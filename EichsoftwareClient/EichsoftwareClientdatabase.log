@@ -1,0 +1,14 @@
+Header checksum is valid.
+Source      : C:\RHEWA\bit.VB10.RHEWA.Eichsoftware\EichsoftwareClient\EichsoftwareClientdatabase.sdf
+Destination : n/a
+Verifying - verMajor: 4, verMinor: 0, verBuild: 8876, verPoint: 1
+Time - 2013-24-08 14:48:09.708
+
+ All Pages have valid checksum.
+Parse the db file and build list of tables ... DONE.
+Cleanup Page list ... DONE.
+Scan bad pages ... DONE.
+Parse SysObjects table ... DONE.
+Copy Tables ... DONE.
+Verify Indices ... DONE.
+
