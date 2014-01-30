@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="RadScrollablePanelTrafficLightBreadcrumb.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadScrollablePanelTrafficLightBreadcrumb.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadLabelContextHelp.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadLabelContextHelp.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadScrollablePanelContextHelp.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadScrollablePanelContextHelp.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lblHeaderText.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lblHeaderText.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="SplitPanelHeaderText.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="SplitPanelHeaderText.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="SplitPanelContent1.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="SplitPanelContent1.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadSplitContainerContent.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadSplitContainerContent.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="SplitPanelContent.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="SplitPanelContent.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadButtonChangeLanguageToPolish.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadButtonChangeLanguageToPolish.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadButtonChangeLanguageToEnglish.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadButtonChangeLanguageToEnglish.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadButtonChangeLanguageToGerman.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadButtonChangeLanguageToGerman.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadButtonNavigateBackwards.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadButtonNavigateBackwards.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadButtonNavigateBackwards.Text" xml:space="preserve">
+    <value>Zurück</value>
+  </data>
+  <data name="resource.Text1" xml:space="preserve">
+    <value>Zurück</value>
+  </data>
+  <data name="RadButtonNavigateForwards.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadButtonNavigateForwards.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadButtonNavigateForwards.Text" xml:space="preserve">
+    <value>Weiter</value>
+  </data>
+  <data name="resource.Text2" xml:space="preserve">
+    <value>Weiter</value>
+  </data>
+  <data name="SplitPanelNavigation.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="SplitPanelNavigation.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadSplitContainerNavigation.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadSplitContainerNavigation.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="SplitPanelMain.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="SplitPanelMain.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="SplitPanelTrafficLight.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="SplitPanelTrafficLight.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="SplitPanelContextHelp.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="SplitPanelContextHelp.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadSplitContainerSidebar.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadSplitContainerSidebar.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="SplitPanelSidebar.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="SplitPanelSidebar.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadSplitContainerMain.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadSplitContainerMain.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadTextBox2.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadTextBox2.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="ImageListTrafficLight.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABc
+        EwAAAk1TRnQBSQFMAgEBAwIAAQIBAAECASABAAEgAQAE/wEhAQAI/wFCAU0BNgcAATYDAAEoAwABgAMA
+        ASADAAEBAQABIAYAAUD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8ATwABAQMEAQYDCwEPAxABFQMQ
+        ARYDEAEWAxABFQMLAQ8DBAEGAwABAVsAAQEDBAEGAwsBDwMQARUDEAEWAxABFgMQARUDCwEPAwQBBgMA
+        AQFbAAEBAwQBBgMLAQ8DEAEVAxABFgMQARYDEAEVAwsBDwMEAQYDAAEB1AADAgEDAwoBDgMXASADIwE0
+        AyoBQAMrAUMDKwFDAyoBQAMjATQDFwEgAwoBDgMCAQNQAAMCAQMDCgEOAxcBIAMjATQDKgFAAysBQwMr
+        AUMDKgFAAyMBNAMXASADCgEOAwIBA1AAAwIBAwMKAQ4DFwEgAyMBNAMqAUADKwFDAysBQwMqAUADIwE0
+        AxcBIAMKAQ4DAgEDzAADAgEDAw0BEgMfAS0DPQFpAVgBXAFYAdEBAAGKAQkB/wEAAYkBCQH/AQABiQEJ
+        Af8BAAGKAQkB/wFYAVwBWAHRAz0BaQMfAS0DDQESAwIBA0gAAwIBAwMNARIDHwEtAz0BaQJYAVwB0QIA
+        Ab8B/wIAAb4B/wIAAb4B/wIAAb8B/wJYAVwB0QM9AWkDHwEtAw0BEgMCAQNIAAMCAQMDDQESAx8BLQM9
+        AWkBWAJcAdEBAAG/Av8BAAG/Av8BAAG/Av8BAAG/Av8BWAJcAdEDPQFpAx8BLQMNARIDAgEDxwABAQMK
+        AQ4DHwEtAVUBVgFVAbQBAAGRARIB/wEAAbcBOQH/AQABzQGRAf8BAAHSAZUB/wEAAdIBlQH/AQABzQGR
+        Af8BAAG3ATkB/wEAAZEBEgH/AVUBVgFVAbQDHwEtAwoBDgMAAQFDAAEBAwoBDgMfAS0CVQFWAbQBAAEE
+        AccB/wERASQB6wH/ASUBOAL/ASkBPAL/ASkBPAL/ASUBOAL/AREBJAHrAf8BAAEEAccB/wJVAVYBtAMf
+        AS0DCgEOAwABAUMAAQEDCgEOAx8BLQFVAlYBtAEAAcQC/wEfAdcC/wE6AeMC/wGAAeUC/wGAAeUC/wE6
+        AeMC/wEfAdcC/wEAAcQC/wFVAlYBtAMfAS0DCgEOAwABAcAAAwQBBgMXASABVQFWAVUBsQEAAZYBFgH/
+        AQABywGPAf8BAAHNAZAB/wEAAcsBjgH/AQABygGOAf8BAAHKAY4B/wEAAcsBjgH/AQABzQGQAf8BAAHL
+        AY8B/wEAAZYBFgH/AVUBVgFVAbEDFwEgAwQBBkAAAwQBBgMXASACVQFWAbEBAAEGAcoB/wEgATIB/gH/
+        ASEBNAH+Af8BIAEzAf0B/wEfATIB/AH/AR8BMgH8Af8BIAEzAf0B/wEhATQB/gH/ASABMgH+Af8BAAEG
+        AcoB/wJVAVYBsQMXASADBAEGQAADBAEGAxcBIAFVAlYBsQEAAcUC/wE1Ad8C/wE2AeAC/wEzAd8C/wEz
+        Ad8C/wEzAd8C/wEzAd8C/wE2AeAC/wE1Ad8C/wEAAcUC/wFVAlYBsQMXASADBAEGwAADCwEPAzgBXQEA
+        AZIBEQH/AQAByQGNAf8BAAHKAYwB/wEAAcgBigH/AQABxwGJAf8BAAHHAYkB/wEAAccBiQH/AQABxwGJ
+        Af8BAAHIAYoB/wEAAcoBjAH/AQAByQGNAf8BAAGSAREB/wM4AV0DCwEPQAADCwEPAzgBXQEAAQIBxwH/
+        ARsBLwH8Af8BGwEvAfwB/wEZAS4B+gH/ARkBLQH5Af8BGQEtAfkB/wEZAS0B+QH/ARkBLQH5Af8BGQEu
+        AfoB/wEbAS8B/AH/ARsBLwH8Af8BAAECAccB/wM4AV0DCwEPQAADCwEPAzgBXQEAAcMC/wEvAdwC/wEv
+        AdwC/wEtAdsC/wEsAdsC/wEsAdsC/wEsAdsC/wEsAdsC/wEtAdsC/wEvAdwC/wEvAdwC/wEAAcMC/wM4
+        AV0DCwEPwAADEAEVAVoBXAFaAc0BAAGzATQB/wEAAcgBigH/AQABxgGIAf8BAAHFAYcB/wEAAcUBhwH/
+        AQABxQGHAf8BAAHFAYcB/wEAAcUBhwH/AQABxQGHAf8BAAHGAYgB/wEAAcgBigH/AQABswE0Af8BWgFc
+        AVoBzQMQARVAAAMQARUCWgFcAc0BCAEbAeYB/wEXASwB+gH/ARQBKQH4Af8BFAEpAfcB/wEUASkB9wH/
+        ARQBKQH3Af8BFAEpAfcB/wEUASkB9wH/ARQBKQH3Af8BFAEpAfgB/wEXASwB+gH/AQgBGwHmAf8CWgFc
+        Ac0DEAEVQAADEAEVAVoCXAHNARQB0AL/ASsB2gL/ASgB2AL/AScB2AL/AScB2AL/AScB2AL/AScB2AL/
+        AScB2AL/AScB2AL/ASgB2AL/ASsB2gL/ARQB0AL/AVoCXAHNAxABFcAAAxABFgEAAYoBCgH/AQABxQGH
+        Af8BAAHFAYYB/wEAAcMBhQH/AQABwwGFAf8BAAHDAYUB/wEAAcMBhQH/AQABwwGFAf8BAAHDAYUB/wEA
+        AcMBhQH/AQABwwGFAf8BAAHFAYYB/wEAAcUBhwH/AQABigEKAf8DEAEWQAADEAEWAgABvwH/ARABJQH2
+        Af8BEAEmAfYB/wEPASUB9AH/AQ8BJQH0Af8BDwElAfQB/wEPASUB9AH/AQ8BJQH0Af8BDwElAfQB/wEP
+        ASUB9AH/AQ8BJQH0Af8BEAEmAfYB/wEQASUB9gH/AgABvwH/AxABFkAAAxABFgEAAcAC/wEkAdUC/wEj
+        AdQC/wEiAdQC/wEiAdQC/wEiAdQC/wEiAdQC/wEiAdQC/wEiAdQC/wEiAdQC/wEiAdQC/wEjAdQC/wEk
+        AdUC/wEAAcAC/wMQARbAAAMQARYBAAGJAQkB/wEAAc0BlwH/AQABwQGDAf8BAAHBAYMB/wEAAcEBgwH/
+        AQABwQGDAf8BAAHBAYMB/wEAAcEBgwH/AQABwQGDAf8BAAHBAYMB/wEAAcEBgwH/AQABwQGDAf8BAAHN
+        AZcB/wEAAYkBCQH/AxABFkAAAxABFgIAAb8B/wEhATUB+AH/AQgBHwHzAf8BCQEgAfIB/wEJASAB8gH/
+        AQkBIAHyAf8BCQEgAfIB/wEJASAB8gH/AQkBIAHyAf8BCQEgAfIB/wEJASAB8gH/AQgBHwHzAf8BIQE1
+        AfgB/wIAAb8B/wMQARZAAAMQARYBAAHAAv8BNAHZAv8BGwHRAv8BHAHRAv8BHAHRAv8BHAHRAv8BHAHR
+        Av8BHAHRAv8BHAHRAv8BHAHRAv8BHAHRAv8BGwHRAv8BNAHZAv8BAAHAAv8DEAEWwAADEAEVAQABiQEI
+        Af8BAAHUAaMB/wEAAcABPwH/AQABwAGBAf8BAAHAAYEB/wEAAcABgQH/AQABwAGBAf8BAAHAAYEB/wEA
+        AcABgQH/AQABwAGBAf8BAAHAAYEB/wEAAcABPwH/AQAB1AGjAf8BAAGJAQgB/wMQARVAAAMQARUCAAG/
+        Af8BMgGFAfkB/wEBARkB8QH/AQMBGwHwAf8BBAEcAfAB/wEEARwB8AH/AQQBHAHwAf8BBAEcAfAB/wEE
+        ARwB8AH/AQQBHAHwAf8BAwEbAfAB/wEBARkB8QH/ATIBhQH5Af8CAAG/Af8DEAEVQAADEAEVAQABwAL/
+        AYMB2wL/ARQBzQL/ARYBzgL/ARcBzgL/ARcBzgL/ARcBzgL/ARcBzgL/ARcBzgL/ARcBzgL/ARYBzgL/
+        ARQBzQL/AYMB2wL/AQABwAL/AxABFcAAAwsBDwEAAYkBBwH/ATAB3AG6Af8BAAG9ATwB/wEAAb0BPgH/
+        AQABvgE/Af8BAAG+AT8B/wEAAb4BPwH/AQABvgE/Af8BAAG+AT8B/wEAAb4BPwH/AQABvQE+Af8BAAG9
+        ATwB/wEwAdwBugH/AQABiQEHAf8DCwEPQAADCwEPAgABwAH/AZQBogH3Af8BAAETAe0B/wEAARYB7QH/
+        AQABGAHtAf8BAAEYAe0B/wEAARgB7QH/AQABGAHtAf8BAAEYAe0B/wEAARgB7QH/AQABFgHtAf8BAAET
+        Ae0B/wGUAaIB9wH/AgABwAH/AwsBD0AAAwsBDwEAAcAC/wGgAeIC/wENAckC/wEQAcoC/wESAcsC/wES
+        AcsC/wESAcsC/wESAcsC/wESAcsC/wESAcsC/wEQAcoC/wENAckC/wGgAeIC/wEAAcAC/wMLAQ/AAAME
+        AQYBWQFbAVkBxAEjAccBoAH/AQAByQGVAf8BAAG6AToB/wEAAbwBPAH/AQABvAE9Af8BAAG8AT0B/wEA
+        AbwBPQH/AQABvAE9Af8BAAG8ATwB/wEAAboBOgH/AQAByQGVAf8BIwHHAaAB/wFZAVsBWQHEAwQBBkAA
+        AwQBBgJZAVsBxAGEAY8B5gH/ARsBMgHwAf8BAAEPAesB/wEAARIB6wH/AQABFAHrAf8BAAEUAesB/wEA
+        ARQB6wH/AQABFAHrAf8BAAESAesB/wEAAQ8B6wH/ARsBMgHwAf8BhAGPAeYB/wJZAVsBxAMEAQZAAAME
+        AQYBWQJbAcQBiAHbAv8BLAHRAv8BCAHGAv8BCwHIAv8BDQHIAv8BDQHIAv8BDQHIAv8BDQHIAv8BCwHI
+        Av8BCAHGAv8BLAHRAv8BiAHbAv8BWQJbAcQDBAEGwwABAQMpAT8BAAGUARcB/wGNAeIBxgH/AQABxAGL
+        Af8BAAG4ATUB/wEAAbkBNwH/AQABuQE4Af8BAAG5ATgB/wEAAbkBNwH/AQABuAE1Af8BAAHEAYsB/wGN
+        AeIBxgH/AQABlAEXAf8DKQE+AwABAUMAAQEDKQE/AQABCAHHAf8BpgGyAfYB/wENASQB7gH/AQABCAHp
+        Af8BAAELAekB/wEAAQ0B6QH/AQABDQHpAf8BAAELAekB/wEAAQgB6QH/AQ0BJAHuAf8BpgGyAfYB/wEA
+        AQgBxwH/AykBPgMAAQFDAAEBAykBPwEAAcQC/wGvAeUC/wEdAcsC/wEAAcMC/wEDAcQC/wEFAcQC/wEF
+        AcQC/wEDAcQC/wEAAcMC/wEdAcsC/wGvAeUC/wEAAcQC/wMpAT4DAAEBxAADAwEEAVUBVgFVAbEBAAGa
+        AR8B/wGYAeQByQH/AR4B1QGsAf8BAAG+AYIB/wEAAbUBMgH/AQABtQEyAf8BAAG+AYIB/wEeAdUBrAH/
+        AZgB5AHJAf8BAAGaAR8B/wFPAVEBTwGcAwIBA0gAAwMBBAJVAVYBsQEAAQ8BygH/AaoBtQH2Af8BPQGO
+        AfEB/wEAARcB6QH/AQABAgHlAf8BAAECAeUB/wEAARcB6QH/AT0BjgHxAf8BqgG1AfYB/wEAAQ8BygH/
+        Ak8BUQGcAwIBA0gAAwMBBAFVAlYBsQEBAcYC/wGzAeYC/wGJAdkC/wEQAcUC/wEAAb0C/wEAAb0C/wEQ
+        AcUC/wGJAdkC/wGzAeYC/wEBAcYC/wFPAlEBnAMCAQPMAAMCAQMBTwFQAU8BmwEAAZQBFgH/AR8BxAGc
+        Af8BlgHiAccB/wGhAegB0AH/AaEB6AHQAf8BlgHiAccB/wEfAcQBnAH/AQABlAEWAf8BTwFQAU8BmwMC
+        AQNQAAMCAQMCTwFQAZsBAAEHAccB/wE7AYkB4wH/AacBsgH1Af8BsAG8AfgB/wGwAbwB+AH/AacBsgH1
+        Af8BOwGJAeMB/wEAAQcBxwH/Ak8BUAGbAwIBA1AAAwIBAwFPAlABmwEAAcQC/wGBAdgC/wGvAeQC/wG4
+        AeYC/wG4AeYC/wGvAeQC/wGBAdgC/wEAAcQC/wFPAlABmwMCAQPXAAEBAyYBOAFXAVkBVwG/AQABiQEG
+        Af8BAAGIAQUB/wEAAYgBBQH/AQABiQEGAf8BVwFZAVcBvwMmATgDAAEBWwABAQMmATgCVwFZAb8CAAHA
+        Af8CAAG/Af8CAAG/Af8CAAHAAf8CVwFZAb8DJgE4AwABAVsAAQEDJgE4AVcCWQG/AQABwAL/AQABvwL/
+        AQABvwL/AQABwAL/AVcCWQG/AyYBOAMAAQH/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A
+        /wC+AAFCAU0BPgcAAT4DAAEoAwABgAMAASADAAEBAQABAQYAAQIWAAP/AQAM/wQADP8EAAz/BAAM/wQA
+        DP8EAAz/BAAM/wQAAf8B4AEHAv8B4AEHAv8B4AEHAf8EAAH/AcABAwL/AcABAwL/AcABAwH/BAAB/wGA
+        AQEC/wGAAQEC/wGAAQEB/wQAAf8CAAL/AgAC/wIAAf8EAAH/AgAC/wIAAv8CAAH/BAAB/wIAAv8CAAL/
+        AgAB/wQAAf8CAAL/AgAC/wIAAf8EAAH/AgAC/wIAAv8CAAH/BAAB/wIAAv8CAAL/AgAB/wQAAf8CAAL/
+        AgAC/wIAAf8EAAH/AgAC/wIAAv8CAAH/BAAB/wIAAv8CAAL/AgAB/wQAAf8CAAL/AgAC/wIAAf8EAAH/
+        AYABAQL/AYABAQL/AYABAQH/BAAB/wHAAQMC/wHAAQMC/wHAAQMB/wQAAf8B4AEHAv8B4AEHAv8B4AEH
+        Af8EAAz/BAAM/wQADP8EAAz/BAAM/wQADP8EAAz/BAAM/wQADP8EAAs=
+</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAABQAAAA8AAAAVAAAAFgAAABYAAAAWAAAAFgAAABYAAAAWAAAAFgAA
+        ABYAAAAWAAAAFgAAABYAAAAWAAAAFgAAABYAAAAWAAAAFgAAABYAAAAWAAAAFQAAAA8AAAAFAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUAAAAYAAAAMwAAAEEAAABDAAAAQwAAAEMAAABDAAAAQwAA
+        AEMAAABDAAAAQwAAAEMAAABDAAAAQwAAAEMAAABDAAAAQwAAAEMAAABDAAAAQwAAAEMAAABBAAAAMwAA
+        ABgAAAAFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwAAADOZkIbhoZeL/6CWi/+glov/oJaL/6CW
+        i/+glov/oJaL/6GWi/+hlov/oZaL/6GWi/+hlov/oZaL/6CWi/+glov/oJaL/6CWi/+glov/oJaL/6GX
+        i/+ZkIbhAAAAMwAAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVm5GH38O8s//k39n/4t3X/+Ld
+        1//i3df/4t3X/+Le1//i3tj/49/Y/+Tf2f/l4Nr/5eDa/+Tf2f/j39j/4t7Y/+Le1//i3df/4t3X/+Ld
+        1//i3df/5N/Z/8O8s/+bkYffAAAAFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABahl4v/49/Z/+Da
+        0v/e2ND/3tjQ/9/Z0f/f2dH/3tjQ/9DJwf/Du7P/v7eu/8S8tP/EvLT/v7eu/8O7s//QycH/3tjQ/9/Z
+        0f/f2dH/3tjQ/97Y0P/g2tL/49/Z/6GXi/8AAAAWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFqCW
+        i//i3df/3dfP/9zWzv/c1s7/3tjP/9PLw/+6s6j/1tHK//Ty8P//////a2xt/2tsbf//////9PLw/9bR
+        yv+6s6j/08vD/97Yz//c1s7/3NbO/93Xz//i3df/oJaL/wAAABYAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAWoJaL/+Ld1//c1c3/29TM/9zVzf/Ox77/v7iw//b18/////////////////9mZWb/ZmVm////
+        //////////////b18/+/uLD/zse+/9zVzf/b1Mz/3NXN/+Ld1/+glov/AAAAFgAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAABaglov/4t3X/9rUzP/a1Mz/z8jA/762r////f7///////79/f/+/fz/////////
+        //////////////79/P/+/f3////////9/v++tq//z8jA/9rUzP/a1Mz/4t3X/6CWi/8AAAAWAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAFqCWi//i3tf/2dPL/9fRyf+1rKP/9vLv/////f/+/Pr//fv5//37
+        +f/+/Pr///37///9+//+/Pr//fv5//37+f/+/Pr////9//by7/+1rKP/19HJ/9nTy//i3tf/oJaL/wAA
+        ABYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoJaL/+Le2P/Y0sr/x8C4/9DJw/////3//fr5//z5
+        9//8+ff//Pn3//779////Pf///z3//779//8+ff//Pn3//z59//9+vn////9/9DJw//HwLj/2NLK/+Le
+        2P+glov/AAAAFgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABaglov/49/Y/9fRyf+3rqX/8Ovn///9
+        +v/9+fb//Pj1//359f///fX////2////9/////f////2///99f/9+fX//Pj1//359v///fr/8Ovn/7eu
+        pf/X0cn/49/Y/6CWi/8AAAAWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFqCWi//j39j/18/H/7Ko
+        nv/////////////7+P/79/X//fn0////9f93dOr/AADg/wAA4P93dOr////1//359P/79/X///v4////
+        ////////sqie/9fPx//j39j/oJaL/wAAABYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoJaL/+Pf
+        2P/Vz8f/tauh/2ppaP9lY2H////7//v48//9+fL////0/wAA4f8AAOL/AADi/wAA4f////T//fny//v4
+        8/////v/ZWNh/2ppaP+1q6H/1c/H/+Pf2P+glov/AAAAFgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        ABaglov/49/Z/9TNxf+yqp//amln/2ViYf///fn//PXx//338P////H/AADh/wAA4v8AAOP/AADh////
+        8v//+fD//Pbx///9+f9lYmH/amln/7Kqn//UzcX/49/Z/6CWi/8AAAAWAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAFqGWi//k39n/0svD/6ujmP////////34//338f/58+7/+/Xu////7/92c+n/AADh/wAA
+        4v8AAOH////v///87v/79e7//ffx///9+P//////q6OY/9LLw//k39n/oZaL/wAAABYAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAWoZaL/+Tf2f/PycL/rqab/+vk3v/89/L/+fPu//jy7f/48+3//fft////
+        7v///+7////u////7v8AAOD////u///67f/79e7//ffy/+vk3v+uppv/z8nC/+Tf2f+hlov/AAAAFgAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABahlov/5N/Z/83Gvv+9tav/xr61//738f/68+3/+PHr//jx
+        6//58uv/+vPr//v06//99uv///vr////7P8AAOH////s///77f//+fH/xr61/721q//Nxr7/5N/Z/6GW
+        i/8AAAAWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFqGWi//k39n/zMW9/8vEu/+lm5H/7ubf//vz
+        7f/48Or/9+/p//fv6f/37+n/+PDq//nx6v/58en///fp////6v8AAOL////t//Xt3/+mnJH/y8S7/8zF
+        vf/k39n/oZaL/wAAABYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoZaL/+Tf2f/Jwrr/y8S8/7+3
+        rv+soZb/+fDq//vy6//57+j/+O/o//vx6v//9u////bv//vy6v/68ej///jp////6/8AAOv/tquW/8G5
+        rv/LxLz/ycK6/+Tf2f+hlov/AAAAFgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABahlov/5N/Z/8jB
+        uf/Jwrr/y8S8/7qyqf+qoJb/7ePc//zz7P/78uv///fw/2NfXf9jX13///fw//vy6//+9ez/9Ord/7Sq
+        lv+/t6n/y8S8/8nCuv/Iwbn/5N/Z/6GWi/8AAAAWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFqGW
+        i//k39n/xcC4/8fBuf/Hwrr/yMO7/7y0q/+flor/wbeu/+fd1f///fX/aWZj/2lmY////fX/593V/8G3
+        rv+gl4r/vrar/8nEu//Hwrr/x8G5/8XAuP/k39n/oZaL/wAAABcAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAVoZaL/+Tg2f/EvbX/xb62/8a/t//Gv7f/x8C4/8W+tv+0rKP/pJqQ/5+Vif+kmY3/pJmN/5+V
+        if+kmpD/tKyj/8W+tv/HwLj/xr+3/8a/t//Fvrb/xL21/+Tg2f+hlov/AAAAFwAAAAEAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAA+hl4z/5eHa/8S9tf/DvLT/w7y0/8O8tP/DvLT/xL21/8W+tv/Fvrb/xr+3/8fA
+        uP/HwLj/xr+3/8W+tv/Fvrb/xL21/8O8tP/DvLT/w7y0/8O8tP/EvbX/5eHa/6GXjP9XUkwgAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAABaCWi9jDvbT/5eHb/+Tg2f/k4Nn/5ODZ/+Tg2f/k4Nr/5eDa/+Xg
+        2v/l4dv/5eHb/+Xh2//l4dv/5eDa/+Xg2v/k4Nr/5ODZ/+Tg2f/k4Nn/5ODZ/+Xh2//DvbT/oJaL2AAA
+        AAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABaCXjNehl4z/oZaL/6GWi/+hlov/oZeM/6OY
+        jf+jmY3/pJmO/6Saj/+kmo//pJqP/6Saj/+kmY7/o5mN/6OYjf+hl4z/oZaL/6GWi/+hlov/oZeM/6CX
+        jNcAAAAFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFAAAADwAAABUAAAAWAAAAFgAAABYAAAAWAAAAFgAA
+        ABYAAAAnfXJm/6GZkP+AdWn/gnZq/4J3a/+Cd2v/gnZq/4B1af+hmZD/fXJm/wAAACcAAAAWAAAAFgAA
+        ABYAAAAWAAAAFgAAABYAAAAVAAAADwAAAAUAAAAAAAAABQAAABgAAAAzAAAAQQAAAEMAAABDAAAAQwAA
+        AEMAAABDAAAAQwAAAEhkWkz/jYd8/2ddUP9pX1L/aV9S/2lfUv9pX1L/Z11Q/42HfP9kWkz/AAAASAAA
+        AEMAAABDAAAAQwAAAEMAAABDAAAAQwAAAEEAAAAzAAAAGAAAAAUAAAAPAAAAM5qRh+GimI3/oZeM/6GW
+        i/+glov/oJaL/6CWi/+glov/oZeM/6OZjv+kmY7/pJqP/6Wbj/+lm5D/pZuQ/6Wbj/+kmo//pJmO/6OZ
+        jv+hl4z/oJaL/6CWi/+glov/oJaL/6GXi/+il4z/o5mN/5qRh+EAAAAzAAAADwAAABWckofft66l/9LL
+        w//Y0cn/3tnR/+Te1//k3tb/5N7W/+Te1v/k3tb/5N7X/+Te1//k39f/5N/X/+Tf1//k39f/5N/X/+Tf
+        1//k3tf/5N7X/+Te1v/k3tb/5N7W/+Te1v/j3db/29XO/9LMxf/Jwrv/ta2j/5ySiN8AAAAVAAAAFqOY
+        jf/Jw7v/zca+/9PLw//Z08v/39nQ/97Y0P/e2ND/3tjQ/97Y0P/e2ND/3tjQ/97Y0P/e2ND/3tjQ/97Y
+        0P/e2ND/3tjQ/97Y0P/e2ND/3tjQ/97Y0P/e2ND/39jQ/97Yz//W0Mj/zce//8W9tf/Gv7j/o5mN/wAA
+        ABYAAAARopiM//Du7P/w7uz/8vHu//X08f/59/T/+Pf0//j39P/49/T/+Pf0//j39P/49/T/+Pf0//j3
+        9P/49/T/+Pf0//j39P/49/T/+Pf0//j39P/49/T/+Pf0//j39P/49/T/+Pbz//Tz8P/w7+z/7evo/+/s
+        6v+imIz/AAAAEQAAAAakmo//oZeM/6CViv+flYn/n5SJ/5+UiP+elIj/npSI/56UiP+elIj/npSI/56U
+        iP+elIj/npSI/56UiP+elIj/npSI/56UiP+elIj/npSI/56UiP+elIj/npSI/5+UiP+flIj/n5SJ/6CV
+        if+glor/opeM/6Saj/8AAAAG///////////4AAAf8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AA
+        AA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP+AAAH//g
+        B///4Af/wAAAA4AAAAGAAAABgAAAAYAAAAE=
+</value>
+  </data>
+  <data name="FrmMainContainer.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="FrmMainContainer.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+</root>

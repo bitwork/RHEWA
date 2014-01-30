@@ -1,0 +1,543 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RadTextBoxControlStammdatenPLZ.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxControlStammdatenPLZ.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPLZ.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPLZ.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblPLZ.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 18</value>
+  </data>
+  <data name="lblPLZ.Text" xml:space="preserve">
+    <value>Postleitzahl</value>
+  </data>
+  <data name="RadTextBoxControlStammdatenOrt.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxControlStammdatenOrt.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblOrt.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblOrt.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblOrt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>22, 18</value>
+  </data>
+  <data name="lblOrt.Text" xml:space="preserve">
+    <value>Ort</value>
+  </data>
+  <data name="RadTextBoxControlStammdatenStrasse.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxControlStammdatenStrasse.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblStrasse.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblStrasse.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblStrasse.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 18</value>
+  </data>
+  <data name="lblStrasse.Text" xml:space="preserve">
+    <value>Strasse</value>
+  </data>
+  <data name="RadTextBoxControlStammdatenWaagenbaufirma.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxControlStammdatenWaagenbaufirma.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblWaagenbaufirma.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblWaagenbaufirma.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblWaagenbaufirma.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 18</value>
+  </data>
+  <data name="lblWaagenbaufirma.Text" xml:space="preserve">
+    <value>Waagenbaufirma</value>
+  </data>
+  <data name="RadGroupBoxStammdaten.HeaderText" xml:space="preserve">
+    <value>Stammdaten</value>
+  </data>
+  <data name="RadGroupBoxStammdaten.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadGroupBoxStammdaten.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadGroupBoxStammdaten.Text" xml:space="preserve">
+    <value>Stammdaten</value>
+  </data>
+  <data name="RadButtonNeueWaegezelle.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadButtonNeueWaegezelle.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadDropdownlistlWZHersteller.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadDropdownlistlWZHersteller.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadDropdownlistlWZTyp.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadDropdownlistlWZTyp.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAWZTyp.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAWZTyp.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAWZTyp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 18</value>
+  </data>
+  <data name="lblAWZTyp.Text" xml:space="preserve">
+    <value>Typ</value>
+  </data>
+  <data name="RadTextBoxControlWZBauartzulassung.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxControlWZBauartzulassung.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAWZZulassung2.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAWZZulassung2.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAWZZulassung2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 18</value>
+  </data>
+  <data name="lblAWZZulassung2.Text" xml:space="preserve">
+    <value>und/oder Bauartzulassung</value>
+  </data>
+  <data name="RadTextBoxControlWZPruefbericht.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxControlWZPruefbericht.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAWZZulassung.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAWZZulassung.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAWZZulassung.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 18</value>
+  </data>
+  <data name="lblAWZZulassung.Text" xml:space="preserve">
+    <value>Prüfbericht/-schein</value>
+  </data>
+  <data name="lblAWZHersteller.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAWZHersteller.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAWZHersteller.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 18</value>
+  </data>
+  <data name="lblAWZHersteller.Text" xml:space="preserve">
+    <value>Hersteller</value>
+  </data>
+  <data name="RadGroupBoxWZ.HeaderText" xml:space="preserve">
+    <value>Wägezelle(n) (WZ)</value>
+  </data>
+  <data name="RadGroupBoxWZ.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadGroupBoxWZ.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadGroupBoxWZ.Text" xml:space="preserve">
+    <value>Wägezelle(n) (WZ)</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblWaagenart.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lblWaagenart.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lblWaagenart.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblWaagenart.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblWaagenart.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lblWaagenart.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblWaagenart.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="lblWaagenart.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="lblWaagenart.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lblWaagenart.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="lblWaagenart.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblWaagenart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 18</value>
+  </data>
+  <data name="lblWaagenart.Text" xml:space="preserve">
+    <value>Waagenart</value>
+  </data>
+  <data name="RadTextBoxControlWaageBauartzulassung.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadTextBoxControlWaageBauartzulassung.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadTextBoxControlWaageBauartzulassung.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="RadTextBoxControlWaageBauartzulassung.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RadTextBoxControlWaageBauartzulassung.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RadTextBoxControlWaageBauartzulassung.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxControlWaageBauartzulassung.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadTextBoxControlWaageBauartzulassung.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadTextBoxControlWaageBauartzulassung.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadTextBoxControlWaageBauartzulassung.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="RadTextBoxControlWaageBauartzulassung.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadDropDownListWaagenArt.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadDropDownListWaagenArt.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel16.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel16.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 18</value>
+  </data>
+  <data name="RadLabel16.Text" xml:space="preserve">
+    <value>Zulassungsinhaber</value>
+  </data>
+  <data name="RadDropdownlistWaagenTyp.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadDropdownlistWaagenTyp.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxControlWaageZulassungsinhaber.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxControlWaageZulassungsinhaber.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAWaageZulassung.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAWaageZulassung.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAWaageZulassung.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 18</value>
+  </data>
+  <data name="lblAWaageZulassung.Text" xml:space="preserve">
+    <value>Bauartzulassung</value>
+  </data>
+  <data name="lblAWaagenTyp.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAWaagenTyp.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAWaagenTyp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 18</value>
+  </data>
+  <data name="lblAWaagenTyp.Text" xml:space="preserve">
+    <value>Waagentyp</value>
+  </data>
+  <data name="RadTextBoxControlWaageSeriennummer.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxControlWaageSeriennummer.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAWaageSeriennummer.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAWaageSeriennummer.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAWaageSeriennummer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 18</value>
+  </data>
+  <data name="lblAWaageSeriennummer.Text" xml:space="preserve">
+    <value>Fabriknummer</value>
+  </data>
+  <data name="RadGroupBoxWaage.HeaderText" xml:space="preserve">
+    <value>Waage (NSW)</value>
+  </data>
+  <data name="RadGroupBoxWaage.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadGroupBoxWaage.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadGroupBoxWaage.Text" xml:space="preserve">
+    <value>Waage (NSW)</value>
+  </data>
+  <data name="RadDropdownlistAWGTyp.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadDropdownlistAWGTyp.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAWGTyp.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAWGTyp.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAWGTyp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 18</value>
+  </data>
+  <data name="lblAWGTyp.Text" xml:space="preserve">
+    <value>Typ</value>
+  </data>
+  <data name="RadTextBoxControlAWGBauartzulassung.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxControlAWGBauartzulassung.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAWGBauart2.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAWGBauart2.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAWGBauart2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 18</value>
+  </data>
+  <data name="lblAWGBauart2.Text" xml:space="preserve">
+    <value>und/oder Bauartzulassung</value>
+  </data>
+  <data name="RadTextBoxControlAWGPruefbericht.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxControlAWGPruefbericht.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAWGBauart.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAWGBauart.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAWGBauart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 18</value>
+  </data>
+  <data name="lblAWGBauart.Text" xml:space="preserve">
+    <value>Prüfbericht/-schein</value>
+  </data>
+  <data name="RadTextBoxControlAWGHersteller.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxControlAWGHersteller.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAWGHersteller.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAWGHersteller.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblAWGHersteller.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 18</value>
+  </data>
+  <data name="lblAWGHersteller.Text" xml:space="preserve">
+    <value>Hersteller</value>
+  </data>
+  <data name="RadGroupBoxAWG.HeaderText" xml:space="preserve">
+    <value>Auswertegerät (AWG)</value>
+  </data>
+  <data name="RadGroupBoxAWG.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadGroupBoxAWG.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadGroupBoxAWG.Text" xml:space="preserve">
+    <value>Auswertegerät (AWG)</value>
+  </data>
+  <data name="RadScrollablePanel1.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadScrollablePanel1.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+</root>

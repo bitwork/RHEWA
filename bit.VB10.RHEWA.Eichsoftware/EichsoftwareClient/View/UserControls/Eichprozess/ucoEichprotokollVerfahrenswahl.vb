@@ -1,0 +1,386 @@
+﻿Public Class ucoEichprotokollVerfahrenswahl
+    Inherits ucoContent
+
+
+#Region "Member Variables"
+    Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken (z.b. selected index changed beim laden des Formulars)
+    Private _bolEichprozessIsDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Verfahrenswahl zurückgesetzt
+    Private _objEichprotokoll As Eichprotokoll
+
+#End Region
+
+#Region "Constructors"
+    Sub New()
+        MyBase.New()
+        ' Dieser Aufruf ist für den Designer erforderlich.
+        InitializeComponent()
+    End Sub
+    Sub New(ByRef pParentform As FrmMainContainer, ByRef pObjEichprozess As Eichprozess, Optional ByRef pPreviousUco As ucoContent = Nothing, Optional ByRef pNextUco As ucoContent = Nothing, Optional ByVal pEnuModus As enuDialogModus = enuDialogModus.normal)
+        MyBase.New(pParentform, pObjEichprozess, pPreviousUco, pNextUco, pEnuModus)
+        InitializeComponent()
+        EichprozessStatusReihenfolge = GlobaleEnumeratoren.enuEichprozessStatus.AuswahlKonformitätsverfahren
+    End Sub
+#End Region
+
+#Region "Events"
+    Private Sub ucoBeschaffenheitspruefung_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        If Not ParentFormular Is Nothing Then
+            _suspendEvents = True
+            Try
+                'Hilfetext setzen
+                ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_Eichprotokollverfahrensauswahl)
+                'Überschrift setzen
+                ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_Eichprotokollverfahrensauswahl
+            Catch ex As Exception
+            End Try
+        End If
+        EichprozessStatusReihenfolge = GlobaleEnumeratoren.enuEichprozessStatus.AuswahlKonformitätsverfahren
+
+        'daten füllen
+        LoadFromDatabase()
+        _suspendEvents = False
+    End Sub
+
+    Private Sub LoadFromDatabase()
+        objEichprozess = ParentFormular.CurrentEichprozess
+        If Not DialogModus = enuDialogModus.lesend And Not DialogModus = enuDialogModus.korrigierend Then
+            Using context As New EichsoftwareClientdatabaseEntities1
+                'neu laden des Objekts, diesmal mit den lookup Objekten
+                'Nur laden wenn es sich um eine Bearbeitung handelt (sonst würde das in Memory Objekt überschrieben werden)
+
+                objEichprozess = (From a In context.Eichprozess.Include("Eichprotokoll").Include("Kompatiblitaetsnachweis").Include("Lookup_Waagenart") Select a Where a.ID = objEichprozess.ID).FirstOrDefault
+
+
+
+            End Using
+        End If
+        _objEichprotokoll = objEichprozess.Eichprotokoll
+
+        'steuerelemente mit werten aus DB füllen
+        FillControls()
+        If DialogModus = enuDialogModus.lesend Then
+            'falls der Eichvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
+            For Each Control In Me.Controls
+                Try
+                    Control.readonly = True
+                Catch ex As Exception
+                    Try
+                        Control.isreadonly = True
+                    Catch ex2 As Exception
+                        Try
+                            Control.enabled = False
+                        Catch ex3 As Exception
+                        End Try
+                    End Try
+                End Try
+            Next
+        End If
+    End Sub
+
+    ''' <summary>
+    ''' Lädt die Werte aus dem Beschaffenheitspruefungsobjekt in die Steuerlemente
+    ''' </summary>
+    ''' <remarks></remarks>
+    ''' <author></author>
+    ''' <commentauthor></commentauthor>
+    Private Sub FillControls()
+
+       
+
+            'je nach Art der Waage MAX1, Max2 oder MAX3 auslesen. Wenn dieser Wert unter 1000KG liegt, wird automatisch ü.60 KG mit normalien gewählt
+            If objEichprozess.Lookup_Waagenart.Art = "Einbereichswaage" Then
+                If objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1 < 1000 Then
+                    SetUeber60KGmitNormalienOnly()
+                End If
+            End If
+            If objEichprozess.Lookup_Waagenart.Art = "Zweibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Zweiteilungswaage" Then
+                If objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 < 1000 Then
+                    SetUeber60KGmitNormalienOnly()
+                End If
+            End If
+            If objEichprozess.Lookup_Waagenart.Art = "Dreibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Dreiteilungswaage" Then
+                If objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 < 1000 Then
+                    SetUeber60KGmitNormalienOnly()
+                End If
+            End If
+            'wenn keiner der Fälle zugetroffen hat, ist die auswahl nach dem Verfahren frei
+
+        If Not objEichprozess.Eichprotokoll Is Nothing Then
+            If _objEichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.Fahrzeugwaagen Then
+                RadRadioButtonFahrzeugwaagen.IsChecked = True
+            ElseIf _objEichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgmitNormalien Then
+                RadRadioButtonNormalien.IsChecked = True
+            ElseIf _objEichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgimStaffelverfahren Then
+                RadRadioButtonStaffelverfahren.IsChecked = True
+
+            End If
+        End If
+
+
+
+        '  RadRadioButtonNormalien.Focus()
+
+    End Sub
+
+    Private Sub SetUeber60KGmitNormalienOnly()
+        objEichprozess.FK_Beschaffenheitspruefung = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgmitNormalien
+        RadRadioButtonFahrzeugwaagen.Enabled = False
+        RadRadioButtonStaffelverfahren.Enabled = False
+        'weiter im Eichprotokoll
+        RadRadioButtonNormalien.IsChecked = True
+    End Sub
+
+    ''' <summary>
+    ''' Füllt das Objekt mit den Werten aus den Steuerlementen
+    ''' </summary>
+    ''' <remarks></remarks>
+    ''' <author></author>
+    ''' <commentauthor></commentauthor>
+    Private Sub UpdateObject()
+        'je nachdem ob das Objekt schon existiert (man ist im Vorgang bereits weiter)  oder nicht, das eine oder andere Objekt ansprechen. Der Hintergrund kommt leider vom Entity Framework 
+        'ich habe erst eine ID im Eichprotokoll, wenn ich dieses Speichere. Somit kann ich dem Eichprozess FK aufs Eichprotokoll nur zuweisen, wenn das Eichprotokoll bereits gespeichert ist
+        If Not objEichprozess.Eichprotokoll Is Nothing Then
+
+     
+        If RadRadioButtonFahrzeugwaagen.IsChecked Then
+            objEichprozess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.Fahrzeugwaagen
+        ElseIf RadRadioButtonNormalien.IsChecked Then
+            objEichprozess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgmitNormalien
+        ElseIf RadRadioButtonStaffelverfahren.IsChecked Then
+            objEichprozess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgimStaffelverfahren
+            End If
+
+        ElseIf Not _objEichprotokoll Is Nothing Then 'passiert im Falle eines neuen Eichprotokolls. Dort gibt es noch keine Zuweisung zu Eichprozess an dieser Setlle
+            If RadRadioButtonFahrzeugwaagen.IsChecked Then
+                _objEichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.Fahrzeugwaagen
+            ElseIf RadRadioButtonNormalien.IsChecked Then
+                _objEichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgmitNormalien
+            ElseIf RadRadioButtonStaffelverfahren.IsChecked Then
+                _objEichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgimStaffelverfahren
+            End If
+
+        End If
+    End Sub
+
+    ''' <summary>
+    ''' aktualisieren der Oberfläche wenn nötig
+    ''' </summary>
+    ''' <param name="UserControl"></param>
+    ''' <remarks></remarks>
+    Protected Friend Overrides Sub UpdateNeeded(UserControl As UserControl)
+        If Me.Equals(UserControl) Then
+            MyBase.UpdateNeeded(UserControl)
+            'Hilfetext setzen
+            ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_Eichprotokollverfahrensauswahl)
+            'Überschrift setzen
+            ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_Eichprotokollverfahrensauswahl
+            '   FillControls()
+            LoadFromDatabase() 'war mal auskommentiert. ich weiß gerade nicht mehr wieso. Ergänzung: war ausdokumentiert, weil damit die Werte der NSW und WZ übeschrieben werden wenn man auf zurück klickt. Wenn es allerdings ausdokumenterit ist, funktioniert das anlegen einer neuen WZ nicht
+        End If
+    End Sub
+
+
+    'Speicherroutine
+    Protected Friend Overrides Sub SaveNeeded(ByVal UserControl As UserControl)
+        If Me.Equals(UserControl) Then
+            'neuen Context aufbauen
+            If DialogModus = enuDialogModus.lesend Then
+                If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.EichprotokollStammdaten Then
+                    objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.EichprotokollStammdaten
+                End If
+                ParentFormular.CurrentEichprozess = objEichprozess
+                Exit Sub
+            End If
+            If DialogModus = enuDialogModus.korrigierend Then
+                UpdateObject()
+                If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.EichprotokollStammdaten Then
+                    objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.EichprotokollStammdaten
+                End If
+                ParentFormular.CurrentEichprozess = objEichprozess
+                Exit Sub
+            End If
+            Using Context As New EichsoftwareClientdatabaseEntities1
+
+                If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
+
+                    If _objEichprotokoll Is Nothing Then           'neues Eichprotokoll anlegen und verfahrens Art zuweisen
+                        _objEichprotokoll = Context.Eichprotokoll.Create
+                        Context.Eichprotokoll.Add(_objEichprotokoll)
+
+                    Else
+                        Dim dobjEichprotkoll As Eichprotokoll = Context.Eichprotokoll.FirstOrDefault(Function(value) value.ID = _objEichprotokoll.ID)
+                        _objEichprotokoll = dobjEichprotkoll
+                    End If
+
+
+
+                    Dim objLiz = (From db In Context.Lizensierung Select db).FirstOrDefault
+                    _objEichprotokoll.FK_Identifikationsdaten_SuperOfficeBenutzer = objLiz.FK_SuperofficeBenutzer
+
+                    'Füllt das Objekt mit den Werten aus den Steuerlementen
+                    UpdateObject()
+                    'Speichern in Datenbank
+                    Context.SaveChanges()
+
+                    'zuweisen des eichprotokolls an den eichprozess
+
+                    'prüfen ob das Objekt anhand der ID gefunden werden kann
+                    Dim dobjEichprozess As Eichprozess = Context.Eichprozess.FirstOrDefault(Function(value) value.ID = objEichprozess.ID)
+                    If Not dobjEichprozess Is Nothing Then
+                        'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
+                        objEichprozess = dobjEichprozess
+                        objEichprozess.FK_Eichprotokoll = _objEichprotokoll.ID 'zuweisen des eichprotokolls an den eichprozess
+                        objEichprozess.Eichprotokoll = _objEichprotokoll
+                        'neuen Status zuweisen
+                        If _bolEichprozessIsDirty = False Then
+                            If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.EichprotokollStammdaten Then
+                                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.EichprotokollStammdaten
+                            End If
+                        ElseIf _bolEichprozessIsDirty = True Then
+                            objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.EichprotokollStammdaten
+                        End If
+                        ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
+
+                        'Füllt das Objekt mit den Werten aus den Steuerlementen
+                        UpdateObject()
+                        'Speichern in Datenbank
+                        Context.SaveChanges()
+
+                    End If
+                End If
+            End Using
+
+            ParentFormular.CurrentEichprozess = objEichprozess
+        End If
+    End Sub
+#End Region
+
+
+    Protected Friend Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
+        MyBase.LokalisierungNeeded(UserControl)
+
+        'lokalisierung: Leider kann ich den automatismus von .NET nicht nutzen. Dieser funktioniert nur sauber, wenn ein Dialog erzeugt wird. Zur Laufzeit aber gibt es diverse Probleme mit dem Automatischen Ändern der Sprache,
+        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße 
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucoEichprotokollVerfahrenswahl))
+
+        Me.RadRadioButtonFahrzeugwaagen.Text = resources.GetString("RadRadioButtonFahrzeugwaagen.Text")
+        Me.RadRadioButtonStaffelverfahren.Text = resources.GetString("RadRadioButtonStaffelverfahren.Text")
+        Me.RadRadioButtonNormalien.Text = resources.GetString("RadRadioButtonNormalien.Text")
+
+
+        If Not ParentFormular Is Nothing Then
+            Try
+                'Hilfetext setzen
+                ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_Eichprotokollverfahrensauswahl)
+                'Überschrift setzen
+                ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_Eichprotokollverfahrensauswahl
+            Catch ex As Exception
+            End Try
+        End If
+
+    
+    End Sub
+
+
+
+#Region "Methods"
+    'Public Function CountDecimalDigits(value As String) As Integer
+    '    Dim possibleChars As Char() = "0123456789.".ToCharArray()
+    '    Dim decimalPoints As Integer = 0
+    '    For Each ch As Char In value
+    '        If Array.IndexOf(possibleChars, ch) < 0 Then
+    '            Throw New Exception()
+    '        End If
+    '        If ch = "."c Then
+    '            decimalPoints += 1
+    '        End If
+    '    Next
+    '    If decimalPoints > 1 Then
+    '        Throw New Exception()
+    '    End If
+    '    If decimalPoints = 0 Then
+    '        Return 0
+    '    End If
+    '    Return value.Length - value.IndexOf("."c) - 1
+    'End Function
+
+#End Region
+
+    ''' <summary>
+    ''' Status des Verfahrens speichern
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="args"></param>
+    ''' <remarks></remarks>
+    Private Sub RadRadioButton_ToggleStateChanged(sender As Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadRadioButtonNormalien.ToggleStateChanged, RadRadioButtonFahrzeugwaagen.ToggleStateChanged, RadRadioButtonStaffelverfahren.ToggleStateChanged
+        If _suspendEvents = True Then Exit Sub
+        _bolEichprozessIsDirty = True
+    End Sub
+
+    'Entsperrroutine
+    Protected Friend Overrides Sub EntsperrungNeeded()
+        MyBase.EntsperrungNeeded()
+
+        'Hiermit wird ein lesender Vorgang wieder entsperrt. 
+        For Each Control In Me.Controls
+            Try
+                Control.readonly = Not Control.readonly
+            Catch ex As Exception
+                Try
+                    Control.isreadonly = Not Control.isReadonly
+                Catch ex2 As Exception
+                    Try
+                        Control.enabled = Not Control.enabled
+                    Catch ex3 As Exception
+                    End Try
+                End Try
+            End Try
+        Next
+
+        'ändern des Moduses
+        DialogModus = enuDialogModus.korrigierend
+        ParentFormular.DialogModus = FrmMainContainer.enuDialogModus.korrigierend
+    End Sub
+
+    Protected Friend Overrides Sub VersendenNeeded(TargetUserControl As UserControl)
+        MyBase.VersendenNeeded(TargetUserControl)
+
+        If Me.Equals(TargetUserControl) Then
+
+            Using dbcontext As New EichsoftwareClientdatabaseEntities1
+                objEichprozess = (From a In dbcontext.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Beschaffenheitspruefung").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
+
+                Dim objServerEichprozess As New EichsoftwareWebservice.ServerEichprozess
+                'auf fehlerhaft Status setzen
+                objEichprozess.FK_Bearbeitungsstatus = 2
+                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Eichbevollmächtigter sich den DS von Anfang angucken muss
+                UpdateObject()
+
+                'erzeuegn eines Server Objektes auf basis des aktuellen DS
+                objServerEichprozess = clsServerHelper.CopyObjectProperties(objServerEichprozess, objEichprozess)
+                Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
+                    Try
+                        Webcontext.Open()
+                    Catch ex As Exception
+                        MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        Exit Sub
+                    End Try
+
+                    Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
+
+                    Try
+                        'add prüft anhand der Vorgangsnummer automatisch ob ein neuer Prozess angelegt, oder ein vorhandener aktualisiert wird
+                        Webcontext.AddEichprozess(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, objServerEichprozess)
+
+                        'schließen des dialoges
+                        ParentFormular.Close()
+                    Catch ex As Exception
+                        MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        ' Status zurück setzen
+                        Exit Sub
+                    End Try
+                End Using
+            End Using
+        End If
+    End Sub
+End Class

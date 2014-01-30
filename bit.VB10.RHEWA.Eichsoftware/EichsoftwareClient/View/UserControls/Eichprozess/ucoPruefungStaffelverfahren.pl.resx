@@ -1,0 +1,1003 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblStaffel5Bereich3ErsatzLastUnten.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 18</value>
+  </data>
+  <data name="lblStaffel5Bereich3ErsatzLastUnten.Text" xml:space="preserve">
+    <value>Obciążenie zastępcze</value>
+  </data>
+  <data name="lblStaffel5Bereich3ErsatzLastOben.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 18</value>
+  </data>
+  <data name="lblStaffel5Bereich3ErsatzLastOben.Text" xml:space="preserve">
+    <value>Obciążenie zastępcze</value>
+  </data>
+  <data name="lblStaffel5Bereich3ZusastzNormalLast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 17</value>
+  </data>
+  <data name="lblStaffel5Bereich3ZusastzNormalLast.Text" xml:space="preserve">
+    <value>&lt;html&gt;dodatkowe  &lt;span style="color: #8000ff"&gt;obciążenie wzorcowe&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel5Bereich3NormalLast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>228, 17</value>
+  </data>
+  <data name="lblStaffel5Bereich3NormalLast.Text" xml:space="preserve">
+    <value>&lt;html&gt;Obciążenie zastępcze + &lt;span style="color: #8000ff"&gt;obciążenie wzorcowe&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel5Bereich3EFG.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 18</value>
+  </data>
+  <data name="lblStaffel5Bereich3EFG.Text" xml:space="preserve">
+    <value>GBL [kg]</value>
+  </data>
+  <data name="lblStaffel5Bereich3Fehler.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 18</value>
+  </data>
+  <data name="lblStaffel5Bereich3Fehler.Text" xml:space="preserve">
+    <value>Błąd [kg]
+</value>
+  </data>
+  <data name="lblStaffel5Bereich3Anzeige.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 39</value>
+  </data>
+  <data name="lblStaffel5Bereich3Anzeige.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;strong&gt;&lt;span style="font-size: 13px; font-family: arial"&gt;[Wartość &lt;br /&gt;faktyczna &lt;br /&gt;±10e]&lt;/span&gt;&lt;/strong&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel5Bereich3Last.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 32</value>
+  </data>
+  <data name="lblStaffel5Bereich3Last.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;strong&gt;[Wartość&lt;br /&gt;zadana]&lt;/strong&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="RadGroupBoxStaffel5Bereich3.HeaderText" xml:space="preserve">
+    <value>Zakres 3</value>
+  </data>
+  <data name="RadGroupBoxStaffel5Bereich3.Text" xml:space="preserve">
+    <value>Zakres 3</value>
+  </data>
+  <data name="lblStaffel5Bereich2ErsatzLastUnten.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 18</value>
+  </data>
+  <data name="lblStaffel5Bereich2ErsatzLastUnten.Text" xml:space="preserve">
+    <value>Obciążenie zastępcze</value>
+  </data>
+  <data name="lblStaffel5Bereich2ErsatzLastOben.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 18</value>
+  </data>
+  <data name="lblStaffel5Bereich2ErsatzLastOben.Text" xml:space="preserve">
+    <value>Obciążenie zastępcze</value>
+  </data>
+  <data name="lblStaffel5Bereich2ZusastzNormalLast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 17</value>
+  </data>
+  <data name="lblStaffel5Bereich2ZusastzNormalLast.Text" xml:space="preserve">
+    <value>&lt;html&gt;dodatkowe  &lt;span style="color: #8000ff"&gt;obciążenie wzorcowe&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel5Bereich2NormalLast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>228, 17</value>
+  </data>
+  <data name="lblStaffel5Bereich2NormalLast.Text" xml:space="preserve">
+    <value>&lt;html&gt;Obciążenie zastępcze + &lt;span style="color: #8000ff"&gt;obciążenie wzorcowe&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel5Bereich2EFG.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 18</value>
+  </data>
+  <data name="lblStaffel5Bereich2EFG.Text" xml:space="preserve">
+    <value>GBL [kg]</value>
+  </data>
+  <data name="lblStaffel5Bereich2Fehler.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 18</value>
+  </data>
+  <data name="lblStaffel5Bereich2Fehler.Text" xml:space="preserve">
+    <value>Błąd [kg]
+</value>
+  </data>
+  <data name="lblStaffel5Bereich2Anzeige.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 39</value>
+  </data>
+  <data name="lblStaffel5Bereich2Anzeige.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;strong&gt;&lt;span style="font-size: 13px; font-family: arial"&gt;[Wartość &lt;br /&gt;faktyczna &lt;br /&gt;±10e]&lt;/span&gt;&lt;/strong&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel5Bereich2Last.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 32</value>
+  </data>
+  <data name="lblStaffel5Bereich2Last.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;strong&gt;[Wartość&lt;br /&gt;zadana]&lt;/strong&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="RadGroupBoxStaffel5Bereich2.HeaderText" xml:space="preserve">
+    <value>Zakres 2</value>
+  </data>
+  <data name="RadGroupBoxStaffel5Bereich2.Text" xml:space="preserve">
+    <value>Zakres 2</value>
+  </data>
+  <data name="lblStaffel5Bereich1ErsatzLastUnten.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 18</value>
+  </data>
+  <data name="lblStaffel5Bereich1ErsatzLastUnten.Text" xml:space="preserve">
+    <value>Obciążenie zastępcze</value>
+  </data>
+  <data name="lblStaffel5Bereich1ErsatzLastOben.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 18</value>
+  </data>
+  <data name="lblStaffel5Bereich1ErsatzLastOben.Text" xml:space="preserve">
+    <value>Obciążenie zastępcze</value>
+  </data>
+  <data name="lblStaffel5Bereich1MessabweichungWaage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 17</value>
+  </data>
+  <data name="lblStaffel5Bereich1MessabweichungWaage.Text" xml:space="preserve">
+    <value>&lt;html&gt;Odchyłka pomiarowa wagi &lt;span style="color: #8000ff"&gt;[&lt;span style="font-family: symbol"&gt;S&lt;/span&gt;Ewi]&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel5Bereich1MessabweichungStaffel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 17</value>
+  </data>
+  <data name="lblStaffel5Bereich1MessabweichungStaffel.Text" xml:space="preserve">
+    <value>&lt;html&gt;Odchyłka pomiarowa stopnia procedury  &lt;span style="color: #8000ff"&gt;[Ew5]&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel5Bereich1Differenz.Size" type="System.Drawing.Size, System.Drawing">
+    <value>288, 32</value>
+  </data>
+  <data name="lblStaffel5Bereich1Differenz.Text" xml:space="preserve">
+    <value>&lt;html&gt;Różnica wartości wskazanych bez obciążenia wzorcowego&lt;span style="color: #8000ff"&gt; &lt;br /&gt;[&lt;span style="font-size: 16px; font-family: symbol"&gt;D&lt;/span&gt;P5]&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel5Bereich1ZusastzNormalLast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 17</value>
+  </data>
+  <data name="lblStaffel5Bereich1ZusastzNormalLast.Text" xml:space="preserve">
+    <value>&lt;html&gt;dodatkowe  &lt;span style="color: #8000ff"&gt;obciążenie wzorcowe&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel5Bereich1NormalLast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>228, 17</value>
+  </data>
+  <data name="lblStaffel5Bereich1NormalLast.Text" xml:space="preserve">
+    <value>&lt;html&gt;Obciążenie zastępcze + &lt;span style="color: #8000ff"&gt;obciążenie wzorcowe&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel5Bereich1EFG.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 18</value>
+  </data>
+  <data name="lblStaffel5Bereich1EFG.Text" xml:space="preserve">
+    <value>GBL [kg]</value>
+  </data>
+  <data name="lblStaffel5Bereich1Fehler.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 18</value>
+  </data>
+  <data name="lblStaffel5Bereich1Fehler.Text" xml:space="preserve">
+    <value>Błąd [kg]
+</value>
+  </data>
+  <data name="lblStaffel5Bereich1Anzeige.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 39</value>
+  </data>
+  <data name="lblStaffel5Bereich1Anzeige.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;strong&gt;&lt;span style="font-size: 13px; font-family: arial"&gt;[Wartość &lt;br /&gt;faktyczna &lt;br /&gt;±10e]&lt;/span&gt;&lt;/strong&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel5Bereich1Last.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 32</value>
+  </data>
+  <data name="lblStaffel5Bereich1Last.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;strong&gt;[Wartość&lt;br /&gt;zadana]&lt;/strong&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="RadGroupBoxStaffel5Bereich1.HeaderText" xml:space="preserve">
+    <value>Zakres 1</value>
+  </data>
+  <data name="RadGroupBoxStaffel5Bereich1.Text" xml:space="preserve">
+    <value>Zakres 1</value>
+  </data>
+  <data name="RadGroupBoxStaffel5.HeaderText" xml:space="preserve">
+    <value>5. stopień procedury</value>
+  </data>
+  <data name="RadGroupBoxStaffel5.Text" xml:space="preserve">
+    <value>5. stopień procedury</value>
+  </data>
+  <data name="lblStaffel4Bereich3ErsatzLastUnten.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 18</value>
+  </data>
+  <data name="lblStaffel4Bereich3ErsatzLastUnten.Text" xml:space="preserve">
+    <value>Obciążenie zastępcze</value>
+  </data>
+  <data name="lblStaffel4Bereich3ErsatzLastOben.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 18</value>
+  </data>
+  <data name="lblStaffel4Bereich3ErsatzLastOben.Text" xml:space="preserve">
+    <value>Obciążenie zastępcze</value>
+  </data>
+  <data name="lblStaffel4Bereich3ZusastzNormalLast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 17</value>
+  </data>
+  <data name="lblStaffel4Bereich3ZusastzNormalLast.Text" xml:space="preserve">
+    <value>&lt;html&gt;dodatkowe  &lt;span style="color: #ff8000"&gt;obciążenie wzorcowe&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel4Bereich3NormalLast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>228, 17</value>
+  </data>
+  <data name="lblStaffel4Bereich3NormalLast.Text" xml:space="preserve">
+    <value>&lt;html&gt;Obciążenie zastępcze  + &lt;span style="color: #ff8000"&gt;obciążenie wzorcowe&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel4Bereich3EFG.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 18</value>
+  </data>
+  <data name="lblStaffel4Bereich3EFG.Text" xml:space="preserve">
+    <value>GBL [kg]</value>
+  </data>
+  <data name="lblStaffel4Bereich3Fehler.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 18</value>
+  </data>
+  <data name="lblStaffel4Bereich3Fehler.Text" xml:space="preserve">
+    <value>Błąd [kg]
+</value>
+  </data>
+  <data name="lblStaffel4Bereich3Anzeige.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 39</value>
+  </data>
+  <data name="lblStaffel4Bereich3Anzeige.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;strong&gt;&lt;span style="font-size: 13px; font-family: arial"&gt;[Wartość &lt;br /&gt;faktyczna &lt;br /&gt;±10e]&lt;/span&gt;&lt;/strong&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel4Bereich3Last.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 32</value>
+  </data>
+  <data name="lblStaffel4Bereich3Last.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;strong&gt;[Wartość&lt;br /&gt;zadana]&lt;/strong&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="RadGroupBoxStaffel4Bereich3.HeaderText" xml:space="preserve">
+    <value>Zakres 3</value>
+  </data>
+  <data name="RadGroupBoxStaffel4Bereich3.Text" xml:space="preserve">
+    <value>Zakres 3</value>
+  </data>
+  <data name="lblStaffel4Bereich2ErsatzLastUnten.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 18</value>
+  </data>
+  <data name="lblStaffel4Bereich2ErsatzLastUnten.Text" xml:space="preserve">
+    <value>Obciążenie zastępcze</value>
+  </data>
+  <data name="lblStaffel4Bereich2ErsatzLastOben.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 18</value>
+  </data>
+  <data name="lblStaffel4Bereich2ErsatzLastOben.Text" xml:space="preserve">
+    <value>Obciążenie zastępcze</value>
+  </data>
+  <data name="lblStaffel4Bereich2ZusastzNormalLast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 17</value>
+  </data>
+  <data name="lblStaffel4Bereich2ZusastzNormalLast.Text" xml:space="preserve">
+    <value>&lt;html&gt;dodatkowe  &lt;span style="color: #ff8000"&gt;obciążenie wzorcowe&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel4Bereich2NormalLast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>228, 17</value>
+  </data>
+  <data name="lblStaffel4Bereich2NormalLast.Text" xml:space="preserve">
+    <value>&lt;html&gt;Obciążenie zastępcze  + &lt;span style="color: #ff8000"&gt;obciążenie wzorcowe&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel4Bereich2EFG.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 18</value>
+  </data>
+  <data name="lblStaffel4Bereich2EFG.Text" xml:space="preserve">
+    <value>GBL [kg]</value>
+  </data>
+  <data name="lblStaffel4Bereich2Fehler.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 18</value>
+  </data>
+  <data name="lblStaffel4Bereich2Fehler.Text" xml:space="preserve">
+    <value>Błąd [kg]
+</value>
+  </data>
+  <data name="lblStaffel4Bereich2Anzeige.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 39</value>
+  </data>
+  <data name="lblStaffel4Bereich2Anzeige.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;strong&gt;&lt;span style="font-size: 13px; font-family: arial"&gt;[Wartość &lt;br /&gt;faktyczna &lt;br /&gt;±10e]&lt;/span&gt;&lt;/strong&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel4Bereich2Last.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 32</value>
+  </data>
+  <data name="lblStaffel4Bereich2Last.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;strong&gt;[Wartość&lt;br /&gt;zadana]&lt;/strong&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="RadGroupBoxStaffel4Bereich2.HeaderText" xml:space="preserve">
+    <value>Zakres 2</value>
+  </data>
+  <data name="RadGroupBoxStaffel4Bereich2.Text" xml:space="preserve">
+    <value>Zakres 2</value>
+  </data>
+  <data name="lblStaffel4Bereich1ErsatzLastUnten.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 18</value>
+  </data>
+  <data name="lblStaffel4Bereich1ErsatzLastUnten.Text" xml:space="preserve">
+    <value>Obciążenie zastępcze</value>
+  </data>
+  <data name="lblStaffel4Bereich1ErsatzLastOben.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 18</value>
+  </data>
+  <data name="lblStaffel4Bereich1ErsatzLastOben.Text" xml:space="preserve">
+    <value>Obciążenie zastępcze</value>
+  </data>
+  <data name="lblStaffel4Bereich1MessabweichungWaage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 17</value>
+  </data>
+  <data name="lblStaffel4Bereich1MessabweichungWaage.Text" xml:space="preserve">
+    <value>&lt;html&gt;Odchyłka pomiarowa wagi &lt;span style="color: #ff8000"&gt;[&lt;span style="font-family: symbol"&gt;S&lt;/span&gt;Ewi]&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel4Bereich1MessabweichungStaffel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 17</value>
+  </data>
+  <data name="lblStaffel4Bereich1MessabweichungStaffel.Text" xml:space="preserve">
+    <value>&lt;html&gt;Odchyłka pomiarowa stopnia procedury  &lt;span style="color: #ff8000"&gt;[Ew4]&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel4Bereich1Differenz.Size" type="System.Drawing.Size, System.Drawing">
+    <value>288, 32</value>
+  </data>
+  <data name="lblStaffel4Bereich1Differenz.Text" xml:space="preserve">
+    <value>&lt;html&gt;Różnica wartości wskazanych bez obciążenia wzorcowego&lt;span style="color: #ff8000"&gt; &lt;br /&gt;[&lt;span style="font-size: 16px; font-family: symbol"&gt;D&lt;/span&gt;P4]&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel4Bereich1ZusastzNormalLast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 17</value>
+  </data>
+  <data name="lblStaffel4Bereich1ZusastzNormalLast.Text" xml:space="preserve">
+    <value>&lt;html&gt;dodatkowe  &lt;span style="color: #ff8000"&gt;obciążenie wzorcowe&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel4Bereich1NormalLast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>228, 17</value>
+  </data>
+  <data name="lblStaffel4Bereich1NormalLast.Text" xml:space="preserve">
+    <value>&lt;html&gt;Obciążenie zastępcze  + &lt;span style="color: #ff8000"&gt;obciążenie wzorcowe&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel4Bereich1EFG.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 18</value>
+  </data>
+  <data name="lblStaffel4Bereich1EFG.Text" xml:space="preserve">
+    <value>GBL [kg]</value>
+  </data>
+  <data name="lblStaffel4Bereich1Fehler.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 18</value>
+  </data>
+  <data name="lblStaffel4Bereich1Fehler.Text" xml:space="preserve">
+    <value>Błąd [kg]
+</value>
+  </data>
+  <data name="lblStaffel4Bereich1Anzeige.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 39</value>
+  </data>
+  <data name="lblStaffel4Bereich1Anzeige.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;strong&gt;&lt;span style="font-size: 13px; font-family: arial"&gt;[Wartość &lt;br /&gt;faktyczna &lt;br /&gt;±10e]&lt;/span&gt;&lt;/strong&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel4Bereich1Last.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 32</value>
+  </data>
+  <data name="lblStaffel4Bereich1Last.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;strong&gt;[Wartość&lt;br /&gt;zadana]&lt;/strong&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="RadGroupBoxStaffel4Bereich1.HeaderText" xml:space="preserve">
+    <value>Zakres 1</value>
+  </data>
+  <data name="RadGroupBoxStaffel4Bereich1.Text" xml:space="preserve">
+    <value>Zakres 1</value>
+  </data>
+  <data name="RadGroupBoxStaffel4.HeaderText" xml:space="preserve">
+    <value>4. stopień procedury</value>
+  </data>
+  <data name="RadGroupBoxStaffel4.Text" xml:space="preserve">
+    <value>4. stopień procedury</value>
+  </data>
+  <data name="lblStaffel3Bereich3ErsatzLastUnten.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 18</value>
+  </data>
+  <data name="lblStaffel3Bereich3ErsatzLastUnten.Text" xml:space="preserve">
+    <value>Obciążenie zastępcze</value>
+  </data>
+  <data name="lblStaffel3Bereich3ErsatzLastOben.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 18</value>
+  </data>
+  <data name="lblStaffel3Bereich3ErsatzLastOben.Text" xml:space="preserve">
+    <value>Obciążenie zastępcze</value>
+  </data>
+  <data name="lblStaffel3Bereich3ZusastzNormalLast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 17</value>
+  </data>
+  <data name="lblStaffel3Bereich3ZusastzNormalLast.Text" xml:space="preserve">
+    <value>&lt;html&gt;dodatkowe &lt;span style="color: #ff0080"&gt;obciążenie wzorcowe&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel3Bereich3NormalLast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>228, 17</value>
+  </data>
+  <data name="lblStaffel3Bereich3NormalLast.Text" xml:space="preserve">
+    <value>&lt;html&gt;Obciążenie zastępcze + &lt;span style="color: #ff0080"&gt;obciążenie wzorcowe&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel3Bereich3EFG.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 18</value>
+  </data>
+  <data name="lblStaffel3Bereich3EFG.Text" xml:space="preserve">
+    <value>GBL [kg]</value>
+  </data>
+  <data name="lblStaffel3Bereich3Fehler.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 18</value>
+  </data>
+  <data name="lblStaffel3Bereich3Fehler.Text" xml:space="preserve">
+    <value>Błąd [kg]
+</value>
+  </data>
+  <data name="lblStaffel3Bereich3Anzeige.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 39</value>
+  </data>
+  <data name="lblStaffel3Bereich3Anzeige.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;strong&gt;&lt;span style="font-size: 13px; font-family: arial"&gt;[Wartość &lt;br /&gt;faktyczna &lt;br /&gt;±10e]&lt;/span&gt;&lt;/strong&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel3Bereich3Last.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 32</value>
+  </data>
+  <data name="lblStaffel3Bereich3Last.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;strong&gt;[Wartość&lt;br /&gt;zadana]&lt;/strong&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="RadGroupBoxStaffel3Bereich3.HeaderText" xml:space="preserve">
+    <value>Zakres 3</value>
+  </data>
+  <data name="RadGroupBoxStaffel3Bereich3.Text" xml:space="preserve">
+    <value>Zakres 3</value>
+  </data>
+  <data name="lblStaffel3Bereich2ErsatzLastUnten.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 18</value>
+  </data>
+  <data name="lblStaffel3Bereich2ErsatzLastUnten.Text" xml:space="preserve">
+    <value>Obciążenie zastępcze</value>
+  </data>
+  <data name="lblStaffel3Bereich2ErsatzLastOben.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 18</value>
+  </data>
+  <data name="lblStaffel3Bereich2ErsatzLastOben.Text" xml:space="preserve">
+    <value>Obciążenie zastępcze</value>
+  </data>
+  <data name="lblStaffel3Bereich2ZusastzNormalLast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 17</value>
+  </data>
+  <data name="lblStaffel3Bereich2ZusastzNormalLast.Text" xml:space="preserve">
+    <value>&lt;html&gt;dodatkowe &lt;span style="color: #ff0080"&gt;obciążenie wzorcowe&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel3Bereich2NormalLast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>228, 17</value>
+  </data>
+  <data name="lblStaffel3Bereich2NormalLast.Text" xml:space="preserve">
+    <value>&lt;html&gt;Obciążenie zastępcze + &lt;span style="color: #ff0080"&gt;obciążenie wzorcowe&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel3Bereich2EFG.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 18</value>
+  </data>
+  <data name="lblStaffel3Bereich2EFG.Text" xml:space="preserve">
+    <value>GBL [kg]</value>
+  </data>
+  <data name="lblStaffel3Bereich2Fehler.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 18</value>
+  </data>
+  <data name="lblStaffel3Bereich2Fehler.Text" xml:space="preserve">
+    <value>Błąd [kg]
+</value>
+  </data>
+  <data name="lblStaffel3Bereich2Anzeige.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 39</value>
+  </data>
+  <data name="lblStaffel3Bereich2Anzeige.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;strong&gt;&lt;span style="font-size: 13px; font-family: arial"&gt;[Wartość &lt;br /&gt;faktyczna &lt;br /&gt;±10e]&lt;/span&gt;&lt;/strong&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel3Bereich2Last.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 32</value>
+  </data>
+  <data name="lblStaffel3Bereich2Last.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;strong&gt;[Wartość&lt;br /&gt;zadana]&lt;/strong&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="RadGroupBoxStaffel3Bereich2.HeaderText" xml:space="preserve">
+    <value>Zakres 2</value>
+  </data>
+  <data name="RadGroupBoxStaffel3Bereich2.Text" xml:space="preserve">
+    <value>Zakres 2</value>
+  </data>
+  <data name="lblStaffel3Bereich1ErsatzLastUnten.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 18</value>
+  </data>
+  <data name="lblStaffel3Bereich1ErsatzLastUnten.Text" xml:space="preserve">
+    <value>Obciążenie zastępcze</value>
+  </data>
+  <data name="lblStaffel3Bereich1ErsatzLastOben.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 18</value>
+  </data>
+  <data name="lblStaffel3Bereich1ErsatzLastOben.Text" xml:space="preserve">
+    <value>Obciążenie zastępcze</value>
+  </data>
+  <data name="lblStaffel3Bereich1MessabweichungWaage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 17</value>
+  </data>
+  <data name="lblStaffel3Bereich1MessabweichungWaage.Text" xml:space="preserve">
+    <value>&lt;html&gt;Odchyłka pomiarowa wagi &lt;span style="color: #ff0080"&gt;[&lt;span style="font-family: symbol"&gt;S&lt;/span&gt;Ewi]&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel3Bereich1MessabweichungStaffel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 17</value>
+  </data>
+  <data name="lblStaffel3Bereich1MessabweichungStaffel.Text" xml:space="preserve">
+    <value>&lt;html&gt;Odchyłka pomiarowa stopnia procedury  &lt;span style="color: #ff0080"&gt;[Ew3]&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel3Bereich1Differenz.Size" type="System.Drawing.Size, System.Drawing">
+    <value>288, 32</value>
+  </data>
+  <data name="lblStaffel3Bereich1Differenz.Text" xml:space="preserve">
+    <value>&lt;html&gt;Różnica wartości wskazanych bez obciążenia wzorcowego&lt;span style="color: #ff0080"&gt; &lt;br /&gt;[&lt;span style="font-size: 16px; font-family: symbol"&gt;D&lt;/span&gt;P3]&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel3Bereich1ZusastzNormalLast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 17</value>
+  </data>
+  <data name="lblStaffel3Bereich1ZusastzNormalLast.Text" xml:space="preserve">
+    <value>&lt;html&gt;dodatkowe &lt;span style="color: #ff0080"&gt;obciążenie wzorcowe&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel3Bereich1NormalLast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>228, 17</value>
+  </data>
+  <data name="lblStaffel3Bereich1NormalLast.Text" xml:space="preserve">
+    <value>&lt;html&gt;Obciążenie zastępcze + &lt;span style="color: #ff0080"&gt;obciążenie wzorcowe&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel3Bereich1EFG.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 18</value>
+  </data>
+  <data name="lblStaffel3Bereich1EFG.Text" xml:space="preserve">
+    <value>GBL [kg]</value>
+  </data>
+  <data name="lblStaffel3Bereich1Fehler.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 18</value>
+  </data>
+  <data name="lblStaffel3Bereich1Fehler.Text" xml:space="preserve">
+    <value>Błąd [kg]
+</value>
+  </data>
+  <data name="lblStaffel3Bereich1Anzeige.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 39</value>
+  </data>
+  <data name="lblStaffel3Bereich1Anzeige.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;strong&gt;&lt;span style="font-size: 13px; font-family: arial"&gt;[Wartość &lt;br /&gt;faktyczna &lt;br /&gt;±10e]&lt;/span&gt;&lt;/strong&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel3Bereich1Last.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 32</value>
+  </data>
+  <data name="lblStaffel3Bereich1Last.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;strong&gt;[Wartość&lt;br /&gt;zadana]&lt;/strong&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="RadGroupBoxStaffel3Bereich1.HeaderText" xml:space="preserve">
+    <value>Zakres 1</value>
+  </data>
+  <data name="RadGroupBoxStaffel3Bereich1.Text" xml:space="preserve">
+    <value>Zakres 1</value>
+  </data>
+  <data name="RadGroupBoxStaffel3.HeaderText" xml:space="preserve">
+    <value>3. stopień procedury</value>
+  </data>
+  <data name="RadGroupBoxStaffel3.Text" xml:space="preserve">
+    <value>3. stopień procedury</value>
+  </data>
+  <data name="lblStaffel2Bereich3ErsatzLastUnten.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 18</value>
+  </data>
+  <data name="lblStaffel2Bereich3ErsatzLastUnten.Text" xml:space="preserve">
+    <value>Obciążenie zastępcze</value>
+  </data>
+  <data name="lblStaffel2Bereich3ErsatzLastOben.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 18</value>
+  </data>
+  <data name="lblStaffel2Bereich3ErsatzLastOben.Text" xml:space="preserve">
+    <value>Obciążenie zastępcze</value>
+  </data>
+  <data name="lblStaffel2Bereich3ZusastzNormalLast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 17</value>
+  </data>
+  <data name="lblStaffel2Bereich3ZusastzNormalLast.Text" xml:space="preserve">
+    <value>&lt;html&gt;dodatkowe &lt;span style="color: #008000"&gt;obciążenie wzorcowe&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel2Bereich3NormalLast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 17</value>
+  </data>
+  <data name="lblStaffel2Bereich3NormalLast.Text" xml:space="preserve">
+    <value>&lt;html&gt;Obciążenie zastępcze  + &lt;span style="color: #008000"&gt;wzorcowe&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel2Bereich3EFG.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 18</value>
+  </data>
+  <data name="lblStaffel2Bereich3EFG.Text" xml:space="preserve">
+    <value>GBL [kg]</value>
+  </data>
+  <data name="lblStaffel2Bereich3Fehler.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 18</value>
+  </data>
+  <data name="lblStaffel2Bereich3Fehler.Text" xml:space="preserve">
+    <value>Błąd [kg]
+</value>
+  </data>
+  <data name="lblStaffel2Bereich3Anzeige.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 39</value>
+  </data>
+  <data name="lblStaffel2Bereich3Anzeige.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;strong&gt;&lt;span style="font-size: 13px; font-family: arial"&gt;[Wartość &lt;br /&gt;faktyczna &lt;br /&gt;±10e]&lt;/span&gt;&lt;/strong&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel2Bereich3Last.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 32</value>
+  </data>
+  <data name="lblStaffel2Bereich3Last.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;strong&gt;[Wartość&lt;br /&gt;zadana]&lt;/strong&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="RadGroupBoxStaffel2Bereich3.HeaderText" xml:space="preserve">
+    <value>Zakres 3</value>
+  </data>
+  <data name="RadGroupBoxStaffel2Bereich3.Text" xml:space="preserve">
+    <value>Zakres 3</value>
+  </data>
+  <data name="lblStaffel2Bereich2ErsatzLastUnten.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 18</value>
+  </data>
+  <data name="lblStaffel2Bereich2ErsatzLastUnten.Text" xml:space="preserve">
+    <value>Obciążenie zastępcze</value>
+  </data>
+  <data name="lblStaffel2Bereich2ErsatzLastOben.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 18</value>
+  </data>
+  <data name="lblStaffel2Bereich2ErsatzLastOben.Text" xml:space="preserve">
+    <value>Obciążenie zastępcze</value>
+  </data>
+  <data name="lblStaffel2Bereich2ZusastzNormalLast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 17</value>
+  </data>
+  <data name="lblStaffel2Bereich2ZusastzNormalLast.Text" xml:space="preserve">
+    <value>&lt;html&gt;dodatkowe &lt;span style="color: #008000"&gt;obciążenie wzorcowe&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel2Bereich2NormalLast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 17</value>
+  </data>
+  <data name="lblStaffel2Bereich2NormalLast.Text" xml:space="preserve">
+    <value>&lt;html&gt;Obciążenie zastępcze  + &lt;span style="color: #008000"&gt;wzorcowe&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel2Bereich2EFG.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 18</value>
+  </data>
+  <data name="lblStaffel2Bereich2EFG.Text" xml:space="preserve">
+    <value>GBL [kg]</value>
+  </data>
+  <data name="lblStaffel2Bereich2Fehler.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 18</value>
+  </data>
+  <data name="lblStaffel2Bereich2Fehler.Text" xml:space="preserve">
+    <value>Błąd [kg]
+</value>
+  </data>
+  <data name="lblStaffel2Bereich2Anzeige.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 39</value>
+  </data>
+  <data name="lblStaffel2Bereich2Anzeige.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;strong&gt;&lt;span style="font-size: 13px; font-family: arial"&gt;[Wartość &lt;br /&gt;faktyczna &lt;br /&gt;±10e]&lt;/span&gt;&lt;/strong&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel2Bereich2Last.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 32</value>
+  </data>
+  <data name="lblStaffel2Bereich2Last.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;strong&gt;[Wartość&lt;br /&gt;zadana]&lt;/strong&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="RadGroupBoxStaffel2Bereich2.HeaderText" xml:space="preserve">
+    <value>Zakres 2</value>
+  </data>
+  <data name="RadGroupBoxStaffel2Bereich2.Text" xml:space="preserve">
+    <value>Zakres 2</value>
+  </data>
+  <data name="lblStaffel2Bereich1ErsatzLastUnten.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 18</value>
+  </data>
+  <data name="lblStaffel2Bereich1ErsatzLastUnten.Text" xml:space="preserve">
+    <value>Obciążenie zastępcze</value>
+  </data>
+  <data name="lblStaffel2Bereich1ErsatzLastOben.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 18</value>
+  </data>
+  <data name="lblStaffel2Bereich1ErsatzLastOben.Text" xml:space="preserve">
+    <value>Obciążenie zastępcze</value>
+  </data>
+  <data name="lblStaffel2Bereich1MessabweichungWaage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 17</value>
+  </data>
+  <data name="lblStaffel2Bereich1MessabweichungWaage.Text" xml:space="preserve">
+    <value>&lt;html&gt;Odchyłka pomiarowa wagi &lt;span style="color: #008000"&gt;[&lt;span style="font-family: symbol"&gt;S&lt;/span&gt;Ewi]&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel2Bereich1MessabweichungStaffel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 17</value>
+  </data>
+  <data name="lblStaffel2Bereich1MessabweichungStaffel.Text" xml:space="preserve">
+    <value>&lt;html&gt;Odchyłka pomiarowa stopnia procedury  &lt;span style="color: #008000"&gt;[Ew2]&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel2Bereich1Differenz.Size" type="System.Drawing.Size, System.Drawing">
+    <value>288, 32</value>
+  </data>
+  <data name="lblStaffel2Bereich1Differenz.Text" xml:space="preserve">
+    <value>&lt;html&gt;Różnica wartości wskazanych bez obciążenia wzorcowego&lt;br /&gt;&lt;span style="color: #008000"&gt;[&lt;span style="font-size: 16px; font-family: symbol"&gt;D&lt;/span&gt;P2]&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel2Bereich1ZusastzNormalLast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 17</value>
+  </data>
+  <data name="lblStaffel2Bereich1ZusastzNormalLast.Text" xml:space="preserve">
+    <value>&lt;html&gt;dodatkowe &lt;span style="color: #008000"&gt;obciążenie wzorcowe&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel2Bereich1NormalLast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 17</value>
+  </data>
+  <data name="lblStaffel2Bereich1NormalLast.Text" xml:space="preserve">
+    <value>&lt;html&gt;Obciążenie zastępcze  + &lt;span style="color: #008000"&gt;wzorcowe&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel2Bereich1EFG.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 18</value>
+  </data>
+  <data name="lblStaffel2Bereich1EFG.Text" xml:space="preserve">
+    <value>GBL [kg]</value>
+  </data>
+  <data name="lblStaffel2Bereich1Fehler.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 18</value>
+  </data>
+  <data name="lblStaffel2Bereich1Fehler.Text" xml:space="preserve">
+    <value>Błąd [kg]
+</value>
+  </data>
+  <data name="lblStaffel2Bereich1Anzeige.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 39</value>
+  </data>
+  <data name="lblStaffel2Bereich1Anzeige.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;strong&gt;&lt;span style="font-size: 13px; font-family: arial"&gt;[Wartość &lt;br /&gt;faktyczna &lt;br /&gt;±10e]&lt;/span&gt;&lt;/strong&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel2Bereich1Last.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 32</value>
+  </data>
+  <data name="lblStaffel2Bereich1Last.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;strong&gt;[Wartość&lt;br /&gt;zadana]&lt;/strong&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="RadGroupBoxStaffel2Bereich1.HeaderText" xml:space="preserve">
+    <value>Zakres 1</value>
+  </data>
+  <data name="RadGroupBoxStaffel2Bereich1.Text" xml:space="preserve">
+    <value>Zakres 1</value>
+  </data>
+  <data name="RadGroupBoxStaffel2.HeaderText" xml:space="preserve">
+    <value>2. stopień procedury</value>
+  </data>
+  <data name="RadGroupBoxStaffel2.Text" xml:space="preserve">
+    <value>2. stopień procedury</value>
+  </data>
+  <data name="lblStaffel1Bereich3NormalLast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 17</value>
+  </data>
+  <data name="lblStaffel1Bereich3NormalLast.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;span style="color: #0000ff"&gt;Obciążenie wzorcowe [L]&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel1Bereich3EFG.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 18</value>
+  </data>
+  <data name="lblStaffel1Bereich3EFG.Text" xml:space="preserve">
+    <value>GBL [kg]</value>
+  </data>
+  <data name="lblStaffel1Bereich3Fehler.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 18</value>
+  </data>
+  <data name="lblStaffel1Bereich3Fehler.Text" xml:space="preserve">
+    <value>Błąd [kg]
+</value>
+  </data>
+  <data name="lblStaffel1Bereich3Anzeige.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 32</value>
+  </data>
+  <data name="lblStaffel1Bereich3Anzeige.Text" xml:space="preserve">
+    <value>&lt;html&gt;Wyświet-&lt;br /&gt;lacz&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel1Bereich3Last.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 32</value>
+  </data>
+  <data name="lblStaffel1Bereich3Last.Text" xml:space="preserve">
+    <value>&lt;html&gt;Obcią-&lt;br /&gt;żenie&lt;/html&gt;</value>
+  </data>
+  <data name="RadGroupBoxStaffel1Bereich3.HeaderText" xml:space="preserve">
+    <value>Zakres 3</value>
+  </data>
+  <data name="RadGroupBoxStaffel1Bereich3.Text" xml:space="preserve">
+    <value>Zakres 3</value>
+  </data>
+  <data name="lblStaffel1Bereich2NormalLast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 17</value>
+  </data>
+  <data name="lblStaffel1Bereich2NormalLast.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;span style="color: #0000ff"&gt;Obciążenie wzorcowe [L]&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel1Bereich2EFG.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 18</value>
+  </data>
+  <data name="lblStaffel1Bereich2EFG.Text" xml:space="preserve">
+    <value>GBL [kg]</value>
+  </data>
+  <data name="lblStaffel1Bereich2Fehler.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 18</value>
+  </data>
+  <data name="lblStaffel1Bereich2Fehler.Text" xml:space="preserve">
+    <value>Błąd [kg]
+</value>
+  </data>
+  <data name="lblStaffel1Bereich2Anzeige.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 32</value>
+  </data>
+  <data name="lblStaffel1Bereich2Anzeige.Text" xml:space="preserve">
+    <value>&lt;html&gt;Wyświet-&lt;br /&gt;lacz&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel1Bereich2Last.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 32</value>
+  </data>
+  <data name="lblStaffel1Bereich2Last.Text" xml:space="preserve">
+    <value>&lt;html&gt;Obcią-&lt;br /&gt;żenie&lt;/html&gt;</value>
+  </data>
+  <data name="RadGroupBoxStaffel1Bereich2.HeaderText" xml:space="preserve">
+    <value>Zakres 2</value>
+  </data>
+  <data name="RadGroupBoxStaffel1Bereich2.Text" xml:space="preserve">
+    <value>Zakres 2</value>
+  </data>
+  <data name="lblStaffel1Bereich1MessabweichungWaage.Text" xml:space="preserve">
+    <value>&lt;html&gt;Odchyłka pomiarowa wagi &lt;span style="color: #0000ff"&gt;[&lt;span style="font-family: symbol"&gt;S&lt;/span&gt;Ewi]&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel1Bereich1MessabweichungStaffel.Text" xml:space="preserve">
+    <value>&lt;html&gt;Odchyłka pomiarowa stopnia procedury&lt;span style="color: #0000ff"&gt;[Ew1]&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel1Bereich1Differenz.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;span &gt;Różnica wartości wskazanych bez obciążenia wzorcowego&lt;br /&gt;&lt;span&gt;&lt;/span&gt;&lt;span style="color: #0000ff"&gt;[&lt;span style="font-size: 16px; font-family: symbol"&gt;D&lt;/span&gt;P1]&lt;/span&gt;&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel1Bereich1NormalLast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 17</value>
+  </data>
+  <data name="lblStaffel1Bereich1NormalLast.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;span style="color: #0000ff"&gt;Obciążenie wzorcowe [L]&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel1Bereich1EFG.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 18</value>
+  </data>
+  <data name="lblStaffel1Bereich1EFG.Text" xml:space="preserve">
+    <value>GBL [kg]</value>
+  </data>
+  <data name="lblStaffel1Bereich1Fehler.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 18</value>
+  </data>
+  <data name="lblStaffel1Bereich1Fehler.Text" xml:space="preserve">
+    <value>Błąd [kg]
+</value>
+  </data>
+  <data name="lblStaffel1Bereich1Anzeige.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 32</value>
+  </data>
+  <data name="lblStaffel1Bereich1Anzeige.Text" xml:space="preserve">
+    <value>&lt;html&gt;Wyświet-&lt;br /&gt;lacz&lt;/html&gt;</value>
+  </data>
+  <data name="lblStaffel1Bereich1Last.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 32</value>
+  </data>
+  <data name="lblStaffel1Bereich1Last.Text" xml:space="preserve">
+    <value>&lt;html&gt;Obcią-&lt;br /&gt;żenie&lt;/html&gt;</value>
+  </data>
+  <data name="RadGroupBoxStaffel1Bereich1.HeaderText" xml:space="preserve">
+    <value>Zakres 1</value>
+  </data>
+  <data name="RadGroupBoxStaffel1Bereich1.Text" xml:space="preserve">
+    <value>Zakres 1</value>
+  </data>
+  <data name="RadGroupBoxStaffel1.HeaderText" xml:space="preserve">
+    <value>1. stopień procedury</value>
+  </data>
+  <data name="RadGroupBoxStaffel1.Text" xml:space="preserve">
+    <value>1. stopień procedury</value>
+  </data>
+</root>

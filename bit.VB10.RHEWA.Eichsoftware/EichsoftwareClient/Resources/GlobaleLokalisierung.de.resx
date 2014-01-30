@@ -1,0 +1,691 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AuswerteGeraet" xml:space="preserve">
+    <value>AWG</value>
+  </data>
+  <data name="Hilfe_Beschaffenheitspruefung" xml:space="preserve">
+    <value>Diese Prüfung gilt für die fertigungsbegleitende Kontrolle aller Waagen, die durch RHEWA-Mitarbeiter bzw. externer, in das RHEWA-QM-System eingebundener Bevollmächtigte in unserem Auftrag montiert bzw. umgebaut wurden.										
+										
+										
+Der zuständige oder bevollmächtigte Mitarbeiter prüft die unten aufgelisteten Kriterien zu 100%.										
+										
+Ein Teil ist dann fehlerhaft, wenn ein Merkmal nicht in Ordnung ist.										
+Ist die Anzahl der fehlerhaften Teile gleich 0, werden die Waagen zur Eichung freigeben.										
+Ist die Anzahl der Fehler größer als 0, werden die Teile gesperrt und eine Korrektur durchgeführt. 										
+Eine Freigabe zur Eichung erfolgt erst nach erneuter fehlerfreier Prüfung.										
+
+
+Hinweise: 										
+										
+1. Das Konformitätsfeststellungsverfahren erfolgte unter den in der DIN EN 45501 Nr. 3.5.3.1 und 3.9.2.1 ff. definierten Rahmenbedingungen.															
+2. Mit Unterzeichnung der Konformitätserklärung bestätigt der Bevollmächtigte, dass die Waage in der vorhandenen Konstellation so noch nicht im eichpflichtigen Warenverkehr eingesetzt war.																											
+3. Für die Einhaltung der Nacheichintervalle ist der Benutzer verantwortlich.																		
+4. Das Konformitätsbewertungsverfahren mit Normalgewichtsstücken der Genauigkeitsklasse M1 erfolgt durch Vergleich mit Bezugsnormalen, die von einer anerkannten Kalibrierstelle kalibriert wurden und damit rückgeführt sind auf die nationalen Normale, mit denen die physikalischen Einheiten in Übereinstimmung mit den internationalen Einheitensystem (SI) darstellt.																			
+5. Bei Waagen bis 10.000 e sind geprüfte Prüfnormale der Klasse M1 zu verwenden.																			
+6. Alle Wägezellen können im Rahmen der EG Bauartzulassung des Auswertegerätes benutzt werden, vorausgesetzt die folgenden Bedingungen sind erfüllt:																		
+ - Es gibt eine entsprechende OIML Konformitätsbescheinigung (R60) oder einen Prüfbericht (EN45501) für die Wägezelle herausgegeben von einer Benannten Stelle die verantwortlich für die Typprüfung im Rahmen der Richtlinie 2009/23/EG ist.																			
+ - Der Prüfbericht enthält den Wägezellentyp und die notwendigen Wägezellendaten, um die Herstellererklärung der Kompatibilität von Modulen (WELMEC 2, Ausgabe4, 2004, Nr.11) auszustellen und alle speziellen Installationsanforderungen zu erfüllen. Eine Wägezelle mit der Markierung NH ist nur zulässig, wenn die Feuchtigkeitsprüfung nach EN45501 für diese Wägezelle durchgeführt wurde. 																								
+ - Die Kompatibilität von Wägezelle und Auswertegerät wurde festgestellt durch entsprechendes Formblatt.										
+ - Die Krafteinleitung muss konform sein mit einen der Beispiele, die im WELMEC Führer (WELMEC 2.4) gezeigt werden.</value>
+  </data>
+  <data name="Hilfe_Hauptmenue" xml:space="preserve">
+    <value>Auswahlliste</value>
+  </data>
+  <data name="Hilfe_KompatiblitaetsnachweisErgebnisHilfe" xml:space="preserve">
+    <value>Hilfe_KompatiblitaetsnachweisErgebnisHilfe Deutsch</value>
+  </data>
+  <data name="Hilfe_KompatiblitaetsnachweisHilfe" xml:space="preserve">
+    <value>Hilfe_KompatiblitaetsnachweisHilfe Deutsch</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_AWGAnschlussart" xml:space="preserve">
+    <value>Anschlußart (4- oder 6-Leitertechnik)
+Bei der Anwendung der 4- Leitertechnik zum Anschluß von Wägezellen an das Auswertegerät dürfen die vom Wägezellenhersteller hierfür vorgeschriebenen Kabel nicht verändert werden. Die Zusammenschaltung mehrerer Wägezellen-anschlusskabel unmittelbar vor dem Auswertegerät ist jedoch zulässig.</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_AWGBruchteilEichfehlergrenze" xml:space="preserve">
+    <value>Bruchteil der Eichfehlergrenzen für das Auswertegerät
+0,3 £ pind £ 0,8
+Nach DIN EN 45501 Nr. 3.5.4 kann für das Auswertegerät pind = 0,5 eingesetzt werden.</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_AWGGrenzwerteLastwiderstandMax" xml:space="preserve">
+    <value>Obere Grenze für die an das Auswertegerät anschließbaren Lastwiderstände
+AWG       83N         ges.5000 Ohm
+AWG       83+         ges.5000 Ohm
+AWG       83Z          ges.5000 Ohm
+AWG       84            ges.5000 Ohm
+AWG       82a          ges.3300 Ohm
+AWG       82b,c,e    ges.5250 Ohm
+
+Obere Grenze für die an das Auswertegerät anschließbaren Lastwiderstände
+Erläuterung zu Lastwiderstand:
+Näherungsweise kleinstmöglicher Eingangswiderstand der einzelnen (parallelgeschalteten) Wägezelle(n) bzw. näherungsweise größtmöglicher Eingangswiderstand der Wägezelle(n)
+Im Allgemeinen kann ohne weitere Prüfung geduldet werden, dass wenn im Prüfschein bzw. in der Bauartzulassung für den größtmöglichen Eingangswiderstand des Auswertegerätes ein Wert von 1000 Ohm angegeben ist, dieser Wert um 15% überschritten wird.</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_AWGGrenzwerteLastwiderstandMin" xml:space="preserve">
+    <value>Untere Grenze für die an das Auswertegerät anschließbaren Lastwiderstände
+      83 N              ges. 87 Ohm
+      83 plus          ges. 87 Ohm
+      83 Z              ges. 35 Ohm
+      84                 ges. 44 Ohm
+      82a               ges. 50 Ohm
+      82b,c,e         ges. 40 Ohm
+
+Untere Grenze für die an das Auswertegerät anschließbaren Lastwiderstände
+Erläuterung zu Lastwiderstand:
+Näherungsweise kleinstmöglicher Eingangswiderstand der einzelnen (parallelgeschalteten) Wägezelle(n) bzw. näherungsweise größtmöglicher Eingangswiderstand der Wägezelle(n)</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_AWGKabellaenge" xml:space="preserve">
+    <value>Maximal zulässiger Quotient von Kabellänge und Kabelquerschnitt  
+
+83 N                     116 m/mm²
+83 plus                 116 m/mm²
+83Z                      440 m/mm²
+84                         110 m/mm²
+82a                       750 m/mm²
+82b,c,e               54,2 m/mm²
+
+
+s.a. Kommentar zu Kabelquerschnitt</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_AWGKlasse" xml:space="preserve">
+    <value>&lt;html&gt;Genauigkeitsklasse&lt;br /&gt;Die Genauigkeitsklassen von NSW, AWG und WZ sind verträglich, wenn sie folgender Zuordnung entsprechen: &lt;br /&gt;&lt;strong&gt;NSW     I          II             III               IIII&lt;br /&gt;AWG     I       I*), II       II*), III       III, IIII&lt;br /&gt;WZ        A      A*), B        B*), C             C, D&lt;/strong&gt;&lt;br /&gt;*) bei ausreichendem Temperaturbereich und &lt;br /&gt;geeigneten Nachweisen der Stabilitäten&lt;br /&gt;gegen Feuchte und Kriechen&lt;br /&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_AWGMindesteingangsspannung" xml:space="preserve">
+    <value>Mindesteingangsspannung des AWGs
+Manche AWGs benötigen eine Vorspannung (Bias), weil
+ihre Vorverstärker nur für eine Polarität ausgelegt sind.
+Wenn kein Umin erforderlich, dann  0  eintragen !</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_AWGMindestmesssignal" xml:space="preserve">
+    <value>Für das Auswertegerät angegebenes Mindestmesssignal pro Eichwert
+
+Auswertegerät 83N              0,5üV/ e
+Auswertegerät 83+             0,5 üV/ e
+Auswertegerät 83Z              0,6 üV/ e
+Auswertegerät  84               0,7 üV/ e
+Auswertegerät 82a              0,5 üV/ e
+Auswertegerät  82b,c,e       0,3 üV/ e</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_AWGSpeisespannung" xml:space="preserve">
+    <value>Speisespannung für die Wägezelle(n)
+Gesamtspannung eintragen
+z.B. falsch + 5 V,  richtig 10 V
+Anmerkung: 
+s.a. Kommentar zu Kabelquerschnitt A
+
+Speisespannung für die Wägezelle(n)
+Auswertegerät    83N             8V
+Auswertegerät    83+             8V
+Auswertegerät    84                8V
+Auswertegerät    83Z            12V
+Auswertegerät    82a,b,c,e    5V</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_AWGTeilungswerte" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;&lt;strong&gt;Größte zulässige Anzahl der Teilungswerte des Größte  Anzahl der Eichwerte des Auswertegerätes&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;                          Einbereichswaage           2-3 Bereichswaage                                   &lt;br /&gt;Genauigkeits-&lt;br /&gt;klasse                    III               IV                  III            IV &lt;br /&gt;Gerät&lt;br /&gt;83+/83Z/84        10000          1000              3000        1000&lt;br /&gt;82a,b,c,e            10000          1000              6000        1000&lt;/p&gt;&lt;p&gt;Auswertegerätes&lt;br /&gt;Die maximale Anzahl nind der Teilungswerte für das Auswertegerät darf nicht kleiner sein als die Anzahl der Eichwerte der Waage n = Max/e. Bei Mehrbereichs- und Mehrteilungswaagen gilt dies für jeden einzelnen Wägebereich i.&lt;/p&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_AWGTemperaturbereichMax" xml:space="preserve">
+    <value>Obere Grenze des Bereichs für die Umgebungstemperatur, wobei die zulässigen Temperaturbereiche der Wägezelle(n) und des Auswertegeräts den Temperaturbereich der Waage überdecken müssen.</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_AWGTemperaturbereichMin" xml:space="preserve">
+    <value>Grenzen des Temperaturbereichs
+Untere Grenze des Bereichs für die Umgebungs-temperatur, wobei die zulässigen Temperaturbereiche 
+der Wägezelle(n) und des Auswertegeräts den Temperaturbereich der Waage überdecken müssen.</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_VerbindungselementeBruchteilEichfehlergrenze" xml:space="preserve">
+    <value>Bruchteil der Eichfehlergrenzen für die Verbindungselemente pcon .
+0,3 £ pcon £ 0,8
+Für den Anteil aller unbekannten mechanischen sowie elektrischen Verbindungselemente zwischen Lastträger, Wägezelle(n) und Auswertegerät kann nach DIN EN 45501 Nr. 3.5.4 pcon = 0,5 eingesetzt werden.</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_WaageAdditiveTarahoechstlast" xml:space="preserve">
+    <value>Höchstlast der additiven Taraeinrichtung (falls vorhanden!).
+Wenn  keine  additive Tara,  dann  0  eintragen !</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_WaageAnzahlWaegezellen" xml:space="preserve">
+    <value>Anzahl der Wägezellen</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_WaageEcklastzuschlag" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;Ecklastzuschlag&lt;br /&gt;Der Ecklastzuschlag stellt den Betrag dar, der in der Praxis durch exzentrische &lt;br /&gt;Belastung bei Max zusätzlich auf die WZ einwirkt. In Anlehnung an WELMEC 2 (Issue 3) Nr. 3.1.6.6 können folgende Werte für NUD angenommen werden:&lt;/p&gt;&lt;p&gt;- Hybridwaagen mit einer WZ, Waagen mit einer Plattform WZ (Single-Point-WZ),&lt;br /&gt;   Waagen deren Belastung nur eine minimale außermittige Belastung zulässt    &lt;strong&gt;0% von Max&lt;/strong&gt;  &lt;br /&gt;                                                                                                   &lt;br /&gt;- andere konventionelle Waagen                                                                      &lt;strong&gt; 20% von Max&lt;/strong&gt;&lt;br /&gt;                                               &lt;br /&gt;- Hängebahn- und Gabelstaplerwaagen sowie befahrbare Brückenwaagen     &lt;strong&gt;50% von Max&lt;/strong&gt;                                    &lt;/p&gt;&lt;p&gt;- Waagenzusammenstellungen im dauernden Verbund (ohne Umschalteinrichtung)  &lt;br /&gt;                                                                                                           &lt;strong&gt;50% von Max (gesamt)&lt;br /&gt;&lt;/strong&gt;  mit Umschalteinrichtung                                                           &lt;strong&gt; 50% von Max (Einzelbrücke)&lt;/strong&gt;                                        &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_WaageEichwert" xml:space="preserve">
+    <value>Eichwert einer Einbereichswaage</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_WaageEichwert1" xml:space="preserve">
+    <value>Eichwert des unteren Wägebereichs von Mehrteilungs- und Mehrbereichswaagen</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_WaageEichwert2" xml:space="preserve">
+    <value>Eichwert des zweiten Wägebereichs von Mehrteilungs- und Mehrbereichswaagen (e1 = kleinster Eichwert)</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_WaageEichwert3" xml:space="preserve">
+    <value>Eichwert des 3. Wägebereichs von Mehrteilungswaagen (e1 = kleinster Eichwert)</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_WaageEinschaltnullstellbereich" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;Einschaltnullstellbereich&lt;br /&gt;Bereich, innerhalb dem die Anzeige beim Einschalten der Waage automatisch auf Null gestellt wird, bevor sie einsatzbereit ist.&lt;br /&gt;Bei möglichem Wechsel des Lastträgers durch den Verwender z.B. bei Ladentischwaagen 20% Max (soweit mit AWG realisierbar), ansonsten immer 4% Max. &lt;br /&gt;&lt;strong&gt;Bei RHEWA-Geräten ist standardmäßig +15% von Max einzutragen&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;        3kg = 0,450kg&lt;br /&gt;        6kg = 0,900kg&lt;br /&gt;      15kg = 2,250kg&lt;br /&gt;      30kg = 4,5kg&lt;br /&gt;      60kg = 9,0kg&lt;br /&gt;    150kg = 22,5kg&lt;br /&gt;    300kg = 45kg&lt;br /&gt;    600kg = 90kg&lt;br /&gt;  1500kg = 225kg&lt;br /&gt;  3000kg = 450kg&lt;br /&gt;  6000kg = 900kg &lt;br /&gt;15000kg = 2250kg&lt;/strong&gt;&lt;/p&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_WaageHoechstlast" xml:space="preserve">
+    <value>Höchstlast einer Einbereichswaage</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_WaageHoechstlast1" xml:space="preserve">
+    <value>Höchstlast des unteren Wägebereichs von Mehrteilungs- und Mehrbereichswaagen</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_WaageHoechstlast2" xml:space="preserve">
+    <value>Höchstlast des 2. Wägebereichs von Mehrteilungs- und Mehrbereichswaagen (Max1 = unterer Wägebereich)</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_WaageHoechstlast3" xml:space="preserve">
+    <value>Höchstlast des 3. Wägebereichs von Mehrteilungs- waagen (Max1 = unterer Wägebereich)</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_WaageKabellaenge" xml:space="preserve">
+    <value>Kabellänge
+Länge des Kabels zwischen  Wägezellen-Anschlusskasten und  Auswertegerät.</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_WaageKabelquerschnitt" xml:space="preserve">
+    <value>Kabelquerschnitt 
+Adernquerschnitt eines der 4 oder 6 Leiter des Kabels zwischen Wägezellen-Anschlusskasten und Auswertegerät.
+
+Anmerkungen:
+Bei verschiedenen Leiterquerschnitten muss
+   bei der 4-Leiterschaltung die Wägezellen-
+   Speiseleitung und
+   bei der 6-Leiterschaltung die   
+   Referenzspannungsleitung herangezogen
+   werden.
+Bei Anwendung von Blitzschutzbarrieren muss die Speisespannung an den Wägezellen geprüft werden, um den Wert in Bedingung (8) (Mindestmesssignal pro Eichwert) als Wägezellen-Speisespannung Uexc einzusetzen.</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_WaageKlasse" xml:space="preserve">
+    <value>&lt;html&gt;Genauigkeitsklasse&lt;br /&gt;Die Genauigkeitsklassen von NSW, AWG und WZ sind verträglich, wenn sie folgender Zuordnung entsprechen: &lt;br /&gt;&lt;strong&gt;NSW     I          II             III               IIII&lt;br /&gt;AWG     I       I*), II       II*), III       III, IIII&lt;br /&gt;WZ        A      A*), B        B*), C             C, D&lt;/strong&gt;&lt;br /&gt;*) bei ausreichendem Temperaturbereich und &lt;br /&gt;geeigneten Nachweisen der Stabilitäten&lt;br /&gt;gegen Feuchte und Kriechen&lt;br /&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_WaageTemperaturbereichMAX" xml:space="preserve">
+    <value>Obere Grenze des Bereichs für die Umgebungstemperatur, wobei die zulässigen Temperaturbereiche der Wägezelle(n) und des Auswertegeräts den Temperaturbereich der Waage überdecken müssen.</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_WaageTemperaturbereichMin" xml:space="preserve">
+    <value>Grenzen des Temperaturbereichs
+Untere Grenze des Bereichs für die Umgebungs-temperatur, wobei die zulässigen Temperaturbereiche 
+der Wägezelle(n) und des Auswertegeräts den Temperaturbereich der Waage überdecken müssen.</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_WaageTotlast" xml:space="preserve">
+    <value>Totlast
+Eigengewicht des Lastträgers sowie zusätzlicher auf dem Lastträger fest montierter Aufbauten.
+Bei  Standardbrücken:
+Type     Größe                             Totlast
+010       60 / 150 kg                      18 kg
+011       150 kg                              38 kg
+012       60 / 150 kg                       10 kg
+013       60 / 150 kg                      6,9 kg
+016       150 / 300 / 600 kg            15 kg
+027       1 kg nicht eichf.               0,29 kg
+028       3 / 6 kg                             0,79 kg
+032        3 / 6 /15 kg                     3,6 kg
+032         30 kg                              4,1 kg  
+033                                                6,9 kg
+034       60 / 150 / 300                  22 kg
+035       550 X 650                         23 kg
+035       600 X 800                         25 kg
+039                                                15,1 kg
+050       600 / 1500 / 2000 kg       45 kg
+050       3000 kg                            50 kg
+051       Standard                          44 kg
+051       3000 kg                            54 kg
+060       1000 X 850 mm                80 kg
+060       1250 X 1050 mm              105 kg
+062       1230 X 800 mm                 34 kg
+070       1000 X 800 mm                 65 kg
+070       1250 X 1000 mm               105 kg
+070       1500 X 1250 mm        165/180/270 kg
+070       2000 X 1500 mm        350/430/590 kg
+071       1250 X 1000 mm                105 kg
+071       1500 X 1250 mm 1500kg   165 kg
+071       1500 X 1250 mm 3000kg   180 kg
+071       1500 X 1500 mm                195 kg
+071       2000 X 1500 mm                300 kg
+081                                                  5,0 kg
+
+082                                                  20,6 kg
+083                                                  26,7 kg
+852                                                  20,0 kg</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_WaageUebersetzungsverhaeltnis" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;Übersetzungsverhältnis&lt;br /&gt;Das Übersetzungsverhältnis, z. B. durch ein Hebelwerk, ist entsprechend DIN EN 45501 T.3.3, gleich &lt;br /&gt;( Kraft auf die Wägezelle) / (Gewichtskraft auf den Lastträger).&lt;br /&gt;Bei NSW &lt;strong&gt;mit&lt;/strong&gt; Hebelwerk ist die Anzahl der Wägezellen im Regelfall N = 1 und das Übersetzungsverhältnis&lt;strong&gt; R &amp;lt; 1&lt;/strong&gt;. In seltenen Sonderfällen kann ein Lastträger mit Hebelwerk mehrere Wägezellen enthalten. In jedem Fall ist der Wert für R vom Waagenbauer anzugeben. &lt;br /&gt;Bei NSW &lt;strong&gt;ohne&lt;/strong&gt; Hebelwerk muss immer &lt;strong&gt;R = 1&lt;/strong&gt; gesetzt werden.&lt;/p&gt;&lt;p&gt;Feldformat : Zahl&lt;br /&gt;Beispiel zur Schreibweise  &lt;strong&gt;falsch&lt;/strong&gt;    1:4 , da Eintragungen mit  ":"  &lt;br /&gt;                                                                 als Zeit verrechnet werden  &lt;br /&gt;                                         &lt;strong&gt;richtig&lt;/strong&gt;   0,25  oder  1/4 &lt;/p&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_WZBruchteilEichfehlergrenze" xml:space="preserve">
+    <value>Bruchteil der Eichfehlergrenzen für die Wägezelle(n) pLC. 
+0,3 £ pLC £ 0,8
+Falls im Prüfschein der Wägezelle(n) nichts angegeben ist, kann nach DIN EN 45501 Nr. 3.5.4 pLC = 0,7 eingesetzt werden.</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_WZGenauigkeitsklasse" xml:space="preserve">
+    <value>&lt;html&gt;Genauigkeitsklasse&lt;br /&gt;Die Genauigkeitsklassen von NSW, AWG und WZ sind verträglich, wenn sie folgender Zuordnung entsprechen: &lt;br /&gt;&lt;strong&gt;NSW     I          II             III               IIII&lt;br /&gt;AWG     I       I*), II       II*), III       III, IIII&lt;br /&gt;WZ        A      A*), B        B*), C             C, D&lt;/strong&gt;&lt;br /&gt;*) bei ausreichendem Temperaturbereich und &lt;br /&gt;geeigneten Nachweisen der Stabilitäten&lt;br /&gt;gegen Feuchte und Kriechen&lt;br /&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_WZHoechstlast" xml:space="preserve">
+    <value>&lt;html&gt;Höchstlast (Nennlast) der einzelnen Wägezelle&lt;br /&gt;Die Höchstlast der Wägezelle darf bei Belastung der Waage mit ihrer Höchstlast Max nicht überschritten werden.&lt;br /&gt;&lt;strong&gt;                                 Nennlast          &lt;br /&gt;   Kg                   N             lb&lt;/strong&gt;&lt;br /&gt;&lt;span style="color: #0080ff"&gt;    20,4            200&lt;br /&gt;    51                500&lt;/span&gt;  &lt;br /&gt;&lt;span style="color: #ff0000"&gt;    91                                200&lt;/span&gt;&lt;br /&gt;&lt;span style="color: #0080ff"&gt;   102              1000             &lt;br /&gt;   204              2000&lt;/span&gt;      &lt;br /&gt;&lt;span style="color: #ff0000"&gt;   227                              500 &lt;br /&gt;   454                              1000&lt;/span&gt; &lt;br /&gt;&lt;span style="color: #0080ff"&gt;   510              5000         &lt;br /&gt; 1020            10000&lt;/span&gt;        &lt;br /&gt;&lt;span style="color: #ff0000"&gt; 1134                               2500&lt;/span&gt;&lt;br /&gt;&lt;span style="color: #0080ff"&gt; 2039            20000&lt;/span&gt;     &lt;br /&gt;&lt;span style="color: #ff0000"&gt; 2268                               5000&lt;br /&gt; 4035                             10000&lt;/span&gt; &lt;br /&gt;&lt;span style="color: #0080ff"&gt; 5099            50000&lt;br /&gt;10197          100000&lt;/span&gt;&lt;br /&gt;&lt;span style="color: #ff0000"&gt;20412                              45000&lt;br /&gt;34020                              75000   &lt;br /&gt;45360                            100000&lt;/span&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_WZHoechstteilungsfaktor" xml:space="preserve">
+    <value>Höchstteilungsfaktor der Wägezelle
+Wenn Y oder vmin nicht angegeben sind (z.B. im Prüfschein nicht genannt), wird nLC für Y eingesetzt.
+Höchstteilungsfaktor der Wägezelle
+Wenn Y oder vmin nicht angegeben sind (z.B. im Prüfschein nicht genannt), wird nLC für Y eingesetzt.
+
+Type     C            Y              Z        E min      C        R LC
+1022       3         10000                        0          2         415
+1042       3         15000                        0          2         415
+1042       6         20000                        0          2         415
+1130       3         15000                        0          2         385
+1242       3         20000                        0          2         415  
+1242       6         20000                        0          2         415
+1260       3         15000                        0          2         415
+1510       3         12000                        0          2         380
+PC1         3         10000                        0          2         390
+PC1         3         15000                        0          2         390
+PC6         3         12500                        0          2       1106 
+PC6 MI6  3         12500        6000        0          2       1106 
+PC6         3         25000                        0          2       1106
+PC6 MI6  3         25000         6000       0          2       1106 
+PCB         3         12500                        0          2       1106
+0531       3         11500                        0          2       1106
+      
+3410       3         10000                        0          2         380
+3510       3         12000          4000      0          2         400
+3510       6         24000          8000      0          2         400
+HSB         3         10000                        0          2         420
+BK2         
+SLB          3         11500                        0          2        1106
+SB6          3         10000                        0          2        1106
+SB14        3         11500                        0          2        1100
+HCB          3        10000                        0          2        1000
+RC3          3        15000                        0          2        1100</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_WZKriechteilungsfaktor" xml:space="preserve">
+    <value>Kriechteilungsfaktor der Wägezelle
+Wenn DR oder Z nicht angegeben sind (z.B. im Prüfschein nicht genannt), wird nLC für Z eingesetzt.
+
+Type     C            Y              Z        E min      C        R LC
+1022       3         10000                        0          2         415
+1042       3         15000                        0          2         415
+1042       6         20000                        0          2         415
+1130       3         15000                        0          2         385
+1242       3         20000                        0          2         415  
+1242       6         20000                        0          2         415
+1260       3         15000                        0          2         415
+1510       3         12000                        0          2         380
+PC1         3         10000                        0          2         390
+PC1         3         15000                        0          2         390
+PC6         3         12500                        0          2       1106 
+PC6 MI6  3         12500        6000        0          2       1106 
+PC6         3         25000                        0          2       1106
+PC6 MI6  3         25000         6000       0          2       1106 
+PCB         3         12500                        0          2       1106
+0531       3         11500                        0          2       1106
+      
+3410       3         10000                        0          2         380
+3510       3         12000          4000      0          2         400
+3510       6         24000          8000      0          2         400
+HSB         3         10000                        0          2         420
+BK2         
+SLB          3         11500                        0          2        1106
+SB6          3         10000                        0          2        1106
+SB14        3         11500                        0          2        1100
+HCB          3        10000                         0         2        1000
+RC3          3        15000                        0          2        1100</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_WZMaxTeilungswerte" xml:space="preserve">
+    <value>Größte zulässige Anzahl der Teilungswerte der Wägezelle 
+Die maximale Anzahl nLC der Teilungswerte für die Wägezelle darf nicht kleiner sein als die Anzahl der Eichwerte der Waage n = Max/e. 
+Bei Mehrbereichs- und Mehrteilungswaagen gilt dies für jeden einzelnen Wägebereich i .</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_WZMindestvorlast" xml:space="preserve">
+    <value>Mindestvorlast der einzelnen Wägezelle 
+Die Vorlast der Wägezelle muss größer oder gleich der Mindestvorlast Emin sein.
+Wenn keine Mindestvorlast der Wägezelle 
+erforderlich, dann  0  eintragen !</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_WZMinTeilungswert" xml:space="preserve">
+    <value>Kleinster zulässiger Teilungswert der Wägezelle
+Wenn Y oder vmin nicht angegeben sind (z.B. im Prüfschein nicht genannt), wird nLC für Y eingesetzt.</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_WZRueckkehrVorlastsignal" xml:space="preserve">
+    <value>Rückkehr des Vorlastsignals der Wägezelle
+Wenn DR oder Z nicht angegeben sind (z.B. im Prüfschein nicht genannt), wird nLC für Z eingesetzt.</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_WZTemperaturbereichMAX" xml:space="preserve">
+    <value>Obere Grenze des Bereichs für die Umgebungstemperatur, wobei die zulässigen Temperaturbereiche der Wägezelle(n) und des Auswertegeräts den Temperaturbereich der Waage überdecken müssen.</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_WZTemperaturbereichMIN" xml:space="preserve">
+    <value>Grenzen des Temperaturbereichs
+Untere Grenze des Bereichs für die Umgebungs-temperatur, wobei die zulässigen Temperaturbereiche 
+der Wägezelle(n) und des Auswertegeräts den Temperaturbereich der Waage überdecken müssen.</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_WZWaegezellenkennwert" xml:space="preserve">
+    <value>Wägezellenkennwert (Signalgröße bei der Höchstlast der Wägezelle in mV/V)</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_WZWiderstand" xml:space="preserve">
+    <value>Wägezellen-Eingangswiderstand
+
+Eingangswiderstand einer Wägezelle.
+Es sind ggf. N Wägezellen parallel geschaltet.
+RLC / N muß innerhalb der Grenzen für die an das Auswertegerät anschließbaren Lastwiderstände liegen.
+
+
+Type     C            Y              Z        E min      C        R LC
+1022       3         10000                        0          2         415
+1042       3         15000                        0          2         415
+1042       6         20000                        0          2         415
+1130       3         15000                        0          2         385
+1242       3         20000                        0          2         415  
+1242       6         20000                        0          2         415
+1260       3         15000                        0          2         415
+1510       3         12000                        0          2         380
+PC1         3         10000                        0          2         390
+PC1         3         15000                        0          2         390
+PC6         3         12500                        0          2       1106 
+PC6 MI6  3         12500        6000        0          2       1106 
+PC6         3         25000                        0          2       1106
+PC6 MI6  3         25000         6000       0          2       1106 
+PCB         3         12500                        0          2       1106
+0531       3         11500                        0          2       1106
+      
+3410       3         10000                        0          2         380
+3510       3         12000          4000      0          2         400
+3510       6         24000          8000      0          2         400
+HSB         3         10000                        0          2         420
+BK2         
+SLB          3         11500                        0          2        1106
+SB6          3         10000                        0          2        1106
+SB14        3         11500                        0          2        1100
+HCB          3        10000                         0         2        1000
+RC3          3        15000                        0          2        1100</value>
+  </data>
+  <data name="Hilfe_Stammdaten" xml:space="preserve">
+    <value>Hilfe_Stammdaten Deutsch</value>
+  </data>
+  <data name="PflichtfelderAusfuellen" xml:space="preserve">
+    <value>Bitte füllen Sie zunächst alle Pflichtfelder aus.</value>
+  </data>
+  <data name="Ueberschrift_Beschaffenheitspruefung" xml:space="preserve">
+    <value>Beschaffenheitsprüfung</value>
+  </data>
+  <data name="Ueberschrift_Hauptmenue" xml:space="preserve">
+    <value>Auswahlliste</value>
+  </data>
+  <data name="Ueberschrift_Kompatiblitaetsnachweis" xml:space="preserve">
+    <value>Kompatibilitätsnachweis</value>
+  </data>
+  <data name="Ueberschrift_KompatiblitaetsnachweisErgebnis" xml:space="preserve">
+    <value>Ergebnis des Kompatibilitätsnachweises</value>
+  </data>
+  <data name="Ueberschrift_Stammdaten" xml:space="preserve">
+    <value>Stammdateneingabe</value>
+  </data>
+  <data name="Waagenart" xml:space="preserve">
+    <value>Waagenart</value>
+  </data>
+  <data name="Waagentyp" xml:space="preserve">
+    <value>Waagentyp</value>
+  </data>
+  <data name="Waegezelle" xml:space="preserve">
+    <value>WZ</value>
+  </data>
+  <data name="KompatiblitätNichtGeleistet" xml:space="preserve">
+    <value>Die Kompatiblität der Komponenten ist leider nicht gegeben. Der Eichvorgang kann nicht fortgesetzt werden.</value>
+  </data>
+  <data name="Hilfe_Auswahlliste" xml:space="preserve">
+    <value>Wählen Sie in diesem Dialog einen bestehenden Eichvorgang aus oder legen einen neuen über die Schaltfläche "Anlegen" an.</value>
+  </data>
+  <data name="Hilfe_Eichprotokollverfahrensauswahl" xml:space="preserve">
+    <value>Deutsch</value>
+  </data>
+  <data name="Ueberschrift_Eichprotokollverfahrensauswahl" xml:space="preserve">
+    <value>Verfahrensauswahl</value>
+  </data>
+  <data name="Hilfe_EichprotokollStammdaten" xml:space="preserve">
+    <value>Hilfe_Eichprotokollstammdaten</value>
+  </data>
+  <data name="Ueberschrift_EichprotokollStammdaten" xml:space="preserve">
+    <value>Eichprotokoll</value>
+  </data>
+  <data name="Eichprotokoll_Dimension" xml:space="preserve">
+    <value>Brückenabmessung</value>
+  </data>
+  <data name="Hilfe_Nullstellung" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;&lt;strong&gt;4.5.2 Genauigkeit&lt;/strong&gt;&lt;br /&gt;Nach dem Nullstellen darf der Einfluß der Abweichung von Null auf das Wägeergebnis nicht mehr als 0,25e betragen; bei einer Waage mit Hilfsanzeigeeinrichtungen darf dieser Einfluss nicht mehr als 0,5d betragen.&lt;br /&gt;&lt;span style="color: #ff0000"&gt;Eine Nullnachführung ist durch entsprechende Belastung auszuschalten.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;A 4.2.3 Genauigkeit der Nullstellung&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;A 4.2.3.1 Nichtselbsttätige und halbselbsttätige Nullstellung&lt;/strong&gt;&lt;br /&gt;Die Genauigkeit der Nullstelleinrichtung wird geprüft, indem die Waage auf Null gestellt und dann die zusätzliche Last bestimmt wird, bei der die Anzeige sich von Null auf einen Teilungswert oberhalb Null ändert. Die Messabweichung bei Null wird nach der Beschreibung in A4.4.3 berechnet.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;A4.2.3.2 Selbsttätige Nullstellung oder Nullnachführung&lt;br /&gt;&lt;/strong&gt;Die Anzeige wird außerhalb des selbsttätigen Bereiches gebracht (z.B. durch belasten mit 10e). Dann wird die zusätzliche Last bestimmt, bei der die Anzeige sich von einem Teilungswert zum nächsthöheren ändert und die Messabweichung nach der Berechnung in A4.4.3 berechnet. Es wird angenommen, dass die Messabweichung bei Last Null die gleiche sein wird, wie für die obige Last.&lt;/p&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="Fabriknummer" xml:space="preserve">
+    <value>Fabriknummer</value>
+  </data>
+  <data name="Hilfe_PruefungAussermittigerBelastung" xml:space="preserve">
+    <value>Hilfe_PrüfungAussermittigerBelastung</value>
+  </data>
+  <data name="Ueberschrift_PruefungNullstellungundAussermittigeBelastung" xml:space="preserve">
+    <value>Messtechnische Prüfung</value>
+  </data>
+  <data name="Hilfe_PruefungDerRichtigkeitMitNormallast" xml:space="preserve">
+    <value>Hilfe_PruefungDerRichtigkeitMitNormallast</value>
+  </data>
+  <data name="Ueberschrift_PruefungDerRichtigkeitMitNormallast" xml:space="preserve">
+    <value>Prüfung der Richtigkeit mit Normallast</value>
+  </data>
+  <data name="Hilfe_PruefungDerWiederholbarkeit" xml:space="preserve">
+    <value>Hilfe_PruefungDerWiederholbarkeit</value>
+  </data>
+  <data name="Ueberschrift_PruefungDerWiederholbarkeit" xml:space="preserve">
+    <value>Prüfung der Wiederholbarkeit</value>
+  </data>
+  <data name="Hilfe_PruefungAnsprechvermoegen" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;&lt;strong&gt;3.8 Ansprechvermögen&lt;/strong&gt;&lt;br /&gt;3.8.1 Nichtselbsteinspielende Waage&lt;br /&gt;Das stoßfreie Aufsetzen oder Abnehmen einer Zusatzlast vom 0,4fachen des für die aufgelegte Belastung geltenden Absolutwertes der Fehlergrenze auf die eingespielte Waage muß einen sichtbaren Ausschlag des Einspielanzeigers verursachen.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;A4.8 Prüfung des Ansprechvermögens  &lt;br /&gt;&lt;/strong&gt;Die folgenden Prüfungen müssen mit drei verschiedenen Lasten z.B. Min 1/2 Max und Max durchgeführt werden.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;A4.8.1 Nichtselbsteinspielende Anzeige und analoge Anzeige &lt;br /&gt;&lt;/strong&gt;Während die Waage in der Einspiellage ist, muss eine zusätzliche Last stossfrei auf den Lastträger aufgebracht oder abgenommen werden. Bei einer bestimmten Zusatzlast muss die Einspielungseinrichtung, wie angegeben, eine andere Einspiellage annehmen.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;A4.8.2 Digitale Anzeige&lt;/strong&gt;&lt;br /&gt;Eine Last und genügend zusätzliche Gewichtsstücke (etwa 10x 1/10 d) muss auf den Lastträger gelegt werden. Die zusätzlichen Gewichtsstücke müssen dann nacheinander abgenommen werden, bis die Anzeige (I) sich eindeutig um einen Teilungswert auf (I-d) verringert. Eines der abgenommenen Gewichtsstücke muss wieder aufgebracht werden und dann muss eine Last entsprechend 1.4d stossfrei auf den Lastträger gelegt werden. Das Ergebnis muss einen Teilungswert über der ersten Anzeige liegen (I+d).&lt;/p&gt;&lt;p&gt;Beispiel: Die Anzeige zu Beginn ist I=200 g. Entferne die zusätzlichen Gewichtsstücke bis die Anzeige sich auf I-d = 190 g verändert. Lege 1/10d = 1g und danach 1.4d = 14g auf. Die Anzeige muss dann I+d = 210 g sein.                                                                                                                                                                                                                &lt;/p&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="Hilfe_PruefungEichtechnischeSicherung" xml:space="preserve">
+    <value>Hilfe_PRuefungEichtechnischeSicherung</value>
+  </data>
+  <data name="Hilfe_PruefungFallbeschleunigung" xml:space="preserve">
+    <value>Hilfe_PRuefungFallbeschleunigung</value>
+  </data>
+  <data name="Hilfe_PruefungRollendeLasten" xml:space="preserve">
+    <value>Hilfe_PruefungRollendeLasten</value>
+  </data>
+  <data name="Hilfe_PruefungStabilitaet" xml:space="preserve">
+    <value>Hilfe_PruefungStabilitaet </value>
+  </data>
+  <data name="Hilfe_PruefungStaffelverfahren" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;&lt;strong&gt;Durchführung eines Staffelverfahrens:&lt;/strong&gt;             &lt;br /&gt;Das vollständige Staffelverfahren besteht aus einer Richtigkeitsprüfung und einer eingeschränkten Prüfung der Hysterese (da die Hysterese nur im Bereich der einzelnen Staffeln und nicht über die gesamte Fehlerkurve geprüft wird, gelten eingeschränkte Eichfehlergrenzen).              &lt;br /&gt;             &lt;br /&gt;Bei der Prüfung mit zunehmender Belastung setzt man auf die unbelastet einspielende Waage die zur Verfügung stehende &lt;span style="color: #0000ff"&gt;Normallast L&lt;/span&gt; und ermittelt die Messabweichung der 1. Staffel &lt;span style="color: #0000ff"&gt;Ew1&lt;/span&gt;. Nach Abnahme der Normallast bestimmt man die Differenz &lt;span style="color: #0000ff"&gt;&lt;span style="font-family: symbol"&gt;D&lt;/span&gt;P1&lt;/span&gt; der Anzeigewerte ohne Normallast, welche ein Maß für die Hysterese im Bereich der 1. Staffel ist.              &lt;/p&gt;&lt;p&gt;Für die 2. Staffel bringt man geeignete Ersatzlast auf. Diese Ersatzlast braucht nur annähernd dem Betrag der Normallast zu entsprechen (Toleranz ± 10e), da davon ausgegangen werden kann, dass sich die Fehlerkurve in diesem Bereich nicht wesentlich ändert. Nun fügt man wieder Normallast hinzu, ermittelt die Messabweichung &lt;span style="color: #008040"&gt;Ew2&lt;/span&gt; und nach Abnahme der Normallast die Differenz &lt;span style="color: #008040"&gt;&lt;span style="font-family: symbol"&gt;D&lt;/span&gt;P2 &lt;/span&gt;für die 2. Staffel. Dieses Verfahren wird bis zum Erreichen der Höchstlast wiederholt, wobei nicht erforderlich ist, dass alle Staffeln gleich groß sind.              &lt;br /&gt;             &lt;br /&gt;Die Messabweichung EW der Waage für einen bestimmten Belastungspunkt ergibt sich aus der Summe der vorher bis zu diesem Belastungspunkt mit Normallast festgestellten Messabweichungen (&lt;span style="font-family: symbol"&gt;S&lt;/span&gt;Ewi).              &lt;br /&gt;             &lt;br /&gt;Liegt bei einer Staffel der Absolutwert der Differenz der Anzeigewerte [&lt;span style="font-family: symbol"&gt;D&lt;/span&gt;Pi] größer/gleich 0,5 e, erfolgt die Rückgabe der Waage.             &lt;br /&gt;Ist [DPi] zwischen 0,2 e und 0,5 e, so ist die Staffel zu wiederholen. Ist bei der Wiederholung [&lt;span style="font-family: symbol"&gt;D&lt;/span&gt;Pi] &amp;gt; 0,2 e, erfolgt ebenfalls eine Rückgabe.             &lt;br /&gt;Das vollständige Staffelverfahren darf mit maximal fünf Staffeln durchgeführt werden. Es ist nicht erforderlich, dass alle Staffeln gleich groß sind. Insbesondere kann die letzte Staffel auch kleiner sein als die vorhergehenden.             &lt;/p&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="Hilfe_PruefungTaraEinrichtung" xml:space="preserve">
+    <value>Bei Hybridwaagen (Waage mit Hebelwerk) ist eine Richtigkeitsprüfung mit Taralast (gem. EN 45501 Nr. 3.5.3.3 - 3.5.3.4, A 4.6) durchzuführen</value>
+  </data>
+  <data name="Hilfe_PruefungUeberlastAnzeige" xml:space="preserve">
+    <value>Hilfe_PruefungUeberlastAnzeige </value>
+  </data>
+  <data name="Ueberschrift_PruefungAnsprechvermoegen" xml:space="preserve">
+    <value>Prüfung des Ansprechvermögens und der Empfindlichkeit</value>
+  </data>
+  <data name="Ueberschrift_PruefungEichtechnischeSicherung" xml:space="preserve">
+    <value>Eichtechnische Sicherung und Datensicherung</value>
+  </data>
+  <data name="Ueberschrift_PruefungFallbeschleunigung" xml:space="preserve">
+    <value>Berücksichtigung der Fallbeschleunigung</value>
+  </data>
+  <data name="Ueberschrift_PruefungRollendelasten" xml:space="preserve">
+    <value>Waagen für rollende Lasten</value>
+  </data>
+  <data name="Ueberschrift_PruefungStabilitaet" xml:space="preserve">
+    <value>Prüfung der Stabilität der Gleichgewichtslage</value>
+  </data>
+  <data name="Ueberschrift_PruefungStaffelverfahren" xml:space="preserve">
+    <value>Staffelverfahren</value>
+  </data>
+  <data name="Ueberschrift_PruefungTaraEinrichtung" xml:space="preserve">
+    <value>Taraeinrichtung</value>
+  </data>
+  <data name="Ueberschrift_PruefungUeberlastAnzeige" xml:space="preserve">
+    <value>Prüfung der Überlastanzeige</value>
+  </data>
+  <data name="Hilfe_PruefungStaffelverfahrenErsatzlastErsatzlast2" xml:space="preserve">
+    <value>Ablesen und eintragen des Anzeigewertes nach Abnahme der aufgebrachten Normallast.</value>
+  </data>
+  <data name="Hilfe_PruefungStaffelverfahrenErsatzlastErsatzPlusNormallast" xml:space="preserve">
+    <value>Ablesen und eintragen des Anzeigewertes der mit entsprechender Ersatzlast und deraufgebrachten Normallast nachgebildet wurde.</value>
+  </data>
+  <data name="Hilfe_PruefungStaffelverfahrenErsatzlastIst" xml:space="preserve">
+    <value>Ablesen und eintragen des Anzeigewertes der mit entsprechender Ersatzlast nachgebildet wurde. Abweichungen von maximal ±10e möglich</value>
+  </data>
+  <data name="Hilfe_PruefungStaffelverfahrenErsatzlastNormallast" xml:space="preserve">
+    <value>Eintragung der zur Verfügung stehenden vollen Normallast oder des Betrages der benötigt wird um die Höchstlast der Waage zu erreichen.</value>
+  </data>
+  <data name="Hilfe_PruefungStaffelverfahrenErsatzlastSoll" xml:space="preserve">
+    <value>Eintragung des Wertes der mit einer Ersatzlast nachgebildet werden soll.</value>
+  </data>
+  <data name="Hilfe_PruefungStaffelverfahrenNormallast" xml:space="preserve">
+    <value>Ablesen und eintragen des Anzeigewertes der aufgebrachten Normallast.</value>
+  </data>
+  <data name="Hilfe_PruefungWiederholbarkeitStaffelverfahren" xml:space="preserve">
+    <value>Die Prüfung mit 0,5 Max ist auch vor der Anwendung eines Staffelverfahrens zur Bestimmung der erforderlichen Normallast durchzuführen.	
+
+Ist der Fehler ≤ 0,2e → L = 0,2 Max = Normalien von 20% von Max werden benötigt							
+Ist der Fehler ≤ 0,3e → L = 0,35 Max = Normalien von 35% von Max werden benötigt							
+Ist der Fehler &gt; 0,3e → L = 0,5 Max = Normalien von 50% von Max werden benötigt</value>
+  </data>
+  <data name="Hilfe_PruefungEignungAchslastwaegungen" xml:space="preserve">
+    <value>Eignung für Achslastwägungen</value>
+  </data>
+  <data name="Ueberschrift_PruefungEignungAchslastwaegungen" xml:space="preserve">
+    <value>Eignung für Achslastwägungen</value>
+  </data>
+  <data name="EichfehlergrenzenNichtEingehalten" xml:space="preserve">
+    <value>Die Eichfehlergrenzen werden nicht eingehalten. Der Vorgang kann nicht weitergeführt werden. </value>
+  </data>
+  <data name="Hilfe_Exports" xml:space="preserve">
+    <value>Export der Daten in Excel und Wordvorlagen</value>
+  </data>
+  <data name="Hilfe_Versenden" xml:space="preserve">
+    <value>Senden der Daten zu RHEWA</value>
+  </data>
+  <data name="Ueberschrift_Exports" xml:space="preserve">
+    <value>Export der Daten</value>
+  </data>
+  <data name="Ueberschrift_Versenden" xml:space="preserve">
+    <value>Senden der Daten zu RHEWA</value>
+  </data>
+  <data name="EinsEintragen" xml:space="preserve">
+    <value>Bitte "1" eintragen</value>
+  </data>
+  <data name="Hilfe_StammdatenNeueWZ" xml:space="preserve">
+    <value>Hiermit können Sie eine neue Wägezelle anlegen, falls sie in der vorhandenen Auswahl nicht enthalten ist.</value>
+  </data>
+  <data name="BitteNeuStarten" xml:space="preserve">
+    <value>Bitte Starten Sie die Anwendung erneut um die Lizenzierung abzuschließen.</value>
+  </data>
+  <data name="KeineVerbindung" xml:space="preserve">
+    <value>Es konnte keine Verbindung aufgebaut werden. Bitte stellen Sie eine Verbindung zum Internet her und versuchen es erneut.</value>
+  </data>
+</root>

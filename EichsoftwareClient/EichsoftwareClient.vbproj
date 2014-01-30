@@ -1,0 +1,970 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E995FE84-F5DA-4CC1-92FE-93028CF4E783}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>EichsoftwareClient.My.MyApplication</StartupObject>
+    <RootNamespace>EichsoftwareClient</RootNamespace>
+    <AssemblyName>EichsoftwareClient</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <PublishUrl>D:\Daten\Hill Daten\Privat\Dropbox\RHEWA\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>29</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>EichsoftwareClient.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>EichsoftwareClient.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\weighing_mashine.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>5A9F255DFC88608A8C710400AFD55BB0D6351844</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>EichsoftwareClient_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.Compatibility" />
+    <Reference Include="Microsoft.VisualBasic.Compatibility.Data" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2013.2.724.40\Telerik.WinControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.GridView, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2013.2.724.40\Telerik.WinControls.GridView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2013.2.724.40\Telerik.WinControls.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TelerikCommon, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWF\2013.2.724.40\TelerikCommon.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic.Compatibility" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Beschaffenheitspruefung.vb">
+      <DependentUpon>EntityModelDatabaseClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Eichprotokoll.vb">
+      <DependentUpon>EntityModelDatabaseClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Eichprozess.vb">
+      <DependentUpon>EntityModelDatabaseClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityModelDatabaseClient.Context.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityModelDatabaseClient.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityModelDatabaseClient.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityModelDatabaseClient.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="EntityModelDatabaseClient.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityModelDatabaseClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Kompatiblitaetsnachweis.vb">
+      <DependentUpon>EntityModelDatabaseClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Lizensierung.vb">
+      <DependentUpon>EntityModelDatabaseClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Lookup_Auswertegeraet.vb">
+      <DependentUpon>EntityModelDatabaseClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Lookup_Bearbeitungsstatus.vb">
+      <DependentUpon>EntityModelDatabaseClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Lookup_Konformitaetsbewertungsverfahren.vb">
+      <DependentUpon>EntityModelDatabaseClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Lookup_Vorgangsstatus.vb">
+      <DependentUpon>EntityModelDatabaseClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Lookup_Waagenart.vb">
+      <DependentUpon>EntityModelDatabaseClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Lookup_Waagentyp.vb">
+      <DependentUpon>EntityModelDatabaseClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Lookup_Waegezelle.vb">
+      <DependentUpon>EntityModelDatabaseClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MainModule.vb" />
+    <Compile Include="Model\clsServerHelper.vb" />
+    <Compile Include="Model\Win32APICall.vb" />
+    <Compile Include="Mogelstatistik.vb">
+      <DependentUpon>EntityModelDatabaseClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PruefungAnsprechvermoegen.vb">
+      <DependentUpon>EntityModelDatabaseClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PruefungAussermittigeBelastung.vb">
+      <DependentUpon>EntityModelDatabaseClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PruefungEichfehlergrenzen.vb">
+      <DependentUpon>EntityModelDatabaseClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PruefungLinearitaetFallend.vb">
+      <DependentUpon>EntityModelDatabaseClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PruefungLinearitaetSteigend.vb">
+      <DependentUpon>EntityModelDatabaseClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PruefungRollendeLasten.vb">
+      <DependentUpon>EntityModelDatabaseClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PruefungStabilitaetGleichgewichtslage.vb">
+      <DependentUpon>EntityModelDatabaseClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PruefungStaffelverfahrenErsatzlast.vb">
+      <DependentUpon>EntityModelDatabaseClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PruefungStaffelverfahrenNormallast.vb">
+      <DependentUpon>EntityModelDatabaseClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PruefungWiederholbarkeit.vb">
+      <DependentUpon>EntityModelDatabaseClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\GlobaleLokalisierung.de.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GlobaleLokalisierung.de.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\GlobaleLokalisierung.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GlobaleLokalisierung.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\GlobaleLokalisierung.en.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GlobaleLokalisierung.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\GlobaleLokalisierung.pl.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GlobaleLokalisierung.pl.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\GlobaleEnumeratoren.vb" />
+    <Compile Include="Model\RuntimeLocalizer.vb" />
+    <Compile Include="Service References\EichsoftwareWebservice\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\frmLizenz.Designer.vb">
+      <DependentUpon>frmLizenz.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\frmLizenz.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Pelster\frmDummy.Designer.vb">
+      <DependentUpon>frmDummy.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\Pelster\frmDummy.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\frmEichfehlergrenzen.Designer.vb">
+      <DependentUpon>frmEichfehlergrenzen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\frmEichfehlergrenzen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\frmMainContainer.Designer.vb">
+      <DependentUpon>frmMainContainer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\frmMainContainer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="View\Forms\frmNeueWaegezele.Designer.vb">
+      <DependentUpon>frmNeueWaegezele.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\frmNeueWaegezele.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\Pelster\ObjectDumper.vb" />
+    <Compile Include="View\UserControls\Allgemein\CustomVisualItem.vb" />
+    <Compile Include="View\UserControls\Allgemein\ucoNewStatustlist.Designer.vb">
+      <DependentUpon>ucoNewStatustlist.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\Allgemein\ucoNewStatustlist.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\Eichprozess\ucoPruefungEignungFuerAchlastwaegungen.Designer.vb">
+      <DependentUpon>ucoPruefungEignungFuerAchlastwaegungen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\Eichprozess\ucoPruefungEignungFuerAchlastwaegungen.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\Eichprozess\ucoEichtechnischeSicherung.Designer.vb">
+      <DependentUpon>ucoEichtechnischeSicherung.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\Eichprozess\ucoEichtechnischeSicherung.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\Eichprozess\ucoFallbeschleunigung.Designer.vb">
+      <DependentUpon>ucoFallbeschleunigung.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\Eichprozess\ucoFallbeschleunigung.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\Eichprozess\ucoPruefungAnsprechvermoegen.Designer.vb">
+      <DependentUpon>ucoPruefungAnsprechvermoegen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\Eichprozess\ucoPruefungAnsprechvermoegen.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\Eichprozess\ucoPruefungRollendeLasten.Designer.vb">
+      <DependentUpon>ucoPruefungRollendeLasten.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\Eichprozess\ucoPruefungRollendeLasten.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\Eichprozess\ucoPruefungStabilitaet.Designer.vb">
+      <DependentUpon>ucoPruefungStabilitaet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\Eichprozess\ucoPruefungStabilitaet.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\Eichprozess\ucoPruefungStaffelverfahren.Designer.vb">
+      <DependentUpon>ucoPruefungStaffelverfahren.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\Eichprozess\ucoPruefungStaffelverfahren.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\Eichprozess\ucoPruefungUeberlastanzeige.Designer.vb">
+      <DependentUpon>ucoPruefungUeberlastanzeige.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\Eichprozess\ucoPruefungUeberlastanzeige.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\Eichprozess\ucoReports.Designer.vb">
+      <DependentUpon>ucoReports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\Eichprozess\ucoReports.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\Eichprozess\ucoTaraeinrichtung.Designer.vb">
+      <DependentUpon>ucoTaraeinrichtung.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\Eichprozess\ucoTaraeinrichtung.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\Allgemein\ucoDummy.Designer.vb">
+      <DependentUpon>ucoDummy.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\Allgemein\ucoDummy.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\Eichprozess\ucoPruefungLinearitaet.Designer.vb">
+      <DependentUpon>ucoPruefungLinearitaet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\Eichprozess\ucoPruefungLinearitaet.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\Eichprozess\ucoPruefungNullstellungUndAussermittigeBelastung.Designer.vb">
+      <DependentUpon>ucoPruefungNullstellungUndAussermittigeBelastung.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\Eichprozess\ucoPruefungNullstellungUndAussermittigeBelastung.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\Eichprozess\ucoEichfehlergrenzen.Designer.vb">
+      <DependentUpon>ucoEichfehlergrenzen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\Eichprozess\ucoEichfehlergrenzen.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\Eichprozess\ucoEichprotokollDaten.Designer.vb">
+      <DependentUpon>ucoEichprotokollDaten.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\Eichprozess\ucoEichprotokollDaten.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\Eichprozess\ucoEichprotokollVerfahrenswahl.Designer.vb">
+      <DependentUpon>ucoEichprotokollVerfahrenswahl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\Eichprozess\ucoEichprotokollVerfahrenswahl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\Eichprozess\ucoKompatiblititaetsnachweisErgebnis.Designer.vb">
+      <DependentUpon>ucoKompatiblititaetsnachweisErgebnis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\Eichprozess\ucoKompatiblititaetsnachweisErgebnis.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\Allgemein\ucoContent.Designer.vb">
+      <DependentUpon>ucoContent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\Allgemein\ucoContent.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\Allgemein\ucoEichprozessauswahlliste.Designer.vb">
+      <DependentUpon>ucoEichprozessauswahlliste.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\Allgemein\ucoEichprozessauswahlliste.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\Eichprozess\ucoKompatiblititaetsnachweis.Designer.vb">
+      <DependentUpon>ucoKompatiblititaetsnachweis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\Eichprozess\ucoKompatiblititaetsnachweis.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\Allgemein\ucoStatusBullet.Designer.vb">
+      <DependentUpon>ucoStatusBullet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\Allgemein\ucoStatusBullet.vb" />
+    <Compile Include="View\UserControls\Eichprozess\ucoBeschaffenheitspruefung.Designer.vb">
+      <DependentUpon>ucoBeschaffenheitspruefung.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\Eichprozess\ucoBeschaffenheitspruefung.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\Eichprozess\ucoPruefungWiederholbarkeitBelastung.Designer.vb">
+      <DependentUpon>ucoPruefungWiederholbarkeitBelastung.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\Eichprozess\ucoPruefungWiederholbarkeitBelastung.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\Eichprozess\ucoStammdatenEingabe.Designer.vb">
+      <DependentUpon>ucoStammdatenEingabe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\Eichprozess\ucoStammdatenEingabe.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\Eichprozess\UcoVersenden.Designer.vb">
+      <DependentUpon>UcoVersenden.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\Eichprozess\UcoVersenden.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\GlobaleLokalisierung.de.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GlobaleLokalisierung.de.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\GlobaleLokalisierung.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GlobaleLokalisierung.en.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\GlobaleLokalisierung.pl.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GlobaleLokalisierung.pl.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\GlobaleLokalisierung.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GlobaleLokalisierung.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="View\Forms\frmLizenz.resx">
+      <DependentUpon>frmLizenz.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\Pelster\frmDummy.resx">
+      <DependentUpon>frmDummy.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\frmEichfehlergrenzen.de.resx">
+      <DependentUpon>frmEichfehlergrenzen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\frmEichfehlergrenzen.pl.resx">
+      <DependentUpon>frmEichfehlergrenzen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\frmEichfehlergrenzen.resx">
+      <DependentUpon>frmEichfehlergrenzen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\frmMainContainer.de-DE.resx">
+      <DependentUpon>frmMainContainer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\frmMainContainer.de.resx">
+      <DependentUpon>frmMainContainer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\frmMainContainer.resx">
+      <DependentUpon>frmMainContainer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\frmNeueWaegezele.de.resx">
+      <DependentUpon>frmNeueWaegezele.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\frmNeueWaegezele.resx">
+      <DependentUpon>frmNeueWaegezele.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Allgemein\ucoNewStatustlist.resx">
+      <DependentUpon>ucoNewStatustlist.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoPruefungEignungFuerAchlastwaegungen.de.resx">
+      <DependentUpon>ucoPruefungEignungFuerAchlastwaegungen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoPruefungEignungFuerAchlastwaegungen.pl.resx">
+      <DependentUpon>ucoPruefungEignungFuerAchlastwaegungen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoPruefungEignungFuerAchlastwaegungen.resx">
+      <DependentUpon>ucoPruefungEignungFuerAchlastwaegungen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoPruefungNullstellungUndAussermittigeBelastung.de.resx">
+      <DependentUpon>ucoPruefungNullstellungUndAussermittigeBelastung.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoPruefungStaffelverfahren.de.resx">
+      <DependentUpon>ucoPruefungStaffelverfahren.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoPruefungStaffelverfahren.pl.resx">
+      <DependentUpon>ucoPruefungStaffelverfahren.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoEichtechnischeSicherung.de.resx">
+      <DependentUpon>ucoEichtechnischeSicherung.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoEichtechnischeSicherung.pl.resx">
+      <DependentUpon>ucoEichtechnischeSicherung.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoEichtechnischeSicherung.resx">
+      <DependentUpon>ucoEichtechnischeSicherung.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoFallbeschleunigung.de.resx">
+      <DependentUpon>ucoFallbeschleunigung.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoFallbeschleunigung.pl.resx">
+      <DependentUpon>ucoFallbeschleunigung.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoFallbeschleunigung.resx">
+      <DependentUpon>ucoFallbeschleunigung.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoPruefungAnsprechvermoegen.de.resx">
+      <DependentUpon>ucoPruefungAnsprechvermoegen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoPruefungAnsprechvermoegen.pl.resx">
+      <DependentUpon>ucoPruefungAnsprechvermoegen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoPruefungAnsprechvermoegen.resx">
+      <DependentUpon>ucoPruefungAnsprechvermoegen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoPruefungRollendeLasten.de.resx">
+      <DependentUpon>ucoPruefungRollendeLasten.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoPruefungRollendeLasten.pl.resx">
+      <DependentUpon>ucoPruefungRollendeLasten.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoPruefungRollendeLasten.resx">
+      <DependentUpon>ucoPruefungRollendeLasten.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoPruefungNullstellungUndAussermittigeBelastung.pl.resx">
+      <DependentUpon>ucoPruefungNullstellungUndAussermittigeBelastung.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoPruefungStabilitaet.de.resx">
+      <DependentUpon>ucoPruefungStabilitaet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoPruefungStabilitaet.pl.resx">
+      <DependentUpon>ucoPruefungStabilitaet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoPruefungStabilitaet.resx">
+      <DependentUpon>ucoPruefungStabilitaet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoPruefungStaffelverfahren.resx">
+      <DependentUpon>ucoPruefungStaffelverfahren.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoPruefungUeberlastanzeige.de.resx">
+      <DependentUpon>ucoPruefungUeberlastanzeige.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoPruefungUeberlastanzeige.pl.resx">
+      <DependentUpon>ucoPruefungUeberlastanzeige.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoPruefungUeberlastanzeige.resx">
+      <DependentUpon>ucoPruefungUeberlastanzeige.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoPruefungWiederholbarkeitBelastung.de.resx">
+      <DependentUpon>ucoPruefungWiederholbarkeitBelastung.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoReports.resx">
+      <DependentUpon>ucoReports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoTaraeinrichtung.de.resx">
+      <DependentUpon>ucoTaraeinrichtung.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoTaraeinrichtung.pl.resx">
+      <DependentUpon>ucoTaraeinrichtung.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoTaraeinrichtung.resx">
+      <DependentUpon>ucoTaraeinrichtung.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Allgemein\ucoContent.de.resx">
+      <DependentUpon>ucoContent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Allgemein\ucoContent.pl.resx">
+      <DependentUpon>ucoContent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Allgemein\ucoContent.resx">
+      <DependentUpon>ucoContent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Allgemein\ucoDummy.resx">
+      <DependentUpon>ucoDummy.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Allgemein\ucoEichprozessauswahlliste.de.resx">
+      <DependentUpon>ucoEichprozessauswahlliste.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Allgemein\ucoEichprozessauswahlliste.en.resx">
+      <DependentUpon>ucoEichprozessauswahlliste.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Allgemein\ucoEichprozessauswahlliste.pl.resx">
+      <DependentUpon>ucoEichprozessauswahlliste.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Allgemein\ucoEichprozessauswahlliste.resx">
+      <DependentUpon>ucoEichprozessauswahlliste.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoBeschaffenheitspruefung.de.resx">
+      <DependentUpon>ucoBeschaffenheitspruefung.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoBeschaffenheitspruefung.pl.resx">
+      <DependentUpon>ucoBeschaffenheitspruefung.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoPruefungLinearitaet.de.resx">
+      <DependentUpon>ucoPruefungLinearitaet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoPruefungLinearitaet.pl.resx">
+      <DependentUpon>ucoPruefungLinearitaet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoPruefungLinearitaet.resx">
+      <DependentUpon>ucoPruefungLinearitaet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoEichprotokollVerfahrenswahl.af.resx">
+      <DependentUpon>ucoEichprotokollVerfahrenswahl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoEichprotokollVerfahrenswahl.en.resx">
+      <DependentUpon>ucoEichprotokollVerfahrenswahl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoPruefungNullstellungUndAussermittigeBelastung.resx">
+      <DependentUpon>ucoPruefungNullstellungUndAussermittigeBelastung.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoEichfehlergrenzen.resx">
+      <DependentUpon>ucoEichfehlergrenzen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoEichprotokollDaten.de.resx">
+      <DependentUpon>ucoEichprotokollDaten.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoEichprotokollDaten.pl.resx">
+      <DependentUpon>ucoEichprotokollDaten.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoEichprotokollDaten.resx">
+      <DependentUpon>ucoEichprotokollDaten.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoEichprotokollVerfahrenswahl.de.resx">
+      <DependentUpon>ucoEichprotokollVerfahrenswahl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoEichprotokollVerfahrenswahl.pl.resx">
+      <DependentUpon>ucoEichprotokollVerfahrenswahl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoEichprotokollVerfahrenswahl.resx">
+      <DependentUpon>ucoEichprotokollVerfahrenswahl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoKompatiblititaetsnachweis.de.resx">
+      <DependentUpon>ucoKompatiblititaetsnachweis.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoKompatiblititaetsnachweis.resx">
+      <DependentUpon>ucoKompatiblititaetsnachweis.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoKompatiblititaetsnachweisErgebnis.de.resx">
+      <DependentUpon>ucoKompatiblititaetsnachweisErgebnis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoKompatiblititaetsnachweisErgebnis.resx">
+      <DependentUpon>ucoKompatiblititaetsnachweisErgebnis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoPruefungWiederholbarkeitBelastung.resx">
+      <DependentUpon>ucoPruefungWiederholbarkeitBelastung.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoStammdatenEingabe.de.resx">
+      <DependentUpon>ucoStammdatenEingabe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Allgemein\ucoStatusBullet.resx">
+      <DependentUpon>ucoStatusBullet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoBeschaffenheitspruefung.resx">
+      <DependentUpon>ucoBeschaffenheitspruefung.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoStammdatenEingabe.resx">
+      <DependentUpon>ucoStammdatenEingabe.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\UcoVersenden.de.resx">
+      <DependentUpon>UcoVersenden.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\UcoVersenden.resx">
+      <DependentUpon>UcoVersenden.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App - debug.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="EntityModelDatabaseClient.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EntityModelDatabaseClient.Designer.vb</LastGenOutput>
+    </EntityDeploy>
+    <None Include="APP - RHEWA.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EichsoftwareClient_TemporaryKey.pfx" />
+    <None Include="EntityModelDatabaseClient.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EntityModelDatabaseClient.edmx</DependentUpon>
+      <LastGenOutput>EntityModelDatabaseClient.Context.vb</LastGenOutput>
+    </None>
+    <None Include="EntityModelDatabaseClient.edmx.diagram">
+      <DependentUpon>EntityModelDatabaseClient.edmx</DependentUpon>
+    </None>
+    <None Include="EntityModelDatabaseClient.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EntityModelDatabaseClient.edmx</DependentUpon>
+      <LastGenOutput>EntityModelDatabaseClient.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\Beschaffenheitspruefung.datasource" />
+    <None Include="My Project\DataSources\Eichprotokoll.datasource" />
+    <None Include="My Project\DataSources\Eichprotokoll_Identifikationsdaten_Waage.datasource" />
+    <None Include="My Project\DataSources\Eichprozess.datasource" />
+    <None Include="My Project\DataSources\EichsoftwareClientdatabaseEntities1.datasource" />
+    <None Include="My Project\DataSources\FrmMainContainer.datasource" />
+    <None Include="My Project\DataSources\Lizensierung.datasource" />
+    <None Include="My Project\DataSources\Lookup_Auswertegeraet.datasource" />
+    <None Include="My Project\DataSources\Lookup_Konformitaetsbewertungsverfahren.datasource" />
+    <None Include="My Project\DataSources\Lookup_Waagenart.datasource" />
+    <None Include="My Project\DataSources\Lookup_Waagentyp.datasource" />
+    <None Include="My Project\DataSources\Lookup_Waegezelle.datasource" />
+    <None Include="My Project\DataSources\Lookup_Zusatzeinrichtung.datasource" />
+    <None Include="My Project\DataSources\Mogelstatistik.datasource" />
+    <None Include="My Project\DataSources\PruefungAnsprechvermoegen.datasource" />
+    <None Include="My Project\DataSources\PruefungAussermittigeBelastung.datasource" />
+    <None Include="My Project\DataSources\PruefungEichfehlergrenzen.datasource" />
+    <None Include="My Project\DataSources\PruefungLinearitaetFallend.datasource" />
+    <None Include="My Project\DataSources\PruefungLinearitaetSteigend.datasource" />
+    <None Include="My Project\DataSources\PruefungRollendeLasten.datasource" />
+    <None Include="My Project\DataSources\PruefungStabilitaetGleichgewichtslage.datasource" />
+    <None Include="My Project\DataSources\PruefungStaffelverfahrenErsatzlast.datasource" />
+    <None Include="My Project\DataSources\PruefungStaffelverfahrenNormallast.datasource" />
+    <None Include="My Project\DataSources\ucoBeschaffenheitspruefung.datasource" />
+    <None Include="My Project\DataSources\ucoContent.datasource" />
+    <None Include="My Project\DataSources\ucoStatusBullet.datasource" />
+    <None Include="My Project\DataSources\ucoStatusBullet.EnumState.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Resources\Ersteichung DE.doc" />
+    <None Include="Resources\Ersteichung EN.doc" />
+    <None Include="Resources\Ersteichung PL.doc" />
+    <None Include="Service References\EichsoftwareWebservice\EichsoftwareClient.EichsoftwareWebservice.clsEichprozessFuerAuswahlliste.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EichsoftwareWebservice\EichsoftwareClient.EichsoftwareWebservice.ServerEichprozess.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EichsoftwareWebservice\EichsoftwareClient.EichsoftwareWebservice.ServerLookup_Auswertegeraet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EichsoftwareWebservice\EichsoftwareClient.EichsoftwareWebservice.ServerLookup_Waegezelle.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\Kompatibilitätsnachweis DE.xls" />
+    <None Include="Resources\Kompatibilitätsnachweis EN.xls" />
+    <None Include="Resources\Konformitätserklärung DE.xls" />
+    <None Include="Resources\Konformitätserklärung PL.xls" />
+    <None Include="Resources\Konformitätserklärung RO.xls" />
+    <None Include="Resources\RHEWA-Logo_35mm_600dpi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resultset_next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resultset_previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flag_germany.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flag_poland.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flag_usa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.4.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 4.0 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EichsoftwareClientdatabase.sdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Service References\EichsoftwareWebservice\EichsoftwareWebservice.disco" />
+    <None Include="Service References\EichsoftwareWebservice\EichsoftwareWebservice.wsdl" />
+    <None Include="Service References\EichsoftwareWebservice\EichsoftwareWebservice.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EichsoftwareWebservice\EichsoftwareWebservice1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EichsoftwareWebservice\EichsoftwareWebservice2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EichsoftwareWebservice\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Service References\EichsoftwareWebservice\configuration.svcinfo" />
+    <None Include="Service References\EichsoftwareWebservice\configuration91.svcinfo" />
+    <None Include="Resources\Verschiebeweg_PL.PNG" />
+    <None Include="Resources\Verschiebeweg_GB.PNG" />
+    <None Include="Resources\Verschiebeweg_DE.PNG" />
+    <None Include="Resources\TwelveLCs.PNG" />
+    <None Include="Resources\SixLCs.PNG" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\disk.png" />
+    <None Include="Resources\lock.png" />
+    <None Include="Resources\Genauigkeitsklasse1.png" />
+    <None Include="Resources\Genauigkeitsklasse2.png" />
+    <None Include="Resources\Genauigkeitsklasse3.png" />
+    <None Include="Resources\Genauigkeitsklasse4.png" />
+    <None Include="Resources\EightLCs.PNG" />
+    <None Include="Resources\FourLCs.PNG" />
+    <None Include="Resources\Equation.PNG" />
+    <None Include="Resources\Fahrzeug_Wenden_DE.PNG" />
+    <None Include="Resources\Fahrzeug_Wenden_GB.PNG" />
+    <None Include="Resources\Fahrzeug_Wenden_PL.PNG" />
+    <None Include="Resources\LKW.PNG" />
+    <None Include="Resources\LKW_Gedreht.PNG" />
+    <None Include="Resources\82Alpha_Beschilderung_Auswertegeraet.PNG" />
+    <None Include="Resources\82Alpha_Beschilderung_Auswertegeraet_Frontseite.PNG" />
+    <None Include="Resources\82Alpha_CEXY_Auswertegeraet.PNG" />
+    <None Include="Resources\82Basic_Beschilderung_Auswertegeraet.PNG" />
+    <None Include="Resources\82Basic_Beschilderung_Auswertegeraet_Unterseite.PNG" />
+    <None Include="Resources\82Basic_CEXY_Auswertegeraet.PNG" />
+    <None Include="Resources\83N_Beschilderung_Auswertegeraet_Frontseite.PNG" />
+    <None Include="Resources\83N_Beschilderung_Auswertegeraet_Rueckseite.PNG" />
+    <None Include="Resources\83Plus_Beschilderung_Auswertegeraet_Frontseite.PNG" />
+    <None Include="Resources\83Plus_Beschilderung_Auswertegeraet_Rueckseite.PNG" />
+    <None Include="Resources\83Z_Beschilderung_Auswertegeraet_Frontseite.PNG" />
+    <None Include="Resources\83Z_Beschilderung_Auswertegeraet_Rueckseite.PNG" />
+    <None Include="Resources\84_Beschilderung_Auswertegeraet_Frontseite.PNG" />
+    <None Include="Resources\84_Beschilderung_Auswertegeraet_Rueckseite.PNG" />
+    <None Include="Resources\92_Beschilderung_Auswertegeraet_Frontseite.PNG" />
+    <None Include="Resources\92_Beschilderung_Auswertegeraet_Rueckseite.PNG" />
+    <None Include="Resources\0405_Beschilderung_Auswertegeraet_Frontseite.PNG" />
+    <None Include="Resources\0405_Beschilderung_Auswertegeraet_Rueckseite.PNG" />
+    <None Include="Resources\82Alpha_Beschilderung_Auswertegeraet_Frontseite_mini.PNG" />
+    <None Include="Resources\82Alpha_Beschilderung_Auswertegeraet_mini.PNG" />
+    <None Include="Resources\82Alpha_CEXY_Auswertegeraet_mini.PNG" />
+    <None Include="Resources\82Basic_Beschilderung_Auswertegeraet_mini.PNG" />
+    <None Include="Resources\82Basic_Beschilderung_Auswertegeraet_Unterseite_mini.PNG" />
+    <None Include="Resources\82Basic_CEXY_Auswertegeraet_mini.PNG" />
+    <None Include="Resources\83N_Beschilderung_Auswertegeraet_Frontseite_mini.PNG" />
+    <None Include="Resources\83N_Beschilderung_Auswertegeraet_Rueckseite_mini.PNG" />
+    <None Include="Resources\83Plus_Beschilderung_Auswertegeraet_Frontseite_mini.PNG" />
+    <None Include="Resources\83Plus_Beschilderung_Auswertegeraet_Rueckseite_mini.PNG" />
+    <None Include="Resources\83Z_Beschilderung_Auswertegeraet_Frontseite_mini.PNG" />
+    <None Include="Resources\83Z_Beschilderung_Auswertegeraet_Rueckseite_mini.PNG" />
+    <None Include="Resources\84_Beschilderung_Auswertegeraet_Frontseite_mini.PNG" />
+    <None Include="Resources\84_Beschilderung_Auswertegeraet_Rueckseite_mini.PNG" />
+    <None Include="Resources\92_Beschilderung_Auswertegeraet_Frontseite_mini.PNG" />
+    <None Include="Resources\92_Beschilderung_Auswertegeraet_Rueckseite_mini.PNG" />
+    <None Include="Resources\0405_Beschilderung_Auswertegeraet_Frontseite_mini.PNG" />
+    <None Include="Resources\0405_Beschilderung_Auswertegeraet_Rueckseite_mini.PNG" />
+    <None Include="Resources\accept.png" />
+    <None Include="Resources\error.png" />
+    <None Include="Resources\database_refresh.png" />
+    <Content Include="Resources\report_add.png" />
+    <Content Include="Resources\report_delete.png" />
+    <Content Include="Resources\report_edit.png" />
+    <EmbeddedResource Include="Resources\RHEWAGREEN.tssp" />
+    <None Include="Resources\weighing_mashine.ico" />
+    <None Include="Resources\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\EichsoftwareWebservice\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

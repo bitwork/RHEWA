@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="RadButtonShowEFGFallend.Text" xml:space="preserve">
+    <value>Zeige EFG</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblBereich3FallendFehlerGrenzen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 18</value>
+  </data>
+  <data name="lblBereich3FallendFehlerGrenzen.Text" xml:space="preserve">
+    <value>Fehler [kg]</value>
+  </data>
+  <data name="lblBereich3FallendEFGSpezial.Text" xml:space="preserve">
+    <value>EFG</value>
+  </data>
+  <data name="lblBereich3FallendGewicht.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 18</value>
+  </data>
+  <data name="lblBereich3FallendGewicht.Text" xml:space="preserve">
+    <value>Last [kg]</value>
+  </data>
+  <data name="lblBereich3FallendAnzeigeGewicht.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 18</value>
+  </data>
+  <data name="lblBereich3FallendAnzeigeGewicht.Text" xml:space="preserve">
+    <value>Anzeige [kg]</value>
+  </data>
+  <data name="RadGroupBoxBereich3Fallend.HeaderText" xml:space="preserve">
+    <value>Bereich 3</value>
+  </data>
+  <data name="RadGroupBoxBereich3Fallend.Text" xml:space="preserve">
+    <value>Bereich 3</value>
+  </data>
+  <data name="lblBereich2FallendFehlerGrenzen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 18</value>
+  </data>
+  <data name="lblBereich2FallendFehlerGrenzen.Text" xml:space="preserve">
+    <value>Fehler [kg]</value>
+  </data>
+  <data name="lblBereich2FallendEFGSpezial.Text" xml:space="preserve">
+    <value>EFG</value>
+  </data>
+  <data name="lblBereich2FallendGewicht.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 18</value>
+  </data>
+  <data name="lblBereich2FallendGewicht.Text" xml:space="preserve">
+    <value>Last [kg]</value>
+  </data>
+  <data name="lblBereich2FallendAnzeigeGewicht.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 18</value>
+  </data>
+  <data name="lblBereich2FallendAnzeigeGewicht.Text" xml:space="preserve">
+    <value>Anzeige [kg]</value>
+  </data>
+  <data name="RadGroupBoxBereich2Fallend.HeaderText" xml:space="preserve">
+    <value>Bereich 2</value>
+  </data>
+  <data name="RadGroupBoxBereich2Fallend.Text" xml:space="preserve">
+    <value>Bereich 2</value>
+  </data>
+  <data name="lblBereich1FallendGewicht.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 18</value>
+  </data>
+  <data name="lblBereich1FallendGewicht.Text" xml:space="preserve">
+    <value>Last [kg]</value>
+  </data>
+  <data name="lblBereich1FallendAnzeigeGewicht.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 18</value>
+  </data>
+  <data name="lblBereich1FallendAnzeigeGewicht.Text" xml:space="preserve">
+    <value>Anzeige [kg]</value>
+  </data>
+  <data name="lblBereich1FallendEFGSpezial.Text" xml:space="preserve">
+    <value>EFG</value>
+  </data>
+  <data name="lblBereich1FallendFehlerGrenzen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 18</value>
+  </data>
+  <data name="lblBereich1FallendFehlerGrenzen.Text" xml:space="preserve">
+    <value>Fehler [kg]</value>
+  </data>
+  <data name="RadGroupBoxBereich1Fallend.HeaderText" xml:space="preserve">
+    <value>Bereich 1</value>
+  </data>
+  <data name="RadGroupBoxBereich1Fallend.Text" xml:space="preserve">
+    <value>Bereich 1</value>
+  </data>
+  <data name="RadGroupBoxPruefungLinearitaetFallend.HeaderText" xml:space="preserve">
+    <value>Linearität Fallend</value>
+  </data>
+  <data name="RadGroupBoxPruefungLinearitaetFallend.Text" xml:space="preserve">
+    <value>Linearität Fallend</value>
+  </data>
+  <data name="RadButtonShowEFGSteigend.Text" xml:space="preserve">
+    <value>Zeige EFG</value>
+  </data>
+  <data name="lblBereich3FehlerGrenzen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 18</value>
+  </data>
+  <data name="lblBereich3FehlerGrenzen.Text" xml:space="preserve">
+    <value>Fehler [kg]</value>
+  </data>
+  <data name="lblBereich3EFGSpezial.Text" xml:space="preserve">
+    <value>EFG</value>
+  </data>
+  <data name="lblBereich3Gewicht.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 18</value>
+  </data>
+  <data name="lblBereich3Gewicht.Text" xml:space="preserve">
+    <value>Last [kg]</value>
+  </data>
+  <data name="lblBereich3AnzeigeGewicht.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 18</value>
+  </data>
+  <data name="lblBereich3AnzeigeGewicht.Text" xml:space="preserve">
+    <value>Anzeige [kg]</value>
+  </data>
+  <data name="RadGroupBoxBereich3.HeaderText" xml:space="preserve">
+    <value>Bereich 3</value>
+  </data>
+  <data name="RadGroupBoxBereich3.Text" xml:space="preserve">
+    <value>Bereich 3</value>
+  </data>
+  <data name="lblBereich2FehlerGrenzen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 18</value>
+  </data>
+  <data name="lblBereich2FehlerGrenzen.Text" xml:space="preserve">
+    <value>Fehler [kg]</value>
+  </data>
+  <data name="lblBereich2EFGSpezial.Text" xml:space="preserve">
+    <value>EFG</value>
+  </data>
+  <data name="lblBereich2Gewicht.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 18</value>
+  </data>
+  <data name="lblBereich2Gewicht.Text" xml:space="preserve">
+    <value>Last [kg]</value>
+  </data>
+  <data name="lblBereich2AnzeigeGewicht.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 18</value>
+  </data>
+  <data name="lblBereich2AnzeigeGewicht.Text" xml:space="preserve">
+    <value>Anzeige [kg]</value>
+  </data>
+  <data name="RadGroupBoxBereich2.HeaderText" xml:space="preserve">
+    <value>Bereich 2</value>
+  </data>
+  <data name="RadGroupBoxBereich2.Text" xml:space="preserve">
+    <value>Bereich 2</value>
+  </data>
+  <data name="lblBereich1FehlerGrenzen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 18</value>
+  </data>
+  <data name="lblBereich1FehlerGrenzen.Text" xml:space="preserve">
+    <value>Fehler [kg]</value>
+  </data>
+  <data name="lblBereich1EFGSpezial.Text" xml:space="preserve">
+    <value>EFG</value>
+  </data>
+  <data name="lblBereich1Gewicht.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 18</value>
+  </data>
+  <data name="lblBereich1Gewicht.Text" xml:space="preserve">
+    <value>Last [kg]</value>
+  </data>
+  <data name="lblBereich1AnzeigeGewicht.Size" type="System.Drawing.Size, System.Drawing">
+    <value>74, 18</value>
+  </data>
+  <data name="lblBereich1AnzeigeGewicht.Text" xml:space="preserve">
+    <value>Anzeige [kg]</value>
+  </data>
+  <data name="RadGroupBoxBereich1.HeaderText" xml:space="preserve">
+    <value>Bereich 1</value>
+  </data>
+  <data name="RadGroupBoxBereich1.Text" xml:space="preserve">
+    <value>Bereich 1</value>
+  </data>
+  <data name="RadGroupBoxPruefungLinearitaetSteigend.HeaderText" xml:space="preserve">
+    <value>Linearität Steigend</value>
+  </data>
+  <data name="RadGroupBoxPruefungLinearitaetSteigend.Text" xml:space="preserve">
+    <value>Linearität Steigend</value>
+  </data>
+</root>

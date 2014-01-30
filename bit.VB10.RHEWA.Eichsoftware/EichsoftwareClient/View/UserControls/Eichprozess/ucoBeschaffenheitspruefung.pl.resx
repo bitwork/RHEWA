@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="RadLabel15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>552, 18</value>
+  </data>
+  <data name="RadLabel15.Text" xml:space="preserve">
+    <value>Czy konstrukcja pomostu jest odpowiednio zaprojektowana, aby zrealizować zaplanowane zadania wagowe?								
+</value>
+  </data>
+  <data name="RadCheckBoxBruecke1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>913, 34</value>
+  </data>
+  <data name="RadCheckBoxBruecke3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>913, 111</value>
+  </data>
+  <data name="RadCheckBoxBruecke2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>913, 72</value>
+  </data>
+  <data name="RadLabel11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>868, 33</value>
+  </data>
+  <data name="RadLabel11.Text" xml:space="preserve">
+    <value>Czy konstrukcja jest wolna od korozji? Przy betonowych wagach samochodowych nie powinno się znaleźć żadnych odpryśniętych cząstek betonu lub widocznego zbrojenia.								
+								
+</value>
+  </data>
+  <data name="RadLabel13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>417, 18</value>
+  </data>
+  <data name="RadLabel13.Text" xml:space="preserve">
+    <value>Czy zamocowania czujników tensometrycznych znajdują się na jednym poziomie?								
+</value>
+  </data>
+  <data name="RadGroupBoxWaegebruecke.HeaderText" xml:space="preserve">
+    <value>Kryteria dla stosowanego pomostu wagowego:										
+</value>
+  </data>
+  <data name="RadGroupBoxWaegebruecke.Text" xml:space="preserve">
+    <value>Kryteria dla stosowanego pomostu wagowego:										
+</value>
+  </data>
+  <data name="RadLabel7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>318, 18</value>
+  </data>
+  <data name="RadLabel7.Text" xml:space="preserve">
+    <value>Przy zalewanych czujnikach zalewa nie może być uszkodzona.								
+</value>
+  </data>
+  <data name="RadLabel5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>229, 18</value>
+  </data>
+  <data name="RadLabel5.Text" xml:space="preserve">
+    <value>Płyty montażowe muszą być równe i czyste.								
+</value>
+  </data>
+  <data name="RadLabel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>400, 18</value>
+  </data>
+  <data name="RadLabel3.Text" xml:space="preserve">
+    <value>Czujnik(i) tensometryczny(e) muszą posiadać zatwierdzenie według OIML R60.								
+</value>
+  </data>
+  <data name="RadLabel6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>670, 18</value>
+  </data>
+  <data name="RadLabel6.Text" xml:space="preserve">
+    <value>Podłączone kable nie mogą być uszkodzone. Kable nie mogą być kruche lub popękane --&gt; niebezpieczeństwo zjawiska kapilarnego.								
+</value>
+  </data>
+  <data name="RadLabel8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>573, 33</value>
+  </data>
+  <data name="RadLabel8.Text" xml:space="preserve">
+    <value>Wprowadzenie siły musi być zgodne z jednym z przykładów pokazanych w przewodniku WELMEC (WELMEC 2.4).								
+								
+</value>
+  </data>
+  <data name="RadCheckBoxWZ1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>913, 23</value>
+  </data>
+  <data name="RadCheckBoxWZ2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>913, 61</value>
+  </data>
+  <data name="RadCheckBoxWZ4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>913, 135</value>
+  </data>
+  <data name="RadCheckBoxWZ3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>913, 97</value>
+  </data>
+  <data name="RadCheckBoxWZ5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>913, 173</value>
+  </data>
+  <data name="RadGroupBoxWaegezellen.HeaderText" xml:space="preserve">
+    <value>Kryteria dla stosowanego(ych) czujnika(ów) tensometrycznego(ych):										
+</value>
+  </data>
+  <data name="RadGroupBoxWaegezellen.Text" xml:space="preserve">
+    <value>Kryteria dla stosowanego(ych) czujnika(ów) tensometrycznego(ych):										
+</value>
+  </data>
+  <data name="RadLabel16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>315, 18</value>
+  </data>
+  <data name="RadLabel16.Text" xml:space="preserve">
+    <value>Szczelność musi być zagwarantowana. (Skrzynka z zaciskami)								
+</value>
+  </data>
+  <data name="RadLabel14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>503, 18</value>
+  </data>
+  <data name="RadLabel14.Text" xml:space="preserve">
+    <value>Kable pomiarowe nie mogą być kruche lub popękane --&gt; niebezpieczeństwo zjawiska kapilarnego.
+</value>
+  </data>
+  <data name="RadLabel12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>234, 18</value>
+  </data>
+  <data name="RadLabel12.Text" xml:space="preserve">
+    <value>Kable pomiarowe nie mogą być uszkodzone.								
+</value>
+  </data>
+  <data name="RadLabel10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>677, 33</value>
+  </data>
+  <data name="RadLabel10.Text" xml:space="preserve">
+    <value>Kable pomiarowe należy kłaść możliwie w miejscach bez skoków temperatur i z wystarczającym odstępem do przewodów prądowych.								
+								
+</value>
+  </data>
+  <data name="RadCheckBoxVerbindungelemente1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>913, 33</value>
+  </data>
+  <data name="RadCheckBoxVerbindungelemente3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>913, 112</value>
+  </data>
+  <data name="RadCheckBoxVerbindungelemente2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>913, 74</value>
+  </data>
+  <data name="RadCheckBoxVerbindungelemente4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>913, 149</value>
+  </data>
+  <data name="RadGroupBoxVerbindungselemente.HeaderText" xml:space="preserve">
+    <value>Kryteria dla używanych elementów łączących:										
+</value>
+  </data>
+  <data name="RadGroupBoxVerbindungselemente.Text" xml:space="preserve">
+    <value>Kryteria dla używanych elementów łączących:										
+</value>
+  </data>
+  <data name="RadLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>475, 18</value>
+  </data>
+  <data name="RadLabel1.Text" xml:space="preserve">
+    <value>Miernik musi znajdować się w identycznym stanie seryjnym (w stanie dostawy przez RHEWA).								
+</value>
+  </data>
+  <data name="RadLabel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>235, 18</value>
+  </data>
+  <data name="RadLabel4.Text" xml:space="preserve">
+    <value>Podłączone kable nie mogą być uszkodzone.								
+</value>
+  </data>
+  <data name="RadLabel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>584, 18</value>
+  </data>
+  <data name="RadLabel2.Text" xml:space="preserve">
+    <value>Dane metrologiczne muszą być dostępne. Max. / Min. / e= / klasa / znak zatwierdzenia / producent / symbol WEEE								
+</value>
+  </data>
+  <data name="RadCheckBoxAWG1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>913, 30</value>
+  </data>
+  <data name="RadCheckBoxAWG3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>913, 93</value>
+  </data>
+  <data name="RadCheckBoxAWG2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>913, 61</value>
+  </data>
+  <data name="RadGroupBoxAuswerteGeraete.HeaderText" xml:space="preserve">
+    <value>Kryteria dla mierników RHEWA:										</value>
+  </data>
+  <data name="RadGroupBoxAuswerteGeraete.Text" xml:space="preserve">
+    <value>Kryteria dla mierników RHEWA:										</value>
+  </data>
+</root>

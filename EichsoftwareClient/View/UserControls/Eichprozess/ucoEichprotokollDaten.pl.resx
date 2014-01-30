@@ -1,0 +1,501 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblTruck.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 18</value>
+  </data>
+  <data name="lblTruck.Text" xml:space="preserve">
+    <value>Pojazd legalizacyjny Firma		
+</value>
+  </data>
+  <data name="lblZertifikatnr.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 18</value>
+  </data>
+  <data name="lblZertifikatnr.Text" xml:space="preserve">
+    <value>Nr. świadectwa badań		
+</value>
+  </data>
+  <data name="lblTestzeitraum.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 18</value>
+  </data>
+  <data name="lblTestzeitraum.Text" xml:space="preserve">
+    <value>Ostatnie badanie		
+</value>
+  </data>
+  <data name="lblPruefzeitraum.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 18</value>
+  </data>
+  <data name="lblPruefzeitraum.Text" xml:space="preserve">
+    <value>Interwał badań		
+</value>
+  </data>
+  <data name="lblGenauigkeitsklasse2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 18</value>
+  </data>
+  <data name="lblGenauigkeitsklasse2.Text" xml:space="preserve">
+    <value>Klasa dokładności		
+</value>
+  </data>
+  <data name="RadGroupBoxBeschaffenheitspruefungNormalien.HeaderText" xml:space="preserve">
+    <value>Zastosowane wzorce
+</value>
+  </data>
+  <data name="RadGroupBoxBeschaffenheitspruefungNormalien.Text" xml:space="preserve">
+    <value>Zastosowane wzorce
+</value>
+  </data>
+  <data name="RadCheckBoxAnzeigen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 143</value>
+  </data>
+  <data name="RadCheckBoxAnzeigen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>429, 18</value>
+  </data>
+  <data name="RadCheckBoxAnzeigen.Text" xml:space="preserve">
+    <value>Czy wskazania i wydruki odpowiadają wymaganiom?					
+</value>
+  </data>
+  <data name="RadCheckBoxKompatiblitaetsnachweisVorhanden.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 167</value>
+  </data>
+  <data name="RadCheckBoxKompatiblitaetsnachweisVorhanden.Size" type="System.Drawing.Size, System.Drawing">
+    <value>429, 18</value>
+  </data>
+  <data name="RadCheckBoxKompatiblitaetsnachweisVorhanden.Text" xml:space="preserve">
+    <value>Czy istnieje dowód kompatybilności?					
+</value>
+  </data>
+  <data name="RadCheckBoxAufstellungsbedingungen.Text" xml:space="preserve">
+    <value>Czy warunki instalacyjne są w porządku?					
+</value>
+  </data>
+  <data name="RadCheckBoxZulassungsunterlagen.Text" xml:space="preserve">
+    <value>Czy dokumenty zatwierdzenia są dostępne?					
+</value>
+  </data>
+  <data name="RadCheckBoxMesstechnischeMerkmale.Size" type="System.Drawing.Size, System.Drawing">
+    <value>426, 35</value>
+  </data>
+  <data name="RadCheckBoxMesstechnischeMerkmale.Text" xml:space="preserve">
+    <value>&lt;html&gt;Czy cechy metrologiczne (klasa, min, maks, e oraz d) są w porządku?&lt;/html&gt;</value>
+  </data>
+  <data name="RadCheckBoxAufschriften.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 119</value>
+  </data>
+  <data name="RadCheckBoxAufschriften.Size" type="System.Drawing.Size, System.Drawing">
+    <value>429, 18</value>
+  </data>
+  <data name="RadCheckBoxAufschriften.Text" xml:space="preserve">
+    <value>Czy napisy oraz oznaczenia są w porządku?					
+</value>
+  </data>
+  <data name="RadGroupBoxBeschaffenheitspruefungEquipment.HeaderText" xml:space="preserve">
+    <value>Badanie jakości
+</value>
+  </data>
+  <data name="RadGroupBoxBeschaffenheitspruefungEquipment.Text" xml:space="preserve">
+    <value>Badanie jakości
+</value>
+  </data>
+  <data name="RadGroupBoxBeschaffenheitspruefung.HeaderText" xml:space="preserve">
+    <value>4. Badanie jakości
+</value>
+  </data>
+  <data name="RadGroupBoxBeschaffenheitspruefung.Text" xml:space="preserve">
+    <value>4. Badanie jakości
+</value>
+  </data>
+  <data name="RadRadioButtonHandTara.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 18</value>
+  </data>
+  <data name="RadRadioButtonHandTara.Text" xml:space="preserve">
+    <value>Tara ręczna</value>
+  </data>
+  <data name="RadRadioButtonAutoTara.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 18</value>
+  </data>
+  <data name="RadRadioButtonAutoTara.Text" xml:space="preserve">
+    <value>Auto Tara</value>
+  </data>
+  <data name="RadGroupBoxVerwendungszweckTara.HeaderText" xml:space="preserve">
+    <value>Urządzenia tary		
+</value>
+  </data>
+  <data name="RadGroupBoxVerwendungszweckTara.Text" xml:space="preserve">
+    <value>Urządzenia tary		
+</value>
+  </data>
+  <data name="RadCheckBoxDrucker.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 18</value>
+  </data>
+  <data name="RadCheckBoxDrucker.Text" xml:space="preserve">
+    <value>Drukarka	
+</value>
+  </data>
+  <data name="RadCheckBoxEichfaehigerSpeicher.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 18</value>
+  </data>
+  <data name="RadCheckBoxEichfaehigerSpeicher.Text" xml:space="preserve">
+    <value>Legalizowana pamięć danych	
+</value>
+  </data>
+  <data name="RadCheckBoxPC.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 18</value>
+  </data>
+  <data name="RadCheckBoxPC.Text" xml:space="preserve">
+    <value>PC	
+</value>
+  </data>
+  <data name="RadCheckBoxSonstiges.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 18</value>
+  </data>
+  <data name="RadCheckBoxSonstiges.Text" xml:space="preserve">
+    <value>Inne	
+</value>
+  </data>
+  <data name="RadTextBoxControlDruckerTyp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>287, 30</value>
+  </data>
+  <data name="RadTextBoxControlDruckerTyp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 20</value>
+  </data>
+  <data name="lblDruckerart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>209, 30</value>
+  </data>
+  <data name="lblDruckerart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 18</value>
+  </data>
+  <data name="lblDruckerart.Text" xml:space="preserve">
+    <value>Typ drukarki
+</value>
+  </data>
+  <data name="RadGroupBoxVerwendungszweckEquipment.HeaderText" xml:space="preserve">
+    <value>Urządzenie dodatkowe		
+</value>
+  </data>
+  <data name="RadGroupBoxVerwendungszweckEquipment.Text" xml:space="preserve">
+    <value>Urządzenie dodatkowe		
+</value>
+  </data>
+  <data name="RadRadioButtonNustellungNullNachfuehrung.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 18</value>
+  </data>
+  <data name="RadRadioButtonNustellungNullNachfuehrung.Text" xml:space="preserve">
+    <value>Naprowadzenie zera	
+</value>
+  </data>
+  <data name="RadRadioButtonNustellungAutomatisch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 18</value>
+  </data>
+  <data name="RadRadioButtonNustellungAutomatisch.Text" xml:space="preserve">
+    <value>automatycznie	
+</value>
+  </data>
+  <data name="RadRadioButtonNustellungHalbAutomatisch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 18</value>
+  </data>
+  <data name="RadRadioButtonNustellungHalbAutomatisch.Text" xml:space="preserve">
+    <value>półautomatycznie	
+</value>
+  </data>
+  <data name="RadGroupBoxVerwendungszweckNullstellung.HeaderText" xml:space="preserve">
+    <value>Urządzenie zerujące		
+</value>
+  </data>
+  <data name="RadGroupBoxVerwendungszweckNullstellung.Text" xml:space="preserve">
+    <value>Urządzenie zerujące		
+</value>
+  </data>
+  <data name="lblArtWaage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 18</value>
+  </data>
+  <data name="lblArtWaage.Text" xml:space="preserve">
+    <value>Typ wagi	
+</value>
+  </data>
+  <data name="lblDimension.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 18</value>
+  </data>
+  <data name="lblDimension.Text" xml:space="preserve">
+    <value>Wymiary</value>
+  </data>
+  <data name="RadGroupBoxVerwendungszweckArtderWaage.HeaderText" xml:space="preserve">
+    <value>Typ wagi	
+</value>
+  </data>
+  <data name="RadGroupBoxVerwendungszweckArtderWaage.Text" xml:space="preserve">
+    <value>Typ wagi	
+</value>
+  </data>
+  <data name="RadGroupBoxVerwendungszweck.HeaderText" xml:space="preserve">
+    <value>3. Cel zastosowania
+</value>
+  </data>
+  <data name="RadGroupBoxVerwendungszweck.Text" xml:space="preserve">
+    <value>3. Cel zastosowania
+</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblFabriknummernWZ.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lblFabriknummernWZ.Location" type="System.Drawing.Point, System.Drawing">
+    <value>644, 14</value>
+  </data>
+  <data name="lblFabriknummernWZ.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 29</value>
+  </data>
+  <data name="lblFabriknummernWZ.Text" xml:space="preserve">
+    <value>Numery fabryczne czujników tensometrycznych:			
+</value>
+  </data>
+  <data name="RadTextBoxControlWZFabriknummer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>644, 56</value>
+  </data>
+  <data name="lblAnzahlWZ.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 81</value>
+  </data>
+  <data name="lblAnzahlWZ.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 18</value>
+  </data>
+  <data name="lblAnzahlWZ.Text" xml:space="preserve">
+    <value>Ilość:		
+</value>
+  </data>
+  <data name="lblTyp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 55</value>
+  </data>
+  <data name="lblTyp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 18</value>
+  </data>
+  <data name="lblTyp.Text" xml:space="preserve">
+    <value>Typ:		
+</value>
+  </data>
+  <data name="lblHerstellerWZ.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lblHerstellerWZ.Location" type="System.Drawing.Point, System.Drawing">
+    <value>325, 14</value>
+  </data>
+  <data name="lblHerstellerWZ.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 35</value>
+  </data>
+  <data name="lblHerstellerWZ.Text" xml:space="preserve">
+    <value>Producent czujników tensometrycznych:		
+</value>
+  </data>
+  <data name="lblZeichen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>155, 33</value>
+  </data>
+  <data name="lblZeichen.Text" xml:space="preserve">
+    <value>Stan licznika legalizacyjnego:
+
+</value>
+  </data>
+  <data name="RadTextBoxControlEichzaehlerstand.Location" type="System.Drawing.Point, System.Drawing">
+    <value>185, 82</value>
+  </data>
+  <data name="RadTextBoxControlEichzaehlerstand.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 20</value>
+  </data>
+  <data name="lblSoftwareversion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 18</value>
+  </data>
+  <data name="lblSoftwareversion.Text" xml:space="preserve">
+    <value>Stan software:
+</value>
+  </data>
+  <data name="lblAWG.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 18</value>
+  </data>
+  <data name="lblAWG.Text" xml:space="preserve">
+    <value>Miernik:
+</value>
+  </data>
+  <data name="RadGroupBoxKomponenten.HeaderText" xml:space="preserve">
+    <value>2. Składniki
+</value>
+  </data>
+  <data name="RadGroupBoxKomponenten.Text" xml:space="preserve">
+    <value>2. Składniki
+</value>
+  </data>
+  <data name="RadLabel6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>284, 62</value>
+  </data>
+  <data name="lblNormalienGewichte.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 18</value>
+  </data>
+  <data name="lblNormalienGewichte.Text" xml:space="preserve">
+    <value>Kwota obciążenia wzorcowego
+</value>
+  </data>
+  <data name="RadTextBoxControlBetragNormallast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>194, 62</value>
+  </data>
+  <data name="RadCheckBoxVollstaendigesStaffelverfahren.Text" xml:space="preserve">
+    <value>Całkowita procedura stopniowa
+</value>
+  </data>
+  <data name="RadCheckBoxVolleNormallast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 28</value>
+  </data>
+  <data name="RadCheckBoxVolleNormallast.Size" type="System.Drawing.Size, System.Drawing">
+    <value>211, 28</value>
+  </data>
+  <data name="RadCheckBoxVolleNormallast.Text" xml:space="preserve">
+    <value>Pełne obciążenie wzorcowe
+
+</value>
+  </data>
+  <data name="RadGroupBoxPruefverfahren.HeaderText" xml:space="preserve">
+    <value>1. Procedura badania
+</value>
+  </data>
+  <data name="RadGroupBoxPruefverfahren.Text" xml:space="preserve">
+    <value>1. Procedura badania
+</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="RadGroupBoxMax1.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadGroupBoxMax1.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadGroupBoxMax3.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadGroupBoxMax3.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadGroupBoxMax2.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadGroupBoxMax2.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadGroupBoxIdentifikationsdaten.HeaderText" xml:space="preserve">
+    <value>0. Dane identyfikacyjne</value>
+  </data>
+  <data name="RadGroupBoxIdentifikationsdaten.Text" xml:space="preserve">
+    <value>0. Dane identyfikacyjne</value>
+  </data>
+</root>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="609fb02769424b229fc8f7cc58ee5e7f" Name="Diagram1" ZoomLevel="103">
+        <EntityTypeShape EntityType="EichenModel.ServerBeschaffenheitspruefung" Width="1.5" PointX="2.9137386059918153" PointY="18.543255933813406" />
+        <EntityTypeShape EntityType="EichenModel.ServerEichmarkenverwaltung" Width="1.5" PointX="0.053619347537690473" PointY="13.005379787183077" />
+        <EntityTypeShape EntityType="EichenModel.ServerEichprotokoll" Width="1.5" PointX="4.8524158358818" PointY="25.898589787026211" />
+        <EntityTypeShape EntityType="EichenModel.ServerEichprozess" Width="1.5" PointX="7.9511650670092395" PointY="11.201183503121689" />
+        <EntityTypeShape EntityType="EichenModel.ServerKompatiblitaetsnachweis" Width="1.5" PointX="0.0609572567329543" PointY="0.70063096317492" />
+        <EntityTypeShape EntityType="EichenModel.ServerLizensierung" Width="1.5" PointX="11.36878839850835" PointY="26.327757430415488" />
+        <EntityTypeShape EntityType="EichenModel.ServerLookup_Auswertegeraet" Width="1.5" PointX="4.6811556614381988" PointY="30.381937249741487" />
+        <EntityTypeShape EntityType="EichenModel.ServerLookup_Konformitaetsbewertungsverfahren" Width="1.5" PointX="11.474971085542334" PointY="7.9730418361597888" />
+        <EntityTypeShape EntityType="EichenModel.ServerLookup_Vorgangsstatus" Width="1.5" PointX="6.0065199947015007" PointY="13.904428190507193" />
+        <EntityTypeShape EntityType="EichenModel.ServerLookup_Waagenart" Width="1.5" PointX="3.3999944456852944" PointY="15.901997111692092" />
+        <EntityTypeShape EntityType="EichenModel.ServerLookup_Waagentyp" Width="1.5" PointX="5.6044522754868735" PointY="27.915782837157966" />
+        <EntityTypeShape EntityType="EichenModel.ServerLookup_Waegezelle" Width="1.5" PointX="8.3355447241736318" PointY="3.9956490267047888" />
+        <EntityTypeShape EntityType="EichenModel.ServerMogelstatistik" Width="1.5" PointX="4.2979583611236691" PointY="15.265880308703464" />
+        <EntityTypeShape EntityType="EichenModel.ServerPruefungAnsprechvermoegen" Width="1.5" PointX="7.0273632086009545" PointY="5.5312965090997963" />
+        <EntityTypeShape EntityType="EichenModel.ServerPruefungAussermittigeBelastung" Width="1.5" PointX="9.57485277837834" PointY="17.073803090059108" />
+        <EntityTypeShape EntityType="EichenModel.ServerPruefungEichfehlergrenzen" Width="1.5" PointX="11.620240783142039" PointY="12.48273659333714" />
+        <EntityTypeShape EntityType="EichenModel.ServerPruefungLinearitaetFallend" Width="1.5" PointX="10.414215210086766" PointY="6.4318749785571709" />
+        <EntityTypeShape EntityType="EichenModel.ServerPruefungLinearitaetSteigend" Width="1.5" PointX="7.1542817517902151" PointY="7.0043340655995223" />
+        <EntityTypeShape EntityType="EichenModel.ServerPruefungRollendeLasten" Width="1.5" PointX="4.5871765728048874" PointY="29.2969258713056" />
+        <EntityTypeShape EntityType="EichenModel.ServerPruefungStabilitaetGleichgewichtslage" Width="1.5" PointX="0.67075925351621546" PointY="24.094424050345282" />
+        <EntityTypeShape EntityType="EichenModel.ServerPruefungStaffelverfahrenErsatzlast" Width="1.5" PointX="10.069179485584227" PointY="31.845038831161819" />
+        <EntityTypeShape EntityType="EichenModel.ServerPruefungStaffelverfahrenNormallast" Width="1.5" PointX="2.8115190839448569" PointY="1.3058607137323639" />
+        <EntityTypeShape EntityType="EichenModel.ServerPruefungWiederholbarkeit" Width="1.5" PointX="6.8919428842570376" PointY="3.4357526467348229" />
+        <AssociationConnector Association="EichenModel.FK_Eichprozess_Beschaffenheitspruefung" />
+        <AssociationConnector Association="EichenModel.FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren" />
+        <AssociationConnector Association="EichenModel.FK_Eichprozess_Eichprotokoll" />
+        <AssociationConnector Association="EichenModel.FK_PruefungAussermittigeBelastung_Eichprotokoll" />
+        <AssociationConnector Association="EichenModel.FK_PruefungEichfehlergrenzen_Eichprotokoll" />
+        <AssociationConnector Association="EichenModel.FK_PruefungLinearitaetFallend_Eichprotokoll" />
+        <AssociationConnector Association="EichenModel.FK_PruefungLinearitaetSteigend_Eichprotokoll" />
+        <AssociationConnector Association="EichenModel.FK_PruefungLinearitaetSteigendAnsprechvermoegen_Eichprotokoll" />
+        <AssociationConnector Association="EichenModel.FK_PruefungRollendeLasten_Eichprotokoll" />
+        <AssociationConnector Association="EichenModel.FK_PruefungStabilitaetGleichgewichtslage_Eichprotokoll" />
+        <AssociationConnector Association="EichenModel.FK_PruefungStaffelverfahrenErsatzlast_Eichprotokoll" />
+        <AssociationConnector Association="EichenModel.FK_PruefungStaffelverfahrenNormallast_Eichprotokoll" />
+        <AssociationConnector Association="EichenModel.FK_PruefungWiederholbarkeit_Eichprotokoll" />
+        <AssociationConnector Association="EichenModel.FK_Eichprozess_Kompatiblitaetsnachweis" />
+        <AssociationConnector Association="EichenModel.FK_Eichprozess_Lookup_Auswertegeraet" />
+        <AssociationConnector Association="EichenModel.FK_Eichprozess_Lookup_Vorgangsstatus" />
+        <AssociationConnector Association="EichenModel.FK_Eichprozess_Lookup_Waagenart" />
+        <AssociationConnector Association="EichenModel.FK_Eichprozess_Lookup_Waagentyp" />
+        <AssociationConnector Association="EichenModel.FK_Eichprozess_Lookup_Waegezelle" />
+        <AssociationConnector Association="EichenModel.FK_Mogelstatistik_Eichprozess" />
+        <AssociationConnector Association="EichenModel.FK_Mogelstatistik_Lookup_Auswertegeraet" />
+        <AssociationConnector Association="EichenModel.FK_Mogelstatistik_Lookup_Waegezelle" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
