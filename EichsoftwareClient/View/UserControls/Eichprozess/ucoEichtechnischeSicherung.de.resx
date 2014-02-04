@@ -117,13 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lblSicherungshinweise.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblSicherungshinweise.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lblSicherungshinweise.Size" type="System.Drawing.Size, System.Drawing">
     <value>331, 18</value>
@@ -131,23 +124,11 @@
   <data name="lblSicherungshinweise.Text" xml:space="preserve">
     <value>Alle erforderlichen Sicherungs- und Hinweismarken aufgebracht?</value>
   </data>
-  <data name="lblBenannteStelle.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblBenannteStelle.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="lblBenannteStelle.Size" type="System.Drawing.Size, System.Drawing">
     <value>209, 18</value>
   </data>
   <data name="lblBenannteStelle.Text" xml:space="preserve">
     <value>Sicherungsmarke "Benannte Stelle 0103"</value>
-  </data>
-  <data name="lblEichsiegel13x13.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblEichsiegel13x13.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="lblEichsiegel13x13.Size" type="System.Drawing.Size, System.Drawing">
     <value>185, 18</value>
@@ -155,23 +136,11 @@
   <data name="lblEichsiegel13x13.Text" xml:space="preserve">
     <value>Sicherungsmarke "Eichsiegel" 13x13</value>
   </data>
-  <data name="lblEichsiegelRund.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblEichsiegelRund.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="lblEichsiegelRund.Size" type="System.Drawing.Size, System.Drawing">
     <value>179, 18</value>
   </data>
   <data name="lblEichsiegelRund.Text" xml:space="preserve">
     <value>Sicherungsmarke "Eichsiegel" rund</value>
-  </data>
-  <data name="lblHinweismarke.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblHinweismarke.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="lblHinweismarke.Size" type="System.Drawing.Size, System.Drawing">
     <value>117, 18</value>
@@ -179,23 +148,11 @@
   <data name="lblHinweismarke.Text" xml:space="preserve">
     <value>Hinweismarke gelocht</value>
   </data>
-  <data name="lblGruenesM.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblGruenesM.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="lblGruenesM.Size" type="System.Drawing.Size, System.Drawing">
     <value>64, 18</value>
   </data>
   <data name="lblGruenesM.Text" xml:space="preserve">
     <value>Grünes "M"</value>
-  </data>
-  <data name="lblCEKennzeichen.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblCEKennzeichen.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="lblCEKennzeichen.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 18</value>
@@ -203,23 +160,11 @@
   <data name="lblCEKennzeichen.Text" xml:space="preserve">
     <value>CE Kennzeichen</value>
   </data>
-  <data name="lblDatenKonfiguration.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblDatenKonfiguration.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="lblDatenKonfiguration.Size" type="System.Drawing.Size, System.Drawing">
     <value>259, 18</value>
   </data>
   <data name="lblDatenKonfiguration.Text" xml:space="preserve">
     <value>Daten über Konfigurations-Programm ausgelesen?</value>
-  </data>
-  <data name="lblAlibispeicher.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblAlibispeicher.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="lblAlibispeicher.Size" type="System.Drawing.Size, System.Drawing">
     <value>198, 18</value>
@@ -227,23 +172,11 @@
   <data name="lblAlibispeicher.Text" xml:space="preserve">
     <value>Alibispeicher für 90 Tage eingerichtet?</value>
   </data>
-  <data name="lblAufbewahrungsdauer.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblAufbewahrungsdauer.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="lblAufbewahrungsdauer.Size" type="System.Drawing.Size, System.Drawing">
     <value>258, 18</value>
   </data>
   <data name="lblAufbewahrungsdauer.Text" xml:space="preserve">
     <value>Aufbewahrungsdauer des Alibispeichers reduziert?</value>
-  </data>
-  <data name="lblBemerkungen.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblBemerkungen.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="lblBemerkungen.Size" type="System.Drawing.Size, System.Drawing">
     <value>78, 18</value>
@@ -251,136 +184,17 @@
   <data name="lblBemerkungen.Text" xml:space="preserve">
     <value>Bemerkungen:</value>
   </data>
-  <data name="RadTextBoxControlBemerkungen.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBemerkungen.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblAnzahl.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblAnzahl.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="lblAnzahl.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 18</value>
   </data>
   <data name="lblAnzahl.Text" xml:space="preserve">
     <value>Anzahl</value>
   </data>
-  <data name="lblWennJaWarum.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="RadScrollablePanel1.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="lblWennJaWarum.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblWennJaWarum.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 18</value>
-  </data>
-  <data name="lblWennJaWarum.Text" xml:space="preserve">
-    <value>Wenn ja warum?</value>
-  </data>
-  <data name="RadCheckBoxBenannteStelle.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxBenannteStelle.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxEichsiegel13x13.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxEichsiegel13x13.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxEichsiegelRund.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxEichsiegelRund.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxHinweismarke.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxHinweismarke.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxGruenesM.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxGruenesM.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxCEKennzeichen.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxCEKennzeichen.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxKonfigurationsProgramm.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxKonfigurationsProgramm.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxAlibispeicher.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxAlibispeicher.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxAufbewahrungsdauer.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxAufbewahrungsdauer.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBenannteStelle.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBenannteStelle.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlEichsiegel13x13.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlEichsiegel13x13.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlEichsiegelRund.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlEichsiegelRund.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlCEKennzeichen.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlCEKennzeichen.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlGruenesM.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlGruenesM.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlHinweismarke.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlHinweismarke.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlKonfigurationsProgramm.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlKonfigurationsProgramm.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlAlibispeicher.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlAlibispeicher.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadScrollablePanel1.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
 </root>

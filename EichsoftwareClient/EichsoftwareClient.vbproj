@@ -524,6 +524,12 @@
     <EmbeddedResource Include="View\UserControls\Allgemein\ucoNewStatustlist.resx">
       <DependentUpon>ucoNewStatustlist.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoEichfehlergrenzen.de.resx">
+      <DependentUpon>ucoEichfehlergrenzen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoEichtechnischeSicherung.gl.resx">
+      <DependentUpon>ucoEichtechnischeSicherung.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\ucoPruefungEignungFuerAchlastwaegungen.de.resx">
       <DependentUpon>ucoPruefungEignungFuerAchlastwaegungen.vb</DependentUpon>
     </EmbeddedResource>

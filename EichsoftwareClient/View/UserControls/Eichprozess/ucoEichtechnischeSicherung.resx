@@ -1236,6 +1236,9 @@
   <data name="RadTextBoxControlAufbewahrungsdauer.TabIndex" type="System.Int32, mscorlib">
     <value>255</value>
   </data>
+  <data name="RadTextBoxControlAufbewahrungsdauer.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;RadTextBoxControlAufbewahrungsdauer.Name" xml:space="preserve">
     <value>RadTextBoxControlAufbewahrungsdauer</value>
   </data>
@@ -1338,6 +1341,9 @@
   <data name="RadTextBoxControlCEKennzeichen.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
   </data>
+  <data name="RadTextBoxControlCEKennzeichen.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;RadTextBoxControlCEKennzeichen.Name" xml:space="preserve">
     <value>RadTextBoxControlCEKennzeichen</value>
   </data>
@@ -1436,6 +1442,9 @@
   </data>
   <data name="RadTextBoxControlGruenesM.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
+  </data>
+  <data name="RadTextBoxControlGruenesM.Text" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlGruenesM.Name" xml:space="preserve">
     <value>RadTextBoxControlGruenesM</value>
@@ -1536,6 +1545,9 @@
   <data name="RadTextBoxControlHinweismarke.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
+  <data name="RadTextBoxControlHinweismarke.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;RadTextBoxControlHinweismarke.Name" xml:space="preserve">
     <value>RadTextBoxControlHinweismarke</value>
   </data>
@@ -1634,6 +1646,9 @@
   </data>
   <data name="RadTextBoxControlEichsiegelRund.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
+  </data>
+  <data name="RadTextBoxControlEichsiegelRund.Text" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlEichsiegelRund.Name" xml:space="preserve">
     <value>RadTextBoxControlEichsiegelRund</value>
@@ -1734,6 +1749,9 @@
   <data name="RadTextBoxControlEichsiegel13x13.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
+  <data name="RadTextBoxControlEichsiegel13x13.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;RadTextBoxControlEichsiegel13x13.Name" xml:space="preserve">
     <value>RadTextBoxControlEichsiegel13x13</value>
   </data>
@@ -1832,6 +1850,9 @@
   </data>
   <data name="RadTextBoxControlBenannteStelle.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
+  </data>
+  <data name="RadTextBoxControlBenannteStelle.Text" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBenannteStelle.Name" xml:space="preserve">
     <value>RadTextBoxControlBenannteStelle</value>
@@ -2052,8 +2073,32 @@
   <data name="&gt;&gt;RadScrollablePanel1.PanelContainer.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="RadScrollablePanel1.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadScrollablePanel1.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadScrollablePanel1.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="RadScrollablePanel1.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RadScrollablePanel1.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RadScrollablePanel1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
   <data name="RadScrollablePanel1.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>1, 1, 1, 1</value>
+  </data>
+  <data name="RadScrollablePanel1.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadScrollablePanel1.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
   </data>
   <data name="RadScrollablePanel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>1098, 547</value>
