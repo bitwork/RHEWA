@@ -24,6 +24,13 @@ Partial Class ucoEichtechnischeSicherung
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucoEichtechnischeSicherung))
         Me.RadScrollablePanel1 = New Telerik.WinControls.UI.RadScrollablePanel()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld1 = New System.Windows.Forms.Label()
         Me.lblSicherungshinweise = New Telerik.WinControls.UI.RadLabel()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.lblBenannteStelle = New Telerik.WinControls.UI.RadLabel()
@@ -114,6 +121,13 @@ Partial Class ucoEichtechnischeSicherung
         '
         'RadScrollablePanel1.PanelContainer
         '
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label6)
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label5)
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label4)
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label3)
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label2)
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label1)
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.lblPflichtfeld1)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.lblSicherungshinweise)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.PictureBox3)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.lblBenannteStelle)
@@ -158,6 +172,48 @@ Partial Class ucoEichtechnischeSicherung
         '
         '
         Me.RadScrollablePanel1.RootElement.Padding = CType(resources.GetObject("RadScrollablePanel1.RootElement.Padding"), System.Windows.Forms.Padding)
+        '
+        'Label6
+        '
+        resources.ApplyResources(Me.Label6, "Label6")
+        Me.Label6.ForeColor = System.Drawing.Color.Red
+        Me.Label6.Name = "Label6"
+        '
+        'Label5
+        '
+        resources.ApplyResources(Me.Label5, "Label5")
+        Me.Label5.ForeColor = System.Drawing.Color.Red
+        Me.Label5.Name = "Label5"
+        '
+        'Label4
+        '
+        resources.ApplyResources(Me.Label4, "Label4")
+        Me.Label4.ForeColor = System.Drawing.Color.Red
+        Me.Label4.Name = "Label4"
+        '
+        'Label3
+        '
+        resources.ApplyResources(Me.Label3, "Label3")
+        Me.Label3.ForeColor = System.Drawing.Color.Red
+        Me.Label3.Name = "Label3"
+        '
+        'Label2
+        '
+        resources.ApplyResources(Me.Label2, "Label2")
+        Me.Label2.ForeColor = System.Drawing.Color.Red
+        Me.Label2.Name = "Label2"
+        '
+        'Label1
+        '
+        resources.ApplyResources(Me.Label1, "Label1")
+        Me.Label1.ForeColor = System.Drawing.Color.Red
+        Me.Label1.Name = "Label1"
+        '
+        'lblPflichtfeld1
+        '
+        resources.ApplyResources(Me.lblPflichtfeld1, "lblPflichtfeld1")
+        Me.lblPflichtfeld1.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld1.Name = "lblPflichtfeld1"
         '
         'lblSicherungshinweise
         '
@@ -824,5 +880,12 @@ Partial Class ucoEichtechnischeSicherung
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents lblPflichtfeld1 As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
 
 End Class

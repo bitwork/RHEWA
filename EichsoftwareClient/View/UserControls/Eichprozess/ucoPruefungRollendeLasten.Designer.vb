@@ -89,6 +89,12 @@ Partial Class ucoPruefungRollendeLasten
         Me.lblEFGWertRechts = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.RadTextBoxControlLastRechts1 = New Telerik.WinControls.UI.RadTextBoxControl()
         Me.PanelContainer = New Telerik.WinControls.UI.RadScrollablePanelContainer()
+        Me.lblPflichtfeld1 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld2 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld3 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld4 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld5 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld6 = New System.Windows.Forms.Label()
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanel1.PanelContainer.SuspendLayout()
         Me.RadScrollablePanel1.SuspendLayout()
@@ -166,6 +172,12 @@ Partial Class ucoPruefungRollendeLasten
         '
         'RadScrollablePanel1.PanelContainer
         '
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.lblPflichtfeld6)
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.lblPflichtfeld5)
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.lblPflichtfeld4)
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.lblPflichtfeld3)
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.lblPflichtfeld2)
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.lblPflichtfeld1)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadButton1)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.PictureBox18)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.PictureBox79)
@@ -1168,6 +1180,42 @@ Partial Class ucoPruefungRollendeLasten
         '
         resources.ApplyResources(Me.PanelContainer, "PanelContainer")
         '
+        'lblPflichtfeld1
+        '
+        resources.ApplyResources(Me.lblPflichtfeld1, "lblPflichtfeld1")
+        Me.lblPflichtfeld1.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld1.Name = "lblPflichtfeld1"
+        '
+        'lblPflichtfeld2
+        '
+        resources.ApplyResources(Me.lblPflichtfeld2, "lblPflichtfeld2")
+        Me.lblPflichtfeld2.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld2.Name = "lblPflichtfeld2"
+        '
+        'lblPflichtfeld3
+        '
+        resources.ApplyResources(Me.lblPflichtfeld3, "lblPflichtfeld3")
+        Me.lblPflichtfeld3.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld3.Name = "lblPflichtfeld3"
+        '
+        'lblPflichtfeld4
+        '
+        resources.ApplyResources(Me.lblPflichtfeld4, "lblPflichtfeld4")
+        Me.lblPflichtfeld4.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld4.Name = "lblPflichtfeld4"
+        '
+        'lblPflichtfeld5
+        '
+        resources.ApplyResources(Me.lblPflichtfeld5, "lblPflichtfeld5")
+        Me.lblPflichtfeld5.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld5.Name = "lblPflichtfeld5"
+        '
+        'lblPflichtfeld6
+        '
+        resources.ApplyResources(Me.lblPflichtfeld6, "lblPflichtfeld6")
+        Me.lblPflichtfeld6.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld6.Name = "lblPflichtfeld6"
+        '
         'ucoPruefungRollendeLasten
         '
         resources.ApplyResources(Me, "$this")
@@ -1312,5 +1360,11 @@ Partial Class ucoPruefungRollendeLasten
     Friend WithEvents RadScrollablePanel1 As Telerik.WinControls.UI.RadScrollablePanel
     Friend WithEvents PictureBox18 As System.Windows.Forms.PictureBox
     Friend WithEvents RadButton1 As Telerik.WinControls.UI.RadButton
+    Friend WithEvents lblPflichtfeld6 As System.Windows.Forms.Label
+    Friend WithEvents lblPflichtfeld5 As System.Windows.Forms.Label
+    Friend WithEvents lblPflichtfeld4 As System.Windows.Forms.Label
+    Friend WithEvents lblPflichtfeld3 As System.Windows.Forms.Label
+    Friend WithEvents lblPflichtfeld2 As System.Windows.Forms.Label
+    Friend WithEvents lblPflichtfeld1 As System.Windows.Forms.Label
 
 End Class

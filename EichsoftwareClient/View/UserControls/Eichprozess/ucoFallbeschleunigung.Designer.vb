@@ -28,6 +28,8 @@ Partial Class ucoFallbeschleunigung
         Me.RadLabel3 = New Telerik.WinControls.UI.RadLabel()
         Me.RadCheckBoxSchwerkraft = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadTextBoxControlG = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.lblPflichtfeld1 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld2 = New System.Windows.Forms.Label()
         CType(Me.lblBeschreibung, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -108,15 +110,30 @@ Partial Class ucoFallbeschleunigung
         resources.ApplyResources(Me.RadTextBoxControlG, "RadTextBoxControlG")
         Me.RadTextBoxControlG.Name = "RadTextBoxControlG"
         '
+        'lblPflichtfeld1
+        '
+        resources.ApplyResources(Me.lblPflichtfeld1, "lblPflichtfeld1")
+        Me.lblPflichtfeld1.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld1.Name = "lblPflichtfeld1"
+        '
+        'lblPflichtfeld2
+        '
+        resources.ApplyResources(Me.lblPflichtfeld2, "lblPflichtfeld2")
+        Me.lblPflichtfeld2.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld2.Name = "lblPflichtfeld2"
+        '
         'ucoFallbeschleunigung
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.lblPflichtfeld2)
+        Me.Controls.Add(Me.lblPflichtfeld1)
         Me.Controls.Add(Me.RadTextBoxControlG)
         Me.Controls.Add(Me.RadCheckBoxSchwerkraft)
         Me.Controls.Add(Me.RadLabel3)
         Me.Controls.Add(Me.RadLabel1)
         Me.Controls.Add(Me.lblBeschreibung)
+        Me.ForeColor = System.Drawing.Color.Red
         Me.Name = "ucoFallbeschleunigung"
         CType(Me.lblBeschreibung, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -132,5 +149,7 @@ Partial Class ucoFallbeschleunigung
     Friend WithEvents RadLabel3 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadCheckBoxSchwerkraft As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents RadTextBoxControlG As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents lblPflichtfeld1 As System.Windows.Forms.Label
+    Friend WithEvents lblPflichtfeld2 As System.Windows.Forms.Label
 
 End Class

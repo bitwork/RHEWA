@@ -48,6 +48,12 @@ Partial Class ucoPruefungAnsprechvermoegen
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.RadLabel4 = New Telerik.WinControls.UI.RadLabel()
+        Me.lblPflichtfeld1 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld2 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld3 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld4 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld5 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld6 = New System.Windows.Forms.Label()
         CType(Me.lblLastL, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblLastkg, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblAnzeige, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -494,10 +500,52 @@ Partial Class ucoPruefungAnsprechvermoegen
         Me.RadLabel4.RootElement.Text = resources.GetString("RadLabel4.RootElement.Text")
         Me.RadLabel4.RootElement.TextOrientation = CType(resources.GetObject("RadLabel4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
+        'lblPflichtfeld1
+        '
+        resources.ApplyResources(Me.lblPflichtfeld1, "lblPflichtfeld1")
+        Me.lblPflichtfeld1.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld1.Name = "lblPflichtfeld1"
+        '
+        'lblPflichtfeld2
+        '
+        resources.ApplyResources(Me.lblPflichtfeld2, "lblPflichtfeld2")
+        Me.lblPflichtfeld2.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld2.Name = "lblPflichtfeld2"
+        '
+        'lblPflichtfeld3
+        '
+        resources.ApplyResources(Me.lblPflichtfeld3, "lblPflichtfeld3")
+        Me.lblPflichtfeld3.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld3.Name = "lblPflichtfeld3"
+        '
+        'lblPflichtfeld4
+        '
+        resources.ApplyResources(Me.lblPflichtfeld4, "lblPflichtfeld4")
+        Me.lblPflichtfeld4.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld4.Name = "lblPflichtfeld4"
+        '
+        'lblPflichtfeld5
+        '
+        resources.ApplyResources(Me.lblPflichtfeld5, "lblPflichtfeld5")
+        Me.lblPflichtfeld5.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld5.Name = "lblPflichtfeld5"
+        '
+        'lblPflichtfeld6
+        '
+        resources.ApplyResources(Me.lblPflichtfeld6, "lblPflichtfeld6")
+        Me.lblPflichtfeld6.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld6.Name = "lblPflichtfeld6"
+        '
         'ucoPruefungAnsprechvermoegen
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.lblPflichtfeld6)
+        Me.Controls.Add(Me.lblPflichtfeld5)
+        Me.Controls.Add(Me.lblPflichtfeld4)
+        Me.Controls.Add(Me.lblPflichtfeld3)
+        Me.Controls.Add(Me.lblPflichtfeld2)
+        Me.Controls.Add(Me.lblPflichtfeld1)
         Me.Controls.Add(Me.RadLabel4)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
@@ -581,5 +629,11 @@ Partial Class ucoPruefungAnsprechvermoegen
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
     Friend WithEvents RadLabel4 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents lblPflichtfeld1 As System.Windows.Forms.Label
+    Friend WithEvents lblPflichtfeld2 As System.Windows.Forms.Label
+    Friend WithEvents lblPflichtfeld3 As System.Windows.Forms.Label
+    Friend WithEvents lblPflichtfeld4 As System.Windows.Forms.Label
+    Friend WithEvents lblPflichtfeld5 As System.Windows.Forms.Label
+    Friend WithEvents lblPflichtfeld6 As System.Windows.Forms.Label
 
 End Class

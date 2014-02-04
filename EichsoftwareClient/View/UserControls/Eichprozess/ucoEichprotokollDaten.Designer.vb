@@ -38,16 +38,23 @@ Partial Class ucoEichprotokollDaten
         Me.lblGenauigkeitsklasse2 = New Telerik.WinControls.UI.RadLabel()
         Me.RadGroupBoxBeschaffenheitspruefungEquipment = New Telerik.WinControls.UI.RadGroupBox()
         Me.RadCheckBoxAnzeigen = New Telerik.WinControls.UI.RadCheckBox()
+        Me.lblPflichtfeld5 = New System.Windows.Forms.Label()
         Me.RadCheckBoxKompatiblitaetsnachweisVorhanden = New Telerik.WinControls.UI.RadCheckBox()
+        Me.lblPflichtfeld6 = New System.Windows.Forms.Label()
         Me.RadCheckBoxAufstellungsbedingungen = New Telerik.WinControls.UI.RadCheckBox()
+        Me.lblPflichtfeld1 = New System.Windows.Forms.Label()
         Me.RadCheckBoxZulassungsunterlagen = New Telerik.WinControls.UI.RadCheckBox()
+        Me.lblPflichtfeld2 = New System.Windows.Forms.Label()
         Me.RadCheckBoxMesstechnischeMerkmale = New Telerik.WinControls.UI.RadCheckBox()
+        Me.lblPflichtfeld3 = New System.Windows.Forms.Label()
         Me.RadCheckBoxAufschriften = New Telerik.WinControls.UI.RadCheckBox()
+        Me.lblPflichtfeld4 = New System.Windows.Forms.Label()
         Me.RadGroupBoxVerwendungszweck = New Telerik.WinControls.UI.RadGroupBox()
         Me.RadGroupBoxVerwendungszweckTara = New Telerik.WinControls.UI.RadGroupBox()
         Me.RadRadioButtonHandTara = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadRadioButtonAutoTara = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadGroupBoxVerwendungszweckEquipment = New Telerik.WinControls.UI.RadGroupBox()
+        Me.lblPflichtfeldDrucker = New System.Windows.Forms.Label()
         Me.RadCheckBoxDrucker = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadCheckBoxEichfaehigerSpeicher = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadCheckBoxPC = New Telerik.WinControls.UI.RadCheckBox()
@@ -176,11 +183,17 @@ Partial Class ucoEichprotokollDaten
         CType(Me.RadGroupBoxBeschaffenheitspruefungEquipment, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxBeschaffenheitspruefungEquipment.SuspendLayout()
         CType(Me.RadCheckBoxAnzeigen, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.RadCheckBoxAnzeigen.SuspendLayout()
         CType(Me.RadCheckBoxKompatiblitaetsnachweisVorhanden, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.RadCheckBoxKompatiblitaetsnachweisVorhanden.SuspendLayout()
         CType(Me.RadCheckBoxAufstellungsbedingungen, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.RadCheckBoxAufstellungsbedingungen.SuspendLayout()
         CType(Me.RadCheckBoxZulassungsunterlagen, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.RadCheckBoxZulassungsunterlagen.SuspendLayout()
         CType(Me.RadCheckBoxMesstechnischeMerkmale, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.RadCheckBoxMesstechnischeMerkmale.SuspendLayout()
         CType(Me.RadCheckBoxAufschriften, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.RadCheckBoxAufschriften.SuspendLayout()
         CType(Me.RadGroupBoxVerwendungszweck, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxVerwendungszweck.SuspendLayout()
         CType(Me.RadGroupBoxVerwendungszweckTara, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -585,6 +598,7 @@ Partial Class ucoEichprotokollDaten
         '
         resources.ApplyResources(Me.RadCheckBoxAnzeigen, "RadCheckBoxAnzeigen")
         Me.RadCheckBoxAnzeigen.CheckAlignment = System.Drawing.ContentAlignment.MiddleRight
+        Me.RadCheckBoxAnzeigen.Controls.Add(Me.lblPflichtfeld5)
         Me.RadCheckBoxAnzeigen.Name = "RadCheckBoxAnzeigen"
         '
         '
@@ -599,10 +613,17 @@ Partial Class ucoEichprotokollDaten
         Me.RadCheckBoxAnzeigen.RootElement.Text = resources.GetString("RadCheckBoxAnzeigen.RootElement.Text")
         Me.RadCheckBoxAnzeigen.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxAnzeigen.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
+        'lblPflichtfeld5
+        '
+        resources.ApplyResources(Me.lblPflichtfeld5, "lblPflichtfeld5")
+        Me.lblPflichtfeld5.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld5.Name = "lblPflichtfeld5"
+        '
         'RadCheckBoxKompatiblitaetsnachweisVorhanden
         '
         resources.ApplyResources(Me.RadCheckBoxKompatiblitaetsnachweisVorhanden, "RadCheckBoxKompatiblitaetsnachweisVorhanden")
         Me.RadCheckBoxKompatiblitaetsnachweisVorhanden.CheckAlignment = System.Drawing.ContentAlignment.MiddleRight
+        Me.RadCheckBoxKompatiblitaetsnachweisVorhanden.Controls.Add(Me.lblPflichtfeld6)
         Me.RadCheckBoxKompatiblitaetsnachweisVorhanden.Name = "RadCheckBoxKompatiblitaetsnachweisVorhanden"
         '
         '
@@ -617,10 +638,17 @@ Partial Class ucoEichprotokollDaten
         Me.RadCheckBoxKompatiblitaetsnachweisVorhanden.RootElement.Text = resources.GetString("RadCheckBoxKompatiblitaetsnachweisVorhanden.RootElement.Text")
         Me.RadCheckBoxKompatiblitaetsnachweisVorhanden.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxKompatiblitaetsnachweisVorhanden.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
+        'lblPflichtfeld6
+        '
+        resources.ApplyResources(Me.lblPflichtfeld6, "lblPflichtfeld6")
+        Me.lblPflichtfeld6.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld6.Name = "lblPflichtfeld6"
+        '
         'RadCheckBoxAufstellungsbedingungen
         '
         resources.ApplyResources(Me.RadCheckBoxAufstellungsbedingungen, "RadCheckBoxAufstellungsbedingungen")
         Me.RadCheckBoxAufstellungsbedingungen.CheckAlignment = System.Drawing.ContentAlignment.MiddleRight
+        Me.RadCheckBoxAufstellungsbedingungen.Controls.Add(Me.lblPflichtfeld1)
         Me.RadCheckBoxAufstellungsbedingungen.Name = "RadCheckBoxAufstellungsbedingungen"
         '
         '
@@ -635,10 +663,17 @@ Partial Class ucoEichprotokollDaten
         Me.RadCheckBoxAufstellungsbedingungen.RootElement.Text = resources.GetString("RadCheckBoxAufstellungsbedingungen.RootElement.Text")
         Me.RadCheckBoxAufstellungsbedingungen.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxAufstellungsbedingungen.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
+        'lblPflichtfeld1
+        '
+        resources.ApplyResources(Me.lblPflichtfeld1, "lblPflichtfeld1")
+        Me.lblPflichtfeld1.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld1.Name = "lblPflichtfeld1"
+        '
         'RadCheckBoxZulassungsunterlagen
         '
         resources.ApplyResources(Me.RadCheckBoxZulassungsunterlagen, "RadCheckBoxZulassungsunterlagen")
         Me.RadCheckBoxZulassungsunterlagen.CheckAlignment = System.Drawing.ContentAlignment.MiddleRight
+        Me.RadCheckBoxZulassungsunterlagen.Controls.Add(Me.lblPflichtfeld2)
         Me.RadCheckBoxZulassungsunterlagen.Name = "RadCheckBoxZulassungsunterlagen"
         '
         '
@@ -653,10 +688,17 @@ Partial Class ucoEichprotokollDaten
         Me.RadCheckBoxZulassungsunterlagen.RootElement.Text = resources.GetString("RadCheckBoxZulassungsunterlagen.RootElement.Text")
         Me.RadCheckBoxZulassungsunterlagen.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxZulassungsunterlagen.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
+        'lblPflichtfeld2
+        '
+        resources.ApplyResources(Me.lblPflichtfeld2, "lblPflichtfeld2")
+        Me.lblPflichtfeld2.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld2.Name = "lblPflichtfeld2"
+        '
         'RadCheckBoxMesstechnischeMerkmale
         '
         resources.ApplyResources(Me.RadCheckBoxMesstechnischeMerkmale, "RadCheckBoxMesstechnischeMerkmale")
         Me.RadCheckBoxMesstechnischeMerkmale.CheckAlignment = System.Drawing.ContentAlignment.MiddleRight
+        Me.RadCheckBoxMesstechnischeMerkmale.Controls.Add(Me.lblPflichtfeld3)
         Me.RadCheckBoxMesstechnischeMerkmale.Name = "RadCheckBoxMesstechnischeMerkmale"
         '
         '
@@ -672,10 +714,17 @@ Partial Class ucoEichprotokollDaten
         Me.RadCheckBoxMesstechnischeMerkmale.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxMesstechnischeMerkmale.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadCheckBoxMesstechnischeMerkmale.TextWrap = True
         '
+        'lblPflichtfeld3
+        '
+        resources.ApplyResources(Me.lblPflichtfeld3, "lblPflichtfeld3")
+        Me.lblPflichtfeld3.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld3.Name = "lblPflichtfeld3"
+        '
         'RadCheckBoxAufschriften
         '
         resources.ApplyResources(Me.RadCheckBoxAufschriften, "RadCheckBoxAufschriften")
         Me.RadCheckBoxAufschriften.CheckAlignment = System.Drawing.ContentAlignment.MiddleRight
+        Me.RadCheckBoxAufschriften.Controls.Add(Me.lblPflichtfeld4)
         Me.RadCheckBoxAufschriften.Name = "RadCheckBoxAufschriften"
         '
         '
@@ -689,6 +738,12 @@ Partial Class ucoEichprotokollDaten
         Me.RadCheckBoxAufschriften.RootElement.Padding = CType(resources.GetObject("RadCheckBoxAufschriften.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadCheckBoxAufschriften.RootElement.Text = resources.GetString("RadCheckBoxAufschriften.RootElement.Text")
         Me.RadCheckBoxAufschriften.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxAufschriften.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        '
+        'lblPflichtfeld4
+        '
+        resources.ApplyResources(Me.lblPflichtfeld4, "lblPflichtfeld4")
+        Me.lblPflichtfeld4.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld4.Name = "lblPflichtfeld4"
         '
         'RadGroupBoxVerwendungszweck
         '
@@ -769,6 +824,7 @@ Partial Class ucoEichprotokollDaten
         'RadGroupBoxVerwendungszweckEquipment
         '
         Me.RadGroupBoxVerwendungszweckEquipment.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.RadGroupBoxVerwendungszweckEquipment.Controls.Add(Me.lblPflichtfeldDrucker)
         Me.RadGroupBoxVerwendungszweckEquipment.Controls.Add(Me.RadCheckBoxDrucker)
         Me.RadGroupBoxVerwendungszweckEquipment.Controls.Add(Me.RadCheckBoxEichfaehigerSpeicher)
         Me.RadGroupBoxVerwendungszweckEquipment.Controls.Add(Me.RadCheckBoxPC)
@@ -789,6 +845,11 @@ Partial Class ucoEichprotokollDaten
         Me.RadGroupBoxVerwendungszweckEquipment.RootElement.Padding = CType(resources.GetObject("RadGroupBoxVerwendungszweckEquipment.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadGroupBoxVerwendungszweckEquipment.RootElement.Text = resources.GetString("RadGroupBoxVerwendungszweckEquipment.RootElement.Text")
         Me.RadGroupBoxVerwendungszweckEquipment.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxVerwendungszweckEquipment.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        '
+        'lblPflichtfeldDrucker
+        '
+        resources.ApplyResources(Me.lblPflichtfeldDrucker, "lblPflichtfeldDrucker")
+        Me.lblPflichtfeldDrucker.Name = "lblPflichtfeldDrucker"
         '
         'RadCheckBoxDrucker
         '
@@ -2596,11 +2657,23 @@ Partial Class ucoEichprotokollDaten
         CType(Me.RadGroupBoxBeschaffenheitspruefungEquipment, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxBeschaffenheitspruefungEquipment.ResumeLayout(False)
         CType(Me.RadCheckBoxAnzeigen, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.RadCheckBoxAnzeigen.ResumeLayout(False)
+        Me.RadCheckBoxAnzeigen.PerformLayout()
         CType(Me.RadCheckBoxKompatiblitaetsnachweisVorhanden, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.RadCheckBoxKompatiblitaetsnachweisVorhanden.ResumeLayout(False)
+        Me.RadCheckBoxKompatiblitaetsnachweisVorhanden.PerformLayout()
         CType(Me.RadCheckBoxAufstellungsbedingungen, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.RadCheckBoxAufstellungsbedingungen.ResumeLayout(False)
+        Me.RadCheckBoxAufstellungsbedingungen.PerformLayout()
         CType(Me.RadCheckBoxZulassungsunterlagen, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.RadCheckBoxZulassungsunterlagen.ResumeLayout(False)
+        Me.RadCheckBoxZulassungsunterlagen.PerformLayout()
         CType(Me.RadCheckBoxMesstechnischeMerkmale, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.RadCheckBoxMesstechnischeMerkmale.ResumeLayout(False)
+        Me.RadCheckBoxMesstechnischeMerkmale.PerformLayout()
         CType(Me.RadCheckBoxAufschriften, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.RadCheckBoxAufschriften.ResumeLayout(False)
+        Me.RadCheckBoxAufschriften.PerformLayout()
         CType(Me.RadGroupBoxVerwendungszweck, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxVerwendungszweck.ResumeLayout(False)
         CType(Me.RadGroupBoxVerwendungszweckTara, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2875,5 +2948,12 @@ Partial Class ucoEichprotokollDaten
     Friend WithEvents RadGroupBoxMax1 As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents RadGroupBoxMax3 As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents RadGroupBoxMax2 As Telerik.WinControls.UI.RadGroupBox
+    Friend WithEvents lblPflichtfeld5 As System.Windows.Forms.Label
+    Friend WithEvents lblPflichtfeld6 As System.Windows.Forms.Label
+    Friend WithEvents lblPflichtfeld1 As System.Windows.Forms.Label
+    Friend WithEvents lblPflichtfeld2 As System.Windows.Forms.Label
+    Friend WithEvents lblPflichtfeld3 As System.Windows.Forms.Label
+    Friend WithEvents lblPflichtfeld4 As System.Windows.Forms.Label
+    Friend WithEvents lblPflichtfeldDrucker As System.Windows.Forms.Label
 
 End Class

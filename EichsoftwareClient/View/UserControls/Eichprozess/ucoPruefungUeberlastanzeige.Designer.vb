@@ -32,6 +32,7 @@ Partial Class ucoPruefungUeberlastanzeige
         Me.lblKg = New Telerik.WinControls.UI.RadLabel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.RadButtonShowEFG = New Telerik.WinControls.UI.RadButton()
+        Me.lblPflichtfeld1 = New System.Windows.Forms.Label()
         CType(Me.lblUeberlast, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlMaxE, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -187,10 +188,17 @@ Partial Class ucoPruefungUeberlastanzeige
         Me.RadButtonShowEFG.RootElement.Text = resources.GetString("RadButtonShowEFG.RootElement.Text")
         Me.RadButtonShowEFG.RootElement.TextOrientation = CType(resources.GetObject("RadButtonShowEFG.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
+        'lblPflichtfeld1
+        '
+        resources.ApplyResources(Me.lblPflichtfeld1, "lblPflichtfeld1")
+        Me.lblPflichtfeld1.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld1.Name = "lblPflichtfeld1"
+        '
         'ucoPruefungUeberlastanzeige
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.lblPflichtfeld1)
         Me.Controls.Add(Me.RadButtonShowEFG)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.lblKg)
@@ -223,5 +231,6 @@ Partial Class ucoPruefungUeberlastanzeige
     Friend WithEvents lblKg As Telerik.WinControls.UI.RadLabel
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents RadButtonShowEFG As Telerik.WinControls.UI.RadButton
+    Friend WithEvents lblPflichtfeld1 As System.Windows.Forms.Label
 
 End Class

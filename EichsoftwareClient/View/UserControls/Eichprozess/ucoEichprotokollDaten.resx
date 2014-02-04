@@ -698,6 +698,36 @@
   <data name="RadCheckBoxAnzeigen.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="lblPflichtfeld5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPflichtfeld5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblPflichtfeld5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>397, 0</value>
+  </data>
+  <data name="lblPflichtfeld5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="lblPflichtfeld5.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="lblPflichtfeld5.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld5.Name" xml:space="preserve">
+    <value>lblPflichtfeld5</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld5.Parent" xml:space="preserve">
+    <value>RadCheckBoxAnzeigen</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld5.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="RadCheckBoxAnzeigen.Location" type="System.Drawing.Point, System.Drawing">
     <value>21, 126</value>
   </data>
@@ -752,6 +782,36 @@
   </data>
   <data name="RadCheckBoxKompatiblitaetsnachweisVorhanden.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="lblPflichtfeld6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPflichtfeld6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblPflichtfeld6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>397, 0</value>
+  </data>
+  <data name="lblPflichtfeld6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="lblPflichtfeld6.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="lblPflichtfeld6.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld6.Name" xml:space="preserve">
+    <value>lblPflichtfeld6</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld6.Parent" xml:space="preserve">
+    <value>RadCheckBoxKompatiblitaetsnachweisVorhanden</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld6.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="RadCheckBoxKompatiblitaetsnachweisVorhanden.Location" type="System.Drawing.Point, System.Drawing">
     <value>21, 150</value>
@@ -808,6 +868,33 @@
   <data name="RadCheckBoxAufstellungsbedingungen.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="lblPflichtfeld1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPflichtfeld1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>397, 0</value>
+  </data>
+  <data name="lblPflichtfeld1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="lblPflichtfeld1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblPflichtfeld1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld1.Name" xml:space="preserve">
+    <value>lblPflichtfeld1</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld1.Parent" xml:space="preserve">
+    <value>RadCheckBoxAufstellungsbedingungen</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="RadCheckBoxAufstellungsbedingungen.Location" type="System.Drawing.Point, System.Drawing">
     <value>21, 30</value>
   </data>
@@ -862,6 +949,36 @@
   </data>
   <data name="RadCheckBoxZulassungsunterlagen.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="lblPflichtfeld2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPflichtfeld2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblPflichtfeld2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>397, 0</value>
+  </data>
+  <data name="lblPflichtfeld2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="lblPflichtfeld2.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lblPflichtfeld2.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld2.Name" xml:space="preserve">
+    <value>lblPflichtfeld2</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld2.Parent" xml:space="preserve">
+    <value>RadCheckBoxZulassungsunterlagen</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld2.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="RadCheckBoxZulassungsunterlagen.Location" type="System.Drawing.Point, System.Drawing">
     <value>21, 54</value>
@@ -918,6 +1035,36 @@
   <data name="RadCheckBoxMesstechnischeMerkmale.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="lblPflichtfeld3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPflichtfeld3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblPflichtfeld3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>397, 0</value>
+  </data>
+  <data name="lblPflichtfeld3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="lblPflichtfeld3.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="lblPflichtfeld3.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld3.Name" xml:space="preserve">
+    <value>lblPflichtfeld3</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld3.Parent" xml:space="preserve">
+    <value>RadCheckBoxMesstechnischeMerkmale</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="RadCheckBoxMesstechnischeMerkmale.Location" type="System.Drawing.Point, System.Drawing">
     <value>21, 78</value>
   </data>
@@ -972,6 +1119,36 @@
   </data>
   <data name="RadCheckBoxAufschriften.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="lblPflichtfeld4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPflichtfeld4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblPflichtfeld4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>397, 0</value>
+  </data>
+  <data name="lblPflichtfeld4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="lblPflichtfeld4.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lblPflichtfeld4.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld4.Name" xml:space="preserve">
+    <value>lblPflichtfeld4</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld4.Parent" xml:space="preserve">
+    <value>RadCheckBoxAufschriften</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld4.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="RadCheckBoxAufschriften.Location" type="System.Drawing.Point, System.Drawing">
     <value>21, 102</value>
@@ -1289,6 +1466,36 @@
   <data name="&gt;&gt;RadGroupBoxVerwendungszweckTara.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="lblPflichtfeldDrucker.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPflichtfeldDrucker.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblPflichtfeldDrucker.Location" type="System.Drawing.Point, System.Drawing">
+    <value>408, 30</value>
+  </data>
+  <data name="lblPflichtfeldDrucker.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="lblPflichtfeldDrucker.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lblPflichtfeldDrucker.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeldDrucker.Name" xml:space="preserve">
+    <value>lblPflichtfeldDrucker</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeldDrucker.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeldDrucker.Parent" xml:space="preserve">
+    <value>RadGroupBoxVerwendungszweckEquipment</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeldDrucker.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="RadCheckBoxDrucker.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -1341,7 +1548,7 @@
     <value>RadGroupBoxVerwendungszweckEquipment</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxDrucker.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="RadCheckBoxEichfaehigerSpeicher.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1395,7 +1602,7 @@
     <value>RadGroupBoxVerwendungszweckEquipment</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxEichfaehigerSpeicher.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="RadCheckBoxPC.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1449,7 +1656,7 @@
     <value>RadGroupBoxVerwendungszweckEquipment</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxPC.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="RadCheckBoxSonstiges.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1503,7 +1710,7 @@
     <value>RadGroupBoxVerwendungszweckEquipment</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxSonstiges.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="RadTextBoxControlDruckerTyp.Location" type="System.Drawing.Point, System.Drawing">
     <value>255, 30</value>
@@ -1554,7 +1761,7 @@
     <value>RadGroupBoxVerwendungszweckEquipment</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlDruckerTyp.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="lblDruckerart.Location" type="System.Drawing.Point, System.Drawing">
     <value>184, 30</value>
@@ -1605,7 +1812,7 @@
     <value>RadGroupBoxVerwendungszweckEquipment</value>
   </data>
   <data name="&gt;&gt;lblDruckerart.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="RadGroupBoxVerwendungszweckEquipment.HeaderText" xml:space="preserve">
     <value>external equipment		

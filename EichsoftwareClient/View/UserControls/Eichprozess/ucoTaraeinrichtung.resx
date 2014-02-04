@@ -117,11 +117,75 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="RadScrollablePanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="RadScrollablePanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblPflichtfeld2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPflichtfeld2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblPflichtfeld2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>473, 36</value>
+  </data>
+  <data name="lblPflichtfeld2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="lblPflichtfeld2.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="lblPflichtfeld2.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld2.Name" xml:space="preserve">
+    <value>lblPflichtfeld2</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld2.Parent" xml:space="preserve">
+    <value>RadScrollablePanel1.PanelContainer</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblPflichtfeld1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPflichtfeld1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>473, 12</value>
+  </data>
+  <data name="lblPflichtfeld1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="lblPflichtfeld1.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="lblPflichtfeld1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld1.Name" xml:space="preserve">
+    <value>lblPflichtfeld1</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld1.Parent" xml:space="preserve">
+    <value>RadScrollablePanel1.PanelContainer</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="lblTaraAusrichtung.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 12</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lblTaraAusrichtung.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -131,7 +195,6 @@
   <data name="lblTaraAusrichtung.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lblTaraAusrichtung.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
@@ -169,7 +232,55 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;lblTaraAusrichtung.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="RadCheckBoxTaraGenauigkeitTarrierung.Location" type="System.Drawing.Point, System.Drawing">
+    <value>452, 63</value>
+  </data>
+  <data name="RadCheckBoxTaraGenauigkeitTarrierung.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadCheckBoxTaraGenauigkeitTarrierung.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadCheckBoxTaraGenauigkeitTarrierung.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="RadCheckBoxTaraGenauigkeitTarrierung.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
+  </data>
+  <data name="RadCheckBoxTaraGenauigkeitTarrierung.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RadCheckBoxTaraGenauigkeitTarrierung.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadCheckBoxTaraGenauigkeitTarrierung.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadCheckBoxTaraGenauigkeitTarrierung.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadCheckBoxTaraGenauigkeitTarrierung.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="RadCheckBoxTaraGenauigkeitTarrierung.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 15</value>
+  </data>
+  <data name="RadCheckBoxTaraGenauigkeitTarrierung.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxTaraGenauigkeitTarrierung.Name" xml:space="preserve">
+    <value>RadCheckBoxTaraGenauigkeitTarrierung</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxTaraGenauigkeitTarrierung.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxTaraGenauigkeitTarrierung.Parent" xml:space="preserve">
+    <value>RadScrollablePanel1.PanelContainer</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxTaraGenauigkeitTarrierung.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="lblGenauigkeit.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 36</value>
@@ -220,7 +331,55 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;lblGenauigkeit.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
+  </data>
+  <data name="RadCheckBoxTaraausgleicheinrichtungOK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>452, 36</value>
+  </data>
+  <data name="RadCheckBoxTaraausgleicheinrichtungOK.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadCheckBoxTaraausgleicheinrichtungOK.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadCheckBoxTaraausgleicheinrichtungOK.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="RadCheckBoxTaraausgleicheinrichtungOK.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RadCheckBoxTaraausgleicheinrichtungOK.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RadCheckBoxTaraausgleicheinrichtungOK.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadCheckBoxTaraausgleicheinrichtungOK.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadCheckBoxTaraausgleicheinrichtungOK.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadCheckBoxTaraausgleicheinrichtungOK.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="RadCheckBoxTaraausgleicheinrichtungOK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 15</value>
+  </data>
+  <data name="RadCheckBoxTaraausgleicheinrichtungOK.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxTaraausgleicheinrichtungOK.Name" xml:space="preserve">
+    <value>RadCheckBoxTaraausgleicheinrichtungOK</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxTaraausgleicheinrichtungOK.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxTaraausgleicheinrichtungOK.Parent" xml:space="preserve">
+    <value>RadScrollablePanel1.PanelContainer</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxTaraausgleicheinrichtungOK.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="lblRichtigkeitspruefung.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 60</value>
@@ -271,7 +430,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;lblRichtigkeitspruefung.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="RadCheckBoxTaraErweiterteRichtigkeitspruefung.Location" type="System.Drawing.Point, System.Drawing">
     <value>452, 12</value>
@@ -319,109 +478,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxTaraErweiterteRichtigkeitspruefung.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="RadCheckBoxTaraausgleicheinrichtungOK.Location" type="System.Drawing.Point, System.Drawing">
-    <value>452, 36</value>
-  </data>
-  <data name="RadCheckBoxTaraausgleicheinrichtungOK.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxTaraausgleicheinrichtungOK.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxTaraausgleicheinrichtungOK.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadCheckBoxTaraausgleicheinrichtungOK.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadCheckBoxTaraausgleicheinrichtungOK.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadCheckBoxTaraausgleicheinrichtungOK.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadCheckBoxTaraausgleicheinrichtungOK.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadCheckBoxTaraausgleicheinrichtungOK.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxTaraausgleicheinrichtungOK.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="RadCheckBoxTaraausgleicheinrichtungOK.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 15</value>
-  </data>
-  <data name="RadCheckBoxTaraausgleicheinrichtungOK.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxTaraausgleicheinrichtungOK.Name" xml:space="preserve">
-    <value>RadCheckBoxTaraausgleicheinrichtungOK</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxTaraausgleicheinrichtungOK.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxTaraausgleicheinrichtungOK.Parent" xml:space="preserve">
-    <value>RadScrollablePanel1.PanelContainer</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxTaraausgleicheinrichtungOK.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="RadCheckBoxTaraGenauigkeitTarrierung.Location" type="System.Drawing.Point, System.Drawing">
-    <value>452, 63</value>
-  </data>
-  <data name="RadCheckBoxTaraGenauigkeitTarrierung.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxTaraGenauigkeitTarrierung.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxTaraGenauigkeitTarrierung.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadCheckBoxTaraGenauigkeitTarrierung.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadCheckBoxTaraGenauigkeitTarrierung.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadCheckBoxTaraGenauigkeitTarrierung.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadCheckBoxTaraGenauigkeitTarrierung.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadCheckBoxTaraGenauigkeitTarrierung.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxTaraGenauigkeitTarrierung.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="RadCheckBoxTaraGenauigkeitTarrierung.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 15</value>
-  </data>
-  <data name="RadCheckBoxTaraGenauigkeitTarrierung.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxTaraGenauigkeitTarrierung.Name" xml:space="preserve">
-    <value>RadCheckBoxTaraGenauigkeitTarrierung</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxTaraGenauigkeitTarrierung.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxTaraGenauigkeitTarrierung.Parent" xml:space="preserve">
-    <value>RadScrollablePanel1.PanelContainer</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxTaraGenauigkeitTarrierung.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="RadScrollablePanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="RadScrollablePanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
   </data>
   <data name="RadScrollablePanel1.PanelContainer.Size" type="System.Drawing.Size, System.Drawing">
     <value>510, 100</value>

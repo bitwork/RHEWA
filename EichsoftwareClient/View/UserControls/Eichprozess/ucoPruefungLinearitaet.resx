@@ -231,6 +231,36 @@
   <data name="&gt;&gt;RadButtonFallendMinus.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="lblPflichtfeld6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPflichtfeld6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblPflichtfeld6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>378, 28</value>
+  </data>
+  <data name="lblPflichtfeld6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="lblPflichtfeld6.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="lblPflichtfeld6.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld6.Name" xml:space="preserve">
+    <value>lblPflichtfeld6</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld6.Parent" xml:space="preserve">
+    <value>RadGroupBoxBereich3Fallend</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="PictureBoxFallend63.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -2410,7 +2440,7 @@
     <value>RadGroupBoxBereich3Fallend</value>
   </data>
   <data name="&gt;&gt;FlowLayoutPanel3.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="lblBereich3FallendFehlerGrenzen.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt, style=Bold</value>
@@ -2464,7 +2494,7 @@
     <value>RadGroupBoxBereich3Fallend</value>
   </data>
   <data name="&gt;&gt;lblBereich3FallendFehlerGrenzen.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="lblBereich3FallendEFGSpezial.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt, style=Bold</value>
@@ -2518,7 +2548,7 @@
     <value>RadGroupBoxBereich3Fallend</value>
   </data>
   <data name="&gt;&gt;lblBereich3FallendEFGSpezial.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="lblBereich3FallendGewicht.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt, style=Bold</value>
@@ -2572,7 +2602,7 @@
     <value>RadGroupBoxBereich3Fallend</value>
   </data>
   <data name="&gt;&gt;lblBereich3FallendGewicht.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="lblBereich3FallendAnzeigeGewicht.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt, style=Bold</value>
@@ -2626,7 +2656,7 @@
     <value>RadGroupBoxBereich3Fallend</value>
   </data>
   <data name="&gt;&gt;lblBereich3FallendAnzeigeGewicht.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="RadGroupBoxBereich3Fallend.HeaderText" xml:space="preserve">
     <value>Range 3</value>
@@ -2735,6 +2765,36 @@
   </data>
   <data name="&gt;&gt;RadButtonFallendPlus.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="lblPflichtfeld5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPflichtfeld5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblPflichtfeld5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>382, 30</value>
+  </data>
+  <data name="lblPflichtfeld5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="lblPflichtfeld5.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="lblPflichtfeld5.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld5.Name" xml:space="preserve">
+    <value>lblPflichtfeld5</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld5.Parent" xml:space="preserve">
+    <value>RadGroupBoxBereich2Fallend</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld5.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="PictureBoxFallend43.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -4915,7 +4975,7 @@
     <value>RadGroupBoxBereich2Fallend</value>
   </data>
   <data name="&gt;&gt;FlowLayoutPanel2.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="lblBereich2FallendFehlerGrenzen.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt, style=Bold</value>
@@ -4969,7 +5029,7 @@
     <value>RadGroupBoxBereich2Fallend</value>
   </data>
   <data name="&gt;&gt;lblBereich2FallendFehlerGrenzen.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="lblBereich2FallendEFGSpezial.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt, style=Bold</value>
@@ -5023,7 +5083,7 @@
     <value>RadGroupBoxBereich2Fallend</value>
   </data>
   <data name="&gt;&gt;lblBereich2FallendEFGSpezial.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="lblBereich2FallendGewicht.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt, style=Bold</value>
@@ -5077,7 +5137,7 @@
     <value>RadGroupBoxBereich2Fallend</value>
   </data>
   <data name="&gt;&gt;lblBereich2FallendGewicht.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="lblBereich2FallendAnzeigeGewicht.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt, style=Bold</value>
@@ -5131,7 +5191,7 @@
     <value>RadGroupBoxBereich2Fallend</value>
   </data>
   <data name="&gt;&gt;lblBereich2FallendAnzeigeGewicht.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="RadGroupBoxBereich2Fallend.HeaderText" xml:space="preserve">
     <value>Range 2</value>
@@ -5190,6 +5250,36 @@
   <data name="&gt;&gt;RadGroupBoxBereich2Fallend.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="lblPflichtfeld4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPflichtfeld4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblPflichtfeld4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>381, 30</value>
+  </data>
+  <data name="lblPflichtfeld4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="lblPflichtfeld4.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="lblPflichtfeld4.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld4.Name" xml:space="preserve">
+    <value>lblPflichtfeld4</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld4.Parent" xml:space="preserve">
+    <value>RadGroupBoxBereich1Fallend</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="lblBereich1FallendGewicht.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt, style=Bold</value>
   </data>
@@ -5242,7 +5332,7 @@
     <value>RadGroupBoxBereich1Fallend</value>
   </data>
   <data name="&gt;&gt;lblBereich1FallendGewicht.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="lblBereich1FallendAnzeigeGewicht.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt, style=Bold</value>
@@ -5296,7 +5386,7 @@
     <value>RadGroupBoxBereich1Fallend</value>
   </data>
   <data name="&gt;&gt;lblBereich1FallendAnzeigeGewicht.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="PictureBoxFallend15.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -7477,7 +7567,7 @@
     <value>RadGroupBoxBereich1Fallend</value>
   </data>
   <data name="&gt;&gt;FlowLayoutPanel1.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="lblBereich1FallendEFGSpezial.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt, style=Bold</value>
@@ -7531,7 +7621,7 @@
     <value>RadGroupBoxBereich1Fallend</value>
   </data>
   <data name="&gt;&gt;lblBereich1FallendEFGSpezial.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="lblBereich1FallendFehlerGrenzen.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt, style=Bold</value>
@@ -7585,7 +7675,7 @@
     <value>RadGroupBoxBereich1Fallend</value>
   </data>
   <data name="&gt;&gt;lblBereich1FallendFehlerGrenzen.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="RadGroupBoxBereich1Fallend.HeaderText" xml:space="preserve">
     <value>Range 1</value>
@@ -7799,6 +7889,36 @@
   </data>
   <data name="&gt;&gt;RadButtonSteigendMinus.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="lblPflichtfeld3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPflichtfeld3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblPflichtfeld3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>378, 30</value>
+  </data>
+  <data name="lblPflichtfeld3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="lblPflichtfeld3.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="lblPflichtfeld3.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld3.Name" xml:space="preserve">
+    <value>lblPflichtfeld3</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld3.Parent" xml:space="preserve">
+    <value>RadGroupBoxBereich3</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld3.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="PictureBox77.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -8068,7 +8188,7 @@
     <value>RadGroupBoxBereich3</value>
   </data>
   <data name="&gt;&gt;PanelBereich3WZ1.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="PictureBox75.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -8338,7 +8458,7 @@
     <value>RadGroupBoxBereich3</value>
   </data>
   <data name="&gt;&gt;PanelBereich3WZ2.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="lblBereich3FehlerGrenzen.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt, style=Bold</value>
@@ -8392,7 +8512,7 @@
     <value>RadGroupBoxBereich3</value>
   </data>
   <data name="&gt;&gt;lblBereich3FehlerGrenzen.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="PictureBox73.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -8662,7 +8782,7 @@
     <value>RadGroupBoxBereich3</value>
   </data>
   <data name="&gt;&gt;PanelBereich3WZ3.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="lblBereich3EFGSpezial.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt, style=Bold</value>
@@ -8716,7 +8836,7 @@
     <value>RadGroupBoxBereich3</value>
   </data>
   <data name="&gt;&gt;lblBereich3EFGSpezial.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="PictureBox71.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -8986,7 +9106,7 @@
     <value>RadGroupBoxBereich3</value>
   </data>
   <data name="&gt;&gt;PanelBereich3WZ4.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="lblBereich3Gewicht.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt, style=Bold</value>
@@ -9040,7 +9160,7 @@
     <value>RadGroupBoxBereich3</value>
   </data>
   <data name="&gt;&gt;lblBereich3Gewicht.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="lblBereich3AnzeigeGewicht.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt, style=Bold</value>
@@ -9094,7 +9214,7 @@
     <value>RadGroupBoxBereich3</value>
   </data>
   <data name="&gt;&gt;lblBereich3AnzeigeGewicht.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="PictureBox69.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -9364,7 +9484,7 @@
     <value>RadGroupBoxBereich3</value>
   </data>
   <data name="&gt;&gt;PanelBereich3WZ5.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="PictureBox67.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -9634,7 +9754,7 @@
     <value>RadGroupBoxBereich3</value>
   </data>
   <data name="&gt;&gt;PanelBereich3WZ6.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="PictureBox65.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -9904,7 +10024,7 @@
     <value>RadGroupBoxBereich3</value>
   </data>
   <data name="&gt;&gt;PanelBereich3WZ7.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="PictureBox63.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -10174,7 +10294,7 @@
     <value>RadGroupBoxBereich3</value>
   </data>
   <data name="&gt;&gt;PanelBereich3WZ8.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="RadGroupBoxBereich3.HeaderText" xml:space="preserve">
     <value>Range 3</value>
@@ -10283,6 +10403,36 @@
   </data>
   <data name="&gt;&gt;RadButtonSteigendPlus.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="lblPflichtfeld2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPflichtfeld2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblPflichtfeld2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>382, 30</value>
+  </data>
+  <data name="lblPflichtfeld2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="lblPflichtfeld2.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="lblPflichtfeld2.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld2.Name" xml:space="preserve">
+    <value>lblPflichtfeld2</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld2.Parent" xml:space="preserve">
+    <value>RadGroupBoxBereich2</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld2.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="PictureBox29.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -10552,7 +10702,7 @@
     <value>RadGroupBoxBereich2</value>
   </data>
   <data name="&gt;&gt;PanelBereich2WZ1.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="lblBereich2FehlerGrenzen.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt, style=Bold</value>
@@ -10606,7 +10756,7 @@
     <value>RadGroupBoxBereich2</value>
   </data>
   <data name="&gt;&gt;lblBereich2FehlerGrenzen.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="PictureBox31.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -10876,7 +11026,7 @@
     <value>RadGroupBoxBereich2</value>
   </data>
   <data name="&gt;&gt;PanelBereich2WZ2.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="lblBereich2EFGSpezial.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt, style=Bold</value>
@@ -10930,7 +11080,7 @@
     <value>RadGroupBoxBereich2</value>
   </data>
   <data name="&gt;&gt;lblBereich2EFGSpezial.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="PictureBox33.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -11200,7 +11350,7 @@
     <value>RadGroupBoxBereich2</value>
   </data>
   <data name="&gt;&gt;PanelBereich2WZ3.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="lblBereich2Gewicht.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt, style=Bold</value>
@@ -11254,7 +11404,7 @@
     <value>RadGroupBoxBereich2</value>
   </data>
   <data name="&gt;&gt;lblBereich2Gewicht.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="lblBereich2AnzeigeGewicht.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt, style=Bold</value>
@@ -11308,7 +11458,7 @@
     <value>RadGroupBoxBereich2</value>
   </data>
   <data name="&gt;&gt;lblBereich2AnzeigeGewicht.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="PictureBox35.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -11578,7 +11728,7 @@
     <value>RadGroupBoxBereich2</value>
   </data>
   <data name="&gt;&gt;PanelBereich2WZ4.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="PictureBox37.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -11848,7 +11998,7 @@
     <value>RadGroupBoxBereich2</value>
   </data>
   <data name="&gt;&gt;PanelBereich2WZ5.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="PictureBox39.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -12118,7 +12268,7 @@
     <value>RadGroupBoxBereich2</value>
   </data>
   <data name="&gt;&gt;PanelBereich2WZ6.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="PictureBox43.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -12388,7 +12538,7 @@
     <value>RadGroupBoxBereich2</value>
   </data>
   <data name="&gt;&gt;PanelBereich2WZ8.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="PictureBox41.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -12658,7 +12808,7 @@
     <value>RadGroupBoxBereich2</value>
   </data>
   <data name="&gt;&gt;PanelBereich2WZ7.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="RadGroupBoxBereich2.HeaderText" xml:space="preserve">
     <value>Range 2</value>
@@ -12716,6 +12866,33 @@
   </data>
   <data name="&gt;&gt;RadGroupBoxBereich2.ZOrder" xml:space="preserve">
     <value>4</value>
+  </data>
+  <data name="lblPflichtfeld1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPflichtfeld1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>381, 30</value>
+  </data>
+  <data name="lblPflichtfeld1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="lblPflichtfeld1.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="lblPflichtfeld1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld1.Name" xml:space="preserve">
+    <value>lblPflichtfeld1</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld1.Parent" xml:space="preserve">
+    <value>RadGroupBoxBereich1</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="PictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -12985,7 +13162,7 @@
     <value>RadGroupBoxBereich1</value>
   </data>
   <data name="&gt;&gt;PanelBereich1WZ1.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="PictureBox3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -13255,7 +13432,7 @@
     <value>RadGroupBoxBereich1</value>
   </data>
   <data name="&gt;&gt;PanelBereich1WZ2.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="lblBereich1FehlerGrenzen.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt, style=Bold</value>
@@ -13309,7 +13486,7 @@
     <value>RadGroupBoxBereich1</value>
   </data>
   <data name="&gt;&gt;lblBereich1FehlerGrenzen.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="PictureBox5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -13579,7 +13756,7 @@
     <value>RadGroupBoxBereich1</value>
   </data>
   <data name="&gt;&gt;PanelBereich1WZ3.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="lblBereich1EFGSpezial.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt, style=Bold</value>
@@ -13633,7 +13810,7 @@
     <value>RadGroupBoxBereich1</value>
   </data>
   <data name="&gt;&gt;lblBereich1EFGSpezial.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="PictureBox7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -13903,7 +14080,7 @@
     <value>RadGroupBoxBereich1</value>
   </data>
   <data name="&gt;&gt;PanelBereich1WZ4.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="lblBereich1Gewicht.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt, style=Bold</value>
@@ -13957,7 +14134,7 @@
     <value>RadGroupBoxBereich1</value>
   </data>
   <data name="&gt;&gt;lblBereich1Gewicht.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="lblBereich1AnzeigeGewicht.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt, style=Bold</value>
@@ -14011,7 +14188,7 @@
     <value>RadGroupBoxBereich1</value>
   </data>
   <data name="&gt;&gt;lblBereich1AnzeigeGewicht.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="PictureBox9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -14281,7 +14458,7 @@
     <value>RadGroupBoxBereich1</value>
   </data>
   <data name="&gt;&gt;PanelBereich1WZ5.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="PictureBox11.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -14551,7 +14728,7 @@
     <value>RadGroupBoxBereich1</value>
   </data>
   <data name="&gt;&gt;PanelBereich1WZ6.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="PictureBox13.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -14821,7 +14998,7 @@
     <value>RadGroupBoxBereich1</value>
   </data>
   <data name="&gt;&gt;PanelBereich1WZ7.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="PictureBox15.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -15091,7 +15268,7 @@
     <value>RadGroupBoxBereich1</value>
   </data>
   <data name="&gt;&gt;PanelBereich1WZ8.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="RadGroupBoxBereich1.HeaderText" xml:space="preserve">
     <value>Range 1</value>

@@ -169,7 +169,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblUeberlast.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="RadTextBoxControlMaxE.Location" type="System.Drawing.Point, System.Drawing">
     <value>232, 26</value>
@@ -217,7 +217,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlMaxE.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="RadLabel2.Location" type="System.Drawing.Point, System.Drawing">
     <value>118, 26</value>
@@ -268,7 +268,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;RadLabel2.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="lblAnzeige.Location" type="System.Drawing.Point, System.Drawing">
     <value>415, 27</value>
@@ -319,7 +319,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblAnzeige.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="RadLabel3.Location" type="System.Drawing.Point, System.Drawing">
     <value>363, 26</value>
@@ -367,7 +367,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;RadLabel3.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="RadCheckBoxUeberlast.Location" type="System.Drawing.Point, System.Drawing">
     <value>713, 29</value>
@@ -415,7 +415,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxUeberlast.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="lblKg.Location" type="System.Drawing.Point, System.Drawing">
     <value>363, 26</value>
@@ -466,7 +466,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblKg.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="PictureBox2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -490,7 +490,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;PictureBox2.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="RadButtonShowEFG.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt</value>
@@ -544,6 +544,33 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;RadButtonShowEFG.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblPflichtfeld1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPflichtfeld1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>734, 29</value>
+  </data>
+  <data name="lblPflichtfeld1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>11, 13</value>
+  </data>
+  <data name="lblPflichtfeld1.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="lblPflichtfeld1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld1.Name" xml:space="preserve">
+    <value>lblPflichtfeld1</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

@@ -401,6 +401,12 @@ Partial Class ucoPruefungLinearitaet
         Me.RadTextBoxControlBereich1DisplayWeight8 = New Telerik.WinControls.UI.RadTextBoxControl()
         Me.RadTextBoxControlBereich1ErrorLimit8 = New Telerik.WinControls.UI.RadTextBoxControl()
         Me.RadCheckBoxBereich1VEL8 = New Telerik.WinControls.UI.RadCheckBox()
+        Me.lblPflichtfeld1 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld2 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld3 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld4 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld5 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld6 = New System.Windows.Forms.Label()
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanel1.PanelContainer.SuspendLayout()
         Me.RadScrollablePanel1.SuspendLayout()
@@ -875,6 +881,7 @@ Partial Class ucoPruefungLinearitaet
         'RadGroupBoxBereich3Fallend
         '
         Me.RadGroupBoxBereich3Fallend.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.RadGroupBoxBereich3Fallend.Controls.Add(Me.lblPflichtfeld6)
         Me.RadGroupBoxBereich3Fallend.Controls.Add(Me.FlowLayoutPanel3)
         Me.RadGroupBoxBereich3Fallend.Controls.Add(Me.lblBereich3FallendFehlerGrenzen)
         Me.RadGroupBoxBereich3Fallend.Controls.Add(Me.lblBereich3FallendEFGSpezial)
@@ -1764,6 +1771,7 @@ Partial Class ucoPruefungLinearitaet
         'RadGroupBoxBereich2Fallend
         '
         Me.RadGroupBoxBereich2Fallend.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.RadGroupBoxBereich2Fallend.Controls.Add(Me.lblPflichtfeld5)
         Me.RadGroupBoxBereich2Fallend.Controls.Add(Me.FlowLayoutPanel2)
         Me.RadGroupBoxBereich2Fallend.Controls.Add(Me.lblBereich2FallendFehlerGrenzen)
         Me.RadGroupBoxBereich2Fallend.Controls.Add(Me.lblBereich2FallendEFGSpezial)
@@ -2636,6 +2644,7 @@ Partial Class ucoPruefungLinearitaet
         'RadGroupBoxBereich1Fallend
         '
         Me.RadGroupBoxBereich1Fallend.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.RadGroupBoxBereich1Fallend.Controls.Add(Me.lblPflichtfeld4)
         Me.RadGroupBoxBereich1Fallend.Controls.Add(Me.lblBereich1FallendGewicht)
         Me.RadGroupBoxBereich1Fallend.Controls.Add(Me.lblBereich1FallendAnzeigeGewicht)
         Me.RadGroupBoxBereich1Fallend.Controls.Add(Me.FlowLayoutPanel1)
@@ -3566,6 +3575,7 @@ Partial Class ucoPruefungLinearitaet
         'RadGroupBoxBereich3
         '
         Me.RadGroupBoxBereich3.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.RadGroupBoxBereich3.Controls.Add(Me.lblPflichtfeld3)
         Me.RadGroupBoxBereich3.Controls.Add(Me.PanelBereich3WZ1)
         Me.RadGroupBoxBereich3.Controls.Add(Me.PanelBereich3WZ2)
         Me.RadGroupBoxBereich3.Controls.Add(Me.lblBereich3FehlerGrenzen)
@@ -4449,6 +4459,7 @@ Partial Class ucoPruefungLinearitaet
         'RadGroupBoxBereich2
         '
         Me.RadGroupBoxBereich2.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.RadGroupBoxBereich2.Controls.Add(Me.lblPflichtfeld2)
         Me.RadGroupBoxBereich2.Controls.Add(Me.PanelBereich2WZ1)
         Me.RadGroupBoxBereich2.Controls.Add(Me.lblBereich2FehlerGrenzen)
         Me.RadGroupBoxBereich2.Controls.Add(Me.PanelBereich2WZ2)
@@ -5315,6 +5326,7 @@ Partial Class ucoPruefungLinearitaet
         'RadGroupBoxBereich1
         '
         Me.RadGroupBoxBereich1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.RadGroupBoxBereich1.Controls.Add(Me.lblPflichtfeld1)
         Me.RadGroupBoxBereich1.Controls.Add(Me.PanelBereich1WZ1)
         Me.RadGroupBoxBereich1.Controls.Add(Me.PanelBereich1WZ2)
         Me.RadGroupBoxBereich1.Controls.Add(Me.lblBereich1FehlerGrenzen)
@@ -6178,6 +6190,42 @@ Partial Class ucoPruefungLinearitaet
         Me.RadCheckBoxBereich1VEL8.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxBereich1VEL8.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadCheckBoxBereich1VEL8.TabStop = False
         '
+        'lblPflichtfeld1
+        '
+        resources.ApplyResources(Me.lblPflichtfeld1, "lblPflichtfeld1")
+        Me.lblPflichtfeld1.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld1.Name = "lblPflichtfeld1"
+        '
+        'lblPflichtfeld2
+        '
+        resources.ApplyResources(Me.lblPflichtfeld2, "lblPflichtfeld2")
+        Me.lblPflichtfeld2.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld2.Name = "lblPflichtfeld2"
+        '
+        'lblPflichtfeld3
+        '
+        resources.ApplyResources(Me.lblPflichtfeld3, "lblPflichtfeld3")
+        Me.lblPflichtfeld3.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld3.Name = "lblPflichtfeld3"
+        '
+        'lblPflichtfeld4
+        '
+        resources.ApplyResources(Me.lblPflichtfeld4, "lblPflichtfeld4")
+        Me.lblPflichtfeld4.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld4.Name = "lblPflichtfeld4"
+        '
+        'lblPflichtfeld5
+        '
+        resources.ApplyResources(Me.lblPflichtfeld5, "lblPflichtfeld5")
+        Me.lblPflichtfeld5.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld5.Name = "lblPflichtfeld5"
+        '
+        'lblPflichtfeld6
+        '
+        resources.ApplyResources(Me.lblPflichtfeld6, "lblPflichtfeld6")
+        Me.lblPflichtfeld6.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld6.Name = "lblPflichtfeld6"
+        '
         'ucoPruefungLinearitaet
         '
         resources.ApplyResources(Me, "$this")
@@ -7007,5 +7055,11 @@ End Sub
     Friend WithEvents FlowLayoutPanel3 As System.Windows.Forms.FlowLayoutPanel
     Friend WithEvents FlowLayoutPanel2 As System.Windows.Forms.FlowLayoutPanel
     Friend WithEvents FlowLayoutPanel1 As System.Windows.Forms.FlowLayoutPanel
+    Friend WithEvents lblPflichtfeld1 As System.Windows.Forms.Label
+    Friend WithEvents lblPflichtfeld6 As System.Windows.Forms.Label
+    Friend WithEvents lblPflichtfeld5 As System.Windows.Forms.Label
+    Friend WithEvents lblPflichtfeld4 As System.Windows.Forms.Label
+    Friend WithEvents lblPflichtfeld3 As System.Windows.Forms.Label
+    Friend WithEvents lblPflichtfeld2 As System.Windows.Forms.Label
 
 End Class

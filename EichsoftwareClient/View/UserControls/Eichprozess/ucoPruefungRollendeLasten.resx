@@ -125,6 +125,184 @@
   <data name="RadScrollablePanel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblPflichtfeld6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPflichtfeld6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblPflichtfeld6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>950, 232</value>
+  </data>
+  <data name="lblPflichtfeld6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="lblPflichtfeld6.TabIndex" type="System.Int32, mscorlib">
+    <value>120</value>
+  </data>
+  <data name="lblPflichtfeld6.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld6.Name" xml:space="preserve">
+    <value>lblPflichtfeld6</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld6.Parent" xml:space="preserve">
+    <value>RadScrollablePanel1.PanelContainer</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblPflichtfeld5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPflichtfeld5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblPflichtfeld5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>950, 208</value>
+  </data>
+  <data name="lblPflichtfeld5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="lblPflichtfeld5.TabIndex" type="System.Int32, mscorlib">
+    <value>119</value>
+  </data>
+  <data name="lblPflichtfeld5.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld5.Name" xml:space="preserve">
+    <value>lblPflichtfeld5</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld5.Parent" xml:space="preserve">
+    <value>RadScrollablePanel1.PanelContainer</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld5.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblPflichtfeld4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPflichtfeld4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblPflichtfeld4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>950, 181</value>
+  </data>
+  <data name="lblPflichtfeld4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="lblPflichtfeld4.TabIndex" type="System.Int32, mscorlib">
+    <value>118</value>
+  </data>
+  <data name="lblPflichtfeld4.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld4.Name" xml:space="preserve">
+    <value>lblPflichtfeld4</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld4.Parent" xml:space="preserve">
+    <value>RadScrollablePanel1.PanelContainer</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld4.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblPflichtfeld3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPflichtfeld3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblPflichtfeld3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>409, 232</value>
+  </data>
+  <data name="lblPflichtfeld3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="lblPflichtfeld3.TabIndex" type="System.Int32, mscorlib">
+    <value>117</value>
+  </data>
+  <data name="lblPflichtfeld3.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld3.Name" xml:space="preserve">
+    <value>lblPflichtfeld3</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld3.Parent" xml:space="preserve">
+    <value>RadScrollablePanel1.PanelContainer</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld3.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lblPflichtfeld2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPflichtfeld2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblPflichtfeld2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>409, 208</value>
+  </data>
+  <data name="lblPflichtfeld2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="lblPflichtfeld2.TabIndex" type="System.Int32, mscorlib">
+    <value>116</value>
+  </data>
+  <data name="lblPflichtfeld2.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld2.Name" xml:space="preserve">
+    <value>lblPflichtfeld2</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld2.Parent" xml:space="preserve">
+    <value>RadScrollablePanel1.PanelContainer</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblPflichtfeld1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPflichtfeld1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>409, 181</value>
+  </data>
+  <data name="lblPflichtfeld1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="lblPflichtfeld1.TabIndex" type="System.Int32, mscorlib">
+    <value>115</value>
+  </data>
+  <data name="lblPflichtfeld1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld1.Name" xml:space="preserve">
+    <value>lblPflichtfeld1</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld1.Parent" xml:space="preserve">
+    <value>RadScrollablePanel1.PanelContainer</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld1.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
   <data name="RadButton1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt</value>
   </data>
@@ -140,7 +318,6 @@
   <data name="RadButton1.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="RadButton1.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
@@ -178,7 +355,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadButton1.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>6</value>
   </data>
   <data name="PictureBox18.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -202,7 +379,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;PictureBox18.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>7</value>
   </data>
   <data name="PictureBox79.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -226,7 +403,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;PictureBox79.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>8</value>
   </data>
   <data name="PictureBox2.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -247,7 +424,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;PictureBox2.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>9</value>
   </data>
   <data name="PictureBox15.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -271,7 +448,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;PictureBox15.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>10</value>
   </data>
   <data name="lblBelastungsstelleLinks.Location" type="System.Drawing.Point, System.Drawing">
     <value>32, 156</value>
@@ -322,7 +499,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;lblBelastungsstelleLinks.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>11</value>
   </data>
   <data name="PictureBox16.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -346,7 +523,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;PictureBox16.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>12</value>
   </data>
   <data name="lblAuffahrtLinks1.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 180</value>
@@ -397,7 +574,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;lblAuffahrtLinks1.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>13</value>
   </data>
   <data name="PictureBox17.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -421,7 +598,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;PictureBox17.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>14</value>
   </data>
   <data name="lblAuffahrtLinks2.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 204</value>
@@ -472,7 +649,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;lblAuffahrtLinks2.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>15</value>
   </data>
   <data name="PictureBox12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -496,7 +673,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;PictureBox12.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>16</value>
   </data>
   <data name="lblAuffahrtLinks3.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 228</value>
@@ -547,7 +724,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;lblAuffahrtLinks3.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>17</value>
   </data>
   <data name="PictureBox13.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -571,7 +748,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;PictureBox13.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>18</value>
   </data>
   <data name="lblLastLinks.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -625,7 +802,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;lblLastLinks.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>19</value>
   </data>
   <data name="PictureBox14.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -649,7 +826,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;PictureBox14.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>20</value>
   </data>
   <data name="lblAnzeigeLinks.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -703,7 +880,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;lblAnzeigeLinks.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>21</value>
   </data>
   <data name="PictureBox9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -727,7 +904,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;PictureBox9.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>22</value>
   </data>
   <data name="lblFehlerLinks.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -781,7 +958,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;lblFehlerLinks.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>23</value>
   </data>
   <data name="PictureBox10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -805,7 +982,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;PictureBox10.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>24</value>
   </data>
   <data name="lblEFGLinks.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt, style=Bold</value>
@@ -859,7 +1036,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;lblEFGLinks.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>25</value>
   </data>
   <data name="PictureBox11.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -883,7 +1060,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;PictureBox11.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>26</value>
   </data>
   <data name="lblEFGWertLinks.Location" type="System.Drawing.Point, System.Drawing">
     <value>371, 156</value>
@@ -938,7 +1115,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;lblEFGWertLinks.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>27</value>
   </data>
   <data name="PictureBox8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -962,7 +1139,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;PictureBox8.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>28</value>
   </data>
   <data name="RadTextBoxControlLastLinks1.Location" type="System.Drawing.Point, System.Drawing">
     <value>143, 178</value>
@@ -1013,7 +1190,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlLastLinks1.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>29</value>
   </data>
   <data name="PictureBox7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1037,7 +1214,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;PictureBox7.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>30</value>
   </data>
   <data name="RadTextBoxControllastLinks3.Location" type="System.Drawing.Point, System.Drawing">
     <value>143, 228</value>
@@ -1088,7 +1265,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControllastLinks3.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>31</value>
   </data>
   <data name="PictureBox6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1112,7 +1289,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;PictureBox6.ZOrder" xml:space="preserve">
-    <value>26</value>
+    <value>32</value>
   </data>
   <data name="RadTextBoxControlLastLinks2.Location" type="System.Drawing.Point, System.Drawing">
     <value>143, 204</value>
@@ -1163,7 +1340,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlLastLinks2.ZOrder" xml:space="preserve">
-    <value>27</value>
+    <value>33</value>
   </data>
   <data name="RadTextBoxControlAnzeigeLinks1.Location" type="System.Drawing.Point, System.Drawing">
     <value>211, 178</value>
@@ -1214,7 +1391,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAnzeigeLinks1.ZOrder" xml:space="preserve">
-    <value>28</value>
+    <value>34</value>
   </data>
   <data name="RadButtonShowEFG.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 12pt</value>
@@ -1268,7 +1445,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadButtonShowEFG.ZOrder" xml:space="preserve">
-    <value>29</value>
+    <value>35</value>
   </data>
   <data name="RadTextBoxControlAnzeigeLinks2.Location" type="System.Drawing.Point, System.Drawing">
     <value>211, 204</value>
@@ -1319,7 +1496,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAnzeigeLinks2.ZOrder" xml:space="preserve">
-    <value>30</value>
+    <value>36</value>
   </data>
   <data name="PictureBox5.Location" type="System.Drawing.Point, System.Drawing">
     <value>687, 251</value>
@@ -1340,7 +1517,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;PictureBox5.ZOrder" xml:space="preserve">
-    <value>31</value>
+    <value>37</value>
   </data>
   <data name="RadTextBoxControlAnzeigeLinks3.Location" type="System.Drawing.Point, System.Drawing">
     <value>211, 228</value>
@@ -1391,7 +1568,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAnzeigeLinks3.ZOrder" xml:space="preserve">
-    <value>32</value>
+    <value>38</value>
   </data>
   <data name="PictureBox4.Location" type="System.Drawing.Point, System.Drawing">
     <value>143, 254</value>
@@ -1412,7 +1589,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;PictureBox4.ZOrder" xml:space="preserve">
-    <value>33</value>
+    <value>39</value>
   </data>
   <data name="RadTextBoxControlFehlerLinks1.Location" type="System.Drawing.Point, System.Drawing">
     <value>301, 178</value>
@@ -1463,7 +1640,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlFehlerLinks1.ZOrder" xml:space="preserve">
-    <value>34</value>
+    <value>40</value>
   </data>
   <data name="PictureBox3.Location" type="System.Drawing.Point, System.Drawing">
     <value>464, 122</value>
@@ -1484,7 +1661,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;PictureBox3.ZOrder" xml:space="preserve">
-    <value>35</value>
+    <value>41</value>
   </data>
   <data name="RadTextBoxControlFehlerLinks2.Location" type="System.Drawing.Point, System.Drawing">
     <value>301, 204</value>
@@ -1535,7 +1712,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlFehlerLinks2.ZOrder" xml:space="preserve">
-    <value>36</value>
+    <value>42</value>
   </data>
   <data name="RadTextBoxControlFehlerLinks3.Location" type="System.Drawing.Point, System.Drawing">
     <value>301, 228</value>
@@ -1586,7 +1763,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlFehlerLinks3.ZOrder" xml:space="preserve">
-    <value>37</value>
+    <value>43</value>
   </data>
   <data name="lblEichfehlergrenze.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 14.25pt, style=Bold</value>
@@ -1640,7 +1817,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;lblEichfehlergrenze.ZOrder" xml:space="preserve">
-    <value>38</value>
+    <value>44</value>
   </data>
   <data name="RadCheckBoxAuffahrtLinks1.Location" type="System.Drawing.Point, System.Drawing">
     <value>388, 181</value>
@@ -1688,7 +1865,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxAuffahrtLinks1.ZOrder" xml:space="preserve">
-    <value>39</value>
+    <value>45</value>
   </data>
   <data name="RadCheckBoxlblAuffahrtRechts3.Location" type="System.Drawing.Point, System.Drawing">
     <value>929, 230</value>
@@ -1736,7 +1913,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxlblAuffahrtRechts3.ZOrder" xml:space="preserve">
-    <value>40</value>
+    <value>46</value>
   </data>
   <data name="RadCheckBoxAuffahrtLinks2.Location" type="System.Drawing.Point, System.Drawing">
     <value>388, 207</value>
@@ -1784,7 +1961,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxAuffahrtLinks2.ZOrder" xml:space="preserve">
-    <value>41</value>
+    <value>47</value>
   </data>
   <data name="RadCheckBoxlblAuffahrtRechts2.Location" type="System.Drawing.Point, System.Drawing">
     <value>929, 206</value>
@@ -1832,7 +2009,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxlblAuffahrtRechts2.ZOrder" xml:space="preserve">
-    <value>42</value>
+    <value>48</value>
   </data>
   <data name="RadCheckBoxAuffahrtLinks3.Location" type="System.Drawing.Point, System.Drawing">
     <value>388, 231</value>
@@ -1880,7 +2057,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxAuffahrtLinks3.ZOrder" xml:space="preserve">
-    <value>43</value>
+    <value>49</value>
   </data>
   <data name="RadCheckBoxlblAuffahrtRechts1.Location" type="System.Drawing.Point, System.Drawing">
     <value>929, 180</value>
@@ -1928,7 +2105,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxlblAuffahrtRechts1.ZOrder" xml:space="preserve">
-    <value>44</value>
+    <value>50</value>
   </data>
   <data name="lblBelastungsstelleRechts.Location" type="System.Drawing.Point, System.Drawing">
     <value>573, 156</value>
@@ -1979,7 +2156,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;lblBelastungsstelleRechts.ZOrder" xml:space="preserve">
-    <value>45</value>
+    <value>51</value>
   </data>
   <data name="RadTextBoxControlFehlerRechts3.Location" type="System.Drawing.Point, System.Drawing">
     <value>844, 228</value>
@@ -2030,7 +2207,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlFehlerRechts3.ZOrder" xml:space="preserve">
-    <value>46</value>
+    <value>52</value>
   </data>
   <data name="lblAuffahrtRechts1.Location" type="System.Drawing.Point, System.Drawing">
     <value>556, 180</value>
@@ -2081,7 +2258,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;lblAuffahrtRechts1.ZOrder" xml:space="preserve">
-    <value>47</value>
+    <value>53</value>
   </data>
   <data name="RadTextBoxControlFehlerRechts2.Location" type="System.Drawing.Point, System.Drawing">
     <value>844, 204</value>
@@ -2132,7 +2309,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlFehlerRechts2.ZOrder" xml:space="preserve">
-    <value>48</value>
+    <value>54</value>
   </data>
   <data name="lblAuffahrtRechts2.Location" type="System.Drawing.Point, System.Drawing">
     <value>556, 204</value>
@@ -2183,7 +2360,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;lblAuffahrtRechts2.ZOrder" xml:space="preserve">
-    <value>49</value>
+    <value>55</value>
   </data>
   <data name="RadTextBoxControlFehlerRechts1.Location" type="System.Drawing.Point, System.Drawing">
     <value>844, 178</value>
@@ -2234,7 +2411,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlFehlerRechts1.ZOrder" xml:space="preserve">
-    <value>50</value>
+    <value>56</value>
   </data>
   <data name="lblAuffahrtRechts3.Location" type="System.Drawing.Point, System.Drawing">
     <value>556, 228</value>
@@ -2285,7 +2462,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;lblAuffahrtRechts3.ZOrder" xml:space="preserve">
-    <value>51</value>
+    <value>57</value>
   </data>
   <data name="RadTextBoxControlAnzeigeRechts3.Location" type="System.Drawing.Point, System.Drawing">
     <value>756, 228</value>
@@ -2336,7 +2513,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAnzeigeRechts3.ZOrder" xml:space="preserve">
-    <value>52</value>
+    <value>58</value>
   </data>
   <data name="lblLastRechts.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2390,7 +2567,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;lblLastRechts.ZOrder" xml:space="preserve">
-    <value>53</value>
+    <value>59</value>
   </data>
   <data name="RadTextBoxControlAnzeigeRechts2.Location" type="System.Drawing.Point, System.Drawing">
     <value>756, 204</value>
@@ -2441,7 +2618,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAnzeigeRechts2.ZOrder" xml:space="preserve">
-    <value>54</value>
+    <value>60</value>
   </data>
   <data name="lblAnzeigeRechts.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2495,7 +2672,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;lblAnzeigeRechts.ZOrder" xml:space="preserve">
-    <value>55</value>
+    <value>61</value>
   </data>
   <data name="RadTextBoxControlAnzeigeRechts1.Location" type="System.Drawing.Point, System.Drawing">
     <value>756, 178</value>
@@ -2546,7 +2723,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAnzeigeRechts1.ZOrder" xml:space="preserve">
-    <value>56</value>
+    <value>62</value>
   </data>
   <data name="lblFehlerRechts.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2624,7 +2801,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;lblFehlerRechts.ZOrder" xml:space="preserve">
-    <value>57</value>
+    <value>63</value>
   </data>
   <data name="RadTextBoxControlLastRechts2.Location" type="System.Drawing.Point, System.Drawing">
     <value>688, 204</value>
@@ -2675,7 +2852,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlLastRechts2.ZOrder" xml:space="preserve">
-    <value>58</value>
+    <value>64</value>
   </data>
   <data name="lblEFGRechts.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt, style=Bold</value>
@@ -2729,7 +2906,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;lblEFGRechts.ZOrder" xml:space="preserve">
-    <value>59</value>
+    <value>65</value>
   </data>
   <data name="RadTextBoxControlLastRechts3.Location" type="System.Drawing.Point, System.Drawing">
     <value>688, 228</value>
@@ -2780,7 +2957,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlLastRechts3.ZOrder" xml:space="preserve">
-    <value>60</value>
+    <value>66</value>
   </data>
   <data name="lblEFGWertRechts.Location" type="System.Drawing.Point, System.Drawing">
     <value>912, 156</value>
@@ -2834,7 +3011,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;lblEFGWertRechts.ZOrder" xml:space="preserve">
-    <value>61</value>
+    <value>67</value>
   </data>
   <data name="RadTextBoxControlLastRechts1.Location" type="System.Drawing.Point, System.Drawing">
     <value>688, 178</value>
@@ -2885,7 +3062,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlLastRechts1.ZOrder" xml:space="preserve">
-    <value>62</value>
+    <value>68</value>
   </data>
   <data name="RadScrollablePanel1.PanelContainer.Size" type="System.Drawing.Size, System.Drawing">
     <value>1057, 400</value>

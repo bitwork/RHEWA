@@ -117,253 +117,100 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="RadCheckBoxWaagegeprueft.Location" type="System.Drawing.Point, System.Drawing">
-    <value>607, 96</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="RadCheckBoxWaagegeprueft.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="RadScrollablePanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
-  <data name="RadCheckBoxWaagegeprueft.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxWaagegeprueft.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="RadScrollablePanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="RadCheckBoxWaagegeprueft.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
+  <data name="lblPflichtfeld3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="RadCheckBoxWaagegeprueft.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="lblPflichtfeld3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="RadCheckBoxWaagegeprueft.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="lblPflichtfeld3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>628, 96</value>
   </data>
-  <data name="RadCheckBoxWaagegeprueft.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="lblPflichtfeld3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 13</value>
   </data>
-  <data name="RadCheckBoxWaagegeprueft.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="lblPflichtfeld3.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
   </data>
-  <data name="RadCheckBoxWaagegeprueft.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
+  <data name="lblPflichtfeld3.Text" xml:space="preserve">
+    <value>*</value>
   </data>
-  <data name="RadCheckBoxWaagegeprueft.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 15</value>
+  <data name="&gt;&gt;lblPflichtfeld3.Name" xml:space="preserve">
+    <value>lblPflichtfeld3</value>
   </data>
-  <data name="RadCheckBoxWaagegeprueft.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+  <data name="&gt;&gt;lblPflichtfeld3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;RadCheckBoxWaagegeprueft.Name" xml:space="preserve">
-    <value>RadCheckBoxWaagegeprueft</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxWaagegeprueft.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxWaagegeprueft.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblPflichtfeld3.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
-  <data name="&gt;&gt;RadCheckBoxWaagegeprueft.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lblPflichtfeld3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblPflichtfeld2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPflichtfeld2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblPflichtfeld2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>628, 67</value>
+  </data>
+  <data name="lblPflichtfeld2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="lblPflichtfeld2.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="lblPflichtfeld2.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld2.Name" xml:space="preserve">
+    <value>lblPflichtfeld2</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld2.Parent" xml:space="preserve">
+    <value>RadScrollablePanel1.PanelContainer</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="RadCheckBoxWaageNichtGeeignet.Location" type="System.Drawing.Point, System.Drawing">
-    <value>607, 67</value>
+  <data name="lblPflichtfeld1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="RadCheckBoxWaageNichtGeeignet.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="lblPflichtfeld1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>628, 15</value>
   </data>
-  <data name="RadCheckBoxWaageNichtGeeignet.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="lblPflichtfeld1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 13</value>
   </data>
-  <data name="RadCheckBoxWaageNichtGeeignet.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
+  <data name="lblPflichtfeld1.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
   </data>
-  <data name="RadCheckBoxWaageNichtGeeignet.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
+  <data name="lblPflichtfeld1.Text" xml:space="preserve">
+    <value>*</value>
   </data>
-  <data name="RadCheckBoxWaageNichtGeeignet.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="&gt;&gt;lblPflichtfeld1.Name" xml:space="preserve">
+    <value>lblPflichtfeld1</value>
   </data>
-  <data name="RadCheckBoxWaageNichtGeeignet.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="&gt;&gt;lblPflichtfeld1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="RadCheckBoxWaageNichtGeeignet.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadCheckBoxWaageNichtGeeignet.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxWaageNichtGeeignet.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="RadCheckBoxWaageNichtGeeignet.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 15</value>
-  </data>
-  <data name="RadCheckBoxWaageNichtGeeignet.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxWaageNichtGeeignet.Name" xml:space="preserve">
-    <value>RadCheckBoxWaageNichtGeeignet</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxWaageNichtGeeignet.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxWaageNichtGeeignet.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblPflichtfeld1.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
-  <data name="&gt;&gt;RadCheckBoxWaageNichtGeeignet.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="RadCheckBoxZufahrtenInOrdnung.Location" type="System.Drawing.Point, System.Drawing">
-    <value>607, 15</value>
-  </data>
-  <data name="RadCheckBoxZufahrtenInOrdnung.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxZufahrtenInOrdnung.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxZufahrtenInOrdnung.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadCheckBoxZufahrtenInOrdnung.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadCheckBoxZufahrtenInOrdnung.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadCheckBoxZufahrtenInOrdnung.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadCheckBoxZufahrtenInOrdnung.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadCheckBoxZufahrtenInOrdnung.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxZufahrtenInOrdnung.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="RadCheckBoxZufahrtenInOrdnung.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 15</value>
-  </data>
-  <data name="RadCheckBoxZufahrtenInOrdnung.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxZufahrtenInOrdnung.Name" xml:space="preserve">
-    <value>RadCheckBoxZufahrtenInOrdnung</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxZufahrtenInOrdnung.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxZufahrtenInOrdnung.Parent" xml:space="preserve">
-    <value>RadScrollablePanel1.PanelContainer</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxZufahrtenInOrdnung.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="lblWaagegeprueft.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 88</value>
-  </data>
-  <data name="lblWaagegeprueft.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblWaagegeprueft.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblWaagegeprueft.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="lblWaagegeprueft.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblWaagegeprueft.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lblWaagegeprueft.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblWaagegeprueft.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblWaagegeprueft.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblWaagegeprueft.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="lblWaagegeprueft.Size" type="System.Drawing.Size, System.Drawing">
-    <value>308, 18</value>
-  </data>
-  <data name="lblWaagegeprueft.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="lblWaagegeprueft.Text" xml:space="preserve">
-    <value>qualification test for axle load weighing has been carried out</value>
-  </data>
-  <data name="&gt;&gt;lblWaagegeprueft.Name" xml:space="preserve">
-    <value>lblWaagegeprueft</value>
-  </data>
-  <data name="&gt;&gt;lblWaagegeprueft.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;lblWaagegeprueft.Parent" xml:space="preserve">
-    <value>RadScrollablePanel1.PanelContainer</value>
-  </data>
-  <data name="&gt;&gt;lblWaagegeprueft.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="lblWaageNichtGeeignet.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 64</value>
-  </data>
-  <data name="lblWaageNichtGeeignet.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblWaageNichtGeeignet.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblWaageNichtGeeignet.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="lblWaageNichtGeeignet.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblWaageNichtGeeignet.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lblWaageNichtGeeignet.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblWaageNichtGeeignet.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblWaageNichtGeeignet.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblWaageNichtGeeignet.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="lblWaageNichtGeeignet.Size" type="System.Drawing.Size, System.Drawing">
-    <value>339, 18</value>
-  </data>
-  <data name="lblWaageNichtGeeignet.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="lblWaageNichtGeeignet.Text" xml:space="preserve">
-    <value>The scale is not qualified for axle load weighing, a information sign</value>
-  </data>
-  <data name="&gt;&gt;lblWaageNichtGeeignet.Name" xml:space="preserve">
-    <value>lblWaageNichtGeeignet</value>
-  </data>
-  <data name="&gt;&gt;lblWaageNichtGeeignet.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;lblWaageNichtGeeignet.Parent" xml:space="preserve">
-    <value>RadScrollablePanel1.PanelContainer</value>
-  </data>
-  <data name="&gt;&gt;lblWaageNichtGeeignet.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;lblPflichtfeld1.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="lblZufahrtenInOrdnung.Location" type="System.Drawing.Point, System.Drawing">
@@ -415,13 +262,253 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;lblZufahrtenInOrdnung.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="RadCheckBoxWaagegeprueft.Location" type="System.Drawing.Point, System.Drawing">
+    <value>607, 96</value>
+  </data>
+  <data name="RadCheckBoxWaagegeprueft.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadCheckBoxWaagegeprueft.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadCheckBoxWaagegeprueft.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="RadCheckBoxWaagegeprueft.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
-  <data name="RadScrollablePanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="RadCheckBoxWaagegeprueft.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="RadScrollablePanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="RadCheckBoxWaagegeprueft.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadCheckBoxWaagegeprueft.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadCheckBoxWaagegeprueft.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadCheckBoxWaagegeprueft.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="RadCheckBoxWaagegeprueft.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 15</value>
+  </data>
+  <data name="RadCheckBoxWaagegeprueft.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxWaagegeprueft.Name" xml:space="preserve">
+    <value>RadCheckBoxWaagegeprueft</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxWaagegeprueft.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxWaagegeprueft.Parent" xml:space="preserve">
+    <value>RadScrollablePanel1.PanelContainer</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxWaagegeprueft.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblWaageNichtGeeignet.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 64</value>
+  </data>
+  <data name="lblWaageNichtGeeignet.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lblWaageNichtGeeignet.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lblWaageNichtGeeignet.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="lblWaageNichtGeeignet.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblWaageNichtGeeignet.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lblWaageNichtGeeignet.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="lblWaageNichtGeeignet.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="lblWaageNichtGeeignet.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lblWaageNichtGeeignet.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="lblWaageNichtGeeignet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>339, 18</value>
+  </data>
+  <data name="lblWaageNichtGeeignet.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="lblWaageNichtGeeignet.Text" xml:space="preserve">
+    <value>The scale is not qualified for axle load weighing, a information sign</value>
+  </data>
+  <data name="&gt;&gt;lblWaageNichtGeeignet.Name" xml:space="preserve">
+    <value>lblWaageNichtGeeignet</value>
+  </data>
+  <data name="&gt;&gt;lblWaageNichtGeeignet.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;lblWaageNichtGeeignet.Parent" xml:space="preserve">
+    <value>RadScrollablePanel1.PanelContainer</value>
+  </data>
+  <data name="&gt;&gt;lblWaageNichtGeeignet.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="RadCheckBoxWaageNichtGeeignet.Location" type="System.Drawing.Point, System.Drawing">
+    <value>607, 67</value>
+  </data>
+  <data name="RadCheckBoxWaageNichtGeeignet.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadCheckBoxWaageNichtGeeignet.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadCheckBoxWaageNichtGeeignet.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="RadCheckBoxWaageNichtGeeignet.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RadCheckBoxWaageNichtGeeignet.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RadCheckBoxWaageNichtGeeignet.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadCheckBoxWaageNichtGeeignet.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadCheckBoxWaageNichtGeeignet.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadCheckBoxWaageNichtGeeignet.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="RadCheckBoxWaageNichtGeeignet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 15</value>
+  </data>
+  <data name="RadCheckBoxWaageNichtGeeignet.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxWaageNichtGeeignet.Name" xml:space="preserve">
+    <value>RadCheckBoxWaageNichtGeeignet</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxWaageNichtGeeignet.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxWaageNichtGeeignet.Parent" xml:space="preserve">
+    <value>RadScrollablePanel1.PanelContainer</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxWaageNichtGeeignet.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lblWaagegeprueft.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 88</value>
+  </data>
+  <data name="lblWaagegeprueft.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lblWaagegeprueft.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lblWaagegeprueft.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="lblWaagegeprueft.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblWaagegeprueft.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lblWaagegeprueft.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="lblWaagegeprueft.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="lblWaagegeprueft.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lblWaagegeprueft.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="lblWaagegeprueft.Size" type="System.Drawing.Size, System.Drawing">
+    <value>308, 18</value>
+  </data>
+  <data name="lblWaagegeprueft.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="lblWaagegeprueft.Text" xml:space="preserve">
+    <value>qualification test for axle load weighing has been carried out</value>
+  </data>
+  <data name="&gt;&gt;lblWaagegeprueft.Name" xml:space="preserve">
+    <value>lblWaagegeprueft</value>
+  </data>
+  <data name="&gt;&gt;lblWaagegeprueft.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;lblWaagegeprueft.Parent" xml:space="preserve">
+    <value>RadScrollablePanel1.PanelContainer</value>
+  </data>
+  <data name="&gt;&gt;lblWaagegeprueft.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="RadCheckBoxZufahrtenInOrdnung.Location" type="System.Drawing.Point, System.Drawing">
+    <value>607, 15</value>
+  </data>
+  <data name="RadCheckBoxZufahrtenInOrdnung.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadCheckBoxZufahrtenInOrdnung.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadCheckBoxZufahrtenInOrdnung.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="RadCheckBoxZufahrtenInOrdnung.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RadCheckBoxZufahrtenInOrdnung.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RadCheckBoxZufahrtenInOrdnung.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadCheckBoxZufahrtenInOrdnung.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadCheckBoxZufahrtenInOrdnung.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadCheckBoxZufahrtenInOrdnung.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="RadCheckBoxZufahrtenInOrdnung.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 15</value>
+  </data>
+  <data name="RadCheckBoxZufahrtenInOrdnung.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxZufahrtenInOrdnung.Name" xml:space="preserve">
+    <value>RadCheckBoxZufahrtenInOrdnung</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxZufahrtenInOrdnung.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxZufahrtenInOrdnung.Parent" xml:space="preserve">
+    <value>RadScrollablePanel1.PanelContainer</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxZufahrtenInOrdnung.ZOrder" xml:space="preserve">
+    <value>8</value>
   </data>
   <data name="RadScrollablePanel1.PanelContainer.Size" type="System.Drawing.Size, System.Drawing">
     <value>779, 148</value>
