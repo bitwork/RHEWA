@@ -353,6 +353,7 @@
 
                 '=WENN('Daten-Eingabe'!$G$15="";"R fehlt";WENN($G$33="";"Q fehlt";WENN('Daten-Eingabe'!$G$16="";"Anzahl  N  fehlt";($G$33*'Daten-Eingabe'!$G$11*'Daten-Eingabe'!$G$15)/'Daten-Eingabe'!$G$16)))
                 'in der Excelmappe ohne Nachkommastellen angegeben deswegen CINT()
+                'TODO Fehlerabfang erforderlich: Buchstaben können eingegeben werden und beim konvertieren in Double schlägt er auf.
                 RadTextBoxPunkt5QMax.Text = (RadTextBoxPunkt5Faktor.Text * objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1 * objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Uebersetzungsverhaeltnis) / objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen
 
                 'vorher bereits runden des Faktorwertes (mit 2 Dezimalstellen angegeben), da damit gerechnet wird

@@ -163,6 +163,8 @@ Partial Class ucoEichprotokollDaten
         Me.RadTextBoxControlAufstellungsort = New Telerik.WinControls.UI.RadTextBoxControl()
         Me.lblBenutzer = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlBenutzer = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanel1.PanelContainer.SuspendLayout()
         Me.RadScrollablePanel1.SuspendLayout()
@@ -1608,6 +1610,8 @@ Partial Class ucoEichprotokollDaten
         'RadGroupBoxIdentifikationsdaten
         '
         Me.RadGroupBoxIdentifikationsdaten.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.RadGroupBoxIdentifikationsdaten.Controls.Add(Me.Label2)
+        Me.RadGroupBoxIdentifikationsdaten.Controls.Add(Me.Label1)
         Me.RadGroupBoxIdentifikationsdaten.Controls.Add(Me.RadGroupBoxMax1)
         Me.RadGroupBoxIdentifikationsdaten.Controls.Add(Me.RadGroupBoxMax3)
         Me.RadGroupBoxIdentifikationsdaten.Controls.Add(Me.RadGroupBoxMax2)
@@ -2630,6 +2634,18 @@ Partial Class ucoEichprotokollDaten
         Me.RadTextBoxControlBenutzer.RootElement.Text = resources.GetString("RadTextBoxControlBenutzer.RootElement.Text")
         Me.RadTextBoxControlBenutzer.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBenutzer.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
+        'Label1
+        '
+        resources.ApplyResources(Me.Label1, "Label1")
+        Me.Label1.ForeColor = System.Drawing.Color.Red
+        Me.Label1.Name = "Label1"
+        '
+        'Label2
+        '
+        resources.ApplyResources(Me.Label2, "Label2")
+        Me.Label2.ForeColor = System.Drawing.Color.Red
+        Me.Label2.Name = "Label2"
+        '
         'ucoEichprotokollDaten
         '
         resources.ApplyResources(Me, "$this")
@@ -2955,5 +2971,7 @@ Partial Class ucoEichprotokollDaten
     Friend WithEvents lblPflichtfeld3 As System.Windows.Forms.Label
     Friend WithEvents lblPflichtfeld4 As System.Windows.Forms.Label
     Friend WithEvents lblPflichtfeldDrucker As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 
 End Class

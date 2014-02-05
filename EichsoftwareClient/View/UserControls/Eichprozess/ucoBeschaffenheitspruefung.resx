@@ -128,6 +128,97 @@
   <data name="RadGroupBoxWaegebruecke.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Label14.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label14.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>986, 111</value>
+  </data>
+  <data name="Label14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="Label14.TabIndex" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="Label14.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;Label14.Name" xml:space="preserve">
+    <value>Label14</value>
+  </data>
+  <data name="&gt;&gt;Label14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label14.Parent" xml:space="preserve">
+    <value>RadGroupBoxWaegebruecke</value>
+  </data>
+  <data name="&gt;&gt;Label14.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Label13.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label13.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>986, 73</value>
+  </data>
+  <data name="Label13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="Label13.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
+  </data>
+  <data name="Label13.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;Label13.Name" xml:space="preserve">
+    <value>Label13</value>
+  </data>
+  <data name="&gt;&gt;Label13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label13.Parent" xml:space="preserve">
+    <value>RadGroupBoxWaegebruecke</value>
+  </data>
+  <data name="&gt;&gt;Label13.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Label12.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>986, 34</value>
+  </data>
+  <data name="Label12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="Label12.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="Label12.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;Label12.Name" xml:space="preserve">
+    <value>Label12</value>
+  </data>
+  <data name="&gt;&gt;Label12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label12.Parent" xml:space="preserve">
+    <value>RadGroupBoxWaegebruecke</value>
+  </data>
+  <data name="&gt;&gt;Label12.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="RadSeparator11.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 94</value>
   </data>
@@ -140,7 +231,6 @@
   <data name="RadSeparator11.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="RadSeparator11.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
@@ -178,7 +268,7 @@
     <value>RadGroupBoxWaegebruecke</value>
   </data>
   <data name="&gt;&gt;RadSeparator11.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>3</value>
   </data>
   <data name="RadSeparator10.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 56</value>
@@ -229,7 +319,7 @@
     <value>RadGroupBoxWaegebruecke</value>
   </data>
   <data name="&gt;&gt;RadSeparator10.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="RadLabel15.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 34</value>
@@ -281,7 +371,7 @@
     <value>RadGroupBoxWaegebruecke</value>
   </data>
   <data name="&gt;&gt;RadLabel15.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
   </data>
   <data name="RadCheckBoxBruecke1.Location" type="System.Drawing.Point, System.Drawing">
     <value>965, 34</value>
@@ -329,7 +419,7 @@
     <value>RadGroupBoxWaegebruecke</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBruecke1.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
   </data>
   <data name="RadCheckBoxBruecke3.Location" type="System.Drawing.Point, System.Drawing">
     <value>965, 111</value>
@@ -377,7 +467,7 @@
     <value>RadGroupBoxWaegebruecke</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBruecke3.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>7</value>
   </data>
   <data name="RadCheckBoxBruecke2.Location" type="System.Drawing.Point, System.Drawing">
     <value>965, 73</value>
@@ -425,7 +515,7 @@
     <value>RadGroupBoxWaegebruecke</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBruecke2.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>8</value>
   </data>
   <data name="RadLabel11.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 72</value>
@@ -476,7 +566,7 @@
     <value>RadGroupBoxWaegebruecke</value>
   </data>
   <data name="&gt;&gt;RadLabel11.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>9</value>
   </data>
   <data name="RadLabel13.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 110</value>
@@ -528,7 +618,7 @@
     <value>RadGroupBoxWaegebruecke</value>
   </data>
   <data name="&gt;&gt;RadLabel13.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>10</value>
   </data>
   <data name="RadGroupBoxWaegebruecke.HeaderText" xml:space="preserve">
     <value>Criteria for weighbridges:										
@@ -589,6 +679,156 @@
   <data name="RadGroupBoxWaegezellen.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
+  <data name="Label7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>986, 173</value>
+  </data>
+  <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="Label7.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="Label7.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;Label7.Name" xml:space="preserve">
+    <value>Label7</value>
+  </data>
+  <data name="&gt;&gt;Label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label7.Parent" xml:space="preserve">
+    <value>RadGroupBoxWaegezellen</value>
+  </data>
+  <data name="&gt;&gt;Label7.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>986, 135</value>
+  </data>
+  <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="Label6.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="Label6.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;Label6.Name" xml:space="preserve">
+    <value>Label6</value>
+  </data>
+  <data name="&gt;&gt;Label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label6.Parent" xml:space="preserve">
+    <value>RadGroupBoxWaegezellen</value>
+  </data>
+  <data name="&gt;&gt;Label6.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>986, 97</value>
+  </data>
+  <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="Label5.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="Label5.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;Label5.Name" xml:space="preserve">
+    <value>Label5</value>
+  </data>
+  <data name="&gt;&gt;Label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label5.Parent" xml:space="preserve">
+    <value>RadGroupBoxWaegezellen</value>
+  </data>
+  <data name="&gt;&gt;Label5.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>986, 63</value>
+  </data>
+  <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="Label4.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;Label4.Name" xml:space="preserve">
+    <value>Label4</value>
+  </data>
+  <data name="&gt;&gt;Label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label4.Parent" xml:space="preserve">
+    <value>RadGroupBoxWaegezellen</value>
+  </data>
+  <data name="&gt;&gt;Label4.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="Label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>986, 23</value>
+  </data>
+  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="Label3.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;Label3.Name" xml:space="preserve">
+    <value>Label3</value>
+  </data>
+  <data name="&gt;&gt;Label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label3.Parent" xml:space="preserve">
+    <value>RadGroupBoxWaegezellen</value>
+  </data>
+  <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="RadSeparator6.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 157</value>
   </data>
@@ -638,7 +878,7 @@
     <value>RadGroupBoxWaegezellen</value>
   </data>
   <data name="&gt;&gt;RadSeparator6.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>5</value>
   </data>
   <data name="RadSeparator5.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 119</value>
@@ -689,7 +929,7 @@
     <value>RadGroupBoxWaegezellen</value>
   </data>
   <data name="&gt;&gt;RadSeparator5.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>6</value>
   </data>
   <data name="RadSeparator4.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 81</value>
@@ -740,7 +980,7 @@
     <value>RadGroupBoxWaegezellen</value>
   </data>
   <data name="&gt;&gt;RadSeparator4.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>7</value>
   </data>
   <data name="RadSeparator3.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 43</value>
@@ -791,7 +1031,7 @@
     <value>RadGroupBoxWaegezellen</value>
   </data>
   <data name="&gt;&gt;RadSeparator3.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>8</value>
   </data>
   <data name="RadLabel7.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 173</value>
@@ -843,7 +1083,7 @@
     <value>RadGroupBoxWaegezellen</value>
   </data>
   <data name="&gt;&gt;RadLabel7.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>9</value>
   </data>
   <data name="RadLabel5.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 135</value>
@@ -895,7 +1135,7 @@
     <value>RadGroupBoxWaegezellen</value>
   </data>
   <data name="&gt;&gt;RadLabel5.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>10</value>
   </data>
   <data name="RadLabel3.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 23</value>
@@ -947,7 +1187,7 @@
     <value>RadGroupBoxWaegezellen</value>
   </data>
   <data name="&gt;&gt;RadLabel3.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>11</value>
   </data>
   <data name="RadLabel6.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 97</value>
@@ -999,7 +1239,7 @@
     <value>RadGroupBoxWaegezellen</value>
   </data>
   <data name="&gt;&gt;RadLabel6.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>12</value>
   </data>
   <data name="RadLabel8.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 59</value>
@@ -1050,7 +1290,7 @@
     <value>RadGroupBoxWaegezellen</value>
   </data>
   <data name="&gt;&gt;RadLabel8.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>13</value>
   </data>
   <data name="RadCheckBoxWZ1.Location" type="System.Drawing.Point, System.Drawing">
     <value>965, 21</value>
@@ -1101,7 +1341,7 @@
     <value>RadGroupBoxWaegezellen</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxWZ1.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>14</value>
   </data>
   <data name="RadCheckBoxWZ2.Location" type="System.Drawing.Point, System.Drawing">
     <value>965, 59</value>
@@ -1152,7 +1392,7 @@
     <value>RadGroupBoxWaegezellen</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxWZ2.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>15</value>
   </data>
   <data name="RadCheckBoxWZ4.Location" type="System.Drawing.Point, System.Drawing">
     <value>965, 133</value>
@@ -1203,7 +1443,7 @@
     <value>RadGroupBoxWaegezellen</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxWZ4.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>16</value>
   </data>
   <data name="RadCheckBoxWZ3.Location" type="System.Drawing.Point, System.Drawing">
     <value>965, 95</value>
@@ -1254,7 +1494,7 @@
     <value>RadGroupBoxWaegezellen</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxWZ3.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>17</value>
   </data>
   <data name="RadCheckBoxWZ5.Location" type="System.Drawing.Point, System.Drawing">
     <value>965, 171</value>
@@ -1305,7 +1545,7 @@
     <value>RadGroupBoxWaegezellen</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxWZ5.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>18</value>
   </data>
   <data name="RadGroupBoxWaegezellen.HeaderText" xml:space="preserve">
     <value>Criteria for load cells:										
@@ -1366,6 +1606,126 @@
   <data name="RadGroupBoxVerbindungselemente.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
+  <data name="Label11.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label11.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>986, 150</value>
+  </data>
+  <data name="Label11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="Label11.TabIndex" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
+  <data name="Label11.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;Label11.Name" xml:space="preserve">
+    <value>Label11</value>
+  </data>
+  <data name="&gt;&gt;Label11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label11.Parent" xml:space="preserve">
+    <value>RadGroupBoxVerbindungselemente</value>
+  </data>
+  <data name="&gt;&gt;Label11.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Label10.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>986, 113</value>
+  </data>
+  <data name="Label10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="Label10.TabIndex" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="Label10.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;Label10.Name" xml:space="preserve">
+    <value>Label10</value>
+  </data>
+  <data name="&gt;&gt;Label10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label10.Parent" xml:space="preserve">
+    <value>RadGroupBoxVerbindungselemente</value>
+  </data>
+  <data name="&gt;&gt;Label10.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Label9.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>986, 77</value>
+  </data>
+  <data name="Label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="Label9.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="Label9.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;Label9.Name" xml:space="preserve">
+    <value>Label9</value>
+  </data>
+  <data name="&gt;&gt;Label9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label9.Parent" xml:space="preserve">
+    <value>RadGroupBoxVerbindungselemente</value>
+  </data>
+  <data name="&gt;&gt;Label9.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Label8.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>986, 36</value>
+  </data>
+  <data name="Label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="Label8.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="Label8.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;Label8.Name" xml:space="preserve">
+    <value>Label8</value>
+  </data>
+  <data name="&gt;&gt;Label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label8.Parent" xml:space="preserve">
+    <value>RadGroupBoxVerbindungselemente</value>
+  </data>
+  <data name="&gt;&gt;Label8.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="RadSeparator9.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 134</value>
   </data>
@@ -1415,7 +1775,7 @@
     <value>RadGroupBoxVerbindungselemente</value>
   </data>
   <data name="&gt;&gt;RadSeparator9.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>4</value>
   </data>
   <data name="RadSeparator8.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 96</value>
@@ -1466,7 +1826,7 @@
     <value>RadGroupBoxVerbindungselemente</value>
   </data>
   <data name="&gt;&gt;RadSeparator8.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>5</value>
   </data>
   <data name="RadSeparator7.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 56</value>
@@ -1517,7 +1877,7 @@
     <value>RadGroupBoxVerbindungselemente</value>
   </data>
   <data name="&gt;&gt;RadSeparator7.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>6</value>
   </data>
   <data name="RadLabel16.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 34</value>
@@ -1569,7 +1929,7 @@
     <value>RadGroupBoxVerbindungselemente</value>
   </data>
   <data name="&gt;&gt;RadLabel16.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>7</value>
   </data>
   <data name="RadLabel14.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 112</value>
@@ -1621,7 +1981,7 @@
     <value>RadGroupBoxVerbindungselemente</value>
   </data>
   <data name="&gt;&gt;RadLabel14.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>8</value>
   </data>
   <data name="RadLabel12.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 72</value>
@@ -1673,7 +2033,7 @@
     <value>RadGroupBoxVerbindungselemente</value>
   </data>
   <data name="&gt;&gt;RadLabel12.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>9</value>
   </data>
   <data name="RadLabel10.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 149</value>
@@ -1724,7 +2084,7 @@
     <value>RadGroupBoxVerbindungselemente</value>
   </data>
   <data name="&gt;&gt;RadLabel10.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>10</value>
   </data>
   <data name="RadCheckBoxVerbindungelemente1.Location" type="System.Drawing.Point, System.Drawing">
     <value>965, 34</value>
@@ -1772,7 +2132,7 @@
     <value>RadGroupBoxVerbindungselemente</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxVerbindungelemente1.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>11</value>
   </data>
   <data name="RadCheckBoxVerbindungelemente3.Location" type="System.Drawing.Point, System.Drawing">
     <value>965, 113</value>
@@ -1820,7 +2180,7 @@
     <value>RadGroupBoxVerbindungselemente</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxVerbindungelemente3.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>12</value>
   </data>
   <data name="RadCheckBoxVerbindungelemente2.Location" type="System.Drawing.Point, System.Drawing">
     <value>965, 75</value>
@@ -1868,7 +2228,7 @@
     <value>RadGroupBoxVerbindungselemente</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxVerbindungelemente2.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>13</value>
   </data>
   <data name="RadCheckBoxVerbindungelemente4.Location" type="System.Drawing.Point, System.Drawing">
     <value>965, 150</value>
@@ -1916,7 +2276,7 @@
     <value>RadGroupBoxVerbindungselemente</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxVerbindungelemente4.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>14</value>
   </data>
   <data name="RadGroupBoxVerbindungselemente.HeaderText" xml:space="preserve">
     <value>Criteria for connecting components:										
@@ -1977,6 +2337,93 @@
   <data name="RadGroupBoxAuswerteGeraete.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
+  <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>986, 95</value>
+  </data>
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="Label2.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;Label2.Name" xml:space="preserve">
+    <value>Label2</value>
+  </data>
+  <data name="&gt;&gt;Label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label2.Parent" xml:space="preserve">
+    <value>RadGroupBoxAuswerteGeraete</value>
+  </data>
+  <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>986, 63</value>
+  </data>
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="Label1.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;Label1.Name" xml:space="preserve">
+    <value>Label1</value>
+  </data>
+  <data name="&gt;&gt;Label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
+    <value>RadGroupBoxAuswerteGeraete</value>
+  </data>
+  <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblPflichtfeld1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPflichtfeld1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>986, 30</value>
+  </data>
+  <data name="lblPflichtfeld1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="lblPflichtfeld1.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="lblPflichtfeld1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld1.Name" xml:space="preserve">
+    <value>lblPflichtfeld1</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld1.Parent" xml:space="preserve">
+    <value>RadGroupBoxAuswerteGeraete</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="RadSeparator2.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 77</value>
   </data>
@@ -2026,7 +2473,7 @@
     <value>RadGroupBoxAuswerteGeraete</value>
   </data>
   <data name="&gt;&gt;RadSeparator2.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>3</value>
   </data>
   <data name="RadSeparator1.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 47</value>
@@ -2077,7 +2524,7 @@
     <value>RadGroupBoxAuswerteGeraete</value>
   </data>
   <data name="&gt;&gt;RadSeparator1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="RadLabel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 30</value>
@@ -2129,7 +2576,7 @@
     <value>RadGroupBoxAuswerteGeraete</value>
   </data>
   <data name="&gt;&gt;RadLabel1.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
   </data>
   <data name="RadLabel4.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 93</value>
@@ -2181,7 +2628,7 @@
     <value>RadGroupBoxAuswerteGeraete</value>
   </data>
   <data name="&gt;&gt;RadLabel4.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
   </data>
   <data name="RadLabel2.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 63</value>
@@ -2232,7 +2679,7 @@
     <value>RadGroupBoxAuswerteGeraete</value>
   </data>
   <data name="&gt;&gt;RadLabel2.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>7</value>
   </data>
   <data name="RadCheckBoxAWG1.Location" type="System.Drawing.Point, System.Drawing">
     <value>965, 30</value>
@@ -2280,7 +2727,7 @@
     <value>RadGroupBoxAuswerteGeraete</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxAWG1.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>8</value>
   </data>
   <data name="RadCheckBoxAWG3.Location" type="System.Drawing.Point, System.Drawing">
     <value>965, 93</value>
@@ -2328,7 +2775,7 @@
     <value>RadGroupBoxAuswerteGeraete</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxAWG3.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>9</value>
   </data>
   <data name="RadCheckBoxAWG2.Location" type="System.Drawing.Point, System.Drawing">
     <value>965, 61</value>
@@ -2376,7 +2823,7 @@
     <value>RadGroupBoxAuswerteGeraete</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxAWG2.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>10</value>
   </data>
   <data name="RadGroupBoxAuswerteGeraete.HeaderText" xml:space="preserve">
     <value>Criteria for Rhewa indicators:	</value>

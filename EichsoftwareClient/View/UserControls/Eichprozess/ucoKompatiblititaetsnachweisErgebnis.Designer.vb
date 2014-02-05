@@ -205,6 +205,7 @@ Partial Class ucoKompatiblititaetsnachweisErgebnis
         Me.RadLabel87 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxFabriknummer = New Telerik.WinControls.UI.RadTextBox()
         Me.lblFabriknummer = New Telerik.WinControls.UI.RadLabel()
+        Me.lblPflichtfeld = New System.Windows.Forms.Label()
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanel1.PanelContainer.SuspendLayout()
         Me.RadScrollablePanel1.SuspendLayout()
@@ -411,6 +412,7 @@ Partial Class ucoKompatiblititaetsnachweisErgebnis
         '
         'RadScrollablePanel1.PanelContainer
         '
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.lblPflichtfeld)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.FlowLayoutPanel1)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadLabel87)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadTextBoxFabriknummer)
@@ -3744,6 +3746,12 @@ Partial Class ucoKompatiblititaetsnachweisErgebnis
         Me.lblFabriknummer.RootElement.Text = resources.GetString("lblFabriknummer.RootElement.Text")
         Me.lblFabriknummer.RootElement.TextOrientation = CType(resources.GetObject("lblFabriknummer.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
+        'lblPflichtfeld
+        '
+        resources.ApplyResources(Me.lblPflichtfeld, "lblPflichtfeld")
+        Me.lblPflichtfeld.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld.Name = "lblPflichtfeld"
+        '
         'ucoKompatiblititaetsnachweisErgebnis
         '
         resources.ApplyResources(Me, "$this")
@@ -4146,5 +4154,6 @@ Partial Class ucoKompatiblititaetsnachweisErgebnis
     Friend WithEvents RadCheckBoxPunkt6aMax2 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents RadCheckBoxPunkt6aMax3 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents FlowLayoutPanel1 As System.Windows.Forms.FlowLayoutPanel
+    Friend WithEvents lblPflichtfeld As System.Windows.Forms.Label
 
 End Class

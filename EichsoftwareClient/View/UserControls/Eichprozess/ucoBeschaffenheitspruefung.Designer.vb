@@ -69,6 +69,21 @@ Partial Class ucoBeschaffenheitspruefung
         Me.RadCheckBoxAWG1 = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadCheckBoxAWG3 = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadCheckBoxAWG2 = New Telerik.WinControls.UI.RadCheckBox()
+        Me.lblPflichtfeld1 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanel1.PanelContainer.SuspendLayout()
         Me.RadScrollablePanel1.SuspendLayout()
@@ -152,6 +167,9 @@ Partial Class ucoBeschaffenheitspruefung
         '
         Me.RadGroupBoxWaegebruecke.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         resources.ApplyResources(Me.RadGroupBoxWaegebruecke, "RadGroupBoxWaegebruecke")
+        Me.RadGroupBoxWaegebruecke.Controls.Add(Me.Label14)
+        Me.RadGroupBoxWaegebruecke.Controls.Add(Me.Label13)
+        Me.RadGroupBoxWaegebruecke.Controls.Add(Me.Label12)
         Me.RadGroupBoxWaegebruecke.Controls.Add(Me.RadSeparator11)
         Me.RadGroupBoxWaegebruecke.Controls.Add(Me.RadSeparator10)
         Me.RadGroupBoxWaegebruecke.Controls.Add(Me.RadLabel15)
@@ -319,6 +337,11 @@ Partial Class ucoBeschaffenheitspruefung
         '
         Me.RadGroupBoxWaegezellen.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         resources.ApplyResources(Me.RadGroupBoxWaegezellen, "RadGroupBoxWaegezellen")
+        Me.RadGroupBoxWaegezellen.Controls.Add(Me.Label7)
+        Me.RadGroupBoxWaegezellen.Controls.Add(Me.Label6)
+        Me.RadGroupBoxWaegezellen.Controls.Add(Me.Label5)
+        Me.RadGroupBoxWaegezellen.Controls.Add(Me.Label4)
+        Me.RadGroupBoxWaegezellen.Controls.Add(Me.Label3)
         Me.RadGroupBoxWaegezellen.Controls.Add(Me.RadSeparator6)
         Me.RadGroupBoxWaegezellen.Controls.Add(Me.RadSeparator5)
         Me.RadGroupBoxWaegezellen.Controls.Add(Me.RadSeparator4)
@@ -598,6 +621,10 @@ Partial Class ucoBeschaffenheitspruefung
         '
         Me.RadGroupBoxVerbindungselemente.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         resources.ApplyResources(Me.RadGroupBoxVerbindungselemente, "RadGroupBoxVerbindungselemente")
+        Me.RadGroupBoxVerbindungselemente.Controls.Add(Me.Label11)
+        Me.RadGroupBoxVerbindungselemente.Controls.Add(Me.Label10)
+        Me.RadGroupBoxVerbindungselemente.Controls.Add(Me.Label9)
+        Me.RadGroupBoxVerbindungselemente.Controls.Add(Me.Label8)
         Me.RadGroupBoxVerbindungselemente.Controls.Add(Me.RadSeparator9)
         Me.RadGroupBoxVerbindungselemente.Controls.Add(Me.RadSeparator8)
         Me.RadGroupBoxVerbindungselemente.Controls.Add(Me.RadSeparator7)
@@ -822,6 +849,9 @@ Partial Class ucoBeschaffenheitspruefung
         '
         Me.RadGroupBoxAuswerteGeraete.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         resources.ApplyResources(Me.RadGroupBoxAuswerteGeraete, "RadGroupBoxAuswerteGeraete")
+        Me.RadGroupBoxAuswerteGeraete.Controls.Add(Me.Label2)
+        Me.RadGroupBoxAuswerteGeraete.Controls.Add(Me.Label1)
+        Me.RadGroupBoxAuswerteGeraete.Controls.Add(Me.lblPflichtfeld1)
         Me.RadGroupBoxAuswerteGeraete.Controls.Add(Me.RadSeparator2)
         Me.RadGroupBoxAuswerteGeraete.Controls.Add(Me.RadSeparator1)
         Me.RadGroupBoxAuswerteGeraete.Controls.Add(Me.RadLabel1)
@@ -985,6 +1015,96 @@ Partial Class ucoBeschaffenheitspruefung
         Me.RadCheckBoxAWG2.RootElement.Text = resources.GetString("RadCheckBoxAWG2.RootElement.Text")
         Me.RadCheckBoxAWG2.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxAWG2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
+        'lblPflichtfeld1
+        '
+        resources.ApplyResources(Me.lblPflichtfeld1, "lblPflichtfeld1")
+        Me.lblPflichtfeld1.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld1.Name = "lblPflichtfeld1"
+        '
+        'Label1
+        '
+        resources.ApplyResources(Me.Label1, "Label1")
+        Me.Label1.ForeColor = System.Drawing.Color.Red
+        Me.Label1.Name = "Label1"
+        '
+        'Label2
+        '
+        resources.ApplyResources(Me.Label2, "Label2")
+        Me.Label2.ForeColor = System.Drawing.Color.Red
+        Me.Label2.Name = "Label2"
+        '
+        'Label3
+        '
+        resources.ApplyResources(Me.Label3, "Label3")
+        Me.Label3.ForeColor = System.Drawing.Color.Red
+        Me.Label3.Name = "Label3"
+        '
+        'Label4
+        '
+        resources.ApplyResources(Me.Label4, "Label4")
+        Me.Label4.ForeColor = System.Drawing.Color.Red
+        Me.Label4.Name = "Label4"
+        '
+        'Label5
+        '
+        resources.ApplyResources(Me.Label5, "Label5")
+        Me.Label5.ForeColor = System.Drawing.Color.Red
+        Me.Label5.Name = "Label5"
+        '
+        'Label6
+        '
+        resources.ApplyResources(Me.Label6, "Label6")
+        Me.Label6.ForeColor = System.Drawing.Color.Red
+        Me.Label6.Name = "Label6"
+        '
+        'Label7
+        '
+        resources.ApplyResources(Me.Label7, "Label7")
+        Me.Label7.ForeColor = System.Drawing.Color.Red
+        Me.Label7.Name = "Label7"
+        '
+        'Label8
+        '
+        resources.ApplyResources(Me.Label8, "Label8")
+        Me.Label8.ForeColor = System.Drawing.Color.Red
+        Me.Label8.Name = "Label8"
+        '
+        'Label9
+        '
+        resources.ApplyResources(Me.Label9, "Label9")
+        Me.Label9.ForeColor = System.Drawing.Color.Red
+        Me.Label9.Name = "Label9"
+        '
+        'Label10
+        '
+        resources.ApplyResources(Me.Label10, "Label10")
+        Me.Label10.ForeColor = System.Drawing.Color.Red
+        Me.Label10.Name = "Label10"
+        '
+        'Label11
+        '
+        resources.ApplyResources(Me.Label11, "Label11")
+        Me.Label11.ForeColor = System.Drawing.Color.Red
+        Me.Label11.Name = "Label11"
+        '
+        'Label12
+        '
+        resources.ApplyResources(Me.Label12, "Label12")
+        Me.Label12.ForeColor = System.Drawing.Color.Red
+        Me.Label12.Name = "Label12"
+        '
+        'Label13
+        '
+        resources.ApplyResources(Me.Label13, "Label13")
+        Me.Label13.ForeColor = System.Drawing.Color.Red
+        Me.Label13.Name = "Label13"
+        '
+        'Label14
+        '
+        resources.ApplyResources(Me.Label14, "Label14")
+        Me.Label14.ForeColor = System.Drawing.Color.Red
+        Me.Label14.Name = "Label14"
+        '
         'ucoBeschaffenheitspruefung
         '
         resources.ApplyResources(Me, "$this")
@@ -1096,5 +1216,20 @@ Partial Class ucoBeschaffenheitspruefung
     Friend WithEvents RadSeparator11 As Telerik.WinControls.UI.RadSeparator
     Friend WithEvents RadSeparator10 As Telerik.WinControls.UI.RadSeparator
     Friend WithEvents RadScrollablePanel1 As Telerik.WinControls.UI.RadScrollablePanel
+    Friend WithEvents Label14 As System.Windows.Forms.Label
+    Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents Label12 As System.Windows.Forms.Label
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents lblPflichtfeld1 As System.Windows.Forms.Label
 
 End Class

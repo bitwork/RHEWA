@@ -67,6 +67,16 @@ Partial Class ucoStammdatenEingabe
         Me.lblAWGBauart = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlAWGHersteller = New Telerik.WinControls.UI.RadTextBoxControl()
         Me.lblAWGHersteller = New Telerik.WinControls.UI.RadLabel()
+        Me.lblPflichtfeld = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanel1.PanelContainer.SuspendLayout()
         Me.RadScrollablePanel1.SuspendLayout()
@@ -147,6 +157,10 @@ Partial Class ucoStammdatenEingabe
         'RadGroupBoxStammdaten
         '
         Me.RadGroupBoxStammdaten.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.RadGroupBoxStammdaten.Controls.Add(Me.Label3)
+        Me.RadGroupBoxStammdaten.Controls.Add(Me.Label2)
+        Me.RadGroupBoxStammdaten.Controls.Add(Me.Label1)
+        Me.RadGroupBoxStammdaten.Controls.Add(Me.lblPflichtfeld)
         Me.RadGroupBoxStammdaten.Controls.Add(Me.RadTextBoxControlStammdatenPLZ)
         Me.RadGroupBoxStammdaten.Controls.Add(Me.lblPLZ)
         Me.RadGroupBoxStammdaten.Controls.Add(Me.RadTextBoxControlStammdatenOrt)
@@ -309,6 +323,8 @@ Partial Class ucoStammdatenEingabe
         'RadGroupBoxWZ
         '
         Me.RadGroupBoxWZ.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.RadGroupBoxWZ.Controls.Add(Me.Label9)
+        Me.RadGroupBoxWZ.Controls.Add(Me.Label8)
         Me.RadGroupBoxWZ.Controls.Add(Me.PictureBox6)
         Me.RadGroupBoxWZ.Controls.Add(Me.PictureBox5)
         Me.RadGroupBoxWZ.Controls.Add(Me.RadButtonNeueWaegezelle)
@@ -514,6 +530,9 @@ Partial Class ucoStammdatenEingabe
         'RadGroupBoxWaage
         '
         Me.RadGroupBoxWaage.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.RadGroupBoxWaage.Controls.Add(Me.Label6)
+        Me.RadGroupBoxWaage.Controls.Add(Me.Label5)
+        Me.RadGroupBoxWaage.Controls.Add(Me.Label4)
         Me.RadGroupBoxWaage.Controls.Add(Me.lblWaagenart)
         Me.RadGroupBoxWaage.Controls.Add(Me.PictureBox4)
         Me.RadGroupBoxWaage.Controls.Add(Me.RadDropDownListWaagenArt)
@@ -690,6 +709,7 @@ Partial Class ucoStammdatenEingabe
         'RadGroupBoxAWG
         '
         Me.RadGroupBoxAWG.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.RadGroupBoxAWG.Controls.Add(Me.Label7)
         Me.RadGroupBoxAWG.Controls.Add(Me.PictureBox2)
         Me.RadGroupBoxAWG.Controls.Add(Me.PictureBox3)
         Me.RadGroupBoxAWG.Controls.Add(Me.PictureBox1)
@@ -881,6 +901,66 @@ Partial Class ucoStammdatenEingabe
         Me.lblAWGHersteller.RootElement.Text = resources.GetString("lblAWGHersteller.RootElement.Text")
         Me.lblAWGHersteller.RootElement.TextOrientation = CType(resources.GetObject("lblAWGHersteller.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
+        'lblPflichtfeld
+        '
+        resources.ApplyResources(Me.lblPflichtfeld, "lblPflichtfeld")
+        Me.lblPflichtfeld.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld.Name = "lblPflichtfeld"
+        '
+        'Label1
+        '
+        resources.ApplyResources(Me.Label1, "Label1")
+        Me.Label1.ForeColor = System.Drawing.Color.Red
+        Me.Label1.Name = "Label1"
+        '
+        'Label2
+        '
+        resources.ApplyResources(Me.Label2, "Label2")
+        Me.Label2.ForeColor = System.Drawing.Color.Red
+        Me.Label2.Name = "Label2"
+        '
+        'Label3
+        '
+        resources.ApplyResources(Me.Label3, "Label3")
+        Me.Label3.ForeColor = System.Drawing.Color.Red
+        Me.Label3.Name = "Label3"
+        '
+        'Label4
+        '
+        resources.ApplyResources(Me.Label4, "Label4")
+        Me.Label4.ForeColor = System.Drawing.Color.Red
+        Me.Label4.Name = "Label4"
+        '
+        'Label5
+        '
+        resources.ApplyResources(Me.Label5, "Label5")
+        Me.Label5.ForeColor = System.Drawing.Color.Red
+        Me.Label5.Name = "Label5"
+        '
+        'Label6
+        '
+        resources.ApplyResources(Me.Label6, "Label6")
+        Me.Label6.ForeColor = System.Drawing.Color.Red
+        Me.Label6.Name = "Label6"
+        '
+        'Label7
+        '
+        resources.ApplyResources(Me.Label7, "Label7")
+        Me.Label7.ForeColor = System.Drawing.Color.Red
+        Me.Label7.Name = "Label7"
+        '
+        'Label8
+        '
+        resources.ApplyResources(Me.Label8, "Label8")
+        Me.Label8.ForeColor = System.Drawing.Color.Red
+        Me.Label8.Name = "Label8"
+        '
+        'Label9
+        '
+        resources.ApplyResources(Me.Label9, "Label9")
+        Me.Label9.ForeColor = System.Drawing.Color.Red
+        Me.Label9.Name = "Label9"
+        '
         'ucoStammdatenEingabe
         '
         resources.ApplyResources(Me, "$this")
@@ -989,5 +1069,15 @@ Partial Class ucoStammdatenEingabe
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents lblWaagenart As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents lblPflichtfeld As System.Windows.Forms.Label
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label7 As System.Windows.Forms.Label
 
 End Class
