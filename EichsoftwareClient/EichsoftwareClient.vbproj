@@ -16,14 +16,10 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile />
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <SccProjectName>
-    </SccProjectName>
-    <SccLocalPath>
-    </SccLocalPath>
-    <SccAuxPath>
-    </SccAuxPath>
-    <SccProvider>
-    </SccProvider>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
     <PublishUrl>D:\Daten\Hill Daten\Privat\Dropbox\RHEWA\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -524,12 +520,6 @@
     <EmbeddedResource Include="View\UserControls\Allgemein\ucoNewStatustlist.resx">
       <DependentUpon>ucoNewStatustlist.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoEichfehlergrenzen.de.resx">
-      <DependentUpon>ucoEichfehlergrenzen.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoEichtechnischeSicherung.gl.resx">
-      <DependentUpon>ucoEichtechnischeSicherung.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\ucoPruefungEignungFuerAchlastwaegungen.de.resx">
       <DependentUpon>ucoPruefungEignungFuerAchlastwaegungen.vb</DependentUpon>
     </EmbeddedResource>
@@ -733,6 +723,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App - debug.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <EntityDeploy Include="EntityModelDatabaseClient.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>EntityModelDatabaseClient.Designer.vb</LastGenOutput>
@@ -754,7 +747,6 @@
       <DependentUpon>EntityModelDatabaseClient.edmx</DependentUpon>
       <LastGenOutput>EntityModelDatabaseClient.vb</LastGenOutput>
     </None>
-    <None Include="App.config" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -846,7 +838,7 @@
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4 %28x86 und x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
