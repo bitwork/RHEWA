@@ -807,6 +807,16 @@
     <None Include="Service References\EichsoftwareWebservice\EichsoftwareClient.EichsoftwareWebservice.ServerLookup_Waegezelle.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\EichsoftwareWebservice\EichsoftwareWebservice.wsdl" />
+    <None Include="Service References\EichsoftwareWebservice\EichsoftwareWebservice.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EichsoftwareWebservice\EichsoftwareWebservice1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EichsoftwareWebservice\EichsoftwareWebservice2.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -875,23 +885,13 @@
     <Content Include="EichsoftwareClientdatabase.sdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="Service References\EichsoftwareWebservice\EichsoftwareWebservice.disco" />
-    <None Include="Service References\EichsoftwareWebservice\EichsoftwareWebservice.wsdl" />
-    <None Include="Service References\EichsoftwareWebservice\EichsoftwareWebservice.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\EichsoftwareWebservice\EichsoftwareWebservice1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\EichsoftwareWebservice\EichsoftwareWebservice2.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Service References\EichsoftwareWebservice\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.vb</LastGenOutput>
     </None>
     <None Include="Service References\EichsoftwareWebservice\configuration.svcinfo" />
     <None Include="Service References\EichsoftwareWebservice\configuration91.svcinfo" />
+    <None Include="Service References\EichsoftwareWebservice\EichsoftwareWebservice.disco" />
     <None Include="Resources\Verschiebeweg_PL.PNG" />
     <None Include="Resources\Verschiebeweg_GB.PNG" />
     <None Include="Resources\Verschiebeweg_DE.PNG" />

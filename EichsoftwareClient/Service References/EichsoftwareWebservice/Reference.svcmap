@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5b06db44-8132-4e3d-8345-07e0d4e39da7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9f20bc65-5df9-48df-b9ec-ea548e95db87" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <EnableDataBinding>true</EnableDataBinding>
@@ -21,11 +21,11 @@
     <MetadataSource Address="http://localhost:12771/EichsoftwareWebservice.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="EichsoftwareWebservice.xsd" MetadataType="Schema" ID="34b59837-63e6-4b26-9073-5ebd60b8c06f" SourceId="1" SourceUrl="http://localhost:12771/EichsoftwareWebservice.svc?xsd=xsd0" />
-    <MetadataFile FileName="EichsoftwareWebservice.wsdl" MetadataType="Wsdl" ID="13404c64-687f-4804-bd0d-6b80e270035a" SourceId="1" SourceUrl="http://localhost:12771/EichsoftwareWebservice.svc?wsdl" />
-    <MetadataFile FileName="EichsoftwareWebservice.disco" MetadataType="Disco" ID="6f413fe9-8e2c-4a32-bdc0-fade6cd0ca11" SourceId="1" SourceUrl="http://localhost:12771/EichsoftwareWebservice.svc?disco" />
-    <MetadataFile FileName="EichsoftwareWebservice1.xsd" MetadataType="Schema" ID="cfb72db3-7508-4c37-b67b-ba883fa729ac" SourceId="1" SourceUrl="http://localhost:12771/EichsoftwareWebservice.svc?xsd=xsd1" />
-    <MetadataFile FileName="EichsoftwareWebservice2.xsd" MetadataType="Schema" ID="3e5fe880-06b0-4f25-b1b5-9ed8678b4e06" SourceId="1" SourceUrl="http://localhost:12771/EichsoftwareWebservice.svc?xsd=xsd2" />
+    <MetadataFile FileName="EichsoftwareWebservice.xsd" MetadataType="Schema" ID="844df01d-4a93-44b1-ae07-265fe614920d" SourceId="1" SourceUrl="http://localhost:12771/EichsoftwareWebservice.svc?xsd=xsd0" />
+    <MetadataFile FileName="EichsoftwareWebservice.wsdl" MetadataType="Wsdl" ID="717a9cf7-e173-4509-a943-1898efa829c9" SourceId="1" SourceUrl="http://localhost:12771/EichsoftwareWebservice.svc?wsdl" />
+    <MetadataFile FileName="EichsoftwareWebservice.disco" MetadataType="Disco" ID="0b344230-f694-425e-a253-f09d4fa18339" SourceId="1" SourceUrl="http://localhost:12771/EichsoftwareWebservice.svc?disco" />
+    <MetadataFile FileName="EichsoftwareWebservice1.xsd" MetadataType="Schema" ID="a6dc9377-9aba-478b-9c49-13ec1aae7899" SourceId="1" SourceUrl="http://localhost:12771/EichsoftwareWebservice.svc?xsd=xsd1" />
+    <MetadataFile FileName="EichsoftwareWebservice2.xsd" MetadataType="Schema" ID="653fb2dd-be2a-411a-b7cc-9fa82c4666a3" SourceId="1" SourceUrl="http://localhost:12771/EichsoftwareWebservice.svc?xsd=xsd2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -8,7 +8,7 @@
     Public Shared Sub DeleteForeignTables(ByRef TargetObject As ServerEichprozess)
         Try
 
-            Using dbcontext As New EichenSQLDatabaseEntities
+            Using dbcontext As New EichenSQLDatabaseEntities1
                 Dim EichprozessID As String = TargetObject.ID
                 Dim EichprotokollID As String = TargetObject.ServerEichprotokoll.ID
 

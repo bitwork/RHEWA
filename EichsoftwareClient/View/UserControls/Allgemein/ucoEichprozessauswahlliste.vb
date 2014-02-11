@@ -104,7 +104,11 @@ Public Class ucoEichprozessauswahlliste
             RadPageView1.Pages(0).Text = ""
         End If
         'daten füllen
-        LoadFromDatabase()
+
+        If My.Settings.Lizensiert Then
+            LoadFromDatabase()
+
+        End If
 
 
     End Sub

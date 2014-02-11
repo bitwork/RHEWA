@@ -14,7 +14,7 @@ Public Class EichsoftwareWebservice
     ''' <returns></returns>
     ''' <remarks></remarks>
     Public Function PruefeLizenz(ByVal Name As String, Lizenzschluessel As String) As Boolean Implements IEichsoftwareWebservice.PruefeLizenz
-        Using dbcontext As New EichenSQLDatabaseEntities
+        Using dbcontext As New EichenSQLDatabaseEntities1
             Dim ObjLizenz = (From lic In dbcontext.ServerLizensierung Where lic.FK_SuperofficeBenutzer = Name And lic.Lizenzschluessel = Lizenzschluessel And lic.Aktiv = True).FirstOrDefault
             If Not ObjLizenz Is Nothing Then
                 Return True
@@ -33,7 +33,7 @@ Public Class EichsoftwareWebservice
     ''' <returns></returns>
     ''' <remarks></remarks>
     Public Function AktiviereLizenz(ByVal Name As String, Lizenzschluessel As String) As Boolean Implements IEichsoftwareWebservice.AktiviereLizenz
-        Using dbcontext As New EichenSQLDatabaseEntities
+        Using dbcontext As New EichenSQLDatabaseEntities1
             Dim ObjLizenz = (From lic In dbcontext.ServerLizensierung Where lic.FK_SuperofficeBenutzer = Name And lic.Lizenzschluessel = Lizenzschluessel And lic.Aktiv = True).FirstOrDefault
             If Not ObjLizenz Is Nothing Then
                 ObjLizenz.LetzteAktivierung = Now
@@ -56,7 +56,7 @@ Public Class EichsoftwareWebservice
     ''' <returns></returns>
     ''' <remarks></remarks>
     Public Function PruefeObRHEWALizenz(ByVal Name As String, Lizenzschluessel As String) As Boolean Implements IEichsoftwareWebservice.PruefeObRHEWALizenz
-        Using dbcontext As New EichenSQLDatabaseEntities
+        Using dbcontext As New EichenSQLDatabaseEntities1
             Dim ObjLizenz = (From lic In dbcontext.ServerLizensierung Where lic.FK_SuperofficeBenutzer = Name And lic.Lizenzschluessel = Lizenzschluessel).FirstOrDefault
             If Not ObjLizenz Is Nothing Then
                 Return ObjLizenz.RHEWALizenz
@@ -80,7 +80,7 @@ Public Class EichsoftwareWebservice
             If PruefeLizenz(Name, Lizenzschluessel) = False Then Return Nothing
             'neuen Context aufbauen
             'prüfen ob der eichprozess schoneinmal eingegangen ist anhand von Vorgangsnummer
-            Using DbContext As New EichenSQLDatabaseEntities
+            Using DbContext As New EichenSQLDatabaseEntities1
                 DbContext.Configuration.LazyLoadingEnabled = True
 
                 Dim Vorgangsnummer As String = pObjEichprozess.Vorgangsnummer
@@ -147,7 +147,7 @@ Public Class EichsoftwareWebservice
             ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
             If PruefeLizenz(Name, Lizenzschluessel) = False Then Return Nothing
             'neuen Context aufbauen
-            Using DbContext As New EichenSQLDatabaseEntities
+            Using DbContext As New EichenSQLDatabaseEntities1
                 DbContext.Configuration.LazyLoadingEnabled = False
                 DbContext.Configuration.ProxyCreationEnabled = False
                 Try
@@ -282,7 +282,7 @@ Public Class EichsoftwareWebservice
             ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
             If PruefeLizenz(Name, Lizenzschluessel) = False Then Return Nothing
             'neuen Context aufbauen
-            Using DbContext As New EichenSQLDatabaseEntities
+            Using DbContext As New EichenSQLDatabaseEntities1
                 DbContext.Configuration.LazyLoadingEnabled = False
                 DbContext.Configuration.ProxyCreationEnabled = False
                 Try
@@ -341,8 +341,8 @@ Public Class EichsoftwareWebservice
                         If Not objeichprozess.Bearbeitungsstatus Is Nothing Then
                             objReturn.Bearbeitungsstatus = objeichprozess.Bearbeitungsstatus
                         End If
-                                '   Dim ModelArtikel As New Model.clsArtikel(objArtikel.Id, objArtikel.Name, objArtikel.Beschreibung, objArtikel.Preis, objArtikel.ErstellDatum)
-                                ReturnList.Add(objReturn)
+                        '   Dim ModelArtikel As New Model.clsArtikel(objArtikel.Id, objArtikel.Name, objArtikel.Beschreibung, objArtikel.Preis, objArtikel.ErstellDatum)
+                        ReturnList.Add(objReturn)
                     Next
 
                     'ergebnismenge zurückgeben
@@ -366,7 +366,7 @@ Public Class EichsoftwareWebservice
     Public Function GetNeueWZ(ByVal Name As String, Lizenzschluessel As String, ByVal LetztesUpdate As Date) As ServerLookup_Waegezelle() Implements IEichsoftwareWebservice.GetNeueWZ
         ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
         If PruefeLizenz(Name, Lizenzschluessel) = False Then Return Nothing
-        Using DBContext As New EichenSQLDatabaseEntities
+        Using DBContext As New EichenSQLDatabaseEntities1
             DBContext.Configuration.LazyLoadingEnabled = False
             DBContext.Configuration.ProxyCreationEnabled = False
             Try
@@ -399,7 +399,7 @@ Public Class EichsoftwareWebservice
         ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
         If PruefeLizenz(Name, Lizenzschluessel) = False Then Return Nothing
 
-        Using DBContext As New EichenSQLDatabaseEntities
+        Using DBContext As New EichenSQLDatabaseEntities1
             DBContext.Configuration.LazyLoadingEnabled = False
             DBContext.Configuration.ProxyCreationEnabled = False
             Try
@@ -445,7 +445,7 @@ Public Class EichsoftwareWebservice
         ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
         If PruefeLizenz(Name, Lizenzschluessel) = False Then Return Nothing
         Try
-            Using DbContext As New EichenSQLDatabaseEntities
+            Using DbContext As New EichenSQLDatabaseEntities1
                 DbContext.Configuration.LazyLoadingEnabled = False
                 DbContext.Configuration.ProxyCreationEnabled = False
 
@@ -507,7 +507,7 @@ Public Class EichsoftwareWebservice
             If PruefeLizenz(Name, Lizenzschluessel) = False Then Return Nothing
             'neuen Context aufbauen
             'prüfen ob der eichprozess schoneinmal eingegangen ist anhand von Vorgangsnummer
-            Using DbContext As New EichenSQLDatabaseEntities
+            Using DbContext As New EichenSQLDatabaseEntities1
                 Dim Serverob = (From db In DbContext.ServerEichprozess Select db Where db.Vorgangsnummer = Vorgangsnummer).FirstOrDefault
 
                 If Not Serverob Is Nothing Then
@@ -543,7 +543,7 @@ Public Class EichsoftwareWebservice
             ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
             If PruefeLizenz(Name, Lizenzschluessel) = False Then Return Nothing
             'neuen Context aufbauen
-            Using DbContext As New EichenSQLDatabaseEntities
+            Using DbContext As New EichenSQLDatabaseEntities1
                 DbContext.Configuration.LazyLoadingEnabled = False
                 DbContext.Configuration.ProxyCreationEnabled = False
                 Try
@@ -581,7 +581,7 @@ Public Class EichsoftwareWebservice
             ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
             If PruefeLizenz(Name, Lizenzschluessel) = False Then Return Nothing
             'neuen Context aufbauen
-            Using DbContext As New EichenSQLDatabaseEntities
+            Using DbContext As New EichenSQLDatabaseEntities1
                 DbContext.Configuration.LazyLoadingEnabled = False
                 DbContext.Configuration.ProxyCreationEnabled = False
                 Try
