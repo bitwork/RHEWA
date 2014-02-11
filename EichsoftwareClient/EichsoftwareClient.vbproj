@@ -256,6 +256,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="SplashScreen.Designer.vb">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="View\Forms\frmLizenz.Designer.vb">
       <DependentUpon>frmLizenz.vb</DependentUpon>
     </Compile>
@@ -481,6 +487,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\frmLizenz.resx">
       <DependentUpon>frmLizenz.vb</DependentUpon>
     </EmbeddedResource>

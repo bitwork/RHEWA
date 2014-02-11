@@ -56,7 +56,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("en-US")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("EN")>  _
         Public Property AktuelleSprache() As String
             Get
                 Return CType(Me("AktuelleSprache"),String)

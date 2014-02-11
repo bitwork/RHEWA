@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="AktuelleSprache" Type="System.String" Scope="User">
-      <Value Profile="(Default)">en-US</Value>
+      <Value Profile="(Default)">EN</Value>
     </Setting>
     <Setting Name="Lizensiert" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
