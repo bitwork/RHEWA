@@ -3059,9 +3059,7 @@
 
 
 
-    Private Sub RadButton1_Click(sender As System.Object, e As System.EventArgs)
-        Dim dump = ObjectDumper.Dump(objEichprozess)
-    End Sub
+ 
     'Entsperrroutine
     Protected Friend Overrides Sub EntsperrungNeeded()
         MyBase.EntsperrungNeeded()

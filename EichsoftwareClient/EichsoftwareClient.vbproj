@@ -269,12 +269,6 @@
     <Compile Include="View\Forms\frmLizenz.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Forms\Pelster\frmDummy.Designer.vb">
-      <DependentUpon>frmDummy.vb</DependentUpon>
-    </Compile>
-    <Compile Include="View\Forms\Pelster\frmDummy.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="View\Forms\frmEichfehlergrenzen.Designer.vb">
       <DependentUpon>frmEichfehlergrenzen.vb</DependentUpon>
     </Compile>
@@ -308,7 +302,6 @@
     <Compile Include="View\Forms\frmNeueWaegezele.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Forms\Pelster\ObjectDumper.vb" />
     <Compile Include="View\UserControls\Allgemein\CustomVisualItem.vb" />
     <Compile Include="View\UserControls\Allgemein\ucoNewStatustlist.Designer.vb">
       <DependentUpon>ucoNewStatustlist.vb</DependentUpon>
@@ -496,9 +489,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\frmLizenz.resx">
       <DependentUpon>frmLizenz.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Forms\Pelster\frmDummy.resx">
-      <DependentUpon>frmDummy.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\frmEichfehlergrenzen.de.resx">
       <DependentUpon>frmEichfehlergrenzen.vb</DependentUpon>

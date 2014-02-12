@@ -124,16 +124,16 @@
     <Import Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmAuswahllisteLizenzen.Designer.vb">
+    <Compile Include="View\frmAuswahllisteLizenzen.Designer.vb">
       <DependentUpon>frmAuswahllisteLizenzen.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmAuswahllisteLizenzen.vb">
+    <Compile Include="View\frmAuswahllisteLizenzen.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAuswahllisteWZ.Designer.vb">
+    <Compile Include="View\frmAuswahllisteWZ.Designer.vb">
       <DependentUpon>frmAuswahllisteWZ.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmAuswahllisteWZ.vb">
+    <Compile Include="View\frmAuswahllisteWZ.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EntityModelDatabaseAdminClient.Context.vb">
@@ -151,52 +151,52 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
     </Compile>
-    <Compile Include="frmAuswahllisteAWG.Designer.vb">
+    <Compile Include="View\frmAuswahllisteAWG.Designer.vb">
       <DependentUpon>frmAuswahllisteAWG.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmAuswahllisteAWG.vb">
+    <Compile Include="View\frmAuswahllisteAWG.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAuswertegeraet.Designer.vb">
+    <Compile Include="View\frmAuswertegeraet.Designer.vb">
       <DependentUpon>frmAuswertegeraet.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmAuswertegeraet.vb">
+    <Compile Include="View\frmAuswertegeraet.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEichmarkenverwaltung.Designer.vb">
+    <Compile Include="View\Statistiken\frmEichmarkenverwaltung.Designer.vb">
       <DependentUpon>frmEichmarkenverwaltung.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmEichmarkenverwaltung.vb">
+    <Compile Include="View\Statistiken\frmEichmarkenverwaltung.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMain.Designer.vb">
+    <Compile Include="View\frmMain.Designer.vb">
       <DependentUpon>frmMain.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmMain.vb">
+    <Compile Include="View\frmMain.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNeueLizenz.Designer.vb">
+    <Compile Include="View\frmNeueLizenz.Designer.vb">
       <DependentUpon>frmNeueLizenz.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmNeueLizenz.vb">
+    <Compile Include="View\frmNeueLizenz.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAuswahllisteEichmarkenverwaltung.Designer.vb">
+    <Compile Include="View\frmAuswahllisteEichmarkenverwaltung.Designer.vb">
       <DependentUpon>frmAuswahllisteEichmarkenverwaltung.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmAuswahllisteEichmarkenverwaltung.vb">
+    <Compile Include="View\frmAuswahllisteEichmarkenverwaltung.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmVerbindungsprotokoll.Designer.vb">
+    <Compile Include="View\Statistiken\frmVerbindungsprotokoll.Designer.vb">
       <DependentUpon>frmVerbindungsprotokoll.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmVerbindungsprotokoll.vb">
+    <Compile Include="View\Statistiken\frmVerbindungsprotokoll.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmWaegezelle.Designer.vb">
+    <Compile Include="View\frmWaegezelle.Designer.vb">
       <DependentUpon>frmWaegezelle.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmWaegezelle.vb">
+    <Compile Include="View\frmWaegezelle.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Model\RuntimeLocalizer.vb" />
@@ -290,28 +290,28 @@
     <Compile Include="ServerVerbindungsprotokoll.vb">
       <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="frmAuswahllisteLizenzen.resx">
+    <EmbeddedResource Include="View\frmAuswahllisteLizenzen.resx">
       <DependentUpon>frmAuswahllisteLizenzen.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAuswahllisteWZ.resx">
+    <EmbeddedResource Include="View\frmAuswahllisteWZ.resx">
       <DependentUpon>frmAuswahllisteWZ.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAuswahllisteAWG.resx">
+    <EmbeddedResource Include="View\frmAuswahllisteAWG.resx">
       <DependentUpon>frmAuswahllisteAWG.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAuswertegeraet.resx">
+    <EmbeddedResource Include="View\frmAuswertegeraet.resx">
       <DependentUpon>frmAuswertegeraet.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEichmarkenverwaltung.resx">
+    <EmbeddedResource Include="View\Statistiken\frmEichmarkenverwaltung.resx">
       <DependentUpon>frmEichmarkenverwaltung.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.de.resx">
+    <EmbeddedResource Include="View\frmMain.de.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNeueLizenz.resx">
+    <EmbeddedResource Include="View\frmNeueLizenz.resx">
       <DependentUpon>frmNeueLizenz.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAuswahllisteEichmarkenverwaltung.resx">
+    <EmbeddedResource Include="View\frmAuswahllisteEichmarkenverwaltung.resx">
       <DependentUpon>frmAuswahllisteEichmarkenverwaltung.vb</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="EntityModelDatabaseAdminClient.edmx">
@@ -342,13 +342,13 @@
       <LastGenOutput>EntityModelDatabaseAdminClient.vb</LastGenOutput>
     </None>
     <None Include="packages.config" />
-    <EmbeddedResource Include="frmMain.resx">
+    <EmbeddedResource Include="View\frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmVerbindungsprotokoll.resx">
+    <EmbeddedResource Include="View\Statistiken\frmVerbindungsprotokoll.resx">
       <DependentUpon>frmVerbindungsprotokoll.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmWaegezelle.resx">
+    <EmbeddedResource Include="View\frmWaegezelle.resx">
       <DependentUpon>frmWaegezelle.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\RHEWAGREEN.tssp" />
