@@ -5,14 +5,14 @@
       
     End Sub
 
-    Private Sub RadButton1_Click(sender As Object, e As EventArgs) Handles RadButton1.Click
+    Private Sub RadButton1_Click(sender As Object, e As EventArgs) Handles RadButtonOK.Click
         Try
             'verbindung zum Webservice aufbauen
             Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
                 Try
                     webContext.Open()
                 Catch ex As Exception
-                    MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
 
                     Exit Sub
                 End Try
@@ -55,7 +55,7 @@
 
 
                     Else
-                        MessageBox.Show("Ungültige Lizenz") 'My.Resources.GlobaleLokalisierung.UngueltigeLizenz, "")
+                        MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_UngueltigeLizenz, "")
                         My.Settings.Lizensiert = False
                         My.Settings.Save()
                     End If
@@ -65,5 +65,15 @@
         Catch ex As Exception
 
         End Try
+    End Sub
+
+    ''' <summary>
+    ''' aktivieren / deaktivieren des OK Buttons
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="args"></param>
+    ''' <remarks></remarks>
+    Private Sub RadCheckBoxAkzeptieren_ToggleStateChanged(sender As Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadCheckBoxAkzeptieren.ToggleStateChanged
+        RadButtonOK.Enabled = RadCheckBoxAkzeptieren.Checked
     End Sub
 End Class
