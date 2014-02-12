@@ -35,19 +35,6 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
         End Using
     End Sub
 
-    'Private Sub SetBedingteFormatierung()
-    '    Try
-    '        'add a couple of sample formatting objects        
-    '        Dim c1 As New ConditionalFormattingObject("Orange, applied to entire row", ConditionTypes.LessOrEqual, "2", "", True)
-    '        c1.RowBackColor = Color.FromArgb(255, 209, 140)
-    '        c1.CellBackColor = Color.FromArgb(255, 209, 140)
-    '        c1.RowForeColor = Color.Black
-    '        RadGridView1.Columns("BenannteStelleAnzahl").ConditionalFormattingObjectList.Add(c1)
-    '    Catch ex As Exception
-
-    '    End Try
-
-    'End Sub
 
     Private Sub EditEichmarkenverwaltung()
         If RadGridView1.SelectedRows.Count > 0 Then

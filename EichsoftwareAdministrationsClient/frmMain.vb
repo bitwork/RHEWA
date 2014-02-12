@@ -19,7 +19,7 @@
       
     End Sub
 
-    Private Sub RadButtonRadButtonAuswertegeraet_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonRadButtonAuswertegeraet.Click
+    Private Sub RadButtonAuswertegeraetAuswertegeraet_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonAuswertegeraet.Click
         Dim f As New FrmAuswahllisteAWG
         f.ShowDialog()
     End Sub
@@ -29,13 +29,18 @@
         f.ShowDialog()
     End Sub
 
-    Private Sub RadButton1_Click(sender As Object, e As EventArgs) Handles RadButton1.Click
+    Private Sub RadButtonLizenzen_Click(sender As Object, e As EventArgs) Handles RadButtonLizenzen.Click
         Dim f As New FrmAuswahllisteLizenzen
-        f.ShowDialog()
+        f.Show()
     End Sub
 
-    Private Sub RadButton2_Click(sender As Object, e As EventArgs) Handles RadButton2.Click
+    Private Sub RadButtonEichmarkenStatistik_Click(sender As Object, e As EventArgs) Handles RadButtonEichmarkenStatistik.Click
         Dim f As New FrmAuswahllisteEichmarkenverwaltung
-        f.ShowDialog()
+        f.Show()
+    End Sub
+
+    Private Sub RadButtonVerbindungsprotokoll_Click(sender As Object, e As EventArgs) Handles RadButtonVerbindungsprotokoll.Click
+        Dim f As New frmVerbindungsprotokoll
+        f.Show()
     End Sub
 End Class

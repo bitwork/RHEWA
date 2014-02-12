@@ -39,7 +39,7 @@ Public Class EichsoftwareWebservice
             Using dbcontext As New EichenSQLDatabaseEntities1
 
                 Dim objProtokoll = New ServerVerbindungsprotokoll
-                objProtokoll.Lizenzschlüssel_FK = Lizenzschluessel
+                objProtokoll.Lizenzschluessel_FK = Lizenzschluessel
                 objProtokoll.Computername = Computername
                 objProtokoll.Domain = Domainname
                 objProtokoll.Windowsbenutzer = WindowsUsername

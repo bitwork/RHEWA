@@ -601,12 +601,12 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="Lizenzschlüssel_FK" Type="nvarchar" MaxLength="50" />
+          <Property Name="Lizenzschluessel_FK" Type="nvarchar" MaxLength="50" />
           <Property Name="Domain" Type="nvarchar(max)" />
           <Property Name="Computername" Type="nvarchar(max)" />
           <Property Name="Windowsbenutzer" Type="nvarchar(max)" />
           <Property Name="Aktion" Type="nvarchar" MaxLength="50" />
-          <Property Name="Zeitstempel" Type="date" />
+          <Property Name="Zeitstempel" Type="datetime" />
         </EntityType>
         <Association Name="FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren">
           <End Role="ServerLookup_Konformitaetsbewertungsverfahren" Type="EichenSQLDatabaseModel.Store.ServerLookup_Konformitaetsbewertungsverfahren" Multiplicity="1" />
@@ -1806,12 +1806,12 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="Lizenzschlüssel_FK" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Domain" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Computername" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Windowsbenutzer" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Aktion" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="DateTime" Name="Zeitstempel" Precision="0" />
+          <Property Type="DateTime" Name="Zeitstempel" Precision="3" />
+          <Property Type="String" Name="Lizenzschluessel_FK" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -2318,12 +2318,12 @@
           <EntitySetMapping Name="ServerVerbindungsprotokoll">
             <EntityTypeMapping TypeName="EichenSQLDatabaseModel.ServerVerbindungsprotokoll">
               <MappingFragment StoreEntitySet="ServerVerbindungsprotokoll">
+                <ScalarProperty Name="Lizenzschluessel_FK" ColumnName="Lizenzschluessel_FK" />
                 <ScalarProperty Name="Zeitstempel" ColumnName="Zeitstempel" />
                 <ScalarProperty Name="Aktion" ColumnName="Aktion" />
                 <ScalarProperty Name="Windowsbenutzer" ColumnName="Windowsbenutzer" />
                 <ScalarProperty Name="Computername" ColumnName="Computername" />
                 <ScalarProperty Name="Domain" ColumnName="Domain" />
-                <ScalarProperty Name="Lizenzschlüssel_FK" ColumnName="Lizenzschlüssel_FK" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>

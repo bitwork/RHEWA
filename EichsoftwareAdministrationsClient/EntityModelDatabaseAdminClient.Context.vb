@@ -46,5 +46,6 @@ Partial Public Class EichenEntities
     Public Property ServerPruefungStaffelverfahrenErsatzlast() As DbSet(Of ServerPruefungStaffelverfahrenErsatzlast)
     Public Property ServerPruefungStaffelverfahrenNormallast() As DbSet(Of ServerPruefungStaffelverfahrenNormallast)
     Public Property ServerPruefungWiederholbarkeit() As DbSet(Of ServerPruefungWiederholbarkeit)
+    Public Property ServerVerbindungsprotokoll() As DbSet(Of ServerVerbindungsprotokoll)
 
 End Class

@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="RadButtonRadButtonAuswertegeraet.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RadButtonAuswertegeraet.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 37</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
@@ -150,25 +150,25 @@
   <data name="RadButtonRadButtonAuswertegeraet.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="RadButtonRadButtonAuswertegeraet.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RadButtonAuswertegeraet.Size" type="System.Drawing.Size, System.Drawing">
     <value>172, 24</value>
   </data>
-  <data name="RadButtonRadButtonAuswertegeraet.TabIndex" type="System.Int32, mscorlib">
+  <data name="RadButtonAuswertegeraet.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="RadButtonRadButtonAuswertegeraet.Text" xml:space="preserve">
+  <data name="RadButtonAuswertegeraet.Text" xml:space="preserve">
     <value>Auswertegeräte verwalten</value>
   </data>
-  <data name="&gt;&gt;RadButtonRadButtonAuswertegeraet.Name" xml:space="preserve">
-    <value>RadButtonRadButtonAuswertegeraet</value>
+  <data name="&gt;&gt;RadButtonAuswertegeraet.Name" xml:space="preserve">
+    <value>RadButtonAuswertegeraet</value>
   </data>
-  <data name="&gt;&gt;RadButtonRadButtonAuswertegeraet.Type" xml:space="preserve">
+  <data name="&gt;&gt;RadButtonAuswertegeraet.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;RadButtonRadButtonAuswertegeraet.Parent" xml:space="preserve">
+  <data name="&gt;&gt;RadButtonAuswertegeraet.Parent" xml:space="preserve">
     <value>RadGroupBox1</value>
   </data>
-  <data name="&gt;&gt;RadButtonRadButtonAuswertegeraet.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;RadButtonAuswertegeraet.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="RadButtonWaegezelle.Location" type="System.Drawing.Point, System.Drawing">
@@ -222,7 +222,7 @@
   <data name="&gt;&gt;RadButtonWaegezelle.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="RadButton1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RadButtonLizenzen.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 97</value>
   </data>
   <data name="RadButton1.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
@@ -252,28 +252,28 @@
   <data name="RadButton1.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="RadButton1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RadButtonLizenzen.Size" type="System.Drawing.Size, System.Drawing">
     <value>172, 24</value>
   </data>
-  <data name="RadButton1.TabIndex" type="System.Int32, mscorlib">
+  <data name="RadButtonLizenzen.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="RadButton1.Text" xml:space="preserve">
+  <data name="RadButtonLizenzen.Text" xml:space="preserve">
     <value>Lizenzen verwalten</value>
   </data>
-  <data name="&gt;&gt;RadButton1.Name" xml:space="preserve">
-    <value>RadButton1</value>
+  <data name="&gt;&gt;RadButtonLizenzen.Name" xml:space="preserve">
+    <value>RadButtonLizenzen</value>
   </data>
-  <data name="&gt;&gt;RadButton1.Type" xml:space="preserve">
+  <data name="&gt;&gt;RadButtonLizenzen.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;RadButton1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;RadButtonLizenzen.Parent" xml:space="preserve">
     <value>RadGroupBox1</value>
   </data>
-  <data name="&gt;&gt;RadButton1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;RadButtonLizenzen.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="RadButton2.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RadButtonEichmarkenStatistik.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 37</value>
   </data>
   <data name="RadButton2.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
@@ -303,26 +303,26 @@
   <data name="RadButton2.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="RadButton2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RadButtonEichmarkenStatistik.Size" type="System.Drawing.Size, System.Drawing">
     <value>172, 24</value>
   </data>
-  <data name="RadButton2.TabIndex" type="System.Int32, mscorlib">
+  <data name="RadButtonEichmarkenStatistik.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="RadButton2.Text" xml:space="preserve">
+  <data name="RadButtonEichmarkenStatistik.Text" xml:space="preserve">
     <value>Eichmarken Statistik</value>
   </data>
-  <data name="&gt;&gt;RadButton2.Name" xml:space="preserve">
-    <value>RadButton2</value>
+  <data name="&gt;&gt;RadButtonEichmarkenStatistik.Name" xml:space="preserve">
+    <value>RadButtonEichmarkenStatistik</value>
   </data>
-  <data name="&gt;&gt;RadButton2.Type" xml:space="preserve">
+  <data name="&gt;&gt;RadButtonEichmarkenStatistik.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;RadButton2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;RadButtonEichmarkenStatistik.Parent" xml:space="preserve">
     <value>RadGroupBox2</value>
   </data>
-  <data name="&gt;&gt;RadButton2.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;RadButtonEichmarkenStatistik.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="RadGroupBox1.HeaderText" xml:space="preserve">
     <value>Verwaltung</value>
@@ -353,6 +353,57 @@
   </data>
   <data name="&gt;&gt;RadGroupBox1.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="RadButtonVerbindungsprotokoll.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 67</value>
+  </data>
+  <data name="RadButton3.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadButton3.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadButton3.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="RadButton3.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RadButton3.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RadButton3.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadButton3.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadButton3.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadButton3.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="RadButtonVerbindungsprotokoll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 24</value>
+  </data>
+  <data name="RadButtonVerbindungsprotokoll.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="RadButtonVerbindungsprotokoll.Text" xml:space="preserve">
+    <value>Verbindungsprotokoll</value>
+  </data>
+  <data name="&gt;&gt;RadButtonVerbindungsprotokoll.Name" xml:space="preserve">
+    <value>RadButtonVerbindungsprotokoll</value>
+  </data>
+  <data name="&gt;&gt;RadButtonVerbindungsprotokoll.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadButtonVerbindungsprotokoll.Parent" xml:space="preserve">
+    <value>RadGroupBox2</value>
+  </data>
+  <data name="&gt;&gt;RadButtonVerbindungsprotokoll.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="RadGroupBox2.HeaderText" xml:space="preserve">
     <value>Statistik</value>
