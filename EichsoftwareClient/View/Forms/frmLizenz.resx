@@ -205,7 +205,7 @@
     <value>578, 20</value>
   </data>
   <data name="RadTextBoxControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControl1.Name" xml:space="preserve">
     <value>RadTextBoxControl1</value>
@@ -253,7 +253,7 @@
     <value>578, 20</value>
   </data>
   <data name="RadTextBoxControl2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControl2.Name" xml:space="preserve">
     <value>RadTextBoxControl2</value>
@@ -355,7 +355,7 @@
     <value>110, 24</value>
   </data>
   <data name="RadButtonOK.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>7</value>
   </data>
   <data name="RadButtonOK.Text" xml:space="preserve">
     <value>OK</value>
@@ -406,7 +406,7 @@
     <value>251, 18</value>
   </data>
   <data name="RadCheckBoxAkzeptieren.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="RadCheckBoxAkzeptieren.Text" xml:space="preserve">
     <value>I have read and accept the license agreements</value>
@@ -508,7 +508,7 @@
     <value>102, 18</value>
   </data>
   <data name="lblLizenzabkommen.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>4</value>
   </data>
   <data name="lblLizenzabkommen.Text" xml:space="preserve">
     <value>License agreement:</value>
