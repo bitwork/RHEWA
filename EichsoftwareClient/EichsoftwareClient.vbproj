@@ -263,6 +263,12 @@
     <Compile Include="SplashScreen.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="View\Forms\frmEinstellungen.Designer.vb">
+      <DependentUpon>frmEinstellungen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\frmEinstellungen.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="View\Forms\frmLizenz.Designer.vb">
       <DependentUpon>frmLizenz.vb</DependentUpon>
     </Compile>
@@ -483,6 +489,12 @@
     <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\frmEinstellungen.de.resx">
+      <DependentUpon>frmEinstellungen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\frmEinstellungen.resx">
+      <DependentUpon>frmEinstellungen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\frmLizenz.de.resx">
       <DependentUpon>frmLizenz.vb</DependentUpon>
@@ -941,6 +953,7 @@
     <None Include="Resources\accept.png" />
     <None Include="Resources\error.png" />
     <None Include="Resources\database_refresh.png" />
+    <None Include="Resources\cog.png" />
     <Content Include="Resources\report_add.png" />
     <Content Include="Resources\report_delete.png" />
     <Content Include="Resources\report_edit.png" />

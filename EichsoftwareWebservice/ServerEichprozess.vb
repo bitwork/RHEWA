@@ -24,6 +24,9 @@ Partial Public Class ServerEichprozess
     Public Property Ausgeblendet As Boolean
     Public Property FK_Bearbeitungsstatus As Nullable(Of Byte)
     Public Property UploadFilePath As String
+    Public Property UploadDatum As Nullable(Of Date)
+    Public Property BearbeitungsDatum As Nullable(Of Date)
+    Public Property ErzeugerLizenz As String
 
     Public Overridable Property ServerBeschaffenheitspruefung As ServerBeschaffenheitspruefung
     Public Overridable Property ServerEichprotokoll As ServerEichprotokoll

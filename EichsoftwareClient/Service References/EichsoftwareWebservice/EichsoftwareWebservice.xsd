@@ -42,6 +42,8 @@
   <xs:complexType name="ServerEichprozess">
     <xs:sequence>
       <xs:element name="_Ausgeblendet" type="xs:boolean" />
+      <xs:element name="_BearbeitungsDatum" nillable="true" type="xs:dateTime" />
+      <xs:element name="_ErzeugerLizenz" nillable="true" type="xs:string" />
       <xs:element name="_FK_Auswertegeraet" nillable="true" type="xs:string" />
       <xs:element name="_FK_Bearbeitungsstatus" nillable="true" type="xs:unsignedByte" />
       <xs:element name="_FK_Beschaffenheitspruefung" nillable="true" type="xs:int" />
@@ -62,6 +64,7 @@
       <xs:element name="_ServerLookup_Waagentyp" nillable="true" type="tns:ServerLookup_Waagentyp" />
       <xs:element name="_ServerLookup_Waegezelle" nillable="true" type="tns:ServerLookup_Waegezelle" />
       <xs:element name="_ServerMogelstatistik" nillable="true" type="tns:ArrayOfServerMogelstatistik" />
+      <xs:element name="_UploadDatum" nillable="true" type="xs:dateTime" />
       <xs:element name="_UploadFilePath" nillable="true" type="xs:string" />
       <xs:element name="_Vorgangsnummer" nillable="true" type="xs:string" />
     </xs:sequence>

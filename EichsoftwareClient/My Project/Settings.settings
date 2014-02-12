@@ -6,13 +6,25 @@
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="LetztesUpdate" Type="System.DateTime" Scope="User">
-      <Value Profile="(Default)">2010-01-01</Value>
+      <Value Profile="(Default)">2000-01-01</Value>
     </Setting>
     <Setting Name="RHEWALizenz" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="AktuelleSprache" Type="System.String" Scope="User">
       <Value Profile="(Default)">EN</Value>
+    </Setting>
+    <Setting Name="Syncronisierungsmodus" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Alles</Value>
+    </Setting>
+    <Setting Name="SyncAb" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SyncBis" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="HoleAlleEigenenEichungenVomServer" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
     </Setting>
   </Settings>
 </SettingsFile>

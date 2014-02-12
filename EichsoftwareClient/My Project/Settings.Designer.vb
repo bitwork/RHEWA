@@ -68,7 +68,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("2010-01-01")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("2000-01-01")>  _
         Public Property LetztesUpdate() As Date
             Get
                 Return CType(Me("LetztesUpdate"),Date)
@@ -99,6 +99,52 @@ Namespace My
             End Get
             Set
                 Me("AktuelleSprache") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Alles")>  _
+        Public Property Syncronisierungsmodus() As String
+            Get
+                Return CType(Me("Syncronisierungsmodus"),String)
+            End Get
+            Set
+                Me("Syncronisierungsmodus") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property SyncAb() As Date
+            Get
+                Return CType(Me("SyncAb"),Date)
+            End Get
+            Set
+                Me("SyncAb") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property SyncBis() As Date
+            Get
+                Return CType(Me("SyncBis"),Date)
+            End Get
+            Set
+                Me("SyncBis") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property HoleAlleEigenenEichungenVomServer() As Boolean
+            Get
+                Return CType(Me("HoleAlleEigenenEichungenVomServer"),Boolean)
+            End Get
+            Set
+                Me("HoleAlleEigenenEichungenVomServer") = value
             End Set
         End Property
     End Class

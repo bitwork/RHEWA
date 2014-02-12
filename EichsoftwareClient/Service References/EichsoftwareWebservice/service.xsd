@@ -64,6 +64,8 @@
         <xs:element minOccurs="0" name="WindowsUsername" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Domainname" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Computername" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SyncAllesSeit" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="SyncAllesBis" type="xs:dateTime" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -99,6 +101,8 @@
         <xs:element minOccurs="0" name="WindowsUsername" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Domainname" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Computername" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SyncAllesSeit" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="SyncAllesBis" type="xs:dateTime" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -172,6 +176,26 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetAlleEichprozesseImZeitraum">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Lizenzschluessel" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="WindowsUsername" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Domainname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Computername" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SyncAllesSeit" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="SyncAllesBis" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAlleEichprozesseImZeitraumResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice" minOccurs="0" name="GetAlleEichprozesseImZeitraumResult" nillable="true" type="q6:ArrayOfServerEichprozess" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="GetEichProzess">
     <xs:complexType>
       <xs:sequence>
@@ -187,7 +211,7 @@
   <xs:element name="GetEichProzessResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice" minOccurs="0" name="GetEichProzessResult" nillable="true" type="q6:ServerEichprozess" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice" minOccurs="0" name="GetEichProzessResult" nillable="true" type="q7:ServerEichprozess" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

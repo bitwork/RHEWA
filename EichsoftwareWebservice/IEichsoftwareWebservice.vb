@@ -12,14 +12,14 @@ Public Interface IEichsoftwareWebservice
     Function PruefeObRHEWALizenz(ByVal Name As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean
 
     <OperationContract()>
-    Function GetNeueWZ(ByVal Name As String, Lizenzschluessel As String, ByVal LetztesUpdate As Date, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As ServerLookup_Waegezelle()
+    Function GetNeueWZ(ByVal Name As String, Lizenzschluessel As String, ByVal LetztesUpdate As Date, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, Optional ByVal SyncAllesSeit As Date = #1/1/2000#, Optional ByVal SyncAllesBis As Date = #12/31/2999#) As ServerLookup_Waegezelle()
 
     <OperationContract()>
     Sub SchreibeVerbindungsprotokoll(ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, ByVal Aktivitaet As String)
 
 
     <OperationContract()>
-    Function GetNeuesAWG(ByVal Name As String, Lizenzschluessel As String, ByVal LetztesUpdate As Date, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As ServerLookup_Auswertegeraet()
+    Function GetNeuesAWG(ByVal Name As String, Lizenzschluessel As String, ByVal LetztesUpdate As Date, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, Optional ByVal SyncAllesSeit As Date = #1/1/2000#, Optional ByVal SyncAllesBis As Date = #12/31/2999#) As ServerLookup_Auswertegeraet()
 
     <OperationContract()>
     Function AddEichmarkenverwaltung(ByVal Name As String, Lizenzschluessel As String, ByVal BenutzerFK As String, ByVal AnzahlBenannteStelle As Integer, ByVal AnzahlEichsiegel13x13 As Integer, ByVal AnzahlEichsiegelRund As Integer, ByVal AnzahlHinweismarke As Integer,
@@ -29,6 +29,9 @@ Public Interface IEichsoftwareWebservice
 
     <OperationContract()>
     Function GetAlleEichprozesse(ByVal Name As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As clsEichprozessFuerAuswahlliste()
+    <OperationContract()>
+    Function GetAlleEichprozesseImZeitraum(ByVal Name As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, Optional ByVal SyncAllesSeit As Date = #1/1/2000#, Optional ByVal SyncAllesBis As Date = #12/31/2999#) As ServerEichprozess()
+
 
     <OperationContract()>
     Function GetEichProzess(ByVal Name As String, Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As ServerEichprozess

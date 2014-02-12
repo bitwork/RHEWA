@@ -134,6 +134,8 @@ Public Class EichsoftwareWebservice
                     Catch ex As Exception
 
                     End Try
+                    pObjEichprozess.UploadDatum = Date.Now
+                    pObjEichprozess.ErzeugerLizenz = Lizenzschluessel 'lizenzschlüssel zur identifizierung des datensatztes hinzufügen
                     DbContext.ServerEichprozess.Add(pObjEichprozess)
                     DbContext.SaveChanges()
                 Else 'update
@@ -146,6 +148,7 @@ Public Class EichsoftwareWebservice
 
                     DbContext.ServerEichprozess.Remove(Serverob)
                     DbContext.SaveChanges()
+                    pObjEichprozess.BearbeitungsDatum = Date.Now
                     DbContext.ServerEichprozess.Add(pObjEichprozess)
                     DbContext.SaveChanges()
 
@@ -289,7 +292,6 @@ Public Class EichsoftwareWebservice
                     Catch e As Exception
                     End Try
 
-                    'TargetObject._ServerEichprotokoll.ServerPruefungWiederholbarkeit = SourceObject.Eichprotokoll.PruefungWiederholbarkeit
                     Try
                         Dim query = From db In DbContext.ServerPruefungWiederholbarkeit Where db.FK_Eichprotokoll = EichID
                         For Each sourceo In query
@@ -315,6 +317,201 @@ Public Class EichsoftwareWebservice
         End Try
 
     End Function
+
+    ''' <summary>
+    ''' holt alle Eichprozesse des Nutzers (Lizenzschlüssel) im angebebenen Zeitraum. diese funktion ist z.b. für eine neuinstallation gedacht, damit der client wieder seine Eichungen bekommt
+    ''' </summary>
+    ''' <param name="Name"></param>
+    ''' <param name="Lizenzschluessel"></param>
+    ''' <param name="WindowsUsername"></param>
+    ''' <param name="Domainname"></param>
+    ''' <param name="Computername"></param>
+    ''' <param name="SyncAllesSeit"></param>
+    ''' <param name="SyncAllesBis"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Public Function GetAlleEichprozesseImZeitraum(ByVal Name As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, Optional ByVal SyncAllesSeit As Date = #1/1/2000#, Optional ByVal SyncAllesBis As Date = #12/31/2999#) As ServerEichprozess() Implements IEichsoftwareWebservice.GetAlleEichprozesseImZeitraum
+        Try
+            ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
+            If PruefeLizenz(Name, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
+            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Hole alle Eichprozesse im Zeitraum")
+
+            'neuen Context aufbauen
+            Using DbContext As New EichenSQLDatabaseEntities1
+
+
+                DbContext.Configuration.LazyLoadingEnabled = False
+                DbContext.Configuration.ProxyCreationEnabled = False
+                Try
+                    Dim Eichprozesse = (From Eichprozess In DbContext.ServerEichprozess.Include("ServerEichprotokoll") _
+                               .Include("ServerLookup_Auswertegeraet").Include("ServerKompatiblitaetsnachweis") _
+                               .Include("ServerLookup_Waegezelle").Include("ServerLookup_Waagenart") _
+                               .Include("ServerLookup_Waagentyp").Include("ServerBeschaffenheitspruefung") Where Eichprozess.UploadDatum > SyncAllesSeit And Eichprozess.UploadDatum < SyncAllesBis And Eichprozess.ErzeugerLizenz = Lizenzschluessel)
+
+
+                    ''abruch
+                    If Eichprozesse Is Nothing Then Return Nothing
+                    Dim returnlist As New List(Of ServerEichprozess)
+                    For Each Obj In Eichprozesse
+
+
+                        'prüfungen
+                        Dim EichID As String = Obj.ServerEichprotokoll.ID
+
+                        Try
+                            Dim query = From db In DbContext.ServerPruefungAnsprechvermoegen Where db.FK_Eichprotokoll = EichID
+                            For Each sourceo In query
+                                Obj.ServerEichprotokoll.ServerPruefungAnsprechvermoegen.Add(sourceo)
+                            Next
+                        Catch e As Exception
+                        End Try
+
+                        Try
+                            Dim query = From db In DbContext.ServerLookup_Vorgangsstatus Where db.ID = Obj.FK_Vorgangsstatus
+                            For Each sourceo In query
+                                Obj.ServerLookup_Vorgangsstatus = sourceo
+                            Next
+                        Catch e As Exception
+                        End Try
+
+                        Try
+                            Dim query = From db In DbContext.ServerPruefungAussermittigeBelastung Where db.FK_Eichprotokoll = EichID
+                            For Each sourceo In query
+                                Obj.ServerEichprotokoll.ServerPruefungAussermittigeBelastung.Add(sourceo)
+                            Next
+                        Catch e As Exception
+                        End Try
+
+
+                        Try
+                            Dim query = From db In DbContext.ServerPruefungEichfehlergrenzen Where db.FK_Eichprotokoll = EichID
+                            For Each sourceo In query
+                                Obj.ServerEichprotokoll.ServerPruefungEichfehlergrenzen.Add(sourceo)
+                            Next
+                        Catch e As Exception
+                        End Try
+
+
+                        Try
+                            Dim query = From db In DbContext.ServerPruefungLinearitaetFallend Where db.FK_Eichprotokoll = EichID
+                            For Each sourceo In query
+                                Obj.ServerEichprotokoll.ServerPruefungLinearitaetFallend.Add(sourceo)
+                            Next
+                        Catch e As Exception
+                        End Try
+
+
+                        Try
+                            Dim query = From db In DbContext.ServerPruefungLinearitaetSteigend Where db.FK_Eichprotokoll = EichID
+                            For Each sourceo In query
+                                Obj.ServerEichprotokoll.ServerPruefungLinearitaetSteigend.Add(sourceo)
+                            Next
+                        Catch e As Exception
+                        End Try
+
+                        Try
+                            Dim query = From db In DbContext.ServerPruefungRollendeLasten Where db.FK_Eichprotokoll = EichID
+                            For Each sourceo In query
+                                Obj.ServerEichprotokoll.ServerPruefungRollendeLasten.Add(sourceo)
+                            Next
+                        Catch e As Exception
+                        End Try
+
+                        Try
+                            Dim query = From db In DbContext.ServerPruefungStabilitaetGleichgewichtslage Where db.FK_Eichprotokoll = EichID
+                            For Each sourceo In query
+                                Obj.ServerEichprotokoll.ServerPruefungStabilitaetGleichgewichtslage.Add(sourceo)
+                            Next
+                        Catch e As Exception
+                        End Try
+
+
+                        Try
+                            Dim query = From db In DbContext.ServerPruefungStaffelverfahrenErsatzlast Where db.FK_Eichprotokoll = EichID
+                            For Each sourceo In query
+                                Obj.ServerEichprotokoll.ServerPruefungStaffelverfahrenErsatzlast.Add(sourceo)
+                            Next
+                        Catch e As Exception
+                        End Try
+
+                        Try
+                            Dim query = From db In DbContext.ServerPruefungStaffelverfahrenNormallast Where db.FK_Eichprotokoll = EichID
+                            For Each sourceo In query
+                                Obj.ServerEichprotokoll.ServerPruefungStaffelverfahrenNormallast.Add(sourceo)
+                            Next
+                        Catch e As Exception
+                        End Try
+
+                        Try
+                            Dim query = From db In DbContext.ServerPruefungWiederholbarkeit Where db.FK_Eichprotokoll = EichID
+                            For Each sourceo In query
+                                Obj.ServerEichprotokoll.ServerPruefungWiederholbarkeit.Add(sourceo)
+                            Next
+                        Catch e As Exception
+                        End Try
+                        returnlist.Add(Obj)
+
+                    Next
+                    Return returnlist.ToArray
+
+                Catch ex As Exception
+                    'hat nicht funktioniert
+                    Return Nothing
+                End Try
+            End Using
+
+
+
+
+            ''neuen Context aufbauen
+            'Using DbContext As New EichenSQLDatabaseEntities1
+            '    DbContext.Configuration.LazyLoadingEnabled = False
+            '    DbContext.Configuration.ProxyCreationEnabled = False
+            '    Try
+            '        Dim Query = From Eichprozess In DbContext.ServerEichprozess Where Eichprozess.UploadDatum > SyncAllesSeit And Eichprozess.UploadDatum < SyncAllesBis _
+            '                Join Lookup In DbContext.ServerLookup_Vorgangsstatus On Eichprozess.FK_Vorgangsstatus Equals Lookup.ID _
+            '                Join Lookup2 In DbContext.ServerLookup_Bearbeitungsstatus On Eichprozess.FK_Bearbeitungsstatus Equals Lookup2.ID _
+            '                                     Select New With _
+            '   { _
+            '        Eichprozess.ID, _
+            '        .Status = Lookup.Status, _
+            '                    Eichprozess.Vorgangsnummer, _
+            '                    .Fabriknummer = Eichprozess.ServerKompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer, _
+            '                    .Lookup_Waegezelle = Eichprozess.ServerLookup_Waegezelle.Typ, _
+            '                    .Lookup_Waagentyp = Eichprozess.ServerLookup_Waagentyp.Typ, _
+            '                    .Lookup_Waagenart = Eichprozess.ServerLookup_Waagenart.Art, _
+            '                    .Lookup_Auswertegeraet = Eichprozess.ServerLookup_Auswertegeraet.Typ, _
+            '                    .Sachbearbeiter = Eichprozess.ServerEichprotokoll.FK_Identifikationsdaten_SuperOfficeBenutzer, _
+            '                    .Bearbeitungsstatus = Lookup2.Status
+            '    }
+
+            '        Return Query.ToArray
+            '        Dim ReturnList As New List(Of ServerEichprozess)
+
+            '        'Wrapper für die KLasse. Problematischer Weise kann man keine anoynmen Typen zurückgeben. Deswegen gibt es die behilfsklasse clsEichprozessFuerAuswahlliste.
+            '        'Diese hat exakt die Eigenschaften die benötigt werden und zusammengesetzt aus der Status Tabelle und dem Eichprozess zusammengebaut wird
+            '        For Each objeichprozess In Query
+            '            ReturnList.Add(objReturn)
+            '        Next
+
+            '        'ergebnismenge zurückgeben
+            '        If Not ReturnList.Count = 0 Then
+            '            Return ReturnList.ToArray
+            '        Else
+            '            'es gibt keine neuerungen
+            '            Return Nothing
+            '        End If
+
+            '    Catch ex As Exception
+            '        'hat nicht funktioniert
+            '        Return Nothing
+            '    End Try
+            'End Using
+        Catch ex As Exception
+            Return Nothing
+        End Try
+    End Function
+
 
     Public Function GetAlleEichprozesse(ByVal Name As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As clsEichprozessFuerAuswahlliste() Implements IEichsoftwareWebservice.GetAlleEichprozesse
         Try
@@ -404,7 +601,7 @@ Public Class EichsoftwareWebservice
         End Try
     End Function
 
-    Public Function GetNeueWZ(ByVal Name As String, Lizenzschluessel As String, ByVal LetztesUpdate As Date, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As ServerLookup_Waegezelle() Implements IEichsoftwareWebservice.GetNeueWZ
+    Public Function GetNeueWZ(ByVal Name As String, Lizenzschluessel As String, ByVal LetztesUpdate As Date, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, Optional ByVal SyncAllesSeit As Date = #1/1/2000#, Optional ByVal SyncAllesBis As Date = #12/31/2999#) As ServerLookup_Waegezelle() Implements IEichsoftwareWebservice.GetNeueWZ
         ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
         If PruefeLizenz(Name, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
         SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Hole WZ")
@@ -414,7 +611,37 @@ Public Class EichsoftwareWebservice
             DBContext.Configuration.LazyLoadingEnabled = False
             DBContext.Configuration.ProxyCreationEnabled = False
             Try
-                Dim query = From d In DBContext.ServerLookup_Waegezelle Where d.ErstellDatum >= LetztesUpdate.Date Order By d.ID
+                'fallunterscheidung für die zu holende Datenmenge:
+                'fall A= Start und Enddate sind auf Default wert => Hole alles seit letztem Update
+                'fall B = StartWert ist ungleich default werd, aber Enddate ist default => Holle alles ab dem Startdate und dann seit dem letzten Update
+                'fall c = StartWert ist ungleich default werd, und Enddate ist ungleich default => Holle alles ab dem Startdate und Endwert, dann seit dem letzten Update wenn dieses nicht über dem Endwert liegt
+                Dim query As System.Linq.IOrderedQueryable(Of ServerLookup_Waegezelle)
+
+                If SyncAllesSeit = #1/1/2000# And SyncAllesBis = #12/31/2999# Then 'fall A
+                    query = From d In DBContext.ServerLookup_Waegezelle Where d.ErstellDatum >= LetztesUpdate Order By d.ID
+                ElseIf SyncAllesSeit <> #1/1/2000# And SyncAllesBis = #12/31/2999# Then 'fall b
+                    query = From d In DBContext.ServerLookup_Waegezelle
+                            Where d.ErstellDatum >= SyncAllesSeit And d.ErstellDatum >= LetztesUpdate
+                            Order By d.ID
+                ElseIf SyncAllesSeit <> #1/1/2000# And SyncAllesBis <> #12/31/2999# Then 'fall c
+                    '#ndern des Letztes Update wertes
+                    If LetztesUpdate > SyncAllesBis Then
+                        LetztesUpdate = SyncAllesBis
+                    End If
+                    If LetztesUpdate < SyncAllesSeit Then
+                        LetztesUpdate = SyncAllesSeit
+                    End If
+                    query = From d In DBContext.ServerLookup_Waegezelle
+                            Where d.ErstellDatum >= SyncAllesSeit And d.ErstellDatum <= SyncAllesBis And d.ErstellDatum >= LetztesUpdate
+                            Order By d.ID
+                Else 'fall das Startwert gleich default aber endwert nicht, ist nicht vorgesehen. Fallback auf Sync Alles seit
+                    query = From d In DBContext.ServerLookup_Waegezelle Where d.ErstellDatum >= LetztesUpdate Order By d.ID
+                End If
+
+
+
+
+
                 Dim ReturnList As New List(Of ServerLookup_Waegezelle)
 
                 For Each objWZ In query
@@ -439,7 +666,7 @@ Public Class EichsoftwareWebservice
 
     End Function
 
-    Public Function GetNeuesAWG(ByVal Name As String, Lizenzschluessel As String, ByVal LetztesUpdate As Date, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As ServerLookup_Auswertegeraet() Implements IEichsoftwareWebservice.GetNeuesAWG
+    Public Function GetNeuesAWG(ByVal Name As String, Lizenzschluessel As String, ByVal LetztesUpdate As Date, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, Optional ByVal SyncAllesSeit As Date = #1/1/2000#, Optional ByVal SyncAllesBis As Date = #12/31/2999#) As ServerLookup_Auswertegeraet() Implements IEichsoftwareWebservice.GetNeuesAWG
         ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
         If PruefeLizenz(Name, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
         SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Hole AWG")
@@ -448,7 +675,37 @@ Public Class EichsoftwareWebservice
             DBContext.Configuration.LazyLoadingEnabled = False
             DBContext.Configuration.ProxyCreationEnabled = False
             Try
-                Dim query = From d In DBContext.ServerLookup_Auswertegeraet Where d.ErstellDatum >= LetztesUpdate.Date Order By d.ID
+                'fallunterscheidung für die zu holende Datenmenge:
+                'fall A= Start und Enddate sind auf Default wert => Hole alles seit letztem Update
+                'fall B = StartWert ist ungleich default werd, aber Enddate ist default => Holle alles ab dem Startdate und dann seit dem letzten Update
+                'fall c = StartWert ist ungleich default werd, und Enddate ist ungleich default => Holle alles ab dem Startdate und Endwert, dann seit dem letzten Update wenn dieses nicht über dem Endwert liegt
+                Dim query As System.Linq.IOrderedQueryable(Of ServerLookup_Auswertegeraet)
+
+                If SyncAllesSeit = #1/1/2000# And SyncAllesBis = #12/31/2999# Then 'fall A
+                    query = From d In DBContext.ServerLookup_Auswertegeraet Where d.ErstellDatum >= LetztesUpdate Order By d.ID
+                ElseIf SyncAllesSeit <> #1/1/2000# And SyncAllesBis = #12/31/2999# Then 'fall b
+                    query = From d In DBContext.ServerLookup_Auswertegeraet
+                            Where d.ErstellDatum >= SyncAllesSeit And d.ErstellDatum >= LetztesUpdate
+                            Order By d.ID
+                ElseIf SyncAllesSeit <> #1/1/2000# And SyncAllesBis <> #12/31/2999# Then 'fall c
+                    '#ndern des Letztes Update wertes
+                    If LetztesUpdate > SyncAllesBis Then
+                        LetztesUpdate = SyncAllesBis
+                    End If
+                    If LetztesUpdate < SyncAllesSeit Then
+                        LetztesUpdate = SyncAllesSeit
+                    End If
+                    query = From d In DBContext.ServerLookup_Auswertegeraet
+                            Where d.ErstellDatum >= SyncAllesSeit And d.ErstellDatum <= SyncAllesBis And d.ErstellDatum >= LetztesUpdate
+                            Order By d.ID
+                Else 'fall das Startwert gleich default aber endwert nicht, ist nicht vorgesehen. Fallback auf Sync Alles seit
+                    query = From d In DBContext.ServerLookup_Auswertegeraet Where d.ErstellDatum >= LetztesUpdate Order By d.ID
+                End If
+
+
+
+
+
                 Dim ReturnList As New List(Of ServerLookup_Auswertegeraet)
 
                 For Each objWZ In query

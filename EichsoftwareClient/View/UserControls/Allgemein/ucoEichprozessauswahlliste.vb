@@ -85,6 +85,48 @@ Public Class ucoEichprozessauswahlliste
             End If
         End If
     End Sub
+    Private Sub ForceActivation()
+        Try
+        
+
+                Using DBContext As New EichsoftwareClientdatabaseEntities1
+                    'prüfen ob die Lizenz gültig ist
+                    Dim name As String = "Tim"
+                    Dim Schluessel As String = "Hill"
+
+
+                    Dim objLic As New Lizensierung
+                    objLic.FK_SuperofficeBenutzer = name
+                    objLic.Lizenzschluessel = Schluessel
+
+                        objLic.RHEWALizenz = True
+                  
+
+                    Try
+                        'löschen der lokalen DB
+                        For Each lic In DBContext.Lizensierung
+                            DBContext.Lizensierung.Remove(lic)
+                        Next
+                        DBContext.SaveChanges()
+                    Catch ex As Exception
+                    End Try
+                    Try
+                        'speichern in lokaler DB
+                        DBContext.Lizensierung.Add(objLic)
+                        DBContext.SaveChanges()
+                    Catch ex As Exception
+                    End Try
+                    My.Settings.Lizensiert = True
+                    My.Settings.RHEWALizenz = objLic.RHEWALizenz
+                    My.Settings.Save()
+
+            End Using
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, My.Resources.GlobaleLokalisierung.Fehler)
+      
+        End Try
+    End Sub
 
 
     Private Sub ucoEichprozessauswahlliste_Load(sender As Object, e As System.EventArgs) Handles Me.Load
@@ -98,12 +140,27 @@ Public Class ucoEichprozessauswahlliste
             End Try
         End If
 
+        RadButtonEinstellungen.Visible = True
+        RadButtonEinstellungen.Enabled = True
+
+        'lizenz eingabe überspringen
+        If Debugger.IsAttached Then
+            ForceActivation()
+        End If
+
         If My.Settings.RHEWALizenz = True Then
         Else
             RadPageView1.Pages.RemoveAt(1)
             RadPageView1.Pages(0).Text = ""
         End If
+
         'daten füllen
+        'für den Fall das die Anwendung gerade erst installiert wurde, oder die einstellung zur Synchronisierung geändert wurde, sollen alle Eichungen vom RHEWA Server geholt werden, die einmal angelegt wurden
+        If My.Settings.HoleAlleEigenenEichungenVomServer = True Then
+            VerbindeMitWebserviceUndHoleAlles()
+            Exit Sub
+        End If
+
 
         If My.Settings.Lizensiert Then
             LoadFromDatabase()
@@ -253,42 +310,6 @@ Public Class ucoEichprozessauswahlliste
             'je nach Sprache die Abfrage anpassen um die entsprechenden Übersetzungen der Lookupwerte aus der DB zu laden
             Select Case My.Settings.AktuelleSprache
                 Case "de"
-                    'laden der benötigten Liste mit nur den benötigten Spalten
-                    'TH Diese Linq abfrage führt einen Join auf die Status Tabelle aus um den Status als Anzeigewert anzeigen zu können. 
-                    'Außerdem werden durch die .Name = Wert Notatation im Kontext des "select NEW" eine neue temporäre "Klasse" erzeugt, die die übergebenen Werte beinhaltet - als kämen sie aus einer Datenbanktabelle
-                    'Dim Data = From Eichprozess In Context.Eichprozess _
-                    '             Join Lookup In Context.Lookup_Vorgangsstatus On Eichprozess.FK_Vorgangsstatus Equals Lookup.ID
-                    '              Join Lookup2 In Context.Lookup_Bearbeitungsstatus On Eichprozess.FK_Bearbeitungsstatus Equals Lookup2.ID
-                    '             Where Eichprozess.Ausgeblendet = RadCheckBoxAusblendenGeloeschterDokumenteAlle.Checked _
-                    '                                            Select New With _
-                    '                              { _
-                    '                                      .Status = If(Lookup Is Nothing, String.Empty, Lookup.Status), _
-                    '                                      .BearbeitungsStatus = If(Lookup2 Is Nothing, String.Empty, Lookup2.Status), _
-                    '                                       Eichprozess.ID, _
-                    '                                      Eichprozess.Vorgangsnummer, _
-                    '                                      .Fabriknummer = Eichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer, _
-                    '                                      .Lookup_Waegezelle = Eichprozess.Lookup_Waegezelle.Typ, _
-                    '                                      .Lookup_Waagentyp = Eichprozess.Lookup_Waagentyp.Typ, _
-                    '                                      .Lookup_Waagenart = Eichprozess.Lookup_Waagenart.Art, _
-                    '                                      .Lookup_Auswertegeraet = Eichprozess.Lookup_Auswertegeraet.Typ, _
-                    '                                      Eichprozess.Ausgeblendet _
-                    '                              }
-                    'Dim Data = From Eichprozess In Context.Eichprozess _
-                    '             Join Lookup In Context.Lookup_Vorgangsstatus On Eichprozess.FK_Vorgangsstatus Equals Lookup.ID
-                    '                                            Where Eichprozess.Ausgeblendet = RadCheckBoxAusblendenGeloeschterDokumenteAlle.Checked _
-                    '                                            Select New With _
-                    '                              { _
-                    '                                      .Status = Lookup.Status, _
-                    '                                                                                                Eichprozess.ID, _
-                    '                                      Eichprozess.Vorgangsnummer, _
-                    '                                      .Fabriknummer = Eichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer, _
-                    '                                      .Lookup_Waegezelle = Eichprozess.Lookup_Waegezelle.Typ, _
-                    '                                      .Lookup_Waagentyp = Eichprozess.Lookup_Waagentyp.Typ, _
-                    '                                      .Lookup_Waagenart = Eichprozess.Lookup_Waagenart.Art, _
-                    '                                      .Lookup_Auswertegeraet = Eichprozess.Lookup_Auswertegeraet.Typ, _
-                    '                                      Eichprozess.Ausgeblendet _
-                    '                              }
-
                     Dim Data = From Eichprozess In Context.Eichprozess _
                                               Where Eichprozess.Ausgeblendet = RadCheckBoxAusblendenClientGeloeschterDokumente.Checked _
                                                                Select New With _
@@ -637,8 +658,7 @@ Public Class ucoEichprozessauswahlliste
             RadButtonEichprozessGenehmigenRHEWA.Enabled = False
         End Try
     End Sub
-
-    Private Sub RadButtonEichprozessKopieren_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonEichprozessKopierenRHEWA.Click
+    Private Sub GetLokaleKopieVonEichprozess()
         If RadGridView1.SelectedRows.Count > 0 Then
             'prüfen ob das ausgewählte element eine REcord Row und kein Groupheader, Filter oder anderes ist
             If TypeOf RadGridView1.SelectedRows(0) Is Telerik.WinControls.UI.GridViewDataRowInfo Then
@@ -681,17 +701,17 @@ Public Class ucoEichprozessauswahlliste
                                 Try
                                     dbcontext.SaveChanges()
                                 Catch ex As Entity.Infrastructure.DbUpdateException
-                                    Debug.WriteLine(ex.InnerException.InnerException.Message)
+                                    messagebox.show(ex.InnerException.InnerException.Message)
                                     MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_SpeicherAnomalie, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK)
                                     If My.Settings.RHEWALizenz Then
-                                        MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_SpeicherAnomalieRHEWAZusatztext, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK)
+                                        MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_SpeicherAnomalieRhewaZusatztext, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK)
                                     End If
 
                                     Exit Sub
                                 Catch ex2 As Entity.Validation.DbEntityValidationException
                                     For Each o In ex2.EntityValidationErrors
                                         For Each v In o.ValidationErrors
-                                            Debug.WriteLine(v.ErrorMessage & " " & v.PropertyName)
+                                            messagebox.show(v.ErrorMessage & " " & v.PropertyName)
                                         Next
                                     Next
                                     Exit Sub
@@ -718,8 +738,47 @@ Public Class ucoEichprozessauswahlliste
             End If
         End If
     End Sub
+    Private Sub RadButtonEichprozessKopieren_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonEichprozessKopierenRHEWA.Click
+        GetLokaleKopieVonEichprozess()
+    End Sub
 
 #Region "Updates aus Webservice"
+
+    Private Sub VerbindeMitWebserviceUndHoleAlles()
+        Try
+            Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
+                webContext.Open()
+                webContext.Close()
+            End Using
+        Catch ex As Exception
+
+            MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show(ex.Message, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+            Exit Sub
+        End Try
+
+        'für den Fall das die Anwendung gerade erst installiert wurde, oder die einstellung zur Synchronisierung geändert wurde, sollen alle Eichungen vom RHEWA Server geholt werden, die einmal angelegt wurden
+
+        LoescheLokaleDatenbank()
+        My.Settings.LetztesUpdate = "01.01.2000"
+        My.Settings.Save()
+        'hole alle WZ
+        GetNeueWZ(False)
+        'prüfen ob es neue AWG gibt
+        GetNeuesAWG(False)
+
+        My.Settings.LetztesUpdate = Date.Now
+        My.Settings.Save()
+
+
+        GetEichprotokolleVomServer()
+        My.Settings.HoleAlleEigenenEichungenVomServer = False
+        My.Settings.Save()
+
+      
+
+    End Sub
     ''' <summary>
     ''' Methode welche sich mit dem Webservice verbinduet und nach aktualisierungen für WZ, AWGs und eigenen Eichungen guckt
     ''' </summary>
@@ -733,6 +792,8 @@ Public Class ucoEichprozessauswahlliste
         Catch ex As Exception
 
             MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show(ex.Message, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+
             Exit Sub
         End Try
 
@@ -758,16 +819,166 @@ Public Class ucoEichprozessauswahlliste
 
         Dim returnMessage As String = My.Resources.GlobaleLokalisierung.Aktualisierung_Erfolgreich
         If bolNeuWZ Then
-            returnMessage += My.Resources.GlobaleLokalisierung.Aktualisierung_NeuWZ
+            returnMessage += "/ " + My.Resources.GlobaleLokalisierung.Aktualisierung_NeuWZ
         End If
         If bolNeuAWG Then
-            returnMessage += My.Resources.GlobaleLokalisierung.Aktualisierung_NeuAWG
+            returnMessage += "/ " + My.Resources.GlobaleLokalisierung.Aktualisierung_NeuAWG
         End If
 
         If bolNeuGenehmigung Then
-            returnMessage += My.Resources.GlobaleLokalisierung.Aktualisierung_NeuEichung
+            returnMessage += "/ " + My.Resources.GlobaleLokalisierung.Aktualisierung_NeuEichung
         End If
         MessageBox.Show(returnMessage)
+    End Sub
+
+    'löscht lokale Datenbank, für resyncronisierung
+    Private Sub LoescheLokaleDatenbank()
+        Try
+            Using DBContext As New EichsoftwareClientdatabaseEntities1
+                Dim Name As String
+                'Dim Schluessel As String
+
+                ''lizenzisierung holen
+                'Dim objLiz = (From db In DBContext.Lizensierung Select db).FirstOrDefault
+
+                'Name = objLiz.FK_SuperofficeBenutzer
+                'Schluessel = objLiz.Lizenzschluessel
+
+                For Each obj In DBContext.Eichprozess
+                    DBContext.Eichprozess.Remove(obj)
+                Next
+                For Each obj In DBContext.Eichprotokoll
+                    DBContext.Eichprotokoll.Remove(obj)
+                Next
+                For Each obj In DBContext.Beschaffenheitspruefung
+                    DBContext.Beschaffenheitspruefung.Remove(obj)
+                Next
+                For Each obj In DBContext.Kompatiblitaetsnachweis
+                    DBContext.Kompatiblitaetsnachweis.Remove(obj)
+                Next
+                For Each obj In DBContext.PruefungAnsprechvermoegen
+                    DBContext.PruefungAnsprechvermoegen.Remove(obj)
+                Next
+                For Each obj In DBContext.PruefungEichfehlergrenzen
+                    DBContext.PruefungEichfehlergrenzen.Remove(obj)
+                Next
+                For Each obj In DBContext.PruefungLinearitaetFallend
+                    DBContext.PruefungLinearitaetFallend.Remove(obj)
+                Next
+                For Each obj In DBContext.PruefungLinearitaetSteigend
+                    DBContext.PruefungLinearitaetSteigend.Remove(obj)
+                Next
+                For Each obj In DBContext.PruefungRollendeLasten
+                    DBContext.PruefungRollendeLasten.Remove(obj)
+                Next
+                For Each obj In DBContext.PruefungAussermittigeBelastung
+                    DBContext.PruefungAussermittigeBelastung.Remove(obj)
+                Next
+                For Each obj In DBContext.PruefungStabilitaetGleichgewichtslage
+                    DBContext.PruefungStabilitaetGleichgewichtslage.Remove(obj)
+                Next
+                For Each obj In DBContext.PruefungStaffelverfahrenErsatzlast
+                    DBContext.PruefungStaffelverfahrenErsatzlast.Remove(obj)
+                Next
+                For Each obj In DBContext.PruefungStaffelverfahrenNormallast
+                    DBContext.PruefungStaffelverfahrenNormallast.Remove(obj)
+                Next
+                For Each obj In DBContext.PruefungWiederholbarkeit
+                    DBContext.PruefungWiederholbarkeit.Remove(obj)
+                Next
+
+                'DBContext.Database.Delete()
+                'DBContext.Database.CreateIfNotExists()
+
+                'Dim objLic As New Lizensierung
+                'objLic.FK_SuperofficeBenutzer = Name
+                'objLic.Lizenzschluessel = Schluessel
+                'objLic.Aktiv = True
+                'objLic.RHEWALizenz = My.Settings.RHEWALizenz
+
+                'DBContext.Lizensierung.Add(objLic)
+                DBContext.SaveChanges()
+
+            End Using
+        Catch ex As Exception
+            MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    'holt alle einem zugehörigen Eichprotokolle vom RHEWA Server. z.B. wenn die anwendung auf einem neuem PC installiert wurde
+    Private Sub GetEichprotokolleVomServer()
+        Try
+
+            'abrufen des Statusts für jeden versendeten Eichprozess
+            Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
+                Try
+                    webContext.Open()
+                Catch ex As Exception
+                    Exit Sub
+                End Try
+                Using DBContext As New EichsoftwareClientdatabaseEntities1
+                    'Eingrenzen welche Daten synchronisiert werden müssen, je nach Einstllung des Benutzers 
+                    Dim StartDatum As Date = #1/1/2000#
+                    Dim EndDatum As Date = #12/31/2999#
+
+                    If My.Settings.Syncronisierungsmodus = "Alles" Then
+                    ElseIf My.Settings.Syncronisierungsmodus = "Ab" Then
+                        StartDatum = My.Settings.SyncAb
+                    ElseIf My.Settings.Syncronisierungsmodus = "Zwischen" Then
+                        StartDatum = My.Settings.SyncAb
+                        EndDatum = My.Settings.SyncBis
+                    Else
+                        My.Settings.Syncronisierungsmodus = "Alles"
+                        My.Settings.Save()
+                    End If
+
+                    'lizenz objekt
+                    Dim objLiz = (From db In DBContext.Lizensierung Select db).FirstOrDefault
+
+                    Try
+                        'wenn es eine Änderung gab, wird das geänderte Objekt vom Server abgerufen. Damit können änderungen die von einem RHEWA Mitarbeiter durchgeführt wurden übernommen werden
+                        'neue Datenbankverbindung
+                        Dim objServerEichprozesse = webContext.GetAlleEichprozesseImZeitraum(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, My.User.Name, System.Environment.UserDomainName, My.Computer.Name, StartDatum, EndDatum)
+
+
+                        If objServerEichprozesse Is Nothing Then
+                            MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_KeinServerObjektEichung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        End If
+                        For Each objectServerEichprozess In objServerEichprozesse
+                            'umwandeln des Serverobjektes in Clientobject
+                            Dim Eichprozess = DBContext.Eichprozess.Create
+
+                            'erzeuge lokale Kopie
+                            clsServerHelper.CopyObjectPropertiesWithNewIDs(Eichprozess, objectServerEichprozess, True)
+                            Try
+                                DBContext.Eichprozess.Add(Eichprozess)
+                                DBContext.SaveChanges()
+                            Catch ex As Entity.Infrastructure.DbUpdateException
+                                MessageBox.Show(ex.InnerException.InnerException.Message)
+                            Catch ex2 As Entity.Validation.DbEntityValidationException
+                                For Each o In ex2.EntityValidationErrors
+                                    For Each v In o.ValidationErrors
+                                        MessageBox.Show(v.ErrorMessage & " " & v.PropertyName)
+                                    Next
+                                Next
+                            End Try
+
+
+                        Next
+
+                        'aktualisieren des Grids
+                        LoadFromDatabase()
+                    Catch ex As Exception
+                        MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_Speichern, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    End Try
+
+                End Using
+            End Using
+
+        Catch ex As Exception
+            MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 
     ''' <summary>
@@ -819,11 +1030,11 @@ Public Class ucoEichprozessauswahlliste
                                         DBContext.SaveChanges()
                                         bolNeuGenehmigung = True
                                     Catch ex As Entity.Infrastructure.DbUpdateException
-                                        Debug.WriteLine(ex.InnerException.InnerException.Message)
+                                        messagebox.show(ex.InnerException.InnerException.Message)
                                     Catch ex2 As Entity.Validation.DbEntityValidationException
                                         For Each o In ex2.EntityValidationErrors
                                             For Each v In o.ValidationErrors
-                                                Debug.WriteLine(v.ErrorMessage & " " & v.PropertyName)
+                                                messagebox.show(v.ErrorMessage & " " & v.PropertyName)
                                             Next
                                         Next
                                     End Try
@@ -868,8 +1079,25 @@ Public Class ucoEichprozessauswahlliste
                     Exit Sub
                 End Try
                 Using DBContext As New EichsoftwareClientdatabaseEntities1
+
+                    'Eingrenzen welche Daten synchronisiert werden müssen, je nach Einstllung des Benutzers 
+                    Dim StartDatum As Date = #1/1/2000#
+                    Dim EndDatum As Date = #12/31/2999#
+
+                    If My.Settings.Syncronisierungsmodus = "Alles" Then
+                    ElseIf My.Settings.Syncronisierungsmodus = "Ab" Then
+                        StartDatum = My.Settings.SyncAb
+                    ElseIf My.Settings.Syncronisierungsmodus = "Zwischen" Then
+                        StartDatum = My.Settings.SyncAb
+                        EndDatum = My.Settings.SyncBis
+                    Else
+                        My.Settings.Syncronisierungsmodus = "Alles"
+                        My.Settings.Save()
+                    End If
+
+                    'lizenzisierung holen
                     Dim objLiz = (From db In DBContext.Lizensierung Select db).FirstOrDefault
-                    Dim objWZResultList = webContext.GetNeueWZ(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, My.Settings.LetztesUpdate, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                    Dim objWZResultList = webContext.GetNeueWZ(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, My.Settings.LetztesUpdate, My.User.Name, System.Environment.UserDomainName, My.Computer.Name, StartDatum, EndDatum)
 
                     If Not objWZResultList Is Nothing Then
 
@@ -885,71 +1113,61 @@ Public Class ucoEichprozessauswahlliste
                                 'prüfen ob es bereits einen Artikel in der lokalen DB gibt, mit dem aktuellen ID-Wert
                                 If query.Count = 0 Then 'Es gbit den Artikel noch nicht in der lokalen Datebank => insert 
                                     Dim newWZ As New Lookup_Waegezelle
-                                    If Not objServerArtikel._Deaktiviert = True Then
 
-                                        newWZ.ID = objServerArtikel._ID
-                                        newWZ.Hoechsteteilungsfaktor = objServerArtikel._Hoechsteteilungsfaktor
-                                        newWZ.Kriechteilungsfaktor = objServerArtikel._Kriechteilungsfaktor
-                                        newWZ.MaxAnzahlTeilungswerte = objServerArtikel._MaxAnzahlTeilungswerte
-                                        newWZ.Mindestvorlast = objServerArtikel._Mindestvorlast
-                                        newWZ.MinTeilungswert = objServerArtikel._MinTeilungswert
-                                        newWZ.RueckkehrVorlastsignal = objServerArtikel._RueckkehrVorlastsignal
-                                        newWZ.Waegezellenkennwert = objServerArtikel._Waegezellenkennwert
-                                        newWZ.WiderstandWaegezelle = objServerArtikel._WiderstandWaegezelle
-                                        newWZ.Bauartzulassung = objServerArtikel._Bauartzulassung
-                                        newWZ.BruchteilEichfehlergrenze = objServerArtikel._BruchteilEichfehlergrenze
-                                        newWZ.Genauigkeitsklasse = objServerArtikel._Genauigkeitsklasse
-                                        newWZ.GrenzwertTemperaturbereichMAX = objServerArtikel._GrenzwertTemperaturbereichMAX
-                                        newWZ.GrenzwertTemperaturbereichMIN = objServerArtikel._GrenzwertTemperaturbereichMIN
-                                        newWZ.Hersteller = objServerArtikel._Hersteller
-                                        newWZ.Pruefbericht = objServerArtikel._Pruefbericht
-                                        newWZ.Typ = objServerArtikel._Typ
-                                        'hinzufügen des neu erzeugten Artikels in Lokale Datenbank
 
-                                        DBContext.Lookup_Waegezelle.Add(newWZ)
-                                        Try
-                                            DBContext.SaveChanges()
-                                            bolNeuWZ = True
-                                        Catch e As Exception
-                                            MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_Speichern, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                                            MessageBox.Show(e.StackTrace, e.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                                        End Try
-                                    End If
+                                    newWZ.ID = objServerArtikel._ID
+                                    newWZ.Hoechsteteilungsfaktor = objServerArtikel._Hoechsteteilungsfaktor
+                                    newWZ.Kriechteilungsfaktor = objServerArtikel._Kriechteilungsfaktor
+                                    newWZ.MaxAnzahlTeilungswerte = objServerArtikel._MaxAnzahlTeilungswerte
+                                    newWZ.Mindestvorlast = objServerArtikel._Mindestvorlast
+                                    newWZ.MinTeilungswert = objServerArtikel._MinTeilungswert
+                                    newWZ.RueckkehrVorlastsignal = objServerArtikel._RueckkehrVorlastsignal
+                                    newWZ.Waegezellenkennwert = objServerArtikel._Waegezellenkennwert
+                                    newWZ.WiderstandWaegezelle = objServerArtikel._WiderstandWaegezelle
+                                    newWZ.Bauartzulassung = objServerArtikel._Bauartzulassung
+                                    newWZ.BruchteilEichfehlergrenze = objServerArtikel._BruchteilEichfehlergrenze
+                                    newWZ.Genauigkeitsklasse = objServerArtikel._Genauigkeitsklasse
+                                    newWZ.GrenzwertTemperaturbereichMAX = objServerArtikel._GrenzwertTemperaturbereichMAX
+                                    newWZ.GrenzwertTemperaturbereichMIN = objServerArtikel._GrenzwertTemperaturbereichMIN
+                                    newWZ.Hersteller = objServerArtikel._Hersteller
+                                    newWZ.Pruefbericht = objServerArtikel._Pruefbericht
+                                    newWZ.Typ = objServerArtikel._Typ
+                                    newWZ.deaktiviert = objServerArtikel._Deaktiviert
+                                    'hinzufügen des neu erzeugten Artikels in Lokale Datenbank
+
+                                    DBContext.Lookup_Waegezelle.Add(newWZ)
+                                    Try
+                                        DBContext.SaveChanges()
+                                        bolNeuWZ = True
+                                    Catch e As Exception
+                                        MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_Speichern, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                                        MessageBox.Show(e.StackTrace, e.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                                    End Try
 
                                 Else 'Es gibt den Artikel bereits, er wird geupdated
-                                    For Each objWZ As Lookup_Waegezelle In query 'es sollte nur einen Artikel Geben, da die IDs eindeutig sind.
-                                        'artikel mit lösch flag löschen
-                                        If objServerArtikel._Deaktiviert Then
-                                            Dim query2 = From d In DBContext.Lookup_Waegezelle Select d Where d.ID = objServerArtikel._ID
-
-                                            DBContext.Lookup_Waegezelle.Remove(query2.First)
-                                            DBContext.SaveChanges()
-                                            bolNeuWZ = True
-
-                                            'TODO fraglich ob das so gut ist ... Was ist wenn auf diese WZ schon geeicht wurde?
-                                        Else
-                                            objWZ.Hoechsteteilungsfaktor = objServerArtikel._Hoechsteteilungsfaktor
-                                            objWZ.Kriechteilungsfaktor = objServerArtikel._Kriechteilungsfaktor
-                                            objWZ.MaxAnzahlTeilungswerte = objServerArtikel._MaxAnzahlTeilungswerte
-                                            objWZ.Mindestvorlast = objServerArtikel._Mindestvorlast
-                                            objWZ.MinTeilungswert = objServerArtikel._MinTeilungswert
-                                            objWZ.RueckkehrVorlastsignal = objServerArtikel._RueckkehrVorlastsignal
-                                            objWZ.Waegezellenkennwert = objServerArtikel._Waegezellenkennwert
-                                            objWZ.WiderstandWaegezelle = objServerArtikel._WiderstandWaegezelle
-                                            objWZ.Bauartzulassung = objServerArtikel._Bauartzulassung
-                                            objWZ.BruchteilEichfehlergrenze = objServerArtikel._BruchteilEichfehlergrenze
-                                            objWZ.Genauigkeitsklasse = objServerArtikel._Genauigkeitsklasse
-                                            objWZ.GrenzwertTemperaturbereichMAX = objServerArtikel._GrenzwertTemperaturbereichMAX
-                                            objWZ.GrenzwertTemperaturbereichMIN = objServerArtikel._GrenzwertTemperaturbereichMIN
-                                            objWZ.Hersteller = objServerArtikel._Hersteller
-                                            objWZ.Pruefbericht = objServerArtikel._Pruefbericht
-                                            objWZ.Typ = objServerArtikel._Typ
-                                        End If
+                                For Each objWZ As Lookup_Waegezelle In query 'es sollte nur einen Artikel Geben, da die IDs eindeutig sind.
+                                        objWZ.Hoechsteteilungsfaktor = objServerArtikel._Hoechsteteilungsfaktor
+                                        objWZ.Kriechteilungsfaktor = objServerArtikel._Kriechteilungsfaktor
+                                        objWZ.MaxAnzahlTeilungswerte = objServerArtikel._MaxAnzahlTeilungswerte
+                                        objWZ.Mindestvorlast = objServerArtikel._Mindestvorlast
+                                        objWZ.MinTeilungswert = objServerArtikel._MinTeilungswert
+                                        objWZ.RueckkehrVorlastsignal = objServerArtikel._RueckkehrVorlastsignal
+                                        objWZ.Waegezellenkennwert = objServerArtikel._Waegezellenkennwert
+                                        objWZ.WiderstandWaegezelle = objServerArtikel._WiderstandWaegezelle
+                                        objWZ.Bauartzulassung = objServerArtikel._Bauartzulassung
+                                        objWZ.BruchteilEichfehlergrenze = objServerArtikel._BruchteilEichfehlergrenze
+                                        objWZ.Genauigkeitsklasse = objServerArtikel._Genauigkeitsklasse
+                                        objWZ.GrenzwertTemperaturbereichMAX = objServerArtikel._GrenzwertTemperaturbereichMAX
+                                        objWZ.GrenzwertTemperaturbereichMIN = objServerArtikel._GrenzwertTemperaturbereichMIN
+                                        objWZ.Hersteller = objServerArtikel._Hersteller
+                                        objWZ.Pruefbericht = objServerArtikel._Pruefbericht
+                                        objWZ.Typ = objServerArtikel._Typ
+                                        objWZ.deaktiviert = objServerArtikel._Deaktiviert
                                     Next
                                 End If
                             Catch ex As Exception
-                                MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                            End Try
+            MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
                         Next
 
                     End If
@@ -982,8 +1200,25 @@ Public Class ucoEichprozessauswahlliste
                     Exit Sub
                 End Try
                 Using DBContext As New EichsoftwareClientdatabaseEntities1
+                    'Eingrenzen welche Daten synchronisiert werden müssen, je nach Einstllung des Benutzers 
+                    Dim StartDatum As Date = #1/1/2000#
+                    Dim EndDatum As Date = #12/31/2999#
+
+                    If My.Settings.Syncronisierungsmodus = "Alles" Then
+                    ElseIf My.Settings.Syncronisierungsmodus = "Ab" Then
+                        StartDatum = My.Settings.SyncAb
+                    ElseIf My.Settings.Syncronisierungsmodus = "Zwischen" Then
+                        StartDatum = My.Settings.SyncAb
+                        EndDatum = My.Settings.SyncBis
+                    Else
+                        My.Settings.Syncronisierungsmodus = "Alles"
+                        My.Settings.Save()
+                    End If
+
+                    'lizenzisierung holen
+
                     Dim objLiz = (From db In DBContext.Lizensierung Select db).FirstOrDefault
-                    Dim objAWGResultList = webContext.GetNeuesAWG(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, My.Settings.LetztesUpdate, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                    Dim objAWGResultList = webContext.GetNeuesAWG(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, My.Settings.LetztesUpdate, My.User.Name, System.Environment.UserDomainName, My.Computer.Name, StartDatum, EndDatum)
 
                     If Not objAWGResultList Is Nothing Then
 
@@ -997,43 +1232,35 @@ Public Class ucoEichprozessauswahlliste
                             'prüfen ob es bereits einen Artikel in der lokalen DB gibt, mit dem aktuellen ID-Wert
                             If query.Count = 0 Then 'Es gbit den Artikel noch nicht in der lokalen Datebank => insert 
                                 Dim newAWG As New Lookup_Auswertegeraet
-                                If Not objServerArtikel._Deaktiviert = True Then
 
-                                    newAWG.ID = objServerArtikel._ID
-                                    newAWG.Bauartzulassung = objServerArtikel._Bauartzulassung
-                                    newAWG.BruchteilEichfehlergrenze = objServerArtikel._BruchteilEichfehlergrenze
-                                    newAWG.Genauigkeitsklasse = objServerArtikel._Genauigkeitsklasse
-                                    newAWG.GrenzwertLastwiderstandMAX = objServerArtikel._GrenzwertLastwiderstandMAX
-                                    newAWG.GrenzwertLastwiderstandMIN = objServerArtikel._GrenzwertLastwiderstandMIN
-                                    newAWG.GrenzwertTemperaturbereichMAX = objServerArtikel._GrenzwertTemperaturbereichMAX
-                                    newAWG.GrenzwertTemperaturbereichMIN = objServerArtikel._GrenzwertTemperaturbereichMIN
-                                    newAWG.Hersteller = objServerArtikel._Hersteller
-                                    newAWG.KabellaengeQuerschnitt = objServerArtikel._KabellaengeQuerschnitt
-                                    newAWG.MAXAnzahlTeilungswerteEinbereichswaage = objServerArtikel._MAXAnzahlTeilungswerteEinbereichswaage
-                                    newAWG.MAXAnzahlTeilungswerteMehrbereichswaage = objServerArtikel._MAXAnzahlTeilungswerteMehrbereichswaage
-                                    newAWG.Mindesteingangsspannung = objServerArtikel._Mindesteingangsspannung
-                                    newAWG.Mindestmesssignal = objServerArtikel._Mindestmesssignal
-                                    newAWG.Pruefbericht = objServerArtikel._Pruefbericht
-                                    newAWG.Speisespannung = objServerArtikel._Speisespannung
-                                    newAWG.Typ = objServerArtikel._Typ
-                                    'hinzufügen des neu erzeugten Artikels in Lokale Datenbank
 
-                                    DBContext.Lookup_Auswertegeraet.Add(newAWG)
-                                    DBContext.SaveChanges()
-                                    bolNeuAWG = True
-                                End If
+                                newAWG.ID = objServerArtikel._ID
+                                newAWG.Bauartzulassung = objServerArtikel._Bauartzulassung
+                                newAWG.BruchteilEichfehlergrenze = objServerArtikel._BruchteilEichfehlergrenze
+                                newAWG.Genauigkeitsklasse = objServerArtikel._Genauigkeitsklasse
+                                newAWG.GrenzwertLastwiderstandMAX = objServerArtikel._GrenzwertLastwiderstandMAX
+                                newAWG.GrenzwertLastwiderstandMIN = objServerArtikel._GrenzwertLastwiderstandMIN
+                                newAWG.GrenzwertTemperaturbereichMAX = objServerArtikel._GrenzwertTemperaturbereichMAX
+                                newAWG.GrenzwertTemperaturbereichMIN = objServerArtikel._GrenzwertTemperaturbereichMIN
+                                newAWG.Hersteller = objServerArtikel._Hersteller
+                                newAWG.KabellaengeQuerschnitt = objServerArtikel._KabellaengeQuerschnitt
+                                newAWG.MAXAnzahlTeilungswerteEinbereichswaage = objServerArtikel._MAXAnzahlTeilungswerteEinbereichswaage
+                                newAWG.MAXAnzahlTeilungswerteMehrbereichswaage = objServerArtikel._MAXAnzahlTeilungswerteMehrbereichswaage
+                                newAWG.Mindesteingangsspannung = objServerArtikel._Mindesteingangsspannung
+                                newAWG.Mindestmesssignal = objServerArtikel._Mindestmesssignal
+                                newAWG.Pruefbericht = objServerArtikel._Pruefbericht
+                                newAWG.Speisespannung = objServerArtikel._Speisespannung
+                                newAWG.Typ = objServerArtikel._Typ
+                                'hinzufügen des neu erzeugten Artikels in Lokale Datenbank
+                                newAWG.deaktiviert = objServerArtikel._Deaktiviert
+                                DBContext.Lookup_Auswertegeraet.Add(newAWG)
+                                DBContext.SaveChanges()
+                                bolNeuAWG = True
+
 
                             Else 'Es gibt den Artikel bereits, er wird geupdated
                                 For Each objAWG As Lookup_Auswertegeraet In query 'es sollte nur einen Artikel Geben, da die IDs eindeutig sind.
-                                    'artikel mit lösch flag löschen
-                                    If objServerArtikel._Deaktiviert Then
-                                        Dim query2 = From d In DBContext.Lookup_Auswertegeraet Select d Where d.ID = objServerArtikel._ID
-
-                                        DBContext.Lookup_Auswertegeraet.Remove(query2.First)
-                                        DBContext.SaveChanges()
-                                        bolNeuAWG = True
-                                        'TODO fraglich ob das so gut ist ... Was ist wenn auf diese WZ schon geeicht wurde?
-                                    Else
+                                 
                                         objAWG.Bauartzulassung = objServerArtikel._Bauartzulassung
                                         objAWG.BruchteilEichfehlergrenze = objServerArtikel._BruchteilEichfehlergrenze
                                         objAWG.Genauigkeitsklasse = objServerArtikel._Genauigkeitsklasse
@@ -1049,8 +1276,9 @@ Public Class ucoEichprozessauswahlliste
                                         objAWG.Mindestmesssignal = objServerArtikel._Mindestmesssignal
                                         objAWG.Pruefbericht = objServerArtikel._Pruefbericht
                                         objAWG.Speisespannung = objServerArtikel._Speisespannung
-                                        objAWG.Typ = objServerArtikel._Typ
-                                    End If
+                                    objAWG.Typ = objServerArtikel._Typ
+                                    objAWG.Deaktiviert = objServerArtikel._Deaktiviert
+                                    bolNeuAWG = True
                                 Next
                             End If
                         Next
@@ -1076,4 +1304,11 @@ Public Class ucoEichprozessauswahlliste
     End Sub
 #End Region
    
+    Private Sub RadButtonEinstellungen_Click(sender As Object, e As EventArgs) Handles RadButtonEinstellungen.Click
+        Dim f As New frmEinstellungen
+        f.showdialog()
+        If f.dialogresult = DialogResult.OK Then
+
+        End If
+    End Sub
 End Class

@@ -130,9 +130,6 @@
   <data name="Verschiebeweg_PL" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Verschiebeweg_PL.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_83N_Beschilderung_Auswertegeraet_Frontseite" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\83N_Beschilderung_Auswertegeraet_Frontseite.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="_82Basic_CEXY_Auswertegeraet" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\82Basic_CEXY_Auswertegeraet.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -160,8 +157,8 @@
   <data name="_83Plus_Beschilderung_Auswertegeraet_Frontseite_mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\83Plus_Beschilderung_Auswertegeraet_Frontseite_mini.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_92_Beschilderung_Auswertegeraet_Rueckseite_mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\92_Beschilderung_Auswertegeraet_Rueckseite_mini.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="help" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\help.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_0405_Beschilderung_Auswertegeraet_Frontseite_mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\0405_Beschilderung_Auswertegeraet_Frontseite_mini.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,11 +166,11 @@
   <data name="flag_usa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\flag_usa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LKW" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LKW.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Verschiebeweg_DE" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Verschiebeweg_DE.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_82Basic_Beschilderung_Auswertegeraet_Unterseite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\82Basic_Beschilderung_Auswertegeraet_Unterseite.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_0405_Beschilderung_Auswertegeraet_Rueckseite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\0405_Beschilderung_Auswertegeraet_Rueckseite.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,8 +181,14 @@
   <data name="Verschiebeweg_GB" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Verschiebeweg_GB.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_82Basic_Beschilderung_Auswertegeraet_Unterseite" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\82Basic_Beschilderung_Auswertegeraet_Unterseite.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="database_refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\database_refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="accept" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\accept.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flag_poland" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flag_poland.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_82Alpha_Beschilderung_Auswertegeraet" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\82Alpha_Beschilderung_Auswertegeraet.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,8 +208,8 @@
   <data name="_82Basic_Beschilderung_Auswertegeraet" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\82Basic_Beschilderung_Auswertegeraet.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Genauigkeitsklasse3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Genauigkeitsklasse3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="report_delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\report_delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Genauigkeitsklasse4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Genauigkeitsklasse4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,14 +220,20 @@
   <data name="_0405_Beschilderung_Auswertegeraet_Rueckseite_mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\0405_Beschilderung_Auswertegeraet_Rueckseite_mini.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_92_Beschilderung_Auswertegeraet_Frontseite_mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\92_Beschilderung_Auswertegeraet_Frontseite_mini.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Genauigkeitsklasse3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Genauigkeitsklasse3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_82Alpha_Beschilderung_Auswertegeraet_Frontseite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\82Alpha_Beschilderung_Auswertegeraet_Frontseite.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="FourLCs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FourLCs.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Fahrzeug_Wenden_GB" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fahrzeug_Wenden_GB.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ersteichung_DE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ersteichung DE.doc;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="_84_Beschilderung_Auswertegeraet_Frontseite_mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\84_Beschilderung_Auswertegeraet_Frontseite_mini.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -232,8 +241,8 @@
   <data name="resultset_next" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\resultset_next.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="help" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\help.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_92_Beschilderung_Auswertegeraet_Frontseite_mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\92_Beschilderung_Auswertegeraet_Frontseite_mini.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="flag_germany" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\flag_germany.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -259,11 +268,11 @@
   <data name="weighing_mashine" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\weighing_mashine.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="TwelveLCs" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\TwelveLCs.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LKW" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LKW.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="report_delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\report_delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Ersteichung_EN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ersteichung EN.doc;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="_82Alpha_CEXY_Auswertegeraet" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\82Alpha_CEXY_Auswertegeraet.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -280,6 +289,9 @@
   <data name="report_edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\report_edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="TwelveLCs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TwelveLCs.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="bullet_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bullet_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -292,14 +304,8 @@
   <data name="Konformitätserklärung_RO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Konformitätserklärung RO.xls;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="accept" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\accept.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="_84_Beschilderung_Auswertegeraet_Frontseite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\84_Beschilderung_Auswertegeraet_Frontseite.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_error" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\error.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SixLCs" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SixLCs.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -316,26 +322,32 @@
   <data name="_83Plus_Beschilderung_Auswertegeraet_Frontseite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\83Plus_Beschilderung_Auswertegeraet_Frontseite.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="flag_poland" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flag_poland.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_83N_Beschilderung_Auswertegeraet_Frontseite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\83N_Beschilderung_Auswertegeraet_Frontseite.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Genauigkeitsklasse1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Genauigkeitsklasse1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_82Alpha_Beschilderung_Auswertegeraet_Frontseite_mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\82Alpha_Beschilderung_Auswertegeraet_Frontseite_mini.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_error" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\error.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_83N_Beschilderung_Auswertegeraet_Frontseite_mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\83N_Beschilderung_Auswertegeraet_Frontseite_mini.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Ersteichung_PL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ersteichung PL.doc;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="report_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\report_add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="FourLCs" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FourLCs.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="_83N_Beschilderung_Auswertegeraet_Rueckseite_mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\83N_Beschilderung_Auswertegeraet_Rueckseite_mini.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_82Alpha_Beschilderung_Auswertegeraet_Frontseite_mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\82Alpha_Beschilderung_Auswertegeraet_Frontseite_mini.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_92_Beschilderung_Auswertegeraet_Rueckseite_mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\92_Beschilderung_Auswertegeraet_Rueckseite_mini.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_83N_Beschilderung_Auswertegeraet_Frontseite_mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\83N_Beschilderung_Auswertegeraet_Frontseite_mini.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_83Plus_Beschilderung_Auswertegeraet_Rueckseite_mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\83Plus_Beschilderung_Auswertegeraet_Rueckseite_mini.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -352,16 +364,7 @@
   <data name="_82Alpha_CEXY_Auswertegeraet_mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\82Alpha_CEXY_Auswertegeraet_mini.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="database_refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\database_refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Ersteichung_DE" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Ersteichung DE.doc;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Ersteichung_EN" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Ersteichung EN.doc;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Ersteichung_PL" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Ersteichung PL.doc;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="cog" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cog.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

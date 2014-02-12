@@ -61,6 +61,12 @@
   <wsdl:message name="IEichsoftwareWebservice_GetAlleEichprozesse_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAlleEichprozesseResponse" />
   </wsdl:message>
+  <wsdl:message name="IEichsoftwareWebservice_GetAlleEichprozesseImZeitraum_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlleEichprozesseImZeitraum" />
+  </wsdl:message>
+  <wsdl:message name="IEichsoftwareWebservice_GetAlleEichprozesseImZeitraum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlleEichprozesseImZeitraumResponse" />
+  </wsdl:message>
   <wsdl:message name="IEichsoftwareWebservice_GetEichProzess_InputMessage">
     <wsdl:part name="parameters" element="tns:GetEichProzess" />
   </wsdl:message>
@@ -121,6 +127,10 @@
     <wsdl:operation name="GetAlleEichprozesse">
       <wsdl:input wsaw:Action="http://tempuri.org/IEichsoftwareWebservice/GetAlleEichprozesse" message="tns:IEichsoftwareWebservice_GetAlleEichprozesse_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IEichsoftwareWebservice/GetAlleEichprozesseResponse" message="tns:IEichsoftwareWebservice_GetAlleEichprozesse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAlleEichprozesseImZeitraum">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEichsoftwareWebservice/GetAlleEichprozesseImZeitraum" message="tns:IEichsoftwareWebservice_GetAlleEichprozesseImZeitraum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEichsoftwareWebservice/GetAlleEichprozesseImZeitraumResponse" message="tns:IEichsoftwareWebservice_GetAlleEichprozesseImZeitraum_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetEichProzess">
       <wsdl:input wsaw:Action="http://tempuri.org/IEichsoftwareWebservice/GetEichProzess" message="tns:IEichsoftwareWebservice_GetEichProzess_InputMessage" />
@@ -215,6 +225,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetAlleEichprozesse">
       <soap:operation soapAction="http://tempuri.org/IEichsoftwareWebservice/GetAlleEichprozesse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAlleEichprozesseImZeitraum">
+      <soap:operation soapAction="http://tempuri.org/IEichsoftwareWebservice/GetAlleEichprozesseImZeitraum" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -305,6 +305,7 @@
           <Property Name="GrenzwertTemperaturbereichMAX" Type="nvarchar" Nullable="false" MaxLength="5" />
           <Property Name="BruchteilEichfehlergrenze" Type="nvarchar" Nullable="false" MaxLength="5" />
           <Property Name="KabellaengeQuerschnitt" Type="nvarchar" MaxLength="50" />
+          <Property Name="Deaktiviert" Type="bit" />
         </EntityType>
         <EntityType Name="Lookup_Bearbeitungsstatus">
           <Key>
@@ -374,6 +375,7 @@
           <Property Name="GrenzwertTemperaturbereichMAX" Type="nvarchar" MaxLength="5" />
           <Property Name="BruchteilEichfehlergrenze" Type="nvarchar" MaxLength="5" />
           <Property Name="Neu" Type="bit" Nullable="false" />
+          <Property Name="Deaktiviert" Type="bit" />
         </EntityType>
         <EntityType Name="Mogelstatistik">
           <Key>
@@ -1174,6 +1176,7 @@
           <Property Type="String" Name="KabellaengeQuerschnitt" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Eichprozess" Relationship="EichsoftwareClientdatabaseModel.FK_Eichprozess_Lookup_Auswertegeraet" FromRole="Lookup_Auswertegeraet" ToRole="Eichprozess" />
           <NavigationProperty Name="Mogelstatistik" Relationship="EichsoftwareClientdatabaseModel.FK_Mogelstatistik_Lookup_Auswertegeraet" FromRole="Lookup_Auswertegeraet" ToRole="Mogelstatistik" />
+          <Property Type="Boolean" Name="Deaktiviert" />
         </EntityType>
         <EntityType Name="Lookup_Bearbeitungsstatus">
           <Key>
@@ -1250,6 +1253,7 @@
           <Property Type="Boolean" Name="Neu" Nullable="false" />
           <NavigationProperty Name="Eichprozess" Relationship="EichsoftwareClientdatabaseModel.FK_Eichprozess_Lookup_Waegezelle" FromRole="Lookup_Waegezelle" ToRole="Eichprozess" />
           <NavigationProperty Name="Mogelstatistik" Relationship="EichsoftwareClientdatabaseModel.FK_Mogelstatistik_Lookup_Waegezelle" FromRole="Lookup_Waegezelle" ToRole="Mogelstatistik" />
+          <Property Type="Boolean" Name="Deaktiviert" />
         </EntityType>
         <EntityType Name="Mogelstatistik">
           <Key>
@@ -1909,6 +1913,7 @@
           <EntitySetMapping Name="Lookup_Auswertegeraet">
             <EntityTypeMapping TypeName="EichsoftwareClientdatabaseModel.Lookup_Auswertegeraet">
               <MappingFragment StoreEntitySet="Lookup_Auswertegeraet">
+                <ScalarProperty Name="Deaktiviert" ColumnName="Deaktiviert" />
                 <ScalarProperty Name="KabellaengeQuerschnitt" ColumnName="KabellaengeQuerschnitt" />
                 <ScalarProperty Name="BruchteilEichfehlergrenze" ColumnName="BruchteilEichfehlergrenze" />
                 <ScalarProperty Name="GrenzwertTemperaturbereichMAX" ColumnName="GrenzwertTemperaturbereichMAX" />
@@ -1982,6 +1987,7 @@
           <EntitySetMapping Name="Lookup_Waegezelle">
             <EntityTypeMapping TypeName="EichsoftwareClientdatabaseModel.Lookup_Waegezelle">
               <MappingFragment StoreEntitySet="Lookup_Waegezelle">
+                <ScalarProperty Name="Deaktiviert" ColumnName="Deaktiviert" />
                 <ScalarProperty Name="Neu" ColumnName="Neu" />
                 <ScalarProperty Name="BruchteilEichfehlergrenze" ColumnName="BruchteilEichfehlergrenze" />
                 <ScalarProperty Name="GrenzwertTemperaturbereichMAX" ColumnName="GrenzwertTemperaturbereichMAX" />

@@ -232,16 +232,7 @@ Public Class FrmMainContainer
             RadButtonNavigateForwards.Visible = False
 
 
-            Select Case My.Settings.AktuelleSprache
-                Case Is = "en"
-                    RadButtonChangeLanguageToEnglish_Click(Nothing, Nothing)
-                Case Is = "de"
-                    RadButtonChangeLanguageToGerman_Click(Nothing, Nothing)
-                Case Is = "pl"
-                    RadButtonChangeLanguageToPolish_Click(Nothing, Nothing)
-                Case Else
-                    RadButtonChangeLanguageToEnglish_Click(Nothing, Nothing)
-            End Select
+          
 
             'prüfen ob die Lizenz gültig ist
             Using DBContext As New EichsoftwareClientdatabaseEntities1
@@ -252,11 +243,6 @@ Public Class FrmMainContainer
                 End If
             End Using
 
-            'lizenz eingabe überspringen
-            If Debugger.IsAttached Then
-                My.Settings.Lizensiert = True
-                My.Settings.RHEWALizenz = True
-            End If
 
 
             'wenn keine Lizenz vorhanden ist, zur Eingabe auffordern
@@ -277,7 +263,16 @@ Public Class FrmMainContainer
                 End If
             End If
 
-
+            Select Case My.Settings.AktuelleSprache
+                Case Is = "en"
+                    RadButtonChangeLanguageToEnglish_Click(Nothing, Nothing)
+                Case Is = "de"
+                    RadButtonChangeLanguageToGerman_Click(Nothing, Nothing)
+                Case Is = "pl"
+                    RadButtonChangeLanguageToPolish_Click(Nothing, Nothing)
+                Case Else
+                    RadButtonChangeLanguageToEnglish_Click(Nothing, Nothing)
+            End Select
 
         Else
             'laden des benötigten UCOs
@@ -338,6 +333,7 @@ Public Class FrmMainContainer
                     uco = New UcoVersenden(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
 
 
+
                 Case Else
                     Me.Close()
                     Exit Sub
@@ -367,6 +363,7 @@ Public Class FrmMainContainer
 
 
             ChangeActiveContentUserControl(uco)
+
 
         End If
     End Sub

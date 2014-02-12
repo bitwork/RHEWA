@@ -287,15 +287,37 @@
             Dim db = (From dbLookup In context.Lookup_Waagentyp Select dbLookup)
             _DatasourceDropdownListWaagentyp = db.ToList
             'Laden der AWG Dropdownliste
-            Dim db2 = From dbLookup In context.Lookup_Auswertegeraet Select dbLookup
-            _DatasourceDropdownListAWG = db2.ToList
-            'Laden der WZ Dropdownliste (alles)
-            Dim db3 = From dbLookup In context.Lookup_Waegezelle Select dbLookup
-            _DatasourceDropdownListWZ = db3.ToList
-            'Laden der WZ Hersteller Dropdownliste (nur hersteller namen gruppiert)
-            Dim db4 = From dblookup In context.Lookup_Waegezelle Group By Hersteller = dblookup.Hersteller Into HerstellerGruppe = Group Select New With {.Hersteller = Hersteller} ' Into Group Select New Lookup_Waegezelle
-            _DatasourceDropdownListWZHersteller = db4.ToList
 
+            'workaround: Wenn ein Benutzer eine Eichung Anlegt darf er keine Deaktivierten AWGs auswählen. Wenn sie gelesen  darf es aber sein, das deaktivierte Elemente gewälht werden
+            If DialogModus = enuDialogModus.lesend Then
+                Dim db2 = From dbLookup In context.Lookup_Auswertegeraet Select dbLookup
+                _DatasourceDropdownListAWG = db2.ToList
+            Else
+                Dim db2 = From dbLookup In context.Lookup_Auswertegeraet Select dbLookup Where dbLookup.Deaktiviert = False
+                _DatasourceDropdownListAWG = db2.ToList
+            End If
+            'Laden der WZ Dropdownliste (alles)
+            'workaround: Wenn ein Benutzer eine Eichung Anlegt darf er keine Deaktivierten AWGs auswählen. Wenn sie gelesen  darf es aber sein, das deaktivierte Elemente gewälht werden
+            If DialogModus = enuDialogModus.lesend Then
+                Dim db3 = From dbLookup In context.Lookup_Waegezelle Select dbLookup
+                _DatasourceDropdownListWZ = db3.ToList
+            Else
+                Dim db3 = From dbLookup In context.Lookup_Waegezelle Select dbLookup Where dbLookup.Deaktiviert = False
+                _DatasourceDropdownListWZ = db3.ToList
+            End If
+
+            'Laden der WZ Hersteller Dropdownliste (nur hersteller namen gruppiert)
+            'workaround: Wenn ein Benutzer eine Eichung Anlegt darf er keine Deaktivierten AWGs auswählen. Wenn sie gelesen  darf es aber sein, das deaktivierte Elemente gewälht werden
+            If DialogModus = enuDialogModus.lesend Then
+                Dim db4 = From dblookup In context.Lookup_Waegezelle Group By Hersteller = dblookup.Hersteller Into HerstellerGruppe = Group Select New With {.Hersteller = Hersteller} ' Into Group Select New Lookup_Waegezelle
+                _DatasourceDropdownListWZHersteller = db4.ToList
+            Else
+                Dim db4 = From dblookup In context.Lookup_Waegezelle Where dblookup.Deaktiviert = False Group By Hersteller = dblookup.Hersteller Into HerstellerGruppe = Group Select New With {.Hersteller = Hersteller} ' Into Group Select New Lookup_Waegezelle
+                _DatasourceDropdownListWZHersteller = db4.ToList
+
+            End If
+
+           
             Dim db5 = (From dbLookup In context.Lookup_Waagenart Select dbLookup)
             _DatasourceDropdownListWaagenArt = db5.ToList
 

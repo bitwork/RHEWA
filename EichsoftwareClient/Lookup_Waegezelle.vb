@@ -30,6 +30,7 @@ Partial Public Class Lookup_Waegezelle
     Public Property GrenzwertTemperaturbereichMAX As String
     Public Property BruchteilEichfehlergrenze As String
     Public Property Neu As Boolean
+    Public Property Deaktiviert As Nullable(Of Boolean)
 
     Public Overridable Property Eichprozess As ICollection(Of Eichprozess) = New HashSet(Of Eichprozess)
     Public Overridable Property Mogelstatistik As ICollection(Of Mogelstatistik) = New HashSet(Of Mogelstatistik)

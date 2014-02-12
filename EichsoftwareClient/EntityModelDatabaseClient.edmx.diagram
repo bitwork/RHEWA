@@ -50,30 +50,8 @@
         <AssociationConnector Association="EichsoftwareClientdatabaseModel.FK_Mogelstatistik_Eichprozess" />
         <AssociationConnector Association="EichsoftwareClientdatabaseModel.FK_Mogelstatistik_Lookup_Auswertegeraet" />
         <AssociationConnector Association="EichsoftwareClientdatabaseModel.FK_Mogelstatistik_Lookup_Waegezelle" />
-        <AssociationConnector Association="EichsoftwareClientdatabaseModel.FK_Eichprozess_Beschaffenheitspruefung" />
-        <AssociationConnector Association="EichsoftwareClientdatabaseModel.FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren" />
-        <AssociationConnector Association="EichsoftwareClientdatabaseModel.FK_Eichprozess_Eichprotokoll" />
-        <AssociationConnector Association="EichsoftwareClientdatabaseModel.FK_PruefungAussermittigeBelastung_Eichprotokoll" />
-        <AssociationConnector Association="EichsoftwareClientdatabaseModel.FK_PruefungEichfehlergrenzen_Eichprotokoll" />
-        <AssociationConnector Association="EichsoftwareClientdatabaseModel.FK_PruefungLinearitaetFallend_Eichprotokoll" />
-        <AssociationConnector Association="EichsoftwareClientdatabaseModel.FK_PruefungLinearitaetSteigend_Eichprotokoll" />
-        <AssociationConnector Association="EichsoftwareClientdatabaseModel.FK_PruefungLinearitaetSteigendAnsprechvermoegen_Eichprotokoll" />
-        <AssociationConnector Association="EichsoftwareClientdatabaseModel.FK_PruefungRollendeLasten_Eichprotokoll" />
-        <AssociationConnector Association="EichsoftwareClientdatabaseModel.FK_PruefungStabilitaetGleichgewichtslage_Eichprotokoll" />
-        <AssociationConnector Association="EichsoftwareClientdatabaseModel.FK_PruefungStaffelverfahrenErsatzlast_Eichprotokoll" />
-        <AssociationConnector Association="EichsoftwareClientdatabaseModel.FK_PruefungStaffelverfahrenNormallast_Eichprotokoll" />
-        <AssociationConnector Association="EichsoftwareClientdatabaseModel.FK_PruefungWiederholbarkeit_Eichprotokoll" />
-        <AssociationConnector Association="EichsoftwareClientdatabaseModel.FK_Eichprozess_Kompatiblitaetsnachweis" />
-        <AssociationConnector Association="EichsoftwareClientdatabaseModel.FK_Eichprozess_Lookup_Auswertegeraet" />
         <AssociationConnector Association="EichsoftwareClientdatabaseModel.FK_Eichprozess_Lookup_Bearbeitungsstatus" />
-        <AssociationConnector Association="EichsoftwareClientdatabaseModel.FK_Eichprozess_Lookup_Vorgangsstatus" />
-        <AssociationConnector Association="EichsoftwareClientdatabaseModel.FK_Eichprozess_Lookup_Waagenart" />
-        <AssociationConnector Association="EichsoftwareClientdatabaseModel.FK_Eichprozess_Lookup_Waagentyp" />
-        <AssociationConnector Association="EichsoftwareClientdatabaseModel.FK_Eichprozess_Lookup_Waegezelle" />
-        <AssociationConnector Association="EichsoftwareClientdatabaseModel.FK_Mogelstatistik_Eichprozess" />
-        <AssociationConnector Association="EichsoftwareClientdatabaseModel.FK_Mogelstatistik_Lookup_Auswertegeraet" />
-        <AssociationConnector Association="EichsoftwareClientdatabaseModel.FK_Mogelstatistik_Lookup_Waegezelle" />
-      </Diagram>
+        </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

@@ -390,6 +390,10 @@ Namespace EichsoftwareWebservice
         
         Private _AusgeblendetField As Boolean
         
+        Private _BearbeitungsDatumField As System.Nullable(Of Date)
+        
+        Private _ErzeugerLizenzField As String
+        
         Private _FK_AuswertegeraetField As String
         
         Private _FK_BearbeitungsstatusField As System.Nullable(Of Byte)
@@ -430,6 +434,8 @@ Namespace EichsoftwareWebservice
         
         Private _ServerMogelstatistikField() As EichsoftwareWebservice.ServerMogelstatistik
         
+        Private _UploadDatumField As System.Nullable(Of Date)
+        
         Private _UploadFilePathField As String
         
         Private _VorgangsnummerField As String
@@ -453,6 +459,32 @@ Namespace EichsoftwareWebservice
                 If (Me._AusgeblendetField.Equals(value) <> true) Then
                     Me._AusgeblendetField = value
                     Me.RaisePropertyChanged("_Ausgeblendet")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _BearbeitungsDatum() As System.Nullable(Of Date)
+            Get
+                Return Me._BearbeitungsDatumField
+            End Get
+            Set
+                If (Me._BearbeitungsDatumField.Equals(value) <> true) Then
+                    Me._BearbeitungsDatumField = value
+                    Me.RaisePropertyChanged("_BearbeitungsDatum")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _ErzeugerLizenz() As String
+            Get
+                Return Me._ErzeugerLizenzField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me._ErzeugerLizenzField, value) <> true) Then
+                    Me._ErzeugerLizenzField = value
+                    Me.RaisePropertyChanged("_ErzeugerLizenz")
                 End If
             End Set
         End Property
@@ -713,6 +745,19 @@ Namespace EichsoftwareWebservice
                 If (Object.ReferenceEquals(Me._ServerMogelstatistikField, value) <> true) Then
                     Me._ServerMogelstatistikField = value
                     Me.RaisePropertyChanged("_ServerMogelstatistik")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _UploadDatum() As System.Nullable(Of Date)
+            Get
+                Return Me._UploadDatumField
+            End Get
+            Set
+                If (Me._UploadDatumField.Equals(value) <> true) Then
+                    Me._UploadDatumField = value
+                    Me.RaisePropertyChanged("_UploadDatum")
                 End If
             End Set
         End Property
@@ -6618,13 +6663,13 @@ Namespace EichsoftwareWebservice
         Function PruefeObRHEWALizenz(ByVal Name As String, ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean
         
         <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IEichsoftwareWebservice/GetNeueWZ", ReplyAction:="http://tempuri.org/IEichsoftwareWebservice/GetNeueWZResponse")>  _
-        Function GetNeueWZ(ByVal Name As String, ByVal Lizenzschluessel As String, ByVal LetztesUpdate As Date, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As EichsoftwareWebservice.ServerLookup_Waegezelle()
+        Function GetNeueWZ(ByVal Name As String, ByVal Lizenzschluessel As String, ByVal LetztesUpdate As Date, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, ByVal SyncAllesSeit As Date, ByVal SyncAllesBis As Date) As EichsoftwareWebservice.ServerLookup_Waegezelle()
         
         <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IEichsoftwareWebservice/SchreibeVerbindungsprotokoll", ReplyAction:="http://tempuri.org/IEichsoftwareWebservice/SchreibeVerbindungsprotokollResponse")>  _
         Sub SchreibeVerbindungsprotokoll(ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, ByVal Aktivitaet As String)
         
         <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IEichsoftwareWebservice/GetNeuesAWG", ReplyAction:="http://tempuri.org/IEichsoftwareWebservice/GetNeuesAWGResponse")>  _
-        Function GetNeuesAWG(ByVal Name As String, ByVal Lizenzschluessel As String, ByVal LetztesUpdate As Date, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As EichsoftwareWebservice.ServerLookup_Auswertegeraet()
+        Function GetNeuesAWG(ByVal Name As String, ByVal Lizenzschluessel As String, ByVal LetztesUpdate As Date, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, ByVal SyncAllesSeit As Date, ByVal SyncAllesBis As Date) As EichsoftwareWebservice.ServerLookup_Auswertegeraet()
         
         <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IEichsoftwareWebservice/AddEichmarkenverwaltung", ReplyAction:="http://tempuri.org/IEichsoftwareWebservice/AddEichmarkenverwaltungResponse")>  _
         Function AddEichmarkenverwaltung(ByVal Name As String, ByVal Lizenzschluessel As String, ByVal BenutzerFK As String, ByVal AnzahlBenannteStelle As Integer, ByVal AnzahlEichsiegel13x13 As Integer, ByVal AnzahlEichsiegelRund As Integer, ByVal AnzahlHinweismarke As Integer, ByVal AnzahlGruenesM As Integer, ByVal AnzahlCE As Integer, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean
@@ -6634,6 +6679,9 @@ Namespace EichsoftwareWebservice
         
         <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IEichsoftwareWebservice/GetAlleEichprozesse", ReplyAction:="http://tempuri.org/IEichsoftwareWebservice/GetAlleEichprozesseResponse")>  _
         Function GetAlleEichprozesse(ByVal Name As String, ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As EichsoftwareWebservice.clsEichprozessFuerAuswahlliste()
+        
+        <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IEichsoftwareWebservice/GetAlleEichprozesseImZeitraum", ReplyAction:="http://tempuri.org/IEichsoftwareWebservice/GetAlleEichprozesseImZeitraumResponse")>  _
+        Function GetAlleEichprozesseImZeitraum(ByVal Name As String, ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, ByVal SyncAllesSeit As Date, ByVal SyncAllesBis As Date) As EichsoftwareWebservice.ServerEichprozess()
         
         <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IEichsoftwareWebservice/GetEichProzess", ReplyAction:="http://tempuri.org/IEichsoftwareWebservice/GetEichProzessResponse")>  _
         Function GetEichProzess(ByVal Name As String, ByVal Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As EichsoftwareWebservice.ServerEichprozess
@@ -6691,16 +6739,16 @@ Namespace EichsoftwareWebservice
             Return MyBase.Channel.PruefeObRHEWALizenz(Name, Lizenzschluessel, WindowsUsername, Domainname, Computername)
         End Function
         
-        Public Function GetNeueWZ(ByVal Name As String, ByVal Lizenzschluessel As String, ByVal LetztesUpdate As Date, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As EichsoftwareWebservice.ServerLookup_Waegezelle() Implements EichsoftwareWebservice.IEichsoftwareWebservice.GetNeueWZ
-            Return MyBase.Channel.GetNeueWZ(Name, Lizenzschluessel, LetztesUpdate, WindowsUsername, Domainname, Computername)
+        Public Function GetNeueWZ(ByVal Name As String, ByVal Lizenzschluessel As String, ByVal LetztesUpdate As Date, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, ByVal SyncAllesSeit As Date, ByVal SyncAllesBis As Date) As EichsoftwareWebservice.ServerLookup_Waegezelle() Implements EichsoftwareWebservice.IEichsoftwareWebservice.GetNeueWZ
+            Return MyBase.Channel.GetNeueWZ(Name, Lizenzschluessel, LetztesUpdate, WindowsUsername, Domainname, Computername, SyncAllesSeit, SyncAllesBis)
         End Function
         
         Public Sub SchreibeVerbindungsprotokoll(ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, ByVal Aktivitaet As String) Implements EichsoftwareWebservice.IEichsoftwareWebservice.SchreibeVerbindungsprotokoll
             MyBase.Channel.SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, Aktivitaet)
         End Sub
         
-        Public Function GetNeuesAWG(ByVal Name As String, ByVal Lizenzschluessel As String, ByVal LetztesUpdate As Date, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As EichsoftwareWebservice.ServerLookup_Auswertegeraet() Implements EichsoftwareWebservice.IEichsoftwareWebservice.GetNeuesAWG
-            Return MyBase.Channel.GetNeuesAWG(Name, Lizenzschluessel, LetztesUpdate, WindowsUsername, Domainname, Computername)
+        Public Function GetNeuesAWG(ByVal Name As String, ByVal Lizenzschluessel As String, ByVal LetztesUpdate As Date, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, ByVal SyncAllesSeit As Date, ByVal SyncAllesBis As Date) As EichsoftwareWebservice.ServerLookup_Auswertegeraet() Implements EichsoftwareWebservice.IEichsoftwareWebservice.GetNeuesAWG
+            Return MyBase.Channel.GetNeuesAWG(Name, Lizenzschluessel, LetztesUpdate, WindowsUsername, Domainname, Computername, SyncAllesSeit, SyncAllesBis)
         End Function
         
         Public Function AddEichmarkenverwaltung(ByVal Name As String, ByVal Lizenzschluessel As String, ByVal BenutzerFK As String, ByVal AnzahlBenannteStelle As Integer, ByVal AnzahlEichsiegel13x13 As Integer, ByVal AnzahlEichsiegelRund As Integer, ByVal AnzahlHinweismarke As Integer, ByVal AnzahlGruenesM As Integer, ByVal AnzahlCE As Integer, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements EichsoftwareWebservice.IEichsoftwareWebservice.AddEichmarkenverwaltung
@@ -6713,6 +6761,10 @@ Namespace EichsoftwareWebservice
         
         Public Function GetAlleEichprozesse(ByVal Name As String, ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As EichsoftwareWebservice.clsEichprozessFuerAuswahlliste() Implements EichsoftwareWebservice.IEichsoftwareWebservice.GetAlleEichprozesse
             Return MyBase.Channel.GetAlleEichprozesse(Name, Lizenzschluessel, WindowsUsername, Domainname, Computername)
+        End Function
+        
+        Public Function GetAlleEichprozesseImZeitraum(ByVal Name As String, ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, ByVal SyncAllesSeit As Date, ByVal SyncAllesBis As Date) As EichsoftwareWebservice.ServerEichprozess() Implements EichsoftwareWebservice.IEichsoftwareWebservice.GetAlleEichprozesseImZeitraum
+            Return MyBase.Channel.GetAlleEichprozesseImZeitraum(Name, Lizenzschluessel, WindowsUsername, Domainname, Computername, SyncAllesSeit, SyncAllesBis)
         End Function
         
         Public Function GetEichProzess(ByVal Name As String, ByVal Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As EichsoftwareWebservice.ServerEichprozess Implements EichsoftwareWebservice.IEichsoftwareWebservice.GetEichProzess

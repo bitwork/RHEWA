@@ -1,7 +1,13 @@
 ﻿Public Class clsServerHelper
 
  
-
+    ''' <summary>
+    ''' Schreibt werte von einem lokalen Eichprozess in ein Server Object
+    ''' </summary>
+    ''' <param name="TargetObject"></param>
+    ''' <param name="SourceObject"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
     Public Shared Function CopyObjectProperties(ByRef TargetObject As EichsoftwareWebservice.ServerEichprozess, ByRef SourceObject As Eichprozess)
         'eichprozess
         TargetObject._Ausgeblendet = SourceObject.Ausgeblendet
@@ -1942,7 +1948,7 @@
     ''' <param name="SourceObject"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Shared Function CopyObjectPropertiesWithNewIDs(ByRef TargetObject As Eichprozess, ByRef SourceObject As EichsoftwareWebservice.ServerEichprozess)
+    Public Shared Function CopyObjectPropertiesWithNewIDs(ByRef TargetObject As Eichprozess, ByRef SourceObject As EichsoftwareWebservice.ServerEichprozess, Optional ByVal bolBehalteVorgangsnummer As Boolean = False)
         'eichprozess
         TargetObject.Ausgeblendet = SourceObject._Ausgeblendet
         TargetObject.FK_Auswertegeraet = SourceObject._FK_Auswertegeraet
@@ -1953,7 +1959,11 @@
         TargetObject.FK_WaagenTyp = SourceObject._FK_WaagenTyp
         TargetObject.FK_Waegezelle = SourceObject._FK_Waegezelle
         ' TargetObject.ID = SourceObject._ID
-        TargetObject.Vorgangsnummer = Guid.NewGuid.ToString
+        If bolBehalteVorgangsnummer Then
+            TargetObject.Vorgangsnummer = SourceObject._Vorgangsnummer
+        Else
+            TargetObject.Vorgangsnummer = Guid.NewGuid.ToString
+        End If
         TargetObject.FK_Bearbeitungsstatus = SourceObject._FK_Bearbeitungsstatus
         TargetObject.UploadFilePath = SourceObject._UploadFilePath
 
@@ -1989,7 +1999,7 @@
         TargetObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Uebersetzungsverhaeltnis = SourceObject._ServerKompatiblitaetsnachweis.Kompatiblitaet_Waage_Uebersetzungsverhaeltnis
         TargetObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Zulassungsinhaber = SourceObject._ServerKompatiblitaetsnachweis.Kompatiblitaet_Waage_Zulassungsinhaber
         TargetObject.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast = SourceObject._ServerKompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast
-
+        '   TargetObject.FK_Kompatibilitaetsnachweis = TargetObject.Kompatiblitaetsnachweis.ID
 
 
 

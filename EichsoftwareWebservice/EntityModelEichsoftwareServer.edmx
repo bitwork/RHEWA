@@ -262,6 +262,9 @@
           <Property Name="Ausgeblendet" Type="bit" Nullable="false" />
           <Property Name="FK_Bearbeitungsstatus" Type="tinyint" />
           <Property Name="UploadFilePath" Type="nvarchar(max)" />
+          <Property Name="UploadDatum" Type="datetime" />
+          <Property Name="BearbeitungsDatum" Type="datetime" />
+          <Property Name="ErzeugerLizenz" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="ServerKompatiblitaetsnachweis">
           <Key>
@@ -1168,6 +1171,9 @@
           <Property Type="Byte" Name="FK_Bearbeitungsstatus" />
           <Property Type="String" Name="UploadFilePath" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="ServerLookup_Bearbeitungsstatus" Relationship="EichenSQLDatabaseModel.FK_ServerEichprozess_ServerLookup_Bearbeitungsstatus" FromRole="ServerEichprozess" ToRole="ServerLookup_Bearbeitungsstatus" />
+          <Property Type="DateTime" Name="UploadDatum" Precision="3" />
+          <Property Type="DateTime" Name="BearbeitungsDatum" Precision="3" />
+          <Property Type="String" Name="ErzeugerLizenz" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="ServerKompatiblitaetsnachweis">
           <Key>
@@ -1946,6 +1952,9 @@
           <EntitySetMapping Name="ServerEichprozess">
             <EntityTypeMapping TypeName="EichenSQLDatabaseModel.ServerEichprozess">
               <MappingFragment StoreEntitySet="ServerEichprozess">
+                <ScalarProperty Name="ErzeugerLizenz" ColumnName="ErzeugerLizenz" />
+                <ScalarProperty Name="BearbeitungsDatum" ColumnName="BearbeitungsDatum" />
+                <ScalarProperty Name="UploadDatum" ColumnName="UploadDatum" />
                 <ScalarProperty Name="UploadFilePath" ColumnName="UploadFilePath" />
                 <ScalarProperty Name="FK_Bearbeitungsstatus" ColumnName="FK_Bearbeitungsstatus" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
