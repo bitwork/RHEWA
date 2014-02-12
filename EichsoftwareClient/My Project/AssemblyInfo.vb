@@ -14,7 +14,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("RHEWA")> 
 <Assembly: AssemblyProduct("RHEWA Herstellerersteichung")> 
-<Assembly: AssemblyCopyright("Copyright ©  2013")> 
+<Assembly: AssemblyCopyright("Copyright ©  2014")> 
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)> 
@@ -32,8 +32,8 @@ Imports System.Runtime.InteropServices
 ' You can specify all the values or you can default the Build and Revision Numbers 
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")> 
-
-<Assembly: AssemblyVersion("1.0.0.0")> 
+<Assembly: AssemblyVersion("1.0.*")> 
 <Assembly: AssemblyFileVersion("1.0.0.0")> 
 
-<Assembly: NeutralResourcesLanguageAttribute("en-US")> 
+
+<Assembly: NeutralResourcesLanguageAttribute("EN")> 

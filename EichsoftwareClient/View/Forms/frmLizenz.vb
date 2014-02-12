@@ -1,11 +1,19 @@
 ﻿Public Class FrmLizenz
 
+    Private Sub FrmLizenz_LostFocus(sender As Object, e As EventArgs) Handles Me.LostFocus
+        'deaktivieren des splashscreens
+        If My.Application.SplashScreen.Visible = True Then
+            My.Application.SplashScreen.Visible = False
+        End If
+    End Sub
+
 
     Private Sub FrmLizenz_Load(sender As Object, e As EventArgs) Handles Me.Load
         'deaktivieren des splashscreens
         If My.Application.SplashScreen.Visible = True Then
             My.Application.SplashScreen.Visible = False
         End If
+        Me.BringToFront()
     End Sub
 
     ''' <summary>
@@ -65,7 +73,7 @@
 
 
                     Else
-                        MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_UngueltigeLizenz, "")
+                        MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_UngueltigeLizenz, My.Resources.GlobaleLokalisierung.Fehler)
                         My.Settings.Lizensiert = False
                         My.Settings.Save()
                     End If

@@ -239,6 +239,8 @@ Public Class FrmMainContainer
                     RadButtonChangeLanguageToGerman_Click(Nothing, Nothing)
                 Case Is = "pl"
                     RadButtonChangeLanguageToPolish_Click(Nothing, Nothing)
+                Case Else
+                    RadButtonChangeLanguageToEnglish_Click(Nothing, Nothing)
             End Select
 
             'prüfen ob die Lizenz gültig ist
@@ -250,6 +252,13 @@ Public Class FrmMainContainer
                 End If
             End Using
 
+            'lizenz eingabe überspringen
+            If Debugger.IsAttached Then
+                My.Settings.Lizensiert = True
+                My.Settings.RHEWALizenz = True
+            End If
+
+
             'wenn keine Lizenz vorhanden ist, zur Eingabe auffordern
             If My.Settings.Lizensiert = False Then
                 Dim f As New FrmLizenz
@@ -258,7 +267,7 @@ Public Class FrmMainContainer
                         System.Windows.Forms.Application.Exit()
                         Exit Sub
                     Else
-                        MessageBox.Show(My.Resources.GlobaleLokalisierung.BitteNeuStarten, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK)
+                        MessageBox.Show(My.Resources.GlobaleLokalisierung.BitteNeuStarten, "", MessageBoxButtons.OK)
                         System.Windows.Forms.Application.Exit()
                         Exit Sub
                     End If
