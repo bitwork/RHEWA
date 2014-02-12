@@ -30,6 +30,7 @@
           <EntitySet Name="ServerPruefungStaffelverfahrenErsatzlast" EntityType="EichenSQLDatabaseModel.Store.ServerPruefungStaffelverfahrenErsatzlast" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ServerPruefungStaffelverfahrenNormallast" EntityType="EichenSQLDatabaseModel.Store.ServerPruefungStaffelverfahrenNormallast" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ServerPruefungWiederholbarkeit" EntityType="EichenSQLDatabaseModel.Store.ServerPruefungWiederholbarkeit" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ServerVerbindungsprotokoll" EntityType="EichenSQLDatabaseModel.Store.ServerVerbindungsprotokoll" store:Type="Tables" Schema="dbo" />
           <AssociationSet Name="FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren" Association="EichenSQLDatabaseModel.Store.FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren">
             <End Role="ServerLookup_Konformitaetsbewertungsverfahren" EntitySet="ServerLookup_Konformitaetsbewertungsverfahren" />
             <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
@@ -595,6 +596,18 @@
           <Property Name="EFG" Type="nvarchar" Nullable="false" MaxLength="20" />
           <Property Name="EFG_Extra" Type="nvarchar" Nullable="false" MaxLength="20" />
         </EntityType>
+        <EntityType Name="ServerVerbindungsprotokoll">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Lizenzschlüssel_FK" Type="nvarchar" MaxLength="50" />
+          <Property Name="Domain" Type="nvarchar(max)" />
+          <Property Name="Computername" Type="nvarchar(max)" />
+          <Property Name="Windowsbenutzer" Type="nvarchar(max)" />
+          <Property Name="Aktion" Type="nvarchar" MaxLength="50" />
+          <Property Name="Zeitstempel" Type="date" />
+        </EntityType>
         <Association Name="FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren">
           <End Role="ServerLookup_Konformitaetsbewertungsverfahren" Type="EichenSQLDatabaseModel.Store.ServerLookup_Konformitaetsbewertungsverfahren" Multiplicity="1" />
           <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.Store.ServerEichprotokoll" Multiplicity="*" />
@@ -992,6 +1005,7 @@
             <End Role="ServerLookup_Bearbeitungsstatus" EntitySet="ServerLookup_Bearbeitungsstatus" />
             <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
           </AssociationSet>
+          <EntitySet Name="ServerVerbindungsprotokoll" EntityType="EichenSQLDatabaseModel.ServerVerbindungsprotokoll" />
         </EntityContainer>
         <EntityType Name="ServerBeschaffenheitspruefung">
           <Key>
@@ -1787,6 +1801,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="ServerVerbindungsprotokoll">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Lizenzschlüssel_FK" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Domain" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Computername" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Windowsbenutzer" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Aktion" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Zeitstempel" Precision="0" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -2285,6 +2311,19 @@
                 <ScalarProperty Name="Status_PL" ColumnName="Status_PL" />
                 <ScalarProperty Name="Status_EN" ColumnName="Status_EN" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServerVerbindungsprotokoll">
+            <EntityTypeMapping TypeName="EichenSQLDatabaseModel.ServerVerbindungsprotokoll">
+              <MappingFragment StoreEntitySet="ServerVerbindungsprotokoll">
+                <ScalarProperty Name="Zeitstempel" ColumnName="Zeitstempel" />
+                <ScalarProperty Name="Aktion" ColumnName="Aktion" />
+                <ScalarProperty Name="Windowsbenutzer" ColumnName="Windowsbenutzer" />
+                <ScalarProperty Name="Computername" ColumnName="Computername" />
+                <ScalarProperty Name="Domain" ColumnName="Domain" />
+                <ScalarProperty Name="Lizenzschlüssel_FK" ColumnName="Lizenzschlüssel_FK" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>

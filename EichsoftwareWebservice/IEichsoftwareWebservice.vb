@@ -4,39 +4,43 @@
 Public Interface IEichsoftwareWebservice
 
     <OperationContract()> _
-    Function PruefeLizenz(ByVal Name As String, Lizenzschluessel As String) As Boolean
+    Function PruefeLizenz(ByVal Name As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean
     <OperationContract()>
-    Function AktiviereLizenz(ByVal Name As String, Lizenzschluessel As String) As Boolean
+    Function AktiviereLizenz(ByVal Name As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean
 
     <OperationContract()> _
-    Function PruefeObRHEWALizenz(ByVal Name As String, Lizenzschluessel As String) As Boolean
+    Function PruefeObRHEWALizenz(ByVal Name As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean
 
     <OperationContract()>
-    Function GetNeueWZ(ByVal Name As String, Lizenzschluessel As String, ByVal LetztesUpdate As Date) As ServerLookup_Waegezelle()
+    Function GetNeueWZ(ByVal Name As String, Lizenzschluessel As String, ByVal LetztesUpdate As Date, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As ServerLookup_Waegezelle()
 
     <OperationContract()>
-    Function GetNeuesAWG(ByVal Name As String, Lizenzschluessel As String, ByVal LetztesUpdate As Date) As ServerLookup_Auswertegeraet()
+    Sub SchreibeVerbindungsprotokoll(ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, ByVal Aktivitaet As String)
+
+
+    <OperationContract()>
+    Function GetNeuesAWG(ByVal Name As String, Lizenzschluessel As String, ByVal LetztesUpdate As Date, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As ServerLookup_Auswertegeraet()
 
     <OperationContract()>
     Function AddEichmarkenverwaltung(ByVal Name As String, Lizenzschluessel As String, ByVal BenutzerFK As String, ByVal AnzahlBenannteStelle As Integer, ByVal AnzahlEichsiegel13x13 As Integer, ByVal AnzahlEichsiegelRund As Integer, ByVal AnzahlHinweismarke As Integer,
-                                    ByVal AnzahlGruenesM As Integer, ByVal AnzahlCE As Integer) As Boolean
+                                    ByVal AnzahlGruenesM As Integer, ByVal AnzahlCE As Integer, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean
     <OperationContract()>
-    Function AddEichprozess(ByVal Name As String, Lizenzschluessel As String, ByRef pObjEichprozess As ServerEichprozess) As Boolean
+    Function AddEichprozess(ByVal Name As String, Lizenzschluessel As String, ByRef pObjEichprozess As ServerEichprozess, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean
 
     <OperationContract()>
-    Function GetAlleEichprozesse(ByVal Name As String, Lizenzschluessel As String) As clsEichprozessFuerAuswahlliste()
+    Function GetAlleEichprozesse(ByVal Name As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As clsEichprozessFuerAuswahlliste()
 
     <OperationContract()>
-    Function GetEichProzess(ByVal Name As String, Lizenzschluessel As String, ByVal Vorgangsnummer As String) As ServerEichprozess
+    Function GetEichProzess(ByVal Name As String, Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As ServerEichprozess
 
     <OperationContract()>
-    Function SetEichprozessUngueltig(ByVal Name As String, Lizenzschluessel As String, ByVal ID As Integer) As Boolean
+    Function SetEichprozessUngueltig(ByVal Name As String, Lizenzschluessel As String, ByVal ID As Integer, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean
 
     <OperationContract()>
-    Function SetEichprozessGenehmight(ByVal Name As String, Lizenzschluessel As String, ByVal ID As Integer) As Boolean
+    Function SetEichprozessGenehmight(ByVal Name As String, Lizenzschluessel As String, ByVal ID As Integer, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean
 
     <OperationContract()>
-    Function CheckGueltigkeitEichprozess(ByVal Name As String, Lizenzschluessel As String, ByVal Vorgangsnummer As String) As String
+    Function CheckGueltigkeitEichprozess(ByVal Name As String, Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As String
 End Interface
 
 #Region "Klassen für Client"

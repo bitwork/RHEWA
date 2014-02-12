@@ -46,5 +46,6 @@ Partial Public Class EichenSQLDatabaseEntities1
     Public Property ServerPruefungStaffelverfahrenNormallast() As DbSet(Of ServerPruefungStaffelverfahrenNormallast)
     Public Property ServerPruefungWiederholbarkeit() As DbSet(Of ServerPruefungWiederholbarkeit)
     Public Property ServerLookup_Bearbeitungsstatus() As DbSet(Of ServerLookup_Bearbeitungsstatus)
+    Public Property ServerVerbindungsprotokoll() As DbSet(Of ServerVerbindungsprotokoll)
 
 End Class

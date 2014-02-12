@@ -146,6 +146,8 @@ Partial Class FrmLizenz
         '
         'RadTextBoxControl3
         '
+        Me.RadTextBoxControl3.IsReadOnly = True
+        Me.RadTextBoxControl3.IsReadOnlyCaretVisible = True
         resources.ApplyResources(Me.RadTextBoxControl3, "RadTextBoxControl3")
         Me.RadTextBoxControl3.Multiline = True
         Me.RadTextBoxControl3.Name = "RadTextBoxControl3"

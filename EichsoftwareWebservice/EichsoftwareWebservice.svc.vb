@@ -13,7 +13,9 @@ Public Class EichsoftwareWebservice
     ''' <param name="Lizenzschluessel"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Function PruefeLizenz(ByVal Name As String, Lizenzschluessel As String) As Boolean Implements IEichsoftwareWebservice.PruefeLizenz
+    Public Function PruefeLizenz(ByVal Name As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements IEichsoftwareWebservice.PruefeLizenz
+        SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Prüfe Lizenz")
+
         Using dbcontext As New EichenSQLDatabaseEntities1
             Dim ObjLizenz = (From lic In dbcontext.ServerLizensierung Where lic.FK_SuperofficeBenutzer = Name And lic.Lizenzschluessel = Lizenzschluessel And lic.Aktiv = True).FirstOrDefault
             If Not ObjLizenz Is Nothing Then
@@ -24,6 +26,33 @@ Public Class EichsoftwareWebservice
         End Using
     End Function
 
+    ''' <summary>
+    ''' Funktion welche einen Eintrag in dem SQL Verbindnugsprotokoll vornimmt. Dieses dient zur Nachkontrolle über die Aktivitäten von Benutzern / Lizenzen
+    ''' </summary>
+    ''' <param name="Lizenzschluessel"></param>
+    ''' <param name="WindowsUsername"></param>
+    ''' <param name="Domainname"></param>
+    ''' <param name="Computername"></param>
+    ''' <remarks></remarks>
+    Public Sub SchreibeVerbindungsprotokoll(ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, ByVal Aktivitaet As String) Implements IEichsoftwareWebservice.SchreibeVerbindungsprotokoll
+        Try
+            Using dbcontext As New EichenSQLDatabaseEntities1
+
+                Dim objProtokoll = New ServerVerbindungsprotokoll
+                objProtokoll.Lizenzschlüssel_FK = Lizenzschluessel
+                objProtokoll.Computername = Computername
+                objProtokoll.Domain = Domainname
+                objProtokoll.Windowsbenutzer = WindowsUsername
+                objProtokoll.Aktion = Aktivitaet
+                objProtokoll.Zeitstempel = Date.Now
+
+                dbcontext.ServerVerbindungsprotokoll.Add(objProtokoll)
+                dbcontext.SaveChanges()
+            End Using
+        Catch ex As Exception
+        End Try
+    End Sub
+
 
     ''' <summary>
     ''' Prüft ob es sich um eine gültige noch aktive Lizenz handelt
@@ -32,8 +61,10 @@ Public Class EichsoftwareWebservice
     ''' <param name="Lizenzschluessel"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Function AktiviereLizenz(ByVal Name As String, Lizenzschluessel As String) As Boolean Implements IEichsoftwareWebservice.AktiviereLizenz
+    Public Function AktiviereLizenz(ByVal Name As String, ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements IEichsoftwareWebservice.AktiviereLizenz
         Using dbcontext As New EichenSQLDatabaseEntities1
+            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Aktiviere Lizenz")
+
             Dim ObjLizenz = (From lic In dbcontext.ServerLizensierung Where lic.FK_SuperofficeBenutzer = Name And lic.Lizenzschluessel = Lizenzschluessel And lic.Aktiv = True).FirstOrDefault
             If Not ObjLizenz Is Nothing Then
                 ObjLizenz.LetzteAktivierung = Now
@@ -43,6 +74,8 @@ Public Class EichsoftwareWebservice
                 Return False
             End If
         End Using
+
+
     End Function
 
 
@@ -55,8 +88,10 @@ Public Class EichsoftwareWebservice
     ''' <param name="Lizenzschluessel"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Function PruefeObRHEWALizenz(ByVal Name As String, Lizenzschluessel As String) As Boolean Implements IEichsoftwareWebservice.PruefeObRHEWALizenz
+    Public Function PruefeObRHEWALizenz(ByVal Name As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements IEichsoftwareWebservice.PruefeObRHEWALizenz
         Using dbcontext As New EichenSQLDatabaseEntities1
+            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Prüfe ob RHEWA Mitarbeiter")
+
             Dim ObjLizenz = (From lic In dbcontext.ServerLizensierung Where lic.FK_SuperofficeBenutzer = Name And lic.Lizenzschluessel = Lizenzschluessel).FirstOrDefault
             If Not ObjLizenz Is Nothing Then
                 Return ObjLizenz.RHEWALizenz
@@ -74,10 +109,12 @@ Public Class EichsoftwareWebservice
     ''' <param name="pObjEichprozess"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Function AddEichprozess(ByVal Name As String, Lizenzschluessel As String, ByRef pObjEichprozess As ServerEichprozess) As Boolean Implements IEichsoftwareWebservice.AddEichprozess
+    Public Function AddEichprozess(ByVal Name As String, Lizenzschluessel As String, ByRef pObjEichprozess As ServerEichprozess, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements IEichsoftwareWebservice.AddEichprozess
         Try
+            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Füge Eichprozess hinzu bzw. Aktualisiere")
+
             ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
-            If PruefeLizenz(Name, Lizenzschluessel) = False Then Return Nothing
+            If PruefeLizenz(Name, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
             'neuen Context aufbauen
             'prüfen ob der eichprozess schoneinmal eingegangen ist anhand von Vorgangsnummer
             Using DbContext As New EichenSQLDatabaseEntities1
@@ -142,10 +179,12 @@ Public Class EichsoftwareWebservice
     ''' <param name="Vorgangsnummer"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Function GetEichProzess(ByVal Name As String, Lizenzschluessel As String, ByVal Vorgangsnummer As String) As ServerEichprozess Implements IEichsoftwareWebservice.GetEichProzess
+    Public Function GetEichProzess(ByVal Name As String, Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As ServerEichprozess Implements IEichsoftwareWebservice.GetEichProzess
         Try
             ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
-            If PruefeLizenz(Name, Lizenzschluessel) = False Then Return Nothing
+            If PruefeLizenz(Name, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
+            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Hole Eichprozess")
+
             'neuen Context aufbauen
             Using DbContext As New EichenSQLDatabaseEntities1
                 DbContext.Configuration.LazyLoadingEnabled = False
@@ -277,10 +316,12 @@ Public Class EichsoftwareWebservice
 
     End Function
 
-    Public Function GetAlleEichprozesse(ByVal Name As String, Lizenzschluessel As String) As clsEichprozessFuerAuswahlliste() Implements IEichsoftwareWebservice.GetAlleEichprozesse
+    Public Function GetAlleEichprozesse(ByVal Name As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As clsEichprozessFuerAuswahlliste() Implements IEichsoftwareWebservice.GetAlleEichprozesse
         Try
             ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
-            If PruefeLizenz(Name, Lizenzschluessel) = False Then Return Nothing
+            If PruefeLizenz(Name, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
+            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Hole alle Eichprozesse")
+
             'neuen Context aufbauen
             Using DbContext As New EichenSQLDatabaseEntities1
                 DbContext.Configuration.LazyLoadingEnabled = False
@@ -363,9 +404,12 @@ Public Class EichsoftwareWebservice
         End Try
     End Function
 
-    Public Function GetNeueWZ(ByVal Name As String, Lizenzschluessel As String, ByVal LetztesUpdate As Date) As ServerLookup_Waegezelle() Implements IEichsoftwareWebservice.GetNeueWZ
+    Public Function GetNeueWZ(ByVal Name As String, Lizenzschluessel As String, ByVal LetztesUpdate As Date, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As ServerLookup_Waegezelle() Implements IEichsoftwareWebservice.GetNeueWZ
         ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
-        If PruefeLizenz(Name, Lizenzschluessel) = False Then Return Nothing
+        If PruefeLizenz(Name, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
+        SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Hole WZ")
+
+
         Using DBContext As New EichenSQLDatabaseEntities1
             DBContext.Configuration.LazyLoadingEnabled = False
             DBContext.Configuration.ProxyCreationEnabled = False
@@ -395,9 +439,10 @@ Public Class EichsoftwareWebservice
 
     End Function
 
-    Public Function GetNeuesAWG(ByVal Name As String, Lizenzschluessel As String, ByVal LetztesUpdate As Date) As ServerLookup_Auswertegeraet() Implements IEichsoftwareWebservice.GetNeuesAWG
+    Public Function GetNeuesAWG(ByVal Name As String, Lizenzschluessel As String, ByVal LetztesUpdate As Date, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As ServerLookup_Auswertegeraet() Implements IEichsoftwareWebservice.GetNeuesAWG
         ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
-        If PruefeLizenz(Name, Lizenzschluessel) = False Then Return Nothing
+        If PruefeLizenz(Name, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
+        SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Hole AWG")
 
         Using DBContext As New EichenSQLDatabaseEntities1
             DBContext.Configuration.LazyLoadingEnabled = False
@@ -441,9 +486,11 @@ Public Class EichsoftwareWebservice
     ''' <returns></returns>
     ''' <remarks></remarks>
     Public Function AddEichmarkenverwaltung(ByVal Name As String, Lizenzschluessel As String, ByVal BenutzerFK As String, ByVal AnzahlBenannteStelle As Integer, ByVal AnzahlEichsiegel13x13 As Integer, _
-                                            ByVal AnzahlEichsiegelRund As Integer, ByVal AnzahlHinweismarke As Integer, ByVal AnzahlGruenesM As Integer, ByVal AnzahlCE As Integer) As Boolean Implements IEichsoftwareWebservice.AddEichmarkenverwaltung
+                                            ByVal AnzahlEichsiegelRund As Integer, ByVal AnzahlHinweismarke As Integer, ByVal AnzahlGruenesM As Integer, ByVal AnzahlCE As Integer, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements IEichsoftwareWebservice.AddEichmarkenverwaltung
         ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
-        If PruefeLizenz(Name, Lizenzschluessel) = False Then Return Nothing
+        If PruefeLizenz(Name, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
+        SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Aktualisiere Eichmarkenverwaltung")
+
         Try
             Using DbContext As New EichenSQLDatabaseEntities1
                 DbContext.Configuration.LazyLoadingEnabled = False
@@ -500,11 +547,14 @@ Public Class EichsoftwareWebservice
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    Public Function CheckGueltigkeitEichprozess(ByVal Name As String, Lizenzschluessel As String, ByVal Vorgangsnummer As String) As String Implements IEichsoftwareWebservice.CheckGueltigkeitEichprozess
+    Public Function CheckGueltigkeitEichprozess(ByVal Name As String, Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As String Implements IEichsoftwareWebservice.CheckGueltigkeitEichprozess
         'da die ID im Server von der im Client abweichen kann wird hier mit der Vorgangsnummer gearbeitet die pro Prozess Eindeutig generiert wrid
         Try
             ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
-            If PruefeLizenz(Name, Lizenzschluessel) = False Then Return Nothing
+            If PruefeLizenz(Name, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
+            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Prüfe gültigkeit des Eichprozesses")
+
+
             'neuen Context aufbauen
             'prüfen ob der eichprozess schoneinmal eingegangen ist anhand von Vorgangsnummer
             Using DbContext As New EichenSQLDatabaseEntities1
@@ -538,10 +588,12 @@ Public Class EichsoftwareWebservice
         End Try
     End Function
 
-    Public Function SetEichprozessUngueltig(ByVal Name As String, Lizenzschluessel As String, ByVal ID As Integer) As Boolean Implements IEichsoftwareWebservice.SetEichprozessunGueltig
+    Public Function SetEichprozessUngueltig(ByVal Name As String, Lizenzschluessel As String, ByVal ID As Integer, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements IEichsoftwareWebservice.SetEichprozessUngueltig
         Try
             ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
-            If PruefeLizenz(Name, Lizenzschluessel) = False Then Return Nothing
+            If PruefeLizenz(Name, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
+            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Setze Eichprozess auf ungültig")
+
             'neuen Context aufbauen
             Using DbContext As New EichenSQLDatabaseEntities1
                 DbContext.Configuration.LazyLoadingEnabled = False
@@ -576,10 +628,12 @@ Public Class EichsoftwareWebservice
         End Try
     End Function
 
-    Public Function SetEichprozessgenehmigt(ByVal Name As String, Lizenzschluessel As String, ByVal ID As Integer) As Boolean Implements IEichsoftwareWebservice.SetEichprozessGenehmight
+    Public Function SetEichprozessgenehmigt(ByVal Name As String, Lizenzschluessel As String, ByVal ID As Integer, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements IEichsoftwareWebservice.SetEichprozessGenehmight
         Try
             ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
-            If PruefeLizenz(Name, Lizenzschluessel) = False Then Return Nothing
+            If PruefeLizenz(Name, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
+            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Setze Eichprozess auf gültig")
+
             'neuen Context aufbauen
             Using DbContext As New EichenSQLDatabaseEntities1
                 DbContext.Configuration.LazyLoadingEnabled = False

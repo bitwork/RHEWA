@@ -236,6 +236,9 @@
     <Compile Include="ServerPruefungWiederholbarkeit.vb">
       <DependentUpon>EntityModelEichsoftwareServer.tt</DependentUpon>
     </Compile>
+    <Compile Include="ServerVerbindungsprotokoll.vb">
+      <DependentUpon>EntityModelEichsoftwareServer.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

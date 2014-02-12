@@ -2,11 +2,21 @@
 
 
     Private Sub FrmLizenz_Load(sender As Object, e As EventArgs) Handles Me.Load
-      
+        'deaktivieren des splashscreens
+        If My.Application.SplashScreen.Visible = True Then
+            My.Application.SplashScreen.Visible = False
+        End If
     End Sub
 
-    Private Sub RadButton1_Click(sender As Object, e As EventArgs) Handles RadButtonOK.Click
+    ''' <summary>
+    ''' übermitteln der Daten
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub RadButtonOK_Click(sender As Object, e As EventArgs) Handles RadButtonOK.Click
         Try
+            RadButtonOK.Enabled = False
             'verbindung zum Webservice aufbauen
             Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
                 Try
@@ -18,13 +28,13 @@
                 End Try
                 Using DBContext As New EichsoftwareClientdatabaseEntities1
                     'prüfen ob die Lizenz gültig ist
-                    If webContext.AktiviereLizenz(RadTextBoxControl1.Text, RadTextBoxControl2.Text) Then
+                    If webContext.AktiviereLizenz(RadTextBoxControl1.Text, RadTextBoxControl2.Text, My.User.Name, System.Environment.UserDomainName, My.Computer.Name) Then
 
                         Dim objLic As New Lizensierung
                         objLic.FK_SuperofficeBenutzer = RadTextBoxControl1.Text
                         objLic.Lizenzschluessel = RadTextBoxControl2.Text
 
-                        If webContext.PruefeObRHEWALizenz(RadTextBoxControl1.Text, RadTextBoxControl2.Text) Then
+                        If webContext.PruefeObRHEWALizenz(RadTextBoxControl1.Text, RadTextBoxControl2.Text, My.User.Name, System.Environment.UserDomainName, My.Computer.Name) Then
                             objLic.RHEWALizenz = True
                         Else
                             objLic.RHEWALizenz = False
@@ -63,8 +73,11 @@
                 End Using
             End Using
         Catch ex As Exception
-
+            MessageBox.Show(ex.Message, My.Resources.GlobaleLokalisierung.Fehler)
+        Finally
+            RadButtonOK.Enabled = True
         End Try
+
     End Sub
 
     ''' <summary>

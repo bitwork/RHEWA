@@ -404,7 +404,7 @@ Public Class ucoEichprozessauswahlliste
                     Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
                     Try
 
-                        e.Result = WebContext.GetAlleEichprozesse(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel)
+                        e.Result = WebContext.GetAlleEichprozesse(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
                     Catch ex As Exception
                     End Try
 
@@ -459,7 +459,7 @@ Public Class ucoEichprozessauswahlliste
 
                         Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
                         Dim objClientEichprozess = dbcontext.Eichprozess.Create
-                        Dim objServerEichprozess = webContext.GetEichProzess(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, SelectedID)
+                        Dim objServerEichprozess = webContext.GetEichProzess(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, SelectedID, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
 
 
                         If objServerEichprozess Is Nothing Then
@@ -531,7 +531,7 @@ Public Class ucoEichprozessauswahlliste
 
                             Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
 
-                            webContext.SetEichprozessGenehmight(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, SelectedID)
+                            webContext.SetEichprozessGenehmight(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, SelectedID, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
 
                             'nach dem schließen des Dialogs aktualisieren
                             LoadFromDatabase()
@@ -565,7 +565,7 @@ Public Class ucoEichprozessauswahlliste
 
                             Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
 
-                            webContext.SetEichprozessUngueltig(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, SelectedID)
+                            webContext.SetEichprozessUngueltig(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, SelectedID, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
 
                             'nach dem schließen des Dialogs aktualisieren
                             LoadFromDatabase()
@@ -662,7 +662,7 @@ Public Class ucoEichprozessauswahlliste
 
                                 Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
                                 Dim objClientEichprozess = dbcontext.Eichprozess.Create
-                                Dim objServerEichprozess = webContext.GetEichProzess(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, SelectedID)
+                                Dim objServerEichprozess = webContext.GetEichProzess(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, SelectedID, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
 
 
                                 If objServerEichprozess Is Nothing Then
@@ -793,7 +793,7 @@ Public Class ucoEichprozessauswahlliste
 
                     For Each Eichprozess In query
                         Try
-                            Dim NeuerStatus As String = webContext.CheckGueltigkeitEichprozess(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, Eichprozess.Vorgangsnummer)
+                            Dim NeuerStatus As String = webContext.CheckGueltigkeitEichprozess(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, Eichprozess.Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
                             If Not NeuerStatus Is Nothing Then
                                 If Eichprozess.FK_Bearbeitungsstatus <> NeuerStatus Then
 
@@ -803,7 +803,7 @@ Public Class ucoEichprozessauswahlliste
                                     '###################
                                     'neue Datenbankverbindung
 
-                                    Dim objServerEichprozess = webContext.GetEichProzess(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, Eichprozess.Vorgangsnummer)
+                                    Dim objServerEichprozess = webContext.GetEichProzess(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, Eichprozess.Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
 
 
                                     If objServerEichprozess Is Nothing Then
@@ -869,7 +869,7 @@ Public Class ucoEichprozessauswahlliste
                 End Try
                 Using DBContext As New EichsoftwareClientdatabaseEntities1
                     Dim objLiz = (From db In DBContext.Lizensierung Select db).FirstOrDefault
-                    Dim objWZResultList = webContext.GetNeueWZ(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, My.Settings.LetztesUpdate)
+                    Dim objWZResultList = webContext.GetNeueWZ(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, My.Settings.LetztesUpdate, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
 
                     If Not objWZResultList Is Nothing Then
 
@@ -983,7 +983,7 @@ Public Class ucoEichprozessauswahlliste
                 End Try
                 Using DBContext As New EichsoftwareClientdatabaseEntities1
                     Dim objLiz = (From db In DBContext.Lizensierung Select db).FirstOrDefault
-                    Dim objAWGResultList = webContext.GetNeuesAWG(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, My.Settings.LetztesUpdate)
+                    Dim objAWGResultList = webContext.GetNeuesAWG(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, My.Settings.LetztesUpdate, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
 
                     If Not objAWGResultList Is Nothing Then
 
