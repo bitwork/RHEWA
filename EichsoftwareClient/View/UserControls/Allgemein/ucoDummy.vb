@@ -163,7 +163,7 @@
             End If
         Next
         If AbortSaveing Then
-            MessageBox.Show(My.Resources.GlobaleLokalisierung.PflichtfelderAusfuellen, "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            MessageBox.Show(My.Resources.GlobaleLokalisierung.PflichtfelderAusfuellen, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End If
         'Speichern soll nicht abgebrochen werden, da alles okay ist
         Me.AbortSaveing = False

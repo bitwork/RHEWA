@@ -612,7 +612,7 @@
         End If
 
         If AbortSaveing Then
-            MessageBox.Show(My.Resources.GlobaleLokalisierung.PflichtfelderAusfuellen, "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            MessageBox.Show(My.Resources.GlobaleLokalisierung.PflichtfelderAusfuellen, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             Return False
         End If
         'Speichern soll nicht abgebrochen werden, da alles okay ist
@@ -879,7 +879,7 @@
                     Try
                         Webcontext.Open()
                     Catch ex As Exception
-                        MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
                         Exit Sub
                     End Try
 

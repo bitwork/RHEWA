@@ -451,7 +451,7 @@ Public Class ucoEichprozessauswahlliste
 
 
                     Catch ex As Exception
-                        MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
                         Exit Sub
                     End Try
 
@@ -463,7 +463,7 @@ Public Class ucoEichprozessauswahlliste
 
 
                         If objServerEichprozess Is Nothing Then
-                            MessageBox.Show("", "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                            MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_KeinServerObjektEichung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
                         End If
 
                         'umwandeln des Serverobjektes in Clientobject
@@ -515,7 +515,7 @@ Public Class ucoEichprozessauswahlliste
             If TypeOf RadGridView1.SelectedRows(0) Is Telerik.WinControls.UI.GridViewDataRowInfo Then
                 Dim SelectedID As String = "" 'Variable zum Speichern der Vorgangsnummer des aktuellen Prozesses
                 SelectedID = RadGridView1.SelectedRows(0).Cells("ID").Value
-                If MessageBox.Show("Möchten Sie den gewählten Eichprozess wirklich genehmigen? Er gilt dann als abgeschlossen und kann nicht mehr bearbeitet werden", "Frage", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+                If MessageBox.Show(My.Resources.GlobaleLokalisierung.Frage_Genehmigen, My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
 
                     'neue Datenbankverbindung
                     Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
@@ -524,7 +524,7 @@ Public Class ucoEichprozessauswahlliste
 
 
                         Catch ex As Exception
-                            MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                            MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
                             Exit Sub
                         End Try
                         Using dbcontext As New EichsoftwareClientdatabaseEntities1
@@ -550,7 +550,7 @@ Public Class ucoEichprozessauswahlliste
                 Dim SelectedID As String = "" 'Variable zum Speichern der Vorgangsnummer des aktuellen Prozesses
                 SelectedID = RadGridView1.SelectedRows(0).Cells("ID").Value
 
-                If MessageBox.Show("Möchten Sie den gewählten Eichprozess wirklich ablehnen? Der Eichbevollmächtigte kriegt diesen dann zur erneuten Bearbeitung zugesandt", "Frage", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+                If MessageBox.Show(My.Resources.GlobaleLokalisierung.Frage_Ablehnen, My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
                     'neue Datenbankverbindung
                     Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
                         Try
@@ -558,7 +558,7 @@ Public Class ucoEichprozessauswahlliste
 
 
                         Catch ex As Exception
-                            MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                            MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
                             Exit Sub
                         End Try
                         Using dbcontext As New EichsoftwareClientdatabaseEntities1
@@ -645,7 +645,7 @@ Public Class ucoEichprozessauswahlliste
                 Dim SelectedID As String = "" 'Variable zum Speichern der Vorgangsnummer des aktuellen Prozesses
                 SelectedID = RadGridView1.SelectedRows(0).Cells("Vorgangsnummer").Value
 
-                If MessageBox.Show("Möchten Sie den gewählten Eichprozess kopieren um ihn als Vorlage zu verwenden? ", "Frage", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+                If MessageBox.Show(My.Resources.GlobaleLokalisierung.Frage_Kopieren, My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
                     'neue Datenbankverbindung
                     Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
                         Try
@@ -653,56 +653,57 @@ Public Class ucoEichprozessauswahlliste
 
 
                         Catch ex As Exception
-                            MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                            MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
                             Exit Sub
                         End Try
                         Using dbcontext As New EichsoftwareClientdatabaseEntities1
                             Try
 
-                         
-                            Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
-                            Dim objClientEichprozess = dbcontext.Eichprozess.Create
-                            Dim objServerEichprozess = webContext.GetEichProzess(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, SelectedID)
+
+                                Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
+                                Dim objClientEichprozess = dbcontext.Eichprozess.Create
+                                Dim objServerEichprozess = webContext.GetEichProzess(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, SelectedID)
 
 
-                            If objServerEichprozess Is Nothing Then
-                                MessageBox.Show("", "", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                            End If
+                                If objServerEichprozess Is Nothing Then
+                                    MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_KeinServerObjektEichung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                                End If
 
-                            'umwandeln des Serverobjektes in Clientobject
-                            clsServerHelper.CopyObjectPropertiesWithNewIDs(objClientEichprozess, objServerEichprozess)
+                                'umwandeln des Serverobjektes in Clientobject
+                                clsServerHelper.CopyObjectPropertiesWithNewIDs(objClientEichprozess, objServerEichprozess)
 
-                            'vorgangsnummer editieren
-                            objClientEichprozess.Vorgangsnummer = Guid.NewGuid.ToString
-                            objClientEichprozess.FK_Bearbeitungsstatus = 4 'noch nichts
-                            objClientEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
-                            dbcontext.Eichprozess.Add(objClientEichprozess)
+                                'vorgangsnummer editieren
+                                objClientEichprozess.Vorgangsnummer = Guid.NewGuid.ToString
+                                objClientEichprozess.FK_Bearbeitungsstatus = 4 'noch nichts
+                                objClientEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
+                                dbcontext.Eichprozess.Add(objClientEichprozess)
 
-                            Try
-                                dbcontext.SaveChanges()
-                            Catch ex As Entity.Infrastructure.DbUpdateException
+                                Try
+                                    dbcontext.SaveChanges()
+                                Catch ex As Entity.Infrastructure.DbUpdateException
                                     Debug.WriteLine(ex.InnerException.InnerException.Message)
-                                    MessageBox.Show("Der Eichvorgang konnte nicht gespeichert werden. Bitte rufen sie die aktuellsten Informationen von RHEWA ab und versuchen es erneut.", "Fehler", MessageBoxButtons.OK)
-                                    MessageBox.Show("Falls auch das nicht hilft, kontrollieren Sie den ""deaktiviert"" Status der Auswertegeräte und Wägezellen im Admin Client.", "Fehler", MessageBoxButtons.OK)
-
+                                    MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_SpeicherAnomalie, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK)
+                                    If My.Settings.RHEWALizenz Then
+                                        MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_SpeicherAnomalieRHEWAZusatztext, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK)
+                                    End If
 
                                     Exit Sub
-                            Catch ex2 As Entity.Validation.DbEntityValidationException
-                                For Each o In ex2.EntityValidationErrors
-                                    For Each v In o.ValidationErrors
-                                        Debug.WriteLine(v.ErrorMessage & " " & v.PropertyName)
+                                Catch ex2 As Entity.Validation.DbEntityValidationException
+                                    For Each o In ex2.EntityValidationErrors
+                                        For Each v In o.ValidationErrors
+                                            Debug.WriteLine(v.ErrorMessage & " " & v.PropertyName)
                                         Next
                                     Next
                                     Exit Sub
-                            End Try
+                                End Try
 
 
-                            'anzeigen des Dialogs zur Bearbeitung der Eichung
-                            Dim f As New FrmMainContainer(objClientEichprozess)
-                            f.ShowDialog()
+                                'anzeigen des Dialogs zur Bearbeitung der Eichung
+                                Dim f As New FrmMainContainer(objClientEichprozess)
+                                f.ShowDialog()
 
-                            'nach dem schließen des Dialogs aktualisieren
-                            LoadFromDatabase()
+                                'nach dem schließen des Dialogs aktualisieren
+                                LoadFromDatabase()
 
                             Catch ex As Exception
 
@@ -719,6 +720,10 @@ Public Class ucoEichprozessauswahlliste
     End Sub
 
 #Region "Updates aus Webservice"
+    ''' <summary>
+    ''' Methode welche sich mit dem Webservice verbinduet und nach aktualisierungen für WZ, AWGs und eigenen Eichungen guckt
+    ''' </summary>
+    ''' <remarks></remarks>
     Private Sub VerbindeMitWebServiceUndAktualisiere()
         Try
             Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
@@ -727,24 +732,50 @@ Public Class ucoEichprozessauswahlliste
             End Using
         Catch ex As Exception
 
-            MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
             Exit Sub
         End Try
 
+        'variablen zur Ausgabe ob es änderungen gibt:
+        Dim bolNeuWZ As Boolean = False
+        Dim bolNeuAWG As Boolean = False
+        Dim bolNeuGenehmigung As Boolean = False
+
+
+
         'prüfen ob es neue WZ gibt
-        GetNeueWZ()
+        GetNeueWZ(bolNeuWZ)
         'prüfen ob es neue AWG gibt
-        GetNeuesAWG()
+        GetNeuesAWG(bolNeuAWG)
 
         My.Settings.LetztesUpdate = Date.Now
         My.Settings.Save()
 
-       
+
         'prüfen ob Eichprozesse die versendet wurden genehmigt oder abgelehnt wurden
-        GetGenehmigungsstatus()
+        GetGenehmigungsstatus(bolNeuGenehmigung)
+
+
+        Dim returnMessage As String = My.Resources.GlobaleLokalisierung.Aktualisierung_Erfolgreich
+        If bolNeuWZ Then
+            returnMessage += My.Resources.GlobaleLokalisierung.Aktualisierung_NeuWZ
+        End If
+        If bolNeuAWG Then
+            returnMessage += My.Resources.GlobaleLokalisierung.Aktualisierung_NeuAWG
+        End If
+
+        If bolNeuGenehmigung Then
+            returnMessage += My.Resources.GlobaleLokalisierung.Aktualisierung_NeuEichung
+        End If
+        MessageBox.Show(returnMessage)
     End Sub
 
-    Private Sub GetGenehmigungsstatus()
+    ''' <summary>
+    ''' holt aktuellen Status eigenerer Eichungenen (z.b. Abgelehnt oder Erfolgreich) aus DB über Webservice
+    ''' </summary>
+    ''' <param name="bolNeuGenehmigung">Variable welche für eine Erfolgsmeldung genutzt wird. Wird beim aktualisieren auf True gesetzt um den Nutzer darauf hinzuweisen, dass etwas neues heruntergeladen wurde.</param>
+    ''' <remarks></remarks>
+    Private Sub GetGenehmigungsstatus(ByRef bolNeuGenehmigung As Boolean)
         Try
 
             'abrufen des Statusts für jeden versendeten Eichprozess
@@ -776,7 +807,7 @@ Public Class ucoEichprozessauswahlliste
 
 
                                     If objServerEichprozess Is Nothing Then
-                                        MessageBox.Show("", "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                                        MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_KeinServerObjektEichung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
                                     End If
 
                                     'umwandeln des Serverobjektes in Clientobject
@@ -786,6 +817,7 @@ Public Class ucoEichprozessauswahlliste
                                     Eichprozess.FK_Bearbeitungsstatus = NeuerStatus
                                     Try
                                         DBContext.SaveChanges()
+                                        bolNeuGenehmigung = True
                                     Catch ex As Entity.Infrastructure.DbUpdateException
                                         Debug.WriteLine(ex.InnerException.InnerException.Message)
                                     Catch ex2 As Entity.Validation.DbEntityValidationException
@@ -807,7 +839,7 @@ Public Class ucoEichprozessauswahlliste
                                 End If
                             End If
                         Catch ex As Exception
-                            MessageBox.Show("Fehler beim Speichern", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                            MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_Speichern, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
                             MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
                         End Try
                     Next
@@ -815,10 +847,16 @@ Public Class ucoEichprozessauswahlliste
             End Using
 
         Catch ex As Exception
-
+            MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
-    Private Sub GetNeueWZ()
+
+    ''' <summary>
+    ''' holt neue oder aktualisierte WZ aus DB über Webservice
+    ''' </summary>
+    ''' <param name="bolNeuWZ">Variable welche für eine Erfolgsmeldung genutzt wird. Wird beim aktualisieren auf True gesetzt um den Nutzer darauf hinzuweisen, dass etwas neues heruntergeladen wurde.</param>
+    ''' <remarks></remarks>
+    Private Sub GetNeueWZ(ByRef bolNeuWZ As Boolean)
         Try
 
 
@@ -871,8 +909,9 @@ Public Class ucoEichprozessauswahlliste
                                         DBContext.Lookup_Waegezelle.Add(newWZ)
                                         Try
                                             DBContext.SaveChanges()
+                                            bolNeuWZ = True
                                         Catch e As Exception
-                                            MessageBox.Show("Fehler beim Speichern", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                                            MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_Speichern, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
                                             MessageBox.Show(e.StackTrace, e.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
                                         End Try
                                     End If
@@ -885,6 +924,8 @@ Public Class ucoEichprozessauswahlliste
 
                                             DBContext.Lookup_Waegezelle.Remove(query2.First)
                                             DBContext.SaveChanges()
+                                            bolNeuWZ = True
+
                                             'TODO fraglich ob das so gut ist ... Was ist wenn auf diese WZ schon geeicht wurde?
                                         Else
                                             objWZ.Hoechsteteilungsfaktor = objServerArtikel._Hoechsteteilungsfaktor
@@ -906,8 +947,8 @@ Public Class ucoEichprozessauswahlliste
                                         End If
                                     Next
                                 End If
-                            Catch e As Exception
-
+                            Catch ex As Exception
+                                MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
                             End Try
                         Next
 
@@ -925,7 +966,12 @@ Public Class ucoEichprozessauswahlliste
         End Try
     End Sub
 
-    Private Sub GetNeuesAWG()
+    ''' <summary>
+    ''' holt neue oder aktualisierte AWGs aus DB über Webservice
+    ''' </summary>
+    ''' <param name="bolNeuAWG">Variable welche für eine Erfolgsmeldung genutzt wird. Wird beim aktualisieren auf True gesetzt um den Nutzer darauf hinzuweisen, dass etwas neues heruntergeladen wurde.</param>
+    ''' <remarks></remarks>
+    Private Sub GetNeuesAWG(ByRef bolNeuAWG As Boolean)
         Try
 
             'abrufen neuer WZ aus Server, basierend auf dem Wert des letzten erfolgreichen updates
@@ -974,6 +1020,7 @@ Public Class ucoEichprozessauswahlliste
 
                                     DBContext.Lookup_Auswertegeraet.Add(newAWG)
                                     DBContext.SaveChanges()
+                                    bolNeuAWG = True
                                 End If
 
                             Else 'Es gibt den Artikel bereits, er wird geupdated
@@ -984,6 +1031,7 @@ Public Class ucoEichprozessauswahlliste
 
                                         DBContext.Lookup_Auswertegeraet.Remove(query2.First)
                                         DBContext.SaveChanges()
+                                        bolNeuAWG = True
                                         'TODO fraglich ob das so gut ist ... Was ist wenn auf diese WZ schon geeicht wurde?
                                     Else
                                         objAWG.Bauartzulassung = objServerArtikel._Bauartzulassung
@@ -1011,7 +1059,7 @@ Public Class ucoEichprozessauswahlliste
                     Try
                         DBContext.SaveChanges()
                     Catch ex As Exception
-                        MessageBox.Show("Fehler beim Laden", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_Laden, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
                         MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
                     End Try
                 End Using
@@ -1019,11 +1067,11 @@ Public Class ucoEichprozessauswahlliste
             End Using
 
         Catch ex As Exception
-
+            MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
-    Private Sub RadButton1_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonClientUpdateDatabase.Click
+    Private Sub RadButtonClientUpdateDatabase_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonClientUpdateDatabase.Click
         VerbindeMitWebServiceUndAktualisiere()
     End Sub
 #End Region

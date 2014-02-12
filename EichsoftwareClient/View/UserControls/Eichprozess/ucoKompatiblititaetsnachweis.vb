@@ -550,7 +550,7 @@
                                     End If
                                 End If
 
-                                ' MessageBox.Show(My.Resources.GlobaleLokalisierung.PflichtfelderAusfuellen, "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+
                                 Me.AbortSaveing = True
 
                                 CType(Control, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.Red
@@ -568,7 +568,7 @@
         If RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper = "A" Or RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper = "B" Or RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper = "C" Or RadTextBoxControlWZGenauigkeitsklasse.Text = "D".ToUpper Then
         Else
             'Ungültiger Wert für Genauigikeitsklasse
-            MessageBox.Show("Bitte geben Sie eine gültige Genauigkeitsklasse ein (I,II,III,IV)", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_GenaugigkeitsklasseUnguelitg, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             Me.AbortSaveing = True
             RadTextBoxControlWZGenauigkeitsklasse.TextBoxElement.BorderColor = Color.Red
             RadTextBoxControlWZGenauigkeitsklasse.Focus()
@@ -576,7 +576,7 @@
         End If
 
         If Me.AbortSaveing = True Then
-            MessageBox.Show(My.Resources.GlobaleLokalisierung.PflichtfelderAusfuellen, "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            MessageBox.Show(My.Resources.GlobaleLokalisierung.PflichtfelderAusfuellen, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             Return False
         End If
 
@@ -1125,7 +1125,7 @@
                     Try
                         Webcontext.Open()
                     Catch ex As Exception
-                        MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
                         Exit Sub
                     End Try
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="ZCCBgtWDcIiyhUxslEJow10/oXg=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="lTPFj7xIIvQhYIlBPq9tOPpqWUA=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="wsHttpBinding" name="WSHttpBinding_IEichsoftwareWebservice">
       <properties>
@@ -127,10 +127,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="WSHttpBinding_IEichsoftwareWebservice" contract="EichsoftwareWebservice.IEichsoftwareWebservice" bindingType="wsHttpBinding" address="http://localhost:12771/EichsoftwareWebservice.svc" bindingConfiguration="WSHttpBinding_IEichsoftwareWebservice">
+    <endpoint name="WSHttpBinding_IEichsoftwareWebservice" contract="EichsoftwareWebservice.IEichsoftwareWebservice" bindingType="wsHttpBinding" address="http://h2223265/EichsoftwareWebservice.svc" bindingConfiguration="WSHttpBinding_IEichsoftwareWebservice">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:12771/EichsoftwareWebservice.svc</serializedValue>
+          <serializedValue>http://h2223265.stratoserver.net/EichsoftwareWebservice.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

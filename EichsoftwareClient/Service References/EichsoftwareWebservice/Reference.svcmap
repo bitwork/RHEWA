@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9f20bc65-5df9-48df-b9ec-ea548e95db87" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4946bdda-e07d-4ef4-b633-22d68f29dcdc" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <EnableDataBinding>true</EnableDataBinding>
@@ -18,14 +18,13 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:12771/EichsoftwareWebservice.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://h2223265.stratoserver.net/EichsoftwareWebservice.svc/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="EichsoftwareWebservice.xsd" MetadataType="Schema" ID="844df01d-4a93-44b1-ae07-265fe614920d" SourceId="1" SourceUrl="http://localhost:12771/EichsoftwareWebservice.svc?xsd=xsd0" />
-    <MetadataFile FileName="EichsoftwareWebservice.wsdl" MetadataType="Wsdl" ID="717a9cf7-e173-4509-a943-1898efa829c9" SourceId="1" SourceUrl="http://localhost:12771/EichsoftwareWebservice.svc?wsdl" />
-    <MetadataFile FileName="EichsoftwareWebservice.disco" MetadataType="Disco" ID="0b344230-f694-425e-a253-f09d4fa18339" SourceId="1" SourceUrl="http://localhost:12771/EichsoftwareWebservice.svc?disco" />
-    <MetadataFile FileName="EichsoftwareWebservice1.xsd" MetadataType="Schema" ID="a6dc9377-9aba-478b-9c49-13ec1aae7899" SourceId="1" SourceUrl="http://localhost:12771/EichsoftwareWebservice.svc?xsd=xsd1" />
-    <MetadataFile FileName="EichsoftwareWebservice2.xsd" MetadataType="Schema" ID="653fb2dd-be2a-411a-b7cc-9fa82c4666a3" SourceId="1" SourceUrl="http://localhost:12771/EichsoftwareWebservice.svc?xsd=xsd2" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="9b5b7cd0-87cd-4c55-ab4c-6e09bdc45ae0" SourceId="1" SourceUrl="http://h2223265.stratoserver.net/EichsoftwareWebservice.svc/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="584585fc-1bc9-41c6-8f2b-ae5f32f7f344" SourceId="1" SourceUrl="http://h2223265.stratoserver.net/EichsoftwareWebservice.svc/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="4f55c57b-c775-4ab9-b415-937862bda844" SourceId="1" SourceUrl="http://h2223265.stratoserver.net/EichsoftwareWebservice.svc/mex" />
+    <MetadataFile FileName="EichsoftwareWebservice.xsd" MetadataType="Schema" ID="95bb35e4-6f3f-4b0f-94c5-ad2a36a9d485" SourceId="1" SourceUrl="http://h2223265.stratoserver.net/EichsoftwareWebservice.svc/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

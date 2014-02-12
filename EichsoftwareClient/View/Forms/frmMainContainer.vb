@@ -1,5 +1,6 @@
 ﻿Imports System.Resources
 Imports System.Globalization
+Imports EichsoftwareClient.My.Resources
 Imports Microsoft.Office.Interop.Excel
 Imports Microsoft.Office.Interop.Word
 
@@ -257,7 +258,7 @@ Public Class FrmMainContainer
                         System.Windows.Forms.Application.Exit()
                         Exit Sub
                     Else
-                        MessageBox.Show(My.Resources.GlobaleLokalisierung.BitteNeuStarten, "", MessageBoxButtons.OK)
+                        MessageBox.Show(My.Resources.GlobaleLokalisierung.BitteNeuStarten, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK)
                         System.Windows.Forms.Application.Exit()
                         Exit Sub
                     End If
@@ -329,7 +330,6 @@ Public Class FrmMainContainer
 
 
                 Case Else
-                    MessageBox.Show("unbekannter Status")
                     Me.Close()
                     Exit Sub
             End Select
@@ -417,7 +417,7 @@ Public Class FrmMainContainer
                     uco = New UcoVersenden(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
 
                 Case Else
-                    MessageBox.Show("unbekannter Status")
+
                     Me.Close()
                     Exit Sub
             End Select
@@ -479,7 +479,7 @@ Public Class FrmMainContainer
 
 
                     Case Else
-                        MessageBox.Show("unbekannter Status")
+
                         Me.Close()
                         Exit Sub
                 End Select
@@ -587,7 +587,7 @@ Public Class FrmMainContainer
 
 
                     Case Else
-                        MessageBox.Show("unbekannter Status")
+
                         Me.Close()
                         Exit Sub
                 End Select
@@ -627,7 +627,7 @@ Public Class FrmMainContainer
 
 
     Private Sub RadButtonVersenden_Click(sender As Object, e As EventArgs) Handles RadButtonVersenden.Click
-        If MessageBox.Show("Möchten Sie das korrigierte Eichprotokoll wirklich an den Eichbevollmächtigten zurücksenden? Der Status wird dabei auf fehlerhaft gesetzt.", "Frage", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = System.Windows.Forms.DialogResult.Yes Then
+        If MessageBox.Show(GlobaleLokalisierung.Frage_EichprotokollZuruecksenden, My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo, MessageBoxIcon.Question) = System.Windows.Forms.DialogResult.Yes Then
             RaiseEvent VersendenNeeded(_CurrentUco)
         End If
     End Sub
@@ -635,13 +635,13 @@ Public Class FrmMainContainer
     Private Sub RadButtonEntsperren_Click(sender As Object, e As EventArgs) Handles RadButtonEntsperren.Click
         'wenn der status des aktuellen elementes eh schon auf fehlerhaft steht oder auf abgeschlossen, darf keine Änderung verschickt werden
         If CurrentEichprozess.FK_Bearbeitungsstatus = 3 Then
-            MessageBox.Show("Der Vorgang kann nicht bearbeitet werden. Er ist schon als genehmigt markiert")
+            MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_EichprotokollBereitsGenehmigt)
 
             Exit Sub
         End If
 
         If CurrentEichprozess.FK_Bearbeitungsstatus = 2 Then
-            MessageBox.Show("Der Vorgang kann nicht bearbeitet werden. Er ist schon als fehlerhaft markiert und wird bearbeitet")
+            MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_EichprotokollBereitsAbgelehnt)
 
             Exit Sub
         End If

@@ -849,7 +849,7 @@
                     If TypeOf Control Is Telerik.WinControls.UI.RadCheckBox Then
                         If CType(Control, Telerik.WinControls.UI.RadCheckBox).Visible = True AndAlso CType(Control, Telerik.WinControls.UI.RadCheckBox).Checked = False Then
                             CType(Control, Telerik.WinControls.UI.RadCheckBox).Focus()
-                            MessageBox.Show(My.Resources.GlobaleLokalisierung.KompatiblitätNichtGeleistet, "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                            MessageBox.Show(My.Resources.GlobaleLokalisierung.KompatiblitätNichtGeleistet, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                             AbortSaveing = True
                             Return False
                         End If
@@ -1108,7 +1108,7 @@
                     Try
                         Webcontext.Open()
                     Catch ex As Exception
-                        MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, "", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
                         Exit Sub
                     End Try
 

@@ -45,6 +45,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DocumentationFile>EichsoftwareClient.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -490,6 +491,9 @@
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\frmLizenz.de.resx">
+      <DependentUpon>frmLizenz.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\frmLizenz.resx">
       <DependentUpon>frmLizenz.vb</DependentUpon>
     </EmbeddedResource>
@@ -504,9 +508,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\frmEichfehlergrenzen.resx">
       <DependentUpon>frmEichfehlergrenzen.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Forms\frmMainContainer.de-DE.resx">
-      <DependentUpon>frmMainContainer.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\frmMainContainer.de.resx">
       <DependentUpon>frmMainContainer.vb</DependentUpon>
@@ -661,9 +662,6 @@
     <EmbeddedResource Include="View\UserControls\Eichprozess\ucoPruefungLinearitaet.resx">
       <DependentUpon>ucoPruefungLinearitaet.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoEichprotokollVerfahrenswahl.af.resx">
-      <DependentUpon>ucoEichprotokollVerfahrenswahl.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\ucoEichprotokollVerfahrenswahl.en.resx">
       <DependentUpon>ucoEichprotokollVerfahrenswahl.vb</DependentUpon>
     </EmbeddedResource>
@@ -742,6 +740,9 @@
     <None Include="APP - RHEWA.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="APP - Strato.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="EichsoftwareClient_TemporaryKey.pfx" />
     <None Include="EntityModelDatabaseClient.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -807,14 +808,14 @@
     <None Include="Service References\EichsoftwareWebservice\EichsoftwareClient.EichsoftwareWebservice.ServerLookup_Waegezelle.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\EichsoftwareWebservice\EichsoftwareWebservice.wsdl" />
     <None Include="Service References\EichsoftwareWebservice\EichsoftwareWebservice.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\EichsoftwareWebservice\EichsoftwareWebservice1.xsd">
+    <None Include="Service References\EichsoftwareWebservice\service.wsdl" />
+    <None Include="Service References\EichsoftwareWebservice\service.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\EichsoftwareWebservice\EichsoftwareWebservice2.xsd">
+    <None Include="Service References\EichsoftwareWebservice\service1.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -891,7 +892,6 @@
     </None>
     <None Include="Service References\EichsoftwareWebservice\configuration.svcinfo" />
     <None Include="Service References\EichsoftwareWebservice\configuration91.svcinfo" />
-    <None Include="Service References\EichsoftwareWebservice\EichsoftwareWebservice.disco" />
     <None Include="Resources\Verschiebeweg_PL.PNG" />
     <None Include="Resources\Verschiebeweg_GB.PNG" />
     <None Include="Resources\Verschiebeweg_DE.PNG" />
@@ -965,6 +965,10 @@
     <WCFMetadataStorage Include="Service References\EichsoftwareWebservice\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>if exist "$(TargetPath).locked" del "$(TargetPath).locked"
+if exist "$(TargetPath)" if not exist "$(TargetPath).locked" move "$(TargetPath)" "$(TargetPath).locked"</PreBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

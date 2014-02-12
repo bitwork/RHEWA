@@ -618,4 +618,61 @@ If the repeatability error is greater than 0.35 e, the portion of standard weigh
   <data name="KeineVerbindung" xml:space="preserve">
     <value>Cant establish connection to RHEWA Server. Make sure you are connected to the internet and try again.</value>
   </data>
+  <data name="Aktualisierung_Erfolgreich" xml:space="preserve">
+    <value>Synced successfully</value>
+  </data>
+  <data name="Aktualisierung_NeuAWG" xml:space="preserve">
+    <value>Added or changed weighing instruments</value>
+  </data>
+  <data name="Aktualisierung_NeuEichung" xml:space="preserve">
+    <value>Englisch</value>
+  </data>
+  <data name="Aktualisierung_NeuWZ" xml:space="preserve">
+    <value>Added or changed Load Cells</value>
+  </data>
+  <data name="Fehler" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Fehler_EichprotokollBereitsAbgelehnt" xml:space="preserve">
+    <value>Der Vorgang kann nicht bearbeitet werden. Er ist schon als fehlerhaft markiert und wird bearbeitet</value>
+  </data>
+  <data name="Fehler_EichprotokollBereitsGenehmigt" xml:space="preserve">
+    <value>Der Vorgang kann nicht bearbeitet werden. Er ist schon als genehmigt markiert</value>
+  </data>
+  <data name="Fehler_GenaugigkeitsklasseUnguelitg" xml:space="preserve">
+    <value>Bitte geben Sie eine gültige Genauigkeitsklasse ein (I,II,III,IV)</value>
+  </data>
+  <data name="Fehler_KeinServerObjektEichung" xml:space="preserve">
+    <value>Es konnte kein passender Eichprozess gefunden werden. Bitte wenden Sie sich an RHEWA</value>
+  </data>
+  <data name="Fehler_Laden" xml:space="preserve">
+    <value>Error while loading data</value>
+  </data>
+  <data name="Fehler_SpeicherAnomalie" xml:space="preserve">
+    <value>Der Eichvorgang konnte nicht gespeichert werden. Bitte rufen sie die aktuellsten Informationen von RHEWA ab und versuchen es erneut.</value>
+  </data>
+  <data name="Fehler_SpeicherAnomalieRhewaZusatztext" xml:space="preserve">
+    <value>Falls auch das nicht hilft, kontrollieren Sie den ""deaktiviert"" Status der Auswertegeräte und Wägezellen im Admin Client.</value>
+  </data>
+  <data name="Fehler_Speichern" xml:space="preserve">
+    <value>Error while saving data</value>
+  </data>
+  <data name="Fehler_UngueltigeLizenz" xml:space="preserve">
+    <value>Invalid license. Please contact RHEWA</value>
+  </data>
+  <data name="Frage" xml:space="preserve">
+    <value>Question</value>
+  </data>
+  <data name="Frage_Ablehnen" xml:space="preserve">
+    <value>Möchten Sie den gewählten Eichprozess wirklich ablehnen? Der Eichbevollmächtigte kriegt diesen dann zur erneuten Bearbeitung zugesandt</value>
+  </data>
+  <data name="Frage_EichprotokollZuruecksenden" xml:space="preserve">
+    <value>Möchten Sie das korrigierte Eichprotokoll wirklich an den Eichbevollmächtigten zurücksenden? Der Status wird dabei auf fehlerhaft gesetzt.</value>
+  </data>
+  <data name="Frage_Genehmigen" xml:space="preserve">
+    <value>Möchten Sie den gewählten Eichprozess wirklich genehmigen? Er gilt dann als abgeschlossen und kann nicht mehr bearbeitet werden</value>
+  </data>
+  <data name="Frage_Kopieren" xml:space="preserve">
+    <value>Möchten Sie den gewählten Eichprozess kopieren um ihn als Vorlage zu verwenden?</value>
+  </data>
 </root>

@@ -56,18 +56,6 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("EN")>  _
-        Public Property AktuelleSprache() As String
-            Get
-                Return CType(Me("AktuelleSprache"),String)
-            End Get
-            Set
-                Me("AktuelleSprache") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
         Public Property Lizensiert() As Boolean
             Get
@@ -99,6 +87,18 @@ Namespace My
             End Get
             Set
                 Me("RHEWALizenz") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("EN")>  _
+        Public Property AktuelleSprache() As String
+            Get
+                Return CType(Me("AktuelleSprache"),String)
+            End Get
+            Set
+                Me("AktuelleSprache") = value
             End Set
         End Property
     End Class

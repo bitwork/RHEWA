@@ -2,9 +2,6 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
   <Profiles />
   <Settings>
-    <Setting Name="AktuelleSprache" Type="System.String" Scope="User">
-      <Value Profile="(Default)">EN</Value>
-    </Setting>
     <Setting Name="Lizensiert" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
@@ -13,6 +10,9 @@
     </Setting>
     <Setting Name="RHEWALizenz" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="AktuelleSprache" Type="System.String" Scope="User">
+      <Value Profile="(Default)">EN</Value>
     </Setting>
   </Settings>
 </SettingsFile>

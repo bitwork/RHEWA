@@ -315,6 +315,9 @@
     <None Include="App %28DEBUG%29.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="App %28STRATO%29.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="EichsoftwareAdministrationsClient_TemporaryKey.pfx" />
     <None Include="EntityModelDatabaseAdminClient.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
