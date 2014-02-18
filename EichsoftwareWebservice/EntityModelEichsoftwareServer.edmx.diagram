@@ -52,6 +52,7 @@
         <AssociationConnector Association="EichenSQLDatabaseModel.FK_Mogelstatistik_Lookup_Waegezelle" ManuallyRouted="false" />
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerLookup_Bearbeitungsstatus" Width="1.5" PointX="2.6960959298052338" PointY="0.23656302701521806" />
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerVerbindungsprotokoll" Width="1.5" PointX="4.55986509684467" PointY="1.8500545778544875" />
+        <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerKonfiguration" Width="1.5" PointX="7.1209252081443211" PointY="12.864900043636979" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

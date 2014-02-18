@@ -8,5 +8,6 @@
     Public Property AWG As String = ""
     Public Property Eichbevollmaechtigter As String = ""
     Public Property Bearbeitungsstatus As String = ""
+    Public Property GesperrtDurch As String = ""
 
 End Class

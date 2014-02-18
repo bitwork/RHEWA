@@ -179,6 +179,9 @@
     <Compile Include="ServerKompatiblitaetsnachweis.vb">
       <DependentUpon>EntityModelEichsoftwareServer.tt</DependentUpon>
     </Compile>
+    <Compile Include="ServerKonfiguration.vb">
+      <DependentUpon>EntityModelEichsoftwareServer.tt</DependentUpon>
+    </Compile>
     <Compile Include="ServerLizensierung.vb">
       <DependentUpon>EntityModelEichsoftwareServer.tt</DependentUpon>
     </Compile>

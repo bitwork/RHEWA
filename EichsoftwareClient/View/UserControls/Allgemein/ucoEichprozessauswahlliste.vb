@@ -445,6 +445,7 @@ Public Class ucoEichprozessauswahlliste
                 'ausblenden von internen spalten
                 RadGridView1.Columns("ID").IsVisible = False
                 RadGridView1.Columns("Vorgangsnummer").IsVisible = False
+                RadGridView1.Columns("Gesperrtdurch").HeaderText = "Gesperrt durch"
             Catch ex As Exception
             End Try
 
@@ -552,12 +553,27 @@ Public Class ucoEichprozessauswahlliste
                         Using dbcontext As New EichsoftwareClientdatabaseEntities1
 
                             Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
+                            'prüfen ob der datensatz von jemand anderem in Bearbeitung ist
+                            Dim bolSetGueltig As Boolean = True 'variable zum abbrechen des Prozesses, falls jemand anderes an dem DS arbeitet
+                            Dim Messagetext As String = ""
+                            Messagetext = webContext.CheckSperrung(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, SelectedID, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                            If Messagetext.Equals("") = False Then
+                                'rhewa arbeitet in deutsch und hat keine lokalisierung gewünscht
+                                Dim result As String
+                                result = webContext.SetSperrung(True, objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, SelectedID, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                                If result = "" Then
+                                    bolSetGueltig = True
+                                Else
+                                    MessageBox.Show(result)
+                                    bolSetGueltig = False
+                                End If
+                            End If
+                            If bolSetGueltig Then
+                                webContext.SetEichprozessGenehmight(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, SelectedID, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
 
-                            webContext.SetEichprozessGenehmight(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, SelectedID, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
-
-                            'nach dem schließen des Dialogs aktualisieren
-                            LoadFromDatabase()
-
+                                'nach dem schließen des Dialogs aktualisieren
+                                LoadFromDatabase()
+                            End If
                         End Using
                     End Using
                 End If
@@ -577,21 +593,41 @@ Public Class ucoEichprozessauswahlliste
                     Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
                         Try
                             webContext.Open()
-
-
                         Catch ex As Exception
                             MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
                             Exit Sub
                         End Try
-                        Using dbcontext As New EichsoftwareClientdatabaseEntities1
 
+                      
+                        Using dbcontext As New EichsoftwareClientdatabaseEntities1
                             Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
 
-                            webContext.SetEichprozessUngueltig(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, SelectedID, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                            'prüfen ob der datensatz von jemand anderem in Bearbeitung ist
+                            Dim bolSetUnueltig As Boolean = True 'variable zum abbrechen des Prozesses, falls jemand anderes an dem DS arbeitet
+                            Dim Messagetext As String = ""
+                            Messagetext = webContext.CheckSperrung(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, SelectedID, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                            If Messagetext.Equals("") = False Then
+                                'rhewa arbeitet in deutsch und hat keine lokalisierung gewünscht
+                                If MessageBox.Show("Dieser Eichprozess wird von '" & Messagetext & "' bearbeitet. Möchten Sie seine Arbeit wirklich überschreiben und den Prozess ablehnen?", My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo) = DialogResult.Yes Then
+                                    Dim result As String
+                                    result = webContext.SetSperrung(True, objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, SelectedID, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
 
-                            'nach dem schließen des Dialogs aktualisieren
-                            LoadFromDatabase()
+                                    If result = "" Then
+                                        bolSetUnueltig = True
+                                    Else
+                                        MessageBox.Show(result)
+                                        bolSetUnueltig = False
+                                    End If
+                                Else
+                                    bolSetUnueltig = False
+                                End If
+                            End If
+                            If bolSetUnueltig Then
+                                webContext.SetEichprozessUngueltig(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, SelectedID, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
 
+                                'nach dem schließen des Dialogs aktualisieren
+                                LoadFromDatabase()
+                            End If
                         End Using
                     End Using
 

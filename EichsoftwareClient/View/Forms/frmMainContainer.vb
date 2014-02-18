@@ -218,6 +218,8 @@ Public Class FrmMainContainer
 #End Region
 
 #Region "Formular Events"
+
+ 
     Private Sub FrmMainContainer_Load(sender As Object, e As System.EventArgs) Handles Me.Load
 
         'laden der Auswahliste
@@ -232,7 +234,7 @@ Public Class FrmMainContainer
             RadButtonNavigateForwards.Visible = False
 
 
-          
+
 
             'prüfen ob die Lizenz gültig ist
             Using DBContext As New EichsoftwareClientdatabaseEntities1
@@ -263,7 +265,7 @@ Public Class FrmMainContainer
                 End If
             End If
 
-           
+
 
         Else
             'laden des benötigten UCOs
@@ -630,13 +632,29 @@ Public Class FrmMainContainer
         RadLabelContextHelp.MaximumSize = New Size(RadScrollablePanelContextHelp.Size.Width - 30, 0)
     End Sub
 
+    ''' <summary>
+    ''' in diesem Event wird gesperrt status zurückgesetzt, falls ein Bearbeiter gerade sperrt
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub FrmMainContainer_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        If DialogModus = enuDialogModus.korrigierend Then
+            SetzeSperrung(False)
+        End If
+    End Sub
+
 #End Region
 
 
 
     Private Sub RadButtonVersenden_Click(sender As Object, e As EventArgs) Handles RadButtonVersenden.Click
         If MessageBox.Show(GlobaleLokalisierung.Frage_EichprotokollZuruecksenden, My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo, MessageBoxIcon.Question) = System.Windows.Forms.DialogResult.Yes Then
-            RaiseEvent VersendenNeeded(_CurrentUco)
+
+            'entsperren des DS
+            If SetzeSperrung(False) Then
+                RaiseEvent VersendenNeeded(_CurrentUco)
+            End If
         End If
     End Sub
 
@@ -644,18 +662,62 @@ Public Class FrmMainContainer
         'wenn der status des aktuellen elementes eh schon auf fehlerhaft steht oder auf abgeschlossen, darf keine Änderung verschickt werden
         If CurrentEichprozess.FK_Bearbeitungsstatus = 3 Then
             MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_EichprotokollBereitsGenehmigt)
-
             Exit Sub
         End If
 
         If CurrentEichprozess.FK_Bearbeitungsstatus = 2 Then
             MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_EichprotokollBereitsAbgelehnt)
-
             Exit Sub
         End If
 
-        RaiseEvent EntsperrungNeeded()
-        RadButtonVersenden.Visible = True
-        RadButtonEntsperren.Enabled = False
+        'prüfen ob eine Sperrung des DS vorliegt und DS sperren wenn nicht
+        If SetzeSperrung(True) Then
+            RaiseEvent EntsperrungNeeded()
+            RadButtonVersenden.Visible = True
+            RadButtonEntsperren.Enabled = False
+        End If
+
     End Sub
+
+    Private Function SetzeSperrung(ByVal bolSperren As Boolean) As Boolean
+        'neue Datenbankverbindung
+        Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
+            Try
+                webContext.Open()
+            Catch ex As Exception
+                MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Return False
+            End Try
+            Using dbcontext As New EichsoftwareClientdatabaseEntities1
+
+                Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
+                'prüfen ob der datensatz von jemand anderem in Bearbeitung ist
+                Dim bolSetSperrung As Boolean = True 'variable zum abbrechen des Prozesses, falls jemand anderes an dem DS arbeitet
+                Dim Messagetext As String = ""
+                Messagetext = webContext.CheckSperrung(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, CurrentEichprozess.Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                If Messagetext.Equals("") = False Then
+                    'rhewa arbeitet in deutsch und hat keine lokalisierung gewünscht
+                    If MessageBox.Show("Dieser Eichprozess wird von '" & Messagetext & "' bearbeitet. Möchten Sie seine Arbeit wirklich überschreiben und den Prozess selbst bearbeiten?", My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo) = DialogResult.Yes Then
+                        bolSetSperrung = True
+                    Else
+                        bolSetSperrung = False
+                    End If
+                End If
+
+                If bolSetSperrung Then
+                    Dim result As String
+                    result = webContext.SetSperrung(bolSperren, objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, CurrentEichprozess.Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+
+                    If result = "" Then
+                        Return True
+                    Else
+                        MessageBox.Show(result)
+                        Return False
+                    End If
+                Else
+                    Return False
+                End If
+            End Using
+        End Using
+    End Function
 End Class

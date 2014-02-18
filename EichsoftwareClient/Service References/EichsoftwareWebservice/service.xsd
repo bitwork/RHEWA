@@ -272,4 +272,43 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="CheckSperrung">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Lizenzschluessel" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Vorgangsnummer" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="WindowsUsername" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Domainname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Computername" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckSperrungResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CheckSperrungResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetSperrung">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bolSperren" type="xs:boolean" />
+        <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Lizenzschluessel" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Vorgangsnummer" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="WindowsUsername" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Domainname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Computername" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetSperrungResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetSperrungResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

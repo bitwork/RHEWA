@@ -124,6 +124,9 @@
     <Import Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ServerKonfiguration.vb">
+      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
+    </Compile>
     <Compile Include="View\frmAuswahllisteLizenzen.Designer.vb">
       <DependentUpon>frmAuswahllisteLizenzen.vb</DependentUpon>
     </Compile>

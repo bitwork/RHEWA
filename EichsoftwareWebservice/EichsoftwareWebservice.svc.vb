@@ -78,9 +78,6 @@ Public Class EichsoftwareWebservice
 
     End Function
 
-
-
-
     ''' <summary>
     ''' gibt zurück ob es sich um einen RHEWA Mitarbeiter handelt
     ''' </summary>
@@ -512,7 +509,16 @@ Public Class EichsoftwareWebservice
         End Try
     End Function
 
-
+    ''' <summary>
+    ''' Holt alle Eichprozesse als Datatable für RHEWA ansicht aller Eichprozesse
+    ''' </summary>
+    ''' <param name="Name"></param>
+    ''' <param name="Lizenzschluessel"></param>
+    ''' <param name="WindowsUsername"></param>
+    ''' <param name="Domainname"></param>
+    ''' <param name="Computername"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
     Public Function GetAlleEichprozesse(ByVal Name As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As clsEichprozessFuerAuswahlliste() Implements IEichsoftwareWebservice.GetAlleEichprozesse
         Try
             ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
@@ -538,8 +544,9 @@ Public Class EichsoftwareWebservice
                                 .Lookup_Waagenart = Eichprozess.ServerLookup_Waagenart.Art, _
                                 .Lookup_Auswertegeraet = Eichprozess.ServerLookup_Auswertegeraet.Typ, _
                                 .Sachbearbeiter = Eichprozess.ServerEichprotokoll.FK_Identifikationsdaten_SuperOfficeBenutzer, _
-                                .Bearbeitungsstatus = Lookup2.Status
-                }
+                       .ZurBearbeitungGesperrtDurch = Eichprozess.ZurBearbeitungGesperrtDurch, _
+                    .Bearbeitungsstatus = Lookup2.Status
+                                 }
 
                     Dim ReturnList As New List(Of clsEichprozessFuerAuswahlliste)
 
@@ -579,6 +586,10 @@ Public Class EichsoftwareWebservice
                         If Not objeichprozess.Bearbeitungsstatus Is Nothing Then
                             objReturn.Bearbeitungsstatus = objeichprozess.Bearbeitungsstatus
                         End If
+
+                        If Not objeichprozess.ZurBearbeitungGesperrtDurch Is Nothing Then
+                            objReturn.GesperrtDurch = objeichprozess.ZurBearbeitungGesperrtDurch
+                        End If
                         '   Dim ModelArtikel As New Model.clsArtikel(objArtikel.Id, objArtikel.Name, objArtikel.Beschreibung, objArtikel.Preis, objArtikel.ErstellDatum)
                         ReturnList.Add(objReturn)
                     Next
@@ -601,6 +612,19 @@ Public Class EichsoftwareWebservice
         End Try
     End Function
 
+    ''' <summary>
+    ''' Holt alle WZ im Zeitraum
+    ''' </summary>
+    ''' <param name="Name"></param>
+    ''' <param name="Lizenzschluessel"></param>
+    ''' <param name="LetztesUpdate"></param>
+    ''' <param name="WindowsUsername"></param>
+    ''' <param name="Domainname"></param>
+    ''' <param name="Computername"></param>
+    ''' <param name="SyncAllesSeit"></param>
+    ''' <param name="SyncAllesBis"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
     Public Function GetNeueWZ(ByVal Name As String, Lizenzschluessel As String, ByVal LetztesUpdate As Date, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, Optional ByVal SyncAllesSeit As Date = #1/1/2000#, Optional ByVal SyncAllesBis As Date = #12/31/2999#) As ServerLookup_Waegezelle() Implements IEichsoftwareWebservice.GetNeueWZ
         ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
         If PruefeLizenz(Name, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
@@ -666,6 +690,19 @@ Public Class EichsoftwareWebservice
 
     End Function
 
+    ''' <summary>
+    ''' Holt alle AWGs im Zeitraum
+    ''' </summary>
+    ''' <param name="Name"></param>
+    ''' <param name="Lizenzschluessel"></param>
+    ''' <param name="LetztesUpdate"></param>
+    ''' <param name="WindowsUsername"></param>
+    ''' <param name="Domainname"></param>
+    ''' <param name="Computername"></param>
+    ''' <param name="SyncAllesSeit"></param>
+    ''' <param name="SyncAllesBis"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
     Public Function GetNeuesAWG(ByVal Name As String, Lizenzschluessel As String, ByVal LetztesUpdate As Date, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, Optional ByVal SyncAllesSeit As Date = #1/1/2000#, Optional ByVal SyncAllesBis As Date = #12/31/2999#) As ServerLookup_Auswertegeraet() Implements IEichsoftwareWebservice.GetNeuesAWG
         ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
         If PruefeLizenz(Name, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
@@ -794,6 +831,7 @@ Public Class EichsoftwareWebservice
         End Try
 
     End Function
+
     ''' <summary>
     '''  Der Client ruft diese Methode auf, mit allen seinen lokalen Prüfungen die im Status auf "wird geprüft stehen" auf
     ''' </summary>
@@ -845,6 +883,17 @@ Public Class EichsoftwareWebservice
         End Try
     End Function
 
+    ''' <summary>
+    ''' Genehmigt übermittelten Eichprozess, so das Client ihn herunterladen kann
+    ''' </summary>
+    ''' <param name="Name"></param>
+    ''' <param name="Lizenzschluessel"></param>
+    ''' <param name="ID"></param>
+    ''' <param name="WindowsUsername"></param>
+    ''' <param name="Domainname"></param>
+    ''' <param name="Computername"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
     Public Function SetEichprozessUngueltig(ByVal Name As String, Lizenzschluessel As String, ByVal ID As Integer, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements IEichsoftwareWebservice.SetEichprozessUngueltig
         Try
             ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
@@ -885,6 +934,17 @@ Public Class EichsoftwareWebservice
         End Try
     End Function
 
+    ''' <summary>
+    ''' Lehnt Eichprozess ab. Client muss erst korrigieren und neu einsenden
+    ''' </summary>
+    ''' <param name="Name"></param>
+    ''' <param name="Lizenzschluessel"></param>
+    ''' <param name="ID"></param>
+    ''' <param name="WindowsUsername"></param>
+    ''' <param name="Domainname"></param>
+    ''' <param name="Computername"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
     Public Function SetEichprozessgenehmigt(ByVal Name As String, Lizenzschluessel As String, ByVal ID As Integer, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements IEichsoftwareWebservice.SetEichprozessGenehmight
         Try
             ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
@@ -925,5 +985,165 @@ Public Class EichsoftwareWebservice
         End Try
     End Function
 
+    ''' <summary>
+    ''' Prüft ob die aktuelle Eichung von jemand anderem Bearbeitet wird
+    ''' </summary>
+    ''' <param name="Name"></param>
+    ''' <param name="Lizenzschluessel"></param>
+    ''' <param name="Vorgangsnummer"></param>
+    ''' <param name="WindowsUsername"></param>
+    ''' <param name="Domainname"></param>
+    ''' <param name="Computername"></param>
+    ''' <returns>WindowsUsername des Sperrers wenn gesperrt</returns>
+    ''' <remarks></remarks>
+    Function CheckSperrung(ByVal Name As String, Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As String Implements IEichsoftwareWebservice.CheckSperrung
+        Try
+            ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
+            If PruefeLizenz(Name, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
+            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Prüfe Sperrung")
+
+            'neuen Context aufbauen
+            Using DbContext As New EichenSQLDatabaseEntities1
+                DbContext.Configuration.LazyLoadingEnabled = False
+                DbContext.Configuration.ProxyCreationEnabled = False
+                Try
+                    Dim Obj = (From Eichprozess In DbContext.ServerEichprozess
+                               Where Eichprozess.Vorgangsnummer = Vorgangsnummer).FirstOrDefault
+
+                    ''abruch
+                    If Obj Is Nothing Then Return ""
+
+                    'Keine sperrung vorliegend
+                    Try
+                        If Obj.ZurBearbeitungGesperrtDurch Is Nothing Then
+                            Return ""
+                        End If
+                    Catch ex As Exception
+
+                    End Try
+               
+                    Try
+                        If IsDBNull(Obj.ZurBearbeitungGesperrtDurch) Then
+                            Return ""
+                        End If
+                    Catch ex As Exception
+
+                    End Try
+                    Try
+                        If Obj.ZurBearbeitungGesperrtDurch.Equals("") Then
+                            Return ""
+                        End If
+                    Catch ex As Exception
+
+                    End Try
+
+
+                    'prüfen ob der Sperrer nicht einem selbst entspricht
+                    If Obj.ZurBearbeitungGesperrtDurch = WindowsUsername Then
+                        Return ""
+                    Else
+                        Return Obj.ZurBearbeitungGesperrtDurch
+                    End If
+
+                    'ansonsten 
+                    Return ""
+
+                Catch ex As Exception
+                    'hat nicht funktioniert
+                    Return "Fehler beim Prüfen"
+                End Try
+            End Using
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+
+    ''' <summary>
+    ''' Sperrt oder entsperrt aktuelle Eichung, so das ein anderer Mitarbeiter der sie öffnet einen Warnhinweis bekommt
+    ''' </summary>
+    ''' <param name="bolSperren"></param>
+    ''' <param name="Name"></param>
+    ''' <param name="Lizenzschluessel"></param>
+    ''' <param name="Vorgangsnummer"></param>
+    ''' <param name="WindowsUsername"></param>
+    ''' <param name="Domainname"></param>
+    ''' <param name="Computername"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Function SetSperrung(ByVal bolSperren As Boolean, ByVal Name As String, Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As String Implements IEichsoftwareWebservice.SetSperrung
+        Try
+            ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
+            If PruefeLizenz(Name, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
+            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Setze Sperrung auf: " & bolSperren)
+
+            'neuen Context aufbauen
+            Using DbContext As New EichenSQLDatabaseEntities1
+                DbContext.Configuration.LazyLoadingEnabled = False
+                DbContext.Configuration.ProxyCreationEnabled = False
+                Try
+                    Dim Obj = (From Eichprozess In DbContext.ServerEichprozess
+                               Where Eichprozess.Vorgangsnummer = Vorgangsnummer).FirstOrDefault
+
+                    ''abruch
+                    If Obj Is Nothing Then Return "Objekt nicht gefunden"
+
+
+                    'entsperren wen bolsperren = false
+                    If bolSperren Then
+                        'Keine sperrung vorliegend, wir setzten sie
+                        Try
+                            If Obj.ZurBearbeitungGesperrtDurch Is Nothing Then
+                                Obj.ZurBearbeitungGesperrtDurch = WindowsUsername
+                                DbContext.SaveChanges()
+                                Return ""
+                            End If
+                        Catch ex As Exception
+
+                        End Try
+                        Try
+                            If IsDBNull(Obj.ZurBearbeitungGesperrtDurch) Then
+                                Obj.ZurBearbeitungGesperrtDurch = WindowsUsername
+                                DbContext.SaveChanges()
+                                Return ""
+                            End If
+                        Catch ex As Exception
+
+                        End Try
+                        Try
+                            If (Obj.ZurBearbeitungGesperrtDurch).Equals("") Then
+                                Obj.ZurBearbeitungGesperrtDurch = WindowsUsername
+                                DbContext.SaveChanges()
+                                Return ""
+                            End If
+                        Catch ex As Exception
+
+                        End Try
+
+
+                        'prüfen ob man selbst gesperrt hat
+                        If Obj.ZurBearbeitungGesperrtDurch = WindowsUsername Then
+                            Return ""
+                        End If
+
+
+                        'ansonsten 
+                        Return "Benutzer ist nicht der Sperrer"
+
+                    Else
+                        Obj.ZurBearbeitungGesperrtDurch = ""
+                        DbContext.SaveChanges()
+                        Return ""
+                    End If
+
+                 
+                Catch ex As Exception
+                    'hat nicht funktioniert
+                    Return ex.Message
+                End Try
+            End Using
+        Catch ex As Exception
+            Return ex.Message
+        End Try
+    End Function
 
 End Class

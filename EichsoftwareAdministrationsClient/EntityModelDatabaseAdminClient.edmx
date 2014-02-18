@@ -11,6 +11,7 @@
           <EntitySet Name="ServerEichprotokoll" EntityType="EichenModel.Store.ServerEichprotokoll" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ServerEichprozess" EntityType="EichenModel.Store.ServerEichprozess" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ServerKompatiblitaetsnachweis" EntityType="EichenModel.Store.ServerKompatiblitaetsnachweis" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ServerKonfiguration" EntityType="EichenModel.Store.ServerKonfiguration" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ServerLizensierung" EntityType="EichenModel.Store.ServerLizensierung" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ServerLookup_Auswertegeraet" EntityType="EichenModel.Store.ServerLookup_Auswertegeraet" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ServerLookup_Bearbeitungsstatus" EntityType="EichenModel.Store.ServerLookup_Bearbeitungsstatus" store:Type="Tables" Schema="dbo" />
@@ -257,6 +258,7 @@
           <Property Name="UploadDatum" Type="datetime" />
           <Property Name="BearbeitungsDatum" Type="datetime" />
           <Property Name="ErzeugerLizenz" Type="nvarchar" MaxLength="50" />
+          <Property Name="ZurBearbeitungGesperrtDurch" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="ServerKompatiblitaetsnachweis">
           <Key>
@@ -292,6 +294,14 @@
           <Property Name="Kompatiblitaet_AWG_Anschlussart" Type="nvarchar" MaxLength="50" />
           <Property Name="Kompatiblitaet_WZ_Hoechstlast" Type="nvarchar" MaxLength="20" />
         </EntityType>
+        <EntityType Name="ServerKonfiguration">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="LetzteSynchronisierungMitRHEWA" Type="datetime" />
+          <Property Name="NetzwerkpfadFuerDateianhaenge" Type="nvarchar(max)" />
+        </EntityType>
         <EntityType Name="ServerLizensierung">
           <Key>
             <PropertyRef Name="ID" />
@@ -325,7 +335,7 @@
           <Property Name="GrenzwertTemperaturbereichMAX" Type="nvarchar" MaxLength="5" />
           <Property Name="BruchteilEichfehlergrenze" Type="nvarchar" MaxLength="5" />
           <Property Name="KabellaengeQuerschnitt" Type="nvarchar" MaxLength="50" />
-          <Property Name="ErstellDatum" Type="date" />
+          <Property Name="ErstellDatum" Type="datetime" />
           <Property Name="Deaktiviert" Type="bit" />
         </EntityType>
         <EntityType Name="ServerLookup_Bearbeitungsstatus">
@@ -395,7 +405,7 @@
           <Property Name="GrenzwertTemperaturbereichMIN" Type="nvarchar" MaxLength="5" />
           <Property Name="GrenzwertTemperaturbereichMAX" Type="nvarchar" MaxLength="5" />
           <Property Name="BruchteilEichfehlergrenze" Type="nvarchar" MaxLength="5" />
-          <Property Name="ErstellDatum" Type="date" />
+          <Property Name="ErstellDatum" Type="datetime" />
           <Property Name="Deaktiviert" Type="bit" />
         </EntityType>
         <EntityType Name="ServerMogelstatistik">
@@ -977,6 +987,7 @@
             <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
           </AssociationSet>
           <EntitySet Name="ServerVerbindungsprotokoll" EntityType="EichenModel.ServerVerbindungsprotokoll" />
+          <EntitySet Name="ServerKonfiguration" EntityType="EichenModel.ServerKonfiguration" />
         </EntityContainer>
         <EntityType Name="ServerBeschaffenheitspruefung">
           <Key>
@@ -1142,6 +1153,7 @@
           <Property Type="DateTime" Name="UploadDatum" Precision="3" />
           <Property Type="DateTime" Name="BearbeitungsDatum" Precision="3" />
           <Property Type="String" Name="ErzeugerLizenz" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ZurBearbeitungGesperrtDurch" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="ServerKompatiblitaetsnachweis">
           <Key>
@@ -1211,7 +1223,7 @@
           <Property Type="String" Name="GrenzwertTemperaturbereichMAX" MaxLength="5" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="BruchteilEichfehlergrenze" MaxLength="5" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="KabellaengeQuerschnitt" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="DateTime" Name="ErstellDatum" Precision="0" />
+          <Property Type="DateTime" Name="ErstellDatum" Precision="3" />
           <Property Type="Boolean" Name="Deaktiviert" />
           <NavigationProperty Name="ServerEichprozess" Relationship="EichenModel.FK_Eichprozess_Lookup_Auswertegeraet" FromRole="ServerLookup_Auswertegeraet" ToRole="ServerEichprozess" />
           <NavigationProperty Name="ServerMogelstatistik" Relationship="EichenModel.FK_Mogelstatistik_Lookup_Auswertegeraet" FromRole="ServerLookup_Auswertegeraet" ToRole="ServerMogelstatistik" />
@@ -1288,7 +1300,7 @@
           <Property Type="String" Name="GrenzwertTemperaturbereichMIN" MaxLength="5" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="GrenzwertTemperaturbereichMAX" MaxLength="5" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="BruchteilEichfehlergrenze" MaxLength="5" FixedLength="false" Unicode="true" />
-          <Property Type="DateTime" Name="ErstellDatum" Precision="0" />
+          <Property Type="DateTime" Name="ErstellDatum" Precision="3" />
           <Property Type="Boolean" Name="Deaktiviert" />
           <NavigationProperty Name="ServerEichprozess" Relationship="EichenModel.FK_Eichprozess_Lookup_Waegezelle" FromRole="ServerLookup_Waegezelle" ToRole="ServerEichprozess" />
           <NavigationProperty Name="ServerMogelstatistik" Relationship="EichenModel.FK_Mogelstatistik_Lookup_Waegezelle" FromRole="ServerLookup_Waegezelle" ToRole="ServerMogelstatistik" />
@@ -1787,6 +1799,14 @@
           <Property Type="DateTime" Name="Zeitstempel" Precision="3" />
           <Property Type="String" Name="Lizenzschluessel_FK" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
+        <EntityType Name="ServerKonfiguration">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="LetzteSynchronisierungMitRHEWA" Precision="3" />
+          <Property Type="String" Name="NetzwerkpfadFuerDateianhaenge" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1920,6 +1940,7 @@
           <EntitySetMapping Name="ServerEichprozess">
             <EntityTypeMapping TypeName="EichenModel.ServerEichprozess">
               <MappingFragment StoreEntitySet="ServerEichprozess">
+                <ScalarProperty Name="ZurBearbeitungGesperrtDurch" ColumnName="ZurBearbeitungGesperrtDurch" />
                 <ScalarProperty Name="ErzeugerLizenz" ColumnName="ErzeugerLizenz" />
                 <ScalarProperty Name="BearbeitungsDatum" ColumnName="BearbeitungsDatum" />
                 <ScalarProperty Name="UploadDatum" ColumnName="UploadDatum" />
@@ -2301,6 +2322,15 @@
                 <ScalarProperty Name="Windowsbenutzer" ColumnName="Windowsbenutzer" />
                 <ScalarProperty Name="Computername" ColumnName="Computername" />
                 <ScalarProperty Name="Domain" ColumnName="Domain" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServerKonfiguration">
+            <EntityTypeMapping TypeName="EichenModel.ServerKonfiguration">
+              <MappingFragment StoreEntitySet="ServerKonfiguration">
+                <ScalarProperty Name="NetzwerkpfadFuerDateianhaenge" ColumnName="NetzwerkpfadFuerDateianhaenge" />
+                <ScalarProperty Name="LetzteSynchronisierungMitRHEWA" ColumnName="LetzteSynchronisierungMitRHEWA" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
