@@ -25,13 +25,16 @@ Partial Class UcoVersenden
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UcoVersenden))
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.RadLabel1 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControl1 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadButton1 = New Telerik.WinControls.UI.RadButton()
+        Me.RadTextBoxControlUploadPath = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadButtonUploadPath = New Telerik.WinControls.UI.RadButton()
         Me.RadButtonAnRhewaSenden = New Telerik.WinControls.UI.RadButton()
+        Me.BackgroundWorkerUploadFTP = New System.ComponentModel.BackgroundWorker()
+        Me.RadProgressBar = New Telerik.WinControls.UI.RadProgressBar()
         CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxControlUploadPath, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadButtonUploadPath, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonAnRhewaSenden, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadProgressBar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'OpenFileDialog1
@@ -50,51 +53,45 @@ Partial Class UcoVersenden
         Me.RadLabel1.RootElement.Alignment = CType(resources.GetObject("RadLabel1.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel1.RootElement.AngleTransform = CType(resources.GetObject("RadLabel1.RootElement.AngleTransform"), Single)
         Me.RadLabel1.RootElement.FlipText = CType(resources.GetObject("RadLabel1.RootElement.FlipText"), Boolean)
-        Me.RadLabel1.RootElement.KeyTip = resources.GetString("RadLabel1.RootElement.KeyTip")
         Me.RadLabel1.RootElement.Margin = CType(resources.GetObject("RadLabel1.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel1.RootElement.Padding = CType(resources.GetObject("RadLabel1.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel1.RootElement.Text = resources.GetString("RadLabel1.RootElement.Text")
         Me.RadLabel1.RootElement.TextOrientation = CType(resources.GetObject("RadLabel1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel1.RootElement.ToolTipText = resources.GetString("RadLabel1.RootElement.ToolTipText")
         '
-        'RadTextBoxControl1
+        'RadTextBoxControlUploadPath
         '
-        resources.ApplyResources(Me.RadTextBoxControl1, "RadTextBoxControl1")
-        Me.RadTextBoxControl1.IsReadOnly = True
-        Me.RadTextBoxControl1.Name = "RadTextBoxControl1"
-        '
-        '
-        '
-        Me.RadTextBoxControl1.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControl1.RootElement.AccessibleDescription")
-        Me.RadTextBoxControl1.RootElement.AccessibleName = resources.GetString("RadTextBoxControl1.RootElement.AccessibleName")
-        Me.RadTextBoxControl1.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControl1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControl1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControl1.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControl1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControl1.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControl1.RootElement.KeyTip = resources.GetString("RadTextBoxControl1.RootElement.KeyTip")
-        Me.RadTextBoxControl1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControl1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControl1.RootElement.Padding = CType(resources.GetObject("RadTextBoxControl1.RootElement.Padding"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControl1.RootElement.Text = resources.GetString("RadTextBoxControl1.RootElement.Text")
-        Me.RadTextBoxControl1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControl1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControl1.RootElement.ToolTipText = resources.GetString("RadTextBoxControl1.RootElement.ToolTipText")
-        '
-        'RadButton1
-        '
-        resources.ApplyResources(Me.RadButton1, "RadButton1")
-        Me.RadButton1.Name = "RadButton1"
+        Me.RadTextBoxControlUploadPath.IsReadOnly = True
+        resources.ApplyResources(Me.RadTextBoxControlUploadPath, "RadTextBoxControlUploadPath")
+        Me.RadTextBoxControlUploadPath.Name = "RadTextBoxControlUploadPath"
         '
         '
         '
-        Me.RadButton1.RootElement.AccessibleDescription = resources.GetString("RadButton1.RootElement.AccessibleDescription")
-        Me.RadButton1.RootElement.AccessibleName = resources.GetString("RadButton1.RootElement.AccessibleName")
-        Me.RadButton1.RootElement.Alignment = CType(resources.GetObject("RadButton1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadButton1.RootElement.AngleTransform = CType(resources.GetObject("RadButton1.RootElement.AngleTransform"), Single)
-        Me.RadButton1.RootElement.FlipText = CType(resources.GetObject("RadButton1.RootElement.FlipText"), Boolean)
-        Me.RadButton1.RootElement.KeyTip = resources.GetString("RadButton1.RootElement.KeyTip")
-        Me.RadButton1.RootElement.Margin = CType(resources.GetObject("RadButton1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButton1.RootElement.Padding = CType(resources.GetObject("RadButton1.RootElement.Padding"), System.Windows.Forms.Padding)
-        Me.RadButton1.RootElement.Text = resources.GetString("RadButton1.RootElement.Text")
-        Me.RadButton1.RootElement.TextOrientation = CType(resources.GetObject("RadButton1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadButton1.RootElement.ToolTipText = resources.GetString("RadButton1.RootElement.ToolTipText")
+        Me.RadTextBoxControlUploadPath.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlUploadPath.RootElement.AccessibleDescription")
+        Me.RadTextBoxControlUploadPath.RootElement.AccessibleName = resources.GetString("RadTextBoxControlUploadPath.RootElement.AccessibleName")
+        Me.RadTextBoxControlUploadPath.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlUploadPath.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.RadTextBoxControlUploadPath.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlUploadPath.RootElement.AngleTransform"), Single)
+        Me.RadTextBoxControlUploadPath.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlUploadPath.RootElement.FlipText"), Boolean)
+        Me.RadTextBoxControlUploadPath.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlUploadPath.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadTextBoxControlUploadPath.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlUploadPath.RootElement.Padding"), System.Windows.Forms.Padding)
+        Me.RadTextBoxControlUploadPath.RootElement.Text = resources.GetString("RadTextBoxControlUploadPath.RootElement.Text")
+        Me.RadTextBoxControlUploadPath.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlUploadPath.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        '
+        'RadButtonUploadPath
+        '
+        resources.ApplyResources(Me.RadButtonUploadPath, "RadButtonUploadPath")
+        Me.RadButtonUploadPath.Name = "RadButtonUploadPath"
+        '
+        '
+        '
+        Me.RadButtonUploadPath.RootElement.AccessibleDescription = resources.GetString("RadButtonUploadPath.RootElement.AccessibleDescription")
+        Me.RadButtonUploadPath.RootElement.AccessibleName = resources.GetString("RadButtonUploadPath.RootElement.AccessibleName")
+        Me.RadButtonUploadPath.RootElement.Alignment = CType(resources.GetObject("RadButtonUploadPath.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.RadButtonUploadPath.RootElement.AngleTransform = CType(resources.GetObject("RadButtonUploadPath.RootElement.AngleTransform"), Single)
+        Me.RadButtonUploadPath.RootElement.FlipText = CType(resources.GetObject("RadButtonUploadPath.RootElement.FlipText"), Boolean)
+        Me.RadButtonUploadPath.RootElement.Margin = CType(resources.GetObject("RadButtonUploadPath.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadButtonUploadPath.RootElement.Padding = CType(resources.GetObject("RadButtonUploadPath.RootElement.Padding"), System.Windows.Forms.Padding)
+        Me.RadButtonUploadPath.RootElement.Text = resources.GetString("RadButtonUploadPath.RootElement.Text")
+        Me.RadButtonUploadPath.RootElement.TextOrientation = CType(resources.GetObject("RadButtonUploadPath.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
         'RadButtonAnRhewaSenden
         '
@@ -108,34 +105,45 @@ Partial Class UcoVersenden
         Me.RadButtonAnRhewaSenden.RootElement.Alignment = CType(resources.GetObject("RadButtonAnRhewaSenden.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadButtonAnRhewaSenden.RootElement.AngleTransform = CType(resources.GetObject("RadButtonAnRhewaSenden.RootElement.AngleTransform"), Single)
         Me.RadButtonAnRhewaSenden.RootElement.FlipText = CType(resources.GetObject("RadButtonAnRhewaSenden.RootElement.FlipText"), Boolean)
-        Me.RadButtonAnRhewaSenden.RootElement.KeyTip = resources.GetString("RadButtonAnRhewaSenden.RootElement.KeyTip")
         Me.RadButtonAnRhewaSenden.RootElement.Margin = CType(resources.GetObject("RadButtonAnRhewaSenden.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadButtonAnRhewaSenden.RootElement.Padding = CType(resources.GetObject("RadButtonAnRhewaSenden.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadButtonAnRhewaSenden.RootElement.Text = resources.GetString("RadButtonAnRhewaSenden.RootElement.Text")
         Me.RadButtonAnRhewaSenden.RootElement.TextOrientation = CType(resources.GetObject("RadButtonAnRhewaSenden.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadButtonAnRhewaSenden.RootElement.ToolTipText = resources.GetString("RadButtonAnRhewaSenden.RootElement.ToolTipText")
+        '
+        'BackgroundWorkerUploadFTP
+        '
+        Me.BackgroundWorkerUploadFTP.WorkerReportsProgress = True
+        '
+        'RadProgressBar
+        '
+        resources.ApplyResources(Me.RadProgressBar, "RadProgressBar")
+        Me.RadProgressBar.Name = "RadProgressBar"
         '
         'UcoVersenden
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.RadProgressBar)
         Me.Controls.Add(Me.RadButtonAnRhewaSenden)
-        Me.Controls.Add(Me.RadButton1)
-        Me.Controls.Add(Me.RadTextBoxControl1)
+        Me.Controls.Add(Me.RadButtonUploadPath)
+        Me.Controls.Add(Me.RadTextBoxControlUploadPath)
         Me.Controls.Add(Me.RadLabel1)
         Me.Name = "UcoVersenden"
         CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControl1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxControlUploadPath, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadButtonUploadPath, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonAnRhewaSenden, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadProgressBar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
     Friend WithEvents RadLabel1 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControl1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadButton1 As Telerik.WinControls.UI.RadButton
+    Friend WithEvents RadTextBoxControlUploadPath As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadButtonUploadPath As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadButtonAnRhewaSenden As Telerik.WinControls.UI.RadButton
+    Friend WithEvents BackgroundWorkerUploadFTP As System.ComponentModel.BackgroundWorker
+    Friend WithEvents RadProgressBar As Telerik.WinControls.UI.RadProgressBar
 
 End Class

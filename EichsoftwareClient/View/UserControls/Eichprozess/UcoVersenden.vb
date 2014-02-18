@@ -1,7 +1,11 @@
-﻿Public Class UcoVersenden
+﻿Imports System.Net.FtpClient
+Imports System.Net
+Imports System.IO
+
+Public Class UcoVersenden
     Inherits ucoContent
     Private _bolEichprozessIsDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann 
-
+    Private FTPUploadPath As String = "" 'Wert der gesetzt wird, falls ein Dokument zum FTP hochgeladen wird. Dieser wert entspricht dann dem reelen Dateipfad auf dem FTP Server
     Sub New()
         MyBase.New()
         ' Dieser Aufruf ist für den Designer erforderlich.
@@ -33,7 +37,7 @@
         'daten füllen
         LoadFromDatabase()
 
-      
+
         'falls der Eichvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
         If DialogModus = enuDialogModus.lesend Then
             For Each Control In Me.Controls
@@ -97,13 +101,11 @@
             RadButtonAnRhewaSenden.Enabled = False
         End If
 
-        RadTextBoxControl1.Text = objEichprozess.UploadFilePath
+        RadTextBoxControlUploadPath.Text = objEichprozess.UploadFilePath
     End Sub
 
     Private Sub UpdateObject()
-        objEichprozess.UploadFilePath = RadTextBoxControl1.Text
-
-      
+        objEichprozess.UploadFilePath = FTPuploadpath
     End Sub
 
     ''' <summary>
@@ -135,15 +137,12 @@
                             For Each e In ex.EntityValidationErrors
                                 MessageBox.Show(e.ValidationErrors(0).ErrorMessage)
                             Next
+                            Exit Sub
                         End Try
                     End If
                 End If
             End Using
-
-
         End If
-
-       
 
         Using dbcontext As New EichsoftwareClientdatabaseEntities1
             objEichprozess = (From a In dbcontext.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Beschaffenheitspruefung").Include("Mogelstatistik") Select a Where a.ID = objEichprozess.ID).FirstOrDefault
@@ -288,15 +287,30 @@
 
 #End Region
 
-    Private Sub RadButton1_Click(sender As Object, e As EventArgs) Handles RadButton1.Click
+    Private Sub RadButtonUploadPath_Click(sender As Object, e As EventArgs) Handles RadButtonUploadPath.Click
         If OpenFileDialog1.ShowDialog = DialogResult.OK Then
-            RadTextBoxControl1.Text = OpenFileDialog1.FileName
+            RadTextBoxControlUploadPath.Text = OpenFileDialog1.FileName
         End If
     End Sub
 
     Private Sub RadButtonAnRhewaSenden_Click(sender As Object, e As EventArgs) Handles RadButtonAnRhewaSenden.Click
-        SendObject()
         'hinzufügen zur Eichmarkenverwaltung
+
+        If Not RadTextBoxControlUploadPath.Text.Trim.Equals("") Then
+            If IO.File.Exists(RadTextBoxControlUploadPath.Text) Then
+                initFTPUpload()
+            Else
+                SendObject()
+            End If
+        Else
+            SendObject()
+        End If
+
+
+
+
+
+
 
     End Sub
 
@@ -376,8 +390,8 @@
 
 
 
-        Me.RadButton1.Text = resources.GetString("RadButton1.Text")
-      
+        Me.RadButtonUploadPath.Text = resources.GetString("RadButton1.Text")
+
 
 
 
@@ -395,4 +409,165 @@
 
 
     End Sub
+
+
+#Region "FTP Upload"
+    Private Sub initFTPUpload()
+        'initiere FTP Upload in Background thread
+        If Not RadTextBoxControlUploadPath.Text.Trim.Equals("") Then
+            If IO.File.Exists(RadTextBoxControlUploadPath.Text) Then
+                If Not BackgroundWorkerUploadFTP.IsBusy Then
+                    Dim file As New FileInfo(RadTextBoxControlUploadPath.Text)
+
+                    'dateigröße ermitteln
+                    Using stream = file.OpenRead
+                        RadProgressBar.Maximum = stream.Length
+                    End Using
+
+                    Me.ParentFormular.RadButtonNavigateBackwards.Enabled = False
+                    Me.ParentFormular.RadButtonNavigateForwards.Enabled = False
+                    Me.Enabled = False
+                    RadProgressBar.Value1 = 0
+                    RadProgressBar.Visible = True
+
+
+                    BackgroundWorkerUploadFTP.RunWorkerAsync()
+                End If
+            End If
+        End If
+    End Sub
+
+    Private Sub BackgroundWorkerUploadFTP_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorkerUploadFTP.DoWork
+        UploadFileToFTP(e)
+    End Sub
+
+    Private Sub BackgroundWorkerUploadFTP_ProgressChanged(sender As Object, e As System.ComponentModel.ProgressChangedEventArgs) Handles BackgroundWorkerUploadFTP.ProgressChanged
+        Try
+            RadProgressBar.Value1 = e.UserState
+            RadProgressBar.Text = CInt(CInt(e.UserState) / 1024) & " KB/ " & CInt(CInt(RadProgressBar.Maximum) / 1024) & " KB"
+            Me.Refresh()
+        Catch ex As Exception
+        End Try
+    End Sub
+
+    Private Sub BackgroundWorkerUploadFTP_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorkerUploadFTP.RunWorkerCompleted
+        Try
+            RadProgressBar.Visible = False
+            RadProgressBar.Value1 = 0
+            Me.Enabled = True
+            Me.ParentFormular.RadButtonNavigateBackwards.Enabled = True
+            Me.ParentFormular.RadButtonNavigateForwards.Enabled = True
+
+            SendObject()
+        Catch ex As Exception
+        End Try
+    End Sub
+
+    Private Sub UploadFileToFTP(ByVal e As System.ComponentModel.DoWorkEventArgs)
+        Using dbcontext As New EichsoftwareClientdatabaseEntities1
+            Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
+                Try
+                    Webcontext.Open()
+                Catch ex As Exception
+                    MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    Exit Sub
+                End Try
+
+                'daten von WebDB holen
+                Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
+                Dim objFTPDaten = Webcontext.GetFTPCredentials(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, objEichprozess.Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+
+
+                'öffnen der FTP connection
+                If Not objFTPDaten Is Nothing Then
+                    Using conn As New FtpClient()
+
+
+                        'get decrypted Password and configuration from Database
+
+                        Dim password As String = objFTPDaten.FTPEncryptedPassword
+                        ' original plaintext
+                        Dim passPhrase As String = "Pas5pr@se"
+                        ' can be any string
+                        Dim saltValue As String = objFTPDaten.FTPSaltKey
+                        ' can be any string
+                        Dim hashAlgorithm As String = "SHA1"
+                        ' can be "MD5"
+                        Dim passwordIterations As Integer = 2
+                        ' can be any number
+                        Dim initVector As String = "@1B2c3D4e5F6g7H8"
+                        ' must be 16 bytes
+                        Dim keySize As Integer = 256
+                        ' can be 192 or 128
+
+
+                        password = RijndaelSimple.Decrypt(password, passPhrase, saltValue, hashAlgorithm, passwordIterations, initVector, _
+                            keySize)
+
+
+                        'FTP Upload
+                        conn.Host = objFTPDaten.FTPServername
+                        conn.Credentials = New NetworkCredential(objFTPDaten.FTPUserName, password)
+                        conn.Connect()
+
+                        If conn.IsConnected Then
+                            Dim file As New FileInfo(RadTextBoxControlUploadPath.Text)
+
+                            Dim extension As String = file.Extension
+                            Dim Filename As String = file.Name.Replace(extension, "")
+                            Dim FileNameOriginal As String = Filename
+
+                            'check if file exists
+                            Dim counter As Integer = 0
+                            If conn.FileExists(Filename & extension) Then
+                                'versuche es erneut
+                                Do
+                                    counter += 1
+                                    Filename = FileNameOriginal & "(" & counter & ")"
+                                Loop While conn.FileExists(Filename & extension)
+                            End If
+
+                            Using ostream As Stream = conn.OpenWrite(Filename & extension)
+                                ' istream.Position is incremented accordingly to the writes you perform
+
+                                FTPUploadPath = Filename & extension
+
+                                Try
+                                    Dim sumbytes As Integer
+                                    Const buffer As Integer = 2048
+                                    Dim contentRead As Byte() = New Byte(buffer - 1) {}
+                                    Dim bytesRead As Integer
+
+                                    Using fs As FileStream = file.OpenRead()
+                                        Do
+                                            bytesRead = fs.Read(contentRead, 0, buffer)
+                                            sumbytes += bytesRead
+
+                                            If bytesRead > 0 Then
+                                                ostream.Write(contentRead, 0, bytesRead)
+                                                BackgroundWorkerUploadFTP.ReportProgress(0, sumbytes)
+                                            End If
+                                        Loop While (bytesRead > 0)
+                                        fs.Close()
+                                    End Using
+
+
+                                Finally
+
+                                    ostream.Close()
+                                End Try
+                            End Using
+                        End If
+
+
+                    End Using
+                End If
+            End Using
+        End Using
+
+        'objEichprozess.UploadFilePath = FTPResult
+    End Sub
+
+#End Region
+
 End Class

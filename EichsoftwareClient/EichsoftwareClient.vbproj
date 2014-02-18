@@ -108,6 +108,10 @@
     <Reference Include="System.Deployment" />
     <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.FtpClient, Version=1.0.5120.18989, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLLs\System.Net.FtpClient.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.ServiceModel" />
@@ -195,6 +199,7 @@
       <DependentUpon>EntityModelDatabaseClient.tt</DependentUpon>
     </Compile>
     <Compile Include="MainModule.vb" />
+    <Compile Include="Model\clsCrypto.vb" />
     <Compile Include="Model\clsServerHelper.vb" />
     <Compile Include="Model\Win32APICall.vb" />
     <Compile Include="Mogelstatistik.vb">
@@ -726,6 +731,9 @@
     <EmbeddedResource Include="View\UserControls\Eichprozess\UcoVersenden.de.resx">
       <DependentUpon>UcoVersenden.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\UcoVersenden.pl.resx">
+      <DependentUpon>UcoVersenden.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\UcoVersenden.resx">
       <DependentUpon>UcoVersenden.vb</DependentUpon>
     </EmbeddedResource>
@@ -799,6 +807,9 @@
     <None Include="Resources\Ersteichung EN.doc" />
     <None Include="Resources\Ersteichung PL.doc" />
     <None Include="Service References\EichsoftwareWebservice\EichsoftwareClient.EichsoftwareWebservice.clsEichprozessFuerAuswahlliste.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EichsoftwareWebservice\EichsoftwareClient.EichsoftwareWebservice.clsServerFTPDaten.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\EichsoftwareWebservice\EichsoftwareClient.EichsoftwareWebservice.ServerEichprozess.datasource">
@@ -885,6 +896,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DLLs\System.Net.FtpClient.dll" />
+    <Content Include="DLLs\System.Net.FtpClient.XML" />
     <Content Include="EichsoftwareClientdatabase.sdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -954,6 +967,7 @@
     <None Include="Resources\error.png" />
     <None Include="Resources\database_refresh.png" />
     <None Include="Resources\cog.png" />
+    <None Include="Resources\attach.png" />
     <Content Include="Resources\report_add.png" />
     <Content Include="Resources\report_delete.png" />
     <Content Include="Resources\report_edit.png" />

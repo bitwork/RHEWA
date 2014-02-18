@@ -20,7 +20,7 @@ Public Class ucoEichprozessauswahlliste
         MyBase.New(pParentForm, Nothing, Nothing)
         ' Dieser Aufruf ist für den Designer erforderlich.
         InitializeComponent()
-        Me.RadGridView1.MasterTemplate.AutoExpandGroups = True
+        Me.RadGridViewRHEWAAlle.MasterTemplate.AutoExpandGroups = True
         ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
         _ParentForm = pParentForm
     End Sub
@@ -88,44 +88,44 @@ Public Class ucoEichprozessauswahlliste
     End Sub
     Private Sub ForceActivation()
         Try
-        
-
-                Using DBContext As New EichsoftwareClientdatabaseEntities1
-                    'prüfen ob die Lizenz gültig ist
-                    Dim name As String = "Tim"
-                    Dim Schluessel As String = "Hill"
 
 
-                    Dim objLic As New Lizensierung
-                    objLic.FK_SuperofficeBenutzer = name
-                    objLic.Lizenzschluessel = Schluessel
+            Using DBContext As New EichsoftwareClientdatabaseEntities1
+                'prüfen ob die Lizenz gültig ist
+                Dim name As String = "Tim"
+                Dim Schluessel As String = "Hill"
 
-                        objLic.RHEWALizenz = True
-                  
 
-                    Try
-                        'löschen der lokalen DB
-                        For Each lic In DBContext.Lizensierung
-                            DBContext.Lizensierung.Remove(lic)
-                        Next
-                        DBContext.SaveChanges()
-                    Catch ex As Exception
-                    End Try
-                    Try
-                        'speichern in lokaler DB
-                        DBContext.Lizensierung.Add(objLic)
-                        DBContext.SaveChanges()
-                    Catch ex As Exception
-                    End Try
-                    My.Settings.Lizensiert = True
-                    My.Settings.RHEWALizenz = objLic.RHEWALizenz
-                    My.Settings.Save()
+                Dim objLic As New Lizensierung
+                objLic.FK_SuperofficeBenutzer = name
+                objLic.Lizenzschluessel = Schluessel
+
+                objLic.RHEWALizenz = True
+
+
+                Try
+                    'löschen der lokalen DB
+                    For Each lic In DBContext.Lizensierung
+                        DBContext.Lizensierung.Remove(lic)
+                    Next
+                    DBContext.SaveChanges()
+                Catch ex As Exception
+                End Try
+                Try
+                    'speichern in lokaler DB
+                    DBContext.Lizensierung.Add(objLic)
+                    DBContext.SaveChanges()
+                Catch ex As Exception
+                End Try
+                My.Settings.Lizensiert = True
+                My.Settings.RHEWALizenz = objLic.RHEWALizenz
+                My.Settings.Save()
 
             End Using
 
         Catch ex As Exception
             MessageBox.Show(ex.Message, My.Resources.GlobaleLokalisierung.Fehler)
-      
+
         End Try
     End Sub
 
@@ -425,7 +425,6 @@ Public Class ucoEichprozessauswahlliste
                 Using dbcontext As New EichsoftwareClientdatabaseEntities1
                     Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
                     Try
-
                         e.Result = WebContext.GetAlleEichprozesse(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
                     Catch ex As Exception
                     End Try
@@ -438,22 +437,22 @@ Public Class ucoEichprozessauswahlliste
 
     Private Sub BackgroundWorkerLoadFromDatabaseRHEWA_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorkerLoadFromDatabaseRHEWA.RunWorkerCompleted
         'zuweisen der Ergebnismenge als Datenquelle für das Grid
-        RadGridView1.DataSource = e.Result
+        RadGridViewRHEWAAlle.DataSource = e.Result
         Try
             Try
                 'Spalten ein und ausblenden und formatieren
                 'ausblenden von internen spalten
-                RadGridView1.Columns("ID").IsVisible = False
-                RadGridView1.Columns("Vorgangsnummer").IsVisible = False
-                RadGridView1.Columns("Gesperrtdurch").HeaderText = "Gesperrt durch"
+                RadGridViewRHEWAAlle.Columns("ID").IsVisible = False
+                RadGridViewRHEWAAlle.Columns("Vorgangsnummer").IsVisible = False
+                RadGridViewRHEWAAlle.Columns("Gesperrtdurch").HeaderText = "Gesperrt durch"
             Catch ex As Exception
             End Try
 
-            RadGridView1.BestFitColumns()
-            RadGridView1.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
-            RadGridView1.BestFitColumns()
-            RadGridView1.EnableAlternatingRowColor = True
-            RadGridView1.ShowNoDataText = True
+            RadGridViewRHEWAAlle.BestFitColumns()
+            RadGridViewRHEWAAlle.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
+            RadGridViewRHEWAAlle.BestFitColumns()
+            RadGridViewRHEWAAlle.EnableAlternatingRowColor = True
+            RadGridViewRHEWAAlle.ShowNoDataText = True
             Me.Enabled = True
         Catch ex As Exception
         End Try
@@ -461,11 +460,11 @@ Public Class ucoEichprozessauswahlliste
 
 
     Private Sub ShowEichprozess()
-        If RadGridView1.SelectedRows.Count > 0 Then
+        If RadGridViewRHEWAAlle.SelectedRows.Count > 0 Then
             'prüfen ob das ausgewählte element eine REcord Row und kein Groupheader, Filter oder anderes ist
-            If TypeOf RadGridView1.SelectedRows(0) Is Telerik.WinControls.UI.GridViewDataRowInfo Then
+            If TypeOf RadGridViewRHEWAAlle.SelectedRows(0) Is Telerik.WinControls.UI.GridViewDataRowInfo Then
                 Dim SelectedID As String = "" 'Variable zum Speichern der Vorgangsnummer des aktuellen Prozesses
-                SelectedID = RadGridView1.SelectedRows(0).Cells("Vorgangsnummer").Value
+                SelectedID = RadGridViewRHEWAAlle.SelectedRows(0).Cells("Vorgangsnummer").Value
 
                 'neue Datenbankverbindung
                 Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
@@ -533,11 +532,11 @@ Public Class ucoEichprozessauswahlliste
     End Sub
 
     Private Sub RadButtonEichprozessGenehmigen_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonEichprozessGenehmigenRHEWA.Click
-        If RadGridView1.SelectedRows.Count > 0 Then
+        If RadGridViewRHEWAAlle.SelectedRows.Count > 0 Then
             'prüfen ob das ausgewählte element eine REcord Row und kein Groupheader, Filter oder anderes ist
-            If TypeOf RadGridView1.SelectedRows(0) Is Telerik.WinControls.UI.GridViewDataRowInfo Then
+            If TypeOf RadGridViewRHEWAAlle.SelectedRows(0) Is Telerik.WinControls.UI.GridViewDataRowInfo Then
                 Dim SelectedID As String = "" 'Variable zum Speichern der Vorgangsnummer des aktuellen Prozesses
-                SelectedID = RadGridView1.SelectedRows(0).Cells("ID").Value
+                SelectedID = RadGridViewRHEWAAlle.SelectedRows(0).Cells("ID").Value
                 If MessageBox.Show(My.Resources.GlobaleLokalisierung.Frage_Genehmigen, My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
 
                     'neue Datenbankverbindung
@@ -582,11 +581,11 @@ Public Class ucoEichprozessauswahlliste
     End Sub
 
     Private Sub RadButtonEichprozessAblehnen_click(sender As System.Object, e As System.EventArgs) Handles RadButtonEichprozessAblehnenRHEWA.Click
-        If RadGridView1.SelectedRows.Count > 0 Then
+        If RadGridViewRHEWAAlle.SelectedRows.Count > 0 Then
             'prüfen ob das ausgewählte element eine REcord Row und kein Groupheader, Filter oder anderes ist
-            If TypeOf RadGridView1.SelectedRows(0) Is Telerik.WinControls.UI.GridViewDataRowInfo Then
+            If TypeOf RadGridViewRHEWAAlle.SelectedRows(0) Is Telerik.WinControls.UI.GridViewDataRowInfo Then
                 Dim SelectedID As String = "" 'Variable zum Speichern der Vorgangsnummer des aktuellen Prozesses
-                SelectedID = RadGridView1.SelectedRows(0).Cells("ID").Value
+                SelectedID = RadGridViewRHEWAAlle.SelectedRows(0).Cells("ID").Value
 
                 If MessageBox.Show(My.Resources.GlobaleLokalisierung.Frage_Ablehnen, My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
                     'neue Datenbankverbindung
@@ -598,7 +597,7 @@ Public Class ucoEichprozessauswahlliste
                             Exit Sub
                         End Try
 
-                      
+
                         Using dbcontext As New EichsoftwareClientdatabaseEntities1
                             Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
 
@@ -644,9 +643,59 @@ Public Class ucoEichprozessauswahlliste
         ShowEichprozess()
     End Sub
 
-    Private Sub RadGridView1_DoubleClick(sender As Object, e As EventArgs) Handles RadGridView1.DoubleClick
-        ShowEichprozess()
+   
+    ''' <summary>
+    ''' Einblenden eines Anhang Symbols für Anträge mit Dateianhang
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub RadGridViewRHEWAAlle_CellFormatting(sender As Object, e As Telerik.WinControls.UI.CellFormattingEventArgs) Handles RadGridViewRHEWAAlle.CellFormatting
+        Try
+            If (RadGridViewRHEWAAlle.Columns(e.ColumnIndex).Name = "AnhangPfad") Then
+                If e.CellElement.Text.Trim.Equals("") = False Then
+                    e.CellElement.Value = e.CellElement.Text
+                    e.CellElement.Text = ""
+                    e.CellElement.Image = My.Resources.attach
+                End If
+            End If
+        Catch ex As Exception
+        End Try
     End Sub
+
+    ''' <summary>
+    ''' öffnen des Dateianhangs
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub RadGridViewRHEWAAlle_CellDoubleClick(sender As Object, e As Telerik.WinControls.UI.GridViewCellEventArgs) Handles RadGridViewRHEWAAlle.CellDoubleClick
+        Try
+            If (RadGridViewRHEWAAlle.Columns(e.ColumnIndex).Name = "AnhangPfad") Then
+                If e.Value.Trim.Equals("") = False Then
+                    Try
+                        If IO.File.Exists(e.Value) Then
+                            Dim proc As Process = New Process()
+                            proc.StartInfo.FileName = e.Value
+                            proc.StartInfo.UseShellExecute = True
+                            proc.Start()
+                        Else
+                            MessageBox.Show("Konnte Datei am Pfad: " & e.Value & "nicht finden")
+                        End If
+                    Catch ex As Exception
+
+                    End Try
+                Else
+                    ShowEichprozess()
+                End If
+            Else
+                ShowEichprozess()
+            End If
+        Catch ex As Exception
+        End Try
+    End Sub
+
+    
 
 #End Region
 
@@ -664,16 +713,16 @@ Public Class ucoEichprozessauswahlliste
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    Private Sub RadGridView1_SelectionChanged(sender As System.Object, e As System.EventArgs) Handles RadGridView1.SelectionChanged
+    Private Sub RadGridView1_SelectionChanged(sender As System.Object, e As System.EventArgs) Handles RadGridViewRHEWAAlle.SelectionChanged
         Try
             RadButtonEichprozessAblehnenRHEWA.Enabled = False
             RadButtonEichprozessGenehmigenRHEWA.Enabled = False
 
-            If RadGridView1.SelectedRows.Count > 0 Then
+            If RadGridViewRHEWAAlle.SelectedRows.Count > 0 Then
                 'prüfen ob das ausgewählte element eine REcord Row und kein Groupheader, Filter oder anderes ist
-                If TypeOf RadGridView1.SelectedRows(0) Is Telerik.WinControls.UI.GridViewDataRowInfo Then
+                If TypeOf RadGridViewRHEWAAlle.SelectedRows(0) Is Telerik.WinControls.UI.GridViewDataRowInfo Then
                     Dim SelectedStatus As String = "" 'Variable zum Speichern des BearbeitungsStatuses des aktuellen Prozesses
-                    SelectedStatus = RadGridView1.SelectedRows(0).Cells("Bearbeitungsstatus").Value
+                    SelectedStatus = RadGridViewRHEWAAlle.SelectedRows(0).Cells("Bearbeitungsstatus").Value
 
                     If SelectedStatus.ToLower = "genehmigt" Then
                         RadButtonEichprozessAblehnenRHEWA.Enabled = False
@@ -696,11 +745,11 @@ Public Class ucoEichprozessauswahlliste
         End Try
     End Sub
     Private Sub GetLokaleKopieVonEichprozess()
-        If RadGridView1.SelectedRows.Count > 0 Then
+        If RadGridViewRHEWAAlle.SelectedRows.Count > 0 Then
             'prüfen ob das ausgewählte element eine REcord Row und kein Groupheader, Filter oder anderes ist
-            If TypeOf RadGridView1.SelectedRows(0) Is Telerik.WinControls.UI.GridViewDataRowInfo Then
+            If TypeOf RadGridViewRHEWAAlle.SelectedRows(0) Is Telerik.WinControls.UI.GridViewDataRowInfo Then
                 Dim SelectedID As String = "" 'Variable zum Speichern der Vorgangsnummer des aktuellen Prozesses
-                SelectedID = RadGridView1.SelectedRows(0).Cells("Vorgangsnummer").Value
+                SelectedID = RadGridViewRHEWAAlle.SelectedRows(0).Cells("Vorgangsnummer").Value
 
                 If MessageBox.Show(My.Resources.GlobaleLokalisierung.Frage_Kopieren, My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
                     'neue Datenbankverbindung
@@ -828,23 +877,24 @@ Public Class ucoEichprozessauswahlliste
         If bolSyncData Then
 
         'für den Fall das die Anwendung gerade erst installiert wurde, oder die einstellung zur Synchronisierung geändert wurde, sollen alle Eichungen vom RHEWA Server geholt werden, die einmal angelegt wurden
-        LoescheLokaleDatenbank()
-        My.Settings.LetztesUpdate = "01.01.2000"
-        My.Settings.Save()
-        'hole alle WZ
-        GetNeueWZ(False)
-        'prüfen ob es neue AWG gibt
-        GetNeuesAWG(False)
+            If LoescheLokaleDatenbank() Then
+                My.Settings.LetztesUpdate = "01.01.2000"
+                My.Settings.Save()
+                'hole alle WZ
+                GetNeueWZ(False)
+                'prüfen ob es neue AWG gibt
+                GetNeuesAWG(False)
 
-        My.Settings.LetztesUpdate = Date.Now
-        My.Settings.Save()
-
-
-        GetEichprotokolleVomServer()
-        My.Settings.HoleAlleEigenenEichungenVomServer = False
-        My.Settings.Save()
+                My.Settings.LetztesUpdate = Date.Now
+                My.Settings.Save()
 
 
+                GetEichprotokolleVomServer()
+                My.Settings.HoleAlleEigenenEichungenVomServer = False
+                My.Settings.Save()
+
+
+            End If
         End If
 
     End Sub
@@ -901,7 +951,7 @@ Public Class ucoEichprozessauswahlliste
     End Sub
 
     'löscht lokale Datenbank, für resyncronisierung
-    Private Sub LoescheLokaleDatenbank()
+    Private Function LoescheLokaleDatenbank() As Boolean
         Try
             Using DBContext As New EichsoftwareClientdatabaseEntities1
 
@@ -913,6 +963,9 @@ Public Class ucoEichprozessauswahlliste
                 Next
                 For Each obj In DBContext.Beschaffenheitspruefung
                     DBContext.Beschaffenheitspruefung.Remove(obj)
+                Next
+                For Each obj In DBContext.Mogelstatistik
+                    DBContext.Mogelstatistik.Remove(obj)
                 Next
                 For Each obj In DBContext.Kompatiblitaetsnachweis
                     DBContext.Kompatiblitaetsnachweis.Remove(obj)
@@ -959,12 +1012,22 @@ Public Class ucoEichprozessauswahlliste
 
                 'DBContext.Lizensierung.Add(objLic)
                 DBContext.SaveChanges()
-
+                Return True
             End Using
         Catch ex As Exception
             MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Try
+                MessageBox.Show(ex.InnerException.StackTrace, ex.InnerException.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Try
+                    MessageBox.Show(ex.InnerException.InnerException.StackTrace, ex.InnerException.InnerException.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Catch ex3 As Exception
+                End Try
+            Catch ex2 As Exception
+            End Try
+
+            Return False
         End Try
-    End Sub
+    End Function
 
     'holt alle einem zugehörigen Eichprotokolle vom RHEWA Server. z.B. wenn die anwendung auf einem neuem PC installiert wurde
     Private Sub GetEichprotokolleVomServer()

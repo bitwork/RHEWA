@@ -49,6 +49,10 @@ Public Interface IEichsoftwareWebservice
 
     <OperationContract()>
     Function SetSperrung(ByVal bolSperren As Boolean, ByVal Name As String, Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As String
+
+    <OperationContract()>
+    Function GetFTPCredentials(ByVal Name As String, Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As clsServerFTPDaten
+
 End Interface
 
 #Region "Klassen für Client"

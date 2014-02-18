@@ -14,5 +14,9 @@ Partial Public Class ServerKonfiguration
     Public Property ID As Integer
     Public Property LetzteSynchronisierungMitRHEWA As Nullable(Of Date)
     Public Property NetzwerkpfadFuerDateianhaenge As String
+    Public Property FTPServerAdresse As String
+    Public Property FTPServerBenutzername As String
+    Public Property FTPServerEnkodiertesPasswort As String
+    Public Property FTPServerCryptoSaltKey As String
 
 End Class

@@ -6504,6 +6504,9 @@ Namespace EichsoftwareWebservice
         Private AWGField As String
         
         <System.Runtime.Serialization.OptionalFieldAttribute()>  _
+        Private AnhangPfadField As String
+        
+        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private BearbeitungsstatusField As String
         
         <System.Runtime.Serialization.OptionalFieldAttribute()>  _
@@ -6549,6 +6552,19 @@ Namespace EichsoftwareWebservice
                 If (Object.ReferenceEquals(Me.AWGField, value) <> true) Then
                     Me.AWGField = value
                     Me.RaisePropertyChanged("AWG")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
+        Public Property AnhangPfad() As String
+            Get
+                Return Me.AnhangPfadField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me.AnhangPfadField, value) <> true) Then
+                    Me.AnhangPfadField = value
+                    Me.RaisePropertyChanged("AnhangPfad")
                 End If
             End Set
         End Property
@@ -6680,6 +6696,101 @@ Namespace EichsoftwareWebservice
         End Sub
     End Class
     
+    <System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0"),  _
+     System.Runtime.Serialization.DataContractAttribute(Name:="clsServerFTPDaten", [Namespace]:="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice"),  _
+     System.SerializableAttribute()>  _
+    Partial Public Class clsServerFTPDaten
+        Inherits Object
+        Implements System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged
+        
+        <System.NonSerializedAttribute()>  _
+        Private extensionDataField As System.Runtime.Serialization.ExtensionDataObject
+        
+        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
+        Private FTPEncryptedPasswordField As String
+        
+        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
+        Private FTPSaltKeyField As String
+        
+        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
+        Private FTPServernameField As String
+        
+        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
+        Private FTPUserNameField As String
+        
+        <Global.System.ComponentModel.BrowsableAttribute(false)>  _
+        Public Property ExtensionData() As System.Runtime.Serialization.ExtensionDataObject Implements System.Runtime.Serialization.IExtensibleDataObject.ExtensionData
+            Get
+                Return Me.extensionDataField
+            End Get
+            Set
+                Me.extensionDataField = value
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
+        Public Property FTPEncryptedPassword() As String
+            Get
+                Return Me.FTPEncryptedPasswordField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me.FTPEncryptedPasswordField, value) <> true) Then
+                    Me.FTPEncryptedPasswordField = value
+                    Me.RaisePropertyChanged("FTPEncryptedPassword")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
+        Public Property FTPSaltKey() As String
+            Get
+                Return Me.FTPSaltKeyField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me.FTPSaltKeyField, value) <> true) Then
+                    Me.FTPSaltKeyField = value
+                    Me.RaisePropertyChanged("FTPSaltKey")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
+        Public Property FTPServername() As String
+            Get
+                Return Me.FTPServernameField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me.FTPServernameField, value) <> true) Then
+                    Me.FTPServernameField = value
+                    Me.RaisePropertyChanged("FTPServername")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
+        Public Property FTPUserName() As String
+            Get
+                Return Me.FTPUserNameField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me.FTPUserNameField, value) <> true) Then
+                    Me.FTPUserNameField = value
+                    Me.RaisePropertyChanged("FTPUserName")
+                End If
+            End Set
+        End Property
+        
+        Public Event PropertyChanged As System.ComponentModel.PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+        
+        Protected Sub RaisePropertyChanged(ByVal propertyName As String)
+            Dim propertyChanged As System.ComponentModel.PropertyChangedEventHandler = Me.PropertyChangedEvent
+            If (Not (propertyChanged) Is Nothing) Then
+                propertyChanged(Me, New System.ComponentModel.PropertyChangedEventArgs(propertyName))
+            End If
+        End Sub
+    End Class
+    
     <System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0"),  _
      System.ServiceModel.ServiceContractAttribute(ConfigurationName:="EichsoftwareWebservice.IEichsoftwareWebservice")>  _
     Public Interface IEichsoftwareWebservice
@@ -6731,6 +6842,9 @@ Namespace EichsoftwareWebservice
         
         <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IEichsoftwareWebservice/SetSperrung", ReplyAction:="http://tempuri.org/IEichsoftwareWebservice/SetSperrungResponse")>  _
         Function SetSperrung(ByVal bolSperren As Boolean, ByVal Name As String, ByVal Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As String
+        
+        <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IEichsoftwareWebservice/GetFTPCredentials", ReplyAction:="http://tempuri.org/IEichsoftwareWebservice/GetFTPCredentialsResponse")>  _
+        Function GetFTPCredentials(ByVal Name As String, ByVal Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As EichsoftwareWebservice.clsServerFTPDaten
     End Interface
     
     <System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")>  _
@@ -6826,6 +6940,10 @@ Namespace EichsoftwareWebservice
         
         Public Function SetSperrung(ByVal bolSperren As Boolean, ByVal Name As String, ByVal Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As String Implements EichsoftwareWebservice.IEichsoftwareWebservice.SetSperrung
             Return MyBase.Channel.SetSperrung(bolSperren, Name, Lizenzschluessel, Vorgangsnummer, WindowsUsername, Domainname, Computername)
+        End Function
+        
+        Public Function GetFTPCredentials(ByVal Name As String, ByVal Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As EichsoftwareWebservice.clsServerFTPDaten Implements EichsoftwareWebservice.IEichsoftwareWebservice.GetFTPCredentials
+            Return MyBase.Channel.GetFTPCredentials(Name, Lizenzschluessel, Vorgangsnummer, WindowsUsername, Domainname, Computername)
         End Function
     End Class
 End Namespace

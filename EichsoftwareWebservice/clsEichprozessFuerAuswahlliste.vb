@@ -9,5 +9,5 @@
     Public Property Eichbevollmaechtigter As String = ""
     Public Property Bearbeitungsstatus As String = ""
     Public Property GesperrtDurch As String = ""
-
+    Public Property AnhangPfad As String = ""
 End Class

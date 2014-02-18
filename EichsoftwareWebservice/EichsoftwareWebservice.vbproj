@@ -127,6 +127,7 @@
   <ItemGroup>
     <Compile Include="ApplyCyclicDataContractSerializerOperationBehavior.vb" />
     <Compile Include="clsEichprozessFuerAuswahlliste.vb" />
+    <Compile Include="clsServerFTPDaten.vb" />
     <Compile Include="CyclicReferencesAwareAttribute.vb" />
     <Compile Include="CyclicReferencesAwareContractBehavior.vb" />
     <Compile Include="EichsoftwareWebservice.svc.vb">

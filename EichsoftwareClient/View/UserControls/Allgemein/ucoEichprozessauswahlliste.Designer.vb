@@ -27,6 +27,7 @@ Partial Class ucoEichprozessauswahlliste
         Me.BackgroundWorkerLoadFromDatabase = New System.ComponentModel.BackgroundWorker()
         Me.RadPageView1 = New Telerik.WinControls.UI.RadPageView()
         Me.RadPageViewPageEigene = New Telerik.WinControls.UI.RadPageViewPage()
+        Me.RadButtonEinstellungen = New Telerik.WinControls.UI.RadButton()
         Me.RadButtonClientUpdateDatabase = New Telerik.WinControls.UI.RadButton()
         Me.RadCheckBoxAusblendenClientGeloeschterDokumente = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadButtonClientAusblenden = New Telerik.WinControls.UI.RadButton()
@@ -36,15 +37,15 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadButtonEichprozessKopierenRHEWA = New Telerik.WinControls.UI.RadButton()
         Me.RadButtonEichprozessAblehnenRHEWA = New Telerik.WinControls.UI.RadButton()
         Me.RadButtonEichprozessGenehmigenRHEWA = New Telerik.WinControls.UI.RadButton()
-        Me.RadGridView1 = New Telerik.WinControls.UI.RadGridView()
+        Me.RadGridViewRHEWAAlle = New Telerik.WinControls.UI.RadGridView()
         Me.RadButtonEichungAnsehenRHEWA = New Telerik.WinControls.UI.RadButton()
         Me.BackgroundWorkerLoadFromDatabaseRHEWA = New System.ComponentModel.BackgroundWorker()
-        Me.RadButtonEinstellungen = New Telerik.WinControls.UI.RadButton()
         CType(Me.RadGridViewAuswahlliste, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGridViewAuswahlliste.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadPageView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadPageView1.SuspendLayout()
         Me.RadPageViewPageEigene.SuspendLayout()
+        CType(Me.RadButtonEinstellungen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonClientUpdateDatabase, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadCheckBoxAusblendenClientGeloeschterDokumente, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonClientAusblenden, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -54,10 +55,9 @@ Partial Class ucoEichprozessauswahlliste
         CType(Me.RadButtonEichprozessKopierenRHEWA, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonEichprozessAblehnenRHEWA, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonEichprozessGenehmigenRHEWA, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadGridView1.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadGridViewRHEWAAlle, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadGridViewRHEWAAlle.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonEichungAnsehenRHEWA, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButtonEinstellungen, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'RadGridViewAuswahlliste
@@ -122,6 +122,30 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadPageViewPageEigene.Controls.Add(Me.RadButtonClientBearbeiten)
         resources.ApplyResources(Me.RadPageViewPageEigene, "RadPageViewPageEigene")
         Me.RadPageViewPageEigene.Name = "RadPageViewPageEigene"
+        '
+        'RadButtonEinstellungen
+        '
+        resources.ApplyResources(Me.RadButtonEinstellungen, "RadButtonEinstellungen")
+        Me.RadButtonEinstellungen.BackColor = System.Drawing.Color.Transparent
+        Me.RadButtonEinstellungen.Image = Global.EichsoftwareClient.My.Resources.Resources.cog
+        Me.RadButtonEinstellungen.Name = "RadButtonEinstellungen"
+        '
+        '
+        '
+        Me.RadButtonEinstellungen.RootElement.AccessibleDescription = resources.GetString("RadButtonEinstellungen.RootElement.AccessibleDescription")
+        Me.RadButtonEinstellungen.RootElement.AccessibleName = resources.GetString("RadButtonEinstellungen.RootElement.AccessibleName")
+        Me.RadButtonEinstellungen.RootElement.Alignment = CType(resources.GetObject("RadButtonEinstellungen.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.RadButtonEinstellungen.RootElement.AngleTransform = CType(resources.GetObject("RadButtonEinstellungen.RootElement.AngleTransform"), Single)
+        Me.RadButtonEinstellungen.RootElement.FlipText = CType(resources.GetObject("RadButtonEinstellungen.RootElement.FlipText"), Boolean)
+        Me.RadButtonEinstellungen.RootElement.Margin = CType(resources.GetObject("RadButtonEinstellungen.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadButtonEinstellungen.RootElement.Padding = CType(resources.GetObject("RadButtonEinstellungen.RootElement.Padding"), System.Windows.Forms.Padding)
+        Me.RadButtonEinstellungen.RootElement.Text = resources.GetString("RadButtonEinstellungen.RootElement.Text")
+        Me.RadButtonEinstellungen.RootElement.TextOrientation = CType(resources.GetObject("RadButtonEinstellungen.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        CType(Me.RadButtonEinstellungen.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = Global.EichsoftwareClient.My.Resources.Resources.cog
+        CType(Me.RadButtonEinstellungen.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
+        CType(Me.RadButtonEinstellungen.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        CType(Me.RadButtonEinstellungen.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = resources.GetString("resource.Text")
+        CType(Me.RadButtonEinstellungen.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Shape = Nothing
         '
         'RadButtonClientUpdateDatabase
         '
@@ -218,7 +242,7 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadPageViewPageAlle.Controls.Add(Me.RadButtonEichprozessKopierenRHEWA)
         Me.RadPageViewPageAlle.Controls.Add(Me.RadButtonEichprozessAblehnenRHEWA)
         Me.RadPageViewPageAlle.Controls.Add(Me.RadButtonEichprozessGenehmigenRHEWA)
-        Me.RadPageViewPageAlle.Controls.Add(Me.RadGridView1)
+        Me.RadPageViewPageAlle.Controls.Add(Me.RadGridViewRHEWAAlle)
         Me.RadPageViewPageAlle.Controls.Add(Me.RadButtonEichungAnsehenRHEWA)
         resources.ApplyResources(Me.RadPageViewPageAlle, "RadPageViewPageAlle")
         Me.RadPageViewPageAlle.Name = "RadPageViewPageAlle"
@@ -277,31 +301,31 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadButtonEichprozessGenehmigenRHEWA.RootElement.Text = resources.GetString("RadButtonEichprozessGenehmigenRHEWA.RootElement.Text")
         Me.RadButtonEichprozessGenehmigenRHEWA.RootElement.TextOrientation = CType(resources.GetObject("RadButtonEichprozessGenehmigenRHEWA.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
-        'RadGridView1
+        'RadGridViewRHEWAAlle
         '
-        resources.ApplyResources(Me.RadGridView1, "RadGridView1")
+        resources.ApplyResources(Me.RadGridViewRHEWAAlle, "RadGridViewRHEWAAlle")
+        '
+        'RadGridViewRHEWAAlle
+        '
+        Me.RadGridViewRHEWAAlle.MasterTemplate.AllowAddNewRow = False
+        Me.RadGridViewRHEWAAlle.MasterTemplate.AllowCellContextMenu = False
+        Me.RadGridViewRHEWAAlle.MasterTemplate.AllowDeleteRow = False
+        Me.RadGridViewRHEWAAlle.MasterTemplate.AllowEditRow = False
+        Me.RadGridViewRHEWAAlle.MasterTemplate.ShowGroupedColumns = True
+        Me.RadGridViewRHEWAAlle.Name = "RadGridViewRHEWAAlle"
         '
         '
         '
-        Me.RadGridView1.MasterTemplate.AllowAddNewRow = False
-        Me.RadGridView1.MasterTemplate.AllowCellContextMenu = False
-        Me.RadGridView1.MasterTemplate.AllowDeleteRow = False
-        Me.RadGridView1.MasterTemplate.AllowEditRow = False
-        Me.RadGridView1.MasterTemplate.ShowGroupedColumns = True
-        Me.RadGridView1.Name = "RadGridView1"
-        '
-        '
-        '
-        Me.RadGridView1.RootElement.AccessibleDescription = resources.GetString("RadGridView1.RootElement.AccessibleDescription")
-        Me.RadGridView1.RootElement.AccessibleName = resources.GetString("RadGridView1.RootElement.AccessibleName")
-        Me.RadGridView1.RootElement.Alignment = CType(resources.GetObject("RadGridView1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadGridView1.RootElement.AngleTransform = CType(resources.GetObject("RadGridView1.RootElement.AngleTransform"), Single)
-        Me.RadGridView1.RootElement.FlipText = CType(resources.GetObject("RadGridView1.RootElement.FlipText"), Boolean)
-        Me.RadGridView1.RootElement.Margin = CType(resources.GetObject("RadGridView1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadGridView1.RootElement.Padding = CType(resources.GetObject("RadGridView1.RootElement.Padding"), System.Windows.Forms.Padding)
-        Me.RadGridView1.RootElement.Text = resources.GetString("RadGridView1.RootElement.Text")
-        Me.RadGridView1.RootElement.TextOrientation = CType(resources.GetObject("RadGridView1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadGridView1.ShowNoDataText = False
+        Me.RadGridViewRHEWAAlle.RootElement.AccessibleDescription = resources.GetString("RadGridView1.RootElement.AccessibleDescription")
+        Me.RadGridViewRHEWAAlle.RootElement.AccessibleName = resources.GetString("RadGridView1.RootElement.AccessibleName")
+        Me.RadGridViewRHEWAAlle.RootElement.Alignment = CType(resources.GetObject("RadGridView1.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.RadGridViewRHEWAAlle.RootElement.AngleTransform = CType(resources.GetObject("RadGridView1.RootElement.AngleTransform"), Single)
+        Me.RadGridViewRHEWAAlle.RootElement.FlipText = CType(resources.GetObject("RadGridView1.RootElement.FlipText"), Boolean)
+        Me.RadGridViewRHEWAAlle.RootElement.Margin = CType(resources.GetObject("RadGridView1.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadGridViewRHEWAAlle.RootElement.Padding = CType(resources.GetObject("RadGridView1.RootElement.Padding"), System.Windows.Forms.Padding)
+        Me.RadGridViewRHEWAAlle.RootElement.Text = resources.GetString("RadGridView1.RootElement.Text")
+        Me.RadGridViewRHEWAAlle.RootElement.TextOrientation = CType(resources.GetObject("RadGridView1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadGridViewRHEWAAlle.ShowNoDataText = False
         '
         'RadButtonEichungAnsehenRHEWA
         '
@@ -324,30 +348,6 @@ Partial Class ucoEichprozessauswahlliste
         'BackgroundWorkerLoadFromDatabaseRHEWA
         '
         '
-        'RadButtonEinstellungen
-        '
-        resources.ApplyResources(Me.RadButtonEinstellungen, "RadButtonEinstellungen")
-        Me.RadButtonEinstellungen.BackColor = System.Drawing.Color.Transparent
-        Me.RadButtonEinstellungen.Image = Global.EichsoftwareClient.My.Resources.Resources.cog
-        Me.RadButtonEinstellungen.Name = "RadButtonEinstellungen"
-        '
-        '
-        '
-        Me.RadButtonEinstellungen.RootElement.AccessibleDescription = resources.GetString("RadButtonEinstellungen.RootElement.AccessibleDescription")
-        Me.RadButtonEinstellungen.RootElement.AccessibleName = resources.GetString("RadButtonEinstellungen.RootElement.AccessibleName")
-        Me.RadButtonEinstellungen.RootElement.Alignment = CType(resources.GetObject("RadButtonEinstellungen.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadButtonEinstellungen.RootElement.AngleTransform = CType(resources.GetObject("RadButtonEinstellungen.RootElement.AngleTransform"), Single)
-        Me.RadButtonEinstellungen.RootElement.FlipText = CType(resources.GetObject("RadButtonEinstellungen.RootElement.FlipText"), Boolean)
-        Me.RadButtonEinstellungen.RootElement.Margin = CType(resources.GetObject("RadButtonEinstellungen.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButtonEinstellungen.RootElement.Padding = CType(resources.GetObject("RadButtonEinstellungen.RootElement.Padding"), System.Windows.Forms.Padding)
-        Me.RadButtonEinstellungen.RootElement.Text = resources.GetString("RadButtonEinstellungen.RootElement.Text")
-        Me.RadButtonEinstellungen.RootElement.TextOrientation = CType(resources.GetObject("RadButtonEinstellungen.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        CType(Me.RadButtonEinstellungen.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = Global.EichsoftwareClient.My.Resources.Resources.cog
-        CType(Me.RadButtonEinstellungen.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
-        CType(Me.RadButtonEinstellungen.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        CType(Me.RadButtonEinstellungen.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = resources.GetString("resource.Text")
-        CType(Me.RadButtonEinstellungen.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Shape = Nothing
-        '
         'ucoEichprozessauswahlliste
         '
         resources.ApplyResources(Me, "$this")
@@ -361,6 +361,7 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadPageView1.ResumeLayout(False)
         Me.RadPageViewPageEigene.ResumeLayout(False)
         Me.RadPageViewPageEigene.PerformLayout()
+        CType(Me.RadButtonEinstellungen, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonClientUpdateDatabase, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadCheckBoxAusblendenClientGeloeschterDokumente, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonClientAusblenden, System.ComponentModel.ISupportInitialize).EndInit()
@@ -370,10 +371,9 @@ Partial Class ucoEichprozessauswahlliste
         CType(Me.RadButtonEichprozessKopierenRHEWA, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonEichprozessAblehnenRHEWA, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonEichprozessGenehmigenRHEWA, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadGridView1.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadGridViewRHEWAAlle.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadGridViewRHEWAAlle, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonEichungAnsehenRHEWA, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButtonEinstellungen, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -386,7 +386,7 @@ Partial Class ucoEichprozessauswahlliste
     Friend WithEvents RadPageView1 As Telerik.WinControls.UI.RadPageView
     Friend WithEvents RadPageViewPageEigene As Telerik.WinControls.UI.RadPageViewPage
     Friend WithEvents RadPageViewPageAlle As Telerik.WinControls.UI.RadPageViewPage
-    Friend WithEvents RadGridView1 As Telerik.WinControls.UI.RadGridView
+    Friend WithEvents RadGridViewRHEWAAlle As Telerik.WinControls.UI.RadGridView
     Friend WithEvents RadButtonEichungAnsehenRHEWA As Telerik.WinControls.UI.RadButton
     Friend WithEvents BackgroundWorkerLoadFromDatabaseRHEWA As System.ComponentModel.BackgroundWorker
     Friend WithEvents RadButtonEichprozessAblehnenRHEWA As Telerik.WinControls.UI.RadButton

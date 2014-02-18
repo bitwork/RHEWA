@@ -5,7 +5,6 @@ Public Class EichsoftwareWebservice
     Public Sub New()
     End Sub
 
-
     ''' <summary>
     ''' Prüft ob es sich um eine gültige noch aktive Lizenz handelt
     ''' </summary>
@@ -52,7 +51,6 @@ Public Class EichsoftwareWebservice
         Catch ex As Exception
         End Try
     End Sub
-
 
     ''' <summary>
     ''' Prüft ob es sich um eine gültige noch aktive Lizenz handelt
@@ -138,7 +136,7 @@ Public Class EichsoftwareWebservice
                 Else 'update
 
                     'aufräumen und löschen der alten Einträge in der Datenbank
-
+                    pObjEichprozess.UploadDatum = Serverob.UploadDatum
                     clsServerHelper.DeleteForeignTables(Serverob)
 
                     Serverob = (From db In DbContext.ServerEichprozess Select db Where db.Vorgangsnummer = Vorgangsnummer).FirstOrDefault
@@ -146,6 +144,7 @@ Public Class EichsoftwareWebservice
                     DbContext.ServerEichprozess.Remove(Serverob)
                     DbContext.SaveChanges()
                     pObjEichprozess.BearbeitungsDatum = Date.Now
+                    pObjEichprozess.ErzeugerLizenz = Lizenzschluessel 'lizenzschlüssel zur identifizierung des datensatztes hinzufügen
                     DbContext.ServerEichprozess.Add(pObjEichprozess)
                     DbContext.SaveChanges()
 
@@ -527,6 +526,16 @@ Public Class EichsoftwareWebservice
 
             'neuen Context aufbauen
             Using DbContext As New EichenSQLDatabaseEntities1
+                Dim lokalerPfadFuerAnhaenge As String = "" 'variable die genutzt wird um den Client den Pfad an dem die Anhänge zu finden sind mitzuteilen
+                Try
+                    lokalerPfadFuerAnhaenge = (From Config In DbContext.ServerKonfiguration Select Config.NetzwerkpfadFuerDateianhaenge).FirstOrDefault
+                    If lokalerPfadFuerAnhaenge Is Nothing Then
+                        lokalerPfadFuerAnhaenge = ""
+                    End If
+                Catch ex As Exception
+                    lokalerPfadFuerAnhaenge = ""
+                End Try
+
                 DbContext.Configuration.LazyLoadingEnabled = False
                 DbContext.Configuration.ProxyCreationEnabled = False
                 Try
@@ -545,6 +554,7 @@ Public Class EichsoftwareWebservice
                                 .Lookup_Auswertegeraet = Eichprozess.ServerLookup_Auswertegeraet.Typ, _
                                 .Sachbearbeiter = Eichprozess.ServerEichprotokoll.FK_Identifikationsdaten_SuperOfficeBenutzer, _
                        .ZurBearbeitungGesperrtDurch = Eichprozess.ZurBearbeitungGesperrtDurch, _
+                     .Anhangpfad = Eichprozess.UploadFilePath, _
                     .Bearbeitungsstatus = Lookup2.Status
                                  }
 
@@ -589,6 +599,17 @@ Public Class EichsoftwareWebservice
 
                         If Not objeichprozess.ZurBearbeitungGesperrtDurch Is Nothing Then
                             objReturn.GesperrtDurch = objeichprozess.ZurBearbeitungGesperrtDurch
+                        End If
+
+                        'dateipfad zusammenbauen
+                        If Not objeichprozess.Anhangpfad Is Nothing Then
+                            If Not objeichprozess.Anhangpfad.Trim.Equals("") Then
+                                If lokalerPfadFuerAnhaenge.EndsWith("\") Then
+                                    objReturn.AnhangPfad = lokalerPfadFuerAnhaenge & objeichprozess.Anhangpfad
+                                Else
+                                    objReturn.AnhangPfad = lokalerPfadFuerAnhaenge & "\" & objeichprozess.Anhangpfad
+                                End If
+                            End If
                         End If
                         '   Dim ModelArtikel As New Model.clsArtikel(objArtikel.Id, objArtikel.Name, objArtikel.Beschreibung, objArtikel.Preis, objArtikel.ErstellDatum)
                         ReturnList.Add(objReturn)
@@ -765,7 +786,6 @@ Public Class EichsoftwareWebservice
         End Using
 
     End Function
-
 
     ''' <summary>
     ''' Funktion für die Statistikfunktion der Eichmarkenverwaltung. Dort können Marken eingetragen werden, die ausgeteilt wurden. Wenn ein Benutzer dann Marken im Eichprozess verwendet, werden sie dort abgezogen um einen Ist-Bestand zu erhalten
@@ -1145,5 +1165,40 @@ Public Class EichsoftwareWebservice
             Return ex.Message
         End Try
     End Function
+
+    ''' <summary>
+    ''' funktion welche die konfigurationsdatenbank von RHEWA ausliest und die benötigten Werte für eine FTP verschlüsselung zurückgibt
+    ''' </summary>
+    ''' <param name="Name"></param>
+    ''' <param name="Lizenzschluessel"></param>
+    ''' <param name="Vorgangsnummer"></param>
+    ''' <param name="WindowsUsername"></param>
+    ''' <param name="Domainname"></param>
+    ''' <param name="Computername"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Function GetFTPCredentials(ByVal Name As String, Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As clsServerFTPDaten Implements IEichsoftwareWebservice.GetFTPCredentials
+        SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Hole FTP Zugangsdaten")
+
+        Using dbcontext As New EichenSQLDatabaseEntities1
+            Dim ObjLizenz = (From lic In dbcontext.ServerLizensierung Where lic.FK_SuperofficeBenutzer = Name And lic.Lizenzschluessel = Lizenzschluessel And lic.Aktiv = True).FirstOrDefault
+            If Not ObjLizenz Is Nothing Then
+
+                Dim ObjFTPDaten = (From FTPDaten In dbcontext.ServerKonfiguration).FirstOrDefault
+                If Not ObjFTPDaten Is Nothing Then
+
+                    Dim objServerFTPDaten As New clsServerFTPDaten
+                    objServerFTPDaten.FTPServername = ObjFTPDaten.FTPServerAdresse
+                    objServerFTPDaten.FTPUserName = ObjFTPDaten.FTPServerBenutzername
+                    objServerFTPDaten.FTPEncryptedPassword = ObjFTPDaten.FTPServerEnkodiertesPasswort
+                    objServerFTPDaten.FTPSaltKey = ObjFTPDaten.FTPServerCryptoSaltKey
+
+                    Return objServerFTPDaten
+                End If
+            End If
+        End Using
+        Return Nothing
+    End Function
+
 
 End Class

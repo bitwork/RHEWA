@@ -103,6 +103,12 @@
   <wsdl:message name="IEichsoftwareWebservice_SetSperrung_OutputMessage">
     <wsdl:part name="parameters" element="tns:SetSperrungResponse" />
   </wsdl:message>
+  <wsdl:message name="IEichsoftwareWebservice_GetFTPCredentials_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFTPCredentials" />
+  </wsdl:message>
+  <wsdl:message name="IEichsoftwareWebservice_GetFTPCredentials_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFTPCredentialsResponse" />
+  </wsdl:message>
   <wsdl:portType name="IEichsoftwareWebservice">
     <wsdl:operation name="PruefeLizenz">
       <wsdl:input wsaw:Action="http://tempuri.org/IEichsoftwareWebservice/PruefeLizenz" message="tns:IEichsoftwareWebservice_PruefeLizenz_InputMessage" />
@@ -167,6 +173,10 @@
     <wsdl:operation name="SetSperrung">
       <wsdl:input wsaw:Action="http://tempuri.org/IEichsoftwareWebservice/SetSperrung" message="tns:IEichsoftwareWebservice_SetSperrung_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IEichsoftwareWebservice/SetSperrungResponse" message="tns:IEichsoftwareWebservice_SetSperrung_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFTPCredentials">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEichsoftwareWebservice/GetFTPCredentials" message="tns:IEichsoftwareWebservice_GetFTPCredentials_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEichsoftwareWebservice/GetFTPCredentialsResponse" message="tns:IEichsoftwareWebservice_GetFTPCredentials_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IEichsoftwareWebservice" type="tns:IEichsoftwareWebservice">
@@ -308,6 +318,15 @@
     </wsdl:operation>
     <wsdl:operation name="SetSperrung">
       <soap:operation soapAction="http://tempuri.org/IEichsoftwareWebservice/SetSperrung" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFTPCredentials">
+      <soap:operation soapAction="http://tempuri.org/IEichsoftwareWebservice/GetFTPCredentials" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

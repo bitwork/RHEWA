@@ -311,4 +311,23 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetFTPCredentials">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Lizenzschluessel" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Vorgangsnummer" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="WindowsUsername" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Domainname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Computername" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFTPCredentialsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice" minOccurs="0" name="GetFTPCredentialsResult" nillable="true" type="q8:clsServerFTPDaten" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

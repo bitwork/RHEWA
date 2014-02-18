@@ -586,6 +586,7 @@
   <xs:complexType name="clsEichprozessFuerAuswahlliste">
     <xs:sequence>
       <xs:element minOccurs="0" name="AWG" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AnhangPfad" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Bearbeitungsstatus" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Eichbevollmaechtigter" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Fabriknummer" nillable="true" type="xs:string" />
@@ -598,4 +599,13 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="clsEichprozessFuerAuswahlliste" nillable="true" type="tns:clsEichprozessFuerAuswahlliste" />
+  <xs:complexType name="clsServerFTPDaten">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FTPEncryptedPassword" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FTPSaltKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FTPServername" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FTPUserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="clsServerFTPDaten" nillable="true" type="tns:clsServerFTPDaten" />
 </xs:schema>

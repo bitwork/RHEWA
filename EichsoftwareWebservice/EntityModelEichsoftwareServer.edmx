@@ -309,6 +309,10 @@
           <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="LetzteSynchronisierungMitRHEWA" Type="datetime" />
           <Property Name="NetzwerkpfadFuerDateianhaenge" Type="nvarchar(max)" />
+          <Property Name="FTPServerAdresse" Type="nvarchar(max)" />
+          <Property Name="FTPServerBenutzername" Type="nvarchar(max)" />
+          <Property Name="FTPServerEnkodiertesPasswort" Type="nvarchar(max)" />
+          <Property Name="FTPServerCryptoSaltKey" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="ServerLizensierung">
           <Key>
@@ -1838,6 +1842,10 @@
           <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Type="DateTime" Name="LetzteSynchronisierungMitRHEWA" Precision="3" />
           <Property Type="String" Name="NetzwerkpfadFuerDateianhaenge" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FTPServerAdresse" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FTPServerBenutzername" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FTPServerEnkodiertesPasswort" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FTPServerCryptoSaltKey" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -2361,6 +2369,10 @@
           <EntitySetMapping Name="ServerKonfiguration">
             <EntityTypeMapping TypeName="EichenSQLDatabaseModel.ServerKonfiguration">
               <MappingFragment StoreEntitySet="ServerKonfiguration">
+                <ScalarProperty Name="FTPServerCryptoSaltKey" ColumnName="FTPServerCryptoSaltKey" />
+                <ScalarProperty Name="FTPServerEnkodiertesPasswort" ColumnName="FTPServerEnkodiertesPasswort" />
+                <ScalarProperty Name="FTPServerBenutzername" ColumnName="FTPServerBenutzername" />
+                <ScalarProperty Name="FTPServerAdresse" ColumnName="FTPServerAdresse" />
                 <ScalarProperty Name="NetzwerkpfadFuerDateianhaenge" ColumnName="NetzwerkpfadFuerDateianhaenge" />
                 <ScalarProperty Name="LetzteSynchronisierungMitRHEWA" ColumnName="LetzteSynchronisierungMitRHEWA" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
