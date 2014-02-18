@@ -745,4 +745,10 @@ Ist der Fehler &gt; 0,3e → L = 0,5 Max = Normalien von 50% von Max werden ben�
   <data name="Frage_Kopieren" xml:space="preserve">
     <value>Möchten Sie den gewählten Eichprozess kopieren um ihn als Vorlage zu verwenden?</value>
   </data>
+  <data name="Warnung_EichungenWerdenGeloescht" xml:space="preserve">
+    <value>Es wurden ungesendete Eichvorgänge gefunden. Wenn Sie mit "Ja" bestätigen, werden diese Daten durch das resynchronisieren gelöscht. Sind Sie sicher, dass sie neu synchroniseren möchten und dabei ihre ungesendeten Eichvorgänge verlieren?</value>
+  </data>
+  <data name="Bearbeitungsstatus" xml:space="preserve">
+    <value>Bearbeitungsstatus</value>
+  </data>
 </root>

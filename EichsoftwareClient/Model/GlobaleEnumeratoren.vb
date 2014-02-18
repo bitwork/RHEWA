@@ -31,4 +31,11 @@
         ueber60kgimStaffelverfahren = 2
         ueber60kgmitNormalien = 3
     End Enum
+
+    Public Enum enuBearbeitungsstatus
+        Wartet_auf_Bearbeitung = 1
+        Fehlerhaft = 2
+        Genehmigt = 3
+        noch_nicht_versendet = 4
+    End Enum
 End Class

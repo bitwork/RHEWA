@@ -34,7 +34,7 @@
         End If
         EichprozessStatusReihenfolge = GlobaleEnumeratoren.enuEichprozessStatus.WaagenFuerRollendeLasten
 
-        If My.Settings.AktuelleSprache = "en" Then
+        If My.Settings.AktuelleSprache.ToLower = "en" Then
             PictureBox2.Image = My.Resources.Verschiebeweg_GB
             PictureBox3.Image = My.Resources.Fahrzeug_Wenden_GB
         ElseIf My.Settings.AktuelleSprache = "de" Then
@@ -43,6 +43,9 @@
         ElseIf My.Settings.AktuelleSprache = "pl" Then
             PictureBox2.Image = My.Resources.Verschiebeweg_PL
             PictureBox3.Image = My.Resources.Fahrzeug_Wenden_PL
+        Else
+            PictureBox2.Image = My.Resources.Verschiebeweg_GB
+            PictureBox3.Image = My.Resources.Fahrzeug_Wenden_GB
         End If
 
         'daten füllen

@@ -35,6 +35,7 @@ Public Class ucoEichprozessauswahlliste
         RadGridViewAuswahlliste.Columns("Vorgangsnummer").IsVisible = False
 
         'übersetzen der Spaltenköpfe
+        RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").HeaderText = My.Resources.GlobaleLokalisierung.Bearbeitungsstatus
         RadGridViewAuswahlliste.Columns("Lookup_Waegezelle").HeaderText = My.Resources.GlobaleLokalisierung.Waegezelle
         RadGridViewAuswahlliste.Columns("Lookup_Auswertegeraet").HeaderText = My.Resources.GlobaleLokalisierung.AuswerteGeraet
         RadGridViewAuswahlliste.Columns("Lookup_Waagentyp").HeaderText = My.Resources.GlobaleLokalisierung.Waagentyp
@@ -308,7 +309,7 @@ Public Class ucoEichprozessauswahlliste
         Using Context As New EichsoftwareClientdatabaseEntities1
             Context.Configuration.LazyLoadingEnabled = True
             'je nach Sprache die Abfrage anpassen um die entsprechenden Übersetzungen der Lookupwerte aus der DB zu laden
-            Select Case My.Settings.AktuelleSprache
+            Select Case My.Settings.AktuelleSprache.ToLower
                 Case "de"
                     Dim Data = From Eichprozess In Context.Eichprozess _
                                               Where Eichprozess.Ausgeblendet = RadCheckBoxAusblendenClientGeloeschterDokumente.Checked _
@@ -743,9 +744,27 @@ Public Class ucoEichprozessauswahlliste
     End Sub
 
 #Region "Updates aus Webservice"
-
+    ''' <summary>
+    ''' Funktion welche prüft ob es noch lokale Eichvorgänge gibt, die nicht an RHEWA versand wurden
+    ''' </summary>
+    ''' <returns>True wenn noch Eichungen gefunden wurden</returns>
+    ''' <remarks>Wird z.b. Genutzt um zu Warnen, bevor ein Benutzer seine lokale DB löscht um eine Teilsynchronisierung vorzunehmen</remarks>
+    Private Function CheckEsGibtUngesendeteEichungen() As Boolean
+        Using dbcontext As New EichsoftwareClientdatabaseEntities1
+            Dim query = From eichungen In dbcontext.Eichprozess Where eichungen.FK_Vorgangsstatus = GlobaleEnumeratoren.enuBearbeitungsstatus.noch_nicht_versendet
+            If query.Count = 0 Then
+                Return False
+            Else
+                Return True
+            End If
+        End Using
+    End Function
     Private Sub VerbindeMitWebserviceUndHoleAlles()
+        Dim bolSyncData As Boolean = True 'Wert der genutzt wird um ggfs die Synchrosierung abzubrechen, falls ein Benutzer noch ungesendete Eichvorgänge hat
         Try
+            'versuche Verbindung zu RHEWA aufzubauen
+
+            'wenn nicht möglich Abbruch
             Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
                 webContext.Open()
                 webContext.Close()
@@ -758,8 +777,21 @@ Public Class ucoEichprozessauswahlliste
             Exit Sub
         End Try
 
-        'für den Fall das die Anwendung gerade erst installiert wurde, oder die einstellung zur Synchronisierung geändert wurde, sollen alle Eichungen vom RHEWA Server geholt werden, die einmal angelegt wurden
 
+
+
+        'prüfen ob noch nicht abgeschickte Eichungen vorlieren. Wenn ja Hinweismeldung und Abbruchmöglichkeit für Benutzer
+        If CheckEsGibtUngesendeteEichungen() = True Then
+            If MessageBox.Show(My.Resources.GlobaleLokalisierung.Warnung_EichungenWerdenGeloescht, My.Resources.GlobaleLokalisierung.Frage) = DialogResult.Yes Then
+                bolSyncData = True
+            Else
+                bolSyncData = False
+            End If
+        End If
+
+        If bolSyncData Then
+
+        'für den Fall das die Anwendung gerade erst installiert wurde, oder die einstellung zur Synchronisierung geändert wurde, sollen alle Eichungen vom RHEWA Server geholt werden, die einmal angelegt wurden
         LoescheLokaleDatenbank()
         My.Settings.LetztesUpdate = "01.01.2000"
         My.Settings.Save()
@@ -776,7 +808,8 @@ Public Class ucoEichprozessauswahlliste
         My.Settings.HoleAlleEigenenEichungenVomServer = False
         My.Settings.Save()
 
-      
+
+        End If
 
     End Sub
     ''' <summary>
@@ -835,14 +868,6 @@ Public Class ucoEichprozessauswahlliste
     Private Sub LoescheLokaleDatenbank()
         Try
             Using DBContext As New EichsoftwareClientdatabaseEntities1
-                Dim Name As String
-                'Dim Schluessel As String
-
-                ''lizenzisierung holen
-                'Dim objLiz = (From db In DBContext.Lizensierung Select db).FirstOrDefault
-
-                'Name = objLiz.FK_SuperofficeBenutzer
-                'Schluessel = objLiz.Lizenzschluessel
 
                 For Each obj In DBContext.Eichprozess
                     DBContext.Eichprozess.Remove(obj)
@@ -1030,11 +1055,11 @@ Public Class ucoEichprozessauswahlliste
                                         DBContext.SaveChanges()
                                         bolNeuGenehmigung = True
                                     Catch ex As Entity.Infrastructure.DbUpdateException
-                                        messagebox.show(ex.InnerException.InnerException.Message)
+                                        MessageBox.Show(ex.InnerException.InnerException.Message)
                                     Catch ex2 As Entity.Validation.DbEntityValidationException
                                         For Each o In ex2.EntityValidationErrors
                                             For Each v In o.ValidationErrors
-                                                messagebox.show(v.ErrorMessage & " " & v.PropertyName)
+                                                MessageBox.Show(v.ErrorMessage & " " & v.PropertyName)
                                             Next
                                         Next
                                     End Try
@@ -1132,7 +1157,7 @@ Public Class ucoEichprozessauswahlliste
                                     newWZ.Hersteller = objServerArtikel._Hersteller
                                     newWZ.Pruefbericht = objServerArtikel._Pruefbericht
                                     newWZ.Typ = objServerArtikel._Typ
-                                    newWZ.deaktiviert = objServerArtikel._Deaktiviert
+                                    newWZ.Deaktiviert = objServerArtikel._Deaktiviert
                                     'hinzufügen des neu erzeugten Artikels in Lokale Datenbank
 
                                     DBContext.Lookup_Waegezelle.Add(newWZ)
@@ -1145,7 +1170,7 @@ Public Class ucoEichprozessauswahlliste
                                     End Try
 
                                 Else 'Es gibt den Artikel bereits, er wird geupdated
-                                For Each objWZ As Lookup_Waegezelle In query 'es sollte nur einen Artikel Geben, da die IDs eindeutig sind.
+                                    For Each objWZ As Lookup_Waegezelle In query 'es sollte nur einen Artikel Geben, da die IDs eindeutig sind.
                                         objWZ.Hoechsteteilungsfaktor = objServerArtikel._Hoechsteteilungsfaktor
                                         objWZ.Kriechteilungsfaktor = objServerArtikel._Kriechteilungsfaktor
                                         objWZ.MaxAnzahlTeilungswerte = objServerArtikel._MaxAnzahlTeilungswerte
@@ -1162,12 +1187,12 @@ Public Class ucoEichprozessauswahlliste
                                         objWZ.Hersteller = objServerArtikel._Hersteller
                                         objWZ.Pruefbericht = objServerArtikel._Pruefbericht
                                         objWZ.Typ = objServerArtikel._Typ
-                                        objWZ.deaktiviert = objServerArtikel._Deaktiviert
+                                        objWZ.Deaktiviert = objServerArtikel._Deaktiviert
                                     Next
                                 End If
                             Catch ex As Exception
-            MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
+                                MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                            End Try
                         Next
 
                     End If
@@ -1252,7 +1277,7 @@ Public Class ucoEichprozessauswahlliste
                                 newAWG.Speisespannung = objServerArtikel._Speisespannung
                                 newAWG.Typ = objServerArtikel._Typ
                                 'hinzufügen des neu erzeugten Artikels in Lokale Datenbank
-                                newAWG.deaktiviert = objServerArtikel._Deaktiviert
+                                newAWG.Deaktiviert = objServerArtikel._Deaktiviert
                                 DBContext.Lookup_Auswertegeraet.Add(newAWG)
                                 DBContext.SaveChanges()
                                 bolNeuAWG = True
@@ -1260,22 +1285,22 @@ Public Class ucoEichprozessauswahlliste
 
                             Else 'Es gibt den Artikel bereits, er wird geupdated
                                 For Each objAWG As Lookup_Auswertegeraet In query 'es sollte nur einen Artikel Geben, da die IDs eindeutig sind.
-                                 
-                                        objAWG.Bauartzulassung = objServerArtikel._Bauartzulassung
-                                        objAWG.BruchteilEichfehlergrenze = objServerArtikel._BruchteilEichfehlergrenze
-                                        objAWG.Genauigkeitsklasse = objServerArtikel._Genauigkeitsklasse
-                                        objAWG.GrenzwertLastwiderstandMAX = objServerArtikel._GrenzwertLastwiderstandMAX
-                                        objAWG.GrenzwertLastwiderstandMIN = objServerArtikel._GrenzwertLastwiderstandMIN
-                                        objAWG.GrenzwertTemperaturbereichMAX = objServerArtikel._GrenzwertTemperaturbereichMAX
-                                        objAWG.GrenzwertTemperaturbereichMIN = objServerArtikel._GrenzwertTemperaturbereichMIN
-                                        objAWG.Hersteller = objServerArtikel._Hersteller
-                                        objAWG.KabellaengeQuerschnitt = objServerArtikel._KabellaengeQuerschnitt
-                                        objAWG.MAXAnzahlTeilungswerteEinbereichswaage = objServerArtikel._MAXAnzahlTeilungswerteEinbereichswaage
-                                        objAWG.MAXAnzahlTeilungswerteMehrbereichswaage = objServerArtikel._MAXAnzahlTeilungswerteMehrbereichswaage
-                                        objAWG.Mindesteingangsspannung = objServerArtikel._Mindesteingangsspannung
-                                        objAWG.Mindestmesssignal = objServerArtikel._Mindestmesssignal
-                                        objAWG.Pruefbericht = objServerArtikel._Pruefbericht
-                                        objAWG.Speisespannung = objServerArtikel._Speisespannung
+
+                                    objAWG.Bauartzulassung = objServerArtikel._Bauartzulassung
+                                    objAWG.BruchteilEichfehlergrenze = objServerArtikel._BruchteilEichfehlergrenze
+                                    objAWG.Genauigkeitsklasse = objServerArtikel._Genauigkeitsklasse
+                                    objAWG.GrenzwertLastwiderstandMAX = objServerArtikel._GrenzwertLastwiderstandMAX
+                                    objAWG.GrenzwertLastwiderstandMIN = objServerArtikel._GrenzwertLastwiderstandMIN
+                                    objAWG.GrenzwertTemperaturbereichMAX = objServerArtikel._GrenzwertTemperaturbereichMAX
+                                    objAWG.GrenzwertTemperaturbereichMIN = objServerArtikel._GrenzwertTemperaturbereichMIN
+                                    objAWG.Hersteller = objServerArtikel._Hersteller
+                                    objAWG.KabellaengeQuerschnitt = objServerArtikel._KabellaengeQuerschnitt
+                                    objAWG.MAXAnzahlTeilungswerteEinbereichswaage = objServerArtikel._MAXAnzahlTeilungswerteEinbereichswaage
+                                    objAWG.MAXAnzahlTeilungswerteMehrbereichswaage = objServerArtikel._MAXAnzahlTeilungswerteMehrbereichswaage
+                                    objAWG.Mindesteingangsspannung = objServerArtikel._Mindesteingangsspannung
+                                    objAWG.Mindestmesssignal = objServerArtikel._Mindestmesssignal
+                                    objAWG.Pruefbericht = objServerArtikel._Pruefbericht
+                                    objAWG.Speisespannung = objServerArtikel._Speisespannung
                                     objAWG.Typ = objServerArtikel._Typ
                                     objAWG.Deaktiviert = objServerArtikel._Deaktiviert
                                     bolNeuAWG = True
@@ -1307,8 +1332,9 @@ Public Class ucoEichprozessauswahlliste
     Private Sub RadButtonEinstellungen_Click(sender As Object, e As EventArgs) Handles RadButtonEinstellungen.Click
         Dim f As New frmEinstellungen
         f.showdialog()
-        If f.dialogresult = DialogResult.OK Then
-
+        If f.DialogResult = DialogResult.OK Then
+            'neu aktualisierung der Eichungen
+            VerbindeMitWebserviceUndHoleAlles()
         End If
     End Sub
 End Class

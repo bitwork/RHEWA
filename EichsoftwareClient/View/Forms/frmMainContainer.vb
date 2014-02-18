@@ -263,16 +263,7 @@ Public Class FrmMainContainer
                 End If
             End If
 
-            Select Case My.Settings.AktuelleSprache
-                Case Is = "en"
-                    RadButtonChangeLanguageToEnglish_Click(Nothing, Nothing)
-                Case Is = "de"
-                    RadButtonChangeLanguageToGerman_Click(Nothing, Nothing)
-                Case Is = "pl"
-                    RadButtonChangeLanguageToPolish_Click(Nothing, Nothing)
-                Case Else
-                    RadButtonChangeLanguageToEnglish_Click(Nothing, Nothing)
-            End Select
+           
 
         Else
             'laden des benötigten UCOs
@@ -366,6 +357,17 @@ Public Class FrmMainContainer
 
 
         End If
+
+        Select Case My.Settings.AktuelleSprache.ToLower
+            Case Is = "en"
+                RadButtonChangeLanguageToEnglish_Click(Nothing, Nothing)
+            Case Is = "de"
+                RadButtonChangeLanguageToGerman_Click(Nothing, Nothing)
+            Case Is = "pl"
+                RadButtonChangeLanguageToPolish_Click(Nothing, Nothing)
+            Case Else
+                RadButtonChangeLanguageToEnglish_Click(Nothing, Nothing)
+        End Select
     End Sub
 
     Private Sub RadButtonNavigateForwards_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonNavigateForwards.Click

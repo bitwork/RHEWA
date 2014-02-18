@@ -676,4 +676,10 @@
   <data name="Frage_EichprotokollZuruecksenden" xml:space="preserve">
     <value>Möchten Sie das korrigierte Eichprotokoll wirklich an den Eichbevollmächtigten zurücksenden? Der Status wird dabei auf fehlerhaft gesetzt.</value>
   </data>
+  <data name="Warnung_EichungenWerdenGeloescht" xml:space="preserve">
+    <value>Choosing 'Yes' will delete remaining unsent assessments. Are you sure you want to resync your data, while loosing unsent assesments?</value>
+  </data>
+  <data name="Bearbeitungsstatus" xml:space="preserve">
+    <value>Global Status</value>
+  </data>
 </root>

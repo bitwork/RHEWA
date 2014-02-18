@@ -24,31 +24,32 @@ Partial Class FrmEinstellungen
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmEinstellungen))
         Me.RadGroupBox1 = New Telerik.WinControls.UI.RadGroupBox()
+        Me.RadDateTimePickerEnd = New Telerik.WinControls.UI.RadDateTimePicker()
+        Me.RadDateTimePickerStart = New Telerik.WinControls.UI.RadDateTimePicker()
+        Me.RadDateTimePickerSince = New Telerik.WinControls.UI.RadDateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.RadRadioButtonSyncZwischen = New Telerik.WinControls.UI.RadRadioButton()
         Me.RadRadioButtonSyncSeit = New Telerik.WinControls.UI.RadRadioButton()
         Me.RadRadioButtonSyncAlles = New Telerik.WinControls.UI.RadRadioButton()
         Me.RadButtonOK = New Telerik.WinControls.UI.RadButton()
         Me.RadButtonAbbrechen = New Telerik.WinControls.UI.RadButton()
-        Me.RadDateTimePickerSince = New Telerik.WinControls.UI.RadDateTimePicker()
-        Me.RadDateTimePickerStart = New Telerik.WinControls.UI.RadDateTimePicker()
-        Me.RadDateTimePickerEnd = New Telerik.WinControls.UI.RadDateTimePicker()
         CType(Me.RadGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBox1.SuspendLayout()
+        CType(Me.RadDateTimePickerEnd, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadDateTimePickerStart, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadDateTimePickerSince, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadRadioButtonSyncZwischen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadRadioButtonSyncSeit, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadRadioButtonSyncAlles, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonOK, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonAbbrechen, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadDateTimePickerSince, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadDateTimePickerStart, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadDateTimePickerEnd, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'RadGroupBox1
         '
         Me.RadGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        resources.ApplyResources(Me.RadGroupBox1, "RadGroupBox1")
         Me.RadGroupBox1.Controls.Add(Me.RadDateTimePickerEnd)
         Me.RadGroupBox1.Controls.Add(Me.RadDateTimePickerStart)
         Me.RadGroupBox1.Controls.Add(Me.RadDateTimePickerSince)
@@ -56,7 +57,6 @@ Partial Class FrmEinstellungen
         Me.RadGroupBox1.Controls.Add(Me.RadRadioButtonSyncZwischen)
         Me.RadGroupBox1.Controls.Add(Me.RadRadioButtonSyncSeit)
         Me.RadGroupBox1.Controls.Add(Me.RadRadioButtonSyncAlles)
-        resources.ApplyResources(Me.RadGroupBox1, "RadGroupBox1")
         Me.RadGroupBox1.Name = "RadGroupBox1"
         '
         '
@@ -70,6 +70,54 @@ Partial Class FrmEinstellungen
         Me.RadGroupBox1.RootElement.Padding = CType(resources.GetObject("RadGroupBox1.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadGroupBox1.RootElement.Text = resources.GetString("RadGroupBox1.RootElement.Text")
         Me.RadGroupBox1.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBox1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        '
+        'RadDateTimePickerEnd
+        '
+        resources.ApplyResources(Me.RadDateTimePickerEnd, "RadDateTimePickerEnd")
+        Me.RadDateTimePickerEnd.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.RadDateTimePickerEnd.Name = "RadDateTimePickerEnd"
+        '
+        '
+        '
+        Me.RadDateTimePickerEnd.RootElement.AccessibleDescription = resources.GetString("RadDateTimePickerEnd.RootElement.AccessibleDescription")
+        Me.RadDateTimePickerEnd.RootElement.AccessibleName = resources.GetString("RadDateTimePickerEnd.RootElement.AccessibleName")
+        Me.RadDateTimePickerEnd.RootElement.Alignment = CType(resources.GetObject("RadDateTimePickerEnd.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.RadDateTimePickerEnd.RootElement.AngleTransform = CType(resources.GetObject("RadDateTimePickerEnd.RootElement.AngleTransform"), Single)
+        Me.RadDateTimePickerEnd.RootElement.FlipText = CType(resources.GetObject("RadDateTimePickerEnd.RootElement.FlipText"), Boolean)
+        Me.RadDateTimePickerEnd.RootElement.Margin = CType(resources.GetObject("RadDateTimePickerEnd.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadDateTimePickerEnd.RootElement.Padding = CType(resources.GetObject("RadDateTimePickerEnd.RootElement.Padding"), System.Windows.Forms.Padding)
+        Me.RadDateTimePickerEnd.RootElement.Text = resources.GetString("RadDateTimePickerEnd.RootElement.Text")
+        Me.RadDateTimePickerEnd.RootElement.TextOrientation = CType(resources.GetObject("RadDateTimePickerEnd.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadDateTimePickerEnd.TabStop = False
+        Me.RadDateTimePickerEnd.Value = New Date(2014, 2, 12, 11, 45, 34, 423)
+        '
+        'RadDateTimePickerStart
+        '
+        resources.ApplyResources(Me.RadDateTimePickerStart, "RadDateTimePickerStart")
+        Me.RadDateTimePickerStart.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.RadDateTimePickerStart.Name = "RadDateTimePickerStart"
+        '
+        '
+        '
+        Me.RadDateTimePickerStart.RootElement.AccessibleDescription = resources.GetString("RadDateTimePickerStart.RootElement.AccessibleDescription")
+        Me.RadDateTimePickerStart.RootElement.AccessibleName = resources.GetString("RadDateTimePickerStart.RootElement.AccessibleName")
+        Me.RadDateTimePickerStart.RootElement.Alignment = CType(resources.GetObject("RadDateTimePickerStart.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.RadDateTimePickerStart.RootElement.AngleTransform = CType(resources.GetObject("RadDateTimePickerStart.RootElement.AngleTransform"), Single)
+        Me.RadDateTimePickerStart.RootElement.FlipText = CType(resources.GetObject("RadDateTimePickerStart.RootElement.FlipText"), Boolean)
+        Me.RadDateTimePickerStart.RootElement.Margin = CType(resources.GetObject("RadDateTimePickerStart.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadDateTimePickerStart.RootElement.Padding = CType(resources.GetObject("RadDateTimePickerStart.RootElement.Padding"), System.Windows.Forms.Padding)
+        Me.RadDateTimePickerStart.RootElement.Text = resources.GetString("RadDateTimePickerStart.RootElement.Text")
+        Me.RadDateTimePickerStart.RootElement.TextOrientation = CType(resources.GetObject("RadDateTimePickerStart.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadDateTimePickerStart.TabStop = False
+        Me.RadDateTimePickerStart.Value = New Date(2014, 2, 12, 11, 45, 34, 423)
+        '
+        'RadDateTimePickerSince
+        '
+        resources.ApplyResources(Me.RadDateTimePickerSince, "RadDateTimePickerSince")
+        Me.RadDateTimePickerSince.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.RadDateTimePickerSince.Name = "RadDateTimePickerSince"
+        Me.RadDateTimePickerSince.TabStop = False
+        Me.RadDateTimePickerSince.Value = New Date(2014, 2, 12, 11, 45, 34, 423)
         '
         'Label1
         '
@@ -132,6 +180,8 @@ Partial Class FrmEinstellungen
         'RadButtonOK
         '
         resources.ApplyResources(Me.RadButtonOK, "RadButtonOK")
+        Me.RadButtonOK.DialogResult = System.Windows.Forms.DialogResult.OK
+        Me.RadButtonOK.Image = Global.EichsoftwareClient.My.Resources.Resources.disk
         Me.RadButtonOK.Name = "RadButtonOK"
         '
         '
@@ -163,51 +213,6 @@ Partial Class FrmEinstellungen
         Me.RadButtonAbbrechen.RootElement.Text = resources.GetString("RadButtonAbbrechen.RootElement.Text")
         Me.RadButtonAbbrechen.RootElement.TextOrientation = CType(resources.GetObject("RadButtonAbbrechen.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
-        'RadDateTimePickerSince
-        '
-        resources.ApplyResources(Me.RadDateTimePickerSince, "RadDateTimePickerSince")
-        Me.RadDateTimePickerSince.Name = "RadDateTimePickerSince"
-        Me.RadDateTimePickerSince.TabStop = False
-        Me.RadDateTimePickerSince.Value = New Date(2014, 2, 12, 11, 45, 34, 423)
-        '
-        'RadDateTimePickerStart
-        '
-        resources.ApplyResources(Me.RadDateTimePickerStart, "RadDateTimePickerStart")
-        Me.RadDateTimePickerStart.Name = "RadDateTimePickerStart"
-        '
-        '
-        '
-        Me.RadDateTimePickerStart.RootElement.AccessibleDescription = resources.GetString("RadDateTimePicker2.RootElement.AccessibleDescription")
-        Me.RadDateTimePickerStart.RootElement.AccessibleName = resources.GetString("RadDateTimePicker2.RootElement.AccessibleName")
-        Me.RadDateTimePickerStart.RootElement.Alignment = CType(resources.GetObject("RadDateTimePicker2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadDateTimePickerStart.RootElement.AngleTransform = CType(resources.GetObject("RadDateTimePicker2.RootElement.AngleTransform"), Single)
-        Me.RadDateTimePickerStart.RootElement.FlipText = CType(resources.GetObject("RadDateTimePicker2.RootElement.FlipText"), Boolean)
-        Me.RadDateTimePickerStart.RootElement.Margin = CType(resources.GetObject("RadDateTimePicker2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadDateTimePickerStart.RootElement.Padding = CType(resources.GetObject("RadDateTimePicker2.RootElement.Padding"), System.Windows.Forms.Padding)
-        Me.RadDateTimePickerStart.RootElement.Text = resources.GetString("RadDateTimePicker2.RootElement.Text")
-        Me.RadDateTimePickerStart.RootElement.TextOrientation = CType(resources.GetObject("RadDateTimePicker2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadDateTimePickerStart.TabStop = False
-        Me.RadDateTimePickerStart.Value = New Date(2014, 2, 12, 11, 45, 34, 423)
-        '
-        'RadDateTimePickerEnd
-        '
-        resources.ApplyResources(Me.RadDateTimePickerEnd, "RadDateTimePickerEnd")
-        Me.RadDateTimePickerEnd.Name = "RadDateTimePickerEnd"
-        '
-        '
-        '
-        Me.RadDateTimePickerEnd.RootElement.AccessibleDescription = resources.GetString("RadDateTimePicker3.RootElement.AccessibleDescription")
-        Me.RadDateTimePickerEnd.RootElement.AccessibleName = resources.GetString("RadDateTimePicker3.RootElement.AccessibleName")
-        Me.RadDateTimePickerEnd.RootElement.Alignment = CType(resources.GetObject("RadDateTimePicker3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadDateTimePickerEnd.RootElement.AngleTransform = CType(resources.GetObject("RadDateTimePicker3.RootElement.AngleTransform"), Single)
-        Me.RadDateTimePickerEnd.RootElement.FlipText = CType(resources.GetObject("RadDateTimePicker3.RootElement.FlipText"), Boolean)
-        Me.RadDateTimePickerEnd.RootElement.Margin = CType(resources.GetObject("RadDateTimePicker3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadDateTimePickerEnd.RootElement.Padding = CType(resources.GetObject("RadDateTimePicker3.RootElement.Padding"), System.Windows.Forms.Padding)
-        Me.RadDateTimePickerEnd.RootElement.Text = resources.GetString("RadDateTimePicker3.RootElement.Text")
-        Me.RadDateTimePickerEnd.RootElement.TextOrientation = CType(resources.GetObject("RadDateTimePicker3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadDateTimePickerEnd.TabStop = False
-        Me.RadDateTimePickerEnd.Value = New Date(2014, 2, 12, 11, 45, 34, 423)
-        '
         'FrmEinstellungen
         '
         resources.ApplyResources(Me, "$this")
@@ -229,17 +234,19 @@ Partial Class FrmEinstellungen
         Me.RootElement.Padding = CType(resources.GetObject("FrmEinstellungen.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RootElement.Text = resources.GetString("FrmEinstellungen.RootElement.Text")
         Me.RootElement.TextOrientation = CType(resources.GetObject("FrmEinstellungen.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.ShowIcon = False
+        Me.ShowInTaskbar = False
         CType(Me.RadGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBox1.ResumeLayout(False)
         Me.RadGroupBox1.PerformLayout()
+        CType(Me.RadDateTimePickerEnd, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadDateTimePickerStart, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadDateTimePickerSince, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadRadioButtonSyncZwischen, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadRadioButtonSyncSeit, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadRadioButtonSyncAlles, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonOK, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonAbbrechen, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadDateTimePickerSince, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadDateTimePickerStart, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadDateTimePickerEnd, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 

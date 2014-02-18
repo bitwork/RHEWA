@@ -794,7 +794,7 @@
                     lblPunkt6cMax.Text = "" 'gibts heir nicht
                 End If
 
-                Select Case My.Settings.AktuelleSprache
+                Select Case My.Settings.AktuelleSprache.ToLower
                     Case Is = "de"
                         lblPunkt4WaagenArt.Text = Waagenart.Art
                         lblPunkt6aWaagenart.Text = Waagenart.Art
@@ -804,6 +804,9 @@
                     Case Is = "pl"
                         lblPunkt4WaagenArt.Text = Waagenart.Art_PL
                         lblPunkt6aWaagenart.Text = Waagenart.Art_PL
+                    Case Else
+                        lblPunkt4WaagenArt.Text = Waagenart.Art_EN
+                        lblPunkt6aWaagenart.Text = Waagenart.Art_EN
                 End Select
             End If
         End Using
@@ -1019,7 +1022,7 @@
                     lblPunkt6cMax.Text = "" 'gibts heir nicht
                 End If
 
-                Select Case My.Settings.AktuelleSprache
+                Select Case My.Settings.AktuelleSprache.ToLower
                     Case Is = "de"
                         lblPunkt4WaagenArt.Text = Waagenart.Art
                         lblPunkt6aWaagenart.Text = Waagenart.Art
@@ -1029,6 +1032,9 @@
                     Case Is = "pl"
                         lblPunkt4WaagenArt.Text = Waagenart.Art_PL
                         lblPunkt6aWaagenart.Text = Waagenart.Art_PL
+                    Case Else
+                        lblPunkt4WaagenArt.Text = Waagenart.Art_EN
+                        lblPunkt6aWaagenart.Text = Waagenart.Art_EN
                 End Select
             End If
 

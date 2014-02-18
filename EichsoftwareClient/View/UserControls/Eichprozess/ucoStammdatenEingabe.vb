@@ -180,7 +180,7 @@
 
 
         'je nach sprache andere werte aus DB abrufen für Waagentyp
-        Select Case My.Settings.AktuelleSprache
+        Select Case My.Settings.AktuelleSprache.ToLower
             Case Is = "en"
                 RadDropdownlistWaagenTyp.DisplayMember = "Typ_EN"
                 RadDropDownListWaagenArt.DisplayMember = "Art_EN"
@@ -362,7 +362,7 @@
         RadDropdownlistlWZHersteller.DisplayMember = "Hersteller"
 
         'je nach sprache andere werte aus DB abrufen für Waagentyp
-        Select Case My.Settings.AktuelleSprache
+        Select Case My.Settings.AktuelleSprache.ToLower
             Case Is = "en"
                 RadDropdownlistWaagenTyp.DisplayMember = "Typ_EN"
                 RadDropDownListWaagenArt.DisplayMember = "Art_EN"
