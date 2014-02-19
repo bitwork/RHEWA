@@ -1,0 +1,2 @@
+C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages <-- Hier den ganzen Ordner einfügen.
+Anschließend im VS unter Publish\Prerequisits RHEWA Waagenfabrik auswählen.
