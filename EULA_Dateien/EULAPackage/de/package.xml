@@ -12,7 +12,7 @@
 
   <!-- Defines a localizable string table for error messages and url's  -->
   <Strings>
-    <String Name="DisplayName">Eulio Instruments End User License Agreement</String>
+    <String Name="DisplayName">End User License Agreement</String>
     <String Name="Culture">de</String>
 
     <String Name="CancelFailure">User Failed to Accept RHEWA Waagenfabrik End User License Agreement.</String>

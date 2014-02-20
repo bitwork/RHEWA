@@ -30,7 +30,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>30</ApplicationRevision>
+    <ApplicationRevision>32</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -821,14 +821,14 @@
     <None Include="Service References\EichsoftwareWebservice\EichsoftwareClient.EichsoftwareWebservice.ServerLookup_Waegezelle.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\EichsoftwareWebservice\EichsoftwareWebservice.wsdl" />
     <None Include="Service References\EichsoftwareWebservice\EichsoftwareWebservice.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\EichsoftwareWebservice\service.wsdl" />
-    <None Include="Service References\EichsoftwareWebservice\service.xsd">
+    <None Include="Service References\EichsoftwareWebservice\EichsoftwareWebservice1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\EichsoftwareWebservice\service1.xsd">
+    <None Include="Service References\EichsoftwareWebservice\EichsoftwareWebservice2.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -891,7 +891,7 @@
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.4.0">
       <Visible>False</Visible>
-      <ProductName>SQL Server Compact 4.0</ProductName>
+      <ProductName>SQL Server Compact 4.0 SP1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
@@ -912,6 +912,7 @@
     </None>
     <None Include="Service References\EichsoftwareWebservice\configuration.svcinfo" />
     <None Include="Service References\EichsoftwareWebservice\configuration91.svcinfo" />
+    <None Include="Service References\EichsoftwareWebservice\EichsoftwareWebservice.disco" />
     <None Include="Resources\Verschiebeweg_PL.PNG" />
     <None Include="Resources\Verschiebeweg_GB.PNG" />
     <None Include="Resources\Verschiebeweg_DE.PNG" />

@@ -49,42 +49,39 @@ End Class
 ''' soon as you feel comfortable with it - you may want to redesign this class.
 ''' </summary>
 Public Class RijndaelSimple
+
+
     ''' <summary>
     ''' Encrypts specified plaintext using Rijndael symmetric key algorithm
     ''' and returns a base64-encoded result.
     ''' </summary>
-    ''' <param name="plainText">
-    ''' Plaintext value to be encrypted.
+    ''' <param name="plainText"> 
+    ''' Plaintext value to be encrypted. </param>
     ''' <param name="passPhrase">
     ''' Passphrase from which a pseudo-random password will be derived. The
     ''' derived password will be used to generate the encryption key.
     ''' Passphrase can be any string. In this example we assume that this
-    ''' passphrase is an ASCII string.
-    ''' 
+    ''' passphrase is an ASCII string.</param>
     ''' <param name="saltValue">
     ''' Salt value used along with passphrase to generate password. Salt can
-    ''' be any string. In this example we assume that salt is an ASCII string.
-    ''' 
+    ''' be any string. In this example we assume that salt is an ASCII string.</param>
     ''' <param name="hashAlgorithm">
     ''' Hash algorithm used to generate password. Allowed values are: "MD5" and
-    ''' "SHA1". SHA1 hashes are a bit slower, but more secure than MD5 hashes.
-    ''' 
+    ''' "SHA1". SHA1 hashes are a bit slower, but more secure than MD5 hashes.</param>
     ''' <param name="passwordIterations">
     ''' Number of iterations used to generate password. One or two iterations
-    ''' should be enough.
-    ''' 
+    ''' should be enough.</param>
     ''' <param name="initVector">
     ''' Initialization vector (or IV). This value is required to encrypt the
     ''' first block of plaintext data. For RijndaelManaged class IV must be 
-    ''' exactly 16 ASCII characters long.
-    ''' 
+    ''' exactly 16 ASCII characters long.</param>
     ''' <param name="keySize">
     ''' Size of encryption key in bits. Allowed values are: 128, 192, and 256. 
-    ''' Longer keys are more secure than shorter keys.
-    ''' 
+    ''' Longer keys are more secure than shorter keys.</param>
     ''' <returns>
     ''' Encrypted value formatted as a base64-encoded string.
     ''' </returns>
+    ''' 
     Public Shared Function Encrypt(plainText As String, passPhrase As String, saltValue As String, hashAlgorithm As String, passwordIterations As Integer, initVector As String, _
         keySize As Integer) As String
         ' Convert strings into byte arrays.
@@ -150,34 +147,34 @@ Public Class RijndaelSimple
     ''' </summary>
     ''' <param name="cipherText">
     ''' Base64-formatted ciphertext value.
-    ''' 
+    ''' </param>
     ''' <param name="passPhrase">
     ''' Passphrase from which a pseudo-random password will be derived. The
     ''' derived password will be used to generate the encryption key.
     ''' Passphrase can be any string. In this example we assume that this
     ''' passphrase is an ASCII string.
-    ''' 
+    ''' </param>
     ''' <param name="saltValue">
     ''' Salt value used along with passphrase to generate password. Salt can
     ''' be any string. In this example we assume that salt is an ASCII string.
-    ''' 
+    ''' </param>
     ''' <param name="hashAlgorithm">
     ''' Hash algorithm used to generate password. Allowed values are: "MD5" and
     ''' "SHA1". SHA1 hashes are a bit slower, but more secure than MD5 hashes.
-    ''' 
+    ''' </param>
     ''' <param name="passwordIterations">
     ''' Number of iterations used to generate password. One or two iterations
     ''' should be enough.
-    ''' 
+    ''' </param>
     ''' <param name="initVector">
     ''' Initialization vector (or IV). This value is required to encrypt the
     ''' first block of plaintext data. For RijndaelManaged class IV must be
     ''' exactly 16 ASCII characters long.
-    ''' 
+    ''' </param>
     ''' <param name="keySize">
     ''' Size of encryption key in bits. Allowed values are: 128, 192, and 256.
     ''' Longer keys are more secure than shorter keys.
-    ''' 
+    ''' </param>
     ''' <returns>
     ''' Decrypted string value.
     ''' </returns>
