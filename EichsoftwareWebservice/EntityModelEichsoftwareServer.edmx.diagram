@@ -4,12 +4,12 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d93fbc3ad5f64180af62fb93acaed507" Name="Diagram1">
+      <Diagram DiagramId="d93fbc3ad5f64180af62fb93acaed507" Name="Diagram1" ZoomLevel="46">
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerBeschaffenheitspruefung" Width="1.5" PointX="6" PointY="8.75" IsExpanded="true" />
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerEichmarkenverwaltung" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerEichprotokoll" Width="1.5" PointX="3" PointY="20" IsExpanded="true" />
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerEichprozess" Width="1.5" PointX="8.25" PointY="26.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerKompatiblitaetsnachweis" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerKompatiblitaetsnachweis" Width="1.5" PointX="6.125" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerLizensierung" Width="1.5" PointX="2.75" PointY="2.25" IsExpanded="true" />
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerLookup_Auswertegeraet" Width="1.5" PointX="6" PointY="55.25" IsExpanded="true" />
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerLookup_Konformitaetsbewertungsverfahren" Width="1.5" PointX="0.75" PointY="27.625" IsExpanded="true" />
@@ -53,6 +53,10 @@
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerLookup_Bearbeitungsstatus" Width="1.5" PointX="2.6960959298052338" PointY="0.23656302701521806" />
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerVerbindungsprotokoll" Width="1.5" PointX="4.55986509684467" PointY="1.8500545778544875" />
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerKonfiguration" Width="1.5" PointX="7.1209252081443211" PointY="12.864900043636979" />
+        <EntityTypeShape EntityType="EichenSQLDatabaseModel.Benutzer" Width="1.5" PointX="8.44095262160569" PointY="12.233194207881201" />
+        <EntityTypeShape EntityType="EichenSQLDatabaseModel.Firmen" Width="1.5" PointX="1.6706084877581375" PointY="15.659090764661828" />
+        <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerFirmenZusatzdaten" Width="1.5" PointX="2.9176521556999777" PointY="12.472100755419628" />
+        <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerLookupVertragspartnerFirma" Width="1.5" PointX="3.265787429765699" PointY="6.1400903491955674" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

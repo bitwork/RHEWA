@@ -13,10 +13,15 @@ Imports System.Collections.Generic
 Partial Public Class Lizensierung
     Public Property ID As Integer
     Public Property Lizenzschluessel As String
-    Public Property FK_SuperofficeBenutzer As String
     Public Property LetzteAktivierung As Nullable(Of Date)
     Public Property RHEWALizenz As Boolean
     Public Property Aktiv As Boolean
-    Public Property Kennung As String
+    Public Property FK_Benutzer As String
+    Public Property FirmaOrt As String
+    Public Property Firma As String
+    Public Property Vorname As String
+    Public Property Name As String
+    Public Property FirmaPLZ As String
+    Public Property FirmaStrasse As String
 
 End Class

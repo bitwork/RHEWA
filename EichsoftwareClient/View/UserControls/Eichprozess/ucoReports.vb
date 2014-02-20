@@ -1406,7 +1406,7 @@ Public Class ucoReports
                 r.InsertAfter("Fallbeschleunigung g: " & pEichProzess.Eichprotokoll.Fallbeschleunigung_g & vbNewLine)
                 r.InsertAfter("Fallbeschleunigung ms2: " & pEichProzess.Eichprotokoll.Fallbeschleunigung_ms2 & vbNewLine)
                 r.InsertAfter("Konformitätsbewertungsverfahren: " & pEichProzess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren & vbNewLine)
-                r.InsertAfter("Super Office Benutzer: " & pEichProzess.Eichprotokoll.FK_Identifikationsdaten_SuperOfficeBenutzer & vbNewLine)
+                r.InsertAfter("Benutzer_FK: " & pEichProzess.Eichprotokoll.FK_Identifikationsdaten_Benutzer & vbNewLine)
                 r.InsertAfter("Genauigkeit Nullstellung In Ordnung: " & pEichProzess.Eichprotokoll.GenauigkeitNullstellung_InOrdnung & vbNewLine)
                 r.InsertAfter("ID: " & pEichProzess.Eichprotokoll.ID & vbNewLine)
                 r.InsertAfter("Aufstellungsort: " & pEichProzess.Eichprotokoll.Identifikationsdaten_Aufstellungsort & vbNewLine)
@@ -1740,7 +1740,7 @@ Public Class ucoReports
 
                     Try
                         'add prüft anhand der Vorgangsnummer automatisch ob ein neuer Prozess angelegt, oder ein vorhandener aktualisiert wird
-                        Webcontext.AddEichprozess(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                        Webcontext.AddEichprozess(objLiz.FK_Benutzer, objLiz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
 
                         'schließen des dialoges
                         ParentFormular.Close()

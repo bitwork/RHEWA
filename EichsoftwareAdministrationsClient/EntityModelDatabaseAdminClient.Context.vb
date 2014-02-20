@@ -48,5 +48,9 @@ Partial Public Class EichenEntities
     Public Property ServerPruefungWiederholbarkeit() As DbSet(Of ServerPruefungWiederholbarkeit)
     Public Property ServerVerbindungsprotokoll() As DbSet(Of ServerVerbindungsprotokoll)
     Public Property ServerKonfiguration() As DbSet(Of ServerKonfiguration)
+    Public Property Benutzer() As DbSet(Of Benutzer)
+    Public Property Firmen() As DbSet(Of Firmen)
+    Public Property ServerFirmenZusatzdaten() As DbSet(Of ServerFirmenZusatzdaten)
+    Public Property ServerLookupVertragspartnerFirma() As DbSet(Of ServerLookupVertragspartnerFirma)
 
 End Class

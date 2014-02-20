@@ -200,7 +200,9 @@
     </Compile>
     <Compile Include="MainModule.vb" />
     <Compile Include="Model\clsCrypto.vb" />
+    <Compile Include="Model\clsDBFunctions.vb" />
     <Compile Include="Model\clsServerHelper.vb" />
+    <Compile Include="Model\clsWebserviceFunctions.vb" />
     <Compile Include="Model\Win32APICall.vb" />
     <Compile Include="Mogelstatistik.vb">
       <DependentUpon>EntityModelDatabaseClient.tt</DependentUpon>
@@ -378,12 +380,6 @@
       <DependentUpon>ucoTaraeinrichtung.vb</DependentUpon>
     </Compile>
     <Compile Include="View\UserControls\Eichprozess\ucoTaraeinrichtung.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\UserControls\Allgemein\ucoDummy.Designer.vb">
-      <DependentUpon>ucoDummy.vb</DependentUpon>
-    </Compile>
-    <Compile Include="View\UserControls\Allgemein\ucoDummy.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="View\UserControls\Eichprozess\ucoPruefungLinearitaet.Designer.vb">
@@ -639,9 +635,6 @@
     <EmbeddedResource Include="View\UserControls\Allgemein\ucoContent.resx">
       <DependentUpon>ucoContent.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\UserControls\Allgemein\ucoDummy.resx">
-      <DependentUpon>ucoDummy.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Allgemein\ucoEichprozessauswahlliste.de.resx">
       <DependentUpon>ucoEichprozessauswahlliste.vb</DependentUpon>
     </EmbeddedResource>
@@ -807,6 +800,9 @@
     <None Include="Resources\Ersteichung EN.doc" />
     <None Include="Resources\Ersteichung PL.doc" />
     <None Include="Service References\EichsoftwareWebservice\EichsoftwareClient.EichsoftwareWebservice.clsEichprozessFuerAuswahlliste.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\EichsoftwareWebservice\EichsoftwareClient.EichsoftwareWebservice.clsLizenzdaten.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\EichsoftwareWebservice\EichsoftwareClient.EichsoftwareWebservice.clsServerFTPDaten.datasource">

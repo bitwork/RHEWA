@@ -149,7 +149,6 @@
           </Key>
           <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="FK_Identifikationsdaten_Konformitaetsbewertungsverfahren" Type="tinyint" Nullable="false" />
-          <Property Name="FK_Identifikationsdaten_SuperOfficeBenutzer" Type="nvarchar" MaxLength="50" />
           <Property Name="Identifikationsdaten_Benutzer" Type="nvarchar" MaxLength="50" />
           <Property Name="Identifikationsdaten_Aufstellungsort" Type="nvarchar" MaxLength="50" />
           <Property Name="Identifikationsdaten_Datum" Type="datetime" />
@@ -219,6 +218,7 @@
           <Property Name="EignungAchlastwaegungen_WaagenbrueckeEbene" Type="bit" />
           <Property Name="EignungAchlastwaegungen_WaageNichtGeeignet" Type="bit" />
           <Property Name="EignungAchlastwaegungen_Geprueft" Type="bit" />
+          <Property Name="FK_Identifikationsdaten_Benutzer" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Eichprozess">
           <Key>
@@ -278,11 +278,16 @@
           </Key>
           <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Lizenzschluessel" Type="nvarchar" Nullable="false" MaxLength="50" />
-          <Property Name="FK_SuperofficeBenutzer" Type="nvarchar" MaxLength="50" />
+          <Property Name="FK_Benutzer" Type="nvarchar" MaxLength="50" />
           <Property Name="LetzteAktivierung" Type="datetime" />
           <Property Name="RHEWALizenz" Type="bit" Nullable="false" />
           <Property Name="Aktiv" Type="bit" Nullable="false" />
-          <Property Name="Kennung" Type="nvarchar" MaxLength="50" />
+          <Property Name="FirmaOrt" Type="nvarchar" MaxLength="50" />
+          <Property Name="Firma" Type="nvarchar" MaxLength="100" />
+          <Property Name="Vorname" Type="nvarchar" MaxLength="100" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="FirmaPLZ" Type="nvarchar" MaxLength="25" />
+          <Property Name="FirmaStrasse" Type="nvarchar" MaxLength="999" />
         </EntityType>
         <EntityType Name="Lookup_Auswertegeraet">
           <Key>
@@ -995,7 +1000,6 @@
           </Key>
           <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Type="Byte" Name="FK_Identifikationsdaten_Konformitaetsbewertungsverfahren" Nullable="false" />
-          <Property Type="String" Name="FK_Identifikationsdaten_SuperOfficeBenutzer" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Identifikationsdaten_Benutzer" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Identifikationsdaten_Aufstellungsort" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="DateTime" Name="Identifikationsdaten_Datum" Precision="3" />
@@ -1077,6 +1081,7 @@
           <NavigationProperty Name="PruefungStaffelverfahrenErsatzlast" Relationship="EichsoftwareClientdatabaseModel.FK_PruefungStaffelverfahrenErsatzlast_Eichprotokoll" FromRole="Eichprotokoll" ToRole="PruefungStaffelverfahrenErsatzlast" />
           <NavigationProperty Name="PruefungStaffelverfahrenNormallast" Relationship="EichsoftwareClientdatabaseModel.FK_PruefungStaffelverfahrenNormallast_Eichprotokoll" FromRole="Eichprotokoll" ToRole="PruefungStaffelverfahrenNormallast" />
           <NavigationProperty Name="PruefungWiederholbarkeit" Relationship="EichsoftwareClientdatabaseModel.FK_PruefungWiederholbarkeit_Eichprotokoll" FromRole="Eichprotokoll" ToRole="PruefungWiederholbarkeit" />
+          <Property Type="String" Name="FK_Identifikationsdaten_Benutzer" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Eichprozess">
           <Key>
@@ -1147,11 +1152,16 @@
           </Key>
           <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Type="String" Name="Lizenzschluessel" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="FK_SuperofficeBenutzer" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="DateTime" Name="LetzteAktivierung" Precision="3" />
           <Property Type="Boolean" Name="RHEWALizenz" Nullable="false" />
           <Property Type="Boolean" Name="Aktiv" Nullable="false" />
-          <Property Type="String" Name="Kennung" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FK_Benutzer" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FirmaOrt" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Firma" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Vorname" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Name" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FirmaPLZ" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FirmaStrasse" MaxLength="999" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Lookup_Auswertegeraet">
           <Key>
@@ -1768,6 +1778,7 @@
           <EntitySetMapping Name="Eichprotokoll">
             <EntityTypeMapping TypeName="EichsoftwareClientdatabaseModel.Eichprotokoll">
               <MappingFragment StoreEntitySet="Eichprotokoll">
+                <ScalarProperty Name="FK_Identifikationsdaten_Benutzer" ColumnName="FK_Identifikationsdaten_Benutzer" />
                 <ScalarProperty Name="EignungAchlastwaegungen_Geprueft" ColumnName="EignungAchlastwaegungen_Geprueft" />
                 <ScalarProperty Name="EignungAchlastwaegungen_WaageNichtGeeignet" ColumnName="EignungAchlastwaegungen_WaageNichtGeeignet" />
                 <ScalarProperty Name="EignungAchlastwaegungen_WaagenbrueckeEbene" ColumnName="EignungAchlastwaegungen_WaagenbrueckeEbene" />
@@ -1837,7 +1848,6 @@
                 <ScalarProperty Name="Identifikationsdaten_Datum" ColumnName="Identifikationsdaten_Datum" />
                 <ScalarProperty Name="Identifikationsdaten_Aufstellungsort" ColumnName="Identifikationsdaten_Aufstellungsort" />
                 <ScalarProperty Name="Identifikationsdaten_Benutzer" ColumnName="Identifikationsdaten_Benutzer" />
-                <ScalarProperty Name="FK_Identifikationsdaten_SuperOfficeBenutzer" ColumnName="FK_Identifikationsdaten_SuperOfficeBenutzer" />
                 <ScalarProperty Name="FK_Identifikationsdaten_Konformitaetsbewertungsverfahren" ColumnName="FK_Identifikationsdaten_Konformitaetsbewertungsverfahren" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
@@ -1900,11 +1910,16 @@
           <EntitySetMapping Name="Lizensierung">
             <EntityTypeMapping TypeName="EichsoftwareClientdatabaseModel.Lizensierung">
               <MappingFragment StoreEntitySet="Lizensierung">
-                <ScalarProperty Name="Kennung" ColumnName="Kennung" />
+                <ScalarProperty Name="FirmaStrasse" ColumnName="FirmaStrasse" />
+                <ScalarProperty Name="FirmaPLZ" ColumnName="FirmaPLZ" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Vorname" ColumnName="Vorname" />
+                <ScalarProperty Name="Firma" ColumnName="Firma" />
+                <ScalarProperty Name="FirmaOrt" ColumnName="FirmaOrt" />
+                <ScalarProperty Name="FK_Benutzer" ColumnName="FK_Benutzer" />
                 <ScalarProperty Name="Aktiv" ColumnName="Aktiv" />
                 <ScalarProperty Name="RHEWALizenz" ColumnName="RHEWALizenz" />
                 <ScalarProperty Name="LetzteAktivierung" ColumnName="LetzteAktivierung" />
-                <ScalarProperty Name="FK_SuperofficeBenutzer" ColumnName="FK_SuperofficeBenutzer" />
                 <ScalarProperty Name="Lizenzschluessel" ColumnName="Lizenzschluessel" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>

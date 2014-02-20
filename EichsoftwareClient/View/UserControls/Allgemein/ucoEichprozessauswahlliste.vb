@@ -1,9 +1,9 @@
-﻿Imports System.Resources
-
-Public Class ucoEichprozessauswahlliste
+﻿Public Class ucoEichprozessauswahlliste
     Inherits ucoContent
 #Region "Member Variables"
     Private WithEvents _ParentForm As FrmMainContainer
+    Private objWebserviceFunctions As New clsWebserviceFunctions
+    Private objDBFunctions As New clsDBFunctions
 #End Region
 
 #Region "Constructors"
@@ -26,8 +26,40 @@ Public Class ucoEichprozessauswahlliste
     End Sub
 #End Region
 
-#Region "Formular Logiken"
+#Region "Properties"
+    Private ReadOnly Property VorgangsnummerGridClient As String
+        Get
+            Try
+                If RadGridViewAuswahlliste.SelectedRows.Count > 0 Then
+                    'prüfen ob das ausgewählte element eine REcord Row und kein Groupheader, Filter oder anderes ist
+                    If TypeOf RadGridViewAuswahlliste.SelectedRows(0) Is Telerik.WinControls.UI.GridViewDataRowInfo Then
+                        Return RadGridViewAuswahlliste.SelectedRows(0).Cells("Vorgangsnummer").Value
+                    End If
+                End If
+                Return ""
+            Catch ex As Exception
+                Return ""
+            End Try
+        End Get
+    End Property
+    Private ReadOnly Property VorgangsnummerGridServer As String
+        Get
+            Try
+                If RadGridViewRHEWAAlle.SelectedRows.Count > 0 Then
+                    'prüfen ob das ausgewählte element eine REcord Row und kein Groupheader, Filter oder anderes ist
+                    If TypeOf RadGridViewRHEWAAlle.SelectedRows(0) Is Telerik.WinControls.UI.GridViewDataRowInfo Then
+                        Return RadGridViewRHEWAAlle.SelectedRows(0).Cells("Vorgangsnummer").Value
+                    End If
+                End If
+                Return ""
+            Catch ex As Exception
+                Return ""
+            End Try
+        End Get
+    End Property
+#End Region
 
+#Region "Formular Logiken"
     Private Sub FormatTable()
         'ausblenden von internen spalten
         RadGridViewAuswahlliste.Columns("ID").IsVisible = False
@@ -48,10 +80,6 @@ Public Class ucoEichprozessauswahlliste
         RadGridViewAuswahlliste.BestFitColumns()
         RadGridViewAuswahlliste.EnableAlternatingRowColor = True
         RadGridViewAuswahlliste.ShowNoDataText = True
-
-
-
-
     End Sub
 
     Protected Friend Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
@@ -75,7 +103,6 @@ Public Class ucoEichprozessauswahlliste
     Private Sub LoadFromDatabase()
         Me.Enabled = False
 
-
         If Not BackgroundWorkerLoadFromDatabase.IsBusy Then
             BackgroundWorkerLoadFromDatabase.RunWorkerAsync()
         End If
@@ -86,6 +113,7 @@ Public Class ucoEichprozessauswahlliste
             End If
         End If
     End Sub
+
     Private Sub ForceActivation()
         Try
 
@@ -97,7 +125,7 @@ Public Class ucoEichprozessauswahlliste
 
 
                 Dim objLic As New Lizensierung
-                objLic.FK_SuperofficeBenutzer = name
+                objLic.FK_Benutzer = name
                 objLic.Lizenzschluessel = Schluessel
 
                 objLic.RHEWALizenz = True
@@ -128,7 +156,6 @@ Public Class ucoEichprozessauswahlliste
 
         End Try
     End Sub
-
 
     Private Sub ucoEichprozessauswahlliste_Load(sender As Object, e As System.EventArgs) Handles Me.Load
         If Not ParentFormular Is Nothing Then
@@ -170,89 +197,143 @@ Public Class ucoEichprozessauswahlliste
 
 
     End Sub
+
+    ''' <summary>
+    ''' Konfigurationsdialog anzeigen
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub RadButtonEinstellungen_Click(sender As Object, e As EventArgs) Handles RadButtonEinstellungen.Click
+        ZeigeKonfigurationsDialog()
+    End Sub
+
+    ''' <summary>
+    ''' Konfigurationsdialog anzeigen
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub ZeigeKonfigurationsDialog()
+        Dim f As New FrmEinstellungen
+        f.ShowDialog()
+        If f.DialogResult = DialogResult.OK Then
+            'neu aktualisierung der Eichungen
+            VerbindeMitWebserviceUndHoleAlles()
+        End If
+    End Sub
+
+    ''' <summary>
+    ''' aktivieren und deaktiveren der Schalter zum Genehmigen und Ablehnen
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    ''' <author></author>
+    ''' <commentauthor></commentauthor>
+    Private Sub RadGridView1_SelectionChanged(sender As System.Object, e As System.EventArgs) Handles RadGridViewRHEWAAlle.SelectionChanged
+        Try
+            RadButtonEichprozessAblehnenRHEWA.Enabled = False
+            RadButtonEichprozessGenehmigenRHEWA.Enabled = False
+
+            If RadGridViewRHEWAAlle.SelectedRows.Count > 0 Then
+                'prüfen ob das ausgewählte element eine REcord Row und kein Groupheader, Filter oder anderes ist
+                If TypeOf RadGridViewRHEWAAlle.SelectedRows(0) Is Telerik.WinControls.UI.GridViewDataRowInfo Then
+                    Dim SelectedStatus As String = "" 'Variable zum Speichern des BearbeitungsStatuses des aktuellen Prozesses
+                    SelectedStatus = RadGridViewRHEWAAlle.SelectedRows(0).Cells("Bearbeitungsstatus").Value
+
+                    If SelectedStatus.ToLower = "genehmigt" Then
+                        RadButtonEichprozessAblehnenRHEWA.Enabled = False
+                        RadButtonEichprozessGenehmigenRHEWA.Enabled = False
+                    ElseIf SelectedStatus.ToLower = "fehlerhaft" Then
+                        RadButtonEichprozessAblehnenRHEWA.Enabled = False
+                        RadButtonEichprozessGenehmigenRHEWA.Enabled = False
+                    ElseIf SelectedStatus.ToLower = "wartet auf bearbeitung" Then
+                        RadButtonEichprozessAblehnenRHEWA.Enabled = True
+                        RadButtonEichprozessGenehmigenRHEWA.Enabled = True
+                    Else
+                        RadButtonEichprozessAblehnenRHEWA.Enabled = False
+                        RadButtonEichprozessGenehmigenRHEWA.Enabled = False
+                    End If
+                End If
+            End If
+        Catch ex As Exception
+            RadButtonEichprozessAblehnenRHEWA.Enabled = False
+            RadButtonEichprozessGenehmigenRHEWA.Enabled = False
+        End Try
+    End Sub
 #End Region
 
-#Region "Routinen Client"
-
-
+#Region "Eichprozess Routinen Client"
+    ''' <summary>
+    ''' Neuen Eichprozess anlegen 
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub RadButtonNeu_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonClientNeu.Click
-        CreateNewEichprozess()
+        OeffneNeuenEichprozess()
     End Sub
 
-    Private Sub CreateNewEichprozess()
-        Dim objEichprozess As Eichprozess = Nothing
-        Using context As New EichsoftwareClientdatabaseEntities1
-            objEichprozess = context.Eichprozess.Create
-            'pflichtfelder füllen
-            objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
-            objEichprozess.Vorgangsnummer = Guid.NewGuid.ToString
-        End Using
-
-        'anzeigen des Dialogs zur Bearbeitung der Eichung
-        Dim f As New FrmMainContainer(objEichprozess)
-        f.ShowDialog()
-
-        'nach dem schließen des Dialogs aktualisieren
-        LoadFromDatabase()
-    End Sub
-
+    ''' <summary>
+    ''' Eichprozess bearbeiten
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub RadButtonBearbeiten_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonClientBearbeiten.Click
-        EditEichprozess()
+        BearbeiteEichprozess()
     End Sub
 
+    ''' <summary>
+    ''' Eichprozess bearbeiten
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub RadGridViewAuswahlliste_DoubleClick(sender As Object, e As EventArgs) Handles RadGridViewAuswahlliste.CellDoubleClick
-        EditEichprozess()
+        BearbeiteEichprozess()
     End Sub
 
+    ''' <summary>
+    ''' Neuen Eichprozess anlegen
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub OeffneNeuenEichprozess()
+        Dim objEichprozess As Eichprozess = objDBFunctions.ErzeugeNeuenEichprozess
+        If Not objEichprozess Is Nothing Then
+            'anzeigen des Dialogs zur Bearbeitung der Eichung
+            Dim f As New FrmMainContainer(objEichprozess)
+            f.ShowDialog()
 
+            'nach dem schließen des Dialogs aktualisieren
+            LoadFromDatabase()
+        End If
+    End Sub
 
-    Private Sub EditEichprozess()
-        If RadGridViewAuswahlliste.SelectedRows.Count > 0 Then
-            'prüfen ob das ausgewählte element eine REcord Row und kein Groupheader, Filter oder anderes ist
-            If TypeOf RadGridViewAuswahlliste.SelectedRows(0) Is Telerik.WinControls.UI.GridViewDataRowInfo Then
-                Dim SelectedID As String = "" 'Variable zum Speichern der ID des aktuellen Prozesses
-                SelectedID = RadGridViewAuswahlliste.SelectedRows(0).Cells("ID").Value
+    ''' <summary>
+    ''' Eichprozess bearbeiten
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub BearbeiteEichprozess()
+        If Not Me.VorgangsnummerGridClient.Equals("") Then
+            Dim objEichprozess = objDBFunctions.HoleVorhandenenEichprozess(VorgangsnummerGridClient)
+            If Not objEichprozess Is Nothing Then
+                If objEichprozess.FK_Bearbeitungsstatus = 4 Or objEichprozess.FK_Bearbeitungsstatus = 2 Then 'nur wenn neu oder fehlerhaft darf eine Änderung vorgenommen werrden
+                    'anzeigen des Dialogs zur Bearbeitung der Eichung
+                    Dim f As New FrmMainContainer(objEichprozess)
+                    f.ShowDialog()
+                Else
+                    'es gibt ihn schon und er ist bereits abgeschickt. nur lesend öffnen
+                    objDBFunctions.HoleNachschlageListenFuerEichprozess(objEichprozess)
+                    Dim f As New FrmMainContainer(objEichprozess, FrmMainContainer.enuDialogModus.lesend)
+                    f.ShowDialog()
+                End If
 
-
-                Using Context As New EichsoftwareClientdatabaseEntities1
-
-                    '  Dim obj = webContext.GetEichProzess(SelectedID)
-
-
-
-
-                    Dim objEichprozess = (From Obj In Context.Eichprozess Select Obj Where Obj.ID = SelectedID).FirstOrDefault 'firstor default um erstes element zurückzugeben das übereintrifft(bei ID Spalten sollte es eh nur 1 sein)
-                    If Not objEichprozess Is Nothing Then
-                        If objEichprozess.FK_Bearbeitungsstatus = 4 Or objEichprozess.FK_Bearbeitungsstatus = 2 Then 'nur wenn neu oder fehlerhaft darf eine Änderung vorgenommen werrden
-
-                            'anzeigen des Dialogs zur Bearbeitung der Eichung
-                            Dim f As New FrmMainContainer(objEichprozess)
-                            f.ShowDialog()
-                            'ElseIf objEichprozess.FK_Bearbeitungsstatus = 2 Then
-                            '    Dim f As New FrmMainContainer(objEichprozess, FrmMainContainer.enuDialogModus.korrigierend)
-                            '    f.ShowDialog()
-                        Else
-                            objEichprozess = (From Obj In Context.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Beschaffenheitspruefung").Include("Mogelstatistik") Select Obj Where Obj.ID = SelectedID).FirstOrDefault 'firstor default um erstes element zurückzugeben das übereintrifft(bei ID Spalten sollte es eh nur 1 sein)
-
-                            objEichprozess.Lookup_Vorgangsstatus = (From f1 In Context.Lookup_Vorgangsstatus Where f1.ID = objEichprozess.FK_Vorgangsstatus Select f1).FirstOrDefault
-
-                            objEichprozess.Lookup_Waagenart = (From f1 In Context.Lookup_Waagenart Where f1.ID = objEichprozess.FK_WaagenArt Select f1).FirstOrDefault
-                            objEichprozess.Lookup_Waagentyp = (From f1 In Context.Lookup_Waagentyp Where f1.ID = objEichprozess.FK_WaagenTyp Select f1).FirstOrDefault
-                            objEichprozess.Lookup_Bearbeitungsstatus = (From f1 In Context.Lookup_Bearbeitungsstatus Where f1.ID = objEichprozess.FK_Bearbeitungsstatus Select f1).FirstOrDefault
-                            objEichprozess.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren = (From f1 In Context.Lookup_Konformitaetsbewertungsverfahren Where f1.ID = objEichprozess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren Select f1).FirstOrDefault
-
-                            Dim f As New FrmMainContainer(objEichprozess, FrmMainContainer.enuDialogModus.lesend)
-                            f.ShowDialog()
-                        End If
-                        'nach dem schließen des Dialogs aktualisieren
-                        LoadFromDatabase()
-                    End If
-                End Using
-
-
+                'nach dem schließen des Dialogs aktualisieren
+                LoadFromDatabase()
             End If
         End If
     End Sub
+
     ''' <summary>
     ''' ausblenden bzw wieder einblenden des aktuellen eichvorgangs
     ''' </summary>
@@ -262,34 +343,24 @@ Public Class ucoEichprozessauswahlliste
     ''' <author></author>
     ''' <commentauthor></commentauthor>
     Private Sub RadButtonAusblenden_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonClientAusblenden.Click
-        HideEichprozess()
-
+        EichprozessAusblendenEinblenden()
     End Sub
 
-    Private Sub HideEichprozess()
-        'prüfen ob es ausgewählte elemente gibt
-        If RadGridViewAuswahlliste.SelectedRows.Count > 0 Then
-            'prüfen ob das ausgewählte element eine REcord Row und kein Groupheader, Filter oder anderes ist
-            If TypeOf RadGridViewAuswahlliste.SelectedRows(0) Is Telerik.WinControls.UI.GridViewDataRowInfo Then
-                Dim SelectedID As String = ""
-                SelectedID = RadGridViewAuswahlliste.SelectedRows(0).Cells("ID").Value
+    ''' <summary>
+    ''' ausblenden bzw wieder einblenden des aktuellen eichvorgangs
+    ''' </summary>
+    ''' <remarks></remarks>
+    ''' <author></author>
+    ''' <commentauthor></commentauthor>
+    Private Sub EichprozessAusblendenEinblenden()
+        If Not Me.VorgangsnummerGridClient.Equals("") Then
 
-
-                Using context As New EichsoftwareClientdatabaseEntities1
-                    Dim objEichprozess = (From Obj In context.Eichprozess Select Obj Where Obj.ID = SelectedID).FirstOrDefault 'firstor default um erstes element zurückzugeben
-                    If Not objEichprozess Is Nothing Then
-                        'umdrehen des ausgeblendet Statuses
-                        objEichprozess.Ausgeblendet = Not objEichprozess.Ausgeblendet
-                        context.SaveChanges()
-                    End If
-
-                    'neu laden der Liste
-                    LoadFromDatabase()
-                End Using
-            End If
+            objDBFunctions.BlendeEichprozessAus(VorgangsnummerGridClient)
+            'neu laden der Liste
+            LoadFromDatabase()
         End If
-
     End Sub
+
     ''' <summary>
     ''' ein und ausblenden der als gelöscht markierten Elementen
     ''' </summary>
@@ -303,106 +374,28 @@ Public Class ucoEichprozessauswahlliste
         LoadFromDatabase()
     End Sub
 
-
+    ''' <summary>
+    ''' Lokale Eichprozesse für Gridview laden
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub BackgroundWorkerLoadFromDatabase_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorkerLoadFromDatabase.DoWork
-        'neuen Context aufbauen
-        Using Context As New EichsoftwareClientdatabaseEntities1
-            Context.Configuration.LazyLoadingEnabled = True
-            'je nach Sprache die Abfrage anpassen um die entsprechenden Übersetzungen der Lookupwerte aus der DB zu laden
-            Select Case My.Settings.AktuelleSprache.ToLower
-                Case "de"
-                    Dim Data = From Eichprozess In Context.Eichprozess _
-                                              Where Eichprozess.Ausgeblendet = RadCheckBoxAusblendenClientGeloeschterDokumente.Checked _
-                                                               Select New With _
-                                                 { _
-                                                         .Status = Eichprozess.Lookup_Vorgangsstatus.Status, _
-                                                         .Bearbeitungsstatus = Eichprozess.Lookup_Bearbeitungsstatus.Status, _
-                                                         Eichprozess.ID, _
-                                                         Eichprozess.Vorgangsnummer, _
-                                                         .Fabriknummer = Eichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer, _
-                                                         .Lookup_Waegezelle = Eichprozess.Lookup_Waegezelle.Typ, _
-                                                         .Lookup_Waagentyp = Eichprozess.Lookup_Waagentyp.Typ, _
-                                                         .Lookup_Waagenart = Eichprozess.Lookup_Waagenart.Art, _
-                                                         .Lookup_Auswertegeraet = Eichprozess.Lookup_Auswertegeraet.Typ, _
-                                                         Eichprozess.Ausgeblendet _
-                                                 }
-
-
-
-
-                    'zuweisen der Ergebnismenge als Datenquelle für das Grid
-                    e.Result = Data.ToList
-                Case "en"
-                    'laden der benötigten Liste mit nur den benötigten Spalten
-                    'TH Diese Linq abfrage führt einen Join auf die Status Tabelle aus um den Status als Anzeigewert anzeigen zu können. 
-                    'Außerdem werden durch die .Name = Wert Notatation im Kontext des "select NEW" eine neue temporäre "Klasse" erzeugt, die die übergebenen Werte beinhaltet - als kämen sie aus einer Datenbanktabelle
-                    Dim Data = From Eichprozess In Context.Eichprozess _
-                                                       Where Eichprozess.Ausgeblendet = RadCheckBoxAusblendenClientGeloeschterDokumente.Checked _
-                               Select New With _
-                                                { _
-                                                              .Status = Eichprozess.Lookup_Vorgangsstatus.Status_EN, _
-                                                         .Bearbeitungsstatus = Eichprozess.Lookup_Bearbeitungsstatus.Status_EN, _
-                                                        Eichprozess.ID, _
-                                                        Eichprozess.Vorgangsnummer, _
-                                                          .Fabriknummer = Eichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer, _
-                                                        .Lookup_Waegezelle = Eichprozess.Lookup_Waegezelle.Typ, _
-                                                        .Lookup_Waagentyp = Eichprozess.Lookup_Waagentyp.Typ_EN, _
-                                                        .Lookup_Waagenart = Eichprozess.Lookup_Waagenart.Art_EN, _
-                                                        .Lookup_Auswertegeraet = Eichprozess.Lookup_Auswertegeraet.Typ, _
-                                                        Eichprozess.Ausgeblendet _
-                                                }
-
-                    'zuweisen der Ergebnismenge als Datenquelle für das Grid
-                    e.Result = Data.ToList
-                Case "pl"
-                    'laden der benötigten Liste mit nur den benötigten Spalten
-                    'TH Diese Linq abfrage führt einen Join auf die Status Tabelle aus um den Status als Anzeigewert anzeigen zu können. 
-                    'Außerdem werden durch die .Name = Wert Notatation im Kontext des "select NEW" eine neue temporäre "Klasse" erzeugt, die die übergebenen Werte beinhaltet - als kämen sie aus einer Datenbanktabelle
-                    Dim Data = From Eichprozess In Context.Eichprozess _
-                                                  Where Eichprozess.Ausgeblendet = RadCheckBoxAusblendenClientGeloeschterDokumente.Checked _
-                               Select New With _
-                                                { _
-                                                          .Status = Eichprozess.Lookup_Vorgangsstatus.Status_PL, _
-                                                         .Bearbeitungsstatus = Eichprozess.Lookup_Bearbeitungsstatus.Status_PL, _
-                                                        Eichprozess.ID, _
-                                                        Eichprozess.Vorgangsnummer, _
-                                                           .Fabriknummer = Eichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer, _
-                                                        .Lookup_Waegezelle = Eichprozess.Lookup_Waegezelle.Typ, _
-                                                        .Lookup_Waagentyp = Eichprozess.Lookup_Waagentyp.Typ_PL, _
-                                                        .Lookup_Waagenart = Eichprozess.Lookup_Waagenart.Art_EN, _
-                                                        .Lookup_Auswertegeraet = Eichprozess.Lookup_Auswertegeraet.Typ, _
-                                                        Eichprozess.Ausgeblendet _
-                                                }
-
-                    'zuweisen der Ergebnismenge als Datenquelle für das Grid
-                    e.Result = Data.ToList
-                Case Else
-                    'laden der benötigten Liste mit nur den benötigten Spalten
-                    'TH Diese Linq abfrage führt einen Join auf die Status Tabelle aus um den Status als Anzeigewert anzeigen zu können. 
-                    'Außerdem werden durch die .Name = Wert Notatation im Kontext des "select NEW" eine neue temporäre "Klasse" erzeugt, die die übergebenen Werte beinhaltet - als kämen sie aus einer Datenbanktabelle
-                    Dim Data = From Eichprozess In Context.Eichprozess _
-                                                            Where Eichprozess.Ausgeblendet = RadCheckBoxAusblendenClientGeloeschterDokumente.Checked _
-                               Select New With _
-                                                { _
-                                                          .Status = Eichprozess.Lookup_Vorgangsstatus.Status_EN, _
-                                                         .Bearbeitungsstatus = Eichprozess.Lookup_Bearbeitungsstatus.Status_EN, _
-                                                        Eichprozess.ID, Eichprozess.Vorgangsnummer, _
-                                                         .Fabriknummer = Eichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer, _
-                                                        .Lookup_Waegezelle = Eichprozess.Lookup_Waegezelle.Typ, _
-                                                        .Lookup_Waagentyp = Eichprozess.Lookup_Waagentyp.Typ, .Lookup_Waagentyp_EN = Eichprozess.Lookup_Waagentyp.Typ_EN, .Lookup_Waagentyp_PL = Eichprozess.Lookup_Waagentyp.Typ_PL, _
-                                                        .Lookup_Waagenart = Eichprozess.Lookup_Waagenart.Art, .Lookup_Waagenart_EN = Eichprozess.Lookup_Waagenart.Art_EN, .Lookup_Waagenart_PL = Eichprozess.Lookup_Waagenart.Art_PL, _
-                                                        .Lookup_Auswertegeraet = Eichprozess.Lookup_Auswertegeraet.Typ, _
-                                                        Eichprozess.Ausgeblendet _
-                                                }
-
-                    'zuweisen der Ergebnismenge als Datenquelle für das Grid
-                    e.Result = Data.ToList
-            End Select
-
-
-        End Using
+        'background worker result enthält anschließend alle lokalen Eichprozesse
+        e.Result = objDBFunctions.LadeLokaleEichprozessListe(RadCheckBoxAusblendenClientGeloeschterDokumente.Checked)
     End Sub
 
+    ''' <summary>
+    '''   ''' <summary>
+    ''' Databinding und Formatierung
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub BackgroundWorkerLoadFromDatabase_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorkerLoadFromDatabase.RunWorkerCompleted
         'zuweisen der Ergebnismenge als Datenquelle für das Grid
         RadGridViewAuswahlliste.DataSource = e.Result
@@ -412,29 +405,24 @@ Public Class ucoEichprozessauswahlliste
     End Sub
 #End Region
 
-#Region "Routinen Server"
+#Region "Eichprozses Routinen Server"
+    ''' <summary>
+    ''' Lade eichprozessliste vom Server
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub BackgroundWorkerLoadFromDatabaseRHEWA_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorkerLoadFromDatabaseRHEWA.DoWork
-        Try
-            'neuen Context aufbauen
-            Using WebContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
-                Try
-                    WebContext.Open()
-                Catch ex As Exception
-                    Exit Sub
-                End Try
-                Using dbcontext As New EichsoftwareClientdatabaseEntities1
-                    Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
-                    Try
-                        e.Result = WebContext.GetAlleEichprozesse(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
-                    Catch ex As Exception
-                    End Try
-
-                End Using
-            End Using
-        Catch ex As Exception
-        End Try
+        'background worker result enthält anschließend alle serverseitigen Eichprozesse
+        e.Result = objWebserviceFunctions.GetServerEichprotokollListe()
     End Sub
 
+    ''' <summary>
+    ''' Databinding und Formatierung
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub BackgroundWorkerLoadFromDatabaseRHEWA_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorkerLoadFromDatabaseRHEWA.RunWorkerCompleted
         'zuweisen der Ergebnismenge als Datenquelle für das Grid
         RadGridViewRHEWAAlle.DataSource = e.Result
@@ -458,192 +446,72 @@ Public Class ucoEichprozessauswahlliste
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Öffnet einen Eichprozess vom Server zum lesen
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub ZeigeServerEichprozess()
+        If Not Me.VorgangsnummerGridServer.Equals("") Then
 
-    Private Sub ShowEichprozess()
-        If RadGridViewRHEWAAlle.SelectedRows.Count > 0 Then
-            'prüfen ob das ausgewählte element eine REcord Row und kein Groupheader, Filter oder anderes ist
-            If TypeOf RadGridViewRHEWAAlle.SelectedRows(0) Is Telerik.WinControls.UI.GridViewDataRowInfo Then
-                Dim SelectedID As String = "" 'Variable zum Speichern der Vorgangsnummer des aktuellen Prozesses
-                SelectedID = RadGridViewRHEWAAlle.SelectedRows(0).Cells("Vorgangsnummer").Value
-
-                'neue Datenbankverbindung
-                Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
-                    Try
-                        webContext.Open()
-
-
-                    Catch ex As Exception
-                        MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                        Exit Sub
-                    End Try
-
-                    Using dbcontext As New EichsoftwareClientdatabaseEntities1
-
-                        Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
-                        Dim objClientEichprozess = dbcontext.Eichprozess.Create
-                        Dim objServerEichprozess = webContext.GetEichProzess(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, SelectedID, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
-
-
-                        If objServerEichprozess Is Nothing Then
-                            MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_KeinServerObjektEichung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                        End If
-
-                        'umwandeln des Serverobjektes in Clientobject
-                        clsServerHelper.CopyObjectPropertiesWithAllLookups(objClientEichprozess, objServerEichprozess)
-                        clsServerHelper.GetLookupValuesServer(objClientEichprozess)
-
-                        'anzeigen des Dialogs zur Bearbeitung der Eichung
-                        Dim f As New FrmMainContainer(objClientEichprozess, FrmMainContainer.enuDialogModus.lesend)
-                        f.ShowDialog()
-
-                        'nach dem schließen des Dialogs aktualisieren
-                        LoadFromDatabase()
-
-                    End Using
-                End Using
-
+            Dim objClientEichprozess = objWebserviceFunctions.ZeigeServerEichprozess(VorgangsnummerGridServer)
+            'anzeigen des Dialogs zur Bearbeitung der Eichung
+            If Not objClientEichprozess Is Nothing Then
+                Dim f As New FrmMainContainer(objClientEichprozess, FrmMainContainer.enuDialogModus.lesend)
+                f.ShowDialog()
+                'nach dem schließen des Dialogs aktualisieren
+                LoadFromDatabase()
             End If
         End If
     End Sub
 
-    Private Sub ShowClientEichprozess()
-        If RadGridViewAuswahlliste.SelectedRows.Count > 0 Then
-            'prüfen ob das ausgewählte element eine REcord Row und kein Groupheader, Filter oder anderes ist
-            If TypeOf RadGridViewAuswahlliste.SelectedRows(0) Is Telerik.WinControls.UI.GridViewDataRowInfo Then
-                Dim SelectedID As String = "" 'Variable zum Speichern der Vorgangsnummer des aktuellen Prozesses
-                SelectedID = RadGridViewAuswahlliste.SelectedRows(0).Cells("ID").Value
+    ''' <summary>
+    ''' Eichprozess genehmigen
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub RadButtonEichprozessGenehmigen_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonEichprozessGenehmigenRHEWA.Click
+        GenehnmigeGewaehltenVorgang()
+    End Sub
 
-                'neue Datenbankverbindung
-
-                Using dbcontext As New EichsoftwareClientdatabaseEntities1
-
-
-                    Dim objClientEichprozess = dbcontext.Eichprozess.Create
-                    'anzeigen des Dialogs zur Bearbeitung der Eichung
-                    Dim f As New FrmMainContainer(objClientEichprozess, FrmMainContainer.enuDialogModus.lesend)
-                    f.ShowDialog()
-
+    ''' <summary>
+    ''' Eichprozess genehmigen
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub GenehnmigeGewaehltenVorgang()
+        If Not Me.VorgangsnummerGridServer.Equals("") Then
+            If MessageBox.Show(My.Resources.GlobaleLokalisierung.Frage_Genehmigen, My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+                If objWebserviceFunctions.GenehmigeEichprozess(VorgangsnummerGridServer) Then
                     'nach dem schließen des Dialogs aktualisieren
                     LoadFromDatabase()
-
-                End Using
-            End If
-        End If
-    End Sub
-
-    Private Sub RadButtonEichprozessGenehmigen_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonEichprozessGenehmigenRHEWA.Click
-        If RadGridViewRHEWAAlle.SelectedRows.Count > 0 Then
-            'prüfen ob das ausgewählte element eine REcord Row und kein Groupheader, Filter oder anderes ist
-            If TypeOf RadGridViewRHEWAAlle.SelectedRows(0) Is Telerik.WinControls.UI.GridViewDataRowInfo Then
-                Dim SelectedID As String = "" 'Variable zum Speichern der Vorgangsnummer des aktuellen Prozesses
-                SelectedID = RadGridViewRHEWAAlle.SelectedRows(0).Cells("ID").Value
-                If MessageBox.Show(My.Resources.GlobaleLokalisierung.Frage_Genehmigen, My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
-
-                    'neue Datenbankverbindung
-                    Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
-                        Try
-                            webContext.Open()
-
-
-                        Catch ex As Exception
-                            MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                            Exit Sub
-                        End Try
-                        Using dbcontext As New EichsoftwareClientdatabaseEntities1
-
-                            Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
-                            'prüfen ob der datensatz von jemand anderem in Bearbeitung ist
-                            Dim bolSetGueltig As Boolean = True 'variable zum abbrechen des Prozesses, falls jemand anderes an dem DS arbeitet
-                            Dim Messagetext As String = ""
-                            Messagetext = webContext.CheckSperrung(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, SelectedID, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
-                            If Messagetext.Equals("") = False Then
-                                'rhewa arbeitet in deutsch und hat keine lokalisierung gewünscht
-                                Dim result As String
-                                result = webContext.SetSperrung(True, objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, SelectedID, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
-                                If result = "" Then
-                                    bolSetGueltig = True
-                                Else
-                                    MessageBox.Show(result)
-                                    bolSetGueltig = False
-                                End If
-                            End If
-                            If bolSetGueltig Then
-                                webContext.SetEichprozessGenehmight(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, SelectedID, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
-
-                                'nach dem schließen des Dialogs aktualisieren
-                                LoadFromDatabase()
-                            End If
-                        End Using
-                    End Using
                 End If
             End If
         End If
     End Sub
 
+    ''' <summary>
+    ''' Eichprozess ablehnen
+    ''' </summary>
+    ''' <remarks></remarks>
     Private Sub RadButtonEichprozessAblehnen_click(sender As System.Object, e As System.EventArgs) Handles RadButtonEichprozessAblehnenRHEWA.Click
-        If RadGridViewRHEWAAlle.SelectedRows.Count > 0 Then
-            'prüfen ob das ausgewählte element eine REcord Row und kein Groupheader, Filter oder anderes ist
-            If TypeOf RadGridViewRHEWAAlle.SelectedRows(0) Is Telerik.WinControls.UI.GridViewDataRowInfo Then
-                Dim SelectedID As String = "" 'Variable zum Speichern der Vorgangsnummer des aktuellen Prozesses
-                SelectedID = RadGridViewRHEWAAlle.SelectedRows(0).Cells("ID").Value
-
-                If MessageBox.Show(My.Resources.GlobaleLokalisierung.Frage_Ablehnen, My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
-                    'neue Datenbankverbindung
-                    Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
-                        Try
-                            webContext.Open()
-                        Catch ex As Exception
-                            MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                            Exit Sub
-                        End Try
-
-
-                        Using dbcontext As New EichsoftwareClientdatabaseEntities1
-                            Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
-
-                            'prüfen ob der datensatz von jemand anderem in Bearbeitung ist
-                            Dim bolSetUnueltig As Boolean = True 'variable zum abbrechen des Prozesses, falls jemand anderes an dem DS arbeitet
-                            Dim Messagetext As String = ""
-                            Messagetext = webContext.CheckSperrung(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, SelectedID, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
-                            If Messagetext.Equals("") = False Then
-                                'rhewa arbeitet in deutsch und hat keine lokalisierung gewünscht
-                                If MessageBox.Show("Dieser Eichprozess wird von '" & Messagetext & "' bearbeitet. Möchten Sie seine Arbeit wirklich überschreiben und den Prozess ablehnen?", My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo) = DialogResult.Yes Then
-                                    Dim result As String
-                                    result = webContext.SetSperrung(True, objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, SelectedID, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
-
-                                    If result = "" Then
-                                        bolSetUnueltig = True
-                                    Else
-                                        MessageBox.Show(result)
-                                        bolSetUnueltig = False
-                                    End If
-                                Else
-                                    bolSetUnueltig = False
-                                End If
-                            End If
-                            If bolSetUnueltig Then
-                                webContext.SetEichprozessUngueltig(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, SelectedID, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
-
-                                'nach dem schließen des Dialogs aktualisieren
-                                LoadFromDatabase()
-                            End If
-                        End Using
-                    End Using
-
-
+        If Not Me.VorgangsnummerGridServer.Equals("") Then
+            If MessageBox.Show(My.Resources.GlobaleLokalisierung.Frage_Ablehnen, My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+                If objWebserviceFunctions.AblehnenEichprozess(VorgangsnummerGridServer) Then
+                    'nach dem schließen des Dialogs aktualisieren
+                    LoadFromDatabase()
                 End If
-
-
             End If
         End If
     End Sub
 
-
+    ''' <summary>
+    ''' Eichprozess ablehnen
+    ''' </summary>
+    ''' <remarks></remarks>
     Private Sub RadButtonBearbeitenRHEWA_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonEichungAnsehenRHEWA.Click
-        ShowEichprozess()
+        ZeigeServerEichprozess()
     End Sub
 
-   
     ''' <summary>
     ''' Einblenden eines Anhang Symbols für Anträge mit Dateianhang
     ''' </summary>
@@ -686,754 +554,153 @@ Public Class ucoEichprozessauswahlliste
 
                     End Try
                 Else
-                    ShowEichprozess()
+                    ZeigeServerEichprozess()
                 End If
             Else
-                ShowEichprozess()
+                ZeigeServerEichprozess()
             End If
         Catch ex As Exception
         End Try
     End Sub
-
-    
-
-#End Region
-
-
-
-
-
-
 
     ''' <summary>
-    ''' aktivieren und deaktiveren der Schalter zum Genehmigen und Ablehnen
+    ''' Kopiert eichprozess vom Server in ein Client Objekt als Vorlage
     ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
     ''' <remarks></remarks>
-    ''' <author></author>
-    ''' <commentauthor></commentauthor>
-    Private Sub RadGridView1_SelectionChanged(sender As System.Object, e As System.EventArgs) Handles RadGridViewRHEWAAlle.SelectionChanged
-        Try
-            RadButtonEichprozessAblehnenRHEWA.Enabled = False
-            RadButtonEichprozessGenehmigenRHEWA.Enabled = False
-
-            If RadGridViewRHEWAAlle.SelectedRows.Count > 0 Then
-                'prüfen ob das ausgewählte element eine REcord Row und kein Groupheader, Filter oder anderes ist
-                If TypeOf RadGridViewRHEWAAlle.SelectedRows(0) Is Telerik.WinControls.UI.GridViewDataRowInfo Then
-                    Dim SelectedStatus As String = "" 'Variable zum Speichern des BearbeitungsStatuses des aktuellen Prozesses
-                    SelectedStatus = RadGridViewRHEWAAlle.SelectedRows(0).Cells("Bearbeitungsstatus").Value
-
-                    If SelectedStatus.ToLower = "genehmigt" Then
-                        RadButtonEichprozessAblehnenRHEWA.Enabled = False
-                        RadButtonEichprozessGenehmigenRHEWA.Enabled = False
-                    ElseIf SelectedStatus.ToLower = "fehlerhaft" Then
-                        RadButtonEichprozessAblehnenRHEWA.Enabled = False
-                        RadButtonEichprozessGenehmigenRHEWA.Enabled = False
-                    ElseIf SelectedStatus.ToLower = "wartet auf bearbeitung" Then
-                        RadButtonEichprozessAblehnenRHEWA.Enabled = True
-                        RadButtonEichprozessGenehmigenRHEWA.Enabled = True
-                    Else
-                        RadButtonEichprozessAblehnenRHEWA.Enabled = False
-                        RadButtonEichprozessGenehmigenRHEWA.Enabled = False
-                    End If
-                End If
-            End If
-        Catch ex As Exception
-            RadButtonEichprozessAblehnenRHEWA.Enabled = False
-            RadButtonEichprozessGenehmigenRHEWA.Enabled = False
-        End Try
-    End Sub
-    Private Sub GetLokaleKopieVonEichprozess()
-        If RadGridViewRHEWAAlle.SelectedRows.Count > 0 Then
-            'prüfen ob das ausgewählte element eine REcord Row und kein Groupheader, Filter oder anderes ist
-            If TypeOf RadGridViewRHEWAAlle.SelectedRows(0) Is Telerik.WinControls.UI.GridViewDataRowInfo Then
-                Dim SelectedID As String = "" 'Variable zum Speichern der Vorgangsnummer des aktuellen Prozesses
-                SelectedID = RadGridViewRHEWAAlle.SelectedRows(0).Cells("Vorgangsnummer").Value
-
-                If MessageBox.Show(My.Resources.GlobaleLokalisierung.Frage_Kopieren, My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
-                    'neue Datenbankverbindung
-                    Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
-                        Try
-                            webContext.Open()
-
-
-                        Catch ex As Exception
-                            MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                            Exit Sub
-                        End Try
-                        Using dbcontext As New EichsoftwareClientdatabaseEntities1
-                            Try
-
-
-                                Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
-                                Dim objClientEichprozess = dbcontext.Eichprozess.Create
-                                Dim objServerEichprozess = webContext.GetEichProzess(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, SelectedID, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
-
-
-                                If objServerEichprozess Is Nothing Then
-                                    MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_KeinServerObjektEichung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                                End If
-
-                                'umwandeln des Serverobjektes in Clientobject
-                                clsServerHelper.CopyObjectPropertiesWithNewIDs(objClientEichprozess, objServerEichprozess)
-
-                                'vorgangsnummer editieren
-                                objClientEichprozess.Vorgangsnummer = Guid.NewGuid.ToString
-                                objClientEichprozess.FK_Bearbeitungsstatus = 4 'noch nichts
-                                objClientEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
-                                dbcontext.Eichprozess.Add(objClientEichprozess)
-
-                                Try
-                                    dbcontext.SaveChanges()
-                                Catch ex As Entity.Infrastructure.DbUpdateException
-                                    messagebox.show(ex.InnerException.InnerException.Message)
-                                    MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_SpeicherAnomalie, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK)
-                                    If My.Settings.RHEWALizenz Then
-                                        MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_SpeicherAnomalieRhewaZusatztext, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK)
-                                    End If
-
-                                    Exit Sub
-                                Catch ex2 As Entity.Validation.DbEntityValidationException
-                                    For Each o In ex2.EntityValidationErrors
-                                        For Each v In o.ValidationErrors
-                                            messagebox.show(v.ErrorMessage & " " & v.PropertyName)
-                                        Next
-                                    Next
-                                    Exit Sub
-                                End Try
-
-
-                                'anzeigen des Dialogs zur Bearbeitung der Eichung
-                                Dim f As New FrmMainContainer(objClientEichprozess)
-                                f.ShowDialog()
-
-                                'nach dem schließen des Dialogs aktualisieren
-                                LoadFromDatabase()
-
-                            Catch ex As Exception
-
-                            End Try
-                        End Using
-                    End Using
-
-
-                End If
-
-
-            End If
-        End If
-    End Sub
     Private Sub RadButtonEichprozessKopieren_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonEichprozessKopierenRHEWA.Click
         GetLokaleKopieVonEichprozess()
     End Sub
 
-#Region "Updates aus Webservice"
     ''' <summary>
-    ''' Funktion welche prüft ob es noch lokale Eichvorgänge gibt, die nicht an RHEWA versand wurden
+    ''' Kopiert eichprozess vom Server in ein Client Objekt als Vorlage
     ''' </summary>
-    ''' <returns>True wenn noch Eichungen gefunden wurden</returns>
-    ''' <remarks>Wird z.b. Genutzt um zu Warnen, bevor ein Benutzer seine lokale DB löscht um eine Teilsynchronisierung vorzunehmen</remarks>
-    Private Function CheckEsGibtUngesendeteEichungen() As Boolean
-        Using dbcontext As New EichsoftwareClientdatabaseEntities1
-            Dim query = From eichungen In dbcontext.Eichprozess Where eichungen.FK_Vorgangsstatus = GlobaleEnumeratoren.enuBearbeitungsstatus.noch_nicht_versendet
-            If query.Count = 0 Then
-                Return False
-            Else
-                Return True
+    ''' <remarks></remarks>
+    Private Sub GetLokaleKopieVonEichprozess()
+        If Not Me.VorgangsnummerGridServer.Equals("") Then
+            If MessageBox.Show(My.Resources.GlobaleLokalisierung.Frage_Kopieren, My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+                Dim objClientEichprozess = objWebserviceFunctions.GetLokaleKopieVonEichprozess(VorgangsnummerGridServer)
+
+                If Not objClientEichprozess Is Nothing Then
+                    'anzeigen des Dialogs zur Bearbeitung der Eichung
+                    Dim f As New FrmMainContainer(objClientEichprozess)
+                    f.ShowDialog()
+                    'nach dem schließen des Dialogs aktualisieren
+                    LoadFromDatabase()
+                End If
             End If
-        End Using
-    End Function
+        End If
+    End Sub
+
+#End Region
+
+#Region "Updates aus Webservice"
+
+    ''' <summary>
+    ''' Synchronisiert Daten wie WZ, AWG, Stammdaten mit Webservice
+    ''' </summary>
+    ''' <remarks></remarks>
     Private Sub VerbindeMitWebserviceUndHoleAlles()
         Dim bolSyncData As Boolean = True 'Wert der genutzt wird um ggfs die Synchrosierung abzubrechen, falls ein Benutzer noch ungesendete Eichvorgänge hat
-        Try
-            'versuche Verbindung zu RHEWA aufzubauen
+        If objWebserviceFunctions.TesteVerbindung() Then
 
-            'wenn nicht möglich Abbruch
-            Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
-                webContext.Open()
-                webContext.Close()
-            End Using
-        Catch ex As Exception
+            'prüfen ob noch nicht abgeschickte Eichungen vorlieren. Wenn ja Hinweismeldung und Abbruchmöglichkeit für Benutzer
+            If objDBFunctions.PruefeAufUngesendeteEichungen() = True Then
+                If MessageBox.Show(My.Resources.GlobaleLokalisierung.Warnung_EichungenWerdenGeloescht, My.Resources.GlobaleLokalisierung.Frage) = DialogResult.Yes Then
+                    bolSyncData = True
+                Else
+                    bolSyncData = False
+                End If
+            End If
 
-            MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
-            MessageBox.Show(ex.Message, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            If bolSyncData Then
 
-            Exit Sub
-        End Try
+                'für den Fall das die Anwendung gerade erst installiert wurde, oder die einstellung zur Synchronisierung geändert wurde, sollen alle Eichungen vom RHEWA Server geholt werden, die einmal angelegt wurden
+                If objDBFunctions.LoescheLokaleDatenbank() Then
+                    My.Settings.LetztesUpdate = "01.01.2000"
+                    My.Settings.Save()
+                    'neue Stammdaten zum Benutzer holen
+                    objWebserviceFunctions.GetNeueStammdaten(False)
+                    'hole alle WZ
+                    objWebserviceFunctions.GetNeueWZ(False)
+                    'prüfen ob es neue AWG gibt
+                    objWebserviceFunctions.GetNeuesAWG(False)
+
+                    My.Settings.LetztesUpdate = Date.Now
+                    My.Settings.Save()
 
 
+                    objWebserviceFunctions.GetEichprotokolleVomServer()
+
+                    'aktualisieren des Grids
+                    LoadFromDatabase()
+
+                    My.Settings.HoleAlleEigenenEichungenVomServer = False
+                    My.Settings.Save()
 
 
-        'prüfen ob noch nicht abgeschickte Eichungen vorlieren. Wenn ja Hinweismeldung und Abbruchmöglichkeit für Benutzer
-        If CheckEsGibtUngesendeteEichungen() = True Then
-            If MessageBox.Show(My.Resources.GlobaleLokalisierung.Warnung_EichungenWerdenGeloescht, My.Resources.GlobaleLokalisierung.Frage) = DialogResult.Yes Then
-                bolSyncData = True
-            Else
-                bolSyncData = False
+                End If
             End If
         End If
-
-        If bolSyncData Then
-
-        'für den Fall das die Anwendung gerade erst installiert wurde, oder die einstellung zur Synchronisierung geändert wurde, sollen alle Eichungen vom RHEWA Server geholt werden, die einmal angelegt wurden
-            If LoescheLokaleDatenbank() Then
-                My.Settings.LetztesUpdate = "01.01.2000"
-                My.Settings.Save()
-                'hole alle WZ
-                GetNeueWZ(False)
-                'prüfen ob es neue AWG gibt
-                GetNeuesAWG(False)
-
-                My.Settings.LetztesUpdate = Date.Now
-                My.Settings.Save()
-
-
-                GetEichprotokolleVomServer()
-                My.Settings.HoleAlleEigenenEichungenVomServer = False
-                My.Settings.Save()
-
-
-            End If
-        End If
-
     End Sub
+
     ''' <summary>
     ''' Methode welche sich mit dem Webservice verbinduet und nach aktualisierungen für WZ, AWGs und eigenen Eichungen guckt
     ''' </summary>
     ''' <remarks></remarks>
     Private Sub VerbindeMitWebServiceUndAktualisiere()
-        Try
-            Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
-                webContext.Open()
-                webContext.Close()
-            End Using
-        Catch ex As Exception
+        If objWebserviceFunctions.TesteVerbindung() Then
 
-            MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
-            MessageBox.Show(ex.Message, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
-
-            Exit Sub
-        End Try
-
-        'variablen zur Ausgabe ob es änderungen gibt:
-        Dim bolNeuWZ As Boolean = False
-        Dim bolNeuAWG As Boolean = False
-        Dim bolNeuGenehmigung As Boolean = False
+            'variablen zur Ausgabe ob es änderungen gibt:
+            Dim bolNeuStammdaten As Boolean = False
+            Dim bolNeuWZ As Boolean = False
+            Dim bolNeuAWG As Boolean = False
+            Dim bolNeuGenehmigung As Boolean = False
 
 
+            'neue Stammdaten zum Benutzer holen
+            objWebserviceFunctions.GetNeueStammdaten(bolNeuStammdaten)
 
-        'prüfen ob es neue WZ gibt
-        GetNeueWZ(bolNeuWZ)
-        'prüfen ob es neue AWG gibt
-        GetNeuesAWG(bolNeuAWG)
+            'prüfen ob es neue WZ gibt
+            objWebserviceFunctions.GetNeueWZ(bolNeuWZ)
+            'prüfen ob es neue AWG gibt
+            objWebserviceFunctions.GetNeuesAWG(bolNeuAWG)
 
-        My.Settings.LetztesUpdate = Date.Now
-        My.Settings.Save()
-
-
-        'prüfen ob Eichprozesse die versendet wurden genehmigt oder abgelehnt wurden
-        GetGenehmigungsstatus(bolNeuGenehmigung)
+            My.Settings.LetztesUpdate = Date.Now
+            My.Settings.Save()
 
 
-        Dim returnMessage As String = My.Resources.GlobaleLokalisierung.Aktualisierung_Erfolgreich
-        If bolNeuWZ Then
-            returnMessage += "/ " + My.Resources.GlobaleLokalisierung.Aktualisierung_NeuWZ
+            'prüfen ob Eichprozesse die versendet wurden genehmigt oder abgelehnt wurden
+            objWebserviceFunctions.GetGenehmigungsstatus(bolNeuGenehmigung)
+
+            'refresh
+            LoadFromDatabase()
+
+            Dim returnMessage As String = My.Resources.GlobaleLokalisierung.Aktualisierung_Erfolgreich
+            If bolNeuWZ Then
+                returnMessage += "/ " + My.Resources.GlobaleLokalisierung.Aktualisierung_NeuWZ + " "
+            End If
+            If bolNeuAWG Then
+                returnMessage += "/ " + My.Resources.GlobaleLokalisierung.Aktualisierung_NeuAWG + " "
+            End If
+
+            If bolNeuGenehmigung Then
+                returnMessage += "/ " + My.Resources.GlobaleLokalisierung.Aktualisierung_NeuEichung + " "
+            End If
+
+            If bolNeuStammdaten Then
+
+            End If
+            MessageBox.Show(returnMessage)
         End If
-        If bolNeuAWG Then
-            returnMessage += "/ " + My.Resources.GlobaleLokalisierung.Aktualisierung_NeuAWG
-        End If
-
-        If bolNeuGenehmigung Then
-            returnMessage += "/ " + My.Resources.GlobaleLokalisierung.Aktualisierung_NeuEichung
-        End If
-        MessageBox.Show(returnMessage)
-    End Sub
-
-    'löscht lokale Datenbank, für resyncronisierung
-    Private Function LoescheLokaleDatenbank() As Boolean
-        Try
-            Using DBContext As New EichsoftwareClientdatabaseEntities1
-
-                For Each obj In DBContext.Eichprozess
-                    DBContext.Eichprozess.Remove(obj)
-                Next
-                For Each obj In DBContext.Eichprotokoll
-                    DBContext.Eichprotokoll.Remove(obj)
-                Next
-                For Each obj In DBContext.Beschaffenheitspruefung
-                    DBContext.Beschaffenheitspruefung.Remove(obj)
-                Next
-                For Each obj In DBContext.Mogelstatistik
-                    DBContext.Mogelstatistik.Remove(obj)
-                Next
-                For Each obj In DBContext.Kompatiblitaetsnachweis
-                    DBContext.Kompatiblitaetsnachweis.Remove(obj)
-                Next
-                For Each obj In DBContext.PruefungAnsprechvermoegen
-                    DBContext.PruefungAnsprechvermoegen.Remove(obj)
-                Next
-                For Each obj In DBContext.PruefungEichfehlergrenzen
-                    DBContext.PruefungEichfehlergrenzen.Remove(obj)
-                Next
-                For Each obj In DBContext.PruefungLinearitaetFallend
-                    DBContext.PruefungLinearitaetFallend.Remove(obj)
-                Next
-                For Each obj In DBContext.PruefungLinearitaetSteigend
-                    DBContext.PruefungLinearitaetSteigend.Remove(obj)
-                Next
-                For Each obj In DBContext.PruefungRollendeLasten
-                    DBContext.PruefungRollendeLasten.Remove(obj)
-                Next
-                For Each obj In DBContext.PruefungAussermittigeBelastung
-                    DBContext.PruefungAussermittigeBelastung.Remove(obj)
-                Next
-                For Each obj In DBContext.PruefungStabilitaetGleichgewichtslage
-                    DBContext.PruefungStabilitaetGleichgewichtslage.Remove(obj)
-                Next
-                For Each obj In DBContext.PruefungStaffelverfahrenErsatzlast
-                    DBContext.PruefungStaffelverfahrenErsatzlast.Remove(obj)
-                Next
-                For Each obj In DBContext.PruefungStaffelverfahrenNormallast
-                    DBContext.PruefungStaffelverfahrenNormallast.Remove(obj)
-                Next
-                For Each obj In DBContext.PruefungWiederholbarkeit
-                    DBContext.PruefungWiederholbarkeit.Remove(obj)
-                Next
-
-                'DBContext.Database.Delete()
-                'DBContext.Database.CreateIfNotExists()
-
-                'Dim objLic As New Lizensierung
-                'objLic.FK_SuperofficeBenutzer = Name
-                'objLic.Lizenzschluessel = Schluessel
-                'objLic.Aktiv = True
-                'objLic.RHEWALizenz = My.Settings.RHEWALizenz
-
-                'DBContext.Lizensierung.Add(objLic)
-                DBContext.SaveChanges()
-                Return True
-            End Using
-        Catch ex As Exception
-            MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Try
-                MessageBox.Show(ex.InnerException.StackTrace, ex.InnerException.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                Try
-                    MessageBox.Show(ex.InnerException.InnerException.StackTrace, ex.InnerException.InnerException.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                Catch ex3 As Exception
-                End Try
-            Catch ex2 As Exception
-            End Try
-
-            Return False
-        End Try
-    End Function
-
-    'holt alle einem zugehörigen Eichprotokolle vom RHEWA Server. z.B. wenn die anwendung auf einem neuem PC installiert wurde
-    Private Sub GetEichprotokolleVomServer()
-        Try
-
-            'abrufen des Statusts für jeden versendeten Eichprozess
-            Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
-                Try
-                    webContext.Open()
-                Catch ex As Exception
-                    Exit Sub
-                End Try
-                Using DBContext As New EichsoftwareClientdatabaseEntities1
-                    'Eingrenzen welche Daten synchronisiert werden müssen, je nach Einstllung des Benutzers 
-                    Dim StartDatum As Date = #1/1/2000#
-                    Dim EndDatum As Date = #12/31/2999#
-
-                    If My.Settings.Syncronisierungsmodus = "Alles" Then
-                    ElseIf My.Settings.Syncronisierungsmodus = "Ab" Then
-                        StartDatum = My.Settings.SyncAb
-                    ElseIf My.Settings.Syncronisierungsmodus = "Zwischen" Then
-                        StartDatum = My.Settings.SyncAb
-                        EndDatum = My.Settings.SyncBis
-                    Else
-                        My.Settings.Syncronisierungsmodus = "Alles"
-                        My.Settings.Save()
-                    End If
-
-                    'lizenz objekt
-                    Dim objLiz = (From db In DBContext.Lizensierung Select db).FirstOrDefault
-
-                    Try
-                        'wenn es eine Änderung gab, wird das geänderte Objekt vom Server abgerufen. Damit können änderungen die von einem RHEWA Mitarbeiter durchgeführt wurden übernommen werden
-                        'neue Datenbankverbindung
-                        Dim objServerEichprozesse = webContext.GetAlleEichprozesseImZeitraum(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, My.User.Name, System.Environment.UserDomainName, My.Computer.Name, StartDatum, EndDatum)
-
-
-                        If objServerEichprozesse Is Nothing Then
-                            MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_KeinServerObjektEichung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                        End If
-                        For Each objectServerEichprozess In objServerEichprozesse
-                            'umwandeln des Serverobjektes in Clientobject
-                            Dim Eichprozess = DBContext.Eichprozess.Create
-
-                            'erzeuge lokale Kopie
-                            clsServerHelper.CopyObjectPropertiesWithNewIDs(Eichprozess, objectServerEichprozess, True)
-                            Try
-                                DBContext.Eichprozess.Add(Eichprozess)
-                                DBContext.SaveChanges()
-                            Catch ex As Entity.Infrastructure.DbUpdateException
-                                MessageBox.Show(ex.InnerException.InnerException.Message)
-                            Catch ex2 As Entity.Validation.DbEntityValidationException
-                                For Each o In ex2.EntityValidationErrors
-                                    For Each v In o.ValidationErrors
-                                        MessageBox.Show(v.ErrorMessage & " " & v.PropertyName)
-                                    Next
-                                Next
-                            End Try
-
-
-                        Next
-
-                        'aktualisieren des Grids
-                        LoadFromDatabase()
-                    Catch ex As Exception
-                        MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_Speichern, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                        MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    End Try
-
-                End Using
-            End Using
-
-        Catch ex As Exception
-            MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
     End Sub
 
     ''' <summary>
-    ''' holt aktuellen Status eigenerer Eichungenen (z.b. Abgelehnt oder Erfolgreich) aus DB über Webservice
+    ''' Methode welche sich mit dem Webservice verbinduet und nach aktualisierungen für WZ, AWGs und eigenen Eichungen guckt
     ''' </summary>
-    ''' <param name="bolNeuGenehmigung">Variable welche für eine Erfolgsmeldung genutzt wird. Wird beim aktualisieren auf True gesetzt um den Nutzer darauf hinzuweisen, dass etwas neues heruntergeladen wurde.</param>
     ''' <remarks></remarks>
-    Private Sub GetGenehmigungsstatus(ByRef bolNeuGenehmigung As Boolean)
-        Try
-
-            'abrufen des Statusts für jeden versendeten Eichprozess
-            Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
-                Try
-                    webContext.Open()
-                Catch ex As Exception
-                    Exit Sub
-                End Try
-                Using DBContext As New EichsoftwareClientdatabaseEntities1
-                    Dim objLiz = (From db In DBContext.Lizensierung Select db).FirstOrDefault
-
-                    'hole die prozesse mit dem status 1 = in bearbeitung bei rhewa
-                    Dim query = From db In DBContext.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Beschaffenheitspruefung").Include("Mogelstatistik") Select db Where db.FK_Bearbeitungsstatus = 1
-
-                    For Each Eichprozess In query
-                        Try
-                            Dim NeuerStatus As String = webContext.CheckGueltigkeitEichprozess(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, Eichprozess.Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
-                            If Not NeuerStatus Is Nothing Then
-                                If Eichprozess.FK_Bearbeitungsstatus <> NeuerStatus Then
-
-                                    'wenn es eine Änderung gab, wird das geänderte Objekt vom Server abgerufen. Damit können änderungen die von einem RHEWA Mitarbeiter durchgeführt wurden übernommen werden
-                                    'todo abrufen des neuen Objektess
-
-                                    '###################
-                                    'neue Datenbankverbindung
-
-                                    Dim objServerEichprozess = webContext.GetEichProzess(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, Eichprozess.Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
-
-
-                                    If objServerEichprozess Is Nothing Then
-                                        MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_KeinServerObjektEichung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                                    End If
-
-                                    'umwandeln des Serverobjektes in Clientobject
-                                    clsServerHelper.CopyObjectPropertiesWithOwnIDs(Eichprozess, objServerEichprozess)
-
-                                    Eichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'überschreiben des Statuses
-                                    Eichprozess.FK_Bearbeitungsstatus = NeuerStatus
-                                    Try
-                                        DBContext.SaveChanges()
-                                        bolNeuGenehmigung = True
-                                    Catch ex As Entity.Infrastructure.DbUpdateException
-                                        MessageBox.Show(ex.InnerException.InnerException.Message)
-                                    Catch ex2 As Entity.Validation.DbEntityValidationException
-                                        For Each o In ex2.EntityValidationErrors
-                                            For Each v In o.ValidationErrors
-                                                MessageBox.Show(v.ErrorMessage & " " & v.PropertyName)
-                                            Next
-                                        Next
-                                    End Try
-
-                                    clsServerHelper.UpdateForeignTables(Eichprozess, objServerEichprozess)
-
-                                    LoadFromDatabase()
-
-                                    '###################
-
-
-
-                                End If
-                            End If
-                        Catch ex As Exception
-                            MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_Speichern, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                            MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                        End Try
-                    Next
-                End Using
-            End Using
-
-        Catch ex As Exception
-            MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
-    End Sub
-
-    ''' <summary>
-    ''' holt neue oder aktualisierte WZ aus DB über Webservice
-    ''' </summary>
-    ''' <param name="bolNeuWZ">Variable welche für eine Erfolgsmeldung genutzt wird. Wird beim aktualisieren auf True gesetzt um den Nutzer darauf hinzuweisen, dass etwas neues heruntergeladen wurde.</param>
-    ''' <remarks></remarks>
-    Private Sub GetNeueWZ(ByRef bolNeuWZ As Boolean)
-        Try
-
-
-            'abrufen neuer WZ aus Server, basierend auf dem Wert des letzten erfolgreichen updates
-            Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
-                Try
-                    webContext.Open()
-                Catch ex As Exception
-                    Exit Sub
-                End Try
-                Using DBContext As New EichsoftwareClientdatabaseEntities1
-
-                    'Eingrenzen welche Daten synchronisiert werden müssen, je nach Einstllung des Benutzers 
-                    Dim StartDatum As Date = #1/1/2000#
-                    Dim EndDatum As Date = #12/31/2999#
-
-                    If My.Settings.Syncronisierungsmodus = "Alles" Then
-                    ElseIf My.Settings.Syncronisierungsmodus = "Ab" Then
-                        StartDatum = My.Settings.SyncAb
-                    ElseIf My.Settings.Syncronisierungsmodus = "Zwischen" Then
-                        StartDatum = My.Settings.SyncAb
-                        EndDatum = My.Settings.SyncBis
-                    Else
-                        My.Settings.Syncronisierungsmodus = "Alles"
-                        My.Settings.Save()
-                    End If
-
-                    'lizenzisierung holen
-                    Dim objLiz = (From db In DBContext.Lizensierung Select db).FirstOrDefault
-                    Dim objWZResultList = webContext.GetNeueWZ(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, My.Settings.LetztesUpdate, My.User.Name, System.Environment.UserDomainName, My.Computer.Name, StartDatum, EndDatum)
-
-                    If Not objWZResultList Is Nothing Then
-
-                        'alle neuen Artikel aus Server iterieren
-                        Dim tObjServerWZ As EichsoftwareWebservice.ServerLookup_Waegezelle 'hilfsvariable für Linq abfrage. Es gibt sonst eine Warnung wenn in Linq mit einer for each variablen gearbeitet wird
-                        For Each objServerArtikel As EichsoftwareWebservice.ServerLookup_Waegezelle In objWZResultList
-                            tObjServerWZ = objServerArtikel
-                            'alle Artikel abrufen in denen die ID mit dem neuem Serverartikel übereinstimmt
-                            Try
-                                Dim query = From d In DBContext.Lookup_Waegezelle Where d.ID = tObjServerWZ._ID
-
-
-                                'prüfen ob es bereits einen Artikel in der lokalen DB gibt, mit dem aktuellen ID-Wert
-                                If query.Count = 0 Then 'Es gbit den Artikel noch nicht in der lokalen Datebank => insert 
-                                    Dim newWZ As New Lookup_Waegezelle
-
-
-                                    newWZ.ID = objServerArtikel._ID
-                                    newWZ.Hoechsteteilungsfaktor = objServerArtikel._Hoechsteteilungsfaktor
-                                    newWZ.Kriechteilungsfaktor = objServerArtikel._Kriechteilungsfaktor
-                                    newWZ.MaxAnzahlTeilungswerte = objServerArtikel._MaxAnzahlTeilungswerte
-                                    newWZ.Mindestvorlast = objServerArtikel._Mindestvorlast
-                                    newWZ.MinTeilungswert = objServerArtikel._MinTeilungswert
-                                    newWZ.RueckkehrVorlastsignal = objServerArtikel._RueckkehrVorlastsignal
-                                    newWZ.Waegezellenkennwert = objServerArtikel._Waegezellenkennwert
-                                    newWZ.WiderstandWaegezelle = objServerArtikel._WiderstandWaegezelle
-                                    newWZ.Bauartzulassung = objServerArtikel._Bauartzulassung
-                                    newWZ.BruchteilEichfehlergrenze = objServerArtikel._BruchteilEichfehlergrenze
-                                    newWZ.Genauigkeitsklasse = objServerArtikel._Genauigkeitsklasse
-                                    newWZ.GrenzwertTemperaturbereichMAX = objServerArtikel._GrenzwertTemperaturbereichMAX
-                                    newWZ.GrenzwertTemperaturbereichMIN = objServerArtikel._GrenzwertTemperaturbereichMIN
-                                    newWZ.Hersteller = objServerArtikel._Hersteller
-                                    newWZ.Pruefbericht = objServerArtikel._Pruefbericht
-                                    newWZ.Typ = objServerArtikel._Typ
-                                    newWZ.Deaktiviert = objServerArtikel._Deaktiviert
-                                    'hinzufügen des neu erzeugten Artikels in Lokale Datenbank
-
-                                    DBContext.Lookup_Waegezelle.Add(newWZ)
-                                    Try
-                                        DBContext.SaveChanges()
-                                        bolNeuWZ = True
-                                    Catch e As Exception
-                                        MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_Speichern, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                                        MessageBox.Show(e.StackTrace, e.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                                    End Try
-
-                                Else 'Es gibt den Artikel bereits, er wird geupdated
-                                    For Each objWZ As Lookup_Waegezelle In query 'es sollte nur einen Artikel Geben, da die IDs eindeutig sind.
-                                        objWZ.Hoechsteteilungsfaktor = objServerArtikel._Hoechsteteilungsfaktor
-                                        objWZ.Kriechteilungsfaktor = objServerArtikel._Kriechteilungsfaktor
-                                        objWZ.MaxAnzahlTeilungswerte = objServerArtikel._MaxAnzahlTeilungswerte
-                                        objWZ.Mindestvorlast = objServerArtikel._Mindestvorlast
-                                        objWZ.MinTeilungswert = objServerArtikel._MinTeilungswert
-                                        objWZ.RueckkehrVorlastsignal = objServerArtikel._RueckkehrVorlastsignal
-                                        objWZ.Waegezellenkennwert = objServerArtikel._Waegezellenkennwert
-                                        objWZ.WiderstandWaegezelle = objServerArtikel._WiderstandWaegezelle
-                                        objWZ.Bauartzulassung = objServerArtikel._Bauartzulassung
-                                        objWZ.BruchteilEichfehlergrenze = objServerArtikel._BruchteilEichfehlergrenze
-                                        objWZ.Genauigkeitsklasse = objServerArtikel._Genauigkeitsklasse
-                                        objWZ.GrenzwertTemperaturbereichMAX = objServerArtikel._GrenzwertTemperaturbereichMAX
-                                        objWZ.GrenzwertTemperaturbereichMIN = objServerArtikel._GrenzwertTemperaturbereichMIN
-                                        objWZ.Hersteller = objServerArtikel._Hersteller
-                                        objWZ.Pruefbericht = objServerArtikel._Pruefbericht
-                                        objWZ.Typ = objServerArtikel._Typ
-                                        objWZ.Deaktiviert = objServerArtikel._Deaktiviert
-                                    Next
-                                End If
-                            Catch ex As Exception
-                                MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                            End Try
-                        Next
-
-                    End If
-                    Try
-                        DBContext.SaveChanges()
-                    Catch ex As Exception
-
-                        MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    End Try
-                End Using
-            End Using
-        Catch ex As Exception
-
-        End Try
-    End Sub
-
-    ''' <summary>
-    ''' holt neue oder aktualisierte AWGs aus DB über Webservice
-    ''' </summary>
-    ''' <param name="bolNeuAWG">Variable welche für eine Erfolgsmeldung genutzt wird. Wird beim aktualisieren auf True gesetzt um den Nutzer darauf hinzuweisen, dass etwas neues heruntergeladen wurde.</param>
-    ''' <remarks></remarks>
-    Private Sub GetNeuesAWG(ByRef bolNeuAWG As Boolean)
-        Try
-
-            'abrufen neuer WZ aus Server, basierend auf dem Wert des letzten erfolgreichen updates
-            Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
-                Try
-                    webContext.Open()
-                Catch ex As Exception
-                    Exit Sub
-                End Try
-                Using DBContext As New EichsoftwareClientdatabaseEntities1
-                    'Eingrenzen welche Daten synchronisiert werden müssen, je nach Einstllung des Benutzers 
-                    Dim StartDatum As Date = #1/1/2000#
-                    Dim EndDatum As Date = #12/31/2999#
-
-                    If My.Settings.Syncronisierungsmodus = "Alles" Then
-                    ElseIf My.Settings.Syncronisierungsmodus = "Ab" Then
-                        StartDatum = My.Settings.SyncAb
-                    ElseIf My.Settings.Syncronisierungsmodus = "Zwischen" Then
-                        StartDatum = My.Settings.SyncAb
-                        EndDatum = My.Settings.SyncBis
-                    Else
-                        My.Settings.Syncronisierungsmodus = "Alles"
-                        My.Settings.Save()
-                    End If
-
-                    'lizenzisierung holen
-
-                    Dim objLiz = (From db In DBContext.Lizensierung Select db).FirstOrDefault
-                    Dim objAWGResultList = webContext.GetNeuesAWG(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, My.Settings.LetztesUpdate, My.User.Name, System.Environment.UserDomainName, My.Computer.Name, StartDatum, EndDatum)
-
-                    If Not objAWGResultList Is Nothing Then
-
-                        'alle neuen Artikel aus Server iterieren
-                        Dim tObjServerAWG As EichsoftwareWebservice.ServerLookup_Auswertegeraet 'hilfsvariable für Linq abfrage. Es gibt sonst eine Warnung wenn in Linq mit einer for each variablen gearbeitet wird
-                        For Each objServerArtikel As EichsoftwareWebservice.ServerLookup_Auswertegeraet In objAWGResultList
-                            tObjServerAWG = objServerArtikel
-                            'alle Artikel abrufen in denen die ID mit dem neuem Serverartikel übereinstimmt
-                            Dim query = From d In DBContext.Lookup_Auswertegeraet Where d.ID = tObjServerAWG._ID
-
-                            'prüfen ob es bereits einen Artikel in der lokalen DB gibt, mit dem aktuellen ID-Wert
-                            If query.Count = 0 Then 'Es gbit den Artikel noch nicht in der lokalen Datebank => insert 
-                                Dim newAWG As New Lookup_Auswertegeraet
-
-
-                                newAWG.ID = objServerArtikel._ID
-                                newAWG.Bauartzulassung = objServerArtikel._Bauartzulassung
-                                newAWG.BruchteilEichfehlergrenze = objServerArtikel._BruchteilEichfehlergrenze
-                                newAWG.Genauigkeitsklasse = objServerArtikel._Genauigkeitsklasse
-                                newAWG.GrenzwertLastwiderstandMAX = objServerArtikel._GrenzwertLastwiderstandMAX
-                                newAWG.GrenzwertLastwiderstandMIN = objServerArtikel._GrenzwertLastwiderstandMIN
-                                newAWG.GrenzwertTemperaturbereichMAX = objServerArtikel._GrenzwertTemperaturbereichMAX
-                                newAWG.GrenzwertTemperaturbereichMIN = objServerArtikel._GrenzwertTemperaturbereichMIN
-                                newAWG.Hersteller = objServerArtikel._Hersteller
-                                newAWG.KabellaengeQuerschnitt = objServerArtikel._KabellaengeQuerschnitt
-                                newAWG.MAXAnzahlTeilungswerteEinbereichswaage = objServerArtikel._MAXAnzahlTeilungswerteEinbereichswaage
-                                newAWG.MAXAnzahlTeilungswerteMehrbereichswaage = objServerArtikel._MAXAnzahlTeilungswerteMehrbereichswaage
-                                newAWG.Mindesteingangsspannung = objServerArtikel._Mindesteingangsspannung
-                                newAWG.Mindestmesssignal = objServerArtikel._Mindestmesssignal
-                                newAWG.Pruefbericht = objServerArtikel._Pruefbericht
-                                newAWG.Speisespannung = objServerArtikel._Speisespannung
-                                newAWG.Typ = objServerArtikel._Typ
-                                'hinzufügen des neu erzeugten Artikels in Lokale Datenbank
-                                newAWG.Deaktiviert = objServerArtikel._Deaktiviert
-                                DBContext.Lookup_Auswertegeraet.Add(newAWG)
-                                DBContext.SaveChanges()
-                                bolNeuAWG = True
-
-
-                            Else 'Es gibt den Artikel bereits, er wird geupdated
-                                For Each objAWG As Lookup_Auswertegeraet In query 'es sollte nur einen Artikel Geben, da die IDs eindeutig sind.
-
-                                    objAWG.Bauartzulassung = objServerArtikel._Bauartzulassung
-                                    objAWG.BruchteilEichfehlergrenze = objServerArtikel._BruchteilEichfehlergrenze
-                                    objAWG.Genauigkeitsklasse = objServerArtikel._Genauigkeitsklasse
-                                    objAWG.GrenzwertLastwiderstandMAX = objServerArtikel._GrenzwertLastwiderstandMAX
-                                    objAWG.GrenzwertLastwiderstandMIN = objServerArtikel._GrenzwertLastwiderstandMIN
-                                    objAWG.GrenzwertTemperaturbereichMAX = objServerArtikel._GrenzwertTemperaturbereichMAX
-                                    objAWG.GrenzwertTemperaturbereichMIN = objServerArtikel._GrenzwertTemperaturbereichMIN
-                                    objAWG.Hersteller = objServerArtikel._Hersteller
-                                    objAWG.KabellaengeQuerschnitt = objServerArtikel._KabellaengeQuerschnitt
-                                    objAWG.MAXAnzahlTeilungswerteEinbereichswaage = objServerArtikel._MAXAnzahlTeilungswerteEinbereichswaage
-                                    objAWG.MAXAnzahlTeilungswerteMehrbereichswaage = objServerArtikel._MAXAnzahlTeilungswerteMehrbereichswaage
-                                    objAWG.Mindesteingangsspannung = objServerArtikel._Mindesteingangsspannung
-                                    objAWG.Mindestmesssignal = objServerArtikel._Mindestmesssignal
-                                    objAWG.Pruefbericht = objServerArtikel._Pruefbericht
-                                    objAWG.Speisespannung = objServerArtikel._Speisespannung
-                                    objAWG.Typ = objServerArtikel._Typ
-                                    objAWG.Deaktiviert = objServerArtikel._Deaktiviert
-                                    bolNeuAWG = True
-                                Next
-                            End If
-                        Next
-
-                    End If
-                    Try
-                        DBContext.SaveChanges()
-                    Catch ex As Exception
-                        MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_Laden, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                        MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    End Try
-                End Using
-
-            End Using
-
-        Catch ex As Exception
-            MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
-    End Sub
-
     Private Sub RadButtonClientUpdateDatabase_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonClientUpdateDatabase.Click
         VerbindeMitWebServiceUndAktualisiere()
     End Sub
 #End Region
-   
-    Private Sub RadButtonEinstellungen_Click(sender As Object, e As EventArgs) Handles RadButtonEinstellungen.Click
-        Dim f As New frmEinstellungen
-        f.showdialog()
-        If f.DialogResult = DialogResult.OK Then
-            'neu aktualisierung der Eichungen
-            VerbindeMitWebserviceUndHoleAlles()
-        End If
-    End Sub
+
 End Class

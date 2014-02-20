@@ -105,7 +105,7 @@
         TargetObject._ServerEichprotokoll.Fallbeschleunigung_g = SourceObject.Eichprotokoll.Fallbeschleunigung_g
         TargetObject._ServerEichprotokoll.Fallbeschleunigung_ms2 = SourceObject.Eichprotokoll.Fallbeschleunigung_ms2
         TargetObject._ServerEichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = SourceObject.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren
-        TargetObject._ServerEichprotokoll.FK_Identifikationsdaten_SuperOfficeBenutzer = SourceObject.Eichprotokoll.FK_Identifikationsdaten_SuperOfficeBenutzer
+        TargetObject._ServerEichprotokoll.FK_Identifikationsdaten_Benutzer = SourceObject.Eichprotokoll.FK_Identifikationsdaten_Benutzer
         TargetObject._ServerEichprotokoll.GenauigkeitNullstellung_InOrdnung = SourceObject.Eichprotokoll.GenauigkeitNullstellung_InOrdnung
         ' TargetObject._ServerEichprotokoll.ID = SourceObject.Eichprotokoll.ID
         TargetObject._ServerEichprotokoll.Identifikationsdaten_Aufstellungsort = SourceObject.Eichprotokoll.Identifikationsdaten_Aufstellungsort
@@ -639,7 +639,7 @@
         TargetObject.Eichprotokoll.Fallbeschleunigung_g = SourceObject._ServerEichprotokoll.Fallbeschleunigung_g
         TargetObject.Eichprotokoll.Fallbeschleunigung_ms2 = SourceObject._ServerEichprotokoll.Fallbeschleunigung_ms2
         TargetObject.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = SourceObject._ServerEichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren
-        TargetObject.Eichprotokoll.FK_Identifikationsdaten_SuperOfficeBenutzer = SourceObject._ServerEichprotokoll.FK_Identifikationsdaten_SuperOfficeBenutzer
+        TargetObject.Eichprotokoll.FK_Identifikationsdaten_Benutzer = SourceObject._ServerEichprotokoll.FK_Identifikationsdaten_Benutzer
         TargetObject.Eichprotokoll.GenauigkeitNullstellung_InOrdnung = SourceObject._ServerEichprotokoll.GenauigkeitNullstellung_InOrdnung
         TargetObject.Eichprotokoll.ID = SourceObject._ServerEichprotokoll.ID
         TargetObject.Eichprotokoll.Identifikationsdaten_Aufstellungsort = SourceObject._ServerEichprotokoll.Identifikationsdaten_Aufstellungsort
@@ -1106,7 +1106,7 @@
         TargetObject.Eichprotokoll.Fallbeschleunigung_g = SourceObject._ServerEichprotokoll.Fallbeschleunigung_g
         TargetObject.Eichprotokoll.Fallbeschleunigung_ms2 = SourceObject._ServerEichprotokoll.Fallbeschleunigung_ms2
         TargetObject.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = SourceObject._ServerEichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren
-        TargetObject.Eichprotokoll.FK_Identifikationsdaten_SuperOfficeBenutzer = SourceObject._ServerEichprotokoll.FK_Identifikationsdaten_SuperOfficeBenutzer
+        TargetObject.Eichprotokoll.FK_Identifikationsdaten_Benutzer = SourceObject._ServerEichprotokoll.FK_Identifikationsdaten_Benutzer
         TargetObject.Eichprotokoll.GenauigkeitNullstellung_InOrdnung = SourceObject._ServerEichprotokoll.GenauigkeitNullstellung_InOrdnung
         TargetObject.Eichprotokoll.ID = TargetObject.FK_Eichprotokoll
         TargetObject.Eichprotokoll.Identifikationsdaten_Aufstellungsort = SourceObject._ServerEichprotokoll.Identifikationsdaten_Aufstellungsort
@@ -2042,7 +2042,7 @@
         TargetObject.Eichprotokoll.Fallbeschleunigung_g = SourceObject._ServerEichprotokoll.Fallbeschleunigung_g
         TargetObject.Eichprotokoll.Fallbeschleunigung_ms2 = SourceObject._ServerEichprotokoll.Fallbeschleunigung_ms2
         TargetObject.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = SourceObject._ServerEichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren
-        TargetObject.Eichprotokoll.FK_Identifikationsdaten_SuperOfficeBenutzer = SourceObject._ServerEichprotokoll.FK_Identifikationsdaten_SuperOfficeBenutzer
+        TargetObject.Eichprotokoll.FK_Identifikationsdaten_Benutzer = SourceObject._ServerEichprotokoll.FK_Identifikationsdaten_Benutzer
         TargetObject.Eichprotokoll.GenauigkeitNullstellung_InOrdnung = SourceObject._ServerEichprotokoll.GenauigkeitNullstellung_InOrdnung
         '  TargetObject.Eichprotokoll.ID = SourceObject._ServerEichprotokoll.ID
         TargetObject.Eichprotokoll.Identifikationsdaten_Aufstellungsort = SourceObject._ServerEichprotokoll.Identifikationsdaten_Aufstellungsort

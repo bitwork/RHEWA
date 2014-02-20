@@ -13,10 +13,9 @@ Imports System.Collections.Generic
 Partial Public Class ServerLizensierung
     Public Property ID As Integer
     Public Property Lizenzschluessel As String
-    Public Property FK_SuperofficeBenutzer As String
     Public Property LetzteAktivierung As Nullable(Of Date)
     Public Property RHEWALizenz As Boolean
     Public Property Aktiv As Boolean
-    Public Property Kennung As String
+    Public Property FK_Benutzer As String
 
 End Class

@@ -13,7 +13,6 @@ Imports System.Collections.Generic
 Partial Public Class ServerEichprotokoll
     Public Property ID As Integer
     Public Property FK_Identifikationsdaten_Konformitaetsbewertungsverfahren As Byte
-    Public Property FK_Identifikationsdaten_SuperOfficeBenutzer As String
     Public Property Identifikationsdaten_Benutzer As String
     Public Property Identifikationsdaten_Aufstellungsort As String
     Public Property Identifikationsdaten_Datum As Nullable(Of Date)
@@ -83,6 +82,7 @@ Partial Public Class ServerEichprotokoll
     Public Property EignungAchlastwaegungen_WaagenbrueckeEbene As Nullable(Of Boolean)
     Public Property EignungAchlastwaegungen_WaageNichtGeeignet As Nullable(Of Boolean)
     Public Property EignungAchlastwaegungen_Geprueft As Nullable(Of Boolean)
+    Public Property FK_Identifikationsdaten_Benutzer As String
 
     Public Overridable Property ServerLookup_Konformitaetsbewertungsverfahren As ServerLookup_Konformitaetsbewertungsverfahren
     Public Overridable Property ServerEichprozess As ICollection(Of ServerEichprozess) = New HashSet(Of ServerEichprozess)

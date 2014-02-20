@@ -124,7 +124,19 @@
     <Import Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Benutzer.vb">
+      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Firmen.vb">
+      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServerFirmenZusatzdaten.vb">
+      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
+    </Compile>
     <Compile Include="ServerKonfiguration.vb">
+      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServerLookupVertragspartnerFirma.vb">
       <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
     </Compile>
     <Compile Include="View\frmAuswahllisteLizenzen.Designer.vb">

@@ -157,23 +157,6 @@
         'prüfen ob alle Felder ausgefüllt sind
         Dim AbortSaveing As Boolean = False
 
-        'If Debugger.IsAttached Then 'für debugzwecke
-        '    Return True
-        'End If
-        'prüfen ob alle Felder ausgefüllt sind
-
-        'TODO hier fehlen noch die genauen Felder welche Pflichtfeld sein müssen und welche nicht
-
-        'For Each Control In Me.Controls
-        '    If TypeOf Control Is Telerik.WinControls.UI.RadTextBoxControl Then
-        '        If CType(Control, Telerik.WinControls.UI.RadTextBoxControl).Text.Trim.Equals("") Then
-        '            AbortSaveing = True
-
-        '            CType(Control, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.Red
-        '            '  CType(Control, Telerik.WinControls.UI.RadTextBoxControl).Focus()
-        '        End If
-        '    End If
-        'Next
 
         If RadTextBoxControlAuswertegeraetGenauigkeitsklasse.Text.ToUpper = "I" Or RadTextBoxControlAuswertegeraetGenauigkeitsklasse.Text.ToUpper = "II" Or RadTextBoxControlAuswertegeraetGenauigkeitsklasse.Text.ToUpper = "III" Or RadTextBoxControlAuswertegeraetGenauigkeitsklasse.Text = "IV".ToUpper Then
         Else

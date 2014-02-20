@@ -41,26 +41,26 @@
         LoadFromDatabase()
     End Sub
 
-    ''' <summary>
-    ''' Event welches alle MouseHovers der Textboxen abfängt um den entsprechenden Hilfetext anzuzeigen
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    ''' <remarks></remarks>
-    Private Sub RadTextBoxControlWaageKlasse_MouseHover(sender As Object, e As EventArgs)
+    ' ''' <summary>
+    ' ''' Event welches alle MouseHovers der Textboxen abfängt um den entsprechenden Hilfetext anzuzeigen
+    ' ''' </summary>
+    ' ''' <param name="sender"></param>
+    ' ''' <param name="e"></param>
+    ' ''' <remarks></remarks>
+    'Private Sub RadTextBoxControlWaageKlasse_MouseHover(sender As Object, e As EventArgs)
 
-        Dim senderControl As Telerik.WinControls.UI.RadTextBoxControl
-        senderControl = TryCast(sender, Telerik.WinControls.UI.RadTextBoxControl)
+    '    Dim senderControl As Telerik.WinControls.UI.RadTextBoxControl
+    '    senderControl = TryCast(sender, Telerik.WinControls.UI.RadTextBoxControl)
 
-        If Not senderControl Is Nothing Then
-            Select Case senderControl.Name
+    '    If Not senderControl Is Nothing Then
+    '        Select Case senderControl.Name
 
-                'TODO ausfüllen
-                'Case Is = "RadTextBoxControlWaageTotlast"
-                '    ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_Kompatiblitaetsnachweis_WaageTotlast)
-            End Select
-        End If
-    End Sub
+    '            'ausfüllen
+    '            'Case Is = "RadTextBoxControlWaageTotlast"
+    '            '    ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_Kompatiblitaetsnachweis_WaageTotlast)
+    '        End Select
+    '    End If
+    'End Sub
 
     ''' <summary>
     ''' event welches prüft ob in den eingabefeldern auch nur gültige Zahlen eingegeben wurden
@@ -170,7 +170,7 @@
             RadTextBoxControlDatum.Text = objEichprozess.Eichprotokoll.Identifikationsdaten_Datum
 
         End If
-        RadTextBoxControlPruefer.Text = "TODO aus Superoffice laden" 'TODO Aus Setttingsladen
+        RadTextBoxControlPruefer.Text = "TODO aus Superoffice laden" 'TODO Aus Superoffice
         RadTextBoxControlFabriknummer.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer
 
         If objEichprozess.Lookup_Waagenart.Art = "Zweibereichswaage" OrElse objEichprozess.Lookup_Waagenart.Art = "Dreibereichswaage" Then
@@ -887,7 +887,7 @@
 
                     Try
                         'add prüft anhand der Vorgangsnummer automatisch ob ein neuer Prozess angelegt, oder ein vorhandener aktualisiert wird
-                        Webcontext.AddEichprozess(objLiz.FK_SuperofficeBenutzer, objLiz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                        Webcontext.AddEichprozess(objLiz.FK_Benutzer, objLiz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
 
                         'schließen des dialoges
                         ParentFormular.Close()

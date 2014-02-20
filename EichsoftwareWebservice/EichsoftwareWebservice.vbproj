@@ -123,7 +123,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplyCyclicDataContractSerializerOperationBehavior.vb" />
+    <Compile Include="Benutzer.vb">
+      <DependentUpon>EntityModelEichsoftwareServer.tt</DependentUpon>
+    </Compile>
     <Compile Include="clsEichprozessFuerAuswahlliste.vb" />
+    <Compile Include="clsLizenzdaten.vb" />
     <Compile Include="clsServerFTPDaten.vb" />
     <Compile Include="CyclicReferencesAwareAttribute.vb" />
     <Compile Include="CyclicReferencesAwareContractBehavior.vb" />
@@ -143,6 +147,9 @@
     <Compile Include="EntityModelEichsoftwareServer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <DependentUpon>EntityModelEichsoftwareServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Firmen.vb">
       <DependentUpon>EntityModelEichsoftwareServer.tt</DependentUpon>
     </Compile>
     <Compile Include="IEichsoftwareWebservice.vb" />
@@ -174,6 +181,9 @@
     <Compile Include="ServerEichprozess.vb">
       <DependentUpon>EntityModelEichsoftwareServer.tt</DependentUpon>
     </Compile>
+    <Compile Include="ServerFirmenZusatzdaten.vb">
+      <DependentUpon>EntityModelEichsoftwareServer.tt</DependentUpon>
+    </Compile>
     <Compile Include="ServerKompatiblitaetsnachweis.vb">
       <DependentUpon>EntityModelEichsoftwareServer.tt</DependentUpon>
     </Compile>
@@ -181,6 +191,9 @@
       <DependentUpon>EntityModelEichsoftwareServer.tt</DependentUpon>
     </Compile>
     <Compile Include="ServerLizensierung.vb">
+      <DependentUpon>EntityModelEichsoftwareServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServerLookupVertragspartnerFirma.vb">
       <DependentUpon>EntityModelEichsoftwareServer.tt</DependentUpon>
     </Compile>
     <Compile Include="ServerLookup_Auswertegeraet.vb">

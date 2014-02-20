@@ -39,7 +39,7 @@
                     If webContext.AktiviereLizenz(RadTextBoxControl1.Text, RadTextBoxControl2.Text, My.User.Name, System.Environment.UserDomainName, My.Computer.Name) Then
 
                         Dim objLic As New Lizensierung
-                        objLic.FK_SuperofficeBenutzer = RadTextBoxControl1.Text
+                        objLic.FK_Benutzer = RadTextBoxControl1.Text
                         objLic.Lizenzschluessel = RadTextBoxControl2.Text
 
                         If webContext.PruefeObRHEWALizenz(RadTextBoxControl1.Text, RadTextBoxControl2.Text, My.User.Name, System.Environment.UserDomainName, My.Computer.Name) Then
@@ -56,18 +56,36 @@
                             DBContext.SaveChanges()
                         Catch ex As Exception
                         End Try
+                     
+                        My.Settings.Lizensiert = True
+                        My.Settings.RHEWALizenz = objLic.RHEWALizenz
+                        My.Settings.Save()
+
+
+                        Try
+                            'hole zusätliche Lizenzdaten
+                            Dim objLizenzdaten As EichsoftwareWebservice.clsLizenzdaten = webContext.GetLizenzdaten(RadTextBoxControl1.Text, RadTextBoxControl2.Text, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+
+                            objLic.Name = objLizenzdaten.Name
+                            objLic.Vorname = objLizenzdaten.Vorname
+                            objLic.Firma = objLizenzdaten.Firma
+                            objLic.FirmaOrt = objLizenzdaten.FirmaOrt
+                            objLic.FirmaPLZ = objLizenzdaten.FirmaPLZ
+                            objLic.FirmaStrasse = objLizenzdaten.FirmaStrasse
+                            DBContext.SaveChanges()
+                        Catch ex As Exception
+
+                        End Try
+                     
                         Try
                             'speichern in lokaler DB
                             DBContext.Lizensierung.Add(objLic)
                             DBContext.SaveChanges()
                         Catch ex As Exception
                         End Try
-                        My.Settings.Lizensiert = True
-                        My.Settings.RHEWALizenz = objLic.RHEWALizenz
-                        My.Settings.Save()
 
 
-
+                        'abschluss des dialoges
                         Me.DialogResult = Windows.Forms.DialogResult.OK
                         Me.Close()
 

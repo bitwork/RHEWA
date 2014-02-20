@@ -29,8 +29,6 @@ Partial Class FrmNeueLizenz
         Me.RadTextBoxControl2 = New Telerik.WinControls.UI.RadTextBoxControl()
         Me.RadCheckBox1 = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadCheckBox2 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.RadTextBoxControlKennung = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadLabel3 = New Telerik.WinControls.UI.RadLabel()
         CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -38,8 +36,6 @@ Partial Class FrmNeueLizenz
         CType(Me.RadTextBoxControl2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadCheckBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadCheckBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControlKennung, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -103,28 +99,11 @@ Partial Class FrmNeueLizenz
         Me.RadCheckBox2.TabIndex = 4
         Me.RadCheckBox2.Text = "Aktiv"
         '
-        'RadTextBoxControlKennung
-        '
-        Me.RadTextBoxControlKennung.Location = New System.Drawing.Point(96, 38)
-        Me.RadTextBoxControlKennung.Name = "RadTextBoxControlKennung"
-        Me.RadTextBoxControlKennung.Size = New System.Drawing.Size(199, 20)
-        Me.RadTextBoxControlKennung.TabIndex = 1
-        '
-        'RadLabel3
-        '
-        Me.RadLabel3.Location = New System.Drawing.Point(12, 38)
-        Me.RadLabel3.Name = "RadLabel3"
-        Me.RadLabel3.Size = New System.Drawing.Size(51, 18)
-        Me.RadLabel3.TabIndex = 4
-        Me.RadLabel3.Text = "Kennung"
-        '
         'FrmNeueLizenz
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(308, 219)
-        Me.Controls.Add(Me.RadTextBoxControlKennung)
-        Me.Controls.Add(Me.RadLabel3)
         Me.Controls.Add(Me.RadCheckBox2)
         Me.Controls.Add(Me.RadCheckBox1)
         Me.Controls.Add(Me.RadButton1)
@@ -145,8 +124,6 @@ Partial Class FrmNeueLizenz
         CType(Me.RadTextBoxControl2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadCheckBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadCheckBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControlKennung, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -159,7 +136,5 @@ Partial Class FrmNeueLizenz
     Friend WithEvents RadTextBoxControl2 As Telerik.WinControls.UI.RadTextBoxControl
     Friend WithEvents RadCheckBox1 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents RadCheckBox2 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents RadTextBoxControlKennung As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadLabel3 As Telerik.WinControls.UI.RadLabel
 End Class
 

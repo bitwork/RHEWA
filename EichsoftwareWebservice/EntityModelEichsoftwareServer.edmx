@@ -6,10 +6,13 @@
     <edmx:StorageModels>
     <Schema Namespace="EichenSQLDatabaseModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="EichenSQLDatabaseModelStoreContainer">
+          <EntitySet Name="Benutzer" EntityType="EichenSQLDatabaseModel.Store.Benutzer" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Firmen" EntityType="EichenSQLDatabaseModel.Store.Firmen" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ServerBeschaffenheitspruefung" EntityType="EichenSQLDatabaseModel.Store.ServerBeschaffenheitspruefung" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ServerEichmarkenverwaltung" EntityType="EichenSQLDatabaseModel.Store.ServerEichmarkenverwaltung" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ServerEichprotokoll" EntityType="EichenSQLDatabaseModel.Store.ServerEichprotokoll" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ServerEichprozess" EntityType="EichenSQLDatabaseModel.Store.ServerEichprozess" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ServerFirmenZusatzdaten" EntityType="EichenSQLDatabaseModel.Store.ServerFirmenZusatzdaten" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ServerKompatiblitaetsnachweis" EntityType="EichenSQLDatabaseModel.Store.ServerKompatiblitaetsnachweis" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ServerKonfiguration" EntityType="EichenSQLDatabaseModel.Store.ServerKonfiguration" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ServerLizensierung" EntityType="EichenSQLDatabaseModel.Store.ServerLizensierung" store:Type="Tables" Schema="dbo" />
@@ -20,6 +23,7 @@
           <EntitySet Name="ServerLookup_Waagenart" EntityType="EichenSQLDatabaseModel.Store.ServerLookup_Waagenart" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ServerLookup_Waagentyp" EntityType="EichenSQLDatabaseModel.Store.ServerLookup_Waagentyp" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ServerLookup_Waegezelle" EntityType="EichenSQLDatabaseModel.Store.ServerLookup_Waegezelle" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ServerLookupVertragspartnerFirma" EntityType="EichenSQLDatabaseModel.Store.ServerLookupVertragspartnerFirma" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ServerMogelstatistik" EntityType="EichenSQLDatabaseModel.Store.ServerMogelstatistik" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ServerPruefungAnsprechvermoegen" EntityType="EichenSQLDatabaseModel.Store.ServerPruefungAnsprechvermoegen" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ServerPruefungAussermittigeBelastung" EntityType="EichenSQLDatabaseModel.Store.ServerPruefungAussermittigeBelastung" store:Type="Tables" Schema="dbo" />
@@ -125,6 +129,30 @@
             <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
           </AssociationSet>
         </EntityContainer>
+        <EntityType Name="Benutzer">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Vorname" Type="nvarchar(max)" />
+          <Property Name="Nachname" Type="nvarchar(max)" />
+          <Property Name="Telefon" Type="nvarchar" MaxLength="50" />
+          <Property Name="HEKennung" Type="nvarchar" MaxLength="50" />
+          <Property Name="Firma_FK" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Firmen">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="KundenNr" Type="nvarchar" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="Strasse" Type="nvarchar(max)" />
+          <Property Name="PLZ" Type="nvarchar" MaxLength="50" />
+          <Property Name="Telefon" Type="nvarchar" MaxLength="50" />
+          <Property Name="Ort" Type="nvarchar" MaxLength="50" />
+          <Property Name="Land" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="ServerBeschaffenheitspruefung">
           <Key>
             <PropertyRef Name="ID" />
@@ -151,7 +179,7 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="FK_SuperofficeBenutzer" Type="nvarchar" MaxLength="50" />
+          <Property Name="FK_Benutzer" Type="nvarchar" MaxLength="50" />
           <Property Name="BenannteStelleAnzahl" Type="int" />
           <Property Name="Eichsiegel13x13Anzahl" Type="int" />
           <Property Name="EichsiegelRundAnzahl" Type="int" />
@@ -165,9 +193,54 @@
           <Property Name="GruenesMAnzahlMeldestand" Type="int" />
           <Property Name="CEAnzahlMeldestand" Type="int" />
           <Property Name="zerstoerteMarke0103" Type="int" />
+          <Property Name="FehlmengeBenannteStelle0103" Type="int" />
+          <Property Name="FehlmengeBenannteStelle0111" Type="int" />
           <Property Name="FehlmengeSicherungsmarkeklein" Type="int" />
           <Property Name="FehlmengeSicherungsmarkegross" Type="int" />
           <Property Name="FehlmengeHinweismarken" Type="int" />
+          <Property Name="Archiv2007_Eichungen" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archiv2007_BenannteStelle0298" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archiv2007_Hinweismarke" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archiv2007_SicherungsmarkeGross" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archiv2007_SicherungsmarkeKlein" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archiv2008_Eichungen" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archiv2008_BenannteStelle0298" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archiv2008_Hinweismarke" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archiv2008_SicherungsmarkeGross" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archiv2008_SicherungsmarkeKlein" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archiv2009_Eichungen" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archiv2009_BenannteStelle0298" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archiv2009_Hinweismarke" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archiv2009_SicherungsmarkeGross" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archiv2009_SicherungsmarkeKlein" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archiv2010_Eichungen" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archiv2010_BenannteStelle0298" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archiv2010_Hinweismarke" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archiv2010_SicherungsmarkeGross" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archiv2010_SicherungsmarkeKlein" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archiv2011_Eichungen" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archiv2011_BenannteStelle0298" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archiv2011_BenannteStelle0103" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archiv2011_Hinweismarke" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archiv2011_SicherungsmarkeGross" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archiv2011_SicherungsmarkeKlein" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archiv2012_Eichungen" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archiv2012_BenannteStelle0103" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archiv2012_Hinweismarke" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archiv2012_SicherungsmarkeGross" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archiv2012_SicherungsmarkeKlein" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archiv2013_Eichungen" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archiv2013_BenannteStelle0103" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archiv2013_Hinweismarke" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archiv2013_SicherungsmarkeGross" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archiv2013_SicherungsmarkeKlein" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archiv2014_Eichungen" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archiv2014_BenannteStelle0103" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archiv2014_BenannteStelle0111" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archiv2014_Hinweismarke" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archiv2014_SicherungsmarkeGross" Type="nvarchar" MaxLength="50" />
+          <Property Name="Archiv2014_SicherungsmarkeKlein" Type="nvarchar" MaxLength="50" />
+          <Property Name="Bemerkung" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="ServerEichprotokoll">
           <Key>
@@ -175,7 +248,7 @@
           </Key>
           <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="FK_Identifikationsdaten_Konformitaetsbewertungsverfahren" Type="tinyint" Nullable="false" />
-          <Property Name="FK_Identifikationsdaten_SuperOfficeBenutzer" Type="nvarchar" MaxLength="50" />
+          <Property Name="FK_Identifikationsdaten_Benutzer" Type="nvarchar" MaxLength="50" />
           <Property Name="Identifikationsdaten_Benutzer" Type="nvarchar" MaxLength="50" />
           <Property Name="Identifikationsdaten_Aufstellungsort" Type="nvarchar" MaxLength="50" />
           <Property Name="Identifikationsdaten_Datum" Type="date" />
@@ -251,6 +324,7 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ErzeugerLizenz" Type="nvarchar" MaxLength="50" />
           <Property Name="Vorgangsnummer" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="FK_Vorgangsstatus" Type="tinyint" Nullable="false" />
           <Property Name="FK_Auswertegeraet" Type="nvarchar" MaxLength="50" />
@@ -260,13 +334,29 @@
           <Property Name="FK_WaagenTyp" Type="tinyint" />
           <Property Name="FK_WaagenArt" Type="tinyint" />
           <Property Name="FK_Kompatibilitaetsnachweis" Type="int" />
-          <Property Name="Ausgeblendet" Type="bit" Nullable="false" />
           <Property Name="FK_Bearbeitungsstatus" Type="tinyint" />
+          <Property Name="Ausgeblendet" Type="bit" Nullable="false" />
           <Property Name="UploadFilePath" Type="nvarchar(max)" />
           <Property Name="UploadDatum" Type="datetime" />
           <Property Name="BearbeitungsDatum" Type="datetime" />
-          <Property Name="ErzeugerLizenz" Type="nvarchar" MaxLength="50" />
           <Property Name="ZurBearbeitungGesperrtDurch" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ServerFirmenZusatzdaten">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Firmen_FK" Type="nvarchar" MaxLength="50" />
+          <Property Name="HEKennung" Type="nvarchar" MaxLength="50" />
+          <Property Name="Umsatz" Type="nvarchar" MaxLength="50" />
+          <Property Name="Abrechnungsmodell" Type="nvarchar" MaxLength="50" />
+          <Property Name="Qualifizierungspauschale" Type="nvarchar" MaxLength="50" />
+          <Property Name="BeginnVertrag" Type="date" />
+          <Property Name="EndeVertrag" Type="date" />
+          <Property Name="Erstschulung" Type="date" />
+          <Property Name="MonatJahrZertifikat" Type="nvarchar" MaxLength="50" />
+          <Property Name="Nachschulung" Type="date" />
+          <Property Name="LetztesAudit" Type="date" />
         </EntityType>
         <EntityType Name="ServerKompatiblitaetsnachweis">
           <Key>
@@ -320,11 +410,10 @@
           </Key>
           <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Lizenzschluessel" Type="nvarchar" Nullable="false" MaxLength="50" />
-          <Property Name="FK_SuperofficeBenutzer" Type="nvarchar" MaxLength="50" />
+          <Property Name="FK_Benutzer" Type="nvarchar" MaxLength="50" />
           <Property Name="LetzteAktivierung" Type="date" />
           <Property Name="RHEWALizenz" Type="bit" Nullable="false" />
           <Property Name="Aktiv" Type="bit" Nullable="false" />
-          <Property Name="Kennung" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="ServerLookup_Auswertegeraet">
           <Key>
@@ -419,6 +508,14 @@
           <Property Name="BruchteilEichfehlergrenze" Type="nvarchar" MaxLength="5" />
           <Property Name="ErstellDatum" Type="datetime" />
           <Property Name="Deaktiviert" Type="bit" />
+        </EntityType>
+        <EntityType Name="ServerLookupVertragspartnerFirma">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Firma_FK" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Vertragspartner_FK" Type="nvarchar" Nullable="false" MaxLength="50" />
         </EntityType>
         <EntityType Name="ServerMogelstatistik">
           <Key>
@@ -1024,6 +1121,10 @@
           </AssociationSet>
           <EntitySet Name="ServerVerbindungsprotokoll" EntityType="EichenSQLDatabaseModel.ServerVerbindungsprotokoll" />
           <EntitySet Name="ServerKonfiguration" EntityType="EichenSQLDatabaseModel.ServerKonfiguration" />
+          <EntitySet Name="Benutzer" EntityType="EichenSQLDatabaseModel.Benutzer" />
+          <EntitySet Name="Firmen" EntityType="EichenSQLDatabaseModel.Firmen" />
+          <EntitySet Name="ServerFirmenZusatzdaten" EntityType="EichenSQLDatabaseModel.ServerFirmenZusatzdaten" />
+          <EntitySet Name="ServerLookupVertragspartnerFirma" EntityType="EichenSQLDatabaseModel.ServerLookupVertragspartnerFirma" />
         </EntityContainer>
         <EntityType Name="ServerBeschaffenheitspruefung">
           <Key>
@@ -1052,7 +1153,6 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="FK_SuperofficeBenutzer" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="BenannteStelleAnzahl" Type="Int32" />
           <Property Name="Eichsiegel13x13Anzahl" Type="Int32" />
           <Property Name="EichsiegelRundAnzahl" Type="Int32" />
@@ -1069,6 +1169,52 @@
           <Property Name="FehlmengeSicherungsmarkeklein" Type="Int32" />
           <Property Name="FehlmengeSicherungsmarkegross" Type="Int32" />
           <Property Name="FehlmengeHinweismarken" Type="Int32" />
+          <Property Type="String" Name="FK_Benutzer" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="FehlmengeBenannteStelle0103" />
+          <Property Type="Int32" Name="FehlmengeBenannteStelle0111" />
+          <Property Type="String" Name="Archiv2007_Eichungen" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Archiv2007_BenannteStelle0298" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Archiv2007_Hinweismarke" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Archiv2007_SicherungsmarkeGross" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Archiv2007_SicherungsmarkeKlein" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Archiv2008_Eichungen" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Archiv2008_BenannteStelle0298" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Archiv2008_Hinweismarke" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Archiv2008_SicherungsmarkeGross" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Archiv2008_SicherungsmarkeKlein" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Archiv2009_Eichungen" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Archiv2009_BenannteStelle0298" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Archiv2009_Hinweismarke" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Archiv2009_SicherungsmarkeGross" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Archiv2009_SicherungsmarkeKlein" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Archiv2010_Eichungen" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Archiv2010_BenannteStelle0298" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Archiv2010_Hinweismarke" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Archiv2010_SicherungsmarkeGross" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Archiv2010_SicherungsmarkeKlein" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Archiv2011_Eichungen" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Archiv2011_BenannteStelle0298" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Archiv2011_BenannteStelle0103" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Archiv2011_Hinweismarke" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Archiv2011_SicherungsmarkeGross" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Archiv2011_SicherungsmarkeKlein" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Archiv2012_Eichungen" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Archiv2012_BenannteStelle0103" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Archiv2012_Hinweismarke" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Archiv2012_SicherungsmarkeGross" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Archiv2012_SicherungsmarkeKlein" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Archiv2013_Eichungen" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Archiv2013_BenannteStelle0103" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Archiv2013_Hinweismarke" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Archiv2013_SicherungsmarkeGross" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Archiv2013_SicherungsmarkeKlein" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Archiv2014_Eichungen" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Archiv2014_BenannteStelle0103" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Archiv2014_BenannteStelle0111" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Archiv2014_Hinweismarke" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Archiv2014_SicherungsmarkeGross" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Archiv2014_SicherungsmarkeKlein" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Bemerkung" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="ServerEichprotokoll">
           <Key>
@@ -1076,7 +1222,6 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="FK_Identifikationsdaten_Konformitaetsbewertungsverfahren" Type="Byte" Nullable="false" />
-          <Property Name="FK_Identifikationsdaten_SuperOfficeBenutzer" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="Identifikationsdaten_Benutzer" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="Identifikationsdaten_Aufstellungsort" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="Identifikationsdaten_Datum" Type="DateTime" Precision="0" />
@@ -1158,6 +1303,7 @@
           <NavigationProperty Name="ServerPruefungStaffelverfahrenErsatzlast" Relationship="EichenSQLDatabaseModel.FK_PruefungStaffelverfahrenErsatzlast_Eichprotokoll" FromRole="ServerEichprotokoll" ToRole="ServerPruefungStaffelverfahrenErsatzlast" />
           <NavigationProperty Name="ServerPruefungStaffelverfahrenNormallast" Relationship="EichenSQLDatabaseModel.FK_PruefungStaffelverfahrenNormallast_Eichprotokoll" FromRole="ServerEichprotokoll" ToRole="ServerPruefungStaffelverfahrenNormallast" />
           <NavigationProperty Name="ServerPruefungWiederholbarkeit" Relationship="EichenSQLDatabaseModel.FK_PruefungWiederholbarkeit_Eichprotokoll" FromRole="ServerEichprotokoll" ToRole="ServerPruefungWiederholbarkeit" />
+          <Property Type="String" Name="FK_Identifikationsdaten_Benutzer" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="ServerEichprozess">
           <Key>
@@ -1232,11 +1378,10 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Lizenzschluessel" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="FK_SuperofficeBenutzer" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="LetzteAktivierung" Type="DateTime" Precision="0" />
           <Property Name="RHEWALizenz" Type="Boolean" Nullable="false" />
           <Property Name="Aktiv" Type="Boolean" Nullable="false" />
-          <Property Name="Kennung" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Type="String" Name="FK_Benutzer" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="ServerLookup_Auswertegeraet">
           <Key>
@@ -1847,6 +1992,55 @@
           <Property Type="String" Name="FTPServerEnkodiertesPasswort" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="FTPServerCryptoSaltKey" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
+        <EntityType Name="Benutzer">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Vorname" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Nachname" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Telefon" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="HEKennung" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Firma_FK" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Firmen">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="KundenNr" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Name" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Strasse" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PLZ" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Telefon" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Ort" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Land" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ServerFirmenZusatzdaten">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Firmen_FK" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="HEKennung" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Umsatz" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Abrechnungsmodell" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Qualifizierungspauschale" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="BeginnVertrag" Precision="0" />
+          <Property Type="DateTime" Name="EndeVertrag" Precision="0" />
+          <Property Type="DateTime" Name="Erstschulung" Precision="0" />
+          <Property Type="String" Name="MonatJahrZertifikat" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Nachschulung" Precision="0" />
+          <Property Type="DateTime" Name="LetztesAudit" Precision="0" />
+        </EntityType>
+        <EntityType Name="ServerLookupVertragspartnerFirma">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Firma_FK" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Vertragspartner_FK" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1878,8 +2072,53 @@
           <EntitySetMapping Name="ServerEichmarkenverwaltung">
             <EntityTypeMapping TypeName="EichenSQLDatabaseModel.ServerEichmarkenverwaltung">
               <MappingFragment StoreEntitySet="ServerEichmarkenverwaltung">
+                <ScalarProperty Name="Bemerkung" ColumnName="Bemerkung" />
+                <ScalarProperty Name="Archiv2014_SicherungsmarkeKlein" ColumnName="Archiv2014_SicherungsmarkeKlein" />
+                <ScalarProperty Name="Archiv2014_SicherungsmarkeGross" ColumnName="Archiv2014_SicherungsmarkeGross" />
+                <ScalarProperty Name="Archiv2014_Hinweismarke" ColumnName="Archiv2014_Hinweismarke" />
+                <ScalarProperty Name="Archiv2014_BenannteStelle0111" ColumnName="Archiv2014_BenannteStelle0111" />
+                <ScalarProperty Name="Archiv2014_BenannteStelle0103" ColumnName="Archiv2014_BenannteStelle0103" />
+                <ScalarProperty Name="Archiv2014_Eichungen" ColumnName="Archiv2014_Eichungen" />
+                <ScalarProperty Name="Archiv2013_SicherungsmarkeKlein" ColumnName="Archiv2013_SicherungsmarkeKlein" />
+                <ScalarProperty Name="Archiv2013_SicherungsmarkeGross" ColumnName="Archiv2013_SicherungsmarkeGross" />
+                <ScalarProperty Name="Archiv2013_Hinweismarke" ColumnName="Archiv2013_Hinweismarke" />
+                <ScalarProperty Name="Archiv2013_BenannteStelle0103" ColumnName="Archiv2013_BenannteStelle0103" />
+                <ScalarProperty Name="Archiv2013_Eichungen" ColumnName="Archiv2013_Eichungen" />
+                <ScalarProperty Name="Archiv2012_SicherungsmarkeKlein" ColumnName="Archiv2012_SicherungsmarkeKlein" />
+                <ScalarProperty Name="Archiv2012_SicherungsmarkeGross" ColumnName="Archiv2012_SicherungsmarkeGross" />
+                <ScalarProperty Name="Archiv2012_Hinweismarke" ColumnName="Archiv2012_Hinweismarke" />
+                <ScalarProperty Name="Archiv2012_BenannteStelle0103" ColumnName="Archiv2012_BenannteStelle0103" />
+                <ScalarProperty Name="Archiv2012_Eichungen" ColumnName="Archiv2012_Eichungen" />
+                <ScalarProperty Name="Archiv2011_SicherungsmarkeKlein" ColumnName="Archiv2011_SicherungsmarkeKlein" />
+                <ScalarProperty Name="Archiv2011_SicherungsmarkeGross" ColumnName="Archiv2011_SicherungsmarkeGross" />
+                <ScalarProperty Name="Archiv2011_Hinweismarke" ColumnName="Archiv2011_Hinweismarke" />
+                <ScalarProperty Name="Archiv2011_BenannteStelle0103" ColumnName="Archiv2011_BenannteStelle0103" />
+                <ScalarProperty Name="Archiv2011_BenannteStelle0298" ColumnName="Archiv2011_BenannteStelle0298" />
+                <ScalarProperty Name="Archiv2011_Eichungen" ColumnName="Archiv2011_Eichungen" />
+                <ScalarProperty Name="Archiv2010_SicherungsmarkeKlein" ColumnName="Archiv2010_SicherungsmarkeKlein" />
+                <ScalarProperty Name="Archiv2010_SicherungsmarkeGross" ColumnName="Archiv2010_SicherungsmarkeGross" />
+                <ScalarProperty Name="Archiv2010_Hinweismarke" ColumnName="Archiv2010_Hinweismarke" />
+                <ScalarProperty Name="Archiv2010_BenannteStelle0298" ColumnName="Archiv2010_BenannteStelle0298" />
+                <ScalarProperty Name="Archiv2010_Eichungen" ColumnName="Archiv2010_Eichungen" />
+                <ScalarProperty Name="Archiv2009_SicherungsmarkeKlein" ColumnName="Archiv2009_SicherungsmarkeKlein" />
+                <ScalarProperty Name="Archiv2009_SicherungsmarkeGross" ColumnName="Archiv2009_SicherungsmarkeGross" />
+                <ScalarProperty Name="Archiv2009_Hinweismarke" ColumnName="Archiv2009_Hinweismarke" />
+                <ScalarProperty Name="Archiv2009_BenannteStelle0298" ColumnName="Archiv2009_BenannteStelle0298" />
+                <ScalarProperty Name="Archiv2009_Eichungen" ColumnName="Archiv2009_Eichungen" />
+                <ScalarProperty Name="Archiv2008_SicherungsmarkeKlein" ColumnName="Archiv2008_SicherungsmarkeKlein" />
+                <ScalarProperty Name="Archiv2008_SicherungsmarkeGross" ColumnName="Archiv2008_SicherungsmarkeGross" />
+                <ScalarProperty Name="Archiv2008_Hinweismarke" ColumnName="Archiv2008_Hinweismarke" />
+                <ScalarProperty Name="Archiv2008_BenannteStelle0298" ColumnName="Archiv2008_BenannteStelle0298" />
+                <ScalarProperty Name="Archiv2008_Eichungen" ColumnName="Archiv2008_Eichungen" />
+                <ScalarProperty Name="Archiv2007_SicherungsmarkeKlein" ColumnName="Archiv2007_SicherungsmarkeKlein" />
+                <ScalarProperty Name="Archiv2007_SicherungsmarkeGross" ColumnName="Archiv2007_SicherungsmarkeGross" />
+                <ScalarProperty Name="Archiv2007_Hinweismarke" ColumnName="Archiv2007_Hinweismarke" />
+                <ScalarProperty Name="Archiv2007_BenannteStelle0298" ColumnName="Archiv2007_BenannteStelle0298" />
+                <ScalarProperty Name="Archiv2007_Eichungen" ColumnName="Archiv2007_Eichungen" />
+                <ScalarProperty Name="FehlmengeBenannteStelle0111" ColumnName="FehlmengeBenannteStelle0111" />
+                <ScalarProperty Name="FehlmengeBenannteStelle0103" ColumnName="FehlmengeBenannteStelle0103" />
+                <ScalarProperty Name="FK_Benutzer" ColumnName="FK_Benutzer" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="FK_SuperofficeBenutzer" ColumnName="FK_SuperofficeBenutzer" />
                 <ScalarProperty Name="BenannteStelleAnzahl" ColumnName="BenannteStelleAnzahl" />
                 <ScalarProperty Name="Eichsiegel13x13Anzahl" ColumnName="Eichsiegel13x13Anzahl" />
                 <ScalarProperty Name="EichsiegelRundAnzahl" ColumnName="EichsiegelRundAnzahl" />
@@ -1902,9 +2141,9 @@
           <EntitySetMapping Name="ServerEichprotokoll">
             <EntityTypeMapping TypeName="EichenSQLDatabaseModel.ServerEichprotokoll">
               <MappingFragment StoreEntitySet="ServerEichprotokoll">
+                <ScalarProperty Name="FK_Identifikationsdaten_Benutzer" ColumnName="FK_Identifikationsdaten_Benutzer" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="FK_Identifikationsdaten_Konformitaetsbewertungsverfahren" ColumnName="FK_Identifikationsdaten_Konformitaetsbewertungsverfahren" />
-                <ScalarProperty Name="FK_Identifikationsdaten_SuperOfficeBenutzer" ColumnName="FK_Identifikationsdaten_SuperOfficeBenutzer" />
                 <ScalarProperty Name="Identifikationsdaten_Benutzer" ColumnName="Identifikationsdaten_Benutzer" />
                 <ScalarProperty Name="Identifikationsdaten_Aufstellungsort" ColumnName="Identifikationsdaten_Aufstellungsort" />
                 <ScalarProperty Name="Identifikationsdaten_Datum" ColumnName="Identifikationsdaten_Datum" />
@@ -2038,13 +2277,12 @@
           <EntitySetMapping Name="ServerLizensierung">
             <EntityTypeMapping TypeName="EichenSQLDatabaseModel.ServerLizensierung">
               <MappingFragment StoreEntitySet="ServerLizensierung">
+                <ScalarProperty Name="FK_Benutzer" ColumnName="FK_Benutzer" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Lizenzschluessel" ColumnName="Lizenzschluessel" />
-                <ScalarProperty Name="FK_SuperofficeBenutzer" ColumnName="FK_SuperofficeBenutzer" />
                 <ScalarProperty Name="LetzteAktivierung" ColumnName="LetzteAktivierung" />
                 <ScalarProperty Name="RHEWALizenz" ColumnName="RHEWALizenz" />
                 <ScalarProperty Name="Aktiv" ColumnName="Aktiv" />
-                <ScalarProperty Name="Kennung" ColumnName="Kennung" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -2375,6 +2613,59 @@
                 <ScalarProperty Name="FTPServerAdresse" ColumnName="FTPServerAdresse" />
                 <ScalarProperty Name="NetzwerkpfadFuerDateianhaenge" ColumnName="NetzwerkpfadFuerDateianhaenge" />
                 <ScalarProperty Name="LetzteSynchronisierungMitRHEWA" ColumnName="LetzteSynchronisierungMitRHEWA" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Benutzer">
+            <EntityTypeMapping TypeName="EichenSQLDatabaseModel.Benutzer">
+              <MappingFragment StoreEntitySet="Benutzer">
+                <ScalarProperty Name="Firma_FK" ColumnName="Firma_FK" />
+                <ScalarProperty Name="HEKennung" ColumnName="HEKennung" />
+                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+                <ScalarProperty Name="Nachname" ColumnName="Nachname" />
+                <ScalarProperty Name="Vorname" ColumnName="Vorname" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Firmen">
+            <EntityTypeMapping TypeName="EichenSQLDatabaseModel.Firmen">
+              <MappingFragment StoreEntitySet="Firmen">
+                <ScalarProperty Name="Land" ColumnName="Land" />
+                <ScalarProperty Name="Ort" ColumnName="Ort" />
+                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+                <ScalarProperty Name="PLZ" ColumnName="PLZ" />
+                <ScalarProperty Name="Strasse" ColumnName="Strasse" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="KundenNr" ColumnName="KundenNr" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServerFirmenZusatzdaten">
+            <EntityTypeMapping TypeName="EichenSQLDatabaseModel.ServerFirmenZusatzdaten">
+              <MappingFragment StoreEntitySet="ServerFirmenZusatzdaten">
+                <ScalarProperty Name="LetztesAudit" ColumnName="LetztesAudit" />
+                <ScalarProperty Name="Nachschulung" ColumnName="Nachschulung" />
+                <ScalarProperty Name="MonatJahrZertifikat" ColumnName="MonatJahrZertifikat" />
+                <ScalarProperty Name="Erstschulung" ColumnName="Erstschulung" />
+                <ScalarProperty Name="EndeVertrag" ColumnName="EndeVertrag" />
+                <ScalarProperty Name="BeginnVertrag" ColumnName="BeginnVertrag" />
+                <ScalarProperty Name="Qualifizierungspauschale" ColumnName="Qualifizierungspauschale" />
+                <ScalarProperty Name="Abrechnungsmodell" ColumnName="Abrechnungsmodell" />
+                <ScalarProperty Name="Umsatz" ColumnName="Umsatz" />
+                <ScalarProperty Name="HEKennung" ColumnName="HEKennung" />
+                <ScalarProperty Name="Firmen_FK" ColumnName="Firmen_FK" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServerLookupVertragspartnerFirma">
+            <EntityTypeMapping TypeName="EichenSQLDatabaseModel.ServerLookupVertragspartnerFirma">
+              <MappingFragment StoreEntitySet="ServerLookupVertragspartnerFirma">
+                <ScalarProperty Name="Vertragspartner_FK" ColumnName="Vertragspartner_FK" />
+                <ScalarProperty Name="Firma_FK" ColumnName="Firma_FK" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>

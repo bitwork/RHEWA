@@ -4,7 +4,7 @@
   <xs:element name="PruefeLizenz">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BenutzerID" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Lizenzschluessel" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="WindowsUsername" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Domainname" nillable="true" type="xs:string" />
@@ -19,10 +19,28 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetLizenzdaten">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BenutzerID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Lizenzschluessel" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="WindowsUsername" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Domainname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Computername" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLizenzdatenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice" minOccurs="0" name="GetLizenzdatenResult" nillable="true" type="q1:clsLizenzdaten" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="AktiviereLizenz">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BenutzerID" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Lizenzschluessel" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="WindowsUsername" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Domainname" nillable="true" type="xs:string" />
@@ -40,7 +58,7 @@
   <xs:element name="PruefeObRHEWALizenz">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BenutzerID" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Lizenzschluessel" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="WindowsUsername" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Domainname" nillable="true" type="xs:string" />
@@ -58,7 +76,7 @@
   <xs:element name="GetNeueWZ">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BenutzerID" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Lizenzschluessel" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="LetztesUpdate" type="xs:dateTime" />
         <xs:element minOccurs="0" name="WindowsUsername" nillable="true" type="xs:string" />
@@ -72,7 +90,7 @@
   <xs:element name="GetNeueWZResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice" minOccurs="0" name="GetNeueWZResult" nillable="true" type="q1:ArrayOfServerLookup_Waegezelle" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice" minOccurs="0" name="GetNeueWZResult" nillable="true" type="q2:ArrayOfServerLookup_Waegezelle" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -95,7 +113,7 @@
   <xs:element name="GetNeuesAWG">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BenutzerID" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Lizenzschluessel" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="LetztesUpdate" type="xs:dateTime" />
         <xs:element minOccurs="0" name="WindowsUsername" nillable="true" type="xs:string" />
@@ -109,14 +127,14 @@
   <xs:element name="GetNeuesAWGResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice" minOccurs="0" name="GetNeuesAWGResult" nillable="true" type="q2:ArrayOfServerLookup_Auswertegeraet" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice" minOccurs="0" name="GetNeuesAWGResult" nillable="true" type="q3:ArrayOfServerLookup_Auswertegeraet" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddEichmarkenverwaltung">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BenutzerID" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Lizenzschluessel" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="BenutzerFK" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="AnzahlBenannteStelle" type="xs:int" />
@@ -141,9 +159,9 @@
   <xs:element name="AddEichprozess">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BenutzerID" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Lizenzschluessel" nillable="true" type="xs:string" />
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice" minOccurs="0" name="pObjEichprozess" nillable="true" type="q3:ServerEichprozess" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice" minOccurs="0" name="pObjEichprozess" nillable="true" type="q4:ServerEichprozess" />
         <xs:element minOccurs="0" name="WindowsUsername" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Domainname" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Computername" nillable="true" type="xs:string" />
@@ -154,14 +172,14 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="AddEichprozessResult" type="xs:boolean" />
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice" minOccurs="0" name="pObjEichprozess" nillable="true" type="q4:ServerEichprozess" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice" minOccurs="0" name="pObjEichprozess" nillable="true" type="q5:ServerEichprozess" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetAlleEichprozesse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BenutzerID" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Lizenzschluessel" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="WindowsUsername" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Domainname" nillable="true" type="xs:string" />
@@ -172,14 +190,14 @@
   <xs:element name="GetAlleEichprozesseResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice" minOccurs="0" name="GetAlleEichprozesseResult" nillable="true" type="q5:ArrayOfclsEichprozessFuerAuswahlliste" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice" minOccurs="0" name="GetAlleEichprozesseResult" nillable="true" type="q6:ArrayOfclsEichprozessFuerAuswahlliste" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetAlleEichprozesseImZeitraum">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BenutzerID" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Lizenzschluessel" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="WindowsUsername" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Domainname" nillable="true" type="xs:string" />
@@ -192,14 +210,14 @@
   <xs:element name="GetAlleEichprozesseImZeitraumResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice" minOccurs="0" name="GetAlleEichprozesseImZeitraumResult" nillable="true" type="q6:ArrayOfServerEichprozess" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice" minOccurs="0" name="GetAlleEichprozesseImZeitraumResult" nillable="true" type="q7:ArrayOfServerEichprozess" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetEichProzess">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BenutzerID" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Lizenzschluessel" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Vorgangsnummer" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="WindowsUsername" nillable="true" type="xs:string" />
@@ -211,16 +229,16 @@
   <xs:element name="GetEichProzessResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice" minOccurs="0" name="GetEichProzessResult" nillable="true" type="q7:ServerEichprozess" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice" minOccurs="0" name="GetEichProzessResult" nillable="true" type="q8:ServerEichprozess" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="SetEichprozessUngueltig">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BenutzerID" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Lizenzschluessel" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="ID" type="xs:int" />
+        <xs:element minOccurs="0" name="Vorgangsnummer" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="WindowsUsername" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Domainname" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Computername" nillable="true" type="xs:string" />
@@ -237,9 +255,9 @@
   <xs:element name="SetEichprozessGenehmight">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BenutzerID" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Lizenzschluessel" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="ID" type="xs:int" />
+        <xs:element minOccurs="0" name="Vorgangsnummer" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="WindowsUsername" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Domainname" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Computername" nillable="true" type="xs:string" />
@@ -256,7 +274,7 @@
   <xs:element name="CheckGueltigkeitEichprozess">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BenutzerID" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Lizenzschluessel" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Vorgangsnummer" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="WindowsUsername" nillable="true" type="xs:string" />
@@ -275,7 +293,7 @@
   <xs:element name="CheckSperrung">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BenutzerID" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Lizenzschluessel" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Vorgangsnummer" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="WindowsUsername" nillable="true" type="xs:string" />
@@ -295,7 +313,7 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="bolSperren" type="xs:boolean" />
-        <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BenutzerID" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Lizenzschluessel" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Vorgangsnummer" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="WindowsUsername" nillable="true" type="xs:string" />
@@ -314,7 +332,7 @@
   <xs:element name="GetFTPCredentials">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BenutzerID" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Lizenzschluessel" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Vorgangsnummer" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="WindowsUsername" nillable="true" type="xs:string" />
@@ -326,7 +344,7 @@
   <xs:element name="GetFTPCredentialsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice" minOccurs="0" name="GetFTPCredentialsResult" nillable="true" type="q8:clsServerFTPDaten" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice" minOccurs="0" name="GetFTPCredentialsResult" nillable="true" type="q9:clsServerFTPDaten" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

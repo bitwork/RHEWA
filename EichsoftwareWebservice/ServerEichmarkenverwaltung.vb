@@ -12,7 +12,6 @@ Imports System.Collections.Generic
 
 Partial Public Class ServerEichmarkenverwaltung
     Public Property ID As Integer
-    Public Property FK_SuperofficeBenutzer As String
     Public Property BenannteStelleAnzahl As Nullable(Of Integer)
     Public Property Eichsiegel13x13Anzahl As Nullable(Of Integer)
     Public Property EichsiegelRundAnzahl As Nullable(Of Integer)
@@ -29,5 +28,51 @@ Partial Public Class ServerEichmarkenverwaltung
     Public Property FehlmengeSicherungsmarkeklein As Nullable(Of Integer)
     Public Property FehlmengeSicherungsmarkegross As Nullable(Of Integer)
     Public Property FehlmengeHinweismarken As Nullable(Of Integer)
+    Public Property FK_Benutzer As String
+    Public Property FehlmengeBenannteStelle0103 As Nullable(Of Integer)
+    Public Property FehlmengeBenannteStelle0111 As Nullable(Of Integer)
+    Public Property Archiv2007_Eichungen As String
+    Public Property Archiv2007_BenannteStelle0298 As String
+    Public Property Archiv2007_Hinweismarke As String
+    Public Property Archiv2007_SicherungsmarkeGross As String
+    Public Property Archiv2007_SicherungsmarkeKlein As String
+    Public Property Archiv2008_Eichungen As String
+    Public Property Archiv2008_BenannteStelle0298 As String
+    Public Property Archiv2008_Hinweismarke As String
+    Public Property Archiv2008_SicherungsmarkeGross As String
+    Public Property Archiv2008_SicherungsmarkeKlein As String
+    Public Property Archiv2009_Eichungen As String
+    Public Property Archiv2009_BenannteStelle0298 As String
+    Public Property Archiv2009_Hinweismarke As String
+    Public Property Archiv2009_SicherungsmarkeGross As String
+    Public Property Archiv2009_SicherungsmarkeKlein As String
+    Public Property Archiv2010_Eichungen As String
+    Public Property Archiv2010_BenannteStelle0298 As String
+    Public Property Archiv2010_Hinweismarke As String
+    Public Property Archiv2010_SicherungsmarkeGross As String
+    Public Property Archiv2010_SicherungsmarkeKlein As String
+    Public Property Archiv2011_Eichungen As String
+    Public Property Archiv2011_BenannteStelle0298 As String
+    Public Property Archiv2011_BenannteStelle0103 As String
+    Public Property Archiv2011_Hinweismarke As String
+    Public Property Archiv2011_SicherungsmarkeGross As String
+    Public Property Archiv2011_SicherungsmarkeKlein As String
+    Public Property Archiv2012_Eichungen As String
+    Public Property Archiv2012_BenannteStelle0103 As String
+    Public Property Archiv2012_Hinweismarke As String
+    Public Property Archiv2012_SicherungsmarkeGross As String
+    Public Property Archiv2012_SicherungsmarkeKlein As String
+    Public Property Archiv2013_Eichungen As String
+    Public Property Archiv2013_BenannteStelle0103 As String
+    Public Property Archiv2013_Hinweismarke As String
+    Public Property Archiv2013_SicherungsmarkeGross As String
+    Public Property Archiv2013_SicherungsmarkeKlein As String
+    Public Property Archiv2014_Eichungen As String
+    Public Property Archiv2014_BenannteStelle0103 As String
+    Public Property Archiv2014_BenannteStelle0111 As String
+    Public Property Archiv2014_Hinweismarke As String
+    Public Property Archiv2014_SicherungsmarkeGross As String
+    Public Property Archiv2014_SicherungsmarkeKlein As String
+    Public Property Bemerkung As String
 
 End Class
