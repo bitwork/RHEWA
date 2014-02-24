@@ -3,7 +3,7 @@
 
 #Region "Member Variables"
     Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken 
-    Private _bolEichprozessIsDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Komptabilitätsnachweis zurückgesetzt
+    'Private AktuellerStatusDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Komptabilitätsnachweis zurückgesetzt
     Private _objEichprotokoll As Eichprotokoll
     Private _objDBFunctions As New clsDBFunctions
 #End Region
@@ -51,7 +51,7 @@
     ''' <remarks></remarks>
     Private Sub RadTextBoxControlBenutzer_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlWZFabriknummer.TextChanged, RadTextBoxControlSoftwarestand.TextChanged, RadTextBoxControlNormalienPruefscheinnummer.TextChanged, RadTextBoxControlNormalienPruefintervall.TextChanged, RadTextBoxControlNormalienGenauigkeitsklasse.TextChanged, RadTextBoxControlNormalienEichfahrzeugFirma.TextChanged, RadTextBoxControlMxM.TextChanged, RadTextBoxControlMin3.TextChanged, RadTextBoxControlMin2.TextChanged, RadTextBoxControlMin1.TextChanged, RadTextBoxControlEichzaehlerstand.TextChanged, RadTextBoxControlDruckerTyp.TextChanged, RadTextBoxControlBetragNormallast.TextChanged, RadTextBoxControlBenutzer.TextChanged, RadTextBoxControlBaujahr.TextChanged, RadTextBoxControlAufstellungsort.TextChanged
         If _suspendEvents = True Then Exit Sub
-        _bolEichprozessIsDirty = True
+        AktuellerStatusDirty = True
     End Sub
 #End Region
 
@@ -126,10 +126,8 @@
         'Stammdaten aus lokaler Lizenz laden
         Dim objLic As Lizensierung = _objDBFunctions.HoleLizenzObjekt
         If Not objLic Is Nothing Then
-            RadTextBoxControlBenutzer.Text = objLic.Name & ", " & objLic.Vorname & " (" + objLic.HEKennung & ")"
+            RadTextBoxControlPruefer.Text = objLic.Name & ", " & objLic.Vorname & " (" + objLic.HEKennung & ")"
         End If
-
-        RadTextBoxControlPruefer.Text = objEichprozess.Eichprotokoll.Identifikationsdaten_Pruefer
 
         RadTextBoxControlFabriknummer.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer
 
@@ -618,14 +616,14 @@
                             objEichprozess = dobjEichprozess
                             'neuen Status zuweisen
 
-                            If _bolEichprozessIsDirty = False Then
+                            If AktuellerStatusDirty = False Then
                                 ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
                                 If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderGenauigkeitderNullstellungUndAussermittigeBelastung Then
                                     objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderGenauigkeitderNullstellungUndAussermittigeBelastung
                                 End If
-                            ElseIf _bolEichprozessIsDirty = True Then
+                            ElseIf AktuellerStatusDirty = True Then
                                 objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderGenauigkeitderNullstellungUndAussermittigeBelastung
-                                _bolEichprozessIsDirty = False
+                                AktuellerStatusDirty = False
                             End If
 
                             'Füllt das Objekt mit den Werten aus den Steuerlementen
@@ -782,7 +780,7 @@
 
     Private Sub RadCheckBoxDrucker_ToggleStateChanged(sender As Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadCheckBoxDrucker.ToggleStateChanged
         RadTextBoxControlDruckerTyp.Enabled = RadCheckBoxDrucker.Checked
-        _bolEichprozessIsDirty = True
+        AktuellerStatusDirty = True
         If RadTextBoxControlDruckerTyp.Enabled = False Then
             RadTextBoxControlDruckerTyp.Text = ""
         End If

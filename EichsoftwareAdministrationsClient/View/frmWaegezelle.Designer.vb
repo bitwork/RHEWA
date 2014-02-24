@@ -57,6 +57,7 @@ Partial Class frmWaegezelle
         Me.RadTextBoxControlWaegezelleBruchteilEichfehlergrenze = New Telerik.WinControls.UI.RadTextBoxControl()
         Me.RadTextBoxControlWaegezelleBauartzulassung = New Telerik.WinControls.UI.RadTextBoxControl()
         Me.RadCheckBoxDeaktiviert = New Telerik.WinControls.UI.RadCheckBox()
+        Me.RadCheckBoxNeueWZ = New Telerik.WinControls.UI.RadCheckBox()
         CType(Me.RadLabelTyp, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabelWiderstandWaegezelle, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabelWagezellenkennwert, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -92,6 +93,7 @@ Partial Class frmWaegezelle
         CType(Me.RadTextBoxControlWaegezelleBruchteilEichfehlergrenze, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlWaegezelleBauartzulassung, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadCheckBoxDeaktiviert, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadCheckBoxNeueWZ, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -767,11 +769,22 @@ Partial Class frmWaegezelle
         Me.RadCheckBoxDeaktiviert.TabIndex = 86
         Me.RadCheckBoxDeaktiviert.Text = "Deaktiviert"
         '
+        'RadCheckBoxNeueWZ
+        '
+        Me.RadCheckBoxNeueWZ.Location = New System.Drawing.Point(316, 252)
+        Me.RadCheckBoxNeueWZ.Name = "RadCheckBoxNeueWZ"
+        Me.RadCheckBoxNeueWZ.Size = New System.Drawing.Size(453, 32)
+        Me.RadCheckBoxNeueWZ.TabIndex = 87
+        Me.RadCheckBoxNeueWZ.Text = "<html>Neu (von externen Eichbevollmächtigten angelegte WZ werden als 'Neu' markie" & _
+    "rt. <br />Nach kontrolle kann/sollte dieser Wert auf 'Nein' gesetzt werden und d" & _
+    "eaktivert auf 'Nein'</html>"
+        '
         'frmWaegezelle
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(961, 398)
+        Me.Controls.Add(Me.RadCheckBoxNeueWZ)
         Me.Controls.Add(Me.RadCheckBoxDeaktiviert)
         Me.Controls.Add(Me.RadLabelTyp)
         Me.Controls.Add(Me.RadLabelWiderstandWaegezelle)
@@ -848,6 +861,7 @@ Partial Class frmWaegezelle
         CType(Me.RadTextBoxControlWaegezelleBruchteilEichfehlergrenze, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlWaegezelleBauartzulassung, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadCheckBoxDeaktiviert, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadCheckBoxNeueWZ, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -888,5 +902,6 @@ Partial Class frmWaegezelle
     Friend WithEvents RadTextBoxControlWaegezelleBruchteilEichfehlergrenze As Telerik.WinControls.UI.RadTextBoxControl
     Friend WithEvents RadTextBoxControlWaegezelleBauartzulassung As Telerik.WinControls.UI.RadTextBoxControl
     Friend WithEvents RadCheckBoxDeaktiviert As Telerik.WinControls.UI.RadCheckBox
+    Friend WithEvents RadCheckBoxNeueWZ As Telerik.WinControls.UI.RadCheckBox
 End Class
 

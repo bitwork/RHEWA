@@ -3,7 +3,7 @@
 
 #Region "Member Variables"
     Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken 
-    Private _bolEichprozessIsDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Komptabilitätsnachweis zurückgesetzt
+    'Private AktuellerStatusDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Komptabilitätsnachweis zurückgesetzt
     Private _ListPruefungStaffelverfahrenNormallast As New List(Of PruefungStaffelverfahrenNormallast)
     Private _currentObjPruefungStaffelverfahrenNormallast As PruefungStaffelverfahrenNormallast
 
@@ -40,6 +40,7 @@
 
         'daten füllen
         LoadFromDatabase()
+
     End Sub
    
     Private Sub RadTextBoxControlStaffel1_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles RadTextBoxControlStaffel5Bereich3Last2.Validating, RadTextBoxControlStaffel5Bereich3Last1.Validating, RadTextBoxControlStaffel5Bereich3Anzeige1.Validating, RadTextBoxControlStaffel5Bereich2Last2.Validating, RadTextBoxControlStaffel5Bereich2Last1.Validating, RadTextBoxControlStaffel5Bereich2Anzeige1.Validating, RadTextBoxControlStaffel5Bereich1Last2.Validating, RadTextBoxControlStaffel5Bereich1Last1.Validating, RadTextBoxControlStaffel5Bereich1Anzeige1.Validating, RadTextBoxControlStaffel4Bereich3Last2.Validating, RadTextBoxControlStaffel4Bereich3Last1.Validating, RadTextBoxControlStaffel4Bereich3Anzeige1.Validating, RadTextBoxControlStaffel4Bereich2Last2.Validating, RadTextBoxControlStaffel4Bereich2Last1.Validating, RadTextBoxControlStaffel4Bereich2Anzeige1.Validating, RadTextBoxControlStaffel4Bereich1Last2.Validating, RadTextBoxControlStaffel4Bereich1Last1.Validating, RadTextBoxControlStaffel4Bereich1Anzeige1.Validating, RadTextBoxControlStaffel3Bereich3Last2.Validating, RadTextBoxControlStaffel3Bereich3Last1.Validating, RadTextBoxControlStaffel3Bereich3Anzeige1.Validating, RadTextBoxControlStaffel3Bereich2Last2.Validating, RadTextBoxControlStaffel3Bereich2Last1.Validating, RadTextBoxControlStaffel3Bereich2Anzeige1.Validating, RadTextBoxControlStaffel3Bereich1Last2.Validating, RadTextBoxControlStaffel3Bereich1Last1.Validating, RadTextBoxControlStaffel3Bereich1Anzeige1.Validating, RadTextBoxControlStaffel2Bereich3Last2.Validating, RadTextBoxControlStaffel2Bereich3Last1.Validating, RadTextBoxControlStaffel2Bereich3Anzeige1.Validating, RadTextBoxControlStaffel2Bereich2Last2.Validating, RadTextBoxControlStaffel2Bereich2Last1.Validating, RadTextBoxControlStaffel2Bereich2Anzeige1.Validating, RadTextBoxControlStaffel2Bereich1Last2.Validating, RadTextBoxControlStaffel2Bereich1Last1.Validating, RadTextBoxControlStaffel2Bereich1Anzeige1.Validating, RadTextBoxControlStaffel1Bereich3Last4.Validating, RadTextBoxControlStaffel1Bereich3Last3.Validating, RadTextBoxControlStaffel1Bereich3Last1.Validating, RadTextBoxControlStaffel1Bereich3Anzeige4.Validating, RadTextBoxControlStaffel1Bereich3Anzeige3.Validating, RadTextBoxControlStaffel1Bereich3Anzeige1.Validating, RadTextBoxControlStaffel1Bereich2Last4.Validating, RadTextBoxControlStaffel1Bereich2Last3.Validating, RadTextBoxControlStaffel1Bereich2Last1.Validating, RadTextBoxControlStaffel1Bereich2Anzeige4.Validating, RadTextBoxControlStaffel1Bereich2Anzeige3.Validating, RadTextBoxControlStaffel1Bereich2Anzeige1.Validating, RadTextBoxControlStaffel1Bereich1Last4.Validating, RadTextBoxControlStaffel1Bereich1Last3.Validating, RadTextBoxControlStaffel1Bereich1Last1.Validating, RadTextBoxControlStaffel1Bereich1Anzeige4.Validating, RadTextBoxControlStaffel1Bereich1Anzeige3.Validating, RadTextBoxControlStaffel1Bereich1Anzeige1.Validating, RadTextBoxControlStaffel1Bereich3Last2.Validating, RadTextBoxControlStaffel1Bereich3Fehler2.Validating, RadTextBoxControlStaffel1Bereich3Anzeige2.Validating, RadTextBoxControlStaffel1Bereich2Last2.Validating, RadTextBoxControlStaffel1Bereich2Fehler2.Validating, RadTextBoxControlStaffel1Bereich2Anzeige2.Validating, RadTextBoxControlStaffel1Bereich1Last2.Validating, RadTextBoxControlStaffel1Bereich1Fehler2.Validating, RadTextBoxControlStaffel1Bereich1Anzeige2.Validating
@@ -1545,14 +1546,14 @@
 
 
                             'neuen Status zuweisen
-                            If _bolEichprozessIsDirty = False Then
+                            If AktuellerStatusDirty = False Then
                                 ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
                                 If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderWiederholbarkeit Then
                                     objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderWiederholbarkeit
                                 End If
-                            ElseIf _bolEichprozessIsDirty = True Then
+                            ElseIf AktuellerStatusDirty = True Then
                                 objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderWiederholbarkeit
-                                _bolEichprozessIsDirty = False
+                                AktuellerStatusDirty = False
                             End If
 
 
@@ -1886,7 +1887,7 @@
 #Region "staffel1"
 
 #Region "Bereich1"
-    Private Sub RadTextBoxControlStaffel1Bereich1Last1_TextChanged_1(sender As Object, e As EventArgs) Handles RadTextBoxControlStaffel1Bereich1Last4.TextChanged, RadTextBoxControlStaffel1Bereich1Last3.TextChanged, RadTextBoxControlStaffel1Bereich1Last2.TextChanged, RadTextBoxControlStaffel1Bereich1Last1.TextChanged, RadTextBoxControlStaffel1Bereich1Anzeige4.TextChanged, RadTextBoxControlStaffel1Bereich1Anzeige3.TextChanged, RadTextBoxControlStaffel1Bereich1Anzeige2.TextChanged, RadTextBoxControlStaffel1Bereich1Anzeige1.TextChanged
+    Private Sub RadTextBoxControlStaffel1Bereich1Last1_TextChanged_1(sender As Object, e As EventArgs) Handles RadTextBoxControlStaffel1Bereich1Last4.TextChanged, RadTextBoxControlStaffel1Bereich1Anzeige4.TextChanged
 
         If _suspendEvents = True Then Exit Sub
         CalculateStaffel1Bereich1()
@@ -2103,7 +2104,7 @@
     End Sub
 
 
-    Private Sub RadTextBoxControlStaffel1Bereich2Last1_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlStaffel1Bereich2Last4.TextChanged, RadTextBoxControlStaffel1Bereich2Last3.TextChanged, RadTextBoxControlStaffel1Bereich2Last2.TextChanged, RadTextBoxControlStaffel1Bereich2Last1.TextChanged, RadTextBoxControlStaffel1Bereich2Anzeige4.TextChanged, RadTextBoxControlStaffel1Bereich2Anzeige3.TextChanged, RadTextBoxControlStaffel1Bereich2Anzeige2.TextChanged, RadTextBoxControlStaffel1Bereich2Anzeige1.TextChanged
+    Private Sub RadTextBoxControlStaffel1Bereich2Last1_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlStaffel1Bereich2Last4.TextChanged, RadTextBoxControlStaffel1Bereich2Anzeige4.TextChanged
         If _suspendEvents = True Then Exit Sub
         CalculateStaffel1Bereich2()
     End Sub
@@ -2215,7 +2216,7 @@
 
     End Sub
 
-    Private Sub RadTextBoxControlStaffel1Bereich3Last1_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlStaffel1Bereich3Last4.TextChanged, RadTextBoxControlStaffel1Bereich3Last3.TextChanged, RadTextBoxControlStaffel1Bereich3Last2.TextChanged, RadTextBoxControlStaffel1Bereich3Last1.TextChanged, RadTextBoxControlStaffel1Bereich3Anzeige4.TextChanged, RadTextBoxControlStaffel1Bereich3Anzeige3.TextChanged, RadTextBoxControlStaffel1Bereich3Anzeige2.TextChanged, RadTextBoxControlStaffel1Bereich3Anzeige1.TextChanged
+    Private Sub RadTextBoxControlStaffel1Bereich3Last1_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlStaffel1Bereich3Last4.TextChanged, RadTextBoxControlStaffel1Bereich3Anzeige4.TextChanged
         If _suspendEvents = True Then Exit Sub
         CalculateStaffel1Bereich3()
     End Sub
@@ -2275,7 +2276,7 @@
         End Try
     End Sub
 
-    Private Sub RadTextBoxControlStaffel2Bereich1_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlStaffel2Bereich1Last2.TextChanged, RadTextBoxControlStaffel2Bereich1Last1.TextChanged, RadTextBoxControlStaffel2Bereich1Anzeige4.TextChanged, RadTextBoxControlStaffel2Bereich1Anzeige3.TextChanged, RadTextBoxControlStaffel2Bereich1Anzeige1.TextChanged
+    Private Sub RadTextBoxControlStaffel2Bereich1_TextChanged(sender As Object, e As EventArgs)
         If _suspendEvents = True Then Exit Sub
         CalculateStaffel2Bereich1()
     End Sub
@@ -2331,7 +2332,7 @@
         End Try
     End Sub
 
-    Private Sub RadTextBoxControlStaffel2Bereich2_TextChanged_1(sender As Object, e As EventArgs) Handles RadTextBoxControlStaffel2Bereich2Last2.TextChanged, RadTextBoxControlStaffel2Bereich2Last1.TextChanged, RadTextBoxControlStaffel2Bereich2Anzeige4.TextChanged, RadTextBoxControlStaffel2Bereich2Anzeige3.TextChanged, RadTextBoxControlStaffel2Bereich2Anzeige1.TextChanged
+    Private Sub RadTextBoxControlStaffel2Bereich2_TextChanged_1(sender As Object, e As EventArgs)
         If _suspendEvents = True Then Exit Sub
         CalculateStaffel2Bereich2()
     End Sub
@@ -2385,7 +2386,7 @@
         End Try
     End Sub
 
-    Private Sub RadTextBoxControlStaffel2Bereich3_TextChanged_1(sender As Object, e As EventArgs) Handles RadTextBoxControlStaffel2Bereich3Last2.TextChanged, RadTextBoxControlStaffel2Bereich3Last1.TextChanged, RadTextBoxControlStaffel2Bereich3Anzeige4.TextChanged, RadTextBoxControlStaffel2Bereich3Anzeige3.TextChanged, RadTextBoxControlStaffel2Bereich3Anzeige1.TextChanged
+    Private Sub RadTextBoxControlStaffel2Bereich3_TextChanged_1(sender As Object, e As EventArgs)
 
         If _suspendEvents = True Then Exit Sub
         CalculateStaffel2Bereich3()
@@ -2447,7 +2448,7 @@
         End Try
     End Sub
 
-    Private Sub RadTextBoxControlStaffel3Bereich1_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlStaffel3Bereich1Last2.TextChanged, RadTextBoxControlStaffel3Bereich1Last1.TextChanged, RadTextBoxControlStaffel3Bereich1Anzeige4.TextChanged, RadTextBoxControlStaffel3Bereich1Anzeige3.TextChanged, RadTextBoxControlStaffel3Bereich1Anzeige1.TextChanged
+    Private Sub RadTextBoxControlStaffel3Bereich1_TextChanged(sender As Object, e As EventArgs)
         If _suspendEvents = True Then Exit Sub
         CalculateStaffel3Bereich1()
     End Sub
@@ -2503,7 +2504,7 @@
         End Try
     End Sub
 
-    Private Sub RadTextBoxControlStaffel3Bereich2_TextChanged_1(sender As Object, e As EventArgs) Handles RadTextBoxControlStaffel3Bereich2Last2.TextChanged, RadTextBoxControlStaffel3Bereich2Last1.TextChanged, RadTextBoxControlStaffel3Bereich2Anzeige4.TextChanged, RadTextBoxControlStaffel3Bereich2Anzeige3.TextChanged, RadTextBoxControlStaffel3Bereich2Anzeige1.TextChanged
+    Private Sub RadTextBoxControlStaffel3Bereich2_TextChanged_1(sender As Object, e As EventArgs)
         If _suspendEvents = True Then Exit Sub
         CalculateStaffel3Bereich2()
     End Sub
@@ -2557,7 +2558,7 @@
         End Try
     End Sub
 
-    Private Sub RadTextBoxControlStaffel3Bereich3_TextChanged_1(sender As Object, e As EventArgs) Handles RadTextBoxControlStaffel3Bereich3Last2.TextChanged, RadTextBoxControlStaffel3Bereich3Last1.TextChanged, RadTextBoxControlStaffel3Bereich3Anzeige4.TextChanged, RadTextBoxControlStaffel3Bereich3Anzeige3.TextChanged, RadTextBoxControlStaffel3Bereich3Anzeige1.TextChanged
+    Private Sub RadTextBoxControlStaffel3Bereich3_TextChanged_1(sender As Object, e As EventArgs)
 
         If _suspendEvents = True Then Exit Sub
         CalculateStaffel3Bereich3()
@@ -2620,7 +2621,7 @@
         End Try
     End Sub
 
-    Private Sub RadTextBoxControlStaffel4Bereich1_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlStaffel4Bereich1Last2.TextChanged, RadTextBoxControlStaffel4Bereich1Last1.TextChanged, RadTextBoxControlStaffel4Bereich1Anzeige4.TextChanged, RadTextBoxControlStaffel4Bereich1Anzeige3.TextChanged, RadTextBoxControlStaffel4Bereich1Anzeige1.TextChanged
+    Private Sub RadTextBoxControlStaffel4Bereich1_TextChanged(sender As Object, e As EventArgs)
         If _suspendEvents = True Then Exit Sub
         CalculateStaffel4Bereich1()
     End Sub
@@ -2676,7 +2677,7 @@
         End Try
     End Sub
 
-    Private Sub RadTextBoxControlStaffel4Bereich2_TextChanged_1(sender As Object, e As EventArgs) Handles RadTextBoxControlStaffel4Bereich2Last2.TextChanged, RadTextBoxControlStaffel4Bereich2Last1.TextChanged, RadTextBoxControlStaffel4Bereich2Anzeige4.TextChanged, RadTextBoxControlStaffel4Bereich2Anzeige3.TextChanged, RadTextBoxControlStaffel4Bereich2Anzeige1.TextChanged
+    Private Sub RadTextBoxControlStaffel4Bereich2_TextChanged_1(sender As Object, e As EventArgs)
         If _suspendEvents = True Then Exit Sub
         CalculateStaffel4Bereich2()
     End Sub
@@ -2730,7 +2731,7 @@
         End Try
     End Sub
 
-    Private Sub RadTextBoxControlStaffel4Bereich3_TextChanged_1(sender As Object, e As EventArgs) Handles RadTextBoxControlStaffel4Bereich3Last2.TextChanged, RadTextBoxControlStaffel4Bereich3Last1.TextChanged, RadTextBoxControlStaffel4Bereich3Anzeige4.TextChanged, RadTextBoxControlStaffel4Bereich3Anzeige3.TextChanged, RadTextBoxControlStaffel4Bereich3Anzeige1.TextChanged
+    Private Sub RadTextBoxControlStaffel4Bereich3_TextChanged_1(sender As Object, e As EventArgs)
 
         If _suspendEvents = True Then Exit Sub
         CalculateStaffel4Bereich3()
@@ -2794,7 +2795,7 @@
         End Try
     End Sub
 
-    Private Sub RadTextBoxControlStaffel5Bereich1_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlStaffel5Bereich1Last2.TextChanged, RadTextBoxControlStaffel5Bereich1Last1.TextChanged, RadTextBoxControlStaffel5Bereich1Anzeige4.TextChanged, RadTextBoxControlStaffel5Bereich1Anzeige3.TextChanged, RadTextBoxControlStaffel5Bereich1Anzeige1.TextChanged
+    Private Sub RadTextBoxControlStaffel5Bereich1_TextChanged(sender As Object, e As EventArgs)
         If _suspendEvents = True Then Exit Sub
         CalculateStaffel5Bereich1()
     End Sub
@@ -2850,7 +2851,7 @@
         End Try
     End Sub
 
-    Private Sub RadTextBoxControlStaffel5Bereich2_TextChanged_1(sender As Object, e As EventArgs) Handles RadTextBoxControlStaffel5Bereich2Last2.TextChanged, RadTextBoxControlStaffel5Bereich2Last1.TextChanged, RadTextBoxControlStaffel5Bereich2Anzeige4.TextChanged, RadTextBoxControlStaffel5Bereich2Anzeige3.TextChanged, RadTextBoxControlStaffel5Bereich2Anzeige1.TextChanged
+    Private Sub RadTextBoxControlStaffel5Bereich2_TextChanged_1(sender As Object, e As EventArgs)
         If _suspendEvents = True Then Exit Sub
         CalculateStaffel5Bereich2()
     End Sub
@@ -2904,7 +2905,7 @@
         End Try
     End Sub
 
-    Private Sub RadTextBoxControlStaffel5Bereich3_TextChanged_1(sender As Object, e As EventArgs) Handles RadTextBoxControlStaffel5Bereich3Last2.TextChanged, RadTextBoxControlStaffel5Bereich3Last1.TextChanged, RadTextBoxControlStaffel5Bereich3Anzeige4.TextChanged, RadTextBoxControlStaffel5Bereich3Anzeige3.TextChanged, RadTextBoxControlStaffel5Bereich3Anzeige1.TextChanged
+    Private Sub RadTextBoxControlStaffel5Bereich3_TextChanged_1(sender As Object, e As EventArgs)
 
         If _suspendEvents = True Then Exit Sub
         CalculateStaffel5Bereich3()
@@ -3125,5 +3126,19 @@
                 End Using
             End Using
         End If
+    End Sub
+
+    ''' <summary>
+    ''' Dirty Flag für Speicherroutine
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    ''' <author></author>
+    ''' <commentauthor></commentauthor>
+    Private Sub RadTextBoxControlStaffel1Bereich1Last1_TextChanged(sender As System.Object, e As System.EventArgs) Handles RadTextBoxControlStaffel5Bereich3Last2.TextChanged, RadTextBoxControlStaffel5Bereich3Last1.TextChanged, RadTextBoxControlStaffel5Bereich3Anzeige4.TextChanged, RadTextBoxControlStaffel5Bereich3Anzeige3.TextChanged, RadTextBoxControlStaffel5Bereich3Anzeige1.TextChanged, RadTextBoxControlStaffel5Bereich2Last2.TextChanged, RadTextBoxControlStaffel5Bereich2Last1.TextChanged, RadTextBoxControlStaffel5Bereich2Anzeige4.TextChanged, RadTextBoxControlStaffel5Bereich2Anzeige3.TextChanged, RadTextBoxControlStaffel5Bereich2Anzeige1.TextChanged, RadTextBoxControlStaffel5Bereich1Last2.TextChanged, RadTextBoxControlStaffel5Bereich1Last1.TextChanged, RadTextBoxControlStaffel5Bereich1Anzeige4.TextChanged, RadTextBoxControlStaffel5Bereich1Anzeige3.TextChanged, RadTextBoxControlStaffel5Bereich1Anzeige1.TextChanged, RadTextBoxControlStaffel4Bereich3Last2.TextChanged, RadTextBoxControlStaffel4Bereich3Last1.TextChanged, RadTextBoxControlStaffel4Bereich3Anzeige4.TextChanged, RadTextBoxControlStaffel4Bereich3Anzeige3.TextChanged, RadTextBoxControlStaffel4Bereich3Anzeige1.TextChanged, RadTextBoxControlStaffel4Bereich2Last2.TextChanged, RadTextBoxControlStaffel4Bereich2Last1.TextChanged, RadTextBoxControlStaffel4Bereich2Anzeige4.TextChanged, RadTextBoxControlStaffel4Bereich2Anzeige3.TextChanged, RadTextBoxControlStaffel4Bereich2Anzeige1.TextChanged, RadTextBoxControlStaffel4Bereich1Last2.TextChanged, RadTextBoxControlStaffel4Bereich1Last1.TextChanged, RadTextBoxControlStaffel4Bereich1Anzeige4.TextChanged, RadTextBoxControlStaffel4Bereich1Anzeige3.TextChanged, RadTextBoxControlStaffel4Bereich1Anzeige1.TextChanged, RadTextBoxControlStaffel3Bereich3Last2.TextChanged, RadTextBoxControlStaffel3Bereich3Last1.TextChanged, RadTextBoxControlStaffel3Bereich3Anzeige4.TextChanged, RadTextBoxControlStaffel3Bereich3Anzeige3.TextChanged, RadTextBoxControlStaffel3Bereich3Anzeige1.TextChanged, RadTextBoxControlStaffel3Bereich2Last2.TextChanged, RadTextBoxControlStaffel3Bereich2Last1.TextChanged, RadTextBoxControlStaffel3Bereich2Anzeige4.TextChanged, RadTextBoxControlStaffel3Bereich2Anzeige3.TextChanged, RadTextBoxControlStaffel3Bereich2Anzeige1.TextChanged, RadTextBoxControlStaffel3Bereich1Last2.TextChanged, RadTextBoxControlStaffel3Bereich1Last1.TextChanged, RadTextBoxControlStaffel3Bereich1Anzeige4.TextChanged, RadTextBoxControlStaffel3Bereich1Anzeige3.TextChanged, RadTextBoxControlStaffel3Bereich1Anzeige1.TextChanged, RadTextBoxControlStaffel2Bereich3Last2.TextChanged, RadTextBoxControlStaffel2Bereich3Last1.TextChanged, RadTextBoxControlStaffel2Bereich3Anzeige4.TextChanged, RadTextBoxControlStaffel2Bereich3Anzeige3.TextChanged, RadTextBoxControlStaffel2Bereich3Anzeige1.TextChanged, RadTextBoxControlStaffel2Bereich2Last2.TextChanged, RadTextBoxControlStaffel2Bereich2Last1.TextChanged, RadTextBoxControlStaffel2Bereich2Anzeige4.TextChanged, RadTextBoxControlStaffel2Bereich2Anzeige3.TextChanged, RadTextBoxControlStaffel2Bereich2Anzeige1.TextChanged, RadTextBoxControlStaffel2Bereich1Last2.TextChanged, RadTextBoxControlStaffel2Bereich1Last1.TextChanged, RadTextBoxControlStaffel2Bereich1Anzeige4.TextChanged, RadTextBoxControlStaffel2Bereich1Anzeige3.TextChanged, RadTextBoxControlStaffel2Bereich1Anzeige1.TextChanged, RadTextBoxControlStaffel1Bereich3Last3.TextChanged, RadTextBoxControlStaffel1Bereich3Last2.TextChanged, RadTextBoxControlStaffel1Bereich3Last1.TextChanged, RadTextBoxControlStaffel1Bereich3Anzeige3.TextChanged, RadTextBoxControlStaffel1Bereich3Anzeige2.TextChanged, RadTextBoxControlStaffel1Bereich3Anzeige1.TextChanged, RadTextBoxControlStaffel1Bereich2Last3.TextChanged, RadTextBoxControlStaffel1Bereich2Last2.TextChanged, RadTextBoxControlStaffel1Bereich2Last1.TextChanged, RadTextBoxControlStaffel1Bereich2Anzeige3.TextChanged, RadTextBoxControlStaffel1Bereich2Anzeige2.TextChanged, RadTextBoxControlStaffel1Bereich2Anzeige1.TextChanged, RadTextBoxControlStaffel1Bereich1Last3.TextChanged, RadTextBoxControlStaffel1Bereich1Last2.TextChanged, RadTextBoxControlStaffel1Bereich1Last1.TextChanged, RadTextBoxControlStaffel1Bereich1Anzeige3.TextChanged, RadTextBoxControlStaffel1Bereich1Anzeige2.TextChanged, RadTextBoxControlStaffel1Bereich1Anzeige1.TextChanged
+        'nur wenn bereits aus der DB geladen wurde
+        If _suspendEvents Then Exit Sub
+        AktuellerStatusDirty = True
     End Sub
 End Class

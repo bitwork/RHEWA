@@ -2,7 +2,7 @@
     Inherits ucoContent
 #Region "Member Variables"
     Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken 
-    Private _bolEichprozessIsDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Komptabilitätsnachweis zurückgesetzt
+    'Private AktuellerStatusDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Komptabilitätsnachweis zurückgesetzt
     Private _objEichprotokoll As Eichprotokoll
 #End Region
 
@@ -187,14 +187,14 @@
                             objEichprozess = dobjEichprozess
                             'neuen Status zuweisen
 
-                            If _bolEichprozessIsDirty = False Then
+                            If AktuellerStatusDirty = False Then
                                 ' wenn der aktuelle status kleiner ist als der für die beschaffenheitspruefung, wird dieser überschrieben. sonst würde ein aktuellere status mit dem vorherigen überschrieben
                                 If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.BerücksichtigungderFallbeschleunigung Then
                                     objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.BerücksichtigungderFallbeschleunigung
                                 End If
-                            ElseIf _bolEichprozessIsDirty = True Then
+                            ElseIf AktuellerStatusDirty = True Then
                                 objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.BerücksichtigungderFallbeschleunigung
-                                _bolEichprozessIsDirty = False
+                                AktuellerStatusDirty = False
                             End If
 
                             'Füllt das Objekt mit den Werten aus den Steuerlementen
@@ -357,5 +357,10 @@
                 End Using
             End Using
         End If
+    End Sub
+
+    Private Sub RadCheckBoxZufahrtenInOrdnung_Click(sender As System.Object, e As System.EventArgs) Handles RadCheckBoxZufahrtenInOrdnung.Click, RadCheckBoxWaageNichtGeeignet.Click, RadCheckBoxWaagegeprueft.Click
+        If _suspendEvents = True Then Exit Sub
+        AktuellerStatusDirty = True
     End Sub
 End Class

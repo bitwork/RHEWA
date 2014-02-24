@@ -3,7 +3,7 @@
 
 #Region "Member Variables"
     Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken 
-    Private _bolEichprozessIsDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Komptabilitätsnachweis zurückgesetzt
+    'Private AktuellerStatusDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Komptabilitätsnachweis zurückgesetzt
     Private _ListPruefungStabilitaet As New List(Of PruefungStabilitaetGleichgewichtslage)
     Private _currentObjPruefungStabilitaetGleichgewichtslage As PruefungStabilitaetGleichgewichtslage
 #End Region
@@ -311,14 +311,14 @@
 
 
                             'neuen Status zuweisen
-                            If _bolEichprozessIsDirty = False Then
+                            If AktuellerStatusDirty = False Then
                                 ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
                                 If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.Taraeinrichtung Then
                                     objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Taraeinrichtung
                                 End If
-                            ElseIf _bolEichprozessIsDirty = True Then
+                            ElseIf AktuellerStatusDirty = True Then
                                 objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Taraeinrichtung
-                                _bolEichprozessIsDirty = False
+                                AktuellerStatusDirty = False
                             End If
 
 
@@ -433,7 +433,7 @@
     ''' <remarks></remarks>
     Private Sub RadTextBoxControlLast1_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlLast5.TextChanged, RadTextBoxControlLast4.TextChanged, RadTextBoxControlLast3.TextChanged, RadTextBoxControlLast2.TextChanged, RadTextBoxControlLast1.TextChanged
         If _suspendEvents = True Then Exit Sub
-        _bolEichprozessIsDirty = True
+        AktuellerStatusDirty = True
 
         'damit keine Event Kettenreaktion durchgeführt wird, werden die Events ab hier unterbrochen
         _suspendEvents = True
@@ -538,4 +538,13 @@
         End If
     End Sub
 
+    Private Sub RadTextBoxControlMax5_TextChanged(sender As System.Object, e As System.EventArgs) Handles RadTextBoxControlMin5.TextChanged, RadTextBoxControlMin4.TextChanged, RadTextBoxControlMin3.TextChanged, RadTextBoxControlMin2.TextChanged, RadTextBoxControlMin1.TextChanged, RadTextBoxControlMax5.TextChanged, RadTextBoxControlMax4.TextChanged, RadTextBoxControlMax3.TextChanged, RadTextBoxControlMax2.TextChanged, RadTextBoxControlMax1.TextChanged, RadTextBoxControlAnzeige5.TextChanged, RadTextBoxControlAnzeige4.TextChanged, RadTextBoxControlAnzeige3.TextChanged, RadTextBoxControlAnzeige2.TextChanged, RadTextBoxControlAnzeige1.TextChanged
+        If _suspendEvents = True Then Exit Sub
+        AktuellerStatusDirty = True
+    End Sub
+
+    Private Sub RadCheckBoxAbdruck5_Click(sender As System.Object, e As System.EventArgs) Handles RadCheckBoxAbdruck5.Click, RadCheckBoxAbdruck4.Click, RadCheckBoxAbdruck3.Click, RadCheckBoxAbdruck2.Click, RadCheckBoxAbdruck1.Click
+        If _suspendEvents = True Then Exit Sub
+        AktuellerStatusDirty = True
+    End Sub
 End Class

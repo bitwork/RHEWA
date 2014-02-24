@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b24fbedd-c1e7-4ac4-b47e-bddbb8893761" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="473321fc-97fb-4700-b4ed-886931ffb1b0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <EnableDataBinding>true</EnableDataBinding>
@@ -21,11 +21,11 @@
     <MetadataSource Address="http://localhost:12000/RhewaHerstellerersteichung/EichsoftwareWebservice.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="EichsoftwareWebservice.xsd" MetadataType="Schema" ID="c1bf3a05-b705-4ab0-bec0-7dc239fac031" SourceId="1" SourceUrl="http://win7mobdev01.bitworkgmbh.local:12000/RhewaHerstellerersteichung/EichsoftwareWebservice.svc?xsd=xsd1" />
-    <MetadataFile FileName="EichsoftwareWebservice1.xsd" MetadataType="Schema" ID="e83d8658-864e-4bcc-9804-79ac95897123" SourceId="1" SourceUrl="http://win7mobdev01.bitworkgmbh.local:12000/RhewaHerstellerersteichung/EichsoftwareWebservice.svc?xsd=xsd2" />
-    <MetadataFile FileName="EichsoftwareWebservice.disco" MetadataType="Disco" ID="6768d389-1a86-4bba-80ce-46a9d2c60399" SourceId="1" SourceUrl="http://win7mobdev01.bitworkgmbh.local:12000/RhewaHerstellerersteichung/EichsoftwareWebservice.svc?disco" />
-    <MetadataFile FileName="EichsoftwareWebservice2.xsd" MetadataType="Schema" ID="4edd0065-09ff-4573-8aab-02ce96a4fc58" SourceId="1" SourceUrl="http://win7mobdev01.bitworkgmbh.local:12000/RhewaHerstellerersteichung/EichsoftwareWebservice.svc?xsd=xsd0" />
-    <MetadataFile FileName="EichsoftwareWebservice.wsdl" MetadataType="Wsdl" ID="db566112-71c4-4573-9155-9b74cbe155c9" SourceId="1" SourceUrl="http://win7mobdev01.bitworkgmbh.local:12000/RhewaHerstellerersteichung/EichsoftwareWebservice.svc?wsdl" />
+    <MetadataFile FileName="EichsoftwareWebservice.xsd" MetadataType="Schema" ID="ee526501-ed98-410d-98cd-a5c4f753eeba" SourceId="1" SourceUrl="http://win7mobdev01.bitworkgmbh.local:12000/RhewaHerstellerersteichung/EichsoftwareWebservice.svc?xsd=xsd1" />
+    <MetadataFile FileName="EichsoftwareWebservice1.xsd" MetadataType="Schema" ID="d1b1b717-1d28-4691-bdca-dce96cf60513" SourceId="1" SourceUrl="http://win7mobdev01.bitworkgmbh.local:12000/RhewaHerstellerersteichung/EichsoftwareWebservice.svc?xsd=xsd2" />
+    <MetadataFile FileName="EichsoftwareWebservice.disco" MetadataType="Disco" ID="b3b1b86d-80f0-4511-b45b-9c27dd176370" SourceId="1" SourceUrl="http://win7mobdev01.bitworkgmbh.local:12000/RhewaHerstellerersteichung/EichsoftwareWebservice.svc?disco" />
+    <MetadataFile FileName="EichsoftwareWebservice2.xsd" MetadataType="Schema" ID="a111c5ac-4237-46bd-85ba-e97a617b4c8c" SourceId="1" SourceUrl="http://win7mobdev01.bitworkgmbh.local:12000/RhewaHerstellerersteichung/EichsoftwareWebservice.svc?xsd=xsd0" />
+    <MetadataFile FileName="EichsoftwareWebservice.wsdl" MetadataType="Wsdl" ID="a7a201d2-6ae7-483c-9a13-01d1dbcc6419" SourceId="1" SourceUrl="http://win7mobdev01.bitworkgmbh.local:12000/RhewaHerstellerersteichung/EichsoftwareWebservice.svc?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

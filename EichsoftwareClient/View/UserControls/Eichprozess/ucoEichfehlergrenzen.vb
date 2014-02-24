@@ -3,7 +3,6 @@
 
 #Region "Member Variables"
     Private _suspendEvents As Boolean = False  'Variable zum temporären stoppen der Eventlogiken 
-    Private _bolEichprozessIsDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Komptabilitätsnachweis zurückgesetzt
 #End Region
 
 #Region "Constructors"

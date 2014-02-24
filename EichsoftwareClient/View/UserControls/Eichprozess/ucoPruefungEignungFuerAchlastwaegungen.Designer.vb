@@ -24,15 +24,15 @@ Partial Class ucoPruefungEignungFuerAchlastwaegungen
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucoPruefungEignungFuerAchlastwaegungen))
         Me.RadScrollablePanel1 = New Telerik.WinControls.UI.RadScrollablePanel()
+        Me.lblPflichtfeld3 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld2 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld1 = New System.Windows.Forms.Label()
         Me.lblZufahrtenInOrdnung = New Telerik.WinControls.UI.RadLabel()
         Me.RadCheckBoxWaagegeprueft = New Telerik.WinControls.UI.RadCheckBox()
         Me.lblWaageNichtGeeignet = New Telerik.WinControls.UI.RadLabel()
         Me.RadCheckBoxWaageNichtGeeignet = New Telerik.WinControls.UI.RadCheckBox()
         Me.lblWaagegeprueft = New Telerik.WinControls.UI.RadLabel()
         Me.RadCheckBoxZufahrtenInOrdnung = New Telerik.WinControls.UI.RadCheckBox()
-        Me.lblPflichtfeld1 = New System.Windows.Forms.Label()
-        Me.lblPflichtfeld2 = New System.Windows.Forms.Label()
-        Me.lblPflichtfeld3 = New System.Windows.Forms.Label()
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanel1.PanelContainer.SuspendLayout()
         Me.RadScrollablePanel1.SuspendLayout()
@@ -65,6 +65,24 @@ Partial Class ucoPruefungEignungFuerAchlastwaegungen
         '
         '
         Me.RadScrollablePanel1.RootElement.Padding = CType(resources.GetObject("RadScrollablePanel1.RootElement.Padding"), System.Windows.Forms.Padding)
+        '
+        'lblPflichtfeld3
+        '
+        resources.ApplyResources(Me.lblPflichtfeld3, "lblPflichtfeld3")
+        Me.lblPflichtfeld3.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld3.Name = "lblPflichtfeld3"
+        '
+        'lblPflichtfeld2
+        '
+        resources.ApplyResources(Me.lblPflichtfeld2, "lblPflichtfeld2")
+        Me.lblPflichtfeld2.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld2.Name = "lblPflichtfeld2"
+        '
+        'lblPflichtfeld1
+        '
+        resources.ApplyResources(Me.lblPflichtfeld1, "lblPflichtfeld1")
+        Me.lblPflichtfeld1.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld1.Name = "lblPflichtfeld1"
         '
         'lblZufahrtenInOrdnung
         '
@@ -167,24 +185,6 @@ Partial Class ucoPruefungEignungFuerAchlastwaegungen
         Me.RadCheckBoxZufahrtenInOrdnung.RootElement.Padding = CType(resources.GetObject("RadCheckBoxZufahrtenInOrdnung.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadCheckBoxZufahrtenInOrdnung.RootElement.Text = resources.GetString("RadCheckBoxZufahrtenInOrdnung.RootElement.Text")
         Me.RadCheckBoxZufahrtenInOrdnung.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxZufahrtenInOrdnung.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        '
-        'lblPflichtfeld1
-        '
-        resources.ApplyResources(Me.lblPflichtfeld1, "lblPflichtfeld1")
-        Me.lblPflichtfeld1.ForeColor = System.Drawing.Color.Red
-        Me.lblPflichtfeld1.Name = "lblPflichtfeld1"
-        '
-        'lblPflichtfeld2
-        '
-        resources.ApplyResources(Me.lblPflichtfeld2, "lblPflichtfeld2")
-        Me.lblPflichtfeld2.ForeColor = System.Drawing.Color.Red
-        Me.lblPflichtfeld2.Name = "lblPflichtfeld2"
-        '
-        'lblPflichtfeld3
-        '
-        resources.ApplyResources(Me.lblPflichtfeld3, "lblPflichtfeld3")
-        Me.lblPflichtfeld3.ForeColor = System.Drawing.Color.Red
-        Me.lblPflichtfeld3.Name = "lblPflichtfeld3"
         '
         'ucoPruefungEignungFuerAchlastwaegungen
         '

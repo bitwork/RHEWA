@@ -10,4 +10,5 @@
     Public Property Bearbeitungsstatus As String = ""
     Public Property GesperrtDurch As String = ""
     Public Property AnhangPfad As String = ""
+    Public Property NeueWZ As Boolean = False
 End Class

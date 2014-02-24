@@ -24,14 +24,14 @@ Partial Class ucoTaraeinrichtung
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucoTaraeinrichtung))
         Me.RadScrollablePanel1 = New Telerik.WinControls.UI.RadScrollablePanel()
+        Me.lblPflichtfeld2 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld1 = New System.Windows.Forms.Label()
         Me.lblTaraAusrichtung = New Telerik.WinControls.UI.RadLabel()
         Me.RadCheckBoxTaraGenauigkeitTarrierung = New Telerik.WinControls.UI.RadCheckBox()
         Me.lblGenauigkeit = New Telerik.WinControls.UI.RadLabel()
         Me.RadCheckBoxTaraausgleicheinrichtungOK = New Telerik.WinControls.UI.RadCheckBox()
         Me.lblRichtigkeitspruefung = New Telerik.WinControls.UI.RadLabel()
         Me.RadCheckBoxTaraErweiterteRichtigkeitspruefung = New Telerik.WinControls.UI.RadCheckBox()
-        Me.lblPflichtfeld1 = New System.Windows.Forms.Label()
-        Me.lblPflichtfeld2 = New System.Windows.Forms.Label()
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanel1.PanelContainer.SuspendLayout()
         Me.RadScrollablePanel1.SuspendLayout()
@@ -63,6 +63,18 @@ Partial Class ucoTaraeinrichtung
         '
         '
         Me.RadScrollablePanel1.RootElement.Padding = CType(resources.GetObject("RadScrollablePanel1.RootElement.Padding"), System.Windows.Forms.Padding)
+        '
+        'lblPflichtfeld2
+        '
+        resources.ApplyResources(Me.lblPflichtfeld2, "lblPflichtfeld2")
+        Me.lblPflichtfeld2.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld2.Name = "lblPflichtfeld2"
+        '
+        'lblPflichtfeld1
+        '
+        resources.ApplyResources(Me.lblPflichtfeld1, "lblPflichtfeld1")
+        Me.lblPflichtfeld1.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld1.Name = "lblPflichtfeld1"
         '
         'lblTaraAusrichtung
         '
@@ -165,18 +177,6 @@ Partial Class ucoTaraeinrichtung
         Me.RadCheckBoxTaraErweiterteRichtigkeitspruefung.RootElement.Padding = CType(resources.GetObject("RadCheckBoxTaraErweiterteRichtigkeitspruefung.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadCheckBoxTaraErweiterteRichtigkeitspruefung.RootElement.Text = resources.GetString("RadCheckBoxTaraErweiterteRichtigkeitspruefung.RootElement.Text")
         Me.RadCheckBoxTaraErweiterteRichtigkeitspruefung.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxTaraErweiterteRichtigkeitspruefung.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        '
-        'lblPflichtfeld1
-        '
-        resources.ApplyResources(Me.lblPflichtfeld1, "lblPflichtfeld1")
-        Me.lblPflichtfeld1.ForeColor = System.Drawing.Color.Red
-        Me.lblPflichtfeld1.Name = "lblPflichtfeld1"
-        '
-        'lblPflichtfeld2
-        '
-        resources.ApplyResources(Me.lblPflichtfeld2, "lblPflichtfeld2")
-        Me.lblPflichtfeld2.ForeColor = System.Drawing.Color.Red
-        Me.lblPflichtfeld2.Name = "lblPflichtfeld2"
         '
         'ucoTaraeinrichtung
         '

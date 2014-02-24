@@ -2254,6 +2254,6 @@
     <value>ucoPruefungStabilitaet</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, EichsoftwareClient, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>EichsoftwareClient.ucoContent, EichsoftwareClient, Version=1.0.5168.20417, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

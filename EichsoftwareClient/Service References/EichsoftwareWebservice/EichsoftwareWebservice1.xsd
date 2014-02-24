@@ -33,6 +33,7 @@
       <xs:element name="_MaxAnzahlTeilungswerte" nillable="true" type="xs:string" />
       <xs:element name="_MinTeilungswert" nillable="true" type="xs:string" />
       <xs:element name="_Mindestvorlast" nillable="true" type="xs:string" />
+      <xs:element name="_Neu" nillable="true" type="xs:boolean" />
       <xs:element name="_Pruefbericht" nillable="true" type="xs:string" />
       <xs:element name="_Revisionsnummer" nillable="true" type="xs:string" />
       <xs:element name="_RueckkehrVorlastsignal" nillable="true" type="xs:string" />
@@ -602,6 +603,7 @@
       <xs:element minOccurs="0" name="Fabriknummer" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="GesperrtDurch" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NeueWZ" type="xs:boolean" />
       <xs:element minOccurs="0" name="Vorgangsnummer" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="WZ" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Waagenart" nillable="true" type="xs:string" />

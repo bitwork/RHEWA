@@ -4,7 +4,7 @@ Inherits ucoContent
 
     #Region "Member Variables"
     Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken 
-    Private _bolEichprozessIsDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Komptabilitätsnachweis zurückgesetzt
+    'Private AktuellerStatusDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Komptabilitätsnachweis zurückgesetzt
     Private _currentObjPruefungWiederholbarkeit As PruefungWiederholbarkeit
     Private _ListPruefungWiederholbarkeit As New List(Of PruefungWiederholbarkeit)
     #End Region
@@ -81,7 +81,7 @@ Inherits ucoContent
     RadTextBoxControlBereich1Weight3.TextChanged, RadTextBoxControlBereich1Weight2.TextChanged, RadTextBoxControlBereich1Weight1.TextChanged
 
         If _suspendEvents = True Then Exit Sub
-        _bolEichprozessIsDirty = True
+        AktuellerStatusDirty = True
 
         'damit keine Event Kettenreaktion durchgeführt wird, werden die Events ab hier unterbrochen
         _suspendEvents = True
@@ -175,7 +175,7 @@ Inherits ucoContent
     RadTextBoxControlBereich2Weight3.TextChanged, RadTextBoxControlBereich2Weight2.TextChanged, RadTextBoxControlBereich2Weight1.TextChanged
 
         If _suspendEvents = True Then Exit Sub
-        _bolEichprozessIsDirty = True
+        AktuellerStatusDirty = True
 
         'damit keine Event Kettenreaktion durchgeführt wird, werden die Events ab hier unterbrochen
         _suspendEvents = True
@@ -750,14 +750,14 @@ Inherits ucoContent
 
                             'neuen Status zuweisen
 
-                            If _bolEichprozessIsDirty = False Then
+                            If AktuellerStatusDirty = False Then
                                 ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
                                 If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderÜberlastanzeige Then
                                     objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderÜberlastanzeige
                                 End If
-                            ElseIf _bolEichprozessIsDirty = True Then
+                            ElseIf AktuellerStatusDirty = True Then
                                 objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderÜberlastanzeige
-                                _bolEichprozessIsDirty = False
+                                AktuellerStatusDirty = False
                             End If
 
 

@@ -24,6 +24,11 @@ Partial Class ucoPruefungStabilitaet
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucoPruefungStabilitaet))
         Me.RadScrollablePanel1 = New Telerik.WinControls.UI.RadScrollablePanel()
+        Me.lblPflichtfeld5 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld4 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld3 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld2 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld1 = New System.Windows.Forms.Label()
         Me.lblBeschreibung = New Telerik.WinControls.UI.RadLabel()
         Me.RadCheckBoxAbdruck5 = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadLabel1 = New Telerik.WinControls.UI.RadLabel()
@@ -62,11 +67,6 @@ Partial Class ucoPruefungStabilitaet
         Me.RadTextBoxControlAnzeige3 = New Telerik.WinControls.UI.RadTextBoxControl()
         Me.RadTextBoxControlAnzeige5 = New Telerik.WinControls.UI.RadTextBoxControl()
         Me.RadTextBoxControlAnzeige4 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.lblPflichtfeld1 = New System.Windows.Forms.Label()
-        Me.lblPflichtfeld2 = New System.Windows.Forms.Label()
-        Me.lblPflichtfeld3 = New System.Windows.Forms.Label()
-        Me.lblPflichtfeld4 = New System.Windows.Forms.Label()
-        Me.lblPflichtfeld5 = New System.Windows.Forms.Label()
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanel1.PanelContainer.SuspendLayout()
         Me.RadScrollablePanel1.SuspendLayout()
@@ -165,6 +165,36 @@ Partial Class ucoPruefungStabilitaet
         '
         '
         Me.RadScrollablePanel1.RootElement.Padding = CType(resources.GetObject("RadScrollablePanel1.RootElement.Padding"), System.Windows.Forms.Padding)
+        '
+        'lblPflichtfeld5
+        '
+        resources.ApplyResources(Me.lblPflichtfeld5, "lblPflichtfeld5")
+        Me.lblPflichtfeld5.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld5.Name = "lblPflichtfeld5"
+        '
+        'lblPflichtfeld4
+        '
+        resources.ApplyResources(Me.lblPflichtfeld4, "lblPflichtfeld4")
+        Me.lblPflichtfeld4.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld4.Name = "lblPflichtfeld4"
+        '
+        'lblPflichtfeld3
+        '
+        resources.ApplyResources(Me.lblPflichtfeld3, "lblPflichtfeld3")
+        Me.lblPflichtfeld3.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld3.Name = "lblPflichtfeld3"
+        '
+        'lblPflichtfeld2
+        '
+        resources.ApplyResources(Me.lblPflichtfeld2, "lblPflichtfeld2")
+        Me.lblPflichtfeld2.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld2.Name = "lblPflichtfeld2"
+        '
+        'lblPflichtfeld1
+        '
+        resources.ApplyResources(Me.lblPflichtfeld1, "lblPflichtfeld1")
+        Me.lblPflichtfeld1.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld1.Name = "lblPflichtfeld1"
         '
         'lblBeschreibung
         '
@@ -811,36 +841,6 @@ Partial Class ucoPruefungStabilitaet
         Me.RadTextBoxControlAnzeige4.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlAnzeige4.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlAnzeige4.RootElement.Text = resources.GetString("RadTextBoxControlAnzeige4.RootElement.Text")
         Me.RadTextBoxControlAnzeige4.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlAnzeige4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        '
-        'lblPflichtfeld1
-        '
-        resources.ApplyResources(Me.lblPflichtfeld1, "lblPflichtfeld1")
-        Me.lblPflichtfeld1.ForeColor = System.Drawing.Color.Red
-        Me.lblPflichtfeld1.Name = "lblPflichtfeld1"
-        '
-        'lblPflichtfeld2
-        '
-        resources.ApplyResources(Me.lblPflichtfeld2, "lblPflichtfeld2")
-        Me.lblPflichtfeld2.ForeColor = System.Drawing.Color.Red
-        Me.lblPflichtfeld2.Name = "lblPflichtfeld2"
-        '
-        'lblPflichtfeld3
-        '
-        resources.ApplyResources(Me.lblPflichtfeld3, "lblPflichtfeld3")
-        Me.lblPflichtfeld3.ForeColor = System.Drawing.Color.Red
-        Me.lblPflichtfeld3.Name = "lblPflichtfeld3"
-        '
-        'lblPflichtfeld4
-        '
-        resources.ApplyResources(Me.lblPflichtfeld4, "lblPflichtfeld4")
-        Me.lblPflichtfeld4.ForeColor = System.Drawing.Color.Red
-        Me.lblPflichtfeld4.Name = "lblPflichtfeld4"
-        '
-        'lblPflichtfeld5
-        '
-        resources.ApplyResources(Me.lblPflichtfeld5, "lblPflichtfeld5")
-        Me.lblPflichtfeld5.ForeColor = System.Drawing.Color.Red
-        Me.lblPflichtfeld5.Name = "lblPflichtfeld5"
         '
         'ucoPruefungStabilitaet
         '

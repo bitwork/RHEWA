@@ -11,7 +11,7 @@
     Private _DatasourceDropdownListWZHersteller As IEnumerable 'datenquelle für dropdown
     Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken (z.b. selected index changed beim laden des Formulars)
 
-    Private _bolEichprozessIsDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Stammdateneingabe zurückgesetzt
+    '  Private AktuellerStatusDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Stammdateneingabe zurückgesetzt
 
     Private objDBFunctions As New clsDBFunctions 'Klasse mit Hilfsfunktionen zum arbeiten mit der lokalen SQL Compact DB
 #End Region
@@ -222,7 +222,7 @@
                 'weitere events unterbrechen
 
                 Dim objWZ As Lookup_Waegezelle = f.NeueWaegezelle
-                _bolEichprozessIsDirty = True
+                AktuellerStatusDirty = True
 
                 Context.SaveChanges()
 
@@ -398,7 +398,11 @@
             RadDropDownListWaagenArt.SelectedValue = objEichprozess.FK_WaagenArt
             RadDropdownlistWaagenTyp.SelectedValue = objEichprozess.FK_WaagenTyp
 
+            'deaktvieren des neuen WZ Buttons
+            RadButtonNeueWaegezelle.Visible = False
+
             If DialogModus = enuDialogModus.lesend Then
+             
                 'falls der Eichvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
                 For Each Control In Me.RadScrollablePanel1.PanelContainer.Controls
                     Try
@@ -621,14 +625,14 @@
                             objEichprozess = dbobjEichprozess
 
                             'prüfen ob es änderungen am Objekt gab
-                            If _bolEichprozessIsDirty = False Then
+                            If AktuellerStatusDirty = False Then
                                 ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
                                 If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.Kompatbilitaetsnachweis Then
                                     objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Kompatbilitaetsnachweis
                                 End If
-                            ElseIf _bolEichprozessIsDirty = True Then
+                            ElseIf AktuellerStatusDirty = True Then
                                 objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Kompatbilitaetsnachweis
-                                _bolEichprozessIsDirty = False
+                                AktuellerStatusDirty = False
                             End If
 
 
@@ -670,6 +674,8 @@
 
 
 #Region "Workaround für Telerik Bug"
+
+   
     'in der aktuellen Telerik Version q1 2013 gibt es ein Bug mit den Dropdownlisten. Diese erhalten keinen Fokus wenn man sie mit Tab ansteuert
     Private Sub RadDropdownlist_GotFocus(sender As Object, e As EventArgs) Handles RadDropdownlistAWGTyp.GotFocus, RadDropdownlistlWZHersteller.GotFocus, RadDropdownlistlWZTyp.GotFocus, RadDropDownListWaagenArt.GotFocus, RadDropdownlistWaagenTyp.GotFocus
         If _suspendEvents Then Exit Sub
@@ -693,14 +699,13 @@
     'wenn die Art der Waage oder die WZ gewechselt wurde, muss kontrolliert werden, ob der Eichvorgang bereits fortschritten ist. Wenn also bereits ein späterer Status erreicht wurde, muss dieser zurückgesetzt werden auf die Stammdateneingabe
     Private Sub RadDropDownList_SelectedIndexChanged(sender As Object, e As Telerik.WinControls.UI.Data.PositionChangedEventArgs) Handles RadDropDownListWaagenArt.SelectedIndexChanged, RadDropdownlistlWZTyp.SelectedIndexChanged
         If _suspendEvents Then Exit Sub
-        'wenn Status = Stammdateneingabe dann abbruch alles ist okay
-        If objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe Then Exit Sub
+        ''wenn Status = Stammdateneingabe dann abbruch alles ist okay
+        'If objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe Then Exit Sub
 
-        'neuen Context aufbauen
 
         'ansonsten zurücksetzen auf Stammdateneingabe
         objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
-        _bolEichprozessIsDirty = True
+        AktuellerStatusDirty = True
 
     End Sub
 

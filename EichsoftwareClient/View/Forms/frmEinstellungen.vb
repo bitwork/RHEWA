@@ -1,7 +1,5 @@
 ﻿Public Class FrmEinstellungen
 
- 
-  
 #Region "Events"
     Private Sub FrmEinstellungen_Load(sender As Object, e As EventArgs) Handles Me.Load
         'vorauswahl der Radioboxen anhand von gespeicherten Settingwerten
@@ -76,6 +74,10 @@
     End Sub
     Private Sub SetRadioButtons()
         'vorauswahl der Radioboxen anhand von gespeicherten Settingwerten und setzten der Datumswerte
+        RadDateTimePickerSince.Value = Date.Now
+        RadDateTimePickerStart.Value = Date.Now
+        RadDateTimePickerEnd.Value = Date.Now
+
         Select Case My.Settings.Syncronisierungsmodus
             Case Is = "Alles"
                 RadRadioButtonSyncAlles.IsChecked = True

@@ -61,6 +61,10 @@
                 RadCheckBoxDeaktiviert.Checked = _objWZ.Deaktiviert
             Catch e As Exception
             End Try
+            Try
+                RadCheckBoxNeueWZ.Checked = _objWZ.Neu
+            Catch e As Exception
+            End Try
         Catch e As Exception
             MessageBox.Show(e.StackTrace, e.Message)
         End Try
@@ -85,6 +89,8 @@
         _objWZ.Typ = RadTextBoxControlWaegezelleTyp.Text
 
         _objWZ.Deaktiviert = RadCheckBoxDeaktiviert.Checked
+        _objWZ.Neu = RadCheckBoxNeueWZ.Checked
+
         _objWZ.ErstellDatum = Now
     End Sub
 

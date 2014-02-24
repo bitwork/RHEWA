@@ -2,7 +2,7 @@
     Inherits ucoContent
 #Region "Member Variables"
     Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken 
-    Private _bolEichprozessIsDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Komptabilitätsnachweis zurückgesetzt
+    'Private AktuellerStatusDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Komptabilitätsnachweis zurückgesetzt
     Private _objEichprotokoll As Eichprotokoll
 #End Region
 
@@ -207,24 +207,24 @@
 
                             Select Case objEichprozess.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren.Verfahren
                                 Case Is = "über 60kg mit Normalien", "über 60kg im Staffelverfahren"
-                                    If _bolEichprozessIsDirty = False Then
+                                    If AktuellerStatusDirty = False Then
                                         ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
                                         If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.BerücksichtigungderFallbeschleunigung Then
                                             objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.BerücksichtigungderFallbeschleunigung
                                         End If
-                                    ElseIf _bolEichprozessIsDirty = True Then
+                                    ElseIf AktuellerStatusDirty = True Then
                                         objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.BerücksichtigungderFallbeschleunigung
-                                        _bolEichprozessIsDirty = False
+                                        AktuellerStatusDirty = False
                                     End If
                                 Case Is = "Fahrzeugwaagen"
-                                    If _bolEichprozessIsDirty = False Then
+                                    If AktuellerStatusDirty = False Then
                                         ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
                                         If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.EignungfürAchslastwägungen Then
                                             objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.EignungfürAchslastwägungen
                                         End If
-                                    ElseIf _bolEichprozessIsDirty = True Then
+                                    ElseIf AktuellerStatusDirty = True Then
                                         objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.EignungfürAchslastwägungen
-                                        _bolEichprozessIsDirty = False
+                                        AktuellerStatusDirty = False
                                     End If
                             End Select
 
@@ -391,5 +391,18 @@
                 End Using
             End Using
         End If
+    End Sub
+
+
+    ''' <summary>
+    ''' Bei Änderungen DirtyFlag Setzen
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    ''' <author></author>
+    ''' <commentauthor></commentauthor>
+    Private Sub RadCheckBoxTaraErweiterteRichtigkeitspruefung_Click(sender As System.Object, e As System.EventArgs) Handles RadCheckBoxTaraGenauigkeitTarrierung.Click, RadCheckBoxTaraErweiterteRichtigkeitspruefung.Click, RadCheckBoxTaraausgleicheinrichtungOK.Click
+        AktuellerStatusDirty = True
     End Sub
 End Class

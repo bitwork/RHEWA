@@ -1,13 +1,13 @@
 ﻿Imports System.Runtime.Remoting.Contexts
 Imports System
 Imports System.Data.Entity
-  
-Friend Class ucoPruefungNullstellungUndAussermittigeBelastung
-Inherits ucoContent
 
-    #Region "Member Variables"
+Friend Class ucoPruefungNullstellungUndAussermittigeBelastung
+    Inherits ucoContent
+
+#Region "Member Variables"
     Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken 
-    Private _bolEichprozessIsDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. 
+    'Private AktuellerStatusDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. 
     'Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Komptabilitätsnachweis zurückgesetzt
     Private _ListPruefungAussermittigeBelastung As New List(Of PruefungAussermittigeBelastung)
     Private _currentObjPruefungAussermittigeBelastung As PruefungAussermittigeBelastung
@@ -15,9 +15,9 @@ Inherits ucoContent
     Private _ListPruefungWiederholbarkeit As New List(Of PruefungWiederholbarkeit)
 
     Private _currentObjVerfahren As Lookup_Konformitaetsbewertungsverfahren
-    #End Region
+#End Region
 
-    #Region "Constructors"
+#Region "Constructors"
     Sub New()
         MyBase.New()
         ' Dieser Aufruf ist für den Designer erforderlich.
@@ -34,9 +34,9 @@ Inherits ucoContent
 
     End Sub
 
-    #End Region
+#End Region
 
-    #Region "Events"
+#Region "Events"
     Private Sub ucoBeschaffenheitspruefung_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         If Not ParentFormular Is Nothing Then
             Try
@@ -93,14 +93,14 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         End If
     End Sub
 
-  Private Sub RadCheckBoxBereich1VEL1_MouseClick(sender As Object, e As MouseEventArgs) Handles RadCheckBoxBereich3VELMitte.MouseClick, RadCheckBoxBereich3VEL9.MouseClick, RadCheckBoxBereich3VEL8.MouseClick, RadCheckBoxBereich3VEL7.MouseClick,
-        RadCheckBoxBereich3VEL6.MouseClick, RadCheckBoxBereich3VEL5.MouseClick, RadCheckBoxBereich3VEL4.MouseClick, RadCheckBoxBereich3VEL3.MouseClick, RadCheckBoxBereich3VEL2.MouseClick, RadCheckBoxBereich3VEL12.MouseClick,
-        RadCheckBoxBereich3VEL11.MouseClick, RadCheckBoxBereich3VEL10.MouseClick, RadCheckBoxBereich3VEL1.MouseClick, RadCheckBoxBereich2VELMitte.MouseClick, RadCheckBoxBereich2VEL9.MouseClick, RadCheckBoxBereich2VEL8.MouseClick,
-        RadCheckBoxBereich2VEL7.MouseClick, RadCheckBoxBereich2VEL6.MouseClick, RadCheckBoxBereich2VEL5.MouseClick, RadCheckBoxBereich2VEL4.MouseClick, RadCheckBoxBereich2VEL3.MouseClick, RadCheckBoxBereich2VEL2.MouseClick,
-        RadCheckBoxBereich2VEL12.MouseClick, RadCheckBoxBereich2VEL11.MouseClick, RadCheckBoxBereich2VEL10.MouseClick, RadCheckBoxBereich2VEL1.MouseClick, RadCheckBoxBereich1VELMitte.MouseClick, RadCheckBoxBereich1VEL9.MouseClick,
-        RadCheckBoxBereich1VEL8.MouseClick, RadCheckBoxBereich1VEL7.MouseClick, RadCheckBoxBereich1VEL6.MouseClick, RadCheckBoxBereich1VEL5.MouseClick, RadCheckBoxBereich1VEL4.MouseClick, RadCheckBoxBereich1VEL3.MouseClick,
-        RadCheckBoxBereich1VEL2.MouseClick, RadCheckBoxBereich1VEL12.MouseClick, RadCheckBoxBereich1VEL11.MouseClick, RadCheckBoxBereich1VEL10.MouseClick, RadCheckBoxBereich1VEL1.MouseClick, RadCheckBoxVEL1.Click, RadCheckBoxVEL2.Click,
-        RadCheckBoxVEL3.Click
+    Private Sub RadCheckBoxBereich1VEL1_MouseClick(sender As Object, e As MouseEventArgs) Handles RadCheckBoxBereich3VELMitte.MouseClick, RadCheckBoxBereich3VEL9.MouseClick, RadCheckBoxBereich3VEL8.MouseClick, RadCheckBoxBereich3VEL7.MouseClick,
+          RadCheckBoxBereich3VEL6.MouseClick, RadCheckBoxBereich3VEL5.MouseClick, RadCheckBoxBereich3VEL4.MouseClick, RadCheckBoxBereich3VEL3.MouseClick, RadCheckBoxBereich3VEL2.MouseClick, RadCheckBoxBereich3VEL12.MouseClick,
+          RadCheckBoxBereich3VEL11.MouseClick, RadCheckBoxBereich3VEL10.MouseClick, RadCheckBoxBereich3VEL1.MouseClick, RadCheckBoxBereich2VELMitte.MouseClick, RadCheckBoxBereich2VEL9.MouseClick, RadCheckBoxBereich2VEL8.MouseClick,
+          RadCheckBoxBereich2VEL7.MouseClick, RadCheckBoxBereich2VEL6.MouseClick, RadCheckBoxBereich2VEL5.MouseClick, RadCheckBoxBereich2VEL4.MouseClick, RadCheckBoxBereich2VEL3.MouseClick, RadCheckBoxBereich2VEL2.MouseClick,
+          RadCheckBoxBereich2VEL12.MouseClick, RadCheckBoxBereich2VEL11.MouseClick, RadCheckBoxBereich2VEL10.MouseClick, RadCheckBoxBereich2VEL1.MouseClick, RadCheckBoxBereich1VELMitte.MouseClick, RadCheckBoxBereich1VEL9.MouseClick,
+          RadCheckBoxBereich1VEL8.MouseClick, RadCheckBoxBereich1VEL7.MouseClick, RadCheckBoxBereich1VEL6.MouseClick, RadCheckBoxBereich1VEL5.MouseClick, RadCheckBoxBereich1VEL4.MouseClick, RadCheckBoxBereich1VEL3.MouseClick,
+          RadCheckBoxBereich1VEL2.MouseClick, RadCheckBoxBereich1VEL12.MouseClick, RadCheckBoxBereich1VEL11.MouseClick, RadCheckBoxBereich1VEL10.MouseClick, RadCheckBoxBereich1VEL1.MouseClick, RadCheckBoxVEL1.Click, RadCheckBoxVEL2.Click,
+          RadCheckBoxVEL3.Click
         CType(sender, Telerik.WinControls.UI.RadCheckBox).Checked = Not CType(sender, Telerik.WinControls.UI.RadCheckBox).Checked
     End Sub
 
@@ -115,7 +115,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
     RadTextBoxControlWeight3.TextChanged, RadTextBoxControlWeight2.TextChanged, RadTextBoxControlWeight1.TextChanged
 
         If _suspendEvents = True Then Exit Sub
-        _bolEichprozessIsDirty = True
+        AktuellerStatusDirty = True
 
         'damit keine Event Kettenreaktion durchgeführt wird, werden die Events ab hier unterbrochen
         _suspendEvents = True
@@ -224,7 +224,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
     RadTextBoxControlBereich1WeightMitte.TextChanged, RadTextBoxControlBereich1Weight9.TextChanged, RadTextBoxControlBereich1Weight8.TextChanged, RadTextBoxControlBereich1Weight7.TextChanged, RadTextBoxControlBereich1Weight6.TextChanged, RadTextBoxControlBereich1Weight5.TextChanged, RadTextBoxControlBereich1Weight4.TextChanged, RadTextBoxControlBereich1Weight3.TextChanged, RadTextBoxControlBereich1Weight2.TextChanged, RadTextBoxControlBereich1Weight12.TextChanged, RadTextBoxControlBereich1Weight11.TextChanged, RadTextBoxControlBereich1Weight10.TextChanged, RadTextBoxControlBereich1Weight1.TextChanged
 
         If _suspendEvents = True Then Exit Sub
-        _bolEichprozessIsDirty = True
+        AktuellerStatusDirty = True
 
         'damit keine Event Kettenreaktion durchgeführt wird, werden die Events ab hier unterbrochen
         _suspendEvents = True
@@ -611,7 +611,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
     RadTextBoxControlBereich2WeightMitte.TextChanged, RadTextBoxControlBereich2Weight9.TextChanged, RadTextBoxControlBereich2Weight8.TextChanged, RadTextBoxControlBereich2Weight7.TextChanged, RadTextBoxControlBereich2Weight6.TextChanged, RadTextBoxControlBereich2Weight5.TextChanged, RadTextBoxControlBereich2Weight4.TextChanged, RadTextBoxControlBereich2Weight3.TextChanged, RadTextBoxControlBereich2Weight2.TextChanged, RadTextBoxControlBereich2Weight12.TextChanged, RadTextBoxControlBereich2Weight11.TextChanged, RadTextBoxControlBereich2Weight10.TextChanged, RadTextBoxControlBereich2Weight1.TextChanged
 
         If _suspendEvents = True Then Exit Sub
-        _bolEichprozessIsDirty = True
+        AktuellerStatusDirty = True
 
         'damit keine Event Kettenreaktion durchgeführt wird, werden die Events ab hier unterbrochen
         _suspendEvents = True
@@ -999,7 +999,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
     Private Sub RadTextBoxControlBereich3_TextChanged(sender As Object, e As EventArgs) Handles _
     RadTextBoxControlBereich3WeightMitte.TextChanged, RadTextBoxControlBereich3Weight9.TextChanged, RadTextBoxControlBereich3Weight8.TextChanged, RadTextBoxControlBereich3Weight7.TextChanged, RadTextBoxControlBereich3Weight6.TextChanged, RadTextBoxControlBereich3Weight5.TextChanged, RadTextBoxControlBereich3Weight4.TextChanged, RadTextBoxControlBereich3Weight3.TextChanged, RadTextBoxControlBereich3Weight2.TextChanged, RadTextBoxControlBereich3Weight12.TextChanged, RadTextBoxControlBereich3Weight11.TextChanged, RadTextBoxControlBereich3Weight10.TextChanged, RadTextBoxControlBereich3Weight1.TextChanged
         If _suspendEvents = True Then Exit Sub
-        _bolEichprozessIsDirty = True
+        AktuellerStatusDirty = True
 
         'damit keine Event Kettenreaktion durchgeführt wird, werden die Events ab hier unterbrochen
         _suspendEvents = True
@@ -1511,7 +1511,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         End Select
 
 
-        
+
 
 
         'fokus setzen auf erstes Steuerelement
@@ -3017,7 +3017,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
             AbortSaveing = True
             Return False
         End If
-     
+
 
         'Speichern soll nicht abgebrochen werden, da alles okay ist
         AbortSaveing = False
@@ -3092,24 +3092,24 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                             'die reihenfolge wird hier je nach Verfahren verändert
                             Select Case objEichprozess.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren.Verfahren
                                 Case Is = "über 60kg mit Normalien"
-                                    If _bolEichprozessIsDirty = False Then
+                                    If AktuellerStatusDirty = False Then
                                         ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
                                         If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitNormallastLinearitaet Then
                                             objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitNormallastLinearitaet
                                         End If
-                                    ElseIf _bolEichprozessIsDirty = True Then
+                                    ElseIf AktuellerStatusDirty = True Then
                                         objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitNormallastLinearitaet
-                                        _bolEichprozessIsDirty = False
+                                        AktuellerStatusDirty = False
                                     End If
                                 Case Is = "Fahrzeugwaagen", "über 60kg im Staffelverfahren"
-                                    If _bolEichprozessIsDirty = False Then
+                                    If AktuellerStatusDirty = False Then
                                         ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
                                         If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitErsatzlast Then
                                             objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitErsatzlast
                                         End If
-                                    ElseIf _bolEichprozessIsDirty = True Then
+                                    ElseIf AktuellerStatusDirty = True Then
                                         objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitErsatzlast
-                                        _bolEichprozessIsDirty = False
+                                        AktuellerStatusDirty = False
                                     End If
                             End Select
 
@@ -3315,10 +3315,10 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                             SaveAussermittigeBelastung(Context)
                             SaveWiederholungen(Context)
 
-                        'Füllt das Objekt mit den Werten aus den Steuerlementen
-                        UpdateObject()
-                        'Speichern in Datenbank
-                        Context.SaveChanges()
+                            'Füllt das Objekt mit den Werten aus den Steuerlementen
+                            UpdateObject()
+                            'Speichern in Datenbank
+                            Context.SaveChanges()
                         End If
                     End If
                 End If
@@ -3397,7 +3397,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
             End Try
         End If
 
-       
+
 
     End Sub
 
@@ -3447,7 +3447,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
 
     Private Sub RadTextBoxControlErrorLimit1_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlErrorLimit3.TextChanged, RadTextBoxControlErrorLimit2.TextChanged, RadTextBoxControlErrorLimit1.TextChanged
         Try
- 
+
             Dim MAX20 As Decimal = 0
             Dim MAx35 As Decimal = 0
             Dim max50 As Decimal = 0

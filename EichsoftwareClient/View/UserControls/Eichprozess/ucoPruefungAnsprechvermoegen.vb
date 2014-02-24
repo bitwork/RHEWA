@@ -2,7 +2,7 @@
     Inherits ucoContent
 #Region "Member Variables"
     Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken 
-    Private _bolEichprozessIsDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Komptabilitätsnachweis zurückgesetzt
+    'Private AktuellerStatusDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Komptabilitätsnachweis zurückgesetzt
     Private _objEichprotokoll As Eichprotokoll
 
     Private _currentObjPruefungAnsprechvermoegen As PruefungAnsprechvermoegen
@@ -352,28 +352,28 @@ RadTextBoxControlLast2.Text.Trim = "" Or _
 
                             'Wenn kein Drucker gewählt wurde entfällt die PRüfung der Stablität der GLeichgewichtslage
                             If objEichprozess.Eichprotokoll.Verwendungszweck_Drucker = False Then
-                                If _bolEichprozessIsDirty = False Then
+                                If AktuellerStatusDirty = False Then
 
 
                                     ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
                                     If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.Taraeinrichtung Then
                                         objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Taraeinrichtung
                                     End If
-                                ElseIf _bolEichprozessIsDirty = True Then
+                                ElseIf AktuellerStatusDirty = True Then
                                     objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Taraeinrichtung
-                                    _bolEichprozessIsDirty = False
+                                    AktuellerStatusDirty = False
                                 End If
                             Else
-                                If _bolEichprozessIsDirty = False Then
+                                If AktuellerStatusDirty = False Then
 
 
                                     ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
                                     If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderStabilitätderGleichgewichtslage Then
                                         objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderStabilitätderGleichgewichtslage
                                     End If
-                                ElseIf _bolEichprozessIsDirty = True Then
+                                ElseIf AktuellerStatusDirty = True Then
                                     objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderStabilitätderGleichgewichtslage
-                                    _bolEichprozessIsDirty = False
+                                    AktuellerStatusDirty = False
                                 End If
                             End If
 
@@ -537,6 +537,10 @@ RadTextBoxControlLast2.Text.Trim = "" Or _
     'berechnen des D1 Wertes aus MIN Eichwert + Anzeige2
     Private Sub RadTextBoxControlLast1_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlAnzeige1.TextChanged, RadTextBoxControlLast1.TextChanged
         'min
+        If _suspendEvents = False Then
+            AktuellerStatusDirty = True
+
+        End If
         Try
             RadTextBoxControLastD1.Text = CDec(RadTextBoxControlAnzeige1.Text) + objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1
         Catch ex As Exception
@@ -546,8 +550,10 @@ RadTextBoxControlLast2.Text.Trim = "" Or _
     'berechnen des D2 Wertes aus MAX Eichwert + Anzeige2
     Private Sub RadTextBoxControlLast2_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlAnzeige2.TextChanged, RadTextBoxControlLast1.TextChanged
         Try
+            If _suspendEvents = False Then
+                AktuellerStatusDirty = True
 
-
+            End If
             Select Case objEichprozess.Lookup_Waagenart.Art
                 Case Is = "Einbereichswaage"
                     RadTextBoxControlLastD2.Text = CDec(RadTextBoxControlAnzeige2.Text) + objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1
@@ -566,6 +572,11 @@ RadTextBoxControlLast2.Text.Trim = "" Or _
 
     'berechnen des D3 Wertes aus MAX Eichwert + Anzeige3
     Private Sub RadTextBoxControlLast3_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlAnzeige3.TextChanged, RadTextBoxControlLast1.TextChanged
+        If _suspendEvents = False Then
+            AktuellerStatusDirty = True
+
+        End If
+
         Try
             Select Case objEichprozess.Lookup_Waagenart.Art
                 Case Is = "Einbereichswaage"
@@ -605,7 +616,7 @@ RadTextBoxControlLast2.Text.Trim = "" Or _
 
     Private Sub RadCheckBoxMin_ToggleStateChanged(sender As Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadCheckBoxMin.ToggleStateChanged, RadCheckBoxMax.ToggleStateChanged, RadCheckBoxHalb.ToggleStateChanged
         If _suspendEvents = True Then Exit Sub
-        _bolEichprozessIsDirty = True
+        AktuellerStatusDirty = True
     End Sub
 
     'Entsperrroutine
@@ -672,6 +683,12 @@ RadTextBoxControlLast2.Text.Trim = "" Or _
                     End Try
                 End Using
             End Using
+        End If
+    End Sub
+
+    Private Sub RadTextBoxControlLast2_TextChanged_1(sender As System.Object, e As System.EventArgs) Handles RadTextBoxControlLast3.TextChanged, RadTextBoxControlLast2.TextChanged
+        If _suspendEvents = False Then
+            AktuellerStatusDirty = True
         End If
     End Sub
 End Class

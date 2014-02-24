@@ -1,4 +1,8 @@
-﻿Public Class ucoContent
+﻿Imports System.ComponentModel
+Public Class ucoContent
+    Implements INotifyPropertyChanged
+
+
 #Region "Member Variables"
     Private WithEvents _ParentForm As FrmMainContainer
     Private _PreviousUco As ucoContent
@@ -10,14 +14,42 @@
     Protected Friend _intNullstellenE2 As Integer = 0 'Variable zum Einstellen der Nullstellen für das Casten und runden der Werte. Abhängig von e Wert. Wenn e = 1 Nullstelle dann hier = 2. wenn e = 2 dann hier = 3. immer eine nullstelle mehr als E
     Protected Friend _intNullstellenE3 As Integer = 0 'Variable zum Einstellen der Nullstellen für das Casten und runden der Werte. Abhängig von e Wert. Wenn e = 1 Nullstelle dann hier = 2. wenn e = 2 dann hier = 3. immer eine nullstelle mehr als E
     Protected Friend _intNullstellenE As Integer = 0
+    Private _bolEichprozessIsDirty = False
 
+    ''' <summary>
+    ''' sobald gravierende Änderungen im aktuellen Status vorgenommen werden, wird das Dirty Flag gesetzt. So kann überprüft werden ob Updates durchgeführt werden müssen und ob der aktuelle Vorgangsstatus zurückgesetzt werden muss
+    ''' </summary>
+    ''' <value></value>
+    ''' <remarks></remarks>
+    ''' <author></author>
+    ''' <commentauthor></commentauthor>
+    Protected Friend Property AktuellerStatusDirty As Boolean
+        Get
+            Return _bolEichprozessIsDirty
+        End Get
+        Set(value As Boolean)
+            _bolEichprozessIsDirty = value
+            onpropertychanged(_bolEichprozessIsDirty)
+        End Set
+    End Property
 
+#Region "Property Changed Event für Dirty Flag, damit Ampel UCO darauf reagieren kann"
+    ' Declare the event 
+    Public Event PropertyChanged As System.ComponentModel.PropertyChangedEventHandler Implements INotifyPropertyChanged.PropertyChanged
 
+    Private Sub onpropertychanged(ByVal name As String)
+        RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(name))
+    End Sub
+#End Region
+
+#Region "Enumartoren"
     Enum enuDialogModus
         normal = 0
         lesend = 1
         korrigierend = 2
     End Enum
+#End Region
+
 #End Region
 #Region "Properties"
     ''' <summary>
@@ -79,15 +111,6 @@
             _NextUco = value
         End Set
     End Property
-
-    'Protected Friend Property Breadcrumb As ucoStatusBullet
-    '    Get
-    '        Return _Breadcrumb
-    '    End Get
-    '    Set(value As ucoStatusBullet)
-    '        _Breadcrumb = value
-    '    End Set
-    'End Property
 
 #End Region
 
@@ -234,6 +257,6 @@
 
 
 
-   
+
 
 End Class

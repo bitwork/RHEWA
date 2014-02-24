@@ -506,6 +506,7 @@
           <Property Name="BruchteilEichfehlergrenze" Type="nvarchar" MaxLength="5" />
           <Property Name="ErstellDatum" Type="datetime" />
           <Property Name="Deaktiviert" Type="bit" />
+          <Property Name="Neu" Type="bit" />
         </EntityType>
         <EntityType Name="ServerLookupVertragspartnerFirma">
           <Key>
@@ -1472,6 +1473,7 @@
           <Property Name="Deaktiviert" Type="Boolean" />
           <NavigationProperty Name="ServerEichprozess" Relationship="EichenSQLDatabaseModel.FK_Eichprozess_Lookup_Waegezelle" FromRole="ServerLookup_Waegezelle" ToRole="ServerEichprozess" />
           <NavigationProperty Name="ServerMogelstatistik" Relationship="EichenSQLDatabaseModel.FK_Mogelstatistik_Lookup_Waegezelle" FromRole="ServerLookup_Waegezelle" ToRole="ServerMogelstatistik" />
+          <Property Type="Boolean" Name="Neu" />
         </EntityType>
         <EntityType Name="ServerMogelstatistik">
           <Key>
@@ -2349,6 +2351,7 @@
           <EntitySetMapping Name="ServerLookup_Waegezelle">
             <EntityTypeMapping TypeName="EichenSQLDatabaseModel.ServerLookup_Waegezelle">
               <MappingFragment StoreEntitySet="ServerLookup_Waegezelle">
+                <ScalarProperty Name="Neu" ColumnName="Neu" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Hersteller" ColumnName="Hersteller" />
                 <ScalarProperty Name="Typ" ColumnName="Typ" />
@@ -2685,7 +2688,7 @@
     </Options>
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
-      <Diagram Name="EntityModelEichsoftwareServer">
+      <Diagram Name="EntityModelEichsoftwareServer" ZoomLevel="49">
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerBeschaffenheitspruefung" Width="1.5" PointX="6" PointY="8.75" Height="4.2879036458333317" IsExpanded="true" />
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerEichmarkenverwaltung" Width="1.5" PointX="0.75" PointY="2.25" Height="4.480205078125" IsExpanded="true" />
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerEichprotokoll" Width="1.5" PointX="3" PointY="20" Height="17.172099609375" IsExpanded="true" />

@@ -539,6 +539,7 @@
             TargetObject._ServerLookup_Waegezelle._Deaktiviert = True
             TargetObject._ServerLookup_Waegezelle._Waegezellenkennwert = SourceObject.Lookup_Waegezelle.Waegezellenkennwert
             TargetObject._ServerLookup_Waegezelle._WiderstandWaegezelle = SourceObject.Lookup_Waegezelle.WiderstandWaegezelle
+            TargetObject._ServerLookup_Waegezelle._neu = True
         End If
 
         Return TargetObject

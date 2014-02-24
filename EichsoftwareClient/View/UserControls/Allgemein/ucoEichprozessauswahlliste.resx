@@ -240,9 +240,6 @@
   <data name="&gt;&gt;RadButtonEinstellungen.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="resource.Text" xml:space="preserve">
-    <value />
-  </data>
   <data name="RadButtonClientUpdateDatabase.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
   </data>
@@ -723,31 +720,31 @@
   <data name="RadGridViewRHEWAAlle.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 0</value>
   </data>
-  <data name="RadGridView1.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadGridViewRHEWAAlle.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadGridView1.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadGridViewRHEWAAlle.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadGridView1.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="RadGridViewRHEWAAlle.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
-  <data name="RadGridView1.RootElement.AngleTransform" type="System.Single, mscorlib">
+  <data name="RadGridViewRHEWAAlle.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
-  <data name="RadGridView1.RootElement.FlipText" type="System.Boolean, mscorlib">
+  <data name="RadGridViewRHEWAAlle.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="RadGridView1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="RadGridViewRHEWAAlle.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadGridView1.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="RadGridViewRHEWAAlle.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadGridView1.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadGridViewRHEWAAlle.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadGridView1.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+  <data name="RadGridViewRHEWAAlle.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
   <data name="RadGridViewRHEWAAlle.Size" type="System.Drawing.Size, System.Drawing">
@@ -931,6 +928,6 @@
     <value>ucoEichprozessauswahlliste</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, EichsoftwareClient, Version=1.0.5162.25964, Culture=neutral, PublicKeyToken=null</value>
+    <value>EichsoftwareClient.ucoContent, EichsoftwareClient, Version=1.0.5168.22678, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

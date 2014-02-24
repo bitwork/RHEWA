@@ -156,18 +156,20 @@ Public Class EichsoftwareWebservice
                 If Serverob Is Nothing Then
 
                     'wenn neue WZ vorhanden ist
-                    Try
-                        DbContext.ServerLookup_Waegezelle.Add(pObjEichprozess.ServerLookup_Waegezelle)
-                        DbContext.SaveChanges()
-
-                    Catch ex As Exception
-
-                    End Try
+                    If pObjEichprozess.ServerLookup_Waegezelle.Neu Then
+                        Try
+                            DbContext.ServerLookup_Waegezelle.Add(pObjEichprozess.ServerLookup_Waegezelle)
+                            DbContext.SaveChanges()
+                        Catch ex As Exception
+                        End Try
+                    End If
+                 
                     pObjEichprozess.UploadDatum = Date.Now
                     pObjEichprozess.ErzeugerLizenz = Lizenzschluessel 'lizenzschlüssel zur identifizierung des datensatztes hinzufügen
                     DbContext.ServerEichprozess.Add(pObjEichprozess)
                     DbContext.SaveChanges()
                 Else 'update
+
 
                     'aufräumen und löschen der alten Einträge in der Datenbank
                     pObjEichprozess.UploadDatum = Serverob.UploadDatum
@@ -179,6 +181,16 @@ Public Class EichsoftwareWebservice
                     DbContext.SaveChanges()
                     pObjEichprozess.BearbeitungsDatum = Date.Now
                     pObjEichprozess.ErzeugerLizenz = Lizenzschluessel 'lizenzschlüssel zur identifizierung des datensatztes hinzufügen
+
+                    'wenn neue WZ vorhanden ist
+                    If pObjEichprozess.ServerLookup_Waegezelle.Neu Then
+                        Try
+                            DbContext.ServerLookup_Waegezelle.Add(pObjEichprozess.ServerLookup_Waegezelle)
+                            DbContext.SaveChanges()
+                        Catch ex As Exception
+                        End Try
+                    End If
+
                     DbContext.ServerEichprozess.Add(pObjEichprozess)
                     DbContext.SaveChanges()
 
@@ -526,7 +538,7 @@ Public Class EichsoftwareWebservice
                 DbContext.Configuration.LazyLoadingEnabled = False
                 DbContext.Configuration.ProxyCreationEnabled = False
                 Try
-                    Dim Query = From Eichprozess In DbContext.ServerEichprozess _
+                    Dim Query = From Eichprozess In DbContext.ServerEichprozess.Include("ServerLookup_Waegezelle") _
                             Join Lookup In DbContext.ServerLookup_Vorgangsstatus On Eichprozess.FK_Vorgangsstatus Equals Lookup.ID _
                             Join Lookup2 In DbContext.ServerLookup_Bearbeitungsstatus On Eichprozess.FK_Bearbeitungsstatus Equals Lookup2.ID _
                                                  Select New With _
@@ -542,6 +554,7 @@ Public Class EichsoftwareWebservice
                                 .Sachbearbeiter = Eichprozess.ServerEichprotokoll.Identifikationsdaten_Benutzer, _
                        .ZurBearbeitungGesperrtDurch = Eichprozess.ZurBearbeitungGesperrtDurch, _
                      .Anhangpfad = Eichprozess.UploadFilePath, _
+                     .NeuWZ = Eichprozess.ServerLookup_Waegezelle.Neu, _
                     .Bearbeitungsstatus = Lookup2.Status
                                  }
 
@@ -586,6 +599,10 @@ Public Class EichsoftwareWebservice
 
                         If Not objeichprozess.ZurBearbeitungGesperrtDurch Is Nothing Then
                             objReturn.GesperrtDurch = objeichprozess.ZurBearbeitungGesperrtDurch
+                        End If
+
+                        If Not objeichprozess.NeuWZ Is Nothing Then
+                            objReturn.NeueWZ = objeichprozess.NeuWZ
                         End If
 
                         'dateipfad zusammenbauen
@@ -918,12 +935,12 @@ Public Class EichsoftwareWebservice
                     ''abruch
                     If Obj Is Nothing Then Return Nothing
 
-                    'setzte Wert für Prüfer im Eichprotokoll
-                    Try
-                        Obj.ServerEichprotokoll.Identifikationsdaten_Pruefer = WindowsUsername.Split("\")(1)
-                    Catch ex As Exception
-                        Obj.ServerEichprotokoll.Identifikationsdaten_Pruefer = WindowsUsername
-                    End Try
+                    ''setzte Wert für Prüfer im Eichprotokoll
+                    'Try
+                    '    Obj.ServerEichprotokoll.Identifikationsdaten_Pruefer = WindowsUsername.Split("\")(1)
+                    'Catch ex As Exception
+                    '    Obj.ServerEichprotokoll.Identifikationsdaten_Pruefer = WindowsUsername
+                    'End Try
 
 
 
@@ -977,13 +994,13 @@ Public Class EichsoftwareWebservice
                     If Obj Is Nothing Then Return Nothing
 
 
-                    'setzte Wert für Prüfer im Eichprotokoll
-                    Try
-                        Obj.ServerEichprotokoll.Identifikationsdaten_Pruefer = WindowsUsername.Split("\")(1)
-                    Catch ex As Exception
-                        Obj.ServerEichprotokoll.Identifikationsdaten_Pruefer = WindowsUsername
+                    ''setzte Wert für Prüfer im Eichprotokoll
+                    'Try
+                    '    Obj.ServerEichprotokoll.Identifikationsdaten_Pruefer = WindowsUsername.Split("\")(1)
+                    'Catch ex As Exception
+                    '    Obj.ServerEichprotokoll.Identifikationsdaten_Pruefer = WindowsUsername
 
-                    End Try
+                    'End Try
 
 
                     'Genehmighter Status aus Lookup_Bearbeitungsstatus = 3

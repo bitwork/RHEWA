@@ -144,7 +144,7 @@ Partial Class ucoEichprozessauswahlliste
         CType(Me.RadButtonEinstellungen.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = Global.EichsoftwareClient.My.Resources.Resources.cog
         CType(Me.RadButtonEinstellungen.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
         CType(Me.RadButtonEinstellungen.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        CType(Me.RadButtonEinstellungen.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = resources.GetString("resource.Text")
+        CType(Me.RadButtonEinstellungen.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         CType(Me.RadButtonEinstellungen.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Shape = Nothing
         '
         'RadButtonClientUpdateDatabase
@@ -316,15 +316,15 @@ Partial Class ucoEichprozessauswahlliste
         '
         '
         '
-        Me.RadGridViewRHEWAAlle.RootElement.AccessibleDescription = resources.GetString("RadGridView1.RootElement.AccessibleDescription")
-        Me.RadGridViewRHEWAAlle.RootElement.AccessibleName = resources.GetString("RadGridView1.RootElement.AccessibleName")
-        Me.RadGridViewRHEWAAlle.RootElement.Alignment = CType(resources.GetObject("RadGridView1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadGridViewRHEWAAlle.RootElement.AngleTransform = CType(resources.GetObject("RadGridView1.RootElement.AngleTransform"), Single)
-        Me.RadGridViewRHEWAAlle.RootElement.FlipText = CType(resources.GetObject("RadGridView1.RootElement.FlipText"), Boolean)
-        Me.RadGridViewRHEWAAlle.RootElement.Margin = CType(resources.GetObject("RadGridView1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadGridViewRHEWAAlle.RootElement.Padding = CType(resources.GetObject("RadGridView1.RootElement.Padding"), System.Windows.Forms.Padding)
-        Me.RadGridViewRHEWAAlle.RootElement.Text = resources.GetString("RadGridView1.RootElement.Text")
-        Me.RadGridViewRHEWAAlle.RootElement.TextOrientation = CType(resources.GetObject("RadGridView1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadGridViewRHEWAAlle.RootElement.AccessibleDescription = resources.GetString("RadGridViewRHEWAAlle.RootElement.AccessibleDescription")
+        Me.RadGridViewRHEWAAlle.RootElement.AccessibleName = resources.GetString("RadGridViewRHEWAAlle.RootElement.AccessibleName")
+        Me.RadGridViewRHEWAAlle.RootElement.Alignment = CType(resources.GetObject("RadGridViewRHEWAAlle.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.RadGridViewRHEWAAlle.RootElement.AngleTransform = CType(resources.GetObject("RadGridViewRHEWAAlle.RootElement.AngleTransform"), Single)
+        Me.RadGridViewRHEWAAlle.RootElement.FlipText = CType(resources.GetObject("RadGridViewRHEWAAlle.RootElement.FlipText"), Boolean)
+        Me.RadGridViewRHEWAAlle.RootElement.Margin = CType(resources.GetObject("RadGridViewRHEWAAlle.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadGridViewRHEWAAlle.RootElement.Padding = CType(resources.GetObject("RadGridViewRHEWAAlle.RootElement.Padding"), System.Windows.Forms.Padding)
+        Me.RadGridViewRHEWAAlle.RootElement.Text = resources.GetString("RadGridViewRHEWAAlle.RootElement.Text")
+        Me.RadGridViewRHEWAAlle.RootElement.TextOrientation = CType(resources.GetObject("RadGridViewRHEWAAlle.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadGridViewRHEWAAlle.ShowNoDataText = False
         '
         'RadButtonEichungAnsehenRHEWA

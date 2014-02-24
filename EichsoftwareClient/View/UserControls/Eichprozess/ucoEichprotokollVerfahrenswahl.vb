@@ -4,7 +4,7 @@
 
 #Region "Member Variables"
     Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken (z.b. selected index changed beim laden des Formulars)
-    Private _bolEichprozessIsDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Verfahrenswahl zurückgesetzt
+    'Private AktuellerStatusDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Verfahrenswahl zurückgesetzt
     Private _objEichprotokoll As Eichprotokoll
 
 #End Region
@@ -232,11 +232,11 @@
                         objEichprozess.FK_Eichprotokoll = _objEichprotokoll.ID 'zuweisen des eichprotokolls an den eichprozess
                         objEichprozess.Eichprotokoll = _objEichprotokoll
                         'neuen Status zuweisen
-                        If _bolEichprozessIsDirty = False Then
+                        If AktuellerStatusDirty = False Then
                             If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.EichprotokollStammdaten Then
                                 objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.EichprotokollStammdaten
                             End If
-                        ElseIf _bolEichprozessIsDirty = True Then
+                        ElseIf AktuellerStatusDirty = True Then
                             objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.EichprotokollStammdaten
                         End If
                         ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
@@ -314,7 +314,7 @@
     ''' <remarks></remarks>
     Private Sub RadRadioButton_ToggleStateChanged(sender As Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadRadioButtonNormalien.ToggleStateChanged, RadRadioButtonFahrzeugwaagen.ToggleStateChanged, RadRadioButtonStaffelverfahren.ToggleStateChanged
         If _suspendEvents = True Then Exit Sub
-        _bolEichprozessIsDirty = True
+        AktuellerStatusDirty = True
     End Sub
 
     'Entsperrroutine

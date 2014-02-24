@@ -3,7 +3,7 @@ Imports Microsoft.Office.Interop.Word
 Imports Microsoft.VisualBasic
 Public Class ucoReports
     Inherits ucoContent
-    Private _bolEichprozessIsDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann 
+    'Private AktuellerStatusDirty As Boolean = False 'TH: Hier eigentlich obsolete. variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann 
     Sub New()
         MyBase.New()
         ' Dieser Aufruf ist für den Designer erforderlich.
@@ -84,14 +84,14 @@ Public Class ucoReports
                         objEichprozess = dobjEichprozess
                         'neuen Status zuweisen
 
-                        If _bolEichprozessIsDirty = False Then
+                        If AktuellerStatusDirty = False Then
                             ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
                             If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.Versenden Then
                                 objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Versenden
                             End If
-                        ElseIf _bolEichprozessIsDirty = True Then
+                        ElseIf AktuellerStatusDirty = True Then
                             objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Versenden
-                            _bolEichprozessIsDirty = False
+                            AktuellerStatusDirty = False
                         End If
 
 
@@ -138,7 +138,7 @@ Public Class ucoReports
     'Kompatiblitätsnachweis DEUTSCH
     Private Sub RadButton3_Click(sender As System.Object, e As System.EventArgs) Handles RadButton3.Click
         Dim pEichProzess As Eichprozess = objEichprozess
-        _bolEichprozessIsDirty = True
+        AktuellerStatusDirty = True
         Dim objExcelApp As New Microsoft.Office.Interop.Excel.Application
         Dim objExcelWorkbook As Microsoft.Office.Interop.Excel.Workbook
         Dim objExcelWorksheetDatenEingabe As Microsoft.Office.Interop.Excel.Worksheet
@@ -549,7 +549,7 @@ Public Class ucoReports
     'Kompatiblitätsnachweis ENGLISCH
     Private Sub RadButton4_Click(sender As System.Object, e As System.EventArgs) Handles RadButton4.Click
         Dim pEichProzess As Eichprozess = objEichprozess
-        _bolEichprozessIsDirty = True
+        AktuellerStatusDirty = True
 
 
         Dim objExcelApp As New Microsoft.Office.Interop.Excel.Application
@@ -951,7 +951,7 @@ Public Class ucoReports
     'Konformitätserklärung DEUTSCH
     Private Sub RadButton7_Click(sender As System.Object, e As System.EventArgs) Handles RadButton7.Click
         Dim pEichProzess As Eichprozess = objEichprozess
-        _bolEichprozessIsDirty = True
+        AktuellerStatusDirty = True
 
         Dim objExcelApp As New Microsoft.Office.Interop.Excel.Application
         Dim objExcelWorkbook As Microsoft.Office.Interop.Excel.Workbook
@@ -1020,7 +1020,7 @@ Public Class ucoReports
     'Konformitätserklärung POLNISCH
     Private Sub RadButton6_Click(sender As System.Object, e As System.EventArgs) Handles RadButton6.Click
         Dim pEichProzess As Eichprozess = objEichprozess
-        _bolEichprozessIsDirty = True
+        AktuellerStatusDirty = True
 
         Dim objExcelApp As New Microsoft.Office.Interop.Excel.Application
         Dim objExcelWorkbook As Microsoft.Office.Interop.Excel.Workbook
@@ -1092,7 +1092,7 @@ Public Class ucoReports
     'Konformitätserklärung RUMÄNISCH
     Private Sub RadButton5_Click(sender As System.Object, e As System.EventArgs) Handles RadButton5.Click
         Dim pEichProzess As Eichprozess = objEichprozess
-        _bolEichprozessIsDirty = True
+        AktuellerStatusDirty = True
 
         Dim objExcelApp As New Microsoft.Office.Interop.Excel.Application
         Dim objExcelWorkbook As Microsoft.Office.Interop.Excel.Workbook
@@ -1164,7 +1164,7 @@ Public Class ucoReports
     'Ersteichung DEUTSCH
     Private Sub RadButton9_Click(sender As System.Object, e As System.EventArgs) Handles RadButton9.Click
         Dim pEichProzess As Eichprozess = objEichprozess
-        _bolEichprozessIsDirty = True
+        AktuellerStatusDirty = True
 
         Dim objWordApp As New Microsoft.Office.Interop.Word.Application
         Dim objWordDoc As Microsoft.Office.Interop.Word.Document
@@ -1196,7 +1196,7 @@ Public Class ucoReports
     'Ersteichung ENGLISCH
     Private Sub RadButton8_Click(sender As System.Object, e As System.EventArgs) Handles RadButton8.Click
         Dim pEichProzess As Eichprozess = objEichprozess
-        _bolEichprozessIsDirty = True
+        AktuellerStatusDirty = True
         Dim objWordApp As New Microsoft.Office.Interop.Word.Application
         Dim objWordDoc As Microsoft.Office.Interop.Word.Document
         Dim FolderBrowserDialog As New FolderBrowserDialog
@@ -1227,7 +1227,7 @@ Public Class ucoReports
     'Ersteichung POLNISCH
     Private Sub RadButton10_Click(sender As System.Object, e As System.EventArgs) Handles RadButton10.Click
         Dim pEichProzess As Eichprozess = objEichprozess
-        _bolEichprozessIsDirty = True
+        AktuellerStatusDirty = True
 
         Dim objWordApp As New Microsoft.Office.Interop.Word.Application
         Dim objWordDoc As Microsoft.Office.Interop.Word.Document
@@ -1264,7 +1264,7 @@ Public Class ucoReports
         Dim pEichProzess As Eichprozess = objEichprozess
         'word instanz
 
-        _bolEichprozessIsDirty = True
+        AktuellerStatusDirty = True
 
         Dim objWordApp As New Microsoft.Office.Interop.Word.Application
         Dim objWordDoc As Microsoft.Office.Interop.Word.Document

@@ -2,7 +2,7 @@
     Inherits ucoContent
 #Region "Member Variables"
     Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken 
-    Private _bolEichprozessIsDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Komptabilitätsnachweis zurückgesetzt
+    'Private AktuellerStatusDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Komptabilitätsnachweis zurückgesetzt
     Private _objEichprotokoll As Eichprotokoll
 #End Region
 
@@ -399,14 +399,14 @@
                             objEichprozess = dobjEichprozess
                             'neuen Status zuweisen
 
-                            If _bolEichprozessIsDirty = False Then
+                            If AktuellerStatusDirty = False Then
                                 ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
                                 If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.Export Then
                                     objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Export
                                 End If
-                            ElseIf _bolEichprozessIsDirty = True Then
+                            ElseIf AktuellerStatusDirty = True Then
                                 objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Export
-                                _bolEichprozessIsDirty = False
+                                AktuellerStatusDirty = False
                             End If
 
                             'Füllt das Objekt mit den Werten aus den Steuerlementen
@@ -676,5 +676,15 @@
                 End Using
             End Using
         End If
+    End Sub
+
+    Private Sub RadTextBoxControlBenannteStelle_TextChanged(sender As System.Object, e As System.EventArgs) Handles RadTextBoxControlHinweismarke.TextChanged, RadTextBoxControlGruenesM.TextChanged, RadTextBoxControlEichsiegelRund.TextChanged, RadTextBoxControlEichsiegel13x13.TextChanged, RadTextBoxControlCEKennzeichen.TextChanged, RadTextBoxControlBenannteStelle.TextChanged, RadTextBoxControlBemerkungen.TextChanged, RadTextBoxControlAufbewahrungsdauer.TextChanged
+        If _suspendEvents = True Then Exit Sub
+        AktuellerStatusDirty = True
+    End Sub
+
+    Private Sub RadCheckBoxBenannteStelle_Click(sender As System.Object, e As System.EventArgs) Handles RadCheckBoxKonfigurationsProgramm.Click, RadCheckBoxHinweismarke.Click, RadCheckBoxGruenesM.Click, RadCheckBoxEichsiegelRund.Click, RadCheckBoxEichsiegel13x13.Click, RadCheckBoxCEKennzeichen.Click, RadCheckBoxBenannteStelle.Click, RadCheckBoxAufbewahrungsdauer.Click, RadCheckBoxAlibispeicher.Click
+        If _suspendEvents = True Then Exit Sub
+        AktuellerStatusDirty = True
     End Sub
 End Class

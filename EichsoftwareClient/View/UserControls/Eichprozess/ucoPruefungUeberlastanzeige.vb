@@ -2,7 +2,7 @@
     Inherits ucoContent
 #Region "Member Variables"
     Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken 
-    Private _bolEichprozessIsDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Komptabilitätsnachweis zurückgesetzt
+    'Private AktuellerStatusDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Komptabilitätsnachweis zurückgesetzt
     Private _objEichprotokoll As Eichprotokoll
 #End Region
 
@@ -202,24 +202,24 @@
                             'wenn es sich um das Staffel oder Fahrzeugwaagen verfahren handelt wird an dieser Stelle die Wiederholbarkeit nur mit MAX geprüft. MIN erfolgte dann bereits vorher
                             Select Case objEichprozess.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren.Verfahren
                                 Case Is = "über 60kg mit Normalien", "über 60kg im Staffelverfahren"
-                                    If _bolEichprozessIsDirty = False Then
+                                    If AktuellerStatusDirty = False Then
                                         ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
                                         If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.PrüfungdesAnsprechvermögens Then
                                             objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungdesAnsprechvermögens
                                         End If
-                                    ElseIf _bolEichprozessIsDirty = True Then
+                                    ElseIf AktuellerStatusDirty = True Then
                                         objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungdesAnsprechvermögens
-                                        _bolEichprozessIsDirty = False
+                                        AktuellerStatusDirty = False
                                     End If
                                 Case Is = "Fahrzeugwaagen"
-                                    If _bolEichprozessIsDirty = False Then
+                                    If AktuellerStatusDirty = False Then
                                         ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
                                         If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.WaagenFuerRollendeLasten Then
                                             objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.WaagenFuerRollendeLasten
                                         End If
-                                    ElseIf _bolEichprozessIsDirty = True Then
+                                    ElseIf AktuellerStatusDirty = True Then
                                         objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.WaagenFuerRollendeLasten
-                                        _bolEichprozessIsDirty = False
+                                        AktuellerStatusDirty = False
                                     End If
                             End Select
 
@@ -326,7 +326,7 @@
 
     Private Sub RadCheckBoxUeberlast_ToggleStateChanged(sender As Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadCheckBoxUeberlast.ToggleStateChanged
         If _suspendEvents = True Then Exit Sub
-        _bolEichprozessIsDirty = True
+        AktuellerStatusDirty = True
     End Sub
     'Entsperrroutine
     Protected Friend Overrides Sub EntsperrungNeeded()

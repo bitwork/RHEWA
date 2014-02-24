@@ -25,6 +25,9 @@ Partial Class ucoBeschaffenheitspruefung
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucoBeschaffenheitspruefung))
         Me.RadScrollablePanel1 = New Telerik.WinControls.UI.RadScrollablePanel()
         Me.RadGroupBoxWaegebruecke = New Telerik.WinControls.UI.RadGroupBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.RadSeparator11 = New Telerik.WinControls.UI.RadSeparator()
         Me.RadSeparator10 = New Telerik.WinControls.UI.RadSeparator()
         Me.RadLabel15 = New Telerik.WinControls.UI.RadLabel()
@@ -34,6 +37,11 @@ Partial Class ucoBeschaffenheitspruefung
         Me.RadLabel11 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel13 = New Telerik.WinControls.UI.RadLabel()
         Me.RadGroupBoxWaegezellen = New Telerik.WinControls.UI.RadGroupBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.RadSeparator6 = New Telerik.WinControls.UI.RadSeparator()
         Me.RadSeparator5 = New Telerik.WinControls.UI.RadSeparator()
         Me.RadSeparator4 = New Telerik.WinControls.UI.RadSeparator()
@@ -49,6 +57,10 @@ Partial Class ucoBeschaffenheitspruefung
         Me.RadCheckBoxWZ3 = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadCheckBoxWZ5 = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadGroupBoxVerbindungselemente = New Telerik.WinControls.UI.RadGroupBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.RadSeparator9 = New Telerik.WinControls.UI.RadSeparator()
         Me.RadSeparator8 = New Telerik.WinControls.UI.RadSeparator()
         Me.RadSeparator7 = New Telerik.WinControls.UI.RadSeparator()
@@ -61,6 +73,9 @@ Partial Class ucoBeschaffenheitspruefung
         Me.RadCheckBoxVerbindungelemente2 = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadCheckBoxVerbindungelemente4 = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadGroupBoxAuswerteGeraete = New Telerik.WinControls.UI.RadGroupBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld1 = New System.Windows.Forms.Label()
         Me.RadSeparator2 = New Telerik.WinControls.UI.RadSeparator()
         Me.RadSeparator1 = New Telerik.WinControls.UI.RadSeparator()
         Me.RadLabel1 = New Telerik.WinControls.UI.RadLabel()
@@ -69,21 +84,6 @@ Partial Class ucoBeschaffenheitspruefung
         Me.RadCheckBoxAWG1 = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadCheckBoxAWG3 = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadCheckBoxAWG2 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.lblPflichtfeld1 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanel1.PanelContainer.SuspendLayout()
         Me.RadScrollablePanel1.SuspendLayout()
@@ -192,6 +192,24 @@ Partial Class ucoBeschaffenheitspruefung
         Me.RadGroupBoxWaegebruecke.RootElement.Text = resources.GetString("RadGroupBoxWaegebruecke.RootElement.Text")
         Me.RadGroupBoxWaegebruecke.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxWaegebruecke.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadGroupBoxWaegebruecke.ThemeName = "Telerik.WinControls.UI.RadGroupBox"
+        '
+        'Label14
+        '
+        resources.ApplyResources(Me.Label14, "Label14")
+        Me.Label14.ForeColor = System.Drawing.Color.Red
+        Me.Label14.Name = "Label14"
+        '
+        'Label13
+        '
+        resources.ApplyResources(Me.Label13, "Label13")
+        Me.Label13.ForeColor = System.Drawing.Color.Red
+        Me.Label13.Name = "Label13"
+        '
+        'Label12
+        '
+        resources.ApplyResources(Me.Label12, "Label12")
+        Me.Label12.ForeColor = System.Drawing.Color.Red
+        Me.Label12.Name = "Label12"
         '
         'RadSeparator11
         '
@@ -370,6 +388,36 @@ Partial Class ucoBeschaffenheitspruefung
         Me.RadGroupBoxWaegezellen.RootElement.Text = resources.GetString("RadGroupBoxWaegezellen.RootElement.Text")
         Me.RadGroupBoxWaegezellen.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxWaegezellen.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadGroupBoxWaegezellen.ThemeName = "Telerik.WinControls.UI.RadGroupBox"
+        '
+        'Label7
+        '
+        resources.ApplyResources(Me.Label7, "Label7")
+        Me.Label7.ForeColor = System.Drawing.Color.Red
+        Me.Label7.Name = "Label7"
+        '
+        'Label6
+        '
+        resources.ApplyResources(Me.Label6, "Label6")
+        Me.Label6.ForeColor = System.Drawing.Color.Red
+        Me.Label6.Name = "Label6"
+        '
+        'Label5
+        '
+        resources.ApplyResources(Me.Label5, "Label5")
+        Me.Label5.ForeColor = System.Drawing.Color.Red
+        Me.Label5.Name = "Label5"
+        '
+        'Label4
+        '
+        resources.ApplyResources(Me.Label4, "Label4")
+        Me.Label4.ForeColor = System.Drawing.Color.Red
+        Me.Label4.Name = "Label4"
+        '
+        'Label3
+        '
+        resources.ApplyResources(Me.Label3, "Label3")
+        Me.Label3.ForeColor = System.Drawing.Color.Red
+        Me.Label3.Name = "Label3"
         '
         'RadSeparator6
         '
@@ -649,8 +697,32 @@ Partial Class ucoBeschaffenheitspruefung
         Me.RadGroupBoxVerbindungselemente.RootElement.Padding = CType(resources.GetObject("RadGroupBoxVerbindungselemente.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadGroupBoxVerbindungselemente.RootElement.Text = resources.GetString("RadGroupBoxVerbindungselemente.RootElement.Text")
         Me.RadGroupBoxVerbindungselemente.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxVerbindungselemente.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadGroupBoxVerbindungselemente.Tag = ""
+        Me.RadGroupBoxVerbindungselemente.Tag = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadGroupBoxVerbindungselemente.ThemeName = "Telerik.WinControls.UI.RadGroupBox"
+        '
+        'Label11
+        '
+        resources.ApplyResources(Me.Label11, "Label11")
+        Me.Label11.ForeColor = System.Drawing.Color.Red
+        Me.Label11.Name = "Label11"
+        '
+        'Label10
+        '
+        resources.ApplyResources(Me.Label10, "Label10")
+        Me.Label10.ForeColor = System.Drawing.Color.Red
+        Me.Label10.Name = "Label10"
+        '
+        'Label9
+        '
+        resources.ApplyResources(Me.Label9, "Label9")
+        Me.Label9.ForeColor = System.Drawing.Color.Red
+        Me.Label9.Name = "Label9"
+        '
+        'Label8
+        '
+        resources.ApplyResources(Me.Label8, "Label8")
+        Me.Label8.ForeColor = System.Drawing.Color.Red
+        Me.Label8.Name = "Label8"
         '
         'RadSeparator9
         '
@@ -875,6 +947,24 @@ Partial Class ucoBeschaffenheitspruefung
         Me.RadGroupBoxAuswerteGeraete.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxAuswerteGeraete.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadGroupBoxAuswerteGeraete.ThemeName = "Telerik.WinControls.UI.RadGroupBox"
         '
+        'Label2
+        '
+        resources.ApplyResources(Me.Label2, "Label2")
+        Me.Label2.ForeColor = System.Drawing.Color.Red
+        Me.Label2.Name = "Label2"
+        '
+        'Label1
+        '
+        resources.ApplyResources(Me.Label1, "Label1")
+        Me.Label1.ForeColor = System.Drawing.Color.Red
+        Me.Label1.Name = "Label1"
+        '
+        'lblPflichtfeld1
+        '
+        resources.ApplyResources(Me.lblPflichtfeld1, "lblPflichtfeld1")
+        Me.lblPflichtfeld1.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld1.Name = "lblPflichtfeld1"
+        '
         'RadSeparator2
         '
         resources.ApplyResources(Me.RadSeparator2, "RadSeparator2")
@@ -1014,96 +1104,6 @@ Partial Class ucoBeschaffenheitspruefung
         Me.RadCheckBoxAWG2.RootElement.Padding = CType(resources.GetObject("RadCheckBoxAWG2.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadCheckBoxAWG2.RootElement.Text = resources.GetString("RadCheckBoxAWG2.RootElement.Text")
         Me.RadCheckBoxAWG2.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxAWG2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        '
-        'lblPflichtfeld1
-        '
-        resources.ApplyResources(Me.lblPflichtfeld1, "lblPflichtfeld1")
-        Me.lblPflichtfeld1.ForeColor = System.Drawing.Color.Red
-        Me.lblPflichtfeld1.Name = "lblPflichtfeld1"
-        '
-        'Label1
-        '
-        resources.ApplyResources(Me.Label1, "Label1")
-        Me.Label1.ForeColor = System.Drawing.Color.Red
-        Me.Label1.Name = "Label1"
-        '
-        'Label2
-        '
-        resources.ApplyResources(Me.Label2, "Label2")
-        Me.Label2.ForeColor = System.Drawing.Color.Red
-        Me.Label2.Name = "Label2"
-        '
-        'Label3
-        '
-        resources.ApplyResources(Me.Label3, "Label3")
-        Me.Label3.ForeColor = System.Drawing.Color.Red
-        Me.Label3.Name = "Label3"
-        '
-        'Label4
-        '
-        resources.ApplyResources(Me.Label4, "Label4")
-        Me.Label4.ForeColor = System.Drawing.Color.Red
-        Me.Label4.Name = "Label4"
-        '
-        'Label5
-        '
-        resources.ApplyResources(Me.Label5, "Label5")
-        Me.Label5.ForeColor = System.Drawing.Color.Red
-        Me.Label5.Name = "Label5"
-        '
-        'Label6
-        '
-        resources.ApplyResources(Me.Label6, "Label6")
-        Me.Label6.ForeColor = System.Drawing.Color.Red
-        Me.Label6.Name = "Label6"
-        '
-        'Label7
-        '
-        resources.ApplyResources(Me.Label7, "Label7")
-        Me.Label7.ForeColor = System.Drawing.Color.Red
-        Me.Label7.Name = "Label7"
-        '
-        'Label8
-        '
-        resources.ApplyResources(Me.Label8, "Label8")
-        Me.Label8.ForeColor = System.Drawing.Color.Red
-        Me.Label8.Name = "Label8"
-        '
-        'Label9
-        '
-        resources.ApplyResources(Me.Label9, "Label9")
-        Me.Label9.ForeColor = System.Drawing.Color.Red
-        Me.Label9.Name = "Label9"
-        '
-        'Label10
-        '
-        resources.ApplyResources(Me.Label10, "Label10")
-        Me.Label10.ForeColor = System.Drawing.Color.Red
-        Me.Label10.Name = "Label10"
-        '
-        'Label11
-        '
-        resources.ApplyResources(Me.Label11, "Label11")
-        Me.Label11.ForeColor = System.Drawing.Color.Red
-        Me.Label11.Name = "Label11"
-        '
-        'Label12
-        '
-        resources.ApplyResources(Me.Label12, "Label12")
-        Me.Label12.ForeColor = System.Drawing.Color.Red
-        Me.Label12.Name = "Label12"
-        '
-        'Label13
-        '
-        resources.ApplyResources(Me.Label13, "Label13")
-        Me.Label13.ForeColor = System.Drawing.Color.Red
-        Me.Label13.Name = "Label13"
-        '
-        'Label14
-        '
-        resources.ApplyResources(Me.Label14, "Label14")
-        Me.Label14.ForeColor = System.Drawing.Color.Red
-        Me.Label14.Name = "Label14"
         '
         'ucoBeschaffenheitspruefung
         '

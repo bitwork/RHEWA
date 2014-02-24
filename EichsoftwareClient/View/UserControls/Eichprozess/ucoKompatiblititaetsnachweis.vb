@@ -6,7 +6,7 @@
 #Region "Member Variables"
     Private _objMogelstatistik As Mogelstatistik
     Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken (z.b. selected index changed beim laden des Formulars)
-    Private _bolEichprozessIsDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Komptabilitätsnachweis zurückgesetzt
+    'Private AktuellerStatusDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Komptabilitätsnachweis zurückgesetzt
 #End Region
 
 #Region "Constructors"
@@ -630,14 +630,14 @@
                             objEichprozess = dobjEichprozess
                             'neuen Status zuweisen
 
-                            If _bolEichprozessIsDirty = False Then
+                            If AktuellerStatusDirty = False Then
                                 ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
                                 If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.KompatbilitaetsnachweisErgebnis Then
                                     objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.KompatbilitaetsnachweisErgebnis
                                 End If
-                            ElseIf _bolEichprozessIsDirty = True Then
+                            ElseIf AktuellerStatusDirty = True Then
                                 objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.KompatbilitaetsnachweisErgebnis
-                                _bolEichprozessIsDirty = False
+                                AktuellerStatusDirty = False
                             End If
 
                             'Füllt das Objekt mit den Werten aus den Steuerlementen
@@ -1074,7 +1074,7 @@
     ''' <remarks></remarks>
     Private Sub RadTextBoxControlWaageKlasse_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlWZWiderstand.TextChanged, RadTextBoxControlWZWaegezellenkennwert.TextChanged, RadTextBoxControlWZTemperaturbereichMIN.TextChanged, RadTextBoxControlWZTemperaturbereichMAX.TextChanged, RadTextBoxControlWZRueckkehrVorlastsignal.TextChanged, RadTextBoxControlWZMinTeilungswert.TextChanged, RadTextBoxControlWZMindestvorlast.TextChanged, RadTextBoxControlWZMaxTeilungswerte.TextChanged, RadTextBoxControlWZKriechteilungsfaktor.TextChanged, RadTextBoxControlWZHoechstteilungsfaktor.TextChanged, RadTextBoxControlWZHoechstlast.TextChanged, RadTextBoxControlWZGenauigkeitsklasse.TextChanged, RadTextBoxControlWZBruchteilEichfehlergrenze.TextChanged, RadTextBoxControlWaageUebersetzungsverhaeltnis.TextChanged, RadTextBoxControlWaageTotlast.TextChanged, RadTextBoxControlWaageTemperaturbereichMin.TextChanged, RadTextBoxControlWaageTemperaturbereichMax.TextChanged, RadTextBoxControlWaageKlasse.TextChanged, RadTextBoxControlWaageKabelquerschnitt.TextChanged, RadTextBoxControlWaageKabellaenge.TextChanged, RadTextBoxControlWaageHoechstlast3.TextChanged, RadTextBoxControlWaageHoechstlast2.TextChanged, RadTextBoxControlWaageHoechstlast1.TextChanged, RadTextBoxControlWaageEichwert3.TextChanged, RadTextBoxControlWaageEichwert2.TextChanged, RadTextBoxControlWaageEichwert1.TextChanged, RadTextBoxControlWaageEcklastzuschlag.TextChanged, RadTextBoxControlWaageAnzahlWaegezellen.TextChanged, RadTextBoxControlWaageAdditiveTarahoechstlast.TextChanged, RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze.TextChanged, RadTextBoxControlEinschaltnullstellbereich.TextChanged, RadTextBoxControlAWGTemperaturbereichMin.TextChanged, RadTextBoxControlAWGTemperaturbereichMax.TextChanged, RadTextBoxControlAWGTeilungswerte.TextChanged, RadTextBoxControlAWGSpeisespannung.TextChanged, RadTextBoxControlAWGMindestmesssignal.TextChanged, RadTextBoxControlAWGMindesteingangsspannung.TextChanged, RadTextBoxControlAWGKlasse.TextChanged, RadTextBoxControlAWGKabellaenge.TextChanged, RadTextBoxControlAWGGrenzwerteLastwiderstandMin.TextChanged, RadTextBoxControlAWGGrenzwerteLastwiderstandMax.TextChanged, RadTextBoxControlAWGBruchteilEichfehlergrenze.TextChanged, RadTextBoxControlAWGAnschlussart.TextChanged
         If _suspendEvents = True Then Exit Sub
-        _bolEichprozessIsDirty = True
+        AktuellerStatusDirty = True
     End Sub
 
   

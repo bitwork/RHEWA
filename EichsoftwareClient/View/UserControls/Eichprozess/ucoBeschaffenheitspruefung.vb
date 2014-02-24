@@ -6,7 +6,7 @@ Public Class ucoBeschaffenheitspruefung
 #Region "Member Variables"
     Private _ObjBeschaffenheitspruefung As Beschaffenheitspruefung
     Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken
-
+    'Private  AktuellerStatusDirty As Boolean = False
 #End Region
 
 
@@ -42,6 +42,7 @@ Public Class ucoBeschaffenheitspruefung
    
 
 #End Region
+
     Private Sub LoadFromDatabase()
         'TH: Laden aus Datenbank
         Using Context As New EichsoftwareClientdatabaseEntities1
@@ -197,10 +198,19 @@ Public Class ucoBeschaffenheitspruefung
                                 objEichprozess = dbobjEichprozess
                                 objEichprozess.FK_Beschaffenheitspruefung = _ObjBeschaffenheitspruefung.ID
 
-                                ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
-                                If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.AuswahlKonformitätsverfahren Then
+                            
+                                'neuen Status zuweisen
+                                If AktuellerStatusDirty = False Then
+                                    ' Wenn der aktuelle Status kleiner ist als der für die AuswahlKonformitätsverfahren, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
+                                    If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.AuswahlKonformitätsverfahren Then
+                                        objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.AuswahlKonformitätsverfahren
+                                    End If
+                                ElseIf AktuellerStatusDirty = True Then
                                     objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.AuswahlKonformitätsverfahren
+                                    AktuellerStatusDirty = False
                                 End If
+
+
 
                                 'Speichern in Datenbank
                                 Context.SaveChanges()
@@ -430,5 +440,10 @@ Public Class ucoBeschaffenheitspruefung
                 End Using
             End Using
         End If
+    End Sub
+
+    Private Sub RadCheckBoxAWG1_Click(sender As System.Object, e As System.EventArgs) Handles RadCheckBoxWZ5.Click, RadCheckBoxWZ4.Click, RadCheckBoxWZ3.Click, RadCheckBoxWZ2.Click, RadCheckBoxWZ1.Click, RadCheckBoxVerbindungelemente4.Click, RadCheckBoxVerbindungelemente3.Click, RadCheckBoxVerbindungelemente2.Click, RadCheckBoxVerbindungelemente1.Click, RadCheckBoxBruecke3.Click, RadCheckBoxBruecke2.Click, RadCheckBoxBruecke1.Click, RadCheckBoxAWG3.Click, RadCheckBoxAWG2.Click, RadCheckBoxAWG1.Click
+        If _suspendEvents Then Exit Sub
+        AktuellerStatusDirty = True
     End Sub
 End Class

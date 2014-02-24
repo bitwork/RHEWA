@@ -75,9 +75,9 @@
         RadButtonEinstellungen.Enabled = True
 
         'lizenz eingabe überspringen
-        If Debugger.IsAttached Then
-            ForceActivation()
-        End If
+        'If Debugger.IsAttached Then
+        '    ForceActivation()
+        'End If
 
         If My.Settings.RHEWALizenz = True Then
         Else
@@ -450,6 +450,11 @@
                 RadGridViewRHEWAAlle.Columns("ID").IsVisible = False
                 RadGridViewRHEWAAlle.Columns("Vorgangsnummer").IsVisible = False
                 RadGridViewRHEWAAlle.Columns("Gesperrtdurch").HeaderText = "Gesperrt durch"
+                RadGridViewRHEWAAlle.Columns("AnhangPfad").HeaderText = "Anhang"
+                RadGridViewRHEWAAlle.Columns("Eichbevollmaechtigter").HeaderText = "Eichbevollmächtigter"
+                RadGridViewRHEWAAlle.Columns("NeueWZ").HeaderText = "Neue WZ"
+                RadGridViewRHEWAAlle.Columns("Gesperrtdurch").HeaderText = "Gesperrt durch"
+
             Catch ex As Exception
             End Try
 
@@ -473,6 +478,9 @@
             Dim objClientEichprozess = objWebserviceFunctions.ZeigeServerEichprozess(VorgangsnummerGridServer)
             'anzeigen des Dialogs zur Bearbeitung der Eichung
             If Not objClientEichprozess Is Nothing Then
+
+                ' lese modus, dann soll beliebig im Eichprozess hin und her gewechselt werden können => Eichprozessstatus auf Versenden setzen
+                objClientEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Versenden
                 Dim f As New FrmMainContainer(objClientEichprozess, FrmMainContainer.enuDialogModus.lesend)
                 f.ShowDialog()
                 'nach dem schließen des Dialogs aktualisieren
@@ -625,6 +633,8 @@
                 If MessageBox.Show(My.Resources.GlobaleLokalisierung.Warnung_EichungenWerdenGeloescht, My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo) = DialogResult.Yes Then
                     bolSyncData = True
                 Else
+                    My.Settings.HoleAlleEigenenEichungenVomServer = False
+                    My.Settings.Save()
                     bolSyncData = False
                 End If
             End If

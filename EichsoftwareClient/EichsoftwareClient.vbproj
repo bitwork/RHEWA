@@ -35,6 +35,7 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <FodyPath>..\packages\Fody.1.20.0.0</FodyPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -97,6 +98,10 @@
     <Reference Include="Microsoft.VisualBasic.Compatibility" />
     <Reference Include="Microsoft.VisualBasic.Compatibility.Data" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PropertyChanged">
+      <HintPath>..\packages\PropertyChanged.Fody.1.46.0.0\Lib\NET35\PropertyChanged.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -436,10 +441,6 @@
     <Compile Include="View\UserControls\Eichprozess\ucoKompatiblititaetsnachweis.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\UserControls\Allgemein\ucoStatusBullet.Designer.vb">
-      <DependentUpon>ucoStatusBullet.vb</DependentUpon>
-    </Compile>
-    <Compile Include="View\UserControls\Allgemein\ucoStatusBullet.vb" />
     <Compile Include="View\UserControls\Eichprozess\ucoBeschaffenheitspruefung.Designer.vb">
       <DependentUpon>ucoBeschaffenheitspruefung.vb</DependentUpon>
     </Compile>
@@ -710,9 +711,6 @@
     <EmbeddedResource Include="View\UserControls\Eichprozess\ucoStammdatenEingabe.de.resx">
       <DependentUpon>ucoStammdatenEingabe.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\UserControls\Allgemein\ucoStatusBullet.resx">
-      <DependentUpon>ucoStatusBullet.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\ucoBeschaffenheitspruefung.resx">
       <DependentUpon>ucoBeschaffenheitspruefung.vb</DependentUpon>
       <SubType>Designer</SubType>
@@ -760,6 +758,7 @@
       <DependentUpon>EntityModelDatabaseClient.edmx</DependentUpon>
       <LastGenOutput>EntityModelDatabaseClient.vb</LastGenOutput>
     </None>
+    <None Include="Fody.targets" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -970,6 +969,7 @@
     <None Include="Resources\database_refresh.png" />
     <None Include="Resources\cog.png" />
     <None Include="Resources\attach.png" />
+    <Content Include="FodyWeavers.xml" />
     <Content Include="Resources\report_add.png" />
     <Content Include="Resources\report_delete.png" />
     <Content Include="Resources\report_edit.png" />
@@ -988,6 +988,7 @@
     <PreBuildEvent>
     </PreBuildEvent>
   </PropertyGroup>
+  <Import Project="Fody.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
