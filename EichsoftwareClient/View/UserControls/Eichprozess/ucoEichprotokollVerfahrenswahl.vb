@@ -214,8 +214,8 @@
 
 
 
-                    Dim objLiz = (From db In Context.Lizensierung Select db).FirstOrDefault
-                    _objEichprotokoll.FK_Identifikationsdaten_Benutzer = objLiz.FK_Benutzer
+                    '  Dim objLiz = (From db In Context.Lizensierung Select db).FirstOrDefault
+                    '   _objEichprotokoll.Identifikationsdaten_Pruefer = objLiz.HEKennung
 
                     'Füllt das Objekt mit den Werten aus den Steuerlementen
                     UpdateObject()
@@ -370,7 +370,7 @@
 
                     Try
                         'add prüft anhand der Vorgangsnummer automatisch ob ein neuer Prozess angelegt, oder ein vorhandener aktualisiert wird
-                        Webcontext.AddEichprozess(objLiz.FK_Benutzer, objLiz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                        Webcontext.AddEichprozess(objLiz.HEKennung, objLiz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
 
                         'schließen des dialoges
                         ParentFormular.Close()

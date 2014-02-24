@@ -43,24 +43,17 @@
     End Sub
 
     Private Sub FillControls()
-        RadTextBoxControl1.Text = _objLizen.FK_SuperofficeBenutzer
+        RadTextBoxControl1.Text = _objLizen.HEKennung
         RadTextBoxControl2.Text = _objLizen.Lizenzschluessel
         RadCheckBox1.Checked = _objLizen.RHEWALizenz
         RadCheckBox2.Checked = _objLizen.Aktiv
-
-        RadTextBoxControlKennung.Text = _objLizen.Kennung
     End Sub
 
     Private Sub UpdateObject()
-        _objLizen.FK_SuperofficeBenutzer = RadTextBoxControl1.Text
+        _objLizen.HEKennung = RadTextBoxControl1.Text
         _objLizen.Lizenzschluessel = RadTextBoxControl2.Text
         _objLizen.RHEWALizenz = RadCheckBox1.Checked
         _objLizen.Aktiv = RadCheckBox2.Checked
-
-        _objLizen.Kennung = RadTextBoxControlKennung.Text
-
-
-        
     End Sub
 
     Private Sub RadButtonSpeichern_Click(sender As Object, e As EventArgs) Handles RadButton1.Click
@@ -95,7 +88,8 @@
                     _objLizen = Context.ServerLizensierung.Create
                     _objEichmarkenverwaltung = Context.ServerEichmarkenverwaltung.Create
                     'eichmarken verwaltung
-                    _objEichmarkenverwaltung.FK_SuperofficeBenutzer = RadTextBoxControl1.Text
+
+                    _objEichmarkenverwaltung.HEKennung = RadTextBoxControl1.Text
                     _objEichmarkenverwaltung.BenannteStelleAnzahl = 0
                     _objEichmarkenverwaltung.BenannteStelleAnzahlMeldestand = 0
                     _objEichmarkenverwaltung.CEAnzahl = 0

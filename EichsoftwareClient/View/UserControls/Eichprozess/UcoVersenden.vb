@@ -163,7 +163,7 @@ Public Class UcoVersenden
 
                 Try
 
-                    Webcontext.AddEichprozess(objLiz.FK_Benutzer, objLiz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                    Webcontext.AddEichprozess(objLiz.HEKennung, objLiz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
                 Catch ex As Exception
                     MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
                     ' Status zurück setzen
@@ -175,7 +175,7 @@ Public Class UcoVersenden
                     'nur versenden wenn der Eichprozess noch nicht versendet wurde. Sonst würden zu oft Marken abgezogen
 
                     If objEichprozess.FK_Bearbeitungsstatus = 1 Then
-                        Webcontext.AddEichmarkenverwaltung(objLiz.FK_Benutzer, objLiz.Lizenzschluessel, objEichprozess.Eichprotokoll.FK_Identifikationsdaten_Benutzer, _
+                        Webcontext.AddEichmarkenverwaltung(objLiz.HEKennung, objLiz.Lizenzschluessel, objEichprozess.Eichprotokoll.Identifikationsdaten_Benutzer, _
                                                        objEichprozess.Eichprotokoll.Sicherung_BenannteStelleAnzahl, objEichprozess.Eichprotokoll.Sicherung_Eichsiegel13x13Anzahl, _
                                                        objEichprozess.Eichprotokoll.Sicherung_EichsiegelRundAnzahl, objEichprozess.Eichprotokoll.Sicherung_HinweismarkeGelochtAnzahl, _
                                                        objEichprozess.Eichprotokoll.Sicherung_GruenesMAnzahl, objEichprozess.Eichprotokoll.Sicherung_CEAnzahl, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
@@ -367,7 +367,7 @@ Public Class UcoVersenden
 
                     Try
                         'add prüft anhand der Vorgangsnummer automatisch ob ein neuer Prozess angelegt, oder ein vorhandener aktualisiert wird
-                        Webcontext.AddEichprozess(objLiz.FK_Benutzer, objLiz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                        Webcontext.AddEichprozess(objLiz.HEKennung, objLiz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
 
                         'schließen des dialoges
                         ParentFormular.Close()
@@ -475,7 +475,7 @@ Public Class UcoVersenden
 
                 'daten von WebDB holen
                 Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
-                Dim objFTPDaten = Webcontext.GetFTPCredentials(objLiz.FK_Benutzer, objLiz.Lizenzschluessel, objEichprozess.Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                Dim objFTPDaten = Webcontext.GetFTPCredentials(objLiz.HEKennung, objLiz.Lizenzschluessel, objEichprozess.Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
 
 
                 'öffnen der FTP connection

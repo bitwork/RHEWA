@@ -16,12 +16,12 @@ Partial Public Class Lizensierung
     Public Property LetzteAktivierung As Nullable(Of Date)
     Public Property RHEWALizenz As Boolean
     Public Property Aktiv As Boolean
-    Public Property FK_Benutzer As String
     Public Property FirmaOrt As String
     Public Property Firma As String
     Public Property Vorname As String
     Public Property Name As String
     Public Property FirmaPLZ As String
     Public Property FirmaStrasse As String
+    Public Property HEKennung As String
 
 End Class

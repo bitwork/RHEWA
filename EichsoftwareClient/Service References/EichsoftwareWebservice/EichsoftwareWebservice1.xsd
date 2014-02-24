@@ -120,7 +120,6 @@
       <xs:element minOccurs="0" name="EignungAchlastwaegungen_Geprueft" nillable="true" type="xs:boolean" />
       <xs:element minOccurs="0" name="EignungAchlastwaegungen_WaageNichtGeeignet" nillable="true" type="xs:boolean" />
       <xs:element minOccurs="0" name="EignungAchlastwaegungen_WaagenbrueckeEbene" nillable="true" type="xs:boolean" />
-      <xs:element minOccurs="0" name="FK_Identifikationsdaten_Benutzer" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="FK_Identifikationsdaten_Konformitaetsbewertungsverfahren" type="xs:unsignedByte" />
       <xs:element minOccurs="0" name="Fallbeschleunigung_g" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Fallbeschleunigung_ms2" nillable="true" type="xs:boolean" />

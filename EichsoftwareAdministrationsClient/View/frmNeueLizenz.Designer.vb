@@ -51,9 +51,9 @@ Partial Class FrmNeueLizenz
         '
         Me.RadLabel1.Location = New System.Drawing.Point(12, 12)
         Me.RadLabel1.Name = "RadLabel1"
-        Me.RadLabel1.Size = New System.Drawing.Size(36, 18)
+        Me.RadLabel1.Size = New System.Drawing.Size(72, 18)
         Me.RadLabel1.TabIndex = 0
-        Me.RadLabel1.Text = "Name"
+        Me.RadLabel1.Text = "HE-Kennung:"
         '
         'RadTextBoxControl1
         '
@@ -66,9 +66,9 @@ Partial Class FrmNeueLizenz
         '
         Me.RadLabel2.Location = New System.Drawing.Point(12, 76)
         Me.RadLabel2.Name = "RadLabel2"
-        Me.RadLabel2.Size = New System.Drawing.Size(37, 18)
+        Me.RadLabel2.Size = New System.Drawing.Size(81, 18)
         Me.RadLabel2.TabIndex = 2
-        Me.RadLabel2.Text = "Lizenz"
+        Me.RadLabel2.Text = "Lizenzschlüssel"
         '
         'RadTextBoxControl2
         '
@@ -87,7 +87,7 @@ Partial Class FrmNeueLizenz
         Me.RadCheckBox1.Name = "RadCheckBox1"
         Me.RadCheckBox1.Size = New System.Drawing.Size(283, 18)
         Me.RadCheckBox1.TabIndex = 3
-        Me.RadCheckBox1.Text = "RHEWA Lizenz"
+        Me.RadCheckBox1.Text = "RHEWA Lizenz (Sonderrechte)"
         '
         'RadCheckBox2
         '
@@ -97,7 +97,7 @@ Partial Class FrmNeueLizenz
         Me.RadCheckBox2.Name = "RadCheckBox2"
         Me.RadCheckBox2.Size = New System.Drawing.Size(283, 18)
         Me.RadCheckBox2.TabIndex = 4
-        Me.RadCheckBox2.Text = "Aktiv"
+        Me.RadCheckBox2.Text = "Aktiv (inaktive dürfen sich nicht anmelden)"
         '
         'FrmNeueLizenz
         '

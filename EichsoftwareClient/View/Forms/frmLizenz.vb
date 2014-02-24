@@ -36,13 +36,16 @@
                 End Try
                 Using DBContext As New EichsoftwareClientdatabaseEntities1
                     'prüfen ob die Lizenz gültig ist
-                    If webContext.AktiviereLizenz(RadTextBoxControl1.Text, RadTextBoxControl2.Text, My.User.Name, System.Environment.UserDomainName, My.Computer.Name) Then
+                    Dim HEKennung As String = RadTextBoxControl1.Text
+                    Dim Lizenzschluessel As String = RadTextBoxControl2.Text
+
+                    If webContext.AktiviereLizenz(HEKennung, Lizenzschluessel, My.User.Name, System.Environment.UserDomainName, My.Computer.Name) Then
 
                         Dim objLic As New Lizensierung
-                        objLic.FK_Benutzer = RadTextBoxControl1.Text
-                        objLic.Lizenzschluessel = RadTextBoxControl2.Text
+                        objLic.HEKennung = HEKennung
+                        objLic.Lizenzschluessel = Lizenzschluessel
 
-                        If webContext.PruefeObRHEWALizenz(RadTextBoxControl1.Text, RadTextBoxControl2.Text, My.User.Name, System.Environment.UserDomainName, My.Computer.Name) Then
+                        If webContext.PruefeObRHEWALizenz(HEKennung, Lizenzschluessel, My.User.Name, System.Environment.UserDomainName, My.Computer.Name) Then
                             objLic.RHEWALizenz = True
                         Else
                             objLic.RHEWALizenz = False
@@ -56,7 +59,7 @@
                             DBContext.SaveChanges()
                         Catch ex As Exception
                         End Try
-                     
+
                         My.Settings.Lizensiert = True
                         My.Settings.RHEWALizenz = objLic.RHEWALizenz
                         My.Settings.Save()
@@ -64,7 +67,7 @@
 
                         Try
                             'hole zusätliche Lizenzdaten
-                            Dim objLizenzdaten As EichsoftwareWebservice.clsLizenzdaten = webContext.GetLizenzdaten(RadTextBoxControl1.Text, RadTextBoxControl2.Text, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                            Dim objLizenzdaten As EichsoftwareWebservice.clsLizenzdaten = webContext.GetLizenzdaten(HEKennung, Lizenzschluessel, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
 
                             objLic.Name = objLizenzdaten.Name
                             objLic.Vorname = objLizenzdaten.Vorname
@@ -76,7 +79,7 @@
                         Catch ex As Exception
 
                         End Try
-                     
+
                         Try
                             'speichern in lokaler DB
                             DBContext.Lizensierung.Add(objLic)

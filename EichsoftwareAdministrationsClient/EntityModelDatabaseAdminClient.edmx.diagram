@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="609fb02769424b229fc8f7cc58ee5e7f" Name="Diagram1" ZoomLevel="95">
+      <Diagram DiagramId="609fb02769424b229fc8f7cc58ee5e7f" Name="Diagram1" ZoomLevel="45">
         <EntityTypeShape EntityType="EichenModel.ServerBeschaffenheitspruefung" Width="1.5" PointX="6.5" PointY="61.75" />
         <EntityTypeShape EntityType="EichenModel.ServerEichmarkenverwaltung" Width="1.5" PointX="0.75" PointY="2.375" />
         <EntityTypeShape EntityType="EichenModel.ServerEichprotokoll" Width="2" PointX="3" PointY="20.125" />

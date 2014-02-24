@@ -13,7 +13,6 @@ Imports System.Collections.Generic
 Partial Public Class ServerEichprotokoll
     Public Property ID As Integer
     Public Property FK_Identifikationsdaten_Konformitaetsbewertungsverfahren As Byte
-    Public Property Identifikationsdaten_Benutzer As String
     Public Property Identifikationsdaten_Aufstellungsort As String
     Public Property Identifikationsdaten_Datum As Nullable(Of Date)
     Public Property Identifikationsdaten_Min1 As String

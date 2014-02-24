@@ -179,7 +179,7 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="FK_Benutzer" Type="nvarchar" MaxLength="50" />
+          <Property Name="HEKennung" Type="nvarchar" MaxLength="50" />
           <Property Name="BenannteStelleAnzahl" Type="int" />
           <Property Name="Eichsiegel13x13Anzahl" Type="int" />
           <Property Name="EichsiegelRundAnzahl" Type="int" />
@@ -249,7 +249,6 @@
           <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="FK_Identifikationsdaten_Konformitaetsbewertungsverfahren" Type="tinyint" Nullable="false" />
           <Property Name="FK_Identifikationsdaten_Benutzer" Type="nvarchar" MaxLength="50" />
-          <Property Name="Identifikationsdaten_Benutzer" Type="nvarchar" MaxLength="50" />
           <Property Name="Identifikationsdaten_Aufstellungsort" Type="nvarchar" MaxLength="50" />
           <Property Name="Identifikationsdaten_Datum" Type="date" />
           <Property Name="Identifikationsdaten_Min1" Type="nvarchar" MaxLength="50" />
@@ -347,7 +346,6 @@
           </Key>
           <Property Name="ID" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="Firmen_FK" Type="nvarchar" MaxLength="50" />
-          <Property Name="HEKennung" Type="nvarchar" MaxLength="50" />
           <Property Name="Umsatz" Type="nvarchar" MaxLength="50" />
           <Property Name="Abrechnungsmodell" Type="nvarchar" MaxLength="50" />
           <Property Name="Qualifizierungspauschale" Type="nvarchar" MaxLength="50" />
@@ -409,8 +407,8 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="HEKennung" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="Lizenzschluessel" Type="nvarchar" Nullable="false" MaxLength="50" />
-          <Property Name="FK_Benutzer" Type="nvarchar" MaxLength="50" />
           <Property Name="LetzteAktivierung" Type="date" />
           <Property Name="RHEWALizenz" Type="bit" Nullable="false" />
           <Property Name="Aktiv" Type="bit" Nullable="false" />
@@ -1169,7 +1167,6 @@
           <Property Type="Int32" Name="FehlmengeSicherungsmarkeklein" />
           <Property Type="Int32" Name="FehlmengeSicherungsmarkegross" />
           <Property Type="Int32" Name="FehlmengeHinweismarken" />
-          <Property Type="String" Name="FK_Benutzer" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="Int32" Name="FehlmengeBenannteStelle0103" />
           <Property Type="Int32" Name="FehlmengeBenannteStelle0111" />
           <Property Type="String" Name="Archiv2007_Eichungen" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -1215,6 +1212,7 @@
           <Property Type="String" Name="Archiv2014_SicherungsmarkeGross" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Archiv2014_SicherungsmarkeKlein" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Bemerkung" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="HEKennung" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="ServerEichprotokoll">
           <Key>
@@ -1222,7 +1220,6 @@
           </Key>
           <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Type="Byte" Name="FK_Identifikationsdaten_Konformitaetsbewertungsverfahren" Nullable="false" />
-          <Property Type="String" Name="Identifikationsdaten_Benutzer" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Identifikationsdaten_Aufstellungsort" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="DateTime" Name="Identifikationsdaten_Datum" Precision="0" />
           <Property Type="String" Name="Identifikationsdaten_Min1" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -1381,7 +1378,7 @@
           <Property Type="DateTime" Name="LetzteAktivierung" Precision="0" />
           <Property Type="Boolean" Name="RHEWALizenz" Nullable="false" />
           <Property Type="Boolean" Name="Aktiv" Nullable="false" />
-          <Property Type="String" Name="FK_Benutzer" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="HEKennung" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="ServerLookup_Auswertegeraet">
           <Key>
@@ -2022,7 +2019,6 @@
           </Key>
           <Property Type="String" Name="ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Firmen_FK" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="HEKennung" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Umsatz" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Abrechnungsmodell" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Qualifizierungspauschale" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -2072,6 +2068,7 @@
           <EntitySetMapping Name="ServerEichmarkenverwaltung">
             <EntityTypeMapping TypeName="EichenModel.ServerEichmarkenverwaltung">
               <MappingFragment StoreEntitySet="ServerEichmarkenverwaltung">
+                <ScalarProperty Name="HEKennung" ColumnName="HEKennung" />
                 <ScalarProperty Name="Bemerkung" ColumnName="Bemerkung" />
                 <ScalarProperty Name="Archiv2014_SicherungsmarkeKlein" ColumnName="Archiv2014_SicherungsmarkeKlein" />
                 <ScalarProperty Name="Archiv2014_SicherungsmarkeGross" ColumnName="Archiv2014_SicherungsmarkeGross" />
@@ -2117,7 +2114,6 @@
                 <ScalarProperty Name="Archiv2007_Eichungen" ColumnName="Archiv2007_Eichungen" />
                 <ScalarProperty Name="FehlmengeBenannteStelle0111" ColumnName="FehlmengeBenannteStelle0111" />
                 <ScalarProperty Name="FehlmengeBenannteStelle0103" ColumnName="FehlmengeBenannteStelle0103" />
-                <ScalarProperty Name="FK_Benutzer" ColumnName="FK_Benutzer" />
                 <ScalarProperty Name="FehlmengeHinweismarken" ColumnName="FehlmengeHinweismarken" />
                 <ScalarProperty Name="FehlmengeSicherungsmarkegross" ColumnName="FehlmengeSicherungsmarkegross" />
                 <ScalarProperty Name="FehlmengeSicherungsmarkeklein" ColumnName="FehlmengeSicherungsmarkeklein" />
@@ -2210,7 +2206,6 @@
                 <ScalarProperty Name="Identifikationsdaten_Min1" ColumnName="Identifikationsdaten_Min1" />
                 <ScalarProperty Name="Identifikationsdaten_Datum" ColumnName="Identifikationsdaten_Datum" />
                 <ScalarProperty Name="Identifikationsdaten_Aufstellungsort" ColumnName="Identifikationsdaten_Aufstellungsort" />
-                <ScalarProperty Name="Identifikationsdaten_Benutzer" ColumnName="Identifikationsdaten_Benutzer" />
                 <ScalarProperty Name="FK_Identifikationsdaten_Konformitaetsbewertungsverfahren" ColumnName="FK_Identifikationsdaten_Konformitaetsbewertungsverfahren" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
@@ -2277,7 +2272,7 @@
           <EntitySetMapping Name="ServerLizensierung">
             <EntityTypeMapping TypeName="EichenModel.ServerLizensierung">
               <MappingFragment StoreEntitySet="ServerLizensierung">
-                <ScalarProperty Name="FK_Benutzer" ColumnName="FK_Benutzer" />
+                <ScalarProperty Name="HEKennung" ColumnName="HEKennung" />
                 <ScalarProperty Name="Aktiv" ColumnName="Aktiv" />
                 <ScalarProperty Name="RHEWALizenz" ColumnName="RHEWALizenz" />
                 <ScalarProperty Name="LetzteAktivierung" ColumnName="LetzteAktivierung" />
@@ -2655,7 +2650,6 @@
                 <ScalarProperty Name="Qualifizierungspauschale" ColumnName="Qualifizierungspauschale" />
                 <ScalarProperty Name="Abrechnungsmodell" ColumnName="Abrechnungsmodell" />
                 <ScalarProperty Name="Umsatz" ColumnName="Umsatz" />
-                <ScalarProperty Name="HEKennung" ColumnName="HEKennung" />
                 <ScalarProperty Name="Firmen_FK" ColumnName="Firmen_FK" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>

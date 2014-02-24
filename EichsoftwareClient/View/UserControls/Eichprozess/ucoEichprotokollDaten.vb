@@ -5,6 +5,7 @@
     Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken 
     Private _bolEichprozessIsDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Komptabilitätsnachweis zurückgesetzt
     Private _objEichprotokoll As Eichprotokoll
+    Private _objDBFunctions As New clsDBFunctions
 #End Region
 
 #Region "Constructors"
@@ -39,55 +40,6 @@
 
         'daten füllen
         LoadFromDatabase()
-    End Sub
-
-    ' ''' <summary>
-    ' ''' Event welches alle MouseHovers der Textboxen abfängt um den entsprechenden Hilfetext anzuzeigen
-    ' ''' </summary>
-    ' ''' <param name="sender"></param>
-    ' ''' <param name="e"></param>
-    ' ''' <remarks></remarks>
-    'Private Sub RadTextBoxControlWaageKlasse_MouseHover(sender As Object, e As EventArgs)
-
-    '    Dim senderControl As Telerik.WinControls.UI.RadTextBoxControl
-    '    senderControl = TryCast(sender, Telerik.WinControls.UI.RadTextBoxControl)
-
-    '    If Not senderControl Is Nothing Then
-    '        Select Case senderControl.Name
-
-    '            'ausfüllen
-    '            'Case Is = "RadTextBoxControlWaageTotlast"
-    '            '    ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_Kompatiblitaetsnachweis_WaageTotlast)
-    '        End Select
-    '    End If
-    'End Sub
-
-    ''' <summary>
-    ''' event welches prüft ob in den eingabefeldern auch nur gültige Zahlen eingegeben wurden
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    ''' <remarks></remarks>
-    Private Sub RadTextBoxContro_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs)
-        'Dim result As Decimal
-        'If Not sender.isreadonly = True Then
-
-        '    'damit das Vorgehen nicht so aggresiv ist, wird es bei leerem Text ignoriert:
-        '    If CType(sender, Telerik.WinControls.UI.RadTextBoxControl).Text.Equals("") Then
-        '        CType(sender, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.FromArgb(0, 255, 255, 255)
-        '        Exit Sub
-        '    End If
-
-        '    'versuchen ob der Text in eine Zahl konvertiert werden kann
-        '    If Not Decimal.TryParse(CType(sender, Telerik.WinControls.UI.RadTextBoxControl).Text, result) Then
-        '        e.Cancel = True
-        '        CType(sender, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.Red
-        '        System.Media.SystemSounds.Exclamation.Play()
-
-        '    Else 'rahmen zurücksetzen
-        '        CType(sender, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.FromArgb(0, 255, 255, 255)
-        '    End If
-        'End If
     End Sub
 
 
@@ -170,7 +122,15 @@
             RadTextBoxControlDatum.Text = objEichprozess.Eichprotokoll.Identifikationsdaten_Datum
 
         End If
-        RadTextBoxControlPruefer.Text = "TODO aus Superoffice laden" 'TODO Aus Superoffice
+
+        'Stammdaten aus lokaler Lizenz laden
+        Dim objLic As Lizensierung = _objDBFunctions.HoleLizenzObjekt
+        If Not objLic Is Nothing Then
+            RadTextBoxControlBenutzer.Text = objLic.Name & ", " & objLic.Vorname & " (" + objLic.HEKennung & ")"
+        End If
+
+        RadTextBoxControlPruefer.Text = objEichprozess.Eichprotokoll.Identifikationsdaten_Pruefer
+
         RadTextBoxControlFabriknummer.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer
 
         If objEichprozess.Lookup_Waagenart.Art = "Zweibereichswaage" OrElse objEichprozess.Lookup_Waagenart.Art = "Dreibereichswaage" Then
@@ -887,7 +847,7 @@
 
                     Try
                         'add prüft anhand der Vorgangsnummer automatisch ob ein neuer Prozess angelegt, oder ein vorhandener aktualisiert wird
-                        Webcontext.AddEichprozess(objLiz.FK_Benutzer, objLiz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                        Webcontext.AddEichprozess(objLiz.HEKennung, objLiz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
 
                         'schließen des dialoges
                         ParentFormular.Close()

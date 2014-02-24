@@ -40,7 +40,7 @@
                     'lizenzisierung holen
                     Dim objLic = (From db In DBContext.Lizensierung Select db).FirstOrDefault
                     'hole zusätliche Lizenzdaten
-                    Dim objLizenzdaten As EichsoftwareWebservice.clsLizenzdaten = webContext.GetLizenzdaten(objLic.FK_Benutzer, objLic.Lizenzschluessel, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                    Dim objLizenzdaten As EichsoftwareWebservice.clsLizenzdaten = webContext.GetLizenzdaten(objLic.HEKennung, objLic.Lizenzschluessel, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
 
                     objLic.Name = objLizenzdaten.Name
                     objLic.Vorname = objLizenzdaten.Vorname
@@ -94,7 +94,7 @@
 
                     'lizenzisierung holen
                     Dim objLiz = (From db In DBContext.Lizensierung Select db).FirstOrDefault
-                    Dim objWZResultList = webContext.GetNeueWZ(objLiz.FK_Benutzer, objLiz.Lizenzschluessel, My.Settings.LetztesUpdate, My.User.Name, System.Environment.UserDomainName, My.Computer.Name, StartDatum, EndDatum)
+                    Dim objWZResultList = webContext.GetNeueWZ(objLiz.HEKennung, objLiz.Lizenzschluessel, My.Settings.LetztesUpdate, My.User.Name, System.Environment.UserDomainName, My.Computer.Name, StartDatum, EndDatum)
 
                     If Not objWZResultList Is Nothing Then
 
@@ -215,7 +215,7 @@
                     'lizenzisierung holen
 
                     Dim objLiz = (From db In DBContext.Lizensierung Select db).FirstOrDefault
-                    Dim objAWGResultList = webContext.GetNeuesAWG(objLiz.FK_Benutzer, objLiz.Lizenzschluessel, My.Settings.LetztesUpdate, My.User.Name, System.Environment.UserDomainName, My.Computer.Name, StartDatum, EndDatum)
+                    Dim objAWGResultList = webContext.GetNeuesAWG(objLiz.HEKennung, objLiz.Lizenzschluessel, My.Settings.LetztesUpdate, My.User.Name, System.Environment.UserDomainName, My.Computer.Name, StartDatum, EndDatum)
 
                     If Not objAWGResultList Is Nothing Then
 
@@ -320,7 +320,7 @@
 
                     For Each Eichprozess In query
                         Try
-                            Dim NeuerStatus As String = webContext.CheckGueltigkeitEichprozess(objLiz.FK_Benutzer, objLiz.Lizenzschluessel, Eichprozess.Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                            Dim NeuerStatus As String = webContext.CheckGueltigkeitEichprozess(objLiz.HEKennung, objLiz.Lizenzschluessel, Eichprozess.Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
                             If Not NeuerStatus Is Nothing Then
                                 If Eichprozess.FK_Bearbeitungsstatus <> NeuerStatus Then
 
@@ -328,7 +328,7 @@
                                     '###################
                                     'neue Datenbankverbindung
 
-                                    Dim objServerEichprozess = webContext.GetEichProzess(objLiz.FK_Benutzer, objLiz.Lizenzschluessel, Eichprozess.Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                                    Dim objServerEichprozess = webContext.GetEichProzess(objLiz.HEKennung, objLiz.Lizenzschluessel, Eichprozess.Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
 
 
                                     If objServerEichprozess Is Nothing Then
@@ -407,7 +407,7 @@
                     Try
                         'wenn es eine Änderung gab, wird das geänderte Objekt vom Server abgerufen. Damit können änderungen die von einem RHEWA Mitarbeiter durchgeführt wurden übernommen werden
                         'neue Datenbankverbindung
-                        Dim objServerEichprozesse = webContext.GetAlleEichprozesseImZeitraum(objLiz.FK_Benutzer, objLiz.Lizenzschluessel, My.User.Name, System.Environment.UserDomainName, My.Computer.Name, StartDatum, EndDatum)
+                        Dim objServerEichprozesse = webContext.GetAlleEichprozesseImZeitraum(objLiz.HEKennung, objLiz.Lizenzschluessel, My.User.Name, System.Environment.UserDomainName, My.Computer.Name, StartDatum, EndDatum)
 
 
                         If objServerEichprozesse Is Nothing Then
@@ -463,7 +463,7 @@
                 Using dbcontext As New EichsoftwareClientdatabaseEntities1
                     Dim objLic = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
                     Try
-                        Dim data = WebContext.GetAlleEichprozesse(objLic.FK_Benutzer, objLic.Lizenzschluessel, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                        Dim data = WebContext.GetAlleEichprozesse(objLic.HEKennung, objLic.Lizenzschluessel, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
                         Return data
                     Catch ex As Exception
                         Return Nothing
@@ -492,7 +492,7 @@
 
                     Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
                     Dim objClientEichprozess = dbcontext.Eichprozess.Create
-                    Dim objServerEichprozess = webContext.GetEichProzess(objLiz.FK_Benutzer, objLiz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                    Dim objServerEichprozess = webContext.GetEichProzess(objLiz.HEKennung, objLiz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
 
 
                     If objServerEichprozess Is Nothing Then
@@ -552,11 +552,11 @@
                 'prüfen ob der datensatz von jemand anderem in Bearbeitung ist
                 Dim bolSetGueltig As Boolean = True 'variable zum abbrechen des Prozesses, falls jemand anderes an dem DS arbeitet
                 Dim Messagetext As String = ""
-                Messagetext = webContext.CheckSperrung(objLiz.FK_Benutzer, objLiz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                Messagetext = webContext.CheckSperrung(objLiz.HEKennung, objLiz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
                 If Messagetext.Equals("") = False Then
                     'rhewa arbeitet in deutsch und hat keine lokalisierung gewünscht
                     Dim result As String
-                    result = webContext.SetSperrung(True, objLiz.FK_Benutzer, objLiz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                    result = webContext.SetSperrung(True, objLiz.HEKennung, objLiz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
                     If result = "" Then
                         bolSetGueltig = True
                     Else
@@ -566,7 +566,7 @@
                     End If
                 End If
                 If bolSetGueltig Then
-                    webContext.SetEichprozessGenehmight(objLiz.FK_Benutzer, objLiz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                    webContext.SetEichprozessGenehmight(objLiz.HEKennung, objLiz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
                     Return True
                 End If
             End Using
@@ -589,12 +589,12 @@
                 'prüfen ob der datensatz von jemand anderem in Bearbeitung ist
                 Dim bolSetUnueltig As Boolean = True 'variable zum abbrechen des Prozesses, falls jemand anderes an dem DS arbeitet
                 Dim Messagetext As String = ""
-                Messagetext = webContext.CheckSperrung(objLiz.FK_Benutzer, objLiz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                Messagetext = webContext.CheckSperrung(objLiz.HEKennung, objLiz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
                 If Messagetext.Equals("") = False Then
                     'rhewa arbeitet in deutsch und hat keine lokalisierung gewünscht
                     If MessageBox.Show("Dieser Eichprozess wird von '" & Messagetext & "' bearbeitet. Möchten Sie seine Arbeit wirklich überschreiben und den Prozess ablehnen?", My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo) = DialogResult.Yes Then
                         Dim result As String
-                        result = webContext.SetSperrung(True, objLiz.FK_Benutzer, objLiz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                        result = webContext.SetSperrung(True, objLiz.HEKennung, objLiz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
                         If result = "" Then
                             bolSetUnueltig = True
                         Else
@@ -607,7 +607,7 @@
                     End If
                 End If
                 If bolSetUnueltig Then
-                    webContext.SetEichprozessUngueltig(objLiz.FK_Benutzer, objLiz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                    webContext.SetEichprozessUngueltig(objLiz.HEKennung, objLiz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
                     Return True
                 End If
             End Using
@@ -632,7 +632,7 @@
 
                 Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
                 Dim objClientEichprozess = dbcontext.Eichprozess.Create
-                Dim objServerEichprozess = webContext.GetEichProzess(objLiz.FK_Benutzer, objLiz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                Dim objServerEichprozess = webContext.GetEichProzess(objLiz.HEKennung, objLiz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
 
 
                 If objServerEichprozess Is Nothing Then

@@ -17,10 +17,10 @@ Partial Class ucoEichprotokollDaten
     'Required by the Windows Form Designer
     Private components As System.ComponentModel.IContainer
 
-    'NOTE: The following procedure is required by the Windows Form Designer
-    'It can be modified using the Windows Form Designer.  
-    'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    ''NOTE: The following procedure is required by the Windows Form Designer
+    ''It can be modified using the Windows Form Designer.  
+    ''Do not modify it using the code editor.
+    '<System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucoEichprotokollDaten))
         Me.RadScrollablePanel1 = New Telerik.WinControls.UI.RadScrollablePanel()

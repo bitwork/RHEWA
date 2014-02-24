@@ -565,7 +565,14 @@
 
      
 
-        If RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper = "A" Or RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper = "B" Or RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper = "C" Or RadTextBoxControlWZGenauigkeitsklasse.Text = "D".ToUpper Then
+        If RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper = "A" _
+            Or RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper = "B" _
+            Or RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper = "C" _
+            Or RadTextBoxControlWZGenauigkeitsklasse.Text = "D".ToUpper _
+            Or RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper = "I" _
+            Or RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper = "II" _
+            Or RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper = "III" _
+            Or RadTextBoxControlWZGenauigkeitsklasse.Text = "IV".ToUpper Then
         Else
             'Ungültiger Wert für Genauigikeitsklasse
             MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_GenaugigkeitsklasseUnguelitg, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
@@ -1133,7 +1140,7 @@
 
                     Try
                         'add prüft anhand der Vorgangsnummer automatisch ob ein neuer Prozess angelegt, oder ein vorhandener aktualisiert wird
-                        Webcontext.AddEichprozess(objLiz.FK_Benutzer, objLiz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                        Webcontext.AddEichprozess(objLiz.HEKennung, objLiz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
 
                         'schließen des dialoges
                         ParentFormular.Close()

@@ -4,10 +4,8 @@
 
 #Region "Member Variables"
     Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken (z.b. selected index changed beim laden des Formulars)
-
+    Private _bolLoaded As Boolean = False ' variable die sicherstellen soll, dass nicht das LOAD Event und das GotFocus Event doppelt läuft
 #End Region
-
-
 
 #Region "Constructors"
     Sub New()
@@ -23,7 +21,19 @@
 #End Region
 
 #Region "Events"
+
+    Private Sub ucoKompatiblititaetsnachweisErgebnis_GotFocus(sender As Object, e As EventArgs) Handles Me.GotFocus
+        'Wenn z.b. lesend auf die Eichung zugegriffen wird udn vor und zurück geblättert wird, wird das LOAD Event nicht mehr aufgerufen. Damit aber trotzdem die Formeln korrigert werden, führt das GotFocus Event dasselbe aus
+        If Not _bolLoaded Then
+            LadeDialog()
+        End If
+    End Sub
     Private Sub ucoBeschaffenheitspruefung_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        LadeDialog()
+        _bolLoaded = True
+    End Sub
+
+    Private Sub LadeDialog()
         If Not ParentFormular Is Nothing Then
             Try
                 'Hilfetext setzen
@@ -40,27 +50,7 @@
     End Sub
 
 
-    ''' <summary>
-    ''' event zum unterbinden des ändern des Checkstates. Da es kein direktes readonly in den checkboxen gibt von Telerik
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="args"></param>
-    ''' <remarks></remarks>
-    Private Sub RadCheckBoxPunkt_ToggleStateChanging(sender As Object, args As Telerik.WinControls.UI.StateChangingEventArgs) Handles RadCheckBoxPunkt1.ToggleStateChanging, _
-        RadCheckBoxPunkt2TMin.ToggleStateChanging, RadCheckBoxPunkt2TMAX.ToggleStateChanging, RadCheckBoxPunkt3.ToggleStateChanging, _
-        RadCheckBoxPunkt4Max1.ToggleStateChanging, RadCheckBoxPunkt4Max2.ToggleStateChanging, RadCheckBoxPunkt4Max3.ToggleStateChanging, _
-        RadCheckBoxPunkt5.ToggleStateChanging, RadCheckBoxPunkt6aMax1.ToggleStateChanging, RadCheckBoxPunkt6aMax2.ToggleStateChanging, _
-        RadCheckBoxPunkt6aMax3.ToggleStateChanging, RadCheckBoxPunkt6b.ToggleStateChanging, RadCheckBoxPunkt6c.ToggleStateChanging, _
-        RadCheckBoxPunkt6d.ToggleStateChanging, RadCheckBoxPunkt7.ToggleStateChanging, RadCheckBoxPunkt8D.ToggleStateChanging, _
-        RadCheckBoxPunkt8U.ToggleStateChanging, RadCheckBoxPunkt9.ToggleStateChanging, RadCheckBoxPunkt10.ToggleStateChanging
 
-        If _suspendEvents = True Then Exit Sub 'Variable zum temporären stoppen der Eventlogiken (z.b. selected index changed beim laden des Formulars)
-
-        args.Cancel = True
-
-    End Sub
-
-  
 #End Region
 
 
@@ -111,7 +101,7 @@
         'befüllen der Controls aus dem Eichprozessobjekt
         RadTextBoxFabriknummer.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer
 
-        'TODO Sauber Casten der Formeln
+
         '(1) Genauigkeitsklassen von WZ, AWG und NSW
         '=WENN('Daten-Eingabe'!$G$36="";"";'Daten-Eingabe'!$G$36)
         RadTextBoxPunkt1LC.Text = objEichprozess.Lookup_Waegezelle.Genauigkeitsklasse
@@ -353,8 +343,7 @@
 
                 '=WENN('Daten-Eingabe'!$G$15="";"R fehlt";WENN($G$33="";"Q fehlt";WENN('Daten-Eingabe'!$G$16="";"Anzahl  N  fehlt";($G$33*'Daten-Eingabe'!$G$11*'Daten-Eingabe'!$G$15)/'Daten-Eingabe'!$G$16)))
                 'in der Excelmappe ohne Nachkommastellen angegeben deswegen CINT()
-                'TODO Fehlerabfang erforderlich: Buchstaben können eingegeben werden und beim konvertieren in Double schlägt er auf.
-                RadTextBoxPunkt5QMax.Text = (RadTextBoxPunkt5Faktor.Text * objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1 * objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Uebersetzungsverhaeltnis) / objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen
+                 RadTextBoxPunkt5QMax.Text = (RadTextBoxPunkt5Faktor.Text * objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1 * objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Uebersetzungsverhaeltnis) / objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen
 
                 'vorher bereits runden des Faktorwertes (mit 2 Dezimalstellen angegeben), da damit gerechnet wird
                 If Not RadTextBoxPunkt5Faktor.Text = "" Then
@@ -869,7 +858,29 @@
 
 
 #End Region
+#Region "Events"
 
+    ''' <summary>
+    ''' event zum unterbinden des ändern des Checkstates. Da es kein direktes readonly in den checkboxen gibt von Telerik
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="args"></param>
+    ''' <remarks></remarks>
+    Private Sub RadCheckBoxPunkt_ToggleStateChanging(sender As Object, args As Telerik.WinControls.UI.StateChangingEventArgs) Handles RadCheckBoxPunkt1.ToggleStateChanging, _
+        RadCheckBoxPunkt2TMin.ToggleStateChanging, RadCheckBoxPunkt2TMAX.ToggleStateChanging, RadCheckBoxPunkt3.ToggleStateChanging, _
+        RadCheckBoxPunkt4Max1.ToggleStateChanging, RadCheckBoxPunkt4Max2.ToggleStateChanging, RadCheckBoxPunkt4Max3.ToggleStateChanging, _
+        RadCheckBoxPunkt5.ToggleStateChanging, RadCheckBoxPunkt6aMax1.ToggleStateChanging, RadCheckBoxPunkt6aMax2.ToggleStateChanging, _
+        RadCheckBoxPunkt6aMax3.ToggleStateChanging, RadCheckBoxPunkt6b.ToggleStateChanging, RadCheckBoxPunkt6c.ToggleStateChanging, _
+        RadCheckBoxPunkt6d.ToggleStateChanging, RadCheckBoxPunkt7.ToggleStateChanging, RadCheckBoxPunkt8D.ToggleStateChanging, _
+        RadCheckBoxPunkt8U.ToggleStateChanging, RadCheckBoxPunkt9.ToggleStateChanging, RadCheckBoxPunkt10.ToggleStateChanging
+
+        If _suspendEvents = True Then Exit Sub 'Variable zum temporären stoppen der Eventlogiken (z.b. selected index changed beim laden des Formulars)
+
+        args.Cancel = True
+
+    End Sub
+
+#End Region
 #Region "Overrides"
     'Speicherroutine
     Protected Friend Overrides Sub SaveNeeded(ByVal UserControl As UserControl)
@@ -944,7 +955,7 @@
         Me.lblPunkt8OhneLast.Text = resources.GetString("lblPunkt8OhneLast.Text")
 
         Me.RadGroupBoxPunkt1.Text = resources.GetString("RadGroupBoxPunkt1.Text")
-        Me.RadGroupBoxPunkt2TMin.Text = resources.GetString("RadGroupBoxPunkt2.Text")
+        Me.RadGroupBoxPunkt2TMin.Text = resources.GetString("RadGroupBoxPunkt2TMin.Text")
         Me.RadGroupBoxPunkt3.Text = resources.GetString("RadGroupBoxPunkt3.Text")
         Me.RadGroupBoxPunkt4.Text = resources.GetString("RadGroupBoxPunkt4.Text")
         Me.RadGroupBoxPunkt5.Text = resources.GetString("RadGroupBoxPunkt5.Text")
@@ -1069,7 +1080,8 @@
             LoadFromDatabase()
         End If
     End Sub
-#End Region
+
+
 
     'Entsperrroutine
     Protected Friend Overrides Sub EntsperrungNeeded()
@@ -1122,7 +1134,7 @@
 
                     Try
                         'add prüft anhand der Vorgangsnummer automatisch ob ein neuer Prozess angelegt, oder ein vorhandener aktualisiert wird
-                        Webcontext.AddEichprozess(objLiz.FK_Benutzer, objLiz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                        Webcontext.AddEichprozess(objLiz.HEKennung, objLiz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
                         'schließen des dialoges
                         ParentFormular.Close()
                     Catch ex As Exception
@@ -1134,5 +1146,8 @@
             End Using
         End If
     End Sub
+#End Region
+
+
 
 End Class

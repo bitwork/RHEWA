@@ -1808,9 +1808,6 @@ Namespace EichsoftwareWebservice
         Private EignungAchlastwaegungen_WaagenbrueckeEbeneField As System.Nullable(Of Boolean)
         
         <System.Runtime.Serialization.OptionalFieldAttribute()>  _
-        Private FK_Identifikationsdaten_BenutzerField As String
-        
-        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private FK_Identifikationsdaten_KonformitaetsbewertungsverfahrenField As Byte
         
         <System.Runtime.Serialization.OptionalFieldAttribute()>  _
@@ -2205,19 +2202,6 @@ Namespace EichsoftwareWebservice
                 If (Me.EignungAchlastwaegungen_WaagenbrueckeEbeneField.Equals(value) <> true) Then
                     Me.EignungAchlastwaegungen_WaagenbrueckeEbeneField = value
                     Me.RaisePropertyChanged("EignungAchlastwaegungen_WaagenbrueckeEbene")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute()>  _
-        Public Property FK_Identifikationsdaten_Benutzer() As String
-            Get
-                Return Me.FK_Identifikationsdaten_BenutzerField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me.FK_Identifikationsdaten_BenutzerField, value) <> true) Then
-                    Me.FK_Identifikationsdaten_BenutzerField = value
-                    Me.RaisePropertyChanged("FK_Identifikationsdaten_Benutzer")
                 End If
             End Set
         End Property
@@ -6923,161 +6907,161 @@ Namespace EichsoftwareWebservice
     Public Interface IEichsoftwareWebservice
         
         <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IEichsoftwareWebservice/PruefeLizenz", ReplyAction:="http://tempuri.org/IEichsoftwareWebservice/PruefeLizenzResponse")>  _
-        Function PruefeLizenz(ByVal BenutzerID As String, ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean
+        Function PruefeLizenz(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean
         
         <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IEichsoftwareWebservice/GetLizenzdaten", ReplyAction:="http://tempuri.org/IEichsoftwareWebservice/GetLizenzdatenResponse")>  _
-        Function GetLizenzdaten(ByVal BenutzerID As String, ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As EichsoftwareWebservice.clsLizenzdaten
+        Function GetLizenzdaten(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As EichsoftwareWebservice.clsLizenzdaten
         
         <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IEichsoftwareWebservice/AktiviereLizenz", ReplyAction:="http://tempuri.org/IEichsoftwareWebservice/AktiviereLizenzResponse")>  _
-        Function AktiviereLizenz(ByVal BenutzerID As String, ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean
+        Function AktiviereLizenz(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean
         
         <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IEichsoftwareWebservice/PruefeObRHEWALizenz", ReplyAction:="http://tempuri.org/IEichsoftwareWebservice/PruefeObRHEWALizenzResponse")>  _
-        Function PruefeObRHEWALizenz(ByVal BenutzerID As String, ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean
+        Function PruefeObRHEWALizenz(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean
         
         <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IEichsoftwareWebservice/GetNeueWZ", ReplyAction:="http://tempuri.org/IEichsoftwareWebservice/GetNeueWZResponse")>  _
-        Function GetNeueWZ(ByVal BenutzerID As String, ByVal Lizenzschluessel As String, ByVal LetztesUpdate As Date, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, ByVal SyncAllesSeit As Date, ByVal SyncAllesBis As Date) As EichsoftwareWebservice.ServerLookup_Waegezelle()
+        Function GetNeueWZ(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal LetztesUpdate As Date, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, ByVal SyncAllesSeit As Date, ByVal SyncAllesBis As Date) As EichsoftwareWebservice.ServerLookup_Waegezelle()
         
         <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IEichsoftwareWebservice/SchreibeVerbindungsprotokoll", ReplyAction:="http://tempuri.org/IEichsoftwareWebservice/SchreibeVerbindungsprotokollResponse")>  _
         Sub SchreibeVerbindungsprotokoll(ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, ByVal Aktivitaet As String)
         
         <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IEichsoftwareWebservice/GetNeuesAWG", ReplyAction:="http://tempuri.org/IEichsoftwareWebservice/GetNeuesAWGResponse")>  _
-        Function GetNeuesAWG(ByVal BenutzerID As String, ByVal Lizenzschluessel As String, ByVal LetztesUpdate As Date, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, ByVal SyncAllesSeit As Date, ByVal SyncAllesBis As Date) As EichsoftwareWebservice.ServerLookup_Auswertegeraet()
+        Function GetNeuesAWG(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal LetztesUpdate As Date, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, ByVal SyncAllesSeit As Date, ByVal SyncAllesBis As Date) As EichsoftwareWebservice.ServerLookup_Auswertegeraet()
         
         <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IEichsoftwareWebservice/AddEichmarkenverwaltung", ReplyAction:="http://tempuri.org/IEichsoftwareWebservice/AddEichmarkenverwaltungResponse")>  _
-        Function AddEichmarkenverwaltung(ByVal BenutzerID As String, ByVal Lizenzschluessel As String, ByVal BenutzerFK As String, ByVal AnzahlBenannteStelle As Integer, ByVal AnzahlEichsiegel13x13 As Integer, ByVal AnzahlEichsiegelRund As Integer, ByVal AnzahlHinweismarke As Integer, ByVal AnzahlGruenesM As Integer, ByVal AnzahlCE As Integer, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean
+        Function AddEichmarkenverwaltung(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal BenutzerFK As String, ByVal AnzahlBenannteStelle As Integer, ByVal AnzahlEichsiegel13x13 As Integer, ByVal AnzahlEichsiegelRund As Integer, ByVal AnzahlHinweismarke As Integer, ByVal AnzahlGruenesM As Integer, ByVal AnzahlCE As Integer, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean
         
         <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IEichsoftwareWebservice/AddEichprozess", ReplyAction:="http://tempuri.org/IEichsoftwareWebservice/AddEichprozessResponse")>  _
-        Function AddEichprozess(ByVal BenutzerID As String, ByVal Lizenzschluessel As String, ByRef pObjEichprozess As EichsoftwareWebservice.ServerEichprozess, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean
+        Function AddEichprozess(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByRef pObjEichprozess As EichsoftwareWebservice.ServerEichprozess, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean
         
         <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IEichsoftwareWebservice/GetAlleEichprozesse", ReplyAction:="http://tempuri.org/IEichsoftwareWebservice/GetAlleEichprozesseResponse")>  _
-        Function GetAlleEichprozesse(ByVal BenutzerID As String, ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As EichsoftwareWebservice.clsEichprozessFuerAuswahlliste()
+        Function GetAlleEichprozesse(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As EichsoftwareWebservice.clsEichprozessFuerAuswahlliste()
         
         <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IEichsoftwareWebservice/GetAlleEichprozesseImZeitraum", ReplyAction:="http://tempuri.org/IEichsoftwareWebservice/GetAlleEichprozesseImZeitraumResponse")>  _
-        Function GetAlleEichprozesseImZeitraum(ByVal BenutzerID As String, ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, ByVal SyncAllesSeit As Date, ByVal SyncAllesBis As Date) As EichsoftwareWebservice.ServerEichprozess()
+        Function GetAlleEichprozesseImZeitraum(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, ByVal SyncAllesSeit As Date, ByVal SyncAllesBis As Date) As EichsoftwareWebservice.ServerEichprozess()
         
         <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IEichsoftwareWebservice/GetEichProzess", ReplyAction:="http://tempuri.org/IEichsoftwareWebservice/GetEichProzessResponse")>  _
-        Function GetEichProzess(ByVal BenutzerID As String, ByVal Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As EichsoftwareWebservice.ServerEichprozess
+        Function GetEichProzess(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As EichsoftwareWebservice.ServerEichprozess
         
-        <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IEichsoftwareWebservice/SetEichprozessUngueltig", ReplyAction:="http://tempuri.org/IEichsoftwareWebservice/SetEichprozessUngueltigResponse")> _
-        Function SetEichprozessUngueltig(ByVal BenutzerID As String, ByVal Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean
-
-        <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IEichsoftwareWebservice/SetEichprozessGenehmight", ReplyAction:="http://tempuri.org/IEichsoftwareWebservice/SetEichprozessGenehmightResponse")> _
-        Function SetEichprozessGenehmight(ByVal BenutzerID As String, ByVal Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean
-
-        <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IEichsoftwareWebservice/CheckGueltigkeitEichprozess", ReplyAction:="http://tempuri.org/IEichsoftwareWebservice/CheckGueltigkeitEichprozessResponse")> _
-        Function CheckGueltigkeitEichprozess(ByVal BenutzerID As String, ByVal Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As String
-
-        <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IEichsoftwareWebservice/CheckSperrung", ReplyAction:="http://tempuri.org/IEichsoftwareWebservice/CheckSperrungResponse")> _
-        Function CheckSperrung(ByVal BenutzerID As String, ByVal Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As String
-
-        <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IEichsoftwareWebservice/SetSperrung", ReplyAction:="http://tempuri.org/IEichsoftwareWebservice/SetSperrungResponse")> _
-        Function SetSperrung(ByVal bolSperren As Boolean, ByVal BenutzerID As String, ByVal Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As String
-
-        <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IEichsoftwareWebservice/GetFTPCredentials", ReplyAction:="http://tempuri.org/IEichsoftwareWebservice/GetFTPCredentialsResponse")> _
-        Function GetFTPCredentials(ByVal BenutzerID As String, ByVal Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As EichsoftwareWebservice.clsServerFTPDaten
+        <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IEichsoftwareWebservice/SetEichprozessUngueltig", ReplyAction:="http://tempuri.org/IEichsoftwareWebservice/SetEichprozessUngueltigResponse")>  _
+        Function SetEichprozessUngueltig(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean
+        
+        <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IEichsoftwareWebservice/SetEichprozessGenehmight", ReplyAction:="http://tempuri.org/IEichsoftwareWebservice/SetEichprozessGenehmightResponse")>  _
+        Function SetEichprozessGenehmight(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean
+        
+        <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IEichsoftwareWebservice/CheckGueltigkeitEichprozess", ReplyAction:="http://tempuri.org/IEichsoftwareWebservice/CheckGueltigkeitEichprozessResponse")>  _
+        Function CheckGueltigkeitEichprozess(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As String
+        
+        <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IEichsoftwareWebservice/CheckSperrung", ReplyAction:="http://tempuri.org/IEichsoftwareWebservice/CheckSperrungResponse")>  _
+        Function CheckSperrung(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As String
+        
+        <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IEichsoftwareWebservice/SetSperrung", ReplyAction:="http://tempuri.org/IEichsoftwareWebservice/SetSperrungResponse")>  _
+        Function SetSperrung(ByVal bolSperren As Boolean, ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As String
+        
+        <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IEichsoftwareWebservice/GetFTPCredentials", ReplyAction:="http://tempuri.org/IEichsoftwareWebservice/GetFTPCredentialsResponse")>  _
+        Function GetFTPCredentials(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As EichsoftwareWebservice.clsServerFTPDaten
     End Interface
-
-    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")> _
+    
+    <System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")>  _
     Public Interface IEichsoftwareWebserviceChannel
         Inherits EichsoftwareWebservice.IEichsoftwareWebservice, System.ServiceModel.IClientChannel
     End Interface
-
-    <System.Diagnostics.DebuggerStepThroughAttribute(), _
-     System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")> _
+    
+    <System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")>  _
     Partial Public Class EichsoftwareWebserviceClient
         Inherits System.ServiceModel.ClientBase(Of EichsoftwareWebservice.IEichsoftwareWebservice)
         Implements EichsoftwareWebservice.IEichsoftwareWebservice
-
+        
         Public Sub New()
-            MyBase.New()
+            MyBase.New
         End Sub
-
+        
         Public Sub New(ByVal endpointConfigurationName As String)
             MyBase.New(endpointConfigurationName)
         End Sub
-
+        
         Public Sub New(ByVal endpointConfigurationName As String, ByVal remoteAddress As String)
             MyBase.New(endpointConfigurationName, remoteAddress)
         End Sub
-
+        
         Public Sub New(ByVal endpointConfigurationName As String, ByVal remoteAddress As System.ServiceModel.EndpointAddress)
             MyBase.New(endpointConfigurationName, remoteAddress)
         End Sub
-
+        
         Public Sub New(ByVal binding As System.ServiceModel.Channels.Binding, ByVal remoteAddress As System.ServiceModel.EndpointAddress)
             MyBase.New(binding, remoteAddress)
         End Sub
-
-        Public Function PruefeLizenz(ByVal BenutzerID As String, ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements EichsoftwareWebservice.IEichsoftwareWebservice.PruefeLizenz
-            Return MyBase.Channel.PruefeLizenz(BenutzerID, Lizenzschluessel, WindowsUsername, Domainname, Computername)
+        
+        Public Function PruefeLizenz(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements EichsoftwareWebservice.IEichsoftwareWebservice.PruefeLizenz
+            Return MyBase.Channel.PruefeLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername)
         End Function
-
-        Public Function GetLizenzdaten(ByVal BenutzerID As String, ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As EichsoftwareWebservice.clsLizenzdaten Implements EichsoftwareWebservice.IEichsoftwareWebservice.GetLizenzdaten
-            Return MyBase.Channel.GetLizenzdaten(BenutzerID, Lizenzschluessel, WindowsUsername, Domainname, Computername)
+        
+        Public Function GetLizenzdaten(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As EichsoftwareWebservice.clsLizenzdaten Implements EichsoftwareWebservice.IEichsoftwareWebservice.GetLizenzdaten
+            Return MyBase.Channel.GetLizenzdaten(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername)
         End Function
-
-        Public Function AktiviereLizenz(ByVal BenutzerID As String, ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements EichsoftwareWebservice.IEichsoftwareWebservice.AktiviereLizenz
-            Return MyBase.Channel.AktiviereLizenz(BenutzerID, Lizenzschluessel, WindowsUsername, Domainname, Computername)
+        
+        Public Function AktiviereLizenz(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements EichsoftwareWebservice.IEichsoftwareWebservice.AktiviereLizenz
+            Return MyBase.Channel.AktiviereLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername)
         End Function
-
-        Public Function PruefeObRHEWALizenz(ByVal BenutzerID As String, ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements EichsoftwareWebservice.IEichsoftwareWebservice.PruefeObRHEWALizenz
-            Return MyBase.Channel.PruefeObRHEWALizenz(BenutzerID, Lizenzschluessel, WindowsUsername, Domainname, Computername)
+        
+        Public Function PruefeObRHEWALizenz(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements EichsoftwareWebservice.IEichsoftwareWebservice.PruefeObRHEWALizenz
+            Return MyBase.Channel.PruefeObRHEWALizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername)
         End Function
-
-        Public Function GetNeueWZ(ByVal BenutzerID As String, ByVal Lizenzschluessel As String, ByVal LetztesUpdate As Date, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, ByVal SyncAllesSeit As Date, ByVal SyncAllesBis As Date) As EichsoftwareWebservice.ServerLookup_Waegezelle() Implements EichsoftwareWebservice.IEichsoftwareWebservice.GetNeueWZ
-            Return MyBase.Channel.GetNeueWZ(BenutzerID, Lizenzschluessel, LetztesUpdate, WindowsUsername, Domainname, Computername, SyncAllesSeit, SyncAllesBis)
+        
+        Public Function GetNeueWZ(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal LetztesUpdate As Date, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, ByVal SyncAllesSeit As Date, ByVal SyncAllesBis As Date) As EichsoftwareWebservice.ServerLookup_Waegezelle() Implements EichsoftwareWebservice.IEichsoftwareWebservice.GetNeueWZ
+            Return MyBase.Channel.GetNeueWZ(HEKennung, Lizenzschluessel, LetztesUpdate, WindowsUsername, Domainname, Computername, SyncAllesSeit, SyncAllesBis)
         End Function
-
+        
         Public Sub SchreibeVerbindungsprotokoll(ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, ByVal Aktivitaet As String) Implements EichsoftwareWebservice.IEichsoftwareWebservice.SchreibeVerbindungsprotokoll
             MyBase.Channel.SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, Aktivitaet)
         End Sub
-
-        Public Function GetNeuesAWG(ByVal BenutzerID As String, ByVal Lizenzschluessel As String, ByVal LetztesUpdate As Date, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, ByVal SyncAllesSeit As Date, ByVal SyncAllesBis As Date) As EichsoftwareWebservice.ServerLookup_Auswertegeraet() Implements EichsoftwareWebservice.IEichsoftwareWebservice.GetNeuesAWG
-            Return MyBase.Channel.GetNeuesAWG(BenutzerID, Lizenzschluessel, LetztesUpdate, WindowsUsername, Domainname, Computername, SyncAllesSeit, SyncAllesBis)
-        End Function
-
-        Public Function AddEichmarkenverwaltung(ByVal BenutzerID As String, ByVal Lizenzschluessel As String, ByVal BenutzerFK As String, ByVal AnzahlBenannteStelle As Integer, ByVal AnzahlEichsiegel13x13 As Integer, ByVal AnzahlEichsiegelRund As Integer, ByVal AnzahlHinweismarke As Integer, ByVal AnzahlGruenesM As Integer, ByVal AnzahlCE As Integer, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements EichsoftwareWebservice.IEichsoftwareWebservice.AddEichmarkenverwaltung
-            Return MyBase.Channel.AddEichmarkenverwaltung(BenutzerID, Lizenzschluessel, BenutzerFK, AnzahlBenannteStelle, AnzahlEichsiegel13x13, AnzahlEichsiegelRund, AnzahlHinweismarke, AnzahlGruenesM, AnzahlCE, WindowsUsername, Domainname, Computername)
-        End Function
-
-        Public Function AddEichprozess(ByVal BenutzerID As String, ByVal Lizenzschluessel As String, ByRef pObjEichprozess As EichsoftwareWebservice.ServerEichprozess, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements EichsoftwareWebservice.IEichsoftwareWebservice.AddEichprozess
-            Return MyBase.Channel.AddEichprozess(BenutzerID, Lizenzschluessel, pObjEichprozess, WindowsUsername, Domainname, Computername)
-        End Function
-
-        Public Function GetAlleEichprozesse(ByVal BenutzerID As String, ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As EichsoftwareWebservice.clsEichprozessFuerAuswahlliste() Implements EichsoftwareWebservice.IEichsoftwareWebservice.GetAlleEichprozesse
-            Return MyBase.Channel.GetAlleEichprozesse(BenutzerID, Lizenzschluessel, WindowsUsername, Domainname, Computername)
-        End Function
-
-        Public Function GetAlleEichprozesseImZeitraum(ByVal BenutzerID As String, ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, ByVal SyncAllesSeit As Date, ByVal SyncAllesBis As Date) As EichsoftwareWebservice.ServerEichprozess() Implements EichsoftwareWebservice.IEichsoftwareWebservice.GetAlleEichprozesseImZeitraum
-            Return MyBase.Channel.GetAlleEichprozesseImZeitraum(BenutzerID, Lizenzschluessel, WindowsUsername, Domainname, Computername, SyncAllesSeit, SyncAllesBis)
-        End Function
-
-        Public Function GetEichProzess(ByVal BenutzerID As String, ByVal Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As EichsoftwareWebservice.ServerEichprozess Implements EichsoftwareWebservice.IEichsoftwareWebservice.GetEichProzess
-            Return MyBase.Channel.GetEichProzess(BenutzerID, Lizenzschluessel, Vorgangsnummer, WindowsUsername, Domainname, Computername)
-        End Function
-
-        Public Function SetEichprozessUngueltig(ByVal BenutzerID As String, ByVal Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements EichsoftwareWebservice.IEichsoftwareWebservice.SetEichprozessUngueltig
-            Return MyBase.Channel.SetEichprozessUngueltig(BenutzerID, Lizenzschluessel, Vorgangsnummer, WindowsUsername, Domainname, Computername)
-        End Function
-
-        Public Function SetEichprozessGenehmight(ByVal BenutzerID As String, ByVal Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements EichsoftwareWebservice.IEichsoftwareWebservice.SetEichprozessGenehmight
-            Return MyBase.Channel.SetEichprozessGenehmight(BenutzerID, Lizenzschluessel, Vorgangsnummer, WindowsUsername, Domainname, Computername)
+        
+        Public Function GetNeuesAWG(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal LetztesUpdate As Date, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, ByVal SyncAllesSeit As Date, ByVal SyncAllesBis As Date) As EichsoftwareWebservice.ServerLookup_Auswertegeraet() Implements EichsoftwareWebservice.IEichsoftwareWebservice.GetNeuesAWG
+            Return MyBase.Channel.GetNeuesAWG(HEKennung, Lizenzschluessel, LetztesUpdate, WindowsUsername, Domainname, Computername, SyncAllesSeit, SyncAllesBis)
         End Function
         
-        Public Function CheckGueltigkeitEichprozess(ByVal BenutzerID As String, ByVal Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As String Implements EichsoftwareWebservice.IEichsoftwareWebservice.CheckGueltigkeitEichprozess
-            Return MyBase.Channel.CheckGueltigkeitEichprozess(BenutzerID, Lizenzschluessel, Vorgangsnummer, WindowsUsername, Domainname, Computername)
+        Public Function AddEichmarkenverwaltung(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal BenutzerFK As String, ByVal AnzahlBenannteStelle As Integer, ByVal AnzahlEichsiegel13x13 As Integer, ByVal AnzahlEichsiegelRund As Integer, ByVal AnzahlHinweismarke As Integer, ByVal AnzahlGruenesM As Integer, ByVal AnzahlCE As Integer, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements EichsoftwareWebservice.IEichsoftwareWebservice.AddEichmarkenverwaltung
+            Return MyBase.Channel.AddEichmarkenverwaltung(HEKennung, Lizenzschluessel, BenutzerFK, AnzahlBenannteStelle, AnzahlEichsiegel13x13, AnzahlEichsiegelRund, AnzahlHinweismarke, AnzahlGruenesM, AnzahlCE, WindowsUsername, Domainname, Computername)
         End Function
         
-        Public Function CheckSperrung(ByVal BenutzerID As String, ByVal Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As String Implements EichsoftwareWebservice.IEichsoftwareWebservice.CheckSperrung
-            Return MyBase.Channel.CheckSperrung(BenutzerID, Lizenzschluessel, Vorgangsnummer, WindowsUsername, Domainname, Computername)
+        Public Function AddEichprozess(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByRef pObjEichprozess As EichsoftwareWebservice.ServerEichprozess, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements EichsoftwareWebservice.IEichsoftwareWebservice.AddEichprozess
+            Return MyBase.Channel.AddEichprozess(HEKennung, Lizenzschluessel, pObjEichprozess, WindowsUsername, Domainname, Computername)
         End Function
         
-        Public Function SetSperrung(ByVal bolSperren As Boolean, ByVal BenutzerID As String, ByVal Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As String Implements EichsoftwareWebservice.IEichsoftwareWebservice.SetSperrung
-            Return MyBase.Channel.SetSperrung(bolSperren, BenutzerID, Lizenzschluessel, Vorgangsnummer, WindowsUsername, Domainname, Computername)
+        Public Function GetAlleEichprozesse(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As EichsoftwareWebservice.clsEichprozessFuerAuswahlliste() Implements EichsoftwareWebservice.IEichsoftwareWebservice.GetAlleEichprozesse
+            Return MyBase.Channel.GetAlleEichprozesse(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername)
         End Function
         
-        Public Function GetFTPCredentials(ByVal BenutzerID As String, ByVal Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As EichsoftwareWebservice.clsServerFTPDaten Implements EichsoftwareWebservice.IEichsoftwareWebservice.GetFTPCredentials
-            Return MyBase.Channel.GetFTPCredentials(BenutzerID, Lizenzschluessel, Vorgangsnummer, WindowsUsername, Domainname, Computername)
+        Public Function GetAlleEichprozesseImZeitraum(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, ByVal SyncAllesSeit As Date, ByVal SyncAllesBis As Date) As EichsoftwareWebservice.ServerEichprozess() Implements EichsoftwareWebservice.IEichsoftwareWebservice.GetAlleEichprozesseImZeitraum
+            Return MyBase.Channel.GetAlleEichprozesseImZeitraum(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername, SyncAllesSeit, SyncAllesBis)
+        End Function
+        
+        Public Function GetEichProzess(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As EichsoftwareWebservice.ServerEichprozess Implements EichsoftwareWebservice.IEichsoftwareWebservice.GetEichProzess
+            Return MyBase.Channel.GetEichProzess(HEKennung, Lizenzschluessel, Vorgangsnummer, WindowsUsername, Domainname, Computername)
+        End Function
+        
+        Public Function SetEichprozessUngueltig(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements EichsoftwareWebservice.IEichsoftwareWebservice.SetEichprozessUngueltig
+            Return MyBase.Channel.SetEichprozessUngueltig(HEKennung, Lizenzschluessel, Vorgangsnummer, WindowsUsername, Domainname, Computername)
+        End Function
+        
+        Public Function SetEichprozessGenehmight(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements EichsoftwareWebservice.IEichsoftwareWebservice.SetEichprozessGenehmight
+            Return MyBase.Channel.SetEichprozessGenehmight(HEKennung, Lizenzschluessel, Vorgangsnummer, WindowsUsername, Domainname, Computername)
+        End Function
+        
+        Public Function CheckGueltigkeitEichprozess(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As String Implements EichsoftwareWebservice.IEichsoftwareWebservice.CheckGueltigkeitEichprozess
+            Return MyBase.Channel.CheckGueltigkeitEichprozess(HEKennung, Lizenzschluessel, Vorgangsnummer, WindowsUsername, Domainname, Computername)
+        End Function
+        
+        Public Function CheckSperrung(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As String Implements EichsoftwareWebservice.IEichsoftwareWebservice.CheckSperrung
+            Return MyBase.Channel.CheckSperrung(HEKennung, Lizenzschluessel, Vorgangsnummer, WindowsUsername, Domainname, Computername)
+        End Function
+        
+        Public Function SetSperrung(ByVal bolSperren As Boolean, ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As String Implements EichsoftwareWebservice.IEichsoftwareWebservice.SetSperrung
+            Return MyBase.Channel.SetSperrung(bolSperren, HEKennung, Lizenzschluessel, Vorgangsnummer, WindowsUsername, Domainname, Computername)
+        End Function
+        
+        Public Function GetFTPCredentials(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As EichsoftwareWebservice.clsServerFTPDaten Implements EichsoftwareWebservice.IEichsoftwareWebservice.GetFTPCredentials
+            Return MyBase.Channel.GetFTPCredentials(HEKennung, Lizenzschluessel, Vorgangsnummer, WindowsUsername, Domainname, Computername)
         End Function
     End Class
 End Namespace

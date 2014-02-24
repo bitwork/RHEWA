@@ -60,103 +60,6 @@
 #End Region
 
 #Region "Formular Logiken"
-    Private Sub FormatTable()
-        'ausblenden von internen spalten
-        RadGridViewAuswahlliste.Columns("ID").IsVisible = False
-        RadGridViewAuswahlliste.Columns("Ausgeblendet").IsVisible = False
-        RadGridViewAuswahlliste.Columns("Vorgangsnummer").IsVisible = False
-
-        'übersetzen der Spaltenköpfe
-        RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").HeaderText = My.Resources.GlobaleLokalisierung.Bearbeitungsstatus
-        RadGridViewAuswahlliste.Columns("Lookup_Waegezelle").HeaderText = My.Resources.GlobaleLokalisierung.Waegezelle
-        RadGridViewAuswahlliste.Columns("Lookup_Auswertegeraet").HeaderText = My.Resources.GlobaleLokalisierung.AuswerteGeraet
-        RadGridViewAuswahlliste.Columns("Lookup_Waagentyp").HeaderText = My.Resources.GlobaleLokalisierung.Waagentyp
-        RadGridViewAuswahlliste.Columns("Lookup_Waagenart").HeaderText = My.Resources.GlobaleLokalisierung.Waagenart
-        RadGridViewAuswahlliste.Columns("Fabriknummer").HeaderText = My.Resources.GlobaleLokalisierung.Fabriknummer
-
-        'spaltengrößen anpassen (so viel platz wie möglich nehmen)
-        RadGridViewAuswahlliste.BestFitColumns()
-        RadGridViewAuswahlliste.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
-        RadGridViewAuswahlliste.BestFitColumns()
-        RadGridViewAuswahlliste.EnableAlternatingRowColor = True
-        RadGridViewAuswahlliste.ShowNoDataText = True
-    End Sub
-
-    Protected Friend Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
-        MyBase.LokalisierungNeeded(UserControl)
-        'übersetzen und formatierung der Tabelle
-        LoadFromDatabase()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucoEichprozessauswahlliste))
-
-        Me.RadButtonClientAusblenden.Text = resources.GetString("RadButtonClientAusblenden.Text")
-        Me.RadButtonClientBearbeiten.Text = resources.GetString("RadButtonClientBearbeiten.Text")
-        Me.RadButtonClientUpdateDatabase.Text = resources.GetString("RadButtonClientUpdateDatabase.Text")
-        Me.RadButtonClientNeu.Text = resources.GetString("RadButtonClientNeu.Text")
-        Me.RadCheckBoxAusblendenClientGeloeschterDokumente.Text = resources.GetString("RadCheckBoxAusblendenClientGeloeschterDokumente.Text")
-
-        'Hilfetext setzen
-        ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_Auswahlliste)
-        'Überschrift setzen
-        ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_Hauptmenue
-    End Sub
-
-    Private Sub LoadFromDatabase()
-        Me.Enabled = False
-
-        If Not BackgroundWorkerLoadFromDatabase.IsBusy Then
-            BackgroundWorkerLoadFromDatabase.RunWorkerAsync()
-        End If
-
-        If My.Settings.RHEWALizenz Then
-            If Not BackgroundWorkerLoadFromDatabaseRHEWA.IsBusy Then
-                BackgroundWorkerLoadFromDatabaseRHEWA.RunWorkerAsync()
-            End If
-        End If
-    End Sub
-
-    Private Sub ForceActivation()
-        Try
-
-
-            Using DBContext As New EichsoftwareClientdatabaseEntities1
-                'prüfen ob die Lizenz gültig ist
-                Dim name As String = "Tim"
-                Dim Schluessel As String = "Hill"
-
-
-                Dim objLic As New Lizensierung
-                objLic.FK_Benutzer = name
-                objLic.Lizenzschluessel = Schluessel
-
-                objLic.RHEWALizenz = True
-
-
-                Try
-                    'löschen der lokalen DB
-                    For Each lic In DBContext.Lizensierung
-                        DBContext.Lizensierung.Remove(lic)
-                    Next
-                    DBContext.SaveChanges()
-                Catch ex As Exception
-                End Try
-                Try
-                    'speichern in lokaler DB
-                    DBContext.Lizensierung.Add(objLic)
-                    DBContext.SaveChanges()
-                Catch ex As Exception
-                End Try
-                My.Settings.Lizensiert = True
-                My.Settings.RHEWALizenz = objLic.RHEWALizenz
-                My.Settings.Save()
-
-            End Using
-
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, My.Resources.GlobaleLokalisierung.Fehler)
-
-        End Try
-    End Sub
-
     Private Sub ucoEichprozessauswahlliste_Load(sender As Object, e As System.EventArgs) Handles Me.Load
         If Not ParentFormular Is Nothing Then
             Try
@@ -197,6 +100,120 @@
 
 
     End Sub
+
+    ''' <summary>
+    ''' Ein und ausblenden sowie lokalisierung des Grids 
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub FormatTable()
+        'ausblenden von internen spalten
+        RadGridViewAuswahlliste.Columns("ID").IsVisible = False
+        RadGridViewAuswahlliste.Columns("Ausgeblendet").IsVisible = False
+        RadGridViewAuswahlliste.Columns("Vorgangsnummer").IsVisible = False
+
+        'übersetzen der Spaltenköpfe
+        RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").HeaderText = My.Resources.GlobaleLokalisierung.Bearbeitungsstatus
+        RadGridViewAuswahlliste.Columns("Lookup_Waegezelle").HeaderText = My.Resources.GlobaleLokalisierung.Waegezelle
+        RadGridViewAuswahlliste.Columns("Lookup_Auswertegeraet").HeaderText = My.Resources.GlobaleLokalisierung.AuswerteGeraet
+        RadGridViewAuswahlliste.Columns("Lookup_Waagentyp").HeaderText = My.Resources.GlobaleLokalisierung.Waagentyp
+        RadGridViewAuswahlliste.Columns("Lookup_Waagenart").HeaderText = My.Resources.GlobaleLokalisierung.Waagenart
+        RadGridViewAuswahlliste.Columns("Fabriknummer").HeaderText = My.Resources.GlobaleLokalisierung.Fabriknummer
+
+        'spaltengrößen anpassen (so viel platz wie möglich nehmen)
+        RadGridViewAuswahlliste.BestFitColumns()
+        RadGridViewAuswahlliste.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
+        RadGridViewAuswahlliste.BestFitColumns()
+        RadGridViewAuswahlliste.EnableAlternatingRowColor = True
+        RadGridViewAuswahlliste.ShowNoDataText = True
+    End Sub
+
+    Protected Friend Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
+        MyBase.LokalisierungNeeded(UserControl)
+        'übersetzen und formatierung der Tabelle
+        LoadFromDatabase()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucoEichprozessauswahlliste))
+
+        Me.RadButtonClientAusblenden.Text = resources.GetString("RadButtonClientAusblenden.Text")
+        Me.RadButtonClientBearbeiten.Text = resources.GetString("RadButtonClientBearbeiten.Text")
+        Me.RadButtonClientUpdateDatabase.Text = resources.GetString("RadButtonClientUpdateDatabase.Text")
+        Me.RadButtonClientNeu.Text = resources.GetString("RadButtonClientNeu.Text")
+        Me.RadCheckBoxAusblendenClientGeloeschterDokumente.Text = resources.GetString("RadCheckBoxAusblendenClientGeloeschterDokumente.Text")
+
+        'Hilfetext setzen
+        ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_Auswahlliste)
+        'Überschrift setzen
+        ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_Hauptmenue
+    End Sub
+
+    ''' <summary>
+    ''' Initiert background threads die aus lokaler Client DB und Server Webservice die vorhandenen Eichungen abrufen
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub LoadFromDatabase()
+        Me.Enabled = False
+
+        If Not BackgroundWorkerLoadFromDatabase.IsBusy Then
+            BackgroundWorkerLoadFromDatabase.RunWorkerAsync()
+        End If
+
+        If My.Settings.RHEWALizenz Then
+            If Not BackgroundWorkerLoadFromDatabaseRHEWA.IsBusy Then
+                BackgroundWorkerLoadFromDatabaseRHEWA.RunWorkerAsync()
+            End If
+        End If
+    End Sub
+
+    ''' <summary>
+    ''' DEBUG Funktion um Lizenzdialog aus Testzwecken zu überspringen
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub ForceActivation()
+        Try
+            Using DBContext As New EichsoftwareClientdatabaseEntities1
+                'prüfen ob die Lizenz gültig ist
+                Dim HEKennung As String = "tim"
+                Dim Schluessel As String = "Hill"
+
+
+                Dim objLic As New Lizensierung
+                objLic.HEKennung = HEKennung
+                objLic.Lizenzschluessel = Schluessel
+
+                objLic.RHEWALizenz = True
+
+                Try
+                    'löschen der lokalen DB
+                    For Each lic In DBContext.Lizensierung
+                        DBContext.Lizensierung.Remove(lic)
+                    Next
+                    DBContext.SaveChanges()
+                Catch ex As Exception
+                End Try
+                Try
+                    'speichern in lokaler DB
+                    DBContext.Lizensierung.Add(objLic)
+                    DBContext.SaveChanges()
+                Catch ex As Exception
+                End Try
+
+
+                My.Settings.Lizensiert = True
+                My.Settings.RHEWALizenz = objLic.RHEWALizenz
+                My.Settings.Save()
+
+                'neue Stammdaten zum Benutzer holen
+                objWebserviceFunctions.GetNeueStammdaten(False)
+
+
+
+            End Using
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, My.Resources.GlobaleLokalisierung.Fehler)
+
+        End Try
+    End Sub
+
 
     ''' <summary>
     ''' Konfigurationsdialog anzeigen
@@ -605,7 +622,7 @@
 
             'prüfen ob noch nicht abgeschickte Eichungen vorlieren. Wenn ja Hinweismeldung und Abbruchmöglichkeit für Benutzer
             If objDBFunctions.PruefeAufUngesendeteEichungen() = True Then
-                If MessageBox.Show(My.Resources.GlobaleLokalisierung.Warnung_EichungenWerdenGeloescht, My.Resources.GlobaleLokalisierung.Frage) = DialogResult.Yes Then
+                If MessageBox.Show(My.Resources.GlobaleLokalisierung.Warnung_EichungenWerdenGeloescht, My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo) = DialogResult.Yes Then
                     bolSyncData = True
                 Else
                     bolSyncData = False

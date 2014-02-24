@@ -12,6 +12,8 @@
     Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken (z.b. selected index changed beim laden des Formulars)
 
     Private _bolEichprozessIsDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Stammdateneingabe zurückgesetzt
+
+    Private objDBFunctions As New clsDBFunctions 'Klasse mit Hilfsfunktionen zum arbeiten mit der lokalen SQL Compact DB
 #End Region
 
 #Region "Constructors"
@@ -54,7 +56,8 @@
         LoadFromDatabase()
 
         'fokus setzen
-        RadTextBoxControlStammdatenWaagenbaufirma.Focus()
+        '        RadTextBoxControlStammdatenWaagenbaufirma.Focus()
+        RadTextBoxControlWaageSeriennummer.Focus()
     End Sub
 
  
@@ -279,8 +282,7 @@
 
         'events abbrechen
         _suspendEvents = True
-        'TODO: stammdaten aus superoffice laden
-
+      
         Using context As New EichsoftwareClientdatabaseEntities1
 
             'laaden der Wagentyp dropdownliste
@@ -437,6 +439,15 @@
                 RadDropDownListWaagenArt.SelectedValue = objEichprozess.FK_WaagenArt
                 RadDropdownlistWaagenTyp.SelectedValue = objEichprozess.FK_WaagenTyp
             Else
+                'Stammdaten aus lokaler Lizenz laden
+                Dim objLic As Lizensierung = objDBFunctions.HoleLizenzObjekt
+                If Not objLic Is Nothing Then
+                    RadTextBoxControlStammdatenOrt.Text = objLic.FirmaOrt
+                    RadTextBoxControlStammdatenPLZ.Text = objLic.FirmaPLZ
+                    RadTextBoxControlStammdatenStrasse.Text = objLic.FirmaStrasse
+                    RadTextBoxControlStammdatenWaagenbaufirma.Text = objLic.Firma
+                End If
+
                 'nulltext auswählen, so das keine vorauswahl getroffen wird
                 RadDropdownlistWaagenTyp.Text = RadDropdownlistWaagenTyp.NullText
                 RadDropDownListWaagenArt.Text = RadDropDownListWaagenArt.NullText
@@ -759,7 +770,7 @@
 
                     Try
                         'add prüft anhand der Vorgangsnummer automatisch ob ein neuer Prozess angelegt, oder ein vorhandener aktualisiert wird
-                        Webcontext.AddEichprozess(objLiz.FK_Benutzer, objLiz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                        Webcontext.AddEichprozess(objLiz.HEKennung, objLiz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
 
                         'schließen des dialoges
                         ParentFormular.Close()

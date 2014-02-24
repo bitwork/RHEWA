@@ -13,7 +13,6 @@ Imports System.Collections.Generic
 Partial Public Class ServerFirmenZusatzdaten
     Public Property ID As String
     Public Property Firmen_FK As String
-    Public Property HEKennung As String
     Public Property Umsatz As String
     Public Property Abrechnungsmodell As String
     Public Property Qualifizierungspauschale As String

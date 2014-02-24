@@ -89,6 +89,14 @@
         End Using
     End Function
 
+    Public Function HoleLizenzObjekt() As Lizensierung
+        Dim objLic As Lizensierung
+        Using context As New EichsoftwareClientdatabaseEntities1
+            objLic = (From lizenz In context.Lizensierung).FirstOrDefault
+            Return objLic
+        End Using
+    End Function
+
     ''' <summary>
     ''' Erzeugt neues leeres Eichprozessobject aus Datenbank
     ''' </summary>

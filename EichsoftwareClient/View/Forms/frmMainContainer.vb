@@ -694,7 +694,7 @@ Public Class FrmMainContainer
                 'prüfen ob der datensatz von jemand anderem in Bearbeitung ist
                 Dim bolSetSperrung As Boolean = True 'variable zum abbrechen des Prozesses, falls jemand anderes an dem DS arbeitet
                 Dim Messagetext As String = ""
-                Messagetext = webContext.CheckSperrung(objLiz.FK_Benutzer, objLiz.Lizenzschluessel, CurrentEichprozess.Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                Messagetext = webContext.CheckSperrung(objLiz.HEKennung, objLiz.Lizenzschluessel, CurrentEichprozess.Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
                 If Messagetext.Equals("") = False Then
                     'rhewa arbeitet in deutsch und hat keine lokalisierung gewünscht
                     If MessageBox.Show("Dieser Eichprozess wird von '" & Messagetext & "' bearbeitet. Möchten Sie seine Arbeit wirklich überschreiben und den Prozess selbst bearbeiten?", My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo) = DialogResult.Yes Then
@@ -706,7 +706,7 @@ Public Class FrmMainContainer
 
                 If bolSetSperrung Then
                     Dim result As String
-                    result = webContext.SetSperrung(bolSperren, objLiz.FK_Benutzer, objLiz.Lizenzschluessel, CurrentEichprozess.Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                    result = webContext.SetSperrung(bolSperren, objLiz.HEKennung, objLiz.Lizenzschluessel, CurrentEichprozess.Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
 
                     If result = "" Then
                         Return True

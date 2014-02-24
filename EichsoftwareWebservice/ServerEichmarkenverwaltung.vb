@@ -28,7 +28,6 @@ Partial Public Class ServerEichmarkenverwaltung
     Public Property FehlmengeSicherungsmarkeklein As Nullable(Of Integer)
     Public Property FehlmengeSicherungsmarkegross As Nullable(Of Integer)
     Public Property FehlmengeHinweismarken As Nullable(Of Integer)
-    Public Property FK_Benutzer As String
     Public Property FehlmengeBenannteStelle0103 As Nullable(Of Integer)
     Public Property FehlmengeBenannteStelle0111 As Nullable(Of Integer)
     Public Property Archiv2007_Eichungen As String
@@ -74,5 +73,6 @@ Partial Public Class ServerEichmarkenverwaltung
     Public Property Archiv2014_SicherungsmarkeGross As String
     Public Property Archiv2014_SicherungsmarkeKlein As String
     Public Property Bemerkung As String
+    Public Property HEKennung As String
 
 End Class

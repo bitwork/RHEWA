@@ -54,10 +54,12 @@ Partial Class FrmLizenz
         Me.lblName.RootElement.Alignment = CType(resources.GetObject("lblName.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.lblName.RootElement.AngleTransform = CType(resources.GetObject("lblName.RootElement.AngleTransform"), Single)
         Me.lblName.RootElement.FlipText = CType(resources.GetObject("lblName.RootElement.FlipText"), Boolean)
+        Me.lblName.RootElement.KeyTip = resources.GetString("lblName.RootElement.KeyTip")
         Me.lblName.RootElement.Margin = CType(resources.GetObject("lblName.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.lblName.RootElement.Padding = CType(resources.GetObject("lblName.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblName.RootElement.Text = resources.GetString("lblName.RootElement.Text")
         Me.lblName.RootElement.TextOrientation = CType(resources.GetObject("lblName.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblName.RootElement.ToolTipText = resources.GetString("lblName.RootElement.ToolTipText")
         '
         'RadTextBoxControl1
         '
@@ -71,10 +73,12 @@ Partial Class FrmLizenz
         Me.RadTextBoxControl1.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControl1.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControl1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControl1.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControl1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControl1.RootElement.FlipText"), Boolean)
+        Me.RadTextBoxControl1.RootElement.KeyTip = resources.GetString("RadTextBoxControl1.RootElement.KeyTip")
         Me.RadTextBoxControl1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControl1.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControl1.RootElement.Padding = CType(resources.GetObject("RadTextBoxControl1.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControl1.RootElement.Text = resources.GetString("RadTextBoxControl1.RootElement.Text")
         Me.RadTextBoxControl1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControl1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControl1.RootElement.ToolTipText = resources.GetString("RadTextBoxControl1.RootElement.ToolTipText")
         '
         'RadTextBoxControl2
         '
@@ -88,10 +92,12 @@ Partial Class FrmLizenz
         Me.RadTextBoxControl2.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControl2.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControl2.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControl2.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControl2.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControl2.RootElement.FlipText"), Boolean)
+        Me.RadTextBoxControl2.RootElement.KeyTip = resources.GetString("RadTextBoxControl2.RootElement.KeyTip")
         Me.RadTextBoxControl2.RootElement.Margin = CType(resources.GetObject("RadTextBoxControl2.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControl2.RootElement.Padding = CType(resources.GetObject("RadTextBoxControl2.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControl2.RootElement.Text = resources.GetString("RadTextBoxControl2.RootElement.Text")
         Me.RadTextBoxControl2.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControl2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControl2.RootElement.ToolTipText = resources.GetString("RadTextBoxControl2.RootElement.ToolTipText")
         '
         'lblLizenzschuessel
         '
@@ -105,10 +111,12 @@ Partial Class FrmLizenz
         Me.lblLizenzschuessel.RootElement.Alignment = CType(resources.GetObject("lblLizenzschuessel.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.lblLizenzschuessel.RootElement.AngleTransform = CType(resources.GetObject("lblLizenzschuessel.RootElement.AngleTransform"), Single)
         Me.lblLizenzschuessel.RootElement.FlipText = CType(resources.GetObject("lblLizenzschuessel.RootElement.FlipText"), Boolean)
+        Me.lblLizenzschuessel.RootElement.KeyTip = resources.GetString("lblLizenzschuessel.RootElement.KeyTip")
         Me.lblLizenzschuessel.RootElement.Margin = CType(resources.GetObject("lblLizenzschuessel.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.lblLizenzschuessel.RootElement.Padding = CType(resources.GetObject("lblLizenzschuessel.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblLizenzschuessel.RootElement.Text = resources.GetString("lblLizenzschuessel.RootElement.Text")
         Me.lblLizenzschuessel.RootElement.TextOrientation = CType(resources.GetObject("lblLizenzschuessel.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblLizenzschuessel.RootElement.ToolTipText = resources.GetString("lblLizenzschuessel.RootElement.ToolTipText")
         '
         'RadButtonOK
         '
@@ -122,10 +130,12 @@ Partial Class FrmLizenz
         Me.RadButtonOK.RootElement.Alignment = CType(resources.GetObject("RadButtonOK.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadButtonOK.RootElement.AngleTransform = CType(resources.GetObject("RadButtonOK.RootElement.AngleTransform"), Single)
         Me.RadButtonOK.RootElement.FlipText = CType(resources.GetObject("RadButtonOK.RootElement.FlipText"), Boolean)
+        Me.RadButtonOK.RootElement.KeyTip = resources.GetString("RadButtonOK.RootElement.KeyTip")
         Me.RadButtonOK.RootElement.Margin = CType(resources.GetObject("RadButtonOK.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadButtonOK.RootElement.Padding = CType(resources.GetObject("RadButtonOK.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadButtonOK.RootElement.Text = resources.GetString("RadButtonOK.RootElement.Text")
         Me.RadButtonOK.RootElement.TextOrientation = CType(resources.GetObject("RadButtonOK.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadButtonOK.RootElement.ToolTipText = resources.GetString("RadButtonOK.RootElement.ToolTipText")
         '
         'RadCheckBoxAkzeptieren
         '
@@ -139,16 +149,18 @@ Partial Class FrmLizenz
         Me.RadCheckBoxAkzeptieren.RootElement.Alignment = CType(resources.GetObject("RadCheckBoxAkzeptieren.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadCheckBoxAkzeptieren.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxAkzeptieren.RootElement.AngleTransform"), Single)
         Me.RadCheckBoxAkzeptieren.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxAkzeptieren.RootElement.FlipText"), Boolean)
+        Me.RadCheckBoxAkzeptieren.RootElement.KeyTip = resources.GetString("RadCheckBoxAkzeptieren.RootElement.KeyTip")
         Me.RadCheckBoxAkzeptieren.RootElement.Margin = CType(resources.GetObject("RadCheckBoxAkzeptieren.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadCheckBoxAkzeptieren.RootElement.Padding = CType(resources.GetObject("RadCheckBoxAkzeptieren.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadCheckBoxAkzeptieren.RootElement.Text = resources.GetString("RadCheckBoxAkzeptieren.RootElement.Text")
         Me.RadCheckBoxAkzeptieren.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxAkzeptieren.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadCheckBoxAkzeptieren.RootElement.ToolTipText = resources.GetString("RadCheckBoxAkzeptieren.RootElement.ToolTipText")
         '
         'RadTextBoxControl3
         '
+        resources.ApplyResources(Me.RadTextBoxControl3, "RadTextBoxControl3")
         Me.RadTextBoxControl3.IsReadOnly = True
         Me.RadTextBoxControl3.IsReadOnlyCaretVisible = True
-        resources.ApplyResources(Me.RadTextBoxControl3, "RadTextBoxControl3")
         Me.RadTextBoxControl3.Multiline = True
         Me.RadTextBoxControl3.Name = "RadTextBoxControl3"
         '
@@ -159,10 +171,12 @@ Partial Class FrmLizenz
         Me.RadTextBoxControl3.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControl3.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControl3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControl3.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControl3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControl3.RootElement.FlipText"), Boolean)
+        Me.RadTextBoxControl3.RootElement.KeyTip = resources.GetString("RadTextBoxControl3.RootElement.KeyTip")
         Me.RadTextBoxControl3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControl3.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControl3.RootElement.Padding = CType(resources.GetObject("RadTextBoxControl3.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControl3.RootElement.Text = resources.GetString("RadTextBoxControl3.RootElement.Text")
         Me.RadTextBoxControl3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControl3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControl3.RootElement.ToolTipText = resources.GetString("RadTextBoxControl3.RootElement.ToolTipText")
         '
         'lblLizenzabkommen
         '
@@ -176,10 +190,12 @@ Partial Class FrmLizenz
         Me.lblLizenzabkommen.RootElement.Alignment = CType(resources.GetObject("lblLizenzabkommen.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.lblLizenzabkommen.RootElement.AngleTransform = CType(resources.GetObject("lblLizenzabkommen.RootElement.AngleTransform"), Single)
         Me.lblLizenzabkommen.RootElement.FlipText = CType(resources.GetObject("lblLizenzabkommen.RootElement.FlipText"), Boolean)
+        Me.lblLizenzabkommen.RootElement.KeyTip = resources.GetString("lblLizenzabkommen.RootElement.KeyTip")
         Me.lblLizenzabkommen.RootElement.Margin = CType(resources.GetObject("lblLizenzabkommen.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.lblLizenzabkommen.RootElement.Padding = CType(resources.GetObject("lblLizenzabkommen.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblLizenzabkommen.RootElement.Text = resources.GetString("lblLizenzabkommen.RootElement.Text")
         Me.lblLizenzabkommen.RootElement.TextOrientation = CType(resources.GetObject("lblLizenzabkommen.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblLizenzabkommen.RootElement.ToolTipText = resources.GetString("lblLizenzabkommen.RootElement.ToolTipText")
         '
         'FrmLizenz
         '
@@ -203,10 +219,12 @@ Partial Class FrmLizenz
         Me.RootElement.AngleTransform = CType(resources.GetObject("FrmLizenz.RootElement.AngleTransform"), Single)
         Me.RootElement.ApplyShapeToControl = True
         Me.RootElement.FlipText = CType(resources.GetObject("FrmLizenz.RootElement.FlipText"), Boolean)
+        Me.RootElement.KeyTip = resources.GetString("FrmLizenz.RootElement.KeyTip")
         Me.RootElement.Margin = CType(resources.GetObject("FrmLizenz.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RootElement.Padding = CType(resources.GetObject("FrmLizenz.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RootElement.Text = resources.GetString("FrmLizenz.RootElement.Text")
         Me.RootElement.TextOrientation = CType(resources.GetObject("FrmLizenz.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RootElement.ToolTipText = resources.GetString("FrmLizenz.RootElement.ToolTipText")
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.ShowItemToolTips = False
