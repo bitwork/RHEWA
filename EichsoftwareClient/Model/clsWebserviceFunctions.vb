@@ -1,4 +1,10 @@
-﻿Public Class clsWebserviceFunctions
+﻿''' <summary>
+''' Klasse mit allegmeinen aufrufen des Webservices
+''' </summary>
+''' <remarks></remarks>
+''' <author></author>
+''' <commentauthor></commentauthor>
+Public Class clsWebserviceFunctions
 
     ''' <summary>
     ''' Prüft ob Webservice aufgerufen werden kann
@@ -436,7 +442,7 @@
 
                         Next
 
-                  
+
                     Catch ex As Exception
                         MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_Speichern, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
                         MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)

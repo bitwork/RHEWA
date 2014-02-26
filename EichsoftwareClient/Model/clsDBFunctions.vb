@@ -7,6 +7,7 @@
     ''' <remarks></remarks>
     Public Function LoescheLokaleDatenbank() As Boolean
         Try
+            'alle Tabellen iterieren und löschen. Das commit wird erst am Ende ausgeführt, deswegen ist die löschreihenefolge egal
             Using DBContext As New EichsoftwareClientdatabaseEntities1
 
                 For Each obj In DBContext.Eichprozess
