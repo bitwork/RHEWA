@@ -180,6 +180,7 @@
 
     Protected Friend Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
         '  UpdateObject()
+        If Me.Equals(UserControl) = False Then Exit Sub
 
 
         MyBase.LokalisierungNeeded(UserControl)
@@ -730,10 +731,10 @@
 
 
     Protected Friend Overrides Sub VersendenNeeded(TargetUserControl As UserControl)
-        MyBase.VersendenNeeded(TargetUserControl)
+
 
         If Me.Equals(TargetUserControl) Then
-
+            MyBase.VersendenNeeded(TargetUserControl)
             Using dbcontext As New EichsoftwareClientdatabaseEntities1
                 objEichprozess = (From a In dbcontext.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Beschaffenheitspruefung").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
 

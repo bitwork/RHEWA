@@ -340,9 +340,8 @@ Public Class UcoVersenden
     End Sub
 
     Protected Friend Overrides Sub VersendenNeeded(TargetUserControl As UserControl)
-        MyBase.VersendenNeeded(TargetUserControl)
-
         If Me.Equals(TargetUserControl) Then
+            MyBase.VersendenNeeded(TargetUserControl)
 
             Using dbcontext As New EichsoftwareClientdatabaseEntities1
                 objEichprozess = (From a In dbcontext.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Beschaffenheitspruefung").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
@@ -382,6 +381,8 @@ Public Class UcoVersenden
     End Sub
 
     Protected Friend Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
+        If Me.Equals(UserControl) = False Then Exit Sub
+
         MyBase.LokalisierungNeeded(UserControl)
 
         'lokalisierung: Leider kann ich den automatismus von .NET nicht nutzen. Dieser funktioniert nur sauber, wenn ein Dialog erzeugt wird. Zur Laufzeit aber gibt es diverse Probleme mit dem Automatischen Ändern der Sprache,

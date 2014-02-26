@@ -932,7 +932,22 @@
 
     End Sub
 
+    Protected Friend Overrides Sub SaveWithoutValidationNeeded(usercontrol As UserControl)
+        MyBase.SaveWithoutValidationNeeded(usercontrol)
+        If DialogModus = enuDialogModus.lesend Then
+            ParentFormular.CurrentEichprozess = objEichprozess
+            Exit Sub
+        End If
+
+
+    End Sub
+
+   
+
+
     Protected Friend Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
+        If Me.Equals(UserControl) = False Then Exit Sub
+
         MyBase.LokalisierungNeeded(UserControl)
 
         'lokalisierung: Leider kann ich den automatismus von .NET nicht nutzen. Dieser funktioniert nur sauber, wenn ein Dialog erzeugt wird. Zur Laufzeit aber gibt es diverse Probleme mit dem Automatischen Ändern der Sprache,
@@ -1061,7 +1076,7 @@
             End Try
         End If
 
-     
+
 
     End Sub
 
@@ -1071,13 +1086,15 @@
     ''' <param name="UserControl"></param>
     ''' <remarks></remarks>
     Protected Friend Overrides Sub UpdateNeeded(UserControl As UserControl)
-        MyBase.UpdateNeeded(UserControl)
-        'Hilfetext setzen
-        ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_KompatiblitaetsnachweisErgebnisHilfe)
-        'Überschrift setzen
-        ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_KompatiblitaetsnachweisErgebnis
         If Me.Equals(UserControl) Then
-            LoadFromDatabase()
+            MyBase.UpdateNeeded(UserControl)
+            'Hilfetext setzen
+            ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_KompatiblitaetsnachweisErgebnisHilfe)
+            'Überschrift setzen
+            ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_KompatiblitaetsnachweisErgebnis
+            If Me.Equals(UserControl) Then
+                LoadFromDatabase()
+            End If
         End If
     End Sub
 
