@@ -342,6 +342,7 @@ Public Class FrmMainContainer
         Catch ex As Exception
             'konnte layout nicht finden
         End Try
+        'laden des RHEWA Grids
         Try
             Using stream As New MemoryStream(Convert.FromBase64String(My.Settings.GridSettingsRHEWA))
                 uco.RadGridViewRHEWAAlle.LoadLayout(stream)
@@ -349,7 +350,6 @@ Public Class FrmMainContainer
         Catch ex As Exception
             'konnte layout nicht finden
         End Try
-
 
     End Sub
 

@@ -7,17 +7,10 @@
 
         Telerik.WinControls.ThemeResolutionService.LoadPackageResource("EichsoftwareAdministrationsClient.RHEWAGREEN.tssp") 'Pfad zur Themedatei
         Telerik.WinControls.ThemeResolutionService.ApplicationThemeName = "RHEWAGREEN" 'standard Themename
-
-
-
-        'aktuelle Sprache der Anwendung auf vorher gewählte Sprache setzen
-        RuntimeLocalizer.ChangeCulture(Me, My.Settings.AktuelleSprache)
     End Sub
 #End Region
 
-    Private Sub frmMain_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-      
-    End Sub
+  
 
     Private Sub RadButtonAuswertegeraetAuswertegeraet_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonAuswertegeraet.Click
         Dim f As New FrmAuswahllisteAWG
@@ -41,6 +34,11 @@
 
     Private Sub RadButtonVerbindungsprotokoll_Click(sender As Object, e As EventArgs) Handles RadButtonVerbindungsprotokoll.Click
         Dim f As New frmVerbindungsprotokoll
+        f.Show()
+    End Sub
+
+    Private Sub RadButtonMogelstatistik_Click(sender As Object, e As EventArgs) Handles RadButtonMogelstatistik.Click
+        Dim f As New FrmMogelstatistik
         f.Show()
     End Sub
 End Class

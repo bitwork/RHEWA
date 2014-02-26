@@ -22,15 +22,15 @@ Partial Class frmMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.RadButtonAuswertegeraet = New Telerik.WinControls.UI.RadButton()
         Me.RadButtonWaegezelle = New Telerik.WinControls.UI.RadButton()
         Me.RadButtonLizenzen = New Telerik.WinControls.UI.RadButton()
         Me.RadButtonEichmarkenStatistik = New Telerik.WinControls.UI.RadButton()
         Me.RadGroupBox1 = New Telerik.WinControls.UI.RadGroupBox()
         Me.RadGroupBox2 = New Telerik.WinControls.UI.RadGroupBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.RadButtonMogelstatistik = New Telerik.WinControls.UI.RadButton()
         Me.RadButtonVerbindungsprotokoll = New Telerik.WinControls.UI.RadButton()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.RadButtonAuswertegeraet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonWaegezelle, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonLizenzen, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -39,78 +39,91 @@ Partial Class frmMain
         Me.RadGroupBox1.SuspendLayout()
         CType(Me.RadGroupBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBox2.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadButtonMogelstatistik, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonVerbindungsprotokoll, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'RadButtonAuswertegeraet
         '
-        resources.ApplyResources(Me.RadButtonAuswertegeraet, "RadButtonAuswertegeraet")
+        Me.RadButtonAuswertegeraet.Location = New System.Drawing.Point(5, 37)
         Me.RadButtonAuswertegeraet.Name = "RadButtonAuswertegeraet"
         '
         '
         '
-        Me.RadButtonAuswertegeraet.RootElement.AccessibleDescription = resources.GetString("RadButtonRadButtonAuswertegeraet.RootElement.AccessibleDescription")
-        Me.RadButtonAuswertegeraet.RootElement.AccessibleName = resources.GetString("RadButtonRadButtonAuswertegeraet.RootElement.AccessibleName")
-        Me.RadButtonAuswertegeraet.RootElement.Alignment = CType(resources.GetObject("RadButtonRadButtonAuswertegeraet.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadButtonAuswertegeraet.RootElement.AngleTransform = CType(resources.GetObject("RadButtonRadButtonAuswertegeraet.RootElement.AngleTransform"), Single)
-        Me.RadButtonAuswertegeraet.RootElement.FlipText = CType(resources.GetObject("RadButtonRadButtonAuswertegeraet.RootElement.FlipText"), Boolean)
-        Me.RadButtonAuswertegeraet.RootElement.Margin = CType(resources.GetObject("RadButtonRadButtonAuswertegeraet.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButtonAuswertegeraet.RootElement.Padding = CType(resources.GetObject("RadButtonRadButtonAuswertegeraet.RootElement.Padding"), System.Windows.Forms.Padding)
-        Me.RadButtonAuswertegeraet.RootElement.Text = resources.GetString("RadButtonRadButtonAuswertegeraet.RootElement.Text")
-        Me.RadButtonAuswertegeraet.RootElement.TextOrientation = CType(resources.GetObject("RadButtonRadButtonAuswertegeraet.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadButtonAuswertegeraet.RootElement.AccessibleDescription = Nothing
+        Me.RadButtonAuswertegeraet.RootElement.AccessibleName = Nothing
+        Me.RadButtonAuswertegeraet.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
+        Me.RadButtonAuswertegeraet.RootElement.AngleTransform = 0.0!
+        Me.RadButtonAuswertegeraet.RootElement.FlipText = False
+        Me.RadButtonAuswertegeraet.RootElement.Margin = New System.Windows.Forms.Padding(0)
+        Me.RadButtonAuswertegeraet.RootElement.Padding = New System.Windows.Forms.Padding(0)
+        Me.RadButtonAuswertegeraet.RootElement.Text = Nothing
+        Me.RadButtonAuswertegeraet.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
+        Me.RadButtonAuswertegeraet.Size = New System.Drawing.Size(172, 24)
+        Me.RadButtonAuswertegeraet.TabIndex = 0
+        Me.RadButtonAuswertegeraet.Text = "Auswertegeräte verwalten"
         '
         'RadButtonWaegezelle
         '
-        resources.ApplyResources(Me.RadButtonWaegezelle, "RadButtonWaegezelle")
+        Me.RadButtonWaegezelle.Location = New System.Drawing.Point(5, 67)
         Me.RadButtonWaegezelle.Name = "RadButtonWaegezelle"
         '
         '
         '
-        Me.RadButtonWaegezelle.RootElement.AccessibleDescription = resources.GetString("RadButtonWaegezelle.RootElement.AccessibleDescription")
-        Me.RadButtonWaegezelle.RootElement.AccessibleName = resources.GetString("RadButtonWaegezelle.RootElement.AccessibleName")
-        Me.RadButtonWaegezelle.RootElement.Alignment = CType(resources.GetObject("RadButtonWaegezelle.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadButtonWaegezelle.RootElement.AngleTransform = CType(resources.GetObject("RadButtonWaegezelle.RootElement.AngleTransform"), Single)
-        Me.RadButtonWaegezelle.RootElement.FlipText = CType(resources.GetObject("RadButtonWaegezelle.RootElement.FlipText"), Boolean)
-        Me.RadButtonWaegezelle.RootElement.Margin = CType(resources.GetObject("RadButtonWaegezelle.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButtonWaegezelle.RootElement.Padding = CType(resources.GetObject("RadButtonWaegezelle.RootElement.Padding"), System.Windows.Forms.Padding)
-        Me.RadButtonWaegezelle.RootElement.Text = resources.GetString("RadButtonWaegezelle.RootElement.Text")
-        Me.RadButtonWaegezelle.RootElement.TextOrientation = CType(resources.GetObject("RadButtonWaegezelle.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadButtonWaegezelle.RootElement.AccessibleDescription = Nothing
+        Me.RadButtonWaegezelle.RootElement.AccessibleName = Nothing
+        Me.RadButtonWaegezelle.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
+        Me.RadButtonWaegezelle.RootElement.AngleTransform = 0.0!
+        Me.RadButtonWaegezelle.RootElement.FlipText = False
+        Me.RadButtonWaegezelle.RootElement.Margin = New System.Windows.Forms.Padding(0)
+        Me.RadButtonWaegezelle.RootElement.Padding = New System.Windows.Forms.Padding(0)
+        Me.RadButtonWaegezelle.RootElement.Text = Nothing
+        Me.RadButtonWaegezelle.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
+        Me.RadButtonWaegezelle.Size = New System.Drawing.Size(172, 24)
+        Me.RadButtonWaegezelle.TabIndex = 1
+        Me.RadButtonWaegezelle.Text = "Wägezellen verwalten"
         '
         'RadButtonLizenzen
         '
-        resources.ApplyResources(Me.RadButtonLizenzen, "RadButtonLizenzen")
+        Me.RadButtonLizenzen.Location = New System.Drawing.Point(5, 97)
         Me.RadButtonLizenzen.Name = "RadButtonLizenzen"
         '
         '
         '
-        Me.RadButtonLizenzen.RootElement.AccessibleDescription = resources.GetString("RadButton1.RootElement.AccessibleDescription")
-        Me.RadButtonLizenzen.RootElement.AccessibleName = resources.GetString("RadButton1.RootElement.AccessibleName")
-        Me.RadButtonLizenzen.RootElement.Alignment = CType(resources.GetObject("RadButton1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadButtonLizenzen.RootElement.AngleTransform = CType(resources.GetObject("RadButton1.RootElement.AngleTransform"), Single)
-        Me.RadButtonLizenzen.RootElement.FlipText = CType(resources.GetObject("RadButton1.RootElement.FlipText"), Boolean)
-        Me.RadButtonLizenzen.RootElement.Margin = CType(resources.GetObject("RadButton1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButtonLizenzen.RootElement.Padding = CType(resources.GetObject("RadButton1.RootElement.Padding"), System.Windows.Forms.Padding)
-        Me.RadButtonLizenzen.RootElement.Text = resources.GetString("RadButton1.RootElement.Text")
-        Me.RadButtonLizenzen.RootElement.TextOrientation = CType(resources.GetObject("RadButton1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadButtonLizenzen.RootElement.AccessibleDescription = Nothing
+        Me.RadButtonLizenzen.RootElement.AccessibleName = Nothing
+        Me.RadButtonLizenzen.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
+        Me.RadButtonLizenzen.RootElement.AngleTransform = 0.0!
+        Me.RadButtonLizenzen.RootElement.FlipText = False
+        Me.RadButtonLizenzen.RootElement.Margin = New System.Windows.Forms.Padding(0)
+        Me.RadButtonLizenzen.RootElement.Padding = New System.Windows.Forms.Padding(0)
+        Me.RadButtonLizenzen.RootElement.Text = Nothing
+        Me.RadButtonLizenzen.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
+        Me.RadButtonLizenzen.Size = New System.Drawing.Size(172, 24)
+        Me.RadButtonLizenzen.TabIndex = 2
+        Me.RadButtonLizenzen.Text = "Lizenzen verwalten"
         '
         'RadButtonEichmarkenStatistik
         '
-        resources.ApplyResources(Me.RadButtonEichmarkenStatistik, "RadButtonEichmarkenStatistik")
+        Me.RadButtonEichmarkenStatistik.Location = New System.Drawing.Point(7, 37)
         Me.RadButtonEichmarkenStatistik.Name = "RadButtonEichmarkenStatistik"
         '
         '
         '
-        Me.RadButtonEichmarkenStatistik.RootElement.AccessibleDescription = resources.GetString("RadButton2.RootElement.AccessibleDescription")
-        Me.RadButtonEichmarkenStatistik.RootElement.AccessibleName = resources.GetString("RadButton2.RootElement.AccessibleName")
-        Me.RadButtonEichmarkenStatistik.RootElement.Alignment = CType(resources.GetObject("RadButton2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadButtonEichmarkenStatistik.RootElement.AngleTransform = CType(resources.GetObject("RadButton2.RootElement.AngleTransform"), Single)
-        Me.RadButtonEichmarkenStatistik.RootElement.FlipText = CType(resources.GetObject("RadButton2.RootElement.FlipText"), Boolean)
-        Me.RadButtonEichmarkenStatistik.RootElement.Margin = CType(resources.GetObject("RadButton2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButtonEichmarkenStatistik.RootElement.Padding = CType(resources.GetObject("RadButton2.RootElement.Padding"), System.Windows.Forms.Padding)
-        Me.RadButtonEichmarkenStatistik.RootElement.Text = resources.GetString("RadButton2.RootElement.Text")
-        Me.RadButtonEichmarkenStatistik.RootElement.TextOrientation = CType(resources.GetObject("RadButton2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadButtonEichmarkenStatistik.RootElement.AccessibleDescription = Nothing
+        Me.RadButtonEichmarkenStatistik.RootElement.AccessibleName = Nothing
+        Me.RadButtonEichmarkenStatistik.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
+        Me.RadButtonEichmarkenStatistik.RootElement.AngleTransform = 0.0!
+        Me.RadButtonEichmarkenStatistik.RootElement.FlipText = False
+        Me.RadButtonEichmarkenStatistik.RootElement.Margin = New System.Windows.Forms.Padding(0)
+        Me.RadButtonEichmarkenStatistik.RootElement.Padding = New System.Windows.Forms.Padding(0)
+        Me.RadButtonEichmarkenStatistik.RootElement.Text = Nothing
+        Me.RadButtonEichmarkenStatistik.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
+        Me.RadButtonEichmarkenStatistik.Size = New System.Drawing.Size(172, 24)
+        Me.RadButtonEichmarkenStatistik.TabIndex = 3
+        Me.RadButtonEichmarkenStatistik.Text = "Eichmarken Übersicht"
         '
         'RadGroupBox1
         '
@@ -118,53 +131,89 @@ Partial Class frmMain
         Me.RadGroupBox1.Controls.Add(Me.RadButtonAuswertegeraet)
         Me.RadGroupBox1.Controls.Add(Me.RadButtonWaegezelle)
         Me.RadGroupBox1.Controls.Add(Me.RadButtonLizenzen)
-        resources.ApplyResources(Me.RadGroupBox1, "RadGroupBox1")
+        Me.RadGroupBox1.HeaderText = "Verwaltung"
+        Me.RadGroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.RadGroupBox1.Name = "RadGroupBox1"
         '
         '
         '
-        Me.RadGroupBox1.RootElement.Padding = CType(resources.GetObject("RadGroupBox1.RootElement.Padding"), System.Windows.Forms.Padding)
+        Me.RadGroupBox1.RootElement.Padding = New System.Windows.Forms.Padding(2, 18, 2, 2)
+        Me.RadGroupBox1.Size = New System.Drawing.Size(184, 139)
+        Me.RadGroupBox1.TabIndex = 4
+        Me.RadGroupBox1.Text = "Verwaltung"
         '
         'RadGroupBox2
         '
         Me.RadGroupBox2.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.RadGroupBox2.Controls.Add(Me.RadButtonMogelstatistik)
         Me.RadGroupBox2.Controls.Add(Me.RadButtonVerbindungsprotokoll)
         Me.RadGroupBox2.Controls.Add(Me.RadButtonEichmarkenStatistik)
-        resources.ApplyResources(Me.RadGroupBox2, "RadGroupBox2")
+        Me.RadGroupBox2.HeaderText = "Statistik"
+        Me.RadGroupBox2.Location = New System.Drawing.Point(265, 12)
         Me.RadGroupBox2.Name = "RadGroupBox2"
         '
         '
         '
-        Me.RadGroupBox2.RootElement.Padding = CType(resources.GetObject("RadGroupBox2.RootElement.Padding"), System.Windows.Forms.Padding)
+        Me.RadGroupBox2.RootElement.Padding = New System.Windows.Forms.Padding(2, 18, 2, 2)
+        Me.RadGroupBox2.Size = New System.Drawing.Size(184, 139)
+        Me.RadGroupBox2.TabIndex = 5
+        Me.RadGroupBox2.Text = "Statistik"
         '
-        'PictureBox1
+        'RadButtonMogelstatistik
         '
-        Me.PictureBox1.Image = Global.EichsoftwareAdministrationsClient.My.Resources.Resources.RHEWA_Logo_35mm_600dpi
-        resources.ApplyResources(Me.PictureBox1, "PictureBox1")
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.TabStop = False
+        Me.RadButtonMogelstatistik.Location = New System.Drawing.Point(7, 97)
+        Me.RadButtonMogelstatistik.Name = "RadButtonMogelstatistik"
+        '
+        '
+        '
+        Me.RadButtonMogelstatistik.RootElement.AccessibleDescription = Nothing
+        Me.RadButtonMogelstatistik.RootElement.AccessibleName = Nothing
+        Me.RadButtonMogelstatistik.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
+        Me.RadButtonMogelstatistik.RootElement.AngleTransform = 0.0!
+        Me.RadButtonMogelstatistik.RootElement.FlipText = False
+        Me.RadButtonMogelstatistik.RootElement.Margin = New System.Windows.Forms.Padding(0)
+        Me.RadButtonMogelstatistik.RootElement.Padding = New System.Windows.Forms.Padding(0)
+        Me.RadButtonMogelstatistik.RootElement.Text = Nothing
+        Me.RadButtonMogelstatistik.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
+        Me.RadButtonMogelstatistik.Size = New System.Drawing.Size(172, 24)
+        Me.RadButtonMogelstatistik.TabIndex = 4
+        Me.RadButtonMogelstatistik.Text = "Mogel Statistik"
         '
         'RadButtonVerbindungsprotokoll
         '
-        resources.ApplyResources(Me.RadButtonVerbindungsprotokoll, "RadButtonVerbindungsprotokoll")
+        Me.RadButtonVerbindungsprotokoll.Location = New System.Drawing.Point(7, 67)
         Me.RadButtonVerbindungsprotokoll.Name = "RadButtonVerbindungsprotokoll"
         '
         '
         '
-        Me.RadButtonVerbindungsprotokoll.RootElement.AccessibleDescription = resources.GetString("RadButton3.RootElement.AccessibleDescription")
-        Me.RadButtonVerbindungsprotokoll.RootElement.AccessibleName = resources.GetString("RadButton3.RootElement.AccessibleName")
-        Me.RadButtonVerbindungsprotokoll.RootElement.Alignment = CType(resources.GetObject("RadButton3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadButtonVerbindungsprotokoll.RootElement.AngleTransform = CType(resources.GetObject("RadButton3.RootElement.AngleTransform"), Single)
-        Me.RadButtonVerbindungsprotokoll.RootElement.FlipText = CType(resources.GetObject("RadButton3.RootElement.FlipText"), Boolean)
-        Me.RadButtonVerbindungsprotokoll.RootElement.Margin = CType(resources.GetObject("RadButton3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButtonVerbindungsprotokoll.RootElement.Padding = CType(resources.GetObject("RadButton3.RootElement.Padding"), System.Windows.Forms.Padding)
-        Me.RadButtonVerbindungsprotokoll.RootElement.Text = resources.GetString("RadButton3.RootElement.Text")
-        Me.RadButtonVerbindungsprotokoll.RootElement.TextOrientation = CType(resources.GetObject("RadButton3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadButtonVerbindungsprotokoll.RootElement.AccessibleDescription = Nothing
+        Me.RadButtonVerbindungsprotokoll.RootElement.AccessibleName = Nothing
+        Me.RadButtonVerbindungsprotokoll.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
+        Me.RadButtonVerbindungsprotokoll.RootElement.AngleTransform = 0.0!
+        Me.RadButtonVerbindungsprotokoll.RootElement.FlipText = False
+        Me.RadButtonVerbindungsprotokoll.RootElement.Margin = New System.Windows.Forms.Padding(0)
+        Me.RadButtonVerbindungsprotokoll.RootElement.Padding = New System.Windows.Forms.Padding(0)
+        Me.RadButtonVerbindungsprotokoll.RootElement.Text = Nothing
+        Me.RadButtonVerbindungsprotokoll.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
+        Me.RadButtonVerbindungsprotokoll.Size = New System.Drawing.Size(172, 24)
+        Me.RadButtonVerbindungsprotokoll.TabIndex = 4
+        Me.RadButtonVerbindungsprotokoll.Text = "Verbindungsprotokoll"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.EichsoftwareAdministrationsClient.My.Resources.Resources.RHEWA_Logo_35mm_600dpi
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 157)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(146, 62)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 6
+        Me.PictureBox1.TabStop = False
         '
         'frmMain
         '
-        resources.ApplyResources(Me, "$this")
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(461, 231)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.RadGroupBox2)
         Me.Controls.Add(Me.RadGroupBox1)
@@ -172,16 +221,17 @@ Partial Class frmMain
         '
         '
         '
-        Me.RootElement.AccessibleDescription = resources.GetString("frmMain.RootElement.AccessibleDescription")
-        Me.RootElement.AccessibleName = resources.GetString("frmMain.RootElement.AccessibleName")
-        Me.RootElement.Alignment = CType(resources.GetObject("frmMain.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RootElement.AngleTransform = CType(resources.GetObject("frmMain.RootElement.AngleTransform"), Single)
+        Me.RootElement.AccessibleDescription = Nothing
+        Me.RootElement.AccessibleName = Nothing
+        Me.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
+        Me.RootElement.AngleTransform = 0.0!
         Me.RootElement.ApplyShapeToControl = True
-        Me.RootElement.FlipText = CType(resources.GetObject("frmMain.RootElement.FlipText"), Boolean)
-        Me.RootElement.Margin = CType(resources.GetObject("frmMain.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RootElement.Padding = CType(resources.GetObject("frmMain.RootElement.Padding"), System.Windows.Forms.Padding)
-        Me.RootElement.Text = resources.GetString("frmMain.RootElement.Text")
-        Me.RootElement.TextOrientation = CType(resources.GetObject("frmMain.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RootElement.FlipText = False
+        Me.RootElement.Margin = New System.Windows.Forms.Padding(0)
+        Me.RootElement.Padding = New System.Windows.Forms.Padding(0)
+        Me.RootElement.Text = Nothing
+        Me.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
+        Me.Text = "Verwaltung und Statistik"
         CType(Me.RadButtonAuswertegeraet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonWaegezelle, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonLizenzen, System.ComponentModel.ISupportInitialize).EndInit()
@@ -190,8 +240,9 @@ Partial Class frmMain
         Me.RadGroupBox1.ResumeLayout(False)
         CType(Me.RadGroupBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBox2.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadButtonMogelstatistik, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonVerbindungsprotokoll, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -204,5 +255,6 @@ Partial Class frmMain
     Friend WithEvents RadGroupBox2 As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents RadButtonVerbindungsprotokoll As Telerik.WinControls.UI.RadButton
+    Friend WithEvents RadButtonMogelstatistik As Telerik.WinControls.UI.RadButton
 End Class
 

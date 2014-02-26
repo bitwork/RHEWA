@@ -22,9 +22,28 @@
                 RadGridViewAuswahlliste.Columns("ServerMogelstatistik").IsVisible = False
                 RadGridViewAuswahlliste.Columns("Hoechsteteilungsfaktor").HeaderText = "Höchstteilungsfaktor"
             Catch ex As Exception
+                MessageBox.Show(ex.Message)
+                MessageBox.Show(ex.StackTrace)
+            End Try
+
+            'unbenennung der Spalten
+            Try
+                RadGridViewAuswahlliste.Columns("Pruefbericht").HeaderText = "Prüfbericht"
+                RadGridViewAuswahlliste.Columns("Waegezellenkennwert").HeaderText = "Wägezellenkennwert"
+                RadGridViewAuswahlliste.Columns("MaxAnzahlTeilungswerte").HeaderText = "Max. Anzahl Teilungswerte"
+                RadGridViewAuswahlliste.Columns("MinTeilungswert").HeaderText = "MIN Teilungswert"
+                RadGridViewAuswahlliste.Columns("Hoechsteteilungsfaktor").HeaderText = "Höchsteteilungsfaktor"
+                RadGridViewAuswahlliste.Columns("RueckkehrVorlastsignal").HeaderText = "Rückkehr Vorlastsignal"
+                RadGridViewAuswahlliste.Columns("WiderstandWaegezelle").HeaderText = "Widerstand der Wägezelle"
+                RadGridViewAuswahlliste.Columns("GrenzwertTemperaturbereichMIN").HeaderText = "Grenzwert Temperaturbereich MIN"
+                RadGridViewAuswahlliste.Columns("GrenzwertTemperaturbereichMAX").HeaderText = "Grenzwert Temperaturbereich MAX"
+                RadGridViewAuswahlliste.Columns("BruchteilEichfehlergrenze").HeaderText = "Bruchteil Eichfehlergrenze"
+                RadGridViewAuswahlliste.Columns("ErstellDatum").HeaderText = "Erstellungsdatum"
+
+                RadGridViewAuswahlliste.BestFitColumns()
+            Catch ex As Exception
 
             End Try
-            RadGridViewAuswahlliste.BestFitColumns()
         End Using
     End Sub
 

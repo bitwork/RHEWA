@@ -39,6 +39,8 @@ Partial Class FrmVerbindungsprotokoll
         Me.RadGridView1.MasterTemplate.AllowCellContextMenu = False
         Me.RadGridView1.MasterTemplate.AllowDeleteRow = False
         Me.RadGridView1.MasterTemplate.AllowEditRow = False
+        Me.RadGridView1.MasterTemplate.EnableAlternatingRowColor = True
+        Me.RadGridView1.MasterTemplate.EnableFiltering = True
         Me.RadGridView1.Name = "RadGridView1"
         Me.RadGridView1.ReadOnly = True
         Me.RadGridView1.Size = New System.Drawing.Size(873, 522)

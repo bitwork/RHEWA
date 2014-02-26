@@ -130,13 +130,19 @@
     <Compile Include="Firmen.vb">
       <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
     </Compile>
+    <Compile Include="ServerEichmarkenverwaltung.vb">
+      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
+    </Compile>
     <Compile Include="ServerFirmenZusatzdaten.vb">
       <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
     </Compile>
-    <Compile Include="ServerKonfiguration.vb">
+    <Compile Include="ServerLookupVertragspartnerFirma.vb">
       <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
     </Compile>
-    <Compile Include="ServerLookupVertragspartnerFirma.vb">
+    <Compile Include="ServerLookup_Auswertegeraet.vb">
+      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServerLookup_Waegezelle.vb">
       <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
     </Compile>
     <Compile Include="View\frmAuswahllisteLizenzen.Designer.vb">
@@ -178,12 +184,16 @@
     <Compile Include="View\frmAuswertegeraet.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Statistiken\frmEichmarkenverwaltung.Designer.vb">
-      <DependentUpon>frmEichmarkenverwaltung.vb</DependentUpon>
+    <Compile Include="View\Statistiken\frmMogelstatistik.Designer.vb">
+      <DependentUpon>frmMogelstatistik.vb</DependentUpon>
     </Compile>
-    <Compile Include="View\Statistiken\frmEichmarkenverwaltung.vb">
+    <Compile Include="View\Statistiken\frmMogelstatistik.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="View\frmEichmarkenverwaltung.Designer.vb">
+      <DependentUpon>frmEichmarkenverwaltung.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmEichmarkenverwaltung.vb" />
     <Compile Include="View\frmMain.Designer.vb">
       <DependentUpon>frmMain.vb</DependentUpon>
     </Compile>
@@ -214,7 +224,6 @@
     <Compile Include="View\frmWaegezelle.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Model\RuntimeLocalizer.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -230,79 +239,22 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="ServerBeschaffenheitspruefung.vb">
-      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ServerEichmarkenverwaltung.vb">
-      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ServerEichprotokoll.vb">
-      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ServerEichprozess.vb">
-      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
-    </Compile>
     <Compile Include="ServerKompatiblitaetsnachweis.vb">
       <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
     </Compile>
     <Compile Include="ServerLizensierung.vb">
       <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
     </Compile>
-    <Compile Include="ServerLookup_Auswertegeraet.vb">
-      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
-    </Compile>
     <Compile Include="ServerLookup_Bearbeitungsstatus.vb">
-      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ServerLookup_Konformitaetsbewertungsverfahren.vb">
-      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ServerLookup_Vorgangsstatus.vb">
-      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ServerLookup_Waagenart.vb">
-      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ServerLookup_Waagentyp.vb">
-      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ServerLookup_Waegezelle.vb">
       <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
     </Compile>
     <Compile Include="ServerMogelstatistik.vb">
       <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
     </Compile>
-    <Compile Include="ServerPruefungAnsprechvermoegen.vb">
-      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ServerPruefungAussermittigeBelastung.vb">
-      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ServerPruefungEichfehlergrenzen.vb">
-      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ServerPruefungLinearitaetFallend.vb">
-      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ServerPruefungLinearitaetSteigend.vb">
-      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ServerPruefungRollendeLasten.vb">
-      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ServerPruefungStabilitaetGleichgewichtslage.vb">
-      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ServerPruefungStaffelverfahrenErsatzlast.vb">
-      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ServerPruefungStaffelverfahrenNormallast.vb">
-      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ServerPruefungWiederholbarkeit.vb">
-      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
-    </Compile>
     <Compile Include="ServerVerbindungsprotokoll.vb">
+      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View_Eichmarkenverwaltung.vb">
       <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="View\frmAuswahllisteLizenzen.resx">
@@ -317,11 +269,11 @@
     <EmbeddedResource Include="View\frmAuswertegeraet.resx">
       <DependentUpon>frmAuswertegeraet.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Statistiken\frmEichmarkenverwaltung.resx">
-      <DependentUpon>frmEichmarkenverwaltung.vb</DependentUpon>
+    <EmbeddedResource Include="View\Statistiken\frmMogelstatistik.resx">
+      <DependentUpon>frmMogelstatistik.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmMain.de.resx">
-      <DependentUpon>frmMain.vb</DependentUpon>
+    <EmbeddedResource Include="View\frmEichmarkenverwaltung.resx">
+      <DependentUpon>frmEichmarkenverwaltung.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmNeueLizenz.resx">
       <DependentUpon>frmNeueLizenz.vb</DependentUpon>

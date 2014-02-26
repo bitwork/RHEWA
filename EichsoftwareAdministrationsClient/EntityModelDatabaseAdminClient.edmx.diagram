@@ -4,58 +4,21 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="609fb02769424b229fc8f7cc58ee5e7f" Name="Diagram1" ZoomLevel="45">
-        <EntityTypeShape EntityType="EichenModel.ServerBeschaffenheitspruefung" Width="1.5" PointX="6.5" PointY="61.75" />
-        <EntityTypeShape EntityType="EichenModel.ServerEichmarkenverwaltung" Width="1.5" PointX="0.75" PointY="2.375" />
-        <EntityTypeShape EntityType="EichenModel.ServerEichprotokoll" Width="2" PointX="3" PointY="20.125" />
-        <EntityTypeShape EntityType="EichenModel.ServerEichprozess" Width="1.5" PointX="8.75" PointY="25.5" />
-        <EntityTypeShape EntityType="EichenModel.ServerKompatiblitaetsnachweis" Width="1.5" PointX="6.5" PointY="0.75" />
-        <EntityTypeShape EntityType="EichenModel.ServerLizensierung" Width="1.5" PointX="2.75" PointY="2.375" />
-        <EntityTypeShape EntityType="EichenModel.ServerLookup_Auswertegeraet" Width="1.5" PointX="6.5" PointY="69.5" />
-        <EntityTypeShape EntityType="EichenModel.ServerLookup_Konformitaetsbewertungsverfahren" Width="1.5" PointX="0.75" PointY="27.625" />
-        <EntityTypeShape EntityType="EichenModel.ServerLookup_Vorgangsstatus" Width="1.5" PointX="6.5" PointY="56.25" />
-        <EntityTypeShape EntityType="EichenModel.ServerLookup_Waagenart" Width="1.5" PointX="6.5" PointY="59" />
-        <EntityTypeShape EntityType="EichenModel.ServerLookup_Waagentyp" Width="1.5" PointX="6.5" PointY="66.75" />
-        <EntityTypeShape EntityType="EichenModel.ServerLookup_Waegezelle" Width="1.5" PointX="6.5" PointY="30.25" />
-        <EntityTypeShape EntityType="EichenModel.ServerMogelstatistik" Width="1.5" PointX="11" PointY="25.125" />
-        <EntityTypeShape EntityType="EichenModel.ServerPruefungAnsprechvermoegen" Width="1.5" PointX="5.75" PointY="19.375" />
-        <EntityTypeShape EntityType="EichenModel.ServerPruefungAussermittigeBelastung" Width="1.5" PointX="5.75" PointY="40.125" />
-        <EntityTypeShape EntityType="EichenModel.ServerPruefungEichfehlergrenzen" Width="1.5" PointX="5.75" PointY="36.625" />
-        <EntityTypeShape EntityType="EichenModel.ServerPruefungLinearitaetFallend" Width="1.5" PointX="5.75" PointY="22.75" />
-        <EntityTypeShape EntityType="EichenModel.ServerPruefungLinearitaetSteigend" Width="1.5" PointX="5.75" PointY="26.25" />
-        <EntityTypeShape EntityType="EichenModel.ServerPruefungRollendeLasten" Width="1.5" PointX="5.75" PointY="47.375" />
-        <EntityTypeShape EntityType="EichenModel.ServerPruefungStabilitaetGleichgewichtslage" Width="1.5" PointX="5.75" PointY="43.875" />
-        <EntityTypeShape EntityType="EichenModel.ServerPruefungStaffelverfahrenErsatzlast" Width="1.5" PointX="5.75" PointY="51" />
-        <EntityTypeShape EntityType="EichenModel.ServerPruefungStaffelverfahrenNormallast" Width="1.5" PointX="5.75" PointY="8.75" />
-        <EntityTypeShape EntityType="EichenModel.ServerPruefungWiederholbarkeit" Width="1.5" PointX="5.75" PointY="15.75" />
-        <AssociationConnector Association="EichenModel.FK_Eichprozess_Beschaffenheitspruefung" />
-        <AssociationConnector Association="EichenModel.FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren" />
-        <AssociationConnector Association="EichenModel.FK_Eichprozess_Eichprotokoll" />
-        <AssociationConnector Association="EichenModel.FK_PruefungAussermittigeBelastung_Eichprotokoll" />
-        <AssociationConnector Association="EichenModel.FK_PruefungEichfehlergrenzen_Eichprotokoll" />
-        <AssociationConnector Association="EichenModel.FK_PruefungLinearitaetFallend_Eichprotokoll" />
-        <AssociationConnector Association="EichenModel.FK_PruefungLinearitaetSteigend_Eichprotokoll" />
-        <AssociationConnector Association="EichenModel.FK_PruefungLinearitaetSteigendAnsprechvermoegen_Eichprotokoll" />
-        <AssociationConnector Association="EichenModel.FK_PruefungRollendeLasten_Eichprotokoll" />
-        <AssociationConnector Association="EichenModel.FK_PruefungStabilitaetGleichgewichtslage_Eichprotokoll" />
-        <AssociationConnector Association="EichenModel.FK_PruefungStaffelverfahrenErsatzlast_Eichprotokoll" />
-        <AssociationConnector Association="EichenModel.FK_PruefungStaffelverfahrenNormallast_Eichprotokoll" />
-        <AssociationConnector Association="EichenModel.FK_PruefungWiederholbarkeit_Eichprotokoll" />
-        <AssociationConnector Association="EichenModel.FK_Eichprozess_Kompatiblitaetsnachweis" />
-        <AssociationConnector Association="EichenModel.FK_Eichprozess_Lookup_Auswertegeraet" />
-        <AssociationConnector Association="EichenModel.FK_Eichprozess_Lookup_Vorgangsstatus" />
-        <AssociationConnector Association="EichenModel.FK_Eichprozess_Lookup_Waagenart" />
-        <AssociationConnector Association="EichenModel.FK_Eichprozess_Lookup_Waagentyp" />
-        <AssociationConnector Association="EichenModel.FK_Eichprozess_Lookup_Waegezelle" />
-        <AssociationConnector Association="EichenModel.FK_Mogelstatistik_Eichprozess" />
+      <Diagram DiagramId="609fb02769424b229fc8f7cc58ee5e7f" Name="Diagram1" ZoomLevel="51">
+        <EntityTypeShape EntityType="EichenModel.ServerKompatiblitaetsnachweis" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="EichenModel.ServerLizensierung" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="EichenModel.ServerMogelstatistik" Width="1.5" PointX="3" PointY="1.125" />
+        <EntityTypeShape EntityType="EichenModel.ServerVerbindungsprotokoll" Width="1.5" PointX="7.75" PointY="3.75" />
+        <EntityTypeShape EntityType="EichenModel.Benutzer" Width="1.5" PointX="7.75" PointY="7.75" />
+        <EntityTypeShape EntityType="EichenModel.Firmen" Width="1.5" PointX="9.75" PointY="0.75" />
+        <EntityTypeShape EntityType="EichenModel.ServerFirmenZusatzdaten" Width="1.5" PointX="2.75" PointY="9.75" />
+        <EntityTypeShape EntityType="EichenModel.ServerLookupVertragspartnerFirma" Width="1.5" PointX="9.75" PointY="4.75" />
+        <EntityTypeShape EntityType="EichenModel.View_Eichmarkenverwaltung" Width="5" PointX="9.75" PointY="7.75" />
+        <EntityTypeShape EntityType="EichenModel.ServerLookup_Auswertegeraet" Width="1.5" PointX="0.75" PointY="2.25" />
+        <EntityTypeShape EntityType="EichenModel.ServerLookup_Waegezelle" Width="1.5" PointX="0.75" PointY="8" />
         <AssociationConnector Association="EichenModel.FK_Mogelstatistik_Lookup_Auswertegeraet" />
         <AssociationConnector Association="EichenModel.FK_Mogelstatistik_Lookup_Waegezelle" />
-        <EntityTypeShape EntityType="EichenModel.ServerVerbindungsprotokoll" Width="1.5" PointX="2.75" PointY="5.375" />
-        <EntityTypeShape EntityType="EichenModel.ServerKonfiguration" Width="1.5" PointX="2.75" PointY="9.375" />
-        <EntityTypeShape EntityType="EichenModel.Benutzer" Width="1.5" PointX="7.75" PointY="8.375" />
-        <EntityTypeShape EntityType="EichenModel.Firmen" Width="1.5" PointX="8.75" PointY="2.375" />
-        <EntityTypeShape EntityType="EichenModel.ServerFirmenZusatzdaten" Width="1.5" PointX="9.75" PointY="6.375" />
-        <EntityTypeShape EntityType="EichenModel.ServerLookupVertragspartnerFirma" Width="1.5" PointX="2.497899319277098" PointY="10.387970988819362" />
+        <EntityTypeShape EntityType="EichenModel.ServerEichmarkenverwaltung" Width="3.625" PointX="14.875" PointY="7.625" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

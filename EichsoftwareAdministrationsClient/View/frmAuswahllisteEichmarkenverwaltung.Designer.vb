@@ -43,7 +43,10 @@ Partial Class FrmAuswahllisteEichmarkenverwaltung
         Me.RadGridView1.MasterTemplate.AllowCellContextMenu = False
         Me.RadGridView1.MasterTemplate.AllowDeleteRow = False
         Me.RadGridView1.MasterTemplate.AllowEditRow = False
+        Me.RadGridView1.MasterTemplate.EnableFiltering = True
+        Me.RadGridView1.MasterTemplate.ShowHeaderCellButtons = True
         Me.RadGridView1.Name = "RadGridView1"
+        Me.RadGridView1.ShowHeaderCellButtons = True
         Me.RadGridView1.Size = New System.Drawing.Size(950, 489)
         Me.RadGridView1.TabIndex = 0
         Me.RadGridView1.Text = "RadGridView1"

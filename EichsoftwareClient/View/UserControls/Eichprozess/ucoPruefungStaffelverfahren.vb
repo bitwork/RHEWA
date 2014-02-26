@@ -74,7 +74,7 @@
 
 #Region "Methods"
     Private Sub LoadFromDatabase()
-
+        Me.SuspendLayout()
         objEichprozess = ParentFormular.CurrentEichprozess
         'events abbrechen
         _suspendEvents = True
@@ -128,6 +128,7 @@
 
         'events abbrechen
         _suspendEvents = False
+        Me.ResumeLayout()
     End Sub
 
 

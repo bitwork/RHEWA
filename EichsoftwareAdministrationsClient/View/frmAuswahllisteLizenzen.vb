@@ -24,6 +24,14 @@
 
                 End Try
 
+                'unbenennugn der Spalten
+                Try
+                    RadGridViewAuswahlliste.Columns("HEKennung").HeaderText = "HE-Kennung"
+                    RadGridViewAuswahlliste.Columns("RHEWALizenz").HeaderText = "RHEWA Lizenz"
+                    RadGridViewAuswahlliste.Columns("LetzteAktivierung").HeaderText = "Letzte Aktivierung"
+
+                Catch e As Exception
+                End Try
                 RadGridViewAuswahlliste.BestFitColumns()
             Catch e As Exception
             End Try

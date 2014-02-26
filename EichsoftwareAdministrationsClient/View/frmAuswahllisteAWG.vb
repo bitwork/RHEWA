@@ -21,6 +21,26 @@
             Catch ex As Exception
 
             End Try
+
+            'unbenennugn der Spalten
+            Try
+                RadGridViewAuswahlliste.Columns("Pruefbericht").HeaderText = "Prüfbericht"
+                RadGridViewAuswahlliste.Columns("MAXAnzahlTeilungswerteEinbereichswaage").HeaderText = "Maximale Anzahl Teilungswerte Einbereichswaage"
+                RadGridViewAuswahlliste.Columns("MAXAnzahlTeilungswerteMehrbereichswaage").HeaderText = "Maximale Anzahl Teilungswerte Mehrbereichswaage"
+                RadGridViewAuswahlliste.Columns("GrenzwertLastwiderstandMIN").HeaderText = "Grenzwert Lastwiderstand MIN"
+                RadGridViewAuswahlliste.Columns("GrenzwertLastwiderstandMAX").HeaderText = "Grenzwert Lastwiderstand MAX"
+                RadGridViewAuswahlliste.Columns("GrenzwertTemperaturbereichMIN").HeaderText = "Grenzwert Temperaturbereich MIN"
+                RadGridViewAuswahlliste.Columns("GrenzwertTemperaturbereichMAX").HeaderText = "Grenzwert Temperaturbereich MAX"
+                RadGridViewAuswahlliste.Columns("BruchteilEichfehlergrenze").HeaderText = "Bruchteil Eichfehlergrenze"
+                RadGridViewAuswahlliste.Columns("KabellaengeQuerschnitt").HeaderText = "Kabellänge/ Querschnitt "
+                RadGridViewAuswahlliste.Columns("ErstellDatum").HeaderText = "Erstellungsdatum"
+
+
+
+
+            Catch ex As Exception
+
+            End Try
             
 
             RadGridViewAuswahlliste.BestFitColumns()
