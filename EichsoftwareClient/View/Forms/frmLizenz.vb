@@ -1,4 +1,6 @@
-﻿Public Class FrmLizenz
+﻿Imports System.Globalization
+
+Public Class FrmLizenz
 
     Private Sub FrmLizenz_LostFocus(sender As Object, e As EventArgs) Handles Me.LostFocus
         'deaktivieren des splashscreens
@@ -118,4 +120,41 @@
     Private Sub RadCheckBoxAkzeptieren_ToggleStateChanged(sender As Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadCheckBoxAkzeptieren.ToggleStateChanged
         RadButtonOK.Enabled = RadCheckBoxAkzeptieren.Checked
     End Sub
+
+
+#Region "Lokalisierung"
+    Private Sub RadButtonChangeLanguageToGerman_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonChangeLanguageToPolish.Click, RadButtonChangeLanguageToGerman.Click, RadButtonChangeLanguageToEnglish.Click
+        If sender.Equals(RadButtonChangeLanguageToEnglish) Then
+            changeCulture("en")
+        ElseIf sender.Equals(RadButtonChangeLanguageToGerman) Then
+            changeCulture("de")
+        ElseIf sender.Equals(RadButtonChangeLanguageToPolish) Then
+            changeCulture("pl")
+        End If
+    End Sub
+
+    Private Sub changeCulture(ByVal Code As String)
+        Dim culture As CultureInfo = CultureInfo.GetCultureInfo(Code)
+
+        Threading.Thread.CurrentThread.CurrentUICulture = culture
+        My.Settings.AktuelleSprache = Code
+        My.Settings.Save()
+
+
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmLizenz))
+        'übersetzung der Formular elemente von frmMainContainer
+
+        Me.RadTextBoxControl1.Text = resources.GetString("RadTextBoxControl1.Text")
+        Me.RadTextBoxControl2.Text = resources.GetString("RadTextBoxControl2.Text")
+        Me.RadTextBoxControl3.Text = resources.GetString("RadTextBoxControl3.Text")
+
+        Me.lblLizenzabkommen.Text = resources.GetString("lblLizenzabkommen.Text")
+        Me.lblLizenzschuessel.Text = resources.GetString("lblLizenzschuessel.Text")
+        Me.lblName.Text = resources.GetString("lblName.Text")
+
+        Me.RadCheckBoxAkzeptieren.Text = resources.GetString("RadCheckBoxAkzeptieren.Text")
+
+    End Sub
+#End Region
+
 End Class

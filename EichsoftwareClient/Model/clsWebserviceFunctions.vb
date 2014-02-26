@@ -221,71 +221,75 @@ Public Class clsWebserviceFunctions
                     'lizenzisierung holen
 
                     Dim objLiz = (From db In DBContext.Lizensierung Select db).FirstOrDefault
-                    Dim objAWGResultList = webContext.GetNeuesAWG(objLiz.HEKennung, objLiz.Lizenzschluessel, My.Settings.LetztesUpdate, My.User.Name, System.Environment.UserDomainName, My.Computer.Name, StartDatum, EndDatum)
-
-                    If Not objAWGResultList Is Nothing Then
-
-                        'alle neuen Artikel aus Server iterieren
-                        Dim tObjServerAWG As EichsoftwareWebservice.ServerLookup_Auswertegeraet 'hilfsvariable für Linq abfrage. Es gibt sonst eine Warnung wenn in Linq mit einer for each variablen gearbeitet wird
-                        For Each objServerArtikel As EichsoftwareWebservice.ServerLookup_Auswertegeraet In objAWGResultList
-                            tObjServerAWG = objServerArtikel
-                            'alle Artikel abrufen in denen die ID mit dem neuem Serverartikel übereinstimmt
-                            Dim query = From d In DBContext.Lookup_Auswertegeraet Where d.ID = tObjServerAWG._ID
-
-                            'prüfen ob es bereits einen Artikel in der lokalen DB gibt, mit dem aktuellen ID-Wert
-                            If query.Count = 0 Then 'Es gbit den Artikel noch nicht in der lokalen Datebank => insert 
-                                Dim newAWG As New Lookup_Auswertegeraet
+                    If Not objLiz Is Nothing Then
 
 
-                                newAWG.ID = objServerArtikel._ID
-                                newAWG.Bauartzulassung = objServerArtikel._Bauartzulassung
-                                newAWG.BruchteilEichfehlergrenze = objServerArtikel._BruchteilEichfehlergrenze
-                                newAWG.Genauigkeitsklasse = objServerArtikel._Genauigkeitsklasse
-                                newAWG.GrenzwertLastwiderstandMAX = objServerArtikel._GrenzwertLastwiderstandMAX
-                                newAWG.GrenzwertLastwiderstandMIN = objServerArtikel._GrenzwertLastwiderstandMIN
-                                newAWG.GrenzwertTemperaturbereichMAX = objServerArtikel._GrenzwertTemperaturbereichMAX
-                                newAWG.GrenzwertTemperaturbereichMIN = objServerArtikel._GrenzwertTemperaturbereichMIN
-                                newAWG.Hersteller = objServerArtikel._Hersteller
-                                newAWG.KabellaengeQuerschnitt = objServerArtikel._KabellaengeQuerschnitt
-                                newAWG.MAXAnzahlTeilungswerteEinbereichswaage = objServerArtikel._MAXAnzahlTeilungswerteEinbereichswaage
-                                newAWG.MAXAnzahlTeilungswerteMehrbereichswaage = objServerArtikel._MAXAnzahlTeilungswerteMehrbereichswaage
-                                newAWG.Mindesteingangsspannung = objServerArtikel._Mindesteingangsspannung
-                                newAWG.Mindestmesssignal = objServerArtikel._Mindestmesssignal
-                                newAWG.Pruefbericht = objServerArtikel._Pruefbericht
-                                newAWG.Speisespannung = objServerArtikel._Speisespannung
-                                newAWG.Typ = objServerArtikel._Typ
-                                'hinzufügen des neu erzeugten Artikels in Lokale Datenbank
-                                newAWG.Deaktiviert = objServerArtikel._Deaktiviert
-                                DBContext.Lookup_Auswertegeraet.Add(newAWG)
-                                DBContext.SaveChanges()
-                                bolNeuAWG = True
+                        Dim objAWGResultList = webContext.GetNeuesAWG(objLiz.HEKennung, objLiz.Lizenzschluessel, My.Settings.LetztesUpdate, My.User.Name, System.Environment.UserDomainName, My.Computer.Name, StartDatum, EndDatum)
+
+                        If Not objAWGResultList Is Nothing Then
+
+                            'alle neuen Artikel aus Server iterieren
+                            Dim tObjServerAWG As EichsoftwareWebservice.ServerLookup_Auswertegeraet 'hilfsvariable für Linq abfrage. Es gibt sonst eine Warnung wenn in Linq mit einer for each variablen gearbeitet wird
+                            For Each objServerArtikel As EichsoftwareWebservice.ServerLookup_Auswertegeraet In objAWGResultList
+                                tObjServerAWG = objServerArtikel
+                                'alle Artikel abrufen in denen die ID mit dem neuem Serverartikel übereinstimmt
+                                Dim query = From d In DBContext.Lookup_Auswertegeraet Where d.ID = tObjServerAWG._ID
+
+                                'prüfen ob es bereits einen Artikel in der lokalen DB gibt, mit dem aktuellen ID-Wert
+                                If query.Count = 0 Then 'Es gbit den Artikel noch nicht in der lokalen Datebank => insert 
+                                    Dim newAWG As New Lookup_Auswertegeraet
 
 
-                            Else 'Es gibt den Artikel bereits, er wird geupdated
-                                For Each objAWG As Lookup_Auswertegeraet In query 'es sollte nur einen Artikel Geben, da die IDs eindeutig sind.
-
-                                    objAWG.Bauartzulassung = objServerArtikel._Bauartzulassung
-                                    objAWG.BruchteilEichfehlergrenze = objServerArtikel._BruchteilEichfehlergrenze
-                                    objAWG.Genauigkeitsklasse = objServerArtikel._Genauigkeitsklasse
-                                    objAWG.GrenzwertLastwiderstandMAX = objServerArtikel._GrenzwertLastwiderstandMAX
-                                    objAWG.GrenzwertLastwiderstandMIN = objServerArtikel._GrenzwertLastwiderstandMIN
-                                    objAWG.GrenzwertTemperaturbereichMAX = objServerArtikel._GrenzwertTemperaturbereichMAX
-                                    objAWG.GrenzwertTemperaturbereichMIN = objServerArtikel._GrenzwertTemperaturbereichMIN
-                                    objAWG.Hersteller = objServerArtikel._Hersteller
-                                    objAWG.KabellaengeQuerschnitt = objServerArtikel._KabellaengeQuerschnitt
-                                    objAWG.MAXAnzahlTeilungswerteEinbereichswaage = objServerArtikel._MAXAnzahlTeilungswerteEinbereichswaage
-                                    objAWG.MAXAnzahlTeilungswerteMehrbereichswaage = objServerArtikel._MAXAnzahlTeilungswerteMehrbereichswaage
-                                    objAWG.Mindesteingangsspannung = objServerArtikel._Mindesteingangsspannung
-                                    objAWG.Mindestmesssignal = objServerArtikel._Mindestmesssignal
-                                    objAWG.Pruefbericht = objServerArtikel._Pruefbericht
-                                    objAWG.Speisespannung = objServerArtikel._Speisespannung
-                                    objAWG.Typ = objServerArtikel._Typ
-                                    objAWG.Deaktiviert = objServerArtikel._Deaktiviert
+                                    newAWG.ID = objServerArtikel._ID
+                                    newAWG.Bauartzulassung = objServerArtikel._Bauartzulassung
+                                    newAWG.BruchteilEichfehlergrenze = objServerArtikel._BruchteilEichfehlergrenze
+                                    newAWG.Genauigkeitsklasse = objServerArtikel._Genauigkeitsklasse
+                                    newAWG.GrenzwertLastwiderstandMAX = objServerArtikel._GrenzwertLastwiderstandMAX
+                                    newAWG.GrenzwertLastwiderstandMIN = objServerArtikel._GrenzwertLastwiderstandMIN
+                                    newAWG.GrenzwertTemperaturbereichMAX = objServerArtikel._GrenzwertTemperaturbereichMAX
+                                    newAWG.GrenzwertTemperaturbereichMIN = objServerArtikel._GrenzwertTemperaturbereichMIN
+                                    newAWG.Hersteller = objServerArtikel._Hersteller
+                                    newAWG.KabellaengeQuerschnitt = objServerArtikel._KabellaengeQuerschnitt
+                                    newAWG.MAXAnzahlTeilungswerteEinbereichswaage = objServerArtikel._MAXAnzahlTeilungswerteEinbereichswaage
+                                    newAWG.MAXAnzahlTeilungswerteMehrbereichswaage = objServerArtikel._MAXAnzahlTeilungswerteMehrbereichswaage
+                                    newAWG.Mindesteingangsspannung = objServerArtikel._Mindesteingangsspannung
+                                    newAWG.Mindestmesssignal = objServerArtikel._Mindestmesssignal
+                                    newAWG.Pruefbericht = objServerArtikel._Pruefbericht
+                                    newAWG.Speisespannung = objServerArtikel._Speisespannung
+                                    newAWG.Typ = objServerArtikel._Typ
+                                    'hinzufügen des neu erzeugten Artikels in Lokale Datenbank
+                                    newAWG.Deaktiviert = objServerArtikel._Deaktiviert
+                                    DBContext.Lookup_Auswertegeraet.Add(newAWG)
+                                    DBContext.SaveChanges()
                                     bolNeuAWG = True
-                                Next
-                            End If
-                        Next
 
+
+                                Else 'Es gibt den Artikel bereits, er wird geupdated
+                                    For Each objAWG As Lookup_Auswertegeraet In query 'es sollte nur einen Artikel Geben, da die IDs eindeutig sind.
+
+                                        objAWG.Bauartzulassung = objServerArtikel._Bauartzulassung
+                                        objAWG.BruchteilEichfehlergrenze = objServerArtikel._BruchteilEichfehlergrenze
+                                        objAWG.Genauigkeitsklasse = objServerArtikel._Genauigkeitsklasse
+                                        objAWG.GrenzwertLastwiderstandMAX = objServerArtikel._GrenzwertLastwiderstandMAX
+                                        objAWG.GrenzwertLastwiderstandMIN = objServerArtikel._GrenzwertLastwiderstandMIN
+                                        objAWG.GrenzwertTemperaturbereichMAX = objServerArtikel._GrenzwertTemperaturbereichMAX
+                                        objAWG.GrenzwertTemperaturbereichMIN = objServerArtikel._GrenzwertTemperaturbereichMIN
+                                        objAWG.Hersteller = objServerArtikel._Hersteller
+                                        objAWG.KabellaengeQuerschnitt = objServerArtikel._KabellaengeQuerschnitt
+                                        objAWG.MAXAnzahlTeilungswerteEinbereichswaage = objServerArtikel._MAXAnzahlTeilungswerteEinbereichswaage
+                                        objAWG.MAXAnzahlTeilungswerteMehrbereichswaage = objServerArtikel._MAXAnzahlTeilungswerteMehrbereichswaage
+                                        objAWG.Mindesteingangsspannung = objServerArtikel._Mindesteingangsspannung
+                                        objAWG.Mindestmesssignal = objServerArtikel._Mindestmesssignal
+                                        objAWG.Pruefbericht = objServerArtikel._Pruefbericht
+                                        objAWG.Speisespannung = objServerArtikel._Speisespannung
+                                        objAWG.Typ = objServerArtikel._Typ
+                                        objAWG.Deaktiviert = objServerArtikel._Deaktiviert
+                                        bolNeuAWG = True
+                                    Next
+                                End If
+                            Next
+
+                        End If
                     End If
                     Try
                         DBContext.SaveChanges()
@@ -653,5 +657,92 @@ Public Class clsWebserviceFunctions
             End Using
         End Using
         Return Nothing
+    End Function
+
+
+    ''' <summary>
+    ''' Sperrt den aktuellen Server Eichprozess zur Bearbeitung. Wenn ein anderer Benutzer diesen DS öffnen will, kriegt er eine hinweismeldung
+    ''' </summary>
+    ''' <param name="bolSperren"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    ''' <author></author>
+    ''' <commentauthor></commentauthor>
+    Public Function SetzeSperrung(ByVal bolSperren As Boolean, ByVal EichprozessVorgangsnummer As String) As Boolean
+        'neue Datenbankverbindung
+        Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
+            Try
+                webContext.Open()
+            Catch ex As Exception
+                MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Return False
+            End Try
+            Using dbcontext As New EichsoftwareClientdatabaseEntities1
+
+                Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
+                'prüfen ob der datensatz von jemand anderem in Bearbeitung ist
+                Dim bolSetSperrung As Boolean = True 'variable zum abbrechen des Prozesses, falls jemand anderes an dem DS arbeitet
+                Dim Messagetext As String = "" 'variable bekommt Ergebniss der Sperrprüfung. Ist anschließend leer wenn keine Sperrung vorliegt
+                Messagetext = PruefeSperrung(EichprozessVorgangsnummer)
+
+                If Messagetext.Equals("") = False Then
+                    'rhewa arbeitet in deutsch und hat keine lokalisierung gewünscht
+                    If MessageBox.Show("Dieser Eichprozess wird von '" & Messagetext & "' bearbeitet. Möchten Sie seine Arbeit wirklich überschreiben und den Prozess selbst bearbeiten?", My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo) = DialogResult.Yes Then
+                        bolSetSperrung = True
+                    Else
+                        bolSetSperrung = False
+                    End If
+                End If
+
+                If bolSetSperrung Then
+                    Dim result As String
+                    result = webContext.SetSperrung(bolSperren, objLiz.HEKennung, objLiz.Lizenzschluessel, EichprozessVorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+
+                    If result = "" Then
+                        Return True
+                    Else
+                        MessageBox.Show(result)
+                        Return False
+                    End If
+                Else
+                    Return False
+                End If
+            End Using
+        End Using
+    End Function
+
+    ''' <summary>
+    ''' Prüft ob DS gesperrt ist. 
+    ''' </summary>
+    ''' <param name="EichprozessVorgangsnummer">Die Vorgangsnummer des Eichprozesses den es zu prüfen gilt</param>
+    ''' <returns>String.Empty wenn nicht gesperrt. Ansonsten Hinweis auf den Benutzer der gesperrt hat</returns>
+    ''' <remarks></remarks>
+    ''' <author></author>
+    ''' <commentauthor></commentauthor>
+    Public Function PruefeSperrung(ByVal EichprozessVorgangsnummer As String) As String
+        Try
+            'neue Datenbankverbindung
+        Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
+            Try
+                webContext.Open()
+            Catch ex As Exception
+                MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Return False
+            End Try
+
+            Using dbcontext As New EichsoftwareClientdatabaseEntities1
+
+                Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
+                'prüfen ob der datensatz von jemand anderem in Bearbeitung ist
+
+                Dim Messagetext As String = ""
+                Messagetext = webContext.CheckSperrung(objLiz.HEKennung, objLiz.Lizenzschluessel, EichprozessVorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                Return Messagetext
+            End Using
+        End Using
+            Return ""
+        Catch ex As Exception
+            Return ""
+        End Try
     End Function
 End Class

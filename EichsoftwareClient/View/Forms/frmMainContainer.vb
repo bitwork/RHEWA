@@ -16,6 +16,7 @@ Public Class FrmMainContainer
     ''' <author></author>
     ''' <commentauthor></commentauthor>
     Private WithEvents _CurrentUco As ucoContent
+    Private objWebservicefunctions As New clsWebserviceFunctions
 
     Enum enuDialogModus
         normal = 0
@@ -236,24 +237,17 @@ Public Class FrmMainContainer
         Me.RadButtonNavigateForwards.Text = resources.GetString("RadButtonNavigateForwards.Text")
 
     End Sub
-    Private Sub RadButtonChangeLanguageToGerman_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonChangeLanguageToGerman.Click
-        ' RuntimeLocalizer.ChangeCulture(Me, "de")
-        '       RaiseEvent LokalisierungNeeded(_CurrentUco)
-        changeCulture("de")
 
+    Private Sub RadButtonChangeLanguage_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonChangeLanguageToGerman.Click, RadButtonChangeLanguageToEnglish.Click, RadButtonChangeLanguageToPolish.Click
+        If sender.Equals(RadButtonChangeLanguageToEnglish) Then
+            changeCulture("en")
+        ElseIf sender.Equals(RadButtonChangeLanguageToGerman) Then
+            changeCulture("de")
+        ElseIf sender.Equals(RadButtonChangeLanguageToPolish) Then
+            changeCulture("pl")
+        End If
     End Sub
 
-    Private Sub RadButtonChangeLanguageToEnglish_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonChangeLanguageToEnglish.Click
-        'RuntimeLocalizer.ChangeCulture(Me, "en")
-        'RaiseEvent LokalisierungNeeded(_CurrentUco)
-        changeCulture("en")
-    End Sub
-
-    Private Sub RadButtonChangeLanguageToPolish_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonChangeLanguageToPolish.Click
-        'RuntimeLocalizer.ChangeCulture(Me, "pl")
-        'RaiseEvent LokalisierungNeeded(_CurrentUco)
-        changeCulture("pl")
-    End Sub
 #End Region
 #End Region
 
@@ -261,72 +255,105 @@ Public Class FrmMainContainer
 
 
     Private Sub FrmMainContainer_Load(sender As Object, e As System.EventArgs) Handles Me.Load
+        'frmMain Container nutzt entweder die logiken zum Blättern eines eichprozesses (sofern me.currenteichprozess) nicht nothing ist oder aber zeigt die Auswahlliste an, in der die eigenen Eichprozesse aufgelistet werden.
 
-        'laden der Auswahliste
+
         'prüfen ob ein Vorgang vorliegt oder nicht
         If Me.CurrentEichprozess Is Nothing Then 'wenn kein vorgang vorliegt Auswahlliste anzeiegn
-            'laden des benötigten UCOs
-            Dim uco As New ucoEichprozessauswahlliste(Me)
-            ListofUcos.Add(uco)
-            ChangeActiveContentUserControl(uco)
+            LadeAuswahlListe()
+        Else
+            'laden des benötigten UCOs anhand status von me.currentEichprozess
+            LadeEichprozessVorgangsUco()
+        End If
 
-            RadButtonNavigateBackwards.Visible = False
-            RadButtonNavigateForwards.Visible = False
+        'Lokalisierung aktualisieren
+        Select Case My.Settings.AktuelleSprache.ToLower
+            Case Is = "en"
+                RadButtonChangeLanguage_Click(RadButtonChangeLanguageToEnglish, Nothing)
+            Case Is = "de"
+                RadButtonChangeLanguage_Click(RadButtonChangeLanguageToGerman, Nothing)
+            Case Is = "pl"
+                RadButtonChangeLanguage_Click(RadButtonChangeLanguageToPolish, Nothing)
+            Case Else
+                RadButtonChangeLanguage_Click(RadButtonChangeLanguageToEnglish, Nothing)
+        End Select
+    End Sub
+
+    ''' <summary>
+    ''' lädt die Auswahliste, da noch kein Eichprozess gewählt wurde. Hier können Eichungen auch gelöscht werden etc.
+    ''' </summary>
+    ''' <remarks></remarks>
+    ''' <author></author>
+    ''' <commentauthor></commentauthor>
+    Private Sub LadeAuswahlListe()
+        'laden des benötigten UCOs
+        Dim uco As New ucoEichprozessauswahlliste(Me)
+        ListofUcos.Add(uco)
+        ChangeActiveContentUserControl(uco)
+
+        RadButtonNavigateBackwards.Visible = False
+        RadButtonNavigateForwards.Visible = False
 
 
 
 
-            'prüfen ob die Lizenz gültig ist
-            Using DBContext As New EichsoftwareClientdatabaseEntities1
-                Dim objLiz = (From db In DBContext.Lizensierung Select db).FirstOrDefault
-                If objLiz Is Nothing Then
-                    My.Settings.Lizensiert = False
-                    My.Settings.Save()
-                End If
-            End Using
+        'prüfen ob die Lizenz gültig ist
+        Using DBContext As New EichsoftwareClientdatabaseEntities1
+            Dim objLiz = (From db In DBContext.Lizensierung Select db).FirstOrDefault
+            If objLiz Is Nothing Then
+                My.Settings.Lizensiert = False
+                My.Settings.Save()
+            End If
+        End Using
 
 
 
-            'wenn keine Lizenz vorhanden ist, zur Eingabe auffordern
-            If My.Settings.Lizensiert = False Then
-                Dim f As New FrmLizenz
-                If f.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
-                    If My.Settings.Lizensiert = False Then
-                        System.Windows.Forms.Application.Exit()
-                        Exit Sub
-                    Else
-                        MessageBox.Show(My.Resources.GlobaleLokalisierung.BitteNeuStarten, "", MessageBoxButtons.OK)
-                        System.Windows.Forms.Application.Exit()
-                        Exit Sub
-                    End If
-                Else
+        'wenn keine Lizenz vorhanden ist, zur Eingabe auffordern
+        If My.Settings.Lizensiert = False Then
+            Dim f As New FrmLizenz
+            If f.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
+                If My.Settings.Lizensiert = False Then
                     System.Windows.Forms.Application.Exit()
                     Exit Sub
+                Else
+                    'MessageBox.Show(My.Resources.GlobaleLokalisierung.BitteNeuStarten, "", MessageBoxButtons.OK)
+                    'System.Windows.Forms.Application.Exit()
+                    Me.FrmMainContainer_Load(Nothing, Nothing)
+                    Exit Sub
                 End If
+            Else
+                System.Windows.Forms.Application.Exit()
+                Exit Sub
             End If
+        End If
 
-            'laden des Grid Layouts
-            Try
-                Using stream As New MemoryStream(Convert.FromBase64String(My.Settings.GridSettings))
-                    uco.RadGridViewAuswahlliste.LoadLayout(stream)
-                End Using
-            Catch ex As Exception
-                'konnte layout nicht finden
-            End Try
-            Try
-                Using stream As New MemoryStream(Convert.FromBase64String(My.Settings.GridSettingsRHEWA))
-                    uco.RadGridViewRHEWAAlle.LoadLayout(stream)
-                End Using
-            Catch ex As Exception
-                'konnte layout nicht finden
-            End Try
-         
-
-         
+        'laden des Grid Layouts
+        Try
+            Using stream As New MemoryStream(Convert.FromBase64String(My.Settings.GridSettings))
+                uco.RadGridViewAuswahlliste.LoadLayout(stream)
+            End Using
+        Catch ex As Exception
+            'konnte layout nicht finden
+        End Try
+        Try
+            Using stream As New MemoryStream(Convert.FromBase64String(My.Settings.GridSettingsRHEWA))
+                uco.RadGridViewRHEWAAlle.LoadLayout(stream)
+            End Using
+        Catch ex As Exception
+            'konnte layout nicht finden
+        End Try
 
 
-        Else
-            'laden des benötigten UCOs
+    End Sub
+
+    ''' <summary>
+    ''' lädt das benötigte Uco zum aktuellen Eichprozess Objektes (me.currenteichprozess)
+    ''' </summary>
+    ''' <remarks></remarks>
+    ''' <author></author>
+    ''' <commentauthor></commentauthor>
+    Private Sub LadeEichprozessVorgangsUco()
+        If Not Me.CurrentEichprozess Is Nothing Then
             Try
                 BreadCrumb = New ucoNewStatustlist(Me)
                 Me.RadScrollablePanelTrafficLightBreadcrumb.PanelContainer.Controls.Add(BreadCrumb)
@@ -334,7 +361,6 @@ Public Class FrmMainContainer
                 Me.RadScrollablePanelTrafficLightBreadcrumb.PanelContainer.Controls(0).Visible = True
             Catch ex As Exception
             End Try
-
 
             Dim uco As Object = Nothing
             BreadCrumb.AktuellerGewaehlterVorgang = CurrentEichprozess.FK_Vorgangsstatus
@@ -403,7 +429,7 @@ Public Class FrmMainContainer
                 End Using
             End If
 
-           
+
             ListofUcos.Add(uco)
             RadButtonNavigateBackwards.Enabled = True
             RadButtonNavigateForwards.Enabled = True
@@ -412,20 +438,15 @@ Public Class FrmMainContainer
 
             ChangeActiveContentUserControl(uco)
         End If
-
-        'sprache
-        Select Case My.Settings.AktuelleSprache.ToLower
-            Case Is = "en"
-                RadButtonChangeLanguageToEnglish_Click(Nothing, Nothing)
-            Case Is = "de"
-                RadButtonChangeLanguageToGerman_Click(Nothing, Nothing)
-            Case Is = "pl"
-                RadButtonChangeLanguageToPolish_Click(Nothing, Nothing)
-            Case Else
-                RadButtonChangeLanguageToEnglish_Click(Nothing, Nothing)
-        End Select
     End Sub
 
+    ''' <summary>
+    ''' funktion welches für die das AmpelUco genutzt wird, um von einem Eichprozess Status auf den anderen zu springen
+    ''' </summary>
+    ''' <param name="Status"></param>
+    ''' <remarks></remarks>
+    ''' <author></author>
+    ''' <commentauthor></commentauthor>
     Private Sub SpringeZuUCO(ByVal Status As GlobaleEnumeratoren.enuEichprozessStatus)
         If _CurrentUco.DialogModus <> ucoContent.enuDialogModus.lesend Then
             'TH Event abfeuern, damit steuerelemente bescheid wissen, das sie in DB speichern müssen
@@ -493,6 +514,12 @@ Public Class FrmMainContainer
         End If
     End Sub
 
+    ''' <summary>
+    ''' Zeige nächsten Dialog ein Eichprozess Reihenfolge an
+    ''' </summary>
+    ''' <remarks></remarks>
+    ''' <author></author>
+    ''' <commentauthor></commentauthor>
     Private Sub BlaettereVorwaerts()
         'TH Event abfeuern, damit steuerelemente bescheid wissen, das sie in DB speichern müssen
 
@@ -641,10 +668,24 @@ Public Class FrmMainContainer
         BlaettereVorwaerts()
     End Sub
 
+    ''' <summary>
+    ''' Navigiere rückwärts inklusive speichern und laden des UCOs
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    ''' <author></author>
+    ''' <commentauthor></commentauthor>
     Private Sub RadButtonNavigateBackwards_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonNavigateBackwards.Click
         BlaettereRueckwaerts()
     End Sub
 
+    ''' <summary>
+    ''' Zeige vorherigen Dialog ein Eichprozess Reihenfolge an
+    ''' </summary>
+    ''' <remarks></remarks>
+    ''' <author></author>
+    ''' <commentauthor></commentauthor>
     Private Sub BlaettereRueckwaerts()
         If Not _CurrentUco Is Nothing Then
             Dim uco As ucoContent = Nothing
@@ -772,7 +813,10 @@ Public Class FrmMainContainer
     ''' <remarks></remarks>
     Private Sub FrmMainContainer_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         If DialogModus = enuDialogModus.korrigierend Then
-            SetzeSperrung(False)
+            If Not CurrentEichprozess Is Nothing Then
+                objWebservicefunctions.SetzeSperrung(False, CurrentEichprozess.Vorgangsnummer)
+            End If
+
         End If
 
         'speichere Layout der beiden Grids
@@ -808,8 +852,10 @@ Public Class FrmMainContainer
         If MessageBox.Show(GlobaleLokalisierung.Frage_EichprotokollZuruecksenden, My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo, MessageBoxIcon.Question) = System.Windows.Forms.DialogResult.Yes Then
 
             'entsperren des DS
-            If SetzeSperrung(False) Then
-                RaiseEvent VersendenNeeded(_CurrentUco)
+            If Not CurrentEichprozess Is Nothing Then
+                If objWebservicefunctions.SetzeSperrung(False, CurrentEichprozess.Vorgangsnummer) Then
+                    RaiseEvent VersendenNeeded(_CurrentUco)
+                End If
             End If
         End If
     End Sub
@@ -827,55 +873,17 @@ Public Class FrmMainContainer
         End If
 
         'prüfen ob eine Sperrung des DS vorliegt und DS sperren wenn nicht
-        If SetzeSperrung(True) Then
-            RaiseEvent EntsperrungNeeded()
-            RadButtonVersenden.Visible = True
-            RadButtonEntsperren.Enabled = False
+        If Not CurrentEichprozess Is Nothing Then
+            If objWebservicefunctions.SetzeSperrung(True, CurrentEichprozess.Vorgangsnummer) Then
+                RaiseEvent EntsperrungNeeded()
+                RadButtonVersenden.Visible = True
+                RadButtonEntsperren.Enabled = False
+            End If
         End If
 
     End Sub
 
-    Private Function SetzeSperrung(ByVal bolSperren As Boolean) As Boolean
-        'neue Datenbankverbindung
-        Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
-            Try
-                webContext.Open()
-            Catch ex As Exception
-                MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                Return False
-            End Try
-            Using dbcontext As New EichsoftwareClientdatabaseEntities1
-
-                Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
-                'prüfen ob der datensatz von jemand anderem in Bearbeitung ist
-                Dim bolSetSperrung As Boolean = True 'variable zum abbrechen des Prozesses, falls jemand anderes an dem DS arbeitet
-                Dim Messagetext As String = ""
-                Messagetext = webContext.CheckSperrung(objLiz.HEKennung, objLiz.Lizenzschluessel, CurrentEichprozess.Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
-                If Messagetext.Equals("") = False Then
-                    'rhewa arbeitet in deutsch und hat keine lokalisierung gewünscht
-                    If MessageBox.Show("Dieser Eichprozess wird von '" & Messagetext & "' bearbeitet. Möchten Sie seine Arbeit wirklich überschreiben und den Prozess selbst bearbeiten?", My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo) = DialogResult.Yes Then
-                        bolSetSperrung = True
-                    Else
-                        bolSetSperrung = False
-                    End If
-                End If
-
-                If bolSetSperrung Then
-                    Dim result As String
-                    result = webContext.SetSperrung(bolSperren, objLiz.HEKennung, objLiz.Lizenzschluessel, CurrentEichprozess.Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
-
-                    If result = "" Then
-                        Return True
-                    Else
-                        MessageBox.Show(result)
-                        Return False
-                    End If
-                Else
-                    Return False
-                End If
-            End Using
-        End Using
-    End Function
+  
 
     Private Sub _CurrentUco_PropertyChanged(sender As Object, e As System.ComponentModel.PropertyChangedEventArgs) Handles _CurrentUco.PropertyChanged
         If e.PropertyName.Equals("AktuellerStatusDirty") Then

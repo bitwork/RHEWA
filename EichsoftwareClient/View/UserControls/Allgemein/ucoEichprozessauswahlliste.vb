@@ -74,10 +74,7 @@
         RadButtonEinstellungen.Visible = True
         RadButtonEinstellungen.Enabled = True
 
-        'lizenz eingabe überspringen
-        'If Debugger.IsAttached Then
-        '    ForceActivation()
-        'End If
+     
 
         If My.Settings.RHEWALizenz = True Then
         Else
@@ -85,17 +82,18 @@
             RadPageView1.Pages(0).Text = ""
         End If
 
-        'daten füllen
-        'für den Fall das die Anwendung gerade erst installiert wurde, oder die einstellung zur Synchronisierung geändert wurde, sollen alle Eichungen vom RHEWA Server geholt werden, die einmal angelegt wurden
-        If My.Settings.HoleAlleEigenenEichungenVomServer = True Then
-            VerbindeMitWebserviceUndHoleAlles()
-            Exit Sub
-        End If
+     
 
 
         If My.Settings.Lizensiert Then
-            LoadFromDatabase()
+            'daten füllen
+            'für den Fall das die Anwendung gerade erst installiert wurde, oder die einstellung zur Synchronisierung geändert wurde, sollen alle Eichungen vom RHEWA Server geholt werden, die einmal angelegt wurden
+            If My.Settings.HoleAlleEigenenEichungenVomServer = True Then
+                VerbindeMitWebserviceUndHoleAlles()
+                Exit Sub
+            End If
 
+            LoadFromDatabase()
         End If
 
 
@@ -235,6 +233,8 @@
         If f.DialogResult = DialogResult.OK Then
             'neu aktualisierung der Eichungen
             VerbindeMitWebserviceUndHoleAlles()
+            'aktualisieren des Grids
+            LoadFromDatabase()
         End If
     End Sub
 
@@ -658,8 +658,7 @@
 
                     objWebserviceFunctions.GetEichprotokolleVomServer()
 
-                    'aktualisieren des Grids
-                    LoadFromDatabase()
+                 
 
                     My.Settings.HoleAlleEigenenEichungenVomServer = False
                     My.Settings.Save()
