@@ -60,7 +60,31 @@
         RadTextBoxControlWaageSeriennummer.Focus()
     End Sub
 
- 
+
+    'wenn die Art der Waage oder die WZ gewechselt wurde, muss kontrolliert werden, ob der Eichvorgang bereits fortschritten ist. Wenn also bereits ein späterer Status erreicht wurde, muss dieser zurückgesetzt werden auf die Stammdateneingabe
+    Private Sub RadDropDownList_SelectedIndexChanged(sender As Object, e As Telerik.WinControls.UI.Data.PositionChangedEventArgs) Handles RadDropDownListWaagenArt.SelectedIndexChanged, RadDropdownlistlWZTyp.SelectedIndexChanged
+        If _suspendEvents Then Exit Sub
+        ''wenn Status = Stammdateneingabe dann abbruch alles ist okay
+        'If objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe Then Exit Sub
+
+
+        'ansonsten zurücksetzen auf Stammdateneingabe
+        objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
+        AktuellerStatusDirty = True
+
+    End Sub
+
+
+    Private Sub RadButtonNeueWaegezelle_Enter(sender As Object, e As EventArgs) Handles RadButtonNeueWaegezelle.Enter
+        'Hilfetext setzen
+        ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_StammdatenNeueWZ)
+    End Sub
+
+    Private Sub RadGroupBoxWZ_MouseEnter(sender As Object, e As EventArgs) Handles RadGroupBoxWZ.MouseEnter
+        'Hilfetext setzen
+        ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_Stammdaten)
+    End Sub
+
 
     ''' <summary>
     ''' Füllt Textboxen anhand des gewählten AWGs
@@ -424,7 +448,7 @@
             If objEichprozess.ID <> 0 Then
                 Using context As New EichsoftwareClientdatabaseEntities1
                     'neu laden des Objekts, diesmal mit den lookup Objekten
-                    objEichprozess = (From a In context.Eichprozess.Include("Lookup_Auswertegeraet").Include("Lookup_Waegezelle").Include("Kompatiblitaetsnachweis").Include("Lookup_Waagenart").Include("Lookup_Waagentyp") Select a Where a.ID = objEichprozess.ID).FirstOrDefault
+                    objEichprozess = (From a In context.Eichprozess.Include("Lookup_Auswertegeraet").Include("Lookup_Waegezelle").Include("Kompatiblitaetsnachweis").Include("Lookup_Waagenart").Include("Lookup_Waagentyp") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
                 End Using
 
                 RadTextBoxControlAWGBauartzulassung.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Bauartzulassung
@@ -619,7 +643,7 @@
 
 
                         'prüfen ob das Objekt anhand der ID gefunden werden kann
-                        Dim dbobjEichprozess As Eichprozess = Context.Eichprozess.FirstOrDefault(Function(value) value.ID = objEichprozess.ID)
+                        Dim dbobjEichprozess As Eichprozess = Context.Eichprozess.FirstOrDefault(Function(value) value.Vorgangsnummer = objEichprozess.Vorgangsnummer)
                         If Not dbobjEichprozess Is Nothing Then
                             'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
                             objEichprozess = dbobjEichprozess
@@ -673,54 +697,7 @@
 #End Region
 
 
-#Region "Workaround für Telerik Bug"
-
-   
-    'in der aktuellen Telerik Version q1 2013 gibt es ein Bug mit den Dropdownlisten. Diese erhalten keinen Fokus wenn man sie mit Tab ansteuert
-    Private Sub RadDropdownlist_GotFocus(sender As Object, e As EventArgs) Handles RadDropdownlistAWGTyp.GotFocus, RadDropdownlistlWZHersteller.GotFocus, RadDropdownlistlWZTyp.GotFocus, RadDropDownListWaagenArt.GotFocus, RadDropdownlistWaagenTyp.GotFocus
-        If _suspendEvents Then Exit Sub
-        Dim c As Telerik.WinControls.UI.RadDropDownList
-
-        If (TypeOf sender Is Telerik.WinControls.UI.RadDropDownList) Then
-            c = CType(sender, Telerik.WinControls.UI.RadDropDownList)
-
-            If (c.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList) AndAlso (Not c.DropDownListElement.ContainsFocus) Then
-
-                c.DropDownListElement.Focus()
-                'If c.DropDownListElement.IsPopupOpen = False Then
-                '    c.DropDownListElement.ShowPopup()
-                'End If
-
-            End If
-        End If
-    End Sub
-#End Region
-
-    'wenn die Art der Waage oder die WZ gewechselt wurde, muss kontrolliert werden, ob der Eichvorgang bereits fortschritten ist. Wenn also bereits ein späterer Status erreicht wurde, muss dieser zurückgesetzt werden auf die Stammdateneingabe
-    Private Sub RadDropDownList_SelectedIndexChanged(sender As Object, e As Telerik.WinControls.UI.Data.PositionChangedEventArgs) Handles RadDropDownListWaagenArt.SelectedIndexChanged, RadDropdownlistlWZTyp.SelectedIndexChanged
-        If _suspendEvents Then Exit Sub
-        ''wenn Status = Stammdateneingabe dann abbruch alles ist okay
-        'If objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe Then Exit Sub
-
-
-        'ansonsten zurücksetzen auf Stammdateneingabe
-        objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
-        AktuellerStatusDirty = True
-
-    End Sub
-
-
-    Private Sub RadButtonNeueWaegezelle_Enter(sender As Object, e As EventArgs) Handles RadButtonNeueWaegezelle.Enter
-        'Hilfetext setzen
-        ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_StammdatenNeueWZ)
-    End Sub
-
-    Private Sub RadGroupBoxWZ_MouseEnter(sender As Object, e As EventArgs) Handles RadGroupBoxWZ.MouseEnter
-        'Hilfetext setzen
-        ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_Stammdaten)
-    End Sub
-
-
+#Region "Overrides"
     'Entsperrroutine
     Protected Friend Overrides Sub EntsperrungNeeded()
         MyBase.EntsperrungNeeded()
@@ -788,6 +765,32 @@
             End Using
         End If
     End Sub
+#End Region
+#Region "Workaround für Telerik Bug"
+
+   
+    'in der aktuellen Telerik Version q1 2013 gibt es ein Bug mit den Dropdownlisten. Diese erhalten keinen Fokus wenn man sie mit Tab ansteuert
+    Private Sub RadDropdownlist_GotFocus(sender As Object, e As EventArgs) Handles RadDropdownlistAWGTyp.GotFocus, RadDropdownlistlWZHersteller.GotFocus, RadDropdownlistlWZTyp.GotFocus, RadDropDownListWaagenArt.GotFocus, RadDropdownlistWaagenTyp.GotFocus
+        If _suspendEvents Then Exit Sub
+        Dim c As Telerik.WinControls.UI.RadDropDownList
+
+        If (TypeOf sender Is Telerik.WinControls.UI.RadDropDownList) Then
+            c = CType(sender, Telerik.WinControls.UI.RadDropDownList)
+
+            If (c.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList) AndAlso (Not c.DropDownListElement.ContainsFocus) Then
+
+                c.DropDownListElement.Focus()
+                'If c.DropDownListElement.IsPopupOpen = False Then
+                '    c.DropDownListElement.ShowPopup()
+                'End If
+
+            End If
+        End If
+    End Sub
+#End Region
+
+
+   
 
 
 End Class

@@ -139,6 +139,10 @@ Public Class ucoAmpel
     Private Sub LokalisierungNeeded() Handles _ParentForm.LokalisierungNeeded
         FillDataset()
         Changes()
+
+        If Not _ParentForm.CurrentEichprozess Is Nothing Then
+            HideElement(_ParentForm.CurrentEichprozess.GetListeUngueltigeStati(_ParentForm.CurrentEichprozess))
+        End If
     End Sub
 
     Private Sub Changes() Handles Me.NotifyPropertyChanged
@@ -352,14 +356,26 @@ Public Class ucoAmpel
     ''' </summary>
     ''' <param name="pStatus"></param>
     ''' <remarks></remarks>
-    Public Sub HideElement(ByVal pStatus As GlobaleEnumeratoren.enuEichprozessStatus)
-        Dim view As New DataView
-        view.Table = Datasource
-        view.RowFilter = "Status = '" & pStatus & "'"
+    Public Sub HideElement(ByVal pStatus As List(Of GlobaleEnumeratoren.enuEichprozessStatus))
+        'Dim view As New DataView
+        'view.Table = Datasource
+        'view.RowFilter = "Status = '" & pStatus & "'"
 
-        For Each item As DataRowView In view 'sollte nur eines sein
-            Datasource.Rows.Remove(item.Row)
-        Next
+        'For Each item As DataRowView In view 'sollte nur eines sein
+        '    Datasource.Rows.Remove(item.Row)
+        'Next
+        If pStatus Is Nothing Then Exit Sub
+        Try
+            For Each item In RadListView1.Items
+                If pStatus.Contains(item.Value) Then
+                    item.Visible = False
+                Else
+                    item.Visible = True
+                End If
+            Next
+        Catch ex As Exception
+
+        End Try
     End Sub
 
 #End Region

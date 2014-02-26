@@ -31,7 +31,7 @@
         _suspendEvents = True
         Using context As New EichsoftwareClientdatabaseEntities1
             'neu laden des Objekts, diesmal mit den lookup Objekten
-            objEichprozess = (From a In context.Eichprozess.Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp") Select a Where a.ID = objEichprozess.ID).FirstOrDefault
+            objEichprozess = (From a In context.Eichprozess.Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
         End Using
         'steuerelemente mit werten aus DB füllen
         FillControls()

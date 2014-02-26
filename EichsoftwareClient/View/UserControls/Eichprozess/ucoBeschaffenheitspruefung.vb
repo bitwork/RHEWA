@@ -50,7 +50,7 @@ Public Class ucoBeschaffenheitspruefung
 
             'Nur laden wenn es sich um eine Bearbeitung handelt (sonst würde das in Memory Objekt überschrieben werden)
             If Not DialogModus = enuDialogModus.lesend And Not DialogModus = enuDialogModus.korrigierend Then
-                objEichprozess = (From Eichprozess In Context.Eichprozess.Include("Beschaffenheitspruefung").Include("Kompatiblitaetsnachweis") Select Eichprozess Where Eichprozess.ID = objEichprozess.ID).FirstOrDefault
+                objEichprozess = (From Eichprozess In Context.Eichprozess.Include("Beschaffenheitspruefung").Include("Kompatiblitaetsnachweis") Select Eichprozess Where Eichprozess.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
                 _ObjBeschaffenheitspruefung = objEichprozess.Beschaffenheitspruefung
 
                 If _ObjBeschaffenheitspruefung Is Nothing Then
@@ -192,7 +192,7 @@ Public Class ucoBeschaffenheitspruefung
                             'Füllt das Objekt mit den Werten aus den Steuerlementen
                             UpdateObject()
 
-                            Dim dbobjEichprozess As Eichprozess = Context.Eichprozess.FirstOrDefault(Function(value) value.ID = objEichprozess.ID)
+                            Dim dbobjEichprozess As Eichprozess = Context.Eichprozess.FirstOrDefault(Function(value) value.Vorgangsnummer = objEichprozess.Vorgangsnummer)
                             If Not dbobjEichprozess Is Nothing Then
                                 'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
                                 objEichprozess = dbobjEichprozess

@@ -39,6 +39,18 @@
         LoadFromDatabase()
     End Sub
 
+
+    ''' <summary>
+    ''' Bei Änderungen DirtyFlag Setzen
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    ''' <author></author>
+    ''' <commentauthor></commentauthor>
+    Private Sub RadCheckBoxTaraErweiterteRichtigkeitspruefung_Click(sender As System.Object, e As System.EventArgs) Handles RadCheckBoxTaraGenauigkeitTarrierung.Click, RadCheckBoxTaraErweiterteRichtigkeitspruefung.Click, RadCheckBoxTaraausgleicheinrichtungOK.Click
+        AktuellerStatusDirty = True
+    End Sub
 #End Region
 
 #Region "Methods"
@@ -50,7 +62,7 @@
         If Not DialogModus = enuDialogModus.lesend And Not DialogModus = enuDialogModus.korrigierend Then
             Using context As New EichsoftwareClientdatabaseEntities1
                 'neu laden des Objekts, diesmal mit den lookup Objekten
-                objEichprozess = (From a In context.Eichprozess.Include("Eichprotokoll") Select a Where a.ID = objEichprozess.ID).FirstOrDefault
+                objEichprozess = (From a In context.Eichprozess.Include("Eichprotokoll") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
                 _objEichprotokoll = objEichprozess.Eichprotokoll
             End Using
         End If
@@ -154,28 +166,15 @@
     'Speicherroutine
     Protected Friend Overrides Sub SaveNeeded(ByVal UserControl As UserControl)
         If Me.Equals(UserControl) Then
-            If DialogModus = enuDialogModus.lesend Then
+
+         
+            If DialogModus = enuDialogModus.lesend Or DialogModus = enuDialogModus.korrigierend Then
+                If DialogModus = enuDialogModus.korrigierend Then
+                    UpdateObject()
+                End If
+
                 Select Case objEichprozess.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren.Verfahren
                     Case Is = "über 60kg mit Normalien", "über 60kg im Staffelverfahren"
-
-                        ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
-                        If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.BerücksichtigungderFallbeschleunigung Then
-                            objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.BerücksichtigungderFallbeschleunigung
-                        End If
-                    Case Is = "Fahrzeugwaagen"
-                        If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.EignungfürAchslastwägungen Then
-                            objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.EignungfürAchslastwägungen
-                        End If
-                End Select
-                ParentFormular.CurrentEichprozess = objEichprozess
-                Exit Sub
-            End If
-
-            If DialogModus = enuDialogModus.korrigierend Then
-                UpdateObject()
-                Select Case objEichprozess.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren.Verfahren
-                    Case Is = "über 60kg mit Normalien", "über 60kg im Staffelverfahren"
-
                         ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
                         If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.BerücksichtigungderFallbeschleunigung Then
                             objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.BerücksichtigungderFallbeschleunigung
@@ -197,7 +196,7 @@
                     'prüfen ob CREATE oder UPDATE durchgeführt werden muss
                     If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
                         'prüfen ob das Objekt anhand der ID gefunden werden kann
-                        Dim dobjEichprozess As Eichprozess = Context.Eichprozess.FirstOrDefault(Function(value) value.ID = objEichprozess.ID)
+                        Dim dobjEichprozess As Eichprozess = Context.Eichprozess.FirstOrDefault(Function(value) value.Vorgangsnummer = objEichprozess.Vorgangsnummer)
                         If Not dobjEichprozess Is Nothing Then
                             'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
                             objEichprozess = dobjEichprozess
@@ -243,6 +242,8 @@
             End If
 
         End If
+
+
     End Sub
 
     Protected Friend Overrides Sub SaveWithoutValidationNeeded(usercontrol As UserControl)
@@ -259,7 +260,7 @@
                 'prüfen ob CREATE oder UPDATE durchgeführt werden muss
                 If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
                     'prüfen ob das Objekt anhand der ID gefunden werden kann
-                    Dim dobjEichprozess As Eichprozess = Context.Eichprozess.Include("Eichprotokoll").FirstOrDefault(Function(value) value.ID = objEichprozess.ID)
+                    Dim dobjEichprozess As Eichprozess = Context.Eichprozess.Include("Eichprotokoll").FirstOrDefault(Function(value) value.Vorgangsnummer = objEichprozess.Vorgangsnummer)
                     If Not dobjEichprozess Is Nothing Then
                         'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
                         objEichprozess = dobjEichprozess
@@ -293,10 +294,6 @@
             LoadFromDatabase() 'war mal auskommentiert. ich weiß gerade nicht mehr wieso
         End If
     End Sub
-
-#End Region
-
-
 
 
 
@@ -393,16 +390,7 @@
         End If
     End Sub
 
+#End Region
 
-    ''' <summary>
-    ''' Bei Änderungen DirtyFlag Setzen
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    ''' <remarks></remarks>
-    ''' <author></author>
-    ''' <commentauthor></commentauthor>
-    Private Sub RadCheckBoxTaraErweiterteRichtigkeitspruefung_Click(sender As System.Object, e As System.EventArgs) Handles RadCheckBoxTaraGenauigkeitTarrierung.Click, RadCheckBoxTaraErweiterteRichtigkeitspruefung.Click, RadCheckBoxTaraausgleicheinrichtungOK.Click
-        AktuellerStatusDirty = True
-    End Sub
+
 End Class

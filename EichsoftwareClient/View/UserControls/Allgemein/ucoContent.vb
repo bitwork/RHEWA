@@ -75,6 +75,14 @@ Public Class ucoContent
     ''' <remarks></remarks>
     Protected Friend Property EichprozessStatusReihenfolge As GlobaleEnumeratoren.enuEichprozessStatus
 
+   
+  
+    'Protected Friend ReadOnly Property ListUeberspringeStatus As List(Of GlobaleEnumeratoren.enuEichprozessStatus)
+    '    Get
+    '        Return objEichprozess.GetListeUngueltigeStati
+    '    End Get
+    'End Property
+
 
     Protected Friend Property objEichprozess As Eichprozess
         Get
@@ -166,7 +174,6 @@ Public Class ucoContent
     ''' <author>TH</author>
     ''' <commentauthor>Die Überladene Routine sollte überprüfen ob me.equals(Usercontrol) = true ist, um nicht unnötig oft alles zu speichern</commentauthor>
     Protected Friend Overridable Sub SaveNeeded(ByVal UserControl As UserControl) Handles _ParentForm.SaveNeeded
-
     End Sub
 
     Protected Friend Overridable Sub SaveWithoutValidationNeeded(ByVal usercontrol As UserControl) Handles _ParentForm.SaveWithoutValidationNeeded
