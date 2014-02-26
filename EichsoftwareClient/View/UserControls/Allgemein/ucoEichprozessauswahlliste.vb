@@ -162,58 +162,6 @@
     End Sub
 
     ''' <summary>
-    ''' DEBUG Funktion um Lizenzdialog aus Testzwecken zu überspringen
-    ''' </summary>
-    ''' <remarks></remarks>
-    Private Sub ForceActivation()
-        Try
-            Using DBContext As New EichsoftwareClientdatabaseEntities1
-                'prüfen ob die Lizenz gültig ist
-                Dim HEKennung As String = "tim"
-                Dim Schluessel As String = "Hill"
-
-
-                Dim objLic As New Lizensierung
-                objLic.HEKennung = HEKennung
-                objLic.Lizenzschluessel = Schluessel
-
-                objLic.RHEWALizenz = True
-
-                Try
-                    'löschen der lokalen DB
-                    For Each lic In DBContext.Lizensierung
-                        DBContext.Lizensierung.Remove(lic)
-                    Next
-                    DBContext.SaveChanges()
-                Catch ex As Exception
-                End Try
-                Try
-                    'speichern in lokaler DB
-                    DBContext.Lizensierung.Add(objLic)
-                    DBContext.SaveChanges()
-                Catch ex As Exception
-                End Try
-
-
-                My.Settings.Lizensiert = True
-                My.Settings.RHEWALizenz = objLic.RHEWALizenz
-                My.Settings.Save()
-
-                'neue Stammdaten zum Benutzer holen
-                objWebserviceFunctions.GetNeueStammdaten(False)
-
-
-
-            End Using
-
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, My.Resources.GlobaleLokalisierung.Fehler)
-
-        End Try
-    End Sub
-
-
-    ''' <summary>
     ''' Konfigurationsdialog anzeigen
     ''' </summary>
     ''' <param name="sender"></param>

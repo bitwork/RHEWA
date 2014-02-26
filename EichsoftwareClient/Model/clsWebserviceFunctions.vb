@@ -346,7 +346,7 @@ Public Class clsWebserviceFunctions
                                     End If
 
                                     'umwandeln des Serverobjektes in Clientobject
-                                    clsServerHelper.CopyObjectPropertiesWithOwnIDs(Eichprozess, objServerEichprozess)
+                                    clsClientServerConversionFunctions.CopyObjectPropertiesWithOwnIDs(Eichprozess, objServerEichprozess)
 
                                     Eichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'überschreiben des Statuses
                                     Eichprozess.FK_Bearbeitungsstatus = NeuerStatus
@@ -363,7 +363,7 @@ Public Class clsWebserviceFunctions
                                         Next
                                     End Try
 
-                                    clsServerHelper.UpdateForeignTables(Eichprozess, objServerEichprozess)
+                                    clsClientServerConversionFunctions.UpdateForeignTables(Eichprozess, objServerEichprozess)
 
 
                                 End If
@@ -429,7 +429,7 @@ Public Class clsWebserviceFunctions
                             Dim Eichprozess = DBContext.Eichprozess.Create
 
                             'erzeuge lokale Kopie
-                            clsServerHelper.CopyObjectPropertiesWithNewIDs(Eichprozess, objectServerEichprozess, True)
+                            clsClientServerConversionFunctions.CopyObjectPropertiesWithNewIDs(Eichprozess, objectServerEichprozess, True)
                             Try
                                 DBContext.Eichprozess.Add(Eichprozess)
                                 DBContext.SaveChanges()
@@ -510,7 +510,7 @@ Public Class clsWebserviceFunctions
                     End If
 
                     'umwandeln des Serverobjektes in Clientobject
-                    clsServerHelper.CopyObjectPropertiesWithNewIDs(objClientEichprozess, objServerEichprozess)
+                    clsClientServerConversionFunctions.CopyObjectPropertiesWithNewIDs(objClientEichprozess, objServerEichprozess)
 
                     'vorgangsnummer editieren
                     objClientEichprozess.Vorgangsnummer = Guid.NewGuid.ToString
@@ -650,8 +650,8 @@ Public Class clsWebserviceFunctions
                 End If
 
                 'umwandeln des Serverobjektes in Clientobject
-                clsServerHelper.CopyObjectPropertiesWithAllLookups(objClientEichprozess, objServerEichprozess)
-                clsServerHelper.GetLookupValuesServer(objClientEichprozess)
+                clsClientServerConversionFunctions.CopyObjectPropertiesWithAllLookups(objClientEichprozess, objServerEichprozess)
+                clsClientServerConversionFunctions.GetLookupValuesServer(objClientEichprozess)
 
                 Return objClientEichprozess
             End Using

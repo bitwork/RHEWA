@@ -1,7 +1,10 @@
 ﻿Imports System.Globalization
 Imports System.Threading
 Imports System.ComponentModel
-
+''' <summary>
+''' Klasse mit Funktionen zum lokalisieren von Dialogen zur Laufzeit. Normalerweise erfordert das .NET Framework ein neu initialisieren der Objekte (Forms) um eine Lokalisierung anzuwenden. Hiermit funktioniert es on demand zur Laufzeit
+''' </summary>
+''' <remarks></remarks>
 Public NotInheritable Class RuntimeLocalizer
     Private Sub New()
     End Sub

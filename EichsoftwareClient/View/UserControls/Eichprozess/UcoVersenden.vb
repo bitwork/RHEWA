@@ -147,7 +147,7 @@ Public Class UcoVersenden
         Using dbcontext As New EichsoftwareClientdatabaseEntities1
             objEichprozess = (From a In dbcontext.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Beschaffenheitspruefung").Include("Mogelstatistik") Select a Where a.ID = objEichprozess.ID).FirstOrDefault
 
-            objServerEichprozess = clsServerHelper.CopyObjectProperties(objServerEichprozess, objEichprozess)
+            objServerEichprozess = clsClientServerConversionFunctions.CopyObjectProperties(objServerEichprozess, objEichprozess)
 
             Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
                 Try
@@ -354,7 +354,7 @@ Public Class UcoVersenden
                 UpdateObject()
 
                 'erzeuegn eines Server Objektes auf basis des aktuellen DS
-                objServerEichprozess = clsServerHelper.CopyObjectProperties(objServerEichprozess, objEichprozess)
+                objServerEichprozess = clsClientServerConversionFunctions.CopyObjectProperties(objServerEichprozess, objEichprozess)
                 Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
                     Try
                         Webcontext.Open()

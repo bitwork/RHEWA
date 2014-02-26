@@ -1,6 +1,11 @@
-﻿Public Class clsServerHelper
+﻿''' <summary>
+''' Diese Klasse enthält funktionen um Entity Framework Objekte von der lokalen SQL Kompakt in Server Objekte und umgegekeht umwandeln zu können
+''' Die Lokale Datenbank ist der Serverdatenbank sehr ähnlich, aber eben nicht gleich
+''' </summary>
+''' <remarks></remarks>
+Public Class clsClientServerConversionFunctions
 
- 
+
     ''' <summary>
     ''' Schreibt werte von einem lokalen Eichprozess in ein Server Object
     ''' </summary>
@@ -539,7 +544,7 @@
             TargetObject._ServerLookup_Waegezelle._Deaktiviert = True
             TargetObject._ServerLookup_Waegezelle._Waegezellenkennwert = SourceObject.Lookup_Waegezelle.Waegezellenkennwert
             TargetObject._ServerLookup_Waegezelle._WiderstandWaegezelle = SourceObject.Lookup_Waegezelle.WiderstandWaegezelle
-            TargetObject._ServerLookup_Waegezelle._neu = True
+            TargetObject._ServerLookup_Waegezelle._Neu = True
         End If
 
         Return TargetObject
@@ -1160,7 +1165,7 @@
         TargetObject.Eichprotokoll.Verwendungszweck_ZubehoerVerschiedenes = SourceObject._ServerEichprotokoll.Verwendungszweck_ZubehoerVerschiedenes
         TargetObject.Eichprotokoll.Wiederholbarkeit_Staffelverfahren_MINNormalien = SourceObject._ServerEichprotokoll.Wiederholbarkeit_Staffelverfahren_MINNormalien
 
-       
+
 
 
 
@@ -1205,7 +1210,7 @@
             End Try
             dbcontext.SaveChanges()
 
-          
+
 
             Try
                 'aufräumen und alte löschen
@@ -1232,7 +1237,7 @@
             End Try
             dbcontext.SaveChanges()
 
-         
+
             'Try
             '    'aufräumen und alte löschen
             '    Dim query3 = From a In dbcontext.PruefungEichfehlergrenzen Where a.FK_Eichprotokoll = EichprotokollID
@@ -1257,7 +1262,7 @@
             'dbcontext.SaveChanges()
 
             'aufräumen und alte löschen
-         
+
             Try
                 Dim query4 = From a In dbcontext.PruefungLinearitaetFallend Where a.FK_Eichprotokoll = EichprotokollID
                 For Each obj In query4
@@ -1280,7 +1285,7 @@
             Catch e As Exception
             End Try
             dbcontext.SaveChanges()
-        
+
             Try
                 'aufräumen und alte löschen
                 Dim query5 = From a In dbcontext.PruefungLinearitaetSteigend Where a.FK_Eichprotokoll = EichprotokollID
@@ -1328,7 +1333,7 @@
             Catch e As Exception
             End Try
             dbcontext.SaveChanges()
-           
+
             Try
                 'aufräumen und alte löschen
                 Dim query6 = From a In dbcontext.PruefungStabilitaetGleichgewichtslage Where a.FK_Eichprotokoll = EichprotokollID
@@ -1351,7 +1356,7 @@
             Catch e As Exception
             End Try
             dbcontext.SaveChanges()
-         
+
             Try
                 'aufräumen und alte löschen
                 Dim query7 = From a In dbcontext.PruefungStaffelverfahrenErsatzlast Where a.FK_Eichprotokoll = EichprotokollID
@@ -1387,7 +1392,7 @@
             dbcontext.SaveChanges()
 
             'aufräumen und alte löschen
-         
+
             Try
                 Dim query8 = From a In dbcontext.PruefungStaffelverfahrenNormallast Where a.FK_Eichprotokoll = EichprotokollID
                 For Each obj In query8
@@ -1428,7 +1433,7 @@
             Catch e As Exception
             End Try
             dbcontext.SaveChanges()
-         
+
             Try
                 'aufräumen und alte löschen
                 Dim query9 = From a In dbcontext.PruefungWiederholbarkeit Where a.FK_Eichprotokoll = EichprotokollID
@@ -1456,7 +1461,7 @@
         End Using
     End Sub
 
-  
+
     ''' <summary>
     ''' wird beim kopieren genutzt. überschreibt alle properties from source ins targetobject erzeugt aber neue IDS
     ''' </summary>
@@ -1961,5 +1966,5 @@
         End Using
     End Sub
 
- 
+
 End Class

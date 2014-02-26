@@ -795,7 +795,7 @@ Public Class EichsoftwareWebservice
     ''' <summary>
     ''' Funktion für die Statistikfunktion der Eichmarkenverwaltung. Dort können Marken eingetragen werden, die ausgeteilt wurden. Wenn ein Benutzer dann Marken im Eichprozess verwendet, werden sie dort abgezogen um einen Ist-Bestand zu erhalten
     ''' </summary>
-    ''' <param name="BenutzerFK"></param>
+    ''' <param name="HEKennung"></param>
     ''' <param name="AnzahlBenannteStelle"></param>
     ''' <param name="AnzahlEichsiegel13x13"></param>
     ''' <param name="AnzahlEichsiegelRund"></param>

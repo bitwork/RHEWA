@@ -6,7 +6,7 @@ Imports System.Drawing.Imaging
 ''' <remarks></remarks>
 ''' <author></author>
 ''' <commentauthor></commentauthor>
-Public Class ucoNewStatustlist
+Public Class ucoAmpel
     Public Event Navigieren(ByVal GewaehlterVorgang As GlobaleEnumeratoren.enuEichprozessStatus)
     Private Event NotifyPropertyChanged()
 
@@ -121,53 +121,17 @@ Public Class ucoNewStatustlist
         End Set
     End Property
 
-    Public Property StatusDesAktuellGewaehltenVorgangs As enuImage
-        Get
-            Try
-                Dim view As New DataView
-                view.Table = Datasource
-                view.RowFilter = "Status = '" & _aktuellerGewaehlterVorgang & "'"
-
-                For Each item In view 'sollte nur eines sein
-                    If item("Image").Equals(ConvertBitmapToByteArray(My.Resources.bullet_green)) Then
-                        Return enuImage.grün
-                    ElseIf item("Image").Equals(ConvertBitmapToByteArray(My.Resources.bullet_yellow)) Then
-                        Return enuImage.gelb
-                    ElseIf item("Image").Equals(ConvertBitmapToByteArray(My.Resources.bullet_red)) Then
-                        Return enuImage.rot
-                    Else
-                        Return enuImage.rot
-                    End If
-                Next
-                Return enuImage.rot
-            Catch e As Exception
-                Return enuImage.rot
-            End Try
-        End Get
-
-        Set(value As enuImage)
-            ChangeImageOfElement(value, _aktuellerGewaehlterVorgang)
-        End Set
-    End Property
-
-
-    Public ReadOnly Property ContentControl() As Control
-        Get
-            Return Me.RadListView1
-        End Get
-    End Property
+ 
 
 
 #End Region
 
 #Region "enumeratoren"
-
     Public Enum enuImage
         grün = 1
         gelb = 2
         rot = 3
     End Enum
-
 #End Region
 
 #Region "Methoden"
@@ -229,10 +193,6 @@ Public Class ucoNewStatustlist
                     Exit For
                 End If
             Next
-
-
-
-
         Catch ex As Exception
 
         End Try
@@ -240,11 +200,11 @@ Public Class ucoNewStatustlist
 
 
     ''' <summary>
-    ''' Füllt das Grid mit den Vorgangsstati
+    ''' Füllt das Grid mit den bisher bekannten Vorgangsstati
     ''' </summary>
     ''' <remarks></remarks>
     ''' <author></author>
-    ''' <commentauthor></commentauthor>
+    ''' <commentauthor>In dem Grid stehen dann aber alle Stati. Es werden nicht unbenötigte ausgeblendet</commentauthor>
     Private Sub FillDataset()
         Try
             Datasource.AcceptChanges()
@@ -387,18 +347,23 @@ Public Class ucoNewStatustlist
         Datasource.AcceptChanges()
     End Sub
 
-    'Public Sub HideElement(ByVal pStatus As GlobaleEnumeratoren.enuEichprozessStatus)
-    '    Dim view As New DataView
-    '    view.Table = Datasource
-    '    view.RowFilter = "Status = '" & pStatus & "'"
+    ''' <summary>
+    ''' Blendet Vorgangs Element aus
+    ''' </summary>
+    ''' <param name="pStatus"></param>
+    ''' <remarks></remarks>
+    Public Sub HideElement(ByVal pStatus As GlobaleEnumeratoren.enuEichprozessStatus)
+        Dim view As New DataView
+        view.Table = Datasource
+        view.RowFilter = "Status = '" & pStatus & "'"
 
-    '    For Each item As DataRowView In view 'sollte nur eines sein
-    '        Datasource.Rows.Remove(item.Row)
-    '    Next
-    'End Sub
+        For Each item As DataRowView In view 'sollte nur eines sein
+            Datasource.Rows.Remove(item.Row)
+        Next
+    End Sub
 
 #End Region
-  
+
 
 
 #Region "telerik"

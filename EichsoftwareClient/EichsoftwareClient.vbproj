@@ -206,9 +206,9 @@
     <Compile Include="MainModule.vb" />
     <Compile Include="Model\clsCrypto.vb" />
     <Compile Include="Model\clsDBFunctions.vb" />
-    <Compile Include="Model\clsServerHelper.vb" />
+    <Compile Include="Model\clsClientServerConversionFunctions.vb" />
+    <Compile Include="Model\clsOfficeExports.vb" />
     <Compile Include="Model\clsWebserviceFunctions.vb" />
-    <Compile Include="Model\Win32APICall.vb" />
     <Compile Include="Mogelstatistik.vb">
       <DependentUpon>EntityModelDatabaseClient.tt</DependentUpon>
     </Compile>
@@ -321,10 +321,10 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\UserControls\Allgemein\CustomVisualItem.vb" />
-    <Compile Include="View\UserControls\Allgemein\ucoNewStatustlist.Designer.vb">
-      <DependentUpon>ucoNewStatustlist.vb</DependentUpon>
+    <Compile Include="View\UserControls\Allgemein\ucoAmpel.Designer.vb">
+      <DependentUpon>ucoAmpel.vb</DependentUpon>
     </Compile>
-    <Compile Include="View\UserControls\Allgemein\ucoNewStatustlist.vb">
+    <Compile Include="View\UserControls\Allgemein\ucoAmpel.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="View\UserControls\Eichprozess\ucoPruefungEignungFuerAchlastwaegungen.Designer.vb">
@@ -531,8 +531,8 @@
     <EmbeddedResource Include="View\Forms\frmNeueWaegezele.resx">
       <DependentUpon>frmNeueWaegezele.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\UserControls\Allgemein\ucoNewStatustlist.resx">
-      <DependentUpon>ucoNewStatustlist.vb</DependentUpon>
+    <EmbeddedResource Include="View\UserControls\Allgemein\ucoAmpel.resx">
+      <DependentUpon>ucoAmpel.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\ucoPruefungEignungFuerAchlastwaegungen.de.resx">
       <DependentUpon>ucoPruefungEignungFuerAchlastwaegungen.vb</DependentUpon>
@@ -614,6 +614,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\ucoPruefungWiederholbarkeitBelastung.de.resx">
       <DependentUpon>ucoPruefungWiederholbarkeitBelastung.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoReports.de.resx">
+      <DependentUpon>ucoReports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\ucoReports.pl.resx">
+      <DependentUpon>ucoReports.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\ucoReports.resx">
       <DependentUpon>ucoReports.vb</DependentUpon>

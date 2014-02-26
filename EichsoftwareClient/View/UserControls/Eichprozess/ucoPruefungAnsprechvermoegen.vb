@@ -659,7 +659,7 @@ RadTextBoxControlLast2.Text.Trim = "" Or _
                 UpdateObject()
 
                 'erzeuegn eines Server Objektes auf basis des aktuellen DS
-                objServerEichprozess = clsServerHelper.CopyObjectProperties(objServerEichprozess, objEichprozess)
+                objServerEichprozess = clsClientServerConversionFunctions.CopyObjectProperties(objServerEichprozess, objEichprozess)
                 Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
                     Try
                         Webcontext.Open()

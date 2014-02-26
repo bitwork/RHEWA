@@ -22,30 +22,31 @@ Partial Class ucoReports
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.RadButton10 = New Telerik.WinControls.UI.RadButton()
-        Me.RadButton5 = New Telerik.WinControls.UI.RadButton()
-        Me.RadButton6 = New Telerik.WinControls.UI.RadButton()
-        Me.RadButton9 = New Telerik.WinControls.UI.RadButton()
-        Me.RadButton8 = New Telerik.WinControls.UI.RadButton()
-        Me.RadButton7 = New Telerik.WinControls.UI.RadButton()
-        Me.RadButton4 = New Telerik.WinControls.UI.RadButton()
-        Me.RadButton3 = New Telerik.WinControls.UI.RadButton()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucoReports))
+        Me.RadButtonExportErstEichungPL = New Telerik.WinControls.UI.RadButton()
+        Me.RadButtonExportKonformitaetserklaerungRO = New Telerik.WinControls.UI.RadButton()
+        Me.RadButtonExportKonformitaetserklaerungPL = New Telerik.WinControls.UI.RadButton()
+        Me.RadButtonExportErstEichungDE = New Telerik.WinControls.UI.RadButton()
+        Me.RadButtonExportErstEichungEN = New Telerik.WinControls.UI.RadButton()
+        Me.RadButtonExportKonformitaetserklaerungDE = New Telerik.WinControls.UI.RadButton()
+        Me.RadButtonExportKompatibliaetsnachweisEN = New Telerik.WinControls.UI.RadButton()
+        Me.RadButtonExportKompatibliaetsnachweisDE = New Telerik.WinControls.UI.RadButton()
         Me.RadGroupBox1 = New Telerik.WinControls.UI.RadGroupBox()
-        Me.RadButton1 = New Telerik.WinControls.UI.RadButton()
+        Me.RadButtonExportEichprozessDE = New Telerik.WinControls.UI.RadButton()
         Me.RadGroupBox2 = New Telerik.WinControls.UI.RadGroupBox()
         Me.RadGroupBox3 = New Telerik.WinControls.UI.RadGroupBox()
         Me.RadGroupBox4 = New Telerik.WinControls.UI.RadGroupBox()
-        CType(Me.RadButton10, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButton5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButton6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButton9, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButton8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButton7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButton4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButton3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadButtonExportErstEichungPL, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadButtonExportKonformitaetserklaerungRO, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadButtonExportKonformitaetserklaerungPL, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadButtonExportErstEichungDE, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadButtonExportErstEichungEN, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadButtonExportKonformitaetserklaerungDE, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadButtonExportKompatibliaetsnachweisEN, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadButtonExportKompatibliaetsnachweisDE, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBox1.SuspendLayout()
-        CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadButtonExportEichprozessDE, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBox2.SuspendLayout()
         CType(Me.RadGroupBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -54,281 +55,286 @@ Partial Class ucoReports
         Me.RadGroupBox4.SuspendLayout()
         Me.SuspendLayout()
         '
-        'RadButton10
+        'RadButtonExportErstEichungPL
         '
-        Me.RadButton10.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RadButton10.Location = New System.Drawing.Point(30, 94)
-        Me.RadButton10.Name = "RadButton10"
-        '
-        '
-        '
-        Me.RadButton10.RootElement.AccessibleDescription = Nothing
-        Me.RadButton10.RootElement.AccessibleName = Nothing
-        Me.RadButton10.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadButton10.RootElement.AngleTransform = 0.0!
-        Me.RadButton10.RootElement.FlipText = False
-        Me.RadButton10.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadButton10.RootElement.Padding = New System.Windows.Forms.Padding(0)
-        Me.RadButton10.RootElement.Text = Nothing
-        Me.RadButton10.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
-        Me.RadButton10.Size = New System.Drawing.Size(186, 24)
-        Me.RadButton10.TabIndex = 18
-        Me.RadButton10.Text = "ExportPL Ersteichung"
-        '
-        'RadButton5
-        '
-        Me.RadButton5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RadButton5.Location = New System.Drawing.Point(30, 64)
-        Me.RadButton5.Name = "RadButton5"
+        resources.ApplyResources(Me.RadButtonExportErstEichungPL, "RadButtonExportErstEichungPL")
+        Me.RadButtonExportErstEichungPL.Name = "RadButtonExportErstEichungPL"
         '
         '
         '
-        Me.RadButton5.RootElement.AccessibleDescription = Nothing
-        Me.RadButton5.RootElement.AccessibleName = Nothing
-        Me.RadButton5.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadButton5.RootElement.AngleTransform = 0.0!
-        Me.RadButton5.RootElement.FlipText = False
-        Me.RadButton5.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadButton5.RootElement.Padding = New System.Windows.Forms.Padding(0)
-        Me.RadButton5.RootElement.Text = Nothing
-        Me.RadButton5.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
-        Me.RadButton5.Size = New System.Drawing.Size(186, 24)
-        Me.RadButton5.TabIndex = 13
-        Me.RadButton5.Text = "ExportRO Konformitätserklärung"
+        Me.RadButtonExportErstEichungPL.RootElement.AccessibleDescription = resources.GetString("RadButtonExportErstEichungPL.RootElement.AccessibleDescription")
+        Me.RadButtonExportErstEichungPL.RootElement.AccessibleName = resources.GetString("RadButtonExportErstEichungPL.RootElement.AccessibleName")
+        Me.RadButtonExportErstEichungPL.RootElement.Alignment = CType(resources.GetObject("RadButtonExportErstEichungPL.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.RadButtonExportErstEichungPL.RootElement.AngleTransform = CType(resources.GetObject("RadButtonExportErstEichungPL.RootElement.AngleTransform"), Single)
+        Me.RadButtonExportErstEichungPL.RootElement.FlipText = CType(resources.GetObject("RadButtonExportErstEichungPL.RootElement.FlipText"), Boolean)
+        Me.RadButtonExportErstEichungPL.RootElement.KeyTip = resources.GetString("RadButtonExportErstEichungPL.RootElement.KeyTip")
+        Me.RadButtonExportErstEichungPL.RootElement.Margin = CType(resources.GetObject("RadButtonExportErstEichungPL.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadButtonExportErstEichungPL.RootElement.Padding = CType(resources.GetObject("RadButtonExportErstEichungPL.RootElement.Padding"), System.Windows.Forms.Padding)
+        Me.RadButtonExportErstEichungPL.RootElement.Text = resources.GetString("RadButtonExportErstEichungPL.RootElement.Text")
+        Me.RadButtonExportErstEichungPL.RootElement.TextOrientation = CType(resources.GetObject("RadButtonExportErstEichungPL.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadButtonExportErstEichungPL.RootElement.ToolTipText = resources.GetString("RadButtonExportErstEichungPL.RootElement.ToolTipText")
         '
-        'RadButton6
+        'RadButtonExportKonformitaetserklaerungRO
         '
-        Me.RadButton6.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RadButton6.Location = New System.Drawing.Point(30, 64)
-        Me.RadButton6.Name = "RadButton6"
+        resources.ApplyResources(Me.RadButtonExportKonformitaetserklaerungRO, "RadButtonExportKonformitaetserklaerungRO")
+        Me.RadButtonExportKonformitaetserklaerungRO.Name = "RadButtonExportKonformitaetserklaerungRO"
         '
         '
         '
-        Me.RadButton6.RootElement.AccessibleDescription = Nothing
-        Me.RadButton6.RootElement.AccessibleName = Nothing
-        Me.RadButton6.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadButton6.RootElement.AngleTransform = 0.0!
-        Me.RadButton6.RootElement.FlipText = False
-        Me.RadButton6.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadButton6.RootElement.Padding = New System.Windows.Forms.Padding(0)
-        Me.RadButton6.RootElement.Text = Nothing
-        Me.RadButton6.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
-        Me.RadButton6.Size = New System.Drawing.Size(186, 24)
-        Me.RadButton6.TabIndex = 14
-        Me.RadButton6.Text = "ExportPL Konformitätserklärung"
+        Me.RadButtonExportKonformitaetserklaerungRO.RootElement.AccessibleDescription = resources.GetString("RadButtonExportKonformitaetserklaerungRO.RootElement.AccessibleDescription")
+        Me.RadButtonExportKonformitaetserklaerungRO.RootElement.AccessibleName = resources.GetString("RadButtonExportKonformitaetserklaerungRO.RootElement.AccessibleName")
+        Me.RadButtonExportKonformitaetserklaerungRO.RootElement.Alignment = CType(resources.GetObject("RadButtonExportKonformitaetserklaerungRO.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.RadButtonExportKonformitaetserklaerungRO.RootElement.AngleTransform = CType(resources.GetObject("RadButtonExportKonformitaetserklaerungRO.RootElement.AngleTransform"), Single)
+        Me.RadButtonExportKonformitaetserklaerungRO.RootElement.FlipText = CType(resources.GetObject("RadButtonExportKonformitaetserklaerungRO.RootElement.FlipText"), Boolean)
+        Me.RadButtonExportKonformitaetserklaerungRO.RootElement.KeyTip = resources.GetString("RadButtonExportKonformitaetserklaerungRO.RootElement.KeyTip")
+        Me.RadButtonExportKonformitaetserklaerungRO.RootElement.Margin = CType(resources.GetObject("RadButtonExportKonformitaetserklaerungRO.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadButtonExportKonformitaetserklaerungRO.RootElement.Padding = CType(resources.GetObject("RadButtonExportKonformitaetserklaerungRO.RootElement.Padding"), System.Windows.Forms.Padding)
+        Me.RadButtonExportKonformitaetserklaerungRO.RootElement.Text = resources.GetString("RadButtonExportKonformitaetserklaerungRO.RootElement.Text")
+        Me.RadButtonExportKonformitaetserklaerungRO.RootElement.TextOrientation = CType(resources.GetObject("RadButtonExportKonformitaetserklaerungRO.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadButtonExportKonformitaetserklaerungRO.RootElement.ToolTipText = resources.GetString("RadButtonExportKonformitaetserklaerungRO.RootElement.ToolTipText")
         '
-        'RadButton9
+        'RadButtonExportKonformitaetserklaerungPL
         '
-        Me.RadButton9.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RadButton9.Location = New System.Drawing.Point(17, 91)
-        Me.RadButton9.Name = "RadButton9"
+        resources.ApplyResources(Me.RadButtonExportKonformitaetserklaerungPL, "RadButtonExportKonformitaetserklaerungPL")
+        Me.RadButtonExportKonformitaetserklaerungPL.Name = "RadButtonExportKonformitaetserklaerungPL"
         '
         '
         '
-        Me.RadButton9.RootElement.AccessibleDescription = Nothing
-        Me.RadButton9.RootElement.AccessibleName = Nothing
-        Me.RadButton9.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadButton9.RootElement.AngleTransform = 0.0!
-        Me.RadButton9.RootElement.FlipText = False
-        Me.RadButton9.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadButton9.RootElement.Padding = New System.Windows.Forms.Padding(0)
-        Me.RadButton9.RootElement.Text = Nothing
-        Me.RadButton9.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
-        Me.RadButton9.Size = New System.Drawing.Size(215, 24)
-        Me.RadButton9.TabIndex = 17
-        Me.RadButton9.Text = "ExportDE Ersteichung"
+        Me.RadButtonExportKonformitaetserklaerungPL.RootElement.AccessibleDescription = resources.GetString("RadButtonExportKonformitaetserklaerungPL.RootElement.AccessibleDescription")
+        Me.RadButtonExportKonformitaetserklaerungPL.RootElement.AccessibleName = resources.GetString("RadButtonExportKonformitaetserklaerungPL.RootElement.AccessibleName")
+        Me.RadButtonExportKonformitaetserklaerungPL.RootElement.Alignment = CType(resources.GetObject("RadButtonExportKonformitaetserklaerungPL.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.RadButtonExportKonformitaetserklaerungPL.RootElement.AngleTransform = CType(resources.GetObject("RadButtonExportKonformitaetserklaerungPL.RootElement.AngleTransform"), Single)
+        Me.RadButtonExportKonformitaetserklaerungPL.RootElement.FlipText = CType(resources.GetObject("RadButtonExportKonformitaetserklaerungPL.RootElement.FlipText"), Boolean)
+        Me.RadButtonExportKonformitaetserklaerungPL.RootElement.KeyTip = resources.GetString("RadButtonExportKonformitaetserklaerungPL.RootElement.KeyTip")
+        Me.RadButtonExportKonformitaetserklaerungPL.RootElement.Margin = CType(resources.GetObject("RadButtonExportKonformitaetserklaerungPL.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadButtonExportKonformitaetserklaerungPL.RootElement.Padding = CType(resources.GetObject("RadButtonExportKonformitaetserklaerungPL.RootElement.Padding"), System.Windows.Forms.Padding)
+        Me.RadButtonExportKonformitaetserklaerungPL.RootElement.Text = resources.GetString("RadButtonExportKonformitaetserklaerungPL.RootElement.Text")
+        Me.RadButtonExportKonformitaetserklaerungPL.RootElement.TextOrientation = CType(resources.GetObject("RadButtonExportKonformitaetserklaerungPL.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadButtonExportKonformitaetserklaerungPL.RootElement.ToolTipText = resources.GetString("RadButtonExportKonformitaetserklaerungPL.RootElement.ToolTipText")
         '
-        'RadButton8
+        'RadButtonExportErstEichungDE
         '
-        Me.RadButton8.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RadButton8.Location = New System.Drawing.Point(17, 94)
-        Me.RadButton8.Name = "RadButton8"
+        resources.ApplyResources(Me.RadButtonExportErstEichungDE, "RadButtonExportErstEichungDE")
+        Me.RadButtonExportErstEichungDE.Name = "RadButtonExportErstEichungDE"
         '
         '
         '
-        Me.RadButton8.RootElement.AccessibleDescription = Nothing
-        Me.RadButton8.RootElement.AccessibleName = Nothing
-        Me.RadButton8.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadButton8.RootElement.AngleTransform = 0.0!
-        Me.RadButton8.RootElement.FlipText = False
-        Me.RadButton8.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadButton8.RootElement.Padding = New System.Windows.Forms.Padding(0)
-        Me.RadButton8.RootElement.Text = Nothing
-        Me.RadButton8.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
-        Me.RadButton8.Size = New System.Drawing.Size(215, 24)
-        Me.RadButton8.TabIndex = 16
-        Me.RadButton8.Text = "ExportEN Ersteichung"
+        Me.RadButtonExportErstEichungDE.RootElement.AccessibleDescription = resources.GetString("RadButtonExportErstEichungDE.RootElement.AccessibleDescription")
+        Me.RadButtonExportErstEichungDE.RootElement.AccessibleName = resources.GetString("RadButtonExportErstEichungDE.RootElement.AccessibleName")
+        Me.RadButtonExportErstEichungDE.RootElement.Alignment = CType(resources.GetObject("RadButtonExportErstEichungDE.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.RadButtonExportErstEichungDE.RootElement.AngleTransform = CType(resources.GetObject("RadButtonExportErstEichungDE.RootElement.AngleTransform"), Single)
+        Me.RadButtonExportErstEichungDE.RootElement.FlipText = CType(resources.GetObject("RadButtonExportErstEichungDE.RootElement.FlipText"), Boolean)
+        Me.RadButtonExportErstEichungDE.RootElement.KeyTip = resources.GetString("RadButtonExportErstEichungDE.RootElement.KeyTip")
+        Me.RadButtonExportErstEichungDE.RootElement.Margin = CType(resources.GetObject("RadButtonExportErstEichungDE.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadButtonExportErstEichungDE.RootElement.Padding = CType(resources.GetObject("RadButtonExportErstEichungDE.RootElement.Padding"), System.Windows.Forms.Padding)
+        Me.RadButtonExportErstEichungDE.RootElement.Text = resources.GetString("RadButtonExportErstEichungDE.RootElement.Text")
+        Me.RadButtonExportErstEichungDE.RootElement.TextOrientation = CType(resources.GetObject("RadButtonExportErstEichungDE.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadButtonExportErstEichungDE.RootElement.ToolTipText = resources.GetString("RadButtonExportErstEichungDE.RootElement.ToolTipText")
         '
-        'RadButton7
+        'RadButtonExportErstEichungEN
         '
-        Me.RadButton7.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RadButton7.Location = New System.Drawing.Point(17, 31)
-        Me.RadButton7.Name = "RadButton7"
+        resources.ApplyResources(Me.RadButtonExportErstEichungEN, "RadButtonExportErstEichungEN")
+        Me.RadButtonExportErstEichungEN.Name = "RadButtonExportErstEichungEN"
         '
         '
         '
-        Me.RadButton7.RootElement.AccessibleDescription = Nothing
-        Me.RadButton7.RootElement.AccessibleName = Nothing
-        Me.RadButton7.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadButton7.RootElement.AngleTransform = 0.0!
-        Me.RadButton7.RootElement.FlipText = False
-        Me.RadButton7.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadButton7.RootElement.Padding = New System.Windows.Forms.Padding(0)
-        Me.RadButton7.RootElement.Text = Nothing
-        Me.RadButton7.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
-        Me.RadButton7.Size = New System.Drawing.Size(215, 24)
-        Me.RadButton7.TabIndex = 15
-        Me.RadButton7.Text = "ExportDE Konformitätserklärung"
+        Me.RadButtonExportErstEichungEN.RootElement.AccessibleDescription = resources.GetString("RadButtonExportErstEichungEN.RootElement.AccessibleDescription")
+        Me.RadButtonExportErstEichungEN.RootElement.AccessibleName = resources.GetString("RadButtonExportErstEichungEN.RootElement.AccessibleName")
+        Me.RadButtonExportErstEichungEN.RootElement.Alignment = CType(resources.GetObject("RadButtonExportErstEichungEN.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.RadButtonExportErstEichungEN.RootElement.AngleTransform = CType(resources.GetObject("RadButtonExportErstEichungEN.RootElement.AngleTransform"), Single)
+        Me.RadButtonExportErstEichungEN.RootElement.FlipText = CType(resources.GetObject("RadButtonExportErstEichungEN.RootElement.FlipText"), Boolean)
+        Me.RadButtonExportErstEichungEN.RootElement.KeyTip = resources.GetString("RadButtonExportErstEichungEN.RootElement.KeyTip")
+        Me.RadButtonExportErstEichungEN.RootElement.Margin = CType(resources.GetObject("RadButtonExportErstEichungEN.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadButtonExportErstEichungEN.RootElement.Padding = CType(resources.GetObject("RadButtonExportErstEichungEN.RootElement.Padding"), System.Windows.Forms.Padding)
+        Me.RadButtonExportErstEichungEN.RootElement.Text = resources.GetString("RadButtonExportErstEichungEN.RootElement.Text")
+        Me.RadButtonExportErstEichungEN.RootElement.TextOrientation = CType(resources.GetObject("RadButtonExportErstEichungEN.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadButtonExportErstEichungEN.RootElement.ToolTipText = resources.GetString("RadButtonExportErstEichungEN.RootElement.ToolTipText")
         '
-        'RadButton4
+        'RadButtonExportKonformitaetserklaerungDE
         '
-        Me.RadButton4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RadButton4.Location = New System.Drawing.Point(17, 64)
-        Me.RadButton4.Name = "RadButton4"
+        resources.ApplyResources(Me.RadButtonExportKonformitaetserklaerungDE, "RadButtonExportKonformitaetserklaerungDE")
+        Me.RadButtonExportKonformitaetserklaerungDE.Name = "RadButtonExportKonformitaetserklaerungDE"
         '
         '
         '
-        Me.RadButton4.RootElement.AccessibleDescription = Nothing
-        Me.RadButton4.RootElement.AccessibleName = Nothing
-        Me.RadButton4.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadButton4.RootElement.AngleTransform = 0.0!
-        Me.RadButton4.RootElement.FlipText = False
-        Me.RadButton4.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadButton4.RootElement.Padding = New System.Windows.Forms.Padding(0)
-        Me.RadButton4.RootElement.Text = Nothing
-        Me.RadButton4.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
-        Me.RadButton4.Size = New System.Drawing.Size(215, 24)
-        Me.RadButton4.TabIndex = 12
-        Me.RadButton4.Text = "ExportEN Kompatibilitätsnachweis"
+        Me.RadButtonExportKonformitaetserklaerungDE.RootElement.AccessibleDescription = resources.GetString("RadButtonExportKonformitaetserklaerungDE.RootElement.AccessibleDescription")
+        Me.RadButtonExportKonformitaetserklaerungDE.RootElement.AccessibleName = resources.GetString("RadButtonExportKonformitaetserklaerungDE.RootElement.AccessibleName")
+        Me.RadButtonExportKonformitaetserklaerungDE.RootElement.Alignment = CType(resources.GetObject("RadButtonExportKonformitaetserklaerungDE.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.RadButtonExportKonformitaetserklaerungDE.RootElement.AngleTransform = CType(resources.GetObject("RadButtonExportKonformitaetserklaerungDE.RootElement.AngleTransform"), Single)
+        Me.RadButtonExportKonformitaetserklaerungDE.RootElement.FlipText = CType(resources.GetObject("RadButtonExportKonformitaetserklaerungDE.RootElement.FlipText"), Boolean)
+        Me.RadButtonExportKonformitaetserklaerungDE.RootElement.KeyTip = resources.GetString("RadButtonExportKonformitaetserklaerungDE.RootElement.KeyTip")
+        Me.RadButtonExportKonformitaetserklaerungDE.RootElement.Margin = CType(resources.GetObject("RadButtonExportKonformitaetserklaerungDE.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadButtonExportKonformitaetserklaerungDE.RootElement.Padding = CType(resources.GetObject("RadButtonExportKonformitaetserklaerungDE.RootElement.Padding"), System.Windows.Forms.Padding)
+        Me.RadButtonExportKonformitaetserklaerungDE.RootElement.Text = resources.GetString("RadButtonExportKonformitaetserklaerungDE.RootElement.Text")
+        Me.RadButtonExportKonformitaetserklaerungDE.RootElement.TextOrientation = CType(resources.GetObject("RadButtonExportKonformitaetserklaerungDE.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadButtonExportKonformitaetserklaerungDE.RootElement.ToolTipText = resources.GetString("RadButtonExportKonformitaetserklaerungDE.RootElement.ToolTipText")
         '
-        'RadButton3
+        'RadButtonExportKompatibliaetsnachweisEN
         '
-        Me.RadButton3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RadButton3.Location = New System.Drawing.Point(17, 61)
-        Me.RadButton3.Name = "RadButton3"
+        resources.ApplyResources(Me.RadButtonExportKompatibliaetsnachweisEN, "RadButtonExportKompatibliaetsnachweisEN")
+        Me.RadButtonExportKompatibliaetsnachweisEN.Name = "RadButtonExportKompatibliaetsnachweisEN"
         '
         '
         '
-        Me.RadButton3.RootElement.AccessibleDescription = Nothing
-        Me.RadButton3.RootElement.AccessibleName = Nothing
-        Me.RadButton3.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadButton3.RootElement.AngleTransform = 0.0!
-        Me.RadButton3.RootElement.FlipText = False
-        Me.RadButton3.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadButton3.RootElement.Padding = New System.Windows.Forms.Padding(0)
-        Me.RadButton3.RootElement.Text = Nothing
-        Me.RadButton3.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
-        Me.RadButton3.Size = New System.Drawing.Size(215, 24)
-        Me.RadButton3.TabIndex = 11
-        Me.RadButton3.Text = "ExportDE Kompatibilitätsnachweis"
+        Me.RadButtonExportKompatibliaetsnachweisEN.RootElement.AccessibleDescription = resources.GetString("RadButtonExportKompatibliaetsnachweisEN.RootElement.AccessibleDescription")
+        Me.RadButtonExportKompatibliaetsnachweisEN.RootElement.AccessibleName = resources.GetString("RadButtonExportKompatibliaetsnachweisEN.RootElement.AccessibleName")
+        Me.RadButtonExportKompatibliaetsnachweisEN.RootElement.Alignment = CType(resources.GetObject("RadButtonExportKompatibliaetsnachweisEN.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.RadButtonExportKompatibliaetsnachweisEN.RootElement.AngleTransform = CType(resources.GetObject("RadButtonExportKompatibliaetsnachweisEN.RootElement.AngleTransform"), Single)
+        Me.RadButtonExportKompatibliaetsnachweisEN.RootElement.FlipText = CType(resources.GetObject("RadButtonExportKompatibliaetsnachweisEN.RootElement.FlipText"), Boolean)
+        Me.RadButtonExportKompatibliaetsnachweisEN.RootElement.KeyTip = resources.GetString("RadButtonExportKompatibliaetsnachweisEN.RootElement.KeyTip")
+        Me.RadButtonExportKompatibliaetsnachweisEN.RootElement.Margin = CType(resources.GetObject("RadButtonExportKompatibliaetsnachweisEN.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadButtonExportKompatibliaetsnachweisEN.RootElement.Padding = CType(resources.GetObject("RadButtonExportKompatibliaetsnachweisEN.RootElement.Padding"), System.Windows.Forms.Padding)
+        Me.RadButtonExportKompatibliaetsnachweisEN.RootElement.Text = resources.GetString("RadButtonExportKompatibliaetsnachweisEN.RootElement.Text")
+        Me.RadButtonExportKompatibliaetsnachweisEN.RootElement.TextOrientation = CType(resources.GetObject("RadButtonExportKompatibliaetsnachweisEN.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadButtonExportKompatibliaetsnachweisEN.RootElement.ToolTipText = resources.GetString("RadButtonExportKompatibliaetsnachweisEN.RootElement.ToolTipText")
+        '
+        'RadButtonExportKompatibliaetsnachweisDE
+        '
+        resources.ApplyResources(Me.RadButtonExportKompatibliaetsnachweisDE, "RadButtonExportKompatibliaetsnachweisDE")
+        Me.RadButtonExportKompatibliaetsnachweisDE.Name = "RadButtonExportKompatibliaetsnachweisDE"
+        '
+        '
+        '
+        Me.RadButtonExportKompatibliaetsnachweisDE.RootElement.AccessibleDescription = resources.GetString("RadButtonExportKompatibliaetsnachweisDE.RootElement.AccessibleDescription")
+        Me.RadButtonExportKompatibliaetsnachweisDE.RootElement.AccessibleName = resources.GetString("RadButtonExportKompatibliaetsnachweisDE.RootElement.AccessibleName")
+        Me.RadButtonExportKompatibliaetsnachweisDE.RootElement.Alignment = CType(resources.GetObject("RadButtonExportKompatibliaetsnachweisDE.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.RadButtonExportKompatibliaetsnachweisDE.RootElement.AngleTransform = CType(resources.GetObject("RadButtonExportKompatibliaetsnachweisDE.RootElement.AngleTransform"), Single)
+        Me.RadButtonExportKompatibliaetsnachweisDE.RootElement.FlipText = CType(resources.GetObject("RadButtonExportKompatibliaetsnachweisDE.RootElement.FlipText"), Boolean)
+        Me.RadButtonExportKompatibliaetsnachweisDE.RootElement.KeyTip = resources.GetString("RadButtonExportKompatibliaetsnachweisDE.RootElement.KeyTip")
+        Me.RadButtonExportKompatibliaetsnachweisDE.RootElement.Margin = CType(resources.GetObject("RadButtonExportKompatibliaetsnachweisDE.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadButtonExportKompatibliaetsnachweisDE.RootElement.Padding = CType(resources.GetObject("RadButtonExportKompatibliaetsnachweisDE.RootElement.Padding"), System.Windows.Forms.Padding)
+        Me.RadButtonExportKompatibliaetsnachweisDE.RootElement.Text = resources.GetString("RadButtonExportKompatibliaetsnachweisDE.RootElement.Text")
+        Me.RadButtonExportKompatibliaetsnachweisDE.RootElement.TextOrientation = CType(resources.GetObject("RadButtonExportKompatibliaetsnachweisDE.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadButtonExportKompatibliaetsnachweisDE.RootElement.ToolTipText = resources.GetString("RadButtonExportKompatibliaetsnachweisDE.RootElement.ToolTipText")
         '
         'RadGroupBox1
         '
+        resources.ApplyResources(Me.RadGroupBox1, "RadGroupBox1")
         Me.RadGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
-        Me.RadGroupBox1.Controls.Add(Me.RadButton1)
-        Me.RadGroupBox1.Controls.Add(Me.RadButton7)
-        Me.RadGroupBox1.Controls.Add(Me.RadButton3)
-        Me.RadGroupBox1.Controls.Add(Me.RadButton9)
-        Me.RadGroupBox1.HeaderText = "DE"
-        Me.RadGroupBox1.Location = New System.Drawing.Point(3, 3)
+        Me.RadGroupBox1.Controls.Add(Me.RadButtonExportEichprozessDE)
+        Me.RadGroupBox1.Controls.Add(Me.RadButtonExportKonformitaetserklaerungDE)
+        Me.RadGroupBox1.Controls.Add(Me.RadButtonExportKompatibliaetsnachweisDE)
+        Me.RadGroupBox1.Controls.Add(Me.RadButtonExportErstEichungDE)
         Me.RadGroupBox1.Name = "RadGroupBox1"
         '
         '
         '
-        Me.RadGroupBox1.RootElement.Padding = New System.Windows.Forms.Padding(2, 18, 2, 2)
-        Me.RadGroupBox1.Size = New System.Drawing.Size(250, 180)
-        Me.RadGroupBox1.TabIndex = 19
-        Me.RadGroupBox1.Text = "DE"
+        Me.RadGroupBox1.RootElement.AccessibleDescription = resources.GetString("RadGroupBox1.RootElement.AccessibleDescription")
+        Me.RadGroupBox1.RootElement.AccessibleName = resources.GetString("RadGroupBox1.RootElement.AccessibleName")
+        Me.RadGroupBox1.RootElement.Alignment = CType(resources.GetObject("RadGroupBox1.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.RadGroupBox1.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBox1.RootElement.AngleTransform"), Single)
+        Me.RadGroupBox1.RootElement.FlipText = CType(resources.GetObject("RadGroupBox1.RootElement.FlipText"), Boolean)
+        Me.RadGroupBox1.RootElement.KeyTip = resources.GetString("RadGroupBox1.RootElement.KeyTip")
+        Me.RadGroupBox1.RootElement.Margin = CType(resources.GetObject("RadGroupBox1.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadGroupBox1.RootElement.Padding = CType(resources.GetObject("RadGroupBox1.RootElement.Padding"), System.Windows.Forms.Padding)
+        Me.RadGroupBox1.RootElement.Text = resources.GetString("RadGroupBox1.RootElement.Text")
+        Me.RadGroupBox1.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBox1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadGroupBox1.RootElement.ToolTipText = resources.GetString("RadGroupBox1.RootElement.ToolTipText")
         '
-        'RadButton1
+        'RadButtonExportEichprozessDE
         '
-        Me.RadButton1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RadButton1.Location = New System.Drawing.Point(17, 121)
-        Me.RadButton1.Name = "RadButton1"
-        '
+        resources.ApplyResources(Me.RadButtonExportEichprozessDE, "RadButtonExportEichprozessDE")
+        Me.RadButtonExportEichprozessDE.Name = "RadButtonExportEichprozessDE"
         '
         '
-        Me.RadButton1.RootElement.AccessibleDescription = Nothing
-        Me.RadButton1.RootElement.AccessibleName = Nothing
-        Me.RadButton1.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadButton1.RootElement.AngleTransform = 0.0!
-        Me.RadButton1.RootElement.FlipText = False
-        Me.RadButton1.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadButton1.RootElement.Padding = New System.Windows.Forms.Padding(0)
-        Me.RadButton1.RootElement.Text = Nothing
-        Me.RadButton1.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
-        Me.RadButton1.Size = New System.Drawing.Size(215, 24)
-        Me.RadButton1.TabIndex = 23
-        Me.RadButton1.Text = "KomplettExport DE"
+        '
+        Me.RadButtonExportEichprozessDE.RootElement.AccessibleDescription = resources.GetString("RadButtonExportEichprozessDE.RootElement.AccessibleDescription")
+        Me.RadButtonExportEichprozessDE.RootElement.AccessibleName = resources.GetString("RadButtonExportEichprozessDE.RootElement.AccessibleName")
+        Me.RadButtonExportEichprozessDE.RootElement.Alignment = CType(resources.GetObject("RadButtonExportEichprozessDE.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.RadButtonExportEichprozessDE.RootElement.AngleTransform = CType(resources.GetObject("RadButtonExportEichprozessDE.RootElement.AngleTransform"), Single)
+        Me.RadButtonExportEichprozessDE.RootElement.FlipText = CType(resources.GetObject("RadButtonExportEichprozessDE.RootElement.FlipText"), Boolean)
+        Me.RadButtonExportEichprozessDE.RootElement.KeyTip = resources.GetString("RadButtonExportEichprozessDE.RootElement.KeyTip")
+        Me.RadButtonExportEichprozessDE.RootElement.Margin = CType(resources.GetObject("RadButtonExportEichprozessDE.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadButtonExportEichprozessDE.RootElement.Padding = CType(resources.GetObject("RadButtonExportEichprozessDE.RootElement.Padding"), System.Windows.Forms.Padding)
+        Me.RadButtonExportEichprozessDE.RootElement.Text = resources.GetString("RadButtonExportEichprozessDE.RootElement.Text")
+        Me.RadButtonExportEichprozessDE.RootElement.TextOrientation = CType(resources.GetObject("RadButtonExportEichprozessDE.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadButtonExportEichprozessDE.RootElement.ToolTipText = resources.GetString("RadButtonExportEichprozessDE.RootElement.ToolTipText")
         '
         'RadGroupBox2
         '
+        resources.ApplyResources(Me.RadGroupBox2, "RadGroupBox2")
         Me.RadGroupBox2.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
-        Me.RadGroupBox2.Controls.Add(Me.RadButton4)
-        Me.RadGroupBox2.Controls.Add(Me.RadButton8)
-        Me.RadGroupBox2.HeaderText = "EN"
-        Me.RadGroupBox2.Location = New System.Drawing.Point(3, 189)
+        Me.RadGroupBox2.Controls.Add(Me.RadButtonExportKompatibliaetsnachweisEN)
+        Me.RadGroupBox2.Controls.Add(Me.RadButtonExportErstEichungEN)
         Me.RadGroupBox2.Name = "RadGroupBox2"
         '
         '
         '
-        Me.RadGroupBox2.RootElement.Padding = New System.Windows.Forms.Padding(2, 18, 2, 2)
-        Me.RadGroupBox2.Size = New System.Drawing.Size(250, 171)
-        Me.RadGroupBox2.TabIndex = 20
-        Me.RadGroupBox2.Text = "EN"
+        Me.RadGroupBox2.RootElement.AccessibleDescription = resources.GetString("RadGroupBox2.RootElement.AccessibleDescription")
+        Me.RadGroupBox2.RootElement.AccessibleName = resources.GetString("RadGroupBox2.RootElement.AccessibleName")
+        Me.RadGroupBox2.RootElement.Alignment = CType(resources.GetObject("RadGroupBox2.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.RadGroupBox2.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBox2.RootElement.AngleTransform"), Single)
+        Me.RadGroupBox2.RootElement.FlipText = CType(resources.GetObject("RadGroupBox2.RootElement.FlipText"), Boolean)
+        Me.RadGroupBox2.RootElement.KeyTip = resources.GetString("RadGroupBox2.RootElement.KeyTip")
+        Me.RadGroupBox2.RootElement.Margin = CType(resources.GetObject("RadGroupBox2.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadGroupBox2.RootElement.Padding = CType(resources.GetObject("RadGroupBox2.RootElement.Padding"), System.Windows.Forms.Padding)
+        Me.RadGroupBox2.RootElement.Text = resources.GetString("RadGroupBox2.RootElement.Text")
+        Me.RadGroupBox2.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBox2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadGroupBox2.RootElement.ToolTipText = resources.GetString("RadGroupBox2.RootElement.ToolTipText")
         '
         'RadGroupBox3
         '
+        resources.ApplyResources(Me.RadGroupBox3, "RadGroupBox3")
         Me.RadGroupBox3.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
-        Me.RadGroupBox3.Controls.Add(Me.RadButton6)
-        Me.RadGroupBox3.Controls.Add(Me.RadButton10)
-        Me.RadGroupBox3.HeaderText = "PL"
-        Me.RadGroupBox3.Location = New System.Drawing.Point(259, 12)
+        Me.RadGroupBox3.Controls.Add(Me.RadButtonExportKonformitaetserklaerungPL)
+        Me.RadGroupBox3.Controls.Add(Me.RadButtonExportErstEichungPL)
         Me.RadGroupBox3.Name = "RadGroupBox3"
         '
         '
         '
-        Me.RadGroupBox3.RootElement.Padding = New System.Windows.Forms.Padding(2, 18, 2, 2)
-        Me.RadGroupBox3.Size = New System.Drawing.Size(250, 171)
-        Me.RadGroupBox3.TabIndex = 21
-        Me.RadGroupBox3.Text = "PL"
+        Me.RadGroupBox3.RootElement.AccessibleDescription = resources.GetString("RadGroupBox3.RootElement.AccessibleDescription")
+        Me.RadGroupBox3.RootElement.AccessibleName = resources.GetString("RadGroupBox3.RootElement.AccessibleName")
+        Me.RadGroupBox3.RootElement.Alignment = CType(resources.GetObject("RadGroupBox3.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.RadGroupBox3.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBox3.RootElement.AngleTransform"), Single)
+        Me.RadGroupBox3.RootElement.FlipText = CType(resources.GetObject("RadGroupBox3.RootElement.FlipText"), Boolean)
+        Me.RadGroupBox3.RootElement.KeyTip = resources.GetString("RadGroupBox3.RootElement.KeyTip")
+        Me.RadGroupBox3.RootElement.Margin = CType(resources.GetObject("RadGroupBox3.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadGroupBox3.RootElement.Padding = CType(resources.GetObject("RadGroupBox3.RootElement.Padding"), System.Windows.Forms.Padding)
+        Me.RadGroupBox3.RootElement.Text = resources.GetString("RadGroupBox3.RootElement.Text")
+        Me.RadGroupBox3.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBox3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadGroupBox3.RootElement.ToolTipText = resources.GetString("RadGroupBox3.RootElement.ToolTipText")
         '
         'RadGroupBox4
         '
+        resources.ApplyResources(Me.RadGroupBox4, "RadGroupBox4")
         Me.RadGroupBox4.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
-        Me.RadGroupBox4.Controls.Add(Me.RadButton5)
-        Me.RadGroupBox4.HeaderText = "RO"
-        Me.RadGroupBox4.Location = New System.Drawing.Point(259, 189)
+        Me.RadGroupBox4.Controls.Add(Me.RadButtonExportKonformitaetserklaerungRO)
         Me.RadGroupBox4.Name = "RadGroupBox4"
         '
         '
         '
-        Me.RadGroupBox4.RootElement.Padding = New System.Windows.Forms.Padding(2, 18, 2, 2)
-        Me.RadGroupBox4.Size = New System.Drawing.Size(250, 171)
-        Me.RadGroupBox4.TabIndex = 22
-        Me.RadGroupBox4.Text = "RO"
+        Me.RadGroupBox4.RootElement.AccessibleDescription = resources.GetString("RadGroupBox4.RootElement.AccessibleDescription")
+        Me.RadGroupBox4.RootElement.AccessibleName = resources.GetString("RadGroupBox4.RootElement.AccessibleName")
+        Me.RadGroupBox4.RootElement.Alignment = CType(resources.GetObject("RadGroupBox4.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.RadGroupBox4.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBox4.RootElement.AngleTransform"), Single)
+        Me.RadGroupBox4.RootElement.FlipText = CType(resources.GetObject("RadGroupBox4.RootElement.FlipText"), Boolean)
+        Me.RadGroupBox4.RootElement.KeyTip = resources.GetString("RadGroupBox4.RootElement.KeyTip")
+        Me.RadGroupBox4.RootElement.Margin = CType(resources.GetObject("RadGroupBox4.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadGroupBox4.RootElement.Padding = CType(resources.GetObject("RadGroupBox4.RootElement.Padding"), System.Windows.Forms.Padding)
+        Me.RadGroupBox4.RootElement.Text = resources.GetString("RadGroupBox4.RootElement.Text")
+        Me.RadGroupBox4.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBox4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadGroupBox4.RootElement.ToolTipText = resources.GetString("RadGroupBox4.RootElement.ToolTipText")
         '
         'ucoReports
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.RadGroupBox4)
         Me.Controls.Add(Me.RadGroupBox3)
         Me.Controls.Add(Me.RadGroupBox2)
         Me.Controls.Add(Me.RadGroupBox1)
         Me.Name = "ucoReports"
-        Me.Size = New System.Drawing.Size(524, 376)
-        CType(Me.RadButton10, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButton5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButton6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButton9, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButton8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButton7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButton4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButton3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadButtonExportErstEichungPL, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadButtonExportKonformitaetserklaerungRO, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadButtonExportKonformitaetserklaerungPL, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadButtonExportErstEichungDE, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadButtonExportErstEichungEN, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadButtonExportKonformitaetserklaerungDE, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadButtonExportKompatibliaetsnachweisEN, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadButtonExportKompatibliaetsnachweisDE, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBox1.ResumeLayout(False)
-        CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadButtonExportEichprozessDE, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBox2.ResumeLayout(False)
         CType(Me.RadGroupBox3, System.ComponentModel.ISupportInitialize).EndInit()
@@ -338,18 +344,18 @@ Partial Class ucoReports
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents RadButton10 As Telerik.WinControls.UI.RadButton
-    Friend WithEvents RadButton5 As Telerik.WinControls.UI.RadButton
-    Friend WithEvents RadButton6 As Telerik.WinControls.UI.RadButton
-    Friend WithEvents RadButton9 As Telerik.WinControls.UI.RadButton
-    Friend WithEvents RadButton8 As Telerik.WinControls.UI.RadButton
-    Friend WithEvents RadButton7 As Telerik.WinControls.UI.RadButton
-    Friend WithEvents RadButton4 As Telerik.WinControls.UI.RadButton
-    Friend WithEvents RadButton3 As Telerik.WinControls.UI.RadButton
+    Friend WithEvents RadButtonExportErstEichungPL As Telerik.WinControls.UI.RadButton
+    Friend WithEvents RadButtonExportKonformitaetserklaerungRO As Telerik.WinControls.UI.RadButton
+    Friend WithEvents RadButtonExportKonformitaetserklaerungPL As Telerik.WinControls.UI.RadButton
+    Friend WithEvents RadButtonExportErstEichungDE As Telerik.WinControls.UI.RadButton
+    Friend WithEvents RadButtonExportErstEichungEN As Telerik.WinControls.UI.RadButton
+    Friend WithEvents RadButtonExportKonformitaetserklaerungDE As Telerik.WinControls.UI.RadButton
+    Friend WithEvents RadButtonExportKompatibliaetsnachweisEN As Telerik.WinControls.UI.RadButton
+    Friend WithEvents RadButtonExportKompatibliaetsnachweisDE As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadGroupBox1 As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents RadGroupBox2 As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents RadGroupBox3 As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents RadGroupBox4 As Telerik.WinControls.UI.RadGroupBox
-    Friend WithEvents RadButton1 As Telerik.WinControls.UI.RadButton
+    Friend WithEvents RadButtonExportEichprozessDE As Telerik.WinControls.UI.RadButton
 
 End Class

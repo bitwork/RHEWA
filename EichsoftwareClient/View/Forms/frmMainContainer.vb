@@ -1,8 +1,5 @@
-﻿Imports System.Resources
-Imports System.Globalization
+﻿Imports System.Globalization
 Imports EichsoftwareClient.My.Resources
-Imports Microsoft.Office.Interop.Excel
-Imports Microsoft.Office.Interop.Word
 Imports System.IO
 
 
@@ -16,7 +13,9 @@ Public Class FrmMainContainer
     ''' <author></author>
     ''' <commentauthor></commentauthor>
     Private WithEvents _CurrentUco As ucoContent
-    Private objWebservicefunctions As New clsWebserviceFunctions
+
+    Private objWebservicefunctions As New clsWebserviceFunctions 'hilfsklasse für aufrufe gegen den Webservice
+    Private objDBFunctions As New clsDBFunctions 'hilfsklasse für aufrufe gegen lokale DB
 
     Enum enuDialogModus
         normal = 0
@@ -24,7 +23,7 @@ Public Class FrmMainContainer
         korrigierend = 2
     End Enum
 
-    Private WithEvents BreadCrumb As ucoNewStatustlist
+    Private WithEvents BreadCrumb As ucoAmpel
 #End Region
 
 
@@ -179,7 +178,7 @@ Public Class FrmMainContainer
             If Status > CurrentEichprozess.FK_Vorgangsstatus Then
                 Exit Sub
             Else
-            
+
                 'If _CurrentUco.DialogModus = ucoContent.enuDialogModus.lesend Then
                 '    'schnelles blättern im lese modus
                 If Not Status = _CurrentUco.EichprozessStatusReihenfolge Then
@@ -310,21 +309,29 @@ Public Class FrmMainContainer
 
         'wenn keine Lizenz vorhanden ist, zur Eingabe auffordern
         If My.Settings.Lizensiert = False Then
-            Dim f As New FrmLizenz
-            If f.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
-                If My.Settings.Lizensiert = False Then
+            If Debugger.IsAttached Then
+                objDBFunctions.ForceActivation()
+                'neue Stammdaten zum Benutzer holen
+                objWebservicefunctions.GetNeueStammdaten(False)
+                Me.FrmMainContainer_Load(Nothing, Nothing)
+            Else
+                Dim f As New FrmLizenz
+                If f.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
+                    If My.Settings.Lizensiert = False Then
+                        System.Windows.Forms.Application.Exit()
+                        Exit Sub
+                    Else
+                        'MessageBox.Show(My.Resources.GlobaleLokalisierung.BitteNeuStarten, "", MessageBoxButtons.OK)
+                        'System.Windows.Forms.Application.Exit()
+                        Me.FrmMainContainer_Load(Nothing, Nothing)
+                        Exit Sub
+                    End If
+                Else
                     System.Windows.Forms.Application.Exit()
                     Exit Sub
-                Else
-                    'MessageBox.Show(My.Resources.GlobaleLokalisierung.BitteNeuStarten, "", MessageBoxButtons.OK)
-                    'System.Windows.Forms.Application.Exit()
-                    Me.FrmMainContainer_Load(Nothing, Nothing)
-                    Exit Sub
                 End If
-            Else
-                System.Windows.Forms.Application.Exit()
-                Exit Sub
             End If
+
         End If
 
         'laden des Grid Layouts
@@ -355,7 +362,7 @@ Public Class FrmMainContainer
     Private Sub LadeEichprozessVorgangsUco()
         If Not Me.CurrentEichprozess Is Nothing Then
             Try
-                BreadCrumb = New ucoNewStatustlist(Me)
+                BreadCrumb = New ucoAmpel(Me)
                 Me.RadScrollablePanelTrafficLightBreadcrumb.PanelContainer.Controls.Add(BreadCrumb)
                 Me.RadScrollablePanelTrafficLightBreadcrumb.PanelContainer.Controls(0).Dock = DockStyle.Fill
                 Me.RadScrollablePanelTrafficLightBreadcrumb.PanelContainer.Controls(0).Visible = True
@@ -524,8 +531,6 @@ Public Class FrmMainContainer
         'TH Event abfeuern, damit steuerelemente bescheid wissen, das sie in DB speichern müssen
 
         RaiseEvent SaveNeeded(_CurrentUco)
-        BreadCrumb.StatusDesAktuellGewaehltenVorgangs = ucoNewStatustlist.enuImage.gelb
-
 
         If Not _CurrentUco Is Nothing Then
             'abbruch des Vorgangs,wenn die validierung einen fehler erzeugt hat
@@ -654,7 +659,7 @@ Public Class FrmMainContainer
         'Else
     End Sub
 
-  
+
 
     ''' <summary>
     ''' Navigiere  vorwärts inklusive speichern und laden des neuen UCOs
