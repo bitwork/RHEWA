@@ -2510,6 +2510,6 @@
     <value>ucoStammdatenEingabe</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, EichsoftwareClient, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>EichsoftwareClient.ucoContent, EichsoftwareClient, Version=1.0.5170.23971, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

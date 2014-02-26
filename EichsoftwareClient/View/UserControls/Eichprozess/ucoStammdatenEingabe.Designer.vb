@@ -25,6 +25,10 @@ Partial Class ucoStammdatenEingabe
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucoStammdatenEingabe))
         Me.RadScrollablePanel1 = New Telerik.WinControls.UI.RadScrollablePanel()
         Me.RadGroupBoxStammdaten = New Telerik.WinControls.UI.RadGroupBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld = New System.Windows.Forms.Label()
         Me.RadTextBoxControlStammdatenPLZ = New Telerik.WinControls.UI.RadTextBoxControl()
         Me.lblPLZ = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlStammdatenOrt = New Telerik.WinControls.UI.RadTextBoxControl()
@@ -34,6 +38,8 @@ Partial Class ucoStammdatenEingabe
         Me.RadTextBoxControlStammdatenWaagenbaufirma = New Telerik.WinControls.UI.RadTextBoxControl()
         Me.lblWaagenbaufirma = New Telerik.WinControls.UI.RadLabel()
         Me.RadGroupBoxWZ = New Telerik.WinControls.UI.RadGroupBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.RadButtonNeueWaegezelle = New Telerik.WinControls.UI.RadButton()
@@ -46,6 +52,9 @@ Partial Class ucoStammdatenEingabe
         Me.lblAWZZulassung = New Telerik.WinControls.UI.RadLabel()
         Me.lblAWZHersteller = New Telerik.WinControls.UI.RadLabel()
         Me.RadGroupBoxWaage = New Telerik.WinControls.UI.RadGroupBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.lblWaagenart = New Telerik.WinControls.UI.RadLabel()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.RadDropDownListWaagenArt = New Telerik.WinControls.UI.RadDropDownList()
@@ -56,6 +65,7 @@ Partial Class ucoStammdatenEingabe
         Me.RadTextBoxControlWaageSeriennummer = New Telerik.WinControls.UI.RadTextBoxControl()
         Me.lblAWaageSeriennummer = New Telerik.WinControls.UI.RadLabel()
         Me.RadGroupBoxAWG = New Telerik.WinControls.UI.RadGroupBox()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -67,16 +77,6 @@ Partial Class ucoStammdatenEingabe
         Me.lblAWGBauart = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlAWGHersteller = New Telerik.WinControls.UI.RadTextBoxControl()
         Me.lblAWGHersteller = New Telerik.WinControls.UI.RadLabel()
-        Me.lblPflichtfeld = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanel1.PanelContainer.SuspendLayout()
         Me.RadScrollablePanel1.SuspendLayout()
@@ -183,6 +183,30 @@ Partial Class ucoStammdatenEingabe
         Me.RadGroupBoxStammdaten.RootElement.Padding = CType(resources.GetObject("RadGroupBoxStammdaten.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadGroupBoxStammdaten.RootElement.Text = resources.GetString("RadGroupBoxStammdaten.RootElement.Text")
         Me.RadGroupBoxStammdaten.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxStammdaten.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        '
+        'Label3
+        '
+        resources.ApplyResources(Me.Label3, "Label3")
+        Me.Label3.ForeColor = System.Drawing.Color.Red
+        Me.Label3.Name = "Label3"
+        '
+        'Label2
+        '
+        resources.ApplyResources(Me.Label2, "Label2")
+        Me.Label2.ForeColor = System.Drawing.Color.Red
+        Me.Label2.Name = "Label2"
+        '
+        'Label1
+        '
+        resources.ApplyResources(Me.Label1, "Label1")
+        Me.Label1.ForeColor = System.Drawing.Color.Red
+        Me.Label1.Name = "Label1"
+        '
+        'lblPflichtfeld
+        '
+        resources.ApplyResources(Me.lblPflichtfeld, "lblPflichtfeld")
+        Me.lblPflichtfeld.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld.Name = "lblPflichtfeld"
         '
         'RadTextBoxControlStammdatenPLZ
         '
@@ -350,6 +374,18 @@ Partial Class ucoStammdatenEingabe
         Me.RadGroupBoxWZ.RootElement.Padding = CType(resources.GetObject("RadGroupBoxWZ.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadGroupBoxWZ.RootElement.Text = resources.GetString("RadGroupBoxWZ.RootElement.Text")
         Me.RadGroupBoxWZ.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxWZ.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        '
+        'Label9
+        '
+        resources.ApplyResources(Me.Label9, "Label9")
+        Me.Label9.ForeColor = System.Drawing.Color.Red
+        Me.Label9.Name = "Label9"
+        '
+        'Label8
+        '
+        resources.ApplyResources(Me.Label8, "Label8")
+        Me.Label8.ForeColor = System.Drawing.Color.Red
+        Me.Label8.Name = "Label8"
         '
         'PictureBox6
         '
@@ -557,6 +593,24 @@ Partial Class ucoStammdatenEingabe
         Me.RadGroupBoxWaage.RootElement.Text = resources.GetString("RadGroupBoxWaage.RootElement.Text")
         Me.RadGroupBoxWaage.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxWaage.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
+        'Label6
+        '
+        resources.ApplyResources(Me.Label6, "Label6")
+        Me.Label6.ForeColor = System.Drawing.Color.Red
+        Me.Label6.Name = "Label6"
+        '
+        'Label5
+        '
+        resources.ApplyResources(Me.Label5, "Label5")
+        Me.Label5.ForeColor = System.Drawing.Color.Red
+        Me.Label5.Name = "Label5"
+        '
+        'Label4
+        '
+        resources.ApplyResources(Me.Label4, "Label4")
+        Me.Label4.ForeColor = System.Drawing.Color.Red
+        Me.Label4.Name = "Label4"
+        '
         'lblWaagenart
         '
         resources.ApplyResources(Me.lblWaagenart, "lblWaagenart")
@@ -736,6 +790,12 @@ Partial Class ucoStammdatenEingabe
         Me.RadGroupBoxAWG.RootElement.Text = resources.GetString("RadGroupBoxAWG.RootElement.Text")
         Me.RadGroupBoxAWG.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxAWG.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
+        'Label7
+        '
+        resources.ApplyResources(Me.Label7, "Label7")
+        Me.Label7.ForeColor = System.Drawing.Color.Red
+        Me.Label7.Name = "Label7"
+        '
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
@@ -900,66 +960,6 @@ Partial Class ucoStammdatenEingabe
         Me.lblAWGHersteller.RootElement.Padding = CType(resources.GetObject("lblAWGHersteller.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblAWGHersteller.RootElement.Text = resources.GetString("lblAWGHersteller.RootElement.Text")
         Me.lblAWGHersteller.RootElement.TextOrientation = CType(resources.GetObject("lblAWGHersteller.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        '
-        'lblPflichtfeld
-        '
-        resources.ApplyResources(Me.lblPflichtfeld, "lblPflichtfeld")
-        Me.lblPflichtfeld.ForeColor = System.Drawing.Color.Red
-        Me.lblPflichtfeld.Name = "lblPflichtfeld"
-        '
-        'Label1
-        '
-        resources.ApplyResources(Me.Label1, "Label1")
-        Me.Label1.ForeColor = System.Drawing.Color.Red
-        Me.Label1.Name = "Label1"
-        '
-        'Label2
-        '
-        resources.ApplyResources(Me.Label2, "Label2")
-        Me.Label2.ForeColor = System.Drawing.Color.Red
-        Me.Label2.Name = "Label2"
-        '
-        'Label3
-        '
-        resources.ApplyResources(Me.Label3, "Label3")
-        Me.Label3.ForeColor = System.Drawing.Color.Red
-        Me.Label3.Name = "Label3"
-        '
-        'Label4
-        '
-        resources.ApplyResources(Me.Label4, "Label4")
-        Me.Label4.ForeColor = System.Drawing.Color.Red
-        Me.Label4.Name = "Label4"
-        '
-        'Label5
-        '
-        resources.ApplyResources(Me.Label5, "Label5")
-        Me.Label5.ForeColor = System.Drawing.Color.Red
-        Me.Label5.Name = "Label5"
-        '
-        'Label6
-        '
-        resources.ApplyResources(Me.Label6, "Label6")
-        Me.Label6.ForeColor = System.Drawing.Color.Red
-        Me.Label6.Name = "Label6"
-        '
-        'Label7
-        '
-        resources.ApplyResources(Me.Label7, "Label7")
-        Me.Label7.ForeColor = System.Drawing.Color.Red
-        Me.Label7.Name = "Label7"
-        '
-        'Label8
-        '
-        resources.ApplyResources(Me.Label8, "Label8")
-        Me.Label8.ForeColor = System.Drawing.Color.Red
-        Me.Label8.Name = "Label8"
-        '
-        'Label9
-        '
-        resources.ApplyResources(Me.Label9, "Label9")
-        Me.Label9.ForeColor = System.Drawing.Color.Red
-        Me.Label9.Name = "Label9"
         '
         'ucoStammdatenEingabe
         '

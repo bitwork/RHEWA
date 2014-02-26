@@ -399,9 +399,24 @@ Public Class ucoAmpel
     ''' <remarks></remarks>
     Private Sub RadListView1_ItemMouseClick(sender As Object, e As Telerik.WinControls.UI.ListViewItemEventArgs) Handles RadListView1.ItemMouseClick
         'abbruch falls Status noch rot. hier darf nicht hingesprungen werden
-        If e.Item("Image").Equals(ConvertBitmapToByteArray(My.Resources.bullet_red)) Then Exit Sub
+        Try
+            Dim ItemImage = DirectCast(e.Item("Image"), Byte())
+            Dim CompareImage = ConvertBitmapToByteArray(My.Resources.bullet_red)
 
-        RaiseEvent Navigieren(e.Item("Status"))
+            'prüfen ob das gewählte element rot ist. wenn nicht das letzte gelbe element wählen
+            If ItemImage.SequenceEqual(CompareImage) Then
+                Me.FindeElementUndSelektiere(Me.AktuellerGewaehlterVorgang)
+
+                Exit Sub
+
+            End If
+
+
+            RaiseEvent Navigieren(e.Item("Status"))
+        Catch ex As Exception
+            Exit Sub
+        End Try
+      
     End Sub
     'TODO Ausblenden der Verfahren die nicht zutreffen bei einem abgeschlossenen Vorgang
 

@@ -62,18 +62,21 @@
 
 
     'wenn die Art der Waage oder die WZ gewechselt wurde, muss kontrolliert werden, ob der Eichvorgang bereits fortschritten ist. Wenn also bereits ein späterer Status erreicht wurde, muss dieser zurückgesetzt werden auf die Stammdateneingabe
-    Private Sub RadDropDownList_SelectedIndexChanged(sender As Object, e As Telerik.WinControls.UI.Data.PositionChangedEventArgs) Handles RadDropDownListWaagenArt.SelectedIndexChanged, RadDropdownlistlWZTyp.SelectedIndexChanged
+    Private Sub RadDropDownListWaagenArt_SelectedIndexChanged(sender As Object, e As Telerik.WinControls.UI.Data.PositionChangedEventArgs) Handles RadDropDownListWaagenArt.SelectedIndexChanged, RadDropdownlistWaagenTyp.SelectedIndexChanged
         If _suspendEvents Then Exit Sub
-        ''wenn Status = Stammdateneingabe dann abbruch alles ist okay
-        'If objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe Then Exit Sub
-
-
-        'ansonsten zurücksetzen auf Stammdateneingabe
-        objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
         AktuellerStatusDirty = True
-
     End Sub
 
+    ''' <summary>
+    ''' Dirty flag 
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub RadTextBoxControlStammdatenWaagenbaufirma_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlWaageSeriennummer.TextChanged, RadTextBoxControlStammdatenWaagenbaufirma.TextChanged, RadTextBoxControlStammdatenStrasse.TextChanged, RadTextBoxControlStammdatenPLZ.TextChanged, RadTextBoxControlStammdatenOrt.TextChanged
+        If _suspendEvents Then Exit Sub
+        AktuellerStatusDirty = True
+    End Sub
 
     Private Sub RadButtonNeueWaegezelle_Enter(sender As Object, e As EventArgs) Handles RadButtonNeueWaegezelle.Enter
         'Hilfetext setzen
@@ -97,6 +100,7 @@
     Private Sub RadDropdownlistAWGTyp_SelectedIndexChanged(sender As System.Object, e As Telerik.WinControls.UI.Data.PositionChangedEventArgs) Handles RadDropdownlistAWGTyp.SelectedIndexChanged
         Try
             If _suspendEvents Then Exit Sub
+            AktuellerStatusDirty = True
             If Not RadDropdownlistAWGTyp.Text.Equals(RadDropdownlistAWGTyp.NullText) Then
                 'auslesen der Daten des AWGs anhand der ausgewählten ID
                 Dim objAWG As Lookup_Auswertegeraet = (From AWG In _DatasourceDropdownListAWG Select AWG Where AWG.ID = RadDropdownlistAWGTyp.SelectedValue).FirstOrDefault
@@ -123,6 +127,7 @@
     Private Sub RadDropdownlistlWZHersteller_SelectedIndexChanged(sender As System.Object, e As Telerik.WinControls.UI.Data.PositionChangedEventArgs) Handles RadDropdownlistlWZHersteller.SelectedIndexChanged
         Try
             If _suspendEvents Then Exit Sub
+            AktuellerStatusDirty = True
             If Not RadDropdownlistlWZHersteller.Text.Equals(RadDropdownlistlWZHersteller.NullText) Then
                 'filtern des Typs durch aufrufen einer delagts funktion
 
@@ -793,4 +798,6 @@
    
 
 
+   
+    
 End Class
