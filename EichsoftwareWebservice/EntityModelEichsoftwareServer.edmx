@@ -179,6 +179,7 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FK_BenutzerID" Type="nvarchar" MaxLength="50" />
           <Property Name="HEKennung" Type="nvarchar" MaxLength="50" />
           <Property Name="BenannteStelleAnzahl" Type="int" />
           <Property Name="Eichsiegel13x13Anzahl" Type="int" />
@@ -412,6 +413,7 @@
           <Property Name="LetzteAktivierung" Type="date" />
           <Property Name="RHEWALizenz" Type="bit" Nullable="false" />
           <Property Name="Aktiv" Type="bit" Nullable="false" />
+          <Property Name="FK_BenutzerID" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="ServerLookup_Auswertegeraet">
           <Key>
@@ -1214,6 +1216,7 @@
           <Property Type="String" Name="Archiv2014_SicherungsmarkeKlein" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Bemerkung" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="HEKennung" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FK_BenutzerID" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="ServerEichprotokoll">
           <Key>
@@ -1380,6 +1383,7 @@
           <Property Name="RHEWALizenz" Type="Boolean" Nullable="false" />
           <Property Name="Aktiv" Type="Boolean" Nullable="false" />
           <Property Type="String" Name="HEKennung" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FK_BenutzerID" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="ServerLookup_Auswertegeraet">
           <Key>
@@ -2070,6 +2074,7 @@
           <EntitySetMapping Name="ServerEichmarkenverwaltung">
             <EntityTypeMapping TypeName="EichenSQLDatabaseModel.ServerEichmarkenverwaltung">
               <MappingFragment StoreEntitySet="ServerEichmarkenverwaltung">
+                <ScalarProperty Name="FK_BenutzerID" ColumnName="FK_BenutzerID" />
                 <ScalarProperty Name="HEKennung" ColumnName="HEKennung" />
                 <ScalarProperty Name="Bemerkung" ColumnName="Bemerkung" />
                 <ScalarProperty Name="Archiv2014_SicherungsmarkeKlein" ColumnName="Archiv2014_SicherungsmarkeKlein" />
@@ -2274,6 +2279,7 @@
           <EntitySetMapping Name="ServerLizensierung">
             <EntityTypeMapping TypeName="EichenSQLDatabaseModel.ServerLizensierung">
               <MappingFragment StoreEntitySet="ServerLizensierung">
+                <ScalarProperty Name="FK_BenutzerID" ColumnName="FK_BenutzerID" />
                 <ScalarProperty Name="HEKennung" ColumnName="HEKennung" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Lizenzschluessel" ColumnName="Lizenzschluessel" />

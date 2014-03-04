@@ -91,6 +91,7 @@ Partial Class FrmAuswahllisteWZ
         Me.RadGridViewAuswahlliste.MasterTemplate.AllowDragToGroup = False
         Me.RadGridViewAuswahlliste.MasterTemplate.AllowEditRow = False
         Me.RadGridViewAuswahlliste.MasterTemplate.EnableAlternatingRowColor = True
+        Me.RadGridViewAuswahlliste.MasterTemplate.EnableFiltering = True
         Me.RadGridViewAuswahlliste.Name = "RadGridViewAuswahlliste"
         '
         '

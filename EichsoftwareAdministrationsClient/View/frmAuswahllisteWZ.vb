@@ -18,7 +18,7 @@
 
             Try
                 RadGridViewAuswahlliste.Columns("ID").IsVisible = False
-                RadGridViewAuswahlliste.Columns("ServerEichprozess").IsVisible = False
+                '  RadGridViewAuswahlliste.Columns("ServerEichprozess").IsVisible = False
                 RadGridViewAuswahlliste.Columns("ServerMogelstatistik").IsVisible = False
                 RadGridViewAuswahlliste.Columns("Hoechsteteilungsfaktor").HeaderText = "Höchstteilungsfaktor"
             Catch ex As Exception
@@ -54,15 +54,12 @@
                 Dim SelectedID As String = "" 'Variable zum Speichern der Vorgangsnummer des aktuellen Prozesses
                 SelectedID = RadGridViewAuswahlliste.SelectedRows(0).Cells("ID").Value
 
-                'neue Datenbankverbindung
-                Using context As New EichenEntities
-                    'anzeigen des Dialogs zur Bearbeitung der Eichung
+                'anzeigen des Dialogs zur Bearbeitung der Eichung
                     Dim f As New frmWaegezelle(SelectedID)
                     f.ShowDialog()
 
                     'nach dem schließen des Dialogs aktualisieren
                     LoadFromDatabase()
-                End Using
 
             End If
         End If
@@ -80,6 +77,10 @@
     End Sub
 
     Private Sub RadGridViewAuswahlliste_CellDoubleClick(sender As Object, e As Telerik.WinControls.UI.GridViewCellEventArgs) Handles RadGridViewAuswahlliste.CellDoubleClick
-        EditEichprozess()
+        If e.Row.RowElementType.Equals(GetType(Telerik.WinControls.UI.GridDataRowElement)) Then
+
+            EditEichprozess()
+        End If
+
     End Sub
 End Class

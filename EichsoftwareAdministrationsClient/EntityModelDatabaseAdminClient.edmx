@@ -18,73 +18,6 @@
           <EntitySet Name="ServerLookupVertragspartnerFirma" EntityType="EichenModel.Store.ServerLookupVertragspartnerFirma" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ServerMogelstatistik" EntityType="EichenModel.Store.ServerMogelstatistik" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ServerVerbindungsprotokoll" EntityType="EichenModel.Store.ServerVerbindungsprotokoll" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="View_Eichmarkenverwaltung" EntityType="EichenModel.Store.View_Eichmarkenverwaltung" store:Type="Views" store:Schema="dbo" store:Name="View_Eichmarkenverwaltung">
-            <DefiningQuery>SELECT 
-      [View_Eichmarkenverwaltung].[HE-Kennung] AS [HE-Kennung], 
-      [View_Eichmarkenverwaltung].[ID] AS [ID], 
-      [View_Eichmarkenverwaltung].[Benannte Stelle Anzahl] AS [Benannte Stelle Anzahl], 
-      [View_Eichmarkenverwaltung].[Eichsiegel 13x13 Anzahl] AS [Eichsiegel 13x13 Anzahl], 
-      [View_Eichmarkenverwaltung].[Eichsiegel Rund Anzahl] AS [Eichsiegel Rund Anzahl], 
-      [View_Eichmarkenverwaltung].[Hinweismarke Gelocht Anzahl] AS [Hinweismarke Gelocht Anzahl], 
-      [View_Eichmarkenverwaltung].[Grünes M Anzahl] AS [Grünes M Anzahl], 
-      [View_Eichmarkenverwaltung].[Benannte Stelle Anzahl Meldestand] AS [Benannte Stelle Anzahl Meldestand], 
-      [View_Eichmarkenverwaltung].[CE Anzahl] AS [CE Anzahl], 
-      [View_Eichmarkenverwaltung].[Eichsiegel 13x13 Anzahl Meldestand] AS [Eichsiegel 13x13 Anzahl Meldestand], 
-      [View_Eichmarkenverwaltung].[Eichsiegel Rund Anzahl Meldestand] AS [Eichsiegel Rund Anzahl Meldestand], 
-      [View_Eichmarkenverwaltung].[Hinweismarke Gelocht Anzahl Meldestand] AS [Hinweismarke Gelocht Anzahl Meldestand], 
-      [View_Eichmarkenverwaltung].[CE Anzahl Meldestand] AS [CE Anzahl Meldestand], 
-      [View_Eichmarkenverwaltung].[zerstoerte Marke 0103] AS [zerstoerte Marke 0103], 
-      [View_Eichmarkenverwaltung].[Grünes M Anzahl Meldestand] AS [Grünes M Anzahl Meldestand], 
-      [View_Eichmarkenverwaltung].[Fehlmenge Benannte Stelle 0103] AS [Fehlmenge Benannte Stelle 0103], 
-      [View_Eichmarkenverwaltung].[Fehlmenge Benannte Stelle 0111] AS [Fehlmenge Benannte Stelle 0111], 
-      [View_Eichmarkenverwaltung].[Fehlmenge Sicherungsmarke Klein] AS [Fehlmenge Sicherungsmarke Klein], 
-      [View_Eichmarkenverwaltung].[Fehlmenge Sicherungsmarke Groß] AS [Fehlmenge Sicherungsmarke Groß], 
-      [View_Eichmarkenverwaltung].[Fehlmenge Hinweismarken] AS [Fehlmenge Hinweismarken], 
-      [View_Eichmarkenverwaltung].[Archiv2007 Benannte Stelle 0298] AS [Archiv2007 Benannte Stelle 0298], 
-      [View_Eichmarkenverwaltung].[Archiv2007 Hinweismarke] AS [Archiv2007 Hinweismarke], 
-      [View_Eichmarkenverwaltung].[Archiv2007 Eichungen] AS [Archiv2007 Eichungen], 
-      [View_Eichmarkenverwaltung].[Archiv2007 Sicherungsmarke Groß] AS [Archiv2007 Sicherungsmarke Groß], 
-      [View_Eichmarkenverwaltung].[Archiv2007 Sicherungsmarke klein] AS [Archiv2007 Sicherungsmarke klein], 
-      [View_Eichmarkenverwaltung].[Archiv2008 Benannte Stelle 0298] AS [Archiv2008 Benannte Stelle 0298], 
-      [View_Eichmarkenverwaltung].[Archiv2008 Hinweismarke] AS [Archiv2008 Hinweismarke], 
-      [View_Eichmarkenverwaltung].[Archiv2008 Eichungen] AS [Archiv2008 Eichungen], 
-      [View_Eichmarkenverwaltung].[Archiv2008 Sicherungsmarke Groß] AS [Archiv2008 Sicherungsmarke Groß], 
-      [View_Eichmarkenverwaltung].[Archiv2008 Sicherungsmarke klein] AS [Archiv2008 Sicherungsmarke klein], 
-      [View_Eichmarkenverwaltung].[Archiv2009 Eichungen] AS [Archiv2009 Eichungen], 
-      [View_Eichmarkenverwaltung].[Archiv2009 Benannte Stelle 0298] AS [Archiv2009 Benannte Stelle 0298], 
-      [View_Eichmarkenverwaltung].[Archiv2009 Hinweismarke] AS [Archiv2009 Hinweismarke], 
-      [View_Eichmarkenverwaltung].[Archiv2009 Sicherungsmarke Groß] AS [Archiv2009 Sicherungsmarke Groß], 
-      [View_Eichmarkenverwaltung].[Archiv2009 Sicherungsmarke klein] AS [Archiv2009 Sicherungsmarke klein], 
-      [View_Eichmarkenverwaltung].[Archiv2010 Eichungen] AS [Archiv2010 Eichungen], 
-      [View_Eichmarkenverwaltung].[Archiv2010 Benannte Stelle 0298] AS [Archiv2010 Benannte Stelle 0298], 
-      [View_Eichmarkenverwaltung].[Archiv2010 Hinweismarke] AS [Archiv2010 Hinweismarke], 
-      [View_Eichmarkenverwaltung].[Archiv2010 Sicherungsmarke Groß] AS [Archiv2010 Sicherungsmarke Groß], 
-      [View_Eichmarkenverwaltung].[Archiv2010 Sicherungsmarke klein] AS [Archiv2010 Sicherungsmarke klein], 
-      [View_Eichmarkenverwaltung].[Archiv2011 Eichungen] AS [Archiv2011 Eichungen], 
-      [View_Eichmarkenverwaltung].[Archiv2011 Benannte Stelle 0298] AS [Archiv2011 Benannte Stelle 0298], 
-      [View_Eichmarkenverwaltung].[Archiv2011 Benannte Stelle 0103] AS [Archiv2011 Benannte Stelle 0103], 
-      [View_Eichmarkenverwaltung].[Archiv2011 Hinweismarke] AS [Archiv2011 Hinweismarke], 
-      [View_Eichmarkenverwaltung].[Archiv2011 Sicherungsmarke Groß] AS [Archiv2011 Sicherungsmarke Groß], 
-      [View_Eichmarkenverwaltung].[Archiv2011 Sicherungsmarke klein] AS [Archiv2011 Sicherungsmarke klein], 
-      [View_Eichmarkenverwaltung].[Archiv2012 Eichungen] AS [Archiv2012 Eichungen], 
-      [View_Eichmarkenverwaltung].[Archiv2012 Benannte Stelle 0103] AS [Archiv2012 Benannte Stelle 0103], 
-      [View_Eichmarkenverwaltung].[Archiv2012 Hinweismarke] AS [Archiv2012 Hinweismarke], 
-      [View_Eichmarkenverwaltung].[Archiv2012 Sicherungsmarke Groß] AS [Archiv2012 Sicherungsmarke Groß], 
-      [View_Eichmarkenverwaltung].[Archiv2013 Eichungen] AS [Archiv2013 Eichungen], 
-      [View_Eichmarkenverwaltung].[Archiv2012 Sicherungsmarke klein] AS [Archiv2012 Sicherungsmarke klein], 
-      [View_Eichmarkenverwaltung].[Archiv2013 Benannte Stelle 0103] AS [Archiv2013 Benannte Stelle 0103], 
-      [View_Eichmarkenverwaltung].[Archiv2013 Hinweismarke] AS [Archiv2013 Hinweismarke], 
-      [View_Eichmarkenverwaltung].[Archiv2013 Sicherungsmarke Groß] AS [Archiv2013 Sicherungsmarke Groß], 
-      [View_Eichmarkenverwaltung].[Archiv2013 Sicherungsmarke klein] AS [Archiv2013 Sicherungsmarke klein], 
-      [View_Eichmarkenverwaltung].[Archiv2014 Eichungen] AS [Archiv2014 Eichungen], 
-      [View_Eichmarkenverwaltung].[Archiv2014 Benannte Stelle 0103] AS [Archiv2014 Benannte Stelle 0103], 
-      [View_Eichmarkenverwaltung].[Archiv2014 Hinweismarke] AS [Archiv2014 Hinweismarke], 
-      [View_Eichmarkenverwaltung].[Archiv2014 Benannte Stelle 0111] AS [Archiv2014 Benannte Stelle 0111], 
-      [View_Eichmarkenverwaltung].[Archiv2014 Sicherungsmarke Groß] AS [Archiv2014 Sicherungsmarke Groß], 
-      [View_Eichmarkenverwaltung].[Archiv2014 Sicherungsmarke Klein] AS [Archiv2014 Sicherungsmarke Klein], 
-      [View_Eichmarkenverwaltung].[Bemerkung] AS [Bemerkung]
-      FROM [dbo].[View_Eichmarkenverwaltung] AS [View_Eichmarkenverwaltung]</DefiningQuery>
-          </EntitySet>
           <AssociationSet Name="FK_Mogelstatistik_Lookup_Auswertegeraet" Association="EichenModel.Store.FK_Mogelstatistik_Lookup_Auswertegeraet">
             <End Role="ServerLookup_Auswertegeraet" EntitySet="ServerLookup_Auswertegeraet" />
             <End Role="ServerMogelstatistik" EntitySet="ServerMogelstatistik" />
@@ -123,6 +56,7 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FK_BenutzerID" Type="nvarchar" MaxLength="50" />
           <Property Name="HEKennung" Type="nvarchar" MaxLength="50" />
           <Property Name="BenannteStelleAnzahl" Type="int" />
           <Property Name="Eichsiegel13x13Anzahl" Type="int" />
@@ -246,6 +180,7 @@
           <Property Name="LetzteAktivierung" Type="date" />
           <Property Name="RHEWALizenz" Type="bit" Nullable="false" />
           <Property Name="Aktiv" Type="bit" Nullable="false" />
+          <Property Name="FK_BenutzerID" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="ServerLookup_Auswertegeraet">
           <Key>
@@ -363,74 +298,6 @@
         <!--Errors Found During Generation:
       warning 6002: The table/view 'Herstellerersteichung.dbo.View_Eichmarkenverwaltung' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
       -->
-        <EntityType Name="View_Eichmarkenverwaltung">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="HE-Kennung" Type="nvarchar" MaxLength="50" />
-          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="Benannte Stelle Anzahl" Type="int" />
-          <Property Name="Eichsiegel 13x13 Anzahl" Type="int" />
-          <Property Name="Eichsiegel Rund Anzahl" Type="int" />
-          <Property Name="Hinweismarke Gelocht Anzahl" Type="int" />
-          <Property Name="Grünes M Anzahl" Type="int" />
-          <Property Name="Benannte Stelle Anzahl Meldestand" Type="int" />
-          <Property Name="CE Anzahl" Type="int" />
-          <Property Name="Eichsiegel 13x13 Anzahl Meldestand" Type="int" />
-          <Property Name="Eichsiegel Rund Anzahl Meldestand" Type="int" />
-          <Property Name="Hinweismarke Gelocht Anzahl Meldestand" Type="int" />
-          <Property Name="CE Anzahl Meldestand" Type="int" />
-          <Property Name="zerstoerte Marke 0103" Type="int" />
-          <Property Name="Grünes M Anzahl Meldestand" Type="int" />
-          <Property Name="Fehlmenge Benannte Stelle 0103" Type="int" />
-          <Property Name="Fehlmenge Benannte Stelle 0111" Type="int" />
-          <Property Name="Fehlmenge Sicherungsmarke Klein" Type="int" />
-          <Property Name="Fehlmenge Sicherungsmarke Groß" Type="int" />
-          <Property Name="Fehlmenge Hinweismarken" Type="int" />
-          <Property Name="Archiv2007 Benannte Stelle 0298" Type="nvarchar" MaxLength="50" />
-          <Property Name="Archiv2007 Hinweismarke" Type="nvarchar" MaxLength="50" />
-          <Property Name="Archiv2007 Eichungen" Type="nvarchar" MaxLength="50" />
-          <Property Name="Archiv2007 Sicherungsmarke Groß" Type="nvarchar" MaxLength="50" />
-          <Property Name="Archiv2007 Sicherungsmarke klein" Type="nvarchar" MaxLength="50" />
-          <Property Name="Archiv2008 Benannte Stelle 0298" Type="nvarchar" MaxLength="50" />
-          <Property Name="Archiv2008 Hinweismarke" Type="nvarchar" MaxLength="50" />
-          <Property Name="Archiv2008 Eichungen" Type="nvarchar" MaxLength="50" />
-          <Property Name="Archiv2008 Sicherungsmarke Groß" Type="nvarchar" MaxLength="50" />
-          <Property Name="Archiv2008 Sicherungsmarke klein" Type="nvarchar" MaxLength="50" />
-          <Property Name="Archiv2009 Eichungen" Type="nvarchar" MaxLength="50" />
-          <Property Name="Archiv2009 Benannte Stelle 0298" Type="nvarchar" MaxLength="50" />
-          <Property Name="Archiv2009 Hinweismarke" Type="nvarchar" MaxLength="50" />
-          <Property Name="Archiv2009 Sicherungsmarke Groß" Type="nvarchar" MaxLength="50" />
-          <Property Name="Archiv2009 Sicherungsmarke klein" Type="nvarchar" MaxLength="50" />
-          <Property Name="Archiv2010 Eichungen" Type="nvarchar" MaxLength="50" />
-          <Property Name="Archiv2010 Benannte Stelle 0298" Type="nvarchar" MaxLength="50" />
-          <Property Name="Archiv2010 Hinweismarke" Type="nvarchar" MaxLength="50" />
-          <Property Name="Archiv2010 Sicherungsmarke Groß" Type="nvarchar" MaxLength="50" />
-          <Property Name="Archiv2010 Sicherungsmarke klein" Type="nvarchar" MaxLength="50" />
-          <Property Name="Archiv2011 Eichungen" Type="nvarchar" MaxLength="50" />
-          <Property Name="Archiv2011 Benannte Stelle 0298" Type="nvarchar" MaxLength="50" />
-          <Property Name="Archiv2011 Benannte Stelle 0103" Type="nvarchar" MaxLength="50" />
-          <Property Name="Archiv2011 Hinweismarke" Type="nvarchar" MaxLength="50" />
-          <Property Name="Archiv2011 Sicherungsmarke Groß" Type="nvarchar" MaxLength="50" />
-          <Property Name="Archiv2011 Sicherungsmarke klein" Type="nvarchar" MaxLength="50" />
-          <Property Name="Archiv2012 Eichungen" Type="nvarchar" MaxLength="50" />
-          <Property Name="Archiv2012 Benannte Stelle 0103" Type="nvarchar" MaxLength="50" />
-          <Property Name="Archiv2012 Hinweismarke" Type="nvarchar" MaxLength="50" />
-          <Property Name="Archiv2012 Sicherungsmarke Groß" Type="nvarchar" MaxLength="50" />
-          <Property Name="Archiv2013 Eichungen" Type="nvarchar" MaxLength="50" />
-          <Property Name="Archiv2012 Sicherungsmarke klein" Type="nvarchar" MaxLength="50" />
-          <Property Name="Archiv2013 Benannte Stelle 0103" Type="nvarchar" MaxLength="50" />
-          <Property Name="Archiv2013 Hinweismarke" Type="nvarchar" MaxLength="50" />
-          <Property Name="Archiv2013 Sicherungsmarke Groß" Type="nvarchar" MaxLength="50" />
-          <Property Name="Archiv2013 Sicherungsmarke klein" Type="nvarchar" MaxLength="50" />
-          <Property Name="Archiv2014 Eichungen" Type="nvarchar" MaxLength="50" />
-          <Property Name="Archiv2014 Benannte Stelle 0103" Type="nvarchar" MaxLength="50" />
-          <Property Name="Archiv2014 Hinweismarke" Type="nvarchar" MaxLength="50" />
-          <Property Name="Archiv2014 Benannte Stelle 0111" Type="nvarchar" MaxLength="50" />
-          <Property Name="Archiv2014 Sicherungsmarke Groß" Type="nvarchar" MaxLength="50" />
-          <Property Name="Archiv2014 Sicherungsmarke Klein" Type="nvarchar" MaxLength="50" />
-          <Property Name="Bemerkung" Type="nvarchar(max)" />
-        </EntityType>
         <Association Name="FK_Mogelstatistik_Lookup_Auswertegeraet">
           <End Role="ServerLookup_Auswertegeraet" Type="EichenModel.Store.ServerLookup_Auswertegeraet" Multiplicity="0..1" />
           <End Role="ServerMogelstatistik" Type="EichenModel.Store.ServerMogelstatistik" Multiplicity="*" />
@@ -469,7 +336,6 @@
           <EntitySet Name="Firmen" EntityType="EichenModel.Firmen" />
           <EntitySet Name="ServerFirmenZusatzdaten" EntityType="EichenModel.ServerFirmenZusatzdaten" />
           <EntitySet Name="ServerLookupVertragspartnerFirma" EntityType="EichenModel.ServerLookupVertragspartnerFirma" />
-          <EntitySet Name="View_Eichmarkenverwaltung" EntityType="EichenModel.View_Eichmarkenverwaltung" />
           <EntitySet Name="ServerLookup_Auswertegeraet" EntityType="EichenModel.ServerLookup_Auswertegeraet" />
           <EntitySet Name="ServerLookup_Waegezelle" EntityType="EichenModel.ServerLookup_Waegezelle" />
           <AssociationSet Name="FK_Mogelstatistik_Lookup_Auswertegeraet" Association="EichenModel.FK_Mogelstatistik_Lookup_Auswertegeraet">
@@ -526,6 +392,7 @@
           <Property Type="Boolean" Name="RHEWALizenz" Nullable="false" />
           <Property Type="Boolean" Name="Aktiv" Nullable="false" />
           <Property Type="String" Name="HEKennung" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FK_BenutzerID" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="ServerLookup_Bearbeitungsstatus">
           <Key>
@@ -631,74 +498,6 @@
           <Property Type="String" Name="ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Firma_FK" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Vertragspartner_FK" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <EntityType Name="View_Eichmarkenverwaltung">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Type="String" Name="HE_Kennung" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="Int32" Name="Benannte_Stelle_Anzahl" />
-          <Property Type="Int32" Name="Eichsiegel_13x13_Anzahl" />
-          <Property Type="Int32" Name="Eichsiegel_Rund_Anzahl" />
-          <Property Type="Int32" Name="Hinweismarke_Gelocht_Anzahl" />
-          <Property Type="Int32" Name="Grünes_M_Anzahl" />
-          <Property Type="Int32" Name="CE_Anzahl" />
-          <Property Type="Int32" Name="Eichsiegel_13x13_Anzahl_Meldestand" />
-          <Property Type="Int32" Name="Eichsiegel_Rund_Anzahl_Meldestand" />
-          <Property Type="Int32" Name="Hinweismarke_Gelocht_Anzahl_Meldestand" />
-          <Property Type="Int32" Name="CE_Anzahl_Meldestand" />
-          <Property Type="Int32" Name="zerstoerte_Marke_0103" />
-          <Property Type="Int32" Name="Grünes_M_Anzahl_Meldestand" />
-          <Property Type="Int32" Name="Fehlmenge_Benannte_Stelle_0103" />
-          <Property Type="Int32" Name="Fehlmenge_Benannte_Stelle_0111" />
-          <Property Type="Int32" Name="Fehlmenge_Sicherungsmarke_Klein" />
-          <Property Type="Int32" Name="Fehlmenge_Sicherungsmarke_Groß" />
-          <Property Type="Int32" Name="Fehlmenge_Hinweismarken" />
-          <Property Type="String" Name="Archiv2007_Benannte_Stelle_0298" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Archiv2007_Hinweismarke" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Archiv2007_Eichungen" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Archiv2007_Sicherungsmarke_Groß" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Archiv2007_Sicherungsmarke_klein" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Archiv2008_Benannte_Stelle_0298" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Archiv2008_Hinweismarke" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Archiv2008_Eichungen" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Archiv2008_Sicherungsmarke_Groß" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Archiv2008_Sicherungsmarke_klein" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Archiv2009_Eichungen" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Archiv2009_Benannte_Stelle_0298" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Archiv2009_Hinweismarke" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Archiv2009_Sicherungsmarke_Groß" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Archiv2009_Sicherungsmarke_klein" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Archiv2010_Eichungen" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Archiv2010_Benannte_Stelle_0298" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Archiv2010_Hinweismarke" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Archiv2010_Sicherungsmarke_Groß" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Archiv2010_Sicherungsmarke_klein" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Archiv2011_Eichungen" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Archiv2011_Benannte_Stelle_0298" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Archiv2011_Benannte_Stelle_0103" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Archiv2011_Hinweismarke" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Archiv2011_Sicherungsmarke_Groß" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Archiv2011_Sicherungsmarke_klein" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Archiv2012_Eichungen" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Archiv2012_Benannte_Stelle_0103" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Archiv2012_Hinweismarke" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Archiv2012_Sicherungsmarke_Groß" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Archiv2013_Eichungen" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Archiv2012_Sicherungsmarke_klein" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Archiv2013_Benannte_Stelle_0103" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Archiv2013_Hinweismarke" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Archiv2013_Sicherungsmarke_Groß" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Archiv2013_Sicherungsmarke_klein" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Archiv2014_Eichungen" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Archiv2014_Benannte_Stelle_0103" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Archiv2014_Hinweismarke" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Archiv2014_Benannte_Stelle_0111" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Archiv2014_Sicherungsmarke_Groß" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Archiv2014_Sicherungsmarke_Klein" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Bemerkung" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Type="Int32" Name="Benannte_Stelle_Anzahl_Meldestand" />
         </EntityType>
         <EntityType Name="ServerLookup_Auswertegeraet">
           <Key>
@@ -843,6 +642,7 @@
           <Property Type="String" Name="Archiv2014_SicherungsmarkeGross" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Archiv2014_SicherungsmarkeKlein" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Bemerkung" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FK_BenutzerID" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -888,6 +688,7 @@
           <EntitySetMapping Name="ServerLizensierung">
             <EntityTypeMapping TypeName="EichenModel.ServerLizensierung">
               <MappingFragment StoreEntitySet="ServerLizensierung">
+                <ScalarProperty Name="FK_BenutzerID" ColumnName="FK_BenutzerID" />
                 <ScalarProperty Name="HEKennung" ColumnName="HEKennung" />
                 <ScalarProperty Name="Aktiv" ColumnName="Aktiv" />
                 <ScalarProperty Name="RHEWALizenz" ColumnName="RHEWALizenz" />
@@ -1007,75 +808,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="View_Eichmarkenverwaltung">
-            <EntityTypeMapping TypeName="EichenModel.View_Eichmarkenverwaltung">
-              <MappingFragment StoreEntitySet="View_Eichmarkenverwaltung">
-                <ScalarProperty Name="Benannte_Stelle_Anzahl_Meldestand" ColumnName="Benannte Stelle Anzahl Meldestand" />
-                <ScalarProperty Name="Bemerkung" ColumnName="Bemerkung" />
-                <ScalarProperty Name="Archiv2014_Sicherungsmarke_Klein" ColumnName="Archiv2014 Sicherungsmarke Klein" />
-                <ScalarProperty Name="Archiv2014_Sicherungsmarke_Groß" ColumnName="Archiv2014 Sicherungsmarke Groß" />
-                <ScalarProperty Name="Archiv2014_Benannte_Stelle_0111" ColumnName="Archiv2014 Benannte Stelle 0111" />
-                <ScalarProperty Name="Archiv2014_Hinweismarke" ColumnName="Archiv2014 Hinweismarke" />
-                <ScalarProperty Name="Archiv2014_Benannte_Stelle_0103" ColumnName="Archiv2014 Benannte Stelle 0103" />
-                <ScalarProperty Name="Archiv2014_Eichungen" ColumnName="Archiv2014 Eichungen" />
-                <ScalarProperty Name="Archiv2013_Sicherungsmarke_klein" ColumnName="Archiv2013 Sicherungsmarke klein" />
-                <ScalarProperty Name="Archiv2013_Sicherungsmarke_Groß" ColumnName="Archiv2013 Sicherungsmarke Groß" />
-                <ScalarProperty Name="Archiv2013_Hinweismarke" ColumnName="Archiv2013 Hinweismarke" />
-                <ScalarProperty Name="Archiv2013_Benannte_Stelle_0103" ColumnName="Archiv2013 Benannte Stelle 0103" />
-                <ScalarProperty Name="Archiv2012_Sicherungsmarke_klein" ColumnName="Archiv2012 Sicherungsmarke klein" />
-                <ScalarProperty Name="Archiv2013_Eichungen" ColumnName="Archiv2013 Eichungen" />
-                <ScalarProperty Name="Archiv2012_Sicherungsmarke_Groß" ColumnName="Archiv2012 Sicherungsmarke Groß" />
-                <ScalarProperty Name="Archiv2012_Hinweismarke" ColumnName="Archiv2012 Hinweismarke" />
-                <ScalarProperty Name="Archiv2012_Benannte_Stelle_0103" ColumnName="Archiv2012 Benannte Stelle 0103" />
-                <ScalarProperty Name="Archiv2012_Eichungen" ColumnName="Archiv2012 Eichungen" />
-                <ScalarProperty Name="Archiv2011_Sicherungsmarke_klein" ColumnName="Archiv2011 Sicherungsmarke klein" />
-                <ScalarProperty Name="Archiv2011_Sicherungsmarke_Groß" ColumnName="Archiv2011 Sicherungsmarke Groß" />
-                <ScalarProperty Name="Archiv2011_Hinweismarke" ColumnName="Archiv2011 Hinweismarke" />
-                <ScalarProperty Name="Archiv2011_Benannte_Stelle_0103" ColumnName="Archiv2011 Benannte Stelle 0103" />
-                <ScalarProperty Name="Archiv2011_Benannte_Stelle_0298" ColumnName="Archiv2011 Benannte Stelle 0298" />
-                <ScalarProperty Name="Archiv2011_Eichungen" ColumnName="Archiv2011 Eichungen" />
-                <ScalarProperty Name="Archiv2010_Sicherungsmarke_klein" ColumnName="Archiv2010 Sicherungsmarke klein" />
-                <ScalarProperty Name="Archiv2010_Sicherungsmarke_Groß" ColumnName="Archiv2010 Sicherungsmarke Groß" />
-                <ScalarProperty Name="Archiv2010_Hinweismarke" ColumnName="Archiv2010 Hinweismarke" />
-                <ScalarProperty Name="Archiv2010_Benannte_Stelle_0298" ColumnName="Archiv2010 Benannte Stelle 0298" />
-                <ScalarProperty Name="Archiv2010_Eichungen" ColumnName="Archiv2010 Eichungen" />
-                <ScalarProperty Name="Archiv2009_Sicherungsmarke_klein" ColumnName="Archiv2009 Sicherungsmarke klein" />
-                <ScalarProperty Name="Archiv2009_Sicherungsmarke_Groß" ColumnName="Archiv2009 Sicherungsmarke Groß" />
-                <ScalarProperty Name="Archiv2009_Hinweismarke" ColumnName="Archiv2009 Hinweismarke" />
-                <ScalarProperty Name="Archiv2009_Benannte_Stelle_0298" ColumnName="Archiv2009 Benannte Stelle 0298" />
-                <ScalarProperty Name="Archiv2009_Eichungen" ColumnName="Archiv2009 Eichungen" />
-                <ScalarProperty Name="Archiv2008_Sicherungsmarke_klein" ColumnName="Archiv2008 Sicherungsmarke klein" />
-                <ScalarProperty Name="Archiv2008_Sicherungsmarke_Groß" ColumnName="Archiv2008 Sicherungsmarke Groß" />
-                <ScalarProperty Name="Archiv2008_Eichungen" ColumnName="Archiv2008 Eichungen" />
-                <ScalarProperty Name="Archiv2008_Hinweismarke" ColumnName="Archiv2008 Hinweismarke" />
-                <ScalarProperty Name="Archiv2008_Benannte_Stelle_0298" ColumnName="Archiv2008 Benannte Stelle 0298" />
-                <ScalarProperty Name="Archiv2007_Sicherungsmarke_klein" ColumnName="Archiv2007 Sicherungsmarke klein" />
-                <ScalarProperty Name="Archiv2007_Sicherungsmarke_Groß" ColumnName="Archiv2007 Sicherungsmarke Groß" />
-                <ScalarProperty Name="Archiv2007_Eichungen" ColumnName="Archiv2007 Eichungen" />
-                <ScalarProperty Name="Archiv2007_Hinweismarke" ColumnName="Archiv2007 Hinweismarke" />
-                <ScalarProperty Name="Archiv2007_Benannte_Stelle_0298" ColumnName="Archiv2007 Benannte Stelle 0298" />
-                <ScalarProperty Name="Fehlmenge_Hinweismarken" ColumnName="Fehlmenge Hinweismarken" />
-                <ScalarProperty Name="Fehlmenge_Sicherungsmarke_Groß" ColumnName="Fehlmenge Sicherungsmarke Groß" />
-                <ScalarProperty Name="Fehlmenge_Sicherungsmarke_Klein" ColumnName="Fehlmenge Sicherungsmarke Klein" />
-                <ScalarProperty Name="Fehlmenge_Benannte_Stelle_0111" ColumnName="Fehlmenge Benannte Stelle 0111" />
-                <ScalarProperty Name="Fehlmenge_Benannte_Stelle_0103" ColumnName="Fehlmenge Benannte Stelle 0103" />
-                <ScalarProperty Name="Grünes_M_Anzahl_Meldestand" ColumnName="Grünes M Anzahl Meldestand" />
-                <ScalarProperty Name="zerstoerte_Marke_0103" ColumnName="zerstoerte Marke 0103" />
-                <ScalarProperty Name="CE_Anzahl_Meldestand" ColumnName="CE Anzahl Meldestand" />
-                <ScalarProperty Name="Hinweismarke_Gelocht_Anzahl_Meldestand" ColumnName="Hinweismarke Gelocht Anzahl Meldestand" />
-                <ScalarProperty Name="Eichsiegel_Rund_Anzahl_Meldestand" ColumnName="Eichsiegel Rund Anzahl Meldestand" />
-                <ScalarProperty Name="Eichsiegel_13x13_Anzahl_Meldestand" ColumnName="Eichsiegel 13x13 Anzahl Meldestand" />
-                <ScalarProperty Name="CE_Anzahl" ColumnName="CE Anzahl" />
-                <ScalarProperty Name="Grünes_M_Anzahl" ColumnName="Grünes M Anzahl" />
-                <ScalarProperty Name="Hinweismarke_Gelocht_Anzahl" ColumnName="Hinweismarke Gelocht Anzahl" />
-                <ScalarProperty Name="Eichsiegel_Rund_Anzahl" ColumnName="Eichsiegel Rund Anzahl" />
-                <ScalarProperty Name="Eichsiegel_13x13_Anzahl" ColumnName="Eichsiegel 13x13 Anzahl" />
-                <ScalarProperty Name="Benannte_Stelle_Anzahl" ColumnName="Benannte Stelle Anzahl" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="HE_Kennung" ColumnName="HE-Kennung" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="ServerLookup_Auswertegeraet">
             <EntityTypeMapping TypeName="EichenModel.ServerLookup_Auswertegeraet">
               <MappingFragment StoreEntitySet="ServerLookup_Auswertegeraet">
@@ -1131,6 +863,7 @@
           <EntitySetMapping Name="ServerEichmarkenverwaltung">
             <EntityTypeMapping TypeName="EichenModel.ServerEichmarkenverwaltung">
               <MappingFragment StoreEntitySet="ServerEichmarkenverwaltung">
+                <ScalarProperty Name="FK_BenutzerID" ColumnName="FK_BenutzerID" />
                 <ScalarProperty Name="Bemerkung" ColumnName="Bemerkung" />
                 <ScalarProperty Name="Archiv2014_SicherungsmarkeKlein" ColumnName="Archiv2014_SicherungsmarkeKlein" />
                 <ScalarProperty Name="Archiv2014_SicherungsmarkeGross" ColumnName="Archiv2014_SicherungsmarkeGross" />

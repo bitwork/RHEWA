@@ -31,7 +31,6 @@ Partial Public Class EichenEntities
     Public Property Firmen() As DbSet(Of Firmen)
     Public Property ServerFirmenZusatzdaten() As DbSet(Of ServerFirmenZusatzdaten)
     Public Property ServerLookupVertragspartnerFirma() As DbSet(Of ServerLookupVertragspartnerFirma)
-    Public Property View_Eichmarkenverwaltung() As DbSet(Of View_Eichmarkenverwaltung)
     Public Property ServerLookup_Auswertegeraet() As DbSet(Of ServerLookup_Auswertegeraet)
     Public Property ServerLookup_Waegezelle() As DbSet(Of ServerLookup_Waegezelle)
     Public Property ServerEichmarkenverwaltung() As DbSet(Of ServerEichmarkenverwaltung)

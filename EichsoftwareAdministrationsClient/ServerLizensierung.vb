@@ -17,5 +17,6 @@ Partial Public Class ServerLizensierung
     Public Property RHEWALizenz As Boolean
     Public Property Aktiv As Boolean
     Public Property HEKennung As String
+    Public Property FK_BenutzerID As String
 
 End Class

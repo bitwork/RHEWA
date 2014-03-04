@@ -35,6 +35,7 @@ Partial Class FrmAuswahllisteEichmarkenverwaltung
         Me.RadGridView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.RadGridView1.EnableCustomFiltering = True
         Me.RadGridView1.Location = New System.Drawing.Point(12, 12)
         '
         'RadGridView1
@@ -43,6 +44,7 @@ Partial Class FrmAuswahllisteEichmarkenverwaltung
         Me.RadGridView1.MasterTemplate.AllowCellContextMenu = False
         Me.RadGridView1.MasterTemplate.AllowDeleteRow = False
         Me.RadGridView1.MasterTemplate.AllowEditRow = False
+        Me.RadGridView1.MasterTemplate.EnableCustomFiltering = True
         Me.RadGridView1.MasterTemplate.EnableFiltering = True
         Me.RadGridView1.MasterTemplate.ShowHeaderCellButtons = True
         Me.RadGridView1.Name = "RadGridView1"

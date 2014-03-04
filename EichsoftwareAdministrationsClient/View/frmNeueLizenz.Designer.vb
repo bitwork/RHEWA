@@ -29,6 +29,8 @@ Partial Class FrmNeueLizenz
         Me.RadTextBoxControl2 = New Telerik.WinControls.UI.RadTextBoxControl()
         Me.RadCheckBox1 = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadCheckBox2 = New Telerik.WinControls.UI.RadCheckBox()
+        Me.RadLabel3 = New Telerik.WinControls.UI.RadLabel()
+        Me.RadMultiColumnComboBoxBenutzer = New Telerik.WinControls.UI.RadMultiColumnComboBox()
         CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -36,74 +38,119 @@ Partial Class FrmNeueLizenz
         CType(Me.RadTextBoxControl2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadCheckBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadCheckBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabel3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadMultiColumnComboBoxBenutzer, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadMultiColumnComboBoxBenutzer.EditorControl, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadMultiColumnComboBoxBenutzer.EditorControl.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'RadButton1
         '
-        Me.RadButton1.Location = New System.Drawing.Point(96, 183)
+        Me.RadButton1.Location = New System.Drawing.Point(487, 198)
         Me.RadButton1.Name = "RadButton1"
         Me.RadButton1.Size = New System.Drawing.Size(110, 24)
-        Me.RadButton1.TabIndex = 5
+        Me.RadButton1.TabIndex = 8
         Me.RadButton1.Text = "OK"
         '
         'RadLabel1
         '
-        Me.RadLabel1.Location = New System.Drawing.Point(12, 12)
+        Me.RadLabel1.Location = New System.Drawing.Point(12, 60)
         Me.RadLabel1.Name = "RadLabel1"
         Me.RadLabel1.Size = New System.Drawing.Size(72, 18)
-        Me.RadLabel1.TabIndex = 0
+        Me.RadLabel1.TabIndex = 2
         Me.RadLabel1.Text = "HE-Kennung:"
         '
         'RadTextBoxControl1
         '
-        Me.RadTextBoxControl1.Location = New System.Drawing.Point(96, 12)
+        Me.RadTextBoxControl1.IsReadOnly = True
+        Me.RadTextBoxControl1.Location = New System.Drawing.Point(99, 60)
         Me.RadTextBoxControl1.Name = "RadTextBoxControl1"
-        Me.RadTextBoxControl1.Size = New System.Drawing.Size(199, 20)
-        Me.RadTextBoxControl1.TabIndex = 0
+        Me.RadTextBoxControl1.Size = New System.Drawing.Size(498, 20)
+        Me.RadTextBoxControl1.TabIndex = 3
         '
         'RadLabel2
         '
-        Me.RadLabel2.Location = New System.Drawing.Point(12, 76)
+        Me.RadLabel2.Location = New System.Drawing.Point(12, 86)
         Me.RadLabel2.Name = "RadLabel2"
         Me.RadLabel2.Size = New System.Drawing.Size(81, 18)
-        Me.RadLabel2.TabIndex = 2
+        Me.RadLabel2.TabIndex = 4
         Me.RadLabel2.Text = "Lizenzschlüssel"
         '
         'RadTextBoxControl2
         '
         Me.RadTextBoxControl2.IsReadOnly = True
-        Me.RadTextBoxControl2.Location = New System.Drawing.Point(96, 76)
+        Me.RadTextBoxControl2.Location = New System.Drawing.Point(99, 86)
         Me.RadTextBoxControl2.Name = "RadTextBoxControl2"
-        Me.RadTextBoxControl2.Size = New System.Drawing.Size(199, 20)
-        Me.RadTextBoxControl2.TabIndex = 2
+        Me.RadTextBoxControl2.Size = New System.Drawing.Size(498, 20)
+        Me.RadTextBoxControl2.TabIndex = 5
         Me.RadTextBoxControl2.TabStop = False
         '
         'RadCheckBox1
         '
         Me.RadCheckBox1.AutoSize = False
         Me.RadCheckBox1.CheckAlignment = System.Drawing.ContentAlignment.MiddleRight
-        Me.RadCheckBox1.Location = New System.Drawing.Point(12, 125)
+        Me.RadCheckBox1.Location = New System.Drawing.Point(12, 135)
         Me.RadCheckBox1.Name = "RadCheckBox1"
-        Me.RadCheckBox1.Size = New System.Drawing.Size(283, 18)
-        Me.RadCheckBox1.TabIndex = 3
+        Me.RadCheckBox1.Size = New System.Drawing.Size(387, 18)
+        Me.RadCheckBox1.TabIndex = 6
         Me.RadCheckBox1.Text = "RHEWA Lizenz (Sonderrechte)"
         '
         'RadCheckBox2
         '
         Me.RadCheckBox2.AutoSize = False
         Me.RadCheckBox2.CheckAlignment = System.Drawing.ContentAlignment.MiddleRight
-        Me.RadCheckBox2.Location = New System.Drawing.Point(12, 149)
+        Me.RadCheckBox2.Location = New System.Drawing.Point(12, 159)
         Me.RadCheckBox2.Name = "RadCheckBox2"
-        Me.RadCheckBox2.Size = New System.Drawing.Size(283, 18)
-        Me.RadCheckBox2.TabIndex = 4
-        Me.RadCheckBox2.Text = "Aktiv (inaktive dürfen sich nicht anmelden)"
+        Me.RadCheckBox2.Size = New System.Drawing.Size(387, 18)
+        Me.RadCheckBox2.TabIndex = 7
+        Me.RadCheckBox2.Text = "Aktiv (inaktive dürfen Anwendung nicht verwenden)"
+        '
+        'RadLabel3
+        '
+        Me.RadLabel3.Location = New System.Drawing.Point(12, 12)
+        Me.RadLabel3.Name = "RadLabel3"
+        Me.RadLabel3.Size = New System.Drawing.Size(53, 18)
+        Me.RadLabel3.TabIndex = 0
+        Me.RadLabel3.Text = "Benutzer:"
+        '
+        'RadMultiColumnComboBoxBenutzer
+        '
+        '
+        'RadMultiColumnComboBoxBenutzer.NestedRadGridView
+        '
+        Me.RadMultiColumnComboBoxBenutzer.EditorControl.BackColor = System.Drawing.SystemColors.Window
+        Me.RadMultiColumnComboBoxBenutzer.EditorControl.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadMultiColumnComboBoxBenutzer.EditorControl.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.RadMultiColumnComboBoxBenutzer.EditorControl.Location = New System.Drawing.Point(0, 0)
+        '
+        '
+        '
+        Me.RadMultiColumnComboBoxBenutzer.EditorControl.MasterTemplate.AllowAddNewRow = False
+        Me.RadMultiColumnComboBoxBenutzer.EditorControl.MasterTemplate.AllowCellContextMenu = False
+        Me.RadMultiColumnComboBoxBenutzer.EditorControl.MasterTemplate.AllowColumnChooser = False
+        Me.RadMultiColumnComboBoxBenutzer.EditorControl.MasterTemplate.EnableGrouping = False
+        Me.RadMultiColumnComboBoxBenutzer.EditorControl.MasterTemplate.ShowFilteringRow = False
+        Me.RadMultiColumnComboBoxBenutzer.EditorControl.Name = "NestedRadGridView"
+        Me.RadMultiColumnComboBoxBenutzer.EditorControl.ReadOnly = True
+        Me.RadMultiColumnComboBoxBenutzer.EditorControl.ShowGroupPanel = False
+        Me.RadMultiColumnComboBoxBenutzer.EditorControl.Size = New System.Drawing.Size(240, 150)
+        Me.RadMultiColumnComboBoxBenutzer.EditorControl.TabIndex = 0
+        Me.RadMultiColumnComboBoxBenutzer.Enabled = False
+        Me.RadMultiColumnComboBoxBenutzer.ImeMode = System.Windows.Forms.ImeMode.[On]
+        Me.RadMultiColumnComboBoxBenutzer.Location = New System.Drawing.Point(99, 12)
+        Me.RadMultiColumnComboBoxBenutzer.Name = "RadMultiColumnComboBoxBenutzer"
+        Me.RadMultiColumnComboBoxBenutzer.Size = New System.Drawing.Size(498, 20)
+        Me.RadMultiColumnComboBoxBenutzer.TabIndex = 1
+        Me.RadMultiColumnComboBoxBenutzer.TabStop = False
         '
         'FrmNeueLizenz
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(308, 219)
+        Me.ClientSize = New System.Drawing.Size(609, 228)
+        Me.Controls.Add(Me.RadMultiColumnComboBoxBenutzer)
+        Me.Controls.Add(Me.RadLabel3)
         Me.Controls.Add(Me.RadCheckBox2)
         Me.Controls.Add(Me.RadCheckBox1)
         Me.Controls.Add(Me.RadButton1)
@@ -124,6 +171,10 @@ Partial Class FrmNeueLizenz
         CType(Me.RadTextBoxControl2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadCheckBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadCheckBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabel3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadMultiColumnComboBoxBenutzer.EditorControl.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadMultiColumnComboBoxBenutzer.EditorControl, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadMultiColumnComboBoxBenutzer, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -136,5 +187,7 @@ Partial Class FrmNeueLizenz
     Friend WithEvents RadTextBoxControl2 As Telerik.WinControls.UI.RadTextBoxControl
     Friend WithEvents RadCheckBox1 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents RadCheckBox2 As Telerik.WinControls.UI.RadCheckBox
+    Friend WithEvents RadLabel3 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents RadMultiColumnComboBoxBenutzer As Telerik.WinControls.UI.RadMultiColumnComboBox
 End Class
 

@@ -44,12 +44,14 @@ Public Class EichsoftwareWebservice
                 'lizenz holen für Benutzer_FK
                 Dim objLic = (From lic In dbcontext.ServerLizensierung Where lic.HEKennung = HEKennung And lic.Lizenzschluessel = Lizenzschluessel And lic.Aktiv = True).FirstOrDefault
                 'Benutzer anhand von Benutzer_FK holen für Firma
-                Dim objBenutzer = (From Benutzer In dbcontext.Benutzer Where Benutzer.HEKennung = objLic.HEKennung).FirstOrDefault
+                Dim objBenutzer = (From Benutzer In dbcontext.Benutzer Where Benutzer.ID = objLic.FK_BenutzerID).FirstOrDefault
                 'firma holen
                 Dim objfirma = (From Firma In dbcontext.Firmen Where Firma.ID = objBenutzer.Firma_FK).FirstOrDefault
 
                 objLizenzdaten.Vorname = objBenutzer.Vorname
                 objLizenzdaten.Name = objBenutzer.Nachname
+                objLizenzdaten.BenutzerID = objBenutzer.ID
+
                 objLizenzdaten.Firma = objfirma.Name
                 objLizenzdaten.FirmaPLZ = objfirma.PLZ
                 objLizenzdaten.FirmaOrt = objfirma.Ort

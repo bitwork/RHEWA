@@ -5,4 +5,6 @@
     Public Property FirmaStrasse As String = ""
     Public Property FirmaOrt As String = ""
     Public Property FirmaPLZ As String = ""
+    Public Property BenutzerID As String = ""
+
 End Class

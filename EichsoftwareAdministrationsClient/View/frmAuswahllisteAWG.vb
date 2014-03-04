@@ -79,7 +79,10 @@
     End Sub
 
     Private Sub RadGridViewAuswahlliste_CellDoubleClick(sender As Object, e As Telerik.WinControls.UI.GridViewCellEventArgs) Handles RadGridViewAuswahlliste.CellDoubleClick
-        EditEichprozess()
+        If e.Row.RowElementType.Equals(GetType(Telerik.WinControls.UI.GridDataRowElement)) Then
+
+            EditEichprozess()
+        End If
 
     End Sub
 End Class
