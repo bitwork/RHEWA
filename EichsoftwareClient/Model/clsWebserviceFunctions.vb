@@ -54,6 +54,7 @@ Public Class clsWebserviceFunctions
                     objLic.FirmaOrt = objLizenzdaten.FirmaOrt
                     objLic.FirmaPLZ = objLizenzdaten.FirmaPLZ
                     objLic.FirmaStrasse = objLizenzdaten.FirmaStrasse
+                    objLic.fk_benutzerID = objLizenzdaten.BenutzerID
                     DBContext.SaveChanges()
                 End Using
             End Using
@@ -136,6 +137,7 @@ Public Class clsWebserviceFunctions
                                     newWZ.Pruefbericht = objServerArtikel._Pruefbericht
                                     newWZ.Typ = objServerArtikel._Typ
                                     newWZ.Deaktiviert = objServerArtikel._Deaktiviert
+                                    newWZ.Neu = objServerArtikel._Neu
                                     'hinzufügen des neu erzeugten Artikels in Lokale Datenbank
 
                                     DBContext.Lookup_Waegezelle.Add(newWZ)

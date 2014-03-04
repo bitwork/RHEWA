@@ -287,6 +287,7 @@
           <Property Name="FirmaPLZ" Type="nvarchar" MaxLength="25" />
           <Property Name="FirmaStrasse" Type="nvarchar" MaxLength="999" />
           <Property Name="HEKennung" Type="nvarchar" MaxLength="50" />
+          <Property Name="FK_BenutzerID" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Lookup_Auswertegeraet">
           <Key>
@@ -1067,6 +1068,7 @@
           <Property Type="Boolean" Name="EignungAchlastwaegungen_WaagenbrueckeEbene" />
           <Property Type="Boolean" Name="EignungAchlastwaegungen_WaageNichtGeeignet" />
           <Property Type="Boolean" Name="EignungAchlastwaegungen_Geprueft" />
+          <Property Type="String" Name="Identifikationsdaten_Benutzer" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Lookup_Konformitaetsbewertungsverfahren" Relationship="EichsoftwareClientdatabaseModel.FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren" FromRole="Eichprotokoll" ToRole="Lookup_Konformitaetsbewertungsverfahren" />
           <NavigationProperty Name="Eichprozess" Relationship="EichsoftwareClientdatabaseModel.FK_Eichprozess_Eichprotokoll" FromRole="Eichprotokoll" ToRole="Eichprozess" />
           <NavigationProperty Name="PruefungAussermittigeBelastung" Relationship="EichsoftwareClientdatabaseModel.FK_PruefungAussermittigeBelastung_Eichprotokoll" FromRole="Eichprotokoll" ToRole="PruefungAussermittigeBelastung" />
@@ -1079,7 +1081,6 @@
           <NavigationProperty Name="PruefungStaffelverfahrenErsatzlast" Relationship="EichsoftwareClientdatabaseModel.FK_PruefungStaffelverfahrenErsatzlast_Eichprotokoll" FromRole="Eichprotokoll" ToRole="PruefungStaffelverfahrenErsatzlast" />
           <NavigationProperty Name="PruefungStaffelverfahrenNormallast" Relationship="EichsoftwareClientdatabaseModel.FK_PruefungStaffelverfahrenNormallast_Eichprotokoll" FromRole="Eichprotokoll" ToRole="PruefungStaffelverfahrenNormallast" />
           <NavigationProperty Name="PruefungWiederholbarkeit" Relationship="EichsoftwareClientdatabaseModel.FK_PruefungWiederholbarkeit_Eichprotokoll" FromRole="Eichprotokoll" ToRole="PruefungWiederholbarkeit" />
-          <Property Type="String" Name="Identifikationsdaten_Benutzer" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Eichprozess">
           <Key>
@@ -1160,6 +1161,7 @@
           <Property Type="String" Name="FirmaPLZ" MaxLength="25" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="FirmaStrasse" MaxLength="999" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="HEKennung" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FK_BenutzerID" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Lookup_Auswertegeraet">
           <Key>
@@ -1182,9 +1184,9 @@
           <Property Type="String" Name="GrenzwertTemperaturbereichMAX" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="BruchteilEichfehlergrenze" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="KabellaengeQuerschnitt" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="Deaktiviert" />
           <NavigationProperty Name="Eichprozess" Relationship="EichsoftwareClientdatabaseModel.FK_Eichprozess_Lookup_Auswertegeraet" FromRole="Lookup_Auswertegeraet" ToRole="Eichprozess" />
           <NavigationProperty Name="Mogelstatistik" Relationship="EichsoftwareClientdatabaseModel.FK_Mogelstatistik_Lookup_Auswertegeraet" FromRole="Lookup_Auswertegeraet" ToRole="Mogelstatistik" />
-          <Property Type="Boolean" Name="Deaktiviert" />
         </EntityType>
         <EntityType Name="Lookup_Bearbeitungsstatus">
           <Key>
@@ -1259,9 +1261,9 @@
           <Property Type="String" Name="GrenzwertTemperaturbereichMAX" MaxLength="5" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="BruchteilEichfehlergrenze" MaxLength="5" FixedLength="false" Unicode="true" />
           <Property Type="Boolean" Name="Neu" Nullable="false" />
+          <Property Type="Boolean" Name="Deaktiviert" Nullable="false" />
           <NavigationProperty Name="Eichprozess" Relationship="EichsoftwareClientdatabaseModel.FK_Eichprozess_Lookup_Waegezelle" FromRole="Lookup_Waegezelle" ToRole="Eichprozess" />
           <NavigationProperty Name="Mogelstatistik" Relationship="EichsoftwareClientdatabaseModel.FK_Mogelstatistik_Lookup_Waegezelle" FromRole="Lookup_Waegezelle" ToRole="Mogelstatistik" />
-          <Property Type="Boolean" Name="Deaktiviert" />
         </EntityType>
         <EntityType Name="Mogelstatistik">
           <Key>
@@ -1749,8 +1751,8 @@
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="EichsoftwareClientdatabaseModelStoreContainer" CdmEntityContainer="EichsoftwareClientdatabaseEntities1">
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EichsoftwareClientdatabaseModelStoreContainer" CdmEntityContainer="EichsoftwareClientdatabaseEntities1">
           <EntitySetMapping Name="Beschaffenheitspruefung">
             <EntityTypeMapping TypeName="EichsoftwareClientdatabaseModel.Beschaffenheitspruefung">
               <MappingFragment StoreEntitySet="Beschaffenheitspruefung">
@@ -1907,6 +1909,7 @@
           <EntitySetMapping Name="Lizensierung">
             <EntityTypeMapping TypeName="EichsoftwareClientdatabaseModel.Lizensierung">
               <MappingFragment StoreEntitySet="Lizensierung">
+                <ScalarProperty Name="FK_BenutzerID" ColumnName="FK_BenutzerID" />
                 <ScalarProperty Name="HEKennung" ColumnName="HEKennung" />
                 <ScalarProperty Name="FirmaStrasse" ColumnName="FirmaStrasse" />
                 <ScalarProperty Name="FirmaPLZ" ColumnName="FirmaPLZ" />
@@ -2227,8 +2230,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
         </EntityContainerMapping>
-      </Mapping>
-    </edmx:Mappings>
+</Mapping></edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
   <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">

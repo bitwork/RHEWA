@@ -326,6 +326,8 @@
 
             'felder beschreiben lassen
             RadTextBoxControlWZGenauigkeitsklasse.IsReadOnly = False
+            RadTextBoxControlWZGenauigkeitsklasse.Enabled = True
+
             RadTextBoxControlWZHoechstteilungsfaktor.IsReadOnly = False
             RadTextBoxControlWZKriechteilungsfaktor.IsReadOnly = False
             RadTextBoxControlWZMaxTeilungswerte.IsReadOnly = False
@@ -1082,7 +1084,10 @@
   
     Private Sub RadTextBoxControlWZGenauigkeitsklasse_TextChanging(sender As Object, e As Telerik.WinControls.TextChangingEventArgs) Handles RadTextBoxControlWZGenauigkeitsklasse.TextChanging
         If _suspendEvents = True Then Exit Sub
-        If e.NewValue.ToUpper = "A" Or e.NewValue.ToUpper = "B" Or e.NewValue.ToUpper = "C" Or e.NewValue.ToUpper = "D" Then
+        If e.NewValue.ToUpper = "A" Or e.NewValue.ToUpper = "B" Or e.NewValue.ToUpper = "C" Or e.NewValue.ToUpper = "D" _
+            Or e.NewValue.ToUpper = "I" Or e.NewValue.ToUpper = "II" Or e.NewValue.ToUpper = "III" Or e.NewValue.ToUpper = "IV" _
+            Or e.NewValue.ToUpper = "" Then
+            e.Cancel = False
         Else
 
             e.Cancel = True

@@ -23,5 +23,6 @@ Partial Public Class Lizensierung
     Public Property FirmaPLZ As String
     Public Property FirmaStrasse As String
     Public Property HEKennung As String
+    Public Property FK_BenutzerID As String
 
 End Class

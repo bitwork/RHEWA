@@ -341,6 +341,7 @@ Public Class FrmMainContainer
             End Using
         Catch ex As Exception
             'konnte layout nicht finden
+            Debug.WriteLine(ex.ToString)
         End Try
         'laden des RHEWA Grids
         Try
@@ -349,6 +350,8 @@ Public Class FrmMainContainer
             End Using
         Catch ex As Exception
             'konnte layout nicht finden
+            Debug.WriteLine(ex.ToString)
+
         End Try
 
     End Sub
@@ -367,6 +370,8 @@ Public Class FrmMainContainer
                 Me.RadScrollablePanelTrafficLightBreadcrumb.PanelContainer.Controls(0).Dock = DockStyle.Fill
                 Me.RadScrollablePanelTrafficLightBreadcrumb.PanelContainer.Controls(0).Visible = True
             Catch ex As Exception
+                Debug.WriteLine(ex.ToString)
+
             End Try
 
             Dim uco As Object = Nothing
@@ -587,12 +592,16 @@ Public Class FrmMainContainer
                                 _CurrentUco.EichprozessStatusReihenfolge += 1
                         End Select
                     Catch ex As Exception
+                        Debug.WriteLine(ex.ToString)
+
                     End Try
                 ElseIf _CurrentUco.EichprozessStatusReihenfolge = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitNormallastLinearitaet Then
                     Try
                         'überspringe staffelverfahren
                         _CurrentUco.EichprozessStatusReihenfolge += 1
                     Catch ex As Exception
+                        Debug.WriteLine(ex.ToString)
+
                     End Try
                 ElseIf _CurrentUco.EichprozessStatusReihenfolge = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderÜberlastanzeige Then
                     Try
@@ -602,6 +611,8 @@ Public Class FrmMainContainer
                                 _CurrentUco.EichprozessStatusReihenfolge += 1
                         End Select
                     Catch ex As Exception
+                        Debug.WriteLine(ex.ToString)
+
                     End Try
                 ElseIf _CurrentUco.EichprozessStatusReihenfolge = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungdesAnsprechvermögens Then
                     Try
@@ -611,6 +622,8 @@ Public Class FrmMainContainer
                         End If
 
                     Catch ex As Exception
+                        Debug.WriteLine(ex.ToString)
+
                     End Try
                 ElseIf _CurrentUco.EichprozessStatusReihenfolge = GlobaleEnumeratoren.enuEichprozessStatus.Taraeinrichtung Then
                     Try
@@ -620,6 +633,8 @@ Public Class FrmMainContainer
                                 _CurrentUco.EichprozessStatusReihenfolge += 1
                         End Select
                     Catch ex As Exception
+                        Debug.WriteLine(ex.ToString)
+
                     End Try
                 End If
 
@@ -850,33 +865,42 @@ Public Class FrmMainContainer
 
         End If
 
+        SpeichereGridLayout()
+    End Sub
+
+ 
+#End Region
+    Private Sub SpeichereGridLayout()
         'speichere Layout der beiden Grids
         If Me._CurrentUco.GetType Is GetType(ucoEichprozessauswahlliste) Then
-
             Dim gridProzesse = CType(Me._CurrentUco, ucoEichprozessauswahlliste).RadGridViewAuswahlliste
             Dim gridProzesseRHEWA = CType(Me._CurrentUco, ucoEichprozessauswahlliste).RadGridViewRHEWAAlle
+            Try
+                Using stream As New MemoryStream()
+                    gridProzesse.SaveLayout(stream)
+                    stream.Position = 0
+                    Dim buffer As Byte() = New Byte(CInt(stream.Length) - 1) {}
+                    stream.Read(buffer, 0, buffer.Length)
+                    My.Settings.GridSettings = Convert.ToBase64String(buffer)
+                    My.Settings.Save()
+                End Using
+            Catch ex As Exception
 
-            Using stream As New MemoryStream()
-                gridProzesse.SaveLayout(stream)
-                stream.Position = 0
-                Dim buffer As Byte() = New Byte(CInt(stream.Length) - 1) {}
-                stream.Read(buffer, 0, buffer.Length)
-                My.Settings.GridSettings = Convert.ToBase64String(buffer)
-                My.Settings.Save()
-            End Using
+            End Try
 
-            Using stream As New MemoryStream()
-                gridProzesseRHEWA.SaveLayout(stream)
-                stream.Position = 0
-                Dim buffer As Byte() = New Byte(CInt(stream.Length) - 1) {}
-                stream.Read(buffer, 0, buffer.Length)
-                My.Settings.GridSettingsRHEWA = Convert.ToBase64String(buffer)
-                My.Settings.Save()
-            End Using
+            Try
+                Using stream As New MemoryStream()
+                    gridProzesseRHEWA.SaveLayout(stream)
+                    stream.Position = 0
+                    Dim buffer As Byte() = New Byte(CInt(stream.Length) - 1) {}
+                    stream.Read(buffer, 0, buffer.Length)
+                    My.Settings.GridSettingsRHEWA = Convert.ToBase64String(buffer)
+                    My.Settings.Save()
+                End Using
+            Catch ex As Exception
+            End Try
         End If
     End Sub
-#End Region
-
 
 
     Private Sub RadButtonVersenden_Click(sender As Object, e As EventArgs) Handles RadButtonVersenden.Click

@@ -141,7 +141,7 @@ Public Class ucoAmpel
         Changes()
 
         If Not _ParentForm.CurrentEichprozess Is Nothing Then
-            HideElement(_ParentForm.CurrentEichprozess.GetListeUngueltigeStati(_ParentForm.CurrentEichprozess))
+            HideElement(GetListeUngueltigeStati(_ParentForm.CurrentEichprozess))
         End If
     End Sub
 
@@ -424,6 +424,124 @@ Public Class ucoAmpel
         e.VisualItem = New CustomVisualItem()
     End Sub
 
+#End Region
+
+
+#Region "Hilfsfunktionen"
+
+    ''' <summary>
+    ''' Erzeugt eine Liste von Stati die für den aktuellen Eichrpozess ungültig sind. Z.B. Staffelverfahren bei einbereichwaagen
+    ''' </summary>
+    ''' <returns></returns>
+    ''' <remarks>Wird z.b. für UCOAmpel genutzt umben�tigte Felder auszublenden</remarks>
+    Private Function GetListeUngueltigeStati(objEichprozess As Eichprozess) As List(Of GlobaleEnumeratoren.enuEichprozessStatus)
+        Try
+            Dim returnlist As New List(Of GlobaleEnumeratoren.enuEichprozessStatus)
+
+            'wenn es sich nicht um ein flüchtiges Object handelt (server seitiges objekt (kopie von Server objekt)
+            'versuche aufruf,
+            Try
+                'Versuch
+                Dim obj = objEichprozess.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren.Verfahren
+                'ansonsten reinitialsiere Objekt aus lokaler DB
+                LadeVonServerObjekt(objEichprozess, returnlist)
+            Catch ex As NullReferenceException
+                'neu laden des Objekts, diesmal mit den lookup Objekten
+                LadeVonLokalerDB(objEichprozess, returnlist)
+            End Try
+
+            Return returnlist
+        Catch ex As Exception
+            Return Nothing
+        End Try
+    End Function
+
+    Private Sub LadeVonLokalerDB(ByRef objEichprozess As Eichprozess, ByRef returnlist As List(Of GlobaleEnumeratoren.enuEichprozessStatus))
+        Using context As New EichsoftwareClientdatabaseEntities1
+            Dim vorgangsnummer As String = objEichprozess.Vorgangsnummer
+            objEichprozess = (From a In context.Eichprozess.Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp") Select a Where a.Vorgangsnummer = vorgangsnummer).FirstOrDefault
+            If Not objEichprozess Is Nothing Then
+                'Achslastw�gungen
+                If Not objEichprozess.Eichprotokoll Is Nothing Then
+                    Select Case objEichprozess.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren.Verfahren
+                        Case Is = "über 60kg mit Normalien", "über 60kg im Staffelverfahren"
+                            ' Wenn der aktuelle Status kleiner ist als der f�r die Beschaffenheitspruefung, wird dieser �berschrieben. Sonst w�rde ein aktuellere Status mit dem vorherigen �berschrieben
+                            returnlist.Add(GlobaleEnumeratoren.enuEichprozessStatus.EignungfürAchslastwägungen)
+                            returnlist.Add(GlobaleEnumeratoren.enuEichprozessStatus.WaagenFuerRollendeLasten)
+                        Case Is = "Fahrzeugwaagen"
+                    End Select
+
+                    Select Case objEichprozess.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren.Verfahren
+                        Case Is = "über 60kg mit Normalien"
+                            ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
+                            returnlist.Add(GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitErsatzlast)
+                        Case Is = "Fahrzeugwaagen", "über 60kg im Staffelverfahren"
+                            ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
+                            returnlist.Add(GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitNormallastLinearitaet)
+                    End Select
+
+
+                    If objEichprozess.Eichprotokoll.Verwendungszweck_Drucker = False Then
+                        returnlist.Add(GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderStabilitätderGleichgewichtslage)
+                    End If
+                Else
+                    returnlist.Add(GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitNormallastLinearitaet)
+                    returnlist.Add(GlobaleEnumeratoren.enuEichprozessStatus.EignungfürAchslastwägungen)
+                    returnlist.Add(GlobaleEnumeratoren.enuEichprozessStatus.WaagenFuerRollendeLasten)
+                    returnlist.Add(GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitErsatzlast)
+                    returnlist.Add(GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderStabilitätderGleichgewichtslage)
+                End If
+            Else
+                returnlist.Add(GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitNormallastLinearitaet)
+                returnlist.Add(GlobaleEnumeratoren.enuEichprozessStatus.EignungfürAchslastwägungen)
+                returnlist.Add(GlobaleEnumeratoren.enuEichprozessStatus.WaagenFuerRollendeLasten)
+                returnlist.Add(GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitErsatzlast)
+                returnlist.Add(GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderStabilitätderGleichgewichtslage)
+            End If
+        End Using
+
+    End Sub
+
+    Private Sub LadeVonServerObjekt(ByRef objEichprozess As Eichprozess, ByRef returnlist As List(Of GlobaleEnumeratoren.enuEichprozessStatus))
+        If Not objEichprozess Is Nothing Then
+            'Achslastwügungen
+            If Not objEichprozess.Eichprotokoll Is Nothing Then
+                Select Case objEichprozess.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren.Verfahren
+                    Case Is = "über 60kg mit Normalien", "über 60kg im Staffelverfahren"
+                        ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
+                        returnlist.Add(GlobaleEnumeratoren.enuEichprozessStatus.EignungfürAchslastwägungen)
+                        returnlist.Add(GlobaleEnumeratoren.enuEichprozessStatus.WaagenFuerRollendeLasten)
+                    Case Is = "Fahrzeugwaagen"
+                End Select
+
+                Select Case objEichprozess.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren.Verfahren
+                    Case Is = "über 60kg mit Normalien"
+                        ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
+                        returnlist.Add(GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitErsatzlast)
+                    Case Is = "Fahrzeugwaagen", "über 60kg im Staffelverfahren"
+                        ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
+                        returnlist.Add(GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitNormallastLinearitaet)
+                End Select
+
+
+                If objEichprozess.Eichprotokoll.Verwendungszweck_Drucker = False Then
+                    returnlist.Add(GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderStabilitätderGleichgewichtslage)
+                End If
+            Else
+                returnlist.Add(GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitNormallastLinearitaet)
+                returnlist.Add(GlobaleEnumeratoren.enuEichprozessStatus.EignungfürAchslastwägungen)
+                returnlist.Add(GlobaleEnumeratoren.enuEichprozessStatus.WaagenFuerRollendeLasten)
+                returnlist.Add(GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitErsatzlast)
+                returnlist.Add(GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderStabilitätderGleichgewichtslage)
+            End If
+        Else
+            returnlist.Add(GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitNormallastLinearitaet)
+            returnlist.Add(GlobaleEnumeratoren.enuEichprozessStatus.EignungfürAchslastwägungen)
+            returnlist.Add(GlobaleEnumeratoren.enuEichprozessStatus.WaagenFuerRollendeLasten)
+            returnlist.Add(GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitErsatzlast)
+            returnlist.Add(GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderStabilitätderGleichgewichtslage)
+        End If
+    End Sub
 #End Region
 
 End Class

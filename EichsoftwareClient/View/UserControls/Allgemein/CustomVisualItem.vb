@@ -58,7 +58,11 @@ Friend Class CustomVisualItem
     End Sub
 
     Protected Overrides Sub SynchronizeProperties()
-        MyBase.SynchronizeProperties()
+        Try
+            MyBase.SynchronizeProperties()
+        Catch ex As RowNotInTableException
+
+        End Try
         Me.Text = ""
         Me.imageElement.Image = Image.FromStream(New System.IO.MemoryStream(CType(Me.Data("Image"), Byte())))
         Me.titleElement.Text = Convert.ToString(Me.Data("Title"))

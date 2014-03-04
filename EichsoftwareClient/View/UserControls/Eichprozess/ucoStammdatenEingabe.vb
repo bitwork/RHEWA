@@ -196,7 +196,10 @@
         Me.RadGroupBoxWZ.Text = resources.GetString("RadGroupBoxWZ.Text")
 
         Me.lblAWZTyp.Text = resources.GetString("lblAWZTyp.Text")
-        Me.lblAWZZulassung2.Text = resources.GetString("lblAWZZulassung2.Text")
+        Try
+            Me.lblAWZZulassung2.Text = resources.GetString("lblAWZZulassung2.Text")
+        Catch ex As Exception
+        End Try
         Me.lblAWZZulassung.Text = resources.GetString("lblAWZZulassung.Text")
         Me.lblAWZHersteller.Text = resources.GetString("lblAWZHersteller.Text")
         Me.RadGroupBoxWaage.Text = resources.GetString("RadGroupBoxWaage.Text")
@@ -275,7 +278,8 @@
 
                 'Name der Propertie setzen, welche als Anzeigename verwendet wird
                 RadDropdownlistlWZTyp.ValueMember = "ID"
-                RadDropdownlistlWZHersteller.ValueMember = "ID"
+
+                'RadDropdownlistlWZHersteller.ValueMember = "ID"
 
                 'Name der Propertie setzen, welche als interner wert (ID) verwendet wird
                 RadDropdownlistlWZTyp.DisplayMember = "Typ"
@@ -325,7 +329,7 @@
                 Dim db2 = From dbLookup In context.Lookup_Auswertegeraet Select dbLookup
                 _DatasourceDropdownListAWG = db2.ToList
             Else
-                Dim db2 = From dbLookup In context.Lookup_Auswertegeraet Select dbLookup Where dbLookup.Deaktiviert = False
+                Dim db2 = From dbLookup In context.Lookup_Auswertegeraet Where dbLookup.Deaktiviert = False Select dbLookup
                 _DatasourceDropdownListAWG = db2.ToList
             End If
             'Laden der WZ Dropdownliste (alles)
@@ -334,7 +338,7 @@
                 Dim db3 = From dbLookup In context.Lookup_Waegezelle Select dbLookup
                 _DatasourceDropdownListWZ = db3.ToList
             Else
-                Dim db3 = From dbLookup In context.Lookup_Waegezelle Select dbLookup Where dbLookup.Deaktiviert = False
+                Dim db3 = From dbLookup In context.Lookup_Waegezelle Where dbLookup.Deaktiviert = False Select dbLookup
                 _DatasourceDropdownListWZ = db3.ToList
             End If
 
@@ -424,6 +428,7 @@
             RadTextBoxControlWZBauartzulassung.Text = objEichprozess.Lookup_Waegezelle.Bauartzulassung
             RadTextBoxControlWZPruefbericht.Text = objEichprozess.Lookup_Waegezelle.Pruefbericht
             RadDropdownlistAWGTyp.SelectedValue = objEichprozess.FK_Auswertegeraet
+            RadDropdownlistlWZHersteller.Text = objEichprozess.Lookup_Waegezelle.Hersteller
             RadDropdownlistlWZTyp.SelectedValue = objEichprozess.FK_Waegezelle
             RadDropDownListWaagenArt.SelectedValue = objEichprozess.FK_WaagenArt
             RadDropdownlistWaagenTyp.SelectedValue = objEichprozess.FK_WaagenTyp
@@ -466,10 +471,16 @@
                 RadTextBoxControlStammdatenWaagenbaufirma.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Hersteller
                 RadTextBoxControlWaageSeriennummer.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer
                 RadTextBoxControlWaageZulassungsinhaber.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Zulassungsinhaber
+
+
                 RadTextBoxControlWZBauartzulassung.Text = objEichprozess.Lookup_Waegezelle.Bauartzulassung
                 RadTextBoxControlWZPruefbericht.Text = objEichprozess.Lookup_Waegezelle.Pruefbericht
                 RadDropdownlistAWGTyp.SelectedValue = objEichprozess.FK_Auswertegeraet
+
+                RadDropdownlistlWZHersteller.Text = objEichprozess.Lookup_Waegezelle.Hersteller
+
                 RadDropdownlistlWZTyp.SelectedValue = objEichprozess.FK_Waegezelle
+
                 RadDropDownListWaagenArt.SelectedValue = objEichprozess.FK_WaagenArt
                 RadDropdownlistWaagenTyp.SelectedValue = objEichprozess.FK_WaagenTyp
             Else

@@ -50,6 +50,7 @@
                 objWZ.Typ = RadTextBoxControlWZTyp.Text
                 objWZ.ID = Guid.NewGuid.ToString
                 objWZ.Neu = True
+                objWZ.Deaktiviert = False
                 context.Lookup_Waegezelle.Add(objWZ)
                 context.SaveChanges()
 

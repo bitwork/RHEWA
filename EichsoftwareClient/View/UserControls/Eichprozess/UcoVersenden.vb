@@ -27,6 +27,8 @@ Public Class UcoVersenden
                 'Überschrift setzen
                 ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_Versenden
             Catch ex As Exception
+                Debug.WriteLine(ex.ToString)
+
             End Try
         End If
         EichprozessStatusReihenfolge = GlobaleEnumeratoren.enuEichprozessStatus.Versenden
@@ -405,6 +407,8 @@ Public Class UcoVersenden
 
                 ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_Versenden
             Catch ex As Exception
+                Debug.WriteLine(ex.ToString)
+
             End Try
         End If
 
@@ -448,6 +452,8 @@ Public Class UcoVersenden
             RadProgressBar.Text = CInt(CInt(e.UserState) / 1024) & " KB/ " & CInt(CInt(RadProgressBar.Maximum) / 1024) & " KB"
             Me.Refresh()
         Catch ex As Exception
+            Debug.WriteLine(ex.ToString)
+
         End Try
     End Sub
 
@@ -461,6 +467,8 @@ Public Class UcoVersenden
 
             SendObject()
         Catch ex As Exception
+            Debug.WriteLine(ex.ToString)
+
         End Try
     End Sub
 

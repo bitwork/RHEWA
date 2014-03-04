@@ -77,6 +77,7 @@ Public Class FrmLizenz
                             objLic.FirmaOrt = objLizenzdaten.FirmaOrt
                             objLic.FirmaPLZ = objLizenzdaten.FirmaPLZ
                             objLic.FirmaStrasse = objLizenzdaten.FirmaStrasse
+                            objLic.fk_benutzerID = objLizenzdaten.BenutzerID
                             DBContext.SaveChanges()
                         Catch ex As Exception
 
