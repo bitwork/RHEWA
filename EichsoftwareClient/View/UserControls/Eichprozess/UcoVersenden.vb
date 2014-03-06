@@ -107,7 +107,13 @@ Public Class UcoVersenden
     End Sub
 
     Private Sub UpdateObject()
-        objEichprozess.UploadFilePath = FTPuploadpath
+        If FTPUploadPath.Equals("") Then
+            objEichprozess.UploadFilePath = RadTextBoxControlUploadPath.Text
+
+        Else
+            objEichprozess.UploadFilePath = FTPUploadPath
+
+        End If
     End Sub
 
     ''' <summary>
@@ -131,7 +137,7 @@ Public Class UcoVersenden
                         'neuen Status zuweisen
                         UpdateObject()
                         objEichprozess.FK_Bearbeitungsstatus = 1
-                        objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit RHEWA sich den DS von Anfang angucken kann
+                        'objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit RHEWA sich den DS von Anfang angucken kann
 
                         Try
                             Context.SaveChanges()
@@ -151,6 +157,7 @@ Public Class UcoVersenden
 
             objServerEichprozess = clsClientServerConversionFunctions.CopyObjectProperties(objServerEichprozess, objEichprozess)
 
+            'verbindung öffnen
             Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
                 Try
                     Webcontext.Open()
@@ -164,14 +171,47 @@ Public Class UcoVersenden
                 Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
 
                 Try
+                    'prüfen ob neue WZ hinzuzufügen ist
+                    If Not objEichprozess Is Nothing Then
+                        If Not objEichprozess.Lookup_Waegezelle Is Nothing Then
+                            If objEichprozess.Lookup_Waegezelle.Neu Then
+                                'umwandeln von Client WZ in Server WZ
+                                Dim objServerWZ As New EichsoftwareWebservice.ServerLookup_Waegezelle
+                                clsClientServerConversionFunctions.CopyWZObjectProperties(objServerWZ, objEichprozess.Lookup_Waegezelle)
+                                Webcontext.AddWaegezelle(objLiz.HEKennung, objLiz.Lizenzschluessel, objServerWZ, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                            End If
+                        End If
+                    End If
+
 
                     Webcontext.AddEichprozess(objLiz.HEKennung, objLiz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
                 Catch ex As Exception
                     MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    ' Status zurück setzen
-                    objEichprozess.FK_Bearbeitungsstatus = 4
-                    objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Versenden
-                    SaveWithoutValidationNeeded(Me)
+
+
+                    Using Context As New EichsoftwareClientdatabaseEntities1
+                        'prüfen ob CREATE oder UPDATE durchgeführt werden muss
+                        If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
+                            'prüfen ob das Objekt anhand der ID gefunden werden kann
+                            Dim dobjEichprozess As Eichprozess = Context.Eichprozess.FirstOrDefault(Function(value) value.Vorgangsnummer = objEichprozess.Vorgangsnummer)
+                            If Not dobjEichprozess Is Nothing Then
+                                'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
+                                objEichprozess = dobjEichprozess
+                                'neuen Status zuweisen
+
+                                ' Status zurück setzen
+                                objEichprozess.FK_Bearbeitungsstatus = 4
+                                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Versenden
+
+                                'SaveWithoutValidationNeeded(Me)
+                                Try
+                                    Context.SaveChanges()
+                                Catch ex2 As Entity.Validation.DbEntityValidationException
+                                    Exit Sub
+                                End Try
+                            End If
+                        End If
+                    End Using
                 End Try
                 Try
                     'nur versenden wenn der Eichprozess noch nicht versendet wurde. Sonst würden zu oft Marken abgezogen
@@ -351,7 +391,7 @@ Public Class UcoVersenden
                 Dim objServerEichprozess As New EichsoftwareWebservice.ServerEichprozess
                 'auf fehlerhaft Status setzen
                 objEichprozess.FK_Bearbeitungsstatus = 2
-                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Eichbevollmächtigter sich den DS von Anfang angucken muss
+                '   objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Eichbevollmächtigter sich den DS von Anfang angucken muss
                 UpdateObject()
 
                 'erzeuegn eines Server Objektes auf basis des aktuellen DS

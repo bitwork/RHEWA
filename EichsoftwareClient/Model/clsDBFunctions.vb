@@ -174,17 +174,60 @@
     Public Function HoleNachschlageListenFuerEichprozess(ByVal objEichprozess As Eichprozess) As Eichprozess
         Using Context As New EichsoftwareClientdatabaseEntities1
             'es gibt ihn schon und er ist bereits abgeschickt. nur lesend öffnen
-            objEichprozess = (From Obj In Context.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Beschaffenheitspruefung").Include("Mogelstatistik") Select Obj Where Obj.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault 'firstor default um erstes element zurückzugeben das übereintrifft(bei ID Spalten sollte es eh nur 1 sein)
-            objEichprozess.Lookup_Vorgangsstatus = (From f1 In Context.Lookup_Vorgangsstatus Where f1.ID = objEichprozess.FK_Vorgangsstatus Select f1).FirstOrDefault
-            objEichprozess.Lookup_Waagenart = (From f1 In Context.Lookup_Waagenart Where f1.ID = objEichprozess.FK_WaagenArt Select f1).FirstOrDefault
-            objEichprozess.Lookup_Waagentyp = (From f1 In Context.Lookup_Waagentyp Where f1.ID = objEichprozess.FK_WaagenTyp Select f1).FirstOrDefault
-            objEichprozess.Lookup_Bearbeitungsstatus = (From f1 In Context.Lookup_Bearbeitungsstatus Where f1.ID = objEichprozess.FK_Bearbeitungsstatus Select f1).FirstOrDefault
-            objEichprozess.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren = (From f1 In Context.Lookup_Konformitaetsbewertungsverfahren Where f1.ID = objEichprozess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren Select f1).FirstOrDefault
+            objEichprozess = (From Obj In Context.Eichprozess.AsNoTracking.Include("Eichprotokoll") _
+                              .Include("Lookup_Auswertegeraet").AsNoTracking _
+                              .Include("Kompatiblitaetsnachweis").AsNoTracking _
+                              .Include("Lookup_Waegezelle").AsNoTracking _
+                              .Include("Lookup_Waagenart").AsNoTracking _
+                              .Include("Lookup_Waagentyp").AsNoTracking _
+                              .Include("Beschaffenheitspruefung").AsNoTracking _
+                              .Include("Mogelstatistik").AsNoTracking _
+                                  Select Obj Where Obj.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault 'firstor default um erstes element zurückzugeben das übereintrifft(bei ID Spalten sollte es eh nur 1 sein)
+
+
+            objEichprozess.Lookup_Vorgangsstatus = (From f1 In Context.Lookup_Vorgangsstatus.AsNoTracking Where f1.ID = objEichprozess.FK_Vorgangsstatus Select f1).FirstOrDefault
+            objEichprozess.Lookup_Waagenart = (From f1 In Context.Lookup_Waagenart.AsNoTracking Where f1.ID = objEichprozess.FK_WaagenArt Select f1).FirstOrDefault
+            objEichprozess.Lookup_Waagentyp = (From f1 In Context.Lookup_Waagentyp.AsNoTracking Where f1.ID = objEichprozess.FK_WaagenTyp Select f1).FirstOrDefault
+            objEichprozess.Lookup_Bearbeitungsstatus = (From f1 In Context.Lookup_Bearbeitungsstatus.AsNoTracking Where f1.ID = objEichprozess.FK_Bearbeitungsstatus Select f1).FirstOrDefault
+            objEichprozess.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren = (From f1 In Context.Lookup_Konformitaetsbewertungsverfahren.AsNoTracking Where f1.ID = objEichprozess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren Select f1).FirstOrDefault
+
+            objEichprozess.Kompatiblitaetsnachweis = (From f1 In Context.Kompatiblitaetsnachweis.AsNoTracking Where f1.ID = objEichprozess.FK_Kompatibilitaetsnachweis Select f1).FirstOrDefault
+            objEichprozess.Lookup_Auswertegeraet = (From f1 In Context.Lookup_Auswertegeraet.AsNoTracking Where f1.ID = objEichprozess.FK_Auswertegeraet Select f1).FirstOrDefault
+            objEichprozess.Lookup_Waegezelle = (From f1 In Context.Lookup_Waegezelle.AsNoTracking Where f1.ID = objEichprozess.FK_Waegezelle Select f1).FirstOrDefault
+
+            'objEichprozess.Eichprotokoll.PruefungAnsprechvermoegen = (From f1 In Context.PruefungAnsprechvermoegen Where f1.FK_Eichprotokoll = objEichprozess.FK_Eichprotokoll)
+            'objEichprozess.Eichprotokoll.PruefungAussermittigeBelastung = (From f1 In Context.PruefungAussermittigeBelastung Where f1.FK_Eichprotokoll = objEichprozess.FK_Eichprotokoll Select f1)
+            'objEichprozess.Eichprotokoll.PruefungEichfehlergrenzen = (From f1 In Context.PruefungEichfehlergrenzen Where f1.FK_Eichprotokoll = objEichprozess.FK_Eichprotokoll Select f1)
+            'objEichprozess.Eichprotokoll.PruefungLinearitaetFallend = (From f1 In Context.PruefungLinearitaetFallend Where f1.FK_Eichprotokoll = objEichprozess.FK_Eichprotokoll Select f1)
+            'objEichprozess.Eichprotokoll.PruefungLinearitaetSteigend = (From f1 In Context.PruefungLinearitaetSteigend Where f1.FK_Eichprotokoll = objEichprozess.FK_Eichprotokoll Select f1)
+            'objEichprozess.Eichprotokoll.PruefungRollendeLasten = (From f1 In Context.PruefungRollendeLasten Where f1.FK_Eichprotokoll = objEichprozess.FK_Eichprotokoll Select f1)
+            'objEichprozess.Eichprotokoll.PruefungStabilitaetGleichgewichtslage = (From f1 In Context.PruefungStabilitaetGleichgewichtslage Where f1.ID = objEichprozess.FK_Eichprotokoll Select f1)
+            'objEichprozess.Eichprotokoll.PruefungStaffelverfahrenErsatzlast = (From f1 In Context.PruefungStaffelverfahrenErsatzlast Where f1.FK_Eichprotokoll = objEichprozess.FK_Eichprotokoll Select f1)
+            'objEichprozess.Eichprotokoll.PruefungStaffelverfahrenNormallast = (From f1 In Context.PruefungStaffelverfahrenNormallast Where f1.FK_Eichprotokoll = objEichprozess.FK_Eichprotokoll Select f1)
+            'objEichprozess.Eichprotokoll.PruefungWiederholbarkeit = (From f1 In Context.PruefungWiederholbarkeit Where f1.FK_Eichprotokoll = objEichprozess.FK_Eichprotokoll Select f1)
+
 
             Return objEichprozess
         End Using
 
     End Function
+    ' ''' <summary>
+    ' ''' Erzeugt einen 1zu1 Kopie eines Objektes
+    ' ''' </summary>
+    ' ''' <typeparam name="T"></typeparam>
+    ' ''' <param name="obj"></param>
+    ' ''' <returns></returns>
+    ' ''' <remarks></remarks>
+    'Private Shared Function DataContractSerialization(Of T)(obj As T) As T
+    '    Dim dcSer As New Runtime.Serialization.DataContractSerializer(obj.[GetType]())
+    '    Dim memoryStream As New IO.MemoryStream()
+
+    '    dcSer.WriteObject(memoryStream, obj)
+    '    memoryStream.Position = 0
+
+    '    Dim newObject As T = DirectCast(dcSer.ReadObject(memoryStream), T)
+    '    Return newObject
+    'End Function
 
     Public Function BlendeEichprozessAus(ByVal Vorgangsnummer As String) As Boolean
         Using context As New EichsoftwareClientdatabaseEntities1

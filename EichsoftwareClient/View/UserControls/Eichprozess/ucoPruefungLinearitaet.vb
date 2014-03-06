@@ -1027,12 +1027,28 @@
                 query2 = Nothing
             End Using
         Else
-            For Each obj In objEichprozess.Eichprotokoll.PruefungLinearitaetSteigend
-                _ListPruefungPruefungLinearitaetSteigend.Add(obj)
-            Next
-            For Each obj In objEichprozess.Eichprotokoll.PruefungLinearitaetFallend
-                _ListPruefungPruefungLinearitaetFallend.Add(obj)
-            Next
+
+            Try
+                'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
+                For Each obj In objEichprozess.Eichprotokoll.PruefungLinearitaetSteigend
+                    _ListPruefungPruefungLinearitaetSteigend.Add(obj)
+                Next
+                For Each obj In objEichprozess.Eichprotokoll.PruefungLinearitaetFallend
+                    _ListPruefungPruefungLinearitaetFallend.Add(obj)
+                Next
+            Catch ex As System.ObjectDisposedException
+                Using context As New EichsoftwareClientdatabaseEntities1
+                    'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
+                    Dim query = From a In context.PruefungLinearitaetSteigend Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
+                    _ListPruefungPruefungLinearitaetSteigend = query.ToList
+                    query = Nothing
+
+                    Dim query2 = From a In context.PruefungLinearitaetFallend Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
+                    _ListPruefungPruefungLinearitaetFallend = query2.ToList
+                    query2 = Nothing
+                End Using
+            End Try
+
         End If
 
 

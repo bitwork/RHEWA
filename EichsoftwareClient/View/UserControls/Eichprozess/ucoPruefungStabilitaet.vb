@@ -58,10 +58,20 @@
 
             End Using
         Else
+            Try
+                'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
 
-            For Each obj In objEichprozess.Eichprotokoll.PruefungStabilitaetGleichgewichtslage
-                _ListPruefungStabilitaet.Add(obj)
-            Next
+                For Each obj In objEichprozess.Eichprotokoll.PruefungStabilitaetGleichgewichtslage
+                    _ListPruefungStabilitaet.Add(obj)
+                Next
+            Catch ex As System.ObjectDisposedException
+                Using context As New EichsoftwareClientdatabaseEntities1
+                    'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
+                    Dim query = From a In context.PruefungStabilitaetGleichgewichtslage Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
+                    _ListPruefungStabilitaet = query.ToList
+                End Using
+            End Try
+
         End If
 
         'steuerelemente mit werten aus DB füllen

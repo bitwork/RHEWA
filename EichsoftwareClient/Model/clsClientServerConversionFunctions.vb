@@ -1,10 +1,39 @@
-﻿''' <summary>
+﻿Imports System.Runtime.Serialization
+Imports System.IO
+
+''' <summary>
 ''' Diese Klasse enthält funktionen um Entity Framework Objekte von der lokalen SQL Kompakt in Server Objekte und umgegekeht umwandeln zu können
 ''' Die Lokale Datenbank ist der Serverdatenbank sehr ähnlich, aber eben nicht gleich
 ''' </summary>
 ''' <remarks></remarks>
 Public Class clsClientServerConversionFunctions
 
+    Public Shared Sub CopyWZObjectProperties(ByRef TargetObject As EichsoftwareWebservice.ServerLookup_Waegezelle, ByRef SourceObject As Lookup_Waegezelle)
+        If SourceObject.Neu Then
+            TargetObject._Bauartzulassung = SourceObject.Bauartzulassung
+            TargetObject._BruchteilEichfehlergrenze = SourceObject.BruchteilEichfehlergrenze
+            TargetObject._Deaktiviert = True
+            TargetObject._ErstellDatum = Date.Now
+            TargetObject._Genauigkeitsklasse = SourceObject.Genauigkeitsklasse
+            TargetObject._GrenzwertTemperaturbereichMAX = SourceObject.GrenzwertTemperaturbereichMAX
+            TargetObject._GrenzwertTemperaturbereichMIN = SourceObject.GrenzwertTemperaturbereichMIN
+            TargetObject._Hersteller = SourceObject.Hersteller
+            TargetObject._Hoechsteteilungsfaktor = SourceObject.Hoechsteteilungsfaktor
+            TargetObject._ID = SourceObject.ID
+            TargetObject._Kriechteilungsfaktor = SourceObject.Kriechteilungsfaktor
+            TargetObject._MaxAnzahlTeilungswerte = SourceObject.MaxAnzahlTeilungswerte
+            TargetObject._Mindestvorlast = SourceObject.Mindestvorlast
+            TargetObject._Neu = SourceObject.Neu
+            TargetObject._Pruefbericht = SourceObject.Pruefbericht
+            TargetObject._Revisionsnummer = SourceObject.Revisionsnummer
+            TargetObject._RueckkehrVorlastsignal = SourceObject.RueckkehrVorlastsignal
+            TargetObject._Typ = SourceObject.Typ
+            TargetObject._MinTeilungswert = SourceObject.MinTeilungswert
+
+            TargetObject._Waegezellenkennwert = SourceObject.Waegezellenkennwert
+            TargetObject._WiderstandWaegezelle = SourceObject.WiderstandWaegezelle
+        End If
+    End Sub
 
     ''' <summary>
     ''' Schreibt werte von einem lokalen Eichprozess in ein Server Object
@@ -522,30 +551,30 @@ Public Class clsClientServerConversionFunctions
 
         'wenn neu
 
-        If SourceObject.Lookup_Waegezelle.Neu Then
-            TargetObject._ServerLookup_Waegezelle = New EichsoftwareWebservice.ServerLookup_Waegezelle
-            TargetObject._ServerLookup_Waegezelle._Bauartzulassung = SourceObject.Lookup_Waegezelle.Bauartzulassung
-            TargetObject._ServerLookup_Waegezelle._BruchteilEichfehlergrenze = SourceObject.Lookup_Waegezelle.BruchteilEichfehlergrenze
-            TargetObject._ServerLookup_Waegezelle._Genauigkeitsklasse = SourceObject.Lookup_Waegezelle.Genauigkeitsklasse
-            TargetObject._ServerLookup_Waegezelle._GrenzwertTemperaturbereichMAX = SourceObject.Lookup_Waegezelle.GrenzwertTemperaturbereichMAX
-            TargetObject._ServerLookup_Waegezelle._GrenzwertTemperaturbereichMIN = SourceObject.Lookup_Waegezelle.GrenzwertTemperaturbereichMIN
-            TargetObject._ServerLookup_Waegezelle._Hersteller = SourceObject.Lookup_Waegezelle.Hersteller
-            TargetObject._ServerLookup_Waegezelle._Hoechsteteilungsfaktor = SourceObject.Lookup_Waegezelle.Hoechsteteilungsfaktor
-            TargetObject._ServerLookup_Waegezelle._ID = SourceObject.Lookup_Waegezelle.ID
-            TargetObject._ServerLookup_Waegezelle._ErstellDatum = Date.Now
-            TargetObject._ServerLookup_Waegezelle._Kriechteilungsfaktor = SourceObject.Lookup_Waegezelle.Kriechteilungsfaktor
-            TargetObject._ServerLookup_Waegezelle._MaxAnzahlTeilungswerte = SourceObject.Lookup_Waegezelle.MaxAnzahlTeilungswerte
-            TargetObject._ServerLookup_Waegezelle._Mindestvorlast = SourceObject.Lookup_Waegezelle.Mindestvorlast
-            TargetObject._ServerLookup_Waegezelle._MinTeilungswert = SourceObject.Lookup_Waegezelle.MinTeilungswert
-            TargetObject._ServerLookup_Waegezelle._Pruefbericht = SourceObject.Lookup_Waegezelle.Pruefbericht
-            TargetObject._ServerLookup_Waegezelle._Revisionsnummer = SourceObject.Lookup_Waegezelle.Revisionsnummer
-            TargetObject._ServerLookup_Waegezelle._RueckkehrVorlastsignal = SourceObject.Lookup_Waegezelle.RueckkehrVorlastsignal
-            TargetObject._ServerLookup_Waegezelle._Typ = SourceObject.Lookup_Waegezelle.Typ
-            TargetObject._ServerLookup_Waegezelle._Deaktiviert = True
-            TargetObject._ServerLookup_Waegezelle._Waegezellenkennwert = SourceObject.Lookup_Waegezelle.Waegezellenkennwert
-            TargetObject._ServerLookup_Waegezelle._WiderstandWaegezelle = SourceObject.Lookup_Waegezelle.WiderstandWaegezelle
-            TargetObject._ServerLookup_Waegezelle._Neu = True
-        End If
+        'If SourceObject.Lookup_Waegezelle.Neu Then
+        '    TargetObject._ServerLookup_Waegezelle = New EichsoftwareWebservice.ServerLookup_Waegezelle
+        '    TargetObject._ServerLookup_Waegezelle._Bauartzulassung = SourceObject.Lookup_Waegezelle.Bauartzulassung
+        '    TargetObject._ServerLookup_Waegezelle._BruchteilEichfehlergrenze = SourceObject.Lookup_Waegezelle.BruchteilEichfehlergrenze
+        '    TargetObject._ServerLookup_Waegezelle._Genauigkeitsklasse = SourceObject.Lookup_Waegezelle.Genauigkeitsklasse
+        '    TargetObject._ServerLookup_Waegezelle._GrenzwertTemperaturbereichMAX = SourceObject.Lookup_Waegezelle.GrenzwertTemperaturbereichMAX
+        '    TargetObject._ServerLookup_Waegezelle._GrenzwertTemperaturbereichMIN = SourceObject.Lookup_Waegezelle.GrenzwertTemperaturbereichMIN
+        '    TargetObject._ServerLookup_Waegezelle._Hersteller = SourceObject.Lookup_Waegezelle.Hersteller
+        '    TargetObject._ServerLookup_Waegezelle._Hoechsteteilungsfaktor = SourceObject.Lookup_Waegezelle.Hoechsteteilungsfaktor
+        '    TargetObject._ServerLookup_Waegezelle._ID = SourceObject.Lookup_Waegezelle.ID
+        '    TargetObject._ServerLookup_Waegezelle._ErstellDatum = Date.Now
+        '    TargetObject._ServerLookup_Waegezelle._Kriechteilungsfaktor = SourceObject.Lookup_Waegezelle.Kriechteilungsfaktor
+        '    TargetObject._ServerLookup_Waegezelle._MaxAnzahlTeilungswerte = SourceObject.Lookup_Waegezelle.MaxAnzahlTeilungswerte
+        '    TargetObject._ServerLookup_Waegezelle._Mindestvorlast = SourceObject.Lookup_Waegezelle.Mindestvorlast
+        '    TargetObject._ServerLookup_Waegezelle._MinTeilungswert = SourceObject.Lookup_Waegezelle.MinTeilungswert
+        '    TargetObject._ServerLookup_Waegezelle._Pruefbericht = SourceObject.Lookup_Waegezelle.Pruefbericht
+        '    TargetObject._ServerLookup_Waegezelle._Revisionsnummer = SourceObject.Lookup_Waegezelle.Revisionsnummer
+        '    TargetObject._ServerLookup_Waegezelle._RueckkehrVorlastsignal = SourceObject.Lookup_Waegezelle.RueckkehrVorlastsignal
+        '    TargetObject._ServerLookup_Waegezelle._Typ = SourceObject.Lookup_Waegezelle.Typ
+        '    TargetObject._ServerLookup_Waegezelle._Deaktiviert = True
+        '    TargetObject._ServerLookup_Waegezelle._Waegezellenkennwert = SourceObject.Lookup_Waegezelle.Waegezellenkennwert
+        '    TargetObject._ServerLookup_Waegezelle._WiderstandWaegezelle = SourceObject.Lookup_Waegezelle.WiderstandWaegezelle
+        '    TargetObject._ServerLookup_Waegezelle._Neu = True
+        'End If
 
         Return TargetObject
     End Function
@@ -1966,5 +1995,8 @@ Public Class clsClientServerConversionFunctions
         End Using
     End Sub
 
+
+
+  
 
 End Class

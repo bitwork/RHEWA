@@ -13,10 +13,12 @@
     Sub New()
         MyBase.New()
         ' Dieser Aufruf ist für den Designer erforderlich.
+        _suspendEvents = True
         InitializeComponent()
     End Sub
     Sub New(ByRef pParentform As FrmMainContainer, ByRef pObjEichprozess As Eichprozess, Optional ByRef pPreviousUco As ucoContent = Nothing, Optional ByRef pNextUco As ucoContent = Nothing, Optional ByVal pEnuModus As enuDialogModus = enuDialogModus.normal)
         MyBase.New(pParentform, pObjEichprozess, pPreviousUco, pNextUco, pEnuModus)
+        _suspendEvents = True
         InitializeComponent()
         EichprozessStatusReihenfolge = GlobaleEnumeratoren.enuEichprozessStatus.AuswahlKonformitätsverfahren
     End Sub
@@ -24,8 +26,9 @@
 
 #Region "Events"
     Private Sub ucoBeschaffenheitspruefung_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        _suspendEvents = True
         If Not ParentFormular Is Nothing Then
-            _suspendEvents = True
+
             Try
                 'Hilfetext setzen
                 ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_Eichprotokollverfahrensauswahl)

@@ -416,6 +416,15 @@
 
       
         If DialogModus = enuDialogModus.lesend Or DialogModus = enuDialogModus.korrigierend Then
+            Try
+                RadTextBoxControlAWGBauartzulassung.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Bauartzulassung
+
+            Catch ex As System.ObjectDisposedException
+                objEichprozess = objDBFunctions.HoleNachschlageListenFuerEichprozess(objEichprozess)
+                RadTextBoxControlAWGBauartzulassung.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Bauartzulassung
+
+            End Try
+
             RadTextBoxControlAWGBauartzulassung.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Bauartzulassung
             RadTextBoxControlAWGHersteller.Text = objEichprozess.Lookup_Auswertegeraet.Hersteller
             RadTextBoxControlAWGPruefbericht.Text = objEichprozess.Lookup_Auswertegeraet.Pruefbericht
@@ -437,7 +446,7 @@
             RadButtonNeueWaegezelle.Visible = False
 
             If DialogModus = enuDialogModus.lesend Then
-             
+
                 'falls der Eichvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
                 For Each Control In Me.RadScrollablePanel1.PanelContainer.Controls
                     Try

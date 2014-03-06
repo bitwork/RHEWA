@@ -122,15 +122,15 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApplyCyclicDataContractSerializerOperationBehavior.vb" />
+    <Compile Include="Model\ApplyCyclicDataContractSerializerOperationBehavior.vb" />
     <Compile Include="Benutzer.vb">
       <DependentUpon>EntityModelEichsoftwareServer.tt</DependentUpon>
     </Compile>
-    <Compile Include="clsEichprozessFuerAuswahlliste.vb" />
-    <Compile Include="clsLizenzdaten.vb" />
-    <Compile Include="clsServerFTPDaten.vb" />
-    <Compile Include="CyclicReferencesAwareAttribute.vb" />
-    <Compile Include="CyclicReferencesAwareContractBehavior.vb" />
+    <Compile Include="Model\clsEichprozessFuerAuswahlliste.vb" />
+    <Compile Include="Model\clsLizenzdaten.vb" />
+    <Compile Include="Model\clsServerFTPDaten.vb" />
+    <Compile Include="Model\CyclicReferencesAwareAttribute.vb" />
+    <Compile Include="Model\CyclicReferencesAwareContractBehavior.vb" />
     <Compile Include="EichsoftwareWebservice.svc.vb">
       <DependentUpon>EichsoftwareWebservice.svc</DependentUpon>
     </Compile>

@@ -288,7 +288,7 @@
                     f.ShowDialog()
                 Else
                     'es gibt ihn schon und er ist bereits abgeschickt. nur lesend öffnen
-                    objDBFunctions.HoleNachschlageListenFuerEichprozess(objEichprozess)
+                    objEichprozess = objDBFunctions.HoleNachschlageListenFuerEichprozess(objEichprozess)
                     Dim f As New FrmMainContainer(objEichprozess, FrmMainContainer.enuDialogModus.lesend)
                     f.ShowDialog()
                 End If
@@ -521,7 +521,7 @@
                             proc.StartInfo.UseShellExecute = True
                             proc.Start()
                         Else
-                            MessageBox.Show("Konnte Datei am Pfad: " & e.Value & "nicht finden")
+                            MessageBox.Show("Konnte Datei am Pfad: " & e.Value & " nicht finden")
                         End If
                     Catch ex As Exception
 

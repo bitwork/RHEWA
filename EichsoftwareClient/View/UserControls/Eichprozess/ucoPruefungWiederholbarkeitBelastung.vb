@@ -273,15 +273,36 @@ Inherits ucoContent
             'je nach verwahrenswahl (über 60 kg mit normalien) wurde noch keine Wiederholbarkeit geprueft. Wenn eni anderes verfahren gewählt wurde, gibt es an dieser stelle aber schon die halbe wiederholbarkeit
             Select Case objEichprozess.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren.Verfahren
                 Case Is = "über 60kg mit Normalien"
-                    For Each obj In objEichprozess.Eichprotokoll.PruefungWiederholbarkeit
-                        _ListPruefungWiederholbarkeit.Add(obj)
-                    Next
-                Case Else
-                    For Each obj In objEichprozess.Eichprotokoll.PruefungWiederholbarkeit
-                        If obj.Belastung = "voll" Then
+
+                    Try
+                        For Each obj In objEichprozess.Eichprotokoll.PruefungWiederholbarkeit
                             _ListPruefungWiederholbarkeit.Add(obj)
-                        End If
-                    Next
+                        Next
+                    Catch ex As System.ObjectDisposedException
+                        Using context As New EichsoftwareClientdatabaseEntities1
+                            'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
+                            'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
+                            Dim query = From a In context.PruefungWiederholbarkeit Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
+                            _ListPruefungWiederholbarkeit = query.ToList
+
+                        End Using
+                    End Try
+                Case Else
+                  
+
+                    Try
+                        For Each obj In objEichprozess.Eichprotokoll.PruefungWiederholbarkeit
+                            If obj.Belastung = "voll" Then
+                                _ListPruefungWiederholbarkeit.Add(obj)
+                            End If
+                        Next
+                    Catch ex As System.ObjectDisposedException
+                        Using context As New EichsoftwareClientdatabaseEntities1
+                           'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen und "voll" sind. Halbe wurden an andere Stelle schon abgearbeitet
+                            Dim query = From a In context.PruefungWiederholbarkeit Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID And a.Belastung = "voll"
+                            _ListPruefungWiederholbarkeit = query.ToList
+                        End Using
+                    End Try
             End Select
 
         End If

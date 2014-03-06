@@ -52,7 +52,6 @@ Public Class FrmMainContainer
         Me.CurrentEichprozess = pEichprozess
         Me.DialogModus = penumDialogModus
 
-
     End Sub
 #End Region
 

@@ -67,10 +67,20 @@
 
             _objEichprotokoll = objEichprozess.Eichprotokoll
 
-            'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
-            For Each obj In objEichprozess.Eichprotokoll.PruefungAnsprechvermoegen
-                _ListPruefungAnsprechvermoegen.Add(obj)
-            Next
+            Try
+                'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
+                For Each obj In objEichprozess.Eichprotokoll.PruefungAnsprechvermoegen
+                    _ListPruefungAnsprechvermoegen.Add(obj)
+                Next
+            Catch ex As System.ObjectDisposedException
+                Using context As New EichsoftwareClientdatabaseEntities1
+                    'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
+                    Dim query = From a In context.PruefungAnsprechvermoegen Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
+                    _ListPruefungAnsprechvermoegen = query.ToList
+
+                End Using
+            End Try
+        
         End If
 
         'steuerelemente mit werten aus DB füllen

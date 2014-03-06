@@ -380,7 +380,7 @@
           <Property Name="GrenzwertTemperaturbereichMAX" Type="nvarchar" MaxLength="5" />
           <Property Name="BruchteilEichfehlergrenze" Type="nvarchar" MaxLength="5" />
           <Property Name="Neu" Type="bit" Nullable="false" />
-          <Property Name="Deaktiviert" Type="bit" />
+          <Property Name="Deaktiviert" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="Mogelstatistik">
           <Key>

@@ -781,6 +781,7 @@
     End Sub
 
     Private Sub RadCheckBoxDrucker_ToggleStateChanged(sender As Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadCheckBoxDrucker.ToggleStateChanged
+        If _suspendEvents Then Exit Sub
         RadTextBoxControlDruckerTyp.Enabled = RadCheckBoxDrucker.Checked
         AktuellerStatusDirty = True
         If RadTextBoxControlDruckerTyp.Enabled = False Then

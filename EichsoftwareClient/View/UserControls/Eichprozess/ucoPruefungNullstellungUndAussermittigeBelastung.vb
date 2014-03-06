@@ -1426,14 +1426,26 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                 _currentObjVerfahren = (From a In context.Lookup_Konformitaetsbewertungsverfahren Where a.ID = objEichprozess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren).FirstOrDefault
             End Using
         Else
-            'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
-            For Each obj In objEichprozess.Eichprotokoll.PruefungAussermittigeBelastung
-                _ListPruefungAussermittigeBelastung.Add(obj)
-            Next
+          
+            Try
+                'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
+                For Each obj In objEichprozess.Eichprotokoll.PruefungAussermittigeBelastung
+                    _ListPruefungAussermittigeBelastung.Add(obj)
+                Next
 
-            For Each obj In objEichprozess.Eichprotokoll.PruefungWiederholbarkeit
-                _ListPruefungWiederholbarkeit.Add(obj)
-            Next
+                For Each obj In objEichprozess.Eichprotokoll.PruefungWiederholbarkeit
+                    _ListPruefungWiederholbarkeit.Add(obj)
+                Next
+            Catch ex As System.ObjectDisposedException
+                Using context As New EichsoftwareClientdatabaseEntities1
+                    Dim query = From a In context.PruefungAussermittigeBelastung Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
+                    _ListPruefungAussermittigeBelastung = query.ToList
+
+                    Dim query2 = From a In context.PruefungWiederholbarkeit Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
+                    _ListPruefungWiederholbarkeit = query2.ToList
+                End Using
+            End Try
+        
 
             _currentObjVerfahren = objEichprozess.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren
         End If

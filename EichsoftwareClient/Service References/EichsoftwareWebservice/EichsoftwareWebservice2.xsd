@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://win7mobdev01.bitworkgmbh.local:12000/RhewaHerstellerersteichung/EichsoftwareWebservice.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice" />
+  <xs:element name="Test">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TestResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="PruefeLizenz">
     <xs:complexType>
       <xs:sequence>
@@ -176,6 +188,25 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="AddWaegezelle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HEKennung" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Lizenzschluessel" nillable="true" type="xs:string" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice" minOccurs="0" name="pObjWZ" nillable="true" type="q6:ServerLookup_Waegezelle" />
+        <xs:element minOccurs="0" name="WindowsUsername" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Domainname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Computername" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddWaegezelleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddWaegezelleResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="GetAlleEichprozesse">
     <xs:complexType>
       <xs:sequence>
@@ -190,7 +221,7 @@
   <xs:element name="GetAlleEichprozesseResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice" minOccurs="0" name="GetAlleEichprozesseResult" nillable="true" type="q6:ArrayOfclsEichprozessFuerAuswahlliste" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice" minOccurs="0" name="GetAlleEichprozesseResult" nillable="true" type="q7:ArrayOfclsEichprozessFuerAuswahlliste" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -210,7 +241,7 @@
   <xs:element name="GetAlleEichprozesseImZeitraumResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice" minOccurs="0" name="GetAlleEichprozesseImZeitraumResult" nillable="true" type="q7:ArrayOfServerEichprozess" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice" minOccurs="0" name="GetAlleEichprozesseImZeitraumResult" nillable="true" type="q8:ArrayOfServerEichprozess" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -229,7 +260,7 @@
   <xs:element name="GetEichProzessResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice" minOccurs="0" name="GetEichProzessResult" nillable="true" type="q8:ServerEichprozess" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice" minOccurs="0" name="GetEichProzessResult" nillable="true" type="q9:ServerEichprozess" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -344,7 +375,7 @@
   <xs:element name="GetFTPCredentialsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice" minOccurs="0" name="GetFTPCredentialsResult" nillable="true" type="q9:clsServerFTPDaten" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice" minOccurs="0" name="GetFTPCredentialsResult" nillable="true" type="q10:clsServerFTPDaten" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

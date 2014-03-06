@@ -95,12 +95,25 @@
             End Using
 
         Else
-            For Each obj In objEichprozess.Eichprotokoll.PruefungStaffelverfahrenNormallast
-                _ListPruefungStaffelverfahrenNormallast.Add(obj)
-            Next
-            For Each obj In objEichprozess.Eichprotokoll.PruefungStaffelverfahrenErsatzlast
-                _ListPruefungStaffelverfahrenErsatzlast.Add(obj)
-            Next
+            Try
+                For Each obj In objEichprozess.Eichprotokoll.PruefungStaffelverfahrenNormallast
+                    _ListPruefungStaffelverfahrenNormallast.Add(obj)
+                Next
+                For Each obj In objEichprozess.Eichprotokoll.PruefungStaffelverfahrenErsatzlast
+                    _ListPruefungStaffelverfahrenErsatzlast.Add(obj)
+                Next
+            Catch ex As System.ObjectDisposedException
+                Using context As New EichsoftwareClientdatabaseEntities1
+                    'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
+                    'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
+                    Dim query = From a In context.PruefungStaffelverfahrenNormallast Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
+                    _ListPruefungStaffelverfahrenNormallast = query.ToList
+
+                    'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
+                    Dim query2 = From a In context.PruefungStaffelverfahrenErsatzlast Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
+                    _ListPruefungStaffelverfahrenErsatzlast = query2.ToList
+                End Using
+            End Try
 
         End If
 

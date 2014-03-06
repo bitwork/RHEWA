@@ -7,6 +7,12 @@
       <xsd:import schemaLocation="http://win7mobdev01.bitworkgmbh.local:12000/RhewaHerstellerersteichung/EichsoftwareWebservice.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice" />
     </xsd:schema>
   </wsdl:types>
+  <wsdl:message name="IEichsoftwareWebservice_Test_InputMessage">
+    <wsdl:part name="parameters" element="tns:Test" />
+  </wsdl:message>
+  <wsdl:message name="IEichsoftwareWebservice_Test_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TestResponse" />
+  </wsdl:message>
   <wsdl:message name="IEichsoftwareWebservice_PruefeLizenz_InputMessage">
     <wsdl:part name="parameters" element="tns:PruefeLizenz" />
   </wsdl:message>
@@ -60,6 +66,12 @@
   </wsdl:message>
   <wsdl:message name="IEichsoftwareWebservice_AddEichprozess_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddEichprozessResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEichsoftwareWebservice_AddWaegezelle_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddWaegezelle" />
+  </wsdl:message>
+  <wsdl:message name="IEichsoftwareWebservice_AddWaegezelle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddWaegezelleResponse" />
   </wsdl:message>
   <wsdl:message name="IEichsoftwareWebservice_GetAlleEichprozesse_InputMessage">
     <wsdl:part name="parameters" element="tns:GetAlleEichprozesse" />
@@ -116,6 +128,10 @@
     <wsdl:part name="parameters" element="tns:GetFTPCredentialsResponse" />
   </wsdl:message>
   <wsdl:portType name="IEichsoftwareWebservice">
+    <wsdl:operation name="Test">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEichsoftwareWebservice/Test" message="tns:IEichsoftwareWebservice_Test_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEichsoftwareWebservice/TestResponse" message="tns:IEichsoftwareWebservice_Test_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="PruefeLizenz">
       <wsdl:input wsaw:Action="http://tempuri.org/IEichsoftwareWebservice/PruefeLizenz" message="tns:IEichsoftwareWebservice_PruefeLizenz_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IEichsoftwareWebservice/PruefeLizenzResponse" message="tns:IEichsoftwareWebservice_PruefeLizenz_OutputMessage" />
@@ -151,6 +167,10 @@
     <wsdl:operation name="AddEichprozess">
       <wsdl:input wsaw:Action="http://tempuri.org/IEichsoftwareWebservice/AddEichprozess" message="tns:IEichsoftwareWebservice_AddEichprozess_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IEichsoftwareWebservice/AddEichprozessResponse" message="tns:IEichsoftwareWebservice_AddEichprozess_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddWaegezelle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEichsoftwareWebservice/AddWaegezelle" message="tns:IEichsoftwareWebservice_AddWaegezelle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEichsoftwareWebservice/AddWaegezelleResponse" message="tns:IEichsoftwareWebservice_AddWaegezelle_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetAlleEichprozesse">
       <wsdl:input wsaw:Action="http://tempuri.org/IEichsoftwareWebservice/GetAlleEichprozesse" message="tns:IEichsoftwareWebservice_GetAlleEichprozesse_InputMessage" />
@@ -191,6 +211,15 @@
   </wsdl:portType>
   <wsdl:binding name="basicHttpBinding" type="tns:IEichsoftwareWebservice">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Test">
+      <soap:operation soapAction="http://tempuri.org/IEichsoftwareWebservice/Test" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="PruefeLizenz">
       <soap:operation soapAction="http://tempuri.org/IEichsoftwareWebservice/PruefeLizenz" style="document" />
       <wsdl:input>
@@ -265,6 +294,15 @@
     </wsdl:operation>
     <wsdl:operation name="AddEichprozess">
       <soap:operation soapAction="http://tempuri.org/IEichsoftwareWebservice/AddEichprozess" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddWaegezelle">
+      <soap:operation soapAction="http://tempuri.org/IEichsoftwareWebservice/AddWaegezelle" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

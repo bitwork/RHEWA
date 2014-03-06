@@ -174,7 +174,7 @@ Namespace EichsoftwareWebservice
         
         Private _BruchteilEichfehlergrenzeField As String
         
-        Private _DeaktiviertField As System.Nullable(Of Boolean)
+        Private _DeaktiviertField As Boolean
         
         Private _ErstellDatumField As System.Nullable(Of Date)
         
@@ -198,7 +198,7 @@ Namespace EichsoftwareWebservice
         
         Private _MindestvorlastField As String
         
-        Private _NeuField As System.Nullable(Of Boolean)
+        Private _NeuField As Boolean
         
         Private _PruefberichtField As String
         
@@ -253,7 +253,7 @@ Namespace EichsoftwareWebservice
         End Property
         
         <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _Deaktiviert() As System.Nullable(Of Boolean)
+        Public Property _Deaktiviert() As Boolean
             Get
                 Return Me._DeaktiviertField
             End Get
@@ -409,7 +409,7 @@ Namespace EichsoftwareWebservice
         End Property
         
         <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _Neu() As System.Nullable(Of Boolean)
+        Public Property _Neu() As Boolean
             Get
                 Return Me._NeuField
             End Get
@@ -6953,6 +6953,9 @@ Namespace EichsoftwareWebservice
      System.ServiceModel.ServiceContractAttribute(ConfigurationName:="EichsoftwareWebservice.IEichsoftwareWebservice")>  _
     Public Interface IEichsoftwareWebservice
         
+        <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IEichsoftwareWebservice/Test", ReplyAction:="http://tempuri.org/IEichsoftwareWebservice/TestResponse")>  _
+        Function Test() As Boolean
+        
         <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IEichsoftwareWebservice/PruefeLizenz", ReplyAction:="http://tempuri.org/IEichsoftwareWebservice/PruefeLizenzResponse")>  _
         Function PruefeLizenz(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean
         
@@ -6979,6 +6982,9 @@ Namespace EichsoftwareWebservice
         
         <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IEichsoftwareWebservice/AddEichprozess", ReplyAction:="http://tempuri.org/IEichsoftwareWebservice/AddEichprozessResponse")>  _
         Function AddEichprozess(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByRef pObjEichprozess As EichsoftwareWebservice.ServerEichprozess, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean
+        
+        <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IEichsoftwareWebservice/AddWaegezelle", ReplyAction:="http://tempuri.org/IEichsoftwareWebservice/AddWaegezelleResponse")>  _
+        Function AddWaegezelle(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal pObjWZ As EichsoftwareWebservice.ServerLookup_Waegezelle, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean
         
         <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IEichsoftwareWebservice/GetAlleEichprozesse", ReplyAction:="http://tempuri.org/IEichsoftwareWebservice/GetAlleEichprozesseResponse")>  _
         Function GetAlleEichprozesse(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As EichsoftwareWebservice.clsEichprozessFuerAuswahlliste()
@@ -7039,6 +7045,10 @@ Namespace EichsoftwareWebservice
             MyBase.New(binding, remoteAddress)
         End Sub
         
+        Public Function Test() As Boolean Implements EichsoftwareWebservice.IEichsoftwareWebservice.Test
+            Return MyBase.Channel.Test
+        End Function
+        
         Public Function PruefeLizenz(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements EichsoftwareWebservice.IEichsoftwareWebservice.PruefeLizenz
             Return MyBase.Channel.PruefeLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername)
         End Function
@@ -7073,6 +7083,10 @@ Namespace EichsoftwareWebservice
         
         Public Function AddEichprozess(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByRef pObjEichprozess As EichsoftwareWebservice.ServerEichprozess, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements EichsoftwareWebservice.IEichsoftwareWebservice.AddEichprozess
             Return MyBase.Channel.AddEichprozess(HEKennung, Lizenzschluessel, pObjEichprozess, WindowsUsername, Domainname, Computername)
+        End Function
+        
+        Public Function AddWaegezelle(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal pObjWZ As EichsoftwareWebservice.ServerLookup_Waegezelle, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements EichsoftwareWebservice.IEichsoftwareWebservice.AddWaegezelle
+            Return MyBase.Channel.AddWaegezelle(HEKennung, Lizenzschluessel, pObjWZ, WindowsUsername, Domainname, Computername)
         End Function
         
         Public Function GetAlleEichprozesse(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As EichsoftwareWebservice.clsEichprozessFuerAuswahlliste() Implements EichsoftwareWebservice.IEichsoftwareWebservice.GetAlleEichprozesse
