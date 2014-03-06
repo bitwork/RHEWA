@@ -240,6 +240,9 @@
   <data name="&gt;&gt;RadButtonEinstellungen.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="resource.Text" xml:space="preserve">
+    <value />
+  </data>
   <data name="RadButtonClientUpdateDatabase.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
   </data>
@@ -543,6 +546,60 @@
   <data name="&gt;&gt;RadPageViewPageEigene.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="RadProgressBar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="RadProgressBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 407</value>
+  </data>
+  <data name="RadProgressBar.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadProgressBar.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadProgressBar.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="RadProgressBar.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RadProgressBar.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RadProgressBar.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadProgressBar.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadProgressBar.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadProgressBar.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="RadProgressBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>299, 24</value>
+  </data>
+  <data name="RadProgressBar.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="RadProgressBar.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;RadProgressBar.Name" xml:space="preserve">
+    <value>RadProgressBar</value>
+  </data>
+  <data name="&gt;&gt;RadProgressBar.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadProgressBar, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadProgressBar.Parent" xml:space="preserve">
+    <value>RadPageViewPageAlle</value>
+  </data>
+  <data name="&gt;&gt;RadProgressBar.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="RadButtonEichprozessKopierenRHEWA.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
   </data>
@@ -598,7 +655,7 @@
     <value>RadPageViewPageAlle</value>
   </data>
   <data name="&gt;&gt;RadButtonEichprozessKopierenRHEWA.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="RadButtonEichprozessAblehnenRHEWA.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -655,7 +712,7 @@
     <value>RadPageViewPageAlle</value>
   </data>
   <data name="&gt;&gt;RadButtonEichprozessAblehnenRHEWA.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="RadButtonEichprozessGenehmigenRHEWA.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -712,7 +769,7 @@
     <value>RadPageViewPageAlle</value>
   </data>
   <data name="&gt;&gt;RadButtonEichprozessGenehmigenRHEWA.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="RadGridViewRHEWAAlle.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -766,7 +823,7 @@
     <value>RadPageViewPageAlle</value>
   </data>
   <data name="&gt;&gt;RadGridViewRHEWAAlle.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="RadButtonEichungAnsehenRHEWA.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -823,7 +880,7 @@
     <value>RadPageViewPageAlle</value>
   </data>
   <data name="&gt;&gt;RadButtonEichungAnsehenRHEWA.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="RadPageViewPageAlle.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 37</value>
@@ -903,6 +960,9 @@
   <metadata name="BackgroundWorkerLoadFromDatabaseRHEWA.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>180, 17</value>
   </metadata>
+  <metadata name="BackgroundWorkerDownloadFromFTP.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>484, 17</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -924,10 +984,16 @@
   <data name="&gt;&gt;BackgroundWorkerLoadFromDatabaseRHEWA.Type" xml:space="preserve">
     <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;BackgroundWorkerDownloadFromFTP.Name" xml:space="preserve">
+    <value>BackgroundWorkerDownloadFromFTP</value>
+  </data>
+  <data name="&gt;&gt;BackgroundWorkerDownloadFromFTP.Type" xml:space="preserve">
+    <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>ucoEichprozessauswahlliste</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, EichsoftwareClient, Version=1.0.5168.22678, Culture=neutral, PublicKeyToken=null</value>
+    <value>EichsoftwareClient.ucoContent, EichsoftwareClient, Version=1.0.5178.23817, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

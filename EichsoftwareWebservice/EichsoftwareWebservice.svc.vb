@@ -658,69 +658,69 @@ Public Class EichsoftwareWebservice
                     .Bearbeitungsstatus = Lookup2.Status
                                  }
 
-                    SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG QUERY ausgeführt")
+                    ' SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG QUERY ausgeführt")
 
 
                     Dim ReturnList As New List(Of clsEichprozessFuerAuswahlliste)
 
                     'Wrapper für die KLasse. Problematischer Weise kann man keine anoynmen Typen zurückgeben. Deswegen gibt es die behilfsklasse clsEichprozessFuerAuswahlliste.
                     'Diese hat exakt die Eigenschaften die benötigt werden und zusammengesetzt aus der Status Tabelle und dem Eichprozess zusammengebaut wird
-                    SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG QUERY Count:" & Query.Count)
+                    'SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG QUERY Count:" & Query.Count)
 
                     For Each objeichprozess In Query
                         Try
-                            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 1")
+                            '     SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 1")
 
 
                             Dim objReturn As New clsEichprozessFuerAuswahlliste
 
                             objReturn.ID = objeichprozess.ID
-                            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 2")
+                            '    SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 2")
 
                             If Not objeichprozess.Lookup_Auswertegeraet Is Nothing Then
                                 objReturn.AWG = objeichprozess.Lookup_Auswertegeraet
                             End If
-                            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 3")
+                            '   SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 3")
 
                             If Not objeichprozess.Fabriknummer Is Nothing Then
                                 objReturn.Fabriknummer = objeichprozess.Fabriknummer
                             End If
-                            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 4")
+                            '   SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 4")
 
                             If Not objeichprozess.Vorgangsnummer Is Nothing Then
                                 objReturn.Vorgangsnummer = objeichprozess.Vorgangsnummer
                             End If
-                            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 51")
+                            '   SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 51")
 
                             If Not objeichprozess.Lookup_Waagenart Is Nothing Then
                                 objReturn.Waagenart = objeichprozess.Lookup_Waagenart
                             End If
-                            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 6")
+                            ' SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 6")
 
                             If Not objeichprozess.Lookup_Waagentyp Is Nothing Then
                                 objReturn.Waagentyp = objeichprozess.Lookup_Waagentyp
                             End If
-                            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 7")
+                            '  SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 7")
 
                             If Not objeichprozess.Lookup_Waegezelle Is Nothing Then
                                 objReturn.WZ = objeichprozess.Lookup_Waegezelle
                             End If
-                            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 8")
+                            '  SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 8")
 
                             If Not objeichprozess.Sachbearbeiter Is Nothing Then
                                 objReturn.Eichbevollmaechtigter = objeichprozess.Sachbearbeiter
                             End If
-                            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 9")
+                            '  SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 9")
 
                             If Not objeichprozess.Bearbeitungsstatus Is Nothing Then
                                 objReturn.Bearbeitungsstatus = objeichprozess.Bearbeitungsstatus
                             End If
-                            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 10")
+                            ' SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 10")
 
                             If Not objeichprozess.ZurBearbeitungGesperrtDurch Is Nothing Then
                                 objReturn.GesperrtDurch = objeichprozess.ZurBearbeitungGesperrtDurch
                             End If
-                            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 11")
+                            '   SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 11")
 
                             Try
                                 objReturn.NeueWZ = objeichprozess.NeuWZ
@@ -728,7 +728,7 @@ Public Class EichsoftwareWebservice
                                 SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
                             End Try
 
-                            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 12")
+                            '  SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 12")
 
                             'dateipfad zusammenbauen
                             If Not objeichprozess.Anhangpfad Is Nothing Then
@@ -748,7 +748,7 @@ Public Class EichsoftwareWebservice
                         End Try
                     Next
 
-                    SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG Returnlist Count:" & ReturnList.Count)
+                    '  SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG Returnlist Count:" & ReturnList.Count)
 
                     'ergebnismenge zurückgeben
                     If Not ReturnList.Count = 0 Then
@@ -1362,14 +1362,33 @@ Public Class EichsoftwareWebservice
                 Dim ObjLizenz = (From lic In dbcontext.ServerLizensierung Where lic.HEKennung = HEKennung And lic.Lizenzschluessel = Lizenzschluessel And lic.Aktiv = True).FirstOrDefault
                 If Not ObjLizenz Is Nothing Then
 
-                    Dim ObjFTPDaten = (From FTPDaten In dbcontext.ServerKonfiguration).FirstOrDefault
-                    If Not ObjFTPDaten Is Nothing Then
+                    Dim objServerKonfiguration = (From FTPDaten In dbcontext.ServerKonfiguration).FirstOrDefault
+                    If Not objServerKonfiguration Is Nothing Then
 
                         Dim objServerFTPDaten As New clsServerFTPDaten
-                        objServerFTPDaten.FTPServername = ObjFTPDaten.FTPServerAdresse
-                        objServerFTPDaten.FTPUserName = ObjFTPDaten.FTPServerBenutzername
-                        objServerFTPDaten.FTPEncryptedPassword = ObjFTPDaten.FTPServerEnkodiertesPasswort
-                        objServerFTPDaten.FTPSaltKey = ObjFTPDaten.FTPServerCryptoSaltKey
+                        objServerFTPDaten.FTPServername = objServerKonfiguration.FTPServerAdresse
+                        objServerFTPDaten.FTPUserName = objServerKonfiguration.FTPServerBenutzername
+                        objServerFTPDaten.FTPEncryptedPassword = objServerKonfiguration.FTPServerEnkodiertesPasswort
+                        objServerFTPDaten.FTPSaltKey = objServerKonfiguration.FTPServerCryptoSaltKey
+
+                        'versuchen ob es zur Vorgangsnummer ein eichvorgang gibt. Wenn ja gucke ob es einen Uploadpfad gibt
+                        Try
+                            Dim FilePath As String = (From eichprozess In dbcontext.ServerEichprozess Select eichprozess.UploadFilePath).FirstOrDefault
+
+                            If Not FilePath Is Nothing Then
+                                If Not FilePath.Trim.Equals("") Then
+                                    If objServerKonfiguration.NetzwerkpfadFuerDateianhaenge.EndsWith("\") Then
+                                        objServerFTPDaten.FTPFilePath = objServerKonfiguration.NetzwerkpfadFuerDateianhaenge & FilePath.ToString
+
+                                    Else
+                                        objServerFTPDaten.FTPFilePath = objServerKonfiguration.NetzwerkpfadFuerDateianhaenge & "\" & FilePath.ToString
+
+                                    End If
+                                End If
+                            End If
+
+                        Catch ex As Exception
+                        End Try
 
                         Return objServerFTPDaten
                     End If

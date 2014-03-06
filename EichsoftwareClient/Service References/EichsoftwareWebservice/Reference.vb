@@ -6869,6 +6869,9 @@ Namespace EichsoftwareWebservice
         Private FTPEncryptedPasswordField As String
         
         <System.Runtime.Serialization.OptionalFieldAttribute()>  _
+        Private FTPFilePathField As String
+        
+        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private FTPSaltKeyField As String
         
         <System.Runtime.Serialization.OptionalFieldAttribute()>  _
@@ -6896,6 +6899,19 @@ Namespace EichsoftwareWebservice
                 If (Object.ReferenceEquals(Me.FTPEncryptedPasswordField, value) <> true) Then
                     Me.FTPEncryptedPasswordField = value
                     Me.RaisePropertyChanged("FTPEncryptedPassword")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
+        Public Property FTPFilePath() As String
+            Get
+                Return Me.FTPFilePathField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me.FTPFilePathField, value) <> true) Then
+                    Me.FTPFilePathField = value
+                    Me.RaisePropertyChanged("FTPFilePath")
                 End If
             End Set
         End Property

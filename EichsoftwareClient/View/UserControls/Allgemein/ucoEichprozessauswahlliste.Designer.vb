@@ -34,12 +34,14 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadButtonClientNeu = New Telerik.WinControls.UI.RadButton()
         Me.RadButtonClientBearbeiten = New Telerik.WinControls.UI.RadButton()
         Me.RadPageViewPageAlle = New Telerik.WinControls.UI.RadPageViewPage()
+        Me.RadProgressBar = New Telerik.WinControls.UI.RadProgressBar()
         Me.RadButtonEichprozessKopierenRHEWA = New Telerik.WinControls.UI.RadButton()
         Me.RadButtonEichprozessAblehnenRHEWA = New Telerik.WinControls.UI.RadButton()
         Me.RadButtonEichprozessGenehmigenRHEWA = New Telerik.WinControls.UI.RadButton()
         Me.RadGridViewRHEWAAlle = New Telerik.WinControls.UI.RadGridView()
         Me.RadButtonEichungAnsehenRHEWA = New Telerik.WinControls.UI.RadButton()
         Me.BackgroundWorkerLoadFromDatabaseRHEWA = New System.ComponentModel.BackgroundWorker()
+        Me.BackgroundWorkerDownloadFromFTP = New System.ComponentModel.BackgroundWorker()
         CType(Me.RadGridViewAuswahlliste, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGridViewAuswahlliste.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadPageView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -52,6 +54,7 @@ Partial Class ucoEichprozessauswahlliste
         CType(Me.RadButtonClientNeu, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonClientBearbeiten, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadPageViewPageAlle.SuspendLayout()
+        CType(Me.RadProgressBar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonEichprozessKopierenRHEWA, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonEichprozessAblehnenRHEWA, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonEichprozessGenehmigenRHEWA, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -144,7 +147,7 @@ Partial Class ucoEichprozessauswahlliste
         CType(Me.RadButtonEinstellungen.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = Global.EichsoftwareClient.My.Resources.Resources.cog
         CType(Me.RadButtonEinstellungen.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
         CType(Me.RadButtonEinstellungen.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        CType(Me.RadButtonEinstellungen.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        CType(Me.RadButtonEinstellungen.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = resources.GetString("resource.Text")
         CType(Me.RadButtonEinstellungen.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Shape = Nothing
         '
         'RadButtonClientUpdateDatabase
@@ -239,6 +242,7 @@ Partial Class ucoEichprozessauswahlliste
         '
         'RadPageViewPageAlle
         '
+        Me.RadPageViewPageAlle.Controls.Add(Me.RadProgressBar)
         Me.RadPageViewPageAlle.Controls.Add(Me.RadButtonEichprozessKopierenRHEWA)
         Me.RadPageViewPageAlle.Controls.Add(Me.RadButtonEichprozessAblehnenRHEWA)
         Me.RadPageViewPageAlle.Controls.Add(Me.RadButtonEichprozessGenehmigenRHEWA)
@@ -246,6 +250,23 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadPageViewPageAlle.Controls.Add(Me.RadButtonEichungAnsehenRHEWA)
         resources.ApplyResources(Me.RadPageViewPageAlle, "RadPageViewPageAlle")
         Me.RadPageViewPageAlle.Name = "RadPageViewPageAlle"
+        '
+        'RadProgressBar
+        '
+        resources.ApplyResources(Me.RadProgressBar, "RadProgressBar")
+        Me.RadProgressBar.Name = "RadProgressBar"
+        '
+        '
+        '
+        Me.RadProgressBar.RootElement.AccessibleDescription = resources.GetString("RadProgressBar.RootElement.AccessibleDescription")
+        Me.RadProgressBar.RootElement.AccessibleName = resources.GetString("RadProgressBar.RootElement.AccessibleName")
+        Me.RadProgressBar.RootElement.Alignment = CType(resources.GetObject("RadProgressBar.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.RadProgressBar.RootElement.AngleTransform = CType(resources.GetObject("RadProgressBar.RootElement.AngleTransform"), Single)
+        Me.RadProgressBar.RootElement.FlipText = CType(resources.GetObject("RadProgressBar.RootElement.FlipText"), Boolean)
+        Me.RadProgressBar.RootElement.Margin = CType(resources.GetObject("RadProgressBar.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadProgressBar.RootElement.Padding = CType(resources.GetObject("RadProgressBar.RootElement.Padding"), System.Windows.Forms.Padding)
+        Me.RadProgressBar.RootElement.Text = resources.GetString("RadProgressBar.RootElement.Text")
+        Me.RadProgressBar.RootElement.TextOrientation = CType(resources.GetObject("RadProgressBar.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
         'RadButtonEichprozessKopierenRHEWA
         '
@@ -348,6 +369,10 @@ Partial Class ucoEichprozessauswahlliste
         'BackgroundWorkerLoadFromDatabaseRHEWA
         '
         '
+        'BackgroundWorkerDownloadFromFTP
+        '
+        Me.BackgroundWorkerDownloadFromFTP.WorkerReportsProgress = True
+        '
         'ucoEichprozessauswahlliste
         '
         resources.ApplyResources(Me, "$this")
@@ -368,6 +393,7 @@ Partial Class ucoEichprozessauswahlliste
         CType(Me.RadButtonClientNeu, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonClientBearbeiten, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadPageViewPageAlle.ResumeLayout(False)
+        CType(Me.RadProgressBar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonEichprozessKopierenRHEWA, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonEichprozessAblehnenRHEWA, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonEichprozessGenehmigenRHEWA, System.ComponentModel.ISupportInitialize).EndInit()
@@ -394,5 +420,7 @@ Partial Class ucoEichprozessauswahlliste
     Friend WithEvents RadButtonEichprozessKopierenRHEWA As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadButtonClientUpdateDatabase As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadButtonEinstellungen As Telerik.WinControls.UI.RadButton
+    Friend WithEvents RadProgressBar As Telerik.WinControls.UI.RadProgressBar
+    Friend WithEvents BackgroundWorkerDownloadFromFTP As System.ComponentModel.BackgroundWorker
 
 End Class

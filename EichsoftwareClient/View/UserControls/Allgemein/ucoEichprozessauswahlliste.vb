@@ -4,6 +4,8 @@
     Private WithEvents _ParentForm As FrmMainContainer
     Private objWebserviceFunctions As New clsWebserviceFunctions
     Private objDBFunctions As New clsDBFunctions
+    Private WithEvents objFTP As New clsFTP
+
 #End Region
 
 #Region "Constructors"
@@ -438,6 +440,55 @@
     End Sub
 
     ''' <summary>
+    ''' Einblenden eines Anhang Symbols für Anträge mit Dateianhang
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub RadGridViewRHEWAAlle_CellFormatting(sender As Object, e As Telerik.WinControls.UI.CellFormattingEventArgs) Handles RadGridViewRHEWAAlle.CellFormatting
+        Try
+            If (RadGridViewRHEWAAlle.Columns(e.ColumnIndex).Name = "AnhangPfad") Then
+                If e.CellElement.Text.Trim.Equals("") = False Then
+                    e.CellElement.Value = e.CellElement.Text
+                    e.CellElement.Text = ""
+                    e.CellElement.Image = My.Resources.attach
+                End If
+            End If
+        Catch ex As Exception
+        End Try
+    End Sub
+
+    ''' <summary>
+    ''' Kopiert eichprozess vom Server in ein Client Objekt als Vorlage
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub RadButtonEichprozessKopieren_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonEichprozessKopierenRHEWA.Click
+        GetLokaleKopieVonEichprozess()
+    End Sub
+
+    ''' <summary>
+    ''' Kopiert eichprozess vom Server in ein Client Objekt als Vorlage
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub GetLokaleKopieVonEichprozess()
+        If Not Me.VorgangsnummerGridServer.Equals("") Then
+            If MessageBox.Show(My.Resources.GlobaleLokalisierung.Frage_Kopieren, My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+                Dim objClientEichprozess = objWebserviceFunctions.GetLokaleKopieVonEichprozess(VorgangsnummerGridServer)
+
+                If Not objClientEichprozess Is Nothing Then
+                    'anzeigen des Dialogs zur Bearbeitung der Eichung
+                    Dim f As New FrmMainContainer(objClientEichprozess)
+                    f.ShowDialog()
+                    'nach dem schließen des Dialogs aktualisieren
+                    LoadFromDatabase()
+                End If
+            End If
+        End If
+    End Sub
+
+
+#Region "Genehmigen / Ablehnen"
+    ''' <summary>
     ''' Eichprozess genehmigen
     ''' </summary>
     ''' <param name="sender"></param>
@@ -484,26 +535,9 @@
     Private Sub RadButtonBearbeitenRHEWA_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonEichungAnsehenRHEWA.Click
         ZeigeServerEichprozess()
     End Sub
+#End Region
 
-    ''' <summary>
-    ''' Einblenden eines Anhang Symbols für Anträge mit Dateianhang
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    ''' <remarks></remarks>
-    Private Sub RadGridViewRHEWAAlle_CellFormatting(sender As Object, e As Telerik.WinControls.UI.CellFormattingEventArgs) Handles RadGridViewRHEWAAlle.CellFormatting
-        Try
-            If (RadGridViewRHEWAAlle.Columns(e.ColumnIndex).Name = "AnhangPfad") Then
-                If e.CellElement.Text.Trim.Equals("") = False Then
-                    e.CellElement.Value = e.CellElement.Text
-                    e.CellElement.Text = ""
-                    e.CellElement.Image = My.Resources.attach
-                End If
-            End If
-        Catch ex As Exception
-        End Try
-    End Sub
-
+#Region "FTP Download"
     ''' <summary>
     ''' öffnen des Dateianhangs
     ''' </summary>
@@ -513,18 +547,14 @@
     Private Sub RadGridViewRHEWAAlle_CellDoubleClick(sender As Object, e As Telerik.WinControls.UI.GridViewCellEventArgs) Handles RadGridViewRHEWAAlle.CellDoubleClick
         Try
             If (RadGridViewRHEWAAlle.Columns(e.ColumnIndex).Name = "AnhangPfad") Then
-                If e.Value.Trim.Equals("") = False Then
-                    Try
-                        If IO.File.Exists(e.Value) Then
-                            Dim proc As Process = New Process()
-                            proc.StartInfo.FileName = e.Value
-                            proc.StartInfo.UseShellExecute = True
-                            proc.Start()
-                        Else
-                            MessageBox.Show("Konnte Datei am Pfad: " & e.Value & " nicht finden")
-                        End If
-                    Catch ex As Exception
 
+                If e.Value.Trim.Equals("") = False Then
+                    Dim Vorgangsnummer As String
+                    Vorgangsnummer = e.Row.Cells("Vorgangsnummer").Value
+                    Try
+                        OeffneDateiVonFTP(e.Value, Vorgangsnummer)
+                    Catch ex As Exception
+                        Debug.WriteLine(ex.ToString)
                     End Try
                 Else
                     ZeigeServerEichprozess()
@@ -533,36 +563,137 @@
                 ZeigeServerEichprozess()
             End If
         Catch ex As Exception
+            Debug.WriteLine(ex.ToString)
         End Try
     End Sub
 
-    ''' <summary>
-    ''' Kopiert eichprozess vom Server in ein Client Objekt als Vorlage
-    ''' </summary>
-    ''' <remarks></remarks>
-    Private Sub RadButtonEichprozessKopieren_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonEichprozessKopierenRHEWA.Click
-        GetLokaleKopieVonEichprozess()
-    End Sub
+    Private Sub OeffneDateiVonFTP(ByVal LokalerPfad As String, ByVal vorgangsnummer As String)
+        If IO.File.Exists(LokalerPfad) Then
+            Dim proc As Process = New Process()
+            proc.StartInfo.FileName = LokalerPfad
+            proc.StartInfo.UseShellExecute = True
+            proc.Start()
+        Else
+            If Not BackgroundWorkerDownloadFromFTP.IsBusy Then
+                Me.Enabled = False
+                Me.RadProgressBar.Visible = True
 
-    ''' <summary>
-    ''' Kopiert eichprozess vom Server in ein Client Objekt als Vorlage
-    ''' </summary>
-    ''' <remarks></remarks>
-    Private Sub GetLokaleKopieVonEichprozess()
-        If Not Me.VorgangsnummerGridServer.Equals("") Then
-            If MessageBox.Show(My.Resources.GlobaleLokalisierung.Frage_Kopieren, My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
-                Dim objClientEichprozess = objWebserviceFunctions.GetLokaleKopieVonEichprozess(VorgangsnummerGridServer)
-
-                If Not objClientEichprozess Is Nothing Then
-                    'anzeigen des Dialogs zur Bearbeitung der Eichung
-                    Dim f As New FrmMainContainer(objClientEichprozess)
-                    f.ShowDialog()
-                    'nach dem schließen des Dialogs aktualisieren
-                    LoadFromDatabase()
-                End If
+                Me.RadProgressBar.Maximum = 100
+                BackgroundWorkerDownloadFromFTP.RunWorkerAsync(vorgangsnummer)
             End If
         End If
+
+
     End Sub
+
+    Public Function InitUDownloadFileToFTP(ByVal vorgangsnummer As String) As String
+        Using dbcontext As New EichsoftwareClientdatabaseEntities1
+            Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
+                Try
+                    Webcontext.Open()
+                Catch ex As Exception
+                    MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    Return False
+                End Try
+
+                'daten von WebDB holen
+                Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
+                Dim objFTPDaten = Webcontext.GetFTPCredentials(objLiz.HEKennung, objLiz.Lizenzschluessel, vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+
+
+                'aufbereiten der für FTP benötigten Verbindungsdaten
+                If Not objFTPDaten Is Nothing Then
+
+                    'get decrypted Password and configuration from Database
+
+                    Dim password As String = objFTPDaten.FTPEncryptedPassword
+                    ' original plaintext
+                    Dim passPhrase As String = "Pas5pr@se"
+                    ' can be any string
+                    Dim saltValue As String = objFTPDaten.FTPSaltKey
+                    ' can be any string
+                    Dim hashAlgorithm As String = "SHA1"
+                    ' can be "MD5"
+                    Dim passwordIterations As Integer = 2
+                    ' can be any number
+                    Dim initVector As String = "@1B2c3D4e5F6g7H8"
+                    ' must be 16 bytes
+                    Dim keySize As Integer = 256
+                    ' can be 192 or 128
+
+                    password = RijndaelSimple.Decrypt(password, passPhrase, saltValue, hashAlgorithm, passwordIterations, initVector, _
+                        keySize)
+
+
+                    Dim file As New IO.FileInfo(objFTPDaten.FTPFilePath)
+                    Dim filesize As Long
+                    'downloadgroße ermitteln
+
+                    filesize = objFTP.GetFileSize(objFTPDaten.FTPServername, objFTPDaten.FTPUserName, password, file.Name)
+
+                    BackgroundWorkerDownloadFromFTP.ReportProgress(filesize)
+                    Try
+                        'datei download. FTPUploadPath bekommt den reelen Pfad auf dem FTP Server
+                        If objFTP.DownloadFileFromFTP(objFTPDaten.FTPServername, objFTPDaten.FTPUserName, password, file.Name, file.FullName) Then
+                            Return file.FullName
+                        Else
+                            Return ""
+                        End If
+                    Catch ex As Exception
+                        Return ""
+                    End Try
+                End If
+            End Using
+        End Using
+        Return ""
+    End Function
+
+
+ 
+    Private Sub BackgroundWorkerDownloadFromFTP_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorkerDownloadFromFTP.DoWork
+        Dim vorgangsnummer As String = e.Argument
+        e.Result = InitUDownloadFileToFTP(vorgangsnummer)
+    End Sub
+
+    Private Sub BackgroundWorkerDownloadFromFTP_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorkerDownloadFromFTP.RunWorkerCompleted
+        Me.Enabled = True
+        Me.RadProgressBar.Visible = False
+        Me.RadProgressBar.Value1 = 0
+        RadProgressBar.Text = ""
+
+
+        Dim filepath As String = e.Result
+        If filepath.Equals("") = False Then
+            Dim proc As Process = New Process()
+            proc.StartInfo.FileName = filepath
+            proc.StartInfo.UseShellExecute = True
+            proc.Start()
+        Else
+            MessageBox.Show("Konnte Datei am Pfad nicht finden. Sie konnte auch nicht heruntergeladen werden.")
+        End If
+    End Sub
+
+    Private Sub BackgroundWorkerDownloadFromFTP_ProgressChanged(sender As Object, e As System.ComponentModel.ProgressChangedEventArgs) Handles BackgroundWorkerDownloadFromFTP.ProgressChanged
+        Try
+            If e.ProgressPercentage = 0 Then
+                RadProgressBar.Value1 = e.UserState
+                RadProgressBar.Text = CInt(CInt(e.UserState) / 1024) & " KB/ " & CInt(CInt(RadProgressBar.Maximum) / 1024) & " KB"
+                Me.Refresh()
+            Else
+                RadProgressBar.Maximum = e.ProgressPercentage
+            End If
+        Catch ex As Exception
+            Debug.WriteLine(ex.ToString)
+        End Try
+    End Sub
+
+    Private Sub objFTP_ReportFTPProgress(Progress As Integer) Handles objFTP.ReportFTPProgress
+        Try
+            BackgroundWorkerDownloadFromFTP.ReportProgress(0, Progress)
+        Catch ex As Exception
+        End Try
+    End Sub
+#End Region
 
 #End Region
 
@@ -676,5 +807,7 @@
         VerbindeMitWebServiceUndAktualisiere()
     End Sub
 #End Region
+
+
 
 End Class

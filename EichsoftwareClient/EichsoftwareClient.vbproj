@@ -20,6 +20,7 @@
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
+    <FodyPath>..\packages\Fody.1.20.0.0</FodyPath>
     <PublishUrl>D:\Daten\Hill Daten\Privat\Dropbox\RHEWA\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -30,12 +31,11 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>32</ApplicationRevision>
+    <ApplicationRevision>33</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <FodyPath>..\packages\Fody.1.20.0.0</FodyPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -207,6 +207,7 @@
     <Compile Include="Model\clsCrypto.vb" />
     <Compile Include="Model\clsDBFunctions.vb" />
     <Compile Include="Model\clsClientServerConversionFunctions.vb" />
+    <Compile Include="Model\clsFTP.vb" />
     <Compile Include="Model\clsOfficeExports.vb" />
     <Compile Include="Model\clsWebserviceFunctions.vb" />
     <Compile Include="Mogelstatistik.vb">

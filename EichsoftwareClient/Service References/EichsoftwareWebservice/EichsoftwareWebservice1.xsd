@@ -615,6 +615,7 @@
   <xs:complexType name="clsServerFTPDaten">
     <xs:sequence>
       <xs:element minOccurs="0" name="FTPEncryptedPassword" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FTPFilePath" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="FTPSaltKey" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="FTPServername" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="FTPUserName" nillable="true" type="xs:string" />
