@@ -215,8 +215,8 @@ Partial Class FrmMainContainer
         Me.SplitPanelMain.RootElement.Padding = CType(resources.GetObject("SplitPanelMain.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.SplitPanelMain.RootElement.Text = resources.GetString("SplitPanelMain.RootElement.Text")
         Me.SplitPanelMain.RootElement.TextOrientation = CType(resources.GetObject("SplitPanelMain.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.SplitPanelMain.SizeInfo.AutoSizeScale = New System.Drawing.SizeF(0.2492114!, 0.0!)
-        Me.SplitPanelMain.SizeInfo.SplitterCorrection = New System.Drawing.Size(317, 0)
+        Me.SplitPanelMain.SizeInfo.AutoSizeScale = New System.Drawing.SizeF(0.2799684!, 0.0!)
+        Me.SplitPanelMain.SizeInfo.SplitterCorrection = New System.Drawing.Size(356, 0)
         Me.SplitPanelMain.TabStop = False
         '
         'RadSplitContainerNavigation
@@ -564,8 +564,8 @@ Partial Class FrmMainContainer
         Me.SplitPanelSidebar.RootElement.Padding = CType(resources.GetObject("SplitPanelSidebar.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.SplitPanelSidebar.RootElement.Text = resources.GetString("SplitPanelSidebar.RootElement.Text")
         Me.SplitPanelSidebar.RootElement.TextOrientation = CType(resources.GetObject("SplitPanelSidebar.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.SplitPanelSidebar.SizeInfo.AutoSizeScale = New System.Drawing.SizeF(-0.2492114!, 0.0!)
-        Me.SplitPanelSidebar.SizeInfo.SplitterCorrection = New System.Drawing.Size(-317, 0)
+        Me.SplitPanelSidebar.SizeInfo.AutoSizeScale = New System.Drawing.SizeF(-0.2799684!, 0.0!)
+        Me.SplitPanelSidebar.SizeInfo.SplitterCorrection = New System.Drawing.Size(-356, 0)
         Me.SplitPanelSidebar.TabStop = False
         '
         'RadSplitContainerSidebar
@@ -608,10 +608,10 @@ Partial Class FrmMainContainer
         Me.SplitPanelTrafficLight.RootElement.Padding = CType(resources.GetObject("SplitPanelTrafficLight.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.SplitPanelTrafficLight.RootElement.Text = resources.GetString("SplitPanelTrafficLight.RootElement.Text")
         Me.SplitPanelTrafficLight.RootElement.TextOrientation = CType(resources.GetObject("SplitPanelTrafficLight.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.SplitPanelTrafficLight.SizeInfo.AbsoluteSize = New System.Drawing.Size(200, 144)
+        Me.SplitPanelTrafficLight.SizeInfo.AbsoluteSize = New System.Drawing.Size(200, 142)
         Me.SplitPanelTrafficLight.SizeInfo.AutoSizeScale = New System.Drawing.SizeF(0.0!, -0.3498542!)
         Me.SplitPanelTrafficLight.SizeInfo.SizeMode = Telerik.WinControls.UI.Docking.SplitPanelSizeMode.Absolute
-        Me.SplitPanelTrafficLight.SizeInfo.SplitterCorrection = New System.Drawing.Size(0, -204)
+        Me.SplitPanelTrafficLight.SizeInfo.SplitterCorrection = New System.Drawing.Size(0, -206)
         Me.SplitPanelTrafficLight.TabStop = False
         '
         'SplitPanelContextHelp
@@ -632,8 +632,8 @@ Partial Class FrmMainContainer
         Me.SplitPanelContextHelp.RootElement.Padding = CType(resources.GetObject("SplitPanelContextHelp.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.SplitPanelContextHelp.RootElement.Text = resources.GetString("SplitPanelContextHelp.RootElement.Text")
         Me.SplitPanelContextHelp.RootElement.TextOrientation = CType(resources.GetObject("SplitPanelContextHelp.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.SplitPanelContextHelp.SizeInfo.AutoSizeScale = New System.Drawing.SizeF(0.0!, -0.03119869!)
-        Me.SplitPanelContextHelp.SizeInfo.SplitterCorrection = New System.Drawing.Size(0, 204)
+        Me.SplitPanelContextHelp.SizeInfo.AutoSizeScale = New System.Drawing.SizeF(0.0!, -0.00837521!)
+        Me.SplitPanelContextHelp.SizeInfo.SplitterCorrection = New System.Drawing.Size(0, 206)
         Me.SplitPanelContextHelp.TabStop = False
         '
         'RadDropDownButtonElement1

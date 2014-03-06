@@ -2,6 +2,8 @@
 <ServiceContract()> _
 <CyclicReferencesAware(True)> _
 Public Interface IEichsoftwareWebservice
+    <OperationContract()> _
+    Function Test() As Boolean
 
     <OperationContract()> _
     Function PruefeLizenz(ByVal HEKennung As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean
@@ -27,6 +29,9 @@ Public Interface IEichsoftwareWebservice
                                     ByVal AnzahlGruenesM As Integer, ByVal AnzahlCE As Integer, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean
     <OperationContract()>
     Function AddEichprozess(ByVal HEKennung As String, Lizenzschluessel As String, ByRef pObjEichprozess As ServerEichprozess, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean
+
+    <OperationContract()>
+    Function AddWaegezelle(ByVal HEKennung As String, Lizenzschluessel As String, ByVal pObjWZ As ServerLookup_Waegezelle, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean
 
     <OperationContract()>
     Function GetAlleEichprozesse(ByVal HEKennung As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As clsEichprozessFuerAuswahlliste()

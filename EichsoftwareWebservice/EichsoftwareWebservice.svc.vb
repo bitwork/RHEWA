@@ -5,6 +5,10 @@ Public Class EichsoftwareWebservice
     Public Sub New()
     End Sub
 
+    Public Function Test() As Boolean Implements IEichsoftwareWebservice.Test
+        Return True
+    End Function
+
     ''' <summary>
     ''' Prüft ob es sich um eine gültige noch aktive Lizenz handelt
     ''' </summary>
@@ -13,7 +17,7 @@ Public Class EichsoftwareWebservice
     ''' <returns></returns>
     ''' <remarks></remarks>
     Public Function PruefeLizenz(ByVal HEKennung As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements IEichsoftwareWebservice.PruefeLizenz
-        SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Prüfe Lizenz")
+        'SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Prüfe Lizenz")
 
 
         Using dbcontext As New EichenSQLDatabaseEntities1
@@ -21,6 +25,7 @@ Public Class EichsoftwareWebservice
             If Not ObjLizenz Is Nothing Then
                 Return True
             Else
+                SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Lizenz ungültig")
                 Return False
             End If
         End Using
@@ -60,6 +65,7 @@ Public Class EichsoftwareWebservice
                 Return objLizenzdaten
             End Using
         Catch ex As Exception
+            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
             Return objLizenzdaten
         End Try
     End Function
@@ -88,6 +94,7 @@ Public Class EichsoftwareWebservice
                 dbcontext.SaveChanges()
             End Using
         Catch ex As Exception
+            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
         End Try
     End Sub
 
@@ -99,18 +106,23 @@ Public Class EichsoftwareWebservice
     ''' <returns></returns>
     ''' <remarks></remarks>
     Public Function AktiviereLizenz(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements IEichsoftwareWebservice.AktiviereLizenz
-        Using dbcontext As New EichenSQLDatabaseEntities1
-            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Aktiviere Lizenz")
+        Try
+            Using dbcontext As New EichenSQLDatabaseEntities1
+                SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Aktiviere Lizenz")
 
-            Dim ObjLizenz = (From lic In dbcontext.ServerLizensierung Where lic.HEKennung = HEKennung And lic.Lizenzschluessel = Lizenzschluessel And lic.Aktiv = True).FirstOrDefault
-            If Not ObjLizenz Is Nothing Then
-                ObjLizenz.LetzteAktivierung = Now
-                dbcontext.SaveChanges()
-                Return True
-            Else
-                Return False
-            End If
-        End Using
+                Dim ObjLizenz = (From lic In dbcontext.ServerLizensierung Where lic.HEKennung = HEKennung And lic.Lizenzschluessel = Lizenzschluessel And lic.Aktiv = True).FirstOrDefault
+                If Not ObjLizenz Is Nothing Then
+                    ObjLizenz.LetzteAktivierung = Now
+                    dbcontext.SaveChanges()
+                    Return True
+                Else
+                    Return False
+                End If
+            End Using
+        Catch ex As Exception
+            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
+        End Try
+  
     End Function
 
     ''' <summary>
@@ -121,16 +133,21 @@ Public Class EichsoftwareWebservice
     ''' <returns></returns>
     ''' <remarks></remarks>
     Public Function PruefeObRHEWALizenz(ByVal HEKennung As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements IEichsoftwareWebservice.PruefeObRHEWALizenz
-        Using dbcontext As New EichenSQLDatabaseEntities1
-            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Prüfe ob RHEWA Mitarbeiter")
+        Try
+            Using dbcontext As New EichenSQLDatabaseEntities1
+                SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Prüfe ob RHEWA Mitarbeiter")
 
-            Dim ObjLizenz = (From lic In dbcontext.ServerLizensierung Where lic.HEKennung = HEKennung And lic.Lizenzschluessel = Lizenzschluessel).FirstOrDefault
-            If Not ObjLizenz Is Nothing Then
-                Return ObjLizenz.RHEWALizenz
-            Else
-                Return False
-            End If
-        End Using
+                Dim ObjLizenz = (From lic In dbcontext.ServerLizensierung Where lic.HEKennung = HEKennung And lic.Lizenzschluessel = Lizenzschluessel).FirstOrDefault
+                If Not ObjLizenz Is Nothing Then
+                    Return ObjLizenz.RHEWALizenz
+                Else
+                    Return False
+                End If
+            End Using
+        Catch ex As Exception
+            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
+        End Try
+
     End Function
 
     ''' <summary>
@@ -158,15 +175,7 @@ Public Class EichsoftwareWebservice
 
                 If Serverob Is Nothing Then
 
-                    'wenn neue WZ vorhanden ist
-                    If pObjEichprozess.ServerLookup_Waegezelle.Neu Then
-                        Try
-                            DbContext.ServerLookup_Waegezelle.Add(pObjEichprozess.ServerLookup_Waegezelle)
-                            DbContext.SaveChanges()
-                        Catch ex As Exception
-                        End Try
-                    End If
-                 
+
                     pObjEichprozess.UploadDatum = Date.Now
                     pObjEichprozess.ErzeugerLizenz = Lizenzschluessel 'lizenzschlüssel zur identifizierung des datensatztes hinzufügen
                     DbContext.ServerEichprozess.Add(pObjEichprozess)
@@ -191,6 +200,8 @@ Public Class EichsoftwareWebservice
                             DbContext.ServerLookup_Waegezelle.Add(pObjEichprozess.ServerLookup_Waegezelle)
                             DbContext.SaveChanges()
                         Catch ex As Exception
+                            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
+
                         End Try
                     End If
 
@@ -207,10 +218,73 @@ Public Class EichsoftwareWebservice
             Return True
         Catch ex As Entity.Infrastructure.DbUpdateException
             Debug.WriteLine(ex.InnerException.InnerException.Message)
+            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
+
         Catch ex As Entity.Validation.DbEntityValidationException
             For Each e In ex.EntityValidationErrors
                 For Each v In e.ValidationErrors
                     Debug.WriteLine(v.ErrorMessage & " " & v.PropertyName)
+                    SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & v.ErrorMessage & v.PropertyName)
+
+                Next
+
+            Next
+            Return False
+        End Try
+    End Function
+
+
+
+    ''' <summary>
+    ''' Adds the waegezelle.
+    ''' </summary>
+    ''' <param name="HEKennung">The HE kennung.</param>
+    ''' <param name="Lizenzschluessel">The lizenzschluessel.</param>
+    ''' <param name="pObjWZ">The p obj WZ.</param>
+    ''' <param name="WindowsUsername">The windows username.</param>
+    ''' <param name="Domainname">The domainname.</param>
+    ''' <param name="Computername">The computername.</param>
+    ''' <returns></returns>
+    Public Function AddWaegezelle(HEKennung As String, Lizenzschluessel As String, ByVal pObjWZ As ServerLookup_Waegezelle, WindowsUsername As String, Domainname As String, Computername As String) As Boolean Implements IEichsoftwareWebservice.AddWaegezelle
+        Try
+            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Füge neue WZ hinzu")
+
+            ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
+            If PruefeLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
+            'neuen Context aufbauen
+            'prüfen ob der eichprozess schoneinmal eingegangen ist anhand von Vorgangsnummer
+            If pObjWZ.Neu Then
+                pObjWZ.ErstellDatum = Date.Now
+                pObjWZ.Deaktiviert = True
+
+                Using DbContext As New EichenSQLDatabaseEntities1
+                    DbContext.Configuration.LazyLoadingEnabled = True
+                    Dim Serverob = (From db In DbContext.ServerLookup_Waegezelle Select db Where db.Hersteller = pObjWZ.Hersteller And db.Typ = pObjWZ.Typ).FirstOrDefault
+                    If Serverob Is Nothing Then
+                        'wenn neue nicht WZ vorhanden ist
+                        Try
+                            DbContext.ServerLookup_Waegezelle.Add(pObjWZ)
+                            DbContext.SaveChanges()
+                        Catch ex As Exception
+                            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
+                        End Try
+                    End If
+
+                End Using
+            End If
+            HEKennung = Nothing
+            Lizenzschluessel = Nothing
+
+            Return True
+        Catch ex As Entity.Infrastructure.DbUpdateException
+            Debug.WriteLine(ex.InnerException.InnerException.Message)
+            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
+
+        Catch ex As Entity.Validation.DbEntityValidationException
+            For Each e In ex.EntityValidationErrors
+                For Each v In e.ValidationErrors
+                    Debug.WriteLine(v.ErrorMessage & " " & v.PropertyName)
+                    SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & v.ErrorMessage & v.PropertyName)
 
                 Next
 
@@ -352,11 +426,15 @@ Public Class EichsoftwareWebservice
 
 
                 Catch ex As Exception
+                    SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
+
                     'hat nicht funktioniert
                     Return Nothing
                 End Try
             End Using
         Catch ex As Exception
+            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
+
             Return Nothing
         End Try
 
@@ -381,7 +459,10 @@ Public Class EichsoftwareWebservice
             SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Hole alle Eichprozesse im Zeitraum")
 
             'neuen Context aufbauen
+            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Baue DB Verbindung auf ")
+
             Using DbContext As New EichenSQLDatabaseEntities1
+                SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DB Verbindung aufgebaut ")
 
 
                 DbContext.Configuration.LazyLoadingEnabled = False
@@ -394,118 +475,132 @@ Public Class EichsoftwareWebservice
 
 
                     ''abruch
-                    If Eichprozesse Is Nothing Then Return Nothing
+                    If Eichprozesse Is Nothing Then
+                        SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Keine Eichprozesse im Zeitraum")
+                        Return Nothing
+
+                    End If
                     Dim returnlist As New List(Of ServerEichprozess)
                     For Each Obj In Eichprozesse
-
-
-                        'prüfungen
-                        Dim EichID As String = Obj.ServerEichprotokoll.ID
-
                         Try
-                            Dim query = From db In DbContext.ServerPruefungAnsprechvermoegen Where db.FK_Eichprotokoll = EichID
-                            For Each sourceo In query
-                                Obj.ServerEichprotokoll.ServerPruefungAnsprechvermoegen.Add(sourceo)
-                            Next
-                        Catch e As Exception
+
+
+                            'prüfungen
+                            Dim EichID As String = Obj.ServerEichprotokoll.ID
+
+                            Try
+                                Dim query = From db In DbContext.ServerPruefungAnsprechvermoegen Where db.FK_Eichprotokoll = EichID
+                                For Each sourceo In query
+                                    Obj.ServerEichprotokoll.ServerPruefungAnsprechvermoegen.Add(sourceo)
+                                Next
+                            Catch e As Exception
+                            End Try
+
+                            Try
+                                Dim query = From db In DbContext.ServerLookup_Vorgangsstatus Where db.ID = Obj.FK_Vorgangsstatus
+                                For Each sourceo In query
+                                    Obj.ServerLookup_Vorgangsstatus = sourceo
+                                Next
+                            Catch e As Exception
+                            End Try
+
+                            Try
+                                Dim query = From db In DbContext.ServerPruefungAussermittigeBelastung Where db.FK_Eichprotokoll = EichID
+                                For Each sourceo In query
+                                    Obj.ServerEichprotokoll.ServerPruefungAussermittigeBelastung.Add(sourceo)
+                                Next
+                            Catch e As Exception
+                            End Try
+
+
+                            Try
+                                Dim query = From db In DbContext.ServerPruefungEichfehlergrenzen Where db.FK_Eichprotokoll = EichID
+                                For Each sourceo In query
+                                    Obj.ServerEichprotokoll.ServerPruefungEichfehlergrenzen.Add(sourceo)
+                                Next
+                            Catch e As Exception
+                            End Try
+
+
+                            Try
+                                Dim query = From db In DbContext.ServerPruefungLinearitaetFallend Where db.FK_Eichprotokoll = EichID
+                                For Each sourceo In query
+                                    Obj.ServerEichprotokoll.ServerPruefungLinearitaetFallend.Add(sourceo)
+                                Next
+                            Catch e As Exception
+                            End Try
+
+
+                            Try
+                                Dim query = From db In DbContext.ServerPruefungLinearitaetSteigend Where db.FK_Eichprotokoll = EichID
+                                For Each sourceo In query
+                                    Obj.ServerEichprotokoll.ServerPruefungLinearitaetSteigend.Add(sourceo)
+                                Next
+                            Catch e As Exception
+                            End Try
+
+                            Try
+                                Dim query = From db In DbContext.ServerPruefungRollendeLasten Where db.FK_Eichprotokoll = EichID
+                                For Each sourceo In query
+                                    Obj.ServerEichprotokoll.ServerPruefungRollendeLasten.Add(sourceo)
+                                Next
+                            Catch e As Exception
+                            End Try
+
+                            Try
+                                Dim query = From db In DbContext.ServerPruefungStabilitaetGleichgewichtslage Where db.FK_Eichprotokoll = EichID
+                                For Each sourceo In query
+                                    Obj.ServerEichprotokoll.ServerPruefungStabilitaetGleichgewichtslage.Add(sourceo)
+                                Next
+                            Catch e As Exception
+                            End Try
+
+
+                            Try
+                                Dim query = From db In DbContext.ServerPruefungStaffelverfahrenErsatzlast Where db.FK_Eichprotokoll = EichID
+                                For Each sourceo In query
+                                    Obj.ServerEichprotokoll.ServerPruefungStaffelverfahrenErsatzlast.Add(sourceo)
+                                Next
+                            Catch e As Exception
+                            End Try
+
+                            Try
+                                Dim query = From db In DbContext.ServerPruefungStaffelverfahrenNormallast Where db.FK_Eichprotokoll = EichID
+                                For Each sourceo In query
+                                    Obj.ServerEichprotokoll.ServerPruefungStaffelverfahrenNormallast.Add(sourceo)
+                                Next
+                            Catch e As Exception
+                            End Try
+
+                            Try
+                                Dim query = From db In DbContext.ServerPruefungWiederholbarkeit Where db.FK_Eichprotokoll = EichID
+                                For Each sourceo In query
+                                    Obj.ServerEichprotokoll.ServerPruefungWiederholbarkeit.Add(sourceo)
+                                Next
+                            Catch e As Exception
+                            End Try
+                            returnlist.Add(Obj)
+
+                        Catch ex As Exception
+                            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler: " & ex.Message & " " & ex.StackTrace)
                         End Try
-
-                        Try
-                            Dim query = From db In DbContext.ServerLookup_Vorgangsstatus Where db.ID = Obj.FK_Vorgangsstatus
-                            For Each sourceo In query
-                                Obj.ServerLookup_Vorgangsstatus = sourceo
-                            Next
-                        Catch e As Exception
-                        End Try
-
-                        Try
-                            Dim query = From db In DbContext.ServerPruefungAussermittigeBelastung Where db.FK_Eichprotokoll = EichID
-                            For Each sourceo In query
-                                Obj.ServerEichprotokoll.ServerPruefungAussermittigeBelastung.Add(sourceo)
-                            Next
-                        Catch e As Exception
-                        End Try
-
-
-                        Try
-                            Dim query = From db In DbContext.ServerPruefungEichfehlergrenzen Where db.FK_Eichprotokoll = EichID
-                            For Each sourceo In query
-                                Obj.ServerEichprotokoll.ServerPruefungEichfehlergrenzen.Add(sourceo)
-                            Next
-                        Catch e As Exception
-                        End Try
-
-
-                        Try
-                            Dim query = From db In DbContext.ServerPruefungLinearitaetFallend Where db.FK_Eichprotokoll = EichID
-                            For Each sourceo In query
-                                Obj.ServerEichprotokoll.ServerPruefungLinearitaetFallend.Add(sourceo)
-                            Next
-                        Catch e As Exception
-                        End Try
-
-
-                        Try
-                            Dim query = From db In DbContext.ServerPruefungLinearitaetSteigend Where db.FK_Eichprotokoll = EichID
-                            For Each sourceo In query
-                                Obj.ServerEichprotokoll.ServerPruefungLinearitaetSteigend.Add(sourceo)
-                            Next
-                        Catch e As Exception
-                        End Try
-
-                        Try
-                            Dim query = From db In DbContext.ServerPruefungRollendeLasten Where db.FK_Eichprotokoll = EichID
-                            For Each sourceo In query
-                                Obj.ServerEichprotokoll.ServerPruefungRollendeLasten.Add(sourceo)
-                            Next
-                        Catch e As Exception
-                        End Try
-
-                        Try
-                            Dim query = From db In DbContext.ServerPruefungStabilitaetGleichgewichtslage Where db.FK_Eichprotokoll = EichID
-                            For Each sourceo In query
-                                Obj.ServerEichprotokoll.ServerPruefungStabilitaetGleichgewichtslage.Add(sourceo)
-                            Next
-                        Catch e As Exception
-                        End Try
-
-
-                        Try
-                            Dim query = From db In DbContext.ServerPruefungStaffelverfahrenErsatzlast Where db.FK_Eichprotokoll = EichID
-                            For Each sourceo In query
-                                Obj.ServerEichprotokoll.ServerPruefungStaffelverfahrenErsatzlast.Add(sourceo)
-                            Next
-                        Catch e As Exception
-                        End Try
-
-                        Try
-                            Dim query = From db In DbContext.ServerPruefungStaffelverfahrenNormallast Where db.FK_Eichprotokoll = EichID
-                            For Each sourceo In query
-                                Obj.ServerEichprotokoll.ServerPruefungStaffelverfahrenNormallast.Add(sourceo)
-                            Next
-                        Catch e As Exception
-                        End Try
-
-                        Try
-                            Dim query = From db In DbContext.ServerPruefungWiederholbarkeit Where db.FK_Eichprotokoll = EichID
-                            For Each sourceo In query
-                                Obj.ServerEichprotokoll.ServerPruefungWiederholbarkeit.Add(sourceo)
-                            Next
-                        Catch e As Exception
-                        End Try
-                        returnlist.Add(Obj)
-
                     Next
+                    SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Gebe zurück")
+
                     Return returnlist.ToArray
 
                 Catch ex As Exception
                     'hat nicht funktioniert
+                    SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
+
                     Return Nothing
                 End Try
             End Using
 
 
         Catch ex As Exception
+            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
+
             Return Nothing
         End Try
     End Function
@@ -535,6 +630,8 @@ Public Class EichsoftwareWebservice
                         lokalerPfadFuerAnhaenge = ""
                     End If
                 Catch ex As Exception
+                    SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
+
                     lokalerPfadFuerAnhaenge = ""
                 End Try
 
@@ -561,66 +658,97 @@ Public Class EichsoftwareWebservice
                     .Bearbeitungsstatus = Lookup2.Status
                                  }
 
+                    SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG QUERY ausgeführt")
+
+
                     Dim ReturnList As New List(Of clsEichprozessFuerAuswahlliste)
 
                     'Wrapper für die KLasse. Problematischer Weise kann man keine anoynmen Typen zurückgeben. Deswegen gibt es die behilfsklasse clsEichprozessFuerAuswahlliste.
                     'Diese hat exakt die Eigenschaften die benötigt werden und zusammengesetzt aus der Status Tabelle und dem Eichprozess zusammengebaut wird
+                    SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG QUERY Count:" & Query.Count)
+
                     For Each objeichprozess In Query
-                        Dim objReturn As New clsEichprozessFuerAuswahlliste
-                        objReturn.ID = objeichprozess.ID
-                        If Not objeichprozess.Lookup_Auswertegeraet Is Nothing Then
-                            objReturn.AWG = objeichprozess.Lookup_Auswertegeraet
-                        End If
+                        Try
+                            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 1")
 
-                        If Not objeichprozess.Fabriknummer Is Nothing Then
-                            objReturn.Fabriknummer = objeichprozess.Fabriknummer
-                        End If
 
-                        If Not objeichprozess.Vorgangsnummer Is Nothing Then
-                            objReturn.Vorgangsnummer = objeichprozess.Vorgangsnummer
-                        End If
+                            Dim objReturn As New clsEichprozessFuerAuswahlliste
 
-                        If Not objeichprozess.Lookup_Waagenart Is Nothing Then
-                            objReturn.Waagenart = objeichprozess.Lookup_Waagenart
-                        End If
+                            objReturn.ID = objeichprozess.ID
+                            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 2")
 
-                        If Not objeichprozess.Lookup_Waagentyp Is Nothing Then
-                            objReturn.Waagentyp = objeichprozess.Lookup_Waagentyp
-                        End If
+                            If Not objeichprozess.Lookup_Auswertegeraet Is Nothing Then
+                                objReturn.AWG = objeichprozess.Lookup_Auswertegeraet
+                            End If
+                            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 3")
 
-                        If Not objeichprozess.Lookup_Waegezelle Is Nothing Then
-                            objReturn.WZ = objeichprozess.Lookup_Waegezelle
-                        End If
+                            If Not objeichprozess.Fabriknummer Is Nothing Then
+                                objReturn.Fabriknummer = objeichprozess.Fabriknummer
+                            End If
+                            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 4")
 
-                        If Not objeichprozess.Sachbearbeiter Is Nothing Then
-                            objReturn.Eichbevollmaechtigter = objeichprozess.Sachbearbeiter
-                        End If
+                            If Not objeichprozess.Vorgangsnummer Is Nothing Then
+                                objReturn.Vorgangsnummer = objeichprozess.Vorgangsnummer
+                            End If
+                            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 51")
 
-                        If Not objeichprozess.Bearbeitungsstatus Is Nothing Then
-                            objReturn.Bearbeitungsstatus = objeichprozess.Bearbeitungsstatus
-                        End If
+                            If Not objeichprozess.Lookup_Waagenart Is Nothing Then
+                                objReturn.Waagenart = objeichprozess.Lookup_Waagenart
+                            End If
+                            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 6")
 
-                        If Not objeichprozess.ZurBearbeitungGesperrtDurch Is Nothing Then
-                            objReturn.GesperrtDurch = objeichprozess.ZurBearbeitungGesperrtDurch
-                        End If
+                            If Not objeichprozess.Lookup_Waagentyp Is Nothing Then
+                                objReturn.Waagentyp = objeichprozess.Lookup_Waagentyp
+                            End If
+                            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 7")
 
-                        If Not objeichprozess.NeuWZ Is Nothing Then
-                            objReturn.NeueWZ = objeichprozess.NeuWZ
-                        End If
+                            If Not objeichprozess.Lookup_Waegezelle Is Nothing Then
+                                objReturn.WZ = objeichprozess.Lookup_Waegezelle
+                            End If
+                            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 8")
 
-                        'dateipfad zusammenbauen
-                        If Not objeichprozess.Anhangpfad Is Nothing Then
-                            If Not objeichprozess.Anhangpfad.Trim.Equals("") Then
-                                If lokalerPfadFuerAnhaenge.EndsWith("\") Then
-                                    objReturn.AnhangPfad = lokalerPfadFuerAnhaenge & objeichprozess.Anhangpfad
-                                Else
-                                    objReturn.AnhangPfad = lokalerPfadFuerAnhaenge & "\" & objeichprozess.Anhangpfad
+                            If Not objeichprozess.Sachbearbeiter Is Nothing Then
+                                objReturn.Eichbevollmaechtigter = objeichprozess.Sachbearbeiter
+                            End If
+                            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 9")
+
+                            If Not objeichprozess.Bearbeitungsstatus Is Nothing Then
+                                objReturn.Bearbeitungsstatus = objeichprozess.Bearbeitungsstatus
+                            End If
+                            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 10")
+
+                            If Not objeichprozess.ZurBearbeitungGesperrtDurch Is Nothing Then
+                                objReturn.GesperrtDurch = objeichprozess.ZurBearbeitungGesperrtDurch
+                            End If
+                            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 11")
+
+                            Try
+                                objReturn.NeueWZ = objeichprozess.NeuWZ
+                            Catch ex As Exception
+                                SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
+                            End Try
+
+                            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 12")
+
+                            'dateipfad zusammenbauen
+                            If Not objeichprozess.Anhangpfad Is Nothing Then
+                                If Not objeichprozess.Anhangpfad.Trim.Equals("") Then
+                                    If lokalerPfadFuerAnhaenge.EndsWith("\") Then
+                                        objReturn.AnhangPfad = lokalerPfadFuerAnhaenge & objeichprozess.Anhangpfad
+                                    Else
+                                        objReturn.AnhangPfad = lokalerPfadFuerAnhaenge & "\" & objeichprozess.Anhangpfad
+                                    End If
                                 End If
                             End If
-                        End If
-                        '   Dim ModelArtikel As New Model.clsArtikel(objArtikel.Id, objArtikel.HEKennung, objArtikel.Beschreibung, objArtikel.Preis, objArtikel.ErstellDatum)
-                        ReturnList.Add(objReturn)
+                            '   Dim ModelArtikel As New Model.clsArtikel(objArtikel.Id, objArtikel.HEKennung, objArtikel.Beschreibung, objArtikel.Preis, objArtikel.ErstellDatum)
+                            ReturnList.Add(objReturn)
+                        Catch ex As Exception
+                            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
+
+                        End Try
                     Next
+
+                    SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG Returnlist Count:" & ReturnList.Count)
 
                     'ergebnismenge zurückgeben
                     If Not ReturnList.Count = 0 Then
@@ -631,11 +759,16 @@ Public Class EichsoftwareWebservice
                     End If
 
                 Catch ex As Exception
+                    SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
+
                     'hat nicht funktioniert
                     Return Nothing
                 End Try
             End Using
         Catch ex As Exception
+
+            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
+
             Return Nothing
         End Try
     End Function
@@ -710,6 +843,8 @@ Public Class EichsoftwareWebservice
                 End If
 
             Catch ex As Exception
+                SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
+
                 'hat nicht funktioniert
                 Return Nothing
             End Try
@@ -787,6 +922,8 @@ Public Class EichsoftwareWebservice
                 End If
 
             Catch ex As Exception
+                SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
+
                 'hat nicht funktioniert
                 Return Nothing
             End Try
@@ -806,7 +943,7 @@ Public Class EichsoftwareWebservice
     ''' <param name="AnzahlCE"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Function AddEichmarkenverwaltung(ByVal HEKennung As String, Lizenzschluessel As String, ByVal BenutzerHEKennungFK As String, ByVal AnzahlBenannteStelle As Integer, ByVal AnzahlEichsiegel13x13 As Integer, _
+    Public Function AddEichmarkenverwaltung(ByVal HEKennung As String, Lizenzschluessel As String, ByVal BenutzerIDFK As String, ByVal AnzahlBenannteStelle As Integer, ByVal AnzahlEichsiegel13x13 As Integer, _
                                             ByVal AnzahlEichsiegelRund As Integer, ByVal AnzahlHinweismarke As Integer, ByVal AnzahlGruenesM As Integer, ByVal AnzahlCE As Integer, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements IEichsoftwareWebservice.AddEichmarkenverwaltung
         ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
         If PruefeLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
@@ -817,7 +954,7 @@ Public Class EichsoftwareWebservice
                 DbContext.Configuration.LazyLoadingEnabled = False
                 DbContext.Configuration.ProxyCreationEnabled = False
 
-                Dim Element = (From d In DbContext.ServerEichmarkenverwaltung Where d.HEKennung = BenutzerHEKennungFK Order By d.ID).FirstOrDefault
+                Dim Element = (From d In DbContext.ServerEichmarkenverwaltung Where d.FK_BenutzerID = BenutzerIDFK Order By d.ID).FirstOrDefault
 
                 Try
                     Element.BenannteStelleAnzahl -= AnzahlBenannteStelle
@@ -853,7 +990,9 @@ Public Class EichsoftwareWebservice
 
                 Return True
             End Using
-        Catch e As Exception
+        Catch ex As Exception
+            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
+
             Return False
         End Try
 
@@ -897,6 +1036,8 @@ Public Class EichsoftwareWebservice
             Return Nothing
         Catch ex As Entity.Infrastructure.DbUpdateException
             Debug.WriteLine(ex.InnerException.InnerException.Message)
+            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
+
             Return Nothing
         Catch ex As Entity.Validation.DbEntityValidationException
             For Each e In ex.EntityValidationErrors
@@ -959,11 +1100,15 @@ Public Class EichsoftwareWebservice
 
 
                 Catch ex As Exception
+                    SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
+
                     'hat nicht funktioniert
                     Return False
                 End Try
             End Using
         Catch ex As Exception
+            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
+
             Return False
         End Try
     End Function
@@ -1018,11 +1163,15 @@ Public Class EichsoftwareWebservice
 
 
                 Catch ex As Exception
+                    SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
+
                     'hat nicht funktioniert
                     Return False
                 End Try
             End Using
         Catch ex As Exception
+            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
+
             Return False
         End Try
     End Function
@@ -1091,11 +1240,15 @@ Public Class EichsoftwareWebservice
                     Return ""
 
                 Catch ex As Exception
+                    SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
+
                     'hat nicht funktioniert
                     Return "Fehler beim Prüfen"
                 End Try
             End Using
         Catch ex As Exception
+            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
+
             Return False
         End Try
     End Function
@@ -1179,11 +1332,14 @@ Public Class EichsoftwareWebservice
 
 
                 Catch ex As Exception
+                    SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
+
                     'hat nicht funktioniert
                     Return ex.Message
                 End Try
             End Using
         Catch ex As Exception
+            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
             Return ex.Message
         End Try
     End Function
@@ -1201,25 +1357,29 @@ Public Class EichsoftwareWebservice
     ''' <remarks></remarks>
     Function GetFTPCredentials(ByVal HEKennung As String, Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As clsServerFTPDaten Implements IEichsoftwareWebservice.GetFTPCredentials
         SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Hole FTP Zugangsdaten")
+        Try
+            Using dbcontext As New EichenSQLDatabaseEntities1
+                Dim ObjLizenz = (From lic In dbcontext.ServerLizensierung Where lic.HEKennung = HEKennung And lic.Lizenzschluessel = Lizenzschluessel And lic.Aktiv = True).FirstOrDefault
+                If Not ObjLizenz Is Nothing Then
 
-        Using dbcontext As New EichenSQLDatabaseEntities1
-            Dim ObjLizenz = (From lic In dbcontext.ServerLizensierung Where lic.HEKennung = HEKennung And lic.Lizenzschluessel = Lizenzschluessel And lic.Aktiv = True).FirstOrDefault
-            If Not ObjLizenz Is Nothing Then
+                    Dim ObjFTPDaten = (From FTPDaten In dbcontext.ServerKonfiguration).FirstOrDefault
+                    If Not ObjFTPDaten Is Nothing Then
 
-                Dim ObjFTPDaten = (From FTPDaten In dbcontext.ServerKonfiguration).FirstOrDefault
-                If Not ObjFTPDaten Is Nothing Then
+                        Dim objServerFTPDaten As New clsServerFTPDaten
+                        objServerFTPDaten.FTPServername = ObjFTPDaten.FTPServerAdresse
+                        objServerFTPDaten.FTPUserName = ObjFTPDaten.FTPServerBenutzername
+                        objServerFTPDaten.FTPEncryptedPassword = ObjFTPDaten.FTPServerEnkodiertesPasswort
+                        objServerFTPDaten.FTPSaltKey = ObjFTPDaten.FTPServerCryptoSaltKey
 
-                    Dim objServerFTPDaten As New clsServerFTPDaten
-                    objServerFTPDaten.FTPServername = ObjFTPDaten.FTPServerAdresse
-                    objServerFTPDaten.FTPUserName = ObjFTPDaten.FTPServerBenutzername
-                    objServerFTPDaten.FTPEncryptedPassword = ObjFTPDaten.FTPServerEnkodiertesPasswort
-                    objServerFTPDaten.FTPSaltKey = ObjFTPDaten.FTPServerCryptoSaltKey
-
-                    Return objServerFTPDaten
+                        Return objServerFTPDaten
+                    End If
                 End If
-            End If
-        End Using
-        Return Nothing
+            End Using
+            Return Nothing
+        Catch ex As Exception
+            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
+            Return Nothing
+        End Try
     End Function
 
 

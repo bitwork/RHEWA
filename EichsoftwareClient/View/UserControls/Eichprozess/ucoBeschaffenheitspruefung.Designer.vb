@@ -697,7 +697,7 @@ Partial Class ucoBeschaffenheitspruefung
         Me.RadGroupBoxVerbindungselemente.RootElement.Padding = CType(resources.GetObject("RadGroupBoxVerbindungselemente.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadGroupBoxVerbindungselemente.RootElement.Text = resources.GetString("RadGroupBoxVerbindungselemente.RootElement.Text")
         Me.RadGroupBoxVerbindungselemente.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxVerbindungselemente.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadGroupBoxVerbindungselemente.Tag = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadGroupBoxVerbindungselemente.Tag = ""
         Me.RadGroupBoxVerbindungselemente.ThemeName = "Telerik.WinControls.UI.RadGroupBox"
         '
         'Label11

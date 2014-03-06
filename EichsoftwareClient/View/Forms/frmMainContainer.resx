@@ -126,7 +126,7 @@
     <value>0, 0</value>
   </data>
   <data name="RadScrollablePanelTrafficLightBreadcrumb.PanelContainer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>316, 142</value>
+    <value>277, 140</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanelTrafficLightBreadcrumb.PanelContainer.Name" xml:space="preserve">
     <value>RadScrollablePanelTrafficLightBreadcrumb.PanelContainer</value>
@@ -169,7 +169,7 @@
     <value>Horizontal</value>
   </data>
   <data name="RadScrollablePanelTrafficLightBreadcrumb.Size" type="System.Drawing.Size, System.Drawing">
-    <value>318, 144</value>
+    <value>279, 142</value>
   </data>
   <data name="RadScrollablePanelTrafficLightBreadcrumb.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -202,7 +202,7 @@
     <value>NoControl</value>
   </data>
   <data name="PictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>270, 3</value>
+    <value>231, 3</value>
   </data>
   <data name="PictureBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 39</value>
@@ -274,7 +274,7 @@
     <value>1</value>
   </data>
   <data name="RadScrollablePanelContextHelp.PanelContainer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>316, 588</value>
+    <value>277, 590</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanelContextHelp.PanelContainer.Name" xml:space="preserve">
     <value>RadScrollablePanelContextHelp.PanelContainer</value>
@@ -316,7 +316,7 @@
     <value>Horizontal</value>
   </data>
   <data name="RadScrollablePanelContextHelp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>318, 590</value>
+    <value>279, 592</value>
   </data>
   <data name="RadScrollablePanelContextHelp.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -421,7 +421,7 @@
     <value>Horizontal</value>
   </data>
   <data name="SplitPanelHeaderText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>950, 142</value>
+    <value>989, 142</value>
   </data>
   <data name="SplitPanelHeaderText.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -472,7 +472,7 @@
     <value>Horizontal</value>
   </data>
   <data name="SplitPanelContent1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>950, 522</value>
+    <value>989, 522</value>
   </data>
   <data name="SplitPanelContent1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -529,7 +529,7 @@
     <value>Horizontal</value>
   </data>
   <data name="RadSplitContainerContent.Size" type="System.Drawing.Size, System.Drawing">
-    <value>950, 668</value>
+    <value>989, 668</value>
   </data>
   <data name="RadSplitContainerContent.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -577,7 +577,7 @@
     <value>Horizontal</value>
   </data>
   <data name="SplitPanelContent.Size" type="System.Drawing.Size, System.Drawing">
-    <value>950, 668</value>
+    <value>989, 668</value>
   </data>
   <data name="SplitPanelContent.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -601,7 +601,7 @@
     <value>Bottom, Right</value>
   </data>
   <data name="RadButtonVersenden.Location" type="System.Drawing.Point, System.Drawing">
-    <value>502, 9</value>
+    <value>541, 9</value>
   </data>
   <data name="RadButtonVersenden.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -664,7 +664,7 @@
     <value>Bottom, Right</value>
   </data>
   <data name="RadButtonEntsperren.Location" type="System.Drawing.Point, System.Drawing">
-    <value>340, 9</value>
+    <value>379, 9</value>
   </data>
   <data name="RadButtonEntsperren.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -907,7 +907,7 @@
     <value>MiddleCenter</value>
   </data>
   <data name="RadButtonNavigateBackwards.Location" type="System.Drawing.Point, System.Drawing">
-    <value>707, 9</value>
+    <value>746, 9</value>
   </data>
   <data name="RadButtonNavigateBackwards.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -973,7 +973,7 @@
     <value>MiddleCenter</value>
   </data>
   <data name="RadButtonNavigateForwards.Location" type="System.Drawing.Point, System.Drawing">
-    <value>808, 9</value>
+    <value>847, 9</value>
   </data>
   <data name="RadButtonNavigateForwards.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -1093,7 +1093,7 @@
     <value>Horizontal</value>
   </data>
   <data name="SplitPanelNavigation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>950, 66</value>
+    <value>989, 66</value>
   </data>
   <data name="SplitPanelNavigation.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1150,7 +1150,7 @@
     <value>Horizontal</value>
   </data>
   <data name="RadSplitContainerNavigation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>950, 738</value>
+    <value>989, 738</value>
   </data>
   <data name="RadSplitContainerNavigation.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1201,7 +1201,7 @@
     <value>Horizontal</value>
   </data>
   <data name="SplitPanelMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>950, 738</value>
+    <value>989, 738</value>
   </data>
   <data name="SplitPanelMain.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1249,7 +1249,7 @@
     <value>Horizontal</value>
   </data>
   <data name="SplitPanelTrafficLight.Size" type="System.Drawing.Size, System.Drawing">
-    <value>318, 144</value>
+    <value>279, 142</value>
   </data>
   <data name="SplitPanelTrafficLight.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1270,7 +1270,7 @@
     <value>0</value>
   </data>
   <data name="SplitPanelContextHelp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 148</value>
+    <value>0, 146</value>
   </data>
   <data name="SplitPanelContextHelp.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -1300,7 +1300,7 @@
     <value>Horizontal</value>
   </data>
   <data name="SplitPanelContextHelp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>318, 590</value>
+    <value>279, 592</value>
   </data>
   <data name="SplitPanelContextHelp.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1357,7 +1357,7 @@
     <value>Horizontal</value>
   </data>
   <data name="RadSplitContainerSidebar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>318, 738</value>
+    <value>279, 738</value>
   </data>
   <data name="RadSplitContainerSidebar.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1378,7 +1378,7 @@
     <value>0</value>
   </data>
   <data name="SplitPanelSidebar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>954, 0</value>
+    <value>993, 0</value>
   </data>
   <data name="SplitPanelSidebar.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -1408,7 +1408,7 @@
     <value>Horizontal</value>
   </data>
   <data name="SplitPanelSidebar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>318, 738</value>
+    <value>279, 738</value>
   </data>
   <data name="SplitPanelSidebar.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1684,8 +1684,8 @@
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
-        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAB+
-        EgAAAk1TRnQBSQFMAgEBAwEAAVgBBAFYAQQBIAEAASABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAGA
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAB6
+        EgAAAk1TRnQBSQFMAgEBAwEAAWABBAFgAQQBIAEAASABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAGA
         AwABIAMAAQEBAAEgBgABQP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wBPAAEBAwQBBgMLAQ8DEAEV
         AxABFgMQARYDEAEVAwsBDwMEAQYDAAEBWwABAQMEAQYDCwEPAxABFQMQARYDEAEWAxABFQMLAQ8DBAEG
         AwABAVsAAQEDBAEGAwsBDwMQARUDEAEWAxABFgMQARUDCwEPAwQBBgMAAQHUAAMCAQMDCgEOAxcBIAMj
@@ -1697,73 +1697,73 @@
         Az0BaQFYAlwB0QEAAb8C/wEAAb8C/wEAAb8C/wEAAb8C/wFYAlwB0QM9AWkDHwEtAw0BEgMCAQPHAAEB
         AwoBDgMfAS0BVQFWAVUBtAEAAZEBAAH/AQABtwEAAf8BAAHNAZEB/wEAAdIBlQH/AQAB0gGVAf8BAAHN
         AZEB/wEAAbcBAAH/AQABkQEAAf8BVQFWAVUBtAMfAS0DCgEOAwABAUMAAQEDCgEOAx8BLQJVAVYBtAIA
-        AccB/wIAAesB/wIAAv8BAAEBAv8BAAEBAv8CAAL/AgAB6wH/AgABxwH/AlUBVgG0Ax8BLQMKAQ4DAAEB
-        QwABAQMKAQ4DHwEtAVUCVgG0AQABxAL/AQAB1wL/AQAB4wL/AYAB5QL/AYAB5QL/AQAB4wL/AQAB1wL/
-        AQABxAL/AVUCVgG0Ax8BLQMKAQ4DAAEBwAADBAEGAxcBIAFVAVYBVQGxAQABlgEAAf8BAAHLAY8B/wEA
-        Ac0BkAH/AQABywGOAf8BAAHKAY4B/wEAAcoBjgH/AQABywGOAf8BAAHNAZAB/wEAAcsBjwH/AQABlgEA
-        Af8BVQFWAVUBsQMXASADBAEGQAADBAEGAxcBIAJVAVYBsQIAAcoB/wIAAf4B/wIAAf4B/wIAAf0B/wIA
-        AfwB/wIAAfwB/wIAAf0B/wIAAf4B/wIAAf4B/wIAAcoB/wJVAVYBsQMXASADBAEGQAADBAEGAxcBIAFV
-        AlYBsQEAAcUC/wEAAd8C/wEAAeAC/wEAAd8C/wEAAd8C/wEAAd8C/wEAAd8C/wEAAeAC/wEAAd8C/wEA
-        AcUC/wFVAlYBsQMXASADBAEGwAADCwEPAzgBXQEAAZIBAAH/AQAByQGNAf8BAAHKAYwB/wEAAcgBigH/
-        AQABxwGJAf8BAAHHAYkB/wEAAccBiQH/AQABxwGJAf8BAAHIAYoB/wEAAcoBjAH/AQAByQGNAf8BAAGS
-        AQAB/wM4AV0DCwEPQAADCwEPAzgBXQIAAccB/wIAAfwB/wIAAfwB/wIAAfoB/wIAAfkB/wIAAfkB/wIA
-        AfkB/wIAAfkB/wIAAfoB/wIAAfwB/wIAAfwB/wIAAccB/wM4AV0DCwEPQAADCwEPAzgBXQEAAcMC/wEA
-        AdwC/wEAAdwC/wEAAdsC/wEAAdsC/wEAAdsC/wEAAdsC/wEAAdsC/wEAAdsC/wEAAdwC/wEAAdwC/wEA
-        AcMC/wM4AV0DCwEPwAADEAEVAVoBXAFaAc0BAAGzAQAB/wEAAcgBigH/AQABxgGIAf8BAAHFAYcB/wEA
-        AcUBhwH/AQABxQGHAf8BAAHFAYcB/wEAAcUBhwH/AQABxQGHAf8BAAHGAYgB/wEAAcgBigH/AQABswEA
-        Af8BWgFcAVoBzQMQARVAAAMQARUCWgFcAc0CAAHmAf8CAAH6Af8CAAH4Af8CAAH3Af8CAAH3Af8CAAH3
-        Af8CAAH3Af8CAAH3Af8CAAH3Af8CAAH4Af8CAAH6Af8CAAHmAf8CWgFcAc0DEAEVQAADEAEVAVoCXAHN
-        AQAB0AL/AQAB2gL/AQAB2AL/AQAB2AL/AQAB2AL/AQAB2AL/AQAB2AL/AQAB2AL/AQAB2AL/AQAB2AL/
-        AQAB2gL/AQAB0AL/AVoCXAHNAxABFcAAAxABFgEAAYoBAAH/AQABxQGHAf8BAAHFAYYB/wEAAcMBhQH/
-        AQABwwGFAf8BAAHDAYUB/wEAAcMBhQH/AQABwwGFAf8BAAHDAYUB/wEAAcMBhQH/AQABwwGFAf8BAAHF
-        AYYB/wEAAcUBhwH/AQABigEAAf8DEAEWQAADEAEWAgABvwH/AgAB9gH/AgAB9gH/AgAB9AH/AgAB9AH/
-        AgAB9AH/AgAB9AH/AgAB9AH/AgAB9AH/AgAB9AH/AgAB9AH/AgAB9gH/AgAB9gH/AgABvwH/AxABFkAA
-        AxABFgEAAcAC/wEAAdUC/wEAAdQC/wEAAdQC/wEAAdQC/wEAAdQC/wEAAdQC/wEAAdQC/wEAAdQC/wEA
-        AdQC/wEAAdQC/wEAAdQC/wEAAdUC/wEAAcAC/wMQARbAAAMQARYBAAGJAQAB/wEAAc0BlwH/AQABwQGD
-        Af8BAAHBAYMB/wEAAcEBgwH/AQABwQGDAf8BAAHBAYMB/wEAAcEBgwH/AQABwQGDAf8BAAHBAYMB/wEA
-        AcEBgwH/AQABwQGDAf8BAAHNAZcB/wEAAYkBAAH/AxABFkAAAxABFgIAAb8B/wIAAfgB/wIAAfMB/wIA
-        AfIB/wIAAfIB/wIAAfIB/wIAAfIB/wIAAfIB/wIAAfIB/wIAAfIB/wIAAfIB/wIAAfMB/wIAAfgB/wIA
-        Ab8B/wMQARZAAAMQARYBAAHAAv8BAAHZAv8BAAHRAv8BAAHRAv8BAAHRAv8BAAHRAv8BAAHRAv8BAAHR
-        Av8BAAHRAv8BAAHRAv8BAAHRAv8BAAHRAv8BAAHZAv8BAAHAAv8DEAEWwAADEAEVAQABiQEAAf8BAAHU
-        AaMB/wEAAcABBAH/AQABwAGBAf8BAAHAAYEB/wEAAcABgQH/AQABwAGBAf8BAAHAAYEB/wEAAcABgQH/
-        AQABwAGBAf8BAAHAAYEB/wEAAcABBAH/AQAB1AGjAf8BAAGJAQAB/wMQARVAAAMQARUCAAG/Af8BAAGF
-        AfkB/wIAAfEB/wIAAfAB/wIAAfAB/wIAAfAB/wIAAfAB/wIAAfAB/wIAAfAB/wIAAfAB/wIAAfAB/wIA
-        AfEB/wEAAYUB+QH/AgABvwH/AxABFUAAAxABFQEAAcAC/wGDAdsC/wEAAc0C/wEAAc4C/wEAAc4C/wEA
-        Ac4C/wEAAc4C/wEAAc4C/wEAAc4C/wEAAc4C/wEAAc4C/wEAAc0C/wGDAdsC/wEAAcAC/wMQARXAAAML
-        AQ8BAAGJAQAB/wEAAdwBugH/AQABvQEBAf8BAAG9AQMB/wEAAb4BBAH/AQABvgEEAf8BAAG+AQQB/wEA
-        Ab4BBAH/AQABvgEEAf8BAAG+AQQB/wEAAb0BAwH/AQABvQEBAf8BAAHcAboB/wEAAYkBAAH/AwsBD0AA
-        AwsBDwIAAcAB/wGUAaIB9wH/AgAB7QH/AgAB7QH/AgAB7QH/AgAB7QH/AgAB7QH/AgAB7QH/AgAB7QH/
-        AgAB7QH/AgAB7QH/AgAB7QH/AZQBogH3Af8CAAHAAf8DCwEPQAADCwEPAQABwAL/AaAB4gL/AQAByQL/
-        AQABygL/AQABywL/AQABywL/AQABywL/AQABywL/AQABywL/AQABywL/AQABygL/AQAByQL/AaAB4gL/
-        AQABwAL/AwsBD8AAAwQBBgFZAVsBWQHEAQABxwGgAf8BAAHJAZUB/wEAAboBAAH/AQABvAEBAf8BAAG8
-        AQIB/wEAAbwBAgH/AQABvAECAf8BAAG8AQIB/wEAAbwBAQH/AQABugEAAf8BAAHJAZUB/wEAAccBoAH/
-        AVkBWwFZAcQDBAEGQAADBAEGAlkBWwHEAYQBjwHmAf8CAAHwAf8CAAHrAf8CAAHrAf8CAAHrAf8CAAHr
-        Af8CAAHrAf8CAAHrAf8CAAHrAf8CAAHrAf8CAAHwAf8BhAGPAeYB/wJZAVsBxAMEAQZAAAMEAQYBWQJb
-        AcQBiAHbAv8BAAHRAv8BAAHGAv8BAAHIAv8BAAHIAv8BAAHIAv8BAAHIAv8BAAHIAv8BAAHIAv8BAAHG
-        Av8BAAHRAv8BiAHbAv8BWQJbAcQDBAEGwwABAQMpAT8BAAGUAQAB/wGNAeIBxgH/AQABxAGLAf8BAAG4
-        AQAB/wEAAbkBAAH/AQABuQEAAf8BAAG5AQAB/wEAAbkBAAH/AQABuAEAAf8BAAHEAYsB/wGNAeIBxgH/
-        AQABlAEAAf8DKQE+AwABAUMAAQEDKQE/AgABxwH/AaYBsgH2Af8CAAHuAf8CAAHpAf8CAAHpAf8CAAHp
-        Af8CAAHpAf8CAAHpAf8CAAHpAf8CAAHuAf8BpgGyAfYB/wIAAccB/wMpAT4DAAEBQwABAQMpAT8BAAHE
-        Av8BrwHlAv8BAAHLAv8BAAHDAv8BAAHEAv8BAAHEAv8BAAHEAv8BAAHEAv8BAAHDAv8BAAHLAv8BrwHl
-        Av8BAAHEAv8DKQE+AwABAcQAAwMBBAFVAVYBVQGxAQABmgEAAf8BmAHkAckB/wEAAdUBrAH/AQABvgGC
-        Af8BAAG1AQAB/wEAAbUBAAH/AQABvgGCAf8BAAHVAawB/wGYAeQByQH/AQABmgEAAf8BTwFRAU8BnAMC
-        AQNIAAMDAQQCVQFWAbECAAHKAf8BqgG1AfYB/wECAY4B8QH/AgAB6QH/AgAB5QH/AgAB5QH/AgAB6QH/
-        AQIBjgHxAf8BqgG1AfYB/wIAAcoB/wJPAVEBnAMCAQNIAAMDAQQBVQJWAbEBAAHGAv8BswHmAv8BiQHZ
-        Av8BAAHFAv8BAAG9Av8BAAG9Av8BAAHFAv8BiQHZAv8BswHmAv8BAAHGAv8BTwJRAZwDAgEDzAADAgED
-        AU8BUAFPAZsBAAGUAQAB/wEAAcQBnAH/AZYB4gHHAf8BoQHoAdAB/wGhAegB0AH/AZYB4gHHAf8BAAHE
-        AZwB/wEAAZQBAAH/AU8BUAFPAZsDAgEDUAADAgEDAk8BUAGbAgABxwH/AQABiQHjAf8BpwGyAfUB/wGw
-        AbwB+AH/AbABvAH4Af8BpwGyAfUB/wEAAYkB4wH/AgABxwH/Ak8BUAGbAwIBA1AAAwIBAwFPAlABmwEA
-        AcQC/wGBAdgC/wGvAeQC/wG4AeYC/wG4AeYC/wGvAeQC/wGBAdgC/wEAAcQC/wFPAlABmwMCAQPXAAEB
-        AyYBOAFXAVkBVwG/AQABiQEAAf8BAAGIAQAB/wEAAYgBAAH/AQABiQEAAf8BVwFZAVcBvwMmATgDAAEB
-        WwABAQMmATgCVwFZAb8CAAHAAf8CAAG/Af8CAAG/Af8CAAHAAf8CVwFZAb8DJgE4AwABAVsAAQEDJgE4
-        AVcCWQG/AQABwAL/AQABvwL/AQABvwL/AQABwAL/AVcCWQG/AyYBOAMAAQH/AP8A/wD/AP8A/wD/AP8A
-        /wD/AP8A/wD/AP8A/wD/AP8A/wC+AAFCAU0BPgcAAT4DAAEoAwABgAMAASADAAEBAQABAQYAAQIWAAP/
-        AQAM/wQADP8EAAz/BAAM/wQADP8EAAz/BAAM/wQAAf8B4AEHAv8B4AEHAv8B4AEHAf8EAAH/AcABAwL/
-        AcABAwL/AcABAwH/BAAB/wGAAQEC/wGAAQEC/wGAAQEB/wQAAf8CAAL/AgAC/wIAAf8EAAH/AgAC/wIA
+        AccB/wIAAesB/wIAAv8CAAL/AgAC/wIAAv8CAAHrAf8CAAHHAf8CVQFWAbQDHwEtAwoBDgMAAQFDAAEB
+        AwoBDgMfAS0BVQJWAbQBAAHEAv8BAAHXAv8BAAHjAv8BgAHlAv8BgAHlAv8BAAHjAv8BAAHXAv8BAAHE
+        Av8BVQJWAbQDHwEtAwoBDgMAAQHAAAMEAQYDFwEgAVUBVgFVAbEBAAGWAQAB/wEAAcsBjwH/AQABzQGQ
+        Af8BAAHLAY4B/wEAAcoBjgH/AQABygGOAf8BAAHLAY4B/wEAAc0BkAH/AQABywGPAf8BAAGWAQAB/wFV
+        AVYBVQGxAxcBIAMEAQZAAAMEAQYDFwEgAlUBVgGxAgABygH/AgAB/gH/AgAB/gH/AgAB/QH/AgAB/AH/
+        AgAB/AH/AgAB/QH/AgAB/gH/AgAB/gH/AgABygH/AlUBVgGxAxcBIAMEAQZAAAMEAQYDFwEgAVUCVgGx
+        AQABxQL/AQAB3wL/AQAB4AL/AQAB3wL/AQAB3wL/AQAB3wL/AQAB3wL/AQAB4AL/AQAB3wL/AQABxQL/
+        AVUCVgGxAxcBIAMEAQbAAAMLAQ8DOAFdAQABkgEAAf8BAAHJAY0B/wEAAcoBjAH/AQAByAGKAf8BAAHH
+        AYkB/wEAAccBiQH/AQABxwGJAf8BAAHHAYkB/wEAAcgBigH/AQABygGMAf8BAAHJAY0B/wEAAZIBAAH/
+        AzgBXQMLAQ9AAAMLAQ8DOAFdAgABxwH/AgAB/AH/AgAB/AH/AgAB+gH/AgAB+QH/AgAB+QH/AgAB+QH/
+        AgAB+QH/AgAB+gH/AgAB/AH/AgAB/AH/AgABxwH/AzgBXQMLAQ9AAAMLAQ8DOAFdAQABwwL/AQAB3AL/
+        AQAB3AL/AQAB2wL/AQAB2wL/AQAB2wL/AQAB2wL/AQAB2wL/AQAB2wL/AQAB3AL/AQAB3AL/AQABwwL/
+        AzgBXQMLAQ/AAAMQARUBWgFcAVoBzQEAAbMBAAH/AQAByAGKAf8BAAHGAYgB/wEAAcUBhwH/AQABxQGH
+        Af8BAAHFAYcB/wEAAcUBhwH/AQABxQGHAf8BAAHFAYcB/wEAAcYBiAH/AQAByAGKAf8BAAGzAQAB/wFa
+        AVwBWgHNAxABFUAAAxABFQJaAVwBzQIAAeYB/wIAAfoB/wIAAfgB/wIAAfcB/wIAAfcB/wIAAfcB/wIA
+        AfcB/wIAAfcB/wIAAfcB/wIAAfgB/wIAAfoB/wIAAeYB/wJaAVwBzQMQARVAAAMQARUBWgJcAc0BAAHQ
+        Av8BAAHaAv8BAAHYAv8BAAHYAv8BAAHYAv8BAAHYAv8BAAHYAv8BAAHYAv8BAAHYAv8BAAHYAv8BAAHa
+        Av8BAAHQAv8BWgJcAc0DEAEVwAADEAEWAQABigEAAf8BAAHFAYcB/wEAAcUBhgH/AQABwwGFAf8BAAHD
+        AYUB/wEAAcMBhQH/AQABwwGFAf8BAAHDAYUB/wEAAcMBhQH/AQABwwGFAf8BAAHDAYUB/wEAAcUBhgH/
+        AQABxQGHAf8BAAGKAQAB/wMQARZAAAMQARYCAAG/Af8CAAH2Af8CAAH2Af8CAAH0Af8CAAH0Af8CAAH0
+        Af8CAAH0Af8CAAH0Af8CAAH0Af8CAAH0Af8CAAH0Af8CAAH2Af8CAAH2Af8CAAG/Af8DEAEWQAADEAEW
+        AQABwAL/AQAB1QL/AQAB1AL/AQAB1AL/AQAB1AL/AQAB1AL/AQAB1AL/AQAB1AL/AQAB1AL/AQAB1AL/
+        AQAB1AL/AQAB1AL/AQAB1QL/AQABwAL/AxABFsAAAxABFgEAAYkBAAH/AQABzQGXAf8BAAHBAYMB/wEA
+        AcEBgwH/AQABwQGDAf8BAAHBAYMB/wEAAcEBgwH/AQABwQGDAf8BAAHBAYMB/wEAAcEBgwH/AQABwQGD
+        Af8BAAHBAYMB/wEAAc0BlwH/AQABiQEAAf8DEAEWQAADEAEWAgABvwH/AgAB+AH/AgAB8wH/AgAB8gH/
+        AgAB8gH/AgAB8gH/AgAB8gH/AgAB8gH/AgAB8gH/AgAB8gH/AgAB8gH/AgAB8wH/AgAB+AH/AgABvwH/
+        AxABFkAAAxABFgEAAcAC/wEAAdkC/wEAAdEC/wEAAdEC/wEAAdEC/wEAAdEC/wEAAdEC/wEAAdEC/wEA
+        AdEC/wEAAdEC/wEAAdEC/wEAAdEC/wEAAdkC/wEAAcAC/wMQARbAAAMQARUBAAGJAQAB/wEAAdQBowH/
+        AQABwAEDAf8BAAHAAYEB/wEAAcABgQH/AQABwAGBAf8BAAHAAYEB/wEAAcABgQH/AQABwAGBAf8BAAHA
+        AYEB/wEAAcABgQH/AQABwAEDAf8BAAHUAaMB/wEAAYkBAAH/AxABFUAAAxABFQIAAb8B/wEAAYUB+QH/
+        AgAB8QH/AgAB8AH/AgAB8AH/AgAB8AH/AgAB8AH/AgAB8AH/AgAB8AH/AgAB8AH/AgAB8AH/AgAB8QH/
+        AQABhQH5Af8CAAG/Af8DEAEVQAADEAEVAQABwAL/AYMB2wL/AQABzQL/AQABzgL/AQABzgL/AQABzgL/
+        AQABzgL/AQABzgL/AQABzgL/AQABzgL/AQABzgL/AQABzQL/AYMB2wL/AQABwAL/AxABFcAAAwsBDwEA
+        AYkBAAH/AQAB3AG6Af8BAAG9AQAB/wEAAb0BAgH/AQABvgEDAf8BAAG+AQMB/wEAAb4BAwH/AQABvgED
+        Af8BAAG+AQMB/wEAAb4BAwH/AQABvQECAf8BAAG9AQAB/wEAAdwBugH/AQABiQEAAf8DCwEPQAADCwEP
+        AgABwAH/AZQBogH3Af8CAAHtAf8CAAHtAf8CAAHtAf8CAAHtAf8CAAHtAf8CAAHtAf8CAAHtAf8CAAHt
+        Af8CAAHtAf8CAAHtAf8BlAGiAfcB/wIAAcAB/wMLAQ9AAAMLAQ8BAAHAAv8BoAHiAv8BAAHJAv8BAAHK
+        Av8BAAHLAv8BAAHLAv8BAAHLAv8BAAHLAv8BAAHLAv8BAAHLAv8BAAHKAv8BAAHJAv8BoAHiAv8BAAHA
+        Av8DCwEPwAADBAEGAVkBWwFZAcQBAAHHAaAB/wEAAckBlQH/AQABugEAAf8BAAG8AQAB/wEAAbwBAQH/
+        AQABvAEBAf8BAAG8AQEB/wEAAbwBAQH/AQABvAEAAf8BAAG6AQAB/wEAAckBlQH/AQABxwGgAf8BWQFb
+        AVkBxAMEAQZAAAMEAQYCWQFbAcQBhAGPAeYB/wIAAfAB/wIAAesB/wIAAesB/wIAAesB/wIAAesB/wIA
+        AesB/wIAAesB/wIAAesB/wIAAesB/wIAAfAB/wGEAY8B5gH/AlkBWwHEAwQBBkAAAwQBBgFZAlsBxAGI
+        AdsC/wEAAdEC/wEAAcYC/wEAAcgC/wEAAcgC/wEAAcgC/wEAAcgC/wEAAcgC/wEAAcgC/wEAAcYC/wEA
+        AdEC/wGIAdsC/wFZAlsBxAMEAQbDAAEBAykBPwEAAZQBAAH/AY0B4gHGAf8BAAHEAYsB/wEAAbgBAAH/
+        AQABuQEAAf8BAAG5AQAB/wEAAbkBAAH/AQABuQEAAf8BAAG4AQAB/wEAAcQBiwH/AY0B4gHGAf8BAAGU
+        AQAB/wMpAT4DAAEBQwABAQMpAT8CAAHHAf8BpgGyAfYB/wIAAe4B/wIAAekB/wIAAekB/wIAAekB/wIA
+        AekB/wIAAekB/wIAAekB/wIAAe4B/wGmAbIB9gH/AgABxwH/AykBPgMAAQFDAAEBAykBPwEAAcQC/wGv
+        AeUC/wEAAcsC/wEAAcMC/wEAAcQC/wEAAcQC/wEAAcQC/wEAAcQC/wEAAcMC/wEAAcsC/wGvAeUC/wEA
+        AcQC/wMpAT4DAAEBxAADAwEEAVUBVgFVAbEBAAGaAQAB/wGYAeQByQH/AQAB1QGsAf8BAAG+AYIB/wEA
+        AbUBAAH/AQABtQEAAf8BAAG+AYIB/wEAAdUBrAH/AZgB5AHJAf8BAAGaAQAB/wFPAVEBTwGcAwIBA0gA
+        AwMBBAJVAVYBsQIAAcoB/wGqAbUB9gH/AQEBjgHxAf8CAAHpAf8CAAHlAf8CAAHlAf8CAAHpAf8BAQGO
+        AfEB/wGqAbUB9gH/AgABygH/Ak8BUQGcAwIBA0gAAwMBBAFVAlYBsQEAAcYC/wGzAeYC/wGJAdkC/wEA
+        AcUC/wEAAb0C/wEAAb0C/wEAAcUC/wGJAdkC/wGzAeYC/wEAAcYC/wFPAlEBnAMCAQPMAAMCAQMBTwFQ
+        AU8BmwEAAZQBAAH/AQABxAGcAf8BlgHiAccB/wGhAegB0AH/AaEB6AHQAf8BlgHiAccB/wEAAcQBnAH/
+        AQABlAEAAf8BTwFQAU8BmwMCAQNQAAMCAQMCTwFQAZsCAAHHAf8BAAGJAeMB/wGnAbIB9QH/AbABvAH4
+        Af8BsAG8AfgB/wGnAbIB9QH/AQABiQHjAf8CAAHHAf8CTwFQAZsDAgEDUAADAgEDAU8CUAGbAQABxAL/
+        AYEB2AL/Aa8B5AL/AbgB5gL/AbgB5gL/Aa8B5AL/AYEB2AL/AQABxAL/AU8CUAGbAwIBA9cAAQEDJgE4
+        AVcBWQFXAb8BAAGJAQAB/wEAAYgBAAH/AQABiAEAAf8BAAGJAQAB/wFXAVkBVwG/AyYBOAMAAQFbAAEB
+        AyYBOAJXAVkBvwIAAcAB/wIAAb8B/wIAAb8B/wIAAcAB/wJXAVkBvwMmATgDAAEBWwABAQMmATgBVwJZ
+        Ab8BAAHAAv8BAAG/Av8BAAG/Av8BAAHAAv8BVwJZAb8DJgE4AwABAf8A/wD/AP8A/wD/AP8A/wD/AP8A
+        /wD/AP8A/wD/AP8A/wD/AL4AAUIBTQE+BwABPgMAASgDAAGAAwABIAMAAQEBAAEBBgABAhYAA/8BAAz/
+        BAAM/wQADP8EAAz/BAAM/wQADP8EAAz/BAAB/wHgAQcC/wHgAQcC/wHgAQcB/wQAAf8BwAEDAv8BwAED
+        Av8BwAEDAf8EAAH/AYABAQL/AYABAQL/AYABAQH/BAAB/wIAAv8CAAL/AgAB/wQAAf8CAAL/AgAC/wIA
+        Af8EAAH/AgAC/wIAAv8CAAH/BAAB/wIAAv8CAAL/AgAB/wQAAf8CAAL/AgAC/wIAAf8EAAH/AgAC/wIA
         Av8CAAH/BAAB/wIAAv8CAAL/AgAB/wQAAf8CAAL/AgAC/wIAAf8EAAH/AgAC/wIAAv8CAAH/BAAB/wIA
-        Av8CAAL/AgAB/wQAAf8CAAL/AgAC/wIAAf8EAAH/AgAC/wIAAv8CAAH/BAAB/wIAAv8CAAL/AgAB/wQA
-        Af8CAAL/AgAC/wIAAf8EAAH/AYABAQL/AYABAQL/AYABAQH/BAAB/wHAAQMC/wHAAQMC/wHAAQMB/wQA
-        Af8B4AEHAv8B4AEHAv8B4AEHAf8EAAz/BAAM/wQADP8EAAz/BAAM/wQADP8EAAz/BAAM/wQADP8EAAs=
+        Av8CAAL/AgAB/wQAAf8BgAEBAv8BgAEBAv8BgAEBAf8EAAH/AcABAwL/AcABAwL/AcABAwH/BAAB/wHg
+        AQcC/wHgAQcC/wHgAQcB/wQADP8EAAz/BAAM/wQADP8EAAz/BAAM/wQADP8EAAz/BAAM/wQACw==
 </value>
   </data>
   <data name="RadDropDownButtonElement2.AccessibleDescription" xml:space="preserve">
@@ -1780,21 +1780,6 @@
   </data>
   <data name="RadDropDownButtonElement2.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
-  </data>
-  <data name="RadDropDownButtonElement2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 2, 0</value>
-  </data>
-  <data name="RadDropDownButtonElement2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadDropDownButtonElement2.RightToLeft" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadDropDownButtonElement2.Text" xml:space="preserve">
-    <value>Kompatibilität</value>
-  </data>
-  <data name="RadDropDownButtonElement2.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="RadMenuItem4.AccessibleDescription" xml:space="preserve">
     <value>Messtechnische und technische Daten</value>
@@ -1989,6 +1974,21 @@
     <value>MiddleCenter</value>
   </data>
   <data name="RadMenuItem8.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="RadDropDownButtonElement2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 2, 0</value>
+  </data>
+  <data name="RadDropDownButtonElement2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadDropDownButtonElement2.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RadDropDownButtonElement2.Text" xml:space="preserve">
+    <value>Kompatibilität</value>
+  </data>
+  <data name="RadDropDownButtonElement2.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
   <data name="RadDropDownButtonElement3.AccessibleDescription" xml:space="preserve">
