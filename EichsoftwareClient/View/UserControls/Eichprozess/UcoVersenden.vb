@@ -177,7 +177,7 @@ Public Class UcoVersenden
                     'nur versenden wenn der Eichprozess noch nicht versendet wurde. Sonst würden zu oft Marken abgezogen
 
                     If objEichprozess.FK_Bearbeitungsstatus = 1 Then
-                        Webcontext.AddEichmarkenverwaltung(objLiz.HEKennung, objLiz.Lizenzschluessel, objEichprozess.Eichprotokoll.Identifikationsdaten_Benutzer, _
+                        Webcontext.AddEichmarkenverwaltung(objLiz.HEKennung, objLiz.Lizenzschluessel, objLiz.FK_BenutzerID, _
                                                        objEichprozess.Eichprotokoll.Sicherung_BenannteStelleAnzahl, objEichprozess.Eichprotokoll.Sicherung_Eichsiegel13x13Anzahl, _
                                                        objEichprozess.Eichprotokoll.Sicherung_EichsiegelRundAnzahl, objEichprozess.Eichprotokoll.Sicherung_HinweismarkeGelochtAnzahl, _
                                                        objEichprozess.Eichprotokoll.Sicherung_GruenesMAnzahl, objEichprozess.Eichprotokoll.Sicherung_CEAnzahl, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)

@@ -41,8 +41,8 @@
                 RadGridViewAuswahlliste.DataSource = Data.ToList
                 Try
                     RadGridViewAuswahlliste.Columns("ID").IsVisible = False
-                    RadGridViewAuswahlliste.Columns("Lizenzschluessel").IsVisible = False
-                    RadGridViewAuswahlliste.Columns("FK_BenutzerID").IsVisible = False
+                    '   RadGridViewAuswahlliste.Columns("Lizenzschluessel").IsVisible = False
+                    '  RadGridViewAuswahlliste.Columns("FK_BenutzerID").IsVisible = False
 
                 Catch ex As Exception
 
