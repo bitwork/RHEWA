@@ -4,7 +4,7 @@
         CreateNewEichprozess()
     End Sub
     Private Sub CreateNewEichprozess()
-        Dim f As New frmWaegezelle
+        Dim f As New frmEingabeWaegezelle
         f.ShowDialog()
 
         'nach dem schließen des Dialogs aktualisieren
@@ -55,11 +55,11 @@
                 SelectedID = RadGridViewAuswahlliste.SelectedRows(0).Cells("ID").Value
 
                 'anzeigen des Dialogs zur Bearbeitung der Eichung
-                    Dim f As New frmWaegezelle(SelectedID)
-                    f.ShowDialog()
+                Dim f As New frmEingabeWaegezelle(SelectedID)
+                f.ShowDialog()
 
-                    'nach dem schließen des Dialogs aktualisieren
-                    LoadFromDatabase()
+                'nach dem schließen des Dialogs aktualisieren
+                LoadFromDatabase()
 
             End If
         End If

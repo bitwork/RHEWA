@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmAuswertegeraet
+Partial Class frmEingabeAuswertegeraet
     Inherits Telerik.WinControls.UI.RadForm
 
     'Form overrides dispose to clean up the component list.
@@ -57,43 +57,43 @@ Partial Class frmAuswertegeraet
         Me.RadTextBoxControlAuswertegeraetGenauigkeitsklasse = New Telerik.WinControls.UI.RadTextBoxControl()
         Me.RadTextBoxControlAuswertegeraetBruchteilEichfehlergrenze = New Telerik.WinControls.UI.RadTextBoxControl()
         Me.RadTextBoxControlAuswertegeraetBauartzulassung = New Telerik.WinControls.UI.RadTextBoxControl()
-        CType(Me.RadCheckBoxDeaktiviert,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RadLabelTyp,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RadLabelSpeisespannung,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RadLabelAuswertegeraetPruefbericht,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RadLabelMindestmesssignal,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RadLabelMindesteingangsspannung,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RadLabelGrenzwertTemperaturbereichMIN,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RadLabelGrenzwertTemperaturbereichMAX,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RadLabelMAXAnzahlTeilungswerteMehrbereichswaage,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RadLabelMAXAnzahlTeilungswerteEinbereichswaage,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RadLabelKabellaengeQuerschnitt,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RadLabelHersteller,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RadLabelGrenzwertLastwiderstandMIN,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RadLabelGrenzwertLastwiderstandMAX,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RadLabelGenauigkeitsklasse,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RadLabelBruchteilEichfehlergrenze,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RadLabelBauartzulassung,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RadButtonAbbrechen,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RadButtonSpeichern,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RadTextBoxControlAuswertegeraetTyp,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RadTextBoxControlAuswertegeraetSpeisespannung,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RadTextBoxControlAuswertegeraetPruefbericht,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RadTextBoxControlAuswertegeraetMindestmesssignal,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RadTextBoxControlAuswertegeraetMindesteingangsspannung,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RadTextBoxControlAuswertegeraetGrenzwertTemperaturbereichMIN,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RadTextBoxControlAuswertegeraetGrenzwertTemperaturbereichMAX,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RadTextBoxControlAuswertegeraetMAXAnzahlTeilungswerteMehrbereichswaage,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RadTextBoxControlAuswertegeraetMAXAnzahlTeilungswertEinbereichswaage,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RadTextBoxControlAuswertegeraetKabellaengeQuerschnitt,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RadTextBoxControlAuswertegeraetHersteller,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RadTextBoxControlAuswertegeraetGrenzwertLastwiderstandMIN,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RadTextBoxControlAuswertegeraetGrenzWertLastwiderstandMAX,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RadTextBoxControlAuswertegeraetGenauigkeitsklasse,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RadTextBoxControlAuswertegeraetBruchteilEichfehlergrenze,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RadTextBoxControlAuswertegeraetBauartzulassung,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.SuspendLayout
+        CType(Me.RadCheckBoxDeaktiviert, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabelTyp, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabelSpeisespannung, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabelAuswertegeraetPruefbericht, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabelMindestmesssignal, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabelMindesteingangsspannung, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabelGrenzwertTemperaturbereichMIN, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabelGrenzwertTemperaturbereichMAX, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabelMAXAnzahlTeilungswerteMehrbereichswaage, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabelMAXAnzahlTeilungswerteEinbereichswaage, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabelKabellaengeQuerschnitt, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabelHersteller, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabelGrenzwertLastwiderstandMIN, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabelGrenzwertLastwiderstandMAX, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabelGenauigkeitsklasse, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabelBruchteilEichfehlergrenze, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadLabelBauartzulassung, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadButtonAbbrechen, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadButtonSpeichern, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxControlAuswertegeraetTyp, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxControlAuswertegeraetSpeisespannung, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxControlAuswertegeraetPruefbericht, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxControlAuswertegeraetMindestmesssignal, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxControlAuswertegeraetMindesteingangsspannung, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxControlAuswertegeraetGrenzwertTemperaturbereichMIN, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxControlAuswertegeraetGrenzwertTemperaturbereichMAX, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxControlAuswertegeraetMAXAnzahlTeilungswerteMehrbereichswaage, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxControlAuswertegeraetMAXAnzahlTeilungswertEinbereichswaage, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxControlAuswertegeraetKabellaengeQuerschnitt, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxControlAuswertegeraetHersteller, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxControlAuswertegeraetGrenzwertLastwiderstandMIN, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxControlAuswertegeraetGrenzWertLastwiderstandMAX, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxControlAuswertegeraetGenauigkeitsklasse, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxControlAuswertegeraetBruchteilEichfehlergrenze, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxControlAuswertegeraetBauartzulassung, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
         '
         'RadCheckBoxDeaktiviert
         '
@@ -105,8 +105,8 @@ Partial Class frmAuswertegeraet
         Me.RadCheckBoxDeaktiviert.RootElement.AccessibleDescription = Nothing
         Me.RadCheckBoxDeaktiviert.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxDeaktiviert.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadCheckBoxDeaktiviert.RootElement.AngleTransform = 0!
-        Me.RadCheckBoxDeaktiviert.RootElement.FlipText = false
+        Me.RadCheckBoxDeaktiviert.RootElement.AngleTransform = 0.0!
+        Me.RadCheckBoxDeaktiviert.RootElement.FlipText = False
         Me.RadCheckBoxDeaktiviert.RootElement.Margin = New System.Windows.Forms.Padding(0)
         Me.RadCheckBoxDeaktiviert.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadCheckBoxDeaktiviert.RootElement.Text = Nothing
@@ -125,8 +125,8 @@ Partial Class frmAuswertegeraet
         Me.RadLabelTyp.RootElement.AccessibleDescription = Nothing
         Me.RadLabelTyp.RootElement.AccessibleName = Nothing
         Me.RadLabelTyp.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadLabelTyp.RootElement.AngleTransform = 0!
-        Me.RadLabelTyp.RootElement.FlipText = false
+        Me.RadLabelTyp.RootElement.AngleTransform = 0.0!
+        Me.RadLabelTyp.RootElement.FlipText = False
         Me.RadLabelTyp.RootElement.Margin = New System.Windows.Forms.Padding(0)
         Me.RadLabelTyp.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadLabelTyp.RootElement.Text = Nothing
@@ -145,8 +145,8 @@ Partial Class frmAuswertegeraet
         Me.RadLabelSpeisespannung.RootElement.AccessibleDescription = Nothing
         Me.RadLabelSpeisespannung.RootElement.AccessibleName = Nothing
         Me.RadLabelSpeisespannung.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadLabelSpeisespannung.RootElement.AngleTransform = 0!
-        Me.RadLabelSpeisespannung.RootElement.FlipText = false
+        Me.RadLabelSpeisespannung.RootElement.AngleTransform = 0.0!
+        Me.RadLabelSpeisespannung.RootElement.FlipText = False
         Me.RadLabelSpeisespannung.RootElement.Margin = New System.Windows.Forms.Padding(0)
         Me.RadLabelSpeisespannung.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadLabelSpeisespannung.RootElement.Text = Nothing
@@ -165,8 +165,8 @@ Partial Class frmAuswertegeraet
         Me.RadLabelAuswertegeraetPruefbericht.RootElement.AccessibleDescription = Nothing
         Me.RadLabelAuswertegeraetPruefbericht.RootElement.AccessibleName = Nothing
         Me.RadLabelAuswertegeraetPruefbericht.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadLabelAuswertegeraetPruefbericht.RootElement.AngleTransform = 0!
-        Me.RadLabelAuswertegeraetPruefbericht.RootElement.FlipText = false
+        Me.RadLabelAuswertegeraetPruefbericht.RootElement.AngleTransform = 0.0!
+        Me.RadLabelAuswertegeraetPruefbericht.RootElement.FlipText = False
         Me.RadLabelAuswertegeraetPruefbericht.RootElement.Margin = New System.Windows.Forms.Padding(0)
         Me.RadLabelAuswertegeraetPruefbericht.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadLabelAuswertegeraetPruefbericht.RootElement.Text = Nothing
@@ -185,8 +185,8 @@ Partial Class frmAuswertegeraet
         Me.RadLabelMindestmesssignal.RootElement.AccessibleDescription = Nothing
         Me.RadLabelMindestmesssignal.RootElement.AccessibleName = Nothing
         Me.RadLabelMindestmesssignal.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadLabelMindestmesssignal.RootElement.AngleTransform = 0!
-        Me.RadLabelMindestmesssignal.RootElement.FlipText = false
+        Me.RadLabelMindestmesssignal.RootElement.AngleTransform = 0.0!
+        Me.RadLabelMindestmesssignal.RootElement.FlipText = False
         Me.RadLabelMindestmesssignal.RootElement.Margin = New System.Windows.Forms.Padding(0)
         Me.RadLabelMindestmesssignal.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadLabelMindestmesssignal.RootElement.Text = Nothing
@@ -205,8 +205,8 @@ Partial Class frmAuswertegeraet
         Me.RadLabelMindesteingangsspannung.RootElement.AccessibleDescription = Nothing
         Me.RadLabelMindesteingangsspannung.RootElement.AccessibleName = Nothing
         Me.RadLabelMindesteingangsspannung.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadLabelMindesteingangsspannung.RootElement.AngleTransform = 0!
-        Me.RadLabelMindesteingangsspannung.RootElement.FlipText = false
+        Me.RadLabelMindesteingangsspannung.RootElement.AngleTransform = 0.0!
+        Me.RadLabelMindesteingangsspannung.RootElement.FlipText = False
         Me.RadLabelMindesteingangsspannung.RootElement.Margin = New System.Windows.Forms.Padding(0)
         Me.RadLabelMindesteingangsspannung.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadLabelMindesteingangsspannung.RootElement.Text = Nothing
@@ -225,8 +225,8 @@ Partial Class frmAuswertegeraet
         Me.RadLabelGrenzwertTemperaturbereichMIN.RootElement.AccessibleDescription = Nothing
         Me.RadLabelGrenzwertTemperaturbereichMIN.RootElement.AccessibleName = Nothing
         Me.RadLabelGrenzwertTemperaturbereichMIN.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadLabelGrenzwertTemperaturbereichMIN.RootElement.AngleTransform = 0!
-        Me.RadLabelGrenzwertTemperaturbereichMIN.RootElement.FlipText = false
+        Me.RadLabelGrenzwertTemperaturbereichMIN.RootElement.AngleTransform = 0.0!
+        Me.RadLabelGrenzwertTemperaturbereichMIN.RootElement.FlipText = False
         Me.RadLabelGrenzwertTemperaturbereichMIN.RootElement.Margin = New System.Windows.Forms.Padding(0)
         Me.RadLabelGrenzwertTemperaturbereichMIN.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadLabelGrenzwertTemperaturbereichMIN.RootElement.Text = Nothing
@@ -245,8 +245,8 @@ Partial Class frmAuswertegeraet
         Me.RadLabelGrenzwertTemperaturbereichMAX.RootElement.AccessibleDescription = Nothing
         Me.RadLabelGrenzwertTemperaturbereichMAX.RootElement.AccessibleName = Nothing
         Me.RadLabelGrenzwertTemperaturbereichMAX.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadLabelGrenzwertTemperaturbereichMAX.RootElement.AngleTransform = 0!
-        Me.RadLabelGrenzwertTemperaturbereichMAX.RootElement.FlipText = false
+        Me.RadLabelGrenzwertTemperaturbereichMAX.RootElement.AngleTransform = 0.0!
+        Me.RadLabelGrenzwertTemperaturbereichMAX.RootElement.FlipText = False
         Me.RadLabelGrenzwertTemperaturbereichMAX.RootElement.Margin = New System.Windows.Forms.Padding(0)
         Me.RadLabelGrenzwertTemperaturbereichMAX.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadLabelGrenzwertTemperaturbereichMAX.RootElement.Text = Nothing
@@ -365,8 +365,8 @@ Partial Class frmAuswertegeraet
         Me.RadLabelGrenzwertLastwiderstandMAX.RootElement.AccessibleDescription = Nothing
         Me.RadLabelGrenzwertLastwiderstandMAX.RootElement.AccessibleName = Nothing
         Me.RadLabelGrenzwertLastwiderstandMAX.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadLabelGrenzwertLastwiderstandMAX.RootElement.AngleTransform = 0!
-        Me.RadLabelGrenzwertLastwiderstandMAX.RootElement.FlipText = false
+        Me.RadLabelGrenzwertLastwiderstandMAX.RootElement.AngleTransform = 0.0!
+        Me.RadLabelGrenzwertLastwiderstandMAX.RootElement.FlipText = False
         Me.RadLabelGrenzwertLastwiderstandMAX.RootElement.Margin = New System.Windows.Forms.Padding(0)
         Me.RadLabelGrenzwertLastwiderstandMAX.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadLabelGrenzwertLastwiderstandMAX.RootElement.Text = Nothing
@@ -385,8 +385,8 @@ Partial Class frmAuswertegeraet
         Me.RadLabelGenauigkeitsklasse.RootElement.AccessibleDescription = Nothing
         Me.RadLabelGenauigkeitsklasse.RootElement.AccessibleName = Nothing
         Me.RadLabelGenauigkeitsklasse.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadLabelGenauigkeitsklasse.RootElement.AngleTransform = 0!
-        Me.RadLabelGenauigkeitsklasse.RootElement.FlipText = false
+        Me.RadLabelGenauigkeitsklasse.RootElement.AngleTransform = 0.0!
+        Me.RadLabelGenauigkeitsklasse.RootElement.FlipText = False
         Me.RadLabelGenauigkeitsklasse.RootElement.Margin = New System.Windows.Forms.Padding(0)
         Me.RadLabelGenauigkeitsklasse.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadLabelGenauigkeitsklasse.RootElement.Text = Nothing
@@ -405,8 +405,8 @@ Partial Class frmAuswertegeraet
         Me.RadLabelBruchteilEichfehlergrenze.RootElement.AccessibleDescription = Nothing
         Me.RadLabelBruchteilEichfehlergrenze.RootElement.AccessibleName = Nothing
         Me.RadLabelBruchteilEichfehlergrenze.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadLabelBruchteilEichfehlergrenze.RootElement.AngleTransform = 0!
-        Me.RadLabelBruchteilEichfehlergrenze.RootElement.FlipText = false
+        Me.RadLabelBruchteilEichfehlergrenze.RootElement.AngleTransform = 0.0!
+        Me.RadLabelBruchteilEichfehlergrenze.RootElement.FlipText = False
         Me.RadLabelBruchteilEichfehlergrenze.RootElement.Margin = New System.Windows.Forms.Padding(0)
         Me.RadLabelBruchteilEichfehlergrenze.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadLabelBruchteilEichfehlergrenze.RootElement.Text = Nothing
@@ -425,8 +425,8 @@ Partial Class frmAuswertegeraet
         Me.RadLabelBauartzulassung.RootElement.AccessibleDescription = Nothing
         Me.RadLabelBauartzulassung.RootElement.AccessibleName = Nothing
         Me.RadLabelBauartzulassung.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadLabelBauartzulassung.RootElement.AngleTransform = 0!
-        Me.RadLabelBauartzulassung.RootElement.FlipText = false
+        Me.RadLabelBauartzulassung.RootElement.AngleTransform = 0.0!
+        Me.RadLabelBauartzulassung.RootElement.FlipText = False
         Me.RadLabelBauartzulassung.RootElement.Margin = New System.Windows.Forms.Padding(0)
         Me.RadLabelBauartzulassung.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadLabelBauartzulassung.RootElement.Text = Nothing
@@ -445,8 +445,8 @@ Partial Class frmAuswertegeraet
         Me.RadButtonAbbrechen.RootElement.AccessibleDescription = Nothing
         Me.RadButtonAbbrechen.RootElement.AccessibleName = Nothing
         Me.RadButtonAbbrechen.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadButtonAbbrechen.RootElement.AngleTransform = 0!
-        Me.RadButtonAbbrechen.RootElement.FlipText = false
+        Me.RadButtonAbbrechen.RootElement.AngleTransform = 0.0!
+        Me.RadButtonAbbrechen.RootElement.FlipText = False
         Me.RadButtonAbbrechen.RootElement.Margin = New System.Windows.Forms.Padding(0)
         Me.RadButtonAbbrechen.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadButtonAbbrechen.RootElement.Text = Nothing
@@ -465,8 +465,8 @@ Partial Class frmAuswertegeraet
         Me.RadButtonSpeichern.RootElement.AccessibleDescription = Nothing
         Me.RadButtonSpeichern.RootElement.AccessibleName = Nothing
         Me.RadButtonSpeichern.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadButtonSpeichern.RootElement.AngleTransform = 0!
-        Me.RadButtonSpeichern.RootElement.FlipText = false
+        Me.RadButtonSpeichern.RootElement.AngleTransform = 0.0!
+        Me.RadButtonSpeichern.RootElement.FlipText = False
         Me.RadButtonSpeichern.RootElement.Margin = New System.Windows.Forms.Padding(0)
         Me.RadButtonSpeichern.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadButtonSpeichern.RootElement.Text = Nothing
@@ -485,8 +485,8 @@ Partial Class frmAuswertegeraet
         Me.RadTextBoxControlAuswertegeraetTyp.RootElement.AccessibleDescription = Nothing
         Me.RadTextBoxControlAuswertegeraetTyp.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlAuswertegeraetTyp.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadTextBoxControlAuswertegeraetTyp.RootElement.AngleTransform = 0!
-        Me.RadTextBoxControlAuswertegeraetTyp.RootElement.FlipText = false
+        Me.RadTextBoxControlAuswertegeraetTyp.RootElement.AngleTransform = 0.0!
+        Me.RadTextBoxControlAuswertegeraetTyp.RootElement.FlipText = False
         Me.RadTextBoxControlAuswertegeraetTyp.RootElement.Margin = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlAuswertegeraetTyp.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlAuswertegeraetTyp.RootElement.Text = Nothing
@@ -504,8 +504,8 @@ Partial Class frmAuswertegeraet
         Me.RadTextBoxControlAuswertegeraetSpeisespannung.RootElement.AccessibleDescription = Nothing
         Me.RadTextBoxControlAuswertegeraetSpeisespannung.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlAuswertegeraetSpeisespannung.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadTextBoxControlAuswertegeraetSpeisespannung.RootElement.AngleTransform = 0!
-        Me.RadTextBoxControlAuswertegeraetSpeisespannung.RootElement.FlipText = false
+        Me.RadTextBoxControlAuswertegeraetSpeisespannung.RootElement.AngleTransform = 0.0!
+        Me.RadTextBoxControlAuswertegeraetSpeisespannung.RootElement.FlipText = False
         Me.RadTextBoxControlAuswertegeraetSpeisespannung.RootElement.Margin = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlAuswertegeraetSpeisespannung.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlAuswertegeraetSpeisespannung.RootElement.Text = Nothing
@@ -523,8 +523,8 @@ Partial Class frmAuswertegeraet
         Me.RadTextBoxControlAuswertegeraetPruefbericht.RootElement.AccessibleDescription = Nothing
         Me.RadTextBoxControlAuswertegeraetPruefbericht.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlAuswertegeraetPruefbericht.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadTextBoxControlAuswertegeraetPruefbericht.RootElement.AngleTransform = 0!
-        Me.RadTextBoxControlAuswertegeraetPruefbericht.RootElement.FlipText = false
+        Me.RadTextBoxControlAuswertegeraetPruefbericht.RootElement.AngleTransform = 0.0!
+        Me.RadTextBoxControlAuswertegeraetPruefbericht.RootElement.FlipText = False
         Me.RadTextBoxControlAuswertegeraetPruefbericht.RootElement.Margin = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlAuswertegeraetPruefbericht.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlAuswertegeraetPruefbericht.RootElement.Text = Nothing
@@ -542,8 +542,8 @@ Partial Class frmAuswertegeraet
         Me.RadTextBoxControlAuswertegeraetMindestmesssignal.RootElement.AccessibleDescription = Nothing
         Me.RadTextBoxControlAuswertegeraetMindestmesssignal.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlAuswertegeraetMindestmesssignal.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadTextBoxControlAuswertegeraetMindestmesssignal.RootElement.AngleTransform = 0!
-        Me.RadTextBoxControlAuswertegeraetMindestmesssignal.RootElement.FlipText = false
+        Me.RadTextBoxControlAuswertegeraetMindestmesssignal.RootElement.AngleTransform = 0.0!
+        Me.RadTextBoxControlAuswertegeraetMindestmesssignal.RootElement.FlipText = False
         Me.RadTextBoxControlAuswertegeraetMindestmesssignal.RootElement.Margin = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlAuswertegeraetMindestmesssignal.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlAuswertegeraetMindestmesssignal.RootElement.Text = Nothing
@@ -561,8 +561,8 @@ Partial Class frmAuswertegeraet
         Me.RadTextBoxControlAuswertegeraetMindesteingangsspannung.RootElement.AccessibleDescription = Nothing
         Me.RadTextBoxControlAuswertegeraetMindesteingangsspannung.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlAuswertegeraetMindesteingangsspannung.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadTextBoxControlAuswertegeraetMindesteingangsspannung.RootElement.AngleTransform = 0!
-        Me.RadTextBoxControlAuswertegeraetMindesteingangsspannung.RootElement.FlipText = false
+        Me.RadTextBoxControlAuswertegeraetMindesteingangsspannung.RootElement.AngleTransform = 0.0!
+        Me.RadTextBoxControlAuswertegeraetMindesteingangsspannung.RootElement.FlipText = False
         Me.RadTextBoxControlAuswertegeraetMindesteingangsspannung.RootElement.Margin = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlAuswertegeraetMindesteingangsspannung.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlAuswertegeraetMindesteingangsspannung.RootElement.Text = Nothing
@@ -580,8 +580,8 @@ Partial Class frmAuswertegeraet
         Me.RadTextBoxControlAuswertegeraetGrenzwertTemperaturbereichMIN.RootElement.AccessibleDescription = Nothing
         Me.RadTextBoxControlAuswertegeraetGrenzwertTemperaturbereichMIN.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlAuswertegeraetGrenzwertTemperaturbereichMIN.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadTextBoxControlAuswertegeraetGrenzwertTemperaturbereichMIN.RootElement.AngleTransform = 0!
-        Me.RadTextBoxControlAuswertegeraetGrenzwertTemperaturbereichMIN.RootElement.FlipText = false
+        Me.RadTextBoxControlAuswertegeraetGrenzwertTemperaturbereichMIN.RootElement.AngleTransform = 0.0!
+        Me.RadTextBoxControlAuswertegeraetGrenzwertTemperaturbereichMIN.RootElement.FlipText = False
         Me.RadTextBoxControlAuswertegeraetGrenzwertTemperaturbereichMIN.RootElement.Margin = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlAuswertegeraetGrenzwertTemperaturbereichMIN.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlAuswertegeraetGrenzwertTemperaturbereichMIN.RootElement.Text = Nothing
@@ -599,8 +599,8 @@ Partial Class frmAuswertegeraet
         Me.RadTextBoxControlAuswertegeraetGrenzwertTemperaturbereichMAX.RootElement.AccessibleDescription = Nothing
         Me.RadTextBoxControlAuswertegeraetGrenzwertTemperaturbereichMAX.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlAuswertegeraetGrenzwertTemperaturbereichMAX.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadTextBoxControlAuswertegeraetGrenzwertTemperaturbereichMAX.RootElement.AngleTransform = 0!
-        Me.RadTextBoxControlAuswertegeraetGrenzwertTemperaturbereichMAX.RootElement.FlipText = false
+        Me.RadTextBoxControlAuswertegeraetGrenzwertTemperaturbereichMAX.RootElement.AngleTransform = 0.0!
+        Me.RadTextBoxControlAuswertegeraetGrenzwertTemperaturbereichMAX.RootElement.FlipText = False
         Me.RadTextBoxControlAuswertegeraetGrenzwertTemperaturbereichMAX.RootElement.Margin = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlAuswertegeraetGrenzwertTemperaturbereichMAX.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlAuswertegeraetGrenzwertTemperaturbereichMAX.RootElement.Text = Nothing
@@ -618,8 +618,8 @@ Partial Class frmAuswertegeraet
         Me.RadTextBoxControlAuswertegeraetMAXAnzahlTeilungswerteMehrbereichswaage.RootElement.AccessibleDescription = Nothing
         Me.RadTextBoxControlAuswertegeraetMAXAnzahlTeilungswerteMehrbereichswaage.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlAuswertegeraetMAXAnzahlTeilungswerteMehrbereichswaage.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadTextBoxControlAuswertegeraetMAXAnzahlTeilungswerteMehrbereichswaage.RootElement.AngleTransform = 0!
-        Me.RadTextBoxControlAuswertegeraetMAXAnzahlTeilungswerteMehrbereichswaage.RootElement.FlipText = false
+        Me.RadTextBoxControlAuswertegeraetMAXAnzahlTeilungswerteMehrbereichswaage.RootElement.AngleTransform = 0.0!
+        Me.RadTextBoxControlAuswertegeraetMAXAnzahlTeilungswerteMehrbereichswaage.RootElement.FlipText = False
         Me.RadTextBoxControlAuswertegeraetMAXAnzahlTeilungswerteMehrbereichswaage.RootElement.Margin = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlAuswertegeraetMAXAnzahlTeilungswerteMehrbereichswaage.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlAuswertegeraetMAXAnzahlTeilungswerteMehrbereichswaage.RootElement.Text = Nothing
@@ -637,8 +637,8 @@ Partial Class frmAuswertegeraet
         Me.RadTextBoxControlAuswertegeraetMAXAnzahlTeilungswertEinbereichswaage.RootElement.AccessibleDescription = Nothing
         Me.RadTextBoxControlAuswertegeraetMAXAnzahlTeilungswertEinbereichswaage.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlAuswertegeraetMAXAnzahlTeilungswertEinbereichswaage.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadTextBoxControlAuswertegeraetMAXAnzahlTeilungswertEinbereichswaage.RootElement.AngleTransform = 0!
-        Me.RadTextBoxControlAuswertegeraetMAXAnzahlTeilungswertEinbereichswaage.RootElement.FlipText = false
+        Me.RadTextBoxControlAuswertegeraetMAXAnzahlTeilungswertEinbereichswaage.RootElement.AngleTransform = 0.0!
+        Me.RadTextBoxControlAuswertegeraetMAXAnzahlTeilungswertEinbereichswaage.RootElement.FlipText = False
         Me.RadTextBoxControlAuswertegeraetMAXAnzahlTeilungswertEinbereichswaage.RootElement.Margin = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlAuswertegeraetMAXAnzahlTeilungswertEinbereichswaage.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlAuswertegeraetMAXAnzahlTeilungswertEinbereichswaage.RootElement.Text = Nothing
@@ -656,8 +656,8 @@ Partial Class frmAuswertegeraet
         Me.RadTextBoxControlAuswertegeraetKabellaengeQuerschnitt.RootElement.AccessibleDescription = Nothing
         Me.RadTextBoxControlAuswertegeraetKabellaengeQuerschnitt.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlAuswertegeraetKabellaengeQuerschnitt.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadTextBoxControlAuswertegeraetKabellaengeQuerschnitt.RootElement.AngleTransform = 0!
-        Me.RadTextBoxControlAuswertegeraetKabellaengeQuerschnitt.RootElement.FlipText = false
+        Me.RadTextBoxControlAuswertegeraetKabellaengeQuerschnitt.RootElement.AngleTransform = 0.0!
+        Me.RadTextBoxControlAuswertegeraetKabellaengeQuerschnitt.RootElement.FlipText = False
         Me.RadTextBoxControlAuswertegeraetKabellaengeQuerschnitt.RootElement.Margin = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlAuswertegeraetKabellaengeQuerschnitt.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlAuswertegeraetKabellaengeQuerschnitt.RootElement.Text = Nothing
@@ -675,8 +675,8 @@ Partial Class frmAuswertegeraet
         Me.RadTextBoxControlAuswertegeraetHersteller.RootElement.AccessibleDescription = Nothing
         Me.RadTextBoxControlAuswertegeraetHersteller.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlAuswertegeraetHersteller.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadTextBoxControlAuswertegeraetHersteller.RootElement.AngleTransform = 0!
-        Me.RadTextBoxControlAuswertegeraetHersteller.RootElement.FlipText = false
+        Me.RadTextBoxControlAuswertegeraetHersteller.RootElement.AngleTransform = 0.0!
+        Me.RadTextBoxControlAuswertegeraetHersteller.RootElement.FlipText = False
         Me.RadTextBoxControlAuswertegeraetHersteller.RootElement.Margin = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlAuswertegeraetHersteller.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlAuswertegeraetHersteller.RootElement.Text = Nothing
@@ -694,8 +694,8 @@ Partial Class frmAuswertegeraet
         Me.RadTextBoxControlAuswertegeraetGrenzwertLastwiderstandMIN.RootElement.AccessibleDescription = Nothing
         Me.RadTextBoxControlAuswertegeraetGrenzwertLastwiderstandMIN.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlAuswertegeraetGrenzwertLastwiderstandMIN.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadTextBoxControlAuswertegeraetGrenzwertLastwiderstandMIN.RootElement.AngleTransform = 0!
-        Me.RadTextBoxControlAuswertegeraetGrenzwertLastwiderstandMIN.RootElement.FlipText = false
+        Me.RadTextBoxControlAuswertegeraetGrenzwertLastwiderstandMIN.RootElement.AngleTransform = 0.0!
+        Me.RadTextBoxControlAuswertegeraetGrenzwertLastwiderstandMIN.RootElement.FlipText = False
         Me.RadTextBoxControlAuswertegeraetGrenzwertLastwiderstandMIN.RootElement.Margin = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlAuswertegeraetGrenzwertLastwiderstandMIN.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlAuswertegeraetGrenzwertLastwiderstandMIN.RootElement.Text = Nothing
@@ -713,8 +713,8 @@ Partial Class frmAuswertegeraet
         Me.RadTextBoxControlAuswertegeraetGrenzWertLastwiderstandMAX.RootElement.AccessibleDescription = Nothing
         Me.RadTextBoxControlAuswertegeraetGrenzWertLastwiderstandMAX.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlAuswertegeraetGrenzWertLastwiderstandMAX.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadTextBoxControlAuswertegeraetGrenzWertLastwiderstandMAX.RootElement.AngleTransform = 0!
-        Me.RadTextBoxControlAuswertegeraetGrenzWertLastwiderstandMAX.RootElement.FlipText = false
+        Me.RadTextBoxControlAuswertegeraetGrenzWertLastwiderstandMAX.RootElement.AngleTransform = 0.0!
+        Me.RadTextBoxControlAuswertegeraetGrenzWertLastwiderstandMAX.RootElement.FlipText = False
         Me.RadTextBoxControlAuswertegeraetGrenzWertLastwiderstandMAX.RootElement.Margin = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlAuswertegeraetGrenzWertLastwiderstandMAX.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlAuswertegeraetGrenzWertLastwiderstandMAX.RootElement.Text = Nothing
@@ -732,8 +732,8 @@ Partial Class frmAuswertegeraet
         Me.RadTextBoxControlAuswertegeraetGenauigkeitsklasse.RootElement.AccessibleDescription = Nothing
         Me.RadTextBoxControlAuswertegeraetGenauigkeitsklasse.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlAuswertegeraetGenauigkeitsklasse.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadTextBoxControlAuswertegeraetGenauigkeitsklasse.RootElement.AngleTransform = 0!
-        Me.RadTextBoxControlAuswertegeraetGenauigkeitsklasse.RootElement.FlipText = false
+        Me.RadTextBoxControlAuswertegeraetGenauigkeitsklasse.RootElement.AngleTransform = 0.0!
+        Me.RadTextBoxControlAuswertegeraetGenauigkeitsklasse.RootElement.FlipText = False
         Me.RadTextBoxControlAuswertegeraetGenauigkeitsklasse.RootElement.Margin = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlAuswertegeraetGenauigkeitsklasse.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlAuswertegeraetGenauigkeitsklasse.RootElement.Text = Nothing
@@ -751,8 +751,8 @@ Partial Class frmAuswertegeraet
         Me.RadTextBoxControlAuswertegeraetBruchteilEichfehlergrenze.RootElement.AccessibleDescription = Nothing
         Me.RadTextBoxControlAuswertegeraetBruchteilEichfehlergrenze.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlAuswertegeraetBruchteilEichfehlergrenze.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadTextBoxControlAuswertegeraetBruchteilEichfehlergrenze.RootElement.AngleTransform = 0!
-        Me.RadTextBoxControlAuswertegeraetBruchteilEichfehlergrenze.RootElement.FlipText = false
+        Me.RadTextBoxControlAuswertegeraetBruchteilEichfehlergrenze.RootElement.AngleTransform = 0.0!
+        Me.RadTextBoxControlAuswertegeraetBruchteilEichfehlergrenze.RootElement.FlipText = False
         Me.RadTextBoxControlAuswertegeraetBruchteilEichfehlergrenze.RootElement.Margin = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlAuswertegeraetBruchteilEichfehlergrenze.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlAuswertegeraetBruchteilEichfehlergrenze.RootElement.Text = Nothing
@@ -770,8 +770,8 @@ Partial Class frmAuswertegeraet
         Me.RadTextBoxControlAuswertegeraetBauartzulassung.RootElement.AccessibleDescription = Nothing
         Me.RadTextBoxControlAuswertegeraetBauartzulassung.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlAuswertegeraetBauartzulassung.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadTextBoxControlAuswertegeraetBauartzulassung.RootElement.AngleTransform = 0!
-        Me.RadTextBoxControlAuswertegeraetBauartzulassung.RootElement.FlipText = false
+        Me.RadTextBoxControlAuswertegeraetBauartzulassung.RootElement.AngleTransform = 0.0!
+        Me.RadTextBoxControlAuswertegeraetBauartzulassung.RootElement.FlipText = False
         Me.RadTextBoxControlAuswertegeraetBauartzulassung.RootElement.Margin = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlAuswertegeraetBauartzulassung.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlAuswertegeraetBauartzulassung.RootElement.Text = Nothing
@@ -781,7 +781,7 @@ Partial Class frmAuswertegeraet
         '
         'frmAuswertegeraet
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(958, 401)
         Me.Controls.Add(Me.RadCheckBoxDeaktiviert)
@@ -823,48 +823,48 @@ Partial Class frmAuswertegeraet
         '
         '
         '
-        Me.RootElement.ApplyShapeToControl = true
+        Me.RootElement.ApplyShapeToControl = True
         Me.Text = "Auswertegerät"
-        CType(Me.RadCheckBoxDeaktiviert,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadLabelTyp,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadLabelSpeisespannung,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadLabelAuswertegeraetPruefbericht,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadLabelMindestmesssignal,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadLabelMindesteingangsspannung,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadLabelGrenzwertTemperaturbereichMIN,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadLabelGrenzwertTemperaturbereichMAX,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadLabelMAXAnzahlTeilungswerteMehrbereichswaage,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadLabelMAXAnzahlTeilungswerteEinbereichswaage,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadLabelKabellaengeQuerschnitt,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadLabelHersteller,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadLabelGrenzwertLastwiderstandMIN,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadLabelGrenzwertLastwiderstandMAX,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadLabelGenauigkeitsklasse,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadLabelBruchteilEichfehlergrenze,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadLabelBauartzulassung,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadButtonAbbrechen,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadButtonSpeichern,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlAuswertegeraetTyp,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlAuswertegeraetSpeisespannung,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlAuswertegeraetPruefbericht,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlAuswertegeraetMindestmesssignal,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlAuswertegeraetMindesteingangsspannung,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlAuswertegeraetGrenzwertTemperaturbereichMIN,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlAuswertegeraetGrenzwertTemperaturbereichMAX,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlAuswertegeraetMAXAnzahlTeilungswerteMehrbereichswaage,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlAuswertegeraetMAXAnzahlTeilungswertEinbereichswaage,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlAuswertegeraetKabellaengeQuerschnitt,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlAuswertegeraetHersteller,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlAuswertegeraetGrenzwertLastwiderstandMIN,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlAuswertegeraetGrenzWertLastwiderstandMAX,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlAuswertegeraetGenauigkeitsklasse,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlAuswertegeraetBruchteilEichfehlergrenze,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlAuswertegeraetBauartzulassung,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me,System.ComponentModel.ISupportInitialize).EndInit
-        Me.ResumeLayout(false)
-        Me.PerformLayout
+        CType(Me.RadCheckBoxDeaktiviert, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabelTyp, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabelSpeisespannung, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabelAuswertegeraetPruefbericht, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabelMindestmesssignal, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabelMindesteingangsspannung, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabelGrenzwertTemperaturbereichMIN, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabelGrenzwertTemperaturbereichMAX, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabelMAXAnzahlTeilungswerteMehrbereichswaage, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabelMAXAnzahlTeilungswerteEinbereichswaage, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabelKabellaengeQuerschnitt, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabelHersteller, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabelGrenzwertLastwiderstandMIN, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabelGrenzwertLastwiderstandMAX, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabelGenauigkeitsklasse, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabelBruchteilEichfehlergrenze, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadLabelBauartzulassung, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadButtonAbbrechen, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadButtonSpeichern, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxControlAuswertegeraetTyp, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxControlAuswertegeraetSpeisespannung, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxControlAuswertegeraetPruefbericht, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxControlAuswertegeraetMindestmesssignal, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxControlAuswertegeraetMindesteingangsspannung, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxControlAuswertegeraetGrenzwertTemperaturbereichMIN, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxControlAuswertegeraetGrenzwertTemperaturbereichMAX, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxControlAuswertegeraetMAXAnzahlTeilungswerteMehrbereichswaage, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxControlAuswertegeraetMAXAnzahlTeilungswertEinbereichswaage, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxControlAuswertegeraetKabellaengeQuerschnitt, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxControlAuswertegeraetHersteller, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxControlAuswertegeraetGrenzwertLastwiderstandMIN, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxControlAuswertegeraetGrenzWertLastwiderstandMAX, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxControlAuswertegeraetGenauigkeitsklasse, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxControlAuswertegeraetBruchteilEichfehlergrenze, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxControlAuswertegeraetBauartzulassung, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
 
-End Sub
+    End Sub
     Friend WithEvents RadCheckBoxDeaktiviert As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents RadLabelTyp As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabelSpeisespannung As Telerik.WinControls.UI.RadLabel

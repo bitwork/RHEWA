@@ -41,4 +41,9 @@
         Dim f As New FrmMogelstatistik
         f.Show()
     End Sub
+
+    Private Sub RadButtonFirmenZuordnung_Click(sender As Object, e As EventArgs) Handles RadButtonFirmenZuordnung.Click
+        Dim f As New frmAuswahllisteFirmenVertragspartnerZuordnung
+        f.Show()
+    End Sub
 End Class

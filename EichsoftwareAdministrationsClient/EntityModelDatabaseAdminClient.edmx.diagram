@@ -18,6 +18,7 @@
         <AssociationConnector Association="EichenModel.FK_Mogelstatistik_Lookup_Auswertegeraet" />
         <AssociationConnector Association="EichenModel.FK_Mogelstatistik_Lookup_Waegezelle" />
         <EntityTypeShape EntityType="EichenModel.ServerEichmarkenverwaltung" Width="3.625" PointX="14.875" PointY="7.625" />
+        <AssociationConnector Association="EichenModel.FK_ServerFirmenZusatzdaten_Firmen" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

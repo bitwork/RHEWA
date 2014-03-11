@@ -1,4 +1,4 @@
-﻿Public Class frmWaegezelle
+﻿Public Class frmEingabeWaegezelle
     Private _ID As String = "-1"
     Private _objWZ As ServerLookup_Waegezelle
 

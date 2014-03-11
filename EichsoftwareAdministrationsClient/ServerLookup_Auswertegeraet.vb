@@ -29,7 +29,7 @@ Partial Public Class ServerLookup_Auswertegeraet
     Public Property BruchteilEichfehlergrenze As String
     Public Property KabellaengeQuerschnitt As String
     Public Property ErstellDatum As Nullable(Of Date)
-    Public Property Deaktiviert As Nullable(Of Boolean)
+    Public Property Deaktiviert As Boolean
 
     Public Overridable Property ServerMogelstatistik As ICollection(Of ServerMogelstatistik) = New HashSet(Of ServerMogelstatistik)
 

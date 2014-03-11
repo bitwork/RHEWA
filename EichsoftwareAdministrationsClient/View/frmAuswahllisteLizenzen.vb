@@ -4,7 +4,7 @@
         CreateNewEichprozess()
     End Sub
     Private Sub CreateNewEichprozess()
-        Dim f As New FrmNeueLizenz
+        Dim f As New frmEingabeNeueLizenz
         f.ShowDialog()
 
         'nach dem schließen des Dialogs aktualisieren
@@ -41,9 +41,6 @@
                 RadGridViewAuswahlliste.DataSource = Data.ToList
                 Try
                     RadGridViewAuswahlliste.Columns("ID").IsVisible = False
-                    '   RadGridViewAuswahlliste.Columns("Lizenzschluessel").IsVisible = False
-                    '  RadGridViewAuswahlliste.Columns("FK_BenutzerID").IsVisible = False
-
                 Catch ex As Exception
 
                 End Try
@@ -101,12 +98,12 @@
                 SelectedID = RadGridViewAuswahlliste.SelectedRows(0).Cells("ID").Value
 
                 'neue Datenbankverbindung
-                    'anzeigen des Dialogs zur Bearbeitung der Eichung
-                Dim f As New FrmNeueLizenz(SelectedID)
-                    f.ShowDialog()
+                'anzeigen des Dialogs zur Bearbeitung der Eichung
+                Dim f As New frmEingabeNeueLizenz(SelectedID)
+                f.ShowDialog()
 
-                    'nach dem schließen des Dialogs aktualisieren
-                    LoadFromDatabase()
+                'nach dem schließen des Dialogs aktualisieren
+                LoadFromDatabase()
 
             End If
         End If

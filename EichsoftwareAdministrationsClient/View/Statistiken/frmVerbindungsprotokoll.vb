@@ -14,6 +14,7 @@ Public Class FrmVerbindungsprotokoll
     Private Sub LoadFromDatabase()
         Using Context As New EichenEntities
             Dim Data = From Verbindungsprotokoll In Context.ServerVerbindungsprotokoll Select Verbindungsprotokoll
+                       
             RadGridView1.DataSource = Data.ToList
             Try
                 RadGridView1.Columns("ID").IsVisible = False
@@ -26,13 +27,6 @@ Public Class FrmVerbindungsprotokoll
                     Me.RadGridView1.GroupDescriptors.Add(descriptor)
                 Catch e As Exception
                 End Try
-
-                ' Try
-                '    Dim descriptor As New GroupDescriptor()
-                '    descriptor.GroupNames.Add("Country", ListSortDirection.Ascending)
-                '    Me.RadGridView1.GroupDescriptors.Add(descriptor)
-                'Catch e As Exception
-                'End Try
 
                 Try
                     Dim sortdescriptor = New SortDescriptor()

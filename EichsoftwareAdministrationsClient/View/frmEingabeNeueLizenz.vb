@@ -1,6 +1,6 @@
 ﻿Imports Telerik.WinControls.UI
 
-Public Class FrmNeueLizenz
+Public Class frmEingabeNeueLizenz
     Private _ID As String = "-1"
     Private _objLizen As ServerLizensierung
     Private _objEichmarkenverwaltung As ServerEichmarkenverwaltung 'dieser Eintrag wird mit anlegen der Lizenz erzeugt
@@ -22,7 +22,7 @@ Public Class FrmNeueLizenz
 
     Private Sub Auswertegeraet_Load(sender As Object, e As EventArgs) Handles Me.Load
         LadeObjekt()
-     
+
         'füllen der Steuerelemente
         LadeDropDownDatenquelle()
         FormatiereDropDown()
@@ -49,7 +49,7 @@ Public Class FrmNeueLizenz
 
     Private Sub FillControls()
         ''todo Dropdown Wert zuweisen aus Objekt 
-        
+
 
         RadTextBoxControl1.Text = _objLizen.HEKennung
         RadTextBoxControl2.Text = _objLizen.Lizenzschluessel
@@ -57,10 +57,10 @@ Public Class FrmNeueLizenz
         RadCheckBox2.Checked = _objLizen.Aktiv
 
         'GRID umschalten, je nachdem ob ein DS geöffnet wird oder ein neuer angelegt wird
-            RadMultiColumnComboBoxBenutzer.Enabled = _bolNew
+        RadMultiColumnComboBoxBenutzer.Enabled = _bolNew
     End Sub
 
-   
+
 
     Private Sub LadeDropDownDatenquelle()
         Try
@@ -77,15 +77,15 @@ Public Class FrmNeueLizenz
 
                     'abrufen der Entität aus der Datenbank
                     Dim query = From Benutz In Benutzer
-                        Join Firma In Firmen On Benutz.Firma_FK Equals Firma.ID
-                                Select New With _
-                   { _
-                       Benutz.ID, _
-                       Benutz.HEKennung, _
+                        Join Firma In Firmen On Benutz.Firma_FK Equals Firma.ID Order By Benutz.Nachname
+                    Select New With _
+                    { _
+                        Benutz.ID, _
+                        Benutz.HEKennung, _
                         Benutz.Nachname, _
                         Benutz.Vorname, _
                         .Firma = Firma.Name, _
-                    .Anzeigename = Benutz.Nachname + ", " + Benutz.Vorname
+                        .Anzeigename = Benutz.Nachname + ", " + Benutz.Vorname
                     }
 
                     'ab hier sind alle Benutzer bekannt.
@@ -126,7 +126,7 @@ Public Class FrmNeueLizenz
                     RadMultiColumnComboBoxBenutzer.DataSource = query.ToList
                     RadMultiColumnComboBoxBenutzer.DisplayMember = "Anzeigename"
                 End If
-        
+
             End Using
         Catch ex As Exception
 
@@ -160,7 +160,7 @@ Public Class FrmNeueLizenz
                     RadTextBoxControl1.Text = Benutzer.HEKennung
                 End Using
             End If
-         
+
         Catch ex As Exception
 
         End Try
@@ -315,5 +315,5 @@ Public Class FrmNeueLizenz
     End Function
 
 
- 
+
 End Class

@@ -4,7 +4,7 @@
         CreateNewEichprozess()
     End Sub
     Private Sub CreateNewEichprozess()
-        Dim f As New FrmAuswertegeraet
+        Dim f As New frmEingabeAuswertegeraet
         f.ShowDialog()
         'nach dem schließen des Dialogs aktualisieren
         LoadFromDatabase()
@@ -41,7 +41,7 @@
             Catch ex As Exception
 
             End Try
-            
+
 
             RadGridViewAuswahlliste.BestFitColumns()
         End Using
@@ -57,7 +57,7 @@
                 'neue Datenbankverbindung
                 Using context As New EichenEntities
                     'anzeigen des Dialogs zur Bearbeitung der Eichung
-                    Dim f As New FrmAuswertegeraet(SelectedID)
+                    Dim f As New frmEingabeAuswertegeraet(SelectedID)
                     f.ShowDialog()
 
                     'nach dem schließen des Dialogs aktualisieren

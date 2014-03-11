@@ -115,6 +115,7 @@
     <Compile Include="Benutzer.vb">
       <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
     </Compile>
+    <Compile Include="clsTelerikHelper.vb" />
     <Compile Include="Firmen.vb">
       <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
     </Compile>
@@ -132,6 +133,18 @@
     </Compile>
     <Compile Include="ServerLookup_Waegezelle.vb">
       <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmAuswahllisteFirmenVertragspartnerZuordnung.Designer.vb">
+      <DependentUpon>frmAuswahllisteFirmenVertragspartnerZuordnung.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmAuswahllisteFirmenVertragspartnerZuordnung.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmEingabeFirmenVertragspartnerZuordnung.Designer.vb">
+      <DependentUpon>frmEingabeFirmenVertragspartnerZuordnung.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmEingabeFirmenVertragspartnerZuordnung.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\frmAuswahllisteLizenzen.Designer.vb">
       <DependentUpon>frmAuswahllisteLizenzen.vb</DependentUpon>
@@ -166,10 +179,10 @@
     <Compile Include="View\frmAuswahllisteAWG.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmAuswertegeraet.Designer.vb">
-      <DependentUpon>frmAuswertegeraet.vb</DependentUpon>
+    <Compile Include="View\frmEingabeAuswertegeraet.Designer.vb">
+      <DependentUpon>frmEingabeAuswertegeraet.vb</DependentUpon>
     </Compile>
-    <Compile Include="View\frmAuswertegeraet.vb">
+    <Compile Include="View\frmEingabeAuswertegeraet.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Statistiken\frmMogelstatistik.Designer.vb">
@@ -178,20 +191,20 @@
     <Compile Include="View\Statistiken\frmMogelstatistik.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmEichmarkenverwaltung.Designer.vb">
-      <DependentUpon>frmEichmarkenverwaltung.vb</DependentUpon>
+    <Compile Include="View\obsolete_frmEichmarkenverwaltung.Designer.vb">
+      <DependentUpon>obsolete_frmEichmarkenverwaltung.vb</DependentUpon>
     </Compile>
-    <Compile Include="View\frmEichmarkenverwaltung.vb" />
+    <Compile Include="View\obsolete_frmEichmarkenverwaltung.vb" />
     <Compile Include="View\frmMain.Designer.vb">
       <DependentUpon>frmMain.vb</DependentUpon>
     </Compile>
     <Compile Include="View\frmMain.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmNeueLizenz.Designer.vb">
-      <DependentUpon>frmNeueLizenz.vb</DependentUpon>
+    <Compile Include="View\frmEingabeNeueLizenz.Designer.vb">
+      <DependentUpon>frmEingabeNeueLizenz.vb</DependentUpon>
     </Compile>
-    <Compile Include="View\frmNeueLizenz.vb">
+    <Compile Include="View\frmEingabeNeueLizenz.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\frmAuswahllisteEichmarkenverwaltung.Designer.vb">
@@ -206,10 +219,10 @@
     <Compile Include="View\Statistiken\frmVerbindungsprotokoll.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmWaegezelle.Designer.vb">
-      <DependentUpon>frmWaegezelle.vb</DependentUpon>
+    <Compile Include="View\frmEingabeWaegezelle.Designer.vb">
+      <DependentUpon>frmEingabeWaegezelle.vb</DependentUpon>
     </Compile>
-    <Compile Include="View\frmWaegezelle.vb">
+    <Compile Include="View\frmEingabeWaegezelle.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -242,6 +255,12 @@
     <Compile Include="ServerVerbindungsprotokoll.vb">
       <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\frmAuswahllisteFirmenVertragspartnerZuordnung.resx">
+      <DependentUpon>frmAuswahllisteFirmenVertragspartnerZuordnung.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmEingabeFirmenVertragspartnerZuordnung.resx">
+      <DependentUpon>frmEingabeFirmenVertragspartnerZuordnung.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmAuswahllisteLizenzen.resx">
       <DependentUpon>frmAuswahllisteLizenzen.vb</DependentUpon>
     </EmbeddedResource>
@@ -251,17 +270,17 @@
     <EmbeddedResource Include="View\frmAuswahllisteAWG.resx">
       <DependentUpon>frmAuswahllisteAWG.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmAuswertegeraet.resx">
-      <DependentUpon>frmAuswertegeraet.vb</DependentUpon>
+    <EmbeddedResource Include="View\frmEingabeAuswertegeraet.resx">
+      <DependentUpon>frmEingabeAuswertegeraet.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Statistiken\frmMogelstatistik.resx">
       <DependentUpon>frmMogelstatistik.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmEichmarkenverwaltung.resx">
-      <DependentUpon>frmEichmarkenverwaltung.vb</DependentUpon>
+    <EmbeddedResource Include="View\obsolete_frmEichmarkenverwaltung.resx">
+      <DependentUpon>obsolete_frmEichmarkenverwaltung.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmNeueLizenz.resx">
-      <DependentUpon>frmNeueLizenz.vb</DependentUpon>
+    <EmbeddedResource Include="View\frmEingabeNeueLizenz.resx">
+      <DependentUpon>frmEingabeNeueLizenz.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmAuswahllisteEichmarkenverwaltung.resx">
       <DependentUpon>frmAuswahllisteEichmarkenverwaltung.vb</DependentUpon>
@@ -300,8 +319,8 @@
     <EmbeddedResource Include="View\Statistiken\frmVerbindungsprotokoll.resx">
       <DependentUpon>frmVerbindungsprotokoll.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmWaegezelle.resx">
-      <DependentUpon>frmWaegezelle.vb</DependentUpon>
+    <EmbeddedResource Include="View\frmEingabeWaegezelle.resx">
+      <DependentUpon>frmEingabeWaegezelle.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\RHEWAGREEN.tssp" />
   </ItemGroup>

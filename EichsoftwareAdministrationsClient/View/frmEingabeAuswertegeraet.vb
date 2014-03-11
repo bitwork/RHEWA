@@ -1,4 +1,4 @@
-﻿Public Class frmAuswertegeraet
+﻿Public Class frmEingabeAuswertegeraet
     Private _ID As String = "-1"
     Private _objAWG As ServerLookup_Auswertegeraet
 
@@ -211,8 +211,8 @@
                 End If
 
 
-                End If
             End If
+        End If
 
     End Sub
 

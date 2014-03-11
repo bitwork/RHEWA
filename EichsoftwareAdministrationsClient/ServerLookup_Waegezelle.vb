@@ -30,8 +30,8 @@ Partial Public Class ServerLookup_Waegezelle
     Public Property GrenzwertTemperaturbereichMAX As String
     Public Property BruchteilEichfehlergrenze As String
     Public Property ErstellDatum As Nullable(Of Date)
-    Public Property Deaktiviert As Nullable(Of Boolean)
-    Public Property Neu As Nullable(Of Boolean)
+    Public Property Deaktiviert As Boolean
+    Public Property Neu As Boolean
 
     Public Overridable Property ServerMogelstatistik As ICollection(Of ServerMogelstatistik) = New HashSet(Of ServerMogelstatistik)
 

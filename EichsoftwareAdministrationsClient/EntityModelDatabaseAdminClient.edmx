@@ -26,6 +26,10 @@
             <End Role="ServerLookup_Waegezelle" EntitySet="ServerLookup_Waegezelle" />
             <End Role="ServerMogelstatistik" EntitySet="ServerMogelstatistik" />
           </AssociationSet>
+          <AssociationSet Name="FK_ServerFirmenZusatzdaten_Firmen" Association="EichenModel.Store.FK_ServerFirmenZusatzdaten_Firmen">
+            <End Role="Firmen" EntitySet="Firmen" />
+            <End Role="ServerFirmenZusatzdaten" EntitySet="ServerFirmenZusatzdaten" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Benutzer">
           <Key>
@@ -119,6 +123,7 @@
           <Property Name="Archiv2014_SicherungsmarkeGross" Type="nvarchar" MaxLength="50" />
           <Property Name="Archiv2014_SicherungsmarkeKlein" Type="nvarchar" MaxLength="50" />
           <Property Name="Bemerkung" Type="nvarchar(max)" />
+          <Property Name="ZurBearbeitungGesperrtDurch" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="ServerFirmenZusatzdaten">
           <Key>
@@ -204,7 +209,7 @@
           <Property Name="BruchteilEichfehlergrenze" Type="nvarchar" MaxLength="5" />
           <Property Name="KabellaengeQuerschnitt" Type="nvarchar" MaxLength="50" />
           <Property Name="ErstellDatum" Type="datetime" />
-          <Property Name="Deaktiviert" Type="bit" />
+          <Property Name="Deaktiviert" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="ServerLookup_Bearbeitungsstatus">
           <Key>
@@ -238,8 +243,8 @@
           <Property Name="GrenzwertTemperaturbereichMAX" Type="nvarchar" MaxLength="5" />
           <Property Name="BruchteilEichfehlergrenze" Type="nvarchar" MaxLength="5" />
           <Property Name="ErstellDatum" Type="datetime" />
-          <Property Name="Deaktiviert" Type="bit" />
-          <Property Name="Neu" Type="bit" />
+          <Property Name="Deaktiviert" Type="bit" Nullable="false" />
+          <Property Name="Neu" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="ServerLookupVertragspartnerFirma">
           <Key>
@@ -295,9 +300,6 @@
           <Property Name="Aktion" Type="nvarchar" MaxLength="50" />
           <Property Name="Zeitstempel" Type="datetime" />
         </EntityType>
-        <!--Errors Found During Generation:
-      warning 6002: The table/view 'Herstellerersteichung.dbo.View_Eichmarkenverwaltung' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
         <Association Name="FK_Mogelstatistik_Lookup_Auswertegeraet">
           <End Role="ServerLookup_Auswertegeraet" Type="EichenModel.Store.ServerLookup_Auswertegeraet" Multiplicity="0..1" />
           <End Role="ServerMogelstatistik" Type="EichenModel.Store.ServerMogelstatistik" Multiplicity="*" />
@@ -319,6 +321,18 @@
             </Principal>
             <Dependent Role="ServerMogelstatistik">
               <PropertyRef Name="FK_Waegezelle" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServerFirmenZusatzdaten_Firmen">
+          <End Role="Firmen" Type="EichenModel.Store.Firmen" Multiplicity="0..1" />
+          <End Role="ServerFirmenZusatzdaten" Type="EichenModel.Store.ServerFirmenZusatzdaten" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Firmen">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerFirmenZusatzdaten">
+              <PropertyRef Name="Firmen_FK" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -347,6 +361,10 @@
             <End Role="ServerMogelstatistik" EntitySet="ServerMogelstatistik" />
           </AssociationSet>
           <EntitySet Name="ServerEichmarkenverwaltung" EntityType="EichenModel.ServerEichmarkenverwaltung" />
+          <AssociationSet Name="FK_ServerFirmenZusatzdaten_Firmen" Association="EichenModel.FK_ServerFirmenZusatzdaten_Firmen">
+            <End Role="Firmen" EntitySet="Firmen" />
+            <End Role="ServerFirmenZusatzdaten" EntitySet="ServerFirmenZusatzdaten" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="ServerKompatiblitaetsnachweis">
           <Key>
@@ -474,6 +492,7 @@
           <Property Type="String" Name="Telefon" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Ort" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Land" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ServerFirmenZusatzdaten" Relationship="EichenModel.FK_ServerFirmenZusatzdaten_Firmen" FromRole="Firmen" ToRole="ServerFirmenZusatzdaten" />
         </EntityType>
         <EntityType Name="ServerFirmenZusatzdaten">
           <Key>
@@ -490,6 +509,7 @@
           <Property Type="String" Name="MonatJahrZertifikat" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="DateTime" Name="Nachschulung" Precision="0" />
           <Property Type="DateTime" Name="LetztesAudit" Precision="0" />
+          <NavigationProperty Name="Firmen" Relationship="EichenModel.FK_ServerFirmenZusatzdaten_Firmen" FromRole="ServerFirmenZusatzdaten" ToRole="Firmen" />
         </EntityType>
         <EntityType Name="ServerLookupVertragspartnerFirma">
           <Key>
@@ -521,7 +541,7 @@
           <Property Type="String" Name="BruchteilEichfehlergrenze" MaxLength="5" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="KabellaengeQuerschnitt" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="DateTime" Name="ErstellDatum" Precision="3" />
-          <Property Type="Boolean" Name="Deaktiviert" />
+          <Property Type="Boolean" Name="Deaktiviert" Nullable="false" />
           <NavigationProperty Name="ServerMogelstatistik" Relationship="EichenModel.FK_Mogelstatistik_Lookup_Auswertegeraet" FromRole="ServerLookup_Auswertegeraet" ToRole="ServerMogelstatistik" />
         </EntityType>
         <EntityType Name="ServerLookup_Waegezelle">
@@ -547,8 +567,8 @@
           <Property Type="String" Name="GrenzwertTemperaturbereichMAX" MaxLength="5" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="BruchteilEichfehlergrenze" MaxLength="5" FixedLength="false" Unicode="true" />
           <Property Type="DateTime" Name="ErstellDatum" Precision="3" />
-          <Property Type="Boolean" Name="Deaktiviert" />
-          <Property Type="Boolean" Name="Neu" />
+          <Property Type="Boolean" Name="Deaktiviert" Nullable="false" />
+          <Property Type="Boolean" Name="Neu" Nullable="false" />
           <NavigationProperty Name="ServerMogelstatistik" Relationship="EichenModel.FK_Mogelstatistik_Lookup_Waegezelle" FromRole="ServerLookup_Waegezelle" ToRole="ServerMogelstatistik" />
         </EntityType>
         <Association Name="FK_Mogelstatistik_Lookup_Auswertegeraet">
@@ -643,7 +663,20 @@
           <Property Type="String" Name="Archiv2014_SicherungsmarkeKlein" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Bemerkung" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="FK_BenutzerID" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ZurBearbeitungGesperrtDurch" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
+        <Association Name="FK_ServerFirmenZusatzdaten_Firmen">
+          <End Type="EichenModel.Firmen" Role="Firmen" Multiplicity="0..1" />
+          <End Type="EichenModel.ServerFirmenZusatzdaten" Role="ServerFirmenZusatzdaten" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Firmen">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerFirmenZusatzdaten">
+              <PropertyRef Name="Firmen_FK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -863,6 +896,7 @@
           <EntitySetMapping Name="ServerEichmarkenverwaltung">
             <EntityTypeMapping TypeName="EichenModel.ServerEichmarkenverwaltung">
               <MappingFragment StoreEntitySet="ServerEichmarkenverwaltung">
+                <ScalarProperty Name="ZurBearbeitungGesperrtDurch" ColumnName="ZurBearbeitungGesperrtDurch" />
                 <ScalarProperty Name="FK_BenutzerID" ColumnName="FK_BenutzerID" />
                 <ScalarProperty Name="Bemerkung" ColumnName="Bemerkung" />
                 <ScalarProperty Name="Archiv2014_SicherungsmarkeKlein" ColumnName="Archiv2014_SicherungsmarkeKlein" />
