@@ -181,6 +181,9 @@
   <data name="RadTextBoxControlNormalienPruefintervall.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
+  <data name="RadTextBoxControlNormalienPruefintervall.Text" xml:space="preserve">
+    <value>jährlich</value>
+  </data>
   <data name="lblPruefzeitraum.RootElement.KeyTip" xml:space="preserve">
     <value />
   </data>
@@ -807,34 +810,8 @@
   <data name="RadLabel22.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
-  <data name="RadGroupBoxMax1.RootElement.AccessibleDescription" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadGroupBoxMax1.RootElement.AccessibleName" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadGroupBoxMax1.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="RadGroupBoxMax1.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadGroupBoxMax1.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="RadGroupBoxMax1.RootElement.KeyTip" xml:space="preserve">
     <value />
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="RadGroupBoxMax1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadGroupBoxMax1.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadGroupBoxMax1.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="RadGroupBoxMax1.RootElement.ToolTipText" xml:space="preserve">
     <value />
@@ -893,32 +870,8 @@
   <data name="RadLabel26.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
-  <data name="RadGroupBoxMax3.RootElement.AccessibleDescription" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadGroupBoxMax3.RootElement.AccessibleName" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadGroupBoxMax3.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadGroupBoxMax3.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadGroupBoxMax3.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="RadGroupBoxMax3.RootElement.KeyTip" xml:space="preserve">
     <value />
-  </data>
-  <data name="RadGroupBoxMax3.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadGroupBoxMax3.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadGroupBoxMax3.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="RadGroupBoxMax3.RootElement.ToolTipText" xml:space="preserve">
     <value />
@@ -977,32 +930,8 @@
   <data name="RadLabel23.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
-  <data name="RadGroupBoxMax2.RootElement.AccessibleDescription" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadGroupBoxMax2.RootElement.AccessibleName" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadGroupBoxMax2.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadGroupBoxMax2.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadGroupBoxMax2.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="RadGroupBoxMax2.RootElement.KeyTip" xml:space="preserve">
     <value />
-  </data>
-  <data name="RadGroupBoxMax2.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadGroupBoxMax2.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadGroupBoxMax2.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="RadGroupBoxMax2.RootElement.ToolTipText" xml:space="preserve">
     <value />

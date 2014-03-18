@@ -139,30 +139,47 @@ Public Class ucoAmpel
     Private Sub LokalisierungNeeded() Handles _ParentForm.LokalisierungNeeded
         FillDataset()
         Changes()
-
-        If Not _ParentForm.CurrentEichprozess Is Nothing Then
-            HideElement(GetListeUngueltigeStati(_ParentForm.CurrentEichprozess))
-        End If
     End Sub
 
     Private Sub Changes() Handles Me.NotifyPropertyChanged
-        ChangeImageOfElement(enuImage.gelb, _aktuellerGewaehlterVorgang)
+      
+        'ändern des bildes
+        ChangeImageOfElement(AktuellerGewaehlterVorgang)
+
+        If Not _ParentForm.CurrentEichprozess Is Nothing Then
+            'erneutes überprüfen auf Stati die nun ungültig sind
+            HideElement(GetListeUngueltigeStati(_ParentForm.CurrentEichprozess))
+        End If
     End Sub
 
     ''' <summary>
     ''' Ändert die Icons des gewählten Elements und alle denen davor. Wenn ein Element auf grün ist, müssen davor auch alle grün sein. Dann kann es max 1 gelbes geben und alles danach ist rot
     ''' </summary>
-    ''' <param name="pBildmodus"></param>
     ''' <param name="pStatus"></param>
     ''' <remarks></remarks>
-    Private Sub ChangeImageOfElement(ByVal pBildmodus As enuImage, ByVal pStatus As GlobaleEnumeratoren.enuEichprozessStatus)
+    Private Sub ChangeImageOfElement(ByVal pStatus As GlobaleEnumeratoren.enuEichprozessStatus)
         Try
             For Each item As DataRow In Datasource.Rows
                 If CInt(item("Status")) < pStatus Then
                     item("Image") = ConvertBitmapToByteArray(My.Resources.bullet_green)
 
                 ElseIf CInt(item("Status")) = pStatus Then
-                    item("Image") = ConvertBitmapToByteArray(My.Resources.bullet_yellow)
+                    'sonderfall versenden = fertig
+                    If pStatus = GlobaleEnumeratoren.enuEichprozessStatus.Versenden Then
+                        If Not _ParentForm.CurrentEichprozess Is Nothing Then
+                            If _ParentForm.CurrentEichprozess.FK_Bearbeitungsstatus = GlobaleEnumeratoren.enuBearbeitungsstatus.noch_nicht_versendet Then
+                                item("Image") = ConvertBitmapToByteArray(My.Resources.bullet_yellow)
+                            Else
+                                item("Image") = ConvertBitmapToByteArray(My.Resources.bullet_green)
+                                Datasource.AcceptChanges()
+                                FindeElementUndSelektiere(GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe)
+                                Exit Sub
+                            End If
+                        End If
+                    Else
+                        item("Image") = ConvertBitmapToByteArray(My.Resources.bullet_yellow)
+                    End If
+
 
                 ElseIf CInt(item("Status")) > pStatus Then
                     item("Image") = ConvertBitmapToByteArray(My.Resources.bullet_red)
@@ -179,6 +196,36 @@ Public Class ucoAmpel
 
     End Sub
 
+    ' ''' <summary>
+    ' ''' Markiert das übergebenen Element als Aktives und setzt den Fokus
+    ' ''' </summary>
+    ' ''' <remarks></remarks>
+    ' ''' <author></author>
+    ' ''' <commentauthor></commentauthor>
+    'Public Sub FindeElementUndSelektiere(ByVal objEichprozess As Eichprozess) ' pStatus As GlobaleEnumeratoren.enuEichprozessStatus)
+    '    Try
+    '        Dim items(0) As Telerik.WinControls.UI.ListViewDataItem
+
+    '        For Each item In RadListView1.Items
+    '            'If item.Value = CInt(pStatus) Then
+    '            If item.Value = CInt(objEichprozess.FK_Vorgangsstatus) Then
+    '                If objEichprozess.FK_Bearbeitungsstatus = GlobaleEnumeratoren.enuBearbeitungsstatus.noch_nicht_versendet Then
+    '                    items(0) = item
+    '                    RadListView1.Select(items)
+    '                    Exit For
+    '                Else
+    '                    items(0) = RadListView1.Items(0)
+    '                    RadListView1.Select(items)
+    '                    Exit For
+    '                End If
+
+    '            End If
+    '        Next
+    '    Catch ex As Exception
+
+    '    End Try
+    'End Sub
+
     ''' <summary>
     ''' Markiert das übergebenen Element als Aktives und setzt den Fokus
     ''' </summary>
@@ -190,17 +237,37 @@ Public Class ucoAmpel
         Try
             Dim items(0) As Telerik.WinControls.UI.ListViewDataItem
 
-            For Each item In RadListView1.Items
-                If item.Value = CInt(pStatus) Then
-                    items(0) = item
-                    RadListView1.Select(items)
-                    Exit For
-                End If
-            Next
+            Dim Listitem = (From raditem In RadListView1.Items Where raditem.Value = pStatus And raditem.Visible = True).FirstOrDefault
+            If Listitem Is Nothing Then
+                Listitem = (From raditem In RadListView1.Items Where raditem.Value = pStatus - 1 And raditem.Visible = True).FirstOrDefault
+            End If
+            items(0) = Listitem
+            RadListView1.Select(items)
+
+            'Dim intPrevious As Integer = -1
+            'For Each item In RadListView1.Items
+            '    If item.Value = CInt(pStatus) Then
+            '        If item.Visible = False Then
+            '            intPrevious = item.Value - 1
+            '            'das vorherige Element selektieren
+            '            Dim Listitem = From Items In RadListView1.Items Where Items.Value = intPrevious
+            '            RadListView1.Select(items)
+            '            For Each item In RadListView1.Items
+            '                If item.Value = CInt(pStatus) Then
+            '                Else
+            '                    items(0) = item
+            '                    RadListView1.Select(items)
+            '                    Exit For
+            '                End If
+            '            Next
+            '        End If
+            '    End If
+            'Next
         Catch ex As Exception
 
         End Try
     End Sub
+
 
 
     ''' <summary>
@@ -416,7 +483,7 @@ Public Class ucoAmpel
         Catch ex As Exception
             Exit Sub
         End Try
-      
+
     End Sub
     'TODO Ausblenden der Verfahren die nicht zutreffen bei einem abgeschlossenen Vorgang
 
@@ -448,10 +515,16 @@ Public Class ucoAmpel
             Catch ex As NullReferenceException
                 'neu laden des Objekts, diesmal mit den lookup Objekten
                 LadeVonLokalerDB(objEichprozess, returnlist)
+            Catch ex As ObjectDisposedException
+                'neu laden des Objekts, diesmal mit den lookup Objekten
+                LadeVonLokalerDB(objEichprozess, returnlist)
             End Try
 
             Return returnlist
         Catch ex As Exception
+            Debug.WriteLine(ex.Message)
+            Debug.WriteLine(ex.StackTrace)
+
             Return Nothing
         End Try
     End Function

@@ -127,7 +127,7 @@
         RadGridViewAuswahlliste.ShowNoDataText = True
     End Sub
 
-    Protected Friend Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
+    Protected Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
         MyBase.LokalisierungNeeded(UserControl)
         'übersetzen und formatierung der Tabelle
         LoadFromDatabase()
@@ -431,6 +431,8 @@
 
                 ' lese modus, dann soll beliebig im Eichprozess hin und her gewechselt werden können => Eichprozessstatus auf Versenden setzen
                 objClientEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Versenden
+               
+
                 Dim f As New FrmMainContainer(objClientEichprozess, FrmMainContainer.enuDialogModus.lesend)
                 f.ShowDialog()
                 'nach dem schließen des Dialogs aktualisieren
@@ -626,9 +628,21 @@
 
 
                     Dim file As New IO.FileInfo(objFTPDaten.FTPFilePath)
-                    Dim filesize As Long
-                    'downloadgroße ermitteln
 
+
+                    'download Ordner anlegen wenn benötigt
+                    Dim folder As New IO.DirectoryInfo(file.DirectoryName)
+                    Try
+                        If folder.Exists = False Then
+                            folder.Create()
+                        End If
+                    Catch ex As Exception
+                        MessageBox.Show(ex.Message)
+                        Return ""
+                    End Try
+                    
+                    'downloadgroße ermitteln
+                    Dim filesize As Long
                     filesize = objFTP.GetFileSize(objFTPDaten.FTPServername, objFTPDaten.FTPUserName, password, file.Name)
 
                     BackgroundWorkerDownloadFromFTP.ReportProgress(filesize)

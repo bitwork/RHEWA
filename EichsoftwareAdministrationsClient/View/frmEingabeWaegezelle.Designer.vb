@@ -22,6 +22,7 @@ Partial Class frmEingabeWaegezelle
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmEingabeWaegezelle))
         Me.RadLabelTyp = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabelWiderstandWaegezelle = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabelWagezellenkennwert = New Telerik.WinControls.UI.RadLabel()
@@ -58,6 +59,19 @@ Partial Class frmEingabeWaegezelle
         Me.RadTextBoxControlWaegezelleBauartzulassung = New Telerik.WinControls.UI.RadTextBoxControl()
         Me.RadCheckBoxDeaktiviert = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadCheckBoxNeueWZ = New Telerik.WinControls.UI.RadCheckBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
         CType(Me.RadLabelTyp, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabelWiderstandWaegezelle, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabelWagezellenkennwert, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -110,7 +124,6 @@ Partial Class frmEingabeWaegezelle
         Me.RadLabelTyp.RootElement.AngleTransform = 0.0!
         Me.RadLabelTyp.RootElement.FlipText = False
         Me.RadLabelTyp.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadLabelTyp.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadLabelTyp.RootElement.Text = Nothing
         Me.RadLabelTyp.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadLabelTyp.Size = New System.Drawing.Size(24, 18)
@@ -130,7 +143,6 @@ Partial Class frmEingabeWaegezelle
         Me.RadLabelWiderstandWaegezelle.RootElement.AngleTransform = 0.0!
         Me.RadLabelWiderstandWaegezelle.RootElement.FlipText = False
         Me.RadLabelWiderstandWaegezelle.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadLabelWiderstandWaegezelle.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadLabelWiderstandWaegezelle.RootElement.Text = Nothing
         Me.RadLabelWiderstandWaegezelle.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadLabelWiderstandWaegezelle.Size = New System.Drawing.Size(118, 18)
@@ -150,7 +162,6 @@ Partial Class frmEingabeWaegezelle
         Me.RadLabelWagezellenkennwert.RootElement.AngleTransform = 0.0!
         Me.RadLabelWagezellenkennwert.RootElement.FlipText = False
         Me.RadLabelWagezellenkennwert.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadLabelWagezellenkennwert.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadLabelWagezellenkennwert.RootElement.Text = Nothing
         Me.RadLabelWagezellenkennwert.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadLabelWagezellenkennwert.Size = New System.Drawing.Size(110, 18)
@@ -170,7 +181,6 @@ Partial Class frmEingabeWaegezelle
         Me.RadLabelRueckkehrVorlastsignal.RootElement.AngleTransform = 0.0!
         Me.RadLabelRueckkehrVorlastsignal.RootElement.FlipText = False
         Me.RadLabelRueckkehrVorlastsignal.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadLabelRueckkehrVorlastsignal.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadLabelRueckkehrVorlastsignal.RootElement.Text = Nothing
         Me.RadLabelRueckkehrVorlastsignal.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadLabelRueckkehrVorlastsignal.Size = New System.Drawing.Size(119, 18)
@@ -190,7 +200,6 @@ Partial Class frmEingabeWaegezelle
         Me.RadLabelPruefbericht.RootElement.AngleTransform = 0.0!
         Me.RadLabelPruefbericht.RootElement.FlipText = False
         Me.RadLabelPruefbericht.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadLabelPruefbericht.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadLabelPruefbericht.RootElement.Text = Nothing
         Me.RadLabelPruefbericht.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadLabelPruefbericht.Size = New System.Drawing.Size(61, 18)
@@ -210,7 +219,6 @@ Partial Class frmEingabeWaegezelle
         Me.RadLabelMinTeilungswert.RootElement.AngleTransform = 0.0!
         Me.RadLabelMinTeilungswert.RootElement.FlipText = False
         Me.RadLabelMinTeilungswert.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadLabelMinTeilungswert.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadLabelMinTeilungswert.RootElement.Text = Nothing
         Me.RadLabelMinTeilungswert.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadLabelMinTeilungswert.Size = New System.Drawing.Size(92, 18)
@@ -230,7 +238,6 @@ Partial Class frmEingabeWaegezelle
         Me.RadLabelMindestvorlast.RootElement.AngleTransform = 0.0!
         Me.RadLabelMindestvorlast.RootElement.FlipText = False
         Me.RadLabelMindestvorlast.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadLabelMindestvorlast.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadLabelMindestvorlast.RootElement.Text = Nothing
         Me.RadLabelMindestvorlast.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadLabelMindestvorlast.Size = New System.Drawing.Size(80, 18)
@@ -250,7 +257,6 @@ Partial Class frmEingabeWaegezelle
         Me.RadLabelMAXAnzahlTeilungswerte.RootElement.AngleTransform = 0.0!
         Me.RadLabelMAXAnzahlTeilungswerte.RootElement.FlipText = False
         Me.RadLabelMAXAnzahlTeilungswerte.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadLabelMAXAnzahlTeilungswerte.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadLabelMAXAnzahlTeilungswerte.RootElement.Text = Nothing
         Me.RadLabelMAXAnzahlTeilungswerte.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadLabelMAXAnzahlTeilungswerte.Size = New System.Drawing.Size(137, 18)
@@ -270,7 +276,6 @@ Partial Class frmEingabeWaegezelle
         Me.RadLabelKriechteilungsfaktor.RootElement.AngleTransform = 0.0!
         Me.RadLabelKriechteilungsfaktor.RootElement.FlipText = False
         Me.RadLabelKriechteilungsfaktor.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadLabelKriechteilungsfaktor.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadLabelKriechteilungsfaktor.RootElement.Text = Nothing
         Me.RadLabelKriechteilungsfaktor.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadLabelKriechteilungsfaktor.Size = New System.Drawing.Size(106, 18)
@@ -290,7 +295,6 @@ Partial Class frmEingabeWaegezelle
         Me.RadLabelHoechstteilungsfaktor.RootElement.AngleTransform = 0.0!
         Me.RadLabelHoechstteilungsfaktor.RootElement.FlipText = False
         Me.RadLabelHoechstteilungsfaktor.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadLabelHoechstteilungsfaktor.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadLabelHoechstteilungsfaktor.RootElement.Text = Nothing
         Me.RadLabelHoechstteilungsfaktor.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadLabelHoechstteilungsfaktor.Size = New System.Drawing.Size(110, 18)
@@ -310,7 +314,6 @@ Partial Class frmEingabeWaegezelle
         Me.RadLabelHersteller.RootElement.AngleTransform = 0.0!
         Me.RadLabelHersteller.RootElement.FlipText = False
         Me.RadLabelHersteller.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadLabelHersteller.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadLabelHersteller.RootElement.Text = Nothing
         Me.RadLabelHersteller.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadLabelHersteller.Size = New System.Drawing.Size(54, 18)
@@ -330,7 +333,6 @@ Partial Class frmEingabeWaegezelle
         Me.RadLabelGrenzwertTemperaturbereichMIN.RootElement.AngleTransform = 0.0!
         Me.RadLabelGrenzwertTemperaturbereichMIN.RootElement.FlipText = False
         Me.RadLabelGrenzwertTemperaturbereichMIN.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadLabelGrenzwertTemperaturbereichMIN.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadLabelGrenzwertTemperaturbereichMIN.RootElement.Text = Nothing
         Me.RadLabelGrenzwertTemperaturbereichMIN.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadLabelGrenzwertTemperaturbereichMIN.Size = New System.Drawing.Size(143, 18)
@@ -350,7 +352,6 @@ Partial Class frmEingabeWaegezelle
         Me.RadLabelGrenzwertTemperaturbereichMAX.RootElement.AngleTransform = 0.0!
         Me.RadLabelGrenzwertTemperaturbereichMAX.RootElement.FlipText = False
         Me.RadLabelGrenzwertTemperaturbereichMAX.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadLabelGrenzwertTemperaturbereichMAX.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadLabelGrenzwertTemperaturbereichMAX.RootElement.Text = Nothing
         Me.RadLabelGrenzwertTemperaturbereichMAX.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadLabelGrenzwertTemperaturbereichMAX.Size = New System.Drawing.Size(146, 18)
@@ -370,7 +371,6 @@ Partial Class frmEingabeWaegezelle
         Me.RadLabelGenauigkeitsklasse.RootElement.AngleTransform = 0.0!
         Me.RadLabelGenauigkeitsklasse.RootElement.FlipText = False
         Me.RadLabelGenauigkeitsklasse.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadLabelGenauigkeitsklasse.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadLabelGenauigkeitsklasse.RootElement.Text = Nothing
         Me.RadLabelGenauigkeitsklasse.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadLabelGenauigkeitsklasse.Size = New System.Drawing.Size(100, 18)
@@ -390,7 +390,6 @@ Partial Class frmEingabeWaegezelle
         Me.RadLabelBruchteilEichfehlergrenze.RootElement.AngleTransform = 0.0!
         Me.RadLabelBruchteilEichfehlergrenze.RootElement.FlipText = False
         Me.RadLabelBruchteilEichfehlergrenze.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadLabelBruchteilEichfehlergrenze.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadLabelBruchteilEichfehlergrenze.RootElement.Text = Nothing
         Me.RadLabelBruchteilEichfehlergrenze.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadLabelBruchteilEichfehlergrenze.Size = New System.Drawing.Size(136, 18)
@@ -410,7 +409,6 @@ Partial Class frmEingabeWaegezelle
         Me.RadLabelBauartzulassung.RootElement.AngleTransform = 0.0!
         Me.RadLabelBauartzulassung.RootElement.FlipText = False
         Me.RadLabelBauartzulassung.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadLabelBauartzulassung.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadLabelBauartzulassung.RootElement.Text = Nothing
         Me.RadLabelBauartzulassung.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadLabelBauartzulassung.Size = New System.Drawing.Size(88, 18)
@@ -430,7 +428,6 @@ Partial Class frmEingabeWaegezelle
         Me.RadButtonAbbrechen.RootElement.AngleTransform = 0.0!
         Me.RadButtonAbbrechen.RootElement.FlipText = False
         Me.RadButtonAbbrechen.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadButtonAbbrechen.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadButtonAbbrechen.RootElement.Text = Nothing
         Me.RadButtonAbbrechen.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadButtonAbbrechen.Size = New System.Drawing.Size(125, 24)
@@ -450,7 +447,6 @@ Partial Class frmEingabeWaegezelle
         Me.RadButtonSpeichern.RootElement.AngleTransform = 0.0!
         Me.RadButtonSpeichern.RootElement.FlipText = False
         Me.RadButtonSpeichern.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadButtonSpeichern.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadButtonSpeichern.RootElement.Text = Nothing
         Me.RadButtonSpeichern.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadButtonSpeichern.Size = New System.Drawing.Size(125, 24)
@@ -470,7 +466,6 @@ Partial Class frmEingabeWaegezelle
         Me.RadTextBoxControlWaegezelleTyp.RootElement.AngleTransform = 0.0!
         Me.RadTextBoxControlWaegezelleTyp.RootElement.FlipText = False
         Me.RadTextBoxControlWaegezelleTyp.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadTextBoxControlWaegezelleTyp.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlWaegezelleTyp.RootElement.Text = Nothing
         Me.RadTextBoxControlWaegezelleTyp.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadTextBoxControlWaegezelleTyp.Size = New System.Drawing.Size(125, 20)
@@ -489,7 +484,6 @@ Partial Class frmEingabeWaegezelle
         Me.RadTextBoxControlWaegezelleWiderstandWaegezelle.RootElement.AngleTransform = 0.0!
         Me.RadTextBoxControlWaegezelleWiderstandWaegezelle.RootElement.FlipText = False
         Me.RadTextBoxControlWaegezelleWiderstandWaegezelle.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadTextBoxControlWaegezelleWiderstandWaegezelle.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlWaegezelleWiderstandWaegezelle.RootElement.Text = Nothing
         Me.RadTextBoxControlWaegezelleWiderstandWaegezelle.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadTextBoxControlWaegezelleWiderstandWaegezelle.Size = New System.Drawing.Size(125, 20)
@@ -508,7 +502,6 @@ Partial Class frmEingabeWaegezelle
         Me.RadTextBoxControlWaegezelleWaegezellenkennwert.RootElement.AngleTransform = 0.0!
         Me.RadTextBoxControlWaegezelleWaegezellenkennwert.RootElement.FlipText = False
         Me.RadTextBoxControlWaegezelleWaegezellenkennwert.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadTextBoxControlWaegezelleWaegezellenkennwert.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlWaegezelleWaegezellenkennwert.RootElement.Text = Nothing
         Me.RadTextBoxControlWaegezelleWaegezellenkennwert.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadTextBoxControlWaegezelleWaegezellenkennwert.Size = New System.Drawing.Size(125, 20)
@@ -527,7 +520,6 @@ Partial Class frmEingabeWaegezelle
         Me.RadTextBoxControlWaegezelleRueckkehrVorlastsignal.RootElement.AngleTransform = 0.0!
         Me.RadTextBoxControlWaegezelleRueckkehrVorlastsignal.RootElement.FlipText = False
         Me.RadTextBoxControlWaegezelleRueckkehrVorlastsignal.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadTextBoxControlWaegezelleRueckkehrVorlastsignal.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlWaegezelleRueckkehrVorlastsignal.RootElement.Text = Nothing
         Me.RadTextBoxControlWaegezelleRueckkehrVorlastsignal.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadTextBoxControlWaegezelleRueckkehrVorlastsignal.Size = New System.Drawing.Size(125, 20)
@@ -546,7 +538,6 @@ Partial Class frmEingabeWaegezelle
         Me.RadTextBoxControlWaegezellePruefbericht.RootElement.AngleTransform = 0.0!
         Me.RadTextBoxControlWaegezellePruefbericht.RootElement.FlipText = False
         Me.RadTextBoxControlWaegezellePruefbericht.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadTextBoxControlWaegezellePruefbericht.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlWaegezellePruefbericht.RootElement.Text = Nothing
         Me.RadTextBoxControlWaegezellePruefbericht.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadTextBoxControlWaegezellePruefbericht.Size = New System.Drawing.Size(125, 20)
@@ -565,7 +556,6 @@ Partial Class frmEingabeWaegezelle
         Me.RadTextBoxControlWaegezelleGrenzwertTemperaturbereichMIN.RootElement.AngleTransform = 0.0!
         Me.RadTextBoxControlWaegezelleGrenzwertTemperaturbereichMIN.RootElement.FlipText = False
         Me.RadTextBoxControlWaegezelleGrenzwertTemperaturbereichMIN.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadTextBoxControlWaegezelleGrenzwertTemperaturbereichMIN.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlWaegezelleGrenzwertTemperaturbereichMIN.RootElement.Text = Nothing
         Me.RadTextBoxControlWaegezelleGrenzwertTemperaturbereichMIN.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadTextBoxControlWaegezelleGrenzwertTemperaturbereichMIN.Size = New System.Drawing.Size(125, 20)
@@ -584,7 +574,6 @@ Partial Class frmEingabeWaegezelle
         Me.RadTextBoxControlWaegezelleGrenzwertTemperaturbereichMAX.RootElement.AngleTransform = 0.0!
         Me.RadTextBoxControlWaegezelleGrenzwertTemperaturbereichMAX.RootElement.FlipText = False
         Me.RadTextBoxControlWaegezelleGrenzwertTemperaturbereichMAX.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadTextBoxControlWaegezelleGrenzwertTemperaturbereichMAX.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlWaegezelleGrenzwertTemperaturbereichMAX.RootElement.Text = Nothing
         Me.RadTextBoxControlWaegezelleGrenzwertTemperaturbereichMAX.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadTextBoxControlWaegezelleGrenzwertTemperaturbereichMAX.Size = New System.Drawing.Size(125, 20)
@@ -603,7 +592,6 @@ Partial Class frmEingabeWaegezelle
         Me.RadTextBoxControlWaegezelleKriechteilungsfaktor.RootElement.AngleTransform = 0.0!
         Me.RadTextBoxControlWaegezelleKriechteilungsfaktor.RootElement.FlipText = False
         Me.RadTextBoxControlWaegezelleKriechteilungsfaktor.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadTextBoxControlWaegezelleKriechteilungsfaktor.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlWaegezelleKriechteilungsfaktor.RootElement.Text = Nothing
         Me.RadTextBoxControlWaegezelleKriechteilungsfaktor.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadTextBoxControlWaegezelleKriechteilungsfaktor.Size = New System.Drawing.Size(125, 20)
@@ -622,7 +610,6 @@ Partial Class frmEingabeWaegezelle
         Me.RadTextBoxControlWaegezelleMAXAnzahlTeilungswerte.RootElement.AngleTransform = 0.0!
         Me.RadTextBoxControlWaegezelleMAXAnzahlTeilungswerte.RootElement.FlipText = False
         Me.RadTextBoxControlWaegezelleMAXAnzahlTeilungswerte.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadTextBoxControlWaegezelleMAXAnzahlTeilungswerte.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlWaegezelleMAXAnzahlTeilungswerte.RootElement.Text = Nothing
         Me.RadTextBoxControlWaegezelleMAXAnzahlTeilungswerte.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadTextBoxControlWaegezelleMAXAnzahlTeilungswerte.Size = New System.Drawing.Size(125, 20)
@@ -641,7 +628,6 @@ Partial Class frmEingabeWaegezelle
         Me.RadTextBoxControWaegezelleHoechstteilungsfaktor.RootElement.AngleTransform = 0.0!
         Me.RadTextBoxControWaegezelleHoechstteilungsfaktor.RootElement.FlipText = False
         Me.RadTextBoxControWaegezelleHoechstteilungsfaktor.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadTextBoxControWaegezelleHoechstteilungsfaktor.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControWaegezelleHoechstteilungsfaktor.RootElement.Text = Nothing
         Me.RadTextBoxControWaegezelleHoechstteilungsfaktor.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadTextBoxControWaegezelleHoechstteilungsfaktor.Size = New System.Drawing.Size(125, 20)
@@ -660,7 +646,6 @@ Partial Class frmEingabeWaegezelle
         Me.RadTextBoxControlWaegezelleHersteller.RootElement.AngleTransform = 0.0!
         Me.RadTextBoxControlWaegezelleHersteller.RootElement.FlipText = False
         Me.RadTextBoxControlWaegezelleHersteller.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadTextBoxControlWaegezelleHersteller.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlWaegezelleHersteller.RootElement.Text = Nothing
         Me.RadTextBoxControlWaegezelleHersteller.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadTextBoxControlWaegezelleHersteller.Size = New System.Drawing.Size(125, 20)
@@ -679,7 +664,6 @@ Partial Class frmEingabeWaegezelle
         Me.RadTextBoxControlWaegezelleMinTeilungswert.RootElement.AngleTransform = 0.0!
         Me.RadTextBoxControlWaegezelleMinTeilungswert.RootElement.FlipText = False
         Me.RadTextBoxControlWaegezelleMinTeilungswert.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadTextBoxControlWaegezelleMinTeilungswert.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlWaegezelleMinTeilungswert.RootElement.Text = Nothing
         Me.RadTextBoxControlWaegezelleMinTeilungswert.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadTextBoxControlWaegezelleMinTeilungswert.Size = New System.Drawing.Size(125, 20)
@@ -698,7 +682,6 @@ Partial Class frmEingabeWaegezelle
         Me.RadTextBoxControlWaegezelleMindestvorlast.RootElement.AngleTransform = 0.0!
         Me.RadTextBoxControlWaegezelleMindestvorlast.RootElement.FlipText = False
         Me.RadTextBoxControlWaegezelleMindestvorlast.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadTextBoxControlWaegezelleMindestvorlast.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlWaegezelleMindestvorlast.RootElement.Text = Nothing
         Me.RadTextBoxControlWaegezelleMindestvorlast.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadTextBoxControlWaegezelleMindestvorlast.Size = New System.Drawing.Size(125, 20)
@@ -717,7 +700,6 @@ Partial Class frmEingabeWaegezelle
         Me.RadTextBoxControlWaegezelleGenauigkeitsklasse.RootElement.AngleTransform = 0.0!
         Me.RadTextBoxControlWaegezelleGenauigkeitsklasse.RootElement.FlipText = False
         Me.RadTextBoxControlWaegezelleGenauigkeitsklasse.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadTextBoxControlWaegezelleGenauigkeitsklasse.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlWaegezelleGenauigkeitsklasse.RootElement.Text = Nothing
         Me.RadTextBoxControlWaegezelleGenauigkeitsklasse.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadTextBoxControlWaegezelleGenauigkeitsklasse.Size = New System.Drawing.Size(125, 20)
@@ -736,7 +718,6 @@ Partial Class frmEingabeWaegezelle
         Me.RadTextBoxControlWaegezelleBruchteilEichfehlergrenze.RootElement.AngleTransform = 0.0!
         Me.RadTextBoxControlWaegezelleBruchteilEichfehlergrenze.RootElement.FlipText = False
         Me.RadTextBoxControlWaegezelleBruchteilEichfehlergrenze.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadTextBoxControlWaegezelleBruchteilEichfehlergrenze.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlWaegezelleBruchteilEichfehlergrenze.RootElement.Text = Nothing
         Me.RadTextBoxControlWaegezelleBruchteilEichfehlergrenze.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadTextBoxControlWaegezelleBruchteilEichfehlergrenze.Size = New System.Drawing.Size(125, 20)
@@ -755,7 +736,6 @@ Partial Class frmEingabeWaegezelle
         Me.RadTextBoxControlWaegezelleBauartzulassung.RootElement.AngleTransform = 0.0!
         Me.RadTextBoxControlWaegezelleBauartzulassung.RootElement.FlipText = False
         Me.RadTextBoxControlWaegezelleBauartzulassung.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadTextBoxControlWaegezelleBauartzulassung.RootElement.Padding = New System.Windows.Forms.Padding(0)
         Me.RadTextBoxControlWaegezelleBauartzulassung.RootElement.Text = Nothing
         Me.RadTextBoxControlWaegezelleBauartzulassung.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadTextBoxControlWaegezelleBauartzulassung.Size = New System.Drawing.Size(125, 20)
@@ -771,19 +751,160 @@ Partial Class frmEingabeWaegezelle
         '
         'RadCheckBoxNeueWZ
         '
-        Me.RadCheckBoxNeueWZ.Location = New System.Drawing.Point(316, 252)
+        Me.RadCheckBoxNeueWZ.Location = New System.Drawing.Point(12, 276)
         Me.RadCheckBoxNeueWZ.Name = "RadCheckBoxNeueWZ"
-        Me.RadCheckBoxNeueWZ.Size = New System.Drawing.Size(453, 32)
+        Me.RadCheckBoxNeueWZ.Size = New System.Drawing.Size(456, 46)
         Me.RadCheckBoxNeueWZ.TabIndex = 87
-        Me.RadCheckBoxNeueWZ.Text = "<html>Neu (von externen Eichbevollmächtigten angelegte WZ werden als 'Neu' markie" & _
-    "rt. <br />Nach kontrolle kann/sollte dieser Wert auf 'Nein' gesetzt werden und d" & _
-    "eaktivert auf 'Nein'</html>"
+        Me.RadCheckBoxNeueWZ.Text = resources.GetString("RadCheckBoxNeueWZ.Text")
         '
-        'frmWaegezelle
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.ForeColor = System.Drawing.Color.Red
+        Me.Label2.Location = New System.Drawing.Point(447, 38)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(12, 13)
+        Me.Label2.TabIndex = 89
+        Me.Label2.Text = "*"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.ForeColor = System.Drawing.Color.Red
+        Me.Label3.Location = New System.Drawing.Point(447, 90)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(12, 13)
+        Me.Label3.TabIndex = 91
+        Me.Label3.Text = "*"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.ForeColor = System.Drawing.Color.Red
+        Me.Label4.Location = New System.Drawing.Point(447, 64)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(12, 13)
+        Me.Label4.TabIndex = 90
+        Me.Label4.Text = "*"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.ForeColor = System.Drawing.Color.Red
+        Me.Label5.Location = New System.Drawing.Point(447, 194)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(12, 13)
+        Me.Label5.TabIndex = 95
+        Me.Label5.Text = "*"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.ForeColor = System.Drawing.Color.Red
+        Me.Label6.Location = New System.Drawing.Point(447, 168)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(12, 13)
+        Me.Label6.TabIndex = 94
+        Me.Label6.Text = "*"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.ForeColor = System.Drawing.Color.Red
+        Me.Label7.Location = New System.Drawing.Point(447, 142)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(12, 13)
+        Me.Label7.TabIndex = 93
+        Me.Label7.Text = "*"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.ForeColor = System.Drawing.Color.Red
+        Me.Label8.Location = New System.Drawing.Point(447, 116)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(12, 13)
+        Me.Label8.TabIndex = 92
+        Me.Label8.Text = "*"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.ForeColor = System.Drawing.Color.Red
+        Me.Label9.Location = New System.Drawing.Point(944, 194)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(12, 13)
+        Me.Label9.TabIndex = 103
+        Me.Label9.Text = "*"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.ForeColor = System.Drawing.Color.Red
+        Me.Label10.Location = New System.Drawing.Point(944, 168)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(12, 13)
+        Me.Label10.TabIndex = 102
+        Me.Label10.Text = "*"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.ForeColor = System.Drawing.Color.Red
+        Me.Label11.Location = New System.Drawing.Point(944, 142)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(12, 13)
+        Me.Label11.TabIndex = 101
+        Me.Label11.Text = "*"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.ForeColor = System.Drawing.Color.Red
+        Me.Label13.Location = New System.Drawing.Point(944, 90)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(12, 13)
+        Me.Label13.TabIndex = 99
+        Me.Label13.Text = "*"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.ForeColor = System.Drawing.Color.Red
+        Me.Label15.Location = New System.Drawing.Point(944, 38)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(12, 13)
+        Me.Label15.TabIndex = 97
+        Me.Label15.Text = "*"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.ForeColor = System.Drawing.Color.Red
+        Me.Label16.Location = New System.Drawing.Point(944, 12)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(12, 13)
+        Me.Label16.TabIndex = 96
+        Me.Label16.Text = "*"
+        '
+        'frmEingabeWaegezelle
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(961, 398)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.Label13)
+        Me.Controls.Add(Me.Label15)
+        Me.Controls.Add(Me.Label16)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.RadCheckBoxNeueWZ)
         Me.Controls.Add(Me.RadCheckBoxDeaktiviert)
         Me.Controls.Add(Me.RadLabelTyp)
@@ -820,7 +941,7 @@ Partial Class frmEingabeWaegezelle
         Me.Controls.Add(Me.RadTextBoxControlWaegezelleGenauigkeitsklasse)
         Me.Controls.Add(Me.RadTextBoxControlWaegezelleBruchteilEichfehlergrenze)
         Me.Controls.Add(Me.RadTextBoxControlWaegezelleBauartzulassung)
-        Me.Name = "frmWaegezelle"
+        Me.Name = "frmEingabeWaegezelle"
         '
         '
         '
@@ -903,5 +1024,18 @@ Partial Class frmEingabeWaegezelle
     Friend WithEvents RadTextBoxControlWaegezelleBauartzulassung As Telerik.WinControls.UI.RadTextBoxControl
     Friend WithEvents RadCheckBoxDeaktiviert As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents RadCheckBoxNeueWZ As Telerik.WinControls.UI.RadCheckBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents Label15 As System.Windows.Forms.Label
+    Friend WithEvents Label16 As System.Windows.Forms.Label
 End Class
 

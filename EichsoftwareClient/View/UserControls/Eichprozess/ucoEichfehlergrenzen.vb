@@ -48,15 +48,15 @@
     Private Sub FillControls()
         'dynamisches laden der Nullstellen:
         Try
-            _intNullstellenE1 = GetRHEWADecimalDigits(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1) '.Replace(",", "."))  + 1
+            _intNullstellenE1 = clsGeneralFunctions.GetRHEWADecimalDigits(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1) '.Replace(",", "."))  + 1
         Catch ex As Exception
         End Try
         Try
-            _intNullstellenE2 = GetRHEWADecimalDigits(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2) '.Replace(",", ".")) + 1
+            _intNullstellenE2 = clsGeneralFunctions.GetRHEWADecimalDigits(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2) '.Replace(",", ".")) + 1
         Catch ex As Exception
         End Try
         Try
-            _intNullstellenE3 = GetRHEWADecimalDigits(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3) '.Replace(",", "."))  + 1
+            _intNullstellenE3 = clsGeneralFunctions.GetRHEWADecimalDigits(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3) '.Replace(",", "."))  + 1
         Catch ex As Exception
         End Try
 
@@ -185,7 +185,7 @@
 #End Region
 
 #Region "Overrides"
-    Protected Friend Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
+    Protected Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
         If Me.Equals(UserControl) = False Then Exit Sub
 
         MyBase.LokalisierungNeeded(UserControl)
@@ -220,9 +220,9 @@
 
 #End Region
 
-  
+
     'Entsperrroutine
-    Protected Friend Overrides Sub EntsperrungNeeded()
+    Protected Overrides Sub EntsperrungNeeded()
         MyBase.EntsperrungNeeded()
 
         'Hiermit wird ein lesender Vorgang wieder entsperrt. 
@@ -246,8 +246,8 @@
         ParentFormular.DialogModus = FrmMainContainer.enuDialogModus.korrigierend
     End Sub
 
-    Protected Friend Overrides Sub VersendenNeeded(TargetUserControl As UserControl)
-    
+    Protected Overrides Sub VersendenNeeded(TargetUserControl As UserControl)
+
         If Me.Equals(TargetUserControl) Then
             MyBase.VersendenNeeded(TargetUserControl)
             Using dbcontext As New EichsoftwareClientdatabaseEntities1

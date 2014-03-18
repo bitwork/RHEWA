@@ -394,15 +394,15 @@
         'Steuerlemente füllen
         'dynamisches laden der Nullstellen:
         Try
-            _intNullstellenE1 = GetRHEWADecimalDigits(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1) '.Replace(",", "."))  + 1
+            _intNullstellenE1 = clsGeneralFunctions.GetRHEWADecimalDigits(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1) '.Replace(",", "."))  + 1
         Catch ex As Exception
         End Try
         Try
-            _intNullstellenE2 = GetRHEWADecimalDigits(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2) '.Replace(",", ".")) + 1
+            _intNullstellenE2 = clsGeneralFunctions.GetRHEWADecimalDigits(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2) '.Replace(",", ".")) + 1
         Catch ex As Exception
         End Try
         Try
-            _intNullstellenE3 = GetRHEWADecimalDigits(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3) '.Replace(",", "."))  + 1
+            _intNullstellenE3 = clsGeneralFunctions.GetRHEWADecimalDigits(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3) '.Replace(",", "."))  + 1
         Catch ex As Exception
         End Try
 
@@ -605,7 +605,7 @@
 
 #Region "Overrides"
     'Speicherroutine
-    Protected Friend Overrides Sub SaveNeeded(ByVal UserControl As UserControl)
+    Protected Overrides Sub SaveNeeded(ByVal UserControl As UserControl)
         If Me.Equals(UserControl) Then
 
             If DialogModus = enuDialogModus.lesend Then
@@ -720,7 +720,7 @@
         End If
     End Sub
 
-    Protected Friend Overrides Sub SaveWithoutValidationNeeded(usercontrol As UserControl)
+    Protected Overrides Sub SaveWithoutValidationNeeded(usercontrol As UserControl)
         MyBase.SaveWithoutValidationNeeded(usercontrol)
 
         If Me.Equals(usercontrol) Then
@@ -810,7 +810,7 @@
     ''' </summary>
     ''' <param name="UserControl"></param>
     ''' <remarks></remarks>
-    Protected Friend Overrides Sub UpdateNeeded(UserControl As UserControl)
+    Protected Overrides Sub UpdateNeeded(UserControl As UserControl)
         If Me.Equals(UserControl) Then
             MyBase.UpdateNeeded(UserControl)
             'Hilfetext setzen
@@ -825,7 +825,7 @@
 #End Region
 
 
-    Protected Friend Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
+    Protected Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
         If Me.Equals(UserControl) = False Then Exit Sub
 
         MyBase.LokalisierungNeeded(UserControl)
@@ -854,7 +854,7 @@
         Me.lblLastLinks.Text = resources.GetString("lblLastLinks.Text")
         Me.lblLastRechts.Text = resources.GetString("lblLastRechts.Text")
 
-      
+
 
         If Not ParentFormular Is Nothing Then
             Try
@@ -868,7 +868,7 @@
             End Try
         End If
 
-       
+
     End Sub
 
     Private Sub RadCheckBoxAuffahrtLinks1_MouseClick(sender As Object, e As MouseEventArgs) Handles RadCheckBoxlblAuffahrtRechts3.MouseClick, RadCheckBoxlblAuffahrtRechts2.MouseClick, RadCheckBoxlblAuffahrtRechts1.MouseClick, RadCheckBoxAuffahrtLinks3.MouseClick, RadCheckBoxAuffahrtLinks2.MouseClick, RadCheckBoxAuffahrtLinks1.MouseClick
@@ -882,7 +882,7 @@
     End Sub
 
     'Entsperrroutine
-    Protected Friend Overrides Sub EntsperrungNeeded()
+    Protected Overrides Sub EntsperrungNeeded()
         MyBase.EntsperrungNeeded()
 
         'Hiermit wird ein lesender Vorgang wieder entsperrt. 
@@ -906,7 +906,7 @@
         ParentFormular.DialogModus = FrmMainContainer.enuDialogModus.korrigierend
     End Sub
 
-    Protected Friend Overrides Sub VersendenNeeded(TargetUserControl As UserControl)
+    Protected Overrides Sub VersendenNeeded(TargetUserControl As UserControl)
 
         If Me.Equals(TargetUserControl) Then
             MyBase.VersendenNeeded(TargetUserControl)

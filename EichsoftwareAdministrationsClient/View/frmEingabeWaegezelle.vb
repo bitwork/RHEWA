@@ -1,7 +1,7 @@
 ﻿Public Class frmEingabeWaegezelle
     Private _ID As String = "-1"
     Private _objWZ As ServerLookup_Waegezelle
-
+    Private _bolSuspendEvents As Boolean = False
     Sub New(ByVal pID As String)
 
         ' This call is required by the designer.
@@ -40,6 +40,7 @@
 
     Private Sub FillControls()
         Try
+            _bolSuspendEvents = True
             RadTextBoxControlWaegezelleBauartzulassung.Text = _objWZ.Bauartzulassung
             RadTextBoxControlWaegezelleBruchteilEichfehlergrenze.Text = _objWZ.BruchteilEichfehlergrenze
             RadTextBoxControlWaegezelleGenauigkeitsklasse.Text = _objWZ.Genauigkeitsklasse
@@ -68,6 +69,7 @@
         Catch e As Exception
             MessageBox.Show(e.StackTrace, e.Message)
         End Try
+        _bolSuspendEvents = False
     End Sub
 
     Private Sub UpdateObject()
@@ -155,20 +157,30 @@
         'prüfen ob alle Felder ausgefüllt sind
         Dim AbortSaveing As Boolean = False
 
-        'If Debugger.IsAttached Then 'für debugzwecke
-        '    Return True
-        'End If
+        ''If Debugger.IsAttached Then 'für debugzwecke
+        ''    Return True
+        ''End If
         'prüfen ob alle Felder ausgefüllt sind
+        _bolSuspendEvents = True
         For Each Control In Me.Controls
             If TypeOf Control Is Telerik.WinControls.UI.RadTextBoxControl Then
+                If Control.Equals(RadTextBoxControlWaegezelleBauartzulassung) Then Continue For
+                If Control.Equals(RadTextBoxControlWaegezelleMinTeilungswert) Then Continue For
+                If Control.Equals(RadTextBoxControlWaegezelleRueckkehrVorlastsignal) Then Continue For
+
                 If Control.Text.trim.Equals("") Then
                     AbortSaveing = True
-
+                    '      CType(Control, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderBoxStyle = Telerik.WinControls.BorderBoxStyle.SingleBorder
                     CType(Control, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.Red
                     CType(Control, Telerik.WinControls.UI.RadTextBoxControl).Focus()
                 End If
             End If
         Next
+        If AbortSaveing Then
+            MessageBox.Show("Bitte füllen Sie alle Felder aus", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            _bolSuspendEvents = False
+            Return False
+        End If
 
         If RadTextBoxControlWaegezelleGenauigkeitsklasse.Text.ToUpper = "A" Or RadTextBoxControlWaegezelleGenauigkeitsklasse.Text.ToUpper = "B" Or RadTextBoxControlWaegezelleGenauigkeitsklasse.Text.ToUpper = "C" Or RadTextBoxControlWaegezelleGenauigkeitsklasse.Text = "D".ToUpper Then
         Else
@@ -177,15 +189,12 @@
             AbortSaveing = True
             RadTextBoxControlWaegezelleGenauigkeitsklasse.TextBoxElement.BorderColor = Color.Red
             RadTextBoxControlWaegezelleGenauigkeitsklasse.Focus()
+            _bolSuspendEvents = False
             Return False
         End If
 
-        If AbortSaveing Then
-            MessageBox.Show("Bitte füllen Sie alle Felder aus", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-            Return False
-        End If
         'Speichern soll nicht abgebrochen werden, da alles okay ist
-
+        _bolSuspendEvents = False
         Return True
 
     End Function
@@ -193,6 +202,7 @@
 
     Private Sub RadTextBoxControlWaegezelleBruchteilEichfehlergrenze_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles RadTextBoxControWaegezelleHoechstteilungsfaktor.Validating, RadTextBoxControlWaegezelleWiderstandWaegezelle.Validating, RadTextBoxControlWaegezelleWaegezellenkennwert.Validating, RadTextBoxControlWaegezelleRueckkehrVorlastsignal.Validating, RadTextBoxControlWaegezelleMinTeilungswert.Validating, RadTextBoxControlWaegezelleMindestvorlast.Validating, RadTextBoxControlWaegezelleMAXAnzahlTeilungswerte.Validating, RadTextBoxControlWaegezelleKriechteilungsfaktor.Validating, RadTextBoxControlWaegezelleGrenzwertTemperaturbereichMIN.Validating, RadTextBoxControlWaegezelleGrenzwertTemperaturbereichMAX.Validating, RadTextBoxControlWaegezelleBruchteilEichfehlergrenze.Validating
         Dim result As Decimal
+        If _bolSuspendEvents = True Then Exit Sub
         If Not sender.isreadonly = True Then
 
             'damit das Vorgehen nicht so aggresiv ist, wird es bei leerem Text ignoriert:
@@ -209,7 +219,10 @@
 
             Else 'rahmen zurücksetzen
                 'prüfen ob negative zahlen eingegeben wurden
-                If sender.text.ToString.Trim.StartsWith("-") Then
+                'prüfen ob negative zahlen eingegeben wurden
+                If CType(sender, Telerik.WinControls.UI.RadTextBoxControl).Name.Equals(RadTextBoxControlWaegezelleGrenzwertTemperaturbereichMIN.Name) Then
+                    CType(sender, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.FromArgb(0, 255, 255, 255)
+                ElseIf sender.text.ToString.Trim.StartsWith("-") Then
                     e.Cancel = True
                     CType(sender, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.Red
                     System.Media.SystemSounds.Exclamation.Play()

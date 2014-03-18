@@ -149,7 +149,7 @@
 
 #Region "Overrides"
     'Speicherroutine
-    Protected Friend Overrides Sub SaveNeeded(ByVal UserControl As UserControl)
+    Protected Overrides Sub SaveNeeded(ByVal UserControl As UserControl)
         If Me.Equals(UserControl) Then
             If DialogModus = enuDialogModus.lesend Then
 
@@ -238,7 +238,7 @@
         End If
     End Sub
 
-    Protected Friend Overrides Sub SaveWithoutValidationNeeded(usercontrol As UserControl)
+    Protected Overrides Sub SaveWithoutValidationNeeded(usercontrol As UserControl)
         MyBase.SaveWithoutValidationNeeded(usercontrol)
 
         If Me.Equals(usercontrol) Then
@@ -275,7 +275,7 @@
     ''' </summary>
     ''' <param name="UserControl"></param>
     ''' <remarks></remarks>
-    Protected Friend Overrides Sub UpdateNeeded(UserControl As UserControl)
+    Protected Overrides Sub UpdateNeeded(UserControl As UserControl)
         If Me.Equals(UserControl) Then
             MyBase.UpdateNeeded(UserControl)
             'Hilfetext setzen
@@ -291,7 +291,7 @@
 
 
 
-    Protected Friend Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
+    Protected Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
         If Me.Equals(UserControl) = False Then Exit Sub
 
         MyBase.LokalisierungNeeded(UserControl)
@@ -317,7 +317,7 @@
             End Try
         End If
 
-      
+
     End Sub
 
     Private Sub RadButtonShowEFGSteigend_Click(sender As Object, e As EventArgs) Handles RadButtonShowEFG.Click
@@ -331,7 +331,7 @@
         AktuellerStatusDirty = True
     End Sub
     'Entsperrroutine
-    Protected Friend Overrides Sub EntsperrungNeeded()
+    Protected Overrides Sub EntsperrungNeeded()
         MyBase.EntsperrungNeeded()
 
         'Hiermit wird ein lesender Vorgang wieder entsperrt. 
@@ -355,7 +355,7 @@
         ParentFormular.DialogModus = FrmMainContainer.enuDialogModus.korrigierend
     End Sub
 
-    Protected Friend Overrides Sub VersendenNeeded(TargetUserControl As UserControl)
+    Protected Overrides Sub VersendenNeeded(TargetUserControl As UserControl)
 
 
         If Me.Equals(TargetUserControl) Then

@@ -23,7 +23,7 @@ Public Class FrmMainContainer
         korrigierend = 2
     End Enum
 
-    Private WithEvents BreadCrumb As ucoAmpel
+    Friend WithEvents BreadCrumb As ucoAmpel
 #End Region
 
 
@@ -147,11 +147,12 @@ Public Class FrmMainContainer
                 Select Case _CurrentUco.EichprozessStatusReihenfolge
                     Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
                         RadButtonNavigateBackwards.Enabled = False
+                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Versenden
+                        RadButtonNavigateBackwards.Enabled = True
+                        RadButtonNavigateForwards.Enabled = False
+
                     Case Else
                         RadButtonNavigateBackwards.Enabled = True
-
-                        'case nur lesend
-                        'case korrektur
                 End Select
             Else
                 RadButtonNavigateBackwards.Enabled = False
@@ -160,7 +161,16 @@ Public Class FrmMainContainer
 
 
         Else
-            RadButtonNavigateBackwards.Enabled = True
+            Select Case _CurrentUco.EichprozessStatusReihenfolge
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
+                    RadButtonNavigateBackwards.Enabled = False
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Versenden
+                    RadButtonNavigateBackwards.Enabled = True
+                    RadButtonNavigateForwards.Enabled = False
+
+                Case Else
+                    RadButtonNavigateBackwards.Enabled = True
+            End Select
         End If
     End Sub
 
@@ -184,32 +194,7 @@ Public Class FrmMainContainer
                     SpringeZuUCO(Status)
 
                 End If
-                'Else
-                '    If Status > _CurrentUco.EichprozessStatusReihenfolge Then
-                '        Do While Status > _CurrentUco.EichprozessStatusReihenfolge
-                '            RadButtonNavigateForwards_Click(Nothing, Nothing)
-                '        Loop
-                '    ElseIf Status < _CurrentUco.EichprozessStatusReihenfolge Then
-                '        Do While Status < _CurrentUco.EichprozessStatusReihenfolge
-                '            RadButtonNavigateBackwards_Click(Nothing, Nothing)
-                '        Loop
-                '    Else
-                '    Exit Sub
-                '    End If
-                'End If
 
-
-                'If Status > _CurrentUco.EichprozessStatusReihenfolge Then
-                '    Do While Status > _CurrentUco.EichprozessStatusReihenfolge
-                '        RadButtonNavigateForwards_Click(Nothing, Nothing)
-                '    Loop
-                'ElseIf Status < _CurrentUco.EichprozessStatusReihenfolge Then
-                '    Do While Status < _CurrentUco.EichprozessStatusReihenfolge
-                '        RadButtonNavigateBackwards_Click(Nothing, Nothing)
-                '    Loop
-                'Else
-                '    Exit Sub 'weil gleich
-                'End If
 
             End If
         Catch e As Exception
@@ -320,8 +305,6 @@ Public Class FrmMainContainer
                         System.Windows.Forms.Application.Exit()
                         Exit Sub
                     Else
-                        'MessageBox.Show(My.Resources.GlobaleLokalisierung.BitteNeuStarten, "", MessageBoxButtons.OK)
-                        'System.Windows.Forms.Application.Exit()
                         Me.FrmMainContainer_Load(Nothing, Nothing)
                         Exit Sub
                     End If
@@ -363,6 +346,7 @@ Public Class FrmMainContainer
     ''' <commentauthor></commentauthor>
     Private Sub LadeEichprozessVorgangsUco()
         If Not Me.CurrentEichprozess Is Nothing Then
+            'Breadcumb (Ampelfunktion intiieren)
             Try
                 BreadCrumb = New ucoAmpel(Me)
                 Me.RadScrollablePanelTrafficLightBreadcrumb.PanelContainer.Controls.Add(BreadCrumb)
@@ -374,11 +358,13 @@ Public Class FrmMainContainer
             End Try
 
             Dim uco As Object = Nothing
+            'aktuelen Status zur Ampel zuweisen
             BreadCrumb.AktuellerGewaehlterVorgang = CurrentEichprozess.FK_Vorgangsstatus
 
             If Me.DialogModus = enuDialogModus.lesend Then 'falls RHEWA seitig ein DS angeguckt wird, ist dieser bereits fertig, soll aber dennoch von anfang an angeguckt werden
-                ' CurrentEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
                 uco = New ucoStammdatenEingabe(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
+                'auf erste seite Blättern
+                BreadCrumb.FindeElementUndSelektiere(GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe)
             Else
                 Select Case CurrentEichprozess.FK_Vorgangsstatus
                     Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
@@ -569,7 +555,7 @@ Public Class FrmMainContainer
             bolUCODirty = _CurrentUco.AktuellerStatusDirty 'im Save Needed wird der Dirty Flag bereits wieder zurückgesetzt. Deswegen wird er hier zwischengespeichert
         End If
         RaiseEvent SaveNeeded(_CurrentUco)
-    
+
 
         If Not _CurrentUco Is Nothing Then
 
@@ -589,6 +575,8 @@ Public Class FrmMainContainer
                             Case Is = "Fahrzeugwaagen", "über 60kg im Staffelverfahren"
                                 'überspringe Prüfung mit Normallast
                                 _CurrentUco.EichprozessStatusReihenfolge += 1
+                                BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge + 1
+
                         End Select
                     Catch ex As Exception
                         Debug.WriteLine(ex.ToString)
@@ -598,6 +586,8 @@ Public Class FrmMainContainer
                     Try
                         'überspringe staffelverfahren
                         _CurrentUco.EichprozessStatusReihenfolge += 1
+                        BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge + 1
+
                     Catch ex As Exception
                         Debug.WriteLine(ex.ToString)
 
@@ -608,6 +598,8 @@ Public Class FrmMainContainer
                             Case Is = "über 60kg mit Normalien", "über 60kg im Staffelverfahren"
                                 'überspringe fahrzeugwaagen
                                 _CurrentUco.EichprozessStatusReihenfolge += 1
+                                BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge + 1
+
                         End Select
                     Catch ex As Exception
                         Debug.WriteLine(ex.ToString)
@@ -618,6 +610,8 @@ Public Class FrmMainContainer
                         If _CurrentUco.objEichprozess.Eichprotokoll.Verwendungszweck_Drucker = False Then
                             'überspringe Stablität der GLeichgewichtslage
                             _CurrentUco.EichprozessStatusReihenfolge += 1
+                            BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge + 1
+
                         End If
 
                     Catch ex As Exception
@@ -630,6 +624,8 @@ Public Class FrmMainContainer
                             Case Is = "über 60kg mit Normalien", "über 60kg im Staffelverfahren"
                                 'überspringe Achlastwägungen
                                 _CurrentUco.EichprozessStatusReihenfolge += 1
+                                BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge + 1
+
                         End Select
                     Catch ex As Exception
                         Debug.WriteLine(ex.ToString)
@@ -732,7 +728,7 @@ Public Class FrmMainContainer
     Private Sub BlaettereRueckwaerts()
 
         If Not _CurrentUco Is Nothing Then
-        
+
             Dim uco As ucoContent = Nothing
 
 
@@ -867,7 +863,7 @@ Public Class FrmMainContainer
         SpeichereGridLayout()
     End Sub
 
- 
+
 #End Region
     Private Sub SpeichereGridLayout()
         'speichere Layout der beiden Grids

@@ -117,4 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="RadCheckBoxNeueWZ.Text" xml:space="preserve">
+    <value>&lt;html&gt;&lt;p&gt;Neu &lt;/p&gt;&lt;p&gt;(von externen Eichbevollmächtigten angelegte WZ werden als 'Neu' markiert. &lt;br /&gt;Nach kontrolle kann/sollte dieser Wert auf 'Nein' gesetzt werden und deaktivert auf 'Nein')&lt;/p&gt;&lt;/html&gt;</value>
+  </data>
 </root>

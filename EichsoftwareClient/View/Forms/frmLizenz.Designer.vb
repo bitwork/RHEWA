@@ -63,7 +63,6 @@ Partial Class FrmLizenz
         Me.lblName.RootElement.AngleTransform = CType(resources.GetObject("lblName.RootElement.AngleTransform"), Single)
         Me.lblName.RootElement.FlipText = CType(resources.GetObject("lblName.RootElement.FlipText"), Boolean)
         Me.lblName.RootElement.Margin = CType(resources.GetObject("lblName.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblName.RootElement.Padding = CType(resources.GetObject("lblName.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblName.RootElement.Text = resources.GetString("lblName.RootElement.Text")
         Me.lblName.RootElement.TextOrientation = CType(resources.GetObject("lblName.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -80,7 +79,6 @@ Partial Class FrmLizenz
         Me.RadTextBoxControl1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControl1.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControl1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControl1.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControl1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControl1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControl1.RootElement.Padding = CType(resources.GetObject("RadTextBoxControl1.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControl1.RootElement.Text = resources.GetString("RadTextBoxControl1.RootElement.Text")
         Me.RadTextBoxControl1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControl1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -97,7 +95,6 @@ Partial Class FrmLizenz
         Me.RadTextBoxControl2.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControl2.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControl2.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControl2.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControl2.RootElement.Margin = CType(resources.GetObject("RadTextBoxControl2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControl2.RootElement.Padding = CType(resources.GetObject("RadTextBoxControl2.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControl2.RootElement.Text = resources.GetString("RadTextBoxControl2.RootElement.Text")
         Me.RadTextBoxControl2.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControl2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -114,7 +111,6 @@ Partial Class FrmLizenz
         Me.lblLizenzschuessel.RootElement.AngleTransform = CType(resources.GetObject("lblLizenzschuessel.RootElement.AngleTransform"), Single)
         Me.lblLizenzschuessel.RootElement.FlipText = CType(resources.GetObject("lblLizenzschuessel.RootElement.FlipText"), Boolean)
         Me.lblLizenzschuessel.RootElement.Margin = CType(resources.GetObject("lblLizenzschuessel.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblLizenzschuessel.RootElement.Padding = CType(resources.GetObject("lblLizenzschuessel.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblLizenzschuessel.RootElement.Text = resources.GetString("lblLizenzschuessel.RootElement.Text")
         Me.lblLizenzschuessel.RootElement.TextOrientation = CType(resources.GetObject("lblLizenzschuessel.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -131,7 +127,6 @@ Partial Class FrmLizenz
         Me.RadButtonOK.RootElement.AngleTransform = CType(resources.GetObject("RadButtonOK.RootElement.AngleTransform"), Single)
         Me.RadButtonOK.RootElement.FlipText = CType(resources.GetObject("RadButtonOK.RootElement.FlipText"), Boolean)
         Me.RadButtonOK.RootElement.Margin = CType(resources.GetObject("RadButtonOK.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButtonOK.RootElement.Padding = CType(resources.GetObject("RadButtonOK.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadButtonOK.RootElement.Text = resources.GetString("RadButtonOK.RootElement.Text")
         Me.RadButtonOK.RootElement.TextOrientation = CType(resources.GetObject("RadButtonOK.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -148,7 +143,6 @@ Partial Class FrmLizenz
         Me.RadCheckBoxAkzeptieren.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxAkzeptieren.RootElement.AngleTransform"), Single)
         Me.RadCheckBoxAkzeptieren.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxAkzeptieren.RootElement.FlipText"), Boolean)
         Me.RadCheckBoxAkzeptieren.RootElement.Margin = CType(resources.GetObject("RadCheckBoxAkzeptieren.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadCheckBoxAkzeptieren.RootElement.Padding = CType(resources.GetObject("RadCheckBoxAkzeptieren.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadCheckBoxAkzeptieren.RootElement.Text = resources.GetString("RadCheckBoxAkzeptieren.RootElement.Text")
         Me.RadCheckBoxAkzeptieren.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxAkzeptieren.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -168,7 +162,6 @@ Partial Class FrmLizenz
         Me.RadTextBoxControl3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControl3.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControl3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControl3.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControl3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControl3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControl3.RootElement.Padding = CType(resources.GetObject("RadTextBoxControl3.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControl3.RootElement.Text = resources.GetString("RadTextBoxControl3.RootElement.Text")
         Me.RadTextBoxControl3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControl3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -185,7 +178,6 @@ Partial Class FrmLizenz
         Me.lblLizenzabkommen.RootElement.AngleTransform = CType(resources.GetObject("lblLizenzabkommen.RootElement.AngleTransform"), Single)
         Me.lblLizenzabkommen.RootElement.FlipText = CType(resources.GetObject("lblLizenzabkommen.RootElement.FlipText"), Boolean)
         Me.lblLizenzabkommen.RootElement.Margin = CType(resources.GetObject("lblLizenzabkommen.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblLizenzabkommen.RootElement.Padding = CType(resources.GetObject("lblLizenzabkommen.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblLizenzabkommen.RootElement.Text = resources.GetString("lblLizenzabkommen.RootElement.Text")
         Me.lblLizenzabkommen.RootElement.TextOrientation = CType(resources.GetObject("lblLizenzabkommen.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -204,7 +196,6 @@ Partial Class FrmLizenz
         Me.RadButtonChangeLanguageToPolish.RootElement.AngleTransform = CType(resources.GetObject("RadButtonChangeLanguageToPolish.RootElement.AngleTransform"), Single)
         Me.RadButtonChangeLanguageToPolish.RootElement.FlipText = CType(resources.GetObject("RadButtonChangeLanguageToPolish.RootElement.FlipText"), Boolean)
         Me.RadButtonChangeLanguageToPolish.RootElement.Margin = CType(resources.GetObject("RadButtonChangeLanguageToPolish.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButtonChangeLanguageToPolish.RootElement.Padding = CType(resources.GetObject("RadButtonChangeLanguageToPolish.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadButtonChangeLanguageToPolish.RootElement.Text = resources.GetString("RadButtonChangeLanguageToPolish.RootElement.Text")
         Me.RadButtonChangeLanguageToPolish.RootElement.TextOrientation = CType(resources.GetObject("RadButtonChangeLanguageToPolish.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadButtonChangeLanguageToPolish.TabStop = False
@@ -228,13 +219,12 @@ Partial Class FrmLizenz
         Me.RadButtonChangeLanguageToEnglish.RootElement.AngleTransform = CType(resources.GetObject("RadButtonChangeLanguageToEnglish.RootElement.AngleTransform"), Single)
         Me.RadButtonChangeLanguageToEnglish.RootElement.FlipText = CType(resources.GetObject("RadButtonChangeLanguageToEnglish.RootElement.FlipText"), Boolean)
         Me.RadButtonChangeLanguageToEnglish.RootElement.Margin = CType(resources.GetObject("RadButtonChangeLanguageToEnglish.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButtonChangeLanguageToEnglish.RootElement.Padding = CType(resources.GetObject("RadButtonChangeLanguageToEnglish.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadButtonChangeLanguageToEnglish.RootElement.Text = resources.GetString("RadButtonChangeLanguageToEnglish.RootElement.Text")
         Me.RadButtonChangeLanguageToEnglish.RootElement.TextOrientation = CType(resources.GetObject("RadButtonChangeLanguageToEnglish.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadButtonChangeLanguageToEnglish.TabStop = False
         CType(Me.RadButtonChangeLanguageToEnglish.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = Global.EichsoftwareClient.My.Resources.Resources.flag_usa
         CType(Me.RadButtonChangeLanguageToEnglish.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        CType(Me.RadButtonChangeLanguageToEnglish.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        CType(Me.RadButtonChangeLanguageToEnglish.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = resources.GetString("resource.Text1")
         CType(Me.RadButtonChangeLanguageToEnglish.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Shape = Nothing
         '
         'RadButtonChangeLanguageToGerman
@@ -252,13 +242,12 @@ Partial Class FrmLizenz
         Me.RadButtonChangeLanguageToGerman.RootElement.AngleTransform = CType(resources.GetObject("RadButtonChangeLanguageToGerman.RootElement.AngleTransform"), Single)
         Me.RadButtonChangeLanguageToGerman.RootElement.FlipText = CType(resources.GetObject("RadButtonChangeLanguageToGerman.RootElement.FlipText"), Boolean)
         Me.RadButtonChangeLanguageToGerman.RootElement.Margin = CType(resources.GetObject("RadButtonChangeLanguageToGerman.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButtonChangeLanguageToGerman.RootElement.Padding = CType(resources.GetObject("RadButtonChangeLanguageToGerman.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadButtonChangeLanguageToGerman.RootElement.Text = resources.GetString("RadButtonChangeLanguageToGerman.RootElement.Text")
         Me.RadButtonChangeLanguageToGerman.RootElement.TextOrientation = CType(resources.GetObject("RadButtonChangeLanguageToGerman.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadButtonChangeLanguageToGerman.TabStop = False
         CType(Me.RadButtonChangeLanguageToGerman.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = Global.EichsoftwareClient.My.Resources.Resources.flag_germany
         CType(Me.RadButtonChangeLanguageToGerman.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        CType(Me.RadButtonChangeLanguageToGerman.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        CType(Me.RadButtonChangeLanguageToGerman.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = resources.GetString("resource.Text2")
         CType(Me.RadButtonChangeLanguageToGerman.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Shape = Nothing
         '
         'PictureBoxRHEWALogo
@@ -296,7 +285,7 @@ Partial Class FrmLizenz
         Me.RootElement.ApplyShapeToControl = True
         Me.RootElement.FlipText = CType(resources.GetObject("FrmLizenz.RootElement.FlipText"), Boolean)
         Me.RootElement.Margin = CType(resources.GetObject("FrmLizenz.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RootElement.Padding = CType(resources.GetObject("FrmLizenz.RootElement.Padding"), System.Windows.Forms.Padding)
+        Me.RootElement.MaxSize = New System.Drawing.Size(822, 520)
         Me.RootElement.Text = resources.GetString("FrmLizenz.RootElement.Text")
         Me.RootElement.TextOrientation = CType(resources.GetObject("FrmLizenz.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.ShowIcon = False

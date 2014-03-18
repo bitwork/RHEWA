@@ -10,6 +10,8 @@ Public Class ucoContent
     'Private _Breadcrumb As ucoStatusBullet
     Private _objEichprozess As Eichprozess
 
+    Private _bolSuspendRefresh As Boolean = False
+
     Protected Friend _intNullstellenE1 As Integer = 0 'Variable zum Einstellen der Nullstellen für das Casten und runden der Werte. Abhängig von e Wert. Wenn e = 1 Nullstelle dann hier = 2. wenn e = 2 dann hier = 3. immer eine nullstelle mehr als E
     Protected Friend _intNullstellenE2 As Integer = 0 'Variable zum Einstellen der Nullstellen für das Casten und runden der Werte. Abhängig von e Wert. Wenn e = 1 Nullstelle dann hier = 2. wenn e = 2 dann hier = 3. immer eine nullstelle mehr als E
     Protected Friend _intNullstellenE3 As Integer = 0 'Variable zum Einstellen der Nullstellen für das Casten und runden der Werte. Abhängig von e Wert. Wenn e = 1 Nullstelle dann hier = 2. wenn e = 2 dann hier = 3. immer eine nullstelle mehr als E
@@ -75,9 +77,9 @@ Public Class ucoContent
     ''' <remarks></remarks>
     Protected Friend Property EichprozessStatusReihenfolge As GlobaleEnumeratoren.enuEichprozessStatus
 
-   
-  
-    'Protected Friend ReadOnly Property ListUeberspringeStatus As List(Of GlobaleEnumeratoren.enuEichprozessStatus)
+
+
+    'Protected ReadOnly Property ListUeberspringeStatus As List(Of GlobaleEnumeratoren.enuEichprozessStatus)
     '    Get
     '        Return objEichprozess.GetListeUngueltigeStati
     '    End Get
@@ -156,6 +158,7 @@ Public Class ucoContent
         If Not _ParentForm Is Nothing Then
             _ParentForm.SETContextHelpText("")
         End If
+
     End Sub
 
 
@@ -173,10 +176,10 @@ Public Class ucoContent
     ''' <remarks></remarks>
     ''' <author>TH</author>
     ''' <commentauthor>Die Überladene Routine sollte überprüfen ob me.equals(Usercontrol) = true ist, um nicht unnötig oft alles zu speichern</commentauthor>
-    Protected Friend Overridable Sub SaveNeeded(ByVal UserControl As UserControl) Handles _ParentForm.SaveNeeded
+    Protected Overridable Sub SaveNeeded(ByVal UserControl As UserControl) Handles _ParentForm.SaveNeeded
     End Sub
 
-    Protected Friend Overridable Sub SaveWithoutValidationNeeded(ByVal usercontrol As UserControl) Handles _ParentForm.SaveWithoutValidationNeeded
+    Protected Overridable Sub SaveWithoutValidationNeeded(ByVal usercontrol As UserControl) Handles _ParentForm.SaveWithoutValidationNeeded
 
     End Sub
 
@@ -186,7 +189,7 @@ Public Class ucoContent
     ''' </summary>
     ''' <param name="UserControl"></param>
     ''' <remarks></remarks>
-    Protected Friend Overridable Sub LokalisierungNeeded(ByVal UserControl As UserControl) Handles _ParentForm.LokalisierungNeeded
+    Protected Overridable Sub LokalisierungNeeded(ByVal UserControl As UserControl) Handles _ParentForm.LokalisierungNeeded
     End Sub
 
     ''' <summary>
@@ -194,76 +197,22 @@ Public Class ucoContent
     ''' </summary>
     ''' <param name="UserControl"></param>
     ''' <remarks></remarks>
-    Protected Friend Overridable Sub UpdateNeeded(ByVal UserControl As UserControl) Handles _ParentForm.UpdateNeeded
+    Protected Overridable Sub UpdateNeeded(ByVal UserControl As UserControl) Handles _ParentForm.UpdateNeeded
 
     End Sub
 
 
-    Protected Friend Overridable Sub EntsperrungNeeded() Handles _ParentForm.EntsperrungNeeded
+    Protected Overridable Sub EntsperrungNeeded() Handles _ParentForm.EntsperrungNeeded
 
     End Sub
 
 
-    Protected Friend Overridable Sub VersendenNeeded(ByVal TargetUserControl As UserControl) Handles _ParentForm.VersendenNeeded
+    Protected Overridable Sub VersendenNeeded(ByVal TargetUserControl As UserControl) Handles _ParentForm.VersendenNeeded
 
     End Sub
 
-    ''' <summary>
-    ''' Funktion zum Zählen von Nullstellen von einem übergebenen Wert
-    ''' </summary>
-    ''' <param name="value"></param>
-    ''' <returns></returns>
-    ''' <remarks></remarks>
-    Public Function CountDecimalDigits(value As String) As Integer
-        Dim possibleChars As Char() = "0123456789,".ToCharArray()
-        Dim decimalPoints As Integer = 0
-        For Each ch As Char In value
-            If Array.IndexOf(possibleChars, ch) < 0 Then
-                Throw New Exception()
-            End If
-            If ch = ","c Then
-                decimalPoints += 1
-            End If
-        Next
-        If decimalPoints > 1 Then
-            Throw New Exception()
-        End If
-        If decimalPoints = 0 Then
-            Return 0
-        End If
-        Return value.Length - value.IndexOf(","c) - 1
-    End Function
 
-    Public Function GetRHEWADecimalDigits(ByVal value As String) As Integer
-        Try
-            If value Is Nothing Then
-                Return 0
-            End If
-            If value = "" Then
-                Return 0
-            End If
-            If CDec(value) >= 1 Then
-                Return 1
-            ElseIf CDec(value) >= 0.1 Then
-                Return 3
-            ElseIf CDec(value) >= 0.01 Then
-                Return 3
-            ElseIf CDec(value) >= 0.001 Then
-                Return 4
-            ElseIf CDec(value) >= 0.0001 Then
-                Return 5
-            Else
-                Return 6
-            End If
-
-        Catch ex As Exception
-            Return 0
-        End Try
-    End Function
 #End Region
-
-
-
 
 
 End Class

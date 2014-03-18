@@ -148,6 +148,8 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblAWGSpeisespannung = New Telerik.WinControls.UI.RadLabel()
         Me.lblAWGmaxAnzahlTeilungswerte = New Telerik.WinControls.UI.RadLabel()
         Me.RadGroupBoxWaage = New Telerik.WinControls.UI.RadGroupBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld1 = New System.Windows.Forms.Label()
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
         Me.RadLabel92 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel91 = New Telerik.WinControls.UI.RadLabel()
@@ -219,8 +221,15 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblWIMaxCap = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlWaageKlasse = New Telerik.WinControls.UI.RadTextBoxControl()
         Me.lblWIKlasse = New Telerik.WinControls.UI.RadLabel()
-        Me.lblPflichtfeld1 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanel1.PanelContainer.SuspendLayout()
         Me.RadScrollablePanel1.SuspendLayout()
@@ -446,7 +455,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadScrollablePanel1.RootElement.AngleTransform = CType(resources.GetObject("RadScrollablePanel1.RootElement.AngleTransform"), Single)
         Me.RadScrollablePanel1.RootElement.FlipText = CType(resources.GetObject("RadScrollablePanel1.RootElement.FlipText"), Boolean)
         Me.RadScrollablePanel1.RootElement.Margin = CType(resources.GetObject("RadScrollablePanel1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadScrollablePanel1.RootElement.Padding = CType(resources.GetObject("RadScrollablePanel1.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadScrollablePanel1.RootElement.Text = resources.GetString("RadScrollablePanel1.RootElement.Text")
         Me.RadScrollablePanel1.RootElement.TextOrientation = CType(resources.GetObject("RadScrollablePanel1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -470,7 +478,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadGroupBoxVerbindungselemente.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBoxVerbindungselemente.RootElement.AngleTransform"), Single)
         Me.RadGroupBoxVerbindungselemente.RootElement.FlipText = CType(resources.GetObject("RadGroupBoxVerbindungselemente.RootElement.FlipText"), Boolean)
         Me.RadGroupBoxVerbindungselemente.RootElement.Margin = CType(resources.GetObject("RadGroupBoxVerbindungselemente.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadGroupBoxVerbindungselemente.RootElement.Padding = CType(resources.GetObject("RadGroupBoxVerbindungselemente.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadGroupBoxVerbindungselemente.RootElement.Text = resources.GetString("RadGroupBoxVerbindungselemente.RootElement.Text")
         Me.RadGroupBoxVerbindungselemente.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxVerbindungselemente.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -495,7 +502,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadSeparator15.RootElement.AngleTransform = CType(resources.GetObject("RadSeparator15.RootElement.AngleTransform"), Single)
         Me.RadSeparator15.RootElement.FlipText = CType(resources.GetObject("RadSeparator15.RootElement.FlipText"), Boolean)
         Me.RadSeparator15.RootElement.Margin = CType(resources.GetObject("RadSeparator15.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadSeparator15.RootElement.Padding = CType(resources.GetObject("RadSeparator15.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadSeparator15.RootElement.Text = resources.GetString("RadSeparator15.RootElement.Text")
         Me.RadSeparator15.RootElement.TextOrientation = CType(resources.GetObject("RadSeparator15.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadSeparator15.TabStop = False
@@ -519,8 +525,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze.RootElement.FlipTex" & _
         "t"), Boolean)
         Me.RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze.RootElement.Padding" & _
-        ""), System.Windows.Forms.Padding)
         Me.RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze.RootElement.Text = resources.GetString("RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze.RootElement.Text")
         Me.RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze.RootElement.TextOri" & _
         "entation"), System.Windows.Forms.Orientation)
@@ -540,7 +544,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadSeparator16.RootElement.AngleTransform = CType(resources.GetObject("RadSeparator16.RootElement.AngleTransform"), Single)
         Me.RadSeparator16.RootElement.FlipText = CType(resources.GetObject("RadSeparator16.RootElement.FlipText"), Boolean)
         Me.RadSeparator16.RootElement.Margin = CType(resources.GetObject("RadSeparator16.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadSeparator16.RootElement.Padding = CType(resources.GetObject("RadSeparator16.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadSeparator16.RootElement.Text = resources.GetString("RadSeparator16.RootElement.Text")
         Me.RadSeparator16.RootElement.TextOrientation = CType(resources.GetObject("RadSeparator16.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadSeparator16.TabStop = False
@@ -558,7 +561,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel76.RootElement.AngleTransform = CType(resources.GetObject("RadLabel76.RootElement.AngleTransform"), Single)
         Me.RadLabel76.RootElement.FlipText = CType(resources.GetObject("RadLabel76.RootElement.FlipText"), Boolean)
         Me.RadLabel76.RootElement.Margin = CType(resources.GetObject("RadLabel76.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel76.RootElement.Padding = CType(resources.GetObject("RadLabel76.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel76.RootElement.Text = resources.GetString("RadLabel76.RootElement.Text")
         Me.RadLabel76.RootElement.TextOrientation = CType(resources.GetObject("RadLabel76.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -575,13 +577,13 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblVerbindungEichfehlergrenze.RootElement.AngleTransform = CType(resources.GetObject("lblVerbindungEichfehlergrenze.RootElement.AngleTransform"), Single)
         Me.lblVerbindungEichfehlergrenze.RootElement.FlipText = CType(resources.GetObject("lblVerbindungEichfehlergrenze.RootElement.FlipText"), Boolean)
         Me.lblVerbindungEichfehlergrenze.RootElement.Margin = CType(resources.GetObject("lblVerbindungEichfehlergrenze.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblVerbindungEichfehlergrenze.RootElement.Padding = CType(resources.GetObject("lblVerbindungEichfehlergrenze.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblVerbindungEichfehlergrenze.RootElement.Text = resources.GetString("lblVerbindungEichfehlergrenze.RootElement.Text")
         Me.lblVerbindungEichfehlergrenze.RootElement.TextOrientation = CType(resources.GetObject("lblVerbindungEichfehlergrenze.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
         'RadGroupBoxWZ
         '
         Me.RadGroupBoxWZ.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.RadGroupBoxWZ.Controls.Add(Me.Label10)
         Me.RadGroupBoxWZ.Controls.Add(Me.PictureBoxWZ1)
         Me.RadGroupBoxWZ.Controls.Add(Me.PictureBoxWZ7)
         Me.RadGroupBoxWZ.Controls.Add(Me.PictureBoxWZ9)
@@ -653,7 +655,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadGroupBoxWZ.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBoxWZ.RootElement.AngleTransform"), Single)
         Me.RadGroupBoxWZ.RootElement.FlipText = CType(resources.GetObject("RadGroupBoxWZ.RootElement.FlipText"), Boolean)
         Me.RadGroupBoxWZ.RootElement.Margin = CType(resources.GetObject("RadGroupBoxWZ.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadGroupBoxWZ.RootElement.Padding = CType(resources.GetObject("RadGroupBoxWZ.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadGroupBoxWZ.RootElement.Text = resources.GetString("RadGroupBoxWZ.RootElement.Text")
         Me.RadGroupBoxWZ.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxWZ.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -747,7 +748,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel108.RootElement.AngleTransform = CType(resources.GetObject("RadLabel108.RootElement.AngleTransform"), Single)
         Me.RadLabel108.RootElement.FlipText = CType(resources.GetObject("RadLabel108.RootElement.FlipText"), Boolean)
         Me.RadLabel108.RootElement.Margin = CType(resources.GetObject("RadLabel108.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel108.RootElement.Padding = CType(resources.GetObject("RadLabel108.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel108.RootElement.Text = resources.GetString("RadLabel108.RootElement.Text")
         Me.RadLabel108.RootElement.TextOrientation = CType(resources.GetObject("RadLabel108.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -764,7 +764,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel111.RootElement.AngleTransform = CType(resources.GetObject("RadLabel111.RootElement.AngleTransform"), Single)
         Me.RadLabel111.RootElement.FlipText = CType(resources.GetObject("RadLabel111.RootElement.FlipText"), Boolean)
         Me.RadLabel111.RootElement.Margin = CType(resources.GetObject("RadLabel111.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel111.RootElement.Padding = CType(resources.GetObject("RadLabel111.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel111.RootElement.Text = resources.GetString("RadLabel111.RootElement.Text")
         Me.RadLabel111.RootElement.TextOrientation = CType(resources.GetObject("RadLabel111.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -781,7 +780,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel105.RootElement.AngleTransform = CType(resources.GetObject("RadLabel105.RootElement.AngleTransform"), Single)
         Me.RadLabel105.RootElement.FlipText = CType(resources.GetObject("RadLabel105.RootElement.FlipText"), Boolean)
         Me.RadLabel105.RootElement.Margin = CType(resources.GetObject("RadLabel105.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel105.RootElement.Padding = CType(resources.GetObject("RadLabel105.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel105.RootElement.Text = resources.GetString("RadLabel105.RootElement.Text")
         Me.RadLabel105.RootElement.TextOrientation = CType(resources.GetObject("RadLabel105.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -798,7 +796,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel106.RootElement.AngleTransform = CType(resources.GetObject("RadLabel106.RootElement.AngleTransform"), Single)
         Me.RadLabel106.RootElement.FlipText = CType(resources.GetObject("RadLabel106.RootElement.FlipText"), Boolean)
         Me.RadLabel106.RootElement.Margin = CType(resources.GetObject("RadLabel106.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel106.RootElement.Padding = CType(resources.GetObject("RadLabel106.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel106.RootElement.Text = resources.GetString("RadLabel106.RootElement.Text")
         Me.RadLabel106.RootElement.TextOrientation = CType(resources.GetObject("RadLabel106.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -815,7 +812,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel107.RootElement.AngleTransform = CType(resources.GetObject("RadLabel107.RootElement.AngleTransform"), Single)
         Me.RadLabel107.RootElement.FlipText = CType(resources.GetObject("RadLabel107.RootElement.FlipText"), Boolean)
         Me.RadLabel107.RootElement.Margin = CType(resources.GetObject("RadLabel107.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel107.RootElement.Padding = CType(resources.GetObject("RadLabel107.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel107.RootElement.Text = resources.GetString("RadLabel107.RootElement.Text")
         Me.RadLabel107.RootElement.TextOrientation = CType(resources.GetObject("RadLabel107.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -832,7 +828,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel103.RootElement.AngleTransform = CType(resources.GetObject("RadLabel103.RootElement.AngleTransform"), Single)
         Me.RadLabel103.RootElement.FlipText = CType(resources.GetObject("RadLabel103.RootElement.FlipText"), Boolean)
         Me.RadLabel103.RootElement.Margin = CType(resources.GetObject("RadLabel103.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel103.RootElement.Padding = CType(resources.GetObject("RadLabel103.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel103.RootElement.Text = resources.GetString("RadLabel103.RootElement.Text")
         Me.RadLabel103.RootElement.TextOrientation = CType(resources.GetObject("RadLabel103.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -849,7 +844,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel93.RootElement.AngleTransform = CType(resources.GetObject("RadLabel93.RootElement.AngleTransform"), Single)
         Me.RadLabel93.RootElement.FlipText = CType(resources.GetObject("RadLabel93.RootElement.FlipText"), Boolean)
         Me.RadLabel93.RootElement.Margin = CType(resources.GetObject("RadLabel93.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel93.RootElement.Padding = CType(resources.GetObject("RadLabel93.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel93.RootElement.Text = resources.GetString("RadLabel93.RootElement.Text")
         Me.RadLabel93.RootElement.TextOrientation = CType(resources.GetObject("RadLabel93.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -866,7 +860,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel101.RootElement.AngleTransform = CType(resources.GetObject("RadLabel101.RootElement.AngleTransform"), Single)
         Me.RadLabel101.RootElement.FlipText = CType(resources.GetObject("RadLabel101.RootElement.FlipText"), Boolean)
         Me.RadLabel101.RootElement.Margin = CType(resources.GetObject("RadLabel101.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel101.RootElement.Padding = CType(resources.GetObject("RadLabel101.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel101.RootElement.Text = resources.GetString("RadLabel101.RootElement.Text")
         Me.RadLabel101.RootElement.TextOrientation = CType(resources.GetObject("RadLabel101.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -884,7 +877,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadTextBoxControlWZTemperaturbereichMAX.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlWZTemperaturbereichMAX.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlWZTemperaturbereichMAX.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlWZTemperaturbereichMAX.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlWZTemperaturbereichMAX.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlWZTemperaturbereichMAX.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlWZTemperaturbereichMAX.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlWZTemperaturbereichMAX.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlWZTemperaturbereichMAX.RootElement.Text = resources.GetString("RadTextBoxControlWZTemperaturbereichMAX.RootElement.Text")
         Me.RadTextBoxControlWZTemperaturbereichMAX.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlWZTemperaturbereichMAX.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadTextBoxControlWZTemperaturbereichMAX.TabStop = False
@@ -902,7 +894,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel78.RootElement.AngleTransform = CType(resources.GetObject("RadLabel78.RootElement.AngleTransform"), Single)
         Me.RadLabel78.RootElement.FlipText = CType(resources.GetObject("RadLabel78.RootElement.FlipText"), Boolean)
         Me.RadLabel78.RootElement.Margin = CType(resources.GetObject("RadLabel78.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel78.RootElement.Padding = CType(resources.GetObject("RadLabel78.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel78.RootElement.Text = resources.GetString("RadLabel78.RootElement.Text")
         Me.RadLabel78.RootElement.TextOrientation = CType(resources.GetObject("RadLabel78.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -920,7 +911,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadTextBoxControlWZBruchteilEichfehlergrenze.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlWZBruchteilEichfehlergrenze.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlWZBruchteilEichfehlergrenze.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlWZBruchteilEichfehlergrenze.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlWZBruchteilEichfehlergrenze.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlWZBruchteilEichfehlergrenze.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlWZBruchteilEichfehlergrenze.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlWZBruchteilEichfehlergrenze.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlWZBruchteilEichfehlergrenze.RootElement.Text = resources.GetString("RadTextBoxControlWZBruchteilEichfehlergrenze.RootElement.Text")
         Me.RadTextBoxControlWZBruchteilEichfehlergrenze.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlWZBruchteilEichfehlergrenze.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadTextBoxControlWZBruchteilEichfehlergrenze.TabStop = False
@@ -938,7 +928,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel74.RootElement.AngleTransform = CType(resources.GetObject("RadLabel74.RootElement.AngleTransform"), Single)
         Me.RadLabel74.RootElement.FlipText = CType(resources.GetObject("RadLabel74.RootElement.FlipText"), Boolean)
         Me.RadLabel74.RootElement.Margin = CType(resources.GetObject("RadLabel74.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel74.RootElement.Padding = CType(resources.GetObject("RadLabel74.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel74.RootElement.Text = resources.GetString("RadLabel74.RootElement.Text")
         Me.RadLabel74.RootElement.TextOrientation = CType(resources.GetObject("RadLabel74.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -955,7 +944,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblWZEichfehlergrenze.RootElement.AngleTransform = CType(resources.GetObject("lblWZEichfehlergrenze.RootElement.AngleTransform"), Single)
         Me.lblWZEichfehlergrenze.RootElement.FlipText = CType(resources.GetObject("lblWZEichfehlergrenze.RootElement.FlipText"), Boolean)
         Me.lblWZEichfehlergrenze.RootElement.Margin = CType(resources.GetObject("lblWZEichfehlergrenze.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblWZEichfehlergrenze.RootElement.Padding = CType(resources.GetObject("lblWZEichfehlergrenze.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblWZEichfehlergrenze.RootElement.Text = resources.GetString("lblWZEichfehlergrenze.RootElement.Text")
         Me.lblWZEichfehlergrenze.RootElement.TextOrientation = CType(resources.GetObject("lblWZEichfehlergrenze.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -973,7 +961,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadTextBoxControlWZTemperaturbereichMIN.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlWZTemperaturbereichMIN.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlWZTemperaturbereichMIN.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlWZTemperaturbereichMIN.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlWZTemperaturbereichMIN.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlWZTemperaturbereichMIN.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlWZTemperaturbereichMIN.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlWZTemperaturbereichMIN.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlWZTemperaturbereichMIN.RootElement.Text = resources.GetString("RadTextBoxControlWZTemperaturbereichMIN.RootElement.Text")
         Me.RadTextBoxControlWZTemperaturbereichMIN.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlWZTemperaturbereichMIN.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadTextBoxControlWZTemperaturbereichMIN.TabStop = False
@@ -991,7 +978,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel52.RootElement.AngleTransform = CType(resources.GetObject("RadLabel52.RootElement.AngleTransform"), Single)
         Me.RadLabel52.RootElement.FlipText = CType(resources.GetObject("RadLabel52.RootElement.FlipText"), Boolean)
         Me.RadLabel52.RootElement.Margin = CType(resources.GetObject("RadLabel52.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel52.RootElement.Padding = CType(resources.GetObject("RadLabel52.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel52.RootElement.Text = resources.GetString("RadLabel52.RootElement.Text")
         Me.RadLabel52.RootElement.TextOrientation = CType(resources.GetObject("RadLabel52.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1008,7 +994,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblWZTemperatur.RootElement.AngleTransform = CType(resources.GetObject("lblWZTemperatur.RootElement.AngleTransform"), Single)
         Me.lblWZTemperatur.RootElement.FlipText = CType(resources.GetObject("lblWZTemperatur.RootElement.FlipText"), Boolean)
         Me.lblWZTemperatur.RootElement.Margin = CType(resources.GetObject("lblWZTemperatur.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblWZTemperatur.RootElement.Padding = CType(resources.GetObject("lblWZTemperatur.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblWZTemperatur.RootElement.Text = resources.GetString("lblWZTemperatur.RootElement.Text")
         Me.lblWZTemperatur.RootElement.TextOrientation = CType(resources.GetObject("lblWZTemperatur.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1025,7 +1010,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadSeparator10.RootElement.AngleTransform = CType(resources.GetObject("RadSeparator10.RootElement.AngleTransform"), Single)
         Me.RadSeparator10.RootElement.FlipText = CType(resources.GetObject("RadSeparator10.RootElement.FlipText"), Boolean)
         Me.RadSeparator10.RootElement.Margin = CType(resources.GetObject("RadSeparator10.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadSeparator10.RootElement.Padding = CType(resources.GetObject("RadSeparator10.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadSeparator10.RootElement.Text = resources.GetString("RadSeparator10.RootElement.Text")
         Me.RadSeparator10.RootElement.TextOrientation = CType(resources.GetObject("RadSeparator10.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadSeparator10.TabStop = False
@@ -1043,7 +1027,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblWZKlasse2.RootElement.AngleTransform = CType(resources.GetObject("lblWZKlasse2.RootElement.AngleTransform"), Single)
         Me.lblWZKlasse2.RootElement.FlipText = CType(resources.GetObject("lblWZKlasse2.RootElement.FlipText"), Boolean)
         Me.lblWZKlasse2.RootElement.Margin = CType(resources.GetObject("lblWZKlasse2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblWZKlasse2.RootElement.Padding = CType(resources.GetObject("lblWZKlasse2.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblWZKlasse2.RootElement.Text = resources.GetString("lblWZKlasse2.RootElement.Text")
         Me.lblWZKlasse2.RootElement.TextOrientation = CType(resources.GetObject("lblWZKlasse2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1061,7 +1044,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadTextBoxControlWZGenauigkeitsklasse.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlWZGenauigkeitsklasse.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlWZGenauigkeitsklasse.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlWZGenauigkeitsklasse.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlWZGenauigkeitsklasse.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlWZGenauigkeitsklasse.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlWZGenauigkeitsklasse.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlWZGenauigkeitsklasse.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlWZGenauigkeitsklasse.RootElement.Text = resources.GetString("RadTextBoxControlWZGenauigkeitsklasse.RootElement.Text")
         Me.RadTextBoxControlWZGenauigkeitsklasse.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlWZGenauigkeitsklasse.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1078,7 +1060,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblWZKlasse.RootElement.AngleTransform = CType(resources.GetObject("lblWZKlasse.RootElement.AngleTransform"), Single)
         Me.lblWZKlasse.RootElement.FlipText = CType(resources.GetObject("lblWZKlasse.RootElement.FlipText"), Boolean)
         Me.lblWZKlasse.RootElement.Margin = CType(resources.GetObject("lblWZKlasse.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblWZKlasse.RootElement.Padding = CType(resources.GetObject("lblWZKlasse.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblWZKlasse.RootElement.Text = resources.GetString("lblWZKlasse.RootElement.Text")
         Me.lblWZKlasse.RootElement.TextOrientation = CType(resources.GetObject("lblWZKlasse.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1096,7 +1077,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadSeparator11.RootElement.AngleTransform = CType(resources.GetObject("RadSeparator11.RootElement.AngleTransform"), Single)
         Me.RadSeparator11.RootElement.FlipText = CType(resources.GetObject("RadSeparator11.RootElement.FlipText"), Boolean)
         Me.RadSeparator11.RootElement.Margin = CType(resources.GetObject("RadSeparator11.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadSeparator11.RootElement.Padding = CType(resources.GetObject("RadSeparator11.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadSeparator11.RootElement.Text = resources.GetString("RadSeparator11.RootElement.Text")
         Me.RadSeparator11.RootElement.TextOrientation = CType(resources.GetObject("RadSeparator11.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadSeparator11.TabStop = False
@@ -1115,7 +1095,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadSeparator12.RootElement.AngleTransform = CType(resources.GetObject("RadSeparator12.RootElement.AngleTransform"), Single)
         Me.RadSeparator12.RootElement.FlipText = CType(resources.GetObject("RadSeparator12.RootElement.FlipText"), Boolean)
         Me.RadSeparator12.RootElement.Margin = CType(resources.GetObject("RadSeparator12.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadSeparator12.RootElement.Padding = CType(resources.GetObject("RadSeparator12.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadSeparator12.RootElement.Text = resources.GetString("RadSeparator12.RootElement.Text")
         Me.RadSeparator12.RootElement.TextOrientation = CType(resources.GetObject("RadSeparator12.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadSeparator12.TabStop = False
@@ -1134,7 +1113,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadTextBoxControlWZWiderstand.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlWZWiderstand.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlWZWiderstand.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlWZWiderstand.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlWZWiderstand.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlWZWiderstand.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlWZWiderstand.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlWZWiderstand.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlWZWiderstand.RootElement.Text = resources.GetString("RadTextBoxControlWZWiderstand.RootElement.Text")
         Me.RadTextBoxControlWZWiderstand.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlWZWiderstand.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1152,7 +1130,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadTextBoxControlWZRueckkehrVorlastsignal.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlWZRueckkehrVorlastsignal.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlWZRueckkehrVorlastsignal.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlWZRueckkehrVorlastsignal.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlWZRueckkehrVorlastsignal.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlWZRueckkehrVorlastsignal.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlWZRueckkehrVorlastsignal.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlWZRueckkehrVorlastsignal.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlWZRueckkehrVorlastsignal.RootElement.Text = resources.GetString("RadTextBoxControlWZRueckkehrVorlastsignal.RootElement.Text")
         Me.RadTextBoxControlWZRueckkehrVorlastsignal.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlWZRueckkehrVorlastsignal.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1169,7 +1146,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel55.RootElement.AngleTransform = CType(resources.GetObject("RadLabel55.RootElement.AngleTransform"), Single)
         Me.RadLabel55.RootElement.FlipText = CType(resources.GetObject("RadLabel55.RootElement.FlipText"), Boolean)
         Me.RadLabel55.RootElement.Margin = CType(resources.GetObject("RadLabel55.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel55.RootElement.Padding = CType(resources.GetObject("RadLabel55.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel55.RootElement.Text = resources.GetString("RadLabel55.RootElement.Text")
         Me.RadLabel55.RootElement.TextOrientation = CType(resources.GetObject("RadLabel55.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1186,7 +1162,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel56.RootElement.AngleTransform = CType(resources.GetObject("RadLabel56.RootElement.AngleTransform"), Single)
         Me.RadLabel56.RootElement.FlipText = CType(resources.GetObject("RadLabel56.RootElement.FlipText"), Boolean)
         Me.RadLabel56.RootElement.Margin = CType(resources.GetObject("RadLabel56.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel56.RootElement.Padding = CType(resources.GetObject("RadLabel56.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel56.RootElement.Text = resources.GetString("RadLabel56.RootElement.Text")
         Me.RadLabel56.RootElement.TextOrientation = CType(resources.GetObject("RadLabel56.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1203,7 +1178,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblWZWiderstandWZ.RootElement.AngleTransform = CType(resources.GetObject("lblWZWiderstandWZ.RootElement.AngleTransform"), Single)
         Me.lblWZWiderstandWZ.RootElement.FlipText = CType(resources.GetObject("lblWZWiderstandWZ.RootElement.FlipText"), Boolean)
         Me.lblWZWiderstandWZ.RootElement.Margin = CType(resources.GetObject("lblWZWiderstandWZ.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblWZWiderstandWZ.RootElement.Padding = CType(resources.GetObject("lblWZWiderstandWZ.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblWZWiderstandWZ.RootElement.Text = resources.GetString("lblWZWiderstandWZ.RootElement.Text")
         Me.lblWZWiderstandWZ.RootElement.TextOrientation = CType(resources.GetObject("lblWZWiderstandWZ.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1220,7 +1194,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblWZRueckkehrVorlastsignal.RootElement.AngleTransform = CType(resources.GetObject("lblWZRueckkehrVorlastsignal.RootElement.AngleTransform"), Single)
         Me.lblWZRueckkehrVorlastsignal.RootElement.FlipText = CType(resources.GetObject("lblWZRueckkehrVorlastsignal.RootElement.FlipText"), Boolean)
         Me.lblWZRueckkehrVorlastsignal.RootElement.Margin = CType(resources.GetObject("lblWZRueckkehrVorlastsignal.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblWZRueckkehrVorlastsignal.RootElement.Padding = CType(resources.GetObject("lblWZRueckkehrVorlastsignal.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblWZRueckkehrVorlastsignal.RootElement.Text = resources.GetString("lblWZRueckkehrVorlastsignal.RootElement.Text")
         Me.lblWZRueckkehrVorlastsignal.RootElement.TextOrientation = CType(resources.GetObject("lblWZRueckkehrVorlastsignal.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1238,7 +1211,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadTextBoxControlWZMinTeilungswert.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlWZMinTeilungswert.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlWZMinTeilungswert.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlWZMinTeilungswert.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlWZMinTeilungswert.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlWZMinTeilungswert.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlWZMinTeilungswert.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlWZMinTeilungswert.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlWZMinTeilungswert.RootElement.Text = resources.GetString("RadTextBoxControlWZMinTeilungswert.RootElement.Text")
         Me.RadTextBoxControlWZMinTeilungswert.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlWZMinTeilungswert.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1256,7 +1228,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadTextBoxControlWZHoechstteilungsfaktor.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlWZHoechstteilungsfaktor.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlWZHoechstteilungsfaktor.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlWZHoechstteilungsfaktor.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlWZHoechstteilungsfaktor.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlWZHoechstteilungsfaktor.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlWZHoechstteilungsfaktor.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlWZHoechstteilungsfaktor.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlWZHoechstteilungsfaktor.RootElement.Text = resources.GetString("RadTextBoxControlWZHoechstteilungsfaktor.RootElement.Text")
         Me.RadTextBoxControlWZHoechstteilungsfaktor.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlWZHoechstteilungsfaktor.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1274,7 +1245,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadTextBoxControlWZKriechteilungsfaktor.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlWZKriechteilungsfaktor.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlWZKriechteilungsfaktor.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlWZKriechteilungsfaktor.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlWZKriechteilungsfaktor.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlWZKriechteilungsfaktor.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlWZKriechteilungsfaktor.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlWZKriechteilungsfaktor.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlWZKriechteilungsfaktor.RootElement.Text = resources.GetString("RadTextBoxControlWZKriechteilungsfaktor.RootElement.Text")
         Me.RadTextBoxControlWZKriechteilungsfaktor.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlWZKriechteilungsfaktor.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1292,7 +1262,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadTextBoxControlWZMaxTeilungswerte.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlWZMaxTeilungswerte.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlWZMaxTeilungswerte.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlWZMaxTeilungswerte.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlWZMaxTeilungswerte.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlWZMaxTeilungswerte.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlWZMaxTeilungswerte.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlWZMaxTeilungswerte.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlWZMaxTeilungswerte.RootElement.Text = resources.GetString("RadTextBoxControlWZMaxTeilungswerte.RootElement.Text")
         Me.RadTextBoxControlWZMaxTeilungswerte.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlWZMaxTeilungswerte.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1310,7 +1279,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadTextBoxControlWZWaegezellenkennwert.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlWZWaegezellenkennwert.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlWZWaegezellenkennwert.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlWZWaegezellenkennwert.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlWZWaegezellenkennwert.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlWZWaegezellenkennwert.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlWZWaegezellenkennwert.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlWZWaegezellenkennwert.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlWZWaegezellenkennwert.RootElement.Text = resources.GetString("RadTextBoxControlWZWaegezellenkennwert.RootElement.Text")
         Me.RadTextBoxControlWZWaegezellenkennwert.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlWZWaegezellenkennwert.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1328,7 +1296,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadTextBoxControlWZMindestvorlast.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlWZMindestvorlast.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlWZMindestvorlast.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlWZMindestvorlast.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlWZMindestvorlast.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlWZMindestvorlast.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlWZMindestvorlast.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlWZMindestvorlast.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlWZMindestvorlast.RootElement.Text = resources.GetString("RadTextBoxControlWZMindestvorlast.RootElement.Text")
         Me.RadTextBoxControlWZMindestvorlast.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlWZMindestvorlast.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1345,7 +1312,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadTextBoxControlWZHoechstlast.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlWZHoechstlast.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlWZHoechstlast.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlWZHoechstlast.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlWZHoechstlast.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlWZHoechstlast.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlWZHoechstlast.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlWZHoechstlast.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlWZHoechstlast.RootElement.Text = resources.GetString("RadTextBoxControlWZHoechstlast.RootElement.Text")
         Me.RadTextBoxControlWZHoechstlast.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlWZHoechstlast.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1362,7 +1328,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel60.RootElement.AngleTransform = CType(resources.GetObject("RadLabel60.RootElement.AngleTransform"), Single)
         Me.RadLabel60.RootElement.FlipText = CType(resources.GetObject("RadLabel60.RootElement.FlipText"), Boolean)
         Me.RadLabel60.RootElement.Margin = CType(resources.GetObject("RadLabel60.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel60.RootElement.Padding = CType(resources.GetObject("RadLabel60.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel60.RootElement.Text = resources.GetString("RadLabel60.RootElement.Text")
         Me.RadLabel60.RootElement.TextOrientation = CType(resources.GetObject("RadLabel60.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1379,7 +1344,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel61.RootElement.AngleTransform = CType(resources.GetObject("RadLabel61.RootElement.AngleTransform"), Single)
         Me.RadLabel61.RootElement.FlipText = CType(resources.GetObject("RadLabel61.RootElement.FlipText"), Boolean)
         Me.RadLabel61.RootElement.Margin = CType(resources.GetObject("RadLabel61.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel61.RootElement.Padding = CType(resources.GetObject("RadLabel61.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel61.RootElement.Text = resources.GetString("RadLabel61.RootElement.Text")
         Me.RadLabel61.RootElement.TextOrientation = CType(resources.GetObject("RadLabel61.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1396,7 +1360,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel62.RootElement.AngleTransform = CType(resources.GetObject("RadLabel62.RootElement.AngleTransform"), Single)
         Me.RadLabel62.RootElement.FlipText = CType(resources.GetObject("RadLabel62.RootElement.FlipText"), Boolean)
         Me.RadLabel62.RootElement.Margin = CType(resources.GetObject("RadLabel62.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel62.RootElement.Padding = CType(resources.GetObject("RadLabel62.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel62.RootElement.Text = resources.GetString("RadLabel62.RootElement.Text")
         Me.RadLabel62.RootElement.TextOrientation = CType(resources.GetObject("RadLabel62.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1413,7 +1376,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel63.RootElement.AngleTransform = CType(resources.GetObject("RadLabel63.RootElement.AngleTransform"), Single)
         Me.RadLabel63.RootElement.FlipText = CType(resources.GetObject("RadLabel63.RootElement.FlipText"), Boolean)
         Me.RadLabel63.RootElement.Margin = CType(resources.GetObject("RadLabel63.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel63.RootElement.Padding = CType(resources.GetObject("RadLabel63.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel63.RootElement.Text = resources.GetString("RadLabel63.RootElement.Text")
         Me.RadLabel63.RootElement.TextOrientation = CType(resources.GetObject("RadLabel63.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1430,7 +1392,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel64.RootElement.AngleTransform = CType(resources.GetObject("RadLabel64.RootElement.AngleTransform"), Single)
         Me.RadLabel64.RootElement.FlipText = CType(resources.GetObject("RadLabel64.RootElement.FlipText"), Boolean)
         Me.RadLabel64.RootElement.Margin = CType(resources.GetObject("RadLabel64.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel64.RootElement.Padding = CType(resources.GetObject("RadLabel64.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel64.RootElement.Text = resources.GetString("RadLabel64.RootElement.Text")
         Me.RadLabel64.RootElement.TextOrientation = CType(resources.GetObject("RadLabel64.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1447,7 +1408,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel65.RootElement.AngleTransform = CType(resources.GetObject("RadLabel65.RootElement.AngleTransform"), Single)
         Me.RadLabel65.RootElement.FlipText = CType(resources.GetObject("RadLabel65.RootElement.FlipText"), Boolean)
         Me.RadLabel65.RootElement.Margin = CType(resources.GetObject("RadLabel65.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel65.RootElement.Padding = CType(resources.GetObject("RadLabel65.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel65.RootElement.Text = resources.GetString("RadLabel65.RootElement.Text")
         Me.RadLabel65.RootElement.TextOrientation = CType(resources.GetObject("RadLabel65.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1464,7 +1424,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel66.RootElement.AngleTransform = CType(resources.GetObject("RadLabel66.RootElement.AngleTransform"), Single)
         Me.RadLabel66.RootElement.FlipText = CType(resources.GetObject("RadLabel66.RootElement.FlipText"), Boolean)
         Me.RadLabel66.RootElement.Margin = CType(resources.GetObject("RadLabel66.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel66.RootElement.Padding = CType(resources.GetObject("RadLabel66.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel66.RootElement.Text = resources.GetString("RadLabel66.RootElement.Text")
         Me.RadLabel66.RootElement.TextOrientation = CType(resources.GetObject("RadLabel66.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1481,7 +1440,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblwzKriechteilungsfaktor.RootElement.AngleTransform = CType(resources.GetObject("lblwzKriechteilungsfaktor.RootElement.AngleTransform"), Single)
         Me.lblwzKriechteilungsfaktor.RootElement.FlipText = CType(resources.GetObject("lblwzKriechteilungsfaktor.RootElement.FlipText"), Boolean)
         Me.lblwzKriechteilungsfaktor.RootElement.Margin = CType(resources.GetObject("lblwzKriechteilungsfaktor.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblwzKriechteilungsfaktor.RootElement.Padding = CType(resources.GetObject("lblwzKriechteilungsfaktor.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblwzKriechteilungsfaktor.RootElement.Text = resources.GetString("lblwzKriechteilungsfaktor.RootElement.Text")
         Me.lblwzKriechteilungsfaktor.RootElement.TextOrientation = CType(resources.GetObject("lblwzKriechteilungsfaktor.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1498,7 +1456,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblWZHoechstteilungswert.RootElement.AngleTransform = CType(resources.GetObject("lblWZHoechstteilungswert.RootElement.AngleTransform"), Single)
         Me.lblWZHoechstteilungswert.RootElement.FlipText = CType(resources.GetObject("lblWZHoechstteilungswert.RootElement.FlipText"), Boolean)
         Me.lblWZHoechstteilungswert.RootElement.Margin = CType(resources.GetObject("lblWZHoechstteilungswert.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblWZHoechstteilungswert.RootElement.Padding = CType(resources.GetObject("lblWZHoechstteilungswert.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblWZHoechstteilungswert.RootElement.Text = resources.GetString("lblWZHoechstteilungswert.RootElement.Text")
         Me.lblWZHoechstteilungswert.RootElement.TextOrientation = CType(resources.GetObject("lblWZHoechstteilungswert.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1515,7 +1472,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblWZMinTeilungswert.RootElement.AngleTransform = CType(resources.GetObject("lblWZMinTeilungswert.RootElement.AngleTransform"), Single)
         Me.lblWZMinTeilungswert.RootElement.FlipText = CType(resources.GetObject("lblWZMinTeilungswert.RootElement.FlipText"), Boolean)
         Me.lblWZMinTeilungswert.RootElement.Margin = CType(resources.GetObject("lblWZMinTeilungswert.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblWZMinTeilungswert.RootElement.Padding = CType(resources.GetObject("lblWZMinTeilungswert.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblWZMinTeilungswert.RootElement.Text = resources.GetString("lblWZMinTeilungswert.RootElement.Text")
         Me.lblWZMinTeilungswert.RootElement.TextOrientation = CType(resources.GetObject("lblWZMinTeilungswert.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1532,7 +1488,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblWZTeilungswerte.RootElement.AngleTransform = CType(resources.GetObject("lblWZTeilungswerte.RootElement.AngleTransform"), Single)
         Me.lblWZTeilungswerte.RootElement.FlipText = CType(resources.GetObject("lblWZTeilungswerte.RootElement.FlipText"), Boolean)
         Me.lblWZTeilungswerte.RootElement.Margin = CType(resources.GetObject("lblWZTeilungswerte.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblWZTeilungswerte.RootElement.Padding = CType(resources.GetObject("lblWZTeilungswerte.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblWZTeilungswerte.RootElement.Text = resources.GetString("lblWZTeilungswerte.RootElement.Text")
         Me.lblWZTeilungswerte.RootElement.TextOrientation = CType(resources.GetObject("lblWZTeilungswerte.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1549,7 +1504,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblWZWaegezellenkennwert.RootElement.AngleTransform = CType(resources.GetObject("lblWZWaegezellenkennwert.RootElement.AngleTransform"), Single)
         Me.lblWZWaegezellenkennwert.RootElement.FlipText = CType(resources.GetObject("lblWZWaegezellenkennwert.RootElement.FlipText"), Boolean)
         Me.lblWZWaegezellenkennwert.RootElement.Margin = CType(resources.GetObject("lblWZWaegezellenkennwert.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblWZWaegezellenkennwert.RootElement.Padding = CType(resources.GetObject("lblWZWaegezellenkennwert.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblWZWaegezellenkennwert.RootElement.Text = resources.GetString("lblWZWaegezellenkennwert.RootElement.Text")
         Me.lblWZWaegezellenkennwert.RootElement.TextOrientation = CType(resources.GetObject("lblWZWaegezellenkennwert.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1566,7 +1520,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblWZMindestvorlast.RootElement.AngleTransform = CType(resources.GetObject("lblWZMindestvorlast.RootElement.AngleTransform"), Single)
         Me.lblWZMindestvorlast.RootElement.FlipText = CType(resources.GetObject("lblWZMindestvorlast.RootElement.FlipText"), Boolean)
         Me.lblWZMindestvorlast.RootElement.Margin = CType(resources.GetObject("lblWZMindestvorlast.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblWZMindestvorlast.RootElement.Padding = CType(resources.GetObject("lblWZMindestvorlast.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblWZMindestvorlast.RootElement.Text = resources.GetString("lblWZMindestvorlast.RootElement.Text")
         Me.lblWZMindestvorlast.RootElement.TextOrientation = CType(resources.GetObject("lblWZMindestvorlast.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1583,13 +1536,13 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblWZHoechstlast.RootElement.AngleTransform = CType(resources.GetObject("lblWZHoechstlast.RootElement.AngleTransform"), Single)
         Me.lblWZHoechstlast.RootElement.FlipText = CType(resources.GetObject("lblWZHoechstlast.RootElement.FlipText"), Boolean)
         Me.lblWZHoechstlast.RootElement.Margin = CType(resources.GetObject("lblWZHoechstlast.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblWZHoechstlast.RootElement.Padding = CType(resources.GetObject("lblWZHoechstlast.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblWZHoechstlast.RootElement.Text = resources.GetString("lblWZHoechstlast.RootElement.Text")
         Me.lblWZHoechstlast.RootElement.TextOrientation = CType(resources.GetObject("lblWZHoechstlast.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
         'RadGroupBoxAWG
         '
         Me.RadGroupBoxAWG.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.RadGroupBoxAWG.Controls.Add(Me.Label8)
         Me.RadGroupBoxAWG.Controls.Add(Me.RadLabel30)
         Me.RadGroupBoxAWG.Controls.Add(Me.PictureBox15)
         Me.RadGroupBoxAWG.Controls.Add(Me.PictureBox14)
@@ -1655,7 +1608,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadGroupBoxAWG.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBoxAWG.RootElement.AngleTransform"), Single)
         Me.RadGroupBoxAWG.RootElement.FlipText = CType(resources.GetObject("RadGroupBoxAWG.RootElement.FlipText"), Boolean)
         Me.RadGroupBoxAWG.RootElement.Margin = CType(resources.GetObject("RadGroupBoxAWG.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadGroupBoxAWG.RootElement.Padding = CType(resources.GetObject("RadGroupBoxAWG.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadGroupBoxAWG.RootElement.Text = resources.GetString("RadGroupBoxAWG.RootElement.Text")
         Me.RadGroupBoxAWG.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxAWG.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1672,7 +1624,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel30.RootElement.AngleTransform = CType(resources.GetObject("RadLabel30.RootElement.AngleTransform"), Single)
         Me.RadLabel30.RootElement.FlipText = CType(resources.GetObject("RadLabel30.RootElement.FlipText"), Boolean)
         Me.RadLabel30.RootElement.Margin = CType(resources.GetObject("RadLabel30.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel30.RootElement.Padding = CType(resources.GetObject("RadLabel30.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel30.RootElement.Text = resources.GetString("RadLabel30.RootElement.Text")
         Me.RadLabel30.RootElement.TextOrientation = CType(resources.GetObject("RadLabel30.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1752,7 +1703,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel102.RootElement.AngleTransform = CType(resources.GetObject("RadLabel102.RootElement.AngleTransform"), Single)
         Me.RadLabel102.RootElement.FlipText = CType(resources.GetObject("RadLabel102.RootElement.FlipText"), Boolean)
         Me.RadLabel102.RootElement.Margin = CType(resources.GetObject("RadLabel102.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel102.RootElement.Padding = CType(resources.GetObject("RadLabel102.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel102.RootElement.Text = resources.GetString("RadLabel102.RootElement.Text")
         Me.RadLabel102.RootElement.TextOrientation = CType(resources.GetObject("RadLabel102.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1769,7 +1719,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel99.RootElement.AngleTransform = CType(resources.GetObject("RadLabel99.RootElement.AngleTransform"), Single)
         Me.RadLabel99.RootElement.FlipText = CType(resources.GetObject("RadLabel99.RootElement.FlipText"), Boolean)
         Me.RadLabel99.RootElement.Margin = CType(resources.GetObject("RadLabel99.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel99.RootElement.Padding = CType(resources.GetObject("RadLabel99.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel99.RootElement.Text = resources.GetString("RadLabel99.RootElement.Text")
         Me.RadLabel99.RootElement.TextOrientation = CType(resources.GetObject("RadLabel99.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1786,7 +1735,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel100.RootElement.AngleTransform = CType(resources.GetObject("RadLabel100.RootElement.AngleTransform"), Single)
         Me.RadLabel100.RootElement.FlipText = CType(resources.GetObject("RadLabel100.RootElement.FlipText"), Boolean)
         Me.RadLabel100.RootElement.Margin = CType(resources.GetObject("RadLabel100.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel100.RootElement.Padding = CType(resources.GetObject("RadLabel100.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel100.RootElement.Text = resources.GetString("RadLabel100.RootElement.Text")
         Me.RadLabel100.RootElement.TextOrientation = CType(resources.GetObject("RadLabel100.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1803,7 +1751,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel94.RootElement.AngleTransform = CType(resources.GetObject("RadLabel94.RootElement.AngleTransform"), Single)
         Me.RadLabel94.RootElement.FlipText = CType(resources.GetObject("RadLabel94.RootElement.FlipText"), Boolean)
         Me.RadLabel94.RootElement.Margin = CType(resources.GetObject("RadLabel94.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel94.RootElement.Padding = CType(resources.GetObject("RadLabel94.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel94.RootElement.Text = resources.GetString("RadLabel94.RootElement.Text")
         Me.RadLabel94.RootElement.TextOrientation = CType(resources.GetObject("RadLabel94.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1820,7 +1767,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel95.RootElement.AngleTransform = CType(resources.GetObject("RadLabel95.RootElement.AngleTransform"), Single)
         Me.RadLabel95.RootElement.FlipText = CType(resources.GetObject("RadLabel95.RootElement.FlipText"), Boolean)
         Me.RadLabel95.RootElement.Margin = CType(resources.GetObject("RadLabel95.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel95.RootElement.Padding = CType(resources.GetObject("RadLabel95.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel95.RootElement.Text = resources.GetString("RadLabel95.RootElement.Text")
         Me.RadLabel95.RootElement.TextOrientation = CType(resources.GetObject("RadLabel95.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1837,7 +1783,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel96.RootElement.AngleTransform = CType(resources.GetObject("RadLabel96.RootElement.AngleTransform"), Single)
         Me.RadLabel96.RootElement.FlipText = CType(resources.GetObject("RadLabel96.RootElement.FlipText"), Boolean)
         Me.RadLabel96.RootElement.Margin = CType(resources.GetObject("RadLabel96.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel96.RootElement.Padding = CType(resources.GetObject("RadLabel96.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel96.RootElement.Text = resources.GetString("RadLabel96.RootElement.Text")
         Me.RadLabel96.RootElement.TextOrientation = CType(resources.GetObject("RadLabel96.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1854,7 +1799,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel97.RootElement.AngleTransform = CType(resources.GetObject("RadLabel97.RootElement.AngleTransform"), Single)
         Me.RadLabel97.RootElement.FlipText = CType(resources.GetObject("RadLabel97.RootElement.FlipText"), Boolean)
         Me.RadLabel97.RootElement.Margin = CType(resources.GetObject("RadLabel97.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel97.RootElement.Padding = CType(resources.GetObject("RadLabel97.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel97.RootElement.Text = resources.GetString("RadLabel97.RootElement.Text")
         Me.RadLabel97.RootElement.TextOrientation = CType(resources.GetObject("RadLabel97.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1871,7 +1815,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel98.RootElement.AngleTransform = CType(resources.GetObject("RadLabel98.RootElement.AngleTransform"), Single)
         Me.RadLabel98.RootElement.FlipText = CType(resources.GetObject("RadLabel98.RootElement.FlipText"), Boolean)
         Me.RadLabel98.RootElement.Margin = CType(resources.GetObject("RadLabel98.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel98.RootElement.Padding = CType(resources.GetObject("RadLabel98.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel98.RootElement.Text = resources.GetString("RadLabel98.RootElement.Text")
         Me.RadLabel98.RootElement.TextOrientation = CType(resources.GetObject("RadLabel98.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1889,7 +1832,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadTextBoxControlAWGTemperaturbereichMax.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlAWGTemperaturbereichMax.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlAWGTemperaturbereichMax.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlAWGTemperaturbereichMax.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlAWGTemperaturbereichMax.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlAWGTemperaturbereichMax.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlAWGTemperaturbereichMax.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlAWGTemperaturbereichMax.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlAWGTemperaturbereichMax.RootElement.Text = resources.GetString("RadTextBoxControlAWGTemperaturbereichMax.RootElement.Text")
         Me.RadTextBoxControlAWGTemperaturbereichMax.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlAWGTemperaturbereichMax.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadTextBoxControlAWGTemperaturbereichMax.TabStop = False
@@ -1907,7 +1849,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel51.RootElement.AngleTransform = CType(resources.GetObject("RadLabel51.RootElement.AngleTransform"), Single)
         Me.RadLabel51.RootElement.FlipText = CType(resources.GetObject("RadLabel51.RootElement.FlipText"), Boolean)
         Me.RadLabel51.RootElement.Margin = CType(resources.GetObject("RadLabel51.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel51.RootElement.Padding = CType(resources.GetObject("RadLabel51.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel51.RootElement.Text = resources.GetString("RadLabel51.RootElement.Text")
         Me.RadLabel51.RootElement.TextOrientation = CType(resources.GetObject("RadLabel51.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1924,7 +1865,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadSeparator9.RootElement.AngleTransform = CType(resources.GetObject("RadSeparator9.RootElement.AngleTransform"), Single)
         Me.RadSeparator9.RootElement.FlipText = CType(resources.GetObject("RadSeparator9.RootElement.FlipText"), Boolean)
         Me.RadSeparator9.RootElement.Margin = CType(resources.GetObject("RadSeparator9.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadSeparator9.RootElement.Padding = CType(resources.GetObject("RadSeparator9.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadSeparator9.RootElement.Text = resources.GetString("RadSeparator9.RootElement.Text")
         Me.RadSeparator9.RootElement.TextOrientation = CType(resources.GetObject("RadSeparator9.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadSeparator9.TabStop = False
@@ -1942,7 +1882,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblAWGKlasse2.RootElement.AngleTransform = CType(resources.GetObject("lblAWGKlasse2.RootElement.AngleTransform"), Single)
         Me.lblAWGKlasse2.RootElement.FlipText = CType(resources.GetObject("lblAWGKlasse2.RootElement.FlipText"), Boolean)
         Me.lblAWGKlasse2.RootElement.Margin = CType(resources.GetObject("lblAWGKlasse2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblAWGKlasse2.RootElement.Padding = CType(resources.GetObject("lblAWGKlasse2.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblAWGKlasse2.RootElement.Text = resources.GetString("lblAWGKlasse2.RootElement.Text")
         Me.lblAWGKlasse2.RootElement.TextOrientation = CType(resources.GetObject("lblAWGKlasse2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1960,7 +1899,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadTextBoxControlAWGKlasse.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlAWGKlasse.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlAWGKlasse.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlAWGKlasse.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlAWGKlasse.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlAWGKlasse.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlAWGKlasse.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlAWGKlasse.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlAWGKlasse.RootElement.Text = resources.GetString("RadTextBoxControlAWGKlasse.RootElement.Text")
         Me.RadTextBoxControlAWGKlasse.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlAWGKlasse.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadTextBoxControlAWGKlasse.TabStop = False
@@ -1978,7 +1916,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblAWGKlasse.RootElement.AngleTransform = CType(resources.GetObject("lblAWGKlasse.RootElement.AngleTransform"), Single)
         Me.lblAWGKlasse.RootElement.FlipText = CType(resources.GetObject("lblAWGKlasse.RootElement.FlipText"), Boolean)
         Me.lblAWGKlasse.RootElement.Margin = CType(resources.GetObject("lblAWGKlasse.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblAWGKlasse.RootElement.Padding = CType(resources.GetObject("lblAWGKlasse.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblAWGKlasse.RootElement.Text = resources.GetString("lblAWGKlasse.RootElement.Text")
         Me.lblAWGKlasse.RootElement.TextOrientation = CType(resources.GetObject("lblAWGKlasse.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1996,7 +1933,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadSeparator6.RootElement.AngleTransform = CType(resources.GetObject("RadSeparator6.RootElement.AngleTransform"), Single)
         Me.RadSeparator6.RootElement.FlipText = CType(resources.GetObject("RadSeparator6.RootElement.FlipText"), Boolean)
         Me.RadSeparator6.RootElement.Margin = CType(resources.GetObject("RadSeparator6.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadSeparator6.RootElement.Padding = CType(resources.GetObject("RadSeparator6.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadSeparator6.RootElement.Text = resources.GetString("RadSeparator6.RootElement.Text")
         Me.RadSeparator6.RootElement.TextOrientation = CType(resources.GetObject("RadSeparator6.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadSeparator6.TabStop = False
@@ -2015,7 +1951,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadSeparator8.RootElement.AngleTransform = CType(resources.GetObject("RadSeparator8.RootElement.AngleTransform"), Single)
         Me.RadSeparator8.RootElement.FlipText = CType(resources.GetObject("RadSeparator8.RootElement.FlipText"), Boolean)
         Me.RadSeparator8.RootElement.Margin = CType(resources.GetObject("RadSeparator8.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadSeparator8.RootElement.Padding = CType(resources.GetObject("RadSeparator8.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadSeparator8.RootElement.Text = resources.GetString("RadSeparator8.RootElement.Text")
         Me.RadSeparator8.RootElement.TextOrientation = CType(resources.GetObject("RadSeparator8.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadSeparator8.TabStop = False
@@ -2034,7 +1969,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadTextBoxControlAWGKabellaenge.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlAWGKabellaenge.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlAWGKabellaenge.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlAWGKabellaenge.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlAWGKabellaenge.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlAWGKabellaenge.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlAWGKabellaenge.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlAWGKabellaenge.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlAWGKabellaenge.RootElement.Text = resources.GetString("RadTextBoxControlAWGKabellaenge.RootElement.Text")
         Me.RadTextBoxControlAWGKabellaenge.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlAWGKabellaenge.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadTextBoxControlAWGKabellaenge.TabStop = False
@@ -2052,7 +1986,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadTextBoxControlAWGAnschlussart.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlAWGAnschlussart.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlAWGAnschlussart.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlAWGAnschlussart.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlAWGAnschlussart.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlAWGAnschlussart.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlAWGAnschlussart.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlAWGAnschlussart.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlAWGAnschlussart.RootElement.Text = resources.GetString("RadTextBoxControlAWGAnschlussart.RootElement.Text")
         Me.RadTextBoxControlAWGAnschlussart.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlAWGAnschlussart.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -2069,7 +2002,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblKabel.RootElement.AngleTransform = CType(resources.GetObject("lblKabel.RootElement.AngleTransform"), Single)
         Me.lblKabel.RootElement.FlipText = CType(resources.GetObject("lblKabel.RootElement.FlipText"), Boolean)
         Me.lblKabel.RootElement.Margin = CType(resources.GetObject("lblKabel.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblKabel.RootElement.Padding = CType(resources.GetObject("lblKabel.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblKabel.RootElement.Text = resources.GetString("lblKabel.RootElement.Text")
         Me.lblKabel.RootElement.TextOrientation = CType(resources.GetObject("lblKabel.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -2086,7 +2018,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblAWGKabellaenge.RootElement.AngleTransform = CType(resources.GetObject("lblAWGKabellaenge.RootElement.AngleTransform"), Single)
         Me.lblAWGKabellaenge.RootElement.FlipText = CType(resources.GetObject("lblAWGKabellaenge.RootElement.FlipText"), Boolean)
         Me.lblAWGKabellaenge.RootElement.Margin = CType(resources.GetObject("lblAWGKabellaenge.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblAWGKabellaenge.RootElement.Padding = CType(resources.GetObject("lblAWGKabellaenge.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblAWGKabellaenge.RootElement.Text = resources.GetString("lblAWGKabellaenge.RootElement.Text")
         Me.lblAWGKabellaenge.RootElement.TextOrientation = CType(resources.GetObject("lblAWGKabellaenge.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -2103,7 +2034,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblAWGAnschlussart.RootElement.AngleTransform = CType(resources.GetObject("lblAWGAnschlussart.RootElement.AngleTransform"), Single)
         Me.lblAWGAnschlussart.RootElement.FlipText = CType(resources.GetObject("lblAWGAnschlussart.RootElement.FlipText"), Boolean)
         Me.lblAWGAnschlussart.RootElement.Margin = CType(resources.GetObject("lblAWGAnschlussart.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblAWGAnschlussart.RootElement.Padding = CType(resources.GetObject("lblAWGAnschlussart.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblAWGAnschlussart.RootElement.Text = resources.GetString("lblAWGAnschlussart.RootElement.Text")
         Me.lblAWGAnschlussart.RootElement.TextOrientation = CType(resources.GetObject("lblAWGAnschlussart.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -2122,7 +2052,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMax.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlAWGGrenzwerteLastwiderstandMax.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMax.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlAWGGrenzwerteLastwiderstandMax.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMax.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlAWGGrenzwerteLastwiderstandMax.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMax.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlAWGGrenzwerteLastwiderstandMax.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMax.RootElement.Text = resources.GetString("RadTextBoxControlAWGGrenzwerteLastwiderstandMax.RootElement.Text")
         Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMax.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlAWGGrenzwerteLastwiderstandMax.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMax.TabStop = False
@@ -2140,7 +2069,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel34.RootElement.AngleTransform = CType(resources.GetObject("RadLabel34.RootElement.AngleTransform"), Single)
         Me.RadLabel34.RootElement.FlipText = CType(resources.GetObject("RadLabel34.RootElement.FlipText"), Boolean)
         Me.RadLabel34.RootElement.Margin = CType(resources.GetObject("RadLabel34.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel34.RootElement.Padding = CType(resources.GetObject("RadLabel34.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel34.RootElement.Text = resources.GetString("RadLabel34.RootElement.Text")
         Me.RadLabel34.RootElement.TextOrientation = CType(resources.GetObject("RadLabel34.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -2159,7 +2087,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMin.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlAWGGrenzwerteLastwiderstandMin.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMin.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlAWGGrenzwerteLastwiderstandMin.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMin.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlAWGGrenzwerteLastwiderstandMin.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMin.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlAWGGrenzwerteLastwiderstandMin.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMin.RootElement.Text = resources.GetString("RadTextBoxControlAWGGrenzwerteLastwiderstandMin.RootElement.Text")
         Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMin.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlAWGGrenzwerteLastwiderstandMin.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMin.TabStop = False
@@ -2178,7 +2105,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadTextBoxControlAWGTemperaturbereichMin.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlAWGTemperaturbereichMin.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlAWGTemperaturbereichMin.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlAWGTemperaturbereichMin.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlAWGTemperaturbereichMin.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlAWGTemperaturbereichMin.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlAWGTemperaturbereichMin.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlAWGTemperaturbereichMin.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlAWGTemperaturbereichMin.RootElement.Text = resources.GetString("RadTextBoxControlAWGTemperaturbereichMin.RootElement.Text")
         Me.RadTextBoxControlAWGTemperaturbereichMin.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlAWGTemperaturbereichMin.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadTextBoxControlAWGTemperaturbereichMin.TabStop = False
@@ -2197,7 +2123,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadTextBoxControlAWGBruchteilEichfehlergrenze.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlAWGBruchteilEichfehlergrenze.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlAWGBruchteilEichfehlergrenze.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlAWGBruchteilEichfehlergrenze.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlAWGBruchteilEichfehlergrenze.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlAWGBruchteilEichfehlergrenze.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlAWGBruchteilEichfehlergrenze.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlAWGBruchteilEichfehlergrenze.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlAWGBruchteilEichfehlergrenze.RootElement.Text = resources.GetString("RadTextBoxControlAWGBruchteilEichfehlergrenze.RootElement.Text")
         Me.RadTextBoxControlAWGBruchteilEichfehlergrenze.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlAWGBruchteilEichfehlergrenze.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadTextBoxControlAWGBruchteilEichfehlergrenze.TabStop = False
@@ -2216,7 +2141,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadTextBoxControlAWGMindestmesssignal.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlAWGMindestmesssignal.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlAWGMindestmesssignal.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlAWGMindestmesssignal.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlAWGMindestmesssignal.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlAWGMindestmesssignal.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlAWGMindestmesssignal.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlAWGMindestmesssignal.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlAWGMindestmesssignal.RootElement.Text = resources.GetString("RadTextBoxControlAWGMindestmesssignal.RootElement.Text")
         Me.RadTextBoxControlAWGMindestmesssignal.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlAWGMindestmesssignal.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadTextBoxControlAWGMindestmesssignal.TabStop = False
@@ -2235,7 +2159,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadTextBoxControlAWGMindesteingangsspannung.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlAWGMindesteingangsspannung.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlAWGMindesteingangsspannung.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlAWGMindesteingangsspannung.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlAWGMindesteingangsspannung.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlAWGMindesteingangsspannung.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlAWGMindesteingangsspannung.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlAWGMindesteingangsspannung.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlAWGMindesteingangsspannung.RootElement.Text = resources.GetString("RadTextBoxControlAWGMindesteingangsspannung.RootElement.Text")
         Me.RadTextBoxControlAWGMindesteingangsspannung.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlAWGMindesteingangsspannung.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadTextBoxControlAWGMindesteingangsspannung.TabStop = False
@@ -2254,7 +2177,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadTextBoxControlAWGSpeisespannung.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlAWGSpeisespannung.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlAWGSpeisespannung.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlAWGSpeisespannung.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlAWGSpeisespannung.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlAWGSpeisespannung.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlAWGSpeisespannung.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlAWGSpeisespannung.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlAWGSpeisespannung.RootElement.Text = resources.GetString("RadTextBoxControlAWGSpeisespannung.RootElement.Text")
         Me.RadTextBoxControlAWGSpeisespannung.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlAWGSpeisespannung.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadTextBoxControlAWGSpeisespannung.TabStop = False
@@ -2273,7 +2195,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadTextBoxControlAWGTeilungswerte.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlAWGTeilungswerte.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlAWGTeilungswerte.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlAWGTeilungswerte.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlAWGTeilungswerte.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlAWGTeilungswerte.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlAWGTeilungswerte.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlAWGTeilungswerte.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlAWGTeilungswerte.RootElement.Text = resources.GetString("RadTextBoxControlAWGTeilungswerte.RootElement.Text")
         Me.RadTextBoxControlAWGTeilungswerte.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlAWGTeilungswerte.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadTextBoxControlAWGTeilungswerte.TabStop = False
@@ -2291,7 +2212,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel35.RootElement.AngleTransform = CType(resources.GetObject("RadLabel35.RootElement.AngleTransform"), Single)
         Me.RadLabel35.RootElement.FlipText = CType(resources.GetObject("RadLabel35.RootElement.FlipText"), Boolean)
         Me.RadLabel35.RootElement.Margin = CType(resources.GetObject("RadLabel35.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel35.RootElement.Padding = CType(resources.GetObject("RadLabel35.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel35.RootElement.Text = resources.GetString("RadLabel35.RootElement.Text")
         Me.RadLabel35.RootElement.TextOrientation = CType(resources.GetObject("RadLabel35.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -2308,7 +2228,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel36.RootElement.AngleTransform = CType(resources.GetObject("RadLabel36.RootElement.AngleTransform"), Single)
         Me.RadLabel36.RootElement.FlipText = CType(resources.GetObject("RadLabel36.RootElement.FlipText"), Boolean)
         Me.RadLabel36.RootElement.Margin = CType(resources.GetObject("RadLabel36.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel36.RootElement.Padding = CType(resources.GetObject("RadLabel36.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel36.RootElement.Text = resources.GetString("RadLabel36.RootElement.Text")
         Me.RadLabel36.RootElement.TextOrientation = CType(resources.GetObject("RadLabel36.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -2325,7 +2244,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel37.RootElement.AngleTransform = CType(resources.GetObject("RadLabel37.RootElement.AngleTransform"), Single)
         Me.RadLabel37.RootElement.FlipText = CType(resources.GetObject("RadLabel37.RootElement.FlipText"), Boolean)
         Me.RadLabel37.RootElement.Margin = CType(resources.GetObject("RadLabel37.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel37.RootElement.Padding = CType(resources.GetObject("RadLabel37.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel37.RootElement.Text = resources.GetString("RadLabel37.RootElement.Text")
         Me.RadLabel37.RootElement.TextOrientation = CType(resources.GetObject("RadLabel37.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -2342,7 +2260,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel38.RootElement.AngleTransform = CType(resources.GetObject("RadLabel38.RootElement.AngleTransform"), Single)
         Me.RadLabel38.RootElement.FlipText = CType(resources.GetObject("RadLabel38.RootElement.FlipText"), Boolean)
         Me.RadLabel38.RootElement.Margin = CType(resources.GetObject("RadLabel38.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel38.RootElement.Padding = CType(resources.GetObject("RadLabel38.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel38.RootElement.Text = resources.GetString("RadLabel38.RootElement.Text")
         Me.RadLabel38.RootElement.TextOrientation = CType(resources.GetObject("RadLabel38.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -2359,7 +2276,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel39.RootElement.AngleTransform = CType(resources.GetObject("RadLabel39.RootElement.AngleTransform"), Single)
         Me.RadLabel39.RootElement.FlipText = CType(resources.GetObject("RadLabel39.RootElement.FlipText"), Boolean)
         Me.RadLabel39.RootElement.Margin = CType(resources.GetObject("RadLabel39.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel39.RootElement.Padding = CType(resources.GetObject("RadLabel39.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel39.RootElement.Text = resources.GetString("RadLabel39.RootElement.Text")
         Me.RadLabel39.RootElement.TextOrientation = CType(resources.GetObject("RadLabel39.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -2376,7 +2292,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel40.RootElement.AngleTransform = CType(resources.GetObject("RadLabel40.RootElement.AngleTransform"), Single)
         Me.RadLabel40.RootElement.FlipText = CType(resources.GetObject("RadLabel40.RootElement.FlipText"), Boolean)
         Me.RadLabel40.RootElement.Margin = CType(resources.GetObject("RadLabel40.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel40.RootElement.Padding = CType(resources.GetObject("RadLabel40.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel40.RootElement.Text = resources.GetString("RadLabel40.RootElement.Text")
         Me.RadLabel40.RootElement.TextOrientation = CType(resources.GetObject("RadLabel40.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -2393,7 +2308,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel41.RootElement.AngleTransform = CType(resources.GetObject("RadLabel41.RootElement.AngleTransform"), Single)
         Me.RadLabel41.RootElement.FlipText = CType(resources.GetObject("RadLabel41.RootElement.FlipText"), Boolean)
         Me.RadLabel41.RootElement.Margin = CType(resources.GetObject("RadLabel41.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel41.RootElement.Padding = CType(resources.GetObject("RadLabel41.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel41.RootElement.Text = resources.GetString("RadLabel41.RootElement.Text")
         Me.RadLabel41.RootElement.TextOrientation = CType(resources.GetObject("RadLabel41.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -2410,7 +2324,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblAWGEichfehlergrenze.RootElement.AngleTransform = CType(resources.GetObject("lblAWGEichfehlergrenze.RootElement.AngleTransform"), Single)
         Me.lblAWGEichfehlergrenze.RootElement.FlipText = CType(resources.GetObject("lblAWGEichfehlergrenze.RootElement.FlipText"), Boolean)
         Me.lblAWGEichfehlergrenze.RootElement.Margin = CType(resources.GetObject("lblAWGEichfehlergrenze.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblAWGEichfehlergrenze.RootElement.Padding = CType(resources.GetObject("lblAWGEichfehlergrenze.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblAWGEichfehlergrenze.RootElement.Text = resources.GetString("lblAWGEichfehlergrenze.RootElement.Text")
         Me.lblAWGEichfehlergrenze.RootElement.TextOrientation = CType(resources.GetObject("lblAWGEichfehlergrenze.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -2427,7 +2340,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblAWGTemperatur.RootElement.AngleTransform = CType(resources.GetObject("lblAWGTemperatur.RootElement.AngleTransform"), Single)
         Me.lblAWGTemperatur.RootElement.FlipText = CType(resources.GetObject("lblAWGTemperatur.RootElement.FlipText"), Boolean)
         Me.lblAWGTemperatur.RootElement.Margin = CType(resources.GetObject("lblAWGTemperatur.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblAWGTemperatur.RootElement.Padding = CType(resources.GetObject("lblAWGTemperatur.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblAWGTemperatur.RootElement.Text = resources.GetString("lblAWGTemperatur.RootElement.Text")
         Me.lblAWGTemperatur.RootElement.TextOrientation = CType(resources.GetObject("lblAWGTemperatur.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -2444,7 +2356,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblAWGWiderstand.RootElement.AngleTransform = CType(resources.GetObject("lblAWGWiderstand.RootElement.AngleTransform"), Single)
         Me.lblAWGWiderstand.RootElement.FlipText = CType(resources.GetObject("lblAWGWiderstand.RootElement.FlipText"), Boolean)
         Me.lblAWGWiderstand.RootElement.Margin = CType(resources.GetObject("lblAWGWiderstand.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblAWGWiderstand.RootElement.Padding = CType(resources.GetObject("lblAWGWiderstand.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblAWGWiderstand.RootElement.Text = resources.GetString("lblAWGWiderstand.RootElement.Text")
         Me.lblAWGWiderstand.RootElement.TextOrientation = CType(resources.GetObject("lblAWGWiderstand.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -2461,7 +2372,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblAWGMinMessSignal.RootElement.AngleTransform = CType(resources.GetObject("lblAWGMinMessSignal.RootElement.AngleTransform"), Single)
         Me.lblAWGMinMessSignal.RootElement.FlipText = CType(resources.GetObject("lblAWGMinMessSignal.RootElement.FlipText"), Boolean)
         Me.lblAWGMinMessSignal.RootElement.Margin = CType(resources.GetObject("lblAWGMinMessSignal.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblAWGMinMessSignal.RootElement.Padding = CType(resources.GetObject("lblAWGMinMessSignal.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblAWGMinMessSignal.RootElement.Text = resources.GetString("lblAWGMinMessSignal.RootElement.Text")
         Me.lblAWGMinMessSignal.RootElement.TextOrientation = CType(resources.GetObject("lblAWGMinMessSignal.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -2478,7 +2388,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblAWGMindesteingangsspannung.RootElement.AngleTransform = CType(resources.GetObject("lblAWGMindesteingangsspannung.RootElement.AngleTransform"), Single)
         Me.lblAWGMindesteingangsspannung.RootElement.FlipText = CType(resources.GetObject("lblAWGMindesteingangsspannung.RootElement.FlipText"), Boolean)
         Me.lblAWGMindesteingangsspannung.RootElement.Margin = CType(resources.GetObject("lblAWGMindesteingangsspannung.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblAWGMindesteingangsspannung.RootElement.Padding = CType(resources.GetObject("lblAWGMindesteingangsspannung.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblAWGMindesteingangsspannung.RootElement.Text = resources.GetString("lblAWGMindesteingangsspannung.RootElement.Text")
         Me.lblAWGMindesteingangsspannung.RootElement.TextOrientation = CType(resources.GetObject("lblAWGMindesteingangsspannung.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -2495,7 +2404,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblAWGSpeisespannung.RootElement.AngleTransform = CType(resources.GetObject("lblAWGSpeisespannung.RootElement.AngleTransform"), Single)
         Me.lblAWGSpeisespannung.RootElement.FlipText = CType(resources.GetObject("lblAWGSpeisespannung.RootElement.FlipText"), Boolean)
         Me.lblAWGSpeisespannung.RootElement.Margin = CType(resources.GetObject("lblAWGSpeisespannung.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblAWGSpeisespannung.RootElement.Padding = CType(resources.GetObject("lblAWGSpeisespannung.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblAWGSpeisespannung.RootElement.Text = resources.GetString("lblAWGSpeisespannung.RootElement.Text")
         Me.lblAWGSpeisespannung.RootElement.TextOrientation = CType(resources.GetObject("lblAWGSpeisespannung.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -2512,13 +2420,19 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblAWGmaxAnzahlTeilungswerte.RootElement.AngleTransform = CType(resources.GetObject("lblAWGmaxAnzahlTeilungswerte.RootElement.AngleTransform"), Single)
         Me.lblAWGmaxAnzahlTeilungswerte.RootElement.FlipText = CType(resources.GetObject("lblAWGmaxAnzahlTeilungswerte.RootElement.FlipText"), Boolean)
         Me.lblAWGmaxAnzahlTeilungswerte.RootElement.Margin = CType(resources.GetObject("lblAWGmaxAnzahlTeilungswerte.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblAWGmaxAnzahlTeilungswerte.RootElement.Padding = CType(resources.GetObject("lblAWGmaxAnzahlTeilungswerte.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblAWGmaxAnzahlTeilungswerte.RootElement.Text = resources.GetString("lblAWGmaxAnzahlTeilungswerte.RootElement.Text")
         Me.lblAWGmaxAnzahlTeilungswerte.RootElement.TextOrientation = CType(resources.GetObject("lblAWGmaxAnzahlTeilungswerte.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
         'RadGroupBoxWaage
         '
         Me.RadGroupBoxWaage.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.RadGroupBoxWaage.Controls.Add(Me.Label6)
+        Me.RadGroupBoxWaage.Controls.Add(Me.Label9)
+        Me.RadGroupBoxWaage.Controls.Add(Me.Label5)
+        Me.RadGroupBoxWaage.Controls.Add(Me.Label7)
+        Me.RadGroupBoxWaage.Controls.Add(Me.Label4)
+        Me.RadGroupBoxWaage.Controls.Add(Me.Label3)
+        Me.RadGroupBoxWaage.Controls.Add(Me.Label2)
         Me.RadGroupBoxWaage.Controls.Add(Me.Label1)
         Me.RadGroupBoxWaage.Controls.Add(Me.lblPflichtfeld1)
         Me.RadGroupBoxWaage.Controls.Add(Me.PictureBox9)
@@ -2603,9 +2517,20 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadGroupBoxWaage.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBoxWaage.RootElement.AngleTransform"), Single)
         Me.RadGroupBoxWaage.RootElement.FlipText = CType(resources.GetObject("RadGroupBoxWaage.RootElement.FlipText"), Boolean)
         Me.RadGroupBoxWaage.RootElement.Margin = CType(resources.GetObject("RadGroupBoxWaage.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadGroupBoxWaage.RootElement.Padding = CType(resources.GetObject("RadGroupBoxWaage.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadGroupBoxWaage.RootElement.Text = resources.GetString("RadGroupBoxWaage.RootElement.Text")
         Me.RadGroupBoxWaage.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxWaage.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        '
+        'Label1
+        '
+        resources.ApplyResources(Me.Label1, "Label1")
+        Me.Label1.ForeColor = System.Drawing.Color.Red
+        Me.Label1.Name = "Label1"
+        '
+        'lblPflichtfeld1
+        '
+        resources.ApplyResources(Me.lblPflichtfeld1, "lblPflichtfeld1")
+        Me.lblPflichtfeld1.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld1.Name = "lblPflichtfeld1"
         '
         'PictureBox9
         '
@@ -2627,7 +2552,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel92.RootElement.AngleTransform = CType(resources.GetObject("RadLabel92.RootElement.AngleTransform"), Single)
         Me.RadLabel92.RootElement.FlipText = CType(resources.GetObject("RadLabel92.RootElement.FlipText"), Boolean)
         Me.RadLabel92.RootElement.Margin = CType(resources.GetObject("RadLabel92.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel92.RootElement.Padding = CType(resources.GetObject("RadLabel92.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel92.RootElement.Text = resources.GetString("RadLabel92.RootElement.Text")
         Me.RadLabel92.RootElement.TextOrientation = CType(resources.GetObject("RadLabel92.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -2644,7 +2568,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel91.RootElement.AngleTransform = CType(resources.GetObject("RadLabel91.RootElement.AngleTransform"), Single)
         Me.RadLabel91.RootElement.FlipText = CType(resources.GetObject("RadLabel91.RootElement.FlipText"), Boolean)
         Me.RadLabel91.RootElement.Margin = CType(resources.GetObject("RadLabel91.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel91.RootElement.Padding = CType(resources.GetObject("RadLabel91.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel91.RootElement.Text = resources.GetString("RadLabel91.RootElement.Text")
         Me.RadLabel91.RootElement.TextOrientation = CType(resources.GetObject("RadLabel91.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -2661,7 +2584,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel90.RootElement.AngleTransform = CType(resources.GetObject("RadLabel90.RootElement.AngleTransform"), Single)
         Me.RadLabel90.RootElement.FlipText = CType(resources.GetObject("RadLabel90.RootElement.FlipText"), Boolean)
         Me.RadLabel90.RootElement.Margin = CType(resources.GetObject("RadLabel90.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel90.RootElement.Padding = CType(resources.GetObject("RadLabel90.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel90.RootElement.Text = resources.GetString("RadLabel90.RootElement.Text")
         Me.RadLabel90.RootElement.TextOrientation = CType(resources.GetObject("RadLabel90.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -2678,7 +2600,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel89.RootElement.AngleTransform = CType(resources.GetObject("RadLabel89.RootElement.AngleTransform"), Single)
         Me.RadLabel89.RootElement.FlipText = CType(resources.GetObject("RadLabel89.RootElement.FlipText"), Boolean)
         Me.RadLabel89.RootElement.Margin = CType(resources.GetObject("RadLabel89.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel89.RootElement.Padding = CType(resources.GetObject("RadLabel89.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel89.RootElement.Text = resources.GetString("RadLabel89.RootElement.Text")
         Me.RadLabel89.RootElement.TextOrientation = CType(resources.GetObject("RadLabel89.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -2695,7 +2616,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel88.RootElement.AngleTransform = CType(resources.GetObject("RadLabel88.RootElement.AngleTransform"), Single)
         Me.RadLabel88.RootElement.FlipText = CType(resources.GetObject("RadLabel88.RootElement.FlipText"), Boolean)
         Me.RadLabel88.RootElement.Margin = CType(resources.GetObject("RadLabel88.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel88.RootElement.Padding = CType(resources.GetObject("RadLabel88.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel88.RootElement.Text = resources.GetString("RadLabel88.RootElement.Text")
         Me.RadLabel88.RootElement.TextOrientation = CType(resources.GetObject("RadLabel88.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -2712,7 +2632,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel85.RootElement.AngleTransform = CType(resources.GetObject("RadLabel85.RootElement.AngleTransform"), Single)
         Me.RadLabel85.RootElement.FlipText = CType(resources.GetObject("RadLabel85.RootElement.FlipText"), Boolean)
         Me.RadLabel85.RootElement.Margin = CType(resources.GetObject("RadLabel85.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel85.RootElement.Padding = CType(resources.GetObject("RadLabel85.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel85.RootElement.Text = resources.GetString("RadLabel85.RootElement.Text")
         Me.RadLabel85.RootElement.TextOrientation = CType(resources.GetObject("RadLabel85.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -2729,7 +2648,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel86.RootElement.AngleTransform = CType(resources.GetObject("RadLabel86.RootElement.AngleTransform"), Single)
         Me.RadLabel86.RootElement.FlipText = CType(resources.GetObject("RadLabel86.RootElement.FlipText"), Boolean)
         Me.RadLabel86.RootElement.Margin = CType(resources.GetObject("RadLabel86.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel86.RootElement.Padding = CType(resources.GetObject("RadLabel86.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel86.RootElement.Text = resources.GetString("RadLabel86.RootElement.Text")
         Me.RadLabel86.RootElement.TextOrientation = CType(resources.GetObject("RadLabel86.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -2746,7 +2664,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel87.RootElement.AngleTransform = CType(resources.GetObject("RadLabel87.RootElement.AngleTransform"), Single)
         Me.RadLabel87.RootElement.FlipText = CType(resources.GetObject("RadLabel87.RootElement.FlipText"), Boolean)
         Me.RadLabel87.RootElement.Margin = CType(resources.GetObject("RadLabel87.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel87.RootElement.Padding = CType(resources.GetObject("RadLabel87.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel87.RootElement.Text = resources.GetString("RadLabel87.RootElement.Text")
         Me.RadLabel87.RootElement.TextOrientation = CType(resources.GetObject("RadLabel87.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -2763,7 +2680,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblEKG3.RootElement.AngleTransform = CType(resources.GetObject("lblEKG3.RootElement.AngleTransform"), Single)
         Me.lblEKG3.RootElement.FlipText = CType(resources.GetObject("lblEKG3.RootElement.FlipText"), Boolean)
         Me.lblEKG3.RootElement.Margin = CType(resources.GetObject("lblEKG3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblEKG3.RootElement.Padding = CType(resources.GetObject("lblEKG3.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblEKG3.RootElement.Text = resources.GetString("lblEKG3.RootElement.Text")
         Me.lblEKG3.RootElement.TextOrientation = CType(resources.GetObject("lblEKG3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -2780,7 +2696,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblEKG2.RootElement.AngleTransform = CType(resources.GetObject("lblEKG2.RootElement.AngleTransform"), Single)
         Me.lblEKG2.RootElement.FlipText = CType(resources.GetObject("lblEKG2.RootElement.FlipText"), Boolean)
         Me.lblEKG2.RootElement.Margin = CType(resources.GetObject("lblEKG2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblEKG2.RootElement.Padding = CType(resources.GetObject("lblEKG2.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblEKG2.RootElement.Text = resources.GetString("lblEKG2.RootElement.Text")
         Me.lblEKG2.RootElement.TextOrientation = CType(resources.GetObject("lblEKG2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -2797,7 +2712,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblEKG1.RootElement.AngleTransform = CType(resources.GetObject("lblEKG1.RootElement.AngleTransform"), Single)
         Me.lblEKG1.RootElement.FlipText = CType(resources.GetObject("lblEKG1.RootElement.FlipText"), Boolean)
         Me.lblEKG1.RootElement.Margin = CType(resources.GetObject("lblEKG1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblEKG1.RootElement.Padding = CType(resources.GetObject("lblEKG1.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblEKG1.RootElement.Text = resources.GetString("lblEKG1.RootElement.Text")
         Me.lblEKG1.RootElement.TextOrientation = CType(resources.GetObject("lblEKG1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -2814,7 +2728,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblKGMax3.RootElement.AngleTransform = CType(resources.GetObject("lblKGMax3.RootElement.AngleTransform"), Single)
         Me.lblKGMax3.RootElement.FlipText = CType(resources.GetObject("lblKGMax3.RootElement.FlipText"), Boolean)
         Me.lblKGMax3.RootElement.Margin = CType(resources.GetObject("lblKGMax3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblKGMax3.RootElement.Padding = CType(resources.GetObject("lblKGMax3.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblKGMax3.RootElement.Text = resources.GetString("lblKGMax3.RootElement.Text")
         Me.lblKGMax3.RootElement.TextOrientation = CType(resources.GetObject("lblKGMax3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -2831,7 +2744,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblKGMax2.RootElement.AngleTransform = CType(resources.GetObject("lblKGMax2.RootElement.AngleTransform"), Single)
         Me.lblKGMax2.RootElement.FlipText = CType(resources.GetObject("lblKGMax2.RootElement.FlipText"), Boolean)
         Me.lblKGMax2.RootElement.Margin = CType(resources.GetObject("lblKGMax2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblKGMax2.RootElement.Padding = CType(resources.GetObject("lblKGMax2.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblKGMax2.RootElement.Text = resources.GetString("lblKGMax2.RootElement.Text")
         Me.lblKGMax2.RootElement.TextOrientation = CType(resources.GetObject("lblKGMax2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -2848,7 +2760,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblKGMax1.RootElement.AngleTransform = CType(resources.GetObject("lblKGMax1.RootElement.AngleTransform"), Single)
         Me.lblKGMax1.RootElement.FlipText = CType(resources.GetObject("lblKGMax1.RootElement.FlipText"), Boolean)
         Me.lblKGMax1.RootElement.Margin = CType(resources.GetObject("lblKGMax1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblKGMax1.RootElement.Padding = CType(resources.GetObject("lblKGMax1.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblKGMax1.RootElement.Text = resources.GetString("lblKGMax1.RootElement.Text")
         Me.lblKGMax1.RootElement.TextOrientation = CType(resources.GetObject("lblKGMax1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -2880,7 +2791,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadSeparator13.RootElement.AngleTransform = CType(resources.GetObject("RadSeparator13.RootElement.AngleTransform"), Single)
         Me.RadSeparator13.RootElement.FlipText = CType(resources.GetObject("RadSeparator13.RootElement.FlipText"), Boolean)
         Me.RadSeparator13.RootElement.Margin = CType(resources.GetObject("RadSeparator13.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadSeparator13.RootElement.Padding = CType(resources.GetObject("RadSeparator13.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadSeparator13.RootElement.Text = resources.GetString("RadSeparator13.RootElement.Text")
         Me.RadSeparator13.RootElement.TextOrientation = CType(resources.GetObject("RadSeparator13.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadSeparator13.TabStop = False
@@ -2899,7 +2809,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadSeparator14.RootElement.AngleTransform = CType(resources.GetObject("RadSeparator14.RootElement.AngleTransform"), Single)
         Me.RadSeparator14.RootElement.FlipText = CType(resources.GetObject("RadSeparator14.RootElement.FlipText"), Boolean)
         Me.RadSeparator14.RootElement.Margin = CType(resources.GetObject("RadSeparator14.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadSeparator14.RootElement.Padding = CType(resources.GetObject("RadSeparator14.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadSeparator14.RootElement.Text = resources.GetString("RadSeparator14.RootElement.Text")
         Me.RadSeparator14.RootElement.TextOrientation = CType(resources.GetObject("RadSeparator14.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadSeparator14.TabStop = False
@@ -2917,7 +2826,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadSeparator7.RootElement.AngleTransform = CType(resources.GetObject("RadSeparator7.RootElement.AngleTransform"), Single)
         Me.RadSeparator7.RootElement.FlipText = CType(resources.GetObject("RadSeparator7.RootElement.FlipText"), Boolean)
         Me.RadSeparator7.RootElement.Margin = CType(resources.GetObject("RadSeparator7.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadSeparator7.RootElement.Padding = CType(resources.GetObject("RadSeparator7.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadSeparator7.RootElement.Text = resources.GetString("RadSeparator7.RootElement.Text")
         Me.RadSeparator7.RootElement.TextOrientation = CType(resources.GetObject("RadSeparator7.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadSeparator7.TabStop = False
@@ -2935,7 +2843,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblWaageKlasse2.RootElement.AngleTransform = CType(resources.GetObject("lblWaageKlasse2.RootElement.AngleTransform"), Single)
         Me.lblWaageKlasse2.RootElement.FlipText = CType(resources.GetObject("lblWaageKlasse2.RootElement.FlipText"), Boolean)
         Me.lblWaageKlasse2.RootElement.Margin = CType(resources.GetObject("lblWaageKlasse2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblWaageKlasse2.RootElement.Padding = CType(resources.GetObject("lblWaageKlasse2.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblWaageKlasse2.RootElement.Text = resources.GetString("lblWaageKlasse2.RootElement.Text")
         Me.lblWaageKlasse2.RootElement.TextOrientation = CType(resources.GetObject("lblWaageKlasse2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -2953,7 +2860,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadSeparator4.RootElement.AngleTransform = CType(resources.GetObject("RadSeparator4.RootElement.AngleTransform"), Single)
         Me.RadSeparator4.RootElement.FlipText = CType(resources.GetObject("RadSeparator4.RootElement.FlipText"), Boolean)
         Me.RadSeparator4.RootElement.Margin = CType(resources.GetObject("RadSeparator4.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadSeparator4.RootElement.Padding = CType(resources.GetObject("RadSeparator4.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadSeparator4.RootElement.Text = resources.GetString("RadSeparator4.RootElement.Text")
         Me.RadSeparator4.RootElement.TextOrientation = CType(resources.GetObject("RadSeparator4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadSeparator4.TabStop = False
@@ -2972,7 +2878,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadSeparator5.RootElement.AngleTransform = CType(resources.GetObject("RadSeparator5.RootElement.AngleTransform"), Single)
         Me.RadSeparator5.RootElement.FlipText = CType(resources.GetObject("RadSeparator5.RootElement.FlipText"), Boolean)
         Me.RadSeparator5.RootElement.Margin = CType(resources.GetObject("RadSeparator5.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadSeparator5.RootElement.Padding = CType(resources.GetObject("RadSeparator5.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadSeparator5.RootElement.Text = resources.GetString("RadSeparator5.RootElement.Text")
         Me.RadSeparator5.RootElement.TextOrientation = CType(resources.GetObject("RadSeparator5.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadSeparator5.TabStop = False
@@ -2991,7 +2896,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadSeparator3.RootElement.AngleTransform = CType(resources.GetObject("RadSeparator3.RootElement.AngleTransform"), Single)
         Me.RadSeparator3.RootElement.FlipText = CType(resources.GetObject("RadSeparator3.RootElement.FlipText"), Boolean)
         Me.RadSeparator3.RootElement.Margin = CType(resources.GetObject("RadSeparator3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadSeparator3.RootElement.Padding = CType(resources.GetObject("RadSeparator3.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadSeparator3.RootElement.Text = resources.GetString("RadSeparator3.RootElement.Text")
         Me.RadSeparator3.RootElement.TextOrientation = CType(resources.GetObject("RadSeparator3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadSeparator3.TabStop = False
@@ -3010,7 +2914,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadSeparator2.RootElement.AngleTransform = CType(resources.GetObject("RadSeparator2.RootElement.AngleTransform"), Single)
         Me.RadSeparator2.RootElement.FlipText = CType(resources.GetObject("RadSeparator2.RootElement.FlipText"), Boolean)
         Me.RadSeparator2.RootElement.Margin = CType(resources.GetObject("RadSeparator2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadSeparator2.RootElement.Padding = CType(resources.GetObject("RadSeparator2.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadSeparator2.RootElement.Text = resources.GetString("RadSeparator2.RootElement.Text")
         Me.RadSeparator2.RootElement.TextOrientation = CType(resources.GetObject("RadSeparator2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadSeparator2.TabStop = False
@@ -3028,7 +2931,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadTextBoxControlWaageKabelquerschnitt.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlWaageKabelquerschnitt.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlWaageKabelquerschnitt.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlWaageKabelquerschnitt.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlWaageKabelquerschnitt.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlWaageKabelquerschnitt.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlWaageKabelquerschnitt.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlWaageKabelquerschnitt.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlWaageKabelquerschnitt.RootElement.Text = resources.GetString("RadTextBoxControlWaageKabelquerschnitt.RootElement.Text")
         Me.RadTextBoxControlWaageKabelquerschnitt.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlWaageKabelquerschnitt.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -3045,7 +2947,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadTextBoxControlWaageKabellaenge.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlWaageKabellaenge.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlWaageKabellaenge.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlWaageKabellaenge.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlWaageKabellaenge.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlWaageKabellaenge.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlWaageKabellaenge.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlWaageKabellaenge.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlWaageKabellaenge.RootElement.Text = resources.GetString("RadTextBoxControlWaageKabellaenge.RootElement.Text")
         Me.RadTextBoxControlWaageKabellaenge.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlWaageKabellaenge.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -3062,7 +2963,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel25.RootElement.AngleTransform = CType(resources.GetObject("RadLabel25.RootElement.AngleTransform"), Single)
         Me.RadLabel25.RootElement.FlipText = CType(resources.GetObject("RadLabel25.RootElement.FlipText"), Boolean)
         Me.RadLabel25.RootElement.Margin = CType(resources.GetObject("RadLabel25.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel25.RootElement.Padding = CType(resources.GetObject("RadLabel25.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel25.RootElement.Text = resources.GetString("RadLabel25.RootElement.Text")
         Me.RadLabel25.RootElement.TextOrientation = CType(resources.GetObject("RadLabel25.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -3079,7 +2979,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel26.RootElement.AngleTransform = CType(resources.GetObject("RadLabel26.RootElement.AngleTransform"), Single)
         Me.RadLabel26.RootElement.FlipText = CType(resources.GetObject("RadLabel26.RootElement.FlipText"), Boolean)
         Me.RadLabel26.RootElement.Margin = CType(resources.GetObject("RadLabel26.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel26.RootElement.Padding = CType(resources.GetObject("RadLabel26.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel26.RootElement.Text = resources.GetString("RadLabel26.RootElement.Text")
         Me.RadLabel26.RootElement.TextOrientation = CType(resources.GetObject("RadLabel26.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -3096,7 +2995,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblKabelquerschnitt.RootElement.AngleTransform = CType(resources.GetObject("lblKabelquerschnitt.RootElement.AngleTransform"), Single)
         Me.lblKabelquerschnitt.RootElement.FlipText = CType(resources.GetObject("lblKabelquerschnitt.RootElement.FlipText"), Boolean)
         Me.lblKabelquerschnitt.RootElement.Margin = CType(resources.GetObject("lblKabelquerschnitt.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblKabelquerschnitt.RootElement.Padding = CType(resources.GetObject("lblKabelquerschnitt.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblKabelquerschnitt.RootElement.Text = resources.GetString("lblKabelquerschnitt.RootElement.Text")
         Me.lblKabelquerschnitt.RootElement.TextOrientation = CType(resources.GetObject("lblKabelquerschnitt.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -3113,7 +3011,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblKabellaenge.RootElement.AngleTransform = CType(resources.GetObject("lblKabellaenge.RootElement.AngleTransform"), Single)
         Me.lblKabellaenge.RootElement.FlipText = CType(resources.GetObject("lblKabellaenge.RootElement.FlipText"), Boolean)
         Me.lblKabellaenge.RootElement.Margin = CType(resources.GetObject("lblKabellaenge.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblKabellaenge.RootElement.Padding = CType(resources.GetObject("lblKabellaenge.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblKabellaenge.RootElement.Text = resources.GetString("lblKabellaenge.RootElement.Text")
         Me.lblKabellaenge.RootElement.TextOrientation = CType(resources.GetObject("lblKabellaenge.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -3130,7 +3027,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblE3.RootElement.AngleTransform = CType(resources.GetObject("lblE3.RootElement.AngleTransform"), Single)
         Me.lblE3.RootElement.FlipText = CType(resources.GetObject("lblE3.RootElement.FlipText"), Boolean)
         Me.lblE3.RootElement.Margin = CType(resources.GetObject("lblE3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblE3.RootElement.Padding = CType(resources.GetObject("lblE3.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblE3.RootElement.Text = resources.GetString("lblE3.RootElement.Text")
         Me.lblE3.RootElement.TextOrientation = CType(resources.GetObject("lblE3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -3147,7 +3043,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblMax3.RootElement.AngleTransform = CType(resources.GetObject("lblMax3.RootElement.AngleTransform"), Single)
         Me.lblMax3.RootElement.FlipText = CType(resources.GetObject("lblMax3.RootElement.FlipText"), Boolean)
         Me.lblMax3.RootElement.Margin = CType(resources.GetObject("lblMax3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblMax3.RootElement.Padding = CType(resources.GetObject("lblMax3.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblMax3.RootElement.Text = resources.GetString("lblMax3.RootElement.Text")
         Me.lblMax3.RootElement.TextOrientation = CType(resources.GetObject("lblMax3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -3164,7 +3059,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblE2.RootElement.AngleTransform = CType(resources.GetObject("lblE2.RootElement.AngleTransform"), Single)
         Me.lblE2.RootElement.FlipText = CType(resources.GetObject("lblE2.RootElement.FlipText"), Boolean)
         Me.lblE2.RootElement.Margin = CType(resources.GetObject("lblE2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblE2.RootElement.Padding = CType(resources.GetObject("lblE2.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblE2.RootElement.Text = resources.GetString("lblE2.RootElement.Text")
         Me.lblE2.RootElement.TextOrientation = CType(resources.GetObject("lblE2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -3181,7 +3075,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblMax2.RootElement.AngleTransform = CType(resources.GetObject("lblMax2.RootElement.AngleTransform"), Single)
         Me.lblMax2.RootElement.FlipText = CType(resources.GetObject("lblMax2.RootElement.FlipText"), Boolean)
         Me.lblMax2.RootElement.Margin = CType(resources.GetObject("lblMax2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblMax2.RootElement.Padding = CType(resources.GetObject("lblMax2.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblMax2.RootElement.Text = resources.GetString("lblMax2.RootElement.Text")
         Me.lblMax2.RootElement.TextOrientation = CType(resources.GetObject("lblMax2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -3198,7 +3091,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblE1.RootElement.AngleTransform = CType(resources.GetObject("lblE1.RootElement.AngleTransform"), Single)
         Me.lblE1.RootElement.FlipText = CType(resources.GetObject("lblE1.RootElement.FlipText"), Boolean)
         Me.lblE1.RootElement.Margin = CType(resources.GetObject("lblE1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblE1.RootElement.Padding = CType(resources.GetObject("lblE1.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblE1.RootElement.Text = resources.GetString("lblE1.RootElement.Text")
         Me.lblE1.RootElement.TextOrientation = CType(resources.GetObject("lblE1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -3215,7 +3107,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblMax1.RootElement.AngleTransform = CType(resources.GetObject("lblMax1.RootElement.AngleTransform"), Single)
         Me.lblMax1.RootElement.FlipText = CType(resources.GetObject("lblMax1.RootElement.FlipText"), Boolean)
         Me.lblMax1.RootElement.Margin = CType(resources.GetObject("lblMax1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblMax1.RootElement.Padding = CType(resources.GetObject("lblMax1.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblMax1.RootElement.Text = resources.GetString("lblMax1.RootElement.Text")
         Me.lblMax1.RootElement.TextOrientation = CType(resources.GetObject("lblMax1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -3233,7 +3124,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadTextBoxControlWaageTemperaturbereichMax.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlWaageTemperaturbereichMax.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlWaageTemperaturbereichMax.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlWaageTemperaturbereichMax.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlWaageTemperaturbereichMax.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlWaageTemperaturbereichMax.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlWaageTemperaturbereichMax.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlWaageTemperaturbereichMax.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlWaageTemperaturbereichMax.RootElement.Text = resources.GetString("RadTextBoxControlWaageTemperaturbereichMax.RootElement.Text")
         Me.RadTextBoxControlWaageTemperaturbereichMax.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlWaageTemperaturbereichMax.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadTextBoxControlWaageTemperaturbereichMax.TabStop = False
@@ -3251,7 +3141,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel18.RootElement.AngleTransform = CType(resources.GetObject("RadLabel18.RootElement.AngleTransform"), Single)
         Me.RadLabel18.RootElement.FlipText = CType(resources.GetObject("RadLabel18.RootElement.FlipText"), Boolean)
         Me.RadLabel18.RootElement.Margin = CType(resources.GetObject("RadLabel18.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel18.RootElement.Padding = CType(resources.GetObject("RadLabel18.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel18.RootElement.Text = resources.GetString("RadLabel18.RootElement.Text")
         Me.RadLabel18.RootElement.TextOrientation = CType(resources.GetObject("RadLabel18.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -3268,7 +3157,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadSeparator1.RootElement.AngleTransform = CType(resources.GetObject("RadSeparator1.RootElement.AngleTransform"), Single)
         Me.RadSeparator1.RootElement.FlipText = CType(resources.GetObject("RadSeparator1.RootElement.FlipText"), Boolean)
         Me.RadSeparator1.RootElement.Margin = CType(resources.GetObject("RadSeparator1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadSeparator1.RootElement.Padding = CType(resources.GetObject("RadSeparator1.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadSeparator1.RootElement.Text = resources.GetString("RadSeparator1.RootElement.Text")
         Me.RadSeparator1.RootElement.TextOrientation = CType(resources.GetObject("RadSeparator1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadSeparator1.TabStop = False
@@ -3286,7 +3174,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadTextBoxControlWaageTotlast.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlWaageTotlast.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlWaageTotlast.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlWaageTotlast.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlWaageTotlast.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlWaageTotlast.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlWaageTotlast.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlWaageTotlast.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlWaageTotlast.RootElement.Text = resources.GetString("RadTextBoxControlWaageTotlast.RootElement.Text")
         Me.RadTextBoxControlWaageTotlast.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlWaageTotlast.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -3304,7 +3191,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadTextBoxControlWaageAdditiveTarahoechstlast.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlWaageAdditiveTarahoechstlast.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlWaageAdditiveTarahoechstlast.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlWaageAdditiveTarahoechstlast.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlWaageAdditiveTarahoechstlast.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlWaageAdditiveTarahoechstlast.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlWaageAdditiveTarahoechstlast.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlWaageAdditiveTarahoechstlast.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlWaageAdditiveTarahoechstlast.RootElement.Text = resources.GetString("RadTextBoxControlWaageAdditiveTarahoechstlast.RootElement.Text")
         Me.RadTextBoxControlWaageAdditiveTarahoechstlast.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlWaageAdditiveTarahoechstlast.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadTextBoxControlWaageAdditiveTarahoechstlast.TabStop = False
@@ -3323,7 +3209,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadTextBoxControlWaageTemperaturbereichMin.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlWaageTemperaturbereichMin.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlWaageTemperaturbereichMin.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlWaageTemperaturbereichMin.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlWaageTemperaturbereichMin.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlWaageTemperaturbereichMin.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlWaageTemperaturbereichMin.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlWaageTemperaturbereichMin.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlWaageTemperaturbereichMin.RootElement.Text = resources.GetString("RadTextBoxControlWaageTemperaturbereichMin.RootElement.Text")
         Me.RadTextBoxControlWaageTemperaturbereichMin.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlWaageTemperaturbereichMin.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadTextBoxControlWaageTemperaturbereichMin.TabStop = False
@@ -3341,7 +3226,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadTextBoxControlWaageEcklastzuschlag.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlWaageEcklastzuschlag.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlWaageEcklastzuschlag.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlWaageEcklastzuschlag.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlWaageEcklastzuschlag.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlWaageEcklastzuschlag.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlWaageEcklastzuschlag.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlWaageEcklastzuschlag.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlWaageEcklastzuschlag.RootElement.Text = resources.GetString("RadTextBoxControlWaageEcklastzuschlag.RootElement.Text")
         Me.RadTextBoxControlWaageEcklastzuschlag.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlWaageEcklastzuschlag.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -3358,7 +3242,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadTextBoxControlEinschaltnullstellbereich.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlEinschaltnullstellbereich.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlEinschaltnullstellbereich.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlEinschaltnullstellbereich.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlEinschaltnullstellbereich.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlEinschaltnullstellbereich.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlEinschaltnullstellbereich.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlEinschaltnullstellbereich.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlEinschaltnullstellbereich.RootElement.Text = resources.GetString("RadTextBoxControlEinschaltnullstellbereich.RootElement.Text")
         Me.RadTextBoxControlEinschaltnullstellbereich.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlEinschaltnullstellbereich.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -3375,7 +3258,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadTextBoxControlWaageAnzahlWaegezellen.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlWaageAnzahlWaegezellen.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlWaageAnzahlWaegezellen.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlWaageAnzahlWaegezellen.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlWaageAnzahlWaegezellen.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlWaageAnzahlWaegezellen.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlWaageAnzahlWaegezellen.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlWaageAnzahlWaegezellen.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlWaageAnzahlWaegezellen.RootElement.Text = resources.GetString("RadTextBoxControlWaageAnzahlWaegezellen.RootElement.Text")
         Me.RadTextBoxControlWaageAnzahlWaegezellen.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlWaageAnzahlWaegezellen.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -3392,7 +3274,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadTextBoxControlWaageUebersetzungsverhaeltnis.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlWaageUebersetzungsverhaeltnis.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlWaageUebersetzungsverhaeltnis.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlWaageUebersetzungsverhaeltnis.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlWaageUebersetzungsverhaeltnis.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlWaageUebersetzungsverhaeltnis.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlWaageUebersetzungsverhaeltnis.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlWaageUebersetzungsverhaeltnis.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlWaageUebersetzungsverhaeltnis.RootElement.Text = resources.GetString("RadTextBoxControlWaageUebersetzungsverhaeltnis.RootElement.Text")
         Me.RadTextBoxControlWaageUebersetzungsverhaeltnis.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlWaageUebersetzungsverhaeltnis.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -3409,7 +3290,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel11.RootElement.AngleTransform = CType(resources.GetObject("RadLabel11.RootElement.AngleTransform"), Single)
         Me.RadLabel11.RootElement.FlipText = CType(resources.GetObject("RadLabel11.RootElement.FlipText"), Boolean)
         Me.RadLabel11.RootElement.Margin = CType(resources.GetObject("RadLabel11.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel11.RootElement.Padding = CType(resources.GetObject("RadLabel11.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel11.RootElement.Text = resources.GetString("RadLabel11.RootElement.Text")
         Me.RadLabel11.RootElement.TextOrientation = CType(resources.GetObject("RadLabel11.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -3426,7 +3306,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel12.RootElement.AngleTransform = CType(resources.GetObject("RadLabel12.RootElement.AngleTransform"), Single)
         Me.RadLabel12.RootElement.FlipText = CType(resources.GetObject("RadLabel12.RootElement.FlipText"), Boolean)
         Me.RadLabel12.RootElement.Margin = CType(resources.GetObject("RadLabel12.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel12.RootElement.Padding = CType(resources.GetObject("RadLabel12.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel12.RootElement.Text = resources.GetString("RadLabel12.RootElement.Text")
         Me.RadLabel12.RootElement.TextOrientation = CType(resources.GetObject("RadLabel12.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -3443,7 +3322,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel13.RootElement.AngleTransform = CType(resources.GetObject("RadLabel13.RootElement.AngleTransform"), Single)
         Me.RadLabel13.RootElement.FlipText = CType(resources.GetObject("RadLabel13.RootElement.FlipText"), Boolean)
         Me.RadLabel13.RootElement.Margin = CType(resources.GetObject("RadLabel13.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel13.RootElement.Padding = CType(resources.GetObject("RadLabel13.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel13.RootElement.Text = resources.GetString("RadLabel13.RootElement.Text")
         Me.RadLabel13.RootElement.TextOrientation = CType(resources.GetObject("RadLabel13.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -3460,7 +3338,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel14.RootElement.AngleTransform = CType(resources.GetObject("RadLabel14.RootElement.AngleTransform"), Single)
         Me.RadLabel14.RootElement.FlipText = CType(resources.GetObject("RadLabel14.RootElement.FlipText"), Boolean)
         Me.RadLabel14.RootElement.Margin = CType(resources.GetObject("RadLabel14.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel14.RootElement.Padding = CType(resources.GetObject("RadLabel14.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel14.RootElement.Text = resources.GetString("RadLabel14.RootElement.Text")
         Me.RadLabel14.RootElement.TextOrientation = CType(resources.GetObject("RadLabel14.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -3477,7 +3354,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel15.RootElement.AngleTransform = CType(resources.GetObject("RadLabel15.RootElement.AngleTransform"), Single)
         Me.RadLabel15.RootElement.FlipText = CType(resources.GetObject("RadLabel15.RootElement.FlipText"), Boolean)
         Me.RadLabel15.RootElement.Margin = CType(resources.GetObject("RadLabel15.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel15.RootElement.Padding = CType(resources.GetObject("RadLabel15.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel15.RootElement.Text = resources.GetString("RadLabel15.RootElement.Text")
         Me.RadLabel15.RootElement.TextOrientation = CType(resources.GetObject("RadLabel15.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -3494,7 +3370,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel16.RootElement.AngleTransform = CType(resources.GetObject("RadLabel16.RootElement.AngleTransform"), Single)
         Me.RadLabel16.RootElement.FlipText = CType(resources.GetObject("RadLabel16.RootElement.FlipText"), Boolean)
         Me.RadLabel16.RootElement.Margin = CType(resources.GetObject("RadLabel16.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel16.RootElement.Padding = CType(resources.GetObject("RadLabel16.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel16.RootElement.Text = resources.GetString("RadLabel16.RootElement.Text")
         Me.RadLabel16.RootElement.TextOrientation = CType(resources.GetObject("RadLabel16.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -3511,7 +3386,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadLabel17.RootElement.AngleTransform = CType(resources.GetObject("RadLabel17.RootElement.AngleTransform"), Single)
         Me.RadLabel17.RootElement.FlipText = CType(resources.GetObject("RadLabel17.RootElement.FlipText"), Boolean)
         Me.RadLabel17.RootElement.Margin = CType(resources.GetObject("RadLabel17.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel17.RootElement.Padding = CType(resources.GetObject("RadLabel17.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel17.RootElement.Text = resources.GetString("RadLabel17.RootElement.Text")
         Me.RadLabel17.RootElement.TextOrientation = CType(resources.GetObject("RadLabel17.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -3528,7 +3402,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblGrenzenTemp.RootElement.AngleTransform = CType(resources.GetObject("lblGrenzenTemp.RootElement.AngleTransform"), Single)
         Me.lblGrenzenTemp.RootElement.FlipText = CType(resources.GetObject("lblGrenzenTemp.RootElement.FlipText"), Boolean)
         Me.lblGrenzenTemp.RootElement.Margin = CType(resources.GetObject("lblGrenzenTemp.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblGrenzenTemp.RootElement.Padding = CType(resources.GetObject("lblGrenzenTemp.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblGrenzenTemp.RootElement.Text = resources.GetString("lblGrenzenTemp.RootElement.Text")
         Me.lblGrenzenTemp.RootElement.TextOrientation = CType(resources.GetObject("lblGrenzenTemp.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -3545,7 +3418,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lbladditiveTarahoechstlast.RootElement.AngleTransform = CType(resources.GetObject("lbladditiveTarahoechstlast.RootElement.AngleTransform"), Single)
         Me.lbladditiveTarahoechstlast.RootElement.FlipText = CType(resources.GetObject("lbladditiveTarahoechstlast.RootElement.FlipText"), Boolean)
         Me.lbladditiveTarahoechstlast.RootElement.Margin = CType(resources.GetObject("lbladditiveTarahoechstlast.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lbladditiveTarahoechstlast.RootElement.Padding = CType(resources.GetObject("lbladditiveTarahoechstlast.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lbladditiveTarahoechstlast.RootElement.Text = resources.GetString("lbladditiveTarahoechstlast.RootElement.Text")
         Me.lbladditiveTarahoechstlast.RootElement.TextOrientation = CType(resources.GetObject("lbladditiveTarahoechstlast.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -3562,7 +3434,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lbltotlast.RootElement.AngleTransform = CType(resources.GetObject("lbltotlast.RootElement.AngleTransform"), Single)
         Me.lbltotlast.RootElement.FlipText = CType(resources.GetObject("lbltotlast.RootElement.FlipText"), Boolean)
         Me.lbltotlast.RootElement.Margin = CType(resources.GetObject("lbltotlast.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lbltotlast.RootElement.Padding = CType(resources.GetObject("lbltotlast.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lbltotlast.RootElement.Text = resources.GetString("lbltotlast.RootElement.Text")
         Me.lbltotlast.RootElement.TextOrientation = CType(resources.GetObject("lbltotlast.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -3579,7 +3450,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblEcklastzuschalg.RootElement.AngleTransform = CType(resources.GetObject("lblEcklastzuschalg.RootElement.AngleTransform"), Single)
         Me.lblEcklastzuschalg.RootElement.FlipText = CType(resources.GetObject("lblEcklastzuschalg.RootElement.FlipText"), Boolean)
         Me.lblEcklastzuschalg.RootElement.Margin = CType(resources.GetObject("lblEcklastzuschalg.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblEcklastzuschalg.RootElement.Padding = CType(resources.GetObject("lblEcklastzuschalg.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblEcklastzuschalg.RootElement.Text = resources.GetString("lblEcklastzuschalg.RootElement.Text")
         Me.lblEcklastzuschalg.RootElement.TextOrientation = CType(resources.GetObject("lblEcklastzuschalg.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -3596,7 +3466,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblEinschaltnullbereich.RootElement.AngleTransform = CType(resources.GetObject("lblEinschaltnullbereich.RootElement.AngleTransform"), Single)
         Me.lblEinschaltnullbereich.RootElement.FlipText = CType(resources.GetObject("lblEinschaltnullbereich.RootElement.FlipText"), Boolean)
         Me.lblEinschaltnullbereich.RootElement.Margin = CType(resources.GetObject("lblEinschaltnullbereich.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblEinschaltnullbereich.RootElement.Padding = CType(resources.GetObject("lblEinschaltnullbereich.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblEinschaltnullbereich.RootElement.Text = resources.GetString("lblEinschaltnullbereich.RootElement.Text")
         Me.lblEinschaltnullbereich.RootElement.TextOrientation = CType(resources.GetObject("lblEinschaltnullbereich.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -3613,7 +3482,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblAnzWaeegezellen.RootElement.AngleTransform = CType(resources.GetObject("lblAnzWaeegezellen.RootElement.AngleTransform"), Single)
         Me.lblAnzWaeegezellen.RootElement.FlipText = CType(resources.GetObject("lblAnzWaeegezellen.RootElement.FlipText"), Boolean)
         Me.lblAnzWaeegezellen.RootElement.Margin = CType(resources.GetObject("lblAnzWaeegezellen.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblAnzWaeegezellen.RootElement.Padding = CType(resources.GetObject("lblAnzWaeegezellen.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblAnzWaeegezellen.RootElement.Text = resources.GetString("lblAnzWaeegezellen.RootElement.Text")
         Me.lblAnzWaeegezellen.RootElement.TextOrientation = CType(resources.GetObject("lblAnzWaeegezellen.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -3630,7 +3498,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblUebersetzung.RootElement.AngleTransform = CType(resources.GetObject("lblUebersetzung.RootElement.AngleTransform"), Single)
         Me.lblUebersetzung.RootElement.FlipText = CType(resources.GetObject("lblUebersetzung.RootElement.FlipText"), Boolean)
         Me.lblUebersetzung.RootElement.Margin = CType(resources.GetObject("lblUebersetzung.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblUebersetzung.RootElement.Padding = CType(resources.GetObject("lblUebersetzung.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblUebersetzung.RootElement.Text = resources.GetString("lblUebersetzung.RootElement.Text")
         Me.lblUebersetzung.RootElement.TextOrientation = CType(resources.GetObject("lblUebersetzung.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -3647,7 +3514,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadTextBoxControlWaageEichwert3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlWaageEichwert3.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlWaageEichwert3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlWaageEichwert3.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlWaageEichwert3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlWaageEichwert3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlWaageEichwert3.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlWaageEichwert3.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlWaageEichwert3.RootElement.Text = resources.GetString("RadTextBoxControlWaageEichwert3.RootElement.Text")
         Me.RadTextBoxControlWaageEichwert3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlWaageEichwert3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -3664,7 +3530,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadTextBoxControlWaageHoechstlast3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlWaageHoechstlast3.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlWaageHoechstlast3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlWaageHoechstlast3.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlWaageHoechstlast3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlWaageHoechstlast3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlWaageHoechstlast3.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlWaageHoechstlast3.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlWaageHoechstlast3.RootElement.Text = resources.GetString("RadTextBoxControlWaageHoechstlast3.RootElement.Text")
         Me.RadTextBoxControlWaageHoechstlast3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlWaageHoechstlast3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -3681,7 +3546,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadTextBoxControlWaageEichwert2.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlWaageEichwert2.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlWaageEichwert2.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlWaageEichwert2.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlWaageEichwert2.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlWaageEichwert2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlWaageEichwert2.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlWaageEichwert2.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlWaageEichwert2.RootElement.Text = resources.GetString("RadTextBoxControlWaageEichwert2.RootElement.Text")
         Me.RadTextBoxControlWaageEichwert2.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlWaageEichwert2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -3698,7 +3562,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadTextBoxControlWaageHoechstlast2.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlWaageHoechstlast2.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlWaageHoechstlast2.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlWaageHoechstlast2.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlWaageHoechstlast2.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlWaageHoechstlast2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlWaageHoechstlast2.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlWaageHoechstlast2.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlWaageHoechstlast2.RootElement.Text = resources.GetString("RadTextBoxControlWaageHoechstlast2.RootElement.Text")
         Me.RadTextBoxControlWaageHoechstlast2.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlWaageHoechstlast2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -3715,7 +3578,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadTextBoxControlWaageEichwert1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlWaageEichwert1.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlWaageEichwert1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlWaageEichwert1.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlWaageEichwert1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlWaageEichwert1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlWaageEichwert1.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlWaageEichwert1.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlWaageEichwert1.RootElement.Text = resources.GetString("RadTextBoxControlWaageEichwert1.RootElement.Text")
         Me.RadTextBoxControlWaageEichwert1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlWaageEichwert1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -3732,7 +3594,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadTextBoxControlWaageHoechstlast1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlWaageHoechstlast1.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlWaageHoechstlast1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlWaageHoechstlast1.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlWaageHoechstlast1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlWaageHoechstlast1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlWaageHoechstlast1.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlWaageHoechstlast1.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlWaageHoechstlast1.RootElement.Text = resources.GetString("RadTextBoxControlWaageHoechstlast1.RootElement.Text")
         Me.RadTextBoxControlWaageHoechstlast1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlWaageHoechstlast1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -3749,7 +3610,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblEichwert.RootElement.AngleTransform = CType(resources.GetObject("lblEichwert.RootElement.AngleTransform"), Single)
         Me.lblEichwert.RootElement.FlipText = CType(resources.GetObject("lblEichwert.RootElement.FlipText"), Boolean)
         Me.lblEichwert.RootElement.Margin = CType(resources.GetObject("lblEichwert.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblEichwert.RootElement.Padding = CType(resources.GetObject("lblEichwert.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblEichwert.RootElement.Text = resources.GetString("lblEichwert.RootElement.Text")
         Me.lblEichwert.RootElement.TextOrientation = CType(resources.GetObject("lblEichwert.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -3766,7 +3626,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblWIMaxCap.RootElement.AngleTransform = CType(resources.GetObject("lblWIMaxCap.RootElement.AngleTransform"), Single)
         Me.lblWIMaxCap.RootElement.FlipText = CType(resources.GetObject("lblWIMaxCap.RootElement.FlipText"), Boolean)
         Me.lblWIMaxCap.RootElement.Margin = CType(resources.GetObject("lblWIMaxCap.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblWIMaxCap.RootElement.Padding = CType(resources.GetObject("lblWIMaxCap.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblWIMaxCap.RootElement.Text = resources.GetString("lblWIMaxCap.RootElement.Text")
         Me.lblWIMaxCap.RootElement.TextOrientation = CType(resources.GetObject("lblWIMaxCap.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -3784,7 +3643,6 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.RadTextBoxControlWaageKlasse.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlWaageKlasse.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlWaageKlasse.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlWaageKlasse.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlWaageKlasse.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlWaageKlasse.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlWaageKlasse.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlWaageKlasse.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlWaageKlasse.RootElement.Text = resources.GetString("RadTextBoxControlWaageKlasse.RootElement.Text")
         Me.RadTextBoxControlWaageKlasse.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlWaageKlasse.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadTextBoxControlWaageKlasse.TabStop = False
@@ -3802,21 +3660,62 @@ Partial Class ucoKompatiblititaetsnachweis
         Me.lblWIKlasse.RootElement.AngleTransform = CType(resources.GetObject("lblWIKlasse.RootElement.AngleTransform"), Single)
         Me.lblWIKlasse.RootElement.FlipText = CType(resources.GetObject("lblWIKlasse.RootElement.FlipText"), Boolean)
         Me.lblWIKlasse.RootElement.Margin = CType(resources.GetObject("lblWIKlasse.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblWIKlasse.RootElement.Padding = CType(resources.GetObject("lblWIKlasse.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblWIKlasse.RootElement.Text = resources.GetString("lblWIKlasse.RootElement.Text")
         Me.lblWIKlasse.RootElement.TextOrientation = CType(resources.GetObject("lblWIKlasse.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
-        'lblPflichtfeld1
+        'Label2
         '
-        resources.ApplyResources(Me.lblPflichtfeld1, "lblPflichtfeld1")
-        Me.lblPflichtfeld1.ForeColor = System.Drawing.Color.Red
-        Me.lblPflichtfeld1.Name = "lblPflichtfeld1"
+        resources.ApplyResources(Me.Label2, "Label2")
+        Me.Label2.ForeColor = System.Drawing.Color.Red
+        Me.Label2.Name = "Label2"
         '
-        'Label1
+        'Label3
         '
-        resources.ApplyResources(Me.Label1, "Label1")
-        Me.Label1.ForeColor = System.Drawing.Color.Red
-        Me.Label1.Name = "Label1"
+        resources.ApplyResources(Me.Label3, "Label3")
+        Me.Label3.ForeColor = System.Drawing.Color.Red
+        Me.Label3.Name = "Label3"
+        '
+        'Label4
+        '
+        resources.ApplyResources(Me.Label4, "Label4")
+        Me.Label4.ForeColor = System.Drawing.Color.Red
+        Me.Label4.Name = "Label4"
+        '
+        'Label5
+        '
+        resources.ApplyResources(Me.Label5, "Label5")
+        Me.Label5.ForeColor = System.Drawing.Color.Red
+        Me.Label5.Name = "Label5"
+        '
+        'Label7
+        '
+        resources.ApplyResources(Me.Label7, "Label7")
+        Me.Label7.ForeColor = System.Drawing.Color.Red
+        Me.Label7.Name = "Label7"
+        '
+        'Label6
+        '
+        resources.ApplyResources(Me.Label6, "Label6")
+        Me.Label6.ForeColor = System.Drawing.Color.Red
+        Me.Label6.Name = "Label6"
+        '
+        'Label9
+        '
+        resources.ApplyResources(Me.Label9, "Label9")
+        Me.Label9.ForeColor = System.Drawing.Color.Red
+        Me.Label9.Name = "Label9"
+        '
+        'Label8
+        '
+        resources.ApplyResources(Me.Label8, "Label8")
+        Me.Label8.ForeColor = System.Drawing.Color.Red
+        Me.Label8.Name = "Label8"
+        '
+        'Label10
+        '
+        resources.ApplyResources(Me.Label10, "Label10")
+        Me.Label10.ForeColor = System.Drawing.Color.Red
+        Me.Label10.Name = "Label10"
         '
         'ucoKompatiblititaetsnachweis
         '
@@ -4231,5 +4130,14 @@ Partial Class ucoKompatiblititaetsnachweis
     Friend WithEvents PictureBox9 As System.Windows.Forms.PictureBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents lblPflichtfeld1 As System.Windows.Forms.Label
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 
 End Class

@@ -151,88 +151,14 @@ Public Class ucoBeschaffenheitspruefung
 
 #Region "Overrides"
 
-    'Speicherroutine
-    Protected Friend Overrides Sub SaveNeeded(ByVal UserControl As UserControl)
-        If Me.Equals(UserControl) Then
-            If DialogModus = enuDialogModus.lesend Then
-                If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.AuswahlKonformitätsverfahren Then
-                    objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.AuswahlKonformitätsverfahren
-                End If
-                ParentFormular.CurrentEichprozess = objEichprozess
-                Exit Sub
-            End If
-            If DialogModus = enuDialogModus.korrigierend Then
-                UpdateObject()
-                If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.AuswahlKonformitätsverfahren Then
-                    objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.AuswahlKonformitätsverfahren
-                End If
-                ParentFormular.CurrentEichprozess = objEichprozess
-                Exit Sub
-            End If
-
-
-            If ValidateControls() Then
-
-
-                'neuen Context aufbauen
-                Using Context As New EichsoftwareClientdatabaseEntities1
-                    'prüfen ob CREATE oder UPDATE durchgeführt werden muss
-                    If _ObjBeschaffenheitspruefung.ID = 0 Then
-                        _ObjBeschaffenheitspruefung = Context.Beschaffenheitspruefung.Create
-                        Context.Beschaffenheitspruefung.Add(_ObjBeschaffenheitspruefung)
-                        Context.SaveChanges()
-                    End If
-
-                    If _ObjBeschaffenheitspruefung.ID <> 0 Then
-                        'prüfen ob das Objekt anhand der ID gefunden werden kann
-                        Dim dbObjBeschaffenheitspruefung As Beschaffenheitspruefung = Context.Beschaffenheitspruefung.FirstOrDefault(Function(value) value.ID = _ObjBeschaffenheitspruefung.ID)
-                        If Not dbObjBeschaffenheitspruefung Is Nothing Then
-                            'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
-                            _ObjBeschaffenheitspruefung = dbObjBeschaffenheitspruefung
-                            'Füllt das Objekt mit den Werten aus den Steuerlementen
-                            UpdateObject()
-
-                            Dim dbobjEichprozess As Eichprozess = Context.Eichprozess.FirstOrDefault(Function(value) value.Vorgangsnummer = objEichprozess.Vorgangsnummer)
-                            If Not dbobjEichprozess Is Nothing Then
-                                'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
-                                objEichprozess = dbobjEichprozess
-                                objEichprozess.FK_Beschaffenheitspruefung = _ObjBeschaffenheitspruefung.ID
-
-                            
-                                'neuen Status zuweisen
-                                If AktuellerStatusDirty = False Then
-                                    ' Wenn der aktuelle Status kleiner ist als der für die AuswahlKonformitätsverfahren, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
-                                    If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.AuswahlKonformitätsverfahren Then
-                                        objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.AuswahlKonformitätsverfahren
-                                    End If
-                                ElseIf AktuellerStatusDirty = True Then
-                                    objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.AuswahlKonformitätsverfahren
-                                    AktuellerStatusDirty = False
-                                End If
-
-
-
-                                'Speichern in Datenbank
-                                Context.SaveChanges()
-                            End If
-
-
-                        End If
-
-                    End If
-                End Using
-                ParentFormular.CurrentEichprozess = objEichprozess
-            End If
-        End If
-
-    End Sub
+  
 
     ''' <summary>
     ''' aktualisieren der Oberfläche wenn nötig
     ''' </summary>
     ''' <param name="UserControl"></param>
     ''' <remarks></remarks>
-    Protected Friend Overrides Sub UpdateNeeded(UserControl As UserControl)
+    Protected Overrides Sub UpdateNeeded(UserControl As UserControl)
         If Me.Equals(UserControl) Then
             MyBase.UpdateNeeded(UserControl)
             'Hilfetext setzen
@@ -276,7 +202,7 @@ Public Class ucoBeschaffenheitspruefung
         'prüfen ob eine neue WZ angelegt wurde (über button und neuem Dialog vermutlich)
     End Function
 
-    Protected Friend Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
+    Protected Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
         If Me.Equals(UserControl) = False Then Exit Sub
 
         MyBase.LokalisierungNeeded(UserControl)
@@ -334,6 +260,193 @@ Public Class ucoBeschaffenheitspruefung
 
     End Sub
  
+    'Speicherroutine
+    Protected Overrides Sub SaveNeeded(ByVal UserControl As UserControl)
+        If Me.Equals(UserControl) Then
+            If DialogModus = enuDialogModus.lesend Then
+                If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.AuswahlKonformitätsverfahren Then
+                    objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.AuswahlKonformitätsverfahren
+                End If
+                ParentFormular.CurrentEichprozess = objEichprozess
+                Exit Sub
+            End If
+            If DialogModus = enuDialogModus.korrigierend Then
+                UpdateObject()
+                If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.AuswahlKonformitätsverfahren Then
+                    objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.AuswahlKonformitätsverfahren
+                End If
+                ParentFormular.CurrentEichprozess = objEichprozess
+                Exit Sub
+            End If
+
+
+            If ValidateControls() Then
+
+
+                'neuen Context aufbauen
+                Using Context As New EichsoftwareClientdatabaseEntities1
+                    'prüfen ob CREATE oder UPDATE durchgeführt werden muss
+                    If _ObjBeschaffenheitspruefung.ID = 0 Then
+                        _ObjBeschaffenheitspruefung = Context.Beschaffenheitspruefung.Create
+                        Context.Beschaffenheitspruefung.Add(_ObjBeschaffenheitspruefung)
+                        Context.SaveChanges()
+                    End If
+
+                    If _ObjBeschaffenheitspruefung.ID <> 0 Then
+                        'prüfen ob das Objekt anhand der ID gefunden werden kann
+                        Dim dbObjBeschaffenheitspruefung As Beschaffenheitspruefung = Context.Beschaffenheitspruefung.FirstOrDefault(Function(value) value.ID = _ObjBeschaffenheitspruefung.ID)
+                        If Not dbObjBeschaffenheitspruefung Is Nothing Then
+                            'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
+                            _ObjBeschaffenheitspruefung = dbObjBeschaffenheitspruefung
+                            'Füllt das Objekt mit den Werten aus den Steuerlementen
+                            UpdateObject()
+
+                            Dim dbobjEichprozess As Eichprozess = Context.Eichprozess.FirstOrDefault(Function(value) value.Vorgangsnummer = objEichprozess.Vorgangsnummer)
+                            If Not dbobjEichprozess Is Nothing Then
+                                'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
+                                objEichprozess = dbobjEichprozess
+                                objEichprozess.FK_Beschaffenheitspruefung = _ObjBeschaffenheitspruefung.ID
+
+
+                                'neuen Status zuweisen
+                                If AktuellerStatusDirty = False Then
+                                    ' Wenn der aktuelle Status kleiner ist als der für die AuswahlKonformitätsverfahren, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
+                                    If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.AuswahlKonformitätsverfahren Then
+                                        objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.AuswahlKonformitätsverfahren
+                                    End If
+                                ElseIf AktuellerStatusDirty = True Then
+                                    objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.AuswahlKonformitätsverfahren
+                                    AktuellerStatusDirty = False
+                                End If
+
+
+
+                                'Speichern in Datenbank
+                                Context.SaveChanges()
+                            End If
+
+
+                        End If
+
+                    End If
+                End Using
+                ParentFormular.CurrentEichprozess = objEichprozess
+            End If
+        End If
+
+    End Sub
+    Protected Overrides Sub SaveWithoutValidationNeeded(usercontrol As UserControl)
+        If Me.Equals(usercontrol) Then
+            MyBase.SaveWithoutValidationNeeded(usercontrol)
+            If DialogModus = enuDialogModus.lesend Then
+                UpdateObject()
+                ParentFormular.CurrentEichprozess = objEichprozess
+                Exit Sub
+            End If
+            'neuen Context aufbauen
+            Using Context As New EichsoftwareClientdatabaseEntities1
+                'prüfen ob CREATE oder UPDATE durchgeführt werden muss
+                If _ObjBeschaffenheitspruefung.ID = 0 Then
+                    _ObjBeschaffenheitspruefung = Context.Beschaffenheitspruefung.Create
+                    Context.Beschaffenheitspruefung.Add(_ObjBeschaffenheitspruefung)
+                    Context.SaveChanges()
+                End If
+
+                If _ObjBeschaffenheitspruefung.ID <> 0 Then
+                    'prüfen ob das Objekt anhand der ID gefunden werden kann
+                    Dim dbObjBeschaffenheitspruefung As Beschaffenheitspruefung = Context.Beschaffenheitspruefung.FirstOrDefault(Function(value) value.ID = _ObjBeschaffenheitspruefung.ID)
+                    If Not dbObjBeschaffenheitspruefung Is Nothing Then
+                        'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
+                        _ObjBeschaffenheitspruefung = dbObjBeschaffenheitspruefung
+                        'Füllt das Objekt mit den Werten aus den Steuerlementen
+                        UpdateObject()
+
+                        Dim dbobjEichprozess As Eichprozess = Context.Eichprozess.FirstOrDefault(Function(value) value.Vorgangsnummer = objEichprozess.Vorgangsnummer)
+                        If Not dbobjEichprozess Is Nothing Then
+                            'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
+                            objEichprozess = dbobjEichprozess
+                            objEichprozess.FK_Beschaffenheitspruefung = _ObjBeschaffenheitspruefung.ID
+
+                            'Speichern in Datenbank
+                            Context.SaveChanges()
+                        End If
+
+
+                    End If
+
+                End If
+            End Using
+
+            ParentFormular.CurrentEichprozess = objEichprozess
+        End If
+    End Sub
+
+    'Entsperrroutine
+    Protected Overrides Sub EntsperrungNeeded()
+        MyBase.EntsperrungNeeded()
+
+        'Hiermit wird ein lesender Vorgang wieder entsperrt. 
+        For Each Control In Me.RadScrollablePanel1.PanelContainer.Controls
+            Try
+                Control.readonly = Not Control.readonly
+            Catch ex As Exception
+                Try
+                    Control.isreadonly = Not Control.isReadonly
+                Catch ex2 As Exception
+                    Try
+                        Control.enabled = Not Control.enabled
+                    Catch ex3 As Exception
+                    End Try
+                End Try
+            End Try
+        Next
+
+        'ändern des Moduses
+        DialogModus = enuDialogModus.korrigierend
+        ParentFormular.DialogModus = FrmMainContainer.enuDialogModus.korrigierend
+    End Sub
+
+    Protected Overrides Sub VersendenNeeded(TargetUserControl As UserControl)
+
+        If Me.Equals(TargetUserControl) Then
+            MyBase.VersendenNeeded(TargetUserControl)
+
+            Using dbcontext As New EichsoftwareClientdatabaseEntities1
+                objEichprozess = (From a In dbcontext.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Beschaffenheitspruefung").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
+
+                Dim objServerEichprozess As New EichsoftwareWebservice.ServerEichprozess
+                'auf fehlerhaft Status setzen
+                objEichprozess.FK_Bearbeitungsstatus = 2
+                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Eichbevollmächtigter sich den DS von Anfang angucken muss
+                UpdateObject()
+
+                'erzeuegn eines Server Objektes auf basis des aktuellen DS
+                objServerEichprozess = clsClientServerConversionFunctions.CopyObjectProperties(objServerEichprozess, objEichprozess)
+                Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
+                    Try
+                        Webcontext.Open()
+                    Catch ex As Exception
+                        MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        Exit Sub
+                    End Try
+
+                    Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
+
+                    Try
+                        'add prüft anhand der Vorgangsnummer automatisch ob ein neuer Prozess angelegt, oder ein vorhandener aktualisiert wird
+                        Webcontext.AddEichprozess(objLiz.HEKennung, objLiz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+
+                        'schließen des dialoges
+                        ParentFormular.Close()
+                    Catch ex As Exception
+                        MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        ' Status zurück setzen
+                        Exit Sub
+                    End Try
+                End Using
+            End Using
+        End If
+    End Sub
 
 #End Region
 
@@ -377,72 +490,6 @@ Public Class ucoBeschaffenheitspruefung
         End If
     End Sub
 
-    'Entsperrroutine
-    Protected Friend Overrides Sub EntsperrungNeeded()
-        MyBase.EntsperrungNeeded()
-
-        'Hiermit wird ein lesender Vorgang wieder entsperrt. 
-        For Each Control In Me.RadScrollablePanel1.PanelContainer.Controls
-            Try
-                Control.readonly = Not Control.readonly
-            Catch ex As Exception
-                Try
-                    Control.isreadonly = Not Control.isReadonly
-                Catch ex2 As Exception
-                    Try
-                        Control.enabled = Not Control.enabled
-                    Catch ex3 As Exception
-                    End Try
-                End Try
-            End Try
-        Next
-
-        'ändern des Moduses
-        DialogModus = enuDialogModus.korrigierend
-        ParentFormular.DialogModus = FrmMainContainer.enuDialogModus.korrigierend
-    End Sub
-
-    Protected Friend Overrides Sub VersendenNeeded(TargetUserControl As UserControl)
-     
-        If Me.Equals(TargetUserControl) Then
-            MyBase.VersendenNeeded(TargetUserControl)
-
-            Using dbcontext As New EichsoftwareClientdatabaseEntities1
-                objEichprozess = (From a In dbcontext.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Beschaffenheitspruefung").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
-
-                Dim objServerEichprozess As New EichsoftwareWebservice.ServerEichprozess
-                'auf fehlerhaft Status setzen
-                objEichprozess.FK_Bearbeitungsstatus = 2
-                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Eichbevollmächtigter sich den DS von Anfang angucken muss
-                UpdateObject()
-
-                'erzeuegn eines Server Objektes auf basis des aktuellen DS
-                objServerEichprozess = clsClientServerConversionFunctions.CopyObjectProperties(objServerEichprozess, objEichprozess)
-                Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
-                    Try
-                        Webcontext.Open()
-                    Catch ex As Exception
-                        MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                        Exit Sub
-                    End Try
-
-                    Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
-
-                    Try
-                        'add prüft anhand der Vorgangsnummer automatisch ob ein neuer Prozess angelegt, oder ein vorhandener aktualisiert wird
-                        Webcontext.AddEichprozess(objLiz.HEKennung, objLiz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
-
-                        'schließen des dialoges
-                        ParentFormular.Close()
-                    Catch ex As Exception
-                        MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                        ' Status zurück setzen
-                        Exit Sub
-                    End Try
-                End Using
-            End Using
-        End If
-    End Sub
 
     Private Sub RadCheckBoxAWG1_Click(sender As System.Object, e As System.EventArgs) Handles RadCheckBoxWZ5.Click, RadCheckBoxWZ4.Click, RadCheckBoxWZ3.Click, RadCheckBoxWZ2.Click, RadCheckBoxWZ1.Click, RadCheckBoxVerbindungelemente4.Click, RadCheckBoxVerbindungelemente3.Click, RadCheckBoxVerbindungelemente2.Click, RadCheckBoxVerbindungelemente1.Click, RadCheckBoxBruecke3.Click, RadCheckBoxBruecke2.Click, RadCheckBoxBruecke1.Click, RadCheckBoxAWG3.Click, RadCheckBoxAWG2.Click, RadCheckBoxAWG1.Click
         If _suspendEvents Then Exit Sub

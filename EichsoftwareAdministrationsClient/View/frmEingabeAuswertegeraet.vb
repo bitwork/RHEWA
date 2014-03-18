@@ -1,6 +1,7 @@
 ﻿Public Class frmEingabeAuswertegeraet
     Private _ID As String = "-1"
     Private _objAWG As ServerLookup_Auswertegeraet
+    Private _bolSuspendEvents As Boolean = False
 
     Sub New(ByVal pID As String)
 
@@ -39,6 +40,7 @@
 
     Private Sub FillControls()
         Try
+            _bolSuspendEvents = True
             RadTextBoxControlAuswertegeraetBauartzulassung.Text = _objAWG.Bauartzulassung
             RadTextBoxControlAuswertegeraetBruchteilEichfehlergrenze.Text = _objAWG.BruchteilEichfehlergrenze
             RadTextBoxControlAuswertegeraetGenauigkeitsklasse.Text = _objAWG.Genauigkeitsklasse
@@ -63,6 +65,7 @@
         Catch e As Exception
             MessageBox.Show(e.StackTrace, e.Message)
         End Try
+        _bolSuspendEvents = False
     End Sub
 
     Private Sub UpdateObject()
@@ -157,6 +160,22 @@
         'prüfen ob alle Felder ausgefüllt sind
         Dim AbortSaveing As Boolean = False
 
+        _bolSuspendEvents = True
+        For Each Control In Me.Controls
+            If TypeOf Control Is Telerik.WinControls.UI.RadTextBoxControl Then
+                If Control.Text.trim.Equals("") Then
+                    AbortSaveing = True
+                    '      CType(Control, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderBoxStyle = Telerik.WinControls.BorderBoxStyle.SingleBorder
+                    CType(Control, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.Red
+                    CType(Control, Telerik.WinControls.UI.RadTextBoxControl).Focus()
+                End If
+            End If
+        Next
+        If AbortSaveing Then
+            MessageBox.Show("Bitte füllen Sie alle Felder aus", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            _bolSuspendEvents = False
+            Return False
+        End If
 
         If RadTextBoxControlAuswertegeraetGenauigkeitsklasse.Text.ToUpper = "I" Or RadTextBoxControlAuswertegeraetGenauigkeitsklasse.Text.ToUpper = "II" Or RadTextBoxControlAuswertegeraetGenauigkeitsklasse.Text.ToUpper = "III" Or RadTextBoxControlAuswertegeraetGenauigkeitsklasse.Text = "IV".ToUpper Then
         Else
@@ -165,20 +184,17 @@
             AbortSaveing = True
             RadTextBoxControlAuswertegeraetGenauigkeitsklasse.TextBoxElement.BorderColor = Color.Red
             RadTextBoxControlAuswertegeraetGenauigkeitsklasse.Focus()
-            Return False
-        End If
-
-        If AbortSaveing Then
-            MessageBox.Show("Bitte füllen Sie alle Felder aus", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            _bolSuspendEvents = False
             Return False
         End If
         'Speichern soll nicht abgebrochen werden, da alles okay ist
-
+        _bolSuspendEvents = False
         Return True
 
     End Function
 
     Private Sub RadTextBoxControlAuswertegeraetBruchteilEichfehlergrenze_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles RadTextBoxControlAuswertegeraetSpeisespannung.Validating, RadTextBoxControlAuswertegeraetMindestmesssignal.Validating, RadTextBoxControlAuswertegeraetMindesteingangsspannung.Validating, RadTextBoxControlAuswertegeraetMAXAnzahlTeilungswerteMehrbereichswaage.Validating, RadTextBoxControlAuswertegeraetMAXAnzahlTeilungswertEinbereichswaage.Validating, RadTextBoxControlAuswertegeraetKabellaengeQuerschnitt.Validating, RadTextBoxControlAuswertegeraetGrenzwertTemperaturbereichMIN.Validating, RadTextBoxControlAuswertegeraetGrenzwertTemperaturbereichMAX.Validating, RadTextBoxControlAuswertegeraetGrenzwertLastwiderstandMIN.Validating, RadTextBoxControlAuswertegeraetGrenzWertLastwiderstandMAX.Validating, RadTextBoxControlAuswertegeraetBruchteilEichfehlergrenze.Validating
+        If _bolSuspendEvents = True Then Exit Sub
 
 
         Dim result As Decimal

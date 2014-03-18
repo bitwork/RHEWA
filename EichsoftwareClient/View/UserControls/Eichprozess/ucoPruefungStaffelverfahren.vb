@@ -243,15 +243,15 @@
         'Steuerlemente füllen
         'dynamisches laden der Nullstellen:
         Try
-            _intNullstellenE1 = GetRHEWADecimalDigits(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1) '.Replace(",", "."))  + 1
+            _intNullstellenE1 = clsGeneralFunctions.GetRHEWADecimalDigits(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1) '.Replace(",", "."))  + 1
         Catch ex As Exception
         End Try
         Try
-            _intNullstellenE2 = GetRHEWADecimalDigits(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2) '.Replace(",", ".")) + 1
+            _intNullstellenE2 = clsGeneralFunctions.GetRHEWADecimalDigits(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2) '.Replace(",", ".")) + 1
         Catch ex As Exception
         End Try
         Try
-            _intNullstellenE3 = GetRHEWADecimalDigits(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3) '.Replace(",", "."))  + 1
+            _intNullstellenE3 = clsGeneralFunctions.GetRHEWADecimalDigits(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3) '.Replace(",", "."))  + 1
         Catch ex As Exception
         End Try
 
@@ -1439,7 +1439,7 @@
 
 #Region "Overrides"
     'Speicherroutine
-    Protected Friend Overrides Sub SaveNeeded(ByVal UserControl As UserControl)
+    Protected Overrides Sub SaveNeeded(ByVal UserControl As UserControl)
         If Me.Equals(UserControl) Then
 
             If DialogModus = enuDialogModus.lesend Then
@@ -1585,124 +1585,124 @@
         End If
     End Sub
 
-    Protected Friend Overrides Sub SaveWithoutValidationNeeded(usercontrol As UserControl)
+    Protected Overrides Sub SaveWithoutValidationNeeded(usercontrol As UserControl)
         MyBase.SaveWithoutValidationNeeded(usercontrol)
         If Me.Equals(usercontrol) Then
-         
-
-                'neuen Context aufbauen
-                Using Context As New EichsoftwareClientdatabaseEntities1
-                    If DialogModus = enuDialogModus.lesend Then
-                        UpdateObject()
-                        ParentFormular.CurrentEichprozess = objEichprozess
-                        Exit Sub
-                    End If
-
-                    'prüfen ob CREATE oder UPDATE durchgeführt werden muss
-                    If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
-                        'prüfen ob das Objekt anhand der ID gefunden werden kann
-                        Dim dobjEichprozess As Eichprozess = Context.Eichprozess.FirstOrDefault(Function(value) value.Vorgangsnummer = objEichprozess.Vorgangsnummer)
-                        If Not dobjEichprozess Is Nothing Then
-                            'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
-                            objEichprozess = dobjEichprozess
 
 
+            'neuen Context aufbauen
+            Using Context As New EichsoftwareClientdatabaseEntities1
+                If DialogModus = enuDialogModus.lesend Then
+                    UpdateObject()
+                    ParentFormular.CurrentEichprozess = objEichprozess
+                    Exit Sub
+                End If
 
-                            'wenn es defintiv noch keine pruefungen gibt, neue Anlegen
-                            If _ListPruefungStaffelverfahrenNormallast.Count = 0 Then
-                                'anzahl Bereiche auslesen um damit die anzahl der benötigten Iterationen und Objekt Erzeugungen zu erfahren
-                                Dim intBereiche As Integer = 0
-                                If objEichprozess.Lookup_Waagenart.Art = "Einbereichswaage" Then
-                                    intBereiche = 1
-                                ElseIf objEichprozess.Lookup_Waagenart.Art = "Zweibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Zweiteilungswaage" Then
-                                    intBereiche = 2
-                                ElseIf objEichprozess.Lookup_Waagenart.Art = "Dreibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Dreiteilungswaage" Then
-                                    intBereiche = 3
-                                End If
+                'prüfen ob CREATE oder UPDATE durchgeführt werden muss
+                If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
+                    'prüfen ob das Objekt anhand der ID gefunden werden kann
+                    Dim dobjEichprozess As Eichprozess = Context.Eichprozess.FirstOrDefault(Function(value) value.Vorgangsnummer = objEichprozess.Vorgangsnummer)
+                    If Not dobjEichprozess Is Nothing Then
+                        'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
+                        objEichprozess = dobjEichprozess
+
+
+
+                        'wenn es defintiv noch keine pruefungen gibt, neue Anlegen
+                        If _ListPruefungStaffelverfahrenNormallast.Count = 0 Then
+                            'anzahl Bereiche auslesen um damit die anzahl der benötigten Iterationen und Objekt Erzeugungen zu erfahren
+                            Dim intBereiche As Integer = 0
+                            If objEichprozess.Lookup_Waagenart.Art = "Einbereichswaage" Then
+                                intBereiche = 1
+                            ElseIf objEichprozess.Lookup_Waagenart.Art = "Zweibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Zweiteilungswaage" Then
+                                intBereiche = 2
+                            ElseIf objEichprozess.Lookup_Waagenart.Art = "Dreibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Dreiteilungswaage" Then
+                                intBereiche = 3
+                            End If
+
+                            For intBereich = 1 To intBereiche
+
+                                Dim objPruefung = Context.PruefungStaffelverfahrenNormallast.Create
+                                'wenn es die eine itereation mehr ist:
+                                objPruefung.Bereich = intBereich
+                                objPruefung.Staffel = 1
+
+                                UpdatePruefungsObject(objPruefung)
+
+                                Context.SaveChanges()
+
+                                objEichprozess.Eichprotokoll.PruefungStaffelverfahrenNormallast.Add(objPruefung)
+                                Context.SaveChanges()
+
+                                _ListPruefungStaffelverfahrenNormallast.Add(objPruefung)
+                            Next
+
+                        Else ' es gibt bereits welche
+                            'jedes objekt initialisieren und aus context laden und updaten
+                            For Each objPruefung In _ListPruefungStaffelverfahrenNormallast
+                                objPruefung = Context.PruefungStaffelverfahrenNormallast.FirstOrDefault(Function(value) value.ID = objPruefung.ID)
+                                UpdatePruefungsObject(objPruefung)
+                                Context.SaveChanges()
+                            Next
+
+                        End If
+
+                        'ersatzlasten
+                        'wenn es defintiv noch keine pruefungen gibt, neue Anlegen
+                        If _ListPruefungStaffelverfahrenErsatzlast.Count = 0 Then
+                            'anzahl Bereiche auslesen um damit die anzahl der benötigten Iterationen und Objekt Erzeugungen zu erfahren
+                            Dim intBereiche As Integer = 0
+                            If objEichprozess.Lookup_Waagenart.Art = "Einbereichswaage" Then
+                                intBereiche = 1
+                            ElseIf objEichprozess.Lookup_Waagenart.Art = "Zweibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Zweiteilungswaage" Then
+                                intBereiche = 2
+                            ElseIf objEichprozess.Lookup_Waagenart.Art = "Dreibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Dreiteilungswaage" Then
+                                intBereiche = 3
+                            End If
+
+                            For intStaffel As Integer = 2 To 5
 
                                 For intBereich = 1 To intBereiche
 
-                                    Dim objPruefung = Context.PruefungStaffelverfahrenNormallast.Create
+                                    Dim objPruefung = Context.PruefungStaffelverfahrenErsatzlast.Create
                                     'wenn es die eine itereation mehr ist:
                                     objPruefung.Bereich = intBereich
-                                    objPruefung.Staffel = 1
+                                    objPruefung.Staffel = intStaffel
 
                                     UpdatePruefungsObject(objPruefung)
 
                                     Context.SaveChanges()
 
-                                    objEichprozess.Eichprotokoll.PruefungStaffelverfahrenNormallast.Add(objPruefung)
+                                    objEichprozess.Eichprotokoll.PruefungStaffelverfahrenErsatzlast.Add(objPruefung)
                                     Context.SaveChanges()
 
-                                    _ListPruefungStaffelverfahrenNormallast.Add(objPruefung)
+                                    _ListPruefungStaffelverfahrenErsatzlast.Add(objPruefung)
                                 Next
+                            Next
 
-                            Else ' es gibt bereits welche
-                                'jedes objekt initialisieren und aus context laden und updaten
-                                For Each objPruefung In _ListPruefungStaffelverfahrenNormallast
-                                    objPruefung = Context.PruefungStaffelverfahrenNormallast.FirstOrDefault(Function(value) value.ID = objPruefung.ID)
-                                    UpdatePruefungsObject(objPruefung)
-                                    Context.SaveChanges()
-                                Next
+                        Else ' es gibt bereits welche
+                            'jedes objekt initialisieren und aus context laden und updaten
+                            For Each objPruefung In _ListPruefungStaffelverfahrenErsatzlast
+                                objPruefung = Context.PruefungStaffelverfahrenErsatzlast.FirstOrDefault(Function(value) value.ID = objPruefung.ID)
+                                UpdatePruefungsObject(objPruefung)
+                                Context.SaveChanges()
+                            Next
 
-                            End If
-
-                            'ersatzlasten
-                            'wenn es defintiv noch keine pruefungen gibt, neue Anlegen
-                            If _ListPruefungStaffelverfahrenErsatzlast.Count = 0 Then
-                                'anzahl Bereiche auslesen um damit die anzahl der benötigten Iterationen und Objekt Erzeugungen zu erfahren
-                                Dim intBereiche As Integer = 0
-                                If objEichprozess.Lookup_Waagenart.Art = "Einbereichswaage" Then
-                                    intBereiche = 1
-                                ElseIf objEichprozess.Lookup_Waagenart.Art = "Zweibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Zweiteilungswaage" Then
-                                    intBereiche = 2
-                                ElseIf objEichprozess.Lookup_Waagenart.Art = "Dreibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Dreiteilungswaage" Then
-                                    intBereiche = 3
-                                End If
-
-                                For intStaffel As Integer = 2 To 5
-
-                                    For intBereich = 1 To intBereiche
-
-                                        Dim objPruefung = Context.PruefungStaffelverfahrenErsatzlast.Create
-                                        'wenn es die eine itereation mehr ist:
-                                        objPruefung.Bereich = intBereich
-                                        objPruefung.Staffel = intStaffel
-
-                                        UpdatePruefungsObject(objPruefung)
-
-                                        Context.SaveChanges()
-
-                                        objEichprozess.Eichprotokoll.PruefungStaffelverfahrenErsatzlast.Add(objPruefung)
-                                        Context.SaveChanges()
-
-                                        _ListPruefungStaffelverfahrenErsatzlast.Add(objPruefung)
-                                    Next
-                                Next
-
-                            Else ' es gibt bereits welche
-                                'jedes objekt initialisieren und aus context laden und updaten
-                                For Each objPruefung In _ListPruefungStaffelverfahrenErsatzlast
-                                    objPruefung = Context.PruefungStaffelverfahrenErsatzlast.FirstOrDefault(Function(value) value.ID = objPruefung.ID)
-                                    UpdatePruefungsObject(objPruefung)
-                                    Context.SaveChanges()
-                                Next
-
-                            End If
-
-
-                            'Füllt das Objekt mit den Werten aus den Steuerlementen
-                            UpdateObject()
-                            'Speichern in Datenbank
-                            Context.SaveChanges()
                         End If
+
+
+                        'Füllt das Objekt mit den Werten aus den Steuerlementen
+                        UpdateObject()
+                        'Speichern in Datenbank
+                        Context.SaveChanges()
                     End If
-                End Using
+                End If
+            End Using
 
-                ParentFormular.CurrentEichprozess = objEichprozess
-            End If
+            ParentFormular.CurrentEichprozess = objEichprozess
+        End If
 
-       
+
     End Sub
 
 
@@ -1711,7 +1711,7 @@
     ''' </summary>
     ''' <param name="UserControl"></param>
     ''' <remarks></remarks>
-    Protected Friend Overrides Sub UpdateNeeded(UserControl As UserControl)
+    Protected Overrides Sub UpdateNeeded(UserControl As UserControl)
         If Me.Equals(UserControl) Then
             MyBase.UpdateNeeded(UserControl)
             'Hilfetext setzen
@@ -1725,7 +1725,7 @@
 
 #End Region
 
-    Protected Friend Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
+    Protected Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
         If Me.Equals(UserControl) = False Then Exit Sub
 
         MyBase.LokalisierungNeeded(UserControl)
@@ -1892,7 +1892,7 @@
             End Try
         End If
 
-    
+
     End Sub
 
 #Region "Events die neue Berechnungen beim Ändern von Feldinformationen erfordern"
@@ -3074,9 +3074,9 @@
 
 
 
- 
+
     'Entsperrroutine
-    Protected Friend Overrides Sub EntsperrungNeeded()
+    Protected Overrides Sub EntsperrungNeeded()
         MyBase.EntsperrungNeeded()
 
         'Hiermit wird ein lesender Vorgang wieder entsperrt. 
@@ -3100,7 +3100,7 @@
         ParentFormular.DialogModus = FrmMainContainer.enuDialogModus.korrigierend
     End Sub
 
-    Protected Friend Overrides Sub VersendenNeeded(TargetUserControl As UserControl)
+    Protected Overrides Sub VersendenNeeded(TargetUserControl As UserControl)
 
 
         If Me.Equals(TargetUserControl) Then

@@ -504,10 +504,11 @@
                                         'CType(Control, Telerik.WinControls.UI.RadTextBoxControl).Focus()
                                         'Return False
                                         Me.AbortSaveing = True
+                                        Continue For
                                     End If
                                 End If
 
-                                Continue For
+
                             End If
 
                             If Control.Text.trim.Equals("") Then
@@ -599,7 +600,7 @@
 
 
     'Speicherroutine
-    Protected Friend Overrides Sub SaveNeeded(ByVal UserControl As UserControl)
+    Protected Overrides Sub SaveNeeded(ByVal UserControl As UserControl)
         If Me.Equals(UserControl) Then
             If DialogModus = enuDialogModus.lesend Then
                 If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.KompatbilitaetsnachweisErgebnis Then
@@ -662,7 +663,7 @@
         End If
     End Sub
 
-    Protected Friend Overrides Sub SaveWithoutValidationNeeded(ByVal UserControl As UserControl)
+    Protected Overrides Sub SaveWithoutValidationNeeded(ByVal UserControl As UserControl)
         If Me.Equals(UserControl) Then
             If DialogModus = enuDialogModus.lesend Then
                 UpdateObject()
@@ -704,7 +705,7 @@
 #End Region
 
 
-    Protected Friend Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
+    Protected Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
         If Me.Equals(UserControl) = False Then Exit Sub
 
         MyBase.LokalisierungNeeded(UserControl)
@@ -788,7 +789,7 @@
     ''' </summary>
     ''' <param name="UserControl"></param>
     ''' <remarks></remarks>
-    Protected Friend Overrides Sub UpdateNeeded(UserControl As UserControl)
+    Protected Overrides Sub UpdateNeeded(UserControl As UserControl)
         If Me.Equals(UserControl) Then
             MyBase.UpdateNeeded(UserControl)
             'Hilfetext setzen
@@ -1095,7 +1096,7 @@
     End Sub
 
     'Entsperrroutine
-    Protected Friend Overrides Sub EntsperrungNeeded()
+    Protected Overrides Sub EntsperrungNeeded()
         MyBase.EntsperrungNeeded()
 
         'Hiermit wird ein lesender Vorgang wieder entsperrt. 
@@ -1119,7 +1120,7 @@
         ParentFormular.DialogModus = FrmMainContainer.enuDialogModus.korrigierend
     End Sub
 
-    Protected Friend Overrides Sub VersendenNeeded(TargetUserControl As UserControl)
+    Protected Overrides Sub VersendenNeeded(TargetUserControl As UserControl)
 
 
         If Me.Equals(TargetUserControl) Then

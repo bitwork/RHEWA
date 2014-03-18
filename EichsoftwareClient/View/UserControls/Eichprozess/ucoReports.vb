@@ -64,7 +64,7 @@ Public Class ucoReports
 
 #Region "Overrides"
     'Speicherroutine
-    Protected Friend Overrides Sub SaveNeeded(ByVal UserControl As UserControl)
+    Protected Overrides Sub SaveNeeded(ByVal UserControl As UserControl)
         If Me.Equals(UserControl) Then
 
             If DialogModus = enuDialogModus.lesend Then
@@ -128,7 +128,7 @@ Public Class ucoReports
     ''' </summary>
     ''' <param name="UserControl"></param>
     ''' <remarks></remarks>
-    Protected Friend Overrides Sub UpdateNeeded(UserControl As UserControl)
+    Protected Overrides Sub UpdateNeeded(UserControl As UserControl)
         If Me.Equals(UserControl) Then
             MyBase.UpdateNeeded(UserControl)
             'Hilfetext setzen
@@ -141,7 +141,7 @@ Public Class ucoReports
     End Sub
 
     'Entsperrroutine
-    Protected Friend Overrides Sub EntsperrungNeeded()
+    Protected Overrides Sub EntsperrungNeeded()
         MyBase.EntsperrungNeeded()
 
         'Hiermit wird ein lesender Vorgang wieder entsperrt. 
@@ -164,7 +164,7 @@ Public Class ucoReports
         DialogModus = enuDialogModus.korrigierend
         ParentFormular.DialogModus = FrmMainContainer.enuDialogModus.korrigierend
     End Sub
-    Protected Friend Overrides Sub VersendenNeeded(TargetUserControl As UserControl)
+    Protected Overrides Sub VersendenNeeded(TargetUserControl As UserControl)
 
 
         If Me.Equals(TargetUserControl) Then

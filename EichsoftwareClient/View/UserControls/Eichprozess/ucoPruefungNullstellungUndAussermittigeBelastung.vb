@@ -243,7 +243,27 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         RadTextBoxControlBereich1Weight12.Text = CType(sender, Telerik.WinControls.UI.RadTextBoxControl).Text
         RadTextBoxControlBereich1WeightMitte.Text = CType(sender, Telerik.WinControls.UI.RadTextBoxControl).Text
 
+        'wenn weight1 leer ist, sind auch alle anderen leer
+        If RadTextBoxControlBereich1Weight1.Text.Equals("") Then
+            'abbruch
+            RadCheckBoxBereich1VEL1.Checked = False
+            RadCheckBoxBereich1VEL2.Checked = False
+            RadCheckBoxBereich1VEL3.Checked = False
+            RadCheckBoxBereich1VEL4.Checked = False
+            RadCheckBoxBereich1VEL5.Checked = False
+            RadCheckBoxBereich1VEL6.Checked = False
+            RadCheckBoxBereich1VEL7.Checked = False
+            RadCheckBoxBereich1VEL8.Checked = False
+            RadCheckBoxBereich1VEL9.Checked = False
+            RadCheckBoxBereich1VEL10.Checked = False
+            RadCheckBoxBereich1VEL11.Checked = False
+            RadCheckBoxBereich1VEL12.Checked = False
+            RadCheckBoxBereich1VELMitte.Checked = False
+            _suspendEvents = False
 
+            Exit Sub
+
+        End If
         'neu berechnen der Fehler und EFG
         Try
             RadTextBoxControlBereich1ErrorLimit1.Text = CDec(RadTextBoxControlBereich1DisplayWeight1.Text) - CDec(RadTextBoxControlBereich1Weight1.Text)
@@ -630,7 +650,27 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         RadTextBoxControlBereich2Weight12.Text = CType(sender, Telerik.WinControls.UI.RadTextBoxControl).Text
         RadTextBoxControlBereich2WeightMitte.Text = CType(sender, Telerik.WinControls.UI.RadTextBoxControl).Text
 
+        'wenn weight1 leer ist, sind auch alle anderen leer
+        If RadTextBoxControlBereich2Weight1.Text.Equals("") Then
+            'abbruch
+            RadCheckBoxBereich2VEL1.Checked = False
+            RadCheckBoxBereich2VEL2.Checked = False
+            RadCheckBoxBereich2VEL3.Checked = False
+            RadCheckBoxBereich2VEL4.Checked = False
+            RadCheckBoxBereich2VEL5.Checked = False
+            RadCheckBoxBereich2VEL6.Checked = False
+            RadCheckBoxBereich2VEL7.Checked = False
+            RadCheckBoxBereich2VEL8.Checked = False
+            RadCheckBoxBereich2VEL9.Checked = False
+            RadCheckBoxBereich2VEL10.Checked = False
+            RadCheckBoxBereich2VEL11.Checked = False
+            RadCheckBoxBereich2VEL12.Checked = False
+            RadCheckBoxBereich2VELMitte.Checked = False
+            _suspendEvents = False
 
+            Exit Sub
+
+        End If
         Try
             RadTextBoxControlBereich2ErrorLimit1.Text = CDec(RadTextBoxControlBereich2DisplayWeight1.Text) - CDec(RadTextBoxControlBereich2Weight1.Text)
             If RadTextBoxControlBereich2DisplayWeight1.Text > CDec(RadTextBoxControlBereich2Weight1.Text) + CDec(lblBereich2EFGSpeziallBerechnung.Text) Then
@@ -1018,7 +1058,27 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         RadTextBoxControlBereich3Weight12.Text = CType(sender, Telerik.WinControls.UI.RadTextBoxControl).Text
         RadTextBoxControlBereich3WeightMitte.Text = CType(sender, Telerik.WinControls.UI.RadTextBoxControl).Text
 
+        'wenn weight1 leer ist, sind auch alle anderen leer
+        If RadTextBoxControlBereich3Weight1.Text.Equals("") Then
+            'abbruch
+            RadCheckBoxBereich3VEL1.Checked = False
+            RadCheckBoxBereich3VEL2.Checked = False
+            RadCheckBoxBereich3VEL3.Checked = False
+            RadCheckBoxBereich3VEL4.Checked = False
+            RadCheckBoxBereich3VEL5.Checked = False
+            RadCheckBoxBereich3VEL6.Checked = False
+            RadCheckBoxBereich3VEL7.Checked = False
+            RadCheckBoxBereich3VEL8.Checked = False
+            RadCheckBoxBereich3VEL9.Checked = False
+            RadCheckBoxBereich3VEL10.Checked = False
+            RadCheckBoxBereich3VEL11.Checked = False
+            RadCheckBoxBereich3VEL12.Checked = False
+            RadCheckBoxBereich3VELMitte.Checked = False
+            _suspendEvents = False
 
+            Exit Sub
+
+        End If
 
         Try
             RadTextBoxControlBereich3ErrorLimit1.Text = CDec(RadTextBoxControlBereich3DisplayWeight1.Text) - CDec(RadTextBoxControlBereich3Weight1.Text)
@@ -1489,15 +1549,15 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         FillControlsNullstellung()
         'dynamisches laden der Nullstellen:
         Try
-            _intNullstellenE1 = GetRHEWADecimalDigits(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1) '.Replace(",", "."))  + 1
+            _intNullstellenE1 = clsGeneralFunctions.GetRHEWADecimalDigits(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1) '.Replace(",", "."))  + 1
         Catch ex As Exception
         End Try
         Try
-            _intNullstellenE2 = GetRHEWADecimalDigits(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2) '.Replace(",", ".")) + 1
+            _intNullstellenE2 = clsGeneralFunctions.GetRHEWADecimalDigits(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2) '.Replace(",", ".")) + 1
         Catch ex As Exception
         End Try
         Try
-            _intNullstellenE3 = GetRHEWADecimalDigits(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3) '.Replace(",", "."))  + 1
+            _intNullstellenE3 = clsGeneralFunctions.GetRHEWADecimalDigits(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3) '.Replace(",", "."))  + 1
         Catch ex As Exception
         End Try
 
@@ -1635,37 +1695,45 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         RadTextBoxControlBereich1WeightMitte.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1 / 3
         'bereich 2
         Try
-            RadTextBoxControlBereich2Weight1.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 / 3
-            RadTextBoxControlBereich2Weight2.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 / 3
-            RadTextBoxControlBereich2Weight3.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 / 3
-            RadTextBoxControlBereich2Weight4.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 / 3
-            RadTextBoxControlBereich2Weight5.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 / 3
-            RadTextBoxControlBereich2Weight6.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 / 3
-            RadTextBoxControlBereich2Weight7.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 / 3
-            RadTextBoxControlBereich2Weight8.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 / 3
-            RadTextBoxControlBereich2Weight9.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 / 3
-            RadTextBoxControlBereich2Weight10.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 / 3
-            RadTextBoxControlBereich2Weight11.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 / 3
-            RadTextBoxControlBereich2Weight12.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 / 3
-            RadTextBoxControlBereich2WeightMitte.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 / 3
+            If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2.Equals("") Then
+
+                RadTextBoxControlBereich2Weight1.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 / 3
+                RadTextBoxControlBereich2Weight2.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 / 3
+                RadTextBoxControlBereich2Weight3.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 / 3
+                RadTextBoxControlBereich2Weight4.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 / 3
+                RadTextBoxControlBereich2Weight5.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 / 3
+                RadTextBoxControlBereich2Weight6.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 / 3
+                RadTextBoxControlBereich2Weight7.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 / 3
+                RadTextBoxControlBereich2Weight8.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 / 3
+                RadTextBoxControlBereich2Weight9.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 / 3
+                RadTextBoxControlBereich2Weight10.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 / 3
+                RadTextBoxControlBereich2Weight11.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 / 3
+                RadTextBoxControlBereich2Weight12.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 / 3
+                RadTextBoxControlBereich2WeightMitte.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 / 3
+            End If
+
         Catch ex As Exception
 
         End Try
         'bereich 3
         Try
-            RadTextBoxControlBereich3Weight1.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 / 3
-            RadTextBoxControlBereich3Weight2.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 / 3
-            RadTextBoxControlBereich3Weight3.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 / 3
-            RadTextBoxControlBereich3Weight4.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 / 3
-            RadTextBoxControlBereich3Weight5.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 / 3
-            RadTextBoxControlBereich3Weight6.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 / 3
-            RadTextBoxControlBereich3Weight7.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 / 3
-            RadTextBoxControlBereich3Weight8.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 / 3
-            RadTextBoxControlBereich3Weight9.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 / 3
-            RadTextBoxControlBereich3Weight10.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 / 3
-            RadTextBoxControlBereich3Weight11.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 / 3
-            RadTextBoxControlBereich3Weight12.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 / 3
-            RadTextBoxControlBereich3WeightMitte.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 / 3
+            If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3.Equals("") Then
+
+                RadTextBoxControlBereich3Weight1.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 / 3
+                RadTextBoxControlBereich3Weight2.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 / 3
+                RadTextBoxControlBereich3Weight3.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 / 3
+                RadTextBoxControlBereich3Weight4.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 / 3
+                RadTextBoxControlBereich3Weight5.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 / 3
+                RadTextBoxControlBereich3Weight6.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 / 3
+                RadTextBoxControlBereich3Weight7.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 / 3
+                RadTextBoxControlBereich3Weight8.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 / 3
+                RadTextBoxControlBereich3Weight9.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 / 3
+                RadTextBoxControlBereich3Weight10.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 / 3
+                RadTextBoxControlBereich3Weight11.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 / 3
+                RadTextBoxControlBereich3Weight12.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 / 3
+                RadTextBoxControlBereich3WeightMitte.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 / 3
+            End If
+
         Catch ex As Exception
 
         End Try
@@ -3041,7 +3109,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
 
 #Region "Overrides"
     'Speicherroutine
-    Protected Friend Overrides Sub SaveNeeded(ByVal UserControl As UserControl)
+    Protected Overrides Sub SaveNeeded(ByVal UserControl As UserControl)
         If Me.Equals(UserControl) Then
 
             If DialogModus = enuDialogModus.lesend Then
@@ -3292,10 +3360,11 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
 
     End Sub
 
-    Protected Friend Overrides Sub SaveWithoutValidationNeeded(usercontrol As UserControl)
-        MyBase.SaveWithoutValidationNeeded(usercontrol)
-
+    Protected Overrides Sub SaveWithoutValidationNeeded(usercontrol As UserControl)
+   
         If Me.Equals(usercontrol) Then
+            MyBase.SaveWithoutValidationNeeded(usercontrol)
+
             If DialogModus = enuDialogModus.lesend Then
                 UpdateObject()
                 ParentFormular.CurrentEichprozess = objEichprozess
@@ -3340,7 +3409,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         End If
     End Sub
 
-    Protected Friend Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
+    Protected Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
         If Me.Equals(UserControl) = False Then Exit Sub
 
         MyBase.LokalisierungNeeded(UserControl)
@@ -3420,7 +3489,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
     ''' </summary>
     ''' <param name="UserControl"></param>
     ''' <remarks></remarks>
-    Protected Friend Overrides Sub UpdateNeeded(UserControl As UserControl)
+    Protected Overrides Sub UpdateNeeded(UserControl As UserControl)
         If Me.Equals(UserControl) Then
             MyBase.UpdateNeeded(UserControl)
             'Hilfetext setzen
@@ -3556,7 +3625,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
 
 
     'Entsperrroutine
-    Protected Friend Overrides Sub EntsperrungNeeded()
+    Protected Overrides Sub EntsperrungNeeded()
         MyBase.EntsperrungNeeded()
 
         'Hiermit wird ein lesender Vorgang wieder entsperrt. 
@@ -3579,8 +3648,8 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         DialogModus = enuDialogModus.korrigierend
         ParentFormular.DialogModus = FrmMainContainer.enuDialogModus.korrigierend
     End Sub
-    Protected Friend Overrides Sub VersendenNeeded(TargetUserControl As UserControl)
-    
+    Protected Overrides Sub VersendenNeeded(TargetUserControl As UserControl)
+
         If Me.Equals(TargetUserControl) Then
             MyBase.VersendenNeeded(TargetUserControl)
 
