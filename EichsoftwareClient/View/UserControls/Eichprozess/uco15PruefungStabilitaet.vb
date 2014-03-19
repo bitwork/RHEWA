@@ -509,11 +509,21 @@
         DialogModus = enuDialogModus.korrigierend
         ParentFormular.DialogModus = FrmMainContainer.enuDialogModus.korrigierend
     End Sub
+    Private Sub UpdateObject()
+        'neuen Context aufbauen
+        Using Context As New EichsoftwareClientdatabaseEntities1
+            'jedes objekt initialisieren und aus context laden und updaten
+            For Each objPruefung In _ListPruefungStabilitaet
+                objPruefung = Context.PruefungStabilitaetGleichgewichtslage.FirstOrDefault(Function(value) value.ID = objPruefung.ID)
+                UpdatePruefungsObject(objPruefung)
+            Next
+        End Using
+    End Sub
     Protected Overrides Sub VersendenNeeded(TargetUserControl As UserControl)
+
 
         If Me.Equals(TargetUserControl) Then
             MyBase.VersendenNeeded(TargetUserControl)
-
             Using dbcontext As New EichsoftwareClientdatabaseEntities1
                 objEichprozess = (From a In dbcontext.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Beschaffenheitspruefung").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
 
@@ -521,6 +531,7 @@
                 'auf fehlerhaft Status setzen
                 objEichprozess.FK_Bearbeitungsstatus = 2
                 objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Eichbevollmächtigter sich den DS von Anfang angucken muss
+                UpdateObject()
 
                 'erzeuegn eines Server Objektes auf basis des aktuellen DS
                 objServerEichprozess = clsClientServerConversionFunctions.CopyObjectProperties(objServerEichprozess, objEichprozess)

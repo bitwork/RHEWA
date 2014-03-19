@@ -575,8 +575,9 @@ Public Class FrmMainContainer
                             Case Is = "Fahrzeugwaagen", "über 60kg im Staffelverfahren"
                                 'überspringe Prüfung mit Normallast
                                 _CurrentUco.EichprozessStatusReihenfolge += 1
-                                BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge + 1
-
+                                If _CurrentUco.DialogModus <> ucoContent.enuDialogModus.lesend Then
+                                    BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge + 1
+                                End If
                         End Select
                     Catch ex As Exception
                         Debug.WriteLine(ex.ToString)
@@ -586,8 +587,9 @@ Public Class FrmMainContainer
                     Try
                         'überspringe staffelverfahren
                         _CurrentUco.EichprozessStatusReihenfolge += 1
-                        BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge + 1
-
+                        If _CurrentUco.DialogModus <> ucoContent.enuDialogModus.lesend Then
+                            BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge + 1
+                        End If
                     Catch ex As Exception
                         Debug.WriteLine(ex.ToString)
 
@@ -598,8 +600,9 @@ Public Class FrmMainContainer
                             Case Is = "über 60kg mit Normalien", "über 60kg im Staffelverfahren"
                                 'überspringe fahrzeugwaagen
                                 _CurrentUco.EichprozessStatusReihenfolge += 1
-                                BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge + 1
-
+                                If _CurrentUco.DialogModus <> ucoContent.enuDialogModus.lesend Then
+                                    BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge + 1
+                                End If
                         End Select
                     Catch ex As Exception
                         Debug.WriteLine(ex.ToString)
@@ -610,8 +613,9 @@ Public Class FrmMainContainer
                         If _CurrentUco.objEichprozess.Eichprotokoll.Verwendungszweck_Drucker = False Then
                             'überspringe Stablität der GLeichgewichtslage
                             _CurrentUco.EichprozessStatusReihenfolge += 1
-                            BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge + 1
-
+                            If _CurrentUco.DialogModus <> ucoContent.enuDialogModus.lesend Then
+                                BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge + 1
+                            End If
                         End If
 
                     Catch ex As Exception
@@ -624,8 +628,9 @@ Public Class FrmMainContainer
                             Case Is = "über 60kg mit Normalien", "über 60kg im Staffelverfahren"
                                 'überspringe Achlastwägungen
                                 _CurrentUco.EichprozessStatusReihenfolge += 1
-                                BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge + 1
-
+                                If _CurrentUco.DialogModus <> ucoContent.enuDialogModus.lesend Then
+                                    BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge + 1
+                                End If
                         End Select
                     Catch ex As Exception
                         Debug.WriteLine(ex.ToString)

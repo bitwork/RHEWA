@@ -34,7 +34,7 @@
     <SupportUrl>http://www.rhewa.com</SupportUrl>
     <ProductName>RHEWA Herstellerersteichung</ProductName>
     <PublisherName>RHEWA Waagenfabrik GmbH</PublisherName>
-    <ApplicationRevision>40</ApplicationRevision>
+    <ApplicationRevision>42</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -547,6 +547,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco17PruefungEignungFuerAchlastwaegungen.resx">
       <DependentUpon>uco17PruefungEignungFuerAchlastwaegungen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\uco21Versenden.af.resx">
+      <DependentUpon>uco21Versenden.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\uco21Versenden.en.resx">
+      <DependentUpon>uco21Versenden.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\uco21Versenden.fr-CH.resx">
+      <DependentUpon>uco21Versenden.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco_4KompatiblititaetsnachweisErgebnis.en.resx">
       <DependentUpon>uco_4KompatiblititaetsnachweisErgebnis.vb</DependentUpon>

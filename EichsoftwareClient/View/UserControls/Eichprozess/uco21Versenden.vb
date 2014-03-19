@@ -434,8 +434,8 @@ Public Class Uco21Versenden
 
 
 
-        Me.RadButtonUploadPath.Text = resources.GetString("RadButton1.Text")
-
+        Me.RadButtonUploadPath.Text = resources.GetString("RadButtonUploadPath.Text")
+        Me.RadButtonAnRhewaSenden.Text = resources.GetString("RadButtonAnRhewaSenden.Text")
 
 
 

@@ -275,6 +275,7 @@
                 Case Is = "über 60kg mit Normalien"
 
                     Try
+                        _ListPruefungWiederholbarkeit.Clear()
                         For Each obj In objEichprozess.Eichprotokoll.PruefungWiederholbarkeit
                             _ListPruefungWiederholbarkeit.Add(obj)
                         Next
@@ -288,7 +289,7 @@
                         End Using
                     End Try
                 Case Else
-
+                    _ListPruefungWiederholbarkeit.Clear()
 
                     Try
                         For Each obj In objEichprozess.Eichprotokoll.PruefungWiederholbarkeit
@@ -495,6 +496,14 @@
     ''' <author></author>
     ''' <commentauthor></commentauthor>
     Private Sub UpdateObject()
+        'neuen Context aufbauen
+        Using Context As New EichsoftwareClientdatabaseEntities1
+            'jedes objekt initialisieren und aus context laden und updaten
+            For Each objPruefung In _ListPruefungWiederholbarkeit
+                objPruefung = Context.PruefungWiederholbarkeit.FirstOrDefault(Function(value) value.ID = objPruefung.ID)
+                UpdatePruefungsObject(objPruefung)
+            Next
+        End Using
     End Sub
 
     Private Sub UpdatePruefungsObject(ByVal PObjPruefung As PruefungWiederholbarkeit)

@@ -417,6 +417,8 @@ Public Class uco_9PruefungLinearitaet
         Else
 
             Try
+                _ListPruefungPruefungLinearitaetSteigend.Clear()
+                _ListPruefungPruefungLinearitaetFallend.Clear()
                 'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
                 For Each obj In objEichprozess.Eichprotokoll.PruefungLinearitaetSteigend
                     _ListPruefungPruefungLinearitaetSteigend.Add(obj)
@@ -1096,10 +1098,6 @@ Public Class uco_9PruefungLinearitaet
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    Private Sub UpdateObject()
-
-    End Sub
-
     Private Sub UpdatePruefungsLinSteigendObject(ByVal PObjPruefung As PruefungLinearitaetSteigend)
         If PObjPruefung.Bereich = 1 Then
             If PObjPruefung.Messpunkt = "1" Then
@@ -1263,7 +1261,12 @@ Public Class uco_9PruefungLinearitaet
 
         End If
     End Sub
-
+    ''' <summary>
+    ''' Füllt das Objekt mit den Werten aus den Steuerlementen
+    ''' </summary>
+    ''' <remarks></remarks>
+    ''' <author></author>
+    ''' <commentauthor></commentauthor>
     Private Sub UpdatePruefungsLinFallendObject(ByVal PObjPruefung As PruefungLinearitaetFallend)
         If PObjPruefung.Bereich = 1 Then
             If PObjPruefung.Messpunkt = "1" Then
@@ -1891,6 +1894,21 @@ Public Class uco_9PruefungLinearitaet
 #End Region
 #End Region
 
+    Private Sub UpdateObject()
+        'neuen Context aufbauen
+        Using Context As New EichsoftwareClientdatabaseEntities1
+            'jedes objekt initialisieren und aus context laden und updaten
+            For Each objPruefung In _ListPruefungPruefungLinearitaetFallend
+                objPruefung = Context.PruefungLinearitaetFallend.FirstOrDefault(Function(value) value.ID = objPruefung.ID)
+                UpdatePruefungsLinFallendObject(objPruefung)
+            Next
+            'jedes objekt initialisieren und aus context laden und updaten
+            For Each objPruefung In _ListPruefungPruefungLinearitaetSteigend
+                objPruefung = Context.PruefungLinearitaetSteigend.FirstOrDefault(Function(value) value.ID = objPruefung.ID)
+                UpdatePruefungsLinSteigendObject(objPruefung)
+            Next
+        End Using
+    End Sub
 
 #Region "Overrides"
     'Speicherroutine

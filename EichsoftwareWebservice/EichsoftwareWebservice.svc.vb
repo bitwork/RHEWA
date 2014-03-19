@@ -641,7 +641,7 @@ Public Class EichsoftwareWebservice
                                 .Lookup_Waagentyp = Eichprozess.ServerLookup_Waagentyp.Typ, _
                                 .Lookup_Waagenart = Eichprozess.ServerLookup_Waagenart.Art, _
                                 .Lookup_Auswertegeraet = Eichprozess.ServerLookup_Auswertegeraet.Typ, _
-                                .Sachbearbeiter = Eichprozess.ServerEichprotokoll.Identifikationsdaten_Benutzer, _
+                                .Sachbearbeiter = Eichprozess.ServerEichprotokoll.Identifikationsdaten_Pruefer, _
                        .ZurBearbeitungGesperrtDurch = Eichprozess.ZurBearbeitungGesperrtDurch, _
                      .Anhangpfad = Eichprozess.UploadFilePath, _
                      .NeuWZ = Eichprozess.ServerLookup_Waegezelle.Neu, _

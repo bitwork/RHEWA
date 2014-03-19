@@ -66,7 +66,7 @@
         Else
 
             _objEichprotokoll = objEichprozess.Eichprotokoll
-
+            _ListPruefungAnsprechvermoegen.Clear()
             Try
                 'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
                 For Each obj In objEichprozess.Eichprotokoll.PruefungAnsprechvermoegen
@@ -188,7 +188,15 @@
     ''' <author></author>
     ''' <commentauthor></commentauthor>
     Private Sub UpdateObject()
-
+        'neuen Context aufbauen
+        Using Context As New EichsoftwareClientdatabaseEntities1
+            'jedes objekt initialisieren und aus context laden und updaten
+            For Each objPruefung In _ListPruefungAnsprechvermoegen
+                objPruefung = Context.PruefungAnsprechvermoegen.FirstOrDefault(Function(value) value.ID = objPruefung.ID)
+                UpdatePruefungsObject(objPruefung)
+            Next
+       
+        End Using
     End Sub
 
     Private Sub UpdatePruefungsObject(ByVal pObjPruefung As PruefungAnsprechvermoegen)

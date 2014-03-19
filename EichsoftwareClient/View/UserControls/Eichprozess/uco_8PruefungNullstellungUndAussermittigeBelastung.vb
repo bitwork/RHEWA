@@ -1486,7 +1486,8 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                 _currentObjVerfahren = (From a In context.Lookup_Konformitaetsbewertungsverfahren Where a.ID = objEichprozess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren).FirstOrDefault
             End Using
         Else
-
+            _ListPruefungWiederholbarkeit.Clear()
+            _ListPruefungAussermittigeBelastung.Clear()
             Try
                 'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
                 For Each obj In objEichprozess.Eichprotokoll.PruefungAussermittigeBelastung
@@ -2671,6 +2672,22 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
     Private Sub UpdateObject()
         objEichprozess.Eichprotokoll.GenauigkeitNullstellung_InOrdnung = RadCheckBoxNullstellungOK.Checked
         objEichprozess.Eichprotokoll.Wiederholbarkeit_Staffelverfahren_MINNormalien = RadTextBoxControlBetragNormallast.Text
+
+        'neuen Context aufbauen
+        Using Context As New EichsoftwareClientdatabaseEntities1
+            'jedes objekt initialisieren und aus context laden und updaten
+            For Each obj In _ListPruefungAussermittigeBelastung
+                Dim objPruefung = Context.PruefungAussermittigeBelastung.FirstOrDefault(Function(value) value.ID = obj.ID)
+                UpdatePruefungsObject(objPruefung)
+            Next
+
+            'jedes objekt initialisieren und aus context laden und updaten
+            For Each obj In _ListPruefungWiederholbarkeit
+                Dim objPruefung = Context.PruefungWiederholbarkeit.FirstOrDefault(Function(value) value.ID = obj.ID)
+                UpdatePruefungsObject(objPruefung)
+            Next
+
+        End Using
     End Sub
 
     Private Sub UpdatePruefungsObject(ByVal PObjPruefung As PruefungAussermittigeBelastung)

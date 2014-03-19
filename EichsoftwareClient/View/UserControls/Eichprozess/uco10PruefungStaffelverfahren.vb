@@ -95,6 +95,8 @@
             End Using
 
         Else
+            _ListPruefungStaffelverfahrenNormallast.Clear()
+            _ListPruefungStaffelverfahrenErsatzlast.Clear()
             Try
                 For Each obj In objEichprozess.Eichprotokoll.PruefungStaffelverfahrenNormallast
                     _ListPruefungStaffelverfahrenNormallast.Add(obj)
@@ -1001,7 +1003,21 @@
     ''' <author></author>
     ''' <commentauthor></commentauthor>
     Private Sub UpdateObject()
+        'neuen Context aufbauen
+        Using Context As New EichsoftwareClientdatabaseEntities1
+            'jedes objekt initialisieren und aus context laden und updaten
+            For Each objPruefung In _ListPruefungStaffelverfahrenNormallast
+                objPruefung = Context.PruefungStaffelverfahrenNormallast.FirstOrDefault(Function(value) value.ID = objPruefung.ID)
+                UpdatePruefungsObject(objPruefung)
+            Next
 
+            'jedes objekt initialisieren und aus context laden und updaten
+            For Each objPruefung In _ListPruefungStaffelverfahrenErsatzlast
+                objPruefung = Context.PruefungStaffelverfahrenErsatzlast.FirstOrDefault(Function(value) value.ID = objPruefung.ID)
+                UpdatePruefungsObject(objPruefung)
+            Next
+
+        End Using
     End Sub
 
     Private Sub UpdatePruefungsObject(ByVal PObjPruefung As PruefungStaffelverfahrenNormallast)
