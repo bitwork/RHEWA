@@ -1,0 +1,1206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="lblPunkt1Waage.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt1Waage.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt1AWG.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt1AWG.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel7.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel7.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt1WZ.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt1WZ.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt1Gleichbesser2.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt1Gleichbesser2.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel4.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel4.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt1WI.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt1WI.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt1IND.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt1IND.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt1LC.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt1LC.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt1GleichBesser1.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt1GleichBesser1.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxPunkt1.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxPunkt1.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadSeparator13.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadSeparator13.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadGroupBoxPunkt1.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadGroupBoxPunkt1.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxPunkt2TMAX.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxPunkt2TMAX.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt2INDMax.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt2INDMax.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt2INDMin.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt2INDMin.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt2AWG.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt2AWG.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt2WZ.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt2WZ.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel13.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel13.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel14.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel14.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel15.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel15.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel16.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel16.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel17.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel17.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel18.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel18.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt2Waage.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt2Waage.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt2WIMax.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt2WIMax.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt2LCMax.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt2LCMax.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt2WIMin.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt2WIMin.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt2LCMin.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt2LCMin.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxPunkt2TMin.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxPunkt2TMin.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadSeparator1.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadSeparator1.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadGroupBoxPunkt2TMin.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadGroupBoxPunkt2TMin.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel25.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel25.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel24.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel24.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel23.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel23.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel22.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel22.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel21.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel21.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel20.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel20.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel19.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel19.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel2.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel2.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt3Plc.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt3Plc.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt3pind.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt3pind.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt3pcon.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt3pcon.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel3.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel3.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxPunkt3.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxPunkt3.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadSeparator2.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadSeparator2.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadGroupBoxPunkt3.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadGroupBoxPunkt3.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxPunkt4Max3.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxPunkt4Max3.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxPunkt4Max2.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxPunkt4Max2.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt4I3Eq.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt4I3Eq.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt4I2Eq.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt4I2Eq.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel29.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel29.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel27.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel27.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel78.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel78.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt4WaagenArt.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt4WaagenArt.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt4Max3.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt4Max3.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt4Nind3.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt4Nind3.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt4I3.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt4I3.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt4Max2.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt4Max2.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt4Nind2.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt4Nind2.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt4I2.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt4I2.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt4Max1.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt4Max1.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt4Nind1.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt4Nind1.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel30.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel30.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel33.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel33.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxPunkt4Max1.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxPunkt4Max1.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadSeparator3.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadSeparator3.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadGroupBoxPunkt4.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadGroupBoxPunkt4.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel38.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel38.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel37.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel37.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt5EMax.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt5EMax.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt5QMax.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt5QMax.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt5Faktor.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt5Faktor.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt5Faktor.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt5Faktor.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel40.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel40.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt5QMAX.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt5QMAX.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxPunkt5.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxPunkt5.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadSeparator4.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadSeparator4.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadGroupBoxPunkt5.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadGroupBoxPunkt5.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxPunkt6aMax3.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxPunkt6aMax3.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxPunkt6aMax2.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxPunkt6aMax2.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel26.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel26.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel28.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel28.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt6aI3Eq.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt6aI3Eq.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt6aI2Eq.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt6aI2Eq.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel75.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel75.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel79.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel79.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt6aI3.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt6aI3.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt6aI2.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt6aI2.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel77.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel77.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt6aWaagenart.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt6aWaagenart.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt6aMax3.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt6aMax3.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt6aNind3.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt6aNind3.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt6aMax2.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt6aMax2.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt6aNind2.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt6aNind2.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt6aMax1.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt6aMax1.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt6aNind1.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt6aNind1.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxPunkt6aMax1.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxPunkt6aMax1.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadSeparator5.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadSeparator5.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadGroupBoxPunkt6a.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadGroupBoxPunkt6a.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel42.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel42.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel44.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel44.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt6bMax.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt6bMax.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt6bNLC.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt6bNLC.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt6bMax.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt6bMax.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel45.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel45.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxPunkt6b.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxPunkt6b.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadSeparator6.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadSeparator6.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadGroupBoxPunkt6b.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadGroupBoxPunkt6b.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel41.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel41.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel47.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel47.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt6cMAX.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt6cMAX.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt6cNLC.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt6cNLC.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt6cMax.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt6cMax.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel48.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel48.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxPunkt6c.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxPunkt6c.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadSeparator7.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadSeparator7.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadGroupBoxPunkt6c.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadGroupBoxPunkt6c.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel49.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel49.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel51.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel51.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt6dEMin.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt6dEMin.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt6dDL.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt6dDL.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel50.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel50.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel52.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel52.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxPunkt6d.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxPunkt6d.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadSeparator8.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadSeparator8.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadGroupBoxPunkt6d.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadGroupBoxPunkt6d.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel53.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel53.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel55.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel55.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt7eMax.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt7eMax.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt7e1.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt7e1.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel54.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel54.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel56.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel56.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxPunkt7.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxPunkt7.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadSeparator9.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadSeparator9.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadGroupBoxPunkt7.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadGroupBoxPunkt7.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxPunkt8D.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxPunkt8D.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel80.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel80.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt8Eingangspannung.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt8Eingangspannung.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel57.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel57.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel81.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel81.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt8DMIN.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt8DMIN.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel59.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel59.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt8D.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt8D.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel84.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel84.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel85.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel85.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt8OhneLast.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt8OhneLast.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt8MinVol.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPunkt8MinVol.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt8UMin.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt8UMin.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt8U.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt8U.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel58.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel58.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel60.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel60.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxPunkt8U.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxPunkt8U.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadSeparator10.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadSeparator10.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadGroupBoxPunkt8.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadGroupBoxPunkt8.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel82.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel82.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel86.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel86.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt9RLmin.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt9RLmin.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel65.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel65.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel63.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel63.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel64.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel64.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt9RLMax.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt9RLMax.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt9RLC.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt9RLC.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel66.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel66.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel68.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel68.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxPunkt9.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxPunkt9.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadSeparator11.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadSeparator11.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadGroupBoxPunkt9.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadGroupBoxPunkt9.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel70.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel70.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel67.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel67.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt10LAMax.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt10LAMax.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt10LA.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxPunkt10LA.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel69.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel69.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel71.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel71.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxPunkt10.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxPunkt10.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadSeparator12.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadSeparator12.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadGroupBoxPunkt10.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadGroupBoxPunkt10.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel87.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel87.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxFabriknummer.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxFabriknummer.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblFabriknummer.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblFabriknummer.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadScrollablePanel1.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadScrollablePanel1.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+</root>

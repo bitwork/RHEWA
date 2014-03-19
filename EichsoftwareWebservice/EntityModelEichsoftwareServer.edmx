@@ -36,6 +36,10 @@
           <EntitySet Name="ServerPruefungStaffelverfahrenNormallast" EntityType="EichenSQLDatabaseModel.Store.ServerPruefungStaffelverfahrenNormallast" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ServerPruefungWiederholbarkeit" EntityType="EichenSQLDatabaseModel.Store.ServerPruefungWiederholbarkeit" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ServerVerbindungsprotokoll" EntityType="EichenSQLDatabaseModel.Store.ServerVerbindungsprotokoll" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Benutzer_Firmen" Association="EichenSQLDatabaseModel.Store.FK_Benutzer_Firmen">
+            <End Role="Firmen" EntitySet="Firmen" />
+            <End Role="Benutzer" EntitySet="Benutzer" />
+          </AssociationSet>
           <AssociationSet Name="FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren" Association="EichenSQLDatabaseModel.Store.FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren">
             <End Role="ServerLookup_Konformitaetsbewertungsverfahren" EntitySet="ServerLookup_Konformitaetsbewertungsverfahren" />
             <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
@@ -128,14 +132,22 @@
             <End Role="ServerLookup_Bearbeitungsstatus" EntitySet="ServerLookup_Bearbeitungsstatus" />
             <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
           </AssociationSet>
+          <AssociationSet Name="FK_ServerFirmenZusatzdaten_Firmen" Association="EichenSQLDatabaseModel.Store.FK_ServerFirmenZusatzdaten_Firmen">
+            <End Role="Firmen" EntitySet="Firmen" />
+            <End Role="ServerFirmenZusatzdaten" EntitySet="ServerFirmenZusatzdaten" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServerLizensierung_Benutzer" Association="EichenSQLDatabaseModel.Store.FK_ServerLizensierung_Benutzer">
+            <End Role="Benutzer" EntitySet="Benutzer" />
+            <End Role="ServerLizensierung" EntitySet="ServerLizensierung" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Benutzer">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="nvarchar" Nullable="false" MaxLength="50" />
-          <Property Name="Vorname" Type="nvarchar(max)" />
-          <Property Name="Nachname" Type="nvarchar(max)" />
+          <Property Name="Vorname" Type="nvarchar" MaxLength="999" />
+          <Property Name="Nachname" Type="nvarchar" MaxLength="999" />
           <Property Name="Telefon" Type="nvarchar" MaxLength="50" />
           <Property Name="HEKennung" Type="nvarchar" MaxLength="50" />
           <Property Name="Firma_FK" Type="nvarchar" MaxLength="50" />
@@ -146,8 +158,8 @@
           </Key>
           <Property Name="ID" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="KundenNr" Type="nvarchar" MaxLength="50" />
-          <Property Name="Name" Type="nvarchar(max)" />
-          <Property Name="Strasse" Type="nvarchar(max)" />
+          <Property Name="Name" Type="nvarchar" MaxLength="999" />
+          <Property Name="Strasse" Type="nvarchar" MaxLength="999" />
           <Property Name="PLZ" Type="nvarchar" MaxLength="50" />
           <Property Name="Telefon" Type="nvarchar" MaxLength="50" />
           <Property Name="Ort" Type="nvarchar" MaxLength="50" />
@@ -241,7 +253,8 @@
           <Property Name="Archiv2014_Hinweismarke" Type="nvarchar" MaxLength="50" />
           <Property Name="Archiv2014_SicherungsmarkeGross" Type="nvarchar" MaxLength="50" />
           <Property Name="Archiv2014_SicherungsmarkeKlein" Type="nvarchar" MaxLength="50" />
-          <Property Name="Bemerkung" Type="nvarchar(max)" />
+          <Property Name="Bemerkung" Type="nvarchar" MaxLength="999" />
+          <Property Name="ZurBearbeitungGesperrtDurch" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="ServerEichprotokoll">
           <Key>
@@ -313,7 +326,7 @@
           <Property Name="Sicherung_AlibispeicherEingerichtet" Type="bit" />
           <Property Name="Sicherung_AlibispeicherAufbewahrungsdauerReduziert" Type="bit" />
           <Property Name="Sicherung_AlibispeicherAufbewahrungsdauerReduziertBegruendung" Type="nvarchar" MaxLength="255" />
-          <Property Name="Sicherung_Bemerkungen" Type="nvarchar(max)" />
+          <Property Name="Sicherung_Bemerkungen" Type="nvarchar" MaxLength="255" />
           <Property Name="Wiederholbarkeit_Staffelverfahren_MINNormalien" Type="nvarchar" MaxLength="10" />
           <Property Name="EignungAchlastwaegungen_WaagenbrueckeEbene" Type="bit" />
           <Property Name="EignungAchlastwaegungen_WaageNichtGeeignet" Type="bit" />
@@ -324,7 +337,6 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="ErzeugerLizenz" Type="nvarchar" MaxLength="50" />
           <Property Name="Vorgangsnummer" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="FK_Vorgangsstatus" Type="tinyint" Nullable="false" />
           <Property Name="FK_Auswertegeraet" Type="nvarchar" MaxLength="50" />
@@ -334,11 +346,12 @@
           <Property Name="FK_WaagenTyp" Type="tinyint" />
           <Property Name="FK_WaagenArt" Type="tinyint" />
           <Property Name="FK_Kompatibilitaetsnachweis" Type="int" />
-          <Property Name="FK_Bearbeitungsstatus" Type="tinyint" />
           <Property Name="Ausgeblendet" Type="bit" Nullable="false" />
-          <Property Name="UploadFilePath" Type="nvarchar(max)" />
+          <Property Name="FK_Bearbeitungsstatus" Type="tinyint" />
+          <Property Name="UploadFilePath" Type="nvarchar" MaxLength="255" />
           <Property Name="UploadDatum" Type="datetime" />
           <Property Name="BearbeitungsDatum" Type="datetime" />
+          <Property Name="ErzeugerLizenz" Type="nvarchar" MaxLength="50" />
           <Property Name="ZurBearbeitungGesperrtDurch" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="ServerFirmenZusatzdaten">
@@ -384,10 +397,10 @@
           <Property Name="Kompatiblitaet_Waage_Kabellaenge" Type="nvarchar" MaxLength="5" />
           <Property Name="Kompatiblitaet_Waage_Kabelquerschnitt" Type="nvarchar" MaxLength="10" />
           <Property Name="Kompatiblitaet_Verbindungselemente_BruchteilEichfehlergrenze" Type="nvarchar" MaxLength="50" />
-          <Property Name="Kompatiblitaet_Hersteller" Type="nvarchar(max)" />
-          <Property Name="Kompatiblitaet_Strasse" Type="nvarchar(max)" />
-          <Property Name="Kompatiblitaet_Ort" Type="nvarchar(max)" />
-          <Property Name="Kompatiblitaet_Postleitzahl" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Kompatiblitaet_Hersteller" Type="nvarchar" MaxLength="255" />
+          <Property Name="Kompatiblitaet_Strasse" Type="nvarchar" MaxLength="255" />
+          <Property Name="Kompatiblitaet_Ort" Type="nvarchar" MaxLength="255" />
+          <Property Name="Kompatiblitaet_Postleitzahl" Type="nvarchar" Nullable="false" MaxLength="255" />
           <Property Name="Kompatiblitaet_AWG_Anschlussart" Type="nvarchar" MaxLength="50" />
           <Property Name="Kompatiblitaet_WZ_Hoechstlast" Type="nvarchar" MaxLength="20" />
         </EntityType>
@@ -397,11 +410,11 @@
           </Key>
           <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="LetzteSynchronisierungMitRHEWA" Type="datetime" />
-          <Property Name="NetzwerkpfadFuerDateianhaenge" Type="nvarchar(max)" />
-          <Property Name="FTPServerAdresse" Type="nvarchar(max)" />
-          <Property Name="FTPServerBenutzername" Type="nvarchar(max)" />
-          <Property Name="FTPServerEnkodiertesPasswort" Type="nvarchar(max)" />
-          <Property Name="FTPServerCryptoSaltKey" Type="nvarchar(max)" />
+          <Property Name="NetzwerkpfadFuerDateianhaenge" Type="nvarchar" MaxLength="255" />
+          <Property Name="FTPServerAdresse" Type="nvarchar" MaxLength="255" />
+          <Property Name="FTPServerBenutzername" Type="nvarchar" MaxLength="255" />
+          <Property Name="FTPServerEnkodiertesPasswort" Type="nvarchar" MaxLength="255" />
+          <Property Name="FTPServerCryptoSaltKey" Type="nvarchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="ServerLizensierung">
           <Key>
@@ -437,7 +450,7 @@
           <Property Name="BruchteilEichfehlergrenze" Type="nvarchar" MaxLength="5" />
           <Property Name="KabellaengeQuerschnitt" Type="nvarchar" MaxLength="50" />
           <Property Name="ErstellDatum" Type="datetime" />
-          <Property Name="Deaktiviert" Type="bit" />
+          <Property Name="Deaktiviert" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="ServerLookup_Bearbeitungsstatus">
           <Key>
@@ -507,8 +520,8 @@
           <Property Name="GrenzwertTemperaturbereichMAX" Type="nvarchar" MaxLength="5" />
           <Property Name="BruchteilEichfehlergrenze" Type="nvarchar" MaxLength="5" />
           <Property Name="ErstellDatum" Type="datetime" />
-          <Property Name="Deaktiviert" Type="bit" />
-          <Property Name="Neu" Type="bit" />
+          <Property Name="Deaktiviert" Type="bit" Nullable="false" />
+          <Property Name="Neu" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="ServerLookupVertragspartnerFirma">
           <Key>
@@ -547,7 +560,7 @@
           <Property Name="Kompatiblitaet_Waage_Totlast" Type="nvarchar" Nullable="false" MaxLength="20" />
           <Property Name="Kompatiblitaet_Waage_Kabellaenge" Type="nvarchar" Nullable="false" MaxLength="5" />
           <Property Name="Kompatiblitaet_Waage_Kabelquerschnitt" Type="nvarchar" Nullable="false" MaxLength="10" />
-          <Property Name="Kompatiblitaet_AnschriftWaagenbaufirma" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Kompatiblitaet_AnschriftWaagenbaufirma" Type="nvarchar" Nullable="false" MaxLength="255" />
           <Property Name="Kompatiblitaet_Verbindungselemente_BruchteilEichfehlergrenze" Type="nchar" Nullable="false" MaxLength="10" />
           <Property Name="Kompatiblitaet_AWG_Anschlussart" Type="nchar" Nullable="false" MaxLength="10" />
           <Property Name="Kompatiblitaet_WZ_Hoechstlast" Type="nvarchar" MaxLength="20" />
@@ -717,12 +730,24 @@
           </Key>
           <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Lizenzschluessel_FK" Type="nvarchar" MaxLength="50" />
-          <Property Name="Domain" Type="nvarchar(max)" />
-          <Property Name="Computername" Type="nvarchar(max)" />
-          <Property Name="Windowsbenutzer" Type="nvarchar(max)" />
+          <Property Name="Domain" Type="nvarchar" MaxLength="255" />
+          <Property Name="Computername" Type="nvarchar" MaxLength="255" />
+          <Property Name="Windowsbenutzer" Type="nvarchar" MaxLength="255" />
           <Property Name="Aktion" Type="nvarchar" MaxLength="50" />
           <Property Name="Zeitstempel" Type="datetime" />
         </EntityType>
+        <Association Name="FK_Benutzer_Firmen">
+          <End Role="Firmen" Type="EichenSQLDatabaseModel.Store.Firmen" Multiplicity="0..1" />
+          <End Role="Benutzer" Type="EichenSQLDatabaseModel.Store.Benutzer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Firmen">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Benutzer">
+              <PropertyRef Name="Firma_FK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren">
           <End Role="ServerLookup_Konformitaetsbewertungsverfahren" Type="EichenSQLDatabaseModel.Store.ServerLookup_Konformitaetsbewertungsverfahren" Multiplicity="1" />
           <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.Store.ServerEichprotokoll" Multiplicity="*" />
@@ -999,6 +1024,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_ServerFirmenZusatzdaten_Firmen">
+          <End Role="Firmen" Type="EichenSQLDatabaseModel.Store.Firmen" Multiplicity="0..1" />
+          <End Role="ServerFirmenZusatzdaten" Type="EichenSQLDatabaseModel.Store.ServerFirmenZusatzdaten" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Firmen">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerFirmenZusatzdaten">
+              <PropertyRef Name="Firmen_FK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServerLizensierung_Benutzer">
+          <End Role="Benutzer" Type="EichenSQLDatabaseModel.Store.Benutzer" Multiplicity="0..1" />
+          <End Role="ServerLizensierung" Type="EichenSQLDatabaseModel.Store.ServerLizensierung" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Benutzer">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerLizensierung">
+              <PropertyRef Name="FK_BenutzerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
@@ -1126,6 +1175,18 @@
           <EntitySet Name="Firmen" EntityType="EichenSQLDatabaseModel.Firmen" />
           <EntitySet Name="ServerFirmenZusatzdaten" EntityType="EichenSQLDatabaseModel.ServerFirmenZusatzdaten" />
           <EntitySet Name="ServerLookupVertragspartnerFirma" EntityType="EichenSQLDatabaseModel.ServerLookupVertragspartnerFirma" />
+          <AssociationSet Name="FK_Benutzer_Firmen" Association="EichenSQLDatabaseModel.FK_Benutzer_Firmen">
+            <End Role="Firmen" EntitySet="Firmen" />
+            <End Role="Benutzer" EntitySet="Benutzer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServerLizensierung_Benutzer" Association="EichenSQLDatabaseModel.FK_ServerLizensierung_Benutzer">
+            <End Role="Benutzer" EntitySet="Benutzer" />
+            <End Role="ServerLizensierung" EntitySet="ServerLizensierung" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServerFirmenZusatzdaten_Firmen" Association="EichenSQLDatabaseModel.FK_ServerFirmenZusatzdaten_Firmen">
+            <End Role="Firmen" EntitySet="Firmen" />
+            <End Role="ServerFirmenZusatzdaten" EntitySet="ServerFirmenZusatzdaten" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="ServerBeschaffenheitspruefung">
           <Key>
@@ -1214,9 +1275,10 @@
           <Property Type="String" Name="Archiv2014_Hinweismarke" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Archiv2014_SicherungsmarkeGross" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Archiv2014_SicherungsmarkeKlein" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Bemerkung" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Bemerkung" MaxLength="999" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="HEKennung" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="FK_BenutzerID" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ZurBearbeitungGesperrtDurch" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="ServerEichprotokoll">
           <Key>
@@ -1287,7 +1349,7 @@
           <Property Name="Sicherung_AlibispeicherEingerichtet" Type="Boolean" />
           <Property Name="Sicherung_AlibispeicherAufbewahrungsdauerReduziert" Type="Boolean" />
           <Property Name="Sicherung_AlibispeicherAufbewahrungsdauerReduziertBegruendung" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
-          <Property Name="Sicherung_Bemerkungen" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Sicherung_Bemerkungen" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
           <Property Name="Wiederholbarkeit_Staffelverfahren_MINNormalien" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
           <Property Name="EignungAchlastwaegungen_WaagenbrueckeEbene" Type="Boolean" />
           <Property Name="EignungAchlastwaegungen_WaageNichtGeeignet" Type="Boolean" />
@@ -1331,9 +1393,9 @@
           <NavigationProperty Name="ServerLookup_Waegezelle" Relationship="EichenSQLDatabaseModel.FK_Eichprozess_Lookup_Waegezelle" FromRole="ServerEichprozess" ToRole="ServerLookup_Waegezelle" />
           <NavigationProperty Name="ServerMogelstatistik" Relationship="EichenSQLDatabaseModel.FK_Mogelstatistik_Eichprozess" FromRole="ServerEichprozess" ToRole="ServerMogelstatistik" />
           <Property Type="Byte" Name="FK_Bearbeitungsstatus" />
-          <Property Type="String" Name="UploadFilePath" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="UploadFilePath" MaxLength="255" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="ServerLookup_Bearbeitungsstatus" Relationship="EichenSQLDatabaseModel.FK_ServerEichprozess_ServerLookup_Bearbeitungsstatus" FromRole="ServerEichprozess" ToRole="ServerLookup_Bearbeitungsstatus" />
-          <Property Type="DateTime" Name="UploadDatum" Precision="3" />
+          <Property Type="DateTime" Name="UploadDatum" Precision="3" ConcurrencyMode="None" />
           <Property Type="DateTime" Name="BearbeitungsDatum" Precision="3" />
           <Property Type="String" Name="ErzeugerLizenz" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="ZurBearbeitungGesperrtDurch" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -1365,10 +1427,10 @@
           <Property Name="Kompatiblitaet_Waage_Kabellaenge" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
           <Property Name="Kompatiblitaet_Waage_Kabelquerschnitt" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
           <Property Name="Kompatiblitaet_Verbindungselemente_BruchteilEichfehlergrenze" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="Kompatiblitaet_Hersteller" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Kompatiblitaet_Strasse" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Kompatiblitaet_Ort" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Kompatiblitaet_Postleitzahl" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Kompatiblitaet_Hersteller" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Kompatiblitaet_Strasse" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Kompatiblitaet_Ort" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Kompatiblitaet_Postleitzahl" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
           <Property Name="Kompatiblitaet_AWG_Anschlussart" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="Kompatiblitaet_WZ_Hoechstlast" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
           <NavigationProperty Name="ServerEichprozess" Relationship="EichenSQLDatabaseModel.FK_Eichprozess_Kompatiblitaetsnachweis" FromRole="ServerKompatiblitaetsnachweis" ToRole="ServerEichprozess" />
@@ -1384,6 +1446,7 @@
           <Property Name="Aktiv" Type="Boolean" Nullable="false" />
           <Property Type="String" Name="HEKennung" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="FK_BenutzerID" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Benutzer" Relationship="EichenSQLDatabaseModel.FK_ServerLizensierung_Benutzer" FromRole="ServerLizensierung" ToRole="Benutzer" />
         </EntityType>
         <EntityType Name="ServerLookup_Auswertegeraet">
           <Key>
@@ -1407,7 +1470,7 @@
           <Property Name="BruchteilEichfehlergrenze" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
           <Property Name="KabellaengeQuerschnitt" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="ErstellDatum" Type="DateTime" Precision="3" />
-          <Property Name="Deaktiviert" Type="Boolean" />
+          <Property Name="Deaktiviert" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="ServerEichprozess" Relationship="EichenSQLDatabaseModel.FK_Eichprozess_Lookup_Auswertegeraet" FromRole="ServerLookup_Auswertegeraet" ToRole="ServerEichprozess" />
           <NavigationProperty Name="ServerMogelstatistik" Relationship="EichenSQLDatabaseModel.FK_Mogelstatistik_Lookup_Auswertegeraet" FromRole="ServerLookup_Auswertegeraet" ToRole="ServerMogelstatistik" />
         </EntityType>
@@ -1474,10 +1537,10 @@
           <Property Name="GrenzwertTemperaturbereichMAX" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
           <Property Name="BruchteilEichfehlergrenze" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
           <Property Name="ErstellDatum" Type="DateTime" Precision="3" />
-          <Property Name="Deaktiviert" Type="Boolean" />
+          <Property Name="Deaktiviert" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="ServerEichprozess" Relationship="EichenSQLDatabaseModel.FK_Eichprozess_Lookup_Waegezelle" FromRole="ServerLookup_Waegezelle" ToRole="ServerEichprozess" />
           <NavigationProperty Name="ServerMogelstatistik" Relationship="EichenSQLDatabaseModel.FK_Mogelstatistik_Lookup_Waegezelle" FromRole="ServerLookup_Waegezelle" ToRole="ServerMogelstatistik" />
-          <Property Type="Boolean" Name="Neu" />
+          <Property Type="Boolean" Name="Neu" Nullable="false" />
         </EntityType>
         <EntityType Name="ServerMogelstatistik">
           <Key>
@@ -1508,7 +1571,7 @@
           <Property Name="Kompatiblitaet_Waage_Totlast" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
           <Property Name="Kompatiblitaet_Waage_Kabellaenge" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="false" />
           <Property Name="Kompatiblitaet_Waage_Kabelquerschnitt" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
-          <Property Name="Kompatiblitaet_AnschriftWaagenbaufirma" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Kompatiblitaet_AnschriftWaagenbaufirma" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
           <Property Name="Kompatiblitaet_Verbindungselemente_BruchteilEichfehlergrenze" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
           <Property Name="Kompatiblitaet_AWG_Anschlussart" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
           <Property Name="Kompatiblitaet_WZ_Hoechstlast" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
@@ -1976,9 +2039,9 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="Domain" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Computername" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Windowsbenutzer" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Domain" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Computername" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Windowsbenutzer" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Aktion" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="DateTime" Name="Zeitstempel" Precision="3" />
           <Property Type="String" Name="Lizenzschluessel_FK" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -1989,22 +2052,24 @@
           </Key>
           <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Type="DateTime" Name="LetzteSynchronisierungMitRHEWA" Precision="3" />
-          <Property Type="String" Name="NetzwerkpfadFuerDateianhaenge" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="FTPServerAdresse" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="FTPServerBenutzername" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="FTPServerEnkodiertesPasswort" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="FTPServerCryptoSaltKey" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NetzwerkpfadFuerDateianhaenge" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FTPServerAdresse" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FTPServerBenutzername" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FTPServerEnkodiertesPasswort" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FTPServerCryptoSaltKey" MaxLength="255" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Benutzer">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Type="String" Name="ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Vorname" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Nachname" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Vorname" MaxLength="999" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Nachname" MaxLength="999" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Telefon" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="HEKennung" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Firma_FK" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Firmen" Relationship="EichenSQLDatabaseModel.FK_Benutzer_Firmen" FromRole="Benutzer" ToRole="Firmen" />
+          <NavigationProperty Name="ServerLizensierung" Relationship="EichenSQLDatabaseModel.FK_ServerLizensierung_Benutzer" FromRole="Benutzer" ToRole="ServerLizensierung" />
         </EntityType>
         <EntityType Name="Firmen">
           <Key>
@@ -2012,12 +2077,14 @@
           </Key>
           <Property Type="String" Name="ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="KundenNr" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Name" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Strasse" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Name" MaxLength="999" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Strasse" MaxLength="999" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="PLZ" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Telefon" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Ort" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Land" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Benutzer" Relationship="EichenSQLDatabaseModel.FK_Benutzer_Firmen" FromRole="Firmen" ToRole="Benutzer" />
+          <NavigationProperty Name="ServerFirmenZusatzdaten" Relationship="EichenSQLDatabaseModel.FK_ServerFirmenZusatzdaten_Firmen" FromRole="Firmen" ToRole="ServerFirmenZusatzdaten" />
         </EntityType>
         <EntityType Name="ServerFirmenZusatzdaten">
           <Key>
@@ -2034,6 +2101,7 @@
           <Property Type="String" Name="MonatJahrZertifikat" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="DateTime" Name="Nachschulung" Precision="0" />
           <Property Type="DateTime" Name="LetztesAudit" Precision="0" />
+          <NavigationProperty Name="Firmen" Relationship="EichenSQLDatabaseModel.FK_ServerFirmenZusatzdaten_Firmen" FromRole="ServerFirmenZusatzdaten" ToRole="Firmen" />
         </EntityType>
         <EntityType Name="ServerLookupVertragspartnerFirma">
           <Key>
@@ -2043,6 +2111,42 @@
           <Property Type="String" Name="Firma_FK" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Vertragspartner_FK" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
+        <Association Name="FK_Benutzer_Firmen">
+          <End Type="EichenSQLDatabaseModel.Firmen" Role="Firmen" Multiplicity="0..1" />
+          <End Type="EichenSQLDatabaseModel.Benutzer" Role="Benutzer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Firmen">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Benutzer">
+              <PropertyRef Name="Firma_FK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServerLizensierung_Benutzer">
+          <End Type="EichenSQLDatabaseModel.Benutzer" Role="Benutzer" Multiplicity="0..1" />
+          <End Type="EichenSQLDatabaseModel.ServerLizensierung" Role="ServerLizensierung" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Benutzer">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerLizensierung">
+              <PropertyRef Name="FK_BenutzerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServerFirmenZusatzdaten_Firmen">
+          <End Type="EichenSQLDatabaseModel.Firmen" Role="Firmen" Multiplicity="0..1" />
+          <End Type="EichenSQLDatabaseModel.ServerFirmenZusatzdaten" Role="ServerFirmenZusatzdaten" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Firmen">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerFirmenZusatzdaten">
+              <PropertyRef Name="Firmen_FK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -2074,6 +2178,7 @@
           <EntitySetMapping Name="ServerEichmarkenverwaltung">
             <EntityTypeMapping TypeName="EichenSQLDatabaseModel.ServerEichmarkenverwaltung">
               <MappingFragment StoreEntitySet="ServerEichmarkenverwaltung">
+                <ScalarProperty Name="ZurBearbeitungGesperrtDurch" ColumnName="ZurBearbeitungGesperrtDurch" />
                 <ScalarProperty Name="FK_BenutzerID" ColumnName="FK_BenutzerID" />
                 <ScalarProperty Name="HEKennung" ColumnName="HEKennung" />
                 <ScalarProperty Name="Bemerkung" ColumnName="Bemerkung" />

@@ -18,4 +18,7 @@ Partial Public Class Benutzer
     Public Property HEKennung As String
     Public Property Firma_FK As String
 
+    Public Overridable Property Firmen As Firmen
+    Public Overridable Property ServerLizensierung As ICollection(Of ServerLizensierung) = New HashSet(Of ServerLizensierung)
+
 End Class

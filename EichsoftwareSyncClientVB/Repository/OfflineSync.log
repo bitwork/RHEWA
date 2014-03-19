@@ -1,0 +1,3 @@
+Sqlcmd: Fehler: Microsoft SQL Server Native Client 11.0 : SQL Server-Netzwerkschnittstellen: Fehler beim Suchen des angegebenen Servers/der angegebenen Instanz [xFFFFFFFF]. .
+Sqlcmd: Fehler: Microsoft SQL Server Native Client 11.0 : Anmeldungstimeout abgelaufen.
+Sqlcmd: Fehler: Microsoft SQL Server Native Client 11.0 : Netzwerkbezogener oder instanzspezifischer Fehler beim Herstellen einer Verbindung mit SQL Server. Der Server wurde nicht gefunden, oder auf ihn kann nicht zugegriffen werden. Überprüfen Sie, ob der Instanzname richtig ist und ob SQL Server Remoteverbindungen zulässt. Weitere Informationen erhalten Sie in der SQL Server-Onlinedokumentation..

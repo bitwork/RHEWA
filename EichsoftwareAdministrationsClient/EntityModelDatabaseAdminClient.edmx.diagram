@@ -19,6 +19,8 @@
         <AssociationConnector Association="EichenModel.FK_Mogelstatistik_Lookup_Waegezelle" />
         <EntityTypeShape EntityType="EichenModel.ServerEichmarkenverwaltung" Width="3.625" PointX="14.875" PointY="7.625" />
         <AssociationConnector Association="EichenModel.FK_ServerFirmenZusatzdaten_Firmen" />
+        <AssociationConnector Association="EichenModel.FK_Benutzer_Firmen" />
+        <AssociationConnector Association="EichenModel.FK_ServerLizensierung_Benutzer" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

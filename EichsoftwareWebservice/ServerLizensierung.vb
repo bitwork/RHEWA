@@ -19,4 +19,6 @@ Partial Public Class ServerLizensierung
     Public Property HEKennung As String
     Public Property FK_BenutzerID As String
 
+    Public Overridable Property Benutzer As Benutzer
+
 End Class

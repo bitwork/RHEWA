@@ -75,5 +75,6 @@ Partial Public Class ServerEichmarkenverwaltung
     Public Property Bemerkung As String
     Public Property HEKennung As String
     Public Property FK_BenutzerID As String
+    Public Property ZurBearbeitungGesperrtDurch As String
 
 End Class

@@ -23,4 +23,6 @@ Partial Public Class ServerFirmenZusatzdaten
     Public Property Nachschulung As Nullable(Of Date)
     Public Property LetztesAudit As Nullable(Of Date)
 
+    Public Overridable Property Firmen As Firmen
+
 End Class

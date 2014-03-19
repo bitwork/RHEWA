@@ -20,4 +20,7 @@ Partial Public Class Firmen
     Public Property Ort As String
     Public Property Land As String
 
+    Public Overridable Property Benutzer As ICollection(Of Benutzer) = New HashSet(Of Benutzer)
+    Public Overridable Property ServerFirmenZusatzdaten As ICollection(Of ServerFirmenZusatzdaten) = New HashSet(Of ServerFirmenZusatzdaten)
+
 End Class

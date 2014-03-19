@@ -5,29 +5,29 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="6d32b71ac94e4200b960274d482a3d38" Name="Diagram1" ZoomLevel="98">
-        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.Beschaffenheitspruefung" Width="1.5" PointX="8.8684617918303523" PointY="31.431398585173952" />
-        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.Eichprotokoll" Width="1.5" PointX="5.7213277619897056" PointY="22.373846124100428" />
-        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.Eichprozess" Width="1.5" PointX="2.1365403300787045" PointY="16.962725051195697" />
-        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.Kompatiblitaetsnachweis" Width="1.5" PointX="2.1973610400209953" PointY="22.282128567938752" />
-        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.Lizensierung" Width="1.5" PointX="0.22361146296542672" PointY="9.079748023804159" />
-        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.Lookup_Auswertegeraet" Width="1.5" PointX="8.67470931106932" PointY="23.138732980535707" />
-        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.Lookup_Bearbeitungsstatus" Width="1.5" PointX="0.54174770440056352" PointY="11.899016713676517" />
-        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.Lookup_Konformitaetsbewertungsverfahren" Width="1.5" PointX="1.09235794148052" PointY="0.722659364679204" />
-        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.Lookup_Vorgangsstatus" Width="1.5" PointX="9.2293620171162125" PointY="0.0998513102996402" />
-        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.Lookup_Waagenart" Width="1.5" PointX="3.4222762153587656" PointY="28.876202328538618" />
-        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.Lookup_Waagentyp" Width="1.5" PointX="11.013467352377933" PointY="15.927032686735984" />
-        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.Lookup_Waegezelle" Width="1.5" PointX="5.0779143893522738" PointY="25.313157927856388" />
-        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.Mogelstatistik" Width="1.5" PointX="8.4912680911325236" PointY="26.970400942010059" />
-        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.PruefungAnsprechvermoegen" Width="1.5" PointX="7.3001203123946308" PointY="23.94578362626293" />
-        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.PruefungAussermittigeBelastung" Width="1.5" PointX="9.33756960431932" PointY="25.818100047213072" />
-        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.PruefungEichfehlergrenzen" Width="1.5" PointX="3.6390897927987806" PointY="25.109591704378644" />
-        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.PruefungLinearitaetFallend" Width="1.5" PointX="6.7045371973442558" PointY="23.724045690020567" />
-        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.PruefungLinearitaetSteigend" Width="1.5" PointX="10.534016299310149" PointY="20.772987420099316" />
-        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.PruefungRollendeLasten" Width="1.5" PointX="9.2887183973978829" PointY="25.351603624108993" />
-        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.PruefungStabilitaetGleichgewichtslage" Width="1.5" PointX="0.651118409191779" PointY="7.4427854155389523" />
-        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.PruefungStaffelverfahrenErsatzlast" Width="1.5" PointX="10.388213780889387" PointY="21.765088493826376" />
-        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.PruefungStaffelverfahrenNormallast" Width="1.5" PointX="1.6181736428375233" PointY="31.236072703840247" />
-        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.PruefungWiederholbarkeit" Width="1.5" PointX="11.228839292763192" PointY="27.11715493868904" />
+        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.Beschaffenheitspruefung" Width="1.5" PointX="6" PointY="8.75" />
+        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.Eichprotokoll" Width="1.5" PointX="3" PointY="19.375" />
+        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.Eichprozess" Width="1.5" PointX="8.25" PointY="25.125" />
+        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.Kompatiblitaetsnachweis" Width="1.5" PointX="6" PointY="0.75" />
+        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.Lizensierung" Width="1.5" PointX="0.75" PointY="1.5" />
+        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.Lookup_Auswertegeraet" Width="1.5" PointX="6" PointY="55.25" />
+        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.Lookup_Bearbeitungsstatus" Width="1.5" PointX="6" PointY="60.875" />
+        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.Lookup_Konformitaetsbewertungsverfahren" Width="1.5" PointX="0.75" PointY="26.875" />
+        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.Lookup_Vorgangsstatus" Width="1.5" PointX="6" PointY="64.625" />
+        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.Lookup_Waagenart" Width="1.5" PointX="6" PointY="67.375" />
+        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.Lookup_Waagentyp" Width="1.5" PointX="6" PointY="70.125" />
+        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.Lookup_Waegezelle" Width="1.5" PointX="6" PointY="72.875" />
+        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.Mogelstatistik" Width="1.5" PointX="10.5" PointY="24.25" />
+        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.PruefungAnsprechvermoegen" Width="1.5" PointX="5.25" PointY="14.125" />
+        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.PruefungAussermittigeBelastung" Width="1.5" PointX="5.25" PointY="17.5" />
+        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.PruefungEichfehlergrenzen" Width="1.5" PointX="5.25" PointY="21.125" />
+        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.PruefungLinearitaetFallend" Width="1.5" PointX="5.25" PointY="24.625" />
+        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.PruefungLinearitaetSteigend" Width="1.5" PointX="5.25" PointY="28.125" />
+        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.PruefungRollendeLasten" Width="1.5" PointX="5.25" PointY="31.625" />
+        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.PruefungStabilitaetGleichgewichtslage" Width="1.5" PointX="5.25" PointY="35.375" />
+        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.PruefungStaffelverfahrenErsatzlast" Width="1.5" PointX="5.25" PointY="38.875" />
+        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.PruefungStaffelverfahrenNormallast" Width="1.5" PointX="5.25" PointY="47.75" />
+        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.PruefungWiederholbarkeit" Width="1.5" PointX="5.25" PointY="44.125" />
         <AssociationConnector Association="EichsoftwareClientdatabaseModel.FK_Eichprozess_Beschaffenheitspruefung" />
         <AssociationConnector Association="EichsoftwareClientdatabaseModel.FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren" />
         <AssociationConnector Association="EichsoftwareClientdatabaseModel.FK_Eichprozess_Eichprotokoll" />
