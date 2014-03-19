@@ -34,6 +34,7 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadButtonClientNeu = New Telerik.WinControls.UI.RadButton()
         Me.RadButtonClientBearbeiten = New Telerik.WinControls.UI.RadButton()
         Me.RadPageViewPageAlle = New Telerik.WinControls.UI.RadPageViewPage()
+        Me.RadButtonRefresh = New Telerik.WinControls.UI.RadButton()
         Me.RadProgressBar = New Telerik.WinControls.UI.RadProgressBar()
         Me.RadButtonEichprozessKopierenRHEWA = New Telerik.WinControls.UI.RadButton()
         Me.RadButtonEichprozessAblehnenRHEWA = New Telerik.WinControls.UI.RadButton()
@@ -54,6 +55,7 @@ Partial Class ucoEichprozessauswahlliste
         CType(Me.RadButtonClientNeu, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonClientBearbeiten, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadPageViewPageAlle.SuspendLayout()
+        CType(Me.RadButtonRefresh, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadProgressBar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonEichprozessKopierenRHEWA, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonEichprozessAblehnenRHEWA, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -84,7 +86,6 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadGridViewAuswahlliste.RootElement.AngleTransform = CType(resources.GetObject("RadGridViewAuswahlliste.RootElement.AngleTransform"), Single)
         Me.RadGridViewAuswahlliste.RootElement.FlipText = CType(resources.GetObject("RadGridViewAuswahlliste.RootElement.FlipText"), Boolean)
         Me.RadGridViewAuswahlliste.RootElement.Margin = CType(resources.GetObject("RadGridViewAuswahlliste.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadGridViewAuswahlliste.RootElement.Padding = CType(resources.GetObject("RadGridViewAuswahlliste.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadGridViewAuswahlliste.RootElement.Text = resources.GetString("RadGridViewAuswahlliste.RootElement.Text")
         Me.RadGridViewAuswahlliste.RootElement.TextOrientation = CType(resources.GetObject("RadGridViewAuswahlliste.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadGridViewAuswahlliste.ShowGroupPanel = False
@@ -108,7 +109,6 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadPageView1.RootElement.AngleTransform = CType(resources.GetObject("RadPageView1.RootElement.AngleTransform"), Single)
         Me.RadPageView1.RootElement.FlipText = CType(resources.GetObject("RadPageView1.RootElement.FlipText"), Boolean)
         Me.RadPageView1.RootElement.Margin = CType(resources.GetObject("RadPageView1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadPageView1.RootElement.Padding = CType(resources.GetObject("RadPageView1.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadPageView1.RootElement.Text = resources.GetString("RadPageView1.RootElement.Text")
         Me.RadPageView1.RootElement.TextOrientation = CType(resources.GetObject("RadPageView1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadPageView1.SelectedPage = Me.RadPageViewPageEigene
@@ -141,7 +141,6 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadButtonEinstellungen.RootElement.AngleTransform = CType(resources.GetObject("RadButtonEinstellungen.RootElement.AngleTransform"), Single)
         Me.RadButtonEinstellungen.RootElement.FlipText = CType(resources.GetObject("RadButtonEinstellungen.RootElement.FlipText"), Boolean)
         Me.RadButtonEinstellungen.RootElement.Margin = CType(resources.GetObject("RadButtonEinstellungen.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButtonEinstellungen.RootElement.Padding = CType(resources.GetObject("RadButtonEinstellungen.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadButtonEinstellungen.RootElement.Text = resources.GetString("RadButtonEinstellungen.RootElement.Text")
         Me.RadButtonEinstellungen.RootElement.TextOrientation = CType(resources.GetObject("RadButtonEinstellungen.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         CType(Me.RadButtonEinstellungen.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = Global.EichsoftwareClient.My.Resources.Resources.cog
@@ -164,7 +163,6 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadButtonClientUpdateDatabase.RootElement.AngleTransform = CType(resources.GetObject("RadButtonClientUpdateDatabase.RootElement.AngleTransform"), Single)
         Me.RadButtonClientUpdateDatabase.RootElement.FlipText = CType(resources.GetObject("RadButtonClientUpdateDatabase.RootElement.FlipText"), Boolean)
         Me.RadButtonClientUpdateDatabase.RootElement.Margin = CType(resources.GetObject("RadButtonClientUpdateDatabase.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButtonClientUpdateDatabase.RootElement.Padding = CType(resources.GetObject("RadButtonClientUpdateDatabase.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadButtonClientUpdateDatabase.RootElement.Text = resources.GetString("RadButtonClientUpdateDatabase.RootElement.Text")
         Me.RadButtonClientUpdateDatabase.RootElement.TextOrientation = CType(resources.GetObject("RadButtonClientUpdateDatabase.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -182,7 +180,6 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadCheckBoxAusblendenClientGeloeschterDokumente.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxAusblendenClientGeloeschterDokumente.RootElement.AngleTransform"), Single)
         Me.RadCheckBoxAusblendenClientGeloeschterDokumente.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxAusblendenClientGeloeschterDokumente.RootElement.FlipText"), Boolean)
         Me.RadCheckBoxAusblendenClientGeloeschterDokumente.RootElement.Margin = CType(resources.GetObject("RadCheckBoxAusblendenClientGeloeschterDokumente.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadCheckBoxAusblendenClientGeloeschterDokumente.RootElement.Padding = CType(resources.GetObject("RadCheckBoxAusblendenClientGeloeschterDokumente.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadCheckBoxAusblendenClientGeloeschterDokumente.RootElement.Text = resources.GetString("RadCheckBoxAusblendenClientGeloeschterDokumente.RootElement.Text")
         Me.RadCheckBoxAusblendenClientGeloeschterDokumente.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxAusblendenClientGeloeschterDokumente.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -200,7 +197,6 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadButtonClientAusblenden.RootElement.AngleTransform = CType(resources.GetObject("RadButtonClientAusblenden.RootElement.AngleTransform"), Single)
         Me.RadButtonClientAusblenden.RootElement.FlipText = CType(resources.GetObject("RadButtonClientAusblenden.RootElement.FlipText"), Boolean)
         Me.RadButtonClientAusblenden.RootElement.Margin = CType(resources.GetObject("RadButtonClientAusblenden.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButtonClientAusblenden.RootElement.Padding = CType(resources.GetObject("RadButtonClientAusblenden.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadButtonClientAusblenden.RootElement.Text = resources.GetString("RadButtonClientAusblenden.RootElement.Text")
         Me.RadButtonClientAusblenden.RootElement.TextOrientation = CType(resources.GetObject("RadButtonClientAusblenden.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -218,7 +214,6 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadButtonClientNeu.RootElement.AngleTransform = CType(resources.GetObject("RadButtonClientNeu.RootElement.AngleTransform"), Single)
         Me.RadButtonClientNeu.RootElement.FlipText = CType(resources.GetObject("RadButtonClientNeu.RootElement.FlipText"), Boolean)
         Me.RadButtonClientNeu.RootElement.Margin = CType(resources.GetObject("RadButtonClientNeu.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButtonClientNeu.RootElement.Padding = CType(resources.GetObject("RadButtonClientNeu.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadButtonClientNeu.RootElement.Text = resources.GetString("RadButtonClientNeu.RootElement.Text")
         Me.RadButtonClientNeu.RootElement.TextOrientation = CType(resources.GetObject("RadButtonClientNeu.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -236,12 +231,12 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadButtonClientBearbeiten.RootElement.AngleTransform = CType(resources.GetObject("RadButtonClientBearbeiten.RootElement.AngleTransform"), Single)
         Me.RadButtonClientBearbeiten.RootElement.FlipText = CType(resources.GetObject("RadButtonClientBearbeiten.RootElement.FlipText"), Boolean)
         Me.RadButtonClientBearbeiten.RootElement.Margin = CType(resources.GetObject("RadButtonClientBearbeiten.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButtonClientBearbeiten.RootElement.Padding = CType(resources.GetObject("RadButtonClientBearbeiten.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadButtonClientBearbeiten.RootElement.Text = resources.GetString("RadButtonClientBearbeiten.RootElement.Text")
         Me.RadButtonClientBearbeiten.RootElement.TextOrientation = CType(resources.GetObject("RadButtonClientBearbeiten.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
         'RadPageViewPageAlle
         '
+        Me.RadPageViewPageAlle.Controls.Add(Me.RadButtonRefresh)
         Me.RadPageViewPageAlle.Controls.Add(Me.RadProgressBar)
         Me.RadPageViewPageAlle.Controls.Add(Me.RadButtonEichprozessKopierenRHEWA)
         Me.RadPageViewPageAlle.Controls.Add(Me.RadButtonEichprozessAblehnenRHEWA)
@@ -250,6 +245,23 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadPageViewPageAlle.Controls.Add(Me.RadButtonEichungAnsehenRHEWA)
         resources.ApplyResources(Me.RadPageViewPageAlle, "RadPageViewPageAlle")
         Me.RadPageViewPageAlle.Name = "RadPageViewPageAlle"
+        '
+        'RadButtonRefresh
+        '
+        resources.ApplyResources(Me.RadButtonRefresh, "RadButtonRefresh")
+        Me.RadButtonRefresh.Image = Global.EichsoftwareClient.My.Resources.Resources.database_refresh
+        Me.RadButtonRefresh.Name = "RadButtonRefresh"
+        '
+        '
+        '
+        Me.RadButtonRefresh.RootElement.AccessibleDescription = resources.GetString("RadButton1.RootElement.AccessibleDescription")
+        Me.RadButtonRefresh.RootElement.AccessibleName = resources.GetString("RadButton1.RootElement.AccessibleName")
+        Me.RadButtonRefresh.RootElement.Alignment = CType(resources.GetObject("RadButton1.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.RadButtonRefresh.RootElement.AngleTransform = CType(resources.GetObject("RadButton1.RootElement.AngleTransform"), Single)
+        Me.RadButtonRefresh.RootElement.FlipText = CType(resources.GetObject("RadButton1.RootElement.FlipText"), Boolean)
+        Me.RadButtonRefresh.RootElement.Margin = CType(resources.GetObject("RadButton1.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadButtonRefresh.RootElement.Text = resources.GetString("RadButton1.RootElement.Text")
+        Me.RadButtonRefresh.RootElement.TextOrientation = CType(resources.GetObject("RadButton1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
         'RadProgressBar
         '
@@ -264,7 +276,6 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadProgressBar.RootElement.AngleTransform = CType(resources.GetObject("RadProgressBar.RootElement.AngleTransform"), Single)
         Me.RadProgressBar.RootElement.FlipText = CType(resources.GetObject("RadProgressBar.RootElement.FlipText"), Boolean)
         Me.RadProgressBar.RootElement.Margin = CType(resources.GetObject("RadProgressBar.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadProgressBar.RootElement.Padding = CType(resources.GetObject("RadProgressBar.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadProgressBar.RootElement.Text = resources.GetString("RadProgressBar.RootElement.Text")
         Me.RadProgressBar.RootElement.TextOrientation = CType(resources.GetObject("RadProgressBar.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -282,7 +293,6 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadButtonEichprozessKopierenRHEWA.RootElement.AngleTransform = CType(resources.GetObject("RadButtonEichprozessKopierenRHEWA.RootElement.AngleTransform"), Single)
         Me.RadButtonEichprozessKopierenRHEWA.RootElement.FlipText = CType(resources.GetObject("RadButtonEichprozessKopierenRHEWA.RootElement.FlipText"), Boolean)
         Me.RadButtonEichprozessKopierenRHEWA.RootElement.Margin = CType(resources.GetObject("RadButtonEichprozessKopierenRHEWA.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButtonEichprozessKopierenRHEWA.RootElement.Padding = CType(resources.GetObject("RadButtonEichprozessKopierenRHEWA.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadButtonEichprozessKopierenRHEWA.RootElement.Text = resources.GetString("RadButtonEichprozessKopierenRHEWA.RootElement.Text")
         Me.RadButtonEichprozessKopierenRHEWA.RootElement.TextOrientation = CType(resources.GetObject("RadButtonEichprozessKopierenRHEWA.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -300,7 +310,6 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadButtonEichprozessAblehnenRHEWA.RootElement.AngleTransform = CType(resources.GetObject("RadButtonEichprozessAblehnenRHEWA.RootElement.AngleTransform"), Single)
         Me.RadButtonEichprozessAblehnenRHEWA.RootElement.FlipText = CType(resources.GetObject("RadButtonEichprozessAblehnenRHEWA.RootElement.FlipText"), Boolean)
         Me.RadButtonEichprozessAblehnenRHEWA.RootElement.Margin = CType(resources.GetObject("RadButtonEichprozessAblehnenRHEWA.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButtonEichprozessAblehnenRHEWA.RootElement.Padding = CType(resources.GetObject("RadButtonEichprozessAblehnenRHEWA.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadButtonEichprozessAblehnenRHEWA.RootElement.Text = resources.GetString("RadButtonEichprozessAblehnenRHEWA.RootElement.Text")
         Me.RadButtonEichprozessAblehnenRHEWA.RootElement.TextOrientation = CType(resources.GetObject("RadButtonEichprozessAblehnenRHEWA.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -318,7 +327,6 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadButtonEichprozessGenehmigenRHEWA.RootElement.AngleTransform = CType(resources.GetObject("RadButtonEichprozessGenehmigenRHEWA.RootElement.AngleTransform"), Single)
         Me.RadButtonEichprozessGenehmigenRHEWA.RootElement.FlipText = CType(resources.GetObject("RadButtonEichprozessGenehmigenRHEWA.RootElement.FlipText"), Boolean)
         Me.RadButtonEichprozessGenehmigenRHEWA.RootElement.Margin = CType(resources.GetObject("RadButtonEichprozessGenehmigenRHEWA.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButtonEichprozessGenehmigenRHEWA.RootElement.Padding = CType(resources.GetObject("RadButtonEichprozessGenehmigenRHEWA.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadButtonEichprozessGenehmigenRHEWA.RootElement.Text = resources.GetString("RadButtonEichprozessGenehmigenRHEWA.RootElement.Text")
         Me.RadButtonEichprozessGenehmigenRHEWA.RootElement.TextOrientation = CType(resources.GetObject("RadButtonEichprozessGenehmigenRHEWA.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -343,7 +351,6 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadGridViewRHEWAAlle.RootElement.AngleTransform = CType(resources.GetObject("RadGridViewRHEWAAlle.RootElement.AngleTransform"), Single)
         Me.RadGridViewRHEWAAlle.RootElement.FlipText = CType(resources.GetObject("RadGridViewRHEWAAlle.RootElement.FlipText"), Boolean)
         Me.RadGridViewRHEWAAlle.RootElement.Margin = CType(resources.GetObject("RadGridViewRHEWAAlle.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadGridViewRHEWAAlle.RootElement.Padding = CType(resources.GetObject("RadGridViewRHEWAAlle.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadGridViewRHEWAAlle.RootElement.Text = resources.GetString("RadGridViewRHEWAAlle.RootElement.Text")
         Me.RadGridViewRHEWAAlle.RootElement.TextOrientation = CType(resources.GetObject("RadGridViewRHEWAAlle.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadGridViewRHEWAAlle.ShowNoDataText = False
@@ -362,7 +369,6 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadButtonEichungAnsehenRHEWA.RootElement.AngleTransform = CType(resources.GetObject("RadButtonEichungAnsehenRHEWA.RootElement.AngleTransform"), Single)
         Me.RadButtonEichungAnsehenRHEWA.RootElement.FlipText = CType(resources.GetObject("RadButtonEichungAnsehenRHEWA.RootElement.FlipText"), Boolean)
         Me.RadButtonEichungAnsehenRHEWA.RootElement.Margin = CType(resources.GetObject("RadButtonEichungAnsehenRHEWA.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButtonEichungAnsehenRHEWA.RootElement.Padding = CType(resources.GetObject("RadButtonEichungAnsehenRHEWA.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadButtonEichungAnsehenRHEWA.RootElement.Text = resources.GetString("RadButtonEichungAnsehenRHEWA.RootElement.Text")
         Me.RadButtonEichungAnsehenRHEWA.RootElement.TextOrientation = CType(resources.GetObject("RadButtonEichungAnsehenRHEWA.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -393,6 +399,7 @@ Partial Class ucoEichprozessauswahlliste
         CType(Me.RadButtonClientNeu, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonClientBearbeiten, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadPageViewPageAlle.ResumeLayout(False)
+        CType(Me.RadButtonRefresh, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadProgressBar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonEichprozessKopierenRHEWA, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonEichprozessAblehnenRHEWA, System.ComponentModel.ISupportInitialize).EndInit()
@@ -422,5 +429,6 @@ Partial Class ucoEichprozessauswahlliste
     Friend WithEvents RadButtonEinstellungen As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadProgressBar As Telerik.WinControls.UI.RadProgressBar
     Friend WithEvents BackgroundWorkerDownloadFromFTP As System.ComponentModel.BackgroundWorker
+    Friend WithEvents RadButtonRefresh As Telerik.WinControls.UI.RadButton
 
 End Class

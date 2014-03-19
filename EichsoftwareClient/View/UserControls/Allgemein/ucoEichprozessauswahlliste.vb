@@ -101,6 +101,10 @@
 
     End Sub
 
+    Private Sub RadButton1_Click(sender As Object, e As EventArgs) Handles RadButtonRefresh.Click
+        LoadFromDatabase()
+    End Sub
+
     ''' <summary>
     ''' Ein und ausblenden sowie lokalisierung des Grids 
     ''' </summary>
@@ -824,4 +828,5 @@
 
 
 
+  
 End Class

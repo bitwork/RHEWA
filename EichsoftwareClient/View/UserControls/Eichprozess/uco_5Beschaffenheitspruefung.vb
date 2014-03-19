@@ -192,6 +192,15 @@ Public Class uco_5Beschaffenheitspruefung
             End If
         Next
         If AbortSaveing = True Then
+            If Debugger.IsAttached Then
+                If MessageBox.Show("Validierung überspringen?", "", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+                    Me.AbortSaveing = False
+                    Return True
+                Else
+                  MessageBox.Show(My.Resources.GlobaleLokalisierung.PflichtfelderAusfuellen, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    Return False
+                End If
+            End If
             MessageBox.Show(My.Resources.GlobaleLokalisierung.PflichtfelderAusfuellen, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             Return False
         End If

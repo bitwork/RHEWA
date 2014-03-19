@@ -194,17 +194,7 @@ Public Class EichsoftwareWebservice
                     pObjEichprozess.BearbeitungsDatum = Date.Now
                     pObjEichprozess.ErzeugerLizenz = Lizenzschluessel 'lizenzschlüssel zur identifizierung des datensatztes hinzufügen
 
-                    'wenn neue WZ vorhanden ist
-                    If pObjEichprozess.ServerLookup_Waegezelle.Neu Then
-                        Try
-                            DbContext.ServerLookup_Waegezelle.Add(pObjEichprozess.ServerLookup_Waegezelle)
-                            DbContext.SaveChanges()
-                        Catch ex As Exception
-                            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
-
-                        End Try
-                    End If
-
+                  
                     DbContext.ServerEichprozess.Add(pObjEichprozess)
                     DbContext.SaveChanges()
 

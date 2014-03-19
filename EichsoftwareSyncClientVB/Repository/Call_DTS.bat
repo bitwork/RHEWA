@@ -31,7 +31,7 @@ echo *** Log ****
 type OfflineSync.log
 
 Rem start synchronize
-call offline_synchronization^
+Rem call offline_synchronization^
  DestinationServerName\SQLExpressDBServiceName,^
  DestinationDatabaseName,^
  DestinationDatabaseUserName,^

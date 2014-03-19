@@ -817,8 +817,11 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
         SelectedId = e.Row.Cells("ID").Value
         'auf Sperrung prüfen
         Using Context As New EichenEntities
-            Dim objEichmarke As ServerEichmarkenverwaltung = (From Eichmarkenverwaltung In Context.ServerEichmarkenverwaltung Where Eichmarkenverwaltung.ID = SelectedId Select Eichmarkenverwaltung).FirstOrDefault
 
+            Dim objEichmarke As ServerEichmarkenverwaltung = (From Eichmarkenverwaltung In Context.ServerEichmarkenverwaltung Where Eichmarkenverwaltung.ID = SelectedId Select Eichmarkenverwaltung).FirstOrDefault
+            If objEichmarke Is Nothing Then
+                Exit Sub
+            End If
             If objEichmarke.ZurBearbeitungGesperrtDurch Is Nothing Then
                 'Sperren des DS
                 objEichmarke.ZurBearbeitungGesperrtDurch = System.Environment.UserName

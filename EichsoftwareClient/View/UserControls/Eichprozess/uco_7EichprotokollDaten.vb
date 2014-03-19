@@ -375,7 +375,7 @@
         Catch ex As Exception
         End Try
         Try
-            If Not objEichprozess.Eichprotokoll.Beschaffenheitspruefung_Pruefintervall Then
+            If Not objEichprozess.Eichprotokoll.Beschaffenheitspruefung_Pruefintervall Is Nothing Then
                 RadTextBoxControlNormalienPruefintervall.Text = objEichprozess.Eichprotokoll.Beschaffenheitspruefung_Pruefintervall
             End If
         Catch ex As Exception

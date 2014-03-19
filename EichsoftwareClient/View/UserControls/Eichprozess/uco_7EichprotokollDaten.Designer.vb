@@ -2831,12 +2831,12 @@ Partial Class uco_7EichprotokollDaten
         Me.RadTextBoxControlBenutzer.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBenutzer.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadTextBoxControlBenutzer.RootElement.ToolTipText = resources.GetString("RadTextBoxControlBenutzer.RootElement.ToolTipText")
         '
-        'ucoEichprotokollDaten
+        'uco_7EichprotokollDaten
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.RadScrollablePanel1)
-        Me.Name = "ucoEichprotokollDaten"
+        Me.Name = "uco_7EichprotokollDaten"
         Me.RadScrollablePanel1.PanelContainer.ResumeLayout(False)
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadScrollablePanel1.ResumeLayout(False)

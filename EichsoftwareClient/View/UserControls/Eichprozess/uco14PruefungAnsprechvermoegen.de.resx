@@ -280,4 +280,19 @@
   <data name="lblLastBeschreibung.Text" xml:space="preserve">
     <value>Es ist die entsprechende Last aufzubringen. Bei Erhöhung der Last um 1d muss ein Ziffernsprung erfolgen</value>
   </data>
+  <data name="RadButtonShowEFG.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadButtonShowEFG.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadButtonShowEFG.Text" xml:space="preserve">
+    <value>Zeige EFG</value>
+  </data>
+  <data name="RadLabel4.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel4.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
 </root>

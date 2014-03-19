@@ -1,3 +1,60 @@
-Sqlcmd: Fehler: Microsoft SQL Server Native Client 11.0 : SQL Server-Netzwerkschnittstellen: Fehler beim Suchen des angegebenen Servers/der angegebenen Instanz [xFFFFFFFF]. .
-Sqlcmd: Fehler: Microsoft SQL Server Native Client 11.0 : Anmeldungstimeout abgelaufen.
-Sqlcmd: Fehler: Microsoft SQL Server Native Client 11.0 : Netzwerkbezogener oder instanzspezifischer Fehler beim Herstellen einer Verbindung mit SQL Server. Der Server wurde nicht gefunden, oder auf ihn kann nicht zugegriffen werden. Überprüfen Sie, ob der Instanzname richtig ist und ob SQL Server Remoteverbindungen zulässt. Weitere Informationen erhalten Sie in der SQL Server-Onlinedokumentation..
+Table [Herstellerersteichung].[dbo].[ServerVerbindungsprotokoll] on h2223265.stratoserver.net and Table [Herstellerersteichung].[dbo].[ServerVerbindungsprotokoll] on WIN7MOBDEV01 are identical.
+The requested operation took 0,5025638 seconds.
+Table [Herstellerersteichung].[dbo].[ServerLookupVertragspartnerFirma] on h2223265.stratoserver.net and Table [Herstellerersteichung].[dbo].[ServerLookupVertragspartnerFirma] on WIN7MOBDEV01 are identical.
+The requested operation took 0,5415688 seconds.
+Table [Herstellerersteichung].[dbo].[ServerKonfiguration] on h2223265.stratoserver.net and Table [Herstellerersteichung].[dbo].[ServerKonfiguration] on WIN7MOBDEV01 are identical.
+The requested operation took 1,41768 seconds.
+Table [Herstellerersteichung].[dbo].[Servereichmarkenverwaltung] on h2223265.stratoserver.net and Table [Herstellerersteichung].[dbo].[Servereichmarkenverwaltung] on WIN7MOBDEV01 are identical.
+The requested operation took 2,149773 seconds.
+Table [Herstellerersteichung].[dbo].[Firmen] on h2223265.stratoserver.net and Table [Herstellerersteichung].[dbo].[Firmen] on WIN7MOBDEV01 are identical.
+The requested operation took 1,5111919 seconds.
+Table [Herstellerersteichung].[dbo].[ServerFirmenZusatzdaten] on h2223265.stratoserver.net and Table [Herstellerersteichung].[dbo].[ServerFirmenZusatzdaten] on WIN7MOBDEV01 are identical.
+The requested operation took 0,4795609 seconds.
+Table [Herstellerersteichung].[dbo].[Benutzer] on h2223265.stratoserver.net and Table [Herstellerersteichung].[dbo].[Benutzer] on WIN7MOBDEV01 are identical.
+The requested operation took 1,3351695 seconds.
+Table [Herstellerersteichung].[dbo].[ServerLizensierung] on h2223265.stratoserver.net and Table [Herstellerersteichung].[dbo].[ServerLizensierung] on WIN7MOBDEV01 are identical.
+The requested operation took 0,6315802 seconds.
+Table [Herstellerersteichung].[dbo].[ServerLookup_Waagenart] on h2223265.stratoserver.net and Table [Herstellerersteichung].[dbo].[ServerLookup_Waagenart] on WIN7MOBDEV01 are identical.
+The requested operation took 3,5484506 seconds.
+Table [Herstellerersteichung].[dbo].[ServerKompatiblitaetsnachweis] on h2223265.stratoserver.net and Table [Herstellerersteichung].[dbo].[ServerKompatiblitaetsnachweis] on WIN7MOBDEV01 are identical.
+The requested operation took 0,4535576 seconds.
+Table [Herstellerersteichung].[dbo].[ServerBeschaffenheitspruefung] on h2223265.stratoserver.net and Table [Herstellerersteichung].[dbo].[ServerBeschaffenheitspruefung] on WIN7MOBDEV01 are identical.
+The requested operation took 1,6047038 seconds.
+Table [Herstellerersteichung].[dbo].[ServerLookup_Vorgangsstatus] on h2223265.stratoserver.net and Table [Herstellerersteichung].[dbo].[ServerLookup_Vorgangsstatus] on WIN7MOBDEV01 are identical.
+The requested operation took 3,5864554 seconds.
+Table [Herstellerersteichung].[dbo].[ServerLookup_Auswertegeraet] on h2223265.stratoserver.net and Table [Herstellerersteichung].[dbo].[ServerLookup_Auswertegeraet] on WIN7MOBDEV01 are identical.
+The requested operation took 5,1456534 seconds.
+Table [Herstellerersteichung].[dbo].[ServerLookup_Waegezelle] on h2223265.stratoserver.net and Table [Herstellerersteichung].[dbo].[ServerLookup_Waegezelle] on WIN7MOBDEV01 are identical.
+The requested operation took 1,685214 seconds.
+Table [Herstellerersteichung].[dbo].[ServerLookup_Bearbeitungsstatus] on h2223265.stratoserver.net and Table [Herstellerersteichung].[dbo].[ServerLookup_Bearbeitungsstatus] on WIN7MOBDEV01 are identical.
+The requested operation took 0,8186039 seconds.
+Table [Herstellerersteichung].[dbo].[ServerLookup_Waagentyp] on h2223265.stratoserver.net and Table [Herstellerersteichung].[dbo].[ServerLookup_Waagentyp] on WIN7MOBDEV01 are identical.
+The requested operation took 0,5065643 seconds.
+Table [Herstellerersteichung].[dbo].[ServerLookup_Konformitaetsbewertungsverfahren] on h2223265.stratoserver.net and Table [Herstellerersteichung].[dbo].[ServerLookup_Konformitaetsbewertungsverfahren] on WIN7MOBDEV01 are identical.
+The requested operation took 0,6440818 seconds.
+Table [Herstellerersteichung].[dbo].[ServerEichprotokoll] on h2223265.stratoserver.net and Table [Herstellerersteichung].[dbo].[ServerEichprotokoll] on WIN7MOBDEV01 are identical.
+The requested operation took 0,5765732 seconds.
+Table [Herstellerersteichung].[dbo].[ServerEichprozess] on h2223265.stratoserver.net and Table [Herstellerersteichung].[dbo].[ServerEichprozess] on WIN7MOBDEV01 are identical.
+The requested operation took 0,5200661 seconds.
+Table [Herstellerersteichung].[dbo].[ServerMogelstatistik] on h2223265.stratoserver.net and Table [Herstellerersteichung].[dbo].[ServerMogelstatistik] on WIN7MOBDEV01 are identical.
+The requested operation took 2,9313722 seconds.
+Table [Herstellerersteichung].[dbo].[ServerPruefungAnsprechvermoegen] on h2223265.stratoserver.net and Table [Herstellerersteichung].[dbo].[ServerPruefungAnsprechvermoegen] on WIN7MOBDEV01 are identical.
+The requested operation took 4,6770939 seconds.
+Table [Herstellerersteichung].[dbo].[ServerPruefungAussermittigeBelastung] on h2223265.stratoserver.net and Table [Herstellerersteichung].[dbo].[ServerPruefungAussermittigeBelastung] on WIN7MOBDEV01 are identical.
+The requested operation took 1,5141923 seconds.
+Table [Herstellerersteichung].[dbo].[ServerPruefungEichfehlergrenzen] on h2223265.stratoserver.net and Table [Herstellerersteichung].[dbo].[ServerPruefungEichfehlergrenzen] on WIN7MOBDEV01 are identical.
+The requested operation took 5,0591425 seconds.
+Table [Herstellerersteichung].[dbo].[ServerPruefungLinearitaetFallend] on h2223265.stratoserver.net and Table [Herstellerersteichung].[dbo].[ServerPruefungLinearitaetFallend] on WIN7MOBDEV01 are identical.
+The requested operation took 5,9207518 seconds.
+Table [Herstellerersteichung].[dbo].[ServerPruefungLinearitaetSteigend] on h2223265.stratoserver.net and Table [Herstellerersteichung].[dbo].[ServerPruefungLinearitaetSteigend] on WIN7MOBDEV01 are identical.
+The requested operation took 0,8386064 seconds.
+Table [Herstellerersteichung].[dbo].[ServerPruefungRollendeLasten] on h2223265.stratoserver.net and Table [Herstellerersteichung].[dbo].[ServerPruefungRollendeLasten] on WIN7MOBDEV01 are identical.
+The requested operation took 0,4130524 seconds.
+Table [Herstellerersteichung].[dbo].[ServerPruefungStabilitaetGleichgewichtslage] on h2223265.stratoserver.net and Table [Herstellerersteichung].[dbo].[ServerPruefungStabilitaetGleichgewichtslage] on WIN7MOBDEV01 are identical.
+The requested operation took 0,9746237 seconds.
+Table [Herstellerersteichung].[dbo].[ServerPruefungStaffelverfahrenErsatzlast] on h2223265.stratoserver.net and Table [Herstellerersteichung].[dbo].[ServerPruefungStaffelverfahrenErsatzlast] on WIN7MOBDEV01 are identical.
+The requested operation took 0,9731236 seconds.
+Table [Herstellerersteichung].[dbo].[ServerPruefungStaffelverfahrenNormallast] on h2223265.stratoserver.net and Table [Herstellerersteichung].[dbo].[ServerPruefungStaffelverfahrenNormallast] on WIN7MOBDEV01 are identical.
+The requested operation took 0,8451073 seconds.
+Table [Herstellerersteichung].[dbo].[ServerPruefungWiederholbarkeit] on h2223265.stratoserver.net and Table [Herstellerersteichung].[dbo].[ServerPruefungWiederholbarkeit] on WIN7MOBDEV01 are identical.
+The requested operation took 2,4028051 seconds.

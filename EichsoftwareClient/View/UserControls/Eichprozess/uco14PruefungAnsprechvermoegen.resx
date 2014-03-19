@@ -117,1196 +117,53 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lblLastL.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 62</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lblLastL.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblLastL.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblLastL.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lblLastL.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblLastL.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lblLastL.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblLastL.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblLastL.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblLastL.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="lblLastL.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 18</value>
-  </data>
-  <data name="lblLastL.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblLastL.Text" xml:space="preserve">
-    <value>weight L</value>
-  </data>
-  <data name="&gt;&gt;lblLastL.Name" xml:space="preserve">
-    <value>lblLastL</value>
-  </data>
-  <data name="&gt;&gt;lblLastL.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;lblLastL.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lblLastL.ZOrder" xml:space="preserve">
-    <value>31</value>
-  </data>
-  <data name="lblLastkg.Location" type="System.Drawing.Point, System.Drawing">
-    <value>111, 90</value>
-  </data>
-  <data name="lblLastkg.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblLastkg.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblLastkg.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="lblLastkg.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblLastkg.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lblLastkg.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblLastkg.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblLastkg.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblLastkg.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="lblLastkg.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 18</value>
-  </data>
-  <data name="lblLastkg.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="lblLastkg.Text" xml:space="preserve">
-    <value>weight [kg]</value>
-  </data>
-  <data name="&gt;&gt;lblLastkg.Name" xml:space="preserve">
-    <value>lblLastkg</value>
-  </data>
-  <data name="&gt;&gt;lblLastkg.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;lblLastkg.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lblLastkg.ZOrder" xml:space="preserve">
-    <value>30</value>
-  </data>
-  <data name="lblAnzeige.Location" type="System.Drawing.Point, System.Drawing">
-    <value>210, 90</value>
-  </data>
-  <data name="lblAnzeige.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblAnzeige.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblAnzeige.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="lblAnzeige.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblAnzeige.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lblAnzeige.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblAnzeige.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblAnzeige.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblAnzeige.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="lblAnzeige.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 18</value>
-  </data>
-  <data name="lblAnzeige.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="lblAnzeige.Text" xml:space="preserve">
-    <value>display [kg]</value>
-  </data>
-  <data name="&gt;&gt;lblAnzeige.Name" xml:space="preserve">
-    <value>lblAnzeige</value>
-  </data>
-  <data name="&gt;&gt;lblAnzeige.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;lblAnzeige.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lblAnzeige.ZOrder" xml:space="preserve">
-    <value>29</value>
-  </data>
-  <data name="lblLast1d.Location" type="System.Drawing.Point, System.Drawing">
-    <value>311, 90</value>
-  </data>
-  <data name="lblLast1d.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblLast1d.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblLast1d.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="lblLast1d.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblLast1d.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lblLast1d.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblLast1d.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblLast1d.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblLast1d.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="lblLast1d.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 18</value>
-  </data>
-  <data name="lblLast1d.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="lblLast1d.Text" xml:space="preserve">
-    <value>weight +1d</value>
-  </data>
-  <data name="&gt;&gt;lblLast1d.Name" xml:space="preserve">
-    <value>lblLast1d</value>
-  </data>
-  <data name="&gt;&gt;lblLast1d.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;lblLast1d.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lblLast1d.ZOrder" xml:space="preserve">
-    <value>28</value>
-  </data>
-  <data name="RadLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 129</value>
-  </data>
-  <data name="RadLabel1.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadLabel1.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadLabel1.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadLabel1.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadLabel1.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadLabel1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadLabel1.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadLabel1.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadLabel1.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="RadLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>28, 18</value>
-  </data>
-  <data name="RadLabel1.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="RadLabel1.Text" xml:space="preserve">
-    <value>Min.</value>
-  </data>
-  <data name="&gt;&gt;RadLabel1.Name" xml:space="preserve">
-    <value>RadLabel1</value>
-  </data>
-  <data name="&gt;&gt;RadLabel1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadLabel1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;RadLabel1.ZOrder" xml:space="preserve">
-    <value>27</value>
-  </data>
-  <data name="RadLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 157</value>
-  </data>
-  <data name="RadLabel2.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadLabel2.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadLabel2.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadLabel2.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
   <data name="RadLabel2.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
-  </data>
-  <data name="RadLabel2.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadLabel2.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadLabel2.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadLabel2.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="RadLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 18</value>
-  </data>
-  <data name="RadLabel2.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="RadLabel2.Text" xml:space="preserve">
-    <value>½ Max.</value>
-  </data>
-  <data name="&gt;&gt;RadLabel2.Name" xml:space="preserve">
-    <value>RadLabel2</value>
-  </data>
-  <data name="&gt;&gt;RadLabel2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadLabel2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;RadLabel2.ZOrder" xml:space="preserve">
-    <value>26</value>
-  </data>
-  <data name="RadLabel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 183</value>
-  </data>
-  <data name="RadLabel3.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadLabel3.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadLabel3.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadLabel3.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadLabel3.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadLabel3.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadLabel3.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadLabel3.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadLabel3.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="RadLabel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 18</value>
-  </data>
-  <data name="RadLabel3.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="RadLabel3.Text" xml:space="preserve">
-    <value>Max.</value>
-  </data>
-  <data name="&gt;&gt;RadLabel3.Name" xml:space="preserve">
-    <value>RadLabel3</value>
-  </data>
-  <data name="&gt;&gt;RadLabel3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadLabel3.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;RadLabel3.ZOrder" xml:space="preserve">
-    <value>25</value>
-  </data>
-  <data name="RadTextBoxControlLast1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>111, 129</value>
-  </data>
-  <data name="RadTextBoxControlLast1.MaxLength" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="RadTextBoxControlLast1.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlLast1.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlLast1.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadTextBoxControlLast1.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadTextBoxControlLast1.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadTextBoxControlLast1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadTextBoxControlLast1.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadTextBoxControlLast1.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlLast1.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="RadTextBoxControlLast1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 20</value>
-  </data>
-  <data name="RadTextBoxControlLast1.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlLast1.Name" xml:space="preserve">
-    <value>RadTextBoxControlLast1</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlLast1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlLast1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlLast1.ZOrder" xml:space="preserve">
-    <value>24</value>
-  </data>
-  <data name="RadTextBoxControlLast2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>111, 155</value>
-  </data>
-  <data name="RadTextBoxControlLast2.MaxLength" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="RadTextBoxControlLast2.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlLast2.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlLast2.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadTextBoxControlLast2.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadTextBoxControlLast2.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadTextBoxControlLast2.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadTextBoxControlLast2.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadTextBoxControlLast2.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlLast2.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="RadTextBoxControlLast2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 20</value>
-  </data>
-  <data name="RadTextBoxControlLast2.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlLast2.Name" xml:space="preserve">
-    <value>RadTextBoxControlLast2</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlLast2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlLast2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlLast2.ZOrder" xml:space="preserve">
-    <value>23</value>
-  </data>
-  <data name="RadTextBoxControlLast3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>111, 181</value>
-  </data>
-  <data name="RadTextBoxControlLast3.MaxLength" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="RadTextBoxControlLast3.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlLast3.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlLast3.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadTextBoxControlLast3.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadTextBoxControlLast3.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadTextBoxControlLast3.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadTextBoxControlLast3.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadTextBoxControlLast3.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlLast3.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="RadTextBoxControlLast3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 20</value>
-  </data>
-  <data name="RadTextBoxControlLast3.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlLast3.Name" xml:space="preserve">
-    <value>RadTextBoxControlLast3</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlLast3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlLast3.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlLast3.ZOrder" xml:space="preserve">
-    <value>22</value>
-  </data>
-  <data name="RadTextBoxControlAnzeige1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>212, 129</value>
-  </data>
-  <data name="RadTextBoxControlAnzeige1.MaxLength" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="RadTextBoxControlAnzeige1.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlAnzeige1.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlAnzeige1.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadTextBoxControlAnzeige1.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadTextBoxControlAnzeige1.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadTextBoxControlAnzeige1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadTextBoxControlAnzeige1.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadTextBoxControlAnzeige1.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlAnzeige1.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="RadTextBoxControlAnzeige1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 20</value>
-  </data>
-  <data name="RadTextBoxControlAnzeige1.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlAnzeige1.Name" xml:space="preserve">
-    <value>RadTextBoxControlAnzeige1</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlAnzeige1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlAnzeige1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlAnzeige1.ZOrder" xml:space="preserve">
-    <value>21</value>
-  </data>
-  <data name="RadTextBoxControlAnzeige2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>212, 155</value>
-  </data>
-  <data name="RadTextBoxControlAnzeige2.MaxLength" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="RadTextBoxControlAnzeige2.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlAnzeige2.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlAnzeige2.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadTextBoxControlAnzeige2.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadTextBoxControlAnzeige2.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadTextBoxControlAnzeige2.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadTextBoxControlAnzeige2.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadTextBoxControlAnzeige2.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlAnzeige2.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="RadTextBoxControlAnzeige2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 20</value>
-  </data>
-  <data name="RadTextBoxControlAnzeige2.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlAnzeige2.Name" xml:space="preserve">
-    <value>RadTextBoxControlAnzeige2</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlAnzeige2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlAnzeige2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlAnzeige2.ZOrder" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <data name="RadTextBoxControlAnzeige3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>212, 181</value>
-  </data>
-  <data name="RadTextBoxControlAnzeige3.MaxLength" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="RadTextBoxControlAnzeige3.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlAnzeige3.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlAnzeige3.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadTextBoxControlAnzeige3.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadTextBoxControlAnzeige3.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadTextBoxControlAnzeige3.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadTextBoxControlAnzeige3.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadTextBoxControlAnzeige3.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlAnzeige3.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="RadTextBoxControlAnzeige3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 20</value>
-  </data>
-  <data name="RadTextBoxControlAnzeige3.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlAnzeige3.Name" xml:space="preserve">
-    <value>RadTextBoxControlAnzeige3</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlAnzeige3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlAnzeige3.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlAnzeige3.ZOrder" xml:space="preserve">
-    <value>19</value>
-  </data>
-  <data name="RadTextBoxControLastD1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>311, 129</value>
-  </data>
-  <data name="RadTextBoxControLastD1.MaxLength" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="RadTextBoxControLastD1.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControLastD1.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControLastD1.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadTextBoxControLastD1.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadTextBoxControLastD1.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadTextBoxControLastD1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadTextBoxControLastD1.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadTextBoxControLastD1.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControLastD1.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="RadTextBoxControLastD1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 20</value>
-  </data>
-  <data name="RadTextBoxControLastD1.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControLastD1.Name" xml:space="preserve">
-    <value>RadTextBoxControLastD1</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControLastD1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControLastD1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControLastD1.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="RadTextBoxControlLastD2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>311, 155</value>
-  </data>
-  <data name="RadTextBoxControlLastD2.MaxLength" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="RadTextBoxControlLastD2.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlLastD2.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlLastD2.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadTextBoxControlLastD2.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadTextBoxControlLastD2.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadTextBoxControlLastD2.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadTextBoxControlLastD2.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadTextBoxControlLastD2.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlLastD2.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="RadTextBoxControlLastD2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 20</value>
-  </data>
-  <data name="RadTextBoxControlLastD2.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlLastD2.Name" xml:space="preserve">
-    <value>RadTextBoxControlLastD2</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlLastD2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlLastD2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlLastD2.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="RadTextBoxControlLastD3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>311, 181</value>
-  </data>
-  <data name="RadTextBoxControlLastD3.MaxLength" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="RadTextBoxControlLastD3.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlLastD3.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlLastD3.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadTextBoxControlLastD3.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadTextBoxControlLastD3.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadTextBoxControlLastD3.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadTextBoxControlLastD3.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadTextBoxControlLastD3.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlLastD3.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="RadTextBoxControlLastD3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 20</value>
-  </data>
-  <data name="RadTextBoxControlLastD3.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlLastD3.Name" xml:space="preserve">
-    <value>RadTextBoxControlLastD3</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlLastD3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlLastD3.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlLastD3.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="RadCheckBoxMin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>407, 131</value>
-  </data>
-  <data name="RadCheckBoxMin.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxMin.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxMin.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadCheckBoxMin.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadCheckBoxMin.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadCheckBoxMin.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadCheckBoxMin.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadCheckBoxMin.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxMin.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="RadCheckBoxMin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 15</value>
-  </data>
-  <data name="RadCheckBoxMin.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxMin.Name" xml:space="preserve">
-    <value>RadCheckBoxMin</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxMin.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxMin.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxMin.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="RadCheckBoxHalb.Location" type="System.Drawing.Point, System.Drawing">
-    <value>407, 157</value>
-  </data>
-  <data name="RadCheckBoxHalb.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxHalb.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxHalb.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadCheckBoxHalb.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadCheckBoxHalb.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadCheckBoxHalb.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadCheckBoxHalb.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadCheckBoxHalb.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxHalb.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="RadCheckBoxHalb.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 15</value>
-  </data>
-  <data name="RadCheckBoxHalb.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxHalb.Name" xml:space="preserve">
-    <value>RadCheckBoxHalb</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxHalb.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxHalb.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxHalb.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="RadCheckBoxMax.Location" type="System.Drawing.Point, System.Drawing">
-    <value>407, 185</value>
-  </data>
-  <data name="RadCheckBoxMax.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxMax.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxMax.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadCheckBoxMax.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadCheckBoxMax.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadCheckBoxMax.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadCheckBoxMax.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadCheckBoxMax.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxMax.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="RadCheckBoxMax.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 15</value>
-  </data>
-  <data name="RadCheckBoxMax.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxMax.Name" xml:space="preserve">
-    <value>RadCheckBoxMax</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxMax.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxMax.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxMax.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="lblBeschreibung.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lblBeschreibung.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 4</value>
-  </data>
-  <data name="lblBeschreibung.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblBeschreibung.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblBeschreibung.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="lblBeschreibung.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblBeschreibung.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lblBeschreibung.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblBeschreibung.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblBeschreibung.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblBeschreibung.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="lblBeschreibung.Size" type="System.Drawing.Size, System.Drawing">
-    <value>669, 38</value>
-  </data>
-  <data name="lblBeschreibung.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="lblBeschreibung.Text" xml:space="preserve">
-    <value>The following tests shall be performed with three different loads, e.g. Min, ½ Max and Max. The test is successively until the indication is decreased unambiguously by one actual scale interval, placed additional weight 1d on the load receptor.</value>
-  </data>
-  <data name="&gt;&gt;lblBeschreibung.Name" xml:space="preserve">
-    <value>lblBeschreibung</value>
-  </data>
-  <data name="&gt;&gt;lblBeschreibung.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;lblBeschreibung.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lblBeschreibung.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="lblLastBeschreibung.Location" type="System.Drawing.Point, System.Drawing">
-    <value>107, 62</value>
-  </data>
-  <data name="lblLastBeschreibung.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblLastBeschreibung.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblLastBeschreibung.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="lblLastBeschreibung.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblLastBeschreibung.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lblLastBeschreibung.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblLastBeschreibung.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblLastBeschreibung.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblLastBeschreibung.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="lblLastBeschreibung.Size" type="System.Drawing.Size, System.Drawing">
-    <value>2, 2</value>
-  </data>
-  <data name="lblLastBeschreibung.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="&gt;&gt;lblLastBeschreibung.Name" xml:space="preserve">
-    <value>lblLastBeschreibung</value>
-  </data>
-  <data name="&gt;&gt;lblLastBeschreibung.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;lblLastBeschreibung.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lblLastBeschreibung.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="RadButtonShowEFG.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
-  </data>
-  <data name="RadButtonShowEFG.Location" type="System.Drawing.Point, System.Drawing">
-    <value>480, 140</value>
-  </data>
-  <data name="RadButtonShowEFG.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadButtonShowEFG.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadButtonShowEFG.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
   </data>
   <data name="RadButtonShowEFG.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
-  <data name="RadButtonShowEFG.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="&gt;&gt;RadTextBoxControlAnzeige1.ZOrder" xml:space="preserve">
+    <value>21</value>
   </data>
-  <data name="RadButtonShowEFG.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="&gt;&gt;PictureBox2.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="RadButtonShowEFG.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="&gt;&gt;RadLabel2.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="RadButtonShowEFG.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadButtonShowEFG.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblLastBeschreibung.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="RadButtonShowEFG.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 50</value>
+  <data name="RadTextBoxControlLast2.RootElement.ToolTipText" xml:space="preserve">
+    <value />
   </data>
-  <data name="RadButtonShowEFG.TabIndex" type="System.Int32, mscorlib">
-    <value>58</value>
+  <data name="&gt;&gt;RadTextBoxControlLast1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="RadButtonShowEFG.Text" xml:space="preserve">
-    <value>Show VEL</value>
-  </data>
-  <data name="&gt;&gt;RadButtonShowEFG.Name" xml:space="preserve">
-    <value>RadButtonShowEFG</value>
-  </data>
-  <data name="&gt;&gt;RadButtonShowEFG.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadButtonShowEFG.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblLast1d.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;RadButtonShowEFG.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="PictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="RadTextBoxControlLast2.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="PictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>287, 129</value>
+  <data name="RadCheckBoxMin.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
-  <data name="PictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>18, 21</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblAnzeige.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
   </data>
-  <data name="PictureBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>59</value>
-  </data>
-  <data name="&gt;&gt;PictureBox1.Name" xml:space="preserve">
-    <value>PictureBox1</value>
-  </data>
-  <data name="&gt;&gt;PictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PictureBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;PictureBox1.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="PictureBox2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="PictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>287, 155</value>
-  </data>
-  <data name="PictureBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>18, 21</value>
-  </data>
-  <data name="PictureBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>60</value>
-  </data>
-  <data name="&gt;&gt;PictureBox2.Name" xml:space="preserve">
-    <value>PictureBox2</value>
-  </data>
-  <data name="&gt;&gt;PictureBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PictureBox2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;PictureBox2.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="PictureBox3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="PictureBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>287, 181</value>
-  </data>
-  <data name="PictureBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>18, 21</value>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
   </data>
   <data name="PictureBox3.TabIndex" type="System.Int32, mscorlib">
     <value>61</value>
-  </data>
-  <data name="&gt;&gt;PictureBox3.Name" xml:space="preserve">
-    <value>PictureBox3</value>
-  </data>
-  <data name="&gt;&gt;PictureBox3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PictureBox3.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;PictureBox3.ZOrder" xml:space="preserve">
-    <value>7</value>
   </data>
   <data name="RadLabel4.Location" type="System.Drawing.Point, System.Drawing">
     <value>401, 90</value>
@@ -1314,241 +171,1453 @@
   <data name="RadLabel4.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadLabel4.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadTextBoxControlLastD3.RootElement.KeyTip" xml:space="preserve">
     <value />
   </data>
-  <data name="RadLabel4.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
+  <data name="&gt;&gt;RadButtonShowEFG.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="RadLabel4.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadLabel4.RootElement.FlipText" type="System.Boolean, mscorlib">
+  <data name="RadCheckBoxMin.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="RadLabel4.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadLabel4.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadLabel4.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadLabel2.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
-  <data name="RadLabel4.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+  <data name="RadLabel3.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="RadLabel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>21, 18</value>
+  <data name="RadTextBoxControlLastD2.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
-  <data name="RadLabel4.TabIndex" type="System.Int32, mscorlib">
-    <value>62</value>
+  <data name="RadTextBoxControlLast1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 20</value>
   </data>
-  <data name="RadLabel4.Text" xml:space="preserve">
-    <value>OK</value>
-  </data>
-  <data name="&gt;&gt;RadLabel4.Name" xml:space="preserve">
-    <value>RadLabel4</value>
-  </data>
-  <data name="&gt;&gt;RadLabel4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadLabel4.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;RadLabel4.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="lblPflichtfeld1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblPflichtfeld1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>94, 129</value>
-  </data>
-  <data name="lblPflichtfeld1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>11, 13</value>
-  </data>
-  <data name="lblPflichtfeld1.TabIndex" type="System.Int32, mscorlib">
-    <value>63</value>
-  </data>
-  <data name="lblPflichtfeld1.Text" xml:space="preserve">
-    <value>*</value>
-  </data>
-  <data name="&gt;&gt;lblPflichtfeld1.Name" xml:space="preserve">
-    <value>lblPflichtfeld1</value>
-  </data>
-  <data name="&gt;&gt;lblPflichtfeld1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblPflichtfeld1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lblPflichtfeld1.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="lblPflichtfeld2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblPflichtfeld2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblPflichtfeld2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>94, 155</value>
-  </data>
-  <data name="lblPflichtfeld2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>11, 13</value>
-  </data>
-  <data name="lblPflichtfeld2.TabIndex" type="System.Int32, mscorlib">
-    <value>64</value>
-  </data>
-  <data name="lblPflichtfeld2.Text" xml:space="preserve">
-    <value>*</value>
-  </data>
-  <data name="&gt;&gt;lblPflichtfeld2.Name" xml:space="preserve">
-    <value>lblPflichtfeld2</value>
-  </data>
-  <data name="&gt;&gt;lblPflichtfeld2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblPflichtfeld2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lblPflichtfeld2.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="lblPflichtfeld3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;PictureBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="lblPflichtfeld3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="lblPflichtfeld3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>94, 181</value>
+  <data name="RadLabel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>21, 18</value>
   </data>
-  <data name="lblPflichtfeld3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>11, 13</value>
+  <data name="RadTextBoxControlLast2.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
-  <data name="lblPflichtfeld3.TabIndex" type="System.Int32, mscorlib">
-    <value>65</value>
+  <data name="&gt;&gt;RadLabel4.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lblLastL.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadTextBoxControLastD1.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="RadLabel1.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;RadLabel3.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="RadTextBoxControlLast3.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadTextBoxControlAnzeige3.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="lblLastBeschreibung.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblLastL.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadTextBoxControlLastD3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>311, 181</value>
+  </data>
+  <data name="RadTextBoxControlLast1.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="RadTextBoxControLastD1.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxControLastD1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>311, 129</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControLastD1.Name" xml:space="preserve">
+    <value>RadTextBoxControLastD1</value>
+  </data>
+  <data name="lblLastBeschreibung.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlAnzeige2.Name" xml:space="preserve">
+    <value>RadTextBoxControlAnzeige2</value>
+  </data>
+  <data name="lblLastkg.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="PictureBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>287, 181</value>
+  </data>
+  <data name="RadTextBoxControLastD1.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lblAnzeige.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="RadTextBoxControlAnzeige1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadLabel3.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="lblLast1d.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlLastD2.Name" xml:space="preserve">
+    <value>RadTextBoxControlLastD2</value>
+  </data>
+  <data name="lblLastBeschreibung.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadLabel2.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblLast1d.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RadLabel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 157</value>
+  </data>
+  <data name="lblBeschreibung.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RadLabel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 183</value>
+  </data>
+  <data name="RadLabel2.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lblAnzeige.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="lblPflichtfeld3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RadLabel1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="lblLastBeschreibung.Size" type="System.Drawing.Size, System.Drawing">
+    <value>2, 2</value>
+  </data>
+  <data name="RadCheckBoxMin.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel1.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lblLast1d.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 18</value>
   </data>
   <data name="lblPflichtfeld3.Text" xml:space="preserve">
     <value>*</value>
   </data>
-  <data name="&gt;&gt;lblPflichtfeld3.Name" xml:space="preserve">
-    <value>lblPflichtfeld3</value>
+  <data name="&gt;&gt;RadTextBoxControlAnzeige2.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="RadTextBoxControlLast1.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="RadTextBoxControlLastD2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 20</value>
+  </data>
+  <data name="RadTextBoxControlAnzeige3.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="&gt;&gt;lblPflichtfeld3.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lblPflichtfeld3.Parent" xml:space="preserve">
+  <data name="lblPflichtfeld1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>94, 129</value>
+  </data>
+  <data name="RadCheckBoxMin.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="RadLabel3.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;RadCheckBoxHalb.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;lblPflichtfeld3.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;RadLabel4.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="lblPflichtfeld4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="RadButtonShowEFG.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
   </data>
-  <data name="lblPflichtfeld4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;lblPflichtfeld1.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="lblPflichtfeld4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>195, 129</value>
+  <data name="&gt;&gt;PictureBox3.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
-  <data name="lblPflichtfeld4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>11, 13</value>
+  <data name="RadCheckBoxMax.RootElement.ToolTipText" xml:space="preserve">
+    <value />
   </data>
-  <data name="lblPflichtfeld4.TabIndex" type="System.Int32, mscorlib">
-    <value>66</value>
+  <data name="lblLastL.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
   </data>
-  <data name="lblPflichtfeld4.Text" xml:space="preserve">
-    <value>*</value>
+  <data name="RadCheckBoxMax.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
   </data>
-  <data name="&gt;&gt;lblPflichtfeld4.Name" xml:space="preserve">
-    <value>lblPflichtfeld4</value>
+  <data name="RadTextBoxControlLastD3.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;lblLastL.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblPflichtfeld4.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lblPflichtfeld4.Parent" xml:space="preserve">
+  <data name="lblLastkg.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblLastkg.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="lblLastL.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblAnzeige.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblLastL.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlLast1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;lblPflichtfeld4.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="RadLabel3.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
-  <data name="lblPflichtfeld5.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="RadButtonShowEFG.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
   </data>
-  <data name="lblPflichtfeld5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="RadTextBoxControlAnzeige3.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
   </data>
-  <data name="lblPflichtfeld5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>195, 155</value>
+  <data name="RadTextBoxControlAnzeige2.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
   </data>
-  <data name="lblPflichtfeld5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>11, 13</value>
+  <data name="lblLastL.Text" xml:space="preserve">
+    <value>weight L</value>
+  </data>
+  <data name="RadLabel1.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lblLastBeschreibung.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lblPflichtfeld2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>94, 155</value>
+  </data>
+  <data name="RadTextBoxControlLast2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 20</value>
+  </data>
+  <data name="RadTextBoxControlAnzeige1.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
   </data>
   <data name="lblPflichtfeld5.TabIndex" type="System.Int32, mscorlib">
     <value>67</value>
   </data>
-  <data name="lblPflichtfeld5.Text" xml:space="preserve">
-    <value>*</value>
+  <data name="RadTextBoxControlLast3.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
   </data>
-  <data name="&gt;&gt;lblPflichtfeld5.Name" xml:space="preserve">
-    <value>lblPflichtfeld5</value>
+  <data name="RadTextBoxControLastD1.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
   </data>
-  <data name="&gt;&gt;lblPflichtfeld5.Type" xml:space="preserve">
+  <data name="&gt;&gt;RadLabel1.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="lblLastkg.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lblPflichtfeld2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPflichtfeld6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RadTextBoxControlLast1.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadLabel4.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="RadLabel1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld6.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lblPflichtfeld5.Parent" xml:space="preserve">
+  <data name="RadButtonShowEFG.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;RadCheckBoxMax.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="lblPflichtfeld5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>195, 155</value>
+  </data>
+  <data name="&gt;&gt;lblLastkg.Name" xml:space="preserve">
+    <value>lblLastkg</value>
+  </data>
+  <data name="PictureBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="&gt;&gt;PictureBox3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="RadLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 129</value>
+  </data>
+  <data name="RadTextBoxControlAnzeige1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 20</value>
+  </data>
+  <data name="RadTextBoxControlLast1.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblBeschreibung.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel3.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lblAnzeige.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadLabel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 18</value>
+  </data>
+  <data name="RadButtonShowEFG.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxMax.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lblPflichtfeld4.TabIndex" type="System.Int32, mscorlib">
+    <value>66</value>
+  </data>
+  <data name="RadTextBoxControlAnzeige3.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="RadLabel4.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="RadTextBoxControlAnzeige1.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="RadTextBoxControlLastD2.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="RadCheckBoxMin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 15</value>
+  </data>
+  <data name="RadCheckBoxHalb.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlLastD2.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="lblPflichtfeld6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>195, 181</value>
+  </data>
+  <data name="RadLabel3.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadTextBoxControlLastD3.MaxLength" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="lblLastBeschreibung.Location" type="System.Drawing.Point, System.Drawing">
+    <value>107, 62</value>
+  </data>
+  <data name="RadTextBoxControlAnzeige3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>212, 181</value>
+  </data>
+  <data name="lblLastBeschreibung.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="lblLast1d.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="RadCheckBoxMin.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadTextBoxControlLastD3.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="&gt;&gt;RadLabel3.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="lblAnzeige.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RadLabel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 18</value>
+  </data>
+  <data name="RadCheckBoxHalb.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="RadCheckBoxHalb.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>EichsoftwareClient.ucoContent, EichsoftwareClient, Version=1.0.5191.26078, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lblBeschreibung.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="RadTextBoxControlAnzeige3.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld3.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="RadButtonShowEFG.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="PictureBox3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;lblLastBeschreibung.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="RadTextBoxControlLast2.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="RadTextBoxControlLastD3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 20</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControLastD1.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlLastD3.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="RadTextBoxControlAnzeige2.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblLastkg.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadButtonShowEFG.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 50</value>
+  </data>
+  <data name="RadLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 18</value>
+  </data>
+  <data name="lblLastBeschreibung.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RadTextBoxControLastD1.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlLast3.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="RadButtonShowEFG.Text" xml:space="preserve">
+    <value>Show VEL</value>
+  </data>
+  <data name="&gt;&gt;RadButtonShowEFG.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lblLastkg.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;RadLabel4.Name" xml:space="preserve">
+    <value>RadLabel4</value>
+  </data>
+  <data name="RadCheckBoxMin.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="lblLast1d.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadLabel2.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="lblPflichtfeld2.TabIndex" type="System.Int32, mscorlib">
+    <value>64</value>
+  </data>
+  <data name="RadCheckBoxMax.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxControLastD1.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RadTextBoxControlAnzeige1.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxControlLast1.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;lblLastL.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lblPflichtfeld1.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="RadTextBoxControlLastD3.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlAnzeige3.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlLast3.Name" xml:space="preserve">
+    <value>RadTextBoxControlLast3</value>
+  </data>
+  <data name="RadCheckBoxMax.Location" type="System.Drawing.Point, System.Drawing">
+    <value>407, 185</value>
+  </data>
+  <data name="RadTextBoxControlLast3.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;RadLabel2.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="RadLabel1.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblLast1d.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;RadLabel3.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblPflichtfeld5.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="lblPflichtfeld6.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblPflichtfeld6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblPflichtfeld6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>195, 181</value>
-  </data>
-  <data name="lblPflichtfeld6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>11, 13</value>
-  </data>
-  <data name="lblPflichtfeld6.TabIndex" type="System.Int32, mscorlib">
-    <value>68</value>
-  </data>
-  <data name="lblPflichtfeld6.Text" xml:space="preserve">
+  <data name="lblPflichtfeld5.Text" xml:space="preserve">
     <value>*</value>
   </data>
-  <data name="&gt;&gt;lblPflichtfeld6.Name" xml:space="preserve">
-    <value>lblPflichtfeld6</value>
+  <data name="lblLastL.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;lblPflichtfeld6.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblPflichtfeld5.Name" xml:space="preserve">
+    <value>lblPflichtfeld5</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lblPflichtfeld6.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;RadTextBoxControlLast2.Name" xml:space="preserve">
+    <value>RadTextBoxControlLast2</value>
+  </data>
+  <data name="lblPflichtfeld4.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="lblPflichtfeld4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;RadButtonShowEFG.Name" xml:space="preserve">
+    <value>RadButtonShowEFG</value>
+  </data>
+  <data name="RadCheckBoxMin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>407, 131</value>
+  </data>
+  <data name="lblLastkg.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="&gt;&gt;lblPflichtfeld6.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="&gt;&gt;RadTextBoxControlAnzeige1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxMax.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="RadTextBoxControLastD1.MaxLength" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControLastD1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lblPflichtfeld5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+  </data>
+  <data name="RadTextBoxControlLast1.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel2.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="RadTextBoxControlLastD2.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RadTextBoxControlLastD2.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlLast3.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="lblLastBeschreibung.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="RadTextBoxControlLast2.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlLast1.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="RadTextBoxControlLastD3.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="&gt;&gt;lblLastL.Name" xml:space="preserve">
+    <value>lblLastL</value>
+  </data>
+  <data name="RadCheckBoxMax.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 15</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlLast2.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="PictureBox2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="RadCheckBoxMax.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;RadLabel2.Name" xml:space="preserve">
+    <value>RadLabel2</value>
+  </data>
+  <data name="RadTextBoxControlLast3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 181</value>
+  </data>
+  <data name="&gt;&gt;lblLastL.ZOrder" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="RadButtonShowEFG.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadTextBoxControlLast3.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RadLabel2.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadTextBoxControlAnzeige1.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lblBeschreibung.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="RadCheckBoxHalb.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RadTextBoxControlLast1.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadLabel1.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlLastD3.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld1.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlAnzeige1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lblLastkg.Text" xml:space="preserve">
+    <value>weight [kg]</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxMin.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld4.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="RadTextBoxControlLastD2.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RadTextBoxControlAnzeige2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>212, 155</value>
+  </data>
+  <data name="lblLast1d.Location" type="System.Drawing.Point, System.Drawing">
+    <value>311, 90</value>
+  </data>
+  <data name="lblLast1d.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadCheckBoxHalb.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 15</value>
+  </data>
+  <data name="RadCheckBoxMax.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lblLastL.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="&gt;&gt;RadLabel4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lblAnzeige.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lblLastL.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxControlAnzeige3.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlLastD2.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="PictureBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>287, 155</value>
+  </data>
+  <data name="RadButtonShowEFG.Location" type="System.Drawing.Point, System.Drawing">
+    <value>480, 140</value>
+  </data>
+  <data name="&gt;&gt;RadLabel2.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="RadTextBoxControlLast2.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;RadCheckBoxMin.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="RadTextBoxControlLastD3.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lblPflichtfeld3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>11, 13</value>
+  </data>
+  <data name="RadTextBoxControlAnzeige3.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxControlLastD2.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxControlAnzeige2.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadLabel4.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="RadTextBoxControlLastD2.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld6.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="RadTextBoxControlAnzeige1.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lblBeschreibung.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadCheckBoxHalb.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblBeschreibung.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlLastD3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxHalb.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="RadTextBoxControlAnzeige1.MaxLength" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="RadTextBoxControlLast3.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RadCheckBoxHalb.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lblPflichtfeld3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>94, 181</value>
+  </data>
+  <data name="RadTextBoxControlAnzeige1.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel3.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblBeschreibung.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlAnzeige2.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="RadLabel1.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel4.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxControlLast3.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;lblAnzeige.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="RadCheckBoxHalb.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="&gt;&gt;lblBeschreibung.Name" xml:space="preserve">
+    <value>lblBeschreibung</value>
+  </data>
+  <data name="&gt;&gt;lblLast1d.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="lblPflichtfeld3.TabIndex" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="RadLabel2.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;lblLast1d.Name" xml:space="preserve">
+    <value>lblLast1d</value>
+  </data>
+  <data name="lblBeschreibung.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;PictureBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="RadTextBoxControlAnzeige1.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RadLabel3.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblLastkg.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 90</value>
+  </data>
+  <data name="RadTextBoxControlLastD2.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="lblPflichtfeld6.TabIndex" type="System.Int32, mscorlib">
+    <value>68</value>
+  </data>
+  <data name="RadTextBoxControlLastD3.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlLastD2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="RadLabel4.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel1.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadButtonShowEFG.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="lblLastBeschreibung.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadTextBoxControlAnzeige3.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RadCheckBoxHalb.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadTextBoxControlLastD2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>311, 155</value>
+  </data>
+  <data name="RadLabel3.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="lblPflichtfeld5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblBeschreibung.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;lblLastBeschreibung.Name" xml:space="preserve">
+    <value>lblLastBeschreibung</value>
+  </data>
+  <data name="RadCheckBoxMin.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblLastBeschreibung.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadTextBoxControlAnzeige1.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lblPflichtfeld1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>11, 13</value>
+  </data>
+  <data name="RadTextBoxControlAnzeige3.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="lblLast1d.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;lblLastkg.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="RadLabel4.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>uco14PruefungAnsprechvermoegen</value>
+  </data>
+  <data name="RadTextBoxControlLastD3.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;RadLabel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblAnzeige.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="lblPflichtfeld1.TabIndex" type="System.Int32, mscorlib">
+    <value>63</value>
+  </data>
+  <data name="RadTextBoxControlLast1.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxHalb.Name" xml:space="preserve">
+    <value>RadCheckBoxHalb</value>
+  </data>
+  <data name="RadLabel4.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="lblPflichtfeld2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>11, 13</value>
+  </data>
+  <data name="lblLastL.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadTextBoxControlLast2.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="PictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="RadTextBoxControlAnzeige1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>212, 129</value>
+  </data>
+  <data name="RadLabel3.Text" xml:space="preserve">
+    <value>Max.</value>
+  </data>
+  <data name="lblLast1d.Text" xml:space="preserve">
+    <value>weight +1d</value>
+  </data>
+  <data name="RadTextBoxControlLastD2.MaxLength" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="RadTextBoxControlAnzeige2.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lblBeschreibung.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld6.Name" xml:space="preserve">
+    <value>lblPflichtfeld6</value>
+  </data>
+  <data name="&gt;&gt;lblLastBeschreibung.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="RadTextBoxControlAnzeige2.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadTextBoxControLastD1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="PictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 21</value>
+  </data>
+  <data name="lblLast1d.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxMax.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadCheckBoxHalb.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;lblAnzeige.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld3.Name" xml:space="preserve">
+    <value>lblPflichtfeld3</value>
+  </data>
+  <data name="RadTextBoxControlLastD3.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="RadTextBoxControlLast1.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="RadLabel4.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lblLastkg.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="RadTextBoxControlAnzeige3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 20</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlAnzeige1.Name" xml:space="preserve">
+    <value>RadTextBoxControlAnzeige1</value>
+  </data>
+  <data name="RadTextBoxControlAnzeige2.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld5.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="RadLabel2.Text" xml:space="preserve">
+    <value>½ Max.</value>
+  </data>
+  <data name="lblAnzeige.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxControlLastD2.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lblLastL.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lblAnzeige.Location" type="System.Drawing.Point, System.Drawing">
+    <value>210, 90</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlAnzeige3.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld4.Name" xml:space="preserve">
+    <value>lblPflichtfeld4</value>
+  </data>
+  <data name="RadCheckBoxMin.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadTextBoxControLastD1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 20</value>
+  </data>
+  <data name="RadLabel1.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="RadButtonShowEFG.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="RadCheckBoxMax.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="RadTextBoxControlAnzeige1.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="lblPflichtfeld1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RadLabel1.Text" xml:space="preserve">
+    <value>Min.</value>
+  </data>
+  <data name="lblBeschreibung.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="lblPflichtfeld4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblBeschreibung.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RadCheckBoxHalb.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="lblPflichtfeld6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblLastkg.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="RadTextBoxControlLastD3.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RadLabel2.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadTextBoxControlAnzeige2.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RadLabel4.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="RadLabel2.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="RadTextBoxControlAnzeige3.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxControlLast1.MaxLength" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlLast1.Name" xml:space="preserve">
+    <value>RadTextBoxControlLast1</value>
+  </data>
+  <data name="lblPflichtfeld2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;RadLabel1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="lblAnzeige.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 18</value>
+  </data>
+  <data name="RadTextBoxControlLast3.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="RadButtonShowEFG.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="lblLastL.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RadTextBoxControlLast1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 129</value>
+  </data>
+  <data name="RadTextBoxControlLast3.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="RadTextBoxControlAnzeige3.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadTextBoxControlLast3.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadTextBoxControlAnzeige2.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxControlAnzeige1.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;RadTextBoxControLastD1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="RadTextBoxControlLastD2.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;RadCheckBoxMin.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxMax.Name" xml:space="preserve">
+    <value>RadCheckBoxMax</value>
+  </data>
+  <data name="RadLabel4.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblLast1d.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;PictureBox2.Name" xml:space="preserve">
+    <value>PictureBox2</value>
+  </data>
+  <data name="&gt;&gt;PictureBox1.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
     <value>850, 289</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>ucoPruefungAnsprechvermoegen</value>
+  <data name="RadCheckBoxHalb.RootElement.KeyTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, EichsoftwareClient, Version=1.0.5168.20417, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;RadTextBoxControlAnzeige2.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
+  <data name="lblPflichtfeld5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>11, 13</value>
+  </data>
+  <data name="RadTextBoxControlAnzeige2.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlAnzeige3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lblLastL.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 62</value>
+  </data>
+  <data name="lblLastkg.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadButtonShowEFG.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxControlAnzeige3.MaxLength" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="RadTextBoxControlLast2.MaxLength" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="RadLabel3.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="RadTextBoxControlLast3.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;RadLabel3.Name" xml:space="preserve">
+    <value>RadLabel3</value>
+  </data>
+  <data name="lblLastkg.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 18</value>
+  </data>
+  <data name="&gt;&gt;lblBeschreibung.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;PictureBox1.Name" xml:space="preserve">
+    <value>PictureBox1</value>
+  </data>
+  <data name="RadTextBoxControlLast1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlLast3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxMin.Name" xml:space="preserve">
+    <value>RadCheckBoxMin</value>
+  </data>
+  <data name="PictureBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 21</value>
+  </data>
+  <data name="lblLastL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 18</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld1.Name" xml:space="preserve">
+    <value>lblPflichtfeld1</value>
+  </data>
+  <data name="RadTextBoxControlLastD3.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadTextBoxControlLastD2.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="lblPflichtfeld6.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlLast2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="RadTextBoxControlLast3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 20</value>
+  </data>
+  <data name="RadTextBoxControlLast2.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RadTextBoxControlLast2.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxMax.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadCheckBoxHalb.Location" type="System.Drawing.Point, System.Drawing">
+    <value>407, 157</value>
+  </data>
+  <data name="lblPflichtfeld4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>195, 129</value>
+  </data>
+  <data name="lblAnzeige.Text" xml:space="preserve">
+    <value>display [kg]</value>
+  </data>
+  <data name="RadLabel3.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="PictureBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 21</value>
+  </data>
+  <data name="lblLast1d.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxControlLast2.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="RadCheckBoxMin.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="lblLastkg.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadCheckBoxMax.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="&gt;&gt;RadLabel1.Name" xml:space="preserve">
+    <value>RadLabel1</value>
+  </data>
+  <data name="lblPflichtfeld2.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;lblLastkg.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="lblBeschreibung.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadTextBoxControLastD1.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlAnzeige3.Name" xml:space="preserve">
+    <value>RadTextBoxControlAnzeige3</value>
+  </data>
+  <data name="RadButtonShowEFG.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RadTextBoxControlAnzeige2.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="PictureBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="lblBeschreibung.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 4</value>
+  </data>
+  <data name="&gt;&gt;PictureBox2.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxHalb.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="lblLastkg.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="RadCheckBoxMin.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RadTextBoxControlAnzeige2.MaxLength" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlLastD3.Name" xml:space="preserve">
+    <value>RadTextBoxControlLastD3</value>
+  </data>
+  <data name="&gt;&gt;lblBeschreibung.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lblBeschreibung.Text" xml:space="preserve">
+    <value>The following tests shall be performed with three different loads, e.g. Min, ½ Max and Max. The test is successively until the indication is decreased unambiguously by one actual scale interval, placed additional weight 1d on the load receptor.</value>
+  </data>
+  <data name="RadLabel4.TabIndex" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="lblLastBeschreibung.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;PictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblAnzeige.Name" xml:space="preserve">
+    <value>lblAnzeige</value>
+  </data>
+  <data name="lblBeschreibung.Size" type="System.Drawing.Size, System.Drawing">
+    <value>669, 38</value>
+  </data>
+  <data name="RadTextBoxControLastD1.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblPflichtfeld4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>11, 13</value>
+  </data>
+  <data name="lblAnzeige.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RadTextBoxControLastD1.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld2.Name" xml:space="preserve">
+    <value>lblPflichtfeld2</value>
+  </data>
+  <data name="lblLast1d.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="RadTextBoxControlAnzeige2.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;PictureBox3.Name" xml:space="preserve">
+    <value>PictureBox3</value>
+  </data>
+  <data name="&gt;&gt;PictureBox1.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="RadTextBoxControlLast2.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxMax.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="RadTextBoxControlLast3.MaxLength" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="RadTextBoxControlLast2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 155</value>
+  </data>
+  <data name="RadTextBoxControlAnzeige2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 20</value>
+  </data>
+  <data name="RadCheckBoxMax.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RadCheckBoxMin.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lblAnzeige.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadTextBoxControlLast3.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxControlLast1.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlLast2.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="lblAnzeige.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lblLast1d.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblLastBeschreibung.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="RadTextBoxControLastD1.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="PictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>287, 129</value>
+  </data>
+  <data name="RadLabel2.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel1.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblPflichtfeld6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>11, 13</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

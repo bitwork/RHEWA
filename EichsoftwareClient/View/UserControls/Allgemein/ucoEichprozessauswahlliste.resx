@@ -144,9 +144,6 @@
   <data name="RadGridViewAuswahlliste.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadGridViewAuswahlliste.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadGridViewAuswahlliste.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -166,7 +163,7 @@
     <value>RadGridViewAuswahlliste</value>
   </data>
   <data name="&gt;&gt;RadGridViewAuswahlliste.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGridView, Telerik.WinControls.GridView, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadGridView, Telerik.WinControls.GridView, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadGridViewAuswahlliste.Parent" xml:space="preserve">
     <value>RadPageViewPageEigene</value>
@@ -207,9 +204,6 @@
   <data name="RadButtonEinstellungen.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadButtonEinstellungen.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadButtonEinstellungen.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -232,7 +226,7 @@
     <value>RadButtonEinstellungen</value>
   </data>
   <data name="&gt;&gt;RadButtonEinstellungen.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonEinstellungen.Parent" xml:space="preserve">
     <value>RadPageViewPageEigene</value>
@@ -267,9 +261,6 @@
   <data name="RadButtonClientUpdateDatabase.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadButtonClientUpdateDatabase.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadButtonClientUpdateDatabase.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -292,7 +283,7 @@
     <value>RadButtonClientUpdateDatabase</value>
   </data>
   <data name="&gt;&gt;RadButtonClientUpdateDatabase.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonClientUpdateDatabase.Parent" xml:space="preserve">
     <value>RadPageViewPageEigene</value>
@@ -324,9 +315,6 @@
   <data name="RadCheckBoxAusblendenClientGeloeschterDokumente.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadCheckBoxAusblendenClientGeloeschterDokumente.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadCheckBoxAusblendenClientGeloeschterDokumente.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -346,7 +334,7 @@
     <value>RadCheckBoxAusblendenClientGeloeschterDokumente</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxAusblendenClientGeloeschterDokumente.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxAusblendenClientGeloeschterDokumente.Parent" xml:space="preserve">
     <value>RadPageViewPageEigene</value>
@@ -378,9 +366,6 @@
   <data name="RadButtonClientAusblenden.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadButtonClientAusblenden.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadButtonClientAusblenden.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -403,7 +388,7 @@
     <value>RadButtonClientAusblenden</value>
   </data>
   <data name="&gt;&gt;RadButtonClientAusblenden.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonClientAusblenden.Parent" xml:space="preserve">
     <value>RadPageViewPageEigene</value>
@@ -435,9 +420,6 @@
   <data name="RadButtonClientNeu.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadButtonClientNeu.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadButtonClientNeu.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -460,7 +442,7 @@
     <value>RadButtonClientNeu</value>
   </data>
   <data name="&gt;&gt;RadButtonClientNeu.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonClientNeu.Parent" xml:space="preserve">
     <value>RadPageViewPageEigene</value>
@@ -492,9 +474,6 @@
   <data name="RadButtonClientBearbeiten.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadButtonClientBearbeiten.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadButtonClientBearbeiten.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -517,7 +496,7 @@
     <value>RadButtonClientBearbeiten</value>
   </data>
   <data name="&gt;&gt;RadButtonClientBearbeiten.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonClientBearbeiten.Parent" xml:space="preserve">
     <value>RadPageViewPageEigene</value>
@@ -538,12 +517,66 @@
     <value>RadPageViewPageEigene</value>
   </data>
   <data name="&gt;&gt;RadPageViewPageEigene.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadPageViewPage, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadPageViewPage, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadPageViewPageEigene.Parent" xml:space="preserve">
     <value>RadPageView1</value>
   </data>
   <data name="&gt;&gt;RadPageViewPageEigene.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RadButtonRefresh.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="RadButtonRefresh.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 437</value>
+  </data>
+  <data name="RadButton1.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadButton1.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadButton1.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="RadButton1.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RadButton1.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RadButton1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadButton1.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadButton1.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="RadButtonRefresh.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 36</value>
+  </data>
+  <data name="RadButtonRefresh.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="RadButtonRefresh.Text" xml:space="preserve">
+    <value>Liste Aktualisieren</value>
+  </data>
+  <data name="RadButtonRefresh.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
+  </data>
+  <data name="&gt;&gt;RadButtonRefresh.Name" xml:space="preserve">
+    <value>RadButtonRefresh</value>
+  </data>
+  <data name="&gt;&gt;RadButtonRefresh.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadButtonRefresh.Parent" xml:space="preserve">
+    <value>RadPageViewPageAlle</value>
+  </data>
+  <data name="&gt;&gt;RadButtonRefresh.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="RadProgressBar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -570,9 +603,6 @@
   <data name="RadProgressBar.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadProgressBar.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadProgressBar.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -592,13 +622,13 @@
     <value>RadProgressBar</value>
   </data>
   <data name="&gt;&gt;RadProgressBar.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadProgressBar, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadProgressBar, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadProgressBar.Parent" xml:space="preserve">
     <value>RadPageViewPageAlle</value>
   </data>
   <data name="&gt;&gt;RadProgressBar.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="RadButtonEichprozessKopierenRHEWA.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -624,9 +654,6 @@
   <data name="RadButtonEichprozessKopierenRHEWA.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadButtonEichprozessKopierenRHEWA.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadButtonEichprozessKopierenRHEWA.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -649,13 +676,13 @@
     <value>RadButtonEichprozessKopierenRHEWA</value>
   </data>
   <data name="&gt;&gt;RadButtonEichprozessKopierenRHEWA.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonEichprozessKopierenRHEWA.Parent" xml:space="preserve">
     <value>RadPageViewPageAlle</value>
   </data>
   <data name="&gt;&gt;RadButtonEichprozessKopierenRHEWA.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="RadButtonEichprozessAblehnenRHEWA.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -681,9 +708,6 @@
   <data name="RadButtonEichprozessAblehnenRHEWA.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadButtonEichprozessAblehnenRHEWA.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadButtonEichprozessAblehnenRHEWA.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -706,13 +730,13 @@
     <value>RadButtonEichprozessAblehnenRHEWA</value>
   </data>
   <data name="&gt;&gt;RadButtonEichprozessAblehnenRHEWA.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonEichprozessAblehnenRHEWA.Parent" xml:space="preserve">
     <value>RadPageViewPageAlle</value>
   </data>
   <data name="&gt;&gt;RadButtonEichprozessAblehnenRHEWA.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="RadButtonEichprozessGenehmigenRHEWA.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -738,9 +762,6 @@
   <data name="RadButtonEichprozessGenehmigenRHEWA.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadButtonEichprozessGenehmigenRHEWA.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadButtonEichprozessGenehmigenRHEWA.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -763,13 +784,13 @@
     <value>RadButtonEichprozessGenehmigenRHEWA</value>
   </data>
   <data name="&gt;&gt;RadButtonEichprozessGenehmigenRHEWA.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonEichprozessGenehmigenRHEWA.Parent" xml:space="preserve">
     <value>RadPageViewPageAlle</value>
   </data>
   <data name="&gt;&gt;RadButtonEichprozessGenehmigenRHEWA.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="RadGridViewRHEWAAlle.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -795,9 +816,6 @@
   <data name="RadGridViewRHEWAAlle.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadGridViewRHEWAAlle.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadGridViewRHEWAAlle.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -817,13 +835,13 @@
     <value>RadGridViewRHEWAAlle</value>
   </data>
   <data name="&gt;&gt;RadGridViewRHEWAAlle.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGridView, Telerik.WinControls.GridView, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadGridView, Telerik.WinControls.GridView, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadGridViewRHEWAAlle.Parent" xml:space="preserve">
     <value>RadPageViewPageAlle</value>
   </data>
   <data name="&gt;&gt;RadGridViewRHEWAAlle.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="RadButtonEichungAnsehenRHEWA.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -849,9 +867,6 @@
   <data name="RadButtonEichungAnsehenRHEWA.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadButtonEichungAnsehenRHEWA.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadButtonEichungAnsehenRHEWA.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -874,13 +889,13 @@
     <value>RadButtonEichungAnsehenRHEWA</value>
   </data>
   <data name="&gt;&gt;RadButtonEichungAnsehenRHEWA.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonEichungAnsehenRHEWA.Parent" xml:space="preserve">
     <value>RadPageViewPageAlle</value>
   </data>
   <data name="&gt;&gt;RadButtonEichungAnsehenRHEWA.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="RadPageViewPageAlle.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 37</value>
@@ -895,7 +910,7 @@
     <value>RadPageViewPageAlle</value>
   </data>
   <data name="&gt;&gt;RadPageViewPageAlle.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadPageViewPage, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadPageViewPage, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadPageViewPageAlle.Parent" xml:space="preserve">
     <value>RadPageView1</value>
@@ -927,9 +942,6 @@
   <data name="RadPageView1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadPageView1.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadPageView1.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -949,7 +961,7 @@
     <value>RadPageView1</value>
   </data>
   <data name="&gt;&gt;RadPageView1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadPageView, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadPageView, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadPageView1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -994,6 +1006,6 @@
     <value>ucoEichprozessauswahlliste</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, EichsoftwareClient, Version=1.0.5178.23817, Culture=neutral, PublicKeyToken=null</value>
+    <value>EichsoftwareClient.ucoContent, EichsoftwareClient, Version=1.0.5191.25921, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>
