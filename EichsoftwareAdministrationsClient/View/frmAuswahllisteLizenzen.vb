@@ -29,6 +29,7 @@
                             Lizenz.HEKennung, _
                             Benutz.Nachname, _
                             Benutz.Vorname, _
+                        Lizenz.Lizenzschluessel, _
                            .Firma = Firma.Name
                  }
 
@@ -50,6 +51,8 @@
                     RadGridViewAuswahlliste.Columns("HEKennung").HeaderText = "HE-Kennung"
                     RadGridViewAuswahlliste.Columns("RHEWALizenz").HeaderText = "RHEWA Lizenz"
                     RadGridViewAuswahlliste.Columns("LetzteAktivierung").HeaderText = "Letzte Aktivierung"
+                    RadGridViewAuswahlliste.Columns("Lizenzschluessel").HeaderText = "Lizenzschlüssel"
+
 
                 Catch e As Exception
                 End Try
