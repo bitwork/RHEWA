@@ -29,13 +29,13 @@ Partial Class uco_2StammdatenEingabe
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblPflichtfeld = New System.Windows.Forms.Label()
-        Me.RadTextBoxControlStammdatenPLZ = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxStammdatenPLZ = New Telerik.WinControls.UI.RadTextBox()
         Me.lblPLZ = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlStammdatenOrt = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxStammdatenOrt = New Telerik.WinControls.UI.RadTextBox()
         Me.lblOrt = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlStammdatenStrasse = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxStammdatenStrasse = New Telerik.WinControls.UI.RadTextBox()
         Me.lblStrasse = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlStammdatenWaagenbaufirma = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxStammdatenWaagenbaufirma = New Telerik.WinControls.UI.RadTextBox()
         Me.lblWaagenbaufirma = New Telerik.WinControls.UI.RadLabel()
         Me.RadGroupBoxWZ = New Telerik.WinControls.UI.RadGroupBox()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -46,9 +46,9 @@ Partial Class uco_2StammdatenEingabe
         Me.RadDropdownlistlWZHersteller = New Telerik.WinControls.UI.RadDropDownList()
         Me.RadDropdownlistlWZTyp = New Telerik.WinControls.UI.RadDropDownList()
         Me.lblAWZTyp = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlWZBauartzulassung = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxWZBauartzulassung = New Telerik.WinControls.UI.RadTextBox()
         Me.lblAWZZulassung2 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlWZPruefbericht = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxWZPruefbericht = New Telerik.WinControls.UI.RadTextBox()
         Me.lblAWZZulassung = New Telerik.WinControls.UI.RadLabel()
         Me.lblAWZHersteller = New Telerik.WinControls.UI.RadLabel()
         Me.RadGroupBoxWaage = New Telerik.WinControls.UI.RadGroupBox()
@@ -60,9 +60,9 @@ Partial Class uco_2StammdatenEingabe
         Me.RadDropDownListWaagenArt = New Telerik.WinControls.UI.RadDropDownList()
         Me.RadLabel16 = New Telerik.WinControls.UI.RadLabel()
         Me.RadDropdownlistWaagenTyp = New Telerik.WinControls.UI.RadDropDownList()
-        Me.RadTextBoxControlWaageZulassungsinhaber = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxWaageZulassungsinhaber = New Telerik.WinControls.UI.RadTextBox()
         Me.lblAWaagenTyp = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlWaageSeriennummer = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxWaageSeriennummer = New Telerik.WinControls.UI.RadTextBox()
         Me.lblAWaageSeriennummer = New Telerik.WinControls.UI.RadLabel()
         Me.RadGroupBoxAWG = New Telerik.WinControls.UI.RadGroupBox()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -71,24 +71,24 @@ Partial Class uco_2StammdatenEingabe
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.RadDropdownlistAWGTyp = New Telerik.WinControls.UI.RadDropDownList()
         Me.lblAWGTyp = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlAWGBauartzulassung = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxAWGBauartzulassung = New Telerik.WinControls.UI.RadTextBox()
         Me.lblAWGBauart2 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlAWGPruefbericht = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxAWGPruefbericht = New Telerik.WinControls.UI.RadTextBox()
         Me.lblAWGBauart = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlAWGHersteller = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxAWGHersteller = New Telerik.WinControls.UI.RadTextBox()
         Me.lblAWGHersteller = New Telerik.WinControls.UI.RadLabel()
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanel1.PanelContainer.SuspendLayout()
         Me.RadScrollablePanel1.SuspendLayout()
         CType(Me.RadGroupBoxStammdaten, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxStammdaten.SuspendLayout()
-        CType(Me.RadTextBoxControlStammdatenPLZ, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxStammdatenPLZ, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblPLZ, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControlStammdatenOrt, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxStammdatenOrt, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblOrt, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControlStammdatenStrasse, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxStammdatenStrasse, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblStrasse, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControlStammdatenWaagenbaufirma, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxStammdatenWaagenbaufirma, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblWaagenbaufirma, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxWZ, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxWZ.SuspendLayout()
@@ -98,9 +98,9 @@ Partial Class uco_2StammdatenEingabe
         CType(Me.RadDropdownlistlWZHersteller, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadDropdownlistlWZTyp, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblAWZTyp, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControlWZBauartzulassung, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxWZBauartzulassung, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblAWZZulassung2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControlWZPruefbericht, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxWZPruefbericht, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblAWZZulassung, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblAWZHersteller, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxWaage, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -110,9 +110,9 @@ Partial Class uco_2StammdatenEingabe
         CType(Me.RadDropDownListWaagenArt, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel16, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadDropdownlistWaagenTyp, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControlWaageZulassungsinhaber, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxWaageZulassungsinhaber, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblAWaagenTyp, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControlWaageSeriennummer, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxWaageSeriennummer, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblAWaageSeriennummer, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxAWG, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxAWG.SuspendLayout()
@@ -121,11 +121,11 @@ Partial Class uco_2StammdatenEingabe
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadDropdownlistAWGTyp, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblAWGTyp, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControlAWGBauartzulassung, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxAWGBauartzulassung, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblAWGBauart2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControlAWGPruefbericht, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxAWGPruefbericht, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblAWGBauart, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControlAWGHersteller, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxAWGHersteller, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblAWGHersteller, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -161,13 +161,13 @@ Partial Class uco_2StammdatenEingabe
         Me.RadGroupBoxStammdaten.Controls.Add(Me.Label2)
         Me.RadGroupBoxStammdaten.Controls.Add(Me.Label1)
         Me.RadGroupBoxStammdaten.Controls.Add(Me.lblPflichtfeld)
-        Me.RadGroupBoxStammdaten.Controls.Add(Me.RadTextBoxControlStammdatenPLZ)
+        Me.RadGroupBoxStammdaten.Controls.Add(Me.RadTextBoxStammdatenPLZ)
         Me.RadGroupBoxStammdaten.Controls.Add(Me.lblPLZ)
-        Me.RadGroupBoxStammdaten.Controls.Add(Me.RadTextBoxControlStammdatenOrt)
+        Me.RadGroupBoxStammdaten.Controls.Add(Me.RadTextBoxStammdatenOrt)
         Me.RadGroupBoxStammdaten.Controls.Add(Me.lblOrt)
-        Me.RadGroupBoxStammdaten.Controls.Add(Me.RadTextBoxControlStammdatenStrasse)
+        Me.RadGroupBoxStammdaten.Controls.Add(Me.RadTextBoxStammdatenStrasse)
         Me.RadGroupBoxStammdaten.Controls.Add(Me.lblStrasse)
-        Me.RadGroupBoxStammdaten.Controls.Add(Me.RadTextBoxControlStammdatenWaagenbaufirma)
+        Me.RadGroupBoxStammdaten.Controls.Add(Me.RadTextBoxStammdatenWaagenbaufirma)
         Me.RadGroupBoxStammdaten.Controls.Add(Me.lblWaagenbaufirma)
         resources.ApplyResources(Me.RadGroupBoxStammdaten, "RadGroupBoxStammdaten")
         Me.RadGroupBoxStammdaten.Name = "RadGroupBoxStammdaten"
@@ -208,22 +208,22 @@ Partial Class uco_2StammdatenEingabe
         Me.lblPflichtfeld.ForeColor = System.Drawing.Color.Red
         Me.lblPflichtfeld.Name = "lblPflichtfeld"
         '
-        'RadTextBoxControlStammdatenPLZ
+        'RadTextBoxStammdatenPLZ
         '
-        resources.ApplyResources(Me.RadTextBoxControlStammdatenPLZ, "RadTextBoxControlStammdatenPLZ")
-        Me.RadTextBoxControlStammdatenPLZ.Name = "RadTextBoxControlStammdatenPLZ"
+        resources.ApplyResources(Me.RadTextBoxStammdatenPLZ, "RadTextBoxStammdatenPLZ")
+        Me.RadTextBoxStammdatenPLZ.Name = "RadTextBoxStammdatenPLZ"
         '
         '
         '
-        Me.RadTextBoxControlStammdatenPLZ.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStammdatenPLZ.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStammdatenPLZ.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStammdatenPLZ.RootElement.AccessibleName")
-        Me.RadTextBoxControlStammdatenPLZ.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStammdatenPLZ.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStammdatenPLZ.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStammdatenPLZ.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStammdatenPLZ.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStammdatenPLZ.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStammdatenPLZ.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStammdatenPLZ.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStammdatenPLZ.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlStammdatenPLZ.RootElement.Padding"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStammdatenPLZ.RootElement.Text = resources.GetString("RadTextBoxControlStammdatenPLZ.RootElement.Text")
-        Me.RadTextBoxControlStammdatenPLZ.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStammdatenPLZ.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxStammdatenPLZ.RootElement.AccessibleDescription = resources.GetString("RadTextBoxStammdatenPLZ.RootElement.AccessibleDescription")
+        Me.RadTextBoxStammdatenPLZ.RootElement.AccessibleName = resources.GetString("RadTextBoxStammdatenPLZ.RootElement.AccessibleName")
+        Me.RadTextBoxStammdatenPLZ.RootElement.Alignment = CType(resources.GetObject("RadTextBoxStammdatenPLZ.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.RadTextBoxStammdatenPLZ.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxStammdatenPLZ.RootElement.AngleTransform"), Single)
+        Me.RadTextBoxStammdatenPLZ.RootElement.FlipText = CType(resources.GetObject("RadTextBoxStammdatenPLZ.RootElement.FlipText"), Boolean)
+        Me.RadTextBoxStammdatenPLZ.RootElement.Margin = CType(resources.GetObject("RadTextBoxStammdatenPLZ.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadTextBoxStammdatenPLZ.RootElement.Padding = CType(resources.GetObject("RadTextBoxStammdatenPLZ.RootElement.Padding"), System.Windows.Forms.Padding)
+        Me.RadTextBoxStammdatenPLZ.RootElement.Text = resources.GetString("RadTextBoxStammdatenPLZ.RootElement.Text")
+        Me.RadTextBoxStammdatenPLZ.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxStammdatenPLZ.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
         'lblPLZ
         '
@@ -242,22 +242,22 @@ Partial Class uco_2StammdatenEingabe
         Me.lblPLZ.RootElement.Text = resources.GetString("lblPLZ.RootElement.Text")
         Me.lblPLZ.RootElement.TextOrientation = CType(resources.GetObject("lblPLZ.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
-        'RadTextBoxControlStammdatenOrt
+        'RadTextBoxStammdatenOrt
         '
-        resources.ApplyResources(Me.RadTextBoxControlStammdatenOrt, "RadTextBoxControlStammdatenOrt")
-        Me.RadTextBoxControlStammdatenOrt.Name = "RadTextBoxControlStammdatenOrt"
+        resources.ApplyResources(Me.RadTextBoxStammdatenOrt, "RadTextBoxStammdatenOrt")
+        Me.RadTextBoxStammdatenOrt.Name = "RadTextBoxStammdatenOrt"
         '
         '
         '
-        Me.RadTextBoxControlStammdatenOrt.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStammdatenOrt.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStammdatenOrt.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStammdatenOrt.RootElement.AccessibleName")
-        Me.RadTextBoxControlStammdatenOrt.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStammdatenOrt.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStammdatenOrt.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStammdatenOrt.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStammdatenOrt.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStammdatenOrt.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStammdatenOrt.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStammdatenOrt.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStammdatenOrt.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlStammdatenOrt.RootElement.Padding"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStammdatenOrt.RootElement.Text = resources.GetString("RadTextBoxControlStammdatenOrt.RootElement.Text")
-        Me.RadTextBoxControlStammdatenOrt.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStammdatenOrt.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxStammdatenOrt.RootElement.AccessibleDescription = resources.GetString("RadTextBoxStammdatenOrt.RootElement.AccessibleDescription")
+        Me.RadTextBoxStammdatenOrt.RootElement.AccessibleName = resources.GetString("RadTextBoxStammdatenOrt.RootElement.AccessibleName")
+        Me.RadTextBoxStammdatenOrt.RootElement.Alignment = CType(resources.GetObject("RadTextBoxStammdatenOrt.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.RadTextBoxStammdatenOrt.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxStammdatenOrt.RootElement.AngleTransform"), Single)
+        Me.RadTextBoxStammdatenOrt.RootElement.FlipText = CType(resources.GetObject("RadTextBoxStammdatenOrt.RootElement.FlipText"), Boolean)
+        Me.RadTextBoxStammdatenOrt.RootElement.Margin = CType(resources.GetObject("RadTextBoxStammdatenOrt.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadTextBoxStammdatenOrt.RootElement.Padding = CType(resources.GetObject("RadTextBoxStammdatenOrt.RootElement.Padding"), System.Windows.Forms.Padding)
+        Me.RadTextBoxStammdatenOrt.RootElement.Text = resources.GetString("RadTextBoxStammdatenOrt.RootElement.Text")
+        Me.RadTextBoxStammdatenOrt.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxStammdatenOrt.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
         'lblOrt
         '
@@ -276,22 +276,22 @@ Partial Class uco_2StammdatenEingabe
         Me.lblOrt.RootElement.Text = resources.GetString("lblOrt.RootElement.Text")
         Me.lblOrt.RootElement.TextOrientation = CType(resources.GetObject("lblOrt.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
-        'RadTextBoxControlStammdatenStrasse
+        'RadTextBoxStammdatenStrasse
         '
-        resources.ApplyResources(Me.RadTextBoxControlStammdatenStrasse, "RadTextBoxControlStammdatenStrasse")
-        Me.RadTextBoxControlStammdatenStrasse.Name = "RadTextBoxControlStammdatenStrasse"
+        resources.ApplyResources(Me.RadTextBoxStammdatenStrasse, "RadTextBoxStammdatenStrasse")
+        Me.RadTextBoxStammdatenStrasse.Name = "RadTextBoxStammdatenStrasse"
         '
         '
         '
-        Me.RadTextBoxControlStammdatenStrasse.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStammdatenStrasse.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStammdatenStrasse.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStammdatenStrasse.RootElement.AccessibleName")
-        Me.RadTextBoxControlStammdatenStrasse.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStammdatenStrasse.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStammdatenStrasse.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStammdatenStrasse.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStammdatenStrasse.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStammdatenStrasse.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStammdatenStrasse.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStammdatenStrasse.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStammdatenStrasse.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlStammdatenStrasse.RootElement.Padding"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStammdatenStrasse.RootElement.Text = resources.GetString("RadTextBoxControlStammdatenStrasse.RootElement.Text")
-        Me.RadTextBoxControlStammdatenStrasse.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStammdatenStrasse.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxStammdatenStrasse.RootElement.AccessibleDescription = resources.GetString("RadTextBoxStammdatenStrasse.RootElement.AccessibleDescription")
+        Me.RadTextBoxStammdatenStrasse.RootElement.AccessibleName = resources.GetString("RadTextBoxStammdatenStrasse.RootElement.AccessibleName")
+        Me.RadTextBoxStammdatenStrasse.RootElement.Alignment = CType(resources.GetObject("RadTextBoxStammdatenStrasse.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.RadTextBoxStammdatenStrasse.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxStammdatenStrasse.RootElement.AngleTransform"), Single)
+        Me.RadTextBoxStammdatenStrasse.RootElement.FlipText = CType(resources.GetObject("RadTextBoxStammdatenStrasse.RootElement.FlipText"), Boolean)
+        Me.RadTextBoxStammdatenStrasse.RootElement.Margin = CType(resources.GetObject("RadTextBoxStammdatenStrasse.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadTextBoxStammdatenStrasse.RootElement.Padding = CType(resources.GetObject("RadTextBoxStammdatenStrasse.RootElement.Padding"), System.Windows.Forms.Padding)
+        Me.RadTextBoxStammdatenStrasse.RootElement.Text = resources.GetString("RadTextBoxStammdatenStrasse.RootElement.Text")
+        Me.RadTextBoxStammdatenStrasse.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxStammdatenStrasse.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
         'lblStrasse
         '
@@ -310,22 +310,22 @@ Partial Class uco_2StammdatenEingabe
         Me.lblStrasse.RootElement.Text = resources.GetString("lblStrasse.RootElement.Text")
         Me.lblStrasse.RootElement.TextOrientation = CType(resources.GetObject("lblStrasse.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
-        'RadTextBoxControlStammdatenWaagenbaufirma
+        'RadTextBoxStammdatenWaagenbaufirma
         '
-        resources.ApplyResources(Me.RadTextBoxControlStammdatenWaagenbaufirma, "RadTextBoxControlStammdatenWaagenbaufirma")
-        Me.RadTextBoxControlStammdatenWaagenbaufirma.Name = "RadTextBoxControlStammdatenWaagenbaufirma"
+        resources.ApplyResources(Me.RadTextBoxStammdatenWaagenbaufirma, "RadTextBoxStammdatenWaagenbaufirma")
+        Me.RadTextBoxStammdatenWaagenbaufirma.Name = "RadTextBoxStammdatenWaagenbaufirma"
         '
         '
         '
-        Me.RadTextBoxControlStammdatenWaagenbaufirma.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStammdatenWaagenbaufirma.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStammdatenWaagenbaufirma.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStammdatenWaagenbaufirma.RootElement.AccessibleName")
-        Me.RadTextBoxControlStammdatenWaagenbaufirma.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStammdatenWaagenbaufirma.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStammdatenWaagenbaufirma.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStammdatenWaagenbaufirma.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStammdatenWaagenbaufirma.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStammdatenWaagenbaufirma.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStammdatenWaagenbaufirma.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStammdatenWaagenbaufirma.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStammdatenWaagenbaufirma.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlStammdatenWaagenbaufirma.RootElement.Padding"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStammdatenWaagenbaufirma.RootElement.Text = resources.GetString("RadTextBoxControlStammdatenWaagenbaufirma.RootElement.Text")
-        Me.RadTextBoxControlStammdatenWaagenbaufirma.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStammdatenWaagenbaufirma.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxStammdatenWaagenbaufirma.RootElement.AccessibleDescription = resources.GetString("RadTextBoxStammdatenWaagenbaufirma.RootElement.AccessibleDescription")
+        Me.RadTextBoxStammdatenWaagenbaufirma.RootElement.AccessibleName = resources.GetString("RadTextBoxStammdatenWaagenbaufirma.RootElement.AccessibleName")
+        Me.RadTextBoxStammdatenWaagenbaufirma.RootElement.Alignment = CType(resources.GetObject("RadTextBoxStammdatenWaagenbaufirma.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.RadTextBoxStammdatenWaagenbaufirma.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxStammdatenWaagenbaufirma.RootElement.AngleTransform"), Single)
+        Me.RadTextBoxStammdatenWaagenbaufirma.RootElement.FlipText = CType(resources.GetObject("RadTextBoxStammdatenWaagenbaufirma.RootElement.FlipText"), Boolean)
+        Me.RadTextBoxStammdatenWaagenbaufirma.RootElement.Margin = CType(resources.GetObject("RadTextBoxStammdatenWaagenbaufirma.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadTextBoxStammdatenWaagenbaufirma.RootElement.Padding = CType(resources.GetObject("RadTextBoxStammdatenWaagenbaufirma.RootElement.Padding"), System.Windows.Forms.Padding)
+        Me.RadTextBoxStammdatenWaagenbaufirma.RootElement.Text = resources.GetString("RadTextBoxStammdatenWaagenbaufirma.RootElement.Text")
+        Me.RadTextBoxStammdatenWaagenbaufirma.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxStammdatenWaagenbaufirma.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
         'lblWaagenbaufirma
         '
@@ -355,9 +355,9 @@ Partial Class uco_2StammdatenEingabe
         Me.RadGroupBoxWZ.Controls.Add(Me.RadDropdownlistlWZHersteller)
         Me.RadGroupBoxWZ.Controls.Add(Me.RadDropdownlistlWZTyp)
         Me.RadGroupBoxWZ.Controls.Add(Me.lblAWZTyp)
-        Me.RadGroupBoxWZ.Controls.Add(Me.RadTextBoxControlWZBauartzulassung)
+        Me.RadGroupBoxWZ.Controls.Add(Me.RadTextBoxWZBauartzulassung)
         Me.RadGroupBoxWZ.Controls.Add(Me.lblAWZZulassung2)
-        Me.RadGroupBoxWZ.Controls.Add(Me.RadTextBoxControlWZPruefbericht)
+        Me.RadGroupBoxWZ.Controls.Add(Me.RadTextBoxWZPruefbericht)
         Me.RadGroupBoxWZ.Controls.Add(Me.lblAWZZulassung)
         Me.RadGroupBoxWZ.Controls.Add(Me.lblAWZHersteller)
         resources.ApplyResources(Me.RadGroupBoxWZ, "RadGroupBoxWZ")
@@ -474,24 +474,24 @@ Partial Class uco_2StammdatenEingabe
         Me.lblAWZTyp.RootElement.Text = resources.GetString("lblAWZTyp.RootElement.Text")
         Me.lblAWZTyp.RootElement.TextOrientation = CType(resources.GetObject("lblAWZTyp.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
-        'RadTextBoxControlWZBauartzulassung
+        'RadTextBoxWZBauartzulassung
         '
-        Me.RadTextBoxControlWZBauartzulassung.IsReadOnly = True
-        resources.ApplyResources(Me.RadTextBoxControlWZBauartzulassung, "RadTextBoxControlWZBauartzulassung")
-        Me.RadTextBoxControlWZBauartzulassung.Name = "RadTextBoxControlWZBauartzulassung"
+        Me.RadTextBoxWZBauartzulassung.ReadOnly = True
+        resources.ApplyResources(Me.RadTextBoxWZBauartzulassung, "RadTextBoxWZBauartzulassung")
+        Me.RadTextBoxWZBauartzulassung.Name = "RadTextBoxWZBauartzulassung"
         '
         '
         '
-        Me.RadTextBoxControlWZBauartzulassung.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlWZBauartzulassung.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlWZBauartzulassung.RootElement.AccessibleName = resources.GetString("RadTextBoxControlWZBauartzulassung.RootElement.AccessibleName")
-        Me.RadTextBoxControlWZBauartzulassung.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlWZBauartzulassung.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlWZBauartzulassung.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlWZBauartzulassung.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlWZBauartzulassung.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlWZBauartzulassung.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlWZBauartzulassung.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlWZBauartzulassung.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlWZBauartzulassung.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlWZBauartzulassung.RootElement.Padding"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlWZBauartzulassung.RootElement.Text = resources.GetString("RadTextBoxControlWZBauartzulassung.RootElement.Text")
-        Me.RadTextBoxControlWZBauartzulassung.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlWZBauartzulassung.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlWZBauartzulassung.TabStop = False
+        Me.RadTextBoxWZBauartzulassung.RootElement.AccessibleDescription = resources.GetString("RadTextBoxWZBauartzulassung.RootElement.AccessibleDescription")
+        Me.RadTextBoxWZBauartzulassung.RootElement.AccessibleName = resources.GetString("RadTextBoxWZBauartzulassung.RootElement.AccessibleName")
+        Me.RadTextBoxWZBauartzulassung.RootElement.Alignment = CType(resources.GetObject("RadTextBoxWZBauartzulassung.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.RadTextBoxWZBauartzulassung.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxWZBauartzulassung.RootElement.AngleTransform"), Single)
+        Me.RadTextBoxWZBauartzulassung.RootElement.FlipText = CType(resources.GetObject("RadTextBoxWZBauartzulassung.RootElement.FlipText"), Boolean)
+        Me.RadTextBoxWZBauartzulassung.RootElement.Margin = CType(resources.GetObject("RadTextBoxWZBauartzulassung.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadTextBoxWZBauartzulassung.RootElement.Padding = CType(resources.GetObject("RadTextBoxWZBauartzulassung.RootElement.Padding"), System.Windows.Forms.Padding)
+        Me.RadTextBoxWZBauartzulassung.RootElement.Text = resources.GetString("RadTextBoxWZBauartzulassung.RootElement.Text")
+        Me.RadTextBoxWZBauartzulassung.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxWZBauartzulassung.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxWZBauartzulassung.TabStop = False
         '
         'lblAWZZulassung2
         '
@@ -510,24 +510,24 @@ Partial Class uco_2StammdatenEingabe
         Me.lblAWZZulassung2.RootElement.Text = resources.GetString("lblAWZZulassung2.RootElement.Text")
         Me.lblAWZZulassung2.RootElement.TextOrientation = CType(resources.GetObject("lblAWZZulassung2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
-        'RadTextBoxControlWZPruefbericht
+        'RadTextBoxWZPruefbericht
         '
-        Me.RadTextBoxControlWZPruefbericht.IsReadOnly = True
-        resources.ApplyResources(Me.RadTextBoxControlWZPruefbericht, "RadTextBoxControlWZPruefbericht")
-        Me.RadTextBoxControlWZPruefbericht.Name = "RadTextBoxControlWZPruefbericht"
+        Me.RadTextBoxWZPruefbericht.ReadOnly = True
+        resources.ApplyResources(Me.RadTextBoxWZPruefbericht, "RadTextBoxWZPruefbericht")
+        Me.RadTextBoxWZPruefbericht.Name = "RadTextBoxWZPruefbericht"
         '
         '
         '
-        Me.RadTextBoxControlWZPruefbericht.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlWZPruefbericht.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlWZPruefbericht.RootElement.AccessibleName = resources.GetString("RadTextBoxControlWZPruefbericht.RootElement.AccessibleName")
-        Me.RadTextBoxControlWZPruefbericht.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlWZPruefbericht.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlWZPruefbericht.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlWZPruefbericht.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlWZPruefbericht.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlWZPruefbericht.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlWZPruefbericht.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlWZPruefbericht.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlWZPruefbericht.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlWZPruefbericht.RootElement.Padding"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlWZPruefbericht.RootElement.Text = resources.GetString("RadTextBoxControlWZPruefbericht.RootElement.Text")
-        Me.RadTextBoxControlWZPruefbericht.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlWZPruefbericht.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlWZPruefbericht.TabStop = False
+        Me.RadTextBoxWZPruefbericht.RootElement.AccessibleDescription = resources.GetString("RadTextBoxWZPruefbericht.RootElement.AccessibleDescription")
+        Me.RadTextBoxWZPruefbericht.RootElement.AccessibleName = resources.GetString("RadTextBoxWZPruefbericht.RootElement.AccessibleName")
+        Me.RadTextBoxWZPruefbericht.RootElement.Alignment = CType(resources.GetObject("RadTextBoxWZPruefbericht.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.RadTextBoxWZPruefbericht.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxWZPruefbericht.RootElement.AngleTransform"), Single)
+        Me.RadTextBoxWZPruefbericht.RootElement.FlipText = CType(resources.GetObject("RadTextBoxWZPruefbericht.RootElement.FlipText"), Boolean)
+        Me.RadTextBoxWZPruefbericht.RootElement.Margin = CType(resources.GetObject("RadTextBoxWZPruefbericht.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadTextBoxWZPruefbericht.RootElement.Padding = CType(resources.GetObject("RadTextBoxWZPruefbericht.RootElement.Padding"), System.Windows.Forms.Padding)
+        Me.RadTextBoxWZPruefbericht.RootElement.Text = resources.GetString("RadTextBoxWZPruefbericht.RootElement.Text")
+        Me.RadTextBoxWZPruefbericht.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxWZPruefbericht.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxWZPruefbericht.TabStop = False
         '
         'lblAWZZulassung
         '
@@ -574,9 +574,9 @@ Partial Class uco_2StammdatenEingabe
         Me.RadGroupBoxWaage.Controls.Add(Me.RadDropDownListWaagenArt)
         Me.RadGroupBoxWaage.Controls.Add(Me.RadLabel16)
         Me.RadGroupBoxWaage.Controls.Add(Me.RadDropdownlistWaagenTyp)
-        Me.RadGroupBoxWaage.Controls.Add(Me.RadTextBoxControlWaageZulassungsinhaber)
+        Me.RadGroupBoxWaage.Controls.Add(Me.RadTextBoxWaageZulassungsinhaber)
         Me.RadGroupBoxWaage.Controls.Add(Me.lblAWaagenTyp)
-        Me.RadGroupBoxWaage.Controls.Add(Me.RadTextBoxControlWaageSeriennummer)
+        Me.RadGroupBoxWaage.Controls.Add(Me.RadTextBoxWaageSeriennummer)
         Me.RadGroupBoxWaage.Controls.Add(Me.lblAWaageSeriennummer)
         resources.ApplyResources(Me.RadGroupBoxWaage, "RadGroupBoxWaage")
         Me.RadGroupBoxWaage.Name = "RadGroupBoxWaage"
@@ -690,24 +690,24 @@ Partial Class uco_2StammdatenEingabe
         Me.RadDropdownlistWaagenTyp.RootElement.Text = resources.GetString("RadDropdownlistWaagenTyp.RootElement.Text")
         Me.RadDropdownlistWaagenTyp.RootElement.TextOrientation = CType(resources.GetObject("RadDropdownlistWaagenTyp.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
-        'RadTextBoxControlWaageZulassungsinhaber
+        'RadTextBoxWaageZulassungsinhaber
         '
-        Me.RadTextBoxControlWaageZulassungsinhaber.IsReadOnly = True
-        resources.ApplyResources(Me.RadTextBoxControlWaageZulassungsinhaber, "RadTextBoxControlWaageZulassungsinhaber")
-        Me.RadTextBoxControlWaageZulassungsinhaber.Name = "RadTextBoxControlWaageZulassungsinhaber"
+        Me.RadTextBoxWaageZulassungsinhaber.ReadOnly = True
+        resources.ApplyResources(Me.RadTextBoxWaageZulassungsinhaber, "RadTextBoxWaageZulassungsinhaber")
+        Me.RadTextBoxWaageZulassungsinhaber.Name = "RadTextBoxWaageZulassungsinhaber"
         '
         '
         '
-        Me.RadTextBoxControlWaageZulassungsinhaber.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlWaageZulassungsinhaber.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlWaageZulassungsinhaber.RootElement.AccessibleName = resources.GetString("RadTextBoxControlWaageZulassungsinhaber.RootElement.AccessibleName")
-        Me.RadTextBoxControlWaageZulassungsinhaber.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlWaageZulassungsinhaber.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlWaageZulassungsinhaber.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlWaageZulassungsinhaber.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlWaageZulassungsinhaber.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlWaageZulassungsinhaber.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlWaageZulassungsinhaber.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlWaageZulassungsinhaber.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlWaageZulassungsinhaber.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlWaageZulassungsinhaber.RootElement.Padding"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlWaageZulassungsinhaber.RootElement.Text = resources.GetString("RadTextBoxControlWaageZulassungsinhaber.RootElement.Text")
-        Me.RadTextBoxControlWaageZulassungsinhaber.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlWaageZulassungsinhaber.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlWaageZulassungsinhaber.TabStop = False
+        Me.RadTextBoxWaageZulassungsinhaber.RootElement.AccessibleDescription = resources.GetString("RadTextBoxWaageZulassungsinhaber.RootElement.AccessibleDescription")
+        Me.RadTextBoxWaageZulassungsinhaber.RootElement.AccessibleName = resources.GetString("RadTextBoxWaageZulassungsinhaber.RootElement.AccessibleName")
+        Me.RadTextBoxWaageZulassungsinhaber.RootElement.Alignment = CType(resources.GetObject("RadTextBoxWaageZulassungsinhaber.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.RadTextBoxWaageZulassungsinhaber.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxWaageZulassungsinhaber.RootElement.AngleTransform"), Single)
+        Me.RadTextBoxWaageZulassungsinhaber.RootElement.FlipText = CType(resources.GetObject("RadTextBoxWaageZulassungsinhaber.RootElement.FlipText"), Boolean)
+        Me.RadTextBoxWaageZulassungsinhaber.RootElement.Margin = CType(resources.GetObject("RadTextBoxWaageZulassungsinhaber.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadTextBoxWaageZulassungsinhaber.RootElement.Padding = CType(resources.GetObject("RadTextBoxWaageZulassungsinhaber.RootElement.Padding"), System.Windows.Forms.Padding)
+        Me.RadTextBoxWaageZulassungsinhaber.RootElement.Text = resources.GetString("RadTextBoxWaageZulassungsinhaber.RootElement.Text")
+        Me.RadTextBoxWaageZulassungsinhaber.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxWaageZulassungsinhaber.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxWaageZulassungsinhaber.TabStop = False
         '
         'lblAWaagenTyp
         '
@@ -726,22 +726,22 @@ Partial Class uco_2StammdatenEingabe
         Me.lblAWaagenTyp.RootElement.Text = resources.GetString("lblAWaagenTyp.RootElement.Text")
         Me.lblAWaagenTyp.RootElement.TextOrientation = CType(resources.GetObject("lblAWaagenTyp.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
-        'RadTextBoxControlWaageSeriennummer
+        'RadTextBoxWaageSeriennummer
         '
-        resources.ApplyResources(Me.RadTextBoxControlWaageSeriennummer, "RadTextBoxControlWaageSeriennummer")
-        Me.RadTextBoxControlWaageSeriennummer.Name = "RadTextBoxControlWaageSeriennummer"
+        resources.ApplyResources(Me.RadTextBoxWaageSeriennummer, "RadTextBoxWaageSeriennummer")
+        Me.RadTextBoxWaageSeriennummer.Name = "RadTextBoxWaageSeriennummer"
         '
         '
         '
-        Me.RadTextBoxControlWaageSeriennummer.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlWaageSeriennummer.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlWaageSeriennummer.RootElement.AccessibleName = resources.GetString("RadTextBoxControlWaageSeriennummer.RootElement.AccessibleName")
-        Me.RadTextBoxControlWaageSeriennummer.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlWaageSeriennummer.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlWaageSeriennummer.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlWaageSeriennummer.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlWaageSeriennummer.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlWaageSeriennummer.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlWaageSeriennummer.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlWaageSeriennummer.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlWaageSeriennummer.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlWaageSeriennummer.RootElement.Padding"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlWaageSeriennummer.RootElement.Text = resources.GetString("RadTextBoxControlWaageSeriennummer.RootElement.Text")
-        Me.RadTextBoxControlWaageSeriennummer.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlWaageSeriennummer.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxWaageSeriennummer.RootElement.AccessibleDescription = resources.GetString("RadTextBoxWaageSeriennummer.RootElement.AccessibleDescription")
+        Me.RadTextBoxWaageSeriennummer.RootElement.AccessibleName = resources.GetString("RadTextBoxWaageSeriennummer.RootElement.AccessibleName")
+        Me.RadTextBoxWaageSeriennummer.RootElement.Alignment = CType(resources.GetObject("RadTextBoxWaageSeriennummer.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.RadTextBoxWaageSeriennummer.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxWaageSeriennummer.RootElement.AngleTransform"), Single)
+        Me.RadTextBoxWaageSeriennummer.RootElement.FlipText = CType(resources.GetObject("RadTextBoxWaageSeriennummer.RootElement.FlipText"), Boolean)
+        Me.RadTextBoxWaageSeriennummer.RootElement.Margin = CType(resources.GetObject("RadTextBoxWaageSeriennummer.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadTextBoxWaageSeriennummer.RootElement.Padding = CType(resources.GetObject("RadTextBoxWaageSeriennummer.RootElement.Padding"), System.Windows.Forms.Padding)
+        Me.RadTextBoxWaageSeriennummer.RootElement.Text = resources.GetString("RadTextBoxWaageSeriennummer.RootElement.Text")
+        Me.RadTextBoxWaageSeriennummer.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxWaageSeriennummer.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
         'lblAWaageSeriennummer
         '
@@ -769,11 +769,11 @@ Partial Class uco_2StammdatenEingabe
         Me.RadGroupBoxAWG.Controls.Add(Me.PictureBox1)
         Me.RadGroupBoxAWG.Controls.Add(Me.RadDropdownlistAWGTyp)
         Me.RadGroupBoxAWG.Controls.Add(Me.lblAWGTyp)
-        Me.RadGroupBoxAWG.Controls.Add(Me.RadTextBoxControlAWGBauartzulassung)
+        Me.RadGroupBoxAWG.Controls.Add(Me.RadTextBoxAWGBauartzulassung)
         Me.RadGroupBoxAWG.Controls.Add(Me.lblAWGBauart2)
-        Me.RadGroupBoxAWG.Controls.Add(Me.RadTextBoxControlAWGPruefbericht)
+        Me.RadGroupBoxAWG.Controls.Add(Me.RadTextBoxAWGPruefbericht)
         Me.RadGroupBoxAWG.Controls.Add(Me.lblAWGBauart)
-        Me.RadGroupBoxAWG.Controls.Add(Me.RadTextBoxControlAWGHersteller)
+        Me.RadGroupBoxAWG.Controls.Add(Me.RadTextBoxAWGHersteller)
         Me.RadGroupBoxAWG.Controls.Add(Me.lblAWGHersteller)
         resources.ApplyResources(Me.RadGroupBoxAWG, "RadGroupBoxAWG")
         Me.RadGroupBoxAWG.Name = "RadGroupBoxAWG"
@@ -853,24 +853,24 @@ Partial Class uco_2StammdatenEingabe
         Me.lblAWGTyp.RootElement.Text = resources.GetString("lblAWGTyp.RootElement.Text")
         Me.lblAWGTyp.RootElement.TextOrientation = CType(resources.GetObject("lblAWGTyp.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
-        'RadTextBoxControlAWGBauartzulassung
+        'RadTextBoxAWGBauartzulassung
         '
-        Me.RadTextBoxControlAWGBauartzulassung.IsReadOnly = True
-        resources.ApplyResources(Me.RadTextBoxControlAWGBauartzulassung, "RadTextBoxControlAWGBauartzulassung")
-        Me.RadTextBoxControlAWGBauartzulassung.Name = "RadTextBoxControlAWGBauartzulassung"
+        Me.RadTextBoxAWGBauartzulassung.ReadOnly = True
+        resources.ApplyResources(Me.RadTextBoxAWGBauartzulassung, "RadTextBoxAWGBauartzulassung")
+        Me.RadTextBoxAWGBauartzulassung.Name = "RadTextBoxAWGBauartzulassung"
         '
         '
         '
-        Me.RadTextBoxControlAWGBauartzulassung.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlAWGBauartzulassung.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlAWGBauartzulassung.RootElement.AccessibleName = resources.GetString("RadTextBoxControlAWGBauartzulassung.RootElement.AccessibleName")
-        Me.RadTextBoxControlAWGBauartzulassung.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlAWGBauartzulassung.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlAWGBauartzulassung.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlAWGBauartzulassung.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlAWGBauartzulassung.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlAWGBauartzulassung.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlAWGBauartzulassung.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlAWGBauartzulassung.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlAWGBauartzulassung.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlAWGBauartzulassung.RootElement.Padding"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlAWGBauartzulassung.RootElement.Text = resources.GetString("RadTextBoxControlAWGBauartzulassung.RootElement.Text")
-        Me.RadTextBoxControlAWGBauartzulassung.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlAWGBauartzulassung.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlAWGBauartzulassung.TabStop = False
+        Me.RadTextBoxAWGBauartzulassung.RootElement.AccessibleDescription = resources.GetString("RadTextBoxAWGBauartzulassung.RootElement.AccessibleDescription")
+        Me.RadTextBoxAWGBauartzulassung.RootElement.AccessibleName = resources.GetString("RadTextBoxAWGBauartzulassung.RootElement.AccessibleName")
+        Me.RadTextBoxAWGBauartzulassung.RootElement.Alignment = CType(resources.GetObject("RadTextBoxAWGBauartzulassung.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.RadTextBoxAWGBauartzulassung.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxAWGBauartzulassung.RootElement.AngleTransform"), Single)
+        Me.RadTextBoxAWGBauartzulassung.RootElement.FlipText = CType(resources.GetObject("RadTextBoxAWGBauartzulassung.RootElement.FlipText"), Boolean)
+        Me.RadTextBoxAWGBauartzulassung.RootElement.Margin = CType(resources.GetObject("RadTextBoxAWGBauartzulassung.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadTextBoxAWGBauartzulassung.RootElement.Padding = CType(resources.GetObject("RadTextBoxAWGBauartzulassung.RootElement.Padding"), System.Windows.Forms.Padding)
+        Me.RadTextBoxAWGBauartzulassung.RootElement.Text = resources.GetString("RadTextBoxAWGBauartzulassung.RootElement.Text")
+        Me.RadTextBoxAWGBauartzulassung.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxAWGBauartzulassung.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxAWGBauartzulassung.TabStop = False
         '
         'lblAWGBauart2
         '
@@ -889,24 +889,24 @@ Partial Class uco_2StammdatenEingabe
         Me.lblAWGBauart2.RootElement.Text = resources.GetString("lblAWGBauart2.RootElement.Text")
         Me.lblAWGBauart2.RootElement.TextOrientation = CType(resources.GetObject("lblAWGBauart2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
-        'RadTextBoxControlAWGPruefbericht
+        'RadTextBoxAWGPruefbericht
         '
-        Me.RadTextBoxControlAWGPruefbericht.IsReadOnly = True
-        resources.ApplyResources(Me.RadTextBoxControlAWGPruefbericht, "RadTextBoxControlAWGPruefbericht")
-        Me.RadTextBoxControlAWGPruefbericht.Name = "RadTextBoxControlAWGPruefbericht"
+        Me.RadTextBoxAWGPruefbericht.ReadOnly = True
+        resources.ApplyResources(Me.RadTextBoxAWGPruefbericht, "RadTextBoxAWGPruefbericht")
+        Me.RadTextBoxAWGPruefbericht.Name = "RadTextBoxAWGPruefbericht"
         '
         '
         '
-        Me.RadTextBoxControlAWGPruefbericht.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlAWGPruefbericht.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlAWGPruefbericht.RootElement.AccessibleName = resources.GetString("RadTextBoxControlAWGPruefbericht.RootElement.AccessibleName")
-        Me.RadTextBoxControlAWGPruefbericht.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlAWGPruefbericht.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlAWGPruefbericht.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlAWGPruefbericht.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlAWGPruefbericht.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlAWGPruefbericht.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlAWGPruefbericht.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlAWGPruefbericht.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlAWGPruefbericht.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlAWGPruefbericht.RootElement.Padding"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlAWGPruefbericht.RootElement.Text = resources.GetString("RadTextBoxControlAWGPruefbericht.RootElement.Text")
-        Me.RadTextBoxControlAWGPruefbericht.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlAWGPruefbericht.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlAWGPruefbericht.TabStop = False
+        Me.RadTextBoxAWGPruefbericht.RootElement.AccessibleDescription = resources.GetString("RadTextBoxAWGPruefbericht.RootElement.AccessibleDescription")
+        Me.RadTextBoxAWGPruefbericht.RootElement.AccessibleName = resources.GetString("RadTextBoxAWGPruefbericht.RootElement.AccessibleName")
+        Me.RadTextBoxAWGPruefbericht.RootElement.Alignment = CType(resources.GetObject("RadTextBoxAWGPruefbericht.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.RadTextBoxAWGPruefbericht.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxAWGPruefbericht.RootElement.AngleTransform"), Single)
+        Me.RadTextBoxAWGPruefbericht.RootElement.FlipText = CType(resources.GetObject("RadTextBoxAWGPruefbericht.RootElement.FlipText"), Boolean)
+        Me.RadTextBoxAWGPruefbericht.RootElement.Margin = CType(resources.GetObject("RadTextBoxAWGPruefbericht.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadTextBoxAWGPruefbericht.RootElement.Padding = CType(resources.GetObject("RadTextBoxAWGPruefbericht.RootElement.Padding"), System.Windows.Forms.Padding)
+        Me.RadTextBoxAWGPruefbericht.RootElement.Text = resources.GetString("RadTextBoxAWGPruefbericht.RootElement.Text")
+        Me.RadTextBoxAWGPruefbericht.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxAWGPruefbericht.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxAWGPruefbericht.TabStop = False
         '
         'lblAWGBauart
         '
@@ -925,24 +925,24 @@ Partial Class uco_2StammdatenEingabe
         Me.lblAWGBauart.RootElement.Text = resources.GetString("lblAWGBauart.RootElement.Text")
         Me.lblAWGBauart.RootElement.TextOrientation = CType(resources.GetObject("lblAWGBauart.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
-        'RadTextBoxControlAWGHersteller
+        'RadTextBoxAWGHersteller
         '
-        Me.RadTextBoxControlAWGHersteller.IsReadOnly = True
-        resources.ApplyResources(Me.RadTextBoxControlAWGHersteller, "RadTextBoxControlAWGHersteller")
-        Me.RadTextBoxControlAWGHersteller.Name = "RadTextBoxControlAWGHersteller"
+        Me.RadTextBoxAWGHersteller.ReadOnly = True
+        resources.ApplyResources(Me.RadTextBoxAWGHersteller, "RadTextBoxAWGHersteller")
+        Me.RadTextBoxAWGHersteller.Name = "RadTextBoxAWGHersteller"
         '
         '
         '
-        Me.RadTextBoxControlAWGHersteller.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlAWGHersteller.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlAWGHersteller.RootElement.AccessibleName = resources.GetString("RadTextBoxControlAWGHersteller.RootElement.AccessibleName")
-        Me.RadTextBoxControlAWGHersteller.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlAWGHersteller.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlAWGHersteller.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlAWGHersteller.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlAWGHersteller.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlAWGHersteller.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlAWGHersteller.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlAWGHersteller.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlAWGHersteller.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlAWGHersteller.RootElement.Padding"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlAWGHersteller.RootElement.Text = resources.GetString("RadTextBoxControlAWGHersteller.RootElement.Text")
-        Me.RadTextBoxControlAWGHersteller.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlAWGHersteller.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlAWGHersteller.TabStop = False
+        Me.RadTextBoxAWGHersteller.RootElement.AccessibleDescription = resources.GetString("RadTextBoxAWGHersteller.RootElement.AccessibleDescription")
+        Me.RadTextBoxAWGHersteller.RootElement.AccessibleName = resources.GetString("RadTextBoxAWGHersteller.RootElement.AccessibleName")
+        Me.RadTextBoxAWGHersteller.RootElement.Alignment = CType(resources.GetObject("RadTextBoxAWGHersteller.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.RadTextBoxAWGHersteller.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxAWGHersteller.RootElement.AngleTransform"), Single)
+        Me.RadTextBoxAWGHersteller.RootElement.FlipText = CType(resources.GetObject("RadTextBoxAWGHersteller.RootElement.FlipText"), Boolean)
+        Me.RadTextBoxAWGHersteller.RootElement.Margin = CType(resources.GetObject("RadTextBoxAWGHersteller.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadTextBoxAWGHersteller.RootElement.Padding = CType(resources.GetObject("RadTextBoxAWGHersteller.RootElement.Padding"), System.Windows.Forms.Padding)
+        Me.RadTextBoxAWGHersteller.RootElement.Text = resources.GetString("RadTextBoxAWGHersteller.RootElement.Text")
+        Me.RadTextBoxAWGHersteller.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxAWGHersteller.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxAWGHersteller.TabStop = False
         '
         'lblAWGHersteller
         '
@@ -973,13 +973,13 @@ Partial Class uco_2StammdatenEingabe
         CType(Me.RadGroupBoxStammdaten, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxStammdaten.ResumeLayout(False)
         Me.RadGroupBoxStammdaten.PerformLayout()
-        CType(Me.RadTextBoxControlStammdatenPLZ, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxStammdatenPLZ, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblPLZ, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControlStammdatenOrt, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxStammdatenOrt, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblOrt, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControlStammdatenStrasse, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxStammdatenStrasse, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblStrasse, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControlStammdatenWaagenbaufirma, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxStammdatenWaagenbaufirma, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblWaagenbaufirma, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBoxWZ, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxWZ.ResumeLayout(False)
@@ -990,9 +990,9 @@ Partial Class uco_2StammdatenEingabe
         CType(Me.RadDropdownlistlWZHersteller, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadDropdownlistlWZTyp, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblAWZTyp, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControlWZBauartzulassung, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxWZBauartzulassung, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblAWZZulassung2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControlWZPruefbericht, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxWZPruefbericht, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblAWZZulassung, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblAWZHersteller, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBoxWaage, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1003,9 +1003,9 @@ Partial Class uco_2StammdatenEingabe
         CType(Me.RadDropDownListWaagenArt, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel16, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadDropdownlistWaagenTyp, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControlWaageZulassungsinhaber, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxWaageZulassungsinhaber, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblAWaagenTyp, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControlWaageSeriennummer, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxWaageSeriennummer, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblAWaageSeriennummer, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBoxAWG, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxAWG.ResumeLayout(False)
@@ -1015,11 +1015,11 @@ Partial Class uco_2StammdatenEingabe
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadDropdownlistAWGTyp, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblAWGTyp, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControlAWGBauartzulassung, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxAWGBauartzulassung, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblAWGBauart2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControlAWGPruefbericht, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxAWGPruefbericht, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblAWGBauart, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControlAWGHersteller, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxAWGHersteller, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblAWGHersteller, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -1029,31 +1029,31 @@ Partial Class uco_2StammdatenEingabe
     Friend WithEvents RadGroupBoxWaage As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents RadGroupBoxAWG As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents lblWaagenbaufirma As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlStammdatenPLZ As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxStammdatenPLZ As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblPLZ As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlStammdatenOrt As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxStammdatenOrt As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblOrt As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlStammdatenStrasse As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxStammdatenStrasse As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblStrasse As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlStammdatenWaagenbaufirma As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlWaageZulassungsinhaber As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxStammdatenWaagenbaufirma As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxWaageZulassungsinhaber As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblAWaagenTyp As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlWaageSeriennummer As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxWaageSeriennummer As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblAWaageSeriennummer As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadDropdownlistAWGTyp As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents lblAWGTyp As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlAWGBauartzulassung As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxAWGBauartzulassung As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblAWGBauart2 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlAWGPruefbericht As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxAWGPruefbericht As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblAWGBauart As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlAWGHersteller As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxAWGHersteller As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblAWGHersteller As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadGroupBoxWZ As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents RadDropdownlistlWZTyp As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents lblAWZTyp As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlWZBauartzulassung As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxWZBauartzulassung As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblAWZZulassung2 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlWZPruefbericht As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxWZPruefbericht As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblAWZZulassung As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblAWZHersteller As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadScrollablePanel1 As Telerik.WinControls.UI.RadScrollablePanel

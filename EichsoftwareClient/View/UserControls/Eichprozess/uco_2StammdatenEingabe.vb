@@ -56,8 +56,8 @@
         LoadFromDatabase()
 
         'fokus setzen
-        '        RadTextBoxControlStammdatenWaagenbaufirma.Focus()
-        RadTextBoxControlWaageSeriennummer.Focus()
+        '        RadTextBoxStammdatenWaagenbaufirma.Focus()
+        RadTextBoxWaageSeriennummer.Focus()
     End Sub
 
 
@@ -73,7 +73,7 @@
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
-    Private Sub RadTextBoxControlStammdatenWaagenbaufirma_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlWaageSeriennummer.TextChanged, RadTextBoxControlStammdatenWaagenbaufirma.TextChanged, RadTextBoxControlStammdatenStrasse.TextChanged, RadTextBoxControlStammdatenPLZ.TextChanged, RadTextBoxControlStammdatenOrt.TextChanged
+    Private Sub RadTextBoxStammdatenWaagenbaufirma_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxWaageSeriennummer.TextChanged, RadTextBoxStammdatenWaagenbaufirma.TextChanged, RadTextBoxStammdatenStrasse.TextChanged, RadTextBoxStammdatenPLZ.TextChanged, RadTextBoxStammdatenOrt.TextChanged
         If _suspendEvents Then Exit Sub
         AktuellerStatusDirty = True
     End Sub
@@ -105,10 +105,10 @@
                 'auslesen der Daten des AWGs anhand der ausgewählten ID
                 Dim objAWG As Lookup_Auswertegeraet = (From AWG In _DatasourceDropdownListAWG Select AWG Where AWG.ID = RadDropdownlistAWGTyp.SelectedValue).FirstOrDefault
                 If Not objAWG Is Nothing Then
-                    RadTextBoxControlAWGHersteller.Text = objAWG.Hersteller
-                    RadTextBoxControlAWGBauartzulassung.Text = objAWG.Bauartzulassung
-                    RadTextBoxControlAWGPruefbericht.Text = objAWG.Pruefbericht
-                    RadTextBoxControlWaageZulassungsinhaber.Text = objAWG.Hersteller
+                    RadTextBoxAWGHersteller.Text = objAWG.Hersteller
+                    RadTextBoxAWGBauartzulassung.Text = objAWG.Bauartzulassung
+                    RadTextBoxAWGPruefbericht.Text = objAWG.Pruefbericht
+                    RadTextBoxWaageZulassungsinhaber.Text = objAWG.Hersteller
                 End If
             End If
         Catch ex As Exception
@@ -137,8 +137,8 @@
                 RadDropdownlistlWZTyp.Filter = New Predicate(Of Telerik.WinControls.UI.RadListDataItem)(AddressOf FilterItem)
                 'zurücksetzten der anderen Werte
                 RadDropdownlistlWZTyp.Text = RadDropdownlistlWZTyp.NullText 'zurücksetzen der auswahl
-                RadTextBoxControlWZBauartzulassung.Text = ""
-                RadTextBoxControlWZPruefbericht.Text = ""
+                RadTextBoxWZBauartzulassung.Text = ""
+                RadTextBoxWZPruefbericht.Text = ""
                 _suspendEvents = False
 
             Else 'entfernen des Typen Filters
@@ -168,8 +168,8 @@
                     'events unterbrechen
                     _suspendEvents = True
                     RadDropdownlistlWZHersteller.Text = objWZ.Hersteller
-                    RadTextBoxControlWZBauartzulassung.Text = objWZ.Bauartzulassung
-                    RadTextBoxControlWZPruefbericht.Text = objWZ.Pruefbericht
+                    RadTextBoxWZBauartzulassung.Text = objWZ.Bauartzulassung
+                    RadTextBoxWZPruefbericht.Text = objWZ.Pruefbericht
                     _suspendEvents = False
                 End If
             End If
@@ -288,8 +288,8 @@
 
                 'zuweisen des neuen Typs
                 RadDropdownlistlWZHersteller.Text = objWZ.Hersteller
-                RadTextBoxControlWZBauartzulassung.Text = objWZ.Bauartzulassung
-                RadTextBoxControlWZPruefbericht.Text = objWZ.Pruefbericht
+                RadTextBoxWZBauartzulassung.Text = objWZ.Bauartzulassung
+                RadTextBoxWZPruefbericht.Text = objWZ.Pruefbericht
 
 
                 RadDropdownlistlWZTyp.Filter = Nothing 'filter leeren
@@ -416,25 +416,25 @@
 
         If DialogModus = enuDialogModus.lesend Or DialogModus = enuDialogModus.korrigierend Then
             Try
-                RadTextBoxControlAWGBauartzulassung.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Bauartzulassung
+                RadTextBoxAWGBauartzulassung.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Bauartzulassung
 
             Catch ex As System.ObjectDisposedException
                 objEichprozess = objDBFunctions.HoleNachschlageListenFuerEichprozess(objEichprozess)
-                RadTextBoxControlAWGBauartzulassung.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Bauartzulassung
+                RadTextBoxAWGBauartzulassung.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Bauartzulassung
 
             End Try
 
-            RadTextBoxControlAWGBauartzulassung.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Bauartzulassung
-            RadTextBoxControlAWGHersteller.Text = objEichprozess.Lookup_Auswertegeraet.Hersteller
-            RadTextBoxControlAWGPruefbericht.Text = objEichprozess.Lookup_Auswertegeraet.Pruefbericht
-            RadTextBoxControlStammdatenOrt.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Ort
-            RadTextBoxControlStammdatenPLZ.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Postleitzahl
-            RadTextBoxControlStammdatenStrasse.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Strasse
-            RadTextBoxControlStammdatenWaagenbaufirma.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Hersteller
-            RadTextBoxControlWaageSeriennummer.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer
-            RadTextBoxControlWaageZulassungsinhaber.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Zulassungsinhaber
-            RadTextBoxControlWZBauartzulassung.Text = objEichprozess.Lookup_Waegezelle.Bauartzulassung
-            RadTextBoxControlWZPruefbericht.Text = objEichprozess.Lookup_Waegezelle.Pruefbericht
+            RadTextBoxAWGBauartzulassung.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Bauartzulassung
+            RadTextBoxAWGHersteller.Text = objEichprozess.Lookup_Auswertegeraet.Hersteller
+            RadTextBoxAWGPruefbericht.Text = objEichprozess.Lookup_Auswertegeraet.Pruefbericht
+            RadTextBoxStammdatenOrt.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Ort
+            RadTextBoxStammdatenPLZ.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Postleitzahl
+            RadTextBoxStammdatenStrasse.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Strasse
+            RadTextBoxStammdatenWaagenbaufirma.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Hersteller
+            RadTextBoxWaageSeriennummer.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer
+            RadTextBoxWaageZulassungsinhaber.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Zulassungsinhaber
+            RadTextBoxWZBauartzulassung.Text = objEichprozess.Lookup_Waegezelle.Bauartzulassung
+            RadTextBoxWZPruefbericht.Text = objEichprozess.Lookup_Waegezelle.Pruefbericht
             RadDropdownlistAWGTyp.SelectedValue = objEichprozess.FK_Auswertegeraet
             RadDropdownlistlWZHersteller.Text = objEichprozess.Lookup_Waegezelle.Hersteller
             RadDropdownlistlWZTyp.SelectedValue = objEichprozess.FK_Waegezelle
@@ -470,23 +470,33 @@
                     objEichprozess = (From a In context.Eichprozess.Include("Lookup_Auswertegeraet").Include("Lookup_Waegezelle").Include("Kompatiblitaetsnachweis").Include("Lookup_Waagenart").Include("Lookup_Waagentyp") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
                 End Using
 
-                RadTextBoxControlAWGBauartzulassung.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Bauartzulassung
-                RadTextBoxControlAWGHersteller.Text = objEichprozess.Lookup_Auswertegeraet.Hersteller
-                RadTextBoxControlAWGPruefbericht.Text = objEichprozess.Lookup_Auswertegeraet.Pruefbericht
-                RadTextBoxControlStammdatenOrt.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Ort
-                RadTextBoxControlStammdatenPLZ.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Postleitzahl
-                RadTextBoxControlStammdatenStrasse.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Strasse
-                RadTextBoxControlStammdatenWaagenbaufirma.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Hersteller
-                RadTextBoxControlWaageSeriennummer.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer
-                RadTextBoxControlWaageZulassungsinhaber.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Zulassungsinhaber
+                RadTextBoxAWGBauartzulassung.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Bauartzulassung
+                RadTextBoxAWGHersteller.Text = objEichprozess.Lookup_Auswertegeraet.Hersteller
+                RadTextBoxAWGPruefbericht.Text = objEichprozess.Lookup_Auswertegeraet.Pruefbericht
+                RadTextBoxStammdatenOrt.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Ort
+                RadTextBoxStammdatenPLZ.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Postleitzahl
+                RadTextBoxStammdatenStrasse.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Strasse
+                RadTextBoxStammdatenWaagenbaufirma.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Hersteller
+                RadTextBoxWaageSeriennummer.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer
+                RadTextBoxWaageZulassungsinhaber.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Zulassungsinhaber
 
 
-                RadTextBoxControlWZBauartzulassung.Text = objEichprozess.Lookup_Waegezelle.Bauartzulassung
-                RadTextBoxControlWZPruefbericht.Text = objEichprozess.Lookup_Waegezelle.Pruefbericht
-                RadDropdownlistAWGTyp.SelectedValue = objEichprozess.FK_Auswertegeraet
+                RadTextBoxWZBauartzulassung.Text = objEichprozess.Lookup_Waegezelle.Bauartzulassung
+                RadTextBoxWZPruefbericht.Text = objEichprozess.Lookup_Waegezelle.Pruefbericht
+              
+                If Not ((From items In RadDropdownlistAWGTyp.Items Where items.Value = objEichprozess.FK_Auswertegeraet).FirstOrDefault) Is Nothing Then
+                    RadDropdownlistAWGTyp.SelectedValue = objEichprozess.FK_Auswertegeraet
+                Else
+                    RadDropdownlistAWGTyp.Text = "Deaktiviert / deactivated"
+                End If
 
                 RadDropdownlistlWZHersteller.Text = objEichprozess.Lookup_Waegezelle.Hersteller
 
+                If Not ((From items In RadDropdownlistlWZTyp.Items Where items.Value = objEichprozess.FK_Waegezelle).FirstOrDefault) Is Nothing Then
+                    RadDropdownlistlWZTyp.SelectedValue = objEichprozess.FK_Waegezelle
+                Else
+                    RadDropdownlistlWZTyp.Text = "Deaktiviert / deactivated"
+                End If
                 RadDropdownlistlWZTyp.SelectedValue = objEichprozess.FK_Waegezelle
 
                 RadDropDownListWaagenArt.SelectedValue = objEichprozess.FK_WaagenArt
@@ -495,10 +505,10 @@
                 'Stammdaten aus lokaler Lizenz laden
                 Dim objLic As Lizensierung = objDBFunctions.HoleLizenzObjekt
                 If Not objLic Is Nothing Then
-                    RadTextBoxControlStammdatenOrt.Text = objLic.FirmaOrt
-                    RadTextBoxControlStammdatenPLZ.Text = objLic.FirmaPLZ
-                    RadTextBoxControlStammdatenStrasse.Text = objLic.FirmaStrasse
-                    RadTextBoxControlStammdatenWaagenbaufirma.Text = objLic.Firma
+                    RadTextBoxStammdatenOrt.Text = objLic.FirmaOrt
+                    RadTextBoxStammdatenPLZ.Text = objLic.FirmaPLZ
+                    RadTextBoxStammdatenStrasse.Text = objLic.FirmaStrasse
+                    RadTextBoxStammdatenWaagenbaufirma.Text = objLic.Firma
                 End If
 
                 'nulltext auswählen, so das keine vorauswahl getroffen wird
@@ -513,7 +523,7 @@
 
 
         'fokus setzen
-        RadTextBoxControlStammdatenWaagenbaufirma.Focus()
+        RadTextBoxStammdatenWaagenbaufirma.Focus()
     End Sub
 
     ''' <summary>
@@ -547,15 +557,15 @@
         objEichprozess.FK_WaagenTyp = RadDropdownlistWaagenTyp.SelectedValue
         objEichprozess.FK_Waegezelle = RadDropdownlistlWZTyp.SelectedValue
 
-        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Ort = RadTextBoxControlStammdatenOrt.Text
-        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Strasse = RadTextBoxControlStammdatenStrasse.Text
-        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Hersteller = RadTextBoxControlStammdatenWaagenbaufirma.Text
-        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Postleitzahl = RadTextBoxControlStammdatenPLZ.Text
+        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Ort = RadTextBoxStammdatenOrt.Text
+        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Strasse = RadTextBoxStammdatenStrasse.Text
+        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Hersteller = RadTextBoxStammdatenWaagenbaufirma.Text
+        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Postleitzahl = RadTextBoxStammdatenPLZ.Text
 
-        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Bauartzulassung = RadTextBoxControlAWGBauartzulassung.Text 'laut HErrn Strack kriegt die Waaage die Zulassung des AWGs
-        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer = RadTextBoxControlWaageSeriennummer.Text
+        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Bauartzulassung = RadTextBoxAWGBauartzulassung.Text 'laut HErrn Strack kriegt die Waaage die Zulassung des AWGs
+        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer = RadTextBoxWaageSeriennummer.Text
         objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Genauigkeitsklasse = "III"
-        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Zulassungsinhaber = RadTextBoxControlWaageZulassungsinhaber.Text
+        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Zulassungsinhaber = RadTextBoxWaageZulassungsinhaber.Text
 
 
 
@@ -575,21 +585,36 @@
         For Each GroupBox In RadScrollablePanel1.PanelContainer.Controls
             If TypeOf GroupBox Is Telerik.WinControls.UI.RadGroupBox Then
                 For Each Control In GroupBox.controls
-                    If TypeOf Control Is Telerik.WinControls.UI.RadTextBoxControl Then
-                        If Control.isreadonly = False Then
+                    If TypeOf Control Is Telerik.WinControls.UI.RadTextBox Then
+                        If Control.readonly = False Then
                             If Control.Text.trim.Equals("") Then
 
                                 Me.AbortSaveing = True
-                                CType(Control, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.Red
-                                CType(Control, Telerik.WinControls.UI.RadTextBoxControl).Focus()
+                                CType(Control, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
+
+                                CType(Control, Telerik.WinControls.UI.RadTextBox).Focus()
                             Else
-                                CType(Control, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.FromArgb(0, 255, 255, 255)
-                                CType(Control, Telerik.WinControls.UI.RadTextBoxControl).Focus()
+                                CType(Control, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.FromArgb(0, 255, 255, 255)
+
+                                CType(Control, Telerik.WinControls.UI.RadTextBox).Focus()
                             End If
 
                         End If
                     ElseIf TypeOf Control Is Telerik.WinControls.UI.RadDropDownList Then
                         If Control.Text.trim.Equals("-") Or Control.Text.trim.Equals("") Then
+                            Me.AbortSaveing = True
+
+                            'etwas umständlich, aber sonst komme ich nicht an den Rahmen der Textbox in der Dropdownliste
+                            Try
+                                DirectCast(CType(Control, Telerik.WinControls.UI.RadDropDownList).DropDownListElement.Children(0), Telerik.WinControls.Primitives.BorderPrimitive).BottomColor = Color.Red
+                                DirectCast(CType(Control, Telerik.WinControls.UI.RadDropDownList).DropDownListElement.Children(0), Telerik.WinControls.Primitives.BorderPrimitive).TopColor = Color.Red
+                                DirectCast(CType(Control, Telerik.WinControls.UI.RadDropDownList).DropDownListElement.Children(0), Telerik.WinControls.Primitives.BorderPrimitive).LeftColor = Color.Red
+                                DirectCast(CType(Control, Telerik.WinControls.UI.RadDropDownList).DropDownListElement.Children(0), Telerik.WinControls.Primitives.BorderPrimitive).RightColor = Color.Red
+                            Catch ex As Exception
+
+                            End Try
+                            CType(Control, Telerik.WinControls.UI.RadDropDownList).Focus()
+                        ElseIf Control.Text.ToLower.Contains("deaktiviert") Then
                             Me.AbortSaveing = True
 
                             'etwas umständlich, aber sonst komme ich nicht an den Rahmen der Textbox in der Dropdownliste
@@ -764,7 +789,7 @@
                 UpdateObject()
 
                 'erzeuegn eines Server Objektes auf basis des aktuellen DS
-                objServerEichprozess = clsClientServerConversionFunctions.CopyObjectProperties(objServerEichprozess, objEichprozess)
+                objServerEichprozess = clsClientServerConversionFunctions.CopyObjectProperties(objServerEichprozess, objEichprozess, clsClientServerConversionFunctions.enuModus.RHEWASendetAnClient)
                 Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
                     Try
                         Webcontext.Open()

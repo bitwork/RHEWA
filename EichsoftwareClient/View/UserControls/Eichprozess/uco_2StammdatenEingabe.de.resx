@@ -117,10 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="RadTextBoxControlStammdatenPLZ.RootElement.KeyTip" xml:space="preserve">
+  <data name="RadTextBoxStammdatenPLZ.RootElement.KeyTip" xml:space="preserve">
     <value />
   </data>
-  <data name="RadTextBoxControlStammdatenPLZ.RootElement.ToolTipText" xml:space="preserve">
+  <data name="RadTextBoxStammdatenPLZ.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
   <data name="lblPLZ.RootElement.KeyTip" xml:space="preserve">
@@ -136,10 +136,10 @@
   <data name="lblPLZ.Text" xml:space="preserve">
     <value>Postleitzahl</value>
   </data>
-  <data name="RadTextBoxControlStammdatenOrt.RootElement.KeyTip" xml:space="preserve">
+  <data name="RadTextBoxStammdatenOrt.RootElement.KeyTip" xml:space="preserve">
     <value />
   </data>
-  <data name="RadTextBoxControlStammdatenOrt.RootElement.ToolTipText" xml:space="preserve">
+  <data name="RadTextBoxStammdatenOrt.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
   <data name="lblOrt.RootElement.KeyTip" xml:space="preserve">
@@ -154,10 +154,10 @@
   <data name="lblOrt.Text" xml:space="preserve">
     <value>Ort</value>
   </data>
-  <data name="RadTextBoxControlStammdatenStrasse.RootElement.KeyTip" xml:space="preserve">
+  <data name="RadTextBoxStammdatenStrasse.RootElement.KeyTip" xml:space="preserve">
     <value />
   </data>
-  <data name="RadTextBoxControlStammdatenStrasse.RootElement.ToolTipText" xml:space="preserve">
+  <data name="RadTextBoxStammdatenStrasse.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
   <data name="lblStrasse.RootElement.KeyTip" xml:space="preserve">
@@ -172,10 +172,10 @@
   <data name="lblStrasse.Text" xml:space="preserve">
     <value>Strasse</value>
   </data>
-  <data name="RadTextBoxControlStammdatenWaagenbaufirma.RootElement.KeyTip" xml:space="preserve">
+  <data name="RadTextBoxStammdatenWaagenbaufirma.RootElement.KeyTip" xml:space="preserve">
     <value />
   </data>
-  <data name="RadTextBoxControlStammdatenWaagenbaufirma.RootElement.ToolTipText" xml:space="preserve">
+  <data name="RadTextBoxStammdatenWaagenbaufirma.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
   <data name="lblWaagenbaufirma.RootElement.KeyTip" xml:space="preserve">
@@ -232,10 +232,10 @@
   <data name="lblAWZTyp.Text" xml:space="preserve">
     <value>Typ</value>
   </data>
-  <data name="RadTextBoxControlWZBauartzulassung.RootElement.KeyTip" xml:space="preserve">
+  <data name="RadTextBoxWZBauartzulassung.RootElement.KeyTip" xml:space="preserve">
     <value />
   </data>
-  <data name="RadTextBoxControlWZBauartzulassung.RootElement.ToolTipText" xml:space="preserve">
+  <data name="RadTextBoxWZBauartzulassung.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
   <data name="lblAWZZulassung2.RootElement.KeyTip" xml:space="preserve">
@@ -250,10 +250,10 @@
   <data name="lblAWZZulassung2.Text" xml:space="preserve">
     <value>und/oder Bauartzulassung</value>
   </data>
-  <data name="RadTextBoxControlWZPruefbericht.RootElement.KeyTip" xml:space="preserve">
+  <data name="RadTextBoxWZPruefbericht.RootElement.KeyTip" xml:space="preserve">
     <value />
   </data>
-  <data name="RadTextBoxControlWZPruefbericht.RootElement.ToolTipText" xml:space="preserve">
+  <data name="RadTextBoxWZPruefbericht.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
   <data name="lblAWZZulassung.RootElement.KeyTip" xml:space="preserve">
@@ -328,10 +328,10 @@
   <data name="RadDropdownlistWaagenTyp.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
-  <data name="RadTextBoxControlWaageZulassungsinhaber.RootElement.KeyTip" xml:space="preserve">
+  <data name="RadTextBoxWaageZulassungsinhaber.RootElement.KeyTip" xml:space="preserve">
     <value />
   </data>
-  <data name="RadTextBoxControlWaageZulassungsinhaber.RootElement.ToolTipText" xml:space="preserve">
+  <data name="RadTextBoxWaageZulassungsinhaber.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
   <data name="lblAWaagenTyp.RootElement.KeyTip" xml:space="preserve">
@@ -346,10 +346,10 @@
   <data name="lblAWaagenTyp.Text" xml:space="preserve">
     <value>Waagentyp</value>
   </data>
-  <data name="RadTextBoxControlWaageSeriennummer.RootElement.KeyTip" xml:space="preserve">
+  <data name="RadTextBoxWaageSeriennummer.RootElement.KeyTip" xml:space="preserve">
     <value />
   </data>
-  <data name="RadTextBoxControlWaageSeriennummer.RootElement.ToolTipText" xml:space="preserve">
+  <data name="RadTextBoxWaageSeriennummer.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
   <data name="lblAWaageSeriennummer.RootElement.KeyTip" xml:space="preserve">
@@ -394,10 +394,10 @@
   <data name="lblAWGTyp.Text" xml:space="preserve">
     <value>Typ</value>
   </data>
-  <data name="RadTextBoxControlAWGBauartzulassung.RootElement.KeyTip" xml:space="preserve">
+  <data name="RadTextBoxAWGBauartzulassung.RootElement.KeyTip" xml:space="preserve">
     <value />
   </data>
-  <data name="RadTextBoxControlAWGBauartzulassung.RootElement.ToolTipText" xml:space="preserve">
+  <data name="RadTextBoxAWGBauartzulassung.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
   <data name="lblAWGBauart2.RootElement.KeyTip" xml:space="preserve">
@@ -412,10 +412,10 @@
   <data name="lblAWGBauart2.Text" xml:space="preserve">
     <value>und/oder Bauartzulassung</value>
   </data>
-  <data name="RadTextBoxControlAWGPruefbericht.RootElement.KeyTip" xml:space="preserve">
+  <data name="RadTextBoxAWGPruefbericht.RootElement.KeyTip" xml:space="preserve">
     <value />
   </data>
-  <data name="RadTextBoxControlAWGPruefbericht.RootElement.ToolTipText" xml:space="preserve">
+  <data name="RadTextBoxAWGPruefbericht.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
   <data name="lblAWGBauart.RootElement.KeyTip" xml:space="preserve">
@@ -430,10 +430,10 @@
   <data name="lblAWGBauart.Text" xml:space="preserve">
     <value>Prüfbericht/-schein</value>
   </data>
-  <data name="RadTextBoxControlAWGHersteller.RootElement.KeyTip" xml:space="preserve">
+  <data name="RadTextBoxAWGHersteller.RootElement.KeyTip" xml:space="preserve">
     <value />
   </data>
-  <data name="RadTextBoxControlAWGHersteller.RootElement.ToolTipText" xml:space="preserve">
+  <data name="RadTextBoxAWGHersteller.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
   <data name="lblAWGHersteller.RootElement.KeyTip" xml:space="preserve">

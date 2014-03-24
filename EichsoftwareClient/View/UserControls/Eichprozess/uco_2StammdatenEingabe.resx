@@ -243,55 +243,55 @@
   <data name="&gt;&gt;lblPflichtfeld.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="RadTextBoxControlStammdatenPLZ.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RadTextBoxStammdatenPLZ.Location" type="System.Drawing.Point, System.Drawing">
     <value>239, 105</value>
   </data>
-  <data name="RadTextBoxControlStammdatenPLZ.MaxLength" type="System.Int32, mscorlib">
+  <data name="RadTextBoxStammdatenPLZ.MaxLength" type="System.Int32, mscorlib">
     <value>255</value>
   </data>
-  <data name="RadTextBoxControlStammdatenPLZ.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadTextBoxStammdatenPLZ.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlStammdatenPLZ.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadTextBoxStammdatenPLZ.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlStammdatenPLZ.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="RadTextBoxStammdatenPLZ.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
-  <data name="RadTextBoxControlStammdatenPLZ.RootElement.AngleTransform" type="System.Single, mscorlib">
+  <data name="RadTextBoxStammdatenPLZ.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
-  <data name="RadTextBoxControlStammdatenPLZ.RootElement.FlipText" type="System.Boolean, mscorlib">
+  <data name="RadTextBoxStammdatenPLZ.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="RadTextBoxControlStammdatenPLZ.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="RadTextBoxStammdatenPLZ.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlStammdatenPLZ.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="RadTextBoxStammdatenPLZ.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlStammdatenPLZ.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadTextBoxStammdatenPLZ.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlStammdatenPLZ.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+  <data name="RadTextBoxStammdatenPLZ.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="RadTextBoxControlStammdatenPLZ.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RadTextBoxStammdatenPLZ.Size" type="System.Drawing.Size, System.Drawing">
     <value>361, 20</value>
   </data>
-  <data name="RadTextBoxControlStammdatenPLZ.TabIndex" type="System.Int32, mscorlib">
+  <data name="RadTextBoxStammdatenPLZ.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlStammdatenPLZ.Name" xml:space="preserve">
-    <value>RadTextBoxControlStammdatenPLZ</value>
+  <data name="&gt;&gt;RadTextBoxStammdatenPLZ.Name" xml:space="preserve">
+    <value>RadTextBoxStammdatenPLZ</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlStammdatenPLZ.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="&gt;&gt;RadTextBoxStammdatenPLZ.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlStammdatenPLZ.Parent" xml:space="preserve">
+  <data name="&gt;&gt;RadTextBoxStammdatenPLZ.Parent" xml:space="preserve">
     <value>RadGroupBoxStammdaten</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlStammdatenPLZ.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;RadTextBoxStammdatenPLZ.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
   <data name="lblPLZ.Location" type="System.Drawing.Point, System.Drawing">
@@ -345,55 +345,55 @@
   <data name="&gt;&gt;lblPLZ.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="RadTextBoxControlStammdatenOrt.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RadTextBoxStammdatenOrt.Location" type="System.Drawing.Point, System.Drawing">
     <value>239, 79</value>
   </data>
-  <data name="RadTextBoxControlStammdatenOrt.MaxLength" type="System.Int32, mscorlib">
+  <data name="RadTextBoxStammdatenOrt.MaxLength" type="System.Int32, mscorlib">
     <value>255</value>
   </data>
-  <data name="RadTextBoxControlStammdatenOrt.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadTextBoxStammdatenOrt.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlStammdatenOrt.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadTextBoxStammdatenOrt.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlStammdatenOrt.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="RadTextBoxStammdatenOrt.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
-  <data name="RadTextBoxControlStammdatenOrt.RootElement.AngleTransform" type="System.Single, mscorlib">
+  <data name="RadTextBoxStammdatenOrt.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
-  <data name="RadTextBoxControlStammdatenOrt.RootElement.FlipText" type="System.Boolean, mscorlib">
+  <data name="RadTextBoxStammdatenOrt.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="RadTextBoxControlStammdatenOrt.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="RadTextBoxStammdatenOrt.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlStammdatenOrt.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="RadTextBoxStammdatenOrt.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlStammdatenOrt.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadTextBoxStammdatenOrt.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlStammdatenOrt.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+  <data name="RadTextBoxStammdatenOrt.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="RadTextBoxControlStammdatenOrt.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RadTextBoxStammdatenOrt.Size" type="System.Drawing.Size, System.Drawing">
     <value>361, 20</value>
   </data>
-  <data name="RadTextBoxControlStammdatenOrt.TabIndex" type="System.Int32, mscorlib">
+  <data name="RadTextBoxStammdatenOrt.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlStammdatenOrt.Name" xml:space="preserve">
-    <value>RadTextBoxControlStammdatenOrt</value>
+  <data name="&gt;&gt;RadTextBoxStammdatenOrt.Name" xml:space="preserve">
+    <value>RadTextBoxStammdatenOrt</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlStammdatenOrt.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="&gt;&gt;RadTextBoxStammdatenOrt.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlStammdatenOrt.Parent" xml:space="preserve">
+  <data name="&gt;&gt;RadTextBoxStammdatenOrt.Parent" xml:space="preserve">
     <value>RadGroupBoxStammdaten</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlStammdatenOrt.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;RadTextBoxStammdatenOrt.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
   <data name="lblOrt.Location" type="System.Drawing.Point, System.Drawing">
@@ -447,55 +447,55 @@
   <data name="&gt;&gt;lblOrt.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="RadTextBoxControlStammdatenStrasse.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RadTextBoxStammdatenStrasse.Location" type="System.Drawing.Point, System.Drawing">
     <value>239, 53</value>
   </data>
-  <data name="RadTextBoxControlStammdatenStrasse.MaxLength" type="System.Int32, mscorlib">
+  <data name="RadTextBoxStammdatenStrasse.MaxLength" type="System.Int32, mscorlib">
     <value>255</value>
   </data>
-  <data name="RadTextBoxControlStammdatenStrasse.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadTextBoxStammdatenStrasse.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlStammdatenStrasse.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadTextBoxStammdatenStrasse.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlStammdatenStrasse.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="RadTextBoxStammdatenStrasse.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
-  <data name="RadTextBoxControlStammdatenStrasse.RootElement.AngleTransform" type="System.Single, mscorlib">
+  <data name="RadTextBoxStammdatenStrasse.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
-  <data name="RadTextBoxControlStammdatenStrasse.RootElement.FlipText" type="System.Boolean, mscorlib">
+  <data name="RadTextBoxStammdatenStrasse.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="RadTextBoxControlStammdatenStrasse.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="RadTextBoxStammdatenStrasse.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlStammdatenStrasse.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="RadTextBoxStammdatenStrasse.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlStammdatenStrasse.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadTextBoxStammdatenStrasse.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlStammdatenStrasse.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+  <data name="RadTextBoxStammdatenStrasse.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="RadTextBoxControlStammdatenStrasse.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RadTextBoxStammdatenStrasse.Size" type="System.Drawing.Size, System.Drawing">
     <value>361, 20</value>
   </data>
-  <data name="RadTextBoxControlStammdatenStrasse.TabIndex" type="System.Int32, mscorlib">
+  <data name="RadTextBoxStammdatenStrasse.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlStammdatenStrasse.Name" xml:space="preserve">
-    <value>RadTextBoxControlStammdatenStrasse</value>
+  <data name="&gt;&gt;RadTextBoxStammdatenStrasse.Name" xml:space="preserve">
+    <value>RadTextBoxStammdatenStrasse</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlStammdatenStrasse.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="&gt;&gt;RadTextBoxStammdatenStrasse.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlStammdatenStrasse.Parent" xml:space="preserve">
+  <data name="&gt;&gt;RadTextBoxStammdatenStrasse.Parent" xml:space="preserve">
     <value>RadGroupBoxStammdaten</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlStammdatenStrasse.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;RadTextBoxStammdatenStrasse.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
   <data name="lblStrasse.Location" type="System.Drawing.Point, System.Drawing">
@@ -549,55 +549,55 @@
   <data name="&gt;&gt;lblStrasse.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="RadTextBoxControlStammdatenWaagenbaufirma.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RadTextBoxStammdatenWaagenbaufirma.Location" type="System.Drawing.Point, System.Drawing">
     <value>239, 27</value>
   </data>
-  <data name="RadTextBoxControlStammdatenWaagenbaufirma.MaxLength" type="System.Int32, mscorlib">
+  <data name="RadTextBoxStammdatenWaagenbaufirma.MaxLength" type="System.Int32, mscorlib">
     <value>255</value>
   </data>
-  <data name="RadTextBoxControlStammdatenWaagenbaufirma.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadTextBoxStammdatenWaagenbaufirma.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlStammdatenWaagenbaufirma.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadTextBoxStammdatenWaagenbaufirma.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlStammdatenWaagenbaufirma.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="RadTextBoxStammdatenWaagenbaufirma.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
-  <data name="RadTextBoxControlStammdatenWaagenbaufirma.RootElement.AngleTransform" type="System.Single, mscorlib">
+  <data name="RadTextBoxStammdatenWaagenbaufirma.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
-  <data name="RadTextBoxControlStammdatenWaagenbaufirma.RootElement.FlipText" type="System.Boolean, mscorlib">
+  <data name="RadTextBoxStammdatenWaagenbaufirma.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="RadTextBoxControlStammdatenWaagenbaufirma.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="RadTextBoxStammdatenWaagenbaufirma.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlStammdatenWaagenbaufirma.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="RadTextBoxStammdatenWaagenbaufirma.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlStammdatenWaagenbaufirma.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadTextBoxStammdatenWaagenbaufirma.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlStammdatenWaagenbaufirma.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+  <data name="RadTextBoxStammdatenWaagenbaufirma.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="RadTextBoxControlStammdatenWaagenbaufirma.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RadTextBoxStammdatenWaagenbaufirma.Size" type="System.Drawing.Size, System.Drawing">
     <value>361, 20</value>
   </data>
-  <data name="RadTextBoxControlStammdatenWaagenbaufirma.TabIndex" type="System.Int32, mscorlib">
+  <data name="RadTextBoxStammdatenWaagenbaufirma.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlStammdatenWaagenbaufirma.Name" xml:space="preserve">
-    <value>RadTextBoxControlStammdatenWaagenbaufirma</value>
+  <data name="&gt;&gt;RadTextBoxStammdatenWaagenbaufirma.Name" xml:space="preserve">
+    <value>RadTextBoxStammdatenWaagenbaufirma</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlStammdatenWaagenbaufirma.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="&gt;&gt;RadTextBoxStammdatenWaagenbaufirma.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlStammdatenWaagenbaufirma.Parent" xml:space="preserve">
+  <data name="&gt;&gt;RadTextBoxStammdatenWaagenbaufirma.Parent" xml:space="preserve">
     <value>RadGroupBoxStammdaten</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlStammdatenWaagenbaufirma.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;RadTextBoxStammdatenWaagenbaufirma.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
   <data name="lblWaagenbaufirma.Location" type="System.Drawing.Point, System.Drawing">
@@ -1005,55 +1005,55 @@
   <data name="&gt;&gt;lblAWZTyp.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="RadTextBoxControlWZBauartzulassung.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RadTextBoxWZBauartzulassung.Location" type="System.Drawing.Point, System.Drawing">
     <value>267, 117</value>
   </data>
-  <data name="RadTextBoxControlWZBauartzulassung.MaxLength" type="System.Int32, mscorlib">
+  <data name="RadTextBoxWZBauartzulassung.MaxLength" type="System.Int32, mscorlib">
     <value>50</value>
   </data>
-  <data name="RadTextBoxControlWZBauartzulassung.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadTextBoxWZBauartzulassung.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlWZBauartzulassung.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadTextBoxWZBauartzulassung.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlWZBauartzulassung.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="RadTextBoxWZBauartzulassung.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
-  <data name="RadTextBoxControlWZBauartzulassung.RootElement.AngleTransform" type="System.Single, mscorlib">
+  <data name="RadTextBoxWZBauartzulassung.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
-  <data name="RadTextBoxControlWZBauartzulassung.RootElement.FlipText" type="System.Boolean, mscorlib">
+  <data name="RadTextBoxWZBauartzulassung.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="RadTextBoxControlWZBauartzulassung.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="RadTextBoxWZBauartzulassung.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlWZBauartzulassung.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="RadTextBoxWZBauartzulassung.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlWZBauartzulassung.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadTextBoxWZBauartzulassung.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlWZBauartzulassung.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+  <data name="RadTextBoxWZBauartzulassung.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="RadTextBoxControlWZBauartzulassung.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RadTextBoxWZBauartzulassung.Size" type="System.Drawing.Size, System.Drawing">
     <value>333, 20</value>
   </data>
-  <data name="RadTextBoxControlWZBauartzulassung.TabIndex" type="System.Int32, mscorlib">
+  <data name="RadTextBoxWZBauartzulassung.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlWZBauartzulassung.Name" xml:space="preserve">
-    <value>RadTextBoxControlWZBauartzulassung</value>
+  <data name="&gt;&gt;RadTextBoxWZBauartzulassung.Name" xml:space="preserve">
+    <value>RadTextBoxWZBauartzulassung</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlWZBauartzulassung.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="&gt;&gt;RadTextBoxWZBauartzulassung.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlWZBauartzulassung.Parent" xml:space="preserve">
+  <data name="&gt;&gt;RadTextBoxWZBauartzulassung.Parent" xml:space="preserve">
     <value>RadGroupBoxWZ</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlWZBauartzulassung.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;RadTextBoxWZBauartzulassung.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
   <data name="lblAWZZulassung2.Location" type="System.Drawing.Point, System.Drawing">
@@ -1107,55 +1107,55 @@
   <data name="&gt;&gt;lblAWZZulassung2.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="RadTextBoxControlWZPruefbericht.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RadTextBoxWZPruefbericht.Location" type="System.Drawing.Point, System.Drawing">
     <value>239, 91</value>
   </data>
-  <data name="RadTextBoxControlWZPruefbericht.MaxLength" type="System.Int32, mscorlib">
+  <data name="RadTextBoxWZPruefbericht.MaxLength" type="System.Int32, mscorlib">
     <value>50</value>
   </data>
-  <data name="RadTextBoxControlWZPruefbericht.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadTextBoxWZPruefbericht.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlWZPruefbericht.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadTextBoxWZPruefbericht.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlWZPruefbericht.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="RadTextBoxWZPruefbericht.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
-  <data name="RadTextBoxControlWZPruefbericht.RootElement.AngleTransform" type="System.Single, mscorlib">
+  <data name="RadTextBoxWZPruefbericht.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
-  <data name="RadTextBoxControlWZPruefbericht.RootElement.FlipText" type="System.Boolean, mscorlib">
+  <data name="RadTextBoxWZPruefbericht.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="RadTextBoxControlWZPruefbericht.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="RadTextBoxWZPruefbericht.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlWZPruefbericht.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="RadTextBoxWZPruefbericht.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlWZPruefbericht.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadTextBoxWZPruefbericht.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlWZPruefbericht.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+  <data name="RadTextBoxWZPruefbericht.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="RadTextBoxControlWZPruefbericht.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RadTextBoxWZPruefbericht.Size" type="System.Drawing.Size, System.Drawing">
     <value>361, 20</value>
   </data>
-  <data name="RadTextBoxControlWZPruefbericht.TabIndex" type="System.Int32, mscorlib">
+  <data name="RadTextBoxWZPruefbericht.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlWZPruefbericht.Name" xml:space="preserve">
-    <value>RadTextBoxControlWZPruefbericht</value>
+  <data name="&gt;&gt;RadTextBoxWZPruefbericht.Name" xml:space="preserve">
+    <value>RadTextBoxWZPruefbericht</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlWZPruefbericht.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="&gt;&gt;RadTextBoxWZPruefbericht.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlWZPruefbericht.Parent" xml:space="preserve">
+  <data name="&gt;&gt;RadTextBoxWZPruefbericht.Parent" xml:space="preserve">
     <value>RadGroupBoxWZ</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlWZPruefbericht.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;RadTextBoxWZPruefbericht.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
   <data name="lblAWZZulassung.Location" type="System.Drawing.Point, System.Drawing">
@@ -1625,55 +1625,55 @@
   <data name="&gt;&gt;RadDropdownlistWaagenTyp.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="RadTextBoxControlWaageZulassungsinhaber.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RadTextBoxWaageZulassungsinhaber.Location" type="System.Drawing.Point, System.Drawing">
     <value>239, 121</value>
   </data>
-  <data name="RadTextBoxControlWaageZulassungsinhaber.MaxLength" type="System.Int32, mscorlib">
+  <data name="RadTextBoxWaageZulassungsinhaber.MaxLength" type="System.Int32, mscorlib">
     <value>50</value>
   </data>
-  <data name="RadTextBoxControlWaageZulassungsinhaber.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadTextBoxWaageZulassungsinhaber.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlWaageZulassungsinhaber.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadTextBoxWaageZulassungsinhaber.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlWaageZulassungsinhaber.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="RadTextBoxWaageZulassungsinhaber.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
-  <data name="RadTextBoxControlWaageZulassungsinhaber.RootElement.AngleTransform" type="System.Single, mscorlib">
+  <data name="RadTextBoxWaageZulassungsinhaber.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
-  <data name="RadTextBoxControlWaageZulassungsinhaber.RootElement.FlipText" type="System.Boolean, mscorlib">
+  <data name="RadTextBoxWaageZulassungsinhaber.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="RadTextBoxControlWaageZulassungsinhaber.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="RadTextBoxWaageZulassungsinhaber.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlWaageZulassungsinhaber.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="RadTextBoxWaageZulassungsinhaber.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlWaageZulassungsinhaber.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadTextBoxWaageZulassungsinhaber.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlWaageZulassungsinhaber.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+  <data name="RadTextBoxWaageZulassungsinhaber.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="RadTextBoxControlWaageZulassungsinhaber.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RadTextBoxWaageZulassungsinhaber.Size" type="System.Drawing.Size, System.Drawing">
     <value>361, 20</value>
   </data>
-  <data name="RadTextBoxControlWaageZulassungsinhaber.TabIndex" type="System.Int32, mscorlib">
+  <data name="RadTextBoxWaageZulassungsinhaber.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlWaageZulassungsinhaber.Name" xml:space="preserve">
-    <value>RadTextBoxControlWaageZulassungsinhaber</value>
+  <data name="&gt;&gt;RadTextBoxWaageZulassungsinhaber.Name" xml:space="preserve">
+    <value>RadTextBoxWaageZulassungsinhaber</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlWaageZulassungsinhaber.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="&gt;&gt;RadTextBoxWaageZulassungsinhaber.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlWaageZulassungsinhaber.Parent" xml:space="preserve">
+  <data name="&gt;&gt;RadTextBoxWaageZulassungsinhaber.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlWaageZulassungsinhaber.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;RadTextBoxWaageZulassungsinhaber.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
   <data name="lblAWaagenTyp.Location" type="System.Drawing.Point, System.Drawing">
@@ -1727,55 +1727,55 @@
   <data name="&gt;&gt;lblAWaagenTyp.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="RadTextBoxControlWaageSeriennummer.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RadTextBoxWaageSeriennummer.Location" type="System.Drawing.Point, System.Drawing">
     <value>239, 35</value>
   </data>
-  <data name="RadTextBoxControlWaageSeriennummer.MaxLength" type="System.Int32, mscorlib">
+  <data name="RadTextBoxWaageSeriennummer.MaxLength" type="System.Int32, mscorlib">
     <value>50</value>
   </data>
-  <data name="RadTextBoxControlWaageSeriennummer.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadTextBoxWaageSeriennummer.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlWaageSeriennummer.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadTextBoxWaageSeriennummer.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlWaageSeriennummer.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="RadTextBoxWaageSeriennummer.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
-  <data name="RadTextBoxControlWaageSeriennummer.RootElement.AngleTransform" type="System.Single, mscorlib">
+  <data name="RadTextBoxWaageSeriennummer.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
-  <data name="RadTextBoxControlWaageSeriennummer.RootElement.FlipText" type="System.Boolean, mscorlib">
+  <data name="RadTextBoxWaageSeriennummer.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="RadTextBoxControlWaageSeriennummer.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="RadTextBoxWaageSeriennummer.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlWaageSeriennummer.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="RadTextBoxWaageSeriennummer.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlWaageSeriennummer.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadTextBoxWaageSeriennummer.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlWaageSeriennummer.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+  <data name="RadTextBoxWaageSeriennummer.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="RadTextBoxControlWaageSeriennummer.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RadTextBoxWaageSeriennummer.Size" type="System.Drawing.Size, System.Drawing">
     <value>361, 20</value>
   </data>
-  <data name="RadTextBoxControlWaageSeriennummer.TabIndex" type="System.Int32, mscorlib">
+  <data name="RadTextBoxWaageSeriennummer.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlWaageSeriennummer.Name" xml:space="preserve">
-    <value>RadTextBoxControlWaageSeriennummer</value>
+  <data name="&gt;&gt;RadTextBoxWaageSeriennummer.Name" xml:space="preserve">
+    <value>RadTextBoxWaageSeriennummer</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlWaageSeriennummer.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="&gt;&gt;RadTextBoxWaageSeriennummer.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlWaageSeriennummer.Parent" xml:space="preserve">
+  <data name="&gt;&gt;RadTextBoxWaageSeriennummer.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlWaageSeriennummer.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;RadTextBoxWaageSeriennummer.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
   <data name="lblAWaageSeriennummer.Location" type="System.Drawing.Point, System.Drawing">
@@ -2075,55 +2075,55 @@
   <data name="&gt;&gt;lblAWGTyp.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="RadTextBoxControlAWGBauartzulassung.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RadTextBoxAWGBauartzulassung.Location" type="System.Drawing.Point, System.Drawing">
     <value>267, 114</value>
   </data>
-  <data name="RadTextBoxControlAWGBauartzulassung.MaxLength" type="System.Int32, mscorlib">
+  <data name="RadTextBoxAWGBauartzulassung.MaxLength" type="System.Int32, mscorlib">
     <value>50</value>
   </data>
-  <data name="RadTextBoxControlAWGBauartzulassung.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadTextBoxAWGBauartzulassung.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlAWGBauartzulassung.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadTextBoxAWGBauartzulassung.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlAWGBauartzulassung.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="RadTextBoxAWGBauartzulassung.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
-  <data name="RadTextBoxControlAWGBauartzulassung.RootElement.AngleTransform" type="System.Single, mscorlib">
+  <data name="RadTextBoxAWGBauartzulassung.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
-  <data name="RadTextBoxControlAWGBauartzulassung.RootElement.FlipText" type="System.Boolean, mscorlib">
+  <data name="RadTextBoxAWGBauartzulassung.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="RadTextBoxControlAWGBauartzulassung.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="RadTextBoxAWGBauartzulassung.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlAWGBauartzulassung.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="RadTextBoxAWGBauartzulassung.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlAWGBauartzulassung.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadTextBoxAWGBauartzulassung.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlAWGBauartzulassung.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+  <data name="RadTextBoxAWGBauartzulassung.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="RadTextBoxControlAWGBauartzulassung.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RadTextBoxAWGBauartzulassung.Size" type="System.Drawing.Size, System.Drawing">
     <value>332, 20</value>
   </data>
-  <data name="RadTextBoxControlAWGBauartzulassung.TabIndex" type="System.Int32, mscorlib">
+  <data name="RadTextBoxAWGBauartzulassung.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlAWGBauartzulassung.Name" xml:space="preserve">
-    <value>RadTextBoxControlAWGBauartzulassung</value>
+  <data name="&gt;&gt;RadTextBoxAWGBauartzulassung.Name" xml:space="preserve">
+    <value>RadTextBoxAWGBauartzulassung</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlAWGBauartzulassung.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="&gt;&gt;RadTextBoxAWGBauartzulassung.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlAWGBauartzulassung.Parent" xml:space="preserve">
+  <data name="&gt;&gt;RadTextBoxAWGBauartzulassung.Parent" xml:space="preserve">
     <value>RadGroupBoxAWG</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlAWGBauartzulassung.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;RadTextBoxAWGBauartzulassung.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
   <data name="lblAWGBauart2.Location" type="System.Drawing.Point, System.Drawing">
@@ -2177,55 +2177,55 @@
   <data name="&gt;&gt;lblAWGBauart2.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="RadTextBoxControlAWGPruefbericht.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RadTextBoxAWGPruefbericht.Location" type="System.Drawing.Point, System.Drawing">
     <value>238, 88</value>
   </data>
-  <data name="RadTextBoxControlAWGPruefbericht.MaxLength" type="System.Int32, mscorlib">
+  <data name="RadTextBoxAWGPruefbericht.MaxLength" type="System.Int32, mscorlib">
     <value>50</value>
   </data>
-  <data name="RadTextBoxControlAWGPruefbericht.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadTextBoxAWGPruefbericht.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlAWGPruefbericht.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadTextBoxAWGPruefbericht.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlAWGPruefbericht.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="RadTextBoxAWGPruefbericht.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
-  <data name="RadTextBoxControlAWGPruefbericht.RootElement.AngleTransform" type="System.Single, mscorlib">
+  <data name="RadTextBoxAWGPruefbericht.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
-  <data name="RadTextBoxControlAWGPruefbericht.RootElement.FlipText" type="System.Boolean, mscorlib">
+  <data name="RadTextBoxAWGPruefbericht.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="RadTextBoxControlAWGPruefbericht.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="RadTextBoxAWGPruefbericht.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlAWGPruefbericht.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="RadTextBoxAWGPruefbericht.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlAWGPruefbericht.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadTextBoxAWGPruefbericht.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlAWGPruefbericht.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+  <data name="RadTextBoxAWGPruefbericht.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="RadTextBoxControlAWGPruefbericht.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RadTextBoxAWGPruefbericht.Size" type="System.Drawing.Size, System.Drawing">
     <value>361, 20</value>
   </data>
-  <data name="RadTextBoxControlAWGPruefbericht.TabIndex" type="System.Int32, mscorlib">
+  <data name="RadTextBoxAWGPruefbericht.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlAWGPruefbericht.Name" xml:space="preserve">
-    <value>RadTextBoxControlAWGPruefbericht</value>
+  <data name="&gt;&gt;RadTextBoxAWGPruefbericht.Name" xml:space="preserve">
+    <value>RadTextBoxAWGPruefbericht</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlAWGPruefbericht.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="&gt;&gt;RadTextBoxAWGPruefbericht.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlAWGPruefbericht.Parent" xml:space="preserve">
+  <data name="&gt;&gt;RadTextBoxAWGPruefbericht.Parent" xml:space="preserve">
     <value>RadGroupBoxAWG</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlAWGPruefbericht.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;RadTextBoxAWGPruefbericht.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
   <data name="lblAWGBauart.Location" type="System.Drawing.Point, System.Drawing">
@@ -2279,55 +2279,55 @@
   <data name="&gt;&gt;lblAWGBauart.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="RadTextBoxControlAWGHersteller.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RadTextBoxAWGHersteller.Location" type="System.Drawing.Point, System.Drawing">
     <value>238, 62</value>
   </data>
-  <data name="RadTextBoxControlAWGHersteller.MaxLength" type="System.Int32, mscorlib">
+  <data name="RadTextBoxAWGHersteller.MaxLength" type="System.Int32, mscorlib">
     <value>50</value>
   </data>
-  <data name="RadTextBoxControlAWGHersteller.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadTextBoxAWGHersteller.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlAWGHersteller.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadTextBoxAWGHersteller.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlAWGHersteller.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="RadTextBoxAWGHersteller.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
-  <data name="RadTextBoxControlAWGHersteller.RootElement.AngleTransform" type="System.Single, mscorlib">
+  <data name="RadTextBoxAWGHersteller.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
-  <data name="RadTextBoxControlAWGHersteller.RootElement.FlipText" type="System.Boolean, mscorlib">
+  <data name="RadTextBoxAWGHersteller.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="RadTextBoxControlAWGHersteller.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="RadTextBoxAWGHersteller.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlAWGHersteller.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="RadTextBoxAWGHersteller.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlAWGHersteller.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadTextBoxAWGHersteller.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlAWGHersteller.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+  <data name="RadTextBoxAWGHersteller.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="RadTextBoxControlAWGHersteller.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RadTextBoxAWGHersteller.Size" type="System.Drawing.Size, System.Drawing">
     <value>361, 20</value>
   </data>
-  <data name="RadTextBoxControlAWGHersteller.TabIndex" type="System.Int32, mscorlib">
+  <data name="RadTextBoxAWGHersteller.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlAWGHersteller.Name" xml:space="preserve">
-    <value>RadTextBoxControlAWGHersteller</value>
+  <data name="&gt;&gt;RadTextBoxAWGHersteller.Name" xml:space="preserve">
+    <value>RadTextBoxAWGHersteller</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlAWGHersteller.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="&gt;&gt;RadTextBoxAWGHersteller.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlAWGHersteller.Parent" xml:space="preserve">
+  <data name="&gt;&gt;RadTextBoxAWGHersteller.Parent" xml:space="preserve">
     <value>RadGroupBoxAWG</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlAWGHersteller.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;RadTextBoxAWGHersteller.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
   <data name="lblAWGHersteller.Location" type="System.Drawing.Point, System.Drawing">
