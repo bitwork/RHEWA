@@ -129,8 +129,11 @@
                 PictureBox3.Image = Nothing
             Else
                 PictureBox1.Image = PictureBox1.ErrorImage
+                PictureBox1.SizeMode = PictureBoxSizeMode.CenterImage
                 PictureBox2.Image = PictureBox2.ErrorImage
+                PictureBox2.SizeMode = PictureBoxSizeMode.CenterImage
                 PictureBox3.Image = PictureBox3.ErrorImage
+                PictureBox3.SizeMode = PictureBoxSizeMode.CenterImage
             End If
         Catch ex As Exception
             PictureBox1.Image = PictureBox1.ErrorImage
@@ -653,7 +656,7 @@
                 UpdateObject()
 
                 'erzeuegn eines Server Objektes auf basis des aktuellen DS
-                objServerEichprozess = clsClientServerConversionFunctions.CopyObjectProperties(objServerEichprozess, objEichprozess)
+               objServerEichprozess = clsClientServerConversionFunctions.CopyObjectProperties(objServerEichprozess, objEichprozess, clsClientServerConversionFunctions.enuModus.RHEWASendetAnClient)
                 Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
                     Try
                         Webcontext.Open()

@@ -43,6 +43,7 @@ Public Class Uco21Versenden
 
         'falls der Eichvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
         If DialogModus = enuDialogModus.lesend Then
+            ParentFormular.BreadCrumb.FindeElementUndSelektiere(GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe)
             For Each Control In Me.Controls
                 Try
                     Control.readonly = True
@@ -156,7 +157,7 @@ Public Class Uco21Versenden
         Using dbcontext As New EichsoftwareClientdatabaseEntities1
             objEichprozess = (From a In dbcontext.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Beschaffenheitspruefung").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
 
-            objServerEichprozess = clsClientServerConversionFunctions.CopyObjectProperties(objServerEichprozess, objEichprozess)
+            objServerEichprozess = clsClientServerConversionFunctions.CopyObjectProperties(objServerEichprozess, objEichprozess, clsClientServerConversionFunctions.enuModus.ClientSendetAnRhewa)
 
             'verbindung öffnen
             Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
@@ -396,7 +397,7 @@ Public Class Uco21Versenden
                 UpdateObject()
 
                 'erzeuegn eines Server Objektes auf basis des aktuellen DS
-                objServerEichprozess = clsClientServerConversionFunctions.CopyObjectProperties(objServerEichprozess, objEichprozess)
+                objServerEichprozess = clsClientServerConversionFunctions.CopyObjectProperties(objServerEichprozess, objEichprozess, clsClientServerConversionFunctions.enuModus.RHEWASendetAnClient)
                 Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
                     Try
                         Webcontext.Open()
