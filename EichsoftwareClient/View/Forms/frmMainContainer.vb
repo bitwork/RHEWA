@@ -17,6 +17,16 @@ Public Class FrmMainContainer
     Private objWebservicefunctions As New clsWebserviceFunctions 'hilfsklasse für aufrufe gegen den Webservice
     Private objDBFunctions As New clsDBFunctions 'hilfsklasse für aufrufe gegen lokale DB
 
+    ''' <summary>
+    ''' Gets the P listof ucos.
+    ''' </summary>
+    ''' <value>The P listof ucos.</value>
+    Public ReadOnly Property AllUcos() As List(Of ucoContent)
+        Get
+            Return ListofUcos
+        End Get
+    End Property
+
     Enum enuDialogModus
         normal = 0
         lesend = 1

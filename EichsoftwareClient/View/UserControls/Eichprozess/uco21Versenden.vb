@@ -216,13 +216,24 @@ Public Class Uco21Versenden
                     End Using
                 End Try
                 Try
-                    'nur versenden wenn der Eichprozess noch nicht versendet wurde. Sonst würden zu oft Marken abgezogen
-
+                    'nur versenden wenn der Eichprozess noch nicht versendet wurde. Sonst würden zu oft Marken abgezogen. Ausserdem sonderfall: eichmarkenverwaltung wurde geändert (dirty)
+                    If Not ParentFormular Is Nothing Then
+                        If Not ParentFormular.AllUcos Is Nothing Then
+                            'prüfen ob es in der auflisting ein element vom typ ucoVersenden gibt.
+                            If Not (From uco1 In ParentFormular.AllUcos Where TypeOf uco1 Is uco19EichtechnischeSicherung).DefaultIfEmpty Is Nothing Then
+                                Dim uco = (From uco1 In ParentFormular.AllUcos Where TypeOf uco1 Is uco19EichtechnischeSicherung).DefaultIfEmpty
+                                'wenn dirty
+                                If CType(uco, Uco21Versenden).AktuellerStatusDirty Then
+                                    Webcontext.AddEichmarkenverwaltung(objLiz.HEKennung, objLiz.Lizenzschluessel, objLiz.FK_BenutzerID, _
+                                                    objEichprozess.Eichprotokoll.Sicherung_BenannteStelleAnzahl, objEichprozess.Eichprotokoll.Sicherung_Eichsiegel13x13Anzahl, _
+                                                    objEichprozess.Eichprotokoll.Sicherung_EichsiegelRundAnzahl, objEichprozess.Eichprotokoll.Sicherung_HinweismarkeGelochtAnzahl, _
+                                                    objEichprozess.Eichprotokoll.Sicherung_GruenesMAnzahl, objEichprozess.Eichprotokoll.Sicherung_CEAnzahl, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                                End If
+                            End If
+                        End If
+                    End If
                     If objEichprozess.FK_Bearbeitungsstatus = 1 Then
-                        Webcontext.AddEichmarkenverwaltung(objLiz.HEKennung, objLiz.Lizenzschluessel, objLiz.FK_BenutzerID, _
-                                                       objEichprozess.Eichprotokoll.Sicherung_BenannteStelleAnzahl, objEichprozess.Eichprotokoll.Sicherung_Eichsiegel13x13Anzahl, _
-                                                       objEichprozess.Eichprotokoll.Sicherung_EichsiegelRundAnzahl, objEichprozess.Eichprotokoll.Sicherung_HinweismarkeGelochtAnzahl, _
-                                                       objEichprozess.Eichprotokoll.Sicherung_GruenesMAnzahl, objEichprozess.Eichprotokoll.Sicherung_CEAnzahl, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                     
                     End If
 
                     ParentFormular.Close()
