@@ -435,7 +435,6 @@
 
                 ' lese modus, dann soll beliebig im Eichprozess hin und her gewechselt werden können => Eichprozessstatus auf Versenden setzen
                 objClientEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Versenden
-               
 
                 Dim f As New FrmMainContainer(objClientEichprozess, FrmMainContainer.enuDialogModus.lesend)
                 f.ShowDialog()
@@ -592,7 +591,7 @@
 
     End Sub
 
-    Public Function InitUDownloadFileToFTP(ByVal vorgangsnummer As String) As String
+    Public Function InitDownloadDateiVonFTP(ByVal vorgangsnummer As String) As String
         Using dbcontext As New EichsoftwareClientdatabaseEntities1
             Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
                 Try
@@ -644,7 +643,7 @@
                         MessageBox.Show(ex.Message)
                         Return ""
                     End Try
-                    
+
                     'downloadgroße ermitteln
                     Dim filesize As Long
                     filesize = objFTP.GetFileSize(objFTPDaten.FTPServername, objFTPDaten.FTPUserName, password, file.Name)
@@ -667,10 +666,10 @@
     End Function
 
 
- 
+
     Private Sub BackgroundWorkerDownloadFromFTP_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorkerDownloadFromFTP.DoWork
         Dim vorgangsnummer As String = e.Argument
-        e.Result = InitUDownloadFileToFTP(vorgangsnummer)
+        e.Result = InitDownloadDateiVonFTP(vorgangsnummer)
     End Sub
 
     Private Sub BackgroundWorkerDownloadFromFTP_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorkerDownloadFromFTP.RunWorkerCompleted
@@ -787,6 +786,8 @@
             objWebserviceFunctions.GetNeueWZ(bolNeuWZ)
             'prüfen ob es neue AWG gibt
             objWebserviceFunctions.GetNeuesAWG(bolNeuAWG)
+
+
 
             My.Settings.LetztesUpdate = Date.Now
             My.Settings.Save()

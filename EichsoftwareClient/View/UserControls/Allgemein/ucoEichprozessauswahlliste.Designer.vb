@@ -34,6 +34,7 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadButtonClientNeu = New Telerik.WinControls.UI.RadButton()
         Me.RadButtonClientBearbeiten = New Telerik.WinControls.UI.RadButton()
         Me.RadPageViewPageAlle = New Telerik.WinControls.UI.RadPageViewPage()
+        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.RadButtonRefresh = New Telerik.WinControls.UI.RadButton()
         Me.RadProgressBar = New Telerik.WinControls.UI.RadProgressBar()
         Me.RadButtonEichprozessKopierenRHEWA = New Telerik.WinControls.UI.RadButton()
@@ -55,6 +56,7 @@ Partial Class ucoEichprozessauswahlliste
         CType(Me.RadButtonClientNeu, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonClientBearbeiten, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadPageViewPageAlle.SuspendLayout()
+        Me.FlowLayoutPanel1.SuspendLayout()
         CType(Me.RadButtonRefresh, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadProgressBar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonEichprozessKopierenRHEWA, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -236,8 +238,7 @@ Partial Class ucoEichprozessauswahlliste
         '
         'RadPageViewPageAlle
         '
-        Me.RadPageViewPageAlle.Controls.Add(Me.RadButtonRefresh)
-        Me.RadPageViewPageAlle.Controls.Add(Me.RadProgressBar)
+        Me.RadPageViewPageAlle.Controls.Add(Me.FlowLayoutPanel1)
         Me.RadPageViewPageAlle.Controls.Add(Me.RadButtonEichprozessKopierenRHEWA)
         Me.RadPageViewPageAlle.Controls.Add(Me.RadButtonEichprozessAblehnenRHEWA)
         Me.RadPageViewPageAlle.Controls.Add(Me.RadButtonEichprozessGenehmigenRHEWA)
@@ -245,6 +246,13 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadPageViewPageAlle.Controls.Add(Me.RadButtonEichungAnsehenRHEWA)
         resources.ApplyResources(Me.RadPageViewPageAlle, "RadPageViewPageAlle")
         Me.RadPageViewPageAlle.Name = "RadPageViewPageAlle"
+        '
+        'FlowLayoutPanel1
+        '
+        resources.ApplyResources(Me.FlowLayoutPanel1, "FlowLayoutPanel1")
+        Me.FlowLayoutPanel1.Controls.Add(Me.RadButtonRefresh)
+        Me.FlowLayoutPanel1.Controls.Add(Me.RadProgressBar)
+        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
         '
         'RadButtonRefresh
         '
@@ -254,14 +262,14 @@ Partial Class ucoEichprozessauswahlliste
         '
         '
         '
-        Me.RadButtonRefresh.RootElement.AccessibleDescription = resources.GetString("RadButton1.RootElement.AccessibleDescription")
-        Me.RadButtonRefresh.RootElement.AccessibleName = resources.GetString("RadButton1.RootElement.AccessibleName")
-        Me.RadButtonRefresh.RootElement.Alignment = CType(resources.GetObject("RadButton1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadButtonRefresh.RootElement.AngleTransform = CType(resources.GetObject("RadButton1.RootElement.AngleTransform"), Single)
-        Me.RadButtonRefresh.RootElement.FlipText = CType(resources.GetObject("RadButton1.RootElement.FlipText"), Boolean)
-        Me.RadButtonRefresh.RootElement.Margin = CType(resources.GetObject("RadButton1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButtonRefresh.RootElement.Text = resources.GetString("RadButton1.RootElement.Text")
-        Me.RadButtonRefresh.RootElement.TextOrientation = CType(resources.GetObject("RadButton1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadButtonRefresh.RootElement.AccessibleDescription = resources.GetString("RadButtonRefresh.RootElement.AccessibleDescription")
+        Me.RadButtonRefresh.RootElement.AccessibleName = resources.GetString("RadButtonRefresh.RootElement.AccessibleName")
+        Me.RadButtonRefresh.RootElement.Alignment = CType(resources.GetObject("RadButtonRefresh.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.RadButtonRefresh.RootElement.AngleTransform = CType(resources.GetObject("RadButtonRefresh.RootElement.AngleTransform"), Single)
+        Me.RadButtonRefresh.RootElement.FlipText = CType(resources.GetObject("RadButtonRefresh.RootElement.FlipText"), Boolean)
+        Me.RadButtonRefresh.RootElement.Margin = CType(resources.GetObject("RadButtonRefresh.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadButtonRefresh.RootElement.Text = resources.GetString("RadButtonRefresh.RootElement.Text")
+        Me.RadButtonRefresh.RootElement.TextOrientation = CType(resources.GetObject("RadButtonRefresh.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
         'RadProgressBar
         '
@@ -399,6 +407,7 @@ Partial Class ucoEichprozessauswahlliste
         CType(Me.RadButtonClientNeu, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonClientBearbeiten, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadPageViewPageAlle.ResumeLayout(False)
+        Me.FlowLayoutPanel1.ResumeLayout(False)
         CType(Me.RadButtonRefresh, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadProgressBar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonEichprozessKopierenRHEWA, System.ComponentModel.ISupportInitialize).EndInit()
@@ -430,5 +439,6 @@ Partial Class ucoEichprozessauswahlliste
     Friend WithEvents RadProgressBar As Telerik.WinControls.UI.RadProgressBar
     Friend WithEvents BackgroundWorkerDownloadFromFTP As System.ComponentModel.BackgroundWorker
     Friend WithEvents RadButtonRefresh As Telerik.WinControls.UI.RadButton
+    Friend WithEvents FlowLayoutPanel1 As System.Windows.Forms.FlowLayoutPanel
 
 End Class

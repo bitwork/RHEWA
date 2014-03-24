@@ -525,34 +525,41 @@
   <data name="&gt;&gt;RadPageViewPageEigene.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="FlowLayoutPanel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
   <data name="RadButtonRefresh.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
   </data>
   <data name="RadButtonRefresh.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 437</value>
+    <value>3, 3</value>
   </data>
-  <data name="RadButton1.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadButtonRefresh.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadButton1.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadButtonRefresh.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadButton1.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
+  <data name="RadButtonRefresh.RootElement.Alignment" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
+        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAAB9TeXN0ZW0uRHJh
+        d2luZy5Db250ZW50QWxpZ25tZW50AQAAAAd2YWx1ZV9fAAgCAAAAAAAAAAs=
+</value>
   </data>
-  <data name="RadButton1.RootElement.AngleTransform" type="System.Single, mscorlib">
+  <data name="RadButtonRefresh.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
-  <data name="RadButton1.RootElement.FlipText" type="System.Boolean, mscorlib">
+  <data name="RadButtonRefresh.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="RadButton1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="RadButtonRefresh.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadButton1.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadButtonRefresh.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadButton1.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+  <data name="RadButtonRefresh.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
   <data name="RadButtonRefresh.Size" type="System.Drawing.Size, System.Drawing">
@@ -574,7 +581,7 @@
     <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonRefresh.Parent" xml:space="preserve">
-    <value>RadPageViewPageAlle</value>
+    <value>FlowLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;RadButtonRefresh.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -583,7 +590,7 @@
     <value>Bottom, Left, Right</value>
   </data>
   <data name="RadProgressBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 407</value>
+    <value>3, 45</value>
   </data>
   <data name="RadProgressBar.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -610,7 +617,7 @@
     <value>Horizontal</value>
   </data>
   <data name="RadProgressBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>299, 24</value>
+    <value>347, 10</value>
   </data>
   <data name="RadProgressBar.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -625,10 +632,31 @@
     <value>Telerik.WinControls.UI.RadProgressBar, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadProgressBar.Parent" xml:space="preserve">
-    <value>RadPageViewPageAlle</value>
+    <value>FlowLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;RadProgressBar.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="FlowLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 407</value>
+  </data>
+  <data name="FlowLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>357, 65</value>
+  </data>
+  <data name="FlowLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;FlowLayoutPanel1.Name" xml:space="preserve">
+    <value>FlowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;FlowLayoutPanel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FlowLayoutPanel1.Parent" xml:space="preserve">
+    <value>RadPageViewPageAlle</value>
+  </data>
+  <data name="&gt;&gt;FlowLayoutPanel1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="RadButtonEichprozessKopierenRHEWA.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -682,7 +710,7 @@
     <value>RadPageViewPageAlle</value>
   </data>
   <data name="&gt;&gt;RadButtonEichprozessKopierenRHEWA.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="RadButtonEichprozessAblehnenRHEWA.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -736,7 +764,7 @@
     <value>RadPageViewPageAlle</value>
   </data>
   <data name="&gt;&gt;RadButtonEichprozessAblehnenRHEWA.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="RadButtonEichprozessGenehmigenRHEWA.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -790,7 +818,7 @@
     <value>RadPageViewPageAlle</value>
   </data>
   <data name="&gt;&gt;RadButtonEichprozessGenehmigenRHEWA.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="RadGridViewRHEWAAlle.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -841,7 +869,7 @@
     <value>RadPageViewPageAlle</value>
   </data>
   <data name="&gt;&gt;RadGridViewRHEWAAlle.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="RadButtonEichungAnsehenRHEWA.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -895,7 +923,7 @@
     <value>RadPageViewPageAlle</value>
   </data>
   <data name="&gt;&gt;RadButtonEichungAnsehenRHEWA.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="RadPageViewPageAlle.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 37</value>
@@ -1006,6 +1034,6 @@
     <value>ucoEichprozessauswahlliste</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, EichsoftwareClient, Version=1.0.5191.25921, Culture=neutral, PublicKeyToken=null</value>
+    <value>EichsoftwareClient.ucoContent, EichsoftwareClient, Version=1.0.5196.15454, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>
