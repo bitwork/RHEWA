@@ -277,9 +277,11 @@
                     Try
                         _ListPruefungWiederholbarkeit.Clear()
                         For Each obj In objEichprozess.Eichprotokoll.PruefungWiederholbarkeit
+                            obj.Eichprotokoll = objEichprozess.Eichprotokoll
+
                             _ListPruefungWiederholbarkeit.Add(obj)
                         Next
-                    Catch ex As System.ObjectDisposedException
+                    Catch ex As System.ObjectDisposedException 'fehler im Clientseitigen Lesemodus (bei bereits abegschickter Eichung)
                         Using context As New EichsoftwareClientdatabaseEntities1
                             'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
                             'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
@@ -294,10 +296,11 @@
                     Try
                         For Each obj In objEichprozess.Eichprotokoll.PruefungWiederholbarkeit
                             If obj.Belastung = "voll" Then
+                                obj.Eichprotokoll = objEichprozess.Eichprotokoll
                                 _ListPruefungWiederholbarkeit.Add(obj)
                             End If
                         Next
-                    Catch ex As System.ObjectDisposedException
+                    Catch ex As System.ObjectDisposedException 'fehler im Clientseitigen Lesemodus (bei bereits abegschickter Eichung)
                         Using context As New EichsoftwareClientdatabaseEntities1
                             'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen und "voll" sind. Halbe wurden an andere Stelle schon abgearbeitet
                             Dim query = From a In context.PruefungWiederholbarkeit Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID And a.Belastung = "voll"
@@ -499,11 +502,25 @@
         'neuen Context aufbauen
         Using Context As New EichsoftwareClientdatabaseEntities1
             'jedes objekt initialisieren und aus context laden und updaten
-            For Each objPruefung In _ListPruefungWiederholbarkeit
-                objPruefung = Context.PruefungWiederholbarkeit.FirstOrDefault(Function(value) value.ID = objPruefung.ID)
-                UpdatePruefungsObject(objPruefung)
+            For Each obj In _ListPruefungWiederholbarkeit
+                Dim objPruefung = Context.PruefungWiederholbarkeit.FirstOrDefault(Function(value) value.ID = obj.ID)
+                If Not objPruefung Is Nothing Then
+                    'in lokaler DB gucken
+                    UpdatePruefungsObject(objPruefung)
+                Else 'es handelt sich um eine Serverobjekt im => Korrekturmodus
+                    If DialogModus = enuDialogModus.korrigierend Then
+                        UpdatePruefungsObject(obj)
+                    End If
+                End If
             Next
         End Using
+    End Sub
+
+    Private Sub UeberschreibePruefungsobjekte()
+        objEichprozess.Eichprotokoll.PruefungWiederholbarkeit.Clear()
+        For Each obj In _ListPruefungWiederholbarkeit
+            objEichprozess.Eichprotokoll.PruefungWiederholbarkeit.Add(obj)
+        Next
     End Sub
 
     Private Sub UpdatePruefungsObject(ByVal PObjPruefung As PruefungWiederholbarkeit)
@@ -991,6 +1008,7 @@
                 objEichprozess.FK_Bearbeitungsstatus = 2
                 objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Eichbevollmächtigter sich den DS von Anfang angucken muss
                 UpdateObject()
+                UeberschreibePruefungsobjekte()
 
                 'erzeuegn eines Server Objektes auf basis des aktuellen DS
                objServerEichprozess = clsClientServerConversionFunctions.CopyObjectProperties(objServerEichprozess, objEichprozess, clsClientServerConversionFunctions.enuModus.RHEWASendetAnClient)

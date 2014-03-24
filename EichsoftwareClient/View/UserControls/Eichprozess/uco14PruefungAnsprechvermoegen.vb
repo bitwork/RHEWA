@@ -70,9 +70,11 @@
             Try
                 'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
                 For Each obj In objEichprozess.Eichprotokoll.PruefungAnsprechvermoegen
+                    obj.Eichprotokoll = objEichprozess.Eichprotokoll
+
                     _ListPruefungAnsprechvermoegen.Add(obj)
                 Next
-            Catch ex As System.ObjectDisposedException
+            Catch ex As System.ObjectDisposedException 'fehler im Clientseitigen Lesemodus (bei bereits abegschickter Eichung)
                 Using context As New EichsoftwareClientdatabaseEntities1
                     'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
                     Dim query = From a In context.PruefungAnsprechvermoegen Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
@@ -191,11 +193,19 @@
         'neuen Context aufbauen
         Using Context As New EichsoftwareClientdatabaseEntities1
             'jedes objekt initialisieren und aus context laden und updaten
-            For Each objPruefung In _ListPruefungAnsprechvermoegen
-                objPruefung = Context.PruefungAnsprechvermoegen.FirstOrDefault(Function(value) value.ID = objPruefung.ID)
-                UpdatePruefungsObject(objPruefung)
-            Next
-       
+                For Each obj In _ListPruefungAnsprechvermoegen
+                    Dim objPruefung = Context.PruefungAnsprechvermoegen.FirstOrDefault(Function(value) value.ID = obj.ID)
+                    If Not objPruefung Is Nothing Then
+                        'in lokaler DB gucken
+                        UpdatePruefungsObject(objPruefung)
+                    Else 'es handelt sich um eine Serverobjekt im => Korrekturmodus
+                        If DialogModus = enuDialogModus.korrigierend Then
+                            UpdatePruefungsObject(obj)
+                        End If
+                    End If
+                Next
+
+
         End Using
     End Sub
 
@@ -218,6 +228,15 @@
                 pObjPruefung.Ziffernsprung = RadCheckBoxMax.Checked
         End Select
     End Sub
+
+    Private Sub UeberschreibePruefungsobjekte()
+        objEichprozess.Eichprotokoll.PruefungAnsprechvermoegen.Clear()
+        For Each obj In _ListPruefungAnsprechvermoegen
+            objEichprozess.Eichprotokoll.PruefungAnsprechvermoegen.Add(obj)
+        Next
+    End Sub
+
+
     ''' <summary>
     ''' Gültigkeit der Eingaben überprüfen
     ''' </summary>
@@ -677,6 +696,7 @@ RadTextBoxControlLast2.Text.Trim = "" Or _
                 objEichprozess.FK_Bearbeitungsstatus = 2
                 objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Eichbevollmächtigter sich den DS von Anfang angucken muss
                 UpdateObject()
+                UeberschreibePruefungsobjekte()
 
                 'erzeuegn eines Server Objektes auf basis des aktuellen DS
                objServerEichprozess = clsClientServerConversionFunctions.CopyObjectProperties(objServerEichprozess, objEichprozess, clsClientServerConversionFunctions.enuModus.RHEWASendetAnClient)

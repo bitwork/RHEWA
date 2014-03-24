@@ -99,12 +99,16 @@
             _ListPruefungStaffelverfahrenErsatzlast.Clear()
             Try
                 For Each obj In objEichprozess.Eichprotokoll.PruefungStaffelverfahrenNormallast
+                    obj.Eichprotokoll = objEichprozess.Eichprotokoll
+
                     _ListPruefungStaffelverfahrenNormallast.Add(obj)
                 Next
                 For Each obj In objEichprozess.Eichprotokoll.PruefungStaffelverfahrenErsatzlast
+                    obj.Eichprotokoll = objEichprozess.Eichprotokoll
+
                     _ListPruefungStaffelverfahrenErsatzlast.Add(obj)
                 Next
-            Catch ex As System.ObjectDisposedException
+            Catch ex As System.ObjectDisposedException 'fehler im Clientseitigen Lesemodus (bei bereits abegschickter Eichung)
                 Using context As New EichsoftwareClientdatabaseEntities1
                     'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
                     'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
@@ -1006,18 +1010,36 @@
         'neuen Context aufbauen
         Using Context As New EichsoftwareClientdatabaseEntities1
             'jedes objekt initialisieren und aus context laden und updaten
-            For Each objPruefung In _ListPruefungStaffelverfahrenNormallast
-                objPruefung = Context.PruefungStaffelverfahrenNormallast.FirstOrDefault(Function(value) value.ID = objPruefung.ID)
-                UpdatePruefungsObject(objPruefung)
+            For Each obj In _ListPruefungStaffelverfahrenNormallast
+                Dim objPruefung = Context.PruefungStaffelverfahrenNormallast.FirstOrDefault(Function(value) value.ID = obj.ID)
+                If Not objPruefung Is Nothing Then
+                    'in lokaler DB gucken
+                    UpdatePruefungsObject(objPruefung)
+                Else 'es handelt sich um eine Serverobjekt im => Korrekturmodus
+                    If DialogModus = enuDialogModus.korrigierend Then
+                        UpdatePruefungsObject(obj)
+                    End If
+                End If
             Next
 
             'jedes objekt initialisieren und aus context laden und updaten
-            For Each objPruefung In _ListPruefungStaffelverfahrenErsatzlast
-                objPruefung = Context.PruefungStaffelverfahrenErsatzlast.FirstOrDefault(Function(value) value.ID = objPruefung.ID)
+            For Each obj In _ListPruefungStaffelverfahrenErsatzlast
+                Dim objPruefung = Context.PruefungStaffelverfahrenErsatzlast.FirstOrDefault(Function(value) value.ID = obj.ID)
                 UpdatePruefungsObject(objPruefung)
             Next
 
         End Using
+    End Sub
+
+    Private Sub UeberschreibePruefungsobjekte()
+        objEichprozess.Eichprotokoll.PruefungStaffelverfahrenErsatzlast.Clear()
+        For Each obj In _ListPruefungStaffelverfahrenErsatzlast
+            objEichprozess.Eichprotokoll.PruefungStaffelverfahrenErsatzlast.Add(obj)
+        Next
+        objEichprozess.Eichprotokoll.PruefungStaffelverfahrenNormallast.Clear()
+        For Each obj In _ListPruefungStaffelverfahrenNormallast
+            objEichprozess.Eichprotokoll.PruefungStaffelverfahrenNormallast.Add(obj)
+        Next
     End Sub
 
     Private Sub UpdatePruefungsObject(ByVal PObjPruefung As PruefungStaffelverfahrenNormallast)
@@ -3129,6 +3151,7 @@
                 objEichprozess.FK_Bearbeitungsstatus = 2
                 objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Eichbevollmächtigter sich den DS von Anfang angucken muss
                 UpdateObject()
+                UeberschreibePruefungsobjekte()
 
                 'erzeuegn eines Server Objektes auf basis des aktuellen DS
                 objServerEichprozess = clsClientServerConversionFunctions.CopyObjectProperties(objServerEichprozess, objEichprozess, clsClientServerConversionFunctions.enuModus.RHEWASendetAnClient)

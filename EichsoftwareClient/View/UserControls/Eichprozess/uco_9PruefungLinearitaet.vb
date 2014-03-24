@@ -421,12 +421,14 @@ Public Class uco_9PruefungLinearitaet
                 _ListPruefungPruefungLinearitaetFallend.Clear()
                 'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
                 For Each obj In objEichprozess.Eichprotokoll.PruefungLinearitaetSteigend
+                    obj.Eichprotokoll = objEichprozess.Eichprotokoll
                     _ListPruefungPruefungLinearitaetSteigend.Add(obj)
                 Next
                 For Each obj In objEichprozess.Eichprotokoll.PruefungLinearitaetFallend
+                    obj.Eichprotokoll = objEichprozess.Eichprotokoll
                     _ListPruefungPruefungLinearitaetFallend.Add(obj)
                 Next
-            Catch ex As System.ObjectDisposedException
+            Catch ex As System.ObjectDisposedException 'fehler im Clientseitigen Lesemodus (bei bereits abegschickter Eichung)
                 Using context As New EichsoftwareClientdatabaseEntities1
                     'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
                     Dim query = From a In context.PruefungLinearitaetSteigend Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
@@ -1898,17 +1900,43 @@ Public Class uco_9PruefungLinearitaet
         'neuen Context aufbauen
         Using Context As New EichsoftwareClientdatabaseEntities1
             'jedes objekt initialisieren und aus context laden und updaten
-            For Each objPruefung In _ListPruefungPruefungLinearitaetFallend
-                objPruefung = Context.PruefungLinearitaetFallend.FirstOrDefault(Function(value) value.ID = objPruefung.ID)
-                UpdatePruefungsLinFallendObject(objPruefung)
+            For Each obj In _ListPruefungPruefungLinearitaetFallend
+                Dim objPruefung = Context.PruefungLinearitaetFallend.FirstOrDefault(Function(value) value.ID = obj.ID)
+                If Not objPruefung Is Nothing Then
+                    'in lokaler DB gucken
+                    UpdatePruefungsLinFallendObject(objPruefung)
+                Else 'es handelt sich um eine Serverobjekt im => Korrekturmodus
+                    If DialogModus = enuDialogModus.korrigierend Then
+                        UpdatePruefungsLinFallendObject(obj)
+                    End If
+                End If
             Next
             'jedes objekt initialisieren und aus context laden und updaten
-            For Each objPruefung In _ListPruefungPruefungLinearitaetSteigend
-                objPruefung = Context.PruefungLinearitaetSteigend.FirstOrDefault(Function(value) value.ID = objPruefung.ID)
-                UpdatePruefungsLinSteigendObject(objPruefung)
+            For Each obj In _ListPruefungPruefungLinearitaetSteigend
+                Dim objPruefung = Context.PruefungLinearitaetSteigend.FirstOrDefault(Function(value) value.ID = obj.ID)
+                If Not objPruefung Is Nothing Then
+                    'in lokaler DB gucken
+                    UpdatePruefungsLinSteigendObject(objPruefung)
+                Else 'es handelt sich um eine Serverobjekt im => Korrekturmodus
+                    If DialogModus = enuDialogModus.korrigierend Then
+                        UpdatePruefungsLinSteigendObject(obj)
+                    End If
+                End If
             Next
         End Using
     End Sub
+
+    Private Sub UeberschreibePruefungsobjekte()
+        objEichprozess.Eichprotokoll.PruefungLinearitaetFallend.Clear()
+        For Each obj In _ListPruefungPruefungLinearitaetFallend
+            objEichprozess.Eichprotokoll.PruefungLinearitaetFallend.Add(obj)
+        Next
+        objEichprozess.Eichprotokoll.PruefungLinearitaetSteigend.Clear()
+        For Each obj In _ListPruefungPruefungLinearitaetSteigend
+            objEichprozess.Eichprotokoll.PruefungLinearitaetSteigend.Add(obj)
+        Next
+    End Sub
+
 
 #Region "Overrides"
     'Speicherroutine
@@ -2463,6 +2491,7 @@ Public Class uco_9PruefungLinearitaet
                 objEichprozess.FK_Bearbeitungsstatus = 2
                 objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Eichbevollmächtigter sich den DS von Anfang angucken muss
                 UpdateObject()
+                UeberschreibePruefungsobjekte()
 
                 'erzeuegn eines Server Objektes auf basis des aktuellen DS
                 objServerEichprozess = clsClientServerConversionFunctions.CopyObjectProperties(objServerEichprozess, objEichprozess, clsClientServerConversionFunctions.enuModus.RHEWASendetAnClient)

@@ -427,10 +427,33 @@ Public Class uco_5Beschaffenheitspruefung
                 'auf fehlerhaft Status setzen
                 objEichprozess.FK_Bearbeitungsstatus = 2
                 objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Eichbevollmächtigter sich den DS von Anfang angucken muss
-                UpdateObject()
+              
+                If _ObjBeschaffenheitspruefung.ID <> 0 Then
+                    'prüfen ob das Objekt anhand der ID gefunden werden kann
+                    Dim dbObjBeschaffenheitspruefung As Beschaffenheitspruefung = dbcontext.Beschaffenheitspruefung.FirstOrDefault(Function(value) value.ID = objEichprozess.FK_Beschaffenheitspruefung)
+                    If Not dbObjBeschaffenheitspruefung Is Nothing Then
+                        'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
+                        _ObjBeschaffenheitspruefung = dbObjBeschaffenheitspruefung
+                        'Füllt das Objekt mit den Werten aus den Steuerlementen
+                        UpdateObject()
+
+                        Dim dbobjEichprozess As Eichprozess = dbcontext.Eichprozess.FirstOrDefault(Function(value) value.Vorgangsnummer = objEichprozess.Vorgangsnummer)
+                        If Not dbobjEichprozess Is Nothing Then
+                            'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
+                            objEichprozess = dbobjEichprozess
+                            objEichprozess.FK_Beschaffenheitspruefung = _ObjBeschaffenheitspruefung.ID
+
+                            'Speichern in Datenbank
+                            dbcontext.SaveChanges()
+                        End If
+
+
+                    End If
+
+                End If
 
                 'erzeuegn eines Server Objektes auf basis des aktuellen DS
-                objServerEichprozess = clsClientServerConversionFunctions.CopyObjectProperties(objServerEichprozess, objEichprozess)
+                objServerEichprozess = clsClientServerConversionFunctions.CopyObjectProperties(objServerEichprozess, objEichprozess, clsClientServerConversionFunctions.enuModus.RHEWASendetAnClient)
                 Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
                     Try
                         Webcontext.Open()

@@ -346,9 +346,11 @@
 
             Try
                 For Each obj In objEichprozess.Eichprotokoll.PruefungRollendeLasten
+                    obj.Eichprotokoll = objEichprozess.Eichprotokoll
+
                     _ListPruefungRollendeLasten.Add(obj)
                 Next
-            Catch ex As System.ObjectDisposedException
+            Catch ex As System.ObjectDisposedException 'fehler im Clientseitigen Lesemodus (bei bereits abegschickter Eichung)
                 Using context As New EichsoftwareClientdatabaseEntities1
                     'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
                     Dim query = From a In context.PruefungRollendeLasten Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
@@ -516,10 +518,19 @@
     Private Sub UpdateObject()
         'neuen Context aufbauen
         Using Context As New EichsoftwareClientdatabaseEntities1
+      
+
             'jedes objekt initialisieren und aus context laden und updaten
-            For Each objPruefung In _ListPruefungRollendeLasten
-                objPruefung = Context.PruefungRollendeLasten.FirstOrDefault(Function(value) value.ID = objPruefung.ID)
-                UpdatePruefungsObject(objPruefung)
+            For Each obj In _ListPruefungRollendeLasten
+                Dim objPruefung = Context.PruefungRollendeLasten.FirstOrDefault(Function(value) value.ID = obj.ID)
+                If Not objPruefung Is Nothing Then
+                    'in lokaler DB gucken
+                    UpdatePruefungsObject(objPruefung)
+                Else 'es handelt sich um eine Serverobjekt im => Korrekturmodus
+                    If DialogModus = enuDialogModus.korrigierend Then
+                        UpdatePruefungsObject(obj)
+                    End If
+                End If
             Next
 
         End Using
@@ -573,6 +584,15 @@
             End If
         End If
     End Sub
+
+    Private Sub UeberschreibePruefungsobjekte()
+        objEichprozess.Eichprotokoll.PruefungRollendeLasten.Clear()
+        For Each obj In _ListPruefungRollendeLasten
+            objEichprozess.Eichprotokoll.PruefungRollendeLasten.Add(obj)
+        Next
+      
+    End Sub
+
 
     ''' <summary>
     ''' Gültigkeit der Eingaben überprüfen
@@ -928,6 +948,7 @@
                 objEichprozess.FK_Bearbeitungsstatus = 2
                 objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Eichbevollmächtigter sich den DS von Anfang angucken muss
                 UpdateObject()
+                UeberschreibePruefungsobjekte()
 
                 'erzeuegn eines Server Objektes auf basis des aktuellen DS
                objServerEichprozess = clsClientServerConversionFunctions.CopyObjectProperties(objServerEichprozess, objEichprozess, clsClientServerConversionFunctions.enuModus.RHEWASendetAnClient)

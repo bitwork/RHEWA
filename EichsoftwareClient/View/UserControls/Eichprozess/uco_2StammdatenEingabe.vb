@@ -418,7 +418,7 @@
             Try
                 RadTextBoxAWGBauartzulassung.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Bauartzulassung
 
-            Catch ex As System.ObjectDisposedException
+            Catch ex As System.ObjectDisposedException 'fehler im Clientseitigen Lesemodus (bei bereits abegschickter Eichung)
                 objEichprozess = objDBFunctions.HoleNachschlageListenFuerEichprozess(objEichprozess)
                 RadTextBoxAWGBauartzulassung.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Bauartzulassung
 
