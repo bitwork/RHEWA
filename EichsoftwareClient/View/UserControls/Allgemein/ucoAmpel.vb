@@ -150,6 +150,7 @@ Public Class ucoAmpel
             'erneutes überprüfen auf Stati die nun ungültig sind
             HideElement(GetListeUngueltigeStati(_ParentForm.CurrentEichprozess))
         End If
+        FindeElementUndSelektiere(AktuellerGewaehlterVorgang)
     End Sub
 
     ''' <summary>
@@ -167,14 +168,17 @@ Public Class ucoAmpel
                     'sonderfall versenden = fertig
                     If pStatus = GlobaleEnumeratoren.enuEichprozessStatus.Versenden Then
                         If Not _ParentForm.CurrentEichprozess Is Nothing Then
-                            If _ParentForm.CurrentEichprozess.FK_Bearbeitungsstatus = GlobaleEnumeratoren.enuBearbeitungsstatus.noch_nicht_versendet Then
+                            If _ParentForm.CurrentEichprozess.FK_Bearbeitungsstatus = GlobaleEnumeratoren.enuBearbeitungsstatus.noch_nicht_versendet Or _
+ _ParentForm.CurrentEichprozess.FK_Bearbeitungsstatus = GlobaleEnumeratoren.enuBearbeitungsstatus.Fehlerhaft Then
                                 item("Image") = ConvertBitmapToByteArray(My.Resources.bullet_yellow)
                             Else
                                 item("Image") = ConvertBitmapToByteArray(My.Resources.bullet_green)
                                 Datasource.AcceptChanges()
-                                FindeElementUndSelektiere(GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe)
+                                'FindeElementUndSelektiere(GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe)
                                 Exit Sub
                             End If
+                        Else
+                            item("Image") = ConvertBitmapToByteArray(My.Resources.bullet_yellow)
                         End If
                     Else
                         item("Image") = ConvertBitmapToByteArray(My.Resources.bullet_yellow)
@@ -470,12 +474,16 @@ Public Class ucoAmpel
             Dim ItemImage = DirectCast(e.Item("Image"), Byte())
             Dim CompareImage = ConvertBitmapToByteArray(My.Resources.bullet_red)
 
-            'prüfen ob das gewählte element rot ist. wenn nicht das letzte gelbe element wählen
-            If ItemImage.SequenceEqual(CompareImage) Then
-                Me.FindeElementUndSelektiere(Me.AktuellerGewaehlterVorgang)
-
+            'im debugger zur einfachheit, kann per click auf jeden Status gesprungen werden
+            If Debugger.IsAttached Then
+                RaiseEvent Navigieren(e.Item("Status"))
                 Exit Sub
-
+            Else
+                'prüfen ob das gewählte element rot ist. wenn nicht das letzte gelbe element wählen
+                If ItemImage.SequenceEqual(CompareImage) Then
+                    Me.FindeElementUndSelektiere(Me.AktuellerGewaehlterVorgang)
+                    Exit Sub
+                End If
             End If
 
 

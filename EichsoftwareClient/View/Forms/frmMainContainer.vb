@@ -183,19 +183,24 @@ Public Class FrmMainContainer
     ''' <commentauthor></commentauthor>
     Private Sub NavigiereZuUco(ByVal Status As GlobaleEnumeratoren.enuEichprozessStatus) Handles BreadCrumb.Navigieren
         Try
-            'prüfen ob zu hoher Status gewählt wurde
-            If Status > CurrentEichprozess.FK_Vorgangsstatus Then
-                Exit Sub
+            'im debugger zur einfachheit, kann per click auf jeden Status gesprungen werden
+            If Debugger.IsAttached Then
+                SpringeZuUCO(Status)
             Else
+                'prüfen ob zu hoher Status gewählt wurde
+                If Status > CurrentEichprozess.FK_Vorgangsstatus Then
+                    Exit Sub
+                Else
 
-                'If _CurrentUco.DialogModus = ucoContent.enuDialogModus.lesend Then
-                '    'schnelles blättern im lese modus
-                If Not Status = _CurrentUco.EichprozessStatusReihenfolge Then
-                    SpringeZuUCO(Status)
+                    'If _CurrentUco.DialogModus = ucoContent.enuDialogModus.lesend Then
+                    '    'schnelles blättern im lese modus
+                    If Not Status = _CurrentUco.EichprozessStatusReihenfolge Then
+                        SpringeZuUCO(Status)
+
+                    End If
+
 
                 End If
-
-
             End If
         Catch e As Exception
         End Try
