@@ -1519,7 +1519,7 @@ Public Class clsClientServerConversionFunctions
                         If pModus = enuModus.RHEWASendetAnClient Then
                             query = SourceObject.Eichprotokoll.PruefungAnsprechvermoegen
                         Else
-                            query = From db In dbcontext.PruefungAnsprechvermoegen Where db.FK_Eichprotokoll = EichID
+                    query = (From db In dbcontext.PruefungAnsprechvermoegen Where db.FK_Eichprotokoll = EichID).ToList
                         End If
                         ReDim TargetObject._ServerEichprotokoll.ServerPruefungAnsprechvermoegen(query.Count - 1)
                         Dim intCounter As Integer = 0
@@ -1543,7 +1543,7 @@ Public Class clsClientServerConversionFunctions
                         If pModus = enuModus.RHEWASendetAnClient Then
                             query = SourceObject.Eichprotokoll.PruefungAussermittigeBelastung
                         Else
-                            query = From db In dbcontext.PruefungAussermittigeBelastung Where db.FK_Eichprotokoll = EichID
+                    query = (From db In dbcontext.PruefungAussermittigeBelastung Where db.FK_Eichprotokoll = EichID).ToList
 
                         End If
 
@@ -1573,7 +1573,7 @@ Public Class clsClientServerConversionFunctions
                             query = SourceObject.Eichprotokoll.PruefungEichfehlergrenzen
 
                         Else
-                            query = From db In dbcontext.PruefungEichfehlergrenzen Where db.FK_Eichprotokoll = EichID
+                    query = (From db In dbcontext.PruefungEichfehlergrenzen Where db.FK_Eichprotokoll = EichID).ToList
 
                         End If
 
@@ -1601,7 +1601,7 @@ Public Class clsClientServerConversionFunctions
                 If pModus = enuModus.RHEWASendetAnClient Then
                     query = SourceObject.Eichprotokoll.PruefungLinearitaetFallend
                 Else
-                    query = From db In dbcontext.PruefungLinearitaetFallend Where db.FK_Eichprotokoll = EichID
+                    query = (From db In dbcontext.PruefungLinearitaetFallend Where db.FK_Eichprotokoll = EichID).ToList
                 End If
 
 
@@ -1629,7 +1629,7 @@ Public Class clsClientServerConversionFunctions
                     query = SourceObject.Eichprotokoll.PruefungLinearitaetSteigend
 
                 Else
-                    query = From db In dbcontext.PruefungLinearitaetSteigend Where db.FK_Eichprotokoll = EichID
+                    query = (From db In dbcontext.PruefungLinearitaetSteigend Where db.FK_Eichprotokoll = EichID).ToList
 
                 End If
 
@@ -1655,7 +1655,7 @@ Public Class clsClientServerConversionFunctions
                     query = SourceObject.Eichprotokoll.PruefungRollendeLasten
 
                 Else
-                    query = From db In dbcontext.PruefungRollendeLasten Where db.FK_Eichprotokoll = EichID
+                    query = (From db In dbcontext.PruefungRollendeLasten Where db.FK_Eichprotokoll = EichID).ToList
 
                 End If
 
@@ -1683,7 +1683,7 @@ Public Class clsClientServerConversionFunctions
                     query = SourceObject.Eichprotokoll.PruefungStabilitaetGleichgewichtslage
 
                 Else
-                    query = From db In dbcontext.PruefungStabilitaetGleichgewichtslage Where db.FK_Eichprotokoll = EichID
+                    query = (From db In dbcontext.PruefungStabilitaetGleichgewichtslage Where db.FK_Eichprotokoll = EichID).ToList
 
                 End If
 
@@ -1711,7 +1711,7 @@ Public Class clsClientServerConversionFunctions
                 If pModus = enuModus.RHEWASendetAnClient Then
                     query = SourceObject.Eichprotokoll.PruefungStaffelverfahrenErsatzlast
                 Else
-                    query = From db In dbcontext.PruefungStaffelverfahrenErsatzlast Where db.FK_Eichprotokoll = EichID
+                    query = (From db In dbcontext.PruefungStaffelverfahrenErsatzlast Where db.FK_Eichprotokoll = EichID).ToList
                 End If
 
 
@@ -1747,7 +1747,7 @@ Public Class clsClientServerConversionFunctions
                     query = SourceObject.Eichprotokoll.PruefungStaffelverfahrenNormallast
 
                 Else
-                    query = From db In dbcontext.PruefungStaffelverfahrenNormallast Where db.FK_Eichprotokoll = EichID
+                    query = (From db In dbcontext.PruefungStaffelverfahrenNormallast Where db.FK_Eichprotokoll = EichID).ToList
 
                 End If
 
@@ -1795,7 +1795,7 @@ Public Class clsClientServerConversionFunctions
                     query = SourceObject.Eichprotokoll.PruefungWiederholbarkeit
 
                 Else
-                    query = From db In dbcontext.PruefungWiederholbarkeit Where db.FK_Eichprotokoll = EichID
+                    query = (From db In dbcontext.PruefungWiederholbarkeit Where db.FK_Eichprotokoll = EichID).ToList
 
                 End If
 
@@ -1824,7 +1824,7 @@ Public Class clsClientServerConversionFunctions
                     query = SourceObject.Mogelstatistik
 
                 Else
-                    query = From db In dbcontext.Mogelstatistik Where db.FK_Eichprozess = EichprozessID
+                    query = (From db In dbcontext.Mogelstatistik Where db.FK_Eichprozess = EichprozessID).ToList
 
                 End If
 
