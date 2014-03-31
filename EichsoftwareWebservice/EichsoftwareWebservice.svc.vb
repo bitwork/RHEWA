@@ -945,29 +945,29 @@ Public Class EichsoftwareWebservice
                 DbContext.Configuration.ProxyCreationEnabled = False
 
                 Dim Element = (From d In DbContext.ServerEichmarkenverwaltung Where d.FK_BenutzerID = BenutzerIDFK Order By d.ID).FirstOrDefault
-
+                'Zieht den vom Ursprünglichen Wert ab. Besonderheit: Eichung Eingesendet 2 Marken. Korretur auf 3 Marken muss den COunter nur im 1 veringern
                 Try
-                    Element.BenannteStelleAnzahl -= AnzahlBenannteStelle
+                    Element.BenannteStelleAnzahl -= (AnzahlBenannteStelle - Element.BenannteStelleAnzahl)
                 Catch e As Exception
                 End Try
                 Try
-                    Element.Eichsiegel13x13Anzahl -= AnzahlEichsiegel13x13
+                    Element.Eichsiegel13x13Anzahl -= (AnzahlEichsiegel13x13 - Element.Eichsiegel13x13Anzahl)
                 Catch e As Exception
                 End Try
                 Try
-                    Element.EichsiegelRundAnzahl -= AnzahlEichsiegelRund
+                    Element.EichsiegelRundAnzahl -= (AnzahlEichsiegelRund - Element.EichsiegelRundAnzahl)
                 Catch e As Exception
                 End Try
                 Try
-                    Element.HinweismarkeGelochtAnzahl -= AnzahlHinweismarke
+                    Element.HinweismarkeGelochtAnzahl -= (AnzahlHinweismarke - Element.HinweismarkeGelochtAnzahl)
                 Catch e As Exception
                 End Try
                 Try
-                    Element.GruenesMAnzahl -= AnzahlGruenesM
+                    Element.GruenesMAnzahl -= (AnzahlGruenesM - Element.GruenesMAnzahl)
                 Catch e As Exception
                 End Try
                 Try
-                    Element.CEAnzahl -= AnzahlCE
+                    Element.CEAnzahl -= (AnzahlCE - Element.CEAnzahl)
                 Catch e As Exception
                 End Try
 

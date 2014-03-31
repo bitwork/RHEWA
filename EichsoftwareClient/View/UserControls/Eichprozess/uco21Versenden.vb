@@ -232,9 +232,7 @@ Public Class Uco21Versenden
                             End If
                         End If
                     End If
-                    If objEichprozess.FK_Bearbeitungsstatus = 1 Then
-                     
-                    End If
+                
 
                     ParentFormular.Close()
                 Catch e As Exception
