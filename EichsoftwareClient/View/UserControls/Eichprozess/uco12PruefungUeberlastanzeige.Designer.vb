@@ -31,7 +31,6 @@ Partial Class uco12PruefungUeberlastanzeige
         Me.RadCheckBoxUeberlast = New Telerik.WinControls.UI.RadCheckBox()
         Me.lblKg = New Telerik.WinControls.UI.RadLabel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.RadButtonShowEFG = New Telerik.WinControls.UI.RadButton()
         Me.lblPflichtfeld1 = New System.Windows.Forms.Label()
         CType(Me.lblUeberlast, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlMaxE, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -41,7 +40,6 @@ Partial Class uco12PruefungUeberlastanzeige
         CType(Me.RadCheckBoxUeberlast, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblKg, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButtonShowEFG, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblUeberlast
@@ -57,7 +55,6 @@ Partial Class uco12PruefungUeberlastanzeige
         Me.lblUeberlast.RootElement.AngleTransform = CType(resources.GetObject("lblUeberlast.RootElement.AngleTransform"), Single)
         Me.lblUeberlast.RootElement.FlipText = CType(resources.GetObject("lblUeberlast.RootElement.FlipText"), Boolean)
         Me.lblUeberlast.RootElement.Margin = CType(resources.GetObject("lblUeberlast.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblUeberlast.RootElement.Padding = CType(resources.GetObject("lblUeberlast.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblUeberlast.RootElement.Text = resources.GetString("lblUeberlast.RootElement.Text")
         Me.lblUeberlast.RootElement.TextOrientation = CType(resources.GetObject("lblUeberlast.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -75,7 +72,6 @@ Partial Class uco12PruefungUeberlastanzeige
         Me.RadTextBoxControlMaxE.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlMaxE.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlMaxE.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlMaxE.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlMaxE.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlMaxE.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlMaxE.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlMaxE.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlMaxE.RootElement.Text = resources.GetString("RadTextBoxControlMaxE.RootElement.Text")
         Me.RadTextBoxControlMaxE.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlMaxE.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -92,7 +88,6 @@ Partial Class uco12PruefungUeberlastanzeige
         Me.RadLabel2.RootElement.AngleTransform = CType(resources.GetObject("RadLabel2.RootElement.AngleTransform"), Single)
         Me.RadLabel2.RootElement.FlipText = CType(resources.GetObject("RadLabel2.RootElement.FlipText"), Boolean)
         Me.RadLabel2.RootElement.Margin = CType(resources.GetObject("RadLabel2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel2.RootElement.Padding = CType(resources.GetObject("RadLabel2.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel2.RootElement.Text = resources.GetString("RadLabel2.RootElement.Text")
         Me.RadLabel2.RootElement.TextOrientation = CType(resources.GetObject("RadLabel2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -109,7 +104,6 @@ Partial Class uco12PruefungUeberlastanzeige
         Me.lblAnzeige.RootElement.AngleTransform = CType(resources.GetObject("lblAnzeige.RootElement.AngleTransform"), Single)
         Me.lblAnzeige.RootElement.FlipText = CType(resources.GetObject("lblAnzeige.RootElement.FlipText"), Boolean)
         Me.lblAnzeige.RootElement.Margin = CType(resources.GetObject("lblAnzeige.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblAnzeige.RootElement.Padding = CType(resources.GetObject("lblAnzeige.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblAnzeige.RootElement.Text = resources.GetString("lblAnzeige.RootElement.Text")
         Me.lblAnzeige.RootElement.TextOrientation = CType(resources.GetObject("lblAnzeige.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -126,7 +120,6 @@ Partial Class uco12PruefungUeberlastanzeige
         Me.RadLabel3.RootElement.AngleTransform = CType(resources.GetObject("RadLabel3.RootElement.AngleTransform"), Single)
         Me.RadLabel3.RootElement.FlipText = CType(resources.GetObject("RadLabel3.RootElement.FlipText"), Boolean)
         Me.RadLabel3.RootElement.Margin = CType(resources.GetObject("RadLabel3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel3.RootElement.Padding = CType(resources.GetObject("RadLabel3.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabel3.RootElement.Text = resources.GetString("RadLabel3.RootElement.Text")
         Me.RadLabel3.RootElement.TextOrientation = CType(resources.GetObject("RadLabel3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -143,7 +136,6 @@ Partial Class uco12PruefungUeberlastanzeige
         Me.RadCheckBoxUeberlast.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxUeberlast.RootElement.AngleTransform"), Single)
         Me.RadCheckBoxUeberlast.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxUeberlast.RootElement.FlipText"), Boolean)
         Me.RadCheckBoxUeberlast.RootElement.Margin = CType(resources.GetObject("RadCheckBoxUeberlast.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadCheckBoxUeberlast.RootElement.Padding = CType(resources.GetObject("RadCheckBoxUeberlast.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadCheckBoxUeberlast.RootElement.Text = resources.GetString("RadCheckBoxUeberlast.RootElement.Text")
         Me.RadCheckBoxUeberlast.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxUeberlast.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -160,7 +152,6 @@ Partial Class uco12PruefungUeberlastanzeige
         Me.lblKg.RootElement.AngleTransform = CType(resources.GetObject("lblKg.RootElement.AngleTransform"), Single)
         Me.lblKg.RootElement.FlipText = CType(resources.GetObject("lblKg.RootElement.FlipText"), Boolean)
         Me.lblKg.RootElement.Margin = CType(resources.GetObject("lblKg.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblKg.RootElement.Padding = CType(resources.GetObject("lblKg.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblKg.RootElement.Text = resources.GetString("lblKg.RootElement.Text")
         Me.lblKg.RootElement.TextOrientation = CType(resources.GetObject("lblKg.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -171,35 +162,17 @@ Partial Class uco12PruefungUeberlastanzeige
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.TabStop = False
         '
-        'RadButtonShowEFG
-        '
-        resources.ApplyResources(Me.RadButtonShowEFG, "RadButtonShowEFG")
-        Me.RadButtonShowEFG.Name = "RadButtonShowEFG"
-        '
-        '
-        '
-        Me.RadButtonShowEFG.RootElement.AccessibleDescription = resources.GetString("RadButtonShowEFG.RootElement.AccessibleDescription")
-        Me.RadButtonShowEFG.RootElement.AccessibleName = resources.GetString("RadButtonShowEFG.RootElement.AccessibleName")
-        Me.RadButtonShowEFG.RootElement.Alignment = CType(resources.GetObject("RadButtonShowEFG.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadButtonShowEFG.RootElement.AngleTransform = CType(resources.GetObject("RadButtonShowEFG.RootElement.AngleTransform"), Single)
-        Me.RadButtonShowEFG.RootElement.FlipText = CType(resources.GetObject("RadButtonShowEFG.RootElement.FlipText"), Boolean)
-        Me.RadButtonShowEFG.RootElement.Margin = CType(resources.GetObject("RadButtonShowEFG.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButtonShowEFG.RootElement.Padding = CType(resources.GetObject("RadButtonShowEFG.RootElement.Padding"), System.Windows.Forms.Padding)
-        Me.RadButtonShowEFG.RootElement.Text = resources.GetString("RadButtonShowEFG.RootElement.Text")
-        Me.RadButtonShowEFG.RootElement.TextOrientation = CType(resources.GetObject("RadButtonShowEFG.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        '
         'lblPflichtfeld1
         '
         resources.ApplyResources(Me.lblPflichtfeld1, "lblPflichtfeld1")
         Me.lblPflichtfeld1.ForeColor = System.Drawing.Color.Red
         Me.lblPflichtfeld1.Name = "lblPflichtfeld1"
         '
-        'ucoPruefungUeberlastanzeige
+        'uco12PruefungUeberlastanzeige
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.lblPflichtfeld1)
-        Me.Controls.Add(Me.RadButtonShowEFG)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.lblKg)
         Me.Controls.Add(Me.RadCheckBoxUeberlast)
@@ -208,7 +181,7 @@ Partial Class uco12PruefungUeberlastanzeige
         Me.Controls.Add(Me.RadLabel2)
         Me.Controls.Add(Me.RadTextBoxControlMaxE)
         Me.Controls.Add(Me.lblUeberlast)
-        Me.Name = "ucoPruefungUeberlastanzeige"
+        Me.Name = "uco12PruefungUeberlastanzeige"
         CType(Me.lblUeberlast, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlMaxE, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -217,7 +190,6 @@ Partial Class uco12PruefungUeberlastanzeige
         CType(Me.RadCheckBoxUeberlast, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblKg, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButtonShowEFG, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -230,7 +202,6 @@ Partial Class uco12PruefungUeberlastanzeige
     Friend WithEvents RadCheckBoxUeberlast As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents lblKg As Telerik.WinControls.UI.RadLabel
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
-    Friend WithEvents RadButtonShowEFG As Telerik.WinControls.UI.RadButton
     Friend WithEvents lblPflichtfeld1 As System.Windows.Forms.Label
 
 End Class

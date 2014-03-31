@@ -326,19 +326,19 @@
 
             'workaround: Wenn ein Benutzer eine Eichung Anlegt darf er keine Deaktivierten AWGs auswählen. Wenn sie gelesen  darf es aber sein, das deaktivierte Elemente gewälht werden
             If DialogModus = enuDialogModus.lesend Then
-                Dim db2 = From dbLookup In context.Lookup_Auswertegeraet Select dbLookup
+                Dim db2 = From dbLookup In context.Lookup_Auswertegeraet Order By dbLookup.Typ Select dbLookup
                 _DatasourceDropdownListAWG = db2.ToList
             Else
-                Dim db2 = From dbLookup In context.Lookup_Auswertegeraet Where dbLookup.Deaktiviert = False Select dbLookup
+                Dim db2 = From dbLookup In context.Lookup_Auswertegeraet Where dbLookup.Deaktiviert = False Order By dbLookup.Typ Select dbLookup
                 _DatasourceDropdownListAWG = db2.ToList
             End If
             'Laden der WZ Dropdownliste (alles)
             'workaround: Wenn ein Benutzer eine Eichung Anlegt darf er keine Deaktivierten AWGs auswählen. Wenn sie gelesen  darf es aber sein, das deaktivierte Elemente gewälht werden
             If DialogModus = enuDialogModus.lesend Then
-                Dim db3 = From dbLookup In context.Lookup_Waegezelle Select dbLookup
+                Dim db3 = From dbLookup In context.Lookup_Waegezelle Order By dbLookup.Typ Select dbLookup
                 _DatasourceDropdownListWZ = db3.ToList
             Else
-                Dim db3 = From dbLookup In context.Lookup_Waegezelle Where dbLookup.Deaktiviert = False Select dbLookup
+                Dim db3 = From dbLookup In context.Lookup_Waegezelle Where dbLookup.Deaktiviert = False Order By dbLookup.Typ Select dbLookup
                 _DatasourceDropdownListWZ = db3.ToList
             End If
 

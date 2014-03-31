@@ -32,6 +32,7 @@ Partial Class frmMain
         Me.RadButtonMogelstatistik = New Telerik.WinControls.UI.RadButton()
         Me.RadButtonVerbindungsprotokoll = New Telerik.WinControls.UI.RadButton()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.RadButton1 = New Telerik.WinControls.UI.RadButton()
         CType(Me.RadButtonAuswertegeraet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonWaegezelle, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonLizenzen, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -44,6 +45,7 @@ Partial Class frmMain
         CType(Me.RadButtonMogelstatistik, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonVerbindungsprotokoll, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -217,11 +219,31 @@ Partial Class frmMain
         Me.PictureBox1.TabIndex = 6
         Me.PictureBox1.TabStop = False
         '
+        'RadButton1
+        '
+        Me.RadButton1.Location = New System.Drawing.Point(241, 217)
+        Me.RadButton1.Name = "RadButton1"
+        '
+        '
+        '
+        Me.RadButton1.RootElement.AccessibleDescription = Nothing
+        Me.RadButton1.RootElement.AccessibleName = Nothing
+        Me.RadButton1.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
+        Me.RadButton1.RootElement.AngleTransform = 0.0!
+        Me.RadButton1.RootElement.FlipText = False
+        Me.RadButton1.RootElement.Margin = New System.Windows.Forms.Padding(0)
+        Me.RadButton1.RootElement.Text = Nothing
+        Me.RadButton1.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
+        Me.RadButton1.Size = New System.Drawing.Size(203, 24)
+        Me.RadButton1.TabIndex = 4
+        Me.RadButton1.Text = "Datenbank Synchronisieren"
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(465, 245)
+        Me.Controls.Add(Me.RadButton1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.RadGroupBox2)
         Me.Controls.Add(Me.RadGroupBox1)
@@ -251,6 +273,7 @@ Partial Class frmMain
         CType(Me.RadButtonMogelstatistik, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonVerbindungsprotokoll, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -265,5 +288,6 @@ Partial Class frmMain
     Friend WithEvents RadButtonVerbindungsprotokoll As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadButtonMogelstatistik As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadButtonFirmenZuordnung As Telerik.WinControls.UI.RadButton
+    Friend WithEvents RadButton1 As Telerik.WinControls.UI.RadButton
 End Class
 

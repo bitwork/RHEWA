@@ -320,7 +320,7 @@
 
     End Sub
 
-    Private Sub RadButtonShowEFGSteigend_Click(sender As Object, e As EventArgs) Handles RadButtonShowEFG.Click
+    Private Sub RadButtonShowEFGSteigend_Click(sender As Object, e As EventArgs)
         Dim f As New frmEichfehlergrenzen(objEichprozess)
         f.Show()
 

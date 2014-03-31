@@ -20,6 +20,8 @@
                 RadGridViewAuswahlliste.Columns("ID").IsVisible = False
                 '  RadGridViewAuswahlliste.Columns("ServerEichprozess").IsVisible = False
                 RadGridViewAuswahlliste.Columns("ServerMogelstatistik").IsVisible = False
+                RadGridViewAuswahlliste.Columns("Revisionsnummer").IsVisible = False
+
                 RadGridViewAuswahlliste.Columns("Hoechsteteilungsfaktor").HeaderText = "Höchstteilungsfaktor"
             Catch ex As Exception
                 MessageBox.Show(ex.Message)

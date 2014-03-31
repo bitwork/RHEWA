@@ -117,10 +117,6 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <EmbeddedResource Include="Repository\Call_DTS.bat">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <Content Include="Repository\GenerateFixSQLScriptMain.bat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -128,6 +124,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Repository\Offline_Synchronization.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Repository\Call_DTS RHEWA STRATO.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Repository\Call_DTS STRATO RHEWA.bat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

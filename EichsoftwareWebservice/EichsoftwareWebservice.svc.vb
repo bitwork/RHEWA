@@ -1363,7 +1363,7 @@ Public Class EichsoftwareWebservice
 
                         'versuchen ob es zur Vorgangsnummer ein eichvorgang gibt. Wenn ja gucke ob es einen Uploadpfad gibt
                         Try
-                            Dim FilePath As String = (From eichprozess In dbcontext.ServerEichprozess Select eichprozess.UploadFilePath).FirstOrDefault
+                            Dim FilePath As String = (From eichprozess In dbcontext.ServerEichprozess Where eichprozess.Vorgangsnummer = Vorgangsnummer Select eichprozess.UploadFilePath).FirstOrDefault
 
                             If Not FilePath Is Nothing Then
                                 If Not FilePath.Trim.Equals("") Then

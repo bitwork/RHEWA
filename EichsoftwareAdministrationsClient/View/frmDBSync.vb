@@ -1,10 +1,8 @@
 ﻿Imports System.Data.SqlClient
 
-Public Class Form1
+Public Class frmDBSync
     Private Const DBTABLES As String = "ServerVerbindungsprotokoll,ServerLookupVertragspartnerFirma,ServerKonfiguration,Servereichmarkenverwaltung,Firmen,ServerFirmenZusatzdaten,Benutzer,ServerLizensierung,ServerLookup_Waagenart,ServerKompatiblitaetsnachweis,ServerBeschaffenheitspruefung,ServerLookup_Vorgangsstatus,ServerLookup_Auswertegeraet,ServerLookup_Waegezelle,ServerLookup_Bearbeitungsstatus,ServerLookup_Waagentyp,ServerLookup_Konformitaetsbewertungsverfahren,ServerEichprotokoll,ServerEichprozess,ServerMogelstatistik,ServerPruefungAnsprechvermoegen,ServerPruefungAussermittigeBelastung,ServerPruefungEichfehlergrenzen,ServerPruefungLinearitaetFallend,ServerPruefungLinearitaetSteigend,ServerPruefungRollendeLasten,ServerPruefungStabilitaetGleichgewichtslage,ServerPruefungStaffelverfahrenErsatzlast,ServerPruefungStaffelverfahrenNormallast,ServerPruefungWiederholbarkeit"
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles ButtonSync.Click
-        Start()
-    End Sub
+
 
     Private Sub Start()
         If Not BackgroundWorker1.IsBusy Then
@@ -235,5 +233,9 @@ Public Class Form1
         Catch ex As Exception
 
         End Try
+    End Sub
+
+    Private Sub RadButton1_Click(sender As Object, e As EventArgs) Handles ButtonSync.Click
+        Start()
     End Sub
 End Class

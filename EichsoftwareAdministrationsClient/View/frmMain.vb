@@ -46,4 +46,9 @@
         Dim f As New frmAuswahllisteFirmenVertragspartnerZuordnung
         f.Show()
     End Sub
+
+    Private Sub RadButton1_Click(sender As Object, e As EventArgs) Handles RadButton1.Click
+        Dim f As New frmDBSync
+        f.show()
+    End Sub
 End Class

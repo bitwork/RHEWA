@@ -116,6 +116,7 @@ Partial Class frmEingabeNeueLizenz
         '
         'RadMultiColumnComboBoxBenutzer
         '
+        Me.RadMultiColumnComboBoxBenutzer.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList
         '
         'RadMultiColumnComboBoxBenutzer.NestedRadGridView
         '
@@ -140,11 +141,12 @@ Partial Class frmEingabeNeueLizenz
         Me.RadMultiColumnComboBoxBenutzer.ImeMode = System.Windows.Forms.ImeMode.[On]
         Me.RadMultiColumnComboBoxBenutzer.Location = New System.Drawing.Point(99, 12)
         Me.RadMultiColumnComboBoxBenutzer.Name = "RadMultiColumnComboBoxBenutzer"
+        Me.RadMultiColumnComboBoxBenutzer.NullText = "Bitte Benutzer aus Liste auswählen"
         Me.RadMultiColumnComboBoxBenutzer.Size = New System.Drawing.Size(498, 20)
         Me.RadMultiColumnComboBoxBenutzer.TabIndex = 1
         Me.RadMultiColumnComboBoxBenutzer.TabStop = False
         '
-        'FrmNeueLizenz
+        'frmEingabeNeueLizenz
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -158,7 +160,7 @@ Partial Class frmEingabeNeueLizenz
         Me.Controls.Add(Me.RadLabel2)
         Me.Controls.Add(Me.RadTextBoxControl1)
         Me.Controls.Add(Me.RadLabel1)
-        Me.Name = "FrmNeueLizenz"
+        Me.Name = "frmEingabeNeueLizenz"
         '
         '
         '
