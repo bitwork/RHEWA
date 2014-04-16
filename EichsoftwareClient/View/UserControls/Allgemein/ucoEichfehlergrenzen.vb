@@ -47,28 +47,9 @@
     ''' <commentauthor></commentauthor>
     Private Sub FillControls()
         'dynamisches laden der Nullstellen:
-        Try
-            _intNullstellenE1 = clsGeneralFunctions.GetRHEWADecimalDigits(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1) '.Replace(",", "."))  + 1
-        Catch ex As Exception
-        End Try
-        Try
-            _intNullstellenE2 = clsGeneralFunctions.GetRHEWADecimalDigits(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2) '.Replace(",", ".")) + 1
-        Catch ex As Exception
-        End Try
-        Try
-            _intNullstellenE3 = clsGeneralFunctions.GetRHEWADecimalDigits(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3) '.Replace(",", "."))  + 1
-        Catch ex As Exception
-        End Try
+      
+        HoleNullstellen()
 
-        If _intNullstellenE1 > _intNullstellenE2 AndAlso _intNullstellenE1 > _intNullstellenE3 Then
-            _intNullstellenE = _intNullstellenE1
-        ElseIf _intNullstellenE2 > _intNullstellenE1 AndAlso _intNullstellenE2 > _intNullstellenE3 Then
-            _intNullstellenE = _intNullstellenE2
-        ElseIf _intNullstellenE3 > _intNullstellenE1 AndAlso _intNullstellenE3 > _intNullstellenE2 Then
-            _intNullstellenE = _intNullstellenE3
-        Else 'alles ist gleih
-            _intNullstellenE = _intNullstellenE1
-        End If
 
         'Steuerlemente füllen
         Select Case objEichprozess.Lookup_Waagenart.Art
@@ -285,4 +266,6 @@
             End Using
         End If
     End Sub
+
+ 
 End Class

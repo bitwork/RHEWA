@@ -51,4 +51,9 @@
         Dim f As New frmDBSync
         f.show()
     End Sub
+
+    Private Sub RadButtonFirmenZusatzDaten_Click(sender As Object, e As EventArgs) Handles RadButtonFirmenZusatzDaten.Click
+        Dim f As New frmFirmenZusatzdaten
+        f.Show()
+    End Sub
 End Class

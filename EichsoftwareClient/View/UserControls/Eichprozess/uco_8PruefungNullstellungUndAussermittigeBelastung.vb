@@ -1551,28 +1551,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         'Steuerlemente füllen
         FillControlsNullstellung()
         'dynamisches laden der Nullstellen:
-        Try
-            _intNullstellenE1 = clsGeneralFunctions.GetRHEWADecimalDigits(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1) '.Replace(",", "."))  + 1
-        Catch ex As Exception
-        End Try
-        Try
-            _intNullstellenE2 = clsGeneralFunctions.GetRHEWADecimalDigits(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2) '.Replace(",", ".")) + 1
-        Catch ex As Exception
-        End Try
-        Try
-            _intNullstellenE3 = clsGeneralFunctions.GetRHEWADecimalDigits(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3) '.Replace(",", "."))  + 1
-        Catch ex As Exception
-        End Try
-
-        If _intNullstellenE1 > _intNullstellenE2 AndAlso _intNullstellenE1 > _intNullstellenE3 Then
-            _intNullstellenE = _intNullstellenE1
-        ElseIf _intNullstellenE2 > _intNullstellenE1 AndAlso _intNullstellenE2 > _intNullstellenE3 Then
-            _intNullstellenE = _intNullstellenE2
-        ElseIf _intNullstellenE3 > _intNullstellenE1 AndAlso _intNullstellenE3 > _intNullstellenE2 Then
-            _intNullstellenE = _intNullstellenE3
-        Else 'alles ist gleih
-            _intNullstellenE = _intNullstellenE1
-        End If
+        HoleNullstellen()
 
         FillControlsAussermittigeBelastung()
 
@@ -1602,17 +1581,18 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
     End Sub
 
     Private Sub SaveAussermittigeBelastung(ByRef Context As EichsoftwareClientdatabaseEntities1)
+        'anzahl Bereiche auslesen um damit die anzahl der benötigten Iterationen und Objekt Erzeugungen zu erfahren
+        Dim intBereiche As Integer = 0
+        If objEichprozess.Lookup_Waagenart.Art = "Einbereichswaage" Then
+            intBereiche = 1
+        ElseIf objEichprozess.Lookup_Waagenart.Art = "Zweibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Zweiteilungswaage" Then
+            intBereiche = 2
+        ElseIf objEichprozess.Lookup_Waagenart.Art = "Dreibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Dreiteilungswaage" Then
+            intBereiche = 3
+        End If
+
         'wenn es defintiv noch keine pruefungen gibt, neue Anlegen
         If _ListPruefungAussermittigeBelastung.Count = 0 Then
-            'anzahl Bereiche auslesen um damit die anzahl der benötigten Iterationen und Objekt Erzeugungen zu erfahren
-            Dim intBereiche As Integer = 0
-            If objEichprozess.Lookup_Waagenart.Art = "Einbereichswaage" Then
-                intBereiche = 1
-            ElseIf objEichprozess.Lookup_Waagenart.Art = "Zweibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Zweiteilungswaage" Then
-                intBereiche = 2
-            ElseIf objEichprozess.Lookup_Waagenart.Art = "Dreibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Dreiteilungswaage" Then
-                intBereiche = 3
-            End If
 
             For j = 1 To intBereiche
                 'sonderfall eine Wägezelle
@@ -1689,15 +1669,133 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
 
             Next
         Else
+            'prüfen ob nun mehr belastungsstellen geladen werden müssen
+            Try
+                Dim differenz As Integer = 0
+                If _ListPruefungAussermittigeBelastung.Count < objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen * 2 Then
+                    'hinzufügen der neuen elemente
+                    differenz = (objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen * 2) - _ListPruefungAussermittigeBelastung.Count
+                ElseIf _ListPruefungAussermittigeBelastung.Count > objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen * 2 Then
+                    'entfernen der elemente
+                    differenz = _ListPruefungAussermittigeBelastung.Count - (objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen * 2)
+                    'durch die Differenz kenne ich die neuen Werte
+                End If
 
 
-            'jedes objekt initialisieren und aus context laden und updaten
-            For Each objPruefung In _ListPruefungAussermittigeBelastung
-                objPruefung = Context.PruefungAussermittigeBelastung.FirstOrDefault(Function(value) value.ID = objPruefung.ID)
-                UpdatePruefungsObject(objPruefung)
-                Context.SaveChanges()
-            Next
+                If differenz = 0 Then
+                    'jedes objekt initialisieren und aus context laden und updaten
+                    For Each objPruefung In _ListPruefungAussermittigeBelastung
+                        objPruefung = Context.PruefungAussermittigeBelastung.FirstOrDefault(Function(value) value.ID = objPruefung.ID)
+                        UpdatePruefungsObject(objPruefung)
+                        Context.SaveChanges()
+                    Next
+                Else
+                    'alle iterieren und ggfs neu anlegen
+                    Dim bolNeu As Boolean = False
+                    For j = 1 To intBereiche
 
+                        'sonderfall eine Wägezelle
+                        If objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen = 1 Then
+                            Dim intBelastungsort As Integer = 1
+                            For i As Integer = 1 To 5 'eine Mehr für Mitte
+                                bolNeu = False
+                                intBelastungsort = i
+                                Dim objPruefung = (From pruefungen In Context.PruefungAussermittigeBelastung Where pruefungen.Belastungsort = CStr(intBelastungsort) And pruefungen.Bereich = j).FirstOrDefault
+                                If objPruefung Is Nothing Then
+                                    objPruefung = Context.PruefungAussermittigeBelastung.Create
+                                    bolNeu = True
+                                End If
+
+                                'wenn es die eine itereation mehr ist:
+                                If intBelastungsort = 5 Then
+                                    'mitte anlegen
+                                    objPruefung.Belastungsort = "M"
+                                Else 'sonst bereich zuweisen
+                                    objPruefung.Belastungsort = intBelastungsort
+                                End If
+
+                                objPruefung.Bereich = j
+
+                                UpdatePruefungsObject(objPruefung)
+                                Try
+                                    Context.SaveChanges()
+                                Catch ex As Validation.DbEntityValidationException
+                                    For Each e In ex.EntityValidationErrors
+                                        MessageBox.Show(e.ValidationErrors(0).ErrorMessage)
+                                    Next
+                                End Try
+
+                                If bolNeu Then
+
+                                    objEichprozess.Eichprotokoll.PruefungAussermittigeBelastung.Add(objPruefung)
+                                    Try
+                                        Context.SaveChanges()
+                                    Catch ex As Validation.DbEntityValidationException
+                                        For Each e In ex.EntityValidationErrors
+                                            MessageBox.Show(e.ValidationErrors(0).ErrorMessage)
+                                        Next
+                                    End Try
+
+                                    _ListPruefungAussermittigeBelastung.Add(objPruefung)
+                                End If
+                            Next
+                        Else
+                            Dim intbelastungsort As Integer = 1
+                            For i As Integer = 1 To (objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen + 1) 'eine Mehr für Mitte
+                                intbelastungsort = i
+                                bolNeu = False
+                                Dim objPruefung = (From pruefungen In Context.PruefungAussermittigeBelastung Where pruefungen.Belastungsort = CStr(intbelastungsort) And pruefungen.Bereich = j).FirstOrDefault
+                                If objPruefung Is Nothing Then
+                                    objPruefung = Context.PruefungAussermittigeBelastung.Create
+                                    bolNeu = True
+                                End If
+
+                                'wenn es die eine itereation mehr ist:
+                                If intbelastungsort = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen + 1 Then
+                                    'mitte anlegen
+                                    objPruefung.Belastungsort = "M"
+                                Else 'sonst bereich zuweisen
+                                    objPruefung.Belastungsort = intbelastungsort
+                                End If
+                                objPruefung.Bereich = j
+                                UpdatePruefungsObject(objPruefung)
+
+                                Try
+                                    Context.SaveChanges()
+
+                                Catch ex As Validation.DbEntityValidationException
+                                    For Each e In ex.EntityValidationErrors
+                                        MessageBox.Show(e.ValidationErrors(0).ErrorMessage)
+                                    Next
+                                End Try
+
+                                If bolNeu Then
+
+
+                                    objEichprozess.Eichprotokoll.PruefungAussermittigeBelastung.Add(objPruefung)
+                                    Try
+                                        Context.SaveChanges()
+
+                                    Catch ex As Validation.DbEntityValidationException
+                                        For Each e In ex.EntityValidationErrors
+                                            MessageBox.Show(e.ValidationErrors(0).ErrorMessage)
+                                        Next
+                                    End Try
+
+                                    _ListPruefungAussermittigeBelastung.Add(objPruefung)
+                                End If
+                            Next
+                        End If
+
+
+                    Next
+
+
+                End If
+
+            Catch ex As Exception
+                MessageBox.Show(ex.StackTrace, ex.Message)
+            End Try
         End If
 
     End Sub
@@ -2857,7 +2955,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                         'es handelt sich um eine Serverobjekt im => Korrekturmodus
                         UpdatePruefungsObject(obj)
                     End If
-                    End If
+                End If
             Next
 
         End Using
@@ -3725,7 +3823,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                 UpdateObject()
                 UeberschreibePruefungsobjekte()
 
-              
+
 
 
                 'erzeuegn eines Server Objektes auf basis des aktuellen DS
@@ -3738,7 +3836,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                         Exit Sub
                     End Try
 
-                
+
                     Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
 
                     Try

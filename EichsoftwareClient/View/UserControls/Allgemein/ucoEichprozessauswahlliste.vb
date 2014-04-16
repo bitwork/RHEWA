@@ -801,14 +801,14 @@
 
             Dim returnMessage As String = My.Resources.GlobaleLokalisierung.Aktualisierung_Erfolgreich
             If bolNeuWZ Then
-                returnMessage += "/ " + My.Resources.GlobaleLokalisierung.Aktualisierung_NeuWZ + " "
+                returnMessage += vbNewLine & vbNewLine & My.Resources.GlobaleLokalisierung.Aktualisierung_NeuWZ & " "
             End If
             If bolNeuAWG Then
-                returnMessage += "/ " + My.Resources.GlobaleLokalisierung.Aktualisierung_NeuAWG + " "
+                returnMessage += vbNewLine & vbNewLine & My.Resources.GlobaleLokalisierung.Aktualisierung_NeuAWG & " "
             End If
 
             If bolNeuGenehmigung Then
-                returnMessage += "/ " + My.Resources.GlobaleLokalisierung.Aktualisierung_NeuEichung + " "
+                returnMessage += vbNewLine & vbNewLine & My.Resources.GlobaleLokalisierung.Aktualisierung_NeuEichung & " "
             End If
 
             If bolNeuStammdaten Then

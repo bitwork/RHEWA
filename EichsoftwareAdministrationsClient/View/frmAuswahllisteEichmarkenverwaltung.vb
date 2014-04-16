@@ -253,26 +253,25 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
 
             'Das entityframework machte hier Probleme mit dem doppelten left outer join. deswegen ein umweg.
             'es werden erst alle Firmendaten geladen, dann alle Zuordnungsdaten und dann diese Daten in einer Datatable zusammengeführt. Alles in einem Schritt wäre natürlich schöner gewesen
-            Dim Firmen = From firma In Context.Firmen
-            From firmenzusatzdaten In firma.ServerFirmenZusatzdaten.DefaultIfEmpty
-            Select New With {
-                .id = firma.ID, _
-                firma.Name, _
-                firma.Telefon, _
-                firma.Strasse, _
-                firma.Ort, _
-                firma.PLZ, _
-                firma.Land, _
-                firmenzusatzdaten.Abrechnungsmodell, _
-                firmenzusatzdaten.BeginnVertrag, _
-                firmenzusatzdaten.EndeVertrag, _
-                firmenzusatzdaten.Erstschulung, _
-                firmenzusatzdaten.LetztesAudit, _
-                firmenzusatzdaten.MonatJahrZertifikat, _
-                firmenzusatzdaten.Nachschulung, _
-                firmenzusatzdaten.Qualifizierungspauschale, _
-                firmenzusatzdaten.Umsatz
-            }
+                Dim Firmen = From firma In Context.Firmen
+                From firmenzusatzdaten In firma.ServerFirmenZusatzdaten.DefaultIfEmpty
+                Select New With {
+                    .id = firma.ID, _
+                    firma.Name, _
+                    firma.Telefon, _
+                    firma.Strasse, _
+                    firma.Ort, _
+                    firma.PLZ, _
+                    firma.Land, _
+                    firmenzusatzdaten.Abrechnungsmodell, _
+                    firmenzusatzdaten.BeginnVertrag, _
+                    firmenzusatzdaten.EndeVertrag, _
+                    firmenzusatzdaten.Erstschulung, _
+                    firmenzusatzdaten.LetztesAudit, _
+                    firmenzusatzdaten.MonatJahrZertifikat, _
+                    firmenzusatzdaten.Nachschulung, _
+                    firmenzusatzdaten.Qualifizierungspauschale
+                }
 
             'es gibt DB Seitig eine Abhängigkeit zwischen Firmen und Firmenzusatzdaten. Deswegen wurde hier kein JOIN gewählt. WICHTIG: die Firmen zusatzdaten werden nicht aus dem Context geladen, sondern von "firma". Dies klappt nur weil durch die Beziehung eine Navigation property existiert
 
@@ -294,7 +293,7 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
             dtFirmenKomplett.Columns.Add("MonatJahrZertifikat")
             dtFirmenKomplett.Columns.Add("Nachschulung")
             dtFirmenKomplett.Columns.Add("Qualifizierungspauschale")
-            dtFirmenKomplett.Columns.Add("Umsatz")
+
             dtFirmenKomplett.Columns.Add("Hauptfirma_FK") 'falls die aktuelle Firma eine Vertragsfirma ist, steht hier drin der Verweis zur Hauptfirma
 
             'umwandeln von entität zu DT. Leider notwendig.
@@ -350,7 +349,7 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
 
                 nrow.Item("MonatJahrZertifikat") = Firma.MonatJahrZertifikat
                 nrow.Item("Qualifizierungspauschale") = Firma.Qualifizierungspauschale
-                nrow.Item("Umsatz") = Firma.Umsatz
+
 
                 'Über Firma prüfen ob es eine Hauptfirma gibt
                 If FirmenZuordnung.Contains((From firm In FirmenZuordnung Where firm.Vertragspartner_FK = Firma.id).FirstOrDefault) Then
@@ -673,7 +672,7 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
     Private Sub FrmEichmarkenverwaltung_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         'prüfen Edit Mode
         If EditMode Then
-            If MessageBox.Show("Möchten Sie Ihre Änderungen wirklich rückgäng machen?", "Frage", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.No Then
+            If MessageBox.Show("Möchten Sie Ihre Änderungen wirklich rückgängig machen?", "Frage", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.No Then
                 e.Cancel = True
                 Exit Sub
             End If

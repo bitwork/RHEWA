@@ -1,6 +1,10 @@
 ﻿Imports Microsoft.Office.Interop.Excel
 Imports Microsoft.Office.Interop.Word
 Imports Microsoft.VisualBasic
+''' <summary>
+''' Code von Marco Pelster bitwork GmbH
+''' </summary>
+''' <remarks></remarks>
 Public Class clsOfficeExports
 
     ''' <summary>
@@ -13,11 +17,7 @@ Public Class clsOfficeExports
         Dim objExcelApp As New Microsoft.Office.Interop.Excel.Application
         Dim objExcelWorkbook As Microsoft.Office.Interop.Excel.Workbook
         Dim objExcelWorksheetDatenEingabe As Microsoft.Office.Interop.Excel.Worksheet
-        'Dim objExcelWorksheetEinbereichswaage As Microsoft.Office.Interop.Excel.Worksheet
-        'Dim objExcelWorksheetZweibereichswaage As Microsoft.Office.Interop.Excel.Worksheet
-        'Dim objExcelWorksheetDreibereichswaage As Microsoft.Office.Interop.Excel.Worksheet
-        'Dim objExcelWorksheetZweiteilungswaage As Microsoft.Office.Interop.Excel.Worksheet
-        'Dim objExcelWorksheetDreiteilungswaage As Microsoft.Office.Interop.Excel.Worksheet
+   
         Dim objExcelWorksheetTabelle1 As Microsoft.Office.Interop.Excel.Worksheet
         Dim ExcelSavePath As String
         Dim DocumentName As String = "Kompatibilitätsnachweis DE" & "_" & pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer & ".xls"
@@ -33,18 +33,18 @@ Public Class clsOfficeExports
             CompletePath = ExcelSavePath & "\" & DocumentName
 
             'Dokument abspeichern
-            System.IO.File.WriteAllBytes(CompletePath, b)
+            Try
+                System.IO.File.WriteAllBytes(CompletePath, b)
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+                Exit Sub
+            End Try
 
             'excel dokument öffnen
             objExcelWorkbook = objExcelApp.Workbooks.Open(CompletePath)
 
             'Worksheets zuweisen
             objExcelWorksheetDatenEingabe = objExcelWorkbook.Worksheets("Daten-Eingabe")
-            'objExcelWorksheetEinbereichswaage = objExcelWorkbook.Worksheets("Einbereichswaage")
-            'objExcelWorksheetZweibereichswaage = objExcelWorkbook.Worksheets("Zweibereichswaage")
-            'objExcelWorksheetDreibereichswaage = objExcelWorkbook.Worksheets("Dreibereichswaage")
-            'objExcelWorksheetZweiteilungswaage = objExcelWorkbook.Worksheets("Zweiteilungswaage")
-            'objExcelWorksheetDreiteilungswaage = objExcelWorkbook.Worksheets("Dreiteilungswaage")
             objExcelWorksheetTabelle1 = objExcelWorkbook.Worksheets("Tabelle1")
 
             'Die Rows stehen vorne und die Collumns hinten. G20 Entspricht also (20=20, 7=G).
@@ -286,11 +286,10 @@ Public Class clsOfficeExports
             objExcelWorksheetDatenEingabe.Cells(27, 1).value = pEichProzess.Lookup_Auswertegeraet.Hersteller
 
             'KabellaengeQuerschnitt AWG befüllen in G34 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(34, 7).value = pEichProzess.Lookup_Auswertegeraet.KabellaengeQuerschnitt
-
+            If IsNumeric(pEichProzess.Lookup_Auswertegeraet.KabellaengeQuerschnitt) Then
+                objExcelWorksheetDatenEingabe.Cells(34, 7).value = CDec(pEichProzess.Lookup_Auswertegeraet.KabellaengeQuerschnitt)
+            End If
             If Not pEichProzess.Lookup_Waagenart.Art = "Einbereichswaage" Then
-
-
                 'MAXAnzahlTeilungswerteMehrbereichswaage AWG befüllen in G26 auf Daten-Eingabe
                 objExcelWorksheetDatenEingabe.Cells(26, 7).Value = pEichProzess.Lookup_Auswertegeraet.MAXAnzahlTeilungswerteMehrbereichswaage
             Else
@@ -310,7 +309,9 @@ Public Class clsOfficeExports
             objExcelWorksheetDatenEingabe.Cells(28, 7).value = pEichProzess.Lookup_Auswertegeraet.Mindesteingangsspannung
 
             'Mindestmesssignal AWG befüllen in G29 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(29, 7).value = pEichProzess.Lookup_Auswertegeraet.Mindestmesssignal
+            If IsNumeric(pEichProzess.Lookup_Auswertegeraet.Mindestmesssignal) Then
+                objExcelWorksheetDatenEingabe.Cells(29, 7).value = CDec(pEichProzess.Lookup_Auswertegeraet.Mindestmesssignal)
+            End If
 
             'Pruefbericht AWG befüllen in A32 auf Daten-Eingabe
             objExcelWorksheetDatenEingabe.Cells(32, 1).value = pEichProzess.Lookup_Auswertegeraet.Pruefbericht
@@ -430,11 +431,6 @@ Public Class clsOfficeExports
         Dim objExcelApp As New Microsoft.Office.Interop.Excel.Application
         Dim objExcelWorkbook As Microsoft.Office.Interop.Excel.Workbook
         Dim objExcelWorksheetDatenEingabe As Microsoft.Office.Interop.Excel.Worksheet
-        'Dim objExcelWorksheetEinbereichswaage As Microsoft.Office.Interop.Excel.Worksheet
-        'Dim objExcelWorksheetZweibereichswaage As Microsoft.Office.Interop.Excel.Worksheet
-        'Dim objExcelWorksheetDreibereichswaage As Microsoft.Office.Interop.Excel.Worksheet
-        'Dim objExcelWorksheetZweiteilungswaage As Microsoft.Office.Interop.Excel.Worksheet
-        'Dim objExcelWorksheetDreiteilungswaage As Microsoft.Office.Interop.Excel.Worksheet
         Dim objExcelWorksheetTabelle1 As Microsoft.Office.Interop.Excel.Worksheet
         Dim ExcelSavePath As String
         Dim DocumentName As String = "Kompatibilitätsnachweis EN" & "_" & pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer & ".xls"
@@ -450,18 +446,17 @@ Public Class clsOfficeExports
             CompletePath = ExcelSavePath & "\" & DocumentName
 
             'Dokument abspeichern
-            System.IO.File.WriteAllBytes(CompletePath, b)
-
+            Try
+                System.IO.File.WriteAllBytes(CompletePath, b)
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+                Exit Sub
+            End Try
             'excel dokument öffnen
             objExcelWorkbook = objExcelApp.Workbooks.Open(CompletePath)
 
             'Worksheets zuweisen
             objExcelWorksheetDatenEingabe = objExcelWorkbook.Worksheets("Data-Input")
-            'objExcelWorksheetEinbereichswaage = objExcelWorkbook.Worksheets("Einbereichswaage")
-            'objExcelWorksheetZweibereichswaage = objExcelWorkbook.Worksheets("Zweibereichswaage")
-            'objExcelWorksheetDreibereichswaage = objExcelWorkbook.Worksheets("Dreibereichswaage")
-            'objExcelWorksheetZweiteilungswaage = objExcelWorkbook.Worksheets("Zweiteilungswaage")
-            'objExcelWorksheetDreiteilungswaage = objExcelWorkbook.Worksheets("Dreiteilungswaage")
             objExcelWorksheetTabelle1 = objExcelWorkbook.Worksheets("Tabelle1")
 
             'Die Rows stehen vorne und die Collumns hinten. G20 Entspricht also (20=20, 7=G).
@@ -703,7 +698,9 @@ Public Class clsOfficeExports
             objExcelWorksheetDatenEingabe.Cells(27, 1).value = pEichProzess.Lookup_Auswertegeraet.Hersteller
 
             'KabellaengeQuerschnitt AWG befüllen in G34 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(34, 7).value = pEichProzess.Lookup_Auswertegeraet.KabellaengeQuerschnitt
+            If IsNumeric(pEichProzess.Lookup_Auswertegeraet.KabellaengeQuerschnitt) Then
+                objExcelWorksheetDatenEingabe.Cells(34, 7).value = CDec(pEichProzess.Lookup_Auswertegeraet.KabellaengeQuerschnitt)
+            End If
 
             If Not pEichProzess.Lookup_Waagenart.Art_EN = "One range WI" Then
 
@@ -727,7 +724,9 @@ Public Class clsOfficeExports
             objExcelWorksheetDatenEingabe.Cells(28, 7).value = pEichProzess.Lookup_Auswertegeraet.Mindesteingangsspannung
 
             'Mindestmesssignal AWG befüllen in G29 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(29, 7).value = pEichProzess.Lookup_Auswertegeraet.Mindestmesssignal
+            If IsNumeric(pEichProzess.Lookup_Auswertegeraet.Mindestmesssignal) Then
+                objExcelWorksheetDatenEingabe.Cells(29, 7).value = CDec(pEichProzess.Lookup_Auswertegeraet.Mindestmesssignal)
+            End If
 
             'Pruefbericht AWG befüllen in A32 auf Daten-Eingabe
             objExcelWorksheetDatenEingabe.Cells(32, 1).value = pEichProzess.Lookup_Auswertegeraet.Pruefbericht
@@ -848,8 +847,12 @@ Public Class clsOfficeExports
             CompletePath = ExcelSavePath & "\" & DocumentName
 
             'Dokument abspeichern
-            System.IO.File.WriteAllBytes(CompletePath, b)
-
+            Try
+                System.IO.File.WriteAllBytes(CompletePath, b)
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+                Exit Sub
+            End Try
             'excel dokument öffnen
             objExcelWorkbook = objExcelApp.Workbooks.Open(CompletePath)
 
@@ -920,8 +923,12 @@ Public Class clsOfficeExports
             CompletePath = ExcelSavePath & "\" & DocumentName
 
             'Dokument abspeichern
-            System.IO.File.WriteAllBytes(CompletePath, b)
-
+            Try
+                System.IO.File.WriteAllBytes(CompletePath, b)
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+                Exit Sub
+            End Try
             'excel dokument öffnen
             objExcelWorkbook = objExcelApp.Workbooks.Open(CompletePath)
 
@@ -995,8 +1002,12 @@ Public Class clsOfficeExports
             CompletePath = ExcelSavePath & "\" & DocumentName
 
             'Dokument abspeichern
-            System.IO.File.WriteAllBytes(CompletePath, b)
-
+            Try
+                System.IO.File.WriteAllBytes(CompletePath, b)
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+                Exit Sub
+            End Try
             'excel dokument öffnen
             objExcelWorkbook = objExcelApp.Workbooks.Open(CompletePath)
 
@@ -1066,7 +1077,12 @@ Public Class clsOfficeExports
             CompletePath = WordSavePath & "Ersteichung_DE.doc"
 
             'Hier wird das Dokument gespeichert.
-            System.IO.File.WriteAllBytes(CompletePath, b)
+            Try
+                System.IO.File.WriteAllBytes(CompletePath, b)
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+                Exit Sub
+            End Try
             objWordDoc = objWordApp.Documents.Open(CompletePath)
             objWordApp.Visible = True
 
@@ -1101,7 +1117,12 @@ Public Class clsOfficeExports
             CompletePath = WordSavePath & "Ersteichung_EN.doc"
 
             'Hier wird das Dokument gespeichert.
-            System.IO.File.WriteAllBytes(CompletePath, b)
+            Try
+                System.IO.File.WriteAllBytes(CompletePath, b)
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+                Exit Sub
+            End Try
             objWordDoc = objWordApp.Documents.Open(CompletePath)
             objWordApp.Visible = True
 
@@ -1136,7 +1157,12 @@ Public Class clsOfficeExports
             CompletePath = WordSavePath & "Ersteichung_PL.doc"
 
             'Hier wird das Dokument gespeichert.
-            System.IO.File.WriteAllBytes(CompletePath, b)
+            Try
+                System.IO.File.WriteAllBytes(CompletePath, b)
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+                Exit Sub
+            End Try
             objWordDoc = objWordApp.Documents.Open(CompletePath)
             objWordApp.Visible = True
 

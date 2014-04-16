@@ -11,4 +11,6 @@
     Public Property GesperrtDurch As String = ""
     Public Property AnhangPfad As String = ""
     Public Property NeueWZ As Boolean = False
+    Public Property Uploaddatum As DateTime
+
 End Class

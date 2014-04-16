@@ -74,7 +74,7 @@ Partial Class frmDBSync
         Me.RadWaitingBar1.Location = New System.Drawing.Point(0, 510)
         Me.RadWaitingBar1.Name = "RadWaitingBar1"
         Me.RadWaitingBar1.Size = New System.Drawing.Size(781, 24)
-        Me.RadWaitingBar1.TabIndex = 3
+        Me.RadWaitingBar1.TabIndex = 4
         Me.RadWaitingBar1.Text = "RadWaitingBar1"
         Me.RadWaitingBar1.Visible = False
         '
@@ -109,20 +109,22 @@ Partial Class frmDBSync
         Me.RadGroupBox1.Location = New System.Drawing.Point(0, 0)
         Me.RadGroupBox1.Name = "RadGroupBox1"
         Me.RadGroupBox1.Size = New System.Drawing.Size(366, 378)
-        Me.RadGroupBox1.TabIndex = 7
+        Me.RadGroupBox1.TabIndex = 0
         Me.RadGroupBox1.Text = "Log"
         '
         'RadListControlLog
         '
+        Me.RadListControlLog.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RadListControlLog.BackColor = System.Drawing.Color.White
-        Me.RadListControlLog.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RadListControlLog.Location = New System.Drawing.Point(2, 18)
+        Me.RadListControlLog.Location = New System.Drawing.Point(2, 31)
         Me.RadListControlLog.Multiline = True
         Me.RadListControlLog.Name = "RadListControlLog"
         Me.RadListControlLog.ReadOnly = True
         Me.RadListControlLog.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.RadListControlLog.Size = New System.Drawing.Size(362, 358)
-        Me.RadListControlLog.TabIndex = 1
+        Me.RadListControlLog.Size = New System.Drawing.Size(362, 345)
+        Me.RadListControlLog.TabIndex = 0
         '
         'RadGroupBox2
         '
@@ -133,19 +135,21 @@ Partial Class frmDBSync
         Me.RadGroupBox2.Location = New System.Drawing.Point(0, 0)
         Me.RadGroupBox2.Name = "RadGroupBox2"
         Me.RadGroupBox2.Size = New System.Drawing.Size(386, 378)
-        Me.RadGroupBox2.TabIndex = 8
+        Me.RadGroupBox2.TabIndex = 0
         Me.RadGroupBox2.Text = "Erzeugtes SQL Query"
         '
         'RadListControlSQLQuery
         '
+        Me.RadListControlSQLQuery.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RadListControlSQLQuery.BackColor = System.Drawing.Color.White
-        Me.RadListControlSQLQuery.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RadListControlSQLQuery.Location = New System.Drawing.Point(2, 18)
+        Me.RadListControlSQLQuery.Location = New System.Drawing.Point(2, 31)
         Me.RadListControlSQLQuery.Multiline = True
         Me.RadListControlSQLQuery.Name = "RadListControlSQLQuery"
         Me.RadListControlSQLQuery.ReadOnly = True
         Me.RadListControlSQLQuery.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.RadListControlSQLQuery.Size = New System.Drawing.Size(382, 358)
+        Me.RadListControlSQLQuery.Size = New System.Drawing.Size(382, 345)
         Me.RadListControlSQLQuery.TabIndex = 0
         '
         'TimerLog
@@ -157,7 +161,7 @@ Partial Class frmDBSync
         Me.ButtonSync.Location = New System.Drawing.Point(15, 73)
         Me.ButtonSync.Name = "ButtonSync"
         Me.ButtonSync.Size = New System.Drawing.Size(110, 24)
-        Me.ButtonSync.TabIndex = 7
+        Me.ButtonSync.TabIndex = 2
         Me.ButtonSync.Text = "Daten abgleichen"
         '
         'frmDBSync

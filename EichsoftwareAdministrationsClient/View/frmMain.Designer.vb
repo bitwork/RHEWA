@@ -33,6 +33,7 @@ Partial Class frmMain
         Me.RadButtonVerbindungsprotokoll = New Telerik.WinControls.UI.RadButton()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.RadButton1 = New Telerik.WinControls.UI.RadButton()
+        Me.RadButtonFirmenZusatzDaten = New Telerik.WinControls.UI.RadButton()
         CType(Me.RadButtonAuswertegeraet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonWaegezelle, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonLizenzen, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -46,6 +47,7 @@ Partial Class frmMain
         CType(Me.RadButtonVerbindungsprotokoll, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadButtonFirmenZusatzDaten, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -128,6 +130,7 @@ Partial Class frmMain
         'RadGroupBox1
         '
         Me.RadGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.RadGroupBox1.Controls.Add(Me.RadButtonFirmenZusatzDaten)
         Me.RadGroupBox1.Controls.Add(Me.RadButtonFirmenZuordnung)
         Me.RadGroupBox1.Controls.Add(Me.RadButtonAuswertegeraet)
         Me.RadGroupBox1.Controls.Add(Me.RadButtonWaegezelle)
@@ -135,7 +138,7 @@ Partial Class frmMain
         Me.RadGroupBox1.HeaderText = "Verwaltung"
         Me.RadGroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.RadGroupBox1.Name = "RadGroupBox1"
-        Me.RadGroupBox1.Size = New System.Drawing.Size(213, 161)
+        Me.RadGroupBox1.Size = New System.Drawing.Size(213, 225)
         Me.RadGroupBox1.TabIndex = 4
         Me.RadGroupBox1.Text = "Verwaltung"
         '
@@ -167,7 +170,7 @@ Partial Class frmMain
         Me.RadGroupBox2.HeaderText = "Statistik"
         Me.RadGroupBox2.Location = New System.Drawing.Point(231, 12)
         Me.RadGroupBox2.Name = "RadGroupBox2"
-        Me.RadGroupBox2.Size = New System.Drawing.Size(218, 161)
+        Me.RadGroupBox2.Size = New System.Drawing.Size(218, 225)
         Me.RadGroupBox2.TabIndex = 5
         Me.RadGroupBox2.Text = "Statistik"
         '
@@ -212,7 +215,7 @@ Partial Class frmMain
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.EichsoftwareAdministrationsClient.My.Resources.Resources.RHEWA_Logo_35mm_600dpi
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 179)
+        Me.PictureBox1.Location = New System.Drawing.Point(9, 243)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(146, 62)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -221,7 +224,7 @@ Partial Class frmMain
         '
         'RadButton1
         '
-        Me.RadButton1.Location = New System.Drawing.Point(241, 217)
+        Me.RadButton1.Location = New System.Drawing.Point(238, 281)
         Me.RadButton1.Name = "RadButton1"
         '
         '
@@ -238,11 +241,30 @@ Partial Class frmMain
         Me.RadButton1.TabIndex = 4
         Me.RadButton1.Text = "Datenbank Synchronisieren"
         '
+        'RadButtonFirmenZusatzDaten
+        '
+        Me.RadButtonFirmenZusatzDaten.Location = New System.Drawing.Point(5, 157)
+        Me.RadButtonFirmenZusatzDaten.Name = "RadButtonFirmenZusatzDaten"
+        '
+        '
+        '
+        Me.RadButtonFirmenZusatzDaten.RootElement.AccessibleDescription = Nothing
+        Me.RadButtonFirmenZusatzDaten.RootElement.AccessibleName = Nothing
+        Me.RadButtonFirmenZusatzDaten.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
+        Me.RadButtonFirmenZusatzDaten.RootElement.AngleTransform = 0.0!
+        Me.RadButtonFirmenZusatzDaten.RootElement.FlipText = False
+        Me.RadButtonFirmenZusatzDaten.RootElement.Margin = New System.Windows.Forms.Padding(0)
+        Me.RadButtonFirmenZusatzDaten.RootElement.Text = Nothing
+        Me.RadButtonFirmenZusatzDaten.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
+        Me.RadButtonFirmenZusatzDaten.Size = New System.Drawing.Size(203, 24)
+        Me.RadButtonFirmenZusatzDaten.TabIndex = 4
+        Me.RadButtonFirmenZusatzDaten.Text = "Firmen Zusatzdaten pflegen"
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(465, 245)
+        Me.ClientSize = New System.Drawing.Size(465, 308)
         Me.Controls.Add(Me.RadButton1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.RadGroupBox2)
@@ -274,6 +296,7 @@ Partial Class frmMain
         CType(Me.RadButtonVerbindungsprotokoll, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadButtonFirmenZusatzDaten, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -289,5 +312,6 @@ Partial Class frmMain
     Friend WithEvents RadButtonMogelstatistik As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadButtonFirmenZuordnung As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadButton1 As Telerik.WinControls.UI.RadButton
+    Friend WithEvents RadButtonFirmenZusatzDaten As Telerik.WinControls.UI.RadButton
 End Class
 

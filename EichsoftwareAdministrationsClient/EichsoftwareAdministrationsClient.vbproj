@@ -122,12 +122,19 @@
     <Import Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
     <Compile Include="Benutzer.vb">
       <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
     </Compile>
     <Compile Include="clsTelerikHelper.vb" />
     <Compile Include="Firmen.vb">
       <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmFirmenZusatzdaten.Designer.vb">
+      <DependentUpon>frmFirmenZusatzdaten.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmFirmenZusatzdaten.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\frmDBSync.Designer.vb">
       <DependentUpon>frmDBSync.vb</DependentUpon>
@@ -271,6 +278,9 @@
     <Compile Include="ServerVerbindungsprotokoll.vb">
       <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\frmFirmenZusatzdaten.resx">
+      <DependentUpon>frmFirmenZusatzdaten.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmDBSync.resx">
       <DependentUpon>frmDBSync.vb</DependentUpon>
     </EmbeddedResource>

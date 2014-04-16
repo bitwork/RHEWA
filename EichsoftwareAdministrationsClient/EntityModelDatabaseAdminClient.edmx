@@ -139,7 +139,6 @@
           </Key>
           <Property Name="ID" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="Firmen_FK" Type="nvarchar" MaxLength="50" />
-          <Property Name="Umsatz" Type="nvarchar" MaxLength="50" />
           <Property Name="Abrechnungsmodell" Type="nvarchar" MaxLength="50" />
           <Property Name="Qualifizierungspauschale" Type="nvarchar" MaxLength="50" />
           <Property Name="BeginnVertrag" Type="date" />
@@ -544,7 +543,6 @@
           </Key>
           <Property Type="String" Name="ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Firmen_FK" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Umsatz" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Abrechnungsmodell" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Qualifizierungspauschale" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="DateTime" Name="BeginnVertrag" Precision="0" />
@@ -894,7 +892,6 @@
                 <ScalarProperty Name="BeginnVertrag" ColumnName="BeginnVertrag" />
                 <ScalarProperty Name="Qualifizierungspauschale" ColumnName="Qualifizierungspauschale" />
                 <ScalarProperty Name="Abrechnungsmodell" ColumnName="Abrechnungsmodell" />
-                <ScalarProperty Name="Umsatz" ColumnName="Umsatz" />
                 <ScalarProperty Name="Firmen_FK" ColumnName="Firmen_FK" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>

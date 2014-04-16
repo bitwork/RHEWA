@@ -348,7 +348,7 @@
           <Property Name="FK_Kompatibilitaetsnachweis" Type="int" />
           <Property Name="Ausgeblendet" Type="bit" Nullable="false" />
           <Property Name="FK_Bearbeitungsstatus" Type="tinyint" />
-          <Property Name="UploadFilePath" Type="nvarchar" MaxLength="255" />
+          <Property Name="UploadFilePath" Type="nvarchar" MaxLength="250" />
           <Property Name="UploadDatum" Type="datetime" />
           <Property Name="BearbeitungsDatum" Type="datetime" />
           <Property Name="ErzeugerLizenz" Type="nvarchar" MaxLength="50" />
@@ -360,7 +360,6 @@
           </Key>
           <Property Name="ID" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="Firmen_FK" Type="nvarchar" MaxLength="50" />
-          <Property Name="Umsatz" Type="nvarchar" MaxLength="50" />
           <Property Name="Abrechnungsmodell" Type="nvarchar" MaxLength="50" />
           <Property Name="Qualifizierungspauschale" Type="nvarchar" MaxLength="50" />
           <Property Name="BeginnVertrag" Type="date" />
@@ -1393,7 +1392,7 @@
           <NavigationProperty Name="ServerLookup_Waegezelle" Relationship="EichenSQLDatabaseModel.FK_Eichprozess_Lookup_Waegezelle" FromRole="ServerEichprozess" ToRole="ServerLookup_Waegezelle" />
           <NavigationProperty Name="ServerMogelstatistik" Relationship="EichenSQLDatabaseModel.FK_Mogelstatistik_Eichprozess" FromRole="ServerEichprozess" ToRole="ServerMogelstatistik" />
           <Property Type="Byte" Name="FK_Bearbeitungsstatus" />
-          <Property Type="String" Name="UploadFilePath" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="UploadFilePath" MaxLength="250" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="ServerLookup_Bearbeitungsstatus" Relationship="EichenSQLDatabaseModel.FK_ServerEichprozess_ServerLookup_Bearbeitungsstatus" FromRole="ServerEichprozess" ToRole="ServerLookup_Bearbeitungsstatus" />
           <Property Type="DateTime" Name="UploadDatum" Precision="3" ConcurrencyMode="None" />
           <Property Type="DateTime" Name="BearbeitungsDatum" Precision="3" />
@@ -2092,7 +2091,6 @@
           </Key>
           <Property Type="String" Name="ID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Firmen_FK" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Umsatz" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Abrechnungsmodell" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Qualifizierungspauschale" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="DateTime" Name="BeginnVertrag" Precision="0" />
@@ -2763,7 +2761,6 @@
                 <ScalarProperty Name="BeginnVertrag" ColumnName="BeginnVertrag" />
                 <ScalarProperty Name="Qualifizierungspauschale" ColumnName="Qualifizierungspauschale" />
                 <ScalarProperty Name="Abrechnungsmodell" ColumnName="Abrechnungsmodell" />
-                <ScalarProperty Name="Umsatz" ColumnName="Umsatz" />
                 <ScalarProperty Name="Firmen_FK" ColumnName="Firmen_FK" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>

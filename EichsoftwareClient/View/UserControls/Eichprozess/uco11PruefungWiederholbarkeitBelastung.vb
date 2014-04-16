@@ -344,28 +344,9 @@
     Private Sub FillControls()
         'Steuerlemente füllen
         'dynamisches laden der Nullstellen:
-        Try
-            _intNullstellenE1 = clsGeneralFunctions.GetRHEWADecimalDigits(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1) '.Replace(",", "."))  + 1
-        Catch ex As Exception
-        End Try
-        Try
-            _intNullstellenE2 = clsGeneralFunctions.GetRHEWADecimalDigits(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2) '.Replace(",", ".")) + 1
-        Catch ex As Exception
-        End Try
-        Try
-            _intNullstellenE3 = clsGeneralFunctions.GetRHEWADecimalDigits(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3) '.Replace(",", "."))  + 1
-        Catch ex As Exception
-        End Try
+      
+        HoleNullstellen()
 
-        If _intNullstellenE1 > _intNullstellenE2 AndAlso _intNullstellenE1 > _intNullstellenE3 Then
-            _intNullstellenE = _intNullstellenE1
-        ElseIf _intNullstellenE2 > _intNullstellenE1 AndAlso _intNullstellenE2 > _intNullstellenE3 Then
-            _intNullstellenE = _intNullstellenE2
-        ElseIf _intNullstellenE3 > _intNullstellenE1 AndAlso _intNullstellenE3 > _intNullstellenE2 Then
-            _intNullstellenE = _intNullstellenE3
-        Else 'alles ist gleih
-            _intNullstellenE = _intNullstellenE1
-        End If
 
         'füllen der berechnenten Steuerelemente
 
@@ -969,7 +950,6 @@
         End If
     End Sub
 
-#End Region
     'Entsperrroutine
     Protected Overrides Sub EntsperrungNeeded()
         MyBase.EntsperrungNeeded()
@@ -1011,7 +991,7 @@
                 UeberschreibePruefungsobjekte()
 
                 'erzeuegn eines Server Objektes auf basis des aktuellen DS
-               objServerEichprozess = clsClientServerConversionFunctions.CopyObjectProperties(objServerEichprozess, objEichprozess, clsClientServerConversionFunctions.enuModus.RHEWASendetAnClient)
+                objServerEichprozess = clsClientServerConversionFunctions.CopyObjectProperties(objServerEichprozess, objEichprozess, clsClientServerConversionFunctions.enuModus.RHEWASendetAnClient)
                 Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
                     Try
                         Webcontext.Open()
@@ -1037,4 +1017,6 @@
             End Using
         End If
     End Sub
+#End Region
+
 End Class

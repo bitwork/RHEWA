@@ -3670,7 +3670,7 @@ Namespace EichsoftwareWebservice
         
         Private _BruchteilEichfehlergrenzeField As String
         
-        Private _DeaktiviertField As System.Nullable(Of Boolean)
+        Private _DeaktiviertField As Boolean
         
         Private _ErstellDatumField As System.Nullable(Of Date)
         
@@ -3745,7 +3745,7 @@ Namespace EichsoftwareWebservice
         End Property
         
         <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _Deaktiviert() As System.Nullable(Of Boolean)
+        Public Property _Deaktiviert() As Boolean
             Get
                 Return Me._DeaktiviertField
             End Get
@@ -6667,6 +6667,9 @@ Namespace EichsoftwareWebservice
         Private NeueWZField As Boolean
         
         <System.Runtime.Serialization.OptionalFieldAttribute()>  _
+        Private UploaddatumField As Date
+        
+        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private VorgangsnummerField As String
         
         <System.Runtime.Serialization.OptionalFieldAttribute()>  _
@@ -6788,6 +6791,19 @@ Namespace EichsoftwareWebservice
                 If (Me.NeueWZField.Equals(value) <> true) Then
                     Me.NeueWZField = value
                     Me.RaisePropertyChanged("NeueWZ")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
+        Public Property Uploaddatum() As Date
+            Get
+                Return Me.UploaddatumField
+            End Get
+            Set
+                If (Me.UploaddatumField.Equals(value) <> true) Then
+                    Me.UploaddatumField = value
+                    Me.RaisePropertyChanged("Uploaddatum")
                 End If
             End Set
         End Property

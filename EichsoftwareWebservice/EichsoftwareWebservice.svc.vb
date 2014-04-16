@@ -184,7 +184,7 @@ Public Class EichsoftwareWebservice
 
 
                     'aufräumen und löschen der alten Einträge in der Datenbank
-                    pObjEichprozess.UploadDatum = Serverob.UploadDatum
+                    pObjEichprozess.UploadDatum = Date.Now
                     clsServerHelper.DeleteForeignTables(Serverob)
 
                     Serverob = (From db In DbContext.ServerEichprozess Select db Where db.Vorgangsnummer = Vorgangsnummer).FirstOrDefault
@@ -645,7 +645,8 @@ Public Class EichsoftwareWebservice
                        .ZurBearbeitungGesperrtDurch = Eichprozess.ZurBearbeitungGesperrtDurch, _
                      .Anhangpfad = Eichprozess.UploadFilePath, _
                      .NeuWZ = Eichprozess.ServerLookup_Waegezelle.Neu, _
-                    .Bearbeitungsstatus = Lookup2.Status
+                    .Bearbeitungsstatus = Lookup2.Status, _
+                .Uploaddatum = Eichprozess.UploadDatum
                                  }
 
                     ' SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG QUERY ausgeführt")
@@ -709,6 +710,11 @@ Public Class EichsoftwareWebservice
 
                             If Not objeichprozess.ZurBearbeitungGesperrtDurch Is Nothing Then
                                 objReturn.GesperrtDurch = objeichprozess.ZurBearbeitungGesperrtDurch
+                            End If
+
+
+                            If Not objeichprozess.Uploaddatum Is Nothing Then
+                                objReturn.Uploaddatum = objeichprozess.Uploaddatum
                             End If
                             '   SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 11")
 
@@ -1080,6 +1086,7 @@ Public Class EichsoftwareWebservice
 
                     'Fehlerhafter Status aus Lookup_Bearbeitungsstatus = 2
                     Obj.FK_Bearbeitungsstatus = 2
+                    Obj.FK_Vorgangsstatus = 2
                     DbContext.SaveChanges()
 
                     HEKennung = Nothing
@@ -1143,6 +1150,7 @@ Public Class EichsoftwareWebservice
 
                     'Genehmighter Status aus Lookup_Bearbeitungsstatus = 3
                     Obj.FK_Bearbeitungsstatus = 3
+                    Obj.FK_Vorgangsstatus = 2
                     DbContext.SaveChanges()
 
                     HEKennung = Nothing

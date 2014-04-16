@@ -478,7 +478,7 @@
     <xs:sequence>
       <xs:element name="_Bauartzulassung" nillable="true" type="xs:string" />
       <xs:element name="_BruchteilEichfehlergrenze" nillable="true" type="xs:string" />
-      <xs:element name="_Deaktiviert" nillable="true" type="xs:boolean" />
+      <xs:element name="_Deaktiviert" type="xs:boolean" />
       <xs:element name="_ErstellDatum" nillable="true" type="xs:dateTime" />
       <xs:element name="_Genauigkeitsklasse" nillable="true" type="xs:string" />
       <xs:element name="_GrenzwertLastwiderstandMAX" nillable="true" type="xs:string" />
@@ -605,6 +605,7 @@
       <xs:element minOccurs="0" name="GesperrtDurch" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="NeueWZ" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Uploaddatum" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Vorgangsnummer" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="WZ" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Waagenart" nillable="true" type="xs:string" />
