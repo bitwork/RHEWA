@@ -722,6 +722,7 @@ Inherits ucoContent
     ''' <author></author>
     ''' <commentauthor></commentauthor>
     Private Function ValidateControls() As Boolean
+     
         'prüfen ob alle Felder ausgefüllt sind
         AbortSaveing = False
 
@@ -800,6 +801,15 @@ Inherits ucoContent
 
 
         If AbortSaveing Then
+            If Debugger.IsAttached Then
+                If MessageBox.Show("Validierung überspringen?", "", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+                    Me.AbortSaveing = False
+                    Return True
+                Else
+                    MessageBox.Show(My.Resources.GlobaleLokalisierung.PflichtfelderAusfuellen, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    Return False
+                End If
+            End If
             MessageBox.Show(My.Resources.GlobaleLokalisierung.PflichtfelderAusfuellen, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             Return False
         End If
