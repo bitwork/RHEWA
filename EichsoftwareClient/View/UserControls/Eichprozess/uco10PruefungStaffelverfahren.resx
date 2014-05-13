@@ -17563,6 +17563,9 @@
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich3Fehler5.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
+  <data name="RadTextBoxControlStaffel1Bereich3Last4.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="RadTextBoxControlStaffel1Bereich3Last4.Location" type="System.Drawing.Point, System.Drawing">
     <value>211, 124</value>
   </data>
@@ -19293,6 +19296,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich2Fehler5.ZOrder" xml:space="preserve">
     <value>11</value>
+  </data>
+  <data name="RadTextBoxControlStaffel1Bereich2Last4.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel1Bereich2Last4.Location" type="System.Drawing.Point, System.Drawing">
     <value>210, 124</value>
@@ -21313,6 +21319,9 @@
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich1Fehler5.ZOrder" xml:space="preserve">
     <value>18</value>
   </data>
+  <data name="RadTextBoxControlStaffel1Bereich1Last4.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="RadTextBoxControlStaffel1Bereich1Last4.Location" type="System.Drawing.Point, System.Drawing">
     <value>210, 124</value>
   </data>
@@ -22766,6 +22775,6 @@
     <value>uco10PruefungStaffelverfahren</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, EichsoftwareClient, Version=1.0.5246.20588, Culture=neutral, PublicKeyToken=null</value>
+    <value>EichsoftwareClient.ucoContent, EichsoftwareClient, Version=1.0.5246.22196, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

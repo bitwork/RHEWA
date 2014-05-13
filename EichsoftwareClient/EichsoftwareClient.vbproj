@@ -1001,6 +1001,8 @@
     <None Include="Resources\cog.png" />
     <None Include="Resources\attach.png" />
     <Content Include="FodyWeavers.xml" />
+    <None Include="Resources\82Vario_Beschilderung_Auswertegeraet.PNG" />
+    <None Include="Resources\82Vario_Beschilderung_Auswertegeraet_Unterseite.PNG" />
     <Content Include="Resources\report_add.png" />
     <Content Include="Resources\report_delete.png" />
     <Content Include="Resources\report_edit.png" />

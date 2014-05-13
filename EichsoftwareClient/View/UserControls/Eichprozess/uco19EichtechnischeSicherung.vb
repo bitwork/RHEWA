@@ -103,10 +103,14 @@
                 PictureBox1.Image = My.Resources._82Alpha_Beschilderung_Auswertegeraet
                 PictureBox2.Image = My.Resources._82Alpha_Beschilderung_Auswertegeraet_Frontseite
                 PictureBox3.Image = My.Resources._82Alpha_CEXY_Auswertegeraet
-            ElseIf objEichprozess.Lookup_Auswertegeraet.Typ.ToLower.Equals("82basic") Then
+            ElseIf objEichprozess.Lookup_Auswertegeraet.Typ.ToLower.Equals("82basic") Or objEichprozess.Lookup_Auswertegeraet.Typ.ToLower.Equals("82comfort") Or objEichprozess.Lookup_Auswertegeraet.Typ.ToLower.Equals("82edition") Then
                 PictureBox1.Image = My.Resources._82Basic_Beschilderung_Auswertegeraet
                 PictureBox2.Image = My.Resources._82Basic_Beschilderung_Auswertegeraet_Unterseite
                 PictureBox3.Image = My.Resources._82Basic_CEXY_Auswertegeraet
+            ElseIf objEichprozess.Lookup_Auswertegeraet.Typ.ToLower.Equals("82vario") Then
+                PictureBox1.Image = My.Resources._82Vario_Beschilderung_Auswertegeraet
+                PictureBox2.Image = My.Resources._82Vario_Beschilderung_Auswertegeraet_Unterseite
+                PictureBox3.Image = Nothing
             ElseIf objEichprozess.Lookup_Auswertegeraet.Typ.ToLower.Equals("83n") Then
                 PictureBox1.Image = My.Resources._83N_Beschilderung_Auswertegeraet_Frontseite
                 PictureBox2.Image = My.Resources._83N_Beschilderung_Auswertegeraet_Rueckseite
