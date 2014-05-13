@@ -2188,40 +2188,10 @@
   <data name="RadLabel8.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
-  <data name="RadLabel9.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel9.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="RadLabel3.RootElement.KeyTip" xml:space="preserve">
     <value />
   </data>
   <data name="RadLabel3.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlStaffel1Bereich3Last2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlStaffel1Bereich3Last2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlStaffel1Bereich3Anzeige2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlStaffel1Bereich3Anzeige2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlStaffel1Bereich3Fehler2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlStaffel1Bereich3Fehler2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblStaffel1Bereich3EFGWert2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblStaffel1Bereich3EFGWert2.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
   <data name="RadTextBoxControlStaffel1Bereich3Fehler7.RootElement.KeyTip" xml:space="preserve">
@@ -2422,40 +2392,10 @@
   <data name="RadLabel6.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
-  <data name="RadLabel7.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel7.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="RadLabel2.RootElement.KeyTip" xml:space="preserve">
     <value />
   </data>
   <data name="RadLabel2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlStaffel1Bereich2Last2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlStaffel1Bereich2Last2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlStaffel1Bereich2Anzeige2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlStaffel1Bereich2Anzeige2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlStaffel1Bereich2Fehler2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlStaffel1Bereich2Fehler2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblStaffel1Bereich2EFGWert2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblStaffel1Bereich2EFGWert2.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
   <data name="RadTextBoxControlStaffel1Bereich2Fehler7.RootElement.KeyTip" xml:space="preserve">

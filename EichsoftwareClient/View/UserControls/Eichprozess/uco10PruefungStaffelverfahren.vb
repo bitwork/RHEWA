@@ -108,27 +108,21 @@
                RadTextBoxControlStaffel1Bereich3Anzeige4.Validating,
                RadTextBoxControlStaffel1Bereich3Anzeige3.Validating,
                RadTextBoxControlStaffel1Bereich3Anzeige1.Validating,
-               RadTextBoxControlStaffel1Bereich3Last2.Validating,
-               RadTextBoxControlStaffel1Bereich3Fehler2.Validating,
-               RadTextBoxControlStaffel1Bereich3Anzeige2.Validating,
-               RadTextBoxControlStaffel1Bereich2Last4.Validating,
-               RadTextBoxControlStaffel1Bereich2Last3.Validating,
-               RadTextBoxControlStaffel1Bereich2Last1.Validating,
-               RadTextBoxControlStaffel1Bereich2Anzeige4.Validating,
-               RadTextBoxControlStaffel1Bereich2Anzeige3.Validating,
-               RadTextBoxControlStaffel1Bereich2Anzeige1.Validating,
-               RadTextBoxControlStaffel1Bereich2Last2.Validating,
-               RadTextBoxControlStaffel1Bereich2Fehler2.Validating,
-               RadTextBoxControlStaffel1Bereich2Anzeige2.Validating,
+                    RadTextBoxControlStaffel1Bereich2Last4.Validating,
+        RadTextBoxControlStaffel1Bereich2Last3.Validating,
+        RadTextBoxControlStaffel1Bereich2Last1.Validating,
+        RadTextBoxControlStaffel1Bereich2Anzeige4.Validating,
+        RadTextBoxControlStaffel1Bereich2Anzeige3.Validating,
+        RadTextBoxControlStaffel1Bereich2Anzeige1.Validating,
                RadTextBoxControlStaffel1Bereich1Last4.Validating,
-               RadTextBoxControlStaffel1Bereich1Last3.Validating,
-               RadTextBoxControlStaffel1Bereich1Last1.Validating,
-               RadTextBoxControlStaffel1Bereich1Anzeige4.Validating,
-               RadTextBoxControlStaffel1Bereich1Anzeige3.Validating,
-               RadTextBoxControlStaffel1Bereich1Anzeige1.Validating,
-               RadTextBoxControlStaffel1Bereich1Last2.Validating,
-               RadTextBoxControlStaffel1Bereich1Fehler2.Validating,
-               RadTextBoxControlStaffel1Bereich1Anzeige2.Validating
+        RadTextBoxControlStaffel1Bereich1Last3.Validating,
+        RadTextBoxControlStaffel1Bereich1Last1.Validating,
+        RadTextBoxControlStaffel1Bereich1Anzeige4.Validating,
+        RadTextBoxControlStaffel1Bereich1Anzeige3.Validating,
+        RadTextBoxControlStaffel1Bereich1Anzeige1.Validating,
+        RadTextBoxControlStaffel1Bereich1Last2.Validating,
+        RadTextBoxControlStaffel1Bereich1Fehler2.Validating,
+        RadTextBoxControlStaffel1Bereich1Anzeige2.Validating
         Try
             Dim result As Decimal
             If Not sender.isreadonly = True Then
@@ -465,7 +459,7 @@
                         End If
 
                         RadTextBoxControlStaffel1Bereich2Last4.Text = objEichprozess.Eichprotokoll.Identifikationsdaten_Min2
-                        RadTextBoxControlStaffel1Bereich2Last2.Text = objEichprozess.Eichprotokoll.Identifikationsdaten_Min2
+                        RadTextBoxControlStaffel1Bereich2Last1.Text = objEichprozess.Eichprotokoll.Identifikationsdaten_Min2
 
                         lblStaffel1Bereich2EFGWert5.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2), _intNullstellenE) / 5
                     ElseIf Bereich = 3 AndAlso AnzahlBereiche >= 3 Then
@@ -478,7 +472,7 @@
                             RadTextBoxControlStaffel1Bereich2Last4.Text = objEichprozess.Eichprotokoll.Pruefverfahren_BetragNormallast
                         End If
                         RadTextBoxControlStaffel1Bereich3Last4.Text = objEichprozess.Eichprotokoll.Identifikationsdaten_Min3
-                        RadTextBoxControlStaffel1Bereich3Last2.Text = objEichprozess.Eichprotokoll.Identifikationsdaten_Min3
+                        RadTextBoxControlStaffel1Bereich3Last1.Text = objEichprozess.Eichprotokoll.Identifikationsdaten_Min3
 
                         lblStaffel1Bereich3EFGWert5.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3), _intNullstellenE) / 5
                     End If
@@ -634,21 +628,26 @@
         Dim EFG6 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblStaffel{0}Bereich{1}EFGWert{2}", CInt(Staffel), CInt(Bereich), 6))
         Dim EFG7 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblStaffel{0}Bereich{1}EFGWert{2}", CInt(Staffel), CInt(Bereich), 7))
 
-      
+
         PObjPruefung.NormalLast_Last_1 = Last1.Text
-        PObjPruefung.NormalLast_Last_2 = Last2.Text
+
+        If Bereich = "1" Then 'diese Felder gibt es nur im Bereich 1 weil dort zustäzlich gegen 0 geprüft werden muss
+            PObjPruefung.NormalLast_Last_2 = Last2.Text
+            PObjPruefung.NormalLast_Anzeige_2 = Anzeige2.Text
+            PObjPruefung.NormalLast_Fehler_2 = Fehler2.Text
+            PObjPruefung.NormalLast_EFG_2 = EFG2.Text
+        End If
+
         PObjPruefung.NormalLast_Last_3 = Last3.Text
         PObjPruefung.NormalLast_Last_4 = Last4.Text
         PObjPruefung.NormalLast_Anzeige_1 = Anzeige1.Text
-        PObjPruefung.NormalLast_Anzeige_2 = Anzeige2.Text
+
         PObjPruefung.NormalLast_Anzeige_3 = Anzeige3.Text
         PObjPruefung.NormalLast_Anzeige_4 = Anzeige4.Text
         PObjPruefung.NormalLast_Fehler_1 = Fehler1.Text
-        PObjPruefung.NormalLast_Fehler_2 = Fehler2.Text
         PObjPruefung.NormalLast_Fehler_3 = Fehler3.Text
         PObjPruefung.NormalLast_Fehler_4 = Fehler4.Text
         PObjPruefung.NormalLast_EFG_1 = EFG1.Text
-        PObjPruefung.NormalLast_EFG_2 = EFG2.Text
         PObjPruefung.NormalLast_EFG_3 = EFG3.Text
         PObjPruefung.NormalLast_EFG_4 = EFG4.Text
         PObjPruefung.DifferenzAnzeigewerte_Fehler = Fehler5.Text
@@ -903,15 +902,26 @@
 
 
             If Staffel = enuStaffel.Staffel1 Then
-                'fehler berechnen
-                Try
-                    Fehler1.Text = CDec(Anzeige1.Text) - CDec(Last1.Text)
-                Catch e As InvalidCastException
-                End Try
-                Try
-                    Fehler2.Text = CDec(Anzeige2.Text) - CDec(Last2.Text)
-                Catch e As InvalidCastException
-                End Try
+              
+                'Im Bereich 1 wird gegen den nullwert geprüft. Ab bereich 2 gegen 20e
+                If Bereich = enuBereich.Bereich1 Then
+                    'fehler berechnen
+                    Try
+                        Fehler1.Text = CDec(Anzeige1.Text) - CDec(Last1.Text)
+                    Catch e As InvalidCastException
+                    End Try
+                    Try
+                        Fehler2.Text = CDec(Anzeige2.Text) - CDec(Last2.Text)
+                    Catch e As InvalidCastException
+                    End Try
+                Else
+                    'fehler berechnen
+                    Try
+                        Fehler1.Text = CDec(Anzeige1.Text) - CDec(Last1.Text)
+                    Catch e As InvalidCastException
+                    End Try
+                End If
+             
                 Try
                     Fehler3.Text = CDec(Anzeige3.Text) - CDec(Last3.Text)
                 Catch e As InvalidCastException
@@ -927,11 +937,24 @@
                 'EFG Wert 1 und 2 Berechnen
                 Try
                     If CDec(Last1.Text) < Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 500), _intNullstellenE, MidpointRounding.AwayFromZero) Then
-                        EFG1.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1) * 0.5, _intNullstellenE)
-                        EFG2.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1) * 0.5, _intNullstellenE)
+                        'Im Bereich 1 wird gegen den nullwert geprüft. Ab bereich 2 gegen 20e. dort fällt EFG2 weg. stattdessen wird EFG3 genutzt
+                        If Bereich = enuBereich.Bereich1 Then
+                            EFG1.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1) * 0.5, _intNullstellenE)
+                            EFG2.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1) * 0.5, _intNullstellenE)
+                        Else
+                            EFG1.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1) * 0.5, _intNullstellenE)
+                            EFG3.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1) * 0.5, _intNullstellenE)
+                        End If
                     Else
-                        EFG1.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1), _intNullstellenE)
-                        EFG2.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1), _intNullstellenE)
+                        'Im Bereich 1 wird gegen den nullwert geprüft. Ab bereich 2 gegen 20e. dort fällt EFG2 weg. stattdessen wird EFG3 genutzt
+                        If Bereich = enuBereich.Bereich1 Then
+                            EFG1.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1), _intNullstellenE)
+                            EFG2.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1), _intNullstellenE)
+                        Else
+
+                            EFG1.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1), _intNullstellenE)
+                            EFG3.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1), _intNullstellenE)
+                        End If
                     End If
                 Catch ex As InvalidCastException
                 End Try
@@ -1014,8 +1037,8 @@
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub RadTextBoxControlEingaben_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlStaffel5Bereich1Last4.TextChanged, RadTextBoxControlStaffel5Bereich1Last3.TextChanged, RadTextBoxControlStaffel5Bereich1Last2.TextChanged, RadTextBoxControlStaffel5Bereich1Last1.TextChanged, RadTextBoxControlStaffel5Bereich1Anzeige4.TextChanged, RadTextBoxControlStaffel5Bereich1Anzeige3.TextChanged, RadTextBoxControlStaffel5Bereich1Anzeige1.TextChanged, RadTextBoxControlStaffel4Bereich1Last4.TextChanged, RadTextBoxControlStaffel4Bereich1Last3.TextChanged, RadTextBoxControlStaffel4Bereich1Last2.TextChanged, RadTextBoxControlStaffel4Bereich1Last1.TextChanged, RadTextBoxControlStaffel4Bereich1Anzeige4.TextChanged, RadTextBoxControlStaffel4Bereich1Anzeige3.TextChanged, RadTextBoxControlStaffel4Bereich1Anzeige1.TextChanged, RadTextBoxControlStaffel3Bereich1Last2.TextChanged, RadTextBoxControlStaffel3Bereich1Last1.TextChanged, RadTextBoxControlStaffel3Bereich1Anzeige1.TextChanged, RadTextBoxControlStaffel2Bereich1Last2.TextChanged, RadTextBoxControlStaffel2Bereich1Last1.TextChanged, RadTextBoxControlStaffel2Bereich1Anzeige1.TextChanged, RadTextBoxControlStaffel1Bereich1Last4.TextChanged, RadTextBoxControlStaffel1Bereich1Last3.TextChanged, RadTextBoxControlStaffel1Bereich1Last2.TextChanged, RadTextBoxControlStaffel1Bereich1Last1.TextChanged, RadTextBoxControlStaffel1Bereich1Anzeige4.TextChanged, RadTextBoxControlStaffel1Bereich1Anzeige3.TextChanged, RadTextBoxControlStaffel1Bereich1Anzeige2.TextChanged, RadTextBoxControlStaffel1Bereich1Anzeige1.TextChanged,
-        RadTextBoxControlStaffel5Bereich2Last4.TextChanged, RadTextBoxControlStaffel5Bereich2Last3.TextChanged, RadTextBoxControlStaffel5Bereich2Last2.TextChanged, RadTextBoxControlStaffel5Bereich2Last1.TextChanged, RadTextBoxControlStaffel5Bereich2Anzeige4.TextChanged, RadTextBoxControlStaffel5Bereich2Anzeige3.TextChanged, RadTextBoxControlStaffel5Bereich2Anzeige1.TextChanged, RadTextBoxControlStaffel4Bereich2Last4.TextChanged, RadTextBoxControlStaffel4Bereich2Last3.TextChanged, RadTextBoxControlStaffel4Bereich2Last2.TextChanged, RadTextBoxControlStaffel4Bereich2Last1.TextChanged, RadTextBoxControlStaffel4Bereich2Anzeige4.TextChanged, RadTextBoxControlStaffel4Bereich2Anzeige3.TextChanged, RadTextBoxControlStaffel4Bereich2Anzeige1.TextChanged, RadTextBoxControlStaffel3Bereich2Last2.TextChanged, RadTextBoxControlStaffel3Bereich2Last1.TextChanged, RadTextBoxControlStaffel3Bereich2Anzeige1.TextChanged, RadTextBoxControlStaffel2Bereich2Last2.TextChanged, RadTextBoxControlStaffel2Bereich2Last1.TextChanged, RadTextBoxControlStaffel2Bereich2Anzeige1.TextChanged, RadTextBoxControlStaffel1Bereich2Last4.TextChanged, RadTextBoxControlStaffel1Bereich2Last3.TextChanged, RadTextBoxControlStaffel1Bereich2Last2.TextChanged, RadTextBoxControlStaffel1Bereich2Last1.TextChanged, RadTextBoxControlStaffel1Bereich2Anzeige4.TextChanged, RadTextBoxControlStaffel1Bereich2Anzeige3.TextChanged, RadTextBoxControlStaffel1Bereich2Anzeige2.TextChanged, RadTextBoxControlStaffel1Bereich2Anzeige1.TextChanged,
-        RadTextBoxControlStaffel5Bereich3Last4.TextChanged, RadTextBoxControlStaffel5Bereich3Last3.TextChanged, RadTextBoxControlStaffel5Bereich3Last2.TextChanged, RadTextBoxControlStaffel5Bereich3Last1.TextChanged, RadTextBoxControlStaffel5Bereich3Anzeige4.TextChanged, RadTextBoxControlStaffel5Bereich3Anzeige3.TextChanged, RadTextBoxControlStaffel5Bereich3Anzeige1.TextChanged, RadTextBoxControlStaffel4Bereich3Last4.TextChanged, RadTextBoxControlStaffel4Bereich3Last3.TextChanged, RadTextBoxControlStaffel4Bereich3Last2.TextChanged, RadTextBoxControlStaffel4Bereich3Last1.TextChanged, RadTextBoxControlStaffel4Bereich3Anzeige4.TextChanged, RadTextBoxControlStaffel4Bereich3Anzeige3.TextChanged, RadTextBoxControlStaffel4Bereich3Anzeige1.TextChanged, RadTextBoxControlStaffel3Bereich3Last2.TextChanged, RadTextBoxControlStaffel3Bereich3Last1.TextChanged, RadTextBoxControlStaffel3Bereich3Anzeige1.TextChanged, RadTextBoxControlStaffel2Bereich3Last2.TextChanged, RadTextBoxControlStaffel2Bereich3Last1.TextChanged, RadTextBoxControlStaffel2Bereich3Anzeige1.TextChanged, RadTextBoxControlStaffel1Bereich3Last4.TextChanged, RadTextBoxControlStaffel1Bereich3Last3.TextChanged, RadTextBoxControlStaffel1Bereich3Last2.TextChanged, RadTextBoxControlStaffel1Bereich3Last1.TextChanged, RadTextBoxControlStaffel1Bereich3Anzeige4.TextChanged, RadTextBoxControlStaffel1Bereich3Anzeige3.TextChanged, RadTextBoxControlStaffel1Bereich3Anzeige2.TextChanged, RadTextBoxControlStaffel1Bereich3Anzeige1.TextChanged
+        RadTextBoxControlStaffel5Bereich2Last4.TextChanged, RadTextBoxControlStaffel5Bereich2Last3.TextChanged, RadTextBoxControlStaffel5Bereich2Last2.TextChanged, RadTextBoxControlStaffel5Bereich2Last1.TextChanged, RadTextBoxControlStaffel5Bereich2Anzeige4.TextChanged, RadTextBoxControlStaffel5Bereich2Anzeige3.TextChanged, RadTextBoxControlStaffel5Bereich2Anzeige1.TextChanged, RadTextBoxControlStaffel4Bereich2Last4.TextChanged, RadTextBoxControlStaffel4Bereich2Last3.TextChanged, RadTextBoxControlStaffel4Bereich2Last2.TextChanged, RadTextBoxControlStaffel4Bereich2Last1.TextChanged, RadTextBoxControlStaffel4Bereich2Anzeige4.TextChanged, RadTextBoxControlStaffel4Bereich2Anzeige3.TextChanged, RadTextBoxControlStaffel4Bereich2Anzeige1.TextChanged, RadTextBoxControlStaffel3Bereich2Last2.TextChanged, RadTextBoxControlStaffel3Bereich2Last1.TextChanged, RadTextBoxControlStaffel3Bereich2Anzeige1.TextChanged, RadTextBoxControlStaffel2Bereich2Last2.TextChanged, RadTextBoxControlStaffel2Bereich2Last1.TextChanged, RadTextBoxControlStaffel2Bereich2Anzeige1.TextChanged, RadTextBoxControlStaffel1Bereich2Last4.TextChanged, RadTextBoxControlStaffel1Bereich2Last3.TextChanged, RadTextBoxControlStaffel1Bereich2Last1.TextChanged, RadTextBoxControlStaffel1Bereich2Anzeige4.TextChanged, RadTextBoxControlStaffel1Bereich2Anzeige3.TextChanged, RadTextBoxControlStaffel1Bereich2Anzeige1.TextChanged,
+        RadTextBoxControlStaffel5Bereich3Last4.TextChanged, RadTextBoxControlStaffel5Bereich3Last3.TextChanged, RadTextBoxControlStaffel5Bereich3Last2.TextChanged, RadTextBoxControlStaffel5Bereich3Last1.TextChanged, RadTextBoxControlStaffel5Bereich3Anzeige4.TextChanged, RadTextBoxControlStaffel5Bereich3Anzeige3.TextChanged, RadTextBoxControlStaffel5Bereich3Anzeige1.TextChanged, RadTextBoxControlStaffel4Bereich3Last4.TextChanged, RadTextBoxControlStaffel4Bereich3Last3.TextChanged, RadTextBoxControlStaffel4Bereich3Last2.TextChanged, RadTextBoxControlStaffel4Bereich3Last1.TextChanged, RadTextBoxControlStaffel4Bereich3Anzeige4.TextChanged, RadTextBoxControlStaffel4Bereich3Anzeige3.TextChanged, RadTextBoxControlStaffel4Bereich3Anzeige1.TextChanged, RadTextBoxControlStaffel3Bereich3Last2.TextChanged, RadTextBoxControlStaffel3Bereich3Last1.TextChanged, RadTextBoxControlStaffel3Bereich3Anzeige1.TextChanged, RadTextBoxControlStaffel2Bereich3Last2.TextChanged, RadTextBoxControlStaffel2Bereich3Last1.TextChanged, RadTextBoxControlStaffel2Bereich3Anzeige1.TextChanged, RadTextBoxControlStaffel1Bereich3Last4.TextChanged, RadTextBoxControlStaffel1Bereich3Last3.TextChanged, RadTextBoxControlStaffel1Bereich3Last1.TextChanged, RadTextBoxControlStaffel1Bereich3Anzeige4.TextChanged, RadTextBoxControlStaffel1Bereich3Anzeige3.TextChanged, RadTextBoxControlStaffel1Bereich3Anzeige1.TextChanged
 
         If _suspendEvents = True Then Exit Sub
         Me.AktuellerStatusDirty = True
