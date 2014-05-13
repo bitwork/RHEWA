@@ -241,32 +241,28 @@ Public Class ucoAmpel
         Try
             Dim items(0) As Telerik.WinControls.UI.ListViewDataItem
 
-            Dim Listitem = (From raditem In RadListView1.Items Where raditem.Value = pStatus And raditem.Visible = True).FirstOrDefault
+            'workaounrd für fokussierungsfehler. Damit das aktuell gewählte element in der Mitte angezeigt wird, wird zunächst das vorherige Element ausgewählt und dann erst das korrekte
+
+            'vorheriges Element finden und selektieren
+            Dim Listitem = (From raditem In RadListView1.Items Where raditem.Value = pStatus - 1 And raditem.Visible = True).FirstOrDefault
+            If Listitem Is Nothing Then
+                Listitem = (From raditem In RadListView1.Items Where raditem.Value = pStatus - 2 And raditem.Visible = True).FirstOrDefault
+            End If
+
+            items(0) = Listitem
+            RadListView1.Select(items)
+            RadListView1.Focus()
+
+            'tatsächliches element finden und selektieren
+            Listitem = (From raditem In RadListView1.Items Where raditem.Value = pStatus And raditem.Visible = True).FirstOrDefault
             If Listitem Is Nothing Then
                 Listitem = (From raditem In RadListView1.Items Where raditem.Value = pStatus - 1 And raditem.Visible = True).FirstOrDefault
             End If
             items(0) = Listitem
+            RadListView1.SelectedItem = Nothing
             RadListView1.Select(items)
-
-            'Dim intPrevious As Integer = -1
-            'For Each item In RadListView1.Items
-            '    If item.Value = CInt(pStatus) Then
-            '        If item.Visible = False Then
-            '            intPrevious = item.Value - 1
-            '            'das vorherige Element selektieren
-            '            Dim Listitem = From Items In RadListView1.Items Where Items.Value = intPrevious
-            '            RadListView1.Select(items)
-            '            For Each item In RadListView1.Items
-            '                If item.Value = CInt(pStatus) Then
-            '                Else
-            '                    items(0) = item
-            '                    RadListView1.Select(items)
-            '                    Exit For
-            '                End If
-            '            Next
-            '        End If
-            '    End If
-            'Next
+            RadListView1.Focus()
+          
         Catch ex As Exception
 
         End Try
@@ -493,8 +489,7 @@ Public Class ucoAmpel
         End Try
 
     End Sub
-    'TODO Ausblenden der Verfahren die nicht zutreffen bei einem abgeschlossenen Vorgang
-
+  
     Private Sub radListView1_VisualItemCreating(ByVal sender As Object, ByVal e As Telerik.WinControls.UI.ListViewVisualItemCreatingEventArgs) Handles RadListView1.VisualItemCreating
         e.VisualItem = New CustomVisualItem()
     End Sub
