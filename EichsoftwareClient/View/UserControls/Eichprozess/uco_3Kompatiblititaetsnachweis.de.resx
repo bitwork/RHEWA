@@ -563,6 +563,12 @@
   <data name="lblWZWaegezellenkennwert.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
+  <data name="lblWZWaegezellenkennwert.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 18</value>
+  </data>
+  <data name="lblWZWaegezellenkennwert.Text" xml:space="preserve">
+    <value>Wägezellenkennwert</value>
+  </data>
   <data name="lblWZMindestvorlast.RootElement.KeyTip" xml:space="preserve">
     <value />
   </data>
