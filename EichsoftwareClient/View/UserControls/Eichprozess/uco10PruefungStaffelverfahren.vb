@@ -21,7 +21,9 @@ Inherits ucoContent
 
     Sub New(ByRef pParentform As FrmMainContainer, ByRef pObjEichprozess As Eichprozess, Optional ByRef pPreviousUco As ucoContent = Nothing, Optional ByRef pNextUco As ucoContent = Nothing, Optional ByVal pEnuModus As enuDialogModus = enuDialogModus.normal)
         MyBase.New(pParentform, pObjEichprozess, pPreviousUco, pNextUco, pEnuModus)
+        _suspendEvents = True
         InitializeComponent()
+        _suspendEvents = False
         EichprozessStatusReihenfolge = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitErsatzlast
     End Sub
 
@@ -596,7 +598,15 @@ Inherits ucoContent
             'jedes objekt initialisieren und aus context laden und updaten
             For Each obj In _ListPruefungStaffelverfahrenErsatzlast
                 Dim objPruefung = Context.PruefungStaffelverfahrenErsatzlast.FirstOrDefault(Function(value) value.ID = obj.ID)
-                UpdatePruefungsObject(objPruefung)
+                If Not objPruefung Is Nothing Then
+                    'in lokaler DB gucken
+                    UpdatePruefungsObject(objPruefung)
+                Else 'es handelt sich um eine Serverobjekt im => Korrekturmodus
+                    If DialogModus = enuDialogModus.korrigierend Then
+                        UpdatePruefungsObject(obj)
+                    End If
+                End If
+
             Next
 
         End Using
@@ -1290,7 +1300,7 @@ Inherits ucoContent
         If Me.Equals(TargetUserControl) Then
             MyBase.VersendenNeeded(TargetUserControl)
             Using dbcontext As New EichsoftwareClientdatabaseEntities1
-                objEichprozess = (From a In dbcontext.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Beschaffenheitspruefung").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
+                '  objEichprozess = (From a In dbcontext.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Beschaffenheitspruefung").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
 
                 Dim objServerEichprozess As New EichsoftwareWebservice.ServerEichprozess
                 'auf fehlerhaft Status setzen
