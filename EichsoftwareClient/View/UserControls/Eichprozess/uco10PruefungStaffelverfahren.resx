@@ -342,6 +342,9 @@
   <data name="&gt;&gt;lblStaffel5Bereich3ErsatzLastOben.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="RadTextBoxControlStaffel5Bereich3Fehler7.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="RadTextBoxControlStaffel5Bereich3Fehler7.Location" type="System.Drawing.Point, System.Drawing">
     <value>325, 234</value>
   </data>
@@ -386,6 +389,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich3Fehler7.ZOrder" xml:space="preserve">
     <value>7</value>
+  </data>
+  <data name="RadTextBoxControlStaffel5Bereich3Fehler6.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel5Bereich3Fehler6.Location" type="System.Drawing.Point, System.Drawing">
     <value>325, 198</value>
@@ -432,6 +438,9 @@
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich3Fehler6.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <data name="RadTextBoxControlStaffel5Bereich3Fehler5.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="RadTextBoxControlStaffel5Bereich3Fehler5.Location" type="System.Drawing.Point, System.Drawing">
     <value>325, 162</value>
   </data>
@@ -476,6 +485,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich3Fehler5.ZOrder" xml:space="preserve">
     <value>9</value>
+  </data>
+  <data name="RadTextBoxControlStaffel5Bereich3Last4.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel5Bereich3Last4.Location" type="System.Drawing.Point, System.Drawing">
     <value>210, 124</value>
@@ -611,6 +623,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich3Anzeige3.ZOrder" xml:space="preserve">
     <value>12</value>
+  </data>
+  <data name="RadTextBoxControlStaffel5Bereich3Last3.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel5Bereich3Last3.Location" type="System.Drawing.Point, System.Drawing">
     <value>210, 98</value>
@@ -1104,8 +1119,11 @@
   <data name="&gt;&gt;PictureBox87.ZOrder" xml:space="preserve">
     <value>24</value>
   </data>
+  <data name="lblStaffel5Bereich3EFGWert7.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel5Bereich3EFGWert7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 234</value>
+    <value>396, 233</value>
   </data>
   <assembly alias="Telerik.WinControls.UI" name="Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
   <data name="lblStaffel5Bereich3EFGWert7.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
@@ -1156,8 +1174,11 @@
   <data name="&gt;&gt;lblStaffel5Bereich3EFGWert7.ZOrder" xml:space="preserve">
     <value>25</value>
   </data>
+  <data name="lblStaffel5Bereich3EFGWert6.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel5Bereich3EFGWert6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 198</value>
+    <value>396, 197</value>
   </data>
   <data name="lblStaffel5Bereich3EFGWert6.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -1207,8 +1228,11 @@
   <data name="&gt;&gt;lblStaffel5Bereich3EFGWert6.ZOrder" xml:space="preserve">
     <value>26</value>
   </data>
+  <data name="lblStaffel5Bereich3EFGWert5.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel5Bereich3EFGWert5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 162</value>
+    <value>396, 161</value>
   </data>
   <data name="lblStaffel5Bereich3EFGWert5.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -1720,6 +1744,9 @@
   <data name="&gt;&gt;lblStaffel5Bereich2ErsatzLastOben.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="RadTextBoxControlStaffel5Bereich2Fehler7.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="RadTextBoxControlStaffel5Bereich2Fehler7.Location" type="System.Drawing.Point, System.Drawing">
     <value>325, 234</value>
   </data>
@@ -1764,6 +1791,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich2Fehler7.ZOrder" xml:space="preserve">
     <value>7</value>
+  </data>
+  <data name="RadTextBoxControlStaffel5Bereich2Fehler6.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel5Bereich2Fehler6.Location" type="System.Drawing.Point, System.Drawing">
     <value>325, 198</value>
@@ -1810,6 +1840,9 @@
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich2Fehler6.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <data name="RadTextBoxControlStaffel5Bereich2Fehler5.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="RadTextBoxControlStaffel5Bereich2Fehler5.Location" type="System.Drawing.Point, System.Drawing">
     <value>325, 162</value>
   </data>
@@ -1854,6 +1887,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich2Fehler5.ZOrder" xml:space="preserve">
     <value>9</value>
+  </data>
+  <data name="RadTextBoxControlStaffel5Bereich2Last4.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel5Bereich2Last4.Location" type="System.Drawing.Point, System.Drawing">
     <value>210, 124</value>
@@ -1989,6 +2025,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich2Anzeige3.ZOrder" xml:space="preserve">
     <value>12</value>
+  </data>
+  <data name="RadTextBoxControlStaffel5Bereich2Last3.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel5Bereich2Last3.Location" type="System.Drawing.Point, System.Drawing">
     <value>210, 98</value>
@@ -2482,8 +2521,11 @@
   <data name="&gt;&gt;PictureBox94.ZOrder" xml:space="preserve">
     <value>24</value>
   </data>
+  <data name="lblStaffel5Bereich2EFGWert7.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel5Bereich2EFGWert7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 234</value>
+    <value>396, 233</value>
   </data>
   <data name="lblStaffel5Bereich2EFGWert7.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -2533,8 +2575,11 @@
   <data name="&gt;&gt;lblStaffel5Bereich2EFGWert7.ZOrder" xml:space="preserve">
     <value>25</value>
   </data>
+  <data name="lblStaffel5Bereich2EFGWert6.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel5Bereich2EFGWert6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 198</value>
+    <value>396, 197</value>
   </data>
   <data name="lblStaffel5Bereich2EFGWert6.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -2584,8 +2629,11 @@
   <data name="&gt;&gt;lblStaffel5Bereich2EFGWert6.ZOrder" xml:space="preserve">
     <value>26</value>
   </data>
+  <data name="lblStaffel5Bereich2EFGWert5.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel5Bereich2EFGWert5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 162</value>
+    <value>396, 161</value>
   </data>
   <data name="lblStaffel5Bereich2EFGWert5.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -3097,6 +3145,9 @@
   <data name="&gt;&gt;lblStaffel5Bereich1ErsatzLastOben.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="RadTextBoxControlStaffel5Bereich1Fehler7.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="RadTextBoxControlStaffel5Bereich1Fehler7.Location" type="System.Drawing.Point, System.Drawing">
     <value>325, 234</value>
   </data>
@@ -3141,6 +3192,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich1Fehler7.ZOrder" xml:space="preserve">
     <value>7</value>
+  </data>
+  <data name="RadTextBoxControlStaffel5Bereich1Fehler6.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel5Bereich1Fehler6.Location" type="System.Drawing.Point, System.Drawing">
     <value>325, 198</value>
@@ -3187,6 +3241,9 @@
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich1Fehler6.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <data name="RadTextBoxControlStaffel5Bereich1Fehler5.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="RadTextBoxControlStaffel5Bereich1Fehler5.Location" type="System.Drawing.Point, System.Drawing">
     <value>325, 162</value>
   </data>
@@ -3231,6 +3288,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich1Fehler5.ZOrder" xml:space="preserve">
     <value>9</value>
+  </data>
+  <data name="RadTextBoxControlStaffel5Bereich1Last4.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel5Bereich1Last4.Location" type="System.Drawing.Point, System.Drawing">
     <value>210, 124</value>
@@ -3366,6 +3426,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich1Anzeige3.ZOrder" xml:space="preserve">
     <value>12</value>
+  </data>
+  <data name="RadTextBoxControlStaffel5Bereich1Last3.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel5Bereich1Last3.Location" type="System.Drawing.Point, System.Drawing">
     <value>210, 98</value>
@@ -3859,8 +3922,11 @@
   <data name="&gt;&gt;PictureBox101.ZOrder" xml:space="preserve">
     <value>24</value>
   </data>
+  <data name="lblStaffel5Bereich1EFGWert7.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel5Bereich1EFGWert7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 234</value>
+    <value>396, 233</value>
   </data>
   <data name="lblStaffel5Bereich1EFGWert7.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -3910,8 +3976,11 @@
   <data name="&gt;&gt;lblStaffel5Bereich1EFGWert7.ZOrder" xml:space="preserve">
     <value>25</value>
   </data>
+  <data name="lblStaffel5Bereich1EFGWert6.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel5Bereich1EFGWert6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 198</value>
+    <value>396, 197</value>
   </data>
   <data name="lblStaffel5Bereich1EFGWert6.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -3961,8 +4030,11 @@
   <data name="&gt;&gt;lblStaffel5Bereich1EFGWert6.ZOrder" xml:space="preserve">
     <value>26</value>
   </data>
+  <data name="lblStaffel5Bereich1EFGWert5.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel5Bereich1EFGWert5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 162</value>
+    <value>396, 161</value>
   </data>
   <data name="lblStaffel5Bereich1EFGWert5.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -4525,6 +4597,9 @@
   <data name="&gt;&gt;lblStaffel4Bereich3ErsatzLastOben.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="RadTextBoxControlStaffel4Bereich3Fehler7.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="RadTextBoxControlStaffel4Bereich3Fehler7.Location" type="System.Drawing.Point, System.Drawing">
     <value>325, 234</value>
   </data>
@@ -4569,6 +4644,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich3Fehler7.ZOrder" xml:space="preserve">
     <value>7</value>
+  </data>
+  <data name="RadTextBoxControlStaffel4Bereich3Fehler6.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel4Bereich3Fehler6.Location" type="System.Drawing.Point, System.Drawing">
     <value>325, 198</value>
@@ -4615,6 +4693,9 @@
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich3Fehler6.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <data name="RadTextBoxControlStaffel4Bereich3Fehler5.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="RadTextBoxControlStaffel4Bereich3Fehler5.Location" type="System.Drawing.Point, System.Drawing">
     <value>325, 162</value>
   </data>
@@ -4659,6 +4740,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich3Fehler5.ZOrder" xml:space="preserve">
     <value>9</value>
+  </data>
+  <data name="RadTextBoxControlStaffel4Bereich3Last4.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel4Bereich3Last4.Location" type="System.Drawing.Point, System.Drawing">
     <value>210, 124</value>
@@ -4794,6 +4878,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich3Anzeige3.ZOrder" xml:space="preserve">
     <value>12</value>
+  </data>
+  <data name="RadTextBoxControlStaffel4Bereich3Last3.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel4Bereich3Last3.Location" type="System.Drawing.Point, System.Drawing">
     <value>210, 98</value>
@@ -5287,8 +5374,11 @@
   <data name="&gt;&gt;PictureBox65.ZOrder" xml:space="preserve">
     <value>24</value>
   </data>
+  <data name="lblStaffel4Bereich3EFGWert7.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel4Bereich3EFGWert7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 234</value>
+    <value>396, 233</value>
   </data>
   <data name="lblStaffel4Bereich3EFGWert7.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -5338,8 +5428,11 @@
   <data name="&gt;&gt;lblStaffel4Bereich3EFGWert7.ZOrder" xml:space="preserve">
     <value>25</value>
   </data>
+  <data name="lblStaffel4Bereich3EFGWert6.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel4Bereich3EFGWert6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 198</value>
+    <value>396, 197</value>
   </data>
   <data name="lblStaffel4Bereich3EFGWert6.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -5389,8 +5482,11 @@
   <data name="&gt;&gt;lblStaffel4Bereich3EFGWert6.ZOrder" xml:space="preserve">
     <value>26</value>
   </data>
+  <data name="lblStaffel4Bereich3EFGWert5.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel4Bereich3EFGWert5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 162</value>
+    <value>396, 161</value>
   </data>
   <data name="lblStaffel4Bereich3EFGWert5.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -5902,6 +5998,9 @@
   <data name="&gt;&gt;lblStaffel4Bereich2ErsatzLastOben.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="RadTextBoxControlStaffel4Bereich2Fehler7.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="RadTextBoxControlStaffel4Bereich2Fehler7.Location" type="System.Drawing.Point, System.Drawing">
     <value>325, 234</value>
   </data>
@@ -5946,6 +6045,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich2Fehler7.ZOrder" xml:space="preserve">
     <value>7</value>
+  </data>
+  <data name="RadTextBoxControlStaffel4Bereich2Fehler6.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel4Bereich2Fehler6.Location" type="System.Drawing.Point, System.Drawing">
     <value>325, 198</value>
@@ -5992,6 +6094,9 @@
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich2Fehler6.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <data name="RadTextBoxControlStaffel4Bereich2Fehler5.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="RadTextBoxControlStaffel4Bereich2Fehler5.Location" type="System.Drawing.Point, System.Drawing">
     <value>325, 162</value>
   </data>
@@ -6036,6 +6141,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich2Fehler5.ZOrder" xml:space="preserve">
     <value>9</value>
+  </data>
+  <data name="RadTextBoxControlStaffel4Bereich2Last4.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel4Bereich2Last4.Location" type="System.Drawing.Point, System.Drawing">
     <value>210, 124</value>
@@ -6171,6 +6279,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich2Anzeige3.ZOrder" xml:space="preserve">
     <value>12</value>
+  </data>
+  <data name="RadTextBoxControlStaffel4Bereich2Last3.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel4Bereich2Last3.Location" type="System.Drawing.Point, System.Drawing">
     <value>210, 98</value>
@@ -6664,8 +6775,11 @@
   <data name="&gt;&gt;PictureBox72.ZOrder" xml:space="preserve">
     <value>24</value>
   </data>
+  <data name="lblStaffel4Bereich2EFGWert7.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel4Bereich2EFGWert7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 234</value>
+    <value>396, 233</value>
   </data>
   <data name="lblStaffel4Bereich2EFGWert7.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -6715,8 +6829,11 @@
   <data name="&gt;&gt;lblStaffel4Bereich2EFGWert7.ZOrder" xml:space="preserve">
     <value>25</value>
   </data>
+  <data name="lblStaffel4Bereich2EFGWert6.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel4Bereich2EFGWert6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 198</value>
+    <value>396, 197</value>
   </data>
   <data name="lblStaffel4Bereich2EFGWert6.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -6766,8 +6883,11 @@
   <data name="&gt;&gt;lblStaffel4Bereich2EFGWert6.ZOrder" xml:space="preserve">
     <value>26</value>
   </data>
+  <data name="lblStaffel4Bereich2EFGWert5.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel4Bereich2EFGWert5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 162</value>
+    <value>396, 161</value>
   </data>
   <data name="lblStaffel4Bereich2EFGWert5.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -7279,6 +7399,9 @@
   <data name="&gt;&gt;lblStaffel4Bereich1ErsatzLastOben.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="RadTextBoxControlStaffel4Bereich1Fehler7.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="RadTextBoxControlStaffel4Bereich1Fehler7.Location" type="System.Drawing.Point, System.Drawing">
     <value>325, 234</value>
   </data>
@@ -7323,6 +7446,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich1Fehler7.ZOrder" xml:space="preserve">
     <value>7</value>
+  </data>
+  <data name="RadTextBoxControlStaffel4Bereich1Fehler6.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel4Bereich1Fehler6.Location" type="System.Drawing.Point, System.Drawing">
     <value>325, 198</value>
@@ -7369,6 +7495,9 @@
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich1Fehler6.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <data name="RadTextBoxControlStaffel4Bereich1Fehler5.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="RadTextBoxControlStaffel4Bereich1Fehler5.Location" type="System.Drawing.Point, System.Drawing">
     <value>325, 162</value>
   </data>
@@ -7413,6 +7542,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich1Fehler5.ZOrder" xml:space="preserve">
     <value>9</value>
+  </data>
+  <data name="RadTextBoxControlStaffel4Bereich1Last4.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel4Bereich1Last4.Location" type="System.Drawing.Point, System.Drawing">
     <value>210, 124</value>
@@ -7548,6 +7680,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich1Anzeige3.ZOrder" xml:space="preserve">
     <value>12</value>
+  </data>
+  <data name="RadTextBoxControlStaffel4Bereich1Last3.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel4Bereich1Last3.Location" type="System.Drawing.Point, System.Drawing">
     <value>210, 98</value>
@@ -8041,8 +8176,11 @@
   <data name="&gt;&gt;PictureBox80.ZOrder" xml:space="preserve">
     <value>24</value>
   </data>
+  <data name="lblStaffel4Bereich1EFGWert7.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel4Bereich1EFGWert7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 234</value>
+    <value>396, 233</value>
   </data>
   <data name="lblStaffel4Bereich1EFGWert7.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -8092,8 +8230,11 @@
   <data name="&gt;&gt;lblStaffel4Bereich1EFGWert7.ZOrder" xml:space="preserve">
     <value>25</value>
   </data>
+  <data name="lblStaffel4Bereich1EFGWert6.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel4Bereich1EFGWert6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 198</value>
+    <value>396, 197</value>
   </data>
   <data name="lblStaffel4Bereich1EFGWert6.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -8143,8 +8284,11 @@
   <data name="&gt;&gt;lblStaffel4Bereich1EFGWert6.ZOrder" xml:space="preserve">
     <value>26</value>
   </data>
+  <data name="lblStaffel4Bereich1EFGWert5.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel4Bereich1EFGWert5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 162</value>
+    <value>396, 161</value>
   </data>
   <data name="lblStaffel4Bereich1EFGWert5.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -8707,6 +8851,9 @@
   <data name="&gt;&gt;lblStaffel3Bereich3ErsatzLastOben.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="RadTextBoxControlStaffel3Bereich3Fehler7.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="RadTextBoxControlStaffel3Bereich3Fehler7.Location" type="System.Drawing.Point, System.Drawing">
     <value>325, 234</value>
   </data>
@@ -8751,6 +8898,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich3Fehler7.ZOrder" xml:space="preserve">
     <value>7</value>
+  </data>
+  <data name="RadTextBoxControlStaffel3Bereich3Fehler6.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel3Bereich3Fehler6.Location" type="System.Drawing.Point, System.Drawing">
     <value>325, 198</value>
@@ -8797,6 +8947,9 @@
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich3Fehler6.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <data name="RadTextBoxControlStaffel3Bereich3Fehler5.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="RadTextBoxControlStaffel3Bereich3Fehler5.Location" type="System.Drawing.Point, System.Drawing">
     <value>325, 162</value>
   </data>
@@ -8841,6 +8994,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich3Fehler5.ZOrder" xml:space="preserve">
     <value>9</value>
+  </data>
+  <data name="RadTextBoxControlStaffel3Bereich3Last4.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel3Bereich3Last4.Location" type="System.Drawing.Point, System.Drawing">
     <value>210, 124</value>
@@ -8976,6 +9132,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich3Anzeige3.ZOrder" xml:space="preserve">
     <value>12</value>
+  </data>
+  <data name="RadTextBoxControlStaffel3Bereich3Last3.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel3Bereich3Last3.Location" type="System.Drawing.Point, System.Drawing">
     <value>210, 98</value>
@@ -9469,8 +9628,11 @@
   <data name="&gt;&gt;PictureBox44.ZOrder" xml:space="preserve">
     <value>24</value>
   </data>
+  <data name="lblStaffel3Bereich3EFGWert7.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel3Bereich3EFGWert7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 234</value>
+    <value>396, 233</value>
   </data>
   <data name="lblStaffel3Bereich3EFGWert7.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -9520,8 +9682,11 @@
   <data name="&gt;&gt;lblStaffel3Bereich3EFGWert7.ZOrder" xml:space="preserve">
     <value>25</value>
   </data>
+  <data name="lblStaffel3Bereich3EFGWert6.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel3Bereich3EFGWert6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 198</value>
+    <value>396, 197</value>
   </data>
   <data name="lblStaffel3Bereich3EFGWert6.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -9571,8 +9736,11 @@
   <data name="&gt;&gt;lblStaffel3Bereich3EFGWert6.ZOrder" xml:space="preserve">
     <value>26</value>
   </data>
+  <data name="lblStaffel3Bereich3EFGWert5.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel3Bereich3EFGWert5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 162</value>
+    <value>396, 161</value>
   </data>
   <data name="lblStaffel3Bereich3EFGWert5.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -10084,6 +10252,9 @@
   <data name="&gt;&gt;lblStaffel3Bereich2ErsatzLastOben.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="RadTextBoxControlStaffel3Bereich2Fehler7.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="RadTextBoxControlStaffel3Bereich2Fehler7.Location" type="System.Drawing.Point, System.Drawing">
     <value>325, 234</value>
   </data>
@@ -10128,6 +10299,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich2Fehler7.ZOrder" xml:space="preserve">
     <value>7</value>
+  </data>
+  <data name="RadTextBoxControlStaffel3Bereich2Fehler6.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel3Bereich2Fehler6.Location" type="System.Drawing.Point, System.Drawing">
     <value>325, 198</value>
@@ -10174,6 +10348,9 @@
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich2Fehler6.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <data name="RadTextBoxControlStaffel3Bereich2Fehler5.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="RadTextBoxControlStaffel3Bereich2Fehler5.Location" type="System.Drawing.Point, System.Drawing">
     <value>325, 162</value>
   </data>
@@ -10218,6 +10395,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich2Fehler5.ZOrder" xml:space="preserve">
     <value>9</value>
+  </data>
+  <data name="RadTextBoxControlStaffel3Bereich2Last4.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel3Bereich2Last4.Location" type="System.Drawing.Point, System.Drawing">
     <value>210, 124</value>
@@ -10353,6 +10533,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich2Anzeige3.ZOrder" xml:space="preserve">
     <value>12</value>
+  </data>
+  <data name="RadTextBoxControlStaffel3Bereich2Last3.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel3Bereich2Last3.Location" type="System.Drawing.Point, System.Drawing">
     <value>210, 98</value>
@@ -10846,8 +11029,11 @@
   <data name="&gt;&gt;PictureBox51.ZOrder" xml:space="preserve">
     <value>24</value>
   </data>
+  <data name="lblStaffel3Bereich2EFGWert7.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel3Bereich2EFGWert7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 234</value>
+    <value>396, 233</value>
   </data>
   <data name="lblStaffel3Bereich2EFGWert7.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -10897,8 +11083,11 @@
   <data name="&gt;&gt;lblStaffel3Bereich2EFGWert7.ZOrder" xml:space="preserve">
     <value>25</value>
   </data>
+  <data name="lblStaffel3Bereich2EFGWert6.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel3Bereich2EFGWert6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 198</value>
+    <value>396, 197</value>
   </data>
   <data name="lblStaffel3Bereich2EFGWert6.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -10948,8 +11137,11 @@
   <data name="&gt;&gt;lblStaffel3Bereich2EFGWert6.ZOrder" xml:space="preserve">
     <value>26</value>
   </data>
+  <data name="lblStaffel3Bereich2EFGWert5.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel3Bereich2EFGWert5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 162</value>
+    <value>396, 161</value>
   </data>
   <data name="lblStaffel3Bereich2EFGWert5.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -11461,6 +11653,9 @@
   <data name="&gt;&gt;lblStaffel3Bereich1ErsatzLastOben.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="RadTextBoxControlStaffel3Bereich1Fehler7.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="RadTextBoxControlStaffel3Bereich1Fehler7.Location" type="System.Drawing.Point, System.Drawing">
     <value>325, 234</value>
   </data>
@@ -11505,6 +11700,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich1Fehler7.ZOrder" xml:space="preserve">
     <value>7</value>
+  </data>
+  <data name="RadTextBoxControlStaffel3Bereich1Fehler6.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel3Bereich1Fehler6.Location" type="System.Drawing.Point, System.Drawing">
     <value>325, 198</value>
@@ -11551,6 +11749,9 @@
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich1Fehler6.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <data name="RadTextBoxControlStaffel3Bereich1Fehler5.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="RadTextBoxControlStaffel3Bereich1Fehler5.Location" type="System.Drawing.Point, System.Drawing">
     <value>325, 162</value>
   </data>
@@ -11595,6 +11796,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich1Fehler5.ZOrder" xml:space="preserve">
     <value>9</value>
+  </data>
+  <data name="RadTextBoxControlStaffel3Bereich1Last4.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel3Bereich1Last4.Location" type="System.Drawing.Point, System.Drawing">
     <value>210, 124</value>
@@ -11730,6 +11934,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich1Anzeige3.ZOrder" xml:space="preserve">
     <value>12</value>
+  </data>
+  <data name="RadTextBoxControlStaffel3Bereich1Last3.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel3Bereich1Last3.Location" type="System.Drawing.Point, System.Drawing">
     <value>210, 98</value>
@@ -12223,8 +12430,11 @@
   <data name="&gt;&gt;PictureBox58.ZOrder" xml:space="preserve">
     <value>24</value>
   </data>
+  <data name="lblStaffel3Bereich1EFGWert7.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel3Bereich1EFGWert7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 234</value>
+    <value>396, 233</value>
   </data>
   <data name="lblStaffel3Bereich1EFGWert7.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -12274,8 +12484,11 @@
   <data name="&gt;&gt;lblStaffel3Bereich1EFGWert7.ZOrder" xml:space="preserve">
     <value>25</value>
   </data>
+  <data name="lblStaffel3Bereich1EFGWert6.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel3Bereich1EFGWert6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 198</value>
+    <value>396, 197</value>
   </data>
   <data name="lblStaffel3Bereich1EFGWert6.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -12325,8 +12538,11 @@
   <data name="&gt;&gt;lblStaffel3Bereich1EFGWert6.ZOrder" xml:space="preserve">
     <value>26</value>
   </data>
+  <data name="lblStaffel3Bereich1EFGWert5.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel3Bereich1EFGWert5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 162</value>
+    <value>396, 161</value>
   </data>
   <data name="lblStaffel3Bereich1EFGWert5.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -12889,6 +13105,9 @@
   <data name="&gt;&gt;lblStaffel2Bereich3ErsatzLastOben.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="RadTextBoxControlStaffel2Bereich3Fehler7.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="RadTextBoxControlStaffel2Bereich3Fehler7.Location" type="System.Drawing.Point, System.Drawing">
     <value>325, 234</value>
   </data>
@@ -12933,6 +13152,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich3Fehler7.ZOrder" xml:space="preserve">
     <value>7</value>
+  </data>
+  <data name="RadTextBoxControlStaffel2Bereich3Fehler6.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel2Bereich3Fehler6.Location" type="System.Drawing.Point, System.Drawing">
     <value>325, 198</value>
@@ -12979,6 +13201,9 @@
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich3Fehler6.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <data name="RadTextBoxControlStaffel2Bereich3Fehler5.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="RadTextBoxControlStaffel2Bereich3Fehler5.Location" type="System.Drawing.Point, System.Drawing">
     <value>325, 162</value>
   </data>
@@ -13023,6 +13248,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich3Fehler5.ZOrder" xml:space="preserve">
     <value>9</value>
+  </data>
+  <data name="RadTextBoxControlStaffel2Bereich3Last4.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel2Bereich3Last4.Location" type="System.Drawing.Point, System.Drawing">
     <value>210, 124</value>
@@ -13158,6 +13386,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich3Anzeige3.ZOrder" xml:space="preserve">
     <value>12</value>
+  </data>
+  <data name="RadTextBoxControlStaffel2Bereich3Last3.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel2Bereich3Last3.Location" type="System.Drawing.Point, System.Drawing">
     <value>210, 98</value>
@@ -13651,8 +13882,11 @@
   <data name="&gt;&gt;PictureBox23.ZOrder" xml:space="preserve">
     <value>24</value>
   </data>
+  <data name="lblStaffel2Bereich3EFGWert7.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel2Bereich3EFGWert7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 234</value>
+    <value>396, 233</value>
   </data>
   <data name="lblStaffel2Bereich3EFGWert7.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -13702,8 +13936,11 @@
   <data name="&gt;&gt;lblStaffel2Bereich3EFGWert7.ZOrder" xml:space="preserve">
     <value>25</value>
   </data>
+  <data name="lblStaffel2Bereich3EFGWert6.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel2Bereich3EFGWert6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 198</value>
+    <value>396, 197</value>
   </data>
   <data name="lblStaffel2Bereich3EFGWert6.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -13753,8 +13990,11 @@
   <data name="&gt;&gt;lblStaffel2Bereich3EFGWert6.ZOrder" xml:space="preserve">
     <value>26</value>
   </data>
+  <data name="lblStaffel2Bereich3EFGWert5.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel2Bereich3EFGWert5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 162</value>
+    <value>396, 161</value>
   </data>
   <data name="lblStaffel2Bereich3EFGWert5.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -14266,6 +14506,9 @@
   <data name="&gt;&gt;lblStaffel2Bereich2ErsatzLastOben.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="RadTextBoxControlStaffel2Bereich2Fehler7.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="RadTextBoxControlStaffel2Bereich2Fehler7.Location" type="System.Drawing.Point, System.Drawing">
     <value>325, 234</value>
   </data>
@@ -14310,6 +14553,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich2Fehler7.ZOrder" xml:space="preserve">
     <value>7</value>
+  </data>
+  <data name="RadTextBoxControlStaffel2Bereich2Fehler6.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel2Bereich2Fehler6.Location" type="System.Drawing.Point, System.Drawing">
     <value>325, 198</value>
@@ -14356,6 +14602,9 @@
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich2Fehler6.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <data name="RadTextBoxControlStaffel2Bereich2Fehler5.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="RadTextBoxControlStaffel2Bereich2Fehler5.Location" type="System.Drawing.Point, System.Drawing">
     <value>325, 162</value>
   </data>
@@ -14400,6 +14649,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich2Fehler5.ZOrder" xml:space="preserve">
     <value>9</value>
+  </data>
+  <data name="RadTextBoxControlStaffel2Bereich2Last4.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel2Bereich2Last4.Location" type="System.Drawing.Point, System.Drawing">
     <value>210, 124</value>
@@ -14535,6 +14787,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich2Anzeige3.ZOrder" xml:space="preserve">
     <value>12</value>
+  </data>
+  <data name="RadTextBoxControlStaffel2Bereich2Last3.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel2Bereich2Last3.Location" type="System.Drawing.Point, System.Drawing">
     <value>210, 98</value>
@@ -15028,8 +15283,11 @@
   <data name="&gt;&gt;PictureBox30.ZOrder" xml:space="preserve">
     <value>24</value>
   </data>
+  <data name="lblStaffel2Bereich2EFGWert7.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel2Bereich2EFGWert7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 234</value>
+    <value>396, 233</value>
   </data>
   <data name="lblStaffel2Bereich2EFGWert7.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -15079,8 +15337,11 @@
   <data name="&gt;&gt;lblStaffel2Bereich2EFGWert7.ZOrder" xml:space="preserve">
     <value>25</value>
   </data>
+  <data name="lblStaffel2Bereich2EFGWert6.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel2Bereich2EFGWert6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 198</value>
+    <value>396, 197</value>
   </data>
   <data name="lblStaffel2Bereich2EFGWert6.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -15130,8 +15391,11 @@
   <data name="&gt;&gt;lblStaffel2Bereich2EFGWert6.ZOrder" xml:space="preserve">
     <value>26</value>
   </data>
+  <data name="lblStaffel2Bereich2EFGWert5.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel2Bereich2EFGWert5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 162</value>
+    <value>396, 161</value>
   </data>
   <data name="lblStaffel2Bereich2EFGWert5.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -15643,6 +15907,9 @@
   <data name="&gt;&gt;lblStaffel2Bereich1ErsatzLastOben.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="RadTextBoxControlStaffel2Bereich1Fehler7.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="RadTextBoxControlStaffel2Bereich1Fehler7.Location" type="System.Drawing.Point, System.Drawing">
     <value>325, 234</value>
   </data>
@@ -15687,6 +15954,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich1Fehler7.ZOrder" xml:space="preserve">
     <value>7</value>
+  </data>
+  <data name="RadTextBoxControlStaffel2Bereich1Fehler6.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel2Bereich1Fehler6.Location" type="System.Drawing.Point, System.Drawing">
     <value>325, 198</value>
@@ -15733,6 +16003,9 @@
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich1Fehler6.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <data name="RadTextBoxControlStaffel2Bereich1Fehler5.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="RadTextBoxControlStaffel2Bereich1Fehler5.Location" type="System.Drawing.Point, System.Drawing">
     <value>325, 162</value>
   </data>
@@ -15777,6 +16050,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich1Fehler5.ZOrder" xml:space="preserve">
     <value>9</value>
+  </data>
+  <data name="RadTextBoxControlStaffel2Bereich1Last4.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel2Bereich1Last4.Location" type="System.Drawing.Point, System.Drawing">
     <value>210, 124</value>
@@ -15912,6 +16188,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich1Anzeige3.ZOrder" xml:space="preserve">
     <value>12</value>
+  </data>
+  <data name="RadTextBoxControlStaffel2Bereich1Last3.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel2Bereich1Last3.Location" type="System.Drawing.Point, System.Drawing">
     <value>210, 98</value>
@@ -16414,8 +16693,11 @@
   <data name="&gt;&gt;PictureBox37.ZOrder" xml:space="preserve">
     <value>24</value>
   </data>
+  <data name="lblStaffel2Bereich1EFGWert7.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel2Bereich1EFGWert7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 234</value>
+    <value>396, 233</value>
   </data>
   <data name="lblStaffel2Bereich1EFGWert7.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -16465,8 +16747,11 @@
   <data name="&gt;&gt;lblStaffel2Bereich1EFGWert7.ZOrder" xml:space="preserve">
     <value>25</value>
   </data>
+  <data name="lblStaffel2Bereich1EFGWert6.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel2Bereich1EFGWert6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 198</value>
+    <value>396, 197</value>
   </data>
   <data name="lblStaffel2Bereich1EFGWert6.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -16516,8 +16801,11 @@
   <data name="&gt;&gt;lblStaffel2Bereich1EFGWert6.ZOrder" xml:space="preserve">
     <value>26</value>
   </data>
+  <data name="lblStaffel2Bereich1EFGWert5.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel2Bereich1EFGWert5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>396, 162</value>
+    <value>396, 161</value>
   </data>
   <data name="lblStaffel2Bereich1EFGWert5.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -17131,6 +17419,9 @@
   <data name="&gt;&gt;PictureBox32.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <data name="RadTextBoxControlStaffel1Bereich3Fehler7.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="RadTextBoxControlStaffel1Bereich3Fehler7.Location" type="System.Drawing.Point, System.Drawing">
     <value>333, 227</value>
   </data>
@@ -17176,6 +17467,9 @@
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich3Fehler7.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
+  <data name="RadTextBoxControlStaffel1Bereich3Fehler6.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="RadTextBoxControlStaffel1Bereich3Fehler6.Location" type="System.Drawing.Point, System.Drawing">
     <value>333, 191</value>
   </data>
@@ -17220,6 +17514,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich3Fehler6.ZOrder" xml:space="preserve">
     <value>10</value>
+  </data>
+  <data name="RadTextBoxControlStaffel1Bereich3Fehler5.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel1Bereich3Fehler5.Location" type="System.Drawing.Point, System.Drawing">
     <value>333, 155</value>
@@ -17356,6 +17653,9 @@
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich3Anzeige4.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
+  <data name="RadTextBoxControlStaffel1Bereich3Fehler4.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="RadTextBoxControlStaffel1Bereich3Fehler4.Location" type="System.Drawing.Point, System.Drawing">
     <value>333, 124</value>
   </data>
@@ -17400,6 +17700,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich3Fehler4.ZOrder" xml:space="preserve">
     <value>14</value>
+  </data>
+  <data name="RadTextBoxControlStaffel1Bereich3Fehler3.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel1Bereich3Fehler3.Location" type="System.Drawing.Point, System.Drawing">
     <value>333, 97</value>
@@ -17625,6 +17928,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich3Anzeige1.ZOrder" xml:space="preserve">
     <value>19</value>
+  </data>
+  <data name="RadTextBoxControlStaffel1Bereich3Fehler1.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel1Bereich3Fehler1.Location" type="System.Drawing.Point, System.Drawing">
     <value>333, 72</value>
@@ -17983,8 +18289,11 @@
   <data name="&gt;&gt;PictureBox19.ZOrder" xml:space="preserve">
     <value>29</value>
   </data>
+  <data name="lblStaffel1Bereich3EFGWert7.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel1Bereich3EFGWert7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>404, 227</value>
+    <value>404, 226</value>
   </data>
   <data name="lblStaffel1Bereich3EFGWert7.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -18034,8 +18343,11 @@
   <data name="&gt;&gt;lblStaffel1Bereich3EFGWert7.ZOrder" xml:space="preserve">
     <value>30</value>
   </data>
+  <data name="lblStaffel1Bereich3EFGWert6.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel1Bereich3EFGWert6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>404, 191</value>
+    <value>404, 190</value>
   </data>
   <data name="lblStaffel1Bereich3EFGWert6.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -18085,8 +18397,11 @@
   <data name="&gt;&gt;lblStaffel1Bereich3EFGWert6.ZOrder" xml:space="preserve">
     <value>31</value>
   </data>
+  <data name="lblStaffel1Bereich3EFGWert5.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel1Bereich3EFGWert5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>404, 155</value>
+    <value>404, 154</value>
   </data>
   <data name="lblStaffel1Bereich3EFGWert5.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -18136,8 +18451,11 @@
   <data name="&gt;&gt;lblStaffel1Bereich3EFGWert5.ZOrder" xml:space="preserve">
     <value>32</value>
   </data>
+  <data name="lblStaffel1Bereich3EFGWert4.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel1Bereich3EFGWert4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>404, 124</value>
+    <value>404, 123</value>
   </data>
   <data name="lblStaffel1Bereich3EFGWert4.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -18187,8 +18505,11 @@
   <data name="&gt;&gt;lblStaffel1Bereich3EFGWert4.ZOrder" xml:space="preserve">
     <value>33</value>
   </data>
+  <data name="lblStaffel1Bereich3EFGWert3.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel1Bereich3EFGWert3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>404, 98</value>
+    <value>404, 97</value>
   </data>
   <data name="lblStaffel1Bereich3EFGWert3.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -18262,8 +18583,11 @@
   <data name="&gt;&gt;PictureBox20.ZOrder" xml:space="preserve">
     <value>35</value>
   </data>
+  <data name="lblStaffel1Bereich3EFGWert1.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel1Bereich3EFGWert1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>404, 72</value>
+    <value>404, 71</value>
   </data>
   <data name="lblStaffel1Bereich3EFGWert1.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -18826,6 +19150,9 @@
   <data name="&gt;&gt;PictureBox26.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <data name="RadTextBoxControlStaffel1Bereich2Fehler7.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="RadTextBoxControlStaffel1Bereich2Fehler7.Location" type="System.Drawing.Point, System.Drawing">
     <value>331, 227</value>
   </data>
@@ -18871,6 +19198,9 @@
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich2Fehler7.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
+  <data name="RadTextBoxControlStaffel1Bereich2Fehler6.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="RadTextBoxControlStaffel1Bereich2Fehler6.Location" type="System.Drawing.Point, System.Drawing">
     <value>331, 191</value>
   </data>
@@ -18915,6 +19245,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich2Fehler6.ZOrder" xml:space="preserve">
     <value>10</value>
+  </data>
+  <data name="RadTextBoxControlStaffel1Bereich2Fehler5.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel1Bereich2Fehler5.Location" type="System.Drawing.Point, System.Drawing">
     <value>331, 155</value>
@@ -19051,6 +19384,9 @@
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich2Anzeige4.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
+  <data name="RadTextBoxControlStaffel1Bereich2Fehler4.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="RadTextBoxControlStaffel1Bereich2Fehler4.Location" type="System.Drawing.Point, System.Drawing">
     <value>331, 124</value>
   </data>
@@ -19095,6 +19431,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich2Fehler4.ZOrder" xml:space="preserve">
     <value>14</value>
+  </data>
+  <data name="RadTextBoxControlStaffel1Bereich2Fehler3.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel1Bereich2Fehler3.Location" type="System.Drawing.Point, System.Drawing">
     <value>331, 97</value>
@@ -19320,6 +19659,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich2Anzeige1.ZOrder" xml:space="preserve">
     <value>19</value>
+  </data>
+  <data name="RadTextBoxControlStaffel1Bereich2Fehler1.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel1Bereich2Fehler1.Location" type="System.Drawing.Point, System.Drawing">
     <value>331, 72</value>
@@ -19678,8 +20020,11 @@
   <data name="&gt;&gt;PictureBox12.ZOrder" xml:space="preserve">
     <value>29</value>
   </data>
+  <data name="lblStaffel1Bereich2EFGWert7.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel1Bereich2EFGWert7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>402, 227</value>
+    <value>402, 226</value>
   </data>
   <data name="lblStaffel1Bereich2EFGWert7.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -19729,8 +20074,11 @@
   <data name="&gt;&gt;lblStaffel1Bereich2EFGWert7.ZOrder" xml:space="preserve">
     <value>30</value>
   </data>
+  <data name="lblStaffel1Bereich2EFGWert6.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel1Bereich2EFGWert6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>402, 191</value>
+    <value>402, 190</value>
   </data>
   <data name="lblStaffel1Bereich2EFGWert6.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -19780,8 +20128,11 @@
   <data name="&gt;&gt;lblStaffel1Bereich2EFGWert6.ZOrder" xml:space="preserve">
     <value>31</value>
   </data>
+  <data name="lblStaffel1Bereich2EFGWert5.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel1Bereich2EFGWert5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>402, 155</value>
+    <value>402, 154</value>
   </data>
   <data name="lblStaffel1Bereich2EFGWert5.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -19831,8 +20182,11 @@
   <data name="&gt;&gt;lblStaffel1Bereich2EFGWert5.ZOrder" xml:space="preserve">
     <value>32</value>
   </data>
+  <data name="lblStaffel1Bereich2EFGWert4.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel1Bereich2EFGWert4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>402, 124</value>
+    <value>402, 123</value>
   </data>
   <data name="lblStaffel1Bereich2EFGWert4.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -19882,8 +20236,11 @@
   <data name="&gt;&gt;lblStaffel1Bereich2EFGWert4.ZOrder" xml:space="preserve">
     <value>33</value>
   </data>
+  <data name="lblStaffel1Bereich2EFGWert3.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel1Bereich2EFGWert3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>402, 98</value>
+    <value>402, 97</value>
   </data>
   <data name="lblStaffel1Bereich2EFGWert3.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -19957,8 +20314,11 @@
   <data name="&gt;&gt;PictureBox13.ZOrder" xml:space="preserve">
     <value>35</value>
   </data>
+  <data name="lblStaffel1Bereich2EFGWert1.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel1Bereich2EFGWert1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>402, 72</value>
+    <value>402, 71</value>
   </data>
   <data name="lblStaffel1Bereich2EFGWert1.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -20539,6 +20899,9 @@
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich1Anzeige2.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="RadTextBoxControlStaffel1Bereich1Fehler2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="RadTextBoxControlStaffel1Bereich1Fehler2.Location" type="System.Drawing.Point, System.Drawing">
     <value>332, 72</value>
   </data>
@@ -20608,8 +20971,11 @@
   <data name="&gt;&gt;PictureBox134.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <data name="lblStaffel1Bereich1EFGWert2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel1Bereich1EFGWert2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>403, 72</value>
+    <value>403, 71</value>
   </data>
   <data name="lblStaffel1Bereich1EFGWert2.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -20803,6 +21169,9 @@
   <data name="&gt;&gt;PictureBox14.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
+  <data name="RadTextBoxControlStaffel1Bereich1Fehler7.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="RadTextBoxControlStaffel1Bereich1Fehler7.Location" type="System.Drawing.Point, System.Drawing">
     <value>332, 227</value>
   </data>
@@ -20848,6 +21217,9 @@
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich1Fehler7.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
+  <data name="RadTextBoxControlStaffel1Bereich1Fehler6.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="RadTextBoxControlStaffel1Bereich1Fehler6.Location" type="System.Drawing.Point, System.Drawing">
     <value>332, 191</value>
   </data>
@@ -20892,6 +21264,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich1Fehler6.ZOrder" xml:space="preserve">
     <value>17</value>
+  </data>
+  <data name="RadTextBoxControlStaffel1Bereich1Fehler5.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel1Bereich1Fehler5.Location" type="System.Drawing.Point, System.Drawing">
     <value>332, 155</value>
@@ -21028,6 +21403,9 @@
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich1Anzeige4.ZOrder" xml:space="preserve">
     <value>20</value>
   </data>
+  <data name="RadTextBoxControlStaffel1Bereich1Fehler4.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="RadTextBoxControlStaffel1Bereich1Fehler4.Location" type="System.Drawing.Point, System.Drawing">
     <value>332, 124</value>
   </data>
@@ -21072,6 +21450,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich1Fehler4.ZOrder" xml:space="preserve">
     <value>21</value>
+  </data>
+  <data name="RadTextBoxControlStaffel1Bereich1Fehler3.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel1Bereich1Fehler3.Location" type="System.Drawing.Point, System.Drawing">
     <value>332, 97</value>
@@ -21297,6 +21678,9 @@
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich1Anzeige1.ZOrder" xml:space="preserve">
     <value>26</value>
+  </data>
+  <data name="RadTextBoxControlStaffel1Bereich1Fehler1.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlStaffel1Bereich1Fehler1.Location" type="System.Drawing.Point, System.Drawing">
     <value>332, 46</value>
@@ -21664,8 +22048,11 @@
   <data name="&gt;&gt;PictureBox1.ZOrder" xml:space="preserve">
     <value>36</value>
   </data>
+  <data name="lblStaffel1Bereich1EFGWert7.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel1Bereich1EFGWert7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>403, 227</value>
+    <value>403, 226</value>
   </data>
   <data name="lblStaffel1Bereich1EFGWert7.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -21715,8 +22102,11 @@
   <data name="&gt;&gt;lblStaffel1Bereich1EFGWert7.ZOrder" xml:space="preserve">
     <value>37</value>
   </data>
+  <data name="lblStaffel1Bereich1EFGWert6.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel1Bereich1EFGWert6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>403, 191</value>
+    <value>403, 190</value>
   </data>
   <data name="lblStaffel1Bereich1EFGWert6.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -21766,8 +22156,11 @@
   <data name="&gt;&gt;lblStaffel1Bereich1EFGWert6.ZOrder" xml:space="preserve">
     <value>38</value>
   </data>
+  <data name="lblStaffel1Bereich1EFGWert5.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel1Bereich1EFGWert5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>403, 155</value>
+    <value>403, 154</value>
   </data>
   <data name="lblStaffel1Bereich1EFGWert5.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -21817,8 +22210,11 @@
   <data name="&gt;&gt;lblStaffel1Bereich1EFGWert5.ZOrder" xml:space="preserve">
     <value>39</value>
   </data>
+  <data name="lblStaffel1Bereich1EFGWert4.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel1Bereich1EFGWert4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>403, 124</value>
+    <value>403, 123</value>
   </data>
   <data name="lblStaffel1Bereich1EFGWert4.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -21868,8 +22264,11 @@
   <data name="&gt;&gt;lblStaffel1Bereich1EFGWert4.ZOrder" xml:space="preserve">
     <value>40</value>
   </data>
+  <data name="lblStaffel1Bereich1EFGWert3.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel1Bereich1EFGWert3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>403, 98</value>
+    <value>403, 97</value>
   </data>
   <data name="lblStaffel1Bereich1EFGWert3.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -21943,8 +22342,11 @@
   <data name="&gt;&gt;PictureBox79.ZOrder" xml:space="preserve">
     <value>42</value>
   </data>
+  <data name="lblStaffel1Bereich1EFGWert1.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblStaffel1Bereich1EFGWert1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>403, 46</value>
+    <value>403, 45</value>
   </data>
   <data name="lblStaffel1Bereich1EFGWert1.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
@@ -22364,6 +22766,6 @@
     <value>uco10PruefungStaffelverfahren</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, EichsoftwareClient, Version=1.0.5246.17845, Culture=neutral, PublicKeyToken=null</value>
+    <value>EichsoftwareClient.ucoContent, EichsoftwareClient, Version=1.0.5246.20588, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

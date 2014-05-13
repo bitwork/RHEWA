@@ -1,18 +1,18 @@
-﻿Public Class uco10PruefungStaffelverfahren
-    Inherits ucoContent
+﻿' 13.05.2014 hill EichsoftwareClient uco10PruefungStaffelverfahren.vb 
+Imports System
+  
+Public Class uco10PruefungStaffelverfahren
+Inherits ucoContent
 
-#Region "Member Variables"
+    #Region "Member Variables"
     Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken 
     Private _ListPruefungStaffelverfahrenNormallast As New List(Of PruefungStaffelverfahrenNormallast)
-    Private _currentObjPruefungStaffelverfahrenNormallast As PruefungStaffelverfahrenNormallast
-
     Private _ListPruefungStaffelverfahrenErsatzlast As New List(Of PruefungStaffelverfahrenErsatzlast)
-    Private _currentObjPruefungStaffelverfahrenErsatzlast As PruefungStaffelverfahrenErsatzlast
 
     Private AnzahlBereiche As Integer
-#End Region
+    #End Region
 
-#Region "Constructors"
+    #Region "Constructors"
     Sub New()
         MyBase.New()
         ' Dieser Aufruf ist für den Designer erforderlich.
@@ -24,14 +24,16 @@
         InitializeComponent()
         EichprozessStatusReihenfolge = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitErsatzlast
     End Sub
-#End Region
 
-#Region "Enumeratoren"
+    #End Region
+
+    #Region "Enumeratoren"
     Private Enum enuBereich
         Bereich1 = 1
         Bereich2 = 2
         Bereich3 = 3
     End Enum
+    
     Private Enum enuStaffel
         Staffel1 = 1
         Staffel2 = 2
@@ -39,9 +41,9 @@
         Staffel4 = 4
         Staffel5 = 5
     End Enum
-#End Region
+    #End Region
 
-#Region "Events"
+    #Region "Events"
     Private Sub ucoBeschaffenheitspruefung_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         If Not ParentFormular Is Nothing Then
             Try
@@ -66,63 +68,63 @@
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub RadTextBoxControl_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles _
-               RadTextBoxControlStaffel5Bereich3Last2.Validating,
-               RadTextBoxControlStaffel5Bereich3Last1.Validating,
-               RadTextBoxControlStaffel5Bereich3Anzeige1.Validating,
-               RadTextBoxControlStaffel5Bereich2Last2.Validating,
-               RadTextBoxControlStaffel5Bereich2Last1.Validating,
-               RadTextBoxControlStaffel5Bereich2Anzeige1.Validating,
-               RadTextBoxControlStaffel5Bereich1Last2.Validating,
-               RadTextBoxControlStaffel5Bereich1Last1.Validating,
-               RadTextBoxControlStaffel5Bereich1Anzeige1.Validating,
-               RadTextBoxControlStaffel4Bereich3Last2.Validating,
-               RadTextBoxControlStaffel4Bereich3Last1.Validating,
-               RadTextBoxControlStaffel4Bereich3Anzeige1.Validating,
-               RadTextBoxControlStaffel4Bereich2Last2.Validating,
-               RadTextBoxControlStaffel4Bereich2Last1.Validating,
-               RadTextBoxControlStaffel4Bereich2Anzeige1.Validating,
-               RadTextBoxControlStaffel4Bereich1Last2.Validating,
-               RadTextBoxControlStaffel4Bereich1Last1.Validating,
-               RadTextBoxControlStaffel4Bereich1Anzeige1.Validating,
-               RadTextBoxControlStaffel3Bereich3Last2.Validating,
-               RadTextBoxControlStaffel3Bereich3Last1.Validating,
-               RadTextBoxControlStaffel3Bereich3Anzeige1.Validating,
-               RadTextBoxControlStaffel3Bereich2Last2.Validating,
-               RadTextBoxControlStaffel3Bereich2Last1.Validating,
-               RadTextBoxControlStaffel3Bereich2Anzeige1.Validating,
-               RadTextBoxControlStaffel3Bereich1Last2.Validating,
-               RadTextBoxControlStaffel3Bereich1Last1.Validating,
-               RadTextBoxControlStaffel3Bereich1Anzeige1.Validating,
-               RadTextBoxControlStaffel2Bereich3Last2.Validating,
-               RadTextBoxControlStaffel2Bereich3Last1.Validating,
-               RadTextBoxControlStaffel2Bereich3Anzeige1.Validating,
-               RadTextBoxControlStaffel2Bereich2Last2.Validating,
-               RadTextBoxControlStaffel2Bereich2Last1.Validating,
-               RadTextBoxControlStaffel2Bereich2Anzeige1.Validating,
-               RadTextBoxControlStaffel2Bereich1Last2.Validating,
-               RadTextBoxControlStaffel2Bereich1Last1.Validating,
-               RadTextBoxControlStaffel2Bereich1Anzeige1.Validating,
-               RadTextBoxControlStaffel1Bereich3Last4.Validating,
-               RadTextBoxControlStaffel1Bereich3Last3.Validating,
-               RadTextBoxControlStaffel1Bereich3Last1.Validating,
-               RadTextBoxControlStaffel1Bereich3Anzeige4.Validating,
-               RadTextBoxControlStaffel1Bereich3Anzeige3.Validating,
-               RadTextBoxControlStaffel1Bereich3Anzeige1.Validating,
-                    RadTextBoxControlStaffel1Bereich2Last4.Validating,
-        RadTextBoxControlStaffel1Bereich2Last3.Validating,
-        RadTextBoxControlStaffel1Bereich2Last1.Validating,
-        RadTextBoxControlStaffel1Bereich2Anzeige4.Validating,
-        RadTextBoxControlStaffel1Bereich2Anzeige3.Validating,
-        RadTextBoxControlStaffel1Bereich2Anzeige1.Validating,
-               RadTextBoxControlStaffel1Bereich1Last4.Validating,
-        RadTextBoxControlStaffel1Bereich1Last3.Validating,
-        RadTextBoxControlStaffel1Bereich1Last1.Validating,
-        RadTextBoxControlStaffel1Bereich1Anzeige4.Validating,
-        RadTextBoxControlStaffel1Bereich1Anzeige3.Validating,
-        RadTextBoxControlStaffel1Bereich1Anzeige1.Validating,
-        RadTextBoxControlStaffel1Bereich1Last2.Validating,
-        RadTextBoxControlStaffel1Bereich1Fehler2.Validating,
-        RadTextBoxControlStaffel1Bereich1Anzeige2.Validating
+    RadTextBoxControlStaffel5Bereich3Last2.Validating,
+    RadTextBoxControlStaffel5Bereich3Last1.Validating,
+    RadTextBoxControlStaffel5Bereich3Anzeige1.Validating,
+    RadTextBoxControlStaffel5Bereich2Last2.Validating,
+    RadTextBoxControlStaffel5Bereich2Last1.Validating,
+    RadTextBoxControlStaffel5Bereich2Anzeige1.Validating,
+    RadTextBoxControlStaffel5Bereich1Last2.Validating,
+    RadTextBoxControlStaffel5Bereich1Last1.Validating,
+    RadTextBoxControlStaffel5Bereich1Anzeige1.Validating,
+    RadTextBoxControlStaffel4Bereich3Last2.Validating,
+    RadTextBoxControlStaffel4Bereich3Last1.Validating,
+    RadTextBoxControlStaffel4Bereich3Anzeige1.Validating,
+    RadTextBoxControlStaffel4Bereich2Last2.Validating,
+    RadTextBoxControlStaffel4Bereich2Last1.Validating,
+    RadTextBoxControlStaffel4Bereich2Anzeige1.Validating,
+    RadTextBoxControlStaffel4Bereich1Last2.Validating,
+    RadTextBoxControlStaffel4Bereich1Last1.Validating,
+    RadTextBoxControlStaffel4Bereich1Anzeige1.Validating,
+    RadTextBoxControlStaffel3Bereich3Last2.Validating,
+    RadTextBoxControlStaffel3Bereich3Last1.Validating,
+    RadTextBoxControlStaffel3Bereich3Anzeige1.Validating,
+    RadTextBoxControlStaffel3Bereich2Last2.Validating,
+    RadTextBoxControlStaffel3Bereich2Last1.Validating,
+    RadTextBoxControlStaffel3Bereich2Anzeige1.Validating,
+    RadTextBoxControlStaffel3Bereich1Last2.Validating,
+    RadTextBoxControlStaffel3Bereich1Last1.Validating,
+    RadTextBoxControlStaffel3Bereich1Anzeige1.Validating,
+    RadTextBoxControlStaffel2Bereich3Last2.Validating,
+    RadTextBoxControlStaffel2Bereich3Last1.Validating,
+    RadTextBoxControlStaffel2Bereich3Anzeige1.Validating,
+    RadTextBoxControlStaffel2Bereich2Last2.Validating,
+    RadTextBoxControlStaffel2Bereich2Last1.Validating,
+    RadTextBoxControlStaffel2Bereich2Anzeige1.Validating,
+    RadTextBoxControlStaffel2Bereich1Last2.Validating,
+    RadTextBoxControlStaffel2Bereich1Last1.Validating,
+    RadTextBoxControlStaffel2Bereich1Anzeige1.Validating,
+    RadTextBoxControlStaffel1Bereich3Last4.Validating,
+    RadTextBoxControlStaffel1Bereich3Last3.Validating,
+    RadTextBoxControlStaffel1Bereich3Last1.Validating,
+    RadTextBoxControlStaffel1Bereich3Anzeige4.Validating,
+    RadTextBoxControlStaffel1Bereich3Anzeige3.Validating,
+    RadTextBoxControlStaffel1Bereich3Anzeige1.Validating,
+    RadTextBoxControlStaffel1Bereich2Last4.Validating,
+    RadTextBoxControlStaffel1Bereich2Last3.Validating,
+    RadTextBoxControlStaffel1Bereich2Last1.Validating,
+    RadTextBoxControlStaffel1Bereich2Anzeige4.Validating,
+    RadTextBoxControlStaffel1Bereich2Anzeige3.Validating,
+    RadTextBoxControlStaffel1Bereich2Anzeige1.Validating,
+    RadTextBoxControlStaffel1Bereich1Last4.Validating,
+    RadTextBoxControlStaffel1Bereich1Last3.Validating,
+    RadTextBoxControlStaffel1Bereich1Last1.Validating,
+    RadTextBoxControlStaffel1Bereich1Anzeige4.Validating,
+    RadTextBoxControlStaffel1Bereich1Anzeige3.Validating,
+    RadTextBoxControlStaffel1Bereich1Anzeige1.Validating,
+    RadTextBoxControlStaffel1Bereich1Last2.Validating,
+    RadTextBoxControlStaffel1Bereich1Fehler2.Validating,
+    RadTextBoxControlStaffel1Bereich1Anzeige2.Validating
         Try
             Dim result As Decimal
             If Not sender.isreadonly = True Then
@@ -146,12 +148,13 @@
         Catch ex As Exception
         End Try
     End Sub
-#End Region
+
+    #End Region
 
 
-#Region "Methods"
+    #Region "Methods"
     Private Sub LoadFromDatabase()
-        Me.SuspendLayout()
+        SuspendLayout()
         objEichprozess = ParentFormular.CurrentEichprozess
         'events abbrechen
         _suspendEvents = True
@@ -206,7 +209,7 @@
 
         If DialogModus = enuDialogModus.lesend Then
             'falls der Eichvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
-            For Each Control In Me.RadScrollablePanel1.PanelContainer.Controls
+            For Each Control In RadScrollablePanel1.PanelContainer.Controls
                 Try
                     Control.readonly = True
                 Catch ex As Exception
@@ -224,7 +227,7 @@
 
         'events abbrechen
         _suspendEvents = False
-        Me.ResumeLayout()
+        ResumeLayout()
     End Sub
 
     ''' <summary>
@@ -380,9 +383,12 @@
     ''' <remarks></remarks>
     Private Sub LadeStaffel(ByVal Staffel As enuStaffel, ByVal Bereich As enuBereich)
         Try
-            _currentObjPruefungStaffelverfahrenNormallast = Nothing
-            _currentObjPruefungStaffelverfahrenNormallast = (From o In _ListPruefungStaffelverfahrenNormallast Where o.Bereich = CStr(Bereich) And o.Staffel = CStr(Staffel)).FirstOrDefault
             If Staffel = enuStaffel.Staffel1 Then
+                Dim _currentObjPruefungStaffelverfahrenNormallast As PruefungStaffelverfahrenNormallast
+
+                _currentObjPruefungStaffelverfahrenNormallast = Nothing
+                _currentObjPruefungStaffelverfahrenNormallast = (From o In _ListPruefungStaffelverfahrenNormallast Where o.Bereich = CStr(Bereich) And o.Staffel = CStr(Staffel)).FirstOrDefault
+
                 If Not _currentObjPruefungStaffelverfahrenNormallast Is Nothing Then
 
                     For messpunkt As Integer = 1 To 7
@@ -393,19 +399,19 @@
 
                         If messpunkt <= 4 Then
                             If Not Last Is Nothing Then
-                                Last.Text = _currentObjPruefungStaffelverfahrenNormallast.GetType().GetProperty("NormalLast_Last_" & messpunkt).GetValue(_currentObjPruefungStaffelverfahrenNormallast, Nothing)
+                                Last.Text = _currentObjPruefungStaffelverfahrenNormallast.GetType().GetProperty(String.Format("NormalLast_Last_{0}", messpunkt)).GetValue(_currentObjPruefungStaffelverfahrenNormallast, Nothing)
                             End If
 
                             If Not Anzeige Is Nothing Then
-                                Anzeige.Text = _currentObjPruefungStaffelverfahrenNormallast.GetType().GetProperty("NormalLast_Anzeige_" & messpunkt).GetValue(_currentObjPruefungStaffelverfahrenNormallast, Nothing)
+                                Anzeige.Text = _currentObjPruefungStaffelverfahrenNormallast.GetType().GetProperty(String.Format("NormalLast_Anzeige_{0}", messpunkt)).GetValue(_currentObjPruefungStaffelverfahrenNormallast, Nothing)
                             End If
 
                             If Not Fehler Is Nothing Then
-                                Fehler.Text = _currentObjPruefungStaffelverfahrenNormallast.GetType().GetProperty("NormalLast_Fehler_" & messpunkt).GetValue(_currentObjPruefungStaffelverfahrenNormallast, Nothing)
+                                Fehler.Text = _currentObjPruefungStaffelverfahrenNormallast.GetType().GetProperty(String.Format("NormalLast_Fehler_{0}", messpunkt)).GetValue(_currentObjPruefungStaffelverfahrenNormallast, Nothing)
                             End If
 
                             If Not EFG Is Nothing Then
-                                EFG.Text = _currentObjPruefungStaffelverfahrenNormallast.GetType().GetProperty("NormalLast_EFG_" & messpunkt).GetValue(_currentObjPruefungStaffelverfahrenNormallast, Nothing)
+                                EFG.Text = _currentObjPruefungStaffelverfahrenNormallast.GetType().GetProperty(String.Format("NormalLast_EFG_{0}", messpunkt)).GetValue(_currentObjPruefungStaffelverfahrenNormallast, Nothing)
                             End If
 
                         ElseIf messpunkt = 5 Then
@@ -480,6 +486,12 @@
                 End If
 
             Else 'staffel 2- 5 => andere Berechnungsroutinen
+                Dim _currentObjPruefungStaffelverfahrenErsatzlast As PruefungStaffelverfahrenErsatzlast
+
+                _currentObjPruefungStaffelverfahrenErsatzlast = Nothing
+                _currentObjPruefungStaffelverfahrenErsatzlast = (From o In _ListPruefungStaffelverfahrenErsatzlast Where o.Bereich = CStr(Bereich) And o.Staffel = CStr(Staffel)).FirstOrDefault
+
+
 
                 Dim Last1 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 1))
                 Dim Last2 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 2))
@@ -701,7 +713,7 @@
     ''' <commentauthor></commentauthor>
     Private Function ValidateControls() As Boolean
         'prüfen ob alle Felder ausgefüllt sind
-        Me.AbortSaveing = False
+        AbortSaveing = False
 
         Dim intausgefuellteStaffeln As Integer = 3
         For Each StaffelGroupBox In RadScrollablePanel1.PanelContainer.Controls
@@ -764,6 +776,7 @@
                             If CType(Control, Telerik.WinControls.UI.RadTextBoxControl).IsReadOnly = False Then
                                 If CType(Control, Telerik.WinControls.UI.RadTextBoxControl).Text.Trim = "" Then
                                     AbortSaveing = True
+                                    Exit For
                                 End If
                             End If
                         Catch ex As Exception
@@ -860,18 +873,17 @@
         End If
 
         'Speichern soll nicht abgebrochen werden, da alles okay ist
-        Me.AbortSaveing = False
+        AbortSaveing = False
         Return True
 
     End Function
 
+    #End Region
 
-#End Region
 
+    #Region "Events die neue Berechnungen beim Ändern von Feldinformationen erfordern"
 
-#Region "Events die neue Berechnungen beim Ändern von Feldinformationen erfordern"
-
-    Private Sub CalculateStaffelBereich(ByVal Staffel As enuStaffel, ByVal Bereich As enuBereich)
+    Private Sub BerechneStaffelBereich(ByVal Staffel As enuStaffel, ByVal Bereich As enuBereich)
         Try
             Dim Last1 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 1))
             Dim Last2 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 2))
@@ -899,10 +911,17 @@
             Dim EFG6 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblStaffel{0}Bereich{1}EFGWert{2}", CInt(Staffel), CInt(Bereich), 6))
             Dim EFG7 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblStaffel{0}Bereich{1}EFGWert{2}", CInt(Staffel), CInt(Bereich), 7))
 
-
+            Dim Eichwert As String = ""
+            If Bereich = enuBereich.Bereich1 AndAlso AnzahlBereiche >= 1 Then
+                Eichwert = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1
+            ElseIf Bereich = enuBereich.Bereich2 AndAlso AnzahlBereiche >= 2 Then
+                Eichwert = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2
+            ElseIf Bereich = enuBereich.Bereich3 AndAlso AnzahlBereiche >= 3 Then
+                Eichwert = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3
+            End If
 
             If Staffel = enuStaffel.Staffel1 Then
-              
+
                 'Im Bereich 1 wird gegen den nullwert geprüft. Ab bereich 2 gegen 20e
                 If Bereich = enuBereich.Bereich1 Then
                     'fehler berechnen
@@ -921,7 +940,7 @@
                     Catch e As InvalidCastException
                     End Try
                 End If
-             
+
                 Try
                     Fehler3.Text = CDec(Anzeige3.Text) - CDec(Last3.Text)
                 Catch e As InvalidCastException
@@ -935,25 +954,27 @@
                 Last4.Text = Last1.Text
 
                 'EFG Wert 1 und 2 Berechnen
+
+
                 Try
-                    If CDec(Last1.Text) < Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 500), _intNullstellenE, MidpointRounding.AwayFromZero) Then
+                    If CDec(Last1.Text) < Math.Round(CDec(Eichwert * 500), _intNullstellenE, MidpointRounding.AwayFromZero) Then
                         'Im Bereich 1 wird gegen den nullwert geprüft. Ab bereich 2 gegen 20e. dort fällt EFG2 weg. stattdessen wird EFG3 genutzt
                         If Bereich = enuBereich.Bereich1 Then
-                            EFG1.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1) * 0.5, _intNullstellenE)
-                            EFG2.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1) * 0.5, _intNullstellenE)
+                            EFG1.Text = Math.Round(CDec(Eichwert) * 0.5, _intNullstellenE)
+                            EFG2.Text = Math.Round(CDec(Eichwert) * 0.5, _intNullstellenE)
                         Else
-                            EFG1.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1) * 0.5, _intNullstellenE)
-                            EFG3.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1) * 0.5, _intNullstellenE)
+                            EFG1.Text = Math.Round(CDec(Eichwert) * 0.5, _intNullstellenE)
+                            EFG3.Text = Math.Round(CDec(Eichwert) * 0.5, _intNullstellenE)
                         End If
                     Else
                         'Im Bereich 1 wird gegen den nullwert geprüft. Ab bereich 2 gegen 20e. dort fällt EFG2 weg. stattdessen wird EFG3 genutzt
                         If Bereich = enuBereich.Bereich1 Then
-                            EFG1.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1), _intNullstellenE)
-                            EFG2.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1), _intNullstellenE)
+                            EFG1.Text = Math.Round(CDec(Eichwert), _intNullstellenE)
+                            EFG2.Text = Math.Round(CDec(Eichwert), _intNullstellenE)
                         Else
 
-                            EFG1.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1), _intNullstellenE)
-                            EFG3.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1), _intNullstellenE)
+                            EFG1.Text = Math.Round(CDec(Eichwert), _intNullstellenE)
+                            EFG3.Text = Math.Round(CDec(Eichwert), _intNullstellenE)
                         End If
                     End If
                 Catch ex As InvalidCastException
@@ -982,10 +1003,10 @@
                 'EFG'Wert 3 Berechnen
                 Try
                     '=WENN(B130<$B$49;WERT(0,5*$B$15);(1*$B$15))
-                    If CDec(Last3.Text) < Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 500), _intNullstellenE, MidpointRounding.AwayFromZero) Then
-                        EFG3.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 0.5), _intNullstellenE)
+                    If CDec(Last3.Text) < Math.Round(CDec(Eichwert * 500), _intNullstellenE, MidpointRounding.AwayFromZero) Then
+                        EFG3.Text = Math.Round(CDec(Eichwert * 0.5), _intNullstellenE)
                     Else
-                        EFG3.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1), _intNullstellenE)
+                        EFG3.Text = Math.Round(CDec(Eichwert), _intNullstellenE)
                     End If
                 Catch e As InvalidCastException
                 End Try
@@ -993,34 +1014,79 @@
                 'Berechnen von EFG  4 
                 Try
                     '=WENN(B130<$B$49;WERT(0,5*$B$15);(1*$B$15))
-                    If CDec(Last4.Text) < Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 500), _intNullstellenE, MidpointRounding.AwayFromZero) Then
-                        EFG4.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 0.5), _intNullstellenE)
+                    If CDec(Last4.Text) < Math.Round(CDec(Eichwert * 500), _intNullstellenE, MidpointRounding.AwayFromZero) Then
+                        EFG4.Text = Math.Round(CDec(Eichwert * 0.5), _intNullstellenE)
                     Else
-                        EFG4.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1), _intNullstellenE)
+                        EFG4.Text = Math.Round(CDec(Eichwert), _intNullstellenE)
                     End If
                 Catch e As InvalidCastException
                 End Try
 
                 'berechnen von EFG 5
                 Try
-                    EFG5.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1), _intNullstellenE) / 5
+                    EFG5.Text = Math.Round(CDec(Eichwert), _intNullstellenE) / 5
                 Catch e As InvalidCastException
                 End Try
 
                 'Berechnen von EFG   6 und 7
                 Try
-                    If CDec(Last3.Text) < Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 500), _intNullstellenE, MidpointRounding.AwayFromZero) Then
-                        EFG6.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 0.5), _intNullstellenE)
-                        EFG7.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 0.5), _intNullstellenE)
+                    If CDec(Last3.Text) < Math.Round(CDec(Eichwert * 500), _intNullstellenE, MidpointRounding.AwayFromZero) Then
+                        EFG6.Text = Math.Round(CDec(Eichwert * 0.5), _intNullstellenE)
+                        EFG7.Text = Math.Round(CDec(Eichwert * 0.5), _intNullstellenE)
                     Else
-                        EFG6.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1), _intNullstellenE)
-                        EFG7.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1), _intNullstellenE)
+                        EFG6.Text = Math.Round(CDec(Eichwert), _intNullstellenE)
+                        EFG7.Text = Math.Round(CDec(Eichwert), _intNullstellenE)
                     End If
                 Catch e As InvalidCastException
                 End Try
 
             Else 'staffel 2 - 7 werden anders berechnet 
-                'TODO
+                'lasten
+                Try
+                    Last3.Text = CDec(Last2.Text) + CDec(Anzeige1.Text)
+                Catch e As Exception
+                End Try
+                Try
+                    Last4.Text = Anzeige1.Text
+                Catch e As Exception
+                End Try
+
+                Try
+                    'Differenz Staffel
+                    If Last3.Text = "0" Then
+                        Fehler6.Text = "0"
+                    Else
+                        Fehler6.Text = (CDec(Anzeige3.Text) - CDec(Anzeige1.Text)) - CDec(Last2.Text)
+                    End If
+                Catch e As Exception
+                End Try
+
+                Try
+                    'Differenze Normallast
+                    Fehler5.Text = CDec(Anzeige4.Text) - CDec(Anzeige1.Text)
+                Catch e As Exception
+                End Try
+
+
+                Try
+                    'berechnen von EFG 5
+                    EFG5.Text = Math.Round(CDec(Eichwert), _intNullstellenE) / 5
+                Catch e As Exception
+                End Try
+                Try
+
+                    'Berechne EFG Wert 6 und 7
+                    If CDec(Last3.Text) < Math.Round(CDec(Eichwert * 2000), _intNullstellenE, MidpointRounding.AwayFromZero) Then
+                        EFG6.Text = Math.Round(CDec(Eichwert), _intNullstellenE)
+                        EFG7.Text = Math.Round(CDec(Eichwert), _intNullstellenE)
+                    Else
+                        EFG6.Text = Math.Round(CDec(Eichwert), _intNullstellenE) * 1.5
+                        EFG7.Text = Math.Round(CDec(Eichwert), _intNullstellenE) * 1.5
+                    End If
+                Catch e As Exception
+                End Try
+
+
 
             End If
 
@@ -1036,754 +1102,49 @@
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
-    Private Sub RadTextBoxControlEingaben_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlStaffel5Bereich1Last4.TextChanged, RadTextBoxControlStaffel5Bereich1Last3.TextChanged, RadTextBoxControlStaffel5Bereich1Last2.TextChanged, RadTextBoxControlStaffel5Bereich1Last1.TextChanged, RadTextBoxControlStaffel5Bereich1Anzeige4.TextChanged, RadTextBoxControlStaffel5Bereich1Anzeige3.TextChanged, RadTextBoxControlStaffel5Bereich1Anzeige1.TextChanged, RadTextBoxControlStaffel4Bereich1Last4.TextChanged, RadTextBoxControlStaffel4Bereich1Last3.TextChanged, RadTextBoxControlStaffel4Bereich1Last2.TextChanged, RadTextBoxControlStaffel4Bereich1Last1.TextChanged, RadTextBoxControlStaffel4Bereich1Anzeige4.TextChanged, RadTextBoxControlStaffel4Bereich1Anzeige3.TextChanged, RadTextBoxControlStaffel4Bereich1Anzeige1.TextChanged, RadTextBoxControlStaffel3Bereich1Last2.TextChanged, RadTextBoxControlStaffel3Bereich1Last1.TextChanged, RadTextBoxControlStaffel3Bereich1Anzeige1.TextChanged, RadTextBoxControlStaffel2Bereich1Last2.TextChanged, RadTextBoxControlStaffel2Bereich1Last1.TextChanged, RadTextBoxControlStaffel2Bereich1Anzeige1.TextChanged, RadTextBoxControlStaffel1Bereich1Last4.TextChanged, RadTextBoxControlStaffel1Bereich1Last3.TextChanged, RadTextBoxControlStaffel1Bereich1Last2.TextChanged, RadTextBoxControlStaffel1Bereich1Last1.TextChanged, RadTextBoxControlStaffel1Bereich1Anzeige4.TextChanged, RadTextBoxControlStaffel1Bereich1Anzeige3.TextChanged, RadTextBoxControlStaffel1Bereich1Anzeige2.TextChanged, RadTextBoxControlStaffel1Bereich1Anzeige1.TextChanged,
-        RadTextBoxControlStaffel5Bereich2Last4.TextChanged, RadTextBoxControlStaffel5Bereich2Last3.TextChanged, RadTextBoxControlStaffel5Bereich2Last2.TextChanged, RadTextBoxControlStaffel5Bereich2Last1.TextChanged, RadTextBoxControlStaffel5Bereich2Anzeige4.TextChanged, RadTextBoxControlStaffel5Bereich2Anzeige3.TextChanged, RadTextBoxControlStaffel5Bereich2Anzeige1.TextChanged, RadTextBoxControlStaffel4Bereich2Last4.TextChanged, RadTextBoxControlStaffel4Bereich2Last3.TextChanged, RadTextBoxControlStaffel4Bereich2Last2.TextChanged, RadTextBoxControlStaffel4Bereich2Last1.TextChanged, RadTextBoxControlStaffel4Bereich2Anzeige4.TextChanged, RadTextBoxControlStaffel4Bereich2Anzeige3.TextChanged, RadTextBoxControlStaffel4Bereich2Anzeige1.TextChanged, RadTextBoxControlStaffel3Bereich2Last2.TextChanged, RadTextBoxControlStaffel3Bereich2Last1.TextChanged, RadTextBoxControlStaffel3Bereich2Anzeige1.TextChanged, RadTextBoxControlStaffel2Bereich2Last2.TextChanged, RadTextBoxControlStaffel2Bereich2Last1.TextChanged, RadTextBoxControlStaffel2Bereich2Anzeige1.TextChanged, RadTextBoxControlStaffel1Bereich2Last4.TextChanged, RadTextBoxControlStaffel1Bereich2Last3.TextChanged, RadTextBoxControlStaffel1Bereich2Last1.TextChanged, RadTextBoxControlStaffel1Bereich2Anzeige4.TextChanged, RadTextBoxControlStaffel1Bereich2Anzeige3.TextChanged, RadTextBoxControlStaffel1Bereich2Anzeige1.TextChanged,
-        RadTextBoxControlStaffel5Bereich3Last4.TextChanged, RadTextBoxControlStaffel5Bereich3Last3.TextChanged, RadTextBoxControlStaffel5Bereich3Last2.TextChanged, RadTextBoxControlStaffel5Bereich3Last1.TextChanged, RadTextBoxControlStaffel5Bereich3Anzeige4.TextChanged, RadTextBoxControlStaffel5Bereich3Anzeige3.TextChanged, RadTextBoxControlStaffel5Bereich3Anzeige1.TextChanged, RadTextBoxControlStaffel4Bereich3Last4.TextChanged, RadTextBoxControlStaffel4Bereich3Last3.TextChanged, RadTextBoxControlStaffel4Bereich3Last2.TextChanged, RadTextBoxControlStaffel4Bereich3Last1.TextChanged, RadTextBoxControlStaffel4Bereich3Anzeige4.TextChanged, RadTextBoxControlStaffel4Bereich3Anzeige3.TextChanged, RadTextBoxControlStaffel4Bereich3Anzeige1.TextChanged, RadTextBoxControlStaffel3Bereich3Last2.TextChanged, RadTextBoxControlStaffel3Bereich3Last1.TextChanged, RadTextBoxControlStaffel3Bereich3Anzeige1.TextChanged, RadTextBoxControlStaffel2Bereich3Last2.TextChanged, RadTextBoxControlStaffel2Bereich3Last1.TextChanged, RadTextBoxControlStaffel2Bereich3Anzeige1.TextChanged, RadTextBoxControlStaffel1Bereich3Last4.TextChanged, RadTextBoxControlStaffel1Bereich3Last3.TextChanged, RadTextBoxControlStaffel1Bereich3Last1.TextChanged, RadTextBoxControlStaffel1Bereich3Anzeige4.TextChanged, RadTextBoxControlStaffel1Bereich3Anzeige3.TextChanged, RadTextBoxControlStaffel1Bereich3Anzeige1.TextChanged
+    Private Sub RadTextBoxControlEingaben_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlStaffel5Bereich1Last4.TextChanged, RadTextBoxControlStaffel5Bereich1Last3.TextChanged, RadTextBoxControlStaffel5Bereich1Last2.TextChanged, RadTextBoxControlStaffel5Bereich1Last1.TextChanged, RadTextBoxControlStaffel5Bereich1Anzeige1.TextChanged, RadTextBoxControlStaffel4Bereich1Last4.TextChanged, RadTextBoxControlStaffel4Bereich1Last3.TextChanged, RadTextBoxControlStaffel4Bereich1Last2.TextChanged, RadTextBoxControlStaffel4Bereich1Last1.TextChanged, RadTextBoxControlStaffel4Bereich1Anzeige1.TextChanged, RadTextBoxControlStaffel3Bereich1Last2.TextChanged, RadTextBoxControlStaffel3Bereich1Last1.TextChanged, RadTextBoxControlStaffel3Bereich1Anzeige1.TextChanged, RadTextBoxControlStaffel2Bereich1Last2.TextChanged, RadTextBoxControlStaffel2Bereich1Last1.TextChanged, RadTextBoxControlStaffel2Bereich1Anzeige1.TextChanged, RadTextBoxControlStaffel1Bereich1Last4.TextChanged, RadTextBoxControlStaffel1Bereich1Last3.TextChanged, RadTextBoxControlStaffel1Bereich1Last2.TextChanged, RadTextBoxControlStaffel1Bereich1Last1.TextChanged, RadTextBoxControlStaffel1Bereich1Anzeige4.TextChanged, RadTextBoxControlStaffel1Bereich1Anzeige3.TextChanged, RadTextBoxControlStaffel1Bereich1Anzeige2.TextChanged, RadTextBoxControlStaffel1Bereich1Anzeige1.TextChanged,
+    RadTextBoxControlStaffel5Bereich2Last4.TextChanged, RadTextBoxControlStaffel5Bereich2Last3.TextChanged, RadTextBoxControlStaffel5Bereich2Last2.TextChanged, RadTextBoxControlStaffel5Bereich2Last1.TextChanged, RadTextBoxControlStaffel5Bereich2Anzeige1.TextChanged, RadTextBoxControlStaffel4Bereich2Last4.TextChanged, RadTextBoxControlStaffel4Bereich2Last3.TextChanged, RadTextBoxControlStaffel4Bereich2Last2.TextChanged, RadTextBoxControlStaffel4Bereich2Last1.TextChanged, RadTextBoxControlStaffel4Bereich2Anzeige1.TextChanged, RadTextBoxControlStaffel3Bereich2Last2.TextChanged, RadTextBoxControlStaffel3Bereich2Last1.TextChanged, RadTextBoxControlStaffel3Bereich2Anzeige1.TextChanged, RadTextBoxControlStaffel2Bereich2Last2.TextChanged, RadTextBoxControlStaffel2Bereich2Last1.TextChanged, RadTextBoxControlStaffel2Bereich2Anzeige1.TextChanged, RadTextBoxControlStaffel1Bereich2Last4.TextChanged, RadTextBoxControlStaffel1Bereich2Last3.TextChanged, RadTextBoxControlStaffel1Bereich2Last1.TextChanged, RadTextBoxControlStaffel1Bereich2Anzeige4.TextChanged, RadTextBoxControlStaffel1Bereich2Anzeige3.TextChanged, RadTextBoxControlStaffel1Bereich2Anzeige1.TextChanged,
+    RadTextBoxControlStaffel5Bereich3Last4.TextChanged, RadTextBoxControlStaffel5Bereich3Last3.TextChanged, RadTextBoxControlStaffel5Bereich3Last2.TextChanged, RadTextBoxControlStaffel5Bereich3Last1.TextChanged, RadTextBoxControlStaffel5Bereich3Anzeige1.TextChanged, RadTextBoxControlStaffel4Bereich3Last4.TextChanged, RadTextBoxControlStaffel4Bereich3Last3.TextChanged, RadTextBoxControlStaffel4Bereich3Last2.TextChanged, RadTextBoxControlStaffel4Bereich3Last1.TextChanged, RadTextBoxControlStaffel4Bereich3Anzeige1.TextChanged, RadTextBoxControlStaffel3Bereich3Last2.TextChanged, RadTextBoxControlStaffel3Bereich3Last1.TextChanged, RadTextBoxControlStaffel3Bereich3Anzeige1.TextChanged, RadTextBoxControlStaffel2Bereich3Last2.TextChanged, RadTextBoxControlStaffel2Bereich3Last1.TextChanged, RadTextBoxControlStaffel2Bereich3Anzeige1.TextChanged, RadTextBoxControlStaffel1Bereich3Last4.TextChanged, RadTextBoxControlStaffel1Bereich3Last3.TextChanged, RadTextBoxControlStaffel1Bereich3Last1.TextChanged, RadTextBoxControlStaffel1Bereich3Anzeige4.TextChanged, RadTextBoxControlStaffel1Bereich3Anzeige3.TextChanged, RadTextBoxControlStaffel1Bereich3Anzeige1.TextChanged,
+    RadTextBoxControlStaffel5Bereich3Anzeige4.TextChanged, RadTextBoxControlStaffel5Bereich3Anzeige3.TextChanged, RadTextBoxControlStaffel5Bereich2Anzeige4.TextChanged, RadTextBoxControlStaffel5Bereich2Anzeige3.TextChanged, RadTextBoxControlStaffel5Bereich1Anzeige4.TextChanged, RadTextBoxControlStaffel5Bereich1Anzeige3.TextChanged, RadTextBoxControlStaffel4Bereich3Anzeige4.TextChanged, RadTextBoxControlStaffel4Bereich3Anzeige3.TextChanged, RadTextBoxControlStaffel4Bereich2Anzeige4.TextChanged, RadTextBoxControlStaffel4Bereich2Anzeige3.TextChanged, RadTextBoxControlStaffel4Bereich1Anzeige4.TextChanged, RadTextBoxControlStaffel4Bereich1Anzeige3.TextChanged, RadTextBoxControlStaffel3Bereich3Anzeige4.TextChanged, RadTextBoxControlStaffel3Bereich3Anzeige3.TextChanged, RadTextBoxControlStaffel3Bereich2Anzeige4.TextChanged, RadTextBoxControlStaffel3Bereich2Anzeige3.TextChanged, RadTextBoxControlStaffel3Bereich1Anzeige4.TextChanged, RadTextBoxControlStaffel3Bereich1Anzeige3.TextChanged, RadTextBoxControlStaffel2Bereich3Anzeige4.TextChanged, RadTextBoxControlStaffel2Bereich3Anzeige3.TextChanged, RadTextBoxControlStaffel2Bereich2Anzeige4.TextChanged, RadTextBoxControlStaffel2Bereich2Anzeige3.TextChanged, RadTextBoxControlStaffel2Bereich1Anzeige4.TextChanged, RadTextBoxControlStaffel2Bereich1Anzeige3.TextChanged
 
         If _suspendEvents = True Then Exit Sub
-        Me.AktuellerStatusDirty = True
+        _suspendEvents = True
+        AktuellerStatusDirty = True
 
         Dim staffel As enuStaffel = GetStaffel(sender)
         Dim bereich As enuBereich = GetBereich(sender)
-        CalculateStaffelBereich(staffel, bereich)
+        BerechneStaffelBereich(staffel, bereich)
+        BerechneMessabweichung(bereich)
+        _suspendEvents = False
     End Sub
 
+    #End Region
 
 
-#Region "Staffel2"
+    #Region " Messabweichung der Waage [SEwi]"
 
-#Region "Bereich1"
-    Private Sub CalculateStaffel2Bereich1()
-
-
-        'lasten
-        Try
-            RadTextBoxControlStaffel2Bereich1Last3.Text = CDec(RadTextBoxControlStaffel2Bereich1Last2.Text) + CDec(RadTextBoxControlStaffel2Bereich1Anzeige1.Text)
-        Catch e As Exception
-        End Try
-        Try
-            RadTextBoxControlStaffel2Bereich1Last4.Text = RadTextBoxControlStaffel2Bereich1Anzeige1.Text
-        Catch e As Exception
-        End Try
-
-        Try
-            'Differenz Staffel
-            If RadTextBoxControlStaffel2Bereich1Last3.Text = "0" Then
-                RadTextBoxControlStaffel2Bereich1Fehler6.Text = "0"
-            Else
-                RadTextBoxControlStaffel2Bereich1Fehler6.Text = (CDec(RadTextBoxControlStaffel2Bereich1Anzeige3.Text) - CDec(RadTextBoxControlStaffel2Bereich1Anzeige1.Text)) - CDec(RadTextBoxControlStaffel2Bereich1Last2.Text)
-            End If
-        Catch e As Exception
-        End Try
-
-        Try
-            'Differenze Normallast
-            RadTextBoxControlStaffel2Bereich1Fehler5.Text = CDec(RadTextBoxControlStaffel2Bereich1Anzeige4.Text) - CDec(RadTextBoxControlStaffel2Bereich1Anzeige1.Text)
-        Catch e As Exception
-        End Try
-
-
-        Try
-            'berechnen von EFG 5
-            lblStaffel2Bereich1EFGWert5.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1), _intNullstellenE) / 5
-        Catch e As Exception
-        End Try
-        Try
-
-            'Berechne EFG Wert 6 und 7
-            If CDec(RadTextBoxControlStaffel2Bereich1Last3.Text) < Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 2000), _intNullstellenE, MidpointRounding.AwayFromZero) Then
-                lblStaffel2Bereich1EFGWert6.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1), _intNullstellenE)
-                lblStaffel2Bereich1EFGWert7.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1), _intNullstellenE)
-            Else
-                lblStaffel2Bereich1EFGWert6.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1), _intNullstellenE) * 1.5
-                lblStaffel2Bereich1EFGWert7.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1), _intNullstellenE) * 1.5
-            End If
-        Catch e As Exception
-        End Try
-    End Sub
-
-    Private Sub RadTextBoxControlStaffel2Bereich1_TextChanged(sender As Object, e As EventArgs)
-        If _suspendEvents = True Then Exit Sub
-        CalculateStaffel2Bereich1()
-    End Sub
-#End Region
-
-#Region "Bereich2"
-    Private Sub CalculateStaffel2Bereich2()
-
-
-
-        'lasten
-        Try
-            RadTextBoxControlStaffel2Bereich2Last3.Text = CDec(RadTextBoxControlStaffel2Bereich2Last2.Text) + CDec(RadTextBoxControlStaffel2Bereich2Anzeige1.Text)
-        Catch e As Exception
-        End Try
-        Try
-            RadTextBoxControlStaffel2Bereich2Last4.Text = RadTextBoxControlStaffel2Bereich2Anzeige1.Text
-        Catch e As Exception
-        End Try
-
-        Try
-            'Differenz Staffel
-            If RadTextBoxControlStaffel2Bereich2Last3.Text = "0" Then
-                RadTextBoxControlStaffel2Bereich2Fehler6.Text = "0"
-            Else
-                RadTextBoxControlStaffel2Bereich2Fehler6.Text = (CDec(RadTextBoxControlStaffel2Bereich2Anzeige3.Text) - CDec(RadTextBoxControlStaffel2Bereich2Anzeige1.Text)) - CDec(RadTextBoxControlStaffel2Bereich2Last2.Text)
-            End If
-        Catch e As Exception
-        End Try
-
-        Try
-            'Differenze Normallast
-            RadTextBoxControlStaffel2Bereich2Fehler5.Text = CDec(RadTextBoxControlStaffel2Bereich2Anzeige4.Text) - CDec(RadTextBoxControlStaffel2Bereich2Anzeige1.Text)
-        Catch e As Exception
-        End Try
-
-        Try
-            'berechnen von EFG 5
-            lblStaffel2Bereich2EFGWert5.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2), _intNullstellenE) / 5
-        Catch e As Exception
-        End Try
-
-        Try
-            'Berechne EFG Wert 6 und 7
-            If CDec(RadTextBoxControlStaffel2Bereich2Last3.Text) < Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 2000), _intNullstellenE, MidpointRounding.AwayFromZero) Then
-                lblStaffel2Bereich2EFGWert6.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2), _intNullstellenE)
-                lblStaffel2Bereich2EFGWert7.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2), _intNullstellenE)
-            Else
-                lblStaffel2Bereich2EFGWert6.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2), _intNullstellenE) * 1.5
-                lblStaffel2Bereich2EFGWert7.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2), _intNullstellenE) * 1.5
-            End If
-        Catch e As Exception
-        End Try
-    End Sub
-
-    Private Sub RadTextBoxControlStaffel2Bereich2_TextChanged_1(sender As Object, e As EventArgs)
-        If _suspendEvents = True Then Exit Sub
-        CalculateStaffel2Bereich2()
-    End Sub
-#End Region
-
-#Region "Bereich3"
-    Private Sub CalculateStaffel2Bereich3()
-
-
-
-        'lasten
-        Try
-            RadTextBoxControlStaffel2Bereich3Last3.Text = CDec(RadTextBoxControlStaffel2Bereich3Last2.Text) + CDec(RadTextBoxControlStaffel2Bereich3Anzeige1.Text)
-        Catch e As Exception
-        End Try
-        Try
-            RadTextBoxControlStaffel2Bereich3Last4.Text = RadTextBoxControlStaffel2Bereich3Anzeige1.Text
-        Catch e As Exception
-        End Try
-
-        Try
-            'Differenz Staffel
-            If RadTextBoxControlStaffel2Bereich3Last3.Text = "0" Then
-                RadTextBoxControlStaffel2Bereich3Fehler6.Text = "0"
-            Else
-                RadTextBoxControlStaffel2Bereich3Fehler6.Text = (CDec(RadTextBoxControlStaffel2Bereich3Anzeige3.Text) - CDec(RadTextBoxControlStaffel2Bereich3Anzeige1.Text)) - CDec(RadTextBoxControlStaffel2Bereich3Last2.Text)
-            End If
-        Catch e As Exception
-        End Try
-
-        Try
-            'Differenze Normallast
-            RadTextBoxControlStaffel2Bereich3Fehler5.Text = CDec(RadTextBoxControlStaffel2Bereich3Anzeige4.Text) - CDec(RadTextBoxControlStaffel2Bereich3Anzeige1.Text)
-        Catch e As Exception
-        End Try
-        Try
-            'berechnen von EFG 5
-            lblStaffel2Bereich3EFGWert5.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3), _intNullstellenE) / 5
-        Catch e As Exception
-        End Try
-        Try
-            'Berechne EFG Wert 6 und 7
-            If CDec(RadTextBoxControlStaffel2Bereich3Last3.Text) < Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 2000), _intNullstellenE, MidpointRounding.AwayFromZero) Then
-                lblStaffel2Bereich3EFGWert6.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3), _intNullstellenE)
-                lblStaffel2Bereich3EFGWert7.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3), _intNullstellenE)
-            Else
-                lblStaffel2Bereich3EFGWert6.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3), _intNullstellenE) * 1.5
-                lblStaffel2Bereich3EFGWert7.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3), _intNullstellenE) * 1.5
-            End If
-        Catch e As Exception
-        End Try
-    End Sub
-
-    Private Sub RadTextBoxControlStaffel2Bereich3_TextChanged_1(sender As Object, e As EventArgs)
-
-        If _suspendEvents = True Then Exit Sub
-        CalculateStaffel2Bereich3()
-    End Sub
-
-#End Region
-
-#End Region
-
-#Region "Staffel3"
-
-#Region "Bereich1"
-    Private Sub CalculateStaffel3Bereich1()
-
-
-        'lasten
-        Try
-            RadTextBoxControlStaffel3Bereich1Last3.Text = CDec(RadTextBoxControlStaffel3Bereich1Last2.Text) + CDec(RadTextBoxControlStaffel3Bereich1Anzeige1.Text)
-        Catch e As Exception
-        End Try
-        Try
-            RadTextBoxControlStaffel3Bereich1Last4.Text = RadTextBoxControlStaffel3Bereich1Anzeige1.Text
-        Catch e As Exception
-        End Try
-
-        Try
-            'Differenz Staffel
-            If RadTextBoxControlStaffel3Bereich1Last3.Text = "0" Then
-                RadTextBoxControlStaffel3Bereich1Fehler6.Text = "0"
-            Else
-                RadTextBoxControlStaffel3Bereich1Fehler6.Text = (CDec(RadTextBoxControlStaffel3Bereich1Anzeige3.Text) - CDec(RadTextBoxControlStaffel3Bereich1Anzeige1.Text)) - CDec(RadTextBoxControlStaffel3Bereich1Last2.Text)
-            End If
-        Catch e As Exception
-        End Try
-
-        Try
-            'Differenze Normallast
-            RadTextBoxControlStaffel3Bereich1Fehler5.Text = CDec(RadTextBoxControlStaffel3Bereich1Anzeige4.Text) - CDec(RadTextBoxControlStaffel3Bereich1Anzeige1.Text)
-        Catch e As Exception
-        End Try
-
-
-        Try
-            'berechnen von EFG 5
-            lblStaffel3Bereich1EFGWert5.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1), _intNullstellenE) / 5
-        Catch e As Exception
-        End Try
-        Try
-
-            'Berechne EFG Wert 6 und 7
-            If CDec(RadTextBoxControlStaffel3Bereich1Last3.Text) < Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 2000), _intNullstellenE, MidpointRounding.AwayFromZero) Then
-                lblStaffel3Bereich1EFGWert6.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1), _intNullstellenE)
-                lblStaffel3Bereich1EFGWert7.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1), _intNullstellenE)
-            Else
-                lblStaffel3Bereich1EFGWert6.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1), _intNullstellenE) * 1.5
-                lblStaffel3Bereich1EFGWert7.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1), _intNullstellenE) * 1.5
-            End If
-        Catch e As Exception
-        End Try
-    End Sub
-
-    Private Sub RadTextBoxControlStaffel3Bereich1_TextChanged(sender As Object, e As EventArgs)
-        If _suspendEvents = True Then Exit Sub
-        CalculateStaffel3Bereich1()
-    End Sub
-#End Region
-
-#Region "Bereich2"
-    Private Sub CalculateStaffel3Bereich2()
-
-
-
-        'lasten
-        Try
-            RadTextBoxControlStaffel3Bereich2Last3.Text = CDec(RadTextBoxControlStaffel3Bereich2Last2.Text) + CDec(RadTextBoxControlStaffel3Bereich2Anzeige1.Text)
-        Catch e As Exception
-        End Try
-        Try
-            RadTextBoxControlStaffel3Bereich2Last4.Text = RadTextBoxControlStaffel3Bereich2Anzeige1.Text
-        Catch e As Exception
-        End Try
-
-        Try
-            'Differenz Staffel
-            If RadTextBoxControlStaffel3Bereich2Last3.Text = "0" Then
-                RadTextBoxControlStaffel3Bereich2Fehler6.Text = "0"
-            Else
-                RadTextBoxControlStaffel3Bereich2Fehler6.Text = (CDec(RadTextBoxControlStaffel3Bereich2Anzeige3.Text) - CDec(RadTextBoxControlStaffel3Bereich2Anzeige1.Text)) - CDec(RadTextBoxControlStaffel3Bereich2Last2.Text)
-            End If
-        Catch e As Exception
-        End Try
-
-        Try
-            'Differenze Normallast
-            RadTextBoxControlStaffel3Bereich2Fehler5.Text = CDec(RadTextBoxControlStaffel3Bereich2Anzeige4.Text) - CDec(RadTextBoxControlStaffel3Bereich2Anzeige1.Text)
-        Catch e As Exception
-        End Try
-
-        Try
-            'berechnen von EFG 5
-            lblStaffel3Bereich2EFGWert5.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2), _intNullstellenE) / 5
-        Catch e As Exception
-        End Try
-
-        Try
-            'Berechne EFG Wert 6 und 7
-            If CDec(RadTextBoxControlStaffel3Bereich2Last3.Text) < Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 2000), _intNullstellenE, MidpointRounding.AwayFromZero) Then
-                lblStaffel3Bereich2EFGWert6.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2), _intNullstellenE)
-                lblStaffel3Bereich2EFGWert7.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2), _intNullstellenE)
-            Else
-                lblStaffel3Bereich2EFGWert6.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2), _intNullstellenE) * 1.5
-                lblStaffel3Bereich2EFGWert7.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2), _intNullstellenE) * 1.5
-            End If
-        Catch e As Exception
-        End Try
-    End Sub
-
-    Private Sub RadTextBoxControlStaffel3Bereich2_TextChanged_1(sender As Object, e As EventArgs)
-        If _suspendEvents = True Then Exit Sub
-        CalculateStaffel3Bereich2()
-    End Sub
-#End Region
-
-#Region "Bereich3"
-    Private Sub CalculateStaffel3Bereich3()
-
-
-
-        'lasten
-        Try
-            RadTextBoxControlStaffel3Bereich3Last3.Text = CDec(RadTextBoxControlStaffel3Bereich3Last2.Text) + CDec(RadTextBoxControlStaffel3Bereich3Anzeige1.Text)
-        Catch e As Exception
-        End Try
-        Try
-            RadTextBoxControlStaffel3Bereich3Last4.Text = RadTextBoxControlStaffel3Bereich3Anzeige1.Text
-        Catch e As Exception
-        End Try
-
-        Try
-            'Differenz Staffel
-            If RadTextBoxControlStaffel3Bereich3Last3.Text = "0" Then
-                RadTextBoxControlStaffel3Bereich3Fehler6.Text = "0"
-            Else
-                RadTextBoxControlStaffel3Bereich3Fehler6.Text = (CDec(RadTextBoxControlStaffel3Bereich3Anzeige3.Text) - CDec(RadTextBoxControlStaffel3Bereich3Anzeige1.Text)) - CDec(RadTextBoxControlStaffel3Bereich3Last2.Text)
-            End If
-        Catch e As Exception
-        End Try
-
-        Try
-            'Differenze Normallast
-            RadTextBoxControlStaffel3Bereich3Fehler5.Text = CDec(RadTextBoxControlStaffel3Bereich3Anzeige4.Text) - CDec(RadTextBoxControlStaffel3Bereich3Anzeige1.Text)
-        Catch e As Exception
-        End Try
-        Try
-            'berechnen von EFG 5
-            lblStaffel3Bereich3EFGWert5.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3), _intNullstellenE) / 5
-        Catch e As Exception
-        End Try
-        Try
-            'Berechne EFG Wert 6 und 7
-            If CDec(RadTextBoxControlStaffel3Bereich3Last3.Text) < Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 2000), _intNullstellenE, MidpointRounding.AwayFromZero) Then
-                lblStaffel3Bereich3EFGWert6.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3), _intNullstellenE)
-                lblStaffel3Bereich3EFGWert7.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3), _intNullstellenE)
-            Else
-                lblStaffel3Bereich3EFGWert6.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3), _intNullstellenE) * 1.5
-                lblStaffel3Bereich3EFGWert7.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3), _intNullstellenE) * 1.5
-            End If
-        Catch e As Exception
-        End Try
-    End Sub
-
-    Private Sub RadTextBoxControlStaffel3Bereich3_TextChanged_1(sender As Object, e As EventArgs)
-
-        If _suspendEvents = True Then Exit Sub
-        CalculateStaffel3Bereich3()
-    End Sub
-
-#End Region
-
-#End Region
-
-#Region "Staffel4"
-
-#Region "Bereich1"
-    Private Sub CalculateStaffel4Bereich1()
-
-
-        'lasten
-        Try
-            RadTextBoxControlStaffel4Bereich1Last3.Text = CDec(RadTextBoxControlStaffel4Bereich1Last2.Text) + CDec(RadTextBoxControlStaffel4Bereich1Anzeige1.Text)
-        Catch e As Exception
-        End Try
-        Try
-            RadTextBoxControlStaffel4Bereich1Last4.Text = RadTextBoxControlStaffel4Bereich1Anzeige1.Text
-        Catch e As Exception
-        End Try
-
-        Try
-            'Differenz Staffel
-            If RadTextBoxControlStaffel4Bereich1Last3.Text = "0" Then
-                RadTextBoxControlStaffel4Bereich1Fehler6.Text = "0"
-            Else
-                RadTextBoxControlStaffel4Bereich1Fehler6.Text = (CDec(RadTextBoxControlStaffel4Bereich1Anzeige3.Text) - CDec(RadTextBoxControlStaffel4Bereich1Anzeige1.Text)) - CDec(RadTextBoxControlStaffel4Bereich1Last2.Text)
-            End If
-        Catch e As Exception
-        End Try
-
-        Try
-            'Differenze Normallast
-            RadTextBoxControlStaffel4Bereich1Fehler5.Text = CDec(RadTextBoxControlStaffel4Bereich1Anzeige4.Text) - CDec(RadTextBoxControlStaffel4Bereich1Anzeige1.Text)
-        Catch e As Exception
-        End Try
-
-
-        Try
-            'berechnen von EFG 5
-            lblStaffel4Bereich1EFGWert5.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1), _intNullstellenE) / 5
-        Catch e As Exception
-        End Try
-        Try
-
-            'Berechne EFG Wert 6 und 7
-            If CDec(RadTextBoxControlStaffel4Bereich1Last3.Text) < Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 2000), _intNullstellenE, MidpointRounding.AwayFromZero) Then
-                lblStaffel4Bereich1EFGWert6.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1), _intNullstellenE)
-                lblStaffel4Bereich1EFGWert7.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1), _intNullstellenE)
-            Else
-                lblStaffel4Bereich1EFGWert6.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1), _intNullstellenE) * 1.5
-                lblStaffel4Bereich1EFGWert7.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1), _intNullstellenE) * 1.5
-            End If
-        Catch e As Exception
-        End Try
-    End Sub
-
-    Private Sub RadTextBoxControlStaffel4Bereich1_TextChanged(sender As Object, e As EventArgs)
-        If _suspendEvents = True Then Exit Sub
-        CalculateStaffel4Bereich1()
-    End Sub
-#End Region
-
-#Region "Bereich2"
-    Private Sub CalculateStaffel4Bereich2()
-
-
-
-        'lasten
-        Try
-            RadTextBoxControlStaffel4Bereich2Last3.Text = CDec(RadTextBoxControlStaffel4Bereich2Last2.Text) + CDec(RadTextBoxControlStaffel4Bereich2Anzeige1.Text)
-        Catch e As Exception
-        End Try
-        Try
-            RadTextBoxControlStaffel4Bereich2Last4.Text = RadTextBoxControlStaffel4Bereich2Anzeige1.Text
-        Catch e As Exception
-        End Try
-
-        Try
-            'Differenz Staffel
-            If RadTextBoxControlStaffel4Bereich2Last3.Text = "0" Then
-                RadTextBoxControlStaffel4Bereich2Fehler6.Text = "0"
-            Else
-                RadTextBoxControlStaffel4Bereich2Fehler6.Text = (CDec(RadTextBoxControlStaffel4Bereich2Anzeige3.Text) - CDec(RadTextBoxControlStaffel4Bereich2Anzeige1.Text)) - CDec(RadTextBoxControlStaffel4Bereich2Last2.Text)
-            End If
-        Catch e As Exception
-        End Try
-
-        Try
-            'Differenze Normallast
-            RadTextBoxControlStaffel4Bereich2Fehler5.Text = CDec(RadTextBoxControlStaffel4Bereich2Anzeige4.Text) - CDec(RadTextBoxControlStaffel4Bereich2Anzeige1.Text)
-        Catch e As Exception
-        End Try
-
-        Try
-            'berechnen von EFG 5
-            lblStaffel4Bereich2EFGWert5.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2), _intNullstellenE) / 5
-        Catch e As Exception
-        End Try
-
-        Try
-            'Berechne EFG Wert 6 und 7
-            If CDec(RadTextBoxControlStaffel4Bereich2Last3.Text) < Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 2000), _intNullstellenE, MidpointRounding.AwayFromZero) Then
-                lblStaffel4Bereich2EFGWert6.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2), _intNullstellenE)
-                lblStaffel4Bereich2EFGWert7.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2), _intNullstellenE)
-            Else
-                lblStaffel4Bereich2EFGWert6.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2), _intNullstellenE) * 1.5
-                lblStaffel4Bereich2EFGWert7.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2), _intNullstellenE) * 1.5
-            End If
-        Catch e As Exception
-        End Try
-    End Sub
-
-    Private Sub RadTextBoxControlStaffel4Bereich2_TextChanged_1(sender As Object, e As EventArgs)
-        If _suspendEvents = True Then Exit Sub
-        CalculateStaffel4Bereich2()
-    End Sub
-#End Region
-
-#Region "Bereich3"
-    Private Sub CalculateStaffel4Bereich3()
-
-
-
-        'lasten
-        Try
-            RadTextBoxControlStaffel4Bereich3Last3.Text = CDec(RadTextBoxControlStaffel4Bereich3Last2.Text) + CDec(RadTextBoxControlStaffel4Bereich3Anzeige1.Text)
-        Catch e As Exception
-        End Try
-        Try
-            RadTextBoxControlStaffel4Bereich3Last4.Text = RadTextBoxControlStaffel4Bereich3Anzeige1.Text
-        Catch e As Exception
-        End Try
-
-        Try
-            'Differenz Staffel
-            If RadTextBoxControlStaffel4Bereich3Last3.Text = "0" Then
-                RadTextBoxControlStaffel4Bereich3Fehler6.Text = "0"
-            Else
-                RadTextBoxControlStaffel4Bereich3Fehler6.Text = (CDec(RadTextBoxControlStaffel4Bereich3Anzeige3.Text) - CDec(RadTextBoxControlStaffel4Bereich3Anzeige1.Text)) - CDec(RadTextBoxControlStaffel4Bereich3Last2.Text)
-            End If
-        Catch e As Exception
-        End Try
-
-        Try
-            'Differenze Normallast
-            RadTextBoxControlStaffel4Bereich3Fehler5.Text = CDec(RadTextBoxControlStaffel4Bereich3Anzeige4.Text) - CDec(RadTextBoxControlStaffel4Bereich3Anzeige1.Text)
-        Catch e As Exception
-        End Try
-        Try
-            'berechnen von EFG 5
-            lblStaffel4Bereich3EFGWert5.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3), _intNullstellenE) / 5
-        Catch e As Exception
-        End Try
-        Try
-            'Berechne EFG Wert 6 und 7
-            If CDec(RadTextBoxControlStaffel4Bereich3Last3.Text) < Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 2000), _intNullstellenE, MidpointRounding.AwayFromZero) Then
-                lblStaffel4Bereich3EFGWert6.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3), _intNullstellenE)
-                lblStaffel4Bereich3EFGWert7.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3), _intNullstellenE)
-            Else
-                lblStaffel4Bereich3EFGWert6.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3), _intNullstellenE) * 1.5
-                lblStaffel4Bereich3EFGWert7.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3), _intNullstellenE) * 1.5
-            End If
-        Catch e As Exception
-        End Try
-    End Sub
-
-    Private Sub RadTextBoxControlStaffel4Bereich3_TextChanged_1(sender As Object, e As EventArgs)
-
-        If _suspendEvents = True Then Exit Sub
-        CalculateStaffel4Bereich3()
-    End Sub
-
-#End Region
-
-#End Region
-
-#Region "Staffel5"
-
-#Region "Bereich1"
-    Private Sub CalculateStaffel5Bereich1()
-
-
-        'lasten
-        Try
-            RadTextBoxControlStaffel5Bereich1Last3.Text = CDec(RadTextBoxControlStaffel5Bereich1Last2.Text) + CDec(RadTextBoxControlStaffel5Bereich1Anzeige1.Text)
-        Catch e As Exception
-        End Try
-        Try
-            RadTextBoxControlStaffel5Bereich1Last4.Text = RadTextBoxControlStaffel5Bereich1Anzeige1.Text
-        Catch e As Exception
-        End Try
-
-        Try
-            'Differenz Staffel
-            If RadTextBoxControlStaffel5Bereich1Last3.Text = "0" Then
-                RadTextBoxControlStaffel5Bereich1Fehler6.Text = "0"
-            Else
-                RadTextBoxControlStaffel5Bereich1Fehler6.Text = (CDec(RadTextBoxControlStaffel5Bereich1Anzeige3.Text) - CDec(RadTextBoxControlStaffel5Bereich1Anzeige1.Text)) - CDec(RadTextBoxControlStaffel5Bereich1Last2.Text)
-            End If
-        Catch e As Exception
-        End Try
-
-        Try
-            'Differenze Normallast
-            RadTextBoxControlStaffel5Bereich1Fehler5.Text = CDec(RadTextBoxControlStaffel5Bereich1Anzeige4.Text) - CDec(RadTextBoxControlStaffel5Bereich1Anzeige1.Text)
-        Catch e As Exception
-        End Try
-
-
-        Try
-            'berechnen von EFG 5
-            lblStaffel5Bereich1EFGWert5.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1), _intNullstellenE) / 5
-        Catch e As Exception
-        End Try
-        Try
-
-            'Berechne EFG Wert 6 und 7
-            If CDec(RadTextBoxControlStaffel5Bereich1Last3.Text) < Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 2000), _intNullstellenE, MidpointRounding.AwayFromZero) Then
-                lblStaffel5Bereich1EFGWert6.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1), _intNullstellenE)
-                lblStaffel5Bereich1EFGWert7.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1), _intNullstellenE)
-            Else
-                lblStaffel5Bereich1EFGWert6.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1), _intNullstellenE) * 1.5
-                lblStaffel5Bereich1EFGWert7.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1), _intNullstellenE) * 1.5
-            End If
-        Catch e As Exception
-        End Try
-    End Sub
-
-    Private Sub RadTextBoxControlStaffel5Bereich1_TextChanged(sender As Object, e As EventArgs)
-        If _suspendEvents = True Then Exit Sub
-        CalculateStaffel5Bereich1()
-    End Sub
-#End Region
-
-#Region "Bereich2"
-    Private Sub CalculateStaffel5Bereich2()
-
-
-
-        'lasten
-        Try
-            RadTextBoxControlStaffel5Bereich2Last3.Text = CDec(RadTextBoxControlStaffel5Bereich2Last2.Text) + CDec(RadTextBoxControlStaffel5Bereich2Anzeige1.Text)
-        Catch e As Exception
-        End Try
-        Try
-            RadTextBoxControlStaffel5Bereich2Last4.Text = RadTextBoxControlStaffel5Bereich2Anzeige1.Text
-        Catch e As Exception
-        End Try
-
-        Try
-            'Differenz Staffel
-            If RadTextBoxControlStaffel5Bereich2Last3.Text = "0" Then
-                RadTextBoxControlStaffel5Bereich2Fehler6.Text = "0"
-            Else
-                RadTextBoxControlStaffel5Bereich2Fehler6.Text = (CDec(RadTextBoxControlStaffel5Bereich2Anzeige3.Text) - CDec(RadTextBoxControlStaffel5Bereich2Anzeige1.Text)) - CDec(RadTextBoxControlStaffel5Bereich2Last2.Text)
-            End If
-        Catch e As Exception
-        End Try
-
-        Try
-            'Differenze Normallast
-            RadTextBoxControlStaffel5Bereich2Fehler5.Text = CDec(RadTextBoxControlStaffel5Bereich2Anzeige4.Text) - CDec(RadTextBoxControlStaffel5Bereich2Anzeige1.Text)
-        Catch e As Exception
-        End Try
-
-        Try
-            'berechnen von EFG 5
-            lblStaffel5Bereich2EFGWert5.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2), _intNullstellenE) / 5
-        Catch e As Exception
-        End Try
-
-        Try
-            'Berechne EFG Wert 6 und 7
-            If CDec(RadTextBoxControlStaffel5Bereich2Last3.Text) < Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 2000), _intNullstellenE, MidpointRounding.AwayFromZero) Then
-                lblStaffel5Bereich2EFGWert6.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2), _intNullstellenE)
-                lblStaffel5Bereich2EFGWert7.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2), _intNullstellenE)
-            Else
-                lblStaffel5Bereich2EFGWert6.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2), _intNullstellenE) * 1.5
-                lblStaffel5Bereich2EFGWert7.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2), _intNullstellenE) * 1.5
-            End If
-        Catch e As Exception
-        End Try
-    End Sub
-
-    Private Sub RadTextBoxControlStaffel5Bereich2_TextChanged_1(sender As Object, e As EventArgs)
-        If _suspendEvents = True Then Exit Sub
-        CalculateStaffel5Bereich2()
-    End Sub
-#End Region
-
-#Region "Bereich3"
-    Private Sub CalculateStaffel5Bereich3()
-
-
-
-        'lasten
-        Try
-            RadTextBoxControlStaffel5Bereich3Last3.Text = CDec(RadTextBoxControlStaffel5Bereich3Last2.Text) + CDec(RadTextBoxControlStaffel5Bereich3Anzeige1.Text)
-        Catch e As Exception
-        End Try
-        Try
-            RadTextBoxControlStaffel5Bereich3Last4.Text = RadTextBoxControlStaffel5Bereich3Anzeige1.Text
-        Catch e As Exception
-        End Try
-
-        Try
-            'Differenz Staffel
-            If RadTextBoxControlStaffel5Bereich3Last3.Text = "0" Then
-                RadTextBoxControlStaffel5Bereich3Fehler6.Text = "0"
-            Else
-                RadTextBoxControlStaffel5Bereich3Fehler6.Text = (CDec(RadTextBoxControlStaffel5Bereich3Anzeige3.Text) - CDec(RadTextBoxControlStaffel5Bereich3Anzeige1.Text)) - CDec(RadTextBoxControlStaffel5Bereich3Last2.Text)
-            End If
-        Catch e As Exception
-        End Try
-
-        Try
-            'Differenze Normallast
-            RadTextBoxControlStaffel5Bereich3Fehler5.Text = CDec(RadTextBoxControlStaffel5Bereich3Anzeige4.Text) - CDec(RadTextBoxControlStaffel5Bereich3Anzeige1.Text)
-        Catch e As Exception
-        End Try
-        Try
-            'berechnen von EFG 5
-            lblStaffel5Bereich3EFGWert5.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3), _intNullstellenE) / 5
-        Catch e As Exception
-        End Try
-        Try
-            'Berechne EFG Wert 6 und 7
-            If CDec(RadTextBoxControlStaffel5Bereich3Last3.Text) < Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 2000), _intNullstellenE, MidpointRounding.AwayFromZero) Then
-                lblStaffel5Bereich3EFGWert6.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3), _intNullstellenE)
-                lblStaffel5Bereich3EFGWert7.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3), _intNullstellenE)
-            Else
-                lblStaffel5Bereich3EFGWert6.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3), _intNullstellenE) * 1.5
-                lblStaffel5Bereich3EFGWert7.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3), _intNullstellenE) * 1.5
-            End If
-        Catch e As Exception
-        End Try
-    End Sub
-
-    Private Sub RadTextBoxControlStaffel5Bereich3_TextChanged_1(sender As Object, e As EventArgs)
-
-        If _suspendEvents = True Then Exit Sub
-        CalculateStaffel5Bereich3()
-    End Sub
-
-#End Region
-
-#End Region
-
-#End Region
-
-
-#Region " Messabweichung der Waage [SEwi]"
-    Private Sub RadTextBoxControlStaffel1Bereich1Fehler5_TextChanged(sender As Object, e As EventArgs) Handles _
-        RadTextBoxControlStaffel5Bereich1Fehler6.TextChanged,
-        RadTextBoxControlStaffel4Bereich1Fehler6.TextChanged,
-        RadTextBoxControlStaffel3Bereich1Fehler6.TextChanged,
-        RadTextBoxControlStaffel2Bereich1Fehler6.TextChanged,
-        RadTextBoxControlStaffel1Bereich1Fehler6.TextChanged,
-        RadTextBoxControlStaffel5Bereich2Fehler6.TextChanged,
-        RadTextBoxControlStaffel4Bereich2Fehler6.TextChanged,
-        RadTextBoxControlStaffel3Bereich2Fehler6.TextChanged,
-        RadTextBoxControlStaffel2Bereich2Fehler6.TextChanged,
-        RadTextBoxControlStaffel1Bereich2Fehler6.TextChanged,
-        RadTextBoxControlStaffel5Bereich3Fehler6.TextChanged,
-        RadTextBoxControlStaffel4Bereich3Fehler6.TextChanged,
-        RadTextBoxControlStaffel3Bereich3Fehler6.TextChanged,
-        RadTextBoxControlStaffel2Bereich3Fehler6.TextChanged,
-        RadTextBoxControlStaffel1Bereich3Fehler6.TextChanged
-
-        BerechneMessabweichung(sender)
-    End Sub
 
     ''' <summary>
     ''' Messabweichung ergibt sich aus Summe der Fehler aller Staffeln
     ''' </summary>
-    ''' <param name="sender"></param>
+    ''' <param name="Bereich"></param>
     ''' <remarks></remarks>
-    Private Sub BerechneMessabweichung(ByVal sender As Object)
+    Private Sub BerechneMessabweichung(ByVal Bereich As enuBereich)
         Try
-            'aktuellen Bereich aus Sender laden
-            Dim Bereich As enuBereich = GetBereich(sender)
+
 
             'die Messabweichung durch alle Staffeln durchreichen
-            Dim Fehler6Staffel1 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 1, CInt(Bereich), 6))
-            Dim Fehler6Staffel2 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 2, CInt(Bereich), 6))
-            Dim Fehler6Staffel3 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 3, CInt(Bereich), 6))
-            Dim Fehler6Staffel4 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 4, CInt(Bereich), 6))
-            Dim Fehler6Staffel5 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 5, CInt(Bereich), 6))
+            Dim Fehler6Staffel1 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 1, CInt(Bereich), 6))
+            Dim Fehler6Staffel2 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 2, CInt(Bereich), 6))
+            Dim Fehler6Staffel3 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 3, CInt(Bereich), 6))
+            Dim Fehler6Staffel4 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 4, CInt(Bereich), 6))
+            Dim Fehler6Staffel5 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 5, CInt(Bereich), 6))
 
-            Dim Fehler7Staffel1 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 1, CInt(Bereich), 7))
-            Dim Fehler7Staffel2 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 2, CInt(Bereich), 7))
-            Dim Fehler7Staffel3 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 3, CInt(Bereich), 7))
-            Dim Fehler7Staffel4 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 4, CInt(Bereich), 7))
-            Dim Fehler7Staffel5 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 5, CInt(Bereich), 7))
+            Dim Fehler7Staffel1 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 1, CInt(Bereich), 7))
+            Dim Fehler7Staffel2 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 2, CInt(Bereich), 7))
+            Dim Fehler7Staffel3 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 3, CInt(Bereich), 7))
+            Dim Fehler7Staffel4 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 4, CInt(Bereich), 7))
+            Dim Fehler7Staffel5 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 5, CInt(Bereich), 7))
 
 
             Try
@@ -1791,36 +1152,40 @@
                 Fehler7Staffel1.Text = CDec(Fehler6Staffel1.Text)
             Catch ex As Exception
                 Fehler7Staffel1.Text = ""
+                Exit Sub
             End Try
             Try
                 Fehler7Staffel2.Text = CDec(Fehler6Staffel1.Text) + CDec(Fehler6Staffel2.Text)
             Catch ex As Exception
                 Fehler7Staffel2.Text = ""
+                Exit Sub
             End Try
             Try
                 Fehler7Staffel3.Text = CDec(Fehler6Staffel1.Text) + CDec(Fehler6Staffel2.Text) + CDec(Fehler6Staffel3.Text)
             Catch ex As Exception
                 Fehler7Staffel3.Text = ""
+                Exit Sub
             End Try
             Try
                 Fehler7Staffel4.Text = CDec(Fehler6Staffel1.Text) + CDec(Fehler6Staffel2.Text) + CDec(Fehler6Staffel3.Text) + CDec(Fehler6Staffel4.Text)
             Catch ex As Exception
                 Fehler7Staffel4.Text = ""
+                Exit Sub
             End Try
             Try
                 Fehler7Staffel5.Text = CDec(Fehler6Staffel1.Text) + CDec(Fehler6Staffel2.Text) + CDec(Fehler6Staffel3.Text) + CDec(Fehler6Staffel4.Text) + CDec(Fehler6Staffel5.Text)
             Catch ex As Exception
                 Fehler7Staffel5.Text = ""
+                Exit Sub
             End Try
         Catch ex As Exception
         End Try
     End Sub
 
+    #End Region
 
-#End Region
 
-
-#Region "Hilfetexte"
+    #Region "Hilfetexte"
     Private Sub RadTextBoxControlStaffel1Bereich1Last1_MouseEnter(sender As Object, e As EventArgs) Handles RadTextBoxControlStaffel1Bereich3Last4.MouseEnter, RadTextBoxControlStaffel1Bereich3Last3.MouseEnter, RadTextBoxControlStaffel1Bereich3Last1.MouseEnter, RadTextBoxControlStaffel1Bereich2Last4.MouseEnter, RadTextBoxControlStaffel1Bereich2Last3.MouseEnter, RadTextBoxControlStaffel1Bereich2Last1.MouseEnter, RadTextBoxControlStaffel1Bereich1Last4.MouseEnter, RadTextBoxControlStaffel1Bereich1Last3.MouseEnter, RadTextBoxControlStaffel1Bereich1Last1.MouseEnter
         ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungStaffelverfahrenNormallast)
     End Sub
@@ -1849,9 +1214,10 @@
     Private Sub RadTextBoxControlStaffel2Bereich1Anzeige4_MouseEnter(sender As Object, e As EventArgs) Handles RadTextBoxControlStaffel5Bereich3Anzeige4.MouseEnter, RadTextBoxControlStaffel5Bereich2Anzeige4.MouseEnter, RadTextBoxControlStaffel5Bereich1Anzeige4.MouseEnter, RadTextBoxControlStaffel4Bereich3Anzeige4.MouseEnter, RadTextBoxControlStaffel4Bereich2Anzeige4.MouseEnter, RadTextBoxControlStaffel4Bereich1Anzeige4.MouseEnter, RadTextBoxControlStaffel3Bereich3Anzeige4.MouseEnter, RadTextBoxControlStaffel3Bereich2Anzeige4.MouseEnter, RadTextBoxControlStaffel3Bereich1Anzeige4.MouseEnter, RadTextBoxControlStaffel2Bereich3Anzeige4.MouseEnter, RadTextBoxControlStaffel2Bereich2Anzeige4.MouseEnter, RadTextBoxControlStaffel2Bereich1Anzeige4.MouseEnter
         ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungStaffelverfahrenErsatzlastErsatzlast2)
     End Sub
-#End Region
 
-#Region "Overrides"
+    #End Region
+
+    #Region "Overrides"
     Protected Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
         If Me.Equals(UserControl) = False Then Exit Sub
 
@@ -1864,13 +1230,13 @@
         For Each Control In RadScrollablePanel1.PanelContainer.Controls
             If TypeOf Control Is Telerik.WinControls.UI.RadGroupBox Then
                 If CType(Control, Telerik.WinControls.UI.RadGroupBox).Visible = True Then
-                    CType(Control, Telerik.WinControls.UI.RadGroupBox).Text = resources.GetString(CType(Control, Telerik.WinControls.UI.RadGroupBox).Name + ".Text")
+                    CType(Control, Telerik.WinControls.UI.RadGroupBox).Text = resources.GetString(String.Format("{0}.Text", CType(Control, Telerik.WinControls.UI.RadGroupBox).Name))
                     For Each control2 In CType(Control, Telerik.WinControls.UI.RadGroupBox).Controls
                         If TypeOf control2 Is Telerik.WinControls.UI.RadGroupBox Then
-                            CType(control2, Telerik.WinControls.UI.RadGroupBox).Text = resources.GetString(CType(control2, Telerik.WinControls.UI.RadGroupBox).Name + ".Text")
+                            CType(control2, Telerik.WinControls.UI.RadGroupBox).Text = resources.GetString(String.Format("{0}.Text", CType(control2, Telerik.WinControls.UI.RadGroupBox).Name))
                             For Each control3 In CType(control2, Telerik.WinControls.UI.RadGroupBox).Controls
                                 If TypeOf control3 Is Telerik.WinControls.UI.RadLabel Then
-                                    CType(control3, Telerik.WinControls.UI.RadLabel).Text = resources.GetString(CType(control3, Telerik.WinControls.UI.RadLabel).Name & ".Text")
+                                    CType(control3, Telerik.WinControls.UI.RadLabel).Text = resources.GetString(String.Format("{0}.Text", CType(control3, Telerik.WinControls.UI.RadLabel).Name))
                                 End If
                             Next
                         End If
@@ -1893,12 +1259,13 @@
 
 
     End Sub
+
     'Entsperrroutine
     Protected Overrides Sub EntsperrungNeeded()
         MyBase.EntsperrungNeeded()
 
         'Hiermit wird ein lesender Vorgang wieder entsperrt. 
-        For Each Control In Me.RadScrollablePanel1.PanelContainer.Controls
+        For Each Control In RadScrollablePanel1.PanelContainer.Controls
             Try
                 Control.readonly = Not Control.readonly
             Catch ex As Exception
@@ -1959,7 +1326,6 @@
             End Using
         End If
     End Sub
-
 
     'Speicherroutine
     Protected Overrides Sub SaveNeeded(ByVal UserControl As UserControl)
@@ -2214,10 +1580,10 @@
                         End If
 
 
-                        'Füllt das Objekt mit den Werten aus den Steuerlementen
-                        UpdateObject()
-                        'Speichern in Datenbank
-                        Context.SaveChanges()
+                        ''Füllt das Objekt mit den Werten aus den Steuerlementen
+                        'UpdateObject()
+                        ''Speichern in Datenbank
+                        'Context.SaveChanges()
                     End If
                 End If
             End Using
@@ -2227,7 +1593,6 @@
 
 
     End Sub
-
 
     ''' <summary>
     ''' aktualisieren der Oberfläche wenn nötig
@@ -2246,8 +1611,6 @@
         End If
     End Sub
 
-
-#End Region
-
+    #End Region
 
 End Class
