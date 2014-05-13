@@ -377,7 +377,7 @@ Public Class FrmMainContainer
             Dim uco As Object = Nothing
             'aktuelen Status zur Ampel zuweisen
 
-            If CurrentEichprozess.FK_Bearbeitungsstatus = GlobaleEnumeratoren.enuBearbeitungsstatus.Fehlerhaft Then
+            If CurrentEichprozess.FK_Bearbeitungsstatus = GlobaleEnumeratoren.enuBearbeitungsstatus.Fehlerhaft AndAlso Me.DialogModus <> enuDialogModus.lesend Then
                 BreadCrumb.AktuellerGewaehlterVorgang = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
                 '      CurrentEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
             Else
