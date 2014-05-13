@@ -320,7 +320,7 @@
         Using context As New EichsoftwareClientdatabaseEntities1
 
             'laaden der Wagentyp dropdownliste
-            Dim db = (From dbLookup In context.Lookup_Waagentyp Select dbLookup)
+            Dim db = (From dbLookup In context.Lookup_Waagentyp Order By dbLookup.Typ Select dbLookup)
             _DatasourceDropdownListWaagentyp = db.ToList
             'Laden der AWG Dropdownliste
 
@@ -345,10 +345,10 @@
             'Laden der WZ Hersteller Dropdownliste (nur hersteller namen gruppiert)
             'workaround: Wenn ein Benutzer eine Eichung Anlegt darf er keine Deaktivierten AWGs auswählen. Wenn sie gelesen  darf es aber sein, das deaktivierte Elemente gewälht werden
             If DialogModus = enuDialogModus.lesend Then
-                Dim db4 = From dblookup In context.Lookup_Waegezelle Group By Hersteller = dblookup.Hersteller Into HerstellerGruppe = Group Select New With {.Hersteller = Hersteller} ' Into Group Select New Lookup_Waegezelle
+                Dim db4 = From dblookup In context.Lookup_Waegezelle Order By dblookup.Hersteller Group By Hersteller = dblookup.Hersteller Into HerstellerGruppe = Group Select New With {.Hersteller = Hersteller} ' Into Group Select New Lookup_Waegezelle
                 _DatasourceDropdownListWZHersteller = db4.ToList
             Else
-                Dim db4 = From dblookup In context.Lookup_Waegezelle Where dblookup.Deaktiviert = False Group By Hersteller = dblookup.Hersteller Into HerstellerGruppe = Group Select New With {.Hersteller = Hersteller} ' Into Group Select New Lookup_Waegezelle
+                Dim db4 = From dblookup In context.Lookup_Waegezelle Where dblookup.Deaktiviert = False Order By dblookup.Hersteller Group By Hersteller = dblookup.Hersteller Into HerstellerGruppe = Group Select New With {.Hersteller = Hersteller} ' Into Group Select New Lookup_Waegezelle
                 _DatasourceDropdownListWZHersteller = db4.ToList
 
             End If
