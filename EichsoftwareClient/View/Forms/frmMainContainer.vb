@@ -364,6 +364,8 @@ Public Class FrmMainContainer
             'Breadcumb (Ampelfunktion intiieren)
             Try
                 BreadCrumb = New ucoAmpel(Me)
+                BreadCrumb.TabStop = False
+
                 Me.RadScrollablePanelTrafficLightBreadcrumb.PanelContainer.Controls.Add(BreadCrumb)
                 Me.RadScrollablePanelTrafficLightBreadcrumb.PanelContainer.Controls(0).Dock = DockStyle.Fill
                 Me.RadScrollablePanelTrafficLightBreadcrumb.PanelContainer.Controls(0).Visible = True

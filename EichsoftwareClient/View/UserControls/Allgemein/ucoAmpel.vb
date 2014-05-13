@@ -150,7 +150,7 @@ Public Class ucoAmpel
             'erneutes überprüfen auf Stati die nun ungültig sind
             HideElement(GetListeUngueltigeStati(_ParentForm.CurrentEichprozess))
         End If
-        FindeElementUndSelektiere(AktuellerGewaehlterVorgang)
+        '   FindeElementUndSelektiere(AktuellerGewaehlterVorgang)
     End Sub
 
     ''' <summary>
@@ -249,8 +249,17 @@ Public Class ucoAmpel
                 Listitem = (From raditem In RadListView1.Items Where raditem.Value = pStatus - 2 And raditem.Visible = True).FirstOrDefault
             End If
 
+            Dim priorcontol As Control
+            If Not Me._ParentForm Is Nothing Then
+                If Not Me._ParentForm.CurrentUCO Is Nothing Then
+                    priorcontol = Me._ParentForm.CurrentUCO.ActiveControl
+
+                End If
+            End If
+
             items(0) = Listitem
             RadListView1.Select(items)
+
             RadListView1.Focus()
 
             'tatsächliches element finden und selektieren
@@ -262,7 +271,10 @@ Public Class ucoAmpel
             RadListView1.SelectedItem = Nothing
             RadListView1.Select(items)
             RadListView1.Focus()
-          
+            If Not priorcontol Is Nothing Then
+                priorcontol.Focus()
+            End If
+
         Catch ex As Exception
 
         End Try
