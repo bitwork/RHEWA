@@ -929,9 +929,7 @@
   <ItemGroup>
     <Content Include="DLLs\System.Net.FtpClient.dll" />
     <Content Include="DLLs\System.Net.FtpClient.XML" />
-    <Content Include="EichsoftwareClientdatabase.sdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Content Include="EichsoftwareClientdatabase.sdf" />
     <None Include="Service References\EichsoftwareWebservice\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.vb</LastGenOutput>
