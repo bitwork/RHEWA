@@ -13,11 +13,26 @@ Public Class clsWebserviceFunctions
     ''' <remarks></remarks>
     Public Function TesteVerbindung() As Boolean
         Try
-            'versuche Verbindung zu RHEWA aufzubauen
-            'wenn nicht möglich Abbruch
+            'abrufen neuer WZ aus Server, basierend auf dem Wert des letzten erfolgreichen updates
             Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
-                webContext.Open()
-                webContext.Close()
+                Try
+                    webContext.Open()
+                Catch ex As Exception
+                    Return False
+                End Try
+                Using DBContext As New EichsoftwareClientdatabaseEntities1
+                    'lizenzisierung holen
+                    Dim objLic = (From db In DBContext.Lizensierung Select db).FirstOrDefault
+
+                    'hole zusätliche Lizenzdaten als Testaufruf
+                    Dim objLizenzdaten As EichsoftwareWebservice.clsLizenzdaten = webContext.GetLizenzdaten(objLic.HEKennung, objLic.Lizenzschluessel, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                    If Not objLizenzdaten Is Nothing Then
+                        Return True
+                    Else
+                        Return False
+                    End If
+
+                End Using
             End Using
         Catch ex As Exception
             MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -478,6 +493,12 @@ Public Class clsWebserviceFunctions
                         Dim data = WebContext.GetAlleEichprozesse(objLic.HEKennung, objLic.Lizenzschluessel, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
                         Return data
                     Catch ex As Exception
+                        MessageBox.Show(ex.Message)
+                        MessageBox.Show(ex.StackTrace)
+                        MessageBox.Show(ex.InnerException.Message)
+                        MessageBox.Show(ex.InnerException.StackTrace)
+                        MessageBox.Show(ex.InnerException.InnerException.Message)
+                        MessageBox.Show(ex.InnerException.InnerException.StackTrace)
                         Return Nothing
                     End Try
                 End Using
