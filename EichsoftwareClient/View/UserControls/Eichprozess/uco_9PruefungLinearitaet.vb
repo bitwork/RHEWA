@@ -12,8 +12,8 @@ Public Class uco_9PruefungLinearitaet
     Private _currentObjPruefungLinearitaetSteigend As PruefungLinearitaetSteigend
     Private _currentObjPruefungLinearitaetFallend As PruefungLinearitaetFallend
 
-    Private _intAnzahlMesspunkte As Integer = 4
-    Private _intAnzahlUrpsMessPunkte As Integer = 4 'Diese Variable wird genutzt um zu prüfen ob etwas an den Messpunkten geändert wurde um in der DB diee änderungen nachzupflegen
+    Private _intAnzahlMesspunkte As Integer = 5
+    Private _intAnzahlUrpsMessPunkte As Integer = 5 'Diese Variable wird genutzt um zu prüfen ob etwas an den Messpunkten geändert wurde um in der DB diee änderungen nachzupflegen
 #End Region
 
 #Region "Constructors"
@@ -183,135 +183,31 @@ Public Class uco_9PruefungLinearitaet
             Return Nothing
         End Try
     End Function
+
+    ''' <summary>
+    ''' EFG Werte müssen jeweils bei Steigend und Fallend gleich sein. Diese funktion reicht sie weiter und berechnet
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <remarks></remarks>
     Private Sub ReicheEFGWeiter(ByVal sender As Object)
         If _suspendEvents = True Then Exit Sub
         AktuellerStatusDirty = True
         'damit keine Event Kettenreaktion durchgeführt wird, werden die Events ab hier unterbrochen
         _suspendEvents = True
 
-        Dim Bereich = GetBereich(sender)
-        Dim Pruefung = getPruefung(sender)
+        Dim Bereich As enuBereich = GetBereich(sender)
+        Dim Pruefung As enuPruefung = GetPruefung(sender)
+        Dim Messpunkt As enuMesspunkt = GetMesspunkt(sender)
 
-        Select Case Pruefung
-            Case enuPruefung.Steigend
-                Select Case Bereich
-                    Case Is = enuBereich.Bereich1
-                        If sender.Name = "RadTextBoxControlBereich1Weight1" Then
-                            RadTextBoxControlBereich1FallendWeight1.Text = RadTextBoxControlBereich1Weight1.Text
-                        ElseIf sender.name = "RadTextBoxControlBereich1Weight2" Then
-                            RadTextBoxControlBereich1FallendWeight2.Text = RadTextBoxControlBereich1Weight2.Text
-                        ElseIf sender.name = "RadTextBoxControlBereich1Weight3" Then
-                            RadTextBoxControlBereich1FallendWeight3.Text = RadTextBoxControlBereich1Weight3.Text
-                        ElseIf sender.name = "RadTextBoxControlBereich1Weight4" Then
-                            RadTextBoxControlBereich1FallendWeight4.Text = RadTextBoxControlBereich1Weight4.Text
-                        ElseIf sender.name = "RadTextBoxControlBereich1Weight5" Then
-                            RadTextBoxControlBereich1FallendWeight5.Text = RadTextBoxControlBereich1Weight5.Text
-                        ElseIf sender.name = "RadTextBoxControlBereich1Weight6" Then
-                            RadTextBoxControlBereich1FallendWeight6.Text = RadTextBoxControlBereich1Weight6.Text
-                        ElseIf sender.name = "RadTextBoxControlBereich1Weight7" Then
-                            RadTextBoxControlBereich1FallendWeight7.Text = RadTextBoxControlBereich1Weight7.Text
-                        ElseIf sender.name = "RadTextBoxControlBereich1Weight8" Then
-                            RadTextBoxControlBereich1FallendWeight8.Text = RadTextBoxControlBereich1Weight8.Text
-                        End If
-                    Case Is = enuBereich.Bereich2
+        Dim CtrlSteigend As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}Weight{1}", CInt(Bereich), CInt(Messpunkt)))
+        Dim CtrlFallend As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}FallendWeight{1}", CInt(Bereich), CInt(Messpunkt)))
 
-                        If sender.name = "RadTextBoxControlBereich2Weight1" Then
-                            RadTextBoxControlBereich2FallendWeight1.Text = RadTextBoxControlBereich2Weight1.Text
-                        ElseIf sender.name = "RadTextBoxControlBereich2Weight2" Then
-                            RadTextBoxControlBereich2FallendWeight2.Text = RadTextBoxControlBereich2Weight2.Text
-                        ElseIf sender.name = "RadTextBoxControlBereich2Weight3" Then
-                            RadTextBoxControlBereich2FallendWeight3.Text = RadTextBoxControlBereich2Weight3.Text
-                        ElseIf sender.name = "RadTextBoxControlBereich2Weight4" Then
-                            RadTextBoxControlBereich2FallendWeight4.Text = RadTextBoxControlBereich2Weight4.Text
-                        ElseIf sender.name = "RadTextBoxControlBereich2Weight5" Then
-                            RadTextBoxControlBereich2FallendWeight5.Text = RadTextBoxControlBereich2Weight5.Text
-                        ElseIf sender.name = "RadTextBoxControlBereich2Weight6" Then
-                            RadTextBoxControlBereich2FallendWeight6.Text = RadTextBoxControlBereich2Weight6.Text
-                        ElseIf sender.name = "RadTextBoxControlBereich2Weight7" Then
-                            RadTextBoxControlBereich2FallendWeight7.Text = RadTextBoxControlBereich2Weight7.Text
-                        ElseIf sender.name = "RadTextBoxControlBereich2Weight8" Then
-                            RadTextBoxControlBereich2FallendWeight8.Text = RadTextBoxControlBereich2Weight8.Text
-                        End If
+        If Pruefung = enuPruefung.Steigend Then
+            CtrlFallend.Text = CtrlSteigend.Text
+        Else
+            CtrlSteigend.Text = CtrlFallend.Text
+        End If
 
-                    Case Is = enuBereich.Bereich3
-
-                        If sender.name = "RadTextBoxControlBereich3Weight1" Then
-                            RadTextBoxControlBereich3FallendWeight1.Text = RadTextBoxControlBereich3Weight1.Text
-                        ElseIf sender.name = "RadTextBoxControlBereich3Weight2" Then
-                            RadTextBoxControlBereich3FallendWeight2.Text = RadTextBoxControlBereich3Weight2.Text
-                        ElseIf sender.name = "RadTextBoxControlBereich3Weight3" Then
-                            RadTextBoxControlBereich3FallendWeight3.Text = RadTextBoxControlBereich3Weight3.Text
-                        ElseIf sender.name = "RadTextBoxControlBereich3Weight4" Then
-                            RadTextBoxControlBereich3FallendWeight4.Text = RadTextBoxControlBereich3Weight4.Text
-                        ElseIf sender.name = "RadTextBoxControlBereich3Weight5" Then
-                            RadTextBoxControlBereich3FallendWeight5.Text = RadTextBoxControlBereich3Weight5.Text
-                        ElseIf sender.name = "RadTextBoxControlBereich3Weight6" Then
-                            RadTextBoxControlBereich3FallendWeight6.Text = RadTextBoxControlBereich3Weight6.Text
-                        ElseIf sender.name = "RadTextBoxControlBereich3Weight7" Then
-                            RadTextBoxControlBereich3FallendWeight7.Text = RadTextBoxControlBereich3Weight7.Text
-                        ElseIf sender.name = "RadTextBoxControlBereich3Weight8" Then
-                            RadTextBoxControlBereich3FallendWeight8.Text = RadTextBoxControlBereich3Weight8.Text
-                        End If
-
-                End Select
-            Case enuPruefung.Fallend
-                Select Case Bereich
-                    Case Is = enuBereich.Bereich1
-                        If sender.name = "RadTextBoxControlBereich1FallendWeight1" Then
-                            RadTextBoxControlBereich1Weight1.Text = RadTextBoxControlBereich1FallendWeight1.Text
-                        ElseIf sender.name = "RadTextBoxControlBereich1FallendWeight2" Then
-                            RadTextBoxControlBereich1Weight2.Text = RadTextBoxControlBereich1FallendWeight2.Text
-                        ElseIf sender.name = "RadTextBoxControlBereich1FallendWeight3" Then
-                            RadTextBoxControlBereich1Weight3.Text = RadTextBoxControlBereich1FallendWeight3.Text
-                        ElseIf sender.name = "RadTextBoxControlBereich1FallendWeight4" Then
-                            RadTextBoxControlBereich1Weight4.Text = RadTextBoxControlBereich1FallendWeight4.Text
-                        ElseIf sender.name = "RadTextBoxControlBereich1FallendWeight5" Then
-                            RadTextBoxControlBereich1Weight5.Text = RadTextBoxControlBereich1FallendWeight5.Text
-                        ElseIf sender.name = "RadTextBoxControlBereich1FallendWeight6" Then
-                            RadTextBoxControlBereich1Weight6.Text = RadTextBoxControlBereich1FallendWeight6.Text
-                        ElseIf sender.name = "RadTextBoxControlBereich1FallendWeight7" Then
-                            RadTextBoxControlBereich1Weight7.Text = RadTextBoxControlBereich1FallendWeight7.Text
-                        ElseIf sender.name = "RadTextBoxControlBereich1FallendWeight8" Then
-                            RadTextBoxControlBereich1Weight8.Text = RadTextBoxControlBereich1FallendWeight8.Text
-                        End If
-                    Case Is = enuBereich.Bereich2
-                        If sender.name = "RadTextBoxControlBereich2FallendWeight1" Then
-                            RadTextBoxControlBereich2Weight1.Text = RadTextBoxControlBereich2FallendWeight1.Text
-                        ElseIf sender.name = "RadTextBoxControlBereich2FallendWeight2" Then
-                            RadTextBoxControlBereich2Weight2.Text = RadTextBoxControlBereich2FallendWeight2.Text
-                        ElseIf sender.name = "RadTextBoxControlBereich2FallendWeight3" Then
-                            RadTextBoxControlBereich2Weight3.Text = RadTextBoxControlBereich2FallendWeight3.Text
-                        ElseIf sender.name = "RadTextBoxControlBereich2FallendWeight4" Then
-                            RadTextBoxControlBereich2Weight4.Text = RadTextBoxControlBereich2FallendWeight4.Text
-                        ElseIf sender.name = "RadTextBoxControlBereich2FallendWeight5" Then
-                            RadTextBoxControlBereich2Weight5.Text = RadTextBoxControlBereich2FallendWeight5.Text
-                        ElseIf sender.name = "RadTextBoxControlBereich2FallendWeight6" Then
-                            RadTextBoxControlBereich2Weight6.Text = RadTextBoxControlBereich2FallendWeight6.Text
-                        ElseIf sender.name = "RadTextBoxControlBereich2FallendWeight7" Then
-                            RadTextBoxControlBereich2Weight7.Text = RadTextBoxControlBereich2FallendWeight7.Text
-                        ElseIf sender.name = "RadTextBoxControlBereich2FallendWeight8" Then
-                            RadTextBoxControlBereich2Weight8.Text = RadTextBoxControlBereich2FallendWeight8.Text
-                        End If
-                    Case Is = enuBereich.Bereich3
-                        If sender.name = "RadTextBoxControlBereich3FallendWeight1" Then
-                            RadTextBoxControlBereich3Weight1.Text = RadTextBoxControlBereich3FallendWeight1.Text
-                        ElseIf sender.name = "RadTextBoxControlBereich3FallendWeight2" Then
-                            RadTextBoxControlBereich3Weight2.Text = RadTextBoxControlBereich3FallendWeight2.Text
-                        ElseIf sender.name = "RadTextBoxControlBereich3FallendWeight3" Then
-                            RadTextBoxControlBereich3Weight3.Text = RadTextBoxControlBereich3FallendWeight3.Text
-                        ElseIf sender.name = "RadTextBoxControlBereich3FallendWeight4" Then
-                            RadTextBoxControlBereich3Weight4.Text = RadTextBoxControlBereich3FallendWeight4.Text
-                        ElseIf sender.name = "RadTextBoxControlBereich3FallendWeight5" Then
-                            RadTextBoxControlBereich3Weight5.Text = RadTextBoxControlBereich3FallendWeight5.Text
-                        ElseIf sender.name = "RadTextBoxControlBereich3FallendWeight6" Then
-                            RadTextBoxControlBereich3Weight6.Text = RadTextBoxControlBereich3FallendWeight6.Text
-                        ElseIf sender.name = "RadTextBoxControlBereich3FallendWeight7" Then
-                            RadTextBoxControlBereich3Weight7.Text = RadTextBoxControlBereich3FallendWeight7.Text
-                        ElseIf sender.name = "RadTextBoxControlBereich3FallendWeight8" Then
-                            RadTextBoxControlBereich3Weight8.Text = RadTextBoxControlBereich3FallendWeight8.Text
-                        End If
-                End Select
-        End Select
 
         Berechne(enuPruefung.Steigend, Bereich)
         Berechne(enuPruefung.Fallend, Bereich)
@@ -336,10 +232,6 @@ Public Class uco_9PruefungLinearitaet
         ReicheEFGWeiter(sender)
     End Sub
 
-
-
-   
-
     ''' <summary>
     ''' Logik zum erweitern der Messpunkte
     ''' </summary>
@@ -363,7 +255,7 @@ Public Class uco_9PruefungLinearitaet
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub RadButtonSteigendMinus_Click(sender As Object, e As EventArgs) Handles RadButtonSteigendMinus.Click, RadButtonFallendMinus.Click
-        If _intAnzahlMesspunkte = 4 Then
+        If _intAnzahlMesspunkte = 5 Then
             System.Media.SystemSounds.Exclamation.Play()
         Else
             AktuellerStatusDirty = True
@@ -460,269 +352,64 @@ Public Class uco_9PruefungLinearitaet
 
         'Die Berechnung erfolgt wie folgt: Es wird die Anzahl MAX / der angezeigten Messschritte - 1 gerechnet multipliziert mit dem aktuellen Schritt
 
-
         'bereich 1
-        RadTextBoxControlBereich1Weight1.Text = objEichprozess.Eichprotokoll.Identifikationsdaten_Min1
+        RadTextBoxControlBereich1Weight1.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 20
         RadTextBoxControlBereich1Weight2.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 500
-        RadTextBoxControlBereich1Weight3.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 1000
-        RadTextBoxControlBereich1Weight4.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 1500
-        RadTextBoxControlBereich1Weight5.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 2000
-        RadTextBoxControlBereich1Weight6.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 2500
-        RadTextBoxControlBereich1Weight7.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 3000
-        RadTextBoxControlBereich1Weight8.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 3500
+        RadTextBoxControlBereich1Weight3.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1 / 2
+        RadTextBoxControlBereich1Weight4.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 2000
+        RadTextBoxControlBereich1Weight5.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1
+        'RadTextBoxControlBereich1Weight6.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 2500
+        'RadTextBoxControlBereich1Weight7.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 3000
+        'RadTextBoxControlBereich1Weight8.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 3500
 
         'bereich 2
         Try
-            RadTextBoxControlBereich2Weight1.Text = objEichprozess.Eichprotokoll.Identifikationsdaten_Min2
+
             If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 Is Nothing Then
+                RadTextBoxControlBereich2Weight1.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 20
                 RadTextBoxControlBereich2Weight2.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 500
-                RadTextBoxControlBereich2Weight3.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 1000
-                RadTextBoxControlBereich2Weight4.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 1500
-                RadTextBoxControlBereich2Weight5.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 2000
-                RadTextBoxControlBereich2Weight6.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 2500
-                RadTextBoxControlBereich2Weight7.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 3000
-                RadTextBoxControlBereich2Weight8.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 3500
+                RadTextBoxControlBereich2Weight3.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 / 2
+                RadTextBoxControlBereich2Weight4.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 2000
+                RadTextBoxControlBereich2Weight5.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2
+
+                'RadTextBoxControlBereich2Weight6.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 2500
+                'RadTextBoxControlBereich2Weight7.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 3000
+                'RadTextBoxControlBereich2Weight8.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 3500
             End If
         Catch ex As Exception
 
         End Try
         'bereich 3
         Try
-            RadTextBoxControlBereich3Weight1.Text = objEichprozess.Eichprotokoll.Identifikationsdaten_Min3
             If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 Is Nothing Then
+                RadTextBoxControlBereich3Weight1.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 20
                 RadTextBoxControlBereich3Weight2.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 500
-                RadTextBoxControlBereich3Weight3.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 1000
-                RadTextBoxControlBereich3Weight4.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 1500
-                RadTextBoxControlBereich3Weight5.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 2000
-                RadTextBoxControlBereich3Weight6.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 2500
-                RadTextBoxControlBereich3Weight7.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 3000
-                RadTextBoxControlBereich3Weight8.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 3500
+                RadTextBoxControlBereich3Weight3.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 / 2
+                RadTextBoxControlBereich3Weight4.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 2000
+                RadTextBoxControlBereich3Weight5.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3
+                'RadTextBoxControlBereich3Weight6.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 2500
+                'RadTextBoxControlBereich3Weight7.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 3000
+                'RadTextBoxControlBereich3Weight8.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 3500
             End If
         Catch ex As Exception
         End Try
 
+        For Each objPruefung In _ListPruefungPruefungLinearitaetSteigend
+            Dim Messpunkt As Integer = objPruefung.Messpunkt
+            Dim Bereich As Integer = objPruefung.Bereich
 
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        'bereich 1
-        _currentObjPruefungLinearitaetSteigend = Nothing
-        _currentObjPruefungLinearitaetSteigend = (From o In _ListPruefungPruefungLinearitaetSteigend Where o.Messpunkt = "1" And o.Bereich = "1").FirstOrDefault
+            Dim ctrlLast As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}Weight{1}", Bereich, Messpunkt))
+            Dim ctrlAnzeige As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}DisplayWeight{1}", Bereich, Messpunkt))
 
-        If Not _currentObjPruefungLinearitaetSteigend Is Nothing Then
-            RadTextBoxControlBereich1Weight1.Text = _currentObjPruefungLinearitaetSteigend.Last
-            RadTextBoxControlBereich1DisplayWeight1.Text = _currentObjPruefungLinearitaetSteigend.Anzeige
-        End If
+            _currentObjPruefungLinearitaetSteigend = Nothing
+            _currentObjPruefungLinearitaetSteigend = objPruefung
 
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungLinearitaetSteigend = Nothing
-        _currentObjPruefungLinearitaetSteigend = (From o In _ListPruefungPruefungLinearitaetSteigend Where o.Messpunkt = "2" And o.Bereich = "1").FirstOrDefault
+            If Not _currentObjPruefungLinearitaetSteigend Is Nothing Then
+                ctrlLast.Text = _currentObjPruefungLinearitaetSteigend.Last
+                ctrlAnzeige.Text = _currentObjPruefungLinearitaetSteigend.Anzeige
+            End If
 
-        If Not _currentObjPruefungLinearitaetSteigend Is Nothing Then
-            RadTextBoxControlBereich1Weight2.Text = _currentObjPruefungLinearitaetSteigend.Last
-            RadTextBoxControlBereich1DisplayWeight2.Text = _currentObjPruefungLinearitaetSteigend.Anzeige
-        End If
-
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungLinearitaetSteigend = Nothing
-        _currentObjPruefungLinearitaetSteigend = (From o In _ListPruefungPruefungLinearitaetSteigend Where o.Messpunkt = "3" And o.Bereich = "1").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetSteigend Is Nothing Then
-            RadTextBoxControlBereich1Weight3.Text = _currentObjPruefungLinearitaetSteigend.Last
-            RadTextBoxControlBereich1DisplayWeight3.Text = _currentObjPruefungLinearitaetSteigend.Anzeige
-        End If
-
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungLinearitaetSteigend = Nothing
-        _currentObjPruefungLinearitaetSteigend = (From o In _ListPruefungPruefungLinearitaetSteigend Where o.Messpunkt = "4" And o.Bereich = "1").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetSteigend Is Nothing Then
-            RadTextBoxControlBereich1Weight4.Text = _currentObjPruefungLinearitaetSteigend.Last
-            RadTextBoxControlBereich1DisplayWeight4.Text = _currentObjPruefungLinearitaetSteigend.Anzeige
-        End If
-
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungLinearitaetSteigend = Nothing
-        _currentObjPruefungLinearitaetSteigend = (From o In _ListPruefungPruefungLinearitaetSteigend Where o.Messpunkt = "5" And o.Bereich = "1").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetSteigend Is Nothing Then
-            RadTextBoxControlBereich1Weight5.Text = _currentObjPruefungLinearitaetSteigend.Last
-            RadTextBoxControlBereich1DisplayWeight5.Text = _currentObjPruefungLinearitaetSteigend.Anzeige
-        End If
-
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungLinearitaetSteigend = Nothing
-        _currentObjPruefungLinearitaetSteigend = (From o In _ListPruefungPruefungLinearitaetSteigend Where o.Messpunkt = "6" And o.Bereich = "1").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetSteigend Is Nothing Then
-            RadTextBoxControlBereich1Weight6.Text = _currentObjPruefungLinearitaetSteigend.Last
-            RadTextBoxControlBereich1DisplayWeight6.Text = _currentObjPruefungLinearitaetSteigend.Anzeige
-        End If
-
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungLinearitaetSteigend = Nothing
-        _currentObjPruefungLinearitaetSteigend = (From o In _ListPruefungPruefungLinearitaetSteigend Where o.Messpunkt = "7" And o.Bereich = "1").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetSteigend Is Nothing Then
-            RadTextBoxControlBereich1Weight7.Text = _currentObjPruefungLinearitaetSteigend.Last
-            RadTextBoxControlBereich1DisplayWeight7.Text = _currentObjPruefungLinearitaetSteigend.Anzeige
-        End If
-
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungLinearitaetSteigend = Nothing
-        _currentObjPruefungLinearitaetSteigend = (From o In _ListPruefungPruefungLinearitaetSteigend Where o.Messpunkt = "8" And o.Bereich = "1").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetSteigend Is Nothing Then
-            RadTextBoxControlBereich1Weight8.Text = _currentObjPruefungLinearitaetSteigend.Last
-            RadTextBoxControlBereich1DisplayWeight8.Text = _currentObjPruefungLinearitaetSteigend.Anzeige
-        End If
-
-
-        'bereich 2
-
-        _currentObjPruefungLinearitaetSteigend = Nothing
-        _currentObjPruefungLinearitaetSteigend = (From o In _ListPruefungPruefungLinearitaetSteigend Where o.Messpunkt = "1" And o.Bereich = "2").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetSteigend Is Nothing Then
-            RadTextBoxControlBereich2Weight1.Text = _currentObjPruefungLinearitaetSteigend.Last
-            RadTextBoxControlBereich2DisplayWeight1.Text = _currentObjPruefungLinearitaetSteigend.Anzeige
-        End If
-
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungLinearitaetSteigend = Nothing
-        _currentObjPruefungLinearitaetSteigend = (From o In _ListPruefungPruefungLinearitaetSteigend Where o.Messpunkt = "2" And o.Bereich = "2").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetSteigend Is Nothing Then
-            RadTextBoxControlBereich2Weight2.Text = _currentObjPruefungLinearitaetSteigend.Last
-            RadTextBoxControlBereich2DisplayWeight2.Text = _currentObjPruefungLinearitaetSteigend.Anzeige
-        End If
-
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungLinearitaetSteigend = Nothing
-        _currentObjPruefungLinearitaetSteigend = (From o In _ListPruefungPruefungLinearitaetSteigend Where o.Messpunkt = "3" And o.Bereich = "2").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetSteigend Is Nothing Then
-            RadTextBoxControlBereich2Weight3.Text = _currentObjPruefungLinearitaetSteigend.Last
-            RadTextBoxControlBereich2DisplayWeight3.Text = _currentObjPruefungLinearitaetSteigend.Anzeige
-        End If
-
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungLinearitaetSteigend = Nothing
-        _currentObjPruefungLinearitaetSteigend = (From o In _ListPruefungPruefungLinearitaetSteigend Where o.Messpunkt = "4" And o.Bereich = "2").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetSteigend Is Nothing Then
-            RadTextBoxControlBereich2Weight4.Text = _currentObjPruefungLinearitaetSteigend.Last
-            RadTextBoxControlBereich2DisplayWeight4.Text = _currentObjPruefungLinearitaetSteigend.Anzeige
-        End If
-
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungLinearitaetSteigend = Nothing
-        _currentObjPruefungLinearitaetSteigend = (From o In _ListPruefungPruefungLinearitaetSteigend Where o.Messpunkt = "5" And o.Bereich = "2").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetSteigend Is Nothing Then
-            RadTextBoxControlBereich2Weight5.Text = _currentObjPruefungLinearitaetSteigend.Last
-            RadTextBoxControlBereich2DisplayWeight5.Text = _currentObjPruefungLinearitaetSteigend.Anzeige
-        End If
-
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungLinearitaetSteigend = Nothing
-        _currentObjPruefungLinearitaetSteigend = (From o In _ListPruefungPruefungLinearitaetSteigend Where o.Messpunkt = "6" And o.Bereich = "2").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetSteigend Is Nothing Then
-            RadTextBoxControlBereich2Weight6.Text = _currentObjPruefungLinearitaetSteigend.Last
-            RadTextBoxControlBereich2DisplayWeight6.Text = _currentObjPruefungLinearitaetSteigend.Anzeige
-        End If
-
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungLinearitaetSteigend = Nothing
-        _currentObjPruefungLinearitaetSteigend = (From o In _ListPruefungPruefungLinearitaetSteigend Where o.Messpunkt = "7" And o.Bereich = "2").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetSteigend Is Nothing Then
-            RadTextBoxControlBereich2Weight7.Text = _currentObjPruefungLinearitaetSteigend.Last
-            RadTextBoxControlBereich2DisplayWeight7.Text = _currentObjPruefungLinearitaetSteigend.Anzeige
-        End If
-
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungLinearitaetSteigend = Nothing
-        _currentObjPruefungLinearitaetSteigend = (From o In _ListPruefungPruefungLinearitaetSteigend Where o.Messpunkt = "8" And o.Bereich = "2").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetSteigend Is Nothing Then
-            RadTextBoxControlBereich2Weight8.Text = _currentObjPruefungLinearitaetSteigend.Last
-            RadTextBoxControlBereich2DisplayWeight8.Text = _currentObjPruefungLinearitaetSteigend.Anzeige
-        End If
-
-
-        'bereich 3
-
-        _currentObjPruefungLinearitaetSteigend = Nothing
-        _currentObjPruefungLinearitaetSteigend = (From o In _ListPruefungPruefungLinearitaetSteigend Where o.Messpunkt = "1" And o.Bereich = "3").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetSteigend Is Nothing Then
-            RadTextBoxControlBereich3Weight1.Text = _currentObjPruefungLinearitaetSteigend.Last
-            RadTextBoxControlBereich3DisplayWeight1.Text = _currentObjPruefungLinearitaetSteigend.Anzeige
-        End If
-
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungLinearitaetSteigend = Nothing
-        _currentObjPruefungLinearitaetSteigend = (From o In _ListPruefungPruefungLinearitaetSteigend Where o.Messpunkt = "2" And o.Bereich = "3").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetSteigend Is Nothing Then
-            RadTextBoxControlBereich3Weight2.Text = _currentObjPruefungLinearitaetSteigend.Last
-            RadTextBoxControlBereich3DisplayWeight2.Text = _currentObjPruefungLinearitaetSteigend.Anzeige
-        End If
-
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungLinearitaetSteigend = Nothing
-        _currentObjPruefungLinearitaetSteigend = (From o In _ListPruefungPruefungLinearitaetSteigend Where o.Messpunkt = "3" And o.Bereich = "3").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetSteigend Is Nothing Then
-            RadTextBoxControlBereich3Weight3.Text = _currentObjPruefungLinearitaetSteigend.Last
-            RadTextBoxControlBereich3DisplayWeight3.Text = _currentObjPruefungLinearitaetSteigend.Anzeige
-        End If
-
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungLinearitaetSteigend = Nothing
-        _currentObjPruefungLinearitaetSteigend = (From o In _ListPruefungPruefungLinearitaetSteigend Where o.Messpunkt = "4" And o.Bereich = "3").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetSteigend Is Nothing Then
-            RadTextBoxControlBereich3Weight4.Text = _currentObjPruefungLinearitaetSteigend.Last
-            RadTextBoxControlBereich3DisplayWeight4.Text = _currentObjPruefungLinearitaetSteigend.Anzeige
-        End If
-
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungLinearitaetSteigend = Nothing
-        _currentObjPruefungLinearitaetSteigend = (From o In _ListPruefungPruefungLinearitaetSteigend Where o.Messpunkt = "5" And o.Bereich = "3").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetSteigend Is Nothing Then
-            RadTextBoxControlBereich3Weight5.Text = _currentObjPruefungLinearitaetSteigend.Last
-            RadTextBoxControlBereich3DisplayWeight5.Text = _currentObjPruefungLinearitaetSteigend.Anzeige
-        End If
-
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungLinearitaetSteigend = Nothing
-        _currentObjPruefungLinearitaetSteigend = (From o In _ListPruefungPruefungLinearitaetSteigend Where o.Messpunkt = "6" And o.Bereich = "3").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetSteigend Is Nothing Then
-            RadTextBoxControlBereich3Weight6.Text = _currentObjPruefungLinearitaetSteigend.Last
-            RadTextBoxControlBereich3DisplayWeight6.Text = _currentObjPruefungLinearitaetSteigend.Anzeige
-        End If
-
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungLinearitaetSteigend = Nothing
-        _currentObjPruefungLinearitaetSteigend = (From o In _ListPruefungPruefungLinearitaetSteigend Where o.Messpunkt = "7" And o.Bereich = "3").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetSteigend Is Nothing Then
-            RadTextBoxControlBereich3Weight7.Text = _currentObjPruefungLinearitaetSteigend.Last
-            RadTextBoxControlBereich3DisplayWeight7.Text = _currentObjPruefungLinearitaetSteigend.Anzeige
-        End If
-
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungLinearitaetSteigend = Nothing
-        _currentObjPruefungLinearitaetSteigend = (From o In _ListPruefungPruefungLinearitaetSteigend Where o.Messpunkt = "8" And o.Bereich = "3").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetSteigend Is Nothing Then
-            RadTextBoxControlBereich3Weight8.Text = _currentObjPruefungLinearitaetSteigend.Last
-            RadTextBoxControlBereich3DisplayWeight8.Text = _currentObjPruefungLinearitaetSteigend.Anzeige
-        End If
-
+        Next
     End Sub
 
     Private Sub FillLinearitaetFallend()
@@ -735,26 +422,22 @@ Public Class uco_9PruefungLinearitaet
 
 
         'bereich 1
-        RadTextBoxControlBereich1FallendWeight1.Text = objEichprozess.Eichprotokoll.Identifikationsdaten_Min1
+        RadTextBoxControlBereich1FallendWeight1.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 20
         RadTextBoxControlBereich1FallendWeight2.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 500
-        RadTextBoxControlBereich1FallendWeight3.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 1000
-        RadTextBoxControlBereich1FallendWeight4.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 1500
-        RadTextBoxControlBereich1FallendWeight5.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 2000
-        RadTextBoxControlBereich1FallendWeight6.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 2500
-        RadTextBoxControlBereich1FallendWeight7.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 3000
-        RadTextBoxControlBereich1FallendWeight8.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 3500
+        RadTextBoxControlBereich1FallendWeight3.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1 / 2
+        RadTextBoxControlBereich1FallendWeight4.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 2000
+        RadTextBoxControlBereich1FallendWeight5.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1
+
 
         'bereich 2
         Try
-            RadTextBoxControlBereich2FallendWeight1.Text = objEichprozess.Eichprotokoll.Identifikationsdaten_Min2
             If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 Is Nothing Then
+                RadTextBoxControlBereich2FallendWeight1.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 20
                 RadTextBoxControlBereich2FallendWeight2.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 500
-                RadTextBoxControlBereich2FallendWeight3.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 1000
-                RadTextBoxControlBereich2FallendWeight4.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 1500
-                RadTextBoxControlBereich2FallendWeight5.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 2000
-                RadTextBoxControlBereich2FallendWeight6.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 2500
-                RadTextBoxControlBereich2FallendWeight7.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 3000
-                RadTextBoxControlBereich2FallendWeight8.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 3500
+                RadTextBoxControlBereich2FallendWeight3.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 / 2
+                RadTextBoxControlBereich2FallendWeight4.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 2000
+                RadTextBoxControlBereich2FallendWeight5.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2
+
             End If
 
         Catch ex As Exception
@@ -762,242 +445,34 @@ Public Class uco_9PruefungLinearitaet
         End Try
         'bereich 3
         Try
-            RadTextBoxControlBereich3FallendWeight1.Text = objEichprozess.Eichprotokoll.Identifikationsdaten_Min3
             If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 Is Nothing Then
+                RadTextBoxControlBereich3FallendWeight1.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 20
                 RadTextBoxControlBereich3FallendWeight2.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 500
-                RadTextBoxControlBereich3FallendWeight3.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 1000
-                RadTextBoxControlBereich3FallendWeight4.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 1500
-                RadTextBoxControlBereich3FallendWeight5.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 2000
-                RadTextBoxControlBereich3FallendWeight6.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 2500
-                RadTextBoxControlBereich3FallendWeight7.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 3000
-                RadTextBoxControlBereich3FallendWeight8.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 3500
+                RadTextBoxControlBereich3FallendWeight3.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 / 2
+                RadTextBoxControlBereich3FallendWeight4.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 2000
+                RadTextBoxControlBereich3FallendWeight5.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3
+
             End If
         Catch ex As Exception
         End Try
 
 
+        For Each objPruefung In _ListPruefungPruefungLinearitaetFallend
+            Dim Messpunkt As Integer = objPruefung.Messpunkt
+            Dim Bereich As Integer = objPruefung.Bereich
 
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        'bereich 1
-        _currentObjPruefungLinearitaetFallend = Nothing
-        _currentObjPruefungLinearitaetFallend = (From o In _ListPruefungPruefungLinearitaetFallend Where o.Messpunkt = "1" And o.Bereich = "1").FirstOrDefault
+            Dim ctrlLast As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}FallendWeight{1}", Bereich, Messpunkt))
+            Dim ctrlAnzeige As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}FallendDisplayWeight{1}", Bereich, Messpunkt))
 
-        If Not _currentObjPruefungLinearitaetFallend Is Nothing Then
-            RadTextBoxControlBereich1FallendWeight1.Text = _currentObjPruefungLinearitaetFallend.Last
-            RadTextBoxControlBereich1FallendDisplayWeight1.Text = _currentObjPruefungLinearitaetFallend.Anzeige
-        End If
+            _currentObjPruefungLinearitaetFallend = Nothing
+            _currentObjPruefungLinearitaetFallend = objPruefung
 
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungLinearitaetFallend = Nothing
-        _currentObjPruefungLinearitaetFallend = (From o In _ListPruefungPruefungLinearitaetFallend Where o.Messpunkt = "2" And o.Bereich = "1").FirstOrDefault
+            If Not _currentObjPruefungLinearitaetFallend Is Nothing Then
+                ctrlLast.Text = _currentObjPruefungLinearitaetFallend.Last
+                ctrlAnzeige.Text = _currentObjPruefungLinearitaetFallend.Anzeige
+            End If
 
-        If Not _currentObjPruefungLinearitaetFallend Is Nothing Then
-            RadTextBoxControlBereich1FallendWeight2.Text = _currentObjPruefungLinearitaetFallend.Last
-            RadTextBoxControlBereich1FallendDisplayWeight2.Text = _currentObjPruefungLinearitaetFallend.Anzeige
-        End If
-
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungLinearitaetFallend = Nothing
-        _currentObjPruefungLinearitaetFallend = (From o In _ListPruefungPruefungLinearitaetFallend Where o.Messpunkt = "3" And o.Bereich = "1").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetFallend Is Nothing Then
-            RadTextBoxControlBereich1FallendWeight3.Text = _currentObjPruefungLinearitaetFallend.Last
-            RadTextBoxControlBereich1FallendDisplayWeight3.Text = _currentObjPruefungLinearitaetFallend.Anzeige
-        End If
-
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungLinearitaetFallend = Nothing
-        _currentObjPruefungLinearitaetFallend = (From o In _ListPruefungPruefungLinearitaetFallend Where o.Messpunkt = "4" And o.Bereich = "1").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetFallend Is Nothing Then
-            RadTextBoxControlBereich1FallendWeight4.Text = _currentObjPruefungLinearitaetFallend.Last
-            RadTextBoxControlBereich1FallendDisplayWeight4.Text = _currentObjPruefungLinearitaetFallend.Anzeige
-        End If
-
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungLinearitaetFallend = Nothing
-        _currentObjPruefungLinearitaetFallend = (From o In _ListPruefungPruefungLinearitaetFallend Where o.Messpunkt = "5" And o.Bereich = "1").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetFallend Is Nothing Then
-            RadTextBoxControlBereich1FallendWeight5.Text = _currentObjPruefungLinearitaetFallend.Last
-            RadTextBoxControlBereich1FallendDisplayWeight5.Text = _currentObjPruefungLinearitaetFallend.Anzeige
-        End If
-
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungLinearitaetFallend = Nothing
-        _currentObjPruefungLinearitaetFallend = (From o In _ListPruefungPruefungLinearitaetFallend Where o.Messpunkt = "6" And o.Bereich = "1").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetFallend Is Nothing Then
-            RadTextBoxControlBereich1FallendWeight6.Text = _currentObjPruefungLinearitaetFallend.Last
-            RadTextBoxControlBereich1FallendDisplayWeight6.Text = _currentObjPruefungLinearitaetFallend.Anzeige
-        End If
-
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungLinearitaetFallend = Nothing
-        _currentObjPruefungLinearitaetFallend = (From o In _ListPruefungPruefungLinearitaetFallend Where o.Messpunkt = "7" And o.Bereich = "1").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetFallend Is Nothing Then
-            RadTextBoxControlBereich1FallendWeight7.Text = _currentObjPruefungLinearitaetFallend.Last
-            RadTextBoxControlBereich1FallendDisplayWeight7.Text = _currentObjPruefungLinearitaetFallend.Anzeige
-        End If
-
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungLinearitaetFallend = Nothing
-        _currentObjPruefungLinearitaetFallend = (From o In _ListPruefungPruefungLinearitaetFallend Where o.Messpunkt = "8" And o.Bereich = "1").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetFallend Is Nothing Then
-            RadTextBoxControlBereich1FallendWeight8.Text = _currentObjPruefungLinearitaetFallend.Last
-            RadTextBoxControlBereich1FallendDisplayWeight8.Text = _currentObjPruefungLinearitaetFallend.Anzeige
-        End If
-
-
-        'bereich 2
-
-        _currentObjPruefungLinearitaetFallend = Nothing
-        _currentObjPruefungLinearitaetFallend = (From o In _ListPruefungPruefungLinearitaetFallend Where o.Messpunkt = "1" And o.Bereich = "2").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetFallend Is Nothing Then
-            RadTextBoxControlBereich2FallendWeight1.Text = _currentObjPruefungLinearitaetFallend.Last
-            RadTextBoxControlBereich2FallendDisplayWeight1.Text = _currentObjPruefungLinearitaetFallend.Anzeige
-        End If
-
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungLinearitaetFallend = Nothing
-        _currentObjPruefungLinearitaetFallend = (From o In _ListPruefungPruefungLinearitaetFallend Where o.Messpunkt = "2" And o.Bereich = "2").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetFallend Is Nothing Then
-            RadTextBoxControlBereich2FallendWeight2.Text = _currentObjPruefungLinearitaetFallend.Last
-            RadTextBoxControlBereich2FallendDisplayWeight2.Text = _currentObjPruefungLinearitaetFallend.Anzeige
-        End If
-
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungLinearitaetFallend = Nothing
-        _currentObjPruefungLinearitaetFallend = (From o In _ListPruefungPruefungLinearitaetFallend Where o.Messpunkt = "3" And o.Bereich = "2").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetFallend Is Nothing Then
-            RadTextBoxControlBereich2FallendWeight3.Text = _currentObjPruefungLinearitaetFallend.Last
-            RadTextBoxControlBereich2FallendDisplayWeight3.Text = _currentObjPruefungLinearitaetFallend.Anzeige
-        End If
-
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungLinearitaetFallend = Nothing
-        _currentObjPruefungLinearitaetFallend = (From o In _ListPruefungPruefungLinearitaetFallend Where o.Messpunkt = "4" And o.Bereich = "2").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetFallend Is Nothing Then
-            RadTextBoxControlBereich2FallendWeight4.Text = _currentObjPruefungLinearitaetFallend.Last
-            RadTextBoxControlBereich2FallendDisplayWeight4.Text = _currentObjPruefungLinearitaetFallend.Anzeige
-        End If
-
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungLinearitaetFallend = Nothing
-        _currentObjPruefungLinearitaetFallend = (From o In _ListPruefungPruefungLinearitaetFallend Where o.Messpunkt = "5" And o.Bereich = "2").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetFallend Is Nothing Then
-            RadTextBoxControlBereich2FallendWeight5.Text = _currentObjPruefungLinearitaetFallend.Last
-            RadTextBoxControlBereich2FallendDisplayWeight5.Text = _currentObjPruefungLinearitaetFallend.Anzeige
-        End If
-
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungLinearitaetFallend = Nothing
-        _currentObjPruefungLinearitaetFallend = (From o In _ListPruefungPruefungLinearitaetFallend Where o.Messpunkt = "6" And o.Bereich = "2").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetFallend Is Nothing Then
-            RadTextBoxControlBereich2FallendWeight6.Text = _currentObjPruefungLinearitaetFallend.Last
-            RadTextBoxControlBereich2FallendDisplayWeight6.Text = _currentObjPruefungLinearitaetFallend.Anzeige
-        End If
-
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungLinearitaetFallend = Nothing
-        _currentObjPruefungLinearitaetFallend = (From o In _ListPruefungPruefungLinearitaetFallend Where o.Messpunkt = "7" And o.Bereich = "2").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetFallend Is Nothing Then
-            RadTextBoxControlBereich2FallendWeight7.Text = _currentObjPruefungLinearitaetFallend.Last
-            RadTextBoxControlBereich2FallendDisplayWeight7.Text = _currentObjPruefungLinearitaetFallend.Anzeige
-        End If
-
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungLinearitaetFallend = Nothing
-        _currentObjPruefungLinearitaetFallend = (From o In _ListPruefungPruefungLinearitaetFallend Where o.Messpunkt = "8" And o.Bereich = "2").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetFallend Is Nothing Then
-            RadTextBoxControlBereich2FallendWeight8.Text = _currentObjPruefungLinearitaetFallend.Last
-            RadTextBoxControlBereich2FallendDisplayWeight8.Text = _currentObjPruefungLinearitaetFallend.Anzeige
-        End If
-
-
-        'bereich 3
-
-        _currentObjPruefungLinearitaetFallend = Nothing
-        _currentObjPruefungLinearitaetFallend = (From o In _ListPruefungPruefungLinearitaetFallend Where o.Messpunkt = "1" And o.Bereich = "3").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetFallend Is Nothing Then
-            RadTextBoxControlBereich3FallendWeight1.Text = _currentObjPruefungLinearitaetFallend.Last
-            RadTextBoxControlBereich3FallendDisplayWeight1.Text = _currentObjPruefungLinearitaetFallend.Anzeige
-        End If
-
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungLinearitaetFallend = Nothing
-        _currentObjPruefungLinearitaetFallend = (From o In _ListPruefungPruefungLinearitaetFallend Where o.Messpunkt = "2" And o.Bereich = "3").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetFallend Is Nothing Then
-            RadTextBoxControlBereich3FallendWeight2.Text = _currentObjPruefungLinearitaetFallend.Last
-            RadTextBoxControlBereich3FallendDisplayWeight2.Text = _currentObjPruefungLinearitaetFallend.Anzeige
-        End If
-
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungLinearitaetFallend = Nothing
-        _currentObjPruefungLinearitaetFallend = (From o In _ListPruefungPruefungLinearitaetFallend Where o.Messpunkt = "3" And o.Bereich = "3").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetFallend Is Nothing Then
-            RadTextBoxControlBereich3FallendWeight3.Text = _currentObjPruefungLinearitaetFallend.Last
-            RadTextBoxControlBereich3FallendDisplayWeight3.Text = _currentObjPruefungLinearitaetFallend.Anzeige
-        End If
-
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungLinearitaetFallend = Nothing
-        _currentObjPruefungLinearitaetFallend = (From o In _ListPruefungPruefungLinearitaetFallend Where o.Messpunkt = "4" And o.Bereich = "3").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetFallend Is Nothing Then
-            RadTextBoxControlBereich3FallendWeight4.Text = _currentObjPruefungLinearitaetFallend.Last
-            RadTextBoxControlBereich3FallendDisplayWeight4.Text = _currentObjPruefungLinearitaetFallend.Anzeige
-        End If
-
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungLinearitaetFallend = Nothing
-        _currentObjPruefungLinearitaetFallend = (From o In _ListPruefungPruefungLinearitaetFallend Where o.Messpunkt = "5" And o.Bereich = "3").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetFallend Is Nothing Then
-            RadTextBoxControlBereich3FallendWeight5.Text = _currentObjPruefungLinearitaetFallend.Last
-            RadTextBoxControlBereich3FallendDisplayWeight5.Text = _currentObjPruefungLinearitaetFallend.Anzeige
-        End If
-
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungLinearitaetFallend = Nothing
-        _currentObjPruefungLinearitaetFallend = (From o In _ListPruefungPruefungLinearitaetFallend Where o.Messpunkt = "6" And o.Bereich = "3").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetFallend Is Nothing Then
-            RadTextBoxControlBereich3FallendWeight6.Text = _currentObjPruefungLinearitaetFallend.Last
-            RadTextBoxControlBereich3FallendDisplayWeight6.Text = _currentObjPruefungLinearitaetFallend.Anzeige
-        End If
-
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungLinearitaetFallend = Nothing
-        _currentObjPruefungLinearitaetFallend = (From o In _ListPruefungPruefungLinearitaetFallend Where o.Messpunkt = "7" And o.Bereich = "3").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetFallend Is Nothing Then
-            RadTextBoxControlBereich3FallendWeight7.Text = _currentObjPruefungLinearitaetFallend.Last
-            RadTextBoxControlBereich3FallendDisplayWeight7.Text = _currentObjPruefungLinearitaetFallend.Anzeige
-        End If
-
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungLinearitaetFallend = Nothing
-        _currentObjPruefungLinearitaetFallend = (From o In _ListPruefungPruefungLinearitaetFallend Where o.Messpunkt = "8" And o.Bereich = "3").FirstOrDefault
-
-        If Not _currentObjPruefungLinearitaetFallend Is Nothing Then
-            RadTextBoxControlBereich3FallendWeight8.Text = _currentObjPruefungLinearitaetFallend.Last
-            RadTextBoxControlBereich3FallendDisplayWeight8.Text = _currentObjPruefungLinearitaetFallend.Anzeige
-        End If
-
+        Next
     End Sub
 
 
@@ -1022,9 +497,6 @@ Public Class uco_9PruefungLinearitaet
     
         HoleNullstellen()
 
-
-
-
         'je nach Art der Waage andere Bereichsgruppen ausblenden
         If objEichprozess.Lookup_Waagenart.Art = "Einbereichswaage" Then
             RadGroupBoxBereich2.Visible = False
@@ -1048,16 +520,10 @@ Public Class uco_9PruefungLinearitaet
 
 
         FillLinearitaetSteigend()
-
         FillLinearitaetFallend()
 
         Berechne(enuPruefung.Steigend)
         Berechne(enuPruefung.Fallend)
-
-
-        'fokus setzen auf erstes Steuerelement
-        'RadTextBoxControlWaageHoechstlast1.Focus()
-
     End Sub
 
     ''' <summary>
@@ -1067,167 +533,19 @@ Public Class uco_9PruefungLinearitaet
     ''' <author></author>
     ''' <commentauthor></commentauthor>
     Private Sub UpdatePruefungsLinSteigendObject(ByVal PObjPruefung As PruefungLinearitaetSteigend)
-        If PObjPruefung.Bereich = 1 Then
-            If PObjPruefung.Messpunkt = "1" Then
-                PObjPruefung.Last = RadTextBoxControlBereich1Weight1.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich1DisplayWeight1.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich1ErrorLimit1.Text
-                PObjPruefung.EFG = RadCheckBoxBereich1VEL1.Checked
-            End If
-            If PObjPruefung.Messpunkt = "2" Then
-                PObjPruefung.Last = RadTextBoxControlBereich1Weight2.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich1DisplayWeight2.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich1ErrorLimit2.Text
-                PObjPruefung.EFG = RadCheckBoxBereich1VEL2.Checked
-            End If
-            If PObjPruefung.Messpunkt = "3" Then
-                PObjPruefung.Last = RadTextBoxControlBereich1Weight3.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich1DisplayWeight3.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich1ErrorLimit3.Text
-                PObjPruefung.EFG = RadCheckBoxBereich1VEL3.Checked
-            End If
-            If PObjPruefung.Messpunkt = "4" Then
-                PObjPruefung.Last = RadTextBoxControlBereich1Weight4.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich1DisplayWeight4.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich1ErrorLimit4.Text
-                PObjPruefung.EFG = RadCheckBoxBereich1VEL4.Checked
-            End If
-            If PObjPruefung.Messpunkt = "5" Then
-                PObjPruefung.Last = RadTextBoxControlBereich1Weight5.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich1DisplayWeight5.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich1ErrorLimit5.Text
-                PObjPruefung.EFG = RadCheckBoxBereich1VEL5.Checked
-            End If
-            If PObjPruefung.Messpunkt = "6" Then
-                PObjPruefung.Last = RadTextBoxControlBereich1Weight6.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich1DisplayWeight6.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich1ErrorLimit6.Text
-                PObjPruefung.EFG = RadCheckBoxBereich1VEL6.Checked
-            End If
-            If PObjPruefung.Messpunkt = "7" Then
-                PObjPruefung.Last = RadTextBoxControlBereich1Weight7.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich1DisplayWeight7.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich1ErrorLimit7.Text
-                PObjPruefung.EFG = RadCheckBoxBereich1VEL7.Checked
-            End If
-            If PObjPruefung.Messpunkt = "8" Then
-                PObjPruefung.Last = RadTextBoxControlBereich1Weight8.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich1DisplayWeight8.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich1ErrorLimit8.Text
-                PObjPruefung.EFG = RadCheckBoxBereich1VEL8.Checked
-            End If
+           Dim Messpunkt As Integer = PObjPruefung.Messpunkt
+        Dim Bereich As Integer = PObjPruefung.Bereich
 
-        ElseIf PObjPruefung.Bereich = "2" Then
-            If PObjPruefung.Messpunkt = "1" Then
-                PObjPruefung.Last = RadTextBoxControlBereich2Weight1.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich2DisplayWeight1.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich2ErrorLimit1.Text
-                PObjPruefung.EFG = RadCheckBoxBereich2VEL1.Checked
-            End If
-            If PObjPruefung.Messpunkt = "2" Then
-                PObjPruefung.Last = RadTextBoxControlBereich2Weight2.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich2DisplayWeight2.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich2ErrorLimit2.Text
-                PObjPruefung.EFG = RadCheckBoxBereich2VEL2.Checked
-            End If
-            If PObjPruefung.Messpunkt = "3" Then
-                PObjPruefung.Last = RadTextBoxControlBereich2Weight3.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich2DisplayWeight3.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich2ErrorLimit3.Text
-                PObjPruefung.EFG = RadCheckBoxBereich2VEL3.Checked
-            End If
-            If PObjPruefung.Messpunkt = "4" Then
-                PObjPruefung.Last = RadTextBoxControlBereich2Weight4.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich2DisplayWeight4.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich2ErrorLimit4.Text
-                PObjPruefung.EFG = RadCheckBoxBereich2VEL4.Checked
-            End If
-            If PObjPruefung.Messpunkt = "5" Then
-                PObjPruefung.Last = RadTextBoxControlBereich2Weight5.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich2DisplayWeight5.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich2ErrorLimit5.Text
-                PObjPruefung.EFG = RadCheckBoxBereich2VEL5.Checked
-            End If
-            If PObjPruefung.Messpunkt = "6" Then
-                PObjPruefung.Last = RadTextBoxControlBereich2Weight6.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich2DisplayWeight6.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich2ErrorLimit6.Text
-                PObjPruefung.EFG = RadCheckBoxBereich2VEL6.Checked
-            End If
-            If PObjPruefung.Messpunkt = "7" Then
-                PObjPruefung.Last = RadTextBoxControlBereich2Weight7.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich2DisplayWeight7.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich2ErrorLimit7.Text
-                PObjPruefung.EFG = RadCheckBoxBereich2VEL7.Checked
-            End If
+        Dim ctrlLast As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}Weight{1}", Bereich, Messpunkt))
+        Dim ctrlAnzeige As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}DisplayWeight{1}", Bereich, Messpunkt))
+        Dim ctrlFehler As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}ErrorLimit{1}", Bereich, Messpunkt))
+        Dim ctrlEFG As Telerik.WinControls.UI.RadCheckBox = FindControl(String.Format("RadCheckBoxBereich{0}VEL{1}", Bereich, Messpunkt))
 
-            If PObjPruefung.Messpunkt = "8" Then
-                PObjPruefung.Last = RadTextBoxControlBereich2Weight8.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich2DisplayWeight8.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich2ErrorLimit8.Text
-                PObjPruefung.EFG = RadCheckBoxBereich2VEL8.Checked
-            End If
+        PObjPruefung.Last = ctrlLast.Text
+        PObjPruefung.Anzeige = ctrlAnzeige.Text
+        PObjPruefung.Fehler = ctrlFehler.Text
+        PObjPruefung.EFG = ctrlEFG.Checked
 
-
-        ElseIf PObjPruefung.Bereich = 3 Then
-            If PObjPruefung.Messpunkt = "1" Then
-                PObjPruefung.Last = RadTextBoxControlBereich3Weight1.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich3DisplayWeight1.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich3ErrorLimit1.Text
-                PObjPruefung.EFG = RadCheckBoxBereich3VEL1.Checked
-            End If
-            If PObjPruefung.Messpunkt = "2" Then
-                PObjPruefung.Last = RadTextBoxControlBereich3Weight2.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich3DisplayWeight2.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich3ErrorLimit2.Text
-                PObjPruefung.EFG = RadCheckBoxBereich3VEL2.Checked
-            End If
-
-            If PObjPruefung.Messpunkt = "3" Then
-                PObjPruefung.Last = RadTextBoxControlBereich3Weight3.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich3DisplayWeight3.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich3ErrorLimit3.Text
-                PObjPruefung.EFG = RadCheckBoxBereich3VEL3.Checked
-            End If
-
-            If PObjPruefung.Messpunkt = "4" Then
-                PObjPruefung.Last = RadTextBoxControlBereich3Weight4.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich3DisplayWeight4.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich3ErrorLimit4.Text
-                PObjPruefung.EFG = RadCheckBoxBereich3VEL4.Checked
-            End If
-
-            If PObjPruefung.Messpunkt = "5" Then
-                PObjPruefung.Last = RadTextBoxControlBereich3Weight5.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich3DisplayWeight5.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich3ErrorLimit5.Text
-                PObjPruefung.EFG = RadCheckBoxBereich3VEL5.Checked
-            End If
-
-            If PObjPruefung.Messpunkt = "6" Then
-                PObjPruefung.Last = RadTextBoxControlBereich3Weight6.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich3DisplayWeight6.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich3ErrorLimit6.Text
-                PObjPruefung.EFG = RadCheckBoxBereich3VEL6.Checked
-            End If
-
-            If PObjPruefung.Messpunkt = "7" Then
-                PObjPruefung.Last = RadTextBoxControlBereich3Weight7.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich3DisplayWeight7.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich3ErrorLimit7.Text
-                PObjPruefung.EFG = RadCheckBoxBereich3VEL7.Checked
-            End If
-
-            If PObjPruefung.Messpunkt = "8" Then
-                PObjPruefung.Last = RadTextBoxControlBereich3Weight8.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich3DisplayWeight8.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich3ErrorLimit8.Text
-                PObjPruefung.EFG = RadCheckBoxBereich3VEL8.Checked
-            End If
-
-
-
-        End If
     End Sub
     ''' <summary>
     ''' Füllt das Objekt mit den Werten aus den Steuerlementen
@@ -1236,167 +554,19 @@ Public Class uco_9PruefungLinearitaet
     ''' <author></author>
     ''' <commentauthor></commentauthor>
     Private Sub UpdatePruefungsLinFallendObject(ByVal PObjPruefung As PruefungLinearitaetFallend)
-        If PObjPruefung.Bereich = 1 Then
-            If PObjPruefung.Messpunkt = "1" Then
-                PObjPruefung.Last = RadTextBoxControlBereich1FallendWeight1.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich1FallendDisplayWeight1.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich1FallendErrorLimit1.Text
-                PObjPruefung.EFG = RadCheckBoxBereich1FallendVEL1.Checked
-            End If
-            If PObjPruefung.Messpunkt = "2" Then
-                PObjPruefung.Last = RadTextBoxControlBereich1FallendWeight2.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich1FallendDisplayWeight2.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich1FallendErrorLimit2.Text
-                PObjPruefung.EFG = RadCheckBoxBereich1FallendVEL2.Checked
-            End If
-            If PObjPruefung.Messpunkt = "3" Then
-                PObjPruefung.Last = RadTextBoxControlBereich1FallendWeight3.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich1FallendDisplayWeight3.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich1FallendErrorLimit3.Text
-                PObjPruefung.EFG = RadCheckBoxBereich1FallendVEL3.Checked
-            End If
-            If PObjPruefung.Messpunkt = "4" Then
-                PObjPruefung.Last = RadTextBoxControlBereich1FallendWeight4.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich1FallendDisplayWeight4.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich1FallendErrorLimit4.Text
-                PObjPruefung.EFG = RadCheckBoxBereich1FallendVEL4.Checked
-            End If
-            If PObjPruefung.Messpunkt = "5" Then
-                PObjPruefung.Last = RadTextBoxControlBereich1FallendWeight5.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich1FallendDisplayWeight5.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich1FallendErrorLimit5.Text
-                PObjPruefung.EFG = RadCheckBoxBereich1FallendVEL5.Checked
-            End If
-            If PObjPruefung.Messpunkt = "6" Then
-                PObjPruefung.Last = RadTextBoxControlBereich1FallendWeight6.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich1FallendDisplayWeight6.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich1FallendErrorLimit6.Text
-                PObjPruefung.EFG = RadCheckBoxBereich1FallendVEL6.Checked
-            End If
-            If PObjPruefung.Messpunkt = "7" Then
-                PObjPruefung.Last = RadTextBoxControlBereich1FallendWeight7.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich1FallendDisplayWeight7.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich1FallendErrorLimit7.Text
-                PObjPruefung.EFG = RadCheckBoxBereich1FallendVEL7.Checked
-            End If
-            If PObjPruefung.Messpunkt = "8" Then
-                PObjPruefung.Last = RadTextBoxControlBereich1FallendWeight8.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich1FallendDisplayWeight8.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich1FallendErrorLimit8.Text
-                PObjPruefung.EFG = RadCheckBoxBereich1FallendVEL8.Checked
-            End If
+        Dim Messpunkt As Integer = PObjPruefung.Messpunkt
+        Dim Bereich As Integer = PObjPruefung.Bereich
 
-        ElseIf PObjPruefung.Bereich = "2" Then
-            If PObjPruefung.Messpunkt = "1" Then
-                PObjPruefung.Last = RadTextBoxControlBereich2FallendWeight1.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich2FallendDisplayWeight1.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich2FallendErrorLimit1.Text
-                PObjPruefung.EFG = RadCheckBoxBereich2FallendVEL1.Checked
-            End If
-            If PObjPruefung.Messpunkt = "2" Then
-                PObjPruefung.Last = RadTextBoxControlBereich2FallendWeight2.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich2FallendDisplayWeight2.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich2FallendErrorLimit2.Text
-                PObjPruefung.EFG = RadCheckBoxBereich2FallendVEL2.Checked
-            End If
-            If PObjPruefung.Messpunkt = "3" Then
-                PObjPruefung.Last = RadTextBoxControlBereich2FallendWeight3.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich2FallendDisplayWeight3.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich2FallendErrorLimit3.Text
-                PObjPruefung.EFG = RadCheckBoxBereich2FallendVEL3.Checked
-            End If
-            If PObjPruefung.Messpunkt = "4" Then
-                PObjPruefung.Last = RadTextBoxControlBereich2FallendWeight4.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich2FallendDisplayWeight4.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich2FallendErrorLimit4.Text
-                PObjPruefung.EFG = RadCheckBoxBereich2FallendVEL4.Checked
-            End If
-            If PObjPruefung.Messpunkt = "5" Then
-                PObjPruefung.Last = RadTextBoxControlBereich2FallendWeight5.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich2FallendDisplayWeight5.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich2FallendErrorLimit5.Text
-                PObjPruefung.EFG = RadCheckBoxBereich2FallendVEL5.Checked
-            End If
-            If PObjPruefung.Messpunkt = "6" Then
-                PObjPruefung.Last = RadTextBoxControlBereich2FallendWeight6.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich2FallendDisplayWeight6.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich2FallendErrorLimit6.Text
-                PObjPruefung.EFG = RadCheckBoxBereich2FallendVEL6.Checked
-            End If
-            If PObjPruefung.Messpunkt = "7" Then
-                PObjPruefung.Last = RadTextBoxControlBereich2FallendWeight7.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich2FallendDisplayWeight7.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich2FallendErrorLimit7.Text
-                PObjPruefung.EFG = RadCheckBoxBereich2FallendVEL7.Checked
-            End If
+        Dim ctrlLast As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}FallendWeight{1}", Bereich, Messpunkt))
+        Dim ctrlAnzeige As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}FallendDisplayWeight{1}", Bereich, Messpunkt))
+        Dim ctrlFehler As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}FallendErrorLimit{1}", Bereich, Messpunkt))
+        Dim ctrlEFG As Telerik.WinControls.UI.RadCheckBox = FindControl(String.Format("RadCheckBoxBereich{0}FallendVEL{1}", Bereich, Messpunkt))
 
-            If PObjPruefung.Messpunkt = "8" Then
-                PObjPruefung.Last = RadTextBoxControlBereich2FallendWeight8.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich2FallendDisplayWeight8.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich2FallendErrorLimit8.Text
-                PObjPruefung.EFG = RadCheckBoxBereich2FallendVEL8.Checked
-            End If
+        PObjPruefung.Last = ctrlLast.Text
+        PObjPruefung.Anzeige = ctrlAnzeige.Text
+        PObjPruefung.Fehler = ctrlFehler.Text
+        PObjPruefung.EFG = ctrlEFG.Checked
 
-
-        ElseIf PObjPruefung.Bereich = 3 Then
-            If PObjPruefung.Messpunkt = "1" Then
-                PObjPruefung.Last = RadTextBoxControlBereich3FallendWeight1.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich3FallendDisplayWeight1.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich3FallendErrorLimit1.Text
-                PObjPruefung.EFG = RadCheckBoxBereich3FallendVEL1.Checked
-            End If
-            If PObjPruefung.Messpunkt = "2" Then
-                PObjPruefung.Last = RadTextBoxControlBereich3FallendWeight2.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich3FallendDisplayWeight2.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich3FallendErrorLimit2.Text
-                PObjPruefung.EFG = RadCheckBoxBereich3FallendVEL2.Checked
-            End If
-
-            If PObjPruefung.Messpunkt = "3" Then
-                PObjPruefung.Last = RadTextBoxControlBereich3FallendWeight3.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich3FallendDisplayWeight3.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich3FallendErrorLimit3.Text
-                PObjPruefung.EFG = RadCheckBoxBereich3FallendVEL3.Checked
-            End If
-
-            If PObjPruefung.Messpunkt = "4" Then
-                PObjPruefung.Last = RadTextBoxControlBereich3FallendWeight4.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich3FallendDisplayWeight4.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich3FallendErrorLimit4.Text
-                PObjPruefung.EFG = RadCheckBoxBereich3FallendVEL4.Checked
-            End If
-
-            If PObjPruefung.Messpunkt = "5" Then
-                PObjPruefung.Last = RadTextBoxControlBereich3FallendWeight5.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich3FallendDisplayWeight5.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich3FallendErrorLimit5.Text
-                PObjPruefung.EFG = RadCheckBoxBereich3FallendVEL5.Checked
-            End If
-
-            If PObjPruefung.Messpunkt = "6" Then
-                PObjPruefung.Last = RadTextBoxControlBereich3FallendWeight6.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich3FallendDisplayWeight6.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich3FallendErrorLimit6.Text
-                PObjPruefung.EFG = RadCheckBoxBereich3FallendVEL6.Checked
-            End If
-
-            If PObjPruefung.Messpunkt = "7" Then
-                PObjPruefung.Last = RadTextBoxControlBereich3FallendWeight7.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich3FallendDisplayWeight7.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich3FallendErrorLimit7.Text
-                PObjPruefung.EFG = RadCheckBoxBereich3FallendVEL7.Checked
-            End If
-
-            If PObjPruefung.Messpunkt = "8" Then
-                PObjPruefung.Last = RadTextBoxControlBereich3FallendWeight8.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich3FallendDisplayWeight8.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich3FallendErrorLimit8.Text
-                PObjPruefung.EFG = RadCheckBoxBereich3FallendVEL8.Checked
-            End If
-
-
-
-        End If
     End Sub
 
     ''' <summary>
@@ -1409,64 +579,20 @@ Public Class uco_9PruefungLinearitaet
         'prüfen ob alle Felder ausgefüllt sind
         AbortSaveing = False
 
-        'TODO FOR EACH CONTROL
-        'steigend
-        If RadCheckBoxBereich1VEL1.Checked = False And RadCheckBoxBereich1VEL1.Visible = True Or _
-        RadCheckBoxBereich1VEL2.Checked = False And RadCheckBoxBereich1VEL2.Visible = True Or _
-        RadCheckBoxBereich1VEL3.Checked = False And RadCheckBoxBereich1VEL3.Visible = True Or _
-        RadCheckBoxBereich1VEL4.Checked = False And RadCheckBoxBereich1VEL4.Visible = True Or _
-        RadCheckBoxBereich1VEL5.Checked = False And RadCheckBoxBereich1VEL5.Visible = True Or _
-        RadCheckBoxBereich1VEL6.Checked = False And RadCheckBoxBereich1VEL6.Visible = True Or _
-        RadCheckBoxBereich1VEL7.Checked = False And RadCheckBoxBereich1VEL7.Visible = True Or _
-        RadCheckBoxBereich1VEL8.Checked = False And RadCheckBoxBereich1VEL8.Visible = True Or _
-        RadCheckBoxBereich2VEL1.Checked = False And RadCheckBoxBereich2VEL1.Visible = True Or _
-        RadCheckBoxBereich2VEL2.Checked = False And RadCheckBoxBereich2VEL2.Visible = True Or _
-        RadCheckBoxBereich2VEL3.Checked = False And RadCheckBoxBereich2VEL3.Visible = True Or _
-        RadCheckBoxBereich2VEL4.Checked = False And RadCheckBoxBereich2VEL4.Visible = True Or _
-        RadCheckBoxBereich2VEL5.Checked = False And RadCheckBoxBereich2VEL5.Visible = True Or _
-        RadCheckBoxBereich2VEL6.Checked = False And RadCheckBoxBereich2VEL6.Visible = True Or _
-        RadCheckBoxBereich2VEL7.Checked = False And RadCheckBoxBereich2VEL7.Visible = True Or _
-        RadCheckBoxBereich2VEL8.Checked = False And RadCheckBoxBereich2VEL8.Visible = True Or _
-        RadCheckBoxBereich3VEL1.Checked = False And RadCheckBoxBereich3VEL1.Visible = True Or _
-        RadCheckBoxBereich3VEL2.Checked = False And RadCheckBoxBereich3VEL2.Visible = True Or _
-        RadCheckBoxBereich3VEL3.Checked = False And RadCheckBoxBereich3VEL3.Visible = True Or _
-        RadCheckBoxBereich3VEL4.Checked = False And RadCheckBoxBereich3VEL4.Visible = True Or _
-        RadCheckBoxBereich3VEL5.Checked = False And RadCheckBoxBereich3VEL5.Visible = True Or _
-        RadCheckBoxBereich3VEL6.Checked = False And RadCheckBoxBereich3VEL6.Visible = True Or _
-        RadCheckBoxBereich3VEL7.Checked = False And RadCheckBoxBereich3VEL7.Visible = True Or _
-        RadCheckBoxBereich3VEL8.Checked = False And RadCheckBoxBereich3VEL8.Visible = True Then
-            AbortSaveing = True
-        End If
+        For i As Integer = 5 To 8 'messpunkt
+            For j As Integer = 1 To 3 'bereich
+                Dim checkbox As Telerik.WinControls.UI.RadCheckBox = FindControl(String.Format("RadCheckBoxBereich{0}VEL{1}", j, i))
+                If checkbox.Checked = False And checkbox.Visible = True Then
+                    AbortSaveing = True
+                End If
 
-        'fallend
-        If RadCheckBoxBereich1FallendVEL1.Checked = False And RadCheckBoxBereich1FallendVEL1.Visible = True Or _
-        RadCheckBoxBereich1FallendVEL2.Checked = False And RadCheckBoxBereich1FallendVEL2.Visible = True Or _
-        RadCheckBoxBereich1FallendVEL3.Checked = False And RadCheckBoxBereich1FallendVEL3.Visible = True Or _
-        RadCheckBoxBereich1FallendVEL4.Checked = False And RadCheckBoxBereich1FallendVEL4.Visible = True Or _
-        RadCheckBoxBereich1FallendVEL5.Checked = False And RadCheckBoxBereich1FallendVEL5.Visible = True Or _
-        RadCheckBoxBereich1FallendVEL6.Checked = False And RadCheckBoxBereich1FallendVEL6.Visible = True Or _
-        RadCheckBoxBereich1FallendVEL7.Checked = False And RadCheckBoxBereich1FallendVEL7.Visible = True Or _
-        RadCheckBoxBereich1FallendVEL8.Checked = False And RadCheckBoxBereich1FallendVEL8.Visible = True Or _
-        RadCheckBoxBereich2FallendVEL1.Checked = False And RadCheckBoxBereich2FallendVEL1.Visible = True Or _
-        RadCheckBoxBereich2FallendVEL2.Checked = False And RadCheckBoxBereich2FallendVEL2.Visible = True Or _
-        RadCheckBoxBereich2FallendVEL3.Checked = False And RadCheckBoxBereich2FallendVEL3.Visible = True Or _
-        RadCheckBoxBereich2FallendVEL4.Checked = False And RadCheckBoxBereich2FallendVEL4.Visible = True Or _
-        RadCheckBoxBereich2FallendVEL5.Checked = False And RadCheckBoxBereich2FallendVEL5.Visible = True Or _
-        RadCheckBoxBereich2FallendVEL6.Checked = False And RadCheckBoxBereich2FallendVEL6.Visible = True Or _
-        RadCheckBoxBereich2FallendVEL7.Checked = False And RadCheckBoxBereich2FallendVEL7.Visible = True Or _
-        RadCheckBoxBereich2FallendVEL8.Checked = False And RadCheckBoxBereich2FallendVEL8.Visible = True Or _
-        RadCheckBoxBereich3FallendVEL1.Checked = False And RadCheckBoxBereich3FallendVEL1.Visible = True Or _
-        RadCheckBoxBereich3FallendVEL2.Checked = False And RadCheckBoxBereich3FallendVEL2.Visible = True Or _
-        RadCheckBoxBereich3FallendVEL3.Checked = False And RadCheckBoxBereich3FallendVEL3.Visible = True Or _
-        RadCheckBoxBereich3FallendVEL4.Checked = False And RadCheckBoxBereich3FallendVEL4.Visible = True Or _
-        RadCheckBoxBereich3FallendVEL5.Checked = False And RadCheckBoxBereich3FallendVEL5.Visible = True Or _
-        RadCheckBoxBereich3FallendVEL6.Checked = False And RadCheckBoxBereich3FallendVEL6.Visible = True Or _
-        RadCheckBoxBereich3FallendVEL7.Checked = False And RadCheckBoxBereich3FallendVEL7.Visible = True Or _
-        RadCheckBoxBereich3FallendVEL8.Checked = False And RadCheckBoxBereich3FallendVEL8.Visible = True Then
-            AbortSaveing = True
-        End If
-
-
+                checkbox = Nothing
+                checkbox = FindControl(String.Format("RadCheckBoxBereich{0}FallendVEL{1}", j, i))
+                If checkbox.Checked = False And checkbox.Visible = True Then
+                    AbortSaveing = True
+                End If
+            Next
+        Next
 
         If AbortSaveing Then
             MessageBox.Show(My.Resources.GlobaleLokalisierung.EichfehlergrenzenNichtEingehalten, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
@@ -1486,34 +612,18 @@ Public Class uco_9PruefungLinearitaet
     ''' <returns></returns>
     ''' <remarks></remarks>
     Private Function GetEFG(ByVal Gewicht As Decimal, ByVal Bereich As Integer) As Decimal
-        If Bereich = 1 Then
-            If Gewicht > 2000 Then
-                Return Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 1.5), _intNullstellenE, MidpointRounding.AwayFromZero)
-            ElseIf Gewicht > 500 Then
-                Return Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 1), _intNullstellenE, MidpointRounding.AwayFromZero)
-            Else
-                Return Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 0.5), _intNullstellenE, MidpointRounding.AwayFromZero)
-            End If
-        ElseIf Bereich = 2 Then
-            If Gewicht > 2000 Then
-                Return Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 1.5), _intNullstellenE, MidpointRounding.AwayFromZero)
-            ElseIf Gewicht > 500 Then
-                Return Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 1), _intNullstellenE, MidpointRounding.AwayFromZero)
-            Else
-                Return Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 0.5), _intNullstellenE, MidpointRounding.AwayFromZero)
-            End If
-        ElseIf Bereich = 3 Then
-            If Gewicht > 2000 Then
-                Return Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 1.5), _intNullstellenE, MidpointRounding.AwayFromZero)
-            ElseIf Gewicht > 500 Then
-                Return Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 1), _intNullstellenE, MidpointRounding.AwayFromZero)
-            Else
-                Return Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 0.5), _intNullstellenE, MidpointRounding.AwayFromZero)
-            End If
-        Else
-            Throw New Exception
-        End If
+        Try
+            Dim value = objEichprozess.Kompatiblitaetsnachweis.GetType().GetProperty(String.Format("Kompatiblitaet_Waage_Eichwert{0}", Bereich)).GetValue(objEichprozess.Kompatiblitaetsnachweis, Nothing)
 
+            If Gewicht > 2000 Then
+                Return Math.Round(CDec(value * 1.5), _intNullstellenE, MidpointRounding.AwayFromZero)
+            ElseIf Gewicht > 500 Then
+                Return Math.Round(CDec(value * 1), _intNullstellenE, MidpointRounding.AwayFromZero)
+            Else
+                Return Math.Round(CDec(value * 0.5), _intNullstellenE, MidpointRounding.AwayFromZero)
+            End If
+        Catch e As Exception
+        End Try
     End Function
 
     ''' <summary>
@@ -1521,168 +631,25 @@ Public Class uco_9PruefungLinearitaet
     ''' </summary>
     ''' <remarks></remarks>
     Private Sub EinAusblendenVonMessBereichen()
-        'messpunkte auslesen
-
-
-
-        'Messpunkte ausblenden
-        Select Case _intAnzahlMesspunkte
-            Case 4
-                'steigend
-                PanelBereich1WZ5.Visible = False
-                PanelBereich1WZ6.Visible = False
-                PanelBereich1WZ7.Visible = False
-                PanelBereich1WZ8.Visible = False
-
-                PanelBereich2WZ5.Visible = False
-                PanelBereich2WZ6.Visible = False
-                PanelBereich2WZ7.Visible = False
-                PanelBereich2WZ8.Visible = False
-
-                PanelBereich3WZ5.Visible = False
-                PanelBereich3WZ6.Visible = False
-                PanelBereich3WZ7.Visible = False
-                PanelBereich3WZ8.Visible = False
-                'fallend
-                PanelBereich1FallendWZ5.Visible = False
-                PanelBereich1FallendWZ6.Visible = False
-                PanelBereich1FallendWZ7.Visible = False
-                PanelBereich1FallendWZ8.Visible = False
-
-                PanelBereich2FallendWZ5.Visible = False
-                PanelBereich2FallendWZ6.Visible = False
-                PanelBereich2FallendWZ7.Visible = False
-                PanelBereich2FallendWZ8.Visible = False
-
-                PanelBereich3FallendWZ5.Visible = False
-                PanelBereich3FallendWZ6.Visible = False
-                PanelBereich3FallendWZ7.Visible = False
-                PanelBereich3FallendWZ8.Visible = False
-            Case 5
-                PanelBereich1WZ5.Visible = True
-                PanelBereich1WZ6.Visible = False
-                PanelBereich1WZ7.Visible = False
-                PanelBereich1WZ8.Visible = False
-
-                PanelBereich2WZ5.Visible = True
-                PanelBereich2WZ6.Visible = False
-                PanelBereich2WZ7.Visible = False
-                PanelBereich2WZ8.Visible = False
-
-                PanelBereich3WZ5.Visible = True
-                PanelBereich3WZ6.Visible = False
-                PanelBereich3WZ7.Visible = False
-                PanelBereich3WZ8.Visible = False
+        For i As Integer = 4 To 8 'messpunkt
+            For j As Integer = 1 To 3 'bereich
+                Dim Panel As Windows.Forms.Panel = FindControl(String.Format("PanelBereich{0}WZ{1}", j, i))
+                If _intAnzahlMesspunkte >= i Then
+                    Panel.Visible = True
+                Else
+                    Panel.Visible = False
+                End If
 
                 'fallend
-                PanelBereich1FallendWZ5.Visible = True
-                PanelBereich1FallendWZ6.Visible = False
-                PanelBereich1FallendWZ7.Visible = False
-                PanelBereich1FallendWZ8.Visible = False
-
-                PanelBereich2FallendWZ5.Visible = True
-                PanelBereich2FallendWZ6.Visible = False
-                PanelBereich2FallendWZ7.Visible = False
-                PanelBereich2FallendWZ8.Visible = False
-
-                PanelBereich3FallendWZ5.Visible = True
-                PanelBereich3FallendWZ6.Visible = False
-                PanelBereich3FallendWZ7.Visible = False
-                PanelBereich3FallendWZ8.Visible = False
-            Case 6
-                PanelBereich1WZ5.Visible = True
-                PanelBereich1WZ6.Visible = True
-                PanelBereich1WZ7.Visible = False
-                PanelBereich1WZ8.Visible = False
-
-                PanelBereich2WZ5.Visible = True
-                PanelBereich2WZ6.Visible = True
-                PanelBereich2WZ7.Visible = False
-                PanelBereich2WZ8.Visible = False
-
-                PanelBereich3WZ5.Visible = True
-                PanelBereich3WZ6.Visible = True
-                PanelBereich3WZ7.Visible = False
-                PanelBereich3WZ8.Visible = False
-
-                'fallend
-                PanelBereich1FallendWZ5.Visible = True
-                PanelBereich1FallendWZ6.Visible = True
-                PanelBereich1FallendWZ7.Visible = False
-                PanelBereich1FallendWZ8.Visible = False
-
-                PanelBereich2FallendWZ5.Visible = True
-                PanelBereich2FallendWZ6.Visible = True
-                PanelBereich2FallendWZ7.Visible = False
-                PanelBereich2FallendWZ8.Visible = False
-
-                PanelBereich3FallendWZ5.Visible = True
-                PanelBereich3FallendWZ6.Visible = True
-                PanelBereich3FallendWZ7.Visible = False
-                PanelBereich3FallendWZ8.Visible = False
-            Case 7
-                PanelBereich1WZ5.Visible = True
-                PanelBereich1WZ6.Visible = True
-                PanelBereich1WZ7.Visible = True
-                PanelBereich1WZ8.Visible = False
-
-                PanelBereich2WZ5.Visible = True
-                PanelBereich2WZ6.Visible = True
-                PanelBereich2WZ7.Visible = True
-                PanelBereich2WZ8.Visible = False
-
-                PanelBereich3WZ5.Visible = True
-                PanelBereich3WZ6.Visible = True
-                PanelBereich3WZ7.Visible = True
-                PanelBereich3WZ8.Visible = False
-
-                'fallend
-                PanelBereich1FallendWZ5.Visible = True
-                PanelBereich1FallendWZ6.Visible = True
-                PanelBereich1FallendWZ7.Visible = True
-                PanelBereich1FallendWZ8.Visible = False
-
-                PanelBereich2FallendWZ5.Visible = True
-                PanelBereich2FallendWZ6.Visible = True
-                PanelBereich2FallendWZ7.Visible = True
-                PanelBereich2FallendWZ8.Visible = False
-
-                PanelBereich3FallendWZ5.Visible = True
-                PanelBereich3FallendWZ6.Visible = True
-                PanelBereich3FallendWZ7.Visible = True
-                PanelBereich3FallendWZ8.Visible = False
-            Case 8
-                PanelBereich1WZ5.Visible = True
-                PanelBereich1WZ6.Visible = True
-                PanelBereich1WZ7.Visible = True
-                PanelBereich1WZ8.Visible = True
-
-                PanelBereich2WZ5.Visible = True
-                PanelBereich2WZ6.Visible = True
-                PanelBereich2WZ7.Visible = True
-                PanelBereich2WZ8.Visible = True
-
-                PanelBereich3WZ5.Visible = True
-                PanelBereich3WZ6.Visible = True
-                PanelBereich3WZ7.Visible = True
-                PanelBereich3WZ8.Visible = True
-
-                'fallend
-                PanelBereich1FallendWZ5.Visible = True
-                PanelBereich1FallendWZ6.Visible = True
-                PanelBereich1FallendWZ7.Visible = True
-                PanelBereich1FallendWZ8.Visible = True
-
-                PanelBereich2FallendWZ5.Visible = True
-                PanelBereich2FallendWZ6.Visible = True
-                PanelBereich2FallendWZ7.Visible = True
-                PanelBereich2FallendWZ8.Visible = True
-
-                PanelBereich3FallendWZ5.Visible = True
-                PanelBereich3FallendWZ6.Visible = True
-                PanelBereich3FallendWZ7.Visible = True
-                PanelBereich3FallendWZ8.Visible = True
-        End Select
+                Panel = Nothing
+                Panel = FindControl(String.Format("PanelBereich{0}FallendWZ{1}", j, i))
+                If _intAnzahlMesspunkte >= i Then
+                    Panel.Visible = True
+                Else
+                    Panel.Visible = False
+                End If
+            Next
+        Next
     End Sub
 
     Private Sub BerechneUndWeiseZu(ByRef FehlerGrenzeTextbox As Telerik.WinControls.UI.RadTextBoxControl, _
@@ -1844,17 +811,9 @@ Public Class uco_9PruefungLinearitaet
     Private Sub TextboxenGewicht_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlBereich3FallendDisplayWeight8.TextChanged, RadTextBoxControlBereich3FallendDisplayWeight7.TextChanged, RadTextBoxControlBereich3FallendDisplayWeight6.TextChanged, RadTextBoxControlBereich3FallendDisplayWeight5.TextChanged, RadTextBoxControlBereich3FallendDisplayWeight4.TextChanged, RadTextBoxControlBereich3FallendDisplayWeight3.TextChanged, RadTextBoxControlBereich3FallendDisplayWeight2.TextChanged, RadTextBoxControlBereich3FallendDisplayWeight1.TextChanged, RadTextBoxControlBereich3DisplayWeight8.TextChanged, RadTextBoxControlBereich3DisplayWeight7.TextChanged, RadTextBoxControlBereich3DisplayWeight6.TextChanged, RadTextBoxControlBereich3DisplayWeight5.TextChanged, RadTextBoxControlBereich3DisplayWeight4.TextChanged, RadTextBoxControlBereich3DisplayWeight3.TextChanged, RadTextBoxControlBereich3DisplayWeight2.TextChanged, RadTextBoxControlBereich3DisplayWeight1.TextChanged, RadTextBoxControlBereich2FallendDisplayWeight8.TextChanged, RadTextBoxControlBereich2FallendDisplayWeight7.TextChanged, RadTextBoxControlBereich2FallendDisplayWeight6.TextChanged, RadTextBoxControlBereich2FallendDisplayWeight5.TextChanged, RadTextBoxControlBereich2FallendDisplayWeight4.TextChanged, RadTextBoxControlBereich2FallendDisplayWeight3.TextChanged, RadTextBoxControlBereich2FallendDisplayWeight2.TextChanged, RadTextBoxControlBereich2FallendDisplayWeight1.TextChanged, RadTextBoxControlBereich2DisplayWeight8.TextChanged, RadTextBoxControlBereich2DisplayWeight7.TextChanged, RadTextBoxControlBereich2DisplayWeight6.TextChanged, RadTextBoxControlBereich2DisplayWeight5.TextChanged, RadTextBoxControlBereich2DisplayWeight4.TextChanged, RadTextBoxControlBereich2DisplayWeight3.TextChanged, RadTextBoxControlBereich2DisplayWeight2.TextChanged, RadTextBoxControlBereich2DisplayWeight1.TextChanged, RadTextBoxControlBereich1FallendDisplayWeight8.TextChanged, RadTextBoxControlBereich1FallendDisplayWeight7.TextChanged, RadTextBoxControlBereich1FallendDisplayWeight6.TextChanged, RadTextBoxControlBereich1FallendDisplayWeight5.TextChanged, RadTextBoxControlBereich1FallendDisplayWeight4.TextChanged, RadTextBoxControlBereich1FallendDisplayWeight3.TextChanged, RadTextBoxControlBereich1FallendDisplayWeight2.TextChanged, RadTextBoxControlBereich1FallendDisplayWeight1.TextChanged, RadTextBoxControlBereich1DisplayWeight8.TextChanged, RadTextBoxControlBereich1DisplayWeight7.TextChanged, RadTextBoxControlBereich1DisplayWeight6.TextChanged, RadTextBoxControlBereich1DisplayWeight5.TextChanged, RadTextBoxControlBereich1DisplayWeight4.TextChanged, RadTextBoxControlBereich1DisplayWeight3.TextChanged, RadTextBoxControlBereich1DisplayWeight2.TextChanged, RadTextBoxControlBereich1DisplayWeight1.TextChanged
         If _suspendEvents Then Exit Sub
 
-        Dim Messpunkt As enuMesspunkt
-        Dim Bereich As enuBereich
-        Dim Pruefung As enuPruefung
-
-
-
-        Bereich = GetBereich(sender)
-        Pruefung = GetPruefung(sender)
-        Messpunkt = GetMesspunkt(sender)
-
-
+        Dim Messpunkt As enuMesspunkt = GetMesspunkt(sender)
+        Dim Bereich As enuBereich = GetBereich(sender)
+        Dim Pruefung As enuPruefung = GetPruefung(sender)
 
         Berechne(Pruefung, Bereich, Messpunkt)
     End Sub
@@ -2035,7 +994,7 @@ Public Class uco_9PruefungLinearitaet
                                 'anzahl Bereiche auslesen um damit die anzahl der benötigten Iterationen und Objekt Erzeugungen zu erfahren
 
                                 For j = 1 To intBereiche
-                                    For intMesspunkt As Integer = 1 To _intAnzahlUrpsMessPunkte
+                                    For intMesspunkt As Integer = 1 To _intAnzahlMesspunkte
                                         Dim objPruefung = Context.PruefungLinearitaetFallend.Create
                                         objPruefung.Messpunkt = intMesspunkt
                                         objPruefung.Bereich = j
@@ -2246,7 +1205,7 @@ Public Class uco_9PruefungLinearitaet
                             'anzahl Bereiche auslesen um damit die anzahl der benötigten Iterationen und Objekt Erzeugungen zu erfahren
 
                             For j = 1 To intBereiche
-                                For intMesspunkt As Integer = 1 To _intAnzahlUrpsMessPunkte
+                                For intMesspunkt As Integer = 1 To _intAnzahlMesspunkte
                                     Dim objPruefung = Context.PruefungLinearitaetFallend.Create
                                     objPruefung.Messpunkt = intMesspunkt
                                     objPruefung.Bereich = j
