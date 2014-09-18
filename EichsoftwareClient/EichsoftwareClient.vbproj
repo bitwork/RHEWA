@@ -34,7 +34,7 @@
     <SupportUrl>http://www.rhewa.com</SupportUrl>
     <ProductName>RHEWA Herstellerersteichung</ProductName>
     <PublisherName>RHEWA Waagenfabrik GmbH</PublisherName>
-    <ApplicationRevision>44</ApplicationRevision>
+    <ApplicationRevision>45</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -78,10 +78,10 @@
     <ApplicationIcon>Resources\weighing_mashine.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>5A9F255DFC88608A8C710400AFD55BB0D6351844</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>3DDFD18CFC8B06092250ABFBA8D13A3C246C8778</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>EichsoftwareClient_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>EichsoftwareClient_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -771,6 +771,7 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="ClassDiagram1.cd" />
+    <None Include="EichsoftwareClient_1_TemporaryKey.pfx" />
     <None Include="EichsoftwareClient_TemporaryKey.pfx" />
     <None Include="EntityModelDatabaseClient.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
