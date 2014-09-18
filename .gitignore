@@ -169,3 +169,5 @@ pip-log.txt
 EichsoftwareWebservice/Error.svclog
 *.svclog
 *.svclog
+*.svclog
+EichsoftwareWebservice/Error.svclog
