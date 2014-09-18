@@ -246,7 +246,6 @@ Partial Class ucoEichfehlergrenzen
         '
         'RadGroupBox1
         '
-        resources.ApplyResources(Me.RadGroupBox1, "RadGroupBox1")
         Me.RadGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBox1.Controls.Add(Me.lblVFG1)
         Me.RadGroupBox1.Controls.Add(Me.lblEFG1)
@@ -283,6 +282,7 @@ Partial Class ucoEichfehlergrenzen
         Me.RadGroupBox1.Controls.Add(Me.RadLabel3)
         Me.RadGroupBox1.Controls.Add(Me.RadLabel2)
         Me.RadGroupBox1.Controls.Add(Me.RadLabel1)
+        resources.ApplyResources(Me.RadGroupBox1, "RadGroupBox1")
         Me.RadGroupBox1.Name = "RadGroupBox1"
         '
         '
@@ -292,11 +292,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadGroupBox1.RootElement.Alignment = CType(resources.GetObject("RadGroupBox1.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadGroupBox1.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBox1.RootElement.AngleTransform"), Single)
         Me.RadGroupBox1.RootElement.FlipText = CType(resources.GetObject("RadGroupBox1.RootElement.FlipText"), Boolean)
-        Me.RadGroupBox1.RootElement.KeyTip = resources.GetString("RadGroupBox1.RootElement.KeyTip")
         Me.RadGroupBox1.RootElement.Margin = CType(resources.GetObject("RadGroupBox1.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadGroupBox1.RootElement.Text = resources.GetString("RadGroupBox1.RootElement.Text")
         Me.RadGroupBox1.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBox1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadGroupBox1.RootElement.ToolTipText = resources.GetString("RadGroupBox1.RootElement.ToolTipText")
         '
         'lblVFG1
         '
@@ -310,11 +308,9 @@ Partial Class ucoEichfehlergrenzen
         Me.lblVFG1.RootElement.Alignment = CType(resources.GetObject("lblVFG1.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.lblVFG1.RootElement.AngleTransform = CType(resources.GetObject("lblVFG1.RootElement.AngleTransform"), Single)
         Me.lblVFG1.RootElement.FlipText = CType(resources.GetObject("lblVFG1.RootElement.FlipText"), Boolean)
-        Me.lblVFG1.RootElement.KeyTip = resources.GetString("lblVFG1.RootElement.KeyTip")
         Me.lblVFG1.RootElement.Margin = CType(resources.GetObject("lblVFG1.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.lblVFG1.RootElement.Text = resources.GetString("lblVFG1.RootElement.Text")
         Me.lblVFG1.RootElement.TextOrientation = CType(resources.GetObject("lblVFG1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblVFG1.RootElement.ToolTipText = resources.GetString("lblVFG1.RootElement.ToolTipText")
         '
         'lblEFG1
         '
@@ -328,11 +324,9 @@ Partial Class ucoEichfehlergrenzen
         Me.lblEFG1.RootElement.Alignment = CType(resources.GetObject("lblEFG1.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.lblEFG1.RootElement.AngleTransform = CType(resources.GetObject("lblEFG1.RootElement.AngleTransform"), Single)
         Me.lblEFG1.RootElement.FlipText = CType(resources.GetObject("lblEFG1.RootElement.FlipText"), Boolean)
-        Me.lblEFG1.RootElement.KeyTip = resources.GetString("lblEFG1.RootElement.KeyTip")
         Me.lblEFG1.RootElement.Margin = CType(resources.GetObject("lblEFG1.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.lblEFG1.RootElement.Text = resources.GetString("lblEFG1.RootElement.Text")
         Me.lblEFG1.RootElement.TextOrientation = CType(resources.GetObject("lblEFG1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblEFG1.RootElement.ToolTipText = resources.GetString("lblEFG1.RootElement.ToolTipText")
         '
         'RadTextBoxControlBereich1VFG2000e
         '
@@ -347,11 +341,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadTextBoxControlBereich1VFG2000e.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlBereich1VFG2000e.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlBereich1VFG2000e.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlBereich1VFG2000e.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlBereich1VFG2000e.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlBereich1VFG2000e.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlBereich1VFG2000e.RootElement.KeyTip = resources.GetString("RadTextBoxControlBereich1VFG2000e.RootElement.KeyTip")
         Me.RadTextBoxControlBereich1VFG2000e.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich1VFG2000e.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich1VFG2000e.RootElement.Text = resources.GetString("RadTextBoxControlBereich1VFG2000e.RootElement.Text")
         Me.RadTextBoxControlBereich1VFG2000e.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich1VFG2000e.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlBereich1VFG2000e.RootElement.ToolTipText = resources.GetString("RadTextBoxControlBereich1VFG2000e.RootElement.ToolTipText")
         Me.RadTextBoxControlBereich1VFG2000e.TabStop = False
         '
         'RadTextBoxControlBereich1VFG500e
@@ -367,11 +359,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadTextBoxControlBereich1VFG500e.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlBereich1VFG500e.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlBereich1VFG500e.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlBereich1VFG500e.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlBereich1VFG500e.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlBereich1VFG500e.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlBereich1VFG500e.RootElement.KeyTip = resources.GetString("RadTextBoxControlBereich1VFG500e.RootElement.KeyTip")
         Me.RadTextBoxControlBereich1VFG500e.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich1VFG500e.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich1VFG500e.RootElement.Text = resources.GetString("RadTextBoxControlBereich1VFG500e.RootElement.Text")
         Me.RadTextBoxControlBereich1VFG500e.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich1VFG500e.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlBereich1VFG500e.RootElement.ToolTipText = resources.GetString("RadTextBoxControlBereich1VFG500e.RootElement.ToolTipText")
         Me.RadTextBoxControlBereich1VFG500e.TabStop = False
         '
         'RadTextBoxControlBereich1VFG20e
@@ -387,11 +377,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadTextBoxControlBereich1VFG20e.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlBereich1VFG20e.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlBereich1VFG20e.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlBereich1VFG20e.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlBereich1VFG20e.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlBereich1VFG20e.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlBereich1VFG20e.RootElement.KeyTip = resources.GetString("RadTextBoxControlBereich1VFG20e.RootElement.KeyTip")
         Me.RadTextBoxControlBereich1VFG20e.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich1VFG20e.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich1VFG20e.RootElement.Text = resources.GetString("RadTextBoxControlBereich1VFG20e.RootElement.Text")
         Me.RadTextBoxControlBereich1VFG20e.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich1VFG20e.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlBereich1VFG20e.RootElement.ToolTipText = resources.GetString("RadTextBoxControlBereich1VFG20e.RootElement.ToolTipText")
         Me.RadTextBoxControlBereich1VFG20e.TabStop = False
         '
         'RadTextBoxControlBereich1EFG2000e
@@ -407,11 +395,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadTextBoxControlBereich1EFG2000e.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlBereich1EFG2000e.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlBereich1EFG2000e.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlBereich1EFG2000e.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlBereich1EFG2000e.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlBereich1EFG2000e.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlBereich1EFG2000e.RootElement.KeyTip = resources.GetString("RadTextBoxControlBereich1EFG2000e.RootElement.KeyTip")
         Me.RadTextBoxControlBereich1EFG2000e.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich1EFG2000e.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich1EFG2000e.RootElement.Text = resources.GetString("RadTextBoxControlBereich1EFG2000e.RootElement.Text")
         Me.RadTextBoxControlBereich1EFG2000e.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich1EFG2000e.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlBereich1EFG2000e.RootElement.ToolTipText = resources.GetString("RadTextBoxControlBereich1EFG2000e.RootElement.ToolTipText")
         Me.RadTextBoxControlBereich1EFG2000e.TabStop = False
         '
         'RadTextBoxControlBereich1EFG500e
@@ -427,11 +413,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadTextBoxControlBereich1EFG500e.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlBereich1EFG500e.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlBereich1EFG500e.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlBereich1EFG500e.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlBereich1EFG500e.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlBereich1EFG500e.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlBereich1EFG500e.RootElement.KeyTip = resources.GetString("RadTextBoxControlBereich1EFG500e.RootElement.KeyTip")
         Me.RadTextBoxControlBereich1EFG500e.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich1EFG500e.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich1EFG500e.RootElement.Text = resources.GetString("RadTextBoxControlBereich1EFG500e.RootElement.Text")
         Me.RadTextBoxControlBereich1EFG500e.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich1EFG500e.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlBereich1EFG500e.RootElement.ToolTipText = resources.GetString("RadTextBoxControlBereich1EFG500e.RootElement.ToolTipText")
         Me.RadTextBoxControlBereich1EFG500e.TabStop = False
         '
         'RadTextBoxControlBereich1EFG20e
@@ -447,17 +431,15 @@ Partial Class ucoEichfehlergrenzen
         Me.RadTextBoxControlBereich1EFG20e.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlBereich1EFG20e.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlBereich1EFG20e.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlBereich1EFG20e.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlBereich1EFG20e.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlBereich1EFG20e.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlBereich1EFG20e.RootElement.KeyTip = resources.GetString("RadTextBoxControlBereich1EFG20e.RootElement.KeyTip")
         Me.RadTextBoxControlBereich1EFG20e.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich1EFG20e.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich1EFG20e.RootElement.Text = resources.GetString("RadTextBoxControlBereich1EFG20e.RootElement.Text")
         Me.RadTextBoxControlBereich1EFG20e.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich1EFG20e.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlBereich1EFG20e.RootElement.ToolTipText = resources.GetString("RadTextBoxControlBereich1EFG20e.RootElement.ToolTipText")
         Me.RadTextBoxControlBereich1EFG20e.TabStop = False
         '
         'RadTextBoxControlBereich1e2000Bis
         '
-        resources.ApplyResources(Me.RadTextBoxControlBereich1e2000Bis, "RadTextBoxControlBereich1e2000Bis")
         Me.RadTextBoxControlBereich1e2000Bis.IsReadOnly = True
+        resources.ApplyResources(Me.RadTextBoxControlBereich1e2000Bis, "RadTextBoxControlBereich1e2000Bis")
         Me.RadTextBoxControlBereich1e2000Bis.Name = "RadTextBoxControlBereich1e2000Bis"
         '
         '
@@ -467,17 +449,15 @@ Partial Class ucoEichfehlergrenzen
         Me.RadTextBoxControlBereich1e2000Bis.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlBereich1e2000Bis.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlBereich1e2000Bis.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlBereich1e2000Bis.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlBereich1e2000Bis.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlBereich1e2000Bis.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlBereich1e2000Bis.RootElement.KeyTip = resources.GetString("RadTextBoxControlBereich1e2000Bis.RootElement.KeyTip")
         Me.RadTextBoxControlBereich1e2000Bis.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich1e2000Bis.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich1e2000Bis.RootElement.Text = resources.GetString("RadTextBoxControlBereich1e2000Bis.RootElement.Text")
         Me.RadTextBoxControlBereich1e2000Bis.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich1e2000Bis.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlBereich1e2000Bis.RootElement.ToolTipText = resources.GetString("RadTextBoxControlBereich1e2000Bis.RootElement.ToolTipText")
         Me.RadTextBoxControlBereich1e2000Bis.TabStop = False
         '
         'RadTextBoxControlBereich1e500Bis
         '
-        resources.ApplyResources(Me.RadTextBoxControlBereich1e500Bis, "RadTextBoxControlBereich1e500Bis")
         Me.RadTextBoxControlBereich1e500Bis.IsReadOnly = True
+        resources.ApplyResources(Me.RadTextBoxControlBereich1e500Bis, "RadTextBoxControlBereich1e500Bis")
         Me.RadTextBoxControlBereich1e500Bis.Name = "RadTextBoxControlBereich1e500Bis"
         '
         '
@@ -487,17 +467,15 @@ Partial Class ucoEichfehlergrenzen
         Me.RadTextBoxControlBereich1e500Bis.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlBereich1e500Bis.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlBereich1e500Bis.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlBereich1e500Bis.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlBereich1e500Bis.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlBereich1e500Bis.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlBereich1e500Bis.RootElement.KeyTip = resources.GetString("RadTextBoxControlBereich1e500Bis.RootElement.KeyTip")
         Me.RadTextBoxControlBereich1e500Bis.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich1e500Bis.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich1e500Bis.RootElement.Text = resources.GetString("RadTextBoxControlBereich1e500Bis.RootElement.Text")
         Me.RadTextBoxControlBereich1e500Bis.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich1e500Bis.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlBereich1e500Bis.RootElement.ToolTipText = resources.GetString("RadTextBoxControlBereich1e500Bis.RootElement.ToolTipText")
         Me.RadTextBoxControlBereich1e500Bis.TabStop = False
         '
         'RadTextBoxControlBereich1e20Bis
         '
-        resources.ApplyResources(Me.RadTextBoxControlBereich1e20Bis, "RadTextBoxControlBereich1e20Bis")
         Me.RadTextBoxControlBereich1e20Bis.IsReadOnly = True
+        resources.ApplyResources(Me.RadTextBoxControlBereich1e20Bis, "RadTextBoxControlBereich1e20Bis")
         Me.RadTextBoxControlBereich1e20Bis.Name = "RadTextBoxControlBereich1e20Bis"
         '
         '
@@ -507,17 +485,15 @@ Partial Class ucoEichfehlergrenzen
         Me.RadTextBoxControlBereich1e20Bis.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlBereich1e20Bis.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlBereich1e20Bis.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlBereich1e20Bis.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlBereich1e20Bis.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlBereich1e20Bis.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlBereich1e20Bis.RootElement.KeyTip = resources.GetString("RadTextBoxControlBereich1e20Bis.RootElement.KeyTip")
         Me.RadTextBoxControlBereich1e20Bis.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich1e20Bis.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich1e20Bis.RootElement.Text = resources.GetString("RadTextBoxControlBereich1e20Bis.RootElement.Text")
         Me.RadTextBoxControlBereich1e20Bis.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich1e20Bis.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlBereich1e20Bis.RootElement.ToolTipText = resources.GetString("RadTextBoxControlBereich1e20Bis.RootElement.ToolTipText")
         Me.RadTextBoxControlBereich1e20Bis.TabStop = False
         '
         'RadTextBoxControlBereich1e2000
         '
-        resources.ApplyResources(Me.RadTextBoxControlBereich1e2000, "RadTextBoxControlBereich1e2000")
         Me.RadTextBoxControlBereich1e2000.IsReadOnly = True
+        resources.ApplyResources(Me.RadTextBoxControlBereich1e2000, "RadTextBoxControlBereich1e2000")
         Me.RadTextBoxControlBereich1e2000.Name = "RadTextBoxControlBereich1e2000"
         '
         '
@@ -527,17 +503,15 @@ Partial Class ucoEichfehlergrenzen
         Me.RadTextBoxControlBereich1e2000.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlBereich1e2000.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlBereich1e2000.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlBereich1e2000.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlBereich1e2000.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlBereich1e2000.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlBereich1e2000.RootElement.KeyTip = resources.GetString("RadTextBoxControlBereich1e2000.RootElement.KeyTip")
         Me.RadTextBoxControlBereich1e2000.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich1e2000.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich1e2000.RootElement.Text = resources.GetString("RadTextBoxControlBereich1e2000.RootElement.Text")
         Me.RadTextBoxControlBereich1e2000.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich1e2000.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlBereich1e2000.RootElement.ToolTipText = resources.GetString("RadTextBoxControlBereich1e2000.RootElement.ToolTipText")
         Me.RadTextBoxControlBereich1e2000.TabStop = False
         '
         'RadTextBoxControlBereich1e500
         '
-        resources.ApplyResources(Me.RadTextBoxControlBereich1e500, "RadTextBoxControlBereich1e500")
         Me.RadTextBoxControlBereich1e500.IsReadOnly = True
+        resources.ApplyResources(Me.RadTextBoxControlBereich1e500, "RadTextBoxControlBereich1e500")
         Me.RadTextBoxControlBereich1e500.Name = "RadTextBoxControlBereich1e500"
         '
         '
@@ -547,17 +521,15 @@ Partial Class ucoEichfehlergrenzen
         Me.RadTextBoxControlBereich1e500.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlBereich1e500.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlBereich1e500.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlBereich1e500.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlBereich1e500.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlBereich1e500.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlBereich1e500.RootElement.KeyTip = resources.GetString("RadTextBoxControlBereich1e500.RootElement.KeyTip")
         Me.RadTextBoxControlBereich1e500.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich1e500.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich1e500.RootElement.Text = resources.GetString("RadTextBoxControlBereich1e500.RootElement.Text")
         Me.RadTextBoxControlBereich1e500.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich1e500.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlBereich1e500.RootElement.ToolTipText = resources.GetString("RadTextBoxControlBereich1e500.RootElement.ToolTipText")
         Me.RadTextBoxControlBereich1e500.TabStop = False
         '
         'RadTextBoxControlBereich1e20
         '
-        resources.ApplyResources(Me.RadTextBoxControlBereich1e20, "RadTextBoxControlBereich1e20")
         Me.RadTextBoxControlBereich1e20.IsReadOnly = True
+        resources.ApplyResources(Me.RadTextBoxControlBereich1e20, "RadTextBoxControlBereich1e20")
         Me.RadTextBoxControlBereich1e20.Name = "RadTextBoxControlBereich1e20"
         '
         '
@@ -567,11 +539,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadTextBoxControlBereich1e20.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlBereich1e20.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlBereich1e20.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlBereich1e20.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlBereich1e20.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlBereich1e20.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlBereich1e20.RootElement.KeyTip = resources.GetString("RadTextBoxControlBereich1e20.RootElement.KeyTip")
         Me.RadTextBoxControlBereich1e20.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich1e20.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich1e20.RootElement.Text = resources.GetString("RadTextBoxControlBereich1e20.RootElement.Text")
         Me.RadTextBoxControlBereich1e20.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich1e20.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlBereich1e20.RootElement.ToolTipText = resources.GetString("RadTextBoxControlBereich1e20.RootElement.ToolTipText")
         Me.RadTextBoxControlBereich1e20.TabStop = False
         '
         'RadLabel19
@@ -586,11 +556,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel19.RootElement.Alignment = CType(resources.GetObject("RadLabel19.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel19.RootElement.AngleTransform = CType(resources.GetObject("RadLabel19.RootElement.AngleTransform"), Single)
         Me.RadLabel19.RootElement.FlipText = CType(resources.GetObject("RadLabel19.RootElement.FlipText"), Boolean)
-        Me.RadLabel19.RootElement.KeyTip = resources.GetString("RadLabel19.RootElement.KeyTip")
         Me.RadLabel19.RootElement.Margin = CType(resources.GetObject("RadLabel19.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel19.RootElement.Text = resources.GetString("RadLabel19.RootElement.Text")
         Me.RadLabel19.RootElement.TextOrientation = CType(resources.GetObject("RadLabel19.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel19.RootElement.ToolTipText = resources.GetString("RadLabel19.RootElement.ToolTipText")
         '
         'RadLabel20
         '
@@ -604,11 +572,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel20.RootElement.Alignment = CType(resources.GetObject("RadLabel20.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel20.RootElement.AngleTransform = CType(resources.GetObject("RadLabel20.RootElement.AngleTransform"), Single)
         Me.RadLabel20.RootElement.FlipText = CType(resources.GetObject("RadLabel20.RootElement.FlipText"), Boolean)
-        Me.RadLabel20.RootElement.KeyTip = resources.GetString("RadLabel20.RootElement.KeyTip")
         Me.RadLabel20.RootElement.Margin = CType(resources.GetObject("RadLabel20.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel20.RootElement.Text = resources.GetString("RadLabel20.RootElement.Text")
         Me.RadLabel20.RootElement.TextOrientation = CType(resources.GetObject("RadLabel20.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel20.RootElement.ToolTipText = resources.GetString("RadLabel20.RootElement.ToolTipText")
         '
         'RadLabel21
         '
@@ -622,11 +588,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel21.RootElement.Alignment = CType(resources.GetObject("RadLabel21.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel21.RootElement.AngleTransform = CType(resources.GetObject("RadLabel21.RootElement.AngleTransform"), Single)
         Me.RadLabel21.RootElement.FlipText = CType(resources.GetObject("RadLabel21.RootElement.FlipText"), Boolean)
-        Me.RadLabel21.RootElement.KeyTip = resources.GetString("RadLabel21.RootElement.KeyTip")
         Me.RadLabel21.RootElement.Margin = CType(resources.GetObject("RadLabel21.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel21.RootElement.Text = resources.GetString("RadLabel21.RootElement.Text")
         Me.RadLabel21.RootElement.TextOrientation = CType(resources.GetObject("RadLabel21.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel21.RootElement.ToolTipText = resources.GetString("RadLabel21.RootElement.ToolTipText")
         '
         'RadLabel16
         '
@@ -640,11 +604,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel16.RootElement.Alignment = CType(resources.GetObject("RadLabel16.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel16.RootElement.AngleTransform = CType(resources.GetObject("RadLabel16.RootElement.AngleTransform"), Single)
         Me.RadLabel16.RootElement.FlipText = CType(resources.GetObject("RadLabel16.RootElement.FlipText"), Boolean)
-        Me.RadLabel16.RootElement.KeyTip = resources.GetString("RadLabel16.RootElement.KeyTip")
         Me.RadLabel16.RootElement.Margin = CType(resources.GetObject("RadLabel16.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel16.RootElement.Text = resources.GetString("RadLabel16.RootElement.Text")
         Me.RadLabel16.RootElement.TextOrientation = CType(resources.GetObject("RadLabel16.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel16.RootElement.ToolTipText = resources.GetString("RadLabel16.RootElement.ToolTipText")
         '
         'RadLabel17
         '
@@ -658,11 +620,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel17.RootElement.Alignment = CType(resources.GetObject("RadLabel17.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel17.RootElement.AngleTransform = CType(resources.GetObject("RadLabel17.RootElement.AngleTransform"), Single)
         Me.RadLabel17.RootElement.FlipText = CType(resources.GetObject("RadLabel17.RootElement.FlipText"), Boolean)
-        Me.RadLabel17.RootElement.KeyTip = resources.GetString("RadLabel17.RootElement.KeyTip")
         Me.RadLabel17.RootElement.Margin = CType(resources.GetObject("RadLabel17.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel17.RootElement.Text = resources.GetString("RadLabel17.RootElement.Text")
         Me.RadLabel17.RootElement.TextOrientation = CType(resources.GetObject("RadLabel17.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel17.RootElement.ToolTipText = resources.GetString("RadLabel17.RootElement.ToolTipText")
         '
         'RadLabel18
         '
@@ -676,11 +636,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel18.RootElement.Alignment = CType(resources.GetObject("RadLabel18.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel18.RootElement.AngleTransform = CType(resources.GetObject("RadLabel18.RootElement.AngleTransform"), Single)
         Me.RadLabel18.RootElement.FlipText = CType(resources.GetObject("RadLabel18.RootElement.FlipText"), Boolean)
-        Me.RadLabel18.RootElement.KeyTip = resources.GetString("RadLabel18.RootElement.KeyTip")
         Me.RadLabel18.RootElement.Margin = CType(resources.GetObject("RadLabel18.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel18.RootElement.Text = resources.GetString("RadLabel18.RootElement.Text")
         Me.RadLabel18.RootElement.TextOrientation = CType(resources.GetObject("RadLabel18.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel18.RootElement.ToolTipText = resources.GetString("RadLabel18.RootElement.ToolTipText")
         '
         'RadLabel13
         '
@@ -694,11 +652,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel13.RootElement.Alignment = CType(resources.GetObject("RadLabel13.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel13.RootElement.AngleTransform = CType(resources.GetObject("RadLabel13.RootElement.AngleTransform"), Single)
         Me.RadLabel13.RootElement.FlipText = CType(resources.GetObject("RadLabel13.RootElement.FlipText"), Boolean)
-        Me.RadLabel13.RootElement.KeyTip = resources.GetString("RadLabel13.RootElement.KeyTip")
         Me.RadLabel13.RootElement.Margin = CType(resources.GetObject("RadLabel13.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel13.RootElement.Text = resources.GetString("RadLabel13.RootElement.Text")
         Me.RadLabel13.RootElement.TextOrientation = CType(resources.GetObject("RadLabel13.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel13.RootElement.ToolTipText = resources.GetString("RadLabel13.RootElement.ToolTipText")
         '
         'RadLabel14
         '
@@ -712,11 +668,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel14.RootElement.Alignment = CType(resources.GetObject("RadLabel14.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel14.RootElement.AngleTransform = CType(resources.GetObject("RadLabel14.RootElement.AngleTransform"), Single)
         Me.RadLabel14.RootElement.FlipText = CType(resources.GetObject("RadLabel14.RootElement.FlipText"), Boolean)
-        Me.RadLabel14.RootElement.KeyTip = resources.GetString("RadLabel14.RootElement.KeyTip")
         Me.RadLabel14.RootElement.Margin = CType(resources.GetObject("RadLabel14.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel14.RootElement.Text = resources.GetString("RadLabel14.RootElement.Text")
         Me.RadLabel14.RootElement.TextOrientation = CType(resources.GetObject("RadLabel14.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel14.RootElement.ToolTipText = resources.GetString("RadLabel14.RootElement.ToolTipText")
         '
         'RadLabel15
         '
@@ -730,11 +684,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel15.RootElement.Alignment = CType(resources.GetObject("RadLabel15.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel15.RootElement.AngleTransform = CType(resources.GetObject("RadLabel15.RootElement.AngleTransform"), Single)
         Me.RadLabel15.RootElement.FlipText = CType(resources.GetObject("RadLabel15.RootElement.FlipText"), Boolean)
-        Me.RadLabel15.RootElement.KeyTip = resources.GetString("RadLabel15.RootElement.KeyTip")
         Me.RadLabel15.RootElement.Margin = CType(resources.GetObject("RadLabel15.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel15.RootElement.Text = resources.GetString("RadLabel15.RootElement.Text")
         Me.RadLabel15.RootElement.TextOrientation = CType(resources.GetObject("RadLabel15.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel15.RootElement.ToolTipText = resources.GetString("RadLabel15.RootElement.ToolTipText")
         '
         'RadLabel10
         '
@@ -748,11 +700,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel10.RootElement.Alignment = CType(resources.GetObject("RadLabel10.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel10.RootElement.AngleTransform = CType(resources.GetObject("RadLabel10.RootElement.AngleTransform"), Single)
         Me.RadLabel10.RootElement.FlipText = CType(resources.GetObject("RadLabel10.RootElement.FlipText"), Boolean)
-        Me.RadLabel10.RootElement.KeyTip = resources.GetString("RadLabel10.RootElement.KeyTip")
         Me.RadLabel10.RootElement.Margin = CType(resources.GetObject("RadLabel10.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel10.RootElement.Text = resources.GetString("RadLabel10.RootElement.Text")
         Me.RadLabel10.RootElement.TextOrientation = CType(resources.GetObject("RadLabel10.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel10.RootElement.ToolTipText = resources.GetString("RadLabel10.RootElement.ToolTipText")
         '
         'RadLabel11
         '
@@ -766,11 +716,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel11.RootElement.Alignment = CType(resources.GetObject("RadLabel11.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel11.RootElement.AngleTransform = CType(resources.GetObject("RadLabel11.RootElement.AngleTransform"), Single)
         Me.RadLabel11.RootElement.FlipText = CType(resources.GetObject("RadLabel11.RootElement.FlipText"), Boolean)
-        Me.RadLabel11.RootElement.KeyTip = resources.GetString("RadLabel11.RootElement.KeyTip")
         Me.RadLabel11.RootElement.Margin = CType(resources.GetObject("RadLabel11.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel11.RootElement.Text = resources.GetString("RadLabel11.RootElement.Text")
         Me.RadLabel11.RootElement.TextOrientation = CType(resources.GetObject("RadLabel11.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel11.RootElement.ToolTipText = resources.GetString("RadLabel11.RootElement.ToolTipText")
         '
         'RadLabel12
         '
@@ -784,11 +732,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel12.RootElement.Alignment = CType(resources.GetObject("RadLabel12.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel12.RootElement.AngleTransform = CType(resources.GetObject("RadLabel12.RootElement.AngleTransform"), Single)
         Me.RadLabel12.RootElement.FlipText = CType(resources.GetObject("RadLabel12.RootElement.FlipText"), Boolean)
-        Me.RadLabel12.RootElement.KeyTip = resources.GetString("RadLabel12.RootElement.KeyTip")
         Me.RadLabel12.RootElement.Margin = CType(resources.GetObject("RadLabel12.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel12.RootElement.Text = resources.GetString("RadLabel12.RootElement.Text")
         Me.RadLabel12.RootElement.TextOrientation = CType(resources.GetObject("RadLabel12.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel12.RootElement.ToolTipText = resources.GetString("RadLabel12.RootElement.ToolTipText")
         '
         'RadLabel7
         '
@@ -802,11 +748,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel7.RootElement.Alignment = CType(resources.GetObject("RadLabel7.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel7.RootElement.AngleTransform = CType(resources.GetObject("RadLabel7.RootElement.AngleTransform"), Single)
         Me.RadLabel7.RootElement.FlipText = CType(resources.GetObject("RadLabel7.RootElement.FlipText"), Boolean)
-        Me.RadLabel7.RootElement.KeyTip = resources.GetString("RadLabel7.RootElement.KeyTip")
         Me.RadLabel7.RootElement.Margin = CType(resources.GetObject("RadLabel7.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel7.RootElement.Text = resources.GetString("RadLabel7.RootElement.Text")
         Me.RadLabel7.RootElement.TextOrientation = CType(resources.GetObject("RadLabel7.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel7.RootElement.ToolTipText = resources.GetString("RadLabel7.RootElement.ToolTipText")
         '
         'RadLabel8
         '
@@ -820,11 +764,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel8.RootElement.Alignment = CType(resources.GetObject("RadLabel8.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel8.RootElement.AngleTransform = CType(resources.GetObject("RadLabel8.RootElement.AngleTransform"), Single)
         Me.RadLabel8.RootElement.FlipText = CType(resources.GetObject("RadLabel8.RootElement.FlipText"), Boolean)
-        Me.RadLabel8.RootElement.KeyTip = resources.GetString("RadLabel8.RootElement.KeyTip")
         Me.RadLabel8.RootElement.Margin = CType(resources.GetObject("RadLabel8.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel8.RootElement.Text = resources.GetString("RadLabel8.RootElement.Text")
         Me.RadLabel8.RootElement.TextOrientation = CType(resources.GetObject("RadLabel8.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel8.RootElement.ToolTipText = resources.GetString("RadLabel8.RootElement.ToolTipText")
         '
         'RadLabel9
         '
@@ -838,11 +780,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel9.RootElement.Alignment = CType(resources.GetObject("RadLabel9.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel9.RootElement.AngleTransform = CType(resources.GetObject("RadLabel9.RootElement.AngleTransform"), Single)
         Me.RadLabel9.RootElement.FlipText = CType(resources.GetObject("RadLabel9.RootElement.FlipText"), Boolean)
-        Me.RadLabel9.RootElement.KeyTip = resources.GetString("RadLabel9.RootElement.KeyTip")
         Me.RadLabel9.RootElement.Margin = CType(resources.GetObject("RadLabel9.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel9.RootElement.Text = resources.GetString("RadLabel9.RootElement.Text")
         Me.RadLabel9.RootElement.TextOrientation = CType(resources.GetObject("RadLabel9.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel9.RootElement.ToolTipText = resources.GetString("RadLabel9.RootElement.ToolTipText")
         '
         'lblBis3
         '
@@ -856,11 +796,9 @@ Partial Class ucoEichfehlergrenzen
         Me.lblBis3.RootElement.Alignment = CType(resources.GetObject("lblBis3.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.lblBis3.RootElement.AngleTransform = CType(resources.GetObject("lblBis3.RootElement.AngleTransform"), Single)
         Me.lblBis3.RootElement.FlipText = CType(resources.GetObject("lblBis3.RootElement.FlipText"), Boolean)
-        Me.lblBis3.RootElement.KeyTip = resources.GetString("lblBis3.RootElement.KeyTip")
         Me.lblBis3.RootElement.Margin = CType(resources.GetObject("lblBis3.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.lblBis3.RootElement.Text = resources.GetString("lblBis3.RootElement.Text")
         Me.lblBis3.RootElement.TextOrientation = CType(resources.GetObject("lblBis3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblBis3.RootElement.ToolTipText = resources.GetString("lblBis3.RootElement.ToolTipText")
         '
         'lblBis2
         '
@@ -874,11 +812,9 @@ Partial Class ucoEichfehlergrenzen
         Me.lblBis2.RootElement.Alignment = CType(resources.GetObject("lblBis2.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.lblBis2.RootElement.AngleTransform = CType(resources.GetObject("lblBis2.RootElement.AngleTransform"), Single)
         Me.lblBis2.RootElement.FlipText = CType(resources.GetObject("lblBis2.RootElement.FlipText"), Boolean)
-        Me.lblBis2.RootElement.KeyTip = resources.GetString("lblBis2.RootElement.KeyTip")
         Me.lblBis2.RootElement.Margin = CType(resources.GetObject("lblBis2.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.lblBis2.RootElement.Text = resources.GetString("lblBis2.RootElement.Text")
         Me.lblBis2.RootElement.TextOrientation = CType(resources.GetObject("lblBis2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblBis2.RootElement.ToolTipText = resources.GetString("lblBis2.RootElement.ToolTipText")
         '
         'lblBis1
         '
@@ -892,11 +828,9 @@ Partial Class ucoEichfehlergrenzen
         Me.lblBis1.RootElement.Alignment = CType(resources.GetObject("lblBis1.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.lblBis1.RootElement.AngleTransform = CType(resources.GetObject("lblBis1.RootElement.AngleTransform"), Single)
         Me.lblBis1.RootElement.FlipText = CType(resources.GetObject("lblBis1.RootElement.FlipText"), Boolean)
-        Me.lblBis1.RootElement.KeyTip = resources.GetString("lblBis1.RootElement.KeyTip")
         Me.lblBis1.RootElement.Margin = CType(resources.GetObject("lblBis1.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.lblBis1.RootElement.Text = resources.GetString("lblBis1.RootElement.Text")
         Me.lblBis1.RootElement.TextOrientation = CType(resources.GetObject("lblBis1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblBis1.RootElement.ToolTipText = resources.GetString("lblBis1.RootElement.ToolTipText")
         '
         'RadLabel3
         '
@@ -910,11 +844,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel3.RootElement.Alignment = CType(resources.GetObject("RadLabel3.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel3.RootElement.AngleTransform = CType(resources.GetObject("RadLabel3.RootElement.AngleTransform"), Single)
         Me.RadLabel3.RootElement.FlipText = CType(resources.GetObject("RadLabel3.RootElement.FlipText"), Boolean)
-        Me.RadLabel3.RootElement.KeyTip = resources.GetString("RadLabel3.RootElement.KeyTip")
         Me.RadLabel3.RootElement.Margin = CType(resources.GetObject("RadLabel3.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel3.RootElement.Text = resources.GetString("RadLabel3.RootElement.Text")
         Me.RadLabel3.RootElement.TextOrientation = CType(resources.GetObject("RadLabel3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel3.RootElement.ToolTipText = resources.GetString("RadLabel3.RootElement.ToolTipText")
         '
         'RadLabel2
         '
@@ -928,11 +860,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel2.RootElement.Alignment = CType(resources.GetObject("RadLabel2.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel2.RootElement.AngleTransform = CType(resources.GetObject("RadLabel2.RootElement.AngleTransform"), Single)
         Me.RadLabel2.RootElement.FlipText = CType(resources.GetObject("RadLabel2.RootElement.FlipText"), Boolean)
-        Me.RadLabel2.RootElement.KeyTip = resources.GetString("RadLabel2.RootElement.KeyTip")
         Me.RadLabel2.RootElement.Margin = CType(resources.GetObject("RadLabel2.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel2.RootElement.Text = resources.GetString("RadLabel2.RootElement.Text")
         Me.RadLabel2.RootElement.TextOrientation = CType(resources.GetObject("RadLabel2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel2.RootElement.ToolTipText = resources.GetString("RadLabel2.RootElement.ToolTipText")
         '
         'RadLabel1
         '
@@ -946,15 +876,12 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel1.RootElement.Alignment = CType(resources.GetObject("RadLabel1.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel1.RootElement.AngleTransform = CType(resources.GetObject("RadLabel1.RootElement.AngleTransform"), Single)
         Me.RadLabel1.RootElement.FlipText = CType(resources.GetObject("RadLabel1.RootElement.FlipText"), Boolean)
-        Me.RadLabel1.RootElement.KeyTip = resources.GetString("RadLabel1.RootElement.KeyTip")
         Me.RadLabel1.RootElement.Margin = CType(resources.GetObject("RadLabel1.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel1.RootElement.Text = resources.GetString("RadLabel1.RootElement.Text")
         Me.RadLabel1.RootElement.TextOrientation = CType(resources.GetObject("RadLabel1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel1.RootElement.ToolTipText = resources.GetString("RadLabel1.RootElement.ToolTipText")
         '
         'RadGroupBox2
         '
-        resources.ApplyResources(Me.RadGroupBox2, "RadGroupBox2")
         Me.RadGroupBox2.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBox2.Controls.Add(Me.lblVFG2)
         Me.RadGroupBox2.Controls.Add(Me.lblEFG2)
@@ -991,6 +918,7 @@ Partial Class ucoEichfehlergrenzen
         Me.RadGroupBox2.Controls.Add(Me.RadLabel39)
         Me.RadGroupBox2.Controls.Add(Me.RadLabel40)
         Me.RadGroupBox2.Controls.Add(Me.RadLabel41)
+        resources.ApplyResources(Me.RadGroupBox2, "RadGroupBox2")
         Me.RadGroupBox2.Name = "RadGroupBox2"
         '
         '
@@ -1000,11 +928,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadGroupBox2.RootElement.Alignment = CType(resources.GetObject("RadGroupBox2.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadGroupBox2.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBox2.RootElement.AngleTransform"), Single)
         Me.RadGroupBox2.RootElement.FlipText = CType(resources.GetObject("RadGroupBox2.RootElement.FlipText"), Boolean)
-        Me.RadGroupBox2.RootElement.KeyTip = resources.GetString("RadGroupBox2.RootElement.KeyTip")
         Me.RadGroupBox2.RootElement.Margin = CType(resources.GetObject("RadGroupBox2.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadGroupBox2.RootElement.Text = resources.GetString("RadGroupBox2.RootElement.Text")
         Me.RadGroupBox2.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBox2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadGroupBox2.RootElement.ToolTipText = resources.GetString("RadGroupBox2.RootElement.ToolTipText")
         '
         'lblVFG2
         '
@@ -1018,11 +944,9 @@ Partial Class ucoEichfehlergrenzen
         Me.lblVFG2.RootElement.Alignment = CType(resources.GetObject("lblVFG2.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.lblVFG2.RootElement.AngleTransform = CType(resources.GetObject("lblVFG2.RootElement.AngleTransform"), Single)
         Me.lblVFG2.RootElement.FlipText = CType(resources.GetObject("lblVFG2.RootElement.FlipText"), Boolean)
-        Me.lblVFG2.RootElement.KeyTip = resources.GetString("lblVFG2.RootElement.KeyTip")
         Me.lblVFG2.RootElement.Margin = CType(resources.GetObject("lblVFG2.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.lblVFG2.RootElement.Text = resources.GetString("lblVFG2.RootElement.Text")
         Me.lblVFG2.RootElement.TextOrientation = CType(resources.GetObject("lblVFG2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblVFG2.RootElement.ToolTipText = resources.GetString("lblVFG2.RootElement.ToolTipText")
         '
         'lblEFG2
         '
@@ -1036,11 +960,9 @@ Partial Class ucoEichfehlergrenzen
         Me.lblEFG2.RootElement.Alignment = CType(resources.GetObject("lblEFG2.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.lblEFG2.RootElement.AngleTransform = CType(resources.GetObject("lblEFG2.RootElement.AngleTransform"), Single)
         Me.lblEFG2.RootElement.FlipText = CType(resources.GetObject("lblEFG2.RootElement.FlipText"), Boolean)
-        Me.lblEFG2.RootElement.KeyTip = resources.GetString("lblEFG2.RootElement.KeyTip")
         Me.lblEFG2.RootElement.Margin = CType(resources.GetObject("lblEFG2.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.lblEFG2.RootElement.Text = resources.GetString("lblEFG2.RootElement.Text")
         Me.lblEFG2.RootElement.TextOrientation = CType(resources.GetObject("lblEFG2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblEFG2.RootElement.ToolTipText = resources.GetString("lblEFG2.RootElement.ToolTipText")
         '
         'RadTextBoxControlBereich2VFG2000e
         '
@@ -1055,11 +977,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadTextBoxControlBereich2VFG2000e.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlBereich2VFG2000e.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlBereich2VFG2000e.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlBereich2VFG2000e.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlBereich2VFG2000e.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlBereich2VFG2000e.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlBereich2VFG2000e.RootElement.KeyTip = resources.GetString("RadTextBoxControlBereich2VFG2000e.RootElement.KeyTip")
         Me.RadTextBoxControlBereich2VFG2000e.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich2VFG2000e.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich2VFG2000e.RootElement.Text = resources.GetString("RadTextBoxControlBereich2VFG2000e.RootElement.Text")
         Me.RadTextBoxControlBereich2VFG2000e.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich2VFG2000e.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlBereich2VFG2000e.RootElement.ToolTipText = resources.GetString("RadTextBoxControlBereich2VFG2000e.RootElement.ToolTipText")
         Me.RadTextBoxControlBereich2VFG2000e.TabStop = False
         '
         'RadTextBoxControlBereich2VFG500e
@@ -1075,11 +995,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadTextBoxControlBereich2VFG500e.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlBereich2VFG500e.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlBereich2VFG500e.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlBereich2VFG500e.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlBereich2VFG500e.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlBereich2VFG500e.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlBereich2VFG500e.RootElement.KeyTip = resources.GetString("RadTextBoxControlBereich2VFG500e.RootElement.KeyTip")
         Me.RadTextBoxControlBereich2VFG500e.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich2VFG500e.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich2VFG500e.RootElement.Text = resources.GetString("RadTextBoxControlBereich2VFG500e.RootElement.Text")
         Me.RadTextBoxControlBereich2VFG500e.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich2VFG500e.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlBereich2VFG500e.RootElement.ToolTipText = resources.GetString("RadTextBoxControlBereich2VFG500e.RootElement.ToolTipText")
         Me.RadTextBoxControlBereich2VFG500e.TabStop = False
         '
         'RadTextBoxControlBereich2VFG20e
@@ -1095,11 +1013,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadTextBoxControlBereich2VFG20e.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlBereich2VFG20e.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlBereich2VFG20e.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlBereich2VFG20e.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlBereich2VFG20e.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlBereich2VFG20e.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlBereich2VFG20e.RootElement.KeyTip = resources.GetString("RadTextBoxControlBereich2VFG20e.RootElement.KeyTip")
         Me.RadTextBoxControlBereich2VFG20e.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich2VFG20e.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich2VFG20e.RootElement.Text = resources.GetString("RadTextBoxControlBereich2VFG20e.RootElement.Text")
         Me.RadTextBoxControlBereich2VFG20e.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich2VFG20e.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlBereich2VFG20e.RootElement.ToolTipText = resources.GetString("RadTextBoxControlBereich2VFG20e.RootElement.ToolTipText")
         Me.RadTextBoxControlBereich2VFG20e.TabStop = False
         '
         'RadTextBoxControlBereich2EFG2000e
@@ -1115,11 +1031,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadTextBoxControlBereich2EFG2000e.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlBereich2EFG2000e.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlBereich2EFG2000e.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlBereich2EFG2000e.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlBereich2EFG2000e.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlBereich2EFG2000e.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlBereich2EFG2000e.RootElement.KeyTip = resources.GetString("RadTextBoxControlBereich2EFG2000e.RootElement.KeyTip")
         Me.RadTextBoxControlBereich2EFG2000e.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich2EFG2000e.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich2EFG2000e.RootElement.Text = resources.GetString("RadTextBoxControlBereich2EFG2000e.RootElement.Text")
         Me.RadTextBoxControlBereich2EFG2000e.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich2EFG2000e.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlBereich2EFG2000e.RootElement.ToolTipText = resources.GetString("RadTextBoxControlBereich2EFG2000e.RootElement.ToolTipText")
         Me.RadTextBoxControlBereich2EFG2000e.TabStop = False
         '
         'RadTextBoxControlBereich2EFG500e
@@ -1135,11 +1049,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadTextBoxControlBereich2EFG500e.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlBereich2EFG500e.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlBereich2EFG500e.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlBereich2EFG500e.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlBereich2EFG500e.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlBereich2EFG500e.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlBereich2EFG500e.RootElement.KeyTip = resources.GetString("RadTextBoxControlBereich2EFG500e.RootElement.KeyTip")
         Me.RadTextBoxControlBereich2EFG500e.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich2EFG500e.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich2EFG500e.RootElement.Text = resources.GetString("RadTextBoxControlBereich2EFG500e.RootElement.Text")
         Me.RadTextBoxControlBereich2EFG500e.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich2EFG500e.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlBereich2EFG500e.RootElement.ToolTipText = resources.GetString("RadTextBoxControlBereich2EFG500e.RootElement.ToolTipText")
         Me.RadTextBoxControlBereich2EFG500e.TabStop = False
         '
         'RadTextBoxControlBereich2EFG20e
@@ -1155,17 +1067,15 @@ Partial Class ucoEichfehlergrenzen
         Me.RadTextBoxControlBereich2EFG20e.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlBereich2EFG20e.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlBereich2EFG20e.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlBereich2EFG20e.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlBereich2EFG20e.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlBereich2EFG20e.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlBereich2EFG20e.RootElement.KeyTip = resources.GetString("RadTextBoxControlBereich2EFG20e.RootElement.KeyTip")
         Me.RadTextBoxControlBereich2EFG20e.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich2EFG20e.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich2EFG20e.RootElement.Text = resources.GetString("RadTextBoxControlBereich2EFG20e.RootElement.Text")
         Me.RadTextBoxControlBereich2EFG20e.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich2EFG20e.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlBereich2EFG20e.RootElement.ToolTipText = resources.GetString("RadTextBoxControlBereich2EFG20e.RootElement.ToolTipText")
         Me.RadTextBoxControlBereich2EFG20e.TabStop = False
         '
         'RadTextBoxControlBereich2e2000Bis
         '
-        resources.ApplyResources(Me.RadTextBoxControlBereich2e2000Bis, "RadTextBoxControlBereich2e2000Bis")
         Me.RadTextBoxControlBereich2e2000Bis.IsReadOnly = True
+        resources.ApplyResources(Me.RadTextBoxControlBereich2e2000Bis, "RadTextBoxControlBereich2e2000Bis")
         Me.RadTextBoxControlBereich2e2000Bis.Name = "RadTextBoxControlBereich2e2000Bis"
         '
         '
@@ -1175,17 +1085,15 @@ Partial Class ucoEichfehlergrenzen
         Me.RadTextBoxControlBereich2e2000Bis.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlBereich2e2000Bis.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlBereich2e2000Bis.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlBereich2e2000Bis.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlBereich2e2000Bis.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlBereich2e2000Bis.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlBereich2e2000Bis.RootElement.KeyTip = resources.GetString("RadTextBoxControlBereich2e2000Bis.RootElement.KeyTip")
         Me.RadTextBoxControlBereich2e2000Bis.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich2e2000Bis.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich2e2000Bis.RootElement.Text = resources.GetString("RadTextBoxControlBereich2e2000Bis.RootElement.Text")
         Me.RadTextBoxControlBereich2e2000Bis.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich2e2000Bis.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlBereich2e2000Bis.RootElement.ToolTipText = resources.GetString("RadTextBoxControlBereich2e2000Bis.RootElement.ToolTipText")
         Me.RadTextBoxControlBereich2e2000Bis.TabStop = False
         '
         'RadTextBoxControlBereich2e500Bis
         '
-        resources.ApplyResources(Me.RadTextBoxControlBereich2e500Bis, "RadTextBoxControlBereich2e500Bis")
         Me.RadTextBoxControlBereich2e500Bis.IsReadOnly = True
+        resources.ApplyResources(Me.RadTextBoxControlBereich2e500Bis, "RadTextBoxControlBereich2e500Bis")
         Me.RadTextBoxControlBereich2e500Bis.Name = "RadTextBoxControlBereich2e500Bis"
         '
         '
@@ -1195,17 +1103,15 @@ Partial Class ucoEichfehlergrenzen
         Me.RadTextBoxControlBereich2e500Bis.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlBereich2e500Bis.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlBereich2e500Bis.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlBereich2e500Bis.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlBereich2e500Bis.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlBereich2e500Bis.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlBereich2e500Bis.RootElement.KeyTip = resources.GetString("RadTextBoxControlBereich2e500Bis.RootElement.KeyTip")
         Me.RadTextBoxControlBereich2e500Bis.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich2e500Bis.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich2e500Bis.RootElement.Text = resources.GetString("RadTextBoxControlBereich2e500Bis.RootElement.Text")
         Me.RadTextBoxControlBereich2e500Bis.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich2e500Bis.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlBereich2e500Bis.RootElement.ToolTipText = resources.GetString("RadTextBoxControlBereich2e500Bis.RootElement.ToolTipText")
         Me.RadTextBoxControlBereich2e500Bis.TabStop = False
         '
         'RadTextBoxControlBereich2e20Bis
         '
-        resources.ApplyResources(Me.RadTextBoxControlBereich2e20Bis, "RadTextBoxControlBereich2e20Bis")
         Me.RadTextBoxControlBereich2e20Bis.IsReadOnly = True
+        resources.ApplyResources(Me.RadTextBoxControlBereich2e20Bis, "RadTextBoxControlBereich2e20Bis")
         Me.RadTextBoxControlBereich2e20Bis.Name = "RadTextBoxControlBereich2e20Bis"
         '
         '
@@ -1215,17 +1121,15 @@ Partial Class ucoEichfehlergrenzen
         Me.RadTextBoxControlBereich2e20Bis.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlBereich2e20Bis.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlBereich2e20Bis.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlBereich2e20Bis.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlBereich2e20Bis.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlBereich2e20Bis.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlBereich2e20Bis.RootElement.KeyTip = resources.GetString("RadTextBoxControlBereich2e20Bis.RootElement.KeyTip")
         Me.RadTextBoxControlBereich2e20Bis.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich2e20Bis.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich2e20Bis.RootElement.Text = resources.GetString("RadTextBoxControlBereich2e20Bis.RootElement.Text")
         Me.RadTextBoxControlBereich2e20Bis.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich2e20Bis.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlBereich2e20Bis.RootElement.ToolTipText = resources.GetString("RadTextBoxControlBereich2e20Bis.RootElement.ToolTipText")
         Me.RadTextBoxControlBereich2e20Bis.TabStop = False
         '
         'RadTextBoxControlBereich2e2000
         '
-        resources.ApplyResources(Me.RadTextBoxControlBereich2e2000, "RadTextBoxControlBereich2e2000")
         Me.RadTextBoxControlBereich2e2000.IsReadOnly = True
+        resources.ApplyResources(Me.RadTextBoxControlBereich2e2000, "RadTextBoxControlBereich2e2000")
         Me.RadTextBoxControlBereich2e2000.Name = "RadTextBoxControlBereich2e2000"
         '
         '
@@ -1235,17 +1139,15 @@ Partial Class ucoEichfehlergrenzen
         Me.RadTextBoxControlBereich2e2000.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlBereich2e2000.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlBereich2e2000.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlBereich2e2000.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlBereich2e2000.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlBereich2e2000.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlBereich2e2000.RootElement.KeyTip = resources.GetString("RadTextBoxControlBereich2e2000.RootElement.KeyTip")
         Me.RadTextBoxControlBereich2e2000.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich2e2000.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich2e2000.RootElement.Text = resources.GetString("RadTextBoxControlBereich2e2000.RootElement.Text")
         Me.RadTextBoxControlBereich2e2000.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich2e2000.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlBereich2e2000.RootElement.ToolTipText = resources.GetString("RadTextBoxControlBereich2e2000.RootElement.ToolTipText")
         Me.RadTextBoxControlBereich2e2000.TabStop = False
         '
         'RadTextBoxControlBereich2e500
         '
-        resources.ApplyResources(Me.RadTextBoxControlBereich2e500, "RadTextBoxControlBereich2e500")
         Me.RadTextBoxControlBereich2e500.IsReadOnly = True
+        resources.ApplyResources(Me.RadTextBoxControlBereich2e500, "RadTextBoxControlBereich2e500")
         Me.RadTextBoxControlBereich2e500.Name = "RadTextBoxControlBereich2e500"
         '
         '
@@ -1255,17 +1157,15 @@ Partial Class ucoEichfehlergrenzen
         Me.RadTextBoxControlBereich2e500.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlBereich2e500.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlBereich2e500.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlBereich2e500.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlBereich2e500.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlBereich2e500.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlBereich2e500.RootElement.KeyTip = resources.GetString("RadTextBoxControlBereich2e500.RootElement.KeyTip")
         Me.RadTextBoxControlBereich2e500.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich2e500.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich2e500.RootElement.Text = resources.GetString("RadTextBoxControlBereich2e500.RootElement.Text")
         Me.RadTextBoxControlBereich2e500.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich2e500.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlBereich2e500.RootElement.ToolTipText = resources.GetString("RadTextBoxControlBereich2e500.RootElement.ToolTipText")
         Me.RadTextBoxControlBereich2e500.TabStop = False
         '
         'RadTextBoxControlBereich2e20
         '
-        resources.ApplyResources(Me.RadTextBoxControlBereich2e20, "RadTextBoxControlBereich2e20")
         Me.RadTextBoxControlBereich2e20.IsReadOnly = True
+        resources.ApplyResources(Me.RadTextBoxControlBereich2e20, "RadTextBoxControlBereich2e20")
         Me.RadTextBoxControlBereich2e20.Name = "RadTextBoxControlBereich2e20"
         '
         '
@@ -1275,11 +1175,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadTextBoxControlBereich2e20.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlBereich2e20.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlBereich2e20.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlBereich2e20.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlBereich2e20.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlBereich2e20.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlBereich2e20.RootElement.KeyTip = resources.GetString("RadTextBoxControlBereich2e20.RootElement.KeyTip")
         Me.RadTextBoxControlBereich2e20.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich2e20.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich2e20.RootElement.Text = resources.GetString("RadTextBoxControlBereich2e20.RootElement.Text")
         Me.RadTextBoxControlBereich2e20.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich2e20.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlBereich2e20.RootElement.ToolTipText = resources.GetString("RadTextBoxControlBereich2e20.RootElement.ToolTipText")
         Me.RadTextBoxControlBereich2e20.TabStop = False
         '
         'RadLabel6
@@ -1294,11 +1192,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel6.RootElement.Alignment = CType(resources.GetObject("RadLabel6.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel6.RootElement.AngleTransform = CType(resources.GetObject("RadLabel6.RootElement.AngleTransform"), Single)
         Me.RadLabel6.RootElement.FlipText = CType(resources.GetObject("RadLabel6.RootElement.FlipText"), Boolean)
-        Me.RadLabel6.RootElement.KeyTip = resources.GetString("RadLabel6.RootElement.KeyTip")
         Me.RadLabel6.RootElement.Margin = CType(resources.GetObject("RadLabel6.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel6.RootElement.Text = resources.GetString("RadLabel6.RootElement.Text")
         Me.RadLabel6.RootElement.TextOrientation = CType(resources.GetObject("RadLabel6.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel6.RootElement.ToolTipText = resources.GetString("RadLabel6.RootElement.ToolTipText")
         '
         'RadLabel22
         '
@@ -1312,11 +1208,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel22.RootElement.Alignment = CType(resources.GetObject("RadLabel22.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel22.RootElement.AngleTransform = CType(resources.GetObject("RadLabel22.RootElement.AngleTransform"), Single)
         Me.RadLabel22.RootElement.FlipText = CType(resources.GetObject("RadLabel22.RootElement.FlipText"), Boolean)
-        Me.RadLabel22.RootElement.KeyTip = resources.GetString("RadLabel22.RootElement.KeyTip")
         Me.RadLabel22.RootElement.Margin = CType(resources.GetObject("RadLabel22.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel22.RootElement.Text = resources.GetString("RadLabel22.RootElement.Text")
         Me.RadLabel22.RootElement.TextOrientation = CType(resources.GetObject("RadLabel22.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel22.RootElement.ToolTipText = resources.GetString("RadLabel22.RootElement.ToolTipText")
         '
         'RadLabel23
         '
@@ -1330,11 +1224,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel23.RootElement.Alignment = CType(resources.GetObject("RadLabel23.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel23.RootElement.AngleTransform = CType(resources.GetObject("RadLabel23.RootElement.AngleTransform"), Single)
         Me.RadLabel23.RootElement.FlipText = CType(resources.GetObject("RadLabel23.RootElement.FlipText"), Boolean)
-        Me.RadLabel23.RootElement.KeyTip = resources.GetString("RadLabel23.RootElement.KeyTip")
         Me.RadLabel23.RootElement.Margin = CType(resources.GetObject("RadLabel23.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel23.RootElement.Text = resources.GetString("RadLabel23.RootElement.Text")
         Me.RadLabel23.RootElement.TextOrientation = CType(resources.GetObject("RadLabel23.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel23.RootElement.ToolTipText = resources.GetString("RadLabel23.RootElement.ToolTipText")
         '
         'RadLabel24
         '
@@ -1348,11 +1240,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel24.RootElement.Alignment = CType(resources.GetObject("RadLabel24.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel24.RootElement.AngleTransform = CType(resources.GetObject("RadLabel24.RootElement.AngleTransform"), Single)
         Me.RadLabel24.RootElement.FlipText = CType(resources.GetObject("RadLabel24.RootElement.FlipText"), Boolean)
-        Me.RadLabel24.RootElement.KeyTip = resources.GetString("RadLabel24.RootElement.KeyTip")
         Me.RadLabel24.RootElement.Margin = CType(resources.GetObject("RadLabel24.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel24.RootElement.Text = resources.GetString("RadLabel24.RootElement.Text")
         Me.RadLabel24.RootElement.TextOrientation = CType(resources.GetObject("RadLabel24.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel24.RootElement.ToolTipText = resources.GetString("RadLabel24.RootElement.ToolTipText")
         '
         'RadLabel25
         '
@@ -1366,11 +1256,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel25.RootElement.Alignment = CType(resources.GetObject("RadLabel25.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel25.RootElement.AngleTransform = CType(resources.GetObject("RadLabel25.RootElement.AngleTransform"), Single)
         Me.RadLabel25.RootElement.FlipText = CType(resources.GetObject("RadLabel25.RootElement.FlipText"), Boolean)
-        Me.RadLabel25.RootElement.KeyTip = resources.GetString("RadLabel25.RootElement.KeyTip")
         Me.RadLabel25.RootElement.Margin = CType(resources.GetObject("RadLabel25.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel25.RootElement.Text = resources.GetString("RadLabel25.RootElement.Text")
         Me.RadLabel25.RootElement.TextOrientation = CType(resources.GetObject("RadLabel25.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel25.RootElement.ToolTipText = resources.GetString("RadLabel25.RootElement.ToolTipText")
         '
         'RadLabel26
         '
@@ -1384,11 +1272,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel26.RootElement.Alignment = CType(resources.GetObject("RadLabel26.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel26.RootElement.AngleTransform = CType(resources.GetObject("RadLabel26.RootElement.AngleTransform"), Single)
         Me.RadLabel26.RootElement.FlipText = CType(resources.GetObject("RadLabel26.RootElement.FlipText"), Boolean)
-        Me.RadLabel26.RootElement.KeyTip = resources.GetString("RadLabel26.RootElement.KeyTip")
         Me.RadLabel26.RootElement.Margin = CType(resources.GetObject("RadLabel26.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel26.RootElement.Text = resources.GetString("RadLabel26.RootElement.Text")
         Me.RadLabel26.RootElement.TextOrientation = CType(resources.GetObject("RadLabel26.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel26.RootElement.ToolTipText = resources.GetString("RadLabel26.RootElement.ToolTipText")
         '
         'RadLabel27
         '
@@ -1402,11 +1288,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel27.RootElement.Alignment = CType(resources.GetObject("RadLabel27.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel27.RootElement.AngleTransform = CType(resources.GetObject("RadLabel27.RootElement.AngleTransform"), Single)
         Me.RadLabel27.RootElement.FlipText = CType(resources.GetObject("RadLabel27.RootElement.FlipText"), Boolean)
-        Me.RadLabel27.RootElement.KeyTip = resources.GetString("RadLabel27.RootElement.KeyTip")
         Me.RadLabel27.RootElement.Margin = CType(resources.GetObject("RadLabel27.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel27.RootElement.Text = resources.GetString("RadLabel27.RootElement.Text")
         Me.RadLabel27.RootElement.TextOrientation = CType(resources.GetObject("RadLabel27.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel27.RootElement.ToolTipText = resources.GetString("RadLabel27.RootElement.ToolTipText")
         '
         'RadLabel28
         '
@@ -1420,11 +1304,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel28.RootElement.Alignment = CType(resources.GetObject("RadLabel28.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel28.RootElement.AngleTransform = CType(resources.GetObject("RadLabel28.RootElement.AngleTransform"), Single)
         Me.RadLabel28.RootElement.FlipText = CType(resources.GetObject("RadLabel28.RootElement.FlipText"), Boolean)
-        Me.RadLabel28.RootElement.KeyTip = resources.GetString("RadLabel28.RootElement.KeyTip")
         Me.RadLabel28.RootElement.Margin = CType(resources.GetObject("RadLabel28.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel28.RootElement.Text = resources.GetString("RadLabel28.RootElement.Text")
         Me.RadLabel28.RootElement.TextOrientation = CType(resources.GetObject("RadLabel28.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel28.RootElement.ToolTipText = resources.GetString("RadLabel28.RootElement.ToolTipText")
         '
         'RadLabel29
         '
@@ -1438,11 +1320,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel29.RootElement.Alignment = CType(resources.GetObject("RadLabel29.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel29.RootElement.AngleTransform = CType(resources.GetObject("RadLabel29.RootElement.AngleTransform"), Single)
         Me.RadLabel29.RootElement.FlipText = CType(resources.GetObject("RadLabel29.RootElement.FlipText"), Boolean)
-        Me.RadLabel29.RootElement.KeyTip = resources.GetString("RadLabel29.RootElement.KeyTip")
         Me.RadLabel29.RootElement.Margin = CType(resources.GetObject("RadLabel29.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel29.RootElement.Text = resources.GetString("RadLabel29.RootElement.Text")
         Me.RadLabel29.RootElement.TextOrientation = CType(resources.GetObject("RadLabel29.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel29.RootElement.ToolTipText = resources.GetString("RadLabel29.RootElement.ToolTipText")
         '
         'RadLabel30
         '
@@ -1456,11 +1336,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel30.RootElement.Alignment = CType(resources.GetObject("RadLabel30.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel30.RootElement.AngleTransform = CType(resources.GetObject("RadLabel30.RootElement.AngleTransform"), Single)
         Me.RadLabel30.RootElement.FlipText = CType(resources.GetObject("RadLabel30.RootElement.FlipText"), Boolean)
-        Me.RadLabel30.RootElement.KeyTip = resources.GetString("RadLabel30.RootElement.KeyTip")
         Me.RadLabel30.RootElement.Margin = CType(resources.GetObject("RadLabel30.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel30.RootElement.Text = resources.GetString("RadLabel30.RootElement.Text")
         Me.RadLabel30.RootElement.TextOrientation = CType(resources.GetObject("RadLabel30.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel30.RootElement.ToolTipText = resources.GetString("RadLabel30.RootElement.ToolTipText")
         '
         'RadLabel31
         '
@@ -1474,11 +1352,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel31.RootElement.Alignment = CType(resources.GetObject("RadLabel31.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel31.RootElement.AngleTransform = CType(resources.GetObject("RadLabel31.RootElement.AngleTransform"), Single)
         Me.RadLabel31.RootElement.FlipText = CType(resources.GetObject("RadLabel31.RootElement.FlipText"), Boolean)
-        Me.RadLabel31.RootElement.KeyTip = resources.GetString("RadLabel31.RootElement.KeyTip")
         Me.RadLabel31.RootElement.Margin = CType(resources.GetObject("RadLabel31.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel31.RootElement.Text = resources.GetString("RadLabel31.RootElement.Text")
         Me.RadLabel31.RootElement.TextOrientation = CType(resources.GetObject("RadLabel31.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel31.RootElement.ToolTipText = resources.GetString("RadLabel31.RootElement.ToolTipText")
         '
         'RadLabel32
         '
@@ -1492,11 +1368,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel32.RootElement.Alignment = CType(resources.GetObject("RadLabel32.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel32.RootElement.AngleTransform = CType(resources.GetObject("RadLabel32.RootElement.AngleTransform"), Single)
         Me.RadLabel32.RootElement.FlipText = CType(resources.GetObject("RadLabel32.RootElement.FlipText"), Boolean)
-        Me.RadLabel32.RootElement.KeyTip = resources.GetString("RadLabel32.RootElement.KeyTip")
         Me.RadLabel32.RootElement.Margin = CType(resources.GetObject("RadLabel32.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel32.RootElement.Text = resources.GetString("RadLabel32.RootElement.Text")
         Me.RadLabel32.RootElement.TextOrientation = CType(resources.GetObject("RadLabel32.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel32.RootElement.ToolTipText = resources.GetString("RadLabel32.RootElement.ToolTipText")
         '
         'RadLabel33
         '
@@ -1510,11 +1384,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel33.RootElement.Alignment = CType(resources.GetObject("RadLabel33.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel33.RootElement.AngleTransform = CType(resources.GetObject("RadLabel33.RootElement.AngleTransform"), Single)
         Me.RadLabel33.RootElement.FlipText = CType(resources.GetObject("RadLabel33.RootElement.FlipText"), Boolean)
-        Me.RadLabel33.RootElement.KeyTip = resources.GetString("RadLabel33.RootElement.KeyTip")
         Me.RadLabel33.RootElement.Margin = CType(resources.GetObject("RadLabel33.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel33.RootElement.Text = resources.GetString("RadLabel33.RootElement.Text")
         Me.RadLabel33.RootElement.TextOrientation = CType(resources.GetObject("RadLabel33.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel33.RootElement.ToolTipText = resources.GetString("RadLabel33.RootElement.ToolTipText")
         '
         'RadLabel34
         '
@@ -1528,11 +1400,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel34.RootElement.Alignment = CType(resources.GetObject("RadLabel34.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel34.RootElement.AngleTransform = CType(resources.GetObject("RadLabel34.RootElement.AngleTransform"), Single)
         Me.RadLabel34.RootElement.FlipText = CType(resources.GetObject("RadLabel34.RootElement.FlipText"), Boolean)
-        Me.RadLabel34.RootElement.KeyTip = resources.GetString("RadLabel34.RootElement.KeyTip")
         Me.RadLabel34.RootElement.Margin = CType(resources.GetObject("RadLabel34.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel34.RootElement.Text = resources.GetString("RadLabel34.RootElement.Text")
         Me.RadLabel34.RootElement.TextOrientation = CType(resources.GetObject("RadLabel34.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel34.RootElement.ToolTipText = resources.GetString("RadLabel34.RootElement.ToolTipText")
         '
         'RadLabel35
         '
@@ -1546,11 +1416,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel35.RootElement.Alignment = CType(resources.GetObject("RadLabel35.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel35.RootElement.AngleTransform = CType(resources.GetObject("RadLabel35.RootElement.AngleTransform"), Single)
         Me.RadLabel35.RootElement.FlipText = CType(resources.GetObject("RadLabel35.RootElement.FlipText"), Boolean)
-        Me.RadLabel35.RootElement.KeyTip = resources.GetString("RadLabel35.RootElement.KeyTip")
         Me.RadLabel35.RootElement.Margin = CType(resources.GetObject("RadLabel35.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel35.RootElement.Text = resources.GetString("RadLabel35.RootElement.Text")
         Me.RadLabel35.RootElement.TextOrientation = CType(resources.GetObject("RadLabel35.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel35.RootElement.ToolTipText = resources.GetString("RadLabel35.RootElement.ToolTipText")
         '
         'lblBis6
         '
@@ -1564,11 +1432,9 @@ Partial Class ucoEichfehlergrenzen
         Me.lblBis6.RootElement.Alignment = CType(resources.GetObject("lblBis6.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.lblBis6.RootElement.AngleTransform = CType(resources.GetObject("lblBis6.RootElement.AngleTransform"), Single)
         Me.lblBis6.RootElement.FlipText = CType(resources.GetObject("lblBis6.RootElement.FlipText"), Boolean)
-        Me.lblBis6.RootElement.KeyTip = resources.GetString("lblBis6.RootElement.KeyTip")
         Me.lblBis6.RootElement.Margin = CType(resources.GetObject("lblBis6.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.lblBis6.RootElement.Text = resources.GetString("lblBis6.RootElement.Text")
         Me.lblBis6.RootElement.TextOrientation = CType(resources.GetObject("lblBis6.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblBis6.RootElement.ToolTipText = resources.GetString("lblBis6.RootElement.ToolTipText")
         '
         'lblBis5
         '
@@ -1582,11 +1448,9 @@ Partial Class ucoEichfehlergrenzen
         Me.lblBis5.RootElement.Alignment = CType(resources.GetObject("lblBis5.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.lblBis5.RootElement.AngleTransform = CType(resources.GetObject("lblBis5.RootElement.AngleTransform"), Single)
         Me.lblBis5.RootElement.FlipText = CType(resources.GetObject("lblBis5.RootElement.FlipText"), Boolean)
-        Me.lblBis5.RootElement.KeyTip = resources.GetString("lblBis5.RootElement.KeyTip")
         Me.lblBis5.RootElement.Margin = CType(resources.GetObject("lblBis5.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.lblBis5.RootElement.Text = resources.GetString("lblBis5.RootElement.Text")
         Me.lblBis5.RootElement.TextOrientation = CType(resources.GetObject("lblBis5.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblBis5.RootElement.ToolTipText = resources.GetString("lblBis5.RootElement.ToolTipText")
         '
         'lblBis4
         '
@@ -1600,11 +1464,9 @@ Partial Class ucoEichfehlergrenzen
         Me.lblBis4.RootElement.Alignment = CType(resources.GetObject("lblBis4.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.lblBis4.RootElement.AngleTransform = CType(resources.GetObject("lblBis4.RootElement.AngleTransform"), Single)
         Me.lblBis4.RootElement.FlipText = CType(resources.GetObject("lblBis4.RootElement.FlipText"), Boolean)
-        Me.lblBis4.RootElement.KeyTip = resources.GetString("lblBis4.RootElement.KeyTip")
         Me.lblBis4.RootElement.Margin = CType(resources.GetObject("lblBis4.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.lblBis4.RootElement.Text = resources.GetString("lblBis4.RootElement.Text")
         Me.lblBis4.RootElement.TextOrientation = CType(resources.GetObject("lblBis4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblBis4.RootElement.ToolTipText = resources.GetString("lblBis4.RootElement.ToolTipText")
         '
         'RadLabel39
         '
@@ -1618,11 +1480,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel39.RootElement.Alignment = CType(resources.GetObject("RadLabel39.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel39.RootElement.AngleTransform = CType(resources.GetObject("RadLabel39.RootElement.AngleTransform"), Single)
         Me.RadLabel39.RootElement.FlipText = CType(resources.GetObject("RadLabel39.RootElement.FlipText"), Boolean)
-        Me.RadLabel39.RootElement.KeyTip = resources.GetString("RadLabel39.RootElement.KeyTip")
         Me.RadLabel39.RootElement.Margin = CType(resources.GetObject("RadLabel39.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel39.RootElement.Text = resources.GetString("RadLabel39.RootElement.Text")
         Me.RadLabel39.RootElement.TextOrientation = CType(resources.GetObject("RadLabel39.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel39.RootElement.ToolTipText = resources.GetString("RadLabel39.RootElement.ToolTipText")
         '
         'RadLabel40
         '
@@ -1636,11 +1496,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel40.RootElement.Alignment = CType(resources.GetObject("RadLabel40.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel40.RootElement.AngleTransform = CType(resources.GetObject("RadLabel40.RootElement.AngleTransform"), Single)
         Me.RadLabel40.RootElement.FlipText = CType(resources.GetObject("RadLabel40.RootElement.FlipText"), Boolean)
-        Me.RadLabel40.RootElement.KeyTip = resources.GetString("RadLabel40.RootElement.KeyTip")
         Me.RadLabel40.RootElement.Margin = CType(resources.GetObject("RadLabel40.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel40.RootElement.Text = resources.GetString("RadLabel40.RootElement.Text")
         Me.RadLabel40.RootElement.TextOrientation = CType(resources.GetObject("RadLabel40.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel40.RootElement.ToolTipText = resources.GetString("RadLabel40.RootElement.ToolTipText")
         '
         'RadLabel41
         '
@@ -1654,15 +1512,12 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel41.RootElement.Alignment = CType(resources.GetObject("RadLabel41.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel41.RootElement.AngleTransform = CType(resources.GetObject("RadLabel41.RootElement.AngleTransform"), Single)
         Me.RadLabel41.RootElement.FlipText = CType(resources.GetObject("RadLabel41.RootElement.FlipText"), Boolean)
-        Me.RadLabel41.RootElement.KeyTip = resources.GetString("RadLabel41.RootElement.KeyTip")
         Me.RadLabel41.RootElement.Margin = CType(resources.GetObject("RadLabel41.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel41.RootElement.Text = resources.GetString("RadLabel41.RootElement.Text")
         Me.RadLabel41.RootElement.TextOrientation = CType(resources.GetObject("RadLabel41.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel41.RootElement.ToolTipText = resources.GetString("RadLabel41.RootElement.ToolTipText")
         '
         'RadGroupBox3
         '
-        resources.ApplyResources(Me.RadGroupBox3, "RadGroupBox3")
         Me.RadGroupBox3.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBox3.Controls.Add(Me.lblVFG3)
         Me.RadGroupBox3.Controls.Add(Me.lblEFG3)
@@ -1699,6 +1554,7 @@ Partial Class ucoEichfehlergrenzen
         Me.RadGroupBox3.Controls.Add(Me.RadLabel62)
         Me.RadGroupBox3.Controls.Add(Me.RadLabel63)
         Me.RadGroupBox3.Controls.Add(Me.RadLabel64)
+        resources.ApplyResources(Me.RadGroupBox3, "RadGroupBox3")
         Me.RadGroupBox3.Name = "RadGroupBox3"
         '
         '
@@ -1708,11 +1564,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadGroupBox3.RootElement.Alignment = CType(resources.GetObject("RadGroupBox3.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadGroupBox3.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBox3.RootElement.AngleTransform"), Single)
         Me.RadGroupBox3.RootElement.FlipText = CType(resources.GetObject("RadGroupBox3.RootElement.FlipText"), Boolean)
-        Me.RadGroupBox3.RootElement.KeyTip = resources.GetString("RadGroupBox3.RootElement.KeyTip")
         Me.RadGroupBox3.RootElement.Margin = CType(resources.GetObject("RadGroupBox3.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadGroupBox3.RootElement.Text = resources.GetString("RadGroupBox3.RootElement.Text")
         Me.RadGroupBox3.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBox3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadGroupBox3.RootElement.ToolTipText = resources.GetString("RadGroupBox3.RootElement.ToolTipText")
         '
         'lblVFG3
         '
@@ -1726,11 +1580,9 @@ Partial Class ucoEichfehlergrenzen
         Me.lblVFG3.RootElement.Alignment = CType(resources.GetObject("lblVFG3.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.lblVFG3.RootElement.AngleTransform = CType(resources.GetObject("lblVFG3.RootElement.AngleTransform"), Single)
         Me.lblVFG3.RootElement.FlipText = CType(resources.GetObject("lblVFG3.RootElement.FlipText"), Boolean)
-        Me.lblVFG3.RootElement.KeyTip = resources.GetString("lblVFG3.RootElement.KeyTip")
         Me.lblVFG3.RootElement.Margin = CType(resources.GetObject("lblVFG3.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.lblVFG3.RootElement.Text = resources.GetString("lblVFG3.RootElement.Text")
         Me.lblVFG3.RootElement.TextOrientation = CType(resources.GetObject("lblVFG3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblVFG3.RootElement.ToolTipText = resources.GetString("lblVFG3.RootElement.ToolTipText")
         '
         'lblEFG3
         '
@@ -1744,11 +1596,9 @@ Partial Class ucoEichfehlergrenzen
         Me.lblEFG3.RootElement.Alignment = CType(resources.GetObject("lblEFG3.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.lblEFG3.RootElement.AngleTransform = CType(resources.GetObject("lblEFG3.RootElement.AngleTransform"), Single)
         Me.lblEFG3.RootElement.FlipText = CType(resources.GetObject("lblEFG3.RootElement.FlipText"), Boolean)
-        Me.lblEFG3.RootElement.KeyTip = resources.GetString("lblEFG3.RootElement.KeyTip")
         Me.lblEFG3.RootElement.Margin = CType(resources.GetObject("lblEFG3.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.lblEFG3.RootElement.Text = resources.GetString("lblEFG3.RootElement.Text")
         Me.lblEFG3.RootElement.TextOrientation = CType(resources.GetObject("lblEFG3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblEFG3.RootElement.ToolTipText = resources.GetString("lblEFG3.RootElement.ToolTipText")
         '
         'RadTextBoxControlBereich3VFG2000e
         '
@@ -1763,11 +1613,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadTextBoxControlBereich3VFG2000e.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlBereich3VFG2000e.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlBereich3VFG2000e.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlBereich3VFG2000e.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlBereich3VFG2000e.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlBereich3VFG2000e.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlBereich3VFG2000e.RootElement.KeyTip = resources.GetString("RadTextBoxControlBereich3VFG2000e.RootElement.KeyTip")
         Me.RadTextBoxControlBereich3VFG2000e.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich3VFG2000e.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich3VFG2000e.RootElement.Text = resources.GetString("RadTextBoxControlBereich3VFG2000e.RootElement.Text")
         Me.RadTextBoxControlBereich3VFG2000e.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich3VFG2000e.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlBereich3VFG2000e.RootElement.ToolTipText = resources.GetString("RadTextBoxControlBereich3VFG2000e.RootElement.ToolTipText")
         Me.RadTextBoxControlBereich3VFG2000e.TabStop = False
         '
         'RadTextBoxControlBereich3VFG500e
@@ -1783,11 +1631,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadTextBoxControlBereich3VFG500e.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlBereich3VFG500e.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlBereich3VFG500e.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlBereich3VFG500e.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlBereich3VFG500e.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlBereich3VFG500e.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlBereich3VFG500e.RootElement.KeyTip = resources.GetString("RadTextBoxControlBereich3VFG500e.RootElement.KeyTip")
         Me.RadTextBoxControlBereich3VFG500e.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich3VFG500e.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich3VFG500e.RootElement.Text = resources.GetString("RadTextBoxControlBereich3VFG500e.RootElement.Text")
         Me.RadTextBoxControlBereich3VFG500e.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich3VFG500e.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlBereich3VFG500e.RootElement.ToolTipText = resources.GetString("RadTextBoxControlBereich3VFG500e.RootElement.ToolTipText")
         Me.RadTextBoxControlBereich3VFG500e.TabStop = False
         '
         'RadTextBoxControlBereich3VFG20e
@@ -1803,11 +1649,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadTextBoxControlBereich3VFG20e.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlBereich3VFG20e.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlBereich3VFG20e.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlBereich3VFG20e.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlBereich3VFG20e.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlBereich3VFG20e.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlBereich3VFG20e.RootElement.KeyTip = resources.GetString("RadTextBoxControlBereich3VFG20e.RootElement.KeyTip")
         Me.RadTextBoxControlBereich3VFG20e.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich3VFG20e.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich3VFG20e.RootElement.Text = resources.GetString("RadTextBoxControlBereich3VFG20e.RootElement.Text")
         Me.RadTextBoxControlBereich3VFG20e.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich3VFG20e.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlBereich3VFG20e.RootElement.ToolTipText = resources.GetString("RadTextBoxControlBereich3VFG20e.RootElement.ToolTipText")
         Me.RadTextBoxControlBereich3VFG20e.TabStop = False
         '
         'RadTextBoxControlBereich3EFG2000e
@@ -1823,11 +1667,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadTextBoxControlBereich3EFG2000e.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlBereich3EFG2000e.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlBereich3EFG2000e.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlBereich3EFG2000e.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlBereich3EFG2000e.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlBereich3EFG2000e.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlBereich3EFG2000e.RootElement.KeyTip = resources.GetString("RadTextBoxControlBereich3EFG2000e.RootElement.KeyTip")
         Me.RadTextBoxControlBereich3EFG2000e.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich3EFG2000e.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich3EFG2000e.RootElement.Text = resources.GetString("RadTextBoxControlBereich3EFG2000e.RootElement.Text")
         Me.RadTextBoxControlBereich3EFG2000e.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich3EFG2000e.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlBereich3EFG2000e.RootElement.ToolTipText = resources.GetString("RadTextBoxControlBereich3EFG2000e.RootElement.ToolTipText")
         Me.RadTextBoxControlBereich3EFG2000e.TabStop = False
         '
         'RadTextBoxControlBereich3EFG500e
@@ -1843,11 +1685,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadTextBoxControlBereich3EFG500e.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlBereich3EFG500e.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlBereich3EFG500e.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlBereich3EFG500e.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlBereich3EFG500e.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlBereich3EFG500e.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlBereich3EFG500e.RootElement.KeyTip = resources.GetString("RadTextBoxControlBereich3EFG500e.RootElement.KeyTip")
         Me.RadTextBoxControlBereich3EFG500e.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich3EFG500e.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich3EFG500e.RootElement.Text = resources.GetString("RadTextBoxControlBereich3EFG500e.RootElement.Text")
         Me.RadTextBoxControlBereich3EFG500e.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich3EFG500e.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlBereich3EFG500e.RootElement.ToolTipText = resources.GetString("RadTextBoxControlBereich3EFG500e.RootElement.ToolTipText")
         Me.RadTextBoxControlBereich3EFG500e.TabStop = False
         '
         'RadTextBoxControlBereich3EFG20e
@@ -1863,17 +1703,15 @@ Partial Class ucoEichfehlergrenzen
         Me.RadTextBoxControlBereich3EFG20e.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlBereich3EFG20e.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlBereich3EFG20e.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlBereich3EFG20e.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlBereich3EFG20e.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlBereich3EFG20e.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlBereich3EFG20e.RootElement.KeyTip = resources.GetString("RadTextBoxControlBereich3EFG20e.RootElement.KeyTip")
         Me.RadTextBoxControlBereich3EFG20e.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich3EFG20e.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich3EFG20e.RootElement.Text = resources.GetString("RadTextBoxControlBereich3EFG20e.RootElement.Text")
         Me.RadTextBoxControlBereich3EFG20e.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich3EFG20e.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlBereich3EFG20e.RootElement.ToolTipText = resources.GetString("RadTextBoxControlBereich3EFG20e.RootElement.ToolTipText")
         Me.RadTextBoxControlBereich3EFG20e.TabStop = False
         '
         'RadTextBoxControlBereich3e2000Bis
         '
-        resources.ApplyResources(Me.RadTextBoxControlBereich3e2000Bis, "RadTextBoxControlBereich3e2000Bis")
         Me.RadTextBoxControlBereich3e2000Bis.IsReadOnly = True
+        resources.ApplyResources(Me.RadTextBoxControlBereich3e2000Bis, "RadTextBoxControlBereich3e2000Bis")
         Me.RadTextBoxControlBereich3e2000Bis.Name = "RadTextBoxControlBereich3e2000Bis"
         '
         '
@@ -1883,17 +1721,15 @@ Partial Class ucoEichfehlergrenzen
         Me.RadTextBoxControlBereich3e2000Bis.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlBereich3e2000Bis.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlBereich3e2000Bis.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlBereich3e2000Bis.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlBereich3e2000Bis.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlBereich3e2000Bis.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlBereich3e2000Bis.RootElement.KeyTip = resources.GetString("RadTextBoxControlBereich3e2000Bis.RootElement.KeyTip")
         Me.RadTextBoxControlBereich3e2000Bis.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich3e2000Bis.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich3e2000Bis.RootElement.Text = resources.GetString("RadTextBoxControlBereich3e2000Bis.RootElement.Text")
         Me.RadTextBoxControlBereich3e2000Bis.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich3e2000Bis.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlBereich3e2000Bis.RootElement.ToolTipText = resources.GetString("RadTextBoxControlBereich3e2000Bis.RootElement.ToolTipText")
         Me.RadTextBoxControlBereich3e2000Bis.TabStop = False
         '
         'RadTextBoxControlBereich3e500Bis
         '
-        resources.ApplyResources(Me.RadTextBoxControlBereich3e500Bis, "RadTextBoxControlBereich3e500Bis")
         Me.RadTextBoxControlBereich3e500Bis.IsReadOnly = True
+        resources.ApplyResources(Me.RadTextBoxControlBereich3e500Bis, "RadTextBoxControlBereich3e500Bis")
         Me.RadTextBoxControlBereich3e500Bis.Name = "RadTextBoxControlBereich3e500Bis"
         '
         '
@@ -1903,17 +1739,15 @@ Partial Class ucoEichfehlergrenzen
         Me.RadTextBoxControlBereich3e500Bis.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlBereich3e500Bis.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlBereich3e500Bis.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlBereich3e500Bis.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlBereich3e500Bis.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlBereich3e500Bis.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlBereich3e500Bis.RootElement.KeyTip = resources.GetString("RadTextBoxControlBereich3e500Bis.RootElement.KeyTip")
         Me.RadTextBoxControlBereich3e500Bis.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich3e500Bis.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich3e500Bis.RootElement.Text = resources.GetString("RadTextBoxControlBereich3e500Bis.RootElement.Text")
         Me.RadTextBoxControlBereich3e500Bis.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich3e500Bis.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlBereich3e500Bis.RootElement.ToolTipText = resources.GetString("RadTextBoxControlBereich3e500Bis.RootElement.ToolTipText")
         Me.RadTextBoxControlBereich3e500Bis.TabStop = False
         '
         'RadTextBoxControlBereich3e20Bis
         '
-        resources.ApplyResources(Me.RadTextBoxControlBereich3e20Bis, "RadTextBoxControlBereich3e20Bis")
         Me.RadTextBoxControlBereich3e20Bis.IsReadOnly = True
+        resources.ApplyResources(Me.RadTextBoxControlBereich3e20Bis, "RadTextBoxControlBereich3e20Bis")
         Me.RadTextBoxControlBereich3e20Bis.Name = "RadTextBoxControlBereich3e20Bis"
         '
         '
@@ -1923,17 +1757,15 @@ Partial Class ucoEichfehlergrenzen
         Me.RadTextBoxControlBereich3e20Bis.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlBereich3e20Bis.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlBereich3e20Bis.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlBereich3e20Bis.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlBereich3e20Bis.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlBereich3e20Bis.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlBereich3e20Bis.RootElement.KeyTip = resources.GetString("RadTextBoxControlBereich3e20Bis.RootElement.KeyTip")
         Me.RadTextBoxControlBereich3e20Bis.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich3e20Bis.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich3e20Bis.RootElement.Text = resources.GetString("RadTextBoxControlBereich3e20Bis.RootElement.Text")
         Me.RadTextBoxControlBereich3e20Bis.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich3e20Bis.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlBereich3e20Bis.RootElement.ToolTipText = resources.GetString("RadTextBoxControlBereich3e20Bis.RootElement.ToolTipText")
         Me.RadTextBoxControlBereich3e20Bis.TabStop = False
         '
         'RadTextBoxControlBereich3e2000
         '
-        resources.ApplyResources(Me.RadTextBoxControlBereich3e2000, "RadTextBoxControlBereich3e2000")
         Me.RadTextBoxControlBereich3e2000.IsReadOnly = True
+        resources.ApplyResources(Me.RadTextBoxControlBereich3e2000, "RadTextBoxControlBereich3e2000")
         Me.RadTextBoxControlBereich3e2000.Name = "RadTextBoxControlBereich3e2000"
         '
         '
@@ -1943,17 +1775,15 @@ Partial Class ucoEichfehlergrenzen
         Me.RadTextBoxControlBereich3e2000.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlBereich3e2000.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlBereich3e2000.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlBereich3e2000.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlBereich3e2000.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlBereich3e2000.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlBereich3e2000.RootElement.KeyTip = resources.GetString("RadTextBoxControlBereich3e2000.RootElement.KeyTip")
         Me.RadTextBoxControlBereich3e2000.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich3e2000.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich3e2000.RootElement.Text = resources.GetString("RadTextBoxControlBereich3e2000.RootElement.Text")
         Me.RadTextBoxControlBereich3e2000.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich3e2000.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlBereich3e2000.RootElement.ToolTipText = resources.GetString("RadTextBoxControlBereich3e2000.RootElement.ToolTipText")
         Me.RadTextBoxControlBereich3e2000.TabStop = False
         '
         'RadTextBoxControlBereich3e500
         '
-        resources.ApplyResources(Me.RadTextBoxControlBereich3e500, "RadTextBoxControlBereich3e500")
         Me.RadTextBoxControlBereich3e500.IsReadOnly = True
+        resources.ApplyResources(Me.RadTextBoxControlBereich3e500, "RadTextBoxControlBereich3e500")
         Me.RadTextBoxControlBereich3e500.Name = "RadTextBoxControlBereich3e500"
         '
         '
@@ -1963,17 +1793,15 @@ Partial Class ucoEichfehlergrenzen
         Me.RadTextBoxControlBereich3e500.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlBereich3e500.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlBereich3e500.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlBereich3e500.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlBereich3e500.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlBereich3e500.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlBereich3e500.RootElement.KeyTip = resources.GetString("RadTextBoxControlBereich3e500.RootElement.KeyTip")
         Me.RadTextBoxControlBereich3e500.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich3e500.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich3e500.RootElement.Text = resources.GetString("RadTextBoxControlBereich3e500.RootElement.Text")
         Me.RadTextBoxControlBereich3e500.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich3e500.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlBereich3e500.RootElement.ToolTipText = resources.GetString("RadTextBoxControlBereich3e500.RootElement.ToolTipText")
         Me.RadTextBoxControlBereich3e500.TabStop = False
         '
         'RadTextBoxControlBereich3e20
         '
-        resources.ApplyResources(Me.RadTextBoxControlBereich3e20, "RadTextBoxControlBereich3e20")
         Me.RadTextBoxControlBereich3e20.IsReadOnly = True
+        resources.ApplyResources(Me.RadTextBoxControlBereich3e20, "RadTextBoxControlBereich3e20")
         Me.RadTextBoxControlBereich3e20.Name = "RadTextBoxControlBereich3e20"
         '
         '
@@ -1983,11 +1811,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadTextBoxControlBereich3e20.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlBereich3e20.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlBereich3e20.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlBereich3e20.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlBereich3e20.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlBereich3e20.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlBereich3e20.RootElement.KeyTip = resources.GetString("RadTextBoxControlBereich3e20.RootElement.KeyTip")
         Me.RadTextBoxControlBereich3e20.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich3e20.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich3e20.RootElement.Text = resources.GetString("RadTextBoxControlBereich3e20.RootElement.Text")
         Me.RadTextBoxControlBereich3e20.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich3e20.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlBereich3e20.RootElement.ToolTipText = resources.GetString("RadTextBoxControlBereich3e20.RootElement.ToolTipText")
         Me.RadTextBoxControlBereich3e20.TabStop = False
         '
         'RadLabel44
@@ -2002,11 +1828,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel44.RootElement.Alignment = CType(resources.GetObject("RadLabel44.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel44.RootElement.AngleTransform = CType(resources.GetObject("RadLabel44.RootElement.AngleTransform"), Single)
         Me.RadLabel44.RootElement.FlipText = CType(resources.GetObject("RadLabel44.RootElement.FlipText"), Boolean)
-        Me.RadLabel44.RootElement.KeyTip = resources.GetString("RadLabel44.RootElement.KeyTip")
         Me.RadLabel44.RootElement.Margin = CType(resources.GetObject("RadLabel44.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel44.RootElement.Text = resources.GetString("RadLabel44.RootElement.Text")
         Me.RadLabel44.RootElement.TextOrientation = CType(resources.GetObject("RadLabel44.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel44.RootElement.ToolTipText = resources.GetString("RadLabel44.RootElement.ToolTipText")
         '
         'RadLabel45
         '
@@ -2020,11 +1844,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel45.RootElement.Alignment = CType(resources.GetObject("RadLabel45.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel45.RootElement.AngleTransform = CType(resources.GetObject("RadLabel45.RootElement.AngleTransform"), Single)
         Me.RadLabel45.RootElement.FlipText = CType(resources.GetObject("RadLabel45.RootElement.FlipText"), Boolean)
-        Me.RadLabel45.RootElement.KeyTip = resources.GetString("RadLabel45.RootElement.KeyTip")
         Me.RadLabel45.RootElement.Margin = CType(resources.GetObject("RadLabel45.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel45.RootElement.Text = resources.GetString("RadLabel45.RootElement.Text")
         Me.RadLabel45.RootElement.TextOrientation = CType(resources.GetObject("RadLabel45.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel45.RootElement.ToolTipText = resources.GetString("RadLabel45.RootElement.ToolTipText")
         '
         'RadLabel46
         '
@@ -2038,11 +1860,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel46.RootElement.Alignment = CType(resources.GetObject("RadLabel46.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel46.RootElement.AngleTransform = CType(resources.GetObject("RadLabel46.RootElement.AngleTransform"), Single)
         Me.RadLabel46.RootElement.FlipText = CType(resources.GetObject("RadLabel46.RootElement.FlipText"), Boolean)
-        Me.RadLabel46.RootElement.KeyTip = resources.GetString("RadLabel46.RootElement.KeyTip")
         Me.RadLabel46.RootElement.Margin = CType(resources.GetObject("RadLabel46.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel46.RootElement.Text = resources.GetString("RadLabel46.RootElement.Text")
         Me.RadLabel46.RootElement.TextOrientation = CType(resources.GetObject("RadLabel46.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel46.RootElement.ToolTipText = resources.GetString("RadLabel46.RootElement.ToolTipText")
         '
         'RadLabel47
         '
@@ -2056,11 +1876,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel47.RootElement.Alignment = CType(resources.GetObject("RadLabel47.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel47.RootElement.AngleTransform = CType(resources.GetObject("RadLabel47.RootElement.AngleTransform"), Single)
         Me.RadLabel47.RootElement.FlipText = CType(resources.GetObject("RadLabel47.RootElement.FlipText"), Boolean)
-        Me.RadLabel47.RootElement.KeyTip = resources.GetString("RadLabel47.RootElement.KeyTip")
         Me.RadLabel47.RootElement.Margin = CType(resources.GetObject("RadLabel47.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel47.RootElement.Text = resources.GetString("RadLabel47.RootElement.Text")
         Me.RadLabel47.RootElement.TextOrientation = CType(resources.GetObject("RadLabel47.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel47.RootElement.ToolTipText = resources.GetString("RadLabel47.RootElement.ToolTipText")
         '
         'RadLabel48
         '
@@ -2074,11 +1892,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel48.RootElement.Alignment = CType(resources.GetObject("RadLabel48.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel48.RootElement.AngleTransform = CType(resources.GetObject("RadLabel48.RootElement.AngleTransform"), Single)
         Me.RadLabel48.RootElement.FlipText = CType(resources.GetObject("RadLabel48.RootElement.FlipText"), Boolean)
-        Me.RadLabel48.RootElement.KeyTip = resources.GetString("RadLabel48.RootElement.KeyTip")
         Me.RadLabel48.RootElement.Margin = CType(resources.GetObject("RadLabel48.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel48.RootElement.Text = resources.GetString("RadLabel48.RootElement.Text")
         Me.RadLabel48.RootElement.TextOrientation = CType(resources.GetObject("RadLabel48.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel48.RootElement.ToolTipText = resources.GetString("RadLabel48.RootElement.ToolTipText")
         '
         'RadLabel49
         '
@@ -2092,11 +1908,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel49.RootElement.Alignment = CType(resources.GetObject("RadLabel49.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel49.RootElement.AngleTransform = CType(resources.GetObject("RadLabel49.RootElement.AngleTransform"), Single)
         Me.RadLabel49.RootElement.FlipText = CType(resources.GetObject("RadLabel49.RootElement.FlipText"), Boolean)
-        Me.RadLabel49.RootElement.KeyTip = resources.GetString("RadLabel49.RootElement.KeyTip")
         Me.RadLabel49.RootElement.Margin = CType(resources.GetObject("RadLabel49.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel49.RootElement.Text = resources.GetString("RadLabel49.RootElement.Text")
         Me.RadLabel49.RootElement.TextOrientation = CType(resources.GetObject("RadLabel49.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel49.RootElement.ToolTipText = resources.GetString("RadLabel49.RootElement.ToolTipText")
         '
         'RadLabel50
         '
@@ -2110,11 +1924,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel50.RootElement.Alignment = CType(resources.GetObject("RadLabel50.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel50.RootElement.AngleTransform = CType(resources.GetObject("RadLabel50.RootElement.AngleTransform"), Single)
         Me.RadLabel50.RootElement.FlipText = CType(resources.GetObject("RadLabel50.RootElement.FlipText"), Boolean)
-        Me.RadLabel50.RootElement.KeyTip = resources.GetString("RadLabel50.RootElement.KeyTip")
         Me.RadLabel50.RootElement.Margin = CType(resources.GetObject("RadLabel50.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel50.RootElement.Text = resources.GetString("RadLabel50.RootElement.Text")
         Me.RadLabel50.RootElement.TextOrientation = CType(resources.GetObject("RadLabel50.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel50.RootElement.ToolTipText = resources.GetString("RadLabel50.RootElement.ToolTipText")
         '
         'RadLabel51
         '
@@ -2128,11 +1940,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel51.RootElement.Alignment = CType(resources.GetObject("RadLabel51.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel51.RootElement.AngleTransform = CType(resources.GetObject("RadLabel51.RootElement.AngleTransform"), Single)
         Me.RadLabel51.RootElement.FlipText = CType(resources.GetObject("RadLabel51.RootElement.FlipText"), Boolean)
-        Me.RadLabel51.RootElement.KeyTip = resources.GetString("RadLabel51.RootElement.KeyTip")
         Me.RadLabel51.RootElement.Margin = CType(resources.GetObject("RadLabel51.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel51.RootElement.Text = resources.GetString("RadLabel51.RootElement.Text")
         Me.RadLabel51.RootElement.TextOrientation = CType(resources.GetObject("RadLabel51.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel51.RootElement.ToolTipText = resources.GetString("RadLabel51.RootElement.ToolTipText")
         '
         'RadLabel52
         '
@@ -2146,11 +1956,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel52.RootElement.Alignment = CType(resources.GetObject("RadLabel52.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel52.RootElement.AngleTransform = CType(resources.GetObject("RadLabel52.RootElement.AngleTransform"), Single)
         Me.RadLabel52.RootElement.FlipText = CType(resources.GetObject("RadLabel52.RootElement.FlipText"), Boolean)
-        Me.RadLabel52.RootElement.KeyTip = resources.GetString("RadLabel52.RootElement.KeyTip")
         Me.RadLabel52.RootElement.Margin = CType(resources.GetObject("RadLabel52.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel52.RootElement.Text = resources.GetString("RadLabel52.RootElement.Text")
         Me.RadLabel52.RootElement.TextOrientation = CType(resources.GetObject("RadLabel52.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel52.RootElement.ToolTipText = resources.GetString("RadLabel52.RootElement.ToolTipText")
         '
         'RadLabel53
         '
@@ -2164,11 +1972,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel53.RootElement.Alignment = CType(resources.GetObject("RadLabel53.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel53.RootElement.AngleTransform = CType(resources.GetObject("RadLabel53.RootElement.AngleTransform"), Single)
         Me.RadLabel53.RootElement.FlipText = CType(resources.GetObject("RadLabel53.RootElement.FlipText"), Boolean)
-        Me.RadLabel53.RootElement.KeyTip = resources.GetString("RadLabel53.RootElement.KeyTip")
         Me.RadLabel53.RootElement.Margin = CType(resources.GetObject("RadLabel53.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel53.RootElement.Text = resources.GetString("RadLabel53.RootElement.Text")
         Me.RadLabel53.RootElement.TextOrientation = CType(resources.GetObject("RadLabel53.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel53.RootElement.ToolTipText = resources.GetString("RadLabel53.RootElement.ToolTipText")
         '
         'RadLabel54
         '
@@ -2182,11 +1988,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel54.RootElement.Alignment = CType(resources.GetObject("RadLabel54.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel54.RootElement.AngleTransform = CType(resources.GetObject("RadLabel54.RootElement.AngleTransform"), Single)
         Me.RadLabel54.RootElement.FlipText = CType(resources.GetObject("RadLabel54.RootElement.FlipText"), Boolean)
-        Me.RadLabel54.RootElement.KeyTip = resources.GetString("RadLabel54.RootElement.KeyTip")
         Me.RadLabel54.RootElement.Margin = CType(resources.GetObject("RadLabel54.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel54.RootElement.Text = resources.GetString("RadLabel54.RootElement.Text")
         Me.RadLabel54.RootElement.TextOrientation = CType(resources.GetObject("RadLabel54.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel54.RootElement.ToolTipText = resources.GetString("RadLabel54.RootElement.ToolTipText")
         '
         'RadLabel55
         '
@@ -2200,11 +2004,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel55.RootElement.Alignment = CType(resources.GetObject("RadLabel55.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel55.RootElement.AngleTransform = CType(resources.GetObject("RadLabel55.RootElement.AngleTransform"), Single)
         Me.RadLabel55.RootElement.FlipText = CType(resources.GetObject("RadLabel55.RootElement.FlipText"), Boolean)
-        Me.RadLabel55.RootElement.KeyTip = resources.GetString("RadLabel55.RootElement.KeyTip")
         Me.RadLabel55.RootElement.Margin = CType(resources.GetObject("RadLabel55.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel55.RootElement.Text = resources.GetString("RadLabel55.RootElement.Text")
         Me.RadLabel55.RootElement.TextOrientation = CType(resources.GetObject("RadLabel55.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel55.RootElement.ToolTipText = resources.GetString("RadLabel55.RootElement.ToolTipText")
         '
         'RadLabel56
         '
@@ -2218,11 +2020,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel56.RootElement.Alignment = CType(resources.GetObject("RadLabel56.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel56.RootElement.AngleTransform = CType(resources.GetObject("RadLabel56.RootElement.AngleTransform"), Single)
         Me.RadLabel56.RootElement.FlipText = CType(resources.GetObject("RadLabel56.RootElement.FlipText"), Boolean)
-        Me.RadLabel56.RootElement.KeyTip = resources.GetString("RadLabel56.RootElement.KeyTip")
         Me.RadLabel56.RootElement.Margin = CType(resources.GetObject("RadLabel56.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel56.RootElement.Text = resources.GetString("RadLabel56.RootElement.Text")
         Me.RadLabel56.RootElement.TextOrientation = CType(resources.GetObject("RadLabel56.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel56.RootElement.ToolTipText = resources.GetString("RadLabel56.RootElement.ToolTipText")
         '
         'RadLabel57
         '
@@ -2236,11 +2036,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel57.RootElement.Alignment = CType(resources.GetObject("RadLabel57.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel57.RootElement.AngleTransform = CType(resources.GetObject("RadLabel57.RootElement.AngleTransform"), Single)
         Me.RadLabel57.RootElement.FlipText = CType(resources.GetObject("RadLabel57.RootElement.FlipText"), Boolean)
-        Me.RadLabel57.RootElement.KeyTip = resources.GetString("RadLabel57.RootElement.KeyTip")
         Me.RadLabel57.RootElement.Margin = CType(resources.GetObject("RadLabel57.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel57.RootElement.Text = resources.GetString("RadLabel57.RootElement.Text")
         Me.RadLabel57.RootElement.TextOrientation = CType(resources.GetObject("RadLabel57.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel57.RootElement.ToolTipText = resources.GetString("RadLabel57.RootElement.ToolTipText")
         '
         'RadLabel58
         '
@@ -2254,11 +2052,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel58.RootElement.Alignment = CType(resources.GetObject("RadLabel58.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel58.RootElement.AngleTransform = CType(resources.GetObject("RadLabel58.RootElement.AngleTransform"), Single)
         Me.RadLabel58.RootElement.FlipText = CType(resources.GetObject("RadLabel58.RootElement.FlipText"), Boolean)
-        Me.RadLabel58.RootElement.KeyTip = resources.GetString("RadLabel58.RootElement.KeyTip")
         Me.RadLabel58.RootElement.Margin = CType(resources.GetObject("RadLabel58.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel58.RootElement.Text = resources.GetString("RadLabel58.RootElement.Text")
         Me.RadLabel58.RootElement.TextOrientation = CType(resources.GetObject("RadLabel58.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel58.RootElement.ToolTipText = resources.GetString("RadLabel58.RootElement.ToolTipText")
         '
         'lblBis9
         '
@@ -2272,11 +2068,9 @@ Partial Class ucoEichfehlergrenzen
         Me.lblBis9.RootElement.Alignment = CType(resources.GetObject("lblBis9.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.lblBis9.RootElement.AngleTransform = CType(resources.GetObject("lblBis9.RootElement.AngleTransform"), Single)
         Me.lblBis9.RootElement.FlipText = CType(resources.GetObject("lblBis9.RootElement.FlipText"), Boolean)
-        Me.lblBis9.RootElement.KeyTip = resources.GetString("lblBis9.RootElement.KeyTip")
         Me.lblBis9.RootElement.Margin = CType(resources.GetObject("lblBis9.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.lblBis9.RootElement.Text = resources.GetString("lblBis9.RootElement.Text")
         Me.lblBis9.RootElement.TextOrientation = CType(resources.GetObject("lblBis9.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblBis9.RootElement.ToolTipText = resources.GetString("lblBis9.RootElement.ToolTipText")
         '
         'lblBis8
         '
@@ -2290,11 +2084,9 @@ Partial Class ucoEichfehlergrenzen
         Me.lblBis8.RootElement.Alignment = CType(resources.GetObject("lblBis8.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.lblBis8.RootElement.AngleTransform = CType(resources.GetObject("lblBis8.RootElement.AngleTransform"), Single)
         Me.lblBis8.RootElement.FlipText = CType(resources.GetObject("lblBis8.RootElement.FlipText"), Boolean)
-        Me.lblBis8.RootElement.KeyTip = resources.GetString("lblBis8.RootElement.KeyTip")
         Me.lblBis8.RootElement.Margin = CType(resources.GetObject("lblBis8.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.lblBis8.RootElement.Text = resources.GetString("lblBis8.RootElement.Text")
         Me.lblBis8.RootElement.TextOrientation = CType(resources.GetObject("lblBis8.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblBis8.RootElement.ToolTipText = resources.GetString("lblBis8.RootElement.ToolTipText")
         '
         'lblBis7
         '
@@ -2308,11 +2100,9 @@ Partial Class ucoEichfehlergrenzen
         Me.lblBis7.RootElement.Alignment = CType(resources.GetObject("lblBis7.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.lblBis7.RootElement.AngleTransform = CType(resources.GetObject("lblBis7.RootElement.AngleTransform"), Single)
         Me.lblBis7.RootElement.FlipText = CType(resources.GetObject("lblBis7.RootElement.FlipText"), Boolean)
-        Me.lblBis7.RootElement.KeyTip = resources.GetString("lblBis7.RootElement.KeyTip")
         Me.lblBis7.RootElement.Margin = CType(resources.GetObject("lblBis7.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.lblBis7.RootElement.Text = resources.GetString("lblBis7.RootElement.Text")
         Me.lblBis7.RootElement.TextOrientation = CType(resources.GetObject("lblBis7.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblBis7.RootElement.ToolTipText = resources.GetString("lblBis7.RootElement.ToolTipText")
         '
         'RadLabel62
         '
@@ -2326,11 +2116,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel62.RootElement.Alignment = CType(resources.GetObject("RadLabel62.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel62.RootElement.AngleTransform = CType(resources.GetObject("RadLabel62.RootElement.AngleTransform"), Single)
         Me.RadLabel62.RootElement.FlipText = CType(resources.GetObject("RadLabel62.RootElement.FlipText"), Boolean)
-        Me.RadLabel62.RootElement.KeyTip = resources.GetString("RadLabel62.RootElement.KeyTip")
         Me.RadLabel62.RootElement.Margin = CType(resources.GetObject("RadLabel62.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel62.RootElement.Text = resources.GetString("RadLabel62.RootElement.Text")
         Me.RadLabel62.RootElement.TextOrientation = CType(resources.GetObject("RadLabel62.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel62.RootElement.ToolTipText = resources.GetString("RadLabel62.RootElement.ToolTipText")
         '
         'RadLabel63
         '
@@ -2344,11 +2132,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel63.RootElement.Alignment = CType(resources.GetObject("RadLabel63.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel63.RootElement.AngleTransform = CType(resources.GetObject("RadLabel63.RootElement.AngleTransform"), Single)
         Me.RadLabel63.RootElement.FlipText = CType(resources.GetObject("RadLabel63.RootElement.FlipText"), Boolean)
-        Me.RadLabel63.RootElement.KeyTip = resources.GetString("RadLabel63.RootElement.KeyTip")
         Me.RadLabel63.RootElement.Margin = CType(resources.GetObject("RadLabel63.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel63.RootElement.Text = resources.GetString("RadLabel63.RootElement.Text")
         Me.RadLabel63.RootElement.TextOrientation = CType(resources.GetObject("RadLabel63.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel63.RootElement.ToolTipText = resources.GetString("RadLabel63.RootElement.ToolTipText")
         '
         'RadLabel64
         '
@@ -2362,11 +2148,9 @@ Partial Class ucoEichfehlergrenzen
         Me.RadLabel64.RootElement.Alignment = CType(resources.GetObject("RadLabel64.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadLabel64.RootElement.AngleTransform = CType(resources.GetObject("RadLabel64.RootElement.AngleTransform"), Single)
         Me.RadLabel64.RootElement.FlipText = CType(resources.GetObject("RadLabel64.RootElement.FlipText"), Boolean)
-        Me.RadLabel64.RootElement.KeyTip = resources.GetString("RadLabel64.RootElement.KeyTip")
         Me.RadLabel64.RootElement.Margin = CType(resources.GetObject("RadLabel64.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabel64.RootElement.Text = resources.GetString("RadLabel64.RootElement.Text")
         Me.RadLabel64.RootElement.TextOrientation = CType(resources.GetObject("RadLabel64.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel64.RootElement.ToolTipText = resources.GetString("RadLabel64.RootElement.ToolTipText")
         '
         'ucoEichfehlergrenzen
         '
