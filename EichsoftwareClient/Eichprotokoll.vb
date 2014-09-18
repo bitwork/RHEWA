@@ -86,7 +86,6 @@ Partial Public Class Eichprotokoll
     Public Overridable Property Lookup_Konformitaetsbewertungsverfahren As Lookup_Konformitaetsbewertungsverfahren
     Public Overridable Property Eichprozess As ICollection(Of Eichprozess) = New HashSet(Of Eichprozess)
     Public Overridable Property PruefungAussermittigeBelastung As ICollection(Of PruefungAussermittigeBelastung) = New HashSet(Of PruefungAussermittigeBelastung)
-    Public Overridable Property PruefungEichfehlergrenzen As ICollection(Of PruefungEichfehlergrenzen) = New HashSet(Of PruefungEichfehlergrenzen)
     Public Overridable Property PruefungLinearitaetFallend As ICollection(Of PruefungLinearitaetFallend) = New HashSet(Of PruefungLinearitaetFallend)
     Public Overridable Property PruefungLinearitaetSteigend As ICollection(Of PruefungLinearitaetSteigend) = New HashSet(Of PruefungLinearitaetSteigend)
     Public Overridable Property PruefungAnsprechvermoegen As ICollection(Of PruefungAnsprechvermoegen) = New HashSet(Of PruefungAnsprechvermoegen)

@@ -1421,27 +1421,7 @@ Public Class clsOfficeExports
                     End Try
 
                     Try
-                        Dim query = From db In dbcontext.PruefungEichfehlergrenzen Where db.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID Select db
-                        para.Range.Style = "Überschrift 1"
-                        r.InsertAfter("Prüfung Eichfehlergrenzen" + vbNewLine + vbNewLine)
-                        para.Range.Style = "Standard"
-                        For Each sourceo In query
-                            r.InsertAfter("Bis: " & sourceo.Bis & vbNewLine)
-                            r.InsertAfter("EFG: " & sourceo.EFG & vbNewLine)
-                            r.InsertAfter("Elemente: " & sourceo.Elemente & vbNewLine)
-                            r.InsertAfter("Eichprotokoll: " & sourceo.FK_Eichprotokoll & vbNewLine)
-                            r.InsertAfter("ID: " & sourceo.ID & vbNewLine)
-                            r.InsertAfter("Messbereich: " & sourceo.Messbereich & vbNewLine)
-                            r.InsertAfter("VFG: " & sourceo.VFG & vbNewLine)
-                            r.InsertAfter("Von: " & sourceo.Von & vbNewLine)
-
-
-                        Next
-                    Catch ex As Exception
-                    End Try
-
-                    Try
-                        Dim query = From db In dbcontext.PruefungLinearitaetFallend Where db.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID Select db
+                        Dim query = From db In dbcontext.PruefungLinearitaetFallend Where db.FK_Eichprotokoll = objEichProzess.Eichprotokoll.ID Select db
                         para.Range.Style = "Überschrift 1"
                         r.InsertAfter("Prüfung Linearität Fallend" + vbNewLine + vbNewLine)
                         para.Range.Style = "Standard"

@@ -27,7 +27,6 @@
           <EntitySet Name="ServerMogelstatistik" EntityType="EichenSQLDatabaseModel.Store.ServerMogelstatistik" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ServerPruefungAnsprechvermoegen" EntityType="EichenSQLDatabaseModel.Store.ServerPruefungAnsprechvermoegen" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ServerPruefungAussermittigeBelastung" EntityType="EichenSQLDatabaseModel.Store.ServerPruefungAussermittigeBelastung" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="ServerPruefungEichfehlergrenzen" EntityType="EichenSQLDatabaseModel.Store.ServerPruefungEichfehlergrenzen" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ServerPruefungLinearitaetFallend" EntityType="EichenSQLDatabaseModel.Store.ServerPruefungLinearitaetFallend" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ServerPruefungLinearitaetSteigend" EntityType="EichenSQLDatabaseModel.Store.ServerPruefungLinearitaetSteigend" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ServerPruefungRollendeLasten" EntityType="EichenSQLDatabaseModel.Store.ServerPruefungRollendeLasten" store:Type="Tables" Schema="dbo" />
@@ -91,10 +90,6 @@
           <AssociationSet Name="FK_PruefungAussermittigeBelastung_Eichprotokoll" Association="EichenSQLDatabaseModel.Store.FK_PruefungAussermittigeBelastung_Eichprotokoll">
             <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
             <End Role="ServerPruefungAussermittigeBelastung" EntitySet="ServerPruefungAussermittigeBelastung" />
-          </AssociationSet>
-          <AssociationSet Name="FK_PruefungEichfehlergrenzen_Eichprotokoll" Association="EichenSQLDatabaseModel.Store.FK_PruefungEichfehlergrenzen_Eichprotokoll">
-            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
-            <End Role="ServerPruefungEichfehlergrenzen" EntitySet="ServerPruefungEichfehlergrenzen" />
           </AssociationSet>
           <AssociationSet Name="FK_PruefungLinearitaetFallend_Eichprotokoll" Association="EichenSQLDatabaseModel.Store.FK_PruefungLinearitaetFallend_Eichprotokoll">
             <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
@@ -590,19 +585,6 @@
           <Property Name="EFG" Type="bit" Nullable="false" />
           <Property Name="EFGExtra" Type="nvarchar" Nullable="false" MaxLength="20" />
         </EntityType>
-        <EntityType Name="ServerPruefungEichfehlergrenzen">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="FK_Eichprotokoll" Type="int" Nullable="false" />
-          <Property Name="Messbereich" Type="tinyint" Nullable="false" />
-          <Property Name="Elemente" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="Von" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="Bis" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="EFG" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="VFG" Type="nvarchar" Nullable="false" MaxLength="20" />
-        </EntityType>
         <EntityType Name="ServerPruefungLinearitaetFallend">
           <Key>
             <PropertyRef Name="ID" />
@@ -903,18 +885,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_PruefungEichfehlergrenzen_Eichprotokoll">
-          <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.Store.ServerEichprotokoll" Multiplicity="1" />
-          <End Role="ServerPruefungEichfehlergrenzen" Type="EichenSQLDatabaseModel.Store.ServerPruefungEichfehlergrenzen" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ServerEichprotokoll">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="ServerPruefungEichfehlergrenzen">
-              <PropertyRef Name="FK_Eichprotokoll" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_PruefungLinearitaetFallend_Eichprotokoll">
           <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.Store.ServerEichprotokoll" Multiplicity="1" />
           <End Role="ServerPruefungLinearitaetFallend" Type="EichenSQLDatabaseModel.Store.ServerPruefungLinearitaetFallend" Multiplicity="*" />
@@ -1067,7 +1037,6 @@
           <EntitySet Name="ServerMogelstatistik" EntityType="EichenSQLDatabaseModel.ServerMogelstatistik" />
           <EntitySet Name="ServerPruefungAnsprechvermoegen" EntityType="EichenSQLDatabaseModel.ServerPruefungAnsprechvermoegen" />
           <EntitySet Name="ServerPruefungAussermittigeBelastung" EntityType="EichenSQLDatabaseModel.ServerPruefungAussermittigeBelastung" />
-          <EntitySet Name="ServerPruefungEichfehlergrenzen" EntityType="EichenSQLDatabaseModel.ServerPruefungEichfehlergrenzen" />
           <EntitySet Name="ServerPruefungLinearitaetFallend" EntityType="EichenSQLDatabaseModel.ServerPruefungLinearitaetFallend" />
           <EntitySet Name="ServerPruefungLinearitaetSteigend" EntityType="EichenSQLDatabaseModel.ServerPruefungLinearitaetSteigend" />
           <EntitySet Name="ServerPruefungRollendeLasten" EntityType="EichenSQLDatabaseModel.ServerPruefungRollendeLasten" />
@@ -1090,10 +1059,6 @@
           <AssociationSet Name="FK_PruefungAussermittigeBelastung_Eichprotokoll" Association="EichenSQLDatabaseModel.FK_PruefungAussermittigeBelastung_Eichprotokoll">
             <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
             <End Role="ServerPruefungAussermittigeBelastung" EntitySet="ServerPruefungAussermittigeBelastung" />
-          </AssociationSet>
-          <AssociationSet Name="FK_PruefungEichfehlergrenzen_Eichprotokoll" Association="EichenSQLDatabaseModel.FK_PruefungEichfehlergrenzen_Eichprotokoll">
-            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
-            <End Role="ServerPruefungEichfehlergrenzen" EntitySet="ServerPruefungEichfehlergrenzen" />
           </AssociationSet>
           <AssociationSet Name="FK_PruefungLinearitaetFallend_Eichprotokoll" Association="EichenSQLDatabaseModel.FK_PruefungLinearitaetFallend_Eichprotokoll">
             <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
@@ -1356,7 +1321,6 @@
           <NavigationProperty Name="ServerLookup_Konformitaetsbewertungsverfahren" Relationship="EichenSQLDatabaseModel.FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren" FromRole="ServerEichprotokoll" ToRole="ServerLookup_Konformitaetsbewertungsverfahren" />
           <NavigationProperty Name="ServerEichprozess" Relationship="EichenSQLDatabaseModel.FK_Eichprozess_Eichprotokoll" FromRole="ServerEichprotokoll" ToRole="ServerEichprozess" />
           <NavigationProperty Name="ServerPruefungAussermittigeBelastung" Relationship="EichenSQLDatabaseModel.FK_PruefungAussermittigeBelastung_Eichprotokoll" FromRole="ServerEichprotokoll" ToRole="ServerPruefungAussermittigeBelastung" />
-          <NavigationProperty Name="ServerPruefungEichfehlergrenzen" Relationship="EichenSQLDatabaseModel.FK_PruefungEichfehlergrenzen_Eichprotokoll" FromRole="ServerEichprotokoll" ToRole="ServerPruefungEichfehlergrenzen" />
           <NavigationProperty Name="ServerPruefungLinearitaetFallend" Relationship="EichenSQLDatabaseModel.FK_PruefungLinearitaetFallend_Eichprotokoll" FromRole="ServerEichprotokoll" ToRole="ServerPruefungLinearitaetFallend" />
           <NavigationProperty Name="ServerPruefungLinearitaetSteigend" Relationship="EichenSQLDatabaseModel.FK_PruefungLinearitaetSteigend_Eichprotokoll" FromRole="ServerEichprotokoll" ToRole="ServerPruefungLinearitaetSteigend" />
           <NavigationProperty Name="ServerPruefungAnsprechvermoegen" Relationship="EichenSQLDatabaseModel.FK_PruefungLinearitaetSteigendAnsprechvermoegen_Eichprotokoll" FromRole="ServerEichprotokoll" ToRole="ServerPruefungAnsprechvermoegen" />
@@ -1606,20 +1570,6 @@
           <Property Name="EFGExtra" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
           <NavigationProperty Name="ServerEichprotokoll" Relationship="EichenSQLDatabaseModel.FK_PruefungAussermittigeBelastung_Eichprotokoll" FromRole="ServerPruefungAussermittigeBelastung" ToRole="ServerEichprotokoll" />
         </EntityType>
-        <EntityType Name="ServerPruefungEichfehlergrenzen">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="FK_Eichprotokoll" Type="Int32" Nullable="false" />
-          <Property Name="Messbereich" Type="Byte" Nullable="false" />
-          <Property Name="Elemente" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
-          <Property Name="Von" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
-          <Property Name="Bis" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
-          <Property Name="EFG" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
-          <Property Name="VFG" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="ServerEichprotokoll" Relationship="EichenSQLDatabaseModel.FK_PruefungEichfehlergrenzen_Eichprotokoll" FromRole="ServerPruefungEichfehlergrenzen" ToRole="ServerEichprotokoll" />
-        </EntityType>
         <EntityType Name="ServerPruefungLinearitaetFallend">
           <Key>
             <PropertyRef Name="ID" />
@@ -1791,18 +1741,6 @@
               <PropertyRef Name="ID" />
             </Principal>
             <Dependent Role="ServerPruefungAussermittigeBelastung">
-              <PropertyRef Name="FK_Eichprotokoll" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_PruefungEichfehlergrenzen_Eichprotokoll">
-          <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.ServerEichprotokoll" Multiplicity="1" />
-          <End Role="ServerPruefungEichfehlergrenzen" Type="EichenSQLDatabaseModel.ServerPruefungEichfehlergrenzen" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ServerEichprotokoll">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="ServerPruefungEichfehlergrenzen">
               <PropertyRef Name="FK_Eichprotokoll" />
             </Dependent>
           </ReferentialConstraint>
@@ -2544,20 +2482,6 @@
                 <ScalarProperty Name="Fehler" ColumnName="Fehler" />
                 <ScalarProperty Name="EFG" ColumnName="EFG" />
                 <ScalarProperty Name="EFGExtra" ColumnName="EFGExtra" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ServerPruefungEichfehlergrenzen">
-            <EntityTypeMapping TypeName="EichenSQLDatabaseModel.ServerPruefungEichfehlergrenzen">
-              <MappingFragment StoreEntitySet="ServerPruefungEichfehlergrenzen">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="FK_Eichprotokoll" ColumnName="FK_Eichprotokoll" />
-                <ScalarProperty Name="Messbereich" ColumnName="Messbereich" />
-                <ScalarProperty Name="Elemente" ColumnName="Elemente" />
-                <ScalarProperty Name="Von" ColumnName="Von" />
-                <ScalarProperty Name="Bis" ColumnName="Bis" />
-                <ScalarProperty Name="EFG" ColumnName="EFG" />
-                <ScalarProperty Name="VFG" ColumnName="VFG" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

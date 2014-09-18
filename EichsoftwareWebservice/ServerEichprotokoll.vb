@@ -86,7 +86,6 @@ Partial Public Class ServerEichprotokoll
     Public Overridable Property ServerLookup_Konformitaetsbewertungsverfahren As ServerLookup_Konformitaetsbewertungsverfahren
     Public Overridable Property ServerEichprozess As ICollection(Of ServerEichprozess) = New HashSet(Of ServerEichprozess)
     Public Overridable Property ServerPruefungAussermittigeBelastung As ICollection(Of ServerPruefungAussermittigeBelastung) = New HashSet(Of ServerPruefungAussermittigeBelastung)
-    Public Overridable Property ServerPruefungEichfehlergrenzen As ICollection(Of ServerPruefungEichfehlergrenzen) = New HashSet(Of ServerPruefungEichfehlergrenzen)
     Public Overridable Property ServerPruefungLinearitaetFallend As ICollection(Of ServerPruefungLinearitaetFallend) = New HashSet(Of ServerPruefungLinearitaetFallend)
     Public Overridable Property ServerPruefungLinearitaetSteigend As ICollection(Of ServerPruefungLinearitaetSteigend) = New HashSet(Of ServerPruefungLinearitaetSteigend)
     Public Overridable Property ServerPruefungAnsprechvermoegen As ICollection(Of ServerPruefungAnsprechvermoegen) = New HashSet(Of ServerPruefungAnsprechvermoegen)

@@ -77,9 +77,6 @@
                 For Each obj In DBContext.PruefungAnsprechvermoegen
                     DBContext.PruefungAnsprechvermoegen.Remove(obj)
                 Next
-                For Each obj In DBContext.PruefungEichfehlergrenzen
-                    DBContext.PruefungEichfehlergrenzen.Remove(obj)
-                Next
                 For Each obj In DBContext.PruefungLinearitaetFallend
                     DBContext.PruefungLinearitaetFallend.Remove(obj)
                 Next

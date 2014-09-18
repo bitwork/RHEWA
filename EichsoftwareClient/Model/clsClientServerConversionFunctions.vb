@@ -399,25 +399,6 @@ Public Class clsClientServerConversionFunctions
         Catch e As Exception
         End Try
 
-        Try
-            Dim intCounter As Integer = 0
-            For Each sourceo In SourceObject._ServerEichprotokoll.ServerPruefungEichfehlergrenzen
-                Dim targeto = New PruefungEichfehlergrenzen
-                targeto.Bis = sourceo._Bis
-                targeto.EFG = sourceo._EFG
-                targeto.Elemente = sourceo._Elemente
-                targeto.FK_Eichprotokoll = TargetObject.Eichprotokoll.ID
-                targeto.ID = sourceo._ID
-                targeto.Messbereich = sourceo._Messbereich
-                targeto.VFG = sourceo._VFG
-                targeto.Von = sourceo._Von
-
-                TargetObject.Eichprotokoll.PruefungEichfehlergrenzen.Add(targeto)
-                intCounter += 1
-            Next
-        Catch e As Exception
-        End Try
-
 
 
         'TargetObject.ServerEichprotokoll.ServerPruefungLinearitaetFallend = SourceObject._ServerEichprotokoll.PruefungLinearitaetFallend
@@ -1291,29 +1272,6 @@ Public Class clsClientServerConversionFunctions
         End Try
 
 
-
-        'TargetObject.ServerEichprotokoll.ServerPruefungEichfehlergrenzen = SourceObject._ServerEichprotokoll.PruefungEichfehlergrenzen
-        Try
-            Dim intCounter As Integer = 0
-            For Each sourceo In SourceObject._ServerEichprotokoll.ServerPruefungEichfehlergrenzen
-                Dim targeto = New PruefungEichfehlergrenzen
-                targeto.Bis = sourceo._Bis
-                targeto.EFG = sourceo._EFG
-                targeto.Elemente = sourceo._Elemente
-                targeto.FK_Eichprotokoll = sourceo._FK_Eichprotokoll
-                '  targeto.ID = sourceo._ID
-                targeto.Messbereich = sourceo._Messbereich
-                targeto.VFG = sourceo._VFG
-                targeto.Von = sourceo._Von
-
-                TargetObject.Eichprotokoll.PruefungEichfehlergrenzen.Add(targeto)
-                intCounter += 1
-            Next
-        Catch e As Exception
-        End Try
-
-
-
         'TargetObject.ServerEichprotokoll.ServerPruefungLinearitaetFallend = SourceObject._ServerEichprotokoll.PruefungLinearitaetFallend
         Try
             Dim intCounter As Integer = 0
@@ -1566,34 +1524,6 @@ Public Class clsClientServerConversionFunctions
                     Catch e As Exception
                     End Try
 
-
-
-                    Try
-                        If pModus = enuModus.RHEWASendetAnClient Then
-                            query = SourceObject.Eichprotokoll.PruefungEichfehlergrenzen
-
-                        Else
-                    query = (From db In dbcontext.PruefungEichfehlergrenzen Where db.FK_Eichprotokoll = EichID).ToList
-
-                        End If
-
-                        ReDim TargetObject._ServerEichprotokoll.ServerPruefungEichfehlergrenzen(query.Count - 1)
-                        Dim intCounter As Integer = 0
-                        For Each sourceo In query
-                            Dim targeto = New EichsoftwareWebservice.ServerPruefungEichfehlergrenzen
-                            targeto._Bis = sourceo.Bis
-                            targeto._EFG = sourceo.EFG
-                            targeto._Elemente = sourceo.Elemente
-                            targeto._FK_Eichprotokoll = sourceo.FK_Eichprotokoll
-                            targeto._Messbereich = sourceo.Messbereich
-                            targeto._VFG = sourceo.VFG
-                            targeto._Von = sourceo.Von
-
-                            TargetObject._ServerEichprotokoll.ServerPruefungEichfehlergrenzen(intCounter) = targeto
-                            intCounter += 1
-                        Next
-                    Catch e As Exception
-                    End Try
 
 
 

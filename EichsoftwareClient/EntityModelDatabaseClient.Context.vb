@@ -37,7 +37,6 @@ Partial Public Class EichsoftwareClientdatabaseEntities1
     Public Property Mogelstatistik() As DbSet(Of Mogelstatistik)
     Public Property PruefungAnsprechvermoegen() As DbSet(Of PruefungAnsprechvermoegen)
     Public Property PruefungAussermittigeBelastung() As DbSet(Of PruefungAussermittigeBelastung)
-    Public Property PruefungEichfehlergrenzen() As DbSet(Of PruefungEichfehlergrenzen)
     Public Property PruefungLinearitaetFallend() As DbSet(Of PruefungLinearitaetFallend)
     Public Property PruefungLinearitaetSteigend() As DbSet(Of PruefungLinearitaetSteigend)
     Public Property PruefungRollendeLasten() As DbSet(Of PruefungRollendeLasten)

@@ -4,10 +4,10 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d93fbc3ad5f64180af62fb93acaed507" Name="Diagram1" ZoomLevel="67">
+      <Diagram DiagramId="d93fbc3ad5f64180af62fb93acaed507" Name="Diagram1" ZoomLevel="95">
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerBeschaffenheitspruefung" Width="1.5" PointX="6" PointY="23.25" IsExpanded="true" />
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerEichmarkenverwaltung" Width="1.5" PointX="0.75" PointY="2.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerEichprotokoll" Width="1.5" PointX="3" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerEichprotokoll" Width="3" PointX="1.5" PointY="20.25" IsExpanded="true" />
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerEichprozess" Width="1.5" PointX="8.25" PointY="25.625" IsExpanded="true" />
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerKompatiblitaetsnachweis" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerLizensierung" Width="1.5" PointX="12.25" PointY="8.875" IsExpanded="true" />
@@ -20,7 +20,6 @@
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerMogelstatistik" Width="1.5" PointX="10.5" PointY="25.125" IsExpanded="true" />
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerPruefungAnsprechvermoegen" Width="1.5" PointX="5.25" PointY="8.875" IsExpanded="true" />
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerPruefungAussermittigeBelastung" Width="1.5" PointX="5.25" PointY="12.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerPruefungEichfehlergrenzen" Width="1.5" PointX="5.25" PointY="15.875" IsExpanded="true" />
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerPruefungLinearitaetFallend" Width="1.5" PointX="5.25" PointY="19.375" IsExpanded="true" />
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerPruefungLinearitaetSteigend" Width="1.5" PointX="5.25" PointY="29.75" IsExpanded="true" />
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerPruefungRollendeLasten" Width="1.5" PointX="5.25" PointY="33.25" IsExpanded="true" />
@@ -32,7 +31,6 @@
         <AssociationConnector Association="EichenSQLDatabaseModel.FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren" ManuallyRouted="false" />
         <AssociationConnector Association="EichenSQLDatabaseModel.FK_Eichprozess_Eichprotokoll" ManuallyRouted="false" />
         <AssociationConnector Association="EichenSQLDatabaseModel.FK_PruefungAussermittigeBelastung_Eichprotokoll" ManuallyRouted="false" />
-        <AssociationConnector Association="EichenSQLDatabaseModel.FK_PruefungEichfehlergrenzen_Eichprotokoll" ManuallyRouted="false" />
         <AssociationConnector Association="EichenSQLDatabaseModel.FK_PruefungLinearitaetFallend_Eichprotokoll" ManuallyRouted="false" />
         <AssociationConnector Association="EichenSQLDatabaseModel.FK_PruefungLinearitaetSteigend_Eichprotokoll" ManuallyRouted="false" />
         <AssociationConnector Association="EichenSQLDatabaseModel.FK_PruefungLinearitaetSteigendAnsprechvermoegen_Eichprotokoll" ManuallyRouted="false" />

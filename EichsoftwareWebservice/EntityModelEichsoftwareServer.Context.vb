@@ -37,7 +37,6 @@ Partial Public Class EichenSQLDatabaseEntities1
     Public Property ServerMogelstatistik() As DbSet(Of ServerMogelstatistik)
     Public Property ServerPruefungAnsprechvermoegen() As DbSet(Of ServerPruefungAnsprechvermoegen)
     Public Property ServerPruefungAussermittigeBelastung() As DbSet(Of ServerPruefungAussermittigeBelastung)
-    Public Property ServerPruefungEichfehlergrenzen() As DbSet(Of ServerPruefungEichfehlergrenzen)
     Public Property ServerPruefungLinearitaetFallend() As DbSet(Of ServerPruefungLinearitaetFallend)
     Public Property ServerPruefungLinearitaetSteigend() As DbSet(Of ServerPruefungLinearitaetSteigend)
     Public Property ServerPruefungRollendeLasten() As DbSet(Of ServerPruefungRollendeLasten)

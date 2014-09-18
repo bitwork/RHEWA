@@ -226,9 +226,6 @@
     <Compile Include="ServerPruefungAussermittigeBelastung.vb">
       <DependentUpon>EntityModelEichsoftwareServer.tt</DependentUpon>
     </Compile>
-    <Compile Include="ServerPruefungEichfehlergrenzen.vb">
-      <DependentUpon>EntityModelEichsoftwareServer.tt</DependentUpon>
-    </Compile>
     <Compile Include="ServerPruefungLinearitaetFallend.vb">
       <DependentUpon>EntityModelEichsoftwareServer.tt</DependentUpon>
     </Compile>

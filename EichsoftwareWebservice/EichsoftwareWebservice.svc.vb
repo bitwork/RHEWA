@@ -341,14 +341,7 @@ Public Class EichsoftwareWebservice
                     End Try
 
 
-                    Try
-                        Dim query = From db In DbContext.ServerPruefungEichfehlergrenzen Where db.FK_Eichprotokoll = EichID
-                        For Each sourceo In query
-                            Obj.ServerEichprotokoll.ServerPruefungEichfehlergrenzen.Add(sourceo)
-                        Next
-                    Catch e As Exception
-                    End Try
-
+                  
 
                     Try
                         Dim query = From db In DbContext.ServerPruefungLinearitaetFallend Where db.FK_Eichprotokoll = EichID
@@ -498,15 +491,6 @@ Public Class EichsoftwareWebservice
                                 Dim query = From db In DbContext.ServerPruefungAussermittigeBelastung Where db.FK_Eichprotokoll = EichID
                                 For Each sourceo In query
                                     Obj.ServerEichprotokoll.ServerPruefungAussermittigeBelastung.Add(sourceo)
-                                Next
-                            Catch e As Exception
-                            End Try
-
-
-                            Try
-                                Dim query = From db In DbContext.ServerPruefungEichfehlergrenzen Where db.FK_Eichprotokoll = EichID
-                                For Each sourceo In query
-                                    Obj.ServerEichprotokoll.ServerPruefungEichfehlergrenzen.Add(sourceo)
                                 Next
                             Catch e As Exception
                             End Try
