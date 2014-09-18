@@ -86,19 +86,12 @@
 
      
 
-
-        If My.Settings.Lizensiert Then
-            'daten füllen
-            'für den Fall das die Anwendung gerade erst installiert wurde, oder die einstellung zur Synchronisierung geändert wurde, sollen alle Eichungen vom RHEWA Server geholt werden, die einmal angelegt wurden
-            If My.Settings.HoleAlleEigenenEichungenVomServer = True Then
-                VerbindeMitWebserviceUndHoleAlles()
-                Exit Sub
-            End If
-
-            LoadFromDatabase()
+        'für den Fall das die Anwendung gerade erst installiert wurde, oder die einstellung zur Synchronisierung geändert wurde, sollen alle Eichungen vom RHEWA Server geholt werden, die einmal angelegt wurden
+        If My.Settings.Lizensiert And My.Settings.HoleAlleEigenenEichungenVomServer = True Then
+            VerbindeMitWebserviceUndHoleAlles()
+            'TH obsolete. Wird im lokalisierungsneeded event noch einmal aufgerufen- dieses triggerd auch beim ersten start 
+            'LoadFromDatabase()
         End If
-
-
     End Sub
 
     Private Sub RadButton1_Click(sender As Object, e As EventArgs) Handles RadButtonRefresh.Click
