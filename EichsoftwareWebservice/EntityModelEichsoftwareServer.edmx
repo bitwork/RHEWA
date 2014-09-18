@@ -714,7 +714,7 @@
           <Property Name="Domain" Type="nvarchar" MaxLength="255" />
           <Property Name="Computername" Type="nvarchar" MaxLength="255" />
           <Property Name="Windowsbenutzer" Type="nvarchar" MaxLength="255" />
-          <Property Name="Aktion" Type="nvarchar" MaxLength="50" />
+          <Property Name="Aktion" Type="nvarchar(max)" />
           <Property Name="Zeitstempel" Type="datetime" />
         </EntityType>
         <Association Name="FK_Benutzer_Firmen">
@@ -1979,7 +1979,7 @@
           <Property Type="String" Name="Domain" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Computername" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Windowsbenutzer" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Aktion" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Aktion" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Type="DateTime" Name="Zeitstempel" Precision="3" />
           <Property Type="String" Name="Lizenzschluessel_FK" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>

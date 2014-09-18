@@ -1917,9 +1917,6 @@ Namespace EichsoftwareWebservice
         Private ServerPruefungAussermittigeBelastungField() As EichsoftwareWebservice.ServerPruefungAussermittigeBelastung
         
         <System.Runtime.Serialization.OptionalFieldAttribute()>  _
-        Private ServerPruefungEichfehlergrenzenField() As EichsoftwareWebservice.ServerPruefungEichfehlergrenzen
-        
-        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private ServerPruefungLinearitaetFallendField() As EichsoftwareWebservice.ServerPruefungLinearitaetFallend
         
         <System.Runtime.Serialization.OptionalFieldAttribute()>  _
@@ -2571,19 +2568,6 @@ Namespace EichsoftwareWebservice
                 If (Object.ReferenceEquals(Me.ServerPruefungAussermittigeBelastungField, value) <> true) Then
                     Me.ServerPruefungAussermittigeBelastungField = value
                     Me.RaisePropertyChanged("ServerPruefungAussermittigeBelastung")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute()>  _
-        Public Property ServerPruefungEichfehlergrenzen() As EichsoftwareWebservice.ServerPruefungEichfehlergrenzen()
-            Get
-                Return Me.ServerPruefungEichfehlergrenzenField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me.ServerPruefungEichfehlergrenzenField, value) <> true) Then
-                    Me.ServerPruefungEichfehlergrenzenField = value
-                    Me.RaisePropertyChanged("ServerPruefungEichfehlergrenzen")
                 End If
             End Set
         End Property
@@ -4854,172 +4838,6 @@ Namespace EichsoftwareWebservice
                 If (Object.ReferenceEquals(Me._ServerEichprotokollField, value) <> true) Then
                     Me._ServerEichprotokollField = value
                     Me.RaisePropertyChanged("_ServerEichprotokoll")
-                End If
-            End Set
-        End Property
-        
-        Public Event PropertyChanged As System.ComponentModel.PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
-        
-        Protected Sub RaisePropertyChanged(ByVal propertyName As String)
-            Dim propertyChanged As System.ComponentModel.PropertyChangedEventHandler = Me.PropertyChangedEvent
-            If (Not (propertyChanged) Is Nothing) Then
-                propertyChanged(Me, New System.ComponentModel.PropertyChangedEventArgs(propertyName))
-            End If
-        End Sub
-    End Class
-    
-    <System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0"),  _
-     System.Runtime.Serialization.DataContractAttribute(Name:="ServerPruefungEichfehlergrenzen", [Namespace]:="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice"),  _
-     System.SerializableAttribute()>  _
-    Partial Public Class ServerPruefungEichfehlergrenzen
-        Inherits Object
-        Implements System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged
-        
-        <System.NonSerializedAttribute()>  _
-        Private extensionDataField As System.Runtime.Serialization.ExtensionDataObject
-        
-        Private _BisField As String
-        
-        Private _EFGField As String
-        
-        Private _ElementeField As String
-        
-        Private _FK_EichprotokollField As Integer
-        
-        Private _IDField As Integer
-        
-        Private _MessbereichField As Byte
-        
-        Private _ServerEichprotokollField As EichsoftwareWebservice.ServerEichprotokoll
-        
-        Private _VFGField As String
-        
-        Private _VonField As String
-        
-        <Global.System.ComponentModel.BrowsableAttribute(false)>  _
-        Public Property ExtensionData() As System.Runtime.Serialization.ExtensionDataObject Implements System.Runtime.Serialization.IExtensibleDataObject.ExtensionData
-            Get
-                Return Me.extensionDataField
-            End Get
-            Set
-                Me.extensionDataField = value
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _Bis() As String
-            Get
-                Return Me._BisField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me._BisField, value) <> true) Then
-                    Me._BisField = value
-                    Me.RaisePropertyChanged("_Bis")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _EFG() As String
-            Get
-                Return Me._EFGField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me._EFGField, value) <> true) Then
-                    Me._EFGField = value
-                    Me.RaisePropertyChanged("_EFG")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _Elemente() As String
-            Get
-                Return Me._ElementeField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me._ElementeField, value) <> true) Then
-                    Me._ElementeField = value
-                    Me.RaisePropertyChanged("_Elemente")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _FK_Eichprotokoll() As Integer
-            Get
-                Return Me._FK_EichprotokollField
-            End Get
-            Set
-                If (Me._FK_EichprotokollField.Equals(value) <> true) Then
-                    Me._FK_EichprotokollField = value
-                    Me.RaisePropertyChanged("_FK_Eichprotokoll")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _ID() As Integer
-            Get
-                Return Me._IDField
-            End Get
-            Set
-                If (Me._IDField.Equals(value) <> true) Then
-                    Me._IDField = value
-                    Me.RaisePropertyChanged("_ID")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _Messbereich() As Byte
-            Get
-                Return Me._MessbereichField
-            End Get
-            Set
-                If (Me._MessbereichField.Equals(value) <> true) Then
-                    Me._MessbereichField = value
-                    Me.RaisePropertyChanged("_Messbereich")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _ServerEichprotokoll() As EichsoftwareWebservice.ServerEichprotokoll
-            Get
-                Return Me._ServerEichprotokollField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me._ServerEichprotokollField, value) <> true) Then
-                    Me._ServerEichprotokollField = value
-                    Me.RaisePropertyChanged("_ServerEichprotokoll")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _VFG() As String
-            Get
-                Return Me._VFGField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me._VFGField, value) <> true) Then
-                    Me._VFGField = value
-                    Me.RaisePropertyChanged("_VFG")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _Von() As String
-            Get
-                Return Me._VonField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me._VonField, value) <> true) Then
-                    Me._VonField = value
-                    Me.RaisePropertyChanged("_Von")
                 End If
             End Set
         End Property

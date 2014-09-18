@@ -148,7 +148,6 @@
       <xs:element minOccurs="0" name="ServerLookup_Konformitaetsbewertungsverfahren" nillable="true" type="tns:ServerLookup_Konformitaetsbewertungsverfahren" />
       <xs:element minOccurs="0" name="ServerPruefungAnsprechvermoegen" nillable="true" type="tns:ArrayOfServerPruefungAnsprechvermoegen" />
       <xs:element minOccurs="0" name="ServerPruefungAussermittigeBelastung" nillable="true" type="tns:ArrayOfServerPruefungAussermittigeBelastung" />
-      <xs:element minOccurs="0" name="ServerPruefungEichfehlergrenzen" nillable="true" type="tns:ArrayOfServerPruefungEichfehlergrenzen" />
       <xs:element minOccurs="0" name="ServerPruefungLinearitaetFallend" nillable="true" type="tns:ArrayOfServerPruefungLinearitaetFallend" />
       <xs:element minOccurs="0" name="ServerPruefungLinearitaetSteigend" nillable="true" type="tns:ArrayOfServerPruefungLinearitaetSteigend" />
       <xs:element minOccurs="0" name="ServerPruefungRollendeLasten" nillable="true" type="tns:ArrayOfServerPruefungRollendeLasten" />
@@ -250,26 +249,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ServerPruefungAussermittigeBelastung" nillable="true" type="tns:ServerPruefungAussermittigeBelastung" />
-  <xs:complexType name="ArrayOfServerPruefungEichfehlergrenzen">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="ServerPruefungEichfehlergrenzen" nillable="true" type="tns:ServerPruefungEichfehlergrenzen" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfServerPruefungEichfehlergrenzen" nillable="true" type="tns:ArrayOfServerPruefungEichfehlergrenzen" />
-  <xs:complexType name="ServerPruefungEichfehlergrenzen">
-    <xs:sequence>
-      <xs:element name="_Bis" nillable="true" type="xs:string" />
-      <xs:element name="_EFG" nillable="true" type="xs:string" />
-      <xs:element name="_Elemente" nillable="true" type="xs:string" />
-      <xs:element name="_FK_Eichprotokoll" type="xs:int" />
-      <xs:element name="_ID" type="xs:int" />
-      <xs:element name="_Messbereich" type="xs:unsignedByte" />
-      <xs:element name="_ServerEichprotokoll" nillable="true" type="tns:ServerEichprotokoll" />
-      <xs:element name="_VFG" nillable="true" type="xs:string" />
-      <xs:element name="_Von" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ServerPruefungEichfehlergrenzen" nillable="true" type="tns:ServerPruefungEichfehlergrenzen" />
   <xs:complexType name="ArrayOfServerPruefungLinearitaetFallend">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="ServerPruefungLinearitaetFallend" nillable="true" type="tns:ServerPruefungLinearitaetFallend" />
