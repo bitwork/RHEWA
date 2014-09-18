@@ -99,11 +99,15 @@ Public Class RijndaelSimple
         ' This password will be generated from the specified passphrase and 
         ' salt value. The password will be created using the specified hash 
         ' algorithm. Password creation can be done in several iterations.
-        Dim password As New PasswordDeriveBytes(passPhrase, saltValueBytes, hashAlgorithm, passwordIterations)
+        '  Dim password As New PasswordDeriveBytes(passPhrase, saltValueBytes, hashAlgorithm, passwordIterations)
+        Dim password As New Rfc2898DeriveBytes(passPhrase, saltValueBytes, passwordIterations)
 
         ' Use the password to generate pseudo-random bytes for the encryption
         ' key. Specify the size of the key in bytes (instead of bits).
         Dim keyBytes As Byte() = password.GetBytes(keySize / 8)
+
+
+
 
         ' Create uninitialized Rijndael encryption object.
         Dim symmetricKey As New RijndaelManaged()
@@ -202,7 +206,8 @@ Public Class RijndaelSimple
         ' passphrase and salt value. The password will be created using
         ' the specified hash algorithm. Password creation can be done in
         ' several iterations.
-        Dim password As New PasswordDeriveBytes(passPhrase, saltValueBytes, hashAlgorithm, passwordIterations)
+        'Dim password As New PasswordDeriveBytes(passPhrase, saltValueBytes, hashAlgorithm, passwordIterations)
+        Dim password As New Rfc2898DeriveBytes(passPhrase, saltValueBytes, passwordIterations)
 
         ' Use the password to generate pseudo-random bytes for the encryption
         ' key. Specify the size of the key in bytes (instead of bits).
