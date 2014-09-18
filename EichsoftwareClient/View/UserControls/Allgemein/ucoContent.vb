@@ -165,8 +165,13 @@ Public Class ucoContent
 #End Region
 
 #Region "Overidables"
-
-
+    ''' <summary>
+    ''' holt Steuerelement Objekt anhand von Namen als String
+    ''' </summary>
+    ''' <param name="Name"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    <DebuggerStepThroughAttribute> _
     Protected Overridable Function FindControl(ByVal Name As String) As Control
         Dim myControl As Control()
         myControl = Me.Controls.Find(Name, True)
@@ -177,6 +182,11 @@ Public Class ucoContent
             Return Nothing
         End If
     End Function
+
+    ''' <summary>
+    ''' Nullstellen Berechnung. Anzahl der Nullstellen ist abhängig vom Eichwert
+    ''' </summary>
+    ''' <remarks></remarks>
     Protected Overridable Sub HoleNullstellen()
         'Steuerlemente füllen
         'dynamisches laden der Nullstellen:
