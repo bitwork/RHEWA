@@ -34,7 +34,7 @@
     <SupportUrl>http://www.rhewa.com</SupportUrl>
     <ProductName>RHEWA Herstellerersteichung</ProductName>
     <PublisherName>RHEWA Waagenfabrik GmbH</PublisherName>
-    <ApplicationRevision>43</ApplicationRevision>
+    <ApplicationRevision>44</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -222,9 +222,6 @@
       <DependentUpon>EntityModelDatabaseClient.tt</DependentUpon>
     </Compile>
     <Compile Include="PruefungAussermittigeBelastung.vb">
-      <DependentUpon>EntityModelDatabaseClient.tt</DependentUpon>
-    </Compile>
-    <Compile Include="PruefungEichfehlergrenzen.vb">
       <DependentUpon>EntityModelDatabaseClient.tt</DependentUpon>
     </Compile>
     <Compile Include="PruefungLinearitaetFallend.vb">
@@ -1019,12 +1016,12 @@
   <ItemGroup>
     <PublishFile Include="EQATEC.Analytics.Monitor">
       <Visible>False</Visible>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
   </ItemGroup>
