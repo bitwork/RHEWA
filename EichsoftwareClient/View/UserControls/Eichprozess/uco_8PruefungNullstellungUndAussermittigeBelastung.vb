@@ -1692,15 +1692,16 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                 Else
                     'alle iterieren und ggfs neu anlegen
                     Dim bolNeu As Boolean = False
+                    Dim Bereich As Integer 'LINQ kann bei verwendung von iterationsvariablen (j und i) fehler durch Tread Parallelität erzeugen. Deswegen zuweisen des Wertes
                     For j = 1 To intBereiche
-
+                        Bereich = j 'LINQ kann bei verwendung von iterationsvariablen (j und i) fehler durch Tread Parallelität erzeugen. Deswegen zuweisen des Wertes
                         'sonderfall eine Wägezelle
                         If objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen = 1 Then
-                            Dim intBelastungsort As Integer = 1
+                            Dim intBelastungsort As Integer 'LINQ kann bei verwendung von iterationsvariablen (j und i) fehler durch Tread Parallelität erzeugen. Deswegen zuweisen des Wertes
                             For i As Integer = 1 To 5 'eine Mehr für Mitte
                                 bolNeu = False
-                                intBelastungsort = i
-                                Dim objPruefung = (From pruefungen In Context.PruefungAussermittigeBelastung Where pruefungen.Belastungsort = CStr(intBelastungsort) And pruefungen.Bereich = j).FirstOrDefault
+                                intBelastungsort = i 'LINQ kann bei verwendung von iterationsvariablen (j und i) fehler durch Tread Parallelität erzeugen. Deswegen zuweisen des Wertes
+                                Dim objPruefung = (From pruefungen In Context.PruefungAussermittigeBelastung Where pruefungen.Belastungsort = CStr(intBelastungsort) And pruefungen.Bereich = Bereich).FirstOrDefault
                                 If objPruefung Is Nothing Then
                                     objPruefung = Context.PruefungAussermittigeBelastung.Create
                                     bolNeu = True
@@ -1744,7 +1745,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                             For i As Integer = 1 To (objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen + 1) 'eine Mehr für Mitte
                                 intbelastungsort = i
                                 bolNeu = False
-                                Dim objPruefung = (From pruefungen In Context.PruefungAussermittigeBelastung Where pruefungen.Belastungsort = CStr(intbelastungsort) And pruefungen.Bereich = j).FirstOrDefault
+                                Dim objPruefung = (From pruefungen In Context.PruefungAussermittigeBelastung Where pruefungen.Belastungsort = CStr(intbelastungsort) And pruefungen.Bereich = Bereich).FirstOrDefault
                                 If objPruefung Is Nothing Then
                                     objPruefung = Context.PruefungAussermittigeBelastung.Create
                                     bolNeu = True

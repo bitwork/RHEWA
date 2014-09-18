@@ -249,7 +249,7 @@ Public Class ucoAmpel
                 Listitem = (From raditem In RadListView1.Items Where raditem.Value = pStatus - 2 And raditem.Visible = True).FirstOrDefault
             End If
 
-            Dim priorcontol As Control
+            Dim priorcontol As Control = Nothing
             If Not Me._ParentForm Is Nothing Then
                 If Not Me._ParentForm.CurrentUCO Is Nothing Then
                     priorcontol = Me._ParentForm.CurrentUCO.ActiveControl
