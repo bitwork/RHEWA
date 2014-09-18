@@ -3,6 +3,7 @@
 
 #Region "Member Variables"
     Private _suspendEvents As Boolean = False  'Variable zum temporären stoppen der Eventlogiken 
+    Private _parentForm As FrmMainContainer
 #End Region
 
 #Region "Constructors"
@@ -13,16 +14,23 @@
     End Sub
     Sub New(ByRef pParentform As FrmMainContainer, ByRef pObjEichprozess As Eichprozess, Optional ByRef pPreviousUco As ucoContent = Nothing, Optional ByRef pNextUco As ucoContent = Nothing, Optional ByVal pEnuModus As enuDialogModus = enuDialogModus.normal)
         MyBase.New(pParentform, pObjEichprozess, pPreviousUco, pNextUco, pEnuModus)
+        _parentForm = pParentform
         _suspendEvents = True
         InitializeComponent()
         _suspendEvents = False
 
-        'daten füllen
-        LoadFromDatabase()
     End Sub
 #End Region
 
 #Region "Events"
+
+    Private Sub ucoEichfehlergrenzen_Load(sender As Object, e As EventArgs) Handles Me.Load
+        Try
+            'daten füllen
+            LoadFromDatabase()
+        Catch ex As Exception
+        End Try
+    End Sub
 #End Region
 
 #Region "Methods"
@@ -32,6 +40,8 @@
         Using context As New EichsoftwareClientdatabaseEntities1
             'neu laden des Objekts, diesmal mit den lookup Objekten
             objEichprozess = (From a In context.Eichprozess.Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
+            If objEichprozess Is Nothing Then _parentForm.Close()
+
         End Using
         'steuerelemente mit werten aus DB füllen
         FillControls()
@@ -47,7 +57,7 @@
     ''' <commentauthor></commentauthor>
     Private Sub FillControls()
         'dynamisches laden der Nullstellen:
-      
+
         HoleNullstellen()
 
 
@@ -267,5 +277,5 @@
         End If
     End Sub
 
- 
+
 End Class

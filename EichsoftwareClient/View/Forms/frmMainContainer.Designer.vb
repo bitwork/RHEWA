@@ -124,7 +124,6 @@ Partial Class FrmMainContainer
         Me.RadScrollablePanelTrafficLightBreadcrumb.RootElement.AngleTransform = CType(resources.GetObject("RadScrollablePanelTrafficLightBreadcrumb.RootElement.AngleTransform"), Single)
         Me.RadScrollablePanelTrafficLightBreadcrumb.RootElement.FlipText = CType(resources.GetObject("RadScrollablePanelTrafficLightBreadcrumb.RootElement.FlipText"), Boolean)
         Me.RadScrollablePanelTrafficLightBreadcrumb.RootElement.Margin = CType(resources.GetObject("RadScrollablePanelTrafficLightBreadcrumb.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadScrollablePanelTrafficLightBreadcrumb.RootElement.Padding = CType(resources.GetObject("RadScrollablePanelTrafficLightBreadcrumb.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadScrollablePanelTrafficLightBreadcrumb.RootElement.Text = resources.GetString("RadScrollablePanelTrafficLightBreadcrumb.RootElement.Text")
         Me.RadScrollablePanelTrafficLightBreadcrumb.RootElement.TextOrientation = CType(resources.GetObject("RadScrollablePanelTrafficLightBreadcrumb.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -147,7 +146,6 @@ Partial Class FrmMainContainer
         Me.RadScrollablePanelContextHelp.RootElement.AngleTransform = CType(resources.GetObject("RadScrollablePanelContextHelp.RootElement.AngleTransform"), Single)
         Me.RadScrollablePanelContextHelp.RootElement.FlipText = CType(resources.GetObject("RadScrollablePanelContextHelp.RootElement.FlipText"), Boolean)
         Me.RadScrollablePanelContextHelp.RootElement.Margin = CType(resources.GetObject("RadScrollablePanelContextHelp.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadScrollablePanelContextHelp.RootElement.Padding = CType(resources.GetObject("RadScrollablePanelContextHelp.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadScrollablePanelContextHelp.RootElement.Text = resources.GetString("RadScrollablePanelContextHelp.RootElement.Text")
         Me.RadScrollablePanelContextHelp.RootElement.TextOrientation = CType(resources.GetObject("RadScrollablePanelContextHelp.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -171,7 +169,6 @@ Partial Class FrmMainContainer
         Me.RadLabelContextHelp.RootElement.AngleTransform = CType(resources.GetObject("RadLabelContextHelp.RootElement.AngleTransform"), Single)
         Me.RadLabelContextHelp.RootElement.FlipText = CType(resources.GetObject("RadLabelContextHelp.RootElement.FlipText"), Boolean)
         Me.RadLabelContextHelp.RootElement.Margin = CType(resources.GetObject("RadLabelContextHelp.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabelContextHelp.RootElement.Padding = CType(resources.GetObject("RadLabelContextHelp.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadLabelContextHelp.RootElement.Text = resources.GetString("RadLabelContextHelp.RootElement.Text")
         Me.RadLabelContextHelp.RootElement.TextOrientation = CType(resources.GetObject("RadLabelContextHelp.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -191,7 +188,6 @@ Partial Class FrmMainContainer
         Me.RadSplitContainerMain.RootElement.FlipText = CType(resources.GetObject("RadSplitContainerMain.RootElement.FlipText"), Boolean)
         Me.RadSplitContainerMain.RootElement.Margin = CType(resources.GetObject("RadSplitContainerMain.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadSplitContainerMain.RootElement.MinSize = New System.Drawing.Size(25, 25)
-        Me.RadSplitContainerMain.RootElement.Padding = CType(resources.GetObject("RadSplitContainerMain.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadSplitContainerMain.RootElement.Text = resources.GetString("RadSplitContainerMain.RootElement.Text")
         Me.RadSplitContainerMain.RootElement.TextOrientation = CType(resources.GetObject("RadSplitContainerMain.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadSplitContainerMain.SplitterWidth = 4
@@ -212,7 +208,6 @@ Partial Class FrmMainContainer
         Me.SplitPanelMain.RootElement.FlipText = CType(resources.GetObject("SplitPanelMain.RootElement.FlipText"), Boolean)
         Me.SplitPanelMain.RootElement.Margin = CType(resources.GetObject("SplitPanelMain.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.SplitPanelMain.RootElement.MinSize = New System.Drawing.Size(25, 25)
-        Me.SplitPanelMain.RootElement.Padding = CType(resources.GetObject("SplitPanelMain.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.SplitPanelMain.RootElement.Text = resources.GetString("SplitPanelMain.RootElement.Text")
         Me.SplitPanelMain.RootElement.TextOrientation = CType(resources.GetObject("SplitPanelMain.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.SplitPanelMain.SizeInfo.AutoSizeScale = New System.Drawing.SizeF(0.2799684!, 0.0!)
@@ -235,7 +230,6 @@ Partial Class FrmMainContainer
         Me.RadSplitContainerNavigation.RootElement.FlipText = CType(resources.GetObject("RadSplitContainerNavigation.RootElement.FlipText"), Boolean)
         Me.RadSplitContainerNavigation.RootElement.Margin = CType(resources.GetObject("RadSplitContainerNavigation.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadSplitContainerNavigation.RootElement.MinSize = New System.Drawing.Size(25, 25)
-        Me.RadSplitContainerNavigation.RootElement.Padding = CType(resources.GetObject("RadSplitContainerNavigation.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadSplitContainerNavigation.RootElement.Text = resources.GetString("RadSplitContainerNavigation.RootElement.Text")
         Me.RadSplitContainerNavigation.RootElement.TextOrientation = CType(resources.GetObject("RadSplitContainerNavigation.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadSplitContainerNavigation.SplitterWidth = 4
@@ -257,7 +251,6 @@ Partial Class FrmMainContainer
         Me.SplitPanelContent.RootElement.FlipText = CType(resources.GetObject("SplitPanelContent.RootElement.FlipText"), Boolean)
         Me.SplitPanelContent.RootElement.Margin = CType(resources.GetObject("SplitPanelContent.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.SplitPanelContent.RootElement.MinSize = New System.Drawing.Size(25, 25)
-        Me.SplitPanelContent.RootElement.Padding = CType(resources.GetObject("SplitPanelContent.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.SplitPanelContent.RootElement.Text = resources.GetString("SplitPanelContent.RootElement.Text")
         Me.SplitPanelContent.RootElement.TextOrientation = CType(resources.GetObject("SplitPanelContent.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.SplitPanelContent.SizeInfo.AutoSizeScale = New System.Drawing.SizeF(0.0!, -0.004815409!)
@@ -280,7 +273,6 @@ Partial Class FrmMainContainer
         Me.RadSplitContainerContent.RootElement.FlipText = CType(resources.GetObject("RadSplitContainerContent.RootElement.FlipText"), Boolean)
         Me.RadSplitContainerContent.RootElement.Margin = CType(resources.GetObject("RadSplitContainerContent.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadSplitContainerContent.RootElement.MinSize = New System.Drawing.Size(25, 25)
-        Me.RadSplitContainerContent.RootElement.Padding = CType(resources.GetObject("RadSplitContainerContent.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadSplitContainerContent.RootElement.Text = resources.GetString("RadSplitContainerContent.RootElement.Text")
         Me.RadSplitContainerContent.RootElement.TextOrientation = CType(resources.GetObject("RadSplitContainerContent.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadSplitContainerContent.SizeInfo.AbsoluteSize = New System.Drawing.Size(20, 200)
@@ -303,7 +295,6 @@ Partial Class FrmMainContainer
         Me.SplitPanelHeaderText.RootElement.FlipText = CType(resources.GetObject("SplitPanelHeaderText.RootElement.FlipText"), Boolean)
         Me.SplitPanelHeaderText.RootElement.Margin = CType(resources.GetObject("SplitPanelHeaderText.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.SplitPanelHeaderText.RootElement.MinSize = New System.Drawing.Size(25, 25)
-        Me.SplitPanelHeaderText.RootElement.Padding = CType(resources.GetObject("SplitPanelHeaderText.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.SplitPanelHeaderText.RootElement.Text = resources.GetString("SplitPanelHeaderText.RootElement.Text")
         Me.SplitPanelHeaderText.RootElement.TextOrientation = CType(resources.GetObject("SplitPanelHeaderText.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.SplitPanelHeaderText.SizeInfo.AbsoluteSize = New System.Drawing.Size(200, 142)
@@ -326,7 +317,6 @@ Partial Class FrmMainContainer
         Me.lblHeaderText.RootElement.AngleTransform = CType(resources.GetObject("lblHeaderText.RootElement.AngleTransform"), Single)
         Me.lblHeaderText.RootElement.FlipText = CType(resources.GetObject("lblHeaderText.RootElement.FlipText"), Boolean)
         Me.lblHeaderText.RootElement.Margin = CType(resources.GetObject("lblHeaderText.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblHeaderText.RootElement.Padding = CType(resources.GetObject("lblHeaderText.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblHeaderText.RootElement.Text = resources.GetString("lblHeaderText.RootElement.Text")
         Me.lblHeaderText.RootElement.TextOrientation = CType(resources.GetObject("lblHeaderText.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -344,7 +334,6 @@ Partial Class FrmMainContainer
         Me.SplitPanelContent1.RootElement.FlipText = CType(resources.GetObject("SplitPanelContent1.RootElement.FlipText"), Boolean)
         Me.SplitPanelContent1.RootElement.Margin = CType(resources.GetObject("SplitPanelContent1.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.SplitPanelContent1.RootElement.MinSize = New System.Drawing.Size(25, 25)
-        Me.SplitPanelContent1.RootElement.Padding = CType(resources.GetObject("SplitPanelContent1.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.SplitPanelContent1.RootElement.Text = resources.GetString("SplitPanelContent1.RootElement.Text")
         Me.SplitPanelContent1.RootElement.TextOrientation = CType(resources.GetObject("SplitPanelContent1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.SplitPanelContent1.SizeInfo.AutoSizeScale = New System.Drawing.SizeF(0.0!, -0.04918033!)
@@ -373,7 +362,6 @@ Partial Class FrmMainContainer
         Me.SplitPanelNavigation.RootElement.FlipText = CType(resources.GetObject("SplitPanelNavigation.RootElement.FlipText"), Boolean)
         Me.SplitPanelNavigation.RootElement.Margin = CType(resources.GetObject("SplitPanelNavigation.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.SplitPanelNavigation.RootElement.MinSize = New System.Drawing.Size(25, 25)
-        Me.SplitPanelNavigation.RootElement.Padding = CType(resources.GetObject("SplitPanelNavigation.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.SplitPanelNavigation.RootElement.Text = resources.GetString("SplitPanelNavigation.RootElement.Text")
         Me.SplitPanelNavigation.RootElement.TextOrientation = CType(resources.GetObject("SplitPanelNavigation.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.SplitPanelNavigation.SizeInfo.AbsoluteSize = New System.Drawing.Size(200, 66)
@@ -396,7 +384,6 @@ Partial Class FrmMainContainer
         Me.RadButtonVersenden.RootElement.AngleTransform = CType(resources.GetObject("RadButtonVersenden.RootElement.AngleTransform"), Single)
         Me.RadButtonVersenden.RootElement.FlipText = CType(resources.GetObject("RadButtonVersenden.RootElement.FlipText"), Boolean)
         Me.RadButtonVersenden.RootElement.Margin = CType(resources.GetObject("RadButtonVersenden.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButtonVersenden.RootElement.Padding = CType(resources.GetObject("RadButtonVersenden.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadButtonVersenden.RootElement.Text = resources.GetString("RadButtonVersenden.RootElement.Text")
         Me.RadButtonVersenden.RootElement.TextOrientation = CType(resources.GetObject("RadButtonVersenden.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadButtonVersenden.RootElement.ToolTipText = resources.GetString("RadButtonVersenden.RootElement.ToolTipText")
@@ -416,7 +403,6 @@ Partial Class FrmMainContainer
         Me.RadButtonEntsperren.RootElement.AngleTransform = CType(resources.GetObject("RadButtonEntsperren.RootElement.AngleTransform"), Single)
         Me.RadButtonEntsperren.RootElement.FlipText = CType(resources.GetObject("RadButtonEntsperren.RootElement.FlipText"), Boolean)
         Me.RadButtonEntsperren.RootElement.Margin = CType(resources.GetObject("RadButtonEntsperren.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButtonEntsperren.RootElement.Padding = CType(resources.GetObject("RadButtonEntsperren.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadButtonEntsperren.RootElement.Text = resources.GetString("RadButtonEntsperren.RootElement.Text")
         Me.RadButtonEntsperren.RootElement.TextOrientation = CType(resources.GetObject("RadButtonEntsperren.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadButtonEntsperren.RootElement.ToolTipText = resources.GetString("RadButtonEntsperren.RootElement.ToolTipText")
@@ -436,7 +422,6 @@ Partial Class FrmMainContainer
         Me.RadButtonChangeLanguageToPolish.RootElement.AngleTransform = CType(resources.GetObject("RadButtonChangeLanguageToPolish.RootElement.AngleTransform"), Single)
         Me.RadButtonChangeLanguageToPolish.RootElement.FlipText = CType(resources.GetObject("RadButtonChangeLanguageToPolish.RootElement.FlipText"), Boolean)
         Me.RadButtonChangeLanguageToPolish.RootElement.Margin = CType(resources.GetObject("RadButtonChangeLanguageToPolish.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButtonChangeLanguageToPolish.RootElement.Padding = CType(resources.GetObject("RadButtonChangeLanguageToPolish.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadButtonChangeLanguageToPolish.RootElement.Text = resources.GetString("RadButtonChangeLanguageToPolish.RootElement.Text")
         Me.RadButtonChangeLanguageToPolish.RootElement.TextOrientation = CType(resources.GetObject("RadButtonChangeLanguageToPolish.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadButtonChangeLanguageToPolish.TabStop = False
@@ -460,7 +445,6 @@ Partial Class FrmMainContainer
         Me.RadButtonChangeLanguageToEnglish.RootElement.AngleTransform = CType(resources.GetObject("RadButtonChangeLanguageToEnglish.RootElement.AngleTransform"), Single)
         Me.RadButtonChangeLanguageToEnglish.RootElement.FlipText = CType(resources.GetObject("RadButtonChangeLanguageToEnglish.RootElement.FlipText"), Boolean)
         Me.RadButtonChangeLanguageToEnglish.RootElement.Margin = CType(resources.GetObject("RadButtonChangeLanguageToEnglish.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButtonChangeLanguageToEnglish.RootElement.Padding = CType(resources.GetObject("RadButtonChangeLanguageToEnglish.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadButtonChangeLanguageToEnglish.RootElement.Text = resources.GetString("RadButtonChangeLanguageToEnglish.RootElement.Text")
         Me.RadButtonChangeLanguageToEnglish.RootElement.TextOrientation = CType(resources.GetObject("RadButtonChangeLanguageToEnglish.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadButtonChangeLanguageToEnglish.TabStop = False
@@ -484,7 +468,6 @@ Partial Class FrmMainContainer
         Me.RadButtonChangeLanguageToGerman.RootElement.AngleTransform = CType(resources.GetObject("RadButtonChangeLanguageToGerman.RootElement.AngleTransform"), Single)
         Me.RadButtonChangeLanguageToGerman.RootElement.FlipText = CType(resources.GetObject("RadButtonChangeLanguageToGerman.RootElement.FlipText"), Boolean)
         Me.RadButtonChangeLanguageToGerman.RootElement.Margin = CType(resources.GetObject("RadButtonChangeLanguageToGerman.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButtonChangeLanguageToGerman.RootElement.Padding = CType(resources.GetObject("RadButtonChangeLanguageToGerman.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadButtonChangeLanguageToGerman.RootElement.Text = resources.GetString("RadButtonChangeLanguageToGerman.RootElement.Text")
         Me.RadButtonChangeLanguageToGerman.RootElement.TextOrientation = CType(resources.GetObject("RadButtonChangeLanguageToGerman.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadButtonChangeLanguageToGerman.TabStop = False
@@ -507,7 +490,6 @@ Partial Class FrmMainContainer
         Me.RadButtonNavigateBackwards.RootElement.AngleTransform = CType(resources.GetObject("RadButtonNavigateBackwards.RootElement.AngleTransform"), Single)
         Me.RadButtonNavigateBackwards.RootElement.FlipText = CType(resources.GetObject("RadButtonNavigateBackwards.RootElement.FlipText"), Boolean)
         Me.RadButtonNavigateBackwards.RootElement.Margin = CType(resources.GetObject("RadButtonNavigateBackwards.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButtonNavigateBackwards.RootElement.Padding = CType(resources.GetObject("RadButtonNavigateBackwards.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadButtonNavigateBackwards.RootElement.Text = resources.GetString("RadButtonNavigateBackwards.RootElement.Text")
         Me.RadButtonNavigateBackwards.RootElement.TextOrientation = CType(resources.GetObject("RadButtonNavigateBackwards.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         CType(Me.RadButtonNavigateBackwards.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
@@ -529,7 +511,6 @@ Partial Class FrmMainContainer
         Me.RadButtonNavigateForwards.RootElement.AngleTransform = CType(resources.GetObject("RadButtonNavigateForwards.RootElement.AngleTransform"), Single)
         Me.RadButtonNavigateForwards.RootElement.FlipText = CType(resources.GetObject("RadButtonNavigateForwards.RootElement.FlipText"), Boolean)
         Me.RadButtonNavigateForwards.RootElement.Margin = CType(resources.GetObject("RadButtonNavigateForwards.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButtonNavigateForwards.RootElement.Padding = CType(resources.GetObject("RadButtonNavigateForwards.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadButtonNavigateForwards.RootElement.Text = resources.GetString("RadButtonNavigateForwards.RootElement.Text")
         Me.RadButtonNavigateForwards.RootElement.TextOrientation = CType(resources.GetObject("RadButtonNavigateForwards.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         CType(Me.RadButtonNavigateForwards.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = CType(resources.GetObject("resource.Image1"), System.Drawing.Image)
@@ -561,7 +542,6 @@ Partial Class FrmMainContainer
         Me.SplitPanelSidebar.RootElement.FlipText = CType(resources.GetObject("SplitPanelSidebar.RootElement.FlipText"), Boolean)
         Me.SplitPanelSidebar.RootElement.Margin = CType(resources.GetObject("SplitPanelSidebar.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.SplitPanelSidebar.RootElement.MinSize = New System.Drawing.Size(25, 25)
-        Me.SplitPanelSidebar.RootElement.Padding = CType(resources.GetObject("SplitPanelSidebar.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.SplitPanelSidebar.RootElement.Text = resources.GetString("SplitPanelSidebar.RootElement.Text")
         Me.SplitPanelSidebar.RootElement.TextOrientation = CType(resources.GetObject("SplitPanelSidebar.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.SplitPanelSidebar.SizeInfo.AutoSizeScale = New System.Drawing.SizeF(-0.2799684!, 0.0!)
@@ -584,7 +564,6 @@ Partial Class FrmMainContainer
         Me.RadSplitContainerSidebar.RootElement.FlipText = CType(resources.GetObject("RadSplitContainerSidebar.RootElement.FlipText"), Boolean)
         Me.RadSplitContainerSidebar.RootElement.Margin = CType(resources.GetObject("RadSplitContainerSidebar.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadSplitContainerSidebar.RootElement.MinSize = New System.Drawing.Size(25, 25)
-        Me.RadSplitContainerSidebar.RootElement.Padding = CType(resources.GetObject("RadSplitContainerSidebar.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadSplitContainerSidebar.RootElement.Text = resources.GetString("RadSplitContainerSidebar.RootElement.Text")
         Me.RadSplitContainerSidebar.RootElement.TextOrientation = CType(resources.GetObject("RadSplitContainerSidebar.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadSplitContainerSidebar.SplitterWidth = 4
@@ -605,7 +584,6 @@ Partial Class FrmMainContainer
         Me.SplitPanelTrafficLight.RootElement.FlipText = CType(resources.GetObject("SplitPanelTrafficLight.RootElement.FlipText"), Boolean)
         Me.SplitPanelTrafficLight.RootElement.Margin = CType(resources.GetObject("SplitPanelTrafficLight.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.SplitPanelTrafficLight.RootElement.MinSize = New System.Drawing.Size(25, 25)
-        Me.SplitPanelTrafficLight.RootElement.Padding = CType(resources.GetObject("SplitPanelTrafficLight.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.SplitPanelTrafficLight.RootElement.Text = resources.GetString("SplitPanelTrafficLight.RootElement.Text")
         Me.SplitPanelTrafficLight.RootElement.TextOrientation = CType(resources.GetObject("SplitPanelTrafficLight.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.SplitPanelTrafficLight.SizeInfo.AbsoluteSize = New System.Drawing.Size(200, 142)
@@ -629,7 +607,6 @@ Partial Class FrmMainContainer
         Me.SplitPanelContextHelp.RootElement.FlipText = CType(resources.GetObject("SplitPanelContextHelp.RootElement.FlipText"), Boolean)
         Me.SplitPanelContextHelp.RootElement.Margin = CType(resources.GetObject("SplitPanelContextHelp.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.SplitPanelContextHelp.RootElement.MinSize = New System.Drawing.Size(25, 25)
-        Me.SplitPanelContextHelp.RootElement.Padding = CType(resources.GetObject("SplitPanelContextHelp.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.SplitPanelContextHelp.RootElement.Text = resources.GetString("SplitPanelContextHelp.RootElement.Text")
         Me.SplitPanelContextHelp.RootElement.TextOrientation = CType(resources.GetObject("SplitPanelContextHelp.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.SplitPanelContextHelp.SizeInfo.AutoSizeScale = New System.Drawing.SizeF(0.0!, -0.00837521!)
@@ -677,7 +654,6 @@ Partial Class FrmMainContainer
         Me.RadTextBox2.RootElement.AngleTransform = CType(resources.GetObject("RadTextBox2.RootElement.AngleTransform"), Single)
         Me.RadTextBox2.RootElement.FlipText = CType(resources.GetObject("RadTextBox2.RootElement.FlipText"), Boolean)
         Me.RadTextBox2.RootElement.Margin = CType(resources.GetObject("RadTextBox2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBox2.RootElement.Padding = CType(resources.GetObject("RadTextBox2.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBox2.RootElement.Text = resources.GetString("RadTextBox2.RootElement.Text")
         Me.RadTextBox2.RootElement.TextOrientation = CType(resources.GetObject("RadTextBox2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -770,6 +746,7 @@ Partial Class FrmMainContainer
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.RadSplitContainerMain)
+        Me.KeyPreview = True
         Me.Name = "FrmMainContainer"
         '
         '
@@ -781,7 +758,6 @@ Partial Class FrmMainContainer
         Me.RootElement.ApplyShapeToControl = True
         Me.RootElement.FlipText = CType(resources.GetObject("FrmMainContainer.RootElement.FlipText"), Boolean)
         Me.RootElement.Margin = CType(resources.GetObject("FrmMainContainer.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RootElement.Padding = CType(resources.GetObject("FrmMainContainer.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RootElement.Text = resources.GetString("FrmMainContainer.RootElement.Text")
         Me.RootElement.TextOrientation = CType(resources.GetObject("FrmMainContainer.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         CType(Me.RadScrollablePanelTrafficLightBreadcrumb, System.ComponentModel.ISupportInitialize).EndInit()

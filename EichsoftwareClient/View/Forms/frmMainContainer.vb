@@ -251,6 +251,18 @@ Public Class FrmMainContainer
 
 #Region "Formular Events"
 
+    Private Sub FrmMainContainer_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+        If e.KeyData.ToString.Equals("F1") Then
+            If Not _CurrentUco Is Nothing Then
+                If Not _CurrentUco.objEichprozess Is Nothing Then
+                    Dim f As New frmEichfehlergrenzen(_CurrentUco.objEichprozess)
+                    f.Show()
+                End If
+            End If
+        End If
+    End Sub
+
+
 
     Private Sub FrmMainContainer_Load(sender As Object, e As System.EventArgs) Handles Me.Load
         'frmMain Container nutzt entweder die logiken zum Blättern eines eichprozesses (sofern me.currenteichprozess) nicht nothing ist oder aber zeigt die Auswahlliste an, in der die eigenen Eichprozesse aufgelistet werden.
