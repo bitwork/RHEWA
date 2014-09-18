@@ -1,10 +1,12 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class frmDBSync
-    Private Const DBTABLES As String = "ServerVerbindungsprotokoll,ServerLookupVertragspartnerFirma,ServerKonfiguration,Servereichmarkenverwaltung,Firmen,ServerFirmenZusatzdaten,Benutzer,ServerLizensierung,ServerLookup_Waagenart,ServerKompatiblitaetsnachweis,ServerBeschaffenheitspruefung,ServerLookup_Vorgangsstatus,ServerLookup_Auswertegeraet,ServerLookup_Waegezelle,ServerLookup_Bearbeitungsstatus,ServerLookup_Waagentyp,ServerLookup_Konformitaetsbewertungsverfahren,ServerEichprotokoll,ServerEichprozess,ServerMogelstatistik,ServerPruefungAnsprechvermoegen,ServerPruefungAussermittigeBelastung,ServerPruefungEichfehlergrenzen,ServerPruefungLinearitaetFallend,ServerPruefungLinearitaetSteigend,ServerPruefungRollendeLasten,ServerPruefungStabilitaetGleichgewichtslage,ServerPruefungStaffelverfahrenErsatzlast,ServerPruefungStaffelverfahrenNormallast,ServerPruefungWiederholbarkeit"
+    Private Const DBTABLES As String = "ServerVerbindungsprotokoll,ServerLookupVertragspartnerFirma,ServerKonfiguration,Servereichmarkenverwaltung,Firmen,ServerFirmenZusatzdaten,Benutzer,ServerLizensierung,ServerLookup_Waagenart,ServerKompatiblitaetsnachweis,ServerBeschaffenheitspruefung,ServerLookup_Vorgangsstatus,ServerLookup_Auswertegeraet,ServerLookup_Waegezelle,ServerLookup_Bearbeitungsstatus,ServerLookup_Waagentyp,ServerLookup_Konformitaetsbewertungsverfahren,ServerEichprotokoll,ServerEichprozess,ServerMogelstatistik,ServerPruefungAnsprechvermoegen,ServerPruefungAussermittigeBelastung,ServerPruefungLinearitaetFallend,ServerPruefungLinearitaetSteigend,ServerPruefungRollendeLasten,ServerPruefungStabilitaetGleichgewichtslage,ServerPruefungStaffelverfahrenErsatzlast,ServerPruefungStaffelverfahrenNormallast,ServerPruefungWiederholbarkeit"
 
 
     Private Sub Start()
+        'einblenden des DEV Syncs
+        If Debugger.IsAttached Then RadioButtonSyncStratoDEV.Visible = True Else RadioButtonSyncStratoDEV.Visible = False
         If Not BackgroundWorker1.IsBusy Then
             'formatierung
             RadWaitingBar1.Visible = True
@@ -17,14 +19,6 @@ Public Class frmDBSync
             'textboxen leeren
             RadListControlSQLQuery.Text = ""
             RadListControlLog.Text = ""
-
-            ''Connection String initialisieren
-            'Dim conn As New SqlClient.SqlConnection
-            'If RadioButtonSyncStratoRHEWA.Checked Then
-            '    conn.ConnectionString = "Data Source=WIN7MOBDEV01;Initial Catalog=Herstellerersteichung;Persist Security Info=True;User ID=sa;Password=Test1234"
-            'ElseIf RadioButtonSyncRHEWAStrato.Checked Then
-            '    conn.ConnectionString = "Data Source=h2223265.stratoserver.net;Initial Catalog=Herstellerersteichung;Persist Security Info=True;User ID=Eichen;Password=Eichen2013"
-            'End If
 
             'Starten des Threads
             TimerLog.Enabled = True
@@ -46,13 +40,16 @@ Public Class frmDBSync
         'Connection String initialisieren
         Dim conn As New SqlClient.SqlConnection
         If RadioButtonSyncStratoRHEWA.Checked Then
+            'TODO DB PFad von RHEWA Eintragen
             conn.ConnectionString = "Data Source=WIN7MOBDEV01;Initial Catalog=Herstellerersteichung;Persist Security Info=True;User ID=sa;Password=Test1234"
             PathScript = AppDomain.CurrentDomain.BaseDirectory & "Repository\Call_DTS STRATO RHEWA.bat"
 
         ElseIf RadioButtonSyncRHEWAStrato.Checked Then
             conn.ConnectionString = "Data Source=h2223265.stratoserver.net;Initial Catalog=Herstellerersteichung;Persist Security Info=True;User ID=Eichen;Password=Eichen2013"
             PathScript = AppDomain.CurrentDomain.BaseDirectory & "Repository\Call_DTS RHEWA STRATO.bat"
-
+        ElseIf RadioButtonSyncStratoDEV.Checked Then
+            conn.ConnectionString = "Data Source=WIN7MOBDEV01;Initial Catalog=Herstellerersteichung;Persist Security Info=True;User ID=sa;Password=Test1234"
+            PathScript = AppDomain.CurrentDomain.BaseDirectory & "Repository\Call_DTS STRATO RHEWA.bat"
         End If
 
         Dim returnvalue As Tuple(Of String, String) = Nothing

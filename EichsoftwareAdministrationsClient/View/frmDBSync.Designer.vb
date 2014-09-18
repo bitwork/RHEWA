@@ -34,6 +34,7 @@ Partial Class frmDBSync
         Me.RadListControlSQLQuery = New System.Windows.Forms.TextBox()
         Me.TimerLog = New System.Windows.Forms.Timer(Me.components)
         Me.ButtonSync = New Telerik.WinControls.UI.RadButton()
+        Me.RadioButtonSyncStratoDEV = New System.Windows.Forms.RadioButton()
         CType(Me.RadWaitingBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
@@ -54,7 +55,6 @@ Partial Class frmDBSync
         Me.RadioButtonSyncStratoRHEWA.Name = "RadioButtonSyncStratoRHEWA"
         Me.RadioButtonSyncStratoRHEWA.Size = New System.Drawing.Size(211, 17)
         Me.RadioButtonSyncStratoRHEWA.TabIndex = 0
-        Me.RadioButtonSyncStratoRHEWA.TabStop = True
         Me.RadioButtonSyncStratoRHEWA.Text = "Sync von Strato zu RHEWA (Standard)"
         Me.RadioButtonSyncStratoRHEWA.UseVisualStyleBackColor = True
         '
@@ -164,12 +164,23 @@ Partial Class frmDBSync
         Me.ButtonSync.TabIndex = 2
         Me.ButtonSync.Text = "Daten abgleichen"
         '
+        'RadioButtonSyncStratoDEV
+        '
+        Me.RadioButtonSyncStratoDEV.AutoSize = True
+        Me.RadioButtonSyncStratoDEV.Location = New System.Drawing.Point(358, 13)
+        Me.RadioButtonSyncStratoDEV.Name = "RadioButtonSyncStratoDEV"
+        Me.RadioButtonSyncStratoDEV.Size = New System.Drawing.Size(140, 17)
+        Me.RadioButtonSyncStratoDEV.TabIndex = 7
+        Me.RadioButtonSyncStratoDEV.Text = "Sync von Strato zu DEV"
+        Me.RadioButtonSyncStratoDEV.UseVisualStyleBackColor = True
+        '
         'frmDBSync
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(781, 534)
+        Me.Controls.Add(Me.RadioButtonSyncStratoDEV)
         Me.Controls.Add(Me.ButtonSync)
         Me.Controls.Add(Me.SplitContainer1)
         Me.Controls.Add(Me.RadWaitingBar1)
@@ -204,5 +215,6 @@ Partial Class frmDBSync
     Friend WithEvents RadGroupBox1 As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents RadGroupBox2 As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents ButtonSync As Telerik.WinControls.UI.RadButton
+    Friend WithEvents RadioButtonSyncStratoDEV As System.Windows.Forms.RadioButton
 
 End Class
