@@ -641,7 +641,11 @@
             End If
         Next
           'fehlermeldung anzeigen bei falscher validierung
-        Return Me.ShowValidationErrorBox()
+        If Me.AbortSaveing = True Then
+                    MessageBox.Show(My.Resources.GlobaleLokalisierung.PflichtfelderAusfuellen, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    Return False
+        End If
+        Return True
     End Function
 
     'Speicherroutine
