@@ -183,6 +183,7 @@ Public Class clsWebserviceFunctions
                                         objWZ.Pruefbericht = objServerArtikel._Pruefbericht
                                         objWZ.Typ = objServerArtikel._Typ
                                         objWZ.Deaktiviert = objServerArtikel._Deaktiviert
+                                        objWZ.Neu = objServerArtikel._Neu
                                     Next
                                 End If
                             Catch ex As Exception

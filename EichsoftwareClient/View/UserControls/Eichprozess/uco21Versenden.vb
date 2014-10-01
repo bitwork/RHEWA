@@ -181,6 +181,8 @@ Public Class Uco21Versenden
                                 Dim objServerWZ As New EichsoftwareWebservice.ServerLookup_Waegezelle
                                 clsClientServerConversionFunctions.CopyWZObjectProperties(objServerWZ, objEichprozess.Lookup_Waegezelle)
                                 Webcontext.AddWaegezelle(objLiz.HEKennung, objLiz.Lizenzschluessel, objServerWZ, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+
+                                objServerEichprozess._FK_Waegezelle = objServerWZ._ID
                             End If
                         End If
                     End If
