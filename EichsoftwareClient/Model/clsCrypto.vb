@@ -206,8 +206,8 @@ Public Class RijndaelSimple
         ' passphrase and salt value. The password will be created using
         ' the specified hash algorithm. Password creation can be done in
         ' several iterations.
-        'Dim password As New PasswordDeriveBytes(passPhrase, saltValueBytes, hashAlgorithm, passwordIterations)
-        Dim password As New Rfc2898DeriveBytes(passPhrase, saltValueBytes, passwordIterations)
+        Dim password As New PasswordDeriveBytes(passPhrase, saltValueBytes, hashAlgorithm, passwordIterations)
+        ' Dim password As New Rfc2898DeriveBytes(passPhrase, saltValueBytes, passwordIterations)
 
         ' Use the password to generate pseudo-random bytes for the encryption
         ' key. Specify the size of the key in bytes (instead of bits).
@@ -236,8 +236,10 @@ Public Class RijndaelSimple
         ' plaintext is never longer than ciphertext.
         Dim plainTextBytes As Byte() = New Byte(cipherTextBytes.Length - 1) {}
 
+
         ' Start decrypting.
         Dim decryptedByteCount As Integer = cryptoStream.Read(plainTextBytes, 0, plainTextBytes.Length)
+
 
         ' Close both streams.
         memoryStream.Close()

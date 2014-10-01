@@ -446,10 +446,13 @@
     Private Sub RadGridViewRHEWAAlle_CellFormatting(sender As Object, e As Telerik.WinControls.UI.CellFormattingEventArgs) Handles RadGridViewRHEWAAlle.CellFormatting
         Try
             If (RadGridViewRHEWAAlle.Columns(e.ColumnIndex).Name = "AnhangPfad") Then
-                If e.CellElement.Text.Trim.Equals("") = False Then
+                'einblenden des symbols
+                If Not e.CellElement.Text.Trim.Equals("") Then
                     e.CellElement.Value = e.CellElement.Text
                     e.CellElement.Text = ""
                     e.CellElement.Image = My.Resources.attach
+                Else
+                    e.CellElement.Image = Nothing
                 End If
             End If
         Catch ex As Exception
@@ -640,16 +643,26 @@
                     'downloadgroße ermitteln
                     Dim filesize As Long
                     filesize = objFTP.GetFileSize(objFTPDaten.FTPServername, objFTPDaten.FTPUserName, password, file.Name)
-
+                    If filesize = 0 Then Return "" 'abbruch 
                     BackgroundWorkerDownloadFromFTP.ReportProgress(filesize)
                     Try
                         'datei download. FTPUploadPath bekommt den reelen Pfad auf dem FTP Server
                         If objFTP.DownloadFileFromFTP(objFTPDaten.FTPServername, objFTPDaten.FTPUserName, password, file.Name, file.FullName) Then
                             Return file.FullName
                         Else
+                            Try
+                                file.Delete()
+                            Catch ex As Exception
+                                MessageBox.Show("Konnte fehlerhafte Datei nicht löschen " & file.FullName)
+                            End Try
                             Return ""
                         End If
                     Catch ex As Exception
+                        Try
+                            file.Delete()
+                        Catch ex2 As Exception
+                            MessageBox.Show("Konnte fehlerhafte Datei nicht löschen " & file.FullName)
+                        End Try
                         Return ""
                     End Try
                 End If

@@ -109,13 +109,21 @@ Public Class clsFTP
 
                             Using fs As FileStream = File.OpenWrite(LocalFilePath)
                                 Do
-                                    bytesRead = ostream.Read(contentRead, 0, buffer)
-                                    sumbytes += bytesRead
 
-                                    If bytesRead > 0 Then
-                                        fs.Write(contentRead, 0, bytesRead)
-                                        RaiseEvent ReportFTPProgress(sumbytes)
-                                    End If
+                                    Try
+                                        bytesRead = ostream.Read(contentRead, 0, buffer)
+                                        sumbytes += bytesRead
+
+                                        If bytesRead > 0 Then
+                                            fs.Write(contentRead, 0, bytesRead)
+                                            RaiseEvent ReportFTPProgress(sumbytes)
+                                        End If
+                                    Catch ex As IOException
+                                        MessageBox.Show("Connection Lost")
+                                        Return False
+                                        Exit Do
+                                    End Try
+
                                 Loop While (bytesRead > 0)
                                 fs.Close()
                                 Return True
@@ -151,7 +159,12 @@ Public Class clsFTP
             'FTP Upload
             conn.Host = pFTPServer
             conn.Credentials = New NetworkCredential(pUsername, pPassword)
-            conn.Connect()
+            Try
+                conn.Connect()
+            Catch ex As Sockets.SocketException
+
+            End Try
+
 
             If conn.IsConnected Then
                 If conn.FileExists(FTPFilePath) Then
