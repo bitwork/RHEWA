@@ -515,58 +515,58 @@
                                         Continue For
                                     End If
 
+                                End If
+                            End If
 
+                            If Control.Text.trim.Equals("") Then
+
+                                'sonderfälle
+                                'emin kein Pflichtfeld
+                                If Control.Equals(RadTextBoxControlWZMindestvorlast) Then
+                                    'standardwert auf 0 setzen
+                                    RadTextBoxControlWZMindestvorlast.Text = 0
+                                    Continue For
                                 End If
 
-                                If Control.Text.trim.Equals("") Then
 
-                                    'sonderfälle
-                                    'emin kein Pflichtfeld
-                                    If Control.Equals(RadTextBoxControlWZMindestvorlast) Then
-                                        'standardwert auf 0 setzen
-                                        RadTextBoxControlWZMindestvorlast.Text = 0
+
+                                'minteilungswert darf leer sein, wenn Hoechsteilungsfaktor gefüllt
+                                If Control.Equals(RadTextBoxControlWZMinTeilungswert) Then
+                                    'ist gültig wenn hoechstteilungsfaktor gefüllt
+                                    If Not RadTextBoxControlWZHoechstteilungsfaktor.Text.Trim.Equals("") Then
                                         Continue For
                                     End If
-
-
-
-                                    'minteilungswert darf leer sein, wenn Hoechsteilungsfaktor gefüllt
-                                    If Control.Equals(RadTextBoxControlWZMinTeilungswert) Then
-                                        'ist gültig wenn hoechstteilungsfaktor gefüllt
-                                        If Not RadTextBoxControlWZHoechstteilungsfaktor.Text.Trim.Equals("") Then
-                                            Continue For
-                                        End If
-                                    End If
-
-                                    'Hoechsteilungsfaktor darf leer sein, wenn minteilungswert gefüllt
-                                    If Control.Equals(RadTextBoxControlWZHoechstteilungsfaktor) Then
-                                        'ist gültig wenn min Teilungswert gefüllt
-                                        If Not RadTextBoxControlWZMinTeilungswert.Text.Trim.Equals("") Then
-                                            Continue For
-                                        End If
-                                    End If
-                                    'RadTextBoxControlWZKriechteilungsfaktor darf leer sein wenn RadTextBoxControlWZRueckkehrVorlastsignal gefüllt ist
-                                    If Control.Equals(RadTextBoxControlWZKriechteilungsfaktor) Then
-                                        'ist gültig wenn Rückkehr des Vorlastsignals gefüllt
-                                        If Not RadTextBoxControlWZRueckkehrVorlastsignal.Text.Trim.Equals("") Then
-                                            Continue For
-                                        End If
-                                    End If
-                                    'RadTextBoxControlWZRueckkehrVorlastsignal darf leer sein wenn RadTextBoxControlWZKriechteilungsfaktor gefüllt ist
-                                    If Control.Equals(RadTextBoxControlWZRueckkehrVorlastsignal) Then
-                                        'ist gültig wenn Kriechteilungsfaktor gefüllt
-                                        If Not RadTextBoxControlWZKriechteilungsfaktor.Text.Trim.Equals("") Then
-                                            Continue For
-                                        End If
-                                    End If
-
-
-                                    Me.AbortSaveing = True
-
-                                    CType(Control, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.Red
-                                    ' CType(Control, Telerik.WinControls.UI.RadTextBoxControl).Focus()
-                                    '  Return False
                                 End If
+
+                                'Hoechsteilungsfaktor darf leer sein, wenn minteilungswert gefüllt
+                                If Control.Equals(RadTextBoxControlWZHoechstteilungsfaktor) Then
+                                    'ist gültig wenn min Teilungswert gefüllt
+                                    If Not RadTextBoxControlWZMinTeilungswert.Text.Trim.Equals("") Then
+                                        Continue For
+                                    End If
+                                End If
+                                'RadTextBoxControlWZKriechteilungsfaktor darf leer sein wenn RadTextBoxControlWZRueckkehrVorlastsignal gefüllt ist
+                                If Control.Equals(RadTextBoxControlWZKriechteilungsfaktor) Then
+                                    'ist gültig wenn Rückkehr des Vorlastsignals gefüllt
+                                    If Not RadTextBoxControlWZRueckkehrVorlastsignal.Text.Trim.Equals("") Then
+                                        Continue For
+                                    End If
+                                End If
+                                'RadTextBoxControlWZRueckkehrVorlastsignal darf leer sein wenn RadTextBoxControlWZKriechteilungsfaktor gefüllt ist
+                                If Control.Equals(RadTextBoxControlWZRueckkehrVorlastsignal) Then
+                                    'ist gültig wenn Kriechteilungsfaktor gefüllt
+                                    If Not RadTextBoxControlWZKriechteilungsfaktor.Text.Trim.Equals("") Then
+                                        Continue For
+                                    End If
+                                End If
+
+
+                                Me.AbortSaveing = True
+
+                                CType(Control, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.Red
+                                ' CType(Control, Telerik.WinControls.UI.RadTextBoxControl).Focus()
+                                '  Return False
+
                             End If
                         End If
                     End If

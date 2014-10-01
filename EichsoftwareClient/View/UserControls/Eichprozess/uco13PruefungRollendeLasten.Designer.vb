@@ -24,6 +24,12 @@ Partial Class uco13PruefungRollendeLasten
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco13PruefungRollendeLasten))
         Me.RadScrollablePanel1 = New Telerik.WinControls.UI.RadScrollablePanel()
+        Me.lblPflichtfeld6 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld5 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld4 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld3 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld2 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld1 = New System.Windows.Forms.Label()
         Me.RadButton1 = New Telerik.WinControls.UI.RadButton()
         Me.PictureBox18 = New System.Windows.Forms.PictureBox()
         Me.PictureBox79 = New System.Windows.Forms.PictureBox()
@@ -89,12 +95,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.lblEFGWertRechts = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.RadTextBoxControlLastRechts1 = New Telerik.WinControls.UI.RadTextBoxControl()
         Me.PanelContainer = New Telerik.WinControls.UI.RadScrollablePanelContainer()
-        Me.lblPflichtfeld1 = New System.Windows.Forms.Label()
-        Me.lblPflichtfeld2 = New System.Windows.Forms.Label()
-        Me.lblPflichtfeld3 = New System.Windows.Forms.Label()
-        Me.lblPflichtfeld4 = New System.Windows.Forms.Label()
-        Me.lblPflichtfeld5 = New System.Windows.Forms.Label()
-        Me.lblPflichtfeld6 = New System.Windows.Forms.Label()
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanel1.PanelContainer.SuspendLayout()
         Me.RadScrollablePanel1.SuspendLayout()
@@ -251,9 +251,44 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadScrollablePanel1.RootElement.AngleTransform = CType(resources.GetObject("RadScrollablePanel1.RootElement.AngleTransform"), Single)
         Me.RadScrollablePanel1.RootElement.FlipText = CType(resources.GetObject("RadScrollablePanel1.RootElement.FlipText"), Boolean)
         Me.RadScrollablePanel1.RootElement.Margin = CType(resources.GetObject("RadScrollablePanel1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadScrollablePanel1.RootElement.Padding = CType(resources.GetObject("RadScrollablePanel1.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadScrollablePanel1.RootElement.Text = resources.GetString("RadScrollablePanel1.RootElement.Text")
         Me.RadScrollablePanel1.RootElement.TextOrientation = CType(resources.GetObject("RadScrollablePanel1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        '
+        'lblPflichtfeld6
+        '
+        resources.ApplyResources(Me.lblPflichtfeld6, "lblPflichtfeld6")
+        Me.lblPflichtfeld6.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld6.Name = "lblPflichtfeld6"
+        '
+        'lblPflichtfeld5
+        '
+        resources.ApplyResources(Me.lblPflichtfeld5, "lblPflichtfeld5")
+        Me.lblPflichtfeld5.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld5.Name = "lblPflichtfeld5"
+        '
+        'lblPflichtfeld4
+        '
+        resources.ApplyResources(Me.lblPflichtfeld4, "lblPflichtfeld4")
+        Me.lblPflichtfeld4.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld4.Name = "lblPflichtfeld4"
+        '
+        'lblPflichtfeld3
+        '
+        resources.ApplyResources(Me.lblPflichtfeld3, "lblPflichtfeld3")
+        Me.lblPflichtfeld3.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld3.Name = "lblPflichtfeld3"
+        '
+        'lblPflichtfeld2
+        '
+        resources.ApplyResources(Me.lblPflichtfeld2, "lblPflichtfeld2")
+        Me.lblPflichtfeld2.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld2.Name = "lblPflichtfeld2"
+        '
+        'lblPflichtfeld1
+        '
+        resources.ApplyResources(Me.lblPflichtfeld1, "lblPflichtfeld1")
+        Me.lblPflichtfeld1.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld1.Name = "lblPflichtfeld1"
         '
         'RadButton1
         '
@@ -268,7 +303,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadButton1.RootElement.AngleTransform = CType(resources.GetObject("RadButton1.RootElement.AngleTransform"), Single)
         Me.RadButton1.RootElement.FlipText = CType(resources.GetObject("RadButton1.RootElement.FlipText"), Boolean)
         Me.RadButton1.RootElement.Margin = CType(resources.GetObject("RadButton1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButton1.RootElement.Padding = CType(resources.GetObject("RadButton1.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadButton1.RootElement.Text = resources.GetString("RadButton1.RootElement.Text")
         Me.RadButton1.RootElement.TextOrientation = CType(resources.GetObject("RadButton1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -313,7 +347,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.lblBelastungsstelleLinks.RootElement.AngleTransform = CType(resources.GetObject("lblBelastungsstelleLinks.RootElement.AngleTransform"), Single)
         Me.lblBelastungsstelleLinks.RootElement.FlipText = CType(resources.GetObject("lblBelastungsstelleLinks.RootElement.FlipText"), Boolean)
         Me.lblBelastungsstelleLinks.RootElement.Margin = CType(resources.GetObject("lblBelastungsstelleLinks.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblBelastungsstelleLinks.RootElement.Padding = CType(resources.GetObject("lblBelastungsstelleLinks.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblBelastungsstelleLinks.RootElement.Text = resources.GetString("lblBelastungsstelleLinks.RootElement.Text")
         Me.lblBelastungsstelleLinks.RootElement.TextOrientation = CType(resources.GetObject("lblBelastungsstelleLinks.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -337,7 +370,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.lblAuffahrtLinks1.RootElement.AngleTransform = CType(resources.GetObject("lblAuffahrtLinks1.RootElement.AngleTransform"), Single)
         Me.lblAuffahrtLinks1.RootElement.FlipText = CType(resources.GetObject("lblAuffahrtLinks1.RootElement.FlipText"), Boolean)
         Me.lblAuffahrtLinks1.RootElement.Margin = CType(resources.GetObject("lblAuffahrtLinks1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblAuffahrtLinks1.RootElement.Padding = CType(resources.GetObject("lblAuffahrtLinks1.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblAuffahrtLinks1.RootElement.Text = resources.GetString("lblAuffahrtLinks1.RootElement.Text")
         Me.lblAuffahrtLinks1.RootElement.TextOrientation = CType(resources.GetObject("lblAuffahrtLinks1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -361,7 +393,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.lblAuffahrtLinks2.RootElement.AngleTransform = CType(resources.GetObject("lblAuffahrtLinks2.RootElement.AngleTransform"), Single)
         Me.lblAuffahrtLinks2.RootElement.FlipText = CType(resources.GetObject("lblAuffahrtLinks2.RootElement.FlipText"), Boolean)
         Me.lblAuffahrtLinks2.RootElement.Margin = CType(resources.GetObject("lblAuffahrtLinks2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblAuffahrtLinks2.RootElement.Padding = CType(resources.GetObject("lblAuffahrtLinks2.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblAuffahrtLinks2.RootElement.Text = resources.GetString("lblAuffahrtLinks2.RootElement.Text")
         Me.lblAuffahrtLinks2.RootElement.TextOrientation = CType(resources.GetObject("lblAuffahrtLinks2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -385,7 +416,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.lblAuffahrtLinks3.RootElement.AngleTransform = CType(resources.GetObject("lblAuffahrtLinks3.RootElement.AngleTransform"), Single)
         Me.lblAuffahrtLinks3.RootElement.FlipText = CType(resources.GetObject("lblAuffahrtLinks3.RootElement.FlipText"), Boolean)
         Me.lblAuffahrtLinks3.RootElement.Margin = CType(resources.GetObject("lblAuffahrtLinks3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblAuffahrtLinks3.RootElement.Padding = CType(resources.GetObject("lblAuffahrtLinks3.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblAuffahrtLinks3.RootElement.Text = resources.GetString("lblAuffahrtLinks3.RootElement.Text")
         Me.lblAuffahrtLinks3.RootElement.TextOrientation = CType(resources.GetObject("lblAuffahrtLinks3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -409,7 +439,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.lblLastLinks.RootElement.AngleTransform = CType(resources.GetObject("lblLastLinks.RootElement.AngleTransform"), Single)
         Me.lblLastLinks.RootElement.FlipText = CType(resources.GetObject("lblLastLinks.RootElement.FlipText"), Boolean)
         Me.lblLastLinks.RootElement.Margin = CType(resources.GetObject("lblLastLinks.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblLastLinks.RootElement.Padding = CType(resources.GetObject("lblLastLinks.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblLastLinks.RootElement.Text = resources.GetString("lblLastLinks.RootElement.Text")
         Me.lblLastLinks.RootElement.TextOrientation = CType(resources.GetObject("lblLastLinks.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -433,7 +462,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.lblAnzeigeLinks.RootElement.AngleTransform = CType(resources.GetObject("lblAnzeigeLinks.RootElement.AngleTransform"), Single)
         Me.lblAnzeigeLinks.RootElement.FlipText = CType(resources.GetObject("lblAnzeigeLinks.RootElement.FlipText"), Boolean)
         Me.lblAnzeigeLinks.RootElement.Margin = CType(resources.GetObject("lblAnzeigeLinks.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblAnzeigeLinks.RootElement.Padding = CType(resources.GetObject("lblAnzeigeLinks.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblAnzeigeLinks.RootElement.Text = resources.GetString("lblAnzeigeLinks.RootElement.Text")
         Me.lblAnzeigeLinks.RootElement.TextOrientation = CType(resources.GetObject("lblAnzeigeLinks.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -457,7 +485,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.lblFehlerLinks.RootElement.AngleTransform = CType(resources.GetObject("lblFehlerLinks.RootElement.AngleTransform"), Single)
         Me.lblFehlerLinks.RootElement.FlipText = CType(resources.GetObject("lblFehlerLinks.RootElement.FlipText"), Boolean)
         Me.lblFehlerLinks.RootElement.Margin = CType(resources.GetObject("lblFehlerLinks.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblFehlerLinks.RootElement.Padding = CType(resources.GetObject("lblFehlerLinks.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblFehlerLinks.RootElement.Text = resources.GetString("lblFehlerLinks.RootElement.Text")
         Me.lblFehlerLinks.RootElement.TextOrientation = CType(resources.GetObject("lblFehlerLinks.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -481,7 +508,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.lblEFGLinks.RootElement.AngleTransform = CType(resources.GetObject("lblEFGLinks.RootElement.AngleTransform"), Single)
         Me.lblEFGLinks.RootElement.FlipText = CType(resources.GetObject("lblEFGLinks.RootElement.FlipText"), Boolean)
         Me.lblEFGLinks.RootElement.Margin = CType(resources.GetObject("lblEFGLinks.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblEFGLinks.RootElement.Padding = CType(resources.GetObject("lblEFGLinks.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblEFGLinks.RootElement.Text = resources.GetString("lblEFGLinks.RootElement.Text")
         Me.lblEFGLinks.RootElement.TextOrientation = CType(resources.GetObject("lblEFGLinks.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -506,7 +532,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.lblEFGWertLinks.RootElement.AngleTransform = CType(resources.GetObject("lblEFGWertLinks.RootElement.AngleTransform"), Single)
         Me.lblEFGWertLinks.RootElement.FlipText = CType(resources.GetObject("lblEFGWertLinks.RootElement.FlipText"), Boolean)
         Me.lblEFGWertLinks.RootElement.Margin = CType(resources.GetObject("lblEFGWertLinks.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblEFGWertLinks.RootElement.Padding = CType(resources.GetObject("lblEFGWertLinks.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblEFGWertLinks.RootElement.Text = resources.GetString("lblEFGWertLinks.RootElement.Text")
         Me.lblEFGWertLinks.RootElement.TextOrientation = CType(resources.GetObject("lblEFGWertLinks.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.lblEFGWertLinks.TabStop = False
@@ -531,7 +556,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadTextBoxControlLastLinks1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlLastLinks1.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlLastLinks1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlLastLinks1.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlLastLinks1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlLastLinks1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlLastLinks1.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlLastLinks1.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlLastLinks1.RootElement.Text = resources.GetString("RadTextBoxControlLastLinks1.RootElement.Text")
         Me.RadTextBoxControlLastLinks1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlLastLinks1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -555,7 +579,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadTextBoxControllastLinks3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControllastLinks3.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControllastLinks3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControllastLinks3.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControllastLinks3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControllastLinks3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControllastLinks3.RootElement.Padding = CType(resources.GetObject("RadTextBoxControllastLinks3.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControllastLinks3.RootElement.Text = resources.GetString("RadTextBoxControllastLinks3.RootElement.Text")
         Me.RadTextBoxControllastLinks3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControllastLinks3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -579,7 +602,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadTextBoxControlLastLinks2.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlLastLinks2.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlLastLinks2.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlLastLinks2.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlLastLinks2.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlLastLinks2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlLastLinks2.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlLastLinks2.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlLastLinks2.RootElement.Text = resources.GetString("RadTextBoxControlLastLinks2.RootElement.Text")
         Me.RadTextBoxControlLastLinks2.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlLastLinks2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -596,7 +618,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadTextBoxControlAnzeigeLinks1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlAnzeigeLinks1.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlAnzeigeLinks1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlAnzeigeLinks1.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlAnzeigeLinks1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlAnzeigeLinks1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlAnzeigeLinks1.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlAnzeigeLinks1.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlAnzeigeLinks1.RootElement.Text = resources.GetString("RadTextBoxControlAnzeigeLinks1.RootElement.Text")
         Me.RadTextBoxControlAnzeigeLinks1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlAnzeigeLinks1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -613,7 +634,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadButtonShowEFG.RootElement.AngleTransform = CType(resources.GetObject("RadButtonShowEFG.RootElement.AngleTransform"), Single)
         Me.RadButtonShowEFG.RootElement.FlipText = CType(resources.GetObject("RadButtonShowEFG.RootElement.FlipText"), Boolean)
         Me.RadButtonShowEFG.RootElement.Margin = CType(resources.GetObject("RadButtonShowEFG.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButtonShowEFG.RootElement.Padding = CType(resources.GetObject("RadButtonShowEFG.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadButtonShowEFG.RootElement.Text = resources.GetString("RadButtonShowEFG.RootElement.Text")
         Me.RadButtonShowEFG.RootElement.TextOrientation = CType(resources.GetObject("RadButtonShowEFG.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -630,7 +650,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadTextBoxControlAnzeigeLinks2.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlAnzeigeLinks2.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlAnzeigeLinks2.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlAnzeigeLinks2.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlAnzeigeLinks2.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlAnzeigeLinks2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlAnzeigeLinks2.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlAnzeigeLinks2.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlAnzeigeLinks2.RootElement.Text = resources.GetString("RadTextBoxControlAnzeigeLinks2.RootElement.Text")
         Me.RadTextBoxControlAnzeigeLinks2.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlAnzeigeLinks2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -654,7 +673,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadTextBoxControlAnzeigeLinks3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlAnzeigeLinks3.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlAnzeigeLinks3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlAnzeigeLinks3.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlAnzeigeLinks3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlAnzeigeLinks3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlAnzeigeLinks3.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlAnzeigeLinks3.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlAnzeigeLinks3.RootElement.Text = resources.GetString("RadTextBoxControlAnzeigeLinks3.RootElement.Text")
         Me.RadTextBoxControlAnzeigeLinks3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlAnzeigeLinks3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -679,7 +697,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadTextBoxControlFehlerLinks1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlFehlerLinks1.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlFehlerLinks1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlFehlerLinks1.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlFehlerLinks1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlFehlerLinks1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlFehlerLinks1.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlFehlerLinks1.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlFehlerLinks1.RootElement.Text = resources.GetString("RadTextBoxControlFehlerLinks1.RootElement.Text")
         Me.RadTextBoxControlFehlerLinks1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlFehlerLinks1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadTextBoxControlFehlerLinks1.TabStop = False
@@ -705,7 +722,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadTextBoxControlFehlerLinks2.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlFehlerLinks2.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlFehlerLinks2.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlFehlerLinks2.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlFehlerLinks2.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlFehlerLinks2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlFehlerLinks2.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlFehlerLinks2.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlFehlerLinks2.RootElement.Text = resources.GetString("RadTextBoxControlFehlerLinks2.RootElement.Text")
         Me.RadTextBoxControlFehlerLinks2.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlFehlerLinks2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadTextBoxControlFehlerLinks2.TabStop = False
@@ -724,7 +740,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadTextBoxControlFehlerLinks3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlFehlerLinks3.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlFehlerLinks3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlFehlerLinks3.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlFehlerLinks3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlFehlerLinks3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlFehlerLinks3.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlFehlerLinks3.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlFehlerLinks3.RootElement.Text = resources.GetString("RadTextBoxControlFehlerLinks3.RootElement.Text")
         Me.RadTextBoxControlFehlerLinks3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlFehlerLinks3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadTextBoxControlFehlerLinks3.TabStop = False
@@ -742,7 +757,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.lblEichfehlergrenze.RootElement.AngleTransform = CType(resources.GetObject("lblEichfehlergrenze.RootElement.AngleTransform"), Single)
         Me.lblEichfehlergrenze.RootElement.FlipText = CType(resources.GetObject("lblEichfehlergrenze.RootElement.FlipText"), Boolean)
         Me.lblEichfehlergrenze.RootElement.Margin = CType(resources.GetObject("lblEichfehlergrenze.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblEichfehlergrenze.RootElement.Padding = CType(resources.GetObject("lblEichfehlergrenze.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblEichfehlergrenze.RootElement.Text = resources.GetString("lblEichfehlergrenze.RootElement.Text")
         Me.lblEichfehlergrenze.RootElement.TextOrientation = CType(resources.GetObject("lblEichfehlergrenze.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -759,7 +773,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadCheckBoxAuffahrtLinks1.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxAuffahrtLinks1.RootElement.AngleTransform"), Single)
         Me.RadCheckBoxAuffahrtLinks1.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxAuffahrtLinks1.RootElement.FlipText"), Boolean)
         Me.RadCheckBoxAuffahrtLinks1.RootElement.Margin = CType(resources.GetObject("RadCheckBoxAuffahrtLinks1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadCheckBoxAuffahrtLinks1.RootElement.Padding = CType(resources.GetObject("RadCheckBoxAuffahrtLinks1.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadCheckBoxAuffahrtLinks1.RootElement.Text = resources.GetString("RadCheckBoxAuffahrtLinks1.RootElement.Text")
         Me.RadCheckBoxAuffahrtLinks1.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxAuffahrtLinks1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadCheckBoxAuffahrtLinks1.TabStop = False
@@ -777,7 +790,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadCheckBoxlblAuffahrtRechts3.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxlblAuffahrtRechts3.RootElement.AngleTransform"), Single)
         Me.RadCheckBoxlblAuffahrtRechts3.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxlblAuffahrtRechts3.RootElement.FlipText"), Boolean)
         Me.RadCheckBoxlblAuffahrtRechts3.RootElement.Margin = CType(resources.GetObject("RadCheckBoxlblAuffahrtRechts3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadCheckBoxlblAuffahrtRechts3.RootElement.Padding = CType(resources.GetObject("RadCheckBoxlblAuffahrtRechts3.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadCheckBoxlblAuffahrtRechts3.RootElement.Text = resources.GetString("RadCheckBoxlblAuffahrtRechts3.RootElement.Text")
         Me.RadCheckBoxlblAuffahrtRechts3.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxlblAuffahrtRechts3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadCheckBoxlblAuffahrtRechts3.TabStop = False
@@ -795,7 +807,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadCheckBoxAuffahrtLinks2.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxAuffahrtLinks2.RootElement.AngleTransform"), Single)
         Me.RadCheckBoxAuffahrtLinks2.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxAuffahrtLinks2.RootElement.FlipText"), Boolean)
         Me.RadCheckBoxAuffahrtLinks2.RootElement.Margin = CType(resources.GetObject("RadCheckBoxAuffahrtLinks2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadCheckBoxAuffahrtLinks2.RootElement.Padding = CType(resources.GetObject("RadCheckBoxAuffahrtLinks2.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadCheckBoxAuffahrtLinks2.RootElement.Text = resources.GetString("RadCheckBoxAuffahrtLinks2.RootElement.Text")
         Me.RadCheckBoxAuffahrtLinks2.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxAuffahrtLinks2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadCheckBoxAuffahrtLinks2.TabStop = False
@@ -813,7 +824,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadCheckBoxlblAuffahrtRechts2.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxlblAuffahrtRechts2.RootElement.AngleTransform"), Single)
         Me.RadCheckBoxlblAuffahrtRechts2.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxlblAuffahrtRechts2.RootElement.FlipText"), Boolean)
         Me.RadCheckBoxlblAuffahrtRechts2.RootElement.Margin = CType(resources.GetObject("RadCheckBoxlblAuffahrtRechts2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadCheckBoxlblAuffahrtRechts2.RootElement.Padding = CType(resources.GetObject("RadCheckBoxlblAuffahrtRechts2.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadCheckBoxlblAuffahrtRechts2.RootElement.Text = resources.GetString("RadCheckBoxlblAuffahrtRechts2.RootElement.Text")
         Me.RadCheckBoxlblAuffahrtRechts2.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxlblAuffahrtRechts2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadCheckBoxlblAuffahrtRechts2.TabStop = False
@@ -831,7 +841,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadCheckBoxAuffahrtLinks3.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxAuffahrtLinks3.RootElement.AngleTransform"), Single)
         Me.RadCheckBoxAuffahrtLinks3.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxAuffahrtLinks3.RootElement.FlipText"), Boolean)
         Me.RadCheckBoxAuffahrtLinks3.RootElement.Margin = CType(resources.GetObject("RadCheckBoxAuffahrtLinks3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadCheckBoxAuffahrtLinks3.RootElement.Padding = CType(resources.GetObject("RadCheckBoxAuffahrtLinks3.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadCheckBoxAuffahrtLinks3.RootElement.Text = resources.GetString("RadCheckBoxAuffahrtLinks3.RootElement.Text")
         Me.RadCheckBoxAuffahrtLinks3.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxAuffahrtLinks3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadCheckBoxAuffahrtLinks3.TabStop = False
@@ -849,7 +858,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadCheckBoxlblAuffahrtRechts1.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxlblAuffahrtRechts1.RootElement.AngleTransform"), Single)
         Me.RadCheckBoxlblAuffahrtRechts1.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxlblAuffahrtRechts1.RootElement.FlipText"), Boolean)
         Me.RadCheckBoxlblAuffahrtRechts1.RootElement.Margin = CType(resources.GetObject("RadCheckBoxlblAuffahrtRechts1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadCheckBoxlblAuffahrtRechts1.RootElement.Padding = CType(resources.GetObject("RadCheckBoxlblAuffahrtRechts1.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadCheckBoxlblAuffahrtRechts1.RootElement.Text = resources.GetString("RadCheckBoxlblAuffahrtRechts1.RootElement.Text")
         Me.RadCheckBoxlblAuffahrtRechts1.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxlblAuffahrtRechts1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadCheckBoxlblAuffahrtRechts1.TabStop = False
@@ -867,7 +875,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.lblBelastungsstelleRechts.RootElement.AngleTransform = CType(resources.GetObject("lblBelastungsstelleRechts.RootElement.AngleTransform"), Single)
         Me.lblBelastungsstelleRechts.RootElement.FlipText = CType(resources.GetObject("lblBelastungsstelleRechts.RootElement.FlipText"), Boolean)
         Me.lblBelastungsstelleRechts.RootElement.Margin = CType(resources.GetObject("lblBelastungsstelleRechts.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblBelastungsstelleRechts.RootElement.Padding = CType(resources.GetObject("lblBelastungsstelleRechts.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblBelastungsstelleRechts.RootElement.Text = resources.GetString("lblBelastungsstelleRechts.RootElement.Text")
         Me.lblBelastungsstelleRechts.RootElement.TextOrientation = CType(resources.GetObject("lblBelastungsstelleRechts.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -885,7 +892,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadTextBoxControlFehlerRechts3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlFehlerRechts3.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlFehlerRechts3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlFehlerRechts3.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlFehlerRechts3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlFehlerRechts3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlFehlerRechts3.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlFehlerRechts3.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlFehlerRechts3.RootElement.Text = resources.GetString("RadTextBoxControlFehlerRechts3.RootElement.Text")
         Me.RadTextBoxControlFehlerRechts3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlFehlerRechts3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadTextBoxControlFehlerRechts3.TabStop = False
@@ -903,7 +909,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.lblAuffahrtRechts1.RootElement.AngleTransform = CType(resources.GetObject("lblAuffahrtRechts1.RootElement.AngleTransform"), Single)
         Me.lblAuffahrtRechts1.RootElement.FlipText = CType(resources.GetObject("lblAuffahrtRechts1.RootElement.FlipText"), Boolean)
         Me.lblAuffahrtRechts1.RootElement.Margin = CType(resources.GetObject("lblAuffahrtRechts1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblAuffahrtRechts1.RootElement.Padding = CType(resources.GetObject("lblAuffahrtRechts1.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblAuffahrtRechts1.RootElement.Text = resources.GetString("lblAuffahrtRechts1.RootElement.Text")
         Me.lblAuffahrtRechts1.RootElement.TextOrientation = CType(resources.GetObject("lblAuffahrtRechts1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -921,7 +926,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadTextBoxControlFehlerRechts2.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlFehlerRechts2.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlFehlerRechts2.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlFehlerRechts2.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlFehlerRechts2.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlFehlerRechts2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlFehlerRechts2.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlFehlerRechts2.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlFehlerRechts2.RootElement.Text = resources.GetString("RadTextBoxControlFehlerRechts2.RootElement.Text")
         Me.RadTextBoxControlFehlerRechts2.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlFehlerRechts2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadTextBoxControlFehlerRechts2.TabStop = False
@@ -939,7 +943,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.lblAuffahrtRechts2.RootElement.AngleTransform = CType(resources.GetObject("lblAuffahrtRechts2.RootElement.AngleTransform"), Single)
         Me.lblAuffahrtRechts2.RootElement.FlipText = CType(resources.GetObject("lblAuffahrtRechts2.RootElement.FlipText"), Boolean)
         Me.lblAuffahrtRechts2.RootElement.Margin = CType(resources.GetObject("lblAuffahrtRechts2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblAuffahrtRechts2.RootElement.Padding = CType(resources.GetObject("lblAuffahrtRechts2.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblAuffahrtRechts2.RootElement.Text = resources.GetString("lblAuffahrtRechts2.RootElement.Text")
         Me.lblAuffahrtRechts2.RootElement.TextOrientation = CType(resources.GetObject("lblAuffahrtRechts2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -957,7 +960,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadTextBoxControlFehlerRechts1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlFehlerRechts1.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlFehlerRechts1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlFehlerRechts1.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlFehlerRechts1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlFehlerRechts1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlFehlerRechts1.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlFehlerRechts1.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlFehlerRechts1.RootElement.Text = resources.GetString("RadTextBoxControlFehlerRechts1.RootElement.Text")
         Me.RadTextBoxControlFehlerRechts1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlFehlerRechts1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadTextBoxControlFehlerRechts1.TabStop = False
@@ -975,7 +977,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.lblAuffahrtRechts3.RootElement.AngleTransform = CType(resources.GetObject("lblAuffahrtRechts3.RootElement.AngleTransform"), Single)
         Me.lblAuffahrtRechts3.RootElement.FlipText = CType(resources.GetObject("lblAuffahrtRechts3.RootElement.FlipText"), Boolean)
         Me.lblAuffahrtRechts3.RootElement.Margin = CType(resources.GetObject("lblAuffahrtRechts3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblAuffahrtRechts3.RootElement.Padding = CType(resources.GetObject("lblAuffahrtRechts3.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblAuffahrtRechts3.RootElement.Text = resources.GetString("lblAuffahrtRechts3.RootElement.Text")
         Me.lblAuffahrtRechts3.RootElement.TextOrientation = CType(resources.GetObject("lblAuffahrtRechts3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -992,7 +993,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadTextBoxControlAnzeigeRechts3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlAnzeigeRechts3.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlAnzeigeRechts3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlAnzeigeRechts3.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlAnzeigeRechts3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlAnzeigeRechts3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlAnzeigeRechts3.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlAnzeigeRechts3.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlAnzeigeRechts3.RootElement.Text = resources.GetString("RadTextBoxControlAnzeigeRechts3.RootElement.Text")
         Me.RadTextBoxControlAnzeigeRechts3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlAnzeigeRechts3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1009,7 +1009,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.lblLastRechts.RootElement.AngleTransform = CType(resources.GetObject("lblLastRechts.RootElement.AngleTransform"), Single)
         Me.lblLastRechts.RootElement.FlipText = CType(resources.GetObject("lblLastRechts.RootElement.FlipText"), Boolean)
         Me.lblLastRechts.RootElement.Margin = CType(resources.GetObject("lblLastRechts.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblLastRechts.RootElement.Padding = CType(resources.GetObject("lblLastRechts.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblLastRechts.RootElement.Text = resources.GetString("lblLastRechts.RootElement.Text")
         Me.lblLastRechts.RootElement.TextOrientation = CType(resources.GetObject("lblLastRechts.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1026,7 +1025,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadTextBoxControlAnzeigeRechts2.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlAnzeigeRechts2.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlAnzeigeRechts2.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlAnzeigeRechts2.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlAnzeigeRechts2.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlAnzeigeRechts2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlAnzeigeRechts2.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlAnzeigeRechts2.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlAnzeigeRechts2.RootElement.Text = resources.GetString("RadTextBoxControlAnzeigeRechts2.RootElement.Text")
         Me.RadTextBoxControlAnzeigeRechts2.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlAnzeigeRechts2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1043,7 +1041,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.lblAnzeigeRechts.RootElement.AngleTransform = CType(resources.GetObject("lblAnzeigeRechts.RootElement.AngleTransform"), Single)
         Me.lblAnzeigeRechts.RootElement.FlipText = CType(resources.GetObject("lblAnzeigeRechts.RootElement.FlipText"), Boolean)
         Me.lblAnzeigeRechts.RootElement.Margin = CType(resources.GetObject("lblAnzeigeRechts.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblAnzeigeRechts.RootElement.Padding = CType(resources.GetObject("lblAnzeigeRechts.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblAnzeigeRechts.RootElement.Text = resources.GetString("lblAnzeigeRechts.RootElement.Text")
         Me.lblAnzeigeRechts.RootElement.TextOrientation = CType(resources.GetObject("lblAnzeigeRechts.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1060,7 +1057,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadTextBoxControlAnzeigeRechts1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlAnzeigeRechts1.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlAnzeigeRechts1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlAnzeigeRechts1.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlAnzeigeRechts1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlAnzeigeRechts1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlAnzeigeRechts1.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlAnzeigeRechts1.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlAnzeigeRechts1.RootElement.Text = resources.GetString("RadTextBoxControlAnzeigeRechts1.RootElement.Text")
         Me.RadTextBoxControlAnzeigeRechts1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlAnzeigeRechts1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1078,7 +1074,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.lblFehlerRechts.RootElement.AngleTransform = CType(resources.GetObject("lblFehlerRechts.RootElement.AngleTransform"), Single)
         Me.lblFehlerRechts.RootElement.FlipText = CType(resources.GetObject("lblFehlerRechts.RootElement.FlipText"), Boolean)
         Me.lblFehlerRechts.RootElement.Margin = CType(resources.GetObject("lblFehlerRechts.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblFehlerRechts.RootElement.Padding = CType(resources.GetObject("lblFehlerRechts.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblFehlerRechts.RootElement.Text = resources.GetString("lblFehlerRechts.RootElement.Text")
         Me.lblFehlerRechts.RootElement.TextOrientation = CType(resources.GetObject("lblFehlerRechts.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1102,7 +1097,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadTextBoxControlLastRechts2.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlLastRechts2.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlLastRechts2.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlLastRechts2.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlLastRechts2.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlLastRechts2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlLastRechts2.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlLastRechts2.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlLastRechts2.RootElement.Text = resources.GetString("RadTextBoxControlLastRechts2.RootElement.Text")
         Me.RadTextBoxControlLastRechts2.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlLastRechts2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1119,7 +1113,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.lblEFGRechts.RootElement.AngleTransform = CType(resources.GetObject("lblEFGRechts.RootElement.AngleTransform"), Single)
         Me.lblEFGRechts.RootElement.FlipText = CType(resources.GetObject("lblEFGRechts.RootElement.FlipText"), Boolean)
         Me.lblEFGRechts.RootElement.Margin = CType(resources.GetObject("lblEFGRechts.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblEFGRechts.RootElement.Padding = CType(resources.GetObject("lblEFGRechts.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblEFGRechts.RootElement.Text = resources.GetString("lblEFGRechts.RootElement.Text")
         Me.lblEFGRechts.RootElement.TextOrientation = CType(resources.GetObject("lblEFGRechts.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1136,7 +1129,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadTextBoxControlLastRechts3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlLastRechts3.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlLastRechts3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlLastRechts3.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlLastRechts3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlLastRechts3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlLastRechts3.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlLastRechts3.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlLastRechts3.RootElement.Text = resources.GetString("RadTextBoxControlLastRechts3.RootElement.Text")
         Me.RadTextBoxControlLastRechts3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlLastRechts3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1154,7 +1146,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.lblEFGWertRechts.RootElement.AngleTransform = CType(resources.GetObject("lblEFGWertRechts.RootElement.AngleTransform"), Single)
         Me.lblEFGWertRechts.RootElement.FlipText = CType(resources.GetObject("lblEFGWertRechts.RootElement.FlipText"), Boolean)
         Me.lblEFGWertRechts.RootElement.Margin = CType(resources.GetObject("lblEFGWertRechts.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblEFGWertRechts.RootElement.Padding = CType(resources.GetObject("lblEFGWertRechts.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.lblEFGWertRechts.RootElement.Text = resources.GetString("lblEFGWertRechts.RootElement.Text")
         Me.lblEFGWertRechts.RootElement.TextOrientation = CType(resources.GetObject("lblEFGWertRechts.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.lblEFGWertRechts.TabStop = False
@@ -1172,7 +1163,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadTextBoxControlLastRechts1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlLastRechts1.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlLastRechts1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlLastRechts1.RootElement.FlipText"), Boolean)
         Me.RadTextBoxControlLastRechts1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlLastRechts1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlLastRechts1.RootElement.Padding = CType(resources.GetObject("RadTextBoxControlLastRechts1.RootElement.Padding"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlLastRechts1.RootElement.Text = resources.GetString("RadTextBoxControlLastRechts1.RootElement.Text")
         Me.RadTextBoxControlLastRechts1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlLastRechts1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
@@ -1180,48 +1170,12 @@ Partial Class uco13PruefungRollendeLasten
         '
         resources.ApplyResources(Me.PanelContainer, "PanelContainer")
         '
-        'lblPflichtfeld1
-        '
-        resources.ApplyResources(Me.lblPflichtfeld1, "lblPflichtfeld1")
-        Me.lblPflichtfeld1.ForeColor = System.Drawing.Color.Red
-        Me.lblPflichtfeld1.Name = "lblPflichtfeld1"
-        '
-        'lblPflichtfeld2
-        '
-        resources.ApplyResources(Me.lblPflichtfeld2, "lblPflichtfeld2")
-        Me.lblPflichtfeld2.ForeColor = System.Drawing.Color.Red
-        Me.lblPflichtfeld2.Name = "lblPflichtfeld2"
-        '
-        'lblPflichtfeld3
-        '
-        resources.ApplyResources(Me.lblPflichtfeld3, "lblPflichtfeld3")
-        Me.lblPflichtfeld3.ForeColor = System.Drawing.Color.Red
-        Me.lblPflichtfeld3.Name = "lblPflichtfeld3"
-        '
-        'lblPflichtfeld4
-        '
-        resources.ApplyResources(Me.lblPflichtfeld4, "lblPflichtfeld4")
-        Me.lblPflichtfeld4.ForeColor = System.Drawing.Color.Red
-        Me.lblPflichtfeld4.Name = "lblPflichtfeld4"
-        '
-        'lblPflichtfeld5
-        '
-        resources.ApplyResources(Me.lblPflichtfeld5, "lblPflichtfeld5")
-        Me.lblPflichtfeld5.ForeColor = System.Drawing.Color.Red
-        Me.lblPflichtfeld5.Name = "lblPflichtfeld5"
-        '
-        'lblPflichtfeld6
-        '
-        resources.ApplyResources(Me.lblPflichtfeld6, "lblPflichtfeld6")
-        Me.lblPflichtfeld6.ForeColor = System.Drawing.Color.Red
-        Me.lblPflichtfeld6.Name = "lblPflichtfeld6"
-        '
-        'ucoPruefungRollendeLasten
+        'uco13PruefungRollendeLasten
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.RadScrollablePanel1)
-        Me.Name = "ucoPruefungRollendeLasten"
+        Me.Name = "uco13PruefungRollendeLasten"
         Me.RadScrollablePanel1.PanelContainer.ResumeLayout(False)
         Me.RadScrollablePanel1.PanelContainer.PerformLayout()
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).EndInit()

@@ -297,9 +297,6 @@
   <data name="lblBeschreibung.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="lblBeschreibung.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="lblBeschreibung.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -319,7 +316,7 @@
     <value>lblBeschreibung</value>
   </data>
   <data name="&gt;&gt;lblBeschreibung.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblBeschreibung.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -348,9 +345,6 @@
   <data name="RadCheckBoxAbdruck5.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadCheckBoxAbdruck5.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadCheckBoxAbdruck5.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -367,7 +361,7 @@
     <value>RadCheckBoxAbdruck5</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxAbdruck5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxAbdruck5.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -396,9 +390,6 @@
   <data name="RadLabel1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadLabel1.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadLabel1.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -418,7 +409,7 @@
     <value>RadLabel1</value>
   </data>
   <data name="&gt;&gt;RadLabel1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadLabel1.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -447,9 +438,6 @@
   <data name="RadCheckBoxAbdruck4.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadCheckBoxAbdruck4.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadCheckBoxAbdruck4.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -460,13 +448,13 @@
     <value>15, 15</value>
   </data>
   <data name="RadCheckBoxAbdruck4.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
+    <value>23</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxAbdruck4.Name" xml:space="preserve">
     <value>RadCheckBoxAbdruck4</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxAbdruck4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxAbdruck4.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -495,9 +483,6 @@
   <data name="lblLast.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="lblLast.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="lblLast.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -517,7 +502,7 @@
     <value>lblLast</value>
   </data>
   <data name="&gt;&gt;lblLast.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblLast.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -546,9 +531,6 @@
   <data name="RadCheckBoxAbdruck3.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadCheckBoxAbdruck3.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadCheckBoxAbdruck3.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -559,13 +541,13 @@
     <value>15, 15</value>
   </data>
   <data name="RadCheckBoxAbdruck3.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
+    <value>22</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxAbdruck3.Name" xml:space="preserve">
     <value>RadCheckBoxAbdruck3</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxAbdruck3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxAbdruck3.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -594,9 +576,6 @@
   <data name="lblAnzeige.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="lblAnzeige.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="lblAnzeige.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -616,7 +595,7 @@
     <value>lblAnzeige</value>
   </data>
   <data name="&gt;&gt;lblAnzeige.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblAnzeige.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -645,9 +624,6 @@
   <data name="RadCheckBoxAbdruck2.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadCheckBoxAbdruck2.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadCheckBoxAbdruck2.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -658,13 +634,13 @@
     <value>15, 15</value>
   </data>
   <data name="RadCheckBoxAbdruck2.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>21</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxAbdruck2.Name" xml:space="preserve">
     <value>RadCheckBoxAbdruck2</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxAbdruck2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxAbdruck2.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -693,9 +669,6 @@
   <data name="RadLabel2.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadLabel2.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadLabel2.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -715,7 +688,7 @@
     <value>RadLabel2</value>
   </data>
   <data name="&gt;&gt;RadLabel2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadLabel2.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -744,9 +717,6 @@
   <data name="RadCheckBoxAbdruck1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadCheckBoxAbdruck1.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadCheckBoxAbdruck1.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -757,13 +727,13 @@
     <value>15, 15</value>
   </data>
   <data name="RadCheckBoxAbdruck1.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>20</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxAbdruck1.Name" xml:space="preserve">
     <value>RadCheckBoxAbdruck1</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxAbdruck1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxAbdruck1.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -792,9 +762,6 @@
   <data name="RadLabel3.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadLabel3.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadLabel3.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -814,7 +781,7 @@
     <value>RadLabel3</value>
   </data>
   <data name="&gt;&gt;RadLabel3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadLabel3.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -843,9 +810,6 @@
   <data name="lblAbdruck.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="lblAbdruck.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="lblAbdruck.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -865,7 +829,7 @@
     <value>lblAbdruck</value>
   </data>
   <data name="&gt;&gt;lblAbdruck.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblAbdruck.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -894,9 +858,6 @@
   <data name="RadLabel4.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadLabel4.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadLabel4.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -916,7 +877,7 @@
     <value>RadLabel4</value>
   </data>
   <data name="&gt;&gt;RadLabel4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadLabel4.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -948,9 +909,6 @@
   <data name="lblPrintBeschreibung.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="lblPrintBeschreibung.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="lblPrintBeschreibung.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -970,7 +928,7 @@
     <value>lblPrintBeschreibung</value>
   </data>
   <data name="&gt;&gt;lblPrintBeschreibung.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblPrintBeschreibung.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -999,9 +957,6 @@
   <data name="RadLabel5.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadLabel5.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadLabel5.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -1021,7 +976,7 @@
     <value>RadLabel5</value>
   </data>
   <data name="&gt;&gt;RadLabel5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadLabel5.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -1050,9 +1005,6 @@
   <data name="RadLabel6.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadLabel6.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadLabel6.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -1072,7 +1024,7 @@
     <value>RadLabel6</value>
   </data>
   <data name="&gt;&gt;RadLabel6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadLabel6.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -1104,9 +1056,6 @@
   <data name="RadTextBoxControlMax5.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlMax5.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadTextBoxControlMax5.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -1117,13 +1066,13 @@
     <value>62, 20</value>
   </data>
   <data name="RadTextBoxControlMax5.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
+    <value>19</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlMax5.Name" xml:space="preserve">
     <value>RadTextBoxControlMax5</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlMax5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlMax5.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -1152,9 +1101,6 @@
   <data name="RadLabel7.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadLabel7.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadLabel7.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -1174,7 +1120,7 @@
     <value>RadLabel7</value>
   </data>
   <data name="&gt;&gt;RadLabel7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadLabel7.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -1206,9 +1152,6 @@
   <data name="RadTextBoxControlMax4.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlMax4.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadTextBoxControlMax4.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -1225,7 +1168,7 @@
     <value>RadTextBoxControlMax4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlMax4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlMax4.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -1254,9 +1197,6 @@
   <data name="RadLabel8.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadLabel8.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadLabel8.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -1276,7 +1216,7 @@
     <value>RadLabel8</value>
   </data>
   <data name="&gt;&gt;RadLabel8.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadLabel8.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -1308,9 +1248,6 @@
   <data name="RadTextBoxControlMax3.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlMax3.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadTextBoxControlMax3.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -1321,13 +1258,13 @@
     <value>62, 20</value>
   </data>
   <data name="RadTextBoxControlMax3.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+    <value>17</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlMax3.Name" xml:space="preserve">
     <value>RadTextBoxControlMax3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlMax3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlMax3.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -1359,9 +1296,6 @@
   <data name="RadTextBoxControlLast1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlLast1.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadTextBoxControlLast1.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -1378,7 +1312,7 @@
     <value>RadTextBoxControlLast1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlLast1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlLast1.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -1410,9 +1344,6 @@
   <data name="RadTextBoxControlMax2.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlMax2.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadTextBoxControlMax2.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -1423,13 +1354,13 @@
     <value>62, 20</value>
   </data>
   <data name="RadTextBoxControlMax2.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>16</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlMax2.Name" xml:space="preserve">
     <value>RadTextBoxControlMax2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlMax2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlMax2.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -1461,9 +1392,6 @@
   <data name="RadTextBoxControlLast2.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlLast2.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadTextBoxControlLast2.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -1474,13 +1402,13 @@
     <value>62, 20</value>
   </data>
   <data name="RadTextBoxControlLast2.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlLast2.Name" xml:space="preserve">
     <value>RadTextBoxControlLast2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlLast2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlLast2.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -1512,9 +1440,6 @@
   <data name="RadTextBoxControlMax1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlMax1.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadTextBoxControlMax1.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -1525,13 +1450,13 @@
     <value>62, 20</value>
   </data>
   <data name="RadTextBoxControlMax1.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>15</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlMax1.Name" xml:space="preserve">
     <value>RadTextBoxControlMax1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlMax1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlMax1.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -1563,9 +1488,6 @@
   <data name="RadTextBoxControlLast3.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlLast3.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadTextBoxControlLast3.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -1576,13 +1498,13 @@
     <value>62, 20</value>
   </data>
   <data name="RadTextBoxControlLast3.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlLast3.Name" xml:space="preserve">
     <value>RadTextBoxControlLast3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlLast3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlLast3.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -1614,9 +1536,6 @@
   <data name="RadTextBoxControlMin5.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlMin5.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadTextBoxControlMin5.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -1627,13 +1546,13 @@
     <value>62, 20</value>
   </data>
   <data name="RadTextBoxControlMin5.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
+    <value>14</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlMin5.Name" xml:space="preserve">
     <value>RadTextBoxControlMin5</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlMin5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlMin5.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -1665,9 +1584,6 @@
   <data name="RadTextBoxControlLast4.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlLast4.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadTextBoxControlLast4.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -1678,13 +1594,13 @@
     <value>62, 20</value>
   </data>
   <data name="RadTextBoxControlLast4.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlLast4.Name" xml:space="preserve">
     <value>RadTextBoxControlLast4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlLast4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlLast4.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -1716,9 +1632,6 @@
   <data name="RadTextBoxControlMin4.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlMin4.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadTextBoxControlMin4.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -1729,13 +1642,13 @@
     <value>62, 20</value>
   </data>
   <data name="RadTextBoxControlMin4.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
+    <value>13</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlMin4.Name" xml:space="preserve">
     <value>RadTextBoxControlMin4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlMin4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlMin4.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -1767,9 +1680,6 @@
   <data name="RadTextBoxControlLast5.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlLast5.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadTextBoxControlLast5.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -1780,13 +1690,13 @@
     <value>62, 20</value>
   </data>
   <data name="RadTextBoxControlLast5.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlLast5.Name" xml:space="preserve">
     <value>RadTextBoxControlLast5</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlLast5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlLast5.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -1818,9 +1728,6 @@
   <data name="RadTextBoxControlMin3.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlMin3.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadTextBoxControlMin3.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -1837,7 +1744,7 @@
     <value>RadTextBoxControlMin3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlMin3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlMin3.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -1869,9 +1776,6 @@
   <data name="RadTextBoxControlAnzeige1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlAnzeige1.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadTextBoxControlAnzeige1.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -1882,13 +1786,13 @@
     <value>62, 20</value>
   </data>
   <data name="RadTextBoxControlAnzeige1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>5</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAnzeige1.Name" xml:space="preserve">
     <value>RadTextBoxControlAnzeige1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAnzeige1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAnzeige1.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -1920,9 +1824,6 @@
   <data name="RadTextBoxControlMin2.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlMin2.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadTextBoxControlMin2.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -1933,13 +1834,13 @@
     <value>62, 20</value>
   </data>
   <data name="RadTextBoxControlMin2.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>11</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlMin2.Name" xml:space="preserve">
     <value>RadTextBoxControlMin2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlMin2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlMin2.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -1971,9 +1872,6 @@
   <data name="RadTextBoxControlAnzeige2.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlAnzeige2.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadTextBoxControlAnzeige2.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -1990,7 +1888,7 @@
     <value>RadTextBoxControlAnzeige2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAnzeige2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAnzeige2.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -2022,9 +1920,6 @@
   <data name="RadTextBoxControlMin1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlMin1.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadTextBoxControlMin1.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -2035,13 +1930,13 @@
     <value>62, 20</value>
   </data>
   <data name="RadTextBoxControlMin1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>10</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlMin1.Name" xml:space="preserve">
     <value>RadTextBoxControlMin1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlMin1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlMin1.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -2073,9 +1968,6 @@
   <data name="RadTextBoxControlAnzeige3.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlAnzeige3.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadTextBoxControlAnzeige3.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -2086,13 +1978,13 @@
     <value>62, 20</value>
   </data>
   <data name="RadTextBoxControlAnzeige3.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+    <value>7</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAnzeige3.Name" xml:space="preserve">
     <value>RadTextBoxControlAnzeige3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAnzeige3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAnzeige3.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -2124,9 +2016,6 @@
   <data name="RadTextBoxControlAnzeige5.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlAnzeige5.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadTextBoxControlAnzeige5.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -2137,13 +2026,13 @@
     <value>62, 20</value>
   </data>
   <data name="RadTextBoxControlAnzeige5.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
+    <value>9</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAnzeige5.Name" xml:space="preserve">
     <value>RadTextBoxControlAnzeige5</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAnzeige5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAnzeige5.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -2175,9 +2064,6 @@
   <data name="RadTextBoxControlAnzeige4.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlAnzeige4.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadTextBoxControlAnzeige4.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -2188,13 +2074,13 @@
     <value>62, 20</value>
   </data>
   <data name="RadTextBoxControlAnzeige4.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
+    <value>8</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAnzeige4.Name" xml:space="preserve">
     <value>RadTextBoxControlAnzeige4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAnzeige4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAnzeige4.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -2209,7 +2095,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanel1.PanelContainer.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadScrollablePanelContainer, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadScrollablePanelContainer, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanel1.PanelContainer.Parent" xml:space="preserve">
     <value>RadScrollablePanel1</value>
@@ -2217,14 +2103,11 @@
   <data name="&gt;&gt;RadScrollablePanel1.PanelContainer.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="RadScrollablePanel1.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>1, 1, 1, 1</value>
-  </data>
   <data name="RadScrollablePanel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>910, 370</value>
   </data>
   <data name="RadScrollablePanel1.TabIndex" type="System.Int32, mscorlib">
-    <value>33</value>
+    <value>0</value>
   </data>
   <data name="RadScrollablePanel1.Text" xml:space="preserve">
     <value>RadScrollablePanel1</value>
@@ -2233,7 +2116,7 @@
     <value>RadScrollablePanel1</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanel1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadScrollablePanel, Telerik.WinControls.UI, Version=2013.2.724.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadScrollablePanel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanel1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -2251,9 +2134,9 @@
     <value>910, 370</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>ucoPruefungStabilitaet</value>
+    <value>uco15PruefungStabilitaet</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, EichsoftwareClient, Version=1.0.5168.20417, Culture=neutral, PublicKeyToken=null</value>
+    <value>EichsoftwareClient.ucoContent, EichsoftwareClient, Version=1.0.5387.21297, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

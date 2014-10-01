@@ -232,7 +232,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblPflichtfeld6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>375, 28</value>
+    <value>377, 28</value>
   </data>
   <data name="lblPflichtfeld6.Size" type="System.Drawing.Size, System.Drawing">
     <value>12, 13</value>
@@ -2653,7 +2653,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblPflichtfeld5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>378, 30</value>
+    <value>380, 30</value>
   </data>
   <data name="lblPflichtfeld5.Size" type="System.Drawing.Size, System.Drawing">
     <value>12, 13</value>
@@ -5026,7 +5026,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblPflichtfeld4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>377, 30</value>
+    <value>379, 30</value>
   </data>
   <data name="lblPflichtfeld4.Size" type="System.Drawing.Size, System.Drawing">
     <value>12, 13</value>
@@ -7546,7 +7546,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblPflichtfeld3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>376, 30</value>
+    <value>378, 30</value>
   </data>
   <data name="lblPflichtfeld3.Size" type="System.Drawing.Size, System.Drawing">
     <value>12, 13</value>
@@ -9946,7 +9946,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblPflichtfeld2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>378, 30</value>
+    <value>380, 30</value>
   </data>
   <data name="lblPflichtfeld2.Size" type="System.Drawing.Size, System.Drawing">
     <value>12, 13</value>
@@ -12295,7 +12295,7 @@
     <value>True</value>
   </data>
   <data name="lblPflichtfeld1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>377, 30</value>
+    <value>379, 30</value>
   </data>
   <data name="lblPflichtfeld1.Size" type="System.Drawing.Size, System.Drawing">
     <value>12, 13</value>
@@ -12346,7 +12346,7 @@
     <value>NoControl</value>
   </data>
   <data name="PictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>209, 3</value>
+    <value>210, 3</value>
   </data>
   <data name="PictureBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>18, 21</value>
@@ -12604,7 +12604,7 @@
     <value>NoControl</value>
   </data>
   <data name="PictureBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>210, 3</value>
+    <value>210, 4</value>
   </data>
   <data name="PictureBox4.Size" type="System.Drawing.Size, System.Drawing">
     <value>18, 21</value>
@@ -14758,9 +14758,9 @@
     <value>1215, 956</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>ucoPruefungLinearitaet</value>
+    <value>uco_9PruefungLinearitaet</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, EichsoftwareClient, Version=1.0.5190.16863, Culture=neutral, PublicKeyToken=null</value>
+    <value>EichsoftwareClient.ucoContent, EichsoftwareClient, Version=1.0.5387.21580, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

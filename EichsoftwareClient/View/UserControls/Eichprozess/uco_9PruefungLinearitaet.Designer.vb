@@ -5995,12 +5995,12 @@ Partial Class uco_9PruefungLinearitaet
         Me.RadCheckBoxBereich1VEL8.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxBereich1VEL8.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadCheckBoxBereich1VEL8.TabStop = False
         '
-        'ucoPruefungLinearitaet
+        'uco_9PruefungLinearitaet
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.RadScrollablePanel1)
-        Me.Name = "ucoPruefungLinearitaet"
+        Me.Name = "uco_9PruefungLinearitaet"
         Me.RadScrollablePanel1.PanelContainer.ResumeLayout(False)
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadScrollablePanel1.ResumeLayout(False)

@@ -334,10 +334,15 @@
 
         Select Case objEichprozess.Lookup_Waagenart.Art
             Case Is = "Einbereichswaage"
-                RadTextBoxPunkt5Faktor.Text = (CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1) + CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Einschaltnullstellbereich) + _
-                                               CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Ecklastzuschlag) + CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Totlast) + _
-                                               CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AdditiveTarahoechstlast)) / CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1)
+                Try
+                    RadTextBoxPunkt5Faktor.Text = (CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1) + CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Einschaltnullstellbereich) + _
+                                                               CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Ecklastzuschlag) + CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Totlast) + _
+                                                               CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AdditiveTarahoechstlast)) / CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1)
 
+                Catch ex As DivideByZeroException
+                    RadTextBoxPunkt5Faktor.Text = "0"
+                End Try
+            
 
 
 
@@ -650,30 +655,35 @@
         RadTextBoxPunkt8DMIN.Text = objEichprozess.Lookup_Auswertegeraet.Mindestmesssignal
 
         'runden auf 2 nachkommastellen
-        If Not RadTextBoxPunkt8U.Text = "" Then
+        If Not RadTextBoxPunkt8U.Text = "" And Not RadTextBoxPunkt8U.Text = "n. def." Then
             RadTextBoxPunkt8U.Text = Math.Round(CDec(RadTextBoxPunkt8U.Text), 2, MidpointRounding.AwayFromZero)
 
         End If
-        If Not RadTextBoxPunkt8D.Text = "" Then
+        If Not RadTextBoxPunkt8D.Text = "" And Not RadTextBoxPunkt8D.Text = "n. def." Then
             RadTextBoxPunkt8D.Text = Math.Round(CDec(RadTextBoxPunkt8D.Text), 2, MidpointRounding.AwayFromZero)
         End If
 
         '=WENN(ODER($D$68>1000000;$G$68="";$D$68="");"NEIN";WENN($G$68>$D$68;"NEIN";"JA"))
-        If RadTextBoxPunkt8U.Text = "" OrElse RadTextBoxPunkt8UMin.Text = "" OrElse CDec(RadTextBoxPunkt8U.Text) > 1000000 Then
-            RadCheckBoxPunkt8U.Checked = False
-        ElseIf CDec(RadTextBoxPunkt8UMin.Text) > CDec(RadTextBoxPunkt8U.Text) Then
-            RadCheckBoxPunkt8U.Checked = False
-        Else
-            RadCheckBoxPunkt8U.Checked = True
+        If Not RadTextBoxPunkt8U.Text = "n. def." Then
+            If RadTextBoxPunkt8U.Text = "" OrElse RadTextBoxPunkt8UMin.Text = "" OrElse CDec(RadTextBoxPunkt8U.Text) > 1000000 Then
+                RadCheckBoxPunkt8U.Checked = False
+            ElseIf CDec(RadTextBoxPunkt8UMin.Text) > CDec(RadTextBoxPunkt8U.Text) Then
+                RadCheckBoxPunkt8U.Checked = False
+            Else
+                RadCheckBoxPunkt8U.Checked = True
+            End If
         End If
 
-        '=WENN(ODER($D$71>1000000;$G$71="";$D$71="");"NEIN";WENN($G$71>$D$71;"NEIN";"JA"))
-        If RadTextBoxPunkt8D.Text = "" OrElse RadTextBoxPunkt8DMIN.Text = "" OrElse CDec(RadTextBoxPunkt8D.Text) > 1000000 Then
-            RadCheckBoxPunkt8D.Checked = False
-        ElseIf CDec(RadTextBoxPunkt8DMIN.Text) > CDec(RadTextBoxPunkt8D.Text) Then
-            RadCheckBoxPunkt8D.Checked = False
-        Else
-            RadCheckBoxPunkt8D.Checked = True
+        If Not RadTextBoxPunkt8D.Text = "n. def." Then
+
+            '=WENN(ODER($D$71>1000000;$G$71="";$D$71="");"NEIN";WENN($G$71>$D$71;"NEIN";"JA"))
+            If RadTextBoxPunkt8D.Text = "" OrElse RadTextBoxPunkt8DMIN.Text = "" OrElse CDec(RadTextBoxPunkt8D.Text) > 1000000 Then
+                RadCheckBoxPunkt8D.Checked = False
+            ElseIf CDec(RadTextBoxPunkt8DMIN.Text) > CDec(RadTextBoxPunkt8D.Text) Then
+                RadCheckBoxPunkt8D.Checked = False
+            Else
+                RadCheckBoxPunkt8D.Checked = True
+            End If
         End If
 
         '(9) Vergleich der Lastwiderstände von AWG und WZ  in  W
