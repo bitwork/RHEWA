@@ -252,6 +252,7 @@ Public Class FrmMainContainer
 #Region "Formular Events"
 
     Private Sub FrmMainContainer_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
+        'F1 für EFG Dialog
         If e.KeyData.ToString.Equals("F1") Then
             If Not _CurrentUco Is Nothing Then
                 If Not _CurrentUco.objEichprozess Is Nothing Then
@@ -259,6 +260,19 @@ Public Class FrmMainContainer
                     f.Show()
                 End If
             End If
+        End If
+
+
+        'Shift Enter für schnelleres vorblättern
+        If e.KeyCode = Keys.Return Then
+            If e.Modifiers.HasFlag(Keys.Shift) Then
+                BlaettereVorwaerts()
+            End If
+            'STRG Enter für schnelleres zurückblättern
+            If e.Modifiers.HasFlag(Keys.Control) Then
+                BlaettereRueckwaerts()
+            End If
+
         End If
     End Sub
 
@@ -584,176 +598,177 @@ Public Class FrmMainContainer
     ''' <author></author>
     ''' <commentauthor></commentauthor>
     Private Sub BlaettereVorwaerts()
+        'abbruch
+        If _CurrentUco Is Nothing Then Exit Sub
+        If _CurrentUco.objEichprozess Is Nothing Then Exit Sub
+        If Me.RadButtonNavigateForwards.Enabled = False Then Exit Sub
+
         'TH Event abfeuern, damit steuerelemente bescheid wissen, das sie in DB speichern müssen
         Dim bolUCODirty As Boolean
-        If Not _CurrentUco Is Nothing Then
             bolUCODirty = _CurrentUco.AktuellerStatusDirty 'im Save Needed wird der Dirty Flag bereits wieder zurückgesetzt. Deswegen wird er hier zwischengespeichert
-        End If
         RaiseEvent SaveNeeded(_CurrentUco)
 
 
-        If Not _CurrentUco Is Nothing Then
 
 
 
-            'abbruch des Vorgangs,wenn die validierung einen fehler erzeugt hat
-            If _CurrentUco.AbortSaveing = True Then Exit Sub
-            If _CurrentUco.NextUco Is Nothing Then
+        'abbruch des Vorgangs,wenn die validierung einen fehler erzeugt hat
+        If _CurrentUco.AbortSaveing = True Then Exit Sub
+        If _CurrentUco.NextUco Is Nothing Then
 
-                Dim uco As Object = Nothing
+            Dim uco As Object = Nothing
 
-                'sonderfälle abprüfen in denen der Vorgang nicht wie gewohnt weiter geht
-                'TODO Abändern der Routine. Vorwärts Blättern setzt die Reihenfolge eines hoch je nach Status, Rückwärts blättern prüft im Status welcher Eichprozesswert vorliegt und lädt dann ein anderes UCO. Sollte angepasst werden
-                If _CurrentUco.EichprozessStatusReihenfolge = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderGenauigkeitderNullstellungUndAussermittigeBelastung Then
-                    Try
-                        Select Case _CurrentUco.objEichprozess.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren.Verfahren
-                            Case Is = "Fahrzeugwaagen", "über 60kg im Staffelverfahren"
-                                'überspringe Prüfung mit Normallast
-                                _CurrentUco.EichprozessStatusReihenfolge += 1
-                                If _CurrentUco.DialogModus <> ucoContent.enuDialogModus.lesend Then
-                                    BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge + 1
-                                End If
-                        End Select
-                    Catch ex As Exception
-                        Debug.WriteLine(ex.ToString)
-
-                    End Try
-                ElseIf _CurrentUco.EichprozessStatusReihenfolge = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitNormallastLinearitaet Then
-                    Try
-                        'überspringe staffelverfahren
-                        _CurrentUco.EichprozessStatusReihenfolge += 1
-                        If _CurrentUco.DialogModus <> ucoContent.enuDialogModus.lesend Then
-                            BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge + 1
-                        End If
-                    Catch ex As Exception
-                        Debug.WriteLine(ex.ToString)
-
-                    End Try
-                ElseIf _CurrentUco.EichprozessStatusReihenfolge = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderÜberlastanzeige Then
-                    Try
-                        Select Case _CurrentUco.objEichprozess.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren.Verfahren
-                            Case Is = "über 60kg mit Normalien", "über 60kg im Staffelverfahren"
-                                'überspringe fahrzeugwaagen
-                                _CurrentUco.EichprozessStatusReihenfolge += 1
-                                If _CurrentUco.DialogModus <> ucoContent.enuDialogModus.lesend Then
-                                    BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge + 1
-                                End If
-                        End Select
-                    Catch ex As Exception
-                        Debug.WriteLine(ex.ToString)
-
-                    End Try
-                ElseIf _CurrentUco.EichprozessStatusReihenfolge = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungdesAnsprechvermögens Then
-                    Try
-                        If _CurrentUco.objEichprozess.Eichprotokoll.Verwendungszweck_Drucker = False Then
-                            'überspringe Stablität der GLeichgewichtslage
+            'sonderfälle abprüfen in denen der Vorgang nicht wie gewohnt weiter geht
+            'TODO Abändern der Routine. Vorwärts Blättern setzt die Reihenfolge eines hoch je nach Status, Rückwärts blättern prüft im Status welcher Eichprozesswert vorliegt und lädt dann ein anderes UCO. Sollte angepasst werden
+            If _CurrentUco.EichprozessStatusReihenfolge = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderGenauigkeitderNullstellungUndAussermittigeBelastung Then
+                Try
+                    Select Case _CurrentUco.objEichprozess.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren.Verfahren
+                        Case Is = "Fahrzeugwaagen", "über 60kg im Staffelverfahren"
+                            'überspringe Prüfung mit Normallast
                             _CurrentUco.EichprozessStatusReihenfolge += 1
                             If _CurrentUco.DialogModus <> ucoContent.enuDialogModus.lesend Then
                                 BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge + 1
                             End If
+                    End Select
+                Catch ex As Exception
+                    Debug.WriteLine(ex.ToString)
+
+                End Try
+            ElseIf _CurrentUco.EichprozessStatusReihenfolge = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitNormallastLinearitaet Then
+                Try
+                    'überspringe staffelverfahren
+                    _CurrentUco.EichprozessStatusReihenfolge += 1
+                    If _CurrentUco.DialogModus <> ucoContent.enuDialogModus.lesend Then
+                        BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge + 1
+                    End If
+                Catch ex As Exception
+                    Debug.WriteLine(ex.ToString)
+
+                End Try
+            ElseIf _CurrentUco.EichprozessStatusReihenfolge = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderÜberlastanzeige Then
+                Try
+                    Select Case _CurrentUco.objEichprozess.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren.Verfahren
+                        Case Is = "über 60kg mit Normalien", "über 60kg im Staffelverfahren"
+                            'überspringe fahrzeugwaagen
+                            _CurrentUco.EichprozessStatusReihenfolge += 1
+                            If _CurrentUco.DialogModus <> ucoContent.enuDialogModus.lesend Then
+                                BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge + 1
+                            End If
+                    End Select
+                Catch ex As Exception
+                    Debug.WriteLine(ex.ToString)
+
+                End Try
+            ElseIf _CurrentUco.EichprozessStatusReihenfolge = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungdesAnsprechvermögens Then
+                Try
+                    If _CurrentUco.objEichprozess.Eichprotokoll.Verwendungszweck_Drucker = False Then
+                        'überspringe Stablität der GLeichgewichtslage
+                        _CurrentUco.EichprozessStatusReihenfolge += 1
+                        If _CurrentUco.DialogModus <> ucoContent.enuDialogModus.lesend Then
+                            BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge + 1
                         End If
+                    End If
 
-                    Catch ex As Exception
-                        Debug.WriteLine(ex.ToString)
+                Catch ex As Exception
+                    Debug.WriteLine(ex.ToString)
 
-                    End Try
-                ElseIf _CurrentUco.EichprozessStatusReihenfolge = GlobaleEnumeratoren.enuEichprozessStatus.Taraeinrichtung Then
-                    Try
-                        Select Case _CurrentUco.objEichprozess.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren.Verfahren
-                            Case Is = "über 60kg mit Normalien", "über 60kg im Staffelverfahren"
-                                'überspringe Achlastwägungen
-                                _CurrentUco.EichprozessStatusReihenfolge += 1
-                                If _CurrentUco.DialogModus <> ucoContent.enuDialogModus.lesend Then
-                                    BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge + 1
-                                End If
-                        End Select
-                    Catch ex As Exception
-                        Debug.WriteLine(ex.ToString)
+                End Try
+            ElseIf _CurrentUco.EichprozessStatusReihenfolge = GlobaleEnumeratoren.enuEichprozessStatus.Taraeinrichtung Then
+                Try
+                    Select Case _CurrentUco.objEichprozess.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren.Verfahren
+                        Case Is = "über 60kg mit Normalien", "über 60kg im Staffelverfahren"
+                            'überspringe Achlastwägungen
+                            _CurrentUco.EichprozessStatusReihenfolge += 1
+                            If _CurrentUco.DialogModus <> ucoContent.enuDialogModus.lesend Then
+                                BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge + 1
+                            End If
+                    End Select
+                Catch ex As Exception
+                    Debug.WriteLine(ex.ToString)
 
-                    End Try
-                End If
+                End Try
+            End If
 
-                If bolUCODirty Then
+            If bolUCODirty Then
+                BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge + 1
+            Else
+                'damit die Auswahl weiter geht
+                If BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge Then
                     BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge + 1
                 Else
-                    'damit die Auswahl weiter geht
-                    If BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge Then
-                        BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge + 1
-                    Else
-                        BreadCrumb.FindeElementUndSelektiere(_CurrentUco.EichprozessStatusReihenfolge + 1)
-                    End If
-
+                    BreadCrumb.FindeElementUndSelektiere(_CurrentUco.EichprozessStatusReihenfolge + 1)
                 End If
 
-                Select Case _CurrentUco.EichprozessStatusReihenfolge + 1
-                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
-                        uco = New uco_2StammdatenEingabe(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
-                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Kompatbilitaetsnachweis
-                        uco = New uco_3Kompatiblititaetsnachweis(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
-                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.KompatbilitaetsnachweisErgebnis
-                        uco = New uco_4KompatiblititaetsnachweisErgebnis(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
-                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Beschaffenheitspruefung
-                        uco = New uco_5Beschaffenheitspruefung(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
-                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.AuswahlKonformitätsverfahren
-                        uco = New uco_6EichprotokollVerfahrenswahl(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
-                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.EichprotokollStammdaten
-                        uco = New uco_7EichprotokollDaten(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
-                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderGenauigkeitderNullstellungUndAussermittigeBelastung
-                        uco = New uco_8PruefungNullstellungUndAussermittigeBelastung(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
-                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitNormallastLinearitaet
-                        uco = New uco_9PruefungLinearitaet(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
-                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitErsatzlast
-                        uco = New uco10PruefungStaffelverfahren(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
-                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderWiederholbarkeit
-                        uco = New uco11PruefungWiederholbarkeitBelastung(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
-                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderÜberlastanzeige
-                        uco = New uco12PruefungUeberlastanzeige(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
-                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.WaagenFuerRollendeLasten
-                        uco = New uco13PruefungRollendeLasten(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
-                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungdesAnsprechvermögens
-                        uco = New uco14PruefungAnsprechvermoegen(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
-                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.EignungfürAchslastwägungen
-                        uco = New uco17PruefungEignungFuerAchlastwaegungen(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
-                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderStabilitätderGleichgewichtslage
-                        uco = New uco15PruefungStabilitaet(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
-                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Taraeinrichtung
-                        uco = New uco16Taraeinrichtung(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
-                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.BerücksichtigungderFallbeschleunigung
-                        uco = New uco18Fallbeschleunigung(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
-                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.EichtechnischeSicherungundDatensicherung
-                        uco = New uco19EichtechnischeSicherung(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
-                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Export
-                        uco = New uco20Reports(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
-                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Versenden
-                        uco = New Uco21Versenden(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
-                    Case Else 'sonderfall der nicht eintreten sollte
-                        Me.Close()
-                        Exit Sub
-                End Select
+            End If
 
-                ListofUcos.Add(uco)
-                _CurrentUco.NextUco = uco
-                'neues UCO in vordergrund bringen
-                ChangeActiveContentUserControl(uco)
+            Select Case _CurrentUco.EichprozessStatusReihenfolge + 1
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
+                    uco = New uco_2StammdatenEingabe(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Kompatbilitaetsnachweis
+                    uco = New uco_3Kompatiblititaetsnachweis(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.KompatbilitaetsnachweisErgebnis
+                    uco = New uco_4KompatiblititaetsnachweisErgebnis(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Beschaffenheitspruefung
+                    uco = New uco_5Beschaffenheitspruefung(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.AuswahlKonformitätsverfahren
+                    uco = New uco_6EichprotokollVerfahrenswahl(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.EichprotokollStammdaten
+                    uco = New uco_7EichprotokollDaten(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderGenauigkeitderNullstellungUndAussermittigeBelastung
+                    uco = New uco_8PruefungNullstellungUndAussermittigeBelastung(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitNormallastLinearitaet
+                    uco = New uco_9PruefungLinearitaet(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitErsatzlast
+                    uco = New uco10PruefungStaffelverfahren(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderWiederholbarkeit
+                    uco = New uco11PruefungWiederholbarkeitBelastung(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderÜberlastanzeige
+                    uco = New uco12PruefungUeberlastanzeige(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.WaagenFuerRollendeLasten
+                    uco = New uco13PruefungRollendeLasten(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungdesAnsprechvermögens
+                    uco = New uco14PruefungAnsprechvermoegen(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.EignungfürAchslastwägungen
+                    uco = New uco17PruefungEignungFuerAchlastwaegungen(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderStabilitätderGleichgewichtslage
+                    uco = New uco15PruefungStabilitaet(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Taraeinrichtung
+                    uco = New uco16Taraeinrichtung(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.BerücksichtigungderFallbeschleunigung
+                    uco = New uco18Fallbeschleunigung(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.EichtechnischeSicherungundDatensicherung
+                    uco = New uco19EichtechnischeSicherung(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Export
+                    uco = New uco20Reports(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Versenden
+                    uco = New Uco21Versenden(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
+                Case Else 'sonderfall der nicht eintreten sollte
+                    Me.Close()
+                    Exit Sub
+            End Select
+
+            ListofUcos.Add(uco)
+            _CurrentUco.NextUco = uco
+            'neues UCO in vordergrund bringen
+            ChangeActiveContentUserControl(uco)
+        Else
+
+            If bolUCODirty Then
+                BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.NextUco.EichprozessStatusReihenfolge
             Else
-
-                If bolUCODirty Then
+                'damit die Auswahl weiter geht
+                If BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge Then
                     BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.NextUco.EichprozessStatusReihenfolge
                 Else
-                    'damit die Auswahl weiter geht
-                    If BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge Then
-                        BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.NextUco.EichprozessStatusReihenfolge
-                    Else
-                        BreadCrumb.FindeElementUndSelektiere(_CurrentUco.NextUco.EichprozessStatusReihenfolge)
-                    End If
+                    BreadCrumb.FindeElementUndSelektiere(_CurrentUco.NextUco.EichprozessStatusReihenfolge)
                 End If
-
-
-                '.CurrentEichprozess.FK_Vorgangsstatus
-                ChangeActiveContentUserControl(_CurrentUco.NextUco)
-                'ermöglichen das das UCO noch einmal die Daten aktualisiert (z.b. wenn in den Stammdaten die Art der waage geändert wurde, muss der Kompatiblitätsnachweis darauf reagieren können
-                RaiseEvent UpdateNeeded(_CurrentUco)
             End If
+
+
+            '.CurrentEichprozess.FK_Vorgangsstatus
+            ChangeActiveContentUserControl(_CurrentUco.NextUco)
+            'ermöglichen das das UCO noch einmal die Daten aktualisiert (z.b. wenn in den Stammdaten die Art der waage geändert wurde, muss der Kompatiblitätsnachweis darauf reagieren können
+            RaiseEvent UpdateNeeded(_CurrentUco)
         End If
 
     End Sub
@@ -766,111 +781,111 @@ Public Class FrmMainContainer
     ''' <author></author>
     ''' <commentauthor></commentauthor>
     Private Sub BlaettereRueckwaerts()
+        If _CurrentUco Is Nothing Then Exit Sub
+        If _CurrentUco.objEichprozess Is Nothing Then Exit Sub
+        If Me.RadButtonNavigateBackwards.Enabled = False Then Exit Sub
 
-        If Not _CurrentUco Is Nothing Then
-
-            Dim uco As ucoContent = Nothing
-
-
-            'TH Event abfeuern, damit steuerelemente bescheid wissen, das sie in DB speichern müssen
-            RaiseEvent SaveWithoutValidationNeeded(_CurrentUco)
+        Dim uco As ucoContent = Nothing
 
 
-            'prüfen ob das vorherige UCO bereits geladen wurde, ansonsten erzeugen
-            If _CurrentUco.PreviousUco Is Nothing Then
+        'TH Event abfeuern, damit steuerelemente bescheid wissen, das sie in DB speichern müssen
+        RaiseEvent SaveWithoutValidationNeeded(_CurrentUco)
 
-                'das vorherige UCO msus in abhängigkeit das aktuellen UCOs und nicht des Eichprozesses geladen werden, da dieser ja in einem viel weiteren Status sein kann
-                'rückwärts navigieren
-                BreadCrumb.FindeElementUndSelektiere(_CurrentUco.EichprozessStatusReihenfolge - 1)
-                Select Case _CurrentUco.EichprozessStatusReihenfolge
-                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
-                        'hier gibt es kein vorheriges UCO
-                        RadButtonNavigateBackwards.Enabled = False 'solte bereits deaktivert sein, so das es nie zu diesem code kommt
-                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Kompatbilitaetsnachweis
-                        uco = New uco_2StammdatenEingabe(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
-                        _CurrentUco.PreviousUco = uco
-                        RadButtonNavigateBackwards.Enabled = False
-                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.KompatbilitaetsnachweisErgebnis
-                        uco = New uco_3Kompatiblititaetsnachweis(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
-                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Beschaffenheitspruefung '"  Beschaffenheitsprüfung"
-                        uco = New uco_4KompatiblititaetsnachweisErgebnis(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
-                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.AuswahlKonformitätsverfahren '"  Beschaffenheitsprüfung"
-                        uco = New uco_5Beschaffenheitspruefung(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
-                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.EichprotokollStammdaten '"  Beschaffenheitsprüfung"
-                        uco = New uco_6EichprotokollVerfahrenswahl(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
-                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderGenauigkeitderNullstellungUndAussermittigeBelastung
-                        uco = New uco_7EichprotokollDaten(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
-                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitNormallastLinearitaet
-                        uco = New uco_8PruefungNullstellungUndAussermittigeBelastung(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
-                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitErsatzlast
-                        uco = New uco_8PruefungNullstellungUndAussermittigeBelastung(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
-                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderWiederholbarkeit
-                        'je nach verfahren
-                        'normallast oder ersatzlast
-                        If CurrentEichprozess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgmitNormalien Then
-                            uco = New uco_9PruefungLinearitaet(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
-                        Else
-                            uco = New uco10PruefungStaffelverfahren(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
-                        End If
-                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderÜberlastanzeige
-                        uco = New uco11PruefungWiederholbarkeitBelastung(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
-                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.WaagenFuerRollendeLasten
-                        uco = New uco11PruefungWiederholbarkeitBelastung(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
 
-                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungdesAnsprechvermögens
-                        'je nach verfahren rollende Lasten oder Überlastanzeige
-                        If CurrentEichprozess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.Fahrzeugwaagen Then
-                            uco = New uco13PruefungRollendeLasten(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
-                        Else
-                            uco = New uco12PruefungUeberlastanzeige(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
-                        End If
-                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.EignungfürAchslastwägungen
+        'prüfen ob das vorherige UCO bereits geladen wurde, ansonsten erzeugen
+        If _CurrentUco.PreviousUco Is Nothing Then
+
+            'das vorherige UCO msus in abhängigkeit das aktuellen UCOs und nicht des Eichprozesses geladen werden, da dieser ja in einem viel weiteren Status sein kann
+            'rückwärts navigieren
+            BreadCrumb.FindeElementUndSelektiere(_CurrentUco.EichprozessStatusReihenfolge - 1)
+            Select Case _CurrentUco.EichprozessStatusReihenfolge
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
+                    'hier gibt es kein vorheriges UCO
+                    RadButtonNavigateBackwards.Enabled = False 'solte bereits deaktivert sein, so das es nie zu diesem code kommt
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Kompatbilitaetsnachweis
+                    uco = New uco_2StammdatenEingabe(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
+                    _CurrentUco.PreviousUco = uco
+                    RadButtonNavigateBackwards.Enabled = False
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.KompatbilitaetsnachweisErgebnis
+                    uco = New uco_3Kompatiblititaetsnachweis(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Beschaffenheitspruefung '"  Beschaffenheitsprüfung"
+                    uco = New uco_4KompatiblititaetsnachweisErgebnis(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.AuswahlKonformitätsverfahren '"  Beschaffenheitsprüfung"
+                    uco = New uco_5Beschaffenheitspruefung(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.EichprotokollStammdaten '"  Beschaffenheitsprüfung"
+                    uco = New uco_6EichprotokollVerfahrenswahl(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderGenauigkeitderNullstellungUndAussermittigeBelastung
+                    uco = New uco_7EichprotokollDaten(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitNormallastLinearitaet
+                    uco = New uco_8PruefungNullstellungUndAussermittigeBelastung(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitErsatzlast
+                    uco = New uco_8PruefungNullstellungUndAussermittigeBelastung(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderWiederholbarkeit
+                    'je nach verfahren
+                    'normallast oder ersatzlast
+                    If CurrentEichprozess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgmitNormalien Then
+                        uco = New uco_9PruefungLinearitaet(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
+                    Else
+                        uco = New uco10PruefungStaffelverfahren(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
+                    End If
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderÜberlastanzeige
+                    uco = New uco11PruefungWiederholbarkeitBelastung(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.WaagenFuerRollendeLasten
+                    uco = New uco11PruefungWiederholbarkeitBelastung(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
+
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungdesAnsprechvermögens
+                    'je nach verfahren rollende Lasten oder Überlastanzeige
+                    If CurrentEichprozess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.Fahrzeugwaagen Then
+                        uco = New uco13PruefungRollendeLasten(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
+                    Else
+                        uco = New uco12PruefungUeberlastanzeige(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
+                    End If
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.EignungfürAchslastwägungen
+                    uco = New uco14PruefungAnsprechvermoegen(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderStabilitätderGleichgewichtslage
+                    'je nach verfahren Eignung für Achlastwägungen oder Prüfung des Ansprechvermögens
+                    If CurrentEichprozess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.Fahrzeugwaagen Then
+                        uco = New uco17PruefungEignungFuerAchlastwaegungen(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
+                    Else
                         uco = New uco14PruefungAnsprechvermoegen(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
-                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderStabilitätderGleichgewichtslage
-                        'je nach verfahren Eignung für Achlastwägungen oder Prüfung des Ansprechvermögens
-                        If CurrentEichprozess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.Fahrzeugwaagen Then
-                            uco = New uco17PruefungEignungFuerAchlastwaegungen(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
-                        Else
-                            uco = New uco14PruefungAnsprechvermoegen(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
-                        End If
+                    End If
 
-                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Taraeinrichtung
-                        'je nachdem ob ein Drucker gewählt wurde oder nicht
-                        If CurrentEichprozess.Eichprotokoll.Verwendungszweck_Drucker = True Then
-                            uco = New uco15PruefungStabilitaet(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
-                        Else
-                            uco = New uco14PruefungAnsprechvermoegen(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
-                        End If
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Taraeinrichtung
+                    'je nachdem ob ein Drucker gewählt wurde oder nicht
+                    If CurrentEichprozess.Eichprotokoll.Verwendungszweck_Drucker = True Then
+                        uco = New uco15PruefungStabilitaet(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
+                    Else
+                        uco = New uco14PruefungAnsprechvermoegen(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
+                    End If
 
-                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.BerücksichtigungderFallbeschleunigung
-                        uco = New uco16Taraeinrichtung(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
-                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.EichtechnischeSicherungundDatensicherung
-                        uco = New uco18Fallbeschleunigung(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
-                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Export
-                        uco = New uco19EichtechnischeSicherung(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
-                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Versenden
-                        uco = New uco20Reports(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.BerücksichtigungderFallbeschleunigung
+                    uco = New uco16Taraeinrichtung(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.EichtechnischeSicherungundDatensicherung
+                    uco = New uco18Fallbeschleunigung(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Export
+                    uco = New uco19EichtechnischeSicherung(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Versenden
+                    uco = New uco20Reports(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
 
 
 
-                    Case Else
+                Case Else
 
-                        Me.Close()
-                        Exit Sub
-                End Select
+                    Me.Close()
+                    Exit Sub
+            End Select
 
-                uco.NextUco = _CurrentUco
-                _CurrentUco.PreviousUco = uco
-                ListofUcos.Add(uco)
-            Else
-                BreadCrumb.FindeElementUndSelektiere(_CurrentUco.PreviousUco.EichprozessStatusReihenfolge)
-                uco = _CurrentUco.PreviousUco
-            End If
-
-            'vorheriges Uco zu anzeige bringen
-            ChangeActiveContentUserControl(uco)
-            RaiseEvent UpdateNeeded(uco)
+            uco.NextUco = _CurrentUco
+            _CurrentUco.PreviousUco = uco
+            ListofUcos.Add(uco)
+        Else
+            BreadCrumb.FindeElementUndSelektiere(_CurrentUco.PreviousUco.EichprozessStatusReihenfolge)
+            uco = _CurrentUco.PreviousUco
         End If
+
+        'vorheriges Uco zu anzeige bringen
+        ChangeActiveContentUserControl(uco)
+        RaiseEvent UpdateNeeded(uco)
     End Sub
 
     ''' <summary>

@@ -492,6 +492,7 @@ Partial Class FrmMainContainer
         Me.RadButtonNavigateBackwards.RootElement.Margin = CType(resources.GetObject("RadButtonNavigateBackwards.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadButtonNavigateBackwards.RootElement.Text = resources.GetString("RadButtonNavigateBackwards.RootElement.Text")
         Me.RadButtonNavigateBackwards.RootElement.TextOrientation = CType(resources.GetObject("RadButtonNavigateBackwards.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadButtonNavigateBackwards.RootElement.ToolTipText = resources.GetString("RadButtonNavigateBackwards.RootElement.ToolTipText")
         CType(Me.RadButtonNavigateBackwards.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
         CType(Me.RadButtonNavigateBackwards.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
         CType(Me.RadButtonNavigateBackwards.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
@@ -513,6 +514,7 @@ Partial Class FrmMainContainer
         Me.RadButtonNavigateForwards.RootElement.Margin = CType(resources.GetObject("RadButtonNavigateForwards.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadButtonNavigateForwards.RootElement.Text = resources.GetString("RadButtonNavigateForwards.RootElement.Text")
         Me.RadButtonNavigateForwards.RootElement.TextOrientation = CType(resources.GetObject("RadButtonNavigateForwards.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadButtonNavigateForwards.RootElement.ToolTipText = resources.GetString("RadButtonNavigateForwards.RootElement.ToolTipText")
         CType(Me.RadButtonNavigateForwards.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = CType(resources.GetObject("resource.Image1"), System.Drawing.Image)
         CType(Me.RadButtonNavigateForwards.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
         CType(Me.RadButtonNavigateForwards.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
