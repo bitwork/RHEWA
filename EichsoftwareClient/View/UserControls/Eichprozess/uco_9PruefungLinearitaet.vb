@@ -594,13 +594,8 @@ Public Class uco_9PruefungLinearitaet
             Next
         Next
 
-        If AbortSaveing Then
-            MessageBox.Show(My.Resources.GlobaleLokalisierung.EichfehlergrenzenNichtEingehalten, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-            Return False
-        End If
-        'Speichern soll nicht abgebrochen werden, da alles okay ist
-        AbortSaveing = False
-        Return True
+        'fehlermeldung anzeigen bei falscher validierung
+        Return Me.ShowValidationErrorBox()
 
     End Function
 
@@ -623,6 +618,7 @@ Public Class uco_9PruefungLinearitaet
                 Return Math.Round(CDec(value * 0.5), _intNullstellenE, MidpointRounding.AwayFromZero)
             End If
         Catch e As Exception
+            Return -1
         End Try
     End Function
 

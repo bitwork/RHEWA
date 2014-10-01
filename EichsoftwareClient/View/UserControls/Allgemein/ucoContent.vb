@@ -261,5 +261,26 @@ Public Class ucoContent
 
 #End Region
 
+    Friend Function ShowValidationErrorBox() As Boolean
+        If Me.AbortSaveing = True Then
+            If Debugger.IsAttached Then
+                If MessageBox.Show("Validierung überspringen?", "", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+                    Me.AbortSaveing = False
+                    Return True
+                Else
+                    MessageBox.Show(My.Resources.GlobaleLokalisierung.PflichtfelderAusfuellen, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    Return False
+                End If
+            Else
+                MessageBox.Show(My.Resources.GlobaleLokalisierung.PflichtfelderAusfuellen, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                Return False
+            End If
+        End If
+
+        'Speichern soll nicht abgebrochen werden, da alles okay ist
+        Me.AbortSaveing = False
+        Return True
+    End Function
+
 
 End Class

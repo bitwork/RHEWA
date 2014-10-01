@@ -3409,15 +3409,14 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                 Return False
             End If
         Else
-            MessageBox.Show(My.Resources.GlobaleLokalisierung.PflichtfelderAusfuellen, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-            AbortSaveing = True
-            Return False
-        End If
+              'fehlermeldung anzeigen bei falscher validierung
+            Return Me.ShowValidationErrorBox()
+            End If
 
 
-        'Speichern soll nicht abgebrochen werden, da alles okay ist
-        AbortSaveing = False
-        Return True
+            'Speichern soll nicht abgebrochen werden, da alles okay ist
+            AbortSaveing = False
+            Return True
 
     End Function
 

@@ -640,15 +640,8 @@
                 Next
             End If
         Next
-        If AbortSaveing = True Then
-            MessageBox.Show(My.Resources.GlobaleLokalisierung.PflichtfelderAusfuellen, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-            Return False
-        End If
-        'Speichern soll nicht abgebrochen werden, da alles okay ist
-        Me.AbortSaveing = False
-        Return True
-
-        'prüfen ob eine neue WZ angelegt wurde (über button und neuem Dialog vermutlich)
+          'fehlermeldung anzeigen bei falscher validierung
+        Return Me.ShowValidationErrorBox()
     End Function
 
     'Speicherroutine

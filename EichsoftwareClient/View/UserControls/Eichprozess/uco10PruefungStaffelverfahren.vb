@@ -800,19 +800,8 @@ Inherits ucoContent
 
 
 
-        If AbortSaveing Then
-            If Debugger.IsAttached Then
-                If MessageBox.Show("Validierung überspringen?", "", MessageBoxButtons.YesNo) = DialogResult.Yes Then
-                    Me.AbortSaveing = False
-                    Return True
-                Else
-                    MessageBox.Show(My.Resources.GlobaleLokalisierung.PflichtfelderAusfuellen, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-                    Return False
-                End If
-            End If
-            MessageBox.Show(My.Resources.GlobaleLokalisierung.PflichtfelderAusfuellen, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-            Return False
-        End If
+      'fehlermeldung anzeigen bei falscher validierung
+        Return Me.ShowValidationErrorBox()
 
         'logik zum Valideren der Eichfehlergrenzen der einzelnen Staffeln. Abhängig davon wieviele Staffeln überhaupt ausgefüllt sind
         'staffel 1- 3 sind ab dieser Stelle im Code aufjedenfall ausgefüllt
@@ -887,14 +876,8 @@ Inherits ucoContent
                 End Try
         End Select
 
-        If AbortSaveing = True Then
-            MessageBox.Show(My.Resources.GlobaleLokalisierung.EichfehlergrenzenNichtEingehalten, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-            Return False
-        End If
-
-        'Speichern soll nicht abgebrochen werden, da alles okay ist
-        AbortSaveing = False
-        Return True
+         'fehlermeldung anzeigen bei falscher validierung
+        Return Me.ShowValidationErrorBox()
 
     End Function
 

@@ -841,29 +841,14 @@
                     If TypeOf Control Is Telerik.WinControls.UI.RadCheckBox Then
                         If CType(Control, Telerik.WinControls.UI.RadCheckBox).Visible = True AndAlso CType(Control, Telerik.WinControls.UI.RadCheckBox).Checked = False Then
                             CType(Control, Telerik.WinControls.UI.RadCheckBox).Focus()
-                            If Debugger.IsAttached Then
-                                If MessageBox.Show("Validierung überspringen?", "", MessageBoxButtons.YesNo) = DialogResult.Yes Then
-                                    Return True
-                                Else
-                                    MessageBox.Show(My.Resources.GlobaleLokalisierung.KompatiblitätNichtGeleistet, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-                                    AbortSaveing = True
-                                    Return False
-                                End If
-                            End If
-                            MessageBox.Show(My.Resources.GlobaleLokalisierung.KompatiblitätNichtGeleistet, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                             AbortSaveing = True
-
-                            Return False
                         End If
-
                     End If
                 Next
             End If
         Next
-        'Speichern soll nicht abgebrochen werden, da alles okay ist
-        Me.AbortSaveing = False
-        Return True
-
+       'fehlermeldung anzeigen bei falscher validierung
+        Return Me.ShowValidationErrorBox()
     End Function
 
 
