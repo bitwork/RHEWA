@@ -123,7 +123,16 @@ Public Class Uco21Versenden
     ''' </summary>
     ''' <remarks></remarks>
     Private Sub SendObject()
+        'testen der Verbindung
+        Dim obj As New clsWebserviceFunctions
+        If Not obj.TesteVerbindung() Then
+            MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung)
+            Exit Sub
+        End If
+
+
         Dim objServerEichprozess As New EichsoftwareWebservice.ServerEichprozess
+
 
         'auf versendet Status setzen
         If objEichprozess.FK_Bearbeitungsstatus = 4 Or objEichprozess.FK_Bearbeitungsstatus = 2 Then 'wenn neu oder fehlerhaft auf versendet zurücksetzen
@@ -163,6 +172,7 @@ Public Class Uco21Versenden
             Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
                 Try
                     Webcontext.Open()
+             
                 Catch ex As Exception
                     MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
 

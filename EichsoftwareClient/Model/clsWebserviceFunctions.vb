@@ -35,8 +35,8 @@ Public Class clsWebserviceFunctions
                 End Using
             End Using
         Catch ex As Exception
-            MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
-            MessageBox.Show(ex.Message, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            'MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            'MessageBox.Show(ex.Message, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return False
         End Try
 
@@ -495,15 +495,20 @@ Public Class clsWebserviceFunctions
                         Return data
                     Catch ex As Exception
                         MessageBox.Show(ex.Message)
-                        MessageBox.Show(ex.StackTrace)
-                        MessageBox.Show(ex.InnerException.Message)
-                        MessageBox.Show(ex.InnerException.StackTrace)
-                        MessageBox.Show(ex.InnerException.InnerException.Message)
-                        MessageBox.Show(ex.InnerException.InnerException.StackTrace)
+                        If Debugger.IsAttached Then
+                            MessageBox.Show(ex.StackTrace)
+                            MessageBox.Show(ex.InnerException.Message)
+                            MessageBox.Show(ex.InnerException.StackTrace)
+                            MessageBox.Show(ex.InnerException.InnerException.Message)
+                            MessageBox.Show(ex.InnerException.InnerException.StackTrace)
+                        End If
                         Return Nothing
                     End Try
                 End Using
             End Using
+        Catch ex As ServiceModel.EndpointNotFoundException
+            MessageBox.Show("Keine Verbindung zum Stratoserver möglich")
+            Return Nothing
         Catch ex As Exception
             Return Nothing
         End Try

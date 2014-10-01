@@ -730,6 +730,12 @@
         Dim bolSyncData As Boolean = True 'Wert der genutzt wird um ggfs die Synchrosierung abzubrechen, falls ein Benutzer noch ungesendete Eichvorgänge hat
         If objWebserviceFunctions.TesteVerbindung() Then
 
+            'variablen zur Ausgabe ob es änderungen gibt:
+            Dim bolNeuStammdaten As Boolean = False
+            Dim bolNeuWZ As Boolean = False
+            Dim bolNeuAWG As Boolean = False
+            Dim bolNeuGenehmigung As Boolean = False
+
             'prüfen ob noch nicht abgeschickte Eichungen vorlieren. Wenn ja Hinweismeldung und Abbruchmöglichkeit für Benutzer
             If objDBFunctions.PruefeAufUngesendeteEichungen() = True Then
                 If MessageBox.Show(My.Resources.GlobaleLokalisierung.Warnung_EichungenWerdenGeloescht, My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo) = DialogResult.Yes Then
@@ -748,11 +754,15 @@
                     My.Settings.LetztesUpdate = "01.01.2000"
                     My.Settings.Save()
                     'neue Stammdaten zum Benutzer holen
-                    objWebserviceFunctions.GetNeueStammdaten(False)
+                    objWebserviceFunctions.GetNeueStammdaten(bolNeuStammdaten)
                     'hole alle WZ
-                    objWebserviceFunctions.GetNeueWZ(False)
+                    objWebserviceFunctions.GetNeueWZ(bolNeuWZ)
                     'prüfen ob es neue AWG gibt
-                    objWebserviceFunctions.GetNeuesAWG(False)
+                    objWebserviceFunctions.GetNeuesAWG(bolNeuAWG)
+
+                    'prüfen ob Eichprozesse die versendet wurden genehmigt oder abgelehnt wurden
+                    objWebserviceFunctions.GetGenehmigungsstatus(bolNeuGenehmigung)
+
 
                     My.Settings.LetztesUpdate = Date.Now
                     My.Settings.Save()
@@ -765,9 +775,25 @@
                     My.Settings.HoleAlleEigenenEichungenVomServer = False
                     My.Settings.Save()
 
+                    Dim returnMessage As String = My.Resources.GlobaleLokalisierung.Aktualisierung_Erfolgreich
+                    If bolNeuWZ Then
+                        returnMessage += vbNewLine & vbNewLine & My.Resources.GlobaleLokalisierung.Aktualisierung_NeuWZ & " "
+                    End If
+                    If bolNeuAWG Then
+                        returnMessage += vbNewLine & vbNewLine & My.Resources.GlobaleLokalisierung.Aktualisierung_NeuAWG & " "
+                    End If
 
+                    If bolNeuGenehmigung Then
+                        returnMessage += vbNewLine & vbNewLine & My.Resources.GlobaleLokalisierung.Aktualisierung_NeuEichung & " "
+                    End If
+
+                    If bolNeuStammdaten Then
+
+                    End If
                 End If
             End If
+        Else
+            MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung)
         End If
     End Sub
 
@@ -821,6 +847,8 @@
 
             End If
             MessageBox.Show(returnMessage)
+        Else
+            MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung)
         End If
     End Sub
 
