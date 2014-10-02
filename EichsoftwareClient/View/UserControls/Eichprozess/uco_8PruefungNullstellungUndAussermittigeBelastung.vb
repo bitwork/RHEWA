@@ -240,16 +240,54 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
             Dim Anzeige As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlDisplayWeight{0}", Wiederholung))
             Dim Fehler As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlErrorLimit{0}", Wiederholung))
             Dim EFG As Telerik.WinControls.UI.RadCheckBox = FindControl(String.Format("RadCheckBoxVEL{0}", Wiederholung))
+            Dim Spezial As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblEFGSpeziallBerechnung"))
 
 
-            Fehler.Text = CDec(Anzeige.Text) - CDec(Last.Text)
-            If Anzeige.Text > CDec(Last.Text) + CDec(lblEFGSpeziallBerechnung.Text) Then
-                EFG.Checked = False
-            ElseIf Anzeige.Text < CDec(Last.Text) - CDec(lblEFGSpeziallBerechnung.Text) Then
-                EFG.Checked = False
-            Else
-                EFG.Checked = True
-            End If
+
+            'neu berechnen der Fehler und EFG
+
+
+            'Alte Formel
+            'Try
+            '    Fehler.Text = CDec(Anzeige.Text) - CDec(Last.Text)
+            '    If Anzeige.Text > CDec(Last.Text) + CDec(Spezial.Text) Then
+            '        EFG.Checked = False
+            '    ElseIf Anzeige.Text < CDec(Last.Text) - CDec(Spezial.Text) Then
+            '        EFG.Checked = False
+            '    Else
+            '        EFG.Checked = True
+            '    End If
+            'Catch ex As Exception
+            'End Try
+
+
+
+            'Neue EFG Formel nach Herrn Strack
+            Try
+                Fehler.Text = CDec(Anzeige.Text) - CDec(Last.Text)
+
+                Dim Faktor As Decimal = 0
+                If CDec(Last.Text) <= 500 * CDec(Spezial.Text) Then
+                    Faktor = 0.5
+                ElseIf CDec(Last.Text) > 500 * CDec(Spezial.Text) And CDec(Last.Text) <= 2000 * CDec(Spezial.Text) Then
+                    Faktor = 1
+                ElseIf CDec(Last.Text) > 2000 * CDec(Spezial.Text) And CDec(Last.Text) <= 10000 * CDec(Spezial.Text) Then
+                    Faktor = 1.5
+                Else
+                    Faktor = 1.5
+                End If
+
+
+
+                If CDec(Anzeige.Text) < (CDec(Last.Text) - (Faktor * CDec(Spezial.Text))) Or CDec(Anzeige.Text) > ((CDec(Last.Text) + (Faktor * CDec(Spezial.Text)))) Then
+                    EFG.Checked = False
+                Else
+                    EFG.Checked = True
+                End If
+            Catch ex As Exception
+
+            End Try
+
         Catch ex As Exception
         End Try
     End Sub
@@ -275,18 +313,49 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         Dim Spezial As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblBereich{0}EFGSpeziallBerechnung", Bereich))
 
 
+
         'neu berechnen der Fehler und EFG
+
+
+        'Alte Formel
+        'Try
+        '    Fehler.Text = CDec(Anzeige.Text) - CDec(Last.Text)
+        '    If Anzeige.Text > CDec(Last.Text) + CDec(Spezial.Text) Then
+        '        EFG.Checked = False
+        '    ElseIf Anzeige.Text < CDec(Last.Text) - CDec(Spezial.Text) Then
+        '        EFG.Checked = False
+        '    Else
+        '        EFG.Checked = True
+        '    End If
+        'Catch ex As Exception
+        'End Try
+
+
+
+        'Neue EFG Formel nach Herrn Strack
         Try
             Fehler.Text = CDec(Anzeige.Text) - CDec(Last.Text)
-            If Anzeige.Text > CDec(Last.Text) + CDec(Spezial.Text) Then
-                EFG.Checked = False
-            ElseIf Anzeige.Text < CDec(Last.Text) - CDec(Spezial.Text) Then
+
+            Dim Faktor As Decimal = 0
+            If CDec(Last.Text) <= 500 * CDec(Spezial.Text) Then
+                Faktor = 0.5
+            ElseIf CDec(Last.Text) > 500 * CDec(Spezial.Text) And CDec(Last.Text) <= 2000 * CDec(Spezial.Text) Then
+                Faktor = 1
+            ElseIf CDec(Last.Text) > 2000 * CDec(Spezial.Text) And CDec(Last.Text) <= 10000 * CDec(Spezial.Text) Then
+                Faktor = 1.5
+            Else
+                Faktor = 1.5
+            End If
+
+            If CDec(Anzeige.Text) < (CDec(Last.Text) - (Faktor * CDec(Spezial.Text))) Or CDec(Anzeige.Text) > ((CDec(Last.Text) + (Faktor * CDec(Spezial.Text)))) Then
                 EFG.Checked = False
             Else
                 EFG.Checked = True
             End If
         Catch ex As Exception
+
         End Try
+
     End Sub
 
 
@@ -522,7 +591,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         FillControls()
 
         If DialogModus = enuDialogModus.lesend Then
-            'falls der Eichvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
+            'falls der Konformitätsbewertungsvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
             For Each Control In Me.FlowLayoutPanel1.Controls
                 Try
                     Control.readonly = True
@@ -1087,8 +1156,12 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         'berechnen der EFGs
 
         Try
-            RadTextBoxControlBetragNormallast.Text = objEichprozess.Eichprotokoll.Wiederholbarkeit_Staffelverfahren_MINNormalien
 
+            RadTextBoxControlBetragNormallast.Text = objEichprozess.Eichprotokoll.Wiederholbarkeit_Staffelverfahren_MINNormalien
+            'standardwert eintragen
+            If RadTextBoxControlBetragNormallast.Text.Equals("") Then
+                RadTextBoxControlBetragNormallast.Text = 0
+            End If
         Catch ex As Exception
 
         End Try
@@ -1615,7 +1688,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                 Dim objServerEichprozess As New EichsoftwareWebservice.ServerEichprozess
                 'auf fehlerhaft Status setzen
                 objEichprozess.FK_Bearbeitungsstatus = 2
-                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Eichbevollmächtigter sich den DS von Anfang angucken muss
+                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Konformitätsbewertungsbevollmächtigter sich den DS von Anfang angucken muss
                 UpdateObject()
                 UeberschreibePruefungsobjekte()
 
@@ -1670,29 +1743,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
 #End Region
 
 #Region "Hilfsfunktionen"
-    ''' <summary>
-    ''' Erwartet z.b. ein Steuerelement, prüft den Namen und gibt zurück um welchen Bereich es sich handelt
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <returns></returns>
-    ''' <remarks></remarks>
-    Private Function GetBereich(ByVal sender As Object) As String
-        Try
-            Dim ControlName As String
-            Dim Bereich As String = ""
-            ControlName = CType(sender, Control).Name
-            If ControlName.Contains("Bereich1") Then
-                Bereich = 1
-            ElseIf ControlName.Contains("Bereich2") Then
-                Bereich = 2
-            ElseIf ControlName.Contains("Bereich3") Then
-                Bereich = 3
-            End If
-            Return Bereich
-        Catch ex As Exception
-            Return Nothing
-        End Try
-    End Function
+
 
     ''' <summary>
     ''' Erwartet z.b. ein Steuerelement, prüft den Namen und gibt zurück um welchen Belastungsort es sich handelt

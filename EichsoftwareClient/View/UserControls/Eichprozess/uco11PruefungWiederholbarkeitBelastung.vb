@@ -41,7 +41,7 @@
         'neu berechnen der Fehler und EFG
 
 
-        'Alte Formel
+        ' Alte Formel
         'Try
         '    Fehler.Text = CDec(Anzeige.Text) - CDec(Last.Text)
         '    If Anzeige.Text > CDec(Last.Text) + CDec(Spezial.Text) Then
@@ -69,6 +69,32 @@
         Else
             Faktor = 1.5
         End If
+
+        'sonderfall: EFG durch die Differenz zwischen den 3 Belastungen. Mit anderen Worten: Die Differenz der Wägeergebnisse bei der 3maligen Belastung darf nicht größer sein, als der Absolutwert der für diese Belastung geltenden Fehlergrenze der Waage.
+        Dim wert1 As String = ""
+        Dim wert2 As String = ""
+        Dim wert3 As String = ""
+        'TODO neue Formel implementieren
+        Dim AnzeigeMax1 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}DisplayWeight{1}", bereich, 1))
+        Dim AnzeigeMax2 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}DisplayWeight{1}", bereich, 2))
+        Dim AnzeigeMax3 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}DisplayWeight{1}", bereich, 3))
+
+        wert1 = AnzeigeMax1.Text
+        If wert1 = "" Then
+            wert1 = 0
+        End If
+        wert2 = AnzeigeMax2.Text
+        If wert2 = "" Then
+            wert2 = 0
+        End If
+        wert3 = AnzeigeMax3.Text
+        If wert3 = "" Then
+            wert3 = 0
+        End If
+
+
+
+
 
         If CDec(Anzeige.Text) < (CDec(Last.Text) - (Faktor * CDec(Spezial.Text))) Or CDec(Anzeige.Text) > ((CDec(Last.Text) + (Faktor * CDec(Spezial.Text)))) Then
             EFG.Checked = False
@@ -210,12 +236,12 @@
                 Select Case objEichprozess.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren.Verfahren
                     Case Is = "über 60kg mit Normalien"
 
-                        'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
+                        'abrufen aller Prüfungs entitäten die sich auf dieses Konformitätsbewertungsprotokoll beziehen
                         Dim query = From a In context.PruefungWiederholbarkeit Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
                         _ListPruefungWiederholbarkeit = query.ToList
                     Case Else
 
-                        'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen und "voll" sind. Halbe wurden an andere Stelle schon abgearbeitet
+                        'abrufen aller Prüfungs entitäten die sich auf dieses Konformitätsbewertungsprotokoll beziehen und "voll" sind. Halbe wurden an andere Stelle schon abgearbeitet
                         Dim query = From a In context.PruefungWiederholbarkeit Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID And a.Belastung = "voll"
                         _ListPruefungWiederholbarkeit = query.ToList
                 End Select
@@ -235,7 +261,7 @@
                         Next
                     Catch ex As System.ObjectDisposedException 'fehler im Clientseitigen Lesemodus (bei bereits abegschickter Eichung)
                         Using context As New EichsoftwareClientdatabaseEntities1
-                            'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
+                            'abrufen aller Prüfungs entitäten die sich auf dieses Konformitätsbewertungsprotokoll beziehen
                             Dim query = From a In context.PruefungWiederholbarkeit Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
                             _ListPruefungWiederholbarkeit = query.ToList
 
@@ -253,7 +279,7 @@
                         Next
                     Catch ex As System.ObjectDisposedException 'fehler im Clientseitigen Lesemodus (bei bereits abegschickter Eichung)
                         Using context As New EichsoftwareClientdatabaseEntities1
-                            'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen und "voll" sind. Halbe wurden an andere Stelle schon abgearbeitet
+                            'abrufen aller Prüfungs entitäten die sich auf dieses Konformitätsbewertungsprotokoll beziehen und "voll" sind. Halbe wurden an andere Stelle schon abgearbeitet
                             Dim query = From a In context.PruefungWiederholbarkeit Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID And a.Belastung = "voll"
                             _ListPruefungWiederholbarkeit = query.ToList
                         End Using
@@ -266,7 +292,7 @@
         'steuerelemente mit werten aus DB füllen
         FillControls()
         If DialogModus = enuDialogModus.lesend Then
-            'falls der Eichvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
+            'falls der Konformitätsbewertungsvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
             For Each Control In Me.RadScrollablePanel1.PanelContainer.Controls
                 Try
                     Control.readonly = True
@@ -781,7 +807,7 @@
                 Dim objServerEichprozess As New EichsoftwareWebservice.ServerEichprozess
                 'auf fehlerhaft Status setzen
                 objEichprozess.FK_Bearbeitungsstatus = 2
-                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Eichbevollmächtigter sich den DS von Anfang angucken muss
+                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Konformitätsbewertungsbevollmächtigter sich den DS von Anfang angucken muss
                 UpdateObject()
                 UeberschreibePruefungsobjekte()
 

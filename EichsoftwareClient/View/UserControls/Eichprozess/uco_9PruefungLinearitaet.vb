@@ -33,28 +33,6 @@ Public Class uco_9PruefungLinearitaet
 
 #End Region
 
-#Region "Enumeratoren"
-    Private Enum enuBereich
-        Bereich1 = 1
-        Bereich2 = 2
-        Bereich3 = 3
-    End Enum
-    Private Enum enuMesspunkt
-        Messpunkt1 = 1
-        Messpunkt2 = 2
-        Messpunkt3 = 3
-        Messpunkt4 = 4
-        Messpunkt5 = 5
-        Messpunkt6 = 6
-        Messpunkt7 = 7
-        Messpunkt8 = 8
-    End Enum
-    Private Enum enuPruefung
-        Steigend = 0
-        Fallend = 1
-    End Enum
-#End Region
-
 #Region "Events"
     Private Sub ucoBeschaffenheitspruefung_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         If Not ParentFormular Is Nothing Then
@@ -120,69 +98,9 @@ Public Class uco_9PruefungLinearitaet
 
 
 
-    Private Function GetBereich(ByVal sender As Object) As enuBereich
-        Try
-            Dim ControlName As String
-            Dim Bereich As enuBereich
-            ControlName = CType(sender, Control).Name
-            If ControlName.Contains("Bereich1") Then
-                Bereich = enuBereich.Bereich1
-            ElseIf ControlName.Contains("Bereich2") Then
-                Bereich = enuBereich.Bereich2
-            ElseIf ControlName.Contains("Bereich3") Then
-                Bereich = enuBereich.Bereich3
-            End If
-            Return Bereich
-        Catch ex As Exception
-            Return Nothing
-        End Try
-    End Function
+  
 
-    Private Function GetPruefung(ByVal sender As Object) As enuPruefung
-        Try
-            Dim ControlName As String
-            Dim Pruefung As enuPruefung
-            ControlName = CType(sender, Control).Name
-
-            If ControlName.Contains("Fallend") Then
-                Pruefung = enuPruefung.Fallend
-            Else
-                Pruefung = enuPruefung.Steigend
-            End If
-            Return Pruefung
-        Catch ex As Exception
-            Return Nothing
-        End Try
-    End Function
-
-    Private Function GetMesspunkt(ByVal sender As Object) As enuMesspunkt
-        Try
-            Dim ControlName As String
-            Dim Messpunkt As enuMesspunkt
-
-            ControlName = CType(sender, Control).Name
-            If ControlName.EndsWith("1") Then
-                Messpunkt = enuMesspunkt.Messpunkt1
-            ElseIf ControlName.EndsWith("2") Then
-                Messpunkt = enuMesspunkt.Messpunkt2
-            ElseIf ControlName.EndsWith("3") Then
-                Messpunkt = enuMesspunkt.Messpunkt3
-            ElseIf ControlName.EndsWith("4") Then
-                Messpunkt = enuMesspunkt.Messpunkt4
-            ElseIf ControlName.EndsWith("5") Then
-                Messpunkt = enuMesspunkt.Messpunkt5
-            ElseIf ControlName.EndsWith("6") Then
-                Messpunkt = enuMesspunkt.Messpunkt6
-            ElseIf ControlName.EndsWith("7") Then
-                Messpunkt = enuMesspunkt.Messpunkt7
-            ElseIf ControlName.EndsWith("8") Then
-                Messpunkt = enuMesspunkt.Messpunkt8
-            End If
-            Return Messpunkt
-        Catch ex As Exception
-            Return Nothing
-        End Try
-    End Function
+    
 
     ''' <summary>
     ''' EFG Werte müssen jeweils bei Steigend und Fallend gleich sein. Diese funktion reicht sie weiter und berechnet
@@ -195,23 +113,23 @@ Public Class uco_9PruefungLinearitaet
         'damit keine Event Kettenreaktion durchgeführt wird, werden die Events ab hier unterbrochen
         _suspendEvents = True
 
-        Dim Bereich As enuBereich = GetBereich(sender)
-        Dim Pruefung As enuPruefung = GetPruefung(sender)
-        Dim Messpunkt As enuMesspunkt = GetMesspunkt(sender)
+        Dim Bereich As String = GetBereich(sender)
+        Dim Pruefung As String = GetPruefung(sender)
+        Dim Messpunkt As String = GetMesspunkt(sender)
 
         Dim CtrlSteigend As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}Weight{1}", CInt(Bereich), CInt(Messpunkt)))
         Dim CtrlFallend As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}FallendWeight{1}", CInt(Bereich), CInt(Messpunkt)))
 
-        If Pruefung = enuPruefung.Steigend Then
+        If Pruefung = "" Then
             CtrlFallend.Text = CtrlSteigend.Text
         Else
             CtrlSteigend.Text = CtrlFallend.Text
         End If
 
-
-        Berechne(enuPruefung.Steigend, Bereich)
-        Berechne(enuPruefung.Fallend, Bereich)
         'neu berechnen der Fehler und EFG
+        Berechne("", Bereich)
+        Berechne("Fallend", Bereich)
+
         _suspendEvents = False
 
     End Sub
@@ -322,7 +240,7 @@ Public Class uco_9PruefungLinearitaet
         FillControls()
 
         If DialogModus = enuDialogModus.lesend Then
-            'falls der Eichvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
+            'falls der Konformitätsbewertungsvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
             For Each Control In RadScrollablePanel1.PanelContainer.Controls
                 Try
                     Control.readonly = True
@@ -522,8 +440,8 @@ Public Class uco_9PruefungLinearitaet
         FillLinearitaetSteigend()
         FillLinearitaetFallend()
 
-        Berechne(enuPruefung.Steigend)
-        Berechne(enuPruefung.Fallend)
+        Berechne("")
+        Berechne("Fallend")
     End Sub
 
     ''' <summary>
@@ -663,6 +581,9 @@ Public Class uco_9PruefungLinearitaet
         If AnzeigeGewichtTextbox.Text.Equals("") Or GewichtTextbox.Text.Equals("") Then
             Exit Sub
         End If
+
+
+        'Alte Formel
         Try
             FehlerGrenzeTextbox.Text = CDec(AnzeigeGewichtTextbox.Text) - CDec(GewichtTextbox.Text)
 
@@ -677,6 +598,9 @@ Public Class uco_9PruefungLinearitaet
             Debug.WriteLine(ex.Message)
             Debug.WriteLine(ex.StackTrace)
         End Try
+
+
+
     End Sub
 
     ''' <summary>
@@ -684,23 +608,18 @@ Public Class uco_9PruefungLinearitaet
     ''' </summary>
     ''' <param name="Pruefung"></param>
     ''' <remarks></remarks>
-    Private Sub Berechne(ByVal Pruefung As enuPruefung, ByVal Bereich As enuBereich, ByVal Messpunkt As enuMesspunkt)
+    Private Sub Berechne(ByVal Pruefung As String, ByVal Bereich As String, ByVal Messpunkt As String)
         Dim FehlerGrenzeTextbox As Telerik.WinControls.UI.RadTextBoxControl
         Dim AnzeigeGewichtTextbox As Telerik.WinControls.UI.RadTextBoxControl
         Dim GewichtTextbox As Telerik.WinControls.UI.RadTextBoxControl
         Dim Checkbox As Telerik.WinControls.UI.RadCheckBox
 
-        Dim SuchstringPruefung As String
-        If Pruefung = enuPruefung.Steigend Then
-            SuchstringPruefung = ""
-        Else
-            SuchstringPruefung = "Fallend"
-        End If
 
-        Dim SuchstringFehlerGrenzeTextbox As String = String.Format("RadTextBoxControlBereich{0}{1}ErrorLimit{2}", CInt(Bereich), SuchstringPruefung, CInt(Messpunkt))
-        Dim SuchstringAnzeigeGewichtTextbox As String = String.Format("RadTextBoxControlBereich{0}{1}DisplayWeight{2}", CInt(Bereich), SuchstringPruefung, CInt(Messpunkt))
-        Dim SuchstringGewichtTextbox As String = String.Format("RadTextBoxControlBereich{0}{1}Weight{2}", CInt(Bereich), SuchstringPruefung, CInt(Messpunkt))
-        Dim SuchstringCheckbox As String = String.Format("RadCheckBoxBereich{0}{1}VEL{2}", CInt(Bereich), SuchstringPruefung, CInt(Messpunkt))
+
+        Dim SuchstringFehlerGrenzeTextbox As String = String.Format("RadTextBoxControlBereich{0}{1}ErrorLimit{2}", CInt(Bereich), Pruefung, CInt(Messpunkt))
+        Dim SuchstringAnzeigeGewichtTextbox As String = String.Format("RadTextBoxControlBereich{0}{1}DisplayWeight{2}", CInt(Bereich), Pruefung, CInt(Messpunkt))
+        Dim SuchstringGewichtTextbox As String = String.Format("RadTextBoxControlBereich{0}{1}Weight{2}", CInt(Bereich), Pruefung, CInt(Messpunkt))
+        Dim SuchstringCheckbox As String = String.Format("RadCheckBoxBereich{0}{1}VEL{2}", CInt(Bereich), Pruefung, CInt(Messpunkt))
 
         FehlerGrenzeTextbox = FindControl(SuchstringFehlerGrenzeTextbox)
         AnzeigeGewichtTextbox = FindControl(SuchstringAnzeigeGewichtTextbox)
@@ -721,24 +640,19 @@ Public Class uco_9PruefungLinearitaet
     ''' </summary>
     ''' <param name="Pruefung"></param>
     ''' <remarks></remarks>
-    Private Sub Berechne(ByVal Pruefung As enuPruefung, ByVal Bereich As enuBereich)
+    Private Sub Berechne(ByVal Pruefung As String, ByVal Bereich As String)
         Dim FehlerGrenzeTextbox As Telerik.WinControls.UI.RadTextBoxControl
         Dim AnzeigeGewichtTextbox As Telerik.WinControls.UI.RadTextBoxControl
         Dim GewichtTextbox As Telerik.WinControls.UI.RadTextBoxControl
         Dim Checkbox As Telerik.WinControls.UI.RadCheckBox
 
-        Dim SuchstringPruefung As String
-        If Pruefung = enuPruefung.Steigend Then
-            SuchstringPruefung = ""
-        Else
-            SuchstringPruefung = "Fallend"
-        End If
+
 
         For Messpunkt As Integer = 1 To 8 Step 1
-            Dim SuchstringFehlerGrenzeTextbox As String = String.Format("RadTextBoxControlBereich{0}{1}ErrorLimit{2}", CInt(Bereich), SuchstringPruefung, CInt(Messpunkt))
-            Dim SuchstringAnzeigeGewichtTextbox As String = String.Format("RadTextBoxControlBereich{0}{1}DisplayWeight{2}", CInt(Bereich), SuchstringPruefung, CInt(Messpunkt))
-            Dim SuchstringGewichtTextbox As String = String.Format("RadTextBoxControlBereich{0}{1}Weight{2}", CInt(Bereich), SuchstringPruefung, CInt(Messpunkt))
-            Dim SuchstringCheckbox As String = String.Format("RadCheckBoxBereich{0}{1}VEL{2}", CInt(Bereich), SuchstringPruefung, CInt(Messpunkt))
+            Dim SuchstringFehlerGrenzeTextbox As String = String.Format("RadTextBoxControlBereich{0}{1}ErrorLimit{2}", CInt(Bereich), Pruefung, CInt(Messpunkt))
+            Dim SuchstringAnzeigeGewichtTextbox As String = String.Format("RadTextBoxControlBereich{0}{1}DisplayWeight{2}", CInt(Bereich), Pruefung, CInt(Messpunkt))
+            Dim SuchstringGewichtTextbox As String = String.Format("RadTextBoxControlBereich{0}{1}Weight{2}", CInt(Bereich), Pruefung, CInt(Messpunkt))
+            Dim SuchstringCheckbox As String = String.Format("RadCheckBoxBereich{0}{1}VEL{2}", CInt(Bereich), Pruefung, CInt(Messpunkt))
 
             FehlerGrenzeTextbox = FindControl(SuchstringFehlerGrenzeTextbox)
             AnzeigeGewichtTextbox = FindControl(SuchstringAnzeigeGewichtTextbox)
@@ -762,25 +676,20 @@ Public Class uco_9PruefungLinearitaet
     ''' </summary>
     ''' <param name="Pruefung"></param>
     ''' <remarks></remarks>
-    Private Sub Berechne(ByVal Pruefung As enuPruefung)
+    Private Sub Berechne(ByVal Pruefung As String)
         Dim FehlerGrenzeTextbox As Telerik.WinControls.UI.RadTextBoxControl
         Dim AnzeigeGewichtTextbox As Telerik.WinControls.UI.RadTextBoxControl
         Dim GewichtTextbox As Telerik.WinControls.UI.RadTextBoxControl
         Dim Checkbox As Telerik.WinControls.UI.RadCheckBox
 
-        Dim SuchstringPruefung As String
-        If Pruefung = enuPruefung.Steigend Then
-            SuchstringPruefung = ""
-        Else
-            SuchstringPruefung = "Fallend"
-        End If
+
 
         For Bereich As Integer = 1 To 3 Step 1
             For Messpunkt As Integer = 1 To 8 Step 1
-                Dim SuchstringFehlerGrenzeTextbox As String = String.Format("RadTextBoxControlBereich{0}{1}ErrorLimit{2}", CInt(Bereich), SuchstringPruefung, CInt(Messpunkt))
-                Dim SuchstringAnzeigeGewichtTextbox As String = String.Format("RadTextBoxControlBereich{0}{1}DisplayWeight{2}", CInt(Bereich), SuchstringPruefung, CInt(Messpunkt))
-                Dim SuchstringGewichtTextbox As String = String.Format("RadTextBoxControlBereich{0}{1}Weight{2}", CInt(Bereich), SuchstringPruefung, CInt(Messpunkt))
-                Dim SuchstringCheckbox As String = String.Format("RadCheckBoxBereich{0}{1}VEL{2}", CInt(Bereich), SuchstringPruefung, CInt(Messpunkt))
+                Dim SuchstringFehlerGrenzeTextbox As String = String.Format("RadTextBoxControlBereich{0}{1}ErrorLimit{2}", CInt(Bereich), Pruefung, CInt(Messpunkt))
+                Dim SuchstringAnzeigeGewichtTextbox As String = String.Format("RadTextBoxControlBereich{0}{1}DisplayWeight{2}", CInt(Bereich), Pruefung, CInt(Messpunkt))
+                Dim SuchstringGewichtTextbox As String = String.Format("RadTextBoxControlBereich{0}{1}Weight{2}", CInt(Bereich), Pruefung, CInt(Messpunkt))
+                Dim SuchstringCheckbox As String = String.Format("RadCheckBoxBereich{0}{1}VEL{2}", CInt(Bereich), Pruefung, CInt(Messpunkt))
 
                 FehlerGrenzeTextbox = FindControl(SuchstringFehlerGrenzeTextbox)
                 AnzeigeGewichtTextbox = FindControl(SuchstringAnzeigeGewichtTextbox)
@@ -807,9 +716,9 @@ Public Class uco_9PruefungLinearitaet
     Private Sub TextboxenGewicht_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlBereich3FallendDisplayWeight8.TextChanged, RadTextBoxControlBereich3FallendDisplayWeight7.TextChanged, RadTextBoxControlBereich3FallendDisplayWeight6.TextChanged, RadTextBoxControlBereich3FallendDisplayWeight5.TextChanged, RadTextBoxControlBereich3FallendDisplayWeight4.TextChanged, RadTextBoxControlBereich3FallendDisplayWeight3.TextChanged, RadTextBoxControlBereich3FallendDisplayWeight2.TextChanged, RadTextBoxControlBereich3FallendDisplayWeight1.TextChanged, RadTextBoxControlBereich3DisplayWeight8.TextChanged, RadTextBoxControlBereich3DisplayWeight7.TextChanged, RadTextBoxControlBereich3DisplayWeight6.TextChanged, RadTextBoxControlBereich3DisplayWeight5.TextChanged, RadTextBoxControlBereich3DisplayWeight4.TextChanged, RadTextBoxControlBereich3DisplayWeight3.TextChanged, RadTextBoxControlBereich3DisplayWeight2.TextChanged, RadTextBoxControlBereich3DisplayWeight1.TextChanged, RadTextBoxControlBereich2FallendDisplayWeight8.TextChanged, RadTextBoxControlBereich2FallendDisplayWeight7.TextChanged, RadTextBoxControlBereich2FallendDisplayWeight6.TextChanged, RadTextBoxControlBereich2FallendDisplayWeight5.TextChanged, RadTextBoxControlBereich2FallendDisplayWeight4.TextChanged, RadTextBoxControlBereich2FallendDisplayWeight3.TextChanged, RadTextBoxControlBereich2FallendDisplayWeight2.TextChanged, RadTextBoxControlBereich2FallendDisplayWeight1.TextChanged, RadTextBoxControlBereich2DisplayWeight8.TextChanged, RadTextBoxControlBereich2DisplayWeight7.TextChanged, RadTextBoxControlBereich2DisplayWeight6.TextChanged, RadTextBoxControlBereich2DisplayWeight5.TextChanged, RadTextBoxControlBereich2DisplayWeight4.TextChanged, RadTextBoxControlBereich2DisplayWeight3.TextChanged, RadTextBoxControlBereich2DisplayWeight2.TextChanged, RadTextBoxControlBereich2DisplayWeight1.TextChanged, RadTextBoxControlBereich1FallendDisplayWeight8.TextChanged, RadTextBoxControlBereich1FallendDisplayWeight7.TextChanged, RadTextBoxControlBereich1FallendDisplayWeight6.TextChanged, RadTextBoxControlBereich1FallendDisplayWeight5.TextChanged, RadTextBoxControlBereich1FallendDisplayWeight4.TextChanged, RadTextBoxControlBereich1FallendDisplayWeight3.TextChanged, RadTextBoxControlBereich1FallendDisplayWeight2.TextChanged, RadTextBoxControlBereich1FallendDisplayWeight1.TextChanged, RadTextBoxControlBereich1DisplayWeight8.TextChanged, RadTextBoxControlBereich1DisplayWeight7.TextChanged, RadTextBoxControlBereich1DisplayWeight6.TextChanged, RadTextBoxControlBereich1DisplayWeight5.TextChanged, RadTextBoxControlBereich1DisplayWeight4.TextChanged, RadTextBoxControlBereich1DisplayWeight3.TextChanged, RadTextBoxControlBereich1DisplayWeight2.TextChanged, RadTextBoxControlBereich1DisplayWeight1.TextChanged
         If _suspendEvents Then Exit Sub
 
-        Dim Messpunkt As enuMesspunkt = GetMesspunkt(sender)
-        Dim Bereich As enuBereich = GetBereich(sender)
-        Dim Pruefung As enuPruefung = GetPruefung(sender)
+        Dim Messpunkt As String = GetMesspunkt(sender)
+        Dim Bereich As String = GetBereich(sender)
+        Dim Pruefung As String = GetPruefung(sender)
 
         Berechne(Pruefung, Bereich, Messpunkt)
     End Sub
@@ -1411,7 +1320,7 @@ Public Class uco_9PruefungLinearitaet
                 Dim objServerEichprozess As New EichsoftwareWebservice.ServerEichprozess
                 'auf fehlerhaft Status setzen
                 objEichprozess.FK_Bearbeitungsstatus = 2
-                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Eichbevollmächtigter sich den DS von Anfang angucken muss
+                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Konformitätsbewertungsbevollmächtigter sich den DS von Anfang angucken muss
                 UpdateObject()
                 UeberschreibePruefungsobjekte()
 
