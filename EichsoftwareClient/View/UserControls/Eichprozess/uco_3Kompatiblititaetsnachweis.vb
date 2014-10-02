@@ -161,6 +161,15 @@
                 RadTextBoxControlWaageHoechstlast2.Visible = False
                 lblKGMax2.Visible = False
 
+
+                lblPflichtfeld1.Visible = True
+                lblPflichtfeld2.Visible = True
+                lblPflichtfeld3.Visible = False
+                lblPflichtfeld4.Visible = False
+                lblPflichtfeld5.Visible = False
+                lblPflichtfeld6.Visible = False
+
+
                 lblE2.Visible = False
                 RadTextBoxControlWaageEichwert2.Visible = False
                 lblEKG2.Visible = False
@@ -190,6 +199,13 @@
                 RadTextBoxControlWaageEichwert2.Visible = True
                 lblEKG2.Visible = True
 
+                lblPflichtfeld1.Visible = True
+                lblPflichtfeld2.Visible = True
+                lblPflichtfeld3.Visible = True
+                lblPflichtfeld4.Visible = True
+                lblPflichtfeld5.Visible = False
+                lblPflichtfeld6.Visible = False
+
                 'dritten Ausblenden
                 lblMax3.Visible = False
                 RadTextBoxControlWaageHoechstlast3.Visible = False
@@ -210,6 +226,13 @@
                 lblMax2.Visible = True
                 RadTextBoxControlWaageHoechstlast2.Visible = True
                 lblKGMax2.Visible = True
+
+                lblPflichtfeld1.Visible = True
+                lblPflichtfeld2.Visible = True
+                lblPflichtfeld3.Visible = True
+                lblPflichtfeld4.Visible = True
+                lblPflichtfeld5.Visible = True
+                lblPflichtfeld6.Visible = True
 
                 lblE2.Visible = True
                 RadTextBoxControlWaageEichwert2.Visible = True
