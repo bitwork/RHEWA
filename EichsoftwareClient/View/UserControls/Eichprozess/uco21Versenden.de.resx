@@ -146,7 +146,7 @@
     <value />
   </data>
   <data name="RadButtonAnRhewaSenden.Text" xml:space="preserve">
-    <value>&lt;html&gt;Sende Konformitätsbewertungsprotokoll &lt;br /&gt;an RHEWA&lt;/html&gt;</value>
+    <value>&lt;html&gt;Sende Messprotokoll &lt;br /&gt;an RHEWA&lt;/html&gt;</value>
   </data>
   <data name="RadProgressBar.RootElement.AccessibleDescription" xml:space="preserve">
     <value />

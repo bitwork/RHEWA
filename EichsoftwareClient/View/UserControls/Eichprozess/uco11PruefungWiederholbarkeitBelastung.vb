@@ -236,12 +236,12 @@
                 Select Case objEichprozess.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren.Verfahren
                     Case Is = "über 60kg mit Normalien"
 
-                        'abrufen aller Prüfungs entitäten die sich auf dieses Konformitätsbewertungsprotokoll beziehen
+                        'abrufen aller Prüfungs entitäten die sich auf dieses Messprotokoll beziehen
                         Dim query = From a In context.PruefungWiederholbarkeit Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
                         _ListPruefungWiederholbarkeit = query.ToList
                     Case Else
 
-                        'abrufen aller Prüfungs entitäten die sich auf dieses Konformitätsbewertungsprotokoll beziehen und "voll" sind. Halbe wurden an andere Stelle schon abgearbeitet
+                        'abrufen aller Prüfungs entitäten die sich auf dieses Messprotokoll beziehen und "voll" sind. Halbe wurden an andere Stelle schon abgearbeitet
                         Dim query = From a In context.PruefungWiederholbarkeit Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID And a.Belastung = "voll"
                         _ListPruefungWiederholbarkeit = query.ToList
                 End Select
@@ -261,7 +261,7 @@
                         Next
                     Catch ex As System.ObjectDisposedException 'fehler im Clientseitigen Lesemodus (bei bereits abegschickter Eichung)
                         Using context As New EichsoftwareClientdatabaseEntities1
-                            'abrufen aller Prüfungs entitäten die sich auf dieses Konformitätsbewertungsprotokoll beziehen
+                            'abrufen aller Prüfungs entitäten die sich auf dieses Messprotokoll beziehen
                             Dim query = From a In context.PruefungWiederholbarkeit Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
                             _ListPruefungWiederholbarkeit = query.ToList
 
@@ -279,7 +279,7 @@
                         Next
                     Catch ex As System.ObjectDisposedException 'fehler im Clientseitigen Lesemodus (bei bereits abegschickter Eichung)
                         Using context As New EichsoftwareClientdatabaseEntities1
-                            'abrufen aller Prüfungs entitäten die sich auf dieses Konformitätsbewertungsprotokoll beziehen und "voll" sind. Halbe wurden an andere Stelle schon abgearbeitet
+                            'abrufen aller Prüfungs entitäten die sich auf dieses Messprotokoll beziehen und "voll" sind. Halbe wurden an andere Stelle schon abgearbeitet
                             Dim query = From a In context.PruefungWiederholbarkeit Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID And a.Belastung = "voll"
                             _ListPruefungWiederholbarkeit = query.ToList
                         End Using

@@ -184,7 +184,7 @@
     <value>526, 53</value>
   </data>
   <data name="lblEichanweisung.Text" xml:space="preserve">
-    <value>Konformitätsbewertungsanweisung /  Konformitätsbewertungsprotokoll</value>
+    <value>Konformitätsbewertungsanweisung /  Messprotokoll</value>
   </data>
   <data name="RadCheckBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>515, 19</value>

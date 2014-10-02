@@ -553,7 +553,7 @@ RC3          3        15000                        0          2        1100</val
     <value>Hilfe_Eichprotokollstammdaten</value>
   </data>
   <data name="Ueberschrift_EichprotokollStammdaten" xml:space="preserve">
-    <value>Konformitätsbewertungsprotokoll</value>
+    <value>Messprotokoll</value>
   </data>
   <data name="Eichprotokoll_Dimension" xml:space="preserve">
     <value>Brückenabmessung</value>

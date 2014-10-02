@@ -281,7 +281,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to Möchten Sie das korrigierte Konformitätsbewertungsprotokoll wirklich an den Eichbevollmächtigten zurücksenden? Der Status wird dabei auf fehlerhaft gesetzt..
+        '''  Looks up a localized string similar to Möchten Sie das korrigierte Messprotokoll wirklich an den Eichbevollmächtigten zurücksenden? Der Status wird dabei auf fehlerhaft gesetzt..
         '''</summary>
         Friend Shared ReadOnly Property Frage_EichprotokollZuruecksenden() As String
             Get

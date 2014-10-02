@@ -1074,7 +1074,7 @@ Public Class EichsoftwareWebservice
                     ''abruch
                     If Obj Is Nothing Then Return Nothing
 
-                    ''setzte Wert für Prüfer imKonformitätsbewertungsprotokoll
+                    ''setzte Wert für Prüfer imMessprotokoll
                     'Try
                     '    Obj.ServerEichprotokoll.Identifikationsdaten_Pruefer = WindowsUsername.Split("\")(1)
                     'Catch ex As Exception
@@ -1138,7 +1138,7 @@ Public Class EichsoftwareWebservice
                     If Obj Is Nothing Then Return Nothing
 
 
-                    ''setzte Wert für Prüfer im Konformitätsbewertungsprotokoll
+                    ''setzte Wert für Prüfer im Messprotokoll
                     'Try
                     '    Obj.ServerEichprotokoll.Identifikationsdaten_Pruefer = WindowsUsername.Split("\")(1)
                     'Catch ex As Exception

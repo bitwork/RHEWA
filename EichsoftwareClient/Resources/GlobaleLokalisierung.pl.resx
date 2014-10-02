@@ -664,7 +664,7 @@ Jest błąd ≤ 0,3e → L = 0,5 Max = potrzebne są wzorce 50% z Max.</value>
     <value>Möchten Sie den gewählten Konformitätsbewertungsprozess wirklich ablehnen? Der Eichbevollmächtigte kriegt diesen dann zur erneuten Bearbeitung zugesandt</value>
   </data>
   <data name="Frage_EichprotokollZuruecksenden" xml:space="preserve">
-    <value>Möchten Sie das korrigierte Konformitätsbewertungsprotokoll wirklich an den Eichbevollmächtigten zurücksenden? Der Status wird dabei auf fehlerhaft gesetzt.</value>
+    <value>Möchten Sie das korrigierte Messprotokoll wirklich an den Eichbevollmächtigten zurücksenden? Der Status wird dabei auf fehlerhaft gesetzt.</value>
   </data>
   <data name="Frage_Genehmigen" xml:space="preserve">
     <value>Möchten Sie den gewählten Konformitätsbewertungsprozess wirklich genehmigen? Er gilt dann als abgeschlossen und kann nicht mehr bearbeitet werden</value>
