@@ -1819,6 +1819,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich3Weight2.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich3Weight2.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich3Weight2.RootElement.Text = resources.GetString("RadTextBoxControlBereich3Weight2.RootElement.Text")
         Me.RadTextBoxControlBereich3Weight2.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich3Weight2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlBereich3Weight2.TabStop = False
         '
         'RadTextBoxControlBereich3DisplayWeight2
         '
@@ -1967,6 +1968,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich3Weight3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich3Weight3.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich3Weight3.RootElement.Text = resources.GetString("RadTextBoxControlBereich3Weight3.RootElement.Text")
         Me.RadTextBoxControlBereich3Weight3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich3Weight3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlBereich3Weight3.TabStop = False
         '
         'RadTextBoxControlBereich3DisplayWeight3
         '
@@ -2099,6 +2101,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich3Weight4.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich3Weight4.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich3Weight4.RootElement.Text = resources.GetString("RadTextBoxControlBereich3Weight4.RootElement.Text")
         Me.RadTextBoxControlBereich3Weight4.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich3Weight4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlBereich3Weight4.TabStop = False
         '
         'RadTextBoxControlBereich3DisplayWeight4
         '
@@ -2247,6 +2250,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich3Weight5.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich3Weight5.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich3Weight5.RootElement.Text = resources.GetString("RadTextBoxControlBereich3Weight5.RootElement.Text")
         Me.RadTextBoxControlBereich3Weight5.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich3Weight5.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlBereich3Weight5.TabStop = False
         '
         'RadTextBoxControlBereich3DisplayWeight5
         '
@@ -2363,6 +2367,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich3Weight12.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich3Weight12.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich3Weight12.RootElement.Text = resources.GetString("RadTextBoxControlBereich3Weight12.RootElement.Text")
         Me.RadTextBoxControlBereich3Weight12.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich3Weight12.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlBereich3Weight12.TabStop = False
         '
         'RadTextBoxControlBereich3DisplayWeight12
         '
@@ -2479,6 +2484,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich3Weight11.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich3Weight11.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich3Weight11.RootElement.Text = resources.GetString("RadTextBoxControlBereich3Weight11.RootElement.Text")
         Me.RadTextBoxControlBereich3Weight11.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich3Weight11.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlBereich3Weight11.TabStop = False
         '
         'RadTextBoxControlBereich3DisplayWeight11
         '
@@ -2595,6 +2601,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich3Weight6.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich3Weight6.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich3Weight6.RootElement.Text = resources.GetString("RadTextBoxControlBereich3Weight6.RootElement.Text")
         Me.RadTextBoxControlBereich3Weight6.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich3Weight6.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlBereich3Weight6.TabStop = False
         '
         'RadTextBoxControlBereich3DisplayWeight6
         '
@@ -2711,6 +2718,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich3WeightMitte.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich3WeightMitte.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich3WeightMitte.RootElement.Text = resources.GetString("RadTextBoxControlBereich3WeightMitte.RootElement.Text")
         Me.RadTextBoxControlBereich3WeightMitte.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich3WeightMitte.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlBereich3WeightMitte.TabStop = False
         '
         'RadTextBoxControlBereich3DisplayWeightMitte
         '
@@ -2827,6 +2835,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich3Weight10.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich3Weight10.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich3Weight10.RootElement.Text = resources.GetString("RadTextBoxControlBereich3Weight10.RootElement.Text")
         Me.RadTextBoxControlBereich3Weight10.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich3Weight10.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlBereich3Weight10.TabStop = False
         '
         'RadTextBoxControlBereich3DisplayWeight10
         '
@@ -2943,6 +2952,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich3Weight7.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich3Weight7.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich3Weight7.RootElement.Text = resources.GetString("RadTextBoxControlBereich3Weight7.RootElement.Text")
         Me.RadTextBoxControlBereich3Weight7.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich3Weight7.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlBereich3Weight7.TabStop = False
         '
         'RadTextBoxControlBereich3DisplayWeight7
         '
@@ -3059,6 +3069,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich3Weight9.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich3Weight9.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich3Weight9.RootElement.Text = resources.GetString("RadTextBoxControlBereich3Weight9.RootElement.Text")
         Me.RadTextBoxControlBereich3Weight9.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich3Weight9.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlBereich3Weight9.TabStop = False
         '
         'RadTextBoxControlBereich3DisplayWeight9
         '
@@ -3175,6 +3186,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich3Weight8.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich3Weight8.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich3Weight8.RootElement.Text = resources.GetString("RadTextBoxControlBereich3Weight8.RootElement.Text")
         Me.RadTextBoxControlBereich3Weight8.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich3Weight8.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlBereich3Weight8.TabStop = False
         '
         'RadTextBoxControlBereich3DisplayWeight8
         '
@@ -3353,6 +3365,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich2WeightMitte.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich2WeightMitte.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich2WeightMitte.RootElement.Text = resources.GetString("RadTextBoxControlBereich2WeightMitte.RootElement.Text")
         Me.RadTextBoxControlBereich2WeightMitte.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich2WeightMitte.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlBereich2WeightMitte.TabStop = False
         '
         'RadTextBoxControlBereich2DisplayWeightMitte
         '
@@ -3617,6 +3630,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich2Weight2.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich2Weight2.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich2Weight2.RootElement.Text = resources.GetString("RadTextBoxControlBereich2Weight2.RootElement.Text")
         Me.RadTextBoxControlBereich2Weight2.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich2Weight2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlBereich2Weight2.TabStop = False
         '
         'RadTextBoxControlBereich2DisplayWeight2
         '
@@ -3749,6 +3763,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich2Weight3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich2Weight3.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich2Weight3.RootElement.Text = resources.GetString("RadTextBoxControlBereich2Weight3.RootElement.Text")
         Me.RadTextBoxControlBereich2Weight3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich2Weight3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlBereich2Weight3.TabStop = False
         '
         'RadTextBoxControlBereich2DisplayWeight3
         '
@@ -3897,6 +3912,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich2Weight4.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich2Weight4.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich2Weight4.RootElement.Text = resources.GetString("RadTextBoxControlBereich2Weight4.RootElement.Text")
         Me.RadTextBoxControlBereich2Weight4.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich2Weight4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlBereich2Weight4.TabStop = False
         '
         'RadTextBoxControlBereich2DisplayWeight4
         '
@@ -4013,6 +4029,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich2Weight11.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich2Weight11.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich2Weight11.RootElement.Text = resources.GetString("RadTextBoxControlBereich2Weight11.RootElement.Text")
         Me.RadTextBoxControlBereich2Weight11.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich2Weight11.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlBereich2Weight11.TabStop = False
         '
         'RadTextBoxControlBereich2DisplayWeight11
         '
@@ -4129,6 +4146,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich2Weight10.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich2Weight10.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich2Weight10.RootElement.Text = resources.GetString("RadTextBoxControlBereich2Weight10.RootElement.Text")
         Me.RadTextBoxControlBereich2Weight10.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich2Weight10.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlBereich2Weight10.TabStop = False
         '
         'RadTextBoxControlBereich2DisplayWeight10
         '
@@ -4245,6 +4263,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich2Weight5.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich2Weight5.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich2Weight5.RootElement.Text = resources.GetString("RadTextBoxControlBereich2Weight5.RootElement.Text")
         Me.RadTextBoxControlBereich2Weight5.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich2Weight5.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlBereich2Weight5.TabStop = False
         '
         'RadTextBoxControlBereich2DisplayWeight5
         '
@@ -4361,6 +4380,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich2Weight12.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich2Weight12.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich2Weight12.RootElement.Text = resources.GetString("RadTextBoxControlBereich2Weight12.RootElement.Text")
         Me.RadTextBoxControlBereich2Weight12.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich2Weight12.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlBereich2Weight12.TabStop = False
         '
         'RadTextBoxControlBereich2DisplayWeight12
         '
@@ -4477,6 +4497,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich2Weight9.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich2Weight9.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich2Weight9.RootElement.Text = resources.GetString("RadTextBoxControlBereich2Weight9.RootElement.Text")
         Me.RadTextBoxControlBereich2Weight9.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich2Weight9.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlBereich2Weight9.TabStop = False
         '
         'RadTextBoxControlBereich2DisplayWeight9
         '
@@ -4593,6 +4614,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich2Weight6.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich2Weight6.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich2Weight6.RootElement.Text = resources.GetString("RadTextBoxControlBereich2Weight6.RootElement.Text")
         Me.RadTextBoxControlBereich2Weight6.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich2Weight6.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlBereich2Weight6.TabStop = False
         '
         'RadTextBoxControlBereich2DisplayWeight6
         '
@@ -4709,6 +4731,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich2Weight8.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich2Weight8.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich2Weight8.RootElement.Text = resources.GetString("RadTextBoxControlBereich2Weight8.RootElement.Text")
         Me.RadTextBoxControlBereich2Weight8.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich2Weight8.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlBereich2Weight8.TabStop = False
         '
         'RadTextBoxControlBereich2DisplayWeight8
         '
@@ -4825,6 +4848,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich2Weight7.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich2Weight7.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich2Weight7.RootElement.Text = resources.GetString("RadTextBoxControlBereich2Weight7.RootElement.Text")
         Me.RadTextBoxControlBereich2Weight7.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich2Weight7.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlBereich2Weight7.TabStop = False
         '
         'RadTextBoxControlBereich2DisplayWeight7
         '
@@ -5119,6 +5143,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich1Weight2.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich1Weight2.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich1Weight2.RootElement.Text = resources.GetString("RadTextBoxControlBereich1Weight2.RootElement.Text")
         Me.RadTextBoxControlBereich1Weight2.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich1Weight2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlBereich1Weight2.TabStop = False
         '
         'RadTextBoxControlBereich1DisplayWeight2
         '
@@ -5267,6 +5292,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich1Weight3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich1Weight3.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich1Weight3.RootElement.Text = resources.GetString("RadTextBoxControlBereich1Weight3.RootElement.Text")
         Me.RadTextBoxControlBereich1Weight3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich1Weight3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlBereich1Weight3.TabStop = False
         '
         'RadTextBoxControlBereich1DisplayWeight3
         '
@@ -5399,6 +5425,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich1Weight4.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich1Weight4.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich1Weight4.RootElement.Text = resources.GetString("RadTextBoxControlBereich1Weight4.RootElement.Text")
         Me.RadTextBoxControlBereich1Weight4.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich1Weight4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlBereich1Weight4.TabStop = False
         '
         'RadTextBoxControlBereich1DisplayWeight4
         '
@@ -5547,6 +5574,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich1Weight5.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich1Weight5.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich1Weight5.RootElement.Text = resources.GetString("RadTextBoxControlBereich1Weight5.RootElement.Text")
         Me.RadTextBoxControlBereich1Weight5.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich1Weight5.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlBereich1Weight5.TabStop = False
         '
         'RadTextBoxControlBereich1DisplayWeight5
         '
@@ -5663,6 +5691,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich1Weight12.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich1Weight12.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich1Weight12.RootElement.Text = resources.GetString("RadTextBoxControlBereich1Weight12.RootElement.Text")
         Me.RadTextBoxControlBereich1Weight12.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich1Weight12.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlBereich1Weight12.TabStop = False
         '
         'RadTextBoxControlBereich1DisplayWeight12
         '
@@ -5779,6 +5808,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich1Weight11.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich1Weight11.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich1Weight11.RootElement.Text = resources.GetString("RadTextBoxControlBereich1Weight11.RootElement.Text")
         Me.RadTextBoxControlBereich1Weight11.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich1Weight11.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlBereich1Weight11.TabStop = False
         '
         'RadTextBoxControlBereich1DisplayWeight11
         '
@@ -5895,6 +5925,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich1Weight6.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich1Weight6.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich1Weight6.RootElement.Text = resources.GetString("RadTextBoxControlBereich1Weight6.RootElement.Text")
         Me.RadTextBoxControlBereich1Weight6.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich1Weight6.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlBereich1Weight6.TabStop = False
         '
         'RadTextBoxControlBereich1DisplayWeight6
         '
@@ -6011,6 +6042,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich1WeightMitte.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich1WeightMitte.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich1WeightMitte.RootElement.Text = resources.GetString("RadTextBoxControlBereich1WeightMitte.RootElement.Text")
         Me.RadTextBoxControlBereich1WeightMitte.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich1WeightMitte.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlBereich1WeightMitte.TabStop = False
         '
         'RadTextBoxControlBereich1DisplayWeightMitte
         '
@@ -6127,6 +6159,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich1Weight10.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich1Weight10.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich1Weight10.RootElement.Text = resources.GetString("RadTextBoxControlBereich1Weight10.RootElement.Text")
         Me.RadTextBoxControlBereich1Weight10.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich1Weight10.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlBereich1Weight10.TabStop = False
         '
         'RadTextBoxControlBereich1DisplayWeight10
         '
@@ -6243,6 +6276,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich1Weight7.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich1Weight7.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich1Weight7.RootElement.Text = resources.GetString("RadTextBoxControlBereich1Weight7.RootElement.Text")
         Me.RadTextBoxControlBereich1Weight7.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich1Weight7.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlBereich1Weight7.TabStop = False
         '
         'RadTextBoxControlBereich1DisplayWeight7
         '
@@ -6359,6 +6393,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich1Weight9.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich1Weight9.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich1Weight9.RootElement.Text = resources.GetString("RadTextBoxControlBereich1Weight9.RootElement.Text")
         Me.RadTextBoxControlBereich1Weight9.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich1Weight9.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlBereich1Weight9.TabStop = False
         '
         'RadTextBoxControlBereich1DisplayWeight9
         '
@@ -6475,6 +6510,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich1Weight8.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBereich1Weight8.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBereich1Weight8.RootElement.Text = resources.GetString("RadTextBoxControlBereich1Weight8.RootElement.Text")
         Me.RadTextBoxControlBereich1Weight8.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBereich1Weight8.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlBereich1Weight8.TabStop = False
         '
         'RadTextBoxControlBereich1DisplayWeight8
         '

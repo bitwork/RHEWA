@@ -16772,6 +16772,6 @@
     <value>uco_8PruefungNullstellungUndAussermittigeBelastung</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, EichsoftwareClient, Version=1.0.5388.14214, Culture=neutral, PublicKeyToken=null</value>
+    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.5388.24619, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>
