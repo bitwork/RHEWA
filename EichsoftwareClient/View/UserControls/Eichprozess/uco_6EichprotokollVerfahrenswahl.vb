@@ -87,25 +87,9 @@
     ''' <author></author>
     ''' <commentauthor></commentauthor>
     Private Sub FillControls()
-
-
-
         'je nach Art der Waage MAX1, Max2 oder MAX3 auslesen. Wenn dieser Wert unter 1000KG liegt, wird automatisch ü.60 KG mit normalien gewählt
-        If objEichprozess.Lookup_Waagenart.Art = "Einbereichswaage" Then
-            If objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1 < 1000 Then
-                SetUeber60KGmitNormalienOnly()
-            End If
-        End If
-        If objEichprozess.Lookup_Waagenart.Art = "Zweibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Zweiteilungswaage" Then
-            If objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 < 1000 Then
-                SetUeber60KGmitNormalienOnly()
-            End If
-        End If
-        If objEichprozess.Lookup_Waagenart.Art = "Dreibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Dreiteilungswaage" Then
-            If objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 < 1000 Then
-                SetUeber60KGmitNormalienOnly()
-            End If
-        End If
+        EnableDisableRadioButtons()
+
         'wenn keiner der Fälle zugetroffen hat, ist die auswahl nach dem Verfahren frei
 
         If Not objEichprozess.Eichprotokoll Is Nothing Then
@@ -124,14 +108,40 @@
         '  RadRadioButtonNormalien.Focus()
 
     End Sub
+    ''' <summary>
+    ''' je nach Art der Waage MAX1, Max2 oder MAX3 auslesen. Wenn dieser Wert unter 1000KG liegt, wird automatisch ü.60 KG mit normalien gewählt
+    ''' 
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub EnableDisableRadioButtons()
+        Dim bolLock As Boolean = False
+        Dim Waagenart As String = objEichprozess.Lookup_Waagenart.Art
 
-    Private Sub SetUeber60KGmitNormalienOnly()
-        objEichprozess.FK_Beschaffenheitspruefung = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgmitNormalien
-        RadRadioButtonFahrzeugwaagen.Enabled = False
-        RadRadioButtonStaffelverfahren.Enabled = False
-        'weiter im Eichprotokoll
-        RadRadioButtonNormalien.IsChecked = True
+        Select Case Waagenart
+            Case Is = "Einbereichswaage"
+                If objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1 < 1000 Then
+                    bolLock = True
+                End If
+            Case Is = "Zweibereichswaage", "Zweiteilungswaage"
+                If objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 < 1000 Then
+                    bolLock = True
+                End If
+            Case Is = "Dreibereichswaage", "Dreiteilungswaage"
+                If objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 < 1000 Then
+                    bolLock = True
+                End If
+        End Select
+    
+
+        If bolLock Then
+            objEichprozess.FK_Beschaffenheitspruefung = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgmitNormalien
+        End If
+
+        RadRadioButtonFahrzeugwaagen.Enabled = Not bolLock
+        RadRadioButtonStaffelverfahren.Enabled = Not bolLock
+        RadRadioButtonNormalien.IsChecked = bolLock
     End Sub
+
 
     ''' <summary>
     ''' Füllt das Objekt mit den Werten aus den Steuerlementen
