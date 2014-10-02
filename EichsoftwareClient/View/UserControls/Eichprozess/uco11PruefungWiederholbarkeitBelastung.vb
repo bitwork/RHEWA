@@ -28,6 +28,57 @@
 
 #End Region
 
+
+    Private Sub CalculateEFG(bereich As String, Wiederholung As String)
+
+        Dim Last As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}Weight{1}", bereich, Wiederholung))
+        Dim Anzeige As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}DisplayWeight{1}", bereich, Wiederholung))
+        Dim Fehler As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}ErrorLimit{1}", bereich, Wiederholung))
+        Dim EFG As Telerik.WinControls.UI.RadCheckBox = FindControl(String.Format("RadCheckBoxBereich{0}VEL{1}", bereich, Wiederholung))
+        Dim Spezial As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblBereich{0}EFGSpeziallBerechnung", Bereich))
+
+
+        'neu berechnen der Fehler und EFG
+
+
+        'Alte Formel
+        'Try
+        '    Fehler.Text = CDec(Anzeige.Text) - CDec(Last.Text)
+        '    If Anzeige.Text > CDec(Last.Text) + CDec(Spezial.Text) Then
+        '        EFG.Checked = False
+        '    ElseIf Anzeige.Text < CDec(Last.Text) - CDec(Spezial.Text) Then
+        '        EFG.Checked = False
+        '    Else
+        '        EFG.Checked = True
+        '    End If
+        'Catch ex As Exception
+        'End Try
+
+
+
+        'Neue EFG Formel nach Herrn Strack
+        Fehler.Text = CDec(Anzeige.Text) - CDec(Last.Text)
+
+        Dim Faktor As Decimal = 0
+        If CDec(Last.Text) <= 500 * CDec(Spezial.Text) Then
+            Faktor = 0.5
+        ElseIf CDec(Last.Text) > 500 * CDec(Spezial.Text) And CDec(Last.Text) <= 2000 * CDec(Spezial.Text) Then
+            Faktor = 1
+        ElseIf CDec(Last.Text) > 2000 * CDec(Spezial.Text) And CDec(Last.Text) <= 10000 * CDec(Spezial.Text) Then
+            Faktor = 1.5
+        Else
+            Faktor = 1.5
+        End If
+
+        If CDec(Anzeige.Text) < (CDec(Last.Text) - (Faktor * CDec(Spezial.Text))) Or CDec(Anzeige.Text) > ((CDec(Last.Text) + (Faktor * CDec(Spezial.Text)))) Then
+            EFG.Checked = False
+        Else
+            EFG.Checked = True
+        End If
+
+
+    End Sub
+
 #Region "Events"
     Private Sub ucoBeschaffenheitspruefung_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         If Not ParentFormular Is Nothing Then
@@ -45,11 +96,14 @@
         LoadFromDatabase()
     End Sub
 
-#Region "Bereich 1/2 MAX"
     Private Sub RadTextBoxControlBereich1DisplayWeight1_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles RadTextBoxControlBereich1DisplayWeight1.Validating, _
-  RadTextBoxControlBereich1DisplayWeight2.Validating, RadTextBoxControlBereich1DisplayWeight3.Validating, _
-  RadTextBoxControlBereich1Weight1.Validating, _
-  RadTextBoxControlBereich1Weight2.Validating, RadTextBoxControlBereich1Weight3.Validating
+       RadTextBoxControlBereich1DisplayWeight2.Validating, RadTextBoxControlBereich1DisplayWeight3.Validating, _
+       RadTextBoxControlBereich1Weight1.Validating, _
+       RadTextBoxControlBereich1Weight2.Validating, RadTextBoxControlBereich1Weight3.Validating,
+       RadTextBoxControlBereich2DisplayWeight1.Validating, _
+       RadTextBoxControlBereich2DisplayWeight2.Validating, RadTextBoxControlBereich2DisplayWeight3.Validating, _
+       RadTextBoxControlBereich2Weight1.Validating, _
+       RadTextBoxControlBereich2Weight2.Validating, RadTextBoxControlBereich2Weight3.Validating
 
         Dim result As Decimal
         If Not sender.isreadonly = True Then
@@ -71,6 +125,9 @@
             End If
         End If
     End Sub
+
+#Region "Bereich 1/2 MAX"
+
     ''' <summary>
     ''' wenn sich eine der Last Werte ändert, muss es in allen anderen Textboxen nachgezogen werden
     ''' </summary>
@@ -78,100 +135,7 @@
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub RadTextBoxControlBereich1_TextChanged(sender As Object, e As EventArgs) Handles _
-    RadTextBoxControlBereich1Weight3.TextChanged, RadTextBoxControlBereich1Weight2.TextChanged, RadTextBoxControlBereich1Weight1.TextChanged
-
-        If _suspendEvents = True Then Exit Sub
-        AktuellerStatusDirty = True
-
-        'damit keine Event Kettenreaktion durchgeführt wird, werden die Events ab hier unterbrochen
-        _suspendEvents = True
-        'bereich 1
-        RadTextBoxControlBereich1Weight1.Text = CType(sender, Telerik.WinControls.UI.RadTextBoxControl).Text
-        RadTextBoxControlBereich1Weight2.Text = CType(sender, Telerik.WinControls.UI.RadTextBoxControl).Text
-        RadTextBoxControlBereich1Weight3.Text = CType(sender, Telerik.WinControls.UI.RadTextBoxControl).Text
-
-
-        'neu berechnen der Fehler und EFG
-
-        Try
-            RadTextBoxControlBereich1ErrorLimit1.Text = CDec(RadTextBoxControlBereich1DisplayWeight1.Text) - CDec(RadTextBoxControlBereich1Weight1.Text)
-            If RadTextBoxControlBereich1DisplayWeight1.Text > CDec(RadTextBoxControlBereich1Weight1.Text) + CDec(lblBereich1EFGSpeziallBerechnung.Text) Then
-                RadCheckBoxBereich1VEL1.Checked = False
-            ElseIf RadTextBoxControlBereich1DisplayWeight1.Text < CDec(RadTextBoxControlBereich1Weight1.Text) - CDec(lblBereich1EFGSpeziallBerechnung.Text) Then
-                RadCheckBoxBereich1VEL1.Checked = False
-            Else
-                RadCheckBoxBereich1VEL1.Checked = True
-            End If
-        Catch ex As Exception
-        End Try
-
-        Try
-            RadTextBoxControlBereich1ErrorLimit2.Text = CDec(RadTextBoxControlBereich1DisplayWeight2.Text) - CDec(RadTextBoxControlBereich1Weight2.Text)
-            If RadTextBoxControlBereich1DisplayWeight2.Text > CDec(RadTextBoxControlBereich1Weight2.Text) + CDec(lblBereich1EFGSpeziallBerechnung.Text) Then
-                RadCheckBoxBereich1VEL2.Checked = False
-            ElseIf RadTextBoxControlBereich1DisplayWeight2.Text < CDec(RadTextBoxControlBereich1Weight2.Text) - CDec(lblBereich1EFGSpeziallBerechnung.Text) Then
-                RadCheckBoxBereich1VEL2.Checked = False
-            Else
-                RadCheckBoxBereich1VEL2.Checked = True
-            End If
-        Catch ex As Exception
-        End Try
-
-
-        Try
-            RadTextBoxControlBereich1ErrorLimit3.Text = CDec(RadTextBoxControlBereich1DisplayWeight3.Text) - CDec(RadTextBoxControlBereich1Weight3.Text)
-            If RadTextBoxControlBereich1DisplayWeight3.Text > CDec(RadTextBoxControlBereich1Weight3.Text) + CDec(lblBereich1EFGSpeziallBerechnung.Text) Then
-                RadCheckBoxBereich1VEL3.Checked = False
-            ElseIf RadTextBoxControlBereich1DisplayWeight3.Text < CDec(RadTextBoxControlBereich1Weight3.Text) - CDec(lblBereich1EFGSpeziallBerechnung.Text) Then
-                RadCheckBoxBereich1VEL3.Checked = False
-            Else
-                RadCheckBoxBereich1VEL3.Checked = True
-            End If
-        Catch ex As Exception
-        End Try
-
-
-        _suspendEvents = False
-    End Sub
-
-#End Region
-
-#Region "bereich MAX"
-    Private Sub RadTextBoxControlBereich2DisplayWeight1_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles RadTextBoxControlBereich2DisplayWeight1.Validating, _
-    RadTextBoxControlBereich2DisplayWeight2.Validating, RadTextBoxControlBereich2DisplayWeight3.Validating, _
-       RadTextBoxControlBereich2Weight1.Validating, _
-    RadTextBoxControlBereich2Weight2.Validating, RadTextBoxControlBereich2Weight3.Validating
-
-
-        Dim result As Decimal
-        If Not sender.isreadonly = True Then
-
-            'damit das Vorgehen nicht so aggresiv ist, wird es bei leerem Text ignoriert:
-            If CType(sender, Telerik.WinControls.UI.RadTextBoxControl).Text.Equals("") Then
-                CType(sender, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.FromArgb(0, 255, 255, 255)
-                Exit Sub
-            End If
-
-            'versuchen ob der Text in eine Zahl konvertiert werden kann
-            If Not Decimal.TryParse(CType(sender, Telerik.WinControls.UI.RadTextBoxControl).Text, result) Then
-                e.Cancel = True
-                CType(sender, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.Red
-                System.Media.SystemSounds.Exclamation.Play()
-
-            Else 'rahmen zurücksetzen
-                CType(sender, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.FromArgb(0, 255, 255, 255)
-            End If
-        End If
-    End Sub
-
-
-    ''' <summary>
-    ''' wenn sich eine der Last Werte ändert, muss es in allen anderen Textboxen nachgezogen werden
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    ''' <remarks></remarks>
-    Private Sub RadTextBoxControlBereich2_TextChanged(sender As Object, e As EventArgs) Handles _
+    RadTextBoxControlBereich1Weight3.TextChanged, RadTextBoxControlBereich1Weight2.TextChanged, RadTextBoxControlBereich1Weight1.TextChanged,
     RadTextBoxControlBereich2Weight3.TextChanged, RadTextBoxControlBereich2Weight2.TextChanged, RadTextBoxControlBereich2Weight1.TextChanged
 
         If _suspendEvents = True Then Exit Sub
@@ -179,57 +143,45 @@
 
         'damit keine Event Kettenreaktion durchgeführt wird, werden die Events ab hier unterbrochen
         _suspendEvents = True
-        'bereich 1
-        RadTextBoxControlBereich2Weight1.Text = CType(sender, Telerik.WinControls.UI.RadTextBoxControl).Text
-        RadTextBoxControlBereich2Weight2.Text = CType(sender, Telerik.WinControls.UI.RadTextBoxControl).Text
-        RadTextBoxControlBereich2Weight3.Text = CType(sender, Telerik.WinControls.UI.RadTextBoxControl).Text
 
+        Dim Bereich = GetBereich(sender)
+
+
+        If Bereich = "1" Then
+            'bereich 1
+            RadTextBoxControlBereich1Weight1.Text = CType(sender, Telerik.WinControls.UI.RadTextBoxControl).Text
+            RadTextBoxControlBereich1Weight2.Text = CType(sender, Telerik.WinControls.UI.RadTextBoxControl).Text
+            RadTextBoxControlBereich1Weight3.Text = CType(sender, Telerik.WinControls.UI.RadTextBoxControl).Text
+        ElseIf Bereich = "2" Then
+            RadTextBoxControlBereich2Weight1.Text = CType(sender, Telerik.WinControls.UI.RadTextBoxControl).Text
+            RadTextBoxControlBereich2Weight2.Text = CType(sender, Telerik.WinControls.UI.RadTextBoxControl).Text
+            RadTextBoxControlBereich2Weight3.Text = CType(sender, Telerik.WinControls.UI.RadTextBoxControl).Text
+        End If
 
         'neu berechnen der Fehler und EFG
-        Try
-            RadTextBoxControlBereich2ErrorLimit1.Text = CDec(RadTextBoxControlBereich2DisplayWeight1.Text) - CDec(RadTextBoxControlBereich2Weight1.Text)
-            If RadTextBoxControlBereich2DisplayWeight1.Text > CDec(RadTextBoxControlBereich2Weight1.Text) + CDec(lblBereich2EFGSpeziallBerechnung.Text) Then
-                RadCheckBoxBereich2VEL1.Checked = False
-            ElseIf RadTextBoxControlBereich2DisplayWeight1.Text < CDec(RadTextBoxControlBereich2Weight1.Text) - CDec(lblBereich2EFGSpeziallBerechnung.Text) Then
-                RadCheckBoxBereich2VEL1.Checked = False
-            Else
-                RadCheckBoxBereich2VEL1.Checked = True
-            End If
-        Catch ex As Exception
-        End Try
-
-        Try
-            RadTextBoxControlBereich2ErrorLimit2.Text = CDec(RadTextBoxControlBereich2DisplayWeight2.Text) - CDec(RadTextBoxControlBereich2Weight2.Text)
-            If RadTextBoxControlBereich2DisplayWeight2.Text > CDec(RadTextBoxControlBereich2Weight2.Text) + CDec(lblBereich2EFGSpeziallBerechnung.Text) Then
-                RadCheckBoxBereich2VEL2.Checked = False
-            ElseIf RadTextBoxControlBereich2DisplayWeight2.Text < CDec(RadTextBoxControlBereich2Weight2.Text) - CDec(lblBereich2EFGSpeziallBerechnung.Text) Then
-                RadCheckBoxBereich2VEL2.Checked = False
-            Else
-                RadCheckBoxBereich2VEL2.Checked = True
-            End If
-        Catch ex As Exception
-        End Try
-
-
-        Try
-            RadTextBoxControlBereich2ErrorLimit3.Text = CDec(RadTextBoxControlBereich2DisplayWeight3.Text) - CDec(RadTextBoxControlBereich2Weight3.Text)
-            If RadTextBoxControlBereich2DisplayWeight3.Text > CDec(RadTextBoxControlBereich2Weight3.Text) + CDec(lblBereich2EFGSpeziallBerechnung.Text) Then
-                RadCheckBoxBereich2VEL3.Checked = False
-            ElseIf RadTextBoxControlBereich2DisplayWeight3.Text < CDec(RadTextBoxControlBereich2Weight3.Text) - CDec(lblBereich2EFGSpeziallBerechnung.Text) Then
-                RadCheckBoxBereich2VEL3.Checked = False
-            Else
-                RadCheckBoxBereich2VEL3.Checked = True
-            End If
-        Catch ex As Exception
-        End Try
-
+        For Wiederholung As Integer = 1 To 3
+            CalculateEFG(Bereich, Wiederholung)
+        Next
 
         _suspendEvents = False
     End Sub
+
+#End Region
+
+#Region "bereich MAX"
+   
+
+
+    
 #End Region
     Private Sub RadCheckBoxBereich1VEL1_MouseClick(sender As Object, e As MouseEventArgs) Handles RadCheckBoxBereich1VEL1.MouseClick, RadCheckBoxBereich1VEL2.MouseClick, RadCheckBoxBereich1VEL3.MouseClick, RadCheckBoxBereich2VEL1.MouseClick, RadCheckBoxBereich2VEL2.MouseClick, RadCheckBoxBereich2VEL3.MouseClick
         CType(sender, Telerik.WinControls.UI.RadCheckBox).Checked = Not CType(sender, Telerik.WinControls.UI.RadCheckBox).Checked
     End Sub
+
+    
+#End Region
+#Region "Methods"
+
     ''' <summary>
     ''' Öffnen der Eichfehlergrenzen
     ''' </summary>
@@ -240,8 +192,8 @@
         Dim f As New frmEichfehlergrenzen(objEichprozess)
         f.Show()
     End Sub
-#End Region
-#Region "Methods"
+
+
     Private Sub LoadFromDatabase()
 
         objEichprozess = ParentFormular.CurrentEichprozess
@@ -283,7 +235,6 @@
                         Next
                     Catch ex As System.ObjectDisposedException 'fehler im Clientseitigen Lesemodus (bei bereits abegschickter Eichung)
                         Using context As New EichsoftwareClientdatabaseEntities1
-                            'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
                             'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
                             Dim query = From a In context.PruefungWiederholbarkeit Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
                             _ListPruefungWiederholbarkeit = query.ToList
@@ -344,134 +295,86 @@
     Private Sub FillControls()
         'Steuerlemente füllen
         'dynamisches laden der Nullstellen:
-      
-        HoleNullstellen()
 
+        HoleNullstellen()
 
         'füllen der berechnenten Steuerelemente
 
         lblBereich1EFGSpeziallBerechnung.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
         lblBereich2EFGSpeziallBerechnung.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
 
-
-
         'wenn es sich um das Staffel oder Fahrzeugwaagen verfahren handelt wird an dieser Stelle die Wiederholbarkeit nur mit MAX geprüft. MIN erfolgte dann bereits vorher
         Select Case objEichprozess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren
             Case Is = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgmitNormalien
-                FillControlsHalBMax()
-                FillControlsBereichMAX()
+                FillControlsMax("halb")
+                FillControlsMax("voll")
             Case Is = GlobaleEnumeratoren.enuVerfahrensauswahl.Fahrzeugwaagen, Is = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgimStaffelverfahren
                 RadGroupBoxBereich1.Visible = False
-                FillControlsBereichMAX()
+                FillControlsMax("voll")
         End Select
 
         'fokus setzen auf erstes Steuerelement
         RadTextBoxControlBereich1Weight1.Focus()
 
     End Sub
-    Private Sub FillControlsHalBMax()
 
-        'bereich 1
+    Private Sub FillControlsMax(Belastung As String)
+        Dim Bereich As String
+        Dim Eichwert As Decimal
+        Dim Hoechstlast As Decimal
+        Dim Faktor As Decimal
+
+        If Belastung = "halb" Then
+            Bereich = "1"
+            Faktor = 0.5
+        Else
+            Bereich = "2"
+            Faktor = 1
+        End If
+
+
         Select Case objEichprozess.Lookup_Waagenart.Art
             Case Is = "Einbereichswaage"
-                lblBereich1EFGSpeziallBerechnung.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1
-                lblBereich2EFGSpeziallBerechnung.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 1.5), _intNullstellenE, MidpointRounding.AwayFromZero)
-
-                RadTextBoxControlBereich1Weight1.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1 * 0.5
-                RadTextBoxControlBereich1Weight2.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1 * 0.5
-                RadTextBoxControlBereich1Weight3.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1 * 0.5
+                Eichwert = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1
+                Hoechstlast = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1 * Faktor
             Case Is = "Zweibereichswaage", "Zweiteilungswaage"
-                lblBereich1EFGSpeziallBerechnung.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2
-                lblBereich2EFGSpeziallBerechnung.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 1.5), _intNullstellenE, MidpointRounding.AwayFromZero)
-
-                RadTextBoxControlBereich1Weight1.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 * 0.5
-                RadTextBoxControlBereich1Weight2.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 * 0.5
-                RadTextBoxControlBereich1Weight3.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 * 0.5
+                Eichwert = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2
+                Hoechstlast = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 * Faktor
             Case Is = "Dreibereichswaage", "Dreiteilungswaage"
-                lblBereich1EFGSpeziallBerechnung.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3
-                lblBereich2EFGSpeziallBerechnung.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 1.5), _intNullstellenE, MidpointRounding.AwayFromZero)
-
-                RadTextBoxControlBereich1Weight1.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 * 0.5
-                RadTextBoxControlBereich1Weight2.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 * 0.5
-                RadTextBoxControlBereich1Weight3.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 * 0.5
+                Eichwert = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3
+                Hoechstlast = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 * Faktor
         End Select
 
+        lblBereich1EFGSpeziallBerechnung.Text = Eichwert
+        lblBereich2EFGSpeziallBerechnung.Text = Math.Round(Eichwert * 1.5, _intNullstellenE, MidpointRounding.AwayFromZero)
 
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        'bereich 1
-        _currentObjPruefungWiederholbarkeit = Nothing
-        _currentObjPruefungWiederholbarkeit = (From o In _ListPruefungWiederholbarkeit Where o.Wiederholung = "1" And o.Belastung = "halb").FirstOrDefault
-
-        If Not _currentObjPruefungWiederholbarkeit Is Nothing Then
-            RadTextBoxControlBereich1Weight1.Text = _currentObjPruefungWiederholbarkeit.Last
-            RadTextBoxControlBereich1DisplayWeight1.Text = _currentObjPruefungWiederholbarkeit.Anzeige
+        If Belastung = "halb" Then
+            RadTextBoxControlBereich1Weight1.Text = Hoechstlast
+            RadTextBoxControlBereich1Weight2.Text = Hoechstlast
+            RadTextBoxControlBereich1Weight3.Text = Hoechstlast
+        ElseIf Belastung = "voll" Then
+            RadTextBoxControlBereich2Weight1.Text = Hoechstlast
+            RadTextBoxControlBereich2Weight2.Text = Hoechstlast
+            RadTextBoxControlBereich2Weight3.Text = Hoechstlast
         End If
 
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungWiederholbarkeit = Nothing
-        _currentObjPruefungWiederholbarkeit = (From o In _ListPruefungWiederholbarkeit Where o.Wiederholung = "2" And o.Belastung = "halb").FirstOrDefault
+        For i As Integer = 1 To 3
+            Dim Wiederholung As String = i
 
-        If Not _currentObjPruefungWiederholbarkeit Is Nothing Then
-            RadTextBoxControlBereich1Weight2.Text = _currentObjPruefungWiederholbarkeit.Last
-            RadTextBoxControlBereich1DisplayWeight2.Text = _currentObjPruefungWiederholbarkeit.Anzeige
-        End If
+            'anzeige KG Nur laden wenn schon etwas eingegeben wurde
+            _currentObjPruefungWiederholbarkeit = Nothing
+            _currentObjPruefungWiederholbarkeit = (From o In _ListPruefungWiederholbarkeit Where o.Wiederholung = Wiederholung And o.Belastung = Belastung).FirstOrDefault
 
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungWiederholbarkeit = Nothing
-        _currentObjPruefungWiederholbarkeit = (From o In _ListPruefungWiederholbarkeit Where o.Wiederholung = "3" And o.Belastung = "halb").FirstOrDefault
+            If Not _currentObjPruefungWiederholbarkeit Is Nothing Then
+                Dim last As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}Weight{1}", Bereich, Wiederholung))
+                Dim Anzeige As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}DisplayWeight{1}", Bereich, Wiederholung))
 
-        If Not _currentObjPruefungWiederholbarkeit Is Nothing Then
-            RadTextBoxControlBereich1Weight3.Text = _currentObjPruefungWiederholbarkeit.Last
-            RadTextBoxControlBereich1DisplayWeight3.Text = _currentObjPruefungWiederholbarkeit.Anzeige
-        End If
+                last.Text = _currentObjPruefungWiederholbarkeit.Last
+                Anzeige.Text = _currentObjPruefungWiederholbarkeit.Anzeige
+            End If
+        Next
     End Sub
 
-    Private Sub FillControlsBereichMAX()
-        'bereich 2
-        Select Case objEichprozess.Lookup_Waagenart.Art
-            Case Is = "Einbereichswaage"
-                RadTextBoxControlBereich2Weight1.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1
-                RadTextBoxControlBereich2Weight2.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1
-                RadTextBoxControlBereich2Weight3.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1
-            Case Is = "Zweibereichswaage", "Zweiteilungswaage"
-                RadTextBoxControlBereich2Weight1.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2
-                RadTextBoxControlBereich2Weight2.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2
-                RadTextBoxControlBereich2Weight3.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2
-            Case Is = "Dreibereichswaage", "Dreiteilungswaage"
-                RadTextBoxControlBereich2Weight1.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3
-                RadTextBoxControlBereich2Weight2.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3
-                RadTextBoxControlBereich2Weight3.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3
-        End Select
-
-
-        _currentObjPruefungWiederholbarkeit = Nothing
-        _currentObjPruefungWiederholbarkeit = (From o In _ListPruefungWiederholbarkeit Where o.Wiederholung = "1" And o.Belastung = "voll").FirstOrDefault
-
-        If Not _currentObjPruefungWiederholbarkeit Is Nothing Then
-            RadTextBoxControlBereich2Weight1.Text = _currentObjPruefungWiederholbarkeit.Last
-            RadTextBoxControlBereich2DisplayWeight1.Text = _currentObjPruefungWiederholbarkeit.Anzeige
-        End If
-
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungWiederholbarkeit = Nothing
-        _currentObjPruefungWiederholbarkeit = (From o In _ListPruefungWiederholbarkeit Where o.Wiederholung = "2" And o.Belastung = "voll").FirstOrDefault
-
-        If Not _currentObjPruefungWiederholbarkeit Is Nothing Then
-            RadTextBoxControlBereich2Weight2.Text = _currentObjPruefungWiederholbarkeit.Last
-            RadTextBoxControlBereich2DisplayWeight2.Text = _currentObjPruefungWiederholbarkeit.Anzeige
-        End If
-
-        'anzeige KG Nur laden wenn schon etwas eingegeben wurde
-        _currentObjPruefungWiederholbarkeit = Nothing
-        _currentObjPruefungWiederholbarkeit = (From o In _ListPruefungWiederholbarkeit Where o.Wiederholung = "3" And o.Belastung = "voll").FirstOrDefault
-
-        If Not _currentObjPruefungWiederholbarkeit Is Nothing Then
-            RadTextBoxControlBereich2Weight3.Text = _currentObjPruefungWiederholbarkeit.Last
-            RadTextBoxControlBereich2DisplayWeight3.Text = _currentObjPruefungWiederholbarkeit.Anzeige
-        End If
-
-
-    End Sub
 
     ''' <summary>
     ''' Füllt das Objekt mit den Werten aus den Steuerlementen
@@ -505,54 +408,26 @@
     End Sub
 
     Private Sub UpdatePruefungsObject(ByVal PObjPruefung As PruefungWiederholbarkeit)
+        Dim Wiederholung = PObjPruefung.Wiederholung
+        Dim Bereich As String = ""
+
         If PObjPruefung.Belastung = "halb" Then
-            If PObjPruefung.Wiederholung = "1" Then
-                PObjPruefung.Last = RadTextBoxControlBereich1Weight1.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich1DisplayWeight1.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich1ErrorLimit1.Text
-                PObjPruefung.EFG = RadCheckBoxBereich1VEL1.Checked
-                PObjPruefung.EFG_Extra = lblBereich1EFGSpeziallBerechnung.Text
-            End If
-            If PObjPruefung.Wiederholung = "2" Then
-                PObjPruefung.Last = RadTextBoxControlBereich1Weight2.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich1DisplayWeight2.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich1ErrorLimit2.Text
-                PObjPruefung.EFG = RadCheckBoxBereich1VEL2.Checked
-                PObjPruefung.EFG_Extra = lblBereich1EFGSpeziallBerechnung.Text
-            End If
-            If PObjPruefung.Wiederholung = "3" Then
-                PObjPruefung.Last = RadTextBoxControlBereich1Weight3.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich1DisplayWeight3.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich1ErrorLimit3.Text
-                PObjPruefung.EFG = RadCheckBoxBereich1VEL3.Checked
-                PObjPruefung.EFG_Extra = lblBereich1EFGSpeziallBerechnung.Text
-            End If
-
-        ElseIf PObjPruefung.Belastung = "voll" Then
-            If PObjPruefung.Wiederholung = "1" Then
-                PObjPruefung.Last = RadTextBoxControlBereich2Weight1.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich2DisplayWeight1.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich2ErrorLimit1.Text
-                PObjPruefung.EFG = RadCheckBoxBereich2VEL1.Checked
-                PObjPruefung.EFG_Extra = lblBereich2EFGSpeziallBerechnung.Text
-            End If
-            If PObjPruefung.Wiederholung = "2" Then
-                PObjPruefung.Last = RadTextBoxControlBereich2Weight2.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich2DisplayWeight2.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich2ErrorLimit2.Text
-                PObjPruefung.EFG = RadCheckBoxBereich2VEL2.Checked
-                PObjPruefung.EFG_Extra = lblBereich2EFGSpeziallBerechnung.Text
-            End If
-            If PObjPruefung.Wiederholung = "3" Then
-                PObjPruefung.Last = RadTextBoxControlBereich2Weight3.Text
-                PObjPruefung.Anzeige = RadTextBoxControlBereich2DisplayWeight3.Text
-                PObjPruefung.Fehler = RadTextBoxControlBereich2ErrorLimit3.Text
-                PObjPruefung.EFG = RadCheckBoxBereich2VEL3.Checked
-                PObjPruefung.EFG_Extra = lblBereich2EFGSpeziallBerechnung.Text
-            End If
-
-
+            Bereich = "1"
+        Else
+            Bereich = "2"
         End If
+
+        Dim Last As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}Weight{1}", Bereich, Wiederholung))
+        Dim Anzeige As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}DisplayWeight{1}", Bereich, Wiederholung))
+        Dim Fehler As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}ErrorLimit{1}", Bereich, Wiederholung))
+        Dim EFG As Telerik.WinControls.UI.RadCheckBox = FindControl(String.Format("RadCheckBoxBereich{0}VEL{1}", Bereich, Wiederholung))
+        Dim Spezial As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblBereich{0}EFGSpeziallBerechnung", Bereich))
+
+        PObjPruefung.Last = Last.Text
+        PObjPruefung.Anzeige = Anzeige.Text
+        PObjPruefung.Fehler = Fehler.Text
+        PObjPruefung.EFG = EFG.Checked
+        PObjPruefung.EFG_Extra = Spezial.Text
     End Sub
 
     ''' <summary>
@@ -583,98 +458,25 @@
 
         'fehlermeldung anzeigen bei falscher validierung
         Return Me.ShowValidationErrorBox()
-      
+
     End Function
 
-#Region "Bereich 1"
-    Private Sub RadTextBoxControlBereich1DisplayWeight1_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlBereich1DisplayWeight1.TextChanged
+    Private Sub RadTextBoxControlBereich1DisplayWeight1_TextChanged(sender As Object, e As EventArgs) Handles _
+        RadTextBoxControlBereich1DisplayWeight1.TextChanged,
+        RadTextBoxControlBereich1DisplayWeight2.TextChanged,
+        RadTextBoxControlBereich1DisplayWeight3.TextChanged,
+        RadTextBoxControlBereich2DisplayWeight1.TextChanged,
+        RadTextBoxControlBereich2DisplayWeight2.TextChanged,
+        RadTextBoxControlBereich2DisplayWeight3.TextChanged
+
         Try
-            RadTextBoxControlBereich1ErrorLimit1.Text = CDec(RadTextBoxControlBereich1DisplayWeight1.Text) - CDec(RadTextBoxControlBereich1Weight1.Text)
-            If RadTextBoxControlBereich1DisplayWeight1.Text > CDec(RadTextBoxControlBereich1Weight1.Text) + CDec(lblBereich1EFGSpeziallBerechnung.Text) Then
-                RadCheckBoxBereich1VEL1.Checked = False
-            ElseIf RadTextBoxControlBereich1DisplayWeight1.Text < CDec(RadTextBoxControlBereich1Weight1.Text) - CDec(lblBereich1EFGSpeziallBerechnung.Text) Then
-                RadCheckBoxBereich1VEL1.Checked = False
-            Else
-                RadCheckBoxBereich1VEL1.Checked = True
-            End If
+            Dim Bereich As String = GetBereich(sender)
+            Dim Wiederholung As String = GetWiederholung(sender)
+
+            CalculateEFG(Bereich, Wiederholung)
         Catch ex As Exception
         End Try
     End Sub
-
-    Private Sub RadTextBoxControlBereich1DisplayWeight2_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlBereich1DisplayWeight2.TextChanged
-        Try
-            RadTextBoxControlBereich1ErrorLimit2.Text = CDec(RadTextBoxControlBereich1DisplayWeight2.Text) - CDec(RadTextBoxControlBereich1Weight2.Text)
-            If RadTextBoxControlBereich1DisplayWeight2.Text > CDec(RadTextBoxControlBereich1Weight2.Text) + CDec(lblBereich1EFGSpeziallBerechnung.Text) Then
-                RadCheckBoxBereich1VEL2.Checked = False
-            ElseIf RadTextBoxControlBereich1DisplayWeight2.Text < CDec(RadTextBoxControlBereich1Weight2.Text) - CDec(lblBereich1EFGSpeziallBerechnung.Text) Then
-                RadCheckBoxBereich1VEL2.Checked = False
-            Else
-                RadCheckBoxBereich1VEL2.Checked = True
-            End If
-        Catch ex As Exception
-        End Try
-    End Sub
-
-    Private Sub RadTextBoxControlBereich1DisplayWeight3_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlBereich1DisplayWeight3.TextChanged
-        Try
-            RadTextBoxControlBereich1ErrorLimit3.Text = CDec(RadTextBoxControlBereich1DisplayWeight3.Text) - CDec(RadTextBoxControlBereich1Weight3.Text)
-            If RadTextBoxControlBereich1DisplayWeight3.Text > CDec(RadTextBoxControlBereich1Weight3.Text) + CDec(lblBereich1EFGSpeziallBerechnung.Text) Then
-                RadCheckBoxBereich1VEL3.Checked = False
-            ElseIf RadTextBoxControlBereich1DisplayWeight3.Text < CDec(RadTextBoxControlBereich1Weight3.Text) - CDec(lblBereich1EFGSpeziallBerechnung.Text) Then
-                RadCheckBoxBereich1VEL3.Checked = False
-            Else
-                RadCheckBoxBereich1VEL3.Checked = True
-            End If
-        Catch ex As Exception
-        End Try
-    End Sub
-
-#End Region
-
-#Region "Bereich 2"
-    Private Sub RadTextBoxControlBereich2DisplayWeight1_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlBereich2DisplayWeight1.TextChanged
-        Try
-            RadTextBoxControlBereich2ErrorLimit1.Text = CDec(RadTextBoxControlBereich2DisplayWeight1.Text) - CDec(RadTextBoxControlBereich2Weight1.Text)
-            If RadTextBoxControlBereich2DisplayWeight1.Text > CDec(RadTextBoxControlBereich2Weight1.Text) + CDec(lblBereich2EFGSpeziallBerechnung.Text) Then
-                RadCheckBoxBereich2VEL1.Checked = False
-            ElseIf RadTextBoxControlBereich2DisplayWeight1.Text < CDec(RadTextBoxControlBereich2Weight1.Text) - CDec(lblBereich2EFGSpeziallBerechnung.Text) Then
-                RadCheckBoxBereich2VEL1.Checked = False
-            Else
-                RadCheckBoxBereich2VEL1.Checked = True
-            End If
-        Catch ex As Exception
-        End Try
-    End Sub
-
-    Private Sub RadTextBoxControlBereich2DisplayWeight2_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlBereich2DisplayWeight2.TextChanged
-        Try
-            RadTextBoxControlBereich2ErrorLimit2.Text = CDec(RadTextBoxControlBereich2DisplayWeight2.Text) - CDec(RadTextBoxControlBereich2Weight2.Text)
-            If RadTextBoxControlBereich2DisplayWeight2.Text > CDec(RadTextBoxControlBereich2Weight2.Text) + CDec(lblBereich2EFGSpeziallBerechnung.Text) Then
-                RadCheckBoxBereich2VEL2.Checked = False
-            ElseIf RadTextBoxControlBereich2DisplayWeight2.Text < CDec(RadTextBoxControlBereich2Weight2.Text) - CDec(lblBereich2EFGSpeziallBerechnung.Text) Then
-                RadCheckBoxBereich2VEL2.Checked = False
-            Else
-                RadCheckBoxBereich2VEL2.Checked = True
-            End If
-        Catch ex As Exception
-        End Try
-    End Sub
-
-    Private Sub RadTextBoxControlBereich2DisplayWeight3_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlBereich2DisplayWeight3.TextChanged
-        Try
-            RadTextBoxControlBereich2ErrorLimit3.Text = CDec(RadTextBoxControlBereich2DisplayWeight3.Text) - CDec(RadTextBoxControlBereich2Weight3.Text)
-            If RadTextBoxControlBereich2DisplayWeight3.Text > CDec(RadTextBoxControlBereich2Weight3.Text) + CDec(lblBereich2EFGSpeziallBerechnung.Text) Then
-                RadCheckBoxBereich2VEL3.Checked = False
-            ElseIf RadTextBoxControlBereich2DisplayWeight3.Text < CDec(RadTextBoxControlBereich2Weight3.Text) - CDec(lblBereich2EFGSpeziallBerechnung.Text) Then
-                RadCheckBoxBereich2VEL3.Checked = False
-            Else
-                RadCheckBoxBereich2VEL3.Checked = True
-            End If
-        Catch ex As Exception
-        End Try
-    End Sub
-
-#End Region
 
 #End Region
 
