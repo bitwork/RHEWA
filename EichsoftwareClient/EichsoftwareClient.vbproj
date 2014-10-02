@@ -34,7 +34,8 @@
     <SupportUrl>http://www.rhewa.com</SupportUrl>
     <ProductName>RHEWA Herstellerersteichung</ProductName>
     <PublisherName>RHEWA Waagenfabrik GmbH</PublisherName>
-    <ApplicationRevision>49</ApplicationRevision>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>53</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
