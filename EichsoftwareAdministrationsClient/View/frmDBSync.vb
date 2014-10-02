@@ -49,7 +49,7 @@ Public Class frmDBSync
             PathScript = AppDomain.CurrentDomain.BaseDirectory & "Repository\Call_DTS RHEWA STRATO.bat"
         ElseIf RadioButtonSyncStratoDEV.Checked Then
             conn.ConnectionString = "Data Source=WIN7MOBDEV01;Initial Catalog=Herstellerersteichung;Persist Security Info=True;User ID=sa;Password=Test1234"
-            PathScript = AppDomain.CurrentDomain.BaseDirectory & "Repository\Call_DTS STRATO RHEWA.bat"
+            PathScript = AppDomain.CurrentDomain.BaseDirectory & "Repository\Call_DTS STRATO DEV.bat"
         End If
 
         Dim returnvalue As Tuple(Of String, String) = Nothing
@@ -59,12 +59,18 @@ Public Class frmDBSync
 
 
         Dim psi As New ProcessStartInfo(PathScript)
+        If Debugger.IsAttached Then
+            psi.CreateNoWindow = False
+        Else
+            psi.CreateNoWindow = True
+        End If
+        psi.UseShellExecute = False
         psi.RedirectStandardError = False
         psi.RedirectStandardOutput = False
-        psi.CreateNoWindow = True
         psi.WindowStyle = ProcessWindowStyle.Normal
-        psi.UseShellExecute = False
+
         psi.WorkingDirectory = PathWorkingDirectory
+
 
         Dim process As Process = process.Start(psi)
 
@@ -139,6 +145,12 @@ Public Class frmDBSync
             returnvalue = New Tuple(Of String, String)(fileContentsSQL, fileContentsLOG)
 
             'zurückgeben der Textinhalte
+            e.Result = returnvalue
+        Else
+            'auslesen der LogDatei
+            Dim LogFile As New IO.FileInfo(PathLog)
+            fileContentsLOG = My.Computer.FileSystem.ReadAllText(LogFile.FullName)
+            returnvalue = New Tuple(Of String, String)("Datei wurde nicht erzeugt. Fehler", fileContentsLOG)
             e.Result = returnvalue
         End If
 
