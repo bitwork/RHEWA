@@ -134,12 +134,15 @@
     
 
         If bolLock Then
-            objEichprozess.FK_Beschaffenheitspruefung = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgmitNormalien
+            '  objEichprozess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgmitNormalien
+            RadRadioButtonNormalien.IsChecked = True
+        Else
+            '    objEichprozess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgimStaffelverfahren
+            RadRadioButtonStaffelverfahren.IsChecked = True
         End If
 
         RadRadioButtonFahrzeugwaagen.Enabled = Not bolLock
         RadRadioButtonStaffelverfahren.Enabled = Not bolLock
-        RadRadioButtonNormalien.IsChecked = bolLock
     End Sub
 
 
