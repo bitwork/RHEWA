@@ -32,7 +32,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ProductName>Herstellerersteichung Administration</ProductName>
     <PublisherName>RHEWA Waagenfabrik GmbH</PublisherName>
-    <ApplicationRevision>10</ApplicationRevision>
+    <ApplicationRevision>11</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -71,10 +71,10 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>35C26744C301285116BFF2A5FE26E8A2364CF0B9</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>DB455856B81E3DAD58038D20B87E58618AEECDD9</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>EichsoftwareAdministrationsClient_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>EichsoftwareAdministrationsClient_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -327,6 +327,7 @@
     <None Include="App %28STRATO%29.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="EichsoftwareAdministrationsClient_1_TemporaryKey.pfx" />
     <None Include="EichsoftwareAdministrationsClient_TemporaryKey.pfx" />
     <None Include="EntityModelDatabaseAdminClient.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -421,12 +422,12 @@
   <ItemGroup>
     <PublishFile Include="EQATEC.Analytics.Monitor">
       <Visible>False</Visible>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
   </ItemGroup>
