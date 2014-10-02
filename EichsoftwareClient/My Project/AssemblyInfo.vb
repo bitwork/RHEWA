@@ -10,10 +10,10 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("RHEWA Herstellerersteichung")> 
+<Assembly: AssemblyTitle("RHEWA Konformitätsbewertungs Software")> 
 <Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("RHEWA")> 
-<Assembly: AssemblyProduct("RHEWA Herstellerersteichung")> 
+<Assembly: AssemblyProduct("RHEWA Konformitätsbewertungs Software")> 
 <Assembly: AssemblyCopyright("Copyright ©  2014")> 
 <Assembly: AssemblyTrademark("")> 
 

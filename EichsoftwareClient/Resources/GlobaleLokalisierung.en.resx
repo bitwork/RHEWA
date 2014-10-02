@@ -643,13 +643,13 @@ If the repeatability error is greater than 0.35 e, the portion of standard weigh
     <value>Bitte geben Sie eine gültige Genauigkeitsklasse ein (I,II,III,IV)</value>
   </data>
   <data name="Fehler_KeinServerObjektEichung" xml:space="preserve">
-    <value>Es konnte kein passender Eichprozess gefunden werden. Bitte wenden Sie sich an RHEWA</value>
+    <value>Es konnte kein passender Konformitätsbewertungsprozess gefunden werden. Bitte wenden Sie sich an RHEWA</value>
   </data>
   <data name="Fehler_Laden" xml:space="preserve">
     <value>Error while loading data</value>
   </data>
   <data name="Fehler_SpeicherAnomalie" xml:space="preserve">
-    <value>Der Eichvorgang konnte nicht gespeichert werden. Bitte rufen sie die aktuellsten Informationen von RHEWA ab und versuchen es erneut.</value>
+    <value>Der Konformitätsbewertungsvorgang konnte nicht gespeichert werden. Bitte rufen sie die aktuellsten Informationen von RHEWA ab und versuchen es erneut.</value>
   </data>
   <data name="Fehler_SpeicherAnomalieRhewaZusatztext" xml:space="preserve">
     <value>Falls auch das nicht hilft, kontrollieren Sie den ""deaktiviert"" Status der Auswertegeräte und Wägezellen im Admin Client.</value>
@@ -664,16 +664,16 @@ If the repeatability error is greater than 0.35 e, the portion of standard weigh
     <value>Question</value>
   </data>
   <data name="Frage_Ablehnen" xml:space="preserve">
-    <value>Möchten Sie den gewählten Eichprozess wirklich ablehnen? Der Eichbevollmächtigte kriegt diesen dann zur erneuten Bearbeitung zugesandt</value>
+    <value>Möchten Sie den gewählten Konformitätsbewertungsprozess wirklich ablehnen? Der Eichbevollmächtigte kriegt diesen dann zur erneuten Bearbeitung zugesandt</value>
   </data>
   <data name="Frage_EichprotokollZuruecksenden" xml:space="preserve">
-    <value>Möchten Sie das korrigierte Eichprotokoll wirklich an den Eichbevollmächtigten zurücksenden? Der Status wird dabei auf fehlerhaft gesetzt.</value>
+    <value>Möchten Sie das korrigierte Konformitätsbewertungsprotokoll wirklich an den Eichbevollmächtigten zurücksenden? Der Status wird dabei auf fehlerhaft gesetzt.</value>
   </data>
   <data name="Frage_Genehmigen" xml:space="preserve">
-    <value>Möchten Sie den gewählten Eichprozess wirklich genehmigen? Er gilt dann als abgeschlossen und kann nicht mehr bearbeitet werden</value>
+    <value>Möchten Sie den gewählten Konformitätsbewertungsprozess wirklich genehmigen? Er gilt dann als abgeschlossen und kann nicht mehr bearbeitet werden</value>
   </data>
   <data name="Frage_Kopieren" xml:space="preserve">
-    <value>Möchten Sie den gewählten Eichprozess kopieren um ihn als Vorlage zu verwenden?</value>
+    <value>Möchten Sie den gewählten Konformitätsbewertungsprozess kopieren um ihn als Vorlage zu verwenden?</value>
   </data>
   <data name="Warnung_EichungenWerdenGeloescht" xml:space="preserve">
     <value>Choosing 'Yes' will delete remaining unsent assessments. Are you sure you want to resync your data, while loosing unsent assesments?</value>

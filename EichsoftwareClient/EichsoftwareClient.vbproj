@@ -10,7 +10,7 @@
     <OutputType>WinExe</OutputType>
     <StartupObject>EichsoftwareClient.My.MyApplication</StartupObject>
     <RootNamespace>EichsoftwareClient</RootNamespace>
-    <AssemblyName>EichsoftwareClient</AssemblyName>
+    <AssemblyName>KonformitätsbewertungsClient</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
@@ -24,7 +24,7 @@
     <PublishUrl>D:\Daten\Hill Daten\Privat\Dropbox\RHEWA\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateEnabled>true</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
@@ -34,7 +34,7 @@
     <SupportUrl>http://www.rhewa.com</SupportUrl>
     <ProductName>RHEWA Herstellerersteichung</ProductName>
     <PublisherName>RHEWA Waagenfabrik GmbH</PublisherName>
-    <ApplicationRevision>46</ApplicationRevision>
+    <ApplicationRevision>49</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -48,7 +48,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>EichsoftwareClient.xml</DocumentationFile>
+    <DocumentationFile>KonformitätsbewertungsClient.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
@@ -59,7 +59,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>EichsoftwareClient.xml</DocumentationFile>
+    <DocumentationFile>KonformitätsbewertungsClient.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -250,11 +250,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GlobaleLokalisierung.de.resx</DependentUpon>
     </Compile>
-    <Compile Include="Resources\GlobaleLokalisierung.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GlobaleLokalisierung.resx</DependentUpon>
-    </Compile>
     <Compile Include="Resources\GlobaleLokalisierung.en.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -267,6 +262,11 @@
     </Compile>
     <Compile Include="Model\GlobaleEnumeratoren.vb" />
     <Compile Include="Model\RuntimeLocalizer.vb" />
+    <Compile Include="Resources\GlobaleLokalisierung1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GlobaleLokalisierung.resx</DependentUpon>
+    </Compile>
     <Compile Include="Service References\EichsoftwareWebservice\Reference.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -488,8 +488,8 @@
     <EmbeddedResource Include="Resources\GlobaleLokalisierung.resx">
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>GlobaleLokalisierung.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>GlobaleLokalisierung1.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="SplashScreen.resx">
@@ -521,6 +521,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\frmMainContainer.resx">
       <DependentUpon>frmMainContainer.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -566,15 +567,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco19EichtechnischeSicherung.de.resx">
       <DependentUpon>uco19EichtechnischeSicherung.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco19EichtechnischeSicherung.pl.resx">
       <DependentUpon>uco19EichtechnischeSicherung.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco19EichtechnischeSicherung.resx">
       <DependentUpon>uco19EichtechnischeSicherung.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco18Fallbeschleunigung.de.resx">
       <DependentUpon>uco18Fallbeschleunigung.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco18Fallbeschleunigung.pl.resx">
       <DependentUpon>uco18Fallbeschleunigung.vb</DependentUpon>
@@ -635,12 +640,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco20Reports.resx">
       <DependentUpon>uco20Reports.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco16Taraeinrichtung.de.resx">
       <DependentUpon>uco16Taraeinrichtung.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco16Taraeinrichtung.pl.resx">
       <DependentUpon>uco16Taraeinrichtung.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco16Taraeinrichtung.resx">
       <DependentUpon>uco16Taraeinrichtung.vb</DependentUpon>
@@ -656,6 +664,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Allgemein\ucoEichprozessauswahlliste.de.resx">
       <DependentUpon>ucoEichprozessauswahlliste.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Allgemein\ucoEichprozessauswahlliste.en.resx">
       <DependentUpon>ucoEichprozessauswahlliste.vb</DependentUpon>
@@ -668,6 +677,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco_5Beschaffenheitspruefung.de.resx">
       <DependentUpon>uco_5Beschaffenheitspruefung.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco_5Beschaffenheitspruefung.pl.resx">
       <DependentUpon>uco_5Beschaffenheitspruefung.vb</DependentUpon>
@@ -696,9 +706,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco_7EichprotokollDaten.pl.resx">
       <DependentUpon>uco_7EichprotokollDaten.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco_7EichprotokollDaten.resx">
       <DependentUpon>uco_7EichprotokollDaten.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco_6EichprotokollVerfahrenswahl.de.resx">
       <DependentUpon>uco_6EichprotokollVerfahrenswahl.vb</DependentUpon>
@@ -739,6 +751,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco21Versenden.de.resx">
       <DependentUpon>uco21Versenden.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco21Versenden.pl.resx">
       <DependentUpon>uco21Versenden.vb</DependentUpon>

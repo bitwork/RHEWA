@@ -631,7 +631,7 @@ Public Class clsWebserviceFunctions
                 Messagetext = webContext.CheckSperrung(objLiz.HEKennung, objLiz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
                 If Messagetext.Equals("") = False Then
                     'rhewa arbeitet in deutsch und hat keine lokalisierung gewünscht
-                    If MessageBox.Show("Dieser Eichprozess wird von '" & Messagetext & "' bearbeitet. Möchten Sie seine Arbeit wirklich überschreiben und den Prozess ablehnen?", My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo) = DialogResult.Yes Then
+                    If MessageBox.Show("Dieser Konformitätsbewertungsprozess wird von '" & Messagetext & "' bearbeitet. Möchten Sie seine Arbeit wirklich überschreiben und den Prozess ablehnen?", My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo) = DialogResult.Yes Then
                         Dim result As String
                         result = webContext.SetSperrung(True, objLiz.HEKennung, objLiz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
                         If result = "" Then
@@ -716,7 +716,7 @@ Public Class clsWebserviceFunctions
 
                 If Messagetext.Equals("") = False Then
                     'rhewa arbeitet in deutsch und hat keine lokalisierung gewünscht
-                    If MessageBox.Show("Dieser Eichprozess wird von '" & Messagetext & "' bearbeitet. Möchten Sie seine Arbeit wirklich überschreiben und den Prozess selbst bearbeiten?", My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo) = DialogResult.Yes Then
+                    If MessageBox.Show("Dieser Konformitätsbewertungsprozess wird von '" & Messagetext & "' bearbeitet. Möchten Sie seine Arbeit wirklich überschreiben und den Prozess selbst bearbeiten?", My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo) = DialogResult.Yes Then
                         bolSetSperrung = True
                     Else
                         bolSetSperrung = False

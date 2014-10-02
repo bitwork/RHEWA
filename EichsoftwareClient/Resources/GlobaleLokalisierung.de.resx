@@ -127,9 +127,9 @@
 Der zuständige oder bevollmächtigte Mitarbeiter prüft die unten aufgelisteten Kriterien zu 100%.										
 										
 Ein Teil ist dann fehlerhaft, wenn ein Merkmal nicht in Ordnung ist.										
-Ist die Anzahl der fehlerhaften Teile gleich 0, werden die Waagen zur Eichung freigeben.										
+Ist die Anzahl der fehlerhaften Teile gleich 0, werden die Waagen zur Konformitätsbewertung freigegeben.										
 Ist die Anzahl der Fehler größer als 0, werden die Teile gesperrt und eine Korrektur durchgeführt. 										
-Eine Freigabe zur Eichung erfolgt erst nach erneuter fehlerfreier Prüfung.										
+Eine Freigabe zur Konformitätsbewertung erfolgt erst nach erneuter fehlerfreier Prüfung.										
 
 
 Hinweise: 										
@@ -538,10 +538,10 @@ RC3          3        15000                        0          2        1100</val
     <value>WZ</value>
   </data>
   <data name="KompatiblitätNichtGeleistet" xml:space="preserve">
-    <value>Die Kompatiblität der Komponenten ist leider nicht gegeben. Der Eichvorgang kann nicht fortgesetzt werden.</value>
+    <value>Die Kompatiblität der Komponenten ist leider nicht gegeben. Der Konformitätsbewertungsvorgang kann nicht fortgesetzt werden.</value>
   </data>
   <data name="Hilfe_Auswahlliste" xml:space="preserve">
-    <value>Wählen Sie in diesem Dialog einen bestehenden Eichvorgang aus oder legen einen neuen über die Schaltfläche "Anlegen" an.</value>
+    <value>Wählen Sie in diesem Dialog einen bestehenden Konformitätsbewertungsvorgang aus oder legen einen neuen über die Schaltfläche "Anlegen" an.</value>
   </data>
   <data name="Hilfe_Eichprotokollverfahrensauswahl" xml:space="preserve">
     <value>Deutsch</value>
@@ -553,7 +553,7 @@ RC3          3        15000                        0          2        1100</val
     <value>Hilfe_Eichprotokollstammdaten</value>
   </data>
   <data name="Ueberschrift_EichprotokollStammdaten" xml:space="preserve">
-    <value>Eichprotokoll</value>
+    <value>Konformitätsbewertungsprotokoll</value>
   </data>
   <data name="Eichprotokoll_Dimension" xml:space="preserve">
     <value>Brückenabmessung</value>
@@ -713,13 +713,13 @@ Ist der Fehler &gt; 0,3e → L = 0,5 Max = Normalien von 50% von Max werden ben�
     <value>Bitte geben Sie eine gültige Genauigkeitsklasse ein (I,II,III,IV)</value>
   </data>
   <data name="Fehler_KeinServerObjektEichung" xml:space="preserve">
-    <value>Es konnte kein passender Eichprozess gefunden werden. Bitte wenden Sie sich an RHEWA</value>
+    <value>Es konnte kein passender Konformitätsbewertungsprozess gefunden werden. Bitte wenden Sie sich an RHEWA</value>
   </data>
   <data name="Fehler_Laden" xml:space="preserve">
     <value>Fehler beim laden der Daten</value>
   </data>
   <data name="Fehler_SpeicherAnomalie" xml:space="preserve">
-    <value>Der Eichvorgang konnte nicht gespeichert werden. Bitte rufen sie die aktuellsten Informationen von RHEWA ab und versuchen es erneut.</value>
+    <value>Der Konformitätsbewertungsvorgang konnte nicht gespeichert werden. Bitte rufen sie die aktuellsten Informationen von RHEWA ab und versuchen es erneut.</value>
   </data>
   <data name="Fehler_SpeicherAnomalieRhewaZusatztext" xml:space="preserve">
     <value>Falls auch das nicht hilft, kontrollieren Sie den ""deaktiviert"" Status der Auswertegeräte und Wägezellen im Admin Client.</value>
@@ -734,19 +734,19 @@ Ist der Fehler &gt; 0,3e → L = 0,5 Max = Normalien von 50% von Max werden ben�
     <value>Question</value>
   </data>
   <data name="Frage_Ablehnen" xml:space="preserve">
-    <value>Möchten Sie den gewählten Eichprozess wirklich ablehnen? Der Eichbevollmächtigte kriegt diesen dann zur erneuten Bearbeitung zugesandt</value>
+    <value>Möchten Sie den gewählten Konformitätsbewertungsprozess wirklich ablehnen? Der Eichbevollmächtigte kriegt diesen dann zur erneuten Bearbeitung zugesandt</value>
   </data>
   <data name="Frage_EichprotokollZuruecksenden" xml:space="preserve">
-    <value>Möchten Sie das korrigierte Eichprotokoll wirklich an den Eichbevollmächtigten zurücksenden? Der Status wird dabei auf fehlerhaft gesetzt.</value>
+    <value>Möchten Sie das korrigierte Konformitätsbewertungsprotokoll wirklich an den Eichbevollmächtigten zurücksenden? Der Status wird dabei auf fehlerhaft gesetzt.</value>
   </data>
   <data name="Frage_Genehmigen" xml:space="preserve">
-    <value>Möchten Sie den gewählten Eichprozess wirklich genehmigen? Er gilt dann als abgeschlossen und kann nicht mehr bearbeitet werden</value>
+    <value>Möchten Sie den gewählten Konformitätsbewertungsprozess wirklich genehmigen? Er gilt dann als abgeschlossen und kann nicht mehr bearbeitet werden</value>
   </data>
   <data name="Frage_Kopieren" xml:space="preserve">
-    <value>Möchten Sie den gewählten Eichprozess kopieren um ihn als Vorlage zu verwenden?</value>
+    <value>Möchten Sie den gewählten Konformitätsbewertungsprozess kopieren um ihn als Vorlage zu verwenden?</value>
   </data>
   <data name="Warnung_EichungenWerdenGeloescht" xml:space="preserve">
-    <value>Es wurden ungesendete Eichvorgänge gefunden. Wenn Sie mit "Ja" bestätigen, werden diese Daten durch das resynchronisieren gelöscht. Sind Sie sicher, dass sie neu synchroniseren möchten und dabei ihre ungesendeten Eichvorgänge verlieren?</value>
+    <value>Es wurden ungesendete Konformitätsbewertungsvorgänge gefunden. Wenn Sie mit "Ja" bestätigen, werden diese Daten durch das resynchronisieren gelöscht. Sind Sie sicher, dass sie neu synchroniseren möchten und dabei ihre ungesendeten Konformitätsbewertungsvorgänge verlieren?</value>
   </data>
   <data name="Bearbeitungsstatus" xml:space="preserve">
     <value>Bearbeitungsstatus</value>
