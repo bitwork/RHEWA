@@ -29,21 +29,6 @@ Inherits ucoContent
 
     #End Region
 
-    #Region "Enumeratoren"
-    Private Enum enuBereich
-        Bereich1 = 1
-        Bereich2 = 2
-        Bereich3 = 3
-    End Enum
-    
-    Private Enum enuStaffel
-        Staffel1 = 1
-        Staffel2 = 2
-        Staffel3 = 3
-        Staffel4 = 4
-        Staffel5 = 5
-    End Enum
-    #End Region
 
     #Region "Events"
     Private Sub ucoBeschaffenheitspruefung_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
@@ -260,57 +245,8 @@ Inherits ucoContent
         End Try
     End Sub
 
-    ''' <summary>
-    ''' Erwartet z.b. ein Steuerelement, prüft den Namen und gibt zurück um welchen Bereich es sich handelt
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <returns></returns>
-    ''' <remarks></remarks>
-    Private Function GetBereich(ByVal sender As Object) As enuBereich
-        Try
-            Dim ControlName As String
-            Dim Bereich As enuBereich
-            ControlName = CType(sender, Control).Name
-            If ControlName.Contains("Bereich1") Then
-                Bereich = enuBereich.Bereich1
-            ElseIf ControlName.Contains("Bereich2") Then
-                Bereich = enuBereich.Bereich2
-            ElseIf ControlName.Contains("Bereich3") Then
-                Bereich = enuBereich.Bereich3
-            End If
-            Return Bereich
-        Catch ex As Exception
-            Return Nothing
-        End Try
-    End Function
-
-    ''' <summary>
-    ''' Erwartet z.b. ein Steuerelement, prüft den Namen und gibt zurück um welche Staffel es sich handelt
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <returns></returns>
-    ''' <remarks></remarks>
-    Private Function GetStaffel(ByVal sender As Object) As enuStaffel
-        Try
-            Dim ControlName As String
-            Dim Staffel As enuStaffel
-            ControlName = CType(sender, Control).Name
-            If ControlName.Contains("Staffel1") Then
-                Staffel = enuStaffel.Staffel1
-            ElseIf ControlName.Contains("Staffel2") Then
-                Staffel = enuStaffel.Staffel2
-            ElseIf ControlName.Contains("Staffel3") Then
-                Staffel = enuStaffel.Staffel3
-            ElseIf ControlName.Contains("Staffel4") Then
-                Staffel = enuStaffel.Staffel4
-            ElseIf ControlName.Contains("Staffel5") Then
-                Staffel = enuStaffel.Staffel5
-            End If
-            Return Staffel
-        Catch ex As Exception
-            Return Nothing
-        End Try
-    End Function
+ 
+   
 
     ''' <summary>
     '''    je nach Art der Waage andere Bereichsgruppen ausblenden
@@ -383,9 +319,9 @@ Inherits ucoContent
     ''' <param name="Staffel"></param>
     ''' <param name="Bereich"></param>
     ''' <remarks></remarks>
-    Private Sub LadeStaffel(ByVal Staffel As enuStaffel, ByVal Bereich As enuBereich)
+    Private Sub LadeStaffel(ByVal Staffel As String, ByVal Bereich As String)
         Try
-            If Staffel = enuStaffel.Staffel1 Then
+            If Staffel = "1" Then
                 Dim _currentObjPruefungStaffelverfahrenNormallast As PruefungStaffelverfahrenNormallast
 
                 _currentObjPruefungStaffelverfahrenNormallast = Nothing
@@ -533,11 +469,11 @@ Inherits ucoContent
                 Else 'standardweret eintragen, wenn DB Objekt nothing ist
                     Dim eichwert As Decimal
                     'eichwert auslesen
-                    If Bereich = enuBereich.Bereich1 AndAlso AnzahlBereiche >= 1 Then
+                    If Bereich = "1" AndAlso AnzahlBereiche >= 1 Then
                         eichwert = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1
-                    ElseIf Bereich = enuBereich.Bereich2 AndAlso AnzahlBereiche >= 2 Then
+                    ElseIf Bereich = "2" AndAlso AnzahlBereiche >= 2 Then
                         eichwert = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2
-                    ElseIf Bereich = enuBereich.Bereich3 AndAlso AnzahlBereiche >= 3 Then
+                    ElseIf Bereich = "3" AndAlso AnzahlBereiche >= 3 Then
                         eichwert = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3
                     End If
                     'EFG Normallast
@@ -658,6 +594,11 @@ Inherits ucoContent
             PObjPruefung.NormalLast_Anzeige_2 = Anzeige2.Text
             PObjPruefung.NormalLast_Fehler_2 = Fehler2.Text
             PObjPruefung.NormalLast_EFG_2 = EFG2.Text
+        Else
+            PObjPruefung.NormalLast_Last_2 = 0
+            PObjPruefung.NormalLast_Anzeige_2 = 0
+            PObjPruefung.NormalLast_Fehler_2 = 0
+            PObjPruefung.NormalLast_EFG_2 = 0
         End If
 
         PObjPruefung.NormalLast_Last_3 = Last3.Text
@@ -886,7 +827,7 @@ Inherits ucoContent
 
     #Region "Events die neue Berechnungen beim Ändern von Feldinformationen erfordern"
 
-    Private Sub BerechneStaffelBereich(ByVal Staffel As enuStaffel, ByVal Bereich As enuBereich)
+    Private Sub BerechneStaffelBereich(ByVal Staffel As String, ByVal Bereich As String)
         Try
             Dim Last1 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 1))
             Dim Last2 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 2))
@@ -915,18 +856,18 @@ Inherits ucoContent
             Dim EFG7 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblStaffel{0}Bereich{1}EFGWert{2}", CInt(Staffel), CInt(Bereich), 7))
 
             Dim Eichwert As String = ""
-            If Bereich = enuBereich.Bereich1 AndAlso AnzahlBereiche >= 1 Then
+            If Bereich = "1" AndAlso AnzahlBereiche >= 1 Then
                 Eichwert = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1
-            ElseIf Bereich = enuBereich.Bereich2 AndAlso AnzahlBereiche >= 2 Then
+            ElseIf Bereich = "2" AndAlso AnzahlBereiche >= 2 Then
                 Eichwert = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2
-            ElseIf Bereich = enuBereich.Bereich3 AndAlso AnzahlBereiche >= 3 Then
+            ElseIf Bereich = "3" AndAlso AnzahlBereiche >= 3 Then
                 Eichwert = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3
             End If
 
-            If Staffel = enuStaffel.Staffel1 Then
+            If Staffel = "1" Then
 
                 'Im Bereich 1 wird gegen den nullwert geprüft. Ab bereich 2 gegen 20e
-                If Bereich = enuBereich.Bereich1 Then
+                If Bereich = "1" Then
                     'fehler berechnen
                     Try
                         Fehler1.Text = CDec(Anzeige1.Text) - CDec(Last1.Text)
@@ -962,7 +903,7 @@ Inherits ucoContent
                 Try
                     If CDec(Last1.Text) < Math.Round(CDec(Eichwert * 500), _intNullstellenE, MidpointRounding.AwayFromZero) Then
                         'Im Bereich 1 wird gegen den nullwert geprüft. Ab bereich 2 gegen 20e. dort fällt EFG2 weg. stattdessen wird EFG3 genutzt
-                        If Bereich = enuBereich.Bereich1 Then
+                        If Bereich = "1" Then
                             EFG1.Text = Math.Round(CDec(Eichwert) * 0.5, _intNullstellenE)
                             EFG2.Text = Math.Round(CDec(Eichwert) * 0.5, _intNullstellenE)
                         Else
@@ -971,7 +912,7 @@ Inherits ucoContent
                         End If
                     Else
                         'Im Bereich 1 wird gegen den nullwert geprüft. Ab bereich 2 gegen 20e. dort fällt EFG2 weg. stattdessen wird EFG3 genutzt
-                        If Bereich = enuBereich.Bereich1 Then
+                        If Bereich = "2" Then
                             EFG1.Text = Math.Round(CDec(Eichwert), _intNullstellenE)
                             EFG2.Text = Math.Round(CDec(Eichwert), _intNullstellenE)
                         Else
@@ -1114,8 +1055,8 @@ Inherits ucoContent
         _suspendEvents = True
         AktuellerStatusDirty = True
 
-        Dim staffel As enuStaffel = GetStaffel(sender)
-        Dim bereich As enuBereich = GetBereich(sender)
+        Dim staffel As String = GetStaffel(sender)
+        Dim bereich As String = GetBereich(sender)
         BerechneStaffelBereich(staffel, bereich)
         BerechneMessabweichung(bereich)
         _suspendEvents = False
@@ -1132,7 +1073,7 @@ Inherits ucoContent
     ''' </summary>
     ''' <param name="Bereich"></param>
     ''' <remarks></remarks>
-    Private Sub BerechneMessabweichung(ByVal Bereich As enuBereich)
+    Private Sub BerechneMessabweichung(ByVal Bereich As String)
         Try
 
 
@@ -1524,7 +1465,12 @@ Inherits ucoContent
                                 Context.SaveChanges()
 
                                 objEichprozess.Eichprotokoll.PruefungStaffelverfahrenNormallast.Add(objPruefung)
-                                Context.SaveChanges()
+                                Try
+                                    Context.SaveChanges()
+
+                                Catch ex As Exception
+                                    lblStaffel1Bereich1Anzeige.Text = ""
+                                End Try
 
                                 _ListPruefungStaffelverfahrenNormallast.Add(objPruefung)
                             Next
