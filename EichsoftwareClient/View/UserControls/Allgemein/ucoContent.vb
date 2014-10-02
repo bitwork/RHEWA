@@ -283,4 +283,123 @@ Public Class ucoContent
     End Function
 
 
+#Region "Hilfsfunktionen"
+    ''' <summary>
+    ''' Erwartet z.b. ein Steuerelement, prüft den Namen und gibt zurück um welchen Bereich es sich handelt
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Friend Function GetBereich(ByVal sender As Object) As String
+        Try
+            Dim ControlName As String
+            Dim Bereich As String = ""
+            ControlName = CType(sender, Control).Name
+            If ControlName.Contains("Bereich1") Then
+                Bereich = 1
+            ElseIf ControlName.Contains("Bereich2") Then
+                Bereich = 2
+            ElseIf ControlName.Contains("Bereich3") Then
+                Bereich = 3
+            End If
+            Return Bereich
+        Catch ex As Exception
+            Return Nothing
+        End Try
+    End Function
+
+    ''' <summary>
+    ''' Erwartet z.b. ein Steuerelement, prüft den Namen und gibt zurück um welche Staffel es sich handelt
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Friend Function GetStaffel(ByVal sender As Object) As String
+        Try
+            Dim ControlName As String
+            Dim Staffel As String = ""
+            ControlName = CType(sender, Control).Name
+            If ControlName.Contains("Staffel1") Then
+                Staffel = 1
+            ElseIf ControlName.Contains("Staffel2") Then
+                Staffel = 2
+            ElseIf ControlName.Contains("Staffel3") Then
+                Staffel = 3
+            ElseIf ControlName.Contains("Staffel4") Then
+                Staffel = 4
+            ElseIf ControlName.Contains("Staffel5") Then
+                Staffel = 5
+            End If
+            Return Staffel
+        Catch ex As Exception
+            Return Nothing
+        End Try
+    End Function
+
+    ''' <summary>
+    ''' Erwartet z.b. ein Steuerelement, prüft den Namen und gibt zurück um welchen Belastungsort es sich handelt
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Friend Function GetBelastungsort(ByVal sender As Object) As String
+        Try
+            Dim ControlName As String
+            Dim Ort As String
+            ControlName = CType(sender, Control).Name
+            If ControlName.EndsWith("Mitte") Then
+                Ort = "Mitte"
+            Else
+                Ort = ControlName.Last
+            End If
+            Return Ort
+        Catch ex As Exception
+            Return Nothing
+        End Try
+    End Function
+
+    Friend Function GetPruefung(ByVal sender As Object) As String
+        Try
+            Dim ControlName As String
+            Dim Pruefung As String = ""
+            ControlName = CType(sender, Control).Name
+
+            If ControlName.Contains("Fallend") Then
+                Pruefung = ""
+            Else
+                Pruefung = "Steigend"
+            End If
+            Return Pruefung
+        Catch ex As Exception
+            Return Nothing
+        End Try
+    End Function
+
+    Friend Function GetMesspunkt(ByVal sender As Object) As String
+        Try
+            Dim ControlName As String
+            Dim Messpunkt As String = ""
+
+            ControlName = CType(sender, Control).Name
+            Messpunkt = ControlName.Last
+            Return Messpunkt
+        Catch ex As Exception
+            Return Nothing
+        End Try
+    End Function
+
+    Friend Function GetWiederholung(ByVal sender As Object) As String
+        Try
+            Dim ControlName As String
+            Dim Messpunkt As String = ""
+
+            ControlName = CType(sender, Control).Name
+            Messpunkt = ControlName.Last
+            Return Messpunkt
+        Catch ex As Exception
+            Return Nothing
+        End Try
+    End Function
+#End Region
+
 End Class
