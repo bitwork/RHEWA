@@ -1797,37 +1797,19 @@ Namespace EichsoftwareWebservice
         Private extensionDataField As System.Runtime.Serialization.ExtensionDataObject
         
         <System.Runtime.Serialization.OptionalFieldAttribute()>  _
-        Private Beschaffenheitspruefung_AnzeigenAbdruckeInOrdnungField As System.Nullable(Of Boolean)
-        
-        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
-        Private Beschaffenheitspruefung_AufschriftenKennzeichnungenInOrdnungField As System.Nullable(Of Boolean)
-        
-        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
-        Private Beschaffenheitspruefung_AufstellungsbedingungenInOrdnungField As System.Nullable(Of Boolean)
-        
-        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private Beschaffenheitspruefung_EichfahrzeugFirmaField As String
         
         <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private Beschaffenheitspruefung_GenauigkeitsklasseField As String
         
         <System.Runtime.Serialization.OptionalFieldAttribute()>  _
-        Private Beschaffenheitspruefung_KompatibilitaetsnachweisVorhandenField As System.Nullable(Of Boolean)
-        
-        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private Beschaffenheitspruefung_LetztePruefungField As String
-        
-        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
-        Private Beschaffenheitspruefung_MesstechnischeMerkmaleInOrdnungField As System.Nullable(Of Boolean)
         
         <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private Beschaffenheitspruefung_PruefintervallField As String
         
         <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private Beschaffenheitspruefung_PruefscheinnummerField As String
-        
-        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
-        Private Beschaffenheitspruefung_ZulassungsunterlagenInLesbarerFassungField As System.Nullable(Of Boolean)
         
         <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private EignungAchlastwaegungen_GeprueftField As System.Nullable(Of Boolean)
@@ -2053,45 +2035,6 @@ Namespace EichsoftwareWebservice
         End Property
         
         <System.Runtime.Serialization.DataMemberAttribute()>  _
-        Public Property Beschaffenheitspruefung_AnzeigenAbdruckeInOrdnung() As System.Nullable(Of Boolean)
-            Get
-                Return Me.Beschaffenheitspruefung_AnzeigenAbdruckeInOrdnungField
-            End Get
-            Set
-                If (Me.Beschaffenheitspruefung_AnzeigenAbdruckeInOrdnungField.Equals(value) <> true) Then
-                    Me.Beschaffenheitspruefung_AnzeigenAbdruckeInOrdnungField = value
-                    Me.RaisePropertyChanged("Beschaffenheitspruefung_AnzeigenAbdruckeInOrdnung")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute()>  _
-        Public Property Beschaffenheitspruefung_AufschriftenKennzeichnungenInOrdnung() As System.Nullable(Of Boolean)
-            Get
-                Return Me.Beschaffenheitspruefung_AufschriftenKennzeichnungenInOrdnungField
-            End Get
-            Set
-                If (Me.Beschaffenheitspruefung_AufschriftenKennzeichnungenInOrdnungField.Equals(value) <> true) Then
-                    Me.Beschaffenheitspruefung_AufschriftenKennzeichnungenInOrdnungField = value
-                    Me.RaisePropertyChanged("Beschaffenheitspruefung_AufschriftenKennzeichnungenInOrdnung")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute()>  _
-        Public Property Beschaffenheitspruefung_AufstellungsbedingungenInOrdnung() As System.Nullable(Of Boolean)
-            Get
-                Return Me.Beschaffenheitspruefung_AufstellungsbedingungenInOrdnungField
-            End Get
-            Set
-                If (Me.Beschaffenheitspruefung_AufstellungsbedingungenInOrdnungField.Equals(value) <> true) Then
-                    Me.Beschaffenheitspruefung_AufstellungsbedingungenInOrdnungField = value
-                    Me.RaisePropertyChanged("Beschaffenheitspruefung_AufstellungsbedingungenInOrdnung")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Beschaffenheitspruefung_EichfahrzeugFirma() As String
             Get
                 Return Me.Beschaffenheitspruefung_EichfahrzeugFirmaField
@@ -2118,19 +2061,6 @@ Namespace EichsoftwareWebservice
         End Property
         
         <System.Runtime.Serialization.DataMemberAttribute()>  _
-        Public Property Beschaffenheitspruefung_KompatibilitaetsnachweisVorhanden() As System.Nullable(Of Boolean)
-            Get
-                Return Me.Beschaffenheitspruefung_KompatibilitaetsnachweisVorhandenField
-            End Get
-            Set
-                If (Me.Beschaffenheitspruefung_KompatibilitaetsnachweisVorhandenField.Equals(value) <> true) Then
-                    Me.Beschaffenheitspruefung_KompatibilitaetsnachweisVorhandenField = value
-                    Me.RaisePropertyChanged("Beschaffenheitspruefung_KompatibilitaetsnachweisVorhanden")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Beschaffenheitspruefung_LetztePruefung() As String
             Get
                 Return Me.Beschaffenheitspruefung_LetztePruefungField
@@ -2139,19 +2069,6 @@ Namespace EichsoftwareWebservice
                 If (Object.ReferenceEquals(Me.Beschaffenheitspruefung_LetztePruefungField, value) <> true) Then
                     Me.Beschaffenheitspruefung_LetztePruefungField = value
                     Me.RaisePropertyChanged("Beschaffenheitspruefung_LetztePruefung")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute()>  _
-        Public Property Beschaffenheitspruefung_MesstechnischeMerkmaleInOrdnung() As System.Nullable(Of Boolean)
-            Get
-                Return Me.Beschaffenheitspruefung_MesstechnischeMerkmaleInOrdnungField
-            End Get
-            Set
-                If (Me.Beschaffenheitspruefung_MesstechnischeMerkmaleInOrdnungField.Equals(value) <> true) Then
-                    Me.Beschaffenheitspruefung_MesstechnischeMerkmaleInOrdnungField = value
-                    Me.RaisePropertyChanged("Beschaffenheitspruefung_MesstechnischeMerkmaleInOrdnung")
                 End If
             End Set
         End Property
@@ -2178,19 +2095,6 @@ Namespace EichsoftwareWebservice
                 If (Object.ReferenceEquals(Me.Beschaffenheitspruefung_PruefscheinnummerField, value) <> true) Then
                     Me.Beschaffenheitspruefung_PruefscheinnummerField = value
                     Me.RaisePropertyChanged("Beschaffenheitspruefung_Pruefscheinnummer")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute()>  _
-        Public Property Beschaffenheitspruefung_ZulassungsunterlagenInLesbarerFassung() As System.Nullable(Of Boolean)
-            Get
-                Return Me.Beschaffenheitspruefung_ZulassungsunterlagenInLesbarerFassungField
-            End Get
-            Set
-                If (Me.Beschaffenheitspruefung_ZulassungsunterlagenInLesbarerFassungField.Equals(value) <> true) Then
-                    Me.Beschaffenheitspruefung_ZulassungsunterlagenInLesbarerFassungField = value
-                    Me.RaisePropertyChanged("Beschaffenheitspruefung_ZulassungsunterlagenInLesbarerFassung")
                 End If
             End Set
         End Property

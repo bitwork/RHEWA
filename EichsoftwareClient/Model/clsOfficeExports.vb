@@ -1308,17 +1308,11 @@ Public Class clsOfficeExports
                 para.Range.Style = "Überschrift 1"
                 r.InsertAfter("Eichprotokoll" + vbNewLine + vbNewLine)
                 para.Range.Style = "Standard"
-                r.InsertAfter("Anzeigen Abdrucke in Ordnung: " & pEichProzess.Eichprotokoll.Beschaffenheitspruefung_AnzeigenAbdruckeInOrdnung & vbNewLine)
-                r.InsertAfter("Aufschriften Kennzeichnungen in Ordnung: " & pEichProzess.Eichprotokoll.Beschaffenheitspruefung_AufschriftenKennzeichnungenInOrdnung & vbNewLine)
-                r.InsertAfter("Aufstellungsbedingungen in Ordnung: " & pEichProzess.Eichprotokoll.Beschaffenheitspruefung_AufstellungsbedingungenInOrdnung & vbNewLine)
-                r.InsertAfter("Eichfahrzeug Firma: " & pEichProzess.Eichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma & vbNewLine)
+               r.InsertAfter("Eichfahrzeug Firma: " & pEichProzess.Eichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma & vbNewLine)
                 r.InsertAfter("Genauigkeitsklasse: " & pEichProzess.Eichprotokoll.Beschaffenheitspruefung_Genauigkeitsklasse & vbNewLine)
-                r.InsertAfter("Kompatibilitätsnachweis Vorhanden: " & pEichProzess.Eichprotokoll.Beschaffenheitspruefung_KompatibilitaetsnachweisVorhanden & vbNewLine)
                 r.InsertAfter("Letzte Prüfung: " & pEichProzess.Eichprotokoll.Beschaffenheitspruefung_LetztePruefung & vbNewLine)
-                r.InsertAfter("Messtechnische Merkmale in Ordnung: " & pEichProzess.Eichprotokoll.Beschaffenheitspruefung_MesstechnischeMerkmaleInOrdnung & vbNewLine)
                 r.InsertAfter("Prüfintervall: " & pEichProzess.Eichprotokoll.Beschaffenheitspruefung_Pruefintervall & vbNewLine)
                 r.InsertAfter("Prüfscheinnummer: " & pEichProzess.Eichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer & vbNewLine)
-                r.InsertAfter("Zulassungsunterlagen in Lesbarer Fassung: " & pEichProzess.Eichprotokoll.Beschaffenheitspruefung_ZulassungsunterlagenInLesbarerFassung & vbNewLine)
                 r.InsertAfter("Eignung Achlastwägungen Geprüft: " & pEichProzess.Eichprotokoll.EignungAchlastwaegungen_Geprueft & vbNewLine)
                 r.InsertAfter("Eignung Achlastwägungen Waagenbruecke Ebene: " & pEichProzess.Eichprotokoll.EignungAchlastwaegungen_WaagenbrueckeEbene & vbNewLine)
                 r.InsertAfter("Eignung Achlastwägungen Waage Nicht Geeignet: " & pEichProzess.Eichprotokoll.EignungAchlastwaegungen_WaageNichtGeeignet & vbNewLine)

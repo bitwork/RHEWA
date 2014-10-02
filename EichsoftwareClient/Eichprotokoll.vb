@@ -41,12 +41,6 @@ Partial Public Class Eichprotokoll
     Public Property Verwendungszweck_Druckertyp As String
     Public Property Verwendungszweck_Fahrzeugwaagen_MxM As String
     Public Property Verwendungszweck_Fahrzeugwaagen_Dimension As String
-    Public Property Beschaffenheitspruefung_AufstellungsbedingungenInOrdnung As Nullable(Of Boolean)
-    Public Property Beschaffenheitspruefung_ZulassungsunterlagenInLesbarerFassung As Nullable(Of Boolean)
-    Public Property Beschaffenheitspruefung_MesstechnischeMerkmaleInOrdnung As Nullable(Of Boolean)
-    Public Property Beschaffenheitspruefung_AufschriftenKennzeichnungenInOrdnung As Nullable(Of Boolean)
-    Public Property Beschaffenheitspruefung_AnzeigenAbdruckeInOrdnung As Nullable(Of Boolean)
-    Public Property Beschaffenheitspruefung_KompatibilitaetsnachweisVorhanden As Nullable(Of Boolean)
     Public Property Beschaffenheitspruefung_Genauigkeitsklasse As String
     Public Property Beschaffenheitspruefung_Pruefintervall As String
     Public Property Beschaffenheitspruefung_LetztePruefung As String

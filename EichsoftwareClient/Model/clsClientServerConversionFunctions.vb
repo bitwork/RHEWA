@@ -125,17 +125,11 @@ Public Class clsClientServerConversionFunctions
         'Eichprotokoll
         TargetObject._ServerEichprotokoll = New EichsoftwareWebservice.ServerEichprotokoll
 
-        TargetObject._ServerEichprotokoll.Beschaffenheitspruefung_AnzeigenAbdruckeInOrdnung = SourceObject.Eichprotokoll.Beschaffenheitspruefung_AnzeigenAbdruckeInOrdnung
-        TargetObject._ServerEichprotokoll.Beschaffenheitspruefung_AufschriftenKennzeichnungenInOrdnung = SourceObject.Eichprotokoll.Beschaffenheitspruefung_AufschriftenKennzeichnungenInOrdnung
-        TargetObject._ServerEichprotokoll.Beschaffenheitspruefung_AufstellungsbedingungenInOrdnung = SourceObject.Eichprotokoll.Beschaffenheitspruefung_AufstellungsbedingungenInOrdnung
-        TargetObject._ServerEichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma = SourceObject.Eichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma
+       TargetObject._ServerEichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma = SourceObject.Eichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma
         TargetObject._ServerEichprotokoll.Beschaffenheitspruefung_Genauigkeitsklasse = SourceObject.Eichprotokoll.Beschaffenheitspruefung_Genauigkeitsklasse
-        TargetObject._ServerEichprotokoll.Beschaffenheitspruefung_KompatibilitaetsnachweisVorhanden = SourceObject.Eichprotokoll.Beschaffenheitspruefung_KompatibilitaetsnachweisVorhanden
         TargetObject._ServerEichprotokoll.Beschaffenheitspruefung_LetztePruefung = SourceObject.Eichprotokoll.Beschaffenheitspruefung_LetztePruefung
-        TargetObject._ServerEichprotokoll.Beschaffenheitspruefung_MesstechnischeMerkmaleInOrdnung = SourceObject.Eichprotokoll.Beschaffenheitspruefung_MesstechnischeMerkmaleInOrdnung
         TargetObject._ServerEichprotokoll.Beschaffenheitspruefung_Pruefintervall = SourceObject.Eichprotokoll.Beschaffenheitspruefung_Pruefintervall
         TargetObject._ServerEichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer = SourceObject.Eichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer
-        TargetObject._ServerEichprotokoll.Beschaffenheitspruefung_ZulassungsunterlagenInLesbarerFassung = SourceObject.Eichprotokoll.Beschaffenheitspruefung_ZulassungsunterlagenInLesbarerFassung
         TargetObject._ServerEichprotokoll.EignungAchlastwaegungen_Geprueft = SourceObject.Eichprotokoll.EignungAchlastwaegungen_Geprueft
         TargetObject._ServerEichprotokoll.EignungAchlastwaegungen_WaagenbrueckeEbene = SourceObject.Eichprotokoll.EignungAchlastwaegungen_WaagenbrueckeEbene
         TargetObject._ServerEichprotokoll.EignungAchlastwaegungen_WaageNichtGeeignet = SourceObject.Eichprotokoll.EignungAchlastwaegungen_WaageNichtGeeignet
@@ -281,17 +275,11 @@ Public Class clsClientServerConversionFunctions
         'Eichprotokoll
         TargetObject.Eichprotokoll = New Eichprotokoll
 
-        TargetObject.Eichprotokoll.Beschaffenheitspruefung_AnzeigenAbdruckeInOrdnung = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_AnzeigenAbdruckeInOrdnung
-        TargetObject.Eichprotokoll.Beschaffenheitspruefung_AufschriftenKennzeichnungenInOrdnung = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_AufschriftenKennzeichnungenInOrdnung
-        TargetObject.Eichprotokoll.Beschaffenheitspruefung_AufstellungsbedingungenInOrdnung = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_AufstellungsbedingungenInOrdnung
         TargetObject.Eichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma
         TargetObject.Eichprotokoll.Beschaffenheitspruefung_Genauigkeitsklasse = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_Genauigkeitsklasse
-        TargetObject.Eichprotokoll.Beschaffenheitspruefung_KompatibilitaetsnachweisVorhanden = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_KompatibilitaetsnachweisVorhanden
         TargetObject.Eichprotokoll.Beschaffenheitspruefung_LetztePruefung = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_LetztePruefung
-        TargetObject.Eichprotokoll.Beschaffenheitspruefung_MesstechnischeMerkmaleInOrdnung = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_MesstechnischeMerkmaleInOrdnung
         TargetObject.Eichprotokoll.Beschaffenheitspruefung_Pruefintervall = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_Pruefintervall
         TargetObject.Eichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer
-        TargetObject.Eichprotokoll.Beschaffenheitspruefung_ZulassungsunterlagenInLesbarerFassung = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_ZulassungsunterlagenInLesbarerFassung
         TargetObject.Eichprotokoll.EignungAchlastwaegungen_Geprueft = SourceObject._ServerEichprotokoll.EignungAchlastwaegungen_Geprueft
         TargetObject.Eichprotokoll.EignungAchlastwaegungen_WaagenbrueckeEbene = SourceObject._ServerEichprotokoll.EignungAchlastwaegungen_WaagenbrueckeEbene
         TargetObject.Eichprotokoll.EignungAchlastwaegungen_WaageNichtGeeignet = SourceObject._ServerEichprotokoll.EignungAchlastwaegungen_WaageNichtGeeignet
@@ -730,17 +718,11 @@ Public Class clsClientServerConversionFunctions
 
         'Eichprotokoll
 
-        TargetObject.Eichprotokoll.Beschaffenheitspruefung_AnzeigenAbdruckeInOrdnung = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_AnzeigenAbdruckeInOrdnung
-        TargetObject.Eichprotokoll.Beschaffenheitspruefung_AufschriftenKennzeichnungenInOrdnung = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_AufschriftenKennzeichnungenInOrdnung
-        TargetObject.Eichprotokoll.Beschaffenheitspruefung_AufstellungsbedingungenInOrdnung = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_AufstellungsbedingungenInOrdnung
         TargetObject.Eichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma
         TargetObject.Eichprotokoll.Beschaffenheitspruefung_Genauigkeitsklasse = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_Genauigkeitsklasse
-        TargetObject.Eichprotokoll.Beschaffenheitspruefung_KompatibilitaetsnachweisVorhanden = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_KompatibilitaetsnachweisVorhanden
         TargetObject.Eichprotokoll.Beschaffenheitspruefung_LetztePruefung = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_LetztePruefung
-        TargetObject.Eichprotokoll.Beschaffenheitspruefung_MesstechnischeMerkmaleInOrdnung = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_MesstechnischeMerkmaleInOrdnung
         TargetObject.Eichprotokoll.Beschaffenheitspruefung_Pruefintervall = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_Pruefintervall
         TargetObject.Eichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer
-        TargetObject.Eichprotokoll.Beschaffenheitspruefung_ZulassungsunterlagenInLesbarerFassung = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_ZulassungsunterlagenInLesbarerFassung
         TargetObject.Eichprotokoll.EignungAchlastwaegungen_Geprueft = SourceObject._ServerEichprotokoll.EignungAchlastwaegungen_Geprueft
         TargetObject.Eichprotokoll.EignungAchlastwaegungen_WaagenbrueckeEbene = SourceObject._ServerEichprotokoll.EignungAchlastwaegungen_WaagenbrueckeEbene
         TargetObject.Eichprotokoll.EignungAchlastwaegungen_WaageNichtGeeignet = SourceObject._ServerEichprotokoll.EignungAchlastwaegungen_WaageNichtGeeignet
@@ -1157,17 +1139,11 @@ Public Class clsClientServerConversionFunctions
 
         'Eichprotokoll
         TargetObject.Eichprotokoll = New Eichprotokoll
-        TargetObject.Eichprotokoll.Beschaffenheitspruefung_AnzeigenAbdruckeInOrdnung = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_AnzeigenAbdruckeInOrdnung
-        TargetObject.Eichprotokoll.Beschaffenheitspruefung_AufschriftenKennzeichnungenInOrdnung = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_AufschriftenKennzeichnungenInOrdnung
-        TargetObject.Eichprotokoll.Beschaffenheitspruefung_AufstellungsbedingungenInOrdnung = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_AufstellungsbedingungenInOrdnung
-        TargetObject.Eichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma
+       TargetObject.Eichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma
         TargetObject.Eichprotokoll.Beschaffenheitspruefung_Genauigkeitsklasse = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_Genauigkeitsklasse
-        TargetObject.Eichprotokoll.Beschaffenheitspruefung_KompatibilitaetsnachweisVorhanden = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_KompatibilitaetsnachweisVorhanden
         TargetObject.Eichprotokoll.Beschaffenheitspruefung_LetztePruefung = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_LetztePruefung
-        TargetObject.Eichprotokoll.Beschaffenheitspruefung_MesstechnischeMerkmaleInOrdnung = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_MesstechnischeMerkmaleInOrdnung
         TargetObject.Eichprotokoll.Beschaffenheitspruefung_Pruefintervall = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_Pruefintervall
         TargetObject.Eichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer
-        TargetObject.Eichprotokoll.Beschaffenheitspruefung_ZulassungsunterlagenInLesbarerFassung = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_ZulassungsunterlagenInLesbarerFassung
         TargetObject.Eichprotokoll.EignungAchlastwaegungen_Geprueft = SourceObject._ServerEichprotokoll.EignungAchlastwaegungen_Geprueft
         TargetObject.Eichprotokoll.EignungAchlastwaegungen_WaagenbrueckeEbene = SourceObject._ServerEichprotokoll.EignungAchlastwaegungen_WaagenbrueckeEbene
         TargetObject.Eichprotokoll.EignungAchlastwaegungen_WaageNichtGeeignet = SourceObject._ServerEichprotokoll.EignungAchlastwaegungen_WaageNichtGeeignet

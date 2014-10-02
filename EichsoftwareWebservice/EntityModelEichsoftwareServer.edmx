@@ -286,12 +286,6 @@
           <Property Name="Verwendungszweck_Druckertyp" Type="nvarchar" MaxLength="50" />
           <Property Name="Verwendungszweck_Fahrzeugwaagen_MxM" Type="nvarchar" MaxLength="25" />
           <Property Name="Verwendungszweck_Fahrzeugwaagen_Dimension" Type="nvarchar" MaxLength="25" />
-          <Property Name="Beschaffenheitspruefung_AufstellungsbedingungenInOrdnung" Type="bit" />
-          <Property Name="Beschaffenheitspruefung_ZulassungsunterlagenInLesbarerFassung" Type="bit" />
-          <Property Name="Beschaffenheitspruefung_MesstechnischeMerkmaleInOrdnung" Type="bit" />
-          <Property Name="Beschaffenheitspruefung_AufschriftenKennzeichnungenInOrdnung" Type="bit" />
-          <Property Name="Beschaffenheitspruefung_AnzeigenAbdruckeInOrdnung" Type="bit" />
-          <Property Name="Beschaffenheitspruefung_KompatibilitaetsnachweisVorhanden" Type="bit" />
           <Property Name="Beschaffenheitspruefung_Genauigkeitsklasse" Type="nvarchar" MaxLength="50" />
           <Property Name="Beschaffenheitspruefung_Pruefintervall" Type="nvarchar" MaxLength="50" />
           <Property Name="Beschaffenheitspruefung_LetztePruefung" Type="nvarchar" MaxLength="50" />
@@ -730,7 +724,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren">
-          <End Role="ServerLookup_Konformitaetsbewertungsverfahren" Type="EichenSQLDatabaseModel.Store.ServerLookup_Konformitaetsbewertungsverfahren" Multiplicity="1" />
+          <End Role="ServerLookup_Konformitaetsbewertungsverfahren" Type="EichenSQLDatabaseModel.Store.ServerLookup_Konformitaetsbewertungsverfahren" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.Store.ServerEichprotokoll" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ServerLookup_Konformitaetsbewertungsverfahren">
@@ -754,7 +750,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Eichprozess_Eichprotokoll">
-          <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.Store.ServerEichprotokoll" Multiplicity="0..1" />
+          <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.Store.ServerEichprotokoll" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="ServerEichprozess" Type="EichenSQLDatabaseModel.Store.ServerEichprozess" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ServerEichprotokoll">
@@ -838,7 +836,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Mogelstatistik_Eichprozess">
-          <End Role="ServerEichprozess" Type="EichenSQLDatabaseModel.Store.ServerEichprozess" Multiplicity="0..1" />
+          <End Role="ServerEichprozess" Type="EichenSQLDatabaseModel.Store.ServerEichprozess" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="ServerMogelstatistik" Type="EichenSQLDatabaseModel.Store.ServerMogelstatistik" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ServerEichprozess">
@@ -874,7 +874,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_PruefungAussermittigeBelastung_Eichprotokoll">
-          <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.Store.ServerEichprotokoll" Multiplicity="1" />
+          <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.Store.ServerEichprotokoll" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="ServerPruefungAussermittigeBelastung" Type="EichenSQLDatabaseModel.Store.ServerPruefungAussermittigeBelastung" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ServerEichprotokoll">
@@ -886,7 +888,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_PruefungLinearitaetFallend_Eichprotokoll">
-          <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.Store.ServerEichprotokoll" Multiplicity="1" />
+          <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.Store.ServerEichprotokoll" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="ServerPruefungLinearitaetFallend" Type="EichenSQLDatabaseModel.Store.ServerPruefungLinearitaetFallend" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ServerEichprotokoll">
@@ -898,7 +902,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_PruefungLinearitaetSteigend_Eichprotokoll">
-          <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.Store.ServerEichprotokoll" Multiplicity="1" />
+          <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.Store.ServerEichprotokoll" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="ServerPruefungLinearitaetSteigend" Type="EichenSQLDatabaseModel.Store.ServerPruefungLinearitaetSteigend" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ServerEichprotokoll">
@@ -910,7 +916,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_PruefungLinearitaetSteigendAnsprechvermoegen_Eichprotokoll">
-          <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.Store.ServerEichprotokoll" Multiplicity="1" />
+          <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.Store.ServerEichprotokoll" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="ServerPruefungAnsprechvermoegen" Type="EichenSQLDatabaseModel.Store.ServerPruefungAnsprechvermoegen" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ServerEichprotokoll">
@@ -922,7 +930,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_PruefungRollendeLasten_Eichprotokoll">
-          <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.Store.ServerEichprotokoll" Multiplicity="1" />
+          <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.Store.ServerEichprotokoll" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="ServerPruefungRollendeLasten" Type="EichenSQLDatabaseModel.Store.ServerPruefungRollendeLasten" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ServerEichprotokoll">
@@ -934,7 +944,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_PruefungStabilitaetGleichgewichtslage_Eichprotokoll">
-          <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.Store.ServerEichprotokoll" Multiplicity="1" />
+          <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.Store.ServerEichprotokoll" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="ServerPruefungStabilitaetGleichgewichtslage" Type="EichenSQLDatabaseModel.Store.ServerPruefungStabilitaetGleichgewichtslage" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ServerEichprotokoll">
@@ -946,7 +958,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_PruefungStaffelverfahrenErsatzlast_Eichprotokoll">
-          <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.Store.ServerEichprotokoll" Multiplicity="1" />
+          <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.Store.ServerEichprotokoll" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="ServerPruefungStaffelverfahrenErsatzlast" Type="EichenSQLDatabaseModel.Store.ServerPruefungStaffelverfahrenErsatzlast" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ServerEichprotokoll">
@@ -958,7 +972,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_PruefungStaffelverfahrenNormallast_Eichprotokoll">
-          <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.Store.ServerEichprotokoll" Multiplicity="1" />
+          <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.Store.ServerEichprotokoll" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="ServerPruefungStaffelverfahrenNormallast" Type="EichenSQLDatabaseModel.Store.ServerPruefungStaffelverfahrenNormallast" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ServerEichprotokoll">
@@ -970,7 +986,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_PruefungWiederholbarkeit_Eichprotokoll">
-          <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.Store.ServerEichprotokoll" Multiplicity="1" />
+          <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.Store.ServerEichprotokoll" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="ServerPruefungWiederholbarkeit" Type="EichenSQLDatabaseModel.Store.ServerPruefungWiederholbarkeit" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ServerEichprotokoll">
@@ -1278,12 +1296,6 @@
           <Property Name="Verwendungszweck_Druckertyp" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="Verwendungszweck_Fahrzeugwaagen_MxM" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
           <Property Name="Verwendungszweck_Fahrzeugwaagen_Dimension" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
-          <Property Name="Beschaffenheitspruefung_AufstellungsbedingungenInOrdnung" Type="Boolean" />
-          <Property Name="Beschaffenheitspruefung_ZulassungsunterlagenInLesbarerFassung" Type="Boolean" />
-          <Property Name="Beschaffenheitspruefung_MesstechnischeMerkmaleInOrdnung" Type="Boolean" />
-          <Property Name="Beschaffenheitspruefung_AufschriftenKennzeichnungenInOrdnung" Type="Boolean" />
-          <Property Name="Beschaffenheitspruefung_AnzeigenAbdruckeInOrdnung" Type="Boolean" />
-          <Property Name="Beschaffenheitspruefung_KompatibilitaetsnachweisVorhanden" Type="Boolean" />
           <Property Name="Beschaffenheitspruefung_Genauigkeitsklasse" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="Beschaffenheitspruefung_Pruefintervall" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="Beschaffenheitspruefung_LetztePruefung" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
@@ -2216,12 +2228,6 @@
                 <ScalarProperty Name="Verwendungszweck_Druckertyp" ColumnName="Verwendungszweck_Druckertyp" />
                 <ScalarProperty Name="Verwendungszweck_Fahrzeugwaagen_MxM" ColumnName="Verwendungszweck_Fahrzeugwaagen_MxM" />
                 <ScalarProperty Name="Verwendungszweck_Fahrzeugwaagen_Dimension" ColumnName="Verwendungszweck_Fahrzeugwaagen_Dimension" />
-                <ScalarProperty Name="Beschaffenheitspruefung_AufstellungsbedingungenInOrdnung" ColumnName="Beschaffenheitspruefung_AufstellungsbedingungenInOrdnung" />
-                <ScalarProperty Name="Beschaffenheitspruefung_ZulassungsunterlagenInLesbarerFassung" ColumnName="Beschaffenheitspruefung_ZulassungsunterlagenInLesbarerFassung" />
-                <ScalarProperty Name="Beschaffenheitspruefung_MesstechnischeMerkmaleInOrdnung" ColumnName="Beschaffenheitspruefung_MesstechnischeMerkmaleInOrdnung" />
-                <ScalarProperty Name="Beschaffenheitspruefung_AufschriftenKennzeichnungenInOrdnung" ColumnName="Beschaffenheitspruefung_AufschriftenKennzeichnungenInOrdnung" />
-                <ScalarProperty Name="Beschaffenheitspruefung_AnzeigenAbdruckeInOrdnung" ColumnName="Beschaffenheitspruefung_AnzeigenAbdruckeInOrdnung" />
-                <ScalarProperty Name="Beschaffenheitspruefung_KompatibilitaetsnachweisVorhanden" ColumnName="Beschaffenheitspruefung_KompatibilitaetsnachweisVorhanden" />
                 <ScalarProperty Name="Beschaffenheitspruefung_Genauigkeitsklasse" ColumnName="Beschaffenheitspruefung_Genauigkeitsklasse" />
                 <ScalarProperty Name="Beschaffenheitspruefung_Pruefintervall" ColumnName="Beschaffenheitspruefung_Pruefintervall" />
                 <ScalarProperty Name="Beschaffenheitspruefung_LetztePruefung" ColumnName="Beschaffenheitspruefung_LetztePruefung" />

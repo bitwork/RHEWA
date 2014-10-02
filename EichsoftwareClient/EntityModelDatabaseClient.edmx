@@ -172,12 +172,6 @@
           <Property Name="Verwendungszweck_Druckertyp" Type="nvarchar" MaxLength="50" />
           <Property Name="Verwendungszweck_Fahrzeugwaagen_MxM" Type="nvarchar" MaxLength="25" />
           <Property Name="Verwendungszweck_Fahrzeugwaagen_Dimension" Type="nvarchar" MaxLength="25" />
-          <Property Name="Beschaffenheitspruefung_AufstellungsbedingungenInOrdnung" Type="bit" />
-          <Property Name="Beschaffenheitspruefung_ZulassungsunterlagenInLesbarerFassung" Type="bit" />
-          <Property Name="Beschaffenheitspruefung_MesstechnischeMerkmaleInOrdnung" Type="bit" />
-          <Property Name="Beschaffenheitspruefung_AufschriftenKennzeichnungenInOrdnung" Type="bit" />
-          <Property Name="Beschaffenheitspruefung_AnzeigenAbdruckeInOrdnung" Type="bit" />
-          <Property Name="Beschaffenheitspruefung_KompatibilitaetsnachweisVorhanden" Type="bit" />
           <Property Name="Beschaffenheitspruefung_Genauigkeitsklasse" Type="nvarchar" MaxLength="50" />
           <Property Name="Beschaffenheitspruefung_Pruefintervall" Type="nvarchar" MaxLength="50" />
           <Property Name="Beschaffenheitspruefung_LetztePruefung" Type="nvarchar" MaxLength="50" />
@@ -993,12 +987,6 @@
           <Property Type="String" Name="Verwendungszweck_Druckertyp" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Verwendungszweck_Fahrzeugwaagen_MxM" MaxLength="25" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Verwendungszweck_Fahrzeugwaagen_Dimension" MaxLength="25" FixedLength="false" Unicode="true" />
-          <Property Type="Boolean" Name="Beschaffenheitspruefung_AufstellungsbedingungenInOrdnung" />
-          <Property Type="Boolean" Name="Beschaffenheitspruefung_ZulassungsunterlagenInLesbarerFassung" />
-          <Property Type="Boolean" Name="Beschaffenheitspruefung_MesstechnischeMerkmaleInOrdnung" />
-          <Property Type="Boolean" Name="Beschaffenheitspruefung_AufschriftenKennzeichnungenInOrdnung" />
-          <Property Type="Boolean" Name="Beschaffenheitspruefung_AnzeigenAbdruckeInOrdnung" />
-          <Property Type="Boolean" Name="Beschaffenheitspruefung_KompatibilitaetsnachweisVorhanden" />
           <Property Type="String" Name="Beschaffenheitspruefung_Genauigkeitsklasse" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Beschaffenheitspruefung_Pruefintervall" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Beschaffenheitspruefung_LetztePruefung" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -1751,12 +1739,6 @@
                 <ScalarProperty Name="Beschaffenheitspruefung_LetztePruefung" ColumnName="Beschaffenheitspruefung_LetztePruefung" />
                 <ScalarProperty Name="Beschaffenheitspruefung_Pruefintervall" ColumnName="Beschaffenheitspruefung_Pruefintervall" />
                 <ScalarProperty Name="Beschaffenheitspruefung_Genauigkeitsklasse" ColumnName="Beschaffenheitspruefung_Genauigkeitsklasse" />
-                <ScalarProperty Name="Beschaffenheitspruefung_KompatibilitaetsnachweisVorhanden" ColumnName="Beschaffenheitspruefung_KompatibilitaetsnachweisVorhanden" />
-                <ScalarProperty Name="Beschaffenheitspruefung_AnzeigenAbdruckeInOrdnung" ColumnName="Beschaffenheitspruefung_AnzeigenAbdruckeInOrdnung" />
-                <ScalarProperty Name="Beschaffenheitspruefung_AufschriftenKennzeichnungenInOrdnung" ColumnName="Beschaffenheitspruefung_AufschriftenKennzeichnungenInOrdnung" />
-                <ScalarProperty Name="Beschaffenheitspruefung_MesstechnischeMerkmaleInOrdnung" ColumnName="Beschaffenheitspruefung_MesstechnischeMerkmaleInOrdnung" />
-                <ScalarProperty Name="Beschaffenheitspruefung_ZulassungsunterlagenInLesbarerFassung" ColumnName="Beschaffenheitspruefung_ZulassungsunterlagenInLesbarerFassung" />
-                <ScalarProperty Name="Beschaffenheitspruefung_AufstellungsbedingungenInOrdnung" ColumnName="Beschaffenheitspruefung_AufstellungsbedingungenInOrdnung" />
                 <ScalarProperty Name="Verwendungszweck_Fahrzeugwaagen_Dimension" ColumnName="Verwendungszweck_Fahrzeugwaagen_Dimension" />
                 <ScalarProperty Name="Verwendungszweck_Fahrzeugwaagen_MxM" ColumnName="Verwendungszweck_Fahrzeugwaagen_MxM" />
                 <ScalarProperty Name="Verwendungszweck_Druckertyp" ColumnName="Verwendungszweck_Druckertyp" />

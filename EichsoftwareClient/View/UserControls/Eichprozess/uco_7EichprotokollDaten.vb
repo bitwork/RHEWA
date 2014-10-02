@@ -250,6 +250,8 @@
         Select Case objEichprozess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren
             Case Is = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgmitNormalien
                 'vollständiges Staffelverfahren NEIN
+                RadCheckBoxVolleNormallast.Checked = True
+                RadCheckBoxVolleNormallast.Enabled = True
                 RadCheckBoxVollstaendigesStaffelverfahren.Checked = False
                 RadCheckBoxVollstaendigesStaffelverfahren.Visible = False
                 PictureBox5.Visible = False
@@ -342,31 +344,7 @@
         Catch ex As Exception
         End Try
 
-        'bereich Beschaffenheitsprufung
-        Try
-            RadCheckBoxAufstellungsbedingungen.Checked = objEichprozess.Eichprotokoll.Beschaffenheitspruefung_AufstellungsbedingungenInOrdnung
-        Catch ex As Exception
-        End Try
-        Try
-            RadCheckBoxZulassungsunterlagen.Checked = objEichprozess.Eichprotokoll.Beschaffenheitspruefung_ZulassungsunterlagenInLesbarerFassung
-        Catch ex As Exception
-        End Try
-        Try
-            RadCheckBoxMesstechnischeMerkmale.Checked = objEichprozess.Eichprotokoll.Beschaffenheitspruefung_MesstechnischeMerkmaleInOrdnung
-        Catch ex As Exception
-        End Try
-        Try
-            RadCheckBoxAufschriften.Checked = objEichprozess.Eichprotokoll.Beschaffenheitspruefung_AufschriftenKennzeichnungenInOrdnung
-        Catch ex As Exception
-        End Try
-        Try
-            RadCheckBoxAnzeigen.Checked = objEichprozess.Eichprotokoll.Beschaffenheitspruefung_AnzeigenAbdruckeInOrdnung
-        Catch ex As Exception
-        End Try
-        Try
-            RadCheckBoxKompatiblitaetsnachweisVorhanden.Checked = objEichprozess.Eichprotokoll.Beschaffenheitspruefung_KompatibilitaetsnachweisVorhanden
-        Catch ex As Exception
-        End Try
+       
         Try
             If Not objEichprozess.Eichprotokoll.Beschaffenheitspruefung_Genauigkeitsklasse Is Nothing Then
                 RadTextBoxControlNormalienGenauigkeitsklasse.Text = objEichprozess.Eichprotokoll.Beschaffenheitspruefung_Genauigkeitsklasse
@@ -442,12 +420,6 @@
         objEichprozess.Eichprotokoll.Verwendungszweck_ZubehoerVerschiedenes = RadCheckBoxSonstiges.Checked
 
         'bereich Beschaffenheitsprufung
-        objEichprozess.Eichprotokoll.Beschaffenheitspruefung_AufstellungsbedingungenInOrdnung = RadCheckBoxAufstellungsbedingungen.Checked
-        objEichprozess.Eichprotokoll.Beschaffenheitspruefung_ZulassungsunterlagenInLesbarerFassung = RadCheckBoxZulassungsunterlagen.Checked
-        objEichprozess.Eichprotokoll.Beschaffenheitspruefung_MesstechnischeMerkmaleInOrdnung = RadCheckBoxMesstechnischeMerkmale.Checked
-        objEichprozess.Eichprotokoll.Beschaffenheitspruefung_AufschriftenKennzeichnungenInOrdnung = RadCheckBoxAufschriften.Checked
-        objEichprozess.Eichprotokoll.Beschaffenheitspruefung_AnzeigenAbdruckeInOrdnung = RadCheckBoxAnzeigen.Checked
-        objEichprozess.Eichprotokoll.Beschaffenheitspruefung_KompatibilitaetsnachweisVorhanden = RadCheckBoxKompatiblitaetsnachweisVorhanden.Checked
         objEichprozess.Eichprotokoll.Beschaffenheitspruefung_Genauigkeitsklasse = RadTextBoxControlNormalienGenauigkeitsklasse.Text
         objEichprozess.Eichprotokoll.Beschaffenheitspruefung_Pruefintervall = RadTextBoxControlNormalienPruefintervall.Text
         objEichprozess.Eichprotokoll.Beschaffenheitspruefung_LetztePruefung = RadDateTimePickerNormalienLetztePruefung.Text
@@ -554,19 +526,6 @@
                 Next
             End If
         Next
-
-
-
-        If RadCheckBoxZulassungsunterlagen.Checked = False Or _
-            RadCheckBoxMesstechnischeMerkmale.Checked = False Or _
-            RadCheckBoxKompatiblitaetsnachweisVorhanden.Checked = False Or _
-            RadCheckBoxAufstellungsbedingungen.Checked = False Or _
-            RadCheckBoxAufschriften.Checked = False Or _
-            RadCheckBoxAnzeigen.Checked = False Then
-            AbortSaveing = True
-
-        End If
-
 
         If RadCheckBoxDrucker.Checked Then
             If RadTextBoxControlDruckerTyp.Text = "" Then
@@ -717,23 +676,17 @@
         RadRadioButtonNustellungAutomatisch.Text = resources.GetString("RadRadioButtonNustellungAutomatisch.Text")
         RadRadioButtonNustellungHalbAutomatisch.Text = resources.GetString("RadRadioButtonNustellungHalbAutomatisch.Text")
         RadRadioButtonNustellungNullNachfuehrung.Text = resources.GetString("RadRadioButtonNustellungNullNachfuehrung.Text")
-        RadCheckBoxAnzeigen.Text = resources.GetString("RadCheckBoxAnzeigen.Text")
-        RadCheckBoxAufschriften.Text = resources.GetString("RadCheckBoxAufschriften.Text")
-        RadCheckBoxAufstellungsbedingungen.Text = resources.GetString("RadCheckBoxAufstellungsbedingungen.Text")
         RadCheckBoxDrucker.Text = resources.GetString("RadCheckBoxDrucker.Text")
         RadCheckBoxEichfaehigerSpeicher.Text = resources.GetString("RadCheckBoxEichfaehigerSpeicher.Text")
         RadCheckBoxHalbSelbsteinspielend.Text = resources.GetString("RadCheckBoxHalbSelbsteinspielend.Text")
         RadCheckBoxHybridMechWaage.Text = resources.GetString("RadCheckBoxHybridMechWaage.Text")
-        RadCheckBoxKompatiblitaetsnachweisVorhanden.Text = resources.GetString("RadCheckBoxKompatiblitaetsnachweisVorhanden.Text")
         RadCheckBoxMehrbereichswaage.Text = resources.GetString("RadCheckBoxMehrbereichswaage.Text")
         RadCheckBoxMehrteilungswaage.Text = resources.GetString("RadCheckBoxMehrteilungswaage.Text")
-        RadCheckBoxMesstechnischeMerkmale.Text = resources.GetString("RadCheckBoxMesstechnischeMerkmale.Text")
         RadCheckBoxNichtselbsteinspielend.Text = resources.GetString("RadCheckBoxNichtselbsteinspielend.Text")
         RadCheckBoxPC.Text = resources.GetString("RadCheckBoxPC.Text")
         RadCheckBoxSonstiges.Text = resources.GetString("RadCheckBoxSonstiges.Text")
         RadCheckBoxVolleNormallast.Text = resources.GetString("RadCheckBoxVolleNormallast.Text")
         RadCheckBoxVollstaendigesStaffelverfahren.Text = resources.GetString("RadCheckBoxVollstaendigesStaffelverfahren.Text")
-        RadCheckBoxZulassungsunterlagen.Text = resources.GetString("RadCheckBoxZulassungsunterlagen.Text")
         RadDateTimePickerNormalienLetztePruefung.Text = resources.GetString("RadDateTimePickerNormalienLetztePruefung.Text")
 
         RadTextBoxControlNormalienGenauigkeitsklasse.Text = resources.GetString("RadTextBoxControlNormalienGenauigkeitsklasse.Text")
