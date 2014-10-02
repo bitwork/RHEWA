@@ -122,18 +122,36 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="RadCheckBoxAusblendenClientGeloeschterDokumente.Size" type="System.Drawing.Size, System.Drawing">
-    <value>238, 18</value>
+    <value>129, 32</value>
   </data>
   <data name="RadCheckBoxAusblendenClientGeloeschterDokumente.Text" xml:space="preserve">
-    <value>Zuvor ausgeblendete Eichvoränge anzeigen</value>
+    <value>&lt;html&gt;  Zuvor ausgeblendete &lt;br /&gt;  Eichvoränge anzeigen&lt;/html&gt;</value>
+  </data>
+  <data name="RadButtonClientAusblenden.Location" type="System.Drawing.Point, System.Drawing">
+    <value>414, 410</value>
+  </data>
+  <data name="RadButtonClientAusblenden.Size" type="System.Drawing.Size, System.Drawing">
+    <value>174, 63</value>
   </data>
   <data name="RadButtonClientAusblenden.Text" xml:space="preserve">
-    <value>&lt;html&gt;Eichvorgang &lt;br /&gt;ausblenden&lt;/html&gt;</value>
+    <value>Vorgang ausblenden</value>
+  </data>
+  <data name="RadButtonClientNeu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>774, 410</value>
+  </data>
+  <data name="RadButtonClientNeu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>174, 63</value>
   </data>
   <data name="RadButtonClientNeu.Text" xml:space="preserve">
-    <value>&lt;html&gt;Eichvorgang &lt;br /&gt;erstellen&lt;/html&gt;</value>
+    <value>Vorgang erstellen</value>
+  </data>
+  <data name="RadButtonClientBearbeiten.Location" type="System.Drawing.Point, System.Drawing">
+    <value>594, 410</value>
+  </data>
+  <data name="RadButtonClientBearbeiten.Size" type="System.Drawing.Size, System.Drawing">
+    <value>174, 63</value>
   </data>
   <data name="RadButtonClientBearbeiten.Text" xml:space="preserve">
-    <value>&lt;html&gt;Eichvorgang &lt;br /&gt;bearbeiten&lt;/html&gt;</value>
+    <value>Vorgang bearbeiten</value>
   </data>
 </root>

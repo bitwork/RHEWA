@@ -175,7 +175,7 @@ Public Class uco20Reports
                 Dim objServerEichprozess As New EichsoftwareWebservice.ServerEichprozess
                 'auf fehlerhaft Status setzen
                 objEichprozess.FK_Bearbeitungsstatus = 2
-                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Eichbevollmächtigter sich den DS von Anfang angucken muss
+                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Konformitätsbewertungsbevollmächtigter sich den DS von Anfang angucken muss
 
 
                 'erzeuegn eines Server Objektes auf basis des aktuellen DS

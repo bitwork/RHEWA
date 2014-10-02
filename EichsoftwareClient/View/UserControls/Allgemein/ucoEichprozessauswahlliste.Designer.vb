@@ -201,6 +201,7 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadButtonClientAusblenden.RootElement.Margin = CType(resources.GetObject("RadButtonClientAusblenden.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadButtonClientAusblenden.RootElement.Text = resources.GetString("RadButtonClientAusblenden.RootElement.Text")
         Me.RadButtonClientAusblenden.RootElement.TextOrientation = CType(resources.GetObject("RadButtonClientAusblenden.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadButtonClientAusblenden.TextWrap = True
         '
         'RadButtonClientNeu
         '
@@ -218,6 +219,7 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadButtonClientNeu.RootElement.Margin = CType(resources.GetObject("RadButtonClientNeu.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadButtonClientNeu.RootElement.Text = resources.GetString("RadButtonClientNeu.RootElement.Text")
         Me.RadButtonClientNeu.RootElement.TextOrientation = CType(resources.GetObject("RadButtonClientNeu.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadButtonClientNeu.TextWrap = True
         '
         'RadButtonClientBearbeiten
         '
@@ -235,6 +237,7 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadButtonClientBearbeiten.RootElement.Margin = CType(resources.GetObject("RadButtonClientBearbeiten.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadButtonClientBearbeiten.RootElement.Text = resources.GetString("RadButtonClientBearbeiten.RootElement.Text")
         Me.RadButtonClientBearbeiten.RootElement.TextOrientation = CType(resources.GetObject("RadButtonClientBearbeiten.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadButtonClientBearbeiten.TextWrap = True
         '
         'RadPageViewPageAlle
         '
@@ -342,7 +345,7 @@ Partial Class ucoEichprozessauswahlliste
         '
         resources.ApplyResources(Me.RadGridViewRHEWAAlle, "RadGridViewRHEWAAlle")
         '
-        'RadGridViewRHEWAAlle
+        '
         '
         Me.RadGridViewRHEWAAlle.MasterTemplate.AllowAddNewRow = False
         Me.RadGridViewRHEWAAlle.MasterTemplate.AllowCellContextMenu = False

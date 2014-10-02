@@ -41,7 +41,7 @@ Public Class Uco21Versenden
         LoadFromDatabase()
 
 
-        'falls der Eichvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
+        'falls der Konformitätsbewertungsvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
         If DialogModus = enuDialogModus.lesend Then
             ParentFormular.BreadCrumb.FindeElementUndSelektiere(GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe)
             For Each Control In Me.Controls
@@ -77,7 +77,7 @@ Public Class Uco21Versenden
 
 
         If DialogModus = enuDialogModus.lesend Then
-            'falls der Eichvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
+            'falls der Konformitätsbewertungsvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
             For Each Control In Me.Controls
                 Try
                     Control.readonly = True
@@ -418,7 +418,7 @@ Public Class Uco21Versenden
                 Dim objServerEichprozess As New EichsoftwareWebservice.ServerEichprozess
                 'auf fehlerhaft Status setzen
                 objEichprozess.FK_Bearbeitungsstatus = 2
-                '   objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Eichbevollmächtigter sich den DS von Anfang angucken muss
+                '   objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Konformitätsbewertungsbevollmächtigter sich den DS von Anfang angucken muss
                 UpdateObject()
 
                 'erzeuegn eines Server Objektes auf basis des aktuellen DS

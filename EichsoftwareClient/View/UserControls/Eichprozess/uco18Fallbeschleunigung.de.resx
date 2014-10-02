@@ -128,7 +128,7 @@
     <value>505, 18</value>
   </data>
   <data name="lblBeschreibung.Text" xml:space="preserve">
-    <value>Die EG-Eichung wurde für folgende(n) Aufstellungsort/ Gebrauchsort/ Gebrauchszone durchgeführt:</value>
+    <value>Die EG-Konformitätsbewertung wurde für folgende(n) Aufstellungsort/ Gebrauchsort/ Gebrauchszone durchgeführt:</value>
   </data>
   <data name="RadLabel1.RootElement.KeyTip" xml:space="preserve">
     <value />

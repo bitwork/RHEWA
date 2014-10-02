@@ -163,7 +163,7 @@ Public Class EichsoftwareWebservice
     ''' <remarks></remarks>
     Public Function AddEichprozess(ByVal HEKennung As String, Lizenzschluessel As String, ByRef pObjEichprozess As ServerEichprozess, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements IEichsoftwareWebservice.AddEichprozess
         Try
-            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Füge Eichprozess hinzu bzw. Aktualisiere")
+            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Füge Konformitätsbewertungsprozess hinzu bzw. Aktualisiere")
 
             ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
             If PruefeLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
@@ -298,7 +298,7 @@ Public Class EichsoftwareWebservice
         Try
             ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
             If PruefeLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
-            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Hole Eichprozess")
+            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Hole Konformitätsbewertungsprozess")
 
             'neuen Context aufbauen
             Using DbContext As New EichenSQLDatabaseEntities1
@@ -462,7 +462,7 @@ Public Class EichsoftwareWebservice
 
                     ''abruch
                     If Eichprozesse Is Nothing Then
-                        SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Keine Eichprozesse im Zeitraum")
+                        SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Keine Konformitätsbewertungsprozess im Zeitraum")
                         Return Nothing
 
                     End If
@@ -1061,7 +1061,7 @@ Public Class EichsoftwareWebservice
         Try
             ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
             If PruefeLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
-            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Setze Eichprozess auf ungültig")
+            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Setze Konformitätsbewertungsprozess auf ungültig")
 
             'neuen Context aufbauen
             Using DbContext As New EichenSQLDatabaseEntities1
@@ -1074,7 +1074,7 @@ Public Class EichsoftwareWebservice
                     ''abruch
                     If Obj Is Nothing Then Return Nothing
 
-                    ''setzte Wert für Prüfer im Eichprotokoll
+                    ''setzte Wert für Prüfer imKonformitätsbewertungsprotokoll
                     'Try
                     '    Obj.ServerEichprotokoll.Identifikationsdaten_Pruefer = WindowsUsername.Split("\")(1)
                     'Catch ex As Exception
@@ -1124,7 +1124,7 @@ Public Class EichsoftwareWebservice
         Try
             ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
             If PruefeLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
-            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Setze Eichprozess auf gültig")
+            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Setze Konformitätsbewertungsprozess auf gültig")
 
             'neuen Context aufbauen
             Using DbContext As New EichenSQLDatabaseEntities1
@@ -1138,7 +1138,7 @@ Public Class EichsoftwareWebservice
                     If Obj Is Nothing Then Return Nothing
 
 
-                    ''setzte Wert für Prüfer im Eichprotokoll
+                    ''setzte Wert für Prüfer im Konformitätsbewertungsprotokoll
                     'Try
                     '    Obj.ServerEichprotokoll.Identifikationsdaten_Pruefer = WindowsUsername.Split("\")(1)
                     'Catch ex As Exception
@@ -1368,7 +1368,7 @@ Public Class EichsoftwareWebservice
                         objServerFTPDaten.FTPEncryptedPassword = objServerKonfiguration.FTPServerEnkodiertesPasswort
                         objServerFTPDaten.FTPSaltKey = objServerKonfiguration.FTPServerCryptoSaltKey
 
-                        'versuchen ob es zur Vorgangsnummer ein eichvorgang gibt. Wenn ja gucke ob es einen Uploadpfad gibt
+                        'versuchen ob es zur Vorgangsnummer ein Konformitätsbewertungsvorgang gibt. Wenn ja gucke ob es einen Uploadpfad gibt
                         Try
                             Dim FilePath As String = (From eichprozess In dbcontext.ServerEichprozess Where eichprozess.Vorgangsnummer = Vorgangsnummer Select eichprozess.UploadFilePath).FirstOrDefault
 

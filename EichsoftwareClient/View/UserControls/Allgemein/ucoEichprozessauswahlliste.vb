@@ -226,7 +226,7 @@
     End Sub
 #End Region
 
-#Region "Eichprozess Routinen Client"
+#Region "Konformitätsbewertungsprozess Routinen Client"
     ''' <summary>
     ''' Neuen Eichprozess anlegen 
     ''' </summary>
@@ -299,7 +299,7 @@
     End Sub
 
     ''' <summary>
-    ''' ausblenden bzw wieder einblenden des aktuellen eichvorgangs
+    ''' ausblenden bzw wieder einblenden des aktuellen Konformitätsbewertungsvorgangs
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
@@ -398,7 +398,7 @@
                 RadGridViewRHEWAAlle.Columns("Vorgangsnummer").IsVisible = False
                 RadGridViewRHEWAAlle.Columns("Gesperrtdurch").HeaderText = "Gesperrt durch"
                 RadGridViewRHEWAAlle.Columns("AnhangPfad").HeaderText = "Anhang"
-                RadGridViewRHEWAAlle.Columns("Eichbevollmaechtigter").HeaderText = "Eichbevollmächtigter"
+                RadGridViewRHEWAAlle.Columns("Eichbevollmaechtigter").HeaderText = "Konformitätsbewertungsbevollmächtigter"
                 RadGridViewRHEWAAlle.Columns("NeueWZ").HeaderText = "Neue WZ"
                 RadGridViewRHEWAAlle.Columns("Gesperrtdurch").HeaderText = "Gesperrt durch"
 
@@ -727,7 +727,7 @@
     ''' </summary>
     ''' <remarks></remarks>
     Private Sub VerbindeMitWebserviceUndHoleAlles()
-        Dim bolSyncData As Boolean = True 'Wert der genutzt wird um ggfs die Synchrosierung abzubrechen, falls ein Benutzer noch ungesendete Eichvorgänge hat
+        Dim bolSyncData As Boolean = True 'Wert der genutzt wird um ggfs die Synchrosierung abzubrechen, falls ein Benutzer noch ungesendete Konformitätsbewertungsvorgänge hat
         If objWebserviceFunctions.TesteVerbindung() Then
 
             'variablen zur Ausgabe ob es änderungen gibt:

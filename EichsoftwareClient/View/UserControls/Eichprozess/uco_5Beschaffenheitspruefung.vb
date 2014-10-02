@@ -70,7 +70,7 @@ Public Class uco_5Beschaffenheitspruefung
         FillControls()
 
         If DialogModus = enuDialogModus.lesend Then
-            'falls der Eichvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
+            'falls der Konformitätsbewertungsvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
             For Each Control In Me.RadScrollablePanel1.PanelContainer.Controls
                 Try
                     Control.readonly = True
@@ -410,7 +410,7 @@ Public Class uco_5Beschaffenheitspruefung
                 Dim objServerEichprozess As New EichsoftwareWebservice.ServerEichprozess
                 'auf fehlerhaft Status setzen
                 objEichprozess.FK_Bearbeitungsstatus = 2
-                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Eichbevollmächtigter sich den DS von Anfang angucken muss
+                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Konformitätsbewertungsbevollmächtigter sich den DS von Anfang angucken muss
               
                 If _ObjBeschaffenheitspruefung.ID <> 0 Then
                     'prüfen ob das Objekt anhand der ID gefunden werden kann

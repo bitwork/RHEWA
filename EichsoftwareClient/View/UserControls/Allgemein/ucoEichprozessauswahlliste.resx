@@ -175,7 +175,7 @@
     <value>17, 17</value>
   </metadata>
   <data name="RadButtonEinstellungen.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
+    <value>Bottom, Left</value>
   </data>
   <data name="RadButtonEinstellungen.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -184,7 +184,7 @@
     <value>MiddleCenter</value>
   </data>
   <data name="RadButtonEinstellungen.Location" type="System.Drawing.Point, System.Drawing">
-    <value>464, 410</value>
+    <value>307, 410</value>
   </data>
   <data name="RadButtonEinstellungen.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -211,7 +211,7 @@
     <value>Horizontal</value>
   </data>
   <data name="RadButtonEinstellungen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 42</value>
+    <value>95, 63</value>
   </data>
   <data name="RadButtonEinstellungen.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -238,10 +238,10 @@
     <value />
   </data>
   <data name="RadButtonClientUpdateDatabase.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
+    <value>Bottom, Left</value>
   </data>
   <data name="RadButtonClientUpdateDatabase.Location" type="System.Drawing.Point, System.Drawing">
-    <value>314, 410</value>
+    <value>157, 410</value>
   </data>
   <data name="RadButtonClientUpdateDatabase.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -268,7 +268,7 @@
     <value>Horizontal</value>
   </data>
   <data name="RadButtonClientUpdateDatabase.Size" type="System.Drawing.Size, System.Drawing">
-    <value>144, 42</value>
+    <value>144, 63</value>
   </data>
   <data name="RadButtonClientUpdateDatabase.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -346,7 +346,7 @@
     <value>Bottom, Right</value>
   </data>
   <data name="RadButtonClientAusblenden.Location" type="System.Drawing.Point, System.Drawing">
-    <value>604, 410</value>
+    <value>411, 410</value>
   </data>
   <data name="RadButtonClientAusblenden.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -373,16 +373,13 @@
     <value>Horizontal</value>
   </data>
   <data name="RadButtonClientAusblenden.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 42</value>
+    <value>174, 63</value>
   </data>
   <data name="RadButtonClientAusblenden.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="RadButtonClientAusblenden.Text" xml:space="preserve">
     <value>Hide</value>
-  </data>
-  <data name="RadButtonClientAusblenden.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
-    <value>ImageBeforeText</value>
   </data>
   <data name="&gt;&gt;RadButtonClientAusblenden.Name" xml:space="preserve">
     <value>RadButtonClientAusblenden</value>
@@ -400,7 +397,7 @@
     <value>Bottom, Right</value>
   </data>
   <data name="RadButtonClientNeu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>836, 410</value>
+    <value>771, 410</value>
   </data>
   <data name="RadButtonClientNeu.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -427,16 +424,13 @@
     <value>Horizontal</value>
   </data>
   <data name="RadButtonClientNeu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 42</value>
+    <value>174, 63</value>
   </data>
   <data name="RadButtonClientNeu.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="RadButtonClientNeu.Text" xml:space="preserve">
     <value>New</value>
-  </data>
-  <data name="RadButtonClientNeu.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
-    <value>ImageBeforeText</value>
   </data>
   <data name="&gt;&gt;RadButtonClientNeu.Name" xml:space="preserve">
     <value>RadButtonClientNeu</value>
@@ -454,7 +448,7 @@
     <value>Bottom, Right</value>
   </data>
   <data name="RadButtonClientBearbeiten.Location" type="System.Drawing.Point, System.Drawing">
-    <value>720, 410</value>
+    <value>591, 410</value>
   </data>
   <data name="RadButtonClientBearbeiten.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -481,16 +475,13 @@
     <value>Horizontal</value>
   </data>
   <data name="RadButtonClientBearbeiten.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 42</value>
+    <value>174, 63</value>
   </data>
   <data name="RadButtonClientBearbeiten.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
   <data name="RadButtonClientBearbeiten.Text" xml:space="preserve">
     <value>Edit</value>
-  </data>
-  <data name="RadButtonClientBearbeiten.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
-    <value>ImageBeforeText</value>
   </data>
   <data name="&gt;&gt;RadButtonClientBearbeiten.Name" xml:space="preserve">
     <value>RadButtonClientBearbeiten</value>
@@ -1034,6 +1025,6 @@
     <value>ucoEichprozessauswahlliste</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, EichsoftwareClient, Version=1.0.5196.15454, Culture=neutral, PublicKeyToken=null</value>
+    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.5388.23164, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

@@ -178,7 +178,7 @@ Inherits ucoContent
             Catch ex As System.ObjectDisposedException 'fehler im Clientseitigen Lesemodus (bei bereits abegschickter Eichung)
                 Using context As New EichsoftwareClientdatabaseEntities1
                     'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
-                    'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
+
                     Dim query = From a In context.PruefungStaffelverfahrenNormallast Where a.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID
                     _ListPruefungStaffelverfahrenNormallast = query.ToList
 
@@ -195,7 +195,7 @@ Inherits ucoContent
         FillControls()
 
         If DialogModus = enuDialogModus.lesend Then
-            'falls der Eichvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
+            'falls der Konformitätsbewertungsvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
             For Each Control In RadScrollablePanel1.PanelContainer.Controls
                 Try
                     Control.readonly = True
@@ -1239,7 +1239,7 @@ Inherits ucoContent
                 Dim objServerEichprozess As New EichsoftwareWebservice.ServerEichprozess
                 'auf fehlerhaft Status setzen
                 objEichprozess.FK_Bearbeitungsstatus = 2
-                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Eichbevollmächtigter sich den DS von Anfang angucken muss
+                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Konformitätsbewertungsbevollmächtigter sich den DS von Anfang angucken muss
                 UpdateObject()
                 UeberschreibePruefungsobjekte()
 

@@ -604,7 +604,7 @@
     <value>Horizontal</value>
   </data>
   <data name="RadButtonVersenden.RootElement.ToolTipText" xml:space="preserve">
-    <value>Hiermit lässt sich ein Eichprozess von einem exteren Bevollmächtigten auf schreibbar setzen um korrekturen vorzunehmen</value>
+    <value>Hiermit lässt sich ein Konformitätsbewertungsprozess von einem exteren Bevollmächtigten auf schreibbar setzen um korrekturen vorzunehmen</value>
   </data>
   <data name="RadButtonVersenden.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 50</value>
@@ -664,7 +664,7 @@
     <value>Horizontal</value>
   </data>
   <data name="RadButtonEntsperren.RootElement.ToolTipText" xml:space="preserve">
-    <value>Hiermit lässt sich ein Eichprozess von einem exteren Bevollmächtigten auf schreibbar setzen um korrekturen vorzunehmen</value>
+    <value>Hiermit lässt sich ein Konformitätsbewertungsprozess von einem exteren Bevollmächtigten auf schreibbar setzen um korrekturen vorzunehmen</value>
   </data>
   <data name="RadButtonEntsperren.Size" type="System.Drawing.Size, System.Drawing">
     <value>156, 50</value>
