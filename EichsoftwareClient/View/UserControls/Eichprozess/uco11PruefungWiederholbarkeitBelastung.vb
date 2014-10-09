@@ -57,7 +57,11 @@
 
 
         'Neue EFG Formel nach Herrn Strack
-        Fehler.Text = CDec(Anzeige.Text) - CDec(Last.Text)
+        Try
+            Fehler.Text = CDec(Anzeige.Text) - CDec(Last.Text)
+        Catch ex As Exception
+            'anzeige ist manchmal leer
+        End Try
 
         Dim Faktor As Decimal = 0
         If CDec(Last.Text) <= 500 * CDec(Spezial.Text) Then
