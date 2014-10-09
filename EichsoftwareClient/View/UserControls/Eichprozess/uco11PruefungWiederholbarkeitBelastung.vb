@@ -30,80 +30,66 @@
 
 
     Private Sub CalculateEFG(bereich As String, Wiederholung As String)
-
+        Dim Fehler As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}ErrorLimit{1}", bereich, 1)) 'gibt nur ein control
+        Dim EFG As Telerik.WinControls.UI.RadCheckBox = FindControl(String.Format("RadCheckBoxBereich{0}VEL{1}", bereich, 1)) 'gibt nur ein control
         Dim Last As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}Weight{1}", bereich, Wiederholung))
-        Dim Anzeige As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}DisplayWeight{1}", bereich, Wiederholung))
-        Dim Fehler As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}ErrorLimit{1}", bereich, Wiederholung))
-        Dim EFG As Telerik.WinControls.UI.RadCheckBox = FindControl(String.Format("RadCheckBoxBereich{0}VEL{1}", bereich, Wiederholung))
-        Dim Spezial As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblBereich{0}EFGSpeziallBerechnung", Bereich))
+        Dim Spezial As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblBereich{0}EFGSpeziallBerechnung", bereich))
+        Dim min As Decimal
+        Dim max As Decimal
+        Dim EichwertBereich As Integer = 0
 
+        'Eichwert holen
+        Select Case objEichprozess.Lookup_Waagenart.Art
+            Case Is = "Einbereichswaage"
+                EichwertBereich = 1
+            Case Is = "Zweibereichswaage", "Zweiteilungswaage"
+                EichwertBereich = 2
+            Case Is = "Dreibereichswaage", "Dreiteilungswaage"
+                EichwertBereich = 3
+        End Select
 
-        'neu berechnen der Fehler und EFG
-
-
-        ' Alte Formel
-        'Try
-        '    Fehler.Text = CDec(Anzeige.Text) - CDec(Last.Text)
-        '    If Anzeige.Text > CDec(Last.Text) + CDec(Spezial.Text) Then
-        '        EFG.Checked = False
-        '    ElseIf Anzeige.Text < CDec(Last.Text) - CDec(Spezial.Text) Then
-        '        EFG.Checked = False
-        '    Else
-        '        EFG.Checked = True
-        '    End If
-        'Catch ex As Exception
-        'End Try
+        'EFG Wert Berechnen
+        Spezial.Text = GetEFG(Last.Text, EichwertBereich)
 
 
 
-        'Neue EFG Formel nach Herrn Strack
-        Try
-            Fehler.Text = CDec(Anzeige.Text) - CDec(Last.Text)
-        Catch ex As Exception
-            'anzeige ist manchmal leer
-        End Try
 
-        Dim Faktor As Decimal = 0
-        If CDec(Last.Text) <= 500 * CDec(Spezial.Text) Then
-            Faktor = 0.5
-        ElseIf CDec(Last.Text) > 500 * CDec(Spezial.Text) And CDec(Last.Text) <= 2000 * CDec(Spezial.Text) Then
-            Faktor = 1
-        ElseIf CDec(Last.Text) > 2000 * CDec(Spezial.Text) And CDec(Last.Text) <= 10000 * CDec(Spezial.Text) Then
-            Faktor = 1.5
-        Else
-            Faktor = 1.5
-        End If
+        'EFG durch die Differenz zwischen den 3 Belastungen. Mit anderen Worten: Die Differenz der Wägeergebnisse bei der 3maligen Belastung darf nicht größer sein, als der Absolutwert der für diese Belastung geltenden Fehlergrenze der Waage.
 
-        'sonderfall: EFG durch die Differenz zwischen den 3 Belastungen. Mit anderen Worten: Die Differenz der Wägeergebnisse bei der 3maligen Belastung darf nicht größer sein, als der Absolutwert der für diese Belastung geltenden Fehlergrenze der Waage.
-        Dim wert1 As String = ""
-        Dim wert2 As String = ""
-        Dim wert3 As String = ""
-        'TODO neue Formel implementieren
         Dim AnzeigeMax1 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}DisplayWeight{1}", bereich, 1))
         Dim AnzeigeMax2 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}DisplayWeight{1}", bereich, 2))
         Dim AnzeigeMax3 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}DisplayWeight{1}", bereich, 3))
 
-        wert1 = AnzeigeMax1.Text
-        If wert1 = "" Then
-            wert1 = 0
+
+        Dim listdecimals As New List(Of Decimal)
+        If IsNumeric(AnzeigeMax1.Text) Then
+            listdecimals.Add(AnzeigeMax1.Text)
         End If
-        wert2 = AnzeigeMax2.Text
-        If wert2 = "" Then
-            wert2 = 0
+        If IsNumeric(AnzeigeMax2.Text) Then
+            listdecimals.Add(AnzeigeMax2.Text)
         End If
-        wert3 = AnzeigeMax3.Text
-        If wert3 = "" Then
-            wert3 = 0
+        If IsNumeric(AnzeigeMax3.Text) Then
+            listdecimals.Add(AnzeigeMax3.Text)
         End If
 
+        If listdecimals.Count = 3 Then
+            max = listdecimals.Max
+            min = listdecimals.Min
 
+            Dim differenz As Decimal = max - min
+            Fehler.Text = differenz
+            Try
 
-
-
-        If CDec(Anzeige.Text) < (CDec(Last.Text) - (Faktor * CDec(Spezial.Text))) Or CDec(Anzeige.Text) > ((CDec(Last.Text) + (Faktor * CDec(Spezial.Text)))) Then
-            EFG.Checked = False
+                If differenz <= CDec(Spezial.Text) And differenz >= -CDec(Spezial.Text) Then
+                    EFG.Checked = True
+                Else
+                    EFG.Checked = False
+                End If
+            Catch ex As Exception
+            End Try
         Else
-            EFG.Checked = True
+            Fehler.Text = ""
+            EFG.Checked = False
         End If
 
 
@@ -204,7 +190,7 @@
 
     
 #End Region
-    Private Sub RadCheckBoxBereich1VEL1_MouseClick(sender As Object, e As MouseEventArgs) Handles RadCheckBoxBereich1VEL1.MouseClick, RadCheckBoxBereich1VEL2.MouseClick, RadCheckBoxBereich1VEL3.MouseClick, RadCheckBoxBereich2VEL1.MouseClick, RadCheckBoxBereich2VEL2.MouseClick, RadCheckBoxBereich2VEL3.MouseClick
+    Private Sub RadCheckBoxBereich1VEL1_MouseClick(sender As Object, e As MouseEventArgs) Handles RadCheckBoxBereich1VEL1.MouseClick, RadCheckBoxBereich2VEL1.MouseClick
         CType(sender, Telerik.WinControls.UI.RadCheckBox).Checked = Not CType(sender, Telerik.WinControls.UI.RadCheckBox).Checked
     End Sub
 
@@ -363,20 +349,25 @@
         End If
 
 
+
         Select Case objEichprozess.Lookup_Waagenart.Art
             Case Is = "Einbereichswaage"
-                Eichwert = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1
                 Hoechstlast = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1 * Faktor
+                Eichwert = GetEFG(Hoechstlast, 1)
             Case Is = "Zweibereichswaage", "Zweiteilungswaage"
-                Eichwert = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2
                 Hoechstlast = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 * Faktor
+                Eichwert = GetEFG(Hoechstlast, 2)
             Case Is = "Dreibereichswaage", "Dreiteilungswaage"
-                Eichwert = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3
                 Hoechstlast = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 * Faktor
+                Eichwert = GetEFG(Hoechstlast, 3)
         End Select
 
-        lblBereich1EFGSpeziallBerechnung.Text = Eichwert
-        lblBereich2EFGSpeziallBerechnung.Text = Math.Round(Eichwert * 1.5, _intNullstellenE, MidpointRounding.AwayFromZero)
+        'alte Formel. nun gewichts abhängig
+        'lblBereich1EFGSpeziallBerechnung.Text = Eichwert
+        'lblBereich2EFGSpeziallBerechnung.Text = Math.Round(Eichwert * 1.5, _intNullstellenE, MidpointRounding.AwayFromZero)
+        Dim Spezial As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblBereich{0}EFGSpeziallBerechnung", Bereich))
+        Spezial.Text = Eichwert
+
 
         If Belastung = "halb" Then
             RadTextBoxControlBereich1Weight1.Text = Hoechstlast
@@ -449,8 +440,8 @@
 
         Dim Last As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}Weight{1}", Bereich, Wiederholung))
         Dim Anzeige As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}DisplayWeight{1}", Bereich, Wiederholung))
-        Dim Fehler As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}ErrorLimit{1}", Bereich, Wiederholung))
-        Dim EFG As Telerik.WinControls.UI.RadCheckBox = FindControl(String.Format("RadCheckBoxBereich{0}VEL{1}", Bereich, Wiederholung))
+        Dim Fehler As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}ErrorLimit{1}", Bereich, 1)) 'gibt nur ein Fehler Control
+        Dim EFG As Telerik.WinControls.UI.RadCheckBox = FindControl(String.Format("RadCheckBoxBereich{0}VEL{1}", Bereich, 1)) 'gibt nur ein EFG Control
         Dim Spezial As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblBereich{0}EFGSpeziallBerechnung", Bereich))
 
         PObjPruefung.Last = Last.Text
@@ -471,18 +462,13 @@
         Me.AbortSaveing = False
         'wenn sie sie sichtbar ist (normalien verfahren) muss validiert werden
         If RadGroupBoxBereich1.Visible = True Then
-            If RadCheckBoxBereich1VEL1.Checked = False And RadCheckBoxBereich1VEL1.Visible = True Or _
-            RadCheckBoxBereich1VEL2.Checked = False And RadCheckBoxBereich1VEL2.Visible = True Or _
-            RadCheckBoxBereich1VEL3.Checked = False And RadCheckBoxBereich1VEL3.Visible = True Then
+            If RadCheckBoxBereich1VEL1.Checked = False And RadCheckBoxBereich1VEL1.Visible = True Then
                 AbortSaveing = True
 
             End If
         End If
 
-
-        If RadCheckBoxBereich2VEL1.Checked = False And RadCheckBoxBereich2VEL1.Visible = True Or _
-              RadCheckBoxBereich2VEL2.Checked = False And RadCheckBoxBereich2VEL2.Visible = True Or _
-              RadCheckBoxBereich2VEL3.Checked = False And RadCheckBoxBereich2VEL3.Visible = True Then
+        If RadCheckBoxBereich2VEL1.Checked = False And RadCheckBoxBereich2VEL1.Visible = True Then
             AbortSaveing = True
         End If
 

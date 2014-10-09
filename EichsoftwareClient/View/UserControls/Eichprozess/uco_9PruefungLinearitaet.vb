@@ -517,29 +517,7 @@ Public Class uco_9PruefungLinearitaet
 
     End Function
 
-    ''' <summary>
-    ''' Berechnet die Eichfehlergrenzen anhand der Last (wählt somit den EFG Bereich aus und des Eichwerts bei Mehrbereichswaagen entpsrechend dem Bereich)
-    ''' </summary>
-    ''' <param name="Gewicht"></param>
-    ''' <param name="Bereich"></param>
-    ''' <returns></returns>
-    ''' <remarks></remarks>
-    Private Function GetEFG(ByVal Gewicht As Decimal, ByVal Bereich As Integer) As Decimal
-        Try
-            Dim value = objEichprozess.Kompatiblitaetsnachweis.GetType().GetProperty(String.Format("Kompatiblitaet_Waage_Eichwert{0}", Bereich)).GetValue(objEichprozess.Kompatiblitaetsnachweis, Nothing)
-
-            If Gewicht > 2000 Then
-                Return Math.Round(CDec(value * 1.5), _intNullstellenE, MidpointRounding.AwayFromZero)
-            ElseIf Gewicht > 500 Then
-                Return Math.Round(CDec(value * 1), _intNullstellenE, MidpointRounding.AwayFromZero)
-            Else
-                Return Math.Round(CDec(value * 0.5), _intNullstellenE, MidpointRounding.AwayFromZero)
-            End If
-        Catch e As Exception
-            Return -1
-        End Try
-    End Function
-
+  
     ''' <summary>
     ''' je nach anzahl von eingestellten Messpunkten werden die panels ein oder ausgeblendet
     ''' </summary>
@@ -569,7 +547,7 @@ Public Class uco_9PruefungLinearitaet
     Private Sub BerechneUndWeiseZu(ByRef FehlerGrenzeTextbox As Telerik.WinControls.UI.RadTextBoxControl, _
     ByRef AnzeigeGewichtTextbox As Telerik.WinControls.UI.RadTextBoxControl, _
     ByRef GewichtTextbox As Telerik.WinControls.UI.RadTextBoxControl, _
-    ByRef Checkbox As Telerik.WinControls.UI.RadCheckBox)
+    ByRef Checkbox As Telerik.WinControls.UI.RadCheckBox, ByVal Bereich As Integer)
 
         If _suspendEvents = False Then
             AktuellerStatusDirty = True
@@ -583,13 +561,13 @@ Public Class uco_9PruefungLinearitaet
         End If
 
 
-        'Alte Formel
+        'Hier gibt es kein EFG Feld. Deswegen wird für jeden DS einzeln durch GETEFG der EFG Wert errrechnet
         Try
             FehlerGrenzeTextbox.Text = CDec(AnzeigeGewichtTextbox.Text) - CDec(GewichtTextbox.Text)
 
-            If CDec(AnzeigeGewichtTextbox.Text) > CDec(GewichtTextbox.Text) + GetEFG(CDec(GewichtTextbox.Text), 1) Then
+            If CDec(AnzeigeGewichtTextbox.Text) > CDec(GewichtTextbox.Text) + GetEFG(CDec(GewichtTextbox.Text), bereich) Then
                 Checkbox.Checked = False
-            ElseIf CDec(AnzeigeGewichtTextbox.Text) < CDec(GewichtTextbox.Text) - GetEFG(CDec(GewichtTextbox.Text), 1) Then
+            ElseIf CDec(AnzeigeGewichtTextbox.Text) < CDec(GewichtTextbox.Text) - GetEFG(CDec(GewichtTextbox.Text), bereich) Then
                 Checkbox.Checked = False
             Else
                 Checkbox.Checked = True
@@ -631,7 +609,7 @@ Public Class uco_9PruefungLinearitaet
             Not GewichtTextbox Is Nothing AndAlso _
             Not Checkbox Is Nothing Then
 
-            BerechneUndWeiseZu(FehlerGrenzeTextbox, AnzeigeGewichtTextbox, GewichtTextbox, Checkbox)
+            BerechneUndWeiseZu(FehlerGrenzeTextbox, AnzeigeGewichtTextbox, GewichtTextbox, Checkbox, Bereich)
         End If
 
     End Sub
@@ -664,7 +642,7 @@ Public Class uco_9PruefungLinearitaet
                 Not GewichtTextbox Is Nothing AndAlso _
                 Not Checkbox Is Nothing Then
 
-                BerechneUndWeiseZu(FehlerGrenzeTextbox, AnzeigeGewichtTextbox, GewichtTextbox, Checkbox)
+                BerechneUndWeiseZu(FehlerGrenzeTextbox, AnzeigeGewichtTextbox, GewichtTextbox, Checkbox, Bereich)
             End If
         Next
 
@@ -701,7 +679,7 @@ Public Class uco_9PruefungLinearitaet
                     Not GewichtTextbox Is Nothing AndAlso _
                     Not Checkbox Is Nothing Then
 
-                    BerechneUndWeiseZu(FehlerGrenzeTextbox, AnzeigeGewichtTextbox, GewichtTextbox, Checkbox)
+                    BerechneUndWeiseZu(FehlerGrenzeTextbox, AnzeigeGewichtTextbox, GewichtTextbox, Checkbox, Bereich)
                 Else
                     Exit For 'überspringen der folgenden Messpunkte
                 End If

@@ -131,7 +131,7 @@
   <data name="lblBereich1EFGSpezial.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit3.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+  <data name="lblBereich1FehlerGrenzen.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
   <data name="lblBereich2EFGSpeziallBerechnung.Text" xml:space="preserve">
@@ -141,8 +141,8 @@
   <data name="PanelBereich1WZ2.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 110</value>
   </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit3.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
+  <data name="RadTextBoxControlBereich2DisplayWeight1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="RadTextBoxControlBereich2DisplayWeight2.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
@@ -150,35 +150,29 @@
   <data name="&gt;&gt;RadTextBoxControlBereich2DisplayWeight3.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="lblBereich1EFGSpezial.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadTextBoxControlBereich1Weight1.RootElement.ToolTipText" xml:space="preserve">
     <value />
-  </data>
-  <data name="lblBereich1EFGSpeziallBerechnung.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="&gt;&gt;PictureBox31.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="RadCheckBoxBereich1VEL1.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="RadGroupBoxBereich1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="RadTextBoxControlBereich2ErrorLimit1.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
   </data>
-  <data name="&gt;&gt;RadCheckBoxBereich1VEL2.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="&gt;&gt;RadTextBoxControlBereich1DisplayWeight3.Parent" xml:space="preserve">
+    <value>PanelBereich1WZ3</value>
   </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit3.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
+  <data name="&gt;&gt;lblBereich2AnzeigeGewicht.Name" xml:space="preserve">
+    <value>lblBereich2AnzeigeGewicht</value>
+  </data>
+  <data name="RadGroupBoxPruefungAussermittigeBelastung.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="PanelBereich2WZ3.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 141</value>
   </data>
-  <data name="RadCheckBoxBereich2VEL3.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="RadLabel2.TabIndex" type="System.Int32, mscorlib">
+    <value>68</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2Weight3.Parent" xml:space="preserve">
     <value>PanelBereich2WZ3</value>
@@ -192,9 +186,6 @@
   <data name="RadTextBoxControlBereich1ErrorLimit1.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit2.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="RadTextBoxControlBereich1DisplayWeight3.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -204,23 +195,17 @@
   <data name="RadTextBoxControlBereich2Weight3.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="RadTextBoxControlBereich1Weight3.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadTextBoxControlBereich2Weight2.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="&gt;&gt;RadScrollablePanel1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadScrollablePanel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
   <data name="&gt;&gt;PictureBox77.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="RadLabel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 18</value>
   </data>
   <data name="RadTextBoxControlBereich2DisplayWeight3.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlBereich2Weight2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+  <data name="RadLabel2.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="RadButtonShowEFG2.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -229,15 +214,9 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="lblBereich2FehlerGrenzen.Location" type="System.Drawing.Point, System.Drawing">
-    <value>248, 40</value>
+    <value>75, 181</value>
   </data>
-  <data name="&gt;&gt;PictureBox74.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblBereich1Gewicht.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblBereich2EFGSpeziallBerechnung.RootElement.AccessibleName" xml:space="preserve">
+  <data name="lblBereich2EFGSpeziallBerechnung.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="lblBereich1EFGSpeziallBerechnung.Text" xml:space="preserve">
@@ -246,11 +225,8 @@
   <data name="RadTextBoxControlBereich2DisplayWeight2.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="lblBereich2FehlerGrenzen.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="&gt;&gt;lblBereich1FehlerGrenzen.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="lblBereich2EFGSpezial.Text" xml:space="preserve">
     <value>VEL</value>
@@ -261,8 +237,8 @@
   <data name="&gt;&gt;PanelBereich2WZ3.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;RadCheckBoxBereich1VEL3.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="RadLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 18</value>
   </data>
   <data name="lblBereich2AnzeigeGewicht.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -270,14 +246,17 @@
   <data name="lblBereich2EFGSpezial.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
+  <data name="lblBereich2Gewicht.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1Weight3.Parent" xml:space="preserve">
     <value>PanelBereich1WZ3</value>
   </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit3.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="&gt;&gt;PanelBereich2WZ1.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
-  <data name="PictureBox34.Location" type="System.Drawing.Point, System.Drawing">
-    <value>209, 3</value>
+  <data name="RadGroupBoxBereich2.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="lblBereich1EFGSpeziallBerechnung.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
@@ -285,8 +264,8 @@
   <data name="RadGroupBoxBereich2.Location" type="System.Drawing.Point, System.Drawing">
     <value>400, 3</value>
   </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit2.MaxLength" type="System.Int32, mscorlib">
-    <value>20</value>
+  <data name="RadTextBoxControlBereich1DisplayWeight2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;lblBereich2FehlerGrenzen.Name" xml:space="preserve">
     <value>lblBereich2FehlerGrenzen</value>
@@ -300,34 +279,19 @@
   <data name="&gt;&gt;lblBereich1FehlerGrenzen.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich1</value>
   </data>
-  <data name="RadGroupBoxBereich2.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="RadTextBoxControlBereich1DisplayWeight2.Location" type="System.Drawing.Point, System.Drawing">
     <value>120, 3</value>
-  </data>
-  <data name="lblBereich2EFGSpezial.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt, style=Bold</value>
   </data>
   <data name="RadTextBoxControlBereich2Weight3.Size" type="System.Drawing.Size, System.Drawing">
     <value>78, 20</value>
   </data>
-  <data name="PictureBox75.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="PictureBox76.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="RadTextBoxControlBereich2Weight1.RootElement.KeyTip" xml:space="preserve">
     <value />
   </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit1.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="lblBereich2AnzeigeGewicht.RootElement.KeyTip" xml:space="preserve">
+    <value />
   </data>
   <data name="&gt;&gt;FlowLayoutPanel1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="RadCheckBoxBereich2VEL3.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
   <data name="&gt;&gt;PictureBox29.Type" xml:space="preserve">
@@ -336,26 +300,14 @@
   <data name="RadTextBoxControlBereich1ErrorLimit1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit3.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="lblBereich1EFGSpezial.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt, style=Bold</value>
   </data>
   <data name="RadTextBoxControlBereich1DisplayWeight2.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="&gt;&gt;lblBereich1EFGSpeziallBerechnung.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;PictureBox80.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
   <data name="RadTextBoxControlBereich2DisplayWeight1.RootElement.ToolTipText" xml:space="preserve">
     <value />
-  </data>
-  <data name="RadCheckBoxBereich2VEL2.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxBereich1.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
@@ -363,8 +315,11 @@
   <data name="RadTextBoxControlBereich2Weight3.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
   </data>
+  <data name="RadLabel1.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
   <data name="lblBereich2FehlerGrenzen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 18</value>
+    <value>88, 18</value>
   </data>
   <data name="FlowLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -375,8 +330,8 @@
   <data name="&gt;&gt;FlowLayoutPanel1.Name" xml:space="preserve">
     <value>FlowLayoutPanel1</value>
   </data>
-  <data name="PictureBox75.TabIndex" type="System.Int32, mscorlib">
-    <value>58</value>
+  <data name="RadTextBoxControlBereich2DisplayWeight2.MaxLength" type="System.Int32, mscorlib">
+    <value>20</value>
   </data>
   <data name="RadTextBoxControlBereich1DisplayWeight2.Size" type="System.Drawing.Size, System.Drawing">
     <value>78, 20</value>
@@ -387,41 +342,29 @@
   <data name="RadGroupBoxBereich1.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit1.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="&gt;&gt;PanelBereich2WZ3.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
   <data name="RadTextBoxControlBereich2DisplayWeight1.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
-  </data>
-  <data name="RadCheckBoxBereich2VEL1.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
   </data>
   <data name="RadGroupBoxBereich2.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="PictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="RadCheckBoxBereich1VEL1.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;lblBereich2EFGSpeziallBerechnung.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMaskedEditBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="lblBereich1EFGSpeziallBerechnung.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
-  <data name="&gt;&gt;lblBereich2EFGSpezial.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="&gt;&gt;RadGroupBoxBereich2.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;PictureBox32.Name" xml:space="preserve">
-    <value>PictureBox32</value>
-  </data>
-  <data name="RadGroupBoxPruefungAussermittigeBelastung.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 18, 2, 2</value>
+  <data name="RadTextBoxControlBereich2Weight2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2DisplayWeight3.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>1</value>
   </data>
-  <data name="RadCheckBoxBereich2VEL2.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="lblBereich1EFGSpezial.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
   </data>
   <data name="lblBereich1AnzeigeGewicht.RootElement.KeyTip" xml:space="preserve">
     <value />
@@ -432,17 +375,11 @@
   <data name="RadCheckBoxBereich1VEL1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1DisplayWeight3.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="lblBereich1FehlerGrenzen.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
   <data name="&gt;&gt;PictureBox77.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="lblBereich2FehlerGrenzen.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -456,26 +393,23 @@
   <data name="&gt;&gt;RadTextBoxControlBereich2DisplayWeight1.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 20</value>
-  </data>
   <data name="lblBereich2FehlerGrenzen.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
   <data name="lblBereich1AnzeigeGewicht.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadGroupBoxBereich1.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 18, 2, 2</value>
-  </data>
   <data name="RadGroupBoxPruefungAussermittigeBelastung.Size" type="System.Drawing.Size, System.Drawing">
     <value>830, 338</value>
   </data>
-  <data name="PanelBereich2WZ1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>376, 25</value>
+  <data name="&gt;&gt;RadScrollablePanel1.PanelContainer.Parent" xml:space="preserve">
+    <value>RadScrollablePanel1</value>
   </data>
   <data name="&gt;&gt;PanelBereich1WZ2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="RadLabel2.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="RadTextBoxControlBereich2ErrorLimit1.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -488,9 +422,6 @@
   </data>
   <data name="RadCheckBoxBereich2VEL1.RootElement.ToolTipText" xml:space="preserve">
     <value />
-  </data>
-  <data name="PictureBox32.TabIndex" type="System.Int32, mscorlib">
-    <value>57</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1DisplayWeight3.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
@@ -507,22 +438,22 @@
   <data name="RadScrollablePanel1.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2ErrorLimit2.Name" xml:space="preserve">
-    <value>RadTextBoxControlBereich2ErrorLimit2</value>
-  </data>
   <data name="RadTextBoxControlBereich2DisplayWeight2.Location" type="System.Drawing.Point, System.Drawing">
     <value>120, 3</value>
   </data>
   <data name="PanelBereich1WZ2.TabIndex" type="System.Int32, mscorlib">
     <value>61</value>
   </data>
-  <data name="PictureBox73.Size" type="System.Drawing.Size, System.Drawing">
-    <value>18, 21</value>
+  <data name="&gt;&gt;lblBereich2AnzeigeGewicht.Parent" xml:space="preserve">
+    <value>RadGroupBoxBereich2</value>
   </data>
   <data name="RadTextBoxControlBereich2DisplayWeight3.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
   <data name="lblBereich1FehlerGrenzen.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadLabel1.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="lblBereich1AnzeigeGewicht.Location" type="System.Drawing.Point, System.Drawing">
@@ -537,6 +468,9 @@
   <data name="&gt;&gt;PanelBereich2WZ2.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich2</value>
   </data>
+  <data name="&gt;&gt;RadCheckBoxBereich1VEL1.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
   <data name="lblBereich1EFGSpeziallBerechnung.RootElement.KeyTip" xml:space="preserve">
     <value />
   </data>
@@ -549,35 +483,38 @@
   <data name="&gt;&gt;lblBereich2Gewicht.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="PictureBox34.TabIndex" type="System.Int32, mscorlib">
-    <value>57</value>
+  <data name="PanelBereich2WZ1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>376, 25</value>
   </data>
   <data name="&gt;&gt;lblBereich1AnzeigeGewicht.Name" xml:space="preserve">
     <value>lblBereich1AnzeigeGewicht</value>
   </data>
-  <data name="RadTextBoxControlBereich1Weight2.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="lblBereich1AnzeigeGewicht.RootElement.ToolTipText" xml:space="preserve">
+    <value />
   </data>
   <data name="RadScrollablePanel1.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
   <data name="lblBereich1FehlerGrenzen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 18</value>
+    <value>88, 18</value>
   </data>
   <data name="RadTextBoxControlBereich2Weight2.RootElement.KeyTip" xml:space="preserve">
     <value />
   </data>
+  <data name="RadTextBoxControlBereich1Weight3.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2DisplayWeight1.Name" xml:space="preserve">
     <value>RadTextBoxControlBereich2DisplayWeight1</value>
-  </data>
-  <data name="&gt;&gt;PictureBox31.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="lblBereich2FehlerGrenzen.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
   <data name="lblBereich2FehlerGrenzen.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
+  </data>
+  <data name="lblBereich2AnzeigeGewicht.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="lblBereich2AnzeigeGewicht.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -586,25 +523,16 @@
     <value />
   </data>
   <data name="PictureBox30.Location" type="System.Drawing.Point, System.Drawing">
-    <value>209, 3</value>
+    <value>180, 181</value>
   </data>
-  <data name="RadGroupBoxBereich2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>391, 214</value>
+  <data name="lblBereich1EFGSpezial.Text" xml:space="preserve">
+    <value>VEL</value>
   </data>
   <data name="lblBereich2Gewicht.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="RadCheckBoxBereich2VEL2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1DisplayWeight2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit3.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="RadTextBoxControlBereich1Weight1.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
-  </data>
-  <data name="RadCheckBoxBereich1VEL3.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
   </data>
   <data name="&gt;&gt;lblBereich1FehlerGrenzen.Name" xml:space="preserve">
     <value>lblBereich1FehlerGrenzen</value>
@@ -621,53 +549,29 @@
   <data name="RadTextBoxControlBereich1DisplayWeight3.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;PictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="RadButtonShowEFG2.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit3.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich2VEL2.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="RadGroupBoxBereich1.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
   </data>
   <data name="lblBereich1Gewicht.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2ErrorLimit1.Parent" xml:space="preserve">
-    <value>PanelBereich2WZ1</value>
-  </data>
   <data name="&gt;&gt;lblBereich2Gewicht.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>12</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1Weight2.Name" xml:space="preserve">
     <value>RadTextBoxControlBereich1Weight2</value>
   </data>
-  <data name="RadCheckBoxBereich2VEL2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 15</value>
+  <data name="RadTextBoxControlBereich2ErrorLimit1.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
   </data>
   <data name="RadTextBoxControlBereich2Weight1.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
-  <data name="PictureBox76.Size" type="System.Drawing.Size, System.Drawing">
-    <value>18, 21</value>
-  </data>
-  <data name="RadCheckBoxBereich2VEL3.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2ErrorLimit3.Name" xml:space="preserve">
-    <value>RadTextBoxControlBereich2ErrorLimit3</value>
-  </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit2.RootElement.KeyTip" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;PictureBox80.ZOrder" xml:space="preserve">
+    <value>11</value>
   </data>
   <data name="RadTextBoxControlBereich2DisplayWeight2.Size" type="System.Drawing.Size, System.Drawing">
     <value>78, 20</value>
-  </data>
-  <data name="RadCheckBoxBereich2VEL2.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="lblBereich1AnzeigeGewicht.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -675,7 +579,7 @@
   <data name="RadTextBoxControlBereich2DisplayWeight3.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="RadScrollablePanel1.RootElement.AccessibleName" xml:space="preserve">
+  <data name="RadScrollablePanel1.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="RadTextBoxControlBereich1Weight1.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
@@ -690,6 +594,12 @@
   <data name="lblBereich1FehlerGrenzen.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
+  <data name="RadLabel2.Text" xml:space="preserve">
+    <value>= ∆P [kg]</value>
+  </data>
+  <data name="RadButtonShowEFG2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt</value>
+  </data>
   <data name="RadTextBoxControlBereich2ErrorLimit1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
@@ -697,10 +607,7 @@
     <value>False</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2DisplayWeight1.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="PictureBox75.Location" type="System.Drawing.Point, System.Drawing">
-    <value>327, 3</value>
+    <value>1</value>
   </data>
   <data name="RadTextBoxControlBereich2Weight1.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -714,53 +621,38 @@
   <data name="RadGroupBoxBereich1.Size" type="System.Drawing.Size, System.Drawing">
     <value>391, 214</value>
   </data>
-  <data name="PictureBox75.Size" type="System.Drawing.Size, System.Drawing">
-    <value>18, 21</value>
-  </data>
   <data name="&gt;&gt;PictureBox77.Parent" xml:space="preserve">
-    <value>PanelBereich2WZ1</value>
+    <value>RadGroupBoxBereich2</value>
   </data>
   <data name="RadButtonShowEFG2.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
-  <data name="lblBereich2AnzeigeGewicht.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2Weight3.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="RadTextBoxControlBereich1Weight3.RootElement.ToolTipText" xml:space="preserve">
+  <data name="RadGroupBoxBereich2.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="PictureBox78.Location" type="System.Drawing.Point, System.Drawing">
-    <value>209, 3</value>
+    <value>176, 178</value>
   </data>
-  <data name="lblBereich2Gewicht.RootElement.KeyTip" xml:space="preserve">
-    <value />
+  <data name="RadScrollablePanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>843, 343</value>
   </data>
-  <data name="&gt;&gt;PictureBox32.Parent" xml:space="preserve">
-    <value>PanelBereich1WZ2</value>
+  <data name="&gt;&gt;PanelBereich2WZ3.ZOrder" xml:space="preserve">
+    <value>10</value>
   </data>
-  <data name="RadTextBoxControlBereich2DisplayWeight3.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="RadLabel1.Text" xml:space="preserve">
+    <value>= ∆P [kg]</value>
   </data>
   <data name="&gt;&gt;lblBereich2EFGSpezial.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2DisplayWeight2.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="lblBereich1EFGSpezial.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
+    <value>1</value>
   </data>
   <data name="RadTextBoxControlBereich1Weight3.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
-  </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit2.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>233, 3</value>
   </data>
   <data name="RadTextBoxControlBereich2Weight3.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -784,28 +676,13 @@
     <value>2</value>
   </data>
   <data name="PictureBox77.Location" type="System.Drawing.Point, System.Drawing">
-    <value>327, 3</value>
-  </data>
-  <data name="RadCheckBoxBereich2VEL3.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;PictureBox34.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit2.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+    <value>346, 178</value>
   </data>
   <data name="RadTextBoxControlBereich1DisplayWeight3.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
-  <data name="RadCheckBoxBereich2VEL1.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="PanelBereich1WZ3.TabIndex" type="System.Int32, mscorlib">
     <value>62</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxBereich2VEL3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadTextBoxControlBereich1DisplayWeight1.Size" type="System.Drawing.Size, System.Drawing">
     <value>78, 20</value>
@@ -813,32 +690,23 @@
   <data name="RadButtonShowEFG2.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
-  <data name="RadCheckBoxBereich1VEL3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 15</value>
-  </data>
   <data name="PanelBereich2WZ2.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 110</value>
   </data>
   <data name="&gt;&gt;lblBereich2AnzeigeGewicht.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>13</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1DisplayWeight2.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="PictureBox74.Size" type="System.Drawing.Size, System.Drawing">
-    <value>18, 21</value>
-  </data>
   <data name="lblBereich2AnzeigeGewicht.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxBereich2VEL1.ZOrder" xml:space="preserve">
-    <value>5</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1Weight3.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="lblBereich2Gewicht.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
   </data>
   <data name="lblBereich2FehlerGrenzen.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -847,22 +715,10 @@
     <value />
   </data>
   <data name="&gt;&gt;PictureBox30.Parent" xml:space="preserve">
-    <value>PanelBereich1WZ1</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxBereich2VEL2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="lblBereich1Gewicht.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 40</value>
+    <value>RadGroupBoxBereich1</value>
   </data>
   <data name="lblBereich1EFGSpezial.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
-  </data>
-  <data name="RadCheckBoxBereich1VEL2.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit3.MaxLength" type="System.Int32, mscorlib">
-    <value>20</value>
   </data>
   <data name="RadScrollablePanel1.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
@@ -872,9 +728,6 @@
   </data>
   <data name="RadGroupBoxBereich1.RootElement.ToolTipText" xml:space="preserve">
     <value />
-  </data>
-  <data name="PictureBox33.Size" type="System.Drawing.Size, System.Drawing">
-    <value>18, 21</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanel1.Name" xml:space="preserve">
     <value>RadScrollablePanel1</value>
@@ -889,19 +742,19 @@
     <value>lblBereich2EFGSpezial</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, EichsoftwareClient, Version=1.0.5387.21297, Culture=neutral, PublicKeyToken=null</value>
+    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.5395.23221, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="RadLabel1.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="lblBereich2Gewicht.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
-  <data name="RadCheckBoxBereich2VEL3.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="PictureBox31.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="RadButtonShowEFG2.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 55</value>
+  </data>
+  <data name="RadLabel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>284, 178</value>
   </data>
   <data name="RadTextBoxControlBereich2DisplayWeight2.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -927,26 +780,14 @@
   <data name="lblBereich2AnzeigeGewicht.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2ErrorLimit3.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxBereich2VEL1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="RadCheckBoxBereich1VEL2.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadGroupBoxPruefungAussermittigeBelastung.RootElement.AccessibleName" xml:space="preserve">
+  <data name="RadGroupBoxPruefungAussermittigeBelastung.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="&gt;&gt;PictureBox29.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich1VEL1.Parent" xml:space="preserve">
-    <value>PanelBereich1WZ1</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxBereich1VEL2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>RadGroupBoxBereich1</value>
   </data>
   <data name="lblBereich1Gewicht.TabIndex" type="System.Int32, mscorlib">
     <value>63</value>
@@ -963,11 +804,8 @@
   <data name="PanelBereich2WZ3.Size" type="System.Drawing.Size, System.Drawing">
     <value>376, 25</value>
   </data>
-  <data name="&gt;&gt;PictureBox31.Name" xml:space="preserve">
-    <value>PictureBox31</value>
-  </data>
-  <data name="RadCheckBoxBereich2VEL1.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
+  <data name="lblBereich2Gewicht.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="RadTextBoxControlBereich1Weight3.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -975,8 +813,8 @@
   <data name="RadCheckBoxBereich2VEL1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="PictureBox32.Size" type="System.Drawing.Size, System.Drawing">
-    <value>18, 21</value>
+  <data name="&gt;&gt;RadTextBoxControlBereich1DisplayWeight1.Name" xml:space="preserve">
+    <value>RadTextBoxControlBereich1DisplayWeight1</value>
   </data>
   <data name="lblBereich2FehlerGrenzen.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -984,10 +822,10 @@
   <data name="PictureBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>18, 21</value>
   </data>
-  <data name="RadCheckBoxBereich1VEL2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>351, 3</value>
+  <data name="&gt;&gt;RadCheckBoxBereich2VEL1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="lblBereich1EFGSpeziallBerechnung.RootElement.AccessibleName" xml:space="preserve">
+  <data name="lblBereich1EFGSpeziallBerechnung.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="RadTextBoxControlBereich1DisplayWeight3.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
@@ -995,9 +833,6 @@
   </data>
   <data name="lblBereich2Gewicht.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
-  </data>
-  <data name="&gt;&gt;PictureBox34.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="&gt;&gt;PictureBox1.Name" xml:space="preserve">
     <value>PictureBox1</value>
@@ -1008,23 +843,14 @@
   <data name="RadTextBoxControlBereich1DisplayWeight3.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="&gt;&gt;PictureBox74.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2Weight2.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>0</value>
   </data>
-  <data name="RadGroupBoxBereich1.RootElement.AccessibleName" xml:space="preserve">
+  <data name="RadGroupBoxBereich1.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
-  </data>
-  <data name="RadCheckBoxBereich1VEL3.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
   </data>
   <data name="lblBereich1AnzeigeGewicht.TabIndex" type="System.Int32, mscorlib">
     <value>64</value>
-  </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 20</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2Weight3.Name" xml:space="preserve">
     <value>RadTextBoxControlBereich2Weight3</value>
@@ -1035,26 +861,17 @@
   <data name="RadTextBoxControlBereich2Weight3.RootElement.KeyTip" xml:space="preserve">
     <value />
   </data>
-  <data name="PictureBox76.TabIndex" type="System.Int32, mscorlib">
-    <value>57</value>
-  </data>
   <data name="&gt;&gt;PanelBereich1WZ2.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2Weight2.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="RadGroupBoxBereich2.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 18, 2, 2</value>
-  </data>
-  <data name="&gt;&gt;PictureBox73.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="RadCheckBoxBereich1VEL3.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="&gt;&gt;RadLabel2.Name" xml:space="preserve">
+    <value>RadLabel2</value>
   </data>
   <data name="RadCheckBoxBereich1VEL1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>351, 3</value>
+    <value>371, 183</value>
   </data>
   <data name="PanelBereich2WZ2.Size" type="System.Drawing.Size, System.Drawing">
     <value>376, 25</value>
@@ -1068,10 +885,7 @@
   <data name="lblBereich1EFGSpeziallBerechnung.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
-  <data name="RadTextBoxControlBereich2Weight3.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit2.RootElement.AngleTransform" type="System.Single, mscorlib">
+  <data name="RadTextBoxControlBereich2Weight2.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
   <data name="RadTextBoxControlBereich1DisplayWeight1.RootElement.FlipText" type="System.Boolean, mscorlib">
@@ -1086,20 +900,20 @@
   <data name="lblBereich1FehlerGrenzen.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt, style=Bold</value>
   </data>
-  <data name="&gt;&gt;lblBereich2AnzeigeGewicht.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="lblBereich1EFGSpezial.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="lblBereich2FehlerGrenzen.Text" xml:space="preserve">
-    <value>error limit [kg]</value>
+    <value> Pmax - Pmin =</value>
   </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit2.MaxLength" type="System.Int32, mscorlib">
-    <value>20</value>
+  <data name="lblBereich1Gewicht.RootElement.ToolTipText" xml:space="preserve">
+    <value />
   </data>
   <data name="&gt;&gt;PictureBox77.Name" xml:space="preserve">
     <value>PictureBox77</value>
   </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit3.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="RadLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>288, 181</value>
   </data>
   <data name="RadTextBoxControlBereich1DisplayWeight1.Location" type="System.Drawing.Point, System.Drawing">
     <value>120, 3</value>
@@ -1107,17 +921,8 @@
   <data name="RadTextBoxControlBereich1Weight3.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
   </data>
-  <data name="lblBereich2FehlerGrenzen.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2ErrorLimit3.Parent" xml:space="preserve">
-    <value>PanelBereich2WZ3</value>
-  </data>
   <data name="lblBereich2AnzeigeGewicht.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
-  </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit2.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
   </data>
   <data name="RadTextBoxControlBereich1Weight1.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1128,14 +933,8 @@
   <data name="RadTextBoxControlBereich2DisplayWeight1.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
-  <data name="PictureBox31.TabIndex" type="System.Int32, mscorlib">
-    <value>58</value>
-  </data>
   <data name="RadScrollablePanel1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
-  </data>
-  <data name="PictureBox32.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="RadTextBoxControlBereich2DisplayWeight3.RootElement.KeyTip" xml:space="preserve">
     <value />
@@ -1149,14 +948,11 @@
   <data name="RadTextBoxControlBereich1Weight3.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
-  <data name="lblBereich2EFGSpeziallBerechnung.RootElement.AccessibleDescription" xml:space="preserve">
+  <data name="lblBereich2EFGSpeziallBerechnung.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="&gt;&gt;RadCheckBoxBereich2VEL3.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich1Weight2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="lblBereich2FehlerGrenzen.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
   </data>
   <data name="RadGroupBoxBereich1.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -1170,29 +966,17 @@
   <data name="RadTextBoxControlBereich2Weight2.Size" type="System.Drawing.Size, System.Drawing">
     <value>78, 20</value>
   </data>
-  <data name="RadCheckBoxBereich1VEL2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich1ErrorLimit2.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <data name="RadTextBoxControlBereich1DisplayWeight1.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="lblBereich1EFGSpezial.RootElement.AccessibleDescription" xml:space="preserve">
-    <value />
-  </data>
   <data name="RadTextBoxControlBereich1ErrorLimit1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>233, 3</value>
+    <value>204, 181</value>
   </data>
   <data name="RadTextBoxControlBereich1Weight1.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
   <data name="&gt;&gt;PanelBereich1WZ2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="RadCheckBoxBereich2VEL3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 15</value>
+    <value>5</value>
   </data>
   <data name="lblBereich1EFGSpezial.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -1201,19 +985,13 @@
     <value>0</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2ErrorLimit1.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxBereich2VEL2.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="PictureBox34.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+    <value>7</value>
   </data>
   <data name="lblBereich2EFGSpeziallBerechnung.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit3.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="&gt;&gt;RadLabel2.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;PictureBox78.Name" xml:space="preserve">
     <value>PictureBox78</value>
@@ -1230,30 +1008,26 @@
   <data name="&gt;&gt;lblBereich1EFGSpeziallBerechnung.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich1</value>
   </data>
-  <data name="&gt;&gt;RadCheckBoxBereich1VEL3.Parent" xml:space="preserve">
-    <value>PanelBereich1WZ3</value>
-  </data>
-  <assembly alias="Telerik.WinControls.UI" name="Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
-  <data name="lblBereich2EFGSpeziallBerechnung.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
-    <value>Numeric</value>
+  <data name="&gt;&gt;RadGroupBoxBereich1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="RadTextBoxControlBereich2Weight3.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="RadTextBoxControlBereich2DisplayWeight1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="RadGroupBoxBereich1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit2.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="RadTextBoxControlBereich1DisplayWeight3.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="RadTextBoxControlBereich1DisplayWeight1.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
-  <data name="PictureBox73.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="RadScrollablePanel1.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
+  </data>
+  <data name="lblBereich1Gewicht.RootElement.KeyTip" xml:space="preserve">
+    <value />
   </data>
   <data name="&gt;&gt;lblBereich1AnzeigeGewicht.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich1</value>
@@ -1267,17 +1041,17 @@
   <data name="RadTextBoxControlBereich1Weight2.RootElement.KeyTip" xml:space="preserve">
     <value />
   </data>
+  <data name="RadLabel1.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="lblBereich2EFGSpezial.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxBereich2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="RadCheckBoxBereich1VEL3.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit2.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="RadTextBoxControlBereich2DisplayWeight1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>120, 3</value>
   </data>
   <data name="RadTextBoxControlBereich1DisplayWeight1.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
@@ -1285,8 +1059,8 @@
   <data name="&gt;&gt;RadTextBoxControlBereich1Weight1.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="lblBereich2AnzeigeGewicht.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="&gt;&gt;RadCheckBoxBereich1VEL1.Name" xml:space="preserve">
+    <value>RadCheckBoxBereich1VEL1</value>
   </data>
   <data name="lblBereich1Gewicht.Text" xml:space="preserve">
     <value>weight [kg]</value>
@@ -1297,50 +1071,32 @@
   <data name="&gt;&gt;lblBereich1EFGSpezial.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich1</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich1ErrorLimit2.Parent" xml:space="preserve">
-    <value>PanelBereich1WZ2</value>
-  </data>
   <data name="lblBereich2AnzeigeGewicht.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit2.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadLabel1.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="&gt;&gt;lblBereich1AnzeigeGewicht.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit1.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
+  <data name="RadTextBoxControlBereich1Weight3.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="RadButtonShowEFG2.Text" xml:space="preserve">
     <value>Show VEL</value>
   </data>
-  <data name="RadTextBoxControlBereich2Weight3.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="lblBereich2EFGSpeziallBerechnung.TabIndex" type="System.Int32, mscorlib">
+    <value>60</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2Weight1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="RadCheckBoxBereich1VEL1.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="PictureBox32.Location" type="System.Drawing.Point, System.Drawing">
-    <value>209, 3</value>
-  </data>
-  <data name="RadCheckBoxBereich1VEL2.RootElement.ToolTipText" xml:space="preserve">
+  <data name="RadCheckBoxBereich1VEL1.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit2.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadScrollablePanel1.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>1, 1, 1, 1</value>
-  </data>
-  <data name="RadButtonShowEFG2.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
+  <data name="RadGroupBoxBereich2.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;lblBereich1AnzeigeGewicht.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>10</value>
   </data>
   <data name="RadTextBoxControlBereich1Weight2.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
@@ -1348,8 +1104,8 @@
   <data name="RadTextBoxControlBereich2DisplayWeight2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="PictureBox73.Location" type="System.Drawing.Point, System.Drawing">
-    <value>327, 3</value>
+  <data name="RadTextBoxControlBereich2DisplayWeight2.RootElement.ToolTipText" xml:space="preserve">
+    <value />
   </data>
   <data name="&gt;&gt;PanelBereich1WZ1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1357,16 +1113,10 @@
   <data name="RadGroupBoxBereich2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="RadCheckBoxBereich2VEL1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>351, 3</value>
-  </data>
-  <data name="&gt;&gt;PictureBox74.Parent" xml:space="preserve">
-    <value>PanelBereich2WZ3</value>
+  <data name="lblBereich2EFGSpeziallBerechnung.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="lblBereich2EFGSpezial.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="RadCheckBoxBereich2VEL2.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
   <data name="lblBereich1EFGSpezial.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
@@ -1375,14 +1125,11 @@
   <data name="&gt;&gt;RadTextBoxControlBereich2Weight2.Parent" xml:space="preserve">
     <value>PanelBereich2WZ2</value>
   </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 20</value>
-  </data>
-  <data name="RadTextBoxControlBereich1Weight3.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadTextBoxControlBereich1DisplayWeight1.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit2.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="&gt;&gt;lblBereich2EFGSpezial.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="lblBereich2EFGSpeziallBerechnung.RootElement.ToolTipText" xml:space="preserve">
     <value />
@@ -1390,14 +1137,11 @@
   <data name="lblBereich2AnzeigeGewicht.Location" type="System.Drawing.Point, System.Drawing">
     <value>135, 40</value>
   </data>
-  <data name="lblBereich1EFGSpezial.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="&gt;&gt;PictureBox32.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;RadCheckBoxBereich2VEL1.ZOrder" xml:space="preserve">
+    <value>9</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1Weight1.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>0</value>
   </data>
   <data name="lblBereich2AnzeigeGewicht.RootElement.ToolTipText" xml:space="preserve">
     <value />
@@ -1408,44 +1152,20 @@
   <data name="&gt;&gt;RadTextBoxControlBereich2DisplayWeight3.Parent" xml:space="preserve">
     <value>PanelBereich2WZ3</value>
   </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit2.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;PanelBereich2WZ3.Name" xml:space="preserve">
-    <value>PanelBereich2WZ3</value>
-  </data>
   <data name="RadGroupBoxPruefungAussermittigeBelastung.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit3.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="RadTextBoxControlBereich2Weight1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="lblBereich2EFGSpeziallBerechnung.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 20</value>
   </data>
-  <data name="RadTextBoxControlBereich2DisplayWeight2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1Weight3.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadTextBoxControlBereich2DisplayWeight2.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadCheckBoxBereich2VEL2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>351, 3</value>
-  </data>
-  <data name="RadCheckBoxBereich1VEL2.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadScrollablePanel1.PanelContainer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>841, 341</value>
-  </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1Weight2.Parent" xml:space="preserve">
     <value>PanelBereich1WZ2</value>
-  </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit2.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="lblBereich1EFGSpeziallBerechnung.TabIndex" type="System.Int32, mscorlib">
     <value>58</value>
@@ -1453,8 +1173,8 @@
   <data name="RadTextBoxControlBereich1DisplayWeight3.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich1DisplayWeight3.Parent" xml:space="preserve">
-    <value>PanelBereich1WZ3</value>
+  <data name="lblBereich2EFGSpezial.RootElement.KeyTip" xml:space="preserve">
+    <value />
   </data>
   <data name="&gt;&gt;lblBereich2Gewicht.Name" xml:space="preserve">
     <value>lblBereich2Gewicht</value>
@@ -1462,17 +1182,11 @@
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
     <value>843, 343</value>
   </data>
-  <data name="RadTextBoxControlBereich1DisplayWeight3.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="lblBereich2Gewicht.Text" xml:space="preserve">
+    <value>weight [kg]</value>
   </data>
   <data name="RadTextBoxControlBereich1DisplayWeight2.RootElement.KeyTip" xml:space="preserve">
     <value />
-  </data>
-  <data name="&gt;&gt;RadCheckBoxBereich1VEL1.Name" xml:space="preserve">
-    <value>RadCheckBoxBereich1VEL1</value>
-  </data>
-  <data name="&gt;&gt;PictureBox33.Parent" xml:space="preserve">
-    <value>PanelBereich1WZ3</value>
   </data>
   <data name="RadTextBoxControlBereich1Weight1.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
@@ -1486,14 +1200,9 @@
   <data name="&gt;&gt;RadScrollablePanel1.PanelContainer.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit1.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
+  <assembly alias="Telerik.WinControls.UI" name="Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
   <data name="lblBereich1EFGSpeziallBerechnung.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
     <value>Numeric</value>
-  </data>
-  <data name="lblBereich2EFGSpeziallBerechnung.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
   </data>
   <data name="lblBereich1Gewicht.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt, style=Bold</value>
@@ -1504,23 +1213,20 @@
   <data name="RadGroupBoxPruefungAussermittigeBelastung.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
+  <data name="RadLabel2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt, style=Bold</value>
+  </data>
   <data name="PanelBereich2WZ2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="RadCheckBoxBereich1VEL2.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
+  <data name="RadTextBoxControlBereich2Weight3.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="RadTextBoxControlBereich2Weight2.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="lblBereich2Gewicht.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadTextBoxControlBereich1ErrorLimit1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxBereich1VEL2.Name" xml:space="preserve">
-    <value>RadCheckBoxBereich1VEL2</value>
   </data>
   <data name="RadTextBoxControlBereich1DisplayWeight1.RootElement.ToolTipText" xml:space="preserve">
     <value />
@@ -1528,20 +1234,17 @@
   <data name="RadCheckBoxBereich1VEL1.RootElement.KeyTip" xml:space="preserve">
     <value />
   </data>
-  <data name="&gt;&gt;RadCheckBoxBereich1VEL3.Name" xml:space="preserve">
-    <value>RadCheckBoxBereich1VEL3</value>
-  </data>
   <data name="RadButtonShowEFG2.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 223</value>
   </data>
   <data name="RadTextBoxControlBereich1ErrorLimit1.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
-  <data name="lblBereich2FehlerGrenzen.RootElement.ToolTipText" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;RadLabel2.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;RadGroupBoxPruefungAussermittigeBelastung.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="RadLabel1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt, style=Bold</value>
   </data>
   <data name="RadGroupBoxBereich2.RootElement.KeyTip" xml:space="preserve">
     <value />
@@ -1550,10 +1253,7 @@
     <value>FlowLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;PanelBereich1WZ3.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="RadTextBoxControlBereich1DisplayWeight2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
+    <value>6</value>
   </data>
   <data name="RadTextBoxControlBereich1Weight2.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1566,9 +1266,6 @@
   </data>
   <data name="lblBereich1AnzeigeGewicht.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich1DisplayWeight1.Name" xml:space="preserve">
-    <value>RadTextBoxControlBereich1DisplayWeight1</value>
   </data>
   <data name="RadTextBoxControlBereich2Weight2.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -1585,6 +1282,9 @@
   <data name="&gt;&gt;RadTextBoxControlBereich1ErrorLimit1.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
+  <data name="&gt;&gt;RadLabel2.Parent" xml:space="preserve">
+    <value>RadGroupBoxBereich2</value>
+  </data>
   <data name="PanelBereich1WZ1.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 79</value>
   </data>
@@ -1592,13 +1292,13 @@
     <value />
   </data>
   <data name="&gt;&gt;PictureBox78.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
-  <data name="lblBereich2EFGSpeziallBerechnung.TabIndex" type="System.Int32, mscorlib">
-    <value>60</value>
+  <data name="RadButtonShowEFG2.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
-  <data name="lblBereich1EFGSpeziallBerechnung.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="RadTextBoxControlBereich1Weight3.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="RadCheckBoxBereich1VEL1.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
@@ -1609,32 +1309,29 @@
   <data name="&gt;&gt;RadTextBoxControlBereich2Weight2.Name" xml:space="preserve">
     <value>RadTextBoxControlBereich2Weight2</value>
   </data>
-  <data name="RadCheckBoxBereich2VEL1.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
+  <data name="lblBereich1EFGSpezial.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadCheckBoxBereich1VEL1.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="&gt;&gt;RadGroupBoxBereich2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
   <data name="lblBereich2EFGSpeziallBerechnung.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
-  </data>
-  <data name="lblBereich1FehlerGrenzen.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="RadTextBoxControlBereich2DisplayWeight1.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadCheckBoxBereich1VEL2.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblBereich2EFGSpezial.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="RadLabel1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
+  <data name="&gt;&gt;lblBereich2EFGSpeziallBerechnung.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadMaskedEditBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="RadGroupBoxPruefungAussermittigeBelastung.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1Weight3.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>0</value>
   </data>
   <data name="RadTextBoxControlBereich2Weight1.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -1642,18 +1339,20 @@
   <data name="lblBereich2AnzeigeGewicht.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt, style=Bold</value>
   </data>
-  <data name="RadGroupBoxBereich2.Text" xml:space="preserve">
-    <value>reproducibility test weight of ≈ Max				
-</value>
+  <data name="RadScrollablePanel1.RootElement.KeyTip" xml:space="preserve">
+    <value />
   </data>
   <data name="RadCheckBoxBereich1VEL1.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="&gt;&gt;PanelBereich1WZ1.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="lblBereich1EFGSpezial.RootElement.ToolTipText" xml:space="preserve">
     <value />
+  </data>
+  <data name="RadLabel1.TabIndex" type="System.Int32, mscorlib">
+    <value>67</value>
   </data>
   <data name="lblBereich2EFGSpeziallBerechnung.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
@@ -1661,20 +1360,23 @@
   <data name="RadCheckBoxBereich2VEL1.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
+  <data name="RadLabel1.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2DisplayWeight1.Parent" xml:space="preserve">
     <value>PanelBereich2WZ1</value>
   </data>
-  <data name="RadCheckBoxBereich2VEL2.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="PictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="RadTextBoxControlBereich2ErrorLimit1.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="RadButtonShowEFG2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 12pt</value>
+  <data name="RadScrollablePanel1.PanelContainer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>841, 341</value>
   </data>
-  <data name="RadCheckBoxBereich2VEL2.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
+  <data name="RadTextBoxControlBereich2DisplayWeight1.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
   </data>
   <data name="RadTextBoxControlBereich2DisplayWeight3.Location" type="System.Drawing.Point, System.Drawing">
     <value>120, 3</value>
@@ -1682,8 +1384,11 @@
   <data name="&gt;&gt;RadScrollablePanel1.PanelContainer.Name" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
-  <data name="PictureBox31.Size" type="System.Drawing.Size, System.Drawing">
-    <value>18, 21</value>
+  <data name="&gt;&gt;RadTextBoxControlBereich1Weight2.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="RadTextBoxControlBereich1ErrorLimit1.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="&gt;&gt;lblBereich1Gewicht.Name" xml:space="preserve">
     <value>lblBereich1Gewicht</value>
@@ -1703,9 +1408,6 @@
   <data name="&gt;&gt;RadTextBoxControlBereich2DisplayWeight2.Parent" xml:space="preserve">
     <value>PanelBereich2WZ2</value>
   </data>
-  <data name="RadCheckBoxBereich1VEL3.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1DisplayWeight1.Parent" xml:space="preserve">
     <value>PanelBereich1WZ1</value>
   </data>
@@ -1718,11 +1420,8 @@
   <data name="RadGroupBoxBereich2.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
-  <data name="RadGroupBoxBereich1.RootElement.AccessibleDescription" xml:space="preserve">
+  <data name="RadGroupBoxBereich1.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
-  </data>
-  <data name="FlowLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>31, 34</value>
   </data>
   <data name="RadTextBoxControlBereich1Weight2.MaxLength" type="System.Int32, mscorlib">
     <value>20</value>
@@ -1730,11 +1429,11 @@
   <data name="RadTextBoxControlBereich1DisplayWeight3.MaxLength" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
+  <data name="RadLabel2.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
   <data name="RadTextBoxControlBereich2DisplayWeight3.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
-  </data>
-  <data name="RadCheckBoxBereich1VEL2.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="lblBereich1EFGSpeziallBerechnung.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -1748,59 +1447,44 @@
   <data name="&gt;&gt;lblBereich2EFGSpeziallBerechnung.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich2</value>
   </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit3.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="lblBereich2EFGSpeziallBerechnung.Location" type="System.Drawing.Point, System.Drawing">
     <value>334, 59</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1DisplayWeight2.Parent" xml:space="preserve">
     <value>PanelBereich1WZ2</value>
   </data>
-  <data name="lblBereich1Gewicht.RootElement.KeyTip" xml:space="preserve">
-    <value />
+  <data name="PanelBereich2WZ3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
   <data name="RadCheckBoxBereich1VEL1.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadGroupBoxPruefungAussermittigeBelastung.RootElement.AccessibleDescription" xml:space="preserve">
+  <data name="RadGroupBoxPruefungAussermittigeBelastung.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit3.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="RadGroupBoxPruefungAussermittigeBelastung.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
-  <data name="lblBereich2AnzeigeGewicht.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 18</value>
+  <data name="&gt;&gt;lblBereich2AnzeigeGewicht.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;PictureBox73.Parent" xml:space="preserve">
-    <value>PanelBereich2WZ3</value>
+  <data name="RadGroupBoxBereich2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>391, 214</value>
   </data>
-  <data name="RadScrollablePanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>843, 343</value>
+  <data name="lblBereich1FehlerGrenzen.RootElement.ToolTipText" xml:space="preserve">
+    <value />
   </data>
   <data name="RadTextBoxControlBereich1DisplayWeight2.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="lblBereich2EFGSpezial.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
   <data name="lblBereich2EFGSpeziallBerechnung.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
-  </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit3.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
   </data>
   <data name="RadCheckBoxBereich1VEL1.Size" type="System.Drawing.Size, System.Drawing">
     <value>15, 15</value>
   </data>
   <data name="PictureBox30.Size" type="System.Drawing.Size, System.Drawing">
     <value>18, 21</value>
-  </data>
-  <data name="RadCheckBoxBereich1VEL3.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
   </data>
   <data name="RadTextBoxControlBereich2Weight3.MaxLength" type="System.Int32, mscorlib">
     <value>20</value>
@@ -1811,17 +1495,14 @@
   <data name="PanelBereich1WZ1.TabIndex" type="System.Int32, mscorlib">
     <value>60</value>
   </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit3.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
+  <data name="FlowLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 34</value>
   </data>
   <data name="RadCheckBoxBereich2VEL1.RootElement.KeyTip" xml:space="preserve">
     <value />
   </data>
   <data name="&gt;&gt;lblBereich2FehlerGrenzen.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit3.RootElement.KeyTip" xml:space="preserve">
-    <value />
+    <value>8</value>
   </data>
   <data name="RadButtonShowEFG2.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1832,17 +1513,26 @@
   <data name="RadTextBoxControlBereich2Weight1.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
+  <data name="RadLabel1.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
   <data name="PictureBox78.TabIndex" type="System.Int32, mscorlib">
     <value>57</value>
+  </data>
+  <data name="RadLabel2.RootElement.ToolTipText" xml:space="preserve">
+    <value />
   </data>
   <data name="lblBereich1Gewicht.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="RadTextBoxControlBereich2Weight3.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="&gt;&gt;lblBereich1EFGSpeziallBerechnung.ZOrder" xml:space="preserve">
+    <value>12</value>
   </data>
-  <data name="RadTextBoxControlBereich1DisplayWeight2.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="&gt;&gt;RadLabel1.Name" xml:space="preserve">
+    <value>RadLabel1</value>
+  </data>
+  <data name="&gt;&gt;PanelBereich2WZ1.Name" xml:space="preserve">
+    <value>PanelBereich2WZ1</value>
   </data>
   <data name="lblBereich1FehlerGrenzen.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1853,23 +1543,17 @@
   <data name="RadTextBoxControlBereich1DisplayWeight3.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich1ErrorLimit2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="lblBereich2AnzeigeGewicht.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 18</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1ErrorLimit1.Name" xml:space="preserve">
     <value>RadTextBoxControlBereich1ErrorLimit1</value>
-  </data>
-  <data name="&gt;&gt;PictureBox74.Name" xml:space="preserve">
-    <value>PictureBox74</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxBereich1.Name" xml:space="preserve">
     <value>RadGroupBoxBereich1</value>
   </data>
   <data name="RadGroupBoxBereich1.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
-  </data>
-  <data name="RadTextBoxControlBereich1Weight1.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
   </data>
   <data name="RadGroupBoxBereich2.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
@@ -1878,7 +1562,7 @@
     <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;PictureBox30.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="RadTextBoxControlBereich1ErrorLimit1.Size" type="System.Drawing.Size, System.Drawing">
     <value>78, 20</value>
@@ -1890,28 +1574,13 @@
     <value />
   </data>
   <data name="&gt;&gt;lblBereich1EFGSpezial.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="lblBereich1EFGSpeziallBerechnung.RootElement.AccessibleDescription" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich2VEL2.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+    <value>13</value>
   </data>
   <data name="lblBereich1AnzeigeGewicht.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
-  <data name="&gt;&gt;PictureBox33.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="RadCheckBoxBereich2VEL3.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="&gt;&gt;PictureBox75.Name" xml:space="preserve">
-    <value>PictureBox75</value>
-  </data>
-  <data name="RadCheckBoxBereich1VEL2.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="&gt;&gt;RadTextBoxControlBereich2Weight1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxBereich2.Name" xml:space="preserve">
     <value>RadGroupBoxBereich2</value>
@@ -1919,20 +1588,17 @@
   <data name="lblBereich1Gewicht.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="PictureBox76.Location" type="System.Drawing.Point, System.Drawing">
-    <value>209, 3</value>
+  <data name="RadLabel2.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
   </data>
   <data name="lblBereich1FehlerGrenzen.RootElement.KeyTip" xml:space="preserve">
     <value />
   </data>
-  <data name="RadCheckBoxBereich2VEL3.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
   <data name="PictureBox29.Location" type="System.Drawing.Point, System.Drawing">
-    <value>327, 3</value>
+    <value>350, 181</value>
   </data>
-  <data name="RadCheckBoxBereich2VEL3.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="RadCheckBoxBereich2VEL1.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="RadTextBoxControlBereich1DisplayWeight3.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -1940,86 +1606,62 @@
   <data name="&gt;&gt;PictureBox1.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich2</value>
   </data>
-  <data name="&gt;&gt;lblBereich2EFGSpeziallBerechnung.ZOrder" xml:space="preserve">
+  <data name="RadTextBoxControlBereich1DisplayWeight1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
+  </data>
+  <data name="&gt;&gt;lblBereich2EFGSpeziallBerechnung.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="RadTextBoxControlBereich2Weight3.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="lblBereich1FehlerGrenzen.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit2.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="lblBereich2FehlerGrenzen.RootElement.ToolTipText" xml:space="preserve">
+    <value />
   </data>
   <data name="lblBereich1AnzeigeGewicht.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="RadButtonShowEFG2.RootElement.AccessibleName" xml:space="preserve">
-    <value />
-  </data>
   <data name="RadTextBoxControlBereich1Weight2.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="&gt;&gt;RadCheckBoxBereich2VEL3.Parent" xml:space="preserve">
-    <value>PanelBereich2WZ3</value>
+  <data name="&gt;&gt;PanelBereich2WZ2.Name" xml:space="preserve">
+    <value>PanelBereich2WZ2</value>
   </data>
   <data name="lblBereich1EFGSpezial.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
-  <data name="RadCheckBoxBereich1VEL3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>351, 3</value>
+  <data name="RadButtonShowEFG2.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1Weight1.Name" xml:space="preserve">
     <value>RadTextBoxControlBereich1Weight1</value>
   </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit3.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich1VEL2.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
+  <data name="PictureBox80.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2DisplayWeight2.Name" xml:space="preserve">
     <value>RadTextBoxControlBereich2DisplayWeight2</value>
   </data>
-  <data name="RadCheckBoxBereich2VEL2.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
   <data name="RadTextBoxControlBereich2ErrorLimit1.RootElement.KeyTip" xml:space="preserve">
     <value />
   </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit2.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
+  <data name="lblBereich2EFGSpezial.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
   </data>
   <data name="RadTextBoxControlBereich2DisplayWeight1.RootElement.KeyTip" xml:space="preserve">
     <value />
   </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit3.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit3.MaxLength" type="System.Int32, mscorlib">
-    <value>20</value>
+  <data name="RadLabel2.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
   </data>
   <data name="lblBereich1EFGSpeziallBerechnung.Location" type="System.Drawing.Point, System.Drawing">
     <value>339, 58</value>
   </data>
-  <data name="PictureBox33.Location" type="System.Drawing.Point, System.Drawing">
-    <value>327, 3</value>
-  </data>
-  <data name="RadGroupBoxBereich2.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="&gt;&gt;RadCheckBoxBereich2VEL2.Parent" xml:space="preserve">
-    <value>PanelBereich2WZ2</value>
-  </data>
-  <data name="RadCheckBoxBereich1VEL1.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
+  <data name="&gt;&gt;RadTextBoxControlBereich2Weight1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;PictureBox1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit2.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
+    <value>2</value>
   </data>
   <data name="RadGroupBoxBereich2.RootElement.ToolTipText" xml:space="preserve">
     <value />
@@ -2030,8 +1672,8 @@
   <data name="&gt;&gt;RadTextBoxControlBereich2ErrorLimit1.Name" xml:space="preserve">
     <value>RadTextBoxControlBereich2ErrorLimit1</value>
   </data>
-  <data name="RadGroupBoxPruefungAussermittigeBelastung.RootElement.ToolTipText" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;RadLabel1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2ErrorLimit1.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
@@ -2045,11 +1687,8 @@
   <data name="lblBereich2EFGSpezial.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="&gt;&gt;PanelBereich2WZ2.Name" xml:space="preserve">
-    <value>PanelBereich2WZ2</value>
-  </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1DisplayWeight3.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>1</value>
   </data>
   <data name="lblBereich2AnzeigeGewicht.Text" xml:space="preserve">
     <value>display [kg]</value>
@@ -2070,23 +1709,11 @@
     <value>reproducibility test weight of ≈ 0,5 Max				
 </value>
   </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit2.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit2.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadCheckBoxBereich1VEL3.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadTextBoxControlBereich1DisplayWeight2.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="RadGroupBoxBereich1.RootElement.KeyTip" xml:space="preserve">
+    <value />
   </data>
   <data name="RadTextBoxControlBereich2DisplayWeight2.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
-  </data>
-  <data name="PictureBox80.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="RadCheckBoxBereich1VEL1.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -2094,14 +1721,14 @@
   <data name="FlowLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>794, 281</value>
   </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit3.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1DisplayWeight3.Name" xml:space="preserve">
     <value>RadTextBoxControlBereich1DisplayWeight3</value>
   </data>
   <data name="&gt;&gt;PanelBereich1WZ3.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich1</value>
+  </data>
+  <data name="RadLabel1.RootElement.ToolTipText" xml:space="preserve">
+    <value />
   </data>
   <data name="PictureBox77.TabIndex" type="System.Int32, mscorlib">
     <value>58</value>
@@ -2115,54 +1742,35 @@
   <data name="RadTextBoxControlBereich1DisplayWeight2.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="lblBereich2EFGSpezial.RootElement.KeyTip" xml:space="preserve">
+  <data name="RadLabel2.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadCheckBoxBereich2VEL2.RootElement.KeyTip" xml:space="preserve">
+  <data name="RadLabel2.RootElement.KeyTip" xml:space="preserve">
     <value />
-  </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>233, 3</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich1ErrorLimit3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="RadTextBoxControlBereich1DisplayWeight1.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
   </data>
   <data name="lblBereich1Gewicht.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit3.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="PictureBox80.TabIndex" type="System.Int32, mscorlib">
     <value>59</value>
   </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit2.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="lblBereich1EFGSpezial.RootElement.KeyTip" xml:space="preserve">
     <value />
   </data>
-  <data name="PanelBereich2WZ3.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;PictureBox73.Name" xml:space="preserve">
-    <value>PictureBox73</value>
+  <data name="RadLabel2.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="PictureBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>316, 59</value>
   </data>
-  <data name="RadGroupBoxBereich1.Text" xml:space="preserve">
-    <value>reproducibility test weight of ≈ 0,5 Max				
-</value>
+  <data name="RadGroupBoxBereich2.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit1.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="RadScrollablePanel1.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="RadTextBoxControlBereich2Weight2.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
-  </data>
-  <data name="&gt;&gt;PictureBox31.Parent" xml:space="preserve">
-    <value>PanelBereich1WZ2</value>
   </data>
   <data name="PanelBereich2WZ1.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 79</value>
@@ -2173,7 +1781,7 @@
   <data name="RadGroupBoxPruefungAussermittigeBelastung.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
-  <data name="RadButtonShowEFG2.RootElement.AccessibleDescription" xml:space="preserve">
+  <data name="RadButtonShowEFG2.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="RadTextBoxControlBereich1Weight3.MaxLength" type="System.Int32, mscorlib">
@@ -2188,14 +1796,12 @@
   <data name="RadTextBoxControlBereich1Weight3.RootElement.KeyTip" xml:space="preserve">
     <value />
   </data>
-  <data name="RadCheckBoxBereich2VEL1.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="lblBereich1AnzeigeGewicht.Size" type="System.Drawing.Size, System.Drawing">
     <value>69, 18</value>
   </data>
-  <data name="RadGroupBoxPruefungAussermittigeBelastung.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="RadGroupBoxBereich2.HeaderText" xml:space="preserve">
+    <value>reproducibility test weight of ≈ Max				
+</value>
   </data>
   <data name="&gt;&gt;lblBereich1Gewicht.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
@@ -2209,32 +1815,26 @@
   <data name="RadTextBoxControlBereich1Weight2.Size" type="System.Drawing.Size, System.Drawing">
     <value>78, 20</value>
   </data>
-  <data name="RadCheckBoxBereich2VEL3.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="&gt;&gt;RadCheckBoxBereich1VEL3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="lblBereich1FehlerGrenzen.Text" xml:space="preserve">
-    <value>error limit [kg]</value>
-  </data>
-  <data name="&gt;&gt;PictureBox76.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxBereich2VEL1.Parent" xml:space="preserve">
-    <value>PanelBereich2WZ1</value>
-  </data>
   <data name="PanelBereich1WZ3.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 141</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2ErrorLimit2.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="lblBereich1Gewicht.Location" type="System.Drawing.Point, System.Drawing">
+    <value>23, 40</value>
+  </data>
+  <data name="lblBereich1FehlerGrenzen.Text" xml:space="preserve">
+    <value> Pmax - Pmin =</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxBereich2VEL1.Parent" xml:space="preserve">
+    <value>RadGroupBoxBereich2</value>
+  </data>
+  <data name="&gt;&gt;RadScrollablePanel1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadScrollablePanel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;PanelBereich2WZ2.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2Weight1.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="lblBereich1FehlerGrenzen.TabIndex" type="System.Int32, mscorlib">
+    <value>66</value>
   </data>
   <data name="RadTextBoxControlBereich2ErrorLimit1.MaxLength" type="System.Int32, mscorlib">
     <value>20</value>
@@ -2242,44 +1842,32 @@
   <data name="RadTextBoxControlBereich1DisplayWeight1.RootElement.KeyTip" xml:space="preserve">
     <value />
   </data>
-  <data name="lblBereich1EFGSpezial.Text" xml:space="preserve">
-    <value>VEL</value>
-  </data>
   <data name="&gt;&gt;RadGroupBoxPruefungAussermittigeBelastung.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
-  <data name="PictureBox74.Location" type="System.Drawing.Point, System.Drawing">
-    <value>209, 3</value>
+  <data name="RadGroupBoxBereich1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="&gt;&gt;PictureBox29.Parent" xml:space="preserve">
-    <value>PanelBereich1WZ1</value>
-  </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit3.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+    <value>RadGroupBoxBereich1</value>
   </data>
   <data name="RadTextBoxControlBereich1Weight2.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlBereich2Weight2.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit3.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadTextBoxControlBereich2DisplayWeight2.RootElement.KeyTip" xml:space="preserve">
     <value />
   </data>
   <data name="RadTextBoxControlBereich1Weight1.Size" type="System.Drawing.Size, System.Drawing">
     <value>78, 20</value>
   </data>
-  <data name="lblBereich2Gewicht.Text" xml:space="preserve">
-    <value>weight [kg]</value>
-  </data>
-  <data name="lblBereich1AnzeigeGewicht.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="RadTextBoxControlBereich2Weight1.RootElement.ToolTipText" xml:space="preserve">
+    <value />
   </data>
   <data name="PictureBox80.Size" type="System.Drawing.Size, System.Drawing">
     <value>18, 21</value>
   </data>
-  <data name="&gt;&gt;PictureBox34.Name" xml:space="preserve">
-    <value>PictureBox34</value>
+  <data name="&gt;&gt;RadTextBoxControlBereich2ErrorLimit1.Parent" xml:space="preserve">
+    <value>RadGroupBoxBereich2</value>
   </data>
   <data name="&gt;&gt;PanelBereich1WZ1.Name" xml:space="preserve">
     <value>PanelBereich1WZ1</value>
@@ -2293,35 +1881,23 @@
   <data name="RadTextBoxControlBereich2DisplayWeight1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="lblBereich1Gewicht.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="RadTextBoxControlBereich2Weight1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="&gt;&gt;RadCheckBoxBereich2VEL3.Name" xml:space="preserve">
-    <value>RadCheckBoxBereich2VEL3</value>
-  </data>
   <data name="&gt;&gt;lblBereich1Gewicht.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>9</value>
   </data>
   <data name="RadTextBoxControlBereich2ErrorLimit1.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1DisplayWeight1.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 20</value>
+    <value>1</value>
   </data>
   <data name="lblBereich1EFGSpeziallBerechnung.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadCheckBoxBereich2VEL3.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2ErrorLimit2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="PictureBox77.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanel1.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -2332,23 +1908,11 @@
   <data name="RadButtonShowEFG2.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="&gt;&gt;PanelBereich2WZ1.Name" xml:space="preserve">
-    <value>PanelBereich2WZ1</value>
-  </data>
-  <data name="lblBereich2EFGSpeziallBerechnung.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="RadTextBoxControlBereich1Weight1.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlBereich2DisplayWeight2.MaxLength" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="RadTextBoxControlBereich1DisplayWeight1.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="&gt;&gt;RadCheckBoxBereich2VEL2.Name" xml:space="preserve">
-    <value>RadCheckBoxBereich2VEL2</value>
+  <data name="RadCheckBoxBereich2VEL1.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;RadButtonShowEFG2.Name" xml:space="preserve">
     <value>RadButtonShowEFG2</value>
@@ -2359,17 +1923,14 @@
   <data name="RadTextBoxControlBereich1Weight3.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="RadTextBoxControlBereich2DisplayWeight2.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="lblBereich1Gewicht.Size" type="System.Drawing.Size, System.Drawing">
     <value>68, 18</value>
   </data>
   <data name="RadTextBoxControlBereich2ErrorLimit1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>233, 3</value>
+    <value>200, 178</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1DisplayWeight2.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>1</value>
   </data>
   <data name="RadTextBoxControlBereich1ErrorLimit1.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
@@ -2380,35 +1941,14 @@
   <data name="RadTextBoxControlBereich1Weight2.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadCheckBoxBereich2VEL2.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadTextBoxControlBereich2Weight1.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
-  </data>
-  <data name="&gt;&gt;PictureBox76.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="PictureBox73.TabIndex" type="System.Int32, mscorlib">
-    <value>58</value>
-  </data>
-  <data name="RadTextBoxControlBereich2Weight1.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
   </data>
   <data name="lblBereich2EFGSpezial.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="RadTextBoxControlBereich1DisplayWeight3.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
-  </data>
-  <data name="PictureBox74.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;RadScrollablePanel1.PanelContainer.Parent" xml:space="preserve">
-    <value>RadScrollablePanel1</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich1ErrorLimit3.ZOrder" xml:space="preserve">
-    <value>4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1DisplayWeight2.Name" xml:space="preserve">
     <value>RadTextBoxControlBereich1DisplayWeight2</value>
@@ -2419,33 +1959,14 @@
   <data name="RadTextBoxControlBereich2Weight2.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich1ErrorLimit3.Name" xml:space="preserve">
-    <value>RadTextBoxControlBereich1ErrorLimit3</value>
-  </data>
-  <data name="RadGroupBoxBereich2.HeaderText" xml:space="preserve">
-    <value>reproducibility test weight of ≈ Max				
-</value>
-  </data>
   <data name="RadCheckBoxBereich2VEL1.Size" type="System.Drawing.Size, System.Drawing">
     <value>15, 15</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2ErrorLimit2.Parent" xml:space="preserve">
-    <value>PanelBereich2WZ2</value>
-  </data>
-  <data name="RadTextBoxControlBereich2DisplayWeight1.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblBereich1AnzeigeGewicht.RootElement.ToolTipText" xml:space="preserve">
-    <value />
   </data>
   <data name="RadTextBoxControlBereich2DisplayWeight3.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="RadScrollablePanel1.RootElement.AccessibleDescription" xml:space="preserve">
+  <data name="RadTextBoxControlBereich1DisplayWeight2.RootElement.ToolTipText" xml:space="preserve">
     <value />
-  </data>
-  <data name="&gt;&gt;PictureBox33.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="&gt;&gt;PanelBereich1WZ2.Name" xml:space="preserve">
     <value>PanelBereich1WZ2</value>
@@ -2459,50 +1980,26 @@
   <data name="lblBereich1EFGSpezial.Location" type="System.Drawing.Point, System.Drawing">
     <value>361, 40</value>
   </data>
-  <data name="&gt;&gt;PictureBox75.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="PictureBox78.Size" type="System.Drawing.Size, System.Drawing">
     <value>18, 21</value>
   </data>
   <data name="&gt;&gt;lblBereich2EFGSpezial.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>11</value>
   </data>
   <data name="lblBereich1AnzeigeGewicht.Text" xml:space="preserve">
     <value>display [kg]</value>
   </data>
-  <data name="RadScrollablePanel1.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich1ErrorLimit2.Name" xml:space="preserve">
-    <value>RadTextBoxControlBereich1ErrorLimit2</value>
+  <data name="RadCheckBoxBereich2VEL1.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
   </data>
   <data name="lblBereich1Gewicht.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="lblBereich2EFGSpeziallBerechnung.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadCheckBoxBereich1VEL2.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich1VEL3.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadGroupBoxBereich2.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadTextBoxControlBereich2Weight2.MaxLength" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
-  <data name="RadGroupBoxBereich1.RootElement.KeyTip" xml:space="preserve">
+  <data name="lblBereich2Gewicht.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
-  </data>
-  <data name="RadGroupBoxBereich1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
   </data>
   <data name="RadTextBoxControlBereich1DisplayWeight2.MaxLength" type="System.Int32, mscorlib">
     <value>20</value>
@@ -2510,20 +2007,11 @@
   <data name="RadGroupBoxPruefungAussermittigeBelastung.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit3.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="PictureBox29.Size" type="System.Drawing.Size, System.Drawing">
     <value>18, 21</value>
   </data>
   <data name="RadTextBoxControlBereich1Weight3.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="lblBereich1FehlerGrenzen.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadGroupBoxPruefungAussermittigeBelastung.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
   </data>
   <data name="RadTextBoxControlBereich2Weight2.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2531,26 +2019,17 @@
   <data name="RadTextBoxControlBereich2DisplayWeight1.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="RadCheckBoxBereich1VEL2.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="lblBereich2EFGSpezial.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 8.25pt, style=Bold</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2Weight3.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>0</value>
   </data>
   <data name="RadTextBoxControlBereich2Weight2.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
-  <data name="RadTextBoxControlBereich2DisplayWeight1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 3</value>
-  </data>
   <data name="PictureBox80.Location" type="System.Drawing.Point, System.Drawing">
     <value>321, 58</value>
-  </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit2.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
   </data>
   <data name="&gt;&gt;lblBereich1EFGSpeziallBerechnung.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadMaskedEditBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
@@ -2558,17 +2037,14 @@
   <data name="RadTextBoxControlBereich1Weight2.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
   </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit2.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich1ErrorLimit3.Parent" xml:space="preserve">
-    <value>PanelBereich1WZ3</value>
+  <data name="PictureBox77.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 21</value>
   </data>
   <data name="RadTextBoxControlBereich1DisplayWeight3.Location" type="System.Drawing.Point, System.Drawing">
     <value>120, 3</value>
   </data>
-  <data name="lblBereich2Gewicht.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="RadLabel2.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
   </data>
   <data name="RadTextBoxControlBereich2DisplayWeight2.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2576,8 +2052,9 @@
   <data name="RadTextBoxControlBereich2DisplayWeight3.MaxLength" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
-  <data name="PictureBox77.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="RadGroupBoxBereich2.Text" xml:space="preserve">
+    <value>reproducibility test weight of ≈ Max				
+</value>
   </data>
   <data name="lblBereich2EFGSpezial.Location" type="System.Drawing.Point, System.Drawing">
     <value>355, 40</value>
@@ -2591,15 +2068,6 @@
   <data name="&gt;&gt;PictureBox78.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="RadCheckBoxBereich1VEL2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 15</value>
-  </data>
-  <data name="RadCheckBoxBereich2VEL3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>351, 3</value>
-  </data>
-  <data name="RadCheckBoxBereich1VEL3.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
   <data name="&gt;&gt;lblBereich2Gewicht.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich2</value>
   </data>
@@ -2612,23 +2080,14 @@
   <data name="lblBereich2Gewicht.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
-  <data name="&gt;&gt;PictureBox34.Parent" xml:space="preserve">
-    <value>PanelBereich1WZ3</value>
+  <data name="&gt;&gt;PanelBereich2WZ3.Name" xml:space="preserve">
+    <value>PanelBereich2WZ3</value>
   </data>
-  <data name="lblBereich1FehlerGrenzen.TabIndex" type="System.Int32, mscorlib">
-    <value>66</value>
-  </data>
-  <data name="RadTextBoxControlBereich1DisplayWeight1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;PictureBox32.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lblBereich2EFGSpeziallBerechnung.MaskType" type="Telerik.WinControls.UI.MaskType, Telerik.WinControls.UI">
+    <value>Numeric</value>
   </data>
   <data name="&gt;&gt;FlowLayoutPanel1.Parent" xml:space="preserve">
     <value>RadGroupBoxPruefungAussermittigeBelastung</value>
-  </data>
-  <data name="RadGroupBoxBereich1.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
   </data>
   <data name="RadCheckBoxBereich2VEL1.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -2639,59 +2098,29 @@
   <data name="RadTextBoxControlBereich1DisplayWeight2.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
-  <data name="PictureBox33.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="&gt;&gt;PictureBox78.Parent" xml:space="preserve">
-    <value>PanelBereich2WZ1</value>
-  </data>
-  <data name="lblBereich1EFGSpezial.RootElement.KeyTip" xml:space="preserve">
-    <value />
+    <value>RadGroupBoxBereich2</value>
   </data>
   <data name="RadTextBoxControlBereich2ErrorLimit1.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2ErrorLimit3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;PictureBox33.Name" xml:space="preserve">
-    <value>PictureBox33</value>
-  </data>
   <data name="RadTextBoxControlBereich1DisplayWeight3.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit3.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
   <data name="lblBereich1AnzeigeGewicht.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt, style=Bold</value>
   </data>
-  <data name="RadCheckBoxBereich1VEL3.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1Weight2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="RadTextBoxControlBereich1DisplayWeight2.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
+    <value>0</value>
   </data>
   <data name="RadTextBoxControlBereich2Weight3.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
-  <data name="RadCheckBoxBereich1VEL3.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
+  <data name="RadTextBoxControlBereich1DisplayWeight2.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2Weight1.Parent" xml:space="preserve">
     <value>PanelBereich2WZ1</value>
-  </data>
-  <data name="lblBereich2AnzeigeGewicht.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;PictureBox76.Parent" xml:space="preserve">
-    <value>PanelBereich2WZ2</value>
-  </data>
-  <data name="&gt;&gt;PictureBox75.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="RadTextBoxControlBereich1ErrorLimit1.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -2702,14 +2131,8 @@
   <data name="&gt;&gt;RadButtonShowEFG2.Parent" xml:space="preserve">
     <value>FlowLayoutPanel1</value>
   </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>233, 3</value>
-  </data>
-  <data name="RadCheckBoxBereich1VEL3.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1ErrorLimit1.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>7</value>
   </data>
   <data name="RadGroupBoxPruefungAussermittigeBelastung.Text" xml:space="preserve">
     <value>reproducibility test</value>
@@ -2717,14 +2140,8 @@
   <data name="RadTextBoxControlBereich2Weight3.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
-  <data name="lblBereich1EFGSpezial.RootElement.AccessibleName" xml:space="preserve">
+  <data name="lblBereich1EFGSpezial.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
-  </data>
-  <data name="&gt;&gt;lblBereich2AnzeigeGewicht.Name" xml:space="preserve">
-    <value>lblBereich2AnzeigeGewicht</value>
-  </data>
-  <data name="RadGroupBoxBereich2.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
   </data>
   <data name="&gt;&gt;PanelBereich2WZ2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -2738,47 +2155,29 @@
   <data name="lblBereich2EFGSpezial.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlBereich2DisplayWeight1.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
+  <data name="&gt;&gt;RadGroupBoxPruefungAussermittigeBelastung.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="RadCheckBoxBereich1VEL1.RootElement.ToolTipText" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;RadLabel1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;PanelBereich2WZ3.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich2</value>
   </data>
-  <data name="&gt;&gt;RadCheckBoxBereich1VEL1.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="lblBereich2EFGSpeziallBerechnung.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1Weight3.Name" xml:space="preserve">
     <value>RadTextBoxControlBereich1Weight3</value>
   </data>
-  <data name="&gt;&gt;PictureBox75.Parent" xml:space="preserve">
-    <value>PanelBereich2WZ2</value>
+  <data name="RadCheckBoxBereich2VEL1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>367, 180</value>
   </data>
-  <data name="RadCheckBoxBereich2VEL3.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadTextBoxControlBereich1Weight1.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="&gt;&gt;PanelBereich2WZ1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 20</value>
-  </data>
-  <data name="&gt;&gt;PictureBox76.Name" xml:space="preserve">
-    <value>PictureBox76</value>
+  <data name="RadLabel1.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1Weight1.Parent" xml:space="preserve">
     <value>PanelBereich1WZ1</value>
-  </data>
-  <data name="&gt;&gt;RadGroupBoxBereich1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="RadTextBoxControlBereich2Weight1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
   </data>
   <data name="&gt;&gt;lblBereich2FehlerGrenzen.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich2</value>
@@ -2786,26 +2185,17 @@
   <data name="lblBereich2Gewicht.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt, style=Bold</value>
   </data>
-  <data name="PictureBox77.Size" type="System.Drawing.Size, System.Drawing">
-    <value>18, 21</value>
-  </data>
-  <data name="&gt;&gt;lblBereich2AnzeigeGewicht.Parent" xml:space="preserve">
-    <value>RadGroupBoxBereich2</value>
+  <data name="RadTextBoxControlBereich1DisplayWeight2.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="RadTextBoxControlBereich2ErrorLimit1.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>233, 3</value>
-  </data>
-  <data name="&gt;&gt;PictureBox73.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lblBereich1EFGSpeziallBerechnung.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
   </data>
   <data name="RadScrollablePanel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
-  </data>
-  <data name="RadCheckBoxBereich2VEL3.RootElement.KeyTip" xml:space="preserve">
-    <value />
   </data>
   <data name="RadTextBoxControlBereich1Weight1.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -2813,20 +2203,17 @@
   <data name="RadTextBoxControlBereich2DisplayWeight2.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="PictureBox31.Location" type="System.Drawing.Point, System.Drawing">
-    <value>327, 3</value>
-  </data>
   <data name="lblBereich1EFGSpeziallBerechnung.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="lblBereich1FehlerGrenzen.Location" type="System.Drawing.Point, System.Drawing">
-    <value>253, 40</value>
+    <value>81, 181</value>
   </data>
   <data name="RadTextBoxControlBereich2DisplayWeight3.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit1.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="&gt;&gt;RadLabel1.Parent" xml:space="preserve">
+    <value>RadGroupBoxBereich1</value>
   </data>
   <data name="PanelBereich2WZ1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2834,17 +2221,12 @@
   <data name="PanelBereich1WZ2.Size" type="System.Drawing.Size, System.Drawing">
     <value>376, 25</value>
   </data>
-  <data name="RadTextBoxControlBereich2DisplayWeight2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit3.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="RadGroupBoxBereich1.Text" xml:space="preserve">
+    <value>reproducibility test weight of ≈ 0,5 Max				
+</value>
   </data>
   <data name="RadScrollablePanel1.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxBereich1VEL2.Parent" xml:space="preserve">
-    <value>PanelBereich1WZ2</value>
   </data>
   <data name="RadScrollablePanel1.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2852,17 +2234,20 @@
   <data name="lblBereich1EFGSpeziallBerechnung.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 20</value>
   </data>
-  <data name="PictureBox34.Size" type="System.Drawing.Size, System.Drawing">
-    <value>18, 21</value>
+  <data name="RadTextBoxControlBereich2ErrorLimit1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 20</value>
   </data>
   <data name="RadTextBoxControlBereich1Weight2.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich1ErrorLimit1.Parent" xml:space="preserve">
-    <value>PanelBereich1WZ1</value>
+  <data name="RadCheckBoxBereich2VEL1.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
   </data>
-  <data name="PictureBox74.TabIndex" type="System.Int32, mscorlib">
-    <value>57</value>
+  <data name="RadTextBoxControlBereich1ErrorLimit1.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich1ErrorLimit1.Parent" xml:space="preserve">
+    <value>RadGroupBoxBereich1</value>
   </data>
   <data name="RadTextBoxControlBereich1Weight2.RootElement.ToolTipText" xml:space="preserve">
     <value />
@@ -2870,14 +2255,14 @@
   <data name="&gt;&gt;PanelBereich2WZ1.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich2</value>
   </data>
-  <data name="RadTextBoxControlBereich2Weight1.RootElement.ToolTipText" xml:space="preserve">
+  <data name="RadTextBoxControlBereich2Weight3.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="lblBereich2EFGSpezial.Size" type="System.Drawing.Size, System.Drawing">
     <value>26, 18</value>
   </data>
-  <data name="PictureBox33.TabIndex" type="System.Int32, mscorlib">
-    <value>58</value>
+  <data name="&gt;&gt;PictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="lblBereich1AnzeigeGewicht.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -2887,8 +2272,5 @@
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>de</value>
   </metadata>
 </root>

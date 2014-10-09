@@ -285,6 +285,30 @@ Public Class ucoContent
 
 #Region "Hilfsfunktionen"
     ''' <summary>
+    ''' Berechnet die Eichfehlergrenzen anhand der Last (wählt somit den EFG Bereich aus und des Eichwerts bei Mehrbereichswaagen entpsrechend dem Bereich)
+    ''' </summary>
+    ''' <param name="Gewicht"></param>
+    ''' <param name="Bereich"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Friend Function GetEFG(ByVal Gewicht As Decimal, ByVal Bereich As Integer) As Decimal
+        Try
+            Dim value = objEichprozess.Kompatiblitaetsnachweis.GetType().GetProperty(String.Format("Kompatiblitaet_Waage_Eichwert{0}", Bereich)).GetValue(objEichprozess.Kompatiblitaetsnachweis, Nothing)
+
+            If Gewicht > 2000 Then
+                Return Math.Round(CDec(value * 1.5), _intNullstellenE, MidpointRounding.AwayFromZero)
+            ElseIf Gewicht > 500 Then
+                Return Math.Round(CDec(value * 1), _intNullstellenE, MidpointRounding.AwayFromZero)
+            Else
+                Return Math.Round(CDec(value * 0.5), _intNullstellenE, MidpointRounding.AwayFromZero)
+            End If
+        Catch e As Exception
+            Return -1
+        End Try
+    End Function
+
+
+    ''' <summary>
     ''' Erwartet z.b. ein Steuerelement, prüft den Namen und gibt zurück um welchen Bereich es sich handelt
     ''' </summary>
     ''' <param name="sender"></param>

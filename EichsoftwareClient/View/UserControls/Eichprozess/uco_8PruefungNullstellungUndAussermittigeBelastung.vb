@@ -104,13 +104,12 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
           RadCheckBoxBereich2VEL7.MouseClick, RadCheckBoxBereich2VEL6.MouseClick, RadCheckBoxBereich2VEL5.MouseClick, RadCheckBoxBereich2VEL4.MouseClick, RadCheckBoxBereich2VEL3.MouseClick, RadCheckBoxBereich2VEL2.MouseClick,
           RadCheckBoxBereich2VEL12.MouseClick, RadCheckBoxBereich2VEL11.MouseClick, RadCheckBoxBereich2VEL10.MouseClick, RadCheckBoxBereich2VEL1.MouseClick, RadCheckBoxBereich1VELMitte.MouseClick, RadCheckBoxBereich1VEL9.MouseClick,
           RadCheckBoxBereich1VEL8.MouseClick, RadCheckBoxBereich1VEL7.MouseClick, RadCheckBoxBereich1VEL6.MouseClick, RadCheckBoxBereich1VEL5.MouseClick, RadCheckBoxBereich1VEL4.MouseClick, RadCheckBoxBereich1VEL3.MouseClick,
-          RadCheckBoxBereich1VEL2.MouseClick, RadCheckBoxBereich1VEL12.MouseClick, RadCheckBoxBereich1VEL11.MouseClick, RadCheckBoxBereich1VEL10.MouseClick, RadCheckBoxBereich1VEL1.MouseClick, RadCheckBoxVEL1.Click, RadCheckBoxVEL2.Click,
-          RadCheckBoxVEL3.Click
+          RadCheckBoxBereich1VEL2.MouseClick, RadCheckBoxBereich1VEL12.MouseClick, RadCheckBoxBereich1VEL11.MouseClick, RadCheckBoxBereich1VEL10.MouseClick, RadCheckBoxBereich1VEL1.MouseClick, RadCheckBoxVEL1.Click
         CType(sender, Telerik.WinControls.UI.RadCheckBox).Checked = Not CType(sender, Telerik.WinControls.UI.RadCheckBox).Checked
     End Sub
 
 #Region "Wiederholbarkeit Text Changed Events"
-    Private Sub RadTextBoxControlErrorLimit1_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlErrorLimit3.TextChanged, RadTextBoxControlErrorLimit2.TextChanged, RadTextBoxControlErrorLimit1.TextChanged
+    Private Sub RadTextBoxControlErrorLimit1_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlErrorLimit1.TextChanged
         Try
 
             Dim MAX20 As Decimal = 0
@@ -219,9 +218,9 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
 
 
         'neu berechnen der Fehler und EFG
-        ValidateVELWiederholungen(RadTextBoxControlWeight1)
-        ValidateVELWiederholungen(RadTextBoxControlWeight2)
-        ValidateVELWiederholungen(RadTextBoxControlWeight3)
+        CalculateEFGWiederholungen(RadTextBoxControlWeight1)
+        CalculateEFGWiederholungen(RadTextBoxControlWeight2)
+        CalculateEFGWiederholungen(RadTextBoxControlWeight3)
 
         _suspendEvents = False
     End Sub
@@ -231,69 +230,77 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <remarks></remarks>
-    Private Sub ValidateVELWiederholungen(ByVal sender As Object)
+    Private Sub CalculateEFGWiederholungen(ByVal sender As Object)
         Try
 
             Dim Wiederholung As String = CType(sender, Windows.Forms.Control).Name.Last() 'letzte Zahl auslesen
-
+            Dim Fehler As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlErrorLimit{0}", 1)) ' gibt nur ein Fehlerelement
             Dim Last As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlWeight{0}", Wiederholung))
-            Dim Anzeige As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlDisplayWeight{0}", Wiederholung))
-            Dim Fehler As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlErrorLimit{0}", Wiederholung))
-            Dim EFG As Telerik.WinControls.UI.RadCheckBox = FindControl(String.Format("RadCheckBoxVEL{0}", Wiederholung))
+            Dim EFG As Telerik.WinControls.UI.RadCheckBox = FindControl(String.Format("RadCheckBoxVEL{0}", 1)) ' gibt nur ein Fehlerelement
             Dim Spezial As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblEFGSpeziallBerechnung"))
+            Dim min As Decimal
+            Dim max As Decimal
+            Dim EichwertBereich As Integer = 0
+            'EFG Wert Berechnen
+            'Eichwert holen
+            Select Case objEichprozess.Lookup_Waagenart.Art
+                Case Is = "Einbereichswaage"
+                    EichwertBereich = 1
+                Case Is = "Zweibereichswaage", "Zweiteilungswaage"
+                    EichwertBereich = 2
+                Case Is = "Dreibereichswaage", "Dreiteilungswaage"
+                    EichwertBereich = 3
+            End Select
+            Spezial.Text = GetEFG(Last.Text, EichwertBereich)
 
 
 
-            'neu berechnen der Fehler und EFG
+            'EFG durch die Differenz zwischen den 3 Belastungen. Mit anderen Worten: Die Differenz der Wägeergebnisse bei der 3maligen Belastung darf nicht größer sein, als der Absolutwert der für diese Belastung geltenden Fehlergrenze der Waage.
+
+            Dim AnzeigeMax1 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlDisplayWeight{0}", 1))
+            Dim AnzeigeMax2 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlDisplayWeight{0}", 2))
+            Dim AnzeigeMax3 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlDisplayWeight{0}", 3))
 
 
-            'Alte Formel
-            'Try
-            '    Fehler.Text = CDec(Anzeige.Text) - CDec(Last.Text)
-            '    If Anzeige.Text > CDec(Last.Text) + CDec(Spezial.Text) Then
-            '        EFG.Checked = False
-            '    ElseIf Anzeige.Text < CDec(Last.Text) - CDec(Spezial.Text) Then
-            '        EFG.Checked = False
-            '    Else
-            '        EFG.Checked = True
-            '    End If
-            'Catch ex As Exception
-            'End Try
+            Dim listdecimals As New List(Of Decimal)
+            If IsNumeric(AnzeigeMax1.Text) Then
+                listdecimals.Add(AnzeigeMax1.Text)
+            End If
+            If IsNumeric(AnzeigeMax2.Text) Then
+                listdecimals.Add(AnzeigeMax2.Text)
+            End If
+            If IsNumeric(AnzeigeMax3.Text) Then
+                listdecimals.Add(AnzeigeMax3.Text)
+            End If
 
+            If listdecimals.Count = 3 Then
+                max = listdecimals.Max
+                min = listdecimals.Min
 
+                Dim differenz As Decimal = max - min
+                Fehler.Text = differenz
+                Try
 
-            'Neue EFG Formel nach Herrn Strack
-            Try
-                Fehler.Text = CDec(Anzeige.Text) - CDec(Last.Text)
+                    If differenz <= CDec(Spezial.Text) And differenz >= -CDec(Spezial.Text) Then
+                        EFG.Checked = True
+                    Else
+                        EFG.Checked = False
+                    End If
+                Catch ex As Exception
+                End Try
 
-                Dim Faktor As Decimal = 0
-                If CDec(Last.Text) <= 500 * CDec(Spezial.Text) Then
-                    Faktor = 0.5
-                ElseIf CDec(Last.Text) > 500 * CDec(Spezial.Text) And CDec(Last.Text) <= 2000 * CDec(Spezial.Text) Then
-                    Faktor = 1
-                ElseIf CDec(Last.Text) > 2000 * CDec(Spezial.Text) And CDec(Last.Text) <= 10000 * CDec(Spezial.Text) Then
-                    Faktor = 1.5
-                Else
-                    Faktor = 1.5
-                End If
-
-
-
-                If CDec(Anzeige.Text) < (CDec(Last.Text) - (Faktor * CDec(Spezial.Text))) Or CDec(Anzeige.Text) > ((CDec(Last.Text) + (Faktor * CDec(Spezial.Text)))) Then
-                    EFG.Checked = False
-                Else
-                    EFG.Checked = True
-                End If
-            Catch ex As Exception
-
-            End Try
+                'If CDec(Last.Text) - differenz Then
+            Else
+                EFG.Checked = False
+                Fehler.Text = ""
+            End If
 
         Catch ex As Exception
         End Try
     End Sub
 
     Private Sub RadTextBoxControlDisplayWeight1_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlDisplayWeight1.TextChanged, RadTextBoxControlDisplayWeight2.TextChanged, RadTextBoxControlDisplayWeight3.TextChanged
-        ValidateVELWiederholungen(sender)
+        CalculateEFGWiederholungen(sender)
     End Sub
 
 
@@ -305,7 +312,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
     ''' Berechnen ob EFG eingehalten wird
     ''' </summary>
     ''' <remarks></remarks>
-    Private Sub ValidateVELAussermittigeBelastung(ByVal Bereich As Integer, ByVal Belastungsort As String)
+    Private Sub CalculateEFGAussermittigeBelastung(ByVal Bereich As Integer, ByVal Belastungsort As String)
         Dim Last As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}Weight{1}", Bereich, Belastungsort))
         Dim Anzeige As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}DisplayWeight{1}", Bereich, Belastungsort))
         Dim Fehler As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}ErrorLimit{1}", Bereich, Belastungsort))
@@ -313,48 +320,48 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         Dim Spezial As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblBereich{0}EFGSpeziallBerechnung", Bereich))
 
 
+        Spezial.Text = GetEFG(Last.Text, Bereich)
 
-        'neu berechnen der Fehler und EFG
-
+      
 
         'Alte Formel
-        'Try
-        '    Fehler.Text = CDec(Anzeige.Text) - CDec(Last.Text)
-        '    If Anzeige.Text > CDec(Last.Text) + CDec(Spezial.Text) Then
-        '        EFG.Checked = False
-        '    ElseIf Anzeige.Text < CDec(Last.Text) - CDec(Spezial.Text) Then
-        '        EFG.Checked = False
-        '    Else
-        '        EFG.Checked = True
-        '    End If
-        'Catch ex As Exception
-        'End Try
-
-
-
-        'Neue EFG Formel nach Herrn Strack
         Try
             Fehler.Text = CDec(Anzeige.Text) - CDec(Last.Text)
-
-            Dim Faktor As Decimal = 0
-            If CDec(Last.Text) <= 500 * CDec(Spezial.Text) Then
-                Faktor = 0.5
-            ElseIf CDec(Last.Text) > 500 * CDec(Spezial.Text) And CDec(Last.Text) <= 2000 * CDec(Spezial.Text) Then
-                Faktor = 1
-            ElseIf CDec(Last.Text) > 2000 * CDec(Spezial.Text) And CDec(Last.Text) <= 10000 * CDec(Spezial.Text) Then
-                Faktor = 1.5
-            Else
-                Faktor = 1.5
-            End If
-
-            If CDec(Anzeige.Text) < (CDec(Last.Text) - (Faktor * CDec(Spezial.Text))) Or CDec(Anzeige.Text) > ((CDec(Last.Text) + (Faktor * CDec(Spezial.Text)))) Then
+            If Anzeige.Text > CDec(Last.Text) + CDec(Spezial.Text) Then
+                EFG.Checked = False
+            ElseIf Anzeige.Text < CDec(Last.Text) - CDec(Spezial.Text) Then
                 EFG.Checked = False
             Else
                 EFG.Checked = True
             End If
         Catch ex As Exception
-
         End Try
+
+
+
+        ''Neue EFG Formel nach Herrn Strack
+        'Try
+        '    Fehler.Text = CDec(Anzeige.Text) - CDec(Last.Text)
+
+        '    Dim Faktor As Decimal = 0
+        '    If CDec(Last.Text) <= 500 * CDec(Spezial.Text) Then
+        '        Faktor = 0.5
+        '    ElseIf CDec(Last.Text) > 500 * CDec(Spezial.Text) And CDec(Last.Text) <= 2000 * CDec(Spezial.Text) Then
+        '        Faktor = 1
+        '    ElseIf CDec(Last.Text) > 2000 * CDec(Spezial.Text) And CDec(Last.Text) <= 10000 * CDec(Spezial.Text) Then
+        '        Faktor = 1.5
+        '    Else
+        '        Faktor = 1.5
+        '    End If
+
+        '    If CDec(Anzeige.Text) < (CDec(Last.Text) - (Faktor * CDec(Spezial.Text))) Or CDec(Anzeige.Text) > ((CDec(Last.Text) + (Faktor * CDec(Spezial.Text)))) Then
+        '        EFG.Checked = False
+        '    Else
+        '        EFG.Checked = True
+        '    End If
+        'Catch ex As Exception
+
+        'End Try
 
     End Sub
 
@@ -438,7 +445,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
 
 
                 'neu berechnen der Fehler und EFG
-                ValidateVELAussermittigeBelastung(bereich, Belastungsort)
+                CalculateEFGAussermittigeBelastung(bereich, Belastungsort)
 
             Next
         Catch ex As Exception
@@ -501,7 +508,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
             Dim Belastungsort = GetBelastungsort(sender)
 
             'neu berechnen der Fehler und EFG
-            ValidateVELAussermittigeBelastung(Bereich, Belastungsort)
+            CalculateEFGAussermittigeBelastung(Bereich, Belastungsort)
 
         Catch ex As Exception
         End Try
@@ -637,6 +644,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                 RadGroupBoxWiederholungen.Visible = False
 
             Case Is = "Fahrzeugwaagen", "über 60kg im Staffelverfahren"
+                RadGroupBoxWiederholungen.Visible = True
                 FillControlsWiederholbarkeit()
         End Select
 
@@ -1025,31 +1033,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         lblBereich2EFGSpeziallBerechnung.Mask = String.Format("F{0}", _intNullstellenE) 'anzahl nullstellen für Textcontrol definieren
         lblBereich3EFGSpeziallBerechnung.Mask = String.Format("F{0}", _intNullstellenE) 'anzahl nullstellen für Textcontrol definieren
 
-        'bereich1
-        '=WENN($G$25>4;WERT(0,5*$B$15);(1*$B$15))
-        If objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen > 4 Then
-            lblBereich1EFGSpeziallBerechnung.Text = 0.5 * objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1
-            Try   'bereich2
-                lblBereich2EFGSpeziallBerechnung.Text = 0.5 * objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2
-                Try   'bereich3
-                    lblBereich3EFGSpeziallBerechnung.Text = 0.5 * objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3
-                Catch ex As Exception
-                End Try
-            Catch ex As Exception
-            End Try
-        Else
-            lblBereich1EFGSpeziallBerechnung.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1
-            Try   'bereich2
-                lblBereich2EFGSpeziallBerechnung.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2
-                Try   'bereich3
-                    lblBereich3EFGSpeziallBerechnung.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3
-
-                Catch ex As Exception
-                End Try
-            Catch ex As Exception
-            End Try
-        End If
-
 
         BerechneHoechstlast()
 
@@ -1084,6 +1067,18 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                 End If
             Next
         Next
+
+     
+
+        Try
+            lblBereich1EFGSpeziallBerechnung.Text = GetEFG(RadTextBoxControlBereich1Weight1.Text, 1)
+            lblBereich2EFGSpeziallBerechnung.Text = GetEFG(RadTextBoxControlBereich2Weight1.Text, 2)
+            lblBereich3EFGSpeziallBerechnung.Text = GetEFG(RadTextBoxControlBereich3Weight1.Text, 3)
+        Catch ex As Exception
+
+        End Try
+       
+
     End Sub
 
     Private Sub EinAusblendenVonWZBereichenen()
@@ -1171,22 +1166,28 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
 
         Select Case objEichprozess.Lookup_Waagenart.Art
             Case Is = "Einbereichswaage"
-                lblEFGSpeziallBerechnung.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1
+                'EFG Wert Berechnen
+
                 RadTextBoxControlWeight1.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1 * 0.5
                 RadTextBoxControlWeight2.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1 * 0.5
                 RadTextBoxControlWeight3.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1 * 0.5
+
+                lblEFGSpeziallBerechnung.Text = GetEFG(RadTextBoxControlWeight1.Text, 1) 'selber werte wie weight 2 und 3
             Case Is = "Zweibereichswaage", "Zweiteilungswaage"
                 lblEFGSpeziallBerechnung.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2
 
                 RadTextBoxControlWeight1.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 * 0.5
                 RadTextBoxControlWeight2.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 * 0.5
                 RadTextBoxControlWeight3.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 * 0.5
+                lblEFGSpeziallBerechnung.Text = GetEFG(RadTextBoxControlWeight1.Text, 2) 'selber werte wie weight 2 und 3
+
             Case Is = "Dreibereichswaage", "Dreiteilungswaage"
                 lblEFGSpeziallBerechnung.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3
 
                 RadTextBoxControlWeight1.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 * 0.5
                 RadTextBoxControlWeight2.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 * 0.5
                 RadTextBoxControlWeight3.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 * 0.5
+                lblEFGSpeziallBerechnung.Text = GetEFG(RadTextBoxControlWeight2.Text, 3) 'selber werte wie weight 2 und 3
         End Select
 
 
@@ -1211,8 +1212,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         If Not _currentObjPruefungWiederholbarkeit Is Nothing Then
             RadTextBoxControlWeight2.Text = _currentObjPruefungWiederholbarkeit.Last
             RadTextBoxControlDisplayWeight2.Text = _currentObjPruefungWiederholbarkeit.Anzeige
-            RadTextBoxControlErrorLimit2.Text = _currentObjPruefungWiederholbarkeit.Fehler
-            RadCheckBoxVEL2.Checked = _currentObjPruefungWiederholbarkeit.EFG
         End If
 
         'anzeige KG Nur laden wenn schon etwas eingegeben wurde
@@ -1222,8 +1221,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         If Not _currentObjPruefungWiederholbarkeit Is Nothing Then
             RadTextBoxControlWeight3.Text = _currentObjPruefungWiederholbarkeit.Last
             RadTextBoxControlDisplayWeight3.Text = _currentObjPruefungWiederholbarkeit.Anzeige
-            RadTextBoxControlErrorLimit3.Text = _currentObjPruefungWiederholbarkeit.Fehler
-            RadCheckBoxVEL3.Checked = _currentObjPruefungWiederholbarkeit.EFG
         End If
 
 
@@ -1292,15 +1289,15 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
             If PObjPruefung.Wiederholung = "2" Then
                 PObjPruefung.Last = RadTextBoxControlWeight2.Text
                 PObjPruefung.Anzeige = RadTextBoxControlDisplayWeight2.Text
-                PObjPruefung.Fehler = RadTextBoxControlErrorLimit2.Text
-                PObjPruefung.EFG = RadCheckBoxVEL2.Checked
+                PObjPruefung.Fehler = RadTextBoxControlErrorLimit1.Text
+                PObjPruefung.EFG = RadCheckBoxVEL1.Checked
                 PObjPruefung.EFG_Extra = lblEFGSpeziallBerechnung.Text
             End If
             If PObjPruefung.Wiederholung = "3" Then
                 PObjPruefung.Last = RadTextBoxControlWeight3.Text
                 PObjPruefung.Anzeige = RadTextBoxControlDisplayWeight3.Text
-                PObjPruefung.Fehler = RadTextBoxControlErrorLimit3.Text
-                PObjPruefung.EFG = RadCheckBoxVEL3.Checked
+                PObjPruefung.Fehler = RadTextBoxControlErrorLimit1.Text
+                PObjPruefung.EFG = RadCheckBoxVEL1.Checked
                 PObjPruefung.EFG_Extra = lblEFGSpeziallBerechnung.Text
             End If
 
@@ -1323,9 +1320,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
 #Region "Wiederholbarkeit"
     Private Function ValidatecontrolsWiederholungen() As Boolean
         If RadGroupBoxWiederholungen.Visible = True Then
-            If RadCheckBoxVEL1.Checked = False And RadCheckBoxVEL1.Visible = True Or _
-      RadCheckBoxVEL2.Checked = False And RadCheckBoxVEL2.Visible = True Or _
-      RadCheckBoxVEL3.Checked = False And RadCheckBoxVEL3.Visible = True Then
+            If RadCheckBoxVEL1.Checked = False And RadCheckBoxVEL1.Visible = True  Then
                 AbortSaveing = True
                 Return False
 
@@ -1586,16 +1581,13 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         Me.lblBereich2AnzeigeGewicht.Text = resources.GetString("lblBereich2AnzeigeGewicht.Text")
         Me.lblBereich3AnzeigeGewicht.Text = resources.GetString("lblBereich3AnzeigeGewicht.Text")
         Me.lblBereich1EFGSpezial.Text = resources.GetString("lblBereich1EFGSpezial.Text")
-        Me.lblBereich1EFGSpeziallBerechnung.Text = resources.GetString("lblBereich1EFGSpeziallBerechnung.Text")
         Me.lblBereich1FehlerGrenzen.Text = resources.GetString("lblBereich1FehlerGrenzen.Text")
         Me.lblBereich1Gewicht.Text = resources.GetString("lblBereich1Gewicht.Text")
         Me.lblBereich1Mitte.Text = resources.GetString("lblBereich1Mitte.Text")
         Me.lblBereich2EFGSpezial.Text = resources.GetString("lblBereich2EFGSpezial.Text")
-        Me.lblBereich2EFGSpeziallBerechnung.Text = resources.GetString("lblBereich2EFGSpeziallBerechnung.Text")
         Me.lblBereich2FehlerGrenzen.Text = resources.GetString("lblBereich2FehlerGrenzen.Text")
         Me.lblBereich2Gewicht.Text = resources.GetString("lblBereich2Gewicht.Text")
         Me.lblBereich3EFGSpezial.Text = resources.GetString("lblBereich3EFGSpezial.Text")
-        Me.lblBereich3EFGSpeziallBerechnung.Text = resources.GetString("lblBereich3EFGSpeziallBerechnung.Text")
         Me.lblBereich3FehlerGrenzen.Text = resources.GetString("lblBereich3FehlerGrenzen.Text")
         Me.lblBereich3Gewicht.Text = resources.GetString("lblBereich3Gewicht.Text")
         Me.lblMengeStandardgewichte1.Text = resources.GetString("lblMengeStandardgewichte1.Text")
@@ -1607,7 +1599,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         Me.lblWiederholungen.Text = resources.GetString("lblWiederholungen.Text")
         Me.lblAnzeigeGewicht.Text = resources.GetString("lblAnzeigeGewicht.Text")
         Me.lblEFGSpezial.Text = resources.GetString("lblEFGSpezial.Text")
-        Me.lblEFGSpeziallBerechnung.Text = resources.GetString("lblEFGSpeziallBerechnung.Text")
         Me.lblMengeStandardgewichte1.Text = resources.GetString("lblMengeStandardgewichte1.Text")
         Me.lblMengeStandardgewichte2.Text = resources.GetString("lblMengeStandardgewichte2.Text")
         Me.lblFehlerGrenzen.Text = resources.GetString("lblFehlerGrenzen.Text")

@@ -170,6 +170,12 @@
   <data name="RadGroupBoxPruefungGenaugikeit.Text" xml:space="preserve">
     <value> Genauigkeit der Nullstellung (autom. Nullnachführung deaktivieren)</value>
   </data>
+  <data name="RadLabel1.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadLabel1.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
   <data name="lblWiederholungen.RootElement.KeyTip" xml:space="preserve">
     <value />
   </data>
@@ -215,6 +221,12 @@
   <data name="lblMengeStandardgewichte2.Text" xml:space="preserve">
     <value>kg werden benötigt</value>
   </data>
+  <data name="RadTextBoxControlErrorLimit1.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadTextBoxControlErrorLimit1.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
   <data name="lblMengeStandardgewichte1.RootElement.KeyTip" xml:space="preserve">
     <value />
   </data>
@@ -226,6 +238,12 @@
   </data>
   <data name="lblMengeStandardgewichte1.Text" xml:space="preserve">
     <value>Menge an Normalien:</value>
+  </data>
+  <data name="RadCheckBoxVEL1.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxVEL1.RootElement.ToolTipText" xml:space="preserve">
+    <value />
   </data>
   <data name="RadTextBoxControlBetragNormallast.Location" type="System.Drawing.Point, System.Drawing">
     <value>441, 198</value>
@@ -254,18 +272,6 @@
   <data name="RadTextBoxControlDisplayWeight1.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
-  <data name="RadTextBoxControlErrorLimit1.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlErrorLimit1.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxVEL1.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxVEL1.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="RadTextBoxControlWeight2.RootElement.KeyTip" xml:space="preserve">
     <value />
   </data>
@@ -278,31 +284,11 @@
   <data name="RadTextBoxControlDisplayWeight2.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
-  <data name="RadTextBoxControlErrorLimit2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlErrorLimit2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxVEL2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxVEL2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="lblFehlerGrenzen.RootElement.KeyTip" xml:space="preserve">
     <value />
   </data>
   <data name="lblFehlerGrenzen.RootElement.ToolTipText" xml:space="preserve">
     <value />
-  </data>
-  <data name="lblFehlerGrenzen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 33</value>
-  </data>
-  <data name="lblFehlerGrenzen.Text" xml:space="preserve">
-    <value>Fehler [kg]
-
-</value>
   </data>
   <data name="RadTextBoxControlWeight3.RootElement.KeyTip" xml:space="preserve">
     <value />
@@ -314,18 +300,6 @@
     <value />
   </data>
   <data name="RadTextBoxControlDisplayWeight3.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlErrorLimit3.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlErrorLimit3.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxVEL3.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxVEL3.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
   <data name="lblEFGSpezial.RootElement.KeyTip" xml:space="preserve">

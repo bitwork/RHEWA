@@ -117,13 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="RadGroupBoxPruefungAussermittigeBelastung.HeaderText" xml:space="preserve">
+    <value>Prüfung der Wiederholbarkeit</value>
+  </data>
+  <data name="RadGroupBoxPruefungAussermittigeBelastung.Text" xml:space="preserve">
+    <value>Prüfung der Wiederholbarkeit</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lblBereich1FehlerGrenzen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 18</value>
-  </data>
-  <data name="lblBereich1FehlerGrenzen.Text" xml:space="preserve">
-    <value>Fehler [kg]</value>
-  </data>
   <data name="lblBereich1Gewicht.Size" type="System.Drawing.Size, System.Drawing">
     <value>52, 18</value>
   </data>
@@ -136,19 +136,6 @@
   <data name="lblBereich1AnzeigeGewicht.Text" xml:space="preserve">
     <value>Anzeige [kg]</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lblBereich1EFGSpeziallBerechnung.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblBereich1EFGSpeziallBerechnung.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblBereich1EFGSpezial.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblBereich1EFGSpezial.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="lblBereich1EFGSpezial.Text" xml:space="preserve">
     <value>EFG</value>
   </data>
@@ -156,27 +143,9 @@
     <value>Wiederholbarkeit mit Last ≈ 0,5 Max				
 </value>
   </data>
-  <data name="RadGroupBoxBereich1.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadGroupBoxBereich1.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="RadGroupBoxBereich1.Text" xml:space="preserve">
     <value>Wiederholbarkeit mit Last ≈ 0,5 Max				
 </value>
-  </data>
-  <data name="lblBereich2EFGSpeziallBerechnung.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblBereich2EFGSpeziallBerechnung.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblBereich2FehlerGrenzen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 18</value>
-  </data>
-  <data name="lblBereich2FehlerGrenzen.Text" xml:space="preserve">
-    <value>Fehler [kg]</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="PanelBereich2WZ3.TabIndex" type="System.Int32, mscorlib">
@@ -205,31 +174,7 @@
     <value>Wiederholbarkeit mit Last ≈ Max				
 </value>
   </data>
-  <data name="RadButtonShowEFG2.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadButtonShowEFG2.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="RadButtonShowEFG2.Text" xml:space="preserve">
     <value>Zeige EFG</value>
-  </data>
-  <data name="RadGroupBoxPruefungAussermittigeBelastung.HeaderText" xml:space="preserve">
-    <value>Prüfung der Wiederholbarkeit</value>
-  </data>
-  <data name="RadGroupBoxPruefungAussermittigeBelastung.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadGroupBoxPruefungAussermittigeBelastung.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadGroupBoxPruefungAussermittigeBelastung.Text" xml:space="preserve">
-    <value>Prüfung der Wiederholbarkeit</value>
-  </data>
-  <data name="RadScrollablePanel1.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadScrollablePanel1.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
 </root>
