@@ -617,8 +617,26 @@
         End If
 
         If Me.AbortSaveing = True Then
-            MessageBox.Show(My.Resources.GlobaleLokalisierung.PflichtfelderAusfuellen, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-            Return False
+            If Debugger.IsAttached Then 'standardwerte füllen für schnelleres testen
+                If Me.ShowValidationErrorBox Then
+                    RadTextBoxControlWaageHoechstlast1.Text = "1000"
+                    RadTextBoxControlWaageHoechstlast2.Text = "2000"
+                    RadTextBoxControlWaageEichwert1.Text = "5"
+                    RadTextBoxControlWaageEichwert2.Text = "25"
+                    RadTextBoxControlWaageAnzahlWaegezellen.Text = "4"
+                    RadTextBoxControlEinschaltnullstellbereich.Text = "1"
+                    RadTextBoxControlWaageEcklastzuschlag.Text = "1"
+                    RadTextBoxControlWaageTotlast.Text = "1"
+                    RadTextBoxControlWZHoechstlast.Text = "2500"
+                    Return True
+                Else
+                    MessageBox.Show(My.Resources.GlobaleLokalisierung.PflichtfelderAusfuellen, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    Return False
+                End If
+            Else
+                MessageBox.Show(My.Resources.GlobaleLokalisierung.PflichtfelderAusfuellen, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                Return False
+            End If
         End If
 
 

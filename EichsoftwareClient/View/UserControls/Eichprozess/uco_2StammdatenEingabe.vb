@@ -501,6 +501,9 @@
 
                 RadDropDownListWaagenArt.SelectedValue = objEichprozess.FK_WaagenArt
                 RadDropdownlistWaagenTyp.SelectedValue = objEichprozess.FK_WaagenTyp
+
+
+
             Else
                 'Stammdaten aus lokaler Lizenz laden
                 Dim objLic As Lizensierung = objDBFunctions.HoleLizenzObjekt
@@ -642,8 +645,35 @@
         Next
           'fehlermeldung anzeigen bei falscher validierung
         If Me.AbortSaveing = True Then
+            If Debugger.IsAttached Then 'standardwerte füllen für schnelleres testen
+                If Me.ShowValidationErrorBox Then
+                    RadTextBoxAWGBauartzulassung.Text = "Bauartzulassung"
+                    RadTextBoxAWGHersteller.Text = "bitwork GmbH"
+                    RadTextBoxAWGPruefbericht.Text = "Prüfbereicht"
+                    RadTextBoxStammdatenOrt.Text = "Ort"
+                    RadTextBoxStammdatenPLZ.Text = "PLZ"
+                    RadTextBoxStammdatenStrasse.Text = "Strasse"
+                    RadTextBoxStammdatenWaagenbaufirma.Text = "Waagenbaufirma"
+                    RadTextBoxWaageSeriennummer.Text = "Seriennummer"
+                    RadTextBoxWaageZulassungsinhaber.Text = "Zulassungsinhaber"
+                    RadTextBoxWZBauartzulassung.Text = "Bauartzulassung"
+                    RadTextBoxWZPruefbericht.Text = "Pruefbereicht"
+                    RadDropdownlistAWGTyp.SelectedIndex = 1
+                    RadDropdownlistlWZHersteller.Text = "Hersteller"
+                    RadDropdownlistlWZTyp.SelectedIndex = 1
+                    RadDropDownListWaagenArt.SelectedIndex = 1
+                    RadDropdownlistWaagenTyp.SelectedIndex = 1
+
+                    Return True
+                Else
                     MessageBox.Show(My.Resources.GlobaleLokalisierung.PflichtfelderAusfuellen, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                     Return False
+                End If
+            Else
+                MessageBox.Show(My.Resources.GlobaleLokalisierung.PflichtfelderAusfuellen, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                Return False
+            End If
+
         End If
         Return True
     End Function
