@@ -1051,7 +1051,6 @@
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
       <Diagram Name="EntityModelDatabaseAdminClient" ZoomLevel="101">
-        <EntityTypeShape EntityType="EichenModel.ServerBeschaffenheitspruefung" Width="1.5" PointX="6" PointY="8.75" Height="4.2879036458333246" />
         <EntityTypeShape EntityType="EichenModel.ServerEichmarkenverwaltung" Width="1.5" PointX="0.75" PointY="2.25" Height="4.48020507812501" />
         <EntityTypeShape EntityType="EichenModel.ServerEichprotokoll" Width="1.5" PointX="3" PointY="20" Height="16.979798177083332" />
         <EntityTypeShape EntityType="EichenModel.ServerEichprozess" Width="1.5" PointX="8.25" PointY="26" Height="5.2494108072916674" />
@@ -1075,14 +1074,7 @@
         <EntityTypeShape EntityType="EichenModel.ServerPruefungStaffelverfahrenErsatzlast" Width="1.5" PointX="5.25" PointY="39.375" Height="4.48020507812501" />
         <EntityTypeShape EntityType="EichenModel.ServerPruefungStaffelverfahrenNormallast" Width="1.5" PointX="5.25" PointY="48.375" Height="6.2109179687499818" />
         <EntityTypeShape EntityType="EichenModel.ServerPruefungWiederholbarkeit" Width="1.5" PointX="5.25" PointY="44.625" Height="2.9417936197916674" />
-        <AssociationConnector Association="EichenModel.FK_Eichprozess_Beschaffenheitspruefung" >
-          <ConnectorPoint PointX="7.0703125" PointY="13.037903645833325" />
-          <ConnectorPoint PointX="7.0703125" PointY="31.886455078125" />
-          <ConnectorPoint PointX="7.201822916666667" PointY="31.886455078125" />
-          <ConnectorPoint PointX="7.368489583333333" PointY="31.886455078125" />
-          <ConnectorPoint PointX="8.25" PointY="31.886455078125" />
-        </AssociationConnector>
-        <AssociationConnector Association="EichenModel.FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren" >
+               <AssociationConnector Association="EichenModel.FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren" >
           <ConnectorPoint PointX="2.25" PointY="28.615143229166662" />
           <ConnectorPoint PointX="3" PointY="28.615143229166662" />
         </AssociationConnector>

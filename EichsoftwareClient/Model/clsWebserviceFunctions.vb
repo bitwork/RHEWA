@@ -344,7 +344,7 @@ Public Class clsWebserviceFunctions
                     Dim objLiz = (From db In DBContext.Lizensierung Select db).FirstOrDefault
 
                     'hole die prozesse mit dem status 1 = in bearbeitung bei rhewa
-                    Dim query = From db In DBContext.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Beschaffenheitspruefung").Include("Mogelstatistik") Select db Where db.FK_Bearbeitungsstatus = 1
+                    Dim query = From db In DBContext.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select db Where db.FK_Bearbeitungsstatus = 1
 
                     For Each Eichprozess In query
                         Try

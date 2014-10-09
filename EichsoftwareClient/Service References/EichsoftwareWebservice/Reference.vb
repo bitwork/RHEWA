@@ -1476,7 +1476,7 @@ Namespace EichsoftwareWebservice
         Private EignungAchlastwaegungen_WaagenbrueckeEbeneField As System.Nullable(Of Boolean)
         
         <System.Runtime.Serialization.OptionalFieldAttribute()>  _
-        Private FK_Identifikationsdaten_KonformitaetsbewertungsverfahrenField As Byte
+        Private FK_Identifikationsdaten_KonformitaetsbewertungsverfahrenField As System.Nullable(Of Byte)
         
         <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private Fallbeschleunigung_gField As String
@@ -1742,7 +1742,7 @@ Namespace EichsoftwareWebservice
         End Property
         
         <System.Runtime.Serialization.DataMemberAttribute()>  _
-        Public Property FK_Identifikationsdaten_Konformitaetsbewertungsverfahren() As Byte
+        Public Property FK_Identifikationsdaten_Konformitaetsbewertungsverfahren() As System.Nullable(Of Byte)
             Get
                 Return Me.FK_Identifikationsdaten_KonformitaetsbewertungsverfahrenField
             End Get

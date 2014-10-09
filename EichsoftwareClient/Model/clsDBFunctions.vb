@@ -174,8 +174,7 @@
                               .Include("Lookup_Waegezelle").AsNoTracking _
                               .Include("Lookup_Waagenart").AsNoTracking _
                               .Include("Lookup_Waagentyp").AsNoTracking _
-                              .Include("Beschaffenheitspruefung").AsNoTracking _
-                              .Include("Mogelstatistik").AsNoTracking _
+                                                            .Include("Mogelstatistik").AsNoTracking _
                                   Select Obj Where Obj.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault 'firstor default um erstes element zurückzugeben das übereintrifft(bei ID Spalten sollte es eh nur 1 sein)
 
 

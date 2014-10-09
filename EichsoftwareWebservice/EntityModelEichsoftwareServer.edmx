@@ -38,10 +38,6 @@
             <End Role="Firmen" EntitySet="Firmen" />
             <End Role="Benutzer" EntitySet="Benutzer" />
           </AssociationSet>
-          <AssociationSet Name="FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren" Association="EichenSQLDatabaseModel.Store.FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren">
-            <End Role="ServerLookup_Konformitaetsbewertungsverfahren" EntitySet="ServerLookup_Konformitaetsbewertungsverfahren" />
-            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
-          </AssociationSet>
           <AssociationSet Name="FK_Eichprozess_Eichprotokoll" Association="EichenSQLDatabaseModel.Store.FK_Eichprozess_Eichprotokoll">
             <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
             <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
@@ -117,6 +113,10 @@
           <AssociationSet Name="FK_PruefungWiederholbarkeit_Eichprotokoll" Association="EichenSQLDatabaseModel.Store.FK_PruefungWiederholbarkeit_Eichprotokoll">
             <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
             <End Role="ServerPruefungWiederholbarkeit" EntitySet="ServerPruefungWiederholbarkeit" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServerEichprotokoll_ServerLookup_Konformitaetsbewertungsverfahren" Association="EichenSQLDatabaseModel.Store.FK_ServerEichprotokoll_ServerLookup_Konformitaetsbewertungsverfahren">
+            <End Role="ServerLookup_Konformitaetsbewertungsverfahren" EntitySet="ServerLookup_Konformitaetsbewertungsverfahren" />
+            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
           </AssociationSet>
           <AssociationSet Name="FK_ServerEichprozess_ServerLookup_Bearbeitungsstatus" Association="EichenSQLDatabaseModel.Store.FK_ServerEichprozess_ServerLookup_Bearbeitungsstatus">
             <End Role="ServerLookup_Bearbeitungsstatus" EntitySet="ServerLookup_Bearbeitungsstatus" />
@@ -230,7 +230,7 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="FK_Identifikationsdaten_Konformitaetsbewertungsverfahren" Type="tinyint" Nullable="false" />
+          <Property Name="FK_Identifikationsdaten_Konformitaetsbewertungsverfahren" Type="tinyint" />
           <Property Name="Identifikationsdaten_Benutzer" Type="nvarchar" MaxLength="50" />
           <Property Name="Identifikationsdaten_Aufstellungsort" Type="nvarchar" MaxLength="50" />
           <Property Name="Identifikationsdaten_Datum" Type="date" />
@@ -422,7 +422,7 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="tinyint" Nullable="false" />
+          <Property Name="ID" Type="tinyint" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Verfahren" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="Verfahren_EN" Type="nvarchar" MaxLength="50" />
           <Property Name="Verfahren_PL" Type="nvarchar" MaxLength="50" />
@@ -692,20 +692,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren">
-          <End Role="ServerLookup_Konformitaetsbewertungsverfahren" Type="EichenSQLDatabaseModel.Store.ServerLookup_Konformitaetsbewertungsverfahren" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.Store.ServerEichprotokoll" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ServerLookup_Konformitaetsbewertungsverfahren">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="ServerEichprotokoll">
-              <PropertyRef Name="FK_Identifikationsdaten_Konformitaetsbewertungsverfahren" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Eichprozess_Eichprotokoll">
           <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.Store.ServerEichprotokoll" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
@@ -956,6 +942,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_ServerEichprotokoll_ServerLookup_Konformitaetsbewertungsverfahren">
+          <End Role="ServerLookup_Konformitaetsbewertungsverfahren" Type="EichenSQLDatabaseModel.Store.ServerLookup_Konformitaetsbewertungsverfahren" Multiplicity="0..1" />
+          <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.Store.ServerEichprotokoll" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerLookup_Konformitaetsbewertungsverfahren">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerEichprotokoll">
+              <PropertyRef Name="FK_Identifikationsdaten_Konformitaetsbewertungsverfahren" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_ServerEichprozess_ServerLookup_Bearbeitungsstatus">
           <End Role="ServerLookup_Bearbeitungsstatus" Type="EichenSQLDatabaseModel.Store.ServerLookup_Bearbeitungsstatus" Multiplicity="0..1" />
           <End Role="ServerEichprozess" Type="EichenSQLDatabaseModel.Store.ServerEichprozess" Multiplicity="*" />
@@ -1197,7 +1195,7 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="FK_Identifikationsdaten_Konformitaetsbewertungsverfahren" Type="Byte" Nullable="false" />
+          <Property Name="FK_Identifikationsdaten_Konformitaetsbewertungsverfahren" Type="Byte" />
           <Property Name="Identifikationsdaten_Aufstellungsort" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="Identifikationsdaten_Datum" Type="DateTime" Precision="0" />
           <Property Name="Identifikationsdaten_Min1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
@@ -1634,7 +1632,7 @@
           <NavigationProperty Name="ServerEichprotokoll" Relationship="EichenSQLDatabaseModel.FK_PruefungWiederholbarkeit_Eichprotokoll" FromRole="ServerPruefungWiederholbarkeit" ToRole="ServerEichprotokoll" />
         </EntityType>
         <Association Name="FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren">
-          <End Role="ServerLookup_Konformitaetsbewertungsverfahren" Type="EichenSQLDatabaseModel.ServerLookup_Konformitaetsbewertungsverfahren" Multiplicity="1" />
+          <End Role="ServerLookup_Konformitaetsbewertungsverfahren" Type="EichenSQLDatabaseModel.ServerLookup_Konformitaetsbewertungsverfahren" Multiplicity="0..1" />
           <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.ServerEichprotokoll" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ServerLookup_Konformitaetsbewertungsverfahren">
@@ -2612,7 +2610,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
       <Diagram Name="EntityModelEichsoftwareServer" ZoomLevel="49">
-        <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerBeschaffenheitspruefung" Width="1.5" PointX="6" PointY="8.75" Height="4.2879036458333317" IsExpanded="true" />
+       
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerEichmarkenverwaltung" Width="1.5" PointX="0.75" PointY="2.25" Height="4.480205078125" IsExpanded="true" />
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerEichprotokoll" Width="1.5" PointX="3" PointY="20" Height="17.172099609375" IsExpanded="true" />
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerEichprozess" Width="1.5" PointX="8.25" PointY="26" Height="5.2494108072916674" IsExpanded="true" />
@@ -2636,14 +2634,7 @@
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerPruefungStaffelverfahrenNormallast" Width="1.5" PointX="5.25" PointY="48.375" Height="6.210917968749996" IsExpanded="true" />
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerPruefungWiederholbarkeit" Width="1.5" PointX="5.25" PointY="44.625" Height="2.9417936197916674" IsExpanded="true" />
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerLookup_Bearbeitungsstatus" Width="1.5" PointX="2.75" PointY="6.25" Height="1.7879850260416674" IsExpanded="true" />
-        <AssociationConnector Association="EichenSQLDatabaseModel.FK_Eichprozess_Beschaffenheitspruefung" ManuallyRouted="false">
-          <ConnectorPoint PointX="7.0703125" PointY="13.037903645833332" />
-          <ConnectorPoint PointX="7.0703125" PointY="28.358548024454421" />
-          <ConnectorPoint PointX="7.201822916666667" PointY="28.358548024454421" />
-          <ConnectorPoint PointX="7.368489583333333" PointY="28.358548024454421" />
-          <ConnectorPoint PointX="8.25" PointY="28.358548024454421" />
-        </AssociationConnector>
-        <AssociationConnector Association="EichenSQLDatabaseModel.FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren" ManuallyRouted="false">
+               <AssociationConnector Association="EichenSQLDatabaseModel.FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren" ManuallyRouted="false">
           <ConnectorPoint PointX="2.25" PointY="28.615143229166666" />
           <ConnectorPoint PointX="3" PointY="28.615143229166666" />
         </AssociationConnector>

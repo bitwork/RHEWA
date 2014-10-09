@@ -122,10 +122,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\ApplyCyclicDataContractSerializerOperationBehavior.vb" />
     <Compile Include="Benutzer.vb">
       <DependentUpon>EntityModelEichsoftwareServer.tt</DependentUpon>
     </Compile>
+    <Compile Include="Firmen.vb">
+      <DependentUpon>EntityModelEichsoftwareServer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ApplyCyclicDataContractSerializerOperationBehavior.vb" />
     <Compile Include="Model\clsEichprozessFuerAuswahlliste.vb" />
     <Compile Include="Model\clsLizenzdaten.vb" />
     <Compile Include="Model\clsServerFTPDaten.vb" />
@@ -147,9 +150,6 @@
     <Compile Include="EntityModelEichsoftwareServer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>EntityModelEichsoftwareServer.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Firmen.vb">
       <DependentUpon>EntityModelEichsoftwareServer.tt</DependentUpon>
     </Compile>
     <Compile Include="IEichsoftwareWebservice.vb" />

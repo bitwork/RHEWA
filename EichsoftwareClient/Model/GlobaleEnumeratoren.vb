@@ -30,6 +30,7 @@
         Fahrzeugwaagen = 1
         ueber60kgimStaffelverfahren = 2
         ueber60kgmitNormalien = 3
+        nichts = 4
     End Enum
 
     Public Enum enuBearbeitungsstatus

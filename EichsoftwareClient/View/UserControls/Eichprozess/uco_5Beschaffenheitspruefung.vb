@@ -5,7 +5,7 @@ Public Class uco_5Beschaffenheitspruefung
 
 #Region "Member Variables"
     Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken
-    'Private  AktuellerStatusDirty As Boolean = False
+    Private _objEichprotokoll As Eichprotokoll
 #End Region
 
 
@@ -46,13 +46,13 @@ Public Class uco_5Beschaffenheitspruefung
         'TH: Laden aus Datenbank
         Using Context As New EichsoftwareClientdatabaseEntities1
             _suspendEvents = True
-
+            objEichprozess = ParentFormular.CurrentEichprozess
             'Nur laden wenn es sich um eine Bearbeitung handelt (sonst würde das in Memory Objekt überschrieben werden)
             If Not DialogModus = enuDialogModus.lesend And Not DialogModus = enuDialogModus.korrigierend Then
-                objEichprozess = (From Eichprozess In Context.Eichprozess.Include("Beschaffenheitspruefung").Include("Kompatiblitaetsnachweis") Select Eichprozess Where Eichprozess.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
+                objEichprozess = (From Eichprozess In Context.Eichprozess.Include("Kompatiblitaetsnachweis").Include("Eichprotokoll") Select Eichprozess Where Eichprozess.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
             End If
         End Using
-
+        _objEichprotokoll = objEichprozess.Eichprotokoll
 
 
         'steuerelemente mit werten aus DB füllen
@@ -86,9 +86,12 @@ Public Class uco_5Beschaffenheitspruefung
     ''' <author></author>
     ''' <commentauthor></commentauthor>
     Private Sub FillControls()
-        If Not objEichprozess.Eichprotokoll Is Nothing Then
-            RadCheckBoxApprove.Checked = objEichprozess.Eichprotokoll.Beschaffenheitspruefung_Genehmigt
+        If Not _objEichprotokoll Is Nothing Then
+            If Not _objEichprotokoll.Beschaffenheitspruefung_Genehmigt Is Nothing Then 'kompatiblitaet zu alten DS mit alter Beschaffenheitspruefung
+                RadCheckBoxApprove.Checked = _objEichprotokoll.Beschaffenheitspruefung_Genehmigt
+            End If
         End If
+
     End Sub
 
     ''' <summary>
@@ -98,8 +101,11 @@ Public Class uco_5Beschaffenheitspruefung
     ''' <author></author>
     ''' <commentauthor></commentauthor>
     Private Sub UpdateObject()
-        If Not objEichprozess.Eichprotokoll Is Nothing Then
-            objEichprozess.Eichprotokoll.Beschaffenheitspruefung_Genehmigt = RadCheckBoxApprove.Checked
+        If Not _objEichprotokoll Is Nothing Then
+            If _objEichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren Is Nothing Then
+                _objEichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.nichts
+            End If
+            _objEichprotokoll.Beschaffenheitspruefung_Genehmigt = RadCheckBoxApprove.Checked
         End If
 
     End Sub
@@ -135,18 +141,12 @@ Public Class uco_5Beschaffenheitspruefung
     Private Function ValidateControls() As Boolean
         Me.AbortSaveing = False
         'prüfen ob alle Felder ausgefüllt sind
-        For Each GroupBox In RadScrollablePanel1.PanelContainer.Controls
-            If TypeOf GroupBox Is Telerik.WinControls.UI.RadGroupBox Then
-                For Each Control In GroupBox.controls
-                    If TypeOf Control Is Telerik.WinControls.UI.RadCheckBox Then
-                        If Control.checked = False Then
-                            AbortSaveing = True
-                        End If
-                    End If
-                Next
-            End If
-        Next
-          'fehlermeldung anzeigen bei falscher validierung
+       
+        If RadCheckBoxApprove.Checked = False Then
+            AbortSaveing = True
+        End If
+
+        'fehlermeldung anzeigen bei falscher validierung
         Return Me.ShowValidationErrorBox()
     End Function
 
@@ -217,59 +217,58 @@ Public Class uco_5Beschaffenheitspruefung
 
                 'neuen Context aufbauen
                 Using Context As New EichsoftwareClientdatabaseEntities1
-                    Dim dbobjEichprozess As Eichprozess = Context.Eichprozess.FirstOrDefault(Function(value) value.Vorgangsnummer = objEichprozess.Vorgangsnummer)
-                            If Not dbobjEichprozess Is Nothing Then
-                                'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
-                                objEichprozess = dbobjEichprozess
-
-                                'neuen Status zuweisen
-                                If AktuellerStatusDirty = False Then
-                                    ' Wenn der aktuelle Status kleiner ist als der für die AuswahlKonformitätsverfahren, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
-                                    If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.AuswahlKonformitätsverfahren Then
-                                        objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.AuswahlKonformitätsverfahren
-                                    End If
-                                ElseIf AktuellerStatusDirty = True Then
-                                    objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.AuswahlKonformitätsverfahren
-                                    AktuellerStatusDirty = False
+                    If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
+                        If _objEichprotokoll Is Nothing Then           'neues Eichprotokoll anlegen und verfahrens Art zuweisen
+                            _objEichprotokoll = Context.Eichprotokoll.Create
+                            Context.Eichprotokoll.Add(_objEichprotokoll)
+                        Else
+                            Dim dobjEichprotkoll As Eichprotokoll = Context.Eichprotokoll.FirstOrDefault(Function(value) value.ID = _objEichprotokoll.ID)
+                            _objEichprotokoll = dobjEichprotkoll
                         End If
 
-                        UpdateObject()
 
+                        'Füllt das Objekt mit den Werten aus den Steuerlementen
+                        UpdateObject()
                         'Speichern in Datenbank
-                                Context.SaveChanges()
+                        Context.SaveChanges()
+
+                        'zuweisen des eichprotokolls an den eichprozess
+
+                        'prüfen ob das Objekt anhand der ID gefunden werden kann
+                        Dim dbobjEichprozess As Eichprozess = Context.Eichprozess.FirstOrDefault(Function(value) value.Vorgangsnummer = objEichprozess.Vorgangsnummer)
+                        If Not dbobjEichprozess Is Nothing Then
+                            'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
+                            objEichprozess = dbobjEichprozess
+                            objEichprozess.FK_Eichprotokoll = _objEichprotokoll.ID 'zuweisen des eichprotokolls an den eichprozess
+                            objEichprozess.Eichprotokoll = _objEichprotokoll
+
+                            'neuen Status zuweisen
+                            If AktuellerStatusDirty = False Then
+                                ' Wenn der aktuelle Status kleiner ist als der für die AuswahlKonformitätsverfahren, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
+                                If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.AuswahlKonformitätsverfahren Then
+                                    objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.AuswahlKonformitätsverfahren
+                                End If
+                            ElseIf AktuellerStatusDirty = True Then
+                                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.AuswahlKonformitätsverfahren
+                                AktuellerStatusDirty = False
                             End If
+
+                            UpdateObject()
+
+                            'Speichern in Datenbank
+                            Context.SaveChanges()
+                        End If
+
+                    End If
+
+                  
                 End Using
                 ParentFormular.CurrentEichprozess = objEichprozess
             End If
         End If
 
     End Sub
-    Protected Overrides Sub SaveWithoutValidationNeeded(usercontrol As UserControl)
-        If Me.Equals(usercontrol) Then
-            MyBase.SaveWithoutValidationNeeded(usercontrol)
-            If DialogModus = enuDialogModus.lesend Then
-                UpdateObject()
-                ParentFormular.CurrentEichprozess = objEichprozess
-                Exit Sub
-            End If
-            'neuen Context aufbauen
-            Using Context As New EichsoftwareClientdatabaseEntities1
-                If objEichprozess.ID <> 0 Then
-                    Dim dbobjEichprozess As Eichprozess = Context.Eichprozess.FirstOrDefault(Function(value) value.Vorgangsnummer = objEichprozess.Vorgangsnummer)
-                    If Not dbobjEichprozess Is Nothing Then
-                        'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
-                        objEichprozess = dbobjEichprozess
-
-                        'Füllt das Objekt mit den Werten aus den Steuerlementen
-                        UpdateObject()
-                        'Speichern in Datenbank
-                        Context.SaveChanges()
-                    End If
-                End If
-            End Using
-            ParentFormular.CurrentEichprozess = objEichprozess
-        End If
-    End Sub
+   
 
     'Entsperrroutine
     Protected Overrides Sub EntsperrungNeeded()
@@ -306,20 +305,10 @@ Public Class uco_5Beschaffenheitspruefung
                 'auf fehlerhaft Status setzen
                 objEichprozess.FK_Bearbeitungsstatus = 2
                 objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Konformitätsbewertungsbevollmächtigter sich den DS von Anfang angucken muss
-              
-                If objEichprozess.ID <> 0 Then
-                    Dim dbobjEichprozess As Eichprozess = dbcontext.Eichprozess.FirstOrDefault(Function(value) value.Vorgangsnummer = objEichprozess.Vorgangsnummer)
-                        If Not dbobjEichprozess Is Nothing Then
-                            'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
-                            objEichprozess = dbobjEichprozess
-                        'Füllt das Objekt mit den Werten aus den Steuerlementen
-                        UpdateObject()
-                            'Speichern in Datenbank
-                            dbcontext.SaveChanges()
-                        End If
-                End If
+                UpdateObject()
 
-                'erzeuegn eines Server Objektes auf basis des aktuellen DS
+
+                'erzeugen eines Server Objektes auf basis des aktuellen DS
                 objServerEichprozess = clsClientServerConversionFunctions.CopyObjectProperties(objServerEichprozess, objEichprozess, clsClientServerConversionFunctions.enuModus.RHEWASendetAnClient)
                 Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
                     Try

@@ -797,7 +797,6 @@
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
-    <None Include="My Project\DataSources\Beschaffenheitspruefung.datasource" />
     <None Include="My Project\DataSources\Eichprotokoll.datasource" />
     <None Include="My Project\DataSources\Eichprotokoll_Identifikationsdaten_Waage.datasource" />
     <None Include="My Project\DataSources\Eichprozess.datasource" />

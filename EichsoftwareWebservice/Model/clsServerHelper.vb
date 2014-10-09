@@ -19,7 +19,7 @@
                 Next
                 dbcontext.SaveChanges()
                 'neu laden der instanz damit TRacking des Contextes aktiv ist
-                TargetObject = (From d In dbcontext.ServerEichprozess.Include("ServerEichprotokoll").Include("ServerBeschaffenheitspruefung").Include("ServerKompatiblitaetsnachweis") Where d.ID = EichprozessID Select d).FirstOrDefault
+                TargetObject = (From d In dbcontext.ServerEichprozess.Include("ServerEichprotokoll").Include("ServerKompatiblitaetsnachweis") Where d.ID = EichprozessID Select d).FirstOrDefault
 
                 'prüfungen
                 Try

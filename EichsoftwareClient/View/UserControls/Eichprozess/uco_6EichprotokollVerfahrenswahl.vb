@@ -50,11 +50,7 @@
             Using context As New EichsoftwareClientdatabaseEntities1
                 'neu laden des Objekts, diesmal mit den lookup Objekten
                 'Nur laden wenn es sich um eine Bearbeitung handelt (sonst würde das in Memory Objekt überschrieben werden)
-
                 objEichprozess = (From a In context.Eichprozess.Include("Eichprotokoll").Include("Kompatiblitaetsnachweis").Include("Lookup_Waagenart") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
-
-
-
             End Using
         End If
         _objEichprotokoll = objEichprozess.Eichprotokoll
@@ -99,7 +95,9 @@
                 RadRadioButtonNormalien.IsChecked = True
             ElseIf _objEichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgimStaffelverfahren Then
                 RadRadioButtonStaffelverfahren.IsChecked = True
-
+            Else
+                RadRadioButtonNormalien.IsChecked = True
+                _objEichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgmitNormalien
             End If
         End If
 
@@ -229,10 +227,6 @@
                     End If
 
 
-
-                    '  Dim objLiz = (From db In Context.Lizensierung Select db).FirstOrDefault
-                    '   _objEichprotokoll.Identifikationsdaten_Pruefer = objLiz.HEKennung
-
                     'Füllt das Objekt mit den Werten aus den Steuerlementen
                     UpdateObject()
                     'Speichern in Datenbank
@@ -269,6 +263,37 @@
             ParentFormular.CurrentEichprozess = objEichprozess
         End If
     End Sub
+
+
+    Protected Overrides Sub SaveWithoutValidationNeeded(usercontrol As UserControl)
+        If Me.Equals(usercontrol) Then
+            If DialogModus = enuDialogModus.lesend Then
+                UpdateObject()
+                ParentFormular.CurrentEichprozess = objEichprozess
+                Exit Sub
+            End If
+            'neuen Context aufbauen
+            Using Context As New EichsoftwareClientdatabaseEntities1
+                'prüfen ob CREATE oder UPDATE durchgeführt werden muss
+                If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
+                    'prüfen ob das Objekt anhand der ID gefunden werden kann
+                    Dim dobjEichprozess As Eichprozess = Context.Eichprozess.FirstOrDefault(Function(value) value.Vorgangsnummer = objEichprozess.Vorgangsnummer)
+                    If Not dobjEichprozess Is Nothing Then
+                        'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
+                        objEichprozess = dobjEichprozess
+                        'neuen Status zuweisen
+
+                        'Füllt das Objekt mit den Werten aus den Steuerlementen
+                        UpdateObject()
+                        'Speichern in Datenbank
+                        Context.SaveChanges()
+                    End If
+                End If
+            End Using
+
+            ParentFormular.CurrentEichprozess = objEichprozess
+        End If
+    End Sub
 #End Region
 
 
@@ -298,31 +323,6 @@
 
 
     End Sub
-
-
-
-#Region "Methods"
-    'Public Function CountDecimalDigits(value As String) As Integer
-    '    Dim possibleChars As Char() = "0123456789.".ToCharArray()
-    '    Dim decimalPoints As Integer = 0
-    '    For Each ch As Char In value
-    '        If Array.IndexOf(possibleChars, ch) < 0 Then
-    '            Throw New Exception()
-    '        End If
-    '        If ch = "."c Then
-    '            decimalPoints += 1
-    '        End If
-    '    Next
-    '    If decimalPoints > 1 Then
-    '        Throw New Exception()
-    '    End If
-    '    If decimalPoints = 0 Then
-    '        Return 0
-    '    End If
-    '    Return value.Length - value.IndexOf("."c) - 1
-    'End Function
-
-#End Region
 
     ''' <summary>
     ''' Status des Verfahrens speichern
@@ -366,7 +366,7 @@
         If Me.Equals(TargetUserControl) Then
             MyBase.VersendenNeeded(TargetUserControl)
             Using dbcontext As New EichsoftwareClientdatabaseEntities1
-                ' objEichprozess = (From a In dbcontext.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Beschaffenheitspruefung").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
+                ' objEichprozess = (From a In dbcontext.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
 
                 Dim objServerEichprozess As New EichsoftwareWebservice.ServerEichprozess
                 'auf fehlerhaft Status setzen

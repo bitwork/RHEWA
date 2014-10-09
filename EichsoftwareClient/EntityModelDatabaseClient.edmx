@@ -117,7 +117,7 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="FK_Identifikationsdaten_Konformitaetsbewertungsverfahren" Type="tinyint" Nullable="false" />
+          <Property Name="FK_Identifikationsdaten_Konformitaetsbewertungsverfahren" Type="tinyint" />
           <Property Name="Identifikationsdaten_Aufstellungsort" Type="nvarchar" MaxLength="50" />
           <Property Name="Identifikationsdaten_Datum" Type="datetime" />
           <Property Name="Identifikationsdaten_Min1" Type="nvarchar" MaxLength="50" />
@@ -521,7 +521,7 @@
           <Property Name="EFG_Extra" Type="nvarchar" Nullable="false" MaxLength="20" />
         </EntityType>
         <Association Name="FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren">
-          <End Role="Lookup_Konformitaetsbewertungsverfahren" Type="EichsoftwareClientdatabaseModel.Store.Lookup_Konformitaetsbewertungsverfahren" Multiplicity="1" />
+          <End Role="Lookup_Konformitaetsbewertungsverfahren" Type="EichsoftwareClientdatabaseModel.Store.Lookup_Konformitaetsbewertungsverfahren" Multiplicity="0..1" />
           <End Role="Eichprotokoll" Type="EichsoftwareClientdatabaseModel.Store.Eichprotokoll" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Lookup_Konformitaetsbewertungsverfahren">
@@ -798,10 +798,6 @@
           <EntitySet Name="PruefungStaffelverfahrenErsatzlast" EntityType="EichsoftwareClientdatabaseModel.PruefungStaffelverfahrenErsatzlast" />
           <EntitySet Name="PruefungStaffelverfahrenNormallast" EntityType="EichsoftwareClientdatabaseModel.PruefungStaffelverfahrenNormallast" />
           <EntitySet Name="PruefungWiederholbarkeit" EntityType="EichsoftwareClientdatabaseModel.PruefungWiederholbarkeit" />
-          <AssociationSet Name="FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren" Association="EichsoftwareClientdatabaseModel.FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren">
-            <End Role="Lookup_Konformitaetsbewertungsverfahren" EntitySet="Lookup_Konformitaetsbewertungsverfahren" />
-            <End Role="Eichprotokoll" EntitySet="Eichprotokoll" />
-          </AssociationSet>
           <AssociationSet Name="FK_Eichprozess_Eichprotokoll" Association="EichsoftwareClientdatabaseModel.FK_Eichprozess_Eichprotokoll">
             <End Role="Eichprotokoll" EntitySet="Eichprotokoll" />
             <End Role="Eichprozess" EntitySet="Eichprozess" />
@@ -882,13 +878,17 @@
             <End Role="Lookup_Waegezelle" EntitySet="Lookup_Waegezelle" />
             <End Role="Mogelstatistik" EntitySet="Mogelstatistik" />
           </AssociationSet>
+          <AssociationSet Name="FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren" Association="EichsoftwareClientdatabaseModel.FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren">
+            <End Role="Lookup_Konformitaetsbewertungsverfahren" EntitySet="Lookup_Konformitaetsbewertungsverfahren" />
+            <End Role="Eichprotokoll" EntitySet="Eichprotokoll" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Eichprotokoll">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="Byte" Name="FK_Identifikationsdaten_Konformitaetsbewertungsverfahren" Nullable="false" />
+          <Property Type="Byte" Name="FK_Identifikationsdaten_Konformitaetsbewertungsverfahren" Nullable="true" />
           <Property Type="String" Name="Identifikationsdaten_Aufstellungsort" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="DateTime" Name="Identifikationsdaten_Datum" Precision="3" />
           <Property Type="String" Name="Identifikationsdaten_Min1" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -947,7 +947,6 @@
           <Property Type="Boolean" Name="EignungAchlastwaegungen_WaageNichtGeeignet" />
           <Property Type="Boolean" Name="EignungAchlastwaegungen_Geprueft" />
           <Property Type="String" Name="Identifikationsdaten_Benutzer" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Lookup_Konformitaetsbewertungsverfahren" Relationship="EichsoftwareClientdatabaseModel.FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren" FromRole="Eichprotokoll" ToRole="Lookup_Konformitaetsbewertungsverfahren" />
           <NavigationProperty Name="Eichprozess" Relationship="EichsoftwareClientdatabaseModel.FK_Eichprozess_Eichprotokoll" FromRole="Eichprotokoll" ToRole="Eichprozess" />
           <NavigationProperty Name="PruefungAussermittigeBelastung" Relationship="EichsoftwareClientdatabaseModel.FK_PruefungAussermittigeBelastung_Eichprotokoll" FromRole="Eichprotokoll" ToRole="PruefungAussermittigeBelastung" />
           <NavigationProperty Name="PruefungLinearitaetFallend" Relationship="EichsoftwareClientdatabaseModel.FK_PruefungLinearitaetFallend_Eichprotokoll" FromRole="Eichprotokoll" ToRole="PruefungLinearitaetFallend" />
@@ -959,6 +958,7 @@
           <NavigationProperty Name="PruefungStaffelverfahrenNormallast" Relationship="EichsoftwareClientdatabaseModel.FK_PruefungStaffelverfahrenNormallast_Eichprotokoll" FromRole="Eichprotokoll" ToRole="PruefungStaffelverfahrenNormallast" />
           <NavigationProperty Name="PruefungWiederholbarkeit" Relationship="EichsoftwareClientdatabaseModel.FK_PruefungWiederholbarkeit_Eichprotokoll" FromRole="Eichprotokoll" ToRole="PruefungWiederholbarkeit" />
           <Property Type="Boolean" Name="Beschaffenheitspruefung_Genehmigt" />
+          <NavigationProperty Name="Lookup_Konformitaetsbewertungsverfahren" Relationship="EichsoftwareClientdatabaseModel.FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren" FromRole="Eichprotokoll" ToRole="Lookup_Konformitaetsbewertungsverfahren" />
         </EntityType>
         <EntityType Name="Eichprozess">
           <Key>
@@ -1333,18 +1333,6 @@
           <Property Type="String" Name="EFG_Extra" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Eichprotokoll" Relationship="EichsoftwareClientdatabaseModel.FK_PruefungWiederholbarkeit_Eichprotokoll" FromRole="PruefungWiederholbarkeit" ToRole="Eichprotokoll" />
         </EntityType>
-        <Association Name="FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren">
-          <End Type="EichsoftwareClientdatabaseModel.Lookup_Konformitaetsbewertungsverfahren" Role="Lookup_Konformitaetsbewertungsverfahren" Multiplicity="1" />
-          <End Type="EichsoftwareClientdatabaseModel.Eichprotokoll" Role="Eichprotokoll" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Lookup_Konformitaetsbewertungsverfahren">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="Eichprotokoll">
-              <PropertyRef Name="FK_Identifikationsdaten_Konformitaetsbewertungsverfahren" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Eichprozess_Eichprotokoll">
           <End Type="EichsoftwareClientdatabaseModel.Eichprotokoll" Role="Eichprotokoll" Multiplicity="0..1" />
           <End Type="EichsoftwareClientdatabaseModel.Eichprozess" Role="Eichprozess" Multiplicity="*" />
@@ -1582,6 +1570,18 @@
             </Principal>
             <Dependent Role="Mogelstatistik">
               <PropertyRef Name="FK_Waegezelle" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren">
+          <End Type="EichsoftwareClientdatabaseModel.Lookup_Konformitaetsbewertungsverfahren" Role="Lookup_Konformitaetsbewertungsverfahren" Multiplicity="0..1" />
+          <End Type="EichsoftwareClientdatabaseModel.Eichprotokoll" Role="Eichprotokoll" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lookup_Konformitaetsbewertungsverfahren">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Eichprotokoll">
+              <PropertyRef Name="FK_Identifikationsdaten_Konformitaetsbewertungsverfahren" />
             </Dependent>
           </ReferentialConstraint>
         </Association>

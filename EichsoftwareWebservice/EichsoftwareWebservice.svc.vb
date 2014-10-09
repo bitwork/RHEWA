@@ -174,7 +174,7 @@ Public Class EichsoftwareWebservice
 
                 Dim Vorgangsnummer As String = pObjEichprozess.Vorgangsnummer
 
-                Dim Serverob = (From db In DbContext.ServerEichprozess.Include("ServerEichprotokoll").Include("ServerBeschaffenheitspruefung").Include("ServerKompatiblitaetsnachweis") Select db Where db.Vorgangsnummer = Vorgangsnummer).FirstOrDefault
+                Dim Serverob = (From db In DbContext.ServerEichprozess.Include("ServerEichprotokoll").Include("ServerKompatiblitaetsnachweis") Select db Where db.Vorgangsnummer = Vorgangsnummer).FirstOrDefault
 
                 If Serverob Is Nothing Then
 
@@ -308,7 +308,7 @@ Public Class EichsoftwareWebservice
                     Dim Obj = (From Eichprozess In DbContext.ServerEichprozess.Include("ServerEichprotokoll") _
                                .Include("ServerLookup_Auswertegeraet").Include("ServerKompatiblitaetsnachweis") _
                                .Include("ServerLookup_Waegezelle").Include("ServerLookup_Waagenart") _
-                               .Include("ServerLookup_Waagentyp").Include("ServerBeschaffenheitspruefung") _
+                               .Include("ServerLookup_Waagentyp") _
                                Where Eichprozess.Vorgangsnummer = Vorgangsnummer).FirstOrDefault
 
                     ''abruch
@@ -457,7 +457,7 @@ Public Class EichsoftwareWebservice
                     Dim Eichprozesse = (From Eichprozess In DbContext.ServerEichprozess.Include("ServerEichprotokoll") _
                                .Include("ServerLookup_Auswertegeraet").Include("ServerKompatiblitaetsnachweis") _
                                .Include("ServerLookup_Waegezelle").Include("ServerLookup_Waagenart") _
-                               .Include("ServerLookup_Waagentyp").Include("ServerBeschaffenheitspruefung") Where Eichprozess.UploadDatum > SyncAllesSeit And Eichprozess.UploadDatum < SyncAllesBis And Eichprozess.ErzeugerLizenz = Lizenzschluessel)
+                               .Include("ServerLookup_Waagentyp") Where Eichprozess.UploadDatum > SyncAllesSeit And Eichprozess.UploadDatum < SyncAllesBis And Eichprozess.ErzeugerLizenz = Lizenzschluessel)
 
 
                     ''abruch

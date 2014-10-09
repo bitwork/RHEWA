@@ -118,21 +118,15 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="RadGroupBoxAufstellbedingungen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>5228, 59</value>
+  </data>
   <data name="RadLabel15.Size" type="System.Drawing.Size, System.Drawing">
     <value>450, 18</value>
   </data>
   <data name="RadLabel15.Text" xml:space="preserve">
     <value>Die Konstruktion der Brücke ist für die künftige Wiegeaufgabe entsprechend ausgelegt. 								
 </value>
-  </data>
-  <data name="RadCheckBoxBruecke1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>878, 34</value>
-  </data>
-  <data name="RadCheckBoxBruecke3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>878, 111</value>
-  </data>
-  <data name="RadCheckBoxBruecke2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>878, 73</value>
   </data>
   <data name="RadLabel11.Size" type="System.Drawing.Size, System.Drawing">
     <value>699, 33</value>
@@ -153,7 +147,7 @@
     <value>Kriterien für die einzusetzende Wägebrücke:										</value>
   </data>
   <data name="RadGroupBoxWaegebruecke.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1194, 137</value>
+    <value>2202, 169</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="RadGroupBoxWaegebruecke.TabIndex" type="System.Int32, mscorlib">
@@ -201,41 +195,11 @@
 								
 </value>
   </data>
-  <data name="RadCheckBoxWZ1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>878, 21</value>
-  </data>
-  <data name="RadCheckBoxWZ1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadCheckBoxWZ2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>878, 59</value>
-  </data>
-  <data name="RadCheckBoxWZ2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="RadCheckBoxWZ4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>878, 135</value>
-  </data>
-  <data name="RadCheckBoxWZ4.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="RadCheckBoxWZ3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>878, 95</value>
-  </data>
-  <data name="RadCheckBoxWZ3.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="RadCheckBoxWZ5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>878, 171</value>
-  </data>
-  <data name="RadCheckBoxWZ5.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
   <data name="RadGroupBoxWaegezellen.HeaderText" xml:space="preserve">
     <value>Kriterien für die einzusetzende(n) Wägezelle(n):</value>
   </data>
   <data name="RadGroupBoxWaegezellen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1194, 193</value>
+    <value>2202, 193</value>
   </data>
   <data name="RadGroupBoxWaegezellen.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -272,23 +236,11 @@
 								
 </value>
   </data>
-  <data name="RadCheckBoxVerbindungelemente1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>878, 21</value>
-  </data>
-  <data name="RadCheckBoxVerbindungelemente3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>878, 100</value>
-  </data>
-  <data name="RadCheckBoxVerbindungelemente2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>878, 62</value>
-  </data>
-  <data name="RadCheckBoxVerbindungelemente4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>878, 137</value>
-  </data>
   <data name="RadGroupBoxVerbindungselemente.HeaderText" xml:space="preserve">
     <value>&lt;html&gt;Kriterien für die einzusetzenden Verbindungselemente:       &lt;/html&gt;</value>
   </data>
   <data name="RadGroupBoxVerbindungselemente.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1194, 191</value>
+    <value>2202, 191</value>
   </data>
   <data name="RadGroupBoxVerbindungselemente.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -316,20 +268,11 @@
   <data name="RadLabel2.Text" xml:space="preserve">
     <value>Die metrologischen Angaben müssen vorhanden und in Ordnung sein Max. / Min. / e= / Klasse / Zulassungszeichen / Hersteller / WEEE-Symbol </value>
   </data>
-  <data name="RadCheckBoxAWG1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>878, 30</value>
-  </data>
-  <data name="RadCheckBoxAWG3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>878, 93</value>
-  </data>
-  <data name="RadCheckBoxAWG2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>878, 61</value>
-  </data>
   <data name="RadGroupBoxAuswerteGeraete.HeaderText" xml:space="preserve">
     <value>Kriterien für Rhewa Auswertegeräte:										</value>
   </data>
   <data name="RadGroupBoxAuswerteGeraete.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1194, 118</value>
+    <value>2202, 212</value>
   </data>
   <data name="RadGroupBoxAuswerteGeraete.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
