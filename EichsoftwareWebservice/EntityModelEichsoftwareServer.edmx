@@ -290,6 +290,7 @@
           <Property Name="EignungAchlastwaegungen_WaageNichtGeeignet" Type="bit" />
           <Property Name="EignungAchlastwaegungen_Geprueft" Type="bit" />
           <Property Name="Beschaffenheitspruefung_Genehmigt" Type="bit" />
+          <Property Name="Taraeinrichtung_Taraeingabe" Type="bit" />
         </EntityType>
         <EntityType Name="ServerEichprozess">
           <Key>
@@ -1266,6 +1267,7 @@
           <NavigationProperty Name="ServerPruefungWiederholbarkeit" Relationship="EichenSQLDatabaseModel.FK_PruefungWiederholbarkeit_Eichprotokoll" FromRole="ServerEichprotokoll" ToRole="ServerPruefungWiederholbarkeit" />
           <Property Type="String" Name="Identifikationsdaten_Benutzer" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="Boolean" Name="Beschaffenheitspruefung_Genehmigt" />
+          <Property Type="Boolean" Name="Taraeinrichtung_Taraeingabe" />
         </EntityType>
         <EntityType Name="ServerEichprozess">
           <Key>
@@ -2085,6 +2087,7 @@
           <EntitySetMapping Name="ServerEichprotokoll">
             <EntityTypeMapping TypeName="EichenSQLDatabaseModel.ServerEichprotokoll">
               <MappingFragment StoreEntitySet="ServerEichprotokoll">
+                <ScalarProperty Name="Taraeinrichtung_Taraeingabe" ColumnName="Taraeinrichtung_Taraeingabe" />
                 <ScalarProperty Name="Beschaffenheitspruefung_Genehmigt" ColumnName="Beschaffenheitspruefung_Genehmigt" />
                 <ScalarProperty Name="Identifikationsdaten_Benutzer" ColumnName="Identifikationsdaten_Benutzer" />
                 <ScalarProperty Name="ID" ColumnName="ID" />

@@ -89,6 +89,7 @@ Partial Class uco_7EichprotokollDaten
         Me.RadTextBoxControlSoftwarestand = New Telerik.WinControls.UI.RadTextBoxControl()
         Me.lblAWG = New Telerik.WinControls.UI.RadLabel()
         Me.RadGroupBoxPruefverfahren = New Telerik.WinControls.UI.RadGroupBox()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.RadLabel6 = New Telerik.WinControls.UI.RadLabel()
         Me.lblNormalienGewichte = New Telerik.WinControls.UI.RadLabel()
@@ -161,7 +162,7 @@ Partial Class uco_7EichprotokollDaten
         Me.RadTextBoxControlAufstellungsort = New Telerik.WinControls.UI.RadTextBoxControl()
         Me.lblBenutzer = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlBenutzer = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.Label12 = New System.Windows.Forms.Label()
+        Me.RadRadioButtonTaraeingabe = New Telerik.WinControls.UI.RadCheckBox()
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanel1.PanelContainer.SuspendLayout()
         Me.RadScrollablePanel1.SuspendLayout()
@@ -307,6 +308,7 @@ Partial Class uco_7EichprotokollDaten
         CType(Me.RadTextBoxControlAufstellungsort, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblBenutzer, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBenutzer, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadRadioButtonTaraeingabe, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'RadScrollablePanel1
@@ -594,6 +596,7 @@ Partial Class uco_7EichprotokollDaten
         'RadGroupBoxVerwendungszweckTara
         '
         Me.RadGroupBoxVerwendungszweckTara.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.RadGroupBoxVerwendungszweckTara.Controls.Add(Me.RadRadioButtonTaraeingabe)
         Me.RadGroupBoxVerwendungszweckTara.Controls.Add(Me.RadRadioButtonHandTara)
         Me.RadGroupBoxVerwendungszweckTara.Controls.Add(Me.RadRadioButtonAutoTara)
         resources.ApplyResources(Me.RadGroupBoxVerwendungszweckTara, "RadGroupBoxVerwendungszweckTara")
@@ -1325,6 +1328,12 @@ Partial Class uco_7EichprotokollDaten
         Me.RadGroupBoxPruefverfahren.RootElement.Margin = CType(resources.GetObject("RadGroupBoxPruefverfahren.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadGroupBoxPruefverfahren.RootElement.Text = resources.GetString("RadGroupBoxPruefverfahren.RootElement.Text")
         Me.RadGroupBoxPruefverfahren.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxPruefverfahren.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        '
+        'Label12
+        '
+        resources.ApplyResources(Me.Label12, "Label12")
+        Me.Label12.ForeColor = System.Drawing.Color.Red
+        Me.Label12.Name = "Label12"
         '
         'PictureBox5
         '
@@ -2414,11 +2423,21 @@ Partial Class uco_7EichprotokollDaten
         Me.RadTextBoxControlBenutzer.RootElement.Text = resources.GetString("RadTextBoxControlBenutzer.RootElement.Text")
         Me.RadTextBoxControlBenutzer.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBenutzer.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
-        'Label12
+        'RadRadioButtonTaraeingabe
         '
-        resources.ApplyResources(Me.Label12, "Label12")
-        Me.Label12.ForeColor = System.Drawing.Color.Red
-        Me.Label12.Name = "Label12"
+        resources.ApplyResources(Me.RadRadioButtonTaraeingabe, "RadRadioButtonTaraeingabe")
+        Me.RadRadioButtonTaraeingabe.Name = "RadRadioButtonTaraeingabe"
+        '
+        '
+        '
+        Me.RadRadioButtonTaraeingabe.RootElement.AccessibleDescription = resources.GetString("RadCheckBox1.RootElement.AccessibleDescription")
+        Me.RadRadioButtonTaraeingabe.RootElement.AccessibleName = resources.GetString("RadCheckBox1.RootElement.AccessibleName")
+        Me.RadRadioButtonTaraeingabe.RootElement.Alignment = CType(resources.GetObject("RadCheckBox1.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.RadRadioButtonTaraeingabe.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBox1.RootElement.AngleTransform"), Single)
+        Me.RadRadioButtonTaraeingabe.RootElement.FlipText = CType(resources.GetObject("RadCheckBox1.RootElement.FlipText"), Boolean)
+        Me.RadRadioButtonTaraeingabe.RootElement.Margin = CType(resources.GetObject("RadCheckBox1.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadRadioButtonTaraeingabe.RootElement.Text = resources.GetString("RadCheckBox1.RootElement.Text")
+        Me.RadRadioButtonTaraeingabe.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBox1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
         'uco_7EichprotokollDaten
         '
@@ -2582,6 +2601,7 @@ Partial Class uco_7EichprotokollDaten
         CType(Me.RadTextBoxControlAufstellungsort, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblBenutzer, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBenutzer, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadRadioButtonTaraeingabe, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -2724,5 +2744,6 @@ Partial Class uco_7EichprotokollDaten
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label12 As System.Windows.Forms.Label
+    Friend WithEvents RadRadioButtonTaraeingabe As Telerik.WinControls.UI.RadCheckBox
 
 End Class

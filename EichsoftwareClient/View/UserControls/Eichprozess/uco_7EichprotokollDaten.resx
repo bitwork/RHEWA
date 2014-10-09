@@ -839,6 +839,54 @@
   <data name="&gt;&gt;RadGroupBoxBeschaffenheitspruefung.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="RadRadioButtonTaraeingabe.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 79</value>
+  </data>
+  <data name="RadCheckBox1.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadCheckBox1.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadCheckBox1.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="RadCheckBox1.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RadCheckBox1.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RadCheckBox1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadCheckBox1.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadCheckBox1.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="RadRadioButtonTaraeingabe.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 18</value>
+  </data>
+  <data name="RadRadioButtonTaraeingabe.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="RadRadioButtonTaraeingabe.Text" xml:space="preserve">
+    <value>Taraeingabe</value>
+  </data>
+  <data name="&gt;&gt;RadRadioButtonTaraeingabe.Name" xml:space="preserve">
+    <value>RadRadioButtonTaraeingabe</value>
+  </data>
+  <data name="&gt;&gt;RadRadioButtonTaraeingabe.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadRadioButtonTaraeingabe.Parent" xml:space="preserve">
+    <value>RadGroupBoxVerwendungszweckTara</value>
+  </data>
+  <data name="&gt;&gt;RadRadioButtonTaraeingabe.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="RadRadioButtonHandTara.Location" type="System.Drawing.Point, System.Drawing">
     <value>21, 55</value>
   </data>
@@ -885,7 +933,7 @@
     <value>RadGroupBoxVerwendungszweckTara</value>
   </data>
   <data name="&gt;&gt;RadRadioButtonHandTara.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="RadRadioButtonAutoTara.Location" type="System.Drawing.Point, System.Drawing">
     <value>21, 31</value>
@@ -933,7 +981,7 @@
     <value>RadGroupBoxVerwendungszweckTara</value>
   </data>
   <data name="&gt;&gt;RadRadioButtonAutoTara.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="RadGroupBoxVerwendungszweckTara.HeaderText" xml:space="preserve">
     <value>tare</value>
@@ -6168,6 +6216,6 @@
     <value>uco_7EichprotokollDaten</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.5388.26371, Culture=neutral, PublicKeyToken=null</value>
+    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.5395.26173, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

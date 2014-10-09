@@ -177,6 +177,7 @@
           <Property Name="EignungAchlastwaegungen_Geprueft" Type="bit" />
           <Property Name="Identifikationsdaten_Benutzer" Type="nvarchar" MaxLength="50" />
           <Property Name="Beschaffenheitspruefung_Genehmigt" Type="bit" />
+          <Property Name="Taraeinrichtung_Taraeingabe" Type="bit" />
         </EntityType>
         <EntityType Name="Eichprozess">
           <Key>
@@ -959,6 +960,7 @@
           <NavigationProperty Name="PruefungWiederholbarkeit" Relationship="EichsoftwareClientdatabaseModel.FK_PruefungWiederholbarkeit_Eichprotokoll" FromRole="Eichprotokoll" ToRole="PruefungWiederholbarkeit" />
           <Property Type="Boolean" Name="Beschaffenheitspruefung_Genehmigt" />
           <NavigationProperty Name="Lookup_Konformitaetsbewertungsverfahren" Relationship="EichsoftwareClientdatabaseModel.FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren" FromRole="Eichprotokoll" ToRole="Lookup_Konformitaetsbewertungsverfahren" />
+          <Property Type="Boolean" Name="Taraeinrichtung_Taraeingabe" />
         </EntityType>
         <EntityType Name="Eichprozess">
           <Key>
@@ -1594,6 +1596,7 @@
           <EntitySetMapping Name="Eichprotokoll">
             <EntityTypeMapping TypeName="EichsoftwareClientdatabaseModel.Eichprotokoll">
               <MappingFragment StoreEntitySet="Eichprotokoll">
+                <ScalarProperty Name="Taraeinrichtung_Taraeingabe" ColumnName="Taraeinrichtung_Taraeingabe" />
                 <ScalarProperty Name="Beschaffenheitspruefung_Genehmigt" ColumnName="Beschaffenheitspruefung_Genehmigt" />
                 <ScalarProperty Name="Identifikationsdaten_Benutzer" ColumnName="Identifikationsdaten_Benutzer" />
                 <ScalarProperty Name="EignungAchlastwaegungen_Geprueft" ColumnName="EignungAchlastwaegungen_Geprueft" />

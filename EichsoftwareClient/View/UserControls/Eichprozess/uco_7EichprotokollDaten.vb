@@ -325,6 +325,10 @@
             RadRadioButtonHandTara.IsChecked = True
         End If
 
+        If objEichprozess.Eichprotokoll.Taraeinrichtung_Taraeingabe Then
+            RadRadioButtonTaraeingabe.IsChecked = True
+        End If
+
         Try
             RadCheckBoxDrucker.Checked = objEichprozess.Eichprotokoll.Verwendungszweck_Drucker
         Catch ex As Exception
@@ -394,6 +398,9 @@
         objEichprozess.Eichprotokoll.Verwendungszweck_HalbAutomatisch = RadRadioButtonNustellungHalbAutomatisch.IsChecked
         objEichprozess.Eichprotokoll.Verwendungszweck_AutoTara = RadRadioButtonAutoTara.IsChecked
         objEichprozess.Eichprotokoll.Verwendungszweck_HandTara = RadRadioButtonHandTara.IsChecked
+        objEichprozess.Eichprotokoll.Taraeinrichtung_Taraeingabe = RadRadioButtonTaraeingabe.IsChecked
+
+
         objEichprozess.Eichprotokoll.Verwendungszweck_Drucker = RadCheckBoxDrucker.Checked
         objEichprozess.Eichprotokoll.Verwendungszweck_Druckertyp = RadTextBoxControlDruckerTyp.Text
         objEichprozess.Eichprotokoll.Verwendungszweck_EichfaehigerDatenspeicher = RadCheckBoxEichfaehigerSpeicher.Checked
@@ -648,6 +655,9 @@
         lblZertifikatnr.Text = resources.GetString("lblZertifikatnr.Text")
         RadRadioButtonAutoTara.Text = resources.GetString("RadRadioButtonAutoTara.Text")
         RadRadioButtonHandTara.Text = resources.GetString("RadRadioButtonHandTara.Text")
+        RadRadioButtonTaraeingabe.Text = resources.GetString("RadRadioButtonTaraeingabe.Text")
+
+
         RadRadioButtonNustellungAutomatisch.Text = resources.GetString("RadRadioButtonNustellungAutomatisch.Text")
         RadRadioButtonNustellungHalbAutomatisch.Text = resources.GetString("RadRadioButtonNustellungHalbAutomatisch.Text")
         RadRadioButtonNustellungNullNachfuehrung.Text = resources.GetString("RadRadioButtonNustellungNullNachfuehrung.Text")

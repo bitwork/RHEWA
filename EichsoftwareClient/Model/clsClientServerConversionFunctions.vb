@@ -153,6 +153,10 @@ Public Class clsClientServerConversionFunctions
         TargetObject._ServerEichprotokoll.Taraeinrichtung_ErweiterteRichtigkeitspruefungOK = SourceObject.Eichprotokoll.Taraeinrichtung_ErweiterteRichtigkeitspruefungOK
         TargetObject._ServerEichprotokoll.Taraeinrichtung_GenauigkeitTarierungOK = SourceObject.Eichprotokoll.Taraeinrichtung_GenauigkeitTarierungOK
         TargetObject._ServerEichprotokoll.Taraeinrichtung_TaraausgleichseinrichtungOK = SourceObject.Eichprotokoll.Taraeinrichtung_TaraausgleichseinrichtungOK
+
+        TargetObject._ServerEichprotokoll.Taraeinrichtung_Taraeingabe = SourceObject.Eichprotokoll.Taraeinrichtung_Taraeingabe
+
+
         TargetObject._ServerEichprotokoll.Ueberlastanzeige_Max = SourceObject.Eichprotokoll.Ueberlastanzeige_Max
         TargetObject._ServerEichprotokoll.Ueberlastanzeige_Ueberlast = SourceObject.Eichprotokoll.Ueberlastanzeige_Ueberlast
         TargetObject._ServerEichprotokoll.Verwendungszweck_Automatisch = SourceObject.Eichprotokoll.Verwendungszweck_Automatisch
@@ -248,6 +252,7 @@ Public Class clsClientServerConversionFunctions
         TargetObject.Eichprotokoll.Identifikationsdaten_Aufstellungsort = SourceObject._ServerEichprotokoll.Identifikationsdaten_Aufstellungsort
         TargetObject.Eichprotokoll.Identifikationsdaten_Baujahr = SourceObject._ServerEichprotokoll.Identifikationsdaten_Baujahr
         TargetObject.Eichprotokoll.Beschaffenheitspruefung_Genehmigt = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_Genehmigt
+        TargetObject.Eichprotokoll.Taraeinrichtung_Taraeingabe = SourceObject._ServerEichprotokoll.Taraeinrichtung_Taraeingabe
 
         TargetObject.Eichprotokoll.Identifikationsdaten_Datum = SourceObject._ServerEichprotokoll.Identifikationsdaten_Datum
         TargetObject.Eichprotokoll.Identifikationsdaten_HybridMechanisch = SourceObject._ServerEichprotokoll.Identifikationsdaten_HybridMechanisch
@@ -662,7 +667,7 @@ Public Class clsClientServerConversionFunctions
         TargetObject.Eichprotokoll.EignungAchlastwaegungen_WaagenbrueckeEbene = SourceObject._ServerEichprotokoll.EignungAchlastwaegungen_WaagenbrueckeEbene
         TargetObject.Eichprotokoll.EignungAchlastwaegungen_WaageNichtGeeignet = SourceObject._ServerEichprotokoll.EignungAchlastwaegungen_WaageNichtGeeignet
         TargetObject.Eichprotokoll.Beschaffenheitspruefung_Genehmigt = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_Genehmigt
-
+        TargetObject.Eichprotokoll.Taraeinrichtung_Taraeingabe = SourceObject._ServerEichprotokoll.Taraeinrichtung_Taraeingabe
         TargetObject.Eichprotokoll.Fallbeschleunigung_g = SourceObject._ServerEichprotokoll.Fallbeschleunigung_g
         TargetObject.Eichprotokoll.Fallbeschleunigung_ms2 = SourceObject._ServerEichprotokoll.Fallbeschleunigung_ms2
         TargetObject.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = SourceObject._ServerEichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren
@@ -1059,6 +1064,7 @@ Public Class clsClientServerConversionFunctions
         TargetObject.Eichprotokoll.EignungAchlastwaegungen_WaageNichtGeeignet = SourceObject._ServerEichprotokoll.EignungAchlastwaegungen_WaageNichtGeeignet
         TargetObject.Eichprotokoll.Fallbeschleunigung_g = SourceObject._ServerEichprotokoll.Fallbeschleunigung_g
         TargetObject.Eichprotokoll.Beschaffenheitspruefung_Genehmigt = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_Genehmigt
+        TargetObject.Eichprotokoll.Taraeinrichtung_Taraeingabe = SourceObject._ServerEichprotokoll.Taraeinrichtung_Taraeingabe
 
         TargetObject.Eichprotokoll.Fallbeschleunigung_ms2 = SourceObject._ServerEichprotokoll.Fallbeschleunigung_ms2
         TargetObject.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = SourceObject._ServerEichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren

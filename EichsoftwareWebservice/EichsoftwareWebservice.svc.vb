@@ -298,6 +298,7 @@ Public Class EichsoftwareWebservice
         Try
             ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
             If PruefeLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
+
             SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Hole Konformitätsbewertungsprozess")
 
             'neuen Context aufbauen
@@ -305,6 +306,8 @@ Public Class EichsoftwareWebservice
                 DbContext.Configuration.LazyLoadingEnabled = False
                 DbContext.Configuration.ProxyCreationEnabled = False
                 Try
+                    Dim ObjLizenz = (From lic In DbContext.ServerLizensierung.Include("Benutzer") Where lic.HEKennung = HEKennung And lic.Lizenzschluessel = Lizenzschluessel And lic.Aktiv = True).FirstOrDefault
+
                     Dim Obj = (From Eichprozess In DbContext.ServerEichprozess.Include("ServerEichprotokoll") _
                                .Include("ServerLookup_Auswertegeraet").Include("ServerKompatiblitaetsnachweis") _
                                .Include("ServerLookup_Waegezelle").Include("ServerLookup_Waagenart") _
@@ -344,7 +347,7 @@ Public Class EichsoftwareWebservice
                     End Try
 
 
-                  
+
 
                     Try
                         Dim query = From db In DbContext.ServerPruefungLinearitaetFallend Where db.FK_Eichprotokoll = EichID
@@ -403,6 +406,21 @@ Public Class EichsoftwareWebservice
                         Next
                     Catch e As Exception
                     End Try
+
+                    'anpassungen an stammdaten
+                    If Not Obj.ServerEichprotokoll Is Nothing Then
+                        Dim objBenutzer = (From Benutzer In DbContext.Benutzer Where Benutzer.ID = ObjLizenz.FK_BenutzerID).FirstOrDefault
+
+                        Obj.ServerEichprotokoll.Identifikationsdaten_Benutzer = "RHEWA-KUNDE"
+                        Obj.ServerEichprotokoll.Identifikationsdaten_Aufstellungsort = "Deutschland"
+                        Obj.ServerEichprotokoll.Identifikationsdaten_Baujahr = Date.Now.Year
+                        Obj.ServerEichprotokoll.Identifikationsdaten_Pruefer = objBenutzer.Nachname & ", " & objBenutzer.Vorname & " (" + ObjLizenz.HEKennung & ")"
+
+                        Obj.ServerEichprotokoll.Komponenten_Softwarestand = "siehe Konfig-Progr."
+                        Obj.ServerEichprotokoll.Komponenten_Eichzaehlerstand = "siehe Konfig-Progr."
+                        Obj.ServerEichprotokoll.Komponenten_WaegezellenFabriknummer = "siehe Auftrag"
+
+                    End If
 
                     HEKennung = Nothing
                     Lizenzschluessel = Nothing

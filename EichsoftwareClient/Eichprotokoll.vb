@@ -72,6 +72,7 @@ Partial Public Class Eichprotokoll
     Public Property EignungAchlastwaegungen_Geprueft As Nullable(Of Boolean)
     Public Property Identifikationsdaten_Benutzer As String
     Public Property Beschaffenheitspruefung_Genehmigt As Nullable(Of Boolean)
+    Public Property Taraeinrichtung_Taraeingabe As Nullable(Of Boolean)
 
     Public Overridable Property Eichprozess As ICollection(Of Eichprozess) = New HashSet(Of Eichprozess)
     Public Overridable Property PruefungAussermittigeBelastung As ICollection(Of PruefungAussermittigeBelastung) = New HashSet(Of PruefungAussermittigeBelastung)

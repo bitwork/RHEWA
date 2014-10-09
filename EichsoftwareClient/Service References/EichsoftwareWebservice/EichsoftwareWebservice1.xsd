@@ -141,6 +141,7 @@
       <xs:element minOccurs="0" name="Taraeinrichtung_ErweiterteRichtigkeitspruefungOK" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Taraeinrichtung_GenauigkeitTarierungOK" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Taraeinrichtung_TaraausgleichseinrichtungOK" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Taraeinrichtung_Taraeingabe" nillable="true" type="xs:boolean" />
       <xs:element minOccurs="0" name="Ueberlastanzeige_Max" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Ueberlastanzeige_Ueberlast" nillable="true" type="xs:boolean" />
       <xs:element minOccurs="0" name="Verwendungszweck_AutoTara" nillable="true" type="xs:boolean" />
