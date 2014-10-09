@@ -658,44 +658,59 @@
         If Not RadTextBoxPunkt8U.Text = "" And Not RadTextBoxPunkt8U.Text = "n. def." Then
             Try
                 RadTextBoxPunkt8U.Text = Math.Round(CDec(RadTextBoxPunkt8U.Text), 2, MidpointRounding.AwayFromZero)
-
+                If Not IsNumeric(RadTextBoxPunkt8U.Text) Then
+                    RadTextBoxPunkt8U.Text = 0
+                End If
             Catch ex As Exception
 
             End Try
 
         End If
+
         If Not RadTextBoxPunkt8D.Text = "" And Not RadTextBoxPunkt8D.Text = "n. def." Then
             Try
                 RadTextBoxPunkt8D.Text = Math.Round(CDec(RadTextBoxPunkt8D.Text), 2, MidpointRounding.AwayFromZero)
-
+                If Not IsNumeric(RadTextBoxPunkt8D.Text) Then
+                    RadTextBoxPunkt8D.Text = 0
+                End If
             Catch ex As Exception
-
+                RadTextBoxPunkt8D.Text = 0
             End Try
         End If
 
-        '=WENN(ODER($D$68>1000000;$G$68="";$D$68="");"NEIN";WENN($G$68>$D$68;"NEIN";"JA"))
-        If Not RadTextBoxPunkt8U.Text = "n. def." Then
-            If RadTextBoxPunkt8U.Text = "" OrElse RadTextBoxPunkt8UMin.Text = "" OrElse CDec(RadTextBoxPunkt8U.Text) > 1000000 Then
-                RadCheckBoxPunkt8U.Checked = False
-            ElseIf CDec(RadTextBoxPunkt8UMin.Text) > CDec(RadTextBoxPunkt8U.Text) Then
-                RadCheckBoxPunkt8U.Checked = False
-            Else
-                RadCheckBoxPunkt8U.Checked = True
+        Try
+            '=WENN(ODER($D$68>1000000;$G$68="";$D$68="");"NEIN";WENN($G$68>$D$68;"NEIN";"JA"))
+            If Not RadTextBoxPunkt8U.Text = "n. def." Then
+                If RadTextBoxPunkt8U.Text = "" OrElse RadTextBoxPunkt8UMin.Text = "" OrElse CDec(RadTextBoxPunkt8U.Text) > 1000000 Then
+                    RadCheckBoxPunkt8U.Checked = False
+                ElseIf CDec(RadTextBoxPunkt8UMin.Text) > CDec(RadTextBoxPunkt8U.Text) Then
+                    RadCheckBoxPunkt8U.Checked = False
+                Else
+                    RadCheckBoxPunkt8U.Checked = True
+                End If
             End If
-        End If
+        Catch ex As InvalidCastException
+            RadTextBoxPunkt8U.Text = 0
+        End Try
 
-        If Not RadTextBoxPunkt8D.Text = "n. def." Then
 
-            '=WENN(ODER($D$71>1000000;$G$71="";$D$71="");"NEIN";WENN($G$71>$D$71;"NEIN";"JA"))
-            If RadTextBoxPunkt8D.Text = "" OrElse RadTextBoxPunkt8DMIN.Text = "" OrElse CDec(RadTextBoxPunkt8D.Text) > 1000000 Then
-                RadCheckBoxPunkt8D.Checked = False
-            ElseIf CDec(RadTextBoxPunkt8DMIN.Text) > CDec(RadTextBoxPunkt8D.Text) Then
-                RadCheckBoxPunkt8D.Checked = False
-            Else
-                RadCheckBoxPunkt8D.Checked = True
+        Try
+            If Not RadTextBoxPunkt8D.Text = "n. def." Then
+
+                '=WENN(ODER($D$71>1000000;$G$71="";$D$71="");"NEIN";WENN($G$71>$D$71;"NEIN";"JA"))
+                If RadTextBoxPunkt8D.Text = "" OrElse RadTextBoxPunkt8DMIN.Text = "" OrElse CDec(RadTextBoxPunkt8D.Text) > 1000000 Then
+                    RadCheckBoxPunkt8D.Checked = False
+                ElseIf CDec(RadTextBoxPunkt8DMIN.Text) > CDec(RadTextBoxPunkt8D.Text) Then
+                    RadCheckBoxPunkt8D.Checked = False
+                Else
+                    RadCheckBoxPunkt8D.Checked = True
+                End If
             End If
-        End If
 
+        Catch ex As InvalidCastException
+            RadTextBoxPunkt8D.Text = 0
+        End Try
+    
         '(9) Vergleich der Lastwiderstände von AWG und WZ  in  W
         '=WENN('Daten-Eingabe'!$G$30="";"fehlt";'Daten-Eingabe'!$G$30)
         RadTextBoxPunkt9RLmin.Text = objEichprozess.Lookup_Auswertegeraet.GrenzwertLastwiderstandMIN
@@ -728,7 +743,12 @@
         RadTextBoxPunkt10LAMax.Text = objEichprozess.Lookup_Auswertegeraet.KabellaengeQuerschnitt
 
         'runden auf 2 nachkommastellen
-        RadTextBoxPunkt10LA.Text = Math.Round(CDec(RadTextBoxPunkt10LA.Text), 2, MidpointRounding.AwayFromZero)
+        Try
+            RadTextBoxPunkt10LA.Text = Math.Round(CDec(RadTextBoxPunkt10LA.Text), 2, MidpointRounding.AwayFromZero)
+
+        Catch ex As InvalidCastException
+            RadTextBoxPunkt10LA.Text = 0
+        End Try
 
         '=WENN($G$81>1000000;"NEIN";WENN($G$81="";"NEIN";WENN($G$81<$E$81;"NEIN";"JA")))
         If RadTextBoxPunkt10LA.Text = "" OrElse RadTextBoxPunkt10LAMax.Text = "" OrElse CDec(RadTextBoxPunkt10LAMax.Text) > 1000000 Then
