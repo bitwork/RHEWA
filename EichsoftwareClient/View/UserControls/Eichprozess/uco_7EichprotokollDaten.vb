@@ -226,6 +226,7 @@
         'volle normallast: wenn höchster MAX Wert unter 1000 dann "ja". darüber auswählbar
         'betrag normallast: Höchster MAX Wert. Wenn über 1000 dann eingebbar
         If objEichprozess.Eichprotokoll.Pruefverfahren_BetragNormallast Is Nothing Then 'prüfen ob bereits ein Wert eingegeben wurde
+            Label12.Visible = False
             If dMAXHoechlast < 1000 Then
                 RadCheckBoxVolleNormallast.Checked = True
                 RadCheckBoxVolleNormallast.Enabled = False
@@ -238,6 +239,11 @@
                 RadCheckBoxVolleNormallast.Enabled = True
                 RadTextBoxControlBetragNormallast.Text = dMAXHoechlast
                 RadTextBoxControlBetragNormallast.Enabled = True
+            End If
+
+            If objEichprozess.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren.ID = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgimStaffelverfahren Then
+                RadTextBoxControlBetragNormallast.Text = ""
+                Label12.Visible = True
             End If
         Else 'WErte übernehmen aus DB
             If Not objEichprozess.Eichprotokoll.Pruefverfahren_VolleNormallast Is Nothing Then

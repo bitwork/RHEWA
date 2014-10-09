@@ -2942,6 +2942,39 @@
   <data name="&gt;&gt;RadGroupBoxKomponenten.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="Label12.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>266, 62</value>
+  </data>
+  <data name="Label12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="Label12.TabIndex" type="System.Int32, mscorlib">
+    <value>67</value>
+  </data>
+  <data name="Label12.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="Label12.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;Label12.Name" xml:space="preserve">
+    <value>Label12</value>
+  </data>
+  <data name="&gt;&gt;Label12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label12.Parent" xml:space="preserve">
+    <value>RadGroupBoxPruefverfahren</value>
+  </data>
+  <data name="&gt;&gt;Label12.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="PictureBox5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -2964,7 +2997,7 @@
     <value>RadGroupBoxPruefverfahren</value>
   </data>
   <data name="&gt;&gt;PictureBox5.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="RadLabel6.Location" type="System.Drawing.Point, System.Drawing">
     <value>248, 62</value>
@@ -3012,7 +3045,7 @@
     <value>RadGroupBoxPruefverfahren</value>
   </data>
   <data name="&gt;&gt;RadLabel6.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="lblNormalienGewichte.Location" type="System.Drawing.Point, System.Drawing">
     <value>24, 62</value>
@@ -3060,7 +3093,7 @@
     <value>RadGroupBoxPruefverfahren</value>
   </data>
   <data name="&gt;&gt;lblNormalienGewichte.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="RadTextBoxControlBetragNormallast.Location" type="System.Drawing.Point, System.Drawing">
     <value>158, 62</value>
@@ -3108,7 +3141,7 @@
     <value>RadGroupBoxPruefverfahren</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBetragNormallast.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="RadCheckBoxVollstaendigesStaffelverfahren.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -3159,7 +3192,7 @@
     <value>RadGroupBoxPruefverfahren</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxVollstaendigesStaffelverfahren.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="RadCheckBoxVolleNormallast.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -3210,7 +3243,7 @@
     <value>RadGroupBoxPruefverfahren</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxVolleNormallast.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="RadGroupBoxPruefverfahren.HeaderText" xml:space="preserve">
     <value>1. test procedure</value>
@@ -6135,6 +6168,6 @@
     <value>uco_7EichprotokollDaten</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.5388.24686, Culture=neutral, PublicKeyToken=null</value>
+    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.5388.26371, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

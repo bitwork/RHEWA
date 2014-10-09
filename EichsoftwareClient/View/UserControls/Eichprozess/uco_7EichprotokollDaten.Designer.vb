@@ -161,6 +161,7 @@ Partial Class uco_7EichprotokollDaten
         Me.RadTextBoxControlAufstellungsort = New Telerik.WinControls.UI.RadTextBoxControl()
         Me.lblBenutzer = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlBenutzer = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.Label12 = New System.Windows.Forms.Label()
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanel1.PanelContainer.SuspendLayout()
         Me.RadScrollablePanel1.SuspendLayout()
@@ -1304,6 +1305,7 @@ Partial Class uco_7EichprotokollDaten
         'RadGroupBoxPruefverfahren
         '
         Me.RadGroupBoxPruefverfahren.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.RadGroupBoxPruefverfahren.Controls.Add(Me.Label12)
         Me.RadGroupBoxPruefverfahren.Controls.Add(Me.PictureBox5)
         Me.RadGroupBoxPruefverfahren.Controls.Add(Me.RadLabel6)
         Me.RadGroupBoxPruefverfahren.Controls.Add(Me.lblNormalienGewichte)
@@ -2412,6 +2414,12 @@ Partial Class uco_7EichprotokollDaten
         Me.RadTextBoxControlBenutzer.RootElement.Text = resources.GetString("RadTextBoxControlBenutzer.RootElement.Text")
         Me.RadTextBoxControlBenutzer.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBenutzer.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
+        'Label12
+        '
+        resources.ApplyResources(Me.Label12, "Label12")
+        Me.Label12.ForeColor = System.Drawing.Color.Red
+        Me.Label12.Name = "Label12"
+        '
         'uco_7EichprotokollDaten
         '
         resources.ApplyResources(Me, "$this")
@@ -2715,5 +2723,6 @@ Partial Class uco_7EichprotokollDaten
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Label12 As System.Windows.Forms.Label
 
 End Class
