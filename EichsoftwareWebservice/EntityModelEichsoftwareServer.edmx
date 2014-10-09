@@ -8,7 +8,6 @@
         <EntityContainer Name="EichenSQLDatabaseModelStoreContainer">
           <EntitySet Name="Benutzer" EntityType="EichenSQLDatabaseModel.Store.Benutzer" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Firmen" EntityType="EichenSQLDatabaseModel.Store.Firmen" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="ServerBeschaffenheitspruefung" EntityType="EichenSQLDatabaseModel.Store.ServerBeschaffenheitspruefung" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ServerEichmarkenverwaltung" EntityType="EichenSQLDatabaseModel.Store.ServerEichmarkenverwaltung" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ServerEichprotokoll" EntityType="EichenSQLDatabaseModel.Store.ServerEichprotokoll" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ServerEichprozess" EntityType="EichenSQLDatabaseModel.Store.ServerEichprozess" store:Type="Tables" Schema="dbo" />
@@ -42,10 +41,6 @@
           <AssociationSet Name="FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren" Association="EichenSQLDatabaseModel.Store.FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren">
             <End Role="ServerLookup_Konformitaetsbewertungsverfahren" EntitySet="ServerLookup_Konformitaetsbewertungsverfahren" />
             <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Eichprozess_Beschaffenheitspruefung" Association="EichenSQLDatabaseModel.Store.FK_Eichprozess_Beschaffenheitspruefung">
-            <End Role="ServerBeschaffenheitspruefung" EntitySet="ServerBeschaffenheitspruefung" />
-            <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
           </AssociationSet>
           <AssociationSet Name="FK_Eichprozess_Eichprotokoll" Association="EichenSQLDatabaseModel.Store.FK_Eichprozess_Eichprotokoll">
             <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
@@ -160,27 +155,6 @@
           <Property Name="Ort" Type="nvarchar" MaxLength="50" />
           <Property Name="Land" Type="nvarchar" MaxLength="50" />
         </EntityType>
-        <EntityType Name="ServerBeschaffenheitspruefung">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="AWG_Auslieferungszustand" Type="bit" Nullable="false" />
-          <Property Name="AWG_MetrologischeAngabenVorhanden" Type="bit" Nullable="false" />
-          <Property Name="AWG_KabelUnbeschaedigt" Type="bit" Nullable="false" />
-          <Property Name="WZ_ZulassungOIMLR60" Type="bit" Nullable="false" />
-          <Property Name="WZ_KrafteinteilungKonformWELMEC" Type="bit" Nullable="false" />
-          <Property Name="WZ_KabelUnbeschaedigt" Type="bit" Nullable="false" />
-          <Property Name="WZ_AnschraubplattenEben" Type="bit" Nullable="false" />
-          <Property Name="WZ_VergussUnbeschaedigt" Type="bit" Nullable="false" />
-          <Property Name="Verbindungselemente_DichtigkeitGegeben" Type="bit" Nullable="false" />
-          <Property Name="Verbindungselemente_KabelUnbeschaedigt" Type="bit" Nullable="false" />
-          <Property Name="Verbindungselemente_KabelNichtSproede" Type="bit" Nullable="false" />
-          <Property Name="Verbindungselemente_KabelTemperaturGeschuetzt" Type="bit" Nullable="false" />
-          <Property Name="Waegebruecke_WiegeaufgabeAusgelegt" Type="bit" Nullable="false" />
-          <Property Name="Waegebruecke_Korrosionsfrei" Type="bit" Nullable="false" />
-          <Property Name="Waegebruecke_WZAufnahmenInEbene" Type="bit" Nullable="false" />
-        </EntityType>
         <EntityType Name="ServerEichmarkenverwaltung">
           <Key>
             <PropertyRef Name="ID" />
@@ -286,11 +260,6 @@
           <Property Name="Verwendungszweck_Druckertyp" Type="nvarchar" MaxLength="50" />
           <Property Name="Verwendungszweck_Fahrzeugwaagen_MxM" Type="nvarchar" MaxLength="25" />
           <Property Name="Verwendungszweck_Fahrzeugwaagen_Dimension" Type="nvarchar" MaxLength="25" />
-          <Property Name="Beschaffenheitspruefung_Genauigkeitsklasse" Type="nvarchar" MaxLength="50" />
-          <Property Name="Beschaffenheitspruefung_Pruefintervall" Type="nvarchar" MaxLength="50" />
-          <Property Name="Beschaffenheitspruefung_LetztePruefung" Type="nvarchar" MaxLength="50" />
-          <Property Name="Beschaffenheitspruefung_Pruefscheinnummer" Type="nvarchar" MaxLength="50" />
-          <Property Name="Beschaffenheitspruefung_EichfahrzeugFirma" Type="nvarchar" MaxLength="50" />
           <Property Name="GenauigkeitNullstellung_InOrdnung" Type="bit" />
           <Property Name="Ueberlastanzeige_Max" Type="nvarchar" MaxLength="20" />
           <Property Name="Ueberlastanzeige_Ueberlast" Type="bit" />
@@ -320,6 +289,7 @@
           <Property Name="EignungAchlastwaegungen_WaagenbrueckeEbene" Type="bit" />
           <Property Name="EignungAchlastwaegungen_WaageNichtGeeignet" Type="bit" />
           <Property Name="EignungAchlastwaegungen_Geprueft" Type="bit" />
+          <Property Name="Beschaffenheitspruefung_Genehmigt" Type="bit" />
         </EntityType>
         <EntityType Name="ServerEichprozess">
           <Key>
@@ -330,7 +300,6 @@
           <Property Name="FK_Vorgangsstatus" Type="tinyint" Nullable="false" />
           <Property Name="FK_Auswertegeraet" Type="nvarchar" MaxLength="50" />
           <Property Name="FK_Waegezelle" Type="nvarchar" MaxLength="50" />
-          <Property Name="FK_Beschaffenheitspruefung" Type="int" />
           <Property Name="FK_Eichprotokoll" Type="int" />
           <Property Name="FK_WaagenTyp" Type="tinyint" />
           <Property Name="FK_WaagenArt" Type="tinyint" />
@@ -737,18 +706,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Eichprozess_Beschaffenheitspruefung">
-          <End Role="ServerBeschaffenheitspruefung" Type="EichenSQLDatabaseModel.Store.ServerBeschaffenheitspruefung" Multiplicity="0..1" />
-          <End Role="ServerEichprozess" Type="EichenSQLDatabaseModel.Store.ServerEichprozess" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ServerBeschaffenheitspruefung">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="ServerEichprozess">
-              <PropertyRef Name="FK_Beschaffenheitspruefung" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Eichprozess_Eichprotokoll">
           <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.Store.ServerEichprotokoll" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
@@ -1040,7 +997,6 @@
     <edmx:ConceptualModels>
       <Schema Namespace="EichenSQLDatabaseModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
         <EntityContainer Name="EichenSQLDatabaseEntities1" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="ServerBeschaffenheitspruefung" EntityType="EichenSQLDatabaseModel.ServerBeschaffenheitspruefung" />
           <EntitySet Name="ServerEichmarkenverwaltung" EntityType="EichenSQLDatabaseModel.ServerEichmarkenverwaltung" />
           <EntitySet Name="ServerEichprotokoll" EntityType="EichenSQLDatabaseModel.ServerEichprotokoll" />
           <EntitySet Name="ServerEichprozess" EntityType="EichenSQLDatabaseModel.ServerEichprozess" />
@@ -1062,10 +1018,6 @@
           <EntitySet Name="ServerPruefungStaffelverfahrenErsatzlast" EntityType="EichenSQLDatabaseModel.ServerPruefungStaffelverfahrenErsatzlast" />
           <EntitySet Name="ServerPruefungStaffelverfahrenNormallast" EntityType="EichenSQLDatabaseModel.ServerPruefungStaffelverfahrenNormallast" />
           <EntitySet Name="ServerPruefungWiederholbarkeit" EntityType="EichenSQLDatabaseModel.ServerPruefungWiederholbarkeit" />
-          <AssociationSet Name="FK_Eichprozess_Beschaffenheitspruefung" Association="EichenSQLDatabaseModel.FK_Eichprozess_Beschaffenheitspruefung">
-            <End Role="ServerBeschaffenheitspruefung" EntitySet="ServerBeschaffenheitspruefung" />
-            <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
-          </AssociationSet>
           <AssociationSet Name="FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren" Association="EichenSQLDatabaseModel.FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren">
             <End Role="ServerLookup_Konformitaetsbewertungsverfahren" EntitySet="ServerLookup_Konformitaetsbewertungsverfahren" />
             <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
@@ -1170,28 +1122,6 @@
             <End Role="ServerFirmenZusatzdaten" EntitySet="ServerFirmenZusatzdaten" />
           </AssociationSet>
         </EntityContainer>
-        <EntityType Name="ServerBeschaffenheitspruefung">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="AWG_Auslieferungszustand" Type="Boolean" Nullable="false" />
-          <Property Name="AWG_MetrologischeAngabenVorhanden" Type="Boolean" Nullable="false" />
-          <Property Name="AWG_KabelUnbeschaedigt" Type="Boolean" Nullable="false" />
-          <Property Name="WZ_ZulassungOIMLR60" Type="Boolean" Nullable="false" />
-          <Property Name="WZ_KrafteinteilungKonformWELMEC" Type="Boolean" Nullable="false" />
-          <Property Name="WZ_KabelUnbeschaedigt" Type="Boolean" Nullable="false" />
-          <Property Name="WZ_AnschraubplattenEben" Type="Boolean" Nullable="false" />
-          <Property Name="WZ_VergussUnbeschaedigt" Type="Boolean" Nullable="false" />
-          <Property Name="Verbindungselemente_DichtigkeitGegeben" Type="Boolean" Nullable="false" />
-          <Property Name="Verbindungselemente_KabelUnbeschaedigt" Type="Boolean" Nullable="false" />
-          <Property Name="Verbindungselemente_KabelNichtSproede" Type="Boolean" Nullable="false" />
-          <Property Name="Verbindungselemente_KabelTemperaturGeschuetzt" Type="Boolean" Nullable="false" />
-          <Property Name="Waegebruecke_WiegeaufgabeAusgelegt" Type="Boolean" Nullable="false" />
-          <Property Name="Waegebruecke_Korrosionsfrei" Type="Boolean" Nullable="false" />
-          <Property Name="Waegebruecke_WZAufnahmenInEbene" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="ServerEichprozess" Relationship="EichenSQLDatabaseModel.FK_Eichprozess_Beschaffenheitspruefung" FromRole="ServerBeschaffenheitspruefung" ToRole="ServerEichprozess" />
-        </EntityType>
         <EntityType Name="ServerEichmarkenverwaltung">
           <Key>
             <PropertyRef Name="ID" />
@@ -1296,11 +1226,6 @@
           <Property Name="Verwendungszweck_Druckertyp" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="Verwendungszweck_Fahrzeugwaagen_MxM" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
           <Property Name="Verwendungszweck_Fahrzeugwaagen_Dimension" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
-          <Property Name="Beschaffenheitspruefung_Genauigkeitsklasse" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="Beschaffenheitspruefung_Pruefintervall" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="Beschaffenheitspruefung_LetztePruefung" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="Beschaffenheitspruefung_Pruefscheinnummer" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="Beschaffenheitspruefung_EichfahrzeugFirma" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="GenauigkeitNullstellung_InOrdnung" Type="Boolean" />
           <Property Name="Ueberlastanzeige_Max" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
           <Property Name="Ueberlastanzeige_Ueberlast" Type="Boolean" />
@@ -1342,6 +1267,7 @@
           <NavigationProperty Name="ServerPruefungStaffelverfahrenNormallast" Relationship="EichenSQLDatabaseModel.FK_PruefungStaffelverfahrenNormallast_Eichprotokoll" FromRole="ServerEichprotokoll" ToRole="ServerPruefungStaffelverfahrenNormallast" />
           <NavigationProperty Name="ServerPruefungWiederholbarkeit" Relationship="EichenSQLDatabaseModel.FK_PruefungWiederholbarkeit_Eichprotokoll" FromRole="ServerEichprotokoll" ToRole="ServerPruefungWiederholbarkeit" />
           <Property Type="String" Name="Identifikationsdaten_Benutzer" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="Beschaffenheitspruefung_Genehmigt" />
         </EntityType>
         <EntityType Name="ServerEichprozess">
           <Key>
@@ -1352,13 +1278,11 @@
           <Property Name="FK_Vorgangsstatus" Type="Byte" Nullable="false" />
           <Property Name="FK_Auswertegeraet" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="FK_Waegezelle" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="FK_Beschaffenheitspruefung" Type="Int32" />
           <Property Name="FK_Eichprotokoll" Type="Int32" />
           <Property Name="FK_WaagenTyp" Type="Byte" />
           <Property Name="FK_WaagenArt" Type="Byte" />
           <Property Name="FK_Kompatibilitaetsnachweis" Type="Int32" />
           <Property Name="Ausgeblendet" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="ServerBeschaffenheitspruefung" Relationship="EichenSQLDatabaseModel.FK_Eichprozess_Beschaffenheitspruefung" FromRole="ServerEichprozess" ToRole="ServerBeschaffenheitspruefung" />
           <NavigationProperty Name="ServerEichprotokoll" Relationship="EichenSQLDatabaseModel.FK_Eichprozess_Eichprotokoll" FromRole="ServerEichprozess" ToRole="ServerEichprotokoll" />
           <NavigationProperty Name="ServerKompatiblitaetsnachweis" Relationship="EichenSQLDatabaseModel.FK_Eichprozess_Kompatiblitaetsnachweis" FromRole="ServerEichprozess" ToRole="ServerKompatiblitaetsnachweis" />
           <NavigationProperty Name="ServerLookup_Auswertegeraet" Relationship="EichenSQLDatabaseModel.FK_Eichprozess_Lookup_Auswertegeraet" FromRole="ServerEichprozess" ToRole="ServerLookup_Auswertegeraet" />
@@ -1709,18 +1633,6 @@
           <Property Name="EFG_Extra" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
           <NavigationProperty Name="ServerEichprotokoll" Relationship="EichenSQLDatabaseModel.FK_PruefungWiederholbarkeit_Eichprotokoll" FromRole="ServerPruefungWiederholbarkeit" ToRole="ServerEichprotokoll" />
         </EntityType>
-        <Association Name="FK_Eichprozess_Beschaffenheitspruefung">
-          <End Role="ServerBeschaffenheitspruefung" Type="EichenSQLDatabaseModel.ServerBeschaffenheitspruefung" Multiplicity="0..1" />
-          <End Role="ServerEichprozess" Type="EichenSQLDatabaseModel.ServerEichprozess" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ServerBeschaffenheitspruefung">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="ServerEichprozess">
-              <PropertyRef Name="FK_Beschaffenheitspruefung" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren">
           <End Role="ServerLookup_Konformitaetsbewertungsverfahren" Type="EichenSQLDatabaseModel.ServerLookup_Konformitaetsbewertungsverfahren" Multiplicity="1" />
           <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.ServerEichprotokoll" Multiplicity="*" />
@@ -2101,28 +2013,6 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="EichenSQLDatabaseModelStoreContainer" CdmEntityContainer="EichenSQLDatabaseEntities1">
-          <EntitySetMapping Name="ServerBeschaffenheitspruefung">
-            <EntityTypeMapping TypeName="EichenSQLDatabaseModel.ServerBeschaffenheitspruefung">
-              <MappingFragment StoreEntitySet="ServerBeschaffenheitspruefung">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="AWG_Auslieferungszustand" ColumnName="AWG_Auslieferungszustand" />
-                <ScalarProperty Name="AWG_MetrologischeAngabenVorhanden" ColumnName="AWG_MetrologischeAngabenVorhanden" />
-                <ScalarProperty Name="AWG_KabelUnbeschaedigt" ColumnName="AWG_KabelUnbeschaedigt" />
-                <ScalarProperty Name="WZ_ZulassungOIMLR60" ColumnName="WZ_ZulassungOIMLR60" />
-                <ScalarProperty Name="WZ_KrafteinteilungKonformWELMEC" ColumnName="WZ_KrafteinteilungKonformWELMEC" />
-                <ScalarProperty Name="WZ_KabelUnbeschaedigt" ColumnName="WZ_KabelUnbeschaedigt" />
-                <ScalarProperty Name="WZ_AnschraubplattenEben" ColumnName="WZ_AnschraubplattenEben" />
-                <ScalarProperty Name="WZ_VergussUnbeschaedigt" ColumnName="WZ_VergussUnbeschaedigt" />
-                <ScalarProperty Name="Verbindungselemente_DichtigkeitGegeben" ColumnName="Verbindungselemente_DichtigkeitGegeben" />
-                <ScalarProperty Name="Verbindungselemente_KabelUnbeschaedigt" ColumnName="Verbindungselemente_KabelUnbeschaedigt" />
-                <ScalarProperty Name="Verbindungselemente_KabelNichtSproede" ColumnName="Verbindungselemente_KabelNichtSproede" />
-                <ScalarProperty Name="Verbindungselemente_KabelTemperaturGeschuetzt" ColumnName="Verbindungselemente_KabelTemperaturGeschuetzt" />
-                <ScalarProperty Name="Waegebruecke_WiegeaufgabeAusgelegt" ColumnName="Waegebruecke_WiegeaufgabeAusgelegt" />
-                <ScalarProperty Name="Waegebruecke_Korrosionsfrei" ColumnName="Waegebruecke_Korrosionsfrei" />
-                <ScalarProperty Name="Waegebruecke_WZAufnahmenInEbene" ColumnName="Waegebruecke_WZAufnahmenInEbene" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="ServerEichmarkenverwaltung">
             <EntityTypeMapping TypeName="EichenSQLDatabaseModel.ServerEichmarkenverwaltung">
               <MappingFragment StoreEntitySet="ServerEichmarkenverwaltung">
@@ -2197,6 +2087,7 @@
           <EntitySetMapping Name="ServerEichprotokoll">
             <EntityTypeMapping TypeName="EichenSQLDatabaseModel.ServerEichprotokoll">
               <MappingFragment StoreEntitySet="ServerEichprotokoll">
+                <ScalarProperty Name="Beschaffenheitspruefung_Genehmigt" ColumnName="Beschaffenheitspruefung_Genehmigt" />
                 <ScalarProperty Name="Identifikationsdaten_Benutzer" ColumnName="Identifikationsdaten_Benutzer" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="FK_Identifikationsdaten_Konformitaetsbewertungsverfahren" ColumnName="FK_Identifikationsdaten_Konformitaetsbewertungsverfahren" />
@@ -2228,11 +2119,6 @@
                 <ScalarProperty Name="Verwendungszweck_Druckertyp" ColumnName="Verwendungszweck_Druckertyp" />
                 <ScalarProperty Name="Verwendungszweck_Fahrzeugwaagen_MxM" ColumnName="Verwendungszweck_Fahrzeugwaagen_MxM" />
                 <ScalarProperty Name="Verwendungszweck_Fahrzeugwaagen_Dimension" ColumnName="Verwendungszweck_Fahrzeugwaagen_Dimension" />
-                <ScalarProperty Name="Beschaffenheitspruefung_Genauigkeitsklasse" ColumnName="Beschaffenheitspruefung_Genauigkeitsklasse" />
-                <ScalarProperty Name="Beschaffenheitspruefung_Pruefintervall" ColumnName="Beschaffenheitspruefung_Pruefintervall" />
-                <ScalarProperty Name="Beschaffenheitspruefung_LetztePruefung" ColumnName="Beschaffenheitspruefung_LetztePruefung" />
-                <ScalarProperty Name="Beschaffenheitspruefung_Pruefscheinnummer" ColumnName="Beschaffenheitspruefung_Pruefscheinnummer" />
-                <ScalarProperty Name="Beschaffenheitspruefung_EichfahrzeugFirma" ColumnName="Beschaffenheitspruefung_EichfahrzeugFirma" />
                 <ScalarProperty Name="GenauigkeitNullstellung_InOrdnung" ColumnName="GenauigkeitNullstellung_InOrdnung" />
                 <ScalarProperty Name="Ueberlastanzeige_Max" ColumnName="Ueberlastanzeige_Max" />
                 <ScalarProperty Name="Ueberlastanzeige_Ueberlast" ColumnName="Ueberlastanzeige_Ueberlast" />
@@ -2279,7 +2165,6 @@
                 <ScalarProperty Name="FK_Vorgangsstatus" ColumnName="FK_Vorgangsstatus" />
                 <ScalarProperty Name="FK_Auswertegeraet" ColumnName="FK_Auswertegeraet" />
                 <ScalarProperty Name="FK_Waegezelle" ColumnName="FK_Waegezelle" />
-                <ScalarProperty Name="FK_Beschaffenheitspruefung" ColumnName="FK_Beschaffenheitspruefung" />
                 <ScalarProperty Name="FK_Eichprotokoll" ColumnName="FK_Eichprotokoll" />
                 <ScalarProperty Name="FK_WaagenTyp" ColumnName="FK_WaagenTyp" />
                 <ScalarProperty Name="FK_WaagenArt" ColumnName="FK_WaagenArt" />

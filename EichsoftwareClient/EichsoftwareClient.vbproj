@@ -157,9 +157,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
-    <Compile Include="Beschaffenheitspruefung.vb">
-      <DependentUpon>EntityModelDatabaseClient.tt</DependentUpon>
-    </Compile>
     <Compile Include="Eichprotokoll.vb">
       <DependentUpon>EntityModelDatabaseClient.tt</DependentUpon>
     </Compile>

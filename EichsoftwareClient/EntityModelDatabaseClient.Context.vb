@@ -22,7 +22,6 @@ Partial Public Class EichsoftwareClientdatabaseEntities1
         Throw New UnintentionalCodeFirstException()
     End Sub
 
-    Public Property Beschaffenheitspruefung() As DbSet(Of Beschaffenheitspruefung)
     Public Property Eichprotokoll() As DbSet(Of Eichprotokoll)
     Public Property Eichprozess() As DbSet(Of Eichprozess)
     Public Property Kompatiblitaetsnachweis() As DbSet(Of Kompatiblitaetsnachweis)

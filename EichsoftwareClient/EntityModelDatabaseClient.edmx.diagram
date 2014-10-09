@@ -4,8 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="6d32b71ac94e4200b960274d482a3d38" Name="Diagram1" ZoomLevel="53">
-        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.Beschaffenheitspruefung" Width="1.5" PointX="6" PointY="8.75" />
+      <Diagram DiagramId="6d32b71ac94e4200b960274d482a3d38" Name="Diagram1" ZoomLevel="92">
         <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.Eichprotokoll" Width="1.5" PointX="3" PointY="19.375" />
         <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.Eichprozess" Width="1.5" PointX="8.25" PointY="25.125" />
         <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.Kompatiblitaetsnachweis" Width="1.5" PointX="6" PointY="0.75" />
@@ -27,7 +26,6 @@
         <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.PruefungStaffelverfahrenErsatzlast" Width="1.5" PointX="5.25" PointY="38.875" />
         <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.PruefungStaffelverfahrenNormallast" Width="1.5" PointX="5.25" PointY="47.75" />
         <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.PruefungWiederholbarkeit" Width="1.5" PointX="5.25" PointY="44.125" />
-        <AssociationConnector Association="EichsoftwareClientdatabaseModel.FK_Eichprozess_Beschaffenheitspruefung" />
         <AssociationConnector Association="EichsoftwareClientdatabaseModel.FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren" />
         <AssociationConnector Association="EichsoftwareClientdatabaseModel.FK_Eichprozess_Eichprotokoll" />
         <AssociationConnector Association="EichsoftwareClientdatabaseModel.FK_PruefungAussermittigeBelastung_Eichprotokoll" />

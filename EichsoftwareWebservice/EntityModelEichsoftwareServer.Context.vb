@@ -22,7 +22,6 @@ Partial Public Class EichenSQLDatabaseEntities1
         Throw New UnintentionalCodeFirstException()
     End Sub
 
-    Public Property ServerBeschaffenheitspruefung() As DbSet(Of ServerBeschaffenheitspruefung)
     Public Property ServerEichmarkenverwaltung() As DbSet(Of ServerEichmarkenverwaltung)
     Public Property ServerEichprotokoll() As DbSet(Of ServerEichprotokoll)
     Public Property ServerEichprozess() As DbSet(Of ServerEichprozess)

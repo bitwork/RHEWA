@@ -65,9 +65,6 @@
                 For Each obj In DBContext.Eichprotokoll
                     DBContext.Eichprotokoll.Remove(obj)
                 Next
-                For Each obj In DBContext.Beschaffenheitspruefung
-                    DBContext.Beschaffenheitspruefung.Remove(obj)
-                Next
                 For Each obj In DBContext.Mogelstatistik
                     DBContext.Mogelstatistik.Remove(obj)
                 Next

@@ -1074,15 +1074,6 @@ Public Class EichsoftwareWebservice
                     ''abruch
                     If Obj Is Nothing Then Return Nothing
 
-                    ''setzte Wert für Prüfer imMessprotokoll
-                    'Try
-                    '    Obj.ServerEichprotokoll.Identifikationsdaten_Pruefer = WindowsUsername.Split("\")(1)
-                    'Catch ex As Exception
-                    '    Obj.ServerEichprotokoll.Identifikationsdaten_Pruefer = WindowsUsername
-                    'End Try
-
-
-
                     'Fehlerhafter Status aus Lookup_Bearbeitungsstatus = 2
                     Obj.FK_Bearbeitungsstatus = 2
                     Obj.FK_Vorgangsstatus = 2
@@ -1136,16 +1127,6 @@ Public Class EichsoftwareWebservice
 
                     ''abruch
                     If Obj Is Nothing Then Return Nothing
-
-
-                    ''setzte Wert für Prüfer im Messprotokoll
-                    'Try
-                    '    Obj.ServerEichprotokoll.Identifikationsdaten_Pruefer = WindowsUsername.Split("\")(1)
-                    'Catch ex As Exception
-                    '    Obj.ServerEichprotokoll.Identifikationsdaten_Pruefer = WindowsUsername
-
-                    'End Try
-
 
                     'Genehmighter Status aus Lookup_Bearbeitungsstatus = 3
                     Obj.FK_Bearbeitungsstatus = 3

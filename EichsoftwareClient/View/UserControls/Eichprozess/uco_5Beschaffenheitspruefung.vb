@@ -4,7 +4,6 @@ Public Class uco_5Beschaffenheitspruefung
 
 
 #Region "Member Variables"
-    Private _ObjBeschaffenheitspruefung As Beschaffenheitspruefung
     Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken
     'Private  AktuellerStatusDirty As Boolean = False
 #End Region
@@ -51,16 +50,6 @@ Public Class uco_5Beschaffenheitspruefung
             'Nur laden wenn es sich um eine Bearbeitung handelt (sonst würde das in Memory Objekt überschrieben werden)
             If Not DialogModus = enuDialogModus.lesend And Not DialogModus = enuDialogModus.korrigierend Then
                 objEichprozess = (From Eichprozess In Context.Eichprozess.Include("Beschaffenheitspruefung").Include("Kompatiblitaetsnachweis") Select Eichprozess Where Eichprozess.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
-                _ObjBeschaffenheitspruefung = objEichprozess.Beschaffenheitspruefung
-
-                If _ObjBeschaffenheitspruefung Is Nothing Then
-                    Context.Beschaffenheitspruefung.Create()
-                    _ObjBeschaffenheitspruefung = Context.Beschaffenheitspruefung.Create()
-                    objEichprozess.Beschaffenheitspruefung = _ObjBeschaffenheitspruefung
-
-                End If
-            Else
-                _ObjBeschaffenheitspruefung = objEichprozess.Beschaffenheitspruefung
             End If
         End Using
 
@@ -97,27 +86,9 @@ Public Class uco_5Beschaffenheitspruefung
     ''' <author></author>
     ''' <commentauthor></commentauthor>
     Private Sub FillControls()
-        If Not _ObjBeschaffenheitspruefung Is Nothing Then
-            RadCheckBoxAWG1.Checked = _ObjBeschaffenheitspruefung.AWG_Auslieferungszustand
-            RadCheckBoxAWG2.Checked = _ObjBeschaffenheitspruefung.AWG_MetrologischeAngabenVorhanden
-            RadCheckBoxAWG3.Checked = _ObjBeschaffenheitspruefung.AWG_KabelUnbeschaedigt
-
-            RadCheckBoxWZ1.Checked = _ObjBeschaffenheitspruefung.WZ_ZulassungOIMLR60
-            RadCheckBoxWZ2.Checked = _ObjBeschaffenheitspruefung.WZ_KrafteinteilungKonformWELMEC
-            RadCheckBoxWZ3.Checked = _ObjBeschaffenheitspruefung.WZ_KabelUnbeschaedigt
-            RadCheckBoxWZ4.Checked = _ObjBeschaffenheitspruefung.WZ_AnschraubplattenEben
-            RadCheckBoxWZ5.Checked = _ObjBeschaffenheitspruefung.WZ_VergussUnbeschaedigt
-
-            RadCheckBoxVerbindungelemente1.Checked = _ObjBeschaffenheitspruefung.Verbindungselemente_DichtigkeitGegeben
-            RadCheckBoxVerbindungelemente2.Checked = _ObjBeschaffenheitspruefung.Verbindungselemente_KabelUnbeschaedigt
-            RadCheckBoxVerbindungelemente3.Checked = _ObjBeschaffenheitspruefung.Verbindungselemente_KabelNichtSproede
-            RadCheckBoxVerbindungelemente4.Checked = _ObjBeschaffenheitspruefung.Verbindungselemente_KabelTemperaturGeschuetzt
-
-            RadCheckBoxBruecke1.Checked = _ObjBeschaffenheitspruefung.Waegebruecke_WiegeaufgabeAusgelegt
-            RadCheckBoxBruecke2.Checked = _ObjBeschaffenheitspruefung.Waegebruecke_Korrosionsfrei
-            RadCheckBoxBruecke3.Checked = _ObjBeschaffenheitspruefung.Waegebruecke_WZAufnahmenInEbene
+        If Not objEichprozess.Eichprotokoll Is Nothing Then
+            RadCheckBoxApprove.Checked = objEichprozess.Eichprotokoll.Beschaffenheitspruefung_Genehmigt
         End If
-
     End Sub
 
     ''' <summary>
@@ -127,26 +98,10 @@ Public Class uco_5Beschaffenheitspruefung
     ''' <author></author>
     ''' <commentauthor></commentauthor>
     Private Sub UpdateObject()
-        _ObjBeschaffenheitspruefung.AWG_Auslieferungszustand = RadCheckBoxAWG1.Checked
-        _ObjBeschaffenheitspruefung.AWG_MetrologischeAngabenVorhanden = RadCheckBoxAWG2.Checked
-        _ObjBeschaffenheitspruefung.AWG_KabelUnbeschaedigt = RadCheckBoxAWG3.Checked
+        If Not objEichprozess.Eichprotokoll Is Nothing Then
+            objEichprozess.Eichprotokoll.Beschaffenheitspruefung_Genehmigt = RadCheckBoxApprove.Checked
+        End If
 
-        _ObjBeschaffenheitspruefung.WZ_ZulassungOIMLR60 = RadCheckBoxWZ1.Checked
-        _ObjBeschaffenheitspruefung.WZ_KrafteinteilungKonformWELMEC = RadCheckBoxWZ2.Checked
-        _ObjBeschaffenheitspruefung.WZ_KabelUnbeschaedigt = RadCheckBoxWZ3.Checked
-        _ObjBeschaffenheitspruefung.WZ_AnschraubplattenEben = RadCheckBoxWZ4.Checked
-        _ObjBeschaffenheitspruefung.WZ_VergussUnbeschaedigt = RadCheckBoxWZ5.Checked
-
-        _ObjBeschaffenheitspruefung.Verbindungselemente_DichtigkeitGegeben = RadCheckBoxVerbindungelemente1.Checked
-        _ObjBeschaffenheitspruefung.Verbindungselemente_KabelUnbeschaedigt = RadCheckBoxVerbindungelemente2.Checked
-        _ObjBeschaffenheitspruefung.Verbindungselemente_KabelNichtSproede = RadCheckBoxVerbindungelemente3.Checked
-        _ObjBeschaffenheitspruefung.Verbindungselemente_KabelTemperaturGeschuetzt = RadCheckBoxVerbindungelemente4.Checked
-
-        _ObjBeschaffenheitspruefung.Waegebruecke_WiegeaufgabeAusgelegt = RadCheckBoxBruecke1.Checked
-        _ObjBeschaffenheitspruefung.Waegebruecke_Korrosionsfrei = RadCheckBoxBruecke2.Checked
-        _ObjBeschaffenheitspruefung.Waegebruecke_WZAufnahmenInEbene = RadCheckBoxBruecke3.Checked
-
-        objEichprozess.FK_Beschaffenheitspruefung = _ObjBeschaffenheitspruefung.ID
     End Sub
 
 #Region "Overrides"
@@ -206,9 +161,6 @@ Public Class uco_5Beschaffenheitspruefung
 
         Me.RadGroupBoxWaegebruecke.Text = resources.GetString("RadGroupBoxWaegebruecke.Text")
         Me.RadLabel15.Text = resources.GetString("RadLabel15.Text")
-        Me.RadCheckBoxBruecke1.Text = resources.GetString("RadCheckBoxBruecke1.Text")
-        Me.RadCheckBoxBruecke3.Text = resources.GetString("RadCheckBoxBruecke3.Text")
-        Me.RadCheckBoxBruecke2.Text = resources.GetString("RadCheckBoxBruecke2.Text")
         Me.RadLabel11.Text = resources.GetString("RadLabel11.Text")
         Me.RadLabel13.Text = resources.GetString("RadLabel13.Text")
         Me.RadGroupBoxWaegezellen.Text = resources.GetString("RadGroupBoxWaegezellen.Text")
@@ -217,29 +169,16 @@ Public Class uco_5Beschaffenheitspruefung
         Me.RadLabel3.Text = resources.GetString("RadLabel3.Text")
         Me.RadLabel6.Text = resources.GetString("RadLabel6.Text")
         Me.RadLabel8.Text = resources.GetString("RadLabel8.Text")
-        Me.RadCheckBoxWZ1.Text = resources.GetString("RadCheckBoxWZ1.Text")
-        Me.RadCheckBoxWZ2.Text = resources.GetString("RadCheckBoxWZ2.Text")
-        Me.RadCheckBoxWZ4.Text = resources.GetString("RadCheckBoxWZ4.Text")
-        Me.RadCheckBoxWZ3.Text = resources.GetString("RadCheckBoxWZ3.Text")
-        Me.RadCheckBoxWZ5.Text = resources.GetString("RadCheckBoxWZ5.Text")
         Me.RadGroupBoxVerbindungselemente.Text = resources.GetString("RadGroupBoxVerbindungselemente.Text")
         Me.RadLabel16.Text = resources.GetString("RadLabel16.Text")
         Me.RadLabel14.Text = resources.GetString("RadLabel14.Text")
         Me.RadLabel12.Text = resources.GetString("RadLabel12.Text")
         Me.RadLabel10.Text = resources.GetString("RadLabel10.Text")
-        Me.RadCheckBoxVerbindungelemente1.Text = resources.GetString("RadCheckBoxVerbindungelemente1.Text")
-        Me.RadCheckBoxVerbindungelemente3.Text = resources.GetString("RadCheckBoxVerbindungelemente3.Text")
-        Me.RadCheckBoxVerbindungelemente2.Text = resources.GetString("RadCheckBoxVerbindungelemente2.Text")
-        Me.RadCheckBoxVerbindungelemente4.Text = resources.GetString("RadCheckBoxVerbindungelemente4.Text")
         Me.RadGroupBoxAuswerteGeraete.Text = resources.GetString("RadGroupBoxAuswerteGeraete.Text")
         Me.RadLabel1.Text = resources.GetString("RadLabel1.Text")
         Me.RadLabel4.Text = resources.GetString("RadLabel4.Text")
         Me.RadLabel2.Text = resources.GetString("RadLabel2.Text")
-        Me.RadCheckBoxAWG1.Text = resources.GetString("RadCheckBoxAWG1.Text")
-        Me.RadCheckBoxAWG3.Text = resources.GetString("RadCheckBoxAWG3.Text")
-        Me.RadCheckBoxAWG2.Text = resources.GetString("RadCheckBoxAWG2.Text")
-
-
+     
         If Not ParentFormular Is Nothing Then
             Try
                 'Hilfetext setzen
@@ -278,28 +217,10 @@ Public Class uco_5Beschaffenheitspruefung
 
                 'neuen Context aufbauen
                 Using Context As New EichsoftwareClientdatabaseEntities1
-                    'prüfen ob CREATE oder UPDATE durchgeführt werden muss
-                    If _ObjBeschaffenheitspruefung.ID = 0 Then
-                        _ObjBeschaffenheitspruefung = Context.Beschaffenheitspruefung.Create
-                        Context.Beschaffenheitspruefung.Add(_ObjBeschaffenheitspruefung)
-                        Context.SaveChanges()
-                    End If
-
-                    If _ObjBeschaffenheitspruefung.ID <> 0 Then
-                        'prüfen ob das Objekt anhand der ID gefunden werden kann
-                        Dim dbObjBeschaffenheitspruefung As Beschaffenheitspruefung = Context.Beschaffenheitspruefung.FirstOrDefault(Function(value) value.ID = _ObjBeschaffenheitspruefung.ID)
-                        If Not dbObjBeschaffenheitspruefung Is Nothing Then
-                            'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
-                            _ObjBeschaffenheitspruefung = dbObjBeschaffenheitspruefung
-                            'Füllt das Objekt mit den Werten aus den Steuerlementen
-                            UpdateObject()
-
-                            Dim dbobjEichprozess As Eichprozess = Context.Eichprozess.FirstOrDefault(Function(value) value.Vorgangsnummer = objEichprozess.Vorgangsnummer)
+                    Dim dbobjEichprozess As Eichprozess = Context.Eichprozess.FirstOrDefault(Function(value) value.Vorgangsnummer = objEichprozess.Vorgangsnummer)
                             If Not dbobjEichprozess Is Nothing Then
                                 'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
                                 objEichprozess = dbobjEichprozess
-                                objEichprozess.FK_Beschaffenheitspruefung = _ObjBeschaffenheitspruefung.ID
-
 
                                 'neuen Status zuweisen
                                 If AktuellerStatusDirty = False Then
@@ -310,18 +231,13 @@ Public Class uco_5Beschaffenheitspruefung
                                 ElseIf AktuellerStatusDirty = True Then
                                     objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.AuswahlKonformitätsverfahren
                                     AktuellerStatusDirty = False
-                                End If
-
-
-
-                                'Speichern in Datenbank
-                                Context.SaveChanges()
-                            End If
-
-
                         End If
 
-                    End If
+                        UpdateObject()
+
+                        'Speichern in Datenbank
+                                Context.SaveChanges()
+                            End If
                 End Using
                 ParentFormular.CurrentEichprozess = objEichprozess
             End If
@@ -338,38 +254,19 @@ Public Class uco_5Beschaffenheitspruefung
             End If
             'neuen Context aufbauen
             Using Context As New EichsoftwareClientdatabaseEntities1
-                'prüfen ob CREATE oder UPDATE durchgeführt werden muss
-                If _ObjBeschaffenheitspruefung.ID = 0 Then
-                    _ObjBeschaffenheitspruefung = Context.Beschaffenheitspruefung.Create
-                    Context.Beschaffenheitspruefung.Add(_ObjBeschaffenheitspruefung)
-                    Context.SaveChanges()
-                End If
-
-                If _ObjBeschaffenheitspruefung.ID <> 0 Then
-                    'prüfen ob das Objekt anhand der ID gefunden werden kann
-                    Dim dbObjBeschaffenheitspruefung As Beschaffenheitspruefung = Context.Beschaffenheitspruefung.FirstOrDefault(Function(value) value.ID = _ObjBeschaffenheitspruefung.ID)
-                    If Not dbObjBeschaffenheitspruefung Is Nothing Then
+                If objEichprozess.ID <> 0 Then
+                    Dim dbobjEichprozess As Eichprozess = Context.Eichprozess.FirstOrDefault(Function(value) value.Vorgangsnummer = objEichprozess.Vorgangsnummer)
+                    If Not dbobjEichprozess Is Nothing Then
                         'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
-                        _ObjBeschaffenheitspruefung = dbObjBeschaffenheitspruefung
+                        objEichprozess = dbobjEichprozess
+
                         'Füllt das Objekt mit den Werten aus den Steuerlementen
                         UpdateObject()
-
-                        Dim dbobjEichprozess As Eichprozess = Context.Eichprozess.FirstOrDefault(Function(value) value.Vorgangsnummer = objEichprozess.Vorgangsnummer)
-                        If Not dbobjEichprozess Is Nothing Then
-                            'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
-                            objEichprozess = dbobjEichprozess
-                            objEichprozess.FK_Beschaffenheitspruefung = _ObjBeschaffenheitspruefung.ID
-
-                            'Speichern in Datenbank
-                            Context.SaveChanges()
-                        End If
-
-
+                        'Speichern in Datenbank
+                        Context.SaveChanges()
                     End If
-
                 End If
             End Using
-
             ParentFormular.CurrentEichprozess = objEichprozess
         End If
     End Sub
@@ -405,35 +302,21 @@ Public Class uco_5Beschaffenheitspruefung
             MyBase.VersendenNeeded(TargetUserControl)
 
             Using dbcontext As New EichsoftwareClientdatabaseEntities1
-                '  objEichprozess = (From a In dbcontext.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Beschaffenheitspruefung").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
-
                 Dim objServerEichprozess As New EichsoftwareWebservice.ServerEichprozess
                 'auf fehlerhaft Status setzen
                 objEichprozess.FK_Bearbeitungsstatus = 2
                 objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Konformitätsbewertungsbevollmächtigter sich den DS von Anfang angucken muss
               
-                If _ObjBeschaffenheitspruefung.ID <> 0 Then
-                    'prüfen ob das Objekt anhand der ID gefunden werden kann
-                    Dim dbObjBeschaffenheitspruefung As Beschaffenheitspruefung = dbcontext.Beschaffenheitspruefung.FirstOrDefault(Function(value) value.ID = objEichprozess.FK_Beschaffenheitspruefung)
-                    If Not dbObjBeschaffenheitspruefung Is Nothing Then
-                        'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
-                        _ObjBeschaffenheitspruefung = dbObjBeschaffenheitspruefung
-                        'Füllt das Objekt mit den Werten aus den Steuerlementen
-                        UpdateObject()
-
-                        Dim dbobjEichprozess As Eichprozess = dbcontext.Eichprozess.FirstOrDefault(Function(value) value.Vorgangsnummer = objEichprozess.Vorgangsnummer)
+                If objEichprozess.ID <> 0 Then
+                    Dim dbobjEichprozess As Eichprozess = dbcontext.Eichprozess.FirstOrDefault(Function(value) value.Vorgangsnummer = objEichprozess.Vorgangsnummer)
                         If Not dbobjEichprozess Is Nothing Then
                             'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
                             objEichprozess = dbobjEichprozess
-                            objEichprozess.FK_Beschaffenheitspruefung = _ObjBeschaffenheitspruefung.ID
-
+                        'Füllt das Objekt mit den Werten aus den Steuerlementen
+                        UpdateObject()
                             'Speichern in Datenbank
                             dbcontext.SaveChanges()
                         End If
-
-
-                    End If
-
                 End If
 
                 'erzeuegn eines Server Objektes auf basis des aktuellen DS
@@ -472,7 +355,7 @@ Public Class uco_5Beschaffenheitspruefung
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
-    Private Sub RadCheckBox_GotFocus(sender As Object, e As EventArgs) Handles RadCheckBoxWZ5.GotFocus, RadCheckBoxWZ4.GotFocus, RadCheckBoxWZ3.GotFocus, RadCheckBoxWZ2.GotFocus, RadCheckBoxWZ1.GotFocus, RadCheckBoxVerbindungelemente4.GotFocus, RadCheckBoxVerbindungelemente3.GotFocus, RadCheckBoxVerbindungelemente2.GotFocus, RadCheckBoxVerbindungelemente1.GotFocus, RadCheckBoxBruecke3.GotFocus, RadCheckBoxBruecke2.GotFocus, RadCheckBoxBruecke1.GotFocus, RadCheckBoxAWG3.GotFocus, RadCheckBoxAWG2.GotFocus, RadCheckBoxAWG1.GotFocus
+    Private Sub RadCheckBox_GotFocus(sender As Object, e As EventArgs)
         If _suspendEvents Then Exit Sub
         Dim c As Telerik.WinControls.UI.RadCheckBox
 
@@ -493,7 +376,7 @@ Public Class uco_5Beschaffenheitspruefung
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
-    Private Sub RadCheckBox_LostFocus(sender As Object, e As EventArgs) Handles RadCheckBoxWZ5.LostFocus, RadCheckBoxWZ4.LostFocus, RadCheckBoxWZ3.LostFocus, RadCheckBoxWZ2.LostFocus, RadCheckBoxWZ1.LostFocus, RadCheckBoxVerbindungelemente4.LostFocus, RadCheckBoxVerbindungelemente3.LostFocus, RadCheckBoxVerbindungelemente2.LostFocus, RadCheckBoxVerbindungelemente1.LostFocus, RadCheckBoxBruecke3.LostFocus, RadCheckBoxBruecke2.LostFocus, RadCheckBoxBruecke1.LostFocus, RadCheckBoxAWG3.LostFocus, RadCheckBoxAWG2.LostFocus, RadCheckBoxAWG1.LostFocus
+    Private Sub RadCheckBox_LostFocus(sender As Object, e As EventArgs)
         If _suspendEvents Then Exit Sub
         Dim c As Telerik.WinControls.UI.RadCheckBox
 
@@ -507,7 +390,7 @@ Public Class uco_5Beschaffenheitspruefung
     End Sub
 
 
-    Private Sub RadCheckBoxAWG1_Click(sender As System.Object, e As System.EventArgs) Handles RadCheckBoxWZ5.Click, RadCheckBoxWZ4.Click, RadCheckBoxWZ3.Click, RadCheckBoxWZ2.Click, RadCheckBoxWZ1.Click, RadCheckBoxVerbindungelemente4.Click, RadCheckBoxVerbindungelemente3.Click, RadCheckBoxVerbindungelemente2.Click, RadCheckBoxVerbindungelemente1.Click, RadCheckBoxBruecke3.Click, RadCheckBoxBruecke2.Click, RadCheckBoxBruecke1.Click, RadCheckBoxAWG3.Click, RadCheckBoxAWG2.Click, RadCheckBoxAWG1.Click
+    Private Sub RadCheckBoxAWG1_Click(sender As System.Object, e As System.EventArgs)
         If _suspendEvents Then Exit Sub
         AktuellerStatusDirty = True
     End Sub

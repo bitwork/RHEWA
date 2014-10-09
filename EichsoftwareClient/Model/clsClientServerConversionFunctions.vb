@@ -50,7 +50,7 @@ Public Class clsClientServerConversionFunctions
         'eichprozess
         TargetObject._Ausgeblendet = SourceObject.Ausgeblendet
         TargetObject._FK_Auswertegeraet = SourceObject.FK_Auswertegeraet
-        TargetObject._FK_Beschaffenheitspruefung = SourceObject.FK_Beschaffenheitspruefung
+
         TargetObject._FK_Eichprotokoll = SourceObject.FK_Eichprotokoll
         TargetObject._FK_Kompatibilitaetsnachweis = SourceObject.FK_Kompatibilitaetsnachweis
         TargetObject._FK_Vorgangsstatus = SourceObject.FK_Vorgangsstatus
@@ -102,37 +102,16 @@ Public Class clsClientServerConversionFunctions
         TargetObject._ServerKompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast
 
 
-        'beschaffenheitsprüfung
-
-        TargetObject._ServerBeschaffenheitspruefung = New EichsoftwareWebservice.ServerBeschaffenheitspruefung
-        TargetObject._ServerBeschaffenheitspruefung.AWG_Auslieferungszustand = SourceObject.Beschaffenheitspruefung.AWG_Auslieferungszustand
-        TargetObject._ServerBeschaffenheitspruefung.AWG_KabelUnbeschaedigt = SourceObject.Beschaffenheitspruefung.AWG_KabelUnbeschaedigt
-        TargetObject._ServerBeschaffenheitspruefung.AWG_MetrologischeAngabenVorhanden = SourceObject.Beschaffenheitspruefung.AWG_MetrologischeAngabenVorhanden
-        TargetObject._ServerBeschaffenheitspruefung.Verbindungselemente_DichtigkeitGegeben = SourceObject.Beschaffenheitspruefung.Verbindungselemente_DichtigkeitGegeben
-        TargetObject._ServerBeschaffenheitspruefung.Verbindungselemente_KabelNichtSproede = SourceObject.Beschaffenheitspruefung.Verbindungselemente_KabelNichtSproede
-        TargetObject._ServerBeschaffenheitspruefung.Verbindungselemente_KabelTemperaturGeschuetzt = SourceObject.Beschaffenheitspruefung.Verbindungselemente_KabelTemperaturGeschuetzt
-        TargetObject._ServerBeschaffenheitspruefung.Verbindungselemente_KabelUnbeschaedigt = SourceObject.Beschaffenheitspruefung.Verbindungselemente_KabelUnbeschaedigt
-        TargetObject._ServerBeschaffenheitspruefung.Waegebruecke_Korrosionsfrei = SourceObject.Beschaffenheitspruefung.Waegebruecke_Korrosionsfrei
-        TargetObject._ServerBeschaffenheitspruefung.Waegebruecke_WiegeaufgabeAusgelegt = SourceObject.Beschaffenheitspruefung.Waegebruecke_WiegeaufgabeAusgelegt
-        TargetObject._ServerBeschaffenheitspruefung.Waegebruecke_WZAufnahmenInEbene = SourceObject.Beschaffenheitspruefung.Waegebruecke_WZAufnahmenInEbene
-        TargetObject._ServerBeschaffenheitspruefung.WZ_AnschraubplattenEben = SourceObject.Beschaffenheitspruefung.WZ_AnschraubplattenEben
-        TargetObject._ServerBeschaffenheitspruefung.WZ_KabelUnbeschaedigt = SourceObject.Beschaffenheitspruefung.WZ_KabelUnbeschaedigt
-        TargetObject._ServerBeschaffenheitspruefung.WZ_KrafteinteilungKonformWELMEC = SourceObject.Beschaffenheitspruefung.WZ_KrafteinteilungKonformWELMEC
-        TargetObject._ServerBeschaffenheitspruefung.WZ_VergussUnbeschaedigt = SourceObject.Beschaffenheitspruefung.WZ_VergussUnbeschaedigt
-        TargetObject._ServerBeschaffenheitspruefung.WZ_ZulassungOIMLR60 = SourceObject.Beschaffenheitspruefung.WZ_ZulassungOIMLR60
-
+        
 
         'Eichprotokoll
         TargetObject._ServerEichprotokoll = New EichsoftwareWebservice.ServerEichprotokoll
 
-       TargetObject._ServerEichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma = SourceObject.Eichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma
-        TargetObject._ServerEichprotokoll.Beschaffenheitspruefung_Genauigkeitsklasse = SourceObject.Eichprotokoll.Beschaffenheitspruefung_Genauigkeitsklasse
-        TargetObject._ServerEichprotokoll.Beschaffenheitspruefung_LetztePruefung = SourceObject.Eichprotokoll.Beschaffenheitspruefung_LetztePruefung
-        TargetObject._ServerEichprotokoll.Beschaffenheitspruefung_Pruefintervall = SourceObject.Eichprotokoll.Beschaffenheitspruefung_Pruefintervall
-        TargetObject._ServerEichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer = SourceObject.Eichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer
         TargetObject._ServerEichprotokoll.EignungAchlastwaegungen_Geprueft = SourceObject.Eichprotokoll.EignungAchlastwaegungen_Geprueft
         TargetObject._ServerEichprotokoll.EignungAchlastwaegungen_WaagenbrueckeEbene = SourceObject.Eichprotokoll.EignungAchlastwaegungen_WaagenbrueckeEbene
         TargetObject._ServerEichprotokoll.EignungAchlastwaegungen_WaageNichtGeeignet = SourceObject.Eichprotokoll.EignungAchlastwaegungen_WaageNichtGeeignet
+        TargetObject._ServerEichprotokoll.Beschaffenheitspruefung_Genehmigt = SourceObject.Eichprotokoll.Beschaffenheitspruefung_Genehmigt
+
         TargetObject._ServerEichprotokoll.Fallbeschleunigung_g = SourceObject.Eichprotokoll.Fallbeschleunigung_g
         TargetObject._ServerEichprotokoll.Fallbeschleunigung_ms2 = SourceObject.Eichprotokoll.Fallbeschleunigung_ms2
         TargetObject._ServerEichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = SourceObject.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren
@@ -251,35 +230,12 @@ Public Class clsClientServerConversionFunctions
         TargetObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Zulassungsinhaber = SourceObject._ServerKompatiblitaetsnachweis.Kompatiblitaet_Waage_Zulassungsinhaber
         TargetObject.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast = SourceObject._ServerKompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast
 
-        'beschaffenheitsprüfung
-        TargetObject.Beschaffenheitspruefung = New Beschaffenheitspruefung
-
-        TargetObject.Beschaffenheitspruefung.AWG_Auslieferungszustand = SourceObject._ServerBeschaffenheitspruefung.AWG_Auslieferungszustand
-        TargetObject.Beschaffenheitspruefung.AWG_KabelUnbeschaedigt = SourceObject._ServerBeschaffenheitspruefung.AWG_KabelUnbeschaedigt
-        TargetObject.Beschaffenheitspruefung.AWG_MetrologischeAngabenVorhanden = SourceObject._ServerBeschaffenheitspruefung.AWG_MetrologischeAngabenVorhanden
-        TargetObject.Beschaffenheitspruefung.ID = SourceObject._ServerBeschaffenheitspruefung.ID
-        TargetObject.Beschaffenheitspruefung.Verbindungselemente_DichtigkeitGegeben = SourceObject._ServerBeschaffenheitspruefung.Verbindungselemente_DichtigkeitGegeben
-        TargetObject.Beschaffenheitspruefung.Verbindungselemente_KabelNichtSproede = SourceObject._ServerBeschaffenheitspruefung.Verbindungselemente_KabelNichtSproede
-        TargetObject.Beschaffenheitspruefung.Verbindungselemente_KabelTemperaturGeschuetzt = SourceObject._ServerBeschaffenheitspruefung.Verbindungselemente_KabelTemperaturGeschuetzt
-        TargetObject.Beschaffenheitspruefung.Verbindungselemente_KabelUnbeschaedigt = SourceObject._ServerBeschaffenheitspruefung.Verbindungselemente_KabelUnbeschaedigt
-        TargetObject.Beschaffenheitspruefung.Waegebruecke_Korrosionsfrei = SourceObject._ServerBeschaffenheitspruefung.Waegebruecke_Korrosionsfrei
-        TargetObject.Beschaffenheitspruefung.Waegebruecke_WiegeaufgabeAusgelegt = SourceObject._ServerBeschaffenheitspruefung.Waegebruecke_WiegeaufgabeAusgelegt
-        TargetObject.Beschaffenheitspruefung.Waegebruecke_WZAufnahmenInEbene = SourceObject._ServerBeschaffenheitspruefung.Waegebruecke_WZAufnahmenInEbene
-        TargetObject.Beschaffenheitspruefung.WZ_AnschraubplattenEben = SourceObject._ServerBeschaffenheitspruefung.WZ_AnschraubplattenEben
-        TargetObject.Beschaffenheitspruefung.WZ_KabelUnbeschaedigt = SourceObject._ServerBeschaffenheitspruefung.WZ_KabelUnbeschaedigt
-        TargetObject.Beschaffenheitspruefung.WZ_KrafteinteilungKonformWELMEC = SourceObject._ServerBeschaffenheitspruefung.WZ_KrafteinteilungKonformWELMEC
-        TargetObject.Beschaffenheitspruefung.WZ_VergussUnbeschaedigt = SourceObject._ServerBeschaffenheitspruefung.WZ_VergussUnbeschaedigt
-        TargetObject.Beschaffenheitspruefung.WZ_ZulassungOIMLR60 = SourceObject._ServerBeschaffenheitspruefung.WZ_ZulassungOIMLR60
-
+       
 
         'Eichprotokoll
         TargetObject.Eichprotokoll = New Eichprotokoll
 
-        TargetObject.Eichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma
-        TargetObject.Eichprotokoll.Beschaffenheitspruefung_Genauigkeitsklasse = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_Genauigkeitsklasse
-        TargetObject.Eichprotokoll.Beschaffenheitspruefung_LetztePruefung = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_LetztePruefung
-        TargetObject.Eichprotokoll.Beschaffenheitspruefung_Pruefintervall = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_Pruefintervall
-        TargetObject.Eichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer
+    
         TargetObject.Eichprotokoll.EignungAchlastwaegungen_Geprueft = SourceObject._ServerEichprotokoll.EignungAchlastwaegungen_Geprueft
         TargetObject.Eichprotokoll.EignungAchlastwaegungen_WaagenbrueckeEbene = SourceObject._ServerEichprotokoll.EignungAchlastwaegungen_WaagenbrueckeEbene
         TargetObject.Eichprotokoll.EignungAchlastwaegungen_WaageNichtGeeignet = SourceObject._ServerEichprotokoll.EignungAchlastwaegungen_WaageNichtGeeignet
@@ -291,6 +247,8 @@ Public Class clsClientServerConversionFunctions
         TargetObject.Eichprotokoll.ID = SourceObject._ServerEichprotokoll.ID
         TargetObject.Eichprotokoll.Identifikationsdaten_Aufstellungsort = SourceObject._ServerEichprotokoll.Identifikationsdaten_Aufstellungsort
         TargetObject.Eichprotokoll.Identifikationsdaten_Baujahr = SourceObject._ServerEichprotokoll.Identifikationsdaten_Baujahr
+        TargetObject.Eichprotokoll.Beschaffenheitspruefung_Genehmigt = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_Genehmigt
+
         TargetObject.Eichprotokoll.Identifikationsdaten_Datum = SourceObject._ServerEichprotokoll.Identifikationsdaten_Datum
         TargetObject.Eichprotokoll.Identifikationsdaten_HybridMechanisch = SourceObject._ServerEichprotokoll.Identifikationsdaten_HybridMechanisch
         TargetObject.Eichprotokoll.Identifikationsdaten_Min1 = SourceObject._ServerEichprotokoll.Identifikationsdaten_Min1
@@ -697,35 +655,14 @@ Public Class clsClientServerConversionFunctions
         TargetObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Zulassungsinhaber = SourceObject._ServerKompatiblitaetsnachweis.Kompatiblitaet_Waage_Zulassungsinhaber
         TargetObject.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast = SourceObject._ServerKompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast
 
-        'beschaffenheitsprüfung
-
-        TargetObject.Beschaffenheitspruefung.AWG_Auslieferungszustand = SourceObject._ServerBeschaffenheitspruefung.AWG_Auslieferungszustand
-        TargetObject.Beschaffenheitspruefung.AWG_KabelUnbeschaedigt = SourceObject._ServerBeschaffenheitspruefung.AWG_KabelUnbeschaedigt
-        TargetObject.Beschaffenheitspruefung.AWG_MetrologischeAngabenVorhanden = SourceObject._ServerBeschaffenheitspruefung.AWG_MetrologischeAngabenVorhanden
-        TargetObject.Beschaffenheitspruefung.Verbindungselemente_DichtigkeitGegeben = SourceObject._ServerBeschaffenheitspruefung.Verbindungselemente_DichtigkeitGegeben
-        TargetObject.Beschaffenheitspruefung.Verbindungselemente_KabelNichtSproede = SourceObject._ServerBeschaffenheitspruefung.Verbindungselemente_KabelNichtSproede
-        TargetObject.Beschaffenheitspruefung.Verbindungselemente_KabelTemperaturGeschuetzt = SourceObject._ServerBeschaffenheitspruefung.Verbindungselemente_KabelTemperaturGeschuetzt
-        TargetObject.Beschaffenheitspruefung.Verbindungselemente_KabelUnbeschaedigt = SourceObject._ServerBeschaffenheitspruefung.Verbindungselemente_KabelUnbeschaedigt
-        TargetObject.Beschaffenheitspruefung.Waegebruecke_Korrosionsfrei = SourceObject._ServerBeschaffenheitspruefung.Waegebruecke_Korrosionsfrei
-        TargetObject.Beschaffenheitspruefung.Waegebruecke_WiegeaufgabeAusgelegt = SourceObject._ServerBeschaffenheitspruefung.Waegebruecke_WiegeaufgabeAusgelegt
-        TargetObject.Beschaffenheitspruefung.Waegebruecke_WZAufnahmenInEbene = SourceObject._ServerBeschaffenheitspruefung.Waegebruecke_WZAufnahmenInEbene
-        TargetObject.Beschaffenheitspruefung.WZ_AnschraubplattenEben = SourceObject._ServerBeschaffenheitspruefung.WZ_AnschraubplattenEben
-        TargetObject.Beschaffenheitspruefung.WZ_KabelUnbeschaedigt = SourceObject._ServerBeschaffenheitspruefung.WZ_KabelUnbeschaedigt
-        TargetObject.Beschaffenheitspruefung.WZ_KrafteinteilungKonformWELMEC = SourceObject._ServerBeschaffenheitspruefung.WZ_KrafteinteilungKonformWELMEC
-        TargetObject.Beschaffenheitspruefung.WZ_VergussUnbeschaedigt = SourceObject._ServerBeschaffenheitspruefung.WZ_VergussUnbeschaedigt
-        TargetObject.Beschaffenheitspruefung.WZ_ZulassungOIMLR60 = SourceObject._ServerBeschaffenheitspruefung.WZ_ZulassungOIMLR60
-
-
         'Eichprotokoll
 
-        TargetObject.Eichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma
-        TargetObject.Eichprotokoll.Beschaffenheitspruefung_Genauigkeitsklasse = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_Genauigkeitsklasse
-        TargetObject.Eichprotokoll.Beschaffenheitspruefung_LetztePruefung = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_LetztePruefung
-        TargetObject.Eichprotokoll.Beschaffenheitspruefung_Pruefintervall = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_Pruefintervall
-        TargetObject.Eichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer
+     
         TargetObject.Eichprotokoll.EignungAchlastwaegungen_Geprueft = SourceObject._ServerEichprotokoll.EignungAchlastwaegungen_Geprueft
         TargetObject.Eichprotokoll.EignungAchlastwaegungen_WaagenbrueckeEbene = SourceObject._ServerEichprotokoll.EignungAchlastwaegungen_WaagenbrueckeEbene
         TargetObject.Eichprotokoll.EignungAchlastwaegungen_WaageNichtGeeignet = SourceObject._ServerEichprotokoll.EignungAchlastwaegungen_WaageNichtGeeignet
+        TargetObject.Eichprotokoll.Beschaffenheitspruefung_Genehmigt = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_Genehmigt
+
         TargetObject.Eichprotokoll.Fallbeschleunigung_g = SourceObject._ServerEichprotokoll.Fallbeschleunigung_g
         TargetObject.Eichprotokoll.Fallbeschleunigung_ms2 = SourceObject._ServerEichprotokoll.Fallbeschleunigung_ms2
         TargetObject.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = SourceObject._ServerEichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren
@@ -1066,7 +1003,6 @@ Public Class clsClientServerConversionFunctions
         'eichprozess
         TargetObject.Ausgeblendet = SourceObject._Ausgeblendet
         TargetObject.FK_Auswertegeraet = SourceObject._FK_Auswertegeraet
-        TargetObject.FK_Beschaffenheitspruefung = SourceObject._FK_Beschaffenheitspruefung
         TargetObject.FK_Eichprotokoll = SourceObject._FK_Eichprotokoll
         TargetObject.FK_Vorgangsstatus = SourceObject._FK_Vorgangsstatus
         TargetObject.FK_WaagenArt = SourceObject._FK_WaagenArt
@@ -1113,41 +1049,17 @@ Public Class clsClientServerConversionFunctions
         TargetObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Uebersetzungsverhaeltnis = SourceObject._ServerKompatiblitaetsnachweis.Kompatiblitaet_Waage_Uebersetzungsverhaeltnis
         TargetObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Zulassungsinhaber = SourceObject._ServerKompatiblitaetsnachweis.Kompatiblitaet_Waage_Zulassungsinhaber
         TargetObject.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast = SourceObject._ServerKompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast
-        '   TargetObject.FK_Kompatibilitaetsnachweis = TargetObject.Kompatiblitaetsnachweis.ID
-
-
-
-        'beschaffenheitsprüfung
-        TargetObject.Beschaffenheitspruefung = New Beschaffenheitspruefung
-        TargetObject.Beschaffenheitspruefung.AWG_Auslieferungszustand = SourceObject._ServerBeschaffenheitspruefung.AWG_Auslieferungszustand
-        TargetObject.Beschaffenheitspruefung.AWG_KabelUnbeschaedigt = SourceObject._ServerBeschaffenheitspruefung.AWG_KabelUnbeschaedigt
-        TargetObject.Beschaffenheitspruefung.AWG_MetrologischeAngabenVorhanden = SourceObject._ServerBeschaffenheitspruefung.AWG_MetrologischeAngabenVorhanden
-        'TargetObject.Beschaffenheitspruefung.ID = SourceObject._ServerBeschaffenheitspruefung.ID
-        TargetObject.Beschaffenheitspruefung.Verbindungselemente_DichtigkeitGegeben = SourceObject._ServerBeschaffenheitspruefung.Verbindungselemente_DichtigkeitGegeben
-        TargetObject.Beschaffenheitspruefung.Verbindungselemente_KabelNichtSproede = SourceObject._ServerBeschaffenheitspruefung.Verbindungselemente_KabelNichtSproede
-        TargetObject.Beschaffenheitspruefung.Verbindungselemente_KabelTemperaturGeschuetzt = SourceObject._ServerBeschaffenheitspruefung.Verbindungselemente_KabelTemperaturGeschuetzt
-        TargetObject.Beschaffenheitspruefung.Verbindungselemente_KabelUnbeschaedigt = SourceObject._ServerBeschaffenheitspruefung.Verbindungselemente_KabelUnbeschaedigt
-        TargetObject.Beschaffenheitspruefung.Waegebruecke_Korrosionsfrei = SourceObject._ServerBeschaffenheitspruefung.Waegebruecke_Korrosionsfrei
-        TargetObject.Beschaffenheitspruefung.Waegebruecke_WiegeaufgabeAusgelegt = SourceObject._ServerBeschaffenheitspruefung.Waegebruecke_WiegeaufgabeAusgelegt
-        TargetObject.Beschaffenheitspruefung.Waegebruecke_WZAufnahmenInEbene = SourceObject._ServerBeschaffenheitspruefung.Waegebruecke_WZAufnahmenInEbene
-        TargetObject.Beschaffenheitspruefung.WZ_AnschraubplattenEben = SourceObject._ServerBeschaffenheitspruefung.WZ_AnschraubplattenEben
-        TargetObject.Beschaffenheitspruefung.WZ_KabelUnbeschaedigt = SourceObject._ServerBeschaffenheitspruefung.WZ_KabelUnbeschaedigt
-        TargetObject.Beschaffenheitspruefung.WZ_KrafteinteilungKonformWELMEC = SourceObject._ServerBeschaffenheitspruefung.WZ_KrafteinteilungKonformWELMEC
-        TargetObject.Beschaffenheitspruefung.WZ_VergussUnbeschaedigt = SourceObject._ServerBeschaffenheitspruefung.WZ_VergussUnbeschaedigt
-        TargetObject.Beschaffenheitspruefung.WZ_ZulassungOIMLR60 = SourceObject._ServerBeschaffenheitspruefung.WZ_ZulassungOIMLR60
 
 
         'Eichprotokoll
         TargetObject.Eichprotokoll = New Eichprotokoll
-       TargetObject.Eichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma
-        TargetObject.Eichprotokoll.Beschaffenheitspruefung_Genauigkeitsklasse = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_Genauigkeitsklasse
-        TargetObject.Eichprotokoll.Beschaffenheitspruefung_LetztePruefung = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_LetztePruefung
-        TargetObject.Eichprotokoll.Beschaffenheitspruefung_Pruefintervall = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_Pruefintervall
-        TargetObject.Eichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer
+      
         TargetObject.Eichprotokoll.EignungAchlastwaegungen_Geprueft = SourceObject._ServerEichprotokoll.EignungAchlastwaegungen_Geprueft
         TargetObject.Eichprotokoll.EignungAchlastwaegungen_WaagenbrueckeEbene = SourceObject._ServerEichprotokoll.EignungAchlastwaegungen_WaagenbrueckeEbene
         TargetObject.Eichprotokoll.EignungAchlastwaegungen_WaageNichtGeeignet = SourceObject._ServerEichprotokoll.EignungAchlastwaegungen_WaageNichtGeeignet
         TargetObject.Eichprotokoll.Fallbeschleunigung_g = SourceObject._ServerEichprotokoll.Fallbeschleunigung_g
+        TargetObject.Eichprotokoll.Beschaffenheitspruefung_Genehmigt = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_Genehmigt
+
         TargetObject.Eichprotokoll.Fallbeschleunigung_ms2 = SourceObject._ServerEichprotokoll.Fallbeschleunigung_ms2
         TargetObject.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = SourceObject._ServerEichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren
         TargetObject.Eichprotokoll.Identifikationsdaten_Benutzer = SourceObject._ServerEichprotokoll.Identifikationsdaten_Benutzer

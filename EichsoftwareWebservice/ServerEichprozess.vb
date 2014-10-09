@@ -16,7 +16,6 @@ Partial Public Class ServerEichprozess
     Public Property FK_Vorgangsstatus As Byte
     Public Property FK_Auswertegeraet As String
     Public Property FK_Waegezelle As String
-    Public Property FK_Beschaffenheitspruefung As Nullable(Of Integer)
     Public Property FK_Eichprotokoll As Nullable(Of Integer)
     Public Property FK_WaagenTyp As Nullable(Of Byte)
     Public Property FK_WaagenArt As Nullable(Of Byte)
@@ -29,7 +28,6 @@ Partial Public Class ServerEichprozess
     Public Property ErzeugerLizenz As String
     Public Property ZurBearbeitungGesperrtDurch As String
 
-    Public Overridable Property ServerBeschaffenheitspruefung As ServerBeschaffenheitspruefung
     Public Overridable Property ServerEichprotokoll As ServerEichprotokoll
     Public Overridable Property ServerKompatiblitaetsnachweis As ServerKompatiblitaetsnachweis
     Public Overridable Property ServerLookup_Auswertegeraet As ServerLookup_Auswertegeraet

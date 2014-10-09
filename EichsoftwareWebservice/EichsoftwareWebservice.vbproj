@@ -169,9 +169,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="ServerBeschaffenheitspruefung.vb">
-      <DependentUpon>EntityModelEichsoftwareServer.tt</DependentUpon>
-    </Compile>
     <Compile Include="ServerEichmarkenverwaltung.vb">
       <DependentUpon>EntityModelEichsoftwareServer.tt</DependentUpon>
     </Compile>

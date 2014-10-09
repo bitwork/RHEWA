@@ -556,8 +556,6 @@ Namespace EichsoftwareWebservice
         
         Private _FK_BearbeitungsstatusField As System.Nullable(Of Byte)
         
-        Private _FK_BeschaffenheitspruefungField As System.Nullable(Of Integer)
-        
         Private _FK_EichprotokollField As System.Nullable(Of Integer)
         
         Private _FK_KompatibilitaetsnachweisField As System.Nullable(Of Integer)
@@ -571,8 +569,6 @@ Namespace EichsoftwareWebservice
         Private _FK_WaegezelleField As String
         
         Private _IDField As Integer
-        
-        Private _ServerBeschaffenheitspruefungField As EichsoftwareWebservice.ServerBeschaffenheitspruefung
         
         Private _ServerEichprotokollField As EichsoftwareWebservice.ServerEichprotokoll
         
@@ -676,19 +672,6 @@ Namespace EichsoftwareWebservice
         End Property
         
         <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _FK_Beschaffenheitspruefung() As System.Nullable(Of Integer)
-            Get
-                Return Me._FK_BeschaffenheitspruefungField
-            End Get
-            Set
-                If (Me._FK_BeschaffenheitspruefungField.Equals(value) <> true) Then
-                    Me._FK_BeschaffenheitspruefungField = value
-                    Me.RaisePropertyChanged("_FK_Beschaffenheitspruefung")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
         Public Property _FK_Eichprotokoll() As System.Nullable(Of Integer)
             Get
                 Return Me._FK_EichprotokollField
@@ -775,19 +758,6 @@ Namespace EichsoftwareWebservice
                 If (Me._IDField.Equals(value) <> true) Then
                     Me._IDField = value
                     Me.RaisePropertyChanged("_ID")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _ServerBeschaffenheitspruefung() As EichsoftwareWebservice.ServerBeschaffenheitspruefung
-            Get
-                Return Me._ServerBeschaffenheitspruefungField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me._ServerBeschaffenheitspruefungField, value) <> true) Then
-                    Me._ServerBeschaffenheitspruefungField = value
-                    Me.RaisePropertyChanged("_ServerBeschaffenheitspruefung")
                 End If
             End Set
         End Property
@@ -1484,309 +1454,6 @@ Namespace EichsoftwareWebservice
     
     <System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0"),  _
-     System.Runtime.Serialization.DataContractAttribute(Name:="ServerBeschaffenheitspruefung", [Namespace]:="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice"),  _
-     System.SerializableAttribute()>  _
-    Partial Public Class ServerBeschaffenheitspruefung
-        Inherits Object
-        Implements System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged
-        
-        <System.NonSerializedAttribute()>  _
-        Private extensionDataField As System.Runtime.Serialization.ExtensionDataObject
-        
-        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
-        Private AWG_AuslieferungszustandField As Boolean
-        
-        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
-        Private AWG_KabelUnbeschaedigtField As Boolean
-        
-        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
-        Private AWG_MetrologischeAngabenVorhandenField As Boolean
-        
-        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
-        Private IDField As Integer
-        
-        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
-        Private ServerEichprozessField() As EichsoftwareWebservice.ServerEichprozess
-        
-        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
-        Private Verbindungselemente_DichtigkeitGegebenField As Boolean
-        
-        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
-        Private Verbindungselemente_KabelNichtSproedeField As Boolean
-        
-        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
-        Private Verbindungselemente_KabelTemperaturGeschuetztField As Boolean
-        
-        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
-        Private Verbindungselemente_KabelUnbeschaedigtField As Boolean
-        
-        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
-        Private WZ_AnschraubplattenEbenField As Boolean
-        
-        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
-        Private WZ_KabelUnbeschaedigtField As Boolean
-        
-        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
-        Private WZ_KrafteinteilungKonformWELMECField As Boolean
-        
-        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
-        Private WZ_VergussUnbeschaedigtField As Boolean
-        
-        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
-        Private WZ_ZulassungOIMLR60Field As Boolean
-        
-        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
-        Private Waegebruecke_KorrosionsfreiField As Boolean
-        
-        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
-        Private Waegebruecke_WZAufnahmenInEbeneField As Boolean
-        
-        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
-        Private Waegebruecke_WiegeaufgabeAusgelegtField As Boolean
-        
-        <Global.System.ComponentModel.BrowsableAttribute(false)>  _
-        Public Property ExtensionData() As System.Runtime.Serialization.ExtensionDataObject Implements System.Runtime.Serialization.IExtensibleDataObject.ExtensionData
-            Get
-                Return Me.extensionDataField
-            End Get
-            Set
-                Me.extensionDataField = value
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute()>  _
-        Public Property AWG_Auslieferungszustand() As Boolean
-            Get
-                Return Me.AWG_AuslieferungszustandField
-            End Get
-            Set
-                If (Me.AWG_AuslieferungszustandField.Equals(value) <> true) Then
-                    Me.AWG_AuslieferungszustandField = value
-                    Me.RaisePropertyChanged("AWG_Auslieferungszustand")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute()>  _
-        Public Property AWG_KabelUnbeschaedigt() As Boolean
-            Get
-                Return Me.AWG_KabelUnbeschaedigtField
-            End Get
-            Set
-                If (Me.AWG_KabelUnbeschaedigtField.Equals(value) <> true) Then
-                    Me.AWG_KabelUnbeschaedigtField = value
-                    Me.RaisePropertyChanged("AWG_KabelUnbeschaedigt")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute()>  _
-        Public Property AWG_MetrologischeAngabenVorhanden() As Boolean
-            Get
-                Return Me.AWG_MetrologischeAngabenVorhandenField
-            End Get
-            Set
-                If (Me.AWG_MetrologischeAngabenVorhandenField.Equals(value) <> true) Then
-                    Me.AWG_MetrologischeAngabenVorhandenField = value
-                    Me.RaisePropertyChanged("AWG_MetrologischeAngabenVorhanden")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute()>  _
-        Public Property ID() As Integer
-            Get
-                Return Me.IDField
-            End Get
-            Set
-                If (Me.IDField.Equals(value) <> true) Then
-                    Me.IDField = value
-                    Me.RaisePropertyChanged("ID")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute()>  _
-        Public Property ServerEichprozess() As EichsoftwareWebservice.ServerEichprozess()
-            Get
-                Return Me.ServerEichprozessField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me.ServerEichprozessField, value) <> true) Then
-                    Me.ServerEichprozessField = value
-                    Me.RaisePropertyChanged("ServerEichprozess")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute()>  _
-        Public Property Verbindungselemente_DichtigkeitGegeben() As Boolean
-            Get
-                Return Me.Verbindungselemente_DichtigkeitGegebenField
-            End Get
-            Set
-                If (Me.Verbindungselemente_DichtigkeitGegebenField.Equals(value) <> true) Then
-                    Me.Verbindungselemente_DichtigkeitGegebenField = value
-                    Me.RaisePropertyChanged("Verbindungselemente_DichtigkeitGegeben")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute()>  _
-        Public Property Verbindungselemente_KabelNichtSproede() As Boolean
-            Get
-                Return Me.Verbindungselemente_KabelNichtSproedeField
-            End Get
-            Set
-                If (Me.Verbindungselemente_KabelNichtSproedeField.Equals(value) <> true) Then
-                    Me.Verbindungselemente_KabelNichtSproedeField = value
-                    Me.RaisePropertyChanged("Verbindungselemente_KabelNichtSproede")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute()>  _
-        Public Property Verbindungselemente_KabelTemperaturGeschuetzt() As Boolean
-            Get
-                Return Me.Verbindungselemente_KabelTemperaturGeschuetztField
-            End Get
-            Set
-                If (Me.Verbindungselemente_KabelTemperaturGeschuetztField.Equals(value) <> true) Then
-                    Me.Verbindungselemente_KabelTemperaturGeschuetztField = value
-                    Me.RaisePropertyChanged("Verbindungselemente_KabelTemperaturGeschuetzt")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute()>  _
-        Public Property Verbindungselemente_KabelUnbeschaedigt() As Boolean
-            Get
-                Return Me.Verbindungselemente_KabelUnbeschaedigtField
-            End Get
-            Set
-                If (Me.Verbindungselemente_KabelUnbeschaedigtField.Equals(value) <> true) Then
-                    Me.Verbindungselemente_KabelUnbeschaedigtField = value
-                    Me.RaisePropertyChanged("Verbindungselemente_KabelUnbeschaedigt")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute()>  _
-        Public Property WZ_AnschraubplattenEben() As Boolean
-            Get
-                Return Me.WZ_AnschraubplattenEbenField
-            End Get
-            Set
-                If (Me.WZ_AnschraubplattenEbenField.Equals(value) <> true) Then
-                    Me.WZ_AnschraubplattenEbenField = value
-                    Me.RaisePropertyChanged("WZ_AnschraubplattenEben")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute()>  _
-        Public Property WZ_KabelUnbeschaedigt() As Boolean
-            Get
-                Return Me.WZ_KabelUnbeschaedigtField
-            End Get
-            Set
-                If (Me.WZ_KabelUnbeschaedigtField.Equals(value) <> true) Then
-                    Me.WZ_KabelUnbeschaedigtField = value
-                    Me.RaisePropertyChanged("WZ_KabelUnbeschaedigt")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute()>  _
-        Public Property WZ_KrafteinteilungKonformWELMEC() As Boolean
-            Get
-                Return Me.WZ_KrafteinteilungKonformWELMECField
-            End Get
-            Set
-                If (Me.WZ_KrafteinteilungKonformWELMECField.Equals(value) <> true) Then
-                    Me.WZ_KrafteinteilungKonformWELMECField = value
-                    Me.RaisePropertyChanged("WZ_KrafteinteilungKonformWELMEC")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute()>  _
-        Public Property WZ_VergussUnbeschaedigt() As Boolean
-            Get
-                Return Me.WZ_VergussUnbeschaedigtField
-            End Get
-            Set
-                If (Me.WZ_VergussUnbeschaedigtField.Equals(value) <> true) Then
-                    Me.WZ_VergussUnbeschaedigtField = value
-                    Me.RaisePropertyChanged("WZ_VergussUnbeschaedigt")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute()>  _
-        Public Property WZ_ZulassungOIMLR60() As Boolean
-            Get
-                Return Me.WZ_ZulassungOIMLR60Field
-            End Get
-            Set
-                If (Me.WZ_ZulassungOIMLR60Field.Equals(value) <> true) Then
-                    Me.WZ_ZulassungOIMLR60Field = value
-                    Me.RaisePropertyChanged("WZ_ZulassungOIMLR60")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute()>  _
-        Public Property Waegebruecke_Korrosionsfrei() As Boolean
-            Get
-                Return Me.Waegebruecke_KorrosionsfreiField
-            End Get
-            Set
-                If (Me.Waegebruecke_KorrosionsfreiField.Equals(value) <> true) Then
-                    Me.Waegebruecke_KorrosionsfreiField = value
-                    Me.RaisePropertyChanged("Waegebruecke_Korrosionsfrei")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute()>  _
-        Public Property Waegebruecke_WZAufnahmenInEbene() As Boolean
-            Get
-                Return Me.Waegebruecke_WZAufnahmenInEbeneField
-            End Get
-            Set
-                If (Me.Waegebruecke_WZAufnahmenInEbeneField.Equals(value) <> true) Then
-                    Me.Waegebruecke_WZAufnahmenInEbeneField = value
-                    Me.RaisePropertyChanged("Waegebruecke_WZAufnahmenInEbene")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute()>  _
-        Public Property Waegebruecke_WiegeaufgabeAusgelegt() As Boolean
-            Get
-                Return Me.Waegebruecke_WiegeaufgabeAusgelegtField
-            End Get
-            Set
-                If (Me.Waegebruecke_WiegeaufgabeAusgelegtField.Equals(value) <> true) Then
-                    Me.Waegebruecke_WiegeaufgabeAusgelegtField = value
-                    Me.RaisePropertyChanged("Waegebruecke_WiegeaufgabeAusgelegt")
-                End If
-            End Set
-        End Property
-        
-        Public Event PropertyChanged As System.ComponentModel.PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
-        
-        Protected Sub RaisePropertyChanged(ByVal propertyName As String)
-            Dim propertyChanged As System.ComponentModel.PropertyChangedEventHandler = Me.PropertyChangedEvent
-            If (Not (propertyChanged) Is Nothing) Then
-                propertyChanged(Me, New System.ComponentModel.PropertyChangedEventArgs(propertyName))
-            End If
-        End Sub
-    End Class
-    
-    <System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0"),  _
      System.Runtime.Serialization.DataContractAttribute(Name:="ServerEichprotokoll", [Namespace]:="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice"),  _
      System.SerializableAttribute()>  _
     Partial Public Class ServerEichprotokoll
@@ -1797,19 +1464,7 @@ Namespace EichsoftwareWebservice
         Private extensionDataField As System.Runtime.Serialization.ExtensionDataObject
         
         <System.Runtime.Serialization.OptionalFieldAttribute()>  _
-        Private Beschaffenheitspruefung_EichfahrzeugFirmaField As String
-        
-        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
-        Private Beschaffenheitspruefung_GenauigkeitsklasseField As String
-        
-        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
-        Private Beschaffenheitspruefung_LetztePruefungField As String
-        
-        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
-        Private Beschaffenheitspruefung_PruefintervallField As String
-        
-        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
-        Private Beschaffenheitspruefung_PruefscheinnummerField As String
+        Private Beschaffenheitspruefung_GenehmigtField As System.Nullable(Of Boolean)
         
         <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private EignungAchlastwaegungen_GeprueftField As System.Nullable(Of Boolean)
@@ -2035,66 +1690,14 @@ Namespace EichsoftwareWebservice
         End Property
         
         <System.Runtime.Serialization.DataMemberAttribute()>  _
-        Public Property Beschaffenheitspruefung_EichfahrzeugFirma() As String
+        Public Property Beschaffenheitspruefung_Genehmigt() As System.Nullable(Of Boolean)
             Get
-                Return Me.Beschaffenheitspruefung_EichfahrzeugFirmaField
+                Return Me.Beschaffenheitspruefung_GenehmigtField
             End Get
             Set
-                If (Object.ReferenceEquals(Me.Beschaffenheitspruefung_EichfahrzeugFirmaField, value) <> true) Then
-                    Me.Beschaffenheitspruefung_EichfahrzeugFirmaField = value
-                    Me.RaisePropertyChanged("Beschaffenheitspruefung_EichfahrzeugFirma")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute()>  _
-        Public Property Beschaffenheitspruefung_Genauigkeitsklasse() As String
-            Get
-                Return Me.Beschaffenheitspruefung_GenauigkeitsklasseField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me.Beschaffenheitspruefung_GenauigkeitsklasseField, value) <> true) Then
-                    Me.Beschaffenheitspruefung_GenauigkeitsklasseField = value
-                    Me.RaisePropertyChanged("Beschaffenheitspruefung_Genauigkeitsklasse")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute()>  _
-        Public Property Beschaffenheitspruefung_LetztePruefung() As String
-            Get
-                Return Me.Beschaffenheitspruefung_LetztePruefungField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me.Beschaffenheitspruefung_LetztePruefungField, value) <> true) Then
-                    Me.Beschaffenheitspruefung_LetztePruefungField = value
-                    Me.RaisePropertyChanged("Beschaffenheitspruefung_LetztePruefung")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute()>  _
-        Public Property Beschaffenheitspruefung_Pruefintervall() As String
-            Get
-                Return Me.Beschaffenheitspruefung_PruefintervallField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me.Beschaffenheitspruefung_PruefintervallField, value) <> true) Then
-                    Me.Beschaffenheitspruefung_PruefintervallField = value
-                    Me.RaisePropertyChanged("Beschaffenheitspruefung_Pruefintervall")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute()>  _
-        Public Property Beschaffenheitspruefung_Pruefscheinnummer() As String
-            Get
-                Return Me.Beschaffenheitspruefung_PruefscheinnummerField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me.Beschaffenheitspruefung_PruefscheinnummerField, value) <> true) Then
-                    Me.Beschaffenheitspruefung_PruefscheinnummerField = value
-                    Me.RaisePropertyChanged("Beschaffenheitspruefung_Pruefscheinnummer")
+                If (Me.Beschaffenheitspruefung_GenehmigtField.Equals(value) <> true) Then
+                    Me.Beschaffenheitspruefung_GenehmigtField = value
+                    Me.RaisePropertyChanged("Beschaffenheitspruefung_Genehmigt")
                 End If
             End Set
         End Property

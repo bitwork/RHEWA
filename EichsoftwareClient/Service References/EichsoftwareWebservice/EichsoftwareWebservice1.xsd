@@ -59,7 +59,6 @@
       <xs:element name="_ErzeugerLizenz" nillable="true" type="xs:string" />
       <xs:element name="_FK_Auswertegeraet" nillable="true" type="xs:string" />
       <xs:element name="_FK_Bearbeitungsstatus" nillable="true" type="xs:unsignedByte" />
-      <xs:element name="_FK_Beschaffenheitspruefung" nillable="true" type="xs:int" />
       <xs:element name="_FK_Eichprotokoll" nillable="true" type="xs:int" />
       <xs:element name="_FK_Kompatibilitaetsnachweis" nillable="true" type="xs:int" />
       <xs:element name="_FK_Vorgangsstatus" type="xs:unsignedByte" />
@@ -67,7 +66,6 @@
       <xs:element name="_FK_WaagenTyp" nillable="true" type="xs:unsignedByte" />
       <xs:element name="_FK_Waegezelle" nillable="true" type="xs:string" />
       <xs:element name="_ID" type="xs:int" />
-      <xs:element name="_ServerBeschaffenheitspruefung" nillable="true" type="tns:ServerBeschaffenheitspruefung" />
       <xs:element name="_ServerEichprotokoll" nillable="true" type="tns:ServerEichprotokoll" />
       <xs:element name="_ServerKompatiblitaetsnachweis" nillable="true" type="tns:ServerKompatiblitaetsnachweis" />
       <xs:element name="_ServerLookup_Auswertegeraet" nillable="true" type="tns:ServerLookup_Auswertegeraet" />
@@ -84,35 +82,9 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ServerEichprozess" nillable="true" type="tns:ServerEichprozess" />
-  <xs:complexType name="ServerBeschaffenheitspruefung">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="AWG_Auslieferungszustand" type="xs:boolean" />
-      <xs:element minOccurs="0" name="AWG_KabelUnbeschaedigt" type="xs:boolean" />
-      <xs:element minOccurs="0" name="AWG_MetrologischeAngabenVorhanden" type="xs:boolean" />
-      <xs:element minOccurs="0" name="ID" type="xs:int" />
-      <xs:element minOccurs="0" name="ServerEichprozess" nillable="true" type="tns:ArrayOfServerEichprozess" />
-      <xs:element minOccurs="0" name="Verbindungselemente_DichtigkeitGegeben" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Verbindungselemente_KabelNichtSproede" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Verbindungselemente_KabelTemperaturGeschuetzt" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Verbindungselemente_KabelUnbeschaedigt" type="xs:boolean" />
-      <xs:element minOccurs="0" name="WZ_AnschraubplattenEben" type="xs:boolean" />
-      <xs:element minOccurs="0" name="WZ_KabelUnbeschaedigt" type="xs:boolean" />
-      <xs:element minOccurs="0" name="WZ_KrafteinteilungKonformWELMEC" type="xs:boolean" />
-      <xs:element minOccurs="0" name="WZ_VergussUnbeschaedigt" type="xs:boolean" />
-      <xs:element minOccurs="0" name="WZ_ZulassungOIMLR60" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Waegebruecke_Korrosionsfrei" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Waegebruecke_WZAufnahmenInEbene" type="xs:boolean" />
-      <xs:element minOccurs="0" name="Waegebruecke_WiegeaufgabeAusgelegt" type="xs:boolean" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ServerBeschaffenheitspruefung" nillable="true" type="tns:ServerBeschaffenheitspruefung" />
   <xs:complexType name="ServerEichprotokoll">
     <xs:sequence>
-      <xs:element minOccurs="0" name="Beschaffenheitspruefung_EichfahrzeugFirma" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Beschaffenheitspruefung_Genauigkeitsklasse" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Beschaffenheitspruefung_LetztePruefung" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Beschaffenheitspruefung_Pruefintervall" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Beschaffenheitspruefung_Pruefscheinnummer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Beschaffenheitspruefung_Genehmigt" nillable="true" type="xs:boolean" />
       <xs:element minOccurs="0" name="EignungAchlastwaegungen_Geprueft" nillable="true" type="xs:boolean" />
       <xs:element minOccurs="0" name="EignungAchlastwaegungen_WaageNichtGeeignet" nillable="true" type="xs:boolean" />
       <xs:element minOccurs="0" name="EignungAchlastwaegungen_WaagenbrueckeEbene" nillable="true" type="xs:boolean" />

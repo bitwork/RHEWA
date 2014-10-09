@@ -117,24 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="RadSeparator11.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadSeparator11.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadSeparator10.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadSeparator10.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel15.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel15.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="RadLabel15.Size" type="System.Drawing.Size, System.Drawing">
     <value>450, 18</value>
@@ -146,35 +128,11 @@
   <data name="RadCheckBoxBruecke1.Location" type="System.Drawing.Point, System.Drawing">
     <value>878, 34</value>
   </data>
-  <data name="RadCheckBoxBruecke1.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBruecke1.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="RadCheckBoxBruecke3.Location" type="System.Drawing.Point, System.Drawing">
     <value>878, 111</value>
   </data>
-  <data name="RadCheckBoxBruecke3.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBruecke3.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="RadCheckBoxBruecke2.Location" type="System.Drawing.Point, System.Drawing">
     <value>878, 73</value>
-  </data>
-  <data name="RadCheckBoxBruecke2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBruecke2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel11.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel11.RootElement.ToolTipText" xml:space="preserve">
-    <value />
   </data>
   <data name="RadLabel11.Size" type="System.Drawing.Size, System.Drawing">
     <value>699, 33</value>
@@ -183,12 +141,6 @@
     <value>Die Konstruktion ist frei von Korrosion. Bei Beton SFW sind keine abgeplatzten Teile bzw. keine Bewehrung der Stahlkonstruktion sichtbar.								
 								
 </value>
-  </data>
-  <data name="RadLabel13.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel13.RootElement.ToolTipText" xml:space="preserve">
-    <value />
   </data>
   <data name="RadLabel13.Size" type="System.Drawing.Size, System.Drawing">
     <value>365, 18</value>
@@ -200,14 +152,8 @@
   <data name="RadGroupBoxWaegebruecke.HeaderText" xml:space="preserve">
     <value>Kriterien für die einzusetzende Wägebrücke:										</value>
   </data>
-  <data name="RadGroupBoxWaegebruecke.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadGroupBoxWaegebruecke.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="RadGroupBoxWaegebruecke.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1196, 137</value>
+    <value>1194, 137</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="RadGroupBoxWaegebruecke.TabIndex" type="System.Int32, mscorlib">
@@ -216,38 +162,8 @@
   <data name="RadGroupBoxWaegebruecke.Text" xml:space="preserve">
     <value>Kriterien für die einzusetzende Wägebrücke:										</value>
   </data>
-  <data name="RadSeparator6.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadSeparator6.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadSeparator5.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadSeparator5.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadSeparator4.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadSeparator4.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadSeparator3.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadSeparator3.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="RadLabel7.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 135</value>
-  </data>
-  <data name="RadLabel7.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel7.RootElement.ToolTipText" xml:space="preserve">
-    <value />
   </data>
   <data name="RadLabel7.Size" type="System.Drawing.Size, System.Drawing">
     <value>248, 18</value>
@@ -258,23 +174,11 @@
   <data name="RadLabel5.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 171</value>
   </data>
-  <data name="RadLabel5.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel5.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="RadLabel5.Size" type="System.Drawing.Size, System.Drawing">
     <value>336, 18</value>
   </data>
   <data name="RadLabel5.Text" xml:space="preserve">
     <value>Bei vergossenen Wägezellen muss der Verguss unbeschädigt sein.								</value>
-  </data>
-  <data name="RadLabel3.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel3.RootElement.ToolTipText" xml:space="preserve">
-    <value />
   </data>
   <data name="RadLabel3.Size" type="System.Drawing.Size, System.Drawing">
     <value>597, 18</value>
@@ -282,24 +186,12 @@
   <data name="RadLabel3.Text" xml:space="preserve">
     <value>Die Wägezelle(n) müssen eine Zulassung nach OIML R60 haben. Die Zulassungsunterlagen liegen in lesbarer Form vor.</value>
   </data>
-  <data name="RadLabel6.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel6.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="RadLabel6.Size" type="System.Drawing.Size, System.Drawing">
     <value>597, 18</value>
   </data>
   <data name="RadLabel6.Text" xml:space="preserve">
     <value>Die Anschlusskabel müssen unbeschädigt sein. Sie dürfen nicht spröde oder rissig sein --&gt; Gefahr von Kappilareffekt. 								
 </value>
-  </data>
-  <data name="RadLabel8.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel8.RootElement.ToolTipText" xml:space="preserve">
-    <value />
   </data>
   <data name="RadLabel8.Size" type="System.Drawing.Size, System.Drawing">
     <value>614, 33</value>
@@ -312,23 +204,11 @@
   <data name="RadCheckBoxWZ1.Location" type="System.Drawing.Point, System.Drawing">
     <value>878, 21</value>
   </data>
-  <data name="RadCheckBoxWZ1.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxWZ1.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="RadCheckBoxWZ1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="RadCheckBoxWZ2.Location" type="System.Drawing.Point, System.Drawing">
     <value>878, 59</value>
-  </data>
-  <data name="RadCheckBoxWZ2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxWZ2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
   </data>
   <data name="RadCheckBoxWZ2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -336,23 +216,11 @@
   <data name="RadCheckBoxWZ4.Location" type="System.Drawing.Point, System.Drawing">
     <value>878, 135</value>
   </data>
-  <data name="RadCheckBoxWZ4.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxWZ4.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="RadCheckBoxWZ4.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="RadCheckBoxWZ3.Location" type="System.Drawing.Point, System.Drawing">
     <value>878, 95</value>
-  </data>
-  <data name="RadCheckBoxWZ3.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxWZ3.RootElement.ToolTipText" xml:space="preserve">
-    <value />
   </data>
   <data name="RadCheckBoxWZ3.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -360,56 +228,20 @@
   <data name="RadCheckBoxWZ5.Location" type="System.Drawing.Point, System.Drawing">
     <value>878, 171</value>
   </data>
-  <data name="RadCheckBoxWZ5.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxWZ5.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="RadCheckBoxWZ5.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
   <data name="RadGroupBoxWaegezellen.HeaderText" xml:space="preserve">
     <value>Kriterien für die einzusetzende(n) Wägezelle(n):</value>
   </data>
-  <data name="RadGroupBoxWaegezellen.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadGroupBoxWaegezellen.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="RadGroupBoxWaegezellen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1196, 193</value>
+    <value>1194, 193</value>
   </data>
   <data name="RadGroupBoxWaegezellen.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="RadGroupBoxWaegezellen.Text" xml:space="preserve">
     <value>Kriterien für die einzusetzende(n) Wägezelle(n):</value>
-  </data>
-  <data name="RadSeparator9.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadSeparator9.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadSeparator8.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadSeparator8.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadSeparator7.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadSeparator7.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel16.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel16.RootElement.ToolTipText" xml:space="preserve">
-    <value />
   </data>
   <data name="RadLabel16.Size" type="System.Drawing.Size, System.Drawing">
     <value>244, 18</value>
@@ -418,12 +250,6 @@
     <value>Dichtigkeit muss gegeben sein. (Klemmkasten)								
 </value>
   </data>
-  <data name="RadLabel14.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel14.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="RadLabel14.Size" type="System.Drawing.Size, System.Drawing">
     <value>416, 18</value>
   </data>
@@ -431,24 +257,12 @@
     <value>Die Messkabel dürfen nicht spröde oder rissig sein --&gt; Gefahr von Kappilareffekt.								
 </value>
   </data>
-  <data name="RadLabel12.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel12.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="RadLabel12.Size" type="System.Drawing.Size, System.Drawing">
     <value>221, 18</value>
   </data>
   <data name="RadLabel12.Text" xml:space="preserve">
     <value>Die Messkabel müssen unbeschädigt sein.								
 </value>
-  </data>
-  <data name="RadLabel10.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel10.RootElement.ToolTipText" xml:space="preserve">
-    <value />
   </data>
   <data name="RadLabel10.Size" type="System.Drawing.Size, System.Drawing">
     <value>761, 33</value>
@@ -461,74 +275,26 @@
   <data name="RadCheckBoxVerbindungelemente1.Location" type="System.Drawing.Point, System.Drawing">
     <value>878, 21</value>
   </data>
-  <data name="RadCheckBoxVerbindungelemente1.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxVerbindungelemente1.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="RadCheckBoxVerbindungelemente3.Location" type="System.Drawing.Point, System.Drawing">
     <value>878, 100</value>
-  </data>
-  <data name="RadCheckBoxVerbindungelemente3.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxVerbindungelemente3.RootElement.ToolTipText" xml:space="preserve">
-    <value />
   </data>
   <data name="RadCheckBoxVerbindungelemente2.Location" type="System.Drawing.Point, System.Drawing">
     <value>878, 62</value>
   </data>
-  <data name="RadCheckBoxVerbindungelemente2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxVerbindungelemente2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="RadCheckBoxVerbindungelemente4.Location" type="System.Drawing.Point, System.Drawing">
     <value>878, 137</value>
-  </data>
-  <data name="RadCheckBoxVerbindungelemente4.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxVerbindungelemente4.RootElement.ToolTipText" xml:space="preserve">
-    <value />
   </data>
   <data name="RadGroupBoxVerbindungselemente.HeaderText" xml:space="preserve">
     <value>&lt;html&gt;Kriterien für die einzusetzenden Verbindungselemente:       &lt;/html&gt;</value>
   </data>
-  <data name="RadGroupBoxVerbindungselemente.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadGroupBoxVerbindungselemente.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="RadGroupBoxVerbindungselemente.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1196, 191</value>
+    <value>1194, 191</value>
   </data>
   <data name="RadGroupBoxVerbindungselemente.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
   <data name="RadGroupBoxVerbindungselemente.Text" xml:space="preserve">
     <value>&lt;html&gt;Kriterien für die einzusetzenden Verbindungselemente:       &lt;/html&gt;</value>
-  </data>
-  <data name="RadSeparator2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadSeparator2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadSeparator1.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadSeparator1.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel1.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel1.RootElement.ToolTipText" xml:space="preserve">
-    <value />
   </data>
   <data name="RadLabel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>491, 18</value>
@@ -537,24 +303,12 @@
     <value>Das Auswertegerät muss in einem serienidentischen Zustand sein (Rhewa-Auslieferungszustand)								
 </value>
   </data>
-  <data name="RadLabel4.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel4.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="RadLabel4.Size" type="System.Drawing.Size, System.Drawing">
     <value>284, 18</value>
   </data>
   <data name="RadLabel4.Text" xml:space="preserve">
     <value>Die angeschlossenen Kabel müssen unbeschädigt sein.								
 </value>
-  </data>
-  <data name="RadLabel2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
   </data>
   <data name="RadLabel2.Size" type="System.Drawing.Size, System.Drawing">
     <value>726, 18</value>
@@ -565,53 +319,23 @@
   <data name="RadCheckBoxAWG1.Location" type="System.Drawing.Point, System.Drawing">
     <value>878, 30</value>
   </data>
-  <data name="RadCheckBoxAWG1.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxAWG1.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="RadCheckBoxAWG3.Location" type="System.Drawing.Point, System.Drawing">
     <value>878, 93</value>
-  </data>
-  <data name="RadCheckBoxAWG3.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxAWG3.RootElement.ToolTipText" xml:space="preserve">
-    <value />
   </data>
   <data name="RadCheckBoxAWG2.Location" type="System.Drawing.Point, System.Drawing">
     <value>878, 61</value>
   </data>
-  <data name="RadCheckBoxAWG2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxAWG2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="RadGroupBoxAuswerteGeraete.HeaderText" xml:space="preserve">
     <value>Kriterien für Rhewa Auswertegeräte:										</value>
   </data>
-  <data name="RadGroupBoxAuswerteGeraete.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadGroupBoxAuswerteGeraete.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="RadGroupBoxAuswerteGeraete.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1196, 118</value>
+    <value>1194, 118</value>
   </data>
   <data name="RadGroupBoxAuswerteGeraete.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="RadGroupBoxAuswerteGeraete.Text" xml:space="preserve">
     <value>Kriterien für Rhewa Auswertegeräte:										</value>
-  </data>
-  <data name="RadScrollablePanel1.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadScrollablePanel1.RootElement.ToolTipText" xml:space="preserve">
-    <value />
   </data>
   <data name="RadScrollablePanel1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>

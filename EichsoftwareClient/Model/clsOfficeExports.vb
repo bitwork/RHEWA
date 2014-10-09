@@ -1287,32 +1287,12 @@ Public Class clsOfficeExports
                 para.Range.Style = "Überschrift 1"
                 r.InsertAfter("Beschaffenheitsprüfung" + vbNewLine + vbNewLine)
                 para.Range.Style = "Standard"
-                r.InsertAfter("Auslieferungszustand: " & pEichProzess.Beschaffenheitspruefung.AWG_Auslieferungszustand & vbNewLine)
-                r.InsertAfter("Kabel unbeschädigt: " & pEichProzess.Beschaffenheitspruefung.AWG_KabelUnbeschaedigt & vbNewLine)
-                r.InsertAfter("Metrologische Angaben vorhanden: " & pEichProzess.Beschaffenheitspruefung.AWG_MetrologischeAngabenVorhanden & vbNewLine)
-                r.InsertAfter("ID: " & pEichProzess.Beschaffenheitspruefung.ID & vbNewLine)
-                r.InsertAfter("Dichtigkeit gegeben: " & pEichProzess.Beschaffenheitspruefung.Verbindungselemente_DichtigkeitGegeben & vbNewLine)
-                r.InsertAfter("Kabel nicht spröde: " & pEichProzess.Beschaffenheitspruefung.Verbindungselemente_KabelNichtSproede & vbNewLine)
-                r.InsertAfter("Kabel Temperatur geschützt: " & pEichProzess.Beschaffenheitspruefung.Verbindungselemente_KabelTemperaturGeschuetzt & vbNewLine)
-                r.InsertAfter("Kabel unbeschädigt: " & pEichProzess.Beschaffenheitspruefung.Verbindungselemente_KabelUnbeschaedigt & vbNewLine)
-                r.InsertAfter("Korrosionsfrei: " & pEichProzess.Beschaffenheitspruefung.Waegebruecke_Korrosionsfrei & vbNewLine)
-                r.InsertAfter("Wiegeaufgabe ausgelegt: " & pEichProzess.Beschaffenheitspruefung.Waegebruecke_WiegeaufgabeAusgelegt & vbNewLine)
-                r.InsertAfter("Aufnahmen in Ebene: " & pEichProzess.Beschaffenheitspruefung.Waegebruecke_WZAufnahmenInEbene & vbNewLine)
-                r.InsertAfter("Anschraubplatten eben: " & pEichProzess.Beschaffenheitspruefung.WZ_AnschraubplattenEben & vbNewLine)
-                r.InsertAfter("Kabel Unbeschädigt: " & pEichProzess.Beschaffenheitspruefung.WZ_KabelUnbeschaedigt & vbNewLine)
-                r.InsertAfter("Krafteinteilung Konform WELMEC: " & pEichProzess.Beschaffenheitspruefung.WZ_KrafteinteilungKonformWELMEC & vbNewLine)
-                r.InsertAfter("Verguss unbeschädigt: " & pEichProzess.Beschaffenheitspruefung.WZ_VergussUnbeschaedigt & vbNewLine)
-                r.InsertAfter("Zulassung OIMLR60: " & pEichProzess.Beschaffenheitspruefung.WZ_ZulassungOIMLR60 & vbNewLine)
-
+                r.InsertAfter("Genehmigt: " & pEichProzess.Eichprotokoll.Beschaffenheitspruefung_Genehmigt & vbNewLine)
+             
                 ''Eichprotokoll
                 para.Range.Style = "Überschrift 1"
                 r.InsertAfter("Eichprotokoll" + vbNewLine + vbNewLine)
                 para.Range.Style = "Standard"
-               r.InsertAfter("Eichfahrzeug Firma: " & pEichProzess.Eichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma & vbNewLine)
-                r.InsertAfter("Genauigkeitsklasse: " & pEichProzess.Eichprotokoll.Beschaffenheitspruefung_Genauigkeitsklasse & vbNewLine)
-                r.InsertAfter("Letzte Prüfung: " & pEichProzess.Eichprotokoll.Beschaffenheitspruefung_LetztePruefung & vbNewLine)
-                r.InsertAfter("Prüfintervall: " & pEichProzess.Eichprotokoll.Beschaffenheitspruefung_Pruefintervall & vbNewLine)
-                r.InsertAfter("Prüfscheinnummer: " & pEichProzess.Eichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer & vbNewLine)
                 r.InsertAfter("Eignung Achlastwägungen Geprüft: " & pEichProzess.Eichprotokoll.EignungAchlastwaegungen_Geprueft & vbNewLine)
                 r.InsertAfter("Eignung Achlastwägungen Waagenbruecke Ebene: " & pEichProzess.Eichprotokoll.EignungAchlastwaegungen_WaagenbrueckeEbene & vbNewLine)
                 r.InsertAfter("Eignung Achlastwägungen Waage Nicht Geeignet: " & pEichProzess.Eichprotokoll.EignungAchlastwaegungen_WaageNichtGeeignet & vbNewLine)

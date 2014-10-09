@@ -16,7 +16,6 @@ Partial Public Class Eichprozess
     Public Property FK_Vorgangsstatus As Byte
     Public Property FK_Auswertegeraet As String
     Public Property FK_Waegezelle As String
-    Public Property FK_Beschaffenheitspruefung As Nullable(Of Integer)
     Public Property FK_Eichprotokoll As Nullable(Of Integer)
     Public Property FK_WaagenTyp As Nullable(Of Byte)
     Public Property FK_WaagenArt As Nullable(Of Byte)
@@ -25,7 +24,6 @@ Partial Public Class Eichprozess
     Public Property UploadFilePath As String
     Public Property FK_Bearbeitungsstatus As Nullable(Of Integer)
 
-    Public Overridable Property Beschaffenheitspruefung As Beschaffenheitspruefung
     Public Overridable Property Eichprotokoll As Eichprotokoll
     Public Overridable Property Kompatiblitaetsnachweis As Kompatiblitaetsnachweis
     Public Overridable Property Lookup_Auswertegeraet As Lookup_Auswertegeraet

@@ -26,23 +26,12 @@ Partial Class uco_5Beschaffenheitspruefung
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco_5Beschaffenheitspruefung))
         Me.RadScrollablePanel1 = New Telerik.WinControls.UI.RadScrollablePanel()
         Me.RadGroupBoxWaegebruecke = New Telerik.WinControls.UI.RadGroupBox()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
         Me.RadSeparator11 = New Telerik.WinControls.UI.RadSeparator()
         Me.RadSeparator10 = New Telerik.WinControls.UI.RadSeparator()
         Me.RadLabel15 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadCheckBoxBruecke1 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.RadCheckBoxBruecke3 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.RadCheckBoxBruecke2 = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadLabel11 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel13 = New Telerik.WinControls.UI.RadLabel()
         Me.RadGroupBoxWaegezellen = New Telerik.WinControls.UI.RadGroupBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.RadSeparator6 = New Telerik.WinControls.UI.RadSeparator()
         Me.RadSeparator5 = New Telerik.WinControls.UI.RadSeparator()
         Me.RadSeparator4 = New Telerik.WinControls.UI.RadSeparator()
@@ -52,16 +41,7 @@ Partial Class uco_5Beschaffenheitspruefung
         Me.RadLabel3 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel6 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel8 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadCheckBoxWZ1 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.RadCheckBoxWZ2 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.RadCheckBoxWZ4 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.RadCheckBoxWZ3 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.RadCheckBoxWZ5 = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadGroupBoxVerbindungselemente = New Telerik.WinControls.UI.RadGroupBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.RadSeparator9 = New Telerik.WinControls.UI.RadSeparator()
         Me.RadSeparator8 = New Telerik.WinControls.UI.RadSeparator()
         Me.RadSeparator7 = New Telerik.WinControls.UI.RadSeparator()
@@ -69,75 +49,69 @@ Partial Class uco_5Beschaffenheitspruefung
         Me.RadLabel14 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel12 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel10 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadCheckBoxVerbindungelemente1 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.RadCheckBoxVerbindungelemente3 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.RadCheckBoxVerbindungelemente2 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.RadCheckBoxVerbindungelemente4 = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadGroupBoxAuswerteGeraete = New Telerik.WinControls.UI.RadGroupBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.lblPflichtfeld1 = New System.Windows.Forms.Label()
         Me.RadSeparator2 = New Telerik.WinControls.UI.RadSeparator()
         Me.RadSeparator1 = New Telerik.WinControls.UI.RadSeparator()
         Me.RadLabel1 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel4 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel2 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadCheckBoxAWG1 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.RadCheckBoxAWG3 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.RadCheckBoxAWG2 = New Telerik.WinControls.UI.RadCheckBox()
-        CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.RadScrollablePanel1.PanelContainer.SuspendLayout()
-        Me.RadScrollablePanel1.SuspendLayout()
-        CType(Me.RadGroupBoxWaegebruecke, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.RadGroupBoxWaegebruecke.SuspendLayout()
-        CType(Me.RadSeparator11, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadSeparator10, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel15, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadCheckBoxBruecke1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadCheckBoxBruecke3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadCheckBoxBruecke2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel11, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel13, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadGroupBoxWaegezellen, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.RadGroupBoxWaegezellen.SuspendLayout()
-        CType(Me.RadSeparator6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadSeparator5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadSeparator4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadSeparator3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadCheckBoxWZ1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadCheckBoxWZ2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadCheckBoxWZ4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadCheckBoxWZ3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadCheckBoxWZ5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadGroupBoxVerbindungselemente, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.RadGroupBoxVerbindungselemente.SuspendLayout()
-        CType(Me.RadSeparator9, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadSeparator8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadSeparator7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel16, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel14, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel12, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel10, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadCheckBoxVerbindungelemente1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadCheckBoxVerbindungelemente3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadCheckBoxVerbindungelemente2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadCheckBoxVerbindungelemente4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadGroupBoxAuswerteGeraete, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.RadGroupBoxAuswerteGeraete.SuspendLayout()
-        CType(Me.RadSeparator2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadSeparator1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadCheckBoxAWG1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadCheckBoxAWG3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadCheckBoxAWG2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
+        Me.RadSeparator12 = New Telerik.WinControls.UI.RadSeparator()
+        Me.RadLabel9 = New Telerik.WinControls.UI.RadLabel()
+        Me.RadSeparator13 = New Telerik.WinControls.UI.RadSeparator()
+        Me.RadLabel17 = New Telerik.WinControls.UI.RadLabel()
+        Me.RadSeparator14 = New Telerik.WinControls.UI.RadSeparator()
+        Me.RadLabel19 = New Telerik.WinControls.UI.RadLabel()
+        Me.RadCheckBoxApprove = New Telerik.WinControls.UI.RadCheckBox()
+        Me.RadGroupBoxAufstellbedingungen = New Telerik.WinControls.UI.RadGroupBox()
+        Me.RadLabel20 = New Telerik.WinControls.UI.RadLabel()
+        CType(Me.RadScrollablePanel1,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.RadScrollablePanel1.PanelContainer.SuspendLayout
+        Me.RadScrollablePanel1.SuspendLayout
+        CType(Me.RadGroupBoxWaegebruecke,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.RadGroupBoxWaegebruecke.SuspendLayout
+        CType(Me.RadSeparator11,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.RadSeparator10,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.RadLabel15,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.RadLabel11,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.RadLabel13,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.RadGroupBoxWaegezellen,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.RadGroupBoxWaegezellen.SuspendLayout
+        CType(Me.RadSeparator6,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.RadSeparator5,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.RadSeparator4,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.RadSeparator3,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.RadLabel7,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.RadLabel5,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.RadLabel3,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.RadLabel6,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.RadLabel8,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.RadGroupBoxVerbindungselemente,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.RadGroupBoxVerbindungselemente.SuspendLayout
+        CType(Me.RadSeparator9,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.RadSeparator8,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.RadSeparator7,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.RadLabel16,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.RadLabel14,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.RadLabel12,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.RadLabel10,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.RadGroupBoxAuswerteGeraete,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.RadGroupBoxAuswerteGeraete.SuspendLayout
+        CType(Me.RadSeparator2,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.RadSeparator1,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.RadLabel1,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.RadLabel4,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.RadLabel2,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.RadSeparator12,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.RadLabel9,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.RadSeparator13,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.RadLabel17,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.RadSeparator14,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.RadLabel19,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.RadCheckBoxApprove,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.RadGroupBoxAufstellbedingungen,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.RadGroupBoxAufstellbedingungen.SuspendLayout
+        CType(Me.RadLabel20,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.SuspendLayout
         '
         'RadScrollablePanel1
         '
@@ -146,38 +120,34 @@ Partial Class uco_5Beschaffenheitspruefung
         '
         'RadScrollablePanel1.PanelContainer
         '
-        resources.ApplyResources(Me.RadScrollablePanel1.PanelContainer, "RadScrollablePanel1.PanelContainer")
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadGroupBoxAufstellbedingungen)
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadCheckBoxApprove)
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadLabel19)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadGroupBoxWaegebruecke)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadGroupBoxWaegezellen)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadGroupBoxVerbindungselemente)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadGroupBoxAuswerteGeraete)
+        resources.ApplyResources(Me.RadScrollablePanel1.PanelContainer, "RadScrollablePanel1.PanelContainer")
         '
         '
         '
         Me.RadScrollablePanel1.RootElement.AccessibleDescription = resources.GetString("RadScrollablePanel1.RootElement.AccessibleDescription")
         Me.RadScrollablePanel1.RootElement.AccessibleName = resources.GetString("RadScrollablePanel1.RootElement.AccessibleName")
-        Me.RadScrollablePanel1.RootElement.Alignment = CType(resources.GetObject("RadScrollablePanel1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadScrollablePanel1.RootElement.AngleTransform = CType(resources.GetObject("RadScrollablePanel1.RootElement.AngleTransform"), Single)
-        Me.RadScrollablePanel1.RootElement.FlipText = CType(resources.GetObject("RadScrollablePanel1.RootElement.FlipText"), Boolean)
-        Me.RadScrollablePanel1.RootElement.KeyTip = resources.GetString("RadScrollablePanel1.RootElement.KeyTip")
-        Me.RadScrollablePanel1.RootElement.Margin = CType(resources.GetObject("RadScrollablePanel1.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadScrollablePanel1.RootElement.Alignment = CType(resources.GetObject("RadScrollablePanel1.RootElement.Alignment"),System.Drawing.ContentAlignment)
+        Me.RadScrollablePanel1.RootElement.AngleTransform = CType(resources.GetObject("RadScrollablePanel1.RootElement.AngleTransform"),Single)
+        Me.RadScrollablePanel1.RootElement.FlipText = CType(resources.GetObject("RadScrollablePanel1.RootElement.FlipText"),Boolean)
+        Me.RadScrollablePanel1.RootElement.Margin = CType(resources.GetObject("RadScrollablePanel1.RootElement.Margin"),System.Windows.Forms.Padding)
         Me.RadScrollablePanel1.RootElement.Text = resources.GetString("RadScrollablePanel1.RootElement.Text")
-        Me.RadScrollablePanel1.RootElement.TextOrientation = CType(resources.GetObject("RadScrollablePanel1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadScrollablePanel1.RootElement.ToolTipText = resources.GetString("RadScrollablePanel1.RootElement.ToolTipText")
+        Me.RadScrollablePanel1.RootElement.TextOrientation = CType(resources.GetObject("RadScrollablePanel1.RootElement.TextOrientation"),System.Windows.Forms.Orientation)
         '
         'RadGroupBoxWaegebruecke
         '
-        resources.ApplyResources(Me.RadGroupBoxWaegebruecke, "RadGroupBoxWaegebruecke")
         Me.RadGroupBoxWaegebruecke.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
-        Me.RadGroupBoxWaegebruecke.Controls.Add(Me.Label14)
-        Me.RadGroupBoxWaegebruecke.Controls.Add(Me.Label13)
-        Me.RadGroupBoxWaegebruecke.Controls.Add(Me.Label12)
+        resources.ApplyResources(Me.RadGroupBoxWaegebruecke, "RadGroupBoxWaegebruecke")
+        Me.RadGroupBoxWaegebruecke.Controls.Add(Me.RadSeparator14)
         Me.RadGroupBoxWaegebruecke.Controls.Add(Me.RadSeparator11)
         Me.RadGroupBoxWaegebruecke.Controls.Add(Me.RadSeparator10)
         Me.RadGroupBoxWaegebruecke.Controls.Add(Me.RadLabel15)
-        Me.RadGroupBoxWaegebruecke.Controls.Add(Me.RadCheckBoxBruecke1)
-        Me.RadGroupBoxWaegebruecke.Controls.Add(Me.RadCheckBoxBruecke3)
-        Me.RadGroupBoxWaegebruecke.Controls.Add(Me.RadCheckBoxBruecke2)
         Me.RadGroupBoxWaegebruecke.Controls.Add(Me.RadLabel11)
         Me.RadGroupBoxWaegebruecke.Controls.Add(Me.RadLabel13)
         Me.RadGroupBoxWaegebruecke.Name = "RadGroupBoxWaegebruecke"
@@ -186,33 +156,13 @@ Partial Class uco_5Beschaffenheitspruefung
         '
         Me.RadGroupBoxWaegebruecke.RootElement.AccessibleDescription = resources.GetString("RadGroupBoxWaegebruecke.RootElement.AccessibleDescription")
         Me.RadGroupBoxWaegebruecke.RootElement.AccessibleName = resources.GetString("RadGroupBoxWaegebruecke.RootElement.AccessibleName")
-        Me.RadGroupBoxWaegebruecke.RootElement.Alignment = CType(resources.GetObject("RadGroupBoxWaegebruecke.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadGroupBoxWaegebruecke.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBoxWaegebruecke.RootElement.AngleTransform"), Single)
-        Me.RadGroupBoxWaegebruecke.RootElement.FlipText = CType(resources.GetObject("RadGroupBoxWaegebruecke.RootElement.FlipText"), Boolean)
-        Me.RadGroupBoxWaegebruecke.RootElement.KeyTip = resources.GetString("RadGroupBoxWaegebruecke.RootElement.KeyTip")
-        Me.RadGroupBoxWaegebruecke.RootElement.Margin = CType(resources.GetObject("RadGroupBoxWaegebruecke.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadGroupBoxWaegebruecke.RootElement.Alignment = CType(resources.GetObject("RadGroupBoxWaegebruecke.RootElement.Alignment"),System.Drawing.ContentAlignment)
+        Me.RadGroupBoxWaegebruecke.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBoxWaegebruecke.RootElement.AngleTransform"),Single)
+        Me.RadGroupBoxWaegebruecke.RootElement.FlipText = CType(resources.GetObject("RadGroupBoxWaegebruecke.RootElement.FlipText"),Boolean)
+        Me.RadGroupBoxWaegebruecke.RootElement.Margin = CType(resources.GetObject("RadGroupBoxWaegebruecke.RootElement.Margin"),System.Windows.Forms.Padding)
         Me.RadGroupBoxWaegebruecke.RootElement.Text = resources.GetString("RadGroupBoxWaegebruecke.RootElement.Text")
-        Me.RadGroupBoxWaegebruecke.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxWaegebruecke.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadGroupBoxWaegebruecke.RootElement.ToolTipText = resources.GetString("RadGroupBoxWaegebruecke.RootElement.ToolTipText")
+        Me.RadGroupBoxWaegebruecke.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxWaegebruecke.RootElement.TextOrientation"),System.Windows.Forms.Orientation)
         Me.RadGroupBoxWaegebruecke.ThemeName = "Telerik.WinControls.UI.RadGroupBox"
-        '
-        'Label14
-        '
-        resources.ApplyResources(Me.Label14, "Label14")
-        Me.Label14.ForeColor = System.Drawing.Color.Red
-        Me.Label14.Name = "Label14"
-        '
-        'Label13
-        '
-        resources.ApplyResources(Me.Label13, "Label13")
-        Me.Label13.ForeColor = System.Drawing.Color.Red
-        Me.Label13.Name = "Label13"
-        '
-        'Label12
-        '
-        resources.ApplyResources(Me.Label12, "Label12")
-        Me.Label12.ForeColor = System.Drawing.Color.Red
-        Me.Label12.Name = "Label12"
         '
         'RadSeparator11
         '
@@ -223,16 +173,14 @@ Partial Class uco_5Beschaffenheitspruefung
         '
         Me.RadSeparator11.RootElement.AccessibleDescription = resources.GetString("RadSeparator11.RootElement.AccessibleDescription")
         Me.RadSeparator11.RootElement.AccessibleName = resources.GetString("RadSeparator11.RootElement.AccessibleName")
-        Me.RadSeparator11.RootElement.Alignment = CType(resources.GetObject("RadSeparator11.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadSeparator11.RootElement.AngleTransform = CType(resources.GetObject("RadSeparator11.RootElement.AngleTransform"), Single)
-        Me.RadSeparator11.RootElement.FlipText = CType(resources.GetObject("RadSeparator11.RootElement.FlipText"), Boolean)
-        Me.RadSeparator11.RootElement.KeyTip = resources.GetString("RadSeparator11.RootElement.KeyTip")
-        Me.RadSeparator11.RootElement.Margin = CType(resources.GetObject("RadSeparator11.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadSeparator11.RootElement.Alignment = CType(resources.GetObject("RadSeparator11.RootElement.Alignment"),System.Drawing.ContentAlignment)
+        Me.RadSeparator11.RootElement.AngleTransform = CType(resources.GetObject("RadSeparator11.RootElement.AngleTransform"),Single)
+        Me.RadSeparator11.RootElement.FlipText = CType(resources.GetObject("RadSeparator11.RootElement.FlipText"),Boolean)
+        Me.RadSeparator11.RootElement.Margin = CType(resources.GetObject("RadSeparator11.RootElement.Margin"),System.Windows.Forms.Padding)
         Me.RadSeparator11.RootElement.Text = resources.GetString("RadSeparator11.RootElement.Text")
-        Me.RadSeparator11.RootElement.TextOrientation = CType(resources.GetObject("RadSeparator11.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadSeparator11.RootElement.ToolTipText = resources.GetString("RadSeparator11.RootElement.ToolTipText")
-        Me.RadSeparator11.ShowShadow = False
-        Me.RadSeparator11.TabStop = False
+        Me.RadSeparator11.RootElement.TextOrientation = CType(resources.GetObject("RadSeparator11.RootElement.TextOrientation"),System.Windows.Forms.Orientation)
+        Me.RadSeparator11.ShowShadow = false
+        Me.RadSeparator11.TabStop = false
         '
         'RadSeparator10
         '
@@ -243,16 +191,14 @@ Partial Class uco_5Beschaffenheitspruefung
         '
         Me.RadSeparator10.RootElement.AccessibleDescription = resources.GetString("RadSeparator10.RootElement.AccessibleDescription")
         Me.RadSeparator10.RootElement.AccessibleName = resources.GetString("RadSeparator10.RootElement.AccessibleName")
-        Me.RadSeparator10.RootElement.Alignment = CType(resources.GetObject("RadSeparator10.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadSeparator10.RootElement.AngleTransform = CType(resources.GetObject("RadSeparator10.RootElement.AngleTransform"), Single)
-        Me.RadSeparator10.RootElement.FlipText = CType(resources.GetObject("RadSeparator10.RootElement.FlipText"), Boolean)
-        Me.RadSeparator10.RootElement.KeyTip = resources.GetString("RadSeparator10.RootElement.KeyTip")
-        Me.RadSeparator10.RootElement.Margin = CType(resources.GetObject("RadSeparator10.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadSeparator10.RootElement.Alignment = CType(resources.GetObject("RadSeparator10.RootElement.Alignment"),System.Drawing.ContentAlignment)
+        Me.RadSeparator10.RootElement.AngleTransform = CType(resources.GetObject("RadSeparator10.RootElement.AngleTransform"),Single)
+        Me.RadSeparator10.RootElement.FlipText = CType(resources.GetObject("RadSeparator10.RootElement.FlipText"),Boolean)
+        Me.RadSeparator10.RootElement.Margin = CType(resources.GetObject("RadSeparator10.RootElement.Margin"),System.Windows.Forms.Padding)
         Me.RadSeparator10.RootElement.Text = resources.GetString("RadSeparator10.RootElement.Text")
-        Me.RadSeparator10.RootElement.TextOrientation = CType(resources.GetObject("RadSeparator10.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadSeparator10.RootElement.ToolTipText = resources.GetString("RadSeparator10.RootElement.ToolTipText")
-        Me.RadSeparator10.ShowShadow = False
-        Me.RadSeparator10.TabStop = False
+        Me.RadSeparator10.RootElement.TextOrientation = CType(resources.GetObject("RadSeparator10.RootElement.TextOrientation"),System.Windows.Forms.Orientation)
+        Me.RadSeparator10.ShowShadow = false
+        Me.RadSeparator10.TabStop = false
         '
         'RadLabel15
         '
@@ -263,68 +209,12 @@ Partial Class uco_5Beschaffenheitspruefung
         '
         Me.RadLabel15.RootElement.AccessibleDescription = resources.GetString("RadLabel15.RootElement.AccessibleDescription")
         Me.RadLabel15.RootElement.AccessibleName = resources.GetString("RadLabel15.RootElement.AccessibleName")
-        Me.RadLabel15.RootElement.Alignment = CType(resources.GetObject("RadLabel15.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadLabel15.RootElement.AngleTransform = CType(resources.GetObject("RadLabel15.RootElement.AngleTransform"), Single)
-        Me.RadLabel15.RootElement.FlipText = CType(resources.GetObject("RadLabel15.RootElement.FlipText"), Boolean)
-        Me.RadLabel15.RootElement.KeyTip = resources.GetString("RadLabel15.RootElement.KeyTip")
-        Me.RadLabel15.RootElement.Margin = CType(resources.GetObject("RadLabel15.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadLabel15.RootElement.Alignment = CType(resources.GetObject("RadLabel15.RootElement.Alignment"),System.Drawing.ContentAlignment)
+        Me.RadLabel15.RootElement.AngleTransform = CType(resources.GetObject("RadLabel15.RootElement.AngleTransform"),Single)
+        Me.RadLabel15.RootElement.FlipText = CType(resources.GetObject("RadLabel15.RootElement.FlipText"),Boolean)
+        Me.RadLabel15.RootElement.Margin = CType(resources.GetObject("RadLabel15.RootElement.Margin"),System.Windows.Forms.Padding)
         Me.RadLabel15.RootElement.Text = resources.GetString("RadLabel15.RootElement.Text")
-        Me.RadLabel15.RootElement.TextOrientation = CType(resources.GetObject("RadLabel15.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel15.RootElement.ToolTipText = resources.GetString("RadLabel15.RootElement.ToolTipText")
-        '
-        'RadCheckBoxBruecke1
-        '
-        resources.ApplyResources(Me.RadCheckBoxBruecke1, "RadCheckBoxBruecke1")
-        Me.RadCheckBoxBruecke1.Name = "RadCheckBoxBruecke1"
-        '
-        '
-        '
-        Me.RadCheckBoxBruecke1.RootElement.AccessibleDescription = resources.GetString("RadCheckBoxBruecke1.RootElement.AccessibleDescription")
-        Me.RadCheckBoxBruecke1.RootElement.AccessibleName = resources.GetString("RadCheckBoxBruecke1.RootElement.AccessibleName")
-        Me.RadCheckBoxBruecke1.RootElement.Alignment = CType(resources.GetObject("RadCheckBoxBruecke1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadCheckBoxBruecke1.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxBruecke1.RootElement.AngleTransform"), Single)
-        Me.RadCheckBoxBruecke1.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxBruecke1.RootElement.FlipText"), Boolean)
-        Me.RadCheckBoxBruecke1.RootElement.KeyTip = resources.GetString("RadCheckBoxBruecke1.RootElement.KeyTip")
-        Me.RadCheckBoxBruecke1.RootElement.Margin = CType(resources.GetObject("RadCheckBoxBruecke1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadCheckBoxBruecke1.RootElement.Text = resources.GetString("RadCheckBoxBruecke1.RootElement.Text")
-        Me.RadCheckBoxBruecke1.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxBruecke1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadCheckBoxBruecke1.RootElement.ToolTipText = resources.GetString("RadCheckBoxBruecke1.RootElement.ToolTipText")
-        '
-        'RadCheckBoxBruecke3
-        '
-        resources.ApplyResources(Me.RadCheckBoxBruecke3, "RadCheckBoxBruecke3")
-        Me.RadCheckBoxBruecke3.Name = "RadCheckBoxBruecke3"
-        '
-        '
-        '
-        Me.RadCheckBoxBruecke3.RootElement.AccessibleDescription = resources.GetString("RadCheckBoxBruecke3.RootElement.AccessibleDescription")
-        Me.RadCheckBoxBruecke3.RootElement.AccessibleName = resources.GetString("RadCheckBoxBruecke3.RootElement.AccessibleName")
-        Me.RadCheckBoxBruecke3.RootElement.Alignment = CType(resources.GetObject("RadCheckBoxBruecke3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadCheckBoxBruecke3.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxBruecke3.RootElement.AngleTransform"), Single)
-        Me.RadCheckBoxBruecke3.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxBruecke3.RootElement.FlipText"), Boolean)
-        Me.RadCheckBoxBruecke3.RootElement.KeyTip = resources.GetString("RadCheckBoxBruecke3.RootElement.KeyTip")
-        Me.RadCheckBoxBruecke3.RootElement.Margin = CType(resources.GetObject("RadCheckBoxBruecke3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadCheckBoxBruecke3.RootElement.Text = resources.GetString("RadCheckBoxBruecke3.RootElement.Text")
-        Me.RadCheckBoxBruecke3.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxBruecke3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadCheckBoxBruecke3.RootElement.ToolTipText = resources.GetString("RadCheckBoxBruecke3.RootElement.ToolTipText")
-        '
-        'RadCheckBoxBruecke2
-        '
-        resources.ApplyResources(Me.RadCheckBoxBruecke2, "RadCheckBoxBruecke2")
-        Me.RadCheckBoxBruecke2.Name = "RadCheckBoxBruecke2"
-        '
-        '
-        '
-        Me.RadCheckBoxBruecke2.RootElement.AccessibleDescription = resources.GetString("RadCheckBoxBruecke2.RootElement.AccessibleDescription")
-        Me.RadCheckBoxBruecke2.RootElement.AccessibleName = resources.GetString("RadCheckBoxBruecke2.RootElement.AccessibleName")
-        Me.RadCheckBoxBruecke2.RootElement.Alignment = CType(resources.GetObject("RadCheckBoxBruecke2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadCheckBoxBruecke2.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxBruecke2.RootElement.AngleTransform"), Single)
-        Me.RadCheckBoxBruecke2.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxBruecke2.RootElement.FlipText"), Boolean)
-        Me.RadCheckBoxBruecke2.RootElement.KeyTip = resources.GetString("RadCheckBoxBruecke2.RootElement.KeyTip")
-        Me.RadCheckBoxBruecke2.RootElement.Margin = CType(resources.GetObject("RadCheckBoxBruecke2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadCheckBoxBruecke2.RootElement.Text = resources.GetString("RadCheckBoxBruecke2.RootElement.Text")
-        Me.RadCheckBoxBruecke2.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxBruecke2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadCheckBoxBruecke2.RootElement.ToolTipText = resources.GetString("RadCheckBoxBruecke2.RootElement.ToolTipText")
+        Me.RadLabel15.RootElement.TextOrientation = CType(resources.GetObject("RadLabel15.RootElement.TextOrientation"),System.Windows.Forms.Orientation)
         '
         'RadLabel11
         '
@@ -335,14 +225,12 @@ Partial Class uco_5Beschaffenheitspruefung
         '
         Me.RadLabel11.RootElement.AccessibleDescription = resources.GetString("RadLabel11.RootElement.AccessibleDescription")
         Me.RadLabel11.RootElement.AccessibleName = resources.GetString("RadLabel11.RootElement.AccessibleName")
-        Me.RadLabel11.RootElement.Alignment = CType(resources.GetObject("RadLabel11.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadLabel11.RootElement.AngleTransform = CType(resources.GetObject("RadLabel11.RootElement.AngleTransform"), Single)
-        Me.RadLabel11.RootElement.FlipText = CType(resources.GetObject("RadLabel11.RootElement.FlipText"), Boolean)
-        Me.RadLabel11.RootElement.KeyTip = resources.GetString("RadLabel11.RootElement.KeyTip")
-        Me.RadLabel11.RootElement.Margin = CType(resources.GetObject("RadLabel11.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadLabel11.RootElement.Alignment = CType(resources.GetObject("RadLabel11.RootElement.Alignment"),System.Drawing.ContentAlignment)
+        Me.RadLabel11.RootElement.AngleTransform = CType(resources.GetObject("RadLabel11.RootElement.AngleTransform"),Single)
+        Me.RadLabel11.RootElement.FlipText = CType(resources.GetObject("RadLabel11.RootElement.FlipText"),Boolean)
+        Me.RadLabel11.RootElement.Margin = CType(resources.GetObject("RadLabel11.RootElement.Margin"),System.Windows.Forms.Padding)
         Me.RadLabel11.RootElement.Text = resources.GetString("RadLabel11.RootElement.Text")
-        Me.RadLabel11.RootElement.TextOrientation = CType(resources.GetObject("RadLabel11.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel11.RootElement.ToolTipText = resources.GetString("RadLabel11.RootElement.ToolTipText")
+        Me.RadLabel11.RootElement.TextOrientation = CType(resources.GetObject("RadLabel11.RootElement.TextOrientation"),System.Windows.Forms.Orientation)
         '
         'RadLabel13
         '
@@ -353,24 +241,17 @@ Partial Class uco_5Beschaffenheitspruefung
         '
         Me.RadLabel13.RootElement.AccessibleDescription = resources.GetString("RadLabel13.RootElement.AccessibleDescription")
         Me.RadLabel13.RootElement.AccessibleName = resources.GetString("RadLabel13.RootElement.AccessibleName")
-        Me.RadLabel13.RootElement.Alignment = CType(resources.GetObject("RadLabel13.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadLabel13.RootElement.AngleTransform = CType(resources.GetObject("RadLabel13.RootElement.AngleTransform"), Single)
-        Me.RadLabel13.RootElement.FlipText = CType(resources.GetObject("RadLabel13.RootElement.FlipText"), Boolean)
-        Me.RadLabel13.RootElement.KeyTip = resources.GetString("RadLabel13.RootElement.KeyTip")
-        Me.RadLabel13.RootElement.Margin = CType(resources.GetObject("RadLabel13.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadLabel13.RootElement.Alignment = CType(resources.GetObject("RadLabel13.RootElement.Alignment"),System.Drawing.ContentAlignment)
+        Me.RadLabel13.RootElement.AngleTransform = CType(resources.GetObject("RadLabel13.RootElement.AngleTransform"),Single)
+        Me.RadLabel13.RootElement.FlipText = CType(resources.GetObject("RadLabel13.RootElement.FlipText"),Boolean)
+        Me.RadLabel13.RootElement.Margin = CType(resources.GetObject("RadLabel13.RootElement.Margin"),System.Windows.Forms.Padding)
         Me.RadLabel13.RootElement.Text = resources.GetString("RadLabel13.RootElement.Text")
-        Me.RadLabel13.RootElement.TextOrientation = CType(resources.GetObject("RadLabel13.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel13.RootElement.ToolTipText = resources.GetString("RadLabel13.RootElement.ToolTipText")
+        Me.RadLabel13.RootElement.TextOrientation = CType(resources.GetObject("RadLabel13.RootElement.TextOrientation"),System.Windows.Forms.Orientation)
         '
         'RadGroupBoxWaegezellen
         '
-        resources.ApplyResources(Me.RadGroupBoxWaegezellen, "RadGroupBoxWaegezellen")
         Me.RadGroupBoxWaegezellen.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
-        Me.RadGroupBoxWaegezellen.Controls.Add(Me.Label7)
-        Me.RadGroupBoxWaegezellen.Controls.Add(Me.Label6)
-        Me.RadGroupBoxWaegezellen.Controls.Add(Me.Label5)
-        Me.RadGroupBoxWaegezellen.Controls.Add(Me.Label4)
-        Me.RadGroupBoxWaegezellen.Controls.Add(Me.Label3)
+        resources.ApplyResources(Me.RadGroupBoxWaegezellen, "RadGroupBoxWaegezellen")
         Me.RadGroupBoxWaegezellen.Controls.Add(Me.RadSeparator6)
         Me.RadGroupBoxWaegezellen.Controls.Add(Me.RadSeparator5)
         Me.RadGroupBoxWaegezellen.Controls.Add(Me.RadSeparator4)
@@ -380,56 +261,19 @@ Partial Class uco_5Beschaffenheitspruefung
         Me.RadGroupBoxWaegezellen.Controls.Add(Me.RadLabel3)
         Me.RadGroupBoxWaegezellen.Controls.Add(Me.RadLabel6)
         Me.RadGroupBoxWaegezellen.Controls.Add(Me.RadLabel8)
-        Me.RadGroupBoxWaegezellen.Controls.Add(Me.RadCheckBoxWZ1)
-        Me.RadGroupBoxWaegezellen.Controls.Add(Me.RadCheckBoxWZ2)
-        Me.RadGroupBoxWaegezellen.Controls.Add(Me.RadCheckBoxWZ4)
-        Me.RadGroupBoxWaegezellen.Controls.Add(Me.RadCheckBoxWZ3)
-        Me.RadGroupBoxWaegezellen.Controls.Add(Me.RadCheckBoxWZ5)
         Me.RadGroupBoxWaegezellen.Name = "RadGroupBoxWaegezellen"
         '
         '
         '
         Me.RadGroupBoxWaegezellen.RootElement.AccessibleDescription = resources.GetString("RadGroupBoxWaegezellen.RootElement.AccessibleDescription")
         Me.RadGroupBoxWaegezellen.RootElement.AccessibleName = resources.GetString("RadGroupBoxWaegezellen.RootElement.AccessibleName")
-        Me.RadGroupBoxWaegezellen.RootElement.Alignment = CType(resources.GetObject("RadGroupBoxWaegezellen.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadGroupBoxWaegezellen.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBoxWaegezellen.RootElement.AngleTransform"), Single)
-        Me.RadGroupBoxWaegezellen.RootElement.FlipText = CType(resources.GetObject("RadGroupBoxWaegezellen.RootElement.FlipText"), Boolean)
-        Me.RadGroupBoxWaegezellen.RootElement.KeyTip = resources.GetString("RadGroupBoxWaegezellen.RootElement.KeyTip")
-        Me.RadGroupBoxWaegezellen.RootElement.Margin = CType(resources.GetObject("RadGroupBoxWaegezellen.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadGroupBoxWaegezellen.RootElement.Alignment = CType(resources.GetObject("RadGroupBoxWaegezellen.RootElement.Alignment"),System.Drawing.ContentAlignment)
+        Me.RadGroupBoxWaegezellen.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBoxWaegezellen.RootElement.AngleTransform"),Single)
+        Me.RadGroupBoxWaegezellen.RootElement.FlipText = CType(resources.GetObject("RadGroupBoxWaegezellen.RootElement.FlipText"),Boolean)
+        Me.RadGroupBoxWaegezellen.RootElement.Margin = CType(resources.GetObject("RadGroupBoxWaegezellen.RootElement.Margin"),System.Windows.Forms.Padding)
         Me.RadGroupBoxWaegezellen.RootElement.Text = resources.GetString("RadGroupBoxWaegezellen.RootElement.Text")
-        Me.RadGroupBoxWaegezellen.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxWaegezellen.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadGroupBoxWaegezellen.RootElement.ToolTipText = resources.GetString("RadGroupBoxWaegezellen.RootElement.ToolTipText")
+        Me.RadGroupBoxWaegezellen.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxWaegezellen.RootElement.TextOrientation"),System.Windows.Forms.Orientation)
         Me.RadGroupBoxWaegezellen.ThemeName = "Telerik.WinControls.UI.RadGroupBox"
-        '
-        'Label7
-        '
-        resources.ApplyResources(Me.Label7, "Label7")
-        Me.Label7.ForeColor = System.Drawing.Color.Red
-        Me.Label7.Name = "Label7"
-        '
-        'Label6
-        '
-        resources.ApplyResources(Me.Label6, "Label6")
-        Me.Label6.ForeColor = System.Drawing.Color.Red
-        Me.Label6.Name = "Label6"
-        '
-        'Label5
-        '
-        resources.ApplyResources(Me.Label5, "Label5")
-        Me.Label5.ForeColor = System.Drawing.Color.Red
-        Me.Label5.Name = "Label5"
-        '
-        'Label4
-        '
-        resources.ApplyResources(Me.Label4, "Label4")
-        Me.Label4.ForeColor = System.Drawing.Color.Red
-        Me.Label4.Name = "Label4"
-        '
-        'Label3
-        '
-        resources.ApplyResources(Me.Label3, "Label3")
-        Me.Label3.ForeColor = System.Drawing.Color.Red
-        Me.Label3.Name = "Label3"
         '
         'RadSeparator6
         '
@@ -440,16 +284,14 @@ Partial Class uco_5Beschaffenheitspruefung
         '
         Me.RadSeparator6.RootElement.AccessibleDescription = resources.GetString("RadSeparator6.RootElement.AccessibleDescription")
         Me.RadSeparator6.RootElement.AccessibleName = resources.GetString("RadSeparator6.RootElement.AccessibleName")
-        Me.RadSeparator6.RootElement.Alignment = CType(resources.GetObject("RadSeparator6.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadSeparator6.RootElement.AngleTransform = CType(resources.GetObject("RadSeparator6.RootElement.AngleTransform"), Single)
-        Me.RadSeparator6.RootElement.FlipText = CType(resources.GetObject("RadSeparator6.RootElement.FlipText"), Boolean)
-        Me.RadSeparator6.RootElement.KeyTip = resources.GetString("RadSeparator6.RootElement.KeyTip")
-        Me.RadSeparator6.RootElement.Margin = CType(resources.GetObject("RadSeparator6.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadSeparator6.RootElement.Alignment = CType(resources.GetObject("RadSeparator6.RootElement.Alignment"),System.Drawing.ContentAlignment)
+        Me.RadSeparator6.RootElement.AngleTransform = CType(resources.GetObject("RadSeparator6.RootElement.AngleTransform"),Single)
+        Me.RadSeparator6.RootElement.FlipText = CType(resources.GetObject("RadSeparator6.RootElement.FlipText"),Boolean)
+        Me.RadSeparator6.RootElement.Margin = CType(resources.GetObject("RadSeparator6.RootElement.Margin"),System.Windows.Forms.Padding)
         Me.RadSeparator6.RootElement.Text = resources.GetString("RadSeparator6.RootElement.Text")
-        Me.RadSeparator6.RootElement.TextOrientation = CType(resources.GetObject("RadSeparator6.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadSeparator6.RootElement.ToolTipText = resources.GetString("RadSeparator6.RootElement.ToolTipText")
-        Me.RadSeparator6.ShowShadow = False
-        Me.RadSeparator6.TabStop = False
+        Me.RadSeparator6.RootElement.TextOrientation = CType(resources.GetObject("RadSeparator6.RootElement.TextOrientation"),System.Windows.Forms.Orientation)
+        Me.RadSeparator6.ShowShadow = false
+        Me.RadSeparator6.TabStop = false
         '
         'RadSeparator5
         '
@@ -460,16 +302,14 @@ Partial Class uco_5Beschaffenheitspruefung
         '
         Me.RadSeparator5.RootElement.AccessibleDescription = resources.GetString("RadSeparator5.RootElement.AccessibleDescription")
         Me.RadSeparator5.RootElement.AccessibleName = resources.GetString("RadSeparator5.RootElement.AccessibleName")
-        Me.RadSeparator5.RootElement.Alignment = CType(resources.GetObject("RadSeparator5.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadSeparator5.RootElement.AngleTransform = CType(resources.GetObject("RadSeparator5.RootElement.AngleTransform"), Single)
-        Me.RadSeparator5.RootElement.FlipText = CType(resources.GetObject("RadSeparator5.RootElement.FlipText"), Boolean)
-        Me.RadSeparator5.RootElement.KeyTip = resources.GetString("RadSeparator5.RootElement.KeyTip")
-        Me.RadSeparator5.RootElement.Margin = CType(resources.GetObject("RadSeparator5.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadSeparator5.RootElement.Alignment = CType(resources.GetObject("RadSeparator5.RootElement.Alignment"),System.Drawing.ContentAlignment)
+        Me.RadSeparator5.RootElement.AngleTransform = CType(resources.GetObject("RadSeparator5.RootElement.AngleTransform"),Single)
+        Me.RadSeparator5.RootElement.FlipText = CType(resources.GetObject("RadSeparator5.RootElement.FlipText"),Boolean)
+        Me.RadSeparator5.RootElement.Margin = CType(resources.GetObject("RadSeparator5.RootElement.Margin"),System.Windows.Forms.Padding)
         Me.RadSeparator5.RootElement.Text = resources.GetString("RadSeparator5.RootElement.Text")
-        Me.RadSeparator5.RootElement.TextOrientation = CType(resources.GetObject("RadSeparator5.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadSeparator5.RootElement.ToolTipText = resources.GetString("RadSeparator5.RootElement.ToolTipText")
-        Me.RadSeparator5.ShowShadow = False
-        Me.RadSeparator5.TabStop = False
+        Me.RadSeparator5.RootElement.TextOrientation = CType(resources.GetObject("RadSeparator5.RootElement.TextOrientation"),System.Windows.Forms.Orientation)
+        Me.RadSeparator5.ShowShadow = false
+        Me.RadSeparator5.TabStop = false
         '
         'RadSeparator4
         '
@@ -480,16 +320,14 @@ Partial Class uco_5Beschaffenheitspruefung
         '
         Me.RadSeparator4.RootElement.AccessibleDescription = resources.GetString("RadSeparator4.RootElement.AccessibleDescription")
         Me.RadSeparator4.RootElement.AccessibleName = resources.GetString("RadSeparator4.RootElement.AccessibleName")
-        Me.RadSeparator4.RootElement.Alignment = CType(resources.GetObject("RadSeparator4.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadSeparator4.RootElement.AngleTransform = CType(resources.GetObject("RadSeparator4.RootElement.AngleTransform"), Single)
-        Me.RadSeparator4.RootElement.FlipText = CType(resources.GetObject("RadSeparator4.RootElement.FlipText"), Boolean)
-        Me.RadSeparator4.RootElement.KeyTip = resources.GetString("RadSeparator4.RootElement.KeyTip")
-        Me.RadSeparator4.RootElement.Margin = CType(resources.GetObject("RadSeparator4.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadSeparator4.RootElement.Alignment = CType(resources.GetObject("RadSeparator4.RootElement.Alignment"),System.Drawing.ContentAlignment)
+        Me.RadSeparator4.RootElement.AngleTransform = CType(resources.GetObject("RadSeparator4.RootElement.AngleTransform"),Single)
+        Me.RadSeparator4.RootElement.FlipText = CType(resources.GetObject("RadSeparator4.RootElement.FlipText"),Boolean)
+        Me.RadSeparator4.RootElement.Margin = CType(resources.GetObject("RadSeparator4.RootElement.Margin"),System.Windows.Forms.Padding)
         Me.RadSeparator4.RootElement.Text = resources.GetString("RadSeparator4.RootElement.Text")
-        Me.RadSeparator4.RootElement.TextOrientation = CType(resources.GetObject("RadSeparator4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadSeparator4.RootElement.ToolTipText = resources.GetString("RadSeparator4.RootElement.ToolTipText")
-        Me.RadSeparator4.ShowShadow = False
-        Me.RadSeparator4.TabStop = False
+        Me.RadSeparator4.RootElement.TextOrientation = CType(resources.GetObject("RadSeparator4.RootElement.TextOrientation"),System.Windows.Forms.Orientation)
+        Me.RadSeparator4.ShowShadow = false
+        Me.RadSeparator4.TabStop = false
         '
         'RadSeparator3
         '
@@ -500,16 +338,14 @@ Partial Class uco_5Beschaffenheitspruefung
         '
         Me.RadSeparator3.RootElement.AccessibleDescription = resources.GetString("RadSeparator3.RootElement.AccessibleDescription")
         Me.RadSeparator3.RootElement.AccessibleName = resources.GetString("RadSeparator3.RootElement.AccessibleName")
-        Me.RadSeparator3.RootElement.Alignment = CType(resources.GetObject("RadSeparator3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadSeparator3.RootElement.AngleTransform = CType(resources.GetObject("RadSeparator3.RootElement.AngleTransform"), Single)
-        Me.RadSeparator3.RootElement.FlipText = CType(resources.GetObject("RadSeparator3.RootElement.FlipText"), Boolean)
-        Me.RadSeparator3.RootElement.KeyTip = resources.GetString("RadSeparator3.RootElement.KeyTip")
-        Me.RadSeparator3.RootElement.Margin = CType(resources.GetObject("RadSeparator3.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadSeparator3.RootElement.Alignment = CType(resources.GetObject("RadSeparator3.RootElement.Alignment"),System.Drawing.ContentAlignment)
+        Me.RadSeparator3.RootElement.AngleTransform = CType(resources.GetObject("RadSeparator3.RootElement.AngleTransform"),Single)
+        Me.RadSeparator3.RootElement.FlipText = CType(resources.GetObject("RadSeparator3.RootElement.FlipText"),Boolean)
+        Me.RadSeparator3.RootElement.Margin = CType(resources.GetObject("RadSeparator3.RootElement.Margin"),System.Windows.Forms.Padding)
         Me.RadSeparator3.RootElement.Text = resources.GetString("RadSeparator3.RootElement.Text")
-        Me.RadSeparator3.RootElement.TextOrientation = CType(resources.GetObject("RadSeparator3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadSeparator3.RootElement.ToolTipText = resources.GetString("RadSeparator3.RootElement.ToolTipText")
-        Me.RadSeparator3.ShowShadow = False
-        Me.RadSeparator3.TabStop = False
+        Me.RadSeparator3.RootElement.TextOrientation = CType(resources.GetObject("RadSeparator3.RootElement.TextOrientation"),System.Windows.Forms.Orientation)
+        Me.RadSeparator3.ShowShadow = false
+        Me.RadSeparator3.TabStop = false
         '
         'RadLabel7
         '
@@ -520,14 +356,12 @@ Partial Class uco_5Beschaffenheitspruefung
         '
         Me.RadLabel7.RootElement.AccessibleDescription = resources.GetString("RadLabel7.RootElement.AccessibleDescription")
         Me.RadLabel7.RootElement.AccessibleName = resources.GetString("RadLabel7.RootElement.AccessibleName")
-        Me.RadLabel7.RootElement.Alignment = CType(resources.GetObject("RadLabel7.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadLabel7.RootElement.AngleTransform = CType(resources.GetObject("RadLabel7.RootElement.AngleTransform"), Single)
-        Me.RadLabel7.RootElement.FlipText = CType(resources.GetObject("RadLabel7.RootElement.FlipText"), Boolean)
-        Me.RadLabel7.RootElement.KeyTip = resources.GetString("RadLabel7.RootElement.KeyTip")
-        Me.RadLabel7.RootElement.Margin = CType(resources.GetObject("RadLabel7.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadLabel7.RootElement.Alignment = CType(resources.GetObject("RadLabel7.RootElement.Alignment"),System.Drawing.ContentAlignment)
+        Me.RadLabel7.RootElement.AngleTransform = CType(resources.GetObject("RadLabel7.RootElement.AngleTransform"),Single)
+        Me.RadLabel7.RootElement.FlipText = CType(resources.GetObject("RadLabel7.RootElement.FlipText"),Boolean)
+        Me.RadLabel7.RootElement.Margin = CType(resources.GetObject("RadLabel7.RootElement.Margin"),System.Windows.Forms.Padding)
         Me.RadLabel7.RootElement.Text = resources.GetString("RadLabel7.RootElement.Text")
-        Me.RadLabel7.RootElement.TextOrientation = CType(resources.GetObject("RadLabel7.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel7.RootElement.ToolTipText = resources.GetString("RadLabel7.RootElement.ToolTipText")
+        Me.RadLabel7.RootElement.TextOrientation = CType(resources.GetObject("RadLabel7.RootElement.TextOrientation"),System.Windows.Forms.Orientation)
         '
         'RadLabel5
         '
@@ -538,14 +372,12 @@ Partial Class uco_5Beschaffenheitspruefung
         '
         Me.RadLabel5.RootElement.AccessibleDescription = resources.GetString("RadLabel5.RootElement.AccessibleDescription")
         Me.RadLabel5.RootElement.AccessibleName = resources.GetString("RadLabel5.RootElement.AccessibleName")
-        Me.RadLabel5.RootElement.Alignment = CType(resources.GetObject("RadLabel5.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadLabel5.RootElement.AngleTransform = CType(resources.GetObject("RadLabel5.RootElement.AngleTransform"), Single)
-        Me.RadLabel5.RootElement.FlipText = CType(resources.GetObject("RadLabel5.RootElement.FlipText"), Boolean)
-        Me.RadLabel5.RootElement.KeyTip = resources.GetString("RadLabel5.RootElement.KeyTip")
-        Me.RadLabel5.RootElement.Margin = CType(resources.GetObject("RadLabel5.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadLabel5.RootElement.Alignment = CType(resources.GetObject("RadLabel5.RootElement.Alignment"),System.Drawing.ContentAlignment)
+        Me.RadLabel5.RootElement.AngleTransform = CType(resources.GetObject("RadLabel5.RootElement.AngleTransform"),Single)
+        Me.RadLabel5.RootElement.FlipText = CType(resources.GetObject("RadLabel5.RootElement.FlipText"),Boolean)
+        Me.RadLabel5.RootElement.Margin = CType(resources.GetObject("RadLabel5.RootElement.Margin"),System.Windows.Forms.Padding)
         Me.RadLabel5.RootElement.Text = resources.GetString("RadLabel5.RootElement.Text")
-        Me.RadLabel5.RootElement.TextOrientation = CType(resources.GetObject("RadLabel5.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel5.RootElement.ToolTipText = resources.GetString("RadLabel5.RootElement.ToolTipText")
+        Me.RadLabel5.RootElement.TextOrientation = CType(resources.GetObject("RadLabel5.RootElement.TextOrientation"),System.Windows.Forms.Orientation)
         '
         'RadLabel3
         '
@@ -556,14 +388,12 @@ Partial Class uco_5Beschaffenheitspruefung
         '
         Me.RadLabel3.RootElement.AccessibleDescription = resources.GetString("RadLabel3.RootElement.AccessibleDescription")
         Me.RadLabel3.RootElement.AccessibleName = resources.GetString("RadLabel3.RootElement.AccessibleName")
-        Me.RadLabel3.RootElement.Alignment = CType(resources.GetObject("RadLabel3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadLabel3.RootElement.AngleTransform = CType(resources.GetObject("RadLabel3.RootElement.AngleTransform"), Single)
-        Me.RadLabel3.RootElement.FlipText = CType(resources.GetObject("RadLabel3.RootElement.FlipText"), Boolean)
-        Me.RadLabel3.RootElement.KeyTip = resources.GetString("RadLabel3.RootElement.KeyTip")
-        Me.RadLabel3.RootElement.Margin = CType(resources.GetObject("RadLabel3.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadLabel3.RootElement.Alignment = CType(resources.GetObject("RadLabel3.RootElement.Alignment"),System.Drawing.ContentAlignment)
+        Me.RadLabel3.RootElement.AngleTransform = CType(resources.GetObject("RadLabel3.RootElement.AngleTransform"),Single)
+        Me.RadLabel3.RootElement.FlipText = CType(resources.GetObject("RadLabel3.RootElement.FlipText"),Boolean)
+        Me.RadLabel3.RootElement.Margin = CType(resources.GetObject("RadLabel3.RootElement.Margin"),System.Windows.Forms.Padding)
         Me.RadLabel3.RootElement.Text = resources.GetString("RadLabel3.RootElement.Text")
-        Me.RadLabel3.RootElement.TextOrientation = CType(resources.GetObject("RadLabel3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel3.RootElement.ToolTipText = resources.GetString("RadLabel3.RootElement.ToolTipText")
+        Me.RadLabel3.RootElement.TextOrientation = CType(resources.GetObject("RadLabel3.RootElement.TextOrientation"),System.Windows.Forms.Orientation)
         '
         'RadLabel6
         '
@@ -574,14 +404,12 @@ Partial Class uco_5Beschaffenheitspruefung
         '
         Me.RadLabel6.RootElement.AccessibleDescription = resources.GetString("RadLabel6.RootElement.AccessibleDescription")
         Me.RadLabel6.RootElement.AccessibleName = resources.GetString("RadLabel6.RootElement.AccessibleName")
-        Me.RadLabel6.RootElement.Alignment = CType(resources.GetObject("RadLabel6.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadLabel6.RootElement.AngleTransform = CType(resources.GetObject("RadLabel6.RootElement.AngleTransform"), Single)
-        Me.RadLabel6.RootElement.FlipText = CType(resources.GetObject("RadLabel6.RootElement.FlipText"), Boolean)
-        Me.RadLabel6.RootElement.KeyTip = resources.GetString("RadLabel6.RootElement.KeyTip")
-        Me.RadLabel6.RootElement.Margin = CType(resources.GetObject("RadLabel6.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadLabel6.RootElement.Alignment = CType(resources.GetObject("RadLabel6.RootElement.Alignment"),System.Drawing.ContentAlignment)
+        Me.RadLabel6.RootElement.AngleTransform = CType(resources.GetObject("RadLabel6.RootElement.AngleTransform"),Single)
+        Me.RadLabel6.RootElement.FlipText = CType(resources.GetObject("RadLabel6.RootElement.FlipText"),Boolean)
+        Me.RadLabel6.RootElement.Margin = CType(resources.GetObject("RadLabel6.RootElement.Margin"),System.Windows.Forms.Padding)
         Me.RadLabel6.RootElement.Text = resources.GetString("RadLabel6.RootElement.Text")
-        Me.RadLabel6.RootElement.TextOrientation = CType(resources.GetObject("RadLabel6.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel6.RootElement.ToolTipText = resources.GetString("RadLabel6.RootElement.ToolTipText")
+        Me.RadLabel6.RootElement.TextOrientation = CType(resources.GetObject("RadLabel6.RootElement.TextOrientation"),System.Windows.Forms.Orientation)
         '
         'RadLabel8
         '
@@ -592,113 +420,17 @@ Partial Class uco_5Beschaffenheitspruefung
         '
         Me.RadLabel8.RootElement.AccessibleDescription = resources.GetString("RadLabel8.RootElement.AccessibleDescription")
         Me.RadLabel8.RootElement.AccessibleName = resources.GetString("RadLabel8.RootElement.AccessibleName")
-        Me.RadLabel8.RootElement.Alignment = CType(resources.GetObject("RadLabel8.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadLabel8.RootElement.AngleTransform = CType(resources.GetObject("RadLabel8.RootElement.AngleTransform"), Single)
-        Me.RadLabel8.RootElement.FlipText = CType(resources.GetObject("RadLabel8.RootElement.FlipText"), Boolean)
-        Me.RadLabel8.RootElement.KeyTip = resources.GetString("RadLabel8.RootElement.KeyTip")
-        Me.RadLabel8.RootElement.Margin = CType(resources.GetObject("RadLabel8.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadLabel8.RootElement.Alignment = CType(resources.GetObject("RadLabel8.RootElement.Alignment"),System.Drawing.ContentAlignment)
+        Me.RadLabel8.RootElement.AngleTransform = CType(resources.GetObject("RadLabel8.RootElement.AngleTransform"),Single)
+        Me.RadLabel8.RootElement.FlipText = CType(resources.GetObject("RadLabel8.RootElement.FlipText"),Boolean)
+        Me.RadLabel8.RootElement.Margin = CType(resources.GetObject("RadLabel8.RootElement.Margin"),System.Windows.Forms.Padding)
         Me.RadLabel8.RootElement.Text = resources.GetString("RadLabel8.RootElement.Text")
-        Me.RadLabel8.RootElement.TextOrientation = CType(resources.GetObject("RadLabel8.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel8.RootElement.ToolTipText = resources.GetString("RadLabel8.RootElement.ToolTipText")
-        '
-        'RadCheckBoxWZ1
-        '
-        resources.ApplyResources(Me.RadCheckBoxWZ1, "RadCheckBoxWZ1")
-        Me.RadCheckBoxWZ1.Name = "RadCheckBoxWZ1"
-        '
-        '
-        '
-        Me.RadCheckBoxWZ1.RootElement.AccessibleDescription = resources.GetString("RadCheckBoxWZ1.RootElement.AccessibleDescription")
-        Me.RadCheckBoxWZ1.RootElement.AccessibleName = resources.GetString("RadCheckBoxWZ1.RootElement.AccessibleName")
-        Me.RadCheckBoxWZ1.RootElement.Alignment = CType(resources.GetObject("RadCheckBoxWZ1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadCheckBoxWZ1.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxWZ1.RootElement.AngleTransform"), Single)
-        Me.RadCheckBoxWZ1.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxWZ1.RootElement.FlipText"), Boolean)
-        Me.RadCheckBoxWZ1.RootElement.KeyTip = resources.GetString("RadCheckBoxWZ1.RootElement.KeyTip")
-        Me.RadCheckBoxWZ1.RootElement.Margin = CType(resources.GetObject("RadCheckBoxWZ1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadCheckBoxWZ1.RootElement.Text = resources.GetString("RadCheckBoxWZ1.RootElement.Text")
-        Me.RadCheckBoxWZ1.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxWZ1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadCheckBoxWZ1.RootElement.ToolTipText = resources.GetString("RadCheckBoxWZ1.RootElement.ToolTipText")
-        '
-        'RadCheckBoxWZ2
-        '
-        resources.ApplyResources(Me.RadCheckBoxWZ2, "RadCheckBoxWZ2")
-        Me.RadCheckBoxWZ2.Name = "RadCheckBoxWZ2"
-        '
-        '
-        '
-        Me.RadCheckBoxWZ2.RootElement.AccessibleDescription = resources.GetString("RadCheckBoxWZ2.RootElement.AccessibleDescription")
-        Me.RadCheckBoxWZ2.RootElement.AccessibleName = resources.GetString("RadCheckBoxWZ2.RootElement.AccessibleName")
-        Me.RadCheckBoxWZ2.RootElement.Alignment = CType(resources.GetObject("RadCheckBoxWZ2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadCheckBoxWZ2.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxWZ2.RootElement.AngleTransform"), Single)
-        Me.RadCheckBoxWZ2.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxWZ2.RootElement.FlipText"), Boolean)
-        Me.RadCheckBoxWZ2.RootElement.KeyTip = resources.GetString("RadCheckBoxWZ2.RootElement.KeyTip")
-        Me.RadCheckBoxWZ2.RootElement.Margin = CType(resources.GetObject("RadCheckBoxWZ2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadCheckBoxWZ2.RootElement.Text = resources.GetString("RadCheckBoxWZ2.RootElement.Text")
-        Me.RadCheckBoxWZ2.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxWZ2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadCheckBoxWZ2.RootElement.ToolTipText = resources.GetString("RadCheckBoxWZ2.RootElement.ToolTipText")
-        '
-        'RadCheckBoxWZ4
-        '
-        resources.ApplyResources(Me.RadCheckBoxWZ4, "RadCheckBoxWZ4")
-        Me.RadCheckBoxWZ4.Name = "RadCheckBoxWZ4"
-        '
-        '
-        '
-        Me.RadCheckBoxWZ4.RootElement.AccessibleDescription = resources.GetString("RadCheckBoxWZ4.RootElement.AccessibleDescription")
-        Me.RadCheckBoxWZ4.RootElement.AccessibleName = resources.GetString("RadCheckBoxWZ4.RootElement.AccessibleName")
-        Me.RadCheckBoxWZ4.RootElement.Alignment = CType(resources.GetObject("RadCheckBoxWZ4.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadCheckBoxWZ4.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxWZ4.RootElement.AngleTransform"), Single)
-        Me.RadCheckBoxWZ4.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxWZ4.RootElement.FlipText"), Boolean)
-        Me.RadCheckBoxWZ4.RootElement.KeyTip = resources.GetString("RadCheckBoxWZ4.RootElement.KeyTip")
-        Me.RadCheckBoxWZ4.RootElement.Margin = CType(resources.GetObject("RadCheckBoxWZ4.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadCheckBoxWZ4.RootElement.Text = resources.GetString("RadCheckBoxWZ4.RootElement.Text")
-        Me.RadCheckBoxWZ4.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxWZ4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadCheckBoxWZ4.RootElement.ToolTipText = resources.GetString("RadCheckBoxWZ4.RootElement.ToolTipText")
-        '
-        'RadCheckBoxWZ3
-        '
-        resources.ApplyResources(Me.RadCheckBoxWZ3, "RadCheckBoxWZ3")
-        Me.RadCheckBoxWZ3.Name = "RadCheckBoxWZ3"
-        '
-        '
-        '
-        Me.RadCheckBoxWZ3.RootElement.AccessibleDescription = resources.GetString("RadCheckBoxWZ3.RootElement.AccessibleDescription")
-        Me.RadCheckBoxWZ3.RootElement.AccessibleName = resources.GetString("RadCheckBoxWZ3.RootElement.AccessibleName")
-        Me.RadCheckBoxWZ3.RootElement.Alignment = CType(resources.GetObject("RadCheckBoxWZ3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadCheckBoxWZ3.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxWZ3.RootElement.AngleTransform"), Single)
-        Me.RadCheckBoxWZ3.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxWZ3.RootElement.FlipText"), Boolean)
-        Me.RadCheckBoxWZ3.RootElement.KeyTip = resources.GetString("RadCheckBoxWZ3.RootElement.KeyTip")
-        Me.RadCheckBoxWZ3.RootElement.Margin = CType(resources.GetObject("RadCheckBoxWZ3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadCheckBoxWZ3.RootElement.Text = resources.GetString("RadCheckBoxWZ3.RootElement.Text")
-        Me.RadCheckBoxWZ3.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxWZ3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadCheckBoxWZ3.RootElement.ToolTipText = resources.GetString("RadCheckBoxWZ3.RootElement.ToolTipText")
-        '
-        'RadCheckBoxWZ5
-        '
-        resources.ApplyResources(Me.RadCheckBoxWZ5, "RadCheckBoxWZ5")
-        Me.RadCheckBoxWZ5.Name = "RadCheckBoxWZ5"
-        '
-        '
-        '
-        Me.RadCheckBoxWZ5.RootElement.AccessibleDescription = resources.GetString("RadCheckBoxWZ5.RootElement.AccessibleDescription")
-        Me.RadCheckBoxWZ5.RootElement.AccessibleName = resources.GetString("RadCheckBoxWZ5.RootElement.AccessibleName")
-        Me.RadCheckBoxWZ5.RootElement.Alignment = CType(resources.GetObject("RadCheckBoxWZ5.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadCheckBoxWZ5.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxWZ5.RootElement.AngleTransform"), Single)
-        Me.RadCheckBoxWZ5.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxWZ5.RootElement.FlipText"), Boolean)
-        Me.RadCheckBoxWZ5.RootElement.KeyTip = resources.GetString("RadCheckBoxWZ5.RootElement.KeyTip")
-        Me.RadCheckBoxWZ5.RootElement.Margin = CType(resources.GetObject("RadCheckBoxWZ5.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadCheckBoxWZ5.RootElement.Text = resources.GetString("RadCheckBoxWZ5.RootElement.Text")
-        Me.RadCheckBoxWZ5.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxWZ5.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadCheckBoxWZ5.RootElement.ToolTipText = resources.GetString("RadCheckBoxWZ5.RootElement.ToolTipText")
+        Me.RadLabel8.RootElement.TextOrientation = CType(resources.GetObject("RadLabel8.RootElement.TextOrientation"),System.Windows.Forms.Orientation)
         '
         'RadGroupBoxVerbindungselemente
         '
-        resources.ApplyResources(Me.RadGroupBoxVerbindungselemente, "RadGroupBoxVerbindungselemente")
         Me.RadGroupBoxVerbindungselemente.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
-        Me.RadGroupBoxVerbindungselemente.Controls.Add(Me.Label11)
-        Me.RadGroupBoxVerbindungselemente.Controls.Add(Me.Label10)
-        Me.RadGroupBoxVerbindungselemente.Controls.Add(Me.Label9)
-        Me.RadGroupBoxVerbindungselemente.Controls.Add(Me.Label8)
+        resources.ApplyResources(Me.RadGroupBoxVerbindungselemente, "RadGroupBoxVerbindungselemente")
         Me.RadGroupBoxVerbindungselemente.Controls.Add(Me.RadSeparator9)
         Me.RadGroupBoxVerbindungselemente.Controls.Add(Me.RadSeparator8)
         Me.RadGroupBoxVerbindungselemente.Controls.Add(Me.RadSeparator7)
@@ -706,50 +438,20 @@ Partial Class uco_5Beschaffenheitspruefung
         Me.RadGroupBoxVerbindungselemente.Controls.Add(Me.RadLabel14)
         Me.RadGroupBoxVerbindungselemente.Controls.Add(Me.RadLabel12)
         Me.RadGroupBoxVerbindungselemente.Controls.Add(Me.RadLabel10)
-        Me.RadGroupBoxVerbindungselemente.Controls.Add(Me.RadCheckBoxVerbindungelemente1)
-        Me.RadGroupBoxVerbindungselemente.Controls.Add(Me.RadCheckBoxVerbindungelemente3)
-        Me.RadGroupBoxVerbindungselemente.Controls.Add(Me.RadCheckBoxVerbindungelemente2)
-        Me.RadGroupBoxVerbindungselemente.Controls.Add(Me.RadCheckBoxVerbindungelemente4)
         Me.RadGroupBoxVerbindungselemente.Name = "RadGroupBoxVerbindungselemente"
         '
         '
         '
         Me.RadGroupBoxVerbindungselemente.RootElement.AccessibleDescription = resources.GetString("RadGroupBoxVerbindungselemente.RootElement.AccessibleDescription")
         Me.RadGroupBoxVerbindungselemente.RootElement.AccessibleName = resources.GetString("RadGroupBoxVerbindungselemente.RootElement.AccessibleName")
-        Me.RadGroupBoxVerbindungselemente.RootElement.Alignment = CType(resources.GetObject("RadGroupBoxVerbindungselemente.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadGroupBoxVerbindungselemente.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBoxVerbindungselemente.RootElement.AngleTransform"), Single)
-        Me.RadGroupBoxVerbindungselemente.RootElement.FlipText = CType(resources.GetObject("RadGroupBoxVerbindungselemente.RootElement.FlipText"), Boolean)
-        Me.RadGroupBoxVerbindungselemente.RootElement.KeyTip = resources.GetString("RadGroupBoxVerbindungselemente.RootElement.KeyTip")
-        Me.RadGroupBoxVerbindungselemente.RootElement.Margin = CType(resources.GetObject("RadGroupBoxVerbindungselemente.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadGroupBoxVerbindungselemente.RootElement.Alignment = CType(resources.GetObject("RadGroupBoxVerbindungselemente.RootElement.Alignment"),System.Drawing.ContentAlignment)
+        Me.RadGroupBoxVerbindungselemente.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBoxVerbindungselemente.RootElement.AngleTransform"),Single)
+        Me.RadGroupBoxVerbindungselemente.RootElement.FlipText = CType(resources.GetObject("RadGroupBoxVerbindungselemente.RootElement.FlipText"),Boolean)
+        Me.RadGroupBoxVerbindungselemente.RootElement.Margin = CType(resources.GetObject("RadGroupBoxVerbindungselemente.RootElement.Margin"),System.Windows.Forms.Padding)
         Me.RadGroupBoxVerbindungselemente.RootElement.Text = resources.GetString("RadGroupBoxVerbindungselemente.RootElement.Text")
-        Me.RadGroupBoxVerbindungselemente.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxVerbindungselemente.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadGroupBoxVerbindungselemente.RootElement.ToolTipText = resources.GetString("RadGroupBoxVerbindungselemente.RootElement.ToolTipText")
+        Me.RadGroupBoxVerbindungselemente.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxVerbindungselemente.RootElement.TextOrientation"),System.Windows.Forms.Orientation)
         Me.RadGroupBoxVerbindungselemente.Tag = ""
         Me.RadGroupBoxVerbindungselemente.ThemeName = "Telerik.WinControls.UI.RadGroupBox"
-        '
-        'Label11
-        '
-        resources.ApplyResources(Me.Label11, "Label11")
-        Me.Label11.ForeColor = System.Drawing.Color.Red
-        Me.Label11.Name = "Label11"
-        '
-        'Label10
-        '
-        resources.ApplyResources(Me.Label10, "Label10")
-        Me.Label10.ForeColor = System.Drawing.Color.Red
-        Me.Label10.Name = "Label10"
-        '
-        'Label9
-        '
-        resources.ApplyResources(Me.Label9, "Label9")
-        Me.Label9.ForeColor = System.Drawing.Color.Red
-        Me.Label9.Name = "Label9"
-        '
-        'Label8
-        '
-        resources.ApplyResources(Me.Label8, "Label8")
-        Me.Label8.ForeColor = System.Drawing.Color.Red
-        Me.Label8.Name = "Label8"
         '
         'RadSeparator9
         '
@@ -760,16 +462,14 @@ Partial Class uco_5Beschaffenheitspruefung
         '
         Me.RadSeparator9.RootElement.AccessibleDescription = resources.GetString("RadSeparator9.RootElement.AccessibleDescription")
         Me.RadSeparator9.RootElement.AccessibleName = resources.GetString("RadSeparator9.RootElement.AccessibleName")
-        Me.RadSeparator9.RootElement.Alignment = CType(resources.GetObject("RadSeparator9.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadSeparator9.RootElement.AngleTransform = CType(resources.GetObject("RadSeparator9.RootElement.AngleTransform"), Single)
-        Me.RadSeparator9.RootElement.FlipText = CType(resources.GetObject("RadSeparator9.RootElement.FlipText"), Boolean)
-        Me.RadSeparator9.RootElement.KeyTip = resources.GetString("RadSeparator9.RootElement.KeyTip")
-        Me.RadSeparator9.RootElement.Margin = CType(resources.GetObject("RadSeparator9.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadSeparator9.RootElement.Alignment = CType(resources.GetObject("RadSeparator9.RootElement.Alignment"),System.Drawing.ContentAlignment)
+        Me.RadSeparator9.RootElement.AngleTransform = CType(resources.GetObject("RadSeparator9.RootElement.AngleTransform"),Single)
+        Me.RadSeparator9.RootElement.FlipText = CType(resources.GetObject("RadSeparator9.RootElement.FlipText"),Boolean)
+        Me.RadSeparator9.RootElement.Margin = CType(resources.GetObject("RadSeparator9.RootElement.Margin"),System.Windows.Forms.Padding)
         Me.RadSeparator9.RootElement.Text = resources.GetString("RadSeparator9.RootElement.Text")
-        Me.RadSeparator9.RootElement.TextOrientation = CType(resources.GetObject("RadSeparator9.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadSeparator9.RootElement.ToolTipText = resources.GetString("RadSeparator9.RootElement.ToolTipText")
-        Me.RadSeparator9.ShowShadow = False
-        Me.RadSeparator9.TabStop = False
+        Me.RadSeparator9.RootElement.TextOrientation = CType(resources.GetObject("RadSeparator9.RootElement.TextOrientation"),System.Windows.Forms.Orientation)
+        Me.RadSeparator9.ShowShadow = false
+        Me.RadSeparator9.TabStop = false
         '
         'RadSeparator8
         '
@@ -780,16 +480,14 @@ Partial Class uco_5Beschaffenheitspruefung
         '
         Me.RadSeparator8.RootElement.AccessibleDescription = resources.GetString("RadSeparator8.RootElement.AccessibleDescription")
         Me.RadSeparator8.RootElement.AccessibleName = resources.GetString("RadSeparator8.RootElement.AccessibleName")
-        Me.RadSeparator8.RootElement.Alignment = CType(resources.GetObject("RadSeparator8.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadSeparator8.RootElement.AngleTransform = CType(resources.GetObject("RadSeparator8.RootElement.AngleTransform"), Single)
-        Me.RadSeparator8.RootElement.FlipText = CType(resources.GetObject("RadSeparator8.RootElement.FlipText"), Boolean)
-        Me.RadSeparator8.RootElement.KeyTip = resources.GetString("RadSeparator8.RootElement.KeyTip")
-        Me.RadSeparator8.RootElement.Margin = CType(resources.GetObject("RadSeparator8.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadSeparator8.RootElement.Alignment = CType(resources.GetObject("RadSeparator8.RootElement.Alignment"),System.Drawing.ContentAlignment)
+        Me.RadSeparator8.RootElement.AngleTransform = CType(resources.GetObject("RadSeparator8.RootElement.AngleTransform"),Single)
+        Me.RadSeparator8.RootElement.FlipText = CType(resources.GetObject("RadSeparator8.RootElement.FlipText"),Boolean)
+        Me.RadSeparator8.RootElement.Margin = CType(resources.GetObject("RadSeparator8.RootElement.Margin"),System.Windows.Forms.Padding)
         Me.RadSeparator8.RootElement.Text = resources.GetString("RadSeparator8.RootElement.Text")
-        Me.RadSeparator8.RootElement.TextOrientation = CType(resources.GetObject("RadSeparator8.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadSeparator8.RootElement.ToolTipText = resources.GetString("RadSeparator8.RootElement.ToolTipText")
-        Me.RadSeparator8.ShowShadow = False
-        Me.RadSeparator8.TabStop = False
+        Me.RadSeparator8.RootElement.TextOrientation = CType(resources.GetObject("RadSeparator8.RootElement.TextOrientation"),System.Windows.Forms.Orientation)
+        Me.RadSeparator8.ShowShadow = false
+        Me.RadSeparator8.TabStop = false
         '
         'RadSeparator7
         '
@@ -800,16 +498,14 @@ Partial Class uco_5Beschaffenheitspruefung
         '
         Me.RadSeparator7.RootElement.AccessibleDescription = resources.GetString("RadSeparator7.RootElement.AccessibleDescription")
         Me.RadSeparator7.RootElement.AccessibleName = resources.GetString("RadSeparator7.RootElement.AccessibleName")
-        Me.RadSeparator7.RootElement.Alignment = CType(resources.GetObject("RadSeparator7.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadSeparator7.RootElement.AngleTransform = CType(resources.GetObject("RadSeparator7.RootElement.AngleTransform"), Single)
-        Me.RadSeparator7.RootElement.FlipText = CType(resources.GetObject("RadSeparator7.RootElement.FlipText"), Boolean)
-        Me.RadSeparator7.RootElement.KeyTip = resources.GetString("RadSeparator7.RootElement.KeyTip")
-        Me.RadSeparator7.RootElement.Margin = CType(resources.GetObject("RadSeparator7.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadSeparator7.RootElement.Alignment = CType(resources.GetObject("RadSeparator7.RootElement.Alignment"),System.Drawing.ContentAlignment)
+        Me.RadSeparator7.RootElement.AngleTransform = CType(resources.GetObject("RadSeparator7.RootElement.AngleTransform"),Single)
+        Me.RadSeparator7.RootElement.FlipText = CType(resources.GetObject("RadSeparator7.RootElement.FlipText"),Boolean)
+        Me.RadSeparator7.RootElement.Margin = CType(resources.GetObject("RadSeparator7.RootElement.Margin"),System.Windows.Forms.Padding)
         Me.RadSeparator7.RootElement.Text = resources.GetString("RadSeparator7.RootElement.Text")
-        Me.RadSeparator7.RootElement.TextOrientation = CType(resources.GetObject("RadSeparator7.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadSeparator7.RootElement.ToolTipText = resources.GetString("RadSeparator7.RootElement.ToolTipText")
-        Me.RadSeparator7.ShowShadow = False
-        Me.RadSeparator7.TabStop = False
+        Me.RadSeparator7.RootElement.TextOrientation = CType(resources.GetObject("RadSeparator7.RootElement.TextOrientation"),System.Windows.Forms.Orientation)
+        Me.RadSeparator7.ShowShadow = false
+        Me.RadSeparator7.TabStop = false
         '
         'RadLabel16
         '
@@ -820,14 +516,12 @@ Partial Class uco_5Beschaffenheitspruefung
         '
         Me.RadLabel16.RootElement.AccessibleDescription = resources.GetString("RadLabel16.RootElement.AccessibleDescription")
         Me.RadLabel16.RootElement.AccessibleName = resources.GetString("RadLabel16.RootElement.AccessibleName")
-        Me.RadLabel16.RootElement.Alignment = CType(resources.GetObject("RadLabel16.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadLabel16.RootElement.AngleTransform = CType(resources.GetObject("RadLabel16.RootElement.AngleTransform"), Single)
-        Me.RadLabel16.RootElement.FlipText = CType(resources.GetObject("RadLabel16.RootElement.FlipText"), Boolean)
-        Me.RadLabel16.RootElement.KeyTip = resources.GetString("RadLabel16.RootElement.KeyTip")
-        Me.RadLabel16.RootElement.Margin = CType(resources.GetObject("RadLabel16.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadLabel16.RootElement.Alignment = CType(resources.GetObject("RadLabel16.RootElement.Alignment"),System.Drawing.ContentAlignment)
+        Me.RadLabel16.RootElement.AngleTransform = CType(resources.GetObject("RadLabel16.RootElement.AngleTransform"),Single)
+        Me.RadLabel16.RootElement.FlipText = CType(resources.GetObject("RadLabel16.RootElement.FlipText"),Boolean)
+        Me.RadLabel16.RootElement.Margin = CType(resources.GetObject("RadLabel16.RootElement.Margin"),System.Windows.Forms.Padding)
         Me.RadLabel16.RootElement.Text = resources.GetString("RadLabel16.RootElement.Text")
-        Me.RadLabel16.RootElement.TextOrientation = CType(resources.GetObject("RadLabel16.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel16.RootElement.ToolTipText = resources.GetString("RadLabel16.RootElement.ToolTipText")
+        Me.RadLabel16.RootElement.TextOrientation = CType(resources.GetObject("RadLabel16.RootElement.TextOrientation"),System.Windows.Forms.Orientation)
         '
         'RadLabel14
         '
@@ -838,14 +532,12 @@ Partial Class uco_5Beschaffenheitspruefung
         '
         Me.RadLabel14.RootElement.AccessibleDescription = resources.GetString("RadLabel14.RootElement.AccessibleDescription")
         Me.RadLabel14.RootElement.AccessibleName = resources.GetString("RadLabel14.RootElement.AccessibleName")
-        Me.RadLabel14.RootElement.Alignment = CType(resources.GetObject("RadLabel14.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadLabel14.RootElement.AngleTransform = CType(resources.GetObject("RadLabel14.RootElement.AngleTransform"), Single)
-        Me.RadLabel14.RootElement.FlipText = CType(resources.GetObject("RadLabel14.RootElement.FlipText"), Boolean)
-        Me.RadLabel14.RootElement.KeyTip = resources.GetString("RadLabel14.RootElement.KeyTip")
-        Me.RadLabel14.RootElement.Margin = CType(resources.GetObject("RadLabel14.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadLabel14.RootElement.Alignment = CType(resources.GetObject("RadLabel14.RootElement.Alignment"),System.Drawing.ContentAlignment)
+        Me.RadLabel14.RootElement.AngleTransform = CType(resources.GetObject("RadLabel14.RootElement.AngleTransform"),Single)
+        Me.RadLabel14.RootElement.FlipText = CType(resources.GetObject("RadLabel14.RootElement.FlipText"),Boolean)
+        Me.RadLabel14.RootElement.Margin = CType(resources.GetObject("RadLabel14.RootElement.Margin"),System.Windows.Forms.Padding)
         Me.RadLabel14.RootElement.Text = resources.GetString("RadLabel14.RootElement.Text")
-        Me.RadLabel14.RootElement.TextOrientation = CType(resources.GetObject("RadLabel14.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel14.RootElement.ToolTipText = resources.GetString("RadLabel14.RootElement.ToolTipText")
+        Me.RadLabel14.RootElement.TextOrientation = CType(resources.GetObject("RadLabel14.RootElement.TextOrientation"),System.Windows.Forms.Orientation)
         '
         'RadLabel12
         '
@@ -856,14 +548,12 @@ Partial Class uco_5Beschaffenheitspruefung
         '
         Me.RadLabel12.RootElement.AccessibleDescription = resources.GetString("RadLabel12.RootElement.AccessibleDescription")
         Me.RadLabel12.RootElement.AccessibleName = resources.GetString("RadLabel12.RootElement.AccessibleName")
-        Me.RadLabel12.RootElement.Alignment = CType(resources.GetObject("RadLabel12.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadLabel12.RootElement.AngleTransform = CType(resources.GetObject("RadLabel12.RootElement.AngleTransform"), Single)
-        Me.RadLabel12.RootElement.FlipText = CType(resources.GetObject("RadLabel12.RootElement.FlipText"), Boolean)
-        Me.RadLabel12.RootElement.KeyTip = resources.GetString("RadLabel12.RootElement.KeyTip")
-        Me.RadLabel12.RootElement.Margin = CType(resources.GetObject("RadLabel12.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadLabel12.RootElement.Alignment = CType(resources.GetObject("RadLabel12.RootElement.Alignment"),System.Drawing.ContentAlignment)
+        Me.RadLabel12.RootElement.AngleTransform = CType(resources.GetObject("RadLabel12.RootElement.AngleTransform"),Single)
+        Me.RadLabel12.RootElement.FlipText = CType(resources.GetObject("RadLabel12.RootElement.FlipText"),Boolean)
+        Me.RadLabel12.RootElement.Margin = CType(resources.GetObject("RadLabel12.RootElement.Margin"),System.Windows.Forms.Padding)
         Me.RadLabel12.RootElement.Text = resources.GetString("RadLabel12.RootElement.Text")
-        Me.RadLabel12.RootElement.TextOrientation = CType(resources.GetObject("RadLabel12.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel12.RootElement.ToolTipText = resources.GetString("RadLabel12.RootElement.ToolTipText")
+        Me.RadLabel12.RootElement.TextOrientation = CType(resources.GetObject("RadLabel12.RootElement.TextOrientation"),System.Windows.Forms.Orientation)
         '
         'RadLabel10
         '
@@ -874,135 +564,39 @@ Partial Class uco_5Beschaffenheitspruefung
         '
         Me.RadLabel10.RootElement.AccessibleDescription = resources.GetString("RadLabel10.RootElement.AccessibleDescription")
         Me.RadLabel10.RootElement.AccessibleName = resources.GetString("RadLabel10.RootElement.AccessibleName")
-        Me.RadLabel10.RootElement.Alignment = CType(resources.GetObject("RadLabel10.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadLabel10.RootElement.AngleTransform = CType(resources.GetObject("RadLabel10.RootElement.AngleTransform"), Single)
-        Me.RadLabel10.RootElement.FlipText = CType(resources.GetObject("RadLabel10.RootElement.FlipText"), Boolean)
-        Me.RadLabel10.RootElement.KeyTip = resources.GetString("RadLabel10.RootElement.KeyTip")
-        Me.RadLabel10.RootElement.Margin = CType(resources.GetObject("RadLabel10.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadLabel10.RootElement.Alignment = CType(resources.GetObject("RadLabel10.RootElement.Alignment"),System.Drawing.ContentAlignment)
+        Me.RadLabel10.RootElement.AngleTransform = CType(resources.GetObject("RadLabel10.RootElement.AngleTransform"),Single)
+        Me.RadLabel10.RootElement.FlipText = CType(resources.GetObject("RadLabel10.RootElement.FlipText"),Boolean)
+        Me.RadLabel10.RootElement.Margin = CType(resources.GetObject("RadLabel10.RootElement.Margin"),System.Windows.Forms.Padding)
         Me.RadLabel10.RootElement.Text = resources.GetString("RadLabel10.RootElement.Text")
-        Me.RadLabel10.RootElement.TextOrientation = CType(resources.GetObject("RadLabel10.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel10.RootElement.ToolTipText = resources.GetString("RadLabel10.RootElement.ToolTipText")
-        '
-        'RadCheckBoxVerbindungelemente1
-        '
-        resources.ApplyResources(Me.RadCheckBoxVerbindungelemente1, "RadCheckBoxVerbindungelemente1")
-        Me.RadCheckBoxVerbindungelemente1.Name = "RadCheckBoxVerbindungelemente1"
-        '
-        '
-        '
-        Me.RadCheckBoxVerbindungelemente1.RootElement.AccessibleDescription = resources.GetString("RadCheckBoxVerbindungelemente1.RootElement.AccessibleDescription")
-        Me.RadCheckBoxVerbindungelemente1.RootElement.AccessibleName = resources.GetString("RadCheckBoxVerbindungelemente1.RootElement.AccessibleName")
-        Me.RadCheckBoxVerbindungelemente1.RootElement.Alignment = CType(resources.GetObject("RadCheckBoxVerbindungelemente1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadCheckBoxVerbindungelemente1.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxVerbindungelemente1.RootElement.AngleTransform"), Single)
-        Me.RadCheckBoxVerbindungelemente1.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxVerbindungelemente1.RootElement.FlipText"), Boolean)
-        Me.RadCheckBoxVerbindungelemente1.RootElement.KeyTip = resources.GetString("RadCheckBoxVerbindungelemente1.RootElement.KeyTip")
-        Me.RadCheckBoxVerbindungelemente1.RootElement.Margin = CType(resources.GetObject("RadCheckBoxVerbindungelemente1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadCheckBoxVerbindungelemente1.RootElement.Text = resources.GetString("RadCheckBoxVerbindungelemente1.RootElement.Text")
-        Me.RadCheckBoxVerbindungelemente1.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxVerbindungelemente1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadCheckBoxVerbindungelemente1.RootElement.ToolTipText = resources.GetString("RadCheckBoxVerbindungelemente1.RootElement.ToolTipText")
-        '
-        'RadCheckBoxVerbindungelemente3
-        '
-        resources.ApplyResources(Me.RadCheckBoxVerbindungelemente3, "RadCheckBoxVerbindungelemente3")
-        Me.RadCheckBoxVerbindungelemente3.Name = "RadCheckBoxVerbindungelemente3"
-        '
-        '
-        '
-        Me.RadCheckBoxVerbindungelemente3.RootElement.AccessibleDescription = resources.GetString("RadCheckBoxVerbindungelemente3.RootElement.AccessibleDescription")
-        Me.RadCheckBoxVerbindungelemente3.RootElement.AccessibleName = resources.GetString("RadCheckBoxVerbindungelemente3.RootElement.AccessibleName")
-        Me.RadCheckBoxVerbindungelemente3.RootElement.Alignment = CType(resources.GetObject("RadCheckBoxVerbindungelemente3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadCheckBoxVerbindungelemente3.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxVerbindungelemente3.RootElement.AngleTransform"), Single)
-        Me.RadCheckBoxVerbindungelemente3.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxVerbindungelemente3.RootElement.FlipText"), Boolean)
-        Me.RadCheckBoxVerbindungelemente3.RootElement.KeyTip = resources.GetString("RadCheckBoxVerbindungelemente3.RootElement.KeyTip")
-        Me.RadCheckBoxVerbindungelemente3.RootElement.Margin = CType(resources.GetObject("RadCheckBoxVerbindungelemente3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadCheckBoxVerbindungelemente3.RootElement.Text = resources.GetString("RadCheckBoxVerbindungelemente3.RootElement.Text")
-        Me.RadCheckBoxVerbindungelemente3.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxVerbindungelemente3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadCheckBoxVerbindungelemente3.RootElement.ToolTipText = resources.GetString("RadCheckBoxVerbindungelemente3.RootElement.ToolTipText")
-        '
-        'RadCheckBoxVerbindungelemente2
-        '
-        resources.ApplyResources(Me.RadCheckBoxVerbindungelemente2, "RadCheckBoxVerbindungelemente2")
-        Me.RadCheckBoxVerbindungelemente2.Name = "RadCheckBoxVerbindungelemente2"
-        '
-        '
-        '
-        Me.RadCheckBoxVerbindungelemente2.RootElement.AccessibleDescription = resources.GetString("RadCheckBoxVerbindungelemente2.RootElement.AccessibleDescription")
-        Me.RadCheckBoxVerbindungelemente2.RootElement.AccessibleName = resources.GetString("RadCheckBoxVerbindungelemente2.RootElement.AccessibleName")
-        Me.RadCheckBoxVerbindungelemente2.RootElement.Alignment = CType(resources.GetObject("RadCheckBoxVerbindungelemente2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadCheckBoxVerbindungelemente2.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxVerbindungelemente2.RootElement.AngleTransform"), Single)
-        Me.RadCheckBoxVerbindungelemente2.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxVerbindungelemente2.RootElement.FlipText"), Boolean)
-        Me.RadCheckBoxVerbindungelemente2.RootElement.KeyTip = resources.GetString("RadCheckBoxVerbindungelemente2.RootElement.KeyTip")
-        Me.RadCheckBoxVerbindungelemente2.RootElement.Margin = CType(resources.GetObject("RadCheckBoxVerbindungelemente2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadCheckBoxVerbindungelemente2.RootElement.Text = resources.GetString("RadCheckBoxVerbindungelemente2.RootElement.Text")
-        Me.RadCheckBoxVerbindungelemente2.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxVerbindungelemente2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadCheckBoxVerbindungelemente2.RootElement.ToolTipText = resources.GetString("RadCheckBoxVerbindungelemente2.RootElement.ToolTipText")
-        '
-        'RadCheckBoxVerbindungelemente4
-        '
-        resources.ApplyResources(Me.RadCheckBoxVerbindungelemente4, "RadCheckBoxVerbindungelemente4")
-        Me.RadCheckBoxVerbindungelemente4.Name = "RadCheckBoxVerbindungelemente4"
-        '
-        '
-        '
-        Me.RadCheckBoxVerbindungelemente4.RootElement.AccessibleDescription = resources.GetString("RadCheckBoxVerbindungelemente4.RootElement.AccessibleDescription")
-        Me.RadCheckBoxVerbindungelemente4.RootElement.AccessibleName = resources.GetString("RadCheckBoxVerbindungelemente4.RootElement.AccessibleName")
-        Me.RadCheckBoxVerbindungelemente4.RootElement.Alignment = CType(resources.GetObject("RadCheckBoxVerbindungelemente4.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadCheckBoxVerbindungelemente4.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxVerbindungelemente4.RootElement.AngleTransform"), Single)
-        Me.RadCheckBoxVerbindungelemente4.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxVerbindungelemente4.RootElement.FlipText"), Boolean)
-        Me.RadCheckBoxVerbindungelemente4.RootElement.KeyTip = resources.GetString("RadCheckBoxVerbindungelemente4.RootElement.KeyTip")
-        Me.RadCheckBoxVerbindungelemente4.RootElement.Margin = CType(resources.GetObject("RadCheckBoxVerbindungelemente4.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadCheckBoxVerbindungelemente4.RootElement.Text = resources.GetString("RadCheckBoxVerbindungelemente4.RootElement.Text")
-        Me.RadCheckBoxVerbindungelemente4.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxVerbindungelemente4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadCheckBoxVerbindungelemente4.RootElement.ToolTipText = resources.GetString("RadCheckBoxVerbindungelemente4.RootElement.ToolTipText")
+        Me.RadLabel10.RootElement.TextOrientation = CType(resources.GetObject("RadLabel10.RootElement.TextOrientation"),System.Windows.Forms.Orientation)
         '
         'RadGroupBoxAuswerteGeraete
         '
-        resources.ApplyResources(Me.RadGroupBoxAuswerteGeraete, "RadGroupBoxAuswerteGeraete")
         Me.RadGroupBoxAuswerteGeraete.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
-        Me.RadGroupBoxAuswerteGeraete.Controls.Add(Me.Label2)
-        Me.RadGroupBoxAuswerteGeraete.Controls.Add(Me.Label1)
-        Me.RadGroupBoxAuswerteGeraete.Controls.Add(Me.lblPflichtfeld1)
+        resources.ApplyResources(Me.RadGroupBoxAuswerteGeraete, "RadGroupBoxAuswerteGeraete")
+        Me.RadGroupBoxAuswerteGeraete.Controls.Add(Me.RadSeparator13)
+        Me.RadGroupBoxAuswerteGeraete.Controls.Add(Me.RadLabel17)
+        Me.RadGroupBoxAuswerteGeraete.Controls.Add(Me.RadSeparator12)
+        Me.RadGroupBoxAuswerteGeraete.Controls.Add(Me.RadLabel9)
         Me.RadGroupBoxAuswerteGeraete.Controls.Add(Me.RadSeparator2)
         Me.RadGroupBoxAuswerteGeraete.Controls.Add(Me.RadSeparator1)
         Me.RadGroupBoxAuswerteGeraete.Controls.Add(Me.RadLabel1)
         Me.RadGroupBoxAuswerteGeraete.Controls.Add(Me.RadLabel4)
         Me.RadGroupBoxAuswerteGeraete.Controls.Add(Me.RadLabel2)
-        Me.RadGroupBoxAuswerteGeraete.Controls.Add(Me.RadCheckBoxAWG1)
-        Me.RadGroupBoxAuswerteGeraete.Controls.Add(Me.RadCheckBoxAWG3)
-        Me.RadGroupBoxAuswerteGeraete.Controls.Add(Me.RadCheckBoxAWG2)
         Me.RadGroupBoxAuswerteGeraete.Name = "RadGroupBoxAuswerteGeraete"
         '
         '
         '
         Me.RadGroupBoxAuswerteGeraete.RootElement.AccessibleDescription = resources.GetString("RadGroupBoxAuswerteGeraete.RootElement.AccessibleDescription")
         Me.RadGroupBoxAuswerteGeraete.RootElement.AccessibleName = resources.GetString("RadGroupBoxAuswerteGeraete.RootElement.AccessibleName")
-        Me.RadGroupBoxAuswerteGeraete.RootElement.Alignment = CType(resources.GetObject("RadGroupBoxAuswerteGeraete.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadGroupBoxAuswerteGeraete.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBoxAuswerteGeraete.RootElement.AngleTransform"), Single)
-        Me.RadGroupBoxAuswerteGeraete.RootElement.FlipText = CType(resources.GetObject("RadGroupBoxAuswerteGeraete.RootElement.FlipText"), Boolean)
-        Me.RadGroupBoxAuswerteGeraete.RootElement.KeyTip = resources.GetString("RadGroupBoxAuswerteGeraete.RootElement.KeyTip")
-        Me.RadGroupBoxAuswerteGeraete.RootElement.Margin = CType(resources.GetObject("RadGroupBoxAuswerteGeraete.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadGroupBoxAuswerteGeraete.RootElement.Alignment = CType(resources.GetObject("RadGroupBoxAuswerteGeraete.RootElement.Alignment"),System.Drawing.ContentAlignment)
+        Me.RadGroupBoxAuswerteGeraete.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBoxAuswerteGeraete.RootElement.AngleTransform"),Single)
+        Me.RadGroupBoxAuswerteGeraete.RootElement.FlipText = CType(resources.GetObject("RadGroupBoxAuswerteGeraete.RootElement.FlipText"),Boolean)
+        Me.RadGroupBoxAuswerteGeraete.RootElement.Margin = CType(resources.GetObject("RadGroupBoxAuswerteGeraete.RootElement.Margin"),System.Windows.Forms.Padding)
         Me.RadGroupBoxAuswerteGeraete.RootElement.Text = resources.GetString("RadGroupBoxAuswerteGeraete.RootElement.Text")
-        Me.RadGroupBoxAuswerteGeraete.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxAuswerteGeraete.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadGroupBoxAuswerteGeraete.RootElement.ToolTipText = resources.GetString("RadGroupBoxAuswerteGeraete.RootElement.ToolTipText")
+        Me.RadGroupBoxAuswerteGeraete.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxAuswerteGeraete.RootElement.TextOrientation"),System.Windows.Forms.Orientation)
         Me.RadGroupBoxAuswerteGeraete.ThemeName = "Telerik.WinControls.UI.RadGroupBox"
-        '
-        'Label2
-        '
-        resources.ApplyResources(Me.Label2, "Label2")
-        Me.Label2.ForeColor = System.Drawing.Color.Red
-        Me.Label2.Name = "Label2"
-        '
-        'Label1
-        '
-        resources.ApplyResources(Me.Label1, "Label1")
-        Me.Label1.ForeColor = System.Drawing.Color.Red
-        Me.Label1.Name = "Label1"
-        '
-        'lblPflichtfeld1
-        '
-        resources.ApplyResources(Me.lblPflichtfeld1, "lblPflichtfeld1")
-        Me.lblPflichtfeld1.ForeColor = System.Drawing.Color.Red
-        Me.lblPflichtfeld1.Name = "lblPflichtfeld1"
         '
         'RadSeparator2
         '
@@ -1013,16 +607,14 @@ Partial Class uco_5Beschaffenheitspruefung
         '
         Me.RadSeparator2.RootElement.AccessibleDescription = resources.GetString("RadSeparator2.RootElement.AccessibleDescription")
         Me.RadSeparator2.RootElement.AccessibleName = resources.GetString("RadSeparator2.RootElement.AccessibleName")
-        Me.RadSeparator2.RootElement.Alignment = CType(resources.GetObject("RadSeparator2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadSeparator2.RootElement.AngleTransform = CType(resources.GetObject("RadSeparator2.RootElement.AngleTransform"), Single)
-        Me.RadSeparator2.RootElement.FlipText = CType(resources.GetObject("RadSeparator2.RootElement.FlipText"), Boolean)
-        Me.RadSeparator2.RootElement.KeyTip = resources.GetString("RadSeparator2.RootElement.KeyTip")
-        Me.RadSeparator2.RootElement.Margin = CType(resources.GetObject("RadSeparator2.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadSeparator2.RootElement.Alignment = CType(resources.GetObject("RadSeparator2.RootElement.Alignment"),System.Drawing.ContentAlignment)
+        Me.RadSeparator2.RootElement.AngleTransform = CType(resources.GetObject("RadSeparator2.RootElement.AngleTransform"),Single)
+        Me.RadSeparator2.RootElement.FlipText = CType(resources.GetObject("RadSeparator2.RootElement.FlipText"),Boolean)
+        Me.RadSeparator2.RootElement.Margin = CType(resources.GetObject("RadSeparator2.RootElement.Margin"),System.Windows.Forms.Padding)
         Me.RadSeparator2.RootElement.Text = resources.GetString("RadSeparator2.RootElement.Text")
-        Me.RadSeparator2.RootElement.TextOrientation = CType(resources.GetObject("RadSeparator2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadSeparator2.RootElement.ToolTipText = resources.GetString("RadSeparator2.RootElement.ToolTipText")
-        Me.RadSeparator2.ShowShadow = False
-        Me.RadSeparator2.TabStop = False
+        Me.RadSeparator2.RootElement.TextOrientation = CType(resources.GetObject("RadSeparator2.RootElement.TextOrientation"),System.Windows.Forms.Orientation)
+        Me.RadSeparator2.ShowShadow = false
+        Me.RadSeparator2.TabStop = false
         '
         'RadSeparator1
         '
@@ -1033,16 +625,14 @@ Partial Class uco_5Beschaffenheitspruefung
         '
         Me.RadSeparator1.RootElement.AccessibleDescription = resources.GetString("RadSeparator1.RootElement.AccessibleDescription")
         Me.RadSeparator1.RootElement.AccessibleName = resources.GetString("RadSeparator1.RootElement.AccessibleName")
-        Me.RadSeparator1.RootElement.Alignment = CType(resources.GetObject("RadSeparator1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadSeparator1.RootElement.AngleTransform = CType(resources.GetObject("RadSeparator1.RootElement.AngleTransform"), Single)
-        Me.RadSeparator1.RootElement.FlipText = CType(resources.GetObject("RadSeparator1.RootElement.FlipText"), Boolean)
-        Me.RadSeparator1.RootElement.KeyTip = resources.GetString("RadSeparator1.RootElement.KeyTip")
-        Me.RadSeparator1.RootElement.Margin = CType(resources.GetObject("RadSeparator1.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadSeparator1.RootElement.Alignment = CType(resources.GetObject("RadSeparator1.RootElement.Alignment"),System.Drawing.ContentAlignment)
+        Me.RadSeparator1.RootElement.AngleTransform = CType(resources.GetObject("RadSeparator1.RootElement.AngleTransform"),Single)
+        Me.RadSeparator1.RootElement.FlipText = CType(resources.GetObject("RadSeparator1.RootElement.FlipText"),Boolean)
+        Me.RadSeparator1.RootElement.Margin = CType(resources.GetObject("RadSeparator1.RootElement.Margin"),System.Windows.Forms.Padding)
         Me.RadSeparator1.RootElement.Text = resources.GetString("RadSeparator1.RootElement.Text")
-        Me.RadSeparator1.RootElement.TextOrientation = CType(resources.GetObject("RadSeparator1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadSeparator1.RootElement.ToolTipText = resources.GetString("RadSeparator1.RootElement.ToolTipText")
-        Me.RadSeparator1.ShowShadow = False
-        Me.RadSeparator1.TabStop = False
+        Me.RadSeparator1.RootElement.TextOrientation = CType(resources.GetObject("RadSeparator1.RootElement.TextOrientation"),System.Windows.Forms.Orientation)
+        Me.RadSeparator1.ShowShadow = false
+        Me.RadSeparator1.TabStop = false
         '
         'RadLabel1
         '
@@ -1053,14 +643,12 @@ Partial Class uco_5Beschaffenheitspruefung
         '
         Me.RadLabel1.RootElement.AccessibleDescription = resources.GetString("RadLabel1.RootElement.AccessibleDescription")
         Me.RadLabel1.RootElement.AccessibleName = resources.GetString("RadLabel1.RootElement.AccessibleName")
-        Me.RadLabel1.RootElement.Alignment = CType(resources.GetObject("RadLabel1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadLabel1.RootElement.AngleTransform = CType(resources.GetObject("RadLabel1.RootElement.AngleTransform"), Single)
-        Me.RadLabel1.RootElement.FlipText = CType(resources.GetObject("RadLabel1.RootElement.FlipText"), Boolean)
-        Me.RadLabel1.RootElement.KeyTip = resources.GetString("RadLabel1.RootElement.KeyTip")
-        Me.RadLabel1.RootElement.Margin = CType(resources.GetObject("RadLabel1.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadLabel1.RootElement.Alignment = CType(resources.GetObject("RadLabel1.RootElement.Alignment"),System.Drawing.ContentAlignment)
+        Me.RadLabel1.RootElement.AngleTransform = CType(resources.GetObject("RadLabel1.RootElement.AngleTransform"),Single)
+        Me.RadLabel1.RootElement.FlipText = CType(resources.GetObject("RadLabel1.RootElement.FlipText"),Boolean)
+        Me.RadLabel1.RootElement.Margin = CType(resources.GetObject("RadLabel1.RootElement.Margin"),System.Windows.Forms.Padding)
         Me.RadLabel1.RootElement.Text = resources.GetString("RadLabel1.RootElement.Text")
-        Me.RadLabel1.RootElement.TextOrientation = CType(resources.GetObject("RadLabel1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel1.RootElement.ToolTipText = resources.GetString("RadLabel1.RootElement.ToolTipText")
+        Me.RadLabel1.RootElement.TextOrientation = CType(resources.GetObject("RadLabel1.RootElement.TextOrientation"),System.Windows.Forms.Orientation)
         '
         'RadLabel4
         '
@@ -1071,14 +659,12 @@ Partial Class uco_5Beschaffenheitspruefung
         '
         Me.RadLabel4.RootElement.AccessibleDescription = resources.GetString("RadLabel4.RootElement.AccessibleDescription")
         Me.RadLabel4.RootElement.AccessibleName = resources.GetString("RadLabel4.RootElement.AccessibleName")
-        Me.RadLabel4.RootElement.Alignment = CType(resources.GetObject("RadLabel4.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadLabel4.RootElement.AngleTransform = CType(resources.GetObject("RadLabel4.RootElement.AngleTransform"), Single)
-        Me.RadLabel4.RootElement.FlipText = CType(resources.GetObject("RadLabel4.RootElement.FlipText"), Boolean)
-        Me.RadLabel4.RootElement.KeyTip = resources.GetString("RadLabel4.RootElement.KeyTip")
-        Me.RadLabel4.RootElement.Margin = CType(resources.GetObject("RadLabel4.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadLabel4.RootElement.Alignment = CType(resources.GetObject("RadLabel4.RootElement.Alignment"),System.Drawing.ContentAlignment)
+        Me.RadLabel4.RootElement.AngleTransform = CType(resources.GetObject("RadLabel4.RootElement.AngleTransform"),Single)
+        Me.RadLabel4.RootElement.FlipText = CType(resources.GetObject("RadLabel4.RootElement.FlipText"),Boolean)
+        Me.RadLabel4.RootElement.Margin = CType(resources.GetObject("RadLabel4.RootElement.Margin"),System.Windows.Forms.Padding)
         Me.RadLabel4.RootElement.Text = resources.GetString("RadLabel4.RootElement.Text")
-        Me.RadLabel4.RootElement.TextOrientation = CType(resources.GetObject("RadLabel4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel4.RootElement.ToolTipText = resources.GetString("RadLabel4.RootElement.ToolTipText")
+        Me.RadLabel4.RootElement.TextOrientation = CType(resources.GetObject("RadLabel4.RootElement.TextOrientation"),System.Windows.Forms.Orientation)
         '
         'RadLabel2
         '
@@ -1089,68 +675,154 @@ Partial Class uco_5Beschaffenheitspruefung
         '
         Me.RadLabel2.RootElement.AccessibleDescription = resources.GetString("RadLabel2.RootElement.AccessibleDescription")
         Me.RadLabel2.RootElement.AccessibleName = resources.GetString("RadLabel2.RootElement.AccessibleName")
-        Me.RadLabel2.RootElement.Alignment = CType(resources.GetObject("RadLabel2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadLabel2.RootElement.AngleTransform = CType(resources.GetObject("RadLabel2.RootElement.AngleTransform"), Single)
-        Me.RadLabel2.RootElement.FlipText = CType(resources.GetObject("RadLabel2.RootElement.FlipText"), Boolean)
-        Me.RadLabel2.RootElement.KeyTip = resources.GetString("RadLabel2.RootElement.KeyTip")
-        Me.RadLabel2.RootElement.Margin = CType(resources.GetObject("RadLabel2.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadLabel2.RootElement.Alignment = CType(resources.GetObject("RadLabel2.RootElement.Alignment"),System.Drawing.ContentAlignment)
+        Me.RadLabel2.RootElement.AngleTransform = CType(resources.GetObject("RadLabel2.RootElement.AngleTransform"),Single)
+        Me.RadLabel2.RootElement.FlipText = CType(resources.GetObject("RadLabel2.RootElement.FlipText"),Boolean)
+        Me.RadLabel2.RootElement.Margin = CType(resources.GetObject("RadLabel2.RootElement.Margin"),System.Windows.Forms.Padding)
         Me.RadLabel2.RootElement.Text = resources.GetString("RadLabel2.RootElement.Text")
-        Me.RadLabel2.RootElement.TextOrientation = CType(resources.GetObject("RadLabel2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadLabel2.RootElement.ToolTipText = resources.GetString("RadLabel2.RootElement.ToolTipText")
+        Me.RadLabel2.RootElement.TextOrientation = CType(resources.GetObject("RadLabel2.RootElement.TextOrientation"),System.Windows.Forms.Orientation)
         '
-        'RadCheckBoxAWG1
+        'RadSeparator12
         '
-        resources.ApplyResources(Me.RadCheckBoxAWG1, "RadCheckBoxAWG1")
-        Me.RadCheckBoxAWG1.Name = "RadCheckBoxAWG1"
-        '
-        '
-        '
-        Me.RadCheckBoxAWG1.RootElement.AccessibleDescription = resources.GetString("RadCheckBoxAWG1.RootElement.AccessibleDescription")
-        Me.RadCheckBoxAWG1.RootElement.AccessibleName = resources.GetString("RadCheckBoxAWG1.RootElement.AccessibleName")
-        Me.RadCheckBoxAWG1.RootElement.Alignment = CType(resources.GetObject("RadCheckBoxAWG1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadCheckBoxAWG1.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxAWG1.RootElement.AngleTransform"), Single)
-        Me.RadCheckBoxAWG1.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxAWG1.RootElement.FlipText"), Boolean)
-        Me.RadCheckBoxAWG1.RootElement.KeyTip = resources.GetString("RadCheckBoxAWG1.RootElement.KeyTip")
-        Me.RadCheckBoxAWG1.RootElement.Margin = CType(resources.GetObject("RadCheckBoxAWG1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadCheckBoxAWG1.RootElement.Text = resources.GetString("RadCheckBoxAWG1.RootElement.Text")
-        Me.RadCheckBoxAWG1.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxAWG1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadCheckBoxAWG1.RootElement.ToolTipText = resources.GetString("RadCheckBoxAWG1.RootElement.ToolTipText")
-        '
-        'RadCheckBoxAWG3
-        '
-        resources.ApplyResources(Me.RadCheckBoxAWG3, "RadCheckBoxAWG3")
-        Me.RadCheckBoxAWG3.Name = "RadCheckBoxAWG3"
+        resources.ApplyResources(Me.RadSeparator12, "RadSeparator12")
+        Me.RadSeparator12.Name = "RadSeparator12"
         '
         '
         '
-        Me.RadCheckBoxAWG3.RootElement.AccessibleDescription = resources.GetString("RadCheckBoxAWG3.RootElement.AccessibleDescription")
-        Me.RadCheckBoxAWG3.RootElement.AccessibleName = resources.GetString("RadCheckBoxAWG3.RootElement.AccessibleName")
-        Me.RadCheckBoxAWG3.RootElement.Alignment = CType(resources.GetObject("RadCheckBoxAWG3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadCheckBoxAWG3.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxAWG3.RootElement.AngleTransform"), Single)
-        Me.RadCheckBoxAWG3.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxAWG3.RootElement.FlipText"), Boolean)
-        Me.RadCheckBoxAWG3.RootElement.KeyTip = resources.GetString("RadCheckBoxAWG3.RootElement.KeyTip")
-        Me.RadCheckBoxAWG3.RootElement.Margin = CType(resources.GetObject("RadCheckBoxAWG3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadCheckBoxAWG3.RootElement.Text = resources.GetString("RadCheckBoxAWG3.RootElement.Text")
-        Me.RadCheckBoxAWG3.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxAWG3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadCheckBoxAWG3.RootElement.ToolTipText = resources.GetString("RadCheckBoxAWG3.RootElement.ToolTipText")
+        Me.RadSeparator12.RootElement.AccessibleDescription = resources.GetString("RadSeparator12.RootElement.AccessibleDescription")
+        Me.RadSeparator12.RootElement.AccessibleName = resources.GetString("RadSeparator12.RootElement.AccessibleName")
+        Me.RadSeparator12.RootElement.Alignment = CType(resources.GetObject("RadSeparator12.RootElement.Alignment"),System.Drawing.ContentAlignment)
+        Me.RadSeparator12.RootElement.AngleTransform = CType(resources.GetObject("RadSeparator12.RootElement.AngleTransform"),Single)
+        Me.RadSeparator12.RootElement.FlipText = CType(resources.GetObject("RadSeparator12.RootElement.FlipText"),Boolean)
+        Me.RadSeparator12.RootElement.Margin = CType(resources.GetObject("RadSeparator12.RootElement.Margin"),System.Windows.Forms.Padding)
+        Me.RadSeparator12.RootElement.Text = resources.GetString("RadSeparator12.RootElement.Text")
+        Me.RadSeparator12.RootElement.TextOrientation = CType(resources.GetObject("RadSeparator12.RootElement.TextOrientation"),System.Windows.Forms.Orientation)
+        Me.RadSeparator12.ShowShadow = false
+        Me.RadSeparator12.TabStop = false
         '
-        'RadCheckBoxAWG2
+        'RadLabel9
         '
-        resources.ApplyResources(Me.RadCheckBoxAWG2, "RadCheckBoxAWG2")
-        Me.RadCheckBoxAWG2.Name = "RadCheckBoxAWG2"
+        resources.ApplyResources(Me.RadLabel9, "RadLabel9")
+        Me.RadLabel9.Name = "RadLabel9"
         '
         '
         '
-        Me.RadCheckBoxAWG2.RootElement.AccessibleDescription = resources.GetString("RadCheckBoxAWG2.RootElement.AccessibleDescription")
-        Me.RadCheckBoxAWG2.RootElement.AccessibleName = resources.GetString("RadCheckBoxAWG2.RootElement.AccessibleName")
-        Me.RadCheckBoxAWG2.RootElement.Alignment = CType(resources.GetObject("RadCheckBoxAWG2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadCheckBoxAWG2.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxAWG2.RootElement.AngleTransform"), Single)
-        Me.RadCheckBoxAWG2.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxAWG2.RootElement.FlipText"), Boolean)
-        Me.RadCheckBoxAWG2.RootElement.KeyTip = resources.GetString("RadCheckBoxAWG2.RootElement.KeyTip")
-        Me.RadCheckBoxAWG2.RootElement.Margin = CType(resources.GetObject("RadCheckBoxAWG2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadCheckBoxAWG2.RootElement.Text = resources.GetString("RadCheckBoxAWG2.RootElement.Text")
-        Me.RadCheckBoxAWG2.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxAWG2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadCheckBoxAWG2.RootElement.ToolTipText = resources.GetString("RadCheckBoxAWG2.RootElement.ToolTipText")
+        Me.RadLabel9.RootElement.AccessibleDescription = resources.GetString("RadLabel9.RootElement.AccessibleDescription")
+        Me.RadLabel9.RootElement.AccessibleName = resources.GetString("RadLabel9.RootElement.AccessibleName")
+        Me.RadLabel9.RootElement.Alignment = CType(resources.GetObject("RadLabel9.RootElement.Alignment"),System.Drawing.ContentAlignment)
+        Me.RadLabel9.RootElement.AngleTransform = CType(resources.GetObject("RadLabel9.RootElement.AngleTransform"),Single)
+        Me.RadLabel9.RootElement.FlipText = CType(resources.GetObject("RadLabel9.RootElement.FlipText"),Boolean)
+        Me.RadLabel9.RootElement.Margin = CType(resources.GetObject("RadLabel9.RootElement.Margin"),System.Windows.Forms.Padding)
+        Me.RadLabel9.RootElement.Text = resources.GetString("RadLabel9.RootElement.Text")
+        Me.RadLabel9.RootElement.TextOrientation = CType(resources.GetObject("RadLabel9.RootElement.TextOrientation"),System.Windows.Forms.Orientation)
+        '
+        'RadSeparator13
+        '
+        resources.ApplyResources(Me.RadSeparator13, "RadSeparator13")
+        Me.RadSeparator13.Name = "RadSeparator13"
+        '
+        '
+        '
+        Me.RadSeparator13.RootElement.AccessibleDescription = resources.GetString("RadSeparator13.RootElement.AccessibleDescription")
+        Me.RadSeparator13.RootElement.AccessibleName = resources.GetString("RadSeparator13.RootElement.AccessibleName")
+        Me.RadSeparator13.RootElement.Alignment = CType(resources.GetObject("RadSeparator13.RootElement.Alignment"),System.Drawing.ContentAlignment)
+        Me.RadSeparator13.RootElement.AngleTransform = CType(resources.GetObject("RadSeparator13.RootElement.AngleTransform"),Single)
+        Me.RadSeparator13.RootElement.FlipText = CType(resources.GetObject("RadSeparator13.RootElement.FlipText"),Boolean)
+        Me.RadSeparator13.RootElement.Margin = CType(resources.GetObject("RadSeparator13.RootElement.Margin"),System.Windows.Forms.Padding)
+        Me.RadSeparator13.RootElement.Text = resources.GetString("RadSeparator13.RootElement.Text")
+        Me.RadSeparator13.RootElement.TextOrientation = CType(resources.GetObject("RadSeparator13.RootElement.TextOrientation"),System.Windows.Forms.Orientation)
+        Me.RadSeparator13.ShowShadow = false
+        Me.RadSeparator13.TabStop = false
+        '
+        'RadLabel17
+        '
+        resources.ApplyResources(Me.RadLabel17, "RadLabel17")
+        Me.RadLabel17.Name = "RadLabel17"
+        '
+        '
+        '
+        Me.RadLabel17.RootElement.AccessibleDescription = resources.GetString("RadLabel17.RootElement.AccessibleDescription")
+        Me.RadLabel17.RootElement.AccessibleName = resources.GetString("RadLabel17.RootElement.AccessibleName")
+        Me.RadLabel17.RootElement.Alignment = CType(resources.GetObject("RadLabel17.RootElement.Alignment"),System.Drawing.ContentAlignment)
+        Me.RadLabel17.RootElement.AngleTransform = CType(resources.GetObject("RadLabel17.RootElement.AngleTransform"),Single)
+        Me.RadLabel17.RootElement.FlipText = CType(resources.GetObject("RadLabel17.RootElement.FlipText"),Boolean)
+        Me.RadLabel17.RootElement.Margin = CType(resources.GetObject("RadLabel17.RootElement.Margin"),System.Windows.Forms.Padding)
+        Me.RadLabel17.RootElement.Text = resources.GetString("RadLabel17.RootElement.Text")
+        Me.RadLabel17.RootElement.TextOrientation = CType(resources.GetObject("RadLabel17.RootElement.TextOrientation"),System.Windows.Forms.Orientation)
+        '
+        'RadSeparator14
+        '
+        resources.ApplyResources(Me.RadSeparator14, "RadSeparator14")
+        Me.RadSeparator14.Name = "RadSeparator14"
+        '
+        '
+        '
+        Me.RadSeparator14.RootElement.AccessibleDescription = resources.GetString("RadSeparator14.RootElement.AccessibleDescription")
+        Me.RadSeparator14.RootElement.AccessibleName = resources.GetString("RadSeparator14.RootElement.AccessibleName")
+        Me.RadSeparator14.RootElement.Alignment = CType(resources.GetObject("RadSeparator14.RootElement.Alignment"),System.Drawing.ContentAlignment)
+        Me.RadSeparator14.RootElement.AngleTransform = CType(resources.GetObject("RadSeparator14.RootElement.AngleTransform"),Single)
+        Me.RadSeparator14.RootElement.FlipText = CType(resources.GetObject("RadSeparator14.RootElement.FlipText"),Boolean)
+        Me.RadSeparator14.RootElement.Margin = CType(resources.GetObject("RadSeparator14.RootElement.Margin"),System.Windows.Forms.Padding)
+        Me.RadSeparator14.RootElement.Text = resources.GetString("RadSeparator14.RootElement.Text")
+        Me.RadSeparator14.RootElement.TextOrientation = CType(resources.GetObject("RadSeparator14.RootElement.TextOrientation"),System.Windows.Forms.Orientation)
+        Me.RadSeparator14.ShowShadow = false
+        Me.RadSeparator14.TabStop = false
+        '
+        'RadLabel19
+        '
+        resources.ApplyResources(Me.RadLabel19, "RadLabel19")
+        Me.RadLabel19.Name = "RadLabel19"
+        '
+        '
+        '
+        Me.RadLabel19.RootElement.AccessibleDescription = resources.GetString("RadLabel19.RootElement.AccessibleDescription")
+        Me.RadLabel19.RootElement.AccessibleName = resources.GetString("RadLabel19.RootElement.AccessibleName")
+        Me.RadLabel19.RootElement.Alignment = CType(resources.GetObject("RadLabel19.RootElement.Alignment"),System.Drawing.ContentAlignment)
+        Me.RadLabel19.RootElement.AngleTransform = CType(resources.GetObject("RadLabel19.RootElement.AngleTransform"),Single)
+        Me.RadLabel19.RootElement.FlipText = CType(resources.GetObject("RadLabel19.RootElement.FlipText"),Boolean)
+        Me.RadLabel19.RootElement.Margin = CType(resources.GetObject("RadLabel19.RootElement.Margin"),System.Windows.Forms.Padding)
+        Me.RadLabel19.RootElement.Text = resources.GetString("RadLabel19.RootElement.Text")
+        Me.RadLabel19.RootElement.TextOrientation = CType(resources.GetObject("RadLabel19.RootElement.TextOrientation"),System.Windows.Forms.Orientation)
+        '
+        'RadCheckBoxApprove
+        '
+        resources.ApplyResources(Me.RadCheckBoxApprove, "RadCheckBoxApprove")
+        Me.RadCheckBoxApprove.Name = "RadCheckBoxApprove"
+        '
+        'RadGroupBoxAufstellbedingungen
+        '
+        Me.RadGroupBoxAufstellbedingungen.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        resources.ApplyResources(Me.RadGroupBoxAufstellbedingungen, "RadGroupBoxAufstellbedingungen")
+        Me.RadGroupBoxAufstellbedingungen.Controls.Add(Me.RadLabel20)
+        Me.RadGroupBoxAufstellbedingungen.Name = "RadGroupBoxAufstellbedingungen"
+        '
+        '
+        '
+        Me.RadGroupBoxAufstellbedingungen.RootElement.AccessibleDescription = resources.GetString("RadGroupBox1.RootElement.AccessibleDescription")
+        Me.RadGroupBoxAufstellbedingungen.RootElement.AccessibleName = resources.GetString("RadGroupBox1.RootElement.AccessibleName")
+        Me.RadGroupBoxAufstellbedingungen.RootElement.Alignment = CType(resources.GetObject("RadGroupBox1.RootElement.Alignment"),System.Drawing.ContentAlignment)
+        Me.RadGroupBoxAufstellbedingungen.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBox1.RootElement.AngleTransform"),Single)
+        Me.RadGroupBoxAufstellbedingungen.RootElement.FlipText = CType(resources.GetObject("RadGroupBox1.RootElement.FlipText"),Boolean)
+        Me.RadGroupBoxAufstellbedingungen.RootElement.Margin = CType(resources.GetObject("RadGroupBox1.RootElement.Margin"),System.Windows.Forms.Padding)
+        Me.RadGroupBoxAufstellbedingungen.RootElement.Text = resources.GetString("RadGroupBox1.RootElement.Text")
+        Me.RadGroupBoxAufstellbedingungen.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBox1.RootElement.TextOrientation"),System.Windows.Forms.Orientation)
+        Me.RadGroupBoxAufstellbedingungen.ThemeName = "Telerik.WinControls.UI.RadGroupBox"
+        '
+        'RadLabel20
+        '
+        resources.ApplyResources(Me.RadLabel20, "RadLabel20")
+        Me.RadLabel20.Name = "RadLabel20"
+        '
+        '
+        '
+        Me.RadLabel20.RootElement.AccessibleDescription = resources.GetString("RadLabel20.RootElement.AccessibleDescription")
+        Me.RadLabel20.RootElement.AccessibleName = resources.GetString("RadLabel20.RootElement.AccessibleName")
+        Me.RadLabel20.RootElement.Alignment = CType(resources.GetObject("RadLabel20.RootElement.Alignment"),System.Drawing.ContentAlignment)
+        Me.RadLabel20.RootElement.AngleTransform = CType(resources.GetObject("RadLabel20.RootElement.AngleTransform"),Single)
+        Me.RadLabel20.RootElement.FlipText = CType(resources.GetObject("RadLabel20.RootElement.FlipText"),Boolean)
+        Me.RadLabel20.RootElement.Margin = CType(resources.GetObject("RadLabel20.RootElement.Margin"),System.Windows.Forms.Padding)
+        Me.RadLabel20.RootElement.Text = resources.GetString("RadLabel20.RootElement.Text")
+        Me.RadLabel20.RootElement.TextOrientation = CType(resources.GetObject("RadLabel20.RootElement.TextOrientation"),System.Windows.Forms.Orientation)
         '
         'uco_5Beschaffenheitspruefung
         '
@@ -1158,80 +830,62 @@ Partial Class uco_5Beschaffenheitspruefung
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.RadScrollablePanel1)
         Me.Name = "uco_5Beschaffenheitspruefung"
-        Me.RadScrollablePanel1.PanelContainer.ResumeLayout(False)
-        CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.RadScrollablePanel1.ResumeLayout(False)
-        CType(Me.RadGroupBoxWaegebruecke, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.RadGroupBoxWaegebruecke.ResumeLayout(False)
-        Me.RadGroupBoxWaegebruecke.PerformLayout()
-        CType(Me.RadSeparator11, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadSeparator10, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel15, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadCheckBoxBruecke1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadCheckBoxBruecke3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadCheckBoxBruecke2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel11, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel13, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadGroupBoxWaegezellen, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.RadGroupBoxWaegezellen.ResumeLayout(False)
-        Me.RadGroupBoxWaegezellen.PerformLayout()
-        CType(Me.RadSeparator6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadSeparator5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadSeparator4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadSeparator3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadCheckBoxWZ1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadCheckBoxWZ2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadCheckBoxWZ4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadCheckBoxWZ3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadCheckBoxWZ5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadGroupBoxVerbindungselemente, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.RadGroupBoxVerbindungselemente.ResumeLayout(False)
-        Me.RadGroupBoxVerbindungselemente.PerformLayout()
-        CType(Me.RadSeparator9, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadSeparator8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadSeparator7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel16, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel14, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel12, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel10, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadCheckBoxVerbindungelemente1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadCheckBoxVerbindungelemente3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadCheckBoxVerbindungelemente2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadCheckBoxVerbindungelemente4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadGroupBoxAuswerteGeraete, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.RadGroupBoxAuswerteGeraete.ResumeLayout(False)
-        Me.RadGroupBoxAuswerteGeraete.PerformLayout()
-        CType(Me.RadSeparator2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadSeparator1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadCheckBoxAWG1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadCheckBoxAWG3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadCheckBoxAWG2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
+        Me.RadScrollablePanel1.PanelContainer.ResumeLayout(false)
+        Me.RadScrollablePanel1.PanelContainer.PerformLayout
+        CType(Me.RadScrollablePanel1,System.ComponentModel.ISupportInitialize).EndInit
+        Me.RadScrollablePanel1.ResumeLayout(false)
+        CType(Me.RadGroupBoxWaegebruecke,System.ComponentModel.ISupportInitialize).EndInit
+        Me.RadGroupBoxWaegebruecke.ResumeLayout(false)
+        Me.RadGroupBoxWaegebruecke.PerformLayout
+        CType(Me.RadSeparator11,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadSeparator10,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadLabel15,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadLabel11,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadLabel13,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadGroupBoxWaegezellen,System.ComponentModel.ISupportInitialize).EndInit
+        Me.RadGroupBoxWaegezellen.ResumeLayout(false)
+        Me.RadGroupBoxWaegezellen.PerformLayout
+        CType(Me.RadSeparator6,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadSeparator5,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadSeparator4,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadSeparator3,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadLabel7,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadLabel5,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadLabel3,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadLabel6,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadLabel8,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadGroupBoxVerbindungselemente,System.ComponentModel.ISupportInitialize).EndInit
+        Me.RadGroupBoxVerbindungselemente.ResumeLayout(false)
+        Me.RadGroupBoxVerbindungselemente.PerformLayout
+        CType(Me.RadSeparator9,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadSeparator8,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadSeparator7,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadLabel16,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadLabel14,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadLabel12,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadLabel10,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadGroupBoxAuswerteGeraete,System.ComponentModel.ISupportInitialize).EndInit
+        Me.RadGroupBoxAuswerteGeraete.ResumeLayout(false)
+        Me.RadGroupBoxAuswerteGeraete.PerformLayout
+        CType(Me.RadSeparator2,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadSeparator1,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadLabel1,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadLabel4,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadLabel2,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadSeparator12,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadLabel9,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadSeparator13,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadLabel17,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadSeparator14,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadLabel19,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadCheckBoxApprove,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadGroupBoxAufstellbedingungen,System.ComponentModel.ISupportInitialize).EndInit
+        Me.RadGroupBoxAufstellbedingungen.ResumeLayout(false)
+        Me.RadGroupBoxAufstellbedingungen.PerformLayout
+        CType(Me.RadLabel20,System.ComponentModel.ISupportInitialize).EndInit
+        Me.ResumeLayout(false)
 
-    End Sub
-    Friend WithEvents RadCheckBoxAWG1 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents RadCheckBoxAWG2 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents RadCheckBoxWZ1 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents RadCheckBoxAWG3 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents RadCheckBoxWZ5 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents RadCheckBoxWZ3 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents RadCheckBoxWZ4 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents RadCheckBoxWZ2 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents RadCheckBoxVerbindungelemente4 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents RadCheckBoxBruecke2 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents RadCheckBoxVerbindungelemente2 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents RadCheckBoxBruecke3 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents RadCheckBoxVerbindungelemente3 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents RadCheckBoxBruecke1 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents RadCheckBoxVerbindungelemente1 As Telerik.WinControls.UI.RadCheckBox
+End Sub
     Friend WithEvents RadLabel1 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel2 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel4 As Telerik.WinControls.UI.RadLabel
@@ -1263,20 +917,14 @@ Partial Class uco_5Beschaffenheitspruefung
     Friend WithEvents RadSeparator11 As Telerik.WinControls.UI.RadSeparator
     Friend WithEvents RadSeparator10 As Telerik.WinControls.UI.RadSeparator
     Friend WithEvents RadScrollablePanel1 As Telerik.WinControls.UI.RadScrollablePanel
-    Friend WithEvents Label14 As System.Windows.Forms.Label
-    Friend WithEvents Label13 As System.Windows.Forms.Label
-    Friend WithEvents Label12 As System.Windows.Forms.Label
-    Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label11 As System.Windows.Forms.Label
-    Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents lblPflichtfeld1 As System.Windows.Forms.Label
+    Friend WithEvents RadSeparator13 As Telerik.WinControls.UI.RadSeparator
+    Friend WithEvents RadLabel17 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents RadSeparator12 As Telerik.WinControls.UI.RadSeparator
+    Friend WithEvents RadLabel9 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents RadGroupBoxAufstellbedingungen As Telerik.WinControls.UI.RadGroupBox
+    Friend WithEvents RadLabel20 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents RadCheckBoxApprove As Telerik.WinControls.UI.RadCheckBox
+    Friend WithEvents RadLabel19 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents RadSeparator14 As Telerik.WinControls.UI.RadSeparator
 
 End Class

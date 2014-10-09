@@ -120,8 +120,6 @@
 
                 dbcontext.ServerEichprotokoll.Remove(TargetObject.ServerEichprotokoll)
                 dbcontext.SaveChanges()
-                dbcontext.ServerBeschaffenheitspruefung.Remove(TargetObject.ServerBeschaffenheitspruefung)
-                dbcontext.SaveChanges()
                 dbcontext.ServerKompatiblitaetsnachweis.Remove(TargetObject.ServerKompatiblitaetsnachweis)
                 dbcontext.SaveChanges()
             End Using

@@ -41,11 +41,6 @@ Partial Public Class Eichprotokoll
     Public Property Verwendungszweck_Druckertyp As String
     Public Property Verwendungszweck_Fahrzeugwaagen_MxM As String
     Public Property Verwendungszweck_Fahrzeugwaagen_Dimension As String
-    Public Property Beschaffenheitspruefung_Genauigkeitsklasse As String
-    Public Property Beschaffenheitspruefung_Pruefintervall As String
-    Public Property Beschaffenheitspruefung_LetztePruefung As String
-    Public Property Beschaffenheitspruefung_Pruefscheinnummer As String
-    Public Property Beschaffenheitspruefung_EichfahrzeugFirma As String
     Public Property GenauigkeitNullstellung_InOrdnung As Nullable(Of Boolean)
     Public Property Ueberlastanzeige_Max As String
     Public Property Ueberlastanzeige_Ueberlast As Nullable(Of Boolean)
@@ -76,6 +71,7 @@ Partial Public Class Eichprotokoll
     Public Property EignungAchlastwaegungen_WaageNichtGeeignet As Nullable(Of Boolean)
     Public Property EignungAchlastwaegungen_Geprueft As Nullable(Of Boolean)
     Public Property Identifikationsdaten_Benutzer As String
+    Public Property Beschaffenheitspruefung_Genehmigt As Nullable(Of Boolean)
 
     Public Overridable Property Lookup_Konformitaetsbewertungsverfahren As Lookup_Konformitaetsbewertungsverfahren
     Public Overridable Property Eichprozess As ICollection(Of Eichprozess) = New HashSet(Of Eichprozess)

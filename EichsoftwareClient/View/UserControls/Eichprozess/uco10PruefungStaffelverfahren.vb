@@ -759,7 +759,7 @@ Inherits ucoContent
             If decAbsoluteFehlergrenze >= CDec(lblStaffel1Bereich1EFGWert7.Text) Then 'eichwerte unterschritten/überschritten
                 AbortSaveing = True
             End If
-        Catch e As Exception
+        Catch ex As Exception
         End Try
         'staffel 2
         Try
