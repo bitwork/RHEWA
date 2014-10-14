@@ -56,4 +56,9 @@
         Dim f As New frmFirmenZusatzdaten
         f.Show()
     End Sub
+
+    Private Sub RadButtonPruefscheinnummersuche_Click(sender As Object, e As EventArgs) Handles RadButtonPruefscheinnummersuche.Click
+        Dim f As New frmPruefscheinnummersuche
+        f.Show()
+    End Sub
 End Class

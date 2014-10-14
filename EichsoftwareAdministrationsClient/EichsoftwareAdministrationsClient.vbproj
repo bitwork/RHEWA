@@ -130,6 +130,21 @@
     <Compile Include="Firmen.vb">
       <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
     </Compile>
+    <Compile Include="ServerEichprotokoll.vb">
+      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServerEichprozess.vb">
+      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServerLookup_Vorgangsstatus.vb">
+      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServerLookup_Waagenart.vb">
+      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServerLookup_Waagentyp.vb">
+      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
+    </Compile>
     <Compile Include="View\frmFirmenZusatzdaten.Designer.vb">
       <DependentUpon>frmFirmenZusatzdaten.vb</DependentUpon>
     </Compile>
@@ -234,6 +249,12 @@
       <DependentUpon>frmAuswahllisteEichmarkenverwaltung.vb</DependentUpon>
     </Compile>
     <Compile Include="View\frmAuswahllisteEichmarkenverwaltung.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Statistiken\frmPruefscheinnummersuche.Designer.vb">
+      <DependentUpon>frmPruefscheinnummersuche.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Statistiken\frmPruefscheinnummersuche.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\Statistiken\frmVerbindungsprotokoll.Designer.vb">
@@ -345,6 +366,9 @@
     <None Include="packages.config" />
     <EmbeddedResource Include="View\frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Statistiken\frmPruefscheinnummersuche.resx">
+      <DependentUpon>frmPruefscheinnummersuche.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Statistiken\frmVerbindungsprotokoll.resx">
       <DependentUpon>frmVerbindungsprotokoll.vb</DependentUpon>
