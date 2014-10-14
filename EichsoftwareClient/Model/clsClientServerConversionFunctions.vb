@@ -153,10 +153,7 @@ Public Class clsClientServerConversionFunctions
         TargetObject._ServerEichprotokoll.Taraeinrichtung_ErweiterteRichtigkeitspruefungOK = SourceObject.Eichprotokoll.Taraeinrichtung_ErweiterteRichtigkeitspruefungOK
         TargetObject._ServerEichprotokoll.Taraeinrichtung_GenauigkeitTarierungOK = SourceObject.Eichprotokoll.Taraeinrichtung_GenauigkeitTarierungOK
         TargetObject._ServerEichprotokoll.Taraeinrichtung_TaraausgleichseinrichtungOK = SourceObject.Eichprotokoll.Taraeinrichtung_TaraausgleichseinrichtungOK
-
         TargetObject._ServerEichprotokoll.Taraeinrichtung_Taraeingabe = SourceObject.Eichprotokoll.Taraeinrichtung_Taraeingabe
-
-
         TargetObject._ServerEichprotokoll.Ueberlastanzeige_Max = SourceObject.Eichprotokoll.Ueberlastanzeige_Max
         TargetObject._ServerEichprotokoll.Ueberlastanzeige_Ueberlast = SourceObject.Eichprotokoll.Ueberlastanzeige_Ueberlast
         TargetObject._ServerEichprotokoll.Verwendungszweck_Automatisch = SourceObject.Eichprotokoll.Verwendungszweck_Automatisch
@@ -172,6 +169,15 @@ Public Class clsClientServerConversionFunctions
         TargetObject._ServerEichprotokoll.Verwendungszweck_PC = SourceObject.Eichprotokoll.Verwendungszweck_PC
         TargetObject._ServerEichprotokoll.Verwendungszweck_ZubehoerVerschiedenes = SourceObject.Eichprotokoll.Verwendungszweck_ZubehoerVerschiedenes
         TargetObject._ServerEichprotokoll.Wiederholbarkeit_Staffelverfahren_MINNormalien = SourceObject.Eichprotokoll.Wiederholbarkeit_Staffelverfahren_MINNormalien
+
+        TargetObject._ServerEichprotokoll.Beschaffenheitspruefung_Genauigkeitsklasse = SourceObject.Eichprotokoll.Beschaffenheitspruefung_Genauigkeitsklasse
+        TargetObject._ServerEichprotokoll.Beschaffenheitspruefung_Pruefintervall = SourceObject.Eichprotokoll.Beschaffenheitspruefung_Pruefintervall
+        TargetObject._ServerEichprotokoll.Beschaffenheitspruefung_LetztePruefung = SourceObject.Eichprotokoll.Beschaffenheitspruefung_LetztePruefung
+        TargetObject._ServerEichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer = SourceObject.Eichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer
+        TargetObject._ServerEichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma = SourceObject.Eichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma
+
+
+
 
         'prüfungen übertragen. je nach Modus aus Client SDF laden oder aus Speicher laden (Serverobjekt)
         UeberschreibePruefungen(pModus, TargetObject, SourceObject)
@@ -303,6 +309,14 @@ Public Class clsClientServerConversionFunctions
         TargetObject.Eichprotokoll.Verwendungszweck_PC = SourceObject._ServerEichprotokoll.Verwendungszweck_PC
         TargetObject.Eichprotokoll.Verwendungszweck_ZubehoerVerschiedenes = SourceObject._ServerEichprotokoll.Verwendungszweck_ZubehoerVerschiedenes
         TargetObject.Eichprotokoll.Wiederholbarkeit_Staffelverfahren_MINNormalien = SourceObject._ServerEichprotokoll.Wiederholbarkeit_Staffelverfahren_MINNormalien
+
+        TargetObject.Eichprotokoll.Beschaffenheitspruefung_Genauigkeitsklasse = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_Genauigkeitsklasse
+        TargetObject.Eichprotokoll.Beschaffenheitspruefung_Pruefintervall = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_Pruefintervall
+        TargetObject.Eichprotokoll.Beschaffenheitspruefung_LetztePruefung = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_LetztePruefung
+        TargetObject.Eichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer
+        TargetObject.Eichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma
+
+
 
         'verfahren
         'TargetObject.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren = New Lookup_Konformitaetsbewertungsverfahren
@@ -734,7 +748,11 @@ Public Class clsClientServerConversionFunctions
         TargetObject.Eichprotokoll.Verwendungszweck_PC = SourceObject._ServerEichprotokoll.Verwendungszweck_PC
         TargetObject.Eichprotokoll.Verwendungszweck_ZubehoerVerschiedenes = SourceObject._ServerEichprotokoll.Verwendungszweck_ZubehoerVerschiedenes
         TargetObject.Eichprotokoll.Wiederholbarkeit_Staffelverfahren_MINNormalien = SourceObject._ServerEichprotokoll.Wiederholbarkeit_Staffelverfahren_MINNormalien
-
+        TargetObject.Eichprotokoll.Beschaffenheitspruefung_Genauigkeitsklasse = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_Genauigkeitsklasse
+        TargetObject.Eichprotokoll.Beschaffenheitspruefung_Pruefintervall = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_Pruefintervall
+        TargetObject.Eichprotokoll.Beschaffenheitspruefung_LetztePruefung = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_LetztePruefung
+        TargetObject.Eichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer
+        TargetObject.Eichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma
         Return TargetObject
     End Function
 
@@ -1126,7 +1144,11 @@ Public Class clsClientServerConversionFunctions
         TargetObject.Eichprotokoll.Verwendungszweck_PC = SourceObject._ServerEichprotokoll.Verwendungszweck_PC
         TargetObject.Eichprotokoll.Verwendungszweck_ZubehoerVerschiedenes = SourceObject._ServerEichprotokoll.Verwendungszweck_ZubehoerVerschiedenes
         TargetObject.Eichprotokoll.Wiederholbarkeit_Staffelverfahren_MINNormalien = SourceObject._ServerEichprotokoll.Wiederholbarkeit_Staffelverfahren_MINNormalien
-
+        TargetObject.Eichprotokoll.Beschaffenheitspruefung_Genauigkeitsklasse = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_Genauigkeitsklasse
+        TargetObject.Eichprotokoll.Beschaffenheitspruefung_Pruefintervall = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_Pruefintervall
+        TargetObject.Eichprotokoll.Beschaffenheitspruefung_LetztePruefung = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_LetztePruefung
+        TargetObject.Eichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer
+        TargetObject.Eichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma = SourceObject._ServerEichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma
       
         'prüfungen
         Try

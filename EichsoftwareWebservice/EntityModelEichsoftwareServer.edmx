@@ -274,6 +274,11 @@
           <Property Name="Sicherung_Eichsiegel13x13Anzahl" Type="smallint" />
           <Property Name="Sicherung_EichsiegelRund" Type="bit" />
           <Property Name="Sicherung_EichsiegelRundAnzahl" Type="smallint" />
+          <Property Name="Beschaffenheitspruefung_Genauigkeitsklasse" Type="nvarchar" MaxLength="50" />
+          <Property Name="Beschaffenheitspruefung_Pruefintervall" Type="nvarchar" MaxLength="50" />
+          <Property Name="Beschaffenheitspruefung_LetztePruefung" Type="nvarchar" MaxLength="50" />
+          <Property Name="Beschaffenheitspruefung_Pruefscheinnummer" Type="nvarchar" MaxLength="50" />
+          <Property Name="Beschaffenheitspruefung_EichfahrzeugFirma" Type="nvarchar" MaxLength="50" />
           <Property Name="Sicherung_HinweismarkeGelocht" Type="bit" />
           <Property Name="Sicherung_HinweismarkeGelochtAnzahl" Type="smallint" />
           <Property Name="Sicherung_GruenesM" Type="bit" />
@@ -1274,6 +1279,11 @@
           <Property Type="String" Name="Identifikationsdaten_Benutzer" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="Boolean" Name="Beschaffenheitspruefung_Genehmigt" />
           <Property Type="Boolean" Name="Taraeinrichtung_Taraeingabe" />
+          <Property Type="String" Name="Beschaffenheitspruefung_Genauigkeitsklasse" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Beschaffenheitspruefung_Pruefintervall" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Beschaffenheitspruefung_LetztePruefung" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Beschaffenheitspruefung_Pruefscheinnummer" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Beschaffenheitspruefung_EichfahrzeugFirma" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="ServerEichprozess">
           <Key>
@@ -2099,6 +2109,11 @@
           <EntitySetMapping Name="ServerEichprotokoll">
             <EntityTypeMapping TypeName="EichenSQLDatabaseModel.ServerEichprotokoll">
               <MappingFragment StoreEntitySet="ServerEichprotokoll">
+                <ScalarProperty Name="Beschaffenheitspruefung_EichfahrzeugFirma" ColumnName="Beschaffenheitspruefung_EichfahrzeugFirma" />
+                <ScalarProperty Name="Beschaffenheitspruefung_Pruefscheinnummer" ColumnName="Beschaffenheitspruefung_Pruefscheinnummer" />
+                <ScalarProperty Name="Beschaffenheitspruefung_LetztePruefung" ColumnName="Beschaffenheitspruefung_LetztePruefung" />
+                <ScalarProperty Name="Beschaffenheitspruefung_Pruefintervall" ColumnName="Beschaffenheitspruefung_Pruefintervall" />
+                <ScalarProperty Name="Beschaffenheitspruefung_Genauigkeitsklasse" ColumnName="Beschaffenheitspruefung_Genauigkeitsklasse" />
                 <ScalarProperty Name="Taraeinrichtung_Taraeingabe" ColumnName="Taraeinrichtung_Taraeingabe" />
                 <ScalarProperty Name="Beschaffenheitspruefung_Genehmigt" ColumnName="Beschaffenheitspruefung_Genehmigt" />
                 <ScalarProperty Name="Identifikationsdaten_Benutzer" ColumnName="Identifikationsdaten_Benutzer" />

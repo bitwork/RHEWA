@@ -84,7 +84,12 @@
   <xs:element name="ServerEichprozess" nillable="true" type="tns:ServerEichprozess" />
   <xs:complexType name="ServerEichprotokoll">
     <xs:sequence>
+      <xs:element minOccurs="0" name="Beschaffenheitspruefung_EichfahrzeugFirma" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Beschaffenheitspruefung_Genauigkeitsklasse" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Beschaffenheitspruefung_Genehmigt" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Beschaffenheitspruefung_LetztePruefung" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Beschaffenheitspruefung_Pruefintervall" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Beschaffenheitspruefung_Pruefscheinnummer" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="EignungAchlastwaegungen_Geprueft" nillable="true" type="xs:boolean" />
       <xs:element minOccurs="0" name="EignungAchlastwaegungen_WaageNichtGeeignet" nillable="true" type="xs:boolean" />
       <xs:element minOccurs="0" name="EignungAchlastwaegungen_WaagenbrueckeEbene" nillable="true" type="xs:boolean" />

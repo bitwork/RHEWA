@@ -73,6 +73,11 @@ Partial Public Class ServerEichprotokoll
     Public Property Identifikationsdaten_Benutzer As String
     Public Property Beschaffenheitspruefung_Genehmigt As Nullable(Of Boolean)
     Public Property Taraeinrichtung_Taraeingabe As Nullable(Of Boolean)
+    Public Property Beschaffenheitspruefung_Genauigkeitsklasse As String
+    Public Property Beschaffenheitspruefung_Pruefintervall As String
+    Public Property Beschaffenheitspruefung_LetztePruefung As String
+    Public Property Beschaffenheitspruefung_Pruefscheinnummer As String
+    Public Property Beschaffenheitspruefung_EichfahrzeugFirma As String
 
     Public Overridable Property ServerLookup_Konformitaetsbewertungsverfahren As ServerLookup_Konformitaetsbewertungsverfahren
     Public Overridable Property ServerEichprozess As ICollection(Of ServerEichprozess) = New HashSet(Of ServerEichprozess)

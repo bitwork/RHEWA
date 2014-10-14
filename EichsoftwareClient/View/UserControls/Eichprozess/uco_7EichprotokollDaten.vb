@@ -345,7 +345,11 @@
             End If
         End If
 
-
+        If Not objEichprozess.Eichprotokoll.Beschaffenheitspruefung_Genauigkeitsklasse Is Nothing Then RadTextBoxControlNormalienGenauigkeitsklasse.Text = objEichprozess.Eichprotokoll.Beschaffenheitspruefung_Genauigkeitsklasse
+        If Not objEichprozess.Eichprotokoll.Beschaffenheitspruefung_Pruefintervall Is Nothing Then RadTextBoxControlNormalienPruefintervall.Text = objEichprozess.Eichprotokoll.Beschaffenheitspruefung_Pruefintervall
+        If Not objEichprozess.Eichprotokoll.Beschaffenheitspruefung_LetztePruefung Is Nothing Then RadDateTimePickerNormalienLetztePruefung.Text = objEichprozess.Eichprotokoll.Beschaffenheitspruefung_LetztePruefung
+        If Not objEichprozess.Eichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer Is Nothing Then RadTextBoxControlNormalienPruefscheinnummer.Text = objEichprozess.Eichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer
+        If Not objEichprozess.Eichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma Is Nothing Then RadTextBoxControlNormalienEichfahrzeugFirma.Text = objEichprozess.Eichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma
 
         Try
             RadCheckBoxDrucker.Checked = objEichprozess.Eichprotokoll.Verwendungszweck_Drucker
@@ -425,7 +429,12 @@
         objEichprozess.Eichprotokoll.Verwendungszweck_PC = RadCheckBoxPC.Checked
         objEichprozess.Eichprotokoll.Verwendungszweck_ZubehoerVerschiedenes = RadCheckBoxSonstiges.Checked
 
-     
+        objEichprozess.Eichprotokoll.Beschaffenheitspruefung_Genauigkeitsklasse = RadTextBoxControlNormalienGenauigkeitsklasse.Text
+        objEichprozess.Eichprotokoll.Beschaffenheitspruefung_Pruefintervall = RadTextBoxControlNormalienPruefintervall.Text
+        objEichprozess.Eichprotokoll.Beschaffenheitspruefung_LetztePruefung = RadDateTimePickerNormalienLetztePruefung.Text
+        objEichprozess.Eichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer = RadTextBoxControlNormalienPruefscheinnummer.Text
+        objEichprozess.Eichprotokoll.Beschaffenheitspruefung_EichfahrzeugFirma = RadTextBoxControlNormalienEichfahrzeugFirma.Text
+
         objEichprozess.Eichprotokoll.Identifikationsdaten_HybridMechanisch = RadCheckBoxHybridMechWaage.Checked
 
     End Sub

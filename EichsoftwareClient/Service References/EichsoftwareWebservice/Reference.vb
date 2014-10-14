@@ -1464,7 +1464,22 @@ Namespace EichsoftwareWebservice
         Private extensionDataField As System.Runtime.Serialization.ExtensionDataObject
         
         <System.Runtime.Serialization.OptionalFieldAttribute()>  _
+        Private Beschaffenheitspruefung_EichfahrzeugFirmaField As String
+        
+        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
+        Private Beschaffenheitspruefung_GenauigkeitsklasseField As String
+        
+        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private Beschaffenheitspruefung_GenehmigtField As System.Nullable(Of Boolean)
+        
+        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
+        Private Beschaffenheitspruefung_LetztePruefungField As String
+        
+        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
+        Private Beschaffenheitspruefung_PruefintervallField As String
+        
+        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
+        Private Beschaffenheitspruefung_PruefscheinnummerField As String
         
         <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private EignungAchlastwaegungen_GeprueftField As System.Nullable(Of Boolean)
@@ -1693,6 +1708,32 @@ Namespace EichsoftwareWebservice
         End Property
         
         <System.Runtime.Serialization.DataMemberAttribute()>  _
+        Public Property Beschaffenheitspruefung_EichfahrzeugFirma() As String
+            Get
+                Return Me.Beschaffenheitspruefung_EichfahrzeugFirmaField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me.Beschaffenheitspruefung_EichfahrzeugFirmaField, value) <> true) Then
+                    Me.Beschaffenheitspruefung_EichfahrzeugFirmaField = value
+                    Me.RaisePropertyChanged("Beschaffenheitspruefung_EichfahrzeugFirma")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
+        Public Property Beschaffenheitspruefung_Genauigkeitsklasse() As String
+            Get
+                Return Me.Beschaffenheitspruefung_GenauigkeitsklasseField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me.Beschaffenheitspruefung_GenauigkeitsklasseField, value) <> true) Then
+                    Me.Beschaffenheitspruefung_GenauigkeitsklasseField = value
+                    Me.RaisePropertyChanged("Beschaffenheitspruefung_Genauigkeitsklasse")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Beschaffenheitspruefung_Genehmigt() As System.Nullable(Of Boolean)
             Get
                 Return Me.Beschaffenheitspruefung_GenehmigtField
@@ -1701,6 +1742,45 @@ Namespace EichsoftwareWebservice
                 If (Me.Beschaffenheitspruefung_GenehmigtField.Equals(value) <> true) Then
                     Me.Beschaffenheitspruefung_GenehmigtField = value
                     Me.RaisePropertyChanged("Beschaffenheitspruefung_Genehmigt")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
+        Public Property Beschaffenheitspruefung_LetztePruefung() As String
+            Get
+                Return Me.Beschaffenheitspruefung_LetztePruefungField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me.Beschaffenheitspruefung_LetztePruefungField, value) <> true) Then
+                    Me.Beschaffenheitspruefung_LetztePruefungField = value
+                    Me.RaisePropertyChanged("Beschaffenheitspruefung_LetztePruefung")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
+        Public Property Beschaffenheitspruefung_Pruefintervall() As String
+            Get
+                Return Me.Beschaffenheitspruefung_PruefintervallField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me.Beschaffenheitspruefung_PruefintervallField, value) <> true) Then
+                    Me.Beschaffenheitspruefung_PruefintervallField = value
+                    Me.RaisePropertyChanged("Beschaffenheitspruefung_Pruefintervall")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
+        Public Property Beschaffenheitspruefung_Pruefscheinnummer() As String
+            Get
+                Return Me.Beschaffenheitspruefung_PruefscheinnummerField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me.Beschaffenheitspruefung_PruefscheinnummerField, value) <> true) Then
+                    Me.Beschaffenheitspruefung_PruefscheinnummerField = value
+                    Me.RaisePropertyChanged("Beschaffenheitspruefung_Pruefscheinnummer")
                 End If
             End Set
         End Property
