@@ -53,25 +53,6 @@ Public Class FrmPruefscheinnummersuche
                 RadGridView1.Columns("NeuWZ").HeaderText = "neue WZ"
 
 
-                'Gruppierung
-                'Try
-                '    Dim descriptor As New GroupDescriptor()
-                '    descriptor.GroupNames.Add("FK_Eichprozess", ListSortDirection.Ascending)
-                '    Me.RadGridView1.GroupDescriptors.Add(descriptor)
-                'Catch e As Exception
-                'End Try
-
-
-                'Try
-                '    Dim sortdescriptor = New SortDescriptor()
-                '    sortdescriptor.Direction = ListSortDirection.Ascending
-                '    sortdescriptor.PropertyName = "ID"
-                '    Me.RadGridView1.SortDescriptors.Add(sortdescriptor)
-                'Catch e As Exception
-
-                'End Try
-
-
             Catch ex As Exception
             End Try
             RadGridView1.AutoExpandGroups = True
