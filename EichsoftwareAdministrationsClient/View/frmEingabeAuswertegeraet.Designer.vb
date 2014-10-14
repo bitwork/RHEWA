@@ -75,6 +75,14 @@ Partial Class frmEingabeAuswertegeraet
         Me.RadLabel41 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel1 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel2 = New Telerik.WinControls.UI.RadLabel()
+        Me.RadGroupBox1 = New Telerik.WinControls.UI.RadGroupBox()
+        Me.RadCheckBoxNullstelleinrichtungHalbSelbsttaetig = New Telerik.WinControls.UI.RadCheckBox()
+        Me.RadCheckBoxNullstelleinrichtungSelbsttaetig = New Telerik.WinControls.UI.RadCheckBox()
+        Me.RadCheckBoxNullstelleinrichtungNullnachfuehrung = New Telerik.WinControls.UI.RadCheckBox()
+        Me.RadCheckBoxTaraeinrichtungHalbSelbsttaetig = New Telerik.WinControls.UI.RadCheckBox()
+        Me.RadGroupBox2 = New Telerik.WinControls.UI.RadGroupBox()
+        Me.RadCheckBoxTaraeinrichtungTaraeingabe = New Telerik.WinControls.UI.RadCheckBox()
+        Me.RadCheckBoxTaraeinrichtungSelbsttaetig = New Telerik.WinControls.UI.RadCheckBox()
         CType(Me.RadCheckBoxDeaktiviert, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabelTyp, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabelSpeisespannung, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -127,6 +135,16 @@ Partial Class frmEingabeAuswertegeraet
         CType(Me.RadLabel41, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.RadGroupBox1.SuspendLayout()
+        CType(Me.RadCheckBoxNullstelleinrichtungHalbSelbsttaetig, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadCheckBoxNullstelleinrichtungSelbsttaetig, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadCheckBoxNullstelleinrichtungNullnachfuehrung, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadCheckBoxTaraeinrichtungHalbSelbsttaetig, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadGroupBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.RadGroupBox2.SuspendLayout()
+        CType(Me.RadCheckBoxTaraeinrichtungTaraeingabe, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadCheckBoxTaraeinrichtungSelbsttaetig, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -147,7 +165,7 @@ Partial Class frmEingabeAuswertegeraet
         Me.RadCheckBoxDeaktiviert.RootElement.Text = Nothing
         Me.RadCheckBoxDeaktiviert.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadCheckBoxDeaktiviert.Size = New System.Drawing.Size(74, 18)
-        Me.RadCheckBoxDeaktiviert.TabIndex = 16
+        Me.RadCheckBoxDeaktiviert.TabIndex = 18
         Me.RadCheckBoxDeaktiviert.Text = "Deaktiviert"
         Me.RadCheckBoxDeaktiviert.ToggleState = Telerik.WinControls.Enumerations.ToggleState.[On]
         '
@@ -433,7 +451,7 @@ Partial Class frmEingabeAuswertegeraet
         Me.RadButtonAbbrechen.RootElement.Text = Nothing
         Me.RadButtonAbbrechen.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadButtonAbbrechen.Size = New System.Drawing.Size(125, 24)
-        Me.RadButtonAbbrechen.TabIndex = 17
+        Me.RadButtonAbbrechen.TabIndex = 19
         Me.RadButtonAbbrechen.Text = "Abbrechen"
         '
         'RadButtonSpeichern
@@ -452,7 +470,7 @@ Partial Class frmEingabeAuswertegeraet
         Me.RadButtonSpeichern.RootElement.Text = Nothing
         Me.RadButtonSpeichern.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadButtonSpeichern.Size = New System.Drawing.Size(125, 24)
-        Me.RadButtonSpeichern.TabIndex = 18
+        Me.RadButtonSpeichern.TabIndex = 20
         Me.RadButtonSpeichern.Text = "Speichern"
         '
         'RadTextBoxControlAuswertegeraetTyp
@@ -1112,11 +1130,158 @@ Partial Class frmEingabeAuswertegeraet
         Me.RadLabel2.Text = "<html><span style=""font-size: 12pt"">n</span><span style=""font-size: 8pt"">ind</spa" & _
     "n></html>"
         '
+        'RadGroupBox1
+        '
+        Me.RadGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.RadGroupBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.RadGroupBox1.Controls.Add(Me.RadCheckBoxNullstelleinrichtungNullnachfuehrung)
+        Me.RadGroupBox1.Controls.Add(Me.RadCheckBoxNullstelleinrichtungSelbsttaetig)
+        Me.RadGroupBox1.Controls.Add(Me.RadCheckBoxNullstelleinrichtungHalbSelbsttaetig)
+        Me.RadGroupBox1.HeaderText = "Nullstelleinrichtung"
+        Me.RadGroupBox1.Location = New System.Drawing.Point(518, 21)
+        Me.RadGroupBox1.Name = "RadGroupBox1"
+        Me.RadGroupBox1.Size = New System.Drawing.Size(437, 108)
+        Me.RadGroupBox1.TabIndex = 16
+        Me.RadGroupBox1.Text = "Nullstelleinrichtung"
+        '
+        'RadCheckBoxNullstelleinrichtungHalbSelbsttaetig
+        '
+        Me.RadCheckBoxNullstelleinrichtungHalbSelbsttaetig.Location = New System.Drawing.Point(16, 30)
+        Me.RadCheckBoxNullstelleinrichtungHalbSelbsttaetig.Name = "RadCheckBoxNullstelleinrichtungHalbSelbsttaetig"
+        '
+        '
+        '
+        Me.RadCheckBoxNullstelleinrichtungHalbSelbsttaetig.RootElement.AccessibleDescription = Nothing
+        Me.RadCheckBoxNullstelleinrichtungHalbSelbsttaetig.RootElement.AccessibleName = Nothing
+        Me.RadCheckBoxNullstelleinrichtungHalbSelbsttaetig.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
+        Me.RadCheckBoxNullstelleinrichtungHalbSelbsttaetig.RootElement.AngleTransform = 0.0!
+        Me.RadCheckBoxNullstelleinrichtungHalbSelbsttaetig.RootElement.FlipText = False
+        Me.RadCheckBoxNullstelleinrichtungHalbSelbsttaetig.RootElement.Margin = New System.Windows.Forms.Padding(0)
+        Me.RadCheckBoxNullstelleinrichtungHalbSelbsttaetig.RootElement.Text = Nothing
+        Me.RadCheckBoxNullstelleinrichtungHalbSelbsttaetig.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
+        Me.RadCheckBoxNullstelleinrichtungHalbSelbsttaetig.Size = New System.Drawing.Size(93, 18)
+        Me.RadCheckBoxNullstelleinrichtungHalbSelbsttaetig.TabIndex = 0
+        Me.RadCheckBoxNullstelleinrichtungHalbSelbsttaetig.Text = "halb selbstätig"
+        '
+        'RadCheckBoxNullstelleinrichtungSelbsttaetig
+        '
+        Me.RadCheckBoxNullstelleinrichtungSelbsttaetig.Location = New System.Drawing.Point(16, 54)
+        Me.RadCheckBoxNullstelleinrichtungSelbsttaetig.Name = "RadCheckBoxNullstelleinrichtungSelbsttaetig"
+        '
+        '
+        '
+        Me.RadCheckBoxNullstelleinrichtungSelbsttaetig.RootElement.AccessibleDescription = Nothing
+        Me.RadCheckBoxNullstelleinrichtungSelbsttaetig.RootElement.AccessibleName = Nothing
+        Me.RadCheckBoxNullstelleinrichtungSelbsttaetig.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
+        Me.RadCheckBoxNullstelleinrichtungSelbsttaetig.RootElement.AngleTransform = 0.0!
+        Me.RadCheckBoxNullstelleinrichtungSelbsttaetig.RootElement.FlipText = False
+        Me.RadCheckBoxNullstelleinrichtungSelbsttaetig.RootElement.Margin = New System.Windows.Forms.Padding(0)
+        Me.RadCheckBoxNullstelleinrichtungSelbsttaetig.RootElement.Text = Nothing
+        Me.RadCheckBoxNullstelleinrichtungSelbsttaetig.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
+        Me.RadCheckBoxNullstelleinrichtungSelbsttaetig.Size = New System.Drawing.Size(68, 18)
+        Me.RadCheckBoxNullstelleinrichtungSelbsttaetig.TabIndex = 1
+        Me.RadCheckBoxNullstelleinrichtungSelbsttaetig.Text = "selbstätig"
+        '
+        'RadCheckBoxNullstelleinrichtungNullnachfuehrung
+        '
+        Me.RadCheckBoxNullstelleinrichtungNullnachfuehrung.Location = New System.Drawing.Point(16, 78)
+        Me.RadCheckBoxNullstelleinrichtungNullnachfuehrung.Name = "RadCheckBoxNullstelleinrichtungNullnachfuehrung"
+        '
+        '
+        '
+        Me.RadCheckBoxNullstelleinrichtungNullnachfuehrung.RootElement.AccessibleDescription = Nothing
+        Me.RadCheckBoxNullstelleinrichtungNullnachfuehrung.RootElement.AccessibleName = Nothing
+        Me.RadCheckBoxNullstelleinrichtungNullnachfuehrung.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
+        Me.RadCheckBoxNullstelleinrichtungNullnachfuehrung.RootElement.AngleTransform = 0.0!
+        Me.RadCheckBoxNullstelleinrichtungNullnachfuehrung.RootElement.FlipText = False
+        Me.RadCheckBoxNullstelleinrichtungNullnachfuehrung.RootElement.Margin = New System.Windows.Forms.Padding(0)
+        Me.RadCheckBoxNullstelleinrichtungNullnachfuehrung.RootElement.Text = Nothing
+        Me.RadCheckBoxNullstelleinrichtungNullnachfuehrung.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
+        Me.RadCheckBoxNullstelleinrichtungNullnachfuehrung.Size = New System.Drawing.Size(104, 18)
+        Me.RadCheckBoxNullstelleinrichtungNullnachfuehrung.TabIndex = 2
+        Me.RadCheckBoxNullstelleinrichtungNullnachfuehrung.Text = "Nullnachführung"
+        '
+        'RadCheckBoxTaraeinrichtungHalbSelbsttaetig
+        '
+        Me.RadCheckBoxTaraeinrichtungHalbSelbsttaetig.AutoSize = False
+        Me.RadCheckBoxTaraeinrichtungHalbSelbsttaetig.Location = New System.Drawing.Point(16, 25)
+        Me.RadCheckBoxTaraeinrichtungHalbSelbsttaetig.Name = "RadCheckBoxTaraeinrichtungHalbSelbsttaetig"
+        '
+        '
+        '
+        Me.RadCheckBoxTaraeinrichtungHalbSelbsttaetig.RootElement.AccessibleDescription = Nothing
+        Me.RadCheckBoxTaraeinrichtungHalbSelbsttaetig.RootElement.AccessibleName = Nothing
+        Me.RadCheckBoxTaraeinrichtungHalbSelbsttaetig.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
+        Me.RadCheckBoxTaraeinrichtungHalbSelbsttaetig.RootElement.AngleTransform = 0.0!
+        Me.RadCheckBoxTaraeinrichtungHalbSelbsttaetig.RootElement.FlipText = False
+        Me.RadCheckBoxTaraeinrichtungHalbSelbsttaetig.RootElement.Margin = New System.Windows.Forms.Padding(0)
+        Me.RadCheckBoxTaraeinrichtungHalbSelbsttaetig.RootElement.StretchHorizontally = True
+        Me.RadCheckBoxTaraeinrichtungHalbSelbsttaetig.RootElement.StretchVertically = True
+        Me.RadCheckBoxTaraeinrichtungHalbSelbsttaetig.RootElement.Text = Nothing
+        Me.RadCheckBoxTaraeinrichtungHalbSelbsttaetig.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
+        Me.RadCheckBoxTaraeinrichtungHalbSelbsttaetig.Size = New System.Drawing.Size(152, 18)
+        Me.RadCheckBoxTaraeinrichtungHalbSelbsttaetig.TabIndex = 0
+        Me.RadCheckBoxTaraeinrichtungHalbSelbsttaetig.Text = "halb selbstätig"
+        '
+        'RadGroupBox2
+        '
+        Me.RadGroupBox2.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.RadGroupBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.RadGroupBox2.Controls.Add(Me.RadCheckBoxTaraeinrichtungTaraeingabe)
+        Me.RadGroupBox2.Controls.Add(Me.RadCheckBoxTaraeinrichtungSelbsttaetig)
+        Me.RadGroupBox2.Controls.Add(Me.RadCheckBoxTaraeinrichtungHalbSelbsttaetig)
+        Me.RadGroupBox2.HeaderText = "Taraeinrichtung"
+        Me.RadGroupBox2.Location = New System.Drawing.Point(518, 135)
+        Me.RadGroupBox2.Name = "RadGroupBox2"
+        Me.RadGroupBox2.Size = New System.Drawing.Size(437, 100)
+        Me.RadGroupBox2.TabIndex = 17
+        Me.RadGroupBox2.Text = "Taraeinrichtung"
+        '
+        'RadCheckBoxTaraeinrichtungTaraeingabe
+        '
+        Me.RadCheckBoxTaraeinrichtungTaraeingabe.Location = New System.Drawing.Point(16, 73)
+        Me.RadCheckBoxTaraeinrichtungTaraeingabe.Name = "RadCheckBoxTaraeinrichtungTaraeingabe"
+        '
+        '
+        '
+        Me.RadCheckBoxTaraeinrichtungTaraeingabe.RootElement.AccessibleDescription = Nothing
+        Me.RadCheckBoxTaraeinrichtungTaraeingabe.RootElement.AccessibleName = Nothing
+        Me.RadCheckBoxTaraeinrichtungTaraeingabe.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
+        Me.RadCheckBoxTaraeinrichtungTaraeingabe.RootElement.AngleTransform = 0.0!
+        Me.RadCheckBoxTaraeinrichtungTaraeingabe.RootElement.FlipText = False
+        Me.RadCheckBoxTaraeinrichtungTaraeingabe.RootElement.Margin = New System.Windows.Forms.Padding(0)
+        Me.RadCheckBoxTaraeinrichtungTaraeingabe.RootElement.Text = Nothing
+        Me.RadCheckBoxTaraeinrichtungTaraeingabe.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
+        Me.RadCheckBoxTaraeinrichtungTaraeingabe.Size = New System.Drawing.Size(82, 18)
+        Me.RadCheckBoxTaraeinrichtungTaraeingabe.TabIndex = 2
+        Me.RadCheckBoxTaraeinrichtungTaraeingabe.Text = "Taraeingabe"
+        '
+        'RadCheckBoxTaraeinrichtungSelbsttaetig
+        '
+        Me.RadCheckBoxTaraeinrichtungSelbsttaetig.Location = New System.Drawing.Point(16, 49)
+        Me.RadCheckBoxTaraeinrichtungSelbsttaetig.Name = "RadCheckBoxTaraeinrichtungSelbsttaetig"
+        '
+        '
+        '
+        Me.RadCheckBoxTaraeinrichtungSelbsttaetig.RootElement.AccessibleDescription = Nothing
+        Me.RadCheckBoxTaraeinrichtungSelbsttaetig.RootElement.AccessibleName = Nothing
+        Me.RadCheckBoxTaraeinrichtungSelbsttaetig.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
+        Me.RadCheckBoxTaraeinrichtungSelbsttaetig.RootElement.AngleTransform = 0.0!
+        Me.RadCheckBoxTaraeinrichtungSelbsttaetig.RootElement.FlipText = False
+        Me.RadCheckBoxTaraeinrichtungSelbsttaetig.RootElement.Margin = New System.Windows.Forms.Padding(0)
+        Me.RadCheckBoxTaraeinrichtungSelbsttaetig.RootElement.Text = Nothing
+        Me.RadCheckBoxTaraeinrichtungSelbsttaetig.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
+        Me.RadCheckBoxTaraeinrichtungSelbsttaetig.Size = New System.Drawing.Size(68, 18)
+        Me.RadCheckBoxTaraeinrichtungSelbsttaetig.TabIndex = 1
+        Me.RadCheckBoxTaraeinrichtungSelbsttaetig.Text = "selbstätig"
+        '
         'frmEingabeAuswertegeraet
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(958, 579)
+        Me.Controls.Add(Me.RadGroupBox2)
+        Me.Controls.Add(Me.RadGroupBox1)
         Me.Controls.Add(Me.RadLabel1)
         Me.Controls.Add(Me.RadLabel2)
         Me.Controls.Add(Me.RadLabel30)
@@ -1227,6 +1392,18 @@ Partial Class frmEingabeAuswertegeraet
         CType(Me.RadLabel41, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabel2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.RadGroupBox1.ResumeLayout(False)
+        Me.RadGroupBox1.PerformLayout()
+        CType(Me.RadCheckBoxNullstelleinrichtungHalbSelbsttaetig, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadCheckBoxNullstelleinrichtungSelbsttaetig, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadCheckBoxNullstelleinrichtungNullnachfuehrung, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadCheckBoxTaraeinrichtungHalbSelbsttaetig, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadGroupBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.RadGroupBox2.ResumeLayout(False)
+        Me.RadGroupBox2.PerformLayout()
+        CType(Me.RadCheckBoxTaraeinrichtungTaraeingabe, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadCheckBoxTaraeinrichtungSelbsttaetig, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -1284,5 +1461,13 @@ Partial Class frmEingabeAuswertegeraet
     Friend WithEvents RadLabel41 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel1 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel2 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents RadGroupBox1 As Telerik.WinControls.UI.RadGroupBox
+    Friend WithEvents RadCheckBoxNullstelleinrichtungNullnachfuehrung As Telerik.WinControls.UI.RadCheckBox
+    Friend WithEvents RadCheckBoxNullstelleinrichtungSelbsttaetig As Telerik.WinControls.UI.RadCheckBox
+    Friend WithEvents RadCheckBoxNullstelleinrichtungHalbSelbsttaetig As Telerik.WinControls.UI.RadCheckBox
+    Friend WithEvents RadCheckBoxTaraeinrichtungHalbSelbsttaetig As Telerik.WinControls.UI.RadCheckBox
+    Friend WithEvents RadGroupBox2 As Telerik.WinControls.UI.RadGroupBox
+    Friend WithEvents RadCheckBoxTaraeinrichtungTaraeingabe As Telerik.WinControls.UI.RadCheckBox
+    Friend WithEvents RadCheckBoxTaraeinrichtungSelbsttaetig As Telerik.WinControls.UI.RadCheckBox
 End Class
 

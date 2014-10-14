@@ -583,6 +583,15 @@ Public Class clsClientServerConversionFunctions
         TargetObject.Lookup_Auswertegeraet.Speisespannung = SourceObject._ServerLookup_Auswertegeraet._Speisespannung
         TargetObject.Lookup_Auswertegeraet.Typ = SourceObject._ServerLookup_Auswertegeraet._Typ
 
+        TargetObject.Lookup_Auswertegeraet.TaraeinrichtungHalbSelbsttaetig = SourceObject._ServerLookup_Auswertegeraet._TaraeinrichtungHalbSelbsttaetig
+        TargetObject.Lookup_Auswertegeraet.TaraeinrichtungSelbsttaetig = SourceObject._ServerLookup_Auswertegeraet._TaraeinrichtungSelbsttaetig
+        TargetObject.Lookup_Auswertegeraet.TaraeinrichtungTaraeingabe = SourceObject._ServerLookup_Auswertegeraet._TaraeinrichtungTaraeingabe
+
+        TargetObject.Lookup_Auswertegeraet.NullstellungHalbSelbsttaetig = SourceObject._ServerLookup_Auswertegeraet._NullstellungHalbSelbsttaetig
+        TargetObject.Lookup_Auswertegeraet.NullstellungSelbsttaetig = SourceObject._ServerLookup_Auswertegeraet._NullstellungSelbsttaetig
+        TargetObject.Lookup_Auswertegeraet.NullstellungNullnachfuehrung = SourceObject._ServerLookup_Auswertegeraet._NullstellungNullnachfuehrung
+
+
 
         'wenn neu
         TargetObject.Lookup_Waegezelle = New Lookup_Waegezelle
@@ -725,12 +734,6 @@ Public Class clsClientServerConversionFunctions
         TargetObject.Eichprotokoll.Verwendungszweck_PC = SourceObject._ServerEichprotokoll.Verwendungszweck_PC
         TargetObject.Eichprotokoll.Verwendungszweck_ZubehoerVerschiedenes = SourceObject._ServerEichprotokoll.Verwendungszweck_ZubehoerVerschiedenes
         TargetObject.Eichprotokoll.Wiederholbarkeit_Staffelverfahren_MINNormalien = SourceObject._ServerEichprotokoll.Wiederholbarkeit_Staffelverfahren_MINNormalien
-
-
-
-
-
-        ''auswerte gerät
 
         Return TargetObject
     End Function

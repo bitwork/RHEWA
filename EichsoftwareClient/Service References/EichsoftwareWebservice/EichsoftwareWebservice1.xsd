@@ -438,10 +438,16 @@
       <xs:element name="_MAXAnzahlTeilungswerteMehrbereichswaage" nillable="true" type="xs:string" />
       <xs:element name="_Mindesteingangsspannung" nillable="true" type="xs:string" />
       <xs:element name="_Mindestmesssignal" nillable="true" type="xs:string" />
+      <xs:element name="_NullstellungHalbSelbsttaetig" type="xs:boolean" />
+      <xs:element name="_NullstellungNullnachfuehrung" type="xs:boolean" />
+      <xs:element name="_NullstellungSelbsttaetig" type="xs:boolean" />
       <xs:element name="_Pruefbericht" nillable="true" type="xs:string" />
       <xs:element name="_ServerEichprozess" nillable="true" type="tns:ArrayOfServerEichprozess" />
       <xs:element name="_ServerMogelstatistik" nillable="true" type="tns:ArrayOfServerMogelstatistik" />
       <xs:element name="_Speisespannung" nillable="true" type="xs:string" />
+      <xs:element name="_TaraeinrichtungHalbSelbsttaetig" type="xs:boolean" />
+      <xs:element name="_TaraeinrichtungSelbsttaetig" type="xs:boolean" />
+      <xs:element name="_TaraeinrichtungTaraeingabe" type="xs:boolean" />
       <xs:element name="_Typ" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>

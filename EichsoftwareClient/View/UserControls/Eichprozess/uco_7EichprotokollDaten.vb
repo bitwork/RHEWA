@@ -311,23 +311,41 @@
                 PictureBox13.Visible = True
         End Select
 
-        If objEichprozess.Eichprotokoll.Verwendungszweck_Automatisch = True Then
-            RadRadioButtonNustellungAutomatisch.IsChecked = True
-        ElseIf objEichprozess.Eichprotokoll.Verwendungszweck_Nullnachfuehrung = True Then
-            RadRadioButtonNustellungNullNachfuehrung.IsChecked = True
-        ElseIf objEichprozess.Eichprotokoll.Verwendungszweck_HalbAutomatisch Then
-            RadRadioButtonNustellungHalbAutomatisch.IsChecked = True
+        'validieren ob die Werte bereits einmal geschrieben wurden. Wenn nicht, Standardwerte aus AWG laden.
+        If objEichprozess.Eichprotokoll.Verwendungszweck_Automatisch Is Nothing Then
+            Try
+                RadRadioButtonNustellungHalbAutomatisch.IsChecked = objEichprozess.Lookup_Auswertegeraet.NullstellungHalbSelbsttaetig
+                RadRadioButtonNustellungAutomatisch.IsChecked = objEichprozess.Lookup_Auswertegeraet.NullstellungSelbsttaetig
+                RadRadioButtonNustellungNullNachfuehrung.IsChecked = objEichprozess.Lookup_Auswertegeraet.NullstellungNullnachfuehrung
+
+                RadRadioButtonHandTara.IsChecked = objEichprozess.Lookup_Auswertegeraet.TaraeinrichtungHalbSelbsttaetig
+                RadRadioButtonAutoTara.IsChecked = objEichprozess.Lookup_Auswertegeraet.TaraeinrichtungSelbsttaetig
+                RadRadioButtonTaraeingabe.IsChecked = objEichprozess.Lookup_Auswertegeraet.TaraeinrichtungTaraeingabe
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
+        
+        Else 'werte aus DB Laden
+            If objEichprozess.Eichprotokoll.Verwendungszweck_Automatisch = True Then
+                RadRadioButtonNustellungAutomatisch.IsChecked = True
+            ElseIf objEichprozess.Eichprotokoll.Verwendungszweck_Nullnachfuehrung = True Then
+                RadRadioButtonNustellungNullNachfuehrung.IsChecked = True
+            ElseIf objEichprozess.Eichprotokoll.Verwendungszweck_HalbAutomatisch Then
+                RadRadioButtonNustellungHalbAutomatisch.IsChecked = True
+            End If
+
+            If objEichprozess.Eichprotokoll.Verwendungszweck_AutoTara Then
+                RadRadioButtonAutoTara.IsChecked = True
+            ElseIf objEichprozess.Eichprotokoll.Verwendungszweck_HandTara Then
+                RadRadioButtonHandTara.IsChecked = True
+            End If
+
+            If objEichprozess.Eichprotokoll.Taraeinrichtung_Taraeingabe Then
+                RadRadioButtonTaraeingabe.IsChecked = True
+            End If
         End If
 
-        If objEichprozess.Eichprotokoll.Verwendungszweck_AutoTara Then
-            RadRadioButtonAutoTara.IsChecked = True
-        ElseIf objEichprozess.Eichprotokoll.Verwendungszweck_HandTara Then
-            RadRadioButtonHandTara.IsChecked = True
-        End If
 
-        If objEichprozess.Eichprotokoll.Taraeinrichtung_Taraeingabe Then
-            RadRadioButtonTaraeingabe.IsChecked = True
-        End If
 
         Try
             RadCheckBoxDrucker.Checked = objEichprozess.Eichprotokoll.Verwendungszweck_Drucker
@@ -354,7 +372,7 @@
         Catch ex As Exception
         End Try
 
-       
+
 
 
         'fokus setzen auf erstes Steuerelement

@@ -270,6 +270,12 @@
           <Property Name="BruchteilEichfehlergrenze" Type="nvarchar" Nullable="false" MaxLength="5" />
           <Property Name="KabellaengeQuerschnitt" Type="nvarchar" MaxLength="50" />
           <Property Name="Deaktiviert" Type="bit" />
+          <Property Name="TaraeinrichtungTaraeingabe" Type="bit" />
+          <Property Name="TaraeinrichtungSelbsttaetig" Type="bit" />
+          <Property Name="TaraeinrichtungHalbSelbsttaetig" Type="bit" />
+          <Property Name="NullstellungNullnachfuehrung" Type="bit" />
+          <Property Name="NullstellungSelbsttaetig" Type="bit" />
+          <Property Name="NullstellungHalbSelbsttaetig" Type="bit" />
         </EntityType>
         <EntityType Name="Lookup_Bearbeitungsstatus">
           <Key>
@@ -1065,6 +1071,12 @@
           <Property Type="Boolean" Name="Deaktiviert" />
           <NavigationProperty Name="Eichprozess" Relationship="EichsoftwareClientdatabaseModel.FK_Eichprozess_Lookup_Auswertegeraet" FromRole="Lookup_Auswertegeraet" ToRole="Eichprozess" />
           <NavigationProperty Name="Mogelstatistik" Relationship="EichsoftwareClientdatabaseModel.FK_Mogelstatistik_Lookup_Auswertegeraet" FromRole="Lookup_Auswertegeraet" ToRole="Mogelstatistik" />
+          <Property Type="Boolean" Name="TaraeinrichtungTaraeingabe" />
+          <Property Type="Boolean" Name="TaraeinrichtungSelbsttaetig" />
+          <Property Type="Boolean" Name="TaraeinrichtungHalbSelbsttaetig" />
+          <Property Type="Boolean" Name="NullstellungNullnachfuehrung" />
+          <Property Type="Boolean" Name="NullstellungSelbsttaetig" />
+          <Property Type="Boolean" Name="NullstellungHalbSelbsttaetig" />
         </EntityType>
         <EntityType Name="Lookup_Bearbeitungsstatus">
           <Key>
@@ -1736,6 +1748,12 @@
           <EntitySetMapping Name="Lookup_Auswertegeraet">
             <EntityTypeMapping TypeName="EichsoftwareClientdatabaseModel.Lookup_Auswertegeraet">
               <MappingFragment StoreEntitySet="Lookup_Auswertegeraet">
+                <ScalarProperty Name="NullstellungHalbSelbsttaetig" ColumnName="NullstellungHalbSelbsttaetig" />
+                <ScalarProperty Name="NullstellungSelbsttaetig" ColumnName="NullstellungSelbsttaetig" />
+                <ScalarProperty Name="NullstellungNullnachfuehrung" ColumnName="NullstellungNullnachfuehrung" />
+                <ScalarProperty Name="TaraeinrichtungHalbSelbsttaetig" ColumnName="TaraeinrichtungHalbSelbsttaetig" />
+                <ScalarProperty Name="TaraeinrichtungSelbsttaetig" ColumnName="TaraeinrichtungSelbsttaetig" />
+                <ScalarProperty Name="TaraeinrichtungTaraeingabe" ColumnName="TaraeinrichtungTaraeingabe" />
                 <ScalarProperty Name="Deaktiviert" ColumnName="Deaktiviert" />
                 <ScalarProperty Name="KabellaengeQuerschnitt" ColumnName="KabellaengeQuerschnitt" />
                 <ScalarProperty Name="BruchteilEichfehlergrenze" ColumnName="BruchteilEichfehlergrenze" />

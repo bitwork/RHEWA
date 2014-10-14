@@ -29,6 +29,12 @@ Partial Public Class Lookup_Auswertegeraet
     Public Property BruchteilEichfehlergrenze As String
     Public Property KabellaengeQuerschnitt As String
     Public Property Deaktiviert As Nullable(Of Boolean)
+    Public Property TaraeinrichtungTaraeingabe As Nullable(Of Boolean)
+    Public Property TaraeinrichtungSelbsttaetig As Nullable(Of Boolean)
+    Public Property TaraeinrichtungHalbSelbsttaetig As Nullable(Of Boolean)
+    Public Property NullstellungNullnachfuehrung As Nullable(Of Boolean)
+    Public Property NullstellungSelbsttaetig As Nullable(Of Boolean)
+    Public Property NullstellungHalbSelbsttaetig As Nullable(Of Boolean)
 
     Public Overridable Property Eichprozess As ICollection(Of Eichprozess) = New HashSet(Of Eichprozess)
     Public Overridable Property Mogelstatistik As ICollection(Of Mogelstatistik) = New HashSet(Of Mogelstatistik)

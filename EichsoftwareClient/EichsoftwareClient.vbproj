@@ -1017,9 +1017,6 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\EichsoftwareWebservice\" />
-  </ItemGroup>
-  <ItemGroup>
     <PublishFile Include="EQATEC.Analytics.Monitor">
       <Visible>False</Visible>
       <Group>
@@ -1030,6 +1027,9 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\EichsoftwareWebservice\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <PropertyGroup>

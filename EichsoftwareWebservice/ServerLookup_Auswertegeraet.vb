@@ -30,6 +30,12 @@ Partial Public Class ServerLookup_Auswertegeraet
     Public Property KabellaengeQuerschnitt As String
     Public Property ErstellDatum As Nullable(Of Date)
     Public Property Deaktiviert As Boolean
+    Public Property TaraeinrichtungTaraeingabe As Boolean
+    Public Property TaraeinrichtungSelbsttaetig As Boolean
+    Public Property TaraeinrichtungHalbSelbsttaetig As Boolean
+    Public Property NullstellungNullnachfuehrung As Boolean
+    Public Property NullstellungSelbsttaetig As Boolean
+    Public Property NullstellungHalbSelbsttaetig As Boolean
 
     Public Overridable Property ServerEichprozess As ICollection(Of ServerEichprozess) = New HashSet(Of ServerEichprozess)
     Public Overridable Property ServerMogelstatistik As ICollection(Of ServerMogelstatistik) = New HashSet(Of ServerMogelstatistik)

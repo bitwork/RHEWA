@@ -275,8 +275,19 @@ Public Class clsWebserviceFunctions
                                     newAWG.Pruefbericht = objServerArtikel._Pruefbericht
                                     newAWG.Speisespannung = objServerArtikel._Speisespannung
                                     newAWG.Typ = objServerArtikel._Typ
-                                    'hinzufügen des neu erzeugten Artikels in Lokale Datenbank
                                     newAWG.Deaktiviert = objServerArtikel._Deaktiviert
+
+                                    newAWG.TaraeinrichtungHalbSelbsttaetig = objServerArtikel._TaraeinrichtungHalbSelbsttaetig
+                                    newAWG.TaraeinrichtungSelbsttaetig = objServerArtikel._TaraeinrichtungSelbsttaetig
+                                    newAWG.TaraeinrichtungTaraeingabe = objServerArtikel._TaraeinrichtungTaraeingabe
+
+                                    newAWG.NullstellungHalbSelbsttaetig = objServerArtikel._NullstellungHalbSelbsttaetig
+                                    newAWG.NullstellungSelbsttaetig = objServerArtikel._NullstellungSelbsttaetig
+                                    newAWG.NullstellungNullnachfuehrung = objServerArtikel._NullstellungNullnachfuehrung
+
+
+                                    'hinzufügen des neu erzeugten Artikels in Lokale Datenbank
+
                                     DBContext.Lookup_Auswertegeraet.Add(newAWG)
                                     DBContext.SaveChanges()
                                     bolNeuAWG = True
@@ -301,7 +312,15 @@ Public Class clsWebserviceFunctions
                                         objAWG.Pruefbericht = objServerArtikel._Pruefbericht
                                         objAWG.Speisespannung = objServerArtikel._Speisespannung
                                         objAWG.Typ = objServerArtikel._Typ
+                                        objAWG.TaraeinrichtungHalbSelbsttaetig = objServerArtikel._TaraeinrichtungHalbSelbsttaetig
+                                        objAWG.TaraeinrichtungSelbsttaetig = objServerArtikel._TaraeinrichtungSelbsttaetig
+                                        objAWG.TaraeinrichtungTaraeingabe = objServerArtikel._TaraeinrichtungTaraeingabe
+                                        objAWG.NullstellungHalbSelbsttaetig = objServerArtikel._NullstellungHalbSelbsttaetig
+                                        objAWG.NullstellungSelbsttaetig = objServerArtikel._NullstellungSelbsttaetig
+                                        objAWG.NullstellungNullnachfuehrung = objServerArtikel._NullstellungNullnachfuehrung
+
                                         objAWG.Deaktiviert = objServerArtikel._Deaktiviert
+
                                         bolNeuAWG = True
                                     Next
                                 End If

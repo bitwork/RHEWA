@@ -217,6 +217,12 @@
           <Property Name="KabellaengeQuerschnitt" Type="nvarchar" MaxLength="50" />
           <Property Name="ErstellDatum" Type="datetime" />
           <Property Name="Deaktiviert" Type="bit" Nullable="false" />
+          <Property Name="TaraeinrichtungTaraeingabe" Type="bit" Nullable="false" />
+          <Property Name="TaraeinrichtungSelbsttaetig" Type="bit" Nullable="false" />
+          <Property Name="TaraeinrichtungHalbSelbsttaetig" Type="bit" Nullable="false" />
+          <Property Name="NullstellungNullnachfuehrung" Type="bit" Nullable="false" />
+          <Property Name="NullstellungSelbsttaetig" Type="bit" Nullable="false" />
+          <Property Name="NullstellungHalbSelbsttaetig" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="ServerLookup_Bearbeitungsstatus">
           <Key>
@@ -585,6 +591,12 @@
           <Property Type="DateTime" Name="ErstellDatum" Precision="3" />
           <Property Type="Boolean" Name="Deaktiviert" Nullable="false" />
           <NavigationProperty Name="ServerMogelstatistik" Relationship="EichenModel.FK_Mogelstatistik_Lookup_Auswertegeraet" FromRole="ServerLookup_Auswertegeraet" ToRole="ServerMogelstatistik" />
+          <Property Type="Boolean" Name="TaraeinrichtungTaraeingabe" Nullable="false" />
+          <Property Type="Boolean" Name="TaraeinrichtungSelbsttaetig" Nullable="false" />
+          <Property Type="Boolean" Name="TaraeinrichtungHalbSelbsttaetig" Nullable="false" />
+          <Property Type="Boolean" Name="NullstellungNullnachfuehrung" Nullable="false" />
+          <Property Type="Boolean" Name="NullstellungSelbsttaetig" Nullable="false" />
+          <Property Type="Boolean" Name="NullstellungHalbSelbsttaetig" Nullable="false" />
         </EntityType>
         <EntityType Name="ServerLookup_Waegezelle">
           <Key>
@@ -909,6 +921,12 @@
           <EntitySetMapping Name="ServerLookup_Auswertegeraet">
             <EntityTypeMapping TypeName="EichenModel.ServerLookup_Auswertegeraet">
               <MappingFragment StoreEntitySet="ServerLookup_Auswertegeraet">
+                <ScalarProperty Name="NullstellungHalbSelbsttaetig" ColumnName="NullstellungHalbSelbsttaetig" />
+                <ScalarProperty Name="NullstellungSelbsttaetig" ColumnName="NullstellungSelbsttaetig" />
+                <ScalarProperty Name="NullstellungNullnachfuehrung" ColumnName="NullstellungNullnachfuehrung" />
+                <ScalarProperty Name="TaraeinrichtungHalbSelbsttaetig" ColumnName="TaraeinrichtungHalbSelbsttaetig" />
+                <ScalarProperty Name="TaraeinrichtungSelbsttaetig" ColumnName="TaraeinrichtungSelbsttaetig" />
+                <ScalarProperty Name="TaraeinrichtungTaraeingabe" ColumnName="TaraeinrichtungTaraeingabe" />
                 <ScalarProperty Name="Deaktiviert" ColumnName="Deaktiviert" />
                 <ScalarProperty Name="ErstellDatum" ColumnName="ErstellDatum" />
                 <ScalarProperty Name="KabellaengeQuerschnitt" ColumnName="KabellaengeQuerschnitt" />

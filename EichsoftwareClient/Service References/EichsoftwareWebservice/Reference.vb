@@ -1634,825 +1634,825 @@ Namespace EichsoftwareWebservice
         <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private Taraeinrichtung_TaraausgleichseinrichtungOKField As String
         
-        <System.Runtime.Serialization.OptionalFieldAttribute()> _
+        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private Taraeinrichtung_TaraeingabeField As System.Nullable(Of Boolean)
-
-        <System.Runtime.Serialization.OptionalFieldAttribute()> _
+        
+        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private Ueberlastanzeige_MaxField As String
-
-        <System.Runtime.Serialization.OptionalFieldAttribute()> _
+        
+        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private Ueberlastanzeige_UeberlastField As System.Nullable(Of Boolean)
-
-        <System.Runtime.Serialization.OptionalFieldAttribute()> _
+        
+        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private Verwendungszweck_AutoTaraField As System.Nullable(Of Boolean)
-
-        <System.Runtime.Serialization.OptionalFieldAttribute()> _
+        
+        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private Verwendungszweck_AutomatischField As System.Nullable(Of Boolean)
-
-        <System.Runtime.Serialization.OptionalFieldAttribute()> _
+        
+        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private Verwendungszweck_DruckerField As System.Nullable(Of Boolean)
-
-        <System.Runtime.Serialization.OptionalFieldAttribute()> _
+        
+        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private Verwendungszweck_DruckertypField As String
-
-        <System.Runtime.Serialization.OptionalFieldAttribute()> _
+        
+        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private Verwendungszweck_EichfaehigerDatenspeicherField As System.Nullable(Of Boolean)
-
-        <System.Runtime.Serialization.OptionalFieldAttribute()> _
+        
+        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private Verwendungszweck_Fahrzeugwaagen_DimensionField As String
-
-        <System.Runtime.Serialization.OptionalFieldAttribute()> _
+        
+        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private Verwendungszweck_Fahrzeugwaagen_MxMField As String
-
-        <System.Runtime.Serialization.OptionalFieldAttribute()> _
+        
+        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private Verwendungszweck_HalbAutomatischField As System.Nullable(Of Boolean)
-
-        <System.Runtime.Serialization.OptionalFieldAttribute()> _
+        
+        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private Verwendungszweck_HandTaraField As System.Nullable(Of Boolean)
-
-        <System.Runtime.Serialization.OptionalFieldAttribute()> _
+        
+        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private Verwendungszweck_NullnachfuehrungField As System.Nullable(Of Boolean)
-
-        <System.Runtime.Serialization.OptionalFieldAttribute()> _
+        
+        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private Verwendungszweck_PCField As System.Nullable(Of Boolean)
-
-        <System.Runtime.Serialization.OptionalFieldAttribute()> _
+        
+        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private Verwendungszweck_ZubehoerVerschiedenesField As System.Nullable(Of Boolean)
-
-        <System.Runtime.Serialization.OptionalFieldAttribute()> _
+        
+        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private Wiederholbarkeit_Staffelverfahren_MINNormalienField As String
-
-        <Global.System.ComponentModel.BrowsableAttribute(False)> _
+        
+        <Global.System.ComponentModel.BrowsableAttribute(false)>  _
         Public Property ExtensionData() As System.Runtime.Serialization.ExtensionDataObject Implements System.Runtime.Serialization.IExtensibleDataObject.ExtensionData
             Get
                 Return Me.extensionDataField
             End Get
-            Set(value As System.Runtime.Serialization.ExtensionDataObject)
+            Set
                 Me.extensionDataField = value
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Beschaffenheitspruefung_Genehmigt() As System.Nullable(Of Boolean)
             Get
                 Return Me.Beschaffenheitspruefung_GenehmigtField
             End Get
-            Set(value As System.Nullable(Of Boolean))
-                If (Me.Beschaffenheitspruefung_GenehmigtField.Equals(value) <> True) Then
+            Set
+                If (Me.Beschaffenheitspruefung_GenehmigtField.Equals(value) <> true) Then
                     Me.Beschaffenheitspruefung_GenehmigtField = value
                     Me.RaisePropertyChanged("Beschaffenheitspruefung_Genehmigt")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property EignungAchlastwaegungen_Geprueft() As System.Nullable(Of Boolean)
             Get
                 Return Me.EignungAchlastwaegungen_GeprueftField
             End Get
-            Set(value As System.Nullable(Of Boolean))
-                If (Me.EignungAchlastwaegungen_GeprueftField.Equals(value) <> True) Then
+            Set
+                If (Me.EignungAchlastwaegungen_GeprueftField.Equals(value) <> true) Then
                     Me.EignungAchlastwaegungen_GeprueftField = value
                     Me.RaisePropertyChanged("EignungAchlastwaegungen_Geprueft")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property EignungAchlastwaegungen_WaageNichtGeeignet() As System.Nullable(Of Boolean)
             Get
                 Return Me.EignungAchlastwaegungen_WaageNichtGeeignetField
             End Get
-            Set(value As System.Nullable(Of Boolean))
-                If (Me.EignungAchlastwaegungen_WaageNichtGeeignetField.Equals(value) <> True) Then
+            Set
+                If (Me.EignungAchlastwaegungen_WaageNichtGeeignetField.Equals(value) <> true) Then
                     Me.EignungAchlastwaegungen_WaageNichtGeeignetField = value
                     Me.RaisePropertyChanged("EignungAchlastwaegungen_WaageNichtGeeignet")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property EignungAchlastwaegungen_WaagenbrueckeEbene() As System.Nullable(Of Boolean)
             Get
                 Return Me.EignungAchlastwaegungen_WaagenbrueckeEbeneField
             End Get
-            Set(value As System.Nullable(Of Boolean))
-                If (Me.EignungAchlastwaegungen_WaagenbrueckeEbeneField.Equals(value) <> True) Then
+            Set
+                If (Me.EignungAchlastwaegungen_WaagenbrueckeEbeneField.Equals(value) <> true) Then
                     Me.EignungAchlastwaegungen_WaagenbrueckeEbeneField = value
                     Me.RaisePropertyChanged("EignungAchlastwaegungen_WaagenbrueckeEbene")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property FK_Identifikationsdaten_Konformitaetsbewertungsverfahren() As System.Nullable(Of Byte)
             Get
                 Return Me.FK_Identifikationsdaten_KonformitaetsbewertungsverfahrenField
             End Get
-            Set(value As System.Nullable(Of Byte))
-                If (Me.FK_Identifikationsdaten_KonformitaetsbewertungsverfahrenField.Equals(value) <> True) Then
+            Set
+                If (Me.FK_Identifikationsdaten_KonformitaetsbewertungsverfahrenField.Equals(value) <> true) Then
                     Me.FK_Identifikationsdaten_KonformitaetsbewertungsverfahrenField = value
                     Me.RaisePropertyChanged("FK_Identifikationsdaten_Konformitaetsbewertungsverfahren")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Fallbeschleunigung_g() As String
             Get
                 Return Me.Fallbeschleunigung_gField
             End Get
-            Set(value As String)
-                If (Object.ReferenceEquals(Me.Fallbeschleunigung_gField, value) <> True) Then
+            Set
+                If (Object.ReferenceEquals(Me.Fallbeschleunigung_gField, value) <> true) Then
                     Me.Fallbeschleunigung_gField = value
                     Me.RaisePropertyChanged("Fallbeschleunigung_g")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Fallbeschleunigung_ms2() As System.Nullable(Of Boolean)
             Get
                 Return Me.Fallbeschleunigung_ms2Field
             End Get
-            Set(value As System.Nullable(Of Boolean))
-                If (Me.Fallbeschleunigung_ms2Field.Equals(value) <> True) Then
+            Set
+                If (Me.Fallbeschleunigung_ms2Field.Equals(value) <> true) Then
                     Me.Fallbeschleunigung_ms2Field = value
                     Me.RaisePropertyChanged("Fallbeschleunigung_ms2")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property GenauigkeitNullstellung_InOrdnung() As System.Nullable(Of Boolean)
             Get
                 Return Me.GenauigkeitNullstellung_InOrdnungField
             End Get
-            Set(value As System.Nullable(Of Boolean))
-                If (Me.GenauigkeitNullstellung_InOrdnungField.Equals(value) <> True) Then
+            Set
+                If (Me.GenauigkeitNullstellung_InOrdnungField.Equals(value) <> true) Then
                     Me.GenauigkeitNullstellung_InOrdnungField = value
                     Me.RaisePropertyChanged("GenauigkeitNullstellung_InOrdnung")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property ID() As Integer
             Get
                 Return Me.IDField
             End Get
-            Set(value As Integer)
-                If (Me.IDField.Equals(value) <> True) Then
+            Set
+                If (Me.IDField.Equals(value) <> true) Then
                     Me.IDField = value
                     Me.RaisePropertyChanged("ID")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Identifikationsdaten_Aufstellungsort() As String
             Get
                 Return Me.Identifikationsdaten_AufstellungsortField
             End Get
-            Set(value As String)
-                If (Object.ReferenceEquals(Me.Identifikationsdaten_AufstellungsortField, value) <> True) Then
+            Set
+                If (Object.ReferenceEquals(Me.Identifikationsdaten_AufstellungsortField, value) <> true) Then
                     Me.Identifikationsdaten_AufstellungsortField = value
                     Me.RaisePropertyChanged("Identifikationsdaten_Aufstellungsort")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Identifikationsdaten_Baujahr() As String
             Get
                 Return Me.Identifikationsdaten_BaujahrField
             End Get
-            Set(value As String)
-                If (Object.ReferenceEquals(Me.Identifikationsdaten_BaujahrField, value) <> True) Then
+            Set
+                If (Object.ReferenceEquals(Me.Identifikationsdaten_BaujahrField, value) <> true) Then
                     Me.Identifikationsdaten_BaujahrField = value
                     Me.RaisePropertyChanged("Identifikationsdaten_Baujahr")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Identifikationsdaten_Benutzer() As String
             Get
                 Return Me.Identifikationsdaten_BenutzerField
             End Get
-            Set(value As String)
-                If (Object.ReferenceEquals(Me.Identifikationsdaten_BenutzerField, value) <> True) Then
+            Set
+                If (Object.ReferenceEquals(Me.Identifikationsdaten_BenutzerField, value) <> true) Then
                     Me.Identifikationsdaten_BenutzerField = value
                     Me.RaisePropertyChanged("Identifikationsdaten_Benutzer")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Identifikationsdaten_Datum() As System.Nullable(Of Date)
             Get
                 Return Me.Identifikationsdaten_DatumField
             End Get
-            Set(value As System.Nullable(Of Date))
-                If (Me.Identifikationsdaten_DatumField.Equals(value) <> True) Then
+            Set
+                If (Me.Identifikationsdaten_DatumField.Equals(value) <> true) Then
                     Me.Identifikationsdaten_DatumField = value
                     Me.RaisePropertyChanged("Identifikationsdaten_Datum")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Identifikationsdaten_HybridMechanisch() As String
             Get
                 Return Me.Identifikationsdaten_HybridMechanischField
             End Get
-            Set(value As String)
-                If (Object.ReferenceEquals(Me.Identifikationsdaten_HybridMechanischField, value) <> True) Then
+            Set
+                If (Object.ReferenceEquals(Me.Identifikationsdaten_HybridMechanischField, value) <> true) Then
                     Me.Identifikationsdaten_HybridMechanischField = value
                     Me.RaisePropertyChanged("Identifikationsdaten_HybridMechanisch")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Identifikationsdaten_Min1() As String
             Get
                 Return Me.Identifikationsdaten_Min1Field
             End Get
-            Set(value As String)
-                If (Object.ReferenceEquals(Me.Identifikationsdaten_Min1Field, value) <> True) Then
+            Set
+                If (Object.ReferenceEquals(Me.Identifikationsdaten_Min1Field, value) <> true) Then
                     Me.Identifikationsdaten_Min1Field = value
                     Me.RaisePropertyChanged("Identifikationsdaten_Min1")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Identifikationsdaten_Min2() As String
             Get
                 Return Me.Identifikationsdaten_Min2Field
             End Get
-            Set(value As String)
-                If (Object.ReferenceEquals(Me.Identifikationsdaten_Min2Field, value) <> True) Then
+            Set
+                If (Object.ReferenceEquals(Me.Identifikationsdaten_Min2Field, value) <> true) Then
                     Me.Identifikationsdaten_Min2Field = value
                     Me.RaisePropertyChanged("Identifikationsdaten_Min2")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Identifikationsdaten_Min3() As String
             Get
                 Return Me.Identifikationsdaten_Min3Field
             End Get
-            Set(value As String)
-                If (Object.ReferenceEquals(Me.Identifikationsdaten_Min3Field, value) <> True) Then
+            Set
+                If (Object.ReferenceEquals(Me.Identifikationsdaten_Min3Field, value) <> true) Then
                     Me.Identifikationsdaten_Min3Field = value
                     Me.RaisePropertyChanged("Identifikationsdaten_Min3")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Identifikationsdaten_NichtSelbsteinspielend() As String
             Get
                 Return Me.Identifikationsdaten_NichtSelbsteinspielendField
             End Get
-            Set(value As String)
-                If (Object.ReferenceEquals(Me.Identifikationsdaten_NichtSelbsteinspielendField, value) <> True) Then
+            Set
+                If (Object.ReferenceEquals(Me.Identifikationsdaten_NichtSelbsteinspielendField, value) <> true) Then
                     Me.Identifikationsdaten_NichtSelbsteinspielendField = value
                     Me.RaisePropertyChanged("Identifikationsdaten_NichtSelbsteinspielend")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Identifikationsdaten_Pruefer() As String
             Get
                 Return Me.Identifikationsdaten_PrueferField
             End Get
-            Set(value As String)
-                If (Object.ReferenceEquals(Me.Identifikationsdaten_PrueferField, value) <> True) Then
+            Set
+                If (Object.ReferenceEquals(Me.Identifikationsdaten_PrueferField, value) <> true) Then
                     Me.Identifikationsdaten_PrueferField = value
                     Me.RaisePropertyChanged("Identifikationsdaten_Pruefer")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Identifikationsdaten_Selbsteinspielend() As String
             Get
                 Return Me.Identifikationsdaten_SelbsteinspielendField
             End Get
-            Set(value As String)
-                If (Object.ReferenceEquals(Me.Identifikationsdaten_SelbsteinspielendField, value) <> True) Then
+            Set
+                If (Object.ReferenceEquals(Me.Identifikationsdaten_SelbsteinspielendField, value) <> true) Then
                     Me.Identifikationsdaten_SelbsteinspielendField = value
                     Me.RaisePropertyChanged("Identifikationsdaten_Selbsteinspielend")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Komponenten_Eichzaehlerstand() As String
             Get
                 Return Me.Komponenten_EichzaehlerstandField
             End Get
-            Set(value As String)
-                If (Object.ReferenceEquals(Me.Komponenten_EichzaehlerstandField, value) <> True) Then
+            Set
+                If (Object.ReferenceEquals(Me.Komponenten_EichzaehlerstandField, value) <> true) Then
                     Me.Komponenten_EichzaehlerstandField = value
                     Me.RaisePropertyChanged("Komponenten_Eichzaehlerstand")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Komponenten_Softwarestand() As String
             Get
                 Return Me.Komponenten_SoftwarestandField
             End Get
-            Set(value As String)
-                If (Object.ReferenceEquals(Me.Komponenten_SoftwarestandField, value) <> True) Then
+            Set
+                If (Object.ReferenceEquals(Me.Komponenten_SoftwarestandField, value) <> true) Then
                     Me.Komponenten_SoftwarestandField = value
                     Me.RaisePropertyChanged("Komponenten_Softwarestand")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Komponenten_WaegezellenFabriknummer() As String
             Get
                 Return Me.Komponenten_WaegezellenFabriknummerField
             End Get
-            Set(value As String)
-                If (Object.ReferenceEquals(Me.Komponenten_WaegezellenFabriknummerField, value) <> True) Then
+            Set
+                If (Object.ReferenceEquals(Me.Komponenten_WaegezellenFabriknummerField, value) <> true) Then
                     Me.Komponenten_WaegezellenFabriknummerField = value
                     Me.RaisePropertyChanged("Komponenten_WaegezellenFabriknummer")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Pruefverfahren_BetragNormallast() As String
             Get
                 Return Me.Pruefverfahren_BetragNormallastField
             End Get
-            Set(value As String)
-                If (Object.ReferenceEquals(Me.Pruefverfahren_BetragNormallastField, value) <> True) Then
+            Set
+                If (Object.ReferenceEquals(Me.Pruefverfahren_BetragNormallastField, value) <> true) Then
                     Me.Pruefverfahren_BetragNormallastField = value
                     Me.RaisePropertyChanged("Pruefverfahren_BetragNormallast")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Pruefverfahren_VolleNormallast() As System.Nullable(Of Boolean)
             Get
                 Return Me.Pruefverfahren_VolleNormallastField
             End Get
-            Set(value As System.Nullable(Of Boolean))
-                If (Me.Pruefverfahren_VolleNormallastField.Equals(value) <> True) Then
+            Set
+                If (Me.Pruefverfahren_VolleNormallastField.Equals(value) <> true) Then
                     Me.Pruefverfahren_VolleNormallastField = value
                     Me.RaisePropertyChanged("Pruefverfahren_VolleNormallast")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Pruefverfahren_VollstaendigesStaffelverfahren() As System.Nullable(Of Boolean)
             Get
                 Return Me.Pruefverfahren_VollstaendigesStaffelverfahrenField
             End Get
-            Set(value As System.Nullable(Of Boolean))
-                If (Me.Pruefverfahren_VollstaendigesStaffelverfahrenField.Equals(value) <> True) Then
+            Set
+                If (Me.Pruefverfahren_VollstaendigesStaffelverfahrenField.Equals(value) <> true) Then
                     Me.Pruefverfahren_VollstaendigesStaffelverfahrenField = value
                     Me.RaisePropertyChanged("Pruefverfahren_VollstaendigesStaffelverfahren")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property ServerEichprozess() As EichsoftwareWebservice.ServerEichprozess()
             Get
                 Return Me.ServerEichprozessField
             End Get
-            Set(value As EichsoftwareWebservice.ServerEichprozess())
-                If (Object.ReferenceEquals(Me.ServerEichprozessField, value) <> True) Then
+            Set
+                If (Object.ReferenceEquals(Me.ServerEichprozessField, value) <> true) Then
                     Me.ServerEichprozessField = value
                     Me.RaisePropertyChanged("ServerEichprozess")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property ServerLookup_Konformitaetsbewertungsverfahren() As EichsoftwareWebservice.ServerLookup_Konformitaetsbewertungsverfahren
             Get
                 Return Me.ServerLookup_KonformitaetsbewertungsverfahrenField
             End Get
-            Set(value As EichsoftwareWebservice.ServerLookup_Konformitaetsbewertungsverfahren)
-                If (Object.ReferenceEquals(Me.ServerLookup_KonformitaetsbewertungsverfahrenField, value) <> True) Then
+            Set
+                If (Object.ReferenceEquals(Me.ServerLookup_KonformitaetsbewertungsverfahrenField, value) <> true) Then
                     Me.ServerLookup_KonformitaetsbewertungsverfahrenField = value
                     Me.RaisePropertyChanged("ServerLookup_Konformitaetsbewertungsverfahren")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property ServerPruefungAnsprechvermoegen() As EichsoftwareWebservice.ServerPruefungAnsprechvermoegen()
             Get
                 Return Me.ServerPruefungAnsprechvermoegenField
             End Get
-            Set(value As EichsoftwareWebservice.ServerPruefungAnsprechvermoegen())
-                If (Object.ReferenceEquals(Me.ServerPruefungAnsprechvermoegenField, value) <> True) Then
+            Set
+                If (Object.ReferenceEquals(Me.ServerPruefungAnsprechvermoegenField, value) <> true) Then
                     Me.ServerPruefungAnsprechvermoegenField = value
                     Me.RaisePropertyChanged("ServerPruefungAnsprechvermoegen")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property ServerPruefungAussermittigeBelastung() As EichsoftwareWebservice.ServerPruefungAussermittigeBelastung()
             Get
                 Return Me.ServerPruefungAussermittigeBelastungField
             End Get
-            Set(value As EichsoftwareWebservice.ServerPruefungAussermittigeBelastung())
-                If (Object.ReferenceEquals(Me.ServerPruefungAussermittigeBelastungField, value) <> True) Then
+            Set
+                If (Object.ReferenceEquals(Me.ServerPruefungAussermittigeBelastungField, value) <> true) Then
                     Me.ServerPruefungAussermittigeBelastungField = value
                     Me.RaisePropertyChanged("ServerPruefungAussermittigeBelastung")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property ServerPruefungLinearitaetFallend() As EichsoftwareWebservice.ServerPruefungLinearitaetFallend()
             Get
                 Return Me.ServerPruefungLinearitaetFallendField
             End Get
-            Set(value As EichsoftwareWebservice.ServerPruefungLinearitaetFallend())
-                If (Object.ReferenceEquals(Me.ServerPruefungLinearitaetFallendField, value) <> True) Then
+            Set
+                If (Object.ReferenceEquals(Me.ServerPruefungLinearitaetFallendField, value) <> true) Then
                     Me.ServerPruefungLinearitaetFallendField = value
                     Me.RaisePropertyChanged("ServerPruefungLinearitaetFallend")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property ServerPruefungLinearitaetSteigend() As EichsoftwareWebservice.ServerPruefungLinearitaetSteigend()
             Get
                 Return Me.ServerPruefungLinearitaetSteigendField
             End Get
-            Set(value As EichsoftwareWebservice.ServerPruefungLinearitaetSteigend())
-                If (Object.ReferenceEquals(Me.ServerPruefungLinearitaetSteigendField, value) <> True) Then
+            Set
+                If (Object.ReferenceEquals(Me.ServerPruefungLinearitaetSteigendField, value) <> true) Then
                     Me.ServerPruefungLinearitaetSteigendField = value
                     Me.RaisePropertyChanged("ServerPruefungLinearitaetSteigend")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property ServerPruefungRollendeLasten() As EichsoftwareWebservice.ServerPruefungRollendeLasten()
             Get
                 Return Me.ServerPruefungRollendeLastenField
             End Get
-            Set(value As EichsoftwareWebservice.ServerPruefungRollendeLasten())
-                If (Object.ReferenceEquals(Me.ServerPruefungRollendeLastenField, value) <> True) Then
+            Set
+                If (Object.ReferenceEquals(Me.ServerPruefungRollendeLastenField, value) <> true) Then
                     Me.ServerPruefungRollendeLastenField = value
                     Me.RaisePropertyChanged("ServerPruefungRollendeLasten")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property ServerPruefungStabilitaetGleichgewichtslage() As EichsoftwareWebservice.ServerPruefungStabilitaetGleichgewichtslage()
             Get
                 Return Me.ServerPruefungStabilitaetGleichgewichtslageField
             End Get
-            Set(value As EichsoftwareWebservice.ServerPruefungStabilitaetGleichgewichtslage())
-                If (Object.ReferenceEquals(Me.ServerPruefungStabilitaetGleichgewichtslageField, value) <> True) Then
+            Set
+                If (Object.ReferenceEquals(Me.ServerPruefungStabilitaetGleichgewichtslageField, value) <> true) Then
                     Me.ServerPruefungStabilitaetGleichgewichtslageField = value
                     Me.RaisePropertyChanged("ServerPruefungStabilitaetGleichgewichtslage")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property ServerPruefungStaffelverfahrenErsatzlast() As EichsoftwareWebservice.ServerPruefungStaffelverfahrenErsatzlast()
             Get
                 Return Me.ServerPruefungStaffelverfahrenErsatzlastField
             End Get
-            Set(value As EichsoftwareWebservice.ServerPruefungStaffelverfahrenErsatzlast())
-                If (Object.ReferenceEquals(Me.ServerPruefungStaffelverfahrenErsatzlastField, value) <> True) Then
+            Set
+                If (Object.ReferenceEquals(Me.ServerPruefungStaffelverfahrenErsatzlastField, value) <> true) Then
                     Me.ServerPruefungStaffelverfahrenErsatzlastField = value
                     Me.RaisePropertyChanged("ServerPruefungStaffelverfahrenErsatzlast")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property ServerPruefungStaffelverfahrenNormallast() As EichsoftwareWebservice.ServerPruefungStaffelverfahrenNormallast()
             Get
                 Return Me.ServerPruefungStaffelverfahrenNormallastField
             End Get
-            Set(value As EichsoftwareWebservice.ServerPruefungStaffelverfahrenNormallast())
-                If (Object.ReferenceEquals(Me.ServerPruefungStaffelverfahrenNormallastField, value) <> True) Then
+            Set
+                If (Object.ReferenceEquals(Me.ServerPruefungStaffelverfahrenNormallastField, value) <> true) Then
                     Me.ServerPruefungStaffelverfahrenNormallastField = value
                     Me.RaisePropertyChanged("ServerPruefungStaffelverfahrenNormallast")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property ServerPruefungWiederholbarkeit() As EichsoftwareWebservice.ServerPruefungWiederholbarkeit()
             Get
                 Return Me.ServerPruefungWiederholbarkeitField
             End Get
-            Set(value As EichsoftwareWebservice.ServerPruefungWiederholbarkeit())
-                If (Object.ReferenceEquals(Me.ServerPruefungWiederholbarkeitField, value) <> True) Then
+            Set
+                If (Object.ReferenceEquals(Me.ServerPruefungWiederholbarkeitField, value) <> true) Then
                     Me.ServerPruefungWiederholbarkeitField = value
                     Me.RaisePropertyChanged("ServerPruefungWiederholbarkeit")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Sicherung_AlibispeicherAufbewahrungsdauerReduziert() As System.Nullable(Of Boolean)
             Get
                 Return Me.Sicherung_AlibispeicherAufbewahrungsdauerReduziertField
             End Get
-            Set(value As System.Nullable(Of Boolean))
-                If (Me.Sicherung_AlibispeicherAufbewahrungsdauerReduziertField.Equals(value) <> True) Then
+            Set
+                If (Me.Sicherung_AlibispeicherAufbewahrungsdauerReduziertField.Equals(value) <> true) Then
                     Me.Sicherung_AlibispeicherAufbewahrungsdauerReduziertField = value
                     Me.RaisePropertyChanged("Sicherung_AlibispeicherAufbewahrungsdauerReduziert")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Sicherung_AlibispeicherAufbewahrungsdauerReduziertBegruendung() As String
             Get
                 Return Me.Sicherung_AlibispeicherAufbewahrungsdauerReduziertBegruendungField
             End Get
-            Set(value As String)
-                If (Object.ReferenceEquals(Me.Sicherung_AlibispeicherAufbewahrungsdauerReduziertBegruendungField, value) <> True) Then
+            Set
+                If (Object.ReferenceEquals(Me.Sicherung_AlibispeicherAufbewahrungsdauerReduziertBegruendungField, value) <> true) Then
                     Me.Sicherung_AlibispeicherAufbewahrungsdauerReduziertBegruendungField = value
                     Me.RaisePropertyChanged("Sicherung_AlibispeicherAufbewahrungsdauerReduziertBegruendung")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Sicherung_AlibispeicherEingerichtet() As System.Nullable(Of Boolean)
             Get
                 Return Me.Sicherung_AlibispeicherEingerichtetField
             End Get
-            Set(value As System.Nullable(Of Boolean))
-                If (Me.Sicherung_AlibispeicherEingerichtetField.Equals(value) <> True) Then
+            Set
+                If (Me.Sicherung_AlibispeicherEingerichtetField.Equals(value) <> true) Then
                     Me.Sicherung_AlibispeicherEingerichtetField = value
                     Me.RaisePropertyChanged("Sicherung_AlibispeicherEingerichtet")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Sicherung_Bemerkungen() As String
             Get
                 Return Me.Sicherung_BemerkungenField
             End Get
-            Set(value As String)
-                If (Object.ReferenceEquals(Me.Sicherung_BemerkungenField, value) <> True) Then
+            Set
+                If (Object.ReferenceEquals(Me.Sicherung_BemerkungenField, value) <> true) Then
                     Me.Sicherung_BemerkungenField = value
                     Me.RaisePropertyChanged("Sicherung_Bemerkungen")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Sicherung_BenannteStelle() As System.Nullable(Of Boolean)
             Get
                 Return Me.Sicherung_BenannteStelleField
             End Get
-            Set(value As System.Nullable(Of Boolean))
-                If (Me.Sicherung_BenannteStelleField.Equals(value) <> True) Then
+            Set
+                If (Me.Sicherung_BenannteStelleField.Equals(value) <> true) Then
                     Me.Sicherung_BenannteStelleField = value
                     Me.RaisePropertyChanged("Sicherung_BenannteStelle")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Sicherung_BenannteStelleAnzahl() As System.Nullable(Of Short)
             Get
                 Return Me.Sicherung_BenannteStelleAnzahlField
             End Get
-            Set(value As System.Nullable(Of Short))
-                If (Me.Sicherung_BenannteStelleAnzahlField.Equals(value) <> True) Then
+            Set
+                If (Me.Sicherung_BenannteStelleAnzahlField.Equals(value) <> true) Then
                     Me.Sicherung_BenannteStelleAnzahlField = value
                     Me.RaisePropertyChanged("Sicherung_BenannteStelleAnzahl")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Sicherung_CE() As System.Nullable(Of Boolean)
             Get
                 Return Me.Sicherung_CEField
             End Get
-            Set(value As System.Nullable(Of Boolean))
-                If (Me.Sicherung_CEField.Equals(value) <> True) Then
+            Set
+                If (Me.Sicherung_CEField.Equals(value) <> true) Then
                     Me.Sicherung_CEField = value
                     Me.RaisePropertyChanged("Sicherung_CE")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Sicherung_CEAnzahl() As System.Nullable(Of Short)
             Get
                 Return Me.Sicherung_CEAnzahlField
             End Get
-            Set(value As System.Nullable(Of Short))
-                If (Me.Sicherung_CEAnzahlField.Equals(value) <> True) Then
+            Set
+                If (Me.Sicherung_CEAnzahlField.Equals(value) <> true) Then
                     Me.Sicherung_CEAnzahlField = value
                     Me.RaisePropertyChanged("Sicherung_CEAnzahl")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Sicherung_DatenAusgelesen() As System.Nullable(Of Boolean)
             Get
                 Return Me.Sicherung_DatenAusgelesenField
             End Get
-            Set(value As System.Nullable(Of Boolean))
-                If (Me.Sicherung_DatenAusgelesenField.Equals(value) <> True) Then
+            Set
+                If (Me.Sicherung_DatenAusgelesenField.Equals(value) <> true) Then
                     Me.Sicherung_DatenAusgelesenField = value
                     Me.RaisePropertyChanged("Sicherung_DatenAusgelesen")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Sicherung_Eichsiegel13x13() As System.Nullable(Of Boolean)
             Get
                 Return Me.Sicherung_Eichsiegel13x13Field
             End Get
-            Set(value As System.Nullable(Of Boolean))
-                If (Me.Sicherung_Eichsiegel13x13Field.Equals(value) <> True) Then
+            Set
+                If (Me.Sicherung_Eichsiegel13x13Field.Equals(value) <> true) Then
                     Me.Sicherung_Eichsiegel13x13Field = value
                     Me.RaisePropertyChanged("Sicherung_Eichsiegel13x13")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Sicherung_Eichsiegel13x13Anzahl() As System.Nullable(Of Short)
             Get
                 Return Me.Sicherung_Eichsiegel13x13AnzahlField
             End Get
-            Set(value As System.Nullable(Of Short))
-                If (Me.Sicherung_Eichsiegel13x13AnzahlField.Equals(value) <> True) Then
+            Set
+                If (Me.Sicherung_Eichsiegel13x13AnzahlField.Equals(value) <> true) Then
                     Me.Sicherung_Eichsiegel13x13AnzahlField = value
                     Me.RaisePropertyChanged("Sicherung_Eichsiegel13x13Anzahl")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Sicherung_EichsiegelRund() As System.Nullable(Of Boolean)
             Get
                 Return Me.Sicherung_EichsiegelRundField
             End Get
-            Set(value As System.Nullable(Of Boolean))
-                If (Me.Sicherung_EichsiegelRundField.Equals(value) <> True) Then
+            Set
+                If (Me.Sicherung_EichsiegelRundField.Equals(value) <> true) Then
                     Me.Sicherung_EichsiegelRundField = value
                     Me.RaisePropertyChanged("Sicherung_EichsiegelRund")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Sicherung_EichsiegelRundAnzahl() As System.Nullable(Of Short)
             Get
                 Return Me.Sicherung_EichsiegelRundAnzahlField
             End Get
-            Set(value As System.Nullable(Of Short))
-                If (Me.Sicherung_EichsiegelRundAnzahlField.Equals(value) <> True) Then
+            Set
+                If (Me.Sicherung_EichsiegelRundAnzahlField.Equals(value) <> true) Then
                     Me.Sicherung_EichsiegelRundAnzahlField = value
                     Me.RaisePropertyChanged("Sicherung_EichsiegelRundAnzahl")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Sicherung_GruenesM() As System.Nullable(Of Boolean)
             Get
                 Return Me.Sicherung_GruenesMField
             End Get
-            Set(value As System.Nullable(Of Boolean))
-                If (Me.Sicherung_GruenesMField.Equals(value) <> True) Then
+            Set
+                If (Me.Sicherung_GruenesMField.Equals(value) <> true) Then
                     Me.Sicherung_GruenesMField = value
                     Me.RaisePropertyChanged("Sicherung_GruenesM")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Sicherung_GruenesMAnzahl() As System.Nullable(Of Short)
             Get
                 Return Me.Sicherung_GruenesMAnzahlField
             End Get
-            Set(value As System.Nullable(Of Short))
-                If (Me.Sicherung_GruenesMAnzahlField.Equals(value) <> True) Then
+            Set
+                If (Me.Sicherung_GruenesMAnzahlField.Equals(value) <> true) Then
                     Me.Sicherung_GruenesMAnzahlField = value
                     Me.RaisePropertyChanged("Sicherung_GruenesMAnzahl")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Sicherung_HinweismarkeGelocht() As System.Nullable(Of Boolean)
             Get
                 Return Me.Sicherung_HinweismarkeGelochtField
             End Get
-            Set(value As System.Nullable(Of Boolean))
-                If (Me.Sicherung_HinweismarkeGelochtField.Equals(value) <> True) Then
+            Set
+                If (Me.Sicherung_HinweismarkeGelochtField.Equals(value) <> true) Then
                     Me.Sicherung_HinweismarkeGelochtField = value
                     Me.RaisePropertyChanged("Sicherung_HinweismarkeGelocht")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Sicherung_HinweismarkeGelochtAnzahl() As System.Nullable(Of Short)
             Get
                 Return Me.Sicherung_HinweismarkeGelochtAnzahlField
             End Get
-            Set(value As System.Nullable(Of Short))
-                If (Me.Sicherung_HinweismarkeGelochtAnzahlField.Equals(value) <> True) Then
+            Set
+                If (Me.Sicherung_HinweismarkeGelochtAnzahlField.Equals(value) <> true) Then
                     Me.Sicherung_HinweismarkeGelochtAnzahlField = value
                     Me.RaisePropertyChanged("Sicherung_HinweismarkeGelochtAnzahl")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Taraeinrichtung_ErweiterteRichtigkeitspruefungOK() As String
             Get
                 Return Me.Taraeinrichtung_ErweiterteRichtigkeitspruefungOKField
             End Get
-            Set(value As String)
-                If (Object.ReferenceEquals(Me.Taraeinrichtung_ErweiterteRichtigkeitspruefungOKField, value) <> True) Then
+            Set
+                If (Object.ReferenceEquals(Me.Taraeinrichtung_ErweiterteRichtigkeitspruefungOKField, value) <> true) Then
                     Me.Taraeinrichtung_ErweiterteRichtigkeitspruefungOKField = value
                     Me.RaisePropertyChanged("Taraeinrichtung_ErweiterteRichtigkeitspruefungOK")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Taraeinrichtung_GenauigkeitTarierungOK() As String
             Get
                 Return Me.Taraeinrichtung_GenauigkeitTarierungOKField
             End Get
-            Set(value As String)
-                If (Object.ReferenceEquals(Me.Taraeinrichtung_GenauigkeitTarierungOKField, value) <> True) Then
+            Set
+                If (Object.ReferenceEquals(Me.Taraeinrichtung_GenauigkeitTarierungOKField, value) <> true) Then
                     Me.Taraeinrichtung_GenauigkeitTarierungOKField = value
                     Me.RaisePropertyChanged("Taraeinrichtung_GenauigkeitTarierungOK")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Taraeinrichtung_TaraausgleichseinrichtungOK() As String
             Get
                 Return Me.Taraeinrichtung_TaraausgleichseinrichtungOKField
             End Get
-            Set(value As String)
-                If (Object.ReferenceEquals(Me.Taraeinrichtung_TaraausgleichseinrichtungOKField, value) <> True) Then
+            Set
+                If (Object.ReferenceEquals(Me.Taraeinrichtung_TaraausgleichseinrichtungOKField, value) <> true) Then
                     Me.Taraeinrichtung_TaraausgleichseinrichtungOKField = value
                     Me.RaisePropertyChanged("Taraeinrichtung_TaraausgleichseinrichtungOK")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Taraeinrichtung_Taraeingabe() As System.Nullable(Of Boolean)
             Get
                 Return Me.Taraeinrichtung_TaraeingabeField
             End Get
-            Set(value As System.Nullable(Of Boolean))
-                If (Me.Taraeinrichtung_TaraeingabeField.Equals(value) <> True) Then
+            Set
+                If (Me.Taraeinrichtung_TaraeingabeField.Equals(value) <> true) Then
                     Me.Taraeinrichtung_TaraeingabeField = value
                     Me.RaisePropertyChanged("Taraeinrichtung_Taraeingabe")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Ueberlastanzeige_Max() As String
             Get
                 Return Me.Ueberlastanzeige_MaxField
             End Get
-            Set(value As String)
-                If (Object.ReferenceEquals(Me.Ueberlastanzeige_MaxField, value) <> True) Then
+            Set
+                If (Object.ReferenceEquals(Me.Ueberlastanzeige_MaxField, value) <> true) Then
                     Me.Ueberlastanzeige_MaxField = value
                     Me.RaisePropertyChanged("Ueberlastanzeige_Max")
                 End If
@@ -3205,6 +3205,12 @@ Namespace EichsoftwareWebservice
         
         Private _MindestmesssignalField As String
         
+        Private _NullstellungHalbSelbsttaetigField As Boolean
+        
+        Private _NullstellungNullnachfuehrungField As Boolean
+        
+        Private _NullstellungSelbsttaetigField As Boolean
+        
         Private _PruefberichtField As String
         
         Private _ServerEichprozessField() As EichsoftwareWebservice.ServerEichprozess
@@ -3212,6 +3218,12 @@ Namespace EichsoftwareWebservice
         Private _ServerMogelstatistikField() As EichsoftwareWebservice.ServerMogelstatistik
         
         Private _SpeisespannungField As String
+        
+        Private _TaraeinrichtungHalbSelbsttaetigField As Boolean
+        
+        Private _TaraeinrichtungSelbsttaetigField As Boolean
+        
+        Private _TaraeinrichtungTaraeingabeField As Boolean
         
         Private _TypField As String
         
@@ -3434,6 +3446,45 @@ Namespace EichsoftwareWebservice
         End Property
         
         <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _NullstellungHalbSelbsttaetig() As Boolean
+            Get
+                Return Me._NullstellungHalbSelbsttaetigField
+            End Get
+            Set
+                If (Me._NullstellungHalbSelbsttaetigField.Equals(value) <> true) Then
+                    Me._NullstellungHalbSelbsttaetigField = value
+                    Me.RaisePropertyChanged("_NullstellungHalbSelbsttaetig")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _NullstellungNullnachfuehrung() As Boolean
+            Get
+                Return Me._NullstellungNullnachfuehrungField
+            End Get
+            Set
+                If (Me._NullstellungNullnachfuehrungField.Equals(value) <> true) Then
+                    Me._NullstellungNullnachfuehrungField = value
+                    Me.RaisePropertyChanged("_NullstellungNullnachfuehrung")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _NullstellungSelbsttaetig() As Boolean
+            Get
+                Return Me._NullstellungSelbsttaetigField
+            End Get
+            Set
+                If (Me._NullstellungSelbsttaetigField.Equals(value) <> true) Then
+                    Me._NullstellungSelbsttaetigField = value
+                    Me.RaisePropertyChanged("_NullstellungSelbsttaetig")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
         Public Property _Pruefbericht() As String
             Get
                 Return Me._PruefberichtField
@@ -3481,6 +3532,45 @@ Namespace EichsoftwareWebservice
                 If (Object.ReferenceEquals(Me._SpeisespannungField, value) <> true) Then
                     Me._SpeisespannungField = value
                     Me.RaisePropertyChanged("_Speisespannung")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _TaraeinrichtungHalbSelbsttaetig() As Boolean
+            Get
+                Return Me._TaraeinrichtungHalbSelbsttaetigField
+            End Get
+            Set
+                If (Me._TaraeinrichtungHalbSelbsttaetigField.Equals(value) <> true) Then
+                    Me._TaraeinrichtungHalbSelbsttaetigField = value
+                    Me.RaisePropertyChanged("_TaraeinrichtungHalbSelbsttaetig")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _TaraeinrichtungSelbsttaetig() As Boolean
+            Get
+                Return Me._TaraeinrichtungSelbsttaetigField
+            End Get
+            Set
+                If (Me._TaraeinrichtungSelbsttaetigField.Equals(value) <> true) Then
+                    Me._TaraeinrichtungSelbsttaetigField = value
+                    Me.RaisePropertyChanged("_TaraeinrichtungSelbsttaetig")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _TaraeinrichtungTaraeingabe() As Boolean
+            Get
+                Return Me._TaraeinrichtungTaraeingabeField
+            End Get
+            Set
+                If (Me._TaraeinrichtungTaraeingabeField.Equals(value) <> true) Then
+                    Me._TaraeinrichtungTaraeingabeField = value
+                    Me.RaisePropertyChanged("_TaraeinrichtungTaraeingabe")
                 End If
             End Set
         End Property

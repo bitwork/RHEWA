@@ -57,6 +57,13 @@
             RadTextBoxControlAuswertegeraetPruefbericht.Text = _objAWG.Pruefbericht
             RadTextBoxControlAuswertegeraetSpeisespannung.Text = _objAWG.Speisespannung
             RadTextBoxControlAuswertegeraetTyp.Text = _objAWG.Typ
+            RadCheckBoxNullstelleinrichtungHalbSelbsttaetig.Checked = _objAWG.NullstellungHalbSelbsttaetig
+            RadCheckBoxNullstelleinrichtungSelbsttaetig.Checked = _objAWG.NullstellungSelbsttaetig
+            RadCheckBoxNullstelleinrichtungNullnachfuehrung.Checked = _objAWG.NullstellungNullnachfuehrung
+            RadCheckBoxTaraeinrichtungHalbSelbsttaetig.Checked = _objAWG.TaraeinrichtungHalbSelbsttaetig
+            RadCheckBoxTaraeinrichtungSelbsttaetig.Checked = _objAWG.TaraeinrichtungSelbsttaetig
+            RadCheckBoxTaraeinrichtungTaraeingabe.Checked = _objAWG.TaraeinrichtungTaraeingabe
+
 
             Try
                 RadCheckBoxDeaktiviert.Checked = _objAWG.Deaktiviert
@@ -85,6 +92,14 @@
         _objAWG.Pruefbericht = RadTextBoxControlAuswertegeraetPruefbericht.Text
         _objAWG.Speisespannung = RadTextBoxControlAuswertegeraetSpeisespannung.Text
         _objAWG.Typ = RadTextBoxControlAuswertegeraetTyp.Text
+
+        _objAWG.NullstellungHalbSelbsttaetig = RadCheckBoxNullstelleinrichtungHalbSelbsttaetig.Checked
+        _objAWG.NullstellungSelbsttaetig = RadCheckBoxNullstelleinrichtungSelbsttaetig.Checked
+        _objAWG.NullstellungNullnachfuehrung = RadCheckBoxNullstelleinrichtungNullnachfuehrung.Checked
+        _objAWG.TaraeinrichtungHalbSelbsttaetig = RadCheckBoxTaraeinrichtungHalbSelbsttaetig.Checked
+        _objAWG.TaraeinrichtungSelbsttaetig = RadCheckBoxTaraeinrichtungSelbsttaetig.Checked
+        _objAWG.TaraeinrichtungTaraeingabe = RadCheckBoxTaraeinrichtungTaraeingabe.Checked
+
         _objAWG.ErstellDatum = Now
 
         _objAWG.Deaktiviert = RadCheckBoxDeaktiviert.Checked
