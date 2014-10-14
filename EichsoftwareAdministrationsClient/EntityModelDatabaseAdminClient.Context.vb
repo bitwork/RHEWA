@@ -34,5 +34,10 @@ Partial Public Class EichenEntities
     Public Property ServerLookup_Auswertegeraet() As DbSet(Of ServerLookup_Auswertegeraet)
     Public Property ServerLookup_Waegezelle() As DbSet(Of ServerLookup_Waegezelle)
     Public Property ServerEichmarkenverwaltung() As DbSet(Of ServerEichmarkenverwaltung)
+    Public Property ServerEichprotokoll() As DbSet(Of ServerEichprotokoll)
+    Public Property ServerEichprozess() As DbSet(Of ServerEichprozess)
+    Public Property ServerLookup_Vorgangsstatus() As DbSet(Of ServerLookup_Vorgangsstatus)
+    Public Property ServerLookup_Waagenart() As DbSet(Of ServerLookup_Waagenart)
+    Public Property ServerLookup_Waagentyp() As DbSet(Of ServerLookup_Waagentyp)
 
 End Class

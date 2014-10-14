@@ -21,6 +21,19 @@
         <AssociationConnector Association="EichenModel.FK_ServerFirmenZusatzdaten_Firmen" />
         <AssociationConnector Association="EichenModel.FK_Benutzer_Firmen" />
         <AssociationConnector Association="EichenModel.FK_ServerLizensierung_Benutzer" />
+        <EntityTypeShape EntityType="EichenModel.ServerEichprotokoll" Width="1.5" PointX="4.5416666942376951" PointY="28.509553222222976" />
+        <EntityTypeShape EntityType="EichenModel.ServerEichprozess" Width="1.5" PointX="3.7112638185318856" PointY="28.023158265288526" />
+        <AssociationConnector Association="EichenModel.FK_Eichprozess_Eichprotokoll" />
+        <AssociationConnector Association="EichenModel.FK_Eichprozess_Kompatiblitaetsnachweis" />
+        <AssociationConnector Association="EichenModel.FK_Eichprozess_Lookup_Auswertegeraet" />
+        <AssociationConnector Association="EichenModel.FK_Eichprozess_Lookup_Waegezelle" />
+        <AssociationConnector Association="EichenModel.FK_Mogelstatistik_Eichprozess" />
+        <EntityTypeShape EntityType="EichenModel.ServerLookup_Vorgangsstatus" Width="1.5" PointX="1.573692056151895" PointY="24.44695472365569" />
+        <AssociationConnector Association="EichenModel.FK_Eichprozess_Lookup_Vorgangsstatus" />
+        <EntityTypeShape EntityType="EichenModel.ServerLookup_Waagenart" Width="1.5" PointX="1.3536783127829797" PointY="15.884503029233079" />
+        <EntityTypeShape EntityType="EichenModel.ServerLookup_Waagentyp" Width="1.5" PointX="1.3885508577286037" PointY="7.77953566973076" />
+        <AssociationConnector Association="EichenModel.FK_Eichprozess_Lookup_Waagenart" />
+        <AssociationConnector Association="EichenModel.FK_Eichprozess_Lookup_Waagentyp" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

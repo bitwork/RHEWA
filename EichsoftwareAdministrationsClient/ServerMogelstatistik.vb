@@ -43,5 +43,6 @@ Partial Public Class ServerMogelstatistik
 
     Public Overridable Property ServerLookup_Auswertegeraet As ServerLookup_Auswertegeraet
     Public Overridable Property ServerLookup_Waegezelle As ServerLookup_Waegezelle
+    Public Overridable Property ServerEichprozess As ServerEichprozess
 
 End Class

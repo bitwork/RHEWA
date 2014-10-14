@@ -12,5 +12,5 @@
     Public Property AnhangPfad As String = ""
     Public Property NeueWZ As Boolean = False
     Public Property Uploaddatum As DateTime
-
+    Public Property Pruefscheinnummer As String
 End Class

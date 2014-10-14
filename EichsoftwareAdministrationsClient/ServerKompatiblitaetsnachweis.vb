@@ -41,4 +41,6 @@ Partial Public Class ServerKompatiblitaetsnachweis
     Public Property Kompatiblitaet_AWG_Anschlussart As String
     Public Property Kompatiblitaet_WZ_Hoechstlast As String
 
+    Public Overridable Property ServerEichprozess As ICollection(Of ServerEichprozess) = New HashSet(Of ServerEichprozess)
+
 End Class

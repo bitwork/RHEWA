@@ -10,7 +10,7 @@
 Imports System
 Imports System.Collections.Generic
 
-Partial Public Class ServerLookup_Bearbeitungsstatus
+Partial Public Class ServerLookup_Vorgangsstatus
     Public Property ID As Byte
     Public Property Status As String
     Public Property Status_EN As String

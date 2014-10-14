@@ -38,5 +38,6 @@ Partial Public Class ServerLookup_Auswertegeraet
     Public Property NullstellungHalbSelbsttaetig As Boolean
 
     Public Overridable Property ServerMogelstatistik As ICollection(Of ServerMogelstatistik) = New HashSet(Of ServerMogelstatistik)
+    Public Overridable Property ServerEichprozess As ICollection(Of ServerEichprozess) = New HashSet(Of ServerEichprozess)
 
 End Class

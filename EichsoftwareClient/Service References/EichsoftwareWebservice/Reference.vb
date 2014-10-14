@@ -6178,6 +6178,9 @@ Namespace EichsoftwareWebservice
         Private NeueWZField As Boolean
         
         <System.Runtime.Serialization.OptionalFieldAttribute()>  _
+        Private PruefscheinnummerField As String
+        
+        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private UploaddatumField As Date
         
         <System.Runtime.Serialization.OptionalFieldAttribute()>  _
@@ -6302,6 +6305,19 @@ Namespace EichsoftwareWebservice
                 If (Me.NeueWZField.Equals(value) <> true) Then
                     Me.NeueWZField = value
                     Me.RaisePropertyChanged("NeueWZ")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
+        Public Property Pruefscheinnummer() As String
+            Get
+                Return Me.PruefscheinnummerField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me.PruefscheinnummerField, value) <> true) Then
+                    Me.PruefscheinnummerField = value
+                    Me.RaisePropertyChanged("Pruefscheinnummer")
                 End If
             End Set
         End Property

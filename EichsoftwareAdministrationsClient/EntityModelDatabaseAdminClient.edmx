@@ -9,11 +9,16 @@
           <EntitySet Name="Benutzer" EntityType="EichenModel.Store.Benutzer" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Firmen" EntityType="EichenModel.Store.Firmen" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ServerEichmarkenverwaltung" EntityType="EichenModel.Store.ServerEichmarkenverwaltung" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ServerEichprotokoll" EntityType="EichenModel.Store.ServerEichprotokoll" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ServerEichprozess" EntityType="EichenModel.Store.ServerEichprozess" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ServerFirmenZusatzdaten" EntityType="EichenModel.Store.ServerFirmenZusatzdaten" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ServerKompatiblitaetsnachweis" EntityType="EichenModel.Store.ServerKompatiblitaetsnachweis" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ServerLizensierung" EntityType="EichenModel.Store.ServerLizensierung" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ServerLookup_Auswertegeraet" EntityType="EichenModel.Store.ServerLookup_Auswertegeraet" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ServerLookup_Bearbeitungsstatus" EntityType="EichenModel.Store.ServerLookup_Bearbeitungsstatus" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ServerLookup_Vorgangsstatus" EntityType="EichenModel.Store.ServerLookup_Vorgangsstatus" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ServerLookup_Waagenart" EntityType="EichenModel.Store.ServerLookup_Waagenart" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ServerLookup_Waagentyp" EntityType="EichenModel.Store.ServerLookup_Waagentyp" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ServerLookup_Waegezelle" EntityType="EichenModel.Store.ServerLookup_Waegezelle" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ServerLookupVertragspartnerFirma" EntityType="EichenModel.Store.ServerLookupVertragspartnerFirma" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ServerMogelstatistik" EntityType="EichenModel.Store.ServerMogelstatistik" store:Type="Tables" Schema="dbo" />
@@ -22,6 +27,38 @@
             <End Role="Firmen" EntitySet="Firmen" />
             <End Role="Benutzer" EntitySet="Benutzer" />
           </AssociationSet>
+          <AssociationSet Name="FK_Eichprozess_Eichprotokoll" Association="EichenModel.Store.FK_Eichprozess_Eichprotokoll">
+            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
+            <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Eichprozess_Kompatiblitaetsnachweis" Association="EichenModel.Store.FK_Eichprozess_Kompatiblitaetsnachweis">
+            <End Role="ServerKompatiblitaetsnachweis" EntitySet="ServerKompatiblitaetsnachweis" />
+            <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Eichprozess_Lookup_Auswertegeraet" Association="EichenModel.Store.FK_Eichprozess_Lookup_Auswertegeraet">
+            <End Role="ServerLookup_Auswertegeraet" EntitySet="ServerLookup_Auswertegeraet" />
+            <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Eichprozess_Lookup_Vorgangsstatus" Association="EichenModel.Store.FK_Eichprozess_Lookup_Vorgangsstatus">
+            <End Role="ServerLookup_Vorgangsstatus" EntitySet="ServerLookup_Vorgangsstatus" />
+            <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Eichprozess_Lookup_Waagenart" Association="EichenModel.Store.FK_Eichprozess_Lookup_Waagenart">
+            <End Role="ServerLookup_Waagenart" EntitySet="ServerLookup_Waagenart" />
+            <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Eichprozess_Lookup_Waagentyp" Association="EichenModel.Store.FK_Eichprozess_Lookup_Waagentyp">
+            <End Role="ServerLookup_Waagentyp" EntitySet="ServerLookup_Waagentyp" />
+            <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Eichprozess_Lookup_Waegezelle" Association="EichenModel.Store.FK_Eichprozess_Lookup_Waegezelle">
+            <End Role="ServerLookup_Waegezelle" EntitySet="ServerLookup_Waegezelle" />
+            <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Mogelstatistik_Eichprozess" Association="EichenModel.Store.FK_Mogelstatistik_Eichprozess">
+            <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
+            <End Role="ServerMogelstatistik" EntitySet="ServerMogelstatistik" />
+          </AssociationSet>
           <AssociationSet Name="FK_Mogelstatistik_Lookup_Auswertegeraet" Association="EichenModel.Store.FK_Mogelstatistik_Lookup_Auswertegeraet">
             <End Role="ServerLookup_Auswertegeraet" EntitySet="ServerLookup_Auswertegeraet" />
             <End Role="ServerMogelstatistik" EntitySet="ServerMogelstatistik" />
@@ -29,6 +66,10 @@
           <AssociationSet Name="FK_Mogelstatistik_Lookup_Waegezelle" Association="EichenModel.Store.FK_Mogelstatistik_Lookup_Waegezelle">
             <End Role="ServerLookup_Waegezelle" EntitySet="ServerLookup_Waegezelle" />
             <End Role="ServerMogelstatistik" EntitySet="ServerMogelstatistik" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServerEichprozess_ServerLookup_Bearbeitungsstatus" Association="EichenModel.Store.FK_ServerEichprozess_ServerLookup_Bearbeitungsstatus">
+            <End Role="ServerLookup_Bearbeitungsstatus" EntitySet="ServerLookup_Bearbeitungsstatus" />
+            <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
           </AssociationSet>
           <AssociationSet Name="FK_ServerFirmenZusatzdaten_Firmen" Association="EichenModel.Store.FK_ServerFirmenZusatzdaten_Firmen">
             <End Role="Firmen" EntitySet="Firmen" />
@@ -133,6 +174,99 @@
           <Property Name="Bemerkung" Type="nvarchar" MaxLength="999" />
           <Property Name="ZurBearbeitungGesperrtDurch" Type="nvarchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="ServerEichprotokoll">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FK_Identifikationsdaten_Konformitaetsbewertungsverfahren" Type="tinyint" />
+          <Property Name="Identifikationsdaten_Benutzer" Type="nvarchar" MaxLength="50" />
+          <Property Name="Identifikationsdaten_Aufstellungsort" Type="nvarchar" MaxLength="50" />
+          <Property Name="Identifikationsdaten_Datum" Type="date" />
+          <Property Name="Identifikationsdaten_Min1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Identifikationsdaten_Min2" Type="nvarchar" MaxLength="50" />
+          <Property Name="Identifikationsdaten_Min3" Type="nvarchar" MaxLength="50" />
+          <Property Name="Identifikationsdaten_NichtSelbsteinspielend" Type="nvarchar" MaxLength="50" />
+          <Property Name="Identifikationsdaten_HybridMechanisch" Type="nvarchar" MaxLength="50" />
+          <Property Name="Identifikationsdaten_Selbsteinspielend" Type="nvarchar" MaxLength="50" />
+          <Property Name="Identifikationsdaten_Pruefer" Type="nvarchar" MaxLength="50" />
+          <Property Name="Identifikationsdaten_Baujahr" Type="nvarchar" MaxLength="20" />
+          <Property Name="Pruefverfahren_VolleNormallast" Type="bit" />
+          <Property Name="Pruefverfahren_VollstaendigesStaffelverfahren" Type="bit" />
+          <Property Name="Pruefverfahren_BetragNormallast" Type="nvarchar" MaxLength="50" />
+          <Property Name="Komponenten_Softwarestand" Type="nvarchar" MaxLength="50" />
+          <Property Name="Komponenten_Eichzaehlerstand" Type="nvarchar" MaxLength="50" />
+          <Property Name="Komponenten_WaegezellenFabriknummer" Type="nvarchar" MaxLength="50" />
+          <Property Name="Verwendungszweck_HalbAutomatisch" Type="bit" />
+          <Property Name="Verwendungszweck_Automatisch" Type="bit" />
+          <Property Name="Verwendungszweck_Nullnachfuehrung" Type="bit" />
+          <Property Name="Verwendungszweck_AutoTara" Type="bit" />
+          <Property Name="Verwendungszweck_HandTara" Type="bit" />
+          <Property Name="Verwendungszweck_ZubehoerVerschiedenes" Type="bit" />
+          <Property Name="Verwendungszweck_EichfaehigerDatenspeicher" Type="bit" />
+          <Property Name="Verwendungszweck_PC" Type="bit" />
+          <Property Name="Verwendungszweck_Drucker" Type="bit" />
+          <Property Name="Verwendungszweck_Druckertyp" Type="nvarchar" MaxLength="50" />
+          <Property Name="Verwendungszweck_Fahrzeugwaagen_MxM" Type="nvarchar" MaxLength="25" />
+          <Property Name="Verwendungszweck_Fahrzeugwaagen_Dimension" Type="nvarchar" MaxLength="25" />
+          <Property Name="Beschaffenheitspruefung_Genauigkeitsklasse" Type="nvarchar" MaxLength="50" />
+          <Property Name="Beschaffenheitspruefung_Pruefintervall" Type="nvarchar" MaxLength="50" />
+          <Property Name="Beschaffenheitspruefung_LetztePruefung" Type="nvarchar" MaxLength="50" />
+          <Property Name="Beschaffenheitspruefung_Pruefscheinnummer" Type="nvarchar" MaxLength="50" />
+          <Property Name="Beschaffenheitspruefung_EichfahrzeugFirma" Type="nvarchar" MaxLength="50" />
+          <Property Name="GenauigkeitNullstellung_InOrdnung" Type="bit" />
+          <Property Name="Ueberlastanzeige_Max" Type="nvarchar" MaxLength="20" />
+          <Property Name="Ueberlastanzeige_Ueberlast" Type="bit" />
+          <Property Name="Taraeinrichtung_TaraausgleichseinrichtungOK" Type="nvarchar" MaxLength="50" />
+          <Property Name="Taraeinrichtung_GenauigkeitTarierungOK" Type="nvarchar" MaxLength="50" />
+          <Property Name="Taraeinrichtung_ErweiterteRichtigkeitspruefungOK" Type="nvarchar" MaxLength="50" />
+          <Property Name="Fallbeschleunigung_g" Type="nvarchar" MaxLength="10" />
+          <Property Name="Fallbeschleunigung_ms2" Type="bit" />
+          <Property Name="Sicherung_BenannteStelle" Type="bit" />
+          <Property Name="Sicherung_BenannteStelleAnzahl" Type="smallint" />
+          <Property Name="Sicherung_Eichsiegel13x13" Type="bit" />
+          <Property Name="Sicherung_Eichsiegel13x13Anzahl" Type="smallint" />
+          <Property Name="Sicherung_EichsiegelRund" Type="bit" />
+          <Property Name="Sicherung_EichsiegelRundAnzahl" Type="smallint" />
+          <Property Name="Sicherung_HinweismarkeGelocht" Type="bit" />
+          <Property Name="Sicherung_HinweismarkeGelochtAnzahl" Type="smallint" />
+          <Property Name="Sicherung_GruenesM" Type="bit" />
+          <Property Name="Sicherung_GruenesMAnzahl" Type="smallint" />
+          <Property Name="Sicherung_CE" Type="bit" />
+          <Property Name="Sicherung_CEAnzahl" Type="smallint" />
+          <Property Name="Sicherung_DatenAusgelesen" Type="bit" />
+          <Property Name="Sicherung_AlibispeicherEingerichtet" Type="bit" />
+          <Property Name="Sicherung_AlibispeicherAufbewahrungsdauerReduziert" Type="bit" />
+          <Property Name="Sicherung_AlibispeicherAufbewahrungsdauerReduziertBegruendung" Type="nvarchar" MaxLength="255" />
+          <Property Name="Sicherung_Bemerkungen" Type="nvarchar" MaxLength="255" />
+          <Property Name="Wiederholbarkeit_Staffelverfahren_MINNormalien" Type="nvarchar" MaxLength="10" />
+          <Property Name="EignungAchlastwaegungen_WaagenbrueckeEbene" Type="bit" />
+          <Property Name="EignungAchlastwaegungen_WaageNichtGeeignet" Type="bit" />
+          <Property Name="EignungAchlastwaegungen_Geprueft" Type="bit" />
+          <Property Name="Beschaffenheitspruefung_Genehmigt" Type="bit" />
+          <Property Name="Taraeinrichtung_Taraeingabe" Type="bit" />
+        </EntityType>
+        <EntityType Name="ServerEichprozess">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Vorgangsnummer" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="FK_Vorgangsstatus" Type="tinyint" Nullable="false" />
+          <Property Name="FK_Auswertegeraet" Type="nvarchar" MaxLength="50" />
+          <Property Name="FK_Waegezelle" Type="nvarchar" MaxLength="50" />
+          <Property Name="FK_Eichprotokoll" Type="int" />
+          <Property Name="FK_WaagenTyp" Type="tinyint" />
+          <Property Name="FK_WaagenArt" Type="tinyint" />
+          <Property Name="FK_Kompatibilitaetsnachweis" Type="int" />
+          <Property Name="Ausgeblendet" Type="bit" Nullable="false" />
+          <Property Name="FK_Bearbeitungsstatus" Type="tinyint" />
+          <Property Name="UploadFilePath" Type="nvarchar" MaxLength="250" />
+          <Property Name="UploadDatum" Type="datetime" />
+          <Property Name="BearbeitungsDatum" Type="datetime" />
+          <Property Name="ErzeugerLizenz" Type="nvarchar" MaxLength="50" />
+          <Property Name="ZurBearbeitungGesperrtDurch" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="ServerFirmenZusatzdaten">
           <Key>
             <PropertyRef Name="ID" />
@@ -233,6 +367,33 @@
           <Property Name="Status_EN" Type="nvarchar" MaxLength="50" />
           <Property Name="Status_PL" Type="nvarchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="ServerLookup_Vorgangsstatus">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" Nullable="false" />
+          <Property Name="Status" Type="nvarchar" MaxLength="80" />
+          <Property Name="Status_EN" Type="nvarchar" MaxLength="80" />
+          <Property Name="Status_PL" Type="nvarchar" MaxLength="80" />
+        </EntityType>
+        <EntityType Name="ServerLookup_Waagenart">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Art" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Art_EN" Type="nvarchar" MaxLength="50" />
+          <Property Name="Art_PL" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ServerLookup_Waagentyp">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Typ" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Typ_EN" Type="nvarchar" MaxLength="50" />
+          <Property Name="Typ_PL" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="ServerLookup_Waegezelle">
           <Key>
             <PropertyRef Name="ID" />
@@ -325,6 +486,102 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Eichprozess_Eichprotokoll">
+          <End Role="ServerEichprotokoll" Type="EichenModel.Store.ServerEichprotokoll" Multiplicity="0..1" />
+          <End Role="ServerEichprozess" Type="EichenModel.Store.ServerEichprozess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerEichprotokoll">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerEichprozess">
+              <PropertyRef Name="FK_Eichprotokoll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Eichprozess_Kompatiblitaetsnachweis">
+          <End Role="ServerKompatiblitaetsnachweis" Type="EichenModel.Store.ServerKompatiblitaetsnachweis" Multiplicity="0..1" />
+          <End Role="ServerEichprozess" Type="EichenModel.Store.ServerEichprozess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerKompatiblitaetsnachweis">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerEichprozess">
+              <PropertyRef Name="FK_Kompatibilitaetsnachweis" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Eichprozess_Lookup_Auswertegeraet">
+          <End Role="ServerLookup_Auswertegeraet" Type="EichenModel.Store.ServerLookup_Auswertegeraet" Multiplicity="0..1" />
+          <End Role="ServerEichprozess" Type="EichenModel.Store.ServerEichprozess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerLookup_Auswertegeraet">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerEichprozess">
+              <PropertyRef Name="FK_Auswertegeraet" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Eichprozess_Lookup_Vorgangsstatus">
+          <End Role="ServerLookup_Vorgangsstatus" Type="EichenModel.Store.ServerLookup_Vorgangsstatus" Multiplicity="1" />
+          <End Role="ServerEichprozess" Type="EichenModel.Store.ServerEichprozess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerLookup_Vorgangsstatus">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerEichprozess">
+              <PropertyRef Name="FK_Vorgangsstatus" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Eichprozess_Lookup_Waagenart">
+          <End Role="ServerLookup_Waagenart" Type="EichenModel.Store.ServerLookup_Waagenart" Multiplicity="0..1" />
+          <End Role="ServerEichprozess" Type="EichenModel.Store.ServerEichprozess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerLookup_Waagenart">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerEichprozess">
+              <PropertyRef Name="FK_WaagenArt" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Eichprozess_Lookup_Waagentyp">
+          <End Role="ServerLookup_Waagentyp" Type="EichenModel.Store.ServerLookup_Waagentyp" Multiplicity="0..1" />
+          <End Role="ServerEichprozess" Type="EichenModel.Store.ServerEichprozess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerLookup_Waagentyp">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerEichprozess">
+              <PropertyRef Name="FK_WaagenTyp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Eichprozess_Lookup_Waegezelle">
+          <End Role="ServerLookup_Waegezelle" Type="EichenModel.Store.ServerLookup_Waegezelle" Multiplicity="0..1" />
+          <End Role="ServerEichprozess" Type="EichenModel.Store.ServerEichprozess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerLookup_Waegezelle">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerEichprozess">
+              <PropertyRef Name="FK_Waegezelle" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Mogelstatistik_Eichprozess">
+          <End Role="ServerEichprozess" Type="EichenModel.Store.ServerEichprozess" Multiplicity="0..1" />
+          <End Role="ServerMogelstatistik" Type="EichenModel.Store.ServerMogelstatistik" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerEichprozess">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerMogelstatistik">
+              <PropertyRef Name="FK_Eichprozess" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Mogelstatistik_Lookup_Auswertegeraet">
           <End Role="ServerLookup_Auswertegeraet" Type="EichenModel.Store.ServerLookup_Auswertegeraet" Multiplicity="0..1" />
           <End Role="ServerMogelstatistik" Type="EichenModel.Store.ServerMogelstatistik" Multiplicity="*" />
@@ -346,6 +603,18 @@
             </Principal>
             <Dependent Role="ServerMogelstatistik">
               <PropertyRef Name="FK_Waegezelle" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServerEichprozess_ServerLookup_Bearbeitungsstatus">
+          <End Role="ServerLookup_Bearbeitungsstatus" Type="EichenModel.Store.ServerLookup_Bearbeitungsstatus" Multiplicity="0..1" />
+          <End Role="ServerEichprozess" Type="EichenModel.Store.ServerEichprozess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerLookup_Bearbeitungsstatus">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerEichprozess">
+              <PropertyRef Name="FK_Bearbeitungsstatus" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -410,6 +679,47 @@
             <End Role="Benutzer" EntitySet="Benutzer" />
             <End Role="ServerLizensierung" EntitySet="ServerLizensierung" />
           </AssociationSet>
+          <EntitySet Name="ServerEichprotokoll" EntityType="EichenModel.ServerEichprotokoll" />
+          <EntitySet Name="ServerEichprozess" EntityType="EichenModel.ServerEichprozess" />
+          <AssociationSet Name="FK_Eichprozess_Eichprotokoll" Association="EichenModel.FK_Eichprozess_Eichprotokoll">
+            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
+            <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Eichprozess_Kompatiblitaetsnachweis" Association="EichenModel.FK_Eichprozess_Kompatiblitaetsnachweis">
+            <End Role="ServerKompatiblitaetsnachweis" EntitySet="ServerKompatiblitaetsnachweis" />
+            <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Eichprozess_Lookup_Auswertegeraet" Association="EichenModel.FK_Eichprozess_Lookup_Auswertegeraet">
+            <End Role="ServerLookup_Auswertegeraet" EntitySet="ServerLookup_Auswertegeraet" />
+            <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Eichprozess_Lookup_Waegezelle" Association="EichenModel.FK_Eichprozess_Lookup_Waegezelle">
+            <End Role="ServerLookup_Waegezelle" EntitySet="ServerLookup_Waegezelle" />
+            <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Mogelstatistik_Eichprozess" Association="EichenModel.FK_Mogelstatistik_Eichprozess">
+            <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
+            <End Role="ServerMogelstatistik" EntitySet="ServerMogelstatistik" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServerEichprozess_ServerLookup_Bearbeitungsstatus" Association="EichenModel.FK_ServerEichprozess_ServerLookup_Bearbeitungsstatus">
+            <End Role="ServerLookup_Bearbeitungsstatus" EntitySet="ServerLookup_Bearbeitungsstatus" />
+            <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
+          </AssociationSet>
+          <EntitySet Name="ServerLookup_Vorgangsstatus" EntityType="EichenModel.ServerLookup_Vorgangsstatus" />
+          <AssociationSet Name="FK_Eichprozess_Lookup_Vorgangsstatus" Association="EichenModel.FK_Eichprozess_Lookup_Vorgangsstatus">
+            <End Role="ServerLookup_Vorgangsstatus" EntitySet="ServerLookup_Vorgangsstatus" />
+            <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
+          </AssociationSet>
+          <EntitySet Name="ServerLookup_Waagenart" EntityType="EichenModel.ServerLookup_Waagenart" />
+          <EntitySet Name="ServerLookup_Waagentyp" EntityType="EichenModel.ServerLookup_Waagentyp" />
+          <AssociationSet Name="FK_Eichprozess_Lookup_Waagenart" Association="EichenModel.FK_Eichprozess_Lookup_Waagenart">
+            <End Role="ServerLookup_Waagenart" EntitySet="ServerLookup_Waagenart" />
+            <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Eichprozess_Lookup_Waagentyp" Association="EichenModel.FK_Eichprozess_Lookup_Waagentyp">
+            <End Role="ServerLookup_Waagentyp" EntitySet="ServerLookup_Waagentyp" />
+            <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="ServerKompatiblitaetsnachweis">
           <Key>
@@ -444,6 +754,7 @@
           <Property Type="String" Name="Kompatiblitaet_Postleitzahl" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Kompatiblitaet_AWG_Anschlussart" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Kompatiblitaet_WZ_Hoechstlast" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ServerEichprozess" Relationship="EichenModel.FK_Eichprozess_Kompatiblitaetsnachweis" FromRole="ServerKompatiblitaetsnachweis" ToRole="ServerEichprozess" />
         </EntityType>
         <EntityType Name="ServerLizensierung">
           <Key>
@@ -466,6 +777,7 @@
           <Property Type="String" Name="Status" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Status_EN" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Status_PL" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ServerEichprozess" Relationship="EichenModel.FK_ServerEichprozess_ServerLookup_Bearbeitungsstatus" FromRole="ServerLookup_Bearbeitungsstatus" ToRole="ServerEichprozess" />
         </EntityType>
         <EntityType Name="ServerMogelstatistik">
           <Key>
@@ -502,6 +814,7 @@
           <Property Type="String" Name="Kompatiblitaet_WZ_Hoechstlast" MaxLength="20" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="ServerLookup_Auswertegeraet" Relationship="EichenModel.FK_Mogelstatistik_Lookup_Auswertegeraet" FromRole="ServerMogelstatistik" ToRole="ServerLookup_Auswertegeraet" />
           <NavigationProperty Name="ServerLookup_Waegezelle" Relationship="EichenModel.FK_Mogelstatistik_Lookup_Waegezelle" FromRole="ServerMogelstatistik" ToRole="ServerLookup_Waegezelle" />
+          <NavigationProperty Name="ServerEichprozess" Relationship="EichenModel.FK_Mogelstatistik_Eichprozess" FromRole="ServerMogelstatistik" ToRole="ServerEichprozess" />
         </EntityType>
         <EntityType Name="ServerVerbindungsprotokoll">
           <Key>
@@ -597,6 +910,7 @@
           <Property Type="Boolean" Name="NullstellungNullnachfuehrung" Nullable="false" />
           <Property Type="Boolean" Name="NullstellungSelbsttaetig" Nullable="false" />
           <Property Type="Boolean" Name="NullstellungHalbSelbsttaetig" Nullable="false" />
+          <NavigationProperty Name="ServerEichprozess" Relationship="EichenModel.FK_Eichprozess_Lookup_Auswertegeraet" FromRole="ServerLookup_Auswertegeraet" ToRole="ServerEichprozess" />
         </EntityType>
         <EntityType Name="ServerLookup_Waegezelle">
           <Key>
@@ -624,6 +938,7 @@
           <Property Type="Boolean" Name="Deaktiviert" Nullable="false" />
           <Property Type="Boolean" Name="Neu" Nullable="false" />
           <NavigationProperty Name="ServerMogelstatistik" Relationship="EichenModel.FK_Mogelstatistik_Lookup_Waegezelle" FromRole="ServerLookup_Waegezelle" ToRole="ServerMogelstatistik" />
+          <NavigationProperty Name="ServerEichprozess" Relationship="EichenModel.FK_Eichprozess_Lookup_Waegezelle" FromRole="ServerLookup_Waegezelle" ToRole="ServerEichprozess" />
         </EntityType>
         <Association Name="FK_Mogelstatistik_Lookup_Auswertegeraet">
           <End Type="EichenModel.ServerLookup_Auswertegeraet" Role="ServerLookup_Auswertegeraet" Multiplicity="0..1" />
@@ -752,6 +1067,247 @@
             </Principal>
             <Dependent Role="ServerLizensierung">
               <PropertyRef Name="FK_BenutzerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ServerEichprotokoll">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Byte" Name="FK_Identifikationsdaten_Konformitaetsbewertungsverfahren" />
+          <Property Type="String" Name="Identifikationsdaten_Benutzer" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Identifikationsdaten_Aufstellungsort" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Identifikationsdaten_Datum" Precision="0" />
+          <Property Type="String" Name="Identifikationsdaten_Min1" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Identifikationsdaten_Min2" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Identifikationsdaten_Min3" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Identifikationsdaten_NichtSelbsteinspielend" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Identifikationsdaten_HybridMechanisch" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Identifikationsdaten_Selbsteinspielend" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Identifikationsdaten_Pruefer" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Identifikationsdaten_Baujahr" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="Pruefverfahren_VolleNormallast" />
+          <Property Type="Boolean" Name="Pruefverfahren_VollstaendigesStaffelverfahren" />
+          <Property Type="String" Name="Pruefverfahren_BetragNormallast" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Komponenten_Softwarestand" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Komponenten_Eichzaehlerstand" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Komponenten_WaegezellenFabriknummer" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="Verwendungszweck_HalbAutomatisch" />
+          <Property Type="Boolean" Name="Verwendungszweck_Automatisch" />
+          <Property Type="Boolean" Name="Verwendungszweck_Nullnachfuehrung" />
+          <Property Type="Boolean" Name="Verwendungszweck_AutoTara" />
+          <Property Type="Boolean" Name="Verwendungszweck_HandTara" />
+          <Property Type="Boolean" Name="Verwendungszweck_ZubehoerVerschiedenes" />
+          <Property Type="Boolean" Name="Verwendungszweck_EichfaehigerDatenspeicher" />
+          <Property Type="Boolean" Name="Verwendungszweck_PC" />
+          <Property Type="Boolean" Name="Verwendungszweck_Drucker" />
+          <Property Type="String" Name="Verwendungszweck_Druckertyp" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Verwendungszweck_Fahrzeugwaagen_MxM" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Verwendungszweck_Fahrzeugwaagen_Dimension" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Beschaffenheitspruefung_Genauigkeitsklasse" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Beschaffenheitspruefung_Pruefintervall" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Beschaffenheitspruefung_LetztePruefung" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Beschaffenheitspruefung_Pruefscheinnummer" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Beschaffenheitspruefung_EichfahrzeugFirma" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="GenauigkeitNullstellung_InOrdnung" />
+          <Property Type="String" Name="Ueberlastanzeige_Max" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="Ueberlastanzeige_Ueberlast" />
+          <Property Type="String" Name="Taraeinrichtung_TaraausgleichseinrichtungOK" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Taraeinrichtung_GenauigkeitTarierungOK" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Taraeinrichtung_ErweiterteRichtigkeitspruefungOK" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Fallbeschleunigung_g" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="Fallbeschleunigung_ms2" />
+          <Property Type="Boolean" Name="Sicherung_BenannteStelle" />
+          <Property Type="Int16" Name="Sicherung_BenannteStelleAnzahl" />
+          <Property Type="Boolean" Name="Sicherung_Eichsiegel13x13" />
+          <Property Type="Int16" Name="Sicherung_Eichsiegel13x13Anzahl" />
+          <Property Type="Boolean" Name="Sicherung_EichsiegelRund" />
+          <Property Type="Int16" Name="Sicherung_EichsiegelRundAnzahl" />
+          <Property Type="Boolean" Name="Sicherung_HinweismarkeGelocht" />
+          <Property Type="Int16" Name="Sicherung_HinweismarkeGelochtAnzahl" />
+          <Property Type="Boolean" Name="Sicherung_GruenesM" />
+          <Property Type="Int16" Name="Sicherung_GruenesMAnzahl" />
+          <Property Type="Boolean" Name="Sicherung_CE" />
+          <Property Type="Int16" Name="Sicherung_CEAnzahl" />
+          <Property Type="Boolean" Name="Sicherung_DatenAusgelesen" />
+          <Property Type="Boolean" Name="Sicherung_AlibispeicherEingerichtet" />
+          <Property Type="Boolean" Name="Sicherung_AlibispeicherAufbewahrungsdauerReduziert" />
+          <Property Type="String" Name="Sicherung_AlibispeicherAufbewahrungsdauerReduziertBegruendung" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Sicherung_Bemerkungen" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Wiederholbarkeit_Staffelverfahren_MINNormalien" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="EignungAchlastwaegungen_WaagenbrueckeEbene" />
+          <Property Type="Boolean" Name="EignungAchlastwaegungen_WaageNichtGeeignet" />
+          <Property Type="Boolean" Name="EignungAchlastwaegungen_Geprueft" />
+          <Property Type="Boolean" Name="Beschaffenheitspruefung_Genehmigt" />
+          <Property Type="Boolean" Name="Taraeinrichtung_Taraeingabe" />
+          <NavigationProperty Name="ServerEichprozess" Relationship="EichenModel.FK_Eichprozess_Eichprotokoll" FromRole="ServerEichprotokoll" ToRole="ServerEichprozess" />
+        </EntityType>
+        <EntityType Name="ServerEichprozess">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Vorgangsnummer" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Byte" Name="FK_Vorgangsstatus" Nullable="false" />
+          <Property Type="String" Name="FK_Auswertegeraet" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FK_Waegezelle" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="FK_Eichprotokoll" />
+          <Property Type="Byte" Name="FK_WaagenTyp" />
+          <Property Type="Byte" Name="FK_WaagenArt" />
+          <Property Type="Int32" Name="FK_Kompatibilitaetsnachweis" />
+          <Property Type="Boolean" Name="Ausgeblendet" Nullable="false" />
+          <Property Type="Byte" Name="FK_Bearbeitungsstatus" />
+          <Property Type="String" Name="UploadFilePath" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="UploadDatum" Precision="3" />
+          <Property Type="DateTime" Name="BearbeitungsDatum" Precision="3" />
+          <Property Type="String" Name="ErzeugerLizenz" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ZurBearbeitungGesperrtDurch" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ServerEichprotokoll" Relationship="EichenModel.FK_Eichprozess_Eichprotokoll" FromRole="ServerEichprozess" ToRole="ServerEichprotokoll" />
+          <NavigationProperty Name="ServerKompatiblitaetsnachweis" Relationship="EichenModel.FK_Eichprozess_Kompatiblitaetsnachweis" FromRole="ServerEichprozess" ToRole="ServerKompatiblitaetsnachweis" />
+          <NavigationProperty Name="ServerLookup_Auswertegeraet" Relationship="EichenModel.FK_Eichprozess_Lookup_Auswertegeraet" FromRole="ServerEichprozess" ToRole="ServerLookup_Auswertegeraet" />
+          <NavigationProperty Name="ServerLookup_Waegezelle" Relationship="EichenModel.FK_Eichprozess_Lookup_Waegezelle" FromRole="ServerEichprozess" ToRole="ServerLookup_Waegezelle" />
+          <NavigationProperty Name="ServerMogelstatistik" Relationship="EichenModel.FK_Mogelstatistik_Eichprozess" FromRole="ServerEichprozess" ToRole="ServerMogelstatistik" />
+          <NavigationProperty Name="ServerLookup_Bearbeitungsstatus" Relationship="EichenModel.FK_ServerEichprozess_ServerLookup_Bearbeitungsstatus" FromRole="ServerEichprozess" ToRole="ServerLookup_Bearbeitungsstatus" />
+          <NavigationProperty Name="ServerLookup_Vorgangsstatus" Relationship="EichenModel.FK_Eichprozess_Lookup_Vorgangsstatus" FromRole="ServerEichprozess" ToRole="ServerLookup_Vorgangsstatus" />
+          <NavigationProperty Name="ServerLookup_Waagenart" Relationship="EichenModel.FK_Eichprozess_Lookup_Waagenart" FromRole="ServerEichprozess" ToRole="ServerLookup_Waagenart" />
+          <NavigationProperty Name="ServerLookup_Waagentyp" Relationship="EichenModel.FK_Eichprozess_Lookup_Waagentyp" FromRole="ServerEichprozess" ToRole="ServerLookup_Waagentyp" />
+        </EntityType>
+        <Association Name="FK_Eichprozess_Eichprotokoll">
+          <End Type="EichenModel.ServerEichprotokoll" Role="ServerEichprotokoll" Multiplicity="0..1" />
+          <End Type="EichenModel.ServerEichprozess" Role="ServerEichprozess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerEichprotokoll">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerEichprozess">
+              <PropertyRef Name="FK_Eichprotokoll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Eichprozess_Kompatiblitaetsnachweis">
+          <End Type="EichenModel.ServerKompatiblitaetsnachweis" Role="ServerKompatiblitaetsnachweis" Multiplicity="0..1" />
+          <End Type="EichenModel.ServerEichprozess" Role="ServerEichprozess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerKompatiblitaetsnachweis">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerEichprozess">
+              <PropertyRef Name="FK_Kompatibilitaetsnachweis" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Eichprozess_Lookup_Auswertegeraet">
+          <End Type="EichenModel.ServerLookup_Auswertegeraet" Role="ServerLookup_Auswertegeraet" Multiplicity="0..1" />
+          <End Type="EichenModel.ServerEichprozess" Role="ServerEichprozess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerLookup_Auswertegeraet">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerEichprozess">
+              <PropertyRef Name="FK_Auswertegeraet" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Eichprozess_Lookup_Waegezelle">
+          <End Type="EichenModel.ServerLookup_Waegezelle" Role="ServerLookup_Waegezelle" Multiplicity="0..1" />
+          <End Type="EichenModel.ServerEichprozess" Role="ServerEichprozess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerLookup_Waegezelle">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerEichprozess">
+              <PropertyRef Name="FK_Waegezelle" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Mogelstatistik_Eichprozess">
+          <End Type="EichenModel.ServerEichprozess" Role="ServerEichprozess" Multiplicity="0..1" />
+          <End Type="EichenModel.ServerMogelstatistik" Role="ServerMogelstatistik" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerEichprozess">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerMogelstatistik">
+              <PropertyRef Name="FK_Eichprozess" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServerEichprozess_ServerLookup_Bearbeitungsstatus">
+          <End Type="EichenModel.ServerLookup_Bearbeitungsstatus" Role="ServerLookup_Bearbeitungsstatus" Multiplicity="0..1" />
+          <End Type="EichenModel.ServerEichprozess" Role="ServerEichprozess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerLookup_Bearbeitungsstatus">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerEichprozess">
+              <PropertyRef Name="FK_Bearbeitungsstatus" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ServerLookup_Vorgangsstatus">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Byte" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Status" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Status_EN" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Status_PL" MaxLength="80" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ServerEichprozess" Relationship="EichenModel.FK_Eichprozess_Lookup_Vorgangsstatus" FromRole="ServerLookup_Vorgangsstatus" ToRole="ServerEichprozess" />
+        </EntityType>
+        <Association Name="FK_Eichprozess_Lookup_Vorgangsstatus">
+          <End Type="EichenModel.ServerLookup_Vorgangsstatus" Role="ServerLookup_Vorgangsstatus" Multiplicity="1" />
+          <End Type="EichenModel.ServerEichprozess" Role="ServerEichprozess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerLookup_Vorgangsstatus">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerEichprozess">
+              <PropertyRef Name="FK_Vorgangsstatus" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ServerLookup_Waagenart">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Byte" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Art" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Art_EN" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Art_PL" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ServerEichprozess" Relationship="EichenModel.FK_Eichprozess_Lookup_Waagenart" FromRole="ServerLookup_Waagenart" ToRole="ServerEichprozess" />
+        </EntityType>
+        <EntityType Name="ServerLookup_Waagentyp">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Byte" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Typ" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Typ_EN" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Typ_PL" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ServerEichprozess" Relationship="EichenModel.FK_Eichprozess_Lookup_Waagentyp" FromRole="ServerLookup_Waagentyp" ToRole="ServerEichprozess" />
+        </EntityType>
+        <Association Name="FK_Eichprozess_Lookup_Waagenart">
+          <End Type="EichenModel.ServerLookup_Waagenart" Role="ServerLookup_Waagenart" Multiplicity="0..1" />
+          <End Type="EichenModel.ServerEichprozess" Role="ServerEichprozess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerLookup_Waagenart">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerEichprozess">
+              <PropertyRef Name="FK_WaagenArt" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Eichprozess_Lookup_Waagentyp">
+          <End Type="EichenModel.ServerLookup_Waagentyp" Role="ServerLookup_Waagentyp" Multiplicity="0..1" />
+          <End Type="EichenModel.ServerEichprozess" Role="ServerEichprozess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerLookup_Waagentyp">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerEichprozess">
+              <PropertyRef Name="FK_WaagenTyp" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1043,6 +1599,131 @@
                 <ScalarProperty Name="Eichsiegel13x13Anzahl" ColumnName="Eichsiegel13x13Anzahl" />
                 <ScalarProperty Name="BenannteStelleAnzahl" ColumnName="BenannteStelleAnzahl" />
                 <ScalarProperty Name="HEKennung" ColumnName="HEKennung" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServerEichprotokoll">
+            <EntityTypeMapping TypeName="EichenModel.ServerEichprotokoll">
+              <MappingFragment StoreEntitySet="ServerEichprotokoll">
+                <ScalarProperty Name="Taraeinrichtung_Taraeingabe" ColumnName="Taraeinrichtung_Taraeingabe" />
+                <ScalarProperty Name="Beschaffenheitspruefung_Genehmigt" ColumnName="Beschaffenheitspruefung_Genehmigt" />
+                <ScalarProperty Name="EignungAchlastwaegungen_Geprueft" ColumnName="EignungAchlastwaegungen_Geprueft" />
+                <ScalarProperty Name="EignungAchlastwaegungen_WaageNichtGeeignet" ColumnName="EignungAchlastwaegungen_WaageNichtGeeignet" />
+                <ScalarProperty Name="EignungAchlastwaegungen_WaagenbrueckeEbene" ColumnName="EignungAchlastwaegungen_WaagenbrueckeEbene" />
+                <ScalarProperty Name="Wiederholbarkeit_Staffelverfahren_MINNormalien" ColumnName="Wiederholbarkeit_Staffelverfahren_MINNormalien" />
+                <ScalarProperty Name="Sicherung_Bemerkungen" ColumnName="Sicherung_Bemerkungen" />
+                <ScalarProperty Name="Sicherung_AlibispeicherAufbewahrungsdauerReduziertBegruendung" ColumnName="Sicherung_AlibispeicherAufbewahrungsdauerReduziertBegruendung" />
+                <ScalarProperty Name="Sicherung_AlibispeicherAufbewahrungsdauerReduziert" ColumnName="Sicherung_AlibispeicherAufbewahrungsdauerReduziert" />
+                <ScalarProperty Name="Sicherung_AlibispeicherEingerichtet" ColumnName="Sicherung_AlibispeicherEingerichtet" />
+                <ScalarProperty Name="Sicherung_DatenAusgelesen" ColumnName="Sicherung_DatenAusgelesen" />
+                <ScalarProperty Name="Sicherung_CEAnzahl" ColumnName="Sicherung_CEAnzahl" />
+                <ScalarProperty Name="Sicherung_CE" ColumnName="Sicherung_CE" />
+                <ScalarProperty Name="Sicherung_GruenesMAnzahl" ColumnName="Sicherung_GruenesMAnzahl" />
+                <ScalarProperty Name="Sicherung_GruenesM" ColumnName="Sicherung_GruenesM" />
+                <ScalarProperty Name="Sicherung_HinweismarkeGelochtAnzahl" ColumnName="Sicherung_HinweismarkeGelochtAnzahl" />
+                <ScalarProperty Name="Sicherung_HinweismarkeGelocht" ColumnName="Sicherung_HinweismarkeGelocht" />
+                <ScalarProperty Name="Sicherung_EichsiegelRundAnzahl" ColumnName="Sicherung_EichsiegelRundAnzahl" />
+                <ScalarProperty Name="Sicherung_EichsiegelRund" ColumnName="Sicherung_EichsiegelRund" />
+                <ScalarProperty Name="Sicherung_Eichsiegel13x13Anzahl" ColumnName="Sicherung_Eichsiegel13x13Anzahl" />
+                <ScalarProperty Name="Sicherung_Eichsiegel13x13" ColumnName="Sicherung_Eichsiegel13x13" />
+                <ScalarProperty Name="Sicherung_BenannteStelleAnzahl" ColumnName="Sicherung_BenannteStelleAnzahl" />
+                <ScalarProperty Name="Sicherung_BenannteStelle" ColumnName="Sicherung_BenannteStelle" />
+                <ScalarProperty Name="Fallbeschleunigung_ms2" ColumnName="Fallbeschleunigung_ms2" />
+                <ScalarProperty Name="Fallbeschleunigung_g" ColumnName="Fallbeschleunigung_g" />
+                <ScalarProperty Name="Taraeinrichtung_ErweiterteRichtigkeitspruefungOK" ColumnName="Taraeinrichtung_ErweiterteRichtigkeitspruefungOK" />
+                <ScalarProperty Name="Taraeinrichtung_GenauigkeitTarierungOK" ColumnName="Taraeinrichtung_GenauigkeitTarierungOK" />
+                <ScalarProperty Name="Taraeinrichtung_TaraausgleichseinrichtungOK" ColumnName="Taraeinrichtung_TaraausgleichseinrichtungOK" />
+                <ScalarProperty Name="Ueberlastanzeige_Ueberlast" ColumnName="Ueberlastanzeige_Ueberlast" />
+                <ScalarProperty Name="Ueberlastanzeige_Max" ColumnName="Ueberlastanzeige_Max" />
+                <ScalarProperty Name="GenauigkeitNullstellung_InOrdnung" ColumnName="GenauigkeitNullstellung_InOrdnung" />
+                <ScalarProperty Name="Beschaffenheitspruefung_EichfahrzeugFirma" ColumnName="Beschaffenheitspruefung_EichfahrzeugFirma" />
+                <ScalarProperty Name="Beschaffenheitspruefung_Pruefscheinnummer" ColumnName="Beschaffenheitspruefung_Pruefscheinnummer" />
+                <ScalarProperty Name="Beschaffenheitspruefung_LetztePruefung" ColumnName="Beschaffenheitspruefung_LetztePruefung" />
+                <ScalarProperty Name="Beschaffenheitspruefung_Pruefintervall" ColumnName="Beschaffenheitspruefung_Pruefintervall" />
+                <ScalarProperty Name="Beschaffenheitspruefung_Genauigkeitsklasse" ColumnName="Beschaffenheitspruefung_Genauigkeitsklasse" />
+                <ScalarProperty Name="Verwendungszweck_Fahrzeugwaagen_Dimension" ColumnName="Verwendungszweck_Fahrzeugwaagen_Dimension" />
+                <ScalarProperty Name="Verwendungszweck_Fahrzeugwaagen_MxM" ColumnName="Verwendungszweck_Fahrzeugwaagen_MxM" />
+                <ScalarProperty Name="Verwendungszweck_Druckertyp" ColumnName="Verwendungszweck_Druckertyp" />
+                <ScalarProperty Name="Verwendungszweck_Drucker" ColumnName="Verwendungszweck_Drucker" />
+                <ScalarProperty Name="Verwendungszweck_PC" ColumnName="Verwendungszweck_PC" />
+                <ScalarProperty Name="Verwendungszweck_EichfaehigerDatenspeicher" ColumnName="Verwendungszweck_EichfaehigerDatenspeicher" />
+                <ScalarProperty Name="Verwendungszweck_ZubehoerVerschiedenes" ColumnName="Verwendungszweck_ZubehoerVerschiedenes" />
+                <ScalarProperty Name="Verwendungszweck_HandTara" ColumnName="Verwendungszweck_HandTara" />
+                <ScalarProperty Name="Verwendungszweck_AutoTara" ColumnName="Verwendungszweck_AutoTara" />
+                <ScalarProperty Name="Verwendungszweck_Nullnachfuehrung" ColumnName="Verwendungszweck_Nullnachfuehrung" />
+                <ScalarProperty Name="Verwendungszweck_Automatisch" ColumnName="Verwendungszweck_Automatisch" />
+                <ScalarProperty Name="Verwendungszweck_HalbAutomatisch" ColumnName="Verwendungszweck_HalbAutomatisch" />
+                <ScalarProperty Name="Komponenten_WaegezellenFabriknummer" ColumnName="Komponenten_WaegezellenFabriknummer" />
+                <ScalarProperty Name="Komponenten_Eichzaehlerstand" ColumnName="Komponenten_Eichzaehlerstand" />
+                <ScalarProperty Name="Komponenten_Softwarestand" ColumnName="Komponenten_Softwarestand" />
+                <ScalarProperty Name="Pruefverfahren_BetragNormallast" ColumnName="Pruefverfahren_BetragNormallast" />
+                <ScalarProperty Name="Pruefverfahren_VollstaendigesStaffelverfahren" ColumnName="Pruefverfahren_VollstaendigesStaffelverfahren" />
+                <ScalarProperty Name="Pruefverfahren_VolleNormallast" ColumnName="Pruefverfahren_VolleNormallast" />
+                <ScalarProperty Name="Identifikationsdaten_Baujahr" ColumnName="Identifikationsdaten_Baujahr" />
+                <ScalarProperty Name="Identifikationsdaten_Pruefer" ColumnName="Identifikationsdaten_Pruefer" />
+                <ScalarProperty Name="Identifikationsdaten_Selbsteinspielend" ColumnName="Identifikationsdaten_Selbsteinspielend" />
+                <ScalarProperty Name="Identifikationsdaten_HybridMechanisch" ColumnName="Identifikationsdaten_HybridMechanisch" />
+                <ScalarProperty Name="Identifikationsdaten_NichtSelbsteinspielend" ColumnName="Identifikationsdaten_NichtSelbsteinspielend" />
+                <ScalarProperty Name="Identifikationsdaten_Min3" ColumnName="Identifikationsdaten_Min3" />
+                <ScalarProperty Name="Identifikationsdaten_Min2" ColumnName="Identifikationsdaten_Min2" />
+                <ScalarProperty Name="Identifikationsdaten_Min1" ColumnName="Identifikationsdaten_Min1" />
+                <ScalarProperty Name="Identifikationsdaten_Datum" ColumnName="Identifikationsdaten_Datum" />
+                <ScalarProperty Name="Identifikationsdaten_Aufstellungsort" ColumnName="Identifikationsdaten_Aufstellungsort" />
+                <ScalarProperty Name="Identifikationsdaten_Benutzer" ColumnName="Identifikationsdaten_Benutzer" />
+                <ScalarProperty Name="FK_Identifikationsdaten_Konformitaetsbewertungsverfahren" ColumnName="FK_Identifikationsdaten_Konformitaetsbewertungsverfahren" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServerEichprozess">
+            <EntityTypeMapping TypeName="EichenModel.ServerEichprozess">
+              <MappingFragment StoreEntitySet="ServerEichprozess">
+                <ScalarProperty Name="ZurBearbeitungGesperrtDurch" ColumnName="ZurBearbeitungGesperrtDurch" />
+                <ScalarProperty Name="ErzeugerLizenz" ColumnName="ErzeugerLizenz" />
+                <ScalarProperty Name="BearbeitungsDatum" ColumnName="BearbeitungsDatum" />
+                <ScalarProperty Name="UploadDatum" ColumnName="UploadDatum" />
+                <ScalarProperty Name="UploadFilePath" ColumnName="UploadFilePath" />
+                <ScalarProperty Name="FK_Bearbeitungsstatus" ColumnName="FK_Bearbeitungsstatus" />
+                <ScalarProperty Name="Ausgeblendet" ColumnName="Ausgeblendet" />
+                <ScalarProperty Name="FK_Kompatibilitaetsnachweis" ColumnName="FK_Kompatibilitaetsnachweis" />
+                <ScalarProperty Name="FK_WaagenArt" ColumnName="FK_WaagenArt" />
+                <ScalarProperty Name="FK_WaagenTyp" ColumnName="FK_WaagenTyp" />
+                <ScalarProperty Name="FK_Eichprotokoll" ColumnName="FK_Eichprotokoll" />
+                <ScalarProperty Name="FK_Waegezelle" ColumnName="FK_Waegezelle" />
+                <ScalarProperty Name="FK_Auswertegeraet" ColumnName="FK_Auswertegeraet" />
+                <ScalarProperty Name="FK_Vorgangsstatus" ColumnName="FK_Vorgangsstatus" />
+                <ScalarProperty Name="Vorgangsnummer" ColumnName="Vorgangsnummer" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServerLookup_Vorgangsstatus">
+            <EntityTypeMapping TypeName="EichenModel.ServerLookup_Vorgangsstatus">
+              <MappingFragment StoreEntitySet="ServerLookup_Vorgangsstatus">
+                <ScalarProperty Name="Status_PL" ColumnName="Status_PL" />
+                <ScalarProperty Name="Status_EN" ColumnName="Status_EN" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServerLookup_Waagenart">
+            <EntityTypeMapping TypeName="EichenModel.ServerLookup_Waagenart">
+              <MappingFragment StoreEntitySet="ServerLookup_Waagenart">
+                <ScalarProperty Name="Art_PL" ColumnName="Art_PL" />
+                <ScalarProperty Name="Art_EN" ColumnName="Art_EN" />
+                <ScalarProperty Name="Art" ColumnName="Art" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServerLookup_Waagentyp">
+            <EntityTypeMapping TypeName="EichenModel.ServerLookup_Waagentyp">
+              <MappingFragment StoreEntitySet="ServerLookup_Waagentyp">
+                <ScalarProperty Name="Typ_PL" ColumnName="Typ_PL" />
+                <ScalarProperty Name="Typ_EN" ColumnName="Typ_EN" />
+                <ScalarProperty Name="Typ" ColumnName="Typ" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>

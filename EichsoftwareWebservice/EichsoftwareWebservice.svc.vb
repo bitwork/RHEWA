@@ -643,6 +643,7 @@ Public Class EichsoftwareWebservice
                     .Status = Lookup.Status, _
                                 Eichprozess.Vorgangsnummer, _
                                 .Fabriknummer = Eichprozess.ServerKompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer, _
+                     .Pruefscheinnummer = Eichprozess.ServerEichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer, _
                                 .Lookup_Waegezelle = Eichprozess.ServerLookup_Waegezelle.Typ, _
                                 .Lookup_Waagentyp = Eichprozess.ServerLookup_Waagentyp.Typ, _
                                 .Lookup_Waagenart = Eichprozess.ServerLookup_Waagenart.Art, _
@@ -725,6 +726,10 @@ Public Class EichsoftwareWebservice
                             If Not objeichprozess.ZurBearbeitungGesperrtDurch Is Nothing Then
                                 objReturn.GesperrtDurch = objeichprozess.ZurBearbeitungGesperrtDurch
                             End If
+
+                                If Not objeichprozess.Pruefscheinnummer Is Nothing Then
+                                    objReturn.Pruefscheinnummer = objeichprozess.Pruefscheinnummer
+                                End If
 
 
                             If Not objeichprozess.Uploaddatum Is Nothing Then
