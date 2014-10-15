@@ -55,14 +55,14 @@
                 SelectedID = RadGridViewAuswahlliste.SelectedRows(0).Cells("ID").Value
 
                 'neue Datenbankverbindung
-                Using context As New EichenEntities
-                    'anzeigen des Dialogs zur Bearbeitung der Eichung
-                    Dim f As New frmEingabeAuswertegeraet(SelectedID)
-                    f.ShowDialog()
 
-                    'nach dem schließen des Dialogs aktualisieren
-                    LoadFromDatabase()
-                End Using
+                'anzeigen des Dialogs zur Bearbeitung der Eichung
+                Dim f As New frmEingabeAuswertegeraet(SelectedID)
+                f.ShowDialog()
+
+                'nach dem schließen des Dialogs aktualisieren
+                LoadFromDatabase()
+
 
             End If
         End If

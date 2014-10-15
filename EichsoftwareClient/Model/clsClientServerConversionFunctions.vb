@@ -58,7 +58,7 @@ Public Class clsClientServerConversionFunctions
         TargetObject._FK_WaagenTyp = SourceObject.FK_WaagenTyp
         TargetObject._FK_Bearbeitungsstatus = SourceObject.FK_Bearbeitungsstatus
         TargetObject._UploadFilePath = SourceObject.UploadFilePath
-
+        TargetObject._ErzeugerLizenz = SourceObject.ErzeugerLizenz
 
         If Not SourceObject.Lookup_Waegezelle.Neu Then
             TargetObject._FK_Waegezelle = SourceObject.FK_Waegezelle
@@ -206,6 +206,7 @@ Public Class clsClientServerConversionFunctions
         TargetObject.Vorgangsnummer = SourceObject._Vorgangsnummer
         TargetObject.FK_Bearbeitungsstatus = SourceObject._FK_Bearbeitungsstatus
         TargetObject.UploadFilePath = SourceObject._UploadFilePath
+        TargetObject.ErzeugerLizenz = SourceObject._ErzeugerLizenz
 
         'kompatiblitätsnachweis
         '  TargetObject.Kompatiblitaetsnachweis.ID = SourceObject._ServerKompatiblitaetsnachweis.ID
@@ -650,6 +651,8 @@ Public Class clsClientServerConversionFunctions
         TargetObject.Vorgangsnummer = SourceObject._Vorgangsnummer
         TargetObject.FK_Bearbeitungsstatus = SourceObject._FK_Bearbeitungsstatus
         TargetObject.UploadFilePath = SourceObject._UploadFilePath
+        TargetObject.ErzeugerLizenz = SourceObject._ErzeugerLizenz
+
 
         'kompatiblitätsnachweis
         '  TargetObject.Kompatiblitaetsnachweis.ID = SourceObject._ServerKompatiblitaetsnachweis.ID
@@ -1042,6 +1045,8 @@ Public Class clsClientServerConversionFunctions
         End If
         TargetObject.FK_Bearbeitungsstatus = SourceObject._FK_Bearbeitungsstatus
         TargetObject.UploadFilePath = SourceObject._UploadFilePath
+        TargetObject.ErzeugerLizenz = AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel
+
 
         'kompatiblitätsnachweis
 

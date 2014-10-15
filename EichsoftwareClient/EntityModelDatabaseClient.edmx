@@ -9,6 +9,7 @@
           <EntitySet Name="Eichprotokoll" EntityType="EichsoftwareClientdatabaseModel.Store.Eichprotokoll" store:Type="Tables" />
           <EntitySet Name="Eichprozess" EntityType="EichsoftwareClientdatabaseModel.Store.Eichprozess" store:Type="Tables" />
           <EntitySet Name="Kompatiblitaetsnachweis" EntityType="EichsoftwareClientdatabaseModel.Store.Kompatiblitaetsnachweis" store:Type="Tables" />
+          <EntitySet Name="Konfiguration" EntityType="EichsoftwareClientdatabaseModel.Store.Konfiguration" store:Type="Tables" />
           <EntitySet Name="Lizensierung" EntityType="EichsoftwareClientdatabaseModel.Store.Lizensierung" store:Type="Tables" />
           <EntitySet Name="Lookup_Auswertegeraet" EntityType="EichsoftwareClientdatabaseModel.Store.Lookup_Auswertegeraet" store:Type="Tables" />
           <EntitySet Name="Lookup_Bearbeitungsstatus" EntityType="EichsoftwareClientdatabaseModel.Store.Lookup_Bearbeitungsstatus" store:Type="Tables" />
@@ -200,6 +201,7 @@
           <Property Name="Ausgeblendet" Type="bit" Nullable="false" />
           <Property Name="UploadFilePath" Type="ntext" />
           <Property Name="FK_Bearbeitungsstatus" Type="int" />
+          <Property Name="ErzeugerLizenz" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Kompatiblitaetsnachweis">
           <Key>
@@ -234,6 +236,20 @@
           <Property Name="Kompatiblitaet_Postleitzahl" Type="ntext" />
           <Property Name="Kompatiblitaet_AWG_Anschlussart" Type="nvarchar" MaxLength="50" />
           <Property Name="Kompatiblitaet_WZ_Hoechstlast" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Konfiguration">
+          <Key>
+            <PropertyRef Name="BenutzerLizenz" />
+          </Key>
+          <Property Name="BenutzerLizenz" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="LetztesUpdate" Type="datetime" Nullable="false" />
+          <Property Name="AktuelleSprache" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="Synchronisierungsmodus" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="SyncAb" Type="datetime" Nullable="false" />
+          <Property Name="SyncBis" Type="datetime" Nullable="false" />
+          <Property Name="HoleAlleeigenenEichungenVomServer" Type="bit" Nullable="false" />
+          <Property Name="GridSettings" Type="ntext" Nullable="false" />
+          <Property Name="GridSettingsRHEWA" Type="ntext" Nullable="false" />
         </EntityType>
         <EntityType Name="Lizensierung">
           <Key>
@@ -894,6 +910,7 @@
             <End Role="Lookup_Konformitaetsbewertungsverfahren" EntitySet="Lookup_Konformitaetsbewertungsverfahren" />
             <End Role="Eichprotokoll" EntitySet="Eichprotokoll" />
           </AssociationSet>
+          <EntitySet Name="Konfiguration" EntityType="EichsoftwareClientdatabaseModel.Konfiguration" />
         </EntityContainer>
         <EntityType Name="Eichprotokoll">
           <Key>
@@ -1003,6 +1020,7 @@
           <NavigationProperty Name="Lookup_Waagentyp" Relationship="EichsoftwareClientdatabaseModel.FK_Eichprozess_Lookup_Waagentyp" FromRole="Eichprozess" ToRole="Lookup_Waagentyp" />
           <NavigationProperty Name="Lookup_Waegezelle" Relationship="EichsoftwareClientdatabaseModel.FK_Eichprozess_Lookup_Waegezelle" FromRole="Eichprozess" ToRole="Lookup_Waegezelle" />
           <NavigationProperty Name="Mogelstatistik" Relationship="EichsoftwareClientdatabaseModel.FK_Mogelstatistik_Eichprozess" FromRole="Eichprozess" ToRole="Mogelstatistik" />
+          <Property Type="String" Name="ErzeugerLizenz" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Kompatiblitaetsnachweis">
           <Key>
@@ -1609,6 +1627,20 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="Konfiguration">
+          <Key>
+            <PropertyRef Name="BenutzerLizenz" />
+          </Key>
+          <Property Type="String" Name="BenutzerLizenz" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="LetztesUpdate" Nullable="false" Precision="3" />
+          <Property Type="String" Name="AktuelleSprache" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Synchronisierungsmodus" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="SyncAb" Nullable="false" Precision="3" />
+          <Property Type="DateTime" Name="SyncBis" Nullable="false" Precision="3" />
+          <Property Type="Boolean" Name="HoleAlleeigenenEichungenVomServer" Nullable="false" />
+          <Property Type="String" Name="GridSettings" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GridSettingsRHEWA" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1691,6 +1723,7 @@
           <EntitySetMapping Name="Eichprozess">
             <EntityTypeMapping TypeName="EichsoftwareClientdatabaseModel.Eichprozess">
               <MappingFragment StoreEntitySet="Eichprozess">
+                <ScalarProperty Name="ErzeugerLizenz" ColumnName="ErzeugerLizenz" />
                 <ScalarProperty Name="FK_Bearbeitungsstatus" ColumnName="FK_Bearbeitungsstatus" />
                 <ScalarProperty Name="UploadFilePath" ColumnName="UploadFilePath" />
                 <ScalarProperty Name="Ausgeblendet" ColumnName="Ausgeblendet" />
@@ -2053,6 +2086,21 @@
                 <ScalarProperty Name="Wiederholung" ColumnName="Wiederholung" />
                 <ScalarProperty Name="FK_Eichprotokoll" ColumnName="FK_Eichprotokoll" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Konfiguration">
+            <EntityTypeMapping TypeName="EichsoftwareClientdatabaseModel.Konfiguration">
+              <MappingFragment StoreEntitySet="Konfiguration">
+                <ScalarProperty Name="GridSettingsRHEWA" ColumnName="GridSettingsRHEWA" />
+                <ScalarProperty Name="GridSettings" ColumnName="GridSettings" />
+                <ScalarProperty Name="HoleAlleeigenenEichungenVomServer" ColumnName="HoleAlleeigenenEichungenVomServer" />
+                <ScalarProperty Name="SyncBis" ColumnName="SyncBis" />
+                <ScalarProperty Name="SyncAb" ColumnName="SyncAb" />
+                <ScalarProperty Name="Synchronisierungsmodus" ColumnName="Synchronisierungsmodus" />
+                <ScalarProperty Name="AktuelleSprache" ColumnName="AktuelleSprache" />
+                <ScalarProperty Name="LetztesUpdate" ColumnName="LetztesUpdate" />
+                <ScalarProperty Name="BenutzerLizenz" ColumnName="BenutzerLizenz" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

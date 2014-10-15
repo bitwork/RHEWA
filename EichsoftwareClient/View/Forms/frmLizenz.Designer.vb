@@ -164,6 +164,7 @@ Partial Class FrmLizenz
         Me.RadTextBoxControl3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControl3.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControl3.RootElement.Text = resources.GetString("RadTextBoxControl3.RootElement.Text")
         Me.RadTextBoxControl3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControl3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControl3.TabStop = False
         '
         'lblLizenzabkommen
         '

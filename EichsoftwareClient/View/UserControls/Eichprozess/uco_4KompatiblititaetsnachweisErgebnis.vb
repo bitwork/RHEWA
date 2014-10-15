@@ -94,8 +94,6 @@
     ''' <author></author>
     ''' <commentauthor></commentauthor>
     Private Sub FillControls()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco_4KompatiblititaetsnachweisErgebnis))
-
 
         _suspendEvents = True
         'befüllen der Controls aus dem Eichprozessobjekt
@@ -823,7 +821,7 @@
                     lblPunkt6cMax.Text = "" 'gibts heir nicht
                 End If
 
-                Select Case My.Settings.AktuelleSprache.ToLower
+                Select Case AktuellerBenutzer.Instance.AktuelleSprache.ToLower
                     Case Is = "de"
                         lblPunkt4WaagenArt.Text = Waagenart.Art
                         lblPunkt6aWaagenart.Text = Waagenart.Art
@@ -1085,7 +1083,7 @@
                     lblPunkt6cMax.Text = "" 'gibts heir nicht
                 End If
 
-                Select Case My.Settings.AktuelleSprache.ToLower
+                Select Case AktuellerBenutzer.Instance.AktuelleSprache.ToLower
                     Case Is = "de"
                         lblPunkt4WaagenArt.Text = Waagenart.Art
                         lblPunkt6aWaagenart.Text = Waagenart.Art
@@ -1166,10 +1164,7 @@
 
         If Me.Equals(TargetUserControl) Then
             MyBase.VersendenNeeded(TargetUserControl)
-            Using dbcontext As New EichsoftwareClientdatabaseEntities1
-                '   objEichprozess = (From a In dbcontext.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
-
-                Dim objServerEichprozess As New EichsoftwareWebservice.ServerEichprozess
+            Dim objServerEichprozess As New EichsoftwareWebservice.ServerEichprozess
                 'auf fehlerhaft Status setzen
                 objEichprozess.FK_Bearbeitungsstatus = 2
                 objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Konformitätsbewertungsbevollmächtigter sich den DS von Anfang angucken muss
@@ -1184,11 +1179,10 @@
                         Exit Sub
                     End Try
 
-                    Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
-
+             
                     Try
                         'add prüft anhand der Vorgangsnummer automatisch ob ein neuer Prozess angelegt, oder ein vorhandener aktualisiert wird
-                        Webcontext.AddEichprozess(objLiz.HEKennung, objLiz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                        Webcontext.AddEichprozess(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
                         'schließen des dialoges
                         ParentFormular.Close()
                     Catch ex As Exception
@@ -1196,8 +1190,8 @@
                         ' Status zurück setzen
                         Exit Sub
                     End Try
+
                 End Using
-            End Using
         End If
     End Sub
 #End Region

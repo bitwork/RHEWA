@@ -35,31 +35,31 @@
 
 #Region "Funktionen"
     Private Sub Speichern()
-        Dim alterSyncmodus As String = My.Settings.Syncronisierungsmodus 'variable wird genutzt um zu prüfen ob überhaupt Änderungen vorgenommen werden müssen
-        Dim alterSyncAbWert As String = My.Settings.SyncAb
-        Dim alterSyncBisWert As String = My.Settings.SyncBis
+        Dim alterSyncmodus As String = AktuellerBenutzer.Instance.Synchronisierungsmodus 'variable wird genutzt um zu prüfen ob überhaupt Änderungen vorgenommen werden müssen
+        Dim alterSyncAbWert As String = AktuellerBenutzer.Instance.SyncAb
+        Dim alterSyncBisWert As String = AktuellerBenutzer.Instance.SyncBis
 
 
         If RadRadioButtonSyncAlles.IsChecked Then
-            My.Settings.Syncronisierungsmodus = "Alles"
-            My.Settings.SyncAb = "01.01.2000"
-            My.Settings.SyncBis = "31.12.2999"
+            AktuellerBenutzer.Instance.Synchronisierungsmodus = "Alles"
+            AktuellerBenutzer.Instance.SyncAb = "01.01.2000"
+            AktuellerBenutzer.Instance.SyncBis = "31.12.2999"
 
         ElseIf RadRadioButtonSyncSeit.IsChecked Then
-            My.Settings.Syncronisierungsmodus = "Ab"
-            My.Settings.SyncAb = RadDateTimePickerSince.Value
-            My.Settings.SyncBis = "31.12.2999"
+            AktuellerBenutzer.Instance.Synchronisierungsmodus = "Ab"
+            AktuellerBenutzer.Instance.SyncAb = RadDateTimePickerSince.Value
+            AktuellerBenutzer.Instance.SyncBis = "31.12.2999"
         ElseIf RadRadioButtonSyncZwischen.IsChecked Then
-            My.Settings.Syncronisierungsmodus = "Zwischen"
-            My.Settings.SyncAb = RadDateTimePickerStart.Value
-            My.Settings.SyncBis = RadDateTimePickerEnd.Value
+            AktuellerBenutzer.Instance.Synchronisierungsmodus = "Zwischen"
+            AktuellerBenutzer.Instance.SyncAb = RadDateTimePickerStart.Value
+            AktuellerBenutzer.Instance.SyncBis = RadDateTimePickerEnd.Value
         End If
 
         'nehme Änderung an Syncverhalten vor
-        If alterSyncmodus <> My.Settings.Syncronisierungsmodus Or alterSyncAbWert <> My.Settings.SyncAb Or alterSyncBisWert <> My.Settings.SyncBis Then
-            My.Settings.LetztesUpdate = "01.01.2000"
-            My.Settings.HoleAlleEigenenEichungenVomServer = True
-            My.Settings.Save()
+        If alterSyncmodus <> AktuellerBenutzer.Instance.Synchronisierungsmodus Or alterSyncAbWert <> AktuellerBenutzer.Instance.SyncAb Or alterSyncBisWert <> AktuellerBenutzer.Instance.SyncBis Then
+            AktuellerBenutzer.Instance.LetztesUpdate = "01.01.2000"
+            AktuellerBenutzer.Instance.HoleAlleeigenenEichungenVomServer = True
+            AktuellerBenutzer.SaveSettings()
 
             'initiere neuen Download der Daten durch Dialogresult = ok. dies wird in ucoEichprozessauswahlliste abgefragt
             Me.DialogResult = Windows.Forms.DialogResult.OK
@@ -78,21 +78,21 @@
         RadDateTimePickerStart.Value = Date.Now
         RadDateTimePickerEnd.Value = Date.Now
 
-        Select Case My.Settings.Syncronisierungsmodus
+        Select Case AktuellerBenutzer.Instance.Synchronisierungsmodus
             Case Is = "Alles"
                 RadRadioButtonSyncAlles.IsChecked = True
             Case Is = "Ab"
                 RadRadioButtonSyncSeit.IsChecked = True
-                RadDateTimePickerSince.Value = My.Settings.SyncAb
+                RadDateTimePickerSince.Value = AktuellerBenutzer.Instance.SyncAb
             Case Is = "Zwischen"
                 RadRadioButtonSyncZwischen.IsChecked = True
-                RadDateTimePickerStart.Value = My.Settings.SyncAb
-                RadDateTimePickerEnd.Value = My.Settings.SyncBis
+                RadDateTimePickerStart.Value = AktuellerBenutzer.Instance.SyncAb
+                RadDateTimePickerEnd.Value = AktuellerBenutzer.Instance.SyncBis
         End Select
     End Sub
     Private Sub Formatcontrols()
         'formatierung der Datumswerte:
-        Select Case My.Settings.AktuelleSprache.ToLower
+        Select Case AktuellerBenutzer.Instance.AktuelleSprache.ToLower
             Case Is = "de"
                 RadDateTimePickerEnd.Culture = New System.Globalization.CultureInfo("de")
                 RadDateTimePickerStart.Culture = New System.Globalization.CultureInfo("de")

@@ -4,7 +4,7 @@
     ''' DEBUG Funktion um Lizenzdialog aus Testzwecken zu überspringen
     ''' </summary>
     ''' <remarks></remarks>
-    Public Sub ForceActivation()
+    Public Shared Sub ForceActivation()
         Try
             Using DBContext As New EichsoftwareClientdatabaseEntities1
                 'prüfen ob die Lizenz gültig ist
@@ -34,9 +34,9 @@
                 End Try
 
 
-                My.Settings.Lizensiert = True
-                My.Settings.RHEWALizenz = objLic.RHEWALizenz
+                My.Settings.LetzterBenutzer = objLic.Lizenzschluessel
                 My.Settings.Save()
+                AktuellerBenutzer.Instance.Lizenz.RHEWALizenz = objLic.RHEWALizenz
 
             End Using
 
@@ -54,49 +54,96 @@
     ''' </summary>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Function LoescheLokaleDatenbank() As Boolean
+    Public Shared Function LoescheLokaleDatenbank() As Boolean
         Try
             'alle Tabellen iterieren und löschen. Das commit wird erst am Ende ausgeführt, deswegen ist die löschreihenefolge egal
             Using DBContext As New EichsoftwareClientdatabaseEntities1
+                Dim Eichprozesse = From eichprozess In DBContext.Eichprozess Where eichprozess.ErzeugerLizenz = AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel
 
-                For Each obj In DBContext.Eichprozess
+                'liste mit gelöschten eichprozessen
+                Dim listIDsEichprozess As New List(Of String)
+                Dim listIDsEichprotokoll As New List(Of String)
+                Dim listIDsKompatiblitaetsnachweis As New List(Of String)
+
+                'aufbereiten der Listen mit allen IDS.
+                For Each obj In Eichprozesse
+                    listIDsEichprozess.Add(obj.ID)
+                    listIDsEichprotokoll.Add(obj.FK_Eichprotokoll)
+
+                    If Not listIDsKompatiblitaetsnachweis.Contains(obj.FK_Kompatibilitaetsnachweis) Then
+                        listIDsKompatiblitaetsnachweis.Add(obj.FK_Kompatibilitaetsnachweis)
+                    End If
+
+
                     DBContext.Eichprozess.Remove(obj)
                 Next
-                For Each obj In DBContext.Eichprotokoll
-                    DBContext.Eichprotokoll.Remove(obj)
+
+                For Each ID In listIDsEichprozess
+                    Dim Mogelstatistiken = From Mogelstatistik In DBContext.Mogelstatistik Where Mogelstatistik.FK_Eichprozess = ID
+                    For Each obj In Mogelstatistiken
+                        DBContext.Mogelstatistik.Remove(obj)
+                    Next
                 Next
-                For Each obj In DBContext.Mogelstatistik
-                    DBContext.Mogelstatistik.Remove(obj)
+
+                For Each ID In listIDsKompatiblitaetsnachweis
+                    Dim Kompatiblitaetsnachweise = From Kompatiblitaetsnachweis In DBContext.Kompatiblitaetsnachweis Where Kompatiblitaetsnachweis.ID = ID
+                    For Each obj In Kompatiblitaetsnachweise
+                        DBContext.Kompatiblitaetsnachweis.Remove(obj)
+                    Next
                 Next
-                For Each obj In DBContext.Kompatiblitaetsnachweis
-                    DBContext.Kompatiblitaetsnachweis.Remove(obj)
-                Next
-                For Each obj In DBContext.PruefungAnsprechvermoegen
-                    DBContext.PruefungAnsprechvermoegen.Remove(obj)
-                Next
-                For Each obj In DBContext.PruefungLinearitaetFallend
-                    DBContext.PruefungLinearitaetFallend.Remove(obj)
-                Next
-                For Each obj In DBContext.PruefungLinearitaetSteigend
-                    DBContext.PruefungLinearitaetSteigend.Remove(obj)
-                Next
-                For Each obj In DBContext.PruefungRollendeLasten
-                    DBContext.PruefungRollendeLasten.Remove(obj)
-                Next
-                For Each obj In DBContext.PruefungAussermittigeBelastung
-                    DBContext.PruefungAussermittigeBelastung.Remove(obj)
-                Next
-                For Each obj In DBContext.PruefungStabilitaetGleichgewichtslage
-                    DBContext.PruefungStabilitaetGleichgewichtslage.Remove(obj)
-                Next
-                For Each obj In DBContext.PruefungStaffelverfahrenErsatzlast
-                    DBContext.PruefungStaffelverfahrenErsatzlast.Remove(obj)
-                Next
-                For Each obj In DBContext.PruefungStaffelverfahrenNormallast
-                    DBContext.PruefungStaffelverfahrenNormallast.Remove(obj)
-                Next
-                For Each obj In DBContext.PruefungWiederholbarkeit
-                    DBContext.PruefungWiederholbarkeit.Remove(obj)
+
+
+                For Each ID In listIDsEichprotokoll
+                    Dim eichprotokolle = From eichprotokoll In DBContext.Eichprotokoll Where eichprotokoll.ID = ID
+                    For Each obj In eichprotokolle
+                        DBContext.Eichprotokoll.Remove(obj)
+                    Next
+
+                    Dim PruefungAnsprechvermoegen = From pruefung In DBContext.PruefungAnsprechvermoegen Where pruefung.FK_Eichprotokoll = ID
+                    For Each obj In PruefungAnsprechvermoegen
+                        DBContext.PruefungAnsprechvermoegen.Remove(obj)
+                    Next
+
+                    Dim PruefungLinearitaetFallend = From pruefung In DBContext.PruefungLinearitaetFallend Where pruefung.FK_Eichprotokoll = ID
+                    For Each obj In PruefungLinearitaetFallend
+                        DBContext.PruefungLinearitaetFallend.Remove(obj)
+                    Next
+
+                    Dim PruefungLinearitaetSteigend = From pruefung In DBContext.PruefungLinearitaetSteigend Where pruefung.FK_Eichprotokoll = ID
+                    For Each obj In PruefungLinearitaetSteigend
+                        DBContext.PruefungLinearitaetSteigend.Remove(obj)
+                    Next
+
+                    Dim PruefungRollendeLasten = From pruefung In DBContext.PruefungRollendeLasten Where pruefung.FK_Eichprotokoll = ID
+                    For Each obj In PruefungRollendeLasten
+                        DBContext.PruefungRollendeLasten.Remove(obj)
+                    Next
+
+                    Dim PruefungAussermittigeBelastung = From pruefung In DBContext.PruefungAussermittigeBelastung Where pruefung.FK_Eichprotokoll = ID
+                    For Each obj In PruefungAussermittigeBelastung
+                        DBContext.PruefungAussermittigeBelastung.Remove(obj)
+                    Next
+
+                    Dim PruefungStabilitaetGleichgewichtslage = From pruefung In DBContext.PruefungStabilitaetGleichgewichtslage Where pruefung.FK_Eichprotokoll = ID
+                    For Each obj In PruefungStabilitaetGleichgewichtslage
+                        DBContext.PruefungStabilitaetGleichgewichtslage.Remove(obj)
+                    Next
+
+                    Dim PruefungStaffelverfahrenErsatzlast = From pruefung In DBContext.PruefungStaffelverfahrenErsatzlast Where pruefung.FK_Eichprotokoll = ID
+                    For Each obj In PruefungStaffelverfahrenErsatzlast
+                        DBContext.PruefungStaffelverfahrenErsatzlast.Remove(obj)
+                    Next
+
+                    Dim PruefungStaffelverfahrenNormallast = From pruefung In DBContext.PruefungStaffelverfahrenNormallast Where pruefung.FK_Eichprotokoll = ID
+                    For Each obj In PruefungStaffelverfahrenNormallast
+                        DBContext.PruefungStaffelverfahrenNormallast.Remove(obj)
+                    Next
+
+                    Dim PruefungWiederholbarkeit = From pruefung In DBContext.PruefungWiederholbarkeit Where pruefung.FK_Eichprotokoll = ID
+                    For Each obj In PruefungWiederholbarkeit
+                        DBContext.PruefungWiederholbarkeit.Remove(obj)
+                    Next
+
                 Next
 
                 DBContext.SaveChanges()
@@ -122,7 +169,7 @@
     ''' </summary>
     ''' <returns>True wenn noch Eichungen gefunden wurden</returns>
     ''' <remarks>Wird z.b. Genutzt um zu Warnen, bevor ein Benutzer seine lokale DB löscht um eine Teilsynchronisierung vorzunehmen</remarks>
-    Public Function PruefeAufUngesendeteEichungen() As Boolean
+    Public Shared Function PruefeAufUngesendeteEichungen() As Boolean
         Using dbcontext As New EichsoftwareClientdatabaseEntities1
             Dim query = From eichungen In dbcontext.Eichprozess Where eichungen.FK_Vorgangsstatus = GlobaleEnumeratoren.enuBearbeitungsstatus.noch_nicht_versendet
             If query.Count = 0 Then
@@ -133,12 +180,25 @@
         End Using
     End Function
 
-    Public Function HoleLizenzObjekt() As Lizensierung
-        Dim objLic As Lizensierung
+    Public Shared Function HoleLizenzObjekt(ByVal pLizenzschluessel As String) As Lizensierung
+        Try
+
+   
         Using context As New EichsoftwareClientdatabaseEntities1
-            objLic = (From lizenz In context.Lizensierung).FirstOrDefault
-            Return objLic
-        End Using
+
+                Dim objLic = (From lizenz In context.Lizensierung Where lizenz.Lizenzschluessel = pLizenzschluessel)
+                Dim listLics As New List(Of Lizensierung)
+                listLics = objLic.ToList
+                If listLics.Count = 1 Then
+                    Return listLics(0)
+                Else
+                    MessageBox.Show("Kein Eindeutiger Schlüssel gefunden. Es gibt Benutzer mit dem selben Lizenzschlüssel")
+                    Return Nothing
+                End If
+            End Using
+        Catch ex As Exception
+
+        End Try
     End Function
 
     ''' <summary>
@@ -146,7 +206,7 @@
     ''' </summary>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Function ErzeugeNeuenEichprozess() As Eichprozess
+    Public Shared Function ErzeugeNeuenEichprozess() As Eichprozess
         Dim objEichprozess As Eichprozess = Nothing
         Using context As New EichsoftwareClientdatabaseEntities1
             objEichprozess = context.Eichprozess.Create
@@ -158,14 +218,14 @@
         Return objEichprozess
     End Function
 
-    Public Function HoleVorhandenenEichprozess(ByVal Vorgangsnummer As String) As Eichprozess
+    Public Shared Function HoleVorhandenenEichprozess(ByVal Vorgangsnummer As String) As Eichprozess
         Using Context As New EichsoftwareClientdatabaseEntities1
             Dim objEichprozess = (From Obj In Context.Eichprozess Select Obj Where Obj.Vorgangsnummer = Vorgangsnummer).FirstOrDefault 'firstor default um erstes element zurückzugeben das übereintrifft(bei ID Spalten sollte es eh nur 1 sein)
             Return objEichprozess
         End Using
     End Function
 
-    Public Function HoleNachschlageListenFuerEichprozess(ByVal objEichprozess As Eichprozess) As Eichprozess
+    Public Shared Function HoleNachschlageListenFuerEichprozess(ByVal objEichprozess As Eichprozess) As Eichprozess
         Using Context As New EichsoftwareClientdatabaseEntities1
             'es gibt ihn schon und er ist bereits abgeschickt. nur lesend öffnen
             objEichprozess = (From Obj In Context.Eichprozess.AsNoTracking.Include("Eichprotokoll") _
@@ -183,22 +243,9 @@
             objEichprozess.Lookup_Waagentyp = (From f1 In Context.Lookup_Waagentyp.AsNoTracking Where f1.ID = objEichprozess.FK_WaagenTyp Select f1).FirstOrDefault
             objEichprozess.Lookup_Bearbeitungsstatus = (From f1 In Context.Lookup_Bearbeitungsstatus.AsNoTracking Where f1.ID = objEichprozess.FK_Bearbeitungsstatus Select f1).FirstOrDefault
             objEichprozess.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren = (From f1 In Context.Lookup_Konformitaetsbewertungsverfahren.AsNoTracking Where f1.ID = objEichprozess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren Select f1).FirstOrDefault
-
             objEichprozess.Kompatiblitaetsnachweis = (From f1 In Context.Kompatiblitaetsnachweis.AsNoTracking Where f1.ID = objEichprozess.FK_Kompatibilitaetsnachweis Select f1).FirstOrDefault
             objEichprozess.Lookup_Auswertegeraet = (From f1 In Context.Lookup_Auswertegeraet.AsNoTracking Where f1.ID = objEichprozess.FK_Auswertegeraet Select f1).FirstOrDefault
             objEichprozess.Lookup_Waegezelle = (From f1 In Context.Lookup_Waegezelle.AsNoTracking Where f1.ID = objEichprozess.FK_Waegezelle Select f1).FirstOrDefault
-
-            'objEichprozess.Eichprotokoll.PruefungAnsprechvermoegen = (From f1 In Context.PruefungAnsprechvermoegen Where f1.FK_Eichprotokoll = objEichprozess.FK_Eichprotokoll)
-            'objEichprozess.Eichprotokoll.PruefungAussermittigeBelastung = (From f1 In Context.PruefungAussermittigeBelastung Where f1.FK_Eichprotokoll = objEichprozess.FK_Eichprotokoll Select f1)
-            'objEichprozess.Eichprotokoll.PruefungEichfehlergrenzen = (From f1 In Context.PruefungEichfehlergrenzen Where f1.FK_Eichprotokoll = objEichprozess.FK_Eichprotokoll Select f1)
-            'objEichprozess.Eichprotokoll.PruefungLinearitaetFallend = (From f1 In Context.PruefungLinearitaetFallend Where f1.FK_Eichprotokoll = objEichprozess.FK_Eichprotokoll Select f1)
-            'objEichprozess.Eichprotokoll.PruefungLinearitaetSteigend = (From f1 In Context.PruefungLinearitaetSteigend Where f1.FK_Eichprotokoll = objEichprozess.FK_Eichprotokoll Select f1)
-            'objEichprozess.Eichprotokoll.PruefungRollendeLasten = (From f1 In Context.PruefungRollendeLasten Where f1.FK_Eichprotokoll = objEichprozess.FK_Eichprotokoll Select f1)
-            'objEichprozess.Eichprotokoll.PruefungStabilitaetGleichgewichtslage = (From f1 In Context.PruefungStabilitaetGleichgewichtslage Where f1.ID = objEichprozess.FK_Eichprotokoll Select f1)
-            'objEichprozess.Eichprotokoll.PruefungStaffelverfahrenErsatzlast = (From f1 In Context.PruefungStaffelverfahrenErsatzlast Where f1.FK_Eichprotokoll = objEichprozess.FK_Eichprotokoll Select f1)
-            'objEichprozess.Eichprotokoll.PruefungStaffelverfahrenNormallast = (From f1 In Context.PruefungStaffelverfahrenNormallast Where f1.FK_Eichprotokoll = objEichprozess.FK_Eichprotokoll Select f1)
-            'objEichprozess.Eichprotokoll.PruefungWiederholbarkeit = (From f1 In Context.PruefungWiederholbarkeit Where f1.FK_Eichprotokoll = objEichprozess.FK_Eichprotokoll Select f1)
-
 
             Return objEichprozess
         End Using
@@ -222,7 +269,7 @@
     '    Return newObject
     'End Function
 
-    Public Function BlendeEichprozessAus(ByVal Vorgangsnummer As String) As Boolean
+    Public Shared Function BlendeEichprozessAus(ByVal Vorgangsnummer As String) As Boolean
         Using context As New EichsoftwareClientdatabaseEntities1
             Dim objEichprozess = (From Obj In context.Eichprozess Select Obj Where Obj.Vorgangsnummer = Vorgangsnummer).FirstOrDefault 'firstor default um erstes element zurückzugeben
             If Not objEichprozess Is Nothing Then
@@ -235,15 +282,17 @@
         End Using
     End Function
 
-    Public Function LadeLokaleEichprozessListe(ByVal bolAusgeblendeteElementeAnzeigen As Boolean) As Object
+    Public Shared Function LadeLokaleEichprozessListe(ByVal bolAusgeblendeteElementeAnzeigen As Boolean) As Object
         'neuen Context aufbauen
         Using Context As New EichsoftwareClientdatabaseEntities1
             Context.Configuration.LazyLoadingEnabled = True
+       
             'je nach Sprache die Abfrage anpassen um die entsprechenden Übersetzungen der Lookupwerte aus der DB zu laden
-            Select Case My.Settings.AktuelleSprache.ToLower
+            Select Case AktuellerBenutzer.Instance.AktuelleSprache.ToLower
                 Case "de"
+
                     Dim Data = From Eichprozess In Context.Eichprozess _
-                                              Where Eichprozess.Ausgeblendet = bolAusgeblendeteElementeAnzeigen _
+                                              Where Eichprozess.Ausgeblendet = bolAusgeblendeteElementeAnzeigen And Eichprozess.ErzeugerLizenz = AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel _
                                                                Select New With _
                                                  { _
                                                          .Status = Eichprozess.Lookup_Vorgangsstatus.Status, _
@@ -268,7 +317,7 @@
                     'TH Diese Linq abfrage führt einen Join auf die Status Tabelle aus um den Status als Anzeigewert anzeigen zu können. 
                     'Außerdem werden durch die .Name = Wert Notatation im Kontext des "select NEW" eine neue temporäre "Klasse" erzeugt, die die übergebenen Werte beinhaltet - als kämen sie aus einer Datenbanktabelle
                     Dim Data = From Eichprozess In Context.Eichprozess _
-                                                       Where Eichprozess.Ausgeblendet = bolAusgeblendeteElementeAnzeigen _
+                                                       Where Eichprozess.Ausgeblendet = bolAusgeblendeteElementeAnzeigen And Eichprozess.ErzeugerLizenz = AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel _
                                Select New With _
                                                 { _
                                                               .Status = Eichprozess.Lookup_Vorgangsstatus.Status_EN, _
@@ -290,7 +339,7 @@
                     'TH Diese Linq abfrage führt einen Join auf die Status Tabelle aus um den Status als Anzeigewert anzeigen zu können. 
                     'Außerdem werden durch die .Name = Wert Notatation im Kontext des "select NEW" eine neue temporäre "Klasse" erzeugt, die die übergebenen Werte beinhaltet - als kämen sie aus einer Datenbanktabelle
                     Dim Data = From Eichprozess In Context.Eichprozess _
-                                                  Where Eichprozess.Ausgeblendet = bolAusgeblendeteElementeAnzeigen _
+                                                  Where Eichprozess.Ausgeblendet = bolAusgeblendeteElementeAnzeigen And Eichprozess.ErzeugerLizenz = AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel _
                                Select New With _
                                                 { _
                                                           .Status = Eichprozess.Lookup_Vorgangsstatus.Status_PL, _
@@ -312,7 +361,7 @@
                     'TH Diese Linq abfrage führt einen Join auf die Status Tabelle aus um den Status als Anzeigewert anzeigen zu können. 
                     'Außerdem werden durch die .Name = Wert Notatation im Kontext des "select NEW" eine neue temporäre "Klasse" erzeugt, die die übergebenen Werte beinhaltet - als kämen sie aus einer Datenbanktabelle
                     Dim Data = From Eichprozess In Context.Eichprozess _
-                                                            Where Eichprozess.Ausgeblendet = bolAusgeblendeteElementeAnzeigen _
+                                                            Where Eichprozess.Ausgeblendet = bolAusgeblendeteElementeAnzeigen And Eichprozess.ErzeugerLizenz = AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel _
                                Select New With _
                                                 { _
                                                           .Status = Eichprozess.Lookup_Vorgangsstatus.Status_EN, _

@@ -1,4 +1,6 @@
-﻿Namespace My
+﻿Imports System.Collections.ObjectModel
+
+Namespace My
 
     ' The following events are available for MyApplication:
     ' 
@@ -12,6 +14,12 @@
         'Private Sub MyApplication_UnhandledException(sender As Object, e As Microsoft.VisualBasic.ApplicationServices.UnhandledExceptionEventArgs) Handles Me.UnhandledException
         '    MessageBox.Show(e.Exception.Message)
         'End Sub
+
+        Protected Overrides Function OnInitialize(commandLineArgs As ReadOnlyCollection(Of String)) As Boolean
+            Me.MinimumSplashScreenDisplayTime = 200
+       
+            Return MyBase.OnInitialize(commandLineArgs)
+        End Function
     End Class
 
 

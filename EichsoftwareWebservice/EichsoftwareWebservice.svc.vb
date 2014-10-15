@@ -56,7 +56,7 @@ Public Class EichsoftwareWebservice
                 objLizenzdaten.Vorname = objBenutzer.Vorname
                 objLizenzdaten.Name = objBenutzer.Nachname
                 objLizenzdaten.BenutzerID = objBenutzer.ID
-
+                objLizenzdaten.Aktiv = True 'wird oben bereits gefiltert
                 objLizenzdaten.Firma = objfirma.Name
                 objLizenzdaten.FirmaPLZ = objfirma.PLZ
                 objLizenzdaten.FirmaOrt = objfirma.Ort

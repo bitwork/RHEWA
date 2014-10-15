@@ -130,9 +130,6 @@
   <data name="lblLizenzschuessel.Text" xml:space="preserve">
     <value>Lizenz Schlüssel:</value>
   </data>
-  <data name="RadCheckBoxAkzeptieren.Location" type="System.Drawing.Point, System.Drawing">
-    <value>281, 417</value>
-  </data>
   <data name="RadCheckBoxAkzeptieren.Size" type="System.Drawing.Size, System.Drawing">
     <value>301, 18</value>
   </data>

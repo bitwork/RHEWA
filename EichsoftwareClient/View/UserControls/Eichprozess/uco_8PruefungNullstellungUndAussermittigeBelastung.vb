@@ -1673,9 +1673,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         If Me.Equals(TargetUserControl) Then
             MyBase.VersendenNeeded(TargetUserControl)
 
-            Using dbcontext As New EichsoftwareClientdatabaseEntities1
-                '  objEichprozess = (From a In dbcontext.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
-
+          
                 Dim objServerEichprozess As New EichsoftwareWebservice.ServerEichprozess
                 'auf fehlerhaft Status setzen
                 objEichprozess.FK_Bearbeitungsstatus = 2
@@ -1697,11 +1695,10 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                     End Try
 
 
-                    Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
 
                     Try
                         'add prüft anhand der Vorgangsnummer automatisch ob ein neuer Prozess angelegt, oder ein vorhandener aktualisiert wird
-                        Webcontext.AddEichprozess(objLiz.HEKennung, objLiz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                        Webcontext.AddEichprozess(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
 
                         'schließen des dialoges
                         ParentFormular.Close()
@@ -1711,7 +1708,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                         Exit Sub
                     End Try
                 End Using
-            End Using
         End If
     End Sub
 
@@ -1733,29 +1729,4 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
 
 #End Region
 
-#Region "Hilfsfunktionen"
-
-
-    ''' <summary>
-    ''' Erwartet z.b. ein Steuerelement, prüft den Namen und gibt zurück um welchen Belastungsort es sich handelt
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <returns></returns>
-    ''' <remarks></remarks>
-    Private Function GetBelastungsort(ByVal sender As Object) As String
-        Try
-            Dim ControlName As String
-            Dim Ort As String
-            ControlName = CType(sender, Control).Name
-            If ControlName.EndsWith("Mitte") Then
-                Ort = "Mitte"
-            Else
-                Ort = ControlName.Last
-            End If
-            Return Ort
-        Catch ex As Exception
-            Return Nothing
-        End Try
-    End Function
-#End Region
 End Class

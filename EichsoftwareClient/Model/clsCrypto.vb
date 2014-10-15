@@ -2,42 +2,7 @@
 Imports System.IO
 Imports System.Text
 
-Public Class clsCrypto
 
-    ''' <summary>
-    ''' If the two SHA1 hashes are the same, returns true.
-    ''' Otherwise returns false.
-    ''' </summary>
-    ''' <param name="p1"></param>
-    ''' <param name="p2"></param>
-    ''' <returns></returns>
-    Private Shared Function MatchSHA1(p1 As Byte(), p2 As Byte()) As Boolean
-        Dim result As Boolean = False
-        If p1 IsNot Nothing AndAlso p2 IsNot Nothing Then
-            If p1.Length = p2.Length Then
-                result = True
-                For i As Integer = 0 To p1.Length - 1
-                    If p1(i) <> p2(i) Then
-                        result = False
-                        Exit For
-                    End If
-                Next
-            End If
-        End If
-        Return result
-    End Function
-    ''' <summary>
-    ''' Returns the SHA1 hash of the combined userID and password.
-    ''' </summary>
-    ''' <param name="userID"></param>
-    ''' <param name="password"></param>
-    ''' <returns></returns>
-    Private Shared Function GetSHA1(userID As String, password As String) As Byte()
-        Dim sha As New SHA1CryptoServiceProvider()
-        Return sha.ComputeHash(System.Text.Encoding.ASCII.GetBytes(userID & password))
-    End Function
-
-End Class
 
 ''' <summary>
 ''' This class uses a symmetric key algorithm (Rijndael/AES) to encrypt and 

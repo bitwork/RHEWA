@@ -11,7 +11,7 @@ Public Class clsWebserviceFunctions
     ''' </summary>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Function TesteVerbindung() As Boolean
+    Public Shared Function TesteVerbindung() As Boolean
         Try
             'abrufen neuer WZ aus Server, basierend auf dem Wert des letzten erfolgreichen updates
             Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
@@ -20,19 +20,8 @@ Public Class clsWebserviceFunctions
                 Catch ex As Exception
                     Return False
                 End Try
-                Using DBContext As New EichsoftwareClientdatabaseEntities1
-                    'lizenzisierung holen
-                    Dim objLic = (From db In DBContext.Lizensierung Select db).FirstOrDefault
-
-                    'hole zusätliche Lizenzdaten als Testaufruf
-                    Dim objLizenzdaten As EichsoftwareWebservice.clsLizenzdaten = webContext.GetLizenzdaten(objLic.HEKennung, objLic.Lizenzschluessel, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
-                    If Not objLizenzdaten Is Nothing Then
-                        Return True
-                    Else
-                        Return False
-                    End If
-
-                End Using
+                'hole zusätliche Lizenzdaten als Testaufruf
+                Return webContext.Test
             End Using
         Catch ex As Exception
             'MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -48,20 +37,29 @@ Public Class clsWebserviceFunctions
     ''' </summary>
     ''' <param name="bolneuStammdaten"></param>
     ''' <remarks></remarks>
-    Public Sub GetNeueStammdaten(ByRef bolneuStammdaten As Boolean)
+    Public Shared Function GetNeueStammdaten(ByRef bolneuStammdaten As Boolean) As Boolean
         Try
             'abrufen neuer WZ aus Server, basierend auf dem Wert des letzten erfolgreichen updates
             Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
                 Try
                     webContext.Open()
                 Catch ex As Exception
-                    Exit Sub
+                    Exit Function
                 End Try
                 Using DBContext As New EichsoftwareClientdatabaseEntities1
                     'lizenzisierung holen
-                    Dim objLic = (From db In DBContext.Lizensierung Select db).FirstOrDefault
-                    'hole zusätliche Lizenzdaten
+                    Dim objLic = (From db In DBContext.Lizensierung Where db.Lizenzschluessel = AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel And db.HEKennung = AktuellerBenutzer.Instance.Lizenz.HEKennung).FirstOrDefault
                     Dim objLizenzdaten As EichsoftwareWebservice.clsLizenzdaten = webContext.GetLizenzdaten(objLic.HEKennung, objLic.Lizenzschluessel, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                    objLic.Aktiv = objLizenzdaten.Aktiv
+
+                    If objLic.Aktiv = False Then
+                        bolneuStammdaten = False
+                        Return False
+                        DBContext.SaveChanges()
+                        MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_UngueltigeLizenz)
+                        Application.Exit()
+                        Exit Function
+                    End If
 
                     objLic.Name = objLizenzdaten.Name
                     objLic.Vorname = objLizenzdaten.Vorname
@@ -69,8 +67,14 @@ Public Class clsWebserviceFunctions
                     objLic.FirmaOrt = objLizenzdaten.FirmaOrt
                     objLic.FirmaPLZ = objLizenzdaten.FirmaPLZ
                     objLic.FirmaStrasse = objLizenzdaten.FirmaStrasse
-                    objLic.fk_benutzerID = objLizenzdaten.BenutzerID
+                    objLic.FK_BenutzerID = objLizenzdaten.BenutzerID
+
+                    bolneuStammdaten = True
                     DBContext.SaveChanges()
+                    Return True
+
+
+
                 End Using
             End Using
         Catch ex As Exception
@@ -79,14 +83,14 @@ Public Class clsWebserviceFunctions
 
 
 
-    End Sub
+    End Function
 
     ''' <summary>
     ''' holt neue oder aktualisierte WZ aus DB über Webservice
     ''' </summary>
     ''' <param name="bolNeuWZ">Variable welche für eine Erfolgsmeldung genutzt wird. Wird beim aktualisieren auf True gesetzt um den Nutzer darauf hinzuweisen, dass etwas neues heruntergeladen wurde.</param>
     ''' <remarks></remarks>
-    Public Sub GetNeueWZ(ByRef bolNeuWZ As Boolean)
+    Public Shared Sub GetNeueWZ(ByRef bolNeuWZ As Boolean)
         Try
 
 
@@ -103,20 +107,19 @@ Public Class clsWebserviceFunctions
                     Dim StartDatum As Date = #1/1/2000#
                     Dim EndDatum As Date = #12/31/2999#
 
-                    If My.Settings.Syncronisierungsmodus = "Alles" Then
-                    ElseIf My.Settings.Syncronisierungsmodus = "Ab" Then
-                        StartDatum = My.Settings.SyncAb
-                    ElseIf My.Settings.Syncronisierungsmodus = "Zwischen" Then
-                        StartDatum = My.Settings.SyncAb
-                        EndDatum = My.Settings.SyncBis
+                    If AktuellerBenutzer.Instance.Synchronisierungsmodus = "Alles" Then
+                    ElseIf AktuellerBenutzer.Instance.Synchronisierungsmodus = "Ab" Then
+                        StartDatum = AktuellerBenutzer.Instance.SyncAb
+                    ElseIf AktuellerBenutzer.Instance.Synchronisierungsmodus = "Zwischen" Then
+                        StartDatum = AktuellerBenutzer.Instance.SyncAb
+                        EndDatum = AktuellerBenutzer.Instance.SyncBis
                     Else
-                        My.Settings.Syncronisierungsmodus = "Alles"
-                        My.Settings.Save()
+                        AktuellerBenutzer.Instance.Synchronisierungsmodus = "Alles"
+                        AktuellerBenutzer.SaveSettings()
                     End If
 
-                    'lizenzisierung holen
-                    Dim objLiz = (From db In DBContext.Lizensierung Select db).FirstOrDefault
-                    Dim objWZResultList = webContext.GetNeueWZ(objLiz.HEKennung, objLiz.Lizenzschluessel, My.Settings.LetztesUpdate, My.User.Name, System.Environment.UserDomainName, My.Computer.Name, StartDatum, EndDatum)
+
+                    Dim objWZResultList = webContext.GetNeueWZ(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, AktuellerBenutzer.Instance.LetztesUpdate, My.User.Name, System.Environment.UserDomainName, My.Computer.Name, StartDatum, EndDatum)
 
                     If Not objWZResultList Is Nothing Then
 
@@ -210,7 +213,7 @@ Public Class clsWebserviceFunctions
     ''' </summary>
     ''' <param name="bolNeuAWG">Variable welche für eine Erfolgsmeldung genutzt wird. Wird beim aktualisieren auf True gesetzt um den Nutzer darauf hinzuweisen, dass etwas neues heruntergeladen wurde.</param>
     ''' <remarks></remarks>
-    Public Sub GetNeuesAWG(ByRef bolNeuAWG As Boolean)
+    Public Shared Sub GetNeuesAWG(ByRef bolNeuAWG As Boolean)
         Try
 
             'abrufen neuer WZ aus Server, basierend auf dem Wert des letzten erfolgreichen updates
@@ -225,109 +228,106 @@ Public Class clsWebserviceFunctions
                     Dim StartDatum As Date = #1/1/2000#
                     Dim EndDatum As Date = #12/31/2999#
 
-                    If My.Settings.Syncronisierungsmodus = "Alles" Then
-                    ElseIf My.Settings.Syncronisierungsmodus = "Ab" Then
-                        StartDatum = My.Settings.SyncAb
-                    ElseIf My.Settings.Syncronisierungsmodus = "Zwischen" Then
-                        StartDatum = My.Settings.SyncAb
-                        EndDatum = My.Settings.SyncBis
+                    If AktuellerBenutzer.Instance.Synchronisierungsmodus = "Alles" Then
+                    ElseIf AktuellerBenutzer.Instance.Synchronisierungsmodus = "Ab" Then
+                        StartDatum = AktuellerBenutzer.Instance.SyncAb
+                    ElseIf AktuellerBenutzer.Instance.Synchronisierungsmodus = "Zwischen" Then
+                        StartDatum = AktuellerBenutzer.Instance.SyncAb
+                        EndDatum = AktuellerBenutzer.Instance.SyncBis
                     Else
-                        My.Settings.Syncronisierungsmodus = "Alles"
-                        My.Settings.Save()
+                        AktuellerBenutzer.Instance.Synchronisierungsmodus = "Alles"
+                        AktuellerBenutzer.SaveSettings()
                     End If
 
-                    'lizenzisierung holen
-
-                    Dim objLiz = (From db In DBContext.Lizensierung Select db).FirstOrDefault
-                    If Not objLiz Is Nothing Then
 
 
-                        Dim objAWGResultList = webContext.GetNeuesAWG(objLiz.HEKennung, objLiz.Lizenzschluessel, My.Settings.LetztesUpdate, My.User.Name, System.Environment.UserDomainName, My.Computer.Name, StartDatum, EndDatum)
 
-                        If Not objAWGResultList Is Nothing Then
+                    Dim objAWGResultList = webContext.GetNeuesAWG(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, AktuellerBenutzer.Instance.LetztesUpdate, My.User.Name, System.Environment.UserDomainName, My.Computer.Name, StartDatum, EndDatum)
 
-                            'alle neuen Artikel aus Server iterieren
-                            Dim tObjServerAWG As EichsoftwareWebservice.ServerLookup_Auswertegeraet 'hilfsvariable für Linq abfrage. Es gibt sonst eine Warnung wenn in Linq mit einer for each variablen gearbeitet wird
-                            For Each objServerArtikel As EichsoftwareWebservice.ServerLookup_Auswertegeraet In objAWGResultList
-                                tObjServerAWG = objServerArtikel
-                                'alle Artikel abrufen in denen die ID mit dem neuem Serverartikel übereinstimmt
-                                Dim query = From d In DBContext.Lookup_Auswertegeraet Where d.ID = tObjServerAWG._ID
+                    If Not objAWGResultList Is Nothing Then
 
-                                'prüfen ob es bereits einen Artikel in der lokalen DB gibt, mit dem aktuellen ID-Wert
-                                If query.Count = 0 Then 'Es gbit den Artikel noch nicht in der lokalen Datebank => insert 
-                                    Dim newAWG As New Lookup_Auswertegeraet
+                        'alle neuen Artikel aus Server iterieren
+                        Dim tObjServerAWG As EichsoftwareWebservice.ServerLookup_Auswertegeraet 'hilfsvariable für Linq abfrage. Es gibt sonst eine Warnung wenn in Linq mit einer for each variablen gearbeitet wird
+                        For Each objServerArtikel As EichsoftwareWebservice.ServerLookup_Auswertegeraet In objAWGResultList
+                            tObjServerAWG = objServerArtikel
+                            'alle Artikel abrufen in denen die ID mit dem neuem Serverartikel übereinstimmt
+                            Dim query = From d In DBContext.Lookup_Auswertegeraet Where d.ID = tObjServerAWG._ID
 
-
-                                    newAWG.ID = objServerArtikel._ID
-                                    newAWG.Bauartzulassung = objServerArtikel._Bauartzulassung
-                                    newAWG.BruchteilEichfehlergrenze = objServerArtikel._BruchteilEichfehlergrenze
-                                    newAWG.Genauigkeitsklasse = objServerArtikel._Genauigkeitsklasse
-                                    newAWG.GrenzwertLastwiderstandMAX = objServerArtikel._GrenzwertLastwiderstandMAX
-                                    newAWG.GrenzwertLastwiderstandMIN = objServerArtikel._GrenzwertLastwiderstandMIN
-                                    newAWG.GrenzwertTemperaturbereichMAX = objServerArtikel._GrenzwertTemperaturbereichMAX
-                                    newAWG.GrenzwertTemperaturbereichMIN = objServerArtikel._GrenzwertTemperaturbereichMIN
-                                    newAWG.Hersteller = objServerArtikel._Hersteller
-                                    newAWG.KabellaengeQuerschnitt = objServerArtikel._KabellaengeQuerschnitt
-                                    newAWG.MAXAnzahlTeilungswerteEinbereichswaage = objServerArtikel._MAXAnzahlTeilungswerteEinbereichswaage
-                                    newAWG.MAXAnzahlTeilungswerteMehrbereichswaage = objServerArtikel._MAXAnzahlTeilungswerteMehrbereichswaage
-                                    newAWG.Mindesteingangsspannung = objServerArtikel._Mindesteingangsspannung
-                                    newAWG.Mindestmesssignal = objServerArtikel._Mindestmesssignal
-                                    newAWG.Pruefbericht = objServerArtikel._Pruefbericht
-                                    newAWG.Speisespannung = objServerArtikel._Speisespannung
-                                    newAWG.Typ = objServerArtikel._Typ
-                                    newAWG.Deaktiviert = objServerArtikel._Deaktiviert
-
-                                    newAWG.TaraeinrichtungHalbSelbsttaetig = objServerArtikel._TaraeinrichtungHalbSelbsttaetig
-                                    newAWG.TaraeinrichtungSelbsttaetig = objServerArtikel._TaraeinrichtungSelbsttaetig
-                                    newAWG.TaraeinrichtungTaraeingabe = objServerArtikel._TaraeinrichtungTaraeingabe
-
-                                    newAWG.NullstellungHalbSelbsttaetig = objServerArtikel._NullstellungHalbSelbsttaetig
-                                    newAWG.NullstellungSelbsttaetig = objServerArtikel._NullstellungSelbsttaetig
-                                    newAWG.NullstellungNullnachfuehrung = objServerArtikel._NullstellungNullnachfuehrung
+                            'prüfen ob es bereits einen Artikel in der lokalen DB gibt, mit dem aktuellen ID-Wert
+                            If query.Count = 0 Then 'Es gbit den Artikel noch nicht in der lokalen Datebank => insert 
+                                Dim newAWG As New Lookup_Auswertegeraet
 
 
-                                    'hinzufügen des neu erzeugten Artikels in Lokale Datenbank
+                                newAWG.ID = objServerArtikel._ID
+                                newAWG.Bauartzulassung = objServerArtikel._Bauartzulassung
+                                newAWG.BruchteilEichfehlergrenze = objServerArtikel._BruchteilEichfehlergrenze
+                                newAWG.Genauigkeitsklasse = objServerArtikel._Genauigkeitsklasse
+                                newAWG.GrenzwertLastwiderstandMAX = objServerArtikel._GrenzwertLastwiderstandMAX
+                                newAWG.GrenzwertLastwiderstandMIN = objServerArtikel._GrenzwertLastwiderstandMIN
+                                newAWG.GrenzwertTemperaturbereichMAX = objServerArtikel._GrenzwertTemperaturbereichMAX
+                                newAWG.GrenzwertTemperaturbereichMIN = objServerArtikel._GrenzwertTemperaturbereichMIN
+                                newAWG.Hersteller = objServerArtikel._Hersteller
+                                newAWG.KabellaengeQuerschnitt = objServerArtikel._KabellaengeQuerschnitt
+                                newAWG.MAXAnzahlTeilungswerteEinbereichswaage = objServerArtikel._MAXAnzahlTeilungswerteEinbereichswaage
+                                newAWG.MAXAnzahlTeilungswerteMehrbereichswaage = objServerArtikel._MAXAnzahlTeilungswerteMehrbereichswaage
+                                newAWG.Mindesteingangsspannung = objServerArtikel._Mindesteingangsspannung
+                                newAWG.Mindestmesssignal = objServerArtikel._Mindestmesssignal
+                                newAWG.Pruefbericht = objServerArtikel._Pruefbericht
+                                newAWG.Speisespannung = objServerArtikel._Speisespannung
+                                newAWG.Typ = objServerArtikel._Typ
+                                newAWG.Deaktiviert = objServerArtikel._Deaktiviert
 
-                                    DBContext.Lookup_Auswertegeraet.Add(newAWG)
-                                    DBContext.SaveChanges()
+                                newAWG.TaraeinrichtungHalbSelbsttaetig = objServerArtikel._TaraeinrichtungHalbSelbsttaetig
+                                newAWG.TaraeinrichtungSelbsttaetig = objServerArtikel._TaraeinrichtungSelbsttaetig
+                                newAWG.TaraeinrichtungTaraeingabe = objServerArtikel._TaraeinrichtungTaraeingabe
+
+                                newAWG.NullstellungHalbSelbsttaetig = objServerArtikel._NullstellungHalbSelbsttaetig
+                                newAWG.NullstellungSelbsttaetig = objServerArtikel._NullstellungSelbsttaetig
+                                newAWG.NullstellungNullnachfuehrung = objServerArtikel._NullstellungNullnachfuehrung
+
+
+                                'hinzufügen des neu erzeugten Artikels in Lokale Datenbank
+
+                                DBContext.Lookup_Auswertegeraet.Add(newAWG)
+                                DBContext.SaveChanges()
+                                bolNeuAWG = True
+
+
+                            Else 'Es gibt den Artikel bereits, er wird geupdated
+                                For Each objAWG As Lookup_Auswertegeraet In query 'es sollte nur einen Artikel Geben, da die IDs eindeutig sind.
+
+                                    objAWG.Bauartzulassung = objServerArtikel._Bauartzulassung
+                                    objAWG.BruchteilEichfehlergrenze = objServerArtikel._BruchteilEichfehlergrenze
+                                    objAWG.Genauigkeitsklasse = objServerArtikel._Genauigkeitsklasse
+                                    objAWG.GrenzwertLastwiderstandMAX = objServerArtikel._GrenzwertLastwiderstandMAX
+                                    objAWG.GrenzwertLastwiderstandMIN = objServerArtikel._GrenzwertLastwiderstandMIN
+                                    objAWG.GrenzwertTemperaturbereichMAX = objServerArtikel._GrenzwertTemperaturbereichMAX
+                                    objAWG.GrenzwertTemperaturbereichMIN = objServerArtikel._GrenzwertTemperaturbereichMIN
+                                    objAWG.Hersteller = objServerArtikel._Hersteller
+                                    objAWG.KabellaengeQuerschnitt = objServerArtikel._KabellaengeQuerschnitt
+                                    objAWG.MAXAnzahlTeilungswerteEinbereichswaage = objServerArtikel._MAXAnzahlTeilungswerteEinbereichswaage
+                                    objAWG.MAXAnzahlTeilungswerteMehrbereichswaage = objServerArtikel._MAXAnzahlTeilungswerteMehrbereichswaage
+                                    objAWG.Mindesteingangsspannung = objServerArtikel._Mindesteingangsspannung
+                                    objAWG.Mindestmesssignal = objServerArtikel._Mindestmesssignal
+                                    objAWG.Pruefbericht = objServerArtikel._Pruefbericht
+                                    objAWG.Speisespannung = objServerArtikel._Speisespannung
+                                    objAWG.Typ = objServerArtikel._Typ
+                                    objAWG.TaraeinrichtungHalbSelbsttaetig = objServerArtikel._TaraeinrichtungHalbSelbsttaetig
+                                    objAWG.TaraeinrichtungSelbsttaetig = objServerArtikel._TaraeinrichtungSelbsttaetig
+                                    objAWG.TaraeinrichtungTaraeingabe = objServerArtikel._TaraeinrichtungTaraeingabe
+                                    objAWG.NullstellungHalbSelbsttaetig = objServerArtikel._NullstellungHalbSelbsttaetig
+                                    objAWG.NullstellungSelbsttaetig = objServerArtikel._NullstellungSelbsttaetig
+                                    objAWG.NullstellungNullnachfuehrung = objServerArtikel._NullstellungNullnachfuehrung
+
+                                    objAWG.Deaktiviert = objServerArtikel._Deaktiviert
+
                                     bolNeuAWG = True
+                                Next
+                            End If
+                        Next
 
-
-                                Else 'Es gibt den Artikel bereits, er wird geupdated
-                                    For Each objAWG As Lookup_Auswertegeraet In query 'es sollte nur einen Artikel Geben, da die IDs eindeutig sind.
-
-                                        objAWG.Bauartzulassung = objServerArtikel._Bauartzulassung
-                                        objAWG.BruchteilEichfehlergrenze = objServerArtikel._BruchteilEichfehlergrenze
-                                        objAWG.Genauigkeitsklasse = objServerArtikel._Genauigkeitsklasse
-                                        objAWG.GrenzwertLastwiderstandMAX = objServerArtikel._GrenzwertLastwiderstandMAX
-                                        objAWG.GrenzwertLastwiderstandMIN = objServerArtikel._GrenzwertLastwiderstandMIN
-                                        objAWG.GrenzwertTemperaturbereichMAX = objServerArtikel._GrenzwertTemperaturbereichMAX
-                                        objAWG.GrenzwertTemperaturbereichMIN = objServerArtikel._GrenzwertTemperaturbereichMIN
-                                        objAWG.Hersteller = objServerArtikel._Hersteller
-                                        objAWG.KabellaengeQuerschnitt = objServerArtikel._KabellaengeQuerschnitt
-                                        objAWG.MAXAnzahlTeilungswerteEinbereichswaage = objServerArtikel._MAXAnzahlTeilungswerteEinbereichswaage
-                                        objAWG.MAXAnzahlTeilungswerteMehrbereichswaage = objServerArtikel._MAXAnzahlTeilungswerteMehrbereichswaage
-                                        objAWG.Mindesteingangsspannung = objServerArtikel._Mindesteingangsspannung
-                                        objAWG.Mindestmesssignal = objServerArtikel._Mindestmesssignal
-                                        objAWG.Pruefbericht = objServerArtikel._Pruefbericht
-                                        objAWG.Speisespannung = objServerArtikel._Speisespannung
-                                        objAWG.Typ = objServerArtikel._Typ
-                                        objAWG.TaraeinrichtungHalbSelbsttaetig = objServerArtikel._TaraeinrichtungHalbSelbsttaetig
-                                        objAWG.TaraeinrichtungSelbsttaetig = objServerArtikel._TaraeinrichtungSelbsttaetig
-                                        objAWG.TaraeinrichtungTaraeingabe = objServerArtikel._TaraeinrichtungTaraeingabe
-                                        objAWG.NullstellungHalbSelbsttaetig = objServerArtikel._NullstellungHalbSelbsttaetig
-                                        objAWG.NullstellungSelbsttaetig = objServerArtikel._NullstellungSelbsttaetig
-                                        objAWG.NullstellungNullnachfuehrung = objServerArtikel._NullstellungNullnachfuehrung
-
-                                        objAWG.Deaktiviert = objServerArtikel._Deaktiviert
-
-                                        bolNeuAWG = True
-                                    Next
-                                End If
-                            Next
-
-                        End If
                     End If
+
                     Try
                         DBContext.SaveChanges()
                     Catch ex As Exception
@@ -349,7 +349,7 @@ Public Class clsWebserviceFunctions
     ''' </summary>
     ''' <param name="bolNeuGenehmigung">Variable welche für eine Erfolgsmeldung genutzt wird. Wird beim aktualisieren auf True gesetzt um den Nutzer darauf hinzuweisen, dass etwas neues heruntergeladen wurde.</param>
     ''' <remarks></remarks>
-    Public Sub GetGenehmigungsstatus(ByRef bolNeuGenehmigung As Boolean)
+    Public Shared Sub GetGenehmigungsstatus(ByRef bolNeuGenehmigung As Boolean)
         Try
 
             'abrufen des Statusts für jeden versendeten Eichprozess
@@ -360,14 +360,14 @@ Public Class clsWebserviceFunctions
                     Exit Sub
                 End Try
                 Using DBContext As New EichsoftwareClientdatabaseEntities1
-                    Dim objLiz = (From db In DBContext.Lizensierung Select db).FirstOrDefault
+
 
                     'hole die prozesse mit dem status 1 = in bearbeitung bei rhewa
                     Dim query = From db In DBContext.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select db Where db.FK_Bearbeitungsstatus = 1
 
                     For Each Eichprozess In query
                         Try
-                            Dim NeuerStatus As String = webContext.CheckGueltigkeitEichprozess(objLiz.HEKennung, objLiz.Lizenzschluessel, Eichprozess.Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                            Dim NeuerStatus As String = webContext.CheckGueltigkeitEichprozess(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, Eichprozess.Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
                             If Not NeuerStatus Is Nothing Then
                                 If Eichprozess.FK_Bearbeitungsstatus <> NeuerStatus Then
 
@@ -375,7 +375,7 @@ Public Class clsWebserviceFunctions
                                     '###################
                                     'neue Datenbankverbindung
 
-                                    Dim objServerEichprozess = webContext.GetEichProzess(objLiz.HEKennung, objLiz.Lizenzschluessel, Eichprozess.Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                                    Dim objServerEichprozess = webContext.GetEichProzess(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, Eichprozess.Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
 
 
                                     If objServerEichprozess Is Nothing Then
@@ -422,7 +422,7 @@ Public Class clsWebserviceFunctions
     ''' holt alle einem zugehörigen Eichprotokolle vom RHEWA Server. z.B. wenn die anwendung auf einem neuem PC installiert wurde
     ''' </summary>
     ''' <remarks></remarks>
-    Public Sub GetEichprotokolleVomServer()
+    Public Shared Sub GetEichprotokolleVomServer()
         Try
 
             'abrufen des Statusts für jeden versendeten Eichprozess
@@ -437,24 +437,22 @@ Public Class clsWebserviceFunctions
                     Dim StartDatum As Date = #1/1/2000#
                     Dim EndDatum As Date = #12/31/2999#
 
-                    If My.Settings.Syncronisierungsmodus = "Alles" Then
-                    ElseIf My.Settings.Syncronisierungsmodus = "Ab" Then
-                        StartDatum = My.Settings.SyncAb
-                    ElseIf My.Settings.Syncronisierungsmodus = "Zwischen" Then
-                        StartDatum = My.Settings.SyncAb
-                        EndDatum = My.Settings.SyncBis
+                    If AktuellerBenutzer.Instance.Synchronisierungsmodus = "Alles" Then
+                    ElseIf AktuellerBenutzer.Instance.Synchronisierungsmodus = "Ab" Then
+                        StartDatum = AktuellerBenutzer.Instance.SyncAb
+                    ElseIf AktuellerBenutzer.Instance.Synchronisierungsmodus = "Zwischen" Then
+                        StartDatum = AktuellerBenutzer.Instance.SyncAb
+                        EndDatum = AktuellerBenutzer.Instance.SyncBis
                     Else
-                        My.Settings.Syncronisierungsmodus = "Alles"
-                        My.Settings.Save()
+                        AktuellerBenutzer.Instance.Synchronisierungsmodus = "Alles"
+                        AktuellerBenutzer.SaveSettings()
                     End If
 
-                    'lizenz objekt
-                    Dim objLiz = (From db In DBContext.Lizensierung Select db).FirstOrDefault
 
                     Try
                         'wenn es eine Änderung gab, wird das geänderte Objekt vom Server abgerufen. Damit können änderungen die von einem RHEWA Mitarbeiter durchgeführt wurden übernommen werden
                         'neue Datenbankverbindung
-                        Dim objServerEichprozesse = webContext.GetAlleEichprozesseImZeitraum(objLiz.HEKennung, objLiz.Lizenzschluessel, My.User.Name, System.Environment.UserDomainName, My.Computer.Name, StartDatum, EndDatum)
+                        Dim objServerEichprozesse = webContext.GetAlleEichprozesseImZeitraum(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, My.User.Name, System.Environment.UserDomainName, My.Computer.Name, StartDatum, EndDatum)
 
 
                         If objServerEichprozesse Is Nothing Then
@@ -497,7 +495,7 @@ Public Class clsWebserviceFunctions
         End Try
     End Sub
 
-    Public Function GetServerEichprotokollListe() As EichsoftwareWebservice.clsEichprozessFuerAuswahlliste()
+    Public Shared Function GetServerEichprotokollListe() As EichsoftwareWebservice.clsEichprozessFuerAuswahlliste()
         Try
             'neuen Context aufbauen
             Using WebContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
@@ -507,23 +505,20 @@ Public Class clsWebserviceFunctions
                     Return Nothing
                 End Try
 
-                Using dbcontext As New EichsoftwareClientdatabaseEntities1
-                    Dim objLic = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
-                    Try
-                        Dim data = WebContext.GetAlleEichprozesse(objLic.HEKennung, objLic.Lizenzschluessel, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
-                        Return data
-                    Catch ex As Exception
-                        MessageBox.Show(ex.Message)
-                        If Debugger.IsAttached Then
-                            MessageBox.Show(ex.StackTrace)
-                            MessageBox.Show(ex.InnerException.Message)
-                            MessageBox.Show(ex.InnerException.StackTrace)
-                            MessageBox.Show(ex.InnerException.InnerException.Message)
-                            MessageBox.Show(ex.InnerException.InnerException.StackTrace)
-                        End If
-                        Return Nothing
-                    End Try
-                End Using
+                Try
+                    Dim data = WebContext.GetAlleEichprozesse(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                    Return data
+                Catch ex As Exception
+                    MessageBox.Show(ex.Message)
+                    If Debugger.IsAttached Then
+                        MessageBox.Show(ex.StackTrace)
+                        MessageBox.Show(ex.InnerException.Message)
+                        MessageBox.Show(ex.InnerException.StackTrace)
+                        MessageBox.Show(ex.InnerException.InnerException.Message)
+                        MessageBox.Show(ex.InnerException.InnerException.StackTrace)
+                    End If
+                    Return Nothing
+                End Try
             End Using
         Catch ex As ServiceModel.EndpointNotFoundException
             MessageBox.Show("Keine Verbindung zum Stratoserver möglich")
@@ -533,7 +528,9 @@ Public Class clsWebserviceFunctions
         End Try
     End Function
 
-    Public Function GetLokaleKopieVonEichprozess(ByVal Vorgangsnummer As String) As Eichprozess
+    Public Shared Function GetLokaleKopieVonEichprozess(ByVal Vorgangsnummer As String) As Eichprozess
+        Dim objServerEichprozess As EichsoftwareWebservice.ServerEichprozess = Nothing
+        Dim objClientEichprozess As Eichprozess = Nothing
         'neue Datenbankverbindung
         Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
             Try
@@ -548,9 +545,9 @@ Public Class clsWebserviceFunctions
                 Try
 
 
-                    Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
-                    Dim objClientEichprozess = dbcontext.Eichprozess.Create
-                    Dim objServerEichprozess = webContext.GetEichProzess(objLiz.HEKennung, objLiz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                
+                    objClientEichprozess = dbcontext.Eichprozess.Create
+                    objServerEichprozess = webContext.GetEichProzess(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
 
 
                     If objServerEichprozess Is Nothing Then
@@ -565,13 +562,13 @@ Public Class clsWebserviceFunctions
                     objClientEichprozess.FK_Bearbeitungsstatus = 4 'noch nichts
                     objClientEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
                     dbcontext.Eichprozess.Add(objClientEichprozess)
-
+                 
                     Try
                         dbcontext.SaveChanges()
                     Catch ex As Entity.Infrastructure.DbUpdateException
                         MessageBox.Show(ex.InnerException.InnerException.Message)
                         MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_SpeicherAnomalie, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK)
-                        If My.Settings.RHEWALizenz Then
+                        If AktuellerBenutzer.Instance.Lizenz.RHEWALizenz Then
                             MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_SpeicherAnomalieRhewaZusatztext, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK)
                         End If
 
@@ -595,7 +592,11 @@ Public Class clsWebserviceFunctions
 
     End Function
 
-    Public Function GenehmigeEichprozess(ByVal Vorgangsnummer As String)
+    Public Shared Function GenehmigeEichprozess(ByVal Vorgangsnummer As String)
+        Dim result As String = ""
+        Dim Messagetext As String = ""
+        Dim bolSetGueltig As Boolean = True 'variable zum abbrechen des Prozesses, falls jemand anderes an dem DS arbeitet
+
         'neue Datenbankverbindung
         Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
             Try
@@ -604,77 +605,73 @@ Public Class clsWebserviceFunctions
                 MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Return False
             End Try
-            Using dbcontext As New EichsoftwareClientdatabaseEntities1
 
-                Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
-                'prüfen ob der datensatz von jemand anderem in Bearbeitung ist
-                Dim bolSetGueltig As Boolean = True 'variable zum abbrechen des Prozesses, falls jemand anderes an dem DS arbeitet
-                Dim Messagetext As String = ""
-                Messagetext = webContext.CheckSperrung(objLiz.HEKennung, objLiz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
-                If Messagetext.Equals("") = False Then
-                    'rhewa arbeitet in deutsch und hat keine lokalisierung gewünscht
-                    Dim result As String
-                    result = webContext.SetSperrung(True, objLiz.HEKennung, objLiz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+
+
+            'prüfen ob der datensatz von jemand anderem in Bearbeitung ist
+
+            Messagetext = webContext.CheckSperrung(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+            If Messagetext.Equals("") = False Then
+                'rhewa arbeitet in deutsch und hat keine lokalisierung gewünscht
+                result = webContext.SetSperrung(True, AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                If result = "" Then
+                    bolSetGueltig = True
+                Else
+                    MessageBox.Show(result)
+                    bolSetGueltig = False
+                    Return False
+                End If
+            End If
+            If bolSetGueltig Then
+                webContext.SetEichprozessGenehmight(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                Return True
+            End If
+        End Using
+
+        Return False
+    End Function
+
+    Public Shared Function AblehnenEichprozess(ByVal Vorgangsnummer As String) As Boolean
+        Dim result As String = ""
+        Dim bolSetUnueltig As Boolean = True 'variable zum abbrechen des Prozesses, falls jemand anderes an dem DS arbeitet
+        Dim Messagetext As String = ""
+        'neue Datenbankverbindung
+        Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
+            Try
+                webContext.Open()
+            Catch ex As Exception
+                MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Return False
+            End Try
+
+            Messagetext = webContext.CheckSperrung(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+            If Messagetext.Equals("") = False Then
+                'rhewa arbeitet in deutsch und hat keine lokalisierung gewünscht
+                If MessageBox.Show("Dieser Konformitätsbewertungsprozess wird von '" & Messagetext & "' bearbeitet. Möchten Sie seine Arbeit wirklich überschreiben und den Prozess ablehnen?", My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo) = DialogResult.Yes Then
+                    result = webContext.SetSperrung(True, AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
                     If result = "" Then
-                        bolSetGueltig = True
+                        bolSetUnueltig = True
                     Else
                         MessageBox.Show(result)
-                        bolSetGueltig = False
+                        bolSetUnueltig = False
                         Return False
                     End If
+                Else
+                    bolSetUnueltig = False
                 End If
-                If bolSetGueltig Then
-                    webContext.SetEichprozessGenehmight(objLiz.HEKennung, objLiz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
-                    Return True
-                End If
-            End Using
-        End Using
-        Return False
-    End Function
-
-    Public Function AblehnenEichprozess(ByVal Vorgangsnummer As String) As Boolean
-        'neue Datenbankverbindung
-        Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
-            Try
-                webContext.Open()
-            Catch ex As Exception
-                MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                Return False
-            End Try
-
-            Using dbcontext As New EichsoftwareClientdatabaseEntities1
-                Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
-                'prüfen ob der datensatz von jemand anderem in Bearbeitung ist
-                Dim bolSetUnueltig As Boolean = True 'variable zum abbrechen des Prozesses, falls jemand anderes an dem DS arbeitet
-                Dim Messagetext As String = ""
-                Messagetext = webContext.CheckSperrung(objLiz.HEKennung, objLiz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
-                If Messagetext.Equals("") = False Then
-                    'rhewa arbeitet in deutsch und hat keine lokalisierung gewünscht
-                    If MessageBox.Show("Dieser Konformitätsbewertungsprozess wird von '" & Messagetext & "' bearbeitet. Möchten Sie seine Arbeit wirklich überschreiben und den Prozess ablehnen?", My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo) = DialogResult.Yes Then
-                        Dim result As String
-                        result = webContext.SetSperrung(True, objLiz.HEKennung, objLiz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
-                        If result = "" Then
-                            bolSetUnueltig = True
-                        Else
-                            MessageBox.Show(result)
-                            bolSetUnueltig = False
-                            Return False
-                        End If
-                    Else
-                        bolSetUnueltig = False
-                    End If
-                End If
-                If bolSetUnueltig Then
-                    webContext.SetEichprozessUngueltig(objLiz.HEKennung, objLiz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
-                    Return True
-                End If
-            End Using
+            End If
+            If bolSetUnueltig Then
+                webContext.SetEichprozessUngueltig(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                Return True
+            End If
         End Using
         Return False
     End Function
 
 
-    Public Function ZeigeServerEichprozess(ByVal Vorgangsnummer As String) As Eichprozess
+    Public Shared Function ZeigeServerEichprozess(ByVal Vorgangsnummer As String) As Eichprozess
+        Dim objServerEichprozess As EichsoftwareWebservice.ServerEichprozess = Nothing
+        Dim objClientEichprozess As Eichprozess = Nothing
         'neue Datenbankverbindung
         Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
             Try
@@ -688,9 +685,9 @@ Public Class clsWebserviceFunctions
 
             Using dbcontext As New EichsoftwareClientdatabaseEntities1
 
-                Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
-                Dim objClientEichprozess = dbcontext.Eichprozess.Create
-                Dim objServerEichprozess = webContext.GetEichProzess(objLiz.HEKennung, objLiz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+
+                objClientEichprozess = dbcontext.Eichprozess.Create
+                objServerEichprozess = webContext.GetEichProzess(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
 
 
                 If objServerEichprozess Is Nothing Then
@@ -716,7 +713,11 @@ Public Class clsWebserviceFunctions
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    Public Function SetzeSperrung(ByVal bolSperren As Boolean, ByVal EichprozessVorgangsnummer As String) As Boolean
+    Public Shared Function SetzeSperrung(ByVal bolSperren As Boolean, ByVal EichprozessVorgangsnummer As String) As Boolean
+        Dim result As String = ""
+        Dim bolSetSperrung As Boolean = True 'variable zum abbrechen des Prozesses, falls jemand anderes an dem DS arbeitet
+        Dim Messagetext As String = "" 'variable bekommt Ergebniss der Sperrprüfung. Ist anschließend leer wenn keine Sperrung vorliegt
+
         'neue Datenbankverbindung
         Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
             Try
@@ -725,37 +726,34 @@ Public Class clsWebserviceFunctions
                 MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Return False
             End Try
-            Using dbcontext As New EichsoftwareClientdatabaseEntities1
 
-                Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
-                'prüfen ob der datensatz von jemand anderem in Bearbeitung ist
-                Dim bolSetSperrung As Boolean = True 'variable zum abbrechen des Prozesses, falls jemand anderes an dem DS arbeitet
-                Dim Messagetext As String = "" 'variable bekommt Ergebniss der Sperrprüfung. Ist anschließend leer wenn keine Sperrung vorliegt
-                Messagetext = PruefeSperrung(EichprozessVorgangsnummer)
 
-                If Messagetext.Equals("") = False Then
-                    'rhewa arbeitet in deutsch und hat keine lokalisierung gewünscht
-                    If MessageBox.Show("Dieser Konformitätsbewertungsprozess wird von '" & Messagetext & "' bearbeitet. Möchten Sie seine Arbeit wirklich überschreiben und den Prozess selbst bearbeiten?", My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo) = DialogResult.Yes Then
-                        bolSetSperrung = True
-                    Else
-                        bolSetSperrung = False
-                    End If
-                End If
+         
+            'prüfen ob der datensatz von jemand anderem in Bearbeitung ist
+           Messagetext = PruefeSperrung(EichprozessVorgangsnummer)
 
-                If bolSetSperrung Then
-                    Dim result As String
-                    result = webContext.SetSperrung(bolSperren, objLiz.HEKennung, objLiz.Lizenzschluessel, EichprozessVorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
-
-                    If result = "" Then
-                        Return True
-                    Else
-                        MessageBox.Show(result)
-                        Return False
-                    End If
+            If Messagetext.Equals("") = False Then
+                'rhewa arbeitet in deutsch und hat keine lokalisierung gewünscht
+                If MessageBox.Show("Dieser Konformitätsbewertungsprozess wird von '" & Messagetext & "' bearbeitet. Möchten Sie seine Arbeit wirklich überschreiben und den Prozess selbst bearbeiten?", My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo) = DialogResult.Yes Then
+                    bolSetSperrung = True
                 Else
+                    bolSetSperrung = False
+                End If
+            End If
+
+            If bolSetSperrung Then
+                result = webContext.SetSperrung(bolSperren, AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, EichprozessVorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+
+                If result = "" Then
+                    Return True
+                Else
+                    MessageBox.Show(result)
                     Return False
                 End If
-            End Using
+            Else
+                Return False
+            End If
+
         End Using
     End Function
 
@@ -767,27 +765,24 @@ Public Class clsWebserviceFunctions
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    Public Function PruefeSperrung(ByVal EichprozessVorgangsnummer As String) As String
+    Public Shared Function PruefeSperrung(ByVal EichprozessVorgangsnummer As String) As String
+        Dim Messagetext As String = ""
+
         Try
             'neue Datenbankverbindung
-        Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
-            Try
-                webContext.Open()
-            Catch ex As Exception
-                MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                Return False
-            End Try
+            Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
+                Try
+                    webContext.Open()
+                Catch ex As Exception
+                    MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    Return False
+                End Try
 
-            Using dbcontext As New EichsoftwareClientdatabaseEntities1
 
-                Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
-                'prüfen ob der datensatz von jemand anderem in Bearbeitung ist
-
-                Dim Messagetext As String = ""
-                Messagetext = webContext.CheckSperrung(objLiz.HEKennung, objLiz.Lizenzschluessel, EichprozessVorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+               
+                Messagetext = webContext.CheckSperrung(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, EichprozessVorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
                 Return Messagetext
             End Using
-        End Using
             Return ""
         Catch ex As Exception
             Return ""

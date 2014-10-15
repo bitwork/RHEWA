@@ -832,7 +832,6 @@ Public Class clsOfficeExports
         Dim objExcelApp As New Microsoft.Office.Interop.Excel.Application
         Dim objExcelWorkbook As Microsoft.Office.Interop.Excel.Workbook
         Dim objExcelWorksheetKonformerk As Microsoft.Office.Interop.Excel.Worksheet
-        Dim objExcelWorksheetTypen As Microsoft.Office.Interop.Excel.Worksheet
         Dim ExcelSavePath As String
         Dim DocumentName As String = "Konformitätserklärung DE" & "_" & objEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer & ".xls"
         Dim CompletePath As String
@@ -858,7 +857,6 @@ Public Class clsOfficeExports
 
             'Worksheets zuweisen
             objExcelWorksheetKonformerk = objExcelWorkbook.Worksheets("Konformerk.")
-            objExcelWorksheetTypen = objExcelWorkbook.Worksheets("Typen")
 
             'Waagentyp befüllen in E21 auf Konformerk. (Werte kommen aus Typen) 
             If Not objEichProzess.Lookup_Auswertegeraet.Typ Is Nothing Then
@@ -908,7 +906,6 @@ Public Class clsOfficeExports
         Dim objExcelApp As New Microsoft.Office.Interop.Excel.Application
         Dim objExcelWorkbook As Microsoft.Office.Interop.Excel.Workbook
         Dim objExcelWorksheetKonformerk As Microsoft.Office.Interop.Excel.Worksheet
-        Dim objExcelWorksheetTypen As Microsoft.Office.Interop.Excel.Worksheet
         Dim ExcelSavePath As String
         Dim DocumentName As String = "Konformitätserklärung PL" & "_" & pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer & ".xls"
         Dim CompletePath As String
@@ -934,7 +931,6 @@ Public Class clsOfficeExports
 
             'Worksheets zuweisen
             objExcelWorksheetKonformerk = objExcelWorkbook.Worksheets("Konformerk.")
-            objExcelWorksheetTypen = objExcelWorkbook.Worksheets("Typen")
 
             'Waagentyp befüllen in E21 auf Konformerk. (Werte kommen aus Typen) 
             If Not pEichProzess.Lookup_Auswertegeraet.Typ Is Nothing Then
@@ -987,7 +983,6 @@ Public Class clsOfficeExports
         Dim objExcelApp As New Microsoft.Office.Interop.Excel.Application
         Dim objExcelWorkbook As Microsoft.Office.Interop.Excel.Workbook
         Dim objExcelWorksheetKonformerk As Microsoft.Office.Interop.Excel.Worksheet
-        Dim objExcelWorksheetTypen As Microsoft.Office.Interop.Excel.Worksheet
         Dim ExcelSavePath As String
         Dim DocumentName As String = "Konformitätserklärung RO" & "_" & pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer & ".xls"
         Dim CompletePath As String
@@ -1013,7 +1008,6 @@ Public Class clsOfficeExports
 
             'Worksheets zuweisen
             objExcelWorksheetKonformerk = objExcelWorkbook.Worksheets("Konformerk.")
-            objExcelWorksheetTypen = objExcelWorkbook.Worksheets("Typen")
 
             'Waagentyp befüllen in E21 auf Konformerk. (Werte kommen aus Typen) 
             If Not pEichProzess.Lookup_Auswertegeraet.Typ Is Nothing Then
@@ -1188,12 +1182,8 @@ Public Class clsOfficeExports
         Dim objWordApp As New Microsoft.Office.Interop.Word.Application
         Dim objWordDoc As Microsoft.Office.Interop.Word.Document
         Dim FolderBrowserDialog As New FolderBrowserDialog
-        Dim WordSavePath As String
-        Dim CompletePath As String
 
         If FolderBrowserDialog.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
-            WordSavePath = FolderBrowserDialog.SelectedPath
-            CompletePath = WordSavePath & "VollExport.doc"
 
             'Hier wird das Dokument gespeichert.
 

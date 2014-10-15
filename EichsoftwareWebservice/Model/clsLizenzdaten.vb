@@ -6,5 +6,5 @@
     Public Property FirmaOrt As String = ""
     Public Property FirmaPLZ As String = ""
     Public Property BenutzerID As String = ""
-
+    Public Property Aktiv As Boolean = False
 End Class

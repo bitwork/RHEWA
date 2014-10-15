@@ -124,8 +124,8 @@ Public Class Uco21Versenden
     ''' <remarks></remarks>
     Private Sub SendObject()
         'testen der Verbindung
-        Dim obj As New clsWebserviceFunctions
-        If Not obj.TesteVerbindung() Then
+
+        If Not clsWebserviceFunctions.TesteVerbindung() Then
             MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung)
             Exit Sub
         End If

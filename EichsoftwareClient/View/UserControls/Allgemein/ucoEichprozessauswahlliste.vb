@@ -3,9 +3,9 @@
 #Region "Member Variables"
     Private WithEvents _ParentForm As FrmMainContainer
     Private objWebserviceFunctions As New clsWebserviceFunctions
-    Private objDBFunctions As New clsDBFunctions
+    'Private objDBFunctions As New clsDBFunctions
     Private WithEvents objFTP As New clsFTP
-
+    Private objPage As Telerik.WinControls.UI.RadPageViewPage
 #End Region
 
 #Region "Constructors"
@@ -63,12 +63,28 @@
 
 #Region "Formular Logiken"
     Private Sub ucoEichprozessauswahlliste_Load(sender As Object, e As System.EventArgs) Handles Me.Load
+        laderoutine()
+    End Sub
+
+    Private Sub RadButton1_Click(sender As Object, e As EventArgs) Handles RadButtonRefresh.Click
+        LoadFromDatabase()
+    End Sub
+
+    Friend Sub LadeRoutine()
         If Not ParentFormular Is Nothing Then
             Try
                 'Hilfetext setzen
                 ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_Hauptmenue)
                 'Überschrift setzen
                 ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_Hauptmenue
+
+                'benutzer auswahl einblenden
+                Dim uco As New ucoBenutzerwechsel(Me)
+                uco.objLizenz = AktuellerBenutzer.Instance.Lizenz
+                uco.Dock = DockStyle.Fill
+                ParentFormular.RadScrollablePanelTrafficLightBreadcrumb.Controls.Add(uco)
+                ParentFormular.objUCOBenutzerwechsel = uco
+
             Catch ex As Exception
             End Try
         End If
@@ -76,26 +92,38 @@
         RadButtonEinstellungen.Visible = True
         RadButtonEinstellungen.Enabled = True
 
-     
 
-        If My.Settings.RHEWALizenz = True Then
+        'Tabelle mit Server Items ausblenden
+        If AktuellerBenutzer.Instance.Lizenz.RHEWALizenz = False Then
+            Try
+                objPage = RadPageView1.Pages(1) 'falls der benutzer gewechselt wird, und so zwischen mit RHEWA Lizenz und ohne RHEWA Lizenz gewechselt wird
+                RadPageView1.Pages.RemoveAt(1)
+                RadPageView1.Pages(0).Text = ""
+
+
+            Catch ex As ArgumentOutOfRangeException
+                'ignorieren
+
+
+            End Try
         Else
-            RadPageView1.Pages.RemoveAt(1)
-            RadPageView1.Pages(0).Text = ""
+            If RadPageView1.Pages.Count = 1 Then
+                RadPageView1.Pages(0).Text = "Eigene"
+
+                RadPageView1.Pages.Add(objPage) 'wieder hinzufügen der Page falls vorher entfernt
+                RadPageView1.Pages(1).Text = "Alle"
+            End If
+
         End If
 
-     
+
 
         'für den Fall das die Anwendung gerade erst installiert wurde, oder die einstellung zur Synchronisierung geändert wurde, sollen alle Eichungen vom RHEWA Server geholt werden, die einmal angelegt wurden
-        If My.Settings.Lizensiert And My.Settings.HoleAlleEigenenEichungenVomServer = True Then
+        If Not AktuellerBenutzer.Instance.Lizenz Is Nothing And AktuellerBenutzer.Instance.HoleAlleeigenenEichungenVomServer = True Then
             VerbindeMitWebserviceUndHoleAlles()
-            'TH obsolete. Wird im lokalisierungsneeded event noch einmal aufgerufen- dieses triggerd auch beim ersten start 
-            'LoadFromDatabase()
+        Else
+            LoadFromDatabase()
         End If
-    End Sub
-
-    Private Sub RadButton1_Click(sender As Object, e As EventArgs) Handles RadButtonRefresh.Click
-        LoadFromDatabase()
     End Sub
 
     ''' <summary>
@@ -125,35 +153,37 @@
     End Sub
 
     Protected Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
-        MyBase.LokalisierungNeeded(UserControl)
-        'übersetzen und formatierung der Tabelle
-        LoadFromDatabase()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucoEichprozessauswahlliste))
+        If Me.Equals(UserControl) Then
+            MyBase.LokalisierungNeeded(UserControl)
+            'übersetzen und formatierung der Tabelle
+            LoadFromDatabase()
+            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucoEichprozessauswahlliste))
 
-        Me.RadButtonClientAusblenden.Text = resources.GetString("RadButtonClientAusblenden.Text")
-        Me.RadButtonClientBearbeiten.Text = resources.GetString("RadButtonClientBearbeiten.Text")
-        Me.RadButtonClientUpdateDatabase.Text = resources.GetString("RadButtonClientUpdateDatabase.Text")
-        Me.RadButtonClientNeu.Text = resources.GetString("RadButtonClientNeu.Text")
-        Me.RadCheckBoxAusblendenClientGeloeschterDokumente.Text = resources.GetString("RadCheckBoxAusblendenClientGeloeschterDokumente.Text")
+            Me.RadButtonClientAusblenden.Text = resources.GetString("RadButtonClientAusblenden.Text")
+            Me.RadButtonClientBearbeiten.Text = resources.GetString("RadButtonClientBearbeiten.Text")
+            Me.RadButtonClientUpdateDatabase.Text = resources.GetString("RadButtonClientUpdateDatabase.Text")
+            Me.RadButtonClientNeu.Text = resources.GetString("RadButtonClientNeu.Text")
+            Me.RadCheckBoxAusblendenClientGeloeschterDokumente.Text = resources.GetString("RadCheckBoxAusblendenClientGeloeschterDokumente.Text")
 
-        'Hilfetext setzen
-        ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_Auswahlliste)
-        'Überschrift setzen
-        ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_Hauptmenue
+            'Hilfetext setzen
+            ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_Auswahlliste)
+            'Überschrift setzen
+            ParentFormular.GETSETHeaderText = My.Resources.GlobaleLokalisierung.Ueberschrift_Hauptmenue
+        End If
     End Sub
 
     ''' <summary>
     ''' Initiert background threads die aus lokaler Client DB und Server Webservice die vorhandenen Eichungen abrufen
     ''' </summary>
     ''' <remarks></remarks>
-    Private Sub LoadFromDatabase()
+    Friend Sub LoadFromDatabase()
         Me.Enabled = False
 
         If Not BackgroundWorkerLoadFromDatabase.IsBusy Then
             BackgroundWorkerLoadFromDatabase.RunWorkerAsync()
         End If
 
-        If My.Settings.RHEWALizenz Then
+        If AktuellerBenutzer.Instance.Lizenz.RHEWALizenz Then
             If Not BackgroundWorkerLoadFromDatabaseRHEWA.IsBusy Then
                 BackgroundWorkerLoadFromDatabaseRHEWA.RunWorkerAsync()
             End If
@@ -262,7 +292,7 @@
     ''' </summary>
     ''' <remarks></remarks>
     Private Sub OeffneNeuenEichprozess()
-        Dim objEichprozess As Eichprozess = objDBFunctions.ErzeugeNeuenEichprozess
+        Dim objEichprozess As Eichprozess = clsDBFunctions.ErzeugeNeuenEichprozess
         If Not objEichprozess Is Nothing Then
             'anzeigen des Dialogs zur Bearbeitung der Eichung
             Dim f As New FrmMainContainer(objEichprozess)
@@ -279,7 +309,7 @@
     ''' <remarks></remarks>
     Private Sub BearbeiteEichprozess()
         If Not Me.VorgangsnummerGridClient.Equals("") Then
-            Dim objEichprozess = objDBFunctions.HoleVorhandenenEichprozess(VorgangsnummerGridClient)
+            Dim objEichprozess = clsDBFunctions.HoleVorhandenenEichprozess(VorgangsnummerGridClient)
             If Not objEichprozess Is Nothing Then
                 If objEichprozess.FK_Bearbeitungsstatus = 4 Or objEichprozess.FK_Bearbeitungsstatus = 2 Then 'nur wenn neu oder fehlerhaft darf eine Änderung vorgenommen werrden
                     'anzeigen des Dialogs zur Bearbeitung der Eichung
@@ -287,7 +317,7 @@
                     f.ShowDialog()
                 Else
                     'es gibt ihn schon und er ist bereits abgeschickt. nur lesend öffnen
-                    objEichprozess = objDBFunctions.HoleNachschlageListenFuerEichprozess(objEichprozess)
+                    objEichprozess = clsDBFunctions.HoleNachschlageListenFuerEichprozess(objEichprozess)
                     Dim f As New FrmMainContainer(objEichprozess, FrmMainContainer.enuDialogModus.lesend)
                     f.ShowDialog()
                 End If
@@ -319,7 +349,7 @@
     Private Sub EichprozessAusblendenEinblenden()
         If Not Me.VorgangsnummerGridClient.Equals("") Then
 
-            objDBFunctions.BlendeEichprozessAus(VorgangsnummerGridClient)
+            clsDBFunctions.BlendeEichprozessAus(VorgangsnummerGridClient)
             'neu laden der Liste
             LoadFromDatabase()
         End If
@@ -346,7 +376,7 @@
     ''' <remarks></remarks>
     Private Sub BackgroundWorkerLoadFromDatabase_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorkerLoadFromDatabase.DoWork
         'background worker result enthält anschließend alle lokalen Eichprozesse
-        e.Result = objDBFunctions.LadeLokaleEichprozessListe(RadCheckBoxAusblendenClientGeloeschterDokumente.Checked)
+        e.Result = clsDBFunctions.LadeLokaleEichprozessListe(RadCheckBoxAusblendenClientGeloeschterDokumente.Checked)
     End Sub
 
     ''' <summary>
@@ -378,7 +408,7 @@
     ''' <remarks></remarks>
     Private Sub BackgroundWorkerLoadFromDatabaseRHEWA_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorkerLoadFromDatabaseRHEWA.DoWork
         'background worker result enthält anschließend alle serverseitigen Eichprozesse
-        e.Result = objWebserviceFunctions.GetServerEichprotokollListe()
+        e.Result = clsWebserviceFunctions.GetServerEichprotokollListe()
     End Sub
 
     ''' <summary>
@@ -422,7 +452,7 @@
     Private Sub ZeigeServerEichprozess()
         If Not Me.VorgangsnummerGridServer.Equals("") Then
 
-            Dim objClientEichprozess = objWebserviceFunctions.ZeigeServerEichprozess(VorgangsnummerGridServer)
+            Dim objClientEichprozess = clsWebserviceFunctions.ZeigeServerEichprozess(VorgangsnummerGridServer)
             'anzeigen des Dialogs zur Bearbeitung der Eichung
             If Not objClientEichprozess Is Nothing Then
 
@@ -474,7 +504,7 @@
     Private Sub GetLokaleKopieVonEichprozess()
         If Not Me.VorgangsnummerGridServer.Equals("") Then
             If MessageBox.Show(My.Resources.GlobaleLokalisierung.Frage_Kopieren, My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
-                Dim objClientEichprozess = objWebserviceFunctions.GetLokaleKopieVonEichprozess(VorgangsnummerGridServer)
+                Dim objClientEichprozess = clsWebserviceFunctions.GetLokaleKopieVonEichprozess(VorgangsnummerGridServer)
 
                 If Not objClientEichprozess Is Nothing Then
                     'anzeigen des Dialogs zur Bearbeitung der Eichung
@@ -506,7 +536,7 @@
     Private Sub GenehnmigeGewaehltenVorgang()
         If Not Me.VorgangsnummerGridServer.Equals("") Then
             If MessageBox.Show(My.Resources.GlobaleLokalisierung.Frage_Genehmigen, My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
-                If objWebserviceFunctions.GenehmigeEichprozess(VorgangsnummerGridServer) Then
+                If clsWebserviceFunctions.GenehmigeEichprozess(VorgangsnummerGridServer) Then
                     'nach dem schließen des Dialogs aktualisieren
                     LoadFromDatabase()
                 End If
@@ -521,7 +551,7 @@
     Private Sub RadButtonEichprozessAblehnen_click(sender As System.Object, e As System.EventArgs) Handles RadButtonEichprozessAblehnenRHEWA.Click
         If Not Me.VorgangsnummerGridServer.Equals("") Then
             If MessageBox.Show(My.Resources.GlobaleLokalisierung.Frage_Ablehnen, My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
-                If objWebserviceFunctions.AblehnenEichprozess(VorgangsnummerGridServer) Then
+                If clsWebserviceFunctions.AblehnenEichprozess(VorgangsnummerGridServer) Then
                     'nach dem schließen des Dialogs aktualisieren
                     LoadFromDatabase()
                 End If
@@ -588,86 +618,85 @@
     End Sub
 
     Public Function InitDownloadDateiVonFTP(ByVal vorgangsnummer As String) As String
-        Using dbcontext As New EichsoftwareClientdatabaseEntities1
-            Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
+
+        Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
+            Try
+                Webcontext.Open()
+            Catch ex As Exception
+                MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Return False
+            End Try
+
+
+            Dim objFTPDaten = Webcontext.GetFTPCredentials(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+
+
+            'aufbereiten der für FTP benötigten Verbindungsdaten
+            If Not objFTPDaten Is Nothing Then
+
+                'get decrypted Password and configuration from Database
+
+                Dim password As String = objFTPDaten.FTPEncryptedPassword
+                ' original plaintext
+                Dim passPhrase As String = "Pas5pr@se"
+                ' can be any string
+                Dim saltValue As String = objFTPDaten.FTPSaltKey
+                ' can be any string
+                Dim hashAlgorithm As String = "SHA1"
+                ' can be "MD5"
+                Dim passwordIterations As Integer = 2
+                ' can be any number
+                Dim initVector As String = "@1B2c3D4e5F6g7H8"
+                ' must be 16 bytes
+                Dim keySize As Integer = 256
+                ' can be 192 or 128
+
+                password = RijndaelSimple.Decrypt(password, passPhrase, saltValue, hashAlgorithm, passwordIterations, initVector, _
+                    keySize)
+
+
+                Dim file As New IO.FileInfo(objFTPDaten.FTPFilePath)
+
+
+                'download Ordner anlegen wenn benötigt
+                Dim folder As New IO.DirectoryInfo(file.DirectoryName)
                 Try
-                    Webcontext.Open()
+                    If folder.Exists = False Then
+                        folder.Create()
+                    End If
                 Catch ex As Exception
-                    MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    Return False
+                    MessageBox.Show(ex.Message)
+                    Return ""
                 End Try
 
-                'daten von WebDB holen
-                Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
-                Dim objFTPDaten = Webcontext.GetFTPCredentials(objLiz.HEKennung, objLiz.Lizenzschluessel, vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
-
-
-                'aufbereiten der für FTP benötigten Verbindungsdaten
-                If Not objFTPDaten Is Nothing Then
-
-                    'get decrypted Password and configuration from Database
-
-                    Dim password As String = objFTPDaten.FTPEncryptedPassword
-                    ' original plaintext
-                    Dim passPhrase As String = "Pas5pr@se"
-                    ' can be any string
-                    Dim saltValue As String = objFTPDaten.FTPSaltKey
-                    ' can be any string
-                    Dim hashAlgorithm As String = "SHA1"
-                    ' can be "MD5"
-                    Dim passwordIterations As Integer = 2
-                    ' can be any number
-                    Dim initVector As String = "@1B2c3D4e5F6g7H8"
-                    ' must be 16 bytes
-                    Dim keySize As Integer = 256
-                    ' can be 192 or 128
-
-                    password = RijndaelSimple.Decrypt(password, passPhrase, saltValue, hashAlgorithm, passwordIterations, initVector, _
-                        keySize)
-
-
-                    Dim file As New IO.FileInfo(objFTPDaten.FTPFilePath)
-
-
-                    'download Ordner anlegen wenn benötigt
-                    Dim folder As New IO.DirectoryInfo(file.DirectoryName)
-                    Try
-                        If folder.Exists = False Then
-                            folder.Create()
-                        End If
-                    Catch ex As Exception
-                        MessageBox.Show(ex.Message)
-                        Return ""
-                    End Try
-
-                    'downloadgroße ermitteln
-                    Dim filesize As Long
-                    filesize = objFTP.GetFileSize(objFTPDaten.FTPServername, objFTPDaten.FTPUserName, password, file.Name)
-                    If filesize = 0 Then Return "" 'abbruch 
-                    BackgroundWorkerDownloadFromFTP.ReportProgress(filesize)
-                    Try
-                        'datei download. FTPUploadPath bekommt den reelen Pfad auf dem FTP Server
-                        If objFTP.DownloadFileFromFTP(objFTPDaten.FTPServername, objFTPDaten.FTPUserName, password, file.Name, file.FullName) Then
-                            Return file.FullName
-                        Else
-                            Try
-                                file.Delete()
-                            Catch ex As Exception
-                                MessageBox.Show("Konnte fehlerhafte Datei nicht löschen " & file.FullName)
-                            End Try
-                            Return ""
-                        End If
-                    Catch ex As Exception
+                'downloadgroße ermitteln
+                Dim filesize As Long
+                filesize = objFTP.GetFileSize(objFTPDaten.FTPServername, objFTPDaten.FTPUserName, password, file.Name)
+                If filesize = 0 Then Return "" 'abbruch 
+                BackgroundWorkerDownloadFromFTP.ReportProgress(filesize)
+                Try
+                    'datei download. FTPUploadPath bekommt den reelen Pfad auf dem FTP Server
+                    If objFTP.DownloadFileFromFTP(objFTPDaten.FTPServername, objFTPDaten.FTPUserName, password, file.Name, file.FullName) Then
+                        Return file.FullName
+                    Else
                         Try
                             file.Delete()
-                        Catch ex2 As Exception
+                        Catch ex As Exception
                             MessageBox.Show("Konnte fehlerhafte Datei nicht löschen " & file.FullName)
                         End Try
                         Return ""
+                    End If
+                Catch ex As Exception
+                    Try
+                        file.Delete()
+                    Catch ex2 As Exception
+                        MessageBox.Show("Konnte fehlerhafte Datei nicht löschen " & file.FullName)
                     End Try
-                End If
-            End Using
+                    Return ""
+                End Try
+            End If
         End Using
+
         Return ""
     End Function
 
@@ -728,7 +757,7 @@
     ''' <remarks></remarks>
     Private Sub VerbindeMitWebserviceUndHoleAlles()
         Dim bolSyncData As Boolean = True 'Wert der genutzt wird um ggfs die Synchrosierung abzubrechen, falls ein Benutzer noch ungesendete Konformitätsbewertungsvorgänge hat
-        If objWebserviceFunctions.TesteVerbindung() Then
+        If clsWebserviceFunctions.TesteVerbindung() Then
 
             'variablen zur Ausgabe ob es änderungen gibt:
             Dim bolNeuStammdaten As Boolean = False
@@ -737,12 +766,12 @@
             Dim bolNeuGenehmigung As Boolean = False
 
             'prüfen ob noch nicht abgeschickte Eichungen vorlieren. Wenn ja Hinweismeldung und Abbruchmöglichkeit für Benutzer
-            If objDBFunctions.PruefeAufUngesendeteEichungen() = True Then
+            If clsDBFunctions.PruefeAufUngesendeteEichungen() = True Then
                 If MessageBox.Show(My.Resources.GlobaleLokalisierung.Warnung_EichungenWerdenGeloescht, My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo) = DialogResult.Yes Then
                     bolSyncData = True
                 Else
-                    My.Settings.HoleAlleEigenenEichungenVomServer = False
-                    My.Settings.Save()
+                    AktuellerBenutzer.Instance.HoleAlleeigenenEichungenVomServer = False
+                    AktuellerBenutzer.SaveSettings()
                     bolSyncData = False
                 End If
             End If
@@ -750,30 +779,27 @@
             If bolSyncData Then
 
                 'für den Fall das die Anwendung gerade erst installiert wurde, oder die einstellung zur Synchronisierung geändert wurde, sollen alle Eichungen vom RHEWA Server geholt werden, die einmal angelegt wurden
-                If objDBFunctions.LoescheLokaleDatenbank() Then
-                    My.Settings.LetztesUpdate = "01.01.2000"
-                    My.Settings.Save()
+                If clsDBFunctions.LoescheLokaleDatenbank() Then
+                    AktuellerBenutzer.Instance.LetztesUpdate = "01.01.2000"
+                    AktuellerBenutzer.SaveSettings()
                     'neue Stammdaten zum Benutzer holen
-                    objWebserviceFunctions.GetNeueStammdaten(bolNeuStammdaten)
+                    clsWebserviceFunctions.GetNeueStammdaten(bolNeuStammdaten)
                     'hole alle WZ
-                    objWebserviceFunctions.GetNeueWZ(bolNeuWZ)
+                    clsWebserviceFunctions.GetNeueWZ(bolNeuWZ)
                     'prüfen ob es neue AWG gibt
-                    objWebserviceFunctions.GetNeuesAWG(bolNeuAWG)
+                    clsWebserviceFunctions.GetNeuesAWG(bolNeuAWG)
 
                     'prüfen ob Eichprozesse die versendet wurden genehmigt oder abgelehnt wurden
-                    objWebserviceFunctions.GetGenehmigungsstatus(bolNeuGenehmigung)
+                    clsWebserviceFunctions.GetGenehmigungsstatus(bolNeuGenehmigung)
 
 
-                    My.Settings.LetztesUpdate = Date.Now
-                    My.Settings.Save()
+                    AktuellerBenutzer.Instance.LetztesUpdate = Date.Now
+                    AktuellerBenutzer.SaveSettings()
 
+                    clsWebserviceFunctions.GetEichprotokolleVomServer()
 
-                    objWebserviceFunctions.GetEichprotokolleVomServer()
-
-                 
-
-                    My.Settings.HoleAlleEigenenEichungenVomServer = False
-                    My.Settings.Save()
+                    AktuellerBenutzer.Instance.HoleAlleeigenenEichungenVomServer = False
+                    AktuellerBenutzer.SaveSettings()
 
                     Dim returnMessage As String = My.Resources.GlobaleLokalisierung.Aktualisierung_Erfolgreich
                     If bolNeuWZ Then
@@ -802,7 +828,7 @@
     ''' </summary>
     ''' <remarks></remarks>
     Private Sub VerbindeMitWebServiceUndAktualisiere()
-        If objWebserviceFunctions.TesteVerbindung() Then
+        If clsWebserviceFunctions.TesteVerbindung() Then
 
             'variablen zur Ausgabe ob es änderungen gibt:
             Dim bolNeuStammdaten As Boolean = False
@@ -812,21 +838,21 @@
 
 
             'neue Stammdaten zum Benutzer holen
-            objWebserviceFunctions.GetNeueStammdaten(bolNeuStammdaten)
+            clsWebserviceFunctions.GetNeueStammdaten(bolNeuStammdaten)
 
             'prüfen ob es neue WZ gibt
-            objWebserviceFunctions.GetNeueWZ(bolNeuWZ)
+            clsWebserviceFunctions.GetNeueWZ(bolNeuWZ)
             'prüfen ob es neue AWG gibt
-            objWebserviceFunctions.GetNeuesAWG(bolNeuAWG)
+            clsWebserviceFunctions.GetNeuesAWG(bolNeuAWG)
 
 
 
-            My.Settings.LetztesUpdate = Date.Now
-            My.Settings.Save()
+            AktuellerBenutzer.Instance.LetztesUpdate = Date.Now
+            AktuellerBenutzer.SaveSettings()
 
 
             'prüfen ob Eichprozesse die versendet wurden genehmigt oder abgelehnt wurden
-            objWebserviceFunctions.GetGenehmigungsstatus(bolNeuGenehmigung)
+            clsWebserviceFunctions.GetGenehmigungsstatus(bolNeuGenehmigung)
 
             'refresh
             LoadFromDatabase()

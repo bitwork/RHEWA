@@ -23,7 +23,7 @@
     <FodyPath>..\packages\Fody.1.20.0.0</FodyPath>
     <PublishUrl>D:\Daten\Hill Daten\Privat\Dropbox\RHEWA\</PublishUrl>
     <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
+    <InstallFrom>Unc</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
@@ -31,12 +31,13 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <UpdateUrl>http://localhost/KonformitätsbewertungsClient/</UpdateUrl>
+    <InstallUrl>\\ntserver\Server\HKB\Software\Aktuelle Eichsoftware\</InstallUrl>
+    <UpdateUrl>\\ntserver\Server\HKB\Software\Aktuelle Eichsoftware\</UpdateUrl>
     <SupportUrl>http://www.rhewa.com</SupportUrl>
-    <ProductName>RHEWA Herstellerersteichung</ProductName>
+    <ProductName>RHEWA Konformitätsbewertungssoftware</ProductName>
     <PublisherName>RHEWA Waagenfabrik GmbH</PublisherName>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>54</ApplicationRevision>
+    <ApplicationRevision>62</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -182,6 +183,9 @@
     <Compile Include="Kompatiblitaetsnachweis.vb">
       <DependentUpon>EntityModelDatabaseClient.tt</DependentUpon>
     </Compile>
+    <Compile Include="Konfiguration.vb">
+      <DependentUpon>EntityModelDatabaseClient.tt</DependentUpon>
+    </Compile>
     <Compile Include="Lizensierung.vb">
       <DependentUpon>EntityModelDatabaseClient.tt</DependentUpon>
     </Compile>
@@ -206,7 +210,7 @@
     <Compile Include="Lookup_Waegezelle.vb">
       <DependentUpon>EntityModelDatabaseClient.tt</DependentUpon>
     </Compile>
-    <Compile Include="MainModule.vb" />
+    <Compile Include="Model\AktuellerBenutzer.vb" />
     <Compile Include="Model\clsCrypto.vb" />
     <Compile Include="Model\clsDBFunctions.vb" />
     <Compile Include="Model\clsClientServerConversionFunctions.vb" />
@@ -277,6 +281,12 @@
     <Compile Include="SplashScreen.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="View\Forms\frmBenutzerauswahl.Designer.vb">
+      <DependentUpon>frmBenutzerauswahl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\frmBenutzerauswahl.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="View\Forms\frmEinstellungen.Designer.vb">
       <DependentUpon>frmEinstellungen.vb</DependentUpon>
     </Compile>
@@ -327,6 +337,12 @@
       <DependentUpon>ucoAmpel.vb</DependentUpon>
     </Compile>
     <Compile Include="View\UserControls\Allgemein\ucoAmpel.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UserControls\Allgemein\ucoBenutzerwechsel.Designer.vb">
+      <DependentUpon>ucoBenutzerwechsel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserControls\Allgemein\ucoBenutzerwechsel.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="View\UserControls\Eichprozess\uco17PruefungEignungFuerAchlastwaegungen.Designer.vb">
@@ -494,6 +510,9 @@
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\frmBenutzerauswahl.resx">
+      <DependentUpon>frmBenutzerauswahl.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\frmEinstellungen.de.resx">
       <DependentUpon>frmEinstellungen.vb</DependentUpon>
     </EmbeddedResource>
@@ -539,6 +558,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Allgemein\ucoEichfehlergrenzen.de.resx">
       <DependentUpon>ucoEichfehlergrenzen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Allgemein\ucoBenutzerwechsel.resx">
+      <DependentUpon>ucoBenutzerwechsel.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco17PruefungEignungFuerAchlastwaegungen.de.resx">
       <DependentUpon>uco17PruefungEignungFuerAchlastwaegungen.vb</DependentUpon>
@@ -930,11 +952,21 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DLLs\System.Net.FtpClient.dll" />
+    <Content Include="DLLs\System.Net.FtpClient.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="DLLs\System.Net.FtpClient.XML" />
     <Content Include="EichsoftwareClientdatabase.sdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\user_edit1.png" />
+    <None Include="Resources\user_delete1.png" />
+    <None Include="Resources\user_add1.png" />
+    <None Include="Resources\user1.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\user_add.png" />
+    <None Include="Resources\user_delete.png" />
+    <None Include="Resources\user_edit.png" />
     <None Include="Service References\EichsoftwareWebservice\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.vb</LastGenOutput>

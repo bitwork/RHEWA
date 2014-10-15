@@ -15,8 +15,8 @@ Public Class FrmMainContainer
     Private WithEvents _CurrentUco As ucoContent
 
     Private objWebservicefunctions As New clsWebserviceFunctions 'hilfsklasse für aufrufe gegen den Webservice
-    Private objDBFunctions As New clsDBFunctions 'hilfsklasse für aufrufe gegen lokale DB
-
+    'Private objDBFunctions As New clsDBFunctions 'hilfsklasse für aufrufe gegen lokale DB
+    Friend objUCOBenutzerwechsel As ucoBenutzerwechsel
     ''' <summary>
     ''' Gets the P listof ucos.
     ''' </summary>
@@ -48,8 +48,7 @@ Public Class FrmMainContainer
 
 
 
-        'aktuelle Sprache der Anwendung auf vorher gewählte Sprache setzen
-        RuntimeLocalizer.ChangeCulture(Me, My.Settings.AktuelleSprache)
+       
     End Sub
 
     Sub New(ByVal pEichprozess As Eichprozess, Optional ByVal penumDialogModus As enuDialogModus = enuDialogModus.normal)
@@ -217,12 +216,12 @@ Public Class FrmMainContainer
     End Sub
 
 #Region "Localization"
-    Private Sub changeCulture(ByVal Code As String)
+    Friend Sub changeCulture(ByVal Code As String)
         Dim culture As CultureInfo = CultureInfo.GetCultureInfo(Code)
 
         Threading.Thread.CurrentThread.CurrentUICulture = culture
-        My.Settings.AktuelleSprache = Code
-        My.Settings.Save()
+        AktuellerBenutzer.Instance.AktuelleSprache = Code
+        AktuellerBenutzer.SaveSettings()
 
         'speichern der aktuellen Eingaben ins Objekt
         RaiseEvent LokalisierungNeeded(_CurrentUco)
@@ -284,14 +283,33 @@ Public Class FrmMainContainer
 
         'prüfen ob ein Vorgang vorliegt oder nicht
         If Me.CurrentEichprozess Is Nothing Then 'wenn kein vorgang vorliegt Auswahlliste anzeiegn
-            LadeAuswahlListe()
+            'auswahl des Benutzers
+          
+            Dim frmBenutzerauswahl As New FrmBenutzerauswahl
+            If frmBenutzerauswahl.ShowDialog = Windows.Forms.DialogResult.OK Then
+                LadeAuswahlListe()
+
+                'aktuelle Sprache der Anwendung auf vorher gewählte Sprache setzen
+                RuntimeLocalizer.ChangeCulture(Me, AktuellerBenutzer.Instance.AktuelleSprache)
+
+                TriggerLokalisierung()
+            Else
+                Application.Exit()
+                Me.Close()
+            End If
+
         Else
             'laden des benötigten UCOs anhand status von me.currentEichprozess
             LadeEichprozessVorgangsUco()
         End If
 
         'Lokalisierung aktualisieren
-        Select Case My.Settings.AktuelleSprache.ToLower
+       TriggerLokalisierung
+    End Sub
+
+    Friend Sub TriggerLokalisierung()
+        'Lokalisierung aktualisieren
+        Select Case AktuellerBenutzer.Instance.AktuelleSprache.ToLower
             Case Is = "en"
                 RadButtonChangeLanguage_Click(RadButtonChangeLanguageToEnglish, Nothing)
             Case Is = "de"
@@ -319,58 +337,26 @@ Public Class FrmMainContainer
         RadButtonNavigateForwards.Visible = False
 
 
-
-
-        'prüfen ob die Lizenz gültig ist
-        Using DBContext As New EichsoftwareClientdatabaseEntities1
-            Dim objLiz = (From db In DBContext.Lizensierung Select db).FirstOrDefault
-            If objLiz Is Nothing Then
-                My.Settings.Lizensiert = False
-                My.Settings.Save()
-            End If
-        End Using
-
-
-
-        'wenn keine Lizenz vorhanden ist, zur Eingabe auffordern
-        If My.Settings.Lizensiert = False Then
-            If Debugger.IsAttached Then
-                objDBFunctions.ForceActivation()
-                'neue Stammdaten zum Benutzer holen
-                objWebservicefunctions.GetNeueStammdaten(False)
-                Me.FrmMainContainer_Load(Nothing, Nothing)
-            Else
-                Dim f As New FrmLizenz
-                If f.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
-                    If My.Settings.Lizensiert = False Then
-                        System.Windows.Forms.Application.Exit()
-                        Exit Sub
-                    Else
-                        Me.FrmMainContainer_Load(Nothing, Nothing)
-                        Exit Sub
-                    End If
-                Else
-                    System.Windows.Forms.Application.Exit()
-                    Exit Sub
-                End If
-            End If
-
-        End If
-
         'laden des Grid Layouts
         Try
-            Using stream As New MemoryStream(Convert.FromBase64String(My.Settings.GridSettings))
-                uco.RadGridViewAuswahlliste.LoadLayout(stream)
-            End Using
+            If Not AktuellerBenutzer.Instance.GridSettings.ToString.Equals("") Then
+                Using stream As New MemoryStream(Convert.FromBase64String(AktuellerBenutzer.Instance.GridSettings))
+                    uco.RadGridViewAuswahlliste.LoadLayout(stream)
+                End Using
+            End If
         Catch ex As Exception
             'konnte layout nicht finden
             Debug.WriteLine(ex.ToString)
         End Try
         'laden des RHEWA Grids
         Try
-            Using stream As New MemoryStream(Convert.FromBase64String(My.Settings.GridSettingsRHEWA))
-                uco.RadGridViewRHEWAAlle.LoadLayout(stream)
-            End Using
+            If Not AktuellerBenutzer.Instance.GridSettingsRhewa.ToString.Equals("") Then
+
+                Using stream As New MemoryStream(Convert.FromBase64String(AktuellerBenutzer.Instance.GridSettingsRhewa))
+                    uco.RadGridViewRHEWAAlle.LoadLayout(stream)
+                End Using
+            End If
+
         Catch ex As Exception
             'konnte layout nicht finden
             Debug.WriteLine(ex.ToString)
@@ -466,13 +452,11 @@ Public Class FrmMainContainer
             'prüfen ob der Button zum entsperren eingeblendet werden soll
             If DialogModus = enuDialogModus.lesend Then
                 'einblenden des entsperren Buttons wenn RHEWA Mitarbeiter
-                Using dbcontext As New EichsoftwareClientdatabaseEntities1
-                    Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
-
-                    If objLiz.RHEWALizenz = True Then
+             
+                    If AktuellerBenutzer.Instance.Lizenz.RHEWALizenz = True Then
                         RadButtonEntsperren.Visible = True
                     End If
-                End Using
+
             End If
 
 
@@ -910,12 +894,14 @@ Public Class FrmMainContainer
     Private Sub FrmMainContainer_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         If DialogModus = enuDialogModus.korrigierend Then
             If Not CurrentEichprozess Is Nothing Then
-                objWebservicefunctions.SetzeSperrung(False, CurrentEichprozess.Vorgangsnummer)
+                clsWebserviceFunctions.SetzeSperrung(False, CurrentEichprozess.Vorgangsnummer)
             End If
 
         End If
+        If Not AktuellerBenutzer.Instance Is Nothing And Not Me._CurrentUco Is Nothing Then
+            SpeichereGridLayout()
 
-        SpeichereGridLayout()
+        End If
     End Sub
 
 
@@ -928,11 +914,13 @@ Public Class FrmMainContainer
             Try
                 Using stream As New MemoryStream()
                     gridProzesse.SaveLayout(stream)
-                    stream.Position = 0
-                    Dim buffer As Byte() = New Byte(CInt(stream.Length) - 1) {}
-                    stream.Read(buffer, 0, buffer.Length)
-                    My.Settings.GridSettings = Convert.ToBase64String(buffer)
-                    My.Settings.Save()
+                    If Not stream Is Nothing Then
+                        stream.Position = 0
+                        Dim buffer As Byte() = New Byte(CInt(stream.Length) - 1) {}
+                        stream.Read(buffer, 0, buffer.Length)
+                        AktuellerBenutzer.Instance.GridSettings = Convert.ToBase64String(buffer)
+                        AktuellerBenutzer.SaveSettings()
+                    End If
                 End Using
             Catch ex As Exception
 
@@ -941,11 +929,13 @@ Public Class FrmMainContainer
             Try
                 Using stream As New MemoryStream()
                     gridProzesseRHEWA.SaveLayout(stream)
-                    stream.Position = 0
-                    Dim buffer As Byte() = New Byte(CInt(stream.Length) - 1) {}
-                    stream.Read(buffer, 0, buffer.Length)
-                    My.Settings.GridSettingsRHEWA = Convert.ToBase64String(buffer)
-                    My.Settings.Save()
+                    If Not stream Is Nothing Then
+                        stream.Position = 0
+                        Dim buffer As Byte() = New Byte(CInt(stream.Length) - 1) {}
+                        stream.Read(buffer, 0, buffer.Length)
+                        AktuellerBenutzer.Instance.GridSettingsRhewa = Convert.ToBase64String(buffer)
+                        AktuellerBenutzer.SaveSettings()
+                    End If
                 End Using
             Catch ex As Exception
             End Try
@@ -958,7 +948,7 @@ Public Class FrmMainContainer
 
             'entsperren des DS
             If Not CurrentEichprozess Is Nothing Then
-                If objWebservicefunctions.SetzeSperrung(False, CurrentEichprozess.Vorgangsnummer) Then
+                If clsWebserviceFunctions.SetzeSperrung(False, CurrentEichprozess.Vorgangsnummer) Then
                     RaiseEvent VersendenNeeded(_CurrentUco)
                 End If
             End If
@@ -979,7 +969,7 @@ Public Class FrmMainContainer
 
         'prüfen ob eine Sperrung des DS vorliegt und DS sperren wenn nicht
         If Not CurrentEichprozess Is Nothing Then
-            If objWebservicefunctions.SetzeSperrung(True, CurrentEichprozess.Vorgangsnummer) Then
+            If clsWebserviceFunctions.SetzeSperrung(True, CurrentEichprozess.Vorgangsnummer) Then
                 RaiseEvent EntsperrungNeeded()
                 RadButtonVersenden.Visible = True
                 RadButtonEntsperren.Enabled = False

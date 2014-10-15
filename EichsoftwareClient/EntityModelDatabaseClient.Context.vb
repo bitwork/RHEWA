@@ -43,5 +43,6 @@ Partial Public Class EichsoftwareClientdatabaseEntities1
     Public Property PruefungStaffelverfahrenErsatzlast() As DbSet(Of PruefungStaffelverfahrenErsatzlast)
     Public Property PruefungStaffelverfahrenNormallast() As DbSet(Of PruefungStaffelverfahrenNormallast)
     Public Property PruefungWiederholbarkeit() As DbSet(Of PruefungWiederholbarkeit)
+    Public Property Konfiguration() As DbSet(Of Konfiguration)
 
 End Class

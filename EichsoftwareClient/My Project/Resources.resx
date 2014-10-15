@@ -130,6 +130,9 @@
   <data name="Verschiebeweg_PL" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Verschiebeweg_PL.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="_83N_Beschilderung_Auswertegeraet_Frontseite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\83N_Beschilderung_Auswertegeraet_Frontseite.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="_82Basic_CEXY_Auswertegeraet" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\82Basic_CEXY_Auswertegeraet.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -141,6 +144,9 @@
   </data>
   <data name="Fahrzeug_Wenden_PL" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fahrzeug_Wenden_PL.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_82Vario_Beschilderung_Auswertegeraet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\82Vario_Beschilderung_Auswertegeraet.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Konformitätserklärung_PL" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Konformitätserklärung PL.xls;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -178,6 +184,9 @@
   <data name="_83Z_Beschilderung_Auswertegeraet_Rueckseite_mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\83Z_Beschilderung_Auswertegeraet_Rueckseite_mini.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cog" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cog.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Verschiebeweg_GB" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Verschiebeweg_GB.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -186,12 +195,6 @@
   </data>
   <data name="accept" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\accept.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="flag_poland" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flag_poland.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_82Alpha_Beschilderung_Auswertegeraet" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\82Alpha_Beschilderung_Auswertegeraet.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_0405_Beschilderung_Auswertegeraet_Frontseite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\0405_Beschilderung_Auswertegeraet_Frontseite.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -225,9 +228,6 @@
   </data>
   <data name="_82Alpha_Beschilderung_Auswertegeraet_Frontseite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\82Alpha_Beschilderung_Auswertegeraet_Frontseite.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="FourLCs" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FourLCs.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Fahrzeug_Wenden_GB" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fahrzeug_Wenden_GB.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -286,6 +286,12 @@
   <data name="RHEWAGREEN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RHEWAGREEN.tssp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="attach" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\attach.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bullet_red" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bullet_red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="report_edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\report_edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -310,8 +316,8 @@
   <data name="SixLCs" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SixLCs.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bullet_red" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bullet_red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_82Alpha_Beschilderung_Auswertegeraet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\82Alpha_Beschilderung_Auswertegeraet.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="resultset_previous" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\resultset_previous.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -322,11 +328,17 @@
   <data name="_83Plus_Beschilderung_Auswertegeraet_Frontseite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\83Plus_Beschilderung_Auswertegeraet_Frontseite.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_83N_Beschilderung_Auswertegeraet_Frontseite" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\83N_Beschilderung_Auswertegeraet_Frontseite.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="flag_poland" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flag_poland.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_82Vario_Beschilderung_Auswertegeraet_Unterseite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\82Vario_Beschilderung_Auswertegeraet_Unterseite.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Genauigkeitsklasse1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Genauigkeitsklasse1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_82Alpha_Beschilderung_Auswertegeraet_Frontseite_mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\82Alpha_Beschilderung_Auswertegeraet_Frontseite_mini.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_error" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\error.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -337,14 +349,14 @@
   <data name="report_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\report_add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_83N_Beschilderung_Auswertegeraet_Rueckseite_mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\83N_Beschilderung_Auswertegeraet_Rueckseite_mini.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="_82Alpha_Beschilderung_Auswertegeraet_Frontseite_mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\82Alpha_Beschilderung_Auswertegeraet_Frontseite_mini.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="_92_Beschilderung_Auswertegeraet_Rueckseite_mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\92_Beschilderung_Auswertegeraet_Rueckseite_mini.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FourLCs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FourLCs.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_83N_Beschilderung_Auswertegeraet_Rueckseite_mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\83N_Beschilderung_Auswertegeraet_Rueckseite_mini.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_83N_Beschilderung_Auswertegeraet_Frontseite_mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\83N_Beschilderung_Auswertegeraet_Frontseite_mini.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -364,16 +376,16 @@
   <data name="_82Alpha_CEXY_Auswertegeraet_mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\82Alpha_CEXY_Auswertegeraet_mini.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cog" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cog.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="attach" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\attach.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="user_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user_add1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_82Vario_Beschilderung_Auswertegeraet" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\82Vario_Beschilderung_Auswertegeraet.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="user_delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user_delete1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_82Vario_Beschilderung_Auswertegeraet_Unterseite" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\82Vario_Beschilderung_Auswertegeraet_Unterseite.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="user_edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user_edit1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

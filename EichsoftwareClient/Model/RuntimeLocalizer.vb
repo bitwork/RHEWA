@@ -12,8 +12,8 @@ Public NotInheritable Class RuntimeLocalizer
         Dim culture As CultureInfo = CultureInfo.GetCultureInfo(cultureCode)
 
         Thread.CurrentThread.CurrentUICulture = culture
-        My.Settings.AktuelleSprache = cultureCode
-        My.Settings.Save()
+        AktuellerBenutzer.Instance.AktuelleSprache = cultureCode
+        AktuellerBenutzer.SaveSettings()
         Dim resources As New ComponentResourceManager(frm.[GetType]())
 
         ApplyResourceToControl(resources, frm, culture)
@@ -24,8 +24,8 @@ Public NotInheritable Class RuntimeLocalizer
         Dim culture As CultureInfo = CultureInfo.GetCultureInfo(cultureCode)
 
         Thread.CurrentThread.CurrentUICulture = culture
-        My.Settings.AktuelleSprache = cultureCode
-        My.Settings.Save()
+        AktuellerBenutzer.Instance.AktuelleSprache = cultureCode
+        AktuellerBenutzer.SaveSettings()
         Dim resources As New ComponentResourceManager(uco.[GetType]())
 
         ApplyResourceToControl(resources, uco, culture)

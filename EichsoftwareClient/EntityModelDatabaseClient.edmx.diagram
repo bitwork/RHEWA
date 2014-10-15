@@ -47,6 +47,7 @@
         <AssociationConnector Association="EichsoftwareClientdatabaseModel.FK_Mogelstatistik_Lookup_Auswertegeraet" />
         <AssociationConnector Association="EichsoftwareClientdatabaseModel.FK_Mogelstatistik_Lookup_Waegezelle" />
         <AssociationConnector Association="EichsoftwareClientdatabaseModel.FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren" />
+        <EntityTypeShape EntityType="EichsoftwareClientdatabaseModel.Konfiguration" Width="1.5" PointX="7.212323749071138" PointY="25.922416490466528" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
