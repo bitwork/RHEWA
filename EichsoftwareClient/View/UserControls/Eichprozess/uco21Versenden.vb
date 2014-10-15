@@ -166,13 +166,13 @@ Public Class Uco21Versenden
         Using dbcontext As New EichsoftwareClientdatabaseEntities1
             objEichprozess = (From a In dbcontext.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
 
-            objServerEichprozess = clsClientServerConversionFunctions.CopyObjectProperties(objServerEichprozess, objEichprozess, clsClientServerConversionFunctions.enuModus.ClientSendetAnRhewa)
+            objServerEichprozess = clsClientServerConversionFunctions.CopyServerObjectProperties(objServerEichprozess, objEichprozess, clsClientServerConversionFunctions.enuModus.ClientSendetAnRhewa)
 
             'verbindung öffnen
             Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
                 Try
                     Webcontext.Open()
-             
+
                 Catch ex As Exception
                     MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
 
@@ -189,7 +189,7 @@ Public Class Uco21Versenden
                             If objEichprozess.Lookup_Waegezelle.Neu Then
                                 'umwandeln von Client WZ in Server WZ
                                 Dim objServerWZ As New EichsoftwareWebservice.ServerLookup_Waegezelle
-                                clsClientServerConversionFunctions.CopyWZObjectProperties(objServerWZ, objEichprozess.Lookup_Waegezelle)
+                                clsClientServerConversionFunctions.CopyServerObjectPropertieWZs(objServerWZ, objEichprozess.Lookup_Waegezelle)
                                 Webcontext.AddWaegezelle(objLiz.HEKennung, objLiz.Lizenzschluessel, objServerWZ, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
 
                                 objServerEichprozess._FK_Waegezelle = objServerWZ._ID
@@ -422,7 +422,7 @@ Public Class Uco21Versenden
                 UpdateObject()
 
                 'erzeuegn eines Server Objektes auf basis des aktuellen DS
-                objServerEichprozess = clsClientServerConversionFunctions.CopyObjectProperties(objServerEichprozess, objEichprozess, clsClientServerConversionFunctions.enuModus.RHEWASendetAnClient)
+                objServerEichprozess = clsClientServerConversionFunctions.CopyServerObjectProperties(objServerEichprozess, objEichprozess, clsClientServerConversionFunctions.enuModus.RHEWASendetAnClient)
                 Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
                     Try
                         Webcontext.Open()

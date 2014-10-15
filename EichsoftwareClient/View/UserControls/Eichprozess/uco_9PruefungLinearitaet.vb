@@ -1302,7 +1302,7 @@ Public Class uco_9PruefungLinearitaet
             UeberschreibePruefungsobjekte()
 
             'erzeuegn eines Server Objektes auf basis des aktuellen DS
-            objServerEichprozess = clsClientServerConversionFunctions.CopyObjectProperties(objServerEichprozess, objEichprozess, clsClientServerConversionFunctions.enuModus.RHEWASendetAnClient)
+            objServerEichprozess = clsClientServerConversionFunctions.CopyServerObjectProperties(objServerEichprozess, objEichprozess, clsClientServerConversionFunctions.enuModus.RHEWASendetAnClient)
             Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
                 Try
                     Webcontext.Open()
