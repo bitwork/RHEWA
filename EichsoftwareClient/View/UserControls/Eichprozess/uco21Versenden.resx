@@ -125,7 +125,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="RadLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 25</value>
+    <value>3, 35</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="RadLabel1.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
@@ -219,8 +219,11 @@
   <data name="&gt;&gt;RadTextBoxControlUploadPath.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="RadButtonUploadPath.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
   <data name="RadButtonUploadPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>672, 25</value>
+    <value>663, 25</value>
   </data>
   <data name="RadButtonUploadPath.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -270,11 +273,14 @@
   <data name="&gt;&gt;RadButtonUploadPath.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="RadButtonAnRhewaSenden.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
   <data name="RadButtonAnRhewaSenden.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt, style=Bold</value>
   </data>
   <data name="RadButtonAnRhewaSenden.Location" type="System.Drawing.Point, System.Drawing">
-    <value>561, 122</value>
+    <value>561, 72</value>
   </data>
   <data name="RadButtonAnRhewaSenden.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -400,6 +406,6 @@
     <value>Uco21Versenden</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, EichsoftwareClient, Version=1.0.5387.21580, Culture=neutral, PublicKeyToken=null</value>
+    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.5401.22564, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

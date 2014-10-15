@@ -782,7 +782,6 @@ Partial Class FrmMainContainer
         Me.RadSplitContainerContent.ResumeLayout(False)
         CType(Me.SplitPanelHeaderText, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitPanelHeaderText.ResumeLayout(False)
-        Me.SplitPanelHeaderText.PerformLayout()
         CType(Me.lblHeaderText, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SplitPanelContent1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SplitPanelNavigation, System.ComponentModel.ISupportInitialize).EndInit()

@@ -131,7 +131,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="RadButtonUploadPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>380, 23</value>
+    <value>672, 25</value>
   </data>
   <data name="RadButtonUploadPath.RootElement.KeyTip" xml:space="preserve">
     <value />
@@ -148,34 +148,8 @@
   <data name="RadButtonAnRhewaSenden.Text" xml:space="preserve">
     <value>&lt;html&gt;Sende Messprotokoll &lt;br /&gt;an RHEWA&lt;/html&gt;</value>
   </data>
-  <data name="RadProgressBar.RootElement.AccessibleDescription" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadProgressBar.RootElement.AccessibleName" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadProgressBar.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="RadProgressBar.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadProgressBar.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="RadProgressBar.RootElement.KeyTip" xml:space="preserve">
     <value />
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="RadProgressBar.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadProgressBar.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadProgressBar.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="RadProgressBar.RootElement.ToolTipText" xml:space="preserve">
     <value />

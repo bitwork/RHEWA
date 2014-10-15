@@ -199,7 +199,7 @@
     <value>NoControl</value>
   </data>
   <data name="PictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>229, 3</value>
+    <value>227, 3</value>
   </data>
   <data name="PictureBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 39</value>
@@ -327,8 +327,14 @@
   <data name="&gt;&gt;RadScrollablePanelContextHelp.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="lblHeaderText.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="lblHeaderText.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblHeaderText.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Semibold, 36pt, style=Bold</value>
+    <value>Segoe UI Semibold, 28pt, style=Bold</value>
   </data>
   <data name="lblHeaderText.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 12</value>
@@ -358,7 +364,7 @@
     <value>Horizontal</value>
   </data>
   <data name="lblHeaderText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>278, 72</value>
+    <value>974, 115</value>
   </data>
   <data name="lblHeaderText.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1619,7 +1625,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAB6
-        EgAAAk1TRnQBSQFMAgEBAwEAAXABBAFwAQQBIAEAASABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAGA
+        EgAAAk1TRnQBSQFMAgEBAwEAAXgBBAF4AQQBIAEAASABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAGA
         AwABIAMAAQEBAAEgBgABQP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wBPAAEBAwQBBgMLAQ8DEAEV
         AxABFgMQARYDEAEVAwsBDwMEAQYDAAEBWwABAQMEAQYDCwEPAxABFQMQARYDEAEWAxABFQMLAQ8DBAEG
         AwABAVsAAQEDBAEGAwsBDwMQARUDEAEWAxABFgMQARUDCwEPAwQBBgMAAQHUAAMCAQMDCgEOAxcBIAMj
@@ -1659,13 +1665,13 @@
         AgAB8gH/AgAB8gH/AgAB8gH/AgAB8gH/AgAB8gH/AgAB8gH/AgAB8gH/AgAB8wH/AgAB+AH/AgABvwH/
         AxABFkAAAxABFgEAAcAC/wEAAdkC/wEAAdEC/wEAAdEC/wEAAdEC/wEAAdEC/wEAAdEC/wEAAdEC/wEA
         AdEC/wEAAdEC/wEAAdEC/wEAAdEC/wEAAdkC/wEAAcAC/wMQARbAAAMQARUBAAGJAQAB/wEAAdQBowH/
-        AQABwAEBAf8BAAHAAYEB/wEAAcABgQH/AQABwAGBAf8BAAHAAYEB/wEAAcABgQH/AQABwAGBAf8BAAHA
-        AYEB/wEAAcABgQH/AQABwAEBAf8BAAHUAaMB/wEAAYkBAAH/AxABFUAAAxABFQIAAb8B/wEAAYUB+QH/
+        AQABwAEAAf8BAAHAAYEB/wEAAcABgQH/AQABwAGBAf8BAAHAAYEB/wEAAcABgQH/AQABwAGBAf8BAAHA
+        AYEB/wEAAcABgQH/AQABwAEAAf8BAAHUAaMB/wEAAYkBAAH/AxABFUAAAxABFQIAAb8B/wEAAYUB+QH/
         AgAB8QH/AgAB8AH/AgAB8AH/AgAB8AH/AgAB8AH/AgAB8AH/AgAB8AH/AgAB8AH/AgAB8AH/AgAB8QH/
         AQABhQH5Af8CAAG/Af8DEAEVQAADEAEVAQABwAL/AYMB2wL/AQABzQL/AQABzgL/AQABzgL/AQABzgL/
         AQABzgL/AQABzgL/AQABzgL/AQABzgL/AQABzgL/AQABzQL/AYMB2wL/AQABwAL/AxABFcAAAwsBDwEA
-        AYkBAAH/AQAB3AG6Af8BAAG9AQAB/wEAAb0BAAH/AQABvgEBAf8BAAG+AQEB/wEAAb4BAQH/AQABvgEB
-        Af8BAAG+AQEB/wEAAb4BAQH/AQABvQEAAf8BAAG9AQAB/wEAAdwBugH/AQABiQEAAf8DCwEPQAADCwEP
+        AYkBAAH/AQAB3AG6Af8BAAG9AQAB/wEAAb0BAAH/AQABvgEAAf8BAAG+AQAB/wEAAb4BAAH/AQABvgEA
+        Af8BAAG+AQAB/wEAAb4BAAH/AQABvQEAAf8BAAG9AQAB/wEAAdwBugH/AQABiQEAAf8DCwEPQAADCwEP
         AgABwAH/AZQBogH3Af8CAAHtAf8CAAHtAf8CAAHtAf8CAAHtAf8CAAHtAf8CAAHtAf8CAAHtAf8CAAHt
         Af8CAAHtAf8CAAHtAf8BlAGiAfcB/wIAAcAB/wMLAQ9AAAMLAQ8BAAHAAv8BoAHiAv8BAAHJAv8BAAHK
         Av8BAAHLAv8BAAHLAv8BAAHLAv8BAAHLAv8BAAHLAv8BAAHLAv8BAAHKAv8BAAHJAv8BoAHiAv8BAAHA
@@ -1714,6 +1720,21 @@
   </data>
   <data name="RadDropDownButtonElement2.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="RadDropDownButtonElement2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 2, 0</value>
+  </data>
+  <data name="RadDropDownButtonElement2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadDropDownButtonElement2.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RadDropDownButtonElement2.Text" xml:space="preserve">
+    <value>Kompatibilität</value>
+  </data>
+  <data name="RadDropDownButtonElement2.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
   </data>
   <data name="RadMenuItem4.AccessibleDescription" xml:space="preserve">
     <value>Messtechnische und technische Daten</value>
@@ -1908,21 +1929,6 @@
     <value>MiddleCenter</value>
   </data>
   <data name="RadMenuItem8.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="RadDropDownButtonElement2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 2, 0</value>
-  </data>
-  <data name="RadDropDownButtonElement2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadDropDownButtonElement2.RightToLeft" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadDropDownButtonElement2.Text" xml:space="preserve">
-    <value>Kompatibilität</value>
-  </data>
-  <data name="RadDropDownButtonElement2.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
   <data name="RadDropDownButtonElement3.AccessibleDescription" xml:space="preserve">
