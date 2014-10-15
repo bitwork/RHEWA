@@ -78,15 +78,6 @@
         End Select
 
         Try
-            'Dim s As String = "11.20"
-            'Dim c1 As Decimal = Decimal.Parse(s, New Globalization.CultureInfo("pl"))
-            'Dim c2 As Decimal = Decimal.Parse(s, New Globalization.CultureInfo("en"))
-            'Dim c3 As Decimal = Decimal.Parse(s, New Globalization.CultureInfo("de"))
-            'Console.WriteLine(c1)
-            'Console.WriteLine(c2)
-
-
-
             'Bereiche berechnen
             RadTextBoxControlBereich1e20.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 20), _intNullstellenE, MidpointRounding.AwayFromZero)
             RadTextBoxControlBereich1e20Bis.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 500), _intNullstellenE, MidpointRounding.AwayFromZero)
@@ -212,70 +203,8 @@
 #End Region
 
 
-    'Entsperrroutine
-    Protected Overrides Sub EntsperrungNeeded()
-        MyBase.EntsperrungNeeded()
 
-        'Hiermit wird ein lesender Vorgang wieder entsperrt. 
-        For Each Control In Me.RadScrollablePanel1.PanelContainer.Controls
-            Try
-                Control.readonly = Not Control.readonly
-            Catch ex As Exception
-                Try
-                    Control.isreadonly = Not Control.isReadonly
-                Catch ex2 As Exception
-                    Try
-                        Control.enabled = Not Control.enabled
-                    Catch ex3 As Exception
-                    End Try
-                End Try
-            End Try
-        Next
 
-        'ändern des Moduses
-        DialogModus = enuDialogModus.korrigierend
-        ParentFormular.DialogModus = FrmMainContainer.enuDialogModus.korrigierend
-    End Sub
-
-    Protected Overrides Sub VersendenNeeded(TargetUserControl As UserControl)
-
-        If Me.Equals(TargetUserControl) Then
-            MyBase.VersendenNeeded(TargetUserControl)
-            Using dbcontext As New EichsoftwareClientdatabaseEntities1
-                objEichprozess = (From a In dbcontext.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
-
-                Dim objServerEichprozess As New EichsoftwareWebservice.ServerEichprozess
-                'auf fehlerhaft Status setzen
-                objEichprozess.FK_Bearbeitungsstatus = 2
-                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Konformitätsbewertungsbevollmächtigter sich den DS von Anfang angucken muss
-
-                'erzeuegn eines Server Objektes auf basis des aktuellen DS
-                objServerEichprozess = clsClientServerConversionFunctions.CopyServerObjectProperties(objServerEichprozess, objEichprozess, clsClientServerConversionFunctions.enuModus.RHEWASendetAnClient)
-                Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
-                    Try
-                        Webcontext.Open()
-                    Catch ex As Exception
-                        MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                        Exit Sub
-                    End Try
-
-                   
-
-                    Try
-                        'add prüft anhand der Vorgangsnummer automatisch ob ein neuer Prozess angelegt, oder ein vorhandener aktualisiert wird
-                        Webcontext.AddEichprozess(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
-
-                        'schließen des dialoges
-                        ParentFormular.Close()
-                    Catch ex As Exception
-                        MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                        ' Status zurück setzen
-                        Exit Sub
-                    End Try
-                End Using
-            End Using
-        End If
-    End Sub
 
 
 End Class

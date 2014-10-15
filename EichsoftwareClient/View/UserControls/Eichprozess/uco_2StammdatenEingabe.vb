@@ -803,7 +803,6 @@
 
     Protected Overrides Sub VersendenNeeded(TargetUserControl As UserControl)
 
-
         If Me.Equals(TargetUserControl) Then
             MyBase.VersendenNeeded(TargetUserControl)
     
