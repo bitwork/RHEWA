@@ -678,4 +678,7 @@ Jest błąd ≤ 0,3e → L = 0,5 Max = potrzebne są wzorce 50% z Max.</value>
   <data name="Bearbeitungsstatus" xml:space="preserve">
     <value>Global Status</value>
   </data>
+  <data name="Sitzung" xml:space="preserve">
+    <value>Session: </value>
+  </data>
 </root>

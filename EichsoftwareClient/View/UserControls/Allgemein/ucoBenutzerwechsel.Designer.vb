@@ -22,42 +22,36 @@ Partial Class ucoBenutzerwechsel
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.LabelBenutzer = New System.Windows.Forms.Label()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.RadButton1 = New Telerik.WinControls.UI.RadButton()
+        CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'PictureBox1
+        'RadButton1
         '
-        Me.PictureBox1.Image = Global.EichsoftwareClient.My.Resources.Resources.user
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(35, 50)
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
+        Me.RadButton1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.RadButton1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.RadButton1.Image = Global.EichsoftwareClient.My.Resources.Resources.user
+        Me.RadButton1.ImageAlignment = System.Drawing.ContentAlignment.TopRight
+        Me.RadButton1.Location = New System.Drawing.Point(0, 0)
+        Me.RadButton1.Name = "RadButton1"
+        Me.RadButton1.Size = New System.Drawing.Size(526, 55)
+        Me.RadButton1.TabIndex = 2
+        Me.RadButton1.Text = "RadButton1"
+        Me.RadButton1.TextAlignment = System.Drawing.ContentAlignment.TopLeft
+        Me.RadButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.RadButton1.TextWrap = True
         '
-        'LabelBenutzer
-        '
-        Me.LabelBenutzer.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelBenutzer.Location = New System.Drawing.Point(41, 0)
-        Me.LabelBenutzer.Name = "LabelBenutzer"
-        Me.LabelBenutzer.Size = New System.Drawing.Size(178, 50)
-        Me.LabelBenutzer.TabIndex = 1
-        Me.LabelBenutzer.Text = "User1"
-        '
-        'ucuBenutzerwechsel
+        'ucoBenutzerwechsel
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Controls.Add(Me.LabelBenutzer)
-        Me.Controls.Add(Me.PictureBox1)
-        Me.Name = "ucuBenutzerwechsel"
-        Me.Size = New System.Drawing.Size(222, 55)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Controls.Add(Me.RadButton1)
+        Me.Name = "ucoBenutzerwechsel"
+        Me.Size = New System.Drawing.Size(526, 55)
+        CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents LabelBenutzer As System.Windows.Forms.Label
+    Friend WithEvents RadButton1 As Telerik.WinControls.UI.RadButton
 
 End Class

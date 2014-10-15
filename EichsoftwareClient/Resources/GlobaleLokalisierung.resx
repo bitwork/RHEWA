@@ -682,4 +682,7 @@
   <data name="Bearbeitungsstatus" xml:space="preserve">
     <value>Global Status</value>
   </data>
+  <data name="Sitzung" xml:space="preserve">
+    <value>Session: </value>
+  </data>
 </root>

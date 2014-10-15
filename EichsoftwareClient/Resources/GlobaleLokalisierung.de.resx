@@ -751,4 +751,7 @@ Ist der Fehler &gt; 0,3e â†’ L = 0,5 Max = Normalien von 50% von Max werden benÃ
   <data name="Bearbeitungsstatus" xml:space="preserve">
     <value>Bearbeitungsstatus</value>
   </data>
+  <data name="Sitzung" xml:space="preserve">
+    <value>Aktueller Benutzer:</value>
+  </data>
 </root>

@@ -22,20 +22,14 @@
         Set(value As Lizensierung)
             mvarObjLizenz = value
             If Not mvarObjLizenz Is Nothing Then
-                LabelBenutzer.Text = mvarObjLizenz.Vorname & " " & mvarObjLizenz.Name
+
+                RadButton1.Text = My.Resources.GlobaleLokalisierung.Sitzung & " " & mvarObjLizenz.Vorname & " " & mvarObjLizenz.Name
             End If
         End Set
     End Property
 
 
 
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-        OpenBenutzerAuswahl()
-    End Sub
-
-    Private Sub LabelBenutzer_Click(sender As Object, e As EventArgs) Handles LabelBenutzer.Click
-        OpenBenutzerAuswahl()
-    End Sub
 
     Private Sub OpenBenutzerAuswahl()
         Dim f As New FrmBenutzerauswahl
@@ -45,6 +39,11 @@
 
         ucoEichprozessauswahlliste.LadeRoutine()
         ucoEichprozessauswahlliste.ParentFormular.TriggerLokalisierung() 'inkludiert LoadfromDatabase
+
+    End Sub
+
+    Private Sub RadButton1_Click(sender As Object, e As EventArgs) Handles RadButton1.Click
+        OpenBenutzerAuswahl()
 
     End Sub
 End Class
