@@ -389,9 +389,9 @@ Public Class ucoContent
             ControlName = CType(sender, Control).Name
 
             If ControlName.Contains("Fallend") Then
-                Pruefung = ""
+                Pruefung = "Fallend"
             Else
-                Pruefung = "Steigend"
+                Pruefung = ""
             End If
             Return Pruefung
         Catch ex As Exception
