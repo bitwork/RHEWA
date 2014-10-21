@@ -27,6 +27,7 @@ Partial Class ucoEichprozessauswahlliste
         Me.BackgroundWorkerLoadFromDatabase = New System.ComponentModel.BackgroundWorker()
         Me.RadPageView1 = New Telerik.WinControls.UI.RadPageView()
         Me.RadPageViewPageEigene = New Telerik.WinControls.UI.RadPageViewPage()
+        Me.RadButtonNeuStandardwaage = New Telerik.WinControls.UI.RadButton()
         Me.RadButtonEinstellungen = New Telerik.WinControls.UI.RadButton()
         Me.RadButtonClientUpdateDatabase = New Telerik.WinControls.UI.RadButton()
         Me.RadCheckBoxAusblendenClientGeloeschterDokumente = New Telerik.WinControls.UI.RadCheckBox()
@@ -49,6 +50,7 @@ Partial Class ucoEichprozessauswahlliste
         CType(Me.RadPageView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadPageView1.SuspendLayout()
         Me.RadPageViewPageEigene.SuspendLayout()
+        CType(Me.RadButtonNeuStandardwaage, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonEinstellungen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonClientUpdateDatabase, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadCheckBoxAusblendenClientGeloeschterDokumente, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -118,6 +120,7 @@ Partial Class ucoEichprozessauswahlliste
         '
         'RadPageViewPageEigene
         '
+        Me.RadPageViewPageEigene.Controls.Add(Me.RadButtonNeuStandardwaage)
         Me.RadPageViewPageEigene.Controls.Add(Me.RadButtonEinstellungen)
         Me.RadPageViewPageEigene.Controls.Add(Me.RadButtonClientUpdateDatabase)
         Me.RadPageViewPageEigene.Controls.Add(Me.RadGridViewAuswahlliste)
@@ -127,6 +130,24 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadPageViewPageEigene.Controls.Add(Me.RadButtonClientBearbeiten)
         resources.ApplyResources(Me.RadPageViewPageEigene, "RadPageViewPageEigene")
         Me.RadPageViewPageEigene.Name = "RadPageViewPageEigene"
+        '
+        'RadButtonNeuStandardwaage
+        '
+        resources.ApplyResources(Me.RadButtonNeuStandardwaage, "RadButtonNeuStandardwaage")
+        Me.RadButtonNeuStandardwaage.Image = Global.EichsoftwareClient.My.Resources.Resources.report_add
+        Me.RadButtonNeuStandardwaage.Name = "RadButtonNeuStandardwaage"
+        '
+        '
+        '
+        Me.RadButtonNeuStandardwaage.RootElement.AccessibleDescription = resources.GetString("RadButtonNeuStandardwaage.RootElement.AccessibleDescription")
+        Me.RadButtonNeuStandardwaage.RootElement.AccessibleName = resources.GetString("RadButtonNeuStandardwaage.RootElement.AccessibleName")
+        Me.RadButtonNeuStandardwaage.RootElement.Alignment = CType(resources.GetObject("RadButtonNeuStandardwaage.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.RadButtonNeuStandardwaage.RootElement.AngleTransform = CType(resources.GetObject("RadButtonNeuStandardwaage.RootElement.AngleTransform"), Single)
+        Me.RadButtonNeuStandardwaage.RootElement.FlipText = CType(resources.GetObject("RadButtonNeuStandardwaage.RootElement.FlipText"), Boolean)
+        Me.RadButtonNeuStandardwaage.RootElement.Margin = CType(resources.GetObject("RadButtonNeuStandardwaage.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadButtonNeuStandardwaage.RootElement.Text = resources.GetString("RadButtonNeuStandardwaage.RootElement.Text")
+        Me.RadButtonNeuStandardwaage.RootElement.TextOrientation = CType(resources.GetObject("RadButtonNeuStandardwaage.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadButtonNeuStandardwaage.TextWrap = True
         '
         'RadButtonEinstellungen
         '
@@ -403,6 +424,7 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadPageView1.ResumeLayout(False)
         Me.RadPageViewPageEigene.ResumeLayout(False)
         Me.RadPageViewPageEigene.PerformLayout()
+        CType(Me.RadButtonNeuStandardwaage, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonEinstellungen, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonClientUpdateDatabase, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadCheckBoxAusblendenClientGeloeschterDokumente, System.ComponentModel.ISupportInitialize).EndInit()
@@ -443,5 +465,6 @@ Partial Class ucoEichprozessauswahlliste
     Friend WithEvents BackgroundWorkerDownloadFromFTP As System.ComponentModel.BackgroundWorker
     Friend WithEvents RadButtonRefresh As Telerik.WinControls.UI.RadButton
     Friend WithEvents FlowLayoutPanel1 As System.Windows.Forms.FlowLayoutPanel
+    Friend WithEvents RadButtonNeuStandardwaage As Telerik.WinControls.UI.RadButton
 
 End Class

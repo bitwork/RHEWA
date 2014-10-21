@@ -27,34 +27,6 @@
             <End Role="Firmen" EntitySet="Firmen" />
             <End Role="Benutzer" EntitySet="Benutzer" />
           </AssociationSet>
-          <AssociationSet Name="FK_Eichprozess_Eichprotokoll" Association="EichenModel.Store.FK_Eichprozess_Eichprotokoll">
-            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
-            <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Eichprozess_Kompatiblitaetsnachweis" Association="EichenModel.Store.FK_Eichprozess_Kompatiblitaetsnachweis">
-            <End Role="ServerKompatiblitaetsnachweis" EntitySet="ServerKompatiblitaetsnachweis" />
-            <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Eichprozess_Lookup_Auswertegeraet" Association="EichenModel.Store.FK_Eichprozess_Lookup_Auswertegeraet">
-            <End Role="ServerLookup_Auswertegeraet" EntitySet="ServerLookup_Auswertegeraet" />
-            <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Eichprozess_Lookup_Vorgangsstatus" Association="EichenModel.Store.FK_Eichprozess_Lookup_Vorgangsstatus">
-            <End Role="ServerLookup_Vorgangsstatus" EntitySet="ServerLookup_Vorgangsstatus" />
-            <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Eichprozess_Lookup_Waagenart" Association="EichenModel.Store.FK_Eichprozess_Lookup_Waagenart">
-            <End Role="ServerLookup_Waagenart" EntitySet="ServerLookup_Waagenart" />
-            <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Eichprozess_Lookup_Waagentyp" Association="EichenModel.Store.FK_Eichprozess_Lookup_Waagentyp">
-            <End Role="ServerLookup_Waagentyp" EntitySet="ServerLookup_Waagentyp" />
-            <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Eichprozess_Lookup_Waegezelle" Association="EichenModel.Store.FK_Eichprozess_Lookup_Waegezelle">
-            <End Role="ServerLookup_Waegezelle" EntitySet="ServerLookup_Waegezelle" />
-            <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
-          </AssociationSet>
           <AssociationSet Name="FK_Mogelstatistik_Eichprozess" Association="EichenModel.Store.FK_Mogelstatistik_Eichprozess">
             <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
             <End Role="ServerMogelstatistik" EntitySet="ServerMogelstatistik" />
@@ -66,10 +38,6 @@
           <AssociationSet Name="FK_Mogelstatistik_Lookup_Waegezelle" Association="EichenModel.Store.FK_Mogelstatistik_Lookup_Waegezelle">
             <End Role="ServerLookup_Waegezelle" EntitySet="ServerLookup_Waegezelle" />
             <End Role="ServerMogelstatistik" EntitySet="ServerMogelstatistik" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ServerEichprozess_ServerLookup_Bearbeitungsstatus" Association="EichenModel.Store.FK_ServerEichprozess_ServerLookup_Bearbeitungsstatus">
-            <End Role="ServerLookup_Bearbeitungsstatus" EntitySet="ServerLookup_Bearbeitungsstatus" />
-            <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
           </AssociationSet>
           <AssociationSet Name="FK_ServerFirmenZusatzdaten_Firmen" Association="EichenModel.Store.FK_ServerFirmenZusatzdaten_Firmen">
             <End Role="Firmen" EntitySet="Firmen" />
@@ -266,6 +234,7 @@
           <Property Name="BearbeitungsDatum" Type="datetime" />
           <Property Name="ErzeugerLizenz" Type="nvarchar" MaxLength="50" />
           <Property Name="ZurBearbeitungGesperrtDurch" Type="nvarchar" MaxLength="50" />
+          <Property Name="Standardwaage" Type="bit" />
         </EntityType>
         <EntityType Name="ServerFirmenZusatzdaten">
           <Key>
@@ -486,90 +455,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Eichprozess_Eichprotokoll">
-          <End Role="ServerEichprotokoll" Type="EichenModel.Store.ServerEichprotokoll" Multiplicity="0..1" />
-          <End Role="ServerEichprozess" Type="EichenModel.Store.ServerEichprozess" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ServerEichprotokoll">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="ServerEichprozess">
-              <PropertyRef Name="FK_Eichprotokoll" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Eichprozess_Kompatiblitaetsnachweis">
-          <End Role="ServerKompatiblitaetsnachweis" Type="EichenModel.Store.ServerKompatiblitaetsnachweis" Multiplicity="0..1" />
-          <End Role="ServerEichprozess" Type="EichenModel.Store.ServerEichprozess" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ServerKompatiblitaetsnachweis">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="ServerEichprozess">
-              <PropertyRef Name="FK_Kompatibilitaetsnachweis" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Eichprozess_Lookup_Auswertegeraet">
-          <End Role="ServerLookup_Auswertegeraet" Type="EichenModel.Store.ServerLookup_Auswertegeraet" Multiplicity="0..1" />
-          <End Role="ServerEichprozess" Type="EichenModel.Store.ServerEichprozess" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ServerLookup_Auswertegeraet">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="ServerEichprozess">
-              <PropertyRef Name="FK_Auswertegeraet" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Eichprozess_Lookup_Vorgangsstatus">
-          <End Role="ServerLookup_Vorgangsstatus" Type="EichenModel.Store.ServerLookup_Vorgangsstatus" Multiplicity="1" />
-          <End Role="ServerEichprozess" Type="EichenModel.Store.ServerEichprozess" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ServerLookup_Vorgangsstatus">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="ServerEichprozess">
-              <PropertyRef Name="FK_Vorgangsstatus" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Eichprozess_Lookup_Waagenart">
-          <End Role="ServerLookup_Waagenart" Type="EichenModel.Store.ServerLookup_Waagenart" Multiplicity="0..1" />
-          <End Role="ServerEichprozess" Type="EichenModel.Store.ServerEichprozess" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ServerLookup_Waagenart">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="ServerEichprozess">
-              <PropertyRef Name="FK_WaagenArt" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Eichprozess_Lookup_Waagentyp">
-          <End Role="ServerLookup_Waagentyp" Type="EichenModel.Store.ServerLookup_Waagentyp" Multiplicity="0..1" />
-          <End Role="ServerEichprozess" Type="EichenModel.Store.ServerEichprozess" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ServerLookup_Waagentyp">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="ServerEichprozess">
-              <PropertyRef Name="FK_WaagenTyp" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Eichprozess_Lookup_Waegezelle">
-          <End Role="ServerLookup_Waegezelle" Type="EichenModel.Store.ServerLookup_Waegezelle" Multiplicity="0..1" />
-          <End Role="ServerEichprozess" Type="EichenModel.Store.ServerEichprozess" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ServerLookup_Waegezelle">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="ServerEichprozess">
-              <PropertyRef Name="FK_Waegezelle" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Mogelstatistik_Eichprozess">
           <End Role="ServerEichprozess" Type="EichenModel.Store.ServerEichprozess" Multiplicity="0..1" />
           <End Role="ServerMogelstatistik" Type="EichenModel.Store.ServerMogelstatistik" Multiplicity="*" />
@@ -603,18 +488,6 @@
             </Principal>
             <Dependent Role="ServerMogelstatistik">
               <PropertyRef Name="FK_Waegezelle" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_ServerEichprozess_ServerLookup_Bearbeitungsstatus">
-          <End Role="ServerLookup_Bearbeitungsstatus" Type="EichenModel.Store.ServerLookup_Bearbeitungsstatus" Multiplicity="0..1" />
-          <End Role="ServerEichprozess" Type="EichenModel.Store.ServerEichprozess" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ServerLookup_Bearbeitungsstatus">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="ServerEichprozess">
-              <PropertyRef Name="FK_Bearbeitungsstatus" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1172,6 +1045,7 @@
           <NavigationProperty Name="ServerLookup_Vorgangsstatus" Relationship="EichenModel.FK_Eichprozess_Lookup_Vorgangsstatus" FromRole="ServerEichprozess" ToRole="ServerLookup_Vorgangsstatus" />
           <NavigationProperty Name="ServerLookup_Waagenart" Relationship="EichenModel.FK_Eichprozess_Lookup_Waagenart" FromRole="ServerEichprozess" ToRole="ServerLookup_Waagenart" />
           <NavigationProperty Name="ServerLookup_Waagentyp" Relationship="EichenModel.FK_Eichprozess_Lookup_Waagentyp" FromRole="ServerEichprozess" ToRole="ServerLookup_Waagentyp" />
+          <Property Type="Boolean" Name="Standardwaage" />
         </EntityType>
         <Association Name="FK_Eichprozess_Eichprotokoll">
           <End Type="EichenModel.ServerEichprotokoll" Role="ServerEichprotokoll" Multiplicity="0..1" />
@@ -1679,6 +1553,7 @@
           <EntitySetMapping Name="ServerEichprozess">
             <EntityTypeMapping TypeName="EichenModel.ServerEichprozess">
               <MappingFragment StoreEntitySet="ServerEichprozess">
+                <ScalarProperty Name="Standardwaage" ColumnName="Standardwaage" />
                 <ScalarProperty Name="ZurBearbeitungGesperrtDurch" ColumnName="ZurBearbeitungGesperrtDurch" />
                 <ScalarProperty Name="ErzeugerLizenz" ColumnName="ErzeugerLizenz" />
                 <ScalarProperty Name="BearbeitungsDatum" ColumnName="BearbeitungsDatum" />

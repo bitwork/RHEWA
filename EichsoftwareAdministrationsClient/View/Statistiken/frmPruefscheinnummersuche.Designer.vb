@@ -93,7 +93,7 @@ Partial Class FrmPruefscheinnummersuche
         '
         '
         Me.RootElement.ApplyShapeToControl = True
-        Me.Text = "FrmPruefscheinnummersuche"
+        Me.Text = "Prüfscheinnummersuche"
         CType(Me.RadGridView1.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlPruefscheinnummer, System.ComponentModel.ISupportInitialize).EndInit()

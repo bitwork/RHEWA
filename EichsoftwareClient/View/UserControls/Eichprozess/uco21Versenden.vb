@@ -165,7 +165,7 @@ Public Class Uco21Versenden
 
         Using dbcontext As New EichsoftwareClientdatabaseEntities1
             objEichprozess = (From a In dbcontext.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
-
+            objEichprozess.AusStandardwaageErzeugt = False 'Egal ob der Prozess versendet wird oder nicht, das Flag bei einer kopierten Leistung kann entfernt werden, da es sich jetzt um eine gültige Waage handelt 
             objServerEichprozess = clsClientServerConversionFunctions.CopyServerObjectProperties(objServerEichprozess, objEichprozess, clsClientServerConversionFunctions.enuModus.ClientSendetAnRhewa)
 
             'verbindung öffnen

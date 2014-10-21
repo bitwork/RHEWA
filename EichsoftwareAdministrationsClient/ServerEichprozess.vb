@@ -27,6 +27,7 @@ Partial Public Class ServerEichprozess
     Public Property BearbeitungsDatum As Nullable(Of Date)
     Public Property ErzeugerLizenz As String
     Public Property ZurBearbeitungGesperrtDurch As String
+    Public Property Standardwaage As Nullable(Of Boolean)
 
     Public Overridable Property ServerEichprotokoll As ServerEichprotokoll
     Public Overridable Property ServerKompatiblitaetsnachweis As ServerKompatiblitaetsnachweis

@@ -269,10 +269,12 @@ Public Class ucoContent
                     Return True
                 Else
                     MessageBox.Show(My.Resources.GlobaleLokalisierung.PflichtfelderAusfuellen, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    Me.AbortSaveing = True
                     Return False
                 End If
             Else
                 MessageBox.Show(My.Resources.GlobaleLokalisierung.PflichtfelderAusfuellen, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                Me.AbortSaveing = True
                 Return False
             End If
         End If
@@ -281,6 +283,34 @@ Public Class ucoContent
         Me.AbortSaveing = False
         Return True
     End Function
+
+
+    Friend Function ShowValidationErrorBoxStandardwaage(enu As GlobaleEnumeratoren.enuEichprozessStatus) As Boolean
+        Dim Displaytext As String = ""
+        Select Case enu
+            Case GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderWiederholbarkeit
+                Displaytext = "Ist die Wiederholbarkeit wirklich gegeben?"
+            Case Is = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungdesAnsprechvermögens
+                Displaytext = "Werden die Daten wirklich nur bei Stillstand übermittelt?"
+        End Select
+
+        If Not Displaytext.Equals("") Then
+            If MessageBox.Show(Displaytext, "", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+                Me.AbortSaveing = False
+                Return True
+            Else
+                Me.AbortSaveing = True
+                MessageBox.Show(My.Resources.GlobaleLokalisierung.PflichtfelderAusfuellen, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                Return False
+            End If
+        Else
+            Return True
+        End If
+
+
+    End Function
+
+
 
 
 #Region "Hilfsfunktionen"

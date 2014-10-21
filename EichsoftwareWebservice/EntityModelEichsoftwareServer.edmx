@@ -317,6 +317,7 @@
           <Property Name="BearbeitungsDatum" Type="datetime" />
           <Property Name="ErzeugerLizenz" Type="nvarchar" MaxLength="50" />
           <Property Name="ZurBearbeitungGesperrtDurch" Type="nvarchar" MaxLength="50" />
+          <Property Name="Standardwaage" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="ServerFirmenZusatzdaten">
           <Key>
@@ -1314,6 +1315,7 @@
           <Property Type="DateTime" Name="BearbeitungsDatum" Precision="3" />
           <Property Type="String" Name="ErzeugerLizenz" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="ZurBearbeitungGesperrtDurch" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="Standardwaage" Nullable="false" />
         </EntityType>
         <EntityType Name="ServerKompatiblitaetsnachweis">
           <Key>
@@ -2182,6 +2184,7 @@
           <EntitySetMapping Name="ServerEichprozess">
             <EntityTypeMapping TypeName="EichenSQLDatabaseModel.ServerEichprozess">
               <MappingFragment StoreEntitySet="ServerEichprozess">
+                <ScalarProperty Name="Standardwaage" ColumnName="Standardwaage" />
                 <ScalarProperty Name="ZurBearbeitungGesperrtDurch" ColumnName="ZurBearbeitungGesperrtDurch" />
                 <ScalarProperty Name="ErzeugerLizenz" ColumnName="ErzeugerLizenz" />
                 <ScalarProperty Name="BearbeitungsDatum" ColumnName="BearbeitungsDatum" />

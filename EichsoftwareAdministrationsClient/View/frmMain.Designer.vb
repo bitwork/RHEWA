@@ -30,11 +30,12 @@ Partial Class frmMain
         Me.RadButtonFirmenZusatzDaten = New Telerik.WinControls.UI.RadButton()
         Me.RadButtonFirmenZuordnung = New Telerik.WinControls.UI.RadButton()
         Me.RadGroupBox2 = New Telerik.WinControls.UI.RadGroupBox()
+        Me.RadButtonPruefscheinnummersuche = New Telerik.WinControls.UI.RadButton()
         Me.RadButtonMogelstatistik = New Telerik.WinControls.UI.RadButton()
         Me.RadButtonVerbindungsprotokoll = New Telerik.WinControls.UI.RadButton()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.RadButton1 = New Telerik.WinControls.UI.RadButton()
-        Me.RadButtonPruefscheinnummersuche = New Telerik.WinControls.UI.RadButton()
+        Me.RadButtonSync = New Telerik.WinControls.UI.RadButton()
+        Me.RadButtonStandardwaagen = New Telerik.WinControls.UI.RadButton()
         CType(Me.RadButtonAuswertegeraet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonWaegezelle, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonLizenzen, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -45,11 +46,12 @@ Partial Class frmMain
         CType(Me.RadButtonFirmenZuordnung, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBox2.SuspendLayout()
+        CType(Me.RadButtonPruefscheinnummersuche, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonMogelstatistik, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonVerbindungsprotokoll, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButtonPruefscheinnummersuche, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadButtonSync, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadButtonStandardwaagen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -132,6 +134,7 @@ Partial Class frmMain
         'RadGroupBox1
         '
         Me.RadGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.RadGroupBox1.Controls.Add(Me.RadButtonStandardwaagen)
         Me.RadGroupBox1.Controls.Add(Me.RadButtonFirmenZusatzDaten)
         Me.RadGroupBox1.Controls.Add(Me.RadButtonFirmenZuordnung)
         Me.RadGroupBox1.Controls.Add(Me.RadButtonAuswertegeraet)
@@ -196,6 +199,25 @@ Partial Class frmMain
         Me.RadGroupBox2.TabIndex = 5
         Me.RadGroupBox2.Text = "Statistik / Auswertung"
         '
+        'RadButtonPruefscheinnummersuche
+        '
+        Me.RadButtonPruefscheinnummersuche.Location = New System.Drawing.Point(7, 127)
+        Me.RadButtonPruefscheinnummersuche.Name = "RadButtonPruefscheinnummersuche"
+        '
+        '
+        '
+        Me.RadButtonPruefscheinnummersuche.RootElement.AccessibleDescription = Nothing
+        Me.RadButtonPruefscheinnummersuche.RootElement.AccessibleName = Nothing
+        Me.RadButtonPruefscheinnummersuche.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
+        Me.RadButtonPruefscheinnummersuche.RootElement.AngleTransform = 0.0!
+        Me.RadButtonPruefscheinnummersuche.RootElement.FlipText = False
+        Me.RadButtonPruefscheinnummersuche.RootElement.Margin = New System.Windows.Forms.Padding(0)
+        Me.RadButtonPruefscheinnummersuche.RootElement.Text = Nothing
+        Me.RadButtonPruefscheinnummersuche.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
+        Me.RadButtonPruefscheinnummersuche.Size = New System.Drawing.Size(206, 24)
+        Me.RadButtonPruefscheinnummersuche.TabIndex = 5
+        Me.RadButtonPruefscheinnummersuche.Text = "Prüfscheinnummer Suche"
+        '
         'RadButtonMogelstatistik
         '
         Me.RadButtonMogelstatistik.Location = New System.Drawing.Point(7, 97)
@@ -244,50 +266,50 @@ Partial Class frmMain
         Me.PictureBox1.TabIndex = 6
         Me.PictureBox1.TabStop = False
         '
-        'RadButton1
+        'RadButtonSync
         '
-        Me.RadButton1.Location = New System.Drawing.Point(238, 281)
-        Me.RadButton1.Name = "RadButton1"
-        '
-        '
-        '
-        Me.RadButton1.RootElement.AccessibleDescription = Nothing
-        Me.RadButton1.RootElement.AccessibleName = Nothing
-        Me.RadButton1.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadButton1.RootElement.AngleTransform = 0.0!
-        Me.RadButton1.RootElement.FlipText = False
-        Me.RadButton1.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadButton1.RootElement.Text = Nothing
-        Me.RadButton1.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
-        Me.RadButton1.Size = New System.Drawing.Size(203, 24)
-        Me.RadButton1.TabIndex = 4
-        Me.RadButton1.Text = "Datenbank Synchronisieren"
-        '
-        'RadButtonPruefscheinnummersuche
-        '
-        Me.RadButtonPruefscheinnummersuche.Location = New System.Drawing.Point(7, 127)
-        Me.RadButtonPruefscheinnummersuche.Name = "RadButtonPruefscheinnummersuche"
+        Me.RadButtonSync.Location = New System.Drawing.Point(238, 281)
+        Me.RadButtonSync.Name = "RadButtonSync"
         '
         '
         '
-        Me.RadButtonPruefscheinnummersuche.RootElement.AccessibleDescription = Nothing
-        Me.RadButtonPruefscheinnummersuche.RootElement.AccessibleName = Nothing
-        Me.RadButtonPruefscheinnummersuche.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
-        Me.RadButtonPruefscheinnummersuche.RootElement.AngleTransform = 0.0!
-        Me.RadButtonPruefscheinnummersuche.RootElement.FlipText = False
-        Me.RadButtonPruefscheinnummersuche.RootElement.Margin = New System.Windows.Forms.Padding(0)
-        Me.RadButtonPruefscheinnummersuche.RootElement.Text = Nothing
-        Me.RadButtonPruefscheinnummersuche.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
-        Me.RadButtonPruefscheinnummersuche.Size = New System.Drawing.Size(206, 24)
-        Me.RadButtonPruefscheinnummersuche.TabIndex = 5
-        Me.RadButtonPruefscheinnummersuche.Text = "Prüfscheinnummer Suche"
+        Me.RadButtonSync.RootElement.AccessibleDescription = Nothing
+        Me.RadButtonSync.RootElement.AccessibleName = Nothing
+        Me.RadButtonSync.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
+        Me.RadButtonSync.RootElement.AngleTransform = 0.0!
+        Me.RadButtonSync.RootElement.FlipText = False
+        Me.RadButtonSync.RootElement.Margin = New System.Windows.Forms.Padding(0)
+        Me.RadButtonSync.RootElement.Text = Nothing
+        Me.RadButtonSync.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
+        Me.RadButtonSync.Size = New System.Drawing.Size(203, 24)
+        Me.RadButtonSync.TabIndex = 4
+        Me.RadButtonSync.Text = "Datenbank Synchronisieren"
+        '
+        'RadButtonStandardwaagen
+        '
+        Me.RadButtonStandardwaagen.Location = New System.Drawing.Point(5, 187)
+        Me.RadButtonStandardwaagen.Name = "RadButtonStandardwaagen"
+        '
+        '
+        '
+        Me.RadButtonStandardwaagen.RootElement.AccessibleDescription = Nothing
+        Me.RadButtonStandardwaagen.RootElement.AccessibleName = Nothing
+        Me.RadButtonStandardwaagen.RootElement.Alignment = System.Drawing.ContentAlignment.TopLeft
+        Me.RadButtonStandardwaagen.RootElement.AngleTransform = 0.0!
+        Me.RadButtonStandardwaagen.RootElement.FlipText = False
+        Me.RadButtonStandardwaagen.RootElement.Margin = New System.Windows.Forms.Padding(0)
+        Me.RadButtonStandardwaagen.RootElement.Text = Nothing
+        Me.RadButtonStandardwaagen.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
+        Me.RadButtonStandardwaagen.Size = New System.Drawing.Size(203, 24)
+        Me.RadButtonStandardwaagen.TabIndex = 5
+        Me.RadButtonStandardwaagen.Text = "Standardwaagen definieren"
         '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(465, 308)
-        Me.Controls.Add(Me.RadButton1)
+        Me.Controls.Add(Me.RadButtonSync)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.RadGroupBox2)
         Me.Controls.Add(Me.RadGroupBox1)
@@ -315,11 +337,12 @@ Partial Class frmMain
         CType(Me.RadButtonFirmenZuordnung, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBox2.ResumeLayout(False)
+        CType(Me.RadButtonPruefscheinnummersuche, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonMogelstatistik, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonVerbindungsprotokoll, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButtonPruefscheinnummersuche, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadButtonSync, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadButtonStandardwaagen, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -334,8 +357,9 @@ Partial Class frmMain
     Friend WithEvents RadButtonVerbindungsprotokoll As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadButtonMogelstatistik As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadButtonFirmenZuordnung As Telerik.WinControls.UI.RadButton
-    Friend WithEvents RadButton1 As Telerik.WinControls.UI.RadButton
+    Friend WithEvents RadButtonSync As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadButtonFirmenZusatzDaten As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadButtonPruefscheinnummersuche As Telerik.WinControls.UI.RadButton
+    Friend WithEvents RadButtonStandardwaagen As Telerik.WinControls.UI.RadButton
 End Class
 

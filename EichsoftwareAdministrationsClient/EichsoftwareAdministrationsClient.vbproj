@@ -225,16 +225,18 @@
     <Compile Include="View\frmEingabeAuswertegeraet.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="View\frmStandardwaagen.Designer.vb">
+      <DependentUpon>frmStandardwaagen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmStandardwaagen.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="View\Statistiken\frmMogelstatistik.Designer.vb">
       <DependentUpon>frmMogelstatistik.vb</DependentUpon>
     </Compile>
     <Compile Include="View\Statistiken\frmMogelstatistik.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\obsolete_frmEichmarkenverwaltung.Designer.vb">
-      <DependentUpon>obsolete_frmEichmarkenverwaltung.vb</DependentUpon>
-    </Compile>
-    <Compile Include="View\obsolete_frmEichmarkenverwaltung.vb" />
     <Compile Include="View\frmMain.Designer.vb">
       <DependentUpon>frmMain.vb</DependentUpon>
     </Compile>
@@ -325,11 +327,11 @@
     <EmbeddedResource Include="View\frmEingabeAuswertegeraet.resx">
       <DependentUpon>frmEingabeAuswertegeraet.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\frmStandardwaagen.resx">
+      <DependentUpon>frmStandardwaagen.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Statistiken\frmMogelstatistik.resx">
       <DependentUpon>frmMogelstatistik.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\obsolete_frmEichmarkenverwaltung.resx">
-      <DependentUpon>obsolete_frmEichmarkenverwaltung.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmEingabeNeueLizenz.resx">
       <DependentUpon>frmEingabeNeueLizenz.vb</DependentUpon>

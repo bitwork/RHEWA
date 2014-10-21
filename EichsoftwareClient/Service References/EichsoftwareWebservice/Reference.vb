@@ -27,61 +27,61 @@ Namespace EichsoftwareWebservice
         <System.NonSerializedAttribute()>  _
         Private extensionDataField As System.Runtime.Serialization.ExtensionDataObject
         
-        <System.Runtime.Serialization.OptionalFieldAttribute()> _
+        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private AktivField As Boolean
-
-        <System.Runtime.Serialization.OptionalFieldAttribute()> _
+        
+        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private BenutzerIDField As String
-
-        <System.Runtime.Serialization.OptionalFieldAttribute()> _
+        
+        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private FirmaField As String
-
-        <System.Runtime.Serialization.OptionalFieldAttribute()> _
+        
+        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private FirmaOrtField As String
-
-        <System.Runtime.Serialization.OptionalFieldAttribute()> _
+        
+        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private FirmaPLZField As String
-
-        <System.Runtime.Serialization.OptionalFieldAttribute()> _
+        
+        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private FirmaStrasseField As String
-
-        <System.Runtime.Serialization.OptionalFieldAttribute()> _
+        
+        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private NameField As String
-
-        <System.Runtime.Serialization.OptionalFieldAttribute()> _
+        
+        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private VornameField As String
-
-        <Global.System.ComponentModel.BrowsableAttribute(False)> _
+        
+        <Global.System.ComponentModel.BrowsableAttribute(false)>  _
         Public Property ExtensionData() As System.Runtime.Serialization.ExtensionDataObject Implements System.Runtime.Serialization.IExtensibleDataObject.ExtensionData
             Get
                 Return Me.extensionDataField
             End Get
-            Set(value As System.Runtime.Serialization.ExtensionDataObject)
+            Set
                 Me.extensionDataField = value
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property Aktiv() As Boolean
             Get
                 Return Me.AktivField
             End Get
-            Set(value As Boolean)
-                If (Me.AktivField.Equals(value) <> True) Then
+            Set
+                If (Me.AktivField.Equals(value) <> true) Then
                     Me.AktivField = value
                     Me.RaisePropertyChanged("Aktiv")
                 End If
             End Set
         End Property
-
-        <System.Runtime.Serialization.DataMemberAttribute()> _
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
         Public Property BenutzerID() As String
             Get
                 Return Me.BenutzerIDField
             End Get
-            Set(value As String)
-                If (Object.ReferenceEquals(Me.BenutzerIDField, Value) <> True) Then
-                    Me.BenutzerIDField = Value
+            Set
+                If (Object.ReferenceEquals(Me.BenutzerIDField, value) <> true) Then
+                    Me.BenutzerIDField = value
                     Me.RaisePropertyChanged("BenutzerID")
                 End If
             End Set
@@ -604,6 +604,8 @@ Namespace EichsoftwareWebservice
         
         Private _ServerMogelstatistikField() As EichsoftwareWebservice.ServerMogelstatistik
         
+        Private _StandardwaageField As Boolean
+        
         Private _UploadDatumField As System.Nullable(Of Date)
         
         Private _UploadFilePathField As String
@@ -891,6 +893,19 @@ Namespace EichsoftwareWebservice
                 If (Object.ReferenceEquals(Me._ServerMogelstatistikField, value) <> true) Then
                     Me._ServerMogelstatistikField = value
                     Me.RaisePropertyChanged("_ServerMogelstatistik")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _Standardwaage() As Boolean
+            Get
+                Return Me._StandardwaageField
+            End Get
+            Set
+                If (Me._StandardwaageField.Equals(value) <> true) Then
+                    Me._StandardwaageField = value
+                    Me.RaisePropertyChanged("_Standardwaage")
                 End If
             End Set
         End Property
@@ -6561,6 +6576,9 @@ Namespace EichsoftwareWebservice
         <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IEichsoftwareWebservice/AddWaegezelle", ReplyAction:="http://tempuri.org/IEichsoftwareWebservice/AddWaegezelleResponse")>  _
         Function AddWaegezelle(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal pObjWZ As EichsoftwareWebservice.ServerLookup_Waegezelle, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean
         
+        <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IEichsoftwareWebservice/GetStandardwaagen", ReplyAction:="http://tempuri.org/IEichsoftwareWebservice/GetStandardwaagenResponse")>  _
+        Function GetStandardwaagen(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As EichsoftwareWebservice.clsEichprozessFuerAuswahlliste()
+        
         <System.ServiceModel.OperationContractAttribute(Action:="http://tempuri.org/IEichsoftwareWebservice/GetAlleEichprozesse", ReplyAction:="http://tempuri.org/IEichsoftwareWebservice/GetAlleEichprozesseResponse")>  _
         Function GetAlleEichprozesse(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As EichsoftwareWebservice.clsEichprozessFuerAuswahlliste()
         
@@ -6662,6 +6680,10 @@ Namespace EichsoftwareWebservice
         
         Public Function AddWaegezelle(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal pObjWZ As EichsoftwareWebservice.ServerLookup_Waegezelle, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements EichsoftwareWebservice.IEichsoftwareWebservice.AddWaegezelle
             Return MyBase.Channel.AddWaegezelle(HEKennung, Lizenzschluessel, pObjWZ, WindowsUsername, Domainname, Computername)
+        End Function
+        
+        Public Function GetStandardwaagen(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As EichsoftwareWebservice.clsEichprozessFuerAuswahlliste() Implements EichsoftwareWebservice.IEichsoftwareWebservice.GetStandardwaagen
+            Return MyBase.Channel.GetStandardwaagen(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername)
         End Function
         
         Public Function GetAlleEichprozesse(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As EichsoftwareWebservice.clsEichprozessFuerAuswahlliste() Implements EichsoftwareWebservice.IEichsoftwareWebservice.GetAlleEichprozesse

@@ -99,14 +99,20 @@
                 objPage = RadPageView1.Pages(1) 'falls der benutzer gewechselt wird, und so zwischen mit RHEWA Lizenz und ohne RHEWA Lizenz gewechselt wird
                 RadPageView1.Pages.RemoveAt(1)
                 RadPageView1.Pages(0).Text = ""
-
-
             Catch ex As ArgumentOutOfRangeException
                 'ignorieren
-
-
             End Try
+            'großer button
+            RadButtonClientNeu.Width = 192
+            RadButtonClientNeu.Height = 63
+            RadButtonClientNeu.TextAlignment = ContentAlignment.MiddleCenter
+            RadButtonNeuStandardwaage.Visible = False
         Else
+            RadButtonClientNeu.Width = 94
+            RadButtonClientNeu.Height = 63
+            RadButtonClientNeu.TextAlignment = ContentAlignment.MiddleRight
+            RadButtonNeuStandardwaage.Visible = True
+
             If RadPageView1.Pages.Count = 1 Then
                 RadPageView1.Pages(0).Text = "Eigene"
 
@@ -115,8 +121,6 @@
             End If
 
         End If
-
-
 
         'für den Fall das die Anwendung gerade erst installiert wurde, oder die einstellung zur Synchronisierung geändert wurde, sollen alle Eichungen vom RHEWA Server geholt werden, die einmal angelegt wurden
         If Not AktuellerBenutzer.Instance.Lizenz Is Nothing And AktuellerBenutzer.Instance.HoleAlleeigenenEichungenVomServer = True Then
@@ -498,13 +502,13 @@
     End Sub
 
     ''' <summary>
-    ''' Kopiert eichprozess vom Server in ein Client Objekt als Vorlage
+    ''' Kopiert eichprozess vom Server in ein Client Objekt als Vorlage 1 zu 1
     ''' </summary>
     ''' <remarks></remarks>
     Private Sub GetLokaleKopieVonEichprozess()
         If Not Me.VorgangsnummerGridServer.Equals("") Then
             If MessageBox.Show(My.Resources.GlobaleLokalisierung.Frage_Kopieren, My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
-                Dim objClientEichprozess = clsWebserviceFunctions.GetLokaleKopieVonEichprozess(VorgangsnummerGridServer)
+                Dim objClientEichprozess = clsWebserviceFunctions.old_GetLokaleKopieVonEichprozess(VorgangsnummerGridServer)
 
                 If Not objClientEichprozess Is Nothing Then
                     'anzeigen des Dialogs zur Bearbeitung der Eichung
@@ -890,4 +894,11 @@
 
 
   
+    Private Sub RadButtonNeuStandardwaage_Click(sender As Object, e As EventArgs) Handles RadButtonNeuStandardwaage.Click
+        Dim f As New FrmAuswahlStandardwaage
+        f.ShowDialog()
+
+        'nach dem schließen des Dialogs aktualisieren
+        LoadFromDatabase()
+    End Sub
 End Class

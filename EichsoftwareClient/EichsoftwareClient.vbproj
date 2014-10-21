@@ -281,6 +281,12 @@
     <Compile Include="SplashScreen.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="View\Forms\frmAuswahlStandardwaage.Designer.vb">
+      <DependentUpon>frmAuswahlStandardwaage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\frmAuswahlStandardwaage.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="View\Forms\frmBenutzerauswahl.Designer.vb">
       <DependentUpon>frmBenutzerauswahl.vb</DependentUpon>
     </Compile>
@@ -509,6 +515,9 @@
     <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\frmAuswahlStandardwaage.resx">
+      <DependentUpon>frmAuswahlStandardwaage.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\frmBenutzerauswahl.resx">
       <DependentUpon>frmBenutzerauswahl.vb</DependentUpon>

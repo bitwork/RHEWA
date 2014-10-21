@@ -296,11 +296,13 @@
                 RadTextBoxControlMxM.Visible = False
                 RadTextBoxControlDimension.Visible = False
                 RadLabel38.Visible = False
+                Label7.Visible = False
                 lblDimension.Visible = False
                 PictureBox13.Visible = False
             Case Is = GlobaleEnumeratoren.enuVerfahrensauswahl.Fahrzeugwaagen
                 RadTextBoxControlMxM.Text = objEichprozess.Eichprotokoll.Verwendungszweck_Fahrzeugwaagen_MxM
                 RadTextBoxControlMxM.Visible = True
+                Label7.Visible = True
                 RadTextBoxControlMxM.IsReadOnly = False
                 RadTextBoxControlDimension.Text = My.Resources.GlobaleLokalisierung.Eichprotokoll_Dimension
                 RadTextBoxControlDimension.IsReadOnly = True

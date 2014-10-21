@@ -73,6 +73,12 @@
   <wsdl:message name="IEichsoftwareWebservice_AddWaegezelle_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddWaegezelleResponse" />
   </wsdl:message>
+  <wsdl:message name="IEichsoftwareWebservice_GetStandardwaagen_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStandardwaagen" />
+  </wsdl:message>
+  <wsdl:message name="IEichsoftwareWebservice_GetStandardwaagen_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStandardwaagenResponse" />
+  </wsdl:message>
   <wsdl:message name="IEichsoftwareWebservice_GetAlleEichprozesse_InputMessage">
     <wsdl:part name="parameters" element="tns:GetAlleEichprozesse" />
   </wsdl:message>
@@ -171,6 +177,10 @@
     <wsdl:operation name="AddWaegezelle">
       <wsdl:input wsaw:Action="http://tempuri.org/IEichsoftwareWebservice/AddWaegezelle" message="tns:IEichsoftwareWebservice_AddWaegezelle_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IEichsoftwareWebservice/AddWaegezelleResponse" message="tns:IEichsoftwareWebservice_AddWaegezelle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStandardwaagen">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEichsoftwareWebservice/GetStandardwaagen" message="tns:IEichsoftwareWebservice_GetStandardwaagen_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEichsoftwareWebservice/GetStandardwaagenResponse" message="tns:IEichsoftwareWebservice_GetStandardwaagen_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetAlleEichprozesse">
       <wsdl:input wsaw:Action="http://tempuri.org/IEichsoftwareWebservice/GetAlleEichprozesse" message="tns:IEichsoftwareWebservice_GetAlleEichprozesse_InputMessage" />
@@ -303,6 +313,15 @@
     </wsdl:operation>
     <wsdl:operation name="AddWaegezelle">
       <soap:operation soapAction="http://tempuri.org/IEichsoftwareWebservice/AddWaegezelle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStandardwaagen">
+      <soap:operation soapAction="http://tempuri.org/IEichsoftwareWebservice/GetStandardwaagen" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

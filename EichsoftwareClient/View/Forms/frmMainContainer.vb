@@ -755,6 +755,30 @@ Public Class FrmMainContainer
             RaiseEvent UpdateNeeded(_CurrentUco)
         End If
 
+
+
+
+
+        '###### TESt#    If Not objEichprozess Is Nothing Then
+        If CurrentEichprozess.AusStandardwaageErzeugt = True Then
+            Select Case _CurrentUco.EichprozessStatusReihenfolge
+
+           
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.KompatbilitaetsnachweisErgebnis
+                    Me.RadButtonNavigateForwards.PerformClick()
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Beschaffenheitspruefung
+                    Me.RadButtonNavigateForwards.PerformClick()
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.AuswahlKonformitätsverfahren
+                    Me.RadButtonNavigateForwards.PerformClick()
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.EichtechnischeSicherungundDatensicherung
+                    Me.RadButtonNavigateForwards.PerformClick()
+                Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Export
+                    Me.RadButtonNavigateForwards.PerformClick()
+
+            End Select
+
+
+        End If
     End Sub
 
 

@@ -282,6 +282,12 @@
         End Using
     End Function
 
+    ''' <summary>
+    ''' Lädt alle lokalen DS des aktuellen Benutzers
+    ''' </summary>
+    ''' <param name="bolAusgeblendeteElementeAnzeigen"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
     Public Shared Function LadeLokaleEichprozessListe(ByVal bolAusgeblendeteElementeAnzeigen As Boolean) As Object
         'neuen Context aufbauen
         Using Context As New EichsoftwareClientdatabaseEntities1

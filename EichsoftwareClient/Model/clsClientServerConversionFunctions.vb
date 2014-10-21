@@ -1088,9 +1088,6 @@ Public Class clsClientServerConversionFunctions
         Return TargetObject
     End Function
 #End Region
-  
-
-  
 
 #End Region
 

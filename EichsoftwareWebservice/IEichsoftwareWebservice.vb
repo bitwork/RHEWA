@@ -33,6 +33,11 @@ Public Interface IEichsoftwareWebservice
     <OperationContract()>
     Function AddWaegezelle(ByVal HEKennung As String, Lizenzschluessel As String, ByVal pObjWZ As ServerLookup_Waegezelle, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean
 
+
+    <OperationContract()>
+    Function GetStandardwaagen(ByVal HEKennung As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As clsEichprozessFuerAuswahlliste()
+
+
     <OperationContract()>
     Function GetAlleEichprozesse(ByVal HEKennung As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As clsEichprozessFuerAuswahlliste()
     <OperationContract()>

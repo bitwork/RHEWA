@@ -16,7 +16,7 @@ Public Class EichsoftwareWebservice
     ''' <param name="Lizenzschluessel"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Function PruefeLizenz(ByVal HEKennung As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements IEichsoftwareWebservice.PruefeLizenz
+    Public Function GetLizenz(ByVal HEKennung As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements IEichsoftwareWebservice.PruefeLizenz
         'SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Prüfe Lizenz")
 
 
@@ -108,7 +108,7 @@ Public Class EichsoftwareWebservice
     ''' <param name="Lizenzschluessel"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Function AktiviereLizenz(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements IEichsoftwareWebservice.AktiviereLizenz
+    Public Function SetValidLizenz(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements IEichsoftwareWebservice.AktiviereLizenz
         Try
             Using dbcontext As New EichenSQLDatabaseEntities1
                 SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Aktiviere Lizenz")
@@ -125,7 +125,7 @@ Public Class EichsoftwareWebservice
         Catch ex As Exception
             SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
         End Try
-  
+
     End Function
 
     ''' <summary>
@@ -135,7 +135,7 @@ Public Class EichsoftwareWebservice
     ''' <param name="Lizenzschluessel"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Function PruefeObRHEWALizenz(ByVal HEKennung As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements IEichsoftwareWebservice.PruefeObRHEWALizenz
+    Public Function GetValidRHEWALizenz(ByVal HEKennung As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements IEichsoftwareWebservice.PruefeObRHEWALizenz
         Try
             Using dbcontext As New EichenSQLDatabaseEntities1
                 SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Prüfe ob RHEWA Mitarbeiter")
@@ -166,7 +166,7 @@ Public Class EichsoftwareWebservice
             SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Füge Konformitätsbewertungsprozess hinzu bzw. Aktualisiere")
 
             ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
-            If PruefeLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
+            If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
             'neuen Context aufbauen
             'prüfen ob der eichprozess schoneinmal eingegangen ist anhand von Vorgangsnummer
             Using DbContext As New EichenSQLDatabaseEntities1
@@ -197,7 +197,7 @@ Public Class EichsoftwareWebservice
                     pObjEichprozess.BearbeitungsDatum = Date.Now
                     pObjEichprozess.ErzeugerLizenz = Lizenzschluessel 'lizenzschlüssel zur identifizierung des datensatztes hinzufügen
 
-                  
+
                     DbContext.ServerEichprozess.Add(pObjEichprozess)
                     DbContext.SaveChanges()
 
@@ -243,7 +243,7 @@ Public Class EichsoftwareWebservice
             SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Füge neue WZ hinzu")
 
             ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
-            If PruefeLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
+            If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
             'neuen Context aufbauen
             'prüfen ob der eichprozess schoneinmal eingegangen ist anhand von Vorgangsnummer
             If pObjWZ.Neu Then
@@ -297,7 +297,7 @@ Public Class EichsoftwareWebservice
     Public Function GetEichProzess(ByVal HEKennung As String, Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As ServerEichprozess Implements IEichsoftwareWebservice.GetEichProzess
         Try
             ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
-            If PruefeLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
+            If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
 
             SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Hole Konformitätsbewertungsprozess")
 
@@ -459,7 +459,7 @@ Public Class EichsoftwareWebservice
     Public Function GetAlleEichprozesseImZeitraum(ByVal HEKennung As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, Optional ByVal SyncAllesSeit As Date = #1/1/2000#, Optional ByVal SyncAllesBis As Date = #12/31/2999#) As ServerEichprozess() Implements IEichsoftwareWebservice.GetAlleEichprozesseImZeitraum
         Try
             ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
-            If PruefeLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
+            If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
             SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Hole alle Eichprozesse im Zeitraum")
 
             'neuen Context aufbauen
@@ -600,6 +600,143 @@ Public Class EichsoftwareWebservice
         End Try
     End Function
 
+
+
+    Public Function GetStandardwaagen(ByVal HEKennung As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As clsEichprozessFuerAuswahlliste() Implements IEichsoftwareWebservice.GetStandardwaagen
+        Try
+            Dim boldebug As Boolean = False ' debug logs schreiben
+            ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
+            If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
+
+
+            'neuen Context aufbauen
+            Using DbContext As New EichenSQLDatabaseEntities1
+
+                DbContext.Configuration.LazyLoadingEnabled = False
+                DbContext.Configuration.ProxyCreationEnabled = False
+                Try
+                    Dim Query = From Eichprozess In DbContext.ServerEichprozess.Include("ServerLookup_Waegezelle") Where Eichprozess.Standardwaage = True _
+                            Join Lookup In DbContext.ServerLookup_Vorgangsstatus On Eichprozess.FK_Vorgangsstatus Equals Lookup.ID _
+                            Join Lookup2 In DbContext.ServerLookup_Bearbeitungsstatus On Eichprozess.FK_Bearbeitungsstatus Equals Lookup2.ID _
+                                                 Select New With _
+               { _
+                    Eichprozess.ID, _
+                    .Status = Lookup.Status, _
+                                Eichprozess.Vorgangsnummer, _
+                                .Fabriknummer = Eichprozess.ServerKompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer, _
+                     .Pruefscheinnummer = Eichprozess.ServerEichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer, _
+                                .Lookup_Waegezelle = Eichprozess.ServerLookup_Waegezelle.Typ, _
+                                .Lookup_Waagentyp = Eichprozess.ServerLookup_Waagentyp.Typ, _
+                                .Lookup_Waagenart = Eichprozess.ServerLookup_Waagenart.Art, _
+                                .Lookup_Auswertegeraet = Eichprozess.ServerLookup_Auswertegeraet.Typ, _
+                             .Uploaddatum = Eichprozess.UploadDatum
+                                 }
+
+
+
+                    Dim ReturnList As New List(Of clsEichprozessFuerAuswahlliste)
+
+                    'Wrapper für die KLasse. Problematischer Weise kann man keine anoynmen Typen zurückgeben. Deswegen gibt es die behilfsklasse clsEichprozessFuerAuswahlliste.
+                    'Diese hat exakt die Eigenschaften die benötigt werden und zusammengesetzt aus der Status Tabelle und dem Eichprozess zusammengebaut wird
+
+                    Dim counter As Integer = 1
+                    For Each objeichprozess In Query
+                        Try
+                            If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Durchlauf: " & counter)
+                            counter += 1
+
+                            Try
+                                If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 1")
+
+
+                                Dim objReturn As New clsEichprozessFuerAuswahlliste
+
+                                objReturn.ID = objeichprozess.ID
+                                If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 2")
+
+                                If Not objeichprozess.Lookup_Auswertegeraet Is Nothing Then
+                                    objReturn.AWG = objeichprozess.Lookup_Auswertegeraet
+                                End If
+                                If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 3")
+
+                                If Not objeichprozess.Fabriknummer Is Nothing Then
+                                    objReturn.Fabriknummer = objeichprozess.Fabriknummer
+                                End If
+                                If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 4")
+
+                                If Not objeichprozess.Vorgangsnummer Is Nothing Then
+                                    objReturn.Vorgangsnummer = objeichprozess.Vorgangsnummer
+                                End If
+                                If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 5")
+
+                                If Not objeichprozess.Lookup_Waagenart Is Nothing Then
+                                    objReturn.Waagenart = objeichprozess.Lookup_Waagenart
+                                End If
+                                If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 6")
+
+                                If Not objeichprozess.Lookup_Waagentyp Is Nothing Then
+                                    objReturn.Waagentyp = objeichprozess.Lookup_Waagentyp
+                                End If
+                                If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 7")
+
+                                If Not objeichprozess.Lookup_Waegezelle Is Nothing Then
+                                    objReturn.WZ = objeichprozess.Lookup_Waegezelle
+                                End If
+                                If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 8")
+
+                                If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 9")
+
+
+                                If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 10")
+
+
+                                If Not objeichprozess.Pruefscheinnummer Is Nothing Then
+                                    objReturn.Pruefscheinnummer = objeichprozess.Pruefscheinnummer
+                                End If
+
+                                If Not objeichprozess.Uploaddatum Is Nothing Then
+                                    objReturn.Uploaddatum = objeichprozess.Uploaddatum
+                                End If
+                                If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 11")
+
+
+
+                                '   Dim ModelArtikel As New Model.clsArtikel(objArtikel.Id, objArtikel.HEKennung, objArtikel.Beschreibung, objArtikel.Preis, objArtikel.ErstellDatum)
+                                ReturnList.Add(objReturn)
+                            Catch ex As Exception
+                                SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
+                            End Try
+                        Catch ex As Exception
+                            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten bei Durchlauf : " & counter & " " & ex.Message & ex.StackTrace)
+
+                        End Try
+                    Next
+
+                    If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG Returnlist Count:" & ReturnList.Count)
+
+                    'ergebnismenge zurückgeben
+                    If Not ReturnList.Count = 0 Then
+                        Return ReturnList.ToArray
+                    Else
+                        'es gibt keine neuerungen
+                        Return Nothing
+                    End If
+
+                Catch ex As Exception
+                    SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
+
+                    'hat nicht funktioniert
+                    Return Nothing
+                End Try
+            End Using
+        Catch ex As Exception
+
+            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
+
+            Return Nothing
+        End Try
+    End Function
+
     ''' <summary>
     ''' Holt alle Eichprozesse als Datatable für RHEWA ansicht aller Eichprozesse
     ''' </summary>
@@ -614,7 +751,7 @@ Public Class EichsoftwareWebservice
         Try
             Dim boldebug As Boolean = False ' debug logs schreiben
             ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
-            If PruefeLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
+            If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
             SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Hole alle Eichprozesse")
 
             'neuen Context aufbauen
@@ -669,93 +806,93 @@ Public Class EichsoftwareWebservice
                     For Each objeichprozess In Query
                         Try
 
-                    
-                        If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Durchlauf: " & counter)
-                        counter += 1
+
+                            If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Durchlauf: " & counter)
+                            counter += 1
 
 
-                        Try
-                            If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 1")
+                            Try
+                                If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 1")
 
 
-                            Dim objReturn As New clsEichprozessFuerAuswahlliste
+                                Dim objReturn As New clsEichprozessFuerAuswahlliste
 
-                            objReturn.ID = objeichprozess.ID
-                            If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 2")
+                                objReturn.ID = objeichprozess.ID
+                                If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 2")
 
-                            If Not objeichprozess.Lookup_Auswertegeraet Is Nothing Then
-                                objReturn.AWG = objeichprozess.Lookup_Auswertegeraet
-                            End If
-                            If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 3")
+                                If Not objeichprozess.Lookup_Auswertegeraet Is Nothing Then
+                                    objReturn.AWG = objeichprozess.Lookup_Auswertegeraet
+                                End If
+                                If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 3")
 
-                            If Not objeichprozess.Fabriknummer Is Nothing Then
-                                objReturn.Fabriknummer = objeichprozess.Fabriknummer
-                            End If
-                            If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 4")
+                                If Not objeichprozess.Fabriknummer Is Nothing Then
+                                    objReturn.Fabriknummer = objeichprozess.Fabriknummer
+                                End If
+                                If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 4")
 
-                            If Not objeichprozess.Vorgangsnummer Is Nothing Then
-                                objReturn.Vorgangsnummer = objeichprozess.Vorgangsnummer
-                            End If
-                            If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 5")
+                                If Not objeichprozess.Vorgangsnummer Is Nothing Then
+                                    objReturn.Vorgangsnummer = objeichprozess.Vorgangsnummer
+                                End If
+                                If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 5")
 
-                            If Not objeichprozess.Lookup_Waagenart Is Nothing Then
-                                objReturn.Waagenart = objeichprozess.Lookup_Waagenart
-                            End If
-                            If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 6")
+                                If Not objeichprozess.Lookup_Waagenart Is Nothing Then
+                                    objReturn.Waagenart = objeichprozess.Lookup_Waagenart
+                                End If
+                                If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 6")
 
-                            If Not objeichprozess.Lookup_Waagentyp Is Nothing Then
-                                objReturn.Waagentyp = objeichprozess.Lookup_Waagentyp
-                            End If
-                            If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 7")
+                                If Not objeichprozess.Lookup_Waagentyp Is Nothing Then
+                                    objReturn.Waagentyp = objeichprozess.Lookup_Waagentyp
+                                End If
+                                If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 7")
 
-                            If Not objeichprozess.Lookup_Waegezelle Is Nothing Then
-                                objReturn.WZ = objeichprozess.Lookup_Waegezelle
-                            End If
-                            If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 8")
+                                If Not objeichprozess.Lookup_Waegezelle Is Nothing Then
+                                    objReturn.WZ = objeichprozess.Lookup_Waegezelle
+                                End If
+                                If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 8")
 
-                            If Not objeichprozess.Sachbearbeiter Is Nothing Then
-                                objReturn.Eichbevollmaechtigter = objeichprozess.Sachbearbeiter
-                            End If
-                            If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 9")
+                                If Not objeichprozess.Sachbearbeiter Is Nothing Then
+                                    objReturn.Eichbevollmaechtigter = objeichprozess.Sachbearbeiter
+                                End If
+                                If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 9")
 
-                            If Not objeichprozess.Bearbeitungsstatus Is Nothing Then
-                                objReturn.Bearbeitungsstatus = objeichprozess.Bearbeitungsstatus
-                            End If
-                            If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 10")
+                                If Not objeichprozess.Bearbeitungsstatus Is Nothing Then
+                                    objReturn.Bearbeitungsstatus = objeichprozess.Bearbeitungsstatus
+                                End If
+                                If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 10")
 
-                            If Not objeichprozess.ZurBearbeitungGesperrtDurch Is Nothing Then
-                                objReturn.GesperrtDurch = objeichprozess.ZurBearbeitungGesperrtDurch
-                            End If
+                                If Not objeichprozess.ZurBearbeitungGesperrtDurch Is Nothing Then
+                                    objReturn.GesperrtDurch = objeichprozess.ZurBearbeitungGesperrtDurch
+                                End If
 
                                 If Not objeichprozess.Pruefscheinnummer Is Nothing Then
                                     objReturn.Pruefscheinnummer = objeichprozess.Pruefscheinnummer
                                 End If
 
 
-                            If Not objeichprozess.Uploaddatum Is Nothing Then
-                                objReturn.Uploaddatum = objeichprozess.Uploaddatum
-                            End If
-                            If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 11")
+                                If Not objeichprozess.Uploaddatum Is Nothing Then
+                                    objReturn.Uploaddatum = objeichprozess.Uploaddatum
+                                End If
+                                If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 11")
 
-                            Try
-                                objReturn.NeueWZ = objeichprozess.NeuWZ
-                            Catch ex As Exception
-                                If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
-                            End Try
+                                Try
+                                    objReturn.NeueWZ = objeichprozess.NeuWZ
+                                Catch ex As Exception
+                                    If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
+                                End Try
 
-                            If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 12")
+                                If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 12")
 
-                            'dateipfad zusammenbauen
-                            If Not objeichprozess.Anhangpfad Is Nothing Then
-                                If Not objeichprozess.Anhangpfad.Trim.Equals("") Then
-                                    If lokalerPfadFuerAnhaenge.EndsWith("\") Then
-                                        objReturn.AnhangPfad = lokalerPfadFuerAnhaenge & objeichprozess.Anhangpfad
-                                    Else
-                                        objReturn.AnhangPfad = lokalerPfadFuerAnhaenge & "\" & objeichprozess.Anhangpfad
+                                'dateipfad zusammenbauen
+                                If Not objeichprozess.Anhangpfad Is Nothing Then
+                                    If Not objeichprozess.Anhangpfad.Trim.Equals("") Then
+                                        If lokalerPfadFuerAnhaenge.EndsWith("\") Then
+                                            objReturn.AnhangPfad = lokalerPfadFuerAnhaenge & objeichprozess.Anhangpfad
+                                        Else
+                                            objReturn.AnhangPfad = lokalerPfadFuerAnhaenge & "\" & objeichprozess.Anhangpfad
+                                        End If
                                     End If
                                 End If
-                            End If
-                            '   Dim ModelArtikel As New Model.clsArtikel(objArtikel.Id, objArtikel.HEKennung, objArtikel.Beschreibung, objArtikel.Preis, objArtikel.ErstellDatum)
+                                '   Dim ModelArtikel As New Model.clsArtikel(objArtikel.Id, objArtikel.HEKennung, objArtikel.Beschreibung, objArtikel.Preis, objArtikel.ErstellDatum)
                                 ReturnList.Add(objReturn)
                             Catch ex As Exception
                                 SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
@@ -806,7 +943,7 @@ Public Class EichsoftwareWebservice
     ''' <remarks></remarks>
     Public Function GetNeueWZ(ByVal HEKennung As String, Lizenzschluessel As String, ByVal LetztesUpdate As Date, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, Optional ByVal SyncAllesSeit As Date = #1/1/2000#, Optional ByVal SyncAllesBis As Date = #12/31/2999#) As ServerLookup_Waegezelle() Implements IEichsoftwareWebservice.GetNeueWZ
         ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
-        If PruefeLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
+        If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
         SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Hole WZ")
 
 
@@ -886,7 +1023,7 @@ Public Class EichsoftwareWebservice
     ''' <remarks></remarks>
     Public Function GetNeuesAWG(ByVal HEKennung As String, Lizenzschluessel As String, ByVal LetztesUpdate As Date, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, Optional ByVal SyncAllesSeit As Date = #1/1/2000#, Optional ByVal SyncAllesBis As Date = #12/31/2999#) As ServerLookup_Auswertegeraet() Implements IEichsoftwareWebservice.GetNeuesAWG
         ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
-        If PruefeLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
+        If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
         SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Hole AWG")
 
         Using DBContext As New EichenSQLDatabaseEntities1
@@ -964,7 +1101,7 @@ Public Class EichsoftwareWebservice
     Public Function AddEichmarkenverwaltung(ByVal HEKennung As String, Lizenzschluessel As String, ByVal BenutzerIDFK As String, ByVal AnzahlBenannteStelle As Integer, ByVal AnzahlEichsiegel13x13 As Integer, _
                                             ByVal AnzahlEichsiegelRund As Integer, ByVal AnzahlHinweismarke As Integer, ByVal AnzahlGruenesM As Integer, ByVal AnzahlCE As Integer, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements IEichsoftwareWebservice.AddEichmarkenverwaltung
         ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
-        If PruefeLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
+        If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
         SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Aktualisiere Eichmarkenverwaltung")
         'FK_Benutzer und HEKennung sind eigentlich doppelt. Es stört aber auch nicht.
         Try
@@ -1026,11 +1163,11 @@ Public Class EichsoftwareWebservice
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    Public Function CheckGueltigkeitEichprozess(ByVal HEKennung As String, Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As String Implements IEichsoftwareWebservice.CheckGueltigkeitEichprozess
+    Public Function GetGueltigkeitEichprozess(ByVal HEKennung As String, Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As String Implements IEichsoftwareWebservice.CheckGueltigkeitEichprozess
         'da die ID im Server von der im Client abweichen kann wird hier mit der Vorgangsnummer gearbeitet die pro Prozess Eindeutig generiert wrid
         Try
             ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
-            If PruefeLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
+            If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
             SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Prüfe gültigkeit des Eichprozesses")
 
 
@@ -1083,7 +1220,7 @@ Public Class EichsoftwareWebservice
     Public Function SetEichprozessUngueltig(ByVal HEKennung As String, Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements IEichsoftwareWebservice.SetEichprozessUngueltig
         Try
             ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
-            If PruefeLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
+            If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
             SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Setze Konformitätsbewertungsprozess auf ungültig")
 
             'neuen Context aufbauen
@@ -1137,7 +1274,7 @@ Public Class EichsoftwareWebservice
     Public Function SetEichprozessgenehmigt(ByVal HEKennung As String, Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements IEichsoftwareWebservice.SetEichprozessGenehmight
         Try
             ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
-            If PruefeLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
+            If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
             SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Setze Konformitätsbewertungsprozess auf gültig")
 
             'neuen Context aufbauen
@@ -1188,10 +1325,10 @@ Public Class EichsoftwareWebservice
     ''' <param name="Computername"></param>
     ''' <returns>WindowsUsername des Sperrers wenn gesperrt</returns>
     ''' <remarks></remarks>
-    Function CheckSperrung(ByVal HEKennung As String, Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As String Implements IEichsoftwareWebservice.CheckSperrung
+    Function GetSperrung(ByVal HEKennung As String, Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As String Implements IEichsoftwareWebservice.CheckSperrung
         Try
             ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
-            If PruefeLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
+            If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
             SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Prüfe Sperrung")
 
             'neuen Context aufbauen
@@ -1269,7 +1406,7 @@ Public Class EichsoftwareWebservice
     Function SetSperrung(ByVal bolSperren As Boolean, ByVal HEKennung As String, Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As String Implements IEichsoftwareWebservice.SetSperrung
         Try
             ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
-            If PruefeLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
+            If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
             SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Setze Sperrung auf: " & bolSperren)
 
             'neuen Context aufbauen

@@ -528,7 +528,40 @@ Public Class clsWebserviceFunctions
         End Try
     End Function
 
-    Public Shared Function GetLokaleKopieVonEichprozess(ByVal Vorgangsnummer As String) As Eichprozess
+    Public Shared Function GetServerStandardwaagen() As EichsoftwareWebservice.clsEichprozessFuerAuswahlliste()
+        Try
+            'neuen Context aufbauen
+            Using WebContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
+                Try
+                    WebContext.Open()
+                Catch ex As Exception
+                    Return Nothing
+                End Try
+
+                Try
+                    Dim data = WebContext.GetStandardwaagen(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                    Return data
+                Catch ex As Exception
+                    MessageBox.Show(ex.Message)
+                    If Debugger.IsAttached Then
+                        MessageBox.Show(ex.StackTrace)
+                        MessageBox.Show(ex.InnerException.Message)
+                        MessageBox.Show(ex.InnerException.StackTrace)
+                        MessageBox.Show(ex.InnerException.InnerException.Message)
+                        MessageBox.Show(ex.InnerException.InnerException.StackTrace)
+                    End If
+                    Return Nothing
+                End Try
+            End Using
+        Catch ex As ServiceModel.EndpointNotFoundException
+            MessageBox.Show("Keine Verbindung zum Stratoserver möglich")
+            Return Nothing
+        Catch ex As Exception
+            Return Nothing
+        End Try
+    End Function
+
+    Public Shared Function GetLokaleKopieVonEichprozess(ByVal Vorgangsnummer As String, ByVal NeueFabriknummer As String) As Eichprozess
         Dim objServerEichprozess As EichsoftwareWebservice.ServerEichprozess = Nothing
         Dim objClientEichprozess As Eichprozess = Nothing
         'neue Datenbankverbindung
@@ -561,6 +594,100 @@ Public Class clsWebserviceFunctions
                     objClientEichprozess.Vorgangsnummer = Guid.NewGuid.ToString
                     objClientEichprozess.FK_Bearbeitungsstatus = 4 'noch nichts
                     objClientEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
+
+                    'standardwaaeg zur identifizierung des verkürrtzten Prozesses setzen
+                    objClientEichprozess.AusStandardwaageErzeugt = True
+                    'neue Fabriknummer
+                    objClientEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer = NeueFabriknummer
+                    'Prüfscheinnummer leeren
+                    objClientEichprozess.Eichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer = ""
+                    'Außermittige Belastung Leeren
+                    objClientEichprozess.Eichprotokoll.PruefungAussermittigeBelastung.Clear()
+                    'Genauigkeit Nullstellung leeren
+                    objClientEichprozess.Eichprotokoll.GenauigkeitNullstellung_InOrdnung = False
+                    'Prüfung Linearität leeren
+                    objClientEichprozess.Eichprotokoll.PruefungLinearitaetFallend.Clear()
+                    objClientEichprozess.Eichprotokoll.PruefungLinearitaetSteigend.Clear()
+                    'Überlastanzeige leeren
+                    objClientEichprozess.Eichprotokoll.Ueberlastanzeige_Ueberlast = False
+                    'Fallbeschleunigung wird geleert
+
+                    objClientEichprozess.Eichprotokoll.Fallbeschleunigung_ms2 = False
+
+
+                    dbcontext.Eichprozess.Add(objClientEichprozess)
+
+                    Try
+                        dbcontext.SaveChanges()
+                    Catch ex As Entity.Infrastructure.DbUpdateException
+                        MessageBox.Show(ex.InnerException.InnerException.Message)
+                        MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_SpeicherAnomalie, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK)
+                        If AktuellerBenutzer.Instance.Lizenz.RHEWALizenz Then
+                            MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_SpeicherAnomalieRhewaZusatztext, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK)
+                        End If
+
+                        Return Nothing
+                    Catch ex2 As Entity.Validation.DbEntityValidationException
+                        For Each o In ex2.EntityValidationErrors
+                            For Each v In o.ValidationErrors
+                                MessageBox.Show(v.ErrorMessage & " " & v.PropertyName)
+                            Next
+                        Next
+                        Return Nothing
+                    End Try
+
+                    Return objClientEichprozess
+
+                Catch ex As Exception
+                    Return Nothing
+                End Try
+            End Using
+        End Using
+
+    End Function
+
+
+    ''' <summary>
+    ''' erzeugt 1:1 kopie von Serverobjekt in lokaler DB. wird nicht mehr benötigt, da der kopiervorgang nun verschärft wurde und keine 1:1 kopie mehr erzeugt werden darf.
+    ''' </summary>
+    ''' <param name="Vorgangsnummer"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Public Shared Function old_GetLokaleKopieVonEichprozess(ByVal Vorgangsnummer As String) As Eichprozess
+        Dim objServerEichprozess As EichsoftwareWebservice.ServerEichprozess = Nothing
+        Dim objClientEichprozess As Eichprozess = Nothing
+        'neue Datenbankverbindung
+        Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
+            Try
+                webContext.Open()
+
+
+            Catch ex As Exception
+                MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Return Nothing
+            End Try
+            Using dbcontext As New EichsoftwareClientdatabaseEntities1
+                Try
+
+
+
+                    objClientEichprozess = dbcontext.Eichprozess.Create
+                    objServerEichprozess = webContext.GetEichProzess(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+
+
+                    If objServerEichprozess Is Nothing Then
+                        MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_KeinServerObjektEichung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    End If
+
+                    'umwandeln des Serverobjektes in Clientobject
+                    clsClientServerConversionFunctions.CopyClientObjectPropertiesWithNewIDs(objClientEichprozess, objServerEichprozess)
+
+                    'vorgangsnummer editieren
+                    objClientEichprozess.Vorgangsnummer = Guid.NewGuid.ToString
+                    objClientEichprozess.FK_Bearbeitungsstatus = 4 'noch nichts
+                    objClientEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
+
+
                     dbcontext.Eichprozess.Add(objClientEichprozess)
 
                     Try

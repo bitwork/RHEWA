@@ -24,6 +24,7 @@ Partial Public Class Eichprozess
     Public Property UploadFilePath As String
     Public Property FK_Bearbeitungsstatus As Nullable(Of Integer)
     Public Property ErzeugerLizenz As String
+    Public Property AusStandardwaageErzeugt As Boolean
 
     Public Overridable Property Eichprotokoll As Eichprotokoll
     Public Overridable Property Kompatiblitaetsnachweis As Kompatiblitaetsnachweis

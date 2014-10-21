@@ -117,8 +117,38 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="RadGridViewAuswahlliste.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadGridViewAuswahlliste.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadButtonNeuStandardwaage.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadButtonNeuStandardwaage.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadButtonEinstellungen.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadButtonEinstellungen.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadButtonClientUpdateDatabase.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadButtonClientUpdateDatabase.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
   <data name="RadButtonClientUpdateDatabase.Text" xml:space="preserve">
     <value>&lt;html&gt;Nach Updates&lt;br /&gt;suchen&lt;/html&gt;</value>
+  </data>
+  <data name="RadCheckBoxAusblendenClientGeloeschterDokumente.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxAusblendenClientGeloeschterDokumente.RootElement.ToolTipText" xml:space="preserve">
+    <value />
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="RadCheckBoxAusblendenClientGeloeschterDokumente.Size" type="System.Drawing.Size, System.Drawing">
@@ -128,30 +158,96 @@
     <value>&lt;html&gt;  Zuvor ausgeblendete &lt;br /&gt;  Eichvoränge anzeigen&lt;/html&gt;</value>
   </data>
   <data name="RadButtonClientAusblenden.Location" type="System.Drawing.Point, System.Drawing">
-    <value>414, 410</value>
+    <value>393, 410</value>
   </data>
-  <data name="RadButtonClientAusblenden.Size" type="System.Drawing.Size, System.Drawing">
-    <value>174, 63</value>
+  <data name="RadButtonClientAusblenden.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadButtonClientAusblenden.RootElement.ToolTipText" xml:space="preserve">
+    <value />
   </data>
   <data name="RadButtonClientAusblenden.Text" xml:space="preserve">
     <value>Vorgang ausblenden</value>
   </data>
   <data name="RadButtonClientNeu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>774, 410</value>
+    <value>753, 410</value>
+  </data>
+  <data name="RadButtonClientNeu.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadButtonClientNeu.RootElement.ToolTipText" xml:space="preserve">
+    <value />
   </data>
   <data name="RadButtonClientNeu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>174, 63</value>
+    <value>96, 63</value>
   </data>
   <data name="RadButtonClientNeu.Text" xml:space="preserve">
-    <value>Vorgang erstellen</value>
+    <value>&lt;html&gt;&lt;p&gt;Vorgang&lt;/p&gt;&lt;p&gt;erstellen&lt;/p&gt;&lt;/html&gt;</value>
+  </data>
+  <data name="RadButtonClientNeu.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
   <data name="RadButtonClientBearbeiten.Location" type="System.Drawing.Point, System.Drawing">
-    <value>594, 410</value>
+    <value>573, 410</value>
   </data>
-  <data name="RadButtonClientBearbeiten.Size" type="System.Drawing.Size, System.Drawing">
-    <value>174, 63</value>
+  <data name="RadButtonClientBearbeiten.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadButtonClientBearbeiten.RootElement.ToolTipText" xml:space="preserve">
+    <value />
   </data>
   <data name="RadButtonClientBearbeiten.Text" xml:space="preserve">
     <value>Vorgang bearbeiten</value>
+  </data>
+  <data name="RadButtonRefresh.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadButtonRefresh.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadProgressBar.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadProgressBar.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadButtonEichprozessKopierenRHEWA.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadButtonEichprozessKopierenRHEWA.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadButtonEichprozessAblehnenRHEWA.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadButtonEichprozessAblehnenRHEWA.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadButtonEichprozessGenehmigenRHEWA.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadButtonEichprozessGenehmigenRHEWA.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadGridViewRHEWAAlle.MasterTemplate.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadGridViewRHEWAAlle.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadGridViewRHEWAAlle.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadButtonEichungAnsehenRHEWA.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadButtonEichungAnsehenRHEWA.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadPageView1.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadPageView1.RootElement.ToolTipText" xml:space="preserve">
+    <value />
   </data>
 </root>
