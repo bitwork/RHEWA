@@ -5,10 +5,13 @@
     End Sub
 
     Private Sub LoadStandardwagen()
+        'laden der Daten vom Webservice
         Dim datasource = clsWebserviceFunctions.GetServerStandardwaagen
+        'databinding
         RadGridViewStandardwaagen.DataSource = datasource
         RadGridViewStandardwaagen.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
 
+        'formatierung des Grids
         RadGridViewStandardwaagen.Columns("ID").IsVisible = False
         RadGridViewStandardwaagen.Columns("Vorgangsnummer").IsVisible = False
         RadGridViewStandardwaagen.Columns("Bearbeitungsstatus").IsVisible = False
@@ -30,6 +33,10 @@
         StandardwaageDeklarieren()
     End Sub
 
+    ''' <summary>
+    ''' markiert / entfernt Flag zur Deklaration einer Standardwaage eines Vorgangs 
+    ''' </summary>
+    ''' <remarks></remarks>
     Private Sub StandardwaageDeklarieren()
         If Not RadGridViewStandardwaagen.Rows.Count = 0 Then
             If Not RadGridViewStandardwaagen.SelectedRows(0) Is Nothing Then
@@ -43,15 +50,11 @@
 
                         'holen einer lokalen Kopie des Server eichprozesses
                         Dim objClientEichprozess = clsWebserviceFunctions.GetLokaleKopieVonEichprozess(ID, Fabriknummer)
-                        ''leeren von Feldern, die bei einer Standardwaage nicht mehr gefüllt sein dürfen
-                        'clsClientServerConversionFunctions.BereinigungFuerStandardwaage(objClientEichprozess, Fabriknummer)
-
                         If Not objClientEichprozess Is Nothing Then
                             'anzeigen des Dialogs zur Bearbeitung der Eichung
                             Dim f As New FrmMainContainer(objClientEichprozess)
                             f.ShowDialog()
                             'nach dem schließen des Dialogs aktualisieren
-
                             Me.Close()
                         End If
                     End If

@@ -24,11 +24,8 @@ Public Class clsWebserviceFunctions
                 Return webContext.Test
             End Using
         Catch ex As Exception
-            'MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
-            'MessageBox.Show(ex.Message, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Return False
+           Return False
         End Try
-
         Return True
     End Function
 
@@ -44,7 +41,7 @@ Public Class clsWebserviceFunctions
                 Try
                     webContext.Open()
                 Catch ex As Exception
-                    Exit Function
+                    Return False
                 End Try
                 Using DBContext As New EichsoftwareClientdatabaseEntities1
                     'lizenzisierung holen
@@ -73,16 +70,11 @@ Public Class clsWebserviceFunctions
                     DBContext.SaveChanges()
                     Return True
 
-
-
                 End Using
             End Using
         Catch ex As Exception
-
+            Return False
         End Try
-
-
-
     End Function
 
     ''' <summary>
@@ -92,8 +84,6 @@ Public Class clsWebserviceFunctions
     ''' <remarks></remarks>
     Public Shared Sub GetNeueWZ(ByRef bolNeuWZ As Boolean)
         Try
-
-
             'abrufen neuer WZ aus Server, basierend auf dem Wert des letzten erfolgreichen updates
             Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
                 Try
@@ -198,13 +188,12 @@ Public Class clsWebserviceFunctions
                     Try
                         DBContext.SaveChanges()
                     Catch ex As Exception
-
                         MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
                     End Try
                 End Using
             End Using
         Catch ex As Exception
-
+            MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
@@ -215,7 +204,6 @@ Public Class clsWebserviceFunctions
     ''' <remarks></remarks>
     Public Shared Sub GetNeuesAWG(ByRef bolNeuAWG As Boolean)
         Try
-
             'abrufen neuer WZ aus Server, basierend auf dem Wert des letzten erfolgreichen updates
             Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
                 Try
@@ -239,11 +227,7 @@ Public Class clsWebserviceFunctions
                         AktuellerBenutzer.SaveSettings()
                     End If
 
-
-
-
                     Dim objAWGResultList = webContext.GetNeuesAWG(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, AktuellerBenutzer.Instance.LetztesUpdate, My.User.Name, System.Environment.UserDomainName, My.Computer.Name, StartDatum, EndDatum)
-
                     If Not objAWGResultList Is Nothing Then
 
                         'alle neuen Artikel aus Server iterieren
@@ -276,26 +260,20 @@ Public Class clsWebserviceFunctions
                                 newAWG.Speisespannung = objServerArtikel._Speisespannung
                                 newAWG.Typ = objServerArtikel._Typ
                                 newAWG.Deaktiviert = objServerArtikel._Deaktiviert
-
                                 newAWG.TaraeinrichtungHalbSelbsttaetig = objServerArtikel._TaraeinrichtungHalbSelbsttaetig
                                 newAWG.TaraeinrichtungSelbsttaetig = objServerArtikel._TaraeinrichtungSelbsttaetig
                                 newAWG.TaraeinrichtungTaraeingabe = objServerArtikel._TaraeinrichtungTaraeingabe
-
                                 newAWG.NullstellungHalbSelbsttaetig = objServerArtikel._NullstellungHalbSelbsttaetig
                                 newAWG.NullstellungSelbsttaetig = objServerArtikel._NullstellungSelbsttaetig
                                 newAWG.NullstellungNullnachfuehrung = objServerArtikel._NullstellungNullnachfuehrung
 
-
                                 'hinzufügen des neu erzeugten Artikels in Lokale Datenbank
-
                                 DBContext.Lookup_Auswertegeraet.Add(newAWG)
                                 DBContext.SaveChanges()
                                 bolNeuAWG = True
 
-
                             Else 'Es gibt den Artikel bereits, er wird geupdated
                                 For Each objAWG As Lookup_Auswertegeraet In query 'es sollte nur einen Artikel Geben, da die IDs eindeutig sind.
-
                                     objAWG.Bauartzulassung = objServerArtikel._Bauartzulassung
                                     objAWG.BruchteilEichfehlergrenze = objServerArtikel._BruchteilEichfehlergrenze
                                     objAWG.Genauigkeitsklasse = objServerArtikel._Genauigkeitsklasse
@@ -318,14 +296,11 @@ Public Class clsWebserviceFunctions
                                     objAWG.NullstellungHalbSelbsttaetig = objServerArtikel._NullstellungHalbSelbsttaetig
                                     objAWG.NullstellungSelbsttaetig = objServerArtikel._NullstellungSelbsttaetig
                                     objAWG.NullstellungNullnachfuehrung = objServerArtikel._NullstellungNullnachfuehrung
-
                                     objAWG.Deaktiviert = objServerArtikel._Deaktiviert
-
                                     bolNeuAWG = True
                                 Next
                             End If
                         Next
-
                     End If
 
                     Try
@@ -374,10 +349,7 @@ Public Class clsWebserviceFunctions
                                     'wenn es eine Änderung gab, wird das geänderte Objekt vom Server abgerufen. Damit können änderungen die von einem RHEWA Mitarbeiter durchgeführt wurden übernommen werden
                                     '###################
                                     'neue Datenbankverbindung
-
                                     Dim objServerEichprozess = webContext.GetEichProzess(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, Eichprozess.Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
-
-
                                     If objServerEichprozess Is Nothing Then
                                         MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_KeinServerObjektEichung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
                                     End If
@@ -399,10 +371,8 @@ Public Class clsWebserviceFunctions
                                             Next
                                         Next
                                     End Try
-
+                                    'Methode welche alle N:1 Verbindungen auf einen Eichprozess entfernt und mit neuen Werten neu anlegt. (Es koennen z.b. neue Pruefstaffeln eingetragen worden sein, somit ist es einfacher alles zu löschen und neu anzulegen als zu updaten)
                                     clsClientServerConversionFunctions.UpdateForeignTables(Eichprozess, objServerEichprozess)
-
-
                                 End If
                             End If
                         Catch ex As Exception
@@ -424,7 +394,6 @@ Public Class clsWebserviceFunctions
     ''' <remarks></remarks>
     Public Shared Sub GetEichprotokolleVomServer()
         Try
-
             'abrufen des Statusts für jeden versendeten Eichprozess
             Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
                 Try
@@ -453,8 +422,6 @@ Public Class clsWebserviceFunctions
                         'wenn es eine Änderung gab, wird das geänderte Objekt vom Server abgerufen. Damit können änderungen die von einem RHEWA Mitarbeiter durchgeführt wurden übernommen werden
                         'neue Datenbankverbindung
                         Dim objServerEichprozesse = webContext.GetAlleEichprozesseImZeitraum(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, My.User.Name, System.Environment.UserDomainName, My.Computer.Name, StartDatum, EndDatum)
-
-
                         If objServerEichprozesse Is Nothing Then
                             Exit Sub
                             'MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_KeinServerObjektEichung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -477,16 +444,11 @@ Public Class clsWebserviceFunctions
                                     Next
                                 Next
                             End Try
-
-
                         Next
-
-
                     Catch ex As Exception
                         MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_Speichern, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
                         MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
                     End Try
-
                 End Using
             End Using
 
@@ -494,7 +456,11 @@ Public Class clsWebserviceFunctions
             MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
-
+    ''' <summary>
+    ''' Methode welche Eichprozesse vom Server holt und die Daten in eine für das datagrid Bindbare Auflistung speichert.
+    ''' </summary>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
     Public Shared Function GetServerEichprotokollListe() As EichsoftwareWebservice.clsEichprozessFuerAuswahlliste()
         Try
             'neuen Context aufbauen
@@ -528,6 +494,11 @@ Public Class clsWebserviceFunctions
         End Try
     End Function
 
+    ''' <summary>
+    ''' Methode welche Eichprozesse vom Server holt, die als Standardwaage deklariert sind und die Daten in eine für das datagrid Bindbare Auflistung speichert.
+    ''' </summary>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
     Public Shared Function GetServerStandardwaagen() As EichsoftwareWebservice.clsEichprozessFuerAuswahlliste()
         Try
             'neuen Context aufbauen
@@ -561,6 +532,13 @@ Public Class clsWebserviceFunctions
         End Try
     End Function
 
+    ''' <summary>
+    ''' Lädt ein Serverobjekt anhand von Vorgangsnummer und erzeugt ein Clientobjet zur Verwendung.
+    ''' </summary>
+    ''' <param name="Vorgangsnummer"></param>
+    ''' <param name="NeueFabriknummer"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
     Public Shared Function GetLokaleKopieVonEichprozess(ByVal Vorgangsnummer As String, ByVal NeueFabriknummer As String) As Eichprozess
         Dim objServerEichprozess As EichsoftwareWebservice.ServerEichprozess = Nothing
         Dim objClientEichprozess As Eichprozess = Nothing
@@ -568,17 +546,12 @@ Public Class clsWebserviceFunctions
         Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
             Try
                 webContext.Open()
-
-
             Catch ex As Exception
                 MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Return Nothing
             End Try
             Using dbcontext As New EichsoftwareClientdatabaseEntities1
                 Try
-
-
-
                     objClientEichprozess = dbcontext.Eichprozess.Create
                     objServerEichprozess = webContext.GetEichProzess(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
 
@@ -611,10 +584,9 @@ Public Class clsWebserviceFunctions
                     'Überlastanzeige leeren
                     objClientEichprozess.Eichprotokoll.Ueberlastanzeige_Ueberlast = False
                     'Fallbeschleunigung wird geleert
-
                     objClientEichprozess.Eichprotokoll.Fallbeschleunigung_ms2 = False
 
-
+                    'hinufügen zur Lokalen DB
                     dbcontext.Eichprozess.Add(objClientEichprozess)
 
                     Try
@@ -636,6 +608,7 @@ Public Class clsWebserviceFunctions
                         Return Nothing
                     End Try
 
+                    'rückgabe 
                     Return objClientEichprozess
 
                 Catch ex As Exception
@@ -643,7 +616,6 @@ Public Class clsWebserviceFunctions
                 End Try
             End Using
         End Using
-
     End Function
 
 
@@ -660,17 +632,12 @@ Public Class clsWebserviceFunctions
         Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
             Try
                 webContext.Open()
-
-
             Catch ex As Exception
                 MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Return Nothing
             End Try
             Using dbcontext As New EichsoftwareClientdatabaseEntities1
                 Try
-
-
-
                     objClientEichprozess = dbcontext.Eichprozess.Create
                     objServerEichprozess = webContext.GetEichProzess(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
 
@@ -719,6 +686,12 @@ Public Class clsWebserviceFunctions
 
     End Function
 
+    ''' <summary>
+    ''' genehmigt Eichprozess anhand von Vorgangsnummer auf dem Server
+    ''' </summary>
+    ''' <param name="Vorgangsnummer"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
     Public Shared Function GenehmigeEichprozess(ByVal Vorgangsnummer As String)
         Dim result As String = ""
         Dim Messagetext As String = ""
@@ -758,6 +731,12 @@ Public Class clsWebserviceFunctions
         Return False
     End Function
 
+    ''' <summary>
+    '''  lehnt Eichprozess ab, anhand von Vorgangsnummer auf dem Server
+    ''' </summary>
+    ''' <param name="Vorgangsnummer"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
     Public Shared Function AblehnenEichprozess(ByVal Vorgangsnummer As String) As Boolean
         Dim result As String = ""
         Dim bolSetUnueltig As Boolean = True 'variable zum abbrechen des Prozesses, falls jemand anderes an dem DS arbeitet
@@ -795,7 +774,12 @@ Public Class clsWebserviceFunctions
         Return False
     End Function
 
-
+    ''' <summary>
+    ''' lädt serverobjekt herunter ohne es in der lokalen DB zu speichern. So kann das in Memoryobjekt genutzt werden um es anzuschauen
+    ''' </summary>
+    ''' <param name="Vorgangsnummer"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
     Public Shared Function ZeigeServerEichprozess(ByVal Vorgangsnummer As String) As Eichprozess
         Dim objServerEichprozess As EichsoftwareWebservice.ServerEichprozess = Nothing
         Dim objClientEichprozess As Eichprozess = Nothing
@@ -803,8 +787,6 @@ Public Class clsWebserviceFunctions
         Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
             Try
                 webContext.Open()
-
-
             Catch ex As Exception
                 MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Return Nothing
@@ -812,15 +794,11 @@ Public Class clsWebserviceFunctions
 
             Using dbcontext As New EichsoftwareClientdatabaseEntities1
 
-
                 objClientEichprozess = dbcontext.Eichprozess.Create
                 objServerEichprozess = webContext.GetEichProzess(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
-
-
                 If objServerEichprozess Is Nothing Then
                     MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_KeinServerObjektEichung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
-
                 'umwandeln des Serverobjektes in Clientobject
                 clsClientServerConversionFunctions.CopyClientObjectPropertiesWithAllLookups(objClientEichprozess, objServerEichprozess)
                 clsClientServerConversionFunctions.GetLookupValuesServer(objClientEichprozess)
@@ -854,8 +832,6 @@ Public Class clsWebserviceFunctions
                 Return False
             End Try
 
-
-         
             'prüfen ob der datensatz von jemand anderem in Bearbeitung ist
            Messagetext = PruefeSperrung(EichprozessVorgangsnummer)
 
@@ -905,8 +881,6 @@ Public Class clsWebserviceFunctions
                     Return False
                 End Try
 
-
-               
                 Messagetext = webContext.CheckSperrung(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, EichprozessVorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
                 Return Messagetext
             End Using

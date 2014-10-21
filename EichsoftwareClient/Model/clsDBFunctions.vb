@@ -1,56 +1,56 @@
 ﻿Public Class clsDBFunctions
 
+    ' ''' <summary>
+    ' ''' DEBUG Funktion um Lizenzdialog aus Testzwecken zu überspringen
+    ' ''' </summary>
+    ' ''' <remarks></remarks>
+    'Public Shared Sub ForceActivation()
+    '    Try
+    '        Using DBContext As New EichsoftwareClientdatabaseEntities1
+    '            'prüfen ob die Lizenz gültig ist
+    '            Dim HEKennung As String = "tim"
+    '            Dim Schluessel As String = "Hill"
+
+
+    '            Dim objLic As New Lizensierung
+    '            objLic.HEKennung = HEKennung
+    '            objLic.Lizenzschluessel = Schluessel
+
+    '            objLic.RHEWALizenz = True
+
+    '            Try
+    '                'löschen der lokalen DB
+    '                For Each lic In DBContext.Lizensierung
+    '                    DBContext.Lizensierung.Remove(lic)
+    '                Next
+    '                DBContext.SaveChanges()
+    '            Catch ex As Exception
+    '            End Try
+    '            Try
+    '                'speichern in lokaler DB
+    '                DBContext.Lizensierung.Add(objLic)
+    '                DBContext.SaveChanges()
+    '            Catch ex As Exception
+    '            End Try
+
+
+    '            My.Settings.LetzterBenutzer = objLic.Lizenzschluessel
+    '            My.Settings.Save()
+    '            AktuellerBenutzer.Instance.Lizenz.RHEWALizenz = objLic.RHEWALizenz
+
+    '        End Using
+
+    '    Catch ex As Exception
+    '        MessageBox.Show(ex.Message, My.Resources.GlobaleLokalisierung.Fehler)
+
+    '    End Try
+    'End Sub
+
+
+
+
     ''' <summary>
-    ''' DEBUG Funktion um Lizenzdialog aus Testzwecken zu überspringen
-    ''' </summary>
-    ''' <remarks></remarks>
-    Public Shared Sub ForceActivation()
-        Try
-            Using DBContext As New EichsoftwareClientdatabaseEntities1
-                'prüfen ob die Lizenz gültig ist
-                Dim HEKennung As String = "tim"
-                Dim Schluessel As String = "Hill"
-
-
-                Dim objLic As New Lizensierung
-                objLic.HEKennung = HEKennung
-                objLic.Lizenzschluessel = Schluessel
-
-                objLic.RHEWALizenz = True
-
-                Try
-                    'löschen der lokalen DB
-                    For Each lic In DBContext.Lizensierung
-                        DBContext.Lizensierung.Remove(lic)
-                    Next
-                    DBContext.SaveChanges()
-                Catch ex As Exception
-                End Try
-                Try
-                    'speichern in lokaler DB
-                    DBContext.Lizensierung.Add(objLic)
-                    DBContext.SaveChanges()
-                Catch ex As Exception
-                End Try
-
-
-                My.Settings.LetzterBenutzer = objLic.Lizenzschluessel
-                My.Settings.Save()
-                AktuellerBenutzer.Instance.Lizenz.RHEWALizenz = objLic.RHEWALizenz
-
-            End Using
-
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, My.Resources.GlobaleLokalisierung.Fehler)
-
-        End Try
-    End Sub
-
-
-
-
-    ''' <summary>
-    '''  löscht lokale Datenbank, für resyncronisierung
+    '''  löscht lokale Datenbank, für resyncronisierung des aktuellen Benutzers
     ''' </summary>
     ''' <returns></returns>
     ''' <remarks></remarks>
@@ -180,12 +180,15 @@
         End Using
     End Function
 
+    ''' <summary>
+    ''' Holt Lizenzobjekt aus DB passend zum Lizenzschlüssel
+    ''' </summary>
+    ''' <param name="pLizenzschluessel"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
     Public Shared Function HoleLizenzObjekt(ByVal pLizenzschluessel As String) As Lizensierung
         Try
-
-   
-        Using context As New EichsoftwareClientdatabaseEntities1
-
+            Using context As New EichsoftwareClientdatabaseEntities1
                 Dim objLic = (From lizenz In context.Lizensierung Where lizenz.Lizenzschluessel = pLizenzschluessel)
                 Dim listLics As New List(Of Lizensierung)
                 listLics = objLic.ToList
@@ -197,7 +200,7 @@
                 End If
             End Using
         Catch ex As Exception
-
+            Return Nothing
         End Try
     End Function
 
@@ -218,6 +221,12 @@
         Return objEichprozess
     End Function
 
+    ''' <summary>
+    ''' Holt Eichprozess Objekt aus lokaler DB anhand von Vorgangsnummer
+    ''' </summary>
+    ''' <param name="Vorgangsnummer"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
     Public Shared Function HoleVorhandenenEichprozess(ByVal Vorgangsnummer As String) As Eichprozess
         Using Context As New EichsoftwareClientdatabaseEntities1
             Dim objEichprozess = (From Obj In Context.Eichprozess Select Obj Where Obj.Vorgangsnummer = Vorgangsnummer).FirstOrDefault 'firstor default um erstes element zurückzugeben das übereintrifft(bei ID Spalten sollte es eh nur 1 sein)
@@ -225,9 +234,14 @@
         End Using
     End Function
 
+    ''' <summary>
+    ''' Lädt alle Zusatztabellen zum Eichprozess Objekt aus DB. Wird verwendet wenn Lazy Loading deaktiviert wurde
+    ''' </summary>
+    ''' <param name="objEichprozess"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
     Public Shared Function HoleNachschlageListenFuerEichprozess(ByVal objEichprozess As Eichprozess) As Eichprozess
         Using Context As New EichsoftwareClientdatabaseEntities1
-            'es gibt ihn schon und er ist bereits abgeschickt. nur lesend öffnen
             objEichprozess = (From Obj In Context.Eichprozess.AsNoTracking.Include("Eichprotokoll") _
                               .Include("Lookup_Auswertegeraet").AsNoTracking _
                               .Include("Kompatiblitaetsnachweis").AsNoTracking _
@@ -251,6 +265,7 @@
         End Using
 
     End Function
+
     ' ''' <summary>
     ' ''' Erzeugt einen 1zu1 Kopie eines Objektes
     ' ''' </summary>
@@ -269,6 +284,12 @@
     '    Return newObject
     'End Function
 
+    ''' <summary>
+    ''' Setzt flag zum ausblenden / einblenden eines Vorgangs
+    ''' </summary>
+    ''' <param name="Vorgangsnummer"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
     Public Shared Function BlendeEichprozessAus(ByVal Vorgangsnummer As String) As Boolean
         Using context As New EichsoftwareClientdatabaseEntities1
             Dim objEichprozess = (From Obj In context.Eichprozess Select Obj Where Obj.Vorgangsnummer = Vorgangsnummer).FirstOrDefault 'firstor default um erstes element zurückzugeben

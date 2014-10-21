@@ -1,30 +1,36 @@
 ﻿Public Class clsGeneralFunctions
+    ' ''' <summary>
+    ' ''' Funktion zum Zählen von Nullstellen von einem übergebenen Wert
+    ' ''' </summary>
+    ' ''' <param name="value"></param>
+    ' ''' <returns></returns>
+    ' ''' <remarks></remarks>
+    'Public Shared Function CountDecimalDigits(value As String) As Integer
+    '    Dim possibleChars As Char() = "0123456789,".ToCharArray()
+    '    Dim decimalPoints As Integer = 0
+    '    For Each ch As Char In value
+    '        If Array.IndexOf(possibleChars, ch) < 0 Then
+    '            Throw New Exception()
+    '        End If
+    '        If ch = ","c Then
+    '            decimalPoints += 1
+    '        End If
+    '    Next
+    '    If decimalPoints > 1 Then
+    '        Throw New Exception()
+    '    End If
+    '    If decimalPoints = 0 Then
+    '        Return 0
+    '    End If
+    '    Return value.Length - value.IndexOf(","c) - 1
+    'End Function
+
     ''' <summary>
-    ''' Funktion zum Zählen von Nullstellen von einem übergebenen Wert
+    ''' Methode zum ermitteln der anzahl der benötigten Nullstellen nach dem RHEWA System
     ''' </summary>
     ''' <param name="value"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Shared Function CountDecimalDigits(value As String) As Integer
-        Dim possibleChars As Char() = "0123456789,".ToCharArray()
-        Dim decimalPoints As Integer = 0
-        For Each ch As Char In value
-            If Array.IndexOf(possibleChars, ch) < 0 Then
-                Throw New Exception()
-            End If
-            If ch = ","c Then
-                decimalPoints += 1
-            End If
-        Next
-        If decimalPoints > 1 Then
-            Throw New Exception()
-        End If
-        If decimalPoints = 0 Then
-            Return 0
-        End If
-        Return value.Length - value.IndexOf(","c) - 1
-    End Function
-
     Public Shared Function GetRHEWADecimalDigits(ByVal value As String) As Integer
         Try
             If value Is Nothing Then

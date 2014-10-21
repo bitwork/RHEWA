@@ -3,10 +3,14 @@ Imports System.IO
 Imports System.Net
 
 Public Class clsFTP
-
-
-
+    ''' <summary>
+    ''' Event welches Fortschrittin KByte des Uploads / Downloads weiterreicht
+    ''' </summary>
+    ''' <param name="Progress"></param>
+    ''' <remarks></remarks>
     Public Event ReportFTPProgress(ByVal Progress As Integer)
+
+
     ''' <summary>
     ''' Lädt Datei vom Pfad an FTP hoch
     ''' </summary>
@@ -154,7 +158,6 @@ Public Class clsFTP
     ''' <returns></returns>
     ''' <remarks></remarks>
     Public Function GetFileSize(ByVal pFTPServer As String, ByVal pUsername As String, ByVal pPassword As String, ByVal FTPFilePath As String) As Long
-
         Using conn As New FtpClient()
             'FTP Upload
             conn.Host = pFTPServer
@@ -165,18 +168,12 @@ Public Class clsFTP
 
             End Try
 
-
             If conn.IsConnected Then
                 If conn.FileExists(FTPFilePath) Then
                     Return conn.GetFileSize(FTPFilePath)
                 End If
-
-
             End If
             Return False
-
         End Using
     End Function
-
-
 End Class

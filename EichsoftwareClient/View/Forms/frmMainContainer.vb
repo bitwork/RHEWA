@@ -2,10 +2,16 @@
 Imports EichsoftwareClient.My.Resources
 Imports System.IO
 
-
+''' <summary>
+''' Haupt Container für die gesamte Anwendung. In das Mainpanel werden die jeweils benötigten UserControls geladen. Die Ucos kommunizieren über Properties immer mit dem MainContainer
+''' </summary>
+''' <remarks></remarks>
 Public Class FrmMainContainer
+
 #Region "Membervariables"
-    Private ListofUcos As New List(Of ucoContent)
+    ' auflistung aller aktuellen UCOs, damit diese nicht immer neu erzeugt werden müssen
+    Private _ListofUcos As New List(Of ucoContent)
+
     ''' <summary>
     ''' Das aktuelle UserControl welches im Inhaltsfenster angezeigt wird
     ''' </summary>
@@ -13,58 +19,60 @@ Public Class FrmMainContainer
     ''' <author></author>
     ''' <commentauthor></commentauthor>
     Private WithEvents _CurrentUco As ucoContent
-
-    Private objWebservicefunctions As New clsWebserviceFunctions 'hilfsklasse für aufrufe gegen den Webservice
-    'Private objDBFunctions As New clsDBFunctions 'hilfsklasse für aufrufe gegen lokale DB
-    Friend objUCOBenutzerwechsel As ucoBenutzerwechsel
     ''' <summary>
-    ''' Gets the P listof ucos.
+    ''' uco zur Navigation in der Breadcrump Leiste oben rechts
     ''' </summary>
-    ''' <value>The P listof ucos.</value>
-    Public ReadOnly Property AllUcos() As List(Of ucoContent)
-        Get
-            Return ListofUcos
-        End Get
-    End Property
+    ''' <remarks></remarks>
+    Friend WithEvents BreadCrumb As ucoAmpel
 
+    ''' <summary>
+    ''' uco zum benutzer wechseln welches oben rechts auf dem maindialog eingeblendet wird
+    ''' </summary>
+    ''' <remarks></remarks>
+    Friend objUCOBenutzerwechsel As ucoBenutzerwechsel
+
+
+#End Region
+
+#Region "Enumeratoren"
     Enum enuDialogModus
         normal = 0
         lesend = 1
         korrigierend = 2
     End Enum
-
-    Friend WithEvents BreadCrumb As ucoAmpel
 #End Region
-
 
 #Region "Constructor"
     Sub New()
-
         ' Dieser Aufruf ist für den Designer erforderlich.
         InitializeComponent()
 
+        'zuweisen des custom Telerik Themes
         Telerik.WinControls.ThemeResolutionService.LoadPackageResource("EichsoftwareClient.RHEWAGREEN.tssp") 'Pfad zur Themedatei
         Telerik.WinControls.ThemeResolutionService.ApplicationThemeName = "RHEWAGREEN" 'standard Themename
-
-
-
-       
     End Sub
 
     Sub New(ByVal pEichprozess As Eichprozess, Optional ByVal penumDialogModus As enuDialogModus = enuDialogModus.normal)
-
         ' Dieser Aufruf ist für den Designer erforderlich.
         InitializeComponent()
-
 
         'zuweisen des Eichprozesses
         Me.CurrentEichprozess = pEichprozess
         Me.DialogModus = penumDialogModus
-
     End Sub
 #End Region
 
 #Region "Properties"
+    ''' <summary>
+    ''' auflistung aller aktuellen UCOs, damit diese nicht immer neu erzeugt werden müssen
+    ''' </summary>
+    ''' <value>The P listof ucos.</value>
+    Public ReadOnly Property AllUcos() As List(Of ucoContent)
+        Get
+            Return _ListofUcos
+        End Get
+    End Property
+
     ''' <summary>
     ''' Mit dieser Property kann der LEsemodus des UCOs eingestellt werden. Normal meint einen Client der eine Eichung anlegend. Im Lesenden Modus darf keine änderung vorgenommen / gespeichert werden. Im Korrigierenden Modus ändern RHEWA die Eichung eines externen bevollmächtigten
     ''' </summary>
@@ -88,9 +96,15 @@ Public Class FrmMainContainer
         End Set
     End Property
 
-
+    'der aktuelle Eichprozess
     Public Property CurrentEichprozess As Eichprozess
 
+    ''' <summary>
+    ''' aktuell angezeigtes UCO im Main Container
+    ''' </summary>
+    ''' <value></value>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
     Public ReadOnly Property CurrentUCO As UserControl
         Get
             Return _CurrentUco
@@ -103,14 +117,10 @@ Public Class FrmMainContainer
     'Event welches angibt das in Datenbank gespeichert werden muss
     Public Event SaveNeeded(ByVal TargetUserControl As UserControl)
     Public Event SaveWithoutValidationNeeded(ByVal TargetUserControl As UserControl)
-
     Public Event LokalisierungNeeded(ByVal TargetUserControl As UserControl)
     Public Event UpdateNeeded(ByVal TargetUserControl As UserControl)
-
     Public Event EntsperrungNeeded()
     Public Event VersendenNeeded(ByVal TargetUserControl As UserControl)
-
-
 #End Region
 
 #Region "Methods Functions"
@@ -122,14 +132,11 @@ Public Class FrmMainContainer
     ''' <author>TH</author>
     ''' <commentauthor></commentauthor>
     Protected Friend Sub SETContextHelpText(ByVal Helptext As String)
-        'Text in HTML Formatieren
-        '  Dim provider As New Telerik.WinControls.RichTextBox.FileFormats.Html.HtmlFormatProvider
         'Formatierten Text dem Steuerelement zuweisen
-        RadLabelContextHelp.Text = Helptext 'provider.Import(Helptext)
+        RadLabelContextHelp.Text = Helptext
 
-        'TH größe des Labels auf die Breite des Panels legen. Der manuelle Weg wurde gewählt, so das nur ein Horizontaler SCrollbalken entsteht und kein Vertikaler
+        'größe des Labels auf die Breite des Panels legen. Der manuelle Weg wurde gewählt, so das nur ein Horizontaler SCrollbalken entsteht und kein Vertikaler
         RadLabelContextHelp.MaximumSize = New Size(RadScrollablePanelContextHelp.Size.Width - 30, 0)
-
     End Sub
 
 
@@ -141,7 +148,7 @@ Public Class FrmMainContainer
     ''' <author></author>
     ''' <commentauthor></commentauthor>
     Private Sub ChangeActiveContentUserControl(ByVal uco As UserControl)
-        If ListofUcos.Contains(uco) Then
+        If _ListofUcos.Contains(uco) Then
             _CurrentUco = uco
 
             If Not Me.SplitPanelContent1.Controls.Contains(_CurrentUco) Then
@@ -151,35 +158,20 @@ Public Class FrmMainContainer
             _CurrentUco.BringToFront()
             _CurrentUco.Dock = DockStyle.Fill
         End If
-        If _CurrentUco.PreviousUco Is Nothing Then
-            If Not CurrentEichprozess Is Nothing Then
-                Select Case _CurrentUco.EichprozessStatusReihenfolge
-                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
-                        RadButtonNavigateBackwards.Enabled = False
-                    Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Versenden
-                        RadButtonNavigateBackwards.Enabled = True
-                        RadButtonNavigateForwards.Enabled = False
-
-                    Case Else
-                        RadButtonNavigateBackwards.Enabled = True
-                End Select
-            Else
-                RadButtonNavigateBackwards.Enabled = False
-
-            End If
 
 
-        Else
+        If Not CurrentEichprozess Is Nothing Then
             Select Case _CurrentUco.EichprozessStatusReihenfolge
                 Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
                     RadButtonNavigateBackwards.Enabled = False
                 Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Versenden
                     RadButtonNavigateBackwards.Enabled = True
                     RadButtonNavigateForwards.Enabled = False
-
                 Case Else
                     RadButtonNavigateBackwards.Enabled = True
             End Select
+        Else
+            RadButtonNavigateBackwards.Enabled = False
         End If
     End Sub
 
@@ -201,14 +193,10 @@ Public Class FrmMainContainer
                     Exit Sub
                 Else
 
-                    'If _CurrentUco.DialogModus = ucoContent.enuDialogModus.lesend Then
-                    '    'schnelles blättern im lese modus
+                    'schnelles blättern im lese modus
                     If Not Status = _CurrentUco.EichprozessStatusReihenfolge Then
                         SpringeZuUCO(Status)
-
                     End If
-
-
                 End If
             End If
         Catch e As Exception
@@ -216,6 +204,12 @@ Public Class FrmMainContainer
     End Sub
 
 #Region "Localization"
+
+    ''' <summary>
+    ''' ändert die Kultur des Anwendungsthreads. Alle neuen Dialoge werden dann entsprechend in der neuen Sprache geladen
+    ''' </summary>
+    ''' <param name="Code"></param>
+    ''' <remarks></remarks>
     Friend Sub changeCulture(ByVal Code As String)
         Dim culture As CultureInfo = CultureInfo.GetCultureInfo(Code)
 
@@ -235,6 +229,12 @@ Public Class FrmMainContainer
 
     End Sub
 
+    ''' <summary>
+    ''' zuweiseung der Sprache für den Hauptthread bei Klick auf die Flaggen
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub RadButtonChangeLanguage_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonChangeLanguageToGerman.Click, RadButtonChangeLanguageToEnglish.Click, RadButtonChangeLanguageToPolish.Click
         If sender.Equals(RadButtonChangeLanguageToEnglish) Then
             changeCulture("en")
@@ -250,6 +250,12 @@ Public Class FrmMainContainer
 
 #Region "Formular Events"
 
+    ''' <summary>
+    ''' abfangen von Sondertasten. F1 für EFG Dialog, sofern anzeigbar, shift + enter für schnelles navigieren, strg + enter für schnelles zurück navigieren
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub FrmMainContainer_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
         'F1 für EFG Dialog
         If e.KeyData.ToString.Equals("F1") Then
@@ -276,15 +282,20 @@ Public Class FrmMainContainer
     End Sub
 
 
-
+    ''' <summary>
+    '''   Laderoutine
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub FrmMainContainer_Load(sender As Object, e As System.EventArgs) Handles Me.Load
         'frmMain Container nutzt entweder die logiken zum Blättern eines eichprozesses (sofern me.currenteichprozess) nicht nothing ist oder aber zeigt die Auswahlliste an, in der die eigenen Eichprozesse aufgelistet werden.
 
 
         'prüfen ob ein Vorgang vorliegt oder nicht
         If Me.CurrentEichprozess Is Nothing Then 'wenn kein vorgang vorliegt Auswahlliste anzeiegn
-            'auswahl des Benutzers
-          
+
+            'auswahl des Benutzers, führt auch zur Lizenzeingabe, falls noch kein Benutzer angelegt wurde
             Dim frmBenutzerauswahl As New FrmBenutzerauswahl
             If frmBenutzerauswahl.ShowDialog = Windows.Forms.DialogResult.OK Then
                 LadeAuswahlListe()
@@ -292,21 +303,25 @@ Public Class FrmMainContainer
                 'aktuelle Sprache der Anwendung auf vorher gewählte Sprache setzen
                 RuntimeLocalizer.ChangeCulture(Me, AktuellerBenutzer.Instance.AktuelleSprache)
 
+                'Lokalisierung anstossen
                 TriggerLokalisierung()
             Else
                 Application.Exit()
                 Me.Close()
             End If
-
         Else
             'laden des benötigten UCOs anhand status von me.currentEichprozess
             LadeEichprozessVorgangsUco()
         End If
 
-        'Lokalisierung aktualisieren
-       TriggerLokalisierung
+        'Lokalisierung anstossen
+        TriggerLokalisierung()
     End Sub
 
+    ''' <summary>
+    ''' button klick der flaggen simulieren, anhand von aktueller Sprache des Benutzerobjektes
+    ''' </summary>
+    ''' <remarks></remarks>
     Friend Sub TriggerLokalisierung()
         'Lokalisierung aktualisieren
         Select Case AktuellerBenutzer.Instance.AktuelleSprache.ToLower
@@ -330,14 +345,14 @@ Public Class FrmMainContainer
     Private Sub LadeAuswahlListe()
         'laden des benötigten UCOs
         Dim uco As New ucoEichprozessauswahlliste(Me)
-        ListofUcos.Add(uco)
+        _ListofUcos.Add(uco)
         ChangeActiveContentUserControl(uco)
 
         RadButtonNavigateBackwards.Visible = False
         RadButtonNavigateForwards.Visible = False
 
 
-        'laden des Grid Layouts
+        'laden des Grid Layouts aus User Settings
         Try
             If Not AktuellerBenutzer.Instance.GridSettings.ToString.Equals("") Then
                 Using stream As New MemoryStream(Convert.FromBase64String(AktuellerBenutzer.Instance.GridSettings))
@@ -348,21 +363,18 @@ Public Class FrmMainContainer
             'konnte layout nicht finden
             Debug.WriteLine(ex.ToString)
         End Try
-        'laden des RHEWA Grids
+
+        'laden des RHEWA Grids aus User Settings
         Try
             If Not AktuellerBenutzer.Instance.GridSettingsRhewa.ToString.Equals("") Then
-
                 Using stream As New MemoryStream(Convert.FromBase64String(AktuellerBenutzer.Instance.GridSettingsRhewa))
                     uco.RadGridViewRHEWAAlle.LoadLayout(stream)
                 End Using
             End If
-
         Catch ex As Exception
             'konnte layout nicht finden
             Debug.WriteLine(ex.ToString)
-
         End Try
-
     End Sub
 
     ''' <summary>
@@ -452,20 +464,21 @@ Public Class FrmMainContainer
             'prüfen ob der Button zum entsperren eingeblendet werden soll
             If DialogModus = enuDialogModus.lesend Then
                 'einblenden des entsperren Buttons wenn RHEWA Mitarbeiter
-             
-                    If AktuellerBenutzer.Instance.Lizenz.RHEWALizenz = True Then
-                        RadButtonEntsperren.Visible = True
-                    End If
+
+                If AktuellerBenutzer.Instance.Lizenz.RHEWALizenz = True Then
+                    RadButtonEntsperren.Visible = True
+                End If
 
             End If
 
-
-            ListofUcos.Add(uco)
+            'zur auflistung der UCOs hinzufügen
+            _ListofUcos.Add(uco)
             RadButtonNavigateBackwards.Enabled = True
             RadButtonNavigateForwards.Enabled = True
             RadButtonNavigateBackwards.Visible = True
             RadButtonNavigateForwards.Visible = True
 
+            'anzeigen des neuen UCOs
             ChangeActiveContentUserControl(uco)
         End If
     End Sub
@@ -537,8 +550,8 @@ Public Class FrmMainContainer
                     Exit Sub
             End Select
 
-            If Not ListofUcos.Contains(uco) Then
-                ListofUcos.Add(uco)
+            If Not _ListofUcos.Contains(uco) Then
+                _ListofUcos.Add(uco)
 
             End If
             '_CurrentUco.NextUco = uco
@@ -589,7 +602,7 @@ Public Class FrmMainContainer
 
         'TH Event abfeuern, damit steuerelemente bescheid wissen, das sie in DB speichern müssen
         Dim bolUCODirty As Boolean
-            bolUCODirty = _CurrentUco.AktuellerStatusDirty 'im Save Needed wird der Dirty Flag bereits wieder zurückgesetzt. Deswegen wird er hier zwischengespeichert
+        bolUCODirty = _CurrentUco.AktuellerStatusDirty 'im Save Needed wird der Dirty Flag bereits wieder zurückgesetzt. Deswegen wird er hier zwischengespeichert
         RaiseEvent SaveNeeded(_CurrentUco)
 
 
@@ -731,7 +744,7 @@ Public Class FrmMainContainer
                     Exit Sub
             End Select
 
-            ListofUcos.Add(uco)
+            _ListofUcos.Add(uco)
             _CurrentUco.NextUco = uco
             'neues UCO in vordergrund bringen
             ChangeActiveContentUserControl(uco)
@@ -757,13 +770,9 @@ Public Class FrmMainContainer
 
 
 
-
-
-        '###### TESt#    If Not objEichprozess Is Nothing Then
+        'sonderfall für Standardwaagen. In diesem Fall werden bestimmte Dialoge beim vorwärts blättern übersprungen
         If CurrentEichprozess.AusStandardwaageErzeugt = True Then
             Select Case _CurrentUco.EichprozessStatusReihenfolge
-
-           
                 Case Is = GlobaleEnumeratoren.enuEichprozessStatus.KompatbilitaetsnachweisErgebnis
                     Me.RadButtonNavigateForwards.PerformClick()
                 Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Beschaffenheitspruefung
@@ -774,10 +783,7 @@ Public Class FrmMainContainer
                     Me.RadButtonNavigateForwards.PerformClick()
                 Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Export
                     Me.RadButtonNavigateForwards.PerformClick()
-
             End Select
-
-
         End If
     End Sub
 
@@ -885,7 +891,7 @@ Public Class FrmMainContainer
 
             uco.NextUco = _CurrentUco
             _CurrentUco.PreviousUco = uco
-            ListofUcos.Add(uco)
+            _ListofUcos.Add(uco)
         Else
             BreadCrumb.FindeElementUndSelektiere(_CurrentUco.PreviousUco.EichprozessStatusReihenfolge)
             uco = _CurrentUco.PreviousUco

@@ -8,14 +8,32 @@
         Formatcontrols()
     End Sub
 
+    ''' <summary>
+    '''  Speichern
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub RadButtonOK_Click(sender As Object, e As EventArgs) Handles RadButtonOK.Click
         Speichern()
     End Sub
 
+    ''' <summary>
+    ''' schliessen
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub RadButtonAbbrechen_Click(sender As Object, e As EventArgs) Handles RadButtonAbbrechen.Click
         Me.Close()
     End Sub
 
+    ''' <summary>
+    ''' setzen der Radioboxen und de/aktivieren der Steuerelemente
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="args"></param>
+    ''' <remarks></remarks>
     Private Sub RadRadioButtonSyncAlles_ToggleStateChanged(sender As Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadRadioButtonSyncZwischen.ToggleStateChanged, RadRadioButtonSyncSeit.ToggleStateChanged, RadRadioButtonSyncAlles.ToggleStateChanged
         If RadRadioButtonSyncAlles.IsChecked Then
             RadDateTimePickerSince.Enabled = False
@@ -34,6 +52,11 @@
 #End Region
 
 #Region "Funktionen"
+
+    ''' <summary>
+    ''' speicher methode der einstellungen
+    ''' </summary>
+    ''' <remarks></remarks>
     Private Sub Speichern()
         Dim alterSyncmodus As String = AktuellerBenutzer.Instance.Synchronisierungsmodus 'variable wird genutzt um zu prüfen ob überhaupt Änderungen vorgenommen werden müssen
         Dim alterSyncAbWert As String = AktuellerBenutzer.Instance.SyncAb
@@ -44,7 +67,6 @@
             AktuellerBenutzer.Instance.Synchronisierungsmodus = "Alles"
             AktuellerBenutzer.Instance.SyncAb = "01.01.2000"
             AktuellerBenutzer.Instance.SyncBis = "31.12.2999"
-
         ElseIf RadRadioButtonSyncSeit.IsChecked Then
             AktuellerBenutzer.Instance.Synchronisierungsmodus = "Ab"
             AktuellerBenutzer.Instance.SyncAb = RadDateTimePickerSince.Value
@@ -65,13 +87,17 @@
             Me.DialogResult = Windows.Forms.DialogResult.OK
             Me.Close()
             Exit Sub
-
         End If
 
         'es wurde nichts geändert, also muss auch nichts heruntergeladen werden
         Me.DialogResult = Windows.Forms.DialogResult.Cancel
         Me.Close()
     End Sub
+
+    ''' <summary>
+    ''' vorauswahl der Radioboxen anhand von gespeicherten Settingwerten und setzten der Datumswerte
+    ''' </summary>
+    ''' <remarks></remarks>
     Private Sub SetRadioButtons()
         'vorauswahl der Radioboxen anhand von gespeicherten Settingwerten und setzten der Datumswerte
         RadDateTimePickerSince.Value = Date.Now
@@ -90,6 +116,11 @@
                 RadDateTimePickerEnd.Value = AktuellerBenutzer.Instance.SyncBis
         End Select
     End Sub
+
+    ''' <summary>
+    ''' Lokalisierung
+    ''' </summary>
+    ''' <remarks></remarks>
     Private Sub Formatcontrols()
         'formatierung der Datumswerte:
         Select Case AktuellerBenutzer.Instance.AktuelleSprache.ToLower
@@ -97,18 +128,18 @@
                 RadDateTimePickerEnd.Culture = New System.Globalization.CultureInfo("de")
                 RadDateTimePickerStart.Culture = New System.Globalization.CultureInfo("de")
                 RadDateTimePickerSince.Culture = New System.Globalization.CultureInfo("de")
-
             Case Is = "pl"
                 RadDateTimePickerEnd.Culture = New System.Globalization.CultureInfo("pl")
                 RadDateTimePickerStart.Culture = New System.Globalization.CultureInfo("pl")
                 RadDateTimePickerSince.Culture = New System.Globalization.CultureInfo("pl")
-
             Case Is = "en"
                 RadDateTimePickerEnd.Culture = New System.Globalization.CultureInfo("en")
                 RadDateTimePickerStart.Culture = New System.Globalization.CultureInfo("en")
                 RadDateTimePickerSince.Culture = New System.Globalization.CultureInfo("en")
-
             Case Else
+                RadDateTimePickerEnd.Culture = New System.Globalization.CultureInfo("en")
+                RadDateTimePickerStart.Culture = New System.Globalization.CultureInfo("en")
+                RadDateTimePickerSince.Culture = New System.Globalization.CultureInfo("en")
         End Select
     End Sub
 #End Region

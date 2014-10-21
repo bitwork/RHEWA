@@ -1,10 +1,12 @@
 ﻿Imports System.Globalization
 
 Public Class FrmLizenz
-
-
-
-
+    ''' <summary>
+    ''' Fokusierung des Lizenzdialoges, damit dieser nicht ausversehen im hintergrund verschwindet
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub FrmLizenz_Load(sender As Object, e As EventArgs) Handles Me.Load
         Me.BringToFront()
     End Sub
@@ -38,14 +40,11 @@ Public Class FrmLizenz
                         clsWebserviceFunctions.TesteVerbindung()
                     End If
 
-
                     If webContext.AktiviereLizenz(HEKennung, Lizenzschluessel, My.User.Name, System.Environment.UserDomainName, My.Computer.Name) Then
 
                         'prüfen ob bereits lokales Objekt existiert
                         Dim Lics = (From Lizensen In DBContext.Lizensierung Where Lizensen.Lizenzschluessel.ToLower = Lizenzschluessel.ToLower And Lizensen.HEKennung.ToLower = HEKennung.ToLower).FirstOrDefault
-
                         If Lics Is Nothing Then
-
 
                             Dim objLic As New Lizensierung
                             objLic.HEKennung = HEKennung
@@ -56,7 +55,6 @@ Public Class FrmLizenz
                             Else
                                 objLic.RHEWALizenz = False
                             End If
-
 
                             Try
                                 'hole zusätliche Lizenzdaten
@@ -154,9 +152,7 @@ Public Class FrmLizenz
         Me.lblLizenzabkommen.Text = resources.GetString("lblLizenzabkommen.Text")
         Me.lblLizenzschuessel.Text = resources.GetString("lblLizenzschuessel.Text")
         Me.lblName.Text = resources.GetString("lblName.Text")
-
         Me.RadCheckBoxAkzeptieren.Text = resources.GetString("RadCheckBoxAkzeptieren.Text")
-
     End Sub
 #End Region
 

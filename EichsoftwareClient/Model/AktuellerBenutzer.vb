@@ -1,4 +1,8 @@
-﻿Public Class AktuellerBenutzer
+﻿''' <summary>
+''' hilfsklasse. Enthält Informationen und Einstellungen des aktuell angemeldeten Benutzers
+''' </summary>
+''' <remarks></remarks>
+Public Class AktuellerBenutzer
 
     Private mvarLetztesUpdate As DateTime
     Private mvarAktuelleSprache As String
@@ -8,9 +12,12 @@
     Private mvarHoleAlleeigenenEichungenVomServer As Boolean
     Private mvarGridSettings As String
     Private mvarGridSettingsRHEWA As String
-
     Private mvarObjLizenz As Lizensierung
 
+    ''' <summary>
+    ''' Obsolete. Keine Singleton Instanz mehr im eigentlichen Sinne
+    ''' </summary>
+    ''' <remarks></remarks>
     Private Shared mobjSingletonObject As AktuellerBenutzer
     ''' <summary>
     ''' Gets the Lizenz.
@@ -26,7 +33,7 @@
     ''' Gets the  letztes update.
     ''' </summary>
     ''' <value>The  letztes update.</value>
-    Public  Property LetztesUpdate() As DateTime
+    Public Property LetztesUpdate() As DateTime
         Get
             Return mvarLetztesUpdate
         End Get
@@ -155,7 +162,7 @@
             mobjSingletonObject.mvarSyncAb = Konfig.SyncAb
             mobjSingletonObject.mvarSyncBis = Konfig.SyncBis
             mobjSingletonObject.mvarSynchronisierungsmodus = Konfig.Synchronisierungsmodus
-         
+
 
         End Using
 
@@ -165,6 +172,11 @@
 
     End Function
 
+    ''' <summary>
+    ''' speichert benutzerbezogene Daten in Datenbank. Etwa die Einstellung der Grids
+    ''' </summary>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
     Public Shared Function SaveSettings()
         Using Context As New EichsoftwareClientdatabaseEntities1
             Context.Configuration.LazyLoadingEnabled = True
@@ -183,11 +195,4 @@
             Return True
         End Using
     End Function
-
-
-
-    Private Sub New()
-
-    End Sub
-
 End Class

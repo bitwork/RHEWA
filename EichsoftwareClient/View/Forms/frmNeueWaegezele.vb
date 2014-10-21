@@ -10,7 +10,6 @@
     ''' <commentauthor></commentauthor>
     Private Function validateControls() As Boolean
 
-
         If RadTextBoxControlWZTyp.Text.Trim.Equals("") Then
             Return False
         End If
@@ -63,7 +62,12 @@
         End If
     End Function
 
-
+    ''' <summary>
+    ''' speichern und schließen
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub RadButtonSpeichern_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonSpeichern.Click
         If SavetoDatebase() = True Then
             Me.DialogResult = Windows.Forms.DialogResult.OK
