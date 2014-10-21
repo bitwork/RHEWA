@@ -1,17 +1,18 @@
 ﻿Imports System.ComponentModel
+''' <summary>
+''' Das UcoContent bietet die Basisklasse für alle im Eichprozess genutzten Ucos. Es enthält allgemein gültige Methoden und Eigenschaften
+''' </summary>
+''' <remarks></remarks>
 Public Class ucoContent
     Implements INotifyPropertyChanged
 
 
 #Region "Member Variables"
-    Private WithEvents _ParentForm As FrmMainContainer
-    Private _PreviousUco As ucoContent
-    Private _NextUco As ucoContent
-    'Private _Breadcrumb As ucoStatusBullet
-    Private _objEichprozess As Eichprozess
-
-    Private _bolSuspendRefresh As Boolean = False
-
+    Private WithEvents _ParentForm As FrmMainContainer 'Bezug zum Parentcontrol.
+    Private _PreviousUco As ucoContent 'mit dieser variable merkt sich das aktuelle UCO, welches Uco VOR ihm im Eichprozess dran kam
+    Private _NextUco As ucoContent 'mit dieser variable merkt sich das aktuelle UCO, welches Uco NACH ihm im Eichprozess dran kam
+    Private _objEichprozess As Eichprozess 'das aktuelle Eichprozess Objekt
+    'Private _bolSuspendRefresh As Boolean = False
     Protected Friend _intNullstellenE1 As Integer = 0 'Variable zum Einstellen der Nullstellen für das Casten und runden der Werte. Abhängig von e Wert. Wenn e = 1 Nullstelle dann hier = 2. wenn e = 2 dann hier = 3. immer eine nullstelle mehr als E
     Protected Friend _intNullstellenE2 As Integer = 0 'Variable zum Einstellen der Nullstellen für das Casten und runden der Werte. Abhängig von e Wert. Wenn e = 1 Nullstelle dann hier = 2. wenn e = 2 dann hier = 3. immer eine nullstelle mehr als E
     Protected Friend _intNullstellenE3 As Integer = 0 'Variable zum Einstellen der Nullstellen für das Casten und runden der Werte. Abhängig von e Wert. Wenn e = 1 Nullstelle dann hier = 2. wenn e = 2 dann hier = 3. immer eine nullstelle mehr als E
@@ -77,15 +78,10 @@ Public Class ucoContent
     ''' <remarks></remarks>
     Protected Friend Property EichprozessStatusReihenfolge As GlobaleEnumeratoren.enuEichprozessStatus
 
-
-
-    'Protected ReadOnly Property ListUeberspringeStatus As List(Of GlobaleEnumeratoren.enuEichprozessStatus)
-    '    Get
-    '        Return objEichprozess.GetListeUngueltigeStati
-    '    End Get
-    'End Property
-
-
+    ''' <summary>
+    ''' Gets or sets the obj eichprozess.
+    ''' </summary>
+    ''' <value>The obj eichprozess.</value>
     Protected Friend Property objEichprozess As Eichprozess
         Get
             Return _objEichprozess
@@ -95,6 +91,10 @@ Public Class ucoContent
         End Set
     End Property
 
+    ''' <summary>
+    ''' Gets or sets the parent formular.
+    ''' </summary>
+    ''' <value>The parent formular.</value>
     Protected Friend Property ParentFormular As FrmMainContainer
         Get
             Return _ParentForm
@@ -104,6 +104,10 @@ Public Class ucoContent
         End Set
     End Property
 
+    ''' <summary>
+    ''' Gets or sets the previous uco.
+    ''' </summary>
+    ''' <value>The previous uco.</value>
     Protected Friend Property PreviousUco As ucoContent
         Get
             Return _PreviousUco
@@ -113,6 +117,10 @@ Public Class ucoContent
         End Set
     End Property
 
+    ''' <summary>
+    ''' Gets or sets the next uco.
+    ''' </summary>
+    ''' <value>The next uco.</value>
     Protected Friend Property NextUco As ucoContent
         Get
             Return _NextUco
@@ -126,14 +134,11 @@ Public Class ucoContent
 
 #Region "Constructors"
     Sub New()
-
         ' Dieser Aufruf ist für den Designer erforderlich.
         InitializeComponent()
         _ParentForm = Nothing
         _PreviousUco = Nothing
         _NextUco = Nothing
-        ' Fügen Sie Initialisierungen nach dem InitializeComponent()-Aufruf hinzu.
-
     End Sub
 
 
@@ -225,9 +230,15 @@ Public Class ucoContent
     ''' <commentauthor>Die Überladene Routine sollte überprüfen ob me.equals(Usercontrol) = true ist, um nicht unnötig oft alles zu speichern</commentauthor>
     Protected Overridable Sub SaveNeeded(ByVal UserControl As UserControl) Handles _ParentForm.SaveNeeded
     End Sub
-
+    ''' <summary>
+    ''' SaveWithoutValidationNeeded wird vom Container ParentForm abgefeuert und gibt dem Usercontrol an das es zu speichern hat, dabei muss nicht auf vollständigkeit geachtet werden. Z.b. beim Rückwärts blättern
+    ''' Die Überladene Methode muss sich dann um die Speicherlogik kümmern, sofern das übergebende Usercontrol dem eigenem entspricht
+    ''' </summary>
+    ''' <param name="UserControl">Das Usercontrol welches zu Speichern hat</param>
+    ''' <remarks></remarks>
+    ''' <author>TH</author>
+    ''' <commentauthor>Die Überladene Routine sollte überprüfen ob me.equals(Usercontrol) = true ist, um nicht unnötig oft alles zu speichern</commentauthor>
     Protected Overridable Sub SaveWithoutValidationNeeded(ByVal usercontrol As UserControl) Handles _ParentForm.SaveWithoutValidationNeeded
-
     End Sub
 
 
@@ -245,20 +256,22 @@ Public Class ucoContent
     ''' <param name="UserControl"></param>
     ''' <remarks></remarks>
     Protected Overridable Sub UpdateNeeded(ByVal UserControl As UserControl) Handles _ParentForm.UpdateNeeded
-
     End Sub
 
-
+    ''' <summary>
+    ''' Entsperren des Eichprozesses durch RHEWA seitige Korrektur
+    ''' </summary>
+    ''' <remarks></remarks>
     Protected Overridable Sub EntsperrungNeeded() Handles _ParentForm.EntsperrungNeeded
-
     End Sub
 
-
+    ''' <summary>
+    ''' Zurücksenden an den Eichbevollmächtigten durch RHEWA
+    ''' </summary>
+    ''' <param name="TargetUserControl"></param>
+    ''' <remarks></remarks>
     Protected Overridable Sub VersendenNeeded(ByVal TargetUserControl As UserControl) Handles _ParentForm.VersendenNeeded
-
     End Sub
-
-
 #End Region
 
     Friend Function ShowValidationErrorBox() As Boolean
@@ -411,7 +424,12 @@ Public Class ucoContent
             Return Nothing
         End Try
     End Function
-
+    ''' <summary>
+    ''' Erwartet z.b. ein Steuerelement, prüft den Namen und gibt zurück um welchen pruefung (linearität) es sich handelt
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
     Friend Function GetPruefung(ByVal sender As Object) As String
         Try
             Dim ControlName As String
@@ -428,7 +446,12 @@ Public Class ucoContent
             Return Nothing
         End Try
     End Function
-
+    ''' <summary>
+    ''' Erwartet z.b. ein Steuerelement, prüft den Namen und gibt zurück um welchen messpunkt es sich handelt
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
     Friend Function GetMesspunkt(ByVal sender As Object) As String
         Try
             Dim ControlName As String
@@ -441,7 +464,12 @@ Public Class ucoContent
             Return Nothing
         End Try
     End Function
-
+    ''' <summary>
+    ''' Erwartet z.b. ein Steuerelement, prüft den Namen und gibt zurück um welche wiederholung es sich handelt
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
     Friend Function GetWiederholung(ByVal sender As Object) As String
         Try
             Dim ControlName As String

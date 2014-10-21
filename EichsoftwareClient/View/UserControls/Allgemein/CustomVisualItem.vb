@@ -2,6 +2,11 @@
 Imports Telerik.WinControls.UI
 Imports Telerik.WinControls.Layouts
 Imports Telerik.WinControls
+
+''' <summary>
+''' Klasse zum Rendern eines Custom Usercontrol List Elements. Wird genutzt für die Breadcrump Navigation. 
+''' </summary>
+''' <remarks>DebuggerStepThrough aktiviert. Er wird hier also nie reindebuggen, solange die Property gesetzt ist.</remarks>
 <DebuggerStepThrough()>
 Friend Class CustomVisualItem
     Inherits Telerik.WinControls.UI.IconListViewVisualItem

@@ -498,8 +498,6 @@ Public Class FrmMainContainer
 
         If Not _CurrentUco Is Nothing Then
 
-
-
             'beim springen werden weder previous noch nextuco gesetzt. D.h. es werden ucos mehrmals geladen, falls benötigt. Sonst funktioneirt das mit dem Vor und zurück blättern aber nicht
             'der grund dafür ist der folgende: ich fange in Stammdateneingabe an, springe auf Versenden. Klicke nun auf zurück und uco Versenden hat als previous UCO UcoStammdaten. das ist was der Benutzer erwartet
             Dim uco As Object = Nothing
@@ -936,6 +934,11 @@ Public Class FrmMainContainer
 
 
 #End Region
+
+    ''' <summary>
+    ''' Speichert Gridlayout als XML Stream, welcher in DB zum aktuellen Benutzer gespeichert wird
+    ''' </summary>
+    ''' <remarks></remarks>
     Private Sub SpeichereGridLayout()
         'speichere Layout der beiden Grids
         If Me._CurrentUco.GetType Is GetType(ucoEichprozessauswahlliste) Then
@@ -972,7 +975,12 @@ Public Class FrmMainContainer
         End If
     End Sub
 
-
+    ''' <summary>
+    ''' Triggered Event im UCO, welches den Versendenprozess startet
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub RadButtonVersenden_Click(sender As Object, e As EventArgs) Handles RadButtonVersenden.Click
         If MessageBox.Show(GlobaleLokalisierung.Frage_EichprotokollZuruecksenden, My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo, MessageBoxIcon.Question) = System.Windows.Forms.DialogResult.Yes Then
 
@@ -985,6 +993,12 @@ Public Class FrmMainContainer
         End If
     End Sub
 
+    ''' <summary>
+    ''' triggerd event im UCO, welches den Entsperrprozess startet
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub RadButtonEntsperren_Click(sender As Object, e As EventArgs) Handles RadButtonEntsperren.Click
         'wenn der status des aktuellen elementes eh schon auf fehlerhaft steht oder auf abgeschlossen, darf keine Änderung verschickt werden
         If CurrentEichprozess.FK_Bearbeitungsstatus = 3 Then
@@ -1009,7 +1023,13 @@ Public Class FrmMainContainer
     End Sub
 
 
-
+    ''' <summary>
+    ''' Eventhandler für UCO Event. Wenn dort eine Eigenschaft geändert wird, wird ein Dirty Flag gesetzt. Durch das Dirty flag wird hier der Status des aktuellen Vorgangs angepasst.
+    ''' Beispiel: Der Eichprozess befindet sich im 10. Schritt. im 8 wird aber etwas geändert. Dies kann folgen haben für die kommenden Schritte. Deswegen wird dann der aktuelle Schritt auf 8 zurückgesetzt
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub _CurrentUco_PropertyChanged(sender As Object, e As System.ComponentModel.PropertyChangedEventArgs) Handles _CurrentUco.PropertyChanged
         If e.PropertyName.Equals("AktuellerStatusDirty") Then
             BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge
