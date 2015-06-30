@@ -572,6 +572,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco17PruefungEignungFuerAchlastwaegungen.resx">
       <DependentUpon>uco17PruefungEignungFuerAchlastwaegungen.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco21Versenden.en.resx">
       <DependentUpon>uco21Versenden.vb</DependentUpon>
