@@ -251,8 +251,12 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                 Case Is = "Dreibereichswaage", "Dreiteilungswaage"
                     EichwertBereich = 3
             End Select
-            Spezial.Text = GetEFG(Last.Text, EichwertBereich)
 
+            Try
+                Spezial.Text = GetEFG(Last.Text, EichwertBereich)
+            Catch ex As InvalidCastException
+                Exit Sub
+            End Try
 
 
             'EFG durch die Differenz zwischen den 3 Belastungen. Mit anderen Worten: Die Differenz der Wägeergebnisse bei der 3maligen Belastung darf nicht größer sein, als der Absolutwert der für diese Belastung geltenden Fehlergrenze der Waage.
@@ -319,8 +323,12 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         Dim EFG As Telerik.WinControls.UI.RadCheckBox = FindControl(String.Format("RadCheckBoxBereich{0}VEL{1}", Bereich, Belastungsort))
         Dim Spezial As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblBereich{0}EFGSpeziallBerechnung", Bereich))
 
+        Try
+            Spezial.Text = GetEFG(Last.Text, Bereich)
+        Catch ex As InvalidCastException
+            Exit Sub
+        End Try
 
-        Spezial.Text = GetEFG(Last.Text, Bereich)
 
       
 

@@ -49,8 +49,11 @@
         End Select
 
         'EFG Wert Berechnen
+        Try
         Spezial.Text = GetEFG(Last.Text, EichwertBereich)
-
+        Catch ex As InvalidCastException
+            Exit Sub
+        End Try
 
 
 

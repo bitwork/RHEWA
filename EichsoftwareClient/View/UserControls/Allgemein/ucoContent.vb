@@ -348,6 +348,7 @@ Public Class ucoContent
             '    Return Math.Round(CDec(value * 0.5), _intNullstellenE, MidpointRounding.AwayFromZero)
             'End If
 
+            'neue Formel mit vom Eichwert abhängigen Gewichtsgrenzen
             '2000 e - maxload oder 3000e
             If Gewicht > MaxLoad Then
                 Return 0

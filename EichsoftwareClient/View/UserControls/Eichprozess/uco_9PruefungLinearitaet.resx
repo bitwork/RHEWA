@@ -14617,7 +14617,7 @@
     <value>Horizontal</value>
   </data>
   <data name="RadGroupBoxPruefungLinearitaetFallend.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1207, 46</value>
+    <value>1207, 444</value>
   </data>
   <data name="RadGroupBoxPruefungLinearitaetFallend.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -14668,7 +14668,7 @@
     <value>Horizontal</value>
   </data>
   <data name="RadGroupBoxPruefungLinearitaetSteigend.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1207, 49</value>
+    <value>1207, 456</value>
   </data>
   <data name="RadGroupBoxPruefungLinearitaetSteigend.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
