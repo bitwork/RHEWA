@@ -117,18 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="RadCheckBoxNullstellungOK.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxNullstellungOK.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblHinweisNullstellung.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblHinweisNullstellung.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lblHinweisNullstellung.Size" type="System.Drawing.Size, System.Drawing">
     <value>97, 18</value>
@@ -137,20 +125,8 @@
     <value>(gem. EN 45501) 			
 </value>
   </data>
-  <data name="RadButtonShowEFG.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadButtonShowEFG.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="RadButtonShowEFG.Text" xml:space="preserve">
     <value>EFG</value>
-  </data>
-  <data name="lblNullstellungOK.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblNullstellungOK.RootElement.ToolTipText" xml:space="preserve">
-    <value />
   </data>
   <data name="lblNullstellungOK.Size" type="System.Drawing.Size, System.Drawing">
     <value>122, 32</value>
@@ -161,26 +137,8 @@
   <data name="RadGroupBoxPruefungGenaugikeit.HeaderText" xml:space="preserve">
     <value> Genauigkeit der Nullstellung (autom. Nullnachführung deaktivieren)</value>
   </data>
-  <data name="RadGroupBoxPruefungGenaugikeit.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadGroupBoxPruefungGenaugikeit.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="RadGroupBoxPruefungGenaugikeit.Text" xml:space="preserve">
     <value> Genauigkeit der Nullstellung (autom. Nullnachführung deaktivieren)</value>
-  </data>
-  <data name="RadLabel1.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel1.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblWiederholungen.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblWiederholungen.RootElement.ToolTipText" xml:space="preserve">
-    <value />
   </data>
   <data name="lblWiederholungen.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 33</value>
@@ -188,32 +146,8 @@
   <data name="lblWiederholungen.Text" xml:space="preserve">
     <value>&lt;html&gt;Wieder-&lt;br /&gt;holungen&lt;/html&gt;</value>
   </data>
-  <data name="RadLabel29.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel29.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel30.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel30.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel31.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel31.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="lblMengeStandardgewichte2.Location" type="System.Drawing.Point, System.Drawing">
     <value>520, 198</value>
-  </data>
-  <data name="lblMengeStandardgewichte2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblMengeStandardgewichte2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
   </data>
   <data name="lblMengeStandardgewichte2.Size" type="System.Drawing.Size, System.Drawing">
     <value>104, 18</value>
@@ -221,92 +155,14 @@
   <data name="lblMengeStandardgewichte2.Text" xml:space="preserve">
     <value>kg werden benötigt</value>
   </data>
-  <data name="RadTextBoxControlErrorLimit1.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlErrorLimit1.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblMengeStandardgewichte1.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblMengeStandardgewichte1.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="lblMengeStandardgewichte1.Size" type="System.Drawing.Size, System.Drawing">
     <value>115, 18</value>
   </data>
   <data name="lblMengeStandardgewichte1.Text" xml:space="preserve">
     <value>Menge an Normalien:</value>
   </data>
-  <data name="RadCheckBoxVEL1.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxVEL1.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="RadTextBoxControlBetragNormallast.Location" type="System.Drawing.Point, System.Drawing">
     <value>441, 198</value>
-  </data>
-  <data name="RadTextBoxControlBetragNormallast.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBetragNormallast.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblEFGSpeziallBerechnung.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblEFGSpeziallBerechnung.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlWeight1.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlWeight1.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlDisplayWeight1.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlDisplayWeight1.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlWeight2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlWeight2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlDisplayWeight2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlDisplayWeight2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblFehlerGrenzen.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblFehlerGrenzen.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlWeight3.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlWeight3.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlDisplayWeight3.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlDisplayWeight3.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblEFGSpezial.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblEFGSpezial.RootElement.ToolTipText" xml:space="preserve">
-    <value />
   </data>
   <data name="lblEFGSpezial.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 18</value>
@@ -315,12 +171,6 @@
     <value>EFG [kg]
 </value>
   </data>
-  <data name="lblGewicht.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblGewicht.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="lblGewicht.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 33</value>
   </data>
@@ -328,12 +178,6 @@
     <value>Last [kg]
 
 </value>
-  </data>
-  <data name="lblAnzeigeGewicht.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblAnzeigeGewicht.RootElement.ToolTipText" xml:space="preserve">
-    <value />
   </data>
   <data name="lblAnzeigeGewicht.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 33</value>
@@ -346,105 +190,15 @@
   <data name="RadGroupBoxWiederholungen.HeaderText" xml:space="preserve">
     <value>Prüfung der Wiederholbarkeit mit Last ~ 0,5 Max</value>
   </data>
-  <data name="RadGroupBoxWiederholungen.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadGroupBoxWiederholungen.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="RadGroupBoxWiederholungen.Text" xml:space="preserve">
     <value>Prüfung der Wiederholbarkeit mit Last ~ 0,5 Max</value>
-  </data>
-  <data name="RadButtonShowEFG2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadButtonShowEFG2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
   </data>
   <data name="RadButtonShowEFG2.Text" xml:space="preserve">
     <value>EFG </value>
   </data>
-  <data name="lblBereich3EFGSpeziallBerechnung.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblBereich3EFGSpeziallBerechnung.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel46.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel46.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3Weight1.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3Weight1.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3DisplayWeight1.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3DisplayWeight1.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3ErrorLimit1.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3ErrorLimit1.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich3VEL1.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich3VEL1.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel45.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel45.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3Weight2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3Weight2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3DisplayWeight2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3DisplayWeight2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3ErrorLimit2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3ErrorLimit2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich3VEL2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich3VEL2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblMessOrtBereich3.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblMessOrtBereich3.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="lblMessOrtBereich3.Text" xml:space="preserve">
     <value>Belastungsorte
 </value>
-  </data>
-  <data name="lblBereich3FehlerGrenzen.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblBereich3FehlerGrenzen.RootElement.ToolTipText" xml:space="preserve">
-    <value />
   </data>
   <data name="lblBereich3FehlerGrenzen.Size" type="System.Drawing.Size, System.Drawing">
     <value>69, 33</value>
@@ -454,84 +208,12 @@
 
 </value>
   </data>
-  <data name="RadLabel44.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel44.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3Weight3.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3Weight3.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3DisplayWeight3.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3DisplayWeight3.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3ErrorLimit3.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3ErrorLimit3.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich3VEL3.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich3VEL3.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblBereich3EFGSpezial.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblBereich3EFGSpezial.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="lblBereich3EFGSpezial.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 18</value>
   </data>
   <data name="lblBereich3EFGSpezial.Text" xml:space="preserve">
     <value>EFG [kg]
 </value>
-  </data>
-  <data name="RadLabel43.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel43.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3Weight4.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3Weight4.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3DisplayWeight4.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3DisplayWeight4.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3ErrorLimit4.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3ErrorLimit4.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich3VEL4.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich3VEL4.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblBereich3Gewicht.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblBereich3Gewicht.RootElement.ToolTipText" xml:space="preserve">
-    <value />
   </data>
   <data name="lblBereich3Gewicht.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 33</value>
@@ -541,12 +223,6 @@
 
 </value>
   </data>
-  <data name="lblBereich3AnzeigeGewicht.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblBereich3AnzeigeGewicht.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="lblBereich3AnzeigeGewicht.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 33</value>
   </data>
@@ -555,369 +231,27 @@
 
 </value>
   </data>
-  <data name="RadLabel42.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel42.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3Weight5.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3Weight5.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3DisplayWeight5.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3DisplayWeight5.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3ErrorLimit5.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3ErrorLimit5.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich3VEL5.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich3VEL5.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel35.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel35.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3Weight12.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3Weight12.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3DisplayWeight12.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3DisplayWeight12.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3ErrorLimit12.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3ErrorLimit12.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich3VEL12.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich3VEL12.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel36.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel36.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3Weight11.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3Weight11.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3DisplayWeight11.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3DisplayWeight11.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3ErrorLimit11.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3ErrorLimit11.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich3VEL11.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich3VEL11.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel41.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel41.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3Weight6.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3Weight6.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3DisplayWeight6.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3DisplayWeight6.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3ErrorLimit6.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3ErrorLimit6.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich3VEL6.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich3VEL6.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel34.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel34.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3WeightMitte.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3WeightMitte.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3DisplayWeightMitte.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3DisplayWeightMitte.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3ErrorLimitMitte.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3ErrorLimitMitte.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich3VELMitte.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich3VELMitte.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel37.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel37.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3Weight10.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3Weight10.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3DisplayWeight10.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3DisplayWeight10.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3ErrorLimit10.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3ErrorLimit10.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich3VEL10.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich3VEL10.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel40.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel40.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3Weight7.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3Weight7.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3DisplayWeight7.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3DisplayWeight7.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3ErrorLimit7.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3ErrorLimit7.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich3VEL7.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich3VEL7.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel38.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel38.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3Weight9.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3Weight9.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3DisplayWeight9.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3DisplayWeight9.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3ErrorLimit9.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3ErrorLimit9.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich3VEL9.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich3VEL9.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel39.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel39.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3Weight8.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3Weight8.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3DisplayWeight8.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3DisplayWeight8.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3ErrorLimit8.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich3ErrorLimit8.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich3VEL8.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich3VEL8.RootElement.ToolTipText" xml:space="preserve">
-    <value />
+  <data name="RadLabel34.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 18</value>
+  </data>
+  <data name="RadLabel34.Text" xml:space="preserve">
+    <value>Mitte</value>
   </data>
   <data name="RadGroupBoxBereich3.HeaderText" xml:space="preserve">
     <value>Bereich 3</value>
   </data>
-  <data name="RadGroupBoxBereich3.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadGroupBoxBereich3.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="RadGroupBoxBereich3.Text" xml:space="preserve">
     <value>Bereich 3</value>
   </data>
-  <data name="lblBereich2EFGSpeziallBerechnung.RootElement.KeyTip" xml:space="preserve">
-    <value />
+  <data name="RadLabel15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 18</value>
   </data>
-  <data name="lblBereich2EFGSpeziallBerechnung.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel15.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel15.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2WeightMitte.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2WeightMitte.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2DisplayWeightMitte.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2DisplayWeightMitte.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2ErrorLimitMitte.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2ErrorLimitMitte.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich2VELMitte.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich2VELMitte.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel27.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel27.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2Weight1.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2Weight1.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2DisplayWeight1.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2DisplayWeight1.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit1.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit1.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich2VEL1.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich2VEL1.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblMessOrtBereich2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblMessOrtBereich2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
+  <data name="RadLabel15.Text" xml:space="preserve">
+    <value>Mitte</value>
   </data>
   <data name="lblMessOrtBereich2.Text" xml:space="preserve">
     <value>Belastungsorte
 </value>
-  </data>
-  <data name="lblBereich2FehlerGrenzen.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblBereich2FehlerGrenzen.RootElement.ToolTipText" xml:space="preserve">
-    <value />
   </data>
   <data name="lblBereich2FehlerGrenzen.Size" type="System.Drawing.Size, System.Drawing">
     <value>69, 33</value>
@@ -927,84 +261,12 @@
 
 </value>
   </data>
-  <data name="RadLabel26.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel26.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2Weight2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2Weight2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2DisplayWeight2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2DisplayWeight2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich2VEL2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich2VEL2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblBereich2EFGSpezial.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblBereich2EFGSpezial.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="lblBereich2EFGSpezial.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 18</value>
   </data>
   <data name="lblBereich2EFGSpezial.Text" xml:space="preserve">
     <value>EFG [kg]
 </value>
-  </data>
-  <data name="RadLabel25.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel25.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2Weight3.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2Weight3.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2DisplayWeight3.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2DisplayWeight3.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit3.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit3.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich2VEL3.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich2VEL3.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblBereich2Gewicht.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblBereich2Gewicht.RootElement.ToolTipText" xml:space="preserve">
-    <value />
   </data>
   <data name="lblBereich2Gewicht.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 33</value>
@@ -1014,12 +276,6 @@
 
 </value>
   </data>
-  <data name="lblBereich2AnzeigeGewicht.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblBereich2AnzeigeGewicht.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="lblBereich2AnzeigeGewicht.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 33</value>
   </data>
@@ -1028,369 +284,15 @@
 
 </value>
   </data>
-  <data name="RadLabel24.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel24.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2Weight4.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2Weight4.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2DisplayWeight4.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2DisplayWeight4.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit4.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit4.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich2VEL4.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich2VEL4.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel17.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel17.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2Weight11.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2Weight11.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2DisplayWeight11.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2DisplayWeight11.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit11.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit11.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich2VEL11.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich2VEL11.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel18.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel18.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2Weight10.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2Weight10.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2DisplayWeight10.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2DisplayWeight10.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit10.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit10.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich2VEL10.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich2VEL10.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel23.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel23.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2Weight5.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2Weight5.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2DisplayWeight5.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2DisplayWeight5.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit5.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit5.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich2VEL5.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich2VEL5.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel16.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel16.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2Weight12.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2Weight12.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2DisplayWeight12.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2DisplayWeight12.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit12.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit12.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich2VEL12.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich2VEL12.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel19.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel19.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2Weight9.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2Weight9.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2DisplayWeight9.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2DisplayWeight9.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit9.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit9.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich2VEL9.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich2VEL9.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel22.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel22.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2Weight6.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2Weight6.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2DisplayWeight6.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2DisplayWeight6.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit6.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit6.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich2VEL6.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich2VEL6.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel20.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel20.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2Weight8.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2Weight8.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2DisplayWeight8.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2DisplayWeight8.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit8.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit8.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich2VEL8.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich2VEL8.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel21.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel21.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2Weight7.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2Weight7.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2DisplayWeight7.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2DisplayWeight7.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit7.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich2ErrorLimit7.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich2VEL7.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich2VEL7.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="RadGroupBoxBereich2.HeaderText" xml:space="preserve">
     <value>Bereich 2</value>
-  </data>
-  <data name="RadGroupBoxBereich2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadGroupBoxBereich2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
   </data>
   <data name="RadGroupBoxBereich2.Text" xml:space="preserve">
     <value>Bereich 2</value>
   </data>
-  <data name="lblBereich1EFGSpeziallBerechnung.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblBereich1EFGSpeziallBerechnung.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel13.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel13.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1Weight1.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1Weight1.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1DisplayWeight1.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1DisplayWeight1.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit1.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit1.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich1VEL1.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich1VEL1.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1Weight2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1Weight2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1DisplayWeight2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1DisplayWeight2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich1VEL2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich1VEL2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblMessOrtBereich1.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblMessOrtBereich1.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="lblMessOrtBereich1.Text" xml:space="preserve">
     <value>Belastungsorte
 </value>
-  </data>
-  <data name="lblBereich1FehlerGrenzen.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblBereich1FehlerGrenzen.RootElement.ToolTipText" xml:space="preserve">
-    <value />
   </data>
   <data name="lblBereich1FehlerGrenzen.Size" type="System.Drawing.Size, System.Drawing">
     <value>69, 33</value>
@@ -1400,84 +302,12 @@
 
 </value>
   </data>
-  <data name="RadLabel4.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel4.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1Weight3.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1Weight3.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1DisplayWeight3.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1DisplayWeight3.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit3.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit3.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich1VEL3.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich1VEL3.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblBereich1EFGSpezial.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblBereich1EFGSpezial.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="lblBereich1EFGSpezial.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 18</value>
   </data>
   <data name="lblBereich1EFGSpezial.Text" xml:space="preserve">
     <value>EFG [kg]
 </value>
-  </data>
-  <data name="RadLabel5.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel5.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1Weight4.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1Weight4.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1DisplayWeight4.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1DisplayWeight4.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit4.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit4.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich1VEL4.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich1VEL4.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblBereich1Gewicht.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblBereich1Gewicht.RootElement.ToolTipText" xml:space="preserve">
-    <value />
   </data>
   <data name="lblBereich1Gewicht.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 33</value>
@@ -1487,12 +317,6 @@
 
 </value>
   </data>
-  <data name="lblBereich1AnzeigeGewicht.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblBereich1AnzeigeGewicht.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="lblBereich1AnzeigeGewicht.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 33</value>
   </data>
@@ -1501,285 +325,15 @@
 
 </value>
   </data>
-  <data name="RadLabel6.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel6.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1Weight5.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1Weight5.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1DisplayWeight5.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1DisplayWeight5.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit5.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit5.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich1VEL5.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich1VEL5.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel14.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel14.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1Weight12.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1Weight12.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1DisplayWeight12.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1DisplayWeight12.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit12.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit12.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich1VEL12.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich1VEL12.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel12.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel12.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1Weight11.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1Weight11.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1DisplayWeight11.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1DisplayWeight11.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit11.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit11.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich1VEL11.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich1VEL11.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel7.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel7.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1Weight6.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1Weight6.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1DisplayWeight6.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1DisplayWeight6.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit6.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit6.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich1VEL6.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich1VEL6.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblBereich1Mitte.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblBereich1Mitte.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1WeightMitte.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1WeightMitte.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1DisplayWeightMitte.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1DisplayWeightMitte.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1ErrorLimitMitte.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1ErrorLimitMitte.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich1VELMitte.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich1VELMitte.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel11.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel11.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1Weight10.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1Weight10.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1DisplayWeight10.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1DisplayWeight10.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit10.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit10.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich1VEL10.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich1VEL10.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel8.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel8.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1Weight7.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1Weight7.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1DisplayWeight7.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1DisplayWeight7.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit7.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit7.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich1VEL7.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich1VEL7.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel10.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel10.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1Weight9.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1Weight9.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1DisplayWeight9.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1DisplayWeight9.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit9.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit9.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich1VEL9.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich1VEL9.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel9.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel9.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1Weight8.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1Weight8.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1DisplayWeight8.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1DisplayWeight8.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit8.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBereich1ErrorLimit8.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich1VEL8.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxBereich1VEL8.RootElement.ToolTipText" xml:space="preserve">
-    <value />
+  <data name="lblBereich1Mitte.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 18</value>
+  </data>
+  <data name="lblBereich1Mitte.Text" xml:space="preserve">
+    <value>Mitte</value>
   </data>
   <data name="RadGroupBoxBereich1.HeaderText" xml:space="preserve">
     <value>Bereich 1			
 </value>
-  </data>
-  <data name="RadGroupBoxBereich1.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadGroupBoxBereich1.RootElement.ToolTipText" xml:space="preserve">
-    <value />
   </data>
   <data name="RadGroupBoxBereich1.Text" xml:space="preserve">
     <value>Bereich 1			
@@ -1788,19 +342,7 @@
   <data name="RadGroupBoxPruefungAussermittigeBelastung.HeaderText" xml:space="preserve">
     <value>Prüfung bei außermittiger Belastung</value>
   </data>
-  <data name="RadGroupBoxPruefungAussermittigeBelastung.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadGroupBoxPruefungAussermittigeBelastung.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="RadGroupBoxPruefungAussermittigeBelastung.Text" xml:space="preserve">
     <value>Prüfung bei außermittiger Belastung</value>
-  </data>
-  <data name="RadScrollablePanel1.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadScrollablePanel1.RootElement.ToolTipText" xml:space="preserve">
-    <value />
   </data>
 </root>

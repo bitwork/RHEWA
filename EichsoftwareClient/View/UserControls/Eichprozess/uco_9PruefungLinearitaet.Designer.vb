@@ -411,7 +411,6 @@ Partial Class uco_9PruefungLinearitaet
         Me.RadScrollablePanel1.PanelContainer.SuspendLayout()
         Me.RadScrollablePanel1.SuspendLayout()
         CType(Me.RadGroupBoxPruefungLinearitaetFallend, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.RadGroupBoxPruefungLinearitaetFallend.SuspendLayout()
         CType(Me.RadButtonShowEFGFallend, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonFallendMinus, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxBereich3Fallend, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -605,7 +604,6 @@ Partial Class uco_9PruefungLinearitaet
         CType(Me.lblBereich1FallendEFGSpezial, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblBereich1FallendFehlerGrenzen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxPruefungLinearitaetSteigend, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.RadGroupBoxPruefungLinearitaetSteigend.SuspendLayout()
         CType(Me.RadButtonShowEFGSteigend, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonSteigendMinus, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxBereich3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -804,6 +802,18 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadScrollablePanel1.PanelContainer
         '
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadButtonSteigendPlus)
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadButtonSteigendMinus)
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadButtonShowEFGSteigend)
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadButtonShowEFGFallend)
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadButtonFallendMinus)
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadGroupBoxBereich3)
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadGroupBoxBereich3Fallend)
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadGroupBoxBereich2)
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadGroupBoxBereich1Fallend)
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadGroupBoxBereich1)
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadButtonFallendPlus)
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadGroupBoxBereich2Fallend)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadGroupBoxPruefungLinearitaetFallend)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadGroupBoxPruefungLinearitaetSteigend)
         resources.ApplyResources(Me.RadScrollablePanel1.PanelContainer, "RadScrollablePanel1.PanelContainer")
@@ -822,12 +832,6 @@ Partial Class uco_9PruefungLinearitaet
         'RadGroupBoxPruefungLinearitaetFallend
         '
         Me.RadGroupBoxPruefungLinearitaetFallend.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
-        Me.RadGroupBoxPruefungLinearitaetFallend.Controls.Add(Me.RadButtonShowEFGFallend)
-        Me.RadGroupBoxPruefungLinearitaetFallend.Controls.Add(Me.RadButtonFallendMinus)
-        Me.RadGroupBoxPruefungLinearitaetFallend.Controls.Add(Me.RadGroupBoxBereich3Fallend)
-        Me.RadGroupBoxPruefungLinearitaetFallend.Controls.Add(Me.RadButtonFallendPlus)
-        Me.RadGroupBoxPruefungLinearitaetFallend.Controls.Add(Me.RadGroupBoxBereich2Fallend)
-        Me.RadGroupBoxPruefungLinearitaetFallend.Controls.Add(Me.RadGroupBoxBereich1Fallend)
         resources.ApplyResources(Me.RadGroupBoxPruefungLinearitaetFallend, "RadGroupBoxPruefungLinearitaetFallend")
         Me.RadGroupBoxPruefungLinearitaetFallend.Name = "RadGroupBoxPruefungLinearitaetFallend"
         '
@@ -857,6 +861,7 @@ Partial Class uco_9PruefungLinearitaet
         Me.RadButtonShowEFGFallend.RootElement.Margin = CType(resources.GetObject("RadButtonShowEFGFallend.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadButtonShowEFGFallend.RootElement.Text = resources.GetString("RadButtonShowEFGFallend.RootElement.Text")
         Me.RadButtonShowEFGFallend.RootElement.TextOrientation = CType(resources.GetObject("RadButtonShowEFGFallend.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadButtonShowEFGFallend.TabStop = False
         '
         'RadButtonFallendMinus
         '
@@ -873,6 +878,7 @@ Partial Class uco_9PruefungLinearitaet
         Me.RadButtonFallendMinus.RootElement.Margin = CType(resources.GetObject("RadButtonFallendMinus.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadButtonFallendMinus.RootElement.Text = resources.GetString("RadButtonFallendMinus.RootElement.Text")
         Me.RadButtonFallendMinus.RootElement.TextOrientation = CType(resources.GetObject("RadButtonFallendMinus.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadButtonFallendMinus.TabStop = False
         '
         'RadGroupBoxBereich3Fallend
         '
@@ -1731,6 +1737,7 @@ Partial Class uco_9PruefungLinearitaet
         Me.RadButtonFallendPlus.RootElement.Margin = CType(resources.GetObject("RadButtonFallendPlus.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadButtonFallendPlus.RootElement.Text = resources.GetString("RadButtonFallendPlus.RootElement.Text")
         Me.RadButtonFallendPlus.RootElement.TextOrientation = CType(resources.GetObject("RadButtonFallendPlus.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadButtonFallendPlus.TabStop = False
         '
         'RadGroupBoxBereich2Fallend
         '
@@ -3419,12 +3426,6 @@ Partial Class uco_9PruefungLinearitaet
         'RadGroupBoxPruefungLinearitaetSteigend
         '
         Me.RadGroupBoxPruefungLinearitaetSteigend.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
-        Me.RadGroupBoxPruefungLinearitaetSteigend.Controls.Add(Me.RadButtonShowEFGSteigend)
-        Me.RadGroupBoxPruefungLinearitaetSteigend.Controls.Add(Me.RadButtonSteigendMinus)
-        Me.RadGroupBoxPruefungLinearitaetSteigend.Controls.Add(Me.RadGroupBoxBereich3)
-        Me.RadGroupBoxPruefungLinearitaetSteigend.Controls.Add(Me.RadButtonSteigendPlus)
-        Me.RadGroupBoxPruefungLinearitaetSteigend.Controls.Add(Me.RadGroupBoxBereich2)
-        Me.RadGroupBoxPruefungLinearitaetSteigend.Controls.Add(Me.RadGroupBoxBereich1)
         resources.ApplyResources(Me.RadGroupBoxPruefungLinearitaetSteigend, "RadGroupBoxPruefungLinearitaetSteigend")
         Me.RadGroupBoxPruefungLinearitaetSteigend.Name = "RadGroupBoxPruefungLinearitaetSteigend"
         '
@@ -3454,6 +3455,7 @@ Partial Class uco_9PruefungLinearitaet
         Me.RadButtonShowEFGSteigend.RootElement.Margin = CType(resources.GetObject("RadButtonShowEFGSteigend.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadButtonShowEFGSteigend.RootElement.Text = resources.GetString("RadButtonShowEFGSteigend.RootElement.Text")
         Me.RadButtonShowEFGSteigend.RootElement.TextOrientation = CType(resources.GetObject("RadButtonShowEFGSteigend.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadButtonShowEFGSteigend.TabStop = False
         '
         'RadButtonSteigendMinus
         '
@@ -3470,6 +3472,7 @@ Partial Class uco_9PruefungLinearitaet
         Me.RadButtonSteigendMinus.RootElement.Margin = CType(resources.GetObject("RadButtonSteigendMinus.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadButtonSteigendMinus.RootElement.Text = resources.GetString("RadButtonSteigendMinus.RootElement.Text")
         Me.RadButtonSteigendMinus.RootElement.TextOrientation = CType(resources.GetObject("RadButtonSteigendMinus.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadButtonSteigendMinus.TabStop = False
         '
         'RadGroupBoxBereich3
         '
@@ -4322,6 +4325,7 @@ Partial Class uco_9PruefungLinearitaet
         Me.RadButtonSteigendPlus.RootElement.Margin = CType(resources.GetObject("RadButtonSteigendPlus.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadButtonSteigendPlus.RootElement.Text = resources.GetString("RadButtonSteigendPlus.RootElement.Text")
         Me.RadButtonSteigendPlus.RootElement.TextOrientation = CType(resources.GetObject("RadButtonSteigendPlus.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadButtonSteigendPlus.TabStop = False
         '
         'RadGroupBoxBereich2
         '
@@ -6005,7 +6009,6 @@ Partial Class uco_9PruefungLinearitaet
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadScrollablePanel1.ResumeLayout(False)
         CType(Me.RadGroupBoxPruefungLinearitaetFallend, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.RadGroupBoxPruefungLinearitaetFallend.ResumeLayout(False)
         CType(Me.RadButtonShowEFGFallend, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonFallendMinus, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBoxBereich3Fallend, System.ComponentModel.ISupportInitialize).EndInit()
@@ -6226,7 +6229,6 @@ Partial Class uco_9PruefungLinearitaet
         CType(Me.lblBereich1FallendEFGSpezial, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblBereich1FallendFehlerGrenzen, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBoxPruefungLinearitaetSteigend, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.RadGroupBoxPruefungLinearitaetSteigend.ResumeLayout(False)
         CType(Me.RadButtonShowEFGSteigend, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonSteigendMinus, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBoxBereich3, System.ComponentModel.ISupportInitialize).EndInit()
