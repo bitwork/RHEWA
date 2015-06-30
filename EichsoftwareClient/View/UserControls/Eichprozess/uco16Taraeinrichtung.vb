@@ -118,6 +118,8 @@
     ''' <author></author>
     ''' <commentauthor></commentauthor>
     Private Sub UpdateObject()
+        If DialogModus = enuDialogModus.normal Then objEichprozess.Bearbeitungsdatum = Date.Now
+
         objEichprozess.Eichprotokoll.Taraeinrichtung_ErweiterteRichtigkeitspruefungOK = RadCheckBoxTaraErweiterteRichtigkeitspruefung.Checked
         objEichprozess.Eichprotokoll.Taraeinrichtung_TaraausgleichseinrichtungOK = RadCheckBoxTaraausgleicheinrichtungOK.Checked
         objEichprozess.Eichprotokoll.Taraeinrichtung_GenauigkeitTarierungOK = RadCheckBoxTaraGenauigkeitTarrierung.Checked

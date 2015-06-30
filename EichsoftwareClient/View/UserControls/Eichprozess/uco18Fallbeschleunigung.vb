@@ -107,6 +107,8 @@
     ''' <author></author>
     ''' <commentauthor></commentauthor>
     Private Sub UpdateObject()
+        If DialogModus = enuDialogModus.normal Then objEichprozess.Bearbeitungsdatum = Date.Now
+
         objEichprozess.Eichprotokoll.Fallbeschleunigung_ms2 = RadCheckBoxSchwerkraft.Checked
         objEichprozess.Eichprotokoll.Fallbeschleunigung_g = RadTextBoxControlG.Text
     End Sub

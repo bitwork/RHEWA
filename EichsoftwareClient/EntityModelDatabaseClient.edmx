@@ -203,6 +203,7 @@
           <Property Name="FK_Bearbeitungsstatus" Type="int" />
           <Property Name="ErzeugerLizenz" Type="nvarchar" MaxLength="50" />
           <Property Name="AusStandardwaageErzeugt" Type="bit" Nullable="false" />
+          <Property Name="Bearbeitungsdatum" Type="datetime" />
         </EntityType>
         <EntityType Name="Kompatiblitaetsnachweis">
           <Key>
@@ -1023,6 +1024,7 @@
           <NavigationProperty Name="Mogelstatistik" Relationship="EichsoftwareClientdatabaseModel.FK_Mogelstatistik_Eichprozess" FromRole="Eichprozess" ToRole="Mogelstatistik" />
           <Property Type="String" Name="ErzeugerLizenz" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="Boolean" Name="AusStandardwaageErzeugt" Nullable="false" />
+          <Property Type="DateTime" Name="Bearbeitungsdatum" Precision="3" />
         </EntityType>
         <EntityType Name="Kompatiblitaetsnachweis">
           <Key>
@@ -1725,6 +1727,7 @@
           <EntitySetMapping Name="Eichprozess">
             <EntityTypeMapping TypeName="EichsoftwareClientdatabaseModel.Eichprozess">
               <MappingFragment StoreEntitySet="Eichprozess">
+                <ScalarProperty Name="Bearbeitungsdatum" ColumnName="Bearbeitungsdatum" />
                 <ScalarProperty Name="AusStandardwaageErzeugt" ColumnName="AusStandardwaageErzeugt" />
                 <ScalarProperty Name="ErzeugerLizenz" ColumnName="ErzeugerLizenz" />
                 <ScalarProperty Name="FK_Bearbeitungsstatus" ColumnName="FK_Bearbeitungsstatus" />

@@ -1248,6 +1248,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
     ''' <author></author>
     ''' <commentauthor></commentauthor>
     Private Sub UpdateObject()
+        If DialogModus = enuDialogModus.normal Then objEichprozess.Bearbeitungsdatum = Date.Now
         objEichprozess.Eichprotokoll.GenauigkeitNullstellung_InOrdnung = RadCheckBoxNullstellungOK.Checked
         objEichprozess.Eichprotokoll.Wiederholbarkeit_Staffelverfahren_MINNormalien = RadTextBoxControlBetragNormallast.Text
     End Sub
@@ -1439,25 +1440,10 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
     Protected Overrides Sub SaveNeeded(ByVal UserControl As UserControl)
         If Me.Equals(UserControl) Then
 
-            If DialogModus = enuDialogModus.lesend Then
-                Select Case objEichprozess.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren.Verfahren
-                    Case Is = "über 60kg mit Normalien"
-                        ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
-                        If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitNormallastLinearitaet Then
-                            objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitNormallastLinearitaet
-                        End If
-                    Case Is = "Fahrzeugwaagen", "über 60kg im Staffelverfahren"
-                        ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
-                        If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitErsatzlast Then
-                            objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitErsatzlast
-                        End If
-                End Select
-                ParentFormular.CurrentEichprozess = objEichprozess
-                Exit Sub
-            End If
-
-            If DialogModus = enuDialogModus.korrigierend Then
-                UpdateObject()
+            If DialogModus = enuDialogModus.korrigierend Or DialogModus = enuDialogModus.lesend Then
+                If DialogModus = enuDialogModus.korrigierend Then
+                    UpdateObject()
+                End If
                 Select Case objEichprozess.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren.Verfahren
                     Case Is = "über 60kg mit Normalien"
                         ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben

@@ -331,8 +331,9 @@
                                                          .Lookup_Waagentyp = Eichprozess.Lookup_Waagentyp.Typ, _
                                                          .Lookup_Waagenart = Eichprozess.Lookup_Waagenart.Art, _
                                                          .Lookup_Auswertegeraet = Eichprozess.Lookup_Auswertegeraet.Typ, _
-                                                         Eichprozess.Ausgeblendet _
-                                                 }
+                                                         Eichprozess.Ausgeblendet, _
+                                                         Eichprozess.Bearbeitungsdatum _
+                                                                                                      }
 
 
 
@@ -356,7 +357,8 @@
                                                         .Lookup_Waagentyp = Eichprozess.Lookup_Waagentyp.Typ_EN, _
                                                         .Lookup_Waagenart = Eichprozess.Lookup_Waagenart.Art_EN, _
                                                         .Lookup_Auswertegeraet = Eichprozess.Lookup_Auswertegeraet.Typ, _
-                                                        Eichprozess.Ausgeblendet _
+                                                        Eichprozess.Ausgeblendet, _
+                                                         Eichprozess.Bearbeitungsdatum _
                                                 }
 
                     'zuweisen der Ergebnismenge als Datenquelle für das Grid
@@ -378,7 +380,8 @@
                                                         .Lookup_Waagentyp = Eichprozess.Lookup_Waagentyp.Typ_PL, _
                                                         .Lookup_Waagenart = Eichprozess.Lookup_Waagenart.Art_EN, _
                                                         .Lookup_Auswertegeraet = Eichprozess.Lookup_Auswertegeraet.Typ, _
-                                                        Eichprozess.Ausgeblendet _
+                                                        Eichprozess.Ausgeblendet, _
+                                                         Eichprozess.Bearbeitungsdatum _
                                                 }
 
                     'zuweisen der Ergebnismenge als Datenquelle für das Grid
@@ -399,7 +402,8 @@
                                                         .Lookup_Waagentyp = Eichprozess.Lookup_Waagentyp.Typ, .Lookup_Waagentyp_EN = Eichprozess.Lookup_Waagentyp.Typ_EN, .Lookup_Waagentyp_PL = Eichprozess.Lookup_Waagentyp.Typ_PL, _
                                                         .Lookup_Waagenart = Eichprozess.Lookup_Waagenart.Art, .Lookup_Waagenart_EN = Eichprozess.Lookup_Waagenart.Art_EN, .Lookup_Waagenart_PL = Eichprozess.Lookup_Waagenart.Art_PL, _
                                                         .Lookup_Auswertegeraet = Eichprozess.Lookup_Auswertegeraet.Typ, _
-                                                        Eichprozess.Ausgeblendet _
+                                                        Eichprozess.Ausgeblendet, _
+                                                         Eichprozess.Bearbeitungsdatum _
                                                 }
 
                     'zuweisen der Ergebnismenge als Datenquelle für das Grid

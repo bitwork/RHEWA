@@ -420,6 +420,8 @@
     ''' <author></author>
     ''' <commentauthor></commentauthor>
     Private Sub UpdateObject()
+        If DialogModus = enuDialogModus.normal Then objEichprozess.Bearbeitungsdatum = Date.Now
+
         objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_AWG_Anschlussart = RadTextBoxControlAWGAnschlussart.Text.Trim
         objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast = RadTextBoxControlWZHoechstlast.Text.Trim
         objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Verbindungselemente_BruchteilEichfehlergrenze = RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze.Text.Trim

@@ -569,6 +569,7 @@
         objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Genauigkeitsklasse = "III"
         objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Zulassungsinhaber = RadTextBoxWaageZulassungsinhaber.Text
 
+        If DialogModus = enuDialogModus.normal Then objEichprozess.Bearbeitungsdatum = Date.Now
 
 
         'zuweisen der aktualisierten Objekt instanz an Hauptformular

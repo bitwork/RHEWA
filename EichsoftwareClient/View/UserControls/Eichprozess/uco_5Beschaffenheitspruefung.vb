@@ -101,6 +101,7 @@ Public Class uco_5Beschaffenheitspruefung
     ''' <author></author>
     ''' <commentauthor></commentauthor>
     Private Sub UpdateObject()
+        If DialogModus = enuDialogModus.normal Then objEichprozess.Bearbeitungsdatum = Date.Now
         If Not _objEichprotokoll Is Nothing Then
             If _objEichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren Is Nothing Then
                 _objEichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.nichts

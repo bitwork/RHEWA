@@ -917,6 +917,7 @@
 #Region "Overrides"
     'Speicherroutine
     Protected Overrides Sub SaveNeeded(ByVal UserControl As UserControl)
+
         If Me.Equals(UserControl) Then
 
             If DialogModus = enuDialogModus.lesend Then
@@ -952,7 +953,7 @@
                             If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.Beschaffenheitspruefung Then
                                 objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Beschaffenheitspruefung
                             End If
-
+                            If DialogModus = enuDialogModus.normal Then objEichprozess.Bearbeitungsdatum = Date.Now
                             'Speichern in Datenbank
                             Context.SaveChanges()
 

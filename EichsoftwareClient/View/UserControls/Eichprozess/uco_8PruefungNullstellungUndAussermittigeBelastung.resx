@@ -6066,7 +6066,7 @@
     <value>310, 3</value>
   </data>
   <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>176, 34</value>
+    <value>181, 34</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlDisplayWeight3.Name" xml:space="preserve">
     <value>RadTextBoxControlDisplayWeight3</value>
@@ -8983,7 +8983,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.5658.24496, Culture=neutral, PublicKeyToken=null</value>
+    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.5659.11537, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="lblFehlerGrenzen.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>

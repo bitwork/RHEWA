@@ -116,6 +116,8 @@ Public Class Uco21Versenden
             objEichprozess.UploadFilePath = FTPUploadPath
 
         End If
+        If DialogModus = enuDialogModus.normal Then objEichprozess.Bearbeitungsdatum = Date.Now
+
     End Sub
 
     ''' <summary>

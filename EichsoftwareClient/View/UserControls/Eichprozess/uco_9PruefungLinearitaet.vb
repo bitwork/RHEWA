@@ -706,6 +706,7 @@ Public Class uco_9PruefungLinearitaet
 #End Region
 
     Private Sub UpdateObject()
+        If DialogModus = enuDialogModus.normal Then objEichprozess.Bearbeitungsdatum = Date.Now
         'neuen Context aufbauen
         Using Context As New EichsoftwareClientdatabaseEntities1
             'jedes objekt initialisieren und aus context laden und updaten

@@ -151,6 +151,7 @@
     ''' <author></author>
     ''' <commentauthor></commentauthor>
     Private Sub UpdateObject()
+        If DialogModus = enuDialogModus.normal Then objEichprozess.Bearbeitungsdatum = Date.Now
         'je nachdem ob das Objekt schon existiert (man ist im Vorgang bereits weiter)  oder nicht, das eine oder andere Objekt ansprechen. Der Hintergrund kommt leider vom Entity Framework 
         'ich habe erst eine ID im Eichprotokoll, wenn ich dieses Speichere. Somit kann ich dem Eichprozess FK aufs Eichprotokoll nur zuweisen, wenn das Eichprotokoll bereits gespeichert ist
         If Not objEichprozess.Eichprotokoll Is Nothing Then

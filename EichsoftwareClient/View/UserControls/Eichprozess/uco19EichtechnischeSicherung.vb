@@ -232,6 +232,7 @@
         objEichprozess.Eichprotokoll.Sicherung_GruenesM = RadCheckBoxGruenesM.Checked
         objEichprozess.Eichprotokoll.Sicherung_CE = RadCheckBoxCEKennzeichen.Checked
 
+        If DialogModus = enuDialogModus.normal Then objEichprozess.Bearbeitungsdatum = Date.Now
 
         'anzahl
         Try

@@ -260,7 +260,7 @@
     Protected Overrides Sub SaveNeeded(ByVal UserControl As UserControl)
         If Me.Equals(UserControl) Then
 
-            If DialogModus = enuDialogModus.lesend Then
+            If DialogModus = enuDialogModus.lesend Or DialogModus = enuDialogModus.korrigierend Then
                 If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.Taraeinrichtung Then
                     objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Taraeinrichtung
                 End If
@@ -268,14 +268,6 @@
                 Exit Sub
             End If
 
-
-            If DialogModus = enuDialogModus.korrigierend Then
-                If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.Taraeinrichtung Then
-                    objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Taraeinrichtung
-                End If
-                ParentFormular.CurrentEichprozess = objEichprozess
-                Exit Sub
-            End If
 
             If ValidateControls() = True Then
 

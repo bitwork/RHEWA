@@ -25,6 +25,7 @@ Partial Public Class Eichprozess
     Public Property FK_Bearbeitungsstatus As Nullable(Of Integer)
     Public Property ErzeugerLizenz As String
     Public Property AusStandardwaageErzeugt As Boolean
+    Public Property Bearbeitungsdatum As Nullable(Of Date)
 
     Public Overridable Property Eichprotokoll As Eichprotokoll
     Public Overridable Property Kompatiblitaetsnachweis As Kompatiblitaetsnachweis

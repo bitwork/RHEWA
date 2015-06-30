@@ -115,7 +115,7 @@
     ''' <author></author>
     ''' <commentauthor></commentauthor>
     Private Sub UpdateObject()
-
+        If DialogModus = enuDialogModus.normal Then objEichprozess.Bearbeitungsdatum = Date.Now
         'Bereich 
         objEichprozess.Eichprotokoll.Ueberlastanzeige_Ueberlast = RadCheckBoxUeberlast.Checked
         objEichprozess.Eichprotokoll.Ueberlastanzeige_Max = RadTextBoxControlMaxE.Text

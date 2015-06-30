@@ -107,6 +107,8 @@
     ''' <author></author>
     ''' <commentauthor></commentauthor>
     Private Sub UpdateObject()
+        If DialogModus = enuDialogModus.normal Then objEichprozess.Bearbeitungsdatum = Date.Now
+
         objEichprozess.Eichprotokoll.EignungAchlastwaegungen_WaagenbrueckeEbene = RadCheckBoxZufahrtenInOrdnung.Checked
         objEichprozess.Eichprotokoll.EignungAchlastwaegungen_WaageNichtGeeignet = RadCheckBoxWaageNichtGeeignet.Checked
         objEichprozess.Eichprotokoll.EignungAchlastwaegungen_Geprueft = RadCheckBoxWaagegeprueft.Checked
