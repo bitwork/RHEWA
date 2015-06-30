@@ -357,7 +357,11 @@ Public Class clsWebserviceFunctions
                                     'umwandeln des Serverobjektes in Clientobject
                                     clsClientServerConversionFunctions.CopyClientObjectPropertiesWithOwnIDs(Eichprozess, objServerEichprozess)
 
-                                    Eichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'überschreiben des Statuses
+                                    If NeuerStatus = GlobaleEnumeratoren.enuBearbeitungsstatus.Genehmigt Then
+                                        Eichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Versenden
+                                    Else
+                                        Eichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
+                                    End If
                                     Eichprozess.FK_Bearbeitungsstatus = NeuerStatus
                                     Try
                                         DBContext.SaveChanges()
