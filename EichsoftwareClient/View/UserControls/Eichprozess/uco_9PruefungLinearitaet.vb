@@ -497,7 +497,7 @@ Public Class uco_9PruefungLinearitaet
         'prüfen ob alle Felder ausgefüllt sind
         AbortSaveing = False
 
-        For i As Integer = 5 To 8 'messpunkt
+        For i As Integer = 1 To 8 'messpunkt
             For j As Integer = 1 To 3 'bereich
                 Dim checkbox As Telerik.WinControls.UI.RadCheckBox = FindControl(String.Format("RadCheckBoxBereich{0}VEL{1}", j, i))
                 If checkbox.Checked = False And checkbox.Visible = True Then
