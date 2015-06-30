@@ -337,7 +337,7 @@
     <value>84, 50</value>
   </data>
   <data name="RadButton1.TabIndex" type="System.Int32, mscorlib">
-    <value>114</value>
+    <value>13</value>
   </data>
   <data name="RadButton1.Text" xml:space="preserve">
     <value>Show VEL</value>
@@ -1217,7 +1217,7 @@
     <value>62, 20</value>
   </data>
   <data name="RadTextBoxControllastLinks3.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>8</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControllastLinks3.Name" xml:space="preserve">
     <value>RadTextBoxControllastLinks3</value>
@@ -1289,7 +1289,7 @@
     <value>62, 20</value>
   </data>
   <data name="RadTextBoxControlLastLinks2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlLastLinks2.Name" xml:space="preserve">
     <value>RadTextBoxControlLastLinks2</value>
@@ -1337,7 +1337,7 @@
     <value>62, 20</value>
   </data>
   <data name="RadTextBoxControlAnzeigeLinks1.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAnzeigeLinks1.Name" xml:space="preserve">
     <value>RadTextBoxControlAnzeigeLinks1</value>
@@ -1436,7 +1436,7 @@
     <value>62, 20</value>
   </data>
   <data name="RadTextBoxControlAnzeigeLinks2.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAnzeigeLinks2.Name" xml:space="preserve">
     <value>RadTextBoxControlAnzeigeLinks2</value>
@@ -1505,7 +1505,7 @@
     <value>62, 20</value>
   </data>
   <data name="RadTextBoxControlAnzeigeLinks3.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>9</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAnzeigeLinks3.Name" xml:space="preserve">
     <value>RadTextBoxControlAnzeigeLinks3</value>
@@ -2495,7 +2495,7 @@
     <value>62, 20</value>
   </data>
   <data name="RadTextBoxControlAnzeigeRechts2.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+    <value>7</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAnzeigeRechts2.Name" xml:space="preserve">
     <value>RadTextBoxControlAnzeigeRechts2</value>
@@ -2594,7 +2594,7 @@
     <value>62, 20</value>
   </data>
   <data name="RadTextBoxControlAnzeigeRechts1.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAnzeigeRechts1.Name" xml:space="preserve">
     <value>RadTextBoxControlAnzeigeRechts1</value>
@@ -2717,7 +2717,7 @@
     <value>62, 20</value>
   </data>
   <data name="RadTextBoxControlLastRechts2.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlLastRechts2.Name" xml:space="preserve">
     <value>RadTextBoxControlLastRechts2</value>
@@ -2816,7 +2816,7 @@
     <value>62, 20</value>
   </data>
   <data name="RadTextBoxControlLastRechts3.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlLastRechts3.Name" xml:space="preserve">
     <value>RadTextBoxControlLastRechts3</value>
@@ -2915,7 +2915,7 @@
     <value>62, 20</value>
   </data>
   <data name="RadTextBoxControlLastRechts1.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlLastRechts1.Name" xml:space="preserve">
     <value>RadTextBoxControlLastRechts1</value>
@@ -3020,6 +3020,6 @@
     <value>uco13PruefungRollendeLasten</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, EichsoftwareClient, Version=1.0.5387.21297, Culture=neutral, PublicKeyToken=null</value>
+    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.5659.11537, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

@@ -619,6 +619,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco14PruefungAnsprechvermoegen.resx">
       <DependentUpon>uco14PruefungAnsprechvermoegen.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco13PruefungRollendeLasten.de.resx">
       <DependentUpon>uco13PruefungRollendeLasten.vb</DependentUpon>
@@ -640,6 +641,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco15PruefungStabilitaet.resx">
       <DependentUpon>uco15PruefungStabilitaet.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco10PruefungStaffelverfahren.resx">
       <DependentUpon>uco10PruefungStaffelverfahren.vb</DependentUpon>
