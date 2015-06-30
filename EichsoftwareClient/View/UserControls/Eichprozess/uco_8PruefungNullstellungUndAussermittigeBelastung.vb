@@ -236,7 +236,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
             Dim Wiederholung As String = CType(sender, Windows.Forms.Control).Name.Last() 'letzte Zahl auslesen
             Dim Fehler As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlErrorLimit{0}", 1)) ' gibt nur ein Fehlerelement
             Dim Last As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlWeight{0}", Wiederholung))
-            Dim EFG As Telerik.WinControls.UI.RadCheckBox = FindControl(String.Format("RadCheckBoxVEL{0}", 1)) ' gibt nur ein Fehlerelement
+            Dim EFG As Telerik.WinControls.UI.RadCheckBox = FindControl(String.Format("RadCheckBoxVEL{0}", 1)) ' gibt nur ein EFG Element
             Dim Spezial As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblEFGSpeziallBerechnung"))
             Dim min As Decimal
             Dim max As Decimal
@@ -424,6 +424,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         'bereich laden
         Dim bereich = GetBereich(sender).ToString
 
+    
         'alle steuerlemente iterieren
         Try
             For i As Integer = 1 To 13
@@ -434,6 +435,10 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
 
                 'wenn sich eine der Last Werte ändert, muss es in allen anderen Textboxen nachgezogen werden
                 Dim Last As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}Weight{1}", bereich, Belastungsort))
+
+                'vorzeitiger abrruch, ab dann wenn ein ausgeblendetes steuerelement gefunden wurde
+                If Last.Visible = False Then Continue For
+
                 Last.Text = CType(sender, Telerik.WinControls.UI.RadTextBoxControl).Text
 
 

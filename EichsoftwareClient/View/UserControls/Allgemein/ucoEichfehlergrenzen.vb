@@ -96,13 +96,13 @@
             RadTextBoxControlBereich1EFG500e.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 1), _intNullstellenE, MidpointRounding.AwayFromZero)
             RadTextBoxControlBereich1EFG2000e.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 1.5), _intNullstellenE, MidpointRounding.AwayFromZero)
 
-            'VFG Berechnen
-            RadTextBoxControlBereich1VFG20e.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
-            RadTextBoxControlBereich1VFG500e.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
-            RadTextBoxControlBereich1VFG2000e.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
-            RadTextBoxControlBereich1VFG20e.Text = Math.Round(CDec(RadTextBoxControlBereich1EFG20e.Text * 2), _intNullstellenE, MidpointRounding.AwayFromZero)
-            RadTextBoxControlBereich1VFG500e.Text = Math.Round(CDec(RadTextBoxControlBereich1EFG500e.Text * 2), _intNullstellenE, MidpointRounding.AwayFromZero)
-            RadTextBoxControlBereich1VFG2000e.Text = Math.Round(CDec(RadTextBoxControlBereich1EFG2000e.Text * 2), _intNullstellenE, MidpointRounding.AwayFromZero)
+            ' 'VFG Berechnen
+            ' RadTextBoxControlBereich1VFG20e.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
+            ' RadTextBoxControlBereich1VFG500e.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
+            ' RadTextBoxControlBereich1VFG2000e.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
+            ' RadTextBoxControlBereich1VFG20e.Text = Math.Round(CDec(RadTextBoxControlBereich1EFG20e.Text * 2), _intNullstellenE, MidpointRounding.AwayFromZero)
+            ' RadTextBoxControlBereich1VFG500e.Text = Math.Round(CDec(RadTextBoxControlBereich1EFG500e.Text * 2), _intNullstellenE, MidpointRounding.AwayFromZero)
+            ' RadTextBoxControlBereich1VFG2000e.Text = Math.Round(CDec(RadTextBoxControlBereich1EFG2000e.Text * 2), _intNullstellenE, MidpointRounding.AwayFromZero)
         Catch ex As Exception
         End Try
 
@@ -125,13 +125,13 @@
             RadTextBoxControlBereich2EFG500e.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 1), _intNullstellenE, MidpointRounding.AwayFromZero)
             RadTextBoxControlBereich2EFG2000e.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 1.5), _intNullstellenE, MidpointRounding.AwayFromZero)
 
-            'VFG Berechnen
-            RadTextBoxControlBereich2VFG20e.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
-            RadTextBoxControlBereich2VFG500e.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
-            RadTextBoxControlBereich2VFG2000e.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
-            RadTextBoxControlBereich2VFG20e.Text = Math.Round(CDec(RadTextBoxControlBereich2EFG20e.Text * 2), _intNullstellenE, MidpointRounding.AwayFromZero)
-            RadTextBoxControlBereich2VFG500e.Text = Math.Round(CDec(RadTextBoxControlBereich2EFG500e.Text * 2), _intNullstellenE, MidpointRounding.AwayFromZero)
-            RadTextBoxControlBereich2VFG2000e.Text = Math.Round(CDec(RadTextBoxControlBereich2EFG2000e.Text * 2), _intNullstellenE, MidpointRounding.AwayFromZero)
+            ''VFG Berechnen
+            'RadTextBoxControlBereich2VFG20e.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
+            'RadTextBoxControlBereich2VFG500e.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
+            'RadTextBoxControlBereich2VFG2000e.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
+            'RadTextBoxControlBereich2VFG20e.Text = Math.Round(CDec(RadTextBoxControlBereich2EFG20e.Text * 2), _intNullstellenE, MidpointRounding.AwayFromZero)
+            'RadTextBoxControlBereich2VFG500e.Text = Math.Round(CDec(RadTextBoxControlBereich2EFG500e.Text * 2), _intNullstellenE, MidpointRounding.AwayFromZero)
+            'RadTextBoxControlBereich2VFG2000e.Text = Math.Round(CDec(RadTextBoxControlBereich2EFG2000e.Text * 2), _intNullstellenE, MidpointRounding.AwayFromZero)
         Catch ex As Exception
         End Try
 
@@ -153,13 +153,13 @@
             RadTextBoxControlBereich3EFG500e.Text = Decimal.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 1), _intNullstellenE, MidpointRounding.AwayFromZero)
             RadTextBoxControlBereich3EFG2000e.Text = Decimal.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 * 1.5), _intNullstellenE, MidpointRounding.AwayFromZero)
 
-            'VFG Berechnen
-            RadTextBoxControlBereich3VFG20e.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
-            RadTextBoxControlBereich3VFG500e.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
-            RadTextBoxControlBereich3VFG2000e.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
-            RadTextBoxControlBereich3VFG20e.Text = Decimal.Round(CDec(RadTextBoxControlBereich3EFG20e.Text * 2), _intNullstellenE, MidpointRounding.AwayFromZero)
-            RadTextBoxControlBereich3VFG500e.Text = Decimal.Round(CDec(RadTextBoxControlBereich3EFG500e.Text * 2), _intNullstellenE, MidpointRounding.AwayFromZero)
-            RadTextBoxControlBereich3VFG2000e.Text = Decimal.Round(CDec(RadTextBoxControlBereich3EFG2000e.Text * 2), _intNullstellenE, MidpointRounding.AwayFromZero)
+            ''VFG Berechnen
+            'RadTextBoxControlBereich3VFG20e.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
+            'RadTextBoxControlBereich3VFG500e.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
+            'RadTextBoxControlBereich3VFG2000e.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
+            'RadTextBoxControlBereich3VFG20e.Text = Decimal.Round(CDec(RadTextBoxControlBereich3EFG20e.Text * 2), _intNullstellenE, MidpointRounding.AwayFromZero)
+            'RadTextBoxControlBereich3VFG500e.Text = Decimal.Round(CDec(RadTextBoxControlBereich3EFG500e.Text * 2), _intNullstellenE, MidpointRounding.AwayFromZero)
+            'RadTextBoxControlBereich3VFG2000e.Text = Decimal.Round(CDec(RadTextBoxControlBereich3EFG2000e.Text * 2), _intNullstellenE, MidpointRounding.AwayFromZero)
         Catch ex As Exception
         End Try
     End Sub

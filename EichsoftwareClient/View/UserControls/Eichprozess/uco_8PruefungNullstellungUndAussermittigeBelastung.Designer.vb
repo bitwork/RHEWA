@@ -8093,94 +8093,94 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
     Friend WithEvents RadTextBoxControlBereich2DisplayWeight1 As Telerik.WinControls.UI.RadTextBoxControl
     Friend WithEvents RadTextBoxControlBereich2ErrorLimit1 As Telerik.WinControls.UI.RadTextBoxControl
     Friend WithEvents RadCheckBoxBereich2VEL1 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents lblMessOrtBereich2 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents lblBereich2FehlerGrenzen As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents lblBereich2EFGSpezial As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents lblBereich2Gewicht As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents lblBereich2AnzeigeGewicht As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents PictureBox8LC As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBoxFormular As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox6LC As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox4LC As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox12LC As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox77 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox78 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox75 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox76 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox73 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox74 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox71 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox72 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox69 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox70 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox55 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox56 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox57 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox58 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox67 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox68 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox53 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox54 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox59 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox60 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox65 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox66 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox61 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox62 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox63 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox64 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox27 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox28 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox29 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox30 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox31 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox32 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox33 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox34 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox35 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox36 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox49 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox50 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox47 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox48 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox37 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox38 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox51 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox52 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox45 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox46 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox39 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox40 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox43 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox44 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox41 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox42 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox5 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox6 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox7 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox8 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox9 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox10 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox23 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox24 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox21 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox22 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox11 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox12 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox25 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox26 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox19 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox20 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox13 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox14 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox17 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox18 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox15 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox16 As System.Windows.Forms.PictureBox
+    Friend lblMessOrtBereich2 As Telerik.WinControls.UI.RadLabel
+    Friend lblBereich2FehlerGrenzen As Telerik.WinControls.UI.RadLabel
+    Friend lblBereich2EFGSpezial As Telerik.WinControls.UI.RadLabel
+    Friend lblBereich2Gewicht As Telerik.WinControls.UI.RadLabel
+    Friend lblBereich2AnzeigeGewicht As Telerik.WinControls.UI.RadLabel
+    Friend PictureBox8LC As System.Windows.Forms.PictureBox
+    Friend PictureBoxFormular As System.Windows.Forms.PictureBox
+    Friend PictureBox6LC As System.Windows.Forms.PictureBox
+    Friend PictureBox4LC As System.Windows.Forms.PictureBox
+    Friend PictureBox12LC As System.Windows.Forms.PictureBox
+    Friend PictureBox77 As System.Windows.Forms.PictureBox
+    Friend PictureBox78 As System.Windows.Forms.PictureBox
+    Friend PictureBox75 As System.Windows.Forms.PictureBox
+    Friend PictureBox76 As System.Windows.Forms.PictureBox
+    Friend PictureBox73 As System.Windows.Forms.PictureBox
+    Friend PictureBox74 As System.Windows.Forms.PictureBox
+    Friend PictureBox71 As System.Windows.Forms.PictureBox
+    Friend PictureBox72 As System.Windows.Forms.PictureBox
+    Friend PictureBox69 As System.Windows.Forms.PictureBox
+    Friend PictureBox70 As System.Windows.Forms.PictureBox
+    Friend PictureBox55 As System.Windows.Forms.PictureBox
+    Friend PictureBox56 As System.Windows.Forms.PictureBox
+    Friend PictureBox57 As System.Windows.Forms.PictureBox
+    Friend PictureBox58 As System.Windows.Forms.PictureBox
+    Friend PictureBox67 As System.Windows.Forms.PictureBox
+    Friend PictureBox68 As System.Windows.Forms.PictureBox
+    Friend PictureBox53 As System.Windows.Forms.PictureBox
+    Friend PictureBox54 As System.Windows.Forms.PictureBox
+    Friend PictureBox59 As System.Windows.Forms.PictureBox
+    Friend PictureBox60 As System.Windows.Forms.PictureBox
+    Friend PictureBox65 As System.Windows.Forms.PictureBox
+    Friend PictureBox66 As System.Windows.Forms.PictureBox
+    Friend PictureBox61 As System.Windows.Forms.PictureBox
+    Friend PictureBox62 As System.Windows.Forms.PictureBox
+    Friend PictureBox63 As System.Windows.Forms.PictureBox
+    Friend PictureBox64 As System.Windows.Forms.PictureBox
+    Friend PictureBox27 As System.Windows.Forms.PictureBox
+    Friend PictureBox28 As System.Windows.Forms.PictureBox
+    Friend PictureBox29 As System.Windows.Forms.PictureBox
+    Friend PictureBox30 As System.Windows.Forms.PictureBox
+    Friend PictureBox31 As System.Windows.Forms.PictureBox
+    Friend PictureBox32 As System.Windows.Forms.PictureBox
+    Friend PictureBox33 As System.Windows.Forms.PictureBox
+    Friend PictureBox34 As System.Windows.Forms.PictureBox
+    Friend PictureBox35 As System.Windows.Forms.PictureBox
+    Friend PictureBox36 As System.Windows.Forms.PictureBox
+    Friend PictureBox49 As System.Windows.Forms.PictureBox
+    Friend PictureBox50 As System.Windows.Forms.PictureBox
+    Friend PictureBox47 As System.Windows.Forms.PictureBox
+    Friend PictureBox48 As System.Windows.Forms.PictureBox
+    Friend PictureBox37 As System.Windows.Forms.PictureBox
+    Friend PictureBox38 As System.Windows.Forms.PictureBox
+    Friend PictureBox51 As System.Windows.Forms.PictureBox
+    Friend PictureBox52 As System.Windows.Forms.PictureBox
+    Friend PictureBox45 As System.Windows.Forms.PictureBox
+    Friend PictureBox46 As System.Windows.Forms.PictureBox
+    Friend PictureBox39 As System.Windows.Forms.PictureBox
+    Friend PictureBox40 As System.Windows.Forms.PictureBox
+    Friend PictureBox43 As System.Windows.Forms.PictureBox
+    Friend PictureBox44 As System.Windows.Forms.PictureBox
+    Friend PictureBox41 As System.Windows.Forms.PictureBox
+    Friend PictureBox42 As System.Windows.Forms.PictureBox
+    Friend PictureBox1 As System.Windows.Forms.PictureBox
+    Friend PictureBox2 As System.Windows.Forms.PictureBox
+    Friend PictureBox3 As System.Windows.Forms.PictureBox
+    Friend PictureBox4 As System.Windows.Forms.PictureBox
+    Friend PictureBox5 As System.Windows.Forms.PictureBox
+    Friend PictureBox6 As System.Windows.Forms.PictureBox
+    Friend PictureBox7 As System.Windows.Forms.PictureBox
+    Friend PictureBox8 As System.Windows.Forms.PictureBox
+    Friend PictureBox9 As System.Windows.Forms.PictureBox
+    Friend PictureBox10 As System.Windows.Forms.PictureBox
+    Friend PictureBox23 As System.Windows.Forms.PictureBox
+    Friend PictureBox24 As System.Windows.Forms.PictureBox
+    Friend PictureBox21 As System.Windows.Forms.PictureBox
+    Friend PictureBox22 As System.Windows.Forms.PictureBox
+    Friend PictureBox11 As System.Windows.Forms.PictureBox
+    Friend PictureBox12 As System.Windows.Forms.PictureBox
+    Friend PictureBox25 As System.Windows.Forms.PictureBox
+    Friend PictureBox26 As System.Windows.Forms.PictureBox
+    Friend PictureBox19 As System.Windows.Forms.PictureBox
+    Friend PictureBox20 As System.Windows.Forms.PictureBox
+    Friend PictureBox13 As System.Windows.Forms.PictureBox
+    Friend PictureBox14 As System.Windows.Forms.PictureBox
+    Friend PictureBox17 As System.Windows.Forms.PictureBox
+    Friend PictureBox18 As System.Windows.Forms.PictureBox
+    Friend PictureBox15 As System.Windows.Forms.PictureBox
+    Friend PictureBox16 As System.Windows.Forms.PictureBox
     Friend WithEvents RadButtonShowEFG As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadButtonShowEFG2 As Telerik.WinControls.UI.RadButton
     Friend WithEvents lblBereich1EFGSpeziallBerechnung As Telerik.WinControls.UI.RadMaskedEditBox
@@ -8210,54 +8210,54 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
     Friend WithEvents RadTextBoxControlWeight3 As Telerik.WinControls.UI.RadTextBoxControl
     Friend WithEvents RadTextBoxControlDisplayWeight3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents lblEFGSpezial As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents lblGewicht As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents lblAnzeigeGewicht As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents lblWiederholungen As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadLabel29 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadLabel30 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadLabel31 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents lblPflichtfeld1 As System.Windows.Forms.Label
-    Friend WithEvents Label30 As System.Windows.Forms.Label
-    Friend WithEvents Label31 As System.Windows.Forms.Label
-    Friend WithEvents Label32 As System.Windows.Forms.Label
-    Friend WithEvents Label33 As System.Windows.Forms.Label
-    Friend WithEvents Label34 As System.Windows.Forms.Label
-    Friend WithEvents Label41 As System.Windows.Forms.Label
-    Friend WithEvents Label40 As System.Windows.Forms.Label
-    Friend WithEvents Label35 As System.Windows.Forms.Label
-    Friend WithEvents Label42 As System.Windows.Forms.Label
-    Friend WithEvents Label39 As System.Windows.Forms.Label
-    Friend WithEvents Label36 As System.Windows.Forms.Label
-    Friend WithEvents Label38 As System.Windows.Forms.Label
-    Friend WithEvents Label37 As System.Windows.Forms.Label
-    Friend WithEvents Label29 As System.Windows.Forms.Label
-    Friend WithEvents Label17 As System.Windows.Forms.Label
-    Friend WithEvents Label18 As System.Windows.Forms.Label
-    Friend WithEvents Label19 As System.Windows.Forms.Label
-    Friend WithEvents Label20 As System.Windows.Forms.Label
-    Friend WithEvents Label27 As System.Windows.Forms.Label
-    Friend WithEvents Label26 As System.Windows.Forms.Label
-    Friend WithEvents Label21 As System.Windows.Forms.Label
-    Friend WithEvents Label28 As System.Windows.Forms.Label
-    Friend WithEvents Label25 As System.Windows.Forms.Label
-    Friend WithEvents Label22 As System.Windows.Forms.Label
-    Friend WithEvents Label24 As System.Windows.Forms.Label
-    Friend WithEvents Label23 As System.Windows.Forms.Label
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents Label15 As System.Windows.Forms.Label
-    Friend WithEvents Label14 As System.Windows.Forms.Label
-    Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents Label16 As System.Windows.Forms.Label
-    Friend WithEvents Label13 As System.Windows.Forms.Label
-    Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents Label12 As System.Windows.Forms.Label
-    Friend WithEvents Label11 As System.Windows.Forms.Label
-    Friend WithEvents RadLabel1 As Telerik.WinControls.UI.RadLabel
+    Friend lblEFGSpezial As Telerik.WinControls.UI.RadLabel
+    Friend lblGewicht As Telerik.WinControls.UI.RadLabel
+    Friend lblAnzeigeGewicht As Telerik.WinControls.UI.RadLabel
+    Friend lblWiederholungen As Telerik.WinControls.UI.RadLabel
+    Friend RadLabel29 As Telerik.WinControls.UI.RadLabel
+    Friend RadLabel30 As Telerik.WinControls.UI.RadLabel
+    Friend RadLabel31 As Telerik.WinControls.UI.RadLabel
+    Friend Label3 As System.Windows.Forms.Label
+    Friend lblPflichtfeld1 As System.Windows.Forms.Label
+    Friend Label30 As System.Windows.Forms.Label
+    Friend Label31 As System.Windows.Forms.Label
+    Friend Label32 As System.Windows.Forms.Label
+    Friend Label33 As System.Windows.Forms.Label
+    Friend Label34 As System.Windows.Forms.Label
+    Friend Label41 As System.Windows.Forms.Label
+    Friend Label40 As System.Windows.Forms.Label
+    Friend Label35 As System.Windows.Forms.Label
+    Friend Label42 As System.Windows.Forms.Label
+    Friend Label39 As System.Windows.Forms.Label
+    Friend Label36 As System.Windows.Forms.Label
+    Friend Label38 As System.Windows.Forms.Label
+    Friend Label37 As System.Windows.Forms.Label
+    Friend Label29 As System.Windows.Forms.Label
+    Friend Label17 As System.Windows.Forms.Label
+    Friend Label18 As System.Windows.Forms.Label
+    Friend Label19 As System.Windows.Forms.Label
+    Friend Label20 As System.Windows.Forms.Label
+    Friend Label27 As System.Windows.Forms.Label
+    Friend Label26 As System.Windows.Forms.Label
+    Friend Label21 As System.Windows.Forms.Label
+    Friend Label28 As System.Windows.Forms.Label
+    Friend Label25 As System.Windows.Forms.Label
+    Friend Label22 As System.Windows.Forms.Label
+    Friend Label24 As System.Windows.Forms.Label
+    Friend Label23 As System.Windows.Forms.Label
+    Friend Label4 As System.Windows.Forms.Label
+    Friend Label5 As System.Windows.Forms.Label
+    Friend Label6 As System.Windows.Forms.Label
+    Friend Label7 As System.Windows.Forms.Label
+    Friend Label8 As System.Windows.Forms.Label
+    Friend Label15 As System.Windows.Forms.Label
+    Friend Label14 As System.Windows.Forms.Label
+    Friend Label9 As System.Windows.Forms.Label
+    Friend Label16 As System.Windows.Forms.Label
+    Friend Label13 As System.Windows.Forms.Label
+    Friend Label10 As System.Windows.Forms.Label
+    Friend Label12 As System.Windows.Forms.Label
+    Friend Label11 As System.Windows.Forms.Label
+    Friend RadLabel1 As Telerik.WinControls.UI.RadLabel
 
 End Class

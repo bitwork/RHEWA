@@ -336,14 +336,29 @@ Public Class ucoContent
     ''' <remarks></remarks>
     Friend Function GetEFG(ByVal Gewicht As Decimal, ByVal Bereich As Integer) As Decimal
         Try
-            Dim value = objEichprozess.Kompatiblitaetsnachweis.GetType().GetProperty(String.Format("Kompatiblitaet_Waage_Eichwert{0}", Bereich)).GetValue(objEichprozess.Kompatiblitaetsnachweis, Nothing)
+            Dim Eichwert = objEichprozess.Kompatiblitaetsnachweis.GetType().GetProperty(String.Format("Kompatiblitaet_Waage_Eichwert{0}", Bereich)).GetValue(objEichprozess.Kompatiblitaetsnachweis, Nothing)
+            Dim MaxLoad = objEichprozess.Kompatiblitaetsnachweis.GetType().GetProperty(String.Format("Kompatiblitaet_Waage_Hoechstlast{0}", Bereich)).GetValue(objEichprozess.Kompatiblitaetsnachweis, Nothing)
 
-            If Gewicht > 2000 Then
-                Return Math.Round(CDec(value * 1.5), _intNullstellenE, MidpointRounding.AwayFromZero)
-            ElseIf Gewicht > 500 Then
-                Return Math.Round(CDec(value * 1), _intNullstellenE, MidpointRounding.AwayFromZero)
+            'TH Die Formel wurde in Excel nach diesem Festen schema definiert. Allerdings sollen die EFGS nun nach den korrekten Gewichtsgrenzen definiert werden
+            'If Gewicht > 2000 Then
+            '    Return Math.Round(CDec(value * 1.5), _intNullstellenE, MidpointRounding.AwayFromZero)
+            'ElseIf Gewicht > 500 Then
+            '    Return Math.Round(CDec(value * 1), _intNullstellenE, MidpointRounding.AwayFromZero)
+            'Else
+            '    Return Math.Round(CDec(value * 0.5), _intNullstellenE, MidpointRounding.AwayFromZero)
+            'End If
+
+            '2000 e - maxload oder 3000e
+            If Gewicht > MaxLoad Then
+                Return 0
+            ElseIf Gewicht > Eichwert * 2000 And Gewicht <= MaxLoad Then
+                Return Math.Round(CDec(Eichwert * 1.5), _intNullstellenE, MidpointRounding.AwayFromZero)
+            ElseIf Gewicht > Eichwert * 500 And Gewicht <= Eichwert * 2000 Then
+                Return Math.Round(CDec(Eichwert * 1), _intNullstellenE, MidpointRounding.AwayFromZero)
+            ElseIf Gewicht >= Eichwert * 20 And Gewicht <= Eichwert * 500 Then
+                Return Math.Round(CDec(Eichwert * 0.5), _intNullstellenE, MidpointRounding.AwayFromZero)
             Else
-                Return Math.Round(CDec(value * 0.5), _intNullstellenE, MidpointRounding.AwayFromZero)
+                Return 0
             End If
         Catch e As Exception
             Return -1
