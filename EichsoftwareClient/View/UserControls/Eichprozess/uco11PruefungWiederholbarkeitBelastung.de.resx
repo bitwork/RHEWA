@@ -117,12 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="RadGroupBoxPruefungAussermittigeBelastung.HeaderText" xml:space="preserve">
-    <value>Prüfung der Wiederholbarkeit</value>
-  </data>
-  <data name="RadGroupBoxPruefungAussermittigeBelastung.Text" xml:space="preserve">
-    <value>Prüfung der Wiederholbarkeit</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lblBereich1Gewicht.Size" type="System.Drawing.Size, System.Drawing">
     <value>52, 18</value>
@@ -146,10 +140,6 @@
   <data name="RadGroupBoxBereich1.Text" xml:space="preserve">
     <value>Wiederholbarkeit mit Last ≈ 0,5 Max				
 </value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="PanelBereich2WZ3.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
   </data>
   <data name="lblBereich2EFGSpezial.Text" xml:space="preserve">
     <value>EFG</value>
@@ -176,5 +166,14 @@
   </data>
   <data name="RadButtonShowEFG2.Text" xml:space="preserve">
     <value>Zeige EFG</value>
+  </data>
+  <data name="RadGroupBoxPruefungAussermittigeBelastung.HeaderText" xml:space="preserve">
+    <value>Prüfung der Wiederholbarkeit</value>
+  </data>
+  <data name="RadGroupBoxPruefungAussermittigeBelastung.Size" type="System.Drawing.Size, System.Drawing">
+    <value>820, 338</value>
+  </data>
+  <data name="RadGroupBoxPruefungAussermittigeBelastung.Text" xml:space="preserve">
+    <value>Prüfung der Wiederholbarkeit</value>
   </data>
 </root>

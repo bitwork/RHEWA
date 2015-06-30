@@ -163,7 +163,7 @@
     <value>RadGridViewAuswahlliste</value>
   </data>
   <data name="&gt;&gt;RadGridViewAuswahlliste.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGridView, Telerik.WinControls.GridView, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadGridView, Telerik.WinControls.GridView, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadGridViewAuswahlliste.Parent" xml:space="preserve">
     <value>RadPageViewPageEigene</value>
@@ -220,7 +220,7 @@
     <value>RadButtonNeuStandardwaage</value>
   </data>
   <data name="&gt;&gt;RadButtonNeuStandardwaage.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonNeuStandardwaage.Parent" xml:space="preserve">
     <value>RadPageViewPageEigene</value>
@@ -280,7 +280,7 @@
     <value>RadButtonEinstellungen</value>
   </data>
   <data name="&gt;&gt;RadButtonEinstellungen.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonEinstellungen.Parent" xml:space="preserve">
     <value>RadPageViewPageEigene</value>
@@ -337,7 +337,7 @@
     <value>RadButtonClientUpdateDatabase</value>
   </data>
   <data name="&gt;&gt;RadButtonClientUpdateDatabase.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonClientUpdateDatabase.Parent" xml:space="preserve">
     <value>RadPageViewPageEigene</value>
@@ -388,7 +388,7 @@
     <value>RadCheckBoxAusblendenClientGeloeschterDokumente</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxAusblendenClientGeloeschterDokumente.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxAusblendenClientGeloeschterDokumente.Parent" xml:space="preserve">
     <value>RadPageViewPageEigene</value>
@@ -439,7 +439,7 @@
     <value>RadButtonClientAusblenden</value>
   </data>
   <data name="&gt;&gt;RadButtonClientAusblenden.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonClientAusblenden.Parent" xml:space="preserve">
     <value>RadPageViewPageEigene</value>
@@ -493,7 +493,7 @@
     <value>RadButtonClientNeu</value>
   </data>
   <data name="&gt;&gt;RadButtonClientNeu.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonClientNeu.Parent" xml:space="preserve">
     <value>RadPageViewPageEigene</value>
@@ -544,7 +544,7 @@
     <value>RadButtonClientBearbeiten</value>
   </data>
   <data name="&gt;&gt;RadButtonClientBearbeiten.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonClientBearbeiten.Parent" xml:space="preserve">
     <value>RadPageViewPageEigene</value>
@@ -565,7 +565,7 @@
     <value>RadPageViewPageEigene</value>
   </data>
   <data name="&gt;&gt;RadPageViewPageEigene.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadPageViewPage, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadPageViewPage, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadPageViewPageEigene.Parent" xml:space="preserve">
     <value>RadPageView1</value>
@@ -626,7 +626,7 @@
     <value>RadButtonRefresh</value>
   </data>
   <data name="&gt;&gt;RadButtonRefresh.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonRefresh.Parent" xml:space="preserve">
     <value>FlowLayoutPanel1</value>
@@ -677,7 +677,7 @@
     <value>RadProgressBar</value>
   </data>
   <data name="&gt;&gt;RadProgressBar.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadProgressBar, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadProgressBar, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadProgressBar.Parent" xml:space="preserve">
     <value>FlowLayoutPanel1</value>
@@ -755,7 +755,7 @@
     <value>RadButtonEichprozessKopierenRHEWA</value>
   </data>
   <data name="&gt;&gt;RadButtonEichprozessKopierenRHEWA.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonEichprozessKopierenRHEWA.Parent" xml:space="preserve">
     <value>RadPageViewPageAlle</value>
@@ -809,7 +809,7 @@
     <value>RadButtonEichprozessAblehnenRHEWA</value>
   </data>
   <data name="&gt;&gt;RadButtonEichprozessAblehnenRHEWA.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonEichprozessAblehnenRHEWA.Parent" xml:space="preserve">
     <value>RadPageViewPageAlle</value>
@@ -863,7 +863,7 @@
     <value>RadButtonEichprozessGenehmigenRHEWA</value>
   </data>
   <data name="&gt;&gt;RadButtonEichprozessGenehmigenRHEWA.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonEichprozessGenehmigenRHEWA.Parent" xml:space="preserve">
     <value>RadPageViewPageAlle</value>
@@ -914,7 +914,7 @@
     <value>RadGridViewRHEWAAlle</value>
   </data>
   <data name="&gt;&gt;RadGridViewRHEWAAlle.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGridView, Telerik.WinControls.GridView, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadGridView, Telerik.WinControls.GridView, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadGridViewRHEWAAlle.Parent" xml:space="preserve">
     <value>RadPageViewPageAlle</value>
@@ -968,7 +968,7 @@
     <value>RadButtonEichungAnsehenRHEWA</value>
   </data>
   <data name="&gt;&gt;RadButtonEichungAnsehenRHEWA.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonEichungAnsehenRHEWA.Parent" xml:space="preserve">
     <value>RadPageViewPageAlle</value>
@@ -989,7 +989,7 @@
     <value>RadPageViewPageAlle</value>
   </data>
   <data name="&gt;&gt;RadPageViewPageAlle.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadPageViewPage, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadPageViewPage, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadPageViewPageAlle.Parent" xml:space="preserve">
     <value>RadPageView1</value>
@@ -1040,7 +1040,7 @@
     <value>RadPageView1</value>
   </data>
   <data name="&gt;&gt;RadPageView1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadPageView, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadPageView, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadPageView1.Parent" xml:space="preserve">
     <value>$this</value>

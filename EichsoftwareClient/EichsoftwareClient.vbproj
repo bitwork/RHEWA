@@ -525,6 +525,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\frmLizenz.resx">
       <DependentUpon>frmLizenz.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\frmEichfehlergrenzen.de.resx">
       <DependentUpon>frmEichfehlergrenzen.vb</DependentUpon>
@@ -780,6 +781,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco21Versenden.resx">
       <DependentUpon>uco21Versenden.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

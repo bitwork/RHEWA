@@ -121,7 +121,7 @@
     <value />
   </data>
   <data name="&gt;&gt;RadCheckBoxPunkt6b.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lblPunkt6aI2Eq.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
@@ -151,10 +151,10 @@
     <value>RadGroupBoxPunkt4</value>
   </data>
   <data name="&gt;&gt;lblPunkt6bMax.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadSeparator11.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadTextBoxPunkt3Plc.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -163,7 +163,7 @@
     <value>971, 1678</value>
   </data>
   <data name="&gt;&gt;RadLabel66.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadSeparator10.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -181,7 +181,7 @@
     <value>RadGroupBoxPunkt3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt9RLC.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel52.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 17</value>
@@ -208,7 +208,7 @@
     <value />
   </data>
   <data name="&gt;&gt;RadLabel40.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadSeparator10.Text" xml:space="preserve">
     <value>RadSeparator10</value>
@@ -220,7 +220,7 @@
     <value>RadTextBoxPunkt5EMax</value>
   </data>
   <data name="&gt;&gt;lblPunkt1AWG.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel51.RootElement.KeyTip" xml:space="preserve">
     <value />
@@ -367,7 +367,7 @@
     <value>0</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxPunkt1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt3pcon.Parent" xml:space="preserve">
     <value>RadGroupBoxPunkt3</value>
@@ -403,7 +403,7 @@
     <value />
   </data>
   <data name="&gt;&gt;lblPunkt6aI2Eq.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadSeparator10.RootElement.KeyTip" xml:space="preserve">
     <value />
@@ -473,7 +473,7 @@
     <value />
   </data>
   <data name="&gt;&gt;RadLabel86.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="lblPunkt4I2.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
@@ -500,7 +500,7 @@
     <value>RadGroupBoxPunkt6a</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxPunkt2TMAX.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel64.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;span style="font-size: 10pt"&gt;R&lt;/span&gt;&lt;span style="font-size: 8pt"&gt;Lmin &lt;/span&gt;&lt;/html&gt;</value>
@@ -581,13 +581,13 @@
     <value>60</value>
   </data>
   <data name="&gt;&gt;RadLabel59.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadTextBoxPunkt3Plc.Location" type="System.Drawing.Point, System.Drawing">
     <value>500, 70</value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt2WIMax.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel44.Text" xml:space="preserve">
     <value>³</value>
@@ -669,7 +669,7 @@
     <value>TopLeft</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxPunkt7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxPunkt6d.Parent" xml:space="preserve">
     <value>RadGroupBoxPunkt6d</value>
@@ -687,7 +687,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="&gt;&gt;lblPunkt2WZ.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadLabel15.Parent" xml:space="preserve">
     <value>RadGroupBoxPunkt2TMin</value>
@@ -827,7 +827,7 @@
     <value>8</value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt2INDMin.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadTextBoxPunkt2WIMax.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -854,7 +854,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxPunkt3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadTextBoxPunkt1LC.RootElement.KeyTip" xml:space="preserve">
     <value />
@@ -974,13 +974,13 @@
     <value />
   </data>
   <data name="&gt;&gt;RadLabel57.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadCheckBoxPunkt6c.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="&gt;&gt;RadLabel4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadCheckBoxPunkt6aMax1.RootElement.ToolTipText" xml:space="preserve">
     <value />
@@ -1016,7 +1016,7 @@
     <value />
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt10LAMax.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadGroupBoxPunkt1.HeaderText" xml:space="preserve">
     <value>(1) Accuracy class of weighing instrument (WI) compatible to class of indicator (IND) and load cell (LC)
@@ -1033,7 +1033,7 @@
     <value>False</value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt6dEMin.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadGroupBoxPunkt1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -1322,7 +1322,7 @@
     <value>False</value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt4Nind1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel67.RootElement.ToolTipText" xml:space="preserve">
     <value />
@@ -1352,7 +1352,7 @@
     <value />
   </data>
   <data name="&gt;&gt;RadLabel87.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel57.Location" type="System.Drawing.Point, System.Drawing">
     <value>401, 44</value>
@@ -1407,13 +1407,13 @@
     <value />
   </data>
   <data name="&gt;&gt;lblPunkt1Waage.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxPunkt6c.Name" xml:space="preserve">
     <value>RadCheckBoxPunkt6c</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxPunkt4Max3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="lblPunkt2Waage.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -1464,7 +1464,7 @@
     <value />
   </data>
   <data name="&gt;&gt;RadCheckBoxPunkt9.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadCheckBoxPunkt1.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1575,7 +1575,7 @@
     <value>100, 20</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxPunkt6c.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel52.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
@@ -1593,7 +1593,7 @@
     <value>RadGroupBoxPunkt6a</value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt6cMAX.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel2.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
@@ -1786,10 +1786,10 @@
     <value>0</value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt1IND.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadLabel7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel21.Location" type="System.Drawing.Point, System.Drawing">
     <value>401, 46</value>
@@ -1970,7 +1970,7 @@
     <value>76</value>
   </data>
   <data name="&gt;&gt;RadLabel65.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="lblPunkt5Faktor.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
@@ -2012,7 +2012,7 @@
     <value />
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt2LCMax.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel3.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
@@ -2036,7 +2036,7 @@
     <value>42, 20</value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt5QMax.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="lblPunkt8Eingangspannung.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
@@ -2174,7 +2174,7 @@
     <value>False</value>
   </data>
   <data name="&gt;&gt;lblPunkt4WaagenArt.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel69.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
@@ -2229,7 +2229,7 @@
     <value>50, 56</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxPunkt2TMin.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel24.Size" type="System.Drawing.Size, System.Drawing">
     <value>18, 17</value>
@@ -2247,7 +2247,7 @@
     <value />
   </data>
   <data name="&gt;&gt;RadLabel33.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadCheckBoxPunkt4Max1.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
@@ -2274,13 +2274,13 @@
     <value>0</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxPunkt1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel77.TabIndex" type="System.Int32, mscorlib">
     <value>81</value>
   </data>
   <data name="&gt;&gt;RadLabel49.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadGroupBoxPunkt7.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
@@ -2541,7 +2541,7 @@
     <value>RadGroupBoxPunkt8</value>
   </data>
   <data name="&gt;&gt;lblPunkt8Eingangspannung.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadCheckBoxPunkt8U.TabIndex" type="System.Int32, mscorlib">
     <value>55</value>
@@ -2565,7 +2565,7 @@
     <value />
   </data>
   <data name="&gt;&gt;RadCheckBoxPunkt6aMax2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt7eMax.Parent" xml:space="preserve">
     <value>RadGroupBoxPunkt7</value>
@@ -2661,13 +2661,13 @@
     <value />
   </data>
   <data name="&gt;&gt;lblPunkt4I3Eq.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanel1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadScrollablePanel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadScrollablePanel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadLabel60.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxFabriknummer.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -2751,7 +2751,7 @@
     <value>False</value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt7eMax.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblPunkt5QMAX.ZOrder" xml:space="preserve">
     <value>7</value>
@@ -2778,7 +2778,7 @@
     <value>RadLabel82</value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt6bMax.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadCheckBoxPunkt6b.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
@@ -2787,7 +2787,7 @@
     <value />
   </data>
   <data name="&gt;&gt;RadLabel84.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadSeparator1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -2814,13 +2814,13 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="&gt;&gt;RadSeparator3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel77.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
   <data name="&gt;&gt;lblPunkt4I2Eq.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadTextBoxPunkt6cMAX.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
@@ -2845,7 +2845,7 @@
     <value />
   </data>
   <data name="&gt;&gt;lblPunkt4I3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadTextBoxPunkt5EMax.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
@@ -2881,7 +2881,7 @@
     <value />
   </data>
   <data name="&gt;&gt;RadLabel28.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadCheckBoxPunkt6b.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2899,7 +2899,7 @@
     <value>Symbol, 8.25pt</value>
   </data>
   <data name="&gt;&gt;lblPunkt6aI3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="lblPunkt8Eingangspannung.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -3037,7 +3037,7 @@
     <value>RadGroupBoxPunkt6a</value>
   </data>
   <data name="&gt;&gt;RadLabel17.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadTextBoxPunkt4Nind3.TabIndex" type="System.Int32, mscorlib">
     <value>70</value>
@@ -3049,7 +3049,7 @@
     <value>85</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxPunkt10.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="lblPunkt2Waage.Size" type="System.Drawing.Size, System.Drawing">
     <value>20, 18</value>
@@ -3149,7 +3149,7 @@
     <value>RadGroupBoxPunkt3</value>
   </data>
   <data name="&gt;&gt;lblPunkt4I2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadCheckBoxPunkt6aMax2.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -3177,7 +3177,7 @@
 </value>
   </data>
   <data name="&gt;&gt;lblPunkt8MinVol.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt5EMax.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -3207,7 +3207,7 @@
     <value>TopLeft</value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt4Max3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel49.Location" type="System.Drawing.Point, System.Drawing">
     <value>401, 48</value>
@@ -3228,7 +3228,7 @@
     <value>TopLeft</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxPunkt6b.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt6aMax2.ZOrder" xml:space="preserve">
     <value>14</value>
@@ -3279,7 +3279,7 @@
     <value>False</value>
   </data>
   <data name="&gt;&gt;RadLabel26.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="lblPunkt2WZ.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -3291,7 +3291,7 @@
     <value />
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt8D.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="lblPunkt2Waage.RootElement.KeyTip" xml:space="preserve">
     <value />
@@ -3303,7 +3303,7 @@
     <value />
   </data>
   <data name="&gt;&gt;RadLabel55.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="FlowLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -3339,7 +3339,7 @@
     <value>RadGroupBoxPunkt5</value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt5EMax.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadGroupBoxPunkt5.Text" xml:space="preserve">
     <value>(5) Maximum capacity of load cells must be compatible to Max of the weighing instrument
@@ -3406,7 +3406,7 @@
     <value />
   </data>
   <data name="&gt;&gt;RadGroupBoxPunkt9.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadGroupBoxPunkt3.Text" xml:space="preserve">
     <value>(3) Sum of the squares of the fractions pi of the max. permissible errors of connecting elements, indicator and load cells
@@ -3515,7 +3515,7 @@
     <value>500, 52</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxPunkt6aMax3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt10LAMax.Parent" xml:space="preserve">
     <value>RadGroupBoxPunkt10</value>
@@ -3566,7 +3566,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="&gt;&gt;RadSeparator6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadSeparator10.Name" xml:space="preserve">
     <value>RadSeparator10</value>
@@ -3609,7 +3609,7 @@
     <value>973, 1680</value>
   </data>
   <data name="&gt;&gt;RadLabel78.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadTextBoxPunkt2INDMin.RootElement.ToolTipText" xml:space="preserve">
     <value />
@@ -3734,10 +3734,10 @@
     <value>False</value>
   </data>
   <data name="&gt;&gt;RadSeparator8.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadLabel85.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadSeparator5.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -3746,7 +3746,7 @@
     <value>Horizontal</value>
   </data>
   <data name="&gt;&gt;RadLabel63.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblPunkt6aI3.Name" xml:space="preserve">
     <value>lblPunkt6aI3</value>
@@ -3794,7 +3794,7 @@
     <value />
   </data>
   <data name="&gt;&gt;RadLabel64.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel25.TabIndex" type="System.Int32, mscorlib">
     <value>70</value>
@@ -3824,7 +3824,7 @@
     <value>False</value>
   </data>
   <data name="&gt;&gt;RadLabel29.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadCheckBoxPunkt6aMax3.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -3842,7 +3842,7 @@
     <value />
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt3pind.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadTextBoxPunkt1WI.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -4040,7 +4040,7 @@
     <value>2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt6dDL.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="lblPunkt5Faktor.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -4088,7 +4088,7 @@
     <value>Horizontal</value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt4Nind3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadTextBoxPunkt2INDMax.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -4107,7 +4107,7 @@
     <value>TopLeft</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxPunkt6d.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadCheckBoxPunkt7.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -4140,7 +4140,7 @@
     <value>0</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxPunkt6c.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadGroupBoxPunkt3.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 227</value>
@@ -4203,16 +4203,16 @@
     <value>TopLeft</value>
   </data>
   <data name="&gt;&gt;RadLabel27.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel50.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt6aNind1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxPunkt4Max1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel33.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -4221,13 +4221,13 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="&gt;&gt;RadLabel52.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="lblPunkt6aI3.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxPunkt4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadSeparator6.Parent" xml:space="preserve">
     <value>RadGroupBoxPunkt6b</value>
@@ -4272,7 +4272,7 @@
     <value>False</value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt7e1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel30.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -4293,10 +4293,10 @@
     <value>0</value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt8DMIN.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadLabel18.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblPunkt6cMax.Name" xml:space="preserve">
     <value>lblPunkt6cMax</value>
@@ -4353,7 +4353,7 @@
     <value />
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt6aNind3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel29.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -4465,7 +4465,7 @@
     <value>RadLabel4</value>
   </data>
   <data name="&gt;&gt;RadLabel80.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadTextBoxPunkt8D.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 20</value>
@@ -4492,7 +4492,7 @@
     <value />
   </data>
   <data name="&gt;&gt;RadLabel79.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadTextBoxPunkt6bMax.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
@@ -4540,7 +4540,7 @@
     <value />
   </data>
   <data name="&gt;&gt;lblPunkt1WZ.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadSeparator3.RootElement.ToolTipText" xml:space="preserve">
     <value />
@@ -4639,7 +4639,7 @@
     <value>79, 18</value>
   </data>
   <data name="&gt;&gt;RadLabel16.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel7.RootElement.ToolTipText" xml:space="preserve">
     <value />
@@ -4853,13 +4853,13 @@
     <value />
   </data>
   <data name="&gt;&gt;RadLabel77.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadLabel41.Name" xml:space="preserve">
     <value>RadLabel41</value>
   </data>
   <data name="&gt;&gt;lblPunkt2Waage.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel59.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
@@ -4898,7 +4898,7 @@
     <value />
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt6aMax2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadTextBoxPunkt8DMIN.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -4910,7 +4910,7 @@
     <value />
   </data>
   <data name="&gt;&gt;RadLabel44.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadTextBoxPunkt8UMin.TabIndex" type="System.Int32, mscorlib">
     <value>76</value>
@@ -4919,7 +4919,7 @@
     <value />
   </data>
   <data name="&gt;&gt;RadLabel51.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt10LA.Parent" xml:space="preserve">
     <value>RadGroupBoxPunkt10</value>
@@ -5010,7 +5010,7 @@
     <value>RadTextBoxPunkt6aMax2</value>
   </data>
   <data name="&gt;&gt;RadLabel3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel56.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -5085,7 +5085,7 @@
     <value>16</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxPunkt10.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadLabel66.Parent" xml:space="preserve">
     <value>RadGroupBoxPunkt9</value>
@@ -5094,7 +5094,7 @@
     <value>0</value>
   </data>
   <data name="&gt;&gt;RadLabel53.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="lblPunkt6cMax.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -5124,7 +5124,7 @@
     <value>£</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxPunkt3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel29.Font" type="System.Drawing.Font, System.Drawing">
     <value>Symbol, 8.25pt</value>
@@ -5160,7 +5160,7 @@
     <value>82, 18</value>
   </data>
   <data name="&gt;&gt;RadLabel19.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadTextBoxPunkt3pind.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
@@ -5298,7 +5298,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="&gt;&gt;RadLabel82.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel28.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -5364,10 +5364,10 @@
     <value />
   </data>
   <data name="&gt;&gt;RadLabel81.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadSeparator5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="lblPunkt4I2.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -5415,7 +5415,7 @@
     <value />
   </data>
   <data name="&gt;&gt;RadCheckBoxPunkt7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel84.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -5457,7 +5457,7 @@
     <value />
   </data>
   <data name="&gt;&gt;lblFabriknummer.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadSeparator7.Name" xml:space="preserve">
     <value>RadSeparator7</value>
@@ -5523,7 +5523,7 @@
     <value />
   </data>
   <data name="&gt;&gt;RadLabel68.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadCheckBoxPunkt8U.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -5547,7 +5547,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt9RLMax.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadCheckBoxPunkt3.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -5616,7 +5616,7 @@
     <value>RadGroupBoxPunkt2TMin</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxPunkt8D.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel55.Size" type="System.Drawing.Size, System.Drawing">
     <value>12, 17</value>
@@ -5736,7 +5736,7 @@
     <value>235, 68</value>
   </data>
   <data name="&gt;&gt;RadLabel24.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel68.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;span style="font-size: 10pt"&gt;R&lt;/span&gt;LC&lt;span style="font-size: 10pt"&gt; / N&lt;/span&gt;&lt;/html&gt;</value>
@@ -5791,7 +5791,7 @@
     <value>Horizontal</value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt8U.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel69.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -5806,7 +5806,7 @@
     <value>216, 47</value>
   </data>
   <data name="&gt;&gt;lblPunkt6aI3Eq.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadSeparator7.TabIndex" type="System.Int32, mscorlib">
     <value>54</value>
@@ -5864,7 +5864,7 @@
     <value>17</value>
   </data>
   <data name="&gt;&gt;lblPunkt6aWaagenart.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt8U.ZOrder" xml:space="preserve">
     <value>13</value>
@@ -6027,7 +6027,7 @@
     <value>TopLeft</value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt6aNind2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadSeparator8.Name" xml:space="preserve">
     <value>RadSeparator8</value>
@@ -6075,7 +6075,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt8UMin.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadTextBoxPunkt4Max3.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
@@ -6210,7 +6210,7 @@
     <value>84</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxPunkt8U.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadCheckBoxPunkt1.Size" type="System.Drawing.Size, System.Drawing">
     <value>15, 15</value>
@@ -6378,7 +6378,7 @@
     <value>947, 137</value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt4Max2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel86.Size" type="System.Drawing.Size, System.Drawing">
     <value>12, 17</value>
@@ -6393,16 +6393,16 @@
     <value>3</value>
   </data>
   <data name="&gt;&gt;lblPunkt5Faktor.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadSeparator7.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt4Nind2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt2WIMin.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadTextBoxPunkt4Nind2.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
@@ -6537,7 +6537,7 @@
     <value />
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt3pcon.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt6aNind1.Parent" xml:space="preserve">
     <value>RadGroupBoxPunkt6a</value>
@@ -6552,13 +6552,13 @@
     <value />
   </data>
   <data name="&gt;&gt;RadGroupBoxPunkt6a.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel22.Text" xml:space="preserve">
     <value>+</value>
   </data>
   <data name="&gt;&gt;lblPunkt1Gleichbesser2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel41.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -6597,7 +6597,7 @@
     <value>TopLeft</value>
   </data>
   <data name="&gt;&gt;lblPunkt1GleichBesser1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadTextBoxPunkt2WIMin.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
@@ -6615,10 +6615,10 @@
     <value>56</value>
   </data>
   <data name="&gt;&gt;RadSeparator2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadLabel25.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="lblPunkt1Waage.Text" xml:space="preserve">
     <value>WI</value>
@@ -6732,7 +6732,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadTextBoxFabriknummer.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadSeparator1.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
@@ -6795,7 +6795,7 @@
     <value />
   </data>
   <data name="&gt;&gt;RadCheckBoxPunkt5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblPunkt6aI2Eq.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -6929,7 +6929,7 @@
     <value>77</value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt9RLmin.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadTextBoxPunkt6aNind2.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
@@ -6953,7 +6953,7 @@
     <value>Symbol, 8.25pt</value>
   </data>
   <data name="&gt;&gt;RadLabel23.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadTextBoxPunkt4Max2.TabIndex" type="System.Int32, mscorlib">
     <value>67</value>
@@ -6971,7 +6971,7 @@
     <value>8</value>
   </data>
   <data name="&gt;&gt;RadLabel47.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel66.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
@@ -7022,7 +7022,7 @@
     <value>RadGroupBoxPunkt8</value>
   </data>
   <data name="&gt;&gt;RadLabel14.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadCheckBoxPunkt2TMin.RootElement.KeyTip" xml:space="preserve">
     <value />
@@ -7046,7 +7046,7 @@
     <value>TopLeft</value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt1WI.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadGroupBoxPunkt5.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -7145,7 +7145,7 @@
     <value />
   </data>
   <data name="&gt;&gt;RadCheckBoxPunkt6aMax1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="lblPunkt2WZ.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
@@ -7217,7 +7217,7 @@
     <value />
   </data>
   <data name="&gt;&gt;RadLabel75.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadTextBoxPunkt6bMax.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -7289,10 +7289,10 @@
     <value>False</value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt10LA.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadLabel20.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadCheckBoxPunkt6d.TabIndex" type="System.Int32, mscorlib">
     <value>55</value>
@@ -7325,7 +7325,7 @@
     <value />
   </data>
   <data name="&gt;&gt;RadCheckBoxPunkt2TMin.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadGroupBoxPunkt6b.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 764</value>
@@ -7446,7 +7446,7 @@
     <value>Horizontal</value>
   </data>
   <data name="&gt;&gt;RadLabel22.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel50.RootElement.KeyTip" xml:space="preserve">
     <value />
@@ -7563,7 +7563,7 @@
     <value />
   </data>
   <data name="&gt;&gt;lblPunkt2AWG.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadSeparator11.Parent" xml:space="preserve">
     <value>RadGroupBoxPunkt9</value>
@@ -7629,7 +7629,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxPunkt5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadTextBoxPunkt6bMax.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -7734,7 +7734,7 @@
     <value>Horizontal</value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt3Plc.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadTextBoxPunkt6bNLC.TabIndex" type="System.Int32, mscorlib">
     <value>69</value>
@@ -7764,7 +7764,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxPunkt6d.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadTextBoxPunkt10LAMax.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
@@ -7878,7 +7878,7 @@
     <value>4</value>
   </data>
   <data name="&gt;&gt;RadLabel15.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel75.Location" type="System.Drawing.Point, System.Drawing">
     <value>401, 59</value>
@@ -7905,7 +7905,7 @@
     <value />
   </data>
   <data name="&gt;&gt;RadLabel37.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel85.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -7914,7 +7914,7 @@
     <value>Symbol, 8.25pt</value>
   </data>
   <data name="&gt;&gt;RadLabel45.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="lblPunkt1Waage.RootElement.KeyTip" xml:space="preserve">
     <value />
@@ -7950,7 +7950,7 @@
     <value>895, 23</value>
   </data>
   <data name="&gt;&gt;RadLabel70.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="lblFabriknummer.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 10pt, style=Bold</value>
@@ -8082,7 +8082,7 @@
     <value>RadLabel45</value>
   </data>
   <data name="&gt;&gt;RadSeparator12.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadGroupBoxPunkt6d.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -8169,10 +8169,10 @@
     <value>0</value>
   </data>
   <data name="&gt;&gt;RadLabel21.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadLabel38.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadCheckBoxPunkt6c.RootElement.ToolTipText" xml:space="preserve">
     <value />
@@ -8205,7 +8205,7 @@
     <value />
   </data>
   <data name="&gt;&gt;lblPunkt6aI2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel77.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -8247,7 +8247,7 @@
     <value />
   </data>
   <data name="&gt;&gt;RadLabel13.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel27.Size" type="System.Drawing.Size, System.Drawing">
     <value>12, 17</value>
@@ -8301,7 +8301,7 @@
     <value>54</value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt6cNLC.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel27.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
@@ -8467,7 +8467,7 @@
     <value>Symbol, 8.25pt</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxPunkt8.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxPunkt9.ZOrder" xml:space="preserve">
     <value>10</value>
@@ -8569,7 +8569,7 @@
     <value />
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt6aMax3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel2.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -8666,7 +8666,7 @@
     <value>100, 20</value>
   </data>
   <data name="&gt;&gt;RadLabel2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel19.Text" xml:space="preserve">
     <value>+</value>
@@ -8844,7 +8844,7 @@
     <value />
   </data>
   <data name="&gt;&gt;RadLabel42.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="lblPunkt6aI2Eq.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -8868,7 +8868,7 @@
     <value>0</value>
   </data>
   <data name="&gt;&gt;RadSeparator1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadSeparator3.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
@@ -8877,7 +8877,7 @@
     <value>RadGroupBoxPunkt1</value>
   </data>
   <data name="&gt;&gt;RadLabel71.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel50.TabIndex" type="System.Int32, mscorlib">
     <value>72</value>
@@ -8955,7 +8955,7 @@
     <value>RadGroupBoxPunkt6c</value>
   </data>
   <data name="&gt;&gt;RadLabel56.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="lblPunkt6aI3Eq.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
@@ -8967,7 +8967,7 @@
     <value>TopLeft</value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt1LC.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="lblPunkt1Waage.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
@@ -8982,7 +8982,7 @@
     <value>3, 1430</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanel1.PanelContainer.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadScrollablePanelContainer, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadScrollablePanelContainer, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="lblPunkt2Waage.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -9000,7 +9000,7 @@
     <value>19</value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt6aMax1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadLabel18.Name" xml:space="preserve">
     <value>RadLabel18</value>
@@ -9021,13 +9021,13 @@
     <value />
   </data>
   <data name="&gt;&gt;RadCheckBoxPunkt4Max2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel82.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
   <data name="&gt;&gt;RadSeparator4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel57.Size" type="System.Drawing.Size, System.Drawing">
     <value>12, 17</value>
@@ -9088,7 +9088,7 @@
 </value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt6bNLC.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadTextBoxPunkt6aMax3.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
@@ -9121,7 +9121,7 @@
     <value />
   </data>
   <data name="&gt;&gt;RadSeparator10.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadGroupBoxPunkt4.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
@@ -9145,7 +9145,7 @@
     <value />
   </data>
   <data name="&gt;&gt;RadLabel69.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadLabel56.Name" xml:space="preserve">
     <value>RadLabel56</value>
@@ -9199,7 +9199,7 @@
     <value>False</value>
   </data>
   <data name="&gt;&gt;lblPunkt5QMAX.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel64.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
@@ -9244,7 +9244,7 @@
     <value>6</value>
   </data>
   <data name="&gt;&gt;RadLabel48.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel47.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -9364,7 +9364,7 @@
     <value />
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt2INDMax.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadCheckBoxPunkt10.TabIndex" type="System.Int32, mscorlib">
     <value>55</value>
@@ -9388,7 +9388,7 @@
     <value />
   </data>
   <data name="&gt;&gt;RadLabel54.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadGroupBoxPunkt1.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
@@ -9419,7 +9419,7 @@
 </value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt4Max1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel50.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -9458,7 +9458,7 @@
     <value>TopLeft</value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt5Faktor.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadSeparator7.RootElement.KeyTip" xml:space="preserve">
     <value />
@@ -9476,7 +9476,7 @@
     <value>Horizontal</value>
   </data>
   <data name="&gt;&gt;RadLabel67.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel16.RootElement.KeyTip" xml:space="preserve">
     <value />
@@ -9573,13 +9573,13 @@
     <value>TopLeft</value>
   </data>
   <data name="&gt;&gt;RadLabel41.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblPunkt2AWG.Name" xml:space="preserve">
     <value>lblPunkt2AWG</value>
   </data>
   <data name="&gt;&gt;RadLabel58.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadLabel45.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -9633,10 +9633,10 @@
     <value>&lt;html&gt;&lt;span style="font-size: 10pt"&gt;p&lt;/span&gt;&lt;span style="font-size: 8pt"&gt;LC&lt;/span&gt;²&lt;/html&gt;</value>
   </data>
   <data name="&gt;&gt;RadLabel30.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadSeparator13.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt6aMax3.Name" xml:space="preserve">
     <value>RadTextBoxPunkt6aMax3</value>
@@ -9672,7 +9672,7 @@
     <value />
   </data>
   <data name="&gt;&gt;lblPunkt6cMax.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadLabel40.ZOrder" xml:space="preserve">
     <value>6</value>
@@ -9808,7 +9808,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="&gt;&gt;RadSeparator7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadLabel63.Text" xml:space="preserve">
     <value>£</value>
@@ -9979,13 +9979,13 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="&gt;&gt;RadTextBoxPunkt2LCMin.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadTextBoxPunkt4Nind3.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
   <data name="&gt;&gt;RadSeparator9.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadSeparator, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadScrollablePanel1.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -10015,10 +10015,10 @@
     <value>62</value>
   </data>
   <data name="&gt;&gt;lblPunkt8OhneLast.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadLabel50.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2014.1.226.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
