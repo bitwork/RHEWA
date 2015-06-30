@@ -130,6 +130,24 @@
   <data name="lblEFG1.Text" xml:space="preserve">
     <value>Eichfehlergrenzen</value>
   </data>
+  <data name="lblBis3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>20, 18</value>
+  </data>
+  <data name="lblBis3.Text" xml:space="preserve">
+    <value>bis</value>
+  </data>
+  <data name="lblBis2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>20, 18</value>
+  </data>
+  <data name="lblBis2.Text" xml:space="preserve">
+    <value>bis</value>
+  </data>
+  <data name="lblBis1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>20, 18</value>
+  </data>
+  <data name="lblBis1.Text" xml:space="preserve">
+    <value>bis</value>
+  </data>
   <data name="RadGroupBox1.HeaderText" xml:space="preserve">
     <value>Bereich1</value>
   </data>
@@ -148,6 +166,24 @@
   <data name="lblEFG2.Text" xml:space="preserve">
     <value>Eichfehlergrenzen</value>
   </data>
+  <data name="lblBis6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>20, 18</value>
+  </data>
+  <data name="lblBis6.Text" xml:space="preserve">
+    <value>bis</value>
+  </data>
+  <data name="lblBis5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>20, 18</value>
+  </data>
+  <data name="lblBis5.Text" xml:space="preserve">
+    <value>bis</value>
+  </data>
+  <data name="lblBis4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>20, 18</value>
+  </data>
+  <data name="lblBis4.Text" xml:space="preserve">
+    <value>bis</value>
+  </data>
   <data name="RadGroupBox2.HeaderText" xml:space="preserve">
     <value>Bereich2</value>
   </data>
@@ -165,6 +201,24 @@
   </data>
   <data name="lblEFG3.Text" xml:space="preserve">
     <value>Eichfehlergrenzen</value>
+  </data>
+  <data name="lblBis9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>20, 18</value>
+  </data>
+  <data name="lblBis9.Text" xml:space="preserve">
+    <value>bis</value>
+  </data>
+  <data name="lblBis8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>20, 18</value>
+  </data>
+  <data name="lblBis8.Text" xml:space="preserve">
+    <value>bis</value>
+  </data>
+  <data name="lblBis7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>20, 18</value>
+  </data>
+  <data name="lblBis7.Text" xml:space="preserve">
+    <value>bis</value>
   </data>
   <data name="RadGroupBox3.HeaderText" xml:space="preserve">
     <value>Bereich3</value>
