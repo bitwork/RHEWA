@@ -484,7 +484,7 @@ Partial Class frmEingabeWaegezelle
         Me.RadTextBoxControlWaegezelleTyp.RootElement.Text = Nothing
         Me.RadTextBoxControlWaegezelleTyp.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadTextBoxControlWaegezelleTyp.Size = New System.Drawing.Size(125, 20)
-        Me.RadTextBoxControlWaegezelleTyp.TabIndex = 2
+        Me.RadTextBoxControlWaegezelleTyp.TabIndex = 1
         '
         'RadTextBoxControlWaegezelleWiderstandWaegezelle
         '
@@ -520,7 +520,7 @@ Partial Class frmEingabeWaegezelle
         Me.RadTextBoxControlWaegezelleWaegezellenkennwert.RootElement.Text = Nothing
         Me.RadTextBoxControlWaegezelleWaegezellenkennwert.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadTextBoxControlWaegezelleWaegezellenkennwert.Size = New System.Drawing.Size(125, 20)
-        Me.RadTextBoxControlWaegezelleWaegezellenkennwert.TabIndex = 7
+        Me.RadTextBoxControlWaegezelleWaegezellenkennwert.TabIndex = 6
         '
         'RadTextBoxControlWaegezelleRueckkehrVorlastsignal
         '
@@ -628,7 +628,7 @@ Partial Class frmEingabeWaegezelle
         Me.RadTextBoxControlWaegezelleMAXAnzahlTeilungswerte.RootElement.Text = Nothing
         Me.RadTextBoxControlWaegezelleMAXAnzahlTeilungswerte.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadTextBoxControlWaegezelleMAXAnzahlTeilungswerte.Size = New System.Drawing.Size(125, 20)
-        Me.RadTextBoxControlWaegezelleMAXAnzahlTeilungswerte.TabIndex = 8
+        Me.RadTextBoxControlWaegezelleMAXAnzahlTeilungswerte.TabIndex = 7
         '
         'RadTextBoxControWaegezelleHoechstteilungsfaktor
         '
@@ -664,7 +664,7 @@ Partial Class frmEingabeWaegezelle
         Me.RadTextBoxControlWaegezelleHersteller.RootElement.Text = Nothing
         Me.RadTextBoxControlWaegezelleHersteller.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadTextBoxControlWaegezelleHersteller.Size = New System.Drawing.Size(125, 20)
-        Me.RadTextBoxControlWaegezelleHersteller.TabIndex = 1
+        Me.RadTextBoxControlWaegezelleHersteller.TabIndex = 0
         '
         'RadTextBoxControlWaegezelleMinTeilungswert
         '
@@ -682,7 +682,7 @@ Partial Class frmEingabeWaegezelle
         Me.RadTextBoxControlWaegezelleMinTeilungswert.RootElement.Text = Nothing
         Me.RadTextBoxControlWaegezelleMinTeilungswert.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadTextBoxControlWaegezelleMinTeilungswert.Size = New System.Drawing.Size(125, 20)
-        Me.RadTextBoxControlWaegezelleMinTeilungswert.TabIndex = 9
+        Me.RadTextBoxControlWaegezelleMinTeilungswert.TabIndex = 8
         '
         'RadTextBoxControlWaegezelleMindestvorlast
         '
@@ -700,7 +700,7 @@ Partial Class frmEingabeWaegezelle
         Me.RadTextBoxControlWaegezelleMindestvorlast.RootElement.Text = Nothing
         Me.RadTextBoxControlWaegezelleMindestvorlast.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadTextBoxControlWaegezelleMindestvorlast.Size = New System.Drawing.Size(125, 20)
-        Me.RadTextBoxControlWaegezelleMindestvorlast.TabIndex = 6
+        Me.RadTextBoxControlWaegezelleMindestvorlast.TabIndex = 5
         '
         'RadTextBoxControlWaegezelleGenauigkeitsklasse
         '
@@ -718,7 +718,7 @@ Partial Class frmEingabeWaegezelle
         Me.RadTextBoxControlWaegezelleGenauigkeitsklasse.RootElement.Text = Nothing
         Me.RadTextBoxControlWaegezelleGenauigkeitsklasse.RootElement.TextOrientation = System.Windows.Forms.Orientation.Horizontal
         Me.RadTextBoxControlWaegezelleGenauigkeitsklasse.Size = New System.Drawing.Size(125, 20)
-        Me.RadTextBoxControlWaegezelleGenauigkeitsklasse.TabIndex = 5
+        Me.RadTextBoxControlWaegezelleGenauigkeitsklasse.TabIndex = 2
         '
         'RadTextBoxControlWaegezelleBruchteilEichfehlergrenze
         '
@@ -876,7 +876,7 @@ Partial Class frmEingabeWaegezelle
         '
         Me.Label13.AutoSize = True
         Me.Label13.ForeColor = System.Drawing.Color.Red
-        Me.Label13.Location = New System.Drawing.Point(356, 96)
+        Me.Label13.Location = New System.Drawing.Point(356, 123)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(12, 13)
         Me.Label13.TabIndex = 99
