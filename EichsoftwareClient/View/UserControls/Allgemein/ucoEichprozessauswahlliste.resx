@@ -288,9 +288,6 @@
   <data name="&gt;&gt;RadButtonEinstellungen.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="resource.Text" xml:space="preserve">
-    <value />
-  </data>
   <data name="RadButtonClientUpdateDatabase.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
   </data>
@@ -1085,6 +1082,6 @@
     <value>ucoEichprozessauswahlliste</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.5401.24263, Culture=neutral, PublicKeyToken=null</value>
+    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.5659.20912, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

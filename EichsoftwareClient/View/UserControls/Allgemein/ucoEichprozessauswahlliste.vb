@@ -154,6 +154,30 @@
         RadGridViewAuswahlliste.BestFitColumns()
         RadGridViewAuswahlliste.EnableAlternatingRowColor = True
         RadGridViewAuswahlliste.ShowNoDataText = True
+        RadGridViewAuswahlliste.SelectionMode = Telerik.WinControls.UI.GridViewSelectionMode.FullRowSelect
+        RadGridViewAuswahlliste.AutoExpandGroups = True
+        Try
+            'bedingte Formatierung - nur hinzufügen, falls sie nicht schon existiert
+            Dim o = From i As Telerik.WinControls.UI.ConditionalFormattingObject In RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList
+                    Where i.Name = "Fehlerhaft"
+
+            If o.Count = 0 Then
+                Dim objCondition As New Telerik.WinControls.UI.ConditionalFormattingObject("Fehlerhaft", Telerik.WinControls.UI.ConditionTypes.Equal, "Fehlerhaft", "", True)
+                objCondition.CellBackColor = Color.FromArgb(247, 87, 67)
+
+                Dim objCondition2 As New Telerik.WinControls.UI.ConditionalFormattingObject("Genehmigt", Telerik.WinControls.UI.ConditionTypes.Equal, "Genehmigt", "", True)
+                objCondition2.CellBackColor = Color.LightGreen
+                RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition)
+                RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition2)
+                Dim descriptor As New Telerik.WinControls.Data.GroupDescriptor()
+                descriptor.GroupNames.Add("Bearbeitungsstatus", System.ComponentModel.ListSortDirection.Ascending)
+                Me.RadGridViewAuswahlliste.GroupDescriptors.Add(descriptor)
+            End If
+
+      
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Protected Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)

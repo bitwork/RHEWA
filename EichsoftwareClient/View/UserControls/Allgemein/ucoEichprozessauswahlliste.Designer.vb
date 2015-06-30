@@ -73,13 +73,14 @@ Partial Class ucoEichprozessauswahlliste
         '
         resources.ApplyResources(Me.RadGridViewAuswahlliste, "RadGridViewAuswahlliste")
         '
-        'RadGridViewAuswahlliste
+        '
         '
         Me.RadGridViewAuswahlliste.MasterTemplate.AllowAddNewRow = False
         Me.RadGridViewAuswahlliste.MasterTemplate.AllowCellContextMenu = False
         Me.RadGridViewAuswahlliste.MasterTemplate.AllowDeleteRow = False
         Me.RadGridViewAuswahlliste.MasterTemplate.AllowDragToGroup = False
         Me.RadGridViewAuswahlliste.MasterTemplate.AllowEditRow = False
+        Me.RadGridViewAuswahlliste.MasterTemplate.ShowGroupedColumns = True
         Me.RadGridViewAuswahlliste.Name = "RadGridViewAuswahlliste"
         '
         '
@@ -92,7 +93,6 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadGridViewAuswahlliste.RootElement.Margin = CType(resources.GetObject("RadGridViewAuswahlliste.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadGridViewAuswahlliste.RootElement.Text = resources.GetString("RadGridViewAuswahlliste.RootElement.Text")
         Me.RadGridViewAuswahlliste.RootElement.TextOrientation = CType(resources.GetObject("RadGridViewAuswahlliste.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadGridViewAuswahlliste.ShowGroupPanel = False
         Me.RadGridViewAuswahlliste.ShowNoDataText = False
         '
         'BackgroundWorkerLoadFromDatabase
@@ -128,6 +128,7 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadPageViewPageEigene.Controls.Add(Me.RadButtonClientAusblenden)
         Me.RadPageViewPageEigene.Controls.Add(Me.RadButtonClientNeu)
         Me.RadPageViewPageEigene.Controls.Add(Me.RadButtonClientBearbeiten)
+        Me.RadPageViewPageEigene.ItemSize = New System.Drawing.SizeF(50.0!, 28.0!)
         resources.ApplyResources(Me.RadPageViewPageEigene, "RadPageViewPageEigene")
         Me.RadPageViewPageEigene.Name = "RadPageViewPageEigene"
         '
@@ -169,7 +170,7 @@ Partial Class ucoEichprozessauswahlliste
         CType(Me.RadButtonEinstellungen.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = Global.EichsoftwareClient.My.Resources.Resources.cog
         CType(Me.RadButtonEinstellungen.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
         CType(Me.RadButtonEinstellungen.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        CType(Me.RadButtonEinstellungen.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = resources.GetString("resource.Text")
+        CType(Me.RadButtonEinstellungen.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         CType(Me.RadButtonEinstellungen.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Shape = Nothing
         '
         'RadButtonClientUpdateDatabase
@@ -268,6 +269,7 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadPageViewPageAlle.Controls.Add(Me.RadButtonEichprozessGenehmigenRHEWA)
         Me.RadPageViewPageAlle.Controls.Add(Me.RadGridViewRHEWAAlle)
         Me.RadPageViewPageAlle.Controls.Add(Me.RadButtonEichungAnsehenRHEWA)
+        Me.RadPageViewPageAlle.ItemSize = New System.Drawing.SizeF(35.0!, 28.0!)
         resources.ApplyResources(Me.RadPageViewPageAlle, "RadPageViewPageAlle")
         Me.RadPageViewPageAlle.Name = "RadPageViewPageAlle"
         '
