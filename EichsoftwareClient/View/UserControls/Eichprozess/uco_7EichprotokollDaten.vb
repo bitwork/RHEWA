@@ -227,16 +227,13 @@
             Label12.Visible = False
             If dMAXHoechlast < 1000 Then
                 RadCheckBoxVolleNormallast.Checked = True
-                RadCheckBoxVolleNormallast.Enabled = False
                 RadTextBoxControlBetragNormallast.Text = dMAXHoechlast
-                RadTextBoxControlBetragNormallast.Enabled = False
             Else
                 If Not objEichprozess.Eichprotokoll.Pruefverfahren_VolleNormallast Is Nothing Then
                     RadCheckBoxVolleNormallast.Checked = objEichprozess.Eichprotokoll.Pruefverfahren_VolleNormallast
                 End If
                 RadCheckBoxVolleNormallast.Enabled = True
                 RadTextBoxControlBetragNormallast.Text = dMAXHoechlast
-                RadTextBoxControlBetragNormallast.Enabled = True
             End If
 
             If objEichprozess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgimStaffelverfahren Then
@@ -248,6 +245,7 @@
                 RadCheckBoxVolleNormallast.Checked = objEichprozess.Eichprotokoll.Pruefverfahren_VolleNormallast
             End If
             RadTextBoxControlBetragNormallast.Text = objEichprozess.Eichprotokoll.Pruefverfahren_BetragNormallast
+
         End If
 
 
@@ -275,8 +273,20 @@
                 RadCheckBoxVollstaendigesStaffelverfahren.Visible = True
                 PictureBox5.Visible = True
 
-
         End Select
+
+
+        'Sonderfall durch Herrn Strack definiert:
+        If dMAXHoechlast < 1000 Then
+            RadCheckBoxVolleNormallast.Checked = True
+            RadCheckBoxVolleNormallast.Enabled = False
+            RadCheckBoxVolleNormallast.ReadOnly = True
+            RadTextBoxControlBetragNormallast.Enabled = False
+        Else
+            RadCheckBoxVolleNormallast.Enabled = True
+            RadTextBoxControlBetragNormallast.Enabled = True
+        End If
+
 
         'bereich Komponenten
         RadTextBoxControlAWG.Text = objEichprozess.Lookup_Auswertegeraet.Typ
