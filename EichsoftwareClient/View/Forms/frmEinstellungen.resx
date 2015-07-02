@@ -128,6 +128,9 @@
   <data name="FrmEinstellungen.RootElement.KeyTip" xml:space="preserve">
     <value />
   </data>
+  <data name="RadRadioButtonSyncAlles.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
   <data name="&gt;&gt;RadButtonAbbrechen.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
@@ -143,6 +146,9 @@
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="RadDateTimePickerEnd.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
+  </data>
+  <data name="RadDateTimePickerSince.RootElement.AccessibleName" xml:space="preserve">
+    <value />
   </data>
   <data name="RadRadioButtonSyncAlles.RootElement.ToolTipText" xml:space="preserve">
     <value />
@@ -177,8 +183,8 @@
   <data name="RadButtonOK.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadDateTimePickerStart.RootElement.KeyTip" xml:space="preserve">
-    <value />
+  <data name="RadDateTimePickerSince.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 20</value>
   </data>
   <data name="RadDateTimePickerStart.CustomFormat" xml:space="preserve">
     <value />
@@ -213,9 +219,6 @@
   <data name="&gt;&gt;RadRadioButtonSyncZwischen.Parent" xml:space="preserve">
     <value>RadGroupBox1</value>
   </data>
-  <data name="RadButtonOK.Size" type="System.Drawing.Size, System.Drawing">
-    <value>151, 40</value>
-  </data>
   <data name="RadButtonAbbrechen.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -231,20 +234,20 @@
   <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>354, 37</value>
   </data>
-  <data name="RadDateTimePickerEnd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>144, 20</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Configuration</value>
   </data>
   <data name="&gt;&gt;RadRadioButtonSyncAlles.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadRadioButton, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
+  <data name="RadDateTimePickerEnd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 20</value>
+  </data>
   <data name="RadButtonOK.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadRadioButtonSyncSeit.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="RadDateTimePickerSince.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadButtonAbbrechen.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="&gt;&gt;RadDateTimePickerSince.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -261,8 +264,8 @@
   <data name="&gt;&gt;RadRadioButtonSyncZwischen.Name" xml:space="preserve">
     <value>RadRadioButtonSyncZwischen</value>
   </data>
-  <data name="RadRadioButtonSyncAlles.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="&gt;&gt;RadGroupBox1.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;RadDateTimePickerSince.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadDateTimePicker, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
@@ -273,26 +276,23 @@
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
+  <data name="RadRadioButtonSyncZwischen.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
   <data name="RadRadioButtonSyncZwischen.RootElement.KeyTip" xml:space="preserve">
     <value />
   </data>
-  <data name="&gt;&gt;RadGroupBox1.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;RadRadioButtonSyncZwischen.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadRadioButton, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonAbbrechen.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="RadDateTimePickerEnd.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadButtonOK.RootElement.KeyTip" xml:space="preserve">
-    <value />
+  <data name="RadButtonOK.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;Label1.Name" xml:space="preserve">
     <value>Label1</value>
-  </data>
-  <data name="RadButtonAbbrechen.RootElement.KeyTip" xml:space="preserve">
-    <value />
   </data>
   <data name="RadRadioButtonSyncSeit.Location" type="System.Drawing.Point, System.Drawing">
     <value>21, 57</value>
@@ -305,6 +305,9 @@
   </data>
   <data name="&gt;&gt;RadDateTimePickerEnd.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadDateTimePicker, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadButtonOK.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadGroupBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -327,8 +330,8 @@
   <data name="RadGroupBox1.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
-  <data name="&gt;&gt;RadRadioButtonSyncAlles.Parent" xml:space="preserve">
-    <value>RadGroupBox1</value>
+  <data name="RadDateTimePickerSince.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 81</value>
   </data>
   <data name="RadRadioButtonSyncAlles.Location" type="System.Drawing.Point, System.Drawing">
     <value>21, 33</value>
@@ -336,17 +339,11 @@
   <data name="RadDateTimePickerStart.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
-  <data name="FrmEinstellungen.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="RadButtonAbbrechen.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
-  <data name="RadButtonOK.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="FrmEinstellungen.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;RadDateTimePickerStart.Name" xml:space="preserve">
-    <value>RadDateTimePickerStart</value>
+  <data name="RadButtonOK.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
   </data>
   <data name="RadRadioButtonSyncAlles.Text" xml:space="preserve">
     <value>sync everything</value>
@@ -354,11 +351,11 @@
   <data name="RadButtonAbbrechen.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadDateTimePickerSince.RootElement.AccessibleName" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;RadRadioButtonSyncSeit.Name" xml:space="preserve">
+    <value>RadRadioButtonSyncSeit</value>
   </data>
-  <data name="RadDateTimePickerSince.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="RadGroupBox1.RootElement.KeyTip" xml:space="preserve">
+    <value />
   </data>
   <data name="RadRadioButtonSyncAlles.RootElement.KeyTip" xml:space="preserve">
     <value />
@@ -372,6 +369,9 @@
   <data name="&gt;&gt;RadRadioButtonSyncAlles.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="RadRadioButtonSyncAlles.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
   <data name="RadRadioButtonSyncSeit.RootElement.KeyTip" xml:space="preserve">
     <value />
   </data>
@@ -384,13 +384,13 @@
   <data name="Label1.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="RadDateTimePickerSince.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="RadRadioButtonSyncAlles.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
   </data>
-  <data name="&gt;&gt;RadDateTimePickerEnd.Parent" xml:space="preserve">
-    <value>RadGroupBox1</value>
+  <data name="RadDateTimePickerStart.RootElement.KeyTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="RadRadioButtonSyncZwischen.RootElement.ToolTipText" xml:space="preserve">
+  <data name="RadButtonOK.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
   <data name="&gt;&gt;RadGroupBox1.ZOrder" xml:space="preserve">
@@ -399,14 +399,11 @@
   <data name="RadDateTimePickerSince.RootElement.AccessibleDescription" xml:space="preserve">
     <value />
   </data>
-  <data name="RadButtonAbbrechen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>151, 40</value>
+  <data name="RadButtonAbbrechen.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
   <data name="RadGroupBox1.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
-  </data>
-  <data name="RadButtonAbbrechen.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
   </data>
   <data name="RadDateTimePickerStart.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -420,11 +417,14 @@
   <data name="RadGroupBox1.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
+  <data name="&gt;&gt;RadRadioButtonSyncAlles.Name" xml:space="preserve">
+    <value>RadRadioButtonSyncAlles</value>
+  </data>
   <data name="RadRadioButtonSyncZwischen.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
-  <data name="RadRadioButtonSyncAlles.Size" type="System.Drawing.Size, System.Drawing">
-    <value>98, 18</value>
+  <data name="&gt;&gt;RadRadioButtonSyncAlles.Parent" xml:space="preserve">
+    <value>RadGroupBox1</value>
   </data>
   <data name="&gt;&gt;RadGroupBox1.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
@@ -438,14 +438,14 @@
   <data name="RadButtonOK.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="RadGroupBox1.RootElement.KeyTip" xml:space="preserve">
-    <value />
+  <data name="FrmEinstellungen.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadRadioButtonSyncSeit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 18</value>
+  <data name="RadButtonOK.Text" xml:space="preserve">
+    <value>Save changes</value>
   </data>
-  <data name="RadButtonOK.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
-    <value>ImageBeforeText</value>
+  <data name="&gt;&gt;RadDateTimePickerStart.Name" xml:space="preserve">
+    <value>RadDateTimePickerStart</value>
   </data>
   <data name="RadDateTimePickerSince.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
@@ -456,17 +456,20 @@
   <data name="RadDateTimePickerEnd.Culture" type="System.Globalization.CultureInfo, mscorlib">
     <value>de</value>
   </data>
+  <data name="RadButtonAbbrechen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>151, 40</value>
+  </data>
   <data name="RadRadioButtonSyncAlles.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadButtonAbbrechen.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="RadDateTimePickerSince.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;Label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="RadDateTimePickerSince.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
-  </data>
-  <data name="FrmEinstellungen.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="RadRadioButtonSyncSeit.Text" xml:space="preserve">
     <value>sync everything since</value>
@@ -480,17 +483,11 @@
   <data name="RadRadioButtonSyncZwischen.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadGroupBox1.HeaderText" xml:space="preserve">
-    <value>Synchronisation Configuration</value>
-  </data>
   <data name="FrmEinstellungen.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="&gt;&gt;RadRadioButtonSyncZwischen.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadRadioButton, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Configuration</value>
+  <data name="RadRadioButtonSyncSeit.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="RadGroupBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 12</value>
@@ -498,20 +495,17 @@
   <data name="RadDateTimePickerStart.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
-  <data name="FrmEinstellungen.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="RadRadioButtonSyncZwischen.Location" type="System.Drawing.Point, System.Drawing">
     <value>21, 107</value>
   </data>
   <data name="RadButtonOK.Location" type="System.Drawing.Point, System.Drawing">
     <value>470, 240</value>
   </data>
+  <data name="RadRadioButtonSyncSeit.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
   <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
     <value>RadGroupBox1</value>
-  </data>
-  <data name="RadRadioButtonSyncSeit.RootElement.ToolTipText" xml:space="preserve">
-    <value />
   </data>
   <data name="RadButtonOK.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -528,11 +522,14 @@
   <data name="RadRadioButtonSyncSeit.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
-  <data name="RadRadioButtonSyncAlles.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadDateTimePickerSince.RootElement.KeyTip" xml:space="preserve">
+  <data name="RadButtonOK.RootElement.KeyTip" xml:space="preserve">
     <value />
+  </data>
+  <data name="RadRadioButtonSyncZwischen.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="RadRadioButtonSyncSeit.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="RadDateTimePickerEnd.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -540,8 +537,8 @@
   <data name="&gt;&gt;RadDateTimePickerEnd.Name" xml:space="preserve">
     <value>RadDateTimePickerEnd</value>
   </data>
-  <data name="RadDateTimePickerSince.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 81</value>
+  <data name="RadButtonOK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>151, 40</value>
   </data>
   <data name="&gt;&gt;RadGroupBox1.Name" xml:space="preserve">
     <value>RadGroupBox1</value>
@@ -564,8 +561,11 @@
   <data name="RadDateTimePickerSince.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
-  <data name="RadDateTimePickerStart.Size" type="System.Drawing.Size, System.Drawing">
-    <value>144, 20</value>
+  <data name="RadDateTimePickerSince.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadRadioButtonSyncAlles.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
   </data>
   <data name="RadDateTimePickerEnd.RootElement.ToolTipText" xml:space="preserve">
     <value />
@@ -585,23 +585,23 @@ If you want to sync very specific data, you can chosse a start and end date.
 Keep in mind: No data will be deleted. If you click "sync everything" all data will be downloaded from RHEWA.
 </value>
   </data>
+  <data name="&gt;&gt;RadDateTimePickerEnd.Parent" xml:space="preserve">
+    <value>RadGroupBox1</value>
+  </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadForm, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="RadDateTimePickerSince.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadRadioButtonSyncSeit.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadRadioButtonSyncZwischen.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
   </data>
   <data name="&gt;&gt;RadRadioButtonSyncSeit.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadRadioButton, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
+  <data name="RadDateTimePickerStart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 20</value>
+  </data>
   <data name="RadRadioButtonSyncZwischen.Text" xml:space="preserve">
     <value>sync everything between</value>
+  </data>
+  <data name="RadDateTimePickerSince.Text" xml:space="preserve">
+    <value>12.02.2014</value>
   </data>
   <data name="RadButtonAbbrechen.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
@@ -609,35 +609,32 @@ Keep in mind: No data will be deleted. If you click "sync everything" all data w
   <data name="&gt;&gt;RadRadioButtonSyncSeit.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;Label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="RadButtonAbbrechen.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
-  <data name="&gt;&gt;RadRadioButtonSyncSeit.Name" xml:space="preserve">
-    <value>RadRadioButtonSyncSeit</value>
+  <data name="FrmEinstellungen.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
   </data>
   <data name="RadDateTimePickerEnd.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
-  <data name="RadDateTimePickerSince.Size" type="System.Drawing.Size, System.Drawing">
-    <value>144, 20</value>
+  <data name="RadGroupBox1.HeaderText" xml:space="preserve">
+    <value>Synchronisation Configuration</value>
   </data>
   <data name="RadButtonOK.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadButtonAbbrechen.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
+  <data name="RadButtonAbbrechen.RootElement.KeyTip" xml:space="preserve">
+    <value />
   </data>
-  <data name="RadRadioButtonSyncZwischen.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="RadRadioButtonSyncAlles.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 18</value>
   </data>
   <data name="RadButtonAbbrechen.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="RadButtonOK.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadGroupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>775, 209</value>
   </data>
   <data name="RadRadioButtonSyncSeit.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -651,35 +648,32 @@ Keep in mind: No data will be deleted. If you click "sync everything" all data w
   <data name="FrmEinstellungen.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadRadioButtonSyncAlles.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
+  <data name="FrmEinstellungen.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
-  <data name="RadDateTimePickerStart.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadRadioButtonSyncSeit.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
   <data name="RadDateTimePickerStart.Text" xml:space="preserve">
     <value>12.02.2014</value>
   </data>
-  <data name="RadDateTimePickerSince.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="&gt;&gt;RadDateTimePickerStart.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadDateTimePicker, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="RadRadioButtonSyncAlles.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="FrmEinstellungen.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadButtonAbbrechen.Location" type="System.Drawing.Point, System.Drawing">
     <value>627, 240</value>
   </data>
-  <data name="&gt;&gt;RadButtonOK.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="RadDateTimePickerSince.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="RadButtonAbbrechen.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
-  <data name="RadRadioButtonSyncZwischen.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
+  <data name="RadRadioButtonSyncZwischen.RootElement.ToolTipText" xml:space="preserve">
+    <value />
   </data>
   <data name="&gt;&gt;RadDateTimePickerSince.Name" xml:space="preserve">
     <value>RadDateTimePickerSince</value>
@@ -687,17 +681,20 @@ Keep in mind: No data will be deleted. If you click "sync everything" all data w
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>790, 292</value>
   </data>
-  <data name="&gt;&gt;RadRadioButtonSyncAlles.Name" xml:space="preserve">
-    <value>RadRadioButtonSyncAlles</value>
+  <data name="RadDateTimePickerEnd.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;RadDateTimePickerSince.Parent" xml:space="preserve">
     <value>RadGroupBox1</value>
   </data>
+  <data name="RadGroupBox1.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
   <data name="&gt;&gt;RadButtonOK.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="RadRadioButtonSyncSeit.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="RadRadioButtonSyncSeit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 18</value>
   </data>
   <data name="RadGroupBox1.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
@@ -711,8 +708,8 @@ Keep in mind: No data will be deleted. If you click "sync everything" all data w
   <data name="&gt;&gt;RadDateTimePickerEnd.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="RadGroupBox1.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
+  <data name="RadDateTimePickerStart.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="&gt;&gt;RadButtonOK.Name" xml:space="preserve">
     <value>RadButtonOK</value>
@@ -723,14 +720,14 @@ Keep in mind: No data will be deleted. If you click "sync everything" all data w
   <data name="RadGroupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="RadDateTimePickerSince.Text" xml:space="preserve">
-    <value>12.02.2014</value>
+  <data name="RadButtonAbbrechen.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadDateTimePickerStart.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="RadButtonOK.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
+  <data name="RadGroupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>775, 209</value>
   </data>
   <data name="RadDateTimePickerSince.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -750,14 +747,17 @@ Keep in mind: No data will be deleted. If you click "sync everything" all data w
   <data name="FrmEinstellungen.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
+  <data name="RadRadioButtonSyncZwischen.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
   <data name="RadDateTimePickerSince.CustomFormat" xml:space="preserve">
     <value />
   </data>
   <data name="&gt;&gt;RadDateTimePickerStart.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="RadButtonOK.Text" xml:space="preserve">
-    <value>Save changes</value>
+  <data name="RadDateTimePickerSince.RootElement.KeyTip" xml:space="preserve">
+    <value />
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

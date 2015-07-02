@@ -117,54 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="RadDateTimePickerEnd.RootElement.KeyTip" xml:space="preserve">
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="RadDateTimePickerSince.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadDateTimePickerEnd.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadDateTimePickerStart.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadDateTimePickerStart.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadDateTimePickerSince.RootElement.AccessibleDescription" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadDateTimePickerSince.RootElement.AccessibleName" xml:space="preserve">
+  <data name="RadDateTimePickerSince.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="RadDateTimePickerSince.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="RadDateTimePickerSince.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadDateTimePickerSince.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadDateTimePickerSince.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="RadDateTimePickerSince.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadDateTimePickerSince.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadDateTimePickerSince.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadDateTimePickerSince.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="RadDateTimePickerSince.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>416, 189</value>
   </data>
@@ -180,35 +140,17 @@ Wenn Sie nur einen Bestimmten Zeitraum synchronisieren wollen, können Sie ein S
 Es werden KEINE Daten gelöscht. Wenn Sie "Synchronisiere Alles" wählen, werden alle Daten von RHEWA auf Ihren Client zurückgeladen
 </value>
   </data>
-  <data name="RadRadioButtonSyncZwischen.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadRadioButtonSyncZwischen.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="RadRadioButtonSyncZwischen.Size" type="System.Drawing.Size, System.Drawing">
     <value>167, 18</value>
   </data>
   <data name="RadRadioButtonSyncZwischen.Text" xml:space="preserve">
     <value>Synchronisiere Alles zwischen</value>
   </data>
-  <data name="RadRadioButtonSyncSeit.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadRadioButtonSyncSeit.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="RadRadioButtonSyncSeit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 18</value>
+    <value>135, 18</value>
   </data>
   <data name="RadRadioButtonSyncSeit.Text" xml:space="preserve">
-    <value>Synchronisiere Alles seit</value>
-  </data>
-  <data name="RadRadioButtonSyncAlles.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadRadioButtonSyncAlles.RootElement.ToolTipText" xml:space="preserve">
-    <value />
+    <value>Synchronisiere Alles ab</value>
   </data>
   <data name="RadRadioButtonSyncAlles.Size" type="System.Drawing.Size, System.Drawing">
     <value>119, 18</value>
@@ -219,12 +161,6 @@ Es werden KEINE Daten gelöscht. Wenn Sie "Synchronisiere Alles" wählen, werden
   <data name="RadGroupBox1.HeaderText" xml:space="preserve">
     <value>Synchronisierungs Einstellungen</value>
   </data>
-  <data name="RadGroupBox1.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadGroupBox1.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="RadGroupBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>775, 238</value>
   </data>
@@ -234,35 +170,17 @@ Es werden KEINE Daten gelöscht. Wenn Sie "Synchronisiere Alles" wählen, werden
   <data name="RadButtonOK.Location" type="System.Drawing.Point, System.Drawing">
     <value>470, 256</value>
   </data>
-  <data name="RadButtonOK.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadButtonOK.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="RadButtonOK.Text" xml:space="preserve">
     <value>Speichern</value>
   </data>
   <data name="RadButtonAbbrechen.Location" type="System.Drawing.Point, System.Drawing">
     <value>627, 256</value>
   </data>
-  <data name="RadButtonAbbrechen.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadButtonAbbrechen.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="RadButtonAbbrechen.Text" xml:space="preserve">
     <value>Abbrechen</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>790, 302</value>
-  </data>
-  <data name="FrmEinstellungen.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="FrmEinstellungen.RootElement.ToolTipText" xml:space="preserve">
-    <value />
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Konfiguration</value>

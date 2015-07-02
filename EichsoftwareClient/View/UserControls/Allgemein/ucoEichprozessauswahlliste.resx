@@ -292,7 +292,7 @@
     <value>Bottom, Left</value>
   </data>
   <data name="RadButtonClientUpdateDatabase.Location" type="System.Drawing.Point, System.Drawing">
-    <value>144, 410</value>
+    <value>146, 410</value>
   </data>
   <data name="RadButtonClientUpdateDatabase.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
