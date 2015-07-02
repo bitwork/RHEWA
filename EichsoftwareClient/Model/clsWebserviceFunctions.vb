@@ -460,6 +460,7 @@ Public Class clsWebserviceFunctions
             MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+
     ''' <summary>
     ''' Methode welche Eichprozesse vom Server holt und die Daten in eine für das datagrid Bindbare Auflistung speichert.
     ''' </summary>
@@ -476,7 +477,45 @@ Public Class clsWebserviceFunctions
                 End Try
 
                 Try
-                    Dim data = WebContext.GetAlleEichprozesse(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                    Dim data = WebContext.GetAlleEichprozesse(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, My.User.Name, System.Environment.UserDomainName, My.Computer.Name) ', pUploadjahr, pUploadmonat)
+                    Return data
+                Catch ex As Exception
+                    MessageBox.Show(ex.Message)
+                    If Debugger.IsAttached Then
+                        MessageBox.Show(ex.StackTrace)
+                        MessageBox.Show(ex.InnerException.Message)
+                        MessageBox.Show(ex.InnerException.StackTrace)
+                        MessageBox.Show(ex.InnerException.InnerException.Message)
+                        MessageBox.Show(ex.InnerException.InnerException.StackTrace)
+                    End If
+                    Return Nothing
+                End Try
+            End Using
+        Catch ex As ServiceModel.EndpointNotFoundException
+            MessageBox.Show("Keine Verbindung zum Stratoserver möglich")
+            Return Nothing
+        Catch ex As Exception
+            Return Nothing
+        End Try
+    End Function
+
+    ''' <summary>
+    ''' Methode welche Eichprozesse vom Server holt und die Daten in eine für das datagrid Bindbare Auflistung speichert.
+    ''' </summary>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Public Shared Function GetServerEichprotokollListe(ByVal pUploadjahr As Integer, pUploadmonat As Integer) As EichsoftwareWebservice.clsEichprozessFuerAuswahlliste()
+        Try
+            'neuen Context aufbauen
+            Using WebContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
+                Try
+                    WebContext.Open()
+                Catch ex As Exception
+                    Return Nothing
+                End Try
+
+                Try
+                    Dim data = WebContext.GetAlleEichprozesseNachUploadMonat(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, My.User.Name, System.Environment.UserDomainName, My.Computer.Name, pUploadjahr, pUploadmonat)
                     Return data
                 Catch ex As Exception
                     MessageBox.Show(ex.Message)
@@ -623,72 +662,72 @@ Public Class clsWebserviceFunctions
     End Function
 
 
-    ''' <summary>
-    ''' erzeugt 1:1 kopie von Serverobjekt in lokaler DB. wird nicht mehr benötigt, da der kopiervorgang nun verschärft wurde und keine 1:1 kopie mehr erzeugt werden darf.
-    ''' </summary>
-    ''' <param name="Vorgangsnummer"></param>
-    ''' <returns></returns>
-    ''' <remarks></remarks>
-    Public Shared Function old_GetLokaleKopieVonEichprozess(ByVal Vorgangsnummer As String) As Eichprozess
-        Dim objServerEichprozess As EichsoftwareWebservice.ServerEichprozess = Nothing
-        Dim objClientEichprozess As Eichprozess = Nothing
-        'neue Datenbankverbindung
-        Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
-            Try
-                webContext.Open()
-            Catch ex As Exception
-                MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                Return Nothing
-            End Try
-            Using dbcontext As New EichsoftwareClientdatabaseEntities1
-                Try
-                    objClientEichprozess = dbcontext.Eichprozess.Create
-                    objServerEichprozess = webContext.GetEichProzess(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+    ' ''' <summary>
+    ' ''' erzeugt 1:1 kopie von Serverobjekt in lokaler DB. wird nicht mehr benötigt, da der kopiervorgang nun verschärft wurde und keine 1:1 kopie mehr erzeugt werden darf.
+    ' ''' </summary>
+    ' ''' <param name="Vorgangsnummer"></param>
+    ' ''' <returns></returns>
+    ' ''' <remarks></remarks>
+    'Public Shared Function old_GetLokaleKopieVonEichprozess(ByVal Vorgangsnummer As String) As Eichprozess
+    '    Dim objServerEichprozess As EichsoftwareWebservice.ServerEichprozess = Nothing
+    '    Dim objClientEichprozess As Eichprozess = Nothing
+    '    'neue Datenbankverbindung
+    '    Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
+    '        Try
+    '            webContext.Open()
+    '        Catch ex As Exception
+    '            MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+    '            Return Nothing
+    '        End Try
+    '        Using dbcontext As New EichsoftwareClientdatabaseEntities1
+    '            Try
+    '                objClientEichprozess = dbcontext.Eichprozess.Create
+    '                objServerEichprozess = webContext.GetEichProzess(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
 
 
-                    If objServerEichprozess Is Nothing Then
-                        MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_KeinServerObjektEichung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    End If
+    '                If objServerEichprozess Is Nothing Then
+    '                    MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_KeinServerObjektEichung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+    '                End If
 
-                    'umwandeln des Serverobjektes in Clientobject
-                    clsClientServerConversionFunctions.CopyClientObjectPropertiesWithNewIDs(objClientEichprozess, objServerEichprozess)
+    '                'umwandeln des Serverobjektes in Clientobject
+    '                clsClientServerConversionFunctions.CopyClientObjectPropertiesWithNewIDs(objClientEichprozess, objServerEichprozess)
 
-                    'vorgangsnummer editieren
-                    objClientEichprozess.Vorgangsnummer = Guid.NewGuid.ToString
-                    objClientEichprozess.FK_Bearbeitungsstatus = 4 'noch nichts
-                    objClientEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
+    '                'vorgangsnummer editieren
+    '                objClientEichprozess.Vorgangsnummer = Guid.NewGuid.ToString
+    '                objClientEichprozess.FK_Bearbeitungsstatus = 4 'noch nichts
+    '                objClientEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
 
 
-                    dbcontext.Eichprozess.Add(objClientEichprozess)
+    '                dbcontext.Eichprozess.Add(objClientEichprozess)
 
-                    Try
-                        dbcontext.SaveChanges()
-                    Catch ex As Entity.Infrastructure.DbUpdateException
-                        MessageBox.Show(ex.InnerException.InnerException.Message)
-                        MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_SpeicherAnomalie, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK)
-                        If AktuellerBenutzer.Instance.Lizenz.RHEWALizenz Then
-                            MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_SpeicherAnomalieRhewaZusatztext, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK)
-                        End If
+    '                Try
+    '                    dbcontext.SaveChanges()
+    '                Catch ex As Entity.Infrastructure.DbUpdateException
+    '                    MessageBox.Show(ex.InnerException.InnerException.Message)
+    '                    MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_SpeicherAnomalie, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK)
+    '                    If AktuellerBenutzer.Instance.Lizenz.RHEWALizenz Then
+    '                        MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_SpeicherAnomalieRhewaZusatztext, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK)
+    '                    End If
 
-                        Return Nothing
-                    Catch ex2 As Entity.Validation.DbEntityValidationException
-                        For Each o In ex2.EntityValidationErrors
-                            For Each v In o.ValidationErrors
-                                MessageBox.Show(v.ErrorMessage & " " & v.PropertyName)
-                            Next
-                        Next
-                        Return Nothing
-                    End Try
+    '                    Return Nothing
+    '                Catch ex2 As Entity.Validation.DbEntityValidationException
+    '                    For Each o In ex2.EntityValidationErrors
+    '                        For Each v In o.ValidationErrors
+    '                            MessageBox.Show(v.ErrorMessage & " " & v.PropertyName)
+    '                        Next
+    '                    Next
+    '                    Return Nothing
+    '                End Try
 
-                    Return objClientEichprozess
+    '                Return objClientEichprozess
 
-                Catch ex As Exception
-                    Return Nothing
-                End Try
-            End Using
-        End Using
+    '            Catch ex As Exception
+    '                Return Nothing
+    '            End Try
+    '        End Using
+    '    End Using
 
-    End Function
+    'End Function
 
     ''' <summary>
     ''' genehmigt Eichprozess anhand von Vorgangsnummer auf dem Server

@@ -35,14 +35,17 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadButtonClientNeu = New Telerik.WinControls.UI.RadButton()
         Me.RadButtonClientBearbeiten = New Telerik.WinControls.UI.RadButton()
         Me.RadPageViewPageAlle = New Telerik.WinControls.UI.RadPageViewPage()
-        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.RadButtonRefresh = New Telerik.WinControls.UI.RadButton()
-        Me.RadProgressBar = New Telerik.WinControls.UI.RadProgressBar()
+        Me.RadCheckBoxLadeAlleEichprozesse = New Telerik.WinControls.UI.RadCheckBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.RadDateTimePickerFilterMonatLadeAlleEichprozesse = New Telerik.WinControls.UI.RadDateTimePicker()
         Me.RadButtonEichprozessKopierenRHEWA = New Telerik.WinControls.UI.RadButton()
         Me.RadButtonEichprozessAblehnenRHEWA = New Telerik.WinControls.UI.RadButton()
         Me.RadButtonEichprozessGenehmigenRHEWA = New Telerik.WinControls.UI.RadButton()
         Me.RadGridViewRHEWAAlle = New Telerik.WinControls.UI.RadGridView()
         Me.RadButtonEichungAnsehenRHEWA = New Telerik.WinControls.UI.RadButton()
+        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.RadProgressBar = New Telerik.WinControls.UI.RadProgressBar()
         Me.BackgroundWorkerLoadFromDatabaseRHEWA = New System.ComponentModel.BackgroundWorker()
         Me.BackgroundWorkerDownloadFromFTP = New System.ComponentModel.BackgroundWorker()
         CType(Me.RadGridViewAuswahlliste, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -58,15 +61,17 @@ Partial Class ucoEichprozessauswahlliste
         CType(Me.RadButtonClientNeu, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonClientBearbeiten, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadPageViewPageAlle.SuspendLayout()
-        Me.FlowLayoutPanel1.SuspendLayout()
         CType(Me.RadButtonRefresh, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadProgressBar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadCheckBoxLadeAlleEichprozesse, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadDateTimePickerFilterMonatLadeAlleEichprozesse, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonEichprozessKopierenRHEWA, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonEichprozessAblehnenRHEWA, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonEichprozessGenehmigenRHEWA, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGridViewRHEWAAlle, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGridViewRHEWAAlle.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonEichungAnsehenRHEWA, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.FlowLayoutPanel1.SuspendLayout()
+        CType(Me.RadProgressBar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'RadGridViewAuswahlliste
@@ -263,27 +268,24 @@ Partial Class ucoEichprozessauswahlliste
         '
         'RadPageViewPageAlle
         '
-        Me.RadPageViewPageAlle.Controls.Add(Me.FlowLayoutPanel1)
+        Me.RadPageViewPageAlle.Controls.Add(Me.RadButtonRefresh)
+        Me.RadPageViewPageAlle.Controls.Add(Me.RadCheckBoxLadeAlleEichprozesse)
+        Me.RadPageViewPageAlle.Controls.Add(Me.Label1)
+        Me.RadPageViewPageAlle.Controls.Add(Me.RadDateTimePickerFilterMonatLadeAlleEichprozesse)
         Me.RadPageViewPageAlle.Controls.Add(Me.RadButtonEichprozessKopierenRHEWA)
         Me.RadPageViewPageAlle.Controls.Add(Me.RadButtonEichprozessAblehnenRHEWA)
         Me.RadPageViewPageAlle.Controls.Add(Me.RadButtonEichprozessGenehmigenRHEWA)
         Me.RadPageViewPageAlle.Controls.Add(Me.RadGridViewRHEWAAlle)
         Me.RadPageViewPageAlle.Controls.Add(Me.RadButtonEichungAnsehenRHEWA)
+        Me.RadPageViewPageAlle.Controls.Add(Me.FlowLayoutPanel1)
         Me.RadPageViewPageAlle.ItemSize = New System.Drawing.SizeF(35.0!, 28.0!)
         resources.ApplyResources(Me.RadPageViewPageAlle, "RadPageViewPageAlle")
         Me.RadPageViewPageAlle.Name = "RadPageViewPageAlle"
         '
-        'FlowLayoutPanel1
-        '
-        resources.ApplyResources(Me.FlowLayoutPanel1, "FlowLayoutPanel1")
-        Me.FlowLayoutPanel1.Controls.Add(Me.RadButtonRefresh)
-        Me.FlowLayoutPanel1.Controls.Add(Me.RadProgressBar)
-        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        '
         'RadButtonRefresh
         '
-        resources.ApplyResources(Me.RadButtonRefresh, "RadButtonRefresh")
         Me.RadButtonRefresh.Image = Global.EichsoftwareClient.My.Resources.Resources.database_refresh
+        resources.ApplyResources(Me.RadButtonRefresh, "RadButtonRefresh")
         Me.RadButtonRefresh.Name = "RadButtonRefresh"
         '
         '
@@ -297,21 +299,24 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadButtonRefresh.RootElement.Text = resources.GetString("RadButtonRefresh.RootElement.Text")
         Me.RadButtonRefresh.RootElement.TextOrientation = CType(resources.GetObject("RadButtonRefresh.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
-        'RadProgressBar
+        'RadCheckBoxLadeAlleEichprozesse
         '
-        resources.ApplyResources(Me.RadProgressBar, "RadProgressBar")
-        Me.RadProgressBar.Name = "RadProgressBar"
+        resources.ApplyResources(Me.RadCheckBoxLadeAlleEichprozesse, "RadCheckBoxLadeAlleEichprozesse")
+        Me.RadCheckBoxLadeAlleEichprozesse.Name = "RadCheckBoxLadeAlleEichprozesse"
         '
+        'Label1
         '
+        resources.ApplyResources(Me.Label1, "Label1")
+        Me.Label1.Name = "Label1"
         '
-        Me.RadProgressBar.RootElement.AccessibleDescription = resources.GetString("RadProgressBar.RootElement.AccessibleDescription")
-        Me.RadProgressBar.RootElement.AccessibleName = resources.GetString("RadProgressBar.RootElement.AccessibleName")
-        Me.RadProgressBar.RootElement.Alignment = CType(resources.GetObject("RadProgressBar.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadProgressBar.RootElement.AngleTransform = CType(resources.GetObject("RadProgressBar.RootElement.AngleTransform"), Single)
-        Me.RadProgressBar.RootElement.FlipText = CType(resources.GetObject("RadProgressBar.RootElement.FlipText"), Boolean)
-        Me.RadProgressBar.RootElement.Margin = CType(resources.GetObject("RadProgressBar.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadProgressBar.RootElement.Text = resources.GetString("RadProgressBar.RootElement.Text")
-        Me.RadProgressBar.RootElement.TextOrientation = CType(resources.GetObject("RadProgressBar.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        'RadDateTimePickerFilterMonatLadeAlleEichprozesse
+        '
+        resources.ApplyResources(Me.RadDateTimePickerFilterMonatLadeAlleEichprozesse, "RadDateTimePickerFilterMonatLadeAlleEichprozesse")
+        Me.RadDateTimePickerFilterMonatLadeAlleEichprozesse.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.RadDateTimePickerFilterMonatLadeAlleEichprozesse.Name = "RadDateTimePickerFilterMonatLadeAlleEichprozesse"
+        Me.RadDateTimePickerFilterMonatLadeAlleEichprozesse.ShowUpDown = True
+        Me.RadDateTimePickerFilterMonatLadeAlleEichprozesse.TabStop = False
+        Me.RadDateTimePickerFilterMonatLadeAlleEichprozesse.Value = New Date(2015, 7, 2, 9, 5, 20, 614)
         '
         'RadButtonEichprozessKopierenRHEWA
         '
@@ -406,6 +411,28 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadButtonEichungAnsehenRHEWA.RootElement.Text = resources.GetString("RadButtonEichungAnsehenRHEWA.RootElement.Text")
         Me.RadButtonEichungAnsehenRHEWA.RootElement.TextOrientation = CType(resources.GetObject("RadButtonEichungAnsehenRHEWA.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
+        'FlowLayoutPanel1
+        '
+        resources.ApplyResources(Me.FlowLayoutPanel1, "FlowLayoutPanel1")
+        Me.FlowLayoutPanel1.Controls.Add(Me.RadProgressBar)
+        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
+        '
+        'RadProgressBar
+        '
+        resources.ApplyResources(Me.RadProgressBar, "RadProgressBar")
+        Me.RadProgressBar.Name = "RadProgressBar"
+        '
+        '
+        '
+        Me.RadProgressBar.RootElement.AccessibleDescription = resources.GetString("RadProgressBar.RootElement.AccessibleDescription")
+        Me.RadProgressBar.RootElement.AccessibleName = resources.GetString("RadProgressBar.RootElement.AccessibleName")
+        Me.RadProgressBar.RootElement.Alignment = CType(resources.GetObject("RadProgressBar.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.RadProgressBar.RootElement.AngleTransform = CType(resources.GetObject("RadProgressBar.RootElement.AngleTransform"), Single)
+        Me.RadProgressBar.RootElement.FlipText = CType(resources.GetObject("RadProgressBar.RootElement.FlipText"), Boolean)
+        Me.RadProgressBar.RootElement.Margin = CType(resources.GetObject("RadProgressBar.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadProgressBar.RootElement.Text = resources.GetString("RadProgressBar.RootElement.Text")
+        Me.RadProgressBar.RootElement.TextOrientation = CType(resources.GetObject("RadProgressBar.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        '
         'BackgroundWorkerLoadFromDatabaseRHEWA
         '
         '
@@ -434,15 +461,18 @@ Partial Class ucoEichprozessauswahlliste
         CType(Me.RadButtonClientNeu, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonClientBearbeiten, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadPageViewPageAlle.ResumeLayout(False)
-        Me.FlowLayoutPanel1.ResumeLayout(False)
+        Me.RadPageViewPageAlle.PerformLayout()
         CType(Me.RadButtonRefresh, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadProgressBar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadCheckBoxLadeAlleEichprozesse, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadDateTimePickerFilterMonatLadeAlleEichprozesse, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonEichprozessKopierenRHEWA, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonEichprozessAblehnenRHEWA, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonEichprozessGenehmigenRHEWA, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGridViewRHEWAAlle.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGridViewRHEWAAlle, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonEichungAnsehenRHEWA, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.FlowLayoutPanel1.ResumeLayout(False)
+        CType(Me.RadProgressBar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -468,5 +498,8 @@ Partial Class ucoEichprozessauswahlliste
     Friend WithEvents RadButtonRefresh As Telerik.WinControls.UI.RadButton
     Friend WithEvents FlowLayoutPanel1 As System.Windows.Forms.FlowLayoutPanel
     Friend WithEvents RadButtonNeuStandardwaage As Telerik.WinControls.UI.RadButton
+    Friend WithEvents RadDateTimePickerFilterMonatLadeAlleEichprozesse As Telerik.WinControls.UI.RadDateTimePicker
+    Friend WithEvents RadCheckBoxLadeAlleEichprozesse As Telerik.WinControls.UI.RadCheckBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 
 End Class

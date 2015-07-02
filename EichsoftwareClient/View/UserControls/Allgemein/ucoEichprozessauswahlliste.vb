@@ -218,6 +218,14 @@
         End If
     End Sub
 
+    'Private Sub RadDateTimePickerFilterMonatLadeAlleEichprozesse_ValueChanged(sender As System.Object, e As System.EventArgs) Handles RadDateTimePickerFilterMonatLadeAlleEichprozesse.Validating
+    '    LoadFromDatabase()
+    'End Sub
+
+    'Private Sub RadCheckBoxLadeAlleEichprozesse_ToggleStateChanged(sender As System.Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadCheckBoxLadeAlleEichprozesse.ToggleStateChanged
+    '    LoadFromDatabase()
+    'End Sub
+
     ''' <summary>
     ''' Konfigurationsdialog anzeigen
     ''' </summary>
@@ -436,7 +444,11 @@
     ''' <remarks></remarks>
     Private Sub BackgroundWorkerLoadFromDatabaseRHEWA_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorkerLoadFromDatabaseRHEWA.DoWork
         'background worker result enthält anschließend alle serverseitigen Eichprozesse
-        e.Result = clsWebserviceFunctions.GetServerEichprotokollListe()
+        If RadCheckBoxLadeAlleEichprozesse.Checked Then
+            e.Result = clsWebserviceFunctions.GetServerEichprotokollListe()
+        Else
+            e.Result = clsWebserviceFunctions.GetServerEichprotokollListe(RadDateTimePickerFilterMonatLadeAlleEichprozesse.Value.Year, RadDateTimePickerFilterMonatLadeAlleEichprozesse.Value.Month)
+        End If
     End Sub
 
     ''' <summary>
@@ -541,33 +553,33 @@
         End Try
     End Sub
 
-    ''' <summary>
-    ''' Kopiert eichprozess vom Server in ein Client Objekt als Vorlage
-    ''' </summary>
-    ''' <remarks></remarks>
-    Private Sub RadButtonEichprozessKopieren_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonEichprozessKopierenRHEWA.Click
-        GetLokaleKopieVonEichprozess()
-    End Sub
+    ' ''' <summary>
+    ' ''' Kopiert eichprozess vom Server in ein Client Objekt als Vorlage
+    ' ''' </summary>
+    ' ''' <remarks></remarks>
+    'Private Sub RadButtonEichprozessKopieren_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonEichprozessKopierenRHEWA.Click
+    '    GetLokaleKopieVonEichprozess()
+    'End Sub
 
-    ''' <summary>
-    ''' Kopiert eichprozess vom Server in ein Client Objekt als Vorlage 1 zu 1
-    ''' </summary>
-    ''' <remarks></remarks>
-    Private Sub GetLokaleKopieVonEichprozess()
-        If Not Me.VorgangsnummerGridServer.Equals("") Then
-            If MessageBox.Show(My.Resources.GlobaleLokalisierung.Frage_Kopieren, My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
-                Dim objClientEichprozess = clsWebserviceFunctions.old_GetLokaleKopieVonEichprozess(VorgangsnummerGridServer)
+    ' ''' <summary>
+    ' ''' Kopiert eichprozess vom Server in ein Client Objekt als Vorlage 1 zu 1
+    ' ''' </summary>
+    ' ''' <remarks></remarks>
+    'Private Sub GetLokaleKopieVonEichprozess()
+    '    If Not Me.VorgangsnummerGridServer.Equals("") Then
+    '        If MessageBox.Show(My.Resources.GlobaleLokalisierung.Frage_Kopieren, My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+    '            Dim objClientEichprozess = clsWebserviceFunctions.old_GetLokaleKopieVonEichprozess(VorgangsnummerGridServer)
 
-                If Not objClientEichprozess Is Nothing Then
-                    'anzeigen des Dialogs zur Bearbeitung der Eichung
-                    Dim f As New FrmMainContainer(objClientEichprozess)
-                    f.ShowDialog()
-                    'nach dem schließen des Dialogs aktualisieren
-                    LoadFromDatabase()
-                End If
-            End If
-        End If
-    End Sub
+    '            If Not objClientEichprozess Is Nothing Then
+    '                'anzeigen des Dialogs zur Bearbeitung der Eichung
+    '                Dim f As New FrmMainContainer(objClientEichprozess)
+    '                f.ShowDialog()
+    '                'nach dem schließen des Dialogs aktualisieren
+    '                LoadFromDatabase()
+    '            End If
+    '        End If
+    '    End If
+    'End Sub
 
 
 #Region "Genehmigen / Ablehnen"
@@ -949,4 +961,6 @@
         'nach dem schließen des Dialogs aktualisieren
         LoadFromDatabase()
     End Sub
+
+  
 End Class

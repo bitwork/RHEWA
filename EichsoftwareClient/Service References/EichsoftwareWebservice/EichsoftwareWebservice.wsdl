@@ -85,6 +85,12 @@
   <wsdl:message name="IEichsoftwareWebservice_GetAlleEichprozesse_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAlleEichprozesseResponse" />
   </wsdl:message>
+  <wsdl:message name="IEichsoftwareWebservice_GetAlleEichprozesseNachUploadMonat_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlleEichprozesseNachUploadMonat" />
+  </wsdl:message>
+  <wsdl:message name="IEichsoftwareWebservice_GetAlleEichprozesseNachUploadMonat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlleEichprozesseNachUploadMonatResponse" />
+  </wsdl:message>
   <wsdl:message name="IEichsoftwareWebservice_GetAlleEichprozesseImZeitraum_InputMessage">
     <wsdl:part name="parameters" element="tns:GetAlleEichprozesseImZeitraum" />
   </wsdl:message>
@@ -185,6 +191,10 @@
     <wsdl:operation name="GetAlleEichprozesse">
       <wsdl:input wsaw:Action="http://tempuri.org/IEichsoftwareWebservice/GetAlleEichprozesse" message="tns:IEichsoftwareWebservice_GetAlleEichprozesse_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IEichsoftwareWebservice/GetAlleEichprozesseResponse" message="tns:IEichsoftwareWebservice_GetAlleEichprozesse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAlleEichprozesseNachUploadMonat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEichsoftwareWebservice/GetAlleEichprozesseNachUploadMonat" message="tns:IEichsoftwareWebservice_GetAlleEichprozesseNachUploadMonat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEichsoftwareWebservice/GetAlleEichprozesseNachUploadMonatResponse" message="tns:IEichsoftwareWebservice_GetAlleEichprozesseNachUploadMonat_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetAlleEichprozesseImZeitraum">
       <wsdl:input wsaw:Action="http://tempuri.org/IEichsoftwareWebservice/GetAlleEichprozesseImZeitraum" message="tns:IEichsoftwareWebservice_GetAlleEichprozesseImZeitraum_InputMessage" />
@@ -331,6 +341,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetAlleEichprozesse">
       <soap:operation soapAction="http://tempuri.org/IEichsoftwareWebservice/GetAlleEichprozesse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAlleEichprozesseNachUploadMonat">
+      <soap:operation soapAction="http://tempuri.org/IEichsoftwareWebservice/GetAlleEichprozesseNachUploadMonat" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

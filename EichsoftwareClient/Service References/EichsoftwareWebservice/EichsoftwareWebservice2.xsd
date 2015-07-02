@@ -243,6 +243,26 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetAlleEichprozesseNachUploadMonat">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HEKennung" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Lizenzschluessel" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="WindowsUsername" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Domainname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Computername" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Uploadjahr" type="xs:int" />
+        <xs:element minOccurs="0" name="Uploadmonat" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAlleEichprozesseNachUploadMonatResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice" minOccurs="0" name="GetAlleEichprozesseNachUploadMonatResult" nillable="true" type="q9:ArrayOfclsEichprozessFuerAuswahlliste" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="GetAlleEichprozesseImZeitraum">
     <xs:complexType>
       <xs:sequence>
@@ -259,7 +279,7 @@
   <xs:element name="GetAlleEichprozesseImZeitraumResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice" minOccurs="0" name="GetAlleEichprozesseImZeitraumResult" nillable="true" type="q9:ArrayOfServerEichprozess" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice" minOccurs="0" name="GetAlleEichprozesseImZeitraumResult" nillable="true" type="q10:ArrayOfServerEichprozess" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -278,7 +298,7 @@
   <xs:element name="GetEichProzessResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice" minOccurs="0" name="GetEichProzessResult" nillable="true" type="q10:ServerEichprozess" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice" minOccurs="0" name="GetEichProzessResult" nillable="true" type="q11:ServerEichprozess" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -393,7 +413,7 @@
   <xs:element name="GetFTPCredentialsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice" minOccurs="0" name="GetFTPCredentialsResult" nillable="true" type="q11:clsServerFTPDaten" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice" minOccurs="0" name="GetFTPCredentialsResult" nillable="true" type="q12:clsServerFTPDaten" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

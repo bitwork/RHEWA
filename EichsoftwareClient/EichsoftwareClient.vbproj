@@ -37,7 +37,7 @@
     <ProductName>RHEWA Konformitätsbewertungssoftware</ProductName>
     <PublisherName>RHEWA Waagenfabrik GmbH</PublisherName>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>63</ApplicationRevision>
+    <ApplicationRevision>64</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -700,6 +700,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Allgemein\ucoEichprozessauswahlliste.resx">
       <DependentUpon>ucoEichprozessauswahlliste.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco_5Beschaffenheitspruefung.de.resx">
       <DependentUpon>uco_5Beschaffenheitspruefung.vb</DependentUpon>
