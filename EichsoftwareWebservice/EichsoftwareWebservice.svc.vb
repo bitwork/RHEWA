@@ -203,7 +203,10 @@ Public Class EichsoftwareWebservice
                             Dim tmpNewMessage As String = NewServerObj.ServerEichprotokoll.Sicherung_Bemerkungen.ToString 'neue nachricht von alter extrahieren
 
                             If tmpNewMessage.Contains(tmpoldMessage) Then
-                                tmpNewMessage = tmpNewMessage.Replace(tmpoldMessage, "").Trim
+                                Try
+                                    tmpNewMessage = tmpNewMessage.Replace(tmpoldMessage, "").Trim
+                                Catch ex As Exception
+                                End Try
                             End If
                    
                     NewServerObj.ServerEichprotokoll.Sicherung_Bemerkungen = tmpoldMessage & vbNewLine & vbNewLine & "#(" & Date.Now & " " & WindowsUsername & "(" & HEKennung & ")" & ")# " & vbNewLine & tmpNewMessage
@@ -708,6 +711,8 @@ Public Class EichsoftwareWebservice
                                     objReturn.Pruefscheinnummer = objeichprozess.Pruefscheinnummer
                                 End If
 
+
+
                                 If Not objeichprozess.Uploaddatum Is Nothing Then
                                     objReturn.Uploaddatum = objeichprozess.Uploaddatum
                                 End If
@@ -881,6 +886,10 @@ Public Class EichsoftwareWebservice
 
                                 If Not objeichprozess.Pruefscheinnummer Is Nothing Then
                                     objReturn.Pruefscheinnummer = objeichprozess.Pruefscheinnummer
+                                End If
+
+ If Not objeichprozess.Bemerkung Is Nothing Then
+                                    objReturn.Bemerkung = objeichprozess.Bemerkung
                                 End If
 
 
@@ -1075,6 +1084,10 @@ Public Class EichsoftwareWebservice
 
                                 If Not objeichprozess.Pruefscheinnummer Is Nothing Then
                                     objReturn.Pruefscheinnummer = objeichprozess.Pruefscheinnummer
+                                End If
+
+                                If Not objeichprozess.Bemerkung Is Nothing Then
+                                    objReturn.Bemerkung = objeichprozess.Bemerkung
                                 End If
 
 

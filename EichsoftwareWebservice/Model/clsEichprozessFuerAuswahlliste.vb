@@ -13,4 +13,5 @@
     Public Property NeueWZ As Boolean = False
     Public Property Uploaddatum As DateTime
     Public Property Pruefscheinnummer As String
+    Public Property Bemerkung As String
 End Class

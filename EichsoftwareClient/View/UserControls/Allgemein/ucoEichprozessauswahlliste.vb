@@ -163,12 +163,20 @@
 
             If o.Count = 0 Then
                 Dim objCondition As New Telerik.WinControls.UI.ConditionalFormattingObject("Fehlerhaft", Telerik.WinControls.UI.ConditionTypes.Equal, "Fehlerhaft", "", True)
+                Dim objCondition2 As New Telerik.WinControls.UI.ConditionalFormattingObject("invalid", Telerik.WinControls.UI.ConditionTypes.Equal, "Invalid", "", True)
                 objCondition.CellBackColor = Color.FromArgb(247, 87, 67)
+                objCondition2.CellBackColor = Color.FromArgb(247, 87, 67)
 
-                Dim objCondition2 As New Telerik.WinControls.UI.ConditionalFormattingObject("Genehmigt", Telerik.WinControls.UI.ConditionTypes.Equal, "Genehmigt", "", True)
-                objCondition2.CellBackColor = Color.LightGreen
+                Dim objCondition3 As New Telerik.WinControls.UI.ConditionalFormattingObject("Genehmigt", Telerik.WinControls.UI.ConditionTypes.Equal, "Genehmigt", "", True)
+                Dim objCondition4 As New Telerik.WinControls.UI.ConditionalFormattingObject("Valid", Telerik.WinControls.UI.ConditionTypes.Equal, "Valid", "", True)
+
+                objCondition3.CellBackColor = Color.LightGreen
+                objCondition4.CellBackColor = Color.LightGreen
                 RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition)
                 RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition2)
+  
+                RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition3)
+                RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition4)
                 Dim descriptor As New Telerik.WinControls.Data.GroupDescriptor()
                 descriptor.GroupNames.Add("Bearbeitungsstatus", System.ComponentModel.ListSortDirection.Ascending)
                 Me.RadGridViewAuswahlliste.GroupDescriptors.Add(descriptor)
@@ -457,7 +465,7 @@
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
-    Private Sub BackgroundWorkerLoadFromDatabaseRHEWA_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorkerLoadFromDatabaseRHEWA.RunWorkerCompleted
+    Private Sub BackgroundWorkerLoadFromDatabaseRHEWA_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs, Optional invalid As String = "Invalid") Handles BackgroundWorkerLoadFromDatabaseRHEWA.RunWorkerCompleted
         'zuweisen der Ergebnismenge als Datenquelle für das Grid
         RadGridViewRHEWAAlle.DataSource = e.Result
         Try
@@ -490,10 +498,15 @@
                     Dim objCondition As New Telerik.WinControls.UI.ConditionalFormattingObject("Fehlerhaft", Telerik.WinControls.UI.ConditionTypes.Equal, "Fehlerhaft", "", True)
                     objCondition.CellBackColor = Color.FromArgb(247, 87, 67)
 
+
                     Dim objCondition2 As New Telerik.WinControls.UI.ConditionalFormattingObject("Genehmigt", Telerik.WinControls.UI.ConditionTypes.Equal, "Genehmigt", "", True)
                     objCondition2.CellBackColor = Color.LightGreen
+
+
                     RadGridViewRHEWAAlle.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition)
                     RadGridViewRHEWAAlle.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition2)
+        
+
                     Dim descriptor As New Telerik.WinControls.Data.GroupDescriptor()
                     descriptor.GroupNames.Add("Bearbeitungsstatus", System.ComponentModel.ListSortDirection.Ascending)
                     Me.RadGridViewRHEWAAlle.GroupDescriptors.Add(descriptor)

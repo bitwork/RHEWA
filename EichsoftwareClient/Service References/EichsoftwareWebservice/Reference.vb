@@ -6194,6 +6194,9 @@ Namespace EichsoftwareWebservice
         Private BearbeitungsstatusField As String
         
         <System.Runtime.Serialization.OptionalFieldAttribute()>  _
+        Private BemerkungField As String
+        
+        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private EichbevollmaechtigterField As String
         
         <System.Runtime.Serialization.OptionalFieldAttribute()>  _
@@ -6271,6 +6274,19 @@ Namespace EichsoftwareWebservice
                 If (Object.ReferenceEquals(Me.BearbeitungsstatusField, value) <> true) Then
                     Me.BearbeitungsstatusField = value
                     Me.RaisePropertyChanged("Bearbeitungsstatus")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
+        Public Property Bemerkung() As String
+            Get
+                Return Me.BemerkungField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me.BemerkungField, value) <> true) Then
+                    Me.BemerkungField = value
+                    Me.RaisePropertyChanged("Bemerkung")
                 End If
             End Set
         End Property
