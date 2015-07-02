@@ -543,11 +543,13 @@
                 'einblenden des symbols
                 If Not e.CellElement.Text.Trim.Equals("") Then
                     e.CellElement.Value = e.CellElement.Text
-                    e.CellElement.Text = ""
+                    e.CellElement.DrawText = False
                     e.CellElement.Image = My.Resources.attach
                 Else
                     e.CellElement.Image = Nothing
                 End If
+            Else
+                e.CellElement.Image = Nothing
             End If
         Catch ex As Exception
         End Try
