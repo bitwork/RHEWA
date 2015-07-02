@@ -58,7 +58,7 @@
         Try
             'alle Tabellen iterieren und löschen. Das commit wird erst am Ende ausgeführt, deswegen ist die löschreihenefolge egal
             Using DBContext As New EichsoftwareClientdatabaseEntities1
-                Dim Eichprozesse = From eichprozess In DBContext.Eichprozess Where eichprozess.ErzeugerLizenz = AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel
+                Dim Eichprozesse = From eichprozess In DBContext.Eichprozess Where eichprozess.ErzeugerLizenz = AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel And eichprozess.FK_Bearbeitungsstatus <> GlobaleEnumeratoren.enuBearbeitungsstatus.noch_nicht_versendet
 
                 'liste mit gelöschten eichprozessen
                 Dim listIDsEichprozess As New List(Of String)
@@ -67,6 +67,7 @@
 
                 'aufbereiten der Listen mit allen IDS.
                 For Each obj In Eichprozesse
+                    If obj.FK_Eichprotokoll Is Nothing Then Continue For
                     listIDsEichprozess.Add(obj.ID)
                     listIDsEichprotokoll.Add(obj.FK_Eichprotokoll)
 
