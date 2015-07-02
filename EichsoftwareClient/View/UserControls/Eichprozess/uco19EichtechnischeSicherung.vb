@@ -15,6 +15,8 @@
     End Sub
     Sub New(ByRef pParentform As FrmMainContainer, ByRef pObjEichprozess As Eichprozess, Optional ByRef pPreviousUco As ucoContent = Nothing, Optional ByRef pNextUco As ucoContent = Nothing, Optional ByVal pEnuModus As enuDialogModus = enuDialogModus.normal)
         MyBase.New(pParentform, pObjEichprozess, pPreviousUco, pNextUco, pEnuModus)
+        _suspendEvents = True
+
         InitializeComponent()
         EichprozessStatusReihenfolge = GlobaleEnumeratoren.enuEichprozessStatus.EichtechnischeSicherungundDatensicherung
     End Sub

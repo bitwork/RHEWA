@@ -7,7 +7,7 @@ Imports Telerik.WinControls
 ''' Klasse zum Rendern eines Custom Usercontrol List Elements. Wird genutzt für die Breadcrump Navigation. 
 ''' </summary>
 ''' <remarks>DebuggerStepThrough aktiviert. Er wird hier also nie reindebuggen, solange die Property gesetzt ist.</remarks>
-<DebuggerStepThrough()>
+'<DebuggerStepThrough()>
 Friend Class CustomVisualItem
     Inherits Telerik.WinControls.UI.IconListViewVisualItem
     Private imageElement As LightVisualElement
@@ -39,17 +39,22 @@ Friend Class CustomVisualItem
         titleElement = New LightVisualElement()
         titleElement.TextAlignment = ContentAlignment.TopLeft
         titleElement.TextWrap = True
-        titleElement.Margin = New Padding(5, 5, 5, 3)
+        titleElement.TextImageRelation = Windows.Forms.TextImageRelation.TextBeforeImage
+        titleElement.Margin = New Padding(0, 5, -15, 0)
         titleElement.Font = New Font("Segoe UI", 10, FontStyle.Regular, GraphicsUnit.Point)
         titleElement.NotifyParentOnMouseInput = True
         titleElement.ShouldHandleMouseInput = False
+
+
+
 
         stackLayout.Children.Add(titleElement)
         stackLayout.NotifyParentOnMouseInput = True
         stackLayout.ShouldHandleMouseInput = False
 
         Me.Children.Add(stackLayout)
-        Me.Padding = New Padding(5)
+        Me.Padding = New Padding(5, 5, 5, 5)
+        Me.Margin = New Padding(20, 5, 5, 10)
         Me.Shape = New RoundRectShape(3)
         Me.BorderColor = Color.FromArgb(255, 20, 100, 0)
         Me.BorderGradientStyle = GradientStyles.Solid

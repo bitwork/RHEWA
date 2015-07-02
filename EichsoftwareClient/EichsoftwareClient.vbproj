@@ -507,21 +507,27 @@
     <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\frmAuswahlStandardwaage.resx">
       <DependentUpon>frmAuswahlStandardwaage.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\frmBenutzerauswahl.resx">
       <DependentUpon>frmBenutzerauswahl.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\frmEinstellungen.de.resx">
       <DependentUpon>frmEinstellungen.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\frmEinstellungen.resx">
       <DependentUpon>frmEinstellungen.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\frmLizenz.de.resx">
       <DependentUpon>frmLizenz.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\frmLizenz.resx">
       <DependentUpon>frmLizenz.vb</DependentUpon>
@@ -529,15 +535,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\frmEichfehlergrenzen.de.resx">
       <DependentUpon>frmEichfehlergrenzen.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\frmEichfehlergrenzen.pl.resx">
       <DependentUpon>frmEichfehlergrenzen.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\frmEichfehlergrenzen.resx">
       <DependentUpon>frmEichfehlergrenzen.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\frmMainContainer.de.resx">
       <DependentUpon>frmMainContainer.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\frmMainContainer.resx">
       <DependentUpon>frmMainContainer.vb</DependentUpon>
@@ -554,21 +564,26 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Forms\frmNeueWaegezele.resx">
       <DependentUpon>frmNeueWaegezele.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Allgemein\ucoAmpel.resx">
       <DependentUpon>ucoAmpel.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Allgemein\ucoEichfehlergrenzen.de.resx">
       <DependentUpon>ucoEichfehlergrenzen.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Allgemein\ucoBenutzerwechsel.resx">
       <DependentUpon>ucoBenutzerwechsel.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco17PruefungEignungFuerAchlastwaegungen.de.resx">
       <DependentUpon>uco17PruefungEignungFuerAchlastwaegungen.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco17PruefungEignungFuerAchlastwaegungen.pl.resx">
       <DependentUpon>uco17PruefungEignungFuerAchlastwaegungen.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco17PruefungEignungFuerAchlastwaegungen.resx">
       <DependentUpon>uco17PruefungEignungFuerAchlastwaegungen.vb</DependentUpon>
@@ -576,9 +591,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco21Versenden.en.resx">
       <DependentUpon>uco21Versenden.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco_4KompatiblititaetsnachweisErgebnis.en.resx">
       <DependentUpon>uco_4KompatiblititaetsnachweisErgebnis.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco_8PruefungNullstellungUndAussermittigeBelastung.de.resx">
       <DependentUpon>uco_8PruefungNullstellungUndAussermittigeBelastung.vb</DependentUpon>
@@ -607,15 +624,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco18Fallbeschleunigung.pl.resx">
       <DependentUpon>uco18Fallbeschleunigung.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco18Fallbeschleunigung.resx">
       <DependentUpon>uco18Fallbeschleunigung.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco14PruefungAnsprechvermoegen.de.resx">
       <DependentUpon>uco14PruefungAnsprechvermoegen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco14PruefungAnsprechvermoegen.pl.resx">
       <DependentUpon>uco14PruefungAnsprechvermoegen.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco14PruefungAnsprechvermoegen.resx">
       <DependentUpon>uco14PruefungAnsprechvermoegen.vb</DependentUpon>
@@ -623,21 +643,26 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco13PruefungRollendeLasten.de.resx">
       <DependentUpon>uco13PruefungRollendeLasten.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco13PruefungRollendeLasten.pl.resx">
       <DependentUpon>uco13PruefungRollendeLasten.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco13PruefungRollendeLasten.resx">
       <DependentUpon>uco13PruefungRollendeLasten.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco_8PruefungNullstellungUndAussermittigeBelastung.pl.resx">
       <DependentUpon>uco_8PruefungNullstellungUndAussermittigeBelastung.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco15PruefungStabilitaet.de.resx">
       <DependentUpon>uco15PruefungStabilitaet.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco15PruefungStabilitaet.pl.resx">
       <DependentUpon>uco15PruefungStabilitaet.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco15PruefungStabilitaet.resx">
       <DependentUpon>uco15PruefungStabilitaet.vb</DependentUpon>
@@ -645,15 +670,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco10PruefungStaffelverfahren.resx">
       <DependentUpon>uco10PruefungStaffelverfahren.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco12PruefungUeberlastanzeige.de.resx">
       <DependentUpon>uco12PruefungUeberlastanzeige.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco12PruefungUeberlastanzeige.pl.resx">
       <DependentUpon>uco12PruefungUeberlastanzeige.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco12PruefungUeberlastanzeige.resx">
       <DependentUpon>uco12PruefungUeberlastanzeige.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco11PruefungWiederholbarkeitBelastung.de.resx">
       <DependentUpon>uco11PruefungWiederholbarkeitBelastung.vb</DependentUpon>
@@ -663,6 +692,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco20Reports.pl.resx">
       <DependentUpon>uco20Reports.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco20Reports.resx">
       <DependentUpon>uco20Reports.vb</DependentUpon>
@@ -678,15 +708,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco16Taraeinrichtung.resx">
       <DependentUpon>uco16Taraeinrichtung.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Allgemein\ucoContent.de.resx">
       <DependentUpon>ucoContent.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Allgemein\ucoContent.pl.resx">
       <DependentUpon>ucoContent.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Allgemein\ucoContent.resx">
       <DependentUpon>ucoContent.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Allgemein\ucoEichprozessauswahlliste.de.resx">
       <DependentUpon>ucoEichprozessauswahlliste.vb</DependentUpon>
@@ -717,12 +751,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco_9PruefungLinearitaet.resx">
       <DependentUpon>uco_9PruefungLinearitaet.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco_6EichprotokollVerfahrenswahl.en.resx">
       <DependentUpon>uco_6EichprotokollVerfahrenswahl.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco_8PruefungNullstellungUndAussermittigeBelastung.resx">
       <DependentUpon>uco_8PruefungNullstellungUndAussermittigeBelastung.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Allgemein\ucoEichfehlergrenzen.resx">
       <DependentUpon>ucoEichfehlergrenzen.vb</DependentUpon>
@@ -747,6 +783,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco_6EichprotokollVerfahrenswahl.resx">
       <DependentUpon>uco_6EichprotokollVerfahrenswahl.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco_3Kompatiblititaetsnachweis.de.resx">
       <DependentUpon>uco_3Kompatiblititaetsnachweis.vb</DependentUpon>
@@ -764,9 +801,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco11PruefungWiederholbarkeitBelastung.resx">
       <DependentUpon>uco11PruefungWiederholbarkeitBelastung.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco_2StammdatenEingabe.de.resx">
       <DependentUpon>uco_2StammdatenEingabe.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco_5Beschaffenheitspruefung.resx">
       <DependentUpon>uco_5Beschaffenheitspruefung.vb</DependentUpon>
@@ -782,6 +821,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco21Versenden.pl.resx">
       <DependentUpon>uco21Versenden.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco21Versenden.resx">
       <DependentUpon>uco21Versenden.vb</DependentUpon>

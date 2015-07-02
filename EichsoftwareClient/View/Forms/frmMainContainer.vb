@@ -148,11 +148,15 @@ Public Class FrmMainContainer
     ''' <author></author>
     ''' <commentauthor></commentauthor>
     Private Sub ChangeActiveContentUserControl(ByVal uco As UserControl)
-        If _ListofUcos.Contains(uco) Then
+        Dim ucos = From tmpuco In _ListofUcos Where tmpuco.Name = uco.Name
+        If ucos.Count > 0 Then
             _CurrentUco = uco
 
-            If Not Me.SplitPanelContent1.Controls.Contains(_CurrentUco) Then
+            Dim controls = From tmpcontrol In Me.SplitPanelContent1.Controls Where tmpcontrol.Name = _CurrentUco.Name
+            If controls.Count = 0 Then
                 Me.SplitPanelContent1.Controls.Add(_CurrentUco)
+            Else
+                controls(0).bringtofront()
             End If
 
             _CurrentUco.BringToFront()
@@ -184,21 +188,21 @@ Public Class FrmMainContainer
     ''' <commentauthor></commentauthor>
     Private Sub NavigiereZuUco(ByVal Status As GlobaleEnumeratoren.enuEichprozessStatus) Handles BreadCrumb.Navigieren
         Try
-            'im debugger zur einfachheit, kann per click auf jeden Status gesprungen werden
-            If Debugger.IsAttached Then
-                SpringeZuUCO(Status)
+            ''im debugger zur einfachheit, kann per click auf jeden Status gesprungen werden
+            'If Debugger.IsAttached Then
+            '    SpringeZuUCO(Status)
+            'Else
+            'prüfen ob zu hoher Status gewählt wurde
+            If Status > CurrentEichprozess.FK_Vorgangsstatus Then
+                Exit Sub
             Else
-                'prüfen ob zu hoher Status gewählt wurde
-                If Status > CurrentEichprozess.FK_Vorgangsstatus Then
-                    Exit Sub
-                Else
 
-                    'schnelles blättern im lese modus
-                    If Not Status = _CurrentUco.EichprozessStatusReihenfolge Then
-                        SpringeZuUCO(Status)
-                    End If
+                'schnelles blättern im lese modus
+                If Not Status = _CurrentUco.EichprozessStatusReihenfolge Then
+                    SpringeZuUCO(Status)
                 End If
             End If
+            'End If
         Catch e As Exception
         End Try
     End Sub
@@ -291,7 +295,6 @@ Public Class FrmMainContainer
     Private Sub FrmMainContainer_Load(sender As Object, e As System.EventArgs) Handles Me.Load
         'frmMain Container nutzt entweder die logiken zum Blättern eines eichprozesses (sofern me.currenteichprozess) nicht nothing ist oder aber zeigt die Auswahlliste an, in der die eigenen Eichprozesse aufgelistet werden.
 
-
         'prüfen ob ein Vorgang vorliegt oder nicht
         If Me.CurrentEichprozess Is Nothing Then 'wenn kein vorgang vorliegt Auswahlliste anzeiegn
 
@@ -314,8 +317,9 @@ Public Class FrmMainContainer
             LadeEichprozessVorgangsUco()
         End If
 
-        'Lokalisierung anstossen
-        TriggerLokalisierung()
+        ''Lokalisierung anstossen
+        'TriggerLokalisierung()
+        
     End Sub
 
     ''' <summary>
@@ -345,7 +349,10 @@ Public Class FrmMainContainer
     Private Sub LadeAuswahlListe()
         'laden des benötigten UCOs
         Dim uco As New ucoEichprozessauswahlliste(Me)
-        _ListofUcos.Add(uco)
+        Dim ucos = From tmpuco In _ListofUcos Where tmpuco.Name = uco.Name
+        If ucos.Count = 0 Then
+            _ListofUcos.Add(uco)
+        End If
         ChangeActiveContentUserControl(uco)
 
         RadButtonNavigateBackwards.Visible = False
@@ -403,15 +410,14 @@ Public Class FrmMainContainer
 
             If CurrentEichprozess.FK_Bearbeitungsstatus = GlobaleEnumeratoren.enuBearbeitungsstatus.Fehlerhaft AndAlso Me.DialogModus <> enuDialogModus.lesend Then
                 BreadCrumb.AktuellerGewaehlterVorgang = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
-                '      CurrentEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
             Else
                 BreadCrumb.AktuellerGewaehlterVorgang = CurrentEichprozess.FK_Vorgangsstatus
-
             End If
             If Me.DialogModus = enuDialogModus.lesend Then 'falls RHEWA seitig ein DS angeguckt wird, ist dieser bereits fertig, soll aber dennoch von anfang an angeguckt werden
                 uco = New uco_2StammdatenEingabe(Me, CurrentEichprozess, _CurrentUco, Nothing, DialogModus)
                 'auf erste seite Blättern
                 BreadCrumb.FindeElementUndSelektiere(GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe)
+
             Else
                 Select Case CurrentEichprozess.FK_Vorgangsstatus
                     Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
@@ -472,7 +478,10 @@ Public Class FrmMainContainer
             End If
 
             'zur auflistung der UCOs hinzufügen
-            _ListofUcos.Add(uco)
+            Dim ucos = From tmpuco In _ListofUcos Where tmpuco.Name = uco.name
+            If ucos.Count = 0 Then
+                _ListofUcos.Add(uco)
+            End If
             RadButtonNavigateBackwards.Enabled = True
             RadButtonNavigateForwards.Enabled = True
             RadButtonNavigateBackwards.Visible = True
@@ -548,9 +557,9 @@ Public Class FrmMainContainer
                     Exit Sub
             End Select
 
-            If Not _ListofUcos.Contains(uco) Then
+            Dim ucos = From tmpuco In _ListofUcos Where tmpuco.Name = uco.name
+            If ucos.Count = 0 Then
                 _ListofUcos.Add(uco)
-
             End If
             '_CurrentUco.NextUco = uco
             'neues UCO in vordergrund bringen
@@ -742,7 +751,10 @@ Public Class FrmMainContainer
                     Exit Sub
             End Select
 
-            _ListofUcos.Add(uco)
+            Dim ucos = From tmpuco In _ListofUcos Where tmpuco.Name = uco.name
+            If ucos.Count = 0 Then
+                _ListofUcos.Add(uco)
+            End If
             _CurrentUco.NextUco = uco
             'neues UCO in vordergrund bringen
             ChangeActiveContentUserControl(uco)
@@ -889,7 +901,10 @@ Public Class FrmMainContainer
 
             uco.NextUco = _CurrentUco
             _CurrentUco.PreviousUco = uco
-            _ListofUcos.Add(uco)
+            Dim ucos = From tmpuco In _ListofUcos Where tmpuco.Name = uco.Name
+            If ucos.Count = 0 Then
+                _ListofUcos.Add(uco)
+            End If
         Else
             BreadCrumb.FindeElementUndSelektiere(_CurrentUco.PreviousUco.EichprozessStatusReihenfolge)
             uco = _CurrentUco.PreviousUco

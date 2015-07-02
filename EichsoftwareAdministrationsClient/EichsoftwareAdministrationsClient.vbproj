@@ -298,27 +298,35 @@
     <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="View\frmFirmenZusatzdaten.resx">
       <DependentUpon>frmFirmenZusatzdaten.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmDBSync.resx">
       <DependentUpon>frmDBSync.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmAuswahllisteFirmenVertragspartnerZuordnung.resx">
       <DependentUpon>frmAuswahllisteFirmenVertragspartnerZuordnung.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmEingabeFirmenVertragspartnerZuordnung.resx">
       <DependentUpon>frmEingabeFirmenVertragspartnerZuordnung.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmAuswahllisteLizenzen.resx">
       <DependentUpon>frmAuswahllisteLizenzen.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmAuswahllisteWZ.resx">
       <DependentUpon>frmAuswahllisteWZ.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmAuswahllisteAWG.resx">
       <DependentUpon>frmAuswahllisteAWG.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmEingabeAuswertegeraet.resx">
       <DependentUpon>frmEingabeAuswertegeraet.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmStandardwaagen.resx">
       <DependentUpon>frmStandardwaagen.vb</DependentUpon>
@@ -328,9 +336,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmEingabeNeueLizenz.resx">
       <DependentUpon>frmEingabeNeueLizenz.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmAuswahllisteEichmarkenverwaltung.resx">
       <DependentUpon>frmAuswahllisteEichmarkenverwaltung.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EntityDeploy Include="EntityModelDatabaseAdminClient.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -372,6 +382,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmEingabeWaegezelle.resx">
       <DependentUpon>frmEingabeWaegezelle.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\RHEWAGREEN.tssp" />
   </ItemGroup>

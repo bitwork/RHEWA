@@ -144,7 +144,7 @@ Public Class ucoAmpel
                                 item("Image") = ConvertBitmapToByteArray(My.Resources.bullet_green)
                                 Datasource.AcceptChanges()
                                 'FindeElementUndSelektiere(GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe)
-                                Exit Sub
+                                'Exit Sub
                             End If
                         Else
                             item("Image") = ConvertBitmapToByteArray(My.Resources.bullet_yellow)
@@ -180,6 +180,9 @@ Public Class ucoAmpel
             Dim Listitem = (From raditem In RadListView1.Items Where raditem.Value = pStatus - 1 And raditem.Visible = True).FirstOrDefault
             If Listitem Is Nothing Then
                 Listitem = (From raditem In RadListView1.Items Where raditem.Value = pStatus - 2 And raditem.Visible = True).FirstOrDefault
+                If Listitem Is Nothing Then
+                    Listitem = (From raditem In RadListView1.Items Where raditem.Value = pStatus And raditem.Visible = True).FirstOrDefault
+                End If
             End If
 
             Dim priorcontol As Control = Nothing
@@ -192,7 +195,6 @@ Public Class ucoAmpel
 
             items(0) = Listitem
             RadListView1.Select(items)
-
             RadListView1.Focus()
 
             'tatsächliches element finden und selektieren
@@ -398,35 +400,64 @@ Public Class ucoAmpel
         Return byteArray
     End Function
 
-    ''' <summary>
-    ''' navigieren
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    ''' <remarks></remarks>
-    Private Sub RadListView1_ItemMouseClick(sender As Object, e As Telerik.WinControls.UI.ListViewItemEventArgs) Handles RadListView1.ItemMouseClick
+    Private Sub RadListView1_CurrentItemChanged(sender As Object, e As Telerik.WinControls.UI.ListViewItemEventArgs) Handles RadListView1.CurrentItemChanged
         'abbruch falls Status noch rot. hier darf nicht hingesprungen werden
         Try
             Dim ItemImage = DirectCast(e.Item("Image"), Byte())
             Dim CompareImage = ConvertBitmapToByteArray(My.Resources.bullet_red)
 
             'im debugger zur einfachheit, kann per click auf jeden Status gesprungen werden
-            If Debugger.IsAttached Then
-                RaiseEvent Navigieren(e.Item("Status"))
+            'If Debugger.IsAttached Then
+            '    RaiseEvent Navigieren(e.Item("Status"))
+            '    Exit Sub
+            'Else
+            'prüfen ob das gewählte element rot ist. wenn nicht das letzte gelbe element wählen
+            If ItemImage.SequenceEqual(CompareImage) Then
+                Me.FindeElementUndSelektiere(Me.AktuellerGewaehlterVorgang)
                 Exit Sub
-            Else
-                'prüfen ob das gewählte element rot ist. wenn nicht das letzte gelbe element wählen
-                If ItemImage.SequenceEqual(CompareImage) Then
-                    Me.FindeElementUndSelektiere(Me.AktuellerGewaehlterVorgang)
-                    Exit Sub
-                End If
             End If
+            'End If
 
             RaiseEvent Navigieren(e.Item("Status"))
         Catch ex As Exception
             Exit Sub
         End Try
     End Sub
+
+    ' ''' <summary>
+    ' ''' navigieren
+    ' ''' </summary>
+    ' ''' <param name="sender"></param>
+    ' ''' <param name="e"></param>
+    ' ''' <remarks></remarks>
+    'Private Sub RadListView1_ItemMouseClick(sender As Object, e As Telerik.WinControls.UI.ListViewItemEventArgs) Handles RadListView1.ItemMouseClick
+    '    'abbruch falls Status noch rot. hier darf nicht hingesprungen werden
+    '    Try
+    '        Dim ItemImage = DirectCast(e.Item("Image"), Byte())
+    '        Dim CompareImage = ConvertBitmapToByteArray(My.Resources.bullet_red)
+
+    '        'im debugger zur einfachheit, kann per click auf jeden Status gesprungen werden
+    '        'If Debugger.IsAttached Then
+    '        '    RaiseEvent Navigieren(e.Item("Status"))
+    '        '    Exit Sub
+    '        'Else
+    '        'prüfen ob das gewählte element rot ist. wenn nicht das letzte gelbe element wählen
+    '        If ItemImage.SequenceEqual(CompareImage) Then
+    '            Me.FindeElementUndSelektiere(Me.AktuellerGewaehlterVorgang)
+    '            Exit Sub
+    '        End If
+    '        'End If
+
+    '        RaiseEvent Navigieren(e.Item("Status"))
+    '    Catch ex As Exception
+    '        Exit Sub
+    '    End Try
+    'End Sub
+
+   
+
+
+
     ''' <summary>
     ''' Event welches von Telerik gebraucht wird, um unser Custom Visual Item in der Listbox zu erzeugen
     ''' </summary>
