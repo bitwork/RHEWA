@@ -31,7 +31,7 @@ Public Class FrmMainContainer
     ''' <remarks></remarks>
     Friend objUCOBenutzerwechsel As ucoBenutzerwechsel
 
-
+    Friend AbortBreadCrumbNavigation As Boolean = False
 #End Region
 
 #Region "Enumeratoren"
@@ -168,6 +168,7 @@ Public Class FrmMainContainer
             Select Case _CurrentUco.EichprozessStatusReihenfolge
                 Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
                     RadButtonNavigateBackwards.Enabled = False
+                    RadButtonNavigateForwards.Enabled = True
                 Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Versenden
                     RadButtonNavigateBackwards.Enabled = True
                     RadButtonNavigateForwards.Enabled = False
@@ -198,11 +199,13 @@ Public Class FrmMainContainer
             Else
 
                 'schnelles blättern im lese modus
-                If Not Status = _CurrentUco.EichprozessStatusReihenfolge Then
-                    SpringeZuUCO(Status)
+                If AbortBreadCrumbNavigation = False Then
+                    If Not Status = _CurrentUco.EichprozessStatusReihenfolge Then
+                        SpringeZuUCO(Status)
+                    End If
                 End If
-            End If
-            'End If
+                End If
+                'End If
         Catch e As Exception
         End Try
     End Sub
@@ -563,6 +566,7 @@ Public Class FrmMainContainer
             End If
             '_CurrentUco.NextUco = uco
             'neues UCO in vordergrund bringen
+            RaiseEvent UpdateNeeded(uco)
             ChangeActiveContentUserControl(uco)
 
         End If
@@ -603,15 +607,16 @@ Public Class FrmMainContainer
     ''' <commentauthor></commentauthor>
     Private Sub BlaettereVorwaerts()
         'abbruch
+
         If _CurrentUco Is Nothing Then Exit Sub
         If _CurrentUco.objEichprozess Is Nothing Then Exit Sub
         If Me.RadButtonNavigateForwards.Enabled = False Then Exit Sub
-
+        AbortBreadCrumbNavigation = True 'SpringeZuMethode aus ucoAmpel überspringen
         'TH Event abfeuern, damit steuerelemente bescheid wissen, das sie in DB speichern müssen
         Dim bolUCODirty As Boolean
         bolUCODirty = _CurrentUco.AktuellerStatusDirty 'im Save Needed wird der Dirty Flag bereits wieder zurückgesetzt. Deswegen wird er hier zwischengespeichert
         RaiseEvent SaveNeeded(_CurrentUco)
-
+        Dim uco As Object = Nothing
 
 
 
@@ -620,7 +625,7 @@ Public Class FrmMainContainer
         If _CurrentUco.AbortSaveing = True Then Exit Sub
         If _CurrentUco.NextUco Is Nothing Then
 
-            Dim uco As Object = Nothing
+
 
             'sonderfälle abprüfen in denen der Vorgang nicht wie gewohnt weiter geht
             'TODO Abändern der Routine. Vorwärts Blättern setzt die Reihenfolge eines hoch je nach Status, Rückwärts blättern prüft im Status welcher Eichprozesswert vorliegt und lädt dann ein anderes UCO. Sollte angepasst werden
@@ -693,17 +698,6 @@ Public Class FrmMainContainer
                 End Try
             End If
 
-            If bolUCODirty Then
-                BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge + 1
-            Else
-                'damit die Auswahl weiter geht
-                If BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge Then
-                    BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge + 1
-                Else
-                    BreadCrumb.FindeElementUndSelektiere(_CurrentUco.EichprozessStatusReihenfolge + 1)
-                End If
-
-            End If
 
             Select Case _CurrentUco.EichprozessStatusReihenfolge + 1
                 Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
@@ -756,26 +750,39 @@ Public Class FrmMainContainer
                 _ListofUcos.Add(uco)
             End If
             _CurrentUco.NextUco = uco
+
+
+            If bolUCODirty Then
+                BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge + 1
+            Else
+                'damit die Auswahl weiter geht
+                If BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge Then
+                    BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge + 1
+                Else
+                    BreadCrumb.FindeElementUndSelektiere(_CurrentUco.EichprozessStatusReihenfolge + 1)
+                End If
+
+            End If
+
             'neues UCO in vordergrund bringen
             ChangeActiveContentUserControl(uco)
         Else
 
             If bolUCODirty Then
-                BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.NextUco.EichprozessStatusReihenfolge
+                BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge + 1
             Else
                 'damit die Auswahl weiter geht
                 If BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge Then
-                    BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.NextUco.EichprozessStatusReihenfolge
+                    BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge + 1
                 Else
-                    BreadCrumb.FindeElementUndSelektiere(_CurrentUco.NextUco.EichprozessStatusReihenfolge)
+                    BreadCrumb.FindeElementUndSelektiere(_CurrentUco.EichprozessStatusReihenfolge + 1)
                 End If
             End If
 
-
-            '.CurrentEichprozess.FK_Vorgangsstatus
-            ChangeActiveContentUserControl(_CurrentUco.NextUco)
             'ermöglichen das das UCO noch einmal die Daten aktualisiert (z.b. wenn in den Stammdaten die Art der waage geändert wurde, muss der Kompatiblitätsnachweis darauf reagieren können
-            RaiseEvent UpdateNeeded(_CurrentUco)
+            RaiseEvent UpdateNeeded(_CurrentUco.NextUco)
+            ChangeActiveContentUserControl(_CurrentUco.NextUco)
+
         End If
 
 
@@ -795,6 +802,7 @@ Public Class FrmMainContainer
                     Me.RadButtonNavigateForwards.PerformClick()
             End Select
         End If
+        AbortBreadCrumbNavigation = False 'SpringeZuMethode aus ucoAmpel aktivieren
     End Sub
 
 
@@ -810,7 +818,7 @@ Public Class FrmMainContainer
         If Me.RadButtonNavigateBackwards.Enabled = False Then Exit Sub
 
         Dim uco As ucoContent = Nothing
-
+        AbortBreadCrumbNavigation = True 'SpringeZuMethode aus ucoAmpel überspringen
 
         'TH Event abfeuern, damit steuerelemente bescheid wissen, das sie in DB speichern müssen
         RaiseEvent SaveWithoutValidationNeeded(_CurrentUco)
@@ -906,13 +914,16 @@ Public Class FrmMainContainer
                 _ListofUcos.Add(uco)
             End If
         Else
-            BreadCrumb.FindeElementUndSelektiere(_CurrentUco.PreviousUco.EichprozessStatusReihenfolge)
             uco = _CurrentUco.PreviousUco
+            BreadCrumb.FindeElementUndSelektiere(_CurrentUco.PreviousUco.EichprozessStatusReihenfolge)
         End If
 
         'vorheriges Uco zu anzeige bringen
-        ChangeActiveContentUserControl(uco)
         RaiseEvent UpdateNeeded(uco)
+        ChangeActiveContentUserControl(uco)
+
+
+        AbortBreadCrumbNavigation = False 'SpringeZuMethode aus ucoAmpel aktivieren
     End Sub
 
     ''' <summary>

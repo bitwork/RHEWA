@@ -392,6 +392,7 @@ Public Class ucoAmpel
     ''' <param name="img"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
+    <DebuggerStepThrough()>
     Private Function ConvertBitmapToByteArray(ByVal img As Bitmap) As Byte()
         Dim stream As New IO.MemoryStream()
         img.Save(stream, ImageFormat.Png)

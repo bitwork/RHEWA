@@ -599,24 +599,26 @@
             End If
         Next
 
-
-
-        If RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper = "A" _
-            Or RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper = "B" _
-            Or RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper = "C" _
-            Or RadTextBoxControlWZGenauigkeitsklasse.Text = "D".ToUpper _
-            Or RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper = "I" _
-            Or RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper = "II" _
-            Or RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper = "III" _
-            Or RadTextBoxControlWZGenauigkeitsklasse.Text = "IV".ToUpper Then
-        Else
-            'Ungültiger Wert für Genauigikeitsklasse
-            MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_GenaugigkeitsklasseUnguelitg, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-            Me.AbortSaveing = True
-            RadTextBoxControlWZGenauigkeitsklasse.TextBoxElement.BorderColor = Color.Red
-            RadTextBoxControlWZGenauigkeitsklasse.Focus()
-            Return False
+        If RadTextBoxControlWZGenauigkeitsklasse.IsReadOnly = False Then
+            If RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper = "A" _
+          Or RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper = "B" _
+          Or RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper = "C" _
+          Or RadTextBoxControlWZGenauigkeitsklasse.Text = "D".ToUpper _
+          Or RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper = "I" _
+          Or RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper = "II" _
+          Or RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper = "III" _
+          Or RadTextBoxControlWZGenauigkeitsklasse.Text = "IV".ToUpper Then
+            Else
+                'Ungültiger Wert für Genauigikeitsklasse
+                MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_GenaugigkeitsklasseUnguelitg, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                Me.AbortSaveing = True
+                RadTextBoxControlWZGenauigkeitsklasse.TextBoxElement.BorderColor = Color.Red
+                RadTextBoxControlWZGenauigkeitsklasse.Focus()
+                Return False
+            End If
         End If
+
+      
 
         If Me.AbortSaveing = True Then
             If Debugger.IsAttached Then 'standardwerte füllen für schnelleres testen
@@ -1128,14 +1130,18 @@
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
-    Private Sub RadTextBoxControlWaageKlasse_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlWZWiderstand.TextChanged, RadTextBoxControlWZWaegezellenkennwert.TextChanged, RadTextBoxControlWZTemperaturbereichMIN.TextChanged, RadTextBoxControlWZTemperaturbereichMAX.TextChanged, RadTextBoxControlWZRueckkehrVorlastsignal.TextChanged, RadTextBoxControlWZMinTeilungswert.TextChanged, RadTextBoxControlWZMindestvorlast.TextChanged, RadTextBoxControlWZMaxTeilungswerte.TextChanged, RadTextBoxControlWZKriechteilungsfaktor.TextChanged, RadTextBoxControlWZHoechstteilungsfaktor.TextChanged, RadTextBoxControlWZHoechstlast.TextChanged, RadTextBoxControlWZGenauigkeitsklasse.TextChanged, RadTextBoxControlWZBruchteilEichfehlergrenze.TextChanged, RadTextBoxControlWaageUebersetzungsverhaeltnis.TextChanged, RadTextBoxControlWaageTotlast.TextChanged, RadTextBoxControlWaageTemperaturbereichMin.TextChanged, RadTextBoxControlWaageTemperaturbereichMax.TextChanged, RadTextBoxControlWaageKlasse.TextChanged, RadTextBoxControlWaageKabelquerschnitt.TextChanged, RadTextBoxControlWaageKabellaenge.TextChanged, RadTextBoxControlWaageHoechstlast3.TextChanged, RadTextBoxControlWaageHoechstlast2.TextChanged, RadTextBoxControlWaageHoechstlast1.TextChanged, RadTextBoxControlWaageEichwert3.TextChanged, RadTextBoxControlWaageEichwert2.TextChanged, RadTextBoxControlWaageEichwert1.TextChanged, RadTextBoxControlWaageEcklastzuschlag.TextChanged, RadTextBoxControlWaageAnzahlWaegezellen.TextChanged, RadTextBoxControlWaageAdditiveTarahoechstlast.TextChanged, RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze.TextChanged, RadTextBoxControlEinschaltnullstellbereich.TextChanged, RadTextBoxControlAWGTemperaturbereichMin.TextChanged, RadTextBoxControlAWGTemperaturbereichMax.TextChanged, RadTextBoxControlAWGTeilungswerte.TextChanged, RadTextBoxControlAWGSpeisespannung.TextChanged, RadTextBoxControlAWGMindestmesssignal.TextChanged, RadTextBoxControlAWGMindesteingangsspannung.TextChanged, RadTextBoxControlAWGKlasse.TextChanged, RadTextBoxControlAWGKabellaenge.TextChanged, RadTextBoxControlAWGGrenzwerteLastwiderstandMin.TextChanged, RadTextBoxControlAWGGrenzwerteLastwiderstandMax.TextChanged, RadTextBoxControlAWGBruchteilEichfehlergrenze.TextChanged, RadTextBoxControlAWGAnschlussart.TextChanged
+    Private Sub RadTextBoxControlWaageKlasse_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlWZWiderstand.TextChanged, RadTextBoxControlWZWaegezellenkennwert.TextChanged, RadTextBoxControlWZTemperaturbereichMIN.TextChanged, RadTextBoxControlWZTemperaturbereichMAX.TextChanged, RadTextBoxControlWZRueckkehrVorlastsignal.TextChanged, RadTextBoxControlWZMinTeilungswert.TextChanged, RadTextBoxControlWZMindestvorlast.TextChanged, RadTextBoxControlWZMaxTeilungswerte.TextChanged, RadTextBoxControlWZKriechteilungsfaktor.TextChanged, RadTextBoxControlWZHoechstteilungsfaktor.TextChanged, RadTextBoxControlWZHoechstlast.TextChanged, RadTextBoxControlWZBruchteilEichfehlergrenze.TextChanged, RadTextBoxControlWaageUebersetzungsverhaeltnis.TextChanged, RadTextBoxControlWaageTotlast.TextChanged, RadTextBoxControlWaageTemperaturbereichMin.TextChanged, RadTextBoxControlWaageTemperaturbereichMax.TextChanged, RadTextBoxControlWaageKlasse.TextChanged, RadTextBoxControlWaageKabelquerschnitt.TextChanged, RadTextBoxControlWaageKabellaenge.TextChanged, RadTextBoxControlWaageHoechstlast3.TextChanged, RadTextBoxControlWaageHoechstlast2.TextChanged, RadTextBoxControlWaageHoechstlast1.TextChanged, RadTextBoxControlWaageEichwert3.TextChanged, RadTextBoxControlWaageEichwert2.TextChanged, RadTextBoxControlWaageEichwert1.TextChanged, RadTextBoxControlWaageEcklastzuschlag.TextChanged, RadTextBoxControlWaageAnzahlWaegezellen.TextChanged, RadTextBoxControlWaageAdditiveTarahoechstlast.TextChanged, RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze.TextChanged, RadTextBoxControlEinschaltnullstellbereich.TextChanged, RadTextBoxControlAWGTemperaturbereichMin.TextChanged, RadTextBoxControlAWGTemperaturbereichMax.TextChanged, RadTextBoxControlAWGTeilungswerte.TextChanged, RadTextBoxControlAWGSpeisespannung.TextChanged, RadTextBoxControlAWGMindestmesssignal.TextChanged, RadTextBoxControlAWGMindesteingangsspannung.TextChanged, RadTextBoxControlAWGKlasse.TextChanged, RadTextBoxControlAWGKabellaenge.TextChanged, RadTextBoxControlAWGGrenzwerteLastwiderstandMin.TextChanged, RadTextBoxControlAWGGrenzwerteLastwiderstandMax.TextChanged, RadTextBoxControlAWGBruchteilEichfehlergrenze.TextChanged, RadTextBoxControlAWGAnschlussart.TextChanged
         If _suspendEvents = True Then Exit Sub
         AktuellerStatusDirty = True
     End Sub
 
 
     Private Sub RadTextBoxControlWZGenauigkeitsklasse_TextChanging(sender As Object, e As Telerik.WinControls.TextChangingEventArgs) Handles RadTextBoxControlWZGenauigkeitsklasse.TextChanging
-        If _suspendEvents = True Then Exit Sub
+        If _suspendEvents = True Then
+            e.Cancel = False
+            Exit Sub
+        End If
+
         If e.NewValue.ToUpper = "A" Or e.NewValue.ToUpper = "B" Or e.NewValue.ToUpper = "C" Or e.NewValue.ToUpper = "D" _
             Or e.NewValue.ToUpper = "I" Or e.NewValue.ToUpper = "II" Or e.NewValue.ToUpper = "III" Or e.NewValue.ToUpper = "IV" _
             Or e.NewValue.ToUpper = "" Then

@@ -336,6 +336,8 @@
                     RadTextBoxPunkt5Faktor.Text = (CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1) + CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Einschaltnullstellbereich) + _
                                                                CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Ecklastzuschlag) + CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Totlast) + _
                                                                CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AdditiveTarahoechstlast)) / CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1)
+                Catch ex As InvalidCastException
+                    RadTextBoxPunkt5Faktor.Text = "0"
 
                 Catch ex As DivideByZeroException
                     RadTextBoxPunkt5Faktor.Text = "0"
@@ -385,7 +387,9 @@
         End Select
         'in der Excelmappe ohne Nachkommastellen angegeben deswegen CINT()
         If Not RadTextBoxPunkt5QMax.Text.Equals("") Then
-            RadTextBoxPunkt5QMax.Text = CInt(RadTextBoxPunkt5QMax.Text)
+            If IsNumeric(RadTextBoxPunkt5QMax.Text) Then
+                RadTextBoxPunkt5QMax.Text = CInt(RadTextBoxPunkt5QMax.Text)
+            End If
         End If
         RadTextBoxPunkt5EMax.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast
 
@@ -708,7 +712,7 @@
         Catch ex As InvalidCastException
             RadTextBoxPunkt8D.Text = 0
         End Try
-    
+
         '(9) Vergleich der Lastwiderstände von AWG und WZ  in  W
         '=WENN('Daten-Eingabe'!$G$30="";"fehlt";'Daten-Eingabe'!$G$30)
         RadTextBoxPunkt9RLmin.Text = objEichprozess.Lookup_Auswertegeraet.GrenzwertLastwiderstandMIN
