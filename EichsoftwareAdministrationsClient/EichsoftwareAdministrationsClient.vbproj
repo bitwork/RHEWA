@@ -38,7 +38,7 @@
     <UpdateUrl>\\ntserver\Server\HKB\Software\Aktuelle Eichsoftware\Admin\</UpdateUrl>
     <ProductName>Konformitätsbewertungssoftware Administration</ProductName>
     <PublisherName>RHEWA Waagenfabrik GmbH</PublisherName>
-    <ApplicationRevision>15</ApplicationRevision>
+    <ApplicationRevision>16</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>

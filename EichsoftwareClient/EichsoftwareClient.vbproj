@@ -41,7 +41,7 @@
     <ProductName>RHEWA Konformitätsbewertungssoftware</ProductName>
     <PublisherName>RHEWA Waagenfabrik GmbH</PublisherName>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>70</ApplicationRevision>
+    <ApplicationRevision>71</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
