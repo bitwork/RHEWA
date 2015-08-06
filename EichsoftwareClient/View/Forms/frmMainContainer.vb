@@ -11,7 +11,7 @@ Public Class FrmMainContainer
 #Region "Membervariables"
     ' auflistung aller aktuellen UCOs, damit diese nicht immer neu erzeugt werden müssen
     Private _ListofUcos As New List(Of ucoContent)
-
+    Private _StandardWaagePopupShown As Boolean = False
     ''' <summary>
     ''' Das aktuelle UserControl welches im Inhaltsfenster angezeigt wird
     ''' </summary>
@@ -148,21 +148,34 @@ Public Class FrmMainContainer
     ''' <author></author>
     ''' <commentauthor></commentauthor>
     Private Sub ChangeActiveContentUserControl(ByVal uco As UserControl)
+        'Dim ucos = From tmpuco In _ListofUcos Where tmpuco.Name = uco.Name
+        'If ucos.Count > 0 Then
+        '    _CurrentUco = uco
+
+        'Dim controls = From tmpcontrol In Me.SplitPanelContent1.Controls Where tmpcontrol.Name = _CurrentUco.Name
+        'If controls.Count = 0 Then
+        '    Me.SplitPanelContent1.Controls.Add(_CurrentUco)
+        'Else
+        '    Me.SplitPanelContent1.Controls.Remove(_CurrentUco)
+        '    Me.SplitPanelContent1.Controls.Add(_CurrentUco)
+
+        '    controls(0).bringtofront()
+        'End If
+
+
+        '    _CurrentUco.BringToFront()
+        '    _CurrentUco.Dock = DockStyle.Fill
+        'End If
+
         Dim ucos = From tmpuco In _ListofUcos Where tmpuco.Name = uco.Name
         If ucos.Count > 0 Then
             _CurrentUco = uco
+            Me.SplitPanelContent1.Controls.Clear()
+            Me.SplitPanelContent1.Controls.Add(_CurrentUco)
 
-            Dim controls = From tmpcontrol In Me.SplitPanelContent1.Controls Where tmpcontrol.Name = _CurrentUco.Name
-            If controls.Count = 0 Then
-                Me.SplitPanelContent1.Controls.Add(_CurrentUco)
-            Else
-                controls(0).bringtofront()
-            End If
-
-            _CurrentUco.BringToFront()
-            _CurrentUco.Dock = DockStyle.Fill
         End If
-
+        _CurrentUco.BringToFront()
+        _CurrentUco.Dock = DockStyle.Fill
 
         If Not CurrentEichprozess Is Nothing Then
             Select Case _CurrentUco.EichprozessStatusReihenfolge
@@ -564,7 +577,7 @@ Public Class FrmMainContainer
             If ucos.Count = 0 Then
                 _ListofUcos.Add(uco)
             End If
-            '_CurrentUco.NextUco = uco
+
             'neues UCO in vordergrund bringen
             RaiseEvent UpdateNeeded(uco)
             ChangeActiveContentUserControl(uco)
@@ -748,9 +761,10 @@ Public Class FrmMainContainer
             Dim ucos = From tmpuco In _ListofUcos Where tmpuco.Name = uco.name
             If ucos.Count = 0 Then
                 _ListofUcos.Add(uco)
-            End If
-            _CurrentUco.NextUco = uco
 
+            End If
+
+            _CurrentUco.NextUco = uco
 
             If bolUCODirty Then
                 BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge + 1
@@ -792,14 +806,19 @@ Public Class FrmMainContainer
             Select Case _CurrentUco.EichprozessStatusReihenfolge
                 Case Is = GlobaleEnumeratoren.enuEichprozessStatus.KompatbilitaetsnachweisErgebnis
                     Me.RadButtonNavigateForwards.PerformClick()
+                    ZeigeStandardwaagenPopUp()
                 Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Beschaffenheitspruefung
                     Me.RadButtonNavigateForwards.PerformClick()
+                    ZeigeStandardwaagenPopUp()
                 Case Is = GlobaleEnumeratoren.enuEichprozessStatus.AuswahlKonformitätsverfahren
                     Me.RadButtonNavigateForwards.PerformClick()
+                    ZeigeStandardwaagenPopUp()
                 Case Is = GlobaleEnumeratoren.enuEichprozessStatus.EichtechnischeSicherungundDatensicherung
                     Me.RadButtonNavigateForwards.PerformClick()
+                    ZeigeStandardwaagenPopUp()
                 Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Export
                     Me.RadButtonNavigateForwards.PerformClick()
+                    ZeigeStandardwaagenPopUp()
             End Select
         End If
         AbortBreadCrumbNavigation = False 'SpringeZuMethode aus ucoAmpel aktivieren
@@ -1061,4 +1080,20 @@ Public Class FrmMainContainer
             BreadCrumb.AktuellerGewaehlterVorgang = _CurrentUco.EichprozessStatusReihenfolge
         End If
     End Sub
+
+    ''' <summary>
+    ''' Zeigt Popup beim Blättern durch eine Standardwaage
+    ''' </summary>
+    ''' <remarks></remarks>
+    Private Sub ZeigeStandardwaagenPopUp()
+        If _StandardWaagePopupShown = True Then Exit Sub
+        _StandardWaagePopupShown = True
+        Dim popup As New Telerik.WinControls.UI.RadDesktopAlert()
+        popup.CaptionText = "Hinweis Standardwaage"
+        popup.ContentText = "Es wurden Schritte übersprungen, da es sich um eine Standardwaage handelt. Über die Ampelschaltfläche kann bewusst auf jeden Bearbeitungsschritt gesprungen werden"
+        popup.AutoCloseDelay = "8000"
+        popup.FixedSize = New Drawing.Size(300, 150)
+        popup.Show()
+    End Sub
+
 End Class

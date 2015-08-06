@@ -172,42 +172,60 @@ Public Class ucoAmpel
     ''' <commentauthor></commentauthor>
     Public Sub FindeElementUndSelektiere(ByVal pStatus As GlobaleEnumeratoren.enuEichprozessStatus)
         Try
-            Dim items(0) As Telerik.WinControls.UI.ListViewDataItem
+            'prüfen ob das aktuelle element welchse das Event triggert bereits fokusiert ist, wenn ja => überspringen
+            Dim ListItemTmp = (From raditem In RadListView1.Items Where raditem.Value = pStatus And raditem.Selected = True).FirstOrDefault
+            If Not ListItemTmp Is Nothing Then 'es ist markiert/fokusiert => abbruch
+                Exit Sub
+            Else
 
-            'workaounrd für fokussierungsfehler. Damit das aktuell gewählte element in der Mitte angezeigt wird, wird zunächst das vorherige Element ausgewählt und dann erst das korrekte
+                Dim items(0) As Telerik.WinControls.UI.ListViewDataItem
 
-            'vorheriges Element finden und selektieren
-            Dim Listitem = (From raditem In RadListView1.Items Where raditem.Value = pStatus - 1 And raditem.Visible = True).FirstOrDefault
-            If Listitem Is Nothing Then
-                Listitem = (From raditem In RadListView1.Items Where raditem.Value = pStatus - 2 And raditem.Visible = True).FirstOrDefault
+                'workaounrd für fokussierungsfehler. Damit das aktuell gewählte element in der Mitte angezeigt wird, wird zunächst das vorherige Element ausgewählt und dann erst das korrekte
+
+                'vorheriges Element finden und selektieren
+                Dim Listitem = (From raditem In RadListView1.Items Where raditem.Value = pStatus - 1 And raditem.Visible = True).FirstOrDefault
                 If Listitem Is Nothing Then
-                    Listitem = (From raditem In RadListView1.Items Where raditem.Value = pStatus And raditem.Visible = True).FirstOrDefault
+                    Listitem = (From raditem In RadListView1.Items Where raditem.Value = pStatus - 2 And raditem.Visible = True).FirstOrDefault
+                    If Listitem Is Nothing Then
+                        Listitem = (From raditem In RadListView1.Items Where raditem.Value = pStatus And raditem.Visible = True).FirstOrDefault
+                    End If
                 End If
-            End If
 
-            Dim priorcontol As Control = Nothing
-            If Not Me._ParentForm Is Nothing Then
-                If Not Me._ParentForm.CurrentUCO Is Nothing Then
-                    priorcontol = Me._ParentForm.CurrentUCO.ActiveControl
+                Dim priorcontol As Control = Nothing
+                If Not Me._ParentForm Is Nothing Then
+                    If Not Me._ParentForm.CurrentUCO Is Nothing Then
+                        priorcontol = Me._ParentForm.CurrentUCO.ActiveControl
 
+                    End If
                 End If
-            End If
 
-            items(0) = Listitem
-            RadListView1.Select(items)
-            RadListView1.Focus()
+                items(0) = Listitem
+                Try
+                    RadListView1.Select(items)
 
-            'tatsächliches element finden und selektieren
-            Listitem = (From raditem In RadListView1.Items Where raditem.Value = pStatus And raditem.Visible = True).FirstOrDefault
-            If Listitem Is Nothing Then
-                Listitem = (From raditem In RadListView1.Items Where raditem.Value = pStatus - 1 And raditem.Visible = True).FirstOrDefault
-            End If
-            items(0) = Listitem
-            RadListView1.SelectedItem = Nothing
-            RadListView1.Select(items)
-            RadListView1.Focus()
-            If Not priorcontol Is Nothing Then
-                priorcontol.Focus()
+                Catch ex As StackOverflowException 'bisher einmal ohne Grund aufgetreten beim Ändern der Sprache...
+                Catch ex As Exception
+                End Try
+                RadListView1.Focus()
+
+                'tatsächliches element finden und selektieren
+                Listitem = (From raditem In RadListView1.Items Where raditem.Value = pStatus And raditem.Visible = True).FirstOrDefault
+                If Listitem Is Nothing Then
+                    Listitem = (From raditem In RadListView1.Items Where raditem.Value = pStatus - 1 And raditem.Visible = True).FirstOrDefault
+                End If
+                items(0) = Listitem
+                RadListView1.SelectedItem = Nothing
+                Try
+                    RadListView1.Select(items)
+
+                Catch ex As StackOverflowException 'bisher einmal ohne Grund aufgetreten beim Ändern der Sprache...
+                Catch ex As Exception
+                End Try
+                RadListView1.Focus()
+                If Not priorcontol Is Nothing Then
+                    priorcontol.Focus()
+                End If
+
             End If
 
         Catch ex As Exception
