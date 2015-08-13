@@ -172,8 +172,8 @@
         RadGridViewAuswahlliste.Columns("Fabriknummer").HeaderText = My.Resources.GlobaleLokalisierung.Fabriknummer
 
         'spaltengrößen anpassen (so viel platz wie möglich nehmen)
-        RadGridViewAuswahlliste.BestFitColumns()
-        RadGridViewAuswahlliste.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
+        'RadGridViewAuswahlliste.BestFitColumns()
+        'RadGridViewAuswahlliste.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
         RadGridViewAuswahlliste.BestFitColumns()
         RadGridViewAuswahlliste.EnableAlternatingRowColor = True
         RadGridViewAuswahlliste.ShowNoDataText = True
@@ -524,8 +524,8 @@
             Catch ex As Exception
             End Try
 
-            RadGridViewRHEWAAlle.BestFitColumns()
-            RadGridViewRHEWAAlle.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
+            'RadGridViewRHEWAAlle.BestFitColumns()
+            'RadGridViewRHEWAAlle.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
             RadGridViewRHEWAAlle.BestFitColumns()
             RadGridViewRHEWAAlle.EnableAlternatingRowColor = True
             RadGridViewRHEWAAlle.ShowNoDataText = True
