@@ -27,7 +27,7 @@
     <FodyPath>..\packages\Fody.1.20.0.0</FodyPath>
     <PublishUrl>D:\Daten\Hill Daten\Privat\Dropbox\RHEWA\</PublishUrl>
     <Install>true</Install>
-    <InstallFrom>Unc</InstallFrom>
+    <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
@@ -35,13 +35,12 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>\\ntserver\Server\HKB\Software\Aktuelle Eichsoftware\</InstallUrl>
     <UpdateUrl>\\ntserver\Server\HKB\Software\Aktuelle Eichsoftware\</UpdateUrl>
     <SupportUrl>http://www.rhewa.com</SupportUrl>
     <ProductName>RHEWA Konformitätsbewertungssoftware</ProductName>
     <PublisherName>RHEWA Waagenfabrik GmbH</PublisherName>
-    <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>71</ApplicationRevision>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>72</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>

@@ -497,6 +497,9 @@ Public Class FrmMainContainer
 
                 If AktuellerBenutzer.Instance.Lizenz.RHEWALizenz = True Then
                     RadButtonEntsperren.Visible = True
+
+                    'prüfen ob eine Sperrung des DS vorliegt und DS sperren wenn nicht
+                    clsWebserviceFunctions.SetzeSperrung(True, CurrentEichprozess.Vorgangsnummer)
                 End If
 
             End If
@@ -973,7 +976,7 @@ Public Class FrmMainContainer
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub FrmMainContainer_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-        If DialogModus = enuDialogModus.korrigierend Then
+        If DialogModus = enuDialogModus.korrigierend Or DialogModus = enuDialogModus.lesend Then
             If Not CurrentEichprozess Is Nothing Then
                 clsWebserviceFunctions.SetzeSperrung(False, CurrentEichprozess.Vorgangsnummer)
             End If
