@@ -23,8 +23,8 @@ Partial Class ucoEichprozessauswahlliste
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucoEichprozessauswahlliste))
-        Dim TableViewDefinition3 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim TableViewDefinition4 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition1 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition2 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Me.RadGridViewAuswahlliste = New Telerik.WinControls.UI.RadGridView()
         Me.BackgroundWorkerLoadFromDatabase = New System.ComponentModel.BackgroundWorker()
         Me.RadPageView1 = New Telerik.WinControls.UI.RadPageView()
@@ -92,7 +92,7 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadGridViewAuswahlliste.MasterTemplate.AllowDragToGroup = False
         Me.RadGridViewAuswahlliste.MasterTemplate.AllowEditRow = False
         Me.RadGridViewAuswahlliste.MasterTemplate.ShowGroupedColumns = True
-        Me.RadGridViewAuswahlliste.MasterTemplate.ViewDefinition = TableViewDefinition3
+        Me.RadGridViewAuswahlliste.MasterTemplate.ViewDefinition = TableViewDefinition1
         Me.RadGridViewAuswahlliste.Name = "RadGridViewAuswahlliste"
         '
         '
@@ -127,7 +127,7 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadPageView1.RootElement.Margin = CType(resources.GetObject("RadPageView1.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadPageView1.RootElement.Text = resources.GetString("RadPageView1.RootElement.Text")
         Me.RadPageView1.RootElement.TextOrientation = CType(resources.GetObject("RadPageView1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadPageView1.SelectedPage = Me.RadPageViewPageAlle
+        Me.RadPageView1.SelectedPage = Me.RadPageViewPageEigene
         CType(Me.RadPageView1.GetChildAt(0).GetChildAt(0).GetChildAt(1), Telerik.WinControls.UI.StripViewButtonsPanel).Visibility = Telerik.WinControls.ElementVisibility.Hidden
         '
         'RadPageViewPageEigene
@@ -421,7 +421,7 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadGridViewRHEWAAlle.MasterTemplate.AllowDeleteRow = False
         Me.RadGridViewRHEWAAlle.MasterTemplate.AllowEditRow = False
         Me.RadGridViewRHEWAAlle.MasterTemplate.ShowGroupedColumns = True
-        Me.RadGridViewRHEWAAlle.MasterTemplate.ViewDefinition = TableViewDefinition4
+        Me.RadGridViewRHEWAAlle.MasterTemplate.ViewDefinition = TableViewDefinition2
         Me.RadGridViewRHEWAAlle.Name = "RadGridViewRHEWAAlle"
         '
         '

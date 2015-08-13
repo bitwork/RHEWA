@@ -303,7 +303,7 @@ Public Class ucoContent
         Select Case enu
             Case GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderWiederholbarkeit
                 Displaytext = "Ist die Wiederholbarkeit wirklich gegeben?"
-            Case Is = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungdesAnsprechvermögens
+            Case Is = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderStabilitätderGleichgewichtslage
                 Displaytext = "Werden die Daten wirklich nur bei Stillstand übermittelt?"
         End Select
 

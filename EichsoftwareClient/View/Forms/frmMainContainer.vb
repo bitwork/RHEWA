@@ -32,6 +32,8 @@ Public Class FrmMainContainer
     Friend objUCOBenutzerwechsel As ucoBenutzerwechsel
 
     Friend AbortBreadCrumbNavigation As Boolean = False
+
+
 #End Region
 
 #Region "Enumeratoren"
@@ -50,6 +52,7 @@ Public Class FrmMainContainer
         'zuweisen des custom Telerik Themes
         Telerik.WinControls.ThemeResolutionService.LoadPackageResource("EichsoftwareClient.RHEWAGREEN.tssp") 'Pfad zur Themedatei
         Telerik.WinControls.ThemeResolutionService.ApplicationThemeName = "RHEWAGREEN" 'standard Themename
+
     End Sub
 
     Sub New(ByVal pEichprozess As Eichprozess, Optional ByVal penumDialogModus As enuDialogModus = enuDialogModus.normal)
@@ -59,6 +62,8 @@ Public Class FrmMainContainer
         'zuweisen des Eichprozesses
         Me.CurrentEichprozess = pEichprozess
         Me.DialogModus = penumDialogModus
+
+
     End Sub
 #End Region
 
@@ -187,6 +192,7 @@ Public Class FrmMainContainer
                     RadButtonNavigateForwards.Enabled = False
                 Case Else
                     RadButtonNavigateBackwards.Enabled = True
+                    RadButtonNavigateForwards.Enabled = True
             End Select
         Else
             RadButtonNavigateBackwards.Enabled = False
@@ -329,8 +335,10 @@ Public Class FrmMainContainer
                 Me.Close()
             End If
         Else
+            _StandardWaagePopupShown = False
             'laden des benötigten UCOs anhand status von me.currentEichprozess
             LadeEichprozessVorgangsUco()
+
         End If
 
         ''Lokalisierung anstossen
@@ -1086,14 +1094,23 @@ Public Class FrmMainContainer
     ''' </summary>
     ''' <remarks></remarks>
     Private Sub ZeigeStandardwaagenPopUp()
+       
+
         If _StandardWaagePopupShown = True Then Exit Sub
         _StandardWaagePopupShown = True
+
         Dim popup As New Telerik.WinControls.UI.RadDesktopAlert()
+        popup.ShowOptionsButton = False
+        popup.ShowPinButton = False
+        popup.ShowCloseButton = True
         popup.CaptionText = "Hinweis Standardwaage"
         popup.ContentText = "Es wurden Schritte übersprungen, da es sich um eine Standardwaage handelt. Über die Ampelschaltfläche kann bewusst auf jeden Bearbeitungsschritt gesprungen werden"
-        popup.AutoCloseDelay = "8000"
+
         popup.FixedSize = New Drawing.Size(300, 150)
+        popup.FadeAnimationType = Telerik.WinControls.UI.FadeAnimationType.FadeIn
         popup.Show()
+
+
     End Sub
 
 End Class

@@ -267,19 +267,10 @@ RadTextBoxControlLast2.Text.Trim = "" Or _
 
             AbortSaveing = True
         End If
+        'fehlermeldung anzeigen bei falscher validierung
 
-   'fehlermeldung anzeigen bei falscher validierung
-        'sonderfall Kopierte Waage
-        If objEichprozess.AusStandardwaageErzeugt Then
-            If Not AbortSaveing Then
-                Return Me.ShowValidationErrorBoxStandardwaage(GlobaleEnumeratoren.enuEichprozessStatus.PrüfungdesAnsprechvermögens)
-            Else
-                Return Me.ShowValidationErrorBox()
-            End If
-        Else
-            'fehlermeldung anzeigen bei falscher validierung
-            Return Me.ShowValidationErrorBox()
-        End If
+        Return Me.ShowValidationErrorBox()
+     
 
     End Function
 

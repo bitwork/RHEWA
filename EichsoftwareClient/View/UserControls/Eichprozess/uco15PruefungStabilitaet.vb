@@ -251,8 +251,27 @@
             AbortSaveing = True
         End If
 
-         'fehlermeldung anzeigen bei falscher validierung
-        Return Me.ShowValidationErrorBox()
+        lblPflichtfeld1.Visible = IIf(RadCheckBoxAbdruck1.Checked = False, True, False)
+        lblPflichtfeld2.Visible = IIf(RadCheckBoxAbdruck2.Checked = False, True, False)
+        lblPflichtfeld3.Visible = IIf(RadCheckBoxAbdruck3.Checked = False, True, False)
+        lblPflichtfeld4.Visible = IIf(RadCheckBoxAbdruck4.Checked = False, True, False)
+        lblPflichtfeld5.Visible = IIf(RadCheckBoxAbdruck5.Checked = False, True, False)
+
+
+
+        'fehlermeldung anzeigen bei falscher validierung
+        'sonderfall Kopierte Waage
+        If objEichprozess.AusStandardwaageErzeugt Then
+            If Not AbortSaveing Then
+                Return Me.ShowValidationErrorBoxStandardwaage(GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderStabilitätderGleichgewichtslage)
+            Else
+                Return Me.ShowValidationErrorBox()
+            End If
+        Else
+            'fehlermeldung anzeigen bei falscher validierung
+            Return Me.ShowValidationErrorBox()
+
+        End If
     End Function
 
 
