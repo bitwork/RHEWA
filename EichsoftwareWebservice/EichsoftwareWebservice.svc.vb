@@ -217,7 +217,12 @@ Public Class EichsoftwareWebservice
                         SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
                     End Try
                 End If
-                NewServerObj.ErzeugerLizenz = Lizenzschluessel 'lizenzschlüssel zur identifizierung des datensatztes hinzufügen
+                If NewServerObj.ErzeugerLizenz Is Nothing Then
+                    NewServerObj.ErzeugerLizenz = Lizenzschluessel 'lizenzschlüssel zur identifizierung des datensatztes hinzufügen
+                ElseIf NewServerObj.ErzeugerLizenz.Equals("") Then
+                    NewServerObj.ErzeugerLizenz = Lizenzschluessel 'lizenzschlüssel zur identifizierung des datensatztes hinzufügen
+
+                End If
                 DbContext.ServerEichprozess.Add(NewServerObj)
                 DbContext.SaveChanges()
             End Using
