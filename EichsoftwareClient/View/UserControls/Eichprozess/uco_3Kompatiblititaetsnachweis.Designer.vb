@@ -27,7 +27,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         Me.RadGroupBoxVerbindungselemente = New Telerik.WinControls.UI.RadGroupBox()
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.RadSeparator15 = New Telerik.WinControls.UI.RadSeparator()
-        Me.RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze = New Telerik.WinControls.UI.RadTextBox()
         Me.RadSeparator16 = New Telerik.WinControls.UI.RadSeparator()
         Me.RadLabel76 = New Telerik.WinControls.UI.RadLabel()
         Me.lblVerbindungEichfehlergrenze = New Telerik.WinControls.UI.RadLabel()
@@ -52,33 +52,33 @@ Partial Class uco_3Kompatiblititaetsnachweis
         Me.RadLabel103 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel93 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel101 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlWZTemperaturbereichMAX = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlWZTemperaturbereichMAX = New Telerik.WinControls.UI.RadTextBox()
         Me.RadLabel78 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlWZBruchteilEichfehlergrenze = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlWZBruchteilEichfehlergrenze = New Telerik.WinControls.UI.RadTextBox()
         Me.RadLabel74 = New Telerik.WinControls.UI.RadLabel()
         Me.lblWZEichfehlergrenze = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlWZTemperaturbereichMIN = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlWZTemperaturbereichMIN = New Telerik.WinControls.UI.RadTextBox()
         Me.RadLabel52 = New Telerik.WinControls.UI.RadLabel()
         Me.lblWZTemperatur = New Telerik.WinControls.UI.RadLabel()
         Me.RadSeparator10 = New Telerik.WinControls.UI.RadSeparator()
         Me.lblWZKlasse2 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlWZGenauigkeitsklasse = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlWZGenauigkeitsklasse = New Telerik.WinControls.UI.RadTextBox()
         Me.lblWZKlasse = New Telerik.WinControls.UI.RadLabel()
         Me.RadSeparator11 = New Telerik.WinControls.UI.RadSeparator()
         Me.RadSeparator12 = New Telerik.WinControls.UI.RadSeparator()
-        Me.RadTextBoxControlWZWiderstand = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlWZRueckkehrVorlastsignal = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlWZWiderstand = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlWZRueckkehrVorlastsignal = New Telerik.WinControls.UI.RadTextBox()
         Me.RadLabel55 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel56 = New Telerik.WinControls.UI.RadLabel()
         Me.lblWZWiderstandWZ = New Telerik.WinControls.UI.RadLabel()
         Me.lblWZRueckkehrVorlastsignal = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlWZMinTeilungswert = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlWZHoechstteilungsfaktor = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlWZKriechteilungsfaktor = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlWZMaxTeilungswerte = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlWZWaegezellenkennwert = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlWZMindestvorlast = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlWZHoechstlast = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlWZMinTeilungswert = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlWZHoechstteilungsfaktor = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlWZKriechteilungsfaktor = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlWZMaxTeilungswerte = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlWZWaegezellenkennwert = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlWZMindestvorlast = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlWZHoechstlast = New Telerik.WinControls.UI.RadTextBox()
         Me.RadLabel60 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel61 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel62 = New Telerik.WinControls.UI.RadLabel()
@@ -113,28 +113,28 @@ Partial Class uco_3Kompatiblititaetsnachweis
         Me.RadLabel96 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel97 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel98 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlAWGTemperaturbereichMax = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlAWGTemperaturbereichMax = New Telerik.WinControls.UI.RadTextBox()
         Me.RadLabel51 = New Telerik.WinControls.UI.RadLabel()
         Me.RadSeparator9 = New Telerik.WinControls.UI.RadSeparator()
         Me.lblAWGKlasse2 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlAWGKlasse = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlAWGKlasse = New Telerik.WinControls.UI.RadTextBox()
         Me.lblAWGKlasse = New Telerik.WinControls.UI.RadLabel()
         Me.RadSeparator6 = New Telerik.WinControls.UI.RadSeparator()
         Me.RadSeparator8 = New Telerik.WinControls.UI.RadSeparator()
-        Me.RadTextBoxControlAWGKabellaenge = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlAWGAnschlussart = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlAWGKabellaenge = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlAWGAnschlussart = New Telerik.WinControls.UI.RadTextBox()
         Me.lblKabel = New Telerik.WinControls.UI.RadLabel()
         Me.lblAWGKabellaenge = New Telerik.WinControls.UI.RadLabel()
         Me.lblAWGAnschlussart = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMax = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMax = New Telerik.WinControls.UI.RadTextBox()
         Me.RadLabel34 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMin = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlAWGTemperaturbereichMin = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlAWGBruchteilEichfehlergrenze = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlAWGMindestmesssignal = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlAWGMindesteingangsspannung = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlAWGSpeisespannung = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlAWGTeilungswerte = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMin = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlAWGTemperaturbereichMin = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlAWGBruchteilEichfehlergrenze = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlAWGMindestmesssignal = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlAWGMindesteingangsspannung = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlAWGSpeisespannung = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlAWGTeilungswerte = New Telerik.WinControls.UI.RadTextBox()
         Me.RadLabel35 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel36 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel37 = New Telerik.WinControls.UI.RadLabel()
@@ -188,8 +188,8 @@ Partial Class uco_3Kompatiblititaetsnachweis
         Me.RadSeparator5 = New Telerik.WinControls.UI.RadSeparator()
         Me.RadSeparator3 = New Telerik.WinControls.UI.RadSeparator()
         Me.RadSeparator2 = New Telerik.WinControls.UI.RadSeparator()
-        Me.RadTextBoxControlWaageKabelquerschnitt = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlWaageKabellaenge = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlWaageKabelquerschnitt = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlWaageKabellaenge = New Telerik.WinControls.UI.RadTextBox()
         Me.RadLabel25 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel26 = New Telerik.WinControls.UI.RadLabel()
         Me.lblKabelquerschnitt = New Telerik.WinControls.UI.RadLabel()
@@ -200,16 +200,16 @@ Partial Class uco_3Kompatiblititaetsnachweis
         Me.lblMax2 = New Telerik.WinControls.UI.RadLabel()
         Me.lblE1 = New Telerik.WinControls.UI.RadLabel()
         Me.lblMax1 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlWaageTemperaturbereichMax = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlWaageTemperaturbereichMax = New Telerik.WinControls.UI.RadTextBox()
         Me.RadLabel18 = New Telerik.WinControls.UI.RadLabel()
         Me.RadSeparator1 = New Telerik.WinControls.UI.RadSeparator()
-        Me.RadTextBoxControlWaageTotlast = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlWaageAdditiveTarahoechstlast = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlWaageTemperaturbereichMin = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlWaageEcklastzuschlag = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlEinschaltnullstellbereich = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlWaageAnzahlWaegezellen = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlWaageUebersetzungsverhaeltnis = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlWaageTotlast = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlWaageAdditiveTarahoechstlast = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlWaageTemperaturbereichMin = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlWaageEcklastzuschlag = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlEinschaltnullstellbereich = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlWaageAnzahlWaegezellen = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlWaageUebersetzungsverhaeltnis = New Telerik.WinControls.UI.RadTextBox()
         Me.RadLabel11 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel12 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel13 = New Telerik.WinControls.UI.RadLabel()
@@ -224,15 +224,15 @@ Partial Class uco_3Kompatiblititaetsnachweis
         Me.lblEinschaltnullbereich = New Telerik.WinControls.UI.RadLabel()
         Me.lblAnzWaeegezellen = New Telerik.WinControls.UI.RadLabel()
         Me.lblUebersetzung = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlWaageEichwert3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlWaageHoechstlast3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlWaageEichwert2 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlWaageHoechstlast2 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlWaageEichwert1 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlWaageHoechstlast1 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlWaageEichwert3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlWaageHoechstlast3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlWaageEichwert2 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlWaageHoechstlast2 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlWaageEichwert1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlWaageHoechstlast1 = New Telerik.WinControls.UI.RadTextBox()
         Me.lblEichwert = New Telerik.WinControls.UI.RadLabel()
         Me.lblWIMaxCap = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlWaageKlasse = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlWaageKlasse = New Telerik.WinControls.UI.RadTextBox()
         Me.lblWIKlasse = New Telerik.WinControls.UI.RadLabel()
         Me.lblPflichtfeld5 = New System.Windows.Forms.Label()
         Me.lblPflichtfeld3 = New System.Windows.Forms.Label()
@@ -517,7 +517,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze
         '
-        Me.RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze.IsReadOnly = True
+        Me.RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze, "RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze")
         Me.RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze.Name = "RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze"
         '
@@ -880,7 +880,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlWZTemperaturbereichMAX
         '
-        Me.RadTextBoxControlWZTemperaturbereichMAX.IsReadOnly = True
+        Me.RadTextBoxControlWZTemperaturbereichMAX.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlWZTemperaturbereichMAX, "RadTextBoxControlWZTemperaturbereichMAX")
         Me.RadTextBoxControlWZTemperaturbereichMAX.Name = "RadTextBoxControlWZTemperaturbereichMAX"
         '
@@ -914,7 +914,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlWZBruchteilEichfehlergrenze
         '
-        Me.RadTextBoxControlWZBruchteilEichfehlergrenze.IsReadOnly = True
+        Me.RadTextBoxControlWZBruchteilEichfehlergrenze.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlWZBruchteilEichfehlergrenze, "RadTextBoxControlWZBruchteilEichfehlergrenze")
         Me.RadTextBoxControlWZBruchteilEichfehlergrenze.Name = "RadTextBoxControlWZBruchteilEichfehlergrenze"
         '
@@ -964,7 +964,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlWZTemperaturbereichMIN
         '
-        Me.RadTextBoxControlWZTemperaturbereichMIN.IsReadOnly = True
+        Me.RadTextBoxControlWZTemperaturbereichMIN.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlWZTemperaturbereichMIN, "RadTextBoxControlWZTemperaturbereichMIN")
         Me.RadTextBoxControlWZTemperaturbereichMIN.Name = "RadTextBoxControlWZTemperaturbereichMIN"
         '
@@ -1047,7 +1047,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlWZGenauigkeitsklasse
         '
-        Me.RadTextBoxControlWZGenauigkeitsklasse.IsReadOnly = True
+        Me.RadTextBoxControlWZGenauigkeitsklasse.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlWZGenauigkeitsklasse, "RadTextBoxControlWZGenauigkeitsklasse")
         Me.RadTextBoxControlWZGenauigkeitsklasse.Name = "RadTextBoxControlWZGenauigkeitsklasse"
         '
@@ -1116,7 +1116,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlWZWiderstand
         '
-        Me.RadTextBoxControlWZWiderstand.IsReadOnly = True
+        Me.RadTextBoxControlWZWiderstand.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlWZWiderstand, "RadTextBoxControlWZWiderstand")
         Me.RadTextBoxControlWZWiderstand.Name = "RadTextBoxControlWZWiderstand"
         '
@@ -1133,7 +1133,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlWZRueckkehrVorlastsignal
         '
-        Me.RadTextBoxControlWZRueckkehrVorlastsignal.IsReadOnly = True
+        Me.RadTextBoxControlWZRueckkehrVorlastsignal.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlWZRueckkehrVorlastsignal, "RadTextBoxControlWZRueckkehrVorlastsignal")
         Me.RadTextBoxControlWZRueckkehrVorlastsignal.Name = "RadTextBoxControlWZRueckkehrVorlastsignal"
         '
@@ -1214,7 +1214,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlWZMinTeilungswert
         '
-        Me.RadTextBoxControlWZMinTeilungswert.IsReadOnly = True
+        Me.RadTextBoxControlWZMinTeilungswert.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlWZMinTeilungswert, "RadTextBoxControlWZMinTeilungswert")
         Me.RadTextBoxControlWZMinTeilungswert.Name = "RadTextBoxControlWZMinTeilungswert"
         '
@@ -1231,7 +1231,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlWZHoechstteilungsfaktor
         '
-        Me.RadTextBoxControlWZHoechstteilungsfaktor.IsReadOnly = True
+        Me.RadTextBoxControlWZHoechstteilungsfaktor.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlWZHoechstteilungsfaktor, "RadTextBoxControlWZHoechstteilungsfaktor")
         Me.RadTextBoxControlWZHoechstteilungsfaktor.Name = "RadTextBoxControlWZHoechstteilungsfaktor"
         '
@@ -1248,7 +1248,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlWZKriechteilungsfaktor
         '
-        Me.RadTextBoxControlWZKriechteilungsfaktor.IsReadOnly = True
+        Me.RadTextBoxControlWZKriechteilungsfaktor.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlWZKriechteilungsfaktor, "RadTextBoxControlWZKriechteilungsfaktor")
         Me.RadTextBoxControlWZKriechteilungsfaktor.Name = "RadTextBoxControlWZKriechteilungsfaktor"
         '
@@ -1265,7 +1265,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlWZMaxTeilungswerte
         '
-        Me.RadTextBoxControlWZMaxTeilungswerte.IsReadOnly = True
+        Me.RadTextBoxControlWZMaxTeilungswerte.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlWZMaxTeilungswerte, "RadTextBoxControlWZMaxTeilungswerte")
         Me.RadTextBoxControlWZMaxTeilungswerte.Name = "RadTextBoxControlWZMaxTeilungswerte"
         '
@@ -1282,7 +1282,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlWZWaegezellenkennwert
         '
-        Me.RadTextBoxControlWZWaegezellenkennwert.IsReadOnly = True
+        Me.RadTextBoxControlWZWaegezellenkennwert.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlWZWaegezellenkennwert, "RadTextBoxControlWZWaegezellenkennwert")
         Me.RadTextBoxControlWZWaegezellenkennwert.Name = "RadTextBoxControlWZWaegezellenkennwert"
         '
@@ -1299,7 +1299,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlWZMindestvorlast
         '
-        Me.RadTextBoxControlWZMindestvorlast.IsReadOnly = True
+        Me.RadTextBoxControlWZMindestvorlast.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlWZMindestvorlast, "RadTextBoxControlWZMindestvorlast")
         Me.RadTextBoxControlWZMindestvorlast.Name = "RadTextBoxControlWZMindestvorlast"
         '
@@ -1841,7 +1841,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlAWGTemperaturbereichMax
         '
-        Me.RadTextBoxControlAWGTemperaturbereichMax.IsReadOnly = True
+        Me.RadTextBoxControlAWGTemperaturbereichMax.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlAWGTemperaturbereichMax, "RadTextBoxControlAWGTemperaturbereichMax")
         Me.RadTextBoxControlAWGTemperaturbereichMax.Name = "RadTextBoxControlAWGTemperaturbereichMax"
         '
@@ -1908,7 +1908,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlAWGKlasse
         '
-        Me.RadTextBoxControlAWGKlasse.IsReadOnly = True
+        Me.RadTextBoxControlAWGKlasse.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlAWGKlasse, "RadTextBoxControlAWGKlasse")
         Me.RadTextBoxControlAWGKlasse.Name = "RadTextBoxControlAWGKlasse"
         '
@@ -1978,7 +1978,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlAWGKabellaenge
         '
-        Me.RadTextBoxControlAWGKabellaenge.IsReadOnly = True
+        Me.RadTextBoxControlAWGKabellaenge.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlAWGKabellaenge, "RadTextBoxControlAWGKabellaenge")
         Me.RadTextBoxControlAWGKabellaenge.Name = "RadTextBoxControlAWGKabellaenge"
         '
@@ -2060,7 +2060,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlAWGGrenzwerteLastwiderstandMax
         '
-        Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMax.IsReadOnly = True
+        Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMax.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMax, "RadTextBoxControlAWGGrenzwerteLastwiderstandMax")
         Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMax.Name = "RadTextBoxControlAWGGrenzwerteLastwiderstandMax"
         '
@@ -2095,7 +2095,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlAWGGrenzwerteLastwiderstandMin
         '
-        Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMin.IsReadOnly = True
+        Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMin.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMin, "RadTextBoxControlAWGGrenzwerteLastwiderstandMin")
         Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMin.Name = "RadTextBoxControlAWGGrenzwerteLastwiderstandMin"
         '
@@ -2114,7 +2114,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlAWGTemperaturbereichMin
         '
-        Me.RadTextBoxControlAWGTemperaturbereichMin.IsReadOnly = True
+        Me.RadTextBoxControlAWGTemperaturbereichMin.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlAWGTemperaturbereichMin, "RadTextBoxControlAWGTemperaturbereichMin")
         Me.RadTextBoxControlAWGTemperaturbereichMin.Name = "RadTextBoxControlAWGTemperaturbereichMin"
         '
@@ -2132,7 +2132,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlAWGBruchteilEichfehlergrenze
         '
-        Me.RadTextBoxControlAWGBruchteilEichfehlergrenze.IsReadOnly = True
+        Me.RadTextBoxControlAWGBruchteilEichfehlergrenze.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlAWGBruchteilEichfehlergrenze, "RadTextBoxControlAWGBruchteilEichfehlergrenze")
         Me.RadTextBoxControlAWGBruchteilEichfehlergrenze.Name = "RadTextBoxControlAWGBruchteilEichfehlergrenze"
         '
@@ -2150,7 +2150,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlAWGMindestmesssignal
         '
-        Me.RadTextBoxControlAWGMindestmesssignal.IsReadOnly = True
+        Me.RadTextBoxControlAWGMindestmesssignal.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlAWGMindestmesssignal, "RadTextBoxControlAWGMindestmesssignal")
         Me.RadTextBoxControlAWGMindestmesssignal.Name = "RadTextBoxControlAWGMindestmesssignal"
         '
@@ -2168,7 +2168,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlAWGMindesteingangsspannung
         '
-        Me.RadTextBoxControlAWGMindesteingangsspannung.IsReadOnly = True
+        Me.RadTextBoxControlAWGMindesteingangsspannung.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlAWGMindesteingangsspannung, "RadTextBoxControlAWGMindesteingangsspannung")
         Me.RadTextBoxControlAWGMindesteingangsspannung.Name = "RadTextBoxControlAWGMindesteingangsspannung"
         '
@@ -2186,7 +2186,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlAWGSpeisespannung
         '
-        Me.RadTextBoxControlAWGSpeisespannung.IsReadOnly = True
+        Me.RadTextBoxControlAWGSpeisespannung.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlAWGSpeisespannung, "RadTextBoxControlAWGSpeisespannung")
         Me.RadTextBoxControlAWGSpeisespannung.Name = "RadTextBoxControlAWGSpeisespannung"
         '
@@ -2204,7 +2204,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlAWGTeilungswerte
         '
-        Me.RadTextBoxControlAWGTeilungswerte.IsReadOnly = True
+        Me.RadTextBoxControlAWGTeilungswerte.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlAWGTeilungswerte, "RadTextBoxControlAWGTeilungswerte")
         Me.RadTextBoxControlAWGTeilungswerte.Name = "RadTextBoxControlAWGTeilungswerte"
         '
@@ -3208,7 +3208,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlWaageTemperaturbereichMax
         '
-        Me.RadTextBoxControlWaageTemperaturbereichMax.IsReadOnly = True
+        Me.RadTextBoxControlWaageTemperaturbereichMax.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlWaageTemperaturbereichMax, "RadTextBoxControlWaageTemperaturbereichMax")
         Me.RadTextBoxControlWaageTemperaturbereichMax.Name = "RadTextBoxControlWaageTemperaturbereichMax"
         '
@@ -3275,7 +3275,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlWaageAdditiveTarahoechstlast
         '
-        Me.RadTextBoxControlWaageAdditiveTarahoechstlast.IsReadOnly = True
+        Me.RadTextBoxControlWaageAdditiveTarahoechstlast.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlWaageAdditiveTarahoechstlast, "RadTextBoxControlWaageAdditiveTarahoechstlast")
         Me.RadTextBoxControlWaageAdditiveTarahoechstlast.Name = "RadTextBoxControlWaageAdditiveTarahoechstlast"
         '
@@ -3293,7 +3293,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlWaageTemperaturbereichMin
         '
-        Me.RadTextBoxControlWaageTemperaturbereichMin.IsReadOnly = True
+        Me.RadTextBoxControlWaageTemperaturbereichMin.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlWaageTemperaturbereichMin, "RadTextBoxControlWaageTemperaturbereichMin")
         Me.RadTextBoxControlWaageTemperaturbereichMin.Name = "RadTextBoxControlWaageTemperaturbereichMin"
         '
@@ -3727,7 +3727,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlWaageKlasse
         '
-        Me.RadTextBoxControlWaageKlasse.IsReadOnly = True
+        Me.RadTextBoxControlWaageKlasse.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlWaageKlasse, "RadTextBoxControlWaageKlasse")
         Me.RadTextBoxControlWaageKlasse.Name = "RadTextBoxControlWaageKlasse"
         '
@@ -4009,16 +4009,16 @@ Partial Class uco_3Kompatiblititaetsnachweis
     Friend WithEvents RadGroupBoxAWG As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents RadGroupBoxWaage As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents RadGroupBoxVerbindungselemente As Telerik.WinControls.UI.RadGroupBox
-    Friend WithEvents RadTextBoxControlWaageTemperaturbereichMax As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlWaageTemperaturbereichMax As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadLabel18 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadSeparator1 As Telerik.WinControls.UI.RadSeparator
-    Friend WithEvents RadTextBoxControlWaageTotlast As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlWaageAdditiveTarahoechstlast As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlWaageTemperaturbereichMin As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlWaageEcklastzuschlag As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlEinschaltnullstellbereich As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlWaageAnzahlWaegezellen As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlWaageUebersetzungsverhaeltnis As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlWaageTotlast As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlWaageAdditiveTarahoechstlast As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlWaageTemperaturbereichMin As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlWaageEcklastzuschlag As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlEinschaltnullstellbereich As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlWaageAnzahlWaegezellen As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlWaageUebersetzungsverhaeltnis As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadLabel11 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel12 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel13 As Telerik.WinControls.UI.RadLabel
@@ -4033,15 +4033,15 @@ Partial Class uco_3Kompatiblititaetsnachweis
     Friend WithEvents lblEinschaltnullbereich As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblAnzWaeegezellen As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblUebersetzung As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlWaageEichwert3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlWaageHoechstlast3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlWaageEichwert2 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlWaageHoechstlast2 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlWaageEichwert1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlWaageHoechstlast1 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlWaageEichwert3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlWaageHoechstlast3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlWaageEichwert2 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlWaageHoechstlast2 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlWaageEichwert1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlWaageHoechstlast1 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblEichwert As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblWIMaxCap As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlWaageKlasse As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlWaageKlasse As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblWIKlasse As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblE3 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblMax3 As Telerik.WinControls.UI.RadLabel
@@ -4055,31 +4055,31 @@ Partial Class uco_3Kompatiblititaetsnachweis
     Friend WithEvents RadSeparator5 As Telerik.WinControls.UI.RadSeparator
     Friend WithEvents RadSeparator3 As Telerik.WinControls.UI.RadSeparator
     Friend WithEvents RadSeparator2 As Telerik.WinControls.UI.RadSeparator
-    Friend WithEvents RadTextBoxControlWaageKabelquerschnitt As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlWaageKabellaenge As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlWaageKabelquerschnitt As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlWaageKabellaenge As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadLabel25 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel26 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblKabelquerschnitt As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblKabellaenge As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadSeparator10 As Telerik.WinControls.UI.RadSeparator
     Friend WithEvents lblWZKlasse2 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlWZGenauigkeitsklasse As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlWZGenauigkeitsklasse As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblWZKlasse As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadSeparator11 As Telerik.WinControls.UI.RadSeparator
     Friend WithEvents RadSeparator12 As Telerik.WinControls.UI.RadSeparator
-    Friend WithEvents RadTextBoxControlWZWiderstand As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlWZRueckkehrVorlastsignal As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlWZWiderstand As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlWZRueckkehrVorlastsignal As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadLabel55 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel56 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblWZWiderstandWZ As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblWZRueckkehrVorlastsignal As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlWZMinTeilungswert As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlWZHoechstteilungsfaktor As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlWZKriechteilungsfaktor As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlWZMaxTeilungswerte As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlWZWaegezellenkennwert As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlWZMindestvorlast As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlWZHoechstlast As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlWZMinTeilungswert As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlWZHoechstteilungsfaktor As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlWZKriechteilungsfaktor As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlWZMaxTeilungswerte As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlWZWaegezellenkennwert As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlWZMindestvorlast As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlWZHoechstlast As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadLabel60 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel61 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel62 As Telerik.WinControls.UI.RadLabel
@@ -4094,29 +4094,29 @@ Partial Class uco_3Kompatiblititaetsnachweis
     Friend WithEvents lblWZWaegezellenkennwert As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblWZMindestvorlast As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblWZHoechstlast As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlAWGTemperaturbereichMax As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlAWGTemperaturbereichMax As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadLabel51 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadSeparator9 As Telerik.WinControls.UI.RadSeparator
     Friend WithEvents lblAWGKlasse2 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlAWGKlasse As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlAWGKlasse As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblAWGKlasse As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadSeparator6 As Telerik.WinControls.UI.RadSeparator
     Friend WithEvents RadSeparator8 As Telerik.WinControls.UI.RadSeparator
-    Friend WithEvents RadTextBoxControlAWGKabellaenge As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlAWGAnschlussart As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlAWGKabellaenge As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlAWGAnschlussart As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadLabel30 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblKabel As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblAWGKabellaenge As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblAWGAnschlussart As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlAWGGrenzwerteLastwiderstandMax As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlAWGGrenzwerteLastwiderstandMax As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadLabel34 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlAWGGrenzwerteLastwiderstandMin As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlAWGTemperaturbereichMin As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlAWGBruchteilEichfehlergrenze As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlAWGMindestmesssignal As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlAWGMindesteingangsspannung As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlAWGSpeisespannung As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlAWGTeilungswerte As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlAWGGrenzwerteLastwiderstandMin As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlAWGTemperaturbereichMin As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlAWGBruchteilEichfehlergrenze As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlAWGMindestmesssignal As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlAWGMindesteingangsspannung As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlAWGSpeisespannung As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlAWGTeilungswerte As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadLabel35 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel36 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel37 As Telerik.WinControls.UI.RadLabel
@@ -4131,15 +4131,15 @@ Partial Class uco_3Kompatiblititaetsnachweis
     Friend WithEvents lblAWGMindesteingangsspannung As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblAWGSpeisespannung As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblAWGmaxAnzahlTeilungswerte As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadLabel76 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblVerbindungEichfehlergrenze As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlWZTemperaturbereichMAX As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlWZTemperaturbereichMAX As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadLabel78 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlWZBruchteilEichfehlergrenze As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlWZBruchteilEichfehlergrenze As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadLabel74 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblWZEichfehlergrenze As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlWZTemperaturbereichMIN As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlWZTemperaturbereichMIN As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadLabel52 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblWZTemperatur As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadSeparator13 As Telerik.WinControls.UI.RadSeparator

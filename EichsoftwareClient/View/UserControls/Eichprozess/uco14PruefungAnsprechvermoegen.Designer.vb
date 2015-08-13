@@ -29,15 +29,15 @@ Partial Class uco14PruefungAnsprechvermoegen
         Me.RadLabel1 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel2 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel3 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlLast1 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlLast2 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlLast3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlAnzeige1 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlAnzeige2 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlAnzeige3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControLastD1 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlLastD2 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlLastD3 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlLast1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlLast2 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlLast3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlAnzeige1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlAnzeige2 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlAnzeige3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControLastD1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlLastD2 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlLastD3 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxMin = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadCheckBoxHalb = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadCheckBoxMax = New Telerik.WinControls.UI.RadCheckBox()
@@ -295,7 +295,7 @@ Partial Class uco14PruefungAnsprechvermoegen
         '
         'RadTextBoxControLastD1
         '
-        Me.RadTextBoxControLastD1.IsReadOnly = True
+        Me.RadTextBoxControLastD1.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControLastD1, "RadTextBoxControLastD1")
         Me.RadTextBoxControLastD1.Name = "RadTextBoxControLastD1"
         '
@@ -313,7 +313,7 @@ Partial Class uco14PruefungAnsprechvermoegen
         '
         'RadTextBoxControlLastD2
         '
-        Me.RadTextBoxControlLastD2.IsReadOnly = True
+        Me.RadTextBoxControlLastD2.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlLastD2, "RadTextBoxControlLastD2")
         Me.RadTextBoxControlLastD2.Name = "RadTextBoxControlLastD2"
         '
@@ -331,7 +331,7 @@ Partial Class uco14PruefungAnsprechvermoegen
         '
         'RadTextBoxControlLastD3
         '
-        Me.RadTextBoxControlLastD3.IsReadOnly = True
+        Me.RadTextBoxControlLastD3.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlLastD3, "RadTextBoxControlLastD3")
         Me.RadTextBoxControlLastD3.Name = "RadTextBoxControlLastD3"
         '
@@ -611,15 +611,15 @@ Partial Class uco14PruefungAnsprechvermoegen
     Friend WithEvents lblLast1d As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel2 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel3 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlLast1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlLast2 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlLast3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlAnzeige1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlAnzeige2 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlAnzeige3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControLastD1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlLastD2 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlLastD3 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlLast1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlLast2 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlLast3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlAnzeige1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlAnzeige2 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlAnzeige3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControLastD1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlLastD2 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlLastD3 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxMin As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents RadCheckBoxHalb As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents RadCheckBoxMax As Telerik.WinControls.UI.RadCheckBox

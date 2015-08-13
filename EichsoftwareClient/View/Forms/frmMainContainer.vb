@@ -181,7 +181,7 @@ Public Class FrmMainContainer
         End If
         _CurrentUco.BringToFront()
         _CurrentUco.Dock = DockStyle.Fill
-
+        _CurrentUco.Focus()
         If Not CurrentEichprozess Is Nothing Then
             Select Case _CurrentUco.EichprozessStatusReihenfolge
                 Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe

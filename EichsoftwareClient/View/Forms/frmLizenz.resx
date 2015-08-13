@@ -208,7 +208,7 @@
     <value>RadTextBoxControl1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControl1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControl1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -256,7 +256,7 @@
     <value>RadTextBoxControl2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControl2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControl2.Parent" xml:space="preserve">
     <value>$this</value>
@@ -460,7 +460,7 @@
     <value>RadTextBoxControl3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControl3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControl3.Parent" xml:space="preserve">
     <value>$this</value>

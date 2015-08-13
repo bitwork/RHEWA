@@ -53,21 +53,21 @@ Partial Class uco13PruefungRollendeLasten
         Me.PictureBox11 = New System.Windows.Forms.PictureBox()
         Me.lblEFGWertLinks = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
-        Me.RadTextBoxControlLastLinks1 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlLastLinks1 = New Telerik.WinControls.UI.RadTextBox()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
-        Me.RadTextBoxControllastLinks3 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControllastLinks3 = New Telerik.WinControls.UI.RadTextBox()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
-        Me.RadTextBoxControlLastLinks2 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlAnzeigeLinks1 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlLastLinks2 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlAnzeigeLinks1 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadButtonShowEFG = New Telerik.WinControls.UI.RadButton()
-        Me.RadTextBoxControlAnzeigeLinks2 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlAnzeigeLinks2 = New Telerik.WinControls.UI.RadTextBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.RadTextBoxControlAnzeigeLinks3 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlAnzeigeLinks3 = New Telerik.WinControls.UI.RadTextBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.RadTextBoxControlFehlerLinks1 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlFehlerLinks1 = New Telerik.WinControls.UI.RadTextBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.RadTextBoxControlFehlerLinks2 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlFehlerLinks3 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlFehlerLinks2 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlFehlerLinks3 = New Telerik.WinControls.UI.RadTextBox()
         Me.lblEichfehlergrenze = New Telerik.WinControls.UI.RadLabel()
         Me.RadCheckBoxAuffahrtLinks1 = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadCheckBoxlblAuffahrtRechts3 = New Telerik.WinControls.UI.RadCheckBox()
@@ -76,24 +76,24 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadCheckBoxAuffahrtLinks3 = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadCheckBoxlblAuffahrtRechts1 = New Telerik.WinControls.UI.RadCheckBox()
         Me.lblBelastungsstelleRechts = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlFehlerRechts3 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlFehlerRechts3 = New Telerik.WinControls.UI.RadTextBox()
         Me.lblAuffahrtRechts1 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlFehlerRechts2 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlFehlerRechts2 = New Telerik.WinControls.UI.RadTextBox()
         Me.lblAuffahrtRechts2 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlFehlerRechts1 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlFehlerRechts1 = New Telerik.WinControls.UI.RadTextBox()
         Me.lblAuffahrtRechts3 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlAnzeigeRechts3 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlAnzeigeRechts3 = New Telerik.WinControls.UI.RadTextBox()
         Me.lblLastRechts = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlAnzeigeRechts2 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlAnzeigeRechts2 = New Telerik.WinControls.UI.RadTextBox()
         Me.lblAnzeigeRechts = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlAnzeigeRechts1 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlAnzeigeRechts1 = New Telerik.WinControls.UI.RadTextBox()
         Me.lblFehlerRechts = New Telerik.WinControls.UI.RadLabel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.RadTextBoxControlLastRechts2 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlLastRechts2 = New Telerik.WinControls.UI.RadTextBox()
         Me.lblEFGRechts = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlLastRechts3 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlLastRechts3 = New Telerik.WinControls.UI.RadTextBox()
         Me.lblEFGWertRechts = New Telerik.WinControls.UI.RadMaskedEditBox()
-        Me.RadTextBoxControlLastRechts1 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlLastRechts1 = New Telerik.WinControls.UI.RadTextBox()
         Me.PanelContainer = New Telerik.WinControls.UI.RadScrollablePanelContainer()
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanel1.PanelContainer.SuspendLayout()
@@ -685,7 +685,7 @@ Partial Class uco13PruefungRollendeLasten
         '
         'RadTextBoxControlFehlerLinks1
         '
-        Me.RadTextBoxControlFehlerLinks1.IsReadOnly = True
+        Me.RadTextBoxControlFehlerLinks1.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlFehlerLinks1, "RadTextBoxControlFehlerLinks1")
         Me.RadTextBoxControlFehlerLinks1.Name = "RadTextBoxControlFehlerLinks1"
         '
@@ -710,7 +710,7 @@ Partial Class uco13PruefungRollendeLasten
         '
         'RadTextBoxControlFehlerLinks2
         '
-        Me.RadTextBoxControlFehlerLinks2.IsReadOnly = True
+        Me.RadTextBoxControlFehlerLinks2.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlFehlerLinks2, "RadTextBoxControlFehlerLinks2")
         Me.RadTextBoxControlFehlerLinks2.Name = "RadTextBoxControlFehlerLinks2"
         '
@@ -728,7 +728,7 @@ Partial Class uco13PruefungRollendeLasten
         '
         'RadTextBoxControlFehlerLinks3
         '
-        Me.RadTextBoxControlFehlerLinks3.IsReadOnly = True
+        Me.RadTextBoxControlFehlerLinks3.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlFehlerLinks3, "RadTextBoxControlFehlerLinks3")
         Me.RadTextBoxControlFehlerLinks3.Name = "RadTextBoxControlFehlerLinks3"
         '
@@ -880,7 +880,7 @@ Partial Class uco13PruefungRollendeLasten
         '
         'RadTextBoxControlFehlerRechts3
         '
-        Me.RadTextBoxControlFehlerRechts3.IsReadOnly = True
+        Me.RadTextBoxControlFehlerRechts3.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlFehlerRechts3, "RadTextBoxControlFehlerRechts3")
         Me.RadTextBoxControlFehlerRechts3.Name = "RadTextBoxControlFehlerRechts3"
         '
@@ -914,7 +914,7 @@ Partial Class uco13PruefungRollendeLasten
         '
         'RadTextBoxControlFehlerRechts2
         '
-        Me.RadTextBoxControlFehlerRechts2.IsReadOnly = True
+        Me.RadTextBoxControlFehlerRechts2.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlFehlerRechts2, "RadTextBoxControlFehlerRechts2")
         Me.RadTextBoxControlFehlerRechts2.Name = "RadTextBoxControlFehlerRechts2"
         '
@@ -948,7 +948,7 @@ Partial Class uco13PruefungRollendeLasten
         '
         'RadTextBoxControlFehlerRechts1
         '
-        Me.RadTextBoxControlFehlerRechts1.IsReadOnly = True
+        Me.RadTextBoxControlFehlerRechts1.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlFehlerRechts1, "RadTextBoxControlFehlerRechts1")
         Me.RadTextBoxControlFehlerRechts1.Name = "RadTextBoxControlFehlerRechts1"
         '
@@ -1258,24 +1258,24 @@ Partial Class uco13PruefungRollendeLasten
     Friend WithEvents PictureBox79 As System.Windows.Forms.PictureBox
     Friend WithEvents lblEFGWertLinks As Telerik.WinControls.UI.RadMaskedEditBox
     Friend WithEvents lblEFGLinks As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlLastLinks1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlFehlerRechts3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControllastLinks3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlFehlerRechts2 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlLastLinks2 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlFehlerRechts1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlAnzeigeLinks1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlAnzeigeRechts3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlAnzeigeLinks2 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlAnzeigeRechts2 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlAnzeigeLinks3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlAnzeigeRechts1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlFehlerLinks1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlLastRechts2 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlFehlerLinks2 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlLastRechts3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlFehlerLinks3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlLastRechts1 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlLastLinks1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlFehlerRechts3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControllastLinks3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlFehlerRechts2 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlLastLinks2 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlFehlerRechts1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlAnzeigeLinks1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlAnzeigeRechts3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlAnzeigeLinks2 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlAnzeigeRechts2 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlAnzeigeLinks3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlAnzeigeRechts1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlFehlerLinks1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlLastRechts2 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlFehlerLinks2 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlLastRechts3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlFehlerLinks3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlLastRechts1 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxAuffahrtLinks1 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents RadCheckBoxlblAuffahrtRechts3 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents RadCheckBoxAuffahrtLinks2 As Telerik.WinControls.UI.RadCheckBox

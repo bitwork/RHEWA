@@ -24,12 +24,12 @@ Partial Class FrmLizenz
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmLizenz))
         Me.lblName = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControl1 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControl2 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControl1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControl2 = New Telerik.WinControls.UI.RadTextBox()
         Me.lblLizenzschuessel = New Telerik.WinControls.UI.RadLabel()
         Me.RadButtonOK = New Telerik.WinControls.UI.RadButton()
         Me.RadCheckBoxAkzeptieren = New Telerik.WinControls.UI.RadCheckBox()
-        Me.RadTextBoxControl3 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControl3 = New Telerik.WinControls.UI.RadTextBox()
         Me.lblLizenzabkommen = New Telerik.WinControls.UI.RadLabel()
         Me.RadButtonChangeLanguageToPolish = New Telerik.WinControls.UI.RadButton()
         Me.RadButtonChangeLanguageToEnglish = New Telerik.WinControls.UI.RadButton()
@@ -149,8 +149,7 @@ Partial Class FrmLizenz
         'RadTextBoxControl3
         '
         resources.ApplyResources(Me.RadTextBoxControl3, "RadTextBoxControl3")
-        Me.RadTextBoxControl3.IsReadOnly = True
-        Me.RadTextBoxControl3.IsReadOnlyCaretVisible = True
+        Me.RadTextBoxControl3.ReadOnly = True
         Me.RadTextBoxControl3.Multiline = True
         Me.RadTextBoxControl3.Name = "RadTextBoxControl3"
         '
@@ -309,12 +308,12 @@ Partial Class FrmLizenz
 
     End Sub
     Friend WithEvents lblName As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControl1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControl2 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControl1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControl2 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblLizenzschuessel As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadButtonOK As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadCheckBoxAkzeptieren As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents RadTextBoxControl3 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControl3 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblLizenzabkommen As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadButtonChangeLanguageToPolish As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadButtonChangeLanguageToEnglish As Telerik.WinControls.UI.RadButton

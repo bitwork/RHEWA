@@ -32,12 +32,12 @@ Partial Class ucoEichfehlergrenzen
         Me.RadTextBoxControlBereich1EFG2000e = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.RadTextBoxControlBereich1EFG500e = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.RadTextBoxControlBereich1EFG20e = New Telerik.WinControls.UI.RadMaskedEditBox()
-        Me.RadTextBoxControlBereich1e2000Bis = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich1e500Bis = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich1e20Bis = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich1e2000 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich1e500 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich1e20 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBereich1e2000Bis = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich1e500Bis = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich1e20Bis = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich1e2000 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich1e500 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich1e20 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadLabel19 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel20 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel21 = New Telerik.WinControls.UI.RadLabel()
@@ -68,12 +68,12 @@ Partial Class ucoEichfehlergrenzen
         Me.RadTextBoxControlBereich2EFG2000e = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.RadTextBoxControlBereich2EFG500e = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.RadTextBoxControlBereich2EFG20e = New Telerik.WinControls.UI.RadMaskedEditBox()
-        Me.RadTextBoxControlBereich2e2000Bis = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich2e500Bis = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich2e20Bis = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich2e2000 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich2e500 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich2e20 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBereich2e2000Bis = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2e500Bis = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2e20Bis = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2e2000 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2e500 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2e20 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadLabel6 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel22 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel23 = New Telerik.WinControls.UI.RadLabel()
@@ -104,12 +104,12 @@ Partial Class ucoEichfehlergrenzen
         Me.RadTextBoxControlBereich3EFG2000e = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.RadTextBoxControlBereich3EFG500e = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.RadTextBoxControlBereich3EFG20e = New Telerik.WinControls.UI.RadMaskedEditBox()
-        Me.RadTextBoxControlBereich3e2000Bis = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich3e500Bis = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich3e20Bis = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich3e2000 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich3e500 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich3e20 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBereich3e2000Bis = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich3e500Bis = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich3e20Bis = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich3e2000 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich3e500 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich3e20 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadLabel44 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel45 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel46 = New Telerik.WinControls.UI.RadLabel()
@@ -473,7 +473,7 @@ Partial Class ucoEichfehlergrenzen
         'RadTextBoxControlBereich1e2000Bis
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1e2000Bis, "RadTextBoxControlBereich1e2000Bis")
-        Me.RadTextBoxControlBereich1e2000Bis.IsReadOnly = True
+        Me.RadTextBoxControlBereich1e2000Bis.ReadOnly = True
         Me.RadTextBoxControlBereich1e2000Bis.Name = "RadTextBoxControlBereich1e2000Bis"
         Me.RadTextBoxControlBereich1e2000Bis.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -495,7 +495,7 @@ Partial Class ucoEichfehlergrenzen
         'RadTextBoxControlBereich1e500Bis
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1e500Bis, "RadTextBoxControlBereich1e500Bis")
-        Me.RadTextBoxControlBereich1e500Bis.IsReadOnly = True
+        Me.RadTextBoxControlBereich1e500Bis.ReadOnly = True
         Me.RadTextBoxControlBereich1e500Bis.Name = "RadTextBoxControlBereich1e500Bis"
         Me.RadTextBoxControlBereich1e500Bis.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -517,7 +517,7 @@ Partial Class ucoEichfehlergrenzen
         'RadTextBoxControlBereich1e20Bis
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1e20Bis, "RadTextBoxControlBereich1e20Bis")
-        Me.RadTextBoxControlBereich1e20Bis.IsReadOnly = True
+        Me.RadTextBoxControlBereich1e20Bis.ReadOnly = True
         Me.RadTextBoxControlBereich1e20Bis.Name = "RadTextBoxControlBereich1e20Bis"
         Me.RadTextBoxControlBereich1e20Bis.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -539,7 +539,7 @@ Partial Class ucoEichfehlergrenzen
         'RadTextBoxControlBereich1e2000
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1e2000, "RadTextBoxControlBereich1e2000")
-        Me.RadTextBoxControlBereich1e2000.IsReadOnly = True
+        Me.RadTextBoxControlBereich1e2000.ReadOnly = True
         Me.RadTextBoxControlBereich1e2000.Name = "RadTextBoxControlBereich1e2000"
         Me.RadTextBoxControlBereich1e2000.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -561,7 +561,7 @@ Partial Class ucoEichfehlergrenzen
         'RadTextBoxControlBereich1e500
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1e500, "RadTextBoxControlBereich1e500")
-        Me.RadTextBoxControlBereich1e500.IsReadOnly = True
+        Me.RadTextBoxControlBereich1e500.ReadOnly = True
         Me.RadTextBoxControlBereich1e500.Name = "RadTextBoxControlBereich1e500"
         Me.RadTextBoxControlBereich1e500.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -583,7 +583,7 @@ Partial Class ucoEichfehlergrenzen
         'RadTextBoxControlBereich1e20
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1e20, "RadTextBoxControlBereich1e20")
-        Me.RadTextBoxControlBereich1e20.IsReadOnly = True
+        Me.RadTextBoxControlBereich1e20.ReadOnly = True
         Me.RadTextBoxControlBereich1e20.Name = "RadTextBoxControlBereich1e20"
         Me.RadTextBoxControlBereich1e20.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -1230,7 +1230,7 @@ Partial Class ucoEichfehlergrenzen
         'RadTextBoxControlBereich2e2000Bis
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2e2000Bis, "RadTextBoxControlBereich2e2000Bis")
-        Me.RadTextBoxControlBereich2e2000Bis.IsReadOnly = True
+        Me.RadTextBoxControlBereich2e2000Bis.ReadOnly = True
         Me.RadTextBoxControlBereich2e2000Bis.Name = "RadTextBoxControlBereich2e2000Bis"
         Me.RadTextBoxControlBereich2e2000Bis.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -1252,7 +1252,7 @@ Partial Class ucoEichfehlergrenzen
         'RadTextBoxControlBereich2e500Bis
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2e500Bis, "RadTextBoxControlBereich2e500Bis")
-        Me.RadTextBoxControlBereich2e500Bis.IsReadOnly = True
+        Me.RadTextBoxControlBereich2e500Bis.ReadOnly = True
         Me.RadTextBoxControlBereich2e500Bis.Name = "RadTextBoxControlBereich2e500Bis"
         Me.RadTextBoxControlBereich2e500Bis.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -1274,7 +1274,7 @@ Partial Class ucoEichfehlergrenzen
         'RadTextBoxControlBereich2e20Bis
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2e20Bis, "RadTextBoxControlBereich2e20Bis")
-        Me.RadTextBoxControlBereich2e20Bis.IsReadOnly = True
+        Me.RadTextBoxControlBereich2e20Bis.ReadOnly = True
         Me.RadTextBoxControlBereich2e20Bis.Name = "RadTextBoxControlBereich2e20Bis"
         Me.RadTextBoxControlBereich2e20Bis.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -1296,7 +1296,7 @@ Partial Class ucoEichfehlergrenzen
         'RadTextBoxControlBereich2e2000
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2e2000, "RadTextBoxControlBereich2e2000")
-        Me.RadTextBoxControlBereich2e2000.IsReadOnly = True
+        Me.RadTextBoxControlBereich2e2000.ReadOnly = True
         Me.RadTextBoxControlBereich2e2000.Name = "RadTextBoxControlBereich2e2000"
         Me.RadTextBoxControlBereich2e2000.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -1318,7 +1318,7 @@ Partial Class ucoEichfehlergrenzen
         'RadTextBoxControlBereich2e500
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2e500, "RadTextBoxControlBereich2e500")
-        Me.RadTextBoxControlBereich2e500.IsReadOnly = True
+        Me.RadTextBoxControlBereich2e500.ReadOnly = True
         Me.RadTextBoxControlBereich2e500.Name = "RadTextBoxControlBereich2e500"
         Me.RadTextBoxControlBereich2e500.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -1340,7 +1340,7 @@ Partial Class ucoEichfehlergrenzen
         'RadTextBoxControlBereich2e20
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2e20, "RadTextBoxControlBereich2e20")
-        Me.RadTextBoxControlBereich2e20.IsReadOnly = True
+        Me.RadTextBoxControlBereich2e20.ReadOnly = True
         Me.RadTextBoxControlBereich2e20.Name = "RadTextBoxControlBereich2e20"
         Me.RadTextBoxControlBereich2e20.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -1987,7 +1987,7 @@ Partial Class ucoEichfehlergrenzen
         'RadTextBoxControlBereich3e2000Bis
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3e2000Bis, "RadTextBoxControlBereich3e2000Bis")
-        Me.RadTextBoxControlBereich3e2000Bis.IsReadOnly = True
+        Me.RadTextBoxControlBereich3e2000Bis.ReadOnly = True
         Me.RadTextBoxControlBereich3e2000Bis.Name = "RadTextBoxControlBereich3e2000Bis"
         Me.RadTextBoxControlBereich3e2000Bis.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -2009,7 +2009,7 @@ Partial Class ucoEichfehlergrenzen
         'RadTextBoxControlBereich3e500Bis
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3e500Bis, "RadTextBoxControlBereich3e500Bis")
-        Me.RadTextBoxControlBereich3e500Bis.IsReadOnly = True
+        Me.RadTextBoxControlBereich3e500Bis.ReadOnly = True
         Me.RadTextBoxControlBereich3e500Bis.Name = "RadTextBoxControlBereich3e500Bis"
         Me.RadTextBoxControlBereich3e500Bis.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -2031,7 +2031,7 @@ Partial Class ucoEichfehlergrenzen
         'RadTextBoxControlBereich3e20Bis
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3e20Bis, "RadTextBoxControlBereich3e20Bis")
-        Me.RadTextBoxControlBereich3e20Bis.IsReadOnly = True
+        Me.RadTextBoxControlBereich3e20Bis.ReadOnly = True
         Me.RadTextBoxControlBereich3e20Bis.Name = "RadTextBoxControlBereich3e20Bis"
         Me.RadTextBoxControlBereich3e20Bis.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -2053,7 +2053,7 @@ Partial Class ucoEichfehlergrenzen
         'RadTextBoxControlBereich3e2000
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3e2000, "RadTextBoxControlBereich3e2000")
-        Me.RadTextBoxControlBereich3e2000.IsReadOnly = True
+        Me.RadTextBoxControlBereich3e2000.ReadOnly = True
         Me.RadTextBoxControlBereich3e2000.Name = "RadTextBoxControlBereich3e2000"
         Me.RadTextBoxControlBereich3e2000.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -2075,7 +2075,7 @@ Partial Class ucoEichfehlergrenzen
         'RadTextBoxControlBereich3e500
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3e500, "RadTextBoxControlBereich3e500")
-        Me.RadTextBoxControlBereich3e500.IsReadOnly = True
+        Me.RadTextBoxControlBereich3e500.ReadOnly = True
         Me.RadTextBoxControlBereich3e500.Name = "RadTextBoxControlBereich3e500"
         Me.RadTextBoxControlBereich3e500.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -2097,7 +2097,7 @@ Partial Class ucoEichfehlergrenzen
         'RadTextBoxControlBereich3e20
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3e20, "RadTextBoxControlBereich3e20")
-        Me.RadTextBoxControlBereich3e20.IsReadOnly = True
+        Me.RadTextBoxControlBereich3e20.ReadOnly = True
         Me.RadTextBoxControlBereich3e20.Name = "RadTextBoxControlBereich3e20"
         Me.RadTextBoxControlBereich3e20.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -2672,12 +2672,12 @@ Partial Class ucoEichfehlergrenzen
     Friend WithEvents RadTextBoxControlBereich1EFG2000e As Telerik.WinControls.UI.RadMaskedEditBox
     Friend WithEvents RadTextBoxControlBereich1EFG500e As Telerik.WinControls.UI.RadMaskedEditBox
     Friend WithEvents RadTextBoxControlBereich1EFG20e As Telerik.WinControls.UI.RadMaskedEditBox
-    Friend WithEvents RadTextBoxControlBereich1e2000Bis As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich1e500Bis As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich1e20Bis As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich1e2000 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich1e500 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich1e20 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBereich1e2000Bis As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich1e500Bis As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich1e20Bis As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich1e2000 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich1e500 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich1e20 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadLabel23 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel22 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblVFG2 As Telerik.WinControls.UI.RadLabel
@@ -2689,12 +2689,12 @@ Partial Class ucoEichfehlergrenzen
     Friend WithEvents RadTextBoxControlBereich2EFG2000e As Telerik.WinControls.UI.RadMaskedEditBox
     Friend WithEvents RadTextBoxControlBereich2EFG500e As Telerik.WinControls.UI.RadMaskedEditBox
     Friend WithEvents RadTextBoxControlBereich2EFG20e As Telerik.WinControls.UI.RadMaskedEditBox
-    Friend WithEvents RadTextBoxControlBereich2e2000Bis As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich2e500Bis As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich2e20Bis As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich2e2000 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich2e500 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich2e20 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBereich2e2000Bis As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich2e500Bis As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich2e20Bis As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich2e2000 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich2e500 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich2e20 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadLabel24 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel25 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel26 As Telerik.WinControls.UI.RadLabel
@@ -2721,12 +2721,12 @@ Partial Class ucoEichfehlergrenzen
     Friend WithEvents RadTextBoxControlBereich3EFG2000e As Telerik.WinControls.UI.RadMaskedEditBox
     Friend WithEvents RadTextBoxControlBereich3EFG500e As Telerik.WinControls.UI.RadMaskedEditBox
     Friend WithEvents RadTextBoxControlBereich3EFG20e As Telerik.WinControls.UI.RadMaskedEditBox
-    Friend WithEvents RadTextBoxControlBereich3e2000Bis As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich3e500Bis As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich3e20Bis As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich3e2000 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich3e500 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich3e20 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBereich3e2000Bis As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich3e500Bis As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich3e20Bis As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich3e2000 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich3e500 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich3e20 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadLabel44 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel45 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel46 As Telerik.WinControls.UI.RadLabel

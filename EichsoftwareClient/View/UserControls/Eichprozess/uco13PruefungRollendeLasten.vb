@@ -57,28 +57,28 @@
     Private Sub RadTextBoxControlLastLinks1_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles RadTextBoxControlLastRechts3.Validating, RadTextBoxControlLastRechts2.Validating, RadTextBoxControlLastRechts1.Validating, RadTextBoxControllastLinks3.Validating, RadTextBoxControlLastLinks2.Validating, RadTextBoxControlLastLinks1.Validating, RadTextBoxControlAnzeigeRechts3.Validating, RadTextBoxControlAnzeigeRechts2.Validating, RadTextBoxControlAnzeigeRechts1.Validating, RadTextBoxControlAnzeigeLinks3.Validating, RadTextBoxControlAnzeigeLinks2.Validating, RadTextBoxControlAnzeigeLinks1.Validating
 
         Dim result As Decimal
-        If Not sender.isreadonly = True Then
+        If Not sender.readonly = True Then
 
             'damit das Vorgehen nicht so aggresiv ist, wird es bei leerem Text ignoriert:
-            If CType(sender, Telerik.WinControls.UI.RadTextBoxControl).Text.Equals("") Then
-                CType(sender, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.FromArgb(0, 255, 255, 255)
+            If CType(sender, Telerik.WinControls.UI.RadTextBox).Text.Equals("") Then
+                CType(sender, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.FromArgb(0, 255, 255, 255)
                 Exit Sub
             End If
 
             'versuchen ob der Text in eine Zahl konvertiert werden kann
-            If Not Decimal.TryParse(CType(sender, Telerik.WinControls.UI.RadTextBoxControl).Text, result) Then
+            If Not Decimal.TryParse(CType(sender, Telerik.WinControls.UI.RadTextBox).Text, result) Then
                 e.Cancel = True
-                CType(sender, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.Red
+                CType(sender, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
                 System.Media.SystemSounds.Exclamation.Play()
 
             Else 'rahmen zurücksetzen
-                CType(sender, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.FromArgb(0, 255, 255, 255)
+                CType(sender, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.FromArgb(0, 255, 255, 255)
             End If
         End If
 
     End Sub
 
-    Private Sub BerechneFehlerundEFGLinks(Optional Sender As Telerik.WinControls.UI.RadTextBoxControl = Nothing)
+    Private Sub BerechneFehlerundEFGLinks(Optional Sender As Telerik.WinControls.UI.RadTextBox = Nothing)
         AktuellerStatusDirty = True
 
         'damit keine Event Kettenreaktion durchgeführt wird, werden die Events ab hier unterbrochen
@@ -174,7 +174,7 @@
 
         _suspendEvents = False
     End Sub
-    Private Sub BerechneFehlerundEFGRechts(Optional sender As Telerik.WinControls.UI.RadTextBoxControl = Nothing)
+    Private Sub BerechneFehlerundEFGRechts(Optional sender As Telerik.WinControls.UI.RadTextBox = Nothing)
 
         AktuellerStatusDirty = True
 
@@ -395,7 +395,7 @@
     Private Sub FillControls()
         'Steuerlemente füllen
         'dynamisches laden der Nullstellen:
-    
+
         HoleNullstellen()
 
 
@@ -499,7 +499,7 @@
     Private Sub UpdateObject()
         'neuen Context aufbauen
         Using Context As New EichsoftwareClientdatabaseEntities1
-      
+
 
             'jedes objekt initialisieren und aus context laden und updaten
             For Each obj In _ListPruefungRollendeLasten
@@ -571,7 +571,7 @@
         For Each obj In _ListPruefungRollendeLasten
             objEichprozess.Eichprotokoll.PruefungRollendeLasten.Add(obj)
         Next
-      
+
     End Sub
 
 
@@ -590,9 +590,9 @@
             RadCheckBoxAuffahrtLinks3.Checked = False And RadCheckBoxAuffahrtLinks3.Visible = True Then
             AbortSaveing = True
 
-            RadTextBoxControlAnzeigeLinks1.TextBoxElement.BorderColor = Color.Red
-            RadTextBoxControlAnzeigeLinks2.TextBoxElement.BorderColor = Color.Red
-            RadTextBoxControlAnzeigeLinks3.TextBoxElement.BorderColor = Color.Red
+            RadTextBoxControlAnzeigeLinks1.TextBoxElement.Border.ForeColor = Color.Red
+            RadTextBoxControlAnzeigeLinks2.TextBoxElement.Border.ForeColor = Color.Red
+            RadTextBoxControlAnzeigeLinks3.TextBoxElement.Border.ForeColor = Color.Red
 
         End If
 
@@ -601,9 +601,9 @@
               RadCheckBoxlblAuffahrtRechts2.Checked = False And RadCheckBoxlblAuffahrtRechts2.Visible = True Or _
               RadCheckBoxlblAuffahrtRechts3.Checked = False And RadCheckBoxlblAuffahrtRechts2.Visible = True Then
             AbortSaveing = True
-            RadTextBoxControlAnzeigeRechts1.TextBoxElement.BorderColor = Color.Red
-            RadTextBoxControlAnzeigeRechts2.TextBoxElement.BorderColor = Color.Red
-            RadTextBoxControlAnzeigeRechts3.TextBoxElement.BorderColor = Color.Red
+            RadTextBoxControlAnzeigeRechts1.TextBoxElement.Border.ForeColor = Color.Red
+            RadTextBoxControlAnzeigeRechts2.TextBoxElement.Border.ForeColor = Color.Red
+            RadTextBoxControlAnzeigeRechts3.TextBoxElement.Border.ForeColor = Color.Red
         End If
 
 

@@ -66,22 +66,22 @@ Public Class uco_9PruefungLinearitaet
 
 
         Dim result As Decimal
-        If Not sender.isreadonly = True Then
+        If Not sender.readonly = True Then
 
             'damit das Vorgehen nicht so aggresiv ist, wird es bei leerem Text ignoriert:
-            If CType(sender, Telerik.WinControls.UI.RadTextBoxControl).Text.Equals("") Then
-                CType(sender, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.FromArgb(0, 255, 255, 255)
+            If CType(sender, Telerik.WinControls.UI.RadTextBox).Text.Equals("") Then
+                CType(sender, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.FromArgb(0, 255, 255, 255)
                 Exit Sub
             End If
 
             'versuchen ob der Text in eine Zahl konvertiert werden kann
-            If Not Decimal.TryParse(CType(sender, Telerik.WinControls.UI.RadTextBoxControl).Text, result) Then
+            If Not Decimal.TryParse(CType(sender, Telerik.WinControls.UI.RadTextBox).Text, result) Then
                 e.Cancel = True
-                CType(sender, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.Red
+                CType(sender, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
                 System.Media.SystemSounds.Exclamation.Play()
 
             Else 'rahmen zurücksetzen
-                CType(sender, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.FromArgb(0, 255, 255, 255)
+                CType(sender, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.FromArgb(0, 255, 255, 255)
             End If
         End If
     End Sub
@@ -117,8 +117,8 @@ Public Class uco_9PruefungLinearitaet
         Dim Pruefung As String = GetPruefung(sender)
         Dim Messpunkt As String = GetMesspunkt(sender)
 
-        Dim CtrlSteigend As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}Weight{1}", CInt(Bereich), CInt(Messpunkt)))
-        Dim CtrlFallend As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}FallendWeight{1}", CInt(Bereich), CInt(Messpunkt)))
+        Dim CtrlSteigend As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}Weight{1}", CInt(Bereich), CInt(Messpunkt)))
+        Dim CtrlFallend As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}FallendWeight{1}", CInt(Bereich), CInt(Messpunkt)))
 
         If Pruefung = "" Then
             CtrlFallend.Text = CtrlSteigend.Text
@@ -316,8 +316,8 @@ Public Class uco_9PruefungLinearitaet
             Dim Messpunkt As Integer = objPruefung.Messpunkt
             Dim Bereich As Integer = objPruefung.Bereich
 
-            Dim ctrlLast As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}Weight{1}", Bereich, Messpunkt))
-            Dim ctrlAnzeige As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}DisplayWeight{1}", Bereich, Messpunkt))
+            Dim ctrlLast As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}Weight{1}", Bereich, Messpunkt))
+            Dim ctrlAnzeige As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}DisplayWeight{1}", Bereich, Messpunkt))
 
             _currentObjPruefungLinearitaetSteigend = Nothing
             _currentObjPruefungLinearitaetSteigend = objPruefung
@@ -379,8 +379,8 @@ Public Class uco_9PruefungLinearitaet
             Dim Messpunkt As Integer = objPruefung.Messpunkt
             Dim Bereich As Integer = objPruefung.Bereich
 
-            Dim ctrlLast As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}FallendWeight{1}", Bereich, Messpunkt))
-            Dim ctrlAnzeige As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}FallendDisplayWeight{1}", Bereich, Messpunkt))
+            Dim ctrlLast As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}FallendWeight{1}", Bereich, Messpunkt))
+            Dim ctrlAnzeige As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}FallendDisplayWeight{1}", Bereich, Messpunkt))
 
             _currentObjPruefungLinearitaetFallend = Nothing
             _currentObjPruefungLinearitaetFallend = objPruefung
@@ -454,9 +454,9 @@ Public Class uco_9PruefungLinearitaet
            Dim Messpunkt As Integer = PObjPruefung.Messpunkt
         Dim Bereich As Integer = PObjPruefung.Bereich
 
-        Dim ctrlLast As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}Weight{1}", Bereich, Messpunkt))
-        Dim ctrlAnzeige As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}DisplayWeight{1}", Bereich, Messpunkt))
-        Dim ctrlFehler As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}ErrorLimit{1}", Bereich, Messpunkt))
+        Dim ctrlLast As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}Weight{1}", Bereich, Messpunkt))
+        Dim ctrlAnzeige As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}DisplayWeight{1}", Bereich, Messpunkt))
+        Dim ctrlFehler As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}ErrorLimit{1}", Bereich, Messpunkt))
         Dim ctrlEFG As Telerik.WinControls.UI.RadCheckBox = FindControl(String.Format("RadCheckBoxBereich{0}VEL{1}", Bereich, Messpunkt))
 
         PObjPruefung.Last = ctrlLast.Text
@@ -475,9 +475,9 @@ Public Class uco_9PruefungLinearitaet
         Dim Messpunkt As Integer = PObjPruefung.Messpunkt
         Dim Bereich As Integer = PObjPruefung.Bereich
 
-        Dim ctrlLast As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}FallendWeight{1}", Bereich, Messpunkt))
-        Dim ctrlAnzeige As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}FallendDisplayWeight{1}", Bereich, Messpunkt))
-        Dim ctrlFehler As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}FallendErrorLimit{1}", Bereich, Messpunkt))
+        Dim ctrlLast As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}FallendWeight{1}", Bereich, Messpunkt))
+        Dim ctrlAnzeige As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}FallendDisplayWeight{1}", Bereich, Messpunkt))
+        Dim ctrlFehler As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}FallendErrorLimit{1}", Bereich, Messpunkt))
         Dim ctrlEFG As Telerik.WinControls.UI.RadCheckBox = FindControl(String.Format("RadCheckBoxBereich{0}FallendVEL{1}", Bereich, Messpunkt))
 
         PObjPruefung.Last = ctrlLast.Text
@@ -502,16 +502,16 @@ Public Class uco_9PruefungLinearitaet
                 Dim checkbox As Telerik.WinControls.UI.RadCheckBox = FindControl(String.Format("RadCheckBoxBereich{0}VEL{1}", j, i))
                 If checkbox.Checked = False And checkbox.Visible = True Then
                     AbortSaveing = True
-                    Dim textbox As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextboxControlBereich{0}DisplayWeight{1}", j, i))
-                    textbox.TextBoxElement.BorderColor = Color.Red
+                    Dim textbox As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextboxControlBereich{0}DisplayWeight{1}", j, i))
+                    textbox.TextBoxElement.Border.ForeColor = Color.Red
                 End If
 
                 checkbox = Nothing
                 checkbox = FindControl(String.Format("RadCheckBoxBereich{0}FallendVEL{1}", j, i))
                 If checkbox.Checked = False And checkbox.Visible = True Then
                     AbortSaveing = True
-                    Dim textbox As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextboxControlBereich{0}FallendDisplayWeight{1}", j, i))
-                    textbox.TextBoxElement.BorderColor = Color.Red
+                    Dim textbox As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextboxControlBereich{0}FallendDisplayWeight{1}", j, i))
+                    textbox.TextBoxElement.Border.ForeColor = Color.Red
                 End If
             Next
         Next
@@ -548,9 +548,9 @@ Public Class uco_9PruefungLinearitaet
         Next
     End Sub
 
-    Private Sub BerechneUndWeiseZu(ByRef FehlerGrenzeTextbox As Telerik.WinControls.UI.RadTextBoxControl, _
-    ByRef AnzeigeGewichtTextbox As Telerik.WinControls.UI.RadTextBoxControl, _
-    ByRef GewichtTextbox As Telerik.WinControls.UI.RadTextBoxControl, _
+    Private Sub BerechneUndWeiseZu(ByRef FehlerGrenzeTextbox As Telerik.WinControls.UI.RadTextBox, _
+    ByRef AnzeigeGewichtTextbox As Telerik.WinControls.UI.RadTextBox, _
+    ByRef GewichtTextbox As Telerik.WinControls.UI.RadTextBox, _
     ByRef Checkbox As Telerik.WinControls.UI.RadCheckBox, ByVal Bereich As Integer)
 
         If _suspendEvents = False Then
@@ -591,9 +591,9 @@ Public Class uco_9PruefungLinearitaet
     ''' <param name="Pruefung"></param>
     ''' <remarks></remarks>
     Private Sub Berechne(ByVal Pruefung As String, ByVal Bereich As String, ByVal Messpunkt As String)
-        Dim FehlerGrenzeTextbox As Telerik.WinControls.UI.RadTextBoxControl
-        Dim AnzeigeGewichtTextbox As Telerik.WinControls.UI.RadTextBoxControl
-        Dim GewichtTextbox As Telerik.WinControls.UI.RadTextBoxControl
+        Dim FehlerGrenzeTextbox As Telerik.WinControls.UI.RadTextBox
+        Dim AnzeigeGewichtTextbox As Telerik.WinControls.UI.RadTextBox
+        Dim GewichtTextbox As Telerik.WinControls.UI.RadTextBox
         Dim Checkbox As Telerik.WinControls.UI.RadCheckBox
 
 
@@ -623,9 +623,9 @@ Public Class uco_9PruefungLinearitaet
     ''' <param name="Pruefung"></param>
     ''' <remarks></remarks>
     Private Sub Berechne(ByVal Pruefung As String, ByVal Bereich As String)
-        Dim FehlerGrenzeTextbox As Telerik.WinControls.UI.RadTextBoxControl
-        Dim AnzeigeGewichtTextbox As Telerik.WinControls.UI.RadTextBoxControl
-        Dim GewichtTextbox As Telerik.WinControls.UI.RadTextBoxControl
+        Dim FehlerGrenzeTextbox As Telerik.WinControls.UI.RadTextBox
+        Dim AnzeigeGewichtTextbox As Telerik.WinControls.UI.RadTextBox
+        Dim GewichtTextbox As Telerik.WinControls.UI.RadTextBox
         Dim Checkbox As Telerik.WinControls.UI.RadCheckBox
 
 
@@ -659,9 +659,9 @@ Public Class uco_9PruefungLinearitaet
     ''' <param name="Pruefung"></param>
     ''' <remarks></remarks>
     Private Sub Berechne(ByVal Pruefung As String)
-        Dim FehlerGrenzeTextbox As Telerik.WinControls.UI.RadTextBoxControl
-        Dim AnzeigeGewichtTextbox As Telerik.WinControls.UI.RadTextBoxControl
-        Dim GewichtTextbox As Telerik.WinControls.UI.RadTextBoxControl
+        Dim FehlerGrenzeTextbox As Telerik.WinControls.UI.RadTextBox
+        Dim AnzeigeGewichtTextbox As Telerik.WinControls.UI.RadTextBox
+        Dim GewichtTextbox As Telerik.WinControls.UI.RadTextBox
         Dim Checkbox As Telerik.WinControls.UI.RadCheckBox
 
 

@@ -52,20 +52,20 @@ Partial Class uco19EichtechnischeSicherung
         Me.PictureBoxEichsiegel13x13 = New System.Windows.Forms.PictureBox()
         Me.lblBemerkungen = New Telerik.WinControls.UI.RadLabel()
         Me.PictureBoxBenannteStelle = New System.Windows.Forms.PictureBox()
-        Me.RadTextBoxControlBemerkungen = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlAufbewahrungsdauer = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBemerkungen = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlAufbewahrungsdauer = New Telerik.WinControls.UI.RadTextBox()
         Me.lblAnzahl = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlCEKennzeichen = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlCEKennzeichen = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBenannteStelle = New Telerik.WinControls.UI.RadCheckBox()
-        Me.RadTextBoxControlGruenesM = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlGruenesM = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxEichsiegel13x13 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.RadTextBoxControlHinweismarke = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlHinweismarke = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxEichsiegelRund = New Telerik.WinControls.UI.RadCheckBox()
-        Me.RadTextBoxControlEichsiegelRund = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlEichsiegelRund = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxHinweismarke = New Telerik.WinControls.UI.RadCheckBox()
-        Me.RadTextBoxControlEichsiegel13x13 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlEichsiegel13x13 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxGruenesM = New Telerik.WinControls.UI.RadCheckBox()
-        Me.RadTextBoxControlBenannteStelle = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBenannteStelle = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxCEKennzeichen = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadCheckBoxAufbewahrungsdauer = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadCheckBoxKonfigurationsProgramm = New Telerik.WinControls.UI.RadCheckBox()
@@ -516,7 +516,7 @@ Partial Class uco19EichtechnischeSicherung
         'RadTextBoxControlAufbewahrungsdauer
         '
         resources.ApplyResources(Me.RadTextBoxControlAufbewahrungsdauer, "RadTextBoxControlAufbewahrungsdauer")
-        Me.RadTextBoxControlAufbewahrungsdauer.IsReadOnly = True
+        Me.RadTextBoxControlAufbewahrungsdauer.ReadOnly = True
         Me.RadTextBoxControlAufbewahrungsdauer.Name = "RadTextBoxControlAufbewahrungsdauer"
         '
         '
@@ -553,7 +553,7 @@ Partial Class uco19EichtechnischeSicherung
         'RadTextBoxControlCEKennzeichen
         '
         resources.ApplyResources(Me.RadTextBoxControlCEKennzeichen, "RadTextBoxControlCEKennzeichen")
-        Me.RadTextBoxControlCEKennzeichen.IsReadOnly = True
+        Me.RadTextBoxControlCEKennzeichen.ReadOnly = True
         Me.RadTextBoxControlCEKennzeichen.Name = "RadTextBoxControlCEKennzeichen"
         '
         '
@@ -590,7 +590,7 @@ Partial Class uco19EichtechnischeSicherung
         'RadTextBoxControlGruenesM
         '
         resources.ApplyResources(Me.RadTextBoxControlGruenesM, "RadTextBoxControlGruenesM")
-        Me.RadTextBoxControlGruenesM.IsReadOnly = True
+        Me.RadTextBoxControlGruenesM.ReadOnly = True
         Me.RadTextBoxControlGruenesM.Name = "RadTextBoxControlGruenesM"
         '
         '
@@ -627,7 +627,7 @@ Partial Class uco19EichtechnischeSicherung
         'RadTextBoxControlHinweismarke
         '
         resources.ApplyResources(Me.RadTextBoxControlHinweismarke, "RadTextBoxControlHinweismarke")
-        Me.RadTextBoxControlHinweismarke.IsReadOnly = True
+        Me.RadTextBoxControlHinweismarke.ReadOnly = True
         Me.RadTextBoxControlHinweismarke.Name = "RadTextBoxControlHinweismarke"
         '
         '
@@ -664,7 +664,7 @@ Partial Class uco19EichtechnischeSicherung
         'RadTextBoxControlEichsiegelRund
         '
         resources.ApplyResources(Me.RadTextBoxControlEichsiegelRund, "RadTextBoxControlEichsiegelRund")
-        Me.RadTextBoxControlEichsiegelRund.IsReadOnly = True
+        Me.RadTextBoxControlEichsiegelRund.ReadOnly = True
         Me.RadTextBoxControlEichsiegelRund.Name = "RadTextBoxControlEichsiegelRund"
         '
         '
@@ -701,7 +701,7 @@ Partial Class uco19EichtechnischeSicherung
         'RadTextBoxControlEichsiegel13x13
         '
         resources.ApplyResources(Me.RadTextBoxControlEichsiegel13x13, "RadTextBoxControlEichsiegel13x13")
-        Me.RadTextBoxControlEichsiegel13x13.IsReadOnly = True
+        Me.RadTextBoxControlEichsiegel13x13.ReadOnly = True
         Me.RadTextBoxControlEichsiegel13x13.Name = "RadTextBoxControlEichsiegel13x13"
         '
         '
@@ -738,7 +738,7 @@ Partial Class uco19EichtechnischeSicherung
         'RadTextBoxControlBenannteStelle
         '
         resources.ApplyResources(Me.RadTextBoxControlBenannteStelle, "RadTextBoxControlBenannteStelle")
-        Me.RadTextBoxControlBenannteStelle.IsReadOnly = True
+        Me.RadTextBoxControlBenannteStelle.ReadOnly = True
         Me.RadTextBoxControlBenannteStelle.Name = "RadTextBoxControlBenannteStelle"
         '
         '
@@ -889,7 +889,7 @@ Partial Class uco19EichtechnischeSicherung
     Friend WithEvents lblAlibispeicher As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblAufbewahrungsdauer As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblBemerkungen As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBemerkungen As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBemerkungen As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblAnzahl As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadCheckBoxBenannteStelle As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents RadCheckBoxEichsiegel13x13 As Telerik.WinControls.UI.RadCheckBox
@@ -900,13 +900,13 @@ Partial Class uco19EichtechnischeSicherung
     Friend WithEvents RadCheckBoxKonfigurationsProgramm As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents RadCheckBoxAlibispeicher As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents RadCheckBoxAufbewahrungsdauer As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents RadTextBoxControlBenannteStelle As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlEichsiegel13x13 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlEichsiegelRund As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlCEKennzeichen As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlGruenesM As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlHinweismarke As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlAufbewahrungsdauer As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBenannteStelle As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlEichsiegel13x13 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlEichsiegelRund As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlCEKennzeichen As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlGruenesM As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlHinweismarke As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlAufbewahrungsdauer As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents PictureBoxBenannteStelle As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBoxEichsiegel13x13 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBoxHinweismarke As System.Windows.Forms.PictureBox

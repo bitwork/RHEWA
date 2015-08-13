@@ -1151,7 +1151,7 @@
     <value>RadTextBoxControlLastLinks1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlLastLinks1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlLastLinks1.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -1223,7 +1223,7 @@
     <value>RadTextBoxControllastLinks3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControllastLinks3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControllastLinks3.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -1295,7 +1295,7 @@
     <value>RadTextBoxControlLastLinks2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlLastLinks2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlLastLinks2.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -1343,7 +1343,7 @@
     <value>RadTextBoxControlAnzeigeLinks1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAnzeigeLinks1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAnzeigeLinks1.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -1442,7 +1442,7 @@
     <value>RadTextBoxControlAnzeigeLinks2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAnzeigeLinks2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAnzeigeLinks2.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -1511,7 +1511,7 @@
     <value>RadTextBoxControlAnzeigeLinks3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAnzeigeLinks3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAnzeigeLinks3.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -1580,7 +1580,7 @@
     <value>RadTextBoxControlFehlerLinks1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlFehlerLinks1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlFehlerLinks1.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -1649,7 +1649,7 @@
     <value>RadTextBoxControlFehlerLinks2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlFehlerLinks2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlFehlerLinks2.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -1697,7 +1697,7 @@
     <value>RadTextBoxControlFehlerLinks3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlFehlerLinks3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlFehlerLinks3.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -2114,7 +2114,7 @@
     <value>RadTextBoxControlFehlerRechts3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlFehlerRechts3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlFehlerRechts3.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -2210,7 +2210,7 @@
     <value>RadTextBoxControlFehlerRechts2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlFehlerRechts2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlFehlerRechts2.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -2306,7 +2306,7 @@
     <value>RadTextBoxControlFehlerRechts1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlFehlerRechts1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlFehlerRechts1.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -2402,7 +2402,7 @@
     <value>RadTextBoxControlAnzeigeRechts3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAnzeigeRechts3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAnzeigeRechts3.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -2501,7 +2501,7 @@
     <value>RadTextBoxControlAnzeigeRechts2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAnzeigeRechts2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAnzeigeRechts2.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -2600,7 +2600,7 @@
     <value>RadTextBoxControlAnzeigeRechts1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAnzeigeRechts1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlAnzeigeRechts1.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -2723,7 +2723,7 @@
     <value>RadTextBoxControlLastRechts2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlLastRechts2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlLastRechts2.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -2822,7 +2822,7 @@
     <value>RadTextBoxControlLastRechts3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlLastRechts3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlLastRechts3.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -2921,7 +2921,7 @@
     <value>RadTextBoxControlLastRechts1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlLastRechts1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlLastRechts1.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>

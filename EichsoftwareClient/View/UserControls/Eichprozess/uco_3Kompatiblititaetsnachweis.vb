@@ -136,7 +136,7 @@
                     Control.readonly = True
                 Catch ex As Exception
                     Try
-                        Control.isreadonly = True
+                        Control.readonly = True
                     Catch ex2 As Exception
                         Try
                             Control.enabled = False
@@ -145,6 +145,30 @@
                     End Try
                 End Try
             Next
+            'For Each Control In Me.RadGroupBoxAWG.Controls
+            '    Try
+            '        Control.readonly = False
+            '    Catch ex As Exception
+            '    End Try
+            'Next
+            'For Each Control In Me.RadGroupBoxVerbindungselemente.Controls
+            '    Try
+            '        Control.readonly = False
+            '    Catch ex As Exception
+            '    End Try
+            'Next
+            'For Each Control In Me.RadGroupBoxWaage.Controls
+            '    Try
+            '        Control.readonly = False
+            '    Catch ex As Exception
+            '    End Try
+            'Next
+            'For Each Control In Me.RadGroupBoxWZ.Controls
+            '    Try
+            '        Control.readonly = False
+            '    Catch ex As Exception
+            '    End Try
+            'Next
         End If
 
 
@@ -348,17 +372,17 @@
 
 
             'felder beschreiben lassen
-            RadTextBoxControlWZGenauigkeitsklasse.IsReadOnly = False
+            RadTextBoxControlWZGenauigkeitsklasse.readonly = False
             RadTextBoxControlWZGenauigkeitsklasse.Enabled = True
 
-            RadTextBoxControlWZHoechstteilungsfaktor.IsReadOnly = False
-            RadTextBoxControlWZKriechteilungsfaktor.IsReadOnly = False
-            RadTextBoxControlWZMaxTeilungswerte.IsReadOnly = False
-            RadTextBoxControlWZMindestvorlast.IsReadOnly = False
-            RadTextBoxControlWZMinTeilungswert.IsReadOnly = False
-            RadTextBoxControlWZRueckkehrVorlastsignal.IsReadOnly = False
-            RadTextBoxControlWZWaegezellenkennwert.IsReadOnly = False
-            RadTextBoxControlWZWiderstand.IsReadOnly = False
+            RadTextBoxControlWZHoechstteilungsfaktor.readonly = False
+            RadTextBoxControlWZKriechteilungsfaktor.readonly = False
+            RadTextBoxControlWZMaxTeilungswerte.readonly = False
+            RadTextBoxControlWZMindestvorlast.readonly = False
+            RadTextBoxControlWZMinTeilungswert.readonly = False
+            RadTextBoxControlWZRueckkehrVorlastsignal.readonly = False
+            RadTextBoxControlWZWaegezellenkennwert.readonly = False
+            RadTextBoxControlWZWiderstand.readonly = False
 
             'tabstops erlauben
             RadTextBoxControlWZGenauigkeitsklasse.TabStop = True
@@ -384,16 +408,16 @@
             PictureBoxWZ11.Visible = True
 
 
-            RadTextBoxControlWZGenauigkeitsklasse.IsReadOnly = True
+            RadTextBoxControlWZGenauigkeitsklasse.readonly = True
 
-            RadTextBoxControlWZHoechstteilungsfaktor.IsReadOnly = True
-            RadTextBoxControlWZKriechteilungsfaktor.IsReadOnly = True
-            RadTextBoxControlWZMaxTeilungswerte.IsReadOnly = True
-            RadTextBoxControlWZMindestvorlast.IsReadOnly = True
-            RadTextBoxControlWZMinTeilungswert.IsReadOnly = True
-            RadTextBoxControlWZRueckkehrVorlastsignal.IsReadOnly = True
-            RadTextBoxControlWZWaegezellenkennwert.IsReadOnly = True
-            RadTextBoxControlWZWiderstand.IsReadOnly = True
+            RadTextBoxControlWZHoechstteilungsfaktor.readonly = True
+            RadTextBoxControlWZKriechteilungsfaktor.readonly = True
+            RadTextBoxControlWZMaxTeilungswerte.readonly = True
+            RadTextBoxControlWZMindestvorlast.readonly = True
+            RadTextBoxControlWZMinTeilungswert.readonly = True
+            RadTextBoxControlWZRueckkehrVorlastsignal.readonly = True
+            RadTextBoxControlWZWaegezellenkennwert.readonly = True
+            RadTextBoxControlWZWiderstand.readonly = True
 
             'tabstops verbieten
             RadTextBoxControlWZGenauigkeitsklasse.TabStop = False
@@ -516,8 +540,8 @@
         For Each GroupBox In RadScrollablePanel1.PanelContainer.Controls
             If TypeOf GroupBox Is Telerik.WinControls.UI.RadGroupBox Then
                 For Each Control In GroupBox.controls
-                    If TypeOf Control Is Telerik.WinControls.UI.RadTextBoxControl Then
-                        If Control.isreadonly = False AndAlso Control.visible = True Then
+                    If TypeOf Control Is Telerik.WinControls.UI.RadTextBox Then
+                        If Control.readonly = False AndAlso Control.visible = True Then
 
                             'anzahl wZ limitieren
                             If Control.Equals(RadTextBoxControlWaageAnzahlWaegezellen) Then
@@ -525,16 +549,16 @@
                                 If Not String.IsNullOrWhiteSpace(RadTextBoxControlWaageAnzahlWaegezellen.Text) Then
                                     If CInt(RadTextBoxControlWaageAnzahlWaegezellen.Text) > 12 Then
                                         RadTextBoxControlWaageAnzahlWaegezellen.Text = 12
-                                        CType(Control, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.Red
-                                        'CType(Control, Telerik.WinControls.UI.RadTextBoxControl).Focus()
+                                        CType(Control, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
+                                        'CType(Control, Telerik.WinControls.UI.RadTextBox).Focus()
                                         'Return False
                                         Me.AbortSaveing = True
                                         Continue For
                                     End If
                                     If CInt(RadTextBoxControlWaageAnzahlWaegezellen.Text) < 1 Then
                                         RadTextBoxControlWaageAnzahlWaegezellen.Text = 1
-                                        CType(Control, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.Red
-                                        'CType(Control, Telerik.WinControls.UI.RadTextBoxControl).Focus()
+                                        CType(Control, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
+                                        'CType(Control, Telerik.WinControls.UI.RadTextBox).Focus()
                                         'Return False
                                         Me.AbortSaveing = True
                                         Continue For
@@ -588,8 +612,8 @@
 
                                 Me.AbortSaveing = True
 
-                                CType(Control, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.Red
-                                ' CType(Control, Telerik.WinControls.UI.RadTextBoxControl).Focus()
+                                CType(Control, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
+                                ' CType(Control, Telerik.WinControls.UI.RadTextBox).Focus()
                                 '  Return False
 
                             End If
@@ -599,7 +623,7 @@
             End If
         Next
 
-        If RadTextBoxControlWZGenauigkeitsklasse.IsReadOnly = False Then
+        If RadTextBoxControlWZGenauigkeitsklasse.readonly = False Then
             If RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper = "A" _
           Or RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper = "B" _
           Or RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper = "C" _
@@ -612,13 +636,13 @@
                 'Ungültiger Wert für Genauigikeitsklasse
                 MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_GenaugigkeitsklasseUnguelitg, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 Me.AbortSaveing = True
-                RadTextBoxControlWZGenauigkeitsklasse.TextBoxElement.BorderColor = Color.Red
+                RadTextBoxControlWZGenauigkeitsklasse.TextBoxElement.Border.ForeColor = Color.Red
                 RadTextBoxControlWZGenauigkeitsklasse.Focus()
                 Return False
             End If
         End If
 
-      
+
 
         If Me.AbortSaveing = True Then
             If Debugger.IsAttached Then 'standardwerte füllen für schnelleres testen
@@ -905,8 +929,8 @@
                 RadTextBoxControlWZBruchteilEichfehlergrenze.MouseHover,
                 RadTextBoxControlWZTemperaturbereichMIN.MouseHover
 
-        Dim senderControl As Telerik.WinControls.UI.RadTextBoxControl
-        senderControl = TryCast(sender, Telerik.WinControls.UI.RadTextBoxControl)
+        Dim senderControl As Telerik.WinControls.UI.RadTextBox
+        senderControl = TryCast(sender, Telerik.WinControls.UI.RadTextBox)
 
         If Not senderControl Is Nothing Then
             Select Case senderControl.Name
@@ -1053,29 +1077,29 @@
     ''' <remarks></remarks>
     Private Sub RadTextBoxControlWaageHoechstlast1_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles RadTextBoxControlWZWiderstand.Validating, RadTextBoxControlWZWaegezellenkennwert.Validating, RadTextBoxControlWZTemperaturbereichMIN.Validating, RadTextBoxControlWZTemperaturbereichMAX.Validating, RadTextBoxControlWZRueckkehrVorlastsignal.Validating, RadTextBoxControlWZMinTeilungswert.Validating, RadTextBoxControlWZMindestvorlast.Validating, RadTextBoxControlWZMaxTeilungswerte.Validating, RadTextBoxControlWZKriechteilungsfaktor.Validating, RadTextBoxControlWZHoechstteilungsfaktor.Validating, RadTextBoxControlWZHoechstlast.Validating, RadTextBoxControlWZBruchteilEichfehlergrenze.Validating, RadTextBoxControlWaageUebersetzungsverhaeltnis.Validating, RadTextBoxControlWaageTotlast.Validating, RadTextBoxControlWaageKabelquerschnitt.Validating, RadTextBoxControlWaageKabellaenge.Validating, RadTextBoxControlWaageHoechstlast3.Validating, RadTextBoxControlWaageHoechstlast2.Validating, RadTextBoxControlWaageHoechstlast1.Validating, RadTextBoxControlWaageEichwert3.Validating, RadTextBoxControlWaageEichwert2.Validating, RadTextBoxControlWaageEichwert1.Validating, RadTextBoxControlWaageEcklastzuschlag.Validating, RadTextBoxControlWaageAnzahlWaegezellen.Validating, RadTextBoxControlEinschaltnullstellbereich.Validating, RadTextBoxControlAWGAnschlussart.Validating
         Dim result As Decimal
-        If Not sender.isreadonly = True Then
+        If Not sender.readonly = True Then
 
             'damit das Vorgehen nicht so aggresiv ist, wird es bei leerem Text ignoriert:
-            If CType(sender, Telerik.WinControls.UI.RadTextBoxControl).Text.Equals("") Then
-                CType(sender, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.FromArgb(0, 255, 255, 255)
+            If CType(sender, Telerik.WinControls.UI.RadTextBox).Text.Equals("") Then
+                CType(sender, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.FromArgb(0, 255, 255, 255)
                 Exit Sub
             End If
 
             'versuchen ob der Text in eine Zahl konvertiert werden kann
-            If Not Decimal.TryParse(CType(sender, Telerik.WinControls.UI.RadTextBoxControl).Text, result) Then
+            If Not Decimal.TryParse(CType(sender, Telerik.WinControls.UI.RadTextBox).Text, result) Then
                 e.Cancel = True
-                CType(sender, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.Red
+                CType(sender, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
                 System.Media.SystemSounds.Exclamation.Play()
 
             Else 'rahmen zurücksetzen
                 'prüfen ob negative zahlen eingegeben wurden
                 If sender.text.ToString.Trim.StartsWith("-") Then
                     e.Cancel = True
-                    CType(sender, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.Red
+                    CType(sender, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
                     System.Media.SystemSounds.Exclamation.Play()
 
                 Else
-                    CType(sender, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.FromArgb(0, 255, 255, 255)
+                    CType(sender, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.FromArgb(0, 255, 255, 255)
 
                 End If
 
@@ -1162,7 +1186,7 @@
                 Control.readonly = Not Control.readonly
             Catch ex As Exception
                 Try
-                    Control.isreadonly = Not Control.isReadonly
+                    Control.readonly = Not Control.readonly
                 Catch ex2 As Exception
                     Try
                         Control.enabled = Not Control.enabled

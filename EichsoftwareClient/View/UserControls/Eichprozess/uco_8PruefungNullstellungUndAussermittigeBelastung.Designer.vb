@@ -41,22 +41,22 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadLabel30 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel31 = New Telerik.WinControls.UI.RadLabel()
         Me.lblMengeStandardgewichte2 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlErrorLimit1 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlErrorLimit1 = New Telerik.WinControls.UI.RadTextBox()
         Me.lblMengeStandardgewichte1 = New Telerik.WinControls.UI.RadLabel()
         Me.RadCheckBoxVEL1 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.RadTextBoxControlBetragNormallast = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBetragNormallast = New Telerik.WinControls.UI.RadTextBox()
         Me.PictureBox82 = New System.Windows.Forms.PictureBox()
         Me.lblEFGSpeziallBerechnung = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.RadTextBoxControlWeight1 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlDisplayWeight1 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlWeight1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlDisplayWeight1 = New Telerik.WinControls.UI.RadTextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.RadTextBoxControlWeight2 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlDisplayWeight2 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlWeight2 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlDisplayWeight2 = New Telerik.WinControls.UI.RadTextBox()
         Me.lblFehlerGrenzen = New Telerik.WinControls.UI.RadLabel()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.RadTextBoxControlWeight3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlDisplayWeight3 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlWeight3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlDisplayWeight3 = New Telerik.WinControls.UI.RadTextBox()
         Me.lblEFGSpezial = New Telerik.WinControls.UI.RadLabel()
         Me.lblGewicht = New Telerik.WinControls.UI.RadLabel()
         Me.lblAnzeigeGewicht = New Telerik.WinControls.UI.RadLabel()
@@ -75,18 +75,18 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PictureBox77 = New System.Windows.Forms.PictureBox()
         Me.PictureBox78 = New System.Windows.Forms.PictureBox()
         Me.RadLabel46 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlBereich3Weight1 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich3DisplayWeight1 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich3ErrorLimit1 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBereich3Weight1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich3DisplayWeight1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich3ErrorLimit1 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich3VEL1 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich3WZ2 = New System.Windows.Forms.Panel()
         Me.Label31 = New System.Windows.Forms.Label()
         Me.PictureBox75 = New System.Windows.Forms.PictureBox()
         Me.PictureBox76 = New System.Windows.Forms.PictureBox()
         Me.RadLabel45 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlBereich3Weight2 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich3DisplayWeight2 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich3ErrorLimit2 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBereich3Weight2 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich3DisplayWeight2 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich3ErrorLimit2 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich3VEL2 = New Telerik.WinControls.UI.RadCheckBox()
         Me.lblMessOrtBereich3 = New Telerik.WinControls.UI.RadLabel()
         Me.lblBereich3FehlerGrenzen = New Telerik.WinControls.UI.RadLabel()
@@ -95,9 +95,9 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PictureBox73 = New System.Windows.Forms.PictureBox()
         Me.PictureBox74 = New System.Windows.Forms.PictureBox()
         Me.RadLabel44 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlBereich3Weight3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich3DisplayWeight3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich3ErrorLimit3 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBereich3Weight3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich3DisplayWeight3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich3ErrorLimit3 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich3VEL3 = New Telerik.WinControls.UI.RadCheckBox()
         Me.lblBereich3EFGSpezial = New Telerik.WinControls.UI.RadLabel()
         Me.PanelBereich3WZ4 = New System.Windows.Forms.Panel()
@@ -105,9 +105,9 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PictureBox71 = New System.Windows.Forms.PictureBox()
         Me.PictureBox72 = New System.Windows.Forms.PictureBox()
         Me.RadLabel43 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlBereich3Weight4 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich3DisplayWeight4 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich3ErrorLimit4 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBereich3Weight4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich3DisplayWeight4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich3ErrorLimit4 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich3VEL4 = New Telerik.WinControls.UI.RadCheckBox()
         Me.lblBereich3Gewicht = New Telerik.WinControls.UI.RadLabel()
         Me.lblBereich3AnzeigeGewicht = New Telerik.WinControls.UI.RadLabel()
@@ -116,81 +116,81 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PictureBox69 = New System.Windows.Forms.PictureBox()
         Me.PictureBox70 = New System.Windows.Forms.PictureBox()
         Me.RadLabel42 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlBereich3Weight5 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich3DisplayWeight5 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich3ErrorLimit5 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBereich3Weight5 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich3DisplayWeight5 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich3ErrorLimit5 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich3VEL5 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich3WZ12 = New System.Windows.Forms.Panel()
         Me.Label41 = New System.Windows.Forms.Label()
         Me.PictureBox55 = New System.Windows.Forms.PictureBox()
         Me.PictureBox56 = New System.Windows.Forms.PictureBox()
         Me.RadLabel35 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlBereich3Weight12 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich3DisplayWeight12 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich3ErrorLimit12 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBereich3Weight12 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich3DisplayWeight12 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich3ErrorLimit12 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich3VEL12 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich3WZ11 = New System.Windows.Forms.Panel()
         Me.Label40 = New System.Windows.Forms.Label()
         Me.PictureBox57 = New System.Windows.Forms.PictureBox()
         Me.PictureBox58 = New System.Windows.Forms.PictureBox()
         Me.RadLabel36 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlBereich3Weight11 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich3DisplayWeight11 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich3ErrorLimit11 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBereich3Weight11 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich3DisplayWeight11 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich3ErrorLimit11 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich3VEL11 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich3WZ6 = New System.Windows.Forms.Panel()
         Me.Label35 = New System.Windows.Forms.Label()
         Me.PictureBox67 = New System.Windows.Forms.PictureBox()
         Me.PictureBox68 = New System.Windows.Forms.PictureBox()
         Me.RadLabel41 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlBereich3Weight6 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich3DisplayWeight6 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich3ErrorLimit6 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBereich3Weight6 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich3DisplayWeight6 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich3ErrorLimit6 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich3VEL6 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich3WZMitte = New System.Windows.Forms.Panel()
         Me.Label42 = New System.Windows.Forms.Label()
         Me.PictureBox53 = New System.Windows.Forms.PictureBox()
         Me.PictureBox54 = New System.Windows.Forms.PictureBox()
         Me.RadLabel34 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlBereich3WeightMitte = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich3DisplayWeightMitte = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich3ErrorLimitMitte = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBereich3WeightMitte = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich3DisplayWeightMitte = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich3ErrorLimitMitte = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich3VELMitte = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich3WZ10 = New System.Windows.Forms.Panel()
         Me.Label39 = New System.Windows.Forms.Label()
         Me.PictureBox59 = New System.Windows.Forms.PictureBox()
         Me.PictureBox60 = New System.Windows.Forms.PictureBox()
         Me.RadLabel37 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlBereich3Weight10 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich3DisplayWeight10 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich3ErrorLimit10 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBereich3Weight10 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich3DisplayWeight10 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich3ErrorLimit10 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich3VEL10 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich3WZ7 = New System.Windows.Forms.Panel()
         Me.Label36 = New System.Windows.Forms.Label()
         Me.PictureBox65 = New System.Windows.Forms.PictureBox()
         Me.PictureBox66 = New System.Windows.Forms.PictureBox()
         Me.RadLabel40 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlBereich3Weight7 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich3DisplayWeight7 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich3ErrorLimit7 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBereich3Weight7 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich3DisplayWeight7 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich3ErrorLimit7 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich3VEL7 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich3WZ9 = New System.Windows.Forms.Panel()
         Me.Label38 = New System.Windows.Forms.Label()
         Me.PictureBox61 = New System.Windows.Forms.PictureBox()
         Me.PictureBox62 = New System.Windows.Forms.PictureBox()
         Me.RadLabel38 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlBereich3Weight9 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich3DisplayWeight9 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich3ErrorLimit9 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBereich3Weight9 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich3DisplayWeight9 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich3ErrorLimit9 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich3VEL9 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich3WZ8 = New System.Windows.Forms.Panel()
         Me.Label37 = New System.Windows.Forms.Label()
         Me.PictureBox63 = New System.Windows.Forms.PictureBox()
         Me.PictureBox64 = New System.Windows.Forms.PictureBox()
         Me.RadLabel39 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlBereich3Weight8 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich3DisplayWeight8 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich3ErrorLimit8 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBereich3Weight8 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich3DisplayWeight8 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich3ErrorLimit8 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich3VEL8 = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadGroupBoxBereich2 = New Telerik.WinControls.UI.RadGroupBox()
         Me.PictureBox80 = New System.Windows.Forms.PictureBox()
@@ -200,18 +200,18 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PictureBox27 = New System.Windows.Forms.PictureBox()
         Me.PictureBox28 = New System.Windows.Forms.PictureBox()
         Me.RadLabel15 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlBereich2WeightMitte = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich2DisplayWeightMitte = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich2ErrorLimitMitte = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBereich2WeightMitte = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2DisplayWeightMitte = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2ErrorLimitMitte = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich2VELMitte = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich2WZ1 = New System.Windows.Forms.Panel()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.PictureBox29 = New System.Windows.Forms.PictureBox()
         Me.PictureBox30 = New System.Windows.Forms.PictureBox()
         Me.RadLabel27 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlBereich2Weight1 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich2DisplayWeight1 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich2ErrorLimit1 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBereich2Weight1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2DisplayWeight1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2ErrorLimit1 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich2VEL1 = New Telerik.WinControls.UI.RadCheckBox()
         Me.lblMessOrtBereich2 = New Telerik.WinControls.UI.RadLabel()
         Me.lblBereich2FehlerGrenzen = New Telerik.WinControls.UI.RadLabel()
@@ -220,9 +220,9 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PictureBox31 = New System.Windows.Forms.PictureBox()
         Me.PictureBox32 = New System.Windows.Forms.PictureBox()
         Me.RadLabel26 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlBereich2Weight2 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich2DisplayWeight2 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich2ErrorLimit2 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBereich2Weight2 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2DisplayWeight2 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2ErrorLimit2 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich2VEL2 = New Telerik.WinControls.UI.RadCheckBox()
         Me.lblBereich2EFGSpezial = New Telerik.WinControls.UI.RadLabel()
         Me.PanelBereich2WZ3 = New System.Windows.Forms.Panel()
@@ -230,9 +230,9 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PictureBox33 = New System.Windows.Forms.PictureBox()
         Me.PictureBox34 = New System.Windows.Forms.PictureBox()
         Me.RadLabel25 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlBereich2Weight3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich2DisplayWeight3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich2ErrorLimit3 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBereich2Weight3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2DisplayWeight3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2ErrorLimit3 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich2VEL3 = New Telerik.WinControls.UI.RadCheckBox()
         Me.lblBereich2Gewicht = New Telerik.WinControls.UI.RadLabel()
         Me.lblBereich2AnzeigeGewicht = New Telerik.WinControls.UI.RadLabel()
@@ -241,81 +241,81 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PictureBox35 = New System.Windows.Forms.PictureBox()
         Me.PictureBox36 = New System.Windows.Forms.PictureBox()
         Me.RadLabel24 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlBereich2Weight4 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich2DisplayWeight4 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich2ErrorLimit4 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBereich2Weight4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2DisplayWeight4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2ErrorLimit4 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich2VEL4 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich2WZ11 = New System.Windows.Forms.Panel()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.PictureBox49 = New System.Windows.Forms.PictureBox()
         Me.PictureBox50 = New System.Windows.Forms.PictureBox()
         Me.RadLabel17 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlBereich2Weight11 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich2DisplayWeight11 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich2ErrorLimit11 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBereich2Weight11 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2DisplayWeight11 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2ErrorLimit11 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich2VEL11 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich2WZ10 = New System.Windows.Forms.Panel()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.PictureBox47 = New System.Windows.Forms.PictureBox()
         Me.PictureBox48 = New System.Windows.Forms.PictureBox()
         Me.RadLabel18 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlBereich2Weight10 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich2DisplayWeight10 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich2ErrorLimit10 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBereich2Weight10 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2DisplayWeight10 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2ErrorLimit10 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich2VEL10 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich2WZ5 = New System.Windows.Forms.Panel()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.PictureBox37 = New System.Windows.Forms.PictureBox()
         Me.PictureBox38 = New System.Windows.Forms.PictureBox()
         Me.RadLabel23 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlBereich2Weight5 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich2DisplayWeight5 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich2ErrorLimit5 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBereich2Weight5 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2DisplayWeight5 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2ErrorLimit5 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich2VEL5 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich2WZ12 = New System.Windows.Forms.Panel()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.PictureBox51 = New System.Windows.Forms.PictureBox()
         Me.PictureBox52 = New System.Windows.Forms.PictureBox()
         Me.RadLabel16 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlBereich2Weight12 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich2DisplayWeight12 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich2ErrorLimit12 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBereich2Weight12 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2DisplayWeight12 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2ErrorLimit12 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich2VEL12 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich2WZ9 = New System.Windows.Forms.Panel()
         Me.Label25 = New System.Windows.Forms.Label()
         Me.PictureBox45 = New System.Windows.Forms.PictureBox()
         Me.PictureBox46 = New System.Windows.Forms.PictureBox()
         Me.RadLabel19 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlBereich2Weight9 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich2DisplayWeight9 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich2ErrorLimit9 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBereich2Weight9 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2DisplayWeight9 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2ErrorLimit9 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich2VEL9 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich2WZ6 = New System.Windows.Forms.Panel()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.PictureBox39 = New System.Windows.Forms.PictureBox()
         Me.PictureBox40 = New System.Windows.Forms.PictureBox()
         Me.RadLabel22 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlBereich2Weight6 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich2DisplayWeight6 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich2ErrorLimit6 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBereich2Weight6 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2DisplayWeight6 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2ErrorLimit6 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich2VEL6 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich2WZ8 = New System.Windows.Forms.Panel()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.PictureBox43 = New System.Windows.Forms.PictureBox()
         Me.PictureBox44 = New System.Windows.Forms.PictureBox()
         Me.RadLabel20 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlBereich2Weight8 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich2DisplayWeight8 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich2ErrorLimit8 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBereich2Weight8 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2DisplayWeight8 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2ErrorLimit8 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich2VEL8 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich2WZ7 = New System.Windows.Forms.Panel()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.PictureBox41 = New System.Windows.Forms.PictureBox()
         Me.PictureBox42 = New System.Windows.Forms.PictureBox()
         Me.RadLabel21 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlBereich2Weight7 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich2DisplayWeight7 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich2ErrorLimit7 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBereich2Weight7 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2DisplayWeight7 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2ErrorLimit7 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich2VEL7 = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadGroupBoxBereich1 = New Telerik.WinControls.UI.RadGroupBox()
         Me.PictureBox79 = New System.Windows.Forms.PictureBox()
@@ -325,18 +325,18 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.RadLabel13 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlBereich1Weight1 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich1DisplayWeight1 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich1ErrorLimit1 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBereich1Weight1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich1DisplayWeight1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich1ErrorLimit1 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich1VEL1 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich1WZ2 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.RadLabel2 = New Telerik.WinControls.UI.RadLabel()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.RadTextBoxControlBereich1Weight2 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich1DisplayWeight2 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich1ErrorLimit2 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBereich1Weight2 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich1DisplayWeight2 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich1ErrorLimit2 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich1VEL2 = New Telerik.WinControls.UI.RadCheckBox()
         Me.lblMessOrtBereich1 = New Telerik.WinControls.UI.RadLabel()
         Me.lblBereich1FehlerGrenzen = New Telerik.WinControls.UI.RadLabel()
@@ -345,9 +345,9 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.RadLabel4 = New Telerik.WinControls.UI.RadLabel()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
-        Me.RadTextBoxControlBereich1Weight3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich1DisplayWeight3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich1ErrorLimit3 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBereich1Weight3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich1DisplayWeight3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich1ErrorLimit3 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich1VEL3 = New Telerik.WinControls.UI.RadCheckBox()
         Me.lblBereich1EFGSpezial = New Telerik.WinControls.UI.RadLabel()
         Me.PanelBereich1WZ4 = New System.Windows.Forms.Panel()
@@ -355,9 +355,9 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.RadLabel5 = New Telerik.WinControls.UI.RadLabel()
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
-        Me.RadTextBoxControlBereich1Weight4 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich1DisplayWeight4 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich1ErrorLimit4 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBereich1Weight4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich1DisplayWeight4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich1ErrorLimit4 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich1VEL4 = New Telerik.WinControls.UI.RadCheckBox()
         Me.lblBereich1Gewicht = New Telerik.WinControls.UI.RadLabel()
         Me.lblBereich1AnzeigeGewicht = New Telerik.WinControls.UI.RadLabel()
@@ -366,81 +366,81 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
         Me.PictureBox10 = New System.Windows.Forms.PictureBox()
         Me.RadLabel6 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlBereich1Weight5 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich1DisplayWeight5 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich1ErrorLimit5 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBereich1Weight5 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich1DisplayWeight5 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich1ErrorLimit5 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich1VEL5 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich1WZ12 = New System.Windows.Forms.Panel()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.PictureBox23 = New System.Windows.Forms.PictureBox()
         Me.PictureBox24 = New System.Windows.Forms.PictureBox()
         Me.RadLabel14 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlBereich1Weight12 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich1DisplayWeight12 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich1ErrorLimit12 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBereich1Weight12 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich1DisplayWeight12 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich1ErrorLimit12 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich1VEL12 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich1WZ11 = New System.Windows.Forms.Panel()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.PictureBox21 = New System.Windows.Forms.PictureBox()
         Me.PictureBox22 = New System.Windows.Forms.PictureBox()
         Me.RadLabel12 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlBereich1Weight11 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich1DisplayWeight11 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich1ErrorLimit11 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBereich1Weight11 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich1DisplayWeight11 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich1ErrorLimit11 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich1VEL11 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich1WZ6 = New System.Windows.Forms.Panel()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.PictureBox11 = New System.Windows.Forms.PictureBox()
         Me.PictureBox12 = New System.Windows.Forms.PictureBox()
         Me.RadLabel7 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlBereich1Weight6 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich1DisplayWeight6 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich1ErrorLimit6 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBereich1Weight6 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich1DisplayWeight6 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich1ErrorLimit6 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich1VEL6 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich1WZMitte = New System.Windows.Forms.Panel()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.PictureBox25 = New System.Windows.Forms.PictureBox()
         Me.PictureBox26 = New System.Windows.Forms.PictureBox()
         Me.lblBereich1Mitte = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlBereich1WeightMitte = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich1DisplayWeightMitte = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich1ErrorLimitMitte = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBereich1WeightMitte = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich1DisplayWeightMitte = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich1ErrorLimitMitte = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich1VELMitte = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich1WZ10 = New System.Windows.Forms.Panel()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.PictureBox19 = New System.Windows.Forms.PictureBox()
         Me.PictureBox20 = New System.Windows.Forms.PictureBox()
         Me.RadLabel11 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlBereich1Weight10 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich1DisplayWeight10 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich1ErrorLimit10 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBereich1Weight10 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich1DisplayWeight10 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich1ErrorLimit10 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich1VEL10 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich1WZ7 = New System.Windows.Forms.Panel()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.PictureBox13 = New System.Windows.Forms.PictureBox()
         Me.PictureBox14 = New System.Windows.Forms.PictureBox()
         Me.RadLabel8 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlBereich1Weight7 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich1DisplayWeight7 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich1ErrorLimit7 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBereich1Weight7 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich1DisplayWeight7 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich1ErrorLimit7 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich1VEL7 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich1WZ9 = New System.Windows.Forms.Panel()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.PictureBox17 = New System.Windows.Forms.PictureBox()
         Me.PictureBox18 = New System.Windows.Forms.PictureBox()
         Me.RadLabel10 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlBereich1Weight9 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich1DisplayWeight9 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich1ErrorLimit9 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBereich1Weight9 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich1DisplayWeight9 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich1ErrorLimit9 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich1VEL9 = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich1WZ8 = New System.Windows.Forms.Panel()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.PictureBox15 = New System.Windows.Forms.PictureBox()
         Me.PictureBox16 = New System.Windows.Forms.PictureBox()
         Me.RadLabel9 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlBereich1Weight8 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich1DisplayWeight8 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlBereich1ErrorLimit8 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBereich1Weight8 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich1DisplayWeight8 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich1ErrorLimit8 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich1VEL8 = New Telerik.WinControls.UI.RadCheckBox()
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanel1.PanelContainer.SuspendLayout()
@@ -1152,7 +1152,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         'RadTextBoxControlErrorLimit1
         '
         resources.ApplyResources(Me.RadTextBoxControlErrorLimit1, "RadTextBoxControlErrorLimit1")
-        Me.RadTextBoxControlErrorLimit1.IsReadOnly = True
+        Me.RadTextBoxControlErrorLimit1.ReadOnly = True
         Me.RadTextBoxControlErrorLimit1.Name = "RadTextBoxControlErrorLimit1"
         Me.RadTextBoxControlErrorLimit1.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -1214,7 +1214,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         'RadTextBoxControlBetragNormallast
         '
         resources.ApplyResources(Me.RadTextBoxControlBetragNormallast, "RadTextBoxControlBetragNormallast")
-        Me.RadTextBoxControlBetragNormallast.IsReadOnly = True
+        Me.RadTextBoxControlBetragNormallast.ReadOnly = True
         Me.RadTextBoxControlBetragNormallast.Name = "RadTextBoxControlBetragNormallast"
         Me.RadTextBoxControlBetragNormallast.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -1731,7 +1731,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         'RadTextBoxControlBereich3ErrorLimit1
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3ErrorLimit1, "RadTextBoxControlBereich3ErrorLimit1")
-        Me.RadTextBoxControlBereich3ErrorLimit1.IsReadOnly = True
+        Me.RadTextBoxControlBereich3ErrorLimit1.ReadOnly = True
         Me.RadTextBoxControlBereich3ErrorLimit1.Name = "RadTextBoxControlBereich3ErrorLimit1"
         Me.RadTextBoxControlBereich3ErrorLimit1.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -1868,7 +1868,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         'RadTextBoxControlBereich3ErrorLimit2
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3ErrorLimit2, "RadTextBoxControlBereich3ErrorLimit2")
-        Me.RadTextBoxControlBereich3ErrorLimit2.IsReadOnly = True
+        Me.RadTextBoxControlBereich3ErrorLimit2.ReadOnly = True
         Me.RadTextBoxControlBereich3ErrorLimit2.Name = "RadTextBoxControlBereich3ErrorLimit2"
         Me.RadTextBoxControlBereich3ErrorLimit2.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -2043,7 +2043,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         'RadTextBoxControlBereich3ErrorLimit3
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3ErrorLimit3, "RadTextBoxControlBereich3ErrorLimit3")
-        Me.RadTextBoxControlBereich3ErrorLimit3.IsReadOnly = True
+        Me.RadTextBoxControlBereich3ErrorLimit3.ReadOnly = True
         Me.RadTextBoxControlBereich3ErrorLimit3.Name = "RadTextBoxControlBereich3ErrorLimit3"
         Me.RadTextBoxControlBereich3ErrorLimit3.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -2199,7 +2199,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         'RadTextBoxControlBereich3ErrorLimit4
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3ErrorLimit4, "RadTextBoxControlBereich3ErrorLimit4")
-        Me.RadTextBoxControlBereich3ErrorLimit4.IsReadOnly = True
+        Me.RadTextBoxControlBereich3ErrorLimit4.ReadOnly = True
         Me.RadTextBoxControlBereich3ErrorLimit4.Name = "RadTextBoxControlBereich3ErrorLimit4"
         Me.RadTextBoxControlBereich3ErrorLimit4.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -2374,7 +2374,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         'RadTextBoxControlBereich3ErrorLimit5
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3ErrorLimit5, "RadTextBoxControlBereich3ErrorLimit5")
-        Me.RadTextBoxControlBereich3ErrorLimit5.IsReadOnly = True
+        Me.RadTextBoxControlBereich3ErrorLimit5.ReadOnly = True
         Me.RadTextBoxControlBereich3ErrorLimit5.Name = "RadTextBoxControlBereich3ErrorLimit5"
         Me.RadTextBoxControlBereich3ErrorLimit5.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -2511,7 +2511,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         'RadTextBoxControlBereich3ErrorLimit12
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3ErrorLimit12, "RadTextBoxControlBereich3ErrorLimit12")
-        Me.RadTextBoxControlBereich3ErrorLimit12.IsReadOnly = True
+        Me.RadTextBoxControlBereich3ErrorLimit12.ReadOnly = True
         Me.RadTextBoxControlBereich3ErrorLimit12.Name = "RadTextBoxControlBereich3ErrorLimit12"
         Me.RadTextBoxControlBereich3ErrorLimit12.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -2648,7 +2648,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         'RadTextBoxControlBereich3ErrorLimit11
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3ErrorLimit11, "RadTextBoxControlBereich3ErrorLimit11")
-        Me.RadTextBoxControlBereich3ErrorLimit11.IsReadOnly = True
+        Me.RadTextBoxControlBereich3ErrorLimit11.ReadOnly = True
         Me.RadTextBoxControlBereich3ErrorLimit11.Name = "RadTextBoxControlBereich3ErrorLimit11"
         Me.RadTextBoxControlBereich3ErrorLimit11.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -2785,7 +2785,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         'RadTextBoxControlBereich3ErrorLimit6
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3ErrorLimit6, "RadTextBoxControlBereich3ErrorLimit6")
-        Me.RadTextBoxControlBereich3ErrorLimit6.IsReadOnly = True
+        Me.RadTextBoxControlBereich3ErrorLimit6.ReadOnly = True
         Me.RadTextBoxControlBereich3ErrorLimit6.Name = "RadTextBoxControlBereich3ErrorLimit6"
         Me.RadTextBoxControlBereich3ErrorLimit6.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -2922,7 +2922,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         'RadTextBoxControlBereich3ErrorLimitMitte
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3ErrorLimitMitte, "RadTextBoxControlBereich3ErrorLimitMitte")
-        Me.RadTextBoxControlBereich3ErrorLimitMitte.IsReadOnly = True
+        Me.RadTextBoxControlBereich3ErrorLimitMitte.ReadOnly = True
         Me.RadTextBoxControlBereich3ErrorLimitMitte.Name = "RadTextBoxControlBereich3ErrorLimitMitte"
         Me.RadTextBoxControlBereich3ErrorLimitMitte.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -3059,7 +3059,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         'RadTextBoxControlBereich3ErrorLimit10
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3ErrorLimit10, "RadTextBoxControlBereich3ErrorLimit10")
-        Me.RadTextBoxControlBereich3ErrorLimit10.IsReadOnly = True
+        Me.RadTextBoxControlBereich3ErrorLimit10.ReadOnly = True
         Me.RadTextBoxControlBereich3ErrorLimit10.Name = "RadTextBoxControlBereich3ErrorLimit10"
         Me.RadTextBoxControlBereich3ErrorLimit10.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -3196,7 +3196,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         'RadTextBoxControlBereich3ErrorLimit7
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3ErrorLimit7, "RadTextBoxControlBereich3ErrorLimit7")
-        Me.RadTextBoxControlBereich3ErrorLimit7.IsReadOnly = True
+        Me.RadTextBoxControlBereich3ErrorLimit7.ReadOnly = True
         Me.RadTextBoxControlBereich3ErrorLimit7.Name = "RadTextBoxControlBereich3ErrorLimit7"
         Me.RadTextBoxControlBereich3ErrorLimit7.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -3333,7 +3333,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         'RadTextBoxControlBereich3ErrorLimit9
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3ErrorLimit9, "RadTextBoxControlBereich3ErrorLimit9")
-        Me.RadTextBoxControlBereich3ErrorLimit9.IsReadOnly = True
+        Me.RadTextBoxControlBereich3ErrorLimit9.ReadOnly = True
         Me.RadTextBoxControlBereich3ErrorLimit9.Name = "RadTextBoxControlBereich3ErrorLimit9"
         Me.RadTextBoxControlBereich3ErrorLimit9.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -3470,7 +3470,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         'RadTextBoxControlBereich3ErrorLimit8
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3ErrorLimit8, "RadTextBoxControlBereich3ErrorLimit8")
-        Me.RadTextBoxControlBereich3ErrorLimit8.IsReadOnly = True
+        Me.RadTextBoxControlBereich3ErrorLimit8.ReadOnly = True
         Me.RadTextBoxControlBereich3ErrorLimit8.Name = "RadTextBoxControlBereich3ErrorLimit8"
         Me.RadTextBoxControlBereich3ErrorLimit8.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -3677,7 +3677,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         'RadTextBoxControlBereich2ErrorLimitMitte
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2ErrorLimitMitte, "RadTextBoxControlBereich2ErrorLimitMitte")
-        Me.RadTextBoxControlBereich2ErrorLimitMitte.IsReadOnly = True
+        Me.RadTextBoxControlBereich2ErrorLimitMitte.ReadOnly = True
         Me.RadTextBoxControlBereich2ErrorLimitMitte.Name = "RadTextBoxControlBereich2ErrorLimitMitte"
         Me.RadTextBoxControlBereich2ErrorLimitMitte.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -3813,7 +3813,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         'RadTextBoxControlBereich2ErrorLimit1
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2ErrorLimit1, "RadTextBoxControlBereich2ErrorLimit1")
-        Me.RadTextBoxControlBereich2ErrorLimit1.IsReadOnly = True
+        Me.RadTextBoxControlBereich2ErrorLimit1.ReadOnly = True
         Me.RadTextBoxControlBereich2ErrorLimit1.Name = "RadTextBoxControlBereich2ErrorLimit1"
         Me.RadTextBoxControlBereich2ErrorLimit1.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -3988,7 +3988,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         'RadTextBoxControlBereich2ErrorLimit2
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2ErrorLimit2, "RadTextBoxControlBereich2ErrorLimit2")
-        Me.RadTextBoxControlBereich2ErrorLimit2.IsReadOnly = True
+        Me.RadTextBoxControlBereich2ErrorLimit2.ReadOnly = True
         Me.RadTextBoxControlBereich2ErrorLimit2.Name = "RadTextBoxControlBereich2ErrorLimit2"
         Me.RadTextBoxControlBereich2ErrorLimit2.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -4144,7 +4144,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         'RadTextBoxControlBereich2ErrorLimit3
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2ErrorLimit3, "RadTextBoxControlBereich2ErrorLimit3")
-        Me.RadTextBoxControlBereich2ErrorLimit3.IsReadOnly = True
+        Me.RadTextBoxControlBereich2ErrorLimit3.ReadOnly = True
         Me.RadTextBoxControlBereich2ErrorLimit3.Name = "RadTextBoxControlBereich2ErrorLimit3"
         Me.RadTextBoxControlBereich2ErrorLimit3.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -4319,7 +4319,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         'RadTextBoxControlBereich2ErrorLimit4
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2ErrorLimit4, "RadTextBoxControlBereich2ErrorLimit4")
-        Me.RadTextBoxControlBereich2ErrorLimit4.IsReadOnly = True
+        Me.RadTextBoxControlBereich2ErrorLimit4.ReadOnly = True
         Me.RadTextBoxControlBereich2ErrorLimit4.Name = "RadTextBoxControlBereich2ErrorLimit4"
         Me.RadTextBoxControlBereich2ErrorLimit4.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -4456,7 +4456,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         'RadTextBoxControlBereich2ErrorLimit11
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2ErrorLimit11, "RadTextBoxControlBereich2ErrorLimit11")
-        Me.RadTextBoxControlBereich2ErrorLimit11.IsReadOnly = True
+        Me.RadTextBoxControlBereich2ErrorLimit11.ReadOnly = True
         Me.RadTextBoxControlBereich2ErrorLimit11.Name = "RadTextBoxControlBereich2ErrorLimit11"
         Me.RadTextBoxControlBereich2ErrorLimit11.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -4593,7 +4593,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         'RadTextBoxControlBereich2ErrorLimit10
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2ErrorLimit10, "RadTextBoxControlBereich2ErrorLimit10")
-        Me.RadTextBoxControlBereich2ErrorLimit10.IsReadOnly = True
+        Me.RadTextBoxControlBereich2ErrorLimit10.ReadOnly = True
         Me.RadTextBoxControlBereich2ErrorLimit10.Name = "RadTextBoxControlBereich2ErrorLimit10"
         Me.RadTextBoxControlBereich2ErrorLimit10.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -4730,7 +4730,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         'RadTextBoxControlBereich2ErrorLimit5
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2ErrorLimit5, "RadTextBoxControlBereich2ErrorLimit5")
-        Me.RadTextBoxControlBereich2ErrorLimit5.IsReadOnly = True
+        Me.RadTextBoxControlBereich2ErrorLimit5.ReadOnly = True
         Me.RadTextBoxControlBereich2ErrorLimit5.Name = "RadTextBoxControlBereich2ErrorLimit5"
         Me.RadTextBoxControlBereich2ErrorLimit5.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -4867,7 +4867,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         'RadTextBoxControlBereich2ErrorLimit12
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2ErrorLimit12, "RadTextBoxControlBereich2ErrorLimit12")
-        Me.RadTextBoxControlBereich2ErrorLimit12.IsReadOnly = True
+        Me.RadTextBoxControlBereich2ErrorLimit12.ReadOnly = True
         Me.RadTextBoxControlBereich2ErrorLimit12.Name = "RadTextBoxControlBereich2ErrorLimit12"
         Me.RadTextBoxControlBereich2ErrorLimit12.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -5004,7 +5004,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         'RadTextBoxControlBereich2ErrorLimit9
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2ErrorLimit9, "RadTextBoxControlBereich2ErrorLimit9")
-        Me.RadTextBoxControlBereich2ErrorLimit9.IsReadOnly = True
+        Me.RadTextBoxControlBereich2ErrorLimit9.ReadOnly = True
         Me.RadTextBoxControlBereich2ErrorLimit9.Name = "RadTextBoxControlBereich2ErrorLimit9"
         Me.RadTextBoxControlBereich2ErrorLimit9.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -5141,7 +5141,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         'RadTextBoxControlBereich2ErrorLimit6
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2ErrorLimit6, "RadTextBoxControlBereich2ErrorLimit6")
-        Me.RadTextBoxControlBereich2ErrorLimit6.IsReadOnly = True
+        Me.RadTextBoxControlBereich2ErrorLimit6.ReadOnly = True
         Me.RadTextBoxControlBereich2ErrorLimit6.Name = "RadTextBoxControlBereich2ErrorLimit6"
         Me.RadTextBoxControlBereich2ErrorLimit6.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -5278,7 +5278,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         'RadTextBoxControlBereich2ErrorLimit8
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2ErrorLimit8, "RadTextBoxControlBereich2ErrorLimit8")
-        Me.RadTextBoxControlBereich2ErrorLimit8.IsReadOnly = True
+        Me.RadTextBoxControlBereich2ErrorLimit8.ReadOnly = True
         Me.RadTextBoxControlBereich2ErrorLimit8.Name = "RadTextBoxControlBereich2ErrorLimit8"
         Me.RadTextBoxControlBereich2ErrorLimit8.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -5415,7 +5415,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         'RadTextBoxControlBereich2ErrorLimit7
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2ErrorLimit7, "RadTextBoxControlBereich2ErrorLimit7")
-        Me.RadTextBoxControlBereich2ErrorLimit7.IsReadOnly = True
+        Me.RadTextBoxControlBereich2ErrorLimit7.ReadOnly = True
         Me.RadTextBoxControlBereich2ErrorLimit7.Name = "RadTextBoxControlBereich2ErrorLimit7"
         Me.RadTextBoxControlBereich2ErrorLimit7.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -5621,7 +5621,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         'RadTextBoxControlBereich1ErrorLimit1
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1ErrorLimit1, "RadTextBoxControlBereich1ErrorLimit1")
-        Me.RadTextBoxControlBereich1ErrorLimit1.IsReadOnly = True
+        Me.RadTextBoxControlBereich1ErrorLimit1.ReadOnly = True
         Me.RadTextBoxControlBereich1ErrorLimit1.Name = "RadTextBoxControlBereich1ErrorLimit1"
         Me.RadTextBoxControlBereich1ErrorLimit1.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -5758,7 +5758,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         'RadTextBoxControlBereich1ErrorLimit2
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1ErrorLimit2, "RadTextBoxControlBereich1ErrorLimit2")
-        Me.RadTextBoxControlBereich1ErrorLimit2.IsReadOnly = True
+        Me.RadTextBoxControlBereich1ErrorLimit2.ReadOnly = True
         Me.RadTextBoxControlBereich1ErrorLimit2.Name = "RadTextBoxControlBereich1ErrorLimit2"
         Me.RadTextBoxControlBereich1ErrorLimit2.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -5933,7 +5933,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         'RadTextBoxControlBereich1ErrorLimit3
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1ErrorLimit3, "RadTextBoxControlBereich1ErrorLimit3")
-        Me.RadTextBoxControlBereich1ErrorLimit3.IsReadOnly = True
+        Me.RadTextBoxControlBereich1ErrorLimit3.ReadOnly = True
         Me.RadTextBoxControlBereich1ErrorLimit3.Name = "RadTextBoxControlBereich1ErrorLimit3"
         Me.RadTextBoxControlBereich1ErrorLimit3.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -6089,7 +6089,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         'RadTextBoxControlBereich1ErrorLimit4
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1ErrorLimit4, "RadTextBoxControlBereich1ErrorLimit4")
-        Me.RadTextBoxControlBereich1ErrorLimit4.IsReadOnly = True
+        Me.RadTextBoxControlBereich1ErrorLimit4.ReadOnly = True
         Me.RadTextBoxControlBereich1ErrorLimit4.Name = "RadTextBoxControlBereich1ErrorLimit4"
         Me.RadTextBoxControlBereich1ErrorLimit4.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -6264,7 +6264,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         'RadTextBoxControlBereich1ErrorLimit5
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1ErrorLimit5, "RadTextBoxControlBereich1ErrorLimit5")
-        Me.RadTextBoxControlBereich1ErrorLimit5.IsReadOnly = True
+        Me.RadTextBoxControlBereich1ErrorLimit5.ReadOnly = True
         Me.RadTextBoxControlBereich1ErrorLimit5.Name = "RadTextBoxControlBereich1ErrorLimit5"
         Me.RadTextBoxControlBereich1ErrorLimit5.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -6401,7 +6401,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         'RadTextBoxControlBereich1ErrorLimit12
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1ErrorLimit12, "RadTextBoxControlBereich1ErrorLimit12")
-        Me.RadTextBoxControlBereich1ErrorLimit12.IsReadOnly = True
+        Me.RadTextBoxControlBereich1ErrorLimit12.ReadOnly = True
         Me.RadTextBoxControlBereich1ErrorLimit12.Name = "RadTextBoxControlBereich1ErrorLimit12"
         Me.RadTextBoxControlBereich1ErrorLimit12.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -6538,7 +6538,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         'RadTextBoxControlBereich1ErrorLimit11
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1ErrorLimit11, "RadTextBoxControlBereich1ErrorLimit11")
-        Me.RadTextBoxControlBereich1ErrorLimit11.IsReadOnly = True
+        Me.RadTextBoxControlBereich1ErrorLimit11.ReadOnly = True
         Me.RadTextBoxControlBereich1ErrorLimit11.Name = "RadTextBoxControlBereich1ErrorLimit11"
         Me.RadTextBoxControlBereich1ErrorLimit11.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -6675,7 +6675,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         'RadTextBoxControlBereich1ErrorLimit6
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1ErrorLimit6, "RadTextBoxControlBereich1ErrorLimit6")
-        Me.RadTextBoxControlBereich1ErrorLimit6.IsReadOnly = True
+        Me.RadTextBoxControlBereich1ErrorLimit6.ReadOnly = True
         Me.RadTextBoxControlBereich1ErrorLimit6.Name = "RadTextBoxControlBereich1ErrorLimit6"
         Me.RadTextBoxControlBereich1ErrorLimit6.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -6812,7 +6812,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         'RadTextBoxControlBereich1ErrorLimitMitte
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1ErrorLimitMitte, "RadTextBoxControlBereich1ErrorLimitMitte")
-        Me.RadTextBoxControlBereich1ErrorLimitMitte.IsReadOnly = True
+        Me.RadTextBoxControlBereich1ErrorLimitMitte.ReadOnly = True
         Me.RadTextBoxControlBereich1ErrorLimitMitte.Name = "RadTextBoxControlBereich1ErrorLimitMitte"
         Me.RadTextBoxControlBereich1ErrorLimitMitte.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -6949,7 +6949,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         'RadTextBoxControlBereich1ErrorLimit10
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1ErrorLimit10, "RadTextBoxControlBereich1ErrorLimit10")
-        Me.RadTextBoxControlBereich1ErrorLimit10.IsReadOnly = True
+        Me.RadTextBoxControlBereich1ErrorLimit10.ReadOnly = True
         Me.RadTextBoxControlBereich1ErrorLimit10.Name = "RadTextBoxControlBereich1ErrorLimit10"
         Me.RadTextBoxControlBereich1ErrorLimit10.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -7086,7 +7086,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         'RadTextBoxControlBereich1ErrorLimit7
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1ErrorLimit7, "RadTextBoxControlBereich1ErrorLimit7")
-        Me.RadTextBoxControlBereich1ErrorLimit7.IsReadOnly = True
+        Me.RadTextBoxControlBereich1ErrorLimit7.ReadOnly = True
         Me.RadTextBoxControlBereich1ErrorLimit7.Name = "RadTextBoxControlBereich1ErrorLimit7"
         Me.RadTextBoxControlBereich1ErrorLimit7.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -7223,7 +7223,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         'RadTextBoxControlBereich1ErrorLimit9
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1ErrorLimit9, "RadTextBoxControlBereich1ErrorLimit9")
-        Me.RadTextBoxControlBereich1ErrorLimit9.IsReadOnly = True
+        Me.RadTextBoxControlBereich1ErrorLimit9.ReadOnly = True
         Me.RadTextBoxControlBereich1ErrorLimit9.Name = "RadTextBoxControlBereich1ErrorLimit9"
         Me.RadTextBoxControlBereich1ErrorLimit9.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -7360,7 +7360,7 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         'RadTextBoxControlBereich1ErrorLimit8
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1ErrorLimit8, "RadTextBoxControlBereich1ErrorLimit8")
-        Me.RadTextBoxControlBereich1ErrorLimit8.IsReadOnly = True
+        Me.RadTextBoxControlBereich1ErrorLimit8.ReadOnly = True
         Me.RadTextBoxControlBereich1ErrorLimit8.Name = "RadTextBoxControlBereich1ErrorLimit8"
         Me.RadTextBoxControlBereich1ErrorLimit8.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
@@ -7854,160 +7854,160 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
     Friend WithEvents lblMessOrtBereich1 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblBereich1FehlerGrenzen As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadCheckBoxBereich1VEL1 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents RadTextBoxControlBereich1ErrorLimit1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich1DisplayWeight1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich1Weight1 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBereich1ErrorLimit1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich1DisplayWeight1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich1Weight1 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents PanelBereich1WZ1 As System.Windows.Forms.Panel
     Friend WithEvents PanelBereich1WZMitte As System.Windows.Forms.Panel
     Friend WithEvents lblBereich1Mitte As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBereich1WeightMitte As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich1DisplayWeightMitte As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich1ErrorLimitMitte As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBereich1WeightMitte As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich1DisplayWeightMitte As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich1ErrorLimitMitte As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich1VELMitte As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents PanelBereich1WZ12 As System.Windows.Forms.Panel
     Friend WithEvents RadLabel14 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBereich1Weight12 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich1DisplayWeight12 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich1ErrorLimit12 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBereich1Weight12 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich1DisplayWeight12 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich1ErrorLimit12 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich1VEL12 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents PanelBereich1WZ11 As System.Windows.Forms.Panel
     Friend WithEvents RadLabel12 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBereich1Weight11 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich1DisplayWeight11 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich1ErrorLimit11 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBereich1Weight11 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich1DisplayWeight11 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich1ErrorLimit11 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich1VEL11 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents PanelBereich1WZ10 As System.Windows.Forms.Panel
     Friend WithEvents RadLabel11 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBereich1Weight10 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich1DisplayWeight10 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich1ErrorLimit10 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBereich1Weight10 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich1DisplayWeight10 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich1ErrorLimit10 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich1VEL10 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents PanelBereich1WZ9 As System.Windows.Forms.Panel
     Friend WithEvents RadLabel10 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBereich1Weight9 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich1DisplayWeight9 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich1ErrorLimit9 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBereich1Weight9 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich1DisplayWeight9 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich1ErrorLimit9 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich1VEL9 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents PanelBereich1WZ8 As System.Windows.Forms.Panel
     Friend WithEvents RadLabel9 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBereich1Weight8 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich1DisplayWeight8 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich1ErrorLimit8 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBereich1Weight8 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich1DisplayWeight8 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich1ErrorLimit8 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich1VEL8 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents PanelBereich1WZ7 As System.Windows.Forms.Panel
     Friend WithEvents RadLabel8 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBereich1Weight7 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich1DisplayWeight7 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich1ErrorLimit7 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBereich1Weight7 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich1DisplayWeight7 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich1ErrorLimit7 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich1VEL7 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents PanelBereich1WZ6 As System.Windows.Forms.Panel
     Friend WithEvents RadLabel7 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBereich1Weight6 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich1DisplayWeight6 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich1ErrorLimit6 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBereich1Weight6 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich1DisplayWeight6 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich1ErrorLimit6 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich1VEL6 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents PanelBereich1WZ5 As System.Windows.Forms.Panel
     Friend WithEvents RadLabel6 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBereich1Weight5 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich1DisplayWeight5 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich1ErrorLimit5 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBereich1Weight5 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich1DisplayWeight5 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich1ErrorLimit5 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich1VEL5 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents PanelBereich1WZ4 As System.Windows.Forms.Panel
     Friend WithEvents RadLabel5 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBereich1Weight4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich1DisplayWeight4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich1ErrorLimit4 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBereich1Weight4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich1DisplayWeight4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich1ErrorLimit4 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich1VEL4 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents PanelBereich1WZ3 As System.Windows.Forms.Panel
     Friend WithEvents RadLabel4 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBereich1Weight3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich1DisplayWeight3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich1ErrorLimit3 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBereich1Weight3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich1DisplayWeight3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich1ErrorLimit3 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich1VEL3 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents PanelBereich1WZ2 As System.Windows.Forms.Panel
     Friend WithEvents RadLabel2 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBereich1Weight2 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich1DisplayWeight2 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich1ErrorLimit2 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBereich1Weight2 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich1DisplayWeight2 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich1ErrorLimit2 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich1VEL2 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents RadGroupBoxBereich3 As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents PanelBereich3WZMitte As System.Windows.Forms.Panel
     Friend WithEvents RadLabel34 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBereich3WeightMitte As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich3DisplayWeightMitte As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich3ErrorLimitMitte As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBereich3WeightMitte As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich3DisplayWeightMitte As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich3ErrorLimitMitte As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich3VELMitte As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents PanelBereich3WZ12 As System.Windows.Forms.Panel
     Friend WithEvents RadLabel35 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBereich3Weight12 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich3DisplayWeight12 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich3ErrorLimit12 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBereich3Weight12 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich3DisplayWeight12 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich3ErrorLimit12 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich3VEL12 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents PanelBereich3WZ11 As System.Windows.Forms.Panel
     Friend WithEvents RadLabel36 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBereich3Weight11 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich3DisplayWeight11 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich3ErrorLimit11 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBereich3Weight11 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich3DisplayWeight11 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich3ErrorLimit11 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich3VEL11 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents PanelBereich3WZ10 As System.Windows.Forms.Panel
     Friend WithEvents RadLabel37 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBereich3Weight10 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich3DisplayWeight10 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich3ErrorLimit10 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBereich3Weight10 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich3DisplayWeight10 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich3ErrorLimit10 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich3VEL10 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents PanelBereich3WZ9 As System.Windows.Forms.Panel
     Friend WithEvents RadLabel38 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBereich3Weight9 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich3DisplayWeight9 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich3ErrorLimit9 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBereich3Weight9 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich3DisplayWeight9 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich3ErrorLimit9 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich3VEL9 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents PanelBereich3WZ8 As System.Windows.Forms.Panel
     Friend WithEvents RadLabel39 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBereich3Weight8 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich3DisplayWeight8 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich3ErrorLimit8 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBereich3Weight8 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich3DisplayWeight8 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich3ErrorLimit8 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich3VEL8 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents PanelBereich3WZ7 As System.Windows.Forms.Panel
     Friend WithEvents RadLabel40 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBereich3Weight7 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich3DisplayWeight7 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich3ErrorLimit7 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBereich3Weight7 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich3DisplayWeight7 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich3ErrorLimit7 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich3VEL7 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents PanelBereich3WZ6 As System.Windows.Forms.Panel
     Friend WithEvents RadLabel41 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBereich3Weight6 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich3DisplayWeight6 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich3ErrorLimit6 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBereich3Weight6 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich3DisplayWeight6 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich3ErrorLimit6 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich3VEL6 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents PanelBereich3WZ5 As System.Windows.Forms.Panel
     Friend WithEvents RadLabel42 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBereich3Weight5 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich3DisplayWeight5 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich3ErrorLimit5 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBereich3Weight5 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich3DisplayWeight5 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich3ErrorLimit5 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich3VEL5 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents PanelBereich3WZ4 As System.Windows.Forms.Panel
     Friend WithEvents RadLabel43 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBereich3Weight4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich3DisplayWeight4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich3ErrorLimit4 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBereich3Weight4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich3DisplayWeight4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich3ErrorLimit4 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich3VEL4 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents PanelBereich3WZ3 As System.Windows.Forms.Panel
     Friend WithEvents RadLabel44 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBereich3Weight3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich3DisplayWeight3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich3ErrorLimit3 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBereich3Weight3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich3DisplayWeight3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich3ErrorLimit3 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich3VEL3 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents PanelBereich3WZ2 As System.Windows.Forms.Panel
     Friend WithEvents RadLabel45 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBereich3Weight2 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich3DisplayWeight2 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich3ErrorLimit2 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBereich3Weight2 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich3DisplayWeight2 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich3ErrorLimit2 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich3VEL2 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents PanelBereich3WZ1 As System.Windows.Forms.Panel
     Friend WithEvents RadLabel46 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBereich3Weight1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich3DisplayWeight1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich3ErrorLimit1 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBereich3Weight1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich3DisplayWeight1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich3ErrorLimit1 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich3VEL1 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents lblMessOrtBereich3 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblBereich3FehlerGrenzen As Telerik.WinControls.UI.RadLabel
@@ -8017,81 +8017,81 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
     Friend WithEvents RadGroupBoxBereich2 As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents PanelBereich2WZMitte As System.Windows.Forms.Panel
     Friend WithEvents RadLabel15 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBereich2WeightMitte As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich2DisplayWeightMitte As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich2ErrorLimitMitte As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBereich2WeightMitte As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich2DisplayWeightMitte As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich2ErrorLimitMitte As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich2VELMitte As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents PanelBereich2WZ12 As System.Windows.Forms.Panel
     Friend WithEvents RadLabel16 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBereich2Weight12 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich2DisplayWeight12 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich2ErrorLimit12 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBereich2Weight12 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich2DisplayWeight12 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich2ErrorLimit12 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich2VEL12 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents PanelBereich2WZ11 As System.Windows.Forms.Panel
     Friend WithEvents RadLabel17 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBereich2Weight11 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich2DisplayWeight11 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich2ErrorLimit11 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBereich2Weight11 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich2DisplayWeight11 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich2ErrorLimit11 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich2VEL11 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents PanelBereich2WZ10 As System.Windows.Forms.Panel
     Friend WithEvents RadLabel18 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBereich2Weight10 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich2DisplayWeight10 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich2ErrorLimit10 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBereich2Weight10 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich2DisplayWeight10 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich2ErrorLimit10 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich2VEL10 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents PanelBereich2WZ9 As System.Windows.Forms.Panel
     Friend WithEvents RadLabel19 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBereich2Weight9 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich2DisplayWeight9 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich2ErrorLimit9 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBereich2Weight9 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich2DisplayWeight9 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich2ErrorLimit9 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich2VEL9 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents PanelBereich2WZ8 As System.Windows.Forms.Panel
     Friend WithEvents RadLabel20 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBereich2Weight8 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich2DisplayWeight8 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich2ErrorLimit8 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBereich2Weight8 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich2DisplayWeight8 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich2ErrorLimit8 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich2VEL8 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents PanelBereich2WZ7 As System.Windows.Forms.Panel
     Friend WithEvents RadLabel21 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBereich2Weight7 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich2DisplayWeight7 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich2ErrorLimit7 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBereich2Weight7 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich2DisplayWeight7 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich2ErrorLimit7 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich2VEL7 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents PanelBereich2WZ6 As System.Windows.Forms.Panel
     Friend WithEvents RadLabel22 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBereich2Weight6 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich2DisplayWeight6 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich2ErrorLimit6 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBereich2Weight6 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich2DisplayWeight6 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich2ErrorLimit6 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich2VEL6 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents PanelBereich2WZ5 As System.Windows.Forms.Panel
     Friend WithEvents RadLabel23 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBereich2Weight5 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich2DisplayWeight5 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich2ErrorLimit5 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBereich2Weight5 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich2DisplayWeight5 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich2ErrorLimit5 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich2VEL5 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents PanelBereich2WZ4 As System.Windows.Forms.Panel
     Friend WithEvents RadLabel24 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBereich2Weight4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich2DisplayWeight4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich2ErrorLimit4 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBereich2Weight4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich2DisplayWeight4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich2ErrorLimit4 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich2VEL4 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents PanelBereich2WZ3 As System.Windows.Forms.Panel
     Friend WithEvents RadLabel25 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBereich2Weight3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich2DisplayWeight3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich2ErrorLimit3 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBereich2Weight3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich2DisplayWeight3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich2ErrorLimit3 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich2VEL3 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents PanelBereich2WZ2 As System.Windows.Forms.Panel
     Friend WithEvents RadLabel26 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBereich2Weight2 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich2DisplayWeight2 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich2ErrorLimit2 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBereich2Weight2 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich2DisplayWeight2 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich2ErrorLimit2 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich2VEL2 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents PanelBereich2WZ1 As System.Windows.Forms.Panel
     Friend WithEvents RadLabel27 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBereich2Weight1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich2DisplayWeight1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlBereich2ErrorLimit1 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBereich2Weight1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich2DisplayWeight1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlBereich2ErrorLimit1 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich2VEL1 As Telerik.WinControls.UI.RadCheckBox
     Friend lblMessOrtBereich2 As Telerik.WinControls.UI.RadLabel
     Friend lblBereich2FehlerGrenzen As Telerik.WinControls.UI.RadLabel
@@ -8193,23 +8193,23 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
     Friend WithEvents RadGroupBoxWiederholungen As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents lblMengeStandardgewichte2 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblMengeStandardgewichte1 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBetragNormallast As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBetragNormallast As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents PictureBox82 As System.Windows.Forms.PictureBox
     Friend WithEvents lblEFGSpeziallBerechnung As Telerik.WinControls.UI.RadMaskedEditBox
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents PictureBox83 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox84 As System.Windows.Forms.PictureBox
-    Friend WithEvents RadTextBoxControlWeight1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlDisplayWeight1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlErrorLimit1 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlWeight1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlDisplayWeight1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlErrorLimit1 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxVEL1 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
-    Friend WithEvents RadTextBoxControlWeight2 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlDisplayWeight2 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlWeight2 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlDisplayWeight2 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblFehlerGrenzen As Telerik.WinControls.UI.RadLabel
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
-    Friend WithEvents RadTextBoxControlWeight3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlDisplayWeight3 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlWeight3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlDisplayWeight3 As Telerik.WinControls.UI.RadTextBox
     Friend lblEFGSpezial As Telerik.WinControls.UI.RadLabel
     Friend lblGewicht As Telerik.WinControls.UI.RadLabel
     Friend lblAnzeigeGewicht As Telerik.WinControls.UI.RadLabel

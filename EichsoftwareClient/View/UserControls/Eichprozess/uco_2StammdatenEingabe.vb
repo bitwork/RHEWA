@@ -452,7 +452,7 @@
                         Control.readonly = True
                     Catch ex As Exception
                         Try
-                            Control.isreadonly = True
+                            Control.ReadOnly = True
                         Catch ex2 As Exception
                             Try
                                 Control.enabled = False
@@ -786,7 +786,7 @@
                 Control.readonly = Not Control.readonly
             Catch ex As Exception
                 Try
-                    Control.isreadonly = Not Control.isReadonly
+                    Control.ReadOnly = Not Control.ReadOnly
                 Catch ex2 As Exception
                     Try
                         Control.enabled = Not Control.enabled

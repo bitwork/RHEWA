@@ -25,7 +25,7 @@ Partial Class Uco21Versenden
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Uco21Versenden))
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.RadLabel1 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlUploadPath = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlUploadPath = New Telerik.WinControls.UI.RadTextBox()
         Me.RadButtonUploadPath = New Telerik.WinControls.UI.RadButton()
         Me.RadButtonAnRhewaSenden = New Telerik.WinControls.UI.RadButton()
         Me.BackgroundWorkerUploadFTP = New System.ComponentModel.BackgroundWorker()
@@ -59,7 +59,7 @@ Partial Class Uco21Versenden
         '
         'RadTextBoxControlUploadPath
         '
-        Me.RadTextBoxControlUploadPath.IsReadOnly = True
+        Me.RadTextBoxControlUploadPath.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlUploadPath, "RadTextBoxControlUploadPath")
         Me.RadTextBoxControlUploadPath.Name = "RadTextBoxControlUploadPath"
         '
@@ -147,7 +147,7 @@ Partial Class Uco21Versenden
     End Sub
     Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
     Friend WithEvents RadLabel1 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlUploadPath As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlUploadPath As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadButtonUploadPath As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadButtonAnRhewaSenden As Telerik.WinControls.UI.RadButton
     Friend WithEvents BackgroundWorkerUploadFTP As System.ComponentModel.BackgroundWorker

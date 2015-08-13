@@ -205,7 +205,7 @@
     <value>RadTextBoxControlMaxE</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlMaxE.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlMaxE.Parent" xml:space="preserve">
     <value>$this</value>

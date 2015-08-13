@@ -525,7 +525,7 @@
 
 #Region "Checkboxen EVents mit Textboxen"
     Private Sub RadCheckBoxBenannteStelle_ToggleStateChanged(sender As Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadCheckBoxBenannteStelle.ToggleStateChanged
-        RadTextBoxControlBenannteStelle.IsReadOnly = Not RadCheckBoxBenannteStelle.Checked
+        RadTextBoxControlBenannteStelle.ReadOnly = Not RadCheckBoxBenannteStelle.Checked
         PictureBoxBenannteStelle.Visible = Not RadCheckBoxBenannteStelle.Checked
 
         If RadCheckBoxBenannteStelle.Checked = False Then
@@ -534,7 +534,7 @@
     End Sub
 
     Private Sub RadCheckBoxEichsiegel13x13_ToggleStateChanged(sender As Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadCheckBoxEichsiegel13x13.ToggleStateChanged
-        RadTextBoxControlEichsiegel13x13.IsReadOnly = Not RadCheckBoxEichsiegel13x13.Checked
+        RadTextBoxControlEichsiegel13x13.ReadOnly = Not RadCheckBoxEichsiegel13x13.Checked
         PictureBoxEichsiegel13x13.Visible = Not RadCheckBoxEichsiegel13x13.Checked
 
         If RadCheckBoxEichsiegel13x13.Checked = False Then
@@ -543,7 +543,7 @@
     End Sub
 
     Private Sub RadCheckBoxEichsiegelRund_ToggleStateChanged(sender As Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadCheckBoxEichsiegelRund.ToggleStateChanged
-        RadTextBoxControlEichsiegelRund.IsReadOnly = Not RadCheckBoxEichsiegelRund.Checked
+        RadTextBoxControlEichsiegelRund.ReadOnly = Not RadCheckBoxEichsiegelRund.Checked
         PictureBoxEichsiegelRund.Visible = Not RadCheckBoxEichsiegelRund.Checked
 
         If RadCheckBoxEichsiegelRund.Checked = False Then
@@ -552,7 +552,7 @@
     End Sub
 
     Private Sub RadCheckBoxHinweismarke_ToggleStateChanged(sender As Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadCheckBoxHinweismarke.ToggleStateChanged
-        RadTextBoxControlHinweismarke.IsReadOnly = Not RadCheckBoxHinweismarke.Checked
+        RadTextBoxControlHinweismarke.ReadOnly = Not RadCheckBoxHinweismarke.Checked
         PictureBoxHinweismarke.Visible = Not RadCheckBoxHinweismarke.Checked
 
         If RadCheckBoxHinweismarke.Checked = False Then
@@ -561,7 +561,7 @@
     End Sub
 
     Private Sub RadCheckBoxGrunesM_ToggleStateChanged(sender As Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadCheckBoxGruenesM.ToggleStateChanged
-        RadTextBoxControlGruenesM.IsReadOnly = Not RadCheckBoxGruenesM.Checked
+        RadTextBoxControlGruenesM.ReadOnly = Not RadCheckBoxGruenesM.Checked
         PictureBoxGruenesM.Visible = Not RadCheckBoxGruenesM.Checked
 
         If RadCheckBoxGruenesM.Checked = False Then
@@ -570,7 +570,7 @@
     End Sub
 
     Private Sub RadCheckBoxCE_ToggleStateChanged(sender As Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadCheckBoxCEKennzeichen.ToggleStateChanged
-        RadTextBoxControlCEKennzeichen.IsReadOnly = Not RadCheckBoxCEKennzeichen.Checked
+        RadTextBoxControlCEKennzeichen.ReadOnly = Not RadCheckBoxCEKennzeichen.Checked
         PictureBoxCE.Visible = Not RadCheckBoxCEKennzeichen.Checked
 
         If RadCheckBoxCEKennzeichen.Checked = False Then
@@ -584,12 +584,12 @@
 
     Private Sub RadTextBoxControlBenannteStelle_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles RadTextBoxControlHinweismarke.Validating, RadTextBoxControlGruenesM.Validating, RadTextBoxControlEichsiegelRund.Validating, RadTextBoxControlEichsiegel13x13.Validating, RadTextBoxControlCEKennzeichen.Validating, RadTextBoxControlBenannteStelle.Validating
         Dim result As Decimal
-        If Not sender.isreadonly = True Then
+        If Not sender.readonly = True Then
 
             If sender.name.Equals("RadTextBoxControlBenannteStelle") Then
                 If sender.text <> "1" Then
 
-                    CType(sender, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.Red
+                    CType(sender, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
                     System.Media.SystemSounds.Exclamation.Play()
                     e.Cancel = True
                     MessageBox.Show(My.Resources.GlobaleLokalisierung.EinsEintragen)
@@ -597,25 +597,25 @@
             End If
 
             'damit das Vorgehen nicht so aggresiv ist, wird es bei leerem Text ignoriert:
-            If CType(sender, Telerik.WinControls.UI.RadTextBoxControl).Text.Equals("") Then
-                CType(sender, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.FromArgb(0, 255, 255, 255)
+            If CType(sender, Telerik.WinControls.UI.RadTextBox).Text.Equals("") Then
+                CType(sender, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.FromArgb(0, 255, 255, 255)
                 Exit Sub
             End If
 
             'versuchen ob der Text in eine Zahl konvertiert werden kann
-            If Not Decimal.TryParse(CType(sender, Telerik.WinControls.UI.RadTextBoxControl).Text, result) Then
+            If Not Decimal.TryParse(CType(sender, Telerik.WinControls.UI.RadTextBox).Text, result) Then
                 e.Cancel = True
-                CType(sender, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.Red
+                CType(sender, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
                 System.Media.SystemSounds.Exclamation.Play()
 
             Else 'rahmen zurücksetzen
-                CType(sender, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.FromArgb(0, 255, 255, 255)
+                CType(sender, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.FromArgb(0, 255, 255, 255)
             End If
         End If
     End Sub
 
     Private Sub RadCheckBoxAufbewahrungsdauer_ToggleStateChanged(sender As Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadCheckBoxAufbewahrungsdauer.ToggleStateChanged
-        RadTextBoxControlAufbewahrungsdauer.IsReadOnly = Not RadCheckBoxAufbewahrungsdauer.Checked
+        RadTextBoxControlAufbewahrungsdauer.ReadOnly = Not RadCheckBoxAufbewahrungsdauer.Checked
         PictureBoxAilbi.Visible = Not RadCheckBoxAufbewahrungsdauer.Checked
 
         If RadCheckBoxAufbewahrungsdauer.Checked = False Then

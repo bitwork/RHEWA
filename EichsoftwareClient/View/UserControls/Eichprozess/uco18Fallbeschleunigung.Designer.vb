@@ -27,7 +27,7 @@ Partial Class uco18Fallbeschleunigung
         Me.RadLabel1 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel3 = New Telerik.WinControls.UI.RadLabel()
         Me.RadCheckBoxSchwerkraft = New Telerik.WinControls.UI.RadCheckBox()
-        Me.RadTextBoxControlG = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlG = New Telerik.WinControls.UI.RadTextBox()
         Me.lblPflichtfeld1 = New System.Windows.Forms.Label()
         Me.lblPflichtfeld2 = New System.Windows.Forms.Label()
         CType(Me.lblBeschreibung, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -144,7 +144,7 @@ Partial Class uco18Fallbeschleunigung
     Friend WithEvents RadLabel1 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel3 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadCheckBoxSchwerkraft As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents RadTextBoxControlG As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlG As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblPflichtfeld1 As System.Windows.Forms.Label
     Friend WithEvents lblPflichtfeld2 As System.Windows.Forms.Label
 

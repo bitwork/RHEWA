@@ -78,22 +78,22 @@ RadTextBoxControlBereich1DisplayWeight9.Validating, RadTextBoxControlBereich1Dis
 RadTextBoxControlBereich1DisplayWeight5.Validating, RadTextBoxControlBereich1DisplayWeight4.Validating, RadTextBoxControlBereich1DisplayWeight3.Validating, RadTextBoxControlBereich1DisplayWeight2.Validating,
 RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1DisplayWeight11.Validating, RadTextBoxControlBereich1DisplayWeight10.Validating, RadTextBoxControlBereich1DisplayWeight1.Validating
         Dim result As Decimal
-        If Not sender.isreadonly = True Then
+        If Not sender.readonly = True Then
 
             'damit das Vorgehen nicht so aggresiv ist, wird es bei leerem Text ignoriert:
-            If CType(sender, Telerik.WinControls.UI.RadTextBoxControl).Text.Equals("") Then
-                CType(sender, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.FromArgb(0, 255, 255, 255)
+            If CType(sender, Telerik.WinControls.UI.RadTextBox).Text.Equals("") Then
+                CType(sender, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.FromArgb(0, 255, 255, 255)
                 Exit Sub
             End If
 
             'versuchen ob der Text in eine Zahl konvertiert werden kann
-            If Not Decimal.TryParse(CType(sender, Telerik.WinControls.UI.RadTextBoxControl).Text, result) Then
+            If Not Decimal.TryParse(CType(sender, Telerik.WinControls.UI.RadTextBox).Text, result) Then
                 e.Cancel = True
-                CType(sender, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.Red
+                CType(sender, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
                 System.Media.SystemSounds.Exclamation.Play()
 
             Else 'rahmen zurücksetzen
-                CType(sender, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.FromArgb(0, 255, 255, 255)
+                CType(sender, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.FromArgb(0, 255, 255, 255)
             End If
         End If
     End Sub
@@ -212,9 +212,9 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         'damit keine Event Kettenreaktion durchgeführt wird, werden die Events ab hier unterbrochen
         _suspendEvents = True
 
-        RadTextBoxControlWeight1.Text = CType(sender, Telerik.WinControls.UI.RadTextBoxControl).Text
-        RadTextBoxControlWeight2.Text = CType(sender, Telerik.WinControls.UI.RadTextBoxControl).Text
-        RadTextBoxControlWeight3.Text = CType(sender, Telerik.WinControls.UI.RadTextBoxControl).Text
+        RadTextBoxControlWeight1.Text = CType(sender, Telerik.WinControls.UI.RadTextBox).Text
+        RadTextBoxControlWeight2.Text = CType(sender, Telerik.WinControls.UI.RadTextBox).Text
+        RadTextBoxControlWeight3.Text = CType(sender, Telerik.WinControls.UI.RadTextBox).Text
 
 
         'neu berechnen der Fehler und EFG
@@ -234,8 +234,8 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         Try
 
             Dim Wiederholung As String = CType(sender, Windows.Forms.Control).Name.Last() 'letzte Zahl auslesen
-            Dim Fehler As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlErrorLimit{0}", 1)) ' gibt nur ein Fehlerelement
-            Dim Last As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlWeight{0}", Wiederholung))
+            Dim Fehler As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlErrorLimit{0}", 1)) ' gibt nur ein Fehlerelement
+            Dim Last As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlWeight{0}", Wiederholung))
             Dim EFG As Telerik.WinControls.UI.RadCheckBox = FindControl(String.Format("RadCheckBoxVEL{0}", 1)) ' gibt nur ein EFG Element
             Dim Spezial As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblEFGSpeziallBerechnung"))
             Dim min As Decimal
@@ -261,9 +261,9 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
 
             'EFG durch die Differenz zwischen den 3 Belastungen. Mit anderen Worten: Die Differenz der Wägeergebnisse bei der 3maligen Belastung darf nicht größer sein, als der Absolutwert der für diese Belastung geltenden Fehlergrenze der Waage.
 
-            Dim AnzeigeMax1 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlDisplayWeight{0}", 1))
-            Dim AnzeigeMax2 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlDisplayWeight{0}", 2))
-            Dim AnzeigeMax3 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlDisplayWeight{0}", 3))
+            Dim AnzeigeMax1 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlDisplayWeight{0}", 1))
+            Dim AnzeigeMax2 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlDisplayWeight{0}", 2))
+            Dim AnzeigeMax3 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlDisplayWeight{0}", 3))
 
 
             Dim listdecimals As New List(Of Decimal)
@@ -317,9 +317,9 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
     ''' </summary>
     ''' <remarks></remarks>
     Private Sub CalculateEFGAussermittigeBelastung(ByVal Bereich As Integer, ByVal Belastungsort As String)
-        Dim Last As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}Weight{1}", Bereich, Belastungsort))
-        Dim Anzeige As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}DisplayWeight{1}", Bereich, Belastungsort))
-        Dim Fehler As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}ErrorLimit{1}", Bereich, Belastungsort))
+        Dim Last As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}Weight{1}", Bereich, Belastungsort))
+        Dim Anzeige As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}DisplayWeight{1}", Bereich, Belastungsort))
+        Dim Fehler As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}ErrorLimit{1}", Bereich, Belastungsort))
         Dim EFG As Telerik.WinControls.UI.RadCheckBox = FindControl(String.Format("RadCheckBoxBereich{0}VEL{1}", Bereich, Belastungsort))
         Dim Spezial As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblBereich{0}EFGSpeziallBerechnung", Bereich))
 
@@ -442,12 +442,12 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                 End If
 
                 'wenn sich eine der Last Werte ändert, muss es in allen anderen Textboxen nachgezogen werden
-                Dim Last As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}Weight{1}", bereich, Belastungsort))
+                Dim Last As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}Weight{1}", bereich, Belastungsort))
 
                 'vorzeitiger abrruch, ab dann wenn ein ausgeblendetes steuerelement gefunden wurde
                 If Last.Visible = False Then Continue For
 
-                Last.Text = CType(sender, Telerik.WinControls.UI.RadTextBoxControl).Text
+                Last.Text = CType(sender, Telerik.WinControls.UI.RadTextBox).Text
 
 
                 'wenn weight1 leer ist, sind auch alle anderen leer
@@ -1032,7 +1032,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                     Dim sBelastungsOrt As String = Belastungsort
                     If Belastungsort = 13 Then sBelastungsOrt = "Mitte" 'sonderfall
 
-                    Dim Last As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}Weight{1}", CInt(Bereich), sBelastungsOrt))
+                    Dim Last As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}Weight{1}", CInt(Bereich), sBelastungsOrt))
                     Last.Text = wert
                 Next
             End If
@@ -1063,9 +1063,9 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                 End If
 
 
-                Dim Last As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}Weight{1}", CInt(Bereich), sBelastungsortControl))
-                Dim Anzeige As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}DisplayWeight{1}", CInt(Bereich), sBelastungsortControl))
-                Dim Fehler As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}ErrorLimit{1}", CInt(Bereich), sBelastungsortControl))
+                Dim Last As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}Weight{1}", CInt(Bereich), sBelastungsortControl))
+                Dim Anzeige As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}DisplayWeight{1}", CInt(Bereich), sBelastungsortControl))
+                Dim Fehler As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}ErrorLimit{1}", CInt(Bereich), sBelastungsortControl))
                 Dim EFG As Telerik.WinControls.UI.RadCheckBox = FindControl(String.Format("RadCheckBoxBereich{0}VEL{1}", CInt(Bereich), sBelastungsortControl))
 
 
@@ -1275,9 +1275,9 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
             Belastungsort = "Mitte"
         End If
 
-        Dim Last As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}Weight{1}", CInt(Bereich), Belastungsort))
-        Dim Anzeige As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}DisplayWeight{1}", CInt(Bereich), Belastungsort))
-        Dim Fehler As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlBereich{0}ErrorLimit{1}", CInt(Bereich), Belastungsort))
+        Dim Last As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}Weight{1}", CInt(Bereich), Belastungsort))
+        Dim Anzeige As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}DisplayWeight{1}", CInt(Bereich), Belastungsort))
+        Dim Fehler As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}ErrorLimit{1}", CInt(Bereich), Belastungsort))
         Dim EFG As Telerik.WinControls.UI.RadCheckBox = FindControl(String.Format("RadCheckBoxBereich{0}VEL{1}", CInt(Bereich), Belastungsort))
         Dim EFGExtra As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblBereich{0}EFGSpeziallBerechnung", CInt(Bereich)))
 
@@ -1348,45 +1348,45 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
 
 #Region "aussermittige Belastung"
     Private Function ValidateControlsAussermittigeBelastung() As Boolean
-        If RadCheckBoxBereich1VEL1.Checked = False And RadCheckBoxBereich1VEL1.Visible = True Then RadTextBoxControlBereich1DisplayWeight1.TextBoxElement.BorderColor = Color.Red
-        If RadCheckBoxBereich1VEL2.Checked = False And RadCheckBoxBereich1VEL2.Visible = True Then RadTextBoxControlBereich1DisplayWeight2.TextBoxElement.BorderColor = Color.Red
-        If RadCheckBoxBereich1VEL3.Checked = False And RadCheckBoxBereich1VEL3.Visible = True Then RadTextBoxControlBereich1DisplayWeight3.TextBoxElement.BorderColor = Color.Red
-        If RadCheckBoxBereich1VEL4.Checked = False And RadCheckBoxBereich1VEL4.Visible = True Then RadTextBoxControlBereich1DisplayWeight4.TextBoxElement.BorderColor = Color.Red
-        If RadCheckBoxBereich1VEL5.Checked = False And RadCheckBoxBereich1VEL5.Visible = True Then RadTextBoxControlBereich1DisplayWeight5.TextBoxElement.BorderColor = Color.Red
-        If RadCheckBoxBereich1VEL6.Checked = False And RadCheckBoxBereich1VEL6.Visible = True Then RadTextBoxControlBereich1DisplayWeight6.TextBoxElement.BorderColor = Color.Red
-        If RadCheckBoxBereich1VEL7.Checked = False And RadCheckBoxBereich1VEL7.Visible = True Then RadTextBoxControlBereich1DisplayWeight7.TextBoxElement.BorderColor = Color.Red
-        If RadCheckBoxBereich1VEL8.Checked = False And RadCheckBoxBereich1VEL8.Visible = True Then RadTextBoxControlBereich1DisplayWeight8.TextBoxElement.BorderColor = Color.Red
-        If RadCheckBoxBereich1VEL9.Checked = False And RadCheckBoxBereich1VEL9.Visible = True Then RadTextBoxControlBereich1DisplayWeight9.TextBoxElement.BorderColor = Color.Red
-        If RadCheckBoxBereich1VEL10.Checked = False And RadCheckBoxBereich1VEL10.Visible = True Then RadTextBoxControlBereich1DisplayWeight10.TextBoxElement.BorderColor = Color.Red
-        If RadCheckBoxBereich1VEL11.Checked = False And RadCheckBoxBereich1VEL11.Visible = True Then RadTextBoxControlBereich1DisplayWeight11.TextBoxElement.BorderColor = Color.Red
-        If RadCheckBoxBereich1VEL12.Checked = False And RadCheckBoxBereich1VEL12.Visible = True Then RadTextBoxControlBereich1DisplayWeight12.TextBoxElement.BorderColor = Color.Red
-        If RadCheckBoxBereich1VELMitte.Checked = False And RadCheckBoxBereich1VELMitte.Visible = True Then RadTextBoxControlBereich1DisplayWeightMitte.TextBoxElement.BorderColor = Color.Red
-        If RadCheckBoxBereich2VEL1.Checked = False And RadCheckBoxBereich2VEL1.Visible = True Then RadTextBoxControlBereich2DisplayWeight1.TextBoxElement.BorderColor = Color.Red
-        If RadCheckBoxBereich2VEL2.Checked = False And RadCheckBoxBereich2VEL2.Visible = True Then RadTextBoxControlBereich2DisplayWeight2.TextBoxElement.BorderColor = Color.Red
-        If RadCheckBoxBereich2VEL3.Checked = False And RadCheckBoxBereich2VEL3.Visible = True Then RadTextBoxControlBereich2DisplayWeight3.TextBoxElement.BorderColor = Color.Red
-        If RadCheckBoxBereich2VEL4.Checked = False And RadCheckBoxBereich2VEL4.Visible = True Then RadTextBoxControlBereich2DisplayWeight4.TextBoxElement.BorderColor = Color.Red
-        If RadCheckBoxBereich2VEL5.Checked = False And RadCheckBoxBereich2VEL5.Visible = True Then RadTextBoxControlBereich2DisplayWeight5.TextBoxElement.BorderColor = Color.Red
-        If RadCheckBoxBereich2VEL6.Checked = False And RadCheckBoxBereich2VEL6.Visible = True Then RadTextBoxControlBereich2DisplayWeight6.TextBoxElement.BorderColor = Color.Red
-        If RadCheckBoxBereich2VEL7.Checked = False And RadCheckBoxBereich2VEL7.Visible = True Then RadTextBoxControlBereich2DisplayWeight7.TextBoxElement.BorderColor = Color.Red
-        If RadCheckBoxBereich2VEL8.Checked = False And RadCheckBoxBereich2VEL8.Visible = True Then RadTextBoxControlBereich2DisplayWeight8.TextBoxElement.BorderColor = Color.Red
-        If RadCheckBoxBereich2VEL9.Checked = False And RadCheckBoxBereich2VEL9.Visible = True Then RadTextBoxControlBereich2DisplayWeight9.TextBoxElement.BorderColor = Color.Red
-        If RadCheckBoxBereich2VEL10.Checked = False And RadCheckBoxBereich2VEL10.Visible = True Then RadTextBoxControlBereich2DisplayWeight10.TextBoxElement.BorderColor = Color.Red
-        If RadCheckBoxBereich2VEL11.Checked = False And RadCheckBoxBereich2VEL11.Visible = True Then RadTextBoxControlBereich2DisplayWeight11.TextBoxElement.BorderColor = Color.Red
-        If RadCheckBoxBereich2VEL12.Checked = False And RadCheckBoxBereich2VEL12.Visible = True Then RadTextBoxControlBereich2DisplayWeight12.TextBoxElement.BorderColor = Color.Red
-        If RadCheckBoxBereich2VELMitte.Checked = False And RadCheckBoxBereich2VELMitte.Visible = True Then RadTextBoxControlBereich2DisplayWeightMitte.TextBoxElement.BorderColor = Color.Red
-        If RadCheckBoxBereich3VEL1.Checked = False And RadCheckBoxBereich3VEL1.Visible = True Then RadTextBoxControlBereich3DisplayWeight1.TextBoxElement.BorderColor = Color.Red
-        If RadCheckBoxBereich3VEL2.Checked = False And RadCheckBoxBereich3VEL2.Visible = True Then RadTextBoxControlBereich3DisplayWeight2.TextBoxElement.BorderColor = Color.Red
-        If RadCheckBoxBereich3VEL3.Checked = False And RadCheckBoxBereich3VEL3.Visible = True Then RadTextBoxControlBereich3DisplayWeight3.TextBoxElement.BorderColor = Color.Red
-        If RadCheckBoxBereich3VEL4.Checked = False And RadCheckBoxBereich3VEL4.Visible = True Then RadTextBoxControlBereich3DisplayWeight4.TextBoxElement.BorderColor = Color.Red
-        If RadCheckBoxBereich3VEL5.Checked = False And RadCheckBoxBereich3VEL5.Visible = True Then RadTextBoxControlBereich3DisplayWeight5.TextBoxElement.BorderColor = Color.Red
-        If RadCheckBoxBereich3VEL6.Checked = False And RadCheckBoxBereich3VEL6.Visible = True Then RadTextBoxControlBereich3DisplayWeight6.TextBoxElement.BorderColor = Color.Red
-        If RadCheckBoxBereich3VEL7.Checked = False And RadCheckBoxBereich3VEL7.Visible = True Then RadTextBoxControlBereich3DisplayWeight7.TextBoxElement.BorderColor = Color.Red
-        If RadCheckBoxBereich3VEL8.Checked = False And RadCheckBoxBereich3VEL8.Visible = True Then RadTextBoxControlBereich3DisplayWeight8.TextBoxElement.BorderColor = Color.Red
-        If RadCheckBoxBereich3VEL9.Checked = False And RadCheckBoxBereich3VEL9.Visible = True Then RadTextBoxControlBereich3DisplayWeight9.TextBoxElement.BorderColor = Color.Red
-        If RadCheckBoxBereich3VEL10.Checked = False And RadCheckBoxBereich3VEL10.Visible = True Then RadTextBoxControlBereich3DisplayWeight10.TextBoxElement.BorderColor = Color.Red
-        If RadCheckBoxBereich3VEL11.Checked = False And RadCheckBoxBereich3VEL11.Visible = True Then RadTextBoxControlBereich3DisplayWeight11.TextBoxElement.BorderColor = Color.Red
-        If RadCheckBoxBereich3VEL12.Checked = False And RadCheckBoxBereich3VEL12.Visible = True Then RadTextBoxControlBereich3DisplayWeight12.TextBoxElement.BorderColor = Color.Red
-        If RadCheckBoxBereich3VELMitte.Checked = False And RadCheckBoxBereich3VELMitte.Visible = True Then RadTextBoxControlBereich3DisplayWeightMitte.TextBoxElement.BorderColor = Color.Red
+        If RadCheckBoxBereich1VEL1.Checked = False And RadCheckBoxBereich1VEL1.Visible = True Then RadTextBoxControlBereich1DisplayWeight1.TextBoxElement.Border.ForeColor = Color.Red
+        If RadCheckBoxBereich1VEL2.Checked = False And RadCheckBoxBereich1VEL2.Visible = True Then RadTextBoxControlBereich1DisplayWeight2.TextBoxElement.Border.ForeColor = Color.Red
+        If RadCheckBoxBereich1VEL3.Checked = False And RadCheckBoxBereich1VEL3.Visible = True Then RadTextBoxControlBereich1DisplayWeight3.TextBoxElement.Border.ForeColor = Color.Red
+        If RadCheckBoxBereich1VEL4.Checked = False And RadCheckBoxBereich1VEL4.Visible = True Then RadTextBoxControlBereich1DisplayWeight4.TextBoxElement.Border.ForeColor = Color.Red
+        If RadCheckBoxBereich1VEL5.Checked = False And RadCheckBoxBereich1VEL5.Visible = True Then RadTextBoxControlBereich1DisplayWeight5.TextBoxElement.Border.ForeColor = Color.Red
+        If RadCheckBoxBereich1VEL6.Checked = False And RadCheckBoxBereich1VEL6.Visible = True Then RadTextBoxControlBereich1DisplayWeight6.TextBoxElement.Border.ForeColor = Color.Red
+        If RadCheckBoxBereich1VEL7.Checked = False And RadCheckBoxBereich1VEL7.Visible = True Then RadTextBoxControlBereich1DisplayWeight7.TextBoxElement.Border.ForeColor = Color.Red
+        If RadCheckBoxBereich1VEL8.Checked = False And RadCheckBoxBereich1VEL8.Visible = True Then RadTextBoxControlBereich1DisplayWeight8.TextBoxElement.Border.ForeColor = Color.Red
+        If RadCheckBoxBereich1VEL9.Checked = False And RadCheckBoxBereich1VEL9.Visible = True Then RadTextBoxControlBereich1DisplayWeight9.TextBoxElement.Border.ForeColor = Color.Red
+        If RadCheckBoxBereich1VEL10.Checked = False And RadCheckBoxBereich1VEL10.Visible = True Then RadTextBoxControlBereich1DisplayWeight10.TextBoxElement.Border.ForeColor = Color.Red
+        If RadCheckBoxBereich1VEL11.Checked = False And RadCheckBoxBereich1VEL11.Visible = True Then RadTextBoxControlBereich1DisplayWeight11.TextBoxElement.Border.ForeColor = Color.Red
+        If RadCheckBoxBereich1VEL12.Checked = False And RadCheckBoxBereich1VEL12.Visible = True Then RadTextBoxControlBereich1DisplayWeight12.TextBoxElement.Border.ForeColor = Color.Red
+        If RadCheckBoxBereich1VELMitte.Checked = False And RadCheckBoxBereich1VELMitte.Visible = True Then RadTextBoxControlBereich1DisplayWeightMitte.TextBoxElement.Border.ForeColor = Color.Red
+        If RadCheckBoxBereich2VEL1.Checked = False And RadCheckBoxBereich2VEL1.Visible = True Then RadTextBoxControlBereich2DisplayWeight1.TextBoxElement.Border.ForeColor = Color.Red
+        If RadCheckBoxBereich2VEL2.Checked = False And RadCheckBoxBereich2VEL2.Visible = True Then RadTextBoxControlBereich2DisplayWeight2.TextBoxElement.Border.ForeColor = Color.Red
+        If RadCheckBoxBereich2VEL3.Checked = False And RadCheckBoxBereich2VEL3.Visible = True Then RadTextBoxControlBereich2DisplayWeight3.TextBoxElement.Border.ForeColor = Color.Red
+        If RadCheckBoxBereich2VEL4.Checked = False And RadCheckBoxBereich2VEL4.Visible = True Then RadTextBoxControlBereich2DisplayWeight4.TextBoxElement.Border.ForeColor = Color.Red
+        If RadCheckBoxBereich2VEL5.Checked = False And RadCheckBoxBereich2VEL5.Visible = True Then RadTextBoxControlBereich2DisplayWeight5.TextBoxElement.Border.ForeColor = Color.Red
+        If RadCheckBoxBereich2VEL6.Checked = False And RadCheckBoxBereich2VEL6.Visible = True Then RadTextBoxControlBereich2DisplayWeight6.TextBoxElement.Border.ForeColor = Color.Red
+        If RadCheckBoxBereich2VEL7.Checked = False And RadCheckBoxBereich2VEL7.Visible = True Then RadTextBoxControlBereich2DisplayWeight7.TextBoxElement.Border.ForeColor = Color.Red
+        If RadCheckBoxBereich2VEL8.Checked = False And RadCheckBoxBereich2VEL8.Visible = True Then RadTextBoxControlBereich2DisplayWeight8.TextBoxElement.Border.ForeColor = Color.Red
+        If RadCheckBoxBereich2VEL9.Checked = False And RadCheckBoxBereich2VEL9.Visible = True Then RadTextBoxControlBereich2DisplayWeight9.TextBoxElement.Border.ForeColor = Color.Red
+        If RadCheckBoxBereich2VEL10.Checked = False And RadCheckBoxBereich2VEL10.Visible = True Then RadTextBoxControlBereich2DisplayWeight10.TextBoxElement.Border.ForeColor = Color.Red
+        If RadCheckBoxBereich2VEL11.Checked = False And RadCheckBoxBereich2VEL11.Visible = True Then RadTextBoxControlBereich2DisplayWeight11.TextBoxElement.Border.ForeColor = Color.Red
+        If RadCheckBoxBereich2VEL12.Checked = False And RadCheckBoxBereich2VEL12.Visible = True Then RadTextBoxControlBereich2DisplayWeight12.TextBoxElement.Border.ForeColor = Color.Red
+        If RadCheckBoxBereich2VELMitte.Checked = False And RadCheckBoxBereich2VELMitte.Visible = True Then RadTextBoxControlBereich2DisplayWeightMitte.TextBoxElement.Border.ForeColor = Color.Red
+        If RadCheckBoxBereich3VEL1.Checked = False And RadCheckBoxBereich3VEL1.Visible = True Then RadTextBoxControlBereich3DisplayWeight1.TextBoxElement.Border.ForeColor = Color.Red
+        If RadCheckBoxBereich3VEL2.Checked = False And RadCheckBoxBereich3VEL2.Visible = True Then RadTextBoxControlBereich3DisplayWeight2.TextBoxElement.Border.ForeColor = Color.Red
+        If RadCheckBoxBereich3VEL3.Checked = False And RadCheckBoxBereich3VEL3.Visible = True Then RadTextBoxControlBereich3DisplayWeight3.TextBoxElement.Border.ForeColor = Color.Red
+        If RadCheckBoxBereich3VEL4.Checked = False And RadCheckBoxBereich3VEL4.Visible = True Then RadTextBoxControlBereich3DisplayWeight4.TextBoxElement.Border.ForeColor = Color.Red
+        If RadCheckBoxBereich3VEL5.Checked = False And RadCheckBoxBereich3VEL5.Visible = True Then RadTextBoxControlBereich3DisplayWeight5.TextBoxElement.Border.ForeColor = Color.Red
+        If RadCheckBoxBereich3VEL6.Checked = False And RadCheckBoxBereich3VEL6.Visible = True Then RadTextBoxControlBereich3DisplayWeight6.TextBoxElement.Border.ForeColor = Color.Red
+        If RadCheckBoxBereich3VEL7.Checked = False And RadCheckBoxBereich3VEL7.Visible = True Then RadTextBoxControlBereich3DisplayWeight7.TextBoxElement.Border.ForeColor = Color.Red
+        If RadCheckBoxBereich3VEL8.Checked = False And RadCheckBoxBereich3VEL8.Visible = True Then RadTextBoxControlBereich3DisplayWeight8.TextBoxElement.Border.ForeColor = Color.Red
+        If RadCheckBoxBereich3VEL9.Checked = False And RadCheckBoxBereich3VEL9.Visible = True Then RadTextBoxControlBereich3DisplayWeight9.TextBoxElement.Border.ForeColor = Color.Red
+        If RadCheckBoxBereich3VEL10.Checked = False And RadCheckBoxBereich3VEL10.Visible = True Then RadTextBoxControlBereich3DisplayWeight10.TextBoxElement.Border.ForeColor = Color.Red
+        If RadCheckBoxBereich3VEL11.Checked = False And RadCheckBoxBereich3VEL11.Visible = True Then RadTextBoxControlBereich3DisplayWeight11.TextBoxElement.Border.ForeColor = Color.Red
+        If RadCheckBoxBereich3VEL12.Checked = False And RadCheckBoxBereich3VEL12.Visible = True Then RadTextBoxControlBereich3DisplayWeight12.TextBoxElement.Border.ForeColor = Color.Red
+        If RadCheckBoxBereich3VELMitte.Checked = False And RadCheckBoxBereich3VELMitte.Visible = True Then RadTextBoxControlBereich3DisplayWeightMitte.TextBoxElement.Border.ForeColor = Color.Red
 
         If RadCheckBoxBereich1VEL1.Checked = False And RadCheckBoxBereich1VEL1.Visible = True Or _
         RadCheckBoxBereich1VEL2.Checked = False And RadCheckBoxBereich1VEL2.Visible = True Or _

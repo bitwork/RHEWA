@@ -382,7 +382,7 @@
     <value>RadTextBoxControlStaffel5Bereich3Fehler7</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich3Fehler7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich3Fehler7.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel5Bereich3</value>
@@ -430,7 +430,7 @@
     <value>RadTextBoxControlStaffel5Bereich3Fehler6</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich3Fehler6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich3Fehler6.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel5Bereich3</value>
@@ -478,7 +478,7 @@
     <value>RadTextBoxControlStaffel5Bereich3Fehler5</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich3Fehler5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich3Fehler5.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel5Bereich3</value>
@@ -526,7 +526,7 @@
     <value>RadTextBoxControlStaffel5Bereich3Last4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich3Last4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich3Last4.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel5Bereich3</value>
@@ -571,7 +571,7 @@
     <value>RadTextBoxControlStaffel5Bereich3Anzeige4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich3Anzeige4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich3Anzeige4.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel5Bereich3</value>
@@ -616,7 +616,7 @@
     <value>RadTextBoxControlStaffel5Bereich3Anzeige3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich3Anzeige3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich3Anzeige3.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel5Bereich3</value>
@@ -664,7 +664,7 @@
     <value>RadTextBoxControlStaffel5Bereich3Last3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich3Last3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich3Last3.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel5Bereich3</value>
@@ -709,7 +709,7 @@
     <value>RadTextBoxControlStaffel5Bereich3Last2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich3Last2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich3Last2.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel5Bereich3</value>
@@ -754,7 +754,7 @@
     <value>RadTextBoxControlStaffel5Bereich3Anzeige1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich3Anzeige1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich3Anzeige1.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel5Bereich3</value>
@@ -799,7 +799,7 @@
     <value>RadTextBoxControlStaffel5Bereich3Last1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich3Last1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich3Last1.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel5Bereich3</value>
@@ -1784,7 +1784,7 @@
     <value>RadTextBoxControlStaffel5Bereich2Fehler7</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich2Fehler7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich2Fehler7.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel5Bereich2</value>
@@ -1832,7 +1832,7 @@
     <value>RadTextBoxControlStaffel5Bereich2Fehler6</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich2Fehler6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich2Fehler6.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel5Bereich2</value>
@@ -1880,7 +1880,7 @@
     <value>RadTextBoxControlStaffel5Bereich2Fehler5</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich2Fehler5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich2Fehler5.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel5Bereich2</value>
@@ -1928,7 +1928,7 @@
     <value>RadTextBoxControlStaffel5Bereich2Last4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich2Last4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich2Last4.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel5Bereich2</value>
@@ -1973,7 +1973,7 @@
     <value>RadTextBoxControlStaffel5Bereich2Anzeige4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich2Anzeige4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich2Anzeige4.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel5Bereich2</value>
@@ -2018,7 +2018,7 @@
     <value>RadTextBoxControlStaffel5Bereich2Anzeige3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich2Anzeige3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich2Anzeige3.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel5Bereich2</value>
@@ -2066,7 +2066,7 @@
     <value>RadTextBoxControlStaffel5Bereich2Last3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich2Last3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich2Last3.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel5Bereich2</value>
@@ -2111,7 +2111,7 @@
     <value>RadTextBoxControlStaffel5Bereich2Last2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich2Last2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich2Last2.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel5Bereich2</value>
@@ -2156,7 +2156,7 @@
     <value>RadTextBoxControlStaffel5Bereich2Anzeige1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich2Anzeige1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich2Anzeige1.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel5Bereich2</value>
@@ -2201,7 +2201,7 @@
     <value>RadTextBoxControlStaffel5Bereich2Last1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich2Last1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich2Last1.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel5Bereich2</value>
@@ -3185,7 +3185,7 @@
     <value>RadTextBoxControlStaffel5Bereich1Fehler7</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich1Fehler7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich1Fehler7.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel5Bereich1</value>
@@ -3233,7 +3233,7 @@
     <value>RadTextBoxControlStaffel5Bereich1Fehler6</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich1Fehler6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich1Fehler6.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel5Bereich1</value>
@@ -3281,7 +3281,7 @@
     <value>RadTextBoxControlStaffel5Bereich1Fehler5</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich1Fehler5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich1Fehler5.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel5Bereich1</value>
@@ -3329,7 +3329,7 @@
     <value>RadTextBoxControlStaffel5Bereich1Last4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich1Last4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich1Last4.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel5Bereich1</value>
@@ -3374,7 +3374,7 @@
     <value>RadTextBoxControlStaffel5Bereich1Anzeige4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich1Anzeige4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich1Anzeige4.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel5Bereich1</value>
@@ -3419,7 +3419,7 @@
     <value>RadTextBoxControlStaffel5Bereich1Anzeige3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich1Anzeige3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich1Anzeige3.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel5Bereich1</value>
@@ -3467,7 +3467,7 @@
     <value>RadTextBoxControlStaffel5Bereich1Last3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich1Last3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich1Last3.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel5Bereich1</value>
@@ -3512,7 +3512,7 @@
     <value>RadTextBoxControlStaffel5Bereich1Last2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich1Last2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich1Last2.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel5Bereich1</value>
@@ -3557,7 +3557,7 @@
     <value>RadTextBoxControlStaffel5Bereich1Anzeige1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich1Anzeige1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich1Anzeige1.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel5Bereich1</value>
@@ -3602,7 +3602,7 @@
     <value>RadTextBoxControlStaffel5Bereich1Last1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich1Last1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel5Bereich1Last1.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel5Bereich1</value>
@@ -4637,7 +4637,7 @@
     <value>RadTextBoxControlStaffel4Bereich3Fehler7</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich3Fehler7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich3Fehler7.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel4Bereich3</value>
@@ -4685,7 +4685,7 @@
     <value>RadTextBoxControlStaffel4Bereich3Fehler6</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich3Fehler6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich3Fehler6.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel4Bereich3</value>
@@ -4733,7 +4733,7 @@
     <value>RadTextBoxControlStaffel4Bereich3Fehler5</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich3Fehler5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich3Fehler5.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel4Bereich3</value>
@@ -4781,7 +4781,7 @@
     <value>RadTextBoxControlStaffel4Bereich3Last4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich3Last4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich3Last4.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel4Bereich3</value>
@@ -4826,7 +4826,7 @@
     <value>RadTextBoxControlStaffel4Bereich3Anzeige4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich3Anzeige4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich3Anzeige4.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel4Bereich3</value>
@@ -4871,7 +4871,7 @@
     <value>RadTextBoxControlStaffel4Bereich3Anzeige3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich3Anzeige3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich3Anzeige3.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel4Bereich3</value>
@@ -4919,7 +4919,7 @@
     <value>RadTextBoxControlStaffel4Bereich3Last3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich3Last3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich3Last3.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel4Bereich3</value>
@@ -4964,7 +4964,7 @@
     <value>RadTextBoxControlStaffel4Bereich3Last2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich3Last2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich3Last2.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel4Bereich3</value>
@@ -5009,7 +5009,7 @@
     <value>RadTextBoxControlStaffel4Bereich3Anzeige1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich3Anzeige1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich3Anzeige1.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel4Bereich3</value>
@@ -5054,7 +5054,7 @@
     <value>RadTextBoxControlStaffel4Bereich3Last1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich3Last1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich3Last1.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel4Bereich3</value>
@@ -6038,7 +6038,7 @@
     <value>RadTextBoxControlStaffel4Bereich2Fehler7</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich2Fehler7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich2Fehler7.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel4Bereich2</value>
@@ -6086,7 +6086,7 @@
     <value>RadTextBoxControlStaffel4Bereich2Fehler6</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich2Fehler6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich2Fehler6.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel4Bereich2</value>
@@ -6134,7 +6134,7 @@
     <value>RadTextBoxControlStaffel4Bereich2Fehler5</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich2Fehler5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich2Fehler5.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel4Bereich2</value>
@@ -6182,7 +6182,7 @@
     <value>RadTextBoxControlStaffel4Bereich2Last4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich2Last4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich2Last4.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel4Bereich2</value>
@@ -6227,7 +6227,7 @@
     <value>RadTextBoxControlStaffel4Bereich2Anzeige4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich2Anzeige4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich2Anzeige4.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel4Bereich2</value>
@@ -6272,7 +6272,7 @@
     <value>RadTextBoxControlStaffel4Bereich2Anzeige3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich2Anzeige3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich2Anzeige3.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel4Bereich2</value>
@@ -6320,7 +6320,7 @@
     <value>RadTextBoxControlStaffel4Bereich2Last3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich2Last3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich2Last3.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel4Bereich2</value>
@@ -6365,7 +6365,7 @@
     <value>RadTextBoxControlStaffel4Bereich2Last2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich2Last2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich2Last2.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel4Bereich2</value>
@@ -6410,7 +6410,7 @@
     <value>RadTextBoxControlStaffel4Bereich2Anzeige1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich2Anzeige1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich2Anzeige1.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel4Bereich2</value>
@@ -6455,7 +6455,7 @@
     <value>RadTextBoxControlStaffel4Bereich2Last1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich2Last1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich2Last1.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel4Bereich2</value>
@@ -7439,7 +7439,7 @@
     <value>RadTextBoxControlStaffel4Bereich1Fehler7</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich1Fehler7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich1Fehler7.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel4Bereich1</value>
@@ -7487,7 +7487,7 @@
     <value>RadTextBoxControlStaffel4Bereich1Fehler6</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich1Fehler6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich1Fehler6.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel4Bereich1</value>
@@ -7535,7 +7535,7 @@
     <value>RadTextBoxControlStaffel4Bereich1Fehler5</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich1Fehler5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich1Fehler5.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel4Bereich1</value>
@@ -7583,7 +7583,7 @@
     <value>RadTextBoxControlStaffel4Bereich1Last4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich1Last4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich1Last4.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel4Bereich1</value>
@@ -7628,7 +7628,7 @@
     <value>RadTextBoxControlStaffel4Bereich1Anzeige4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich1Anzeige4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich1Anzeige4.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel4Bereich1</value>
@@ -7673,7 +7673,7 @@
     <value>RadTextBoxControlStaffel4Bereich1Anzeige3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich1Anzeige3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich1Anzeige3.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel4Bereich1</value>
@@ -7721,7 +7721,7 @@
     <value>RadTextBoxControlStaffel4Bereich1Last3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich1Last3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich1Last3.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel4Bereich1</value>
@@ -7766,7 +7766,7 @@
     <value>RadTextBoxControlStaffel4Bereich1Last2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich1Last2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich1Last2.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel4Bereich1</value>
@@ -7811,7 +7811,7 @@
     <value>RadTextBoxControlStaffel4Bereich1Anzeige1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich1Anzeige1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich1Anzeige1.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel4Bereich1</value>
@@ -7856,7 +7856,7 @@
     <value>RadTextBoxControlStaffel4Bereich1Last1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich1Last1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel4Bereich1Last1.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel4Bereich1</value>
@@ -8891,7 +8891,7 @@
     <value>RadTextBoxControlStaffel3Bereich3Fehler7</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich3Fehler7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich3Fehler7.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel3Bereich3</value>
@@ -8939,7 +8939,7 @@
     <value>RadTextBoxControlStaffel3Bereich3Fehler6</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich3Fehler6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich3Fehler6.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel3Bereich3</value>
@@ -8987,7 +8987,7 @@
     <value>RadTextBoxControlStaffel3Bereich3Fehler5</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich3Fehler5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich3Fehler5.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel3Bereich3</value>
@@ -9035,7 +9035,7 @@
     <value>RadTextBoxControlStaffel3Bereich3Last4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich3Last4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich3Last4.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel3Bereich3</value>
@@ -9080,7 +9080,7 @@
     <value>RadTextBoxControlStaffel3Bereich3Anzeige4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich3Anzeige4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich3Anzeige4.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel3Bereich3</value>
@@ -9125,7 +9125,7 @@
     <value>RadTextBoxControlStaffel3Bereich3Anzeige3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich3Anzeige3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich3Anzeige3.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel3Bereich3</value>
@@ -9173,7 +9173,7 @@
     <value>RadTextBoxControlStaffel3Bereich3Last3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich3Last3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich3Last3.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel3Bereich3</value>
@@ -9218,7 +9218,7 @@
     <value>RadTextBoxControlStaffel3Bereich3Last2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich3Last2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich3Last2.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel3Bereich3</value>
@@ -9263,7 +9263,7 @@
     <value>RadTextBoxControlStaffel3Bereich3Anzeige1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich3Anzeige1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich3Anzeige1.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel3Bereich3</value>
@@ -9308,7 +9308,7 @@
     <value>RadTextBoxControlStaffel3Bereich3Last1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich3Last1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich3Last1.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel3Bereich3</value>
@@ -10292,7 +10292,7 @@
     <value>RadTextBoxControlStaffel3Bereich2Fehler7</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich2Fehler7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich2Fehler7.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel3Bereich2</value>
@@ -10340,7 +10340,7 @@
     <value>RadTextBoxControlStaffel3Bereich2Fehler6</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich2Fehler6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich2Fehler6.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel3Bereich2</value>
@@ -10388,7 +10388,7 @@
     <value>RadTextBoxControlStaffel3Bereich2Fehler5</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich2Fehler5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich2Fehler5.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel3Bereich2</value>
@@ -10436,7 +10436,7 @@
     <value>RadTextBoxControlStaffel3Bereich2Last4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich2Last4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich2Last4.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel3Bereich2</value>
@@ -10481,7 +10481,7 @@
     <value>RadTextBoxControlStaffel3Bereich2Anzeige4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich2Anzeige4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich2Anzeige4.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel3Bereich2</value>
@@ -10526,7 +10526,7 @@
     <value>RadTextBoxControlStaffel3Bereich2Anzeige3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich2Anzeige3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich2Anzeige3.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel3Bereich2</value>
@@ -10574,7 +10574,7 @@
     <value>RadTextBoxControlStaffel3Bereich2Last3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich2Last3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich2Last3.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel3Bereich2</value>
@@ -10619,7 +10619,7 @@
     <value>RadTextBoxControlStaffel3Bereich2Last2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich2Last2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich2Last2.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel3Bereich2</value>
@@ -10664,7 +10664,7 @@
     <value>RadTextBoxControlStaffel3Bereich2Anzeige1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich2Anzeige1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich2Anzeige1.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel3Bereich2</value>
@@ -10709,7 +10709,7 @@
     <value>RadTextBoxControlStaffel3Bereich2Last1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich2Last1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich2Last1.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel3Bereich2</value>
@@ -11693,7 +11693,7 @@
     <value>RadTextBoxControlStaffel3Bereich1Fehler7</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich1Fehler7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich1Fehler7.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel3Bereich1</value>
@@ -11741,7 +11741,7 @@
     <value>RadTextBoxControlStaffel3Bereich1Fehler6</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich1Fehler6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich1Fehler6.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel3Bereich1</value>
@@ -11789,7 +11789,7 @@
     <value>RadTextBoxControlStaffel3Bereich1Fehler5</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich1Fehler5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich1Fehler5.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel3Bereich1</value>
@@ -11837,7 +11837,7 @@
     <value>RadTextBoxControlStaffel3Bereich1Last4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich1Last4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich1Last4.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel3Bereich1</value>
@@ -11882,7 +11882,7 @@
     <value>RadTextBoxControlStaffel3Bereich1Anzeige4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich1Anzeige4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich1Anzeige4.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel3Bereich1</value>
@@ -11927,7 +11927,7 @@
     <value>RadTextBoxControlStaffel3Bereich1Anzeige3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich1Anzeige3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich1Anzeige3.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel3Bereich1</value>
@@ -11975,7 +11975,7 @@
     <value>RadTextBoxControlStaffel3Bereich1Last3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich1Last3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich1Last3.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel3Bereich1</value>
@@ -12020,7 +12020,7 @@
     <value>RadTextBoxControlStaffel3Bereich1Last2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich1Last2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich1Last2.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel3Bereich1</value>
@@ -12065,7 +12065,7 @@
     <value>RadTextBoxControlStaffel3Bereich1Anzeige1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich1Anzeige1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich1Anzeige1.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel3Bereich1</value>
@@ -12110,7 +12110,7 @@
     <value>RadTextBoxControlStaffel3Bereich1Last1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich1Last1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel3Bereich1Last1.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel3Bereich1</value>
@@ -13145,7 +13145,7 @@
     <value>RadTextBoxControlStaffel2Bereich3Fehler7</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich3Fehler7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich3Fehler7.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel2Bereich3</value>
@@ -13193,7 +13193,7 @@
     <value>RadTextBoxControlStaffel2Bereich3Fehler6</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich3Fehler6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich3Fehler6.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel2Bereich3</value>
@@ -13241,7 +13241,7 @@
     <value>RadTextBoxControlStaffel2Bereich3Fehler5</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich3Fehler5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich3Fehler5.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel2Bereich3</value>
@@ -13289,7 +13289,7 @@
     <value>RadTextBoxControlStaffel2Bereich3Last4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich3Last4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich3Last4.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel2Bereich3</value>
@@ -13334,7 +13334,7 @@
     <value>RadTextBoxControlStaffel2Bereich3Anzeige4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich3Anzeige4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich3Anzeige4.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel2Bereich3</value>
@@ -13379,7 +13379,7 @@
     <value>RadTextBoxControlStaffel2Bereich3Anzeige3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich3Anzeige3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich3Anzeige3.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel2Bereich3</value>
@@ -13427,7 +13427,7 @@
     <value>RadTextBoxControlStaffel2Bereich3Last3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich3Last3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich3Last3.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel2Bereich3</value>
@@ -13472,7 +13472,7 @@
     <value>RadTextBoxControlStaffel2Bereich3Last2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich3Last2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich3Last2.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel2Bereich3</value>
@@ -13517,7 +13517,7 @@
     <value>RadTextBoxControlStaffel2Bereich3Anzeige1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich3Anzeige1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich3Anzeige1.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel2Bereich3</value>
@@ -13562,7 +13562,7 @@
     <value>RadTextBoxControlStaffel2Bereich3Last1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich3Last1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich3Last1.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel2Bereich3</value>
@@ -14546,7 +14546,7 @@
     <value>RadTextBoxControlStaffel2Bereich2Fehler7</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich2Fehler7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich2Fehler7.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel2Bereich2</value>
@@ -14594,7 +14594,7 @@
     <value>RadTextBoxControlStaffel2Bereich2Fehler6</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich2Fehler6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich2Fehler6.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel2Bereich2</value>
@@ -14642,7 +14642,7 @@
     <value>RadTextBoxControlStaffel2Bereich2Fehler5</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich2Fehler5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich2Fehler5.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel2Bereich2</value>
@@ -14690,7 +14690,7 @@
     <value>RadTextBoxControlStaffel2Bereich2Last4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich2Last4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich2Last4.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel2Bereich2</value>
@@ -14735,7 +14735,7 @@
     <value>RadTextBoxControlStaffel2Bereich2Anzeige4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich2Anzeige4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich2Anzeige4.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel2Bereich2</value>
@@ -14780,7 +14780,7 @@
     <value>RadTextBoxControlStaffel2Bereich2Anzeige3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich2Anzeige3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich2Anzeige3.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel2Bereich2</value>
@@ -14828,7 +14828,7 @@
     <value>RadTextBoxControlStaffel2Bereich2Last3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich2Last3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich2Last3.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel2Bereich2</value>
@@ -14873,7 +14873,7 @@
     <value>RadTextBoxControlStaffel2Bereich2Last2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich2Last2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich2Last2.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel2Bereich2</value>
@@ -14918,7 +14918,7 @@
     <value>RadTextBoxControlStaffel2Bereich2Anzeige1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich2Anzeige1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich2Anzeige1.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel2Bereich2</value>
@@ -14963,7 +14963,7 @@
     <value>RadTextBoxControlStaffel2Bereich2Last1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich2Last1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich2Last1.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel2Bereich2</value>
@@ -15947,7 +15947,7 @@
     <value>RadTextBoxControlStaffel2Bereich1Fehler7</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich1Fehler7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich1Fehler7.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel2Bereich1</value>
@@ -15995,7 +15995,7 @@
     <value>RadTextBoxControlStaffel2Bereich1Fehler6</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich1Fehler6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich1Fehler6.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel2Bereich1</value>
@@ -16043,7 +16043,7 @@
     <value>RadTextBoxControlStaffel2Bereich1Fehler5</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich1Fehler5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich1Fehler5.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel2Bereich1</value>
@@ -16091,7 +16091,7 @@
     <value>RadTextBoxControlStaffel2Bereich1Last4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich1Last4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich1Last4.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel2Bereich1</value>
@@ -16136,7 +16136,7 @@
     <value>RadTextBoxControlStaffel2Bereich1Anzeige4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich1Anzeige4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich1Anzeige4.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel2Bereich1</value>
@@ -16181,7 +16181,7 @@
     <value>RadTextBoxControlStaffel2Bereich1Anzeige3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich1Anzeige3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich1Anzeige3.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel2Bereich1</value>
@@ -16229,7 +16229,7 @@
     <value>RadTextBoxControlStaffel2Bereich1Last3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich1Last3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich1Last3.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel2Bereich1</value>
@@ -16274,7 +16274,7 @@
     <value>RadTextBoxControlStaffel2Bereich1Last2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich1Last2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich1Last2.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel2Bereich1</value>
@@ -16319,7 +16319,7 @@
     <value>RadTextBoxControlStaffel2Bereich1Anzeige1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich1Anzeige1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich1Anzeige1.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel2Bereich1</value>
@@ -16364,7 +16364,7 @@
     <value>RadTextBoxControlStaffel2Bereich1Last1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich1Last1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel2Bereich1Last1.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel2Bereich1</value>
@@ -17459,7 +17459,7 @@
     <value>RadTextBoxControlStaffel1Bereich3Fehler7</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich3Fehler7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich3Fehler7.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel1Bereich3</value>
@@ -17507,7 +17507,7 @@
     <value>RadTextBoxControlStaffel1Bereich3Fehler6</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich3Fehler6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich3Fehler6.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel1Bereich3</value>
@@ -17555,7 +17555,7 @@
     <value>RadTextBoxControlStaffel1Bereich3Fehler5</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich3Fehler5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich3Fehler5.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel1Bereich3</value>
@@ -17603,7 +17603,7 @@
     <value>RadTextBoxControlStaffel1Bereich3Last4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich3Last4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich3Last4.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel1Bereich3</value>
@@ -17648,7 +17648,7 @@
     <value>RadTextBoxControlStaffel1Bereich3Anzeige4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich3Anzeige4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich3Anzeige4.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel1Bereich3</value>
@@ -17696,7 +17696,7 @@
     <value>RadTextBoxControlStaffel1Bereich3Fehler4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich3Fehler4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich3Fehler4.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel1Bereich3</value>
@@ -17744,7 +17744,7 @@
     <value>RadTextBoxControlStaffel1Bereich3Fehler3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich3Fehler3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich3Fehler3.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel1Bereich3</value>
@@ -17789,7 +17789,7 @@
     <value>RadTextBoxControlStaffel1Bereich3Anzeige3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich3Anzeige3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich3Anzeige3.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel1Bereich3</value>
@@ -17834,7 +17834,7 @@
     <value>RadTextBoxControlStaffel1Bereich3Last3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich3Last3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich3Last3.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel1Bereich3</value>
@@ -17879,7 +17879,7 @@
     <value>RadTextBoxControlStaffel1Bereich3Last1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich3Last1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich3Last1.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel1Bereich3</value>
@@ -17924,7 +17924,7 @@
     <value>RadTextBoxControlStaffel1Bereich3Anzeige1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich3Anzeige1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich3Anzeige1.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel1Bereich3</value>
@@ -17972,7 +17972,7 @@
     <value>RadTextBoxControlStaffel1Bereich3Fehler1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich3Fehler1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich3Fehler1.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel1Bereich3</value>
@@ -19193,7 +19193,7 @@
     <value>RadTextBoxControlStaffel1Bereich2Fehler7</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich2Fehler7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich2Fehler7.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel1Bereich2</value>
@@ -19241,7 +19241,7 @@
     <value>RadTextBoxControlStaffel1Bereich2Fehler6</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich2Fehler6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich2Fehler6.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel1Bereich2</value>
@@ -19289,7 +19289,7 @@
     <value>RadTextBoxControlStaffel1Bereich2Fehler5</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich2Fehler5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich2Fehler5.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel1Bereich2</value>
@@ -19337,7 +19337,7 @@
     <value>RadTextBoxControlStaffel1Bereich2Last4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich2Last4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich2Last4.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel1Bereich2</value>
@@ -19382,7 +19382,7 @@
     <value>RadTextBoxControlStaffel1Bereich2Anzeige4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich2Anzeige4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich2Anzeige4.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel1Bereich2</value>
@@ -19430,7 +19430,7 @@
     <value>RadTextBoxControlStaffel1Bereich2Fehler4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich2Fehler4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich2Fehler4.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel1Bereich2</value>
@@ -19478,7 +19478,7 @@
     <value>RadTextBoxControlStaffel1Bereich2Fehler3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich2Fehler3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich2Fehler3.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel1Bereich2</value>
@@ -19523,7 +19523,7 @@
     <value>RadTextBoxControlStaffel1Bereich2Anzeige3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich2Anzeige3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich2Anzeige3.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel1Bereich2</value>
@@ -19568,7 +19568,7 @@
     <value>RadTextBoxControlStaffel1Bereich2Last3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich2Last3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich2Last3.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel1Bereich2</value>
@@ -19613,7 +19613,7 @@
     <value>RadTextBoxControlStaffel1Bereich2Last1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich2Last1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich2Last1.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel1Bereich2</value>
@@ -19658,7 +19658,7 @@
     <value>RadTextBoxControlStaffel1Bereich2Anzeige1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich2Anzeige1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich2Anzeige1.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel1Bereich2</value>
@@ -19706,7 +19706,7 @@
     <value>RadTextBoxControlStaffel1Bereich2Fehler1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich2Fehler1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich2Fehler1.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel1Bereich2</value>
@@ -20852,7 +20852,7 @@
     <value>RadTextBoxControlStaffel1Bereich1Last2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich1Last2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich1Last2.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel1Bereich1</value>
@@ -20897,7 +20897,7 @@
     <value>RadTextBoxControlStaffel1Bereich1Anzeige2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich1Anzeige2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich1Anzeige2.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel1Bereich1</value>
@@ -20945,7 +20945,7 @@
     <value>RadTextBoxControlStaffel1Bereich1Fehler2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich1Fehler2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich1Fehler2.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel1Bereich1</value>
@@ -21215,7 +21215,7 @@
     <value>RadTextBoxControlStaffel1Bereich1Fehler7</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich1Fehler7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich1Fehler7.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel1Bereich1</value>
@@ -21263,7 +21263,7 @@
     <value>RadTextBoxControlStaffel1Bereich1Fehler6</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich1Fehler6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich1Fehler6.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel1Bereich1</value>
@@ -21311,7 +21311,7 @@
     <value>RadTextBoxControlStaffel1Bereich1Fehler5</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich1Fehler5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich1Fehler5.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel1Bereich1</value>
@@ -21359,7 +21359,7 @@
     <value>RadTextBoxControlStaffel1Bereich1Last4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich1Last4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich1Last4.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel1Bereich1</value>
@@ -21404,7 +21404,7 @@
     <value>RadTextBoxControlStaffel1Bereich1Anzeige4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich1Anzeige4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich1Anzeige4.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel1Bereich1</value>
@@ -21452,7 +21452,7 @@
     <value>RadTextBoxControlStaffel1Bereich1Fehler4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich1Fehler4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich1Fehler4.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel1Bereich1</value>
@@ -21500,7 +21500,7 @@
     <value>RadTextBoxControlStaffel1Bereich1Fehler3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich1Fehler3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich1Fehler3.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel1Bereich1</value>
@@ -21545,7 +21545,7 @@
     <value>RadTextBoxControlStaffel1Bereich1Anzeige3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich1Anzeige3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich1Anzeige3.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel1Bereich1</value>
@@ -21590,7 +21590,7 @@
     <value>RadTextBoxControlStaffel1Bereich1Last3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich1Last3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich1Last3.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel1Bereich1</value>
@@ -21635,7 +21635,7 @@
     <value>RadTextBoxControlStaffel1Bereich1Last1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich1Last1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich1Last1.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel1Bereich1</value>
@@ -21680,7 +21680,7 @@
     <value>RadTextBoxControlStaffel1Bereich1Anzeige1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich1Anzeige1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich1Anzeige1.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel1Bereich1</value>
@@ -21728,7 +21728,7 @@
     <value>RadTextBoxControlStaffel1Bereich1Fehler1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich1Fehler1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBoxControl, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlStaffel1Bereich1Fehler1.Parent" xml:space="preserve">
     <value>RadGroupBoxStaffel1Bereich1</value>

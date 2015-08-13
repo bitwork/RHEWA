@@ -33,16 +33,16 @@ Partial Class uco10PruefungStaffelverfahren
         Me.PictureBox67 = New System.Windows.Forms.PictureBox()
         Me.lblStaffel5Bereich3ErsatzLastUnten = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel5Bereich3ErsatzLastOben = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlStaffel5Bereich3Fehler7 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel5Bereich3Fehler6 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel5Bereich3Fehler5 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel5Bereich3Last4 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel5Bereich3Anzeige4 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel5Bereich3Anzeige3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel5Bereich3Last3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel5Bereich3Last2 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel5Bereich3Anzeige1 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel5Bereich3Last1 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlStaffel5Bereich3Fehler7 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel5Bereich3Fehler6 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel5Bereich3Fehler5 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel5Bereich3Last4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel5Bereich3Anzeige4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel5Bereich3Anzeige3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel5Bereich3Last3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel5Bereich3Last2 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel5Bereich3Anzeige1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel5Bereich3Last1 = New Telerik.WinControls.UI.RadTextBox()
         Me.lblStaffel5Bereich3MessabweichungWaage = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel5Bereich3MessabweichungStaffel = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel5Bereich3Differenz = New Telerik.WinControls.UI.RadLabel()
@@ -66,16 +66,16 @@ Partial Class uco10PruefungStaffelverfahren
         Me.PictureBox69 = New System.Windows.Forms.PictureBox()
         Me.lblStaffel5Bereich2ErsatzLastUnten = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel5Bereich2ErsatzLastOben = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlStaffel5Bereich2Fehler7 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel5Bereich2Fehler6 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel5Bereich2Fehler5 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel5Bereich2Last4 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel5Bereich2Anzeige4 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel5Bereich2Anzeige3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel5Bereich2Last3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel5Bereich2Last2 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel5Bereich2Anzeige1 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel5Bereich2Last1 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlStaffel5Bereich2Fehler7 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel5Bereich2Fehler6 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel5Bereich2Fehler5 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel5Bereich2Last4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel5Bereich2Anzeige4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel5Bereich2Anzeige3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel5Bereich2Last3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel5Bereich2Last2 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel5Bereich2Anzeige1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel5Bereich2Last1 = New Telerik.WinControls.UI.RadTextBox()
         Me.lblStaffel5Bereich2MessabweichungWaage = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel5Bereich2MessabweichungStaffel = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel5Bereich2Differenz = New Telerik.WinControls.UI.RadLabel()
@@ -99,16 +99,16 @@ Partial Class uco10PruefungStaffelverfahren
         Me.PictureBox74 = New System.Windows.Forms.PictureBox()
         Me.lblStaffel5Bereich1ErsatzLastUnten = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel5Bereich1ErsatzLastOben = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlStaffel5Bereich1Fehler7 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel5Bereich1Fehler6 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel5Bereich1Fehler5 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel5Bereich1Last4 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel5Bereich1Anzeige4 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel5Bereich1Anzeige3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel5Bereich1Last3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel5Bereich1Last2 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel5Bereich1Anzeige1 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel5Bereich1Last1 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlStaffel5Bereich1Fehler7 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel5Bereich1Fehler6 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel5Bereich1Fehler5 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel5Bereich1Last4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel5Bereich1Anzeige4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel5Bereich1Anzeige3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel5Bereich1Last3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel5Bereich1Last2 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel5Bereich1Anzeige1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel5Bereich1Last1 = New Telerik.WinControls.UI.RadTextBox()
         Me.lblStaffel5Bereich1MessabweichungWaage = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel5Bereich1MessabweichungStaffel = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel5Bereich1Differenz = New Telerik.WinControls.UI.RadLabel()
@@ -133,16 +133,16 @@ Partial Class uco10PruefungStaffelverfahren
         Me.PictureBox62 = New System.Windows.Forms.PictureBox()
         Me.lblStaffel4Bereich3ErsatzLastUnten = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel4Bereich3ErsatzLastOben = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlStaffel4Bereich3Fehler7 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel4Bereich3Fehler6 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel4Bereich3Fehler5 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel4Bereich3Last4 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel4Bereich3Anzeige4 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel4Bereich3Anzeige3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel4Bereich3Last3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel4Bereich3Last2 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel4Bereich3Anzeige1 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel4Bereich3Last1 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlStaffel4Bereich3Fehler7 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel4Bereich3Fehler6 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel4Bereich3Fehler5 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel4Bereich3Last4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel4Bereich3Anzeige4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel4Bereich3Anzeige3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel4Bereich3Last3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel4Bereich3Last2 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel4Bereich3Anzeige1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel4Bereich3Last1 = New Telerik.WinControls.UI.RadTextBox()
         Me.lblStaffel4Bereich3MessabweichungWaage = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel4Bereich3MessabweichungStaffel = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel4Bereich3Differenz = New Telerik.WinControls.UI.RadLabel()
@@ -166,16 +166,16 @@ Partial Class uco10PruefungStaffelverfahren
         Me.PictureBox60 = New System.Windows.Forms.PictureBox()
         Me.lblStaffel4Bereich2ErsatzLastUnten = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel4Bereich2ErsatzLastOben = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlStaffel4Bereich2Fehler7 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel4Bereich2Fehler6 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel4Bereich2Fehler5 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel4Bereich2Last4 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel4Bereich2Anzeige4 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel4Bereich2Anzeige3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel4Bereich2Last3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel4Bereich2Last2 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel4Bereich2Anzeige1 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel4Bereich2Last1 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlStaffel4Bereich2Fehler7 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel4Bereich2Fehler6 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel4Bereich2Fehler5 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel4Bereich2Last4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel4Bereich2Anzeige4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel4Bereich2Anzeige3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel4Bereich2Last3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel4Bereich2Last2 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel4Bereich2Anzeige1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel4Bereich2Last1 = New Telerik.WinControls.UI.RadTextBox()
         Me.lblStaffel4Bereich2MessabweichungWaage = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel4Bereich2MessabweichungStaffel = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel4Bereich2Differenz = New Telerik.WinControls.UI.RadLabel()
@@ -199,16 +199,16 @@ Partial Class uco10PruefungStaffelverfahren
         Me.PictureBox55 = New System.Windows.Forms.PictureBox()
         Me.lblStaffel4Bereich1ErsatzLastUnten = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel4Bereich1ErsatzLastOben = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlStaffel4Bereich1Fehler7 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel4Bereich1Fehler6 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel4Bereich1Fehler5 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel4Bereich1Last4 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel4Bereich1Anzeige4 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel4Bereich1Anzeige3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel4Bereich1Last3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel4Bereich1Last2 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel4Bereich1Anzeige1 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel4Bereich1Last1 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlStaffel4Bereich1Fehler7 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel4Bereich1Fehler6 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel4Bereich1Fehler5 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel4Bereich1Last4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel4Bereich1Anzeige4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel4Bereich1Anzeige3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel4Bereich1Last3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel4Bereich1Last2 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel4Bereich1Anzeige1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel4Bereich1Last1 = New Telerik.WinControls.UI.RadTextBox()
         Me.lblStaffel4Bereich1MessabweichungWaage = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel4Bereich1MessabweichungStaffel = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel4Bereich1Differenz = New Telerik.WinControls.UI.RadLabel()
@@ -233,16 +233,16 @@ Partial Class uco10PruefungStaffelverfahren
         Me.PictureBox46 = New System.Windows.Forms.PictureBox()
         Me.lblStaffel3Bereich3ErsatzLastUnten = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel3Bereich3ErsatzLastOben = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlStaffel3Bereich3Fehler7 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel3Bereich3Fehler6 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel3Bereich3Fehler5 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel3Bereich3Last4 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel3Bereich3Anzeige4 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel3Bereich3Anzeige3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel3Bereich3Last3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel3Bereich3Last2 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel3Bereich3Anzeige1 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel3Bereich3Last1 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlStaffel3Bereich3Fehler7 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel3Bereich3Fehler6 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel3Bereich3Fehler5 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel3Bereich3Last4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel3Bereich3Anzeige4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel3Bereich3Anzeige3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel3Bereich3Last3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel3Bereich3Last2 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel3Bereich3Anzeige1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel3Bereich3Last1 = New Telerik.WinControls.UI.RadTextBox()
         Me.lblStaffel3Bereich3MessabweichungWaage = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel3Bereich3MessabweichungStaffel = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel3Bereich3Differenz = New Telerik.WinControls.UI.RadLabel()
@@ -266,16 +266,16 @@ Partial Class uco10PruefungStaffelverfahren
         Me.PictureBox48 = New System.Windows.Forms.PictureBox()
         Me.lblStaffel3Bereich2ErsatzLastUnten = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel3Bereich2ErsatzLastOben = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlStaffel3Bereich2Fehler7 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel3Bereich2Fehler6 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel3Bereich2Fehler5 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel3Bereich2Last4 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel3Bereich2Anzeige4 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel3Bereich2Anzeige3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel3Bereich2Last3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel3Bereich2Last2 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel3Bereich2Anzeige1 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel3Bereich2Last1 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlStaffel3Bereich2Fehler7 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel3Bereich2Fehler6 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel3Bereich2Fehler5 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel3Bereich2Last4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel3Bereich2Anzeige4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel3Bereich2Anzeige3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel3Bereich2Last3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel3Bereich2Last2 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel3Bereich2Anzeige1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel3Bereich2Last1 = New Telerik.WinControls.UI.RadTextBox()
         Me.lblStaffel3Bereich2MessabweichungWaage = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel3Bereich2MessabweichungStaffel = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel3Bereich2Differenz = New Telerik.WinControls.UI.RadLabel()
@@ -299,16 +299,16 @@ Partial Class uco10PruefungStaffelverfahren
         Me.PictureBox53 = New System.Windows.Forms.PictureBox()
         Me.lblStaffel3Bereich1ErsatzLastUnten = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel3Bereich1ErsatzLastOben = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlStaffel3Bereich1Fehler7 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel3Bereich1Fehler6 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel3Bereich1Fehler5 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel3Bereich1Last4 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel3Bereich1Anzeige4 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel3Bereich1Anzeige3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel3Bereich1Last3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel3Bereich1Last2 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel3Bereich1Anzeige1 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel3Bereich1Last1 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlStaffel3Bereich1Fehler7 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel3Bereich1Fehler6 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel3Bereich1Fehler5 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel3Bereich1Last4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel3Bereich1Anzeige4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel3Bereich1Anzeige3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel3Bereich1Last3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel3Bereich1Last2 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel3Bereich1Anzeige1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel3Bereich1Last1 = New Telerik.WinControls.UI.RadTextBox()
         Me.lblStaffel3Bereich1MessabweichungWaage = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel3Bereich1MessabweichungStaffel = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel3Bereich1Differenz = New Telerik.WinControls.UI.RadLabel()
@@ -333,16 +333,16 @@ Partial Class uco10PruefungStaffelverfahren
         Me.PictureBox41 = New System.Windows.Forms.PictureBox()
         Me.lblStaffel2Bereich3ErsatzLastUnten = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel2Bereich3ErsatzLastOben = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlStaffel2Bereich3Fehler7 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel2Bereich3Fehler6 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel2Bereich3Fehler5 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel2Bereich3Last4 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel2Bereich3Anzeige4 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel2Bereich3Anzeige3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel2Bereich3Last3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel2Bereich3Last2 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel2Bereich3Anzeige1 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel2Bereich3Last1 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlStaffel2Bereich3Fehler7 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel2Bereich3Fehler6 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel2Bereich3Fehler5 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel2Bereich3Last4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel2Bereich3Anzeige4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel2Bereich3Anzeige3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel2Bereich3Last3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel2Bereich3Last2 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel2Bereich3Anzeige1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel2Bereich3Last1 = New Telerik.WinControls.UI.RadTextBox()
         Me.lblStaffel2Bereich3MessabweichungWaage = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel2Bereich3MessabweichungStaffel = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel2Bereich3Differenz = New Telerik.WinControls.UI.RadLabel()
@@ -366,16 +366,16 @@ Partial Class uco10PruefungStaffelverfahren
         Me.PictureBox39 = New System.Windows.Forms.PictureBox()
         Me.lblStaffel2Bereich2ErsatzLastUnten = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel2Bereich2ErsatzLastOben = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlStaffel2Bereich2Fehler7 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel2Bereich2Fehler6 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel2Bereich2Fehler5 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel2Bereich2Last4 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel2Bereich2Anzeige4 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel2Bereich2Anzeige3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel2Bereich2Last3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel2Bereich2Last2 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel2Bereich2Anzeige1 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel2Bereich2Last1 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlStaffel2Bereich2Fehler7 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel2Bereich2Fehler6 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel2Bereich2Fehler5 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel2Bereich2Last4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel2Bereich2Anzeige4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel2Bereich2Anzeige3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel2Bereich2Last3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel2Bereich2Last2 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel2Bereich2Anzeige1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel2Bereich2Last1 = New Telerik.WinControls.UI.RadTextBox()
         Me.lblStaffel2Bereich2MessabweichungWaage = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel2Bereich2MessabweichungStaffel = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel2Bereich2Differenz = New Telerik.WinControls.UI.RadLabel()
@@ -399,16 +399,16 @@ Partial Class uco10PruefungStaffelverfahren
         Me.PictureBox34 = New System.Windows.Forms.PictureBox()
         Me.lblStaffel2Bereich1ErsatzLastUnten = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel2Bereich1ErsatzLastOben = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlStaffel2Bereich1Fehler7 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel2Bereich1Fehler6 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel2Bereich1Fehler5 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel2Bereich1Last4 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel2Bereich1Anzeige4 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel2Bereich1Anzeige3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel2Bereich1Last3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel2Bereich1Last2 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel2Bereich1Anzeige1 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel2Bereich1Last1 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlStaffel2Bereich1Fehler7 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel2Bereich1Fehler6 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel2Bereich1Fehler5 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel2Bereich1Last4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel2Bereich1Anzeige4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel2Bereich1Anzeige3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel2Bereich1Last3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel2Bereich1Last2 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel2Bereich1Anzeige1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel2Bereich1Last1 = New Telerik.WinControls.UI.RadTextBox()
         Me.lblStaffel2Bereich1MessabweichungWaage = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel2Bereich1MessabweichungStaffel = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel2Bereich1Differenz = New Telerik.WinControls.UI.RadLabel()
@@ -435,18 +435,18 @@ Partial Class uco10PruefungStaffelverfahren
         Me.PictureBox27 = New System.Windows.Forms.PictureBox()
         Me.PictureBox31 = New System.Windows.Forms.PictureBox()
         Me.PictureBox32 = New System.Windows.Forms.PictureBox()
-        Me.RadTextBoxControlStaffel1Bereich3Fehler7 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel1Bereich3Fehler6 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel1Bereich3Fehler5 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel1Bereich3Last4 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel1Bereich3Anzeige4 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel1Bereich3Fehler4 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel1Bereich3Fehler3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel1Bereich3Anzeige3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel1Bereich3Last3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel1Bereich3Last1 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel1Bereich3Anzeige1 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel1Bereich3Fehler1 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlStaffel1Bereich3Fehler7 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel1Bereich3Fehler6 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel1Bereich3Fehler5 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel1Bereich3Last4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel1Bereich3Anzeige4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel1Bereich3Fehler4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel1Bereich3Fehler3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel1Bereich3Anzeige3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel1Bereich3Last3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel1Bereich3Last1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel1Bereich3Anzeige1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel1Bereich3Fehler1 = New Telerik.WinControls.UI.RadTextBox()
         Me.lblStaffel1Bereich3MessabweichungWaage = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel1Bereich3MessabweichungStaffel = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel1Bereich3Differenz = New Telerik.WinControls.UI.RadLabel()
@@ -477,18 +477,18 @@ Partial Class uco10PruefungStaffelverfahren
         Me.PictureBox24 = New System.Windows.Forms.PictureBox()
         Me.PictureBox25 = New System.Windows.Forms.PictureBox()
         Me.PictureBox26 = New System.Windows.Forms.PictureBox()
-        Me.RadTextBoxControlStaffel1Bereich2Fehler7 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel1Bereich2Fehler6 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel1Bereich2Fehler5 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel1Bereich2Last4 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel1Bereich2Anzeige4 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel1Bereich2Fehler4 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel1Bereich2Fehler3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel1Bereich2Anzeige3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel1Bereich2Last3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel1Bereich2Last1 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel1Bereich2Anzeige1 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel1Bereich2Fehler1 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlStaffel1Bereich2Fehler7 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel1Bereich2Fehler6 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel1Bereich2Fehler5 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel1Bereich2Last4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel1Bereich2Anzeige4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel1Bereich2Fehler4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel1Bereich2Fehler3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel1Bereich2Anzeige3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel1Bereich2Last3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel1Bereich2Last1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel1Bereich2Anzeige1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel1Bereich2Fehler1 = New Telerik.WinControls.UI.RadTextBox()
         Me.lblStaffel1Bereich2MessabweichungWaage = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel1Bereich2MessabweichungStaffel = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel1Bereich2Differenz = New Telerik.WinControls.UI.RadLabel()
@@ -515,9 +515,9 @@ Partial Class uco10PruefungStaffelverfahren
         Me.RadLabel4 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel1 = New Telerik.WinControls.UI.RadLabel()
         Me.PictureBox133 = New System.Windows.Forms.PictureBox()
-        Me.RadTextBoxControlStaffel1Bereich1Last2 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige2 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel1Bereich1Fehler2 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlStaffel1Bereich1Last2 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel1Bereich1Anzeige2 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel1Bereich1Fehler2 = New Telerik.WinControls.UI.RadTextBox()
         Me.PictureBox134 = New System.Windows.Forms.PictureBox()
         Me.lblStaffel1Bereich1EFGWert2 = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.PictureBox75 = New System.Windows.Forms.PictureBox()
@@ -526,18 +526,18 @@ Partial Class uco10PruefungStaffelverfahren
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.PictureBox14 = New System.Windows.Forms.PictureBox()
-        Me.RadTextBoxControlStaffel1Bereich1Fehler7 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel1Bereich1Fehler6 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel1Bereich1Fehler5 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel1Bereich1Last4 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige4 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel1Bereich1Fehler4 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel1Bereich1Fehler3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel1Bereich1Last3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel1Bereich1Last1 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige1 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlStaffel1Bereich1Fehler1 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlStaffel1Bereich1Fehler7 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel1Bereich1Fehler6 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel1Bereich1Fehler5 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel1Bereich1Last4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel1Bereich1Anzeige4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel1Bereich1Fehler4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel1Bereich1Fehler3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel1Bereich1Anzeige3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel1Bereich1Last3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel1Bereich1Last1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel1Bereich1Anzeige1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlStaffel1Bereich1Fehler1 = New Telerik.WinControls.UI.RadTextBox()
         Me.lblStaffel1Bereich1MessabweichungWaage = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel1Bereich1MessabweichungStaffel = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel1Bereich1Differenz = New Telerik.WinControls.UI.RadLabel()
@@ -9775,18 +9775,18 @@ Partial Class uco10PruefungStaffelverfahren
 End Sub
     Friend WithEvents RadGroupBoxStaffel1 As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents RadGroupBoxStaffel1Bereich1 As Telerik.WinControls.UI.RadGroupBox
-    Friend WithEvents RadTextBoxControlStaffel1Bereich1Fehler7 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel1Bereich1Fehler6 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel1Bereich1Fehler5 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel1Bereich1Last4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel1Bereich1Anzeige4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel1Bereich1Fehler4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel1Bereich1Fehler3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel1Bereich1Anzeige3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel1Bereich1Last3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel1Bereich1Anzeige1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel1Bereich1Fehler1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel1Bereich1Last1 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlStaffel1Bereich1Fehler7 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel1Bereich1Fehler6 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel1Bereich1Fehler5 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel1Bereich1Last4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel1Bereich1Anzeige4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel1Bereich1Fehler4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel1Bereich1Fehler3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel1Bereich1Anzeige3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel1Bereich1Last3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel1Bereich1Anzeige1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel1Bereich1Fehler1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel1Bereich1Last1 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblStaffel1Bereich1MessabweichungWaage As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel1Bereich1MessabweichungStaffel As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel1Bereich1Differenz As Telerik.WinControls.UI.RadLabel
@@ -9808,18 +9808,18 @@ End Sub
     Friend WithEvents lblStaffel1Bereich1Anzeige As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel1Bereich1Last As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadGroupBoxStaffel1Bereich2 As Telerik.WinControls.UI.RadGroupBox
-    Friend WithEvents RadTextBoxControlStaffel1Bereich2Fehler7 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel1Bereich2Fehler6 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel1Bereich2Fehler5 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel1Bereich2Last4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel1Bereich2Anzeige4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel1Bereich2Fehler4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel1Bereich2Fehler3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel1Bereich2Anzeige3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel1Bereich2Last3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel1Bereich2Last1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel1Bereich2Anzeige1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel1Bereich2Fehler1 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlStaffel1Bereich2Fehler7 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel1Bereich2Fehler6 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel1Bereich2Fehler5 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel1Bereich2Last4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel1Bereich2Anzeige4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel1Bereich2Fehler4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel1Bereich2Fehler3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel1Bereich2Anzeige3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel1Bereich2Last3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel1Bereich2Last1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel1Bereich2Anzeige1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel1Bereich2Fehler1 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblStaffel1Bereich2MessabweichungWaage As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel1Bereich2MessabweichungStaffel As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel1Bereich2Differenz As Telerik.WinControls.UI.RadLabel
@@ -9841,18 +9841,18 @@ End Sub
     Friend WithEvents lblStaffel1Bereich2Anzeige As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel1Bereich2Last As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadGroupBoxStaffel1Bereich3 As Telerik.WinControls.UI.RadGroupBox
-    Friend WithEvents RadTextBoxControlStaffel1Bereich3Fehler7 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel1Bereich3Fehler6 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel1Bereich3Fehler5 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel1Bereich3Last4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel1Bereich3Anzeige4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel1Bereich3Fehler4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel1Bereich3Fehler3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel1Bereich3Anzeige3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel1Bereich3Last3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel1Bereich3Last1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel1Bereich3Anzeige1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel1Bereich3Fehler1 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlStaffel1Bereich3Fehler7 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel1Bereich3Fehler6 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel1Bereich3Fehler5 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel1Bereich3Last4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel1Bereich3Anzeige4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel1Bereich3Fehler4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel1Bereich3Fehler3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel1Bereich3Anzeige3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel1Bereich3Last3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel1Bereich3Last1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel1Bereich3Anzeige1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel1Bereich3Fehler1 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblStaffel1Bereich3MessabweichungWaage As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel1Bereich3MessabweichungStaffel As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel1Bereich3Differenz As Telerik.WinControls.UI.RadLabel
@@ -9877,16 +9877,16 @@ End Sub
     Friend WithEvents RadGroupBoxStaffel2Bereich3 As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents lblStaffel2Bereich3ErsatzLastUnten As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel2Bereich3ErsatzLastOben As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlStaffel2Bereich3Fehler7 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel2Bereich3Fehler6 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel2Bereich3Fehler5 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel2Bereich3Last4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel2Bereich3Anzeige4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel2Bereich3Anzeige3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel2Bereich3Last3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel2Bereich3Last2 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel2Bereich3Anzeige1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel2Bereich3Last1 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlStaffel2Bereich3Fehler7 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel2Bereich3Fehler6 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel2Bereich3Fehler5 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel2Bereich3Last4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel2Bereich3Anzeige4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel2Bereich3Anzeige3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel2Bereich3Last3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel2Bereich3Last2 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel2Bereich3Anzeige1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel2Bereich3Last1 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblStaffel2Bereich3MessabweichungWaage As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel2Bereich3MessabweichungStaffel As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel2Bereich3Differenz As Telerik.WinControls.UI.RadLabel
@@ -9905,16 +9905,16 @@ End Sub
     Friend WithEvents RadGroupBoxStaffel2Bereich2 As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents lblStaffel2Bereich2ErsatzLastUnten As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel2Bereich2ErsatzLastOben As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlStaffel2Bereich2Fehler7 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel2Bereich2Fehler6 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel2Bereich2Fehler5 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel2Bereich2Last4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel2Bereich2Anzeige4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel2Bereich2Anzeige3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel2Bereich2Last3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel2Bereich2Last2 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel2Bereich2Anzeige1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel2Bereich2Last1 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlStaffel2Bereich2Fehler7 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel2Bereich2Fehler6 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel2Bereich2Fehler5 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel2Bereich2Last4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel2Bereich2Anzeige4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel2Bereich2Anzeige3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel2Bereich2Last3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel2Bereich2Last2 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel2Bereich2Anzeige1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel2Bereich2Last1 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblStaffel2Bereich2MessabweichungWaage As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel2Bereich2MessabweichungStaffel As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel2Bereich2Differenz As Telerik.WinControls.UI.RadLabel
@@ -9933,16 +9933,16 @@ End Sub
     Friend WithEvents RadGroupBoxStaffel2Bereich1 As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents lblStaffel2Bereich1ErsatzLastUnten As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel2Bereich1ErsatzLastOben As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlStaffel2Bereich1Fehler7 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel2Bereich1Fehler6 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel2Bereich1Fehler5 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel2Bereich1Last4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel2Bereich1Anzeige4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel2Bereich1Anzeige3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel2Bereich1Last3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel2Bereich1Last2 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel2Bereich1Anzeige1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel2Bereich1Last1 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlStaffel2Bereich1Fehler7 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel2Bereich1Fehler6 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel2Bereich1Fehler5 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel2Bereich1Last4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel2Bereich1Anzeige4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel2Bereich1Anzeige3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel2Bereich1Last3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel2Bereich1Last2 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel2Bereich1Anzeige1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel2Bereich1Last1 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblStaffel2Bereich1MessabweichungWaage As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel2Bereich1MessabweichungStaffel As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel2Bereich1Differenz As Telerik.WinControls.UI.RadLabel
@@ -9962,16 +9962,16 @@ End Sub
     Friend WithEvents RadGroupBoxStaffel3Bereich3 As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents lblStaffel3Bereich3ErsatzLastUnten As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel3Bereich3ErsatzLastOben As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlStaffel3Bereich3Fehler7 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel3Bereich3Fehler6 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel3Bereich3Fehler5 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel3Bereich3Last4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel3Bereich3Anzeige4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel3Bereich3Anzeige3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel3Bereich3Last3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel3Bereich3Last2 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel3Bereich3Anzeige1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel3Bereich3Last1 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlStaffel3Bereich3Fehler7 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel3Bereich3Fehler6 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel3Bereich3Fehler5 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel3Bereich3Last4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel3Bereich3Anzeige4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel3Bereich3Anzeige3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel3Bereich3Last3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel3Bereich3Last2 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel3Bereich3Anzeige1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel3Bereich3Last1 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblStaffel3Bereich3MessabweichungWaage As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel3Bereich3MessabweichungStaffel As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel3Bereich3Differenz As Telerik.WinControls.UI.RadLabel
@@ -9990,16 +9990,16 @@ End Sub
     Friend WithEvents RadGroupBoxStaffel3Bereich2 As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents lblStaffel3Bereich2ErsatzLastUnten As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel3Bereich2ErsatzLastOben As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlStaffel3Bereich2Fehler7 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel3Bereich2Fehler6 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel3Bereich2Fehler5 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel3Bereich2Last4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel3Bereich2Anzeige4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel3Bereich2Anzeige3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel3Bereich2Last3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel3Bereich2Last2 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel3Bereich2Anzeige1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel3Bereich2Last1 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlStaffel3Bereich2Fehler7 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel3Bereich2Fehler6 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel3Bereich2Fehler5 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel3Bereich2Last4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel3Bereich2Anzeige4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel3Bereich2Anzeige3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel3Bereich2Last3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel3Bereich2Last2 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel3Bereich2Anzeige1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel3Bereich2Last1 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblStaffel3Bereich2MessabweichungWaage As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel3Bereich2MessabweichungStaffel As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel3Bereich2Differenz As Telerik.WinControls.UI.RadLabel
@@ -10018,16 +10018,16 @@ End Sub
     Friend WithEvents RadGroupBoxStaffel3Bereich1 As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents lblStaffel3Bereich1ErsatzLastUnten As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel3Bereich1ErsatzLastOben As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlStaffel3Bereich1Fehler7 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel3Bereich1Fehler6 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel3Bereich1Fehler5 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel3Bereich1Last4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel3Bereich1Anzeige4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel3Bereich1Anzeige3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel3Bereich1Last3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel3Bereich1Last2 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel3Bereich1Anzeige1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel3Bereich1Last1 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlStaffel3Bereich1Fehler7 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel3Bereich1Fehler6 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel3Bereich1Fehler5 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel3Bereich1Last4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel3Bereich1Anzeige4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel3Bereich1Anzeige3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel3Bereich1Last3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel3Bereich1Last2 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel3Bereich1Anzeige1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel3Bereich1Last1 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblStaffel3Bereich1MessabweichungWaage As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel3Bereich1MessabweichungStaffel As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel3Bereich1Differenz As Telerik.WinControls.UI.RadLabel
@@ -10047,16 +10047,16 @@ End Sub
     Friend WithEvents RadGroupBoxStaffel4Bereich3 As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents lblStaffel4Bereich3ErsatzLastUnten As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel4Bereich3ErsatzLastOben As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlStaffel4Bereich3Fehler7 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel4Bereich3Fehler6 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel4Bereich3Fehler5 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel4Bereich3Last4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel4Bereich3Anzeige4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel4Bereich3Anzeige3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel4Bereich3Last3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel4Bereich3Last2 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel4Bereich3Anzeige1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel4Bereich3Last1 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlStaffel4Bereich3Fehler7 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel4Bereich3Fehler6 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel4Bereich3Fehler5 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel4Bereich3Last4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel4Bereich3Anzeige4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel4Bereich3Anzeige3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel4Bereich3Last3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel4Bereich3Last2 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel4Bereich3Anzeige1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel4Bereich3Last1 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblStaffel4Bereich3MessabweichungWaage As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel4Bereich3MessabweichungStaffel As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel4Bereich3Differenz As Telerik.WinControls.UI.RadLabel
@@ -10075,16 +10075,16 @@ End Sub
     Friend WithEvents RadGroupBoxStaffel4Bereich2 As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents lblStaffel4Bereich2ErsatzLastUnten As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel4Bereich2ErsatzLastOben As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlStaffel4Bereich2Fehler7 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel4Bereich2Fehler6 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel4Bereich2Fehler5 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel4Bereich2Last4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel4Bereich2Anzeige4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel4Bereich2Anzeige3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel4Bereich2Last3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel4Bereich2Last2 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel4Bereich2Anzeige1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel4Bereich2Last1 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlStaffel4Bereich2Fehler7 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel4Bereich2Fehler6 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel4Bereich2Fehler5 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel4Bereich2Last4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel4Bereich2Anzeige4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel4Bereich2Anzeige3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel4Bereich2Last3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel4Bereich2Last2 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel4Bereich2Anzeige1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel4Bereich2Last1 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblStaffel4Bereich2MessabweichungWaage As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel4Bereich2MessabweichungStaffel As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel4Bereich2Differenz As Telerik.WinControls.UI.RadLabel
@@ -10103,16 +10103,16 @@ End Sub
     Friend WithEvents RadGroupBoxStaffel4Bereich1 As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents lblStaffel4Bereich1ErsatzLastUnten As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel4Bereich1ErsatzLastOben As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlStaffel4Bereich1Fehler7 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel4Bereich1Fehler6 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel4Bereich1Fehler5 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel4Bereich1Last4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel4Bereich1Anzeige4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel4Bereich1Anzeige3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel4Bereich1Last3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel4Bereich1Last2 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel4Bereich1Anzeige1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel4Bereich1Last1 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlStaffel4Bereich1Fehler7 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel4Bereich1Fehler6 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel4Bereich1Fehler5 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel4Bereich1Last4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel4Bereich1Anzeige4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel4Bereich1Anzeige3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel4Bereich1Last3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel4Bereich1Last2 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel4Bereich1Anzeige1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel4Bereich1Last1 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblStaffel4Bereich1MessabweichungWaage As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel4Bereich1MessabweichungStaffel As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel4Bereich1Differenz As Telerik.WinControls.UI.RadLabel
@@ -10132,16 +10132,16 @@ End Sub
     Friend WithEvents RadGroupBoxStaffel5Bereich3 As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents lblStaffel5Bereich3ErsatzLastUnten As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel5Bereich3ErsatzLastOben As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlStaffel5Bereich3Fehler7 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel5Bereich3Fehler6 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel5Bereich3Fehler5 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel5Bereich3Last4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel5Bereich3Anzeige4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel5Bereich3Anzeige3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel5Bereich3Last3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel5Bereich3Last2 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel5Bereich3Anzeige1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel5Bereich3Last1 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlStaffel5Bereich3Fehler7 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel5Bereich3Fehler6 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel5Bereich3Fehler5 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel5Bereich3Last4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel5Bereich3Anzeige4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel5Bereich3Anzeige3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel5Bereich3Last3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel5Bereich3Last2 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel5Bereich3Anzeige1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel5Bereich3Last1 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblStaffel5Bereich3MessabweichungWaage As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel5Bereich3MessabweichungStaffel As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel5Bereich3Differenz As Telerik.WinControls.UI.RadLabel
@@ -10160,16 +10160,16 @@ End Sub
     Friend WithEvents RadGroupBoxStaffel5Bereich2 As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents lblStaffel5Bereich2ErsatzLastUnten As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel5Bereich2ErsatzLastOben As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlStaffel5Bereich2Fehler7 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel5Bereich2Fehler6 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel5Bereich2Fehler5 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel5Bereich2Last4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel5Bereich2Anzeige4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel5Bereich2Anzeige3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel5Bereich2Last3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel5Bereich2Last2 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel5Bereich2Anzeige1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel5Bereich2Last1 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlStaffel5Bereich2Fehler7 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel5Bereich2Fehler6 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel5Bereich2Fehler5 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel5Bereich2Last4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel5Bereich2Anzeige4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel5Bereich2Anzeige3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel5Bereich2Last3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel5Bereich2Last2 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel5Bereich2Anzeige1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel5Bereich2Last1 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblStaffel5Bereich2MessabweichungWaage As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel5Bereich2MessabweichungStaffel As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel5Bereich2Differenz As Telerik.WinControls.UI.RadLabel
@@ -10188,16 +10188,16 @@ End Sub
     Friend WithEvents RadGroupBoxStaffel5Bereich1 As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents lblStaffel5Bereich1ErsatzLastUnten As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel5Bereich1ErsatzLastOben As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlStaffel5Bereich1Fehler7 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel5Bereich1Fehler6 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel5Bereich1Fehler5 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel5Bereich1Last4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel5Bereich1Anzeige4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel5Bereich1Anzeige3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel5Bereich1Last3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel5Bereich1Last2 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel5Bereich1Anzeige1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel5Bereich1Last1 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlStaffel5Bereich1Fehler7 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel5Bereich1Fehler6 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel5Bereich1Fehler5 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel5Bereich1Last4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel5Bereich1Anzeige4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel5Bereich1Anzeige3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel5Bereich1Last3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel5Bereich1Last2 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel5Bereich1Anzeige1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel5Bereich1Last1 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblStaffel5Bereich1MessabweichungWaage As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel5Bereich1MessabweichungStaffel As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblStaffel5Bereich1Differenz As Telerik.WinControls.UI.RadLabel
@@ -10293,9 +10293,9 @@ End Sub
     Friend WithEvents PictureBox7 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox14 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox133 As System.Windows.Forms.PictureBox
-    Friend WithEvents RadTextBoxControlStaffel1Bereich1Last2 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel1Bereich1Anzeige2 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlStaffel1Bereich1Fehler2 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlStaffel1Bereich1Last2 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel1Bereich1Anzeige2 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlStaffel1Bereich1Fehler2 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents PictureBox134 As System.Windows.Forms.PictureBox
     Friend WithEvents lblStaffel1Bereich1EFGWert2 As Telerik.WinControls.UI.RadMaskedEditBox
     Friend WithEvents RadLabel8 As Telerik.WinControls.UI.RadLabel

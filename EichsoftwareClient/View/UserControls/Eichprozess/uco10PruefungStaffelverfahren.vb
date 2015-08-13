@@ -114,32 +114,32 @@ Inherits ucoContent
     RadTextBoxControlStaffel1Bereich1Anzeige2.Validating
         Try
             Dim result As Decimal
-            If Not sender.isreadonly = True Then
+            If Not sender.readonly = True Then
 
                 'damit das Vorgehen nicht so aggresiv ist, wird es bei leerem Text ignoriert:
-                If CType(sender, Telerik.WinControls.UI.RadTextBoxControl).Text.Equals("") Then
-                    CType(sender, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.FromArgb(0, 255, 255, 255)
+                If CType(sender, Telerik.WinControls.UI.RadTextBox).Text.Equals("") Then
+                    CType(sender, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.FromArgb(0, 255, 255, 255)
                     Exit Sub
                 End If
 
                 'versuchen ob der Text in eine Zahl konvertiert werden kann
-                If Not Decimal.TryParse(CType(sender, Telerik.WinControls.UI.RadTextBoxControl).Text, result) Then
+                If Not Decimal.TryParse(CType(sender, Telerik.WinControls.UI.RadTextBox).Text, result) Then
                     e.Cancel = True
-                    CType(sender, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.Red
+                    CType(sender, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
                     System.Media.SystemSounds.Exclamation.Play()
 
                 Else 'rahmen zurücksetzen
-                    CType(sender, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.FromArgb(0, 255, 255, 255)
+                    CType(sender, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.FromArgb(0, 255, 255, 255)
                 End If
             End If
         Catch ex As Exception
         End Try
     End Sub
 
-    #End Region
+#End Region
 
 
-    #Region "Methods"
+#Region "Methods"
     Private Sub LoadFromDatabase()
         SuspendLayout()
         objEichprozess = ParentFormular.CurrentEichprozess
@@ -245,8 +245,8 @@ Inherits ucoContent
         End Try
     End Sub
 
- 
-   
+
+
 
     ''' <summary>
     '''    je nach Art der Waage andere Bereichsgruppen ausblenden
@@ -330,9 +330,9 @@ Inherits ucoContent
                 If Not _currentObjPruefungStaffelverfahrenNormallast Is Nothing Then
 
                     For messpunkt As Integer = 1 To 7
-                        Dim Last As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), CInt(messpunkt)))
-                        Dim Anzeige As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), CInt(messpunkt)))
-                        Dim Fehler As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), CInt(messpunkt)))
+                        Dim Last As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), CInt(messpunkt)))
+                        Dim Anzeige As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), CInt(messpunkt)))
+                        Dim Fehler As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), CInt(messpunkt)))
                         Dim EFG As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblStaffel{0}Bereich{1}EFGWert{2}", CInt(Staffel), CInt(Bereich), CInt(messpunkt)))
 
                         If messpunkt <= 4 Then
@@ -431,18 +431,18 @@ Inherits ucoContent
 
 
 
-                Dim Last1 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 1))
-                Dim Last2 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 2))
-                Dim Last3 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 3))
-                Dim Last4 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 4))
+                Dim Last1 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 1))
+                Dim Last2 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 2))
+                Dim Last3 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 3))
+                Dim Last4 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 4))
 
-                Dim Anzeige1 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 1))
-                Dim Anzeige3 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 3))
-                Dim Anzeige4 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 4))
+                Dim Anzeige1 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 1))
+                Dim Anzeige3 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 3))
+                Dim Anzeige4 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 4))
 
-                Dim Fehler5 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 5))
-                Dim Fehler6 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 6))
-                Dim Fehler7 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 7))
+                Dim Fehler5 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 5))
+                Dim Fehler6 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 6))
+                Dim Fehler7 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 7))
 
                 Dim EFG5 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblStaffel{0}Bereich{1}EFGWert{2}", CInt(Staffel), CInt(Bereich), 5))
                 Dim EFG6 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblStaffel{0}Bereich{1}EFGWert{2}", CInt(Staffel), CInt(Bereich), 6))
@@ -565,21 +565,21 @@ Inherits ucoContent
         Dim Staffel As String = PObjPruefung.Staffel
         Dim Bereich As String = PObjPruefung.Bereich
 
-        Dim Last1 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 1))
-        Dim Last2 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 2))
-        Dim Last3 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 3))
-        Dim Last4 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 4))
-        Dim Anzeige1 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 1))
-        Dim Anzeige2 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 2))
-        Dim Anzeige3 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 3))
-        Dim Anzeige4 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 4))
-        Dim Fehler1 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 1))
-        Dim Fehler2 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 2))
-        Dim Fehler3 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 3))
-        Dim Fehler4 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 4))
-        Dim Fehler5 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 5))
-        Dim Fehler6 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 6))
-        Dim Fehler7 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 7))
+        Dim Last1 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 1))
+        Dim Last2 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 2))
+        Dim Last3 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 3))
+        Dim Last4 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 4))
+        Dim Anzeige1 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 1))
+        Dim Anzeige2 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 2))
+        Dim Anzeige3 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 3))
+        Dim Anzeige4 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 4))
+        Dim Fehler1 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 1))
+        Dim Fehler2 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 2))
+        Dim Fehler3 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 3))
+        Dim Fehler4 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 4))
+        Dim Fehler5 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 5))
+        Dim Fehler6 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 6))
+        Dim Fehler7 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 7))
         Dim EFG1 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblStaffel{0}Bereich{1}EFGWert{2}", CInt(Staffel), CInt(Bereich), 1))
         Dim EFG2 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblStaffel{0}Bereich{1}EFGWert{2}", CInt(Staffel), CInt(Bereich), 2))
         Dim EFG3 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblStaffel{0}Bereich{1}EFGWert{2}", CInt(Staffel), CInt(Bereich), 3))
@@ -628,16 +628,16 @@ Inherits ucoContent
         Dim Bereich As String = PObjPruefung.Bereich
 
         'suchen der Steuerelemente
-        Dim Last1 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 1))
-        Dim Last2 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 2))
-        Dim Last3 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 3))
-        Dim Last4 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 4))
-        Dim Anzeige1 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 1))
-        Dim Anzeige3 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 3))
-        Dim Anzeige4 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 4))
-        Dim Fehler5 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 5))
-        Dim Fehler6 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 6))
-        Dim Fehler7 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 7))
+        Dim Last1 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 1))
+        Dim Last2 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 2))
+        Dim Last3 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 3))
+        Dim Last4 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 4))
+        Dim Anzeige1 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 1))
+        Dim Anzeige3 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 3))
+        Dim Anzeige4 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 4))
+        Dim Fehler5 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 5))
+        Dim Fehler6 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 6))
+        Dim Fehler7 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 7))
         Dim EFG5 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblStaffel{0}Bereich{1}EFGWert{2}", CInt(Staffel), CInt(Bereich), 5))
         Dim EFG6 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblStaffel{0}Bereich{1}EFGWert{2}", CInt(Staffel), CInt(Bereich), 6))
         Dim EFG7 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblStaffel{0}Bereich{1}EFGWert{2}", CInt(Staffel), CInt(Bereich), 7))
@@ -665,7 +665,7 @@ Inherits ucoContent
     ''' <author></author>
     ''' <commentauthor></commentauthor>
     Private Function ValidateControls() As Boolean
-     
+
         'prüfen ob alle Felder ausgefüllt sind
         AbortSaveing = False
 
@@ -680,10 +680,10 @@ Inherits ucoContent
                         If CType(BereichGroupBox, Telerik.WinControls.UI.RadGroupBox).Visible = True Then
                             For Each Control In BereichGroupBox.controls
                                 Try
-                                    If CType(Control, Telerik.WinControls.UI.RadTextBoxControl).IsReadOnly = False Then
-                                        If CType(Control, Telerik.WinControls.UI.RadTextBoxControl).Text.Trim = "" Then
+                                    If CType(Control, Telerik.WinControls.UI.RadTextBox).ReadOnly = False Then
+                                        If CType(Control, Telerik.WinControls.UI.RadTextBox).Text.Trim = "" Then
                                             AbortSaveing = True
-                                            CType(Control, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.Red
+                                            CType(Control, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
                                             intausgefuellteStaffeln = 3 'die staffel wurde nicht voll ausgefüllt
                                         Else
                                             intausgefuellteStaffeln = 4 'die 4 Staffel wurde auch ausgefüllt
@@ -707,10 +707,10 @@ Inherits ucoContent
                             If CType(BereichGroupBox, Telerik.WinControls.UI.RadGroupBox).Visible = True Then
                                 For Each Control In BereichGroupBox.controls
                                     Try
-                                        If CType(Control, Telerik.WinControls.UI.RadTextBoxControl).IsReadOnly = False Then
-                                            If CType(Control, Telerik.WinControls.UI.RadTextBoxControl).Text.Trim = "" Then
+                                        If CType(Control, Telerik.WinControls.UI.RadTextBox).ReadOnly = False Then
+                                            If CType(Control, Telerik.WinControls.UI.RadTextBox).Text.Trim = "" Then
                                                 AbortSaveing = True
-                                                CType(Control, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.Red
+                                                CType(Control, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
 
                                                 intausgefuellteStaffeln = 4 'die staffel wurde nicht voll ausgefüllt
                                             Else
@@ -730,10 +730,10 @@ Inherits ucoContent
                 If CType(BereichGroupBox, Telerik.WinControls.UI.RadGroupBox).Visible = True Then
                     For Each Control In BereichGroupBox.controls
                         Try
-                            If CType(Control, Telerik.WinControls.UI.RadTextBoxControl).IsReadOnly = False Then
-                                If CType(Control, Telerik.WinControls.UI.RadTextBoxControl).Text.Trim = "" Then
+                            If CType(Control, Telerik.WinControls.UI.RadTextBox).ReadOnly = False Then
+                                If CType(Control, Telerik.WinControls.UI.RadTextBox).Text.Trim = "" Then
                                     AbortSaveing = True
-                                    CType(Control, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.Red
+                                    CType(Control, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
 
 
                                     Exit For
@@ -749,7 +749,7 @@ Inherits ucoContent
 
         Dim decAbsoluteFehlergrenze As Decimal = 0
 
-      'fehlermeldung anzeigen bei falscher validierung
+        'fehlermeldung anzeigen bei falscher validierung
         Return Me.ShowValidationErrorBox()
 
         'logik zum Valideren der Eichfehlergrenzen der einzelnen Staffeln. Abhängig davon wieviele Staffeln überhaupt ausgefüllt sind
@@ -825,35 +825,35 @@ Inherits ucoContent
                 End Try
         End Select
 
-         'fehlermeldung anzeigen bei falscher validierung
+        'fehlermeldung anzeigen bei falscher validierung
         Return Me.ShowValidationErrorBox()
 
     End Function
 
-    #End Region
+#End Region
 
 
     #Region "Events die neue Berechnungen beim Ändern von Feldinformationen erfordern"
 
     Private Sub BerechneStaffelBereich(ByVal Staffel As String, ByVal Bereich As String)
         Try
-            Dim Last1 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 1))
-            Dim Last2 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 2))
-            Dim Last3 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 3))
-            Dim Last4 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 4))
+            Dim Last1 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 1))
+            Dim Last2 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 2))
+            Dim Last3 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 3))
+            Dim Last4 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 4))
 
-            Dim Anzeige1 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 1))
-            Dim Anzeige2 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 2))
-            Dim Anzeige3 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 3))
-            Dim Anzeige4 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 4))
+            Dim Anzeige1 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 1))
+            Dim Anzeige2 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 2))
+            Dim Anzeige3 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 3))
+            Dim Anzeige4 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 4))
 
-            Dim Fehler1 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 1))
-            Dim Fehler2 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 2))
-            Dim Fehler3 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 3))
-            Dim Fehler4 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 4))
-            Dim Fehler5 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 5))
-            Dim Fehler6 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 6))
-            Dim Fehler7 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 7))
+            Dim Fehler1 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 1))
+            Dim Fehler2 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 2))
+            Dim Fehler3 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 3))
+            Dim Fehler4 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 4))
+            Dim Fehler5 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 5))
+            Dim Fehler6 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 6))
+            Dim Fehler7 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 7))
 
             Dim EFG1 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblStaffel{0}Bereich{1}EFGWert{2}", CInt(Staffel), CInt(Bereich), 1))
             Dim EFG2 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblStaffel{0}Bereich{1}EFGWert{2}", CInt(Staffel), CInt(Bereich), 2))
@@ -1086,17 +1086,17 @@ Inherits ucoContent
 
 
             'die Messabweichung durch alle Staffeln durchreichen
-            Dim Fehler6Staffel1 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 1, CInt(Bereich), 6))
-            Dim Fehler6Staffel2 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 2, CInt(Bereich), 6))
-            Dim Fehler6Staffel3 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 3, CInt(Bereich), 6))
-            Dim Fehler6Staffel4 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 4, CInt(Bereich), 6))
-            Dim Fehler6Staffel5 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 5, CInt(Bereich), 6))
+            Dim Fehler6Staffel1 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 1, CInt(Bereich), 6))
+            Dim Fehler6Staffel2 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 2, CInt(Bereich), 6))
+            Dim Fehler6Staffel3 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 3, CInt(Bereich), 6))
+            Dim Fehler6Staffel4 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 4, CInt(Bereich), 6))
+            Dim Fehler6Staffel5 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 5, CInt(Bereich), 6))
 
-            Dim Fehler7Staffel1 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 1, CInt(Bereich), 7))
-            Dim Fehler7Staffel2 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 2, CInt(Bereich), 7))
-            Dim Fehler7Staffel3 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 3, CInt(Bereich), 7))
-            Dim Fehler7Staffel4 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 4, CInt(Bereich), 7))
-            Dim Fehler7Staffel5 As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 5, CInt(Bereich), 7))
+            Dim Fehler7Staffel1 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 1, CInt(Bereich), 7))
+            Dim Fehler7Staffel2 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 2, CInt(Bereich), 7))
+            Dim Fehler7Staffel3 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 3, CInt(Bereich), 7))
+            Dim Fehler7Staffel4 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 4, CInt(Bereich), 7))
+            Dim Fehler7Staffel5 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 5, CInt(Bereich), 7))
 
 
             Try

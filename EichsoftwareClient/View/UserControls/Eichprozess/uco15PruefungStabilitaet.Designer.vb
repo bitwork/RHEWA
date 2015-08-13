@@ -45,28 +45,28 @@ Partial Class uco15PruefungStabilitaet
         Me.lblPrintBeschreibung = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel5 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel6 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlMax5 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlMax5 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadLabel7 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlMax4 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlMax4 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadLabel8 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlMax3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlLast1 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlMax2 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlLast2 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlMax1 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlLast3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlMin5 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlLast4 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlMin4 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlLast5 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlMin3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlAnzeige1 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlMin2 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlAnzeige2 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlMin1 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlAnzeige3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlAnzeige5 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlAnzeige4 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlMax3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlLast1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlMax2 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlLast2 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlMax1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlLast3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlMin5 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlLast4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlMin4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlLast5 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlMin3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlAnzeige1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlMin2 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlAnzeige2 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlMin1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlAnzeige3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlAnzeige5 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlAnzeige4 = New Telerik.WinControls.UI.RadTextBox()
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanel1.PanelContainer.SuspendLayout()
         Me.RadScrollablePanel1.SuspendLayout()
@@ -861,26 +861,26 @@ Partial Class uco15PruefungStabilitaet
     Friend WithEvents RadLabel6 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel7 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel8 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlLast1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlLast2 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlLast3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlLast4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlLast5 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlAnzeige1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlAnzeige2 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlAnzeige3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlAnzeige4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlAnzeige5 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlMin1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlMin2 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlMin3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlMin4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlMin5 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlMax1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlMax2 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlMax3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlMax4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlMax5 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlLast1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlLast2 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlLast3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlLast4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlLast5 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlAnzeige1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlAnzeige2 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlAnzeige3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlAnzeige4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlAnzeige5 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlMin1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlMin2 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlMin3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlMin4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlMin5 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlMax1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlMax2 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlMax3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlMax4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlMax5 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblBeschreibung As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblPrintBeschreibung As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblAbdruck As Telerik.WinControls.UI.RadLabel

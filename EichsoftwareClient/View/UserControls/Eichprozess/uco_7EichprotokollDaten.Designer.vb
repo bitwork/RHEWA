@@ -31,14 +31,14 @@ Partial Class uco_7EichprotokollDaten
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.RadDateTimePickerNormalienLetztePruefung = New Telerik.WinControls.UI.RadDateTimePicker()
-        Me.RadTextBoxControlNormalienEichfahrzeugFirma = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlNormalienEichfahrzeugFirma = New Telerik.WinControls.UI.RadTextBox()
         Me.lblTruck = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlNormalienPruefscheinnummer = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlNormalienPruefscheinnummer = New Telerik.WinControls.UI.RadTextBox()
         Me.lblZertifikatnr = New Telerik.WinControls.UI.RadLabel()
         Me.lblTestzeitraum = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlNormalienPruefintervall = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlNormalienPruefintervall = New Telerik.WinControls.UI.RadTextBox()
         Me.lblPruefzeitraum = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlNormalienGenauigkeitsklasse = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlNormalienGenauigkeitsklasse = New Telerik.WinControls.UI.RadTextBox()
         Me.lblGenauigkeitsklasse2 = New Telerik.WinControls.UI.RadLabel()
         Me.RadGroupBoxVerwendungszweck = New Telerik.WinControls.UI.RadGroupBox()
         Me.RadGroupBoxVerwendungszweckTara = New Telerik.WinControls.UI.RadGroupBox()
@@ -50,7 +50,7 @@ Partial Class uco_7EichprotokollDaten
         Me.RadCheckBoxEichfaehigerSpeicher = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadCheckBoxPC = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadCheckBoxSonstiges = New Telerik.WinControls.UI.RadCheckBox()
-        Me.RadTextBoxControlDruckerTyp = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlDruckerTyp = New Telerik.WinControls.UI.RadTextBox()
         Me.lblDruckerart = New Telerik.WinControls.UI.RadLabel()
         Me.RadGroupBoxVerwendungszweckNullstellung = New Telerik.WinControls.UI.RadGroupBox()
         Me.RadRadioButtonNustellungNullNachfuehrung = New Telerik.WinControls.UI.RadCheckBox()
@@ -60,12 +60,12 @@ Partial Class uco_7EichprotokollDaten
         Me.Label7 = New System.Windows.Forms.Label()
         Me.lblArtWaage = New Telerik.WinControls.UI.RadLabel()
         Me.PictureBox16 = New System.Windows.Forms.PictureBox()
-        Me.RadTextBoxControlWaagentyp = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlWaagentyp = New Telerik.WinControls.UI.RadTextBox()
         Me.PictureBox13 = New System.Windows.Forms.PictureBox()
-        Me.RadTextBoxControlDimension = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlDimension = New Telerik.WinControls.UI.RadTextBox()
         Me.RadLabel38 = New Telerik.WinControls.UI.RadLabel()
         Me.lblDimension = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlMxM = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlMxM = New Telerik.WinControls.UI.RadTextBox()
         Me.RadGroupBoxKomponenten = New Telerik.WinControls.UI.RadGroupBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -74,26 +74,26 @@ Partial Class uco_7EichprotokollDaten
         Me.PictureBox20 = New System.Windows.Forms.PictureBox()
         Me.PictureBox19 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.RadTextBoxControlAWG = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlAWG = New Telerik.WinControls.UI.RadTextBox()
         Me.lblFabriknummernWZ = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlWZFabriknummer = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlWZFabriknummer = New Telerik.WinControls.UI.RadTextBox()
         Me.lblAnzahlWZ = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlWZAnzahl = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlWZAnzahl = New Telerik.WinControls.UI.RadTextBox()
         Me.lblTyp = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlWZTyp = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlWZTyp = New Telerik.WinControls.UI.RadTextBox()
         Me.lblHerstellerWZ = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlWZHersteller = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlWZHersteller = New Telerik.WinControls.UI.RadTextBox()
         Me.lblZeichen = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlEichzaehlerstand = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlEichzaehlerstand = New Telerik.WinControls.UI.RadTextBox()
         Me.lblSoftwareversion = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlSoftwarestand = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlSoftwarestand = New Telerik.WinControls.UI.RadTextBox()
         Me.lblAWG = New Telerik.WinControls.UI.RadLabel()
         Me.RadGroupBoxPruefverfahren = New Telerik.WinControls.UI.RadGroupBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.RadLabel6 = New Telerik.WinControls.UI.RadLabel()
         Me.lblNormalienGewichte = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlBetragNormallast = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBetragNormallast = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxVollstaendigesStaffelverfahren = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadCheckBoxVolleNormallast = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadGroupBoxIdentifikationsdaten = New Telerik.WinControls.UI.RadGroupBox()
@@ -102,36 +102,36 @@ Partial Class uco_7EichprotokollDaten
         Me.Label1 = New System.Windows.Forms.Label()
         Me.RadGroupBoxMax1 = New Telerik.WinControls.UI.RadGroupBox()
         Me.RadLabel11 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControl1Hoechstwert1 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlMin1 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControl1Hoechstwert1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlMin1 = New Telerik.WinControls.UI.RadTextBox()
         Me.PictureBox11 = New System.Windows.Forms.PictureBox()
         Me.RadLabel12 = New Telerik.WinControls.UI.RadLabel()
         Me.PictureBox12 = New System.Windows.Forms.PictureBox()
-        Me.RadTextBoxControlEichwert1 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlEichwert1 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadLabel13 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel20 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel21 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel22 = New Telerik.WinControls.UI.RadLabel()
         Me.RadGroupBoxMax3 = New Telerik.WinControls.UI.RadGroupBox()
-        Me.RadTextBoxControl1Hoechstwert3 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControl1Hoechstwert3 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadLabel19 = New Telerik.WinControls.UI.RadLabel()
         Me.PictureBox17 = New System.Windows.Forms.PictureBox()
-        Me.RadTextBoxControlMin3 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlMin3 = New Telerik.WinControls.UI.RadTextBox()
         Me.PictureBox18 = New System.Windows.Forms.PictureBox()
         Me.RadLabel18 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlEichwert3 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlEichwert3 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadLabel17 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel28 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel27 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel26 = New Telerik.WinControls.UI.RadLabel()
         Me.RadGroupBoxMax2 = New Telerik.WinControls.UI.RadGroupBox()
-        Me.RadTextBoxControl1Hoechstwert2 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControl1Hoechstwert2 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadLabel16 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlMin2 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlMin2 = New Telerik.WinControls.UI.RadTextBox()
         Me.PictureBox14 = New System.Windows.Forms.PictureBox()
         Me.RadLabel15 = New Telerik.WinControls.UI.RadLabel()
         Me.PictureBox15 = New System.Windows.Forms.PictureBox()
-        Me.RadTextBoxControlEichwert2 = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlEichwert2 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadLabel14 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel25 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel24 = New Telerik.WinControls.UI.RadLabel()
@@ -151,17 +151,17 @@ Partial Class uco_7EichprotokollDaten
         Me.RadCheckBoxHalbSelbsteinspielend = New Telerik.WinControls.UI.RadCheckBox()
         Me.PictureBox10 = New System.Windows.Forms.PictureBox()
         Me.lblHerstellungsjahr = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlBaujahr = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBaujahr = New Telerik.WinControls.UI.RadTextBox()
         Me.lblPruefer = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlPruefer = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlPruefer = New Telerik.WinControls.UI.RadTextBox()
         Me.lblDatum = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlDatum = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlDatum = New Telerik.WinControls.UI.RadTextBox()
         Me.lblFabriknummer = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlFabriknummer = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlFabriknummer = New Telerik.WinControls.UI.RadTextBox()
         Me.lblOrt = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlAufstellungsort = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlAufstellungsort = New Telerik.WinControls.UI.RadTextBox()
         Me.lblBenutzer = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlBenutzer = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlBenutzer = New Telerik.WinControls.UI.RadTextBox()
         Me.RadRadioButtonTaraeingabe = New Telerik.WinControls.UI.RadCheckBox()
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanel1.PanelContainer.SuspendLayout()
@@ -899,7 +899,7 @@ Partial Class uco_7EichprotokollDaten
         '
         'RadTextBoxControlWaagentyp
         '
-        Me.RadTextBoxControlWaagentyp.IsReadOnly = True
+        Me.RadTextBoxControlWaagentyp.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlWaagentyp, "RadTextBoxControlWaagentyp")
         Me.RadTextBoxControlWaagentyp.Name = "RadTextBoxControlWaagentyp"
         '
@@ -924,7 +924,7 @@ Partial Class uco_7EichprotokollDaten
         '
         'RadTextBoxControlDimension
         '
-        Me.RadTextBoxControlDimension.IsReadOnly = True
+        Me.RadTextBoxControlDimension.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlDimension, "RadTextBoxControlDimension")
         Me.RadTextBoxControlDimension.Name = "RadTextBoxControlDimension"
         '
@@ -1074,7 +1074,7 @@ Partial Class uco_7EichprotokollDaten
         '
         'RadTextBoxControlAWG
         '
-        Me.RadTextBoxControlAWG.IsReadOnly = True
+        Me.RadTextBoxControlAWG.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlAWG, "RadTextBoxControlAWG")
         Me.RadTextBoxControlAWG.Name = "RadTextBoxControlAWG"
         '
@@ -1141,7 +1141,7 @@ Partial Class uco_7EichprotokollDaten
         '
         'RadTextBoxControlWZAnzahl
         '
-        Me.RadTextBoxControlWZAnzahl.IsReadOnly = True
+        Me.RadTextBoxControlWZAnzahl.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlWZAnzahl, "RadTextBoxControlWZAnzahl")
         Me.RadTextBoxControlWZAnzahl.Name = "RadTextBoxControlWZAnzahl"
         '
@@ -1175,7 +1175,7 @@ Partial Class uco_7EichprotokollDaten
         '
         'RadTextBoxControlWZTyp
         '
-        Me.RadTextBoxControlWZTyp.IsReadOnly = True
+        Me.RadTextBoxControlWZTyp.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlWZTyp, "RadTextBoxControlWZTyp")
         Me.RadTextBoxControlWZTyp.Name = "RadTextBoxControlWZTyp"
         '
@@ -1209,7 +1209,7 @@ Partial Class uco_7EichprotokollDaten
         '
         'RadTextBoxControlWZHersteller
         '
-        Me.RadTextBoxControlWZHersteller.IsReadOnly = True
+        Me.RadTextBoxControlWZHersteller.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlWZHersteller, "RadTextBoxControlWZHersteller")
         Me.RadTextBoxControlWZHersteller.Name = "RadTextBoxControlWZHersteller"
         '
@@ -1534,7 +1534,7 @@ Partial Class uco_7EichprotokollDaten
         '
         'RadTextBoxControl1Hoechstwert1
         '
-        Me.RadTextBoxControl1Hoechstwert1.IsReadOnly = True
+        Me.RadTextBoxControl1Hoechstwert1.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControl1Hoechstwert1, "RadTextBoxControl1Hoechstwert1")
         Me.RadTextBoxControl1Hoechstwert1.Name = "RadTextBoxControl1Hoechstwert1"
         '
@@ -1598,7 +1598,7 @@ Partial Class uco_7EichprotokollDaten
         '
         'RadTextBoxControlEichwert1
         '
-        Me.RadTextBoxControlEichwert1.IsReadOnly = True
+        Me.RadTextBoxControlEichwert1.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlEichwert1, "RadTextBoxControlEichwert1")
         Me.RadTextBoxControlEichwert1.Name = "RadTextBoxControlEichwert1"
         '
@@ -1708,7 +1708,7 @@ Partial Class uco_7EichprotokollDaten
         '
         'RadTextBoxControl1Hoechstwert3
         '
-        Me.RadTextBoxControl1Hoechstwert3.IsReadOnly = True
+        Me.RadTextBoxControl1Hoechstwert3.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControl1Hoechstwert3, "RadTextBoxControl1Hoechstwert3")
         Me.RadTextBoxControl1Hoechstwert3.Name = "RadTextBoxControl1Hoechstwert3"
         '
@@ -1788,7 +1788,7 @@ Partial Class uco_7EichprotokollDaten
         '
         'RadTextBoxControlEichwert3
         '
-        Me.RadTextBoxControlEichwert3.IsReadOnly = True
+        Me.RadTextBoxControlEichwert3.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlEichwert3, "RadTextBoxControlEichwert3")
         Me.RadTextBoxControlEichwert3.Name = "RadTextBoxControlEichwert3"
         '
@@ -1898,7 +1898,7 @@ Partial Class uco_7EichprotokollDaten
         '
         'RadTextBoxControl1Hoechstwert2
         '
-        Me.RadTextBoxControl1Hoechstwert2.IsReadOnly = True
+        Me.RadTextBoxControl1Hoechstwert2.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControl1Hoechstwert2, "RadTextBoxControl1Hoechstwert2")
         Me.RadTextBoxControl1Hoechstwert2.Name = "RadTextBoxControl1Hoechstwert2"
         '
@@ -1978,7 +1978,7 @@ Partial Class uco_7EichprotokollDaten
         '
         'RadTextBoxControlEichwert2
         '
-        Me.RadTextBoxControlEichwert2.IsReadOnly = True
+        Me.RadTextBoxControlEichwert2.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlEichwert2, "RadTextBoxControlEichwert2")
         Me.RadTextBoxControlEichwert2.Name = "RadTextBoxControlEichwert2"
         '
@@ -2275,7 +2275,7 @@ Partial Class uco_7EichprotokollDaten
         '
         'RadTextBoxControlPruefer
         '
-        Me.RadTextBoxControlPruefer.IsReadOnly = True
+        Me.RadTextBoxControlPruefer.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlPruefer, "RadTextBoxControlPruefer")
         Me.RadTextBoxControlPruefer.Name = "RadTextBoxControlPruefer"
         '
@@ -2309,7 +2309,7 @@ Partial Class uco_7EichprotokollDaten
         '
         'RadTextBoxControlDatum
         '
-        Me.RadTextBoxControlDatum.IsReadOnly = True
+        Me.RadTextBoxControlDatum.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlDatum, "RadTextBoxControlDatum")
         Me.RadTextBoxControlDatum.Name = "RadTextBoxControlDatum"
         '
@@ -2343,7 +2343,7 @@ Partial Class uco_7EichprotokollDaten
         '
         'RadTextBoxControlFabriknummer
         '
-        Me.RadTextBoxControlFabriknummer.IsReadOnly = True
+        Me.RadTextBoxControlFabriknummer.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlFabriknummer, "RadTextBoxControlFabriknummer")
         Me.RadTextBoxControlFabriknummer.Name = "RadTextBoxControlFabriknummer"
         '
@@ -2612,17 +2612,17 @@ Partial Class uco_7EichprotokollDaten
     Friend WithEvents RadGroupBoxPruefverfahren As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents RadGroupBoxIdentifikationsdaten As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents lblHerstellungsjahr As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBaujahr As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBaujahr As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblPruefer As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlPruefer As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlPruefer As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblDatum As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlDatum As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlDatum As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblFabriknummer As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlFabriknummer As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlFabriknummer As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblOrt As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlAufstellungsort As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlAufstellungsort As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblBenutzer As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBenutzer As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBenutzer As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadLabel26 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel27 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel28 As Telerik.WinControls.UI.RadLabel
@@ -2633,23 +2633,23 @@ Partial Class uco_7EichprotokollDaten
     Friend WithEvents RadLabel21 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel20 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel17 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlEichwert3 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlEichwert3 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadLabel18 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlMin3 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlMin3 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadLabel19 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControl1Hoechstwert3 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControl1Hoechstwert3 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadLabel14 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlEichwert2 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlEichwert2 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadLabel15 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlMin2 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlMin2 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadLabel16 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControl1Hoechstwert2 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControl1Hoechstwert2 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadLabel13 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlEichwert1 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlEichwert1 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadLabel12 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlMin1 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlMin1 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadLabel11 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControl1Hoechstwert1 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControl1Hoechstwert1 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents PictureBoxGenauigkeitsklasse As System.Windows.Forms.PictureBox
     Friend WithEvents RadCheckBoxNichtselbsteinspielend As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents RadCheckBoxMehrteilungswaage As Telerik.WinControls.UI.RadCheckBox
@@ -2671,22 +2671,22 @@ Partial Class uco_7EichprotokollDaten
     Friend WithEvents PictureBox14 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox15 As System.Windows.Forms.PictureBox
     Friend WithEvents lblFabriknummernWZ As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlWZFabriknummer As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlWZFabriknummer As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblAnzahlWZ As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlWZAnzahl As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlWZAnzahl As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblTyp As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlWZTyp As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlWZTyp As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblHerstellerWZ As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlWZHersteller As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlWZHersteller As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblZeichen As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlEichzaehlerstand As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlEichzaehlerstand As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblSoftwareversion As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlSoftwarestand As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlSoftwarestand As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblAWG As Telerik.WinControls.UI.RadLabel
     Friend WithEvents PictureBox5 As System.Windows.Forms.PictureBox
     Friend WithEvents RadLabel6 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblNormalienGewichte As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBetragNormallast As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlBetragNormallast As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxVollstaendigesStaffelverfahren As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents RadCheckBoxVolleNormallast As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents RadGroupBoxVerwendungszweckEquipment As Telerik.WinControls.UI.RadGroupBox
@@ -2696,34 +2696,34 @@ Partial Class uco_7EichprotokollDaten
     Friend WithEvents PictureBox16 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox13 As System.Windows.Forms.PictureBox
     Friend WithEvents RadLabel38 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlMxM As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlMxM As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblDimension As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlDimension As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlDimension As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblDruckerart As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlDruckerTyp As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlDruckerTyp As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxSonstiges As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents RadCheckBoxPC As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents RadCheckBoxEichfaehigerSpeicher As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents RadCheckBoxDrucker As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents lblArtWaage As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlWaagentyp As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlWaagentyp As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadRadioButtonHandTara As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents RadRadioButtonAutoTara As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents RadRadioButtonNustellungNullNachfuehrung As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents RadRadioButtonNustellungAutomatisch As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents RadRadioButtonNustellungHalbAutomatisch As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents RadGroupBoxBeschaffenheitspruefungNormalien As Telerik.WinControls.UI.RadGroupBox
-    Friend WithEvents RadTextBoxControlNormalienEichfahrzeugFirma As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlNormalienEichfahrzeugFirma As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblTruck As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlNormalienPruefscheinnummer As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlNormalienPruefscheinnummer As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblZertifikatnr As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblTestzeitraum As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlNormalienPruefintervall As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlNormalienPruefintervall As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblPruefzeitraum As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlNormalienGenauigkeitsklasse As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlNormalienGenauigkeitsklasse As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblGenauigkeitsklasse2 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadDateTimePickerNormalienLetztePruefung As Telerik.WinControls.UI.RadDateTimePicker
-    Friend WithEvents RadTextBoxControlAWG As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlAWG As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox20 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox19 As System.Windows.Forms.PictureBox

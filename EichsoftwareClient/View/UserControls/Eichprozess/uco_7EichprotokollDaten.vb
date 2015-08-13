@@ -72,13 +72,12 @@
         FillControls()
 
         If DialogModus = enuDialogModus.lesend Then
-            'falls der Konformitätsbewertungsvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
             For Each Control In Me.RadScrollablePanel1.PanelContainer.Controls
                 Try
                     Control.readonly = True
                 Catch ex As Exception
                     Try
-                        Control.isreadonly = True
+                        Control.readonly = True
                     Catch ex2 As Exception
                         Try
                             Control.enabled = False
@@ -87,6 +86,58 @@
                     End Try
                 End Try
             Next
+            ''falls der Konformitätsbewertungsvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
+            'RadTextBoxControlBaujahr.ReadOnly = True
+            'RadTextBoxControlPruefer.ReadOnly = True
+            'RadTextBoxControlDatum.ReadOnly = True
+            'RadTextBoxControlFabriknummer.ReadOnly = True
+            'RadTextBoxControlAufstellungsort.ReadOnly = True
+            'RadTextBoxControlBenutzer.ReadOnly = True
+            'RadTextBoxControlEichwert3.ReadOnly = True
+            'RadTextBoxControlMin3.ReadOnly = True
+            'RadTextBoxControl1Hoechstwert3.ReadOnly = True
+            'RadTextBoxControlEichwert2.ReadOnly = True
+            'RadTextBoxControlMin2.ReadOnly = True
+            'RadTextBoxControl1Hoechstwert2.ReadOnly = True
+            'RadTextBoxControlEichwert1.ReadOnly = True
+            'RadTextBoxControlMin1.ReadOnly = True
+            'RadTextBoxControl1Hoechstwert1.ReadOnly = True
+            'RadCheckBoxNichtselbsteinspielend.Enabled = False
+            'RadCheckBoxMehrteilungswaage.Enabled = False
+            'RadCheckBoxHybridMechWaage.Enabled = False
+            'RadCheckBoxMehrbereichswaage.Enabled = False
+            'RadCheckBoxHalbSelbsteinspielend.Enabled = False
+            'RadTextBoxControlWZFabriknummer.ReadOnly = True
+            'RadTextBoxControlWZAnzahl.ReadOnly = True
+            'RadTextBoxControlWZTyp.ReadOnly = True
+            'RadTextBoxControlWZHersteller.ReadOnly = True
+            'RadTextBoxControlEichzaehlerstand.ReadOnly = True
+            'RadTextBoxControlSoftwarestand.ReadOnly = True
+            'RadTextBoxControlBetragNormallast.ReadOnly = True
+            'RadCheckBoxVollstaendigesStaffelverfahren.Enabled = False
+            'RadCheckBoxVolleNormallast.Enabled = False
+            'RadTextBoxControlMxM.ReadOnly = True
+            'RadTextBoxControlDimension.ReadOnly = True
+            'RadTextBoxControlDruckerTyp.ReadOnly = True
+            'RadCheckBoxSonstiges.Enabled = False
+            'RadCheckBoxPC.Enabled = False
+            'RadCheckBoxEichfaehigerSpeicher.Enabled = False
+            'RadCheckBoxDrucker.Enabled = False
+            'RadTextBoxControlWaagentyp.ReadOnly = True
+            'RadRadioButtonHandTara.Enabled = False
+            'RadRadioButtonAutoTara.Enabled = False
+            'RadRadioButtonNustellungNullNachfuehrung.Enabled = False
+            'RadRadioButtonNustellungAutomatisch.Enabled = False
+            'RadRadioButtonNustellungHalbAutomatisch.Enabled = False
+            'RadTextBoxControlNormalienEichfahrzeugFirma.ReadOnly = True
+            'RadTextBoxControlNormalienPruefscheinnummer.ReadOnly = True
+            'RadTextBoxControlNormalienPruefintervall.ReadOnly = True
+            'RadTextBoxControlNormalienGenauigkeitsklasse.ReadOnly = True
+            'RadDateTimePickerNormalienLetztePruefung.ReadOnly = True
+            'RadTextBoxControlAWG.ReadOnly = True
+
+            'RadRadioButtonTaraeingabe.Enabled = False
+
         End If
         'events abbrechen
         _suspendEvents = False
@@ -313,9 +364,9 @@
                 RadTextBoxControlMxM.Text = objEichprozess.Eichprotokoll.Verwendungszweck_Fahrzeugwaagen_MxM
                 RadTextBoxControlMxM.Visible = True
                 Label7.Visible = True
-                RadTextBoxControlMxM.IsReadOnly = False
+                RadTextBoxControlMxM.ReadOnly = False
                 RadTextBoxControlDimension.Text = My.Resources.GlobaleLokalisierung.Eichprotokoll_Dimension
-                RadTextBoxControlDimension.IsReadOnly = True
+                RadTextBoxControlDimension.ReadOnly = True
                 lblDimension.Visible = True
                 RadLabel38.Visible = True
                 PictureBox13.Visible = True
@@ -451,7 +502,7 @@
 
     Private Sub MarkControlRed(ByVal control As Control)
         Try
-            CType(control, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.Red
+            CType(control, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
             System.Media.SystemSounds.Exclamation.Play()
         Catch e As Exception
         End Try
@@ -464,7 +515,7 @@
 
     Private Sub MarkControlNormal(ByVal control As Control)
         Try
-            CType(control, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.FromArgb(0, 255, 255, 255)
+            CType(control, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.FromArgb(0, 255, 255, 255)
         Catch ex As Exception
         End Try
 
@@ -487,8 +538,8 @@
         For Each GroupBox In RadScrollablePanel1.PanelContainer.Controls
             If TypeOf GroupBox Is Telerik.WinControls.UI.RadGroupBox Then
                 For Each Control In GroupBox.controls
-                    If TypeOf Control Is Telerik.WinControls.UI.RadTextBoxControl Then
-                        If CType(Control, Telerik.WinControls.UI.RadTextBoxControl).Visible = True AndAlso CType(Control, Telerik.WinControls.UI.RadTextBoxControl).IsReadOnly = False Then
+                    If TypeOf Control Is Telerik.WinControls.UI.RadTextBox Then
+                        If CType(Control, Telerik.WinControls.UI.RadTextBox).Visible = True AndAlso CType(Control, Telerik.WinControls.UI.RadTextBox).ReadOnly = False Then
                             If Control.text.Equals("") Then
                                 Control.focus()
                                 AbortSaveing = True
@@ -509,8 +560,8 @@
                     If TypeOf Control Is Telerik.WinControls.UI.RadGroupBox Then
                         For Each Control2 In Control.controls
 
-                            If TypeOf Control2 Is Telerik.WinControls.UI.RadTextBoxControl Then
-                                If CType(Control2, Telerik.WinControls.UI.RadTextBoxControl).Visible = True AndAlso CType(Control2, Telerik.WinControls.UI.RadTextBoxControl).IsReadOnly = False Then
+                            If TypeOf Control2 Is Telerik.WinControls.UI.RadTextBox Then
+                                If CType(Control2, Telerik.WinControls.UI.RadTextBox).Visible = True AndAlso CType(Control2, Telerik.WinControls.UI.RadTextBox).ReadOnly = False Then
                                     If Control2.text.Equals("") Then
 
                                         'sonderfall Eichfahrzeug

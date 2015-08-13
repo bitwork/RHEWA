@@ -25,10 +25,10 @@ Partial Class FrmNeueWaegezele
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmNeueWaegezele))
         Me.RadButtonSpeichern = New Telerik.WinControls.UI.RadButton()
         Me.RadButtonAbbrechen = New Telerik.WinControls.UI.RadButton()
-        Me.RadTextBoxControlWZBauartzulassung = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlWZPruefbericht = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlWZTyp = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControlWZHersteller = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlWZBauartzulassung = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlWZPruefbericht = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlWZTyp = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlWZHersteller = New Telerik.WinControls.UI.RadTextBox()
         Me.RadLabel1 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel2 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel3 = New Telerik.WinControls.UI.RadLabel()
@@ -287,10 +287,10 @@ Partial Class FrmNeueWaegezele
     End Sub
     Friend WithEvents RadButtonSpeichern As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadButtonAbbrechen As Telerik.WinControls.UI.RadButton
-    Friend WithEvents RadTextBoxControlWZBauartzulassung As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlWZPruefbericht As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlWZTyp As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControlWZHersteller As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlWZBauartzulassung As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlWZPruefbericht As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlWZTyp As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBoxControlWZHersteller As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadLabel1 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel2 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel3 As Telerik.WinControls.UI.RadLabel

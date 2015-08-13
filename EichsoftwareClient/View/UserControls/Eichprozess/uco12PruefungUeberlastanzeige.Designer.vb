@@ -24,7 +24,7 @@ Partial Class uco12PruefungUeberlastanzeige
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco12PruefungUeberlastanzeige))
         Me.lblUeberlast = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlMaxE = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadTextBoxControlMaxE = New Telerik.WinControls.UI.RadTextBox()
         Me.RadLabel2 = New Telerik.WinControls.UI.RadLabel()
         Me.lblAnzeige = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel3 = New Telerik.WinControls.UI.RadLabel()
@@ -60,7 +60,7 @@ Partial Class uco12PruefungUeberlastanzeige
         '
         'RadTextBoxControlMaxE
         '
-        Me.RadTextBoxControlMaxE.IsReadOnly = True
+        Me.RadTextBoxControlMaxE.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlMaxE, "RadTextBoxControlMaxE")
         Me.RadTextBoxControlMaxE.Name = "RadTextBoxControlMaxE"
         '
@@ -195,7 +195,7 @@ Partial Class uco12PruefungUeberlastanzeige
 
     End Sub
     Friend WithEvents lblUeberlast As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlMaxE As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents RadTextBoxControlMaxE As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadLabel2 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblAnzeige As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel3 As Telerik.WinControls.UI.RadLabel
