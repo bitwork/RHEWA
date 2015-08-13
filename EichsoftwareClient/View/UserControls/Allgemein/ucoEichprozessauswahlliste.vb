@@ -63,11 +63,34 @@
 
 #Region "Formular Logiken"
     Private Sub ucoEichprozessauswahlliste_Load(sender As Object, e As System.EventArgs) Handles Me.Load
-        laderoutine()
+        'laden des eingestellten Moants für den nächsten Programmstart
+        Try
+            If My.Settings.RHEWAFilterMonatBis.Equals(New Date) Then
+                My.Settings.RHEWAFilterMonatBis = Date.Now
+                My.Settings.Save()
+            End If
+            If My.Settings.RHEWAFilterMonatVon.Equals(New Date) Then
+                My.Settings.RHEWAFilterMonatVon = Date.Now
+                My.Settings.Save()
+
+            End If
+            RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.Value = My.Settings.RHEWAFilterMonatVon
+            RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.Value = My.Settings.RHEWAFilterMonatBis
+        Catch ex As Exception
+            RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.Value = Date.Now.Date
+        End Try
+
+        LadeRoutine()
     End Sub
 
-    Private Sub RadButton1_Click(sender As Object, e As EventArgs) Handles RadButtonRefresh.Click
+    Private Sub RadButtonRefresh_Click(sender As Object, e As EventArgs) Handles RadButtonRefresh.Click
         LoadFromDatabase()
+
+        'speichern des eingestellen Monats für den nächsten Programmstart
+        My.Settings.RHEWAFilterMonatVon = RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.Value
+        My.Settings.RHEWAFilterMonatBis = RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.Value
+
+        My.Settings.Save()
     End Sub
 
     Friend Sub LadeRoutine()
@@ -174,7 +197,7 @@
                 objCondition4.CellBackColor = Color.LightGreen
                 RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition)
                 RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition2)
-  
+
                 RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition3)
                 RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition4)
                 Dim descriptor As New Telerik.WinControls.Data.GroupDescriptor()
@@ -182,7 +205,7 @@
                 Me.RadGridViewAuswahlliste.GroupDescriptors.Add(descriptor)
             End If
 
-      
+
         Catch ex As Exception
 
         End Try
@@ -444,6 +467,24 @@
 #End Region
 
 #Region "Eichprozses Routinen Server"
+
+    Private Sub RadButtonNeuStandardwaage_Click(sender As Object, e As EventArgs) Handles RadButtonNeuStandardwaage.Click
+        Dim f As New FrmAuswahlStandardwaage
+        f.ShowDialog()
+
+        'nach dem schließen des Dialogs aktualisieren
+        LoadFromDatabase()
+    End Sub
+
+    'limitieren der Min MAx Werte des Datetime Pcikers
+    Private Sub RadDateTimePickerFilterMonatLadeAlleEichprozesseVon_ValueChanged(sender As Object, e As EventArgs) Handles RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.ValueChanged
+        RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.MinDate = RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.Value
+    End Sub
+
+    Private Sub RadDateTimePickerFilterMonatLadeAlleEichprozesseBis_ValueChanged(sender As Object, e As EventArgs) Handles RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.ValueChanged
+        RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.MaxDate = RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.Value
+
+    End Sub
     ''' <summary>
     ''' Lade eichprozessliste vom Server
     ''' </summary>
@@ -455,7 +496,7 @@
         If RadCheckBoxLadeAlleEichprozesse.Checked Then
             e.Result = clsWebserviceFunctions.GetServerEichprotokollListe()
         Else
-            e.Result = clsWebserviceFunctions.GetServerEichprotokollListe(RadDateTimePickerFilterMonatLadeAlleEichprozesse.Value.Year, RadDateTimePickerFilterMonatLadeAlleEichprozesse.Value.Month)
+            e.Result = clsWebserviceFunctions.GetServerEichprotokollListe(RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.Value.Year, RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.Value.Month, RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.Value.Year, RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.Value.Month)
         End If
     End Sub
 
@@ -505,7 +546,7 @@
 
                     RadGridViewRHEWAAlle.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition)
                     RadGridViewRHEWAAlle.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition2)
-        
+
 
                     Dim descriptor As New Telerik.WinControls.Data.GroupDescriptor()
                     descriptor.GroupNames.Add("Bearbeitungsstatus", System.ComponentModel.ListSortDirection.Ascending)
@@ -967,15 +1008,6 @@
 #End Region
 
 
-
-  
-    Private Sub RadButtonNeuStandardwaage_Click(sender As Object, e As EventArgs) Handles RadButtonNeuStandardwaage.Click
-        Dim f As New FrmAuswahlStandardwaage
-        f.ShowDialog()
-
-        'nach dem schließen des Dialogs aktualisieren
-        LoadFromDatabase()
-    End Sub
 
   
 End Class

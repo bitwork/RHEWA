@@ -251,8 +251,10 @@
         <xs:element minOccurs="0" name="WindowsUsername" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Domainname" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Computername" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="Uploadjahr" type="xs:int" />
-        <xs:element minOccurs="0" name="Uploadmonat" type="xs:int" />
+        <xs:element minOccurs="0" name="UploadjahrVon" type="xs:int" />
+        <xs:element minOccurs="0" name="UploadmonatVon" type="xs:int" />
+        <xs:element minOccurs="0" name="UploadjahrBis" type="xs:int" />
+        <xs:element minOccurs="0" name="UploadmonatBis" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

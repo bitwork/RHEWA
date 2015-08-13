@@ -23,6 +23,8 @@ Partial Class ucoEichprozessauswahlliste
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucoEichprozessauswahlliste))
+        Dim TableViewDefinition3 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition4 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Me.RadGridViewAuswahlliste = New Telerik.WinControls.UI.RadGridView()
         Me.BackgroundWorkerLoadFromDatabase = New System.ComponentModel.BackgroundWorker()
         Me.RadPageView1 = New Telerik.WinControls.UI.RadPageView()
@@ -35,10 +37,13 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadButtonClientNeu = New Telerik.WinControls.UI.RadButton()
         Me.RadButtonClientBearbeiten = New Telerik.WinControls.UI.RadButton()
         Me.RadPageViewPageAlle = New Telerik.WinControls.UI.RadPageViewPage()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.RadDateTimePickerFilterMonatLadeAlleEichprozesseBis = New Telerik.WinControls.UI.RadDateTimePicker()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.RadButtonRefresh = New Telerik.WinControls.UI.RadButton()
         Me.RadCheckBoxLadeAlleEichprozesse = New Telerik.WinControls.UI.RadCheckBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.RadDateTimePickerFilterMonatLadeAlleEichprozesse = New Telerik.WinControls.UI.RadDateTimePicker()
+        Me.RadDateTimePickerFilterMonatLadeAlleEichprozesseVon = New Telerik.WinControls.UI.RadDateTimePicker()
         Me.RadButtonEichprozessKopierenRHEWA = New Telerik.WinControls.UI.RadButton()
         Me.RadButtonEichprozessAblehnenRHEWA = New Telerik.WinControls.UI.RadButton()
         Me.RadButtonEichprozessGenehmigenRHEWA = New Telerik.WinControls.UI.RadButton()
@@ -61,9 +66,10 @@ Partial Class ucoEichprozessauswahlliste
         CType(Me.RadButtonClientNeu, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonClientBearbeiten, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadPageViewPageAlle.SuspendLayout()
+        CType(Me.RadDateTimePickerFilterMonatLadeAlleEichprozesseBis, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonRefresh, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadCheckBoxLadeAlleEichprozesse, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadDateTimePickerFilterMonatLadeAlleEichprozesse, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadDateTimePickerFilterMonatLadeAlleEichprozesseVon, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonEichprozessKopierenRHEWA, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonEichprozessAblehnenRHEWA, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonEichprozessGenehmigenRHEWA, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -86,6 +92,7 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadGridViewAuswahlliste.MasterTemplate.AllowDragToGroup = False
         Me.RadGridViewAuswahlliste.MasterTemplate.AllowEditRow = False
         Me.RadGridViewAuswahlliste.MasterTemplate.ShowGroupedColumns = True
+        Me.RadGridViewAuswahlliste.MasterTemplate.ViewDefinition = TableViewDefinition3
         Me.RadGridViewAuswahlliste.Name = "RadGridViewAuswahlliste"
         '
         '
@@ -120,7 +127,7 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadPageView1.RootElement.Margin = CType(resources.GetObject("RadPageView1.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadPageView1.RootElement.Text = resources.GetString("RadPageView1.RootElement.Text")
         Me.RadPageView1.RootElement.TextOrientation = CType(resources.GetObject("RadPageView1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadPageView1.SelectedPage = Me.RadPageViewPageEigene
+        Me.RadPageView1.SelectedPage = Me.RadPageViewPageAlle
         CType(Me.RadPageView1.GetChildAt(0).GetChildAt(0).GetChildAt(1), Telerik.WinControls.UI.StripViewButtonsPanel).Visibility = Telerik.WinControls.ElementVisibility.Hidden
         '
         'RadPageViewPageEigene
@@ -133,7 +140,7 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadPageViewPageEigene.Controls.Add(Me.RadButtonClientAusblenden)
         Me.RadPageViewPageEigene.Controls.Add(Me.RadButtonClientNeu)
         Me.RadPageViewPageEigene.Controls.Add(Me.RadButtonClientBearbeiten)
-        Me.RadPageViewPageEigene.ItemSize = New System.Drawing.SizeF(50.0!, 28.0!)
+        Me.RadPageViewPageEigene.ItemSize = New System.Drawing.SizeF(49.0!, 25.0!)
         resources.ApplyResources(Me.RadPageViewPageEigene, "RadPageViewPageEigene")
         Me.RadPageViewPageEigene.Name = "RadPageViewPageEigene"
         '
@@ -175,7 +182,7 @@ Partial Class ucoEichprozessauswahlliste
         CType(Me.RadButtonEinstellungen.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = Global.EichsoftwareClient.My.Resources.Resources.cog
         CType(Me.RadButtonEinstellungen.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
         CType(Me.RadButtonEinstellungen.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        CType(Me.RadButtonEinstellungen.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        CType(Me.RadButtonEinstellungen.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = resources.GetString("resource.Text")
         CType(Me.RadButtonEinstellungen.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Shape = Nothing
         '
         'RadButtonClientUpdateDatabase
@@ -268,19 +275,53 @@ Partial Class ucoEichprozessauswahlliste
         '
         'RadPageViewPageAlle
         '
+        Me.RadPageViewPageAlle.Controls.Add(Me.Label3)
+        Me.RadPageViewPageAlle.Controls.Add(Me.RadDateTimePickerFilterMonatLadeAlleEichprozesseBis)
+        Me.RadPageViewPageAlle.Controls.Add(Me.Label2)
         Me.RadPageViewPageAlle.Controls.Add(Me.RadButtonRefresh)
         Me.RadPageViewPageAlle.Controls.Add(Me.RadCheckBoxLadeAlleEichprozesse)
         Me.RadPageViewPageAlle.Controls.Add(Me.Label1)
-        Me.RadPageViewPageAlle.Controls.Add(Me.RadDateTimePickerFilterMonatLadeAlleEichprozesse)
+        Me.RadPageViewPageAlle.Controls.Add(Me.RadDateTimePickerFilterMonatLadeAlleEichprozesseVon)
         Me.RadPageViewPageAlle.Controls.Add(Me.RadButtonEichprozessKopierenRHEWA)
         Me.RadPageViewPageAlle.Controls.Add(Me.RadButtonEichprozessAblehnenRHEWA)
         Me.RadPageViewPageAlle.Controls.Add(Me.RadButtonEichprozessGenehmigenRHEWA)
         Me.RadPageViewPageAlle.Controls.Add(Me.RadGridViewRHEWAAlle)
         Me.RadPageViewPageAlle.Controls.Add(Me.RadButtonEichungAnsehenRHEWA)
         Me.RadPageViewPageAlle.Controls.Add(Me.FlowLayoutPanel1)
-        Me.RadPageViewPageAlle.ItemSize = New System.Drawing.SizeF(35.0!, 28.0!)
+        Me.RadPageViewPageAlle.ItemSize = New System.Drawing.SizeF(33.0!, 25.0!)
         resources.ApplyResources(Me.RadPageViewPageAlle, "RadPageViewPageAlle")
         Me.RadPageViewPageAlle.Name = "RadPageViewPageAlle"
+        '
+        'Label3
+        '
+        resources.ApplyResources(Me.Label3, "Label3")
+        Me.Label3.Name = "Label3"
+        '
+        'RadDateTimePickerFilterMonatLadeAlleEichprozesseBis
+        '
+        resources.ApplyResources(Me.RadDateTimePickerFilterMonatLadeAlleEichprozesseBis, "RadDateTimePickerFilterMonatLadeAlleEichprozesseBis")
+        Me.RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.Name = "RadDateTimePickerFilterMonatLadeAlleEichprozesseBis"
+        '
+        '
+        '
+        Me.RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.RootElement.AccessibleDescription = resources.GetString("RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.RootElement.AccessibleDescrip" & _
+        "tion")
+        Me.RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.RootElement.AccessibleName = resources.GetString("RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.RootElement.AccessibleName")
+        Me.RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.RootElement.Alignment = CType(resources.GetObject("RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.RootElement.AngleTransform = CType(resources.GetObject("RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.RootElement.AngleTransform"), Single)
+        Me.RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.RootElement.FlipText = CType(resources.GetObject("RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.RootElement.FlipText"), Boolean)
+        Me.RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.RootElement.Margin = CType(resources.GetObject("RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.RootElement.Text = resources.GetString("RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.RootElement.Text")
+        Me.RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.RootElement.TextOrientation = CType(resources.GetObject("RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.ShowUpDown = True
+        Me.RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.TabStop = False
+        Me.RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.Value = New Date(2015, 7, 2, 9, 5, 20, 614)
+        '
+        'Label2
+        '
+        resources.ApplyResources(Me.Label2, "Label2")
+        Me.Label2.Name = "Label2"
         '
         'RadButtonRefresh
         '
@@ -309,14 +350,14 @@ Partial Class ucoEichprozessauswahlliste
         resources.ApplyResources(Me.Label1, "Label1")
         Me.Label1.Name = "Label1"
         '
-        'RadDateTimePickerFilterMonatLadeAlleEichprozesse
+        'RadDateTimePickerFilterMonatLadeAlleEichprozesseVon
         '
-        resources.ApplyResources(Me.RadDateTimePickerFilterMonatLadeAlleEichprozesse, "RadDateTimePickerFilterMonatLadeAlleEichprozesse")
-        Me.RadDateTimePickerFilterMonatLadeAlleEichprozesse.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.RadDateTimePickerFilterMonatLadeAlleEichprozesse.Name = "RadDateTimePickerFilterMonatLadeAlleEichprozesse"
-        Me.RadDateTimePickerFilterMonatLadeAlleEichprozesse.ShowUpDown = True
-        Me.RadDateTimePickerFilterMonatLadeAlleEichprozesse.TabStop = False
-        Me.RadDateTimePickerFilterMonatLadeAlleEichprozesse.Value = New Date(2015, 7, 2, 9, 5, 20, 614)
+        resources.ApplyResources(Me.RadDateTimePickerFilterMonatLadeAlleEichprozesseVon, "RadDateTimePickerFilterMonatLadeAlleEichprozesseVon")
+        Me.RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.Name = "RadDateTimePickerFilterMonatLadeAlleEichprozesseVon"
+        Me.RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.ShowUpDown = True
+        Me.RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.TabStop = False
+        Me.RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.Value = New Date(2015, 7, 2, 9, 5, 20, 614)
         '
         'RadButtonEichprozessKopierenRHEWA
         '
@@ -380,6 +421,7 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadGridViewRHEWAAlle.MasterTemplate.AllowDeleteRow = False
         Me.RadGridViewRHEWAAlle.MasterTemplate.AllowEditRow = False
         Me.RadGridViewRHEWAAlle.MasterTemplate.ShowGroupedColumns = True
+        Me.RadGridViewRHEWAAlle.MasterTemplate.ViewDefinition = TableViewDefinition4
         Me.RadGridViewRHEWAAlle.Name = "RadGridViewRHEWAAlle"
         '
         '
@@ -462,9 +504,10 @@ Partial Class ucoEichprozessauswahlliste
         CType(Me.RadButtonClientBearbeiten, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadPageViewPageAlle.ResumeLayout(False)
         Me.RadPageViewPageAlle.PerformLayout()
+        CType(Me.RadDateTimePickerFilterMonatLadeAlleEichprozesseBis, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonRefresh, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadCheckBoxLadeAlleEichprozesse, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadDateTimePickerFilterMonatLadeAlleEichprozesse, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadDateTimePickerFilterMonatLadeAlleEichprozesseVon, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonEichprozessKopierenRHEWA, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonEichprozessAblehnenRHEWA, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonEichprozessGenehmigenRHEWA, System.ComponentModel.ISupportInitialize).EndInit()
@@ -498,8 +541,11 @@ Partial Class ucoEichprozessauswahlliste
     Friend WithEvents RadButtonRefresh As Telerik.WinControls.UI.RadButton
     Friend WithEvents FlowLayoutPanel1 As System.Windows.Forms.FlowLayoutPanel
     Friend WithEvents RadButtonNeuStandardwaage As Telerik.WinControls.UI.RadButton
-    Friend WithEvents RadDateTimePickerFilterMonatLadeAlleEichprozesse As Telerik.WinControls.UI.RadDateTimePicker
+    Friend WithEvents RadDateTimePickerFilterMonatLadeAlleEichprozesseVon As Telerik.WinControls.UI.RadDateTimePicker
     Friend WithEvents RadCheckBoxLadeAlleEichprozesse As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents RadDateTimePickerFilterMonatLadeAlleEichprozesseBis As Telerik.WinControls.UI.RadDateTimePicker
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 
 End Class

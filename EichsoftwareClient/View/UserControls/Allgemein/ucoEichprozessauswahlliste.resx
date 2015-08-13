@@ -163,7 +163,7 @@
     <value>RadGridViewAuswahlliste</value>
   </data>
   <data name="&gt;&gt;RadGridViewAuswahlliste.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGridView, Telerik.WinControls.GridView, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadGridView, Telerik.WinControls.GridView, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadGridViewAuswahlliste.Parent" xml:space="preserve">
     <value>RadPageViewPageEigene</value>
@@ -174,6 +174,736 @@
   <metadata name="BackgroundWorkerLoadFromDatabase.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="&gt;&gt;RadButtonNeuStandardwaage.Name" xml:space="preserve">
+    <value>RadButtonNeuStandardwaage</value>
+  </data>
+  <data name="&gt;&gt;RadButtonNeuStandardwaage.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadButtonNeuStandardwaage.Parent" xml:space="preserve">
+    <value>RadPageViewPageEigene</value>
+  </data>
+  <data name="&gt;&gt;RadButtonNeuStandardwaage.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;RadButtonEinstellungen.Name" xml:space="preserve">
+    <value>RadButtonEinstellungen</value>
+  </data>
+  <data name="&gt;&gt;RadButtonEinstellungen.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadButtonEinstellungen.Parent" xml:space="preserve">
+    <value>RadPageViewPageEigene</value>
+  </data>
+  <data name="&gt;&gt;RadButtonEinstellungen.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="resource.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;RadButtonClientUpdateDatabase.Name" xml:space="preserve">
+    <value>RadButtonClientUpdateDatabase</value>
+  </data>
+  <data name="&gt;&gt;RadButtonClientUpdateDatabase.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadButtonClientUpdateDatabase.Parent" xml:space="preserve">
+    <value>RadPageViewPageEigene</value>
+  </data>
+  <data name="&gt;&gt;RadButtonClientUpdateDatabase.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxAusblendenClientGeloeschterDokumente.Name" xml:space="preserve">
+    <value>RadCheckBoxAusblendenClientGeloeschterDokumente</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxAusblendenClientGeloeschterDokumente.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxAusblendenClientGeloeschterDokumente.Parent" xml:space="preserve">
+    <value>RadPageViewPageEigene</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxAusblendenClientGeloeschterDokumente.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;RadButtonClientAusblenden.Name" xml:space="preserve">
+    <value>RadButtonClientAusblenden</value>
+  </data>
+  <data name="&gt;&gt;RadButtonClientAusblenden.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadButtonClientAusblenden.Parent" xml:space="preserve">
+    <value>RadPageViewPageEigene</value>
+  </data>
+  <data name="&gt;&gt;RadButtonClientAusblenden.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;RadButtonClientNeu.Name" xml:space="preserve">
+    <value>RadButtonClientNeu</value>
+  </data>
+  <data name="&gt;&gt;RadButtonClientNeu.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadButtonClientNeu.Parent" xml:space="preserve">
+    <value>RadPageViewPageEigene</value>
+  </data>
+  <data name="&gt;&gt;RadButtonClientNeu.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;RadButtonClientBearbeiten.Name" xml:space="preserve">
+    <value>RadButtonClientBearbeiten</value>
+  </data>
+  <data name="&gt;&gt;RadButtonClientBearbeiten.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadButtonClientBearbeiten.Parent" xml:space="preserve">
+    <value>RadPageViewPageEigene</value>
+  </data>
+  <data name="&gt;&gt;RadButtonClientBearbeiten.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="RadPageViewPageEigene.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 37</value>
+  </data>
+  <data name="RadPageViewPageEigene.Size" type="System.Drawing.Size, System.Drawing">
+    <value>948, 476</value>
+  </data>
+  <data name="RadPageViewPageEigene.Text" xml:space="preserve">
+    <value>Eigene</value>
+  </data>
+  <data name="&gt;&gt;RadPageViewPageEigene.Name" xml:space="preserve">
+    <value>RadPageViewPageEigene</value>
+  </data>
+  <data name="&gt;&gt;RadPageViewPageEigene.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPageViewPage, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadPageViewPageEigene.Parent" xml:space="preserve">
+    <value>RadPageView1</value>
+  </data>
+  <data name="&gt;&gt;RadPageViewPageEigene.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>298, 13</value>
+  </data>
+  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>22, 15</value>
+  </data>
+  <data name="Label3.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>bis</value>
+  </data>
+  <data name="&gt;&gt;Label3.Name" xml:space="preserve">
+    <value>Label3</value>
+  </data>
+  <data name="&gt;&gt;Label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label3.Parent" xml:space="preserve">
+    <value>RadPageViewPageAlle</value>
+  </data>
+  <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.CustomFormat" xml:space="preserve">
+    <value>MM.yyyy</value>
+  </data>
+  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.Location" type="System.Drawing.Point, System.Drawing">
+    <value>330, 11</value>
+  </data>
+  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 22</value>
+  </data>
+  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.Text" xml:space="preserve">
+    <value>07.2015</value>
+  </data>
+  <data name="&gt;&gt;RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.Name" xml:space="preserve">
+    <value>RadDateTimePickerFilterMonatLadeAlleEichprozesseBis</value>
+  </data>
+  <data name="&gt;&gt;RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadDateTimePicker, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.Parent" xml:space="preserve">
+    <value>RadPageViewPageAlle</value>
+  </data>
+  <data name="&gt;&gt;RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>171, 13</value>
+  </data>
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>27, 15</value>
+  </data>
+  <data name="Label2.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>von</value>
+  </data>
+  <data name="&gt;&gt;Label2.Name" xml:space="preserve">
+    <value>Label2</value>
+  </data>
+  <data name="&gt;&gt;Label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label2.Parent" xml:space="preserve">
+    <value>RadPageViewPageAlle</value>
+  </data>
+  <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="RadButtonRefresh.Location" type="System.Drawing.Point, System.Drawing">
+    <value>775, 5</value>
+  </data>
+  <data name="RadButtonRefresh.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadButtonRefresh.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadButtonRefresh.RootElement.Alignment" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
+        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAAB9TeXN0ZW0uRHJh
+        d2luZy5Db250ZW50QWxpZ25tZW50AQAAAAd2YWx1ZV9fAAgCAAAAAAAAAAs=
+</value>
+  </data>
+  <data name="RadButtonRefresh.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RadButtonRefresh.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RadButtonRefresh.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadButtonRefresh.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadButtonRefresh.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="RadButtonRefresh.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 36</value>
+  </data>
+  <data name="RadButtonRefresh.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="RadButtonRefresh.Text" xml:space="preserve">
+    <value>Liste Aktualisieren</value>
+  </data>
+  <data name="RadButtonRefresh.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
+  </data>
+  <data name="&gt;&gt;RadButtonRefresh.Name" xml:space="preserve">
+    <value>RadButtonRefresh</value>
+  </data>
+  <data name="&gt;&gt;RadButtonRefresh.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadButtonRefresh.Parent" xml:space="preserve">
+    <value>RadPageViewPageAlle</value>
+  </data>
+  <data name="&gt;&gt;RadButtonRefresh.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="RadCheckBoxLadeAlleEichprozesse.Location" type="System.Drawing.Point, System.Drawing">
+    <value>558, 12</value>
+  </data>
+  <data name="RadCheckBoxLadeAlleEichprozesse.Size" type="System.Drawing.Size, System.Drawing">
+    <value>214, 19</value>
+  </data>
+  <data name="RadCheckBoxLadeAlleEichprozesse.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="RadCheckBoxLadeAlleEichprozesse.Text" xml:space="preserve">
+    <value>Alle Laden (unabhängig vom Filter)</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxLadeAlleEichprozesse.Name" xml:space="preserve">
+    <value>RadCheckBoxLadeAlleEichprozesse</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxLadeAlleEichprozesse.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxLadeAlleEichprozesse.Parent" xml:space="preserve">
+    <value>RadPageViewPageAlle</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxLadeAlleEichprozesse.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 15</value>
+  </data>
+  <data name="Label1.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Filter nach Uploadmonat</value>
+  </data>
+  <data name="&gt;&gt;Label1.Name" xml:space="preserve">
+    <value>Label1</value>
+  </data>
+  <data name="&gt;&gt;Label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
+    <value>RadPageViewPageAlle</value>
+  </data>
+  <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.CustomFormat" xml:space="preserve">
+    <value>MM.yyyy</value>
+  </data>
+  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.Location" type="System.Drawing.Point, System.Drawing">
+    <value>203, 11</value>
+  </data>
+  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 22</value>
+  </data>
+  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.Text" xml:space="preserve">
+    <value>07.2015</value>
+  </data>
+  <data name="&gt;&gt;RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.Name" xml:space="preserve">
+    <value>RadDateTimePickerFilterMonatLadeAlleEichprozesseVon</value>
+  </data>
+  <data name="&gt;&gt;RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadDateTimePicker, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.Parent" xml:space="preserve">
+    <value>RadPageViewPageAlle</value>
+  </data>
+  <data name="&gt;&gt;RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="RadButtonEichprozessKopierenRHEWA.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="RadButtonEichprozessKopierenRHEWA.Location" type="System.Drawing.Point, System.Drawing">
+    <value>719, 407</value>
+  </data>
+  <data name="RadButtonEichprozessKopierenRHEWA.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadButtonEichprozessKopierenRHEWA.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadButtonEichprozessKopierenRHEWA.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="RadButtonEichprozessKopierenRHEWA.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RadButtonEichprozessKopierenRHEWA.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RadButtonEichprozessKopierenRHEWA.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadButtonEichprozessKopierenRHEWA.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadButtonEichprozessKopierenRHEWA.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="RadButtonEichprozessKopierenRHEWA.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 42</value>
+  </data>
+  <data name="RadButtonEichprozessKopierenRHEWA.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="RadButtonEichprozessKopierenRHEWA.Text" xml:space="preserve">
+    <value>Kopieren</value>
+  </data>
+  <data name="RadButtonEichprozessKopierenRHEWA.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
+  </data>
+  <data name="RadButtonEichprozessKopierenRHEWA.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;RadButtonEichprozessKopierenRHEWA.Name" xml:space="preserve">
+    <value>RadButtonEichprozessKopierenRHEWA</value>
+  </data>
+  <data name="&gt;&gt;RadButtonEichprozessKopierenRHEWA.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadButtonEichprozessKopierenRHEWA.Parent" xml:space="preserve">
+    <value>RadPageViewPageAlle</value>
+  </data>
+  <data name="&gt;&gt;RadButtonEichprozessKopierenRHEWA.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="RadButtonEichprozessAblehnenRHEWA.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="RadButtonEichprozessAblehnenRHEWA.Location" type="System.Drawing.Point, System.Drawing">
+    <value>485, 407</value>
+  </data>
+  <data name="RadButtonEichprozessAblehnenRHEWA.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadButtonEichprozessAblehnenRHEWA.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadButtonEichprozessAblehnenRHEWA.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="RadButtonEichprozessAblehnenRHEWA.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RadButtonEichprozessAblehnenRHEWA.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RadButtonEichprozessAblehnenRHEWA.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadButtonEichprozessAblehnenRHEWA.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadButtonEichprozessAblehnenRHEWA.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="RadButtonEichprozessAblehnenRHEWA.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 42</value>
+  </data>
+  <data name="RadButtonEichprozessAblehnenRHEWA.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="RadButtonEichprozessAblehnenRHEWA.Text" xml:space="preserve">
+    <value>Ablehnen</value>
+  </data>
+  <data name="RadButtonEichprozessAblehnenRHEWA.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
+  </data>
+  <data name="&gt;&gt;RadButtonEichprozessAblehnenRHEWA.Name" xml:space="preserve">
+    <value>RadButtonEichprozessAblehnenRHEWA</value>
+  </data>
+  <data name="&gt;&gt;RadButtonEichprozessAblehnenRHEWA.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadButtonEichprozessAblehnenRHEWA.Parent" xml:space="preserve">
+    <value>RadPageViewPageAlle</value>
+  </data>
+  <data name="&gt;&gt;RadButtonEichprozessAblehnenRHEWA.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="RadButtonEichprozessGenehmigenRHEWA.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="RadButtonEichprozessGenehmigenRHEWA.Location" type="System.Drawing.Point, System.Drawing">
+    <value>369, 407</value>
+  </data>
+  <data name="RadButtonEichprozessGenehmigenRHEWA.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadButtonEichprozessGenehmigenRHEWA.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadButtonEichprozessGenehmigenRHEWA.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="RadButtonEichprozessGenehmigenRHEWA.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RadButtonEichprozessGenehmigenRHEWA.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RadButtonEichprozessGenehmigenRHEWA.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadButtonEichprozessGenehmigenRHEWA.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadButtonEichprozessGenehmigenRHEWA.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="RadButtonEichprozessGenehmigenRHEWA.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 42</value>
+  </data>
+  <data name="RadButtonEichprozessGenehmigenRHEWA.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="RadButtonEichprozessGenehmigenRHEWA.Text" xml:space="preserve">
+    <value>Genehmigen</value>
+  </data>
+  <data name="RadButtonEichprozessGenehmigenRHEWA.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
+  </data>
+  <data name="&gt;&gt;RadButtonEichprozessGenehmigenRHEWA.Name" xml:space="preserve">
+    <value>RadButtonEichprozessGenehmigenRHEWA</value>
+  </data>
+  <data name="&gt;&gt;RadButtonEichprozessGenehmigenRHEWA.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadButtonEichprozessGenehmigenRHEWA.Parent" xml:space="preserve">
+    <value>RadPageViewPageAlle</value>
+  </data>
+  <data name="&gt;&gt;RadButtonEichprozessGenehmigenRHEWA.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="RadGridViewRHEWAAlle.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="RadGridViewRHEWAAlle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 47</value>
+  </data>
+  <data name="RadGridViewRHEWAAlle.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadGridViewRHEWAAlle.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadGridViewRHEWAAlle.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="RadGridViewRHEWAAlle.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RadGridViewRHEWAAlle.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RadGridViewRHEWAAlle.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadGridViewRHEWAAlle.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadGridViewRHEWAAlle.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="RadGridViewRHEWAAlle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>942, 354</value>
+  </data>
+  <data name="RadGridViewRHEWAAlle.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="RadGridViewRHEWAAlle.Text" xml:space="preserve">
+    <value>RadGridView1</value>
+  </data>
+  <data name="&gt;&gt;RadGridViewRHEWAAlle.Name" xml:space="preserve">
+    <value>RadGridViewRHEWAAlle</value>
+  </data>
+  <data name="&gt;&gt;RadGridViewRHEWAAlle.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadGridView, Telerik.WinControls.GridView, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadGridViewRHEWAAlle.Parent" xml:space="preserve">
+    <value>RadPageViewPageAlle</value>
+  </data>
+  <data name="&gt;&gt;RadGridViewRHEWAAlle.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="RadButtonEichungAnsehenRHEWA.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="RadButtonEichungAnsehenRHEWA.Location" type="System.Drawing.Point, System.Drawing">
+    <value>835, 407</value>
+  </data>
+  <data name="RadButtonEichungAnsehenRHEWA.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadButtonEichungAnsehenRHEWA.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadButtonEichungAnsehenRHEWA.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="RadButtonEichungAnsehenRHEWA.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RadButtonEichungAnsehenRHEWA.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RadButtonEichungAnsehenRHEWA.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadButtonEichungAnsehenRHEWA.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadButtonEichungAnsehenRHEWA.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="RadButtonEichungAnsehenRHEWA.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 42</value>
+  </data>
+  <data name="RadButtonEichungAnsehenRHEWA.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="RadButtonEichungAnsehenRHEWA.Text" xml:space="preserve">
+    <value>Ansehen</value>
+  </data>
+  <data name="RadButtonEichungAnsehenRHEWA.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
+  </data>
+  <data name="&gt;&gt;RadButtonEichungAnsehenRHEWA.Name" xml:space="preserve">
+    <value>RadButtonEichungAnsehenRHEWA</value>
+  </data>
+  <data name="&gt;&gt;RadButtonEichungAnsehenRHEWA.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadButtonEichungAnsehenRHEWA.Parent" xml:space="preserve">
+    <value>RadPageViewPageAlle</value>
+  </data>
+  <data name="&gt;&gt;RadButtonEichungAnsehenRHEWA.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="FlowLayoutPanel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="&gt;&gt;RadProgressBar.Name" xml:space="preserve">
+    <value>RadProgressBar</value>
+  </data>
+  <data name="&gt;&gt;RadProgressBar.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadProgressBar, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadProgressBar.Parent" xml:space="preserve">
+    <value>FlowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;RadProgressBar.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="FlowLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 407</value>
+  </data>
+  <data name="FlowLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>357, 65</value>
+  </data>
+  <data name="FlowLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;FlowLayoutPanel1.Name" xml:space="preserve">
+    <value>FlowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;FlowLayoutPanel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FlowLayoutPanel1.Parent" xml:space="preserve">
+    <value>RadPageViewPageAlle</value>
+  </data>
+  <data name="&gt;&gt;FlowLayoutPanel1.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="RadPageViewPageAlle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 31</value>
+  </data>
+  <data name="RadPageViewPageAlle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>959, 488</value>
+  </data>
+  <data name="RadPageViewPageAlle.Text" xml:space="preserve">
+    <value>Alle</value>
+  </data>
+  <data name="&gt;&gt;RadPageViewPageAlle.Name" xml:space="preserve">
+    <value>RadPageViewPageAlle</value>
+  </data>
+  <data name="&gt;&gt;RadPageViewPageAlle.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPageViewPage, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadPageViewPageAlle.Parent" xml:space="preserve">
+    <value>RadPageView1</value>
+  </data>
+  <data name="&gt;&gt;RadPageViewPageAlle.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RadPageView1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="RadPageView1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="RadPageView1.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadPageView1.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadPageView1.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="RadPageView1.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RadPageView1.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RadPageView1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadPageView1.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadPageView1.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="RadPageView1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>969, 524</value>
+  </data>
+  <data name="RadPageView1.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="RadPageView1.Text" xml:space="preserve">
+    <value>Own</value>
+  </data>
+  <data name="&gt;&gt;RadPageView1.Name" xml:space="preserve">
+    <value>RadPageView1</value>
+  </data>
+  <data name="&gt;&gt;RadPageView1.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadPageView, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadPageView1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;RadPageView1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="RadButtonNeuStandardwaage.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
   </data>
@@ -220,7 +950,7 @@
     <value>RadButtonNeuStandardwaage</value>
   </data>
   <data name="&gt;&gt;RadButtonNeuStandardwaage.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonNeuStandardwaage.Parent" xml:space="preserve">
     <value>RadPageViewPageEigene</value>
@@ -280,13 +1010,16 @@
     <value>RadButtonEinstellungen</value>
   </data>
   <data name="&gt;&gt;RadButtonEinstellungen.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonEinstellungen.Parent" xml:space="preserve">
     <value>RadPageViewPageEigene</value>
   </data>
   <data name="&gt;&gt;RadButtonEinstellungen.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="resource.Text" xml:space="preserve">
+    <value />
   </data>
   <data name="RadButtonClientUpdateDatabase.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
@@ -334,7 +1067,7 @@
     <value>RadButtonClientUpdateDatabase</value>
   </data>
   <data name="&gt;&gt;RadButtonClientUpdateDatabase.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonClientUpdateDatabase.Parent" xml:space="preserve">
     <value>RadPageViewPageEigene</value>
@@ -373,7 +1106,7 @@
     <value>Horizontal</value>
   </data>
   <data name="RadCheckBoxAusblendenClientGeloeschterDokumente.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 18</value>
+    <value>147, 19</value>
   </data>
   <data name="RadCheckBoxAusblendenClientGeloeschterDokumente.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -385,7 +1118,7 @@
     <value>RadCheckBoxAusblendenClientGeloeschterDokumente</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxAusblendenClientGeloeschterDokumente.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxAusblendenClientGeloeschterDokumente.Parent" xml:space="preserve">
     <value>RadPageViewPageEigene</value>
@@ -436,7 +1169,7 @@
     <value>RadButtonClientAusblenden</value>
   </data>
   <data name="&gt;&gt;RadButtonClientAusblenden.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonClientAusblenden.Parent" xml:space="preserve">
     <value>RadPageViewPageEigene</value>
@@ -490,7 +1223,7 @@
     <value>RadButtonClientNeu</value>
   </data>
   <data name="&gt;&gt;RadButtonClientNeu.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonClientNeu.Parent" xml:space="preserve">
     <value>RadPageViewPageEigene</value>
@@ -541,440 +1274,13 @@
     <value>RadButtonClientBearbeiten</value>
   </data>
   <data name="&gt;&gt;RadButtonClientBearbeiten.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonClientBearbeiten.Parent" xml:space="preserve">
     <value>RadPageViewPageEigene</value>
   </data>
   <data name="&gt;&gt;RadButtonClientBearbeiten.ZOrder" xml:space="preserve">
     <value>7</value>
-  </data>
-  <data name="RadPageViewPageEigene.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 37</value>
-  </data>
-  <data name="RadPageViewPageEigene.Size" type="System.Drawing.Size, System.Drawing">
-    <value>948, 476</value>
-  </data>
-  <data name="RadPageViewPageEigene.Text" xml:space="preserve">
-    <value>Eigene</value>
-  </data>
-  <data name="&gt;&gt;RadPageViewPageEigene.Name" xml:space="preserve">
-    <value>RadPageViewPageEigene</value>
-  </data>
-  <data name="&gt;&gt;RadPageViewPageEigene.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadPageViewPage, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadPageViewPageEigene.Parent" xml:space="preserve">
-    <value>RadPageView1</value>
-  </data>
-  <data name="&gt;&gt;RadPageViewPageEigene.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="RadButtonRefresh.Location" type="System.Drawing.Point, System.Drawing">
-    <value>464, 5</value>
-  </data>
-  <data name="RadButtonRefresh.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadButtonRefresh.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadButtonRefresh.RootElement.Alignment" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
-        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAAB9TeXN0ZW0uRHJh
-        d2luZy5Db250ZW50QWxpZ25tZW50AQAAAAd2YWx1ZV9fAAgCAAAAAAAAAAs=
-</value>
-  </data>
-  <data name="RadButtonRefresh.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadButtonRefresh.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadButtonRefresh.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadButtonRefresh.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadButtonRefresh.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="RadButtonRefresh.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 36</value>
-  </data>
-  <data name="RadButtonRefresh.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="RadButtonRefresh.Text" xml:space="preserve">
-    <value>Liste Aktualisieren</value>
-  </data>
-  <data name="RadButtonRefresh.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
-    <value>ImageBeforeText</value>
-  </data>
-  <data name="&gt;&gt;RadButtonRefresh.Name" xml:space="preserve">
-    <value>RadButtonRefresh</value>
-  </data>
-  <data name="&gt;&gt;RadButtonRefresh.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadButtonRefresh.Parent" xml:space="preserve">
-    <value>RadPageViewPageAlle</value>
-  </data>
-  <data name="&gt;&gt;RadButtonRefresh.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="RadCheckBoxLadeAlleEichprozesse.Location" type="System.Drawing.Point, System.Drawing">
-    <value>247, 12</value>
-  </data>
-  <data name="RadCheckBoxLadeAlleEichprozesse.Size" type="System.Drawing.Size, System.Drawing">
-    <value>195, 18</value>
-  </data>
-  <data name="RadCheckBoxLadeAlleEichprozesse.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="RadCheckBoxLadeAlleEichprozesse.Text" xml:space="preserve">
-    <value>Alle Laden (unabhängig vom Filter)</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxLadeAlleEichprozesse.Name" xml:space="preserve">
-    <value>RadCheckBoxLadeAlleEichprozesse</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxLadeAlleEichprozesse.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxLadeAlleEichprozesse.Parent" xml:space="preserve">
-    <value>RadPageViewPageAlle</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxLadeAlleEichprozesse.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 13</value>
-  </data>
-  <data name="Label1.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>Filter nach Uploadmonat:</value>
-  </data>
-  <data name="&gt;&gt;Label1.Name" xml:space="preserve">
-    <value>Label1</value>
-  </data>
-  <data name="&gt;&gt;Label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
-    <value>RadPageViewPageAlle</value>
-  </data>
-  <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesse.CustomFormat" xml:space="preserve">
-    <value>MM.yyyy</value>
-  </data>
-  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesse.Location" type="System.Drawing.Point, System.Drawing">
-    <value>153, 11</value>
-  </data>
-  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesse.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 20</value>
-  </data>
-  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesse.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesse.Text" xml:space="preserve">
-    <value>07.2015</value>
-  </data>
-  <data name="&gt;&gt;RadDateTimePickerFilterMonatLadeAlleEichprozesse.Name" xml:space="preserve">
-    <value>RadDateTimePickerFilterMonatLadeAlleEichprozesse</value>
-  </data>
-  <data name="&gt;&gt;RadDateTimePickerFilterMonatLadeAlleEichprozesse.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadDateTimePicker, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadDateTimePickerFilterMonatLadeAlleEichprozesse.Parent" xml:space="preserve">
-    <value>RadPageViewPageAlle</value>
-  </data>
-  <data name="&gt;&gt;RadDateTimePickerFilterMonatLadeAlleEichprozesse.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="RadButtonEichprozessKopierenRHEWA.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="RadButtonEichprozessKopierenRHEWA.Location" type="System.Drawing.Point, System.Drawing">
-    <value>719, 407</value>
-  </data>
-  <data name="RadButtonEichprozessKopierenRHEWA.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadButtonEichprozessKopierenRHEWA.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadButtonEichprozessKopierenRHEWA.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadButtonEichprozessKopierenRHEWA.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadButtonEichprozessKopierenRHEWA.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadButtonEichprozessKopierenRHEWA.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadButtonEichprozessKopierenRHEWA.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadButtonEichprozessKopierenRHEWA.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="RadButtonEichprozessKopierenRHEWA.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 42</value>
-  </data>
-  <data name="RadButtonEichprozessKopierenRHEWA.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="RadButtonEichprozessKopierenRHEWA.Text" xml:space="preserve">
-    <value>Kopieren</value>
-  </data>
-  <data name="RadButtonEichprozessKopierenRHEWA.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
-    <value>ImageBeforeText</value>
-  </data>
-  <data name="RadButtonEichprozessKopierenRHEWA.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;RadButtonEichprozessKopierenRHEWA.Name" xml:space="preserve">
-    <value>RadButtonEichprozessKopierenRHEWA</value>
-  </data>
-  <data name="&gt;&gt;RadButtonEichprozessKopierenRHEWA.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadButtonEichprozessKopierenRHEWA.Parent" xml:space="preserve">
-    <value>RadPageViewPageAlle</value>
-  </data>
-  <data name="&gt;&gt;RadButtonEichprozessKopierenRHEWA.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="RadButtonEichprozessAblehnenRHEWA.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="RadButtonEichprozessAblehnenRHEWA.Location" type="System.Drawing.Point, System.Drawing">
-    <value>485, 407</value>
-  </data>
-  <data name="RadButtonEichprozessAblehnenRHEWA.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadButtonEichprozessAblehnenRHEWA.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadButtonEichprozessAblehnenRHEWA.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadButtonEichprozessAblehnenRHEWA.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadButtonEichprozessAblehnenRHEWA.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadButtonEichprozessAblehnenRHEWA.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadButtonEichprozessAblehnenRHEWA.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadButtonEichprozessAblehnenRHEWA.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="RadButtonEichprozessAblehnenRHEWA.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 42</value>
-  </data>
-  <data name="RadButtonEichprozessAblehnenRHEWA.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="RadButtonEichprozessAblehnenRHEWA.Text" xml:space="preserve">
-    <value>Ablehnen</value>
-  </data>
-  <data name="RadButtonEichprozessAblehnenRHEWA.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
-    <value>ImageBeforeText</value>
-  </data>
-  <data name="&gt;&gt;RadButtonEichprozessAblehnenRHEWA.Name" xml:space="preserve">
-    <value>RadButtonEichprozessAblehnenRHEWA</value>
-  </data>
-  <data name="&gt;&gt;RadButtonEichprozessAblehnenRHEWA.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadButtonEichprozessAblehnenRHEWA.Parent" xml:space="preserve">
-    <value>RadPageViewPageAlle</value>
-  </data>
-  <data name="&gt;&gt;RadButtonEichprozessAblehnenRHEWA.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="RadButtonEichprozessGenehmigenRHEWA.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="RadButtonEichprozessGenehmigenRHEWA.Location" type="System.Drawing.Point, System.Drawing">
-    <value>369, 407</value>
-  </data>
-  <data name="RadButtonEichprozessGenehmigenRHEWA.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadButtonEichprozessGenehmigenRHEWA.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadButtonEichprozessGenehmigenRHEWA.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadButtonEichprozessGenehmigenRHEWA.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadButtonEichprozessGenehmigenRHEWA.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadButtonEichprozessGenehmigenRHEWA.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadButtonEichprozessGenehmigenRHEWA.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadButtonEichprozessGenehmigenRHEWA.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="RadButtonEichprozessGenehmigenRHEWA.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 42</value>
-  </data>
-  <data name="RadButtonEichprozessGenehmigenRHEWA.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="RadButtonEichprozessGenehmigenRHEWA.Text" xml:space="preserve">
-    <value>Genehmigen</value>
-  </data>
-  <data name="RadButtonEichprozessGenehmigenRHEWA.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
-    <value>ImageBeforeText</value>
-  </data>
-  <data name="&gt;&gt;RadButtonEichprozessGenehmigenRHEWA.Name" xml:space="preserve">
-    <value>RadButtonEichprozessGenehmigenRHEWA</value>
-  </data>
-  <data name="&gt;&gt;RadButtonEichprozessGenehmigenRHEWA.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadButtonEichprozessGenehmigenRHEWA.Parent" xml:space="preserve">
-    <value>RadPageViewPageAlle</value>
-  </data>
-  <data name="&gt;&gt;RadButtonEichprozessGenehmigenRHEWA.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="RadGridViewRHEWAAlle.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="RadGridViewRHEWAAlle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 47</value>
-  </data>
-  <data name="RadGridViewRHEWAAlle.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadGridViewRHEWAAlle.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadGridViewRHEWAAlle.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadGridViewRHEWAAlle.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadGridViewRHEWAAlle.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadGridViewRHEWAAlle.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadGridViewRHEWAAlle.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadGridViewRHEWAAlle.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="RadGridViewRHEWAAlle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>942, 354</value>
-  </data>
-  <data name="RadGridViewRHEWAAlle.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="RadGridViewRHEWAAlle.Text" xml:space="preserve">
-    <value>RadGridView1</value>
-  </data>
-  <data name="&gt;&gt;RadGridViewRHEWAAlle.Name" xml:space="preserve">
-    <value>RadGridViewRHEWAAlle</value>
-  </data>
-  <data name="&gt;&gt;RadGridViewRHEWAAlle.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGridView, Telerik.WinControls.GridView, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadGridViewRHEWAAlle.Parent" xml:space="preserve">
-    <value>RadPageViewPageAlle</value>
-  </data>
-  <data name="&gt;&gt;RadGridViewRHEWAAlle.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="RadButtonEichungAnsehenRHEWA.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="RadButtonEichungAnsehenRHEWA.Location" type="System.Drawing.Point, System.Drawing">
-    <value>835, 407</value>
-  </data>
-  <data name="RadButtonEichungAnsehenRHEWA.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadButtonEichungAnsehenRHEWA.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadButtonEichungAnsehenRHEWA.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadButtonEichungAnsehenRHEWA.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadButtonEichungAnsehenRHEWA.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadButtonEichungAnsehenRHEWA.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadButtonEichungAnsehenRHEWA.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadButtonEichungAnsehenRHEWA.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="RadButtonEichungAnsehenRHEWA.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 42</value>
-  </data>
-  <data name="RadButtonEichungAnsehenRHEWA.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="RadButtonEichungAnsehenRHEWA.Text" xml:space="preserve">
-    <value>Ansehen</value>
-  </data>
-  <data name="RadButtonEichungAnsehenRHEWA.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
-    <value>ImageBeforeText</value>
-  </data>
-  <data name="&gt;&gt;RadButtonEichungAnsehenRHEWA.Name" xml:space="preserve">
-    <value>RadButtonEichungAnsehenRHEWA</value>
-  </data>
-  <data name="&gt;&gt;RadButtonEichungAnsehenRHEWA.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadButtonEichungAnsehenRHEWA.Parent" xml:space="preserve">
-    <value>RadPageViewPageAlle</value>
-  </data>
-  <data name="&gt;&gt;RadButtonEichungAnsehenRHEWA.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="FlowLayoutPanel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
   </data>
   <data name="RadProgressBar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left, Right</value>
@@ -1019,105 +1325,12 @@
     <value>RadProgressBar</value>
   </data>
   <data name="&gt;&gt;RadProgressBar.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadProgressBar, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadProgressBar, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadProgressBar.Parent" xml:space="preserve">
     <value>FlowLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;RadProgressBar.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="FlowLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 407</value>
-  </data>
-  <data name="FlowLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>357, 65</value>
-  </data>
-  <data name="FlowLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;FlowLayoutPanel1.Name" xml:space="preserve">
-    <value>FlowLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;FlowLayoutPanel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FlowLayoutPanel1.Parent" xml:space="preserve">
-    <value>RadPageViewPageAlle</value>
-  </data>
-  <data name="&gt;&gt;FlowLayoutPanel1.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="RadPageViewPageAlle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 37</value>
-  </data>
-  <data name="RadPageViewPageAlle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>948, 476</value>
-  </data>
-  <data name="RadPageViewPageAlle.Text" xml:space="preserve">
-    <value>Alle</value>
-  </data>
-  <data name="&gt;&gt;RadPageViewPageAlle.Name" xml:space="preserve">
-    <value>RadPageViewPageAlle</value>
-  </data>
-  <data name="&gt;&gt;RadPageViewPageAlle.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadPageViewPage, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadPageViewPageAlle.Parent" xml:space="preserve">
-    <value>RadPageView1</value>
-  </data>
-  <data name="&gt;&gt;RadPageViewPageAlle.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="RadPageView1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="RadPageView1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="RadPageView1.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadPageView1.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadPageView1.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadPageView1.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadPageView1.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadPageView1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadPageView1.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadPageView1.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="RadPageView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>969, 524</value>
-  </data>
-  <data name="RadPageView1.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="RadPageView1.Text" xml:space="preserve">
-    <value>Own</value>
-  </data>
-  <data name="&gt;&gt;RadPageView1.Name" xml:space="preserve">
-    <value>RadPageView1</value>
-  </data>
-  <data name="&gt;&gt;RadPageView1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadPageView, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadPageView1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;RadPageView1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="BackgroundWorkerLoadFromDatabaseRHEWA.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -1157,6 +1370,6 @@
     <value>ucoEichprozessauswahlliste</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.5661.12260, Culture=neutral, PublicKeyToken=null</value>
+    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.5703.12773, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

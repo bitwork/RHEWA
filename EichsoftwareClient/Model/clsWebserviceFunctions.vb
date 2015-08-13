@@ -504,7 +504,7 @@ Public Class clsWebserviceFunctions
     ''' </summary>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Shared Function GetServerEichprotokollListe(ByVal pUploadjahr As Integer, pUploadmonat As Integer) As EichsoftwareWebservice.clsEichprozessFuerAuswahlliste()
+    Public Shared Function GetServerEichprotokollListe(ByVal pUploadjahrVon As Integer, pUploadmonatvon As Integer, ByVal pUploadjahrbis As Integer, pUploadmonatbis As Integer) As EichsoftwareWebservice.clsEichprozessFuerAuswahlliste()
         Try
             'neuen Context aufbauen
             Using WebContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
@@ -515,7 +515,7 @@ Public Class clsWebserviceFunctions
                 End Try
 
                 Try
-                    Dim data = WebContext.GetAlleEichprozesseNachUploadMonat(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, My.User.Name, System.Environment.UserDomainName, My.Computer.Name, pUploadjahr, pUploadmonat)
+                    Dim data = WebContext.GetAlleEichprozesseNachUploadMonat(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, My.User.Name, System.Environment.UserDomainName, My.Computer.Name, pUploadjahrVon, pUploadmonatvon, pUploadjahrbis, pUploadmonatbis)
                     Return data
                 Catch ex As Exception
                     MessageBox.Show(ex.Message)

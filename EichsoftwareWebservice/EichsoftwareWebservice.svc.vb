@@ -1,4 +1,6 @@
 ﻿' HINWEIS: Mit dem Befehl "Umbenennen" im Kontextmenü können Sie den Klassennamen "Service1" sowohl im Code als auch in der SVC-Datei und der Konfigurationsdatei ändern.
+Imports System.Data.Entity
+Imports System.Data.Objects
 Public Class EichsoftwareWebservice
     Implements IEichsoftwareWebservice
 
@@ -963,7 +965,7 @@ Public Class EichsoftwareWebservice
     ''' <param name="Computername"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Function GetAlleEichprozesseNachUploadMonat(ByVal HEKennung As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, ByVal Uploadjahr As Integer, ByVal Uploadmonat As Integer) As clsEichprozessFuerAuswahlliste() Implements IEichsoftwareWebservice.GetAlleEichprozesseNachUploadMonat
+    Public Function GetAlleEichprozesseNachUploadMonat(ByVal HEKennung As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, ByVal UploadjahrVon As Integer, ByVal UploadmonatVon As Integer, ByVal UploadjahrBis As Integer, ByVal UploadmonatBis As Integer) As clsEichprozessFuerAuswahlliste() Implements IEichsoftwareWebservice.GetAlleEichprozesseNachUploadMonat
         Try
             Dim boldebug As Boolean = False ' debug logs schreiben
             ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
@@ -986,11 +988,27 @@ Public Class EichsoftwareWebservice
 
                 DbContext.Configuration.LazyLoadingEnabled = False
                 DbContext.Configuration.ProxyCreationEnabled = False
+
+                Dim dateVon As New Date(UploadjahrVon, UploadmonatVon, 1)
+                Dim dateBis As Date
+                Try
+                    dateBis = New Date(UploadjahrBis, UploadmonatBis, 31)
+
+                Catch ex As ArgumentOutOfRangeException
+                    Try
+                        dateBis = New Date(UploadjahrBis, UploadmonatBis, 30)
+                    Catch exw As Exception
+                        dateBis = New Date(UploadjahrBis, UploadmonatBis, 27)
+                    End Try
+                End Try
+
+                'aufgrund einer Limitierung im Entity Framework 5 in Verbindung mit LINQ und den Vergleich zweier Datumswerte, wird hier leider nur auf das MinDate geprüft und im Anschluss nach dem Query auf das Max Date.
+                'syntaktisch funktioniert der Vergleich Mindate >= Value AND Max Date <= Value, aber es kommen falsche ergebnisse zurück
                 Try
                     Dim Query = From Eichprozess In DbContext.ServerEichprozess.Include("ServerLookup_Waegezelle") _
                             Join Lookup In DbContext.ServerLookup_Vorgangsstatus On Eichprozess.FK_Vorgangsstatus Equals Lookup.ID _
                             Join Lookup2 In DbContext.ServerLookup_Bearbeitungsstatus On Eichprozess.FK_Bearbeitungsstatus Equals Lookup2.ID _
-                            Where Eichprozess.UploadDatum.Value.Year = Uploadjahr And Eichprozess.UploadDatum.Value.Month = Uploadmonat
+                            Where Eichprozess.UploadDatum.Value >= dateVon
                                                  Select New With _
                { _
                     Eichprozess.ID, _
@@ -1023,7 +1041,12 @@ Public Class EichsoftwareWebservice
                     Dim counter As Integer = 1
                     For Each objeichprozess In Query
                         Try
-
+                            'max date prüfen, weil es oben nicht klappt
+                            If Not objeichprozess.Uploaddatum Is Nothing Then
+                                If objeichprozess.Uploaddatum > dateBis Then
+                                    Continue For 'abbruch
+                                End If
+                            End If
 
                             If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Durchlauf: " & counter)
                             counter += 1
