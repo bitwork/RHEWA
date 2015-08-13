@@ -511,7 +511,7 @@ RC3          3        15000                        0          2        1100</val
     <value>Hilfe_Stammdaten Deutsch</value>
   </data>
   <data name="PflichtfelderAusfuellen" xml:space="preserve">
-    <value>Bitte füllen Sie zunächst alle Pflichtfelder aus.</value>
+    <value>Bitte füllen Sie alle Pflichtfelder aus. Die fehlenden Felder sind rot markiert</value>
   </data>
   <data name="Ueberschrift_Beschaffenheitspruefung" xml:space="preserve">
     <value>Beschaffenheitsprüfung</value>

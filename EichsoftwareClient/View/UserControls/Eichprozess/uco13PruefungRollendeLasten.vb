@@ -590,6 +590,10 @@
             RadCheckBoxAuffahrtLinks3.Checked = False And RadCheckBoxAuffahrtLinks3.Visible = True Then
             AbortSaveing = True
 
+            RadTextBoxControlAnzeigeLinks1.TextBoxElement.BorderColor = Color.Red
+            RadTextBoxControlAnzeigeLinks2.TextBoxElement.BorderColor = Color.Red
+            RadTextBoxControlAnzeigeLinks3.TextBoxElement.BorderColor = Color.Red
+
         End If
 
 
@@ -597,6 +601,9 @@
               RadCheckBoxlblAuffahrtRechts2.Checked = False And RadCheckBoxlblAuffahrtRechts2.Visible = True Or _
               RadCheckBoxlblAuffahrtRechts3.Checked = False And RadCheckBoxlblAuffahrtRechts2.Visible = True Then
             AbortSaveing = True
+            RadTextBoxControlAnzeigeRechts1.TextBoxElement.BorderColor = Color.Red
+            RadTextBoxControlAnzeigeRechts2.TextBoxElement.BorderColor = Color.Red
+            RadTextBoxControlAnzeigeRechts3.TextBoxElement.BorderColor = Color.Red
         End If
 
 

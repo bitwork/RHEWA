@@ -1322,6 +1322,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
 #Region "Nullstellung"
     Private Function ValidateControlsNullstellung() As Boolean
         If RadCheckBoxNullstellungOK.Checked = False Then
+            RadCheckBoxNullstellungOK.Focus()
             AbortSaveing = True
             '   MessageBox.Show(My.Resources.GlobaleLokalisierung.PflichtfelderAusfuellen, "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             RadCheckBoxNullstellungOK.Focus()
@@ -1347,6 +1348,45 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
 
 #Region "aussermittige Belastung"
     Private Function ValidateControlsAussermittigeBelastung() As Boolean
+        If RadCheckBoxBereich1VEL1.Checked = False And RadCheckBoxBereich1VEL1.Visible = True Then RadTextBoxControlBereich1DisplayWeight1.TextBoxElement.BorderColor = Color.Red
+        If RadCheckBoxBereich1VEL2.Checked = False And RadCheckBoxBereich1VEL2.Visible = True Then RadTextBoxControlBereich1DisplayWeight2.TextBoxElement.BorderColor = Color.Red
+        If RadCheckBoxBereich1VEL3.Checked = False And RadCheckBoxBereich1VEL3.Visible = True Then RadTextBoxControlBereich1DisplayWeight3.TextBoxElement.BorderColor = Color.Red
+        If RadCheckBoxBereich1VEL4.Checked = False And RadCheckBoxBereich1VEL4.Visible = True Then RadTextBoxControlBereich1DisplayWeight4.TextBoxElement.BorderColor = Color.Red
+        If RadCheckBoxBereich1VEL5.Checked = False And RadCheckBoxBereich1VEL5.Visible = True Then RadTextBoxControlBereich1DisplayWeight5.TextBoxElement.BorderColor = Color.Red
+        If RadCheckBoxBereich1VEL6.Checked = False And RadCheckBoxBereich1VEL6.Visible = True Then RadTextBoxControlBereich1DisplayWeight6.TextBoxElement.BorderColor = Color.Red
+        If RadCheckBoxBereich1VEL7.Checked = False And RadCheckBoxBereich1VEL7.Visible = True Then RadTextBoxControlBereich1DisplayWeight7.TextBoxElement.BorderColor = Color.Red
+        If RadCheckBoxBereich1VEL8.Checked = False And RadCheckBoxBereich1VEL8.Visible = True Then RadTextBoxControlBereich1DisplayWeight8.TextBoxElement.BorderColor = Color.Red
+        If RadCheckBoxBereich1VEL9.Checked = False And RadCheckBoxBereich1VEL9.Visible = True Then RadTextBoxControlBereich1DisplayWeight9.TextBoxElement.BorderColor = Color.Red
+        If RadCheckBoxBereich1VEL10.Checked = False And RadCheckBoxBereich1VEL10.Visible = True Then RadTextBoxControlBereich1DisplayWeight10.TextBoxElement.BorderColor = Color.Red
+        If RadCheckBoxBereich1VEL11.Checked = False And RadCheckBoxBereich1VEL11.Visible = True Then RadTextBoxControlBereich1DisplayWeight11.TextBoxElement.BorderColor = Color.Red
+        If RadCheckBoxBereich1VEL12.Checked = False And RadCheckBoxBereich1VEL12.Visible = True Then RadTextBoxControlBereich1DisplayWeight12.TextBoxElement.BorderColor = Color.Red
+        If RadCheckBoxBereich1VELMitte.Checked = False And RadCheckBoxBereich1VELMitte.Visible = True Then RadTextBoxControlBereich1DisplayWeightMitte.TextBoxElement.BorderColor = Color.Red
+        If RadCheckBoxBereich2VEL1.Checked = False And RadCheckBoxBereich2VEL1.Visible = True Then RadTextBoxControlBereich2DisplayWeight1.TextBoxElement.BorderColor = Color.Red
+        If RadCheckBoxBereich2VEL2.Checked = False And RadCheckBoxBereich2VEL2.Visible = True Then RadTextBoxControlBereich2DisplayWeight2.TextBoxElement.BorderColor = Color.Red
+        If RadCheckBoxBereich2VEL3.Checked = False And RadCheckBoxBereich2VEL3.Visible = True Then RadTextBoxControlBereich2DisplayWeight3.TextBoxElement.BorderColor = Color.Red
+        If RadCheckBoxBereich2VEL4.Checked = False And RadCheckBoxBereich2VEL4.Visible = True Then RadTextBoxControlBereich2DisplayWeight4.TextBoxElement.BorderColor = Color.Red
+        If RadCheckBoxBereich2VEL5.Checked = False And RadCheckBoxBereich2VEL5.Visible = True Then RadTextBoxControlBereich2DisplayWeight5.TextBoxElement.BorderColor = Color.Red
+        If RadCheckBoxBereich2VEL6.Checked = False And RadCheckBoxBereich2VEL6.Visible = True Then RadTextBoxControlBereich2DisplayWeight6.TextBoxElement.BorderColor = Color.Red
+        If RadCheckBoxBereich2VEL7.Checked = False And RadCheckBoxBereich2VEL7.Visible = True Then RadTextBoxControlBereich2DisplayWeight7.TextBoxElement.BorderColor = Color.Red
+        If RadCheckBoxBereich2VEL8.Checked = False And RadCheckBoxBereich2VEL8.Visible = True Then RadTextBoxControlBereich2DisplayWeight8.TextBoxElement.BorderColor = Color.Red
+        If RadCheckBoxBereich2VEL9.Checked = False And RadCheckBoxBereich2VEL9.Visible = True Then RadTextBoxControlBereich2DisplayWeight9.TextBoxElement.BorderColor = Color.Red
+        If RadCheckBoxBereich2VEL10.Checked = False And RadCheckBoxBereich2VEL10.Visible = True Then RadTextBoxControlBereich2DisplayWeight10.TextBoxElement.BorderColor = Color.Red
+        If RadCheckBoxBereich2VEL11.Checked = False And RadCheckBoxBereich2VEL11.Visible = True Then RadTextBoxControlBereich2DisplayWeight11.TextBoxElement.BorderColor = Color.Red
+        If RadCheckBoxBereich2VEL12.Checked = False And RadCheckBoxBereich2VEL12.Visible = True Then RadTextBoxControlBereich2DisplayWeight12.TextBoxElement.BorderColor = Color.Red
+        If RadCheckBoxBereich2VELMitte.Checked = False And RadCheckBoxBereich2VELMitte.Visible = True Then RadTextBoxControlBereich2DisplayWeightMitte.TextBoxElement.BorderColor = Color.Red
+        If RadCheckBoxBereich3VEL1.Checked = False And RadCheckBoxBereich3VEL1.Visible = True Then RadTextBoxControlBereich3DisplayWeight1.TextBoxElement.BorderColor = Color.Red
+        If RadCheckBoxBereich3VEL2.Checked = False And RadCheckBoxBereich3VEL2.Visible = True Then RadTextBoxControlBereich3DisplayWeight2.TextBoxElement.BorderColor = Color.Red
+        If RadCheckBoxBereich3VEL3.Checked = False And RadCheckBoxBereich3VEL3.Visible = True Then RadTextBoxControlBereich3DisplayWeight3.TextBoxElement.BorderColor = Color.Red
+        If RadCheckBoxBereich3VEL4.Checked = False And RadCheckBoxBereich3VEL4.Visible = True Then RadTextBoxControlBereich3DisplayWeight4.TextBoxElement.BorderColor = Color.Red
+        If RadCheckBoxBereich3VEL5.Checked = False And RadCheckBoxBereich3VEL5.Visible = True Then RadTextBoxControlBereich3DisplayWeight5.TextBoxElement.BorderColor = Color.Red
+        If RadCheckBoxBereich3VEL6.Checked = False And RadCheckBoxBereich3VEL6.Visible = True Then RadTextBoxControlBereich3DisplayWeight6.TextBoxElement.BorderColor = Color.Red
+        If RadCheckBoxBereich3VEL7.Checked = False And RadCheckBoxBereich3VEL7.Visible = True Then RadTextBoxControlBereich3DisplayWeight7.TextBoxElement.BorderColor = Color.Red
+        If RadCheckBoxBereich3VEL8.Checked = False And RadCheckBoxBereich3VEL8.Visible = True Then RadTextBoxControlBereich3DisplayWeight8.TextBoxElement.BorderColor = Color.Red
+        If RadCheckBoxBereich3VEL9.Checked = False And RadCheckBoxBereich3VEL9.Visible = True Then RadTextBoxControlBereich3DisplayWeight9.TextBoxElement.BorderColor = Color.Red
+        If RadCheckBoxBereich3VEL10.Checked = False And RadCheckBoxBereich3VEL10.Visible = True Then RadTextBoxControlBereich3DisplayWeight10.TextBoxElement.BorderColor = Color.Red
+        If RadCheckBoxBereich3VEL11.Checked = False And RadCheckBoxBereich3VEL11.Visible = True Then RadTextBoxControlBereich3DisplayWeight11.TextBoxElement.BorderColor = Color.Red
+        If RadCheckBoxBereich3VEL12.Checked = False And RadCheckBoxBereich3VEL12.Visible = True Then RadTextBoxControlBereich3DisplayWeight12.TextBoxElement.BorderColor = Color.Red
+        If RadCheckBoxBereich3VELMitte.Checked = False And RadCheckBoxBereich3VELMitte.Visible = True Then RadTextBoxControlBereich3DisplayWeightMitte.TextBoxElement.BorderColor = Color.Red
 
         If RadCheckBoxBereich1VEL1.Checked = False And RadCheckBoxBereich1VEL1.Visible = True Or _
         RadCheckBoxBereich1VEL2.Checked = False And RadCheckBoxBereich1VEL2.Visible = True Or _
@@ -1422,6 +1462,8 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                 Return False
             End If
         Else
+            ValidateControlsAussermittigeBelastung()
+            ValidatecontrolsWiederholungen()
             'fehlermeldung anzeigen bei falscher validierung
             Return Me.ShowValidationErrorBox()
         End If

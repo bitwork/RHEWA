@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="RadGridViewAuswahlliste.MasterTemplate.Caption" xml:space="preserve">
+    <value />
+  </data>
   <data name="RadGridViewAuswahlliste.RootElement.KeyTip" xml:space="preserve">
     <value />
   </data>
@@ -142,7 +145,11 @@
     <value />
   </data>
   <data name="RadButtonClientUpdateDatabase.Text" xml:space="preserve">
-    <value>&lt;html&gt;Nach Updates&lt;br /&gt;suchen&lt;/html&gt;</value>
+    <value>Status der abgeschickten Verfahren prüfen</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="RadCheckBoxAusblendenClientGeloeschterDokumente.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 431</value>
   </data>
   <data name="RadCheckBoxAusblendenClientGeloeschterDokumente.RootElement.KeyTip" xml:space="preserve">
     <value />
@@ -150,9 +157,8 @@
   <data name="RadCheckBoxAusblendenClientGeloeschterDokumente.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="RadCheckBoxAusblendenClientGeloeschterDokumente.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 32</value>
+    <value>142, 34</value>
   </data>
   <data name="RadCheckBoxAusblendenClientGeloeschterDokumente.Text" xml:space="preserve">
     <value>&lt;html&gt;  Zuvor ausgeblendete &lt;br /&gt;  Eichvoränge anzeigen&lt;/html&gt;</value>
@@ -184,9 +190,6 @@
   <data name="RadButtonClientNeu.Text" xml:space="preserve">
     <value>&lt;html&gt;&lt;p&gt;Vorgang&lt;/p&gt;&lt;p&gt;erstellen&lt;/p&gt;&lt;/html&gt;</value>
   </data>
-  <data name="RadButtonClientNeu.TextAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
   <data name="RadButtonClientBearbeiten.Location" type="System.Drawing.Point, System.Drawing">
     <value>573, 410</value>
   </data>
@@ -199,16 +202,78 @@
   <data name="RadButtonClientBearbeiten.Text" xml:space="preserve">
     <value>Vorgang bearbeiten</value>
   </data>
+  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesseBis.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
   <data name="RadButtonRefresh.RootElement.KeyTip" xml:space="preserve">
     <value />
   </data>
   <data name="RadButtonRefresh.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
-  <data name="RadProgressBar.RootElement.KeyTip" xml:space="preserve">
+  <data name="RadCheckBoxLadeAlleEichprozesse.RootElement.AccessibleDescription" xml:space="preserve">
     <value />
   </data>
-  <data name="RadProgressBar.RootElement.ToolTipText" xml:space="preserve">
+  <data name="RadCheckBoxLadeAlleEichprozesse.RootElement.AccessibleName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadCheckBoxLadeAlleEichprozesse.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="RadCheckBoxLadeAlleEichprozesse.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RadCheckBoxLadeAlleEichprozesse.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RadCheckBoxLadeAlleEichprozesse.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="RadCheckBoxLadeAlleEichprozesse.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadCheckBoxLadeAlleEichprozesse.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadCheckBoxLadeAlleEichprozesse.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="RadCheckBoxLadeAlleEichprozesse.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.RootElement.AccessibleDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.RootElement.AccessibleName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="RadDateTimePickerFilterMonatLadeAlleEichprozesseVon.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
   <data name="RadButtonEichprozessKopierenRHEWA.RootElement.KeyTip" xml:space="preserve">
@@ -242,6 +307,12 @@
     <value />
   </data>
   <data name="RadButtonEichungAnsehenRHEWA.RootElement.ToolTipText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadProgressBar.RootElement.KeyTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RadProgressBar.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
   <data name="RadPageView1.RootElement.KeyTip" xml:space="preserve">

@@ -144,6 +144,7 @@ Public Class uco_5Beschaffenheitspruefung
         'prüfen ob alle Felder ausgefüllt sind
        
         If RadCheckBoxApprove.Checked = False Then
+            RadCheckBoxApprove.Focus()
             AbortSaveing = True
         End If
 

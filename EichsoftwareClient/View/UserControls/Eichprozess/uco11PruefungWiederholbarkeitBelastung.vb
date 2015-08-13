@@ -467,12 +467,17 @@
         If RadGroupBoxBereich1.Visible = True Then
             If RadCheckBoxBereich1VEL1.Checked = False And RadCheckBoxBereich1VEL1.Visible = True Then
                 AbortSaveing = True
-
+                RadTextBoxControlBereich1DisplayWeight1.TextBoxElement.BorderColor = Color.Red
+                RadTextBoxControlBereich1DisplayWeight2.TextBoxElement.BorderColor = Color.Red
+                RadTextBoxControlBereich1DisplayWeight3.TextBoxElement.BorderColor = Color.Red
             End If
         End If
 
         If RadCheckBoxBereich2VEL1.Checked = False And RadCheckBoxBereich2VEL1.Visible = True Then
             AbortSaveing = True
+            RadTextBoxControlBereich2DisplayWeight1.TextBoxElement.BorderColor = Color.Red
+            RadTextBoxControlBereich2DisplayWeight2.TextBoxElement.BorderColor = Color.Red
+            RadTextBoxControlBereich2DisplayWeight3.TextBoxElement.BorderColor = Color.Red
         End If
 
 

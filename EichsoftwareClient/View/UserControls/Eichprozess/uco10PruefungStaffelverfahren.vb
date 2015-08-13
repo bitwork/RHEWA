@@ -683,6 +683,7 @@ Inherits ucoContent
                                     If CType(Control, Telerik.WinControls.UI.RadTextBoxControl).IsReadOnly = False Then
                                         If CType(Control, Telerik.WinControls.UI.RadTextBoxControl).Text.Trim = "" Then
                                             AbortSaveing = True
+                                            CType(Control, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.Red
                                             intausgefuellteStaffeln = 3 'die staffel wurde nicht voll ausgefüllt
                                         Else
                                             intausgefuellteStaffeln = 4 'die 4 Staffel wurde auch ausgefüllt
@@ -709,6 +710,8 @@ Inherits ucoContent
                                         If CType(Control, Telerik.WinControls.UI.RadTextBoxControl).IsReadOnly = False Then
                                             If CType(Control, Telerik.WinControls.UI.RadTextBoxControl).Text.Trim = "" Then
                                                 AbortSaveing = True
+                                                CType(Control, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.Red
+
                                                 intausgefuellteStaffeln = 4 'die staffel wurde nicht voll ausgefüllt
                                             Else
                                                 intausgefuellteStaffeln = 5 'die 5 Staffel wurde auch ausgefüllt
@@ -730,6 +733,9 @@ Inherits ucoContent
                             If CType(Control, Telerik.WinControls.UI.RadTextBoxControl).IsReadOnly = False Then
                                 If CType(Control, Telerik.WinControls.UI.RadTextBoxControl).Text.Trim = "" Then
                                     AbortSaveing = True
+                                    CType(Control, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.Red
+
+
                                     Exit For
                                 End If
                             End If

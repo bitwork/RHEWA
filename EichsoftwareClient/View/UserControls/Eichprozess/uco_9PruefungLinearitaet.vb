@@ -502,12 +502,16 @@ Public Class uco_9PruefungLinearitaet
                 Dim checkbox As Telerik.WinControls.UI.RadCheckBox = FindControl(String.Format("RadCheckBoxBereich{0}VEL{1}", j, i))
                 If checkbox.Checked = False And checkbox.Visible = True Then
                     AbortSaveing = True
+                    Dim textbox As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextboxControlBereich{0}DisplayWeight{1}", j, i))
+                    textbox.TextBoxElement.BorderColor = Color.Red
                 End If
 
                 checkbox = Nothing
                 checkbox = FindControl(String.Format("RadCheckBoxBereich{0}FallendVEL{1}", j, i))
                 If checkbox.Checked = False And checkbox.Visible = True Then
                     AbortSaveing = True
+                    Dim textbox As Telerik.WinControls.UI.RadTextBoxControl = FindControl(String.Format("RadTextboxControlBereich{0}FallendDisplayWeight{1}", j, i))
+                    textbox.TextBoxElement.BorderColor = Color.Red
                 End If
             Next
         Next

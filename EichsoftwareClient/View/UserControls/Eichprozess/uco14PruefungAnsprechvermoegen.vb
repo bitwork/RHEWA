@@ -268,7 +268,12 @@ RadTextBoxControlLast2.Text.Trim = "" Or _
             AbortSaveing = True
         End If
         'fehlermeldung anzeigen bei falscher validierung
+        If AbortSaveing Then
+            RadTextBoxControlAnzeige1.TextBoxElement.BorderColor = Color.Red
+            RadTextBoxControlAnzeige2.TextBoxElement.BorderColor = Color.Red
+            RadTextBoxControlAnzeige3.TextBoxElement.BorderColor = Color.Red
 
+        End If
         Return Me.ShowValidationErrorBox()
      
 
