@@ -295,7 +295,8 @@
                 RadDropdownlistlWZTyp.Filter = Nothing 'filter leeren
                 RadDropdownlistlWZTyp.Filter = New Predicate(Of Telerik.WinControls.UI.RadListDataItem)(AddressOf FilterItem)
 
-                RadDropdownlistlWZTyp.Text = objWZ.Typ 'zurücksetzen der auswahl
+                'RadDropdownlistlWZTyp.Text = objWZ.Typ 'zurücksetzen der auswahl
+                RadDropdownlistlWZTyp.SelectedValue = objWZ.ID
                 _suspendEvents = False
 
             End Using
