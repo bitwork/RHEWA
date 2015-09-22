@@ -459,9 +459,23 @@
     ''' <remarks></remarks>
     Private Sub BackgroundWorkerLoadFromDatabase_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorkerLoadFromDatabase.RunWorkerCompleted
         'zuweisen der Ergebnismenge als Datenquelle für das Grid
+        Dim index As Integer = 0
+        Dim groupIndex As Integer = 0
+        Try
+            index = RadGridViewAuswahlliste.SelectedRows(0).Index
+            groupIndex = RadGridViewAuswahlliste.SelectedRows(0).Group.GroupRow.Index
+        Catch ex As Exception
+        End Try
         RadGridViewAuswahlliste.DataSource = e.Result
+    
         'Spalten ein und ausblenden und formatieren
         FormatTable()
+
+        Try
+            RadGridViewAuswahlliste.Groups(groupIndex).GroupRow.ChildRows(index).IsSelected = True
+            RadGridViewAuswahlliste.Groups(groupIndex).GroupRow.ChildRows(index).IsCurrent = True
+        Catch ex As Exception
+        End Try
         Me.Enabled = True
     End Sub
 #End Region
@@ -508,7 +522,17 @@
     ''' <remarks></remarks>
     Private Sub BackgroundWorkerLoadFromDatabaseRHEWA_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs, Optional invalid As String = "Invalid") Handles BackgroundWorkerLoadFromDatabaseRHEWA.RunWorkerCompleted
         'zuweisen der Ergebnismenge als Datenquelle für das Grid
+        Dim index As Integer = 0
+        Dim groupIndex As Integer = 0
+        Try
+            index = RadGridViewRHEWAAlle.SelectedRows(0).Index
+            groupIndex = RadGridViewRHEWAAlle.SelectedRows(0).Group.GroupRow.Index
+
+        Catch ex As Exception
+        End Try
+
         RadGridViewRHEWAAlle.DataSource = e.Result
+     
         Try
             Try
                 'Spalten ein und ausblenden und formatieren
@@ -557,6 +581,14 @@
             Catch ex As Exception
 
             End Try
+
+            Try
+                RadGridViewRHEWAAlle.Groups(groupIndex).GroupRow.ChildRows(index).IsSelected = True
+                RadGridViewRHEWAAlle.Groups(groupIndex).GroupRow.ChildRows(index).IsCurrent = True
+
+            Catch ex As Exception
+            End Try
+
 
             Me.Enabled = True
         Catch ex As Exception
