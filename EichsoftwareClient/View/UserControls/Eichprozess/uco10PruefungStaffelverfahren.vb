@@ -659,6 +659,60 @@ Inherits ucoContent
     End Sub
 
     ''' <summary>
+    ''' prüft innerhalb einer Staffel ob alle Felder ausgefüllt sind und gibt true zurück wenn dem so ist, prüft nur wenn überhaupt eintragungen vorgenommen wurden
+    ''' </summary>
+    ''' <param name="StaffelGroupBox"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    ''' <author></author>
+    ''' <commentauthor></commentauthor>
+    Private Function ValidateStaffelAusgefuellt(StaffelGroupBox As Telerik.WinControls.UI.RadGroupBox) As Boolean
+        Dim returnvalue As Boolean = True
+        Dim einFeldGefuellt As Boolean = False 'nur rot markieren wenn überhaupt ein Feld gefüllt ist
+        For Each BereichGroupBox In StaffelGroupBox.Controls
+            If CType(BereichGroupBox, Telerik.WinControls.UI.RadGroupBox).Visible = True Then 'Nur wenn der Bereich auch sichtbar ist
+                For Each Control In BereichGroupBox.controls
+                    Try
+                        If CType(Control, Telerik.WinControls.UI.RadTextBox).ReadOnly = False And CType(Control, Telerik.WinControls.UI.RadTextBox).Enabled = True Then
+                            If CType(Control, Telerik.WinControls.UI.RadTextBox).Text.Trim = "" Then
+                                returnvalue = False
+                                If einFeldGefuellt = True Then
+                                    CType(Control, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
+                                End If
+                            Else
+                                CType(Control, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Transparent
+                                einFeldGefuellt = True
+                            End If
+                        End If
+                    Catch ex As Exception
+                    End Try
+                Next
+            End If
+        Next
+        Return returnvalue
+    End Function
+
+    Private Sub ValidateStaffelEFG(staffel As Integer, bereich As Integer)
+        Dim Fehler7 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(staffel), CInt(bereich), 7))
+        Dim EFGWertStaffel As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblStaffel{0}Bereich{1}EFGWert{2}", CInt(staffel), CInt(bereich), 7))
+
+        Dim decAbsoluteFehlergrenze As Decimal = 0
+        If Fehler7.Text.Trim.StartsWith("-") Then
+            decAbsoluteFehlergrenze = CDec(Fehler7.Text.Replace("-", "")) 'entfernen des minuszeichens
+        Else
+            decAbsoluteFehlergrenze = CDec(Fehler7.Text)
+        End If
+
+        If decAbsoluteFehlergrenze > CDec(EFGWertStaffel.Text) Then 'eichwerte unterschritten/überschritten
+            Fehler7.TextBoxElement.Border.ForeColor = Color.Red
+            AbortSaveing = True
+        Else
+            Fehler7.TextBoxElement.Border.ForeColor = Color.Transparent
+        End If
+    End Sub
+
+
+    ''' <summary>
     ''' Gültigkeit der Eingaben überprüfen
     ''' </summary>
     ''' <remarks></remarks>
@@ -669,164 +723,71 @@ Inherits ucoContent
         'prüfen ob alle Felder ausgefüllt sind
         AbortSaveing = False
 
-        Dim intausgefuellteStaffeln As Integer = 3
-        For Each StaffelGroupBox In RadScrollablePanel1.PanelContainer.Controls
-            'nur die ersten 3 Staffeln sind Pflicht
-            If StaffelGroupBox.name.ToString.EndsWith("4") Or StaffelGroupBox.name.ToString.EndsWith("5") Then
-                If RadTextBoxControlStaffel4Bereich1Anzeige1.Text = "" Then
-                    Continue For
-                Else
-                    For Each BereichGroupBox In StaffelGroupBox.controls
-                        If CType(BereichGroupBox, Telerik.WinControls.UI.RadGroupBox).Visible = True Then
-                            For Each Control In BereichGroupBox.controls
-                                Try
-                                    If CType(Control, Telerik.WinControls.UI.RadTextBox).ReadOnly = False Then
-                                        If CType(Control, Telerik.WinControls.UI.RadTextBox).Text.Trim = "" Then
-                                            AbortSaveing = True
-                                            CType(Control, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
-                                            intausgefuellteStaffeln = 3 'die staffel wurde nicht voll ausgefüllt
-                                        Else
-                                            intausgefuellteStaffeln = 4 'die 4 Staffel wurde auch ausgefüllt
-                                        End If
-
-                                    End If
-                                Catch ex As Exception
-                                End Try
-                            Next
-                        End If
-                    Next
-                End If
-
-
-                If intausgefuellteStaffeln = 4 Then ' nur prüfen wenn die 4. Staffel ausgefüllt wurde
-
-                    If RadTextBoxControlStaffel5Bereich1Anzeige1.Text = "" Then
-                        Continue For
-                    Else
-                        For Each BereichGroupBox In StaffelGroupBox.controls
-                            If CType(BereichGroupBox, Telerik.WinControls.UI.RadGroupBox).Visible = True Then
-                                For Each Control In BereichGroupBox.controls
-                                    Try
-                                        If CType(Control, Telerik.WinControls.UI.RadTextBox).ReadOnly = False Then
-                                            If CType(Control, Telerik.WinControls.UI.RadTextBox).Text.Trim = "" Then
-                                                AbortSaveing = True
-                                                CType(Control, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
-
-                                                intausgefuellteStaffeln = 4 'die staffel wurde nicht voll ausgefüllt
-                                            Else
-                                                intausgefuellteStaffeln = 5 'die 5 Staffel wurde auch ausgefüllt
-                                            End If
-                                        End If
-                                    Catch ex As Exception
-                                    End Try
-                                Next
-                            End If
-                        Next
+        Dim intausgefuellteStaffeln As Integer = 0
+        If ValidateStaffelAusgefuellt(RadGroupBoxStaffel1) Then
+            intausgefuellteStaffeln = 1
+            If ValidateStaffelAusgefuellt(RadGroupBoxStaffel2) Then
+                intausgefuellteStaffeln = 2
+                If ValidateStaffelAusgefuellt(RadGroupBoxStaffel3) Then
+                    intausgefuellteStaffeln = 3
+                    If ValidateStaffelAusgefuellt(RadGroupBoxStaffel4) Then
+                        intausgefuellteStaffeln = 4
+                        If ValidateStaffelAusgefuellt(RadGroupBoxStaffel5) Then intausgefuellteStaffeln = 5
                     End If
                 End If
             End If
+        Else : AbortSaveing = True 'eine Staffel muss ausgefüllt sein
+        End If
 
-            For Each BereichGroupBox In StaffelGroupBox.controls
-                If CType(BereichGroupBox, Telerik.WinControls.UI.RadGroupBox).Visible = True Then
-                    For Each Control In BereichGroupBox.controls
-                        Try
-                            If CType(Control, Telerik.WinControls.UI.RadTextBox).ReadOnly = False Then
-                                If CType(Control, Telerik.WinControls.UI.RadTextBox).Text.Trim = "" Then
-                                    AbortSaveing = True
-                                    CType(Control, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
+        If AbortSaveing Then
+            'fehlermeldung anzeigen bei falscher validierung
+            Return Me.ShowValidationErrorBox()
+        End If
 
-
-                                    Exit For
-                                End If
-                            End If
-                        Catch ex As Exception
-                        End Try
-                    Next
-                End If
-            Next
-        Next
-
-
-        Dim decAbsoluteFehlergrenze As Decimal = 0
-
-        'fehlermeldung anzeigen bei falscher validierung
-        Return Me.ShowValidationErrorBox()
+     
 
         'logik zum Valideren der Eichfehlergrenzen der einzelnen Staffeln. Abhängig davon wieviele Staffeln überhaupt ausgefüllt sind
-        'staffel 1- 3 sind ab dieser Stelle im Code aufjedenfall ausgefüllt
+        If (intausgefuellteStaffeln >= 1) Then
+            'Staffel 1
+            ValidateStaffelEFG(1, 1)
+            If AnzahlBereiche >= 2 Then ValidateStaffelEFG(1, 2)
+            If AnzahlBereiche >= 3 Then ValidateStaffelEFG(1, 3)
+        End If
 
-
-        'Staffel 1
-        Try
-            If RadTextBoxControlStaffel1Bereich1Fehler7.Text.Trim.StartsWith("-") Then
-                decAbsoluteFehlergrenze = CDec(RadTextBoxControlStaffel1Bereich1Fehler7.Text.Replace("-", "")) 'entfernen des minuszeichens
-            Else
-                decAbsoluteFehlergrenze = CDec(RadTextBoxControlStaffel1Bereich1Fehler7.Text)
-            End If
-
-            If decAbsoluteFehlergrenze >= CDec(lblStaffel1Bereich1EFGWert7.Text) Then 'eichwerte unterschritten/überschritten
-                AbortSaveing = True
-            End If
-        Catch ex As Exception
-        End Try
         'staffel 2
-        Try
-            If RadTextBoxControlStaffel2Bereich1Fehler7.Text.Trim.StartsWith("-") Then
-                decAbsoluteFehlergrenze = CDec(RadTextBoxControlStaffel2Bereich1Fehler7.Text.Replace("-", "")) 'entfernen des minuszeichens
-            Else
-                decAbsoluteFehlergrenze = CDec(RadTextBoxControlStaffel2Bereich1Fehler7.Text)
-            End If
-
-            If decAbsoluteFehlergrenze >= CDec(lblStaffel2Bereich1EFGWert7.Text) Then 'eichwerte unterschritten/überschritten
-                decAbsoluteFehlergrenze = True
-            End If
-        Catch e As Exception
-        End Try
+        If (intausgefuellteStaffeln >= 2) Then
+            ValidateStaffelEFG(2, 1)
+            If AnzahlBereiche >= 2 Then ValidateStaffelEFG(2, 2)
+            If AnzahlBereiche >= 3 Then ValidateStaffelEFG(2, 3)
+        End If
         'staffel 3
-        Try
-            If RadTextBoxControlStaffel3Bereich1Fehler7.Text.Trim.StartsWith("-") Then
-                decAbsoluteFehlergrenze = CDec(RadTextBoxControlStaffel3Bereich1Fehler7.Text.Replace("-", "")) 'entfernen des minuszeichens
-            Else
-                decAbsoluteFehlergrenze = CDec(RadTextBoxControlStaffel3Bereich1Fehler7.Text)
-            End If
-
-            If decAbsoluteFehlergrenze >= CDec(lblStaffel3Bereich1EFGWert7.Text) Then 'eichwerte unterschritten/überschritten
-                AbortSaveing = True
-            End If
-        Catch e As Exception
-        End Try
-
-        Select Case intausgefuellteStaffeln
-            Case Is = 4
-                Try
-                    If RadTextBoxControlStaffel4Bereich1Fehler7.Text.Trim.StartsWith("-") Then
-                        decAbsoluteFehlergrenze = CDec(RadTextBoxControlStaffel4Bereich1Fehler7.Text.Replace("-", "")) 'entfernen des minuszeichens
-                    Else
-                        decAbsoluteFehlergrenze = CDec(RadTextBoxControlStaffel4Bereich1Fehler7.Text)
-                    End If
-
-                    If decAbsoluteFehlergrenze >= CDec(lblStaffel4Bereich1EFGWert7.Text) Then 'eichwerte unterschritten/überschritten
-                        AbortSaveing = True
-                    End If
-                Catch e As Exception
-                End Try
-            Case Is = 5
-                Try
-                    If RadTextBoxControlStaffel5Bereich1Fehler7.Text.Trim.StartsWith("-") Then
-                        decAbsoluteFehlergrenze = CDec(RadTextBoxControlStaffel5Bereich1Fehler7.Text.Replace("-", "")) 'entfernen des minuszeichens
-                    Else
-                        decAbsoluteFehlergrenze = CDec(RadTextBoxControlStaffel5Bereich1Fehler7.Text)
-                    End If
-
-                    If decAbsoluteFehlergrenze >= CDec(lblStaffel5Bereich1EFGWert7.Text) Then 'eichwerte unterschritten/überschritten
-                        AbortSaveing = True
-                    End If
-                Catch e As Exception
-                End Try
-        End Select
+        If (intausgefuellteStaffeln >= 3) Then
+            ValidateStaffelEFG(3, 1)
+            If AnzahlBereiche >= 2 Then ValidateStaffelEFG(3, 2)
+            If AnzahlBereiche >= 3 Then ValidateStaffelEFG(3, 3)
+        End If
+        'staffel 4
+        If (intausgefuellteStaffeln >= 4) Then
+            ValidateStaffelEFG(4, 1)
+            If AnzahlBereiche >= 2 Then ValidateStaffelEFG(4, 2)
+            If AnzahlBereiche >= 3 Then ValidateStaffelEFG(4, 3)
+        End If
+        'staffel 5
+        If (intausgefuellteStaffeln >= 5) Then
+            ValidateStaffelEFG(5, 1)
+            If AnzahlBereiche >= 2 Then ValidateStaffelEFG(5, 2)
+            If AnzahlBereiche >= 3 Then ValidateStaffelEFG(5, 3)
+        End If
 
         'fehlermeldung anzeigen bei falscher validierung
-        Return Me.ShowValidationErrorBox()
+
+        If AbortSaveing Then
+            'fehlermeldung anzeigen bei falscher validierung
+            MessageBox.Show(My.Resources.GlobaleLokalisierung.EichfehlergrenzenNichtEingehalten, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            Return False
+        End If
+
+        Return True
 
     End Function
 
@@ -839,12 +800,12 @@ Inherits ucoContent
         Try
             Dim Last1 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 1))
             Dim Last2 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 2))
-            Dim Last3 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 3))
+            Dim Last3Normallast As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 3))
             Dim Last4 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 4))
 
             Dim Anzeige1 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 1))
             Dim Anzeige2 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 2))
-            Dim Anzeige3 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 3))
+            Dim Anzeige3Normallast As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 3))
             Dim Anzeige4 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Anzeige{2}", CInt(Staffel), CInt(Bereich), 4))
 
             Dim Fehler1 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", CInt(Staffel), CInt(Bereich), 1))
@@ -894,7 +855,7 @@ Inherits ucoContent
                 End If
 
                 Try
-                    Fehler3.Text = CDec(Anzeige3.Text) - CDec(Last3.Text)
+                    Fehler3.Text = CDec(Anzeige3Normallast.Text) - CDec(Last3Normallast.Text)
                 Catch e As InvalidCastException
                 End Try
                 Try
@@ -920,7 +881,7 @@ Inherits ucoContent
                         End If
                     Else
                         'Im Bereich 1 wird gegen den nullwert geprüft. Ab bereich 2 gegen 20e. dort fällt EFG2 weg. stattdessen wird EFG3 genutzt
-                        If Bereich = "2" Then
+                        If Bereich = "1" Then
                             EFG1.Text = Math.Round(CDec(Eichwert), _intNullstellenE)
                             EFG2.Text = Math.Round(CDec(Eichwert), _intNullstellenE)
                         Else
@@ -942,7 +903,32 @@ Inherits ucoContent
 
                 'messabweichung berechnen (abgeändert von Excel mappe. hier wird statt der min. normalien die eingebene Normalien Menge genommen
                 Try
-                    Fehler6.Text = CDec(Anzeige3.Text) - CDec(Anzeige1.Text) - CDec(Last3.Text)
+                    'Fehler6.Text = CDec(Anzeige3.Text) - CDec(Anzeige1.Text) - CDec(Last3.Text) //alte Rechnung
+
+
+                    'weitere Anpassung nach Absprache mit Herrn Lüling und Herrn Strack:
+                    'Ermittlung der Messabweichung für eine Staffel
+
+                    'Für die Ermittlung der Messabweichung der Staffel 1 für den Bereich 1 gilt folgende Formel:
+                    'Messabweichung = Anzeigewert (Normallast) – Anzeigewert (Nullwert) – Normallast
+                    If (Staffel = "1") Then
+                        If Bereich = "1" Then
+                            Fehler6.Text = CDec(Anzeige3Normallast.Text) - CDec(Anzeige1.Text) - CDec(Last3Normallast.Text)
+                        Else
+                            'Für die Ermittlung der Messabweichung der Staffel 1 für die Bereiche 2 und 3 wird in der bestehenden Prüfanweisung keine Vorgehensweise beschrieben. Deshalb wird an dieser Stelle der Berechnung folgende Vereinbarung zugrunde gelegt: Die Mindestlast bleibt bei der Ermittlung der Messabweichung an dieser Stelle unberücksichtigt. Lediglich die Differenz von SOLL und IST der Mindestlast wird berücksichtigt.
+                            'Folgende Formel gilt:
+                            'Messabweichung = Anzeigewert (Normallast) – (Anzeigewert (Mindestlast) – Mindestlast) – Normallast
+                            Fehler6.Text = (CDec(Anzeige3Normallast.Text)) - (CDec(Anzeige1.Text) - CDec(Last1.Text)) - CDec(Last2.Text)
+                        End If
+                    Else
+                        'Für die Ermittlung der Messabweichung der Staffeln 2-5 für alle Bereiche gilt folgende Formel:
+                        'Messabweichung = Anzeigewert (Ersatzlast+Normallast) – Anzeigewert (Ersatzlast) – Normallast
+                        Fehler6.Text = (CDec(Anzeige3Normallast.Text)) - CDec(Anzeige1.Text) - CDec(Last2.Text)
+                    End If
+
+
+
+
                 Catch ex As InvalidCastException
                 End Try
 
@@ -955,7 +941,7 @@ Inherits ucoContent
                 'EFG'Wert 3 Berechnen
                 Try
                     '=WENN(B130<$B$49;WERT(0,5*$B$15);(1*$B$15))
-                    If CDec(Last3.Text) < Math.Round(CDec(Eichwert * 500), _intNullstellenE, MidpointRounding.AwayFromZero) Then
+                    If CDec(Last3Normallast.Text) < Math.Round(CDec(Eichwert * 500), _intNullstellenE, MidpointRounding.AwayFromZero) Then
                         EFG3.Text = Math.Round(CDec(Eichwert * 0.5), _intNullstellenE)
                     Else
                         EFG3.Text = Math.Round(CDec(Eichwert), _intNullstellenE)
@@ -982,7 +968,7 @@ Inherits ucoContent
 
                 'Berechnen von EFG   6 und 7
                 Try
-                    If CDec(Last3.Text) < Math.Round(CDec(Eichwert * 500), _intNullstellenE, MidpointRounding.AwayFromZero) Then
+                    If CDec(Last3Normallast.Text) < Math.Round(CDec(Eichwert * 500), _intNullstellenE, MidpointRounding.AwayFromZero) Then
                         EFG6.Text = Math.Round(CDec(Eichwert * 0.5), _intNullstellenE)
                         EFG7.Text = Math.Round(CDec(Eichwert * 0.5), _intNullstellenE)
                     Else
@@ -995,7 +981,7 @@ Inherits ucoContent
             Else 'staffel 2 - 7 werden anders berechnet 
                 'lasten
                 Try
-                    Last3.Text = CDec(Last2.Text) + CDec(Anzeige1.Text)
+                    Last3Normallast.Text = CDec(Last2.Text) + CDec(Anzeige1.Text)
                 Catch e As Exception
                 End Try
                 Try
@@ -1005,10 +991,10 @@ Inherits ucoContent
 
                 Try
                     'Differenz Staffel
-                    If Last3.Text = "0" Then
+                    If Last3Normallast.Text = "0" Then
                         Fehler6.Text = "0"
                     Else
-                        Fehler6.Text = (CDec(Anzeige3.Text) - CDec(Anzeige1.Text)) - CDec(Last2.Text)
+                        Fehler6.Text = (CDec(Anzeige3Normallast.Text) - CDec(Anzeige1.Text)) - CDec(Last2.Text)
                     End If
                 Catch e As Exception
                 End Try
@@ -1028,7 +1014,7 @@ Inherits ucoContent
                 Try
 
                     'Berechne EFG Wert 6 und 7
-                    If CDec(Last3.Text) < Math.Round(CDec(Eichwert * 2000), _intNullstellenE, MidpointRounding.AwayFromZero) Then
+                    If CDec(Last3Normallast.Text) < Math.Round(CDec(Eichwert * 2000), _intNullstellenE, MidpointRounding.AwayFromZero) Then
                         EFG6.Text = Math.Round(CDec(Eichwert), _intNullstellenE)
                         EFG7.Text = Math.Round(CDec(Eichwert), _intNullstellenE)
                     Else
@@ -1564,4 +1550,6 @@ Inherits ucoContent
 
     #End Region
 
+  
+   
 End Class
