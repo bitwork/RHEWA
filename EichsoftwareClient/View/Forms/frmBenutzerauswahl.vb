@@ -1,10 +1,11 @@
 ﻿Imports Telerik.WinControls.UI
+Imports System.Deployment.Application
 
 Public Class FrmBenutzerauswahl
 
     Private mvarGewaehlteBenutzerLizenz As Lizensierung 'aktuell gewählter Benutzer
 
-    
+
     ''' <summary>
     ''' Gets the gewaehlte benutzer lizenz.
     ''' </summary>
@@ -27,6 +28,16 @@ Public Class FrmBenutzerauswahl
         If RadListControlBenutzer.Items.Count = 0 Then
             ShowNeueLizenz()
         End If
+
+        Dim myVersion As Version
+
+        Try
+            If ApplicationDeployment.IsNetworkDeployed Then
+                myVersion = ApplicationDeployment.CurrentDeployment.CurrentVersion
+                Me.Text += " " + myVersion.ToString(3)
+            End If
+        Catch ex As Exception
+        End Try
     End Sub
 
     ''' <summary>
