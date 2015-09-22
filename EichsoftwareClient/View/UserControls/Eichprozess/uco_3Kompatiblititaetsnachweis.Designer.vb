@@ -150,6 +150,11 @@ Partial Class uco_3Kompatiblititaetsnachweis
         Me.lblAWGSpeisespannung = New Telerik.WinControls.UI.RadLabel()
         Me.lblAWGmaxAnzahlTeilungswerte = New Telerik.WinControls.UI.RadLabel()
         Me.RadGroupBoxWaage = New Telerik.WinControls.UI.RadGroupBox()
+        Me.lblPflichtfeld6 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld4 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld2 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld5 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld3 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -234,11 +239,6 @@ Partial Class uco_3Kompatiblititaetsnachweis
         Me.lblWIMaxCap = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlWaageKlasse = New Telerik.WinControls.UI.RadTextBox()
         Me.lblWIKlasse = New Telerik.WinControls.UI.RadLabel()
-        Me.lblPflichtfeld5 = New System.Windows.Forms.Label()
-        Me.lblPflichtfeld3 = New System.Windows.Forms.Label()
-        Me.lblPflichtfeld6 = New System.Windows.Forms.Label()
-        Me.lblPflichtfeld4 = New System.Windows.Forms.Label()
-        Me.lblPflichtfeld2 = New System.Windows.Forms.Label()
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanel1.PanelContainer.SuspendLayout()
         Me.RadScrollablePanel1.SuspendLayout()
@@ -517,9 +517,10 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze
         '
-        Me.RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze, "RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze")
+        Me.RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze.MaxLength = 10
         Me.RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze.Name = "RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze"
+        Me.RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze.ReadOnly = True
         '
         '
         '
@@ -880,9 +881,10 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlWZTemperaturbereichMAX
         '
-        Me.RadTextBoxControlWZTemperaturbereichMAX.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlWZTemperaturbereichMAX, "RadTextBoxControlWZTemperaturbereichMAX")
+        Me.RadTextBoxControlWZTemperaturbereichMAX.MaxLength = 5
         Me.RadTextBoxControlWZTemperaturbereichMAX.Name = "RadTextBoxControlWZTemperaturbereichMAX"
+        Me.RadTextBoxControlWZTemperaturbereichMAX.ReadOnly = True
         '
         '
         '
@@ -914,9 +916,10 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlWZBruchteilEichfehlergrenze
         '
-        Me.RadTextBoxControlWZBruchteilEichfehlergrenze.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlWZBruchteilEichfehlergrenze, "RadTextBoxControlWZBruchteilEichfehlergrenze")
+        Me.RadTextBoxControlWZBruchteilEichfehlergrenze.MaxLength = 5
         Me.RadTextBoxControlWZBruchteilEichfehlergrenze.Name = "RadTextBoxControlWZBruchteilEichfehlergrenze"
+        Me.RadTextBoxControlWZBruchteilEichfehlergrenze.ReadOnly = True
         '
         '
         '
@@ -964,9 +967,10 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlWZTemperaturbereichMIN
         '
-        Me.RadTextBoxControlWZTemperaturbereichMIN.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlWZTemperaturbereichMIN, "RadTextBoxControlWZTemperaturbereichMIN")
+        Me.RadTextBoxControlWZTemperaturbereichMIN.MaxLength = 5
         Me.RadTextBoxControlWZTemperaturbereichMIN.Name = "RadTextBoxControlWZTemperaturbereichMIN"
+        Me.RadTextBoxControlWZTemperaturbereichMIN.ReadOnly = True
         '
         '
         '
@@ -1047,9 +1051,10 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlWZGenauigkeitsklasse
         '
-        Me.RadTextBoxControlWZGenauigkeitsklasse.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlWZGenauigkeitsklasse, "RadTextBoxControlWZGenauigkeitsklasse")
+        Me.RadTextBoxControlWZGenauigkeitsklasse.MaxLength = 3
         Me.RadTextBoxControlWZGenauigkeitsklasse.Name = "RadTextBoxControlWZGenauigkeitsklasse"
+        Me.RadTextBoxControlWZGenauigkeitsklasse.ReadOnly = True
         '
         '
         '
@@ -1116,9 +1121,10 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlWZWiderstand
         '
-        Me.RadTextBoxControlWZWiderstand.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlWZWiderstand, "RadTextBoxControlWZWiderstand")
+        Me.RadTextBoxControlWZWiderstand.MaxLength = 50
         Me.RadTextBoxControlWZWiderstand.Name = "RadTextBoxControlWZWiderstand"
+        Me.RadTextBoxControlWZWiderstand.ReadOnly = True
         '
         '
         '
@@ -1133,9 +1139,10 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlWZRueckkehrVorlastsignal
         '
-        Me.RadTextBoxControlWZRueckkehrVorlastsignal.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlWZRueckkehrVorlastsignal, "RadTextBoxControlWZRueckkehrVorlastsignal")
+        Me.RadTextBoxControlWZRueckkehrVorlastsignal.MaxLength = 50
         Me.RadTextBoxControlWZRueckkehrVorlastsignal.Name = "RadTextBoxControlWZRueckkehrVorlastsignal"
+        Me.RadTextBoxControlWZRueckkehrVorlastsignal.ReadOnly = True
         '
         '
         '
@@ -1214,9 +1221,10 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlWZMinTeilungswert
         '
-        Me.RadTextBoxControlWZMinTeilungswert.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlWZMinTeilungswert, "RadTextBoxControlWZMinTeilungswert")
+        Me.RadTextBoxControlWZMinTeilungswert.MaxLength = 50
         Me.RadTextBoxControlWZMinTeilungswert.Name = "RadTextBoxControlWZMinTeilungswert"
+        Me.RadTextBoxControlWZMinTeilungswert.ReadOnly = True
         '
         '
         '
@@ -1231,9 +1239,10 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlWZHoechstteilungsfaktor
         '
-        Me.RadTextBoxControlWZHoechstteilungsfaktor.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlWZHoechstteilungsfaktor, "RadTextBoxControlWZHoechstteilungsfaktor")
+        Me.RadTextBoxControlWZHoechstteilungsfaktor.MaxLength = 50
         Me.RadTextBoxControlWZHoechstteilungsfaktor.Name = "RadTextBoxControlWZHoechstteilungsfaktor"
+        Me.RadTextBoxControlWZHoechstteilungsfaktor.ReadOnly = True
         '
         '
         '
@@ -1248,9 +1257,10 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlWZKriechteilungsfaktor
         '
-        Me.RadTextBoxControlWZKriechteilungsfaktor.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlWZKriechteilungsfaktor, "RadTextBoxControlWZKriechteilungsfaktor")
+        Me.RadTextBoxControlWZKriechteilungsfaktor.MaxLength = 50
         Me.RadTextBoxControlWZKriechteilungsfaktor.Name = "RadTextBoxControlWZKriechteilungsfaktor"
+        Me.RadTextBoxControlWZKriechteilungsfaktor.ReadOnly = True
         '
         '
         '
@@ -1265,9 +1275,10 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlWZMaxTeilungswerte
         '
-        Me.RadTextBoxControlWZMaxTeilungswerte.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlWZMaxTeilungswerte, "RadTextBoxControlWZMaxTeilungswerte")
+        Me.RadTextBoxControlWZMaxTeilungswerte.MaxLength = 50
         Me.RadTextBoxControlWZMaxTeilungswerte.Name = "RadTextBoxControlWZMaxTeilungswerte"
+        Me.RadTextBoxControlWZMaxTeilungswerte.ReadOnly = True
         '
         '
         '
@@ -1282,9 +1293,10 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlWZWaegezellenkennwert
         '
-        Me.RadTextBoxControlWZWaegezellenkennwert.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlWZWaegezellenkennwert, "RadTextBoxControlWZWaegezellenkennwert")
+        Me.RadTextBoxControlWZWaegezellenkennwert.MaxLength = 50
         Me.RadTextBoxControlWZWaegezellenkennwert.Name = "RadTextBoxControlWZWaegezellenkennwert"
+        Me.RadTextBoxControlWZWaegezellenkennwert.ReadOnly = True
         '
         '
         '
@@ -1299,9 +1311,10 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlWZMindestvorlast
         '
-        Me.RadTextBoxControlWZMindestvorlast.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlWZMindestvorlast, "RadTextBoxControlWZMindestvorlast")
+        Me.RadTextBoxControlWZMindestvorlast.MaxLength = 50
         Me.RadTextBoxControlWZMindestvorlast.Name = "RadTextBoxControlWZMindestvorlast"
+        Me.RadTextBoxControlWZMindestvorlast.ReadOnly = True
         '
         '
         '
@@ -1317,6 +1330,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         'RadTextBoxControlWZHoechstlast
         '
         resources.ApplyResources(Me.RadTextBoxControlWZHoechstlast, "RadTextBoxControlWZHoechstlast")
+        Me.RadTextBoxControlWZHoechstlast.MaxLength = 20
         Me.RadTextBoxControlWZHoechstlast.Name = "RadTextBoxControlWZHoechstlast"
         '
         '
@@ -1841,9 +1855,9 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlAWGTemperaturbereichMax
         '
-        Me.RadTextBoxControlAWGTemperaturbereichMax.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlAWGTemperaturbereichMax, "RadTextBoxControlAWGTemperaturbereichMax")
         Me.RadTextBoxControlAWGTemperaturbereichMax.Name = "RadTextBoxControlAWGTemperaturbereichMax"
+        Me.RadTextBoxControlAWGTemperaturbereichMax.ReadOnly = True
         '
         '
         '
@@ -1908,9 +1922,9 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlAWGKlasse
         '
-        Me.RadTextBoxControlAWGKlasse.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlAWGKlasse, "RadTextBoxControlAWGKlasse")
         Me.RadTextBoxControlAWGKlasse.Name = "RadTextBoxControlAWGKlasse"
+        Me.RadTextBoxControlAWGKlasse.ReadOnly = True
         '
         '
         '
@@ -1978,9 +1992,9 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlAWGKabellaenge
         '
-        Me.RadTextBoxControlAWGKabellaenge.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlAWGKabellaenge, "RadTextBoxControlAWGKabellaenge")
         Me.RadTextBoxControlAWGKabellaenge.Name = "RadTextBoxControlAWGKabellaenge"
+        Me.RadTextBoxControlAWGKabellaenge.ReadOnly = True
         '
         '
         '
@@ -2060,9 +2074,9 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlAWGGrenzwerteLastwiderstandMax
         '
-        Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMax.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMax, "RadTextBoxControlAWGGrenzwerteLastwiderstandMax")
         Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMax.Name = "RadTextBoxControlAWGGrenzwerteLastwiderstandMax"
+        Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMax.ReadOnly = True
         '
         '
         '
@@ -2095,9 +2109,9 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlAWGGrenzwerteLastwiderstandMin
         '
-        Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMin.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMin, "RadTextBoxControlAWGGrenzwerteLastwiderstandMin")
         Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMin.Name = "RadTextBoxControlAWGGrenzwerteLastwiderstandMin"
+        Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMin.ReadOnly = True
         '
         '
         '
@@ -2114,9 +2128,9 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlAWGTemperaturbereichMin
         '
-        Me.RadTextBoxControlAWGTemperaturbereichMin.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlAWGTemperaturbereichMin, "RadTextBoxControlAWGTemperaturbereichMin")
         Me.RadTextBoxControlAWGTemperaturbereichMin.Name = "RadTextBoxControlAWGTemperaturbereichMin"
+        Me.RadTextBoxControlAWGTemperaturbereichMin.ReadOnly = True
         '
         '
         '
@@ -2132,9 +2146,9 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlAWGBruchteilEichfehlergrenze
         '
-        Me.RadTextBoxControlAWGBruchteilEichfehlergrenze.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlAWGBruchteilEichfehlergrenze, "RadTextBoxControlAWGBruchteilEichfehlergrenze")
         Me.RadTextBoxControlAWGBruchteilEichfehlergrenze.Name = "RadTextBoxControlAWGBruchteilEichfehlergrenze"
+        Me.RadTextBoxControlAWGBruchteilEichfehlergrenze.ReadOnly = True
         '
         '
         '
@@ -2150,9 +2164,9 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlAWGMindestmesssignal
         '
-        Me.RadTextBoxControlAWGMindestmesssignal.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlAWGMindestmesssignal, "RadTextBoxControlAWGMindestmesssignal")
         Me.RadTextBoxControlAWGMindestmesssignal.Name = "RadTextBoxControlAWGMindestmesssignal"
+        Me.RadTextBoxControlAWGMindestmesssignal.ReadOnly = True
         '
         '
         '
@@ -2168,9 +2182,9 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlAWGMindesteingangsspannung
         '
-        Me.RadTextBoxControlAWGMindesteingangsspannung.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlAWGMindesteingangsspannung, "RadTextBoxControlAWGMindesteingangsspannung")
         Me.RadTextBoxControlAWGMindesteingangsspannung.Name = "RadTextBoxControlAWGMindesteingangsspannung"
+        Me.RadTextBoxControlAWGMindesteingangsspannung.ReadOnly = True
         '
         '
         '
@@ -2186,9 +2200,9 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlAWGSpeisespannung
         '
-        Me.RadTextBoxControlAWGSpeisespannung.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlAWGSpeisespannung, "RadTextBoxControlAWGSpeisespannung")
         Me.RadTextBoxControlAWGSpeisespannung.Name = "RadTextBoxControlAWGSpeisespannung"
+        Me.RadTextBoxControlAWGSpeisespannung.ReadOnly = True
         '
         '
         '
@@ -2204,9 +2218,9 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlAWGTeilungswerte
         '
-        Me.RadTextBoxControlAWGTeilungswerte.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlAWGTeilungswerte, "RadTextBoxControlAWGTeilungswerte")
         Me.RadTextBoxControlAWGTeilungswerte.Name = "RadTextBoxControlAWGTeilungswerte"
+        Me.RadTextBoxControlAWGTeilungswerte.ReadOnly = True
         '
         '
         '
@@ -2549,6 +2563,36 @@ Partial Class uco_3Kompatiblititaetsnachweis
         Me.RadGroupBoxWaage.RootElement.Margin = CType(resources.GetObject("RadGroupBoxWaage.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadGroupBoxWaage.RootElement.Text = resources.GetString("RadGroupBoxWaage.RootElement.Text")
         Me.RadGroupBoxWaage.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxWaage.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        '
+        'lblPflichtfeld6
+        '
+        resources.ApplyResources(Me.lblPflichtfeld6, "lblPflichtfeld6")
+        Me.lblPflichtfeld6.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld6.Name = "lblPflichtfeld6"
+        '
+        'lblPflichtfeld4
+        '
+        resources.ApplyResources(Me.lblPflichtfeld4, "lblPflichtfeld4")
+        Me.lblPflichtfeld4.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld4.Name = "lblPflichtfeld4"
+        '
+        'lblPflichtfeld2
+        '
+        resources.ApplyResources(Me.lblPflichtfeld2, "lblPflichtfeld2")
+        Me.lblPflichtfeld2.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld2.Name = "lblPflichtfeld2"
+        '
+        'lblPflichtfeld5
+        '
+        resources.ApplyResources(Me.lblPflichtfeld5, "lblPflichtfeld5")
+        Me.lblPflichtfeld5.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld5.Name = "lblPflichtfeld5"
+        '
+        'lblPflichtfeld3
+        '
+        resources.ApplyResources(Me.lblPflichtfeld3, "lblPflichtfeld3")
+        Me.lblPflichtfeld3.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld3.Name = "lblPflichtfeld3"
         '
         'Label13
         '
@@ -3017,6 +3061,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         'RadTextBoxControlWaageKabelquerschnitt
         '
         resources.ApplyResources(Me.RadTextBoxControlWaageKabelquerschnitt, "RadTextBoxControlWaageKabelquerschnitt")
+        Me.RadTextBoxControlWaageKabelquerschnitt.MaxLength = 10
         Me.RadTextBoxControlWaageKabelquerschnitt.Name = "RadTextBoxControlWaageKabelquerschnitt"
         '
         '
@@ -3033,6 +3078,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         'RadTextBoxControlWaageKabellaenge
         '
         resources.ApplyResources(Me.RadTextBoxControlWaageKabellaenge, "RadTextBoxControlWaageKabellaenge")
+        Me.RadTextBoxControlWaageKabellaenge.MaxLength = 5
         Me.RadTextBoxControlWaageKabellaenge.Name = "RadTextBoxControlWaageKabellaenge"
         '
         '
@@ -3208,9 +3254,9 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlWaageTemperaturbereichMax
         '
-        Me.RadTextBoxControlWaageTemperaturbereichMax.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlWaageTemperaturbereichMax, "RadTextBoxControlWaageTemperaturbereichMax")
         Me.RadTextBoxControlWaageTemperaturbereichMax.Name = "RadTextBoxControlWaageTemperaturbereichMax"
+        Me.RadTextBoxControlWaageTemperaturbereichMax.ReadOnly = True
         '
         '
         '
@@ -3260,6 +3306,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         'RadTextBoxControlWaageTotlast
         '
         resources.ApplyResources(Me.RadTextBoxControlWaageTotlast, "RadTextBoxControlWaageTotlast")
+        Me.RadTextBoxControlWaageTotlast.MaxLength = 20
         Me.RadTextBoxControlWaageTotlast.Name = "RadTextBoxControlWaageTotlast"
         '
         '
@@ -3275,9 +3322,9 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlWaageAdditiveTarahoechstlast
         '
-        Me.RadTextBoxControlWaageAdditiveTarahoechstlast.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlWaageAdditiveTarahoechstlast, "RadTextBoxControlWaageAdditiveTarahoechstlast")
         Me.RadTextBoxControlWaageAdditiveTarahoechstlast.Name = "RadTextBoxControlWaageAdditiveTarahoechstlast"
+        Me.RadTextBoxControlWaageAdditiveTarahoechstlast.ReadOnly = True
         '
         '
         '
@@ -3293,9 +3340,9 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlWaageTemperaturbereichMin
         '
-        Me.RadTextBoxControlWaageTemperaturbereichMin.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlWaageTemperaturbereichMin, "RadTextBoxControlWaageTemperaturbereichMin")
         Me.RadTextBoxControlWaageTemperaturbereichMin.Name = "RadTextBoxControlWaageTemperaturbereichMin"
+        Me.RadTextBoxControlWaageTemperaturbereichMin.ReadOnly = True
         '
         '
         '
@@ -3312,6 +3359,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         'RadTextBoxControlWaageEcklastzuschlag
         '
         resources.ApplyResources(Me.RadTextBoxControlWaageEcklastzuschlag, "RadTextBoxControlWaageEcklastzuschlag")
+        Me.RadTextBoxControlWaageEcklastzuschlag.MaxLength = 20
         Me.RadTextBoxControlWaageEcklastzuschlag.Name = "RadTextBoxControlWaageEcklastzuschlag"
         '
         '
@@ -3328,6 +3376,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         'RadTextBoxControlEinschaltnullstellbereich
         '
         resources.ApplyResources(Me.RadTextBoxControlEinschaltnullstellbereich, "RadTextBoxControlEinschaltnullstellbereich")
+        Me.RadTextBoxControlEinschaltnullstellbereich.MaxLength = 20
         Me.RadTextBoxControlEinschaltnullstellbereich.Name = "RadTextBoxControlEinschaltnullstellbereich"
         '
         '
@@ -3344,6 +3393,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         'RadTextBoxControlWaageAnzahlWaegezellen
         '
         resources.ApplyResources(Me.RadTextBoxControlWaageAnzahlWaegezellen, "RadTextBoxControlWaageAnzahlWaegezellen")
+        Me.RadTextBoxControlWaageAnzahlWaegezellen.MaxLength = 5
         Me.RadTextBoxControlWaageAnzahlWaegezellen.Name = "RadTextBoxControlWaageAnzahlWaegezellen"
         '
         '
@@ -3360,6 +3410,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         'RadTextBoxControlWaageUebersetzungsverhaeltnis
         '
         resources.ApplyResources(Me.RadTextBoxControlWaageUebersetzungsverhaeltnis, "RadTextBoxControlWaageUebersetzungsverhaeltnis")
+        Me.RadTextBoxControlWaageUebersetzungsverhaeltnis.MaxLength = 10
         Me.RadTextBoxControlWaageUebersetzungsverhaeltnis.Name = "RadTextBoxControlWaageUebersetzungsverhaeltnis"
         '
         '
@@ -3600,6 +3651,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         'RadTextBoxControlWaageEichwert3
         '
         resources.ApplyResources(Me.RadTextBoxControlWaageEichwert3, "RadTextBoxControlWaageEichwert3")
+        Me.RadTextBoxControlWaageEichwert3.MaxLength = 50
         Me.RadTextBoxControlWaageEichwert3.Name = "RadTextBoxControlWaageEichwert3"
         '
         '
@@ -3616,6 +3668,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         'RadTextBoxControlWaageHoechstlast3
         '
         resources.ApplyResources(Me.RadTextBoxControlWaageHoechstlast3, "RadTextBoxControlWaageHoechstlast3")
+        Me.RadTextBoxControlWaageHoechstlast3.MaxLength = 50
         Me.RadTextBoxControlWaageHoechstlast3.Name = "RadTextBoxControlWaageHoechstlast3"
         '
         '
@@ -3632,6 +3685,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         'RadTextBoxControlWaageEichwert2
         '
         resources.ApplyResources(Me.RadTextBoxControlWaageEichwert2, "RadTextBoxControlWaageEichwert2")
+        Me.RadTextBoxControlWaageEichwert2.MaxLength = 50
         Me.RadTextBoxControlWaageEichwert2.Name = "RadTextBoxControlWaageEichwert2"
         '
         '
@@ -3648,6 +3702,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         'RadTextBoxControlWaageHoechstlast2
         '
         resources.ApplyResources(Me.RadTextBoxControlWaageHoechstlast2, "RadTextBoxControlWaageHoechstlast2")
+        Me.RadTextBoxControlWaageHoechstlast2.MaxLength = 50
         Me.RadTextBoxControlWaageHoechstlast2.Name = "RadTextBoxControlWaageHoechstlast2"
         '
         '
@@ -3664,6 +3719,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         'RadTextBoxControlWaageEichwert1
         '
         resources.ApplyResources(Me.RadTextBoxControlWaageEichwert1, "RadTextBoxControlWaageEichwert1")
+        Me.RadTextBoxControlWaageEichwert1.MaxLength = 50
         Me.RadTextBoxControlWaageEichwert1.Name = "RadTextBoxControlWaageEichwert1"
         '
         '
@@ -3680,6 +3736,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         'RadTextBoxControlWaageHoechstlast1
         '
         resources.ApplyResources(Me.RadTextBoxControlWaageHoechstlast1, "RadTextBoxControlWaageHoechstlast1")
+        Me.RadTextBoxControlWaageHoechstlast1.MaxLength = 50
         Me.RadTextBoxControlWaageHoechstlast1.Name = "RadTextBoxControlWaageHoechstlast1"
         '
         '
@@ -3727,9 +3784,9 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         'RadTextBoxControlWaageKlasse
         '
-        Me.RadTextBoxControlWaageKlasse.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlWaageKlasse, "RadTextBoxControlWaageKlasse")
         Me.RadTextBoxControlWaageKlasse.Name = "RadTextBoxControlWaageKlasse"
+        Me.RadTextBoxControlWaageKlasse.ReadOnly = True
         '
         '
         '
@@ -3758,36 +3815,6 @@ Partial Class uco_3Kompatiblititaetsnachweis
         Me.lblWIKlasse.RootElement.Margin = CType(resources.GetObject("lblWIKlasse.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.lblWIKlasse.RootElement.Text = resources.GetString("lblWIKlasse.RootElement.Text")
         Me.lblWIKlasse.RootElement.TextOrientation = CType(resources.GetObject("lblWIKlasse.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        '
-        'lblPflichtfeld5
-        '
-        resources.ApplyResources(Me.lblPflichtfeld5, "lblPflichtfeld5")
-        Me.lblPflichtfeld5.ForeColor = System.Drawing.Color.Red
-        Me.lblPflichtfeld5.Name = "lblPflichtfeld5"
-        '
-        'lblPflichtfeld3
-        '
-        resources.ApplyResources(Me.lblPflichtfeld3, "lblPflichtfeld3")
-        Me.lblPflichtfeld3.ForeColor = System.Drawing.Color.Red
-        Me.lblPflichtfeld3.Name = "lblPflichtfeld3"
-        '
-        'lblPflichtfeld6
-        '
-        resources.ApplyResources(Me.lblPflichtfeld6, "lblPflichtfeld6")
-        Me.lblPflichtfeld6.ForeColor = System.Drawing.Color.Red
-        Me.lblPflichtfeld6.Name = "lblPflichtfeld6"
-        '
-        'lblPflichtfeld4
-        '
-        resources.ApplyResources(Me.lblPflichtfeld4, "lblPflichtfeld4")
-        Me.lblPflichtfeld4.ForeColor = System.Drawing.Color.Red
-        Me.lblPflichtfeld4.Name = "lblPflichtfeld4"
-        '
-        'lblPflichtfeld2
-        '
-        resources.ApplyResources(Me.lblPflichtfeld2, "lblPflichtfeld2")
-        Me.lblPflichtfeld2.ForeColor = System.Drawing.Color.Red
-        Me.lblPflichtfeld2.Name = "lblPflichtfeld2"
         '
         'uco_3Kompatiblititaetsnachweis
         '
