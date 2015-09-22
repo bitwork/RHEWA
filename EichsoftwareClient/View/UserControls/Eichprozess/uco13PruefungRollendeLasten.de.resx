@@ -117,11 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="lblBelastungsstelleLinks.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblBelastungsstelleLinks.RootElement.ToolTipText" xml:space="preserve">
-    <value />
+  <data name="RadButton1.Text" xml:space="preserve">
+    <value>Zeige EFG</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lblBelastungsstelleLinks.Size" type="System.Drawing.Size, System.Drawing">
@@ -130,23 +127,11 @@
   <data name="lblBelastungsstelleLinks.Text" xml:space="preserve">
     <value>Belastungsstelle</value>
   </data>
-  <data name="lblAuffahrtLinks1.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblAuffahrtLinks1.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="lblAuffahrtLinks1.Size" type="System.Drawing.Size, System.Drawing">
     <value>103, 18</value>
   </data>
   <data name="lblAuffahrtLinks1.Text" xml:space="preserve">
     <value>Auffahrt von links 1</value>
-  </data>
-  <data name="lblAuffahrtLinks2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblAuffahrtLinks2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
   </data>
   <data name="lblAuffahrtLinks2.Size" type="System.Drawing.Size, System.Drawing">
     <value>103, 18</value>
@@ -154,56 +139,20 @@
   <data name="lblAuffahrtLinks2.Text" xml:space="preserve">
     <value>Auffahrt von links 2</value>
   </data>
-  <data name="lblAuffahrtLinks3.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblAuffahrtLinks3.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="lblAuffahrtLinks3.Size" type="System.Drawing.Size, System.Drawing">
     <value>103, 18</value>
   </data>
   <data name="lblAuffahrtLinks3.Text" xml:space="preserve">
     <value>Auffahrt von links 3</value>
   </data>
-  <data name="lblLastLinks.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblLastLinks.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="lblLastLinks.Text" xml:space="preserve">
     <value>Last [kg]</value>
-  </data>
-  <data name="lblAnzeigeLinks.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblAnzeigeLinks.RootElement.ToolTipText" xml:space="preserve">
-    <value />
   </data>
   <data name="lblAnzeigeLinks.Text" xml:space="preserve">
     <value>Anzeige [kg]</value>
   </data>
-  <data name="lblFehlerLinks.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblFehlerLinks.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="lblFehlerLinks.Text" xml:space="preserve">
     <value>Fehler [kg]</value>
-  </data>
-  <data name="lblEFGWertLinks.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblEFGWertLinks.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblEFGLinks.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblEFGLinks.RootElement.ToolTipText" xml:space="preserve">
-    <value />
   </data>
   <data name="lblEFGLinks.Size" type="System.Drawing.Size, System.Drawing">
     <value>51, 18</value>
@@ -211,236 +160,8 @@
   <data name="lblEFGLinks.Text" xml:space="preserve">
     <value>EFG [kg]</value>
   </data>
-  <data name="RadTextBoxControlLastLinks1.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlLastLinks1.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControllastLinks3.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControllastLinks3.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlLastLinks2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlLastLinks2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlAnzeigeLinks1.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlAnzeigeLinks1.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlAnzeigeLinks2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlAnzeigeLinks2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlAnzeigeLinks3.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlAnzeigeLinks3.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlFehlerLinks1.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlFehlerLinks1.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlFehlerLinks2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlFehlerLinks2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlFehlerLinks3.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlFehlerLinks3.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxAuffahrtLinks1.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxAuffahrtLinks1.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxAuffahrtLinks2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxAuffahrtLinks2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxAuffahrtLinks3.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxAuffahrtLinks3.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxlblAuffahrtRechts3.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxlblAuffahrtRechts3.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxlblAuffahrtRechts2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxlblAuffahrtRechts2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxlblAuffahrtRechts1.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxlblAuffahrtRechts1.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlFehlerRechts3.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlFehlerRechts3.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlFehlerRechts2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlFehlerRechts2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlFehlerRechts1.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlFehlerRechts1.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlAnzeigeRechts3.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlAnzeigeRechts3.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlAnzeigeRechts2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlAnzeigeRechts2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlAnzeigeRechts1.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlAnzeigeRechts1.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlLastRechts2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlLastRechts2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlLastRechts3.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlLastRechts3.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlLastRechts1.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlLastRechts1.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblEFGWertRechts.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblEFGWertRechts.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblEFGRechts.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblEFGRechts.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblEFGRechts.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 18</value>
-  </data>
-  <data name="lblEFGRechts.Text" xml:space="preserve">
-    <value>EFG [kg]</value>
-  </data>
-  <data name="lblFehlerRechts.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblFehlerRechts.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblFehlerRechts.Text" xml:space="preserve">
-    <value>Fehler [kg]</value>
-  </data>
-  <data name="lblAnzeigeRechts.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblAnzeigeRechts.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblAnzeigeRechts.Text" xml:space="preserve">
-    <value>Anzeige [kg]</value>
-  </data>
-  <data name="lblLastRechts.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblLastRechts.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblLastRechts.Text" xml:space="preserve">
-    <value>Last [kg]</value>
-  </data>
-  <data name="lblAuffahrtRechts3.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblAuffahrtRechts3.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblAuffahrtRechts3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 18</value>
-  </data>
-  <data name="lblAuffahrtRechts3.Text" xml:space="preserve">
-    <value>Auffahrt von rechts 3</value>
-  </data>
-  <data name="lblAuffahrtRechts2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblAuffahrtRechts2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblAuffahrtRechts2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 18</value>
-  </data>
-  <data name="lblAuffahrtRechts2.Text" xml:space="preserve">
-    <value>Auffahrt von rechts 2</value>
-  </data>
-  <data name="lblAuffahrtRechts1.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblAuffahrtRechts1.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblAuffahrtRechts1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 18</value>
-  </data>
-  <data name="lblAuffahrtRechts1.Text" xml:space="preserve">
-    <value>Auffahrt von rechts 1</value>
-  </data>
-  <data name="lblBelastungsstelleRechts.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblBelastungsstelleRechts.RootElement.ToolTipText" xml:space="preserve">
-    <value />
+  <data name="RadButtonShowEFG.Text" xml:space="preserve">
+    <value>Zeige EFG</value>
   </data>
   <data name="lblBelastungsstelleRechts.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 18</value>
@@ -448,22 +169,37 @@
   <data name="lblBelastungsstelleRechts.Text" xml:space="preserve">
     <value>Belastungsstelle</value>
   </data>
-  <data name="lblEichfehlergrenze.RootElement.KeyTip" xml:space="preserve">
-    <value />
+  <data name="lblAuffahrtRechts1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 18</value>
   </data>
-  <data name="lblEichfehlergrenze.RootElement.ToolTipText" xml:space="preserve">
-    <value />
+  <data name="lblAuffahrtRechts1.Text" xml:space="preserve">
+    <value>Auffahrt von rechts 1</value>
   </data>
-  <data name="lblEichfehlergrenze.Size" type="System.Drawing.Size, System.Drawing">
-    <value>398, 30</value>
+  <data name="lblAuffahrtRechts2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 18</value>
   </data>
-  <data name="lblEichfehlergrenze.Text" xml:space="preserve">
-    <value>Die Eichfehlergrenzen werden eingehalten</value>
+  <data name="lblAuffahrtRechts2.Text" xml:space="preserve">
+    <value>Auffahrt von rechts 2</value>
   </data>
-  <data name="RadButtonShowEFG.RootElement.KeyTip" xml:space="preserve">
-    <value />
+  <data name="lblAuffahrtRechts3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 18</value>
   </data>
-  <data name="RadButtonShowEFG.RootElement.ToolTipText" xml:space="preserve">
-    <value />
+  <data name="lblAuffahrtRechts3.Text" xml:space="preserve">
+    <value>Auffahrt von rechts 3</value>
+  </data>
+  <data name="lblLastRechts.Text" xml:space="preserve">
+    <value>Last [kg]</value>
+  </data>
+  <data name="lblAnzeigeRechts.Text" xml:space="preserve">
+    <value>Anzeige [kg]</value>
+  </data>
+  <data name="lblFehlerRechts.Text" xml:space="preserve">
+    <value>Fehler [kg]</value>
+  </data>
+  <data name="lblEFGRechts.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 18</value>
+  </data>
+  <data name="lblEFGRechts.Text" xml:space="preserve">
+    <value>EFG [kg]</value>
   </data>
 </root>

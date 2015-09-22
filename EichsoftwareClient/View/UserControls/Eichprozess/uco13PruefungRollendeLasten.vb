@@ -859,7 +859,6 @@
         Me.lblEFGRechts.Text = resources.GetString("lblEFGRechts.Text")
         Me.lblEFGWertLinks.Text = resources.GetString("lblEFGWertLinks.Text")
         Me.lblEFGWertRechts.Text = resources.GetString("lblEFGWertRechts.Text")
-        Me.lblEichfehlergrenze.Text = resources.GetString("lblEichfehlergrenze.Text")
         Me.lblFehlerLinks.Text = resources.GetString("lblFehlerLinks.Text")
         Me.lblFehlerRechts.Text = resources.GetString("lblFehlerRechts.Text")
         Me.lblLastLinks.Text = resources.GetString("lblLastLinks.Text")
