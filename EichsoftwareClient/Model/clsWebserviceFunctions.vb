@@ -888,7 +888,11 @@ Public Class clsWebserviceFunctions
             End If
 
             If bolSetSperrung Then
-                result = webContext.SetSperrung(bolSperren, AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, EichprozessVorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                Try
+                    result = webContext.SetSperrung(bolSperren, AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, EichprozessVorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                Catch ex As ServiceModel.EndpointNotFoundException
+                    Return False 'kann nicht entpserren wenn offline
+                End Try
 
                 If result = "" Then
                     Return True

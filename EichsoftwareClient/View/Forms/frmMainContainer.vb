@@ -977,10 +977,11 @@ Public Class FrmMainContainer
     ''' <remarks></remarks>
     Private Sub FrmMainContainer_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         If DialogModus = enuDialogModus.korrigierend Or DialogModus = enuDialogModus.lesend Then
-            If Not CurrentEichprozess Is Nothing Then
-                clsWebserviceFunctions.SetzeSperrung(False, CurrentEichprozess.Vorgangsnummer)
+            If AktuellerBenutzer.Instance.Lizenz.RHEWALizenz = True Then
+                If Not CurrentEichprozess Is Nothing Then
+                    clsWebserviceFunctions.SetzeSperrung(False, CurrentEichprozess.Vorgangsnummer)
+                End If
             End If
-
         End If
         If Not AktuellerBenutzer.Instance Is Nothing And Not Me._CurrentUco Is Nothing Then
             SpeichereGridLayout()
