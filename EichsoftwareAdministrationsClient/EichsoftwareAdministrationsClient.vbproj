@@ -77,10 +77,10 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>DB455856B81E3DAD58038D20B87E58618AEECDD9</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>3378DFAB577EC7BFABBB8113407E6218C626C7A5</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>EichsoftwareAdministrationsClient_1_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>EichsoftwareAdministrationsClient_2_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -360,6 +360,7 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="EichsoftwareAdministrationsClient_1_TemporaryKey.pfx" />
+    <None Include="EichsoftwareAdministrationsClient_2_TemporaryKey.pfx" />
     <None Include="EichsoftwareAdministrationsClient_TemporaryKey.pfx" />
     <None Include="EntityModelDatabaseAdminClient.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -436,7 +437,7 @@
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4 %28x86 und x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

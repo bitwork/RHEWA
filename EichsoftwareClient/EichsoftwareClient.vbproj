@@ -40,7 +40,7 @@
     <ProductName>RHEWA Konformitätsbewertungssoftware</ProductName>
     <PublisherName>RHEWA Waagenfabrik GmbH</PublisherName>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>77</ApplicationRevision>
+    <ApplicationRevision>79</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -84,10 +84,10 @@
     <ApplicationIcon>Resources\weighing_mashine.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>C2C717DFBA01957B7925B7596213494666982F4C</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>AC3B89EC21F34DA2CD1C660177126C7FF6894922</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>EichsoftwareClient_2_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>EichsoftwareClient_3_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -851,6 +851,7 @@
     <None Include="ClassDiagram1.cd" />
     <None Include="EichsoftwareClient_1_TemporaryKey.pfx" />
     <None Include="EichsoftwareClient_2_TemporaryKey.pfx" />
+    <None Include="EichsoftwareClient_3_TemporaryKey.pfx" />
     <None Include="EichsoftwareClient_TemporaryKey.pfx" />
     <None Include="EntityModelDatabaseClient.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
