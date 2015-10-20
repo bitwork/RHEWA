@@ -288,7 +288,9 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <Content Include="packages.config" />
-    <Content Include="Web %28DEBUG%29.config" />
+    <Content Include="Web %28DEBUG%29.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web STRATO.config">
       <SubType>Designer</SubType>
     </Content>
