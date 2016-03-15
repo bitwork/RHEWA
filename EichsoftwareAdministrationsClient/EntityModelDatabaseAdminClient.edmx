@@ -91,6 +91,8 @@
           <Property Name="HinweismarkeGelochtAnzahlMeldestand" Type="int" />
           <Property Name="GruenesMAnzahlMeldestand" Type="int" />
           <Property Name="CEAnzahlMeldestand" Type="int" />
+          <Property Name="CE2016Anzahl" Type="int" />
+          <Property Name="CE2016AnzahlMeldestand" Type="int" />
           <Property Name="zerstoerteMarke0103" Type="int" />
           <Property Name="FehlmengeBenannteStelle0103" Type="int" />
           <Property Name="FehlmengeBenannteStelle0111" Type="int" />
@@ -908,6 +910,8 @@
           <Property Type="String" Name="Bemerkung" MaxLength="999" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="FK_BenutzerID" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="ZurBearbeitungGesperrtDurch" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="CE2016Anzahl" />
+          <Property Type="Int32" Name="CE2016AnzahlMeldestand" />
         </EntityType>
         <Association Name="FK_ServerFirmenZusatzdaten_Firmen">
           <End Type="EichenModel.Firmen" Role="Firmen" Multiplicity="0..1" />
@@ -1413,6 +1417,8 @@
           <EntitySetMapping Name="ServerEichmarkenverwaltung">
             <EntityTypeMapping TypeName="EichenModel.ServerEichmarkenverwaltung">
               <MappingFragment StoreEntitySet="ServerEichmarkenverwaltung">
+                <ScalarProperty Name="CE2016AnzahlMeldestand" ColumnName="CE2016AnzahlMeldestand" />
+                <ScalarProperty Name="CE2016Anzahl" ColumnName="CE2016Anzahl" />
                 <ScalarProperty Name="ZurBearbeitungGesperrtDurch" ColumnName="ZurBearbeitungGesperrtDurch" />
                 <ScalarProperty Name="FK_BenutzerID" ColumnName="FK_BenutzerID" />
                 <ScalarProperty Name="Bemerkung" ColumnName="Bemerkung" />

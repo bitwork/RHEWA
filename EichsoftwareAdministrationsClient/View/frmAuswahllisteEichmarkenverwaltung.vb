@@ -104,6 +104,10 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
                         col.HeaderText = "CE Anzahl"
                     ElseIf col.HeaderText.Equals("CEAnzahlMeldestand") Then
                         col.HeaderText = "CE Anzahl Meldestand"
+                    ElseIf col.HeaderText.Equals("CE2016Anzahl") Then
+                        col.HeaderText = "CE 2016 Anzahl"
+                    ElseIf col.HeaderText.Equals("CE2016AnzahlMeldestand") Then
+                        col.HeaderText = "CE 2016 Anzahl Meldestand"
                     ElseIf col.HeaderText.Equals("Eichsiegel13x13Anzahl") Then
                         col.HeaderText = "  Eichsiegel 13x13 Anzahl"
                     ElseIf col.HeaderText.Equals("Eichsiegel13x13AnzahlMeldestand") Then
@@ -162,81 +166,83 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
         'Eichmarken Grid
         Using Context As New EichenEntities
             'Daten aus eichmarkenverwaltungstabelle und Benutzertabelle zusammenführen. Fürs Databinding Casten in einen neuen Typen
-            Dim Data = From Eichmarken In Context.ServerEichmarkenverwaltung
-            Join Benutzer In Context.Benutzer On Eichmarken.FK_BenutzerID Equals Benutzer.ID
-            Join Firma In Context.Firmen On Firma.ID Equals Benutzer.Firma_FK
-            Select New With {
-                Eichmarken.ID, _
-                Benutzer.Firma_FK, _
-                Eichmarken.ZurBearbeitungGesperrtDurch, _
-                Benutzer.Nachname, _
-                Benutzer.Vorname, _
-                .Firma = Firma.Name, _
-                Firma.Land, _
-                Eichmarken.HEKennung, _
-                Eichmarken.Bemerkung, _
-                Eichmarken.BenannteStelleAnzahl, _
-                Eichmarken.BenannteStelleAnzahlMeldestand, _
-                Eichmarken.CEAnzahl, _
-                Eichmarken.CEAnzahlMeldestand, _
-                Eichmarken.Eichsiegel13x13Anzahl, _
-                Eichmarken.Eichsiegel13x13AnzahlMeldestand, _
-                Eichmarken.EichsiegelRundAnzahl, _
-                Eichmarken.EichsiegelRundAnzahlMeldestand, _
-                Eichmarken.GruenesMAnzahl, _
-                Eichmarken.GruenesMAnzahlMeldestand, _
-                Eichmarken.HinweismarkeGelochtAnzahl, _
-                Eichmarken.HinweismarkeGelochtAnzahlMeldestand, _
-                Eichmarken.FehlmengeBenannteStelle0103, _
-                Eichmarken.FehlmengeBenannteStelle0111, _
-                Eichmarken.FehlmengeHinweismarken, _
-                Eichmarken.FehlmengeSicherungsmarkegross, _
-                Eichmarken.FehlmengeSicherungsmarkeklein, _
-                Eichmarken.zerstoerteMarke0103, _
-                Eichmarken.Archiv2007_BenannteStelle0298, _
-                Eichmarken.Archiv2007_Eichungen, _
-                Eichmarken.Archiv2007_Hinweismarke, _
-                Eichmarken.Archiv2007_SicherungsmarkeGross, _
-                Eichmarken.Archiv2007_SicherungsmarkeKlein, _
-                Eichmarken.Archiv2008_BenannteStelle0298, _
-                Eichmarken.Archiv2008_Eichungen, _
-                Eichmarken.Archiv2008_Hinweismarke, _
-                Eichmarken.Archiv2008_SicherungsmarkeGross, _
-                Eichmarken.Archiv2008_SicherungsmarkeKlein, _
-                Eichmarken.Archiv2009_BenannteStelle0298, _
-                Eichmarken.Archiv2009_Eichungen, _
-                Eichmarken.Archiv2009_Hinweismarke, _
-                Eichmarken.Archiv2009_SicherungsmarkeGross, _
-                Eichmarken.Archiv2009_SicherungsmarkeKlein, _
-                Eichmarken.Archiv2010_BenannteStelle0298, _
-                Eichmarken.Archiv2010_Eichungen, _
-                Eichmarken.Archiv2010_Hinweismarke, _
-                Eichmarken.Archiv2010_SicherungsmarkeGross, _
-                Eichmarken.Archiv2010_SicherungsmarkeKlein, _
-                Eichmarken.Archiv2011_BenannteStelle0298, _
-                Eichmarken.Archiv2011_BenannteStelle0103, _
-                Eichmarken.Archiv2011_Eichungen, _
-                Eichmarken.Archiv2011_Hinweismarke, _
-                Eichmarken.Archiv2011_SicherungsmarkeGross, _
-                Eichmarken.Archiv2011_SicherungsmarkeKlein, _
-                Eichmarken.Archiv2012_BenannteStelle0103, _
-                Eichmarken.Archiv2012_Eichungen, _
-                Eichmarken.Archiv2012_Hinweismarke, _
-                Eichmarken.Archiv2012_SicherungsmarkeGross, _
-                Eichmarken.Archiv2012_SicherungsmarkeKlein, _
-                Eichmarken.Archiv2013_BenannteStelle0103, _
-                Eichmarken.Archiv2013_Eichungen, _
-                Eichmarken.Archiv2013_Hinweismarke, _
-                Eichmarken.Archiv2013_SicherungsmarkeGross, _
-                Eichmarken.Archiv2013_SicherungsmarkeKlein, _
-                Eichmarken.Archiv2014_BenannteStelle0103, _
-                Eichmarken.Archiv2014_BenannteStelle0111, _
-                Eichmarken.Archiv2014_Eichungen, _
-                Eichmarken.Archiv2014_Hinweismarke, _
-                Eichmarken.Archiv2014_SicherungsmarkeGross, _
-                Eichmarken.Archiv2014_SicherungsmarkeKlein, _
-                Eichmarken.FK_BenutzerID
-            }
+                Dim Data = From Eichmarken In Context.ServerEichmarkenverwaltung
+                Join Benutzer In Context.Benutzer On Eichmarken.FK_BenutzerID Equals Benutzer.ID
+                Join Firma In Context.Firmen On Firma.ID Equals Benutzer.Firma_FK
+                Select New With {
+                    Eichmarken.ID, _
+                    Benutzer.Firma_FK, _
+                    Eichmarken.ZurBearbeitungGesperrtDurch, _
+                    Benutzer.Nachname, _
+                    Benutzer.Vorname, _
+                    .Firma = Firma.Name, _
+                    Firma.Land, _
+                    Eichmarken.HEKennung, _
+                    Eichmarken.Bemerkung, _
+                    Eichmarken.BenannteStelleAnzahl, _
+                    Eichmarken.BenannteStelleAnzahlMeldestand, _
+                    Eichmarken.CEAnzahl, _
+                    Eichmarken.CEAnzahlMeldestand, _
+                      Eichmarken.CE2016Anzahl, _
+                    Eichmarken.CE2016AnzahlMeldestand, _
+                    Eichmarken.Eichsiegel13x13Anzahl, _
+                    Eichmarken.Eichsiegel13x13AnzahlMeldestand, _
+                    Eichmarken.EichsiegelRundAnzahl, _
+                    Eichmarken.EichsiegelRundAnzahlMeldestand, _
+                    Eichmarken.GruenesMAnzahl, _
+                    Eichmarken.GruenesMAnzahlMeldestand, _
+                    Eichmarken.HinweismarkeGelochtAnzahl, _
+                    Eichmarken.HinweismarkeGelochtAnzahlMeldestand, _
+                    Eichmarken.FehlmengeBenannteStelle0103, _
+                    Eichmarken.FehlmengeBenannteStelle0111, _
+                    Eichmarken.FehlmengeHinweismarken, _
+                    Eichmarken.FehlmengeSicherungsmarkegross, _
+                    Eichmarken.FehlmengeSicherungsmarkeklein, _
+                    Eichmarken.zerstoerteMarke0103, _
+                    Eichmarken.Archiv2007_BenannteStelle0298, _
+                    Eichmarken.Archiv2007_Eichungen, _
+                    Eichmarken.Archiv2007_Hinweismarke, _
+                    Eichmarken.Archiv2007_SicherungsmarkeGross, _
+                    Eichmarken.Archiv2007_SicherungsmarkeKlein, _
+                    Eichmarken.Archiv2008_BenannteStelle0298, _
+                    Eichmarken.Archiv2008_Eichungen, _
+                    Eichmarken.Archiv2008_Hinweismarke, _
+                    Eichmarken.Archiv2008_SicherungsmarkeGross, _
+                    Eichmarken.Archiv2008_SicherungsmarkeKlein, _
+                    Eichmarken.Archiv2009_BenannteStelle0298, _
+                    Eichmarken.Archiv2009_Eichungen, _
+                    Eichmarken.Archiv2009_Hinweismarke, _
+                    Eichmarken.Archiv2009_SicherungsmarkeGross, _
+                    Eichmarken.Archiv2009_SicherungsmarkeKlein, _
+                    Eichmarken.Archiv2010_BenannteStelle0298, _
+                    Eichmarken.Archiv2010_Eichungen, _
+                    Eichmarken.Archiv2010_Hinweismarke, _
+                    Eichmarken.Archiv2010_SicherungsmarkeGross, _
+                    Eichmarken.Archiv2010_SicherungsmarkeKlein, _
+                    Eichmarken.Archiv2011_BenannteStelle0298, _
+                    Eichmarken.Archiv2011_BenannteStelle0103, _
+                    Eichmarken.Archiv2011_Eichungen, _
+                    Eichmarken.Archiv2011_Hinweismarke, _
+                    Eichmarken.Archiv2011_SicherungsmarkeGross, _
+                    Eichmarken.Archiv2011_SicherungsmarkeKlein, _
+                    Eichmarken.Archiv2012_BenannteStelle0103, _
+                    Eichmarken.Archiv2012_Eichungen, _
+                    Eichmarken.Archiv2012_Hinweismarke, _
+                    Eichmarken.Archiv2012_SicherungsmarkeGross, _
+                    Eichmarken.Archiv2012_SicherungsmarkeKlein, _
+                    Eichmarken.Archiv2013_BenannteStelle0103, _
+                    Eichmarken.Archiv2013_Eichungen, _
+                    Eichmarken.Archiv2013_Hinweismarke, _
+                    Eichmarken.Archiv2013_SicherungsmarkeGross, _
+                    Eichmarken.Archiv2013_SicherungsmarkeKlein, _
+                    Eichmarken.Archiv2014_BenannteStelle0103, _
+                    Eichmarken.Archiv2014_BenannteStelle0111, _
+                    Eichmarken.Archiv2014_Eichungen, _
+                    Eichmarken.Archiv2014_Hinweismarke, _
+                    Eichmarken.Archiv2014_SicherungsmarkeGross, _
+                    Eichmarken.Archiv2014_SicherungsmarkeKlein, _
+                    Eichmarken.FK_BenutzerID
+                }
 
 
             'databinding
@@ -531,6 +537,8 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
             TargetObj.BenannteStelleAnzahlMeldestand = SourceObj.BenannteStelleAnzahlMeldestand
             TargetObj.CEAnzahl = SourceObj.CEAnzahl
             TargetObj.CEAnzahlMeldestand = SourceObj.CEAnzahlMeldestand
+            TargetObj.CE2016Anzahl = SourceObj.CE2016Anzahl
+            TargetObj.CE2016AnzahlMeldestand = SourceObj.CE2016AnzahlMeldestand
             TargetObj.Eichsiegel13x13Anzahl = SourceObj.Eichsiegel13x13Anzahl
             TargetObj.Eichsiegel13x13AnzahlMeldestand = SourceObj.Eichsiegel13x13AnzahlMeldestand
             TargetObj.EichsiegelRundAnzahl = SourceObj.EichsiegelRundAnzahl
@@ -752,6 +760,10 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
                     e.CellElement.GradientStyle = Telerik.WinControls.GradientStyles.Solid
                     e.CellElement.BackColor = Color.FromArgb(255, 209, 140)
                 ElseIf (e.Column.Name = "CEAnzahl" And e.Row.Cells("CEAnzahl").Value <= e.Row.Cells("CEAnzahlMeldestand").Value) Then
+                    e.CellElement.DrawFill = True
+                    e.CellElement.GradientStyle = Telerik.WinControls.GradientStyles.Solid
+                    e.CellElement.BackColor = Color.FromArgb(255, 209, 140)
+                ElseIf (e.Column.Name = "CE2016Anzahl" And e.Row.Cells("CE2016Anzahl").Value <= e.Row.Cells("CE2016AnzahlMeldestand").Value) Then
                     e.CellElement.DrawFill = True
                     e.CellElement.GradientStyle = Telerik.WinControls.GradientStyles.Solid
                     e.CellElement.BackColor = Color.FromArgb(255, 209, 140)
