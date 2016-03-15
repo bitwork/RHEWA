@@ -182,8 +182,10 @@
           <Property Name="Beschaffenheitspruefung_Genauigkeitsklasse" Type="nvarchar" MaxLength="50" />
           <Property Name="Beschaffenheitspruefung_Pruefintervall" Type="nvarchar" MaxLength="50" />
           <Property Name="Beschaffenheitspruefung_LetztePruefung" Type="nvarchar" MaxLength="50" />
-          <Property Name="Beschaffenheitspruefung_Pruefscheinnummer" Type="nvarchar" MaxLength="50" />
+          <Property Name="Beschaffenheitspruefung_Pruefscheinnummer" Type="nvarchar" />
           <Property Name="Beschaffenheitspruefung_EichfahrzeugFirma" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sicherung_CE2016" Type="bit" />
+          <Property Name="Sicherung_CE2016Anzahl" Type="int" />
         </EntityType>
         <EntityType Name="Eichprozess">
           <Key>
@@ -996,6 +998,8 @@
           <Property Type="String" Name="Beschaffenheitspruefung_LetztePruefung" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Beschaffenheitspruefung_Pruefscheinnummer" FixedLength="false" Unicode="true" MaxLength="4000" />
           <Property Type="String" Name="Beschaffenheitspruefung_EichfahrzeugFirma" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="Sicherung_CE2016" />
+          <Property Type="Int32" Name="Sicherung_CE2016Anzahl" />
         </EntityType>
         <EntityType Name="Eichprozess">
           <Key>
@@ -1654,6 +1658,8 @@
           <EntitySetMapping Name="Eichprotokoll">
             <EntityTypeMapping TypeName="EichsoftwareClientdatabaseModel.Eichprotokoll">
               <MappingFragment StoreEntitySet="Eichprotokoll">
+                <ScalarProperty Name="Sicherung_CE2016Anzahl" ColumnName="Sicherung_CE2016Anzahl" />
+                <ScalarProperty Name="Sicherung_CE2016" ColumnName="Sicherung_CE2016" />
                 <ScalarProperty Name="Beschaffenheitspruefung_EichfahrzeugFirma" ColumnName="Beschaffenheitspruefung_EichfahrzeugFirma" />
                 <ScalarProperty Name="Beschaffenheitspruefung_Pruefscheinnummer" ColumnName="Beschaffenheitspruefung_Pruefscheinnummer" />
                 <ScalarProperty Name="Beschaffenheitspruefung_LetztePruefung" ColumnName="Beschaffenheitspruefung_LetztePruefung" />

@@ -184,6 +184,10 @@
   <data name="lblBemerkungen.Text" xml:space="preserve">
     <value>Spostrzeżenia:</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="RadTextBoxControlBemerkungen.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="lblAnzahl.Size" type="System.Drawing.Size, System.Drawing">
     <value>29, 18</value>
   </data>

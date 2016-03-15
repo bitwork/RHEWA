@@ -1349,7 +1349,7 @@ Public Class EichsoftwareWebservice
     ''' <returns></returns>
     ''' <remarks></remarks>
     Public Function AddEichmarkenverwaltung(ByVal HEKennung As String, Lizenzschluessel As String, ByVal BenutzerIDFK As String, ByVal AnzahlBenannteStelle As Integer, ByVal AnzahlEichsiegel13x13 As Integer, _
-                                            ByVal AnzahlEichsiegelRund As Integer, ByVal AnzahlHinweismarke As Integer, ByVal AnzahlGruenesM As Integer, ByVal AnzahlCE As Integer, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements IEichsoftwareWebservice.AddEichmarkenverwaltung
+                                            ByVal AnzahlEichsiegelRund As Integer, ByVal AnzahlHinweismarke As Integer, ByVal AnzahlGruenesM As Integer, ByVal AnzahlCE As Integer, ByVal AnzahlCE2016 As Integer, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements IEichsoftwareWebservice.AddEichmarkenverwaltung
         ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
         If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
         SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Aktualisiere Eichmarkenverwaltung")
@@ -1385,6 +1385,11 @@ Public Class EichsoftwareWebservice
                     Element.CEAnzahl -= (AnzahlCE - Element.CEAnzahl)
                 Catch e As Exception
                 End Try
+                Try
+                    Element.CE2016Anzahl -= (AnzahlCE2016 - Element.CE2016Anzahl)
+                Catch e As Exception
+                End Try
+
 
                 Try
                     DbContext.SaveChanges()

@@ -24,9 +24,14 @@ Partial Class uco19EichtechnischeSicherung
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco19EichtechnischeSicherung))
         Me.RadScrollablePanel1 = New Telerik.WinControls.UI.RadScrollablePanel()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.PictureBoxCE2016 = New System.Windows.Forms.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.lblCE2016Kennzeichen = New Telerik.WinControls.UI.RadLabel()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.RadTextBoxControlCE2016Kennzeichen = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadCheckBoxCE2016Kennzeichen = New Telerik.WinControls.UI.RadCheckBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -73,6 +78,10 @@ Partial Class uco19EichtechnischeSicherung
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanel1.PanelContainer.SuspendLayout()
         Me.RadScrollablePanel1.SuspendLayout()
+        CType(Me.PictureBoxCE2016, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblCE2016Kennzeichen, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxControlCE2016Kennzeichen, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadCheckBoxCE2016Kennzeichen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblSicherungshinweise, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblBenannteStelle, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -122,9 +131,14 @@ Partial Class uco19EichtechnischeSicherung
         'RadScrollablePanel1.PanelContainer
         '
         resources.ApplyResources(Me.RadScrollablePanel1.PanelContainer, "RadScrollablePanel1.PanelContainer")
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label7)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label6)
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.PictureBoxCE2016)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label5)
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.lblCE2016Kennzeichen)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label4)
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadTextBoxControlCE2016Kennzeichen)
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadCheckBoxCE2016Kennzeichen)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label3)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label2)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label1)
@@ -176,57 +190,139 @@ Partial Class uco19EichtechnischeSicherung
         Me.RadScrollablePanel1.RootElement.Alignment = CType(resources.GetObject("RadScrollablePanel1.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadScrollablePanel1.RootElement.AngleTransform = CType(resources.GetObject("RadScrollablePanel1.RootElement.AngleTransform"), Single)
         Me.RadScrollablePanel1.RootElement.FlipText = CType(resources.GetObject("RadScrollablePanel1.RootElement.FlipText"), Boolean)
-        Me.RadScrollablePanel1.RootElement.KeyTip = resources.GetString("RadScrollablePanel1.RootElement.KeyTip")
+        Me.RadScrollablePanel1.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadScrollablePanel1.RootElement.Margin = CType(resources.GetObject("RadScrollablePanel1.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadScrollablePanel1.RootElement.Text = resources.GetString("RadScrollablePanel1.RootElement.Text")
         Me.RadScrollablePanel1.RootElement.TextOrientation = CType(resources.GetObject("RadScrollablePanel1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadScrollablePanel1.RootElement.ToolTipText = resources.GetString("RadScrollablePanel1.RootElement.ToolTipText")
+        Me.RadScrollablePanel1.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        '
+        'Label7
+        '
+        resources.ApplyResources(Me.Label7, "Label7")
+        Me.Label7.ForeColor = System.Drawing.Color.Red
+        Me.Label7.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.Label7.Name = "Label7"
         '
         'Label6
         '
         resources.ApplyResources(Me.Label6, "Label6")
         Me.Label6.ForeColor = System.Drawing.Color.Red
+        Me.Label6.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.Label6.Name = "Label6"
+        '
+        'PictureBoxCE2016
+        '
+        resources.ApplyResources(Me.PictureBoxCE2016, "PictureBoxCE2016")
+        Me.PictureBoxCE2016.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        Me.PictureBoxCE2016.Name = "PictureBoxCE2016"
+        Me.PictureBoxCE2016.TabStop = False
         '
         'Label5
         '
         resources.ApplyResources(Me.Label5, "Label5")
         Me.Label5.ForeColor = System.Drawing.Color.Red
+        Me.Label5.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.Label5.Name = "Label5"
+        '
+        'lblCE2016Kennzeichen
+        '
+        resources.ApplyResources(Me.lblCE2016Kennzeichen, "lblCE2016Kennzeichen")
+        Me.lblCE2016Kennzeichen.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.lblCE2016Kennzeichen.Name = "lblCE2016Kennzeichen"
+        '
+        '
+        '
+        Me.lblCE2016Kennzeichen.RootElement.AccessibleDescription = resources.GetString("lblCE2016Kennzeichen.RootElement.AccessibleDescription")
+        Me.lblCE2016Kennzeichen.RootElement.AccessibleName = resources.GetString("lblCE2016Kennzeichen.RootElement.AccessibleName")
+        Me.lblCE2016Kennzeichen.RootElement.Alignment = CType(resources.GetObject("lblCE2016Kennzeichen.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.lblCE2016Kennzeichen.RootElement.AngleTransform = CType(resources.GetObject("lblCE2016Kennzeichen.RootElement.AngleTransform"), Single)
+        Me.lblCE2016Kennzeichen.RootElement.FlipText = CType(resources.GetObject("lblCE2016Kennzeichen.RootElement.FlipText"), Boolean)
+        Me.lblCE2016Kennzeichen.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.lblCE2016Kennzeichen.RootElement.Margin = CType(resources.GetObject("lblCE2016Kennzeichen.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.lblCE2016Kennzeichen.RootElement.Text = resources.GetString("lblCE2016Kennzeichen.RootElement.Text")
+        Me.lblCE2016Kennzeichen.RootElement.TextOrientation = CType(resources.GetObject("lblCE2016Kennzeichen.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblCE2016Kennzeichen.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         'Label4
         '
         resources.ApplyResources(Me.Label4, "Label4")
         Me.Label4.ForeColor = System.Drawing.Color.Red
+        Me.Label4.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.Label4.Name = "Label4"
+        '
+        'RadTextBoxControlCE2016Kennzeichen
+        '
+        resources.ApplyResources(Me.RadTextBoxControlCE2016Kennzeichen, "RadTextBoxControlCE2016Kennzeichen")
+        Me.RadTextBoxControlCE2016Kennzeichen.MaxLength = 2
+        Me.RadTextBoxControlCE2016Kennzeichen.Name = "RadTextBoxControlCE2016Kennzeichen"
+        Me.RadTextBoxControlCE2016Kennzeichen.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadTextBoxControlCE2016Kennzeichen.ReadOnly = True
+        '
+        '
+        '
+        Me.RadTextBoxControlCE2016Kennzeichen.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlCE2016Kennzeichen.RootElement.AccessibleDescription")
+        Me.RadTextBoxControlCE2016Kennzeichen.RootElement.AccessibleName = resources.GetString("RadTextBoxControlCE2016Kennzeichen.RootElement.AccessibleName")
+        Me.RadTextBoxControlCE2016Kennzeichen.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlCE2016Kennzeichen.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.RadTextBoxControlCE2016Kennzeichen.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlCE2016Kennzeichen.RootElement.AngleTransform"), Single)
+        Me.RadTextBoxControlCE2016Kennzeichen.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlCE2016Kennzeichen.RootElement.FlipText"), Boolean)
+        Me.RadTextBoxControlCE2016Kennzeichen.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadTextBoxControlCE2016Kennzeichen.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlCE2016Kennzeichen.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadTextBoxControlCE2016Kennzeichen.RootElement.Text = resources.GetString("RadTextBoxControlCE2016Kennzeichen.RootElement.Text")
+        Me.RadTextBoxControlCE2016Kennzeichen.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlCE2016Kennzeichen.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlCE2016Kennzeichen.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        '
+        'RadCheckBoxCE2016Kennzeichen
+        '
+        resources.ApplyResources(Me.RadCheckBoxCE2016Kennzeichen, "RadCheckBoxCE2016Kennzeichen")
+        Me.RadCheckBoxCE2016Kennzeichen.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadCheckBoxCE2016Kennzeichen.Name = "RadCheckBoxCE2016Kennzeichen"
+        '
+        '
+        '
+        Me.RadCheckBoxCE2016Kennzeichen.RootElement.AccessibleDescription = resources.GetString("RadCheckBoxCE2016Kennzeichen.RootElement.AccessibleDescription")
+        Me.RadCheckBoxCE2016Kennzeichen.RootElement.AccessibleName = resources.GetString("RadCheckBoxCE2016Kennzeichen.RootElement.AccessibleName")
+        Me.RadCheckBoxCE2016Kennzeichen.RootElement.Alignment = CType(resources.GetObject("RadCheckBoxCE2016Kennzeichen.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.RadCheckBoxCE2016Kennzeichen.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxCE2016Kennzeichen.RootElement.AngleTransform"), Single)
+        Me.RadCheckBoxCE2016Kennzeichen.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxCE2016Kennzeichen.RootElement.FlipText"), Boolean)
+        Me.RadCheckBoxCE2016Kennzeichen.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadCheckBoxCE2016Kennzeichen.RootElement.Margin = CType(resources.GetObject("RadCheckBoxCE2016Kennzeichen.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadCheckBoxCE2016Kennzeichen.RootElement.Text = resources.GetString("RadCheckBoxCE2016Kennzeichen.RootElement.Text")
+        Me.RadCheckBoxCE2016Kennzeichen.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxCE2016Kennzeichen.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadCheckBoxCE2016Kennzeichen.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadCheckBoxCE2016Kennzeichen.Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         'Label3
         '
         resources.ApplyResources(Me.Label3, "Label3")
         Me.Label3.ForeColor = System.Drawing.Color.Red
+        Me.Label3.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.Label3.Name = "Label3"
         '
         'Label2
         '
         resources.ApplyResources(Me.Label2, "Label2")
         Me.Label2.ForeColor = System.Drawing.Color.Red
+        Me.Label2.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.Label2.Name = "Label2"
         '
         'Label1
         '
         resources.ApplyResources(Me.Label1, "Label1")
         Me.Label1.ForeColor = System.Drawing.Color.Red
+        Me.Label1.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.Label1.Name = "Label1"
         '
         'lblPflichtfeld1
         '
         resources.ApplyResources(Me.lblPflichtfeld1, "lblPflichtfeld1")
         Me.lblPflichtfeld1.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld1.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblPflichtfeld1.Name = "lblPflichtfeld1"
         '
         'lblSicherungshinweise
         '
         resources.ApplyResources(Me.lblSicherungshinweise, "lblSicherungshinweise")
+        Me.lblSicherungshinweise.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblSicherungshinweise.Name = "lblSicherungshinweise"
         '
         '
@@ -236,11 +332,11 @@ Partial Class uco19EichtechnischeSicherung
         Me.lblSicherungshinweise.RootElement.Alignment = CType(resources.GetObject("lblSicherungshinweise.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.lblSicherungshinweise.RootElement.AngleTransform = CType(resources.GetObject("lblSicherungshinweise.RootElement.AngleTransform"), Single)
         Me.lblSicherungshinweise.RootElement.FlipText = CType(resources.GetObject("lblSicherungshinweise.RootElement.FlipText"), Boolean)
-        Me.lblSicherungshinweise.RootElement.KeyTip = resources.GetString("lblSicherungshinweise.RootElement.KeyTip")
+        Me.lblSicherungshinweise.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblSicherungshinweise.RootElement.Margin = CType(resources.GetObject("lblSicherungshinweise.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.lblSicherungshinweise.RootElement.Text = resources.GetString("lblSicherungshinweise.RootElement.Text")
         Me.lblSicherungshinweise.RootElement.TextOrientation = CType(resources.GetObject("lblSicherungshinweise.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblSicherungshinweise.RootElement.ToolTipText = resources.GetString("lblSicherungshinweise.RootElement.ToolTipText")
+        Me.lblSicherungshinweise.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         'PictureBox3
         '
@@ -252,6 +348,7 @@ Partial Class uco19EichtechnischeSicherung
         'lblBenannteStelle
         '
         resources.ApplyResources(Me.lblBenannteStelle, "lblBenannteStelle")
+        Me.lblBenannteStelle.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblBenannteStelle.Name = "lblBenannteStelle"
         '
         '
@@ -261,11 +358,11 @@ Partial Class uco19EichtechnischeSicherung
         Me.lblBenannteStelle.RootElement.Alignment = CType(resources.GetObject("lblBenannteStelle.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.lblBenannteStelle.RootElement.AngleTransform = CType(resources.GetObject("lblBenannteStelle.RootElement.AngleTransform"), Single)
         Me.lblBenannteStelle.RootElement.FlipText = CType(resources.GetObject("lblBenannteStelle.RootElement.FlipText"), Boolean)
-        Me.lblBenannteStelle.RootElement.KeyTip = resources.GetString("lblBenannteStelle.RootElement.KeyTip")
+        Me.lblBenannteStelle.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblBenannteStelle.RootElement.Margin = CType(resources.GetObject("lblBenannteStelle.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.lblBenannteStelle.RootElement.Text = resources.GetString("lblBenannteStelle.RootElement.Text")
         Me.lblBenannteStelle.RootElement.TextOrientation = CType(resources.GetObject("lblBenannteStelle.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblBenannteStelle.RootElement.ToolTipText = resources.GetString("lblBenannteStelle.RootElement.ToolTipText")
+        Me.lblBenannteStelle.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         'PictureBox2
         '
@@ -277,6 +374,7 @@ Partial Class uco19EichtechnischeSicherung
         'lblEichsiegel13x13
         '
         resources.ApplyResources(Me.lblEichsiegel13x13, "lblEichsiegel13x13")
+        Me.lblEichsiegel13x13.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblEichsiegel13x13.Name = "lblEichsiegel13x13"
         '
         '
@@ -286,11 +384,11 @@ Partial Class uco19EichtechnischeSicherung
         Me.lblEichsiegel13x13.RootElement.Alignment = CType(resources.GetObject("lblEichsiegel13x13.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.lblEichsiegel13x13.RootElement.AngleTransform = CType(resources.GetObject("lblEichsiegel13x13.RootElement.AngleTransform"), Single)
         Me.lblEichsiegel13x13.RootElement.FlipText = CType(resources.GetObject("lblEichsiegel13x13.RootElement.FlipText"), Boolean)
-        Me.lblEichsiegel13x13.RootElement.KeyTip = resources.GetString("lblEichsiegel13x13.RootElement.KeyTip")
+        Me.lblEichsiegel13x13.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblEichsiegel13x13.RootElement.Margin = CType(resources.GetObject("lblEichsiegel13x13.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.lblEichsiegel13x13.RootElement.Text = resources.GetString("lblEichsiegel13x13.RootElement.Text")
         Me.lblEichsiegel13x13.RootElement.TextOrientation = CType(resources.GetObject("lblEichsiegel13x13.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblEichsiegel13x13.RootElement.ToolTipText = resources.GetString("lblEichsiegel13x13.RootElement.ToolTipText")
+        Me.lblEichsiegel13x13.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         'PictureBox1
         '
@@ -302,6 +400,7 @@ Partial Class uco19EichtechnischeSicherung
         'lblEichsiegelRund
         '
         resources.ApplyResources(Me.lblEichsiegelRund, "lblEichsiegelRund")
+        Me.lblEichsiegelRund.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblEichsiegelRund.Name = "lblEichsiegelRund"
         '
         '
@@ -311,15 +410,16 @@ Partial Class uco19EichtechnischeSicherung
         Me.lblEichsiegelRund.RootElement.Alignment = CType(resources.GetObject("lblEichsiegelRund.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.lblEichsiegelRund.RootElement.AngleTransform = CType(resources.GetObject("lblEichsiegelRund.RootElement.AngleTransform"), Single)
         Me.lblEichsiegelRund.RootElement.FlipText = CType(resources.GetObject("lblEichsiegelRund.RootElement.FlipText"), Boolean)
-        Me.lblEichsiegelRund.RootElement.KeyTip = resources.GetString("lblEichsiegelRund.RootElement.KeyTip")
+        Me.lblEichsiegelRund.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblEichsiegelRund.RootElement.Margin = CType(resources.GetObject("lblEichsiegelRund.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.lblEichsiegelRund.RootElement.Text = resources.GetString("lblEichsiegelRund.RootElement.Text")
         Me.lblEichsiegelRund.RootElement.TextOrientation = CType(resources.GetObject("lblEichsiegelRund.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblEichsiegelRund.RootElement.ToolTipText = resources.GetString("lblEichsiegelRund.RootElement.ToolTipText")
+        Me.lblEichsiegelRund.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         'lblHinweismarke
         '
         resources.ApplyResources(Me.lblHinweismarke, "lblHinweismarke")
+        Me.lblHinweismarke.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblHinweismarke.Name = "lblHinweismarke"
         '
         '
@@ -329,11 +429,11 @@ Partial Class uco19EichtechnischeSicherung
         Me.lblHinweismarke.RootElement.Alignment = CType(resources.GetObject("lblHinweismarke.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.lblHinweismarke.RootElement.AngleTransform = CType(resources.GetObject("lblHinweismarke.RootElement.AngleTransform"), Single)
         Me.lblHinweismarke.RootElement.FlipText = CType(resources.GetObject("lblHinweismarke.RootElement.FlipText"), Boolean)
-        Me.lblHinweismarke.RootElement.KeyTip = resources.GetString("lblHinweismarke.RootElement.KeyTip")
+        Me.lblHinweismarke.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblHinweismarke.RootElement.Margin = CType(resources.GetObject("lblHinweismarke.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.lblHinweismarke.RootElement.Text = resources.GetString("lblHinweismarke.RootElement.Text")
         Me.lblHinweismarke.RootElement.TextOrientation = CType(resources.GetObject("lblHinweismarke.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblHinweismarke.RootElement.ToolTipText = resources.GetString("lblHinweismarke.RootElement.ToolTipText")
+        Me.lblHinweismarke.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         'PictureBoxAilbi
         '
@@ -345,6 +445,7 @@ Partial Class uco19EichtechnischeSicherung
         'lblGruenesM
         '
         resources.ApplyResources(Me.lblGruenesM, "lblGruenesM")
+        Me.lblGruenesM.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblGruenesM.Name = "lblGruenesM"
         '
         '
@@ -354,11 +455,11 @@ Partial Class uco19EichtechnischeSicherung
         Me.lblGruenesM.RootElement.Alignment = CType(resources.GetObject("lblGruenesM.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.lblGruenesM.RootElement.AngleTransform = CType(resources.GetObject("lblGruenesM.RootElement.AngleTransform"), Single)
         Me.lblGruenesM.RootElement.FlipText = CType(resources.GetObject("lblGruenesM.RootElement.FlipText"), Boolean)
-        Me.lblGruenesM.RootElement.KeyTip = resources.GetString("lblGruenesM.RootElement.KeyTip")
+        Me.lblGruenesM.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblGruenesM.RootElement.Margin = CType(resources.GetObject("lblGruenesM.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.lblGruenesM.RootElement.Text = resources.GetString("lblGruenesM.RootElement.Text")
         Me.lblGruenesM.RootElement.TextOrientation = CType(resources.GetObject("lblGruenesM.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblGruenesM.RootElement.ToolTipText = resources.GetString("lblGruenesM.RootElement.ToolTipText")
+        Me.lblGruenesM.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         'PictureBoxCE
         '
@@ -370,6 +471,7 @@ Partial Class uco19EichtechnischeSicherung
         'lblCEKennzeichen
         '
         resources.ApplyResources(Me.lblCEKennzeichen, "lblCEKennzeichen")
+        Me.lblCEKennzeichen.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblCEKennzeichen.Name = "lblCEKennzeichen"
         '
         '
@@ -379,11 +481,11 @@ Partial Class uco19EichtechnischeSicherung
         Me.lblCEKennzeichen.RootElement.Alignment = CType(resources.GetObject("lblCEKennzeichen.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.lblCEKennzeichen.RootElement.AngleTransform = CType(resources.GetObject("lblCEKennzeichen.RootElement.AngleTransform"), Single)
         Me.lblCEKennzeichen.RootElement.FlipText = CType(resources.GetObject("lblCEKennzeichen.RootElement.FlipText"), Boolean)
-        Me.lblCEKennzeichen.RootElement.KeyTip = resources.GetString("lblCEKennzeichen.RootElement.KeyTip")
+        Me.lblCEKennzeichen.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblCEKennzeichen.RootElement.Margin = CType(resources.GetObject("lblCEKennzeichen.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.lblCEKennzeichen.RootElement.Text = resources.GetString("lblCEKennzeichen.RootElement.Text")
         Me.lblCEKennzeichen.RootElement.TextOrientation = CType(resources.GetObject("lblCEKennzeichen.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblCEKennzeichen.RootElement.ToolTipText = resources.GetString("lblCEKennzeichen.RootElement.ToolTipText")
+        Me.lblCEKennzeichen.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         'PictureBoxGruenesM
         '
@@ -395,6 +497,7 @@ Partial Class uco19EichtechnischeSicherung
         'lblDatenKonfiguration
         '
         resources.ApplyResources(Me.lblDatenKonfiguration, "lblDatenKonfiguration")
+        Me.lblDatenKonfiguration.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblDatenKonfiguration.Name = "lblDatenKonfiguration"
         '
         '
@@ -404,11 +507,11 @@ Partial Class uco19EichtechnischeSicherung
         Me.lblDatenKonfiguration.RootElement.Alignment = CType(resources.GetObject("lblDatenKonfiguration.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.lblDatenKonfiguration.RootElement.AngleTransform = CType(resources.GetObject("lblDatenKonfiguration.RootElement.AngleTransform"), Single)
         Me.lblDatenKonfiguration.RootElement.FlipText = CType(resources.GetObject("lblDatenKonfiguration.RootElement.FlipText"), Boolean)
-        Me.lblDatenKonfiguration.RootElement.KeyTip = resources.GetString("lblDatenKonfiguration.RootElement.KeyTip")
+        Me.lblDatenKonfiguration.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblDatenKonfiguration.RootElement.Margin = CType(resources.GetObject("lblDatenKonfiguration.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.lblDatenKonfiguration.RootElement.Text = resources.GetString("lblDatenKonfiguration.RootElement.Text")
         Me.lblDatenKonfiguration.RootElement.TextOrientation = CType(resources.GetObject("lblDatenKonfiguration.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblDatenKonfiguration.RootElement.ToolTipText = resources.GetString("lblDatenKonfiguration.RootElement.ToolTipText")
+        Me.lblDatenKonfiguration.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         'PictureBoxHinweismarke
         '
@@ -420,6 +523,7 @@ Partial Class uco19EichtechnischeSicherung
         'lblAlibispeicher
         '
         resources.ApplyResources(Me.lblAlibispeicher, "lblAlibispeicher")
+        Me.lblAlibispeicher.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblAlibispeicher.Name = "lblAlibispeicher"
         '
         '
@@ -429,11 +533,11 @@ Partial Class uco19EichtechnischeSicherung
         Me.lblAlibispeicher.RootElement.Alignment = CType(resources.GetObject("lblAlibispeicher.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.lblAlibispeicher.RootElement.AngleTransform = CType(resources.GetObject("lblAlibispeicher.RootElement.AngleTransform"), Single)
         Me.lblAlibispeicher.RootElement.FlipText = CType(resources.GetObject("lblAlibispeicher.RootElement.FlipText"), Boolean)
-        Me.lblAlibispeicher.RootElement.KeyTip = resources.GetString("lblAlibispeicher.RootElement.KeyTip")
+        Me.lblAlibispeicher.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblAlibispeicher.RootElement.Margin = CType(resources.GetObject("lblAlibispeicher.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.lblAlibispeicher.RootElement.Text = resources.GetString("lblAlibispeicher.RootElement.Text")
         Me.lblAlibispeicher.RootElement.TextOrientation = CType(resources.GetObject("lblAlibispeicher.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblAlibispeicher.RootElement.ToolTipText = resources.GetString("lblAlibispeicher.RootElement.ToolTipText")
+        Me.lblAlibispeicher.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         'PictureBoxEichsiegelRund
         '
@@ -445,6 +549,7 @@ Partial Class uco19EichtechnischeSicherung
         'lblAufbewahrungsdauer
         '
         resources.ApplyResources(Me.lblAufbewahrungsdauer, "lblAufbewahrungsdauer")
+        Me.lblAufbewahrungsdauer.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblAufbewahrungsdauer.Name = "lblAufbewahrungsdauer"
         '
         '
@@ -454,11 +559,11 @@ Partial Class uco19EichtechnischeSicherung
         Me.lblAufbewahrungsdauer.RootElement.Alignment = CType(resources.GetObject("lblAufbewahrungsdauer.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.lblAufbewahrungsdauer.RootElement.AngleTransform = CType(resources.GetObject("lblAufbewahrungsdauer.RootElement.AngleTransform"), Single)
         Me.lblAufbewahrungsdauer.RootElement.FlipText = CType(resources.GetObject("lblAufbewahrungsdauer.RootElement.FlipText"), Boolean)
-        Me.lblAufbewahrungsdauer.RootElement.KeyTip = resources.GetString("lblAufbewahrungsdauer.RootElement.KeyTip")
+        Me.lblAufbewahrungsdauer.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblAufbewahrungsdauer.RootElement.Margin = CType(resources.GetObject("lblAufbewahrungsdauer.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.lblAufbewahrungsdauer.RootElement.Text = resources.GetString("lblAufbewahrungsdauer.RootElement.Text")
         Me.lblAufbewahrungsdauer.RootElement.TextOrientation = CType(resources.GetObject("lblAufbewahrungsdauer.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblAufbewahrungsdauer.RootElement.ToolTipText = resources.GetString("lblAufbewahrungsdauer.RootElement.ToolTipText")
+        Me.lblAufbewahrungsdauer.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         'PictureBoxEichsiegel13x13
         '
@@ -470,6 +575,7 @@ Partial Class uco19EichtechnischeSicherung
         'lblBemerkungen
         '
         resources.ApplyResources(Me.lblBemerkungen, "lblBemerkungen")
+        Me.lblBemerkungen.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblBemerkungen.Name = "lblBemerkungen"
         '
         '
@@ -479,11 +585,11 @@ Partial Class uco19EichtechnischeSicherung
         Me.lblBemerkungen.RootElement.Alignment = CType(resources.GetObject("lblBemerkungen.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.lblBemerkungen.RootElement.AngleTransform = CType(resources.GetObject("lblBemerkungen.RootElement.AngleTransform"), Single)
         Me.lblBemerkungen.RootElement.FlipText = CType(resources.GetObject("lblBemerkungen.RootElement.FlipText"), Boolean)
-        Me.lblBemerkungen.RootElement.KeyTip = resources.GetString("lblBemerkungen.RootElement.KeyTip")
+        Me.lblBemerkungen.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblBemerkungen.RootElement.Margin = CType(resources.GetObject("lblBemerkungen.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.lblBemerkungen.RootElement.Text = resources.GetString("lblBemerkungen.RootElement.Text")
         Me.lblBemerkungen.RootElement.TextOrientation = CType(resources.GetObject("lblBemerkungen.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblBemerkungen.RootElement.ToolTipText = resources.GetString("lblBemerkungen.RootElement.ToolTipText")
+        Me.lblBemerkungen.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         'PictureBoxBenannteStelle
         '
@@ -497,8 +603,10 @@ Partial Class uco19EichtechnischeSicherung
         Me.RadTextBoxControlBemerkungen.AcceptsReturn = True
         Me.RadTextBoxControlBemerkungen.AcceptsTab = True
         resources.ApplyResources(Me.RadTextBoxControlBemerkungen, "RadTextBoxControlBemerkungen")
+        Me.RadTextBoxControlBemerkungen.MaxLength = 30000
         Me.RadTextBoxControlBemerkungen.Multiline = True
         Me.RadTextBoxControlBemerkungen.Name = "RadTextBoxControlBemerkungen"
+        Me.RadTextBoxControlBemerkungen.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         '
         '
@@ -507,17 +615,20 @@ Partial Class uco19EichtechnischeSicherung
         Me.RadTextBoxControlBemerkungen.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlBemerkungen.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlBemerkungen.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlBemerkungen.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlBemerkungen.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlBemerkungen.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlBemerkungen.RootElement.KeyTip = resources.GetString("RadTextBoxControlBemerkungen.RootElement.KeyTip")
+        Me.RadTextBoxControlBemerkungen.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadTextBoxControlBemerkungen.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBemerkungen.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBemerkungen.RootElement.Text = resources.GetString("RadTextBoxControlBemerkungen.RootElement.Text")
         Me.RadTextBoxControlBemerkungen.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBemerkungen.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlBemerkungen.RootElement.ToolTipText = resources.GetString("RadTextBoxControlBemerkungen.RootElement.ToolTipText")
+        Me.RadTextBoxControlBemerkungen.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadTextBoxControlBemerkungen.Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         'RadTextBoxControlAufbewahrungsdauer
         '
         resources.ApplyResources(Me.RadTextBoxControlAufbewahrungsdauer, "RadTextBoxControlAufbewahrungsdauer")
-        Me.RadTextBoxControlAufbewahrungsdauer.ReadOnly = True
+        Me.RadTextBoxControlAufbewahrungsdauer.MaxLength = 2
         Me.RadTextBoxControlAufbewahrungsdauer.Name = "RadTextBoxControlAufbewahrungsdauer"
+        Me.RadTextBoxControlAufbewahrungsdauer.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadTextBoxControlAufbewahrungsdauer.ReadOnly = True
         '
         '
         '
@@ -526,15 +637,16 @@ Partial Class uco19EichtechnischeSicherung
         Me.RadTextBoxControlAufbewahrungsdauer.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlAufbewahrungsdauer.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlAufbewahrungsdauer.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlAufbewahrungsdauer.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlAufbewahrungsdauer.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlAufbewahrungsdauer.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlAufbewahrungsdauer.RootElement.KeyTip = resources.GetString("RadTextBoxControlAufbewahrungsdauer.RootElement.KeyTip")
+        Me.RadTextBoxControlAufbewahrungsdauer.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadTextBoxControlAufbewahrungsdauer.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlAufbewahrungsdauer.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlAufbewahrungsdauer.RootElement.Text = resources.GetString("RadTextBoxControlAufbewahrungsdauer.RootElement.Text")
         Me.RadTextBoxControlAufbewahrungsdauer.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlAufbewahrungsdauer.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlAufbewahrungsdauer.RootElement.ToolTipText = resources.GetString("RadTextBoxControlAufbewahrungsdauer.RootElement.ToolTipText")
+        Me.RadTextBoxControlAufbewahrungsdauer.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         'lblAnzahl
         '
         resources.ApplyResources(Me.lblAnzahl, "lblAnzahl")
+        Me.lblAnzahl.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblAnzahl.Name = "lblAnzahl"
         '
         '
@@ -544,17 +656,19 @@ Partial Class uco19EichtechnischeSicherung
         Me.lblAnzahl.RootElement.Alignment = CType(resources.GetObject("lblAnzahl.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.lblAnzahl.RootElement.AngleTransform = CType(resources.GetObject("lblAnzahl.RootElement.AngleTransform"), Single)
         Me.lblAnzahl.RootElement.FlipText = CType(resources.GetObject("lblAnzahl.RootElement.FlipText"), Boolean)
-        Me.lblAnzahl.RootElement.KeyTip = resources.GetString("lblAnzahl.RootElement.KeyTip")
+        Me.lblAnzahl.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblAnzahl.RootElement.Margin = CType(resources.GetObject("lblAnzahl.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.lblAnzahl.RootElement.Text = resources.GetString("lblAnzahl.RootElement.Text")
         Me.lblAnzahl.RootElement.TextOrientation = CType(resources.GetObject("lblAnzahl.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblAnzahl.RootElement.ToolTipText = resources.GetString("lblAnzahl.RootElement.ToolTipText")
+        Me.lblAnzahl.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         'RadTextBoxControlCEKennzeichen
         '
         resources.ApplyResources(Me.RadTextBoxControlCEKennzeichen, "RadTextBoxControlCEKennzeichen")
-        Me.RadTextBoxControlCEKennzeichen.ReadOnly = True
+        Me.RadTextBoxControlCEKennzeichen.MaxLength = 2
         Me.RadTextBoxControlCEKennzeichen.Name = "RadTextBoxControlCEKennzeichen"
+        Me.RadTextBoxControlCEKennzeichen.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadTextBoxControlCEKennzeichen.ReadOnly = True
         '
         '
         '
@@ -563,15 +677,16 @@ Partial Class uco19EichtechnischeSicherung
         Me.RadTextBoxControlCEKennzeichen.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlCEKennzeichen.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlCEKennzeichen.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlCEKennzeichen.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlCEKennzeichen.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlCEKennzeichen.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlCEKennzeichen.RootElement.KeyTip = resources.GetString("RadTextBoxControlCEKennzeichen.RootElement.KeyTip")
+        Me.RadTextBoxControlCEKennzeichen.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadTextBoxControlCEKennzeichen.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlCEKennzeichen.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlCEKennzeichen.RootElement.Text = resources.GetString("RadTextBoxControlCEKennzeichen.RootElement.Text")
         Me.RadTextBoxControlCEKennzeichen.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlCEKennzeichen.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlCEKennzeichen.RootElement.ToolTipText = resources.GetString("RadTextBoxControlCEKennzeichen.RootElement.ToolTipText")
+        Me.RadTextBoxControlCEKennzeichen.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         'RadCheckBoxBenannteStelle
         '
         resources.ApplyResources(Me.RadCheckBoxBenannteStelle, "RadCheckBoxBenannteStelle")
+        Me.RadCheckBoxBenannteStelle.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadCheckBoxBenannteStelle.Name = "RadCheckBoxBenannteStelle"
         '
         '
@@ -581,17 +696,20 @@ Partial Class uco19EichtechnischeSicherung
         Me.RadCheckBoxBenannteStelle.RootElement.Alignment = CType(resources.GetObject("RadCheckBoxBenannteStelle.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadCheckBoxBenannteStelle.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxBenannteStelle.RootElement.AngleTransform"), Single)
         Me.RadCheckBoxBenannteStelle.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxBenannteStelle.RootElement.FlipText"), Boolean)
-        Me.RadCheckBoxBenannteStelle.RootElement.KeyTip = resources.GetString("RadCheckBoxBenannteStelle.RootElement.KeyTip")
+        Me.RadCheckBoxBenannteStelle.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadCheckBoxBenannteStelle.RootElement.Margin = CType(resources.GetObject("RadCheckBoxBenannteStelle.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadCheckBoxBenannteStelle.RootElement.Text = resources.GetString("RadCheckBoxBenannteStelle.RootElement.Text")
         Me.RadCheckBoxBenannteStelle.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxBenannteStelle.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadCheckBoxBenannteStelle.RootElement.ToolTipText = resources.GetString("RadCheckBoxBenannteStelle.RootElement.ToolTipText")
+        Me.RadCheckBoxBenannteStelle.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadCheckBoxBenannteStelle.Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         'RadTextBoxControlGruenesM
         '
         resources.ApplyResources(Me.RadTextBoxControlGruenesM, "RadTextBoxControlGruenesM")
-        Me.RadTextBoxControlGruenesM.ReadOnly = True
+        Me.RadTextBoxControlGruenesM.MaxLength = 2
         Me.RadTextBoxControlGruenesM.Name = "RadTextBoxControlGruenesM"
+        Me.RadTextBoxControlGruenesM.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadTextBoxControlGruenesM.ReadOnly = True
         '
         '
         '
@@ -600,15 +718,16 @@ Partial Class uco19EichtechnischeSicherung
         Me.RadTextBoxControlGruenesM.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlGruenesM.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlGruenesM.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlGruenesM.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlGruenesM.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlGruenesM.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlGruenesM.RootElement.KeyTip = resources.GetString("RadTextBoxControlGruenesM.RootElement.KeyTip")
+        Me.RadTextBoxControlGruenesM.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadTextBoxControlGruenesM.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlGruenesM.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlGruenesM.RootElement.Text = resources.GetString("RadTextBoxControlGruenesM.RootElement.Text")
         Me.RadTextBoxControlGruenesM.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlGruenesM.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlGruenesM.RootElement.ToolTipText = resources.GetString("RadTextBoxControlGruenesM.RootElement.ToolTipText")
+        Me.RadTextBoxControlGruenesM.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         'RadCheckBoxEichsiegel13x13
         '
         resources.ApplyResources(Me.RadCheckBoxEichsiegel13x13, "RadCheckBoxEichsiegel13x13")
+        Me.RadCheckBoxEichsiegel13x13.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadCheckBoxEichsiegel13x13.Name = "RadCheckBoxEichsiegel13x13"
         '
         '
@@ -618,17 +737,20 @@ Partial Class uco19EichtechnischeSicherung
         Me.RadCheckBoxEichsiegel13x13.RootElement.Alignment = CType(resources.GetObject("RadCheckBoxEichsiegel13x13.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadCheckBoxEichsiegel13x13.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxEichsiegel13x13.RootElement.AngleTransform"), Single)
         Me.RadCheckBoxEichsiegel13x13.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxEichsiegel13x13.RootElement.FlipText"), Boolean)
-        Me.RadCheckBoxEichsiegel13x13.RootElement.KeyTip = resources.GetString("RadCheckBoxEichsiegel13x13.RootElement.KeyTip")
+        Me.RadCheckBoxEichsiegel13x13.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadCheckBoxEichsiegel13x13.RootElement.Margin = CType(resources.GetObject("RadCheckBoxEichsiegel13x13.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadCheckBoxEichsiegel13x13.RootElement.Text = resources.GetString("RadCheckBoxEichsiegel13x13.RootElement.Text")
         Me.RadCheckBoxEichsiegel13x13.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxEichsiegel13x13.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadCheckBoxEichsiegel13x13.RootElement.ToolTipText = resources.GetString("RadCheckBoxEichsiegel13x13.RootElement.ToolTipText")
+        Me.RadCheckBoxEichsiegel13x13.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadCheckBoxEichsiegel13x13.Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         'RadTextBoxControlHinweismarke
         '
         resources.ApplyResources(Me.RadTextBoxControlHinweismarke, "RadTextBoxControlHinweismarke")
-        Me.RadTextBoxControlHinweismarke.ReadOnly = True
+        Me.RadTextBoxControlHinweismarke.MaxLength = 2
         Me.RadTextBoxControlHinweismarke.Name = "RadTextBoxControlHinweismarke"
+        Me.RadTextBoxControlHinweismarke.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadTextBoxControlHinweismarke.ReadOnly = True
         '
         '
         '
@@ -637,15 +759,16 @@ Partial Class uco19EichtechnischeSicherung
         Me.RadTextBoxControlHinweismarke.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlHinweismarke.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlHinweismarke.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlHinweismarke.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlHinweismarke.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlHinweismarke.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlHinweismarke.RootElement.KeyTip = resources.GetString("RadTextBoxControlHinweismarke.RootElement.KeyTip")
+        Me.RadTextBoxControlHinweismarke.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadTextBoxControlHinweismarke.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlHinweismarke.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlHinweismarke.RootElement.Text = resources.GetString("RadTextBoxControlHinweismarke.RootElement.Text")
         Me.RadTextBoxControlHinweismarke.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlHinweismarke.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlHinweismarke.RootElement.ToolTipText = resources.GetString("RadTextBoxControlHinweismarke.RootElement.ToolTipText")
+        Me.RadTextBoxControlHinweismarke.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         'RadCheckBoxEichsiegelRund
         '
         resources.ApplyResources(Me.RadCheckBoxEichsiegelRund, "RadCheckBoxEichsiegelRund")
+        Me.RadCheckBoxEichsiegelRund.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadCheckBoxEichsiegelRund.Name = "RadCheckBoxEichsiegelRund"
         '
         '
@@ -655,17 +778,20 @@ Partial Class uco19EichtechnischeSicherung
         Me.RadCheckBoxEichsiegelRund.RootElement.Alignment = CType(resources.GetObject("RadCheckBoxEichsiegelRund.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadCheckBoxEichsiegelRund.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxEichsiegelRund.RootElement.AngleTransform"), Single)
         Me.RadCheckBoxEichsiegelRund.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxEichsiegelRund.RootElement.FlipText"), Boolean)
-        Me.RadCheckBoxEichsiegelRund.RootElement.KeyTip = resources.GetString("RadCheckBoxEichsiegelRund.RootElement.KeyTip")
+        Me.RadCheckBoxEichsiegelRund.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadCheckBoxEichsiegelRund.RootElement.Margin = CType(resources.GetObject("RadCheckBoxEichsiegelRund.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadCheckBoxEichsiegelRund.RootElement.Text = resources.GetString("RadCheckBoxEichsiegelRund.RootElement.Text")
         Me.RadCheckBoxEichsiegelRund.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxEichsiegelRund.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadCheckBoxEichsiegelRund.RootElement.ToolTipText = resources.GetString("RadCheckBoxEichsiegelRund.RootElement.ToolTipText")
+        Me.RadCheckBoxEichsiegelRund.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadCheckBoxEichsiegelRund.Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         'RadTextBoxControlEichsiegelRund
         '
         resources.ApplyResources(Me.RadTextBoxControlEichsiegelRund, "RadTextBoxControlEichsiegelRund")
-        Me.RadTextBoxControlEichsiegelRund.ReadOnly = True
+        Me.RadTextBoxControlEichsiegelRund.MaxLength = 2
         Me.RadTextBoxControlEichsiegelRund.Name = "RadTextBoxControlEichsiegelRund"
+        Me.RadTextBoxControlEichsiegelRund.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadTextBoxControlEichsiegelRund.ReadOnly = True
         '
         '
         '
@@ -674,15 +800,16 @@ Partial Class uco19EichtechnischeSicherung
         Me.RadTextBoxControlEichsiegelRund.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlEichsiegelRund.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlEichsiegelRund.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlEichsiegelRund.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlEichsiegelRund.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlEichsiegelRund.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlEichsiegelRund.RootElement.KeyTip = resources.GetString("RadTextBoxControlEichsiegelRund.RootElement.KeyTip")
+        Me.RadTextBoxControlEichsiegelRund.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadTextBoxControlEichsiegelRund.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlEichsiegelRund.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlEichsiegelRund.RootElement.Text = resources.GetString("RadTextBoxControlEichsiegelRund.RootElement.Text")
         Me.RadTextBoxControlEichsiegelRund.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlEichsiegelRund.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlEichsiegelRund.RootElement.ToolTipText = resources.GetString("RadTextBoxControlEichsiegelRund.RootElement.ToolTipText")
+        Me.RadTextBoxControlEichsiegelRund.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         'RadCheckBoxHinweismarke
         '
         resources.ApplyResources(Me.RadCheckBoxHinweismarke, "RadCheckBoxHinweismarke")
+        Me.RadCheckBoxHinweismarke.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadCheckBoxHinweismarke.Name = "RadCheckBoxHinweismarke"
         '
         '
@@ -692,17 +819,20 @@ Partial Class uco19EichtechnischeSicherung
         Me.RadCheckBoxHinweismarke.RootElement.Alignment = CType(resources.GetObject("RadCheckBoxHinweismarke.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadCheckBoxHinweismarke.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxHinweismarke.RootElement.AngleTransform"), Single)
         Me.RadCheckBoxHinweismarke.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxHinweismarke.RootElement.FlipText"), Boolean)
-        Me.RadCheckBoxHinweismarke.RootElement.KeyTip = resources.GetString("RadCheckBoxHinweismarke.RootElement.KeyTip")
+        Me.RadCheckBoxHinweismarke.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadCheckBoxHinweismarke.RootElement.Margin = CType(resources.GetObject("RadCheckBoxHinweismarke.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadCheckBoxHinweismarke.RootElement.Text = resources.GetString("RadCheckBoxHinweismarke.RootElement.Text")
         Me.RadCheckBoxHinweismarke.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxHinweismarke.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadCheckBoxHinweismarke.RootElement.ToolTipText = resources.GetString("RadCheckBoxHinweismarke.RootElement.ToolTipText")
+        Me.RadCheckBoxHinweismarke.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadCheckBoxHinweismarke.Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         'RadTextBoxControlEichsiegel13x13
         '
         resources.ApplyResources(Me.RadTextBoxControlEichsiegel13x13, "RadTextBoxControlEichsiegel13x13")
-        Me.RadTextBoxControlEichsiegel13x13.ReadOnly = True
+        Me.RadTextBoxControlEichsiegel13x13.MaxLength = 2
         Me.RadTextBoxControlEichsiegel13x13.Name = "RadTextBoxControlEichsiegel13x13"
+        Me.RadTextBoxControlEichsiegel13x13.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadTextBoxControlEichsiegel13x13.ReadOnly = True
         '
         '
         '
@@ -711,15 +841,16 @@ Partial Class uco19EichtechnischeSicherung
         Me.RadTextBoxControlEichsiegel13x13.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlEichsiegel13x13.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlEichsiegel13x13.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlEichsiegel13x13.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlEichsiegel13x13.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlEichsiegel13x13.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlEichsiegel13x13.RootElement.KeyTip = resources.GetString("RadTextBoxControlEichsiegel13x13.RootElement.KeyTip")
+        Me.RadTextBoxControlEichsiegel13x13.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadTextBoxControlEichsiegel13x13.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlEichsiegel13x13.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlEichsiegel13x13.RootElement.Text = resources.GetString("RadTextBoxControlEichsiegel13x13.RootElement.Text")
         Me.RadTextBoxControlEichsiegel13x13.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlEichsiegel13x13.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlEichsiegel13x13.RootElement.ToolTipText = resources.GetString("RadTextBoxControlEichsiegel13x13.RootElement.ToolTipText")
+        Me.RadTextBoxControlEichsiegel13x13.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         'RadCheckBoxGruenesM
         '
         resources.ApplyResources(Me.RadCheckBoxGruenesM, "RadCheckBoxGruenesM")
+        Me.RadCheckBoxGruenesM.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadCheckBoxGruenesM.Name = "RadCheckBoxGruenesM"
         '
         '
@@ -729,17 +860,20 @@ Partial Class uco19EichtechnischeSicherung
         Me.RadCheckBoxGruenesM.RootElement.Alignment = CType(resources.GetObject("RadCheckBoxGruenesM.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadCheckBoxGruenesM.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxGruenesM.RootElement.AngleTransform"), Single)
         Me.RadCheckBoxGruenesM.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxGruenesM.RootElement.FlipText"), Boolean)
-        Me.RadCheckBoxGruenesM.RootElement.KeyTip = resources.GetString("RadCheckBoxGruenesM.RootElement.KeyTip")
+        Me.RadCheckBoxGruenesM.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadCheckBoxGruenesM.RootElement.Margin = CType(resources.GetObject("RadCheckBoxGruenesM.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadCheckBoxGruenesM.RootElement.Text = resources.GetString("RadCheckBoxGruenesM.RootElement.Text")
         Me.RadCheckBoxGruenesM.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxGruenesM.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadCheckBoxGruenesM.RootElement.ToolTipText = resources.GetString("RadCheckBoxGruenesM.RootElement.ToolTipText")
+        Me.RadCheckBoxGruenesM.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadCheckBoxGruenesM.Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         'RadTextBoxControlBenannteStelle
         '
         resources.ApplyResources(Me.RadTextBoxControlBenannteStelle, "RadTextBoxControlBenannteStelle")
-        Me.RadTextBoxControlBenannteStelle.ReadOnly = True
+        Me.RadTextBoxControlBenannteStelle.MaxLength = 2
         Me.RadTextBoxControlBenannteStelle.Name = "RadTextBoxControlBenannteStelle"
+        Me.RadTextBoxControlBenannteStelle.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadTextBoxControlBenannteStelle.ReadOnly = True
         '
         '
         '
@@ -748,15 +882,16 @@ Partial Class uco19EichtechnischeSicherung
         Me.RadTextBoxControlBenannteStelle.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlBenannteStelle.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadTextBoxControlBenannteStelle.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlBenannteStelle.RootElement.AngleTransform"), Single)
         Me.RadTextBoxControlBenannteStelle.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlBenannteStelle.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlBenannteStelle.RootElement.KeyTip = resources.GetString("RadTextBoxControlBenannteStelle.RootElement.KeyTip")
+        Me.RadTextBoxControlBenannteStelle.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadTextBoxControlBenannteStelle.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBenannteStelle.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBenannteStelle.RootElement.Text = resources.GetString("RadTextBoxControlBenannteStelle.RootElement.Text")
         Me.RadTextBoxControlBenannteStelle.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBenannteStelle.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlBenannteStelle.RootElement.ToolTipText = resources.GetString("RadTextBoxControlBenannteStelle.RootElement.ToolTipText")
+        Me.RadTextBoxControlBenannteStelle.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         'RadCheckBoxCEKennzeichen
         '
         resources.ApplyResources(Me.RadCheckBoxCEKennzeichen, "RadCheckBoxCEKennzeichen")
+        Me.RadCheckBoxCEKennzeichen.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadCheckBoxCEKennzeichen.Name = "RadCheckBoxCEKennzeichen"
         '
         '
@@ -766,15 +901,17 @@ Partial Class uco19EichtechnischeSicherung
         Me.RadCheckBoxCEKennzeichen.RootElement.Alignment = CType(resources.GetObject("RadCheckBoxCEKennzeichen.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadCheckBoxCEKennzeichen.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxCEKennzeichen.RootElement.AngleTransform"), Single)
         Me.RadCheckBoxCEKennzeichen.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxCEKennzeichen.RootElement.FlipText"), Boolean)
-        Me.RadCheckBoxCEKennzeichen.RootElement.KeyTip = resources.GetString("RadCheckBoxCEKennzeichen.RootElement.KeyTip")
+        Me.RadCheckBoxCEKennzeichen.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadCheckBoxCEKennzeichen.RootElement.Margin = CType(resources.GetObject("RadCheckBoxCEKennzeichen.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadCheckBoxCEKennzeichen.RootElement.Text = resources.GetString("RadCheckBoxCEKennzeichen.RootElement.Text")
         Me.RadCheckBoxCEKennzeichen.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxCEKennzeichen.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadCheckBoxCEKennzeichen.RootElement.ToolTipText = resources.GetString("RadCheckBoxCEKennzeichen.RootElement.ToolTipText")
+        Me.RadCheckBoxCEKennzeichen.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadCheckBoxCEKennzeichen.Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         'RadCheckBoxAufbewahrungsdauer
         '
         resources.ApplyResources(Me.RadCheckBoxAufbewahrungsdauer, "RadCheckBoxAufbewahrungsdauer")
+        Me.RadCheckBoxAufbewahrungsdauer.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadCheckBoxAufbewahrungsdauer.Name = "RadCheckBoxAufbewahrungsdauer"
         '
         '
@@ -784,15 +921,17 @@ Partial Class uco19EichtechnischeSicherung
         Me.RadCheckBoxAufbewahrungsdauer.RootElement.Alignment = CType(resources.GetObject("RadCheckBoxAufbewahrungsdauer.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadCheckBoxAufbewahrungsdauer.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxAufbewahrungsdauer.RootElement.AngleTransform"), Single)
         Me.RadCheckBoxAufbewahrungsdauer.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxAufbewahrungsdauer.RootElement.FlipText"), Boolean)
-        Me.RadCheckBoxAufbewahrungsdauer.RootElement.KeyTip = resources.GetString("RadCheckBoxAufbewahrungsdauer.RootElement.KeyTip")
+        Me.RadCheckBoxAufbewahrungsdauer.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadCheckBoxAufbewahrungsdauer.RootElement.Margin = CType(resources.GetObject("RadCheckBoxAufbewahrungsdauer.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadCheckBoxAufbewahrungsdauer.RootElement.Text = resources.GetString("RadCheckBoxAufbewahrungsdauer.RootElement.Text")
         Me.RadCheckBoxAufbewahrungsdauer.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxAufbewahrungsdauer.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadCheckBoxAufbewahrungsdauer.RootElement.ToolTipText = resources.GetString("RadCheckBoxAufbewahrungsdauer.RootElement.ToolTipText")
+        Me.RadCheckBoxAufbewahrungsdauer.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadCheckBoxAufbewahrungsdauer.Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         'RadCheckBoxKonfigurationsProgramm
         '
         resources.ApplyResources(Me.RadCheckBoxKonfigurationsProgramm, "RadCheckBoxKonfigurationsProgramm")
+        Me.RadCheckBoxKonfigurationsProgramm.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadCheckBoxKonfigurationsProgramm.Name = "RadCheckBoxKonfigurationsProgramm"
         '
         '
@@ -802,15 +941,17 @@ Partial Class uco19EichtechnischeSicherung
         Me.RadCheckBoxKonfigurationsProgramm.RootElement.Alignment = CType(resources.GetObject("RadCheckBoxKonfigurationsProgramm.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadCheckBoxKonfigurationsProgramm.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxKonfigurationsProgramm.RootElement.AngleTransform"), Single)
         Me.RadCheckBoxKonfigurationsProgramm.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxKonfigurationsProgramm.RootElement.FlipText"), Boolean)
-        Me.RadCheckBoxKonfigurationsProgramm.RootElement.KeyTip = resources.GetString("RadCheckBoxKonfigurationsProgramm.RootElement.KeyTip")
+        Me.RadCheckBoxKonfigurationsProgramm.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadCheckBoxKonfigurationsProgramm.RootElement.Margin = CType(resources.GetObject("RadCheckBoxKonfigurationsProgramm.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadCheckBoxKonfigurationsProgramm.RootElement.Text = resources.GetString("RadCheckBoxKonfigurationsProgramm.RootElement.Text")
         Me.RadCheckBoxKonfigurationsProgramm.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxKonfigurationsProgramm.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadCheckBoxKonfigurationsProgramm.RootElement.ToolTipText = resources.GetString("RadCheckBoxKonfigurationsProgramm.RootElement.ToolTipText")
+        Me.RadCheckBoxKonfigurationsProgramm.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadCheckBoxKonfigurationsProgramm.Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         'RadCheckBoxAlibispeicher
         '
         resources.ApplyResources(Me.RadCheckBoxAlibispeicher, "RadCheckBoxAlibispeicher")
+        Me.RadCheckBoxAlibispeicher.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadCheckBoxAlibispeicher.Name = "RadCheckBoxAlibispeicher"
         '
         '
@@ -820,22 +961,27 @@ Partial Class uco19EichtechnischeSicherung
         Me.RadCheckBoxAlibispeicher.RootElement.Alignment = CType(resources.GetObject("RadCheckBoxAlibispeicher.RootElement.Alignment"), System.Drawing.ContentAlignment)
         Me.RadCheckBoxAlibispeicher.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxAlibispeicher.RootElement.AngleTransform"), Single)
         Me.RadCheckBoxAlibispeicher.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxAlibispeicher.RootElement.FlipText"), Boolean)
-        Me.RadCheckBoxAlibispeicher.RootElement.KeyTip = resources.GetString("RadCheckBoxAlibispeicher.RootElement.KeyTip")
+        Me.RadCheckBoxAlibispeicher.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadCheckBoxAlibispeicher.RootElement.Margin = CType(resources.GetObject("RadCheckBoxAlibispeicher.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadCheckBoxAlibispeicher.RootElement.Text = resources.GetString("RadCheckBoxAlibispeicher.RootElement.Text")
         Me.RadCheckBoxAlibispeicher.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxAlibispeicher.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadCheckBoxAlibispeicher.RootElement.ToolTipText = resources.GetString("RadCheckBoxAlibispeicher.RootElement.ToolTipText")
+        Me.RadCheckBoxAlibispeicher.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadCheckBoxAlibispeicher.Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
-        'ucoEichtechnischeSicherung
+        'uco19EichtechnischeSicherung
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.RadScrollablePanel1)
-        Me.Name = "ucoEichtechnischeSicherung"
+        Me.Name = "uco19EichtechnischeSicherung"
         Me.RadScrollablePanel1.PanelContainer.ResumeLayout(False)
         Me.RadScrollablePanel1.PanelContainer.PerformLayout()
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadScrollablePanel1.ResumeLayout(False)
+        CType(Me.PictureBoxCE2016, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblCE2016Kennzeichen, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxControlCE2016Kennzeichen, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadCheckBoxCE2016Kennzeichen, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblSicherungshinweise, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblBenannteStelle, System.ComponentModel.ISupportInitialize).EndInit()
@@ -925,5 +1071,10 @@ Partial Class uco19EichtechnischeSicherung
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents lblPflichtfeld1 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents PictureBoxCE2016 As System.Windows.Forms.PictureBox
+    Friend WithEvents lblCE2016Kennzeichen As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents RadTextBoxControlCE2016Kennzeichen As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadCheckBoxCE2016Kennzeichen As Telerik.WinControls.UI.RadCheckBox
 
 End Class

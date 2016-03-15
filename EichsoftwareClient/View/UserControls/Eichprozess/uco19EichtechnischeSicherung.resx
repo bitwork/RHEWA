@@ -126,17 +126,14 @@
     <value>265</value>
   </data>
   <data name="&gt;&gt;lblEichsiegel13x13.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>16</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lblGruenesM.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
+  <data name="lblEichsiegel13x13.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="RadCheckBoxHinweismarke.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
-  </data>
-  <data name="lblBemerkungen.RootElement.ToolTipText" xml:space="preserve">
-    <value />
   </data>
   <data name="RadCheckBoxEichsiegelRund.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -144,20 +141,20 @@
   <data name="PictureBoxBenannteStelle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="lblBemerkungen.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="&gt;&gt;RadTextBoxControlGruenesM.ZOrder" xml:space="preserve">
+    <value>38</value>
   </data>
   <data name="&gt;&gt;lblEichsiegelRund.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>18</value>
   </data>
   <data name="RadTextBoxControlCEKennzeichen.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
+  <data name="RadCheckBox1.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
   <data name="RadCheckBoxAlibispeicher.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
-  </data>
-  <data name="RadTextBoxControlBenannteStelle.RootElement.ToolTipText" xml:space="preserve">
-    <value />
   </data>
   <data name="&gt;&gt;lblAlibispeicher.Name" xml:space="preserve">
     <value>lblAlibispeicher</value>
@@ -171,14 +168,20 @@
   <data name="RadCheckBoxGruenesM.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlHinweismarke.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="PictureBoxHinweismarke.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 21</value>
+  </data>
+  <data name="Label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="RadTextBoxControlCE2016Kennzeichen.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
   </data>
   <data name="lblAlibispeicher.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="&gt;&gt;RadCheckBoxEichsiegel13x13.ZOrder" xml:space="preserve">
-    <value>34</value>
+    <value>39</value>
   </data>
   <data name="RadTextBoxControlGruenesM.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -187,13 +190,19 @@
     <value>3, 164</value>
   </data>
   <data name="&gt;&gt;lblEichsiegel13x13.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="lblSicherungshinweise.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
+  <data name="&gt;&gt;PictureBoxBenannteStelle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="RadTextBoxControlCEKennzeichen.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="Label7.TabIndex" type="System.Int32, mscorlib">
+    <value>270</value>
   </data>
   <data name="RadCheckBoxEichsiegelRund.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -231,26 +240,26 @@
   <data name="PictureBox3.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
   </data>
-  <data name="&gt;&gt;lblAlibispeicher.ZOrder" xml:space="preserve">
-    <value>22</value>
+  <data name="RadCheckBoxCE2016Kennzeichen.TabIndex" type="System.Int32, mscorlib">
+    <value>267</value>
   </data>
   <data name="lblCEKennzeichen.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="lblAufbewahrungsdauer.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="&gt;&gt;RadCheckBoxEichsiegel13x13.Name" xml:space="preserve">
     <value>RadCheckBoxEichsiegel13x13</value>
+  </data>
+  <data name="RadCheckBoxCE2016Kennzeichen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>316, 266</value>
   </data>
   <data name="Label5.Text" xml:space="preserve">
     <value>*</value>
   </data>
   <data name="&gt;&gt;PictureBoxAilbi.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>20</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxAlibispeicher.ZOrder" xml:space="preserve">
-    <value>45</value>
+    <value>50</value>
   </data>
   <data name="RadCheckBoxBenannteStelle.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -261,8 +270,14 @@
   <data name="lblEichsiegel13x13.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
+  <data name="lblBemerkungen.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
   <data name="RadCheckBoxGruenesM.Location" type="System.Drawing.Point, System.Drawing">
     <value>316, 198</value>
+  </data>
+  <data name="RadTextBox1.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="lblCEKennzeichen.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -273,14 +288,17 @@
   <data name="&gt;&gt;PictureBoxGruenesM.Name" xml:space="preserve">
     <value>PictureBoxGruenesM</value>
   </data>
+  <data name="PictureBoxAilbi.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 21</value>
+  </data>
   <data name="&gt;&gt;RadCheckBoxEichsiegelRund.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
-  <data name="&gt;&gt;lblGruenesM.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
   <data name="&gt;&gt;lblDatenKonfiguration.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
+  </data>
+  <data name="RadLabel1.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;PictureBoxEichsiegelRund.Name" xml:space="preserve">
     <value>PictureBoxEichsiegelRund</value>
@@ -288,11 +306,8 @@
   <data name="RadTextBoxControlBenannteStelle.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
-  <data name="RadCheckBoxKonfigurationsProgramm.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="lblAnzahl.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
-  </data>
-  <data name="lblCEKennzeichen.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 234</value>
   </data>
   <data name="RadTextBoxControlBemerkungen.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 417</value>
@@ -303,17 +318,17 @@
   <data name="PictureBoxAilbi.TabIndex" type="System.Int32, mscorlib">
     <value>63</value>
   </data>
-  <data name="RadCheckBoxEichsiegel13x13.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
   <data name="&gt;&gt;lblEichsiegelRund.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld1.ZOrder" xml:space="preserve">
+    <value>11</value>
   </data>
   <data name="lblDatenKonfiguration.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlGruenesM.RootElement.ToolTipText" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;Label3.Name" xml:space="preserve">
+    <value>Label3</value>
   </data>
   <data name="lblSicherungshinweise.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
@@ -321,8 +336,11 @@
   <data name="Label4.TabIndex" type="System.Int32, mscorlib">
     <value>264</value>
   </data>
-  <data name="&gt;&gt;lblGruenesM.ZOrder" xml:space="preserve">
-    <value>16</value>
+  <data name="&gt;&gt;Label7.Name" xml:space="preserve">
+    <value>Label7</value>
+  </data>
+  <data name="RadTextBox1.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="PictureBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>404, 166</value>
@@ -336,8 +354,8 @@
   <data name="lblBemerkungen.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadCheckBoxKonfigurationsProgramm.RootElement.KeyTip" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;Label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="RadTextBoxControlGruenesM.Size" type="System.Drawing.Size, System.Drawing">
     <value>125, 20</value>
@@ -346,9 +364,6 @@
     <value>Horizontal</value>
   </data>
   <data name="lblDatenKonfiguration.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxKonfigurationsProgramm.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
   <data name="PictureBoxBenannteStelle.Location" type="System.Drawing.Point, System.Drawing">
@@ -366,9 +381,6 @@
   <data name="RadCheckBoxGruenesM.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlEichsiegel13x13.MaxLength" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
   <data name="RadTextBoxControlGruenesM.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
@@ -378,20 +390,20 @@
   <data name="RadCheckBoxAlibispeicher.Size" type="System.Drawing.Size, System.Drawing">
     <value>15, 15</value>
   </data>
+  <data name="lblSicherungshinweise.Text" xml:space="preserve">
+    <value>to bring up all verification marks?</value>
+  </data>
   <data name="RadCheckBoxAufbewahrungsdauer.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="&gt;&gt;lblCEKennzeichen.Name" xml:space="preserve">
     <value>lblCEKennzeichen</value>
   </data>
-  <data name="PictureBoxCE.TabIndex" type="System.Int32, mscorlib">
-    <value>62</value>
+  <data name="lblCEKennzeichen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 234</value>
   </data>
   <data name="&gt;&gt;PictureBoxGruenesM.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
-  </data>
-  <data name="lblEichsiegel13x13.RootElement.ToolTipText" xml:space="preserve">
-    <value />
   </data>
   <data name="RadScrollablePanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -403,7 +415,7 @@
     <value>125, 20</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBenannteStelle.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadScrollablePanel1.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -415,7 +427,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;lblSicherungshinweise.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="PictureBoxCE.Location" type="System.Drawing.Point, System.Drawing">
     <value>337, 233</value>
@@ -423,26 +435,41 @@
   <data name="lblAufbewahrungsdauer.Size" type="System.Drawing.Size, System.Drawing">
     <value>235, 18</value>
   </data>
+  <data name="RadLabel1.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
   <data name="RadCheckBoxKonfigurationsProgramm.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlBenannteStelle.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="&gt;&gt;RadTextBoxControlBemerkungen.ZOrder" xml:space="preserve">
+    <value>33</value>
   </data>
-  <data name="&gt;&gt;Label3.Name" xml:space="preserve">
-    <value>Label3</value>
+  <data name="&gt;&gt;RadTextBoxControlBenannteStelle.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="RadTextBoxControlBemerkungen.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RadTextBox1.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="&gt;&gt;lblAnzahl.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;lblAufbewahrungsdauer.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>29</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>ucoEichtechnischeSicherung</value>
+    <value>uco19EichtechnischeSicherung</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlEichsiegelRund.ZOrder" xml:space="preserve">
-    <value>37</value>
+    <value>42</value>
+  </data>
+  <data name="RadTextBox1.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlCE2016Kennzeichen.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="lblAnzahl.Location" type="System.Drawing.Point, System.Drawing">
     <value>337, 30</value>
@@ -459,6 +486,9 @@
   <data name="&gt;&gt;RadCheckBoxAlibispeicher.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
+  <data name="RadCheckBoxCE2016Kennzeichen.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
   <data name="Label1.Text" xml:space="preserve">
     <value>*</value>
   </data>
@@ -468,19 +498,25 @@
   <data name="&gt;&gt;PictureBoxAilbi.Name" xml:space="preserve">
     <value>PictureBoxAilbi</value>
   </data>
+  <data name="RadTextBoxControlHinweismarke.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlHinweismarke.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
   <data name="PictureBox3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;PictureBoxCE.ZOrder" xml:space="preserve">
-    <value>17</value>
+  <data name="&gt;&gt;RadTextBoxControlCE2016Kennzeichen.Parent" xml:space="preserve">
+    <value>RadScrollablePanel1.PanelContainer</value>
   </data>
-  <data name="RadCheckBoxCEKennzeichen.RootElement.KeyTip" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;PictureBoxCE.ZOrder" xml:space="preserve">
+    <value>22</value>
   </data>
   <data name="PictureBox2.TabIndex" type="System.Int32, mscorlib">
     <value>258</value>
   </data>
-  <data name="&gt;&gt;lblAlibispeicher.Parent" xml:space="preserve">
+  <data name="&gt;&gt;PictureBoxCE.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="RadCheckBoxHinweismarke.Location" type="System.Drawing.Point, System.Drawing">
@@ -489,14 +525,17 @@
   <data name="RadCheckBoxCEKennzeichen.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
+  <data name="RadTextBoxControlAufbewahrungsdauer.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadTextBoxControlCE2016Kennzeichen.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
   <data name="RadCheckBoxCEKennzeichen.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
   <data name="lblAlibispeicher.Text" xml:space="preserve">
     <value>retention period for alibi memory 90 days?</value>
-  </data>
-  <data name="lblAlibispeicher.RootElement.ToolTipText" xml:space="preserve">
-    <value />
   </data>
   <data name="Label4.Text" xml:space="preserve">
     <value>*</value>
@@ -504,14 +543,8 @@
   <data name="&gt;&gt;lblHinweismarke.Name" xml:space="preserve">
     <value>lblHinweismarke</value>
   </data>
-  <data name="RadTextBoxControlGruenesM.MaxLength" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="RadCheckBoxEichsiegelRund.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblEichsiegel13x13.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
+  <data name="RadTextBoxControlCE2016Kennzeichen.TabIndex" type="System.Int32, mscorlib">
+    <value>268</value>
   </data>
   <data name="RadTextBoxControlAufbewahrungsdauer.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -520,7 +553,7 @@
     <value />
   </data>
   <data name="&gt;&gt;lblAlibispeicher.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadTextBoxControlCEKennzeichen.Text" xml:space="preserve">
     <value>0</value>
@@ -544,7 +577,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxEichsiegel13x13.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="lblAufbewahrungsdauer.Text" xml:space="preserve">
     <value>reduce the retention period for alibi memory?</value>
@@ -553,13 +586,13 @@
     <value>TopLeft</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxEichsiegelRund.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblBenannteStelle.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
-  <data name="RadTextBoxControlAufbewahrungsdauer.RootElement.ToolTipText" xml:space="preserve">
-    <value />
+  <data name="RadCheckBoxCE2016Kennzeichen.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
   </data>
   <data name="RadScrollablePanel1.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -576,20 +609,26 @@
   <data name="RadTextBoxControlBenannteStelle.Text" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="&gt;&gt;RadTextBoxControlCE2016Kennzeichen.Name" xml:space="preserve">
+    <value>RadTextBoxControlCE2016Kennzeichen</value>
+  </data>
   <data name="&gt;&gt;Label4.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;Label7.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;lblDatenKonfiguration.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>25</value>
   </data>
-  <data name="PictureBoxBenannteStelle.TabIndex" type="System.Int32, mscorlib">
-    <value>57</value>
+  <data name="RadCheckBox1.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lblSicherungshinweise.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 18</value>
   </data>
   <data name="lblAlibispeicher.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlCEKennzeichen.ZOrder" xml:space="preserve">
-    <value>31</value>
   </data>
   <data name="lblEichsiegelRund.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -603,9 +642,6 @@
   <data name="RadTextBoxControlEichsiegel13x13.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="lblAnzahl.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="RadCheckBoxHinweismarke.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
@@ -613,13 +649,13 @@
     <value>NoControl</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxCEKennzeichen.ZOrder" xml:space="preserve">
-    <value>42</value>
+    <value>47</value>
   </data>
   <data name="lblBenannteStelle.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="&gt;&gt;lblEichsiegelRund.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxKonfigurationsProgramm.Name" xml:space="preserve">
     <value>RadCheckBoxKonfigurationsProgramm</value>
@@ -627,20 +663,20 @@
   <data name="lblHinweismarke.Size" type="System.Drawing.Size, System.Drawing">
     <value>165, 18</value>
   </data>
+  <data name="&gt;&gt;PictureBoxAilbi.Parent" xml:space="preserve">
+    <value>RadScrollablePanel1.PanelContainer</value>
+  </data>
   <data name="RadCheckBoxKonfigurationsProgramm.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="&gt;&gt;lblPflichtfeld1.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="Label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="RadCheckBoxKonfigurationsProgramm.Location" type="System.Drawing.Point, System.Drawing">
-    <value>316, 267</value>
+    <value>316, 301</value>
   </data>
-  <data name="lblBenannteStelle.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblAnzahl.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+  <data name="lblEichsiegel13x13.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
   </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
@@ -648,11 +684,8 @@
   <data name="RadTextBoxControlEichsiegel13x13.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlAufbewahrungsdauer.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblGruenesM.RootElement.KeyTip" xml:space="preserve">
-    <value />
+  <data name="lblAufbewahrungsdauer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 369</value>
   </data>
   <data name="RadTextBoxControlAufbewahrungsdauer.Text" xml:space="preserve">
     <value>0</value>
@@ -660,11 +693,8 @@
   <data name="PictureBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>503, 27</value>
   </data>
-  <data name="lblHinweismarke.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlCEKennzeichen.RootElement.ToolTipText" xml:space="preserve">
-    <value />
+  <data name="RadLabel1.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
   </data>
   <data name="RadScrollablePanel1.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
@@ -676,7 +706,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxAufbewahrungsdauer.ZOrder" xml:space="preserve">
-    <value>43</value>
+    <value>48</value>
   </data>
   <data name="&gt;&gt;Label3.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -688,7 +718,13 @@
     <value>RadScrollablePanel1</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, EichsoftwareClient, Version=1.0.5190.21966, Culture=neutral, PublicKeyToken=null</value>
+    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.5918.17221, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="RadLabel1.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxCE2016Kennzeichen.Parent" xml:space="preserve">
+    <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="PictureBoxHinweismarke.Location" type="System.Drawing.Point, System.Drawing">
     <value>337, 163</value>
@@ -697,10 +733,7 @@
     <value>TopLeft</value>
   </data>
   <data name="&gt;&gt;lblAnzahl.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="RadTextBoxControlHinweismarke.RootElement.ToolTipText" xml:space="preserve">
-    <value />
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadCheckBoxHinweismarke.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
@@ -712,13 +745,13 @@
     <value>RadTextBoxControlBemerkungen</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxHinweismarke.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="RadTextBoxControlBenannteStelle.RootElement.KeyTip" xml:space="preserve">
-    <value />
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxEichsiegelRund.ZOrder" xml:space="preserve">
-    <value>36</value>
+    <value>41</value>
+  </data>
+  <data name="RadCheckBox1.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
   </data>
   <data name="RadScrollablePanel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -727,15 +760,15 @@
     <value>TopLeft</value>
   </data>
   <data name="Label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>485, 333</value>
+    <value>485, 366</value>
   </data>
   <data name="&gt;&gt;PictureBox2.Name" xml:space="preserve">
     <value>PictureBox2</value>
   </data>
-  <data name="RadTextBoxControlCEKennzeichen.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="lblCE2016Kennzeichen.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
   </data>
-  <data name="lblAufbewahrungsdauer.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadTextBoxControlCEKennzeichen.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="lblAnzahl.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
@@ -746,6 +779,9 @@
   </data>
   <data name="PictureBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>404, 166</value>
+  </data>
+  <data name="Label7.Text" xml:space="preserve">
+    <value>*</value>
   </data>
   <data name="RadCheckBoxAlibispeicher.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -762,11 +798,17 @@
   <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>485, 94</value>
   </data>
+  <data name="&gt;&gt;lblEichsiegel13x13.Name" xml:space="preserve">
+    <value>lblEichsiegel13x13</value>
+  </data>
   <data name="lblHinweismarke.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="lblGruenesM.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="lblEichsiegelRund.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="RadCheckBoxCEKennzeichen.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
@@ -777,13 +819,13 @@
   <data name="RadCheckBoxBenannteStelle.Size" type="System.Drawing.Size, System.Drawing">
     <value>15, 15</value>
   </data>
-  <data name="Label2.TabIndex" type="System.Int32, mscorlib">
-    <value>262</value>
-  </data>
   <data name="RadTextBoxControlAufbewahrungsdauer.Size" type="System.Drawing.Size, System.Drawing">
     <value>125, 20</value>
   </data>
-  <data name="RadCheckBoxHinweismarke.RootElement.ToolTipText" xml:space="preserve">
+  <data name="&gt;&gt;PictureBoxCE2016.Name" xml:space="preserve">
+    <value>PictureBoxCE2016</value>
+  </data>
+  <data name="RadTextBoxControlCE2016Kennzeichen.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="PictureBoxEichsiegelRund.TabIndex" type="System.Int32, mscorlib">
@@ -799,7 +841,7 @@
     <value>355, 164</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlGruenesM.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadCheckBoxAlibispeicher.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -810,26 +852,23 @@
   <data name="lblEichsiegel13x13.Size" type="System.Drawing.Size, System.Drawing">
     <value>199, 18</value>
   </data>
-  <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>486, 164</value>
-  </data>
-  <data name="RadCheckBoxBenannteStelle.RootElement.ToolTipText" xml:space="preserve">
-    <value />
+  <data name="RadTextBoxControlBemerkungen.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
   </data>
   <data name="RadTextBoxControlCEKennzeichen.Location" type="System.Drawing.Point, System.Drawing">
     <value>355, 234</value>
   </data>
-  <data name="RadCheckBoxAlibispeicher.RootElement.ToolTipText" xml:space="preserve">
+  <data name="lblGruenesM.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="PictureBoxAilbi.Location" type="System.Drawing.Point, System.Drawing">
-    <value>337, 333</value>
+  <data name="RadTextBoxControlCE2016Kennzeichen.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
+  <data name="RadCheckBoxCE2016Kennzeichen.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="lblBemerkungen.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 18</value>
-  </data>
-  <data name="RadCheckBoxEichsiegel13x13.RootElement.KeyTip" xml:space="preserve">
-    <value />
   </data>
   <data name="RadCheckBoxEichsiegel13x13.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
@@ -855,13 +894,7 @@
   <data name="RadTextBoxControlBemerkungen.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadCheckBoxHinweismarke.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="RadCheckBoxBenannteStelle.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblDatenKonfiguration.RootElement.KeyTip" xml:space="preserve">
     <value />
   </data>
   <data name="lblHinweismarke.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
@@ -870,8 +903,8 @@
   <data name="RadScrollablePanel1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="RadCheckBoxAufbewahrungsdauer.RootElement.KeyTip" xml:space="preserve">
-    <value />
+  <data name="&gt;&gt;lblEichsiegelRund.Name" xml:space="preserve">
+    <value>lblEichsiegelRund</value>
   </data>
   <data name="lblHinweismarke.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
@@ -885,26 +918,29 @@
   <data name="RadCheckBoxKonfigurationsProgramm.Size" type="System.Drawing.Size, System.Drawing">
     <value>15, 15</value>
   </data>
+  <data name="RadTextBoxControlEichsiegel13x13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 20</value>
+  </data>
   <data name="lblAnzahl.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblSicherungshinweise.RootElement.KeyTip" xml:space="preserve">
-    <value />
   </data>
   <data name="RadTextBoxControlEichsiegelRund.Location" type="System.Drawing.Point, System.Drawing">
     <value>355, 128</value>
   </data>
-  <data name="&gt;&gt;PictureBox2.Parent" xml:space="preserve">
-    <value>RadScrollablePanel1.PanelContainer</value>
+  <data name="&gt;&gt;RadTextBoxControlEichsiegel13x13.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="lblSicherungshinweise.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
   <data name="&gt;&gt;lblCEKennzeichen.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>23</value>
   </data>
-  <data name="&gt;&gt;PictureBoxHinweismarke.ZOrder" xml:space="preserve">
-    <value>21</value>
+  <data name="PictureBoxCE2016.Location" type="System.Drawing.Point, System.Drawing">
+    <value>337, 265</value>
+  </data>
+  <data name="&gt;&gt;lblHinweismarke.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="lblDatenKonfiguration.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -918,6 +954,9 @@
   <data name="lblAufbewahrungsdauer.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
+  <data name="&gt;&gt;RadCheckBoxCE2016Kennzeichen.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
   <data name="RadTextBoxControlGruenesM.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
@@ -928,7 +967,7 @@
     <value>0</value>
   </data>
   <data name="&gt;&gt;PictureBoxBenannteStelle.ZOrder" xml:space="preserve">
-    <value>27</value>
+    <value>32</value>
   </data>
   <data name="lblEichsiegelRund.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -946,7 +985,7 @@
     <value />
   </data>
   <data name="&gt;&gt;RadTextBoxControlAufbewahrungsdauer.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxCEKennzeichen.Name" xml:space="preserve">
     <value>RadCheckBoxCEKennzeichen</value>
@@ -960,20 +999,17 @@
   <data name="RadTextBoxControlGruenesM.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="RadCheckBoxAufbewahrungsdauer.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="RadScrollablePanel1.Text" xml:space="preserve">
+    <value>RadScrollablePanel1</value>
   </data>
   <data name="RadCheckBoxBenannteStelle.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="lblAlibispeicher.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
   <data name="&gt;&gt;RadTextBoxControlAufbewahrungsdauer.ZOrder" xml:space="preserve">
-    <value>29</value>
+    <value>34</value>
   </data>
-  <data name="RadTextBoxControlBemerkungen.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
+  <data name="lblCE2016Kennzeichen.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="lblHinweismarke.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1011,6 +1047,12 @@
   <data name="lblGruenesM.Size" type="System.Drawing.Size, System.Drawing">
     <value>57, 18</value>
   </data>
+  <data name="RadLabel1.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="PictureBoxCE2016.TabIndex" type="System.Int32, mscorlib">
+    <value>269</value>
+  </data>
   <data name="RadTextBoxControlHinweismarke.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
@@ -1019,9 +1061,6 @@
   </data>
   <data name="&gt;&gt;Label1.Name" xml:space="preserve">
     <value>Label1</value>
-  </data>
-  <data name="Label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="&gt;&gt;Label5.Name" xml:space="preserve">
     <value>Label5</value>
@@ -1039,13 +1078,16 @@
     <value>RadCheckBoxHinweismarke</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxKonfigurationsProgramm.ZOrder" xml:space="preserve">
-    <value>44</value>
+    <value>49</value>
   </data>
   <data name="&gt;&gt;PictureBoxCE.Name" xml:space="preserve">
     <value>PictureBoxCE</value>
   </data>
   <data name="Label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="RadTextBoxControlCE2016Kennzeichen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 18</value>
   </data>
   <data name="PictureBox2.Location" type="System.Drawing.Point, System.Drawing">
     <value>503, 206</value>
@@ -1056,29 +1098,32 @@
   <data name="&gt;&gt;RadTextBoxControlAufbewahrungsdauer.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
-  <data name="lblEichsiegel13x13.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="RadTextBoxControlCE2016Kennzeichen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>355, 266</value>
+  </data>
+  <data name="RadTextBoxControlCE2016Kennzeichen.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="RadTextBoxControlAufbewahrungsdauer.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
-  <data name="lblSicherungshinweise.Text" xml:space="preserve">
-    <value>to bring up all verification marks?</value>
+  <data name="lblCE2016Kennzeichen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>151, 18</value>
   </data>
-  <data name="RadTextBoxControlCEKennzeichen.RootElement.KeyTip" xml:space="preserve">
-    <value />
+  <data name="RadTextBox1.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
   </data>
-  <data name="RadTextBoxControlEichsiegel13x13.Text" xml:space="preserve">
-    <value>0</value>
+  <data name="RadTextBox1.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
   </data>
   <data name="&gt;&gt;PictureBoxEichsiegelRund.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlGruenesM.ZOrder" xml:space="preserve">
-    <value>33</value>
-  </data>
   <data name="lblBenannteStelle.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
+  </data>
+  <data name="&gt;&gt;lblAlibispeicher.Parent" xml:space="preserve">
+    <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="RadCheckBoxGruenesM.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -1089,17 +1134,26 @@
   <data name="RadTextBoxControlEichsiegelRund.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
+  <data name="RadTextBoxControlCE2016Kennzeichen.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lblCE2016Kennzeichen.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
   <data name="&gt;&gt;RadTextBoxControlBenannteStelle.Name" xml:space="preserve">
     <value>RadTextBoxControlBenannteStelle</value>
   </data>
   <data name="RadCheckBoxAlibispeicher.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
+  <data name="RadTextBox1.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
   <data name="lblAufbewahrungsdauer.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="lblEichsiegelRund.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="RadTextBox1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="lblHinweismarke.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -1119,8 +1173,14 @@
   <data name="Label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="&gt;&gt;lblCE2016Kennzeichen.Parent" xml:space="preserve">
+    <value>RadScrollablePanel1.PanelContainer</value>
+  </data>
+  <data name="&gt;&gt;RadScrollablePanel1.PanelContainer.Name" xml:space="preserve">
+    <value>RadScrollablePanel1.PanelContainer</value>
+  </data>
   <data name="&gt;&gt;RadCheckBoxGruenesM.ZOrder" xml:space="preserve">
-    <value>40</value>
+    <value>45</value>
   </data>
   <data name="RadTextBoxControlBenannteStelle.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -1158,38 +1218,47 @@
   <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>12, 13</value>
   </data>
-  <data name="RadCheckBoxEichsiegel13x13.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="lblBenannteStelle.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="RadTextBoxControlBenannteStelle.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlCEKennzeichen.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
+  <data name="PictureBoxBenannteStelle.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
   </data>
   <data name="RadTextBoxControlEichsiegel13x13.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="lblGruenesM.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="PictureBoxCE2016.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="RadCheckBoxKonfigurationsProgramm.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="lblEichsiegelRund.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 128</value>
   </data>
+  <data name="&gt;&gt;PictureBoxCE2016.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="&gt;&gt;RadTextBoxControlHinweismarke.ZOrder" xml:space="preserve">
-    <value>35</value>
+    <value>40</value>
+  </data>
+  <data name="RadCheckBoxCE2016Kennzeichen.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadCheckBoxAufbewahrungsdauer.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBenannteStelle.ZOrder" xml:space="preserve">
-    <value>32</value>
+    <value>37</value>
   </data>
   <data name="RadCheckBoxAlibispeicher.Location" type="System.Drawing.Point, System.Drawing">
-    <value>316, 300</value>
+    <value>316, 334</value>
+  </data>
+  <data name="&gt;&gt;lblCE2016Kennzeichen.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="lblAlibispeicher.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -1197,8 +1266,8 @@
   <data name="&gt;&gt;PictureBoxHinweismarke.Name" xml:space="preserve">
     <value>PictureBoxHinweismarke</value>
   </data>
-  <data name="lblAufbewahrungsdauer.RootElement.ToolTipText" xml:space="preserve">
-    <value />
+  <data name="RadCheckBoxBenannteStelle.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadCheckBoxHinweismarke.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -1206,32 +1275,35 @@
   <data name="lblSicherungshinweise.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadCheckBoxBenannteStelle.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="RadCheckBox1.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="&gt;&gt;lblAufbewahrungsdauer.Name" xml:space="preserve">
     <value>lblAufbewahrungsdauer</value>
   </data>
-  <data name="RadCheckBoxEichsiegel13x13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>316, 94</value>
+  <data name="RadCheckBoxAufbewahrungsdauer.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
-  <data name="lblBemerkungen.RootElement.KeyTip" xml:space="preserve">
-    <value />
+  <data name="RadCheckBoxCE2016Kennzeichen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 15</value>
   </data>
   <data name="&gt;&gt;Label4.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
-  <data name="lblSicherungshinweise.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="&gt;&gt;Label7.Parent" xml:space="preserve">
+    <value>RadScrollablePanel1.PanelContainer</value>
+  </data>
+  <data name="lblCE2016Kennzeichen.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
   </data>
   <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>9</value>
   </data>
   <data name="&gt;&gt;lblPflichtfeld1.Name" xml:space="preserve">
     <value>lblPflichtfeld1</value>
   </data>
-  <data name="lblHinweismarke.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="PictureBoxBenannteStelle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 21</value>
   </data>
   <data name="PictureBoxGruenesM.Location" type="System.Drawing.Point, System.Drawing">
     <value>337, 198</value>
@@ -1239,11 +1311,11 @@
   <data name="lblBemerkungen.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="lblBenannteStelle.RootElement.KeyTip" xml:space="preserve">
-    <value />
+  <data name="RadCheckBoxEichsiegel13x13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>316, 94</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxAufbewahrungsdauer.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;PictureBoxBenannteStelle.Name" xml:space="preserve">
     <value>PictureBoxBenannteStelle</value>
@@ -1257,23 +1329,23 @@
   <data name="lblBemerkungen.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
+  <data name="&gt;&gt;RadTextBoxControlCE2016Kennzeichen.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
   <data name="RadCheckBoxEichsiegel13x13.Size" type="System.Drawing.Size, System.Drawing">
     <value>15, 15</value>
   </data>
-  <data name="RadTextBoxControlEichsiegelRund.RootElement.KeyTip" xml:space="preserve">
+  <data name="RadLabel1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadCheckBoxCEKennzeichen.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadTextBoxControlAufbewahrungsdauer.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxControlBenannteStelle.MaxLength" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="&gt;&gt;lblCE2016Kennzeichen.Name" xml:space="preserve">
+    <value>lblCE2016Kennzeichen</value>
   </data>
   <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="RadScrollablePanel1.RootElement.KeyTip" xml:space="preserve">
-    <value />
+    <value>10</value>
   </data>
   <data name="&gt;&gt;PictureBox2.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1282,6 +1354,12 @@
     <value>12</value>
   </data>
   <data name="RadTextBoxControlEichsiegel13x13.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lblSicherungshinweise.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="lblCE2016Kennzeichen.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="&gt;&gt;Label2.Name" xml:space="preserve">
@@ -1302,23 +1380,32 @@
   <data name="&gt;&gt;lblSicherungshinweise.Name" xml:space="preserve">
     <value>lblSicherungshinweise</value>
   </data>
+  <data name="RadCheckBoxBenannteStelle.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
   <data name="&gt;&gt;lblBenannteStelle.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>14</value>
   </data>
-  <data name="&gt;&gt;RadScrollablePanel1.PanelContainer.Name" xml:space="preserve">
-    <value>RadScrollablePanel1.PanelContainer</value>
-  </data>
-  <data name="lblGruenesM.RootElement.ToolTipText" xml:space="preserve">
+  <data name="RadCheckBoxCE2016Kennzeichen.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
+  <data name="lblGruenesM.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Label2.TabIndex" type="System.Int32, mscorlib">
+    <value>262</value>
+  </data>
+  <data name="RadTextBoxControlCEKennzeichen.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
+  </data>
   <data name="&gt;&gt;RadTextBoxControlCEKennzeichen.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;PictureBox1.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;PictureBoxEichsiegel13x13.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>30</value>
   </data>
   <data name="&gt;&gt;lblBenannteStelle.Name" xml:space="preserve">
     <value>lblBenannteStelle</value>
@@ -1333,13 +1420,10 @@
     <value />
   </data>
   <data name="lblAlibispeicher.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 300</value>
+    <value>3, 334</value>
   </data>
-  <data name="lblCEKennzeichen.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblDatenKonfiguration.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="lblCE2016Kennzeichen.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
   </data>
   <data name="RadTextBoxControlCEKennzeichen.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -1350,14 +1434,14 @@
   <data name="RadCheckBoxEichsiegel13x13.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="Label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="RadCheckBoxEichsiegel13x13.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="lblEichsiegelRund.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
-  <data name="&gt;&gt;PictureBoxEichsiegelRund.ZOrder" xml:space="preserve">
-    <value>23</value>
+  <data name="&gt;&gt;lblCE2016Kennzeichen.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="Label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1371,17 +1455,8 @@
   <data name="RadCheckBoxHinweismarke.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
-  <data name="RadCheckBoxEichsiegel13x13.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlAufbewahrungsdauer.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="RadCheckBoxAufbewahrungsdauer.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
-  </data>
-  <data name="RadCheckBoxCEKennzeichen.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
   </data>
   <data name="Label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1402,16 +1477,16 @@
     <value>StretchImage</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlEichsiegel13x13.ZOrder" xml:space="preserve">
-    <value>39</value>
+    <value>44</value>
   </data>
   <data name="lblSicherungshinweise.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
   </data>
-  <data name="PictureBoxHinweismarke.Size" type="System.Drawing.Size, System.Drawing">
-    <value>18, 21</value>
+  <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>486, 164</value>
   </data>
   <data name="&gt;&gt;lblAufbewahrungsdauer.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="lblCEKennzeichen.Size" type="System.Drawing.Size, System.Drawing">
     <value>63, 18</value>
@@ -1420,7 +1495,7 @@
     <value>23</value>
   </data>
   <data name="RadCheckBoxAufbewahrungsdauer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>316, 335</value>
+    <value>316, 369</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBenannteStelle.Name" xml:space="preserve">
     <value>RadCheckBoxBenannteStelle</value>
@@ -1434,23 +1509,26 @@
   <data name="RadCheckBoxGruenesM.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
+  <data name="lblCE2016Kennzeichen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 266</value>
+  </data>
   <data name="&gt;&gt;Label3.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="RadTextBoxControlBemerkungen.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="lblBemerkungen.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
   <data name="&gt;&gt;RadCheckBoxHinweismarke.ZOrder" xml:space="preserve">
-    <value>38</value>
+    <value>43</value>
   </data>
-  <data name="RadCheckBoxCEKennzeichen.RootElement.ToolTipText" xml:space="preserve">
+  <data name="RadCheckBoxCE2016Kennzeichen.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="RadTextBoxControlEichsiegelRund.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
+  </data>
+  <data name="RadLabel1.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxGruenesM.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -1461,14 +1539,8 @@
   <data name="lblDatenKonfiguration.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
-  <data name="RadTextBoxControlHinweismarke.MaxLength" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="RadTextBoxControlEichsiegel13x13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 20</value>
-  </data>
-  <data name="RadTextBoxControlBemerkungen.MaxLength" type="System.Int32, mscorlib">
-    <value>30000</value>
+  <data name="RadTextBoxControlEichsiegel13x13.Text" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;lblBemerkungen.Name" xml:space="preserve">
     <value>lblBemerkungen</value>
@@ -1481,6 +1553,9 @@
   </data>
   <data name="&gt;&gt;lblSicherungshinweise.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
+  </data>
+  <data name="Label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="RadCheckBoxEichsiegel13x13.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
@@ -1497,20 +1572,20 @@
   <data name="lblBemerkungen.Text" xml:space="preserve">
     <value>remarks:</value>
   </data>
-  <data name="lblEichsiegelRund.RootElement.ToolTipText" xml:space="preserve">
-    <value />
+  <data name="PictureBoxAilbi.Location" type="System.Drawing.Point, System.Drawing">
+    <value>337, 367</value>
   </data>
   <data name="lblBemerkungen.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
+  <data name="RadCheckBox1.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
   <data name="&gt;&gt;RadCheckBoxCEKennzeichen.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadCheckBoxKonfigurationsProgramm.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
-  </data>
-  <data name="RadTextBoxControlBemerkungen.RootElement.ToolTipText" xml:space="preserve">
-    <value />
   </data>
   <data name="lblAufbewahrungsdauer.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
@@ -1518,11 +1593,14 @@
   <data name="lblAnzahl.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="RadCheckBoxBenannteStelle.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="&gt;&gt;RadTextBoxControlCEKennzeichen.ZOrder" xml:space="preserve">
+    <value>36</value>
   </data>
   <data name="lblPflichtfeld1.Text" xml:space="preserve">
     <value>*</value>
+  </data>
+  <data name="&gt;&gt;PictureBoxEichsiegelRund.ZOrder" xml:space="preserve">
+    <value>28</value>
   </data>
   <data name="RadTextBoxControlCEKennzeichen.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -1533,9 +1611,6 @@
   <data name="lblCEKennzeichen.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
-  <data name="lblCEKennzeichen.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="RadCheckBoxAufbewahrungsdauer.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
@@ -1545,17 +1620,23 @@
   <data name="lblPflichtfeld1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="&gt;&gt;PictureBoxCE2016.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;PictureBox1.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="RadTextBoxControlAufbewahrungsdauer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>355, 333</value>
+    <value>355, 367</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxCE2016Kennzeichen.Name" xml:space="preserve">
+    <value>RadCheckBoxCE2016Kennzeichen</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;PictureBox3.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="RadTextBoxControlEichsiegel13x13.RootElement.KeyTip" xml:space="preserve">
-    <value />
   </data>
   <data name="&gt;&gt;PictureBoxEichsiegel13x13.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1563,7 +1644,7 @@
   <data name="RadTextBoxControlHinweismarke.Size" type="System.Drawing.Size, System.Drawing">
     <value>125, 20</value>
   </data>
-  <data name="RadTextBoxControlHinweismarke.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="lblAufbewahrungsdauer.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="RadCheckBoxAlibispeicher.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
@@ -1576,7 +1657,7 @@
     <value>12, 13</value>
   </data>
   <data name="&gt;&gt;lblSicherungshinweise.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>12</value>
   </data>
   <data name="RadTextBoxControlAufbewahrungsdauer.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -1591,10 +1672,13 @@
     <value>RadTextBoxControlHinweismarke</value>
   </data>
   <data name="&gt;&gt;PictureBox2.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>15</value>
   </data>
   <data name="RadTextBoxControlGruenesM.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
+  </data>
+  <data name="&gt;&gt;PictureBoxCE2016.Parent" xml:space="preserve">
+    <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="lblAlibispeicher.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
@@ -1602,26 +1686,32 @@
   <data name="lblEichsiegelRund.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
+  <data name="&gt;&gt;PictureBox3.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
   <data name="&gt;&gt;RadCheckBoxEichsiegelRund.Name" xml:space="preserve">
     <value>RadCheckBoxEichsiegelRund</value>
-  </data>
-  <data name="lblGruenesM.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 198</value>
   </data>
   <data name="RadTextBoxControlEichsiegel13x13.Location" type="System.Drawing.Point, System.Drawing">
     <value>355, 94</value>
   </data>
-  <data name="lblDatenKonfiguration.RootElement.ToolTipText" xml:space="preserve">
+  <data name="RadCheckBox1.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="RadCheckBoxHinweismarke.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="&gt;&gt;PictureBox1.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>17</value>
+  </data>
+  <data name="RadTextBoxControlCE2016Kennzeichen.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
   </data>
   <data name="RadCheckBoxEichsiegelRund.Size" type="System.Drawing.Size, System.Drawing">
     <value>15, 15</value>
+  </data>
+  <data name="PictureBoxCE.TabIndex" type="System.Int32, mscorlib">
+    <value>62</value>
   </data>
   <data name="RadCheckBoxGruenesM.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
@@ -1629,17 +1719,14 @@
   <data name="lblEichsiegelRund.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
-  <data name="lblEichsiegel13x13.RootElement.KeyTip" xml:space="preserve">
-    <value />
+  <data name="Label7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="RadTextBoxControlBenannteStelle.Size" type="System.Drawing.Size, System.Drawing">
     <value>125, 20</value>
   </data>
-  <data name="RadScrollablePanel1.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="&gt;&gt;RadTextBoxControlBemerkungen.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="Label3.TabIndex" type="System.Int32, mscorlib">
     <value>263</value>
@@ -1653,11 +1740,8 @@
   <data name="&gt;&gt;PictureBoxAilbi.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lblAnzahl.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="&gt;&gt;RadCheckBoxGruenesM.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="Label3.Text" xml:space="preserve">
     <value>*</value>
@@ -1671,38 +1755,35 @@
   <data name="RadTextBoxControlEichsiegelRund.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
-  <data name="lblPflichtfeld1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="lblAnzahl.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="lblBenannteStelle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 18</value>
   </data>
   <data name="RadCheckBoxKonfigurationsProgramm.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="&gt;&gt;lblCEKennzeichen.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;PictureBoxCE.Parent" xml:space="preserve">
-    <value>RadScrollablePanel1.PanelContainer</value>
+  <data name="lblGruenesM.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 198</value>
   </data>
   <data name="RadTextBoxControlHinweismarke.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="RadCheckBoxAlibispeicher.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="&gt;&gt;RadCheckBoxAufbewahrungsdauer.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
-  </data>
-  <data name="RadCheckBoxBenannteStelle.RootElement.KeyTip" xml:space="preserve">
-    <value />
   </data>
   <data name="RadTextBoxControlEichsiegelRund.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="lblSicherungshinweise.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 18</value>
-  </data>
   <data name="&gt;&gt;lblAnzahl.ZOrder" xml:space="preserve">
-    <value>30</value>
+    <value>35</value>
+  </data>
+  <data name="lblCEKennzeichen.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="lblEichsiegel13x13.Text" xml:space="preserve">
     <value>verification marking "Eichsiegel 13x13"</value>
@@ -1710,11 +1791,11 @@
   <data name="&gt;&gt;Label5.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
-  <data name="lblBenannteStelle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>195, 18</value>
-  </data>
   <data name="PictureBoxEichsiegel13x13.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="RadCheckBox1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="lblSicherungshinweise.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1740,8 +1821,8 @@
   <data name="&gt;&gt;lblAnzahl.Name" xml:space="preserve">
     <value>lblAnzahl</value>
   </data>
-  <data name="RadCheckBoxEichsiegelRund.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="lblGruenesM.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
   </data>
   <data name="lblGruenesM.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -1753,9 +1834,6 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="RadCheckBoxEichsiegelRund.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxEichsiegelRund.RootElement.ToolTipText" xml:space="preserve">
     <value />
   </data>
   <data name="lblPflichtfeld1.TabIndex" type="System.Int32, mscorlib">
@@ -1782,6 +1860,9 @@
   <data name="RadCheckBoxGruenesM.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
+  <data name="&gt;&gt;lblAlibispeicher.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
   <data name="lblEichsiegelRund.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
@@ -1789,7 +1870,10 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanel1.PanelContainer.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadScrollablePanelContainer, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadScrollablePanelContainer, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="RadTextBoxControlCE2016Kennzeichen.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="PictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -1797,17 +1881,20 @@
   <data name="lblBenannteStelle.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="lblAlibispeicher.RootElement.KeyTip" xml:space="preserve">
-    <value />
+  <data name="lblCE2016Kennzeichen.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadTextBoxControlEichsiegel13x13.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="&gt;&gt;RadScrollablePanel1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadScrollablePanel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadScrollablePanel, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadCheckBoxCEKennzeichen.Size" type="System.Drawing.Size, System.Drawing">
     <value>15, 15</value>
+  </data>
+  <data name="lblDatenKonfiguration.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 301</value>
   </data>
   <data name="RadTextBoxControlGruenesM.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
@@ -1819,16 +1906,13 @@
     <value>RadTextBoxControlEichsiegel13x13</value>
   </data>
   <data name="&gt;&gt;Label6.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lblAufbewahrungsdauer.Parent" xml:space="preserve">
-    <value>RadScrollablePanel1.PanelContainer</value>
+    <value>1</value>
   </data>
   <data name="lblHinweismarke.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="&gt;&gt;PictureBox3.ZOrder" xml:space="preserve">
-    <value>8</value>
+  <data name="RadCheckBoxEichsiegelRund.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
   <data name="RadTextBoxControlBemerkungen.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1839,11 +1923,8 @@
   <data name="RadCheckBoxBenannteStelle.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlEichsiegel13x13.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="RadScrollablePanel1.Text" xml:space="preserve">
-    <value>RadScrollablePanel1</value>
+  <data name="RadTextBoxControlEichsiegel13x13.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="RadTextBoxControlCEKennzeichen.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -1851,29 +1932,26 @@
   <data name="RadCheckBoxAufbewahrungsdauer.Size" type="System.Drawing.Size, System.Drawing">
     <value>15, 15</value>
   </data>
+  <data name="lblCE2016Kennzeichen.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
   <data name="&gt;&gt;RadScrollablePanel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="RadTextBoxControlGruenesM.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="&gt;&gt;Label5.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="lblAnzahl.Text" xml:space="preserve">
     <value>how many</value>
   </data>
   <data name="&gt;&gt;lblBemerkungen.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="lblAufbewahrungsdauer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 335</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadCheckBoxKonfigurationsProgramm.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
-  <data name="RadTextBoxControlBemerkungen.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="&gt;&gt;PictureBox2.Parent" xml:space="preserve">
+    <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;PictureBoxEichsiegelRund.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1884,23 +1962,17 @@
   <data name="lblEichsiegelRund.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="lblGruenesM.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="&gt;&gt;Label4.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;PictureBoxGruenesM.ZOrder" xml:space="preserve">
-    <value>19</value>
-  </data>
-  <data name="RadTextBoxControlEichsiegel13x13.RootElement.ToolTipText" xml:space="preserve">
-    <value />
+    <value>24</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlCEKennzeichen.Name" xml:space="preserve">
     <value>RadTextBoxControlCEKennzeichen</value>
   </data>
   <data name="&gt;&gt;lblBemerkungen.ZOrder" xml:space="preserve">
-    <value>26</value>
+    <value>31</value>
   </data>
   <data name="lblAnzahl.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
@@ -1915,16 +1987,13 @@
     <value>337, 94</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxKonfigurationsProgramm.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="lblAnzahl.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="RadTextBoxControlEichsiegelRund.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="&gt;&gt;RadTextBoxControlBenannteStelle.ZOrder" xml:space="preserve">
-    <value>41</value>
+    <value>46</value>
   </data>
   <data name="lblBemerkungen.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 393</value>
@@ -1932,8 +2001,8 @@
   <data name="&gt;&gt;RadTextBoxControlEichsiegelRund.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
-  <data name="lblEichsiegelRund.RootElement.KeyTip" xml:space="preserve">
-    <value />
+  <data name="Label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>486, 266</value>
   </data>
   <data name="&gt;&gt;PictureBoxGruenesM.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1944,11 +2013,11 @@
   <data name="&gt;&gt;RadCheckBoxAlibispeicher.Name" xml:space="preserve">
     <value>RadCheckBoxAlibispeicher</value>
   </data>
-  <data name="RadTextBoxControlBemerkungen.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="lblCEKennzeichen.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
+  </data>
+  <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 13</value>
   </data>
   <data name="RadScrollablePanel1.TabIndex" type="System.Int32, mscorlib">
     <value>260</value>
@@ -1968,11 +2037,8 @@
   <data name="&gt;&gt;Label4.Name" xml:space="preserve">
     <value>Label4</value>
   </data>
-  <data name="RadCheckBoxGruenesM.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="&gt;&gt;lblBenannteStelle.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="PictureBox3.TabIndex" type="System.Int32, mscorlib">
     <value>259</value>
@@ -1980,11 +2046,8 @@
   <data name="PictureBoxEichsiegel13x13.TabIndex" type="System.Int32, mscorlib">
     <value>58</value>
   </data>
-  <data name="&gt;&gt;Label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblCEKennzeichen.RootElement.KeyTip" xml:space="preserve">
-    <value />
+  <data name="RadCheckBoxCE2016Kennzeichen.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
   </data>
   <data name="RadTextBoxControlGruenesM.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -1995,6 +2058,9 @@
   <data name="lblGruenesM.Text" xml:space="preserve">
     <value>green "M"</value>
   </data>
+  <data name="&gt;&gt;Label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;RadTextBoxControlAufbewahrungsdauer.Name" xml:space="preserve">
     <value>RadTextBoxControlAufbewahrungsdauer</value>
   </data>
@@ -2004,23 +2070,20 @@
   <data name="&gt;&gt;lblBemerkungen.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
-  <data name="RadTextBoxControlEichsiegel13x13.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
+  <data name="&gt;&gt;RadCheckBoxCE2016Kennzeichen.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
-  <data name="RadScrollablePanel1.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;PictureBoxAilbi.Parent" xml:space="preserve">
-    <value>RadScrollablePanel1.PanelContainer</value>
+  <data name="lblBemerkungen.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlEichsiegelRund.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="lblAlibispeicher.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="&gt;&gt;lblHinweismarke.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>19</value>
   </data>
   <data name="Label6.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -2034,9 +2097,6 @@
   <data name="lblAnzahl.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 18</value>
   </data>
-  <data name="lblHinweismarke.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>485, 128</value>
   </data>
@@ -2049,29 +2109,32 @@
   <data name="Label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="lblPflichtfeld1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="RadCheckBoxAlibispeicher.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
-  <data name="RadCheckBoxAufbewahrungsdauer.RootElement.ToolTipText" xml:space="preserve">
-    <value />
+  <data name="PictureBoxCE2016.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 21</value>
   </data>
   <data name="lblAlibispeicher.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
   </data>
   <data name="&gt;&gt;lblDatenKonfiguration.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="lblAufbewahrungsdauer.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
-  </data>
-  <data name="&gt;&gt;lblEichsiegelRund.Name" xml:space="preserve">
-    <value>lblEichsiegelRund</value>
   </data>
   <data name="lblCEKennzeichen.RootElement.AngleTransform" type="System.Single, mscorlib">
     <value>0</value>
   </data>
   <data name="RadTextBoxControlEichsiegel13x13.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
+  </data>
+  <data name="RadCheckBox1.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
   </data>
   <data name="RadTextBoxControlEichsiegelRund.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -2088,8 +2151,11 @@
   <data name="&gt;&gt;RadCheckBoxEichsiegel13x13.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
-  <data name="RadTextBoxControlEichsiegelRund.MaxLength" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="RadTextBoxControlAufbewahrungsdauer.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="RadTextBoxControlAufbewahrungsdauer.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="PictureBoxCE.Size" type="System.Drawing.Size, System.Drawing">
     <value>18, 21</value>
@@ -2104,25 +2170,19 @@
     <value>TopLeft</value>
   </data>
   <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>8</value>
   </data>
-  <data name="RadCheckBoxGruenesM.RootElement.KeyTip" xml:space="preserve">
-    <value />
+  <data name="lblCE2016Kennzeichen.Text" xml:space="preserve">
+    <value>CE Marking from 04/20/2016</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlBemerkungen.ZOrder" xml:space="preserve">
-    <value>28</value>
+  <data name="RadCheckBoxEichsiegel13x13.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
-  <data name="&gt;&gt;lblEichsiegel13x13.Name" xml:space="preserve">
-    <value>lblEichsiegel13x13</value>
+  <data name="lblDatenKonfiguration.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
-  <data name="RadTextBoxControlAufbewahrungsdauer.MaxLength" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="lblDatenKonfiguration.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 267</value>
-  </data>
-  <data name="&gt;&gt;lblPflichtfeld1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="RadTextBoxControlBemerkungen.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxCEKennzeichen.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -2133,11 +2193,17 @@
   <data name="lblEichsiegelRund.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
+  <data name="RadTextBoxControlCE2016Kennzeichen.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="lblPflichtfeld1.Location" type="System.Drawing.Point, System.Drawing">
     <value>485, 59</value>
   </data>
-  <data name="RadTextBoxControlHinweismarke.RootElement.KeyTip" xml:space="preserve">
-    <value />
+  <data name="lblAlibispeicher.RootElement.AngleTransform" type="System.Single, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblCE2016Kennzeichen.TabIndex" type="System.Int32, mscorlib">
+    <value>266</value>
   </data>
   <data name="lblEichsiegel13x13.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
@@ -2145,7 +2211,10 @@
   <data name="lblAlibispeicher.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="lblSicherungshinweise.RootElement.ToolTipText" xml:space="preserve">
+  <data name="&gt;&gt;lblGruenesM.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="RadLabel1.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
   <data name="PictureBoxGruenesM.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -2169,32 +2238,29 @@
   <data name="RadCheckBoxAufbewahrungsdauer.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="PictureBoxBenannteStelle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>18, 21</value>
+  <data name="&gt;&gt;lblAufbewahrungsdauer.Parent" xml:space="preserve">
+    <value>RadScrollablePanel1.PanelContainer</value>
   </data>
-  <data name="RadTextBoxControlCEKennzeichen.MaxLength" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="RadCheckBoxCE2016Kennzeichen.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopLeft</value>
   </data>
-  <data name="&gt;&gt;PictureBoxBenannteStelle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;lblGruenesM.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="lblAnzahl.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;lblHinweismarke.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="&gt;&gt;PictureBoxHinweismarke.ZOrder" xml:space="preserve">
+    <value>26</value>
   </data>
   <data name="PictureBoxEichsiegel13x13.Size" type="System.Drawing.Size, System.Drawing">
     <value>18, 21</value>
   </data>
-  <data name="PictureBoxAilbi.Size" type="System.Drawing.Size, System.Drawing">
-    <value>18, 21</value>
+  <data name="lblHinweismarke.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="PictureBox3.Location" type="System.Drawing.Point, System.Drawing">
     <value>503, 393</value>
   </data>
-  <data name="RadTextBoxControlAufbewahrungsdauer.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
+  <data name="RadScrollablePanel1.RootElement.FlipText" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="RadCheckBoxCEKennzeichen.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2218,15 +2284,12 @@
     <value />
   </data>
   <data name="&gt;&gt;RadCheckBoxAlibispeicher.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="RadTextBoxControlEichsiegel13x13.RootElement.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>pl</value>
   </metadata>
 </root>

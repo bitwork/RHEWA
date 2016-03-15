@@ -118,6 +118,15 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblCE2016Kennzeichen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 18</value>
+  </data>
+  <data name="lblCE2016Kennzeichen.Text" xml:space="preserve">
+    <value>CE Kennzeichen ab 20.04.2016</value>
+  </data>
+  <data name="RadTextBoxControlCE2016Kennzeichen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 20</value>
+  </data>
   <data name="lblSicherungshinweise.Size" type="System.Drawing.Size, System.Drawing">
     <value>331, 18</value>
   </data>

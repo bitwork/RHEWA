@@ -155,6 +155,7 @@
         <xs:element minOccurs="0" name="AnzahlHinweismarke" type="xs:int" />
         <xs:element minOccurs="0" name="AnzahlGruenesM" type="xs:int" />
         <xs:element minOccurs="0" name="AnzahlCE" type="xs:int" />
+        <xs:element minOccurs="0" name="AnzahlCE2016" type="xs:int" />
         <xs:element minOccurs="0" name="WindowsUsername" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Domainname" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Computername" nillable="true" type="xs:string" />

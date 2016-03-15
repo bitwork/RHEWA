@@ -1316,6 +1316,8 @@ Public Class clsOfficeExports
                 r.InsertAfter("Benannte Stelle Anzahl: " & pEichProzess.Eichprotokoll.Sicherung_BenannteStelleAnzahl & vbNewLine)
                 r.InsertAfter("CE: " & pEichProzess.Eichprotokoll.Sicherung_CE & vbNewLine)
                 r.InsertAfter("CE Anzahl: " & pEichProzess.Eichprotokoll.Sicherung_CEAnzahl & vbNewLine)
+                r.InsertAfter("CE 2016: " & pEichProzess.Eichprotokoll.Sicherung_CE2016 & vbNewLine)
+                r.InsertAfter("CE 2016 Anzahl: " & pEichProzess.Eichprotokoll.Sicherung_CE2016Anzahl & vbNewLine)
                 r.InsertAfter("Daten Ausgelesen: " & pEichProzess.Eichprotokoll.Sicherung_DatenAusgelesen & vbNewLine)
                 r.InsertAfter("Eichsiegel 13x13: " & pEichProzess.Eichprotokoll.Sicherung_Eichsiegel13x13 & vbNewLine)
                 r.InsertAfter("Eichsiegel 13x13 Anzahl: " & pEichProzess.Eichprotokoll.Sicherung_Eichsiegel13x13Anzahl & vbNewLine)

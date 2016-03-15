@@ -180,7 +180,7 @@
           <Property Name="Beschaffenheitspruefung_Genauigkeitsklasse" Type="nvarchar" MaxLength="50" />
           <Property Name="Beschaffenheitspruefung_Pruefintervall" Type="nvarchar" MaxLength="50" />
           <Property Name="Beschaffenheitspruefung_LetztePruefung" Type="nvarchar" MaxLength="50" />
-          <Property Name="Beschaffenheitspruefung_Pruefscheinnummer" Type="nvarchar" MaxLength="50" />
+          <Property Name="Beschaffenheitspruefung_Pruefscheinnummer" Type="nvarchar(max)" />
           <Property Name="Beschaffenheitspruefung_EichfahrzeugFirma" Type="nvarchar" MaxLength="50" />
           <Property Name="GenauigkeitNullstellung_InOrdnung" Type="bit" />
           <Property Name="Ueberlastanzeige_Max" Type="nvarchar" MaxLength="20" />
@@ -202,6 +202,8 @@
           <Property Name="Sicherung_GruenesMAnzahl" Type="smallint" />
           <Property Name="Sicherung_CE" Type="bit" />
           <Property Name="Sicherung_CEAnzahl" Type="smallint" />
+          <Property Name="Sicherung_CE2016" Type="bit" />
+          <Property Name="Sicherung_CE2016Anzahl" Type="smallint" />
           <Property Name="Sicherung_DatenAusgelesen" Type="bit" />
           <Property Name="Sicherung_AlibispeicherEingerichtet" Type="bit" />
           <Property Name="Sicherung_AlibispeicherAufbewahrungsdauerReduziert" Type="bit" />
@@ -1015,6 +1017,8 @@
           <Property Type="Boolean" Name="Beschaffenheitspruefung_Genehmigt" />
           <Property Type="Boolean" Name="Taraeinrichtung_Taraeingabe" />
           <NavigationProperty Name="ServerEichprozess" Relationship="EichenModel.FK_Eichprozess_Eichprotokoll" FromRole="ServerEichprotokoll" ToRole="ServerEichprozess" />
+          <Property Type="Boolean" Name="Sicherung_CE2016" />
+          <Property Type="Int16" Name="Sicherung_CE2016Anzahl" />
         </EntityType>
         <EntityType Name="ServerEichprozess">
           <Key>
@@ -1480,6 +1484,8 @@
           <EntitySetMapping Name="ServerEichprotokoll">
             <EntityTypeMapping TypeName="EichenModel.ServerEichprotokoll">
               <MappingFragment StoreEntitySet="ServerEichprotokoll">
+                <ScalarProperty Name="Sicherung_CE2016Anzahl" ColumnName="Sicherung_CE2016Anzahl" />
+                <ScalarProperty Name="Sicherung_CE2016" ColumnName="Sicherung_CE2016" />
                 <ScalarProperty Name="Taraeinrichtung_Taraeingabe" ColumnName="Taraeinrichtung_Taraeingabe" />
                 <ScalarProperty Name="Beschaffenheitspruefung_Genehmigt" ColumnName="Beschaffenheitspruefung_Genehmigt" />
                 <ScalarProperty Name="EignungAchlastwaegungen_Geprueft" ColumnName="EignungAchlastwaegungen_Geprueft" />
@@ -1624,7 +1630,7 @@
     </Options>
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
-      <Diagram Name="EntityModelDatabaseAdminClient" ZoomLevel="101">
+      <Diagram Name="EntityModelDatabaseAdminClient" ZoomLevel="50">
         <EntityTypeShape EntityType="EichenModel.ServerEichmarkenverwaltung" Width="1.5" PointX="0.75" PointY="2.25" Height="4.48020507812501" />
         <EntityTypeShape EntityType="EichenModel.ServerEichprotokoll" Width="1.5" PointX="3" PointY="20" Height="16.979798177083332" />
         <EntityTypeShape EntityType="EichenModel.ServerEichprozess" Width="1.5" PointX="8.25" PointY="26" Height="5.2494108072916674" />

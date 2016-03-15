@@ -171,6 +171,9 @@
         If Not objEichprozess.Eichprotokoll.Sicherung_CE Is Nothing Then
             RadCheckBoxCEKennzeichen.Checked = objEichprozess.Eichprotokoll.Sicherung_CE
         End If
+        If Not objEichprozess.Eichprotokoll.Sicherung_CE2016 Is Nothing Then
+            RadCheckBoxCE2016Kennzeichen.Checked = objEichprozess.Eichprotokoll.Sicherung_CE2016
+        End If
 
 
         'anzahl
@@ -194,6 +197,9 @@
         End If
         If Not objEichprozess.Eichprotokoll.Sicherung_CEAnzahl Is Nothing Then
             RadTextBoxControlCEKennzeichen.Text = objEichprozess.Eichprotokoll.Sicherung_CEAnzahl
+        End If
+        If Not objEichprozess.Eichprotokoll.Sicherung_CE2016Anzahl Is Nothing Then
+            RadTextBoxControlCE2016Kennzeichen.Text = objEichprozess.Eichprotokoll.Sicherung_CE2016Anzahl
         End If
 
 
@@ -233,6 +239,8 @@
         objEichprozess.Eichprotokoll.Sicherung_HinweismarkeGelocht = RadCheckBoxHinweismarke.Checked
         objEichprozess.Eichprotokoll.Sicherung_GruenesM = RadCheckBoxGruenesM.Checked
         objEichprozess.Eichprotokoll.Sicherung_CE = RadCheckBoxCEKennzeichen.Checked
+        objEichprozess.Eichprotokoll.Sicherung_CE2016 = RadCheckBoxCE2016Kennzeichen.Checked
+
 
         If DialogModus = enuDialogModus.normal Then objEichprozess.Bearbeitungsdatum = Date.Now
 
@@ -291,6 +299,16 @@
             End If
         Catch ex As Exception
         End Try
+        Try
+            If RadTextBoxControlCE2016Kennzeichen.Text.Trim.Equals("") Then
+                objEichprozess.Eichprotokoll.Sicherung_CE2016Anzahl = 0
+            Else
+                objEichprozess.Eichprotokoll.Sicherung_CE2016Anzahl = RadTextBoxControlCE2016Kennzeichen.Text
+
+            End If
+        Catch ex As Exception
+        End Try
+
 
         'alibi
         objEichprozess.Eichprotokoll.Sicherung_DatenAusgelesen = RadCheckBoxKonfigurationsProgramm.Checked

@@ -39,7 +39,6 @@
       <xs:element name="_Pruefbericht" nillable="true" type="xs:string" />
       <xs:element name="_Revisionsnummer" nillable="true" type="xs:string" />
       <xs:element name="_RueckkehrVorlastsignal" nillable="true" type="xs:string" />
-      <xs:element name="_ServerEichprozess" nillable="true" type="tns:ArrayOfServerEichprozess" />
       <xs:element name="_ServerMogelstatistik" nillable="true" type="tns:ArrayOfServerMogelstatistik" />
       <xs:element name="_Typ" nillable="true" type="xs:string" />
       <xs:element name="_Waegezellenkennwert" nillable="true" type="xs:string" />
@@ -47,12 +46,49 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ServerLookup_Waegezelle" nillable="true" type="tns:ServerLookup_Waegezelle" />
-  <xs:complexType name="ArrayOfServerEichprozess">
+  <xs:complexType name="ArrayOfServerMogelstatistik">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="ServerEichprozess" nillable="true" type="tns:ServerEichprozess" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ServerMogelstatistik" nillable="true" type="tns:ServerMogelstatistik" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ArrayOfServerEichprozess" nillable="true" type="tns:ArrayOfServerEichprozess" />
+  <xs:element name="ArrayOfServerMogelstatistik" nillable="true" type="tns:ArrayOfServerMogelstatistik" />
+  <xs:complexType name="ServerMogelstatistik">
+    <xs:sequence>
+      <xs:element name="_FK_Auswertegeraet" nillable="true" type="xs:string" />
+      <xs:element name="_FK_Eichprozess" nillable="true" type="xs:int" />
+      <xs:element name="_FK_Waegezelle" nillable="true" type="xs:string" />
+      <xs:element name="_ID" type="xs:int" />
+      <xs:element name="_Kompatiblitaet_AWG_Anschlussart" nillable="true" type="xs:string" />
+      <xs:element name="_Kompatiblitaet_AnschriftWaagenbaufirma" nillable="true" type="xs:string" />
+      <xs:element name="_Kompatiblitaet_Verbindungselemente_BruchteilEichfehlergrenze" nillable="true" type="xs:string" />
+      <xs:element name="_Kompatiblitaet_WZ_Hoechstlast" nillable="true" type="xs:string" />
+      <xs:element name="_Kompatiblitaet_Waage_AdditiveTarahoechstlast" nillable="true" type="xs:string" />
+      <xs:element name="_Kompatiblitaet_Waage_AnzahlWaegezellen" nillable="true" type="xs:string" />
+      <xs:element name="_Kompatiblitaet_Waage_Bauartzulassung" nillable="true" type="xs:string" />
+      <xs:element name="_Kompatiblitaet_Waage_Ecklastzuschlag" nillable="true" type="xs:string" />
+      <xs:element name="_Kompatiblitaet_Waage_Einschaltnullstellbereich" nillable="true" type="xs:string" />
+      <xs:element name="_Kompatiblitaet_Waage_FabrikNummer" nillable="true" type="xs:string" />
+      <xs:element name="_Kompatiblitaet_Waage_Genauigkeitsklasse" nillable="true" type="xs:string" />
+      <xs:element name="_Kompatiblitaet_Waage_GrenzenTemperaturbereichMAX" nillable="true" type="xs:string" />
+      <xs:element name="_Kompatiblitaet_Waage_GrenzenTemperaturbereichMIN" nillable="true" type="xs:string" />
+      <xs:element name="_Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich1" nillable="true" type="xs:string" />
+      <xs:element name="_Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich2" nillable="true" type="xs:string" />
+      <xs:element name="_Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich3" nillable="true" type="xs:string" />
+      <xs:element name="_Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich1" nillable="true" type="xs:string" />
+      <xs:element name="_Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich2" nillable="true" type="xs:string" />
+      <xs:element name="_Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich3" nillable="true" type="xs:string" />
+      <xs:element name="_Kompatiblitaet_Waage_Kabellaenge" nillable="true" type="xs:string" />
+      <xs:element name="_Kompatiblitaet_Waage_Kabelquerschnitt" nillable="true" type="xs:string" />
+      <xs:element name="_Kompatiblitaet_Waage_Revisionsnummer" nillable="true" type="xs:string" />
+      <xs:element name="_Kompatiblitaet_Waage_Totlast" nillable="true" type="xs:string" />
+      <xs:element name="_Kompatiblitaet_Waage_Uebersetzungsverhaeltnis" nillable="true" type="xs:string" />
+      <xs:element name="_Kompatiblitaet_Waage_Zulassungsinhaber" nillable="true" type="xs:string" />
+      <xs:element name="_ServerEichprozess" nillable="true" type="tns:ServerEichprozess" />
+      <xs:element name="_ServerLookup_Auswertegeraet" nillable="true" type="tns:ServerLookup_Auswertegeraet" />
+      <xs:element name="_ServerLookup_Waegezelle" nillable="true" type="tns:ServerLookup_Waegezelle" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ServerMogelstatistik" nillable="true" type="tns:ServerMogelstatistik" />
   <xs:complexType name="ServerEichprozess">
     <xs:sequence>
       <xs:element name="_Ausgeblendet" type="xs:boolean" />
@@ -76,7 +112,7 @@
       <xs:element name="_ServerLookup_Waagentyp" nillable="true" type="tns:ServerLookup_Waagentyp" />
       <xs:element name="_ServerLookup_Waegezelle" nillable="true" type="tns:ServerLookup_Waegezelle" />
       <xs:element name="_ServerMogelstatistik" nillable="true" type="tns:ArrayOfServerMogelstatistik" />
-      <xs:element name="_Standardwaage" type="xs:boolean" />
+      <xs:element name="_Standardwaage" nillable="true" type="xs:boolean" />
       <xs:element name="_UploadDatum" nillable="true" type="xs:dateTime" />
       <xs:element name="_UploadFilePath" nillable="true" type="xs:string" />
       <xs:element name="_Vorgangsnummer" nillable="true" type="xs:string" />
@@ -117,7 +153,6 @@
       <xs:element minOccurs="0" name="Pruefverfahren_BetragNormallast" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Pruefverfahren_VolleNormallast" nillable="true" type="xs:boolean" />
       <xs:element minOccurs="0" name="Pruefverfahren_VollstaendigesStaffelverfahren" nillable="true" type="xs:boolean" />
-      <xs:element minOccurs="0" name="ServerEichprozess" nillable="true" type="tns:ArrayOfServerEichprozess" />
       <xs:element minOccurs="0" name="ServerLookup_Konformitaetsbewertungsverfahren" nillable="true" type="tns:ServerLookup_Konformitaetsbewertungsverfahren" />
       <xs:element minOccurs="0" name="ServerPruefungAnsprechvermoegen" nillable="true" type="tns:ArrayOfServerPruefungAnsprechvermoegen" />
       <xs:element minOccurs="0" name="ServerPruefungAussermittigeBelastung" nillable="true" type="tns:ArrayOfServerPruefungAussermittigeBelastung" />
@@ -135,6 +170,8 @@
       <xs:element minOccurs="0" name="Sicherung_BenannteStelle" nillable="true" type="xs:boolean" />
       <xs:element minOccurs="0" name="Sicherung_BenannteStelleAnzahl" nillable="true" type="xs:short" />
       <xs:element minOccurs="0" name="Sicherung_CE" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Sicherung_CE2016" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Sicherung_CE2016Anzahl" nillable="true" type="xs:short" />
       <xs:element minOccurs="0" name="Sicherung_CEAnzahl" nillable="true" type="xs:short" />
       <xs:element minOccurs="0" name="Sicherung_DatenAusgelesen" nillable="true" type="xs:boolean" />
       <xs:element minOccurs="0" name="Sicherung_Eichsiegel13x13" nillable="true" type="xs:boolean" />
@@ -423,7 +460,6 @@
       <xs:element minOccurs="0" name="Kompatiblitaet_Waage_Totlast" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Kompatiblitaet_Waage_Uebersetzungsverhaeltnis" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Kompatiblitaet_Waage_Zulassungsinhaber" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ServerEichprozess" nillable="true" type="tns:ArrayOfServerEichprozess" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ServerKompatiblitaetsnachweis" nillable="true" type="tns:ServerKompatiblitaetsnachweis" />
@@ -449,7 +485,6 @@
       <xs:element name="_NullstellungNullnachfuehrung" type="xs:boolean" />
       <xs:element name="_NullstellungSelbsttaetig" type="xs:boolean" />
       <xs:element name="_Pruefbericht" nillable="true" type="xs:string" />
-      <xs:element name="_ServerEichprozess" nillable="true" type="tns:ArrayOfServerEichprozess" />
       <xs:element name="_ServerMogelstatistik" nillable="true" type="tns:ArrayOfServerMogelstatistik" />
       <xs:element name="_Speisespannung" nillable="true" type="xs:string" />
       <xs:element name="_TaraeinrichtungHalbSelbsttaetig" type="xs:boolean" />
@@ -459,53 +494,9 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ServerLookup_Auswertegeraet" nillable="true" type="tns:ServerLookup_Auswertegeraet" />
-  <xs:complexType name="ArrayOfServerMogelstatistik">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="ServerMogelstatistik" nillable="true" type="tns:ServerMogelstatistik" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfServerMogelstatistik" nillable="true" type="tns:ArrayOfServerMogelstatistik" />
-  <xs:complexType name="ServerMogelstatistik">
-    <xs:sequence>
-      <xs:element name="_FK_Auswertegeraet" nillable="true" type="xs:string" />
-      <xs:element name="_FK_Eichprozess" nillable="true" type="xs:int" />
-      <xs:element name="_FK_Waegezelle" nillable="true" type="xs:string" />
-      <xs:element name="_ID" type="xs:int" />
-      <xs:element name="_Kompatiblitaet_AWG_Anschlussart" nillable="true" type="xs:string" />
-      <xs:element name="_Kompatiblitaet_AnschriftWaagenbaufirma" nillable="true" type="xs:string" />
-      <xs:element name="_Kompatiblitaet_Verbindungselemente_BruchteilEichfehlergrenze" nillable="true" type="xs:string" />
-      <xs:element name="_Kompatiblitaet_WZ_Hoechstlast" nillable="true" type="xs:string" />
-      <xs:element name="_Kompatiblitaet_Waage_AdditiveTarahoechstlast" nillable="true" type="xs:string" />
-      <xs:element name="_Kompatiblitaet_Waage_AnzahlWaegezellen" nillable="true" type="xs:string" />
-      <xs:element name="_Kompatiblitaet_Waage_Bauartzulassung" nillable="true" type="xs:string" />
-      <xs:element name="_Kompatiblitaet_Waage_Ecklastzuschlag" nillable="true" type="xs:string" />
-      <xs:element name="_Kompatiblitaet_Waage_Einschaltnullstellbereich" nillable="true" type="xs:string" />
-      <xs:element name="_Kompatiblitaet_Waage_FabrikNummer" nillable="true" type="xs:string" />
-      <xs:element name="_Kompatiblitaet_Waage_Genauigkeitsklasse" nillable="true" type="xs:string" />
-      <xs:element name="_Kompatiblitaet_Waage_GrenzenTemperaturbereichMAX" nillable="true" type="xs:string" />
-      <xs:element name="_Kompatiblitaet_Waage_GrenzenTemperaturbereichMIN" nillable="true" type="xs:string" />
-      <xs:element name="_Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich1" nillable="true" type="xs:string" />
-      <xs:element name="_Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich2" nillable="true" type="xs:string" />
-      <xs:element name="_Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich3" nillable="true" type="xs:string" />
-      <xs:element name="_Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich1" nillable="true" type="xs:string" />
-      <xs:element name="_Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich2" nillable="true" type="xs:string" />
-      <xs:element name="_Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich3" nillable="true" type="xs:string" />
-      <xs:element name="_Kompatiblitaet_Waage_Kabellaenge" nillable="true" type="xs:string" />
-      <xs:element name="_Kompatiblitaet_Waage_Kabelquerschnitt" nillable="true" type="xs:string" />
-      <xs:element name="_Kompatiblitaet_Waage_Revisionsnummer" nillable="true" type="xs:string" />
-      <xs:element name="_Kompatiblitaet_Waage_Totlast" nillable="true" type="xs:string" />
-      <xs:element name="_Kompatiblitaet_Waage_Uebersetzungsverhaeltnis" nillable="true" type="xs:string" />
-      <xs:element name="_Kompatiblitaet_Waage_Zulassungsinhaber" nillable="true" type="xs:string" />
-      <xs:element name="_ServerEichprozess" nillable="true" type="tns:ServerEichprozess" />
-      <xs:element name="_ServerLookup_Auswertegeraet" nillable="true" type="tns:ServerLookup_Auswertegeraet" />
-      <xs:element name="_ServerLookup_Waegezelle" nillable="true" type="tns:ServerLookup_Waegezelle" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ServerMogelstatistik" nillable="true" type="tns:ServerMogelstatistik" />
   <xs:complexType name="ServerLookup_Bearbeitungsstatus">
     <xs:sequence>
       <xs:element minOccurs="0" name="ID" type="xs:unsignedByte" />
-      <xs:element minOccurs="0" name="ServerEichprozess" nillable="true" type="tns:ArrayOfServerEichprozess" />
       <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Status_EN" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Status_PL" nillable="true" type="xs:string" />
@@ -515,7 +506,6 @@
   <xs:complexType name="ServerLookup_Vorgangsstatus">
     <xs:sequence>
       <xs:element name="_ID" type="xs:unsignedByte" />
-      <xs:element name="_ServerEichprozess" nillable="true" type="tns:ArrayOfServerEichprozess" />
       <xs:element name="_Status" nillable="true" type="xs:string" />
       <xs:element name="_Status_EN" nillable="true" type="xs:string" />
       <xs:element name="_Status_PL" nillable="true" type="xs:string" />
@@ -528,14 +518,12 @@
       <xs:element name="_Art_EN" nillable="true" type="xs:string" />
       <xs:element name="_Art_PL" nillable="true" type="xs:string" />
       <xs:element name="_ID" type="xs:unsignedByte" />
-      <xs:element name="_ServerEichprozess" nillable="true" type="tns:ArrayOfServerEichprozess" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ServerLookup_Waagenart" nillable="true" type="tns:ServerLookup_Waagenart" />
   <xs:complexType name="ServerLookup_Waagentyp">
     <xs:sequence>
       <xs:element name="_ID" type="xs:unsignedByte" />
-      <xs:element name="_ServerEichprozess" nillable="true" type="tns:ArrayOfServerEichprozess" />
       <xs:element name="_Typ" nillable="true" type="xs:string" />
       <xs:element name="_Typ_EN" nillable="true" type="xs:string" />
       <xs:element name="_Typ_PL" nillable="true" type="xs:string" />
@@ -574,6 +562,12 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="clsEichprozessFuerAuswahlliste" nillable="true" type="tns:clsEichprozessFuerAuswahlliste" />
+  <xs:complexType name="ArrayOfServerEichprozess">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ServerEichprozess" nillable="true" type="tns:ServerEichprozess" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfServerEichprozess" nillable="true" type="tns:ArrayOfServerEichprozess" />
   <xs:complexType name="clsServerFTPDaten">
     <xs:sequence>
       <xs:element minOccurs="0" name="FTPEncryptedPassword" nillable="true" type="xs:string" />
