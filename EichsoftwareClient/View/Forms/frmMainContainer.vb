@@ -175,6 +175,7 @@ Public Class FrmMainContainer
         Dim ucos = From tmpuco In _ListofUcos Where tmpuco.Name = uco.Name
         If ucos.Count > 0 Then
             _CurrentUco = uco
+            Me.SuspendLayout()
             Me.SplitPanelContent1.Controls.Clear()
             Me.SplitPanelContent1.Controls.Add(_CurrentUco)
 
@@ -197,6 +198,7 @@ Public Class FrmMainContainer
         Else
             RadButtonNavigateBackwards.Enabled = False
         End If
+        Me.ResumeLayout()
     End Sub
 
     ''' <summary>
