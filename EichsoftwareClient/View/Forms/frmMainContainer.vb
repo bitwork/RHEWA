@@ -176,8 +176,8 @@ Public Class FrmMainContainer
         If ucos.Count > 0 Then
             _CurrentUco = uco
             Me.SuspendLayout()
-            Me.SplitPanelContent1.Controls.Clear()
-            Me.SplitPanelContent1.Controls.Add(_CurrentUco)
+            Me.SplitPanelContent.Controls.Clear()
+            Me.SplitPanelContent.Controls.Add(_CurrentUco)
 
         End If
         _CurrentUco.BringToFront()
@@ -345,7 +345,9 @@ Public Class FrmMainContainer
 
         ''Lokalisierung anstossen
         'TriggerLokalisierung()
-        
+        Me.WindowState = FormWindowState.Normal
+        Me.WindowState = FormWindowState.Maximized
+
     End Sub
 
     ''' <summary>
@@ -966,7 +968,7 @@ Public Class FrmMainContainer
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    Private Sub SplitPanelContextHelpr_Resize(sender As Object, e As System.EventArgs) Handles SplitPanelContextHelp.Resize
+    Private Sub SplitPanelContextHelpr_Resize(sender As Object, e As System.EventArgs)
         'TH größe des Labels auf die Breite des Panels legen. Der manuelle Weg wurde gewählt, so das nur ein Horizontaler SCrollbalken entsteht und kein Vertikaler
         RadLabelContextHelp.MaximumSize = New Size(RadScrollablePanelContextHelp.Size.Width - 30, 0)
     End Sub
