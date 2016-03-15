@@ -126,7 +126,7 @@
     <value>0, 0</value>
   </data>
   <data name="RadScrollablePanelTrafficLightBreadcrumb.PanelContainer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>973, 82</value>
+    <value>997, 72</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanelTrafficLightBreadcrumb.PanelContainer.Name" xml:space="preserve">
     <value>RadScrollablePanelTrafficLightBreadcrumb.PanelContainer</value>
@@ -166,7 +166,7 @@
     <value>Horizontal</value>
   </data>
   <data name="RadScrollablePanelTrafficLightBreadcrumb.Size" type="System.Drawing.Size, System.Drawing">
-    <value>975, 84</value>
+    <value>999, 74</value>
   </data>
   <data name="RadScrollablePanelTrafficLightBreadcrumb.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -268,7 +268,7 @@
     <value>1</value>
   </data>
   <data name="RadScrollablePanelContextHelp.PanelContainer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>202, 648</value>
+    <value>202, 658</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanelContextHelp.PanelContainer.Name" xml:space="preserve">
     <value>RadScrollablePanelContextHelp.PanelContainer</value>
@@ -307,7 +307,7 @@
     <value>Horizontal</value>
   </data>
   <data name="RadScrollablePanelContextHelp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 650</value>
+    <value>204, 660</value>
   </data>
   <data name="RadScrollablePanelContextHelp.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -355,7 +355,7 @@
     <value>Horizontal</value>
   </data>
   <data name="SplitPanelContent.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1064, 580</value>
+    <value>1064, 590</value>
   </data>
   <data name="SplitPanelContent.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -820,7 +820,7 @@
     <value>7</value>
   </data>
   <data name="SplitPanelNavigation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 584</value>
+    <value>0, 594</value>
   </data>
   <data name="SplitPanelNavigation.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -901,7 +901,7 @@
     <value>Horizontal</value>
   </data>
   <data name="RadSplitContainerNavigation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1064, 650</value>
+    <value>1064, 660</value>
   </data>
   <data name="RadSplitContainerNavigation.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -928,7 +928,7 @@
     <value>Fill</value>
   </data>
   <data name="lblHeaderText.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Semibold, 20pt, style=Bold</value>
+    <value>Segoe UI Semibold, 18pt, style=Bold</value>
   </data>
   <data name="lblHeaderText.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -958,7 +958,7 @@
     <value>Horizontal</value>
   </data>
   <data name="lblHeaderText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>293, 84</value>
+    <value>269, 74</value>
   </data>
   <data name="lblHeaderText.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1271,21 +1271,6 @@
   <data name="RadDropDownButtonElement2.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="RadDropDownButtonElement2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 2, 0</value>
-  </data>
-  <data name="RadDropDownButtonElement2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadDropDownButtonElement2.RightToLeft" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadDropDownButtonElement2.Text" xml:space="preserve">
-    <value>Kompatibilität</value>
-  </data>
-  <data name="RadDropDownButtonElement2.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
   <data name="RadMenuItem4.AccessibleDescription" xml:space="preserve">
     <value>Messtechnische und technische Daten</value>
   </data>
@@ -1466,6 +1451,21 @@
   <data name="RadMenuItem8.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
+  <data name="RadDropDownButtonElement2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 2, 0</value>
+  </data>
+  <data name="RadDropDownButtonElement2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadDropDownButtonElement2.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RadDropDownButtonElement2.Text" xml:space="preserve">
+    <value>Kompatibilität</value>
+  </data>
+  <data name="RadDropDownButtonElement2.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
   <data name="RadDropDownButtonElement3.AccessibleDescription" xml:space="preserve">
     <value>Beschaffenheit</value>
   </data>
@@ -1596,10 +1596,10 @@
     <value>1</value>
   </data>
   <data name="SplitContainer3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1272, 84</value>
+    <value>1272, 74</value>
   </data>
   <data name="SplitContainer3.SplitterDistance" type="System.Int32, mscorlib">
-    <value>293</value>
+    <value>269</value>
   </data>
   <data name="SplitContainer3.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1659,7 +1659,7 @@
     <value>1</value>
   </data>
   <data name="SplitContainer2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1272, 650</value>
+    <value>1272, 660</value>
   </data>
   <data name="SplitContainer2.SplitterDistance" type="System.Int32, mscorlib">
     <value>1064</value>
@@ -1695,7 +1695,7 @@
     <value>1272, 738</value>
   </data>
   <data name="SplitContainer1.SplitterDistance" type="System.Int32, mscorlib">
-    <value>84</value>
+    <value>74</value>
   </data>
   <data name="SplitContainer1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>

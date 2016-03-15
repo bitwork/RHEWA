@@ -39,9 +39,11 @@ Friend Class CustomVisualItem
         titleElement = New LightVisualElement()
         titleElement.TextAlignment = ContentAlignment.TopLeft
         titleElement.TextWrap = True
-        titleElement.TextImageRelation = Windows.Forms.TextImageRelation.TextBeforeImage
-        titleElement.Margin = New Padding(0, 5, -15, 0)
-        titleElement.Font = New Font("Segoe UI", 10, FontStyle.Regular, GraphicsUnit.Point)
+        titleElement.TextImageRelation = Windows.Forms.TextImageRelation.Overlay
+        titleElement.Margin = New Padding(0, 5, -10, 0)
+        titleElement.Font = New Font("Segoe UI", 8, FontStyle.Regular, GraphicsUnit.Point)
+        titleElement.AutoSize = True
+        titleElement.AutoSizeMode = RadAutoSizeMode.WrapAroundChildren
         titleElement.NotifyParentOnMouseInput = True
         titleElement.ShouldHandleMouseInput = False
 
@@ -53,8 +55,6 @@ Friend Class CustomVisualItem
         stackLayout.ShouldHandleMouseInput = False
 
         Me.Children.Add(stackLayout)
-        Me.Padding = New Padding(5, 5, 5, 5)
-        Me.Margin = New Padding(20, 5, 5, 10)
         Me.Shape = New RoundRectShape(3)
         Me.BorderColor = Color.FromArgb(255, 20, 100, 0)
         Me.BorderGradientStyle = GradientStyles.Solid
@@ -70,17 +70,19 @@ Friend Class CustomVisualItem
     Protected Overrides Sub SynchronizeProperties()
         Try
             MyBase.SynchronizeProperties()
+            Me.Text = ""
+            Me.imageElement.Image = Image.FromStream(New System.IO.MemoryStream(CType(Me.Data("Image"), Byte())))
+            Me.titleElement.Text = Convert.ToString(Me.Data("Title"))
+            'Me.artistElement.Text = Convert.ToString(Me.Data("ArtistName"))
         Catch ex As RowNotInTableException
 
         End Try
-        Me.Text = ""
-        Me.imageElement.Image = Image.FromStream(New System.IO.MemoryStream(CType(Me.Data("Image"), Byte())))
-        Me.titleElement.Text = Convert.ToString(Me.Data("Title"))
-        'Me.artistElement.Text = Convert.ToString(Me.Data("ArtistName"))
+
     End Sub
 
     Protected Overloads Overrides Function MeasureOverride(ByVal availableSize As SizeF) As SizeF
         Dim measuredSize As SizeF = MyBase.MeasureOverride(availableSize)
+        measuredSize.Width = measuredSize.Width / 1.8
 
         Me.stackLayout.Measure(measuredSize)
 
