@@ -187,10 +187,9 @@ Partial Class FrmMainContainer
         Me.RadSplitContainerMain.RootElement.AngleTransform = CType(resources.GetObject("RadSplitContainerMain.RootElement.AngleTransform"), Single)
         Me.RadSplitContainerMain.RootElement.FlipText = CType(resources.GetObject("RadSplitContainerMain.RootElement.FlipText"), Boolean)
         Me.RadSplitContainerMain.RootElement.Margin = CType(resources.GetObject("RadSplitContainerMain.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadSplitContainerMain.RootElement.MinSize = New System.Drawing.Size(25, 25)
+        Me.RadSplitContainerMain.RootElement.MinSize = New System.Drawing.Size(0, 0)
         Me.RadSplitContainerMain.RootElement.Text = resources.GetString("RadSplitContainerMain.RootElement.Text")
         Me.RadSplitContainerMain.RootElement.TextOrientation = CType(resources.GetObject("RadSplitContainerMain.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadSplitContainerMain.SplitterWidth = 4
         Me.RadSplitContainerMain.TabStop = False
         '
         'SplitPanelMain
@@ -207,7 +206,7 @@ Partial Class FrmMainContainer
         Me.SplitPanelMain.RootElement.AngleTransform = CType(resources.GetObject("SplitPanelMain.RootElement.AngleTransform"), Single)
         Me.SplitPanelMain.RootElement.FlipText = CType(resources.GetObject("SplitPanelMain.RootElement.FlipText"), Boolean)
         Me.SplitPanelMain.RootElement.Margin = CType(resources.GetObject("SplitPanelMain.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.SplitPanelMain.RootElement.MinSize = New System.Drawing.Size(25, 25)
+        Me.SplitPanelMain.RootElement.MinSize = New System.Drawing.Size(0, 0)
         Me.SplitPanelMain.RootElement.Text = resources.GetString("SplitPanelMain.RootElement.Text")
         Me.SplitPanelMain.RootElement.TextOrientation = CType(resources.GetObject("SplitPanelMain.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.SplitPanelMain.SizeInfo.AutoSizeScale = New System.Drawing.SizeF(0.2799684!, 0.0!)
@@ -229,10 +228,9 @@ Partial Class FrmMainContainer
         Me.RadSplitContainerNavigation.RootElement.AngleTransform = CType(resources.GetObject("RadSplitContainerNavigation.RootElement.AngleTransform"), Single)
         Me.RadSplitContainerNavigation.RootElement.FlipText = CType(resources.GetObject("RadSplitContainerNavigation.RootElement.FlipText"), Boolean)
         Me.RadSplitContainerNavigation.RootElement.Margin = CType(resources.GetObject("RadSplitContainerNavigation.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadSplitContainerNavigation.RootElement.MinSize = New System.Drawing.Size(25, 25)
+        Me.RadSplitContainerNavigation.RootElement.MinSize = New System.Drawing.Size(0, 0)
         Me.RadSplitContainerNavigation.RootElement.Text = resources.GetString("RadSplitContainerNavigation.RootElement.Text")
         Me.RadSplitContainerNavigation.RootElement.TextOrientation = CType(resources.GetObject("RadSplitContainerNavigation.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadSplitContainerNavigation.SplitterWidth = 4
         Me.RadSplitContainerNavigation.TabStop = False
         CType(Me.RadSplitContainerNavigation.GetChildAt(1), Telerik.WinControls.UI.SplitContainerElement).SplitterWidth = 4
         '
@@ -250,7 +248,7 @@ Partial Class FrmMainContainer
         Me.SplitPanelContent.RootElement.AngleTransform = CType(resources.GetObject("SplitPanelContent.RootElement.AngleTransform"), Single)
         Me.SplitPanelContent.RootElement.FlipText = CType(resources.GetObject("SplitPanelContent.RootElement.FlipText"), Boolean)
         Me.SplitPanelContent.RootElement.Margin = CType(resources.GetObject("SplitPanelContent.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.SplitPanelContent.RootElement.MinSize = New System.Drawing.Size(25, 25)
+        Me.SplitPanelContent.RootElement.MinSize = New System.Drawing.Size(0, 0)
         Me.SplitPanelContent.RootElement.Text = resources.GetString("SplitPanelContent.RootElement.Text")
         Me.SplitPanelContent.RootElement.TextOrientation = CType(resources.GetObject("SplitPanelContent.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.SplitPanelContent.SizeInfo.AutoSizeScale = New System.Drawing.SizeF(0.0!, -0.004815409!)
@@ -272,12 +270,11 @@ Partial Class FrmMainContainer
         Me.RadSplitContainerContent.RootElement.AngleTransform = CType(resources.GetObject("RadSplitContainerContent.RootElement.AngleTransform"), Single)
         Me.RadSplitContainerContent.RootElement.FlipText = CType(resources.GetObject("RadSplitContainerContent.RootElement.FlipText"), Boolean)
         Me.RadSplitContainerContent.RootElement.Margin = CType(resources.GetObject("RadSplitContainerContent.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadSplitContainerContent.RootElement.MinSize = New System.Drawing.Size(25, 25)
+        Me.RadSplitContainerContent.RootElement.MinSize = New System.Drawing.Size(0, 0)
         Me.RadSplitContainerContent.RootElement.Text = resources.GetString("RadSplitContainerContent.RootElement.Text")
         Me.RadSplitContainerContent.RootElement.TextOrientation = CType(resources.GetObject("RadSplitContainerContent.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.RadSplitContainerContent.SizeInfo.AbsoluteSize = New System.Drawing.Size(20, 200)
         Me.RadSplitContainerContent.SizeInfo.SizeMode = Telerik.WinControls.UI.Docking.SplitPanelSizeMode.Absolute
-        Me.RadSplitContainerContent.SplitterWidth = 4
         Me.RadSplitContainerContent.TabStop = False
         '
         'SplitPanelHeaderText
@@ -294,7 +291,7 @@ Partial Class FrmMainContainer
         Me.SplitPanelHeaderText.RootElement.AngleTransform = CType(resources.GetObject("SplitPanelHeaderText.RootElement.AngleTransform"), Single)
         Me.SplitPanelHeaderText.RootElement.FlipText = CType(resources.GetObject("SplitPanelHeaderText.RootElement.FlipText"), Boolean)
         Me.SplitPanelHeaderText.RootElement.Margin = CType(resources.GetObject("SplitPanelHeaderText.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.SplitPanelHeaderText.RootElement.MinSize = New System.Drawing.Size(25, 25)
+        Me.SplitPanelHeaderText.RootElement.MinSize = New System.Drawing.Size(0, 0)
         Me.SplitPanelHeaderText.RootElement.Text = resources.GetString("SplitPanelHeaderText.RootElement.Text")
         Me.SplitPanelHeaderText.RootElement.TextOrientation = CType(resources.GetObject("SplitPanelHeaderText.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.SplitPanelHeaderText.SizeInfo.AbsoluteSize = New System.Drawing.Size(200, 142)
@@ -333,7 +330,7 @@ Partial Class FrmMainContainer
         Me.SplitPanelContent1.RootElement.AngleTransform = CType(resources.GetObject("SplitPanelContent1.RootElement.AngleTransform"), Single)
         Me.SplitPanelContent1.RootElement.FlipText = CType(resources.GetObject("SplitPanelContent1.RootElement.FlipText"), Boolean)
         Me.SplitPanelContent1.RootElement.Margin = CType(resources.GetObject("SplitPanelContent1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.SplitPanelContent1.RootElement.MinSize = New System.Drawing.Size(25, 25)
+        Me.SplitPanelContent1.RootElement.MinSize = New System.Drawing.Size(0, 0)
         Me.SplitPanelContent1.RootElement.Text = resources.GetString("SplitPanelContent1.RootElement.Text")
         Me.SplitPanelContent1.RootElement.TextOrientation = CType(resources.GetObject("SplitPanelContent1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.SplitPanelContent1.SizeInfo.AutoSizeScale = New System.Drawing.SizeF(0.0!, -0.04918033!)
@@ -361,7 +358,7 @@ Partial Class FrmMainContainer
         Me.SplitPanelNavigation.RootElement.AngleTransform = CType(resources.GetObject("SplitPanelNavigation.RootElement.AngleTransform"), Single)
         Me.SplitPanelNavigation.RootElement.FlipText = CType(resources.GetObject("SplitPanelNavigation.RootElement.FlipText"), Boolean)
         Me.SplitPanelNavigation.RootElement.Margin = CType(resources.GetObject("SplitPanelNavigation.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.SplitPanelNavigation.RootElement.MinSize = New System.Drawing.Size(25, 25)
+        Me.SplitPanelNavigation.RootElement.MinSize = New System.Drawing.Size(0, 0)
         Me.SplitPanelNavigation.RootElement.Text = resources.GetString("SplitPanelNavigation.RootElement.Text")
         Me.SplitPanelNavigation.RootElement.TextOrientation = CType(resources.GetObject("SplitPanelNavigation.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.SplitPanelNavigation.SizeInfo.AbsoluteSize = New System.Drawing.Size(200, 66)
@@ -450,7 +447,7 @@ Partial Class FrmMainContainer
         Me.RadButtonChangeLanguageToEnglish.TabStop = False
         CType(Me.RadButtonChangeLanguageToEnglish.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = Global.EichsoftwareClient.My.Resources.Resources.flag_usa
         CType(Me.RadButtonChangeLanguageToEnglish.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        CType(Me.RadButtonChangeLanguageToEnglish.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = resources.GetString("resource.Text1")
+        CType(Me.RadButtonChangeLanguageToEnglish.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         CType(Me.RadButtonChangeLanguageToEnglish.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Shape = Nothing
         '
         'RadButtonChangeLanguageToGerman
@@ -473,7 +470,7 @@ Partial Class FrmMainContainer
         Me.RadButtonChangeLanguageToGerman.TabStop = False
         CType(Me.RadButtonChangeLanguageToGerman.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = Global.EichsoftwareClient.My.Resources.Resources.flag_germany
         CType(Me.RadButtonChangeLanguageToGerman.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        CType(Me.RadButtonChangeLanguageToGerman.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = resources.GetString("resource.Text2")
+        CType(Me.RadButtonChangeLanguageToGerman.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         CType(Me.RadButtonChangeLanguageToGerman.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Shape = Nothing
         '
         'RadButtonNavigateBackwards
@@ -496,7 +493,7 @@ Partial Class FrmMainContainer
         CType(Me.RadButtonNavigateBackwards.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
         CType(Me.RadButtonNavigateBackwards.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
         CType(Me.RadButtonNavigateBackwards.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        CType(Me.RadButtonNavigateBackwards.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = resources.GetString("resource.Text3")
+        CType(Me.RadButtonNavigateBackwards.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = resources.GetString("resource.Text1")
         CType(Me.RadButtonNavigateBackwards.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Shape = Nothing
         '
         'RadButtonNavigateForwards
@@ -518,7 +515,7 @@ Partial Class FrmMainContainer
         CType(Me.RadButtonNavigateForwards.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = CType(resources.GetObject("resource.Image1"), System.Drawing.Image)
         CType(Me.RadButtonNavigateForwards.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
         CType(Me.RadButtonNavigateForwards.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
-        CType(Me.RadButtonNavigateForwards.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = resources.GetString("resource.Text4")
+        CType(Me.RadButtonNavigateForwards.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = resources.GetString("resource.Text2")
         CType(Me.RadButtonNavigateForwards.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Shape = Nothing
         '
         'PictureBoxRHEWALogo
@@ -543,7 +540,7 @@ Partial Class FrmMainContainer
         Me.SplitPanelSidebar.RootElement.AngleTransform = CType(resources.GetObject("SplitPanelSidebar.RootElement.AngleTransform"), Single)
         Me.SplitPanelSidebar.RootElement.FlipText = CType(resources.GetObject("SplitPanelSidebar.RootElement.FlipText"), Boolean)
         Me.SplitPanelSidebar.RootElement.Margin = CType(resources.GetObject("SplitPanelSidebar.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.SplitPanelSidebar.RootElement.MinSize = New System.Drawing.Size(25, 25)
+        Me.SplitPanelSidebar.RootElement.MinSize = New System.Drawing.Size(0, 0)
         Me.SplitPanelSidebar.RootElement.Text = resources.GetString("SplitPanelSidebar.RootElement.Text")
         Me.SplitPanelSidebar.RootElement.TextOrientation = CType(resources.GetObject("SplitPanelSidebar.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.SplitPanelSidebar.SizeInfo.AutoSizeScale = New System.Drawing.SizeF(-0.2799684!, 0.0!)
@@ -565,10 +562,9 @@ Partial Class FrmMainContainer
         Me.RadSplitContainerSidebar.RootElement.AngleTransform = CType(resources.GetObject("RadSplitContainerSidebar.RootElement.AngleTransform"), Single)
         Me.RadSplitContainerSidebar.RootElement.FlipText = CType(resources.GetObject("RadSplitContainerSidebar.RootElement.FlipText"), Boolean)
         Me.RadSplitContainerSidebar.RootElement.Margin = CType(resources.GetObject("RadSplitContainerSidebar.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadSplitContainerSidebar.RootElement.MinSize = New System.Drawing.Size(25, 25)
+        Me.RadSplitContainerSidebar.RootElement.MinSize = New System.Drawing.Size(0, 0)
         Me.RadSplitContainerSidebar.RootElement.Text = resources.GetString("RadSplitContainerSidebar.RootElement.Text")
         Me.RadSplitContainerSidebar.RootElement.TextOrientation = CType(resources.GetObject("RadSplitContainerSidebar.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadSplitContainerSidebar.SplitterWidth = 4
         Me.RadSplitContainerSidebar.TabStop = False
         '
         'SplitPanelTrafficLight
@@ -585,7 +581,7 @@ Partial Class FrmMainContainer
         Me.SplitPanelTrafficLight.RootElement.AngleTransform = CType(resources.GetObject("SplitPanelTrafficLight.RootElement.AngleTransform"), Single)
         Me.SplitPanelTrafficLight.RootElement.FlipText = CType(resources.GetObject("SplitPanelTrafficLight.RootElement.FlipText"), Boolean)
         Me.SplitPanelTrafficLight.RootElement.Margin = CType(resources.GetObject("SplitPanelTrafficLight.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.SplitPanelTrafficLight.RootElement.MinSize = New System.Drawing.Size(25, 25)
+        Me.SplitPanelTrafficLight.RootElement.MinSize = New System.Drawing.Size(0, 0)
         Me.SplitPanelTrafficLight.RootElement.Text = resources.GetString("SplitPanelTrafficLight.RootElement.Text")
         Me.SplitPanelTrafficLight.RootElement.TextOrientation = CType(resources.GetObject("SplitPanelTrafficLight.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.SplitPanelTrafficLight.SizeInfo.AbsoluteSize = New System.Drawing.Size(200, 142)
@@ -608,7 +604,7 @@ Partial Class FrmMainContainer
         Me.SplitPanelContextHelp.RootElement.AngleTransform = CType(resources.GetObject("SplitPanelContextHelp.RootElement.AngleTransform"), Single)
         Me.SplitPanelContextHelp.RootElement.FlipText = CType(resources.GetObject("SplitPanelContextHelp.RootElement.FlipText"), Boolean)
         Me.SplitPanelContextHelp.RootElement.Margin = CType(resources.GetObject("SplitPanelContextHelp.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.SplitPanelContextHelp.RootElement.MinSize = New System.Drawing.Size(25, 25)
+        Me.SplitPanelContextHelp.RootElement.MinSize = New System.Drawing.Size(0, 0)
         Me.SplitPanelContextHelp.RootElement.Text = resources.GetString("SplitPanelContextHelp.RootElement.Text")
         Me.SplitPanelContextHelp.RootElement.TextOrientation = CType(resources.GetObject("SplitPanelContextHelp.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         Me.SplitPanelContextHelp.SizeInfo.AutoSizeScale = New System.Drawing.SizeF(0.0!, -0.00837521!)
@@ -623,25 +619,24 @@ Partial Class FrmMainContainer
         Me.RadDropDownButtonElement1.ExpandArrowButton = False
         Me.RadDropDownButtonElement1.Name = "RadDropDownButtonElement1"
         Me.RadDropDownButtonElement1.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
-        Me.RadDropDownButtonElement1.Visibility = Telerik.WinControls.ElementVisibility.Visible
         '
         'RadMenuItem1
         '
         resources.ApplyResources(Me.RadMenuItem1, "RadMenuItem1")
+        Me.RadMenuItem1.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadMenuItem1.Name = "RadMenuItem1"
-        Me.RadMenuItem1.Visibility = Telerik.WinControls.ElementVisibility.Visible
         '
         'RadMenuItem2
         '
         resources.ApplyResources(Me.RadMenuItem2, "RadMenuItem2")
+        Me.RadMenuItem2.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadMenuItem2.Name = "RadMenuItem2"
-        Me.RadMenuItem2.Visibility = Telerik.WinControls.ElementVisibility.Visible
         '
         'RadMenuItem3
         '
         resources.ApplyResources(Me.RadMenuItem3, "RadMenuItem3")
+        Me.RadMenuItem3.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadMenuItem3.Name = "RadMenuItem3"
-        Me.RadMenuItem3.Visibility = Telerik.WinControls.ElementVisibility.Visible
         '
         'RadTextBox2
         '
@@ -676,42 +671,41 @@ Partial Class FrmMainContainer
         Me.RadDropDownButtonElement2.Image = Global.EichsoftwareClient.My.Resources.Resources.bullet_green
         Me.RadDropDownButtonElement2.Items.AddRange(New Telerik.WinControls.RadItem() {Me.RadMenuItem4, Me.RadMenuItem5, Me.RadMenuItem6, Me.RadMenuItem7, Me.RadMenuItem8})
         Me.RadDropDownButtonElement2.Name = "RadDropDownButtonElement2"
-        Me.RadDropDownButtonElement2.Visibility = Telerik.WinControls.ElementVisibility.Visible
         '
         'RadMenuItem4
         '
         resources.ApplyResources(Me.RadMenuItem4, "RadMenuItem4")
         Me.RadMenuItem4.Image = Global.EichsoftwareClient.My.Resources.Resources.bullet_green
+        Me.RadMenuItem4.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadMenuItem4.Name = "RadMenuItem4"
-        Me.RadMenuItem4.Visibility = Telerik.WinControls.ElementVisibility.Visible
         '
         'RadMenuItem5
         '
         resources.ApplyResources(Me.RadMenuItem5, "RadMenuItem5")
         Me.RadMenuItem5.Image = Global.EichsoftwareClient.My.Resources.Resources.bullet_green
+        Me.RadMenuItem5.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadMenuItem5.Name = "RadMenuItem5"
-        Me.RadMenuItem5.Visibility = Telerik.WinControls.ElementVisibility.Visible
         '
         'RadMenuItem6
         '
         resources.ApplyResources(Me.RadMenuItem6, "RadMenuItem6")
         Me.RadMenuItem6.Image = Global.EichsoftwareClient.My.Resources.Resources.bullet_green
+        Me.RadMenuItem6.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadMenuItem6.Name = "RadMenuItem6"
-        Me.RadMenuItem6.Visibility = Telerik.WinControls.ElementVisibility.Visible
         '
         'RadMenuItem7
         '
         resources.ApplyResources(Me.RadMenuItem7, "RadMenuItem7")
         Me.RadMenuItem7.Image = Global.EichsoftwareClient.My.Resources.Resources.bullet_green
+        Me.RadMenuItem7.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadMenuItem7.Name = "RadMenuItem7"
-        Me.RadMenuItem7.Visibility = Telerik.WinControls.ElementVisibility.Visible
         '
         'RadMenuItem8
         '
         resources.ApplyResources(Me.RadMenuItem8, "RadMenuItem8")
         Me.RadMenuItem8.Image = Global.EichsoftwareClient.My.Resources.Resources.bullet_green
+        Me.RadMenuItem8.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadMenuItem8.Name = "RadMenuItem8"
-        Me.RadMenuItem8.Visibility = Telerik.WinControls.ElementVisibility.Visible
         '
         'RadDropDownButtonElement3
         '
@@ -721,7 +715,6 @@ Partial Class FrmMainContainer
         Me.RadDropDownButtonElement3.ExpandArrowButton = False
         Me.RadDropDownButtonElement3.Image = Global.EichsoftwareClient.My.Resources.Resources.bullet_yellow
         Me.RadDropDownButtonElement3.Name = "RadDropDownButtonElement3"
-        Me.RadDropDownButtonElement3.Visibility = Telerik.WinControls.ElementVisibility.Visible
         '
         'RadDropDownButtonElement4
         '
@@ -731,7 +724,6 @@ Partial Class FrmMainContainer
         Me.RadDropDownButtonElement4.ExpandArrowButton = False
         Me.RadDropDownButtonElement4.Image = Global.EichsoftwareClient.My.Resources.Resources.bullet_red
         Me.RadDropDownButtonElement4.Name = "RadDropDownButtonElement4"
-        Me.RadDropDownButtonElement4.Visibility = Telerik.WinControls.ElementVisibility.Visible
         '
         'RadDropDownButtonElement5
         '
@@ -741,7 +733,6 @@ Partial Class FrmMainContainer
         Me.RadDropDownButtonElement5.ExpandArrowButton = False
         Me.RadDropDownButtonElement5.Image = Global.EichsoftwareClient.My.Resources.Resources.bullet_red
         Me.RadDropDownButtonElement5.Name = "RadDropDownButtonElement5"
-        Me.RadDropDownButtonElement5.Visibility = Telerik.WinControls.ElementVisibility.Visible
         '
         'FrmMainContainer
         '
@@ -762,6 +753,8 @@ Partial Class FrmMainContainer
         Me.RootElement.Margin = CType(resources.GetObject("FrmMainContainer.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RootElement.Text = resources.GetString("FrmMainContainer.RootElement.Text")
         Me.RootElement.TextOrientation = CType(resources.GetObject("FrmMainContainer.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.RadScrollablePanelTrafficLightBreadcrumb, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadScrollablePanelTrafficLightBreadcrumb.ResumeLayout(False)
         Me.RadScrollablePanelContextHelp.PanelContainer.ResumeLayout(False)

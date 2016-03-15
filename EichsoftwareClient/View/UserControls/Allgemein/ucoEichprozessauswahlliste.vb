@@ -363,10 +363,8 @@
         If Not objEichprozess Is Nothing Then
             'anzeigen des Dialogs zur Bearbeitung der Eichung
             Dim f As New FrmMainContainer(objEichprozess)
-            f.ShowDialog()
-
-            'nach dem schließen des Dialogs aktualisieren
-            LoadFromDatabase()
+           f.Show()
+            AddHandler f.FormClosed, AddressOf LoadFromDatabase
         End If
     End Sub
 
@@ -381,16 +379,18 @@
                 If objEichprozess.FK_Bearbeitungsstatus = 4 Or objEichprozess.FK_Bearbeitungsstatus = 2 Then 'nur wenn neu oder fehlerhaft darf eine Änderung vorgenommen werrden
                     'anzeigen des Dialogs zur Bearbeitung der Eichung
                     Dim f As New FrmMainContainer(objEichprozess)
-                    f.ShowDialog()
+                    f.Show()
+                    AddHandler f.FormClosed, AddressOf LoadFromDatabase
                 Else
                     'es gibt ihn schon und er ist bereits abgeschickt. nur lesend öffnen
                     objEichprozess = clsDBFunctions.HoleNachschlageListenFuerEichprozess(objEichprozess)
                     Dim f As New FrmMainContainer(objEichprozess, FrmMainContainer.enuDialogModus.lesend)
-                    f.ShowDialog()
+                    f.Show()
+                    AddHandler f.FormClosed, AddressOf LoadFromDatabase
                 End If
 
-                'nach dem schließen des Dialogs aktualisieren
-                LoadFromDatabase()
+                ''nach dem schließen des Dialogs aktualisieren
+                'LoadFromDatabase()
             End If
         End If
     End Sub
@@ -484,10 +484,8 @@
 
     Private Sub RadButtonNeuStandardwaage_Click(sender As Object, e As EventArgs) Handles RadButtonNeuStandardwaage.Click
         Dim f As New FrmAuswahlStandardwaage
-        f.ShowDialog()
-
-        'nach dem schließen des Dialogs aktualisieren
-        LoadFromDatabase()
+        f.Show()
+        AddHandler f.FormClosed, AddressOf LoadFromDatabase
     End Sub
 
     'limitieren der Min MAx Werte des Datetime Pcikers
@@ -610,9 +608,8 @@
                 objClientEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Versenden
 
                 Dim f As New FrmMainContainer(objClientEichprozess, FrmMainContainer.enuDialogModus.lesend)
-                f.ShowDialog()
-                'nach dem schließen des Dialogs aktualisieren
-                LoadFromDatabase()
+                f.Show()
+                AddHandler f.FormClosed, AddressOf LoadFromDatabase
             End If
         End If
     End Sub
