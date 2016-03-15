@@ -994,7 +994,7 @@
           <Property Type="String" Name="Beschaffenheitspruefung_Genauigkeitsklasse" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Beschaffenheitspruefung_Pruefintervall" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Beschaffenheitspruefung_LetztePruefung" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Beschaffenheitspruefung_Pruefscheinnummer" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Beschaffenheitspruefung_Pruefscheinnummer" FixedLength="false" Unicode="true" MaxLength="4000" />
           <Property Type="String" Name="Beschaffenheitspruefung_EichfahrzeugFirma" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Eichprozess">

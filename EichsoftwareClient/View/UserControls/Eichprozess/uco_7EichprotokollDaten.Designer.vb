@@ -42,6 +42,7 @@ Partial Class uco_7EichprotokollDaten
         Me.lblGenauigkeitsklasse2 = New Telerik.WinControls.UI.RadLabel()
         Me.RadGroupBoxVerwendungszweck = New Telerik.WinControls.UI.RadGroupBox()
         Me.RadGroupBoxVerwendungszweckTara = New Telerik.WinControls.UI.RadGroupBox()
+        Me.RadRadioButtonTaraeingabe = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadRadioButtonHandTara = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadRadioButtonAutoTara = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadGroupBoxVerwendungszweckEquipment = New Telerik.WinControls.UI.RadGroupBox()
@@ -162,7 +163,6 @@ Partial Class uco_7EichprotokollDaten
         Me.RadTextBoxControlAufstellungsort = New Telerik.WinControls.UI.RadTextBox()
         Me.lblBenutzer = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlBenutzer = New Telerik.WinControls.UI.RadTextBox()
-        Me.RadRadioButtonTaraeingabe = New Telerik.WinControls.UI.RadCheckBox()
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanel1.PanelContainer.SuspendLayout()
         Me.RadScrollablePanel1.SuspendLayout()
@@ -184,6 +184,7 @@ Partial Class uco_7EichprotokollDaten
         Me.RadGroupBoxVerwendungszweck.SuspendLayout()
         CType(Me.RadGroupBoxVerwendungszweckTara, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxVerwendungszweckTara.SuspendLayout()
+        CType(Me.RadRadioButtonTaraeingabe, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadRadioButtonHandTara, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadRadioButtonAutoTara, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxVerwendungszweckEquipment, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -308,7 +309,6 @@ Partial Class uco_7EichprotokollDaten
         CType(Me.RadTextBoxControlAufstellungsort, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblBenutzer, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBenutzer, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadRadioButtonTaraeingabe, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'RadScrollablePanel1
@@ -430,6 +430,7 @@ Partial Class uco_7EichprotokollDaten
         'RadTextBoxControlNormalienEichfahrzeugFirma
         '
         resources.ApplyResources(Me.RadTextBoxControlNormalienEichfahrzeugFirma, "RadTextBoxControlNormalienEichfahrzeugFirma")
+        Me.RadTextBoxControlNormalienEichfahrzeugFirma.MaxLength = 50
         Me.RadTextBoxControlNormalienEichfahrzeugFirma.Name = "RadTextBoxControlNormalienEichfahrzeugFirma"
         '
         '
@@ -462,6 +463,7 @@ Partial Class uco_7EichprotokollDaten
         'RadTextBoxControlNormalienPruefscheinnummer
         '
         resources.ApplyResources(Me.RadTextBoxControlNormalienPruefscheinnummer, "RadTextBoxControlNormalienPruefscheinnummer")
+        Me.RadTextBoxControlNormalienPruefscheinnummer.MaxLength = 4000
         Me.RadTextBoxControlNormalienPruefscheinnummer.Multiline = True
         Me.RadTextBoxControlNormalienPruefscheinnummer.Name = "RadTextBoxControlNormalienPruefscheinnummer"
         '
@@ -475,6 +477,7 @@ Partial Class uco_7EichprotokollDaten
         Me.RadTextBoxControlNormalienPruefscheinnummer.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlNormalienPruefscheinnummer.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlNormalienPruefscheinnummer.RootElement.Text = resources.GetString("RadTextBoxControlNormalienPruefscheinnummer.RootElement.Text")
         Me.RadTextBoxControlNormalienPruefscheinnummer.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlNormalienPruefscheinnummer.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlNormalienPruefscheinnummer.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         '
         'lblZertifikatnr
         '
@@ -511,6 +514,7 @@ Partial Class uco_7EichprotokollDaten
         'RadTextBoxControlNormalienPruefintervall
         '
         resources.ApplyResources(Me.RadTextBoxControlNormalienPruefintervall, "RadTextBoxControlNormalienPruefintervall")
+        Me.RadTextBoxControlNormalienPruefintervall.MaxLength = 50
         Me.RadTextBoxControlNormalienPruefintervall.Name = "RadTextBoxControlNormalienPruefintervall"
         '
         '
@@ -543,6 +547,7 @@ Partial Class uco_7EichprotokollDaten
         'RadTextBoxControlNormalienGenauigkeitsklasse
         '
         resources.ApplyResources(Me.RadTextBoxControlNormalienGenauigkeitsklasse, "RadTextBoxControlNormalienGenauigkeitsklasse")
+        Me.RadTextBoxControlNormalienGenauigkeitsklasse.MaxLength = 50
         Me.RadTextBoxControlNormalienGenauigkeitsklasse.Name = "RadTextBoxControlNormalienGenauigkeitsklasse"
         '
         '
@@ -612,6 +617,22 @@ Partial Class uco_7EichprotokollDaten
         Me.RadGroupBoxVerwendungszweckTara.RootElement.Margin = CType(resources.GetObject("RadGroupBoxVerwendungszweckTara.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadGroupBoxVerwendungszweckTara.RootElement.Text = resources.GetString("RadGroupBoxVerwendungszweckTara.RootElement.Text")
         Me.RadGroupBoxVerwendungszweckTara.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxVerwendungszweckTara.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        '
+        'RadRadioButtonTaraeingabe
+        '
+        resources.ApplyResources(Me.RadRadioButtonTaraeingabe, "RadRadioButtonTaraeingabe")
+        Me.RadRadioButtonTaraeingabe.Name = "RadRadioButtonTaraeingabe"
+        '
+        '
+        '
+        Me.RadRadioButtonTaraeingabe.RootElement.AccessibleDescription = resources.GetString("RadRadioButtonTaraeingabe.RootElement.AccessibleDescription")
+        Me.RadRadioButtonTaraeingabe.RootElement.AccessibleName = resources.GetString("RadRadioButtonTaraeingabe.RootElement.AccessibleName")
+        Me.RadRadioButtonTaraeingabe.RootElement.Alignment = CType(resources.GetObject("RadRadioButtonTaraeingabe.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.RadRadioButtonTaraeingabe.RootElement.AngleTransform = CType(resources.GetObject("RadRadioButtonTaraeingabe.RootElement.AngleTransform"), Single)
+        Me.RadRadioButtonTaraeingabe.RootElement.FlipText = CType(resources.GetObject("RadRadioButtonTaraeingabe.RootElement.FlipText"), Boolean)
+        Me.RadRadioButtonTaraeingabe.RootElement.Margin = CType(resources.GetObject("RadRadioButtonTaraeingabe.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadRadioButtonTaraeingabe.RootElement.Text = resources.GetString("RadRadioButtonTaraeingabe.RootElement.Text")
+        Me.RadRadioButtonTaraeingabe.RootElement.TextOrientation = CType(resources.GetObject("RadRadioButtonTaraeingabe.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
         'RadRadioButtonHandTara
         '
@@ -745,6 +766,7 @@ Partial Class uco_7EichprotokollDaten
         'RadTextBoxControlDruckerTyp
         '
         resources.ApplyResources(Me.RadTextBoxControlDruckerTyp, "RadTextBoxControlDruckerTyp")
+        Me.RadTextBoxControlDruckerTyp.MaxLength = 50
         Me.RadTextBoxControlDruckerTyp.Name = "RadTextBoxControlDruckerTyp"
         '
         '
@@ -899,9 +921,10 @@ Partial Class uco_7EichprotokollDaten
         '
         'RadTextBoxControlWaagentyp
         '
-        Me.RadTextBoxControlWaagentyp.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlWaagentyp, "RadTextBoxControlWaagentyp")
+        Me.RadTextBoxControlWaagentyp.MaxLength = 50
         Me.RadTextBoxControlWaagentyp.Name = "RadTextBoxControlWaagentyp"
+        Me.RadTextBoxControlWaagentyp.ReadOnly = True
         '
         '
         '
@@ -924,9 +947,10 @@ Partial Class uco_7EichprotokollDaten
         '
         'RadTextBoxControlDimension
         '
-        Me.RadTextBoxControlDimension.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlDimension, "RadTextBoxControlDimension")
+        Me.RadTextBoxControlDimension.MaxLength = 15
         Me.RadTextBoxControlDimension.Name = "RadTextBoxControlDimension"
+        Me.RadTextBoxControlDimension.ReadOnly = True
         '
         '
         '
@@ -975,6 +999,7 @@ Partial Class uco_7EichprotokollDaten
         'RadTextBoxControlMxM
         '
         resources.ApplyResources(Me.RadTextBoxControlMxM, "RadTextBoxControlMxM")
+        Me.RadTextBoxControlMxM.MaxLength = 15
         Me.RadTextBoxControlMxM.Name = "RadTextBoxControlMxM"
         '
         '
@@ -1074,9 +1099,10 @@ Partial Class uco_7EichprotokollDaten
         '
         'RadTextBoxControlAWG
         '
-        Me.RadTextBoxControlAWG.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlAWG, "RadTextBoxControlAWG")
+        Me.RadTextBoxControlAWG.MaxLength = 50
         Me.RadTextBoxControlAWG.Name = "RadTextBoxControlAWG"
+        Me.RadTextBoxControlAWG.ReadOnly = True
         '
         '
         '
@@ -1109,6 +1135,7 @@ Partial Class uco_7EichprotokollDaten
         'RadTextBoxControlWZFabriknummer
         '
         resources.ApplyResources(Me.RadTextBoxControlWZFabriknummer, "RadTextBoxControlWZFabriknummer")
+        Me.RadTextBoxControlWZFabriknummer.MaxLength = 50
         Me.RadTextBoxControlWZFabriknummer.Multiline = True
         Me.RadTextBoxControlWZFabriknummer.Name = "RadTextBoxControlWZFabriknummer"
         '
@@ -1141,9 +1168,10 @@ Partial Class uco_7EichprotokollDaten
         '
         'RadTextBoxControlWZAnzahl
         '
-        Me.RadTextBoxControlWZAnzahl.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlWZAnzahl, "RadTextBoxControlWZAnzahl")
+        Me.RadTextBoxControlWZAnzahl.MaxLength = 50
         Me.RadTextBoxControlWZAnzahl.Name = "RadTextBoxControlWZAnzahl"
+        Me.RadTextBoxControlWZAnzahl.ReadOnly = True
         '
         '
         '
@@ -1175,9 +1203,10 @@ Partial Class uco_7EichprotokollDaten
         '
         'RadTextBoxControlWZTyp
         '
-        Me.RadTextBoxControlWZTyp.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlWZTyp, "RadTextBoxControlWZTyp")
+        Me.RadTextBoxControlWZTyp.MaxLength = 50
         Me.RadTextBoxControlWZTyp.Name = "RadTextBoxControlWZTyp"
+        Me.RadTextBoxControlWZTyp.ReadOnly = True
         '
         '
         '
@@ -1209,9 +1238,10 @@ Partial Class uco_7EichprotokollDaten
         '
         'RadTextBoxControlWZHersteller
         '
-        Me.RadTextBoxControlWZHersteller.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlWZHersteller, "RadTextBoxControlWZHersteller")
+        Me.RadTextBoxControlWZHersteller.MaxLength = 50
         Me.RadTextBoxControlWZHersteller.Name = "RadTextBoxControlWZHersteller"
+        Me.RadTextBoxControlWZHersteller.ReadOnly = True
         '
         '
         '
@@ -1244,6 +1274,7 @@ Partial Class uco_7EichprotokollDaten
         'RadTextBoxControlEichzaehlerstand
         '
         resources.ApplyResources(Me.RadTextBoxControlEichzaehlerstand, "RadTextBoxControlEichzaehlerstand")
+        Me.RadTextBoxControlEichzaehlerstand.MaxLength = 50
         Me.RadTextBoxControlEichzaehlerstand.Name = "RadTextBoxControlEichzaehlerstand"
         '
         '
@@ -1276,6 +1307,7 @@ Partial Class uco_7EichprotokollDaten
         'RadTextBoxControlSoftwarestand
         '
         resources.ApplyResources(Me.RadTextBoxControlSoftwarestand, "RadTextBoxControlSoftwarestand")
+        Me.RadTextBoxControlSoftwarestand.MaxLength = 50
         Me.RadTextBoxControlSoftwarestand.Name = "RadTextBoxControlSoftwarestand"
         '
         '
@@ -1377,6 +1409,7 @@ Partial Class uco_7EichprotokollDaten
         'RadTextBoxControlBetragNormallast
         '
         resources.ApplyResources(Me.RadTextBoxControlBetragNormallast, "RadTextBoxControlBetragNormallast")
+        Me.RadTextBoxControlBetragNormallast.MaxLength = 50
         Me.RadTextBoxControlBetragNormallast.Name = "RadTextBoxControlBetragNormallast"
         '
         '
@@ -1502,6 +1535,7 @@ Partial Class uco_7EichprotokollDaten
         Me.RadGroupBoxMax1.Controls.Add(Me.RadLabel20)
         Me.RadGroupBoxMax1.Controls.Add(Me.RadLabel21)
         Me.RadGroupBoxMax1.Controls.Add(Me.RadLabel22)
+        Me.RadGroupBoxMax1.HeaderText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         resources.ApplyResources(Me.RadGroupBoxMax1, "RadGroupBoxMax1")
         Me.RadGroupBoxMax1.Name = "RadGroupBoxMax1"
         '
@@ -1534,9 +1568,10 @@ Partial Class uco_7EichprotokollDaten
         '
         'RadTextBoxControl1Hoechstwert1
         '
-        Me.RadTextBoxControl1Hoechstwert1.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControl1Hoechstwert1, "RadTextBoxControl1Hoechstwert1")
+        Me.RadTextBoxControl1Hoechstwert1.MaxLength = 50
         Me.RadTextBoxControl1Hoechstwert1.Name = "RadTextBoxControl1Hoechstwert1"
+        Me.RadTextBoxControl1Hoechstwert1.ReadOnly = True
         '
         '
         '
@@ -1553,6 +1588,7 @@ Partial Class uco_7EichprotokollDaten
         'RadTextBoxControlMin1
         '
         resources.ApplyResources(Me.RadTextBoxControlMin1, "RadTextBoxControlMin1")
+        Me.RadTextBoxControlMin1.MaxLength = 50
         Me.RadTextBoxControlMin1.Name = "RadTextBoxControlMin1"
         '
         '
@@ -1598,9 +1634,10 @@ Partial Class uco_7EichprotokollDaten
         '
         'RadTextBoxControlEichwert1
         '
-        Me.RadTextBoxControlEichwert1.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlEichwert1, "RadTextBoxControlEichwert1")
+        Me.RadTextBoxControlEichwert1.MaxLength = 50
         Me.RadTextBoxControlEichwert1.Name = "RadTextBoxControlEichwert1"
+        Me.RadTextBoxControlEichwert1.ReadOnly = True
         '
         '
         '
@@ -1692,6 +1729,7 @@ Partial Class uco_7EichprotokollDaten
         Me.RadGroupBoxMax3.Controls.Add(Me.RadLabel28)
         Me.RadGroupBoxMax3.Controls.Add(Me.RadLabel27)
         Me.RadGroupBoxMax3.Controls.Add(Me.RadLabel26)
+        Me.RadGroupBoxMax3.HeaderText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         resources.ApplyResources(Me.RadGroupBoxMax3, "RadGroupBoxMax3")
         Me.RadGroupBoxMax3.Name = "RadGroupBoxMax3"
         '
@@ -1708,9 +1746,10 @@ Partial Class uco_7EichprotokollDaten
         '
         'RadTextBoxControl1Hoechstwert3
         '
-        Me.RadTextBoxControl1Hoechstwert3.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControl1Hoechstwert3, "RadTextBoxControl1Hoechstwert3")
+        Me.RadTextBoxControl1Hoechstwert3.MaxLength = 50
         Me.RadTextBoxControl1Hoechstwert3.Name = "RadTextBoxControl1Hoechstwert3"
+        Me.RadTextBoxControl1Hoechstwert3.ReadOnly = True
         '
         '
         '
@@ -1750,6 +1789,7 @@ Partial Class uco_7EichprotokollDaten
         'RadTextBoxControlMin3
         '
         resources.ApplyResources(Me.RadTextBoxControlMin3, "RadTextBoxControlMin3")
+        Me.RadTextBoxControlMin3.MaxLength = 50
         Me.RadTextBoxControlMin3.Name = "RadTextBoxControlMin3"
         '
         '
@@ -1788,9 +1828,10 @@ Partial Class uco_7EichprotokollDaten
         '
         'RadTextBoxControlEichwert3
         '
-        Me.RadTextBoxControlEichwert3.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlEichwert3, "RadTextBoxControlEichwert3")
+        Me.RadTextBoxControlEichwert3.MaxLength = 50
         Me.RadTextBoxControlEichwert3.Name = "RadTextBoxControlEichwert3"
+        Me.RadTextBoxControlEichwert3.ReadOnly = True
         '
         '
         '
@@ -1882,6 +1923,7 @@ Partial Class uco_7EichprotokollDaten
         Me.RadGroupBoxMax2.Controls.Add(Me.RadLabel25)
         Me.RadGroupBoxMax2.Controls.Add(Me.RadLabel24)
         Me.RadGroupBoxMax2.Controls.Add(Me.RadLabel23)
+        Me.RadGroupBoxMax2.HeaderText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         resources.ApplyResources(Me.RadGroupBoxMax2, "RadGroupBoxMax2")
         Me.RadGroupBoxMax2.Name = "RadGroupBoxMax2"
         '
@@ -1898,9 +1940,10 @@ Partial Class uco_7EichprotokollDaten
         '
         'RadTextBoxControl1Hoechstwert2
         '
-        Me.RadTextBoxControl1Hoechstwert2.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControl1Hoechstwert2, "RadTextBoxControl1Hoechstwert2")
+        Me.RadTextBoxControl1Hoechstwert2.MaxLength = 50
         Me.RadTextBoxControl1Hoechstwert2.Name = "RadTextBoxControl1Hoechstwert2"
+        Me.RadTextBoxControl1Hoechstwert2.ReadOnly = True
         '
         '
         '
@@ -1933,6 +1976,7 @@ Partial Class uco_7EichprotokollDaten
         'RadTextBoxControlMin2
         '
         resources.ApplyResources(Me.RadTextBoxControlMin2, "RadTextBoxControlMin2")
+        Me.RadTextBoxControlMin2.MaxLength = 50
         Me.RadTextBoxControlMin2.Name = "RadTextBoxControlMin2"
         '
         '
@@ -1978,9 +2022,10 @@ Partial Class uco_7EichprotokollDaten
         '
         'RadTextBoxControlEichwert2
         '
-        Me.RadTextBoxControlEichwert2.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlEichwert2, "RadTextBoxControlEichwert2")
+        Me.RadTextBoxControlEichwert2.MaxLength = 50
         Me.RadTextBoxControlEichwert2.Name = "RadTextBoxControlEichwert2"
+        Me.RadTextBoxControlEichwert2.ReadOnly = True
         '
         '
         '
@@ -2244,6 +2289,7 @@ Partial Class uco_7EichprotokollDaten
         'RadTextBoxControlBaujahr
         '
         resources.ApplyResources(Me.RadTextBoxControlBaujahr, "RadTextBoxControlBaujahr")
+        Me.RadTextBoxControlBaujahr.MaxLength = 50
         Me.RadTextBoxControlBaujahr.Name = "RadTextBoxControlBaujahr"
         '
         '
@@ -2275,9 +2321,10 @@ Partial Class uco_7EichprotokollDaten
         '
         'RadTextBoxControlPruefer
         '
-        Me.RadTextBoxControlPruefer.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlPruefer, "RadTextBoxControlPruefer")
+        Me.RadTextBoxControlPruefer.MaxLength = 50
         Me.RadTextBoxControlPruefer.Name = "RadTextBoxControlPruefer"
+        Me.RadTextBoxControlPruefer.ReadOnly = True
         '
         '
         '
@@ -2309,9 +2356,10 @@ Partial Class uco_7EichprotokollDaten
         '
         'RadTextBoxControlDatum
         '
-        Me.RadTextBoxControlDatum.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlDatum, "RadTextBoxControlDatum")
+        Me.RadTextBoxControlDatum.MaxLength = 50
         Me.RadTextBoxControlDatum.Name = "RadTextBoxControlDatum"
+        Me.RadTextBoxControlDatum.ReadOnly = True
         '
         '
         '
@@ -2343,9 +2391,10 @@ Partial Class uco_7EichprotokollDaten
         '
         'RadTextBoxControlFabriknummer
         '
-        Me.RadTextBoxControlFabriknummer.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlFabriknummer, "RadTextBoxControlFabriknummer")
+        Me.RadTextBoxControlFabriknummer.MaxLength = 50
         Me.RadTextBoxControlFabriknummer.Name = "RadTextBoxControlFabriknummer"
+        Me.RadTextBoxControlFabriknummer.ReadOnly = True
         '
         '
         '
@@ -2378,6 +2427,7 @@ Partial Class uco_7EichprotokollDaten
         'RadTextBoxControlAufstellungsort
         '
         resources.ApplyResources(Me.RadTextBoxControlAufstellungsort, "RadTextBoxControlAufstellungsort")
+        Me.RadTextBoxControlAufstellungsort.MaxLength = 50
         Me.RadTextBoxControlAufstellungsort.Name = "RadTextBoxControlAufstellungsort"
         '
         '
@@ -2410,6 +2460,7 @@ Partial Class uco_7EichprotokollDaten
         'RadTextBoxControlBenutzer
         '
         resources.ApplyResources(Me.RadTextBoxControlBenutzer, "RadTextBoxControlBenutzer")
+        Me.RadTextBoxControlBenutzer.MaxLength = 50
         Me.RadTextBoxControlBenutzer.Name = "RadTextBoxControlBenutzer"
         '
         '
@@ -2422,22 +2473,6 @@ Partial Class uco_7EichprotokollDaten
         Me.RadTextBoxControlBenutzer.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlBenutzer.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadTextBoxControlBenutzer.RootElement.Text = resources.GetString("RadTextBoxControlBenutzer.RootElement.Text")
         Me.RadTextBoxControlBenutzer.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlBenutzer.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        '
-        'RadRadioButtonTaraeingabe
-        '
-        resources.ApplyResources(Me.RadRadioButtonTaraeingabe, "RadRadioButtonTaraeingabe")
-        Me.RadRadioButtonTaraeingabe.Name = "RadRadioButtonTaraeingabe"
-        '
-        '
-        '
-        Me.RadRadioButtonTaraeingabe.RootElement.AccessibleDescription = resources.GetString("RadCheckBox1.RootElement.AccessibleDescription")
-        Me.RadRadioButtonTaraeingabe.RootElement.AccessibleName = resources.GetString("RadCheckBox1.RootElement.AccessibleName")
-        Me.RadRadioButtonTaraeingabe.RootElement.Alignment = CType(resources.GetObject("RadCheckBox1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadRadioButtonTaraeingabe.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBox1.RootElement.AngleTransform"), Single)
-        Me.RadRadioButtonTaraeingabe.RootElement.FlipText = CType(resources.GetObject("RadCheckBox1.RootElement.FlipText"), Boolean)
-        Me.RadRadioButtonTaraeingabe.RootElement.Margin = CType(resources.GetObject("RadCheckBox1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadRadioButtonTaraeingabe.RootElement.Text = resources.GetString("RadCheckBox1.RootElement.Text")
-        Me.RadRadioButtonTaraeingabe.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBox1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
         'uco_7EichprotokollDaten
         '
@@ -2468,6 +2503,7 @@ Partial Class uco_7EichprotokollDaten
         CType(Me.RadGroupBoxVerwendungszweckTara, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxVerwendungszweckTara.ResumeLayout(False)
         Me.RadGroupBoxVerwendungszweckTara.PerformLayout()
+        CType(Me.RadRadioButtonTaraeingabe, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadRadioButtonHandTara, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadRadioButtonAutoTara, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBoxVerwendungszweckEquipment, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2601,7 +2637,6 @@ Partial Class uco_7EichprotokollDaten
         CType(Me.RadTextBoxControlAufstellungsort, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblBenutzer, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBenutzer, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadRadioButtonTaraeingabe, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
