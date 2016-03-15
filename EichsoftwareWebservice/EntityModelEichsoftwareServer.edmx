@@ -2648,7 +2648,7 @@
     </Options>
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
-      <Diagram Name="EntityModelEichsoftwareServer" ZoomLevel="85">
+      <Diagram Name="EntityModelEichsoftwareServer" ZoomLevel="50">
        
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerEichmarkenverwaltung" Width="1.5" PointX="0.75" PointY="2.25" Height="4.480205078125" IsExpanded="true" />
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerEichprotokoll" Width="1.5" PointX="3" PointY="20" Height="17.172099609375" IsExpanded="true" />
