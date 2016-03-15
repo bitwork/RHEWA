@@ -978,6 +978,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich3Weight1
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3Weight1, "RadTextBoxControlBereich3Weight1")
+        Me.RadTextBoxControlBereich3Weight1.MaxLength = 20
         Me.RadTextBoxControlBereich3Weight1.Name = "RadTextBoxControlBereich3Weight1"
         '
         '
@@ -994,6 +995,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich3DisplayWeight1
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3DisplayWeight1, "RadTextBoxControlBereich3DisplayWeight1")
+        Me.RadTextBoxControlBereich3DisplayWeight1.MaxLength = 20
         Me.RadTextBoxControlBereich3DisplayWeight1.Name = "RadTextBoxControlBereich3DisplayWeight1"
         '
         '
@@ -1009,9 +1011,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich3ErrorLimit1
         '
-        Me.RadTextBoxControlBereich3ErrorLimit1.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich3ErrorLimit1, "RadTextBoxControlBereich3ErrorLimit1")
+        Me.RadTextBoxControlBereich3ErrorLimit1.MaxLength = 20
         Me.RadTextBoxControlBereich3ErrorLimit1.Name = "RadTextBoxControlBereich3ErrorLimit1"
+        Me.RadTextBoxControlBereich3ErrorLimit1.ReadOnly = True
         '
         '
         '
@@ -1070,6 +1073,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich3Weight2
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3Weight2, "RadTextBoxControlBereich3Weight2")
+        Me.RadTextBoxControlBereich3Weight2.MaxLength = 20
         Me.RadTextBoxControlBereich3Weight2.Name = "RadTextBoxControlBereich3Weight2"
         '
         '
@@ -1086,6 +1090,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich3DisplayWeight2
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3DisplayWeight2, "RadTextBoxControlBereich3DisplayWeight2")
+        Me.RadTextBoxControlBereich3DisplayWeight2.MaxLength = 20
         Me.RadTextBoxControlBereich3DisplayWeight2.Name = "RadTextBoxControlBereich3DisplayWeight2"
         '
         '
@@ -1101,9 +1106,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich3ErrorLimit2
         '
-        Me.RadTextBoxControlBereich3ErrorLimit2.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich3ErrorLimit2, "RadTextBoxControlBereich3ErrorLimit2")
+        Me.RadTextBoxControlBereich3ErrorLimit2.MaxLength = 20
         Me.RadTextBoxControlBereich3ErrorLimit2.Name = "RadTextBoxControlBereich3ErrorLimit2"
+        Me.RadTextBoxControlBereich3ErrorLimit2.ReadOnly = True
         '
         '
         '
@@ -1178,6 +1184,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich3Weight3
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3Weight3, "RadTextBoxControlBereich3Weight3")
+        Me.RadTextBoxControlBereich3Weight3.MaxLength = 20
         Me.RadTextBoxControlBereich3Weight3.Name = "RadTextBoxControlBereich3Weight3"
         '
         '
@@ -1194,6 +1201,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich3DisplayWeight3
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3DisplayWeight3, "RadTextBoxControlBereich3DisplayWeight3")
+        Me.RadTextBoxControlBereich3DisplayWeight3.MaxLength = 20
         Me.RadTextBoxControlBereich3DisplayWeight3.Name = "RadTextBoxControlBereich3DisplayWeight3"
         '
         '
@@ -1209,9 +1217,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich3ErrorLimit3
         '
-        Me.RadTextBoxControlBereich3ErrorLimit3.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich3ErrorLimit3, "RadTextBoxControlBereich3ErrorLimit3")
+        Me.RadTextBoxControlBereich3ErrorLimit3.MaxLength = 20
         Me.RadTextBoxControlBereich3ErrorLimit3.Name = "RadTextBoxControlBereich3ErrorLimit3"
+        Me.RadTextBoxControlBereich3ErrorLimit3.ReadOnly = True
         '
         '
         '
@@ -1286,6 +1295,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich3Weight4
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3Weight4, "RadTextBoxControlBereich3Weight4")
+        Me.RadTextBoxControlBereich3Weight4.MaxLength = 20
         Me.RadTextBoxControlBereich3Weight4.Name = "RadTextBoxControlBereich3Weight4"
         '
         '
@@ -1302,6 +1312,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich3DisplayWeight4
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3DisplayWeight4, "RadTextBoxControlBereich3DisplayWeight4")
+        Me.RadTextBoxControlBereich3DisplayWeight4.MaxLength = 20
         Me.RadTextBoxControlBereich3DisplayWeight4.Name = "RadTextBoxControlBereich3DisplayWeight4"
         '
         '
@@ -1317,9 +1328,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich3ErrorLimit4
         '
-        Me.RadTextBoxControlBereich3ErrorLimit4.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich3ErrorLimit4, "RadTextBoxControlBereich3ErrorLimit4")
+        Me.RadTextBoxControlBereich3ErrorLimit4.MaxLength = 20
         Me.RadTextBoxControlBereich3ErrorLimit4.Name = "RadTextBoxControlBereich3ErrorLimit4"
+        Me.RadTextBoxControlBereich3ErrorLimit4.ReadOnly = True
         '
         '
         '
@@ -1410,6 +1422,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich3Weight5
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3Weight5, "RadTextBoxControlBereich3Weight5")
+        Me.RadTextBoxControlBereich3Weight5.MaxLength = 20
         Me.RadTextBoxControlBereich3Weight5.Name = "RadTextBoxControlBereich3Weight5"
         '
         '
@@ -1426,6 +1439,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich3DisplayWeight5
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3DisplayWeight5, "RadTextBoxControlBereich3DisplayWeight5")
+        Me.RadTextBoxControlBereich3DisplayWeight5.MaxLength = 20
         Me.RadTextBoxControlBereich3DisplayWeight5.Name = "RadTextBoxControlBereich3DisplayWeight5"
         '
         '
@@ -1441,9 +1455,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich3ErrorLimit5
         '
-        Me.RadTextBoxControlBereich3ErrorLimit5.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich3ErrorLimit5, "RadTextBoxControlBereich3ErrorLimit5")
+        Me.RadTextBoxControlBereich3ErrorLimit5.MaxLength = 20
         Me.RadTextBoxControlBereich3ErrorLimit5.Name = "RadTextBoxControlBereich3ErrorLimit5"
+        Me.RadTextBoxControlBereich3ErrorLimit5.ReadOnly = True
         '
         '
         '
@@ -1502,6 +1517,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich3Weight6
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3Weight6, "RadTextBoxControlBereich3Weight6")
+        Me.RadTextBoxControlBereich3Weight6.MaxLength = 20
         Me.RadTextBoxControlBereich3Weight6.Name = "RadTextBoxControlBereich3Weight6"
         '
         '
@@ -1518,6 +1534,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich3DisplayWeight6
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3DisplayWeight6, "RadTextBoxControlBereich3DisplayWeight6")
+        Me.RadTextBoxControlBereich3DisplayWeight6.MaxLength = 20
         Me.RadTextBoxControlBereich3DisplayWeight6.Name = "RadTextBoxControlBereich3DisplayWeight6"
         '
         '
@@ -1533,9 +1550,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich3ErrorLimit6
         '
-        Me.RadTextBoxControlBereich3ErrorLimit6.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich3ErrorLimit6, "RadTextBoxControlBereich3ErrorLimit6")
+        Me.RadTextBoxControlBereich3ErrorLimit6.MaxLength = 20
         Me.RadTextBoxControlBereich3ErrorLimit6.Name = "RadTextBoxControlBereich3ErrorLimit6"
+        Me.RadTextBoxControlBereich3ErrorLimit6.ReadOnly = True
         '
         '
         '
@@ -1594,6 +1612,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich3Weight7
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3Weight7, "RadTextBoxControlBereich3Weight7")
+        Me.RadTextBoxControlBereich3Weight7.MaxLength = 20
         Me.RadTextBoxControlBereich3Weight7.Name = "RadTextBoxControlBereich3Weight7"
         '
         '
@@ -1610,6 +1629,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich3DisplayWeight7
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3DisplayWeight7, "RadTextBoxControlBereich3DisplayWeight7")
+        Me.RadTextBoxControlBereich3DisplayWeight7.MaxLength = 20
         Me.RadTextBoxControlBereich3DisplayWeight7.Name = "RadTextBoxControlBereich3DisplayWeight7"
         '
         '
@@ -1625,9 +1645,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich3ErrorLimit7
         '
-        Me.RadTextBoxControlBereich3ErrorLimit7.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich3ErrorLimit7, "RadTextBoxControlBereich3ErrorLimit7")
+        Me.RadTextBoxControlBereich3ErrorLimit7.MaxLength = 20
         Me.RadTextBoxControlBereich3ErrorLimit7.Name = "RadTextBoxControlBereich3ErrorLimit7"
+        Me.RadTextBoxControlBereich3ErrorLimit7.ReadOnly = True
         '
         '
         '
@@ -1686,6 +1707,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich3Weight8
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3Weight8, "RadTextBoxControlBereich3Weight8")
+        Me.RadTextBoxControlBereich3Weight8.MaxLength = 20
         Me.RadTextBoxControlBereich3Weight8.Name = "RadTextBoxControlBereich3Weight8"
         '
         '
@@ -1702,6 +1724,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich3DisplayWeight8
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3DisplayWeight8, "RadTextBoxControlBereich3DisplayWeight8")
+        Me.RadTextBoxControlBereich3DisplayWeight8.MaxLength = 20
         Me.RadTextBoxControlBereich3DisplayWeight8.Name = "RadTextBoxControlBereich3DisplayWeight8"
         '
         '
@@ -1717,9 +1740,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich3ErrorLimit8
         '
-        Me.RadTextBoxControlBereich3ErrorLimit8.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich3ErrorLimit8, "RadTextBoxControlBereich3ErrorLimit8")
+        Me.RadTextBoxControlBereich3ErrorLimit8.MaxLength = 20
         Me.RadTextBoxControlBereich3ErrorLimit8.Name = "RadTextBoxControlBereich3ErrorLimit8"
+        Me.RadTextBoxControlBereich3ErrorLimit8.ReadOnly = True
         '
         '
         '
@@ -1820,6 +1844,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich3FallendWeight8
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3FallendWeight8, "RadTextBoxControlBereich3FallendWeight8")
+        Me.RadTextBoxControlBereich3FallendWeight8.MaxLength = 20
         Me.RadTextBoxControlBereich3FallendWeight8.Name = "RadTextBoxControlBereich3FallendWeight8"
         '
         '
@@ -1836,6 +1861,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich3FallendDisplayWeight8
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3FallendDisplayWeight8, "RadTextBoxControlBereich3FallendDisplayWeight8")
+        Me.RadTextBoxControlBereich3FallendDisplayWeight8.MaxLength = 20
         Me.RadTextBoxControlBereich3FallendDisplayWeight8.Name = "RadTextBoxControlBereich3FallendDisplayWeight8"
         '
         '
@@ -1851,9 +1877,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich3FallendErrorLimit8
         '
-        Me.RadTextBoxControlBereich3FallendErrorLimit8.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich3FallendErrorLimit8, "RadTextBoxControlBereich3FallendErrorLimit8")
+        Me.RadTextBoxControlBereich3FallendErrorLimit8.MaxLength = 20
         Me.RadTextBoxControlBereich3FallendErrorLimit8.Name = "RadTextBoxControlBereich3FallendErrorLimit8"
+        Me.RadTextBoxControlBereich3FallendErrorLimit8.ReadOnly = True
         '
         '
         '
@@ -1912,6 +1939,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich3FallendWeight7
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3FallendWeight7, "RadTextBoxControlBereich3FallendWeight7")
+        Me.RadTextBoxControlBereich3FallendWeight7.MaxLength = 20
         Me.RadTextBoxControlBereich3FallendWeight7.Name = "RadTextBoxControlBereich3FallendWeight7"
         '
         '
@@ -1928,6 +1956,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich3FallendDisplayWeight7
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3FallendDisplayWeight7, "RadTextBoxControlBereich3FallendDisplayWeight7")
+        Me.RadTextBoxControlBereich3FallendDisplayWeight7.MaxLength = 20
         Me.RadTextBoxControlBereich3FallendDisplayWeight7.Name = "RadTextBoxControlBereich3FallendDisplayWeight7"
         '
         '
@@ -1943,9 +1972,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich3FallendErrorLimit7
         '
-        Me.RadTextBoxControlBereich3FallendErrorLimit7.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich3FallendErrorLimit7, "RadTextBoxControlBereich3FallendErrorLimit7")
+        Me.RadTextBoxControlBereich3FallendErrorLimit7.MaxLength = 20
         Me.RadTextBoxControlBereich3FallendErrorLimit7.Name = "RadTextBoxControlBereich3FallendErrorLimit7"
+        Me.RadTextBoxControlBereich3FallendErrorLimit7.ReadOnly = True
         '
         '
         '
@@ -2004,6 +2034,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich3FallendWeight6
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3FallendWeight6, "RadTextBoxControlBereich3FallendWeight6")
+        Me.RadTextBoxControlBereich3FallendWeight6.MaxLength = 20
         Me.RadTextBoxControlBereich3FallendWeight6.Name = "RadTextBoxControlBereich3FallendWeight6"
         '
         '
@@ -2020,6 +2051,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich3FallendDisplayWeight6
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3FallendDisplayWeight6, "RadTextBoxControlBereich3FallendDisplayWeight6")
+        Me.RadTextBoxControlBereich3FallendDisplayWeight6.MaxLength = 20
         Me.RadTextBoxControlBereich3FallendDisplayWeight6.Name = "RadTextBoxControlBereich3FallendDisplayWeight6"
         '
         '
@@ -2035,9 +2067,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich3FallendErrorLimit6
         '
-        Me.RadTextBoxControlBereich3FallendErrorLimit6.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich3FallendErrorLimit6, "RadTextBoxControlBereich3FallendErrorLimit6")
+        Me.RadTextBoxControlBereich3FallendErrorLimit6.MaxLength = 20
         Me.RadTextBoxControlBereich3FallendErrorLimit6.Name = "RadTextBoxControlBereich3FallendErrorLimit6"
+        Me.RadTextBoxControlBereich3FallendErrorLimit6.ReadOnly = True
         '
         '
         '
@@ -2096,6 +2129,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich3FallendWeight5
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3FallendWeight5, "RadTextBoxControlBereich3FallendWeight5")
+        Me.RadTextBoxControlBereich3FallendWeight5.MaxLength = 20
         Me.RadTextBoxControlBereich3FallendWeight5.Name = "RadTextBoxControlBereich3FallendWeight5"
         '
         '
@@ -2112,6 +2146,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich3FallendDisplayWeight5
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3FallendDisplayWeight5, "RadTextBoxControlBereich3FallendDisplayWeight5")
+        Me.RadTextBoxControlBereich3FallendDisplayWeight5.MaxLength = 20
         Me.RadTextBoxControlBereich3FallendDisplayWeight5.Name = "RadTextBoxControlBereich3FallendDisplayWeight5"
         '
         '
@@ -2127,9 +2162,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich3FallendErrorLimit5
         '
-        Me.RadTextBoxControlBereich3FallendErrorLimit5.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich3FallendErrorLimit5, "RadTextBoxControlBereich3FallendErrorLimit5")
+        Me.RadTextBoxControlBereich3FallendErrorLimit5.MaxLength = 20
         Me.RadTextBoxControlBereich3FallendErrorLimit5.Name = "RadTextBoxControlBereich3FallendErrorLimit5"
+        Me.RadTextBoxControlBereich3FallendErrorLimit5.ReadOnly = True
         '
         '
         '
@@ -2188,6 +2224,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich3FallendWeight4
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3FallendWeight4, "RadTextBoxControlBereich3FallendWeight4")
+        Me.RadTextBoxControlBereich3FallendWeight4.MaxLength = 20
         Me.RadTextBoxControlBereich3FallendWeight4.Name = "RadTextBoxControlBereich3FallendWeight4"
         '
         '
@@ -2204,6 +2241,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich3FallendDisplayWeight4
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3FallendDisplayWeight4, "RadTextBoxControlBereich3FallendDisplayWeight4")
+        Me.RadTextBoxControlBereich3FallendDisplayWeight4.MaxLength = 20
         Me.RadTextBoxControlBereich3FallendDisplayWeight4.Name = "RadTextBoxControlBereich3FallendDisplayWeight4"
         '
         '
@@ -2219,9 +2257,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich3FallendErrorLimit4
         '
-        Me.RadTextBoxControlBereich3FallendErrorLimit4.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich3FallendErrorLimit4, "RadTextBoxControlBereich3FallendErrorLimit4")
+        Me.RadTextBoxControlBereich3FallendErrorLimit4.MaxLength = 20
         Me.RadTextBoxControlBereich3FallendErrorLimit4.Name = "RadTextBoxControlBereich3FallendErrorLimit4"
+        Me.RadTextBoxControlBereich3FallendErrorLimit4.ReadOnly = True
         '
         '
         '
@@ -2280,6 +2319,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich3FallendWeight3
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3FallendWeight3, "RadTextBoxControlBereich3FallendWeight3")
+        Me.RadTextBoxControlBereich3FallendWeight3.MaxLength = 20
         Me.RadTextBoxControlBereich3FallendWeight3.Name = "RadTextBoxControlBereich3FallendWeight3"
         '
         '
@@ -2296,6 +2336,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich3FallendDisplayWeight3
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3FallendDisplayWeight3, "RadTextBoxControlBereich3FallendDisplayWeight3")
+        Me.RadTextBoxControlBereich3FallendDisplayWeight3.MaxLength = 20
         Me.RadTextBoxControlBereich3FallendDisplayWeight3.Name = "RadTextBoxControlBereich3FallendDisplayWeight3"
         '
         '
@@ -2311,9 +2352,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich3FallendErrorLimit3
         '
-        Me.RadTextBoxControlBereich3FallendErrorLimit3.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich3FallendErrorLimit3, "RadTextBoxControlBereich3FallendErrorLimit3")
+        Me.RadTextBoxControlBereich3FallendErrorLimit3.MaxLength = 20
         Me.RadTextBoxControlBereich3FallendErrorLimit3.Name = "RadTextBoxControlBereich3FallendErrorLimit3"
+        Me.RadTextBoxControlBereich3FallendErrorLimit3.ReadOnly = True
         '
         '
         '
@@ -2372,6 +2414,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich3FallendWeight2
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3FallendWeight2, "RadTextBoxControlBereich3FallendWeight2")
+        Me.RadTextBoxControlBereich3FallendWeight2.MaxLength = 20
         Me.RadTextBoxControlBereich3FallendWeight2.Name = "RadTextBoxControlBereich3FallendWeight2"
         '
         '
@@ -2388,6 +2431,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich3FallendDisplayWeight2
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3FallendDisplayWeight2, "RadTextBoxControlBereich3FallendDisplayWeight2")
+        Me.RadTextBoxControlBereich3FallendDisplayWeight2.MaxLength = 20
         Me.RadTextBoxControlBereich3FallendDisplayWeight2.Name = "RadTextBoxControlBereich3FallendDisplayWeight2"
         '
         '
@@ -2403,9 +2447,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich3FallendErrorLimit2
         '
-        Me.RadTextBoxControlBereich3FallendErrorLimit2.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich3FallendErrorLimit2, "RadTextBoxControlBereich3FallendErrorLimit2")
+        Me.RadTextBoxControlBereich3FallendErrorLimit2.MaxLength = 20
         Me.RadTextBoxControlBereich3FallendErrorLimit2.Name = "RadTextBoxControlBereich3FallendErrorLimit2"
+        Me.RadTextBoxControlBereich3FallendErrorLimit2.ReadOnly = True
         '
         '
         '
@@ -2464,6 +2509,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich3FallendWeight1
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3FallendWeight1, "RadTextBoxControlBereich3FallendWeight1")
+        Me.RadTextBoxControlBereich3FallendWeight1.MaxLength = 20
         Me.RadTextBoxControlBereich3FallendWeight1.Name = "RadTextBoxControlBereich3FallendWeight1"
         '
         '
@@ -2480,6 +2526,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich3FallendDisplayWeight1
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3FallendDisplayWeight1, "RadTextBoxControlBereich3FallendDisplayWeight1")
+        Me.RadTextBoxControlBereich3FallendDisplayWeight1.MaxLength = 20
         Me.RadTextBoxControlBereich3FallendDisplayWeight1.Name = "RadTextBoxControlBereich3FallendDisplayWeight1"
         '
         '
@@ -2495,9 +2542,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich3FallendErrorLimit1
         '
-        Me.RadTextBoxControlBereich3FallendErrorLimit1.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich3FallendErrorLimit1, "RadTextBoxControlBereich3FallendErrorLimit1")
+        Me.RadTextBoxControlBereich3FallendErrorLimit1.MaxLength = 20
         Me.RadTextBoxControlBereich3FallendErrorLimit1.Name = "RadTextBoxControlBereich3FallendErrorLimit1"
+        Me.RadTextBoxControlBereich3FallendErrorLimit1.ReadOnly = True
         '
         '
         '
@@ -2656,6 +2704,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich2Weight1
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2Weight1, "RadTextBoxControlBereich2Weight1")
+        Me.RadTextBoxControlBereich2Weight1.MaxLength = 20
         Me.RadTextBoxControlBereich2Weight1.Name = "RadTextBoxControlBereich2Weight1"
         '
         '
@@ -2672,6 +2721,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich2DisplayWeight1
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2DisplayWeight1, "RadTextBoxControlBereich2DisplayWeight1")
+        Me.RadTextBoxControlBereich2DisplayWeight1.MaxLength = 20
         Me.RadTextBoxControlBereich2DisplayWeight1.Name = "RadTextBoxControlBereich2DisplayWeight1"
         '
         '
@@ -2687,9 +2737,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich2ErrorLimit1
         '
-        Me.RadTextBoxControlBereich2ErrorLimit1.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich2ErrorLimit1, "RadTextBoxControlBereich2ErrorLimit1")
+        Me.RadTextBoxControlBereich2ErrorLimit1.MaxLength = 20
         Me.RadTextBoxControlBereich2ErrorLimit1.Name = "RadTextBoxControlBereich2ErrorLimit1"
+        Me.RadTextBoxControlBereich2ErrorLimit1.ReadOnly = True
         '
         '
         '
@@ -2764,6 +2815,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich2Weight2
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2Weight2, "RadTextBoxControlBereich2Weight2")
+        Me.RadTextBoxControlBereich2Weight2.MaxLength = 20
         Me.RadTextBoxControlBereich2Weight2.Name = "RadTextBoxControlBereich2Weight2"
         '
         '
@@ -2780,6 +2832,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich2DisplayWeight2
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2DisplayWeight2, "RadTextBoxControlBereich2DisplayWeight2")
+        Me.RadTextBoxControlBereich2DisplayWeight2.MaxLength = 20
         Me.RadTextBoxControlBereich2DisplayWeight2.Name = "RadTextBoxControlBereich2DisplayWeight2"
         '
         '
@@ -2795,9 +2848,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich2ErrorLimit2
         '
-        Me.RadTextBoxControlBereich2ErrorLimit2.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich2ErrorLimit2, "RadTextBoxControlBereich2ErrorLimit2")
+        Me.RadTextBoxControlBereich2ErrorLimit2.MaxLength = 20
         Me.RadTextBoxControlBereich2ErrorLimit2.Name = "RadTextBoxControlBereich2ErrorLimit2"
+        Me.RadTextBoxControlBereich2ErrorLimit2.ReadOnly = True
         '
         '
         '
@@ -2872,6 +2926,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich2Weight3
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2Weight3, "RadTextBoxControlBereich2Weight3")
+        Me.RadTextBoxControlBereich2Weight3.MaxLength = 20
         Me.RadTextBoxControlBereich2Weight3.Name = "RadTextBoxControlBereich2Weight3"
         '
         '
@@ -2888,6 +2943,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich2DisplayWeight3
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2DisplayWeight3, "RadTextBoxControlBereich2DisplayWeight3")
+        Me.RadTextBoxControlBereich2DisplayWeight3.MaxLength = 20
         Me.RadTextBoxControlBereich2DisplayWeight3.Name = "RadTextBoxControlBereich2DisplayWeight3"
         '
         '
@@ -2903,9 +2959,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich2ErrorLimit3
         '
-        Me.RadTextBoxControlBereich2ErrorLimit3.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich2ErrorLimit3, "RadTextBoxControlBereich2ErrorLimit3")
+        Me.RadTextBoxControlBereich2ErrorLimit3.MaxLength = 20
         Me.RadTextBoxControlBereich2ErrorLimit3.Name = "RadTextBoxControlBereich2ErrorLimit3"
+        Me.RadTextBoxControlBereich2ErrorLimit3.ReadOnly = True
         '
         '
         '
@@ -2996,6 +3053,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich2Weight4
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2Weight4, "RadTextBoxControlBereich2Weight4")
+        Me.RadTextBoxControlBereich2Weight4.MaxLength = 20
         Me.RadTextBoxControlBereich2Weight4.Name = "RadTextBoxControlBereich2Weight4"
         '
         '
@@ -3012,6 +3070,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich2DisplayWeight4
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2DisplayWeight4, "RadTextBoxControlBereich2DisplayWeight4")
+        Me.RadTextBoxControlBereich2DisplayWeight4.MaxLength = 20
         Me.RadTextBoxControlBereich2DisplayWeight4.Name = "RadTextBoxControlBereich2DisplayWeight4"
         '
         '
@@ -3027,9 +3086,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich2ErrorLimit4
         '
-        Me.RadTextBoxControlBereich2ErrorLimit4.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich2ErrorLimit4, "RadTextBoxControlBereich2ErrorLimit4")
+        Me.RadTextBoxControlBereich2ErrorLimit4.MaxLength = 20
         Me.RadTextBoxControlBereich2ErrorLimit4.Name = "RadTextBoxControlBereich2ErrorLimit4"
+        Me.RadTextBoxControlBereich2ErrorLimit4.ReadOnly = True
         '
         '
         '
@@ -3088,6 +3148,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich2Weight5
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2Weight5, "RadTextBoxControlBereich2Weight5")
+        Me.RadTextBoxControlBereich2Weight5.MaxLength = 20
         Me.RadTextBoxControlBereich2Weight5.Name = "RadTextBoxControlBereich2Weight5"
         '
         '
@@ -3104,6 +3165,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich2DisplayWeight5
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2DisplayWeight5, "RadTextBoxControlBereich2DisplayWeight5")
+        Me.RadTextBoxControlBereich2DisplayWeight5.MaxLength = 20
         Me.RadTextBoxControlBereich2DisplayWeight5.Name = "RadTextBoxControlBereich2DisplayWeight5"
         '
         '
@@ -3119,9 +3181,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich2ErrorLimit5
         '
-        Me.RadTextBoxControlBereich2ErrorLimit5.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich2ErrorLimit5, "RadTextBoxControlBereich2ErrorLimit5")
+        Me.RadTextBoxControlBereich2ErrorLimit5.MaxLength = 20
         Me.RadTextBoxControlBereich2ErrorLimit5.Name = "RadTextBoxControlBereich2ErrorLimit5"
+        Me.RadTextBoxControlBereich2ErrorLimit5.ReadOnly = True
         '
         '
         '
@@ -3180,6 +3243,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich2Weight6
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2Weight6, "RadTextBoxControlBereich2Weight6")
+        Me.RadTextBoxControlBereich2Weight6.MaxLength = 20
         Me.RadTextBoxControlBereich2Weight6.Name = "RadTextBoxControlBereich2Weight6"
         '
         '
@@ -3196,6 +3260,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich2DisplayWeight6
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2DisplayWeight6, "RadTextBoxControlBereich2DisplayWeight6")
+        Me.RadTextBoxControlBereich2DisplayWeight6.MaxLength = 20
         Me.RadTextBoxControlBereich2DisplayWeight6.Name = "RadTextBoxControlBereich2DisplayWeight6"
         '
         '
@@ -3211,9 +3276,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich2ErrorLimit6
         '
-        Me.RadTextBoxControlBereich2ErrorLimit6.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich2ErrorLimit6, "RadTextBoxControlBereich2ErrorLimit6")
+        Me.RadTextBoxControlBereich2ErrorLimit6.MaxLength = 20
         Me.RadTextBoxControlBereich2ErrorLimit6.Name = "RadTextBoxControlBereich2ErrorLimit6"
+        Me.RadTextBoxControlBereich2ErrorLimit6.ReadOnly = True
         '
         '
         '
@@ -3272,6 +3338,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich2Weight8
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2Weight8, "RadTextBoxControlBereich2Weight8")
+        Me.RadTextBoxControlBereich2Weight8.MaxLength = 20
         Me.RadTextBoxControlBereich2Weight8.Name = "RadTextBoxControlBereich2Weight8"
         '
         '
@@ -3288,6 +3355,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich2DisplayWeight8
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2DisplayWeight8, "RadTextBoxControlBereich2DisplayWeight8")
+        Me.RadTextBoxControlBereich2DisplayWeight8.MaxLength = 20
         Me.RadTextBoxControlBereich2DisplayWeight8.Name = "RadTextBoxControlBereich2DisplayWeight8"
         '
         '
@@ -3303,9 +3371,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich2ErrorLimit8
         '
-        Me.RadTextBoxControlBereich2ErrorLimit8.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich2ErrorLimit8, "RadTextBoxControlBereich2ErrorLimit8")
+        Me.RadTextBoxControlBereich2ErrorLimit8.MaxLength = 20
         Me.RadTextBoxControlBereich2ErrorLimit8.Name = "RadTextBoxControlBereich2ErrorLimit8"
+        Me.RadTextBoxControlBereich2ErrorLimit8.ReadOnly = True
         '
         '
         '
@@ -3364,6 +3433,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich2Weight7
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2Weight7, "RadTextBoxControlBereich2Weight7")
+        Me.RadTextBoxControlBereich2Weight7.MaxLength = 20
         Me.RadTextBoxControlBereich2Weight7.Name = "RadTextBoxControlBereich2Weight7"
         '
         '
@@ -3380,6 +3450,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich2DisplayWeight7
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2DisplayWeight7, "RadTextBoxControlBereich2DisplayWeight7")
+        Me.RadTextBoxControlBereich2DisplayWeight7.MaxLength = 20
         Me.RadTextBoxControlBereich2DisplayWeight7.Name = "RadTextBoxControlBereich2DisplayWeight7"
         '
         '
@@ -3395,9 +3466,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich2ErrorLimit7
         '
-        Me.RadTextBoxControlBereich2ErrorLimit7.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich2ErrorLimit7, "RadTextBoxControlBereich2ErrorLimit7")
+        Me.RadTextBoxControlBereich2ErrorLimit7.MaxLength = 20
         Me.RadTextBoxControlBereich2ErrorLimit7.Name = "RadTextBoxControlBereich2ErrorLimit7"
+        Me.RadTextBoxControlBereich2ErrorLimit7.ReadOnly = True
         '
         '
         '
@@ -3530,6 +3602,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich1FallendWeight8
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1FallendWeight8, "RadTextBoxControlBereich1FallendWeight8")
+        Me.RadTextBoxControlBereich1FallendWeight8.MaxLength = 20
         Me.RadTextBoxControlBereich1FallendWeight8.Name = "RadTextBoxControlBereich1FallendWeight8"
         '
         '
@@ -3546,6 +3619,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich1FallendDisplayWeight8
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1FallendDisplayWeight8, "RadTextBoxControlBereich1FallendDisplayWeight8")
+        Me.RadTextBoxControlBereich1FallendDisplayWeight8.MaxLength = 20
         Me.RadTextBoxControlBereich1FallendDisplayWeight8.Name = "RadTextBoxControlBereich1FallendDisplayWeight8"
         '
         '
@@ -3561,9 +3635,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich1FallendErrorLimit8
         '
-        Me.RadTextBoxControlBereich1FallendErrorLimit8.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich1FallendErrorLimit8, "RadTextBoxControlBereich1FallendErrorLimit8")
+        Me.RadTextBoxControlBereich1FallendErrorLimit8.MaxLength = 20
         Me.RadTextBoxControlBereich1FallendErrorLimit8.Name = "RadTextBoxControlBereich1FallendErrorLimit8"
+        Me.RadTextBoxControlBereich1FallendErrorLimit8.ReadOnly = True
         '
         '
         '
@@ -3622,6 +3697,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich1FallendWeight7
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1FallendWeight7, "RadTextBoxControlBereich1FallendWeight7")
+        Me.RadTextBoxControlBereich1FallendWeight7.MaxLength = 20
         Me.RadTextBoxControlBereich1FallendWeight7.Name = "RadTextBoxControlBereich1FallendWeight7"
         '
         '
@@ -3638,6 +3714,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich1FallendDisplayWeight7
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1FallendDisplayWeight7, "RadTextBoxControlBereich1FallendDisplayWeight7")
+        Me.RadTextBoxControlBereich1FallendDisplayWeight7.MaxLength = 20
         Me.RadTextBoxControlBereich1FallendDisplayWeight7.Name = "RadTextBoxControlBereich1FallendDisplayWeight7"
         '
         '
@@ -3653,9 +3730,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich1FallendErrorLimit7
         '
-        Me.RadTextBoxControlBereich1FallendErrorLimit7.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich1FallendErrorLimit7, "RadTextBoxControlBereich1FallendErrorLimit7")
+        Me.RadTextBoxControlBereich1FallendErrorLimit7.MaxLength = 20
         Me.RadTextBoxControlBereich1FallendErrorLimit7.Name = "RadTextBoxControlBereich1FallendErrorLimit7"
+        Me.RadTextBoxControlBereich1FallendErrorLimit7.ReadOnly = True
         '
         '
         '
@@ -3714,6 +3792,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich1FallendWeight6
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1FallendWeight6, "RadTextBoxControlBereich1FallendWeight6")
+        Me.RadTextBoxControlBereich1FallendWeight6.MaxLength = 20
         Me.RadTextBoxControlBereich1FallendWeight6.Name = "RadTextBoxControlBereich1FallendWeight6"
         '
         '
@@ -3730,6 +3809,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich1FallendDisplayWeight6
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1FallendDisplayWeight6, "RadTextBoxControlBereich1FallendDisplayWeight6")
+        Me.RadTextBoxControlBereich1FallendDisplayWeight6.MaxLength = 20
         Me.RadTextBoxControlBereich1FallendDisplayWeight6.Name = "RadTextBoxControlBereich1FallendDisplayWeight6"
         '
         '
@@ -3745,9 +3825,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich1FallendErrorLimit6
         '
-        Me.RadTextBoxControlBereich1FallendErrorLimit6.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich1FallendErrorLimit6, "RadTextBoxControlBereich1FallendErrorLimit6")
+        Me.RadTextBoxControlBereich1FallendErrorLimit6.MaxLength = 20
         Me.RadTextBoxControlBereich1FallendErrorLimit6.Name = "RadTextBoxControlBereich1FallendErrorLimit6"
+        Me.RadTextBoxControlBereich1FallendErrorLimit6.ReadOnly = True
         '
         '
         '
@@ -3806,6 +3887,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich1FallendWeight5
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1FallendWeight5, "RadTextBoxControlBereich1FallendWeight5")
+        Me.RadTextBoxControlBereich1FallendWeight5.MaxLength = 20
         Me.RadTextBoxControlBereich1FallendWeight5.Name = "RadTextBoxControlBereich1FallendWeight5"
         '
         '
@@ -3822,6 +3904,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich1FallendDisplayWeight5
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1FallendDisplayWeight5, "RadTextBoxControlBereich1FallendDisplayWeight5")
+        Me.RadTextBoxControlBereich1FallendDisplayWeight5.MaxLength = 20
         Me.RadTextBoxControlBereich1FallendDisplayWeight5.Name = "RadTextBoxControlBereich1FallendDisplayWeight5"
         '
         '
@@ -3837,9 +3920,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich1FallendErrorLimit5
         '
-        Me.RadTextBoxControlBereich1FallendErrorLimit5.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich1FallendErrorLimit5, "RadTextBoxControlBereich1FallendErrorLimit5")
+        Me.RadTextBoxControlBereich1FallendErrorLimit5.MaxLength = 20
         Me.RadTextBoxControlBereich1FallendErrorLimit5.Name = "RadTextBoxControlBereich1FallendErrorLimit5"
+        Me.RadTextBoxControlBereich1FallendErrorLimit5.ReadOnly = True
         '
         '
         '
@@ -3898,6 +3982,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich1FallendWeight4
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1FallendWeight4, "RadTextBoxControlBereich1FallendWeight4")
+        Me.RadTextBoxControlBereich1FallendWeight4.MaxLength = 20
         Me.RadTextBoxControlBereich1FallendWeight4.Name = "RadTextBoxControlBereich1FallendWeight4"
         '
         '
@@ -3914,6 +3999,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich1FallendDisplayWeight4
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1FallendDisplayWeight4, "RadTextBoxControlBereich1FallendDisplayWeight4")
+        Me.RadTextBoxControlBereich1FallendDisplayWeight4.MaxLength = 20
         Me.RadTextBoxControlBereich1FallendDisplayWeight4.Name = "RadTextBoxControlBereich1FallendDisplayWeight4"
         '
         '
@@ -3929,9 +4015,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich1FallendErrorLimit4
         '
-        Me.RadTextBoxControlBereich1FallendErrorLimit4.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich1FallendErrorLimit4, "RadTextBoxControlBereich1FallendErrorLimit4")
+        Me.RadTextBoxControlBereich1FallendErrorLimit4.MaxLength = 20
         Me.RadTextBoxControlBereich1FallendErrorLimit4.Name = "RadTextBoxControlBereich1FallendErrorLimit4"
+        Me.RadTextBoxControlBereich1FallendErrorLimit4.ReadOnly = True
         '
         '
         '
@@ -3990,6 +4077,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich1FallendWeight3
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1FallendWeight3, "RadTextBoxControlBereich1FallendWeight3")
+        Me.RadTextBoxControlBereich1FallendWeight3.MaxLength = 20
         Me.RadTextBoxControlBereich1FallendWeight3.Name = "RadTextBoxControlBereich1FallendWeight3"
         '
         '
@@ -4006,6 +4094,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich1FallendDisplayWeight3
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1FallendDisplayWeight3, "RadTextBoxControlBereich1FallendDisplayWeight3")
+        Me.RadTextBoxControlBereich1FallendDisplayWeight3.MaxLength = 20
         Me.RadTextBoxControlBereich1FallendDisplayWeight3.Name = "RadTextBoxControlBereich1FallendDisplayWeight3"
         '
         '
@@ -4021,9 +4110,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich1FallendErrorLimit3
         '
-        Me.RadTextBoxControlBereich1FallendErrorLimit3.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich1FallendErrorLimit3, "RadTextBoxControlBereich1FallendErrorLimit3")
+        Me.RadTextBoxControlBereich1FallendErrorLimit3.MaxLength = 20
         Me.RadTextBoxControlBereich1FallendErrorLimit3.Name = "RadTextBoxControlBereich1FallendErrorLimit3"
+        Me.RadTextBoxControlBereich1FallendErrorLimit3.ReadOnly = True
         '
         '
         '
@@ -4082,6 +4172,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich1FallendWeight2
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1FallendWeight2, "RadTextBoxControlBereich1FallendWeight2")
+        Me.RadTextBoxControlBereich1FallendWeight2.MaxLength = 20
         Me.RadTextBoxControlBereich1FallendWeight2.Name = "RadTextBoxControlBereich1FallendWeight2"
         '
         '
@@ -4098,6 +4189,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich1FallendDisplayWeight2
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1FallendDisplayWeight2, "RadTextBoxControlBereich1FallendDisplayWeight2")
+        Me.RadTextBoxControlBereich1FallendDisplayWeight2.MaxLength = 20
         Me.RadTextBoxControlBereich1FallendDisplayWeight2.Name = "RadTextBoxControlBereich1FallendDisplayWeight2"
         '
         '
@@ -4113,9 +4205,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich1FallendErrorLimit2
         '
-        Me.RadTextBoxControlBereich1FallendErrorLimit2.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich1FallendErrorLimit2, "RadTextBoxControlBereich1FallendErrorLimit2")
+        Me.RadTextBoxControlBereich1FallendErrorLimit2.MaxLength = 20
         Me.RadTextBoxControlBereich1FallendErrorLimit2.Name = "RadTextBoxControlBereich1FallendErrorLimit2"
+        Me.RadTextBoxControlBereich1FallendErrorLimit2.ReadOnly = True
         '
         '
         '
@@ -4174,6 +4267,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich1FallendWeight1
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1FallendWeight1, "RadTextBoxControlBereich1FallendWeight1")
+        Me.RadTextBoxControlBereich1FallendWeight1.MaxLength = 20
         Me.RadTextBoxControlBereich1FallendWeight1.Name = "RadTextBoxControlBereich1FallendWeight1"
         '
         '
@@ -4190,6 +4284,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich1FallendDisplayWeight1
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1FallendDisplayWeight1, "RadTextBoxControlBereich1FallendDisplayWeight1")
+        Me.RadTextBoxControlBereich1FallendDisplayWeight1.MaxLength = 20
         Me.RadTextBoxControlBereich1FallendDisplayWeight1.Name = "RadTextBoxControlBereich1FallendDisplayWeight1"
         '
         '
@@ -4205,9 +4300,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich1FallendErrorLimit1
         '
-        Me.RadTextBoxControlBereich1FallendErrorLimit1.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich1FallendErrorLimit1, "RadTextBoxControlBereich1FallendErrorLimit1")
+        Me.RadTextBoxControlBereich1FallendErrorLimit1.MaxLength = 20
         Me.RadTextBoxControlBereich1FallendErrorLimit1.Name = "RadTextBoxControlBereich1FallendErrorLimit1"
+        Me.RadTextBoxControlBereich1FallendErrorLimit1.ReadOnly = True
         '
         '
         '
@@ -4334,6 +4430,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich1Weight1
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1Weight1, "RadTextBoxControlBereich1Weight1")
+        Me.RadTextBoxControlBereich1Weight1.MaxLength = 20
         Me.RadTextBoxControlBereich1Weight1.Name = "RadTextBoxControlBereich1Weight1"
         '
         '
@@ -4350,6 +4447,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich1DisplayWeight1
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1DisplayWeight1, "RadTextBoxControlBereich1DisplayWeight1")
+        Me.RadTextBoxControlBereich1DisplayWeight1.MaxLength = 20
         Me.RadTextBoxControlBereich1DisplayWeight1.Name = "RadTextBoxControlBereich1DisplayWeight1"
         '
         '
@@ -4365,9 +4463,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich1ErrorLimit1
         '
-        Me.RadTextBoxControlBereich1ErrorLimit1.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich1ErrorLimit1, "RadTextBoxControlBereich1ErrorLimit1")
+        Me.RadTextBoxControlBereich1ErrorLimit1.MaxLength = 20
         Me.RadTextBoxControlBereich1ErrorLimit1.Name = "RadTextBoxControlBereich1ErrorLimit1"
+        Me.RadTextBoxControlBereich1ErrorLimit1.ReadOnly = True
         '
         '
         '
@@ -4426,6 +4525,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich1Weight2
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1Weight2, "RadTextBoxControlBereich1Weight2")
+        Me.RadTextBoxControlBereich1Weight2.MaxLength = 20
         Me.RadTextBoxControlBereich1Weight2.Name = "RadTextBoxControlBereich1Weight2"
         '
         '
@@ -4442,6 +4542,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich1DisplayWeight2
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1DisplayWeight2, "RadTextBoxControlBereich1DisplayWeight2")
+        Me.RadTextBoxControlBereich1DisplayWeight2.MaxLength = 20
         Me.RadTextBoxControlBereich1DisplayWeight2.Name = "RadTextBoxControlBereich1DisplayWeight2"
         '
         '
@@ -4457,9 +4558,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich1ErrorLimit2
         '
-        Me.RadTextBoxControlBereich1ErrorLimit2.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich1ErrorLimit2, "RadTextBoxControlBereich1ErrorLimit2")
+        Me.RadTextBoxControlBereich1ErrorLimit2.MaxLength = 20
         Me.RadTextBoxControlBereich1ErrorLimit2.Name = "RadTextBoxControlBereich1ErrorLimit2"
+        Me.RadTextBoxControlBereich1ErrorLimit2.ReadOnly = True
         '
         '
         '
@@ -4534,6 +4636,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich1Weight3
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1Weight3, "RadTextBoxControlBereich1Weight3")
+        Me.RadTextBoxControlBereich1Weight3.MaxLength = 20
         Me.RadTextBoxControlBereich1Weight3.Name = "RadTextBoxControlBereich1Weight3"
         '
         '
@@ -4550,6 +4653,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich1DisplayWeight3
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1DisplayWeight3, "RadTextBoxControlBereich1DisplayWeight3")
+        Me.RadTextBoxControlBereich1DisplayWeight3.MaxLength = 20
         Me.RadTextBoxControlBereich1DisplayWeight3.Name = "RadTextBoxControlBereich1DisplayWeight3"
         '
         '
@@ -4565,9 +4669,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich1ErrorLimit3
         '
-        Me.RadTextBoxControlBereich1ErrorLimit3.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich1ErrorLimit3, "RadTextBoxControlBereich1ErrorLimit3")
+        Me.RadTextBoxControlBereich1ErrorLimit3.MaxLength = 20
         Me.RadTextBoxControlBereich1ErrorLimit3.Name = "RadTextBoxControlBereich1ErrorLimit3"
+        Me.RadTextBoxControlBereich1ErrorLimit3.ReadOnly = True
         '
         '
         '
@@ -4642,6 +4747,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich1Weight4
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1Weight4, "RadTextBoxControlBereich1Weight4")
+        Me.RadTextBoxControlBereich1Weight4.MaxLength = 20
         Me.RadTextBoxControlBereich1Weight4.Name = "RadTextBoxControlBereich1Weight4"
         '
         '
@@ -4658,6 +4764,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich1DisplayWeight4
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1DisplayWeight4, "RadTextBoxControlBereich1DisplayWeight4")
+        Me.RadTextBoxControlBereich1DisplayWeight4.MaxLength = 20
         Me.RadTextBoxControlBereich1DisplayWeight4.Name = "RadTextBoxControlBereich1DisplayWeight4"
         '
         '
@@ -4673,9 +4780,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich1ErrorLimit4
         '
-        Me.RadTextBoxControlBereich1ErrorLimit4.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich1ErrorLimit4, "RadTextBoxControlBereich1ErrorLimit4")
+        Me.RadTextBoxControlBereich1ErrorLimit4.MaxLength = 20
         Me.RadTextBoxControlBereich1ErrorLimit4.Name = "RadTextBoxControlBereich1ErrorLimit4"
+        Me.RadTextBoxControlBereich1ErrorLimit4.ReadOnly = True
         '
         '
         '
@@ -4766,6 +4874,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich1Weight5
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1Weight5, "RadTextBoxControlBereich1Weight5")
+        Me.RadTextBoxControlBereich1Weight5.MaxLength = 20
         Me.RadTextBoxControlBereich1Weight5.Name = "RadTextBoxControlBereich1Weight5"
         '
         '
@@ -4782,6 +4891,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich1DisplayWeight5
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1DisplayWeight5, "RadTextBoxControlBereich1DisplayWeight5")
+        Me.RadTextBoxControlBereich1DisplayWeight5.MaxLength = 20
         Me.RadTextBoxControlBereich1DisplayWeight5.Name = "RadTextBoxControlBereich1DisplayWeight5"
         '
         '
@@ -4797,9 +4907,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich1ErrorLimit5
         '
-        Me.RadTextBoxControlBereich1ErrorLimit5.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich1ErrorLimit5, "RadTextBoxControlBereich1ErrorLimit5")
+        Me.RadTextBoxControlBereich1ErrorLimit5.MaxLength = 20
         Me.RadTextBoxControlBereich1ErrorLimit5.Name = "RadTextBoxControlBereich1ErrorLimit5"
+        Me.RadTextBoxControlBereich1ErrorLimit5.ReadOnly = True
         '
         '
         '
@@ -4858,6 +4969,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich1Weight6
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1Weight6, "RadTextBoxControlBereich1Weight6")
+        Me.RadTextBoxControlBereich1Weight6.MaxLength = 20
         Me.RadTextBoxControlBereich1Weight6.Name = "RadTextBoxControlBereich1Weight6"
         '
         '
@@ -4874,6 +4986,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich1DisplayWeight6
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1DisplayWeight6, "RadTextBoxControlBereich1DisplayWeight6")
+        Me.RadTextBoxControlBereich1DisplayWeight6.MaxLength = 20
         Me.RadTextBoxControlBereich1DisplayWeight6.Name = "RadTextBoxControlBereich1DisplayWeight6"
         '
         '
@@ -4889,9 +5002,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich1ErrorLimit6
         '
-        Me.RadTextBoxControlBereich1ErrorLimit6.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich1ErrorLimit6, "RadTextBoxControlBereich1ErrorLimit6")
+        Me.RadTextBoxControlBereich1ErrorLimit6.MaxLength = 20
         Me.RadTextBoxControlBereich1ErrorLimit6.Name = "RadTextBoxControlBereich1ErrorLimit6"
+        Me.RadTextBoxControlBereich1ErrorLimit6.ReadOnly = True
         '
         '
         '
@@ -4950,6 +5064,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich1Weight7
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1Weight7, "RadTextBoxControlBereich1Weight7")
+        Me.RadTextBoxControlBereich1Weight7.MaxLength = 20
         Me.RadTextBoxControlBereich1Weight7.Name = "RadTextBoxControlBereich1Weight7"
         '
         '
@@ -4966,6 +5081,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich1DisplayWeight7
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1DisplayWeight7, "RadTextBoxControlBereich1DisplayWeight7")
+        Me.RadTextBoxControlBereich1DisplayWeight7.MaxLength = 20
         Me.RadTextBoxControlBereich1DisplayWeight7.Name = "RadTextBoxControlBereich1DisplayWeight7"
         '
         '
@@ -4981,9 +5097,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich1ErrorLimit7
         '
-        Me.RadTextBoxControlBereich1ErrorLimit7.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich1ErrorLimit7, "RadTextBoxControlBereich1ErrorLimit7")
+        Me.RadTextBoxControlBereich1ErrorLimit7.MaxLength = 20
         Me.RadTextBoxControlBereich1ErrorLimit7.Name = "RadTextBoxControlBereich1ErrorLimit7"
+        Me.RadTextBoxControlBereich1ErrorLimit7.ReadOnly = True
         '
         '
         '
@@ -5042,6 +5159,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich1Weight8
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1Weight8, "RadTextBoxControlBereich1Weight8")
+        Me.RadTextBoxControlBereich1Weight8.MaxLength = 20
         Me.RadTextBoxControlBereich1Weight8.Name = "RadTextBoxControlBereich1Weight8"
         '
         '
@@ -5058,6 +5176,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich1DisplayWeight8
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1DisplayWeight8, "RadTextBoxControlBereich1DisplayWeight8")
+        Me.RadTextBoxControlBereich1DisplayWeight8.MaxLength = 20
         Me.RadTextBoxControlBereich1DisplayWeight8.Name = "RadTextBoxControlBereich1DisplayWeight8"
         '
         '
@@ -5073,9 +5192,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich1ErrorLimit8
         '
-        Me.RadTextBoxControlBereich1ErrorLimit8.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich1ErrorLimit8, "RadTextBoxControlBereich1ErrorLimit8")
+        Me.RadTextBoxControlBereich1ErrorLimit8.MaxLength = 20
         Me.RadTextBoxControlBereich1ErrorLimit8.Name = "RadTextBoxControlBereich1ErrorLimit8"
+        Me.RadTextBoxControlBereich1ErrorLimit8.ReadOnly = True
         '
         '
         '
@@ -5193,6 +5313,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich2FallendWeight8
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2FallendWeight8, "RadTextBoxControlBereich2FallendWeight8")
+        Me.RadTextBoxControlBereich2FallendWeight8.MaxLength = 20
         Me.RadTextBoxControlBereich2FallendWeight8.Name = "RadTextBoxControlBereich2FallendWeight8"
         '
         '
@@ -5209,6 +5330,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich2FallendDisplayWeight8
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2FallendDisplayWeight8, "RadTextBoxControlBereich2FallendDisplayWeight8")
+        Me.RadTextBoxControlBereich2FallendDisplayWeight8.MaxLength = 20
         Me.RadTextBoxControlBereich2FallendDisplayWeight8.Name = "RadTextBoxControlBereich2FallendDisplayWeight8"
         '
         '
@@ -5224,9 +5346,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich2FallendErrorLimit8
         '
-        Me.RadTextBoxControlBereich2FallendErrorLimit8.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich2FallendErrorLimit8, "RadTextBoxControlBereich2FallendErrorLimit8")
+        Me.RadTextBoxControlBereich2FallendErrorLimit8.MaxLength = 20
         Me.RadTextBoxControlBereich2FallendErrorLimit8.Name = "RadTextBoxControlBereich2FallendErrorLimit8"
+        Me.RadTextBoxControlBereich2FallendErrorLimit8.ReadOnly = True
         '
         '
         '
@@ -5285,6 +5408,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich2FallendWeight7
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2FallendWeight7, "RadTextBoxControlBereich2FallendWeight7")
+        Me.RadTextBoxControlBereich2FallendWeight7.MaxLength = 20
         Me.RadTextBoxControlBereich2FallendWeight7.Name = "RadTextBoxControlBereich2FallendWeight7"
         '
         '
@@ -5301,6 +5425,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich2FallendDisplayWeight7
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2FallendDisplayWeight7, "RadTextBoxControlBereich2FallendDisplayWeight7")
+        Me.RadTextBoxControlBereich2FallendDisplayWeight7.MaxLength = 20
         Me.RadTextBoxControlBereich2FallendDisplayWeight7.Name = "RadTextBoxControlBereich2FallendDisplayWeight7"
         '
         '
@@ -5316,9 +5441,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich2FallendErrorLimit7
         '
-        Me.RadTextBoxControlBereich2FallendErrorLimit7.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich2FallendErrorLimit7, "RadTextBoxControlBereich2FallendErrorLimit7")
+        Me.RadTextBoxControlBereich2FallendErrorLimit7.MaxLength = 20
         Me.RadTextBoxControlBereich2FallendErrorLimit7.Name = "RadTextBoxControlBereich2FallendErrorLimit7"
+        Me.RadTextBoxControlBereich2FallendErrorLimit7.ReadOnly = True
         '
         '
         '
@@ -5377,6 +5503,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich2FallendWeight6
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2FallendWeight6, "RadTextBoxControlBereich2FallendWeight6")
+        Me.RadTextBoxControlBereich2FallendWeight6.MaxLength = 20
         Me.RadTextBoxControlBereich2FallendWeight6.Name = "RadTextBoxControlBereich2FallendWeight6"
         '
         '
@@ -5393,6 +5520,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich2FallendDisplayWeight6
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2FallendDisplayWeight6, "RadTextBoxControlBereich2FallendDisplayWeight6")
+        Me.RadTextBoxControlBereich2FallendDisplayWeight6.MaxLength = 20
         Me.RadTextBoxControlBereich2FallendDisplayWeight6.Name = "RadTextBoxControlBereich2FallendDisplayWeight6"
         '
         '
@@ -5408,9 +5536,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich2FallendErrorLimit6
         '
-        Me.RadTextBoxControlBereich2FallendErrorLimit6.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich2FallendErrorLimit6, "RadTextBoxControlBereich2FallendErrorLimit6")
+        Me.RadTextBoxControlBereich2FallendErrorLimit6.MaxLength = 20
         Me.RadTextBoxControlBereich2FallendErrorLimit6.Name = "RadTextBoxControlBereich2FallendErrorLimit6"
+        Me.RadTextBoxControlBereich2FallendErrorLimit6.ReadOnly = True
         '
         '
         '
@@ -5469,6 +5598,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich2FallendWeight5
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2FallendWeight5, "RadTextBoxControlBereich2FallendWeight5")
+        Me.RadTextBoxControlBereich2FallendWeight5.MaxLength = 20
         Me.RadTextBoxControlBereich2FallendWeight5.Name = "RadTextBoxControlBereich2FallendWeight5"
         '
         '
@@ -5485,6 +5615,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich2FallendDisplayWeight5
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2FallendDisplayWeight5, "RadTextBoxControlBereich2FallendDisplayWeight5")
+        Me.RadTextBoxControlBereich2FallendDisplayWeight5.MaxLength = 20
         Me.RadTextBoxControlBereich2FallendDisplayWeight5.Name = "RadTextBoxControlBereich2FallendDisplayWeight5"
         '
         '
@@ -5500,9 +5631,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich2FallendErrorLimit5
         '
-        Me.RadTextBoxControlBereich2FallendErrorLimit5.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich2FallendErrorLimit5, "RadTextBoxControlBereich2FallendErrorLimit5")
+        Me.RadTextBoxControlBereich2FallendErrorLimit5.MaxLength = 20
         Me.RadTextBoxControlBereich2FallendErrorLimit5.Name = "RadTextBoxControlBereich2FallendErrorLimit5"
+        Me.RadTextBoxControlBereich2FallendErrorLimit5.ReadOnly = True
         '
         '
         '
@@ -5561,6 +5693,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich2FallendWeight4
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2FallendWeight4, "RadTextBoxControlBereich2FallendWeight4")
+        Me.RadTextBoxControlBereich2FallendWeight4.MaxLength = 20
         Me.RadTextBoxControlBereich2FallendWeight4.Name = "RadTextBoxControlBereich2FallendWeight4"
         '
         '
@@ -5577,6 +5710,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich2FallendDisplayWeight4
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2FallendDisplayWeight4, "RadTextBoxControlBereich2FallendDisplayWeight4")
+        Me.RadTextBoxControlBereich2FallendDisplayWeight4.MaxLength = 20
         Me.RadTextBoxControlBereich2FallendDisplayWeight4.Name = "RadTextBoxControlBereich2FallendDisplayWeight4"
         '
         '
@@ -5592,9 +5726,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich2FallendErrorLimit4
         '
-        Me.RadTextBoxControlBereich2FallendErrorLimit4.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich2FallendErrorLimit4, "RadTextBoxControlBereich2FallendErrorLimit4")
+        Me.RadTextBoxControlBereich2FallendErrorLimit4.MaxLength = 20
         Me.RadTextBoxControlBereich2FallendErrorLimit4.Name = "RadTextBoxControlBereich2FallendErrorLimit4"
+        Me.RadTextBoxControlBereich2FallendErrorLimit4.ReadOnly = True
         '
         '
         '
@@ -5653,6 +5788,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich2FallendWeight3
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2FallendWeight3, "RadTextBoxControlBereich2FallendWeight3")
+        Me.RadTextBoxControlBereich2FallendWeight3.MaxLength = 20
         Me.RadTextBoxControlBereich2FallendWeight3.Name = "RadTextBoxControlBereich2FallendWeight3"
         '
         '
@@ -5669,6 +5805,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich2FallendDisplayWeight3
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2FallendDisplayWeight3, "RadTextBoxControlBereich2FallendDisplayWeight3")
+        Me.RadTextBoxControlBereich2FallendDisplayWeight3.MaxLength = 20
         Me.RadTextBoxControlBereich2FallendDisplayWeight3.Name = "RadTextBoxControlBereich2FallendDisplayWeight3"
         '
         '
@@ -5684,9 +5821,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich2FallendErrorLimit3
         '
-        Me.RadTextBoxControlBereich2FallendErrorLimit3.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich2FallendErrorLimit3, "RadTextBoxControlBereich2FallendErrorLimit3")
+        Me.RadTextBoxControlBereich2FallendErrorLimit3.MaxLength = 20
         Me.RadTextBoxControlBereich2FallendErrorLimit3.Name = "RadTextBoxControlBereich2FallendErrorLimit3"
+        Me.RadTextBoxControlBereich2FallendErrorLimit3.ReadOnly = True
         '
         '
         '
@@ -5745,6 +5883,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich2FallendWeight2
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2FallendWeight2, "RadTextBoxControlBereich2FallendWeight2")
+        Me.RadTextBoxControlBereich2FallendWeight2.MaxLength = 20
         Me.RadTextBoxControlBereich2FallendWeight2.Name = "RadTextBoxControlBereich2FallendWeight2"
         '
         '
@@ -5761,6 +5900,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich2FallendDisplayWeight2
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2FallendDisplayWeight2, "RadTextBoxControlBereich2FallendDisplayWeight2")
+        Me.RadTextBoxControlBereich2FallendDisplayWeight2.MaxLength = 20
         Me.RadTextBoxControlBereich2FallendDisplayWeight2.Name = "RadTextBoxControlBereich2FallendDisplayWeight2"
         '
         '
@@ -5776,9 +5916,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich2FallendErrorLimit2
         '
-        Me.RadTextBoxControlBereich2FallendErrorLimit2.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich2FallendErrorLimit2, "RadTextBoxControlBereich2FallendErrorLimit2")
+        Me.RadTextBoxControlBereich2FallendErrorLimit2.MaxLength = 20
         Me.RadTextBoxControlBereich2FallendErrorLimit2.Name = "RadTextBoxControlBereich2FallendErrorLimit2"
+        Me.RadTextBoxControlBereich2FallendErrorLimit2.ReadOnly = True
         '
         '
         '
@@ -5837,6 +5978,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich2FallendWeight1
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2FallendWeight1, "RadTextBoxControlBereich2FallendWeight1")
+        Me.RadTextBoxControlBereich2FallendWeight1.MaxLength = 20
         Me.RadTextBoxControlBereich2FallendWeight1.Name = "RadTextBoxControlBereich2FallendWeight1"
         '
         '
@@ -5853,6 +5995,7 @@ Partial Class uco_9PruefungLinearitaet
         'RadTextBoxControlBereich2FallendDisplayWeight1
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2FallendDisplayWeight1, "RadTextBoxControlBereich2FallendDisplayWeight1")
+        Me.RadTextBoxControlBereich2FallendDisplayWeight1.MaxLength = 20
         Me.RadTextBoxControlBereich2FallendDisplayWeight1.Name = "RadTextBoxControlBereich2FallendDisplayWeight1"
         '
         '
@@ -5868,9 +6011,10 @@ Partial Class uco_9PruefungLinearitaet
         '
         'RadTextBoxControlBereich2FallendErrorLimit1
         '
-        Me.RadTextBoxControlBereich2FallendErrorLimit1.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlBereich2FallendErrorLimit1, "RadTextBoxControlBereich2FallendErrorLimit1")
+        Me.RadTextBoxControlBereich2FallendErrorLimit1.MaxLength = 20
         Me.RadTextBoxControlBereich2FallendErrorLimit1.Name = "RadTextBoxControlBereich2FallendErrorLimit1"
+        Me.RadTextBoxControlBereich2FallendErrorLimit1.ReadOnly = True
         '
         '
         '
