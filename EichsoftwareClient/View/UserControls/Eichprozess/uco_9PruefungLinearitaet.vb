@@ -241,24 +241,25 @@ Public Class uco_9PruefungLinearitaet
 
         If DialogModus = enuDialogModus.lesend Then
             'falls der Konformitätsbewertungsvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
-            For Each Control In RadScrollablePanel1.PanelContainer.Controls
-                Try
-                    Control.readonly = True
-                Catch ex As Exception
-                    Try
-                        Control.isreadonly = True
-                    Catch ex2 As Exception
-                        Try
-                            Control.enabled = False
-                        Catch ex3 As Exception
-                        End Try
-                    End Try
-                End Try
-            Next
+            DisableControls(RadGroupBoxBereich1)
+            DisableControls(RadGroupBoxBereich1Fallend)
+            DisableControls(RadGroupBoxBereich2)
+            DisableControls(RadGroupBoxBereich2Fallend)
+            DisableControls(RadGroupBoxBereich3)
+            DisableControls(RadGroupBoxBereich3Fallend)
+            DisableControls(RadButtonFallendMinus)
+            RadButtonFallendMinus.Enabled = False
+            RadButtonFallendPlus.Enabled = False
+            RadButtonSteigendMinus.Enabled = False
+            RadButtonSteigendPlus.Enabled = False
+
         End If
         'events abbrechen
         _suspendEvents = False
     End Sub
+
+   
+
 
     Private Sub FillLinearitaetSteigend()
         ''ein ausblenden von WZ Bereichenen

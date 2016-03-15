@@ -29,8 +29,11 @@
         End If
     End Sub
     Private Sub ucoBeschaffenheitspruefung_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        Me.SuspendLayout()
+
         LadeDialog()
         _bolLoaded = True
+        Me.ResumeLayout()
     End Sub
 
     Private Sub LadeDialog()
@@ -70,20 +73,20 @@
 
         If DialogModus = enuDialogModus.lesend Then
             'falls der Konformitätsbewertungsvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
-            For Each Control In Me.FlowLayoutPanel1.Controls
-                Try
-                    Control.readonly = True
-                Catch ex As Exception
-                    Try
-                        Control.isreadonly = True
-                    Catch ex2 As Exception
-                        Try
-                            Control.enabled = False
-                        Catch ex3 As Exception
-                        End Try
-                    End Try
-                End Try
-            Next
+            DisableControls(RadGroupBoxPunkt1)
+            DisableControls(RadGroupBoxPunkt10)
+            DisableControls(RadGroupBoxPunkt2TMin)
+            DisableControls(RadGroupBoxPunkt3)
+            DisableControls(RadGroupBoxPunkt4)
+            DisableControls(RadGroupBoxPunkt5)
+            DisableControls(RadGroupBoxPunkt6a)
+            DisableControls(RadGroupBoxPunkt6b)
+            DisableControls(RadGroupBoxPunkt6c)
+            DisableControls(RadGroupBoxPunkt6d)
+            DisableControls(RadGroupBoxPunkt7)
+            DisableControls(RadGroupBoxPunkt8)
+            DisableControls(RadGroupBoxPunkt9)
+            
         End If
     End Sub
 

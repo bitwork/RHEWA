@@ -650,24 +650,19 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
 
         If DialogModus = enuDialogModus.lesend Then
             'falls der Konformitätsbewertungsvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
-            For Each Control In Me.FlowLayoutPanel1.Controls
-                Try
-                    Control.readonly = True
-                Catch ex As Exception
-                    Try
-                        Control.isreadonly = True
-                    Catch ex2 As Exception
-                        Try
-                            Control.enabled = False
-                        Catch ex3 As Exception
-                        End Try
-                    End Try
-                End Try
-            Next
+            DisableControls(RadGroupBoxBereich1)
+            DisableControls(RadGroupBoxBereich2)
+            DisableControls(RadGroupBoxBereich3)
+            DisableControls(RadGroupBoxPruefungAussermittigeBelastung)
+            DisableControls(RadGroupBoxPruefungGenaugikeit)
+            DisableControls(RadGroupBoxWiederholungen)
+
         End If
         'events abbrechen
         _suspendEvents = False
     End Sub
+
+   
 
 #Region "FillControls"
     ''' <summary>

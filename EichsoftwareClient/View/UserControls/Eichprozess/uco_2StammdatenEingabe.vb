@@ -41,6 +41,7 @@
     ''' <author></author>
     ''' <commentauthor></commentauthor>
     Private Sub ucoBeschaffenheitspruefung_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        Me.SuspendLayout()
         If Not ParentFormular Is Nothing Then
             Try
                 'Hilfetext setzen
@@ -58,6 +59,7 @@
         'fokus setzen
         '        RadTextBoxStammdatenWaagenbaufirma.Focus()
         RadTextBoxWaageSeriennummer.Focus()
+        Me.ResumeLayout()
     End Sub
 
 
@@ -448,20 +450,10 @@
             If DialogModus = enuDialogModus.lesend Then
 
                 'falls der Konformitätsbewertungsvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
-                For Each Control In Me.RadScrollablePanel1.PanelContainer.Controls
-                    Try
-                        Control.readonly = True
-                    Catch ex As Exception
-                        Try
-                            Control.ReadOnly = True
-                        Catch ex2 As Exception
-                            Try
-                                Control.enabled = False
-                            Catch ex3 As Exception
-                            End Try
-                        End Try
-                    End Try
-                Next
+                DisableControls(RadGroupBoxAWG)
+                DisableControls(RadGroupBoxStammdaten)
+                DisableControls(RadGroupBoxWaage)
+                DisableControls(RadGroupBoxWZ)
             End If
         Else
             'wenn bereits ein Objekt exisitert (z.b. zurück navigiert wurde) sollen die Werte aus der DB geladen werden
@@ -787,7 +779,7 @@
                 Control.readonly = Not Control.readonly
             Catch ex As Exception
                 Try
-                    Control.ReadOnly = Not Control.ReadOnly
+                    Control.isReadOnly = Not Control.isReadOnly
                 Catch ex2 As Exception
                     Try
                         Control.enabled = Not Control.enabled

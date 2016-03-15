@@ -26,11 +26,10 @@ Partial Class FrmMainContainer
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMainContainer))
         Me.RadScrollablePanelTrafficLightBreadcrumb = New Telerik.WinControls.UI.RadScrollablePanel()
         Me.RadScrollablePanelContextHelp = New Telerik.WinControls.UI.RadScrollablePanel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.RadLabelContextHelp = New Telerik.WinControls.UI.RadLabel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.RadSplitContainerNavigation = New Telerik.WinControls.UI.RadSplitContainer()
         Me.SplitPanelContent = New Telerik.WinControls.UI.SplitPanel()
-        Me.lblHeaderText = New Telerik.WinControls.UI.RadLabel()
         Me.SplitPanelNavigation = New Telerik.WinControls.UI.SplitPanel()
         Me.RadButtonVersenden = New Telerik.WinControls.UI.RadButton()
         Me.RadButtonEntsperren = New Telerik.WinControls.UI.RadButton()
@@ -40,6 +39,7 @@ Partial Class FrmMainContainer
         Me.RadButtonNavigateBackwards = New Telerik.WinControls.UI.RadButton()
         Me.RadButtonNavigateForwards = New Telerik.WinControls.UI.RadButton()
         Me.PictureBoxRHEWALogo = New System.Windows.Forms.PictureBox()
+        Me.lblHeaderText = New Telerik.WinControls.UI.RadLabel()
         Me.RadDropDownButtonElement1 = New Telerik.WinControls.UI.RadDropDownButtonElement()
         Me.RadMenuItem1 = New Telerik.WinControls.UI.RadMenuItem()
         Me.RadMenuItem2 = New Telerik.WinControls.UI.RadMenuItem()
@@ -56,19 +56,18 @@ Partial Class FrmMainContainer
         Me.RadDropDownButtonElement4 = New Telerik.WinControls.UI.RadDropDownButtonElement()
         Me.RadDropDownButtonElement5 = New Telerik.WinControls.UI.RadDropDownButtonElement()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-        Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
         Me.SplitContainer3 = New System.Windows.Forms.SplitContainer()
+        Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
         CType(Me.RadScrollablePanelTrafficLightBreadcrumb, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanelTrafficLightBreadcrumb.SuspendLayout()
         CType(Me.RadScrollablePanelContextHelp, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanelContextHelp.PanelContainer.SuspendLayout()
         Me.RadScrollablePanelContextHelp.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabelContextHelp, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadSplitContainerNavigation, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadSplitContainerNavigation.SuspendLayout()
         CType(Me.SplitPanelContent, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.lblHeaderText, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SplitPanelNavigation, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitPanelNavigation.SuspendLayout()
         CType(Me.RadButtonVersenden, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -79,19 +78,20 @@ Partial Class FrmMainContainer
         CType(Me.RadButtonNavigateBackwards, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonNavigateForwards, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxRHEWALogo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblHeaderText, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
-        CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SplitContainer2.Panel1.SuspendLayout()
-        Me.SplitContainer2.Panel2.SuspendLayout()
-        Me.SplitContainer2.SuspendLayout()
         CType(Me.SplitContainer3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer3.Panel1.SuspendLayout()
         Me.SplitContainer3.Panel2.SuspendLayout()
         Me.SplitContainer3.SuspendLayout()
+        CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SplitContainer2.Panel1.SuspendLayout()
+        Me.SplitContainer2.Panel2.SuspendLayout()
+        Me.SplitContainer2.SuspendLayout()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -137,13 +137,6 @@ Partial Class FrmMainContainer
         Me.RadScrollablePanelContextHelp.RootElement.Text = resources.GetString("RadScrollablePanelContextHelp.RootElement.Text")
         Me.RadScrollablePanelContextHelp.RootElement.TextOrientation = CType(resources.GetObject("RadScrollablePanelContextHelp.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
-        'PictureBox1
-        '
-        resources.ApplyResources(Me.PictureBox1, "PictureBox1")
-        Me.PictureBox1.Image = Global.EichsoftwareClient.My.Resources.Resources.help
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.TabStop = False
-        '
         'RadLabelContextHelp
         '
         resources.ApplyResources(Me.RadLabelContextHelp, "RadLabelContextHelp")
@@ -159,6 +152,13 @@ Partial Class FrmMainContainer
         Me.RadLabelContextHelp.RootElement.Margin = CType(resources.GetObject("RadLabelContextHelp.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadLabelContextHelp.RootElement.Text = resources.GetString("RadLabelContextHelp.RootElement.Text")
         Me.RadLabelContextHelp.RootElement.TextOrientation = CType(resources.GetObject("RadLabelContextHelp.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        '
+        'PictureBox1
+        '
+        resources.ApplyResources(Me.PictureBox1, "PictureBox1")
+        Me.PictureBox1.Image = Global.EichsoftwareClient.My.Resources.Resources.help
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.TabStop = False
         '
         'RadSplitContainerNavigation
         '
@@ -200,23 +200,6 @@ Partial Class FrmMainContainer
         Me.SplitPanelContent.SizeInfo.AutoSizeScale = New System.Drawing.SizeF(0.0!, -0.004815409!)
         Me.SplitPanelContent.SizeInfo.SplitterCorrection = New System.Drawing.Size(0, 287)
         Me.SplitPanelContent.TabStop = False
-        '
-        'lblHeaderText
-        '
-        resources.ApplyResources(Me.lblHeaderText, "lblHeaderText")
-        Me.lblHeaderText.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(51, Byte), Integer))
-        Me.lblHeaderText.Name = "lblHeaderText"
-        '
-        '
-        '
-        Me.lblHeaderText.RootElement.AccessibleDescription = resources.GetString("lblHeaderText.RootElement.AccessibleDescription")
-        Me.lblHeaderText.RootElement.AccessibleName = resources.GetString("lblHeaderText.RootElement.AccessibleName")
-        Me.lblHeaderText.RootElement.Alignment = CType(resources.GetObject("lblHeaderText.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblHeaderText.RootElement.AngleTransform = CType(resources.GetObject("lblHeaderText.RootElement.AngleTransform"), Single)
-        Me.lblHeaderText.RootElement.FlipText = CType(resources.GetObject("lblHeaderText.RootElement.FlipText"), Boolean)
-        Me.lblHeaderText.RootElement.Margin = CType(resources.GetObject("lblHeaderText.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblHeaderText.RootElement.Text = resources.GetString("lblHeaderText.RootElement.Text")
-        Me.lblHeaderText.RootElement.TextOrientation = CType(resources.GetObject("lblHeaderText.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
         'SplitPanelNavigation
         '
@@ -407,6 +390,23 @@ Partial Class FrmMainContainer
         Me.PictureBoxRHEWALogo.Name = "PictureBoxRHEWALogo"
         Me.PictureBoxRHEWALogo.TabStop = False
         '
+        'lblHeaderText
+        '
+        resources.ApplyResources(Me.lblHeaderText, "lblHeaderText")
+        Me.lblHeaderText.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.lblHeaderText.Name = "lblHeaderText"
+        '
+        '
+        '
+        Me.lblHeaderText.RootElement.AccessibleDescription = resources.GetString("lblHeaderText.RootElement.AccessibleDescription")
+        Me.lblHeaderText.RootElement.AccessibleName = resources.GetString("lblHeaderText.RootElement.AccessibleName")
+        Me.lblHeaderText.RootElement.Alignment = CType(resources.GetObject("lblHeaderText.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.lblHeaderText.RootElement.AngleTransform = CType(resources.GetObject("lblHeaderText.RootElement.AngleTransform"), Single)
+        Me.lblHeaderText.RootElement.FlipText = CType(resources.GetObject("lblHeaderText.RootElement.FlipText"), Boolean)
+        Me.lblHeaderText.RootElement.Margin = CType(resources.GetObject("lblHeaderText.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.lblHeaderText.RootElement.Text = resources.GetString("lblHeaderText.RootElement.Text")
+        Me.lblHeaderText.RootElement.TextOrientation = CType(resources.GetObject("lblHeaderText.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        '
         'RadDropDownButtonElement1
         '
         resources.ApplyResources(Me.RadDropDownButtonElement1, "RadDropDownButtonElement1")
@@ -543,19 +543,6 @@ Partial Class FrmMainContainer
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.SplitContainer2)
         '
-        'SplitContainer2
-        '
-        resources.ApplyResources(Me.SplitContainer2, "SplitContainer2")
-        Me.SplitContainer2.Name = "SplitContainer2"
-        '
-        'SplitContainer2.Panel1
-        '
-        Me.SplitContainer2.Panel1.Controls.Add(Me.RadSplitContainerNavigation)
-        '
-        'SplitContainer2.Panel2
-        '
-        Me.SplitContainer2.Panel2.Controls.Add(Me.RadScrollablePanelContextHelp)
-        '
         'SplitContainer3
         '
         resources.ApplyResources(Me.SplitContainer3, "SplitContainer3")
@@ -568,6 +555,19 @@ Partial Class FrmMainContainer
         'SplitContainer3.Panel2
         '
         Me.SplitContainer3.Panel2.Controls.Add(Me.RadScrollablePanelTrafficLightBreadcrumb)
+        '
+        'SplitContainer2
+        '
+        resources.ApplyResources(Me.SplitContainer2, "SplitContainer2")
+        Me.SplitContainer2.Name = "SplitContainer2"
+        '
+        'SplitContainer2.Panel1
+        '
+        Me.SplitContainer2.Panel1.Controls.Add(Me.RadSplitContainerNavigation)
+        '
+        'SplitContainer2.Panel2
+        '
+        Me.SplitContainer2.Panel2.Controls.Add(Me.RadScrollablePanelContextHelp)
         '
         'FrmMainContainer
         '
@@ -596,12 +596,11 @@ Partial Class FrmMainContainer
         Me.RadScrollablePanelContextHelp.PanelContainer.PerformLayout()
         CType(Me.RadScrollablePanelContextHelp, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadScrollablePanelContextHelp.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadLabelContextHelp, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadSplitContainerNavigation, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadSplitContainerNavigation.ResumeLayout(False)
         CType(Me.SplitPanelContent, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.lblHeaderText, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SplitPanelNavigation, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitPanelNavigation.ResumeLayout(False)
         CType(Me.RadButtonVersenden, System.ComponentModel.ISupportInitialize).EndInit()
@@ -612,19 +611,20 @@ Partial Class FrmMainContainer
         CType(Me.RadButtonNavigateBackwards, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonNavigateForwards, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxRHEWALogo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblHeaderText, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
-        Me.SplitContainer2.Panel1.ResumeLayout(False)
-        Me.SplitContainer2.Panel2.ResumeLayout(False)
-        CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.SplitContainer2.ResumeLayout(False)
         Me.SplitContainer3.Panel1.ResumeLayout(False)
         Me.SplitContainer3.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer3.ResumeLayout(False)
+        Me.SplitContainer2.Panel1.ResumeLayout(False)
+        Me.SplitContainer2.Panel2.ResumeLayout(False)
+        CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SplitContainer2.ResumeLayout(False)
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 

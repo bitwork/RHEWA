@@ -297,6 +297,53 @@ Public Class ucoContent
         Return True
     End Function
 
+    Friend Sub DisableControls(ByVal controlcontainer As Control)
+        For Each Control In controlcontainer.Controls
+            If TypeOf Control Is Label Then Continue For
+            If TypeOf Control Is PictureBox Then Continue For
+            If TypeOf Control Is Telerik.WinControls.UI.RadLabel Then Continue For
+            If TypeOf Control Is Telerik.WinControls.UI.RadSeparator Then Continue For
+
+            If TypeOf Control Is GroupBox Then
+                DisableControls(Control)
+                Continue For
+            End If
+            If TypeOf Control Is Panel Then
+                DisableControls(Control)
+                Continue For
+            End If
+            If TypeOf Control Is Telerik.WinControls.UI.RadGroupBox Then
+                DisableControls(Control)
+                Continue For
+            End If
+            If TypeOf Control Is Telerik.WinControls.UI.RadButton Then
+                Control.enabled = False
+                Continue For
+            End If
+            If TypeOf Control Is Telerik.WinControls.UI.RadCheckBox Then
+                Control.enabled = False
+                Continue For
+            End If
+
+            If TypeOf Control Is Telerik.WinControls.UI.RadRadioButton Then
+                Control.enabled = False
+                Continue For
+            End If
+
+            Try
+                Control.readonly = True
+            Catch ex As Exception
+                Try
+                    Control.isreadonly = True
+                Catch ex2 As Exception
+                    Try
+                        Control.enabled = False
+                    Catch ex3 As Exception
+                    End Try
+                End Try
+            End Try
+        Next
+    End Sub
 
     Friend Function ShowValidationErrorBoxStandardwaage(enu As GlobaleEnumeratoren.enuEichprozessStatus) As Boolean
         Dim Displaytext As String = ""

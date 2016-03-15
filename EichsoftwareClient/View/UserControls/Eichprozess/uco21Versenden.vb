@@ -44,20 +44,8 @@ Public Class Uco21Versenden
         'falls der Konformitätsbewertungsvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
         If DialogModus = enuDialogModus.lesend Then
             '  ParentFormular.BreadCrumb.FindeElementUndSelektiere(GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe)
-            For Each Control In Me.Controls
-                Try
-                    Control.readonly = True
-                Catch ex As Exception
-                    Try
-                        Control.isreadonly = True
-                    Catch ex2 As Exception
-                        Try
-                            Control.enabled = False
-                        Catch ex3 As Exception
-                        End Try
-                    End Try
-                End Try
-            Next
+            DisableControls(Me)
+
         End If
     End Sub
 
@@ -78,20 +66,8 @@ Public Class Uco21Versenden
 
         If DialogModus = enuDialogModus.lesend Then
             'falls der Konformitätsbewertungsvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
-            For Each Control In Me.Controls
-                Try
-                    Control.readonly = True
-                Catch ex As Exception
-                    Try
-                        Control.isreadonly = True
-                    Catch ex2 As Exception
-                        Try
-                            Control.enabled = False
-                        Catch ex3 As Exception
-                        End Try
-                    End Try
-                End Try
-            Next
+            DisableControls(Me)
+
         End If
     End Sub
 

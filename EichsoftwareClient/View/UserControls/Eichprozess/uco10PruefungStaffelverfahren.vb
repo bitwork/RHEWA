@@ -195,21 +195,23 @@ Inherits ucoContent
         FillControls()
 
         If DialogModus = enuDialogModus.lesend Then
-            'falls der Konformitätsbewertungsvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
-            For Each Control In RadScrollablePanel1.PanelContainer.Controls
-                Try
-                    Control.readonly = True
-                Catch ex As Exception
-                    Try
-                        Control.isreadonly = True
-                    Catch ex2 As Exception
-                        Try
-                            Control.enabled = False
-                        Catch ex3 As Exception
-                        End Try
-                    End Try
-                End Try
-            Next
+            DisableControls(RadGroupBoxStaffel1Bereich1)
+            DisableControls(RadGroupBoxStaffel1Bereich2)
+            DisableControls(RadGroupBoxStaffel1Bereich3)
+
+            DisableControls(RadGroupBoxStaffel2Bereich1)
+            DisableControls(RadGroupBoxStaffel2Bereich2)
+            DisableControls(RadGroupBoxStaffel2Bereich3)
+            DisableControls(RadGroupBoxStaffel3Bereich1)
+            DisableControls(RadGroupBoxStaffel3Bereich2)
+            DisableControls(RadGroupBoxStaffel3Bereich3)
+            DisableControls(RadGroupBoxStaffel4Bereich1)
+            DisableControls(RadGroupBoxStaffel4Bereich2)
+            DisableControls(RadGroupBoxStaffel4Bereich3)
+            DisableControls(RadGroupBoxStaffel5Bereich1)
+            DisableControls(RadGroupBoxStaffel5Bereich2)
+            DisableControls(RadGroupBoxStaffel5Bereich3)
+          
         End If
 
         'events abbrechen
