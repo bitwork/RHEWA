@@ -78,6 +78,8 @@ Partial Public Class ServerEichprotokoll
     Public Property Beschaffenheitspruefung_LetztePruefung As String
     Public Property Beschaffenheitspruefung_Pruefscheinnummer As String
     Public Property Beschaffenheitspruefung_EichfahrzeugFirma As String
+    Public Property Sicherung_CE2016 As Nullable(Of Boolean)
+    Public Property Sicherung_CE2016Anzahl As Nullable(Of Short)
 
     Public Overridable Property ServerLookup_Konformitaetsbewertungsverfahren As ServerLookup_Konformitaetsbewertungsverfahren
     Public Overridable Property ServerEichprozess As ICollection(Of ServerEichprozess) = New HashSet(Of ServerEichprozess)

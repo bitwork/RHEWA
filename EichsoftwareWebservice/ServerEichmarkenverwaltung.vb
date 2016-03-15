@@ -76,5 +76,7 @@ Partial Public Class ServerEichmarkenverwaltung
     Public Property HEKennung As String
     Public Property FK_BenutzerID As String
     Public Property ZurBearbeitungGesperrtDurch As String
+    Public Property CE2016Anzahl As Nullable(Of Integer)
+    Public Property CE2016AnzahlMeldestand As Nullable(Of Integer)
 
 End Class

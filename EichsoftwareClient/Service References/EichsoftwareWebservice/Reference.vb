@@ -222,6 +222,8 @@ Namespace EichsoftwareWebservice
         
         Private _RueckkehrVorlastsignalField As String
         
+        Private _ServerEichprozessField() As EichsoftwareWebservice.ServerEichprozess
+        
         Private _ServerMogelstatistikField() As EichsoftwareWebservice.ServerMogelstatistik
         
         Private _TypField As String
@@ -475,6 +477,19 @@ Namespace EichsoftwareWebservice
         End Property
         
         <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _ServerEichprozess() As EichsoftwareWebservice.ServerEichprozess()
+            Get
+                Return Me._ServerEichprozessField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me._ServerEichprozessField, value) <> true) Then
+                    Me._ServerEichprozessField = value
+                    Me.RaisePropertyChanged("_ServerEichprozess")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
         Public Property _ServerMogelstatistik() As EichsoftwareWebservice.ServerMogelstatistik()
             Get
                 Return Me._ServerMogelstatistikField
@@ -522,6 +537,427 @@ Namespace EichsoftwareWebservice
                 If (Object.ReferenceEquals(Me._WiderstandWaegezelleField, value) <> true) Then
                     Me._WiderstandWaegezelleField = value
                     Me.RaisePropertyChanged("_WiderstandWaegezelle")
+                End If
+            End Set
+        End Property
+        
+        Public Event PropertyChanged As System.ComponentModel.PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+        
+        Protected Sub RaisePropertyChanged(ByVal propertyName As String)
+            Dim propertyChanged As System.ComponentModel.PropertyChangedEventHandler = Me.PropertyChangedEvent
+            If (Not (propertyChanged) Is Nothing) Then
+                propertyChanged(Me, New System.ComponentModel.PropertyChangedEventArgs(propertyName))
+            End If
+        End Sub
+    End Class
+    
+    <System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0"),  _
+     System.Runtime.Serialization.DataContractAttribute(Name:="ServerEichprozess", [Namespace]:="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice"),  _
+     System.SerializableAttribute()>  _
+    Partial Public Class ServerEichprozess
+        Inherits Object
+        Implements System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged
+        
+        <System.NonSerializedAttribute()>  _
+        Private extensionDataField As System.Runtime.Serialization.ExtensionDataObject
+        
+        Private _AusgeblendetField As Boolean
+        
+        Private _BearbeitungsDatumField As System.Nullable(Of Date)
+        
+        Private _ErzeugerLizenzField As String
+        
+        Private _FK_AuswertegeraetField As String
+        
+        Private _FK_BearbeitungsstatusField As System.Nullable(Of Byte)
+        
+        Private _FK_EichprotokollField As System.Nullable(Of Integer)
+        
+        Private _FK_KompatibilitaetsnachweisField As System.Nullable(Of Integer)
+        
+        Private _FK_VorgangsstatusField As Byte
+        
+        Private _FK_WaagenArtField As System.Nullable(Of Byte)
+        
+        Private _FK_WaagenTypField As System.Nullable(Of Byte)
+        
+        Private _FK_WaegezelleField As String
+        
+        Private _IDField As Integer
+        
+        Private _ServerEichprotokollField As EichsoftwareWebservice.ServerEichprotokoll
+        
+        Private _ServerKompatiblitaetsnachweisField As EichsoftwareWebservice.ServerKompatiblitaetsnachweis
+        
+        Private _ServerLookup_AuswertegeraetField As EichsoftwareWebservice.ServerLookup_Auswertegeraet
+        
+        Private _ServerLookup_BearbeitungsstatusField As EichsoftwareWebservice.ServerLookup_Bearbeitungsstatus
+        
+        Private _ServerLookup_VorgangsstatusField As EichsoftwareWebservice.ServerLookup_Vorgangsstatus
+        
+        Private _ServerLookup_WaagenartField As EichsoftwareWebservice.ServerLookup_Waagenart
+        
+        Private _ServerLookup_WaagentypField As EichsoftwareWebservice.ServerLookup_Waagentyp
+        
+        Private _ServerLookup_WaegezelleField As EichsoftwareWebservice.ServerLookup_Waegezelle
+        
+        Private _ServerMogelstatistikField() As EichsoftwareWebservice.ServerMogelstatistik
+        
+        Private _StandardwaageField As Boolean
+        
+        Private _UploadDatumField As System.Nullable(Of Date)
+        
+        Private _UploadFilePathField As String
+        
+        Private _VorgangsnummerField As String
+        
+        Private _ZurBearbeitungGesperrtDurchField As String
+        
+        <Global.System.ComponentModel.BrowsableAttribute(false)>  _
+        Public Property ExtensionData() As System.Runtime.Serialization.ExtensionDataObject Implements System.Runtime.Serialization.IExtensibleDataObject.ExtensionData
+            Get
+                Return Me.extensionDataField
+            End Get
+            Set
+                Me.extensionDataField = value
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _Ausgeblendet() As Boolean
+            Get
+                Return Me._AusgeblendetField
+            End Get
+            Set
+                If (Me._AusgeblendetField.Equals(value) <> true) Then
+                    Me._AusgeblendetField = value
+                    Me.RaisePropertyChanged("_Ausgeblendet")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _BearbeitungsDatum() As System.Nullable(Of Date)
+            Get
+                Return Me._BearbeitungsDatumField
+            End Get
+            Set
+                If (Me._BearbeitungsDatumField.Equals(value) <> true) Then
+                    Me._BearbeitungsDatumField = value
+                    Me.RaisePropertyChanged("_BearbeitungsDatum")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _ErzeugerLizenz() As String
+            Get
+                Return Me._ErzeugerLizenzField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me._ErzeugerLizenzField, value) <> true) Then
+                    Me._ErzeugerLizenzField = value
+                    Me.RaisePropertyChanged("_ErzeugerLizenz")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _FK_Auswertegeraet() As String
+            Get
+                Return Me._FK_AuswertegeraetField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me._FK_AuswertegeraetField, value) <> true) Then
+                    Me._FK_AuswertegeraetField = value
+                    Me.RaisePropertyChanged("_FK_Auswertegeraet")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _FK_Bearbeitungsstatus() As System.Nullable(Of Byte)
+            Get
+                Return Me._FK_BearbeitungsstatusField
+            End Get
+            Set
+                If (Me._FK_BearbeitungsstatusField.Equals(value) <> true) Then
+                    Me._FK_BearbeitungsstatusField = value
+                    Me.RaisePropertyChanged("_FK_Bearbeitungsstatus")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _FK_Eichprotokoll() As System.Nullable(Of Integer)
+            Get
+                Return Me._FK_EichprotokollField
+            End Get
+            Set
+                If (Me._FK_EichprotokollField.Equals(value) <> true) Then
+                    Me._FK_EichprotokollField = value
+                    Me.RaisePropertyChanged("_FK_Eichprotokoll")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _FK_Kompatibilitaetsnachweis() As System.Nullable(Of Integer)
+            Get
+                Return Me._FK_KompatibilitaetsnachweisField
+            End Get
+            Set
+                If (Me._FK_KompatibilitaetsnachweisField.Equals(value) <> true) Then
+                    Me._FK_KompatibilitaetsnachweisField = value
+                    Me.RaisePropertyChanged("_FK_Kompatibilitaetsnachweis")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _FK_Vorgangsstatus() As Byte
+            Get
+                Return Me._FK_VorgangsstatusField
+            End Get
+            Set
+                If (Me._FK_VorgangsstatusField.Equals(value) <> true) Then
+                    Me._FK_VorgangsstatusField = value
+                    Me.RaisePropertyChanged("_FK_Vorgangsstatus")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _FK_WaagenArt() As System.Nullable(Of Byte)
+            Get
+                Return Me._FK_WaagenArtField
+            End Get
+            Set
+                If (Me._FK_WaagenArtField.Equals(value) <> true) Then
+                    Me._FK_WaagenArtField = value
+                    Me.RaisePropertyChanged("_FK_WaagenArt")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _FK_WaagenTyp() As System.Nullable(Of Byte)
+            Get
+                Return Me._FK_WaagenTypField
+            End Get
+            Set
+                If (Me._FK_WaagenTypField.Equals(value) <> true) Then
+                    Me._FK_WaagenTypField = value
+                    Me.RaisePropertyChanged("_FK_WaagenTyp")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _FK_Waegezelle() As String
+            Get
+                Return Me._FK_WaegezelleField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me._FK_WaegezelleField, value) <> true) Then
+                    Me._FK_WaegezelleField = value
+                    Me.RaisePropertyChanged("_FK_Waegezelle")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _ID() As Integer
+            Get
+                Return Me._IDField
+            End Get
+            Set
+                If (Me._IDField.Equals(value) <> true) Then
+                    Me._IDField = value
+                    Me.RaisePropertyChanged("_ID")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _ServerEichprotokoll() As EichsoftwareWebservice.ServerEichprotokoll
+            Get
+                Return Me._ServerEichprotokollField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me._ServerEichprotokollField, value) <> true) Then
+                    Me._ServerEichprotokollField = value
+                    Me.RaisePropertyChanged("_ServerEichprotokoll")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _ServerKompatiblitaetsnachweis() As EichsoftwareWebservice.ServerKompatiblitaetsnachweis
+            Get
+                Return Me._ServerKompatiblitaetsnachweisField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me._ServerKompatiblitaetsnachweisField, value) <> true) Then
+                    Me._ServerKompatiblitaetsnachweisField = value
+                    Me.RaisePropertyChanged("_ServerKompatiblitaetsnachweis")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _ServerLookup_Auswertegeraet() As EichsoftwareWebservice.ServerLookup_Auswertegeraet
+            Get
+                Return Me._ServerLookup_AuswertegeraetField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me._ServerLookup_AuswertegeraetField, value) <> true) Then
+                    Me._ServerLookup_AuswertegeraetField = value
+                    Me.RaisePropertyChanged("_ServerLookup_Auswertegeraet")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _ServerLookup_Bearbeitungsstatus() As EichsoftwareWebservice.ServerLookup_Bearbeitungsstatus
+            Get
+                Return Me._ServerLookup_BearbeitungsstatusField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me._ServerLookup_BearbeitungsstatusField, value) <> true) Then
+                    Me._ServerLookup_BearbeitungsstatusField = value
+                    Me.RaisePropertyChanged("_ServerLookup_Bearbeitungsstatus")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _ServerLookup_Vorgangsstatus() As EichsoftwareWebservice.ServerLookup_Vorgangsstatus
+            Get
+                Return Me._ServerLookup_VorgangsstatusField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me._ServerLookup_VorgangsstatusField, value) <> true) Then
+                    Me._ServerLookup_VorgangsstatusField = value
+                    Me.RaisePropertyChanged("_ServerLookup_Vorgangsstatus")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _ServerLookup_Waagenart() As EichsoftwareWebservice.ServerLookup_Waagenart
+            Get
+                Return Me._ServerLookup_WaagenartField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me._ServerLookup_WaagenartField, value) <> true) Then
+                    Me._ServerLookup_WaagenartField = value
+                    Me.RaisePropertyChanged("_ServerLookup_Waagenart")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _ServerLookup_Waagentyp() As EichsoftwareWebservice.ServerLookup_Waagentyp
+            Get
+                Return Me._ServerLookup_WaagentypField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me._ServerLookup_WaagentypField, value) <> true) Then
+                    Me._ServerLookup_WaagentypField = value
+                    Me.RaisePropertyChanged("_ServerLookup_Waagentyp")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _ServerLookup_Waegezelle() As EichsoftwareWebservice.ServerLookup_Waegezelle
+            Get
+                Return Me._ServerLookup_WaegezelleField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me._ServerLookup_WaegezelleField, value) <> true) Then
+                    Me._ServerLookup_WaegezelleField = value
+                    Me.RaisePropertyChanged("_ServerLookup_Waegezelle")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _ServerMogelstatistik() As EichsoftwareWebservice.ServerMogelstatistik()
+            Get
+                Return Me._ServerMogelstatistikField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me._ServerMogelstatistikField, value) <> true) Then
+                    Me._ServerMogelstatistikField = value
+                    Me.RaisePropertyChanged("_ServerMogelstatistik")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _Standardwaage() As Boolean
+            Get
+                Return Me._StandardwaageField
+            End Get
+            Set
+                If (Me._StandardwaageField.Equals(value) <> true) Then
+                    Me._StandardwaageField = value
+                    Me.RaisePropertyChanged("_Standardwaage")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _UploadDatum() As System.Nullable(Of Date)
+            Get
+                Return Me._UploadDatumField
+            End Get
+            Set
+                If (Me._UploadDatumField.Equals(value) <> true) Then
+                    Me._UploadDatumField = value
+                    Me.RaisePropertyChanged("_UploadDatum")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _UploadFilePath() As String
+            Get
+                Return Me._UploadFilePathField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me._UploadFilePathField, value) <> true) Then
+                    Me._UploadFilePathField = value
+                    Me.RaisePropertyChanged("_UploadFilePath")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _Vorgangsnummer() As String
+            Get
+                Return Me._VorgangsnummerField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me._VorgangsnummerField, value) <> true) Then
+                    Me._VorgangsnummerField = value
+                    Me.RaisePropertyChanged("_Vorgangsnummer")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _ZurBearbeitungGesperrtDurch() As String
+            Get
+                Return Me._ZurBearbeitungGesperrtDurchField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me._ZurBearbeitungGesperrtDurchField, value) <> true) Then
+                    Me._ZurBearbeitungGesperrtDurchField = value
+                    Me.RaisePropertyChanged("_ZurBearbeitungGesperrtDurch")
                 End If
             End Set
         End Property
@@ -1049,848 +1485,6 @@ Namespace EichsoftwareWebservice
     
     <System.Diagnostics.DebuggerStepThroughAttribute(),  _
      System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0"),  _
-     System.Runtime.Serialization.DataContractAttribute(Name:="ServerEichprozess", [Namespace]:="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice"),  _
-     System.SerializableAttribute()>  _
-    Partial Public Class ServerEichprozess
-        Inherits Object
-        Implements System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged
-        
-        <System.NonSerializedAttribute()>  _
-        Private extensionDataField As System.Runtime.Serialization.ExtensionDataObject
-        
-        Private _AusgeblendetField As Boolean
-        
-        Private _BearbeitungsDatumField As System.Nullable(Of Date)
-        
-        Private _ErzeugerLizenzField As String
-        
-        Private _FK_AuswertegeraetField As String
-        
-        Private _FK_BearbeitungsstatusField As System.Nullable(Of Byte)
-        
-        Private _FK_EichprotokollField As System.Nullable(Of Integer)
-        
-        Private _FK_KompatibilitaetsnachweisField As System.Nullable(Of Integer)
-        
-        Private _FK_VorgangsstatusField As Byte
-        
-        Private _FK_WaagenArtField As System.Nullable(Of Byte)
-        
-        Private _FK_WaagenTypField As System.Nullable(Of Byte)
-        
-        Private _FK_WaegezelleField As String
-        
-        Private _IDField As Integer
-        
-        Private _ServerEichprotokollField As EichsoftwareWebservice.ServerEichprotokoll
-        
-        Private _ServerKompatiblitaetsnachweisField As EichsoftwareWebservice.ServerKompatiblitaetsnachweis
-        
-        Private _ServerLookup_AuswertegeraetField As EichsoftwareWebservice.ServerLookup_Auswertegeraet
-        
-        Private _ServerLookup_BearbeitungsstatusField As EichsoftwareWebservice.ServerLookup_Bearbeitungsstatus
-        
-        Private _ServerLookup_VorgangsstatusField As EichsoftwareWebservice.ServerLookup_Vorgangsstatus
-        
-        Private _ServerLookup_WaagenartField As EichsoftwareWebservice.ServerLookup_Waagenart
-        
-        Private _ServerLookup_WaagentypField As EichsoftwareWebservice.ServerLookup_Waagentyp
-        
-        Private _ServerLookup_WaegezelleField As EichsoftwareWebservice.ServerLookup_Waegezelle
-        
-        Private _ServerMogelstatistikField() As EichsoftwareWebservice.ServerMogelstatistik
-        
-        Private _StandardwaageField As System.Nullable(Of Boolean)
-        
-        Private _UploadDatumField As System.Nullable(Of Date)
-        
-        Private _UploadFilePathField As String
-        
-        Private _VorgangsnummerField As String
-        
-        Private _ZurBearbeitungGesperrtDurchField As String
-        
-        <Global.System.ComponentModel.BrowsableAttribute(false)>  _
-        Public Property ExtensionData() As System.Runtime.Serialization.ExtensionDataObject Implements System.Runtime.Serialization.IExtensibleDataObject.ExtensionData
-            Get
-                Return Me.extensionDataField
-            End Get
-            Set
-                Me.extensionDataField = value
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _Ausgeblendet() As Boolean
-            Get
-                Return Me._AusgeblendetField
-            End Get
-            Set
-                If (Me._AusgeblendetField.Equals(value) <> true) Then
-                    Me._AusgeblendetField = value
-                    Me.RaisePropertyChanged("_Ausgeblendet")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _BearbeitungsDatum() As System.Nullable(Of Date)
-            Get
-                Return Me._BearbeitungsDatumField
-            End Get
-            Set
-                If (Me._BearbeitungsDatumField.Equals(value) <> true) Then
-                    Me._BearbeitungsDatumField = value
-                    Me.RaisePropertyChanged("_BearbeitungsDatum")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _ErzeugerLizenz() As String
-            Get
-                Return Me._ErzeugerLizenzField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me._ErzeugerLizenzField, value) <> true) Then
-                    Me._ErzeugerLizenzField = value
-                    Me.RaisePropertyChanged("_ErzeugerLizenz")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _FK_Auswertegeraet() As String
-            Get
-                Return Me._FK_AuswertegeraetField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me._FK_AuswertegeraetField, value) <> true) Then
-                    Me._FK_AuswertegeraetField = value
-                    Me.RaisePropertyChanged("_FK_Auswertegeraet")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _FK_Bearbeitungsstatus() As System.Nullable(Of Byte)
-            Get
-                Return Me._FK_BearbeitungsstatusField
-            End Get
-            Set
-                If (Me._FK_BearbeitungsstatusField.Equals(value) <> true) Then
-                    Me._FK_BearbeitungsstatusField = value
-                    Me.RaisePropertyChanged("_FK_Bearbeitungsstatus")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _FK_Eichprotokoll() As System.Nullable(Of Integer)
-            Get
-                Return Me._FK_EichprotokollField
-            End Get
-            Set
-                If (Me._FK_EichprotokollField.Equals(value) <> true) Then
-                    Me._FK_EichprotokollField = value
-                    Me.RaisePropertyChanged("_FK_Eichprotokoll")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _FK_Kompatibilitaetsnachweis() As System.Nullable(Of Integer)
-            Get
-                Return Me._FK_KompatibilitaetsnachweisField
-            End Get
-            Set
-                If (Me._FK_KompatibilitaetsnachweisField.Equals(value) <> true) Then
-                    Me._FK_KompatibilitaetsnachweisField = value
-                    Me.RaisePropertyChanged("_FK_Kompatibilitaetsnachweis")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _FK_Vorgangsstatus() As Byte
-            Get
-                Return Me._FK_VorgangsstatusField
-            End Get
-            Set
-                If (Me._FK_VorgangsstatusField.Equals(value) <> true) Then
-                    Me._FK_VorgangsstatusField = value
-                    Me.RaisePropertyChanged("_FK_Vorgangsstatus")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _FK_WaagenArt() As System.Nullable(Of Byte)
-            Get
-                Return Me._FK_WaagenArtField
-            End Get
-            Set
-                If (Me._FK_WaagenArtField.Equals(value) <> true) Then
-                    Me._FK_WaagenArtField = value
-                    Me.RaisePropertyChanged("_FK_WaagenArt")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _FK_WaagenTyp() As System.Nullable(Of Byte)
-            Get
-                Return Me._FK_WaagenTypField
-            End Get
-            Set
-                If (Me._FK_WaagenTypField.Equals(value) <> true) Then
-                    Me._FK_WaagenTypField = value
-                    Me.RaisePropertyChanged("_FK_WaagenTyp")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _FK_Waegezelle() As String
-            Get
-                Return Me._FK_WaegezelleField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me._FK_WaegezelleField, value) <> true) Then
-                    Me._FK_WaegezelleField = value
-                    Me.RaisePropertyChanged("_FK_Waegezelle")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _ID() As Integer
-            Get
-                Return Me._IDField
-            End Get
-            Set
-                If (Me._IDField.Equals(value) <> true) Then
-                    Me._IDField = value
-                    Me.RaisePropertyChanged("_ID")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _ServerEichprotokoll() As EichsoftwareWebservice.ServerEichprotokoll
-            Get
-                Return Me._ServerEichprotokollField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me._ServerEichprotokollField, value) <> true) Then
-                    Me._ServerEichprotokollField = value
-                    Me.RaisePropertyChanged("_ServerEichprotokoll")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _ServerKompatiblitaetsnachweis() As EichsoftwareWebservice.ServerKompatiblitaetsnachweis
-            Get
-                Return Me._ServerKompatiblitaetsnachweisField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me._ServerKompatiblitaetsnachweisField, value) <> true) Then
-                    Me._ServerKompatiblitaetsnachweisField = value
-                    Me.RaisePropertyChanged("_ServerKompatiblitaetsnachweis")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _ServerLookup_Auswertegeraet() As EichsoftwareWebservice.ServerLookup_Auswertegeraet
-            Get
-                Return Me._ServerLookup_AuswertegeraetField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me._ServerLookup_AuswertegeraetField, value) <> true) Then
-                    Me._ServerLookup_AuswertegeraetField = value
-                    Me.RaisePropertyChanged("_ServerLookup_Auswertegeraet")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _ServerLookup_Bearbeitungsstatus() As EichsoftwareWebservice.ServerLookup_Bearbeitungsstatus
-            Get
-                Return Me._ServerLookup_BearbeitungsstatusField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me._ServerLookup_BearbeitungsstatusField, value) <> true) Then
-                    Me._ServerLookup_BearbeitungsstatusField = value
-                    Me.RaisePropertyChanged("_ServerLookup_Bearbeitungsstatus")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _ServerLookup_Vorgangsstatus() As EichsoftwareWebservice.ServerLookup_Vorgangsstatus
-            Get
-                Return Me._ServerLookup_VorgangsstatusField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me._ServerLookup_VorgangsstatusField, value) <> true) Then
-                    Me._ServerLookup_VorgangsstatusField = value
-                    Me.RaisePropertyChanged("_ServerLookup_Vorgangsstatus")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _ServerLookup_Waagenart() As EichsoftwareWebservice.ServerLookup_Waagenart
-            Get
-                Return Me._ServerLookup_WaagenartField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me._ServerLookup_WaagenartField, value) <> true) Then
-                    Me._ServerLookup_WaagenartField = value
-                    Me.RaisePropertyChanged("_ServerLookup_Waagenart")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _ServerLookup_Waagentyp() As EichsoftwareWebservice.ServerLookup_Waagentyp
-            Get
-                Return Me._ServerLookup_WaagentypField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me._ServerLookup_WaagentypField, value) <> true) Then
-                    Me._ServerLookup_WaagentypField = value
-                    Me.RaisePropertyChanged("_ServerLookup_Waagentyp")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _ServerLookup_Waegezelle() As EichsoftwareWebservice.ServerLookup_Waegezelle
-            Get
-                Return Me._ServerLookup_WaegezelleField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me._ServerLookup_WaegezelleField, value) <> true) Then
-                    Me._ServerLookup_WaegezelleField = value
-                    Me.RaisePropertyChanged("_ServerLookup_Waegezelle")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _ServerMogelstatistik() As EichsoftwareWebservice.ServerMogelstatistik()
-            Get
-                Return Me._ServerMogelstatistikField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me._ServerMogelstatistikField, value) <> true) Then
-                    Me._ServerMogelstatistikField = value
-                    Me.RaisePropertyChanged("_ServerMogelstatistik")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _Standardwaage() As System.Nullable(Of Boolean)
-            Get
-                Return Me._StandardwaageField
-            End Get
-            Set
-                If (Me._StandardwaageField.Equals(value) <> true) Then
-                    Me._StandardwaageField = value
-                    Me.RaisePropertyChanged("_Standardwaage")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _UploadDatum() As System.Nullable(Of Date)
-            Get
-                Return Me._UploadDatumField
-            End Get
-            Set
-                If (Me._UploadDatumField.Equals(value) <> true) Then
-                    Me._UploadDatumField = value
-                    Me.RaisePropertyChanged("_UploadDatum")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _UploadFilePath() As String
-            Get
-                Return Me._UploadFilePathField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me._UploadFilePathField, value) <> true) Then
-                    Me._UploadFilePathField = value
-                    Me.RaisePropertyChanged("_UploadFilePath")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _Vorgangsnummer() As String
-            Get
-                Return Me._VorgangsnummerField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me._VorgangsnummerField, value) <> true) Then
-                    Me._VorgangsnummerField = value
-                    Me.RaisePropertyChanged("_Vorgangsnummer")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _ZurBearbeitungGesperrtDurch() As String
-            Get
-                Return Me._ZurBearbeitungGesperrtDurchField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me._ZurBearbeitungGesperrtDurchField, value) <> true) Then
-                    Me._ZurBearbeitungGesperrtDurchField = value
-                    Me.RaisePropertyChanged("_ZurBearbeitungGesperrtDurch")
-                End If
-            End Set
-        End Property
-        
-        Public Event PropertyChanged As System.ComponentModel.PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
-        
-        Protected Sub RaisePropertyChanged(ByVal propertyName As String)
-            Dim propertyChanged As System.ComponentModel.PropertyChangedEventHandler = Me.PropertyChangedEvent
-            If (Not (propertyChanged) Is Nothing) Then
-                propertyChanged(Me, New System.ComponentModel.PropertyChangedEventArgs(propertyName))
-            End If
-        End Sub
-    End Class
-    
-    <System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0"),  _
-     System.Runtime.Serialization.DataContractAttribute(Name:="ServerLookup_Auswertegeraet", [Namespace]:="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice"),  _
-     System.SerializableAttribute()>  _
-    Partial Public Class ServerLookup_Auswertegeraet
-        Inherits Object
-        Implements System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged
-        
-        <System.NonSerializedAttribute()>  _
-        Private extensionDataField As System.Runtime.Serialization.ExtensionDataObject
-        
-        Private _BauartzulassungField As String
-        
-        Private _BruchteilEichfehlergrenzeField As String
-        
-        Private _DeaktiviertField As Boolean
-        
-        Private _ErstellDatumField As System.Nullable(Of Date)
-        
-        Private _GenauigkeitsklasseField As String
-        
-        Private _GrenzwertLastwiderstandMAXField As String
-        
-        Private _GrenzwertLastwiderstandMINField As String
-        
-        Private _GrenzwertTemperaturbereichMAXField As String
-        
-        Private _GrenzwertTemperaturbereichMINField As String
-        
-        Private _HerstellerField As String
-        
-        Private _IDField As String
-        
-        Private _KabellaengeQuerschnittField As String
-        
-        Private _MAXAnzahlTeilungswerteEinbereichswaageField As String
-        
-        Private _MAXAnzahlTeilungswerteMehrbereichswaageField As String
-        
-        Private _MindesteingangsspannungField As String
-        
-        Private _MindestmesssignalField As String
-        
-        Private _NullstellungHalbSelbsttaetigField As Boolean
-        
-        Private _NullstellungNullnachfuehrungField As Boolean
-        
-        Private _NullstellungSelbsttaetigField As Boolean
-        
-        Private _PruefberichtField As String
-        
-        Private _ServerMogelstatistikField() As EichsoftwareWebservice.ServerMogelstatistik
-        
-        Private _SpeisespannungField As String
-        
-        Private _TaraeinrichtungHalbSelbsttaetigField As Boolean
-        
-        Private _TaraeinrichtungSelbsttaetigField As Boolean
-        
-        Private _TaraeinrichtungTaraeingabeField As Boolean
-        
-        Private _TypField As String
-        
-        <Global.System.ComponentModel.BrowsableAttribute(false)>  _
-        Public Property ExtensionData() As System.Runtime.Serialization.ExtensionDataObject Implements System.Runtime.Serialization.IExtensibleDataObject.ExtensionData
-            Get
-                Return Me.extensionDataField
-            End Get
-            Set
-                Me.extensionDataField = value
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _Bauartzulassung() As String
-            Get
-                Return Me._BauartzulassungField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me._BauartzulassungField, value) <> true) Then
-                    Me._BauartzulassungField = value
-                    Me.RaisePropertyChanged("_Bauartzulassung")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _BruchteilEichfehlergrenze() As String
-            Get
-                Return Me._BruchteilEichfehlergrenzeField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me._BruchteilEichfehlergrenzeField, value) <> true) Then
-                    Me._BruchteilEichfehlergrenzeField = value
-                    Me.RaisePropertyChanged("_BruchteilEichfehlergrenze")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _Deaktiviert() As Boolean
-            Get
-                Return Me._DeaktiviertField
-            End Get
-            Set
-                If (Me._DeaktiviertField.Equals(value) <> true) Then
-                    Me._DeaktiviertField = value
-                    Me.RaisePropertyChanged("_Deaktiviert")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _ErstellDatum() As System.Nullable(Of Date)
-            Get
-                Return Me._ErstellDatumField
-            End Get
-            Set
-                If (Me._ErstellDatumField.Equals(value) <> true) Then
-                    Me._ErstellDatumField = value
-                    Me.RaisePropertyChanged("_ErstellDatum")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _Genauigkeitsklasse() As String
-            Get
-                Return Me._GenauigkeitsklasseField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me._GenauigkeitsklasseField, value) <> true) Then
-                    Me._GenauigkeitsklasseField = value
-                    Me.RaisePropertyChanged("_Genauigkeitsklasse")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _GrenzwertLastwiderstandMAX() As String
-            Get
-                Return Me._GrenzwertLastwiderstandMAXField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me._GrenzwertLastwiderstandMAXField, value) <> true) Then
-                    Me._GrenzwertLastwiderstandMAXField = value
-                    Me.RaisePropertyChanged("_GrenzwertLastwiderstandMAX")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _GrenzwertLastwiderstandMIN() As String
-            Get
-                Return Me._GrenzwertLastwiderstandMINField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me._GrenzwertLastwiderstandMINField, value) <> true) Then
-                    Me._GrenzwertLastwiderstandMINField = value
-                    Me.RaisePropertyChanged("_GrenzwertLastwiderstandMIN")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _GrenzwertTemperaturbereichMAX() As String
-            Get
-                Return Me._GrenzwertTemperaturbereichMAXField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me._GrenzwertTemperaturbereichMAXField, value) <> true) Then
-                    Me._GrenzwertTemperaturbereichMAXField = value
-                    Me.RaisePropertyChanged("_GrenzwertTemperaturbereichMAX")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _GrenzwertTemperaturbereichMIN() As String
-            Get
-                Return Me._GrenzwertTemperaturbereichMINField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me._GrenzwertTemperaturbereichMINField, value) <> true) Then
-                    Me._GrenzwertTemperaturbereichMINField = value
-                    Me.RaisePropertyChanged("_GrenzwertTemperaturbereichMIN")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _Hersteller() As String
-            Get
-                Return Me._HerstellerField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me._HerstellerField, value) <> true) Then
-                    Me._HerstellerField = value
-                    Me.RaisePropertyChanged("_Hersteller")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _ID() As String
-            Get
-                Return Me._IDField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me._IDField, value) <> true) Then
-                    Me._IDField = value
-                    Me.RaisePropertyChanged("_ID")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _KabellaengeQuerschnitt() As String
-            Get
-                Return Me._KabellaengeQuerschnittField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me._KabellaengeQuerschnittField, value) <> true) Then
-                    Me._KabellaengeQuerschnittField = value
-                    Me.RaisePropertyChanged("_KabellaengeQuerschnitt")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _MAXAnzahlTeilungswerteEinbereichswaage() As String
-            Get
-                Return Me._MAXAnzahlTeilungswerteEinbereichswaageField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me._MAXAnzahlTeilungswerteEinbereichswaageField, value) <> true) Then
-                    Me._MAXAnzahlTeilungswerteEinbereichswaageField = value
-                    Me.RaisePropertyChanged("_MAXAnzahlTeilungswerteEinbereichswaage")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _MAXAnzahlTeilungswerteMehrbereichswaage() As String
-            Get
-                Return Me._MAXAnzahlTeilungswerteMehrbereichswaageField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me._MAXAnzahlTeilungswerteMehrbereichswaageField, value) <> true) Then
-                    Me._MAXAnzahlTeilungswerteMehrbereichswaageField = value
-                    Me.RaisePropertyChanged("_MAXAnzahlTeilungswerteMehrbereichswaage")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _Mindesteingangsspannung() As String
-            Get
-                Return Me._MindesteingangsspannungField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me._MindesteingangsspannungField, value) <> true) Then
-                    Me._MindesteingangsspannungField = value
-                    Me.RaisePropertyChanged("_Mindesteingangsspannung")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _Mindestmesssignal() As String
-            Get
-                Return Me._MindestmesssignalField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me._MindestmesssignalField, value) <> true) Then
-                    Me._MindestmesssignalField = value
-                    Me.RaisePropertyChanged("_Mindestmesssignal")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _NullstellungHalbSelbsttaetig() As Boolean
-            Get
-                Return Me._NullstellungHalbSelbsttaetigField
-            End Get
-            Set
-                If (Me._NullstellungHalbSelbsttaetigField.Equals(value) <> true) Then
-                    Me._NullstellungHalbSelbsttaetigField = value
-                    Me.RaisePropertyChanged("_NullstellungHalbSelbsttaetig")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _NullstellungNullnachfuehrung() As Boolean
-            Get
-                Return Me._NullstellungNullnachfuehrungField
-            End Get
-            Set
-                If (Me._NullstellungNullnachfuehrungField.Equals(value) <> true) Then
-                    Me._NullstellungNullnachfuehrungField = value
-                    Me.RaisePropertyChanged("_NullstellungNullnachfuehrung")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _NullstellungSelbsttaetig() As Boolean
-            Get
-                Return Me._NullstellungSelbsttaetigField
-            End Get
-            Set
-                If (Me._NullstellungSelbsttaetigField.Equals(value) <> true) Then
-                    Me._NullstellungSelbsttaetigField = value
-                    Me.RaisePropertyChanged("_NullstellungSelbsttaetig")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _Pruefbericht() As String
-            Get
-                Return Me._PruefberichtField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me._PruefberichtField, value) <> true) Then
-                    Me._PruefberichtField = value
-                    Me.RaisePropertyChanged("_Pruefbericht")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _ServerMogelstatistik() As EichsoftwareWebservice.ServerMogelstatistik()
-            Get
-                Return Me._ServerMogelstatistikField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me._ServerMogelstatistikField, value) <> true) Then
-                    Me._ServerMogelstatistikField = value
-                    Me.RaisePropertyChanged("_ServerMogelstatistik")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _Speisespannung() As String
-            Get
-                Return Me._SpeisespannungField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me._SpeisespannungField, value) <> true) Then
-                    Me._SpeisespannungField = value
-                    Me.RaisePropertyChanged("_Speisespannung")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _TaraeinrichtungHalbSelbsttaetig() As Boolean
-            Get
-                Return Me._TaraeinrichtungHalbSelbsttaetigField
-            End Get
-            Set
-                If (Me._TaraeinrichtungHalbSelbsttaetigField.Equals(value) <> true) Then
-                    Me._TaraeinrichtungHalbSelbsttaetigField = value
-                    Me.RaisePropertyChanged("_TaraeinrichtungHalbSelbsttaetig")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _TaraeinrichtungSelbsttaetig() As Boolean
-            Get
-                Return Me._TaraeinrichtungSelbsttaetigField
-            End Get
-            Set
-                If (Me._TaraeinrichtungSelbsttaetigField.Equals(value) <> true) Then
-                    Me._TaraeinrichtungSelbsttaetigField = value
-                    Me.RaisePropertyChanged("_TaraeinrichtungSelbsttaetig")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _TaraeinrichtungTaraeingabe() As Boolean
-            Get
-                Return Me._TaraeinrichtungTaraeingabeField
-            End Get
-            Set
-                If (Me._TaraeinrichtungTaraeingabeField.Equals(value) <> true) Then
-                    Me._TaraeinrichtungTaraeingabeField = value
-                    Me.RaisePropertyChanged("_TaraeinrichtungTaraeingabe")
-                End If
-            End Set
-        End Property
-        
-        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
-        Public Property _Typ() As String
-            Get
-                Return Me._TypField
-            End Get
-            Set
-                If (Object.ReferenceEquals(Me._TypField, value) <> true) Then
-                    Me._TypField = value
-                    Me.RaisePropertyChanged("_Typ")
-                End If
-            End Set
-        End Property
-        
-        Public Event PropertyChanged As System.ComponentModel.PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
-        
-        Protected Sub RaisePropertyChanged(ByVal propertyName As String)
-            Dim propertyChanged As System.ComponentModel.PropertyChangedEventHandler = Me.PropertyChangedEvent
-            If (Not (propertyChanged) Is Nothing) Then
-                propertyChanged(Me, New System.ComponentModel.PropertyChangedEventArgs(propertyName))
-            End If
-        End Sub
-    End Class
-    
-    <System.Diagnostics.DebuggerStepThroughAttribute(),  _
-     System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0"),  _
      System.Runtime.Serialization.DataContractAttribute(Name:="ServerEichprotokoll", [Namespace]:="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice"),  _
      System.SerializableAttribute()>  _
     Partial Public Class ServerEichprotokoll
@@ -1992,6 +1586,9 @@ Namespace EichsoftwareWebservice
         
         <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private Pruefverfahren_VollstaendigesStaffelverfahrenField As System.Nullable(Of Boolean)
+        
+        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
+        Private ServerEichprozessField() As EichsoftwareWebservice.ServerEichprozess
         
         <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private ServerLookup_KonformitaetsbewertungsverfahrenField As EichsoftwareWebservice.ServerLookup_Konformitaetsbewertungsverfahren
@@ -2546,6 +2143,19 @@ Namespace EichsoftwareWebservice
                 If (Me.Pruefverfahren_VollstaendigesStaffelverfahrenField.Equals(value) <> true) Then
                     Me.Pruefverfahren_VollstaendigesStaffelverfahrenField = value
                     Me.RaisePropertyChanged("Pruefverfahren_VollstaendigesStaffelverfahren")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
+        Public Property ServerEichprozess() As EichsoftwareWebservice.ServerEichprozess()
+            Get
+                Return Me.ServerEichprozessField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me.ServerEichprozessField, value) <> true) Then
+                    Me.ServerEichprozessField = value
+                    Me.RaisePropertyChanged("ServerEichprozess")
                 End If
             End Set
         End Property
@@ -3282,6 +2892,9 @@ Namespace EichsoftwareWebservice
         <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private Kompatiblitaet_Waage_ZulassungsinhaberField As String
         
+        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
+        Private ServerEichprozessField() As EichsoftwareWebservice.ServerEichprozess
+        
         <Global.System.ComponentModel.BrowsableAttribute(false)>  _
         Public Property ExtensionData() As System.Runtime.Serialization.ExtensionDataObject Implements System.Runtime.Serialization.IExtensibleDataObject.ExtensionData
             Get
@@ -3669,6 +3282,455 @@ Namespace EichsoftwareWebservice
             End Set
         End Property
         
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
+        Public Property ServerEichprozess() As EichsoftwareWebservice.ServerEichprozess()
+            Get
+                Return Me.ServerEichprozessField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me.ServerEichprozessField, value) <> true) Then
+                    Me.ServerEichprozessField = value
+                    Me.RaisePropertyChanged("ServerEichprozess")
+                End If
+            End Set
+        End Property
+        
+        Public Event PropertyChanged As System.ComponentModel.PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+        
+        Protected Sub RaisePropertyChanged(ByVal propertyName As String)
+            Dim propertyChanged As System.ComponentModel.PropertyChangedEventHandler = Me.PropertyChangedEvent
+            If (Not (propertyChanged) Is Nothing) Then
+                propertyChanged(Me, New System.ComponentModel.PropertyChangedEventArgs(propertyName))
+            End If
+        End Sub
+    End Class
+    
+    <System.Diagnostics.DebuggerStepThroughAttribute(),  _
+     System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0"),  _
+     System.Runtime.Serialization.DataContractAttribute(Name:="ServerLookup_Auswertegeraet", [Namespace]:="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice"),  _
+     System.SerializableAttribute()>  _
+    Partial Public Class ServerLookup_Auswertegeraet
+        Inherits Object
+        Implements System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged
+        
+        <System.NonSerializedAttribute()>  _
+        Private extensionDataField As System.Runtime.Serialization.ExtensionDataObject
+        
+        Private _BauartzulassungField As String
+        
+        Private _BruchteilEichfehlergrenzeField As String
+        
+        Private _DeaktiviertField As Boolean
+        
+        Private _ErstellDatumField As System.Nullable(Of Date)
+        
+        Private _GenauigkeitsklasseField As String
+        
+        Private _GrenzwertLastwiderstandMAXField As String
+        
+        Private _GrenzwertLastwiderstandMINField As String
+        
+        Private _GrenzwertTemperaturbereichMAXField As String
+        
+        Private _GrenzwertTemperaturbereichMINField As String
+        
+        Private _HerstellerField As String
+        
+        Private _IDField As String
+        
+        Private _KabellaengeQuerschnittField As String
+        
+        Private _MAXAnzahlTeilungswerteEinbereichswaageField As String
+        
+        Private _MAXAnzahlTeilungswerteMehrbereichswaageField As String
+        
+        Private _MindesteingangsspannungField As String
+        
+        Private _MindestmesssignalField As String
+        
+        Private _NullstellungHalbSelbsttaetigField As Boolean
+        
+        Private _NullstellungNullnachfuehrungField As Boolean
+        
+        Private _NullstellungSelbsttaetigField As Boolean
+        
+        Private _PruefberichtField As String
+        
+        Private _ServerEichprozessField() As EichsoftwareWebservice.ServerEichprozess
+        
+        Private _ServerMogelstatistikField() As EichsoftwareWebservice.ServerMogelstatistik
+        
+        Private _SpeisespannungField As String
+        
+        Private _TaraeinrichtungHalbSelbsttaetigField As Boolean
+        
+        Private _TaraeinrichtungSelbsttaetigField As Boolean
+        
+        Private _TaraeinrichtungTaraeingabeField As Boolean
+        
+        Private _TypField As String
+        
+        <Global.System.ComponentModel.BrowsableAttribute(false)>  _
+        Public Property ExtensionData() As System.Runtime.Serialization.ExtensionDataObject Implements System.Runtime.Serialization.IExtensibleDataObject.ExtensionData
+            Get
+                Return Me.extensionDataField
+            End Get
+            Set
+                Me.extensionDataField = value
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _Bauartzulassung() As String
+            Get
+                Return Me._BauartzulassungField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me._BauartzulassungField, value) <> true) Then
+                    Me._BauartzulassungField = value
+                    Me.RaisePropertyChanged("_Bauartzulassung")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _BruchteilEichfehlergrenze() As String
+            Get
+                Return Me._BruchteilEichfehlergrenzeField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me._BruchteilEichfehlergrenzeField, value) <> true) Then
+                    Me._BruchteilEichfehlergrenzeField = value
+                    Me.RaisePropertyChanged("_BruchteilEichfehlergrenze")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _Deaktiviert() As Boolean
+            Get
+                Return Me._DeaktiviertField
+            End Get
+            Set
+                If (Me._DeaktiviertField.Equals(value) <> true) Then
+                    Me._DeaktiviertField = value
+                    Me.RaisePropertyChanged("_Deaktiviert")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _ErstellDatum() As System.Nullable(Of Date)
+            Get
+                Return Me._ErstellDatumField
+            End Get
+            Set
+                If (Me._ErstellDatumField.Equals(value) <> true) Then
+                    Me._ErstellDatumField = value
+                    Me.RaisePropertyChanged("_ErstellDatum")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _Genauigkeitsklasse() As String
+            Get
+                Return Me._GenauigkeitsklasseField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me._GenauigkeitsklasseField, value) <> true) Then
+                    Me._GenauigkeitsklasseField = value
+                    Me.RaisePropertyChanged("_Genauigkeitsklasse")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _GrenzwertLastwiderstandMAX() As String
+            Get
+                Return Me._GrenzwertLastwiderstandMAXField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me._GrenzwertLastwiderstandMAXField, value) <> true) Then
+                    Me._GrenzwertLastwiderstandMAXField = value
+                    Me.RaisePropertyChanged("_GrenzwertLastwiderstandMAX")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _GrenzwertLastwiderstandMIN() As String
+            Get
+                Return Me._GrenzwertLastwiderstandMINField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me._GrenzwertLastwiderstandMINField, value) <> true) Then
+                    Me._GrenzwertLastwiderstandMINField = value
+                    Me.RaisePropertyChanged("_GrenzwertLastwiderstandMIN")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _GrenzwertTemperaturbereichMAX() As String
+            Get
+                Return Me._GrenzwertTemperaturbereichMAXField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me._GrenzwertTemperaturbereichMAXField, value) <> true) Then
+                    Me._GrenzwertTemperaturbereichMAXField = value
+                    Me.RaisePropertyChanged("_GrenzwertTemperaturbereichMAX")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _GrenzwertTemperaturbereichMIN() As String
+            Get
+                Return Me._GrenzwertTemperaturbereichMINField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me._GrenzwertTemperaturbereichMINField, value) <> true) Then
+                    Me._GrenzwertTemperaturbereichMINField = value
+                    Me.RaisePropertyChanged("_GrenzwertTemperaturbereichMIN")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _Hersteller() As String
+            Get
+                Return Me._HerstellerField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me._HerstellerField, value) <> true) Then
+                    Me._HerstellerField = value
+                    Me.RaisePropertyChanged("_Hersteller")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _ID() As String
+            Get
+                Return Me._IDField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me._IDField, value) <> true) Then
+                    Me._IDField = value
+                    Me.RaisePropertyChanged("_ID")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _KabellaengeQuerschnitt() As String
+            Get
+                Return Me._KabellaengeQuerschnittField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me._KabellaengeQuerschnittField, value) <> true) Then
+                    Me._KabellaengeQuerschnittField = value
+                    Me.RaisePropertyChanged("_KabellaengeQuerschnitt")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _MAXAnzahlTeilungswerteEinbereichswaage() As String
+            Get
+                Return Me._MAXAnzahlTeilungswerteEinbereichswaageField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me._MAXAnzahlTeilungswerteEinbereichswaageField, value) <> true) Then
+                    Me._MAXAnzahlTeilungswerteEinbereichswaageField = value
+                    Me.RaisePropertyChanged("_MAXAnzahlTeilungswerteEinbereichswaage")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _MAXAnzahlTeilungswerteMehrbereichswaage() As String
+            Get
+                Return Me._MAXAnzahlTeilungswerteMehrbereichswaageField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me._MAXAnzahlTeilungswerteMehrbereichswaageField, value) <> true) Then
+                    Me._MAXAnzahlTeilungswerteMehrbereichswaageField = value
+                    Me.RaisePropertyChanged("_MAXAnzahlTeilungswerteMehrbereichswaage")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _Mindesteingangsspannung() As String
+            Get
+                Return Me._MindesteingangsspannungField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me._MindesteingangsspannungField, value) <> true) Then
+                    Me._MindesteingangsspannungField = value
+                    Me.RaisePropertyChanged("_Mindesteingangsspannung")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _Mindestmesssignal() As String
+            Get
+                Return Me._MindestmesssignalField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me._MindestmesssignalField, value) <> true) Then
+                    Me._MindestmesssignalField = value
+                    Me.RaisePropertyChanged("_Mindestmesssignal")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _NullstellungHalbSelbsttaetig() As Boolean
+            Get
+                Return Me._NullstellungHalbSelbsttaetigField
+            End Get
+            Set
+                If (Me._NullstellungHalbSelbsttaetigField.Equals(value) <> true) Then
+                    Me._NullstellungHalbSelbsttaetigField = value
+                    Me.RaisePropertyChanged("_NullstellungHalbSelbsttaetig")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _NullstellungNullnachfuehrung() As Boolean
+            Get
+                Return Me._NullstellungNullnachfuehrungField
+            End Get
+            Set
+                If (Me._NullstellungNullnachfuehrungField.Equals(value) <> true) Then
+                    Me._NullstellungNullnachfuehrungField = value
+                    Me.RaisePropertyChanged("_NullstellungNullnachfuehrung")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _NullstellungSelbsttaetig() As Boolean
+            Get
+                Return Me._NullstellungSelbsttaetigField
+            End Get
+            Set
+                If (Me._NullstellungSelbsttaetigField.Equals(value) <> true) Then
+                    Me._NullstellungSelbsttaetigField = value
+                    Me.RaisePropertyChanged("_NullstellungSelbsttaetig")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _Pruefbericht() As String
+            Get
+                Return Me._PruefberichtField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me._PruefberichtField, value) <> true) Then
+                    Me._PruefberichtField = value
+                    Me.RaisePropertyChanged("_Pruefbericht")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _ServerEichprozess() As EichsoftwareWebservice.ServerEichprozess()
+            Get
+                Return Me._ServerEichprozessField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me._ServerEichprozessField, value) <> true) Then
+                    Me._ServerEichprozessField = value
+                    Me.RaisePropertyChanged("_ServerEichprozess")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _ServerMogelstatistik() As EichsoftwareWebservice.ServerMogelstatistik()
+            Get
+                Return Me._ServerMogelstatistikField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me._ServerMogelstatistikField, value) <> true) Then
+                    Me._ServerMogelstatistikField = value
+                    Me.RaisePropertyChanged("_ServerMogelstatistik")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _Speisespannung() As String
+            Get
+                Return Me._SpeisespannungField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me._SpeisespannungField, value) <> true) Then
+                    Me._SpeisespannungField = value
+                    Me.RaisePropertyChanged("_Speisespannung")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _TaraeinrichtungHalbSelbsttaetig() As Boolean
+            Get
+                Return Me._TaraeinrichtungHalbSelbsttaetigField
+            End Get
+            Set
+                If (Me._TaraeinrichtungHalbSelbsttaetigField.Equals(value) <> true) Then
+                    Me._TaraeinrichtungHalbSelbsttaetigField = value
+                    Me.RaisePropertyChanged("_TaraeinrichtungHalbSelbsttaetig")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _TaraeinrichtungSelbsttaetig() As Boolean
+            Get
+                Return Me._TaraeinrichtungSelbsttaetigField
+            End Get
+            Set
+                If (Me._TaraeinrichtungSelbsttaetigField.Equals(value) <> true) Then
+                    Me._TaraeinrichtungSelbsttaetigField = value
+                    Me.RaisePropertyChanged("_TaraeinrichtungSelbsttaetig")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _TaraeinrichtungTaraeingabe() As Boolean
+            Get
+                Return Me._TaraeinrichtungTaraeingabeField
+            End Get
+            Set
+                If (Me._TaraeinrichtungTaraeingabeField.Equals(value) <> true) Then
+                    Me._TaraeinrichtungTaraeingabeField = value
+                    Me.RaisePropertyChanged("_TaraeinrichtungTaraeingabe")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _Typ() As String
+            Get
+                Return Me._TypField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me._TypField, value) <> true) Then
+                    Me._TypField = value
+                    Me.RaisePropertyChanged("_Typ")
+                End If
+            End Set
+        End Property
+        
         Public Event PropertyChanged As System.ComponentModel.PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
         
         Protected Sub RaisePropertyChanged(ByVal propertyName As String)
@@ -3692,6 +3754,9 @@ Namespace EichsoftwareWebservice
         
         <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private IDField As Byte
+        
+        <System.Runtime.Serialization.OptionalFieldAttribute()>  _
+        Private ServerEichprozessField() As EichsoftwareWebservice.ServerEichprozess
         
         <System.Runtime.Serialization.OptionalFieldAttribute()>  _
         Private StatusField As String
@@ -3721,6 +3786,19 @@ Namespace EichsoftwareWebservice
                 If (Me.IDField.Equals(value) <> true) Then
                     Me.IDField = value
                     Me.RaisePropertyChanged("ID")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute()>  _
+        Public Property ServerEichprozess() As EichsoftwareWebservice.ServerEichprozess()
+            Get
+                Return Me.ServerEichprozessField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me.ServerEichprozessField, value) <> true) Then
+                    Me.ServerEichprozessField = value
+                    Me.RaisePropertyChanged("ServerEichprozess")
                 End If
             End Set
         End Property
@@ -3787,6 +3865,8 @@ Namespace EichsoftwareWebservice
         
         Private _IDField As Byte
         
+        Private _ServerEichprozessField() As EichsoftwareWebservice.ServerEichprozess
+        
         Private _StatusField As String
         
         Private _Status_ENField As String
@@ -3812,6 +3892,19 @@ Namespace EichsoftwareWebservice
                 If (Me._IDField.Equals(value) <> true) Then
                     Me._IDField = value
                     Me.RaisePropertyChanged("_ID")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _ServerEichprozess() As EichsoftwareWebservice.ServerEichprozess()
+            Get
+                Return Me._ServerEichprozessField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me._ServerEichprozessField, value) <> true) Then
+                    Me._ServerEichprozessField = value
+                    Me.RaisePropertyChanged("_ServerEichprozess")
                 End If
             End Set
         End Property
@@ -3884,6 +3977,8 @@ Namespace EichsoftwareWebservice
         
         Private _IDField As Byte
         
+        Private _ServerEichprozessField() As EichsoftwareWebservice.ServerEichprozess
+        
         <Global.System.ComponentModel.BrowsableAttribute(false)>  _
         Public Property ExtensionData() As System.Runtime.Serialization.ExtensionDataObject Implements System.Runtime.Serialization.IExtensibleDataObject.ExtensionData
             Get
@@ -3946,6 +4041,19 @@ Namespace EichsoftwareWebservice
             End Set
         End Property
         
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _ServerEichprozess() As EichsoftwareWebservice.ServerEichprozess()
+            Get
+                Return Me._ServerEichprozessField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me._ServerEichprozessField, value) <> true) Then
+                    Me._ServerEichprozessField = value
+                    Me.RaisePropertyChanged("_ServerEichprozess")
+                End If
+            End Set
+        End Property
+        
         Public Event PropertyChanged As System.ComponentModel.PropertyChangedEventHandler Implements System.ComponentModel.INotifyPropertyChanged.PropertyChanged
         
         Protected Sub RaisePropertyChanged(ByVal propertyName As String)
@@ -3968,6 +4076,8 @@ Namespace EichsoftwareWebservice
         Private extensionDataField As System.Runtime.Serialization.ExtensionDataObject
         
         Private _IDField As Byte
+        
+        Private _ServerEichprozessField() As EichsoftwareWebservice.ServerEichprozess
         
         Private _TypField As String
         
@@ -3994,6 +4104,19 @@ Namespace EichsoftwareWebservice
                 If (Me._IDField.Equals(value) <> true) Then
                     Me._IDField = value
                     Me.RaisePropertyChanged("_ID")
+                End If
+            End Set
+        End Property
+        
+        <System.Runtime.Serialization.DataMemberAttribute(IsRequired:=true)>  _
+        Public Property _ServerEichprozess() As EichsoftwareWebservice.ServerEichprozess()
+            Get
+                Return Me._ServerEichprozessField
+            End Get
+            Set
+                If (Object.ReferenceEquals(Me._ServerEichprozessField, value) <> true) Then
+                    Me._ServerEichprozessField = value
+                    Me.RaisePropertyChanged("_ServerEichprozess")
                 End If
             End Set
         End Property
