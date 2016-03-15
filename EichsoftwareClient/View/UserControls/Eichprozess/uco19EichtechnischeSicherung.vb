@@ -596,11 +596,21 @@
         End If
     End Sub
 
+    Private Sub RadCheckBoxCE2016_ToggleStateChanged(sender As Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadCheckBoxCE2016Kennzeichen.ToggleStateChanged
+        RadTextBoxControlCE2016Kennzeichen.ReadOnly = Not RadCheckBoxCE2016Kennzeichen.Checked
+        PictureBoxCE2016.Visible = Not RadCheckBoxCE2016Kennzeichen.Checked
+
+        If RadCheckBoxCE2016Kennzeichen.Checked = False Then
+            RadTextBoxControlCE2016Kennzeichen.Text = ""
+        End If
+    End Sub
+
+
 
 #End Region
 
 
-    Private Sub RadTextBoxControlBenannteStelle_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles RadTextBoxControlHinweismarke.Validating, RadTextBoxControlGruenesM.Validating, RadTextBoxControlEichsiegelRund.Validating, RadTextBoxControlEichsiegel13x13.Validating, RadTextBoxControlCEKennzeichen.Validating, RadTextBoxControlBenannteStelle.Validating
+    Private Sub RadTextBoxControlBenannteStelle_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles RadTextBoxControlHinweismarke.Validating, RadTextBoxControlGruenesM.Validating, RadTextBoxControlEichsiegelRund.Validating, RadTextBoxControlEichsiegel13x13.Validating, RadTextBoxControlCEKennzeichen.Validating, RadTextBoxControlBenannteStelle.Validating, RadTextBoxControlCE2016Kennzeichen.Validating
         Dim result As Decimal
         If Not sender.readonly = True Then
 
@@ -708,12 +718,12 @@
         End If
     End Sub
 
-    Private Sub RadTextBoxControlBenannteStelle_TextChanged(sender As System.Object, e As System.EventArgs) Handles RadTextBoxControlHinweismarke.TextChanged, RadTextBoxControlGruenesM.TextChanged, RadTextBoxControlEichsiegelRund.TextChanged, RadTextBoxControlEichsiegel13x13.TextChanged, RadTextBoxControlCEKennzeichen.TextChanged, RadTextBoxControlBenannteStelle.TextChanged, RadTextBoxControlBemerkungen.TextChanged, RadTextBoxControlAufbewahrungsdauer.TextChanged
+    Private Sub RadTextBoxControlBenannteStelle_TextChanged(sender As System.Object, e As System.EventArgs) Handles RadTextBoxControlHinweismarke.TextChanged, RadTextBoxControlGruenesM.TextChanged, RadTextBoxControlEichsiegelRund.TextChanged, RadTextBoxControlEichsiegel13x13.TextChanged, RadTextBoxControlCEKennzeichen.TextChanged, RadTextBoxControlBenannteStelle.TextChanged, RadTextBoxControlBemerkungen.TextChanged, RadTextBoxControlAufbewahrungsdauer.TextChanged, RadTextBoxControlCE2016Kennzeichen.TextChanged
         If _suspendEvents = True Then Exit Sub
         AktuellerStatusDirty = True
     End Sub
 
-    Private Sub RadCheckBoxBenannteStelle_Click(sender As System.Object, e As System.EventArgs) Handles RadCheckBoxKonfigurationsProgramm.Click, RadCheckBoxHinweismarke.Click, RadCheckBoxGruenesM.Click, RadCheckBoxEichsiegelRund.Click, RadCheckBoxEichsiegel13x13.Click, RadCheckBoxCEKennzeichen.Click, RadCheckBoxBenannteStelle.Click, RadCheckBoxAufbewahrungsdauer.Click, RadCheckBoxAlibispeicher.Click
+    Private Sub RadCheckBoxBenannteStelle_Click(sender As System.Object, e As System.EventArgs) Handles RadCheckBoxKonfigurationsProgramm.Click, RadCheckBoxHinweismarke.Click, RadCheckBoxGruenesM.Click, RadCheckBoxEichsiegelRund.Click, RadCheckBoxEichsiegel13x13.Click, RadCheckBoxCEKennzeichen.Click, RadCheckBoxBenannteStelle.Click, RadCheckBoxAufbewahrungsdauer.Click, RadCheckBoxAlibispeicher.Click, RadCheckBoxCE2016Kennzeichen.Click
         If _suspendEvents = True Then Exit Sub
         AktuellerStatusDirty = True
     End Sub

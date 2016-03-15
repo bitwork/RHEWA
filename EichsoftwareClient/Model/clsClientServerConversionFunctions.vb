@@ -152,6 +152,8 @@ Public Class clsClientServerConversionFunctions
         TargetObject.Eichprotokoll.Sicherung_BenannteStelleAnzahl = SourceObject._ServerEichprotokoll.Sicherung_BenannteStelleAnzahl
         TargetObject.Eichprotokoll.Sicherung_CE = SourceObject._ServerEichprotokoll.Sicherung_CE
         TargetObject.Eichprotokoll.Sicherung_CEAnzahl = SourceObject._ServerEichprotokoll.Sicherung_CEAnzahl
+        TargetObject.Eichprotokoll.Sicherung_CE2016 = SourceObject._ServerEichprotokoll.Sicherung_CE2016
+        TargetObject.Eichprotokoll.Sicherung_CE2016Anzahl = SourceObject._ServerEichprotokoll.Sicherung_CE2016Anzahl
         TargetObject.Eichprotokoll.Sicherung_DatenAusgelesen = SourceObject._ServerEichprotokoll.Sicherung_DatenAusgelesen
         TargetObject.Eichprotokoll.Sicherung_Eichsiegel13x13 = SourceObject._ServerEichprotokoll.Sicherung_Eichsiegel13x13
         TargetObject.Eichprotokoll.Sicherung_Eichsiegel13x13Anzahl = SourceObject._ServerEichprotokoll.Sicherung_Eichsiegel13x13Anzahl
@@ -901,6 +903,8 @@ Public Class clsClientServerConversionFunctions
         TargetObject._ServerEichprotokoll.Sicherung_BenannteStelleAnzahl = SourceObject.Eichprotokoll.Sicherung_BenannteStelleAnzahl
         TargetObject._ServerEichprotokoll.Sicherung_CE = SourceObject.Eichprotokoll.Sicherung_CE
         TargetObject._ServerEichprotokoll.Sicherung_CEAnzahl = SourceObject.Eichprotokoll.Sicherung_CEAnzahl
+        TargetObject._ServerEichprotokoll.Sicherung_CE2016 = SourceObject.Eichprotokoll.Sicherung_CE2016
+        TargetObject._ServerEichprotokoll.Sicherung_CE2016Anzahl = SourceObject.Eichprotokoll.Sicherung_CE2016Anzahl
         TargetObject._ServerEichprotokoll.Sicherung_DatenAusgelesen = SourceObject.Eichprotokoll.Sicherung_DatenAusgelesen
         TargetObject._ServerEichprotokoll.Sicherung_Eichsiegel13x13 = SourceObject.Eichprotokoll.Sicherung_Eichsiegel13x13
         TargetObject._ServerEichprotokoll.Sicherung_Eichsiegel13x13Anzahl = SourceObject.Eichprotokoll.Sicherung_Eichsiegel13x13Anzahl
