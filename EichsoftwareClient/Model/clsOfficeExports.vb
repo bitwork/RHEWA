@@ -251,7 +251,7 @@ Public Class clsOfficeExports
             objExcelWorksheetDatenEingabe.Cells(23, 1).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Zulassungsinhaber
 
             'WZ_Hoechstlast befüllen in G37 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(37, 7).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast
+            objExcelWorksheetDatenEingabe.Cells(37, 7).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast.Split(";")(0)
 
 
             '_________________________________________________________________________________________________________________________________
@@ -663,7 +663,7 @@ Public Class clsOfficeExports
             objExcelWorksheetDatenEingabe.Cells(23, 1).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Zulassungsinhaber
 
             'WZ_Hoechstlast befüllen in G37 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(37, 7).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast
+            objExcelWorksheetDatenEingabe.Cells(37, 7).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast.Split(";")(0)
 
 
             '_________________________________________________________________________________________________________________________________
@@ -1271,7 +1271,7 @@ Public Class clsOfficeExports
                 r.InsertAfter("Waage Totlast: " & pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Totlast & vbNewLine)
                 r.InsertAfter("Waage Übersetzungsverhaeltnis: " & pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Uebersetzungsverhaeltnis & vbNewLine)
                 r.InsertAfter("Waage Zulassungsinhaber: " & pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Zulassungsinhaber & vbNewLine)
-                r.InsertAfter("WZ Höchstlast: " & pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast & vbNewLine)
+                r.InsertAfter("WZ Höchstlast: " & pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast.Split(";")(0) & vbNewLine)
 
                 ''beschaffenheitsprüfung
                 para.Range.Style = "Überschrift 1"

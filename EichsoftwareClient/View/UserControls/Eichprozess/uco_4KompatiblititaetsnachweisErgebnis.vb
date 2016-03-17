@@ -31,7 +31,7 @@
     Private Sub ucoBeschaffenheitspruefung_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         Me.SuspendLayout()
 
-        LadeDialog()
+        If _bolLoaded = False Then LadeDialog()
         _bolLoaded = True
         Me.ResumeLayout()
     End Sub
@@ -401,7 +401,7 @@
                 RadTextBoxPunkt5QMax.Text = CInt(RadTextBoxPunkt5QMax.Text)
             End If
         End If
-        RadTextBoxPunkt5EMax.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast
+        RadTextBoxPunkt5EMax.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast.Split(";")(0)
 
         '=WENN(ODER($G$33="";$G$35="";$G$35>10000000);"NEIN";WENN($D$35>$G$35;"NEIN";"JA"))
         If RadTextBoxPunkt5Faktor.Text = "" OrElse RadTextBoxPunkt5EMax.Text = "" OrElse CDec(RadTextBoxPunkt5EMax.Text) > 10000000 Then
@@ -525,7 +525,7 @@
                 If objEichprozess.Lookup_Waegezelle.Kriechteilungsfaktor <> "0" And objEichprozess.Lookup_Waegezelle.Kriechteilungsfaktor <> "" Then
                     RadTextBoxPunkt6bNLC.Text = objEichprozess.Lookup_Waegezelle.Kriechteilungsfaktor
                 ElseIf objEichprozess.Lookup_Waegezelle.RueckkehrVorlastsignal <> "0" And objEichprozess.Lookup_Waegezelle.RueckkehrVorlastsignal <> "" Then
-                    RadTextBoxPunkt6bNLC.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast / (2 * objEichprozess.Lookup_Waegezelle.RueckkehrVorlastsignal)
+                    RadTextBoxPunkt6bNLC.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast.Split(";")(0) / (2 * objEichprozess.Lookup_Waegezelle.RueckkehrVorlastsignal)
                 Else
                     RadTextBoxPunkt6bNLC.Text = objEichprozess.Lookup_Waegezelle.MaxAnzahlTeilungswerte
                 End If
@@ -574,7 +574,7 @@
                 If objEichprozess.Lookup_Waegezelle.Kriechteilungsfaktor <> "0" And objEichprozess.Lookup_Waegezelle.Kriechteilungsfaktor.ToString <> "" Then
                     RadTextBoxPunkt6cNLC.Text = objEichprozess.Lookup_Waegezelle.Kriechteilungsfaktor
                 ElseIf objEichprozess.Lookup_Waegezelle.RueckkehrVorlastsignal <> "0" And objEichprozess.Lookup_Waegezelle.RueckkehrVorlastsignal <> "" Then
-                    RadTextBoxPunkt6cNLC.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast / (2 * objEichprozess.Lookup_Waegezelle.RueckkehrVorlastsignal)
+                    RadTextBoxPunkt6cNLC.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast.Split(";")(0) / (2 * objEichprozess.Lookup_Waegezelle.RueckkehrVorlastsignal)
                 Else
                     RadTextBoxPunkt6cNLC.Text = objEichprozess.Lookup_Waegezelle.MaxAnzahlTeilungswerte
                 End If
@@ -638,11 +638,18 @@
         '=WENN('Daten-Eingabe'!$G$37="";""; WENN('Daten-Eingabe'!$G$42<>0;'Daten-Eingabe'!$G$37/'Daten-Eingabe'!$G$42; WENN('Daten-Eingabe'!$G$41<>0;'Daten-Eingabe'!$G$41; WENN('Daten-Eingabe'!$G$40=0;"";
         'Daten-Eingabe'!$G$37/'Daten-Eingabe'!$G$40))))
         If objEichprozess.Lookup_Waegezelle.Hoechsteteilungsfaktor <> "0" And objEichprozess.Lookup_Waegezelle.Hoechsteteilungsfaktor <> "" Then
-            RadTextBoxPunkt7eMax.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast / objEichprozess.Lookup_Waegezelle.Hoechsteteilungsfaktor
+            Dim wertHoechsteteilungsfaktor = objEichprozess.Lookup_Waegezelle.Hoechsteteilungsfaktor
+            Dim wertHoechsteteilungsfaktorAufgedruckt = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast
+
+            If wertHoechsteteilungsfaktorAufgedruckt.Contains(";") Then
+                wertHoechsteteilungsfaktorAufgedruckt = wertHoechsteteilungsfaktorAufgedruckt.Split(";")(1)
+                wertHoechsteteilungsfaktor = wertHoechsteteilungsfaktorAufgedruckt
+            End If
+            RadTextBoxPunkt7eMax.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast.Split(";")(0) / wertHoechsteteilungsfaktor
         ElseIf objEichprozess.Lookup_Waegezelle.MinTeilungswert <> "0" And objEichprozess.Lookup_Waegezelle.MinTeilungswert <> "" Then
             RadTextBoxPunkt7eMax.Text = objEichprozess.Lookup_Waegezelle.MinTeilungswert
         Else
-            RadTextBoxPunkt7eMax.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast / objEichprozess.Lookup_Waegezelle.MaxAnzahlTeilungswerte
+            RadTextBoxPunkt7eMax.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast.Split(";")(0) / objEichprozess.Lookup_Waegezelle.MaxAnzahlTeilungswerte
         End If
 
         'runden auf 3 Nachomastellen
@@ -661,9 +668,9 @@
 
         '(8) Mindesteingangssignal für AWG, Mindestmesssignal pro Eichwert und Berechnung
         '=WENN('Daten-Eingabe'!$G$39="";"";WENN(ODER('Daten-Eingabe'!$G$37=0;'Daten-Eingabe'!$G$16=0);"";'Daten-Eingabe'!$G$39*'Daten-Eingabe'!$G$27*'Daten-Eingabe'!$G$15*'Daten-Eingabe'!$G$19/('Daten-Eingabe'!$G$37*'Daten-Eingabe'!$G$16)))
-        RadTextBoxPunkt8U.Text = objEichprozess.Lookup_Waegezelle.Waegezellenkennwert * objEichprozess.Lookup_Auswertegeraet.Speisespannung * objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Uebersetzungsverhaeltnis * objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Totlast / (objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast * objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen)
+        RadTextBoxPunkt8U.Text = objEichprozess.Lookup_Waegezelle.Waegezellenkennwert * objEichprozess.Lookup_Auswertegeraet.Speisespannung * objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Uebersetzungsverhaeltnis * objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Totlast / (objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast.Split(";")(0) * objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen)
         RadTextBoxPunkt8UMin.Text = objEichprozess.Lookup_Auswertegeraet.Mindesteingangsspannung
-        RadTextBoxPunkt8D.Text = objEichprozess.Lookup_Waegezelle.Waegezellenkennwert * 1000 * objEichprozess.Lookup_Auswertegeraet.Speisespannung * objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Uebersetzungsverhaeltnis * objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 / (objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast * objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen)
+        RadTextBoxPunkt8D.Text = objEichprozess.Lookup_Waegezelle.Waegezellenkennwert * 1000 * objEichprozess.Lookup_Auswertegeraet.Speisespannung * objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Uebersetzungsverhaeltnis * objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 / (objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast.Split(";")(0) * objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen)
         RadTextBoxPunkt8DMIN.Text = objEichprozess.Lookup_Auswertegeraet.Mindestmesssignal
 
         'runden auf 2 nachkommastellen

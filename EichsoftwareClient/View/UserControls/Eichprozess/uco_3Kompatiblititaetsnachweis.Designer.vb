@@ -32,6 +32,8 @@ Partial Class uco_3Kompatiblititaetsnachweis
         Me.RadLabel76 = New Telerik.WinControls.UI.RadLabel()
         Me.lblVerbindungEichfehlergrenze = New Telerik.WinControls.UI.RadLabel()
         Me.RadGroupBoxWZ = New Telerik.WinControls.UI.RadGroupBox()
+        Me.RadLabel1 = New Telerik.WinControls.UI.RadLabel()
+        Me.RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt = New Telerik.WinControls.UI.RadTextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.PictureBoxWZ1 = New System.Windows.Forms.PictureBox()
         Me.PictureBoxWZ7 = New System.Windows.Forms.PictureBox()
@@ -239,6 +241,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         Me.lblWIMaxCap = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlWaageKlasse = New Telerik.WinControls.UI.RadTextBox()
         Me.lblWIKlasse = New Telerik.WinControls.UI.RadLabel()
+        Me.RadButton1 = New Telerik.WinControls.UI.RadButton()
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanel1.PanelContainer.SuspendLayout()
         Me.RadScrollablePanel1.SuspendLayout()
@@ -252,6 +255,8 @@ Partial Class uco_3Kompatiblititaetsnachweis
         CType(Me.lblVerbindungEichfehlergrenze, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxWZ, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxWZ.SuspendLayout()
+        CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxWZ1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxWZ7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxWZ9, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -441,6 +446,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         CType(Me.lblWIMaxCap, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlWaageKlasse, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblWIKlasse, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'RadScrollablePanel1
@@ -593,6 +599,9 @@ Partial Class uco_3Kompatiblititaetsnachweis
         'RadGroupBoxWZ
         '
         Me.RadGroupBoxWZ.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.RadGroupBoxWZ.Controls.Add(Me.RadButton1)
+        Me.RadGroupBoxWZ.Controls.Add(Me.RadLabel1)
+        Me.RadGroupBoxWZ.Controls.Add(Me.RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt)
         Me.RadGroupBoxWZ.Controls.Add(Me.Label10)
         Me.RadGroupBoxWZ.Controls.Add(Me.PictureBoxWZ1)
         Me.RadGroupBoxWZ.Controls.Add(Me.PictureBoxWZ7)
@@ -667,6 +676,41 @@ Partial Class uco_3Kompatiblititaetsnachweis
         Me.RadGroupBoxWZ.RootElement.Margin = CType(resources.GetObject("RadGroupBoxWZ.RootElement.Margin"), System.Windows.Forms.Padding)
         Me.RadGroupBoxWZ.RootElement.Text = resources.GetString("RadGroupBoxWZ.RootElement.Text")
         Me.RadGroupBoxWZ.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxWZ.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        '
+        'RadLabel1
+        '
+        resources.ApplyResources(Me.RadLabel1, "RadLabel1")
+        Me.RadLabel1.Name = "RadLabel1"
+        '
+        '
+        '
+        Me.RadLabel1.RootElement.AccessibleDescription = resources.GetString("RadLabel1.RootElement.AccessibleDescription")
+        Me.RadLabel1.RootElement.AccessibleName = resources.GetString("RadLabel1.RootElement.AccessibleName")
+        Me.RadLabel1.RootElement.Alignment = CType(resources.GetObject("RadLabel1.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.RadLabel1.RootElement.AngleTransform = CType(resources.GetObject("RadLabel1.RootElement.AngleTransform"), Single)
+        Me.RadLabel1.RootElement.FlipText = CType(resources.GetObject("RadLabel1.RootElement.FlipText"), Boolean)
+        Me.RadLabel1.RootElement.Margin = CType(resources.GetObject("RadLabel1.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadLabel1.RootElement.Text = resources.GetString("RadLabel1.RootElement.Text")
+        Me.RadLabel1.RootElement.TextOrientation = CType(resources.GetObject("RadLabel1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        '
+        'RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt
+        '
+        resources.ApplyResources(Me.RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt, "RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt")
+        Me.RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.MaxLength = 50
+        Me.RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.Name = "RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt"
+        Me.RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.ReadOnly = True
+        '
+        '
+        '
+        Me.RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.RootElement.AccessibleDescrip" & _
+        "tion")
+        Me.RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.RootElement.AccessibleName = resources.GetString("RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.RootElement.AccessibleName")
+        Me.RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.RootElement.Alignment"), System.Drawing.ContentAlignment)
+        Me.RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.RootElement.AngleTransform"), Single)
+        Me.RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.RootElement.FlipText"), Boolean)
+        Me.RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.RootElement.Margin"), System.Windows.Forms.Padding)
+        Me.RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.RootElement.Text = resources.GetString("RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.RootElement.Text")
+        Me.RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
         'Label10
         '
@@ -3816,6 +3860,11 @@ Partial Class uco_3Kompatiblititaetsnachweis
         Me.lblWIKlasse.RootElement.Text = resources.GetString("lblWIKlasse.RootElement.Text")
         Me.lblWIKlasse.RootElement.TextOrientation = CType(resources.GetObject("lblWIKlasse.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
+        'RadButton1
+        '
+        resources.ApplyResources(Me.RadButton1, "RadButton1")
+        Me.RadButton1.Name = "RadButton1"
+        '
         'uco_3Kompatiblititaetsnachweis
         '
         resources.ApplyResources(Me, "$this")
@@ -3837,6 +3886,8 @@ Partial Class uco_3Kompatiblititaetsnachweis
         CType(Me.RadGroupBoxWZ, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxWZ.ResumeLayout(False)
         Me.RadGroupBoxWZ.PerformLayout()
+        CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxWZ1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxWZ7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxWZ9, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4028,6 +4079,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         CType(Me.lblWIMaxCap, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlWaageKlasse, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblWIKlasse, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -4247,5 +4299,8 @@ Partial Class uco_3Kompatiblititaetsnachweis
     Friend WithEvents lblPflichtfeld2 As System.Windows.Forms.Label
     Friend WithEvents lblPflichtfeld5 As System.Windows.Forms.Label
     Friend WithEvents lblPflichtfeld3 As System.Windows.Forms.Label
+    Friend WithEvents RadLabel1 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadButton1 As Telerik.WinControls.UI.RadButton
 
 End Class

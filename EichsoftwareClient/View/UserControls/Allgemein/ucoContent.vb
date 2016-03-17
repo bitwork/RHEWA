@@ -170,8 +170,12 @@ Public Class ucoContent
 
 #End Region
 #Region "Must Override"
-    Protected Friend MustOverride Function ValidationNeeded() As Boolean
-    Protected Friend MustOverride Sub LoadFromDatabase()
+    Protected Friend Overridable Function ValidationNeeded() As Boolean
+
+    End Function
+    Protected Friend Overridable Sub LoadFromDatabase()
+
+    End Sub
 #End Region
 #Region "Overidables"
     ''' <summary>

@@ -138,7 +138,7 @@
             End If
 
             If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast Is Nothing Then
-                RadTextBoxControlWZHoechstlast.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast
+                RadTextBoxControlWZHoechstlast.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast.Split(";")(0)
             End If
         End If
 
@@ -309,7 +309,16 @@
 
             End If
             If Not wz.Hoechsteteilungsfaktor Is Nothing Then
-                RadTextBoxControlWZHoechstteilungsfaktor.Text = wz.Hoechsteteilungsfaktor
+                Dim wertHoechsteteilungsfaktor = objEichprozess.Lookup_Waegezelle.Hoechsteteilungsfaktor
+                Dim wertHoechsteteilungsfaktorAufgedruckt = ""
+                If Not objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast Is Nothing Then
+                    If objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast.Contains(";") Then
+                        wertHoechsteteilungsfaktorAufgedruckt = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast.Split(";")(1)
+                    End If
+                End If
+
+                RadTextBoxControlWZHoechstteilungsfaktor.Text = wertHoechsteteilungsfaktor
+                RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.Text = wertHoechsteteilungsfaktorAufgedruckt
 
             End If
 
@@ -427,7 +436,7 @@
         If DialogModus = enuDialogModus.normal Then objEichprozess.Bearbeitungsdatum = Date.Now
 
         objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_AWG_Anschlussart = RadTextBoxControlAWGAnschlussart.Text.Trim
-        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast = RadTextBoxControlWZHoechstlast.Text.Trim
+        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast = RadTextBoxControlWZHoechstlast.Text.Trim.Split(";")(0)
         objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Verbindungselemente_BruchteilEichfehlergrenze = RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze.Text.Trim
         objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AdditiveTarahoechstlast = RadTextBoxControlWaageAdditiveTarahoechstlast.Text.Trim
         objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen = RadTextBoxControlWaageAnzahlWaegezellen.Text.Trim
@@ -447,6 +456,11 @@
         objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 = RadTextBoxControlWaageEichwert2.Text.Trim
         objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3 = RadTextBoxControlWaageEichwert3.Text.Trim
         objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Revisionsnummer = ""
+
+        If RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.Text.Trim <> "" Then
+            objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast += ";" & RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.Text.Trim
+        End If
+
         'im falle einer neuen WZ die Werte übernehmen
         If objEichprozess.Lookup_Waegezelle.Neu Then
             objEichprozess.Lookup_Waegezelle.Genauigkeitsklasse = RadTextBoxControlWZGenauigkeitsklasse.Text.Trim
@@ -1103,7 +1117,7 @@
     Private Sub RadTextBoxControlWaageKlasse_TextChanging(sender As Object, e As Telerik.WinControls.TextChangingEventArgs) Handles RadTextBoxControlWZWiderstand.TextChanging, RadTextBoxControlWZWaegezellenkennwert.TextChanging, _
         RadTextBoxControlWZTemperaturbereichMIN.TextChanging, RadTextBoxControlWZTemperaturbereichMAX.TextChanging, RadTextBoxControlWZRueckkehrVorlastsignal.TextChanging, _
         RadTextBoxControlWZMinTeilungswert.TextChanging, RadTextBoxControlWZMindestvorlast.TextChanging, RadTextBoxControlWZMaxTeilungswerte.TextChanging, _
-        RadTextBoxControlWZKriechteilungsfaktor.TextChanging, RadTextBoxControlWZHoechstteilungsfaktor.TextChanging, RadTextBoxControlWZHoechstlast.TextChanging, _
+        RadTextBoxControlWZKriechteilungsfaktor.TextChanging, RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.TextChanging, RadTextBoxControlWZHoechstteilungsfaktor.TextChanging, RadTextBoxControlWZHoechstlast.TextChanging, _
         RadTextBoxControlWZBruchteilEichfehlergrenze.TextChanging, RadTextBoxControlWaageUebersetzungsverhaeltnis.TextChanging, _
         RadTextBoxControlWaageTotlast.TextChanging, RadTextBoxControlWaageTemperaturbereichMin.TextChanging, RadTextBoxControlWaageTemperaturbereichMax.TextChanging, _
         RadTextBoxControlWaageKlasse.TextChanging, RadTextBoxControlWaageKabelquerschnitt.TextChanging, RadTextBoxControlWaageKabellaenge.TextChanging, _
@@ -1134,7 +1148,7 @@
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
-    Private Sub RadTextBoxControlWaageKlasse_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlWZWiderstand.TextChanged, RadTextBoxControlWZWaegezellenkennwert.TextChanged, RadTextBoxControlWZTemperaturbereichMIN.TextChanged, RadTextBoxControlWZTemperaturbereichMAX.TextChanged, RadTextBoxControlWZRueckkehrVorlastsignal.TextChanged, RadTextBoxControlWZMinTeilungswert.TextChanged, RadTextBoxControlWZMindestvorlast.TextChanged, RadTextBoxControlWZMaxTeilungswerte.TextChanged, RadTextBoxControlWZKriechteilungsfaktor.TextChanged, RadTextBoxControlWZHoechstteilungsfaktor.TextChanged, RadTextBoxControlWZHoechstlast.TextChanged, RadTextBoxControlWZBruchteilEichfehlergrenze.TextChanged, RadTextBoxControlWaageUebersetzungsverhaeltnis.TextChanged, RadTextBoxControlWaageTotlast.TextChanged, RadTextBoxControlWaageTemperaturbereichMin.TextChanged, RadTextBoxControlWaageTemperaturbereichMax.TextChanged, RadTextBoxControlWaageKlasse.TextChanged, RadTextBoxControlWaageKabelquerschnitt.TextChanged, RadTextBoxControlWaageKabellaenge.TextChanged, RadTextBoxControlWaageHoechstlast3.TextChanged, RadTextBoxControlWaageHoechstlast2.TextChanged, RadTextBoxControlWaageHoechstlast1.TextChanged, RadTextBoxControlWaageEichwert3.TextChanged, RadTextBoxControlWaageEichwert2.TextChanged, RadTextBoxControlWaageEichwert1.TextChanged, RadTextBoxControlWaageEcklastzuschlag.TextChanged, RadTextBoxControlWaageAnzahlWaegezellen.TextChanged, RadTextBoxControlWaageAdditiveTarahoechstlast.TextChanged, RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze.TextChanged, RadTextBoxControlEinschaltnullstellbereich.TextChanged, RadTextBoxControlAWGTemperaturbereichMin.TextChanged, RadTextBoxControlAWGTemperaturbereichMax.TextChanged, RadTextBoxControlAWGTeilungswerte.TextChanged, RadTextBoxControlAWGSpeisespannung.TextChanged, RadTextBoxControlAWGMindestmesssignal.TextChanged, RadTextBoxControlAWGMindesteingangsspannung.TextChanged, RadTextBoxControlAWGKlasse.TextChanged, RadTextBoxControlAWGKabellaenge.TextChanged, RadTextBoxControlAWGGrenzwerteLastwiderstandMin.TextChanged, RadTextBoxControlAWGGrenzwerteLastwiderstandMax.TextChanged, RadTextBoxControlAWGBruchteilEichfehlergrenze.TextChanged, RadTextBoxControlAWGAnschlussart.TextChanged
+    Private Sub RadTextBoxControlWaageKlasse_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlWZWiderstand.TextChanged, RadTextBoxControlWZWaegezellenkennwert.TextChanged, RadTextBoxControlWZTemperaturbereichMIN.TextChanged, RadTextBoxControlWZTemperaturbereichMAX.TextChanged, RadTextBoxControlWZRueckkehrVorlastsignal.TextChanged, RadTextBoxControlWZMinTeilungswert.TextChanged, RadTextBoxControlWZMindestvorlast.TextChanged, RadTextBoxControlWZMaxTeilungswerte.TextChanged, RadTextBoxControlWZKriechteilungsfaktor.TextChanged, RadTextBoxControlWZHoechstteilungsfaktor.TextChanged, RadTextBoxControlWZHoechstlast.TextChanged, RadTextBoxControlWZBruchteilEichfehlergrenze.TextChanged, RadTextBoxControlWaageUebersetzungsverhaeltnis.TextChanged, RadTextBoxControlWaageTotlast.TextChanged, RadTextBoxControlWaageTemperaturbereichMin.TextChanged, RadTextBoxControlWaageTemperaturbereichMax.TextChanged, RadTextBoxControlWaageKlasse.TextChanged, RadTextBoxControlWaageKabelquerschnitt.TextChanged, RadTextBoxControlWaageKabellaenge.TextChanged, RadTextBoxControlWaageHoechstlast3.TextChanged, RadTextBoxControlWaageHoechstlast2.TextChanged, RadTextBoxControlWaageHoechstlast1.TextChanged, RadTextBoxControlWaageEichwert3.TextChanged, RadTextBoxControlWaageEichwert2.TextChanged, RadTextBoxControlWaageEichwert1.TextChanged, RadTextBoxControlWaageEcklastzuschlag.TextChanged, RadTextBoxControlWaageAnzahlWaegezellen.TextChanged, RadTextBoxControlWaageAdditiveTarahoechstlast.TextChanged, RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze.TextChanged, RadTextBoxControlEinschaltnullstellbereich.TextChanged, RadTextBoxControlAWGTemperaturbereichMin.TextChanged, RadTextBoxControlAWGTemperaturbereichMax.TextChanged, RadTextBoxControlAWGTeilungswerte.TextChanged, RadTextBoxControlAWGSpeisespannung.TextChanged, RadTextBoxControlAWGMindestmesssignal.TextChanged, RadTextBoxControlAWGMindesteingangsspannung.TextChanged, RadTextBoxControlAWGKlasse.TextChanged, RadTextBoxControlAWGKabellaenge.TextChanged, RadTextBoxControlAWGGrenzwerteLastwiderstandMin.TextChanged, RadTextBoxControlAWGGrenzwerteLastwiderstandMax.TextChanged, RadTextBoxControlAWGBruchteilEichfehlergrenze.TextChanged, RadTextBoxControlAWGAnschlussart.TextChanged, RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.TextChanged
         If _suspendEvents = True Then Exit Sub
         AktuellerStatusDirty = True
     End Sub
@@ -1219,5 +1233,9 @@
                 End Using
 
         End If
+    End Sub
+
+    Private Sub RadButton1_Click(sender As Object, e As EventArgs) Handles RadButton1.Click
+        RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.ReadOnly = False
     End Sub
 End Class
