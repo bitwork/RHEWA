@@ -19,6 +19,7 @@ Public Class ucoContent
     Protected Friend _intNullstellenE As Integer = 0
     Private _bolEichprozessIsDirty = False
 
+    Protected Friend _bolValidierungsmodus As Boolean = False 'wenn dieser Wert auf True steht, dürfen validierungen nicht mehr übersprungen werden
     ''' <summary>
     ''' sobald gravierende Änderungen im aktuellen Status vorgenommen werden, wird das Dirty Flag gesetzt. So kann überprüft werden ob Updates durchgeführt werden müssen und ob der aktuelle Vorgangsstatus zurückgesetzt werden muss
     ''' </summary>
@@ -168,7 +169,10 @@ Public Class ucoContent
 
 
 #End Region
-
+#Region "Must Override"
+    Protected Friend MustOverride Function ValidationNeeded() As Boolean
+    Protected Friend MustOverride Sub LoadFromDatabase()
+#End Region
 #Region "Overidables"
     ''' <summary>
     ''' holt Steuerelement Objekt anhand von Namen als String
@@ -276,17 +280,23 @@ Public Class ucoContent
     ''' <summary>
     ''' Bietet die Option an validierungen zu überspringen wenn AbortSaving auf true steht.
     ''' </summary>
-    ''' <param name="pDisplayMessage"></param>
+    ''' <param name="pDisplayMessage">Hinweistext der in der Messagebox auftauchen soll</param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Friend Function ShowValidationErrorBox(Optional ByVal pDisplayMessage As String = "") As Boolean
+    Friend Function ShowValidationErrorBox(ByVal DebugOnly As Boolean, Optional ByVal pDisplayMessage As String = "") As Boolean
         Dim DisplayMessage As String = pDisplayMessage
         If DisplayMessage.Equals("") Then DisplayMessage = My.Resources.GlobaleLokalisierung.PflichtfelderAusfuellen
 
 
         If Me.AbortSaving = True Then
-            If Debugger.IsAttached Then
-                If MessageBox.Show("Validierung überspringen?", "", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+            If _bolValidierungsmodus Then
+                MessageBox.Show(DisplayMessage, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                Me.AbortSaving = True
+                Return False
+            End If
+
+            If DebugOnly = False Then
+                If MessageBox.Show(My.Resources.GlobaleLokalisierung.ValidierungUeberspringen, "", MessageBoxButtons.YesNo) = DialogResult.Yes Then
                     Me.AbortSaving = False
                     Return True
                 Else
@@ -295,10 +305,22 @@ Public Class ucoContent
                     Return False
                 End If
             Else
-                MessageBox.Show(DisplayMessage, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-                Me.AbortSaving = True
-                Return False
+                If Debugger.IsAttached Then
+                    If MessageBox.Show(My.Resources.GlobaleLokalisierung.ValidierungUeberspringen, "", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+                        Me.AbortSaving = False
+                        Return True
+                    Else
+                        MessageBox.Show(DisplayMessage, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                        Me.AbortSaving = True
+                        Return False
+                    End If
+                Else
+                    MessageBox.Show(DisplayMessage, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    Me.AbortSaving = True
+                    Return False
+                End If
             End If
+
         End If
 
         'Speichern soll nicht abgebrochen werden, da alles okay ist

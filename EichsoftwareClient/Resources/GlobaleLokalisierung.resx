@@ -685,4 +685,7 @@
   <data name="Sitzung" xml:space="preserve">
     <value>Session: </value>
   </data>
+  <data name="ValidierungUeberspringen" xml:space="preserve">
+    <value>Skip validation? </value>
+  </data>
 </root>

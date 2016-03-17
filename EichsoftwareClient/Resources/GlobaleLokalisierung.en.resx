@@ -684,4 +684,7 @@ If the repeatability error is greater than 0.35 e, the portion of standard weigh
   <data name="Sitzung" xml:space="preserve">
     <value>Session: </value>
   </data>
+  <data name="ValidierungUeberspringen" xml:space="preserve">
+    <value>Skip validation? </value>
+  </data>
 </root>

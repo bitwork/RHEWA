@@ -36,7 +36,14 @@ Friend Class uco_8PruefungNullstellungUndAussermittigeBelastung
 #End Region
 
 #Region "Events"
-
+    ''' <summary>
+    ''' Validations the needed.
+    ''' </summary>
+    ''' <returns></returns>
+    Protected Friend Overrides Function ValidationNeeded() As Boolean
+        LoadFromDatabase()
+        Return ValidateControls()
+    End Function
     Private Sub uco_8PruefungNullstellungUndAussermittigeBelastung_KeyDown(sender As Object, e As KeyEventArgs) Handles Me.KeyDown
         If e.KeyData.Equals("F1") Then
             MessageBox.Show("")
@@ -583,7 +590,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
 #End Region
 
 #Region "Methods"
-    Private Sub LoadFromDatabase()
+    Protected Friend Overrides Sub LoadFromDatabase()
         'zurücksetzten der Groupboxen größen auf default (designer) werte. Sonst würden die Groupboxen immer kleiner gerechnet
         RadGroupBoxBereich1.Size = New Size(503, 489)
         RadGroupBoxBereich2.Size = New Size(503, 489)
@@ -1501,12 +1508,12 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
             ValidateControlsAussermittigeBelastung()
             ValidatecontrolsWiederholungen()
             'fehlermeldung anzeigen bei falscher validierung
-            Return Me.ShowValidationErrorBox()
+            Return Me.ShowValidationErrorBox(False)
         Else
             ValidateControlsAussermittigeBelastung()
             ValidatecontrolsWiederholungen()
             'fehlermeldung anzeigen bei falscher validierung
-            Return Me.ShowValidationErrorBox(My.Resources.GlobaleLokalisierung.EichfehlergrenzenNichtEingehalten)
+            Return Me.ShowValidationErrorBox(False, My.Resources.GlobaleLokalisierung.EichfehlergrenzenNichtEingehalten)
         End If
 
         'Speichern soll nicht abgebrochen werden, da alles okay ist

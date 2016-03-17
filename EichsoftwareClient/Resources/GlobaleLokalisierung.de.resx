@@ -754,4 +754,7 @@ Ist der Fehler &gt; 0,3e → L = 0,5 Max = Normalien von 50% von Max werden ben�
   <data name="Sitzung" xml:space="preserve">
     <value>Aktueller Benutzer:</value>
   </data>
+  <data name="ValidierungUeberspringen" xml:space="preserve">
+    <value>Validierung überspringen? Ein versenden ist nur möglich wenn alles erfolgreich validiert wurde.</value>
+  </data>
 </root>

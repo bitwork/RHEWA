@@ -247,7 +247,7 @@
     <value>NoControl</value>
   </data>
   <data name="PictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>169, 3</value>
+    <value>167, 3</value>
   </data>
   <data name="PictureBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 39</value>
@@ -498,11 +498,14 @@
   <data name="RadButtonChangeLanguageToPolish.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
   </data>
+  <data name="RadButtonChangeLanguageToPolish.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="RadButtonChangeLanguageToPolish.ImageAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
   <data name="RadButtonChangeLanguageToPolish.Location" type="System.Drawing.Point, System.Drawing">
-    <value>284, 10</value>
+    <value>284, 9</value>
   </data>
   <data name="RadButtonChangeLanguageToPolish.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -555,6 +558,9 @@
   <data name="RadButtonChangeLanguageToEnglish.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
   </data>
+  <data name="RadButtonChangeLanguageToEnglish.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="RadButtonChangeLanguageToEnglish.ImageAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
@@ -606,11 +612,14 @@
   <data name="RadButtonChangeLanguageToGerman.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
   </data>
+  <data name="RadButtonChangeLanguageToGerman.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="RadButtonChangeLanguageToGerman.ImageAlignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
   <data name="RadButtonChangeLanguageToGerman.Location" type="System.Drawing.Point, System.Drawing">
-    <value>172, 9</value>
+    <value>172, 10</value>
   </data>
   <data name="RadButtonChangeLanguageToGerman.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -1175,7 +1184,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAB6
-        EgAAAk1TRnQBSQFMAgEBAwEAAZABBAGQAQQBIAEAASABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAGA
+        EgAAAk1TRnQBSQFMAgEBAwEAAZgBBAGYAQQBIAEAASABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAGA
         AwABIAMAAQEBAAEgBgABQP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wBPAAEBAwQBBgMLAQ8DEAEV
         AxABFgMQARYDEAEVAwsBDwMEAQYDAAEBWwABAQMEAQYDCwEPAxABFQMQARYDEAEWAxABFQMLAQ8DBAEG
         AwABAVsAAQEDBAEGAwsBDwMQARUDEAEWAxABFgMQARUDCwEPAwQBBgMAAQHUAAMCAQMDCgEOAxcBIAMj
@@ -1270,6 +1279,21 @@
   </data>
   <data name="RadDropDownButtonElement2.FlipText" type="System.Boolean, mscorlib">
     <value>False</value>
+  </data>
+  <data name="RadDropDownButtonElement2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 2, 0</value>
+  </data>
+  <data name="RadDropDownButtonElement2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="RadDropDownButtonElement2.RightToLeft" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="RadDropDownButtonElement2.Text" xml:space="preserve">
+    <value>Kompatibilität</value>
+  </data>
+  <data name="RadDropDownButtonElement2.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
   </data>
   <data name="RadMenuItem4.AccessibleDescription" xml:space="preserve">
     <value>Messtechnische und technische Daten</value>
@@ -1449,21 +1473,6 @@
     <value>MiddleCenter</value>
   </data>
   <data name="RadMenuItem8.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="RadDropDownButtonElement2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 2, 0</value>
-  </data>
-  <data name="RadDropDownButtonElement2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadDropDownButtonElement2.RightToLeft" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadDropDownButtonElement2.Text" xml:space="preserve">
-    <value>Kompatibilität</value>
-  </data>
-  <data name="RadDropDownButtonElement2.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
   <data name="RadDropDownButtonElement3.AccessibleDescription" xml:space="preserve">

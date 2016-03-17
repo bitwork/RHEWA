@@ -58,8 +58,15 @@
 
 
 #Region "Methods"
-
-    Private Sub LoadFromDatabase()
+    ''' <summary>
+    ''' Validations the needed.
+    ''' </summary>
+    ''' <returns></returns>
+    Protected Friend Overrides Function ValidationNeeded() As Boolean
+        LoadFromDatabase()
+        Return ValidateControls()
+    End Function
+    Protected Friend Overrides Sub LoadFromDatabase()
         objEichprozess = ParentFormular.CurrentEichprozess
         'Nur laden wenn es sich um eine Bearbeitung handelt (sonst würde das in Memory Objekt überschrieben werden)
         If Not DialogModus = enuDialogModus.lesend And Not DialogModus = enuDialogModus.korrigierend Then
@@ -86,7 +93,7 @@
             DisableControls(RadGroupBoxPunkt7)
             DisableControls(RadGroupBoxPunkt8)
             DisableControls(RadGroupBoxPunkt9)
-            
+
         End If
     End Sub
 
@@ -893,7 +900,7 @@
             End If
         Next
        'fehlermeldung anzeigen bei falscher validierung
-        Return Me.ShowValidationErrorBox()
+        Return Me.ShowValidationErrorBox(True)
     End Function
 
 

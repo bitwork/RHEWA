@@ -30,7 +30,15 @@ Inherits ucoContent
     #End Region
 
 
-    #Region "Events"
+#Region "Events"
+    ''' <summary>
+    ''' Validations the needed.
+    ''' </summary>
+    ''' <returns></returns>
+    Protected Friend Overrides Function ValidationNeeded() As Boolean
+        LoadFromDatabase()
+        Return ValidateControls()
+    End Function
     Private Sub ucoBeschaffenheitspruefung_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         If Not ParentFormular Is Nothing Then
             Try
@@ -140,7 +148,7 @@ Inherits ucoContent
 
 
 #Region "Methods"
-    Private Sub LoadFromDatabase()
+    Protected Friend Overrides Sub LoadFromDatabase()
         SuspendLayout()
         objEichprozess = ParentFormular.CurrentEichprozess
         'events abbrechen
@@ -211,7 +219,7 @@ Inherits ucoContent
             DisableControls(RadGroupBoxStaffel5Bereich1)
             DisableControls(RadGroupBoxStaffel5Bereich2)
             DisableControls(RadGroupBoxStaffel5Bereich3)
-          
+
         End If
 
         'events abbrechen
@@ -743,7 +751,7 @@ Inherits ucoContent
 
         If AbortSaving Then
             'fehlermeldung anzeigen bei falscher validierung
-            Return Me.ShowValidationErrorBox()
+            Return Me.ShowValidationErrorBox(False)
         End If
 
 
@@ -785,8 +793,7 @@ Inherits ucoContent
 
         If AbortSaving Then
             'fehlermeldung anzeigen bei falscher validierung
-            MessageBox.Show(My.Resources.GlobaleLokalisierung.EichfehlergrenzenNichtEingehalten, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-            Return False
+            Return Me.ShowValidationErrorBox(False, My.Resources.GlobaleLokalisierung.EichfehlergrenzenNichtEingehalten)
         End If
 
         Return True

@@ -290,6 +290,7 @@ Partial Class FrmMainContainer
         CType(Me.RadButtonChangeLanguageToPolish.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
         CType(Me.RadButtonChangeLanguageToPolish.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = resources.GetString("resource.Text")
         CType(Me.RadButtonChangeLanguageToPolish.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Shape = Nothing
+        CType(Me.RadButtonChangeLanguageToPolish.GetChildAt(0).GetChildAt(2), Telerik.WinControls.Primitives.BorderPrimitive).ShouldPaint = False
         '
         'RadButtonChangeLanguageToEnglish
         '
@@ -313,6 +314,7 @@ Partial Class FrmMainContainer
         CType(Me.RadButtonChangeLanguageToEnglish.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
         CType(Me.RadButtonChangeLanguageToEnglish.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         CType(Me.RadButtonChangeLanguageToEnglish.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Shape = Nothing
+        CType(Me.RadButtonChangeLanguageToEnglish.GetChildAt(0).GetChildAt(2), Telerik.WinControls.Primitives.BorderPrimitive).ShouldPaint = False
         '
         'RadButtonChangeLanguageToGerman
         '
@@ -336,6 +338,7 @@ Partial Class FrmMainContainer
         CType(Me.RadButtonChangeLanguageToGerman.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter
         CType(Me.RadButtonChangeLanguageToGerman.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         CType(Me.RadButtonChangeLanguageToGerman.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Shape = Nothing
+        CType(Me.RadButtonChangeLanguageToGerman.GetChildAt(0).GetChildAt(2), Telerik.WinControls.Primitives.BorderPrimitive).ShouldPaint = False
         '
         'RadButtonNavigateBackwards
         '
@@ -603,6 +606,7 @@ Partial Class FrmMainContainer
         CType(Me.SplitPanelContent, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SplitPanelNavigation, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitPanelNavigation.ResumeLayout(False)
+        Me.SplitPanelNavigation.PerformLayout()
         CType(Me.RadButtonVersenden, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonEntsperren, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonChangeLanguageToPolish, System.ComponentModel.ISupportInitialize).EndInit()

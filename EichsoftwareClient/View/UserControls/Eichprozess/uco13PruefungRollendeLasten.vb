@@ -22,6 +22,14 @@
 
 
 #Region "Events"
+    ''' <summary>
+    ''' Validations the needed.
+    ''' </summary>
+    ''' <returns></returns>
+    Protected Friend Overrides Function ValidationNeeded() As Boolean
+        LoadFromDatabase()
+        Return ValidateControls()
+    End Function
     Private Sub ucoBeschaffenheitspruefung_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         If Not ParentFormular Is Nothing Then
             Try
@@ -184,15 +192,15 @@
 
         Try
             'zuweisen der last an alle Felder
-            If Sender.Equals(RadTextBoxControlLastRechts1) Then
+            If sender.Equals(RadTextBoxControlLastRechts1) Then
                 RadTextBoxControlLastRechts1.Text = RadTextBoxControlLastRechts1.Text
                 RadTextBoxControlLastRechts2.Text = RadTextBoxControlLastRechts1.Text
                 RadTextBoxControlLastRechts3.Text = RadTextBoxControlLastRechts1.Text
-            ElseIf Sender.Equals(RadTextBoxControlLastRechts2) Then
+            ElseIf sender.Equals(RadTextBoxControlLastRechts2) Then
                 RadTextBoxControlLastRechts1.Text = RadTextBoxControlLastRechts2.Text
                 RadTextBoxControlLastRechts2.Text = RadTextBoxControlLastRechts2.Text
                 RadTextBoxControlLastRechts3.Text = RadTextBoxControlLastRechts2.Text
-            ElseIf Sender.Equals(RadTextBoxControlLastRechts3) Then
+            ElseIf sender.Equals(RadTextBoxControlLastRechts3) Then
                 RadTextBoxControlLastRechts1.Text = RadTextBoxControlLastRechts3.Text
                 RadTextBoxControlLastRechts2.Text = RadTextBoxControlLastRechts3.Text
                 RadTextBoxControlLastRechts3.Text = RadTextBoxControlLastRechts3.Text
@@ -325,7 +333,7 @@
 #End Region
 
 #Region "Methods"
-    Private Sub LoadFromDatabase()
+    Protected Friend Overrides Sub LoadFromDatabase()
 
         objEichprozess = ParentFormular.CurrentEichprozess
         'events abbrechen
@@ -597,7 +605,7 @@
 
 
         'fehlermeldung anzeigen bei falscher validierung
-        Return Me.ShowValidationErrorBox()
+        Return Me.ShowValidationErrorBox(False)
     End Function
 
 #End Region

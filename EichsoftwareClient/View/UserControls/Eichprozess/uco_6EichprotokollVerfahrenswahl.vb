@@ -25,6 +25,13 @@
 #End Region
 
 #Region "Events"
+    ''' <summary>
+    ''' Validations the needed.
+    ''' </summary>
+    ''' <returns></returns>
+    Protected Friend Overrides Function ValidationNeeded() As Boolean
+        Return True
+    End Function
     Private Sub ucoBeschaffenheitspruefung_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         _suspendEvents = True
         If Not ParentFormular Is Nothing Then
@@ -44,7 +51,7 @@
         _suspendEvents = False
     End Sub
 
-    Private Sub LoadFromDatabase()
+    Protected Friend Overrides Sub LoadFromDatabase()
         objEichprozess = ParentFormular.CurrentEichprozess
         If Not DialogModus = enuDialogModus.lesend And Not DialogModus = enuDialogModus.korrigierend Then
             Using context As New EichsoftwareClientdatabaseEntities1
@@ -116,7 +123,7 @@
                     bolLock = True
                 End If
         End Select
-    
+
 
         If bolLock Then
             '  objEichprozess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgmitNormalien

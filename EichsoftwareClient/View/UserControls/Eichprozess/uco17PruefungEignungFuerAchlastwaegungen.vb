@@ -23,6 +23,14 @@
 #End Region
 
 #Region "Events"
+    ''' <summary>
+    ''' Validations the needed.
+    ''' </summary>
+    ''' <returns></returns>
+    Protected Friend Overrides Function ValidationNeeded() As Boolean
+        LoadFromDatabase()
+        Return ValidateControls()
+    End Function
     Private Sub ucoBeschaffenheitspruefung_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         If Not ParentFormular Is Nothing Then
             Try
@@ -42,7 +50,7 @@
 #End Region
 
 #Region "Methods"
-    Private Sub LoadFromDatabase()
+    Protected Friend Overrides Sub LoadFromDatabase()
         objEichprozess = ParentFormular.CurrentEichprozess
         'events abbrechen
         _suspendEvents = True
@@ -60,7 +68,7 @@
 
         If DialogModus = enuDialogModus.lesend Then
             'falls der Konformitätsbewertungsvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
-                       DisableControls(RadScrollablePanel1.PanelContainer)
+            DisableControls(RadScrollablePanel1.PanelContainer)
 
         End If
         'events abbrechen
@@ -130,7 +138,7 @@
         End If
 
          'fehlermeldung anzeigen bei falscher validierung
-        Return Me.ShowValidationErrorBox()
+        Return Me.ShowValidationErrorBox(False)
     End Function
 
 #End Region

@@ -23,6 +23,14 @@ Public Class uco_5Beschaffenheitspruefung
 #End Region
 
 #Region "Events"
+    ''' <summary>
+    ''' Validations the needed.
+    ''' </summary>
+    ''' <returns></returns>
+    Protected Friend Overrides Function ValidationNeeded() As Boolean
+        LoadFromDatabase()
+        Return ValidateControls()
+    End Function
     Private Sub ucoBeschaffenheitspruefung_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         If Not ParentFormular Is Nothing Then
             Try
@@ -42,7 +50,7 @@ Public Class uco_5Beschaffenheitspruefung
 
 #End Region
 
-    Private Sub LoadFromDatabase()
+    Protected Friend Overrides Sub LoadFromDatabase()
         'TH: Laden aus Datenbank
         Using Context As New EichsoftwareClientdatabaseEntities1
             _suspendEvents = True
@@ -141,7 +149,7 @@ Public Class uco_5Beschaffenheitspruefung
         End If
 
         'fehlermeldung anzeigen bei falscher validierung
-        Return Me.ShowValidationErrorBox()
+        Return Me.ShowValidationErrorBox(True)
     End Function
 
     Protected Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)

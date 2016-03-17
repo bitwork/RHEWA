@@ -23,7 +23,13 @@
 #End Region
 
 #Region "Events"
-
+    ''' <summary>
+    ''' Validations the needed.
+    ''' </summary>
+    ''' <returns></returns>
+    Protected Friend Overrides Function ValidationNeeded() As Boolean
+        Return True
+    End Function
     Private Sub ucoEichfehlergrenzen_Load(sender As Object, e As EventArgs) Handles Me.Load
         Try
             'daten füllen
@@ -34,7 +40,8 @@
 #End Region
 
 #Region "Methods"
-    Private Sub LoadFromDatabase()
+    Protected Friend Overrides Sub LoadFromDatabase()
+
         'events abbrechen
         _suspendEvents = True
         Using context As New EichsoftwareClientdatabaseEntities1

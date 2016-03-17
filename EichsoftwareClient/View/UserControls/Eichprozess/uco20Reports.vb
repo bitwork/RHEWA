@@ -38,7 +38,7 @@ Public Class uco20Reports
         LoadFromDatabase()
     End Sub
 
-    Private Sub LoadFromDatabase()
+    Protected Friend Overrides Sub LoadFromDatabase()
         objEichprozess = ParentFormular.CurrentEichprozess
         'events abbrechen
         ParentFormular.RadButtonNavigateForwards.Enabled = True
@@ -63,6 +63,13 @@ Public Class uco20Reports
 
 
 #Region "Overrides"
+    ''' <summary>
+    ''' Validations the needed.
+    ''' </summary>
+    ''' <returns></returns>
+    Protected Friend Overrides Function ValidationNeeded() As Boolean
+        Return True
+    End Function
     'Speicherroutine
     Protected Overrides Sub SaveNeeded(ByVal UserControl As UserControl)
         If Me.Equals(UserControl) Then

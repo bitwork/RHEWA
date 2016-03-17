@@ -26,6 +26,14 @@
 #End Region
 
 #Region "Events"
+    ''' <summary>
+    ''' Validations the needed.
+    ''' </summary>
+    ''' <returns></returns>
+    Protected Friend Overrides Function ValidationNeeded() As Boolean
+        LoadFromDatabase()
+        Return ValidateControls()
+    End Function
     Private Sub ucoBeschaffenheitspruefung_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         Me.SuspendLayout()
 
@@ -47,7 +55,7 @@
 
     End Sub
 
-    Private Sub LoadFromDatabase()
+    Protected Friend Overrides Sub LoadFromDatabase()
         objEichprozess = ParentFormular.CurrentEichprozess
         'events abbrechen
         _suspendEvents = True
@@ -344,17 +352,17 @@
 
 
             'felder beschreiben lassen
-            RadTextBoxControlWZGenauigkeitsklasse.readonly = False
+            RadTextBoxControlWZGenauigkeitsklasse.ReadOnly = False
             RadTextBoxControlWZGenauigkeitsklasse.Enabled = True
 
-            RadTextBoxControlWZHoechstteilungsfaktor.readonly = False
-            RadTextBoxControlWZKriechteilungsfaktor.readonly = False
-            RadTextBoxControlWZMaxTeilungswerte.readonly = False
-            RadTextBoxControlWZMindestvorlast.readonly = False
-            RadTextBoxControlWZMinTeilungswert.readonly = False
-            RadTextBoxControlWZRueckkehrVorlastsignal.readonly = False
-            RadTextBoxControlWZWaegezellenkennwert.readonly = False
-            RadTextBoxControlWZWiderstand.readonly = False
+            RadTextBoxControlWZHoechstteilungsfaktor.ReadOnly = False
+            RadTextBoxControlWZKriechteilungsfaktor.ReadOnly = False
+            RadTextBoxControlWZMaxTeilungswerte.ReadOnly = False
+            RadTextBoxControlWZMindestvorlast.ReadOnly = False
+            RadTextBoxControlWZMinTeilungswert.ReadOnly = False
+            RadTextBoxControlWZRueckkehrVorlastsignal.ReadOnly = False
+            RadTextBoxControlWZWaegezellenkennwert.ReadOnly = False
+            RadTextBoxControlWZWiderstand.ReadOnly = False
 
             'tabstops erlauben
             RadTextBoxControlWZGenauigkeitsklasse.TabStop = True
@@ -380,16 +388,16 @@
             PictureBoxWZ11.Visible = True
 
 
-            RadTextBoxControlWZGenauigkeitsklasse.readonly = True
+            RadTextBoxControlWZGenauigkeitsklasse.ReadOnly = True
 
-            RadTextBoxControlWZHoechstteilungsfaktor.readonly = True
-            RadTextBoxControlWZKriechteilungsfaktor.readonly = True
-            RadTextBoxControlWZMaxTeilungswerte.readonly = True
-            RadTextBoxControlWZMindestvorlast.readonly = True
-            RadTextBoxControlWZMinTeilungswert.readonly = True
-            RadTextBoxControlWZRueckkehrVorlastsignal.readonly = True
-            RadTextBoxControlWZWaegezellenkennwert.readonly = True
-            RadTextBoxControlWZWiderstand.readonly = True
+            RadTextBoxControlWZHoechstteilungsfaktor.ReadOnly = True
+            RadTextBoxControlWZKriechteilungsfaktor.ReadOnly = True
+            RadTextBoxControlWZMaxTeilungswerte.ReadOnly = True
+            RadTextBoxControlWZMindestvorlast.ReadOnly = True
+            RadTextBoxControlWZMinTeilungswert.ReadOnly = True
+            RadTextBoxControlWZRueckkehrVorlastsignal.ReadOnly = True
+            RadTextBoxControlWZWaegezellenkennwert.ReadOnly = True
+            RadTextBoxControlWZWiderstand.ReadOnly = True
 
             'tabstops verbieten
             RadTextBoxControlWZGenauigkeitsklasse.TabStop = False
@@ -595,7 +603,7 @@
             End If
         Next
 
-        If RadTextBoxControlWZGenauigkeitsklasse.readonly = False Then
+        If RadTextBoxControlWZGenauigkeitsklasse.ReadOnly = False Then
             If RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper = "A" _
           Or RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper = "B" _
           Or RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper = "C" _
@@ -618,7 +626,7 @@
 
         If Me.AbortSaving = True Then
             If Debugger.IsAttached Then 'standardwerte füllen für schnelleres testen
-                If Me.ShowValidationErrorBox Then
+                If Me.ShowValidationErrorBox(True) Then
                     RadTextBoxControlWaageHoechstlast1.Text = "1000"
                     RadTextBoxControlWaageHoechstlast2.Text = "2000"
                     RadTextBoxControlWaageEichwert1.Text = "5"

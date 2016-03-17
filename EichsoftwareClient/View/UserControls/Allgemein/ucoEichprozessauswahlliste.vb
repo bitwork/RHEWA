@@ -235,7 +235,7 @@
     ''' Initiert background threads die aus lokaler Client DB und Server Webservice die vorhandenen Eichungen abrufen
     ''' </summary>
     ''' <remarks></remarks>
-    Friend Sub LoadFromDatabase()
+    Protected Friend Overrides Sub LoadFromDatabase()
         Me.Enabled = False
 
         If Not BackgroundWorkerLoadFromDatabase.IsBusy Then
@@ -1036,7 +1036,13 @@
     End Sub
 #End Region
 
-
+    ''' <summary>
+    ''' Validations the needed.
+    ''' </summary>
+    ''' <returns></returns>
+    Protected Friend Overrides Function ValidationNeeded() As Boolean
+        Return True
+    End Function
 
   
 End Class

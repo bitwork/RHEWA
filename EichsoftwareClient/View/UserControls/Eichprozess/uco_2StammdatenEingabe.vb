@@ -33,6 +33,15 @@
 
 #Region "Events"
     ''' <summary>
+    ''' Validations the needed.
+    ''' </summary>
+    ''' <returns></returns>
+    Protected Friend Overrides Function ValidationNeeded() As Boolean
+        LoadFromDatabase()
+        Return ValidateControls()
+    End Function
+
+    ''' <summary>
     ''' lade routine des ucos. Hilfetext und überschrift text setzen. ausserdem dropdownlisten füllen
     ''' </summary>
     ''' <param name="sender"></param>
@@ -312,7 +321,7 @@
 #Region "Methods"
 
 
-    Private Sub LoadFromDatabase()
+    Protected Friend Overrides Sub LoadFromDatabase()
         objEichprozess = ParentFormular.CurrentEichprozess
 
 
@@ -639,7 +648,7 @@
         'fehlermeldung anzeigen bei falscher validierung
         If Me.AbortSaving = True Then
             If Debugger.IsAttached Then 'standardwerte füllen für schnelleres testen
-                If Me.ShowValidationErrorBox Then
+                If Me.ShowValidationErrorBox(True) Then
                     RadTextBoxAWGBauartzulassung.Text = "Bauartzulassung"
                     RadTextBoxAWGHersteller.Text = "bitwork GmbH"
                     RadTextBoxAWGPruefbericht.Text = "Prüfbereicht"

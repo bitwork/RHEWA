@@ -49,7 +49,7 @@ Public Class Uco21Versenden
         End If
     End Sub
 
-    Private Sub LoadFromDatabase()
+    Protected Friend Overrides Sub LoadFromDatabase()
         objEichprozess = ParentFormular.CurrentEichprozess
         'events abbrechen
         'Nur laden wenn es sich um eine Bearbeitung handelt (sonst würde das in Memory Objekt überschrieben werden)
@@ -237,6 +237,13 @@ Public Class Uco21Versenden
     End Sub
 
 #Region "Overrides"
+    ''' <summary>
+    ''' Validations the needed.
+    ''' </summary>
+    ''' <returns></returns>
+    Protected Friend Overrides Function ValidationNeeded() As Boolean
+        Return True
+    End Function
     'Speicherroutine
     Protected Overrides Sub SaveNeeded(ByVal UserControl As UserControl)
         If Me.Equals(UserControl) Then
@@ -341,7 +348,11 @@ Public Class Uco21Versenden
     End Sub
 
     Private Sub RadButtonAnRhewaSenden_Click(sender As Object, e As EventArgs) Handles RadButtonAnRhewaSenden.Click
-        'hinzufügen zur Eichmarkenverwaltung
+        If ValidateControls() = False Then 'alle vorherigen controls validieren
+            ParentFormular.NavigiereZuUco(GlobaleEnumeratoren.enuEichprozessStatus.EichprotokollStammdaten)
+            Exit Sub
+
+        End If
 
         If Not RadTextBoxControlUploadPath.Text.Trim.Equals("") Then
             If IO.File.Exists(RadTextBoxControlUploadPath.Text) Then
@@ -353,13 +364,34 @@ Public Class Uco21Versenden
             SendObject()
         End If
 
-
-
-
-
-
-
     End Sub
+
+    ''' <summary>
+    ''' Gültigkeit der Eingaben überprüfen
+    ''' </summary>
+    ''' <remarks></remarks>
+    ''' <author></author>
+    ''' <commentauthor></commentauthor>
+    Private Function ValidateControls() As Boolean
+        'prüfen ob alle Felder ausgefüllt sind
+        Me.AbortSaving = False
+        Dim validationErrorName As String = ""
+        ParentFormular.CurrentEichprozess = objEichprozess
+        Me.ParentFormular.ValidiereRueckwaerts(validationErrorName, Me)
+
+        'For Each uco In Me.ParentFormular.BreadCrumb.
+        '    validationErrorName = uco.Name
+        '    AbortSaving = uco.ValidationNeeded()
+        '    If AbortSaving = True Then Exit For
+        'Next
+        'alle Controls validieren bevor versendet wird
+        If validationErrorName.Equals("") = False Then
+            Me.AbortSaving = True 'todo entfernen
+
+        End If
+        Return Not Me.AbortSaving
+    End Function
+
 
     'Entsperrroutine
     Protected Overrides Sub EntsperrungNeeded()
