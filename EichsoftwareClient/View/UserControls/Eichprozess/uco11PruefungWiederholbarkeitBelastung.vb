@@ -449,11 +449,11 @@
     ''' <commentauthor></commentauthor>
     Private Function ValidateControls() As Boolean
         'prüfen ob alle Felder ausgefüllt sind
-        Me.AbortSaveing = False
+        Me.AbortSaving = False
         'wenn sie sie sichtbar ist (normalien verfahren) muss validiert werden
         If RadGroupBoxBereich1.Visible = True Then
             If RadCheckBoxBereich1VEL1.Checked = False And RadCheckBoxBereich1VEL1.Visible = True Then
-                AbortSaveing = True
+                AbortSaving = True
                 RadTextBoxControlBereich1DisplayWeight1.TextBoxElement.Border.ForeColor = Color.Red
                 RadTextBoxControlBereich1DisplayWeight2.TextBoxElement.Border.ForeColor = Color.Red
                 RadTextBoxControlBereich1DisplayWeight3.TextBoxElement.Border.ForeColor = Color.Red
@@ -461,7 +461,7 @@
         End If
 
         If RadCheckBoxBereich2VEL1.Checked = False And RadCheckBoxBereich2VEL1.Visible = True Then
-            AbortSaveing = True
+            AbortSaving = True
             RadTextBoxControlBereich2DisplayWeight1.TextBoxElement.Border.ForeColor = Color.Red
             RadTextBoxControlBereich2DisplayWeight2.TextBoxElement.Border.ForeColor = Color.Red
             RadTextBoxControlBereich2DisplayWeight3.TextBoxElement.Border.ForeColor = Color.Red
@@ -470,7 +470,7 @@
 
         'sonderfall Kopierte Waage
         If objEichprozess.AusStandardwaageErzeugt Then
-            If Not AbortSaveing Then
+            If Not AbortSaving Then
                 Return Me.ShowValidationErrorBoxStandardwaage(GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderWiederholbarkeit)
             Else
                 Return Me.ShowValidationErrorBox()

@@ -230,14 +230,14 @@
 
     Private Function ValidateControls() As Boolean
         'prüfen ob alle Felder ausgefüllt sind
-        Me.AbortSaveing = False
+        Me.AbortSaving = False
 
         If RadCheckBoxAbdruck1.Checked = False Or _
      RadCheckBoxAbdruck2.Checked = False Or _
      RadCheckBoxAbdruck3.Checked = False Or _
      RadCheckBoxAbdruck4.Checked = False Or _
       RadCheckBoxAbdruck5.Checked = False Then
-            AbortSaveing = True
+            AbortSaving = True
         End If
 
         lblPflichtfeld1.Visible = IIf(RadCheckBoxAbdruck1.Checked = False, True, False)
@@ -251,7 +251,7 @@
         'fehlermeldung anzeigen bei falscher validierung
         'sonderfall Kopierte Waage
         If objEichprozess.AusStandardwaageErzeugt Then
-            If Not AbortSaveing Then
+            If Not AbortSaving Then
                 Return Me.ShowValidationErrorBoxStandardwaage(GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderStabilitätderGleichgewichtslage)
             Else
                 Return Me.ShowValidationErrorBox()

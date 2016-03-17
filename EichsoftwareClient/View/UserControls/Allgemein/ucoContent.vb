@@ -62,7 +62,7 @@ Public Class ucoContent
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    Protected Friend Property AbortSaveing As Boolean
+    Protected Friend Property AbortSaving As Boolean
     ''' <summary>
     ''' Mit dieser Property kann der LEsemodus des UCOs eingestellt werden. Normal meint einen Client der eine Eichung anlegend. Im Lesenden Modus darf keine änderung vorgenommen / gespeichert werden. Im Korrigierenden Modus ändern RHEWA die Eichung eines externen bevollmächtigten
     ''' </summary>
@@ -176,7 +176,7 @@ Public Class ucoContent
     ''' <param name="Name"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    <DebuggerStepThroughAttribute> _
+    <DebuggerStepThroughAttribute()> _
     Protected Overridable Function FindControl(ByVal Name As String) As Control
         Dim myControl As Control()
         myControl = Me.Controls.Find(Name, True)
@@ -273,27 +273,36 @@ Public Class ucoContent
     Protected Overridable Sub VersendenNeeded(ByVal TargetUserControl As UserControl) Handles _ParentForm.VersendenNeeded
     End Sub
 #End Region
+    ''' <summary>
+    ''' Bietet die Option an validierungen zu überspringen wenn AbortSaving auf true steht.
+    ''' </summary>
+    ''' <param name="pDisplayMessage"></param>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Friend Function ShowValidationErrorBox(Optional ByVal pDisplayMessage As String = "") As Boolean
+        Dim DisplayMessage As String = pDisplayMessage
+        If DisplayMessage.Equals("") Then DisplayMessage = My.Resources.GlobaleLokalisierung.PflichtfelderAusfuellen
 
-    Friend Function ShowValidationErrorBox() As Boolean
-        If Me.AbortSaveing = True Then
+
+        If Me.AbortSaving = True Then
             If Debugger.IsAttached Then
                 If MessageBox.Show("Validierung überspringen?", "", MessageBoxButtons.YesNo) = DialogResult.Yes Then
-                    Me.AbortSaveing = False
+                    Me.AbortSaving = False
                     Return True
                 Else
-                    MessageBox.Show(My.Resources.GlobaleLokalisierung.PflichtfelderAusfuellen, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-                    Me.AbortSaveing = True
+                    MessageBox.Show(DisplayMessage, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    Me.AbortSaving = True
                     Return False
                 End If
             Else
-                MessageBox.Show(My.Resources.GlobaleLokalisierung.PflichtfelderAusfuellen, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-                Me.AbortSaveing = True
+                MessageBox.Show(DisplayMessage, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                Me.AbortSaving = True
                 Return False
             End If
         End If
 
         'Speichern soll nicht abgebrochen werden, da alles okay ist
-        Me.AbortSaveing = False
+        Me.AbortSaving = False
         Return True
     End Function
 
@@ -356,10 +365,10 @@ Public Class ucoContent
 
         If Not Displaytext.Equals("") Then
             If MessageBox.Show(Displaytext, "", MessageBoxButtons.YesNo) = DialogResult.Yes Then
-                Me.AbortSaveing = False
+                Me.AbortSaving = False
                 Return True
             Else
-                Me.AbortSaveing = True
+                Me.AbortSaving = True
                 MessageBox.Show(My.Resources.GlobaleLokalisierung.PflichtfelderAusfuellen, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 Return False
             End If

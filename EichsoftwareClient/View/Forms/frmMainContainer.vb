@@ -650,7 +650,7 @@ Public Class FrmMainContainer
 
 
         'abbruch des Vorgangs,wenn die validierung einen fehler erzeugt hat
-        If _CurrentUco.AbortSaveing = True Then Exit Sub
+        If _CurrentUco.AbortSaving = True Then Exit Sub
         If _CurrentUco.NextUco Is Nothing Then
 
 

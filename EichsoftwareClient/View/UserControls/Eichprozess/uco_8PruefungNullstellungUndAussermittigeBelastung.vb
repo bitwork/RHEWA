@@ -1356,7 +1356,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
     Private Function ValidateControlsNullstellung() As Boolean
         If RadCheckBoxNullstellungOK.Checked = False Then
             RadCheckBoxNullstellungOK.Focus()
-            AbortSaveing = True
+            AbortSaving = True
             '   MessageBox.Show(My.Resources.GlobaleLokalisierung.PflichtfelderAusfuellen, "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             RadCheckBoxNullstellungOK.Focus()
             Return False
@@ -1368,8 +1368,8 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
 #Region "Wiederholbarkeit"
     Private Function ValidatecontrolsWiederholungen() As Boolean
         If RadGroupBoxWiederholungen.Visible = True Then
-            If RadCheckBoxVEL1.Checked = False And RadCheckBoxVEL1.Visible = True  Then
-                AbortSaveing = True
+            If RadCheckBoxVEL1.Checked = False And RadCheckBoxVEL1.Visible = True Then
+                AbortSaving = True
                 Return False
 
             End If
@@ -1460,7 +1460,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         RadCheckBoxBereich3VEL11.Checked = False And RadCheckBoxBereich3VEL11.Visible = True Or _
         RadCheckBoxBereich3VEL12.Checked = False And RadCheckBoxBereich3VEL12.Visible = True Or _
         RadCheckBoxBereich3VELMitte.Checked = False And RadCheckBoxBereich3VELMitte.Visible = True Then
-            AbortSaveing = True
+            AbortSaving = True
             Return False
 
         End If
@@ -1479,31 +1479,38 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
     ''' <commentauthor></commentauthor>
     Private Function ValidateControls() As Boolean
         'prüfen ob alle Felder ausgefüllt sind
-        AbortSaveing = False
+        AbortSaving = False
 
-        If ValidateControlsNullstellung() Then
-            If ValidateControlsAussermittigeBelastung() Then
-                If ValidatecontrolsWiederholungen() Then
-                Else
-                    MessageBox.Show(My.Resources.GlobaleLokalisierung.EichfehlergrenzenNichtEingehalten, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-                    AbortSaveing = True
-                    Return False
-                End If
-            Else
-                MessageBox.Show(My.Resources.GlobaleLokalisierung.EichfehlergrenzenNichtEingehalten, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-                AbortSaveing = True
-                Return False
-            End If
-        Else
+        'If ValidateControlsNullstellung() Then
+        '    If ValidateControlsAussermittigeBelastung() Then
+        '        If ValidatecontrolsWiederholungen() Then
+        '        Else
+        '                      Return Me.ShowValidationErrorBox(My.Resources.GlobaleLokalisierung.EichfehlergrenzenNichtEingehalten)
+        '        End If
+        '    Else
+        '        Return Me.ShowValidationErrorBox(My.Resources.GlobaleLokalisierung.EichfehlergrenzenNichtEingehalten)
+        '    End If
+        'Else
+        '    ValidateControlsAussermittigeBelastung()
+        '    ValidatecontrolsWiederholungen()
+        '    'fehlermeldung anzeigen bei falscher validierung
+        '    Return Me.ShowValidationErrorBox()
+        'End If
+
+        If ValidateControlsNullstellung() = False Then
             ValidateControlsAussermittigeBelastung()
             ValidatecontrolsWiederholungen()
             'fehlermeldung anzeigen bei falscher validierung
             Return Me.ShowValidationErrorBox()
+        Else
+            ValidateControlsAussermittigeBelastung()
+            ValidatecontrolsWiederholungen()
+            'fehlermeldung anzeigen bei falscher validierung
+            Return Me.ShowValidationErrorBox(My.Resources.GlobaleLokalisierung.EichfehlergrenzenNichtEingehalten)
         End If
 
-
         'Speichern soll nicht abgebrochen werden, da alles okay ist
-        AbortSaveing = False
+        AbortSaving = False
         Return True
 
     End Function

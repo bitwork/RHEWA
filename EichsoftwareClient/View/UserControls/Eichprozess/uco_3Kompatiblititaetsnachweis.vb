@@ -508,7 +508,7 @@
         '    Return True
         'End If
         'prüfen ob alle Felder ausgefüllt sind
-        AbortSaveing = False
+        AbortSaving = False
         For Each GroupBox In RadScrollablePanel1.PanelContainer.Controls
             If TypeOf GroupBox Is Telerik.WinControls.UI.RadGroupBox Then
                 For Each Control In GroupBox.controls
@@ -524,7 +524,7 @@
                                         CType(Control, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
                                         'CType(Control, Telerik.WinControls.UI.RadTextBox).Focus()
                                         'Return False
-                                        Me.AbortSaveing = True
+                                        Me.AbortSaving = True
                                         Continue For
                                     End If
                                     If CInt(RadTextBoxControlWaageAnzahlWaegezellen.Text) < 1 Then
@@ -532,7 +532,7 @@
                                         CType(Control, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
                                         'CType(Control, Telerik.WinControls.UI.RadTextBox).Focus()
                                         'Return False
-                                        Me.AbortSaveing = True
+                                        Me.AbortSaving = True
                                         Continue For
                                     End If
 
@@ -582,7 +582,7 @@
                                 End If
 
 
-                                Me.AbortSaveing = True
+                                Me.AbortSaving = True
 
                                 CType(Control, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
                                 ' CType(Control, Telerik.WinControls.UI.RadTextBox).Focus()
@@ -607,7 +607,7 @@
             Else
                 'Ungültiger Wert für Genauigikeitsklasse
                 MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_GenaugigkeitsklasseUnguelitg, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-                Me.AbortSaveing = True
+                Me.AbortSaving = True
                 RadTextBoxControlWZGenauigkeitsklasse.TextBoxElement.Border.ForeColor = Color.Red
                 RadTextBoxControlWZGenauigkeitsklasse.Focus()
                 Return False
@@ -616,7 +616,7 @@
 
 
 
-        If Me.AbortSaveing = True Then
+        If Me.AbortSaving = True Then
             If Debugger.IsAttached Then 'standardwerte füllen für schnelleres testen
                 If Me.ShowValidationErrorBox Then
                     RadTextBoxControlWaageHoechstlast1.Text = "1000"
@@ -641,7 +641,7 @@
 
 
         'Speichern soll nicht abgebrochen werden, da alles okay ist
-        Me.AbortSaveing = False
+        Me.AbortSaving = False
         Return True
 
         'prüfen ob eine neue WZ angelegt wurde (über button und neuem Dialog vermutlich)

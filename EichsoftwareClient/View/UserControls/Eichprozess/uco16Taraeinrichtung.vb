@@ -121,15 +121,15 @@
     ''' <commentauthor></commentauthor>
     Private Function ValidateControls() As Boolean
         'prüfen ob alle Felder ausgefüllt sind
-        Me.AbortSaveing = False
+        Me.AbortSaving = False
 
         If RadCheckBoxTaraausgleicheinrichtungOK.Checked = False Then
-            AbortSaveing = True
+            AbortSaving = True
             RadCheckBoxTaraausgleicheinrichtungOK.Focus()
         End If
 
         If RadCheckBoxTaraErweiterteRichtigkeitspruefung.Checked = False Then
-            AbortSaveing = True
+            AbortSaving = True
             RadCheckBoxTaraErweiterteRichtigkeitspruefung.Focus()
 
         End If

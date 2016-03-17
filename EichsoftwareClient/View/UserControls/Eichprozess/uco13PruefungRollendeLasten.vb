@@ -571,12 +571,12 @@
     ''' <commentauthor></commentauthor>
     Private Function ValidateControls() As Boolean
         'prüfen ob alle Felder ausgefüllt sind
-        Me.AbortSaveing = False
+        Me.AbortSaving = False
 
         If RadCheckBoxAuffahrtLinks1.Checked = False And RadCheckBoxAuffahrtLinks1.Visible = True Or _
             RadCheckBoxAuffahrtLinks2.Checked = False And RadCheckBoxAuffahrtLinks2.Visible = True Or _
             RadCheckBoxAuffahrtLinks3.Checked = False And RadCheckBoxAuffahrtLinks3.Visible = True Then
-            AbortSaveing = True
+            AbortSaving = True
 
             RadTextBoxControlAnzeigeLinks1.TextBoxElement.Border.ForeColor = Color.Red
             RadTextBoxControlAnzeigeLinks2.TextBoxElement.Border.ForeColor = Color.Red
@@ -588,7 +588,7 @@
         If RadCheckBoxlblAuffahrtRechts1.Checked = False And RadCheckBoxlblAuffahrtRechts1.Visible = True Or _
               RadCheckBoxlblAuffahrtRechts2.Checked = False And RadCheckBoxlblAuffahrtRechts2.Visible = True Or _
               RadCheckBoxlblAuffahrtRechts3.Checked = False And RadCheckBoxlblAuffahrtRechts2.Visible = True Then
-            AbortSaveing = True
+            AbortSaving = True
             RadTextBoxControlAnzeigeRechts1.TextBoxElement.Border.ForeColor = Color.Red
             RadTextBoxControlAnzeigeRechts2.TextBoxElement.Border.ForeColor = Color.Red
             RadTextBoxControlAnzeigeRechts3.TextBoxElement.Border.ForeColor = Color.Red

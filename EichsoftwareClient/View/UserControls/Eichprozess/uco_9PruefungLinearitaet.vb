@@ -496,13 +496,13 @@ Public Class uco_9PruefungLinearitaet
     ''' <commentauthor></commentauthor>
     Private Function ValidateControls() As Boolean
         'prüfen ob alle Felder ausgefüllt sind
-        AbortSaveing = False
+        AbortSaving = False
 
         For i As Integer = 1 To 8 'messpunkt
             For j As Integer = 1 To 3 'bereich
                 Dim checkbox As Telerik.WinControls.UI.RadCheckBox = FindControl(String.Format("RadCheckBoxBereich{0}VEL{1}", j, i))
                 If checkbox.Checked = False And checkbox.Visible = True Then
-                    AbortSaveing = True
+                    AbortSaving = True
                     Dim textbox As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextboxControlBereich{0}DisplayWeight{1}", j, i))
                     textbox.TextBoxElement.Border.ForeColor = Color.Red
                 End If
@@ -510,7 +510,7 @@ Public Class uco_9PruefungLinearitaet
                 checkbox = Nothing
                 checkbox = FindControl(String.Format("RadCheckBoxBereich{0}FallendVEL{1}", j, i))
                 If checkbox.Checked = False And checkbox.Visible = True Then
-                    AbortSaveing = True
+                    AbortSaving = True
                     Dim textbox As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextboxControlBereich{0}FallendDisplayWeight{1}", j, i))
                     textbox.TextBoxElement.Border.ForeColor = Color.Red
                 End If

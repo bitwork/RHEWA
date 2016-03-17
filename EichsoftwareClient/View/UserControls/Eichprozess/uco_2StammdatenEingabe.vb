@@ -576,7 +576,7 @@
     ''' <author></author>
     ''' <commentauthor></commentauthor>
     Private Function ValidateControls() As Boolean
-        Me.AbortSaveing = False
+        Me.AbortSaving = False
         'prüfen ob alle Felder ausgefüllt sind
         For Each GroupBox In RadScrollablePanel1.PanelContainer.Controls
             If TypeOf GroupBox Is Telerik.WinControls.UI.RadGroupBox Then
@@ -585,7 +585,7 @@
                         If Control.readonly = False Then
                             If Control.Text.trim.Equals("") Then
 
-                                Me.AbortSaveing = True
+                                Me.AbortSaving = True
                                 CType(Control, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
 
                                 CType(Control, Telerik.WinControls.UI.RadTextBox).Focus()
@@ -598,7 +598,7 @@
                         End If
                     ElseIf TypeOf Control Is Telerik.WinControls.UI.RadDropDownList Then
                         If Control.Text.trim.Equals("-") Or Control.Text.trim.Equals("") Then
-                            Me.AbortSaveing = True
+                            Me.AbortSaving = True
 
                             'etwas umständlich, aber sonst komme ich nicht an den Rahmen der Textbox in der Dropdownliste
                             Try
@@ -611,7 +611,7 @@
                             End Try
                             CType(Control, Telerik.WinControls.UI.RadDropDownList).Focus()
                         ElseIf Control.Text.ToLower.Contains("deaktiviert") Then
-                            Me.AbortSaveing = True
+                            Me.AbortSaving = True
 
                             'etwas umständlich, aber sonst komme ich nicht an den Rahmen der Textbox in der Dropdownliste
                             Try
@@ -636,8 +636,8 @@
                 Next
             End If
         Next
-          'fehlermeldung anzeigen bei falscher validierung
-        If Me.AbortSaveing = True Then
+        'fehlermeldung anzeigen bei falscher validierung
+        If Me.AbortSaving = True Then
             If Debugger.IsAttached Then 'standardwerte füllen für schnelleres testen
                 If Me.ShowValidationErrorBox Then
                     RadTextBoxAWGBauartzulassung.Text = "Bauartzulassung"

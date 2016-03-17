@@ -116,10 +116,10 @@
     ''' <commentauthor></commentauthor>
     Private Function ValidateControls() As Boolean
         'prüfen ob alle Felder ausgefüllt sind
-        Me.AbortSaveing = False
+        Me.AbortSaving = False
 
         If RadCheckBoxUeberlast.Checked = False Then
-            AbortSaveing = True
+            AbortSaving = True
         End If
 
           'fehlermeldung anzeigen bei falscher validierung

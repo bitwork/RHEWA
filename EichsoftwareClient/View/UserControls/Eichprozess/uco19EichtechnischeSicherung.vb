@@ -316,64 +316,64 @@
     ''' <commentauthor></commentauthor>
     Private Function ValidateControls() As Boolean
         'prüfen ob alle Felder ausgefüllt sind
-        Me.AbortSaveing = False
+        Me.AbortSaving = False
 
         If RadCheckBoxBenannteStelle.Checked Then
             If RadTextBoxControlBenannteStelle.Text = "" Then
-                AbortSaveing = True
+                AbortSaving = True
                 RadTextBoxControlBenannteStelle.Focus()
             End If
         End If
 
         If RadCheckBoxEichsiegel13x13.Checked Then
             If RadTextBoxControlEichsiegel13x13.Text = "" Then
-                AbortSaveing = True
+                AbortSaving = True
                 RadTextBoxControlEichsiegel13x13.Focus()
             End If
         End If
 
         If RadCheckBoxEichsiegelRund.Checked Then
             If RadTextBoxControlEichsiegelRund.Text = "" Then
-                AbortSaveing = True
+                AbortSaving = True
                 RadTextBoxControlEichsiegelRund.Focus()
             End If
         End If
 
         If RadCheckBoxHinweismarke.Checked Then
             If RadTextBoxControlHinweismarke.Text = "" Then
-                AbortSaveing = True
+                AbortSaving = True
                 RadTextBoxControlHinweismarke.Focus()
             End If
         End If
 
         If RadCheckBoxGruenesM.Checked Then
             If RadTextBoxControlGruenesM.Text = "" Then
-                AbortSaveing = True
+                AbortSaving = True
                 RadTextBoxControlGruenesM.Focus()
             End If
         End If
 
         If RadCheckBoxCEKennzeichen.Checked Then
             If RadTextBoxControlCEKennzeichen.Text = "" Then
-                AbortSaveing = True
+                AbortSaving = True
                 RadTextBoxControlCEKennzeichen.Focus()
             End If
         End If
 
         If RadCheckBoxAufbewahrungsdauer.Checked Then
             If RadTextBoxControlAufbewahrungsdauer.Text = "" Then
-                AbortSaveing = True
+                AbortSaving = True
                 RadTextBoxControlAufbewahrungsdauer.Focus()
             End If
         End If
 
 
-        If AbortSaveing Then
+        If AbortSaving Then
             MessageBox.Show(My.Resources.GlobaleLokalisierung.PflichtfelderAusfuellen, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             Return False
         End If
         'Speichern soll nicht abgebrochen werden, da alles okay ist
-        Me.AbortSaveing = False
+        Me.AbortSaving = False
         Return True
 
     End Function

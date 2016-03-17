@@ -707,7 +707,7 @@ Inherits ucoContent
 
         If decAbsoluteFehlergrenze > CDec(EFGWertStaffel.Text) Then 'eichwerte unterschritten/überschritten
             Fehler7.TextBoxElement.Border.ForeColor = Color.Red
-            AbortSaveing = True
+            AbortSaving = True
         Else
             Fehler7.TextBoxElement.Border.ForeColor = Color.Transparent
         End If
@@ -723,7 +723,7 @@ Inherits ucoContent
     Private Function ValidateControls() As Boolean
 
         'prüfen ob alle Felder ausgefüllt sind
-        AbortSaveing = False
+        AbortSaving = False
 
         Dim intausgefuellteStaffeln As Integer = 0
         If ValidateStaffelAusgefuellt(RadGroupBoxStaffel1) Then
@@ -738,15 +738,15 @@ Inherits ucoContent
                     End If
                 End If
             End If
-        Else : AbortSaveing = True 'eine Staffel muss ausgefüllt sein
+        Else : AbortSaving = True 'eine Staffel muss ausgefüllt sein
         End If
 
-        If AbortSaveing Then
+        If AbortSaving Then
             'fehlermeldung anzeigen bei falscher validierung
             Return Me.ShowValidationErrorBox()
         End If
 
-     
+
 
         'logik zum Valideren der Eichfehlergrenzen der einzelnen Staffeln. Abhängig davon wieviele Staffeln überhaupt ausgefüllt sind
         If (intausgefuellteStaffeln >= 1) Then
@@ -783,7 +783,7 @@ Inherits ucoContent
 
         'fehlermeldung anzeigen bei falscher validierung
 
-        If AbortSaveing Then
+        If AbortSaving Then
             'fehlermeldung anzeigen bei falscher validierung
             MessageBox.Show(My.Resources.GlobaleLokalisierung.EichfehlergrenzenNichtEingehalten, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             Return False

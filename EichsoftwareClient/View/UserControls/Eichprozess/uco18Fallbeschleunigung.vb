@@ -109,15 +109,15 @@
     ''' <commentauthor></commentauthor>
     Private Function ValidateControls() As Boolean
         'prüfen ob alle Felder ausgefüllt sind
-        Me.AbortSaveing = False
+        Me.AbortSaving = False
 
         If RadTextBoxControlG.Text.Trim = "" Then
-            AbortSaveing = True
+            AbortSaving = True
             RadTextBoxControlG.Focus()
         End If
 
         If RadCheckBoxSchwerkraft.Checked = False Then
-            AbortSaveing = True
+            AbortSaving = True
             RadCheckBoxSchwerkraft.Focus()
 
         End If

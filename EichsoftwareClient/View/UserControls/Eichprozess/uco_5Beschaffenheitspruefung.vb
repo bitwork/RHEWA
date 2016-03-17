@@ -132,12 +132,12 @@ Public Class uco_5Beschaffenheitspruefung
     ''' <author></author>
     ''' <commentauthor></commentauthor>
     Private Function ValidateControls() As Boolean
-        Me.AbortSaveing = False
+        Me.AbortSaving = False
         'prüfen ob alle Felder ausgefüllt sind
-       
+
         If RadCheckBoxApprove.Checked = False Then
             RadCheckBoxApprove.Focus()
-            AbortSaveing = True
+            AbortSaving = True
         End If
 
         'fehlermeldung anzeigen bei falscher validierung

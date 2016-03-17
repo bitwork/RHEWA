@@ -878,7 +878,7 @@
     ''' <author></author>
     ''' <commentauthor></commentauthor>
     Private Function ValidateControls() As Boolean
-        AbortSaveing = False
+        AbortSaving = False
         'prüfen ob alle Felder ausgefüllt sind
         For Each GroupBox In FlowLayoutPanel1.Controls
             If TypeOf GroupBox Is Telerik.WinControls.UI.RadGroupBox Then
@@ -886,7 +886,7 @@
                     If TypeOf Control Is Telerik.WinControls.UI.RadCheckBox Then
                         If CType(Control, Telerik.WinControls.UI.RadCheckBox).Visible = True AndAlso CType(Control, Telerik.WinControls.UI.RadCheckBox).Checked = False Then
                             CType(Control, Telerik.WinControls.UI.RadCheckBox).Focus()
-                            AbortSaveing = True
+                            AbortSaving = True
                         End If
                     End If
                 Next

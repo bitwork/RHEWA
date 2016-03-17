@@ -486,7 +486,7 @@
     ''' <commentauthor></commentauthor>
     Private Function ValidateControls() As Boolean
         'prüfen ob alle Felder ausgefüllt sind
-        Me.AbortSaveing = False
+        Me.AbortSaving = False
         For Each GroupBox In RadScrollablePanel1.PanelContainer.Controls
             If TypeOf GroupBox Is Telerik.WinControls.UI.RadGroupBox Then
                 For Each Control In GroupBox.controls
@@ -494,7 +494,7 @@
                         If CType(Control, Telerik.WinControls.UI.RadTextBox).Visible = True AndAlso CType(Control, Telerik.WinControls.UI.RadTextBox).ReadOnly = False Then
                             If Control.text.Equals("") Then
                                 Control.focus()
-                                AbortSaveing = True
+                                AbortSaving = True
                                 MarkControlRed(Control)
                             Else
                                 MarkControlNormal(Control)
@@ -505,7 +505,7 @@
                         If CType(Control, Telerik.WinControls.UI.RadDateTimePicker).Visible = True Then
                             If CType(Control, Telerik.WinControls.UI.RadDateTimePicker).Text.Equals(CType(Control, Telerik.WinControls.UI.RadDateTimePicker).NullText) Then
                                 Control.focus()
-                                AbortSaveing = True
+                                AbortSaving = True
                             End If
                         End If
                     End If
@@ -527,7 +527,7 @@
                                         End If
 
                                         Control2.focus()
-                                        AbortSaveing = True
+                                        AbortSaving = True
                                         MarkControlRed(Control2)
                                     Else
                                         MarkControlNormal(Control2)
@@ -538,7 +538,7 @@
                                 If CType(Control2, Telerik.WinControls.UI.RadDateTimePicker).Visible = True Then
                                     If CType(Control2, Telerik.WinControls.UI.RadDateTimePicker).Text.Equals(CType(Control2, Telerik.WinControls.UI.RadDateTimePicker).NullText) Then
                                         Control2.focus()
-                                        AbortSaveing = True
+                                        AbortSaving = True
                                     End If
                                 End If
                             End If
@@ -551,7 +551,7 @@
 
         If RadCheckBoxDrucker.Checked Then
             If RadTextBoxControlDruckerTyp.Text = "" Then
-                AbortSaveing = True
+                AbortSaving = True
             End If
         End If
 

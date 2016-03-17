@@ -233,17 +233,17 @@
     ''' <commentauthor></commentauthor>
     Private Function ValidateControls() As Boolean
         'prüfen ob alle Felder ausgefüllt sind
-        Me.AbortSaveing = False
+        Me.AbortSaving = False
 
         If RadCheckBoxHalb.Checked = False Then
-            AbortSaveing = True
+            AbortSaving = True
         End If
         If RadCheckBoxMax.Checked = False Then
-            AbortSaveing = True
+            AbortSaving = True
         End If
 
         If RadCheckBoxMin.Checked = False Then
-            AbortSaveing = True
+            AbortSaving = True
         End If
 
         If RadTextBoxControlAnzeige1.Text.Trim = "" Or _
@@ -253,10 +253,10 @@ RadTextBoxControlLast1.Text.Trim = "" Or _
 RadTextBoxControlLast2.Text.Trim = "" Or _
             RadTextBoxControlLast3.Text.Trim = "" Then
 
-            AbortSaveing = True
+            AbortSaving = True
         End If
         'fehlermeldung anzeigen bei falscher validierung
-        If AbortSaveing Then
+        If AbortSaving Then
             RadTextBoxControlAnzeige1.TextBoxElement.Border.ForeColor = Color.Red
             RadTextBoxControlAnzeige2.TextBoxElement.Border.ForeColor = Color.Red
             RadTextBoxControlAnzeige3.TextBoxElement.Border.ForeColor = Color.Red

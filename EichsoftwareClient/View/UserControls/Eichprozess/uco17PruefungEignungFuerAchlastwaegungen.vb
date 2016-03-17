@@ -110,21 +110,21 @@
     ''' <commentauthor></commentauthor>
     Private Function ValidateControls() As Boolean
         'prüfen ob alle Felder ausgefüllt sind
-        Me.AbortSaveing = False
+        Me.AbortSaving = False
 
         If RadCheckBoxWaageNichtGeeignet.Checked = False Then
-            AbortSaveing = True
+            AbortSaving = True
             RadCheckBoxWaageNichtGeeignet.Focus()
         End If
 
         If RadCheckBoxZufahrtenInOrdnung.Checked = False Then
-            AbortSaveing = True
+            AbortSaving = True
             RadCheckBoxZufahrtenInOrdnung.Focus()
 
         End If
 
         If RadCheckBoxWaagegeprueft.Checked = False Then
-            AbortSaveing = True
+            AbortSaving = True
             RadCheckBoxWaagegeprueft.Focus()
 
         End If
