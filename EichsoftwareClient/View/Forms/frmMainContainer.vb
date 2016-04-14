@@ -326,6 +326,7 @@ Public Class FrmMainContainer
             'auswahl des Benutzers, führt auch zur Lizenzeingabe, falls noch kein Benutzer angelegt wurde
             Dim frmBenutzerauswahl As New FrmBenutzerauswahl
             If frmBenutzerauswahl.ShowDialog = Windows.Forms.DialogResult.OK Then
+
                 LadeAuswahlListe()
 
                 'aktuelle Sprache der Anwendung auf vorher gewählte Sprache setzen
@@ -386,32 +387,10 @@ Public Class FrmMainContainer
 
         RadButtonNavigateBackwards.Visible = False
         RadButtonNavigateForwards.Visible = False
-
-
-        'laden des Grid Layouts aus User Settings
-        Try
-            If Not AktuellerBenutzer.Instance.GridSettings.ToString.Equals("") Then
-                Using stream As New MemoryStream(Convert.FromBase64String(AktuellerBenutzer.Instance.GridSettings))
-                    uco.RadGridViewAuswahlliste.LoadLayout(stream)
-                End Using
-            End If
-        Catch ex As Exception
-            'konnte layout nicht finden
-            Debug.WriteLine(ex.ToString)
-        End Try
-
-        'laden des RHEWA Grids aus User Settings
-        Try
-            If Not AktuellerBenutzer.Instance.GridSettingsRhewa.ToString.Equals("") Then
-                Using stream As New MemoryStream(Convert.FromBase64String(AktuellerBenutzer.Instance.GridSettingsRhewa))
-                    uco.RadGridViewRHEWAAlle.LoadLayout(stream)
-                End Using
-            End If
-        Catch ex As Exception
-            'konnte layout nicht finden
-            Debug.WriteLine(ex.ToString)
-        End Try
+        AktuellerBenutzer.LadeGridLayout(uco)
     End Sub
+
+
 
     ''' <summary>
     ''' lädt das benötigte Uco zum aktuellen Eichprozess Objektes (me.currenteichprozess)
@@ -1124,7 +1103,7 @@ Public Class FrmMainContainer
             End If
         End If
         If Not AktuellerBenutzer.Instance Is Nothing And Not Me._CurrentUco Is Nothing Then
-            SpeichereGridLayout()
+            AktuellerBenutzer.SpeichereGridLayout(Me._CurrentUco)
 
         End If
     End Sub
@@ -1132,45 +1111,6 @@ Public Class FrmMainContainer
 
 #End Region
 
-    ''' <summary>
-    ''' Speichert Gridlayout als XML Stream, welcher in DB zum aktuellen Benutzer gespeichert wird
-    ''' </summary>
-    ''' <remarks></remarks>
-    Private Sub SpeichereGridLayout()
-        'speichere Layout der beiden Grids
-        If Me._CurrentUco.GetType Is GetType(ucoEichprozessauswahlliste) Then
-            Dim gridProzesse = CType(Me._CurrentUco, ucoEichprozessauswahlliste).RadGridViewAuswahlliste
-            Dim gridProzesseRHEWA = CType(Me._CurrentUco, ucoEichprozessauswahlliste).RadGridViewRHEWAAlle
-            Try
-                Using stream As New MemoryStream()
-                    gridProzesse.SaveLayout(stream)
-                    If Not stream Is Nothing Then
-                        stream.Position = 0
-                        Dim buffer As Byte() = New Byte(CInt(stream.Length) - 1) {}
-                        stream.Read(buffer, 0, buffer.Length)
-                        AktuellerBenutzer.Instance.GridSettings = Convert.ToBase64String(buffer)
-                        AktuellerBenutzer.SaveSettings()
-                    End If
-                End Using
-            Catch ex As Exception
-
-            End Try
-
-            Try
-                Using stream As New MemoryStream()
-                    gridProzesseRHEWA.SaveLayout(stream)
-                    If Not stream Is Nothing Then
-                        stream.Position = 0
-                        Dim buffer As Byte() = New Byte(CInt(stream.Length) - 1) {}
-                        stream.Read(buffer, 0, buffer.Length)
-                        AktuellerBenutzer.Instance.GridSettingsRhewa = Convert.ToBase64String(buffer)
-                        AktuellerBenutzer.SaveSettings()
-                    End If
-                End Using
-            Catch ex As Exception
-            End Try
-        End If
-    End Sub
 
     ''' <summary>
     ''' Triggered Event im UCO, welches den Versendenprozess startet

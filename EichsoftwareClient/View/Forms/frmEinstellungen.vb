@@ -26,6 +26,16 @@
     ''' <remarks></remarks>
     Private Sub RadButtonAbbrechen_Click(sender As Object, e As EventArgs) Handles RadButtonAbbrechen.Click
         Me.Close()
+
+
+    End Sub
+
+    Private Sub RadButtonGridSettingsZuruecksetzen_Click(sender As Object, e As EventArgs) Handles RadButtonGridSettingsZuruecksetzen.Click
+        AktuellerBenutzer.Instance.GridSettings = AktuellerBenutzer.Instance.GridDefaultSettings
+        AktuellerBenutzer.Instance.GridSettingsRhewa = AktuellerBenutzer.Instance.GridDefaultSettingsRhewa
+        AktuellerBenutzer.SaveSettings()
+        Me.DialogResult = DialogResult.Retry
+        Me.Close()
     End Sub
 
     ''' <summary>
@@ -142,6 +152,8 @@
                 RadDateTimePickerSince.Culture = New System.Globalization.CultureInfo("en")
         End Select
     End Sub
+
+
 #End Region
-  
+
 End Class

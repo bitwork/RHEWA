@@ -12,6 +12,9 @@ Public Class AktuellerBenutzer
     Private mvarHoleAlleeigenenEichungenVomServer As Boolean
     Private mvarGridSettings As String
     Private mvarGridSettingsRHEWA As String
+    Private mvarDefaultGridSettings As String = "PFJhZEdyaWRWaWV3IFNob3dOb0RhdGFUZXh0PSJGYWxzZSIgVGV4dD0iUmFkR3JpZFZpZXcxIiBBdXRvU2Nyb2xsPSJUcnVlIiBUYWJJbmRleD0iMCI+PE1hc3RlclRlbXBsYXRlIEFsbG93RHJhZ1RvR3JvdXA9IkZhbHNlIiBBbGxvd0VkaXRSb3c9IkZhbHNlIiBBbGxvd0NlbGxDb250ZXh0TWVudT0iRmFsc2UiIEFsbG93RGVsZXRlUm93PSJGYWxzZSIgQWxsb3dBZGROZXdSb3c9IkZhbHNlIiBTaG93R3JvdXBlZENvbHVtbnM9IlRydWUiPjxWaWV3RGVmaW5pdGlvbiB4c2k6dHlwZT0iVGVsZXJpay5XaW5Db250cm9scy5VSS5UYWJsZVZpZXdEZWZpbml0aW9uIiB4bWxuczp4c2k9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hLWluc3RhbmNlIiAvPjwvTWFzdGVyVGVtcGxhdGU+PC9SYWRHcmlkVmlldz4="
+    Private mvarDefaultGridSettingsRHEWA As String = "PFJhZEdyaWRWaWV3IFNob3dOb0RhdGFUZXh0PSJGYWxzZSIgVGV4dD0iUmFkR3JpZFZpZXcxIiBBdXRvU2Nyb2xsPSJUcnVlIiBUYWJJbmRleD0iNSI+PE1hc3RlclRlbXBsYXRlIEFsbG93RWRpdFJvdz0iRmFsc2UiIEFsbG93Q2VsbENvbnRleHRNZW51PSJGYWxzZSIgQWxsb3dEZWxldGVSb3c9IkZhbHNlIiBBbGxvd0FkZE5ld1Jvdz0iRmFsc2UiIFNob3dHcm91cGVkQ29sdW1ucz0iVHJ1ZSIgQXV0b0V4cGFuZEdyb3Vwcz0iVHJ1ZSI+PFZpZXdEZWZpbml0aW9uIHhzaTp0eXBlPSJUZWxlcmlrLldpbkNvbnRyb2xzLlVJLlRhYmxlVmlld0RlZmluaXRpb24iIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIC8+PC9NYXN0ZXJUZW1wbGF0ZT48L1JhZEdyaWRWaWV3Pg=="
+
     Private mvarObjLizenz As Lizensierung
 
     ''' <summary>
@@ -136,6 +139,27 @@ Public Class AktuellerBenutzer
     End Property
 
 
+    ''' <summary>
+    ''' Gets the  grid settings.
+    ''' </summary>
+    ''' <value>The  grid settings.</value>
+    Public ReadOnly Property GridDefaultSettings() As String
+        Get
+            Return mvarDefaultGridSettings
+        End Get
+    End Property
+
+    ''' <summary>
+    ''' Gets the  grid settings rhewa.
+    ''' </summary>
+    ''' <value>The  grid settings rhewa.</value>
+    Public ReadOnly Property GridDefaultSettingsRhewa() As String
+        Get
+            Return mvarDefaultGridSettingsRHEWA
+        End Get
+    End Property
+
+
     Public Shared ReadOnly Property Instance() As AktuellerBenutzer
         Get
             Return mobjSingletonObject
@@ -195,4 +219,74 @@ Public Class AktuellerBenutzer
             Return True
         End Using
     End Function
+
+
+
+    ''' <summary>
+    ''' Speichert Gridlayout als XML Stream, welcher in DB zum aktuellen Benutzer gespeichert wird
+    ''' </summary>
+    ''' <remarks></remarks>
+    Friend Shared Sub SpeichereGridLayout(ByVal uco As ucoEichprozessauswahlliste)
+        'speichere Layout der beiden Grids
+        If uco.GetType Is GetType(ucoEichprozessauswahlliste) Then
+            Dim gridProzesse = CType(uco, ucoEichprozessauswahlliste).RadGridViewAuswahlliste
+            Dim gridProzesseRHEWA = CType(uco, ucoEichprozessauswahlliste).RadGridViewRHEWAAlle
+            Try
+                Using stream As New IO.MemoryStream()
+                    gridProzesse.SaveLayout(stream)
+                    If Not stream Is Nothing Then
+                        stream.Position = 0
+                        Dim buffer As Byte() = New Byte(CInt(stream.Length) - 1) {}
+                        stream.Read(buffer, 0, buffer.Length)
+
+                        AktuellerBenutzer.Instance.GridSettings = Convert.ToBase64String(buffer)
+                    End If
+                End Using
+            Catch ex As Exception
+
+            End Try
+
+            Try
+                Using stream As New IO.MemoryStream()
+                    gridProzesseRHEWA.SaveLayout(stream)
+                    If Not stream Is Nothing Then
+                        stream.Position = 0
+                        Dim buffer As Byte() = New Byte(CInt(stream.Length) - 1) {}
+                        stream.Read(buffer, 0, buffer.Length)
+                        AktuellerBenutzer.Instance.GridSettingsRhewa = Convert.ToBase64String(buffer)
+                    End If
+                End Using
+            Catch ex As Exception
+            End Try
+        End If
+        AktuellerBenutzer.SaveSettings()
+
+    End Sub
+
+    Friend Shared Sub LadeGridLayout(uco As ucoEichprozessauswahlliste)
+        'laden des Grid Layouts aus User Settings
+        Try
+            If Not AktuellerBenutzer.Instance.GridSettings.ToString.Equals("") Then
+                Using stream As New IO.MemoryStream(Convert.FromBase64String(AktuellerBenutzer.Instance.GridSettings))
+                    uco.RadGridViewAuswahlliste.LoadLayout(stream)
+
+                End Using
+            End If
+        Catch ex As Exception
+            'konnte layout nicht finden
+            Debug.WriteLine(ex.ToString)
+        End Try
+
+        'laden des RHEWA Grids aus User Settings
+        Try
+            If Not AktuellerBenutzer.Instance.GridSettingsRhewa.ToString.Equals("") Then
+                Using stream As New IO.MemoryStream(Convert.FromBase64String(AktuellerBenutzer.Instance.GridSettingsRhewa))
+                    uco.RadGridViewRHEWAAlle.LoadLayout(stream)
+                End Using
+            End If
+        Catch ex As Exception
+            'konnte layout nicht finden
+            Debug.WriteLine(ex.ToString)
+        End Try
+    End Sub
 End Class

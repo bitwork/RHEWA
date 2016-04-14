@@ -117,13 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="RadDateTimePickerSince.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadDateTimePickerSince.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>416, 189</value>
@@ -178,6 +171,16 @@ Es werden KEINE Daten gelöscht. Wenn Sie "Synchronisiere Alles" wählen, werden
   </data>
   <data name="RadButtonAbbrechen.Text" xml:space="preserve">
     <value>Abbrechen</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="RadButtonGridSettingsZuruecksetzen.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="RadButtonGridSettingsZuruecksetzen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>151, 40</value>
+  </data>
+  <data name="RadButtonGridSettingsZuruecksetzen.Text" xml:space="preserve">
+    <value>Tabellenformat zurücksetzen</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>790, 302</value>

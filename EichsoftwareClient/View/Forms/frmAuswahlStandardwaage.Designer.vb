@@ -22,6 +22,7 @@ Partial Class FrmAuswahlStandardwaage
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim TableViewDefinition1 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Me.RadGridViewStandardwaagen = New Telerik.WinControls.UI.RadGridView()
         Me.RadButtonZuordnen = New Telerik.WinControls.UI.RadButton()
         CType(Me.RadGridViewStandardwaagen, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -32,9 +33,10 @@ Partial Class FrmAuswahlStandardwaage
         '
         'RadGridViewStandardwaagen
         '
-        Me.RadGridViewStandardwaagen.Location = New System.Drawing.Point(0, 3)
+        Me.RadGridViewStandardwaagen.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.RadGridViewStandardwaagen.Location = New System.Drawing.Point(0, 0)
         '
-        'RadGridViewStandardwaagen
+        '
         '
         Me.RadGridViewStandardwaagen.MasterTemplate.AllowAddNewRow = False
         Me.RadGridViewStandardwaagen.MasterTemplate.AllowCellContextMenu = False
@@ -45,8 +47,10 @@ Partial Class FrmAuswahlStandardwaage
         Me.RadGridViewStandardwaagen.MasterTemplate.AllowDragToGroup = False
         Me.RadGridViewStandardwaagen.MasterTemplate.AllowEditRow = False
         Me.RadGridViewStandardwaagen.MasterTemplate.EnableFiltering = True
+        Me.RadGridViewStandardwaagen.MasterTemplate.ViewDefinition = TableViewDefinition1
         Me.RadGridViewStandardwaagen.Name = "RadGridViewStandardwaagen"
-        Me.RadGridViewStandardwaagen.Size = New System.Drawing.Size(1142, 521)
+        Me.RadGridViewStandardwaagen.ShowNoDataText = False
+        Me.RadGridViewStandardwaagen.Size = New System.Drawing.Size(1145, 557)
         Me.RadGridViewStandardwaagen.TabIndex = 0
         Me.RadGridViewStandardwaagen.Text = "RadGridView1"
         '

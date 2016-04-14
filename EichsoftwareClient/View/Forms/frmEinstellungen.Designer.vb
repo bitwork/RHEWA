@@ -33,6 +33,7 @@ Partial Class FrmEinstellungen
         Me.RadRadioButtonSyncAlles = New Telerik.WinControls.UI.RadRadioButton()
         Me.RadButtonOK = New Telerik.WinControls.UI.RadButton()
         Me.RadButtonAbbrechen = New Telerik.WinControls.UI.RadButton()
+        Me.RadButtonGridSettingsZuruecksetzen = New Telerik.WinControls.UI.RadButton()
         CType(Me.RadGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBox1.SuspendLayout()
         CType(Me.RadDateTimePickerEnd, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -43,6 +44,7 @@ Partial Class FrmEinstellungen
         CType(Me.RadRadioButtonSyncAlles, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonOK, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonAbbrechen, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadButtonGridSettingsZuruecksetzen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -57,153 +59,87 @@ Partial Class FrmEinstellungen
         Me.RadGroupBox1.Controls.Add(Me.RadRadioButtonSyncZwischen)
         Me.RadGroupBox1.Controls.Add(Me.RadRadioButtonSyncSeit)
         Me.RadGroupBox1.Controls.Add(Me.RadRadioButtonSyncAlles)
-        Me.RadGroupBox1.FooterImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadGroupBox1.HeaderImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadGroupBox1.Name = "RadGroupBox1"
         '
         '
         '
-        Me.RadGroupBox1.RootElement.AccessibleDescription = resources.GetString("RadGroupBox1.RootElement.AccessibleDescription")
-        Me.RadGroupBox1.RootElement.AccessibleName = resources.GetString("RadGroupBox1.RootElement.AccessibleName")
-        Me.RadGroupBox1.RootElement.Alignment = CType(resources.GetObject("RadGroupBox1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadGroupBox1.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBox1.RootElement.AngleTransform"), Single)
-        Me.RadGroupBox1.RootElement.FlipText = CType(resources.GetObject("RadGroupBox1.RootElement.FlipText"), Boolean)
-        Me.RadGroupBox1.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadGroupBox1.RootElement.Margin = CType(resources.GetObject("RadGroupBox1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadGroupBox1.RootElement.Text = resources.GetString("RadGroupBox1.RootElement.Text")
-        Me.RadGroupBox1.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBox1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadGroupBox1.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadGroupBox1.RootElement.AccessibleDescription = Nothing
+        Me.RadGroupBox1.RootElement.AccessibleName = Nothing
         '
         'RadDateTimePickerEnd
         '
         resources.ApplyResources(Me.RadDateTimePickerEnd, "RadDateTimePickerEnd")
-        Me.RadDateTimePickerEnd.CustomFormat = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadDateTimePickerEnd.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.RadDateTimePickerEnd.Name = "RadDateTimePickerEnd"
         '
         '
         '
-        Me.RadDateTimePickerEnd.RootElement.AccessibleDescription = resources.GetString("RadDateTimePickerEnd.RootElement.AccessibleDescription")
-        Me.RadDateTimePickerEnd.RootElement.AccessibleName = resources.GetString("RadDateTimePickerEnd.RootElement.AccessibleName")
-        Me.RadDateTimePickerEnd.RootElement.Alignment = CType(resources.GetObject("RadDateTimePickerEnd.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadDateTimePickerEnd.RootElement.AngleTransform = CType(resources.GetObject("RadDateTimePickerEnd.RootElement.AngleTransform"), Single)
-        Me.RadDateTimePickerEnd.RootElement.FlipText = CType(resources.GetObject("RadDateTimePickerEnd.RootElement.FlipText"), Boolean)
-        Me.RadDateTimePickerEnd.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadDateTimePickerEnd.RootElement.Margin = CType(resources.GetObject("RadDateTimePickerEnd.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadDateTimePickerEnd.RootElement.Text = resources.GetString("RadDateTimePickerEnd.RootElement.Text")
-        Me.RadDateTimePickerEnd.RootElement.TextOrientation = CType(resources.GetObject("RadDateTimePickerEnd.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadDateTimePickerEnd.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadDateTimePickerEnd.RootElement.AccessibleDescription = Nothing
+        Me.RadDateTimePickerEnd.RootElement.AccessibleName = Nothing
         Me.RadDateTimePickerEnd.TabStop = False
         Me.RadDateTimePickerEnd.Value = New Date(2014, 2, 12, 11, 45, 34, 423)
         '
         'RadDateTimePickerStart
         '
         resources.ApplyResources(Me.RadDateTimePickerStart, "RadDateTimePickerStart")
-        Me.RadDateTimePickerStart.CustomFormat = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadDateTimePickerStart.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.RadDateTimePickerStart.Name = "RadDateTimePickerStart"
         '
         '
         '
-        Me.RadDateTimePickerStart.RootElement.AccessibleDescription = resources.GetString("RadDateTimePickerStart.RootElement.AccessibleDescription")
-        Me.RadDateTimePickerStart.RootElement.AccessibleName = resources.GetString("RadDateTimePickerStart.RootElement.AccessibleName")
-        Me.RadDateTimePickerStart.RootElement.Alignment = CType(resources.GetObject("RadDateTimePickerStart.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadDateTimePickerStart.RootElement.AngleTransform = CType(resources.GetObject("RadDateTimePickerStart.RootElement.AngleTransform"), Single)
-        Me.RadDateTimePickerStart.RootElement.FlipText = CType(resources.GetObject("RadDateTimePickerStart.RootElement.FlipText"), Boolean)
-        Me.RadDateTimePickerStart.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadDateTimePickerStart.RootElement.Margin = CType(resources.GetObject("RadDateTimePickerStart.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadDateTimePickerStart.RootElement.Text = resources.GetString("RadDateTimePickerStart.RootElement.Text")
-        Me.RadDateTimePickerStart.RootElement.TextOrientation = CType(resources.GetObject("RadDateTimePickerStart.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadDateTimePickerStart.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadDateTimePickerStart.RootElement.AccessibleDescription = Nothing
+        Me.RadDateTimePickerStart.RootElement.AccessibleName = Nothing
         Me.RadDateTimePickerStart.TabStop = False
         Me.RadDateTimePickerStart.Value = New Date(2014, 2, 12, 11, 45, 34, 423)
         '
         'RadDateTimePickerSince
         '
         resources.ApplyResources(Me.RadDateTimePickerSince, "RadDateTimePickerSince")
-        Me.RadDateTimePickerSince.CustomFormat = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadDateTimePickerSince.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.RadDateTimePickerSince.Name = "RadDateTimePickerSince"
         '
         '
         '
-        Me.RadDateTimePickerSince.RootElement.AccessibleDescription = resources.GetString("RadDateTimePickerSince.RootElement.AccessibleDescription")
-        Me.RadDateTimePickerSince.RootElement.AccessibleName = resources.GetString("RadDateTimePickerSince.RootElement.AccessibleName")
-        Me.RadDateTimePickerSince.RootElement.Alignment = CType(resources.GetObject("RadDateTimePickerSince.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadDateTimePickerSince.RootElement.AngleTransform = CType(resources.GetObject("RadDateTimePickerSince.RootElement.AngleTransform"), Single)
-        Me.RadDateTimePickerSince.RootElement.FlipText = CType(resources.GetObject("RadDateTimePickerSince.RootElement.FlipText"), Boolean)
-        Me.RadDateTimePickerSince.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadDateTimePickerSince.RootElement.Margin = CType(resources.GetObject("RadDateTimePickerSince.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadDateTimePickerSince.RootElement.Text = resources.GetString("RadDateTimePickerSince.RootElement.Text")
-        Me.RadDateTimePickerSince.RootElement.TextOrientation = CType(resources.GetObject("RadDateTimePickerSince.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadDateTimePickerSince.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadDateTimePickerSince.RootElement.AccessibleDescription = Nothing
+        Me.RadDateTimePickerSince.RootElement.AccessibleName = Nothing
         Me.RadDateTimePickerSince.TabStop = False
         Me.RadDateTimePickerSince.Value = New Date(2014, 2, 12, 11, 45, 34, 423)
         '
         'Label1
         '
         resources.ApplyResources(Me.Label1, "Label1")
-        Me.Label1.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.Label1.Name = "Label1"
         '
         'RadRadioButtonSyncZwischen
         '
         resources.ApplyResources(Me.RadRadioButtonSyncZwischen, "RadRadioButtonSyncZwischen")
-        Me.RadRadioButtonSyncZwischen.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadRadioButtonSyncZwischen.Name = "RadRadioButtonSyncZwischen"
         '
         '
         '
-        Me.RadRadioButtonSyncZwischen.RootElement.AccessibleDescription = resources.GetString("RadRadioButtonSyncZwischen.RootElement.AccessibleDescription")
-        Me.RadRadioButtonSyncZwischen.RootElement.AccessibleName = resources.GetString("RadRadioButtonSyncZwischen.RootElement.AccessibleName")
-        Me.RadRadioButtonSyncZwischen.RootElement.Alignment = CType(resources.GetObject("RadRadioButtonSyncZwischen.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadRadioButtonSyncZwischen.RootElement.AngleTransform = CType(resources.GetObject("RadRadioButtonSyncZwischen.RootElement.AngleTransform"), Single)
-        Me.RadRadioButtonSyncZwischen.RootElement.FlipText = CType(resources.GetObject("RadRadioButtonSyncZwischen.RootElement.FlipText"), Boolean)
-        Me.RadRadioButtonSyncZwischen.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadRadioButtonSyncZwischen.RootElement.Margin = CType(resources.GetObject("RadRadioButtonSyncZwischen.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadRadioButtonSyncZwischen.RootElement.Text = resources.GetString("RadRadioButtonSyncZwischen.RootElement.Text")
-        Me.RadRadioButtonSyncZwischen.RootElement.TextOrientation = CType(resources.GetObject("RadRadioButtonSyncZwischen.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadRadioButtonSyncZwischen.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadRadioButtonSyncZwischen.RootElement.AccessibleDescription = Nothing
+        Me.RadRadioButtonSyncZwischen.RootElement.AccessibleName = Nothing
         '
         'RadRadioButtonSyncSeit
         '
         resources.ApplyResources(Me.RadRadioButtonSyncSeit, "RadRadioButtonSyncSeit")
-        Me.RadRadioButtonSyncSeit.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadRadioButtonSyncSeit.Name = "RadRadioButtonSyncSeit"
         '
         '
         '
-        Me.RadRadioButtonSyncSeit.RootElement.AccessibleDescription = resources.GetString("RadRadioButtonSyncSeit.RootElement.AccessibleDescription")
-        Me.RadRadioButtonSyncSeit.RootElement.AccessibleName = resources.GetString("RadRadioButtonSyncSeit.RootElement.AccessibleName")
-        Me.RadRadioButtonSyncSeit.RootElement.Alignment = CType(resources.GetObject("RadRadioButtonSyncSeit.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadRadioButtonSyncSeit.RootElement.AngleTransform = CType(resources.GetObject("RadRadioButtonSyncSeit.RootElement.AngleTransform"), Single)
-        Me.RadRadioButtonSyncSeit.RootElement.FlipText = CType(resources.GetObject("RadRadioButtonSyncSeit.RootElement.FlipText"), Boolean)
-        Me.RadRadioButtonSyncSeit.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadRadioButtonSyncSeit.RootElement.Margin = CType(resources.GetObject("RadRadioButtonSyncSeit.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadRadioButtonSyncSeit.RootElement.Text = resources.GetString("RadRadioButtonSyncSeit.RootElement.Text")
-        Me.RadRadioButtonSyncSeit.RootElement.TextOrientation = CType(resources.GetObject("RadRadioButtonSyncSeit.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadRadioButtonSyncSeit.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadRadioButtonSyncSeit.RootElement.AccessibleDescription = Nothing
+        Me.RadRadioButtonSyncSeit.RootElement.AccessibleName = Nothing
         '
         'RadRadioButtonSyncAlles
         '
         resources.ApplyResources(Me.RadRadioButtonSyncAlles, "RadRadioButtonSyncAlles")
-        Me.RadRadioButtonSyncAlles.AccessibleName = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadRadioButtonSyncAlles.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.RadRadioButtonSyncAlles.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadRadioButtonSyncAlles.Name = "RadRadioButtonSyncAlles"
         '
         '
         '
-        Me.RadRadioButtonSyncAlles.RootElement.AccessibleDescription = resources.GetString("RadRadioButtonSyncAlles.RootElement.AccessibleDescription")
-        Me.RadRadioButtonSyncAlles.RootElement.AccessibleName = resources.GetString("RadRadioButtonSyncAlles.RootElement.AccessibleName")
-        Me.RadRadioButtonSyncAlles.RootElement.Alignment = CType(resources.GetObject("RadRadioButtonSyncAlles.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadRadioButtonSyncAlles.RootElement.AngleTransform = CType(resources.GetObject("RadRadioButtonSyncAlles.RootElement.AngleTransform"), Single)
-        Me.RadRadioButtonSyncAlles.RootElement.FlipText = CType(resources.GetObject("RadRadioButtonSyncAlles.RootElement.FlipText"), Boolean)
-        Me.RadRadioButtonSyncAlles.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadRadioButtonSyncAlles.RootElement.Margin = CType(resources.GetObject("RadRadioButtonSyncAlles.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadRadioButtonSyncAlles.RootElement.Text = resources.GetString("RadRadioButtonSyncAlles.RootElement.Text")
-        Me.RadRadioButtonSyncAlles.RootElement.TextOrientation = CType(resources.GetObject("RadRadioButtonSyncAlles.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadRadioButtonSyncAlles.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadRadioButtonSyncAlles.RootElement.AccessibleDescription = Nothing
+        Me.RadRadioButtonSyncAlles.RootElement.AccessibleName = Nothing
         Me.RadRadioButtonSyncAlles.ToggleState = Telerik.WinControls.Enumerations.ToggleState.[On]
         '
         'RadButtonOK
@@ -211,45 +147,33 @@ Partial Class FrmEinstellungen
         resources.ApplyResources(Me.RadButtonOK, "RadButtonOK")
         Me.RadButtonOK.DialogResult = System.Windows.Forms.DialogResult.OK
         Me.RadButtonOK.Image = Global.EichsoftwareClient.My.Resources.Resources.disk
-        Me.RadButtonOK.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadButtonOK.Name = "RadButtonOK"
         '
         '
         '
-        Me.RadButtonOK.RootElement.AccessibleDescription = resources.GetString("RadButtonOK.RootElement.AccessibleDescription")
-        Me.RadButtonOK.RootElement.AccessibleName = resources.GetString("RadButtonOK.RootElement.AccessibleName")
-        Me.RadButtonOK.RootElement.Alignment = CType(resources.GetObject("RadButtonOK.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadButtonOK.RootElement.AngleTransform = CType(resources.GetObject("RadButtonOK.RootElement.AngleTransform"), Single)
-        Me.RadButtonOK.RootElement.FlipText = CType(resources.GetObject("RadButtonOK.RootElement.FlipText"), Boolean)
-        Me.RadButtonOK.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadButtonOK.RootElement.Margin = CType(resources.GetObject("RadButtonOK.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButtonOK.RootElement.Text = resources.GetString("RadButtonOK.RootElement.Text")
-        Me.RadButtonOK.RootElement.TextOrientation = CType(resources.GetObject("RadButtonOK.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadButtonOK.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadButtonOK.RootElement.AccessibleDescription = Nothing
+        Me.RadButtonOK.RootElement.AccessibleName = Nothing
         '
         'RadButtonAbbrechen
         '
         resources.ApplyResources(Me.RadButtonAbbrechen, "RadButtonAbbrechen")
-        Me.RadButtonAbbrechen.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadButtonAbbrechen.Name = "RadButtonAbbrechen"
         '
         '
         '
-        Me.RadButtonAbbrechen.RootElement.AccessibleDescription = resources.GetString("RadButtonAbbrechen.RootElement.AccessibleDescription")
-        Me.RadButtonAbbrechen.RootElement.AccessibleName = resources.GetString("RadButtonAbbrechen.RootElement.AccessibleName")
-        Me.RadButtonAbbrechen.RootElement.Alignment = CType(resources.GetObject("RadButtonAbbrechen.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadButtonAbbrechen.RootElement.AngleTransform = CType(resources.GetObject("RadButtonAbbrechen.RootElement.AngleTransform"), Single)
-        Me.RadButtonAbbrechen.RootElement.FlipText = CType(resources.GetObject("RadButtonAbbrechen.RootElement.FlipText"), Boolean)
-        Me.RadButtonAbbrechen.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadButtonAbbrechen.RootElement.Margin = CType(resources.GetObject("RadButtonAbbrechen.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButtonAbbrechen.RootElement.Text = resources.GetString("RadButtonAbbrechen.RootElement.Text")
-        Me.RadButtonAbbrechen.RootElement.TextOrientation = CType(resources.GetObject("RadButtonAbbrechen.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadButtonAbbrechen.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadButtonAbbrechen.RootElement.AccessibleDescription = Nothing
+        Me.RadButtonAbbrechen.RootElement.AccessibleName = Nothing
+        '
+        'RadButtonGridSettingsZuruecksetzen
+        '
+        resources.ApplyResources(Me.RadButtonGridSettingsZuruecksetzen, "RadButtonGridSettingsZuruecksetzen")
+        Me.RadButtonGridSettingsZuruecksetzen.Name = "RadButtonGridSettingsZuruecksetzen"
         '
         'FrmEinstellungen
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.RadButtonGridSettingsZuruecksetzen)
         Me.Controls.Add(Me.RadButtonAbbrechen)
         Me.Controls.Add(Me.RadButtonOK)
         Me.Controls.Add(Me.RadGroupBox1)
@@ -257,17 +181,9 @@ Partial Class FrmEinstellungen
         '
         '
         '
-        Me.RootElement.AccessibleDescription = resources.GetString("FrmEinstellungen.RootElement.AccessibleDescription")
-        Me.RootElement.AccessibleName = resources.GetString("FrmEinstellungen.RootElement.AccessibleName")
-        Me.RootElement.Alignment = CType(resources.GetObject("FrmEinstellungen.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RootElement.AngleTransform = CType(resources.GetObject("FrmEinstellungen.RootElement.AngleTransform"), Single)
+        Me.RootElement.AccessibleDescription = Nothing
+        Me.RootElement.AccessibleName = Nothing
         Me.RootElement.ApplyShapeToControl = True
-        Me.RootElement.FlipText = CType(resources.GetObject("FrmEinstellungen.RootElement.FlipText"), Boolean)
-        Me.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RootElement.Margin = CType(resources.GetObject("FrmEinstellungen.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RootElement.Text = resources.GetString("FrmEinstellungen.RootElement.Text")
-        Me.RootElement.TextOrientation = CType(resources.GetObject("FrmEinstellungen.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
         CType(Me.RadGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -281,6 +197,7 @@ Partial Class FrmEinstellungen
         CType(Me.RadRadioButtonSyncAlles, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonOK, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonAbbrechen, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadButtonGridSettingsZuruecksetzen, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -295,5 +212,6 @@ Partial Class FrmEinstellungen
     Friend WithEvents RadDateTimePickerEnd As Telerik.WinControls.UI.RadDateTimePicker
     Friend WithEvents RadDateTimePickerStart As Telerik.WinControls.UI.RadDateTimePicker
     Friend WithEvents RadDateTimePickerSince As Telerik.WinControls.UI.RadDateTimePicker
+    Friend WithEvents RadButtonGridSettingsZuruecksetzen As Telerik.WinControls.UI.RadButton
 End Class
 

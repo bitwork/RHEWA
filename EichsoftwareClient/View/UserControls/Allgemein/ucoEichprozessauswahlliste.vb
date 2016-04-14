@@ -171,12 +171,15 @@
         RadGridViewAuswahlliste.Columns("Lookup_Waagenart").HeaderText = My.Resources.GlobaleLokalisierung.Waagenart
         RadGridViewAuswahlliste.Columns("Fabriknummer").HeaderText = My.Resources.GlobaleLokalisierung.Fabriknummer
 
+        RadGridViewAuswahlliste.ShowFilteringRow = True
+
+        RadGridViewRHEWAAlle.ShowFilteringRow = True
+
         'spaltengrößen anpassen (so viel platz wie möglich nehmen)
         'RadGridViewAuswahlliste.BestFitColumns()
         'RadGridViewAuswahlliste.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
         RadGridViewAuswahlliste.BestFitColumns()
         RadGridViewAuswahlliste.EnableAlternatingRowColor = True
-        RadGridViewAuswahlliste.ShowNoDataText = True
         RadGridViewAuswahlliste.SelectionMode = Telerik.WinControls.UI.GridViewSelectionMode.FullRowSelect
         RadGridViewAuswahlliste.AutoExpandGroups = True
         Try
@@ -277,6 +280,12 @@
         If f.DialogResult = DialogResult.OK Then
             'neu aktualisierung der Eichungen
             VerbindeMitWebserviceUndHoleAlles()
+            'aktualisieren des Grids
+            LoadFromDatabase()
+        ElseIf f.DialogResult = DialogResult.Retry Then
+            RadGridViewAuswahlliste.DataSource = Nothing
+            RadGridViewRHEWAAlle.DataSource = Nothing
+            AktuellerBenutzer.LadeGridLayout(Me)
             'aktualisieren des Grids
             LoadFromDatabase()
         End If
@@ -462,8 +471,11 @@
         Dim index As Integer = 0
         Dim groupIndex As Integer = 0
         Try
-            index = RadGridViewAuswahlliste.SelectedRows(0).Index
-            groupIndex = RadGridViewAuswahlliste.SelectedRows(0).Group.GroupRow.Index
+            If RadGridViewAuswahlliste.SelectedRows.Count > 0 Then
+                index = RadGridViewAuswahlliste.SelectedRows(0).Index
+                groupIndex = RadGridViewAuswahlliste.SelectedRows(0).Group.GroupRow.Index
+            End If
+
         Catch ex As Exception
         End Try
         RadGridViewAuswahlliste.DataSource = e.Result
@@ -523,9 +535,10 @@
         Dim index As Integer = 0
         Dim groupIndex As Integer = 0
         Try
-            index = RadGridViewRHEWAAlle.SelectedRows(0).Index
-            groupIndex = RadGridViewRHEWAAlle.SelectedRows(0).Group.GroupRow.Index
-
+            If Not RadGridViewRHEWAAlle.SelectedRows.Count > 0 Then
+                index = RadGridViewRHEWAAlle.SelectedRows(0).Index
+                groupIndex = RadGridViewRHEWAAlle.SelectedRows(0).Group.GroupRow.Index
+            End If
         Catch ex As Exception
         End Try
 
