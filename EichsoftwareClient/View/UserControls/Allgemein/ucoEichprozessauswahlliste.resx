@@ -253,7 +253,7 @@
     <value>2</value>
   </data>
   <data name="RadCheckBoxAusblendenClientGeloeschterDokumente.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
+    <value>Bottom, Left</value>
   </data>
   <data name="RadCheckBoxAusblendenClientGeloeschterDokumente.Location" type="System.Drawing.Point, System.Drawing">
     <value>256, 432</value>
@@ -865,6 +865,6 @@
     <value>ucoEichprozessauswahlliste</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.5948.18868, Culture=neutral, PublicKeyToken=null</value>
+    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.5948.22341, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

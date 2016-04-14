@@ -229,6 +229,7 @@
     <Compile Include="Model\clsGeneralFunctions.vb" />
     <Compile Include="Model\clsOfficeExports.vb" />
     <Compile Include="Model\clsWebserviceFunctions.vb" />
+    <Compile Include="Model\telerikgridlocalizer.vb" />
     <Compile Include="Mogelstatistik.vb">
       <DependentUpon>EntityModelDatabaseClient.tt</DependentUpon>
     </Compile>
@@ -1058,35 +1059,12 @@
     <None Include="Resources\Fahrzeug_Wenden_PL.PNG" />
     <None Include="Resources\LKW.PNG" />
     <None Include="Resources\LKW_Gedreht.PNG" />
-    <None Include="Resources\82Alpha_Beschilderung_Auswertegeraet.PNG" />
-    <None Include="Resources\82Alpha_Beschilderung_Auswertegeraet_Frontseite.PNG" />
-    <None Include="Resources\82Alpha_CEXY_Auswertegeraet.PNG" />
-    <None Include="Resources\82Basic_Beschilderung_Auswertegeraet.PNG" />
-    <None Include="Resources\82Basic_CEXY_Auswertegeraet.PNG" />
-    <None Include="Resources\83Z_Beschilderung_Auswertegeraet_Frontseite.PNG" />
-    <None Include="Resources\83Z_Beschilderung_Auswertegeraet_Rueckseite.PNG" />
-    <None Include="Resources\84_Beschilderung_Auswertegeraet_Frontseite.PNG" />
-    <None Include="Resources\84_Beschilderung_Auswertegeraet_Rueckseite.PNG" />
     <None Include="Resources\accept.png" />
     <None Include="Resources\error.png" />
     <None Include="Resources\database_refresh.png" />
     <None Include="Resources\cog.png" />
     <None Include="Resources\attach.png" />
-    <None Include="Resources\82Vario_Beschilderung_Auswertegeraet.PNG" />
-    <None Include="Resources\82Vario_Beschilderung_Auswertegeraet_Unterseite.PNG" />
     <None Include="Resources\82 Seite.PNG" />
-    <None Include="Resources\neu\82b plus front.png" />
-    <None Include="Resources\neu\82b plus typenschild.png" />
-    <None Include="Resources\neu\82c plus front.png" />
-    <None Include="Resources\neu\82c plus typenschild.png" />
-    <None Include="Resources\neu\82comfort front.png" />
-    <None Include="Resources\neu\82comfort typenschild.png" />
-    <None Include="Resources\neu\82e plus front.png" />
-    <None Include="Resources\neu\82e plus typenschild.png" />
-    <None Include="Resources\neu\82edition front.png" />
-    <None Include="Resources\neu\82edition typenschild.png" />
-    <None Include="Resources\neu\83sigma front.png" />
-    <None Include="Resources\neu\83sigma typenschild.png" />
     <None Include="Resources\82Alpha front.png" />
     <None Include="Resources\82Alpha typenschild.PNG" />
     <None Include="Resources\82b plus front.png" />
@@ -1101,8 +1079,6 @@
     <None Include="Resources\82e plus typenschild.png" />
     <None Include="Resources\82edition front.png" />
     <None Include="Resources\82edition typenschild.png" />
-    <None Include="Resources\82Vario front.PNG" />
-    <None Include="Resources\82Vario typenschild.PNG" />
     <None Include="Resources\83sigma front.png" />
     <None Include="Resources\83sigma typenschild.png" />
     <None Include="Resources\83Z front.PNG" />

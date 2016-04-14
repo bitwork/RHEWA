@@ -227,6 +227,12 @@
             Me.RadButtonClientNeu.Text = resources.GetString("RadButtonClientNeu.Text")
             Me.RadCheckBoxAusblendenClientGeloeschterDokumente.Text = resources.GetString("RadCheckBoxAusblendenClientGeloeschterDokumente.Text")
 
+            If AktuellerBenutzer.Instance.AktuelleSprache = "de" Then
+                Telerik.WinControls.UI.Localization.RadGridLocalizationProvider.CurrentProvider = New telerikgridlocalizerDE
+            Else
+                Telerik.WinControls.UI.Localization.RadGridLocalizationProvider.CurrentProvider = New telerikgridlocalizerEN
+
+            End If
             'Hilfetext setzen
             ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_Auswahlliste)
             'Überschrift setzen
@@ -359,7 +365,10 @@
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
-    Private Sub RadGridViewAuswahlliste_DoubleClick(sender As Object, e As EventArgs) Handles RadGridViewAuswahlliste.CellDoubleClick
+    Private Sub RadGridViewAuswahlliste_DoubleClick(sender As Object, e As Telerik.WinControls.UI.GridViewCellEventArgs) Handles RadGridViewAuswahlliste.CellDoubleClick
+        If RadGridViewAuswahlliste.SelectedRows.Count = 0 Then Exit Sub
+        If Not TypeOf e.Row Is Telerik.WinControls.UI.GridViewDataRowInfo Then Exit Sub
+
         BearbeiteEichprozess()
     End Sub
 
@@ -372,7 +381,7 @@
         If Not objEichprozess Is Nothing Then
             'anzeigen des Dialogs zur Bearbeitung der Eichung
             Dim f As New FrmMainContainer(objEichprozess)
-           f.Show()
+            f.Show()
             AddHandler f.FormClosed, AddressOf LoadFromDatabase
         End If
     End Sub
@@ -479,7 +488,7 @@
         Catch ex As Exception
         End Try
         RadGridViewAuswahlliste.DataSource = e.Result
-    
+
         'Spalten ein und ausblenden und formatieren
         FormatTable()
 
@@ -543,7 +552,7 @@
         End Try
 
         RadGridViewRHEWAAlle.DataSource = e.Result
-     
+
         Try
             Try
                 'Spalten ein und ausblenden und formatieren
@@ -738,6 +747,10 @@
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub RadGridViewRHEWAAlle_CellDoubleClick(sender As Object, e As Telerik.WinControls.UI.GridViewCellEventArgs) Handles RadGridViewRHEWAAlle.CellDoubleClick
+        If RadGridViewRHEWAAlle.SelectedRows.Count = 0 Then Exit Sub
+        If Not TypeOf e.Row Is Telerik.WinControls.UI.GridViewDataRowInfo Then Exit Sub
+
+
         Try
             If (RadGridViewRHEWAAlle.Columns(e.ColumnIndex).Name = "AnhangPfad") Then
 
@@ -813,7 +826,7 @@
                 Dim keySize As Integer = 256
                 ' can be 192 or 128
 
-                password = RijndaelSimple.Decrypt(password, passPhrase, saltValue, hashAlgorithm, passwordIterations, initVector, _
+                password = RijndaelSimple.Decrypt(password, passPhrase, saltValue, hashAlgorithm, passwordIterations, initVector,
                     keySize)
 
 

@@ -1103,8 +1103,9 @@ Public Class FrmMainContainer
             End If
         End If
         If Not AktuellerBenutzer.Instance Is Nothing And Not Me._CurrentUco Is Nothing Then
-            AktuellerBenutzer.SpeichereGridLayout(Me._CurrentUco)
-
+            If Me._CurrentUco.GetType Is GetType(ucoEichprozessauswahlliste) Then
+                AktuellerBenutzer.SpeichereGridLayout(Me._CurrentUco)
+            End If
         End If
     End Sub
 

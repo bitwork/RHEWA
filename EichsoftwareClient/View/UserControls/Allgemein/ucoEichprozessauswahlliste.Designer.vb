@@ -88,9 +88,12 @@ Partial Class ucoEichprozessauswahlliste
         '
         Me.RadGridViewAuswahlliste.MasterTemplate.AllowAddNewRow = False
         Me.RadGridViewAuswahlliste.MasterTemplate.AllowCellContextMenu = False
+        Me.RadGridViewAuswahlliste.MasterTemplate.AllowColumnChooser = False
+        Me.RadGridViewAuswahlliste.MasterTemplate.AllowColumnHeaderContextMenu = False
         Me.RadGridViewAuswahlliste.MasterTemplate.AllowDeleteRow = False
-        Me.RadGridViewAuswahlliste.MasterTemplate.AllowDragToGroup = False
         Me.RadGridViewAuswahlliste.MasterTemplate.AllowEditRow = False
+        Me.RadGridViewAuswahlliste.MasterTemplate.AllowRowHeaderContextMenu = False
+        Me.RadGridViewAuswahlliste.MasterTemplate.AllowSearchRow = True
         Me.RadGridViewAuswahlliste.MasterTemplate.ShowGroupedColumns = True
         Me.RadGridViewAuswahlliste.MasterTemplate.ViewDefinition = TableViewDefinition1
         Me.RadGridViewAuswahlliste.Name = "RadGridViewAuswahlliste"
@@ -238,6 +241,7 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadGridViewRHEWAAlle.MasterTemplate.AllowCellContextMenu = False
         Me.RadGridViewRHEWAAlle.MasterTemplate.AllowDeleteRow = False
         Me.RadGridViewRHEWAAlle.MasterTemplate.AllowEditRow = False
+        Me.RadGridViewRHEWAAlle.MasterTemplate.AllowSearchRow = True
         Me.RadGridViewRHEWAAlle.MasterTemplate.ShowGroupedColumns = True
         Me.RadGridViewRHEWAAlle.MasterTemplate.ViewDefinition = TableViewDefinition2
         Me.RadGridViewRHEWAAlle.Name = "RadGridViewRHEWAAlle"
