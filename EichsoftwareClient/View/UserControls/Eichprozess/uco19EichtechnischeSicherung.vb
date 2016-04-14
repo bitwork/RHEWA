@@ -153,9 +153,6 @@
 
 
         'checkboxen
-        If Not objEichprozess.Eichprotokoll.Sicherung_BenannteStelle Is Nothing Then
-            RadCheckBoxBenannteStelle.Checked = objEichprozess.Eichprotokoll.Sicherung_BenannteStelle
-        End If
 
         If Not objEichprozess.Eichprotokoll.Sicherung_Eichsiegel13x13 Is Nothing Then
             RadCheckBoxEichsiegel13x13.Checked = objEichprozess.Eichprotokoll.Sicherung_Eichsiegel13x13
@@ -168,21 +165,14 @@
         If Not objEichprozess.Eichprotokoll.Sicherung_HinweismarkeGelocht Is Nothing Then
             RadCheckBoxHinweismarke.Checked = objEichprozess.Eichprotokoll.Sicherung_HinweismarkeGelocht
         End If
-        If Not objEichprozess.Eichprotokoll.Sicherung_GruenesM Is Nothing Then
-            RadCheckBoxGruenesM.Checked = objEichprozess.Eichprotokoll.Sicherung_GruenesM
-        End If
-        If Not objEichprozess.Eichprotokoll.Sicherung_CE Is Nothing Then
-            RadCheckBoxCEKennzeichen.Checked = objEichprozess.Eichprotokoll.Sicherung_CE
-        End If
+
         If Not objEichprozess.Eichprotokoll.Sicherung_CE2016 Is Nothing Then
             RadCheckBoxCE2016Kennzeichen.Checked = objEichprozess.Eichprotokoll.Sicherung_CE2016
         End If
 
 
         'anzahl
-        If Not objEichprozess.Eichprotokoll.Sicherung_BenannteStelleAnzahl Is Nothing Then
-            RadTextBoxControlBenannteStelle.Text = objEichprozess.Eichprotokoll.Sicherung_BenannteStelleAnzahl
-        End If
+
 
         If Not objEichprozess.Eichprotokoll.Sicherung_Eichsiegel13x13Anzahl Is Nothing Then
             RadTextBoxControlEichsiegel13x13.Text = objEichprozess.Eichprotokoll.Sicherung_Eichsiegel13x13Anzahl
@@ -195,12 +185,7 @@
         If Not objEichprozess.Eichprotokoll.Sicherung_HinweismarkeGelochtAnzahl Is Nothing Then
             RadTextBoxControlHinweismarke.Text = objEichprozess.Eichprotokoll.Sicherung_HinweismarkeGelochtAnzahl
         End If
-        If Not objEichprozess.Eichprotokoll.Sicherung_GruenesMAnzahl Is Nothing Then
-            RadTextBoxControlGruenesM.Text = objEichprozess.Eichprotokoll.Sicherung_GruenesMAnzahl
-        End If
-        If Not objEichprozess.Eichprotokoll.Sicherung_CEAnzahl Is Nothing Then
-            RadTextBoxControlCEKennzeichen.Text = objEichprozess.Eichprotokoll.Sicherung_CEAnzahl
-        End If
+
         If Not objEichprozess.Eichprotokoll.Sicherung_CE2016Anzahl Is Nothing Then
             RadTextBoxControlCE2016Kennzeichen.Text = objEichprozess.Eichprotokoll.Sicherung_CE2016Anzahl
         End If
@@ -236,12 +221,12 @@
     ''' <commentauthor></commentauthor>
     Private Sub UpdateObject()
         'checkboxen
-        objEichprozess.Eichprotokoll.Sicherung_BenannteStelle = RadCheckBoxBenannteStelle.Checked
+        objEichprozess.Eichprotokoll.Sicherung_BenannteStelle = False 'TODO obsolete
         objEichprozess.Eichprotokoll.Sicherung_Eichsiegel13x13 = RadCheckBoxEichsiegel13x13.Checked
         objEichprozess.Eichprotokoll.Sicherung_EichsiegelRund = RadCheckBoxEichsiegelRund.Checked
         objEichprozess.Eichprotokoll.Sicherung_HinweismarkeGelocht = RadCheckBoxHinweismarke.Checked
-        objEichprozess.Eichprotokoll.Sicherung_GruenesM = RadCheckBoxGruenesM.Checked
-        objEichprozess.Eichprotokoll.Sicherung_CE = RadCheckBoxCEKennzeichen.Checked
+        objEichprozess.Eichprotokoll.Sicherung_GruenesM = False 'TODO obsolete
+        objEichprozess.Eichprotokoll.Sicherung_CE = False 'TODO obsolete
         objEichprozess.Eichprotokoll.Sicherung_CE2016 = RadCheckBoxCE2016Kennzeichen.Checked
 
 
@@ -250,11 +235,8 @@
         'anzahl
         Try
 
-            If RadTextBoxControlBenannteStelle.Text.Trim.Equals("") Then
-                objEichprozess.Eichprotokoll.Sicherung_BenannteStelleAnzahl = 0
-            Else
-                objEichprozess.Eichprotokoll.Sicherung_BenannteStelleAnzahl = RadTextBoxControlBenannteStelle.Text
-            End If
+            objEichprozess.Eichprotokoll.Sicherung_BenannteStelleAnzahl = 0  'TODO obsolete
+
         Catch ex As Exception
         End Try
         Try
@@ -285,21 +267,14 @@
         Catch ex As Exception
         End Try
         Try
-            If RadTextBoxControlGruenesM.Text.Trim.Equals("") Then
-                objEichprozess.Eichprotokoll.Sicherung_GruenesMAnzahl = 0
-            Else
-                objEichprozess.Eichprotokoll.Sicherung_GruenesMAnzahl = RadTextBoxControlGruenesM.Text
 
-            End If
+            objEichprozess.Eichprotokoll.Sicherung_GruenesMAnzahl = 0  'TODO obsolete
+
         Catch ex As Exception
         End Try
         Try
-            If RadTextBoxControlCEKennzeichen.Text.Trim.Equals("") Then
-                objEichprozess.Eichprotokoll.Sicherung_CEAnzahl = 0
-            Else
-                objEichprozess.Eichprotokoll.Sicherung_CEAnzahl = RadTextBoxControlCEKennzeichen.Text
+            objEichprozess.Eichprotokoll.Sicherung_CEAnzahl = 0  'TODO obsolete
 
-            End If
         Catch ex As Exception
         End Try
         Try
@@ -334,12 +309,7 @@
         'prüfen ob alle Felder ausgefüllt sind
         Me.AbortSaving = False
 
-        If RadCheckBoxBenannteStelle.Checked Then
-            If RadTextBoxControlBenannteStelle.Text = "" Then
-                AbortSaving = True
-                RadTextBoxControlBenannteStelle.Focus()
-            End If
-        End If
+
 
         If RadCheckBoxEichsiegel13x13.Checked Then
             If RadTextBoxControlEichsiegel13x13.Text = "" Then
@@ -362,17 +332,11 @@
             End If
         End If
 
-        If RadCheckBoxGruenesM.Checked Then
-            If RadTextBoxControlGruenesM.Text = "" Then
-                AbortSaving = True
-                RadTextBoxControlGruenesM.Focus()
-            End If
-        End If
 
-        If RadCheckBoxCEKennzeichen.Checked Then
-            If RadTextBoxControlCEKennzeichen.Text = "" Then
+        If RadCheckBoxCE2016Kennzeichen.Checked Then
+            If RadTextBoxControlCE2016Kennzeichen.Text = "" Then
                 AbortSaving = True
-                RadTextBoxControlCEKennzeichen.Focus()
+                RadTextBoxControlCE2016Kennzeichen.Focus()
             End If
         End If
 
@@ -519,12 +483,10 @@
         Me.lblAnzahl.Text = resources.GetString("lblAnzahl.Text")
         Me.lblAufbewahrungsdauer.Text = resources.GetString("lblAufbewahrungsdauer.Text")
         Me.lblBemerkungen.Text = resources.GetString("lblBemerkungen.Text")
-        Me.lblBenannteStelle.Text = resources.GetString("lblBenannteStelle.Text")
-        Me.lblCEKennzeichen.Text = resources.GetString("lblCEKennzeichen.Text")
+
         Me.lblDatenKonfiguration.Text = resources.GetString("lblDatenKonfiguration.Text")
         Me.lblEichsiegel13x13.Text = resources.GetString("lblEichsiegel13x13.Text")
         Me.lblEichsiegelRund.Text = resources.GetString("lblEichsiegelRund.Text")
-        Me.lblGruenesM.Text = resources.GetString("lblGruenesM.Text")
         Me.lblHinweismarke.Text = resources.GetString("lblHinweismarke.Text")
         Me.lblSicherungshinweise.Text = resources.GetString("lblSicherungshinweise.Text")
 
@@ -545,14 +507,7 @@
     End Sub
 
 #Region "Checkboxen EVents mit Textboxen"
-    Private Sub RadCheckBoxBenannteStelle_ToggleStateChanged(sender As Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadCheckBoxBenannteStelle.ToggleStateChanged
-        RadTextBoxControlBenannteStelle.ReadOnly = Not RadCheckBoxBenannteStelle.Checked
-        PictureBoxBenannteStelle.Visible = Not RadCheckBoxBenannteStelle.Checked
 
-        If RadCheckBoxBenannteStelle.Checked = False Then
-            RadTextBoxControlBenannteStelle.Text = ""
-        End If
-    End Sub
 
     Private Sub RadCheckBoxEichsiegel13x13_ToggleStateChanged(sender As Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadCheckBoxEichsiegel13x13.ToggleStateChanged
         RadTextBoxControlEichsiegel13x13.ReadOnly = Not RadCheckBoxEichsiegel13x13.Checked
@@ -581,23 +536,6 @@
         End If
     End Sub
 
-    Private Sub RadCheckBoxGrunesM_ToggleStateChanged(sender As Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadCheckBoxGruenesM.ToggleStateChanged
-        RadTextBoxControlGruenesM.ReadOnly = Not RadCheckBoxGruenesM.Checked
-        PictureBoxGruenesM.Visible = Not RadCheckBoxGruenesM.Checked
-
-        If RadCheckBoxGruenesM.Checked = False Then
-            RadTextBoxControlGruenesM.Text = ""
-        End If
-    End Sub
-
-    Private Sub RadCheckBoxCE_ToggleStateChanged(sender As Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadCheckBoxCEKennzeichen.ToggleStateChanged
-        RadTextBoxControlCEKennzeichen.ReadOnly = Not RadCheckBoxCEKennzeichen.Checked
-        PictureBoxCE.Visible = Not RadCheckBoxCEKennzeichen.Checked
-
-        If RadCheckBoxCEKennzeichen.Checked = False Then
-            RadTextBoxControlCEKennzeichen.Text = ""
-        End If
-    End Sub
 
     Private Sub RadCheckBoxCE2016_ToggleStateChanged(sender As Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadCheckBoxCE2016Kennzeichen.ToggleStateChanged
         RadTextBoxControlCE2016Kennzeichen.ReadOnly = Not RadCheckBoxCE2016Kennzeichen.Checked
@@ -613,7 +551,7 @@
 #End Region
 
 
-    Private Sub RadTextBoxControlBenannteStelle_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles RadTextBoxControlHinweismarke.Validating, RadTextBoxControlGruenesM.Validating, RadTextBoxControlEichsiegelRund.Validating, RadTextBoxControlEichsiegel13x13.Validating, RadTextBoxControlCEKennzeichen.Validating, RadTextBoxControlBenannteStelle.Validating, RadTextBoxControlCE2016Kennzeichen.Validating
+    Private Sub RadTextBoxControlBenannteStelle_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles RadTextBoxControlHinweismarke.Validating, RadTextBoxControlEichsiegelRund.Validating, RadTextBoxControlEichsiegel13x13.Validating, RadTextBoxControlCE2016Kennzeichen.Validating
         Dim result As Decimal
         If Not sender.readonly = True Then
 
@@ -708,12 +646,12 @@
         End If
     End Sub
 
-    Private Sub RadTextBoxControlBenannteStelle_TextChanged(sender As System.Object, e As System.EventArgs) Handles RadTextBoxControlHinweismarke.TextChanged, RadTextBoxControlGruenesM.TextChanged, RadTextBoxControlEichsiegelRund.TextChanged, RadTextBoxControlEichsiegel13x13.TextChanged, RadTextBoxControlCEKennzeichen.TextChanged, RadTextBoxControlBenannteStelle.TextChanged, RadTextBoxControlBemerkungen.TextChanged, RadTextBoxControlAufbewahrungsdauer.TextChanged, RadTextBoxControlCE2016Kennzeichen.TextChanged
+    Private Sub RadTextBoxControlBenannteStelle_TextChanged(sender As System.Object, e As System.EventArgs) Handles RadTextBoxControlHinweismarke.TextChanged, RadTextBoxControlEichsiegelRund.TextChanged, RadTextBoxControlEichsiegel13x13.TextChanged, RadTextBoxControlBemerkungen.TextChanged, RadTextBoxControlAufbewahrungsdauer.TextChanged, RadTextBoxControlCE2016Kennzeichen.TextChanged
         If _suspendEvents = True Then Exit Sub
         AktuellerStatusDirty = True
     End Sub
 
-    Private Sub RadCheckBoxBenannteStelle_Click(sender As System.Object, e As System.EventArgs) Handles RadCheckBoxKonfigurationsProgramm.Click, RadCheckBoxHinweismarke.Click, RadCheckBoxGruenesM.Click, RadCheckBoxEichsiegelRund.Click, RadCheckBoxEichsiegel13x13.Click, RadCheckBoxCEKennzeichen.Click, RadCheckBoxBenannteStelle.Click, RadCheckBoxAufbewahrungsdauer.Click, RadCheckBoxAlibispeicher.Click, RadCheckBoxCE2016Kennzeichen.Click
+    Private Sub RadCheckBoxBenannteStelle_Click(sender As System.Object, e As System.EventArgs) Handles RadCheckBoxKonfigurationsProgramm.Click, RadCheckBoxHinweismarke.Click, RadCheckBoxEichsiegelRund.Click, RadCheckBoxEichsiegel13x13.Click, RadCheckBoxAufbewahrungsdauer.Click, RadCheckBoxAlibispeicher.Click, RadCheckBoxCE2016Kennzeichen.Click
         If _suspendEvents = True Then Exit Sub
         AktuellerStatusDirty = True
     End Sub

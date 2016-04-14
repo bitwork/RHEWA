@@ -122,22 +122,13 @@
     <value>158, 18</value>
   </data>
   <data name="lblCE2016Kennzeichen.Text" xml:space="preserve">
-    <value>CE Kennzeichen ab 20.04.2016</value>
-  </data>
-  <data name="RadTextBoxControlCE2016Kennzeichen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 20</value>
+    <value>Marke CE, Mxx, "Benannte Stelle 0111"</value>
   </data>
   <data name="lblSicherungshinweise.Size" type="System.Drawing.Size, System.Drawing">
     <value>331, 18</value>
   </data>
   <data name="lblSicherungshinweise.Text" xml:space="preserve">
     <value>Alle erforderlichen Sicherungs- und Hinweismarken aufgebracht?</value>
-  </data>
-  <data name="lblBenannteStelle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 18</value>
-  </data>
-  <data name="lblBenannteStelle.Text" xml:space="preserve">
-    <value>Sicherungsmarke "Benannte Stelle"</value>
   </data>
   <data name="lblEichsiegel13x13.Size" type="System.Drawing.Size, System.Drawing">
     <value>185, 18</value>
@@ -156,18 +147,6 @@
   </data>
   <data name="lblHinweismarke.Text" xml:space="preserve">
     <value>Hinweismarke gelocht</value>
-  </data>
-  <data name="lblGruenesM.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 18</value>
-  </data>
-  <data name="lblGruenesM.Text" xml:space="preserve">
-    <value>Grünes "M"</value>
-  </data>
-  <data name="lblCEKennzeichen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 18</value>
-  </data>
-  <data name="lblCEKennzeichen.Text" xml:space="preserve">
-    <value>CE Kennzeichen</value>
   </data>
   <data name="lblDatenKonfiguration.Size" type="System.Drawing.Size, System.Drawing">
     <value>259, 18</value>
@@ -192,6 +171,9 @@
   </data>
   <data name="lblBemerkungen.Text" xml:space="preserve">
     <value>Bemerkungen:</value>
+  </data>
+  <data name="RadTextBoxControlBemerkungen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>477, 647</value>
   </data>
   <data name="lblAnzahl.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 18</value>
