@@ -18,7 +18,7 @@
 
             Try
                 RadGridViewAuswahlliste.Columns("ID").IsVisible = False
-                '  RadGridViewAuswahlliste.Columns("ServerEichprozess").IsVisible = False
+                RadGridViewAuswahlliste.Columns("ServerEichprozess").IsVisible = False
                 RadGridViewAuswahlliste.Columns("ServerMogelstatistik").IsVisible = False
                 RadGridViewAuswahlliste.Columns("Revisionsnummer").IsVisible = False
 

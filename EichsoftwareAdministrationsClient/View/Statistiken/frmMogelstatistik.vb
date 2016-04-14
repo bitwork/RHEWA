@@ -18,7 +18,7 @@ Public Class frmMogelstatistik
             Try
                 RadGridView1.Columns("ID").IsVisible = False
                 RadGridView1.Columns("ServerLookup_Waegezelle").IsVisible = False
-                '  RadGridView1.Columns("ServerEichprozess").IsVisible = False
+                RadGridView1.Columns("ServerEichprozess").IsVisible = False
                 RadGridView1.Columns("ServerLookup_Auswertegeraet").IsVisible = False
 
                 'Gruppierung

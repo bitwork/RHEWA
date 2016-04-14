@@ -16,7 +16,7 @@
             RadGridViewAuswahlliste.DataSource = Data.ToList
             Try
                 RadGridViewAuswahlliste.Columns("ID").IsVisible = False
-                '   RadGridViewAuswahlliste.Columns("ServerEichprozess").IsVisible = False
+                RadGridViewAuswahlliste.Columns("ServerEichprozess").IsVisible = False
                 RadGridViewAuswahlliste.Columns("ServerMogelstatistik").IsVisible = False
             Catch ex As Exception
 
