@@ -25,6 +25,8 @@
     <SccProvider>
     </SccProvider>
     <FodyPath>..\packages\Fody.1.20.0.0</FodyPath>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
     <PublishUrl>C:\tmp\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
@@ -48,8 +50,6 @@
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -232,6 +232,11 @@
     <Compile Include="Mogelstatistik.vb">
       <DependentUpon>EntityModelDatabaseClient.tt</DependentUpon>
     </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="PruefungAnsprechvermoegen.vb">
       <DependentUpon>EntityModelDatabaseClient.tt</DependentUpon>
     </Compile>
@@ -332,11 +337,6 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
-    </Compile>
-    <Compile Include="My Project\Resources.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="My Project\Settings.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -1062,38 +1062,11 @@
     <None Include="Resources\82Alpha_Beschilderung_Auswertegeraet_Frontseite.PNG" />
     <None Include="Resources\82Alpha_CEXY_Auswertegeraet.PNG" />
     <None Include="Resources\82Basic_Beschilderung_Auswertegeraet.PNG" />
-    <None Include="Resources\82Basic_Beschilderung_Auswertegeraet_Unterseite.PNG" />
     <None Include="Resources\82Basic_CEXY_Auswertegeraet.PNG" />
-    <None Include="Resources\83N_Beschilderung_Auswertegeraet_Frontseite.PNG" />
-    <None Include="Resources\83N_Beschilderung_Auswertegeraet_Rueckseite.PNG" />
-    <None Include="Resources\83Plus_Beschilderung_Auswertegeraet_Frontseite.PNG" />
-    <None Include="Resources\83Plus_Beschilderung_Auswertegeraet_Rueckseite.PNG" />
     <None Include="Resources\83Z_Beschilderung_Auswertegeraet_Frontseite.PNG" />
     <None Include="Resources\83Z_Beschilderung_Auswertegeraet_Rueckseite.PNG" />
     <None Include="Resources\84_Beschilderung_Auswertegeraet_Frontseite.PNG" />
     <None Include="Resources\84_Beschilderung_Auswertegeraet_Rueckseite.PNG" />
-    <None Include="Resources\92_Beschilderung_Auswertegeraet_Frontseite.PNG" />
-    <None Include="Resources\92_Beschilderung_Auswertegeraet_Rueckseite.PNG" />
-    <None Include="Resources\0405_Beschilderung_Auswertegeraet_Frontseite.PNG" />
-    <None Include="Resources\0405_Beschilderung_Auswertegeraet_Rueckseite.PNG" />
-    <None Include="Resources\82Alpha_Beschilderung_Auswertegeraet_Frontseite_mini.PNG" />
-    <None Include="Resources\82Alpha_Beschilderung_Auswertegeraet_mini.PNG" />
-    <None Include="Resources\82Alpha_CEXY_Auswertegeraet_mini.PNG" />
-    <None Include="Resources\82Basic_Beschilderung_Auswertegeraet_mini.PNG" />
-    <None Include="Resources\82Basic_Beschilderung_Auswertegeraet_Unterseite_mini.PNG" />
-    <None Include="Resources\82Basic_CEXY_Auswertegeraet_mini.PNG" />
-    <None Include="Resources\83N_Beschilderung_Auswertegeraet_Frontseite_mini.PNG" />
-    <None Include="Resources\83N_Beschilderung_Auswertegeraet_Rueckseite_mini.PNG" />
-    <None Include="Resources\83Plus_Beschilderung_Auswertegeraet_Frontseite_mini.PNG" />
-    <None Include="Resources\83Plus_Beschilderung_Auswertegeraet_Rueckseite_mini.PNG" />
-    <None Include="Resources\83Z_Beschilderung_Auswertegeraet_Frontseite_mini.PNG" />
-    <None Include="Resources\83Z_Beschilderung_Auswertegeraet_Rueckseite_mini.PNG" />
-    <None Include="Resources\84_Beschilderung_Auswertegeraet_Frontseite_mini.PNG" />
-    <None Include="Resources\84_Beschilderung_Auswertegeraet_Rueckseite_mini.PNG" />
-    <None Include="Resources\92_Beschilderung_Auswertegeraet_Frontseite_mini.PNG" />
-    <None Include="Resources\92_Beschilderung_Auswertegeraet_Rueckseite_mini.PNG" />
-    <None Include="Resources\0405_Beschilderung_Auswertegeraet_Frontseite_mini.PNG" />
-    <None Include="Resources\0405_Beschilderung_Auswertegeraet_Rueckseite_mini.PNG" />
     <None Include="Resources\accept.png" />
     <None Include="Resources\error.png" />
     <None Include="Resources\database_refresh.png" />
@@ -1101,6 +1074,43 @@
     <None Include="Resources\attach.png" />
     <None Include="Resources\82Vario_Beschilderung_Auswertegeraet.PNG" />
     <None Include="Resources\82Vario_Beschilderung_Auswertegeraet_Unterseite.PNG" />
+    <None Include="Resources\82 Seite.PNG" />
+    <None Include="Resources\neu\82b plus front.png" />
+    <None Include="Resources\neu\82b plus typenschild.png" />
+    <None Include="Resources\neu\82c plus front.png" />
+    <None Include="Resources\neu\82c plus typenschild.png" />
+    <None Include="Resources\neu\82comfort front.png" />
+    <None Include="Resources\neu\82comfort typenschild.png" />
+    <None Include="Resources\neu\82e plus front.png" />
+    <None Include="Resources\neu\82e plus typenschild.png" />
+    <None Include="Resources\neu\82edition front.png" />
+    <None Include="Resources\neu\82edition typenschild.png" />
+    <None Include="Resources\neu\83sigma front.png" />
+    <None Include="Resources\neu\83sigma typenschild.png" />
+    <None Include="Resources\82Alpha front.png" />
+    <None Include="Resources\82Alpha typenschild.PNG" />
+    <None Include="Resources\82b plus front.png" />
+    <None Include="Resources\82b plus typenschild.png" />
+    <None Include="Resources\82Basic front.PNG" />
+    <None Include="Resources\82Basic typenschild.PNG" />
+    <None Include="Resources\82c plus front.png" />
+    <None Include="Resources\82c plus typenschild.png" />
+    <None Include="Resources\82comfort front.png" />
+    <None Include="Resources\82comfort typenschild.png" />
+    <None Include="Resources\82e plus front.png" />
+    <None Include="Resources\82e plus typenschild.png" />
+    <None Include="Resources\82edition front.png" />
+    <None Include="Resources\82edition typenschild.png" />
+    <None Include="Resources\82Vario front.PNG" />
+    <None Include="Resources\82Vario typenschild.PNG" />
+    <None Include="Resources\83sigma front.png" />
+    <None Include="Resources\83sigma typenschild.png" />
+    <None Include="Resources\83Z front.PNG" />
+    <None Include="Resources\83Z typenschild.PNG" />
+    <None Include="Resources\84 front.PNG" />
+    <None Include="Resources\84 typenschild.PNG" />
+    <None Include="Resources\84Vario front.PNG" />
+    <None Include="Resources\84Vario typenschild.PNG" />
     <Content Include="Resources\report_add.png" />
     <Content Include="Resources\report_delete.png" />
     <Content Include="Resources\report_edit.png" />

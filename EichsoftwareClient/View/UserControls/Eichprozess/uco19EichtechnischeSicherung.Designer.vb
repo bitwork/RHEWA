@@ -341,7 +341,7 @@ Partial Class uco19EichtechnischeSicherung
         'PictureBox3
         '
         resources.ApplyResources(Me.PictureBox3, "PictureBox3")
-        Me.PictureBox3.Image = Global.EichsoftwareClient.My.Resources.Resources._82Alpha_CEXY_Auswertegeraet
+        Me.PictureBox3.Image = Global.EichsoftwareClient.My.Resources.Resources._82Alpha_typenschild
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.TabStop = False
         '
@@ -367,7 +367,6 @@ Partial Class uco19EichtechnischeSicherung
         'PictureBox2
         '
         resources.ApplyResources(Me.PictureBox2, "PictureBox2")
-        Me.PictureBox2.Image = Global.EichsoftwareClient.My.Resources.Resources._0405_Beschilderung_Auswertegeraet_Rueckseite
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.TabStop = False
         '
@@ -393,7 +392,6 @@ Partial Class uco19EichtechnischeSicherung
         'PictureBox1
         '
         resources.ApplyResources(Me.PictureBox1, "PictureBox1")
-        Me.PictureBox1.Image = Global.EichsoftwareClient.My.Resources.Resources._0405_Beschilderung_Auswertegeraet_Frontseite
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.TabStop = False
         '

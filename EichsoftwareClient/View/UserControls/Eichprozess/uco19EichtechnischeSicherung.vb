@@ -92,41 +92,49 @@
         'TODO Falls ein neues Gerät auf den Markt kommt, muss ein neues Bild in die Resourcen geladen werden und hier verknüpft werden, damit das korrekte angezeigt wird
         'pictureboxen anzeigen
         Try
-            If objEichprozess.Lookup_Auswertegeraet.Typ.Equals("0405") Or objEichprozess.Lookup_Auswertegeraet.Typ.Equals("0405/10") Then
-                PictureBox1.Image = My.Resources._0405_Beschilderung_Auswertegeraet_Frontseite
-                PictureBox2.Image = My.Resources._0405_Beschilderung_Auswertegeraet_Rueckseite
-                PictureBox3.Image = Nothing
-            ElseIf objEichprozess.Lookup_Auswertegeraet.Typ.ToLower.Equals("82alpha") Then
-                PictureBox1.Image = My.Resources._82Alpha_Beschilderung_Auswertegeraet
-                PictureBox2.Image = My.Resources._82Alpha_Beschilderung_Auswertegeraet_Frontseite
-                PictureBox3.Image = My.Resources._82Alpha_CEXY_Auswertegeraet
-            ElseIf objEichprozess.Lookup_Auswertegeraet.Typ.ToLower.Equals("82basic") Or objEichprozess.Lookup_Auswertegeraet.Typ.ToLower.Equals("82comfort") Or objEichprozess.Lookup_Auswertegeraet.Typ.ToLower.Equals("82edition") Then
-                PictureBox1.Image = My.Resources._82Basic_Beschilderung_Auswertegeraet
-                PictureBox2.Image = My.Resources._82Basic_Beschilderung_Auswertegeraet_Unterseite
-                PictureBox3.Image = My.Resources._82Basic_CEXY_Auswertegeraet
-            ElseIf objEichprozess.Lookup_Auswertegeraet.Typ.ToLower.Equals("82vario") Then
-                PictureBox1.Image = My.Resources._82Vario_Beschilderung_Auswertegeraet
-                PictureBox2.Image = My.Resources._82Vario_Beschilderung_Auswertegeraet_Unterseite
-                PictureBox3.Image = Nothing
-            ElseIf objEichprozess.Lookup_Auswertegeraet.Typ.ToLower.Equals("83n") Then
-                PictureBox1.Image = My.Resources._83N_Beschilderung_Auswertegeraet_Frontseite
-                PictureBox2.Image = My.Resources._83N_Beschilderung_Auswertegeraet_Rueckseite
-                PictureBox3.Image = Nothing
-            ElseIf objEichprozess.Lookup_Auswertegeraet.Typ.ToLower.Equals("83plus") Then
-                PictureBox1.Image = My.Resources._83Plus_Beschilderung_Auswertegeraet_Frontseite
-                PictureBox2.Image = My.Resources._83Plus_Beschilderung_Auswertegeraet_Rueckseite
+            If objEichprozess.Lookup_Auswertegeraet.Typ.ToLower.Equals("82alpha") Then
+                PictureBox1.Image = My.Resources._82Alpha_front
+                PictureBox2.Image = My.Resources._82_Seite
+                PictureBox3.Image = My.Resources._82Alpha_typenschild
+            ElseIf objEichprozess.Lookup_Auswertegeraet.Typ.ToLower.Equals("82basic") Then
+                PictureBox1.Image = My.Resources._82Basic_front
+                PictureBox2.Image = My.Resources._82_Seite
+                PictureBox3.Image = My.Resources._82Basic_typenschild
+            ElseIf objEichprozess.Lookup_Auswertegeraet.Typ.ToLower.Equals("82b plus") Then
+                PictureBox1.Image = My.Resources._82b_plus_front
+                PictureBox2.Image = My.Resources._82_Seite
+                PictureBox3.Image = My.Resources._82b_plus_typenschild
+            ElseIf objEichprozess.Lookup_Auswertegeraet.Typ.ToLower.Equals("82c plus") Then
+                PictureBox1.Image = My.Resources._82c_plus_front
+                PictureBox2.Image = My.Resources._82_Seite
+                PictureBox3.Image = My.Resources._82c_plus_typenschild
+            ElseIf objEichprozess.Lookup_Auswertegeraet.Typ.ToLower.Equals("82comfort") Then
+                PictureBox1.Image = My.Resources._82comfort_front
+                PictureBox2.Image = My.Resources._82_Seite
+                PictureBox3.Image = My.Resources._82comfort_typenschild
+            ElseIf objEichprozess.Lookup_Auswertegeraet.Typ.ToLower.Equals("82e plus") Then
+                PictureBox1.Image = My.Resources._82e_plus_front
+                PictureBox2.Image = My.Resources._82_Seite
+                PictureBox3.Image = My.Resources._82e_plus_typenschild
+            ElseIf objEichprozess.Lookup_Auswertegeraet.Typ.ToLower.Equals("82edition") Then
+                PictureBox1.Image = My.Resources._82edition_front
+                PictureBox2.Image = My.Resources._82_Seite
+                PictureBox3.Image = My.Resources._82edition_typenschild
+            ElseIf objEichprozess.Lookup_Auswertegeraet.Typ.ToLower.Equals("83sigma") Then
+                PictureBox1.Image = My.Resources._83sigma_front
+                PictureBox2.Image = My.Resources._83sigma_typenschild
                 PictureBox3.Image = Nothing
             ElseIf objEichprozess.Lookup_Auswertegeraet.Typ.ToLower.Equals("83z") Then
-                PictureBox1.Image = My.Resources._83Z_Beschilderung_Auswertegeraet_Frontseite
-                PictureBox2.Image = My.Resources._83Z_Beschilderung_Auswertegeraet_Rueckseite
+                PictureBox1.Image = My.Resources._83Z_front
+                PictureBox2.Image = My.Resources._83Z_typenschild
                 PictureBox3.Image = Nothing
             ElseIf objEichprozess.Lookup_Auswertegeraet.Typ.ToLower.Equals("84") Or objEichprozess.Lookup_Auswertegeraet.Typ.ToLower.Equals("84evo") Then
-                PictureBox1.Image = My.Resources._84_Beschilderung_Auswertegeraet_Frontseite
-                PictureBox2.Image = My.Resources._84_Beschilderung_Auswertegeraet_Rueckseite
+                PictureBox1.Image = My.Resources._84_front
+                PictureBox2.Image = My.Resources._84_typenschild
                 PictureBox3.Image = Nothing
-            ElseIf objEichprozess.Lookup_Auswertegeraet.Typ.Equals("92") Then
-                PictureBox1.Image = My.Resources._92_Beschilderung_Auswertegeraet_Frontseite
-                PictureBox2.Image = My.Resources._92_Beschilderung_Auswertegeraet_Rueckseite
+            ElseIf objEichprozess.Lookup_Auswertegeraet.Typ.ToLower.Equals("84vario") Then
+                PictureBox1.Image = My.Resources._84Vario_front
+                PictureBox2.Image = My.Resources._84Vario_typenschild
                 PictureBox3.Image = Nothing
             Else
                 PictureBox1.Image = PictureBox1.ErrorImage
