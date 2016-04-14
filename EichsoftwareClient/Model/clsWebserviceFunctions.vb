@@ -628,7 +628,9 @@ Public Class clsWebserviceFunctions
                     objClientEichprozess.Eichprotokoll.Ueberlastanzeige_Ueberlast = False
                     'Fallbeschleunigung wird geleert
                     objClientEichprozess.Eichprotokoll.Fallbeschleunigung_ms2 = False
-
+                    objClientEichprozess.Eichprotokoll.Identifikationsdaten_Datum = Date.Now.Date
+                    objClientEichprozess.Eichprotokoll.Beschaffenheitspruefung_LetztePruefung = Nothing
+                    objClientEichprozess.Eichprotokoll.Identifikationsdaten_Baujahr = Date.Now.Year
                     'hinufügen zur Lokalen DB
                     dbcontext.Eichprozess.Add(objClientEichprozess)
 

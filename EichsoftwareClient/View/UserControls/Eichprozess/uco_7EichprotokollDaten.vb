@@ -131,7 +131,6 @@
             RadTextBoxControlDatum.Text = Date.Now.Date
         Else
             RadTextBoxControlDatum.Text = objEichprozess.Eichprotokoll.Identifikationsdaten_Datum
-
         End If
 
         'Stammdaten aus lokaler Lizenz laden
