@@ -1212,20 +1212,21 @@ Inherits ucoContent
         MyBase.EntsperrungNeeded()
 
         'Hiermit wird ein lesender Vorgang wieder entsperrt. 
-        For Each Control In RadScrollablePanel1.PanelContainer.Controls
-            Try
-                Control.readonly = Not Control.readonly
-            Catch ex As Exception
-                Try
-                    Control.isreadonly = Not Control.isReadonly
-                Catch ex2 As Exception
-                    Try
-                        Control.enabled = Not Control.enabled
-                    Catch ex3 As Exception
-                    End Try
-                End Try
-            End Try
-        Next
+        EnableControls(RadGroupBoxStaffel1Bereich1)
+        EnableControls(RadGroupBoxStaffel1Bereich2)
+        EnableControls(RadGroupBoxStaffel1Bereich3)
+        EnableControls(RadGroupBoxStaffel2Bereich1)
+        EnableControls(RadGroupBoxStaffel2Bereich2)
+        EnableControls(RadGroupBoxStaffel2Bereich3)
+        EnableControls(RadGroupBoxStaffel3Bereich1)
+        EnableControls(RadGroupBoxStaffel3Bereich2)
+        EnableControls(RadGroupBoxStaffel3Bereich3)
+        EnableControls(RadGroupBoxStaffel4Bereich1)
+        EnableControls(RadGroupBoxStaffel4Bereich2)
+        EnableControls(RadGroupBoxStaffel4Bereich3)
+        EnableControls(RadGroupBoxStaffel5Bereich1)
+        EnableControls(RadGroupBoxStaffel5Bereich2)
+        EnableControls(RadGroupBoxStaffel5Bereich3)
 
         'ändern des Moduses
         DialogModus = enuDialogModus.korrigierend

@@ -892,20 +892,7 @@
         MyBase.EntsperrungNeeded()
 
         'Hiermit wird ein lesender Vorgang wieder entsperrt. 
-        For Each Control In Me.RadScrollablePanel1.PanelContainer.Controls
-            Try
-                Control.readonly = Not Control.readonly
-            Catch ex As Exception
-                Try
-                    Control.isreadonly = Not Control.isReadonly
-                Catch ex2 As Exception
-                    Try
-                        Control.enabled = Not Control.enabled
-                    Catch ex3 As Exception
-                    End Try
-                End Try
-            End Try
-        Next
+        EnableControls(RadScrollablePanel1.PanelContainer)
 
         'ändern des Moduses
         DialogModus = enuDialogModus.korrigierend

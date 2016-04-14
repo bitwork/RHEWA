@@ -1162,20 +1162,19 @@
         MyBase.EntsperrungNeeded()
 
         'Hiermit wird ein lesender Vorgang wieder entsperrt. 
-        For Each Control In Me.FlowLayoutPanel1.Controls
-            Try
-                Control.readonly = Not Control.readonly
-            Catch ex As Exception
-                Try
-                    Control.isreadonly = Not Control.isReadonly
-                Catch ex2 As Exception
-                    Try
-                        Control.enabled = Not Control.enabled
-                    Catch ex3 As Exception
-                    End Try
-                End Try
-            End Try
-        Next
+        EnableControls(RadGroupBoxPunkt1)
+        EnableControls(RadGroupBoxPunkt10)
+        EnableControls(RadGroupBoxPunkt2TMin)
+        EnableControls(RadGroupBoxPunkt3)
+        EnableControls(RadGroupBoxPunkt4)
+        EnableControls(RadGroupBoxPunkt5)
+        EnableControls(RadGroupBoxPunkt6a)
+        EnableControls(RadGroupBoxPunkt6b)
+        EnableControls(RadGroupBoxPunkt6c)
+        EnableControls(RadGroupBoxPunkt6d)
+        EnableControls(RadGroupBoxPunkt7)
+        EnableControls(RadGroupBoxPunkt8)
+        EnableControls(RadGroupBoxPunkt9)
 
         'ändern des Moduses
         DialogModus = enuDialogModus.korrigierend

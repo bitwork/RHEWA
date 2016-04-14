@@ -1737,20 +1737,13 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         MyBase.EntsperrungNeeded()
 
         'Hiermit wird ein lesender Vorgang wieder entsperrt. 
-        For Each Control In Me.FlowLayoutPanel1.Controls
-            Try
-                Control.readonly = Not Control.readonly
-            Catch ex As Exception
-                Try
-                    Control.isreadonly = Not Control.isReadonly
-                Catch ex2 As Exception
-                    Try
-                        Control.enabled = Not Control.enabled
-                    Catch ex3 As Exception
-                    End Try
-                End Try
-            End Try
-        Next
+        EnableControls(RadGroupBoxBereich1)
+        EnableControls(RadGroupBoxBereich2)
+        EnableControls(RadGroupBoxBereich3)
+        EnableControls(RadGroupBoxPruefungAussermittigeBelastung)
+        EnableControls(RadGroupBoxPruefungGenaugikeit)
+        EnableControls(RadGroupBoxWiederholungen)
+
 
         'ändern des Moduses
         DialogModus = enuDialogModus.korrigierend
