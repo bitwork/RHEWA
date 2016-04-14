@@ -46,12 +46,12 @@ Partial Class uco_7EichprotokollDaten
         Me.RadRadioButtonHandTara = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadRadioButtonAutoTara = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadGroupBoxVerwendungszweckEquipment = New Telerik.WinControls.UI.RadGroupBox()
+        Me.RadTextBoxControlDruckerTyp = New Telerik.WinControls.UI.RadDropDownList()
         Me.lblPflichtfeldDrucker = New System.Windows.Forms.Label()
         Me.RadCheckBoxDrucker = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadCheckBoxEichfaehigerSpeicher = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadCheckBoxPC = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadCheckBoxSonstiges = New Telerik.WinControls.UI.RadCheckBox()
-        Me.RadTextBoxControlDruckerTyp = New Telerik.WinControls.UI.RadTextBox()
         Me.lblDruckerart = New Telerik.WinControls.UI.RadLabel()
         Me.RadGroupBoxVerwendungszweckNullstellung = New Telerik.WinControls.UI.RadGroupBox()
         Me.RadRadioButtonNustellungNullNachfuehrung = New Telerik.WinControls.UI.RadCheckBox()
@@ -189,11 +189,11 @@ Partial Class uco_7EichprotokollDaten
         CType(Me.RadRadioButtonAutoTara, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxVerwendungszweckEquipment, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxVerwendungszweckEquipment.SuspendLayout()
+        CType(Me.RadTextBoxControlDruckerTyp, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadCheckBoxDrucker, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadCheckBoxEichfaehigerSpeicher, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadCheckBoxPC, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadCheckBoxSonstiges, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControlDruckerTyp, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblDruckerart, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxVerwendungszweckNullstellung, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxVerwendungszweckNullstellung.SuspendLayout()
@@ -325,22 +325,12 @@ Partial Class uco_7EichprotokollDaten
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadGroupBoxIdentifikationsdaten)
         resources.ApplyResources(Me.RadScrollablePanel1.PanelContainer, "RadScrollablePanel1.PanelContainer")
         '
-        '
-        '
-        Me.RadScrollablePanel1.RootElement.AccessibleDescription = Nothing
-        Me.RadScrollablePanel1.RootElement.AccessibleName = Nothing
-        '
         'RadGroupBoxBeschaffenheitspruefung
         '
         Me.RadGroupBoxBeschaffenheitspruefung.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBoxBeschaffenheitspruefung.Controls.Add(Me.RadGroupBoxBeschaffenheitspruefungNormalien)
         resources.ApplyResources(Me.RadGroupBoxBeschaffenheitspruefung, "RadGroupBoxBeschaffenheitspruefung")
         Me.RadGroupBoxBeschaffenheitspruefung.Name = "RadGroupBoxBeschaffenheitspruefung"
-        '
-        '
-        '
-        Me.RadGroupBoxBeschaffenheitspruefung.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxBeschaffenheitspruefung.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxBeschaffenheitspruefungNormalien
         '
@@ -361,11 +351,6 @@ Partial Class uco_7EichprotokollDaten
         Me.RadGroupBoxBeschaffenheitspruefungNormalien.Controls.Add(Me.lblGenauigkeitsklasse2)
         resources.ApplyResources(Me.RadGroupBoxBeschaffenheitspruefungNormalien, "RadGroupBoxBeschaffenheitspruefungNormalien")
         Me.RadGroupBoxBeschaffenheitspruefungNormalien.Name = "RadGroupBoxBeschaffenheitspruefungNormalien"
-        '
-        '
-        '
-        Me.RadGroupBoxBeschaffenheitspruefungNormalien.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxBeschaffenheitspruefungNormalien.RootElement.AccessibleName = Nothing
         '
         'Label11
         '
@@ -395,11 +380,6 @@ Partial Class uco_7EichprotokollDaten
         '
         resources.ApplyResources(Me.RadDateTimePickerNormalienLetztePruefung, "RadDateTimePickerNormalienLetztePruefung")
         Me.RadDateTimePickerNormalienLetztePruefung.Name = "RadDateTimePickerNormalienLetztePruefung"
-        '
-        '
-        '
-        Me.RadDateTimePickerNormalienLetztePruefung.RootElement.AccessibleDescription = Nothing
-        Me.RadDateTimePickerNormalienLetztePruefung.RootElement.AccessibleName = Nothing
         Me.RadDateTimePickerNormalienLetztePruefung.TabStop = False
         Me.RadDateTimePickerNormalienLetztePruefung.Value = New Date(CType(0, Long))
         '
@@ -409,20 +389,10 @@ Partial Class uco_7EichprotokollDaten
         Me.RadTextBoxControlNormalienEichfahrzeugFirma.MaxLength = 50
         Me.RadTextBoxControlNormalienEichfahrzeugFirma.Name = "RadTextBoxControlNormalienEichfahrzeugFirma"
         '
-        '
-        '
-        Me.RadTextBoxControlNormalienEichfahrzeugFirma.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlNormalienEichfahrzeugFirma.RootElement.AccessibleName = Nothing
-        '
         'lblTruck
         '
         resources.ApplyResources(Me.lblTruck, "lblTruck")
         Me.lblTruck.Name = "lblTruck"
-        '
-        '
-        '
-        Me.lblTruck.RootElement.AccessibleDescription = Nothing
-        Me.lblTruck.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlNormalienPruefscheinnummer
         '
@@ -430,11 +400,6 @@ Partial Class uco_7EichprotokollDaten
         Me.RadTextBoxControlNormalienPruefscheinnummer.MaxLength = 4000
         Me.RadTextBoxControlNormalienPruefscheinnummer.Multiline = True
         Me.RadTextBoxControlNormalienPruefscheinnummer.Name = "RadTextBoxControlNormalienPruefscheinnummer"
-        '
-        '
-        '
-        Me.RadTextBoxControlNormalienPruefscheinnummer.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlNormalienPruefscheinnummer.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlNormalienPruefscheinnummer.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         '
         'lblZertifikatnr
@@ -442,20 +407,10 @@ Partial Class uco_7EichprotokollDaten
         resources.ApplyResources(Me.lblZertifikatnr, "lblZertifikatnr")
         Me.lblZertifikatnr.Name = "lblZertifikatnr"
         '
-        '
-        '
-        Me.lblZertifikatnr.RootElement.AccessibleDescription = Nothing
-        Me.lblZertifikatnr.RootElement.AccessibleName = Nothing
-        '
         'lblTestzeitraum
         '
         resources.ApplyResources(Me.lblTestzeitraum, "lblTestzeitraum")
         Me.lblTestzeitraum.Name = "lblTestzeitraum"
-        '
-        '
-        '
-        Me.lblTestzeitraum.RootElement.AccessibleDescription = Nothing
-        Me.lblTestzeitraum.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlNormalienPruefintervall
         '
@@ -463,20 +418,10 @@ Partial Class uco_7EichprotokollDaten
         Me.RadTextBoxControlNormalienPruefintervall.MaxLength = 50
         Me.RadTextBoxControlNormalienPruefintervall.Name = "RadTextBoxControlNormalienPruefintervall"
         '
-        '
-        '
-        Me.RadTextBoxControlNormalienPruefintervall.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlNormalienPruefintervall.RootElement.AccessibleName = Nothing
-        '
         'lblPruefzeitraum
         '
         resources.ApplyResources(Me.lblPruefzeitraum, "lblPruefzeitraum")
         Me.lblPruefzeitraum.Name = "lblPruefzeitraum"
-        '
-        '
-        '
-        Me.lblPruefzeitraum.RootElement.AccessibleDescription = Nothing
-        Me.lblPruefzeitraum.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlNormalienGenauigkeitsklasse
         '
@@ -484,20 +429,10 @@ Partial Class uco_7EichprotokollDaten
         Me.RadTextBoxControlNormalienGenauigkeitsklasse.MaxLength = 50
         Me.RadTextBoxControlNormalienGenauigkeitsklasse.Name = "RadTextBoxControlNormalienGenauigkeitsklasse"
         '
-        '
-        '
-        Me.RadTextBoxControlNormalienGenauigkeitsklasse.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlNormalienGenauigkeitsklasse.RootElement.AccessibleName = Nothing
-        '
         'lblGenauigkeitsklasse2
         '
         resources.ApplyResources(Me.lblGenauigkeitsklasse2, "lblGenauigkeitsklasse2")
         Me.lblGenauigkeitsklasse2.Name = "lblGenauigkeitsklasse2"
-        '
-        '
-        '
-        Me.lblGenauigkeitsklasse2.RootElement.AccessibleDescription = Nothing
-        Me.lblGenauigkeitsklasse2.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxVerwendungszweck
         '
@@ -509,11 +444,6 @@ Partial Class uco_7EichprotokollDaten
         resources.ApplyResources(Me.RadGroupBoxVerwendungszweck, "RadGroupBoxVerwendungszweck")
         Me.RadGroupBoxVerwendungszweck.Name = "RadGroupBoxVerwendungszweck"
         '
-        '
-        '
-        Me.RadGroupBoxVerwendungszweck.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxVerwendungszweck.RootElement.AccessibleName = Nothing
-        '
         'RadGroupBoxVerwendungszweckTara
         '
         Me.RadGroupBoxVerwendungszweckTara.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
@@ -523,58 +453,39 @@ Partial Class uco_7EichprotokollDaten
         resources.ApplyResources(Me.RadGroupBoxVerwendungszweckTara, "RadGroupBoxVerwendungszweckTara")
         Me.RadGroupBoxVerwendungszweckTara.Name = "RadGroupBoxVerwendungszweckTara"
         '
-        '
-        '
-        Me.RadGroupBoxVerwendungszweckTara.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxVerwendungszweckTara.RootElement.AccessibleName = Nothing
-        '
         'RadRadioButtonTaraeingabe
         '
         resources.ApplyResources(Me.RadRadioButtonTaraeingabe, "RadRadioButtonTaraeingabe")
         Me.RadRadioButtonTaraeingabe.Name = "RadRadioButtonTaraeingabe"
-        '
-        '
-        '
-        Me.RadRadioButtonTaraeingabe.RootElement.AccessibleDescription = Nothing
-        Me.RadRadioButtonTaraeingabe.RootElement.AccessibleName = Nothing
         '
         'RadRadioButtonHandTara
         '
         resources.ApplyResources(Me.RadRadioButtonHandTara, "RadRadioButtonHandTara")
         Me.RadRadioButtonHandTara.Name = "RadRadioButtonHandTara"
         '
-        '
-        '
-        Me.RadRadioButtonHandTara.RootElement.AccessibleDescription = Nothing
-        Me.RadRadioButtonHandTara.RootElement.AccessibleName = Nothing
-        '
         'RadRadioButtonAutoTara
         '
         resources.ApplyResources(Me.RadRadioButtonAutoTara, "RadRadioButtonAutoTara")
         Me.RadRadioButtonAutoTara.Name = "RadRadioButtonAutoTara"
         '
-        '
-        '
-        Me.RadRadioButtonAutoTara.RootElement.AccessibleDescription = Nothing
-        Me.RadRadioButtonAutoTara.RootElement.AccessibleName = Nothing
-        '
         'RadGroupBoxVerwendungszweckEquipment
         '
         Me.RadGroupBoxVerwendungszweckEquipment.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.RadGroupBoxVerwendungszweckEquipment.Controls.Add(Me.RadTextBoxControlDruckerTyp)
         Me.RadGroupBoxVerwendungszweckEquipment.Controls.Add(Me.lblPflichtfeldDrucker)
         Me.RadGroupBoxVerwendungszweckEquipment.Controls.Add(Me.RadCheckBoxDrucker)
         Me.RadGroupBoxVerwendungszweckEquipment.Controls.Add(Me.RadCheckBoxEichfaehigerSpeicher)
         Me.RadGroupBoxVerwendungszweckEquipment.Controls.Add(Me.RadCheckBoxPC)
         Me.RadGroupBoxVerwendungszweckEquipment.Controls.Add(Me.RadCheckBoxSonstiges)
-        Me.RadGroupBoxVerwendungszweckEquipment.Controls.Add(Me.RadTextBoxControlDruckerTyp)
         Me.RadGroupBoxVerwendungszweckEquipment.Controls.Add(Me.lblDruckerart)
         resources.ApplyResources(Me.RadGroupBoxVerwendungszweckEquipment, "RadGroupBoxVerwendungszweckEquipment")
         Me.RadGroupBoxVerwendungszweckEquipment.Name = "RadGroupBoxVerwendungszweckEquipment"
         '
+        'RadTextBoxControlDruckerTyp
         '
-        '
-        Me.RadGroupBoxVerwendungszweckEquipment.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxVerwendungszweckEquipment.RootElement.AccessibleName = Nothing
+        Me.RadTextBoxControlDruckerTyp.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        resources.ApplyResources(Me.RadTextBoxControlDruckerTyp, "RadTextBoxControlDruckerTyp")
+        Me.RadTextBoxControlDruckerTyp.Name = "RadTextBoxControlDruckerTyp"
         '
         'lblPflichtfeldDrucker
         '
@@ -587,21 +498,11 @@ Partial Class uco_7EichprotokollDaten
         Me.RadCheckBoxDrucker.CheckAlignment = System.Drawing.ContentAlignment.MiddleRight
         Me.RadCheckBoxDrucker.Name = "RadCheckBoxDrucker"
         '
-        '
-        '
-        Me.RadCheckBoxDrucker.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxDrucker.RootElement.AccessibleName = Nothing
-        '
         'RadCheckBoxEichfaehigerSpeicher
         '
         resources.ApplyResources(Me.RadCheckBoxEichfaehigerSpeicher, "RadCheckBoxEichfaehigerSpeicher")
         Me.RadCheckBoxEichfaehigerSpeicher.CheckAlignment = System.Drawing.ContentAlignment.MiddleRight
         Me.RadCheckBoxEichfaehigerSpeicher.Name = "RadCheckBoxEichfaehigerSpeicher"
-        '
-        '
-        '
-        Me.RadCheckBoxEichfaehigerSpeicher.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxEichfaehigerSpeicher.RootElement.AccessibleName = Nothing
         '
         'RadCheckBoxPC
         '
@@ -609,42 +510,16 @@ Partial Class uco_7EichprotokollDaten
         Me.RadCheckBoxPC.CheckAlignment = System.Drawing.ContentAlignment.MiddleRight
         Me.RadCheckBoxPC.Name = "RadCheckBoxPC"
         '
-        '
-        '
-        Me.RadCheckBoxPC.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxPC.RootElement.AccessibleName = Nothing
-        '
         'RadCheckBoxSonstiges
         '
         resources.ApplyResources(Me.RadCheckBoxSonstiges, "RadCheckBoxSonstiges")
         Me.RadCheckBoxSonstiges.CheckAlignment = System.Drawing.ContentAlignment.MiddleRight
         Me.RadCheckBoxSonstiges.Name = "RadCheckBoxSonstiges"
         '
-        '
-        '
-        Me.RadCheckBoxSonstiges.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxSonstiges.RootElement.AccessibleName = Nothing
-        '
-        'RadTextBoxControlDruckerTyp
-        '
-        resources.ApplyResources(Me.RadTextBoxControlDruckerTyp, "RadTextBoxControlDruckerTyp")
-        Me.RadTextBoxControlDruckerTyp.MaxLength = 50
-        Me.RadTextBoxControlDruckerTyp.Name = "RadTextBoxControlDruckerTyp"
-        '
-        '
-        '
-        Me.RadTextBoxControlDruckerTyp.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlDruckerTyp.RootElement.AccessibleName = Nothing
-        '
         'lblDruckerart
         '
         resources.ApplyResources(Me.lblDruckerart, "lblDruckerart")
         Me.lblDruckerart.Name = "lblDruckerart"
-        '
-        '
-        '
-        Me.lblDruckerart.RootElement.AccessibleDescription = Nothing
-        Me.lblDruckerart.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxVerwendungszweckNullstellung
         '
@@ -655,40 +530,20 @@ Partial Class uco_7EichprotokollDaten
         resources.ApplyResources(Me.RadGroupBoxVerwendungszweckNullstellung, "RadGroupBoxVerwendungszweckNullstellung")
         Me.RadGroupBoxVerwendungszweckNullstellung.Name = "RadGroupBoxVerwendungszweckNullstellung"
         '
-        '
-        '
-        Me.RadGroupBoxVerwendungszweckNullstellung.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxVerwendungszweckNullstellung.RootElement.AccessibleName = Nothing
-        '
         'RadRadioButtonNustellungNullNachfuehrung
         '
         resources.ApplyResources(Me.RadRadioButtonNustellungNullNachfuehrung, "RadRadioButtonNustellungNullNachfuehrung")
         Me.RadRadioButtonNustellungNullNachfuehrung.Name = "RadRadioButtonNustellungNullNachfuehrung"
-        '
-        '
-        '
-        Me.RadRadioButtonNustellungNullNachfuehrung.RootElement.AccessibleDescription = Nothing
-        Me.RadRadioButtonNustellungNullNachfuehrung.RootElement.AccessibleName = Nothing
         '
         'RadRadioButtonNustellungAutomatisch
         '
         resources.ApplyResources(Me.RadRadioButtonNustellungAutomatisch, "RadRadioButtonNustellungAutomatisch")
         Me.RadRadioButtonNustellungAutomatisch.Name = "RadRadioButtonNustellungAutomatisch"
         '
-        '
-        '
-        Me.RadRadioButtonNustellungAutomatisch.RootElement.AccessibleDescription = Nothing
-        Me.RadRadioButtonNustellungAutomatisch.RootElement.AccessibleName = Nothing
-        '
         'RadRadioButtonNustellungHalbAutomatisch
         '
         resources.ApplyResources(Me.RadRadioButtonNustellungHalbAutomatisch, "RadRadioButtonNustellungHalbAutomatisch")
         Me.RadRadioButtonNustellungHalbAutomatisch.Name = "RadRadioButtonNustellungHalbAutomatisch"
-        '
-        '
-        '
-        Me.RadRadioButtonNustellungHalbAutomatisch.RootElement.AccessibleDescription = Nothing
-        Me.RadRadioButtonNustellungHalbAutomatisch.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxVerwendungszweckArtderWaage
         '
@@ -705,11 +560,6 @@ Partial Class uco_7EichprotokollDaten
         resources.ApplyResources(Me.RadGroupBoxVerwendungszweckArtderWaage, "RadGroupBoxVerwendungszweckArtderWaage")
         Me.RadGroupBoxVerwendungszweckArtderWaage.Name = "RadGroupBoxVerwendungszweckArtderWaage"
         '
-        '
-        '
-        Me.RadGroupBoxVerwendungszweckArtderWaage.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxVerwendungszweckArtderWaage.RootElement.AccessibleName = Nothing
-        '
         'Label7
         '
         resources.ApplyResources(Me.Label7, "Label7")
@@ -720,11 +570,6 @@ Partial Class uco_7EichprotokollDaten
         '
         resources.ApplyResources(Me.lblArtWaage, "lblArtWaage")
         Me.lblArtWaage.Name = "lblArtWaage"
-        '
-        '
-        '
-        Me.lblArtWaage.RootElement.AccessibleDescription = Nothing
-        Me.lblArtWaage.RootElement.AccessibleName = Nothing
         '
         'PictureBox16
         '
@@ -739,11 +584,6 @@ Partial Class uco_7EichprotokollDaten
         Me.RadTextBoxControlWaagentyp.MaxLength = 50
         Me.RadTextBoxControlWaagentyp.Name = "RadTextBoxControlWaagentyp"
         Me.RadTextBoxControlWaagentyp.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlWaagentyp.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlWaagentyp.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlWaagentyp.TabStop = False
         '
         'PictureBox13
@@ -759,11 +599,6 @@ Partial Class uco_7EichprotokollDaten
         Me.RadTextBoxControlDimension.MaxLength = 15
         Me.RadTextBoxControlDimension.Name = "RadTextBoxControlDimension"
         Me.RadTextBoxControlDimension.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlDimension.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlDimension.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlDimension.TabStop = False
         '
         'RadLabel38
@@ -771,31 +606,16 @@ Partial Class uco_7EichprotokollDaten
         resources.ApplyResources(Me.RadLabel38, "RadLabel38")
         Me.RadLabel38.Name = "RadLabel38"
         '
-        '
-        '
-        Me.RadLabel38.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel38.RootElement.AccessibleName = Nothing
-        '
         'lblDimension
         '
         resources.ApplyResources(Me.lblDimension, "lblDimension")
         Me.lblDimension.Name = "lblDimension"
-        '
-        '
-        '
-        Me.lblDimension.RootElement.AccessibleDescription = Nothing
-        Me.lblDimension.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlMxM
         '
         resources.ApplyResources(Me.RadTextBoxControlMxM, "RadTextBoxControlMxM")
         Me.RadTextBoxControlMxM.MaxLength = 15
         Me.RadTextBoxControlMxM.Name = "RadTextBoxControlMxM"
-        '
-        '
-        '
-        Me.RadTextBoxControlMxM.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlMxM.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxKomponenten
         '
@@ -823,11 +643,6 @@ Partial Class uco_7EichprotokollDaten
         Me.RadGroupBoxKomponenten.Controls.Add(Me.lblAWG)
         resources.ApplyResources(Me.RadGroupBoxKomponenten, "RadGroupBoxKomponenten")
         Me.RadGroupBoxKomponenten.Name = "RadGroupBoxKomponenten"
-        '
-        '
-        '
-        Me.RadGroupBoxKomponenten.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxKomponenten.RootElement.AccessibleName = Nothing
         '
         'Label6
         '
@@ -881,22 +696,12 @@ Partial Class uco_7EichprotokollDaten
         Me.RadTextBoxControlAWG.MaxLength = 50
         Me.RadTextBoxControlAWG.Name = "RadTextBoxControlAWG"
         Me.RadTextBoxControlAWG.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlAWG.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlAWG.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlAWG.TabStop = False
         '
         'lblFabriknummernWZ
         '
         resources.ApplyResources(Me.lblFabriknummernWZ, "lblFabriknummernWZ")
         Me.lblFabriknummernWZ.Name = "lblFabriknummernWZ"
-        '
-        '
-        '
-        Me.lblFabriknummernWZ.RootElement.AccessibleDescription = Nothing
-        Me.lblFabriknummernWZ.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlWZFabriknummer
         '
@@ -905,20 +710,10 @@ Partial Class uco_7EichprotokollDaten
         Me.RadTextBoxControlWZFabriknummer.Multiline = True
         Me.RadTextBoxControlWZFabriknummer.Name = "RadTextBoxControlWZFabriknummer"
         '
-        '
-        '
-        Me.RadTextBoxControlWZFabriknummer.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlWZFabriknummer.RootElement.AccessibleName = Nothing
-        '
         'lblAnzahlWZ
         '
         resources.ApplyResources(Me.lblAnzahlWZ, "lblAnzahlWZ")
         Me.lblAnzahlWZ.Name = "lblAnzahlWZ"
-        '
-        '
-        '
-        Me.lblAnzahlWZ.RootElement.AccessibleDescription = Nothing
-        Me.lblAnzahlWZ.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlWZAnzahl
         '
@@ -926,11 +721,6 @@ Partial Class uco_7EichprotokollDaten
         Me.RadTextBoxControlWZAnzahl.MaxLength = 50
         Me.RadTextBoxControlWZAnzahl.Name = "RadTextBoxControlWZAnzahl"
         Me.RadTextBoxControlWZAnzahl.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlWZAnzahl.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlWZAnzahl.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlWZAnzahl.TabStop = False
         '
         'lblTyp
@@ -938,22 +728,12 @@ Partial Class uco_7EichprotokollDaten
         resources.ApplyResources(Me.lblTyp, "lblTyp")
         Me.lblTyp.Name = "lblTyp"
         '
-        '
-        '
-        Me.lblTyp.RootElement.AccessibleDescription = Nothing
-        Me.lblTyp.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlWZTyp
         '
         resources.ApplyResources(Me.RadTextBoxControlWZTyp, "RadTextBoxControlWZTyp")
         Me.RadTextBoxControlWZTyp.MaxLength = 50
         Me.RadTextBoxControlWZTyp.Name = "RadTextBoxControlWZTyp"
         Me.RadTextBoxControlWZTyp.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlWZTyp.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlWZTyp.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlWZTyp.TabStop = False
         '
         'lblHerstellerWZ
@@ -961,22 +741,12 @@ Partial Class uco_7EichprotokollDaten
         resources.ApplyResources(Me.lblHerstellerWZ, "lblHerstellerWZ")
         Me.lblHerstellerWZ.Name = "lblHerstellerWZ"
         '
-        '
-        '
-        Me.lblHerstellerWZ.RootElement.AccessibleDescription = Nothing
-        Me.lblHerstellerWZ.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlWZHersteller
         '
         resources.ApplyResources(Me.RadTextBoxControlWZHersteller, "RadTextBoxControlWZHersteller")
         Me.RadTextBoxControlWZHersteller.MaxLength = 50
         Me.RadTextBoxControlWZHersteller.Name = "RadTextBoxControlWZHersteller"
         Me.RadTextBoxControlWZHersteller.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlWZHersteller.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlWZHersteller.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlWZHersteller.TabStop = False
         '
         'lblZeichen
@@ -984,31 +754,16 @@ Partial Class uco_7EichprotokollDaten
         resources.ApplyResources(Me.lblZeichen, "lblZeichen")
         Me.lblZeichen.Name = "lblZeichen"
         '
-        '
-        '
-        Me.lblZeichen.RootElement.AccessibleDescription = Nothing
-        Me.lblZeichen.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlEichzaehlerstand
         '
         resources.ApplyResources(Me.RadTextBoxControlEichzaehlerstand, "RadTextBoxControlEichzaehlerstand")
         Me.RadTextBoxControlEichzaehlerstand.MaxLength = 50
         Me.RadTextBoxControlEichzaehlerstand.Name = "RadTextBoxControlEichzaehlerstand"
         '
-        '
-        '
-        Me.RadTextBoxControlEichzaehlerstand.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlEichzaehlerstand.RootElement.AccessibleName = Nothing
-        '
         'lblSoftwareversion
         '
         resources.ApplyResources(Me.lblSoftwareversion, "lblSoftwareversion")
         Me.lblSoftwareversion.Name = "lblSoftwareversion"
-        '
-        '
-        '
-        Me.lblSoftwareversion.RootElement.AccessibleDescription = Nothing
-        Me.lblSoftwareversion.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlSoftwarestand
         '
@@ -1016,20 +771,10 @@ Partial Class uco_7EichprotokollDaten
         Me.RadTextBoxControlSoftwarestand.MaxLength = 50
         Me.RadTextBoxControlSoftwarestand.Name = "RadTextBoxControlSoftwarestand"
         '
-        '
-        '
-        Me.RadTextBoxControlSoftwarestand.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlSoftwarestand.RootElement.AccessibleName = Nothing
-        '
         'lblAWG
         '
         resources.ApplyResources(Me.lblAWG, "lblAWG")
         Me.lblAWG.Name = "lblAWG"
-        '
-        '
-        '
-        Me.lblAWG.RootElement.AccessibleDescription = Nothing
-        Me.lblAWG.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxPruefverfahren
         '
@@ -1043,11 +788,6 @@ Partial Class uco_7EichprotokollDaten
         Me.RadGroupBoxPruefverfahren.Controls.Add(Me.RadCheckBoxVolleNormallast)
         resources.ApplyResources(Me.RadGroupBoxPruefverfahren, "RadGroupBoxPruefverfahren")
         Me.RadGroupBoxPruefverfahren.Name = "RadGroupBoxPruefverfahren"
-        '
-        '
-        '
-        Me.RadGroupBoxPruefverfahren.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxPruefverfahren.RootElement.AccessibleName = Nothing
         '
         'Label12
         '
@@ -1067,20 +807,10 @@ Partial Class uco_7EichprotokollDaten
         resources.ApplyResources(Me.RadLabel6, "RadLabel6")
         Me.RadLabel6.Name = "RadLabel6"
         '
-        '
-        '
-        Me.RadLabel6.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel6.RootElement.AccessibleName = Nothing
-        '
         'lblNormalienGewichte
         '
         resources.ApplyResources(Me.lblNormalienGewichte, "lblNormalienGewichte")
         Me.lblNormalienGewichte.Name = "lblNormalienGewichte"
-        '
-        '
-        '
-        Me.lblNormalienGewichte.RootElement.AccessibleDescription = Nothing
-        Me.lblNormalienGewichte.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlBetragNormallast
         '
@@ -1088,21 +818,11 @@ Partial Class uco_7EichprotokollDaten
         Me.RadTextBoxControlBetragNormallast.MaxLength = 50
         Me.RadTextBoxControlBetragNormallast.Name = "RadTextBoxControlBetragNormallast"
         '
-        '
-        '
-        Me.RadTextBoxControlBetragNormallast.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBetragNormallast.RootElement.AccessibleName = Nothing
-        '
         'RadCheckBoxVollstaendigesStaffelverfahren
         '
         resources.ApplyResources(Me.RadCheckBoxVollstaendigesStaffelverfahren, "RadCheckBoxVollstaendigesStaffelverfahren")
         Me.RadCheckBoxVollstaendigesStaffelverfahren.CheckAlignment = System.Drawing.ContentAlignment.MiddleRight
         Me.RadCheckBoxVollstaendigesStaffelverfahren.Name = "RadCheckBoxVollstaendigesStaffelverfahren"
-        '
-        '
-        '
-        Me.RadCheckBoxVollstaendigesStaffelverfahren.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxVollstaendigesStaffelverfahren.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxVollstaendigesStaffelverfahren.TabStop = False
         '
         'RadCheckBoxVolleNormallast
@@ -1110,11 +830,6 @@ Partial Class uco_7EichprotokollDaten
         resources.ApplyResources(Me.RadCheckBoxVolleNormallast, "RadCheckBoxVolleNormallast")
         Me.RadCheckBoxVolleNormallast.CheckAlignment = System.Drawing.ContentAlignment.MiddleRight
         Me.RadCheckBoxVolleNormallast.Name = "RadCheckBoxVolleNormallast"
-        '
-        '
-        '
-        Me.RadCheckBoxVolleNormallast.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxVolleNormallast.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxIdentifikationsdaten
         '
@@ -1149,11 +864,6 @@ Partial Class uco_7EichprotokollDaten
         Me.RadGroupBoxIdentifikationsdaten.Controls.Add(Me.RadTextBoxControlBenutzer)
         resources.ApplyResources(Me.RadGroupBoxIdentifikationsdaten, "RadGroupBoxIdentifikationsdaten")
         Me.RadGroupBoxIdentifikationsdaten.Name = "RadGroupBoxIdentifikationsdaten"
-        '
-        '
-        '
-        Me.RadGroupBoxIdentifikationsdaten.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxIdentifikationsdaten.RootElement.AccessibleName = Nothing
         '
         'Label3
         '
@@ -1190,20 +900,10 @@ Partial Class uco_7EichprotokollDaten
         resources.ApplyResources(Me.RadGroupBoxMax1, "RadGroupBoxMax1")
         Me.RadGroupBoxMax1.Name = "RadGroupBoxMax1"
         '
-        '
-        '
-        Me.RadGroupBoxMax1.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxMax1.RootElement.AccessibleName = Nothing
-        '
         'RadLabel11
         '
         resources.ApplyResources(Me.RadLabel11, "RadLabel11")
         Me.RadLabel11.Name = "RadLabel11"
-        '
-        '
-        '
-        Me.RadLabel11.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel11.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControl1Hoechstwert1
         '
@@ -1211,11 +911,6 @@ Partial Class uco_7EichprotokollDaten
         Me.RadTextBoxControl1Hoechstwert1.MaxLength = 50
         Me.RadTextBoxControl1Hoechstwert1.Name = "RadTextBoxControl1Hoechstwert1"
         Me.RadTextBoxControl1Hoechstwert1.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControl1Hoechstwert1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControl1Hoechstwert1.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControl1Hoechstwert1.TabStop = False
         '
         'RadTextBoxControlMin1
@@ -1223,11 +918,6 @@ Partial Class uco_7EichprotokollDaten
         resources.ApplyResources(Me.RadTextBoxControlMin1, "RadTextBoxControlMin1")
         Me.RadTextBoxControlMin1.MaxLength = 50
         Me.RadTextBoxControlMin1.Name = "RadTextBoxControlMin1"
-        '
-        '
-        '
-        Me.RadTextBoxControlMin1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlMin1.RootElement.AccessibleName = Nothing
         '
         'PictureBox11
         '
@@ -1240,11 +930,6 @@ Partial Class uco_7EichprotokollDaten
         '
         resources.ApplyResources(Me.RadLabel12, "RadLabel12")
         Me.RadLabel12.Name = "RadLabel12"
-        '
-        '
-        '
-        Me.RadLabel12.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel12.RootElement.AccessibleName = Nothing
         '
         'PictureBox12
         '
@@ -1259,11 +944,6 @@ Partial Class uco_7EichprotokollDaten
         Me.RadTextBoxControlEichwert1.MaxLength = 50
         Me.RadTextBoxControlEichwert1.Name = "RadTextBoxControlEichwert1"
         Me.RadTextBoxControlEichwert1.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlEichwert1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlEichwert1.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlEichwert1.TabStop = False
         '
         'RadLabel13
@@ -1271,40 +951,20 @@ Partial Class uco_7EichprotokollDaten
         resources.ApplyResources(Me.RadLabel13, "RadLabel13")
         Me.RadLabel13.Name = "RadLabel13"
         '
-        '
-        '
-        Me.RadLabel13.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel13.RootElement.AccessibleName = Nothing
-        '
         'RadLabel20
         '
         resources.ApplyResources(Me.RadLabel20, "RadLabel20")
         Me.RadLabel20.Name = "RadLabel20"
-        '
-        '
-        '
-        Me.RadLabel20.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel20.RootElement.AccessibleName = Nothing
         '
         'RadLabel21
         '
         resources.ApplyResources(Me.RadLabel21, "RadLabel21")
         Me.RadLabel21.Name = "RadLabel21"
         '
-        '
-        '
-        Me.RadLabel21.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel21.RootElement.AccessibleName = Nothing
-        '
         'RadLabel22
         '
         resources.ApplyResources(Me.RadLabel22, "RadLabel22")
         Me.RadLabel22.Name = "RadLabel22"
-        '
-        '
-        '
-        Me.RadLabel22.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel22.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxMax3
         '
@@ -1323,33 +983,18 @@ Partial Class uco_7EichprotokollDaten
         resources.ApplyResources(Me.RadGroupBoxMax3, "RadGroupBoxMax3")
         Me.RadGroupBoxMax3.Name = "RadGroupBoxMax3"
         '
-        '
-        '
-        Me.RadGroupBoxMax3.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxMax3.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControl1Hoechstwert3
         '
         resources.ApplyResources(Me.RadTextBoxControl1Hoechstwert3, "RadTextBoxControl1Hoechstwert3")
         Me.RadTextBoxControl1Hoechstwert3.MaxLength = 50
         Me.RadTextBoxControl1Hoechstwert3.Name = "RadTextBoxControl1Hoechstwert3"
         Me.RadTextBoxControl1Hoechstwert3.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControl1Hoechstwert3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControl1Hoechstwert3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControl1Hoechstwert3.TabStop = False
         '
         'RadLabel19
         '
         resources.ApplyResources(Me.RadLabel19, "RadLabel19")
         Me.RadLabel19.Name = "RadLabel19"
-        '
-        '
-        '
-        Me.RadLabel19.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel19.RootElement.AccessibleName = Nothing
         '
         'PictureBox17
         '
@@ -1364,11 +1009,6 @@ Partial Class uco_7EichprotokollDaten
         Me.RadTextBoxControlMin3.MaxLength = 50
         Me.RadTextBoxControlMin3.Name = "RadTextBoxControlMin3"
         '
-        '
-        '
-        Me.RadTextBoxControlMin3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlMin3.RootElement.AccessibleName = Nothing
-        '
         'PictureBox18
         '
         Me.PictureBox18.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
@@ -1381,22 +1021,12 @@ Partial Class uco_7EichprotokollDaten
         resources.ApplyResources(Me.RadLabel18, "RadLabel18")
         Me.RadLabel18.Name = "RadLabel18"
         '
-        '
-        '
-        Me.RadLabel18.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel18.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlEichwert3
         '
         resources.ApplyResources(Me.RadTextBoxControlEichwert3, "RadTextBoxControlEichwert3")
         Me.RadTextBoxControlEichwert3.MaxLength = 50
         Me.RadTextBoxControlEichwert3.Name = "RadTextBoxControlEichwert3"
         Me.RadTextBoxControlEichwert3.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlEichwert3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlEichwert3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlEichwert3.TabStop = False
         '
         'RadLabel17
@@ -1404,40 +1034,20 @@ Partial Class uco_7EichprotokollDaten
         resources.ApplyResources(Me.RadLabel17, "RadLabel17")
         Me.RadLabel17.Name = "RadLabel17"
         '
-        '
-        '
-        Me.RadLabel17.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel17.RootElement.AccessibleName = Nothing
-        '
         'RadLabel28
         '
         resources.ApplyResources(Me.RadLabel28, "RadLabel28")
         Me.RadLabel28.Name = "RadLabel28"
-        '
-        '
-        '
-        Me.RadLabel28.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel28.RootElement.AccessibleName = Nothing
         '
         'RadLabel27
         '
         resources.ApplyResources(Me.RadLabel27, "RadLabel27")
         Me.RadLabel27.Name = "RadLabel27"
         '
-        '
-        '
-        Me.RadLabel27.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel27.RootElement.AccessibleName = Nothing
-        '
         'RadLabel26
         '
         resources.ApplyResources(Me.RadLabel26, "RadLabel26")
         Me.RadLabel26.Name = "RadLabel26"
-        '
-        '
-        '
-        Me.RadLabel26.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel26.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxMax2
         '
@@ -1456,22 +1066,12 @@ Partial Class uco_7EichprotokollDaten
         resources.ApplyResources(Me.RadGroupBoxMax2, "RadGroupBoxMax2")
         Me.RadGroupBoxMax2.Name = "RadGroupBoxMax2"
         '
-        '
-        '
-        Me.RadGroupBoxMax2.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxMax2.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControl1Hoechstwert2
         '
         resources.ApplyResources(Me.RadTextBoxControl1Hoechstwert2, "RadTextBoxControl1Hoechstwert2")
         Me.RadTextBoxControl1Hoechstwert2.MaxLength = 50
         Me.RadTextBoxControl1Hoechstwert2.Name = "RadTextBoxControl1Hoechstwert2"
         Me.RadTextBoxControl1Hoechstwert2.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControl1Hoechstwert2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControl1Hoechstwert2.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControl1Hoechstwert2.TabStop = False
         '
         'RadLabel16
@@ -1479,21 +1079,11 @@ Partial Class uco_7EichprotokollDaten
         resources.ApplyResources(Me.RadLabel16, "RadLabel16")
         Me.RadLabel16.Name = "RadLabel16"
         '
-        '
-        '
-        Me.RadLabel16.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel16.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlMin2
         '
         resources.ApplyResources(Me.RadTextBoxControlMin2, "RadTextBoxControlMin2")
         Me.RadTextBoxControlMin2.MaxLength = 50
         Me.RadTextBoxControlMin2.Name = "RadTextBoxControlMin2"
-        '
-        '
-        '
-        Me.RadTextBoxControlMin2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlMin2.RootElement.AccessibleName = Nothing
         '
         'PictureBox14
         '
@@ -1506,11 +1096,6 @@ Partial Class uco_7EichprotokollDaten
         '
         resources.ApplyResources(Me.RadLabel15, "RadLabel15")
         Me.RadLabel15.Name = "RadLabel15"
-        '
-        '
-        '
-        Me.RadLabel15.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel15.RootElement.AccessibleName = Nothing
         '
         'PictureBox15
         '
@@ -1525,11 +1110,6 @@ Partial Class uco_7EichprotokollDaten
         Me.RadTextBoxControlEichwert2.MaxLength = 50
         Me.RadTextBoxControlEichwert2.Name = "RadTextBoxControlEichwert2"
         Me.RadTextBoxControlEichwert2.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlEichwert2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlEichwert2.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlEichwert2.TabStop = False
         '
         'RadLabel14
@@ -1537,40 +1117,20 @@ Partial Class uco_7EichprotokollDaten
         resources.ApplyResources(Me.RadLabel14, "RadLabel14")
         Me.RadLabel14.Name = "RadLabel14"
         '
-        '
-        '
-        Me.RadLabel14.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel14.RootElement.AccessibleName = Nothing
-        '
         'RadLabel25
         '
         resources.ApplyResources(Me.RadLabel25, "RadLabel25")
         Me.RadLabel25.Name = "RadLabel25"
-        '
-        '
-        '
-        Me.RadLabel25.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel25.RootElement.AccessibleName = Nothing
         '
         'RadLabel24
         '
         resources.ApplyResources(Me.RadLabel24, "RadLabel24")
         Me.RadLabel24.Name = "RadLabel24"
         '
-        '
-        '
-        Me.RadLabel24.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel24.RootElement.AccessibleName = Nothing
-        '
         'RadLabel23
         '
         resources.ApplyResources(Me.RadLabel23, "RadLabel23")
         Me.RadLabel23.Name = "RadLabel23"
-        '
-        '
-        '
-        Me.RadLabel23.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel23.RootElement.AccessibleName = Nothing
         '
         'PictureBox6
         '
@@ -1598,11 +1158,6 @@ Partial Class uco_7EichprotokollDaten
         resources.ApplyResources(Me.lblGenauigkeitsklasse, "lblGenauigkeitsklasse")
         Me.lblGenauigkeitsklasse.Name = "lblGenauigkeitsklasse"
         '
-        '
-        '
-        Me.lblGenauigkeitsklasse.RootElement.AccessibleDescription = Nothing
-        Me.lblGenauigkeitsklasse.RootElement.AccessibleName = Nothing
-        '
         'PictureBoxGenauigkeitsklasse
         '
         Me.PictureBoxGenauigkeitsklasse.Image = Global.EichsoftwareClient.My.Resources.Resources.Genauigkeitsklasse3
@@ -1616,11 +1171,6 @@ Partial Class uco_7EichprotokollDaten
         Me.RadCheckBoxNichtselbsteinspielend.CheckAlignment = System.Drawing.ContentAlignment.MiddleRight
         Me.RadCheckBoxNichtselbsteinspielend.Controls.Add(Me.PictureBox7)
         Me.RadCheckBoxNichtselbsteinspielend.Name = "RadCheckBoxNichtselbsteinspielend"
-        '
-        '
-        '
-        Me.RadCheckBoxNichtselbsteinspielend.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxNichtselbsteinspielend.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxNichtselbsteinspielend.TabStop = False
         '
         'PictureBox7
@@ -1636,11 +1186,6 @@ Partial Class uco_7EichprotokollDaten
         Me.RadCheckBoxMehrteilungswaage.CheckAlignment = System.Drawing.ContentAlignment.MiddleRight
         Me.RadCheckBoxMehrteilungswaage.Controls.Add(Me.PictureBox8)
         Me.RadCheckBoxMehrteilungswaage.Name = "RadCheckBoxMehrteilungswaage"
-        '
-        '
-        '
-        Me.RadCheckBoxMehrteilungswaage.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxMehrteilungswaage.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxMehrteilungswaage.TabStop = False
         '
         'PictureBox8
@@ -1656,22 +1201,12 @@ Partial Class uco_7EichprotokollDaten
         Me.RadCheckBoxHybridMechWaage.CheckAlignment = System.Drawing.ContentAlignment.MiddleRight
         Me.RadCheckBoxHybridMechWaage.Name = "RadCheckBoxHybridMechWaage"
         '
-        '
-        '
-        Me.RadCheckBoxHybridMechWaage.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxHybridMechWaage.RootElement.AccessibleName = Nothing
-        '
         'RadCheckBoxMehrbereichswaage
         '
         resources.ApplyResources(Me.RadCheckBoxMehrbereichswaage, "RadCheckBoxMehrbereichswaage")
         Me.RadCheckBoxMehrbereichswaage.CheckAlignment = System.Drawing.ContentAlignment.MiddleRight
         Me.RadCheckBoxMehrbereichswaage.Controls.Add(Me.PictureBox9)
         Me.RadCheckBoxMehrbereichswaage.Name = "RadCheckBoxMehrbereichswaage"
-        '
-        '
-        '
-        Me.RadCheckBoxMehrbereichswaage.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxMehrbereichswaage.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxMehrbereichswaage.TabStop = False
         '
         'PictureBox9
@@ -1688,11 +1223,6 @@ Partial Class uco_7EichprotokollDaten
         Me.RadCheckBoxHalbSelbsteinspielend.CheckState = System.Windows.Forms.CheckState.Checked
         Me.RadCheckBoxHalbSelbsteinspielend.Controls.Add(Me.PictureBox10)
         Me.RadCheckBoxHalbSelbsteinspielend.Name = "RadCheckBoxHalbSelbsteinspielend"
-        '
-        '
-        '
-        Me.RadCheckBoxHalbSelbsteinspielend.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxHalbSelbsteinspielend.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxHalbSelbsteinspielend.TabStop = False
         Me.RadCheckBoxHalbSelbsteinspielend.ToggleState = Telerik.WinControls.Enumerations.ToggleState.[On]
         '
@@ -1708,31 +1238,16 @@ Partial Class uco_7EichprotokollDaten
         resources.ApplyResources(Me.lblHerstellungsjahr, "lblHerstellungsjahr")
         Me.lblHerstellungsjahr.Name = "lblHerstellungsjahr"
         '
-        '
-        '
-        Me.lblHerstellungsjahr.RootElement.AccessibleDescription = Nothing
-        Me.lblHerstellungsjahr.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBaujahr
         '
         resources.ApplyResources(Me.RadTextBoxControlBaujahr, "RadTextBoxControlBaujahr")
         Me.RadTextBoxControlBaujahr.MaxLength = 50
         Me.RadTextBoxControlBaujahr.Name = "RadTextBoxControlBaujahr"
         '
-        '
-        '
-        Me.RadTextBoxControlBaujahr.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBaujahr.RootElement.AccessibleName = Nothing
-        '
         'lblPruefer
         '
         resources.ApplyResources(Me.lblPruefer, "lblPruefer")
         Me.lblPruefer.Name = "lblPruefer"
-        '
-        '
-        '
-        Me.lblPruefer.RootElement.AccessibleDescription = Nothing
-        Me.lblPruefer.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlPruefer
         '
@@ -1740,11 +1255,6 @@ Partial Class uco_7EichprotokollDaten
         Me.RadTextBoxControlPruefer.MaxLength = 50
         Me.RadTextBoxControlPruefer.Name = "RadTextBoxControlPruefer"
         Me.RadTextBoxControlPruefer.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlPruefer.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlPruefer.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlPruefer.TabStop = False
         '
         'lblDatum
@@ -1752,22 +1262,12 @@ Partial Class uco_7EichprotokollDaten
         resources.ApplyResources(Me.lblDatum, "lblDatum")
         Me.lblDatum.Name = "lblDatum"
         '
-        '
-        '
-        Me.lblDatum.RootElement.AccessibleDescription = Nothing
-        Me.lblDatum.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlDatum
         '
         resources.ApplyResources(Me.RadTextBoxControlDatum, "RadTextBoxControlDatum")
         Me.RadTextBoxControlDatum.MaxLength = 50
         Me.RadTextBoxControlDatum.Name = "RadTextBoxControlDatum"
         Me.RadTextBoxControlDatum.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlDatum.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlDatum.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlDatum.TabStop = False
         '
         'lblFabriknummer
@@ -1775,22 +1275,12 @@ Partial Class uco_7EichprotokollDaten
         resources.ApplyResources(Me.lblFabriknummer, "lblFabriknummer")
         Me.lblFabriknummer.Name = "lblFabriknummer"
         '
-        '
-        '
-        Me.lblFabriknummer.RootElement.AccessibleDescription = Nothing
-        Me.lblFabriknummer.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlFabriknummer
         '
         resources.ApplyResources(Me.RadTextBoxControlFabriknummer, "RadTextBoxControlFabriknummer")
         Me.RadTextBoxControlFabriknummer.MaxLength = 50
         Me.RadTextBoxControlFabriknummer.Name = "RadTextBoxControlFabriknummer"
         Me.RadTextBoxControlFabriknummer.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlFabriknummer.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlFabriknummer.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlFabriknummer.TabStop = False
         '
         'lblOrt
@@ -1798,42 +1288,22 @@ Partial Class uco_7EichprotokollDaten
         resources.ApplyResources(Me.lblOrt, "lblOrt")
         Me.lblOrt.Name = "lblOrt"
         '
-        '
-        '
-        Me.lblOrt.RootElement.AccessibleDescription = Nothing
-        Me.lblOrt.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlAufstellungsort
         '
         resources.ApplyResources(Me.RadTextBoxControlAufstellungsort, "RadTextBoxControlAufstellungsort")
         Me.RadTextBoxControlAufstellungsort.MaxLength = 50
         Me.RadTextBoxControlAufstellungsort.Name = "RadTextBoxControlAufstellungsort"
         '
-        '
-        '
-        Me.RadTextBoxControlAufstellungsort.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlAufstellungsort.RootElement.AccessibleName = Nothing
-        '
         'lblBenutzer
         '
         resources.ApplyResources(Me.lblBenutzer, "lblBenutzer")
         Me.lblBenutzer.Name = "lblBenutzer"
-        '
-        '
-        '
-        Me.lblBenutzer.RootElement.AccessibleDescription = Nothing
-        Me.lblBenutzer.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlBenutzer
         '
         resources.ApplyResources(Me.RadTextBoxControlBenutzer, "RadTextBoxControlBenutzer")
         Me.RadTextBoxControlBenutzer.MaxLength = 50
         Me.RadTextBoxControlBenutzer.Name = "RadTextBoxControlBenutzer"
-        '
-        '
-        '
-        Me.RadTextBoxControlBenutzer.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBenutzer.RootElement.AccessibleName = Nothing
         '
         'uco_7EichprotokollDaten
         '
@@ -1870,11 +1340,11 @@ Partial Class uco_7EichprotokollDaten
         CType(Me.RadGroupBoxVerwendungszweckEquipment, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxVerwendungszweckEquipment.ResumeLayout(False)
         Me.RadGroupBoxVerwendungszweckEquipment.PerformLayout()
+        CType(Me.RadTextBoxControlDruckerTyp, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadCheckBoxDrucker, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadCheckBoxEichfaehigerSpeicher, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadCheckBoxPC, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadCheckBoxSonstiges, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControlDruckerTyp, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblDruckerart, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBoxVerwendungszweckNullstellung, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxVerwendungszweckNullstellung.ResumeLayout(False)
@@ -2096,7 +1566,6 @@ Partial Class uco_7EichprotokollDaten
     Friend WithEvents lblDimension As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadTextBoxControlDimension As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents lblDruckerart As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlDruckerTyp As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxSonstiges As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents RadCheckBoxPC As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents RadCheckBoxEichfaehigerSpeicher As Telerik.WinControls.UI.RadCheckBox
@@ -2141,5 +1610,5 @@ Partial Class uco_7EichprotokollDaten
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents RadRadioButtonTaraeingabe As Telerik.WinControls.UI.RadCheckBox
-
+    Friend WithEvents RadTextBoxControlDruckerTyp As Telerik.WinControls.UI.RadDropDownList
 End Class

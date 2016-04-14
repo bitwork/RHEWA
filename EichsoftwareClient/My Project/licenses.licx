@@ -10,5 +10,6 @@ Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.1.216.4
 Telerik.WinControls.UI.RadDateTimePicker, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e
 Telerik.WinControls.UI.RadGridView, Telerik.WinControls.GridView, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e
 Telerik.WinControls.UI.RadSplitContainer, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e
+Telerik.WinControls.UI.RadDropDownList, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e
 Telerik.WinControls.UI.RadRadioButton, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e
 Janus.Windows.ExplorerBar.ExplorerBar, Janus.Windows.ExplorerBar.v3, Version=3.5.117.0, Culture=neutral, PublicKeyToken=21d5517571b185bf
