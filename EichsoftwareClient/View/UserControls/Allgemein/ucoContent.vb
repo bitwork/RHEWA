@@ -331,7 +331,10 @@ Public Class ucoContent
         Me.AbortSaving = False
         Return True
     End Function
-
+    ''' <summary>
+    ''' Hiearschisches deaktivieren der Steuerelemente
+    ''' </summary>
+    ''' <param name="controlcontainer"></param>
     Friend Sub DisableControls(ByVal controlcontainer As Control)
         For Each Control In controlcontainer.Controls
             If TypeOf Control Is Label Then Continue For
@@ -373,6 +376,58 @@ Public Class ucoContent
                 Catch ex2 As Exception
                     Try
                         Control.enabled = False
+                    Catch ex3 As Exception
+                    End Try
+                End Try
+            End Try
+        Next
+    End Sub
+
+    ''' <summary>
+    '''   Hiearschisches aktivieren der Steuerelemente
+    ''' </summary>
+    ''' <param name="controlcontainer"></param>
+    Friend Sub EnableControls(ByVal controlcontainer As Control)
+        For Each Control In controlcontainer.Controls
+            If TypeOf Control Is Label Then Continue For
+            If TypeOf Control Is PictureBox Then Continue For
+            If TypeOf Control Is Telerik.WinControls.UI.RadLabel Then Continue For
+            If TypeOf Control Is Telerik.WinControls.UI.RadSeparator Then Continue For
+
+            If TypeOf Control Is GroupBox Then
+                DisableControls(Control)
+                Continue For
+            End If
+            If TypeOf Control Is Panel Then
+                DisableControls(Control)
+                Continue For
+            End If
+            If TypeOf Control Is Telerik.WinControls.UI.RadGroupBox Then
+                DisableControls(Control)
+                Continue For
+            End If
+            If TypeOf Control Is Telerik.WinControls.UI.RadButton Then
+                Control.enabled = True
+                Continue For
+            End If
+            If TypeOf Control Is Telerik.WinControls.UI.RadCheckBox Then
+                Control.enabled = True
+                Continue For
+            End If
+
+            If TypeOf Control Is Telerik.WinControls.UI.RadRadioButton Then
+                Control.enabled = True
+                Continue For
+            End If
+
+            Try
+                Control.readonly = False
+            Catch ex As Exception
+                Try
+                    Control.isreadonly = False
+                Catch ex2 As Exception
+                    Try
+                        Control.enabled = True
                     Catch ex3 As Exception
                     End Try
                 End Try

@@ -64,7 +64,7 @@ Public Class uco_9PruefungLinearitaet
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
-    Private Sub RadButtonShowEFG_Click(sender As Object, e As EventArgs) Handles RadButtonShowEFGFallend.Click, RadButtonShowEFGSteigend.Click
+    Private Sub RadButtonShowEFG_Click(sender As Object, e As EventArgs) Handles  RadButtonShowEFGSteigend.Click
         Dim f As New frmEichfehlergrenzen(objEichprozess)
         f.Show()
     End Sub
@@ -164,7 +164,7 @@ Public Class uco_9PruefungLinearitaet
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
-    Private Sub RadButtonSteigendPlus_Click(sender As Object, e As EventArgs) Handles RadButtonSteigendPlus.Click, RadButtonFallendPlus.Click
+    Private Sub RadButtonSteigendPlus_Click(sender As Object, e As EventArgs) Handles RadButtonSteigendPlus.Click
         If _intAnzahlMesspunkte = 8 Then
             System.Media.SystemSounds.Exclamation.Play()
         Else
@@ -180,7 +180,7 @@ Public Class uco_9PruefungLinearitaet
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
-    Private Sub RadButtonSteigendMinus_Click(sender As Object, e As EventArgs) Handles RadButtonSteigendMinus.Click, RadButtonFallendMinus.Click
+    Private Sub RadButtonSteigendMinus_Click(sender As Object, e As EventArgs) Handles RadButtonSteigendMinus.Click
         If _intAnzahlMesspunkte = 5 Then
             System.Media.SystemSounds.Exclamation.Play()
         Else
@@ -255,9 +255,7 @@ Public Class uco_9PruefungLinearitaet
             DisableControls(RadGroupBoxBereich2Fallend)
             DisableControls(RadGroupBoxBereich3)
             DisableControls(RadGroupBoxBereich3Fallend)
-            DisableControls(RadButtonFallendMinus)
-            RadButtonFallendMinus.Enabled = False
-            RadButtonFallendPlus.Enabled = False
+
             RadButtonSteigendMinus.Enabled = False
             RadButtonSteigendPlus.Enabled = False
 
@@ -1199,8 +1197,7 @@ Public Class uco_9PruefungLinearitaet
         RadGroupBoxBereich1Fallend.Text = resources.GetString("RadGroupBoxBereich1Fallend.Text")
         RadGroupBoxBereich2Fallend.Text = resources.GetString("RadGroupBoxBereich2Fallend.Text")
         RadGroupBoxBereich3Fallend.Text = resources.GetString("RadGroupBoxBereich3Fallend.Text")
-        RadGroupBoxPruefungLinearitaetFallend.Text = resources.GetString("RadGroupBoxPruefungLinearitaetFallend.Text")
-        RadGroupBoxPruefungLinearitaetSteigend.Text = resources.GetString("RadGroupBoxPruefungLinearitaetSteigend.Text")
+
 
 
         lblBereich1AnzeigeGewicht.Text = resources.GetString("lblBereich1AnzeigeGewicht.Text")
@@ -1233,7 +1230,6 @@ Public Class uco_9PruefungLinearitaet
 
 
         RadButtonShowEFGSteigend.Text = resources.GetString("RadButtonShowEFGSteigend.Text")
-        RadButtonShowEFGFallend.Text = resources.GetString("RadButtonShowEFGFallend.Text")
 
 
 
@@ -1280,21 +1276,16 @@ Public Class uco_9PruefungLinearitaet
     Protected Overrides Sub EntsperrungNeeded()
         MyBase.EntsperrungNeeded()
 
-        'Hiermit wird ein lesender Vorgang wieder entsperrt. 
-        For Each Control In RadScrollablePanel1.PanelContainer.Controls
-            Try
-                Control.readonly = Not Control.readonly
-            Catch ex As Exception
-                Try
-                    Control.isreadonly = Not Control.isReadonly
-                Catch ex2 As Exception
-                    Try
-                        Control.enabled = Not Control.enabled
-                    Catch ex3 As Exception
-                    End Try
-                End Try
-            End Try
-        Next
+        'falls der Konformitätsbewertungsvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
+        EnableControls(RadGroupBoxBereich1)
+        EnableControls(RadGroupBoxBereich1Fallend)
+        EnableControls(RadGroupBoxBereich2)
+        EnableControls(RadGroupBoxBereich2Fallend)
+        EnableControls(RadGroupBoxBereich3)
+        EnableControls(RadGroupBoxBereich3Fallend)
+
+        RadButtonSteigendMinus.Enabled = True
+        RadButtonSteigendPlus.Enabled = True
 
         'ändern des Moduses
         DialogModus = enuDialogModus.korrigierend

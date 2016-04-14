@@ -371,7 +371,7 @@
     <value>Anzeige [kg]</value>
   </data>
   <data name="RadGroupBoxBereich3Fallend.HeaderText" xml:space="preserve">
-    <value>Bereich 3</value>
+    <value>Bereich 3 Steigend</value>
   </data>
   <data name="RadGroupBoxBereich3Fallend.RootElement.KeyTip" xml:space="preserve">
     <value />
@@ -380,7 +380,7 @@
     <value />
   </data>
   <data name="RadGroupBoxBereich3Fallend.Text" xml:space="preserve">
-    <value>Bereich 3</value>
+    <value>Bereich 3 Fallend</value>
   </data>
   <data name="RadButtonFallendPlus.RootElement.KeyTip" xml:space="preserve">
     <value />
@@ -626,7 +626,7 @@
     <value>Anzeige [kg]</value>
   </data>
   <data name="RadGroupBoxBereich2Fallend.HeaderText" xml:space="preserve">
-    <value>Bereich 2</value>
+    <value>Bereich 2 Fallend</value>
   </data>
   <data name="RadGroupBoxBereich2Fallend.RootElement.KeyTip" xml:space="preserve">
     <value />
@@ -635,7 +635,7 @@
     <value />
   </data>
   <data name="RadGroupBoxBereich2Fallend.Text" xml:space="preserve">
-    <value>Bereich 2</value>
+    <value>Bereich 2 Fallend</value>
   </data>
   <data name="lblBereich1FallendGewicht.RootElement.KeyTip" xml:space="preserve">
     <value />
@@ -875,7 +875,7 @@
     <value>Fehler [kg]</value>
   </data>
   <data name="RadGroupBoxBereich1Fallend.HeaderText" xml:space="preserve">
-    <value>Bereich 1</value>
+    <value>Bereich 1 Fallend</value>
   </data>
   <data name="RadGroupBoxBereich1Fallend.RootElement.KeyTip" xml:space="preserve">
     <value />
@@ -884,7 +884,7 @@
     <value />
   </data>
   <data name="RadGroupBoxBereich1Fallend.Text" xml:space="preserve">
-    <value>Bereich 1</value>
+    <value>Bereich 1 Fallend</value>
   </data>
   <data name="RadGroupBoxPruefungLinearitaetFallend.HeaderText" xml:space="preserve">
     <value>Linearität Fallend</value>
@@ -1151,7 +1151,7 @@
     <value />
   </data>
   <data name="RadGroupBoxBereich3.HeaderText" xml:space="preserve">
-    <value>Bereich 3</value>
+    <value>Bereich 3 Steigend</value>
   </data>
   <data name="RadGroupBoxBereich3.RootElement.KeyTip" xml:space="preserve">
     <value />
@@ -1160,7 +1160,7 @@
     <value />
   </data>
   <data name="RadGroupBoxBereich3.Text" xml:space="preserve">
-    <value>Bereich 3</value>
+    <value>Bereich 3 Steigend</value>
   </data>
   <data name="RadButtonSteigendPlus.RootElement.KeyTip" xml:space="preserve">
     <value />
@@ -1406,7 +1406,7 @@
     <value />
   </data>
   <data name="RadGroupBoxBereich2.HeaderText" xml:space="preserve">
-    <value>Bereich 2</value>
+    <value>Bereich 2 Steigend</value>
   </data>
   <data name="RadGroupBoxBereich2.RootElement.KeyTip" xml:space="preserve">
     <value />
@@ -1415,7 +1415,7 @@
     <value />
   </data>
   <data name="RadGroupBoxBereich2.Text" xml:space="preserve">
-    <value>Bereich 2</value>
+    <value>Bereich 2 Steigend</value>
   </data>
   <data name="RadTextBoxControlBereich1Weight1.RootElement.KeyTip" xml:space="preserve">
     <value />
@@ -1655,7 +1655,7 @@
     <value />
   </data>
   <data name="RadGroupBoxBereich1.HeaderText" xml:space="preserve">
-    <value>Bereich 1</value>
+    <value>Bereich 1 Steigend</value>
   </data>
   <data name="RadGroupBoxBereich1.RootElement.KeyTip" xml:space="preserve">
     <value />
@@ -1664,7 +1664,7 @@
     <value />
   </data>
   <data name="RadGroupBoxBereich1.Text" xml:space="preserve">
-    <value>Bereich 1</value>
+    <value>Bereich 1 Steigend</value>
   </data>
   <data name="RadGroupBoxPruefungLinearitaetSteigend.HeaderText" xml:space="preserve">
     <value>Linearität Steigend</value>
