@@ -349,19 +349,22 @@
             Catch ex As Exception
                 MessageBox.Show(ex.Message)
             End Try
-        
+
         Else 'werte aus DB Laden
             If objEichprozess.Eichprotokoll.Verwendungszweck_Automatisch = True Then
                 RadRadioButtonNustellungAutomatisch.IsChecked = True
-            ElseIf objEichprozess.Eichprotokoll.Verwendungszweck_Nullnachfuehrung = True Then
+            End If
+            If objEichprozess.Eichprotokoll.Verwendungszweck_Nullnachfuehrung = True Then
                 RadRadioButtonNustellungNullNachfuehrung.IsChecked = True
-            ElseIf objEichprozess.Eichprotokoll.Verwendungszweck_HalbAutomatisch Then
+            End If
+            If objEichprozess.Eichprotokoll.Verwendungszweck_HalbAutomatisch Then
                 RadRadioButtonNustellungHalbAutomatisch.IsChecked = True
             End If
 
             If objEichprozess.Eichprotokoll.Verwendungszweck_AutoTara Then
                 RadRadioButtonAutoTara.IsChecked = True
-            ElseIf objEichprozess.Eichprotokoll.Verwendungszweck_HandTara Then
+            End If
+            If objEichprozess.Eichprotokoll.Verwendungszweck_HandTara Then
                 RadRadioButtonHandTara.IsChecked = True
             End If
 
