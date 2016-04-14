@@ -117,12 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="lblUeberlast.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblUeberlast.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lblUeberlast.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 18</value>
@@ -130,46 +124,16 @@
   <data name="lblUeberlast.Text" xml:space="preserve">
     <value>Überlast:</value>
   </data>
-  <data name="RadTextBoxControlMaxE.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadTextBoxControlMaxE.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel2.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadLabel2.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblAnzeige.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblAnzeige.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
   <data name="lblAnzeige.Size" type="System.Drawing.Size, System.Drawing">
-    <value>212, 18</value>
+    <value>401, 18</value>
   </data>
   <data name="lblAnzeige.Text" xml:space="preserve">
-    <value>Anzeige: Überlast, kein Ausdruck möglich</value>
+    <value>Anzeige: zeigt Überlast; bei angeschlossenem Drucker:  Ausdruck nicht möglich</value>
   </data>
-  <data name="RadLabel3.RootElement.KeyTip" xml:space="preserve">
-    <value />
+  <data name="RadCheckBoxUeberlast.Location" type="System.Drawing.Point, System.Drawing">
+    <value>843, 29</value>
   </data>
-  <data name="RadLabel3.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxUeberlast.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="RadCheckBoxUeberlast.RootElement.ToolTipText" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblKg.RootElement.KeyTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="lblKg.RootElement.ToolTipText" xml:space="preserve">
-    <value />
+  <data name="lblPflichtfeld1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>864, 28</value>
   </data>
 </root>

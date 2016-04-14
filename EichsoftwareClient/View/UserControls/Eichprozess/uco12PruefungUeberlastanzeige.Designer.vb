@@ -47,118 +47,41 @@ Partial Class uco12PruefungUeberlastanzeige
         resources.ApplyResources(Me.lblUeberlast, "lblUeberlast")
         Me.lblUeberlast.Name = "lblUeberlast"
         '
-        '
-        '
-        Me.lblUeberlast.RootElement.AccessibleDescription = resources.GetString("lblUeberlast.RootElement.AccessibleDescription")
-        Me.lblUeberlast.RootElement.AccessibleName = resources.GetString("lblUeberlast.RootElement.AccessibleName")
-        Me.lblUeberlast.RootElement.Alignment = CType(resources.GetObject("lblUeberlast.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblUeberlast.RootElement.AngleTransform = CType(resources.GetObject("lblUeberlast.RootElement.AngleTransform"), Single)
-        Me.lblUeberlast.RootElement.FlipText = CType(resources.GetObject("lblUeberlast.RootElement.FlipText"), Boolean)
-        Me.lblUeberlast.RootElement.Margin = CType(resources.GetObject("lblUeberlast.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblUeberlast.RootElement.Text = resources.GetString("lblUeberlast.RootElement.Text")
-        Me.lblUeberlast.RootElement.TextOrientation = CType(resources.GetObject("lblUeberlast.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        '
         'RadTextBoxControlMaxE
         '
-        Me.RadTextBoxControlMaxE.ReadOnly = True
         resources.ApplyResources(Me.RadTextBoxControlMaxE, "RadTextBoxControlMaxE")
         Me.RadTextBoxControlMaxE.Name = "RadTextBoxControlMaxE"
-        '
-        '
-        '
-        Me.RadTextBoxControlMaxE.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlMaxE.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlMaxE.RootElement.AccessibleName = resources.GetString("RadTextBoxControlMaxE.RootElement.AccessibleName")
-        Me.RadTextBoxControlMaxE.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlMaxE.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlMaxE.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlMaxE.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlMaxE.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlMaxE.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlMaxE.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlMaxE.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlMaxE.RootElement.Text = resources.GetString("RadTextBoxControlMaxE.RootElement.Text")
-        Me.RadTextBoxControlMaxE.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlMaxE.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlMaxE.ReadOnly = True
         '
         'RadLabel2
         '
         resources.ApplyResources(Me.RadLabel2, "RadLabel2")
         Me.RadLabel2.Name = "RadLabel2"
         '
-        '
-        '
-        Me.RadLabel2.RootElement.AccessibleDescription = resources.GetString("RadLabel2.RootElement.AccessibleDescription")
-        Me.RadLabel2.RootElement.AccessibleName = resources.GetString("RadLabel2.RootElement.AccessibleName")
-        Me.RadLabel2.RootElement.Alignment = CType(resources.GetObject("RadLabel2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadLabel2.RootElement.AngleTransform = CType(resources.GetObject("RadLabel2.RootElement.AngleTransform"), Single)
-        Me.RadLabel2.RootElement.FlipText = CType(resources.GetObject("RadLabel2.RootElement.FlipText"), Boolean)
-        Me.RadLabel2.RootElement.Margin = CType(resources.GetObject("RadLabel2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel2.RootElement.Text = resources.GetString("RadLabel2.RootElement.Text")
-        Me.RadLabel2.RootElement.TextOrientation = CType(resources.GetObject("RadLabel2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        '
         'lblAnzeige
         '
         resources.ApplyResources(Me.lblAnzeige, "lblAnzeige")
         Me.lblAnzeige.Name = "lblAnzeige"
-        '
-        '
-        '
-        Me.lblAnzeige.RootElement.AccessibleDescription = resources.GetString("lblAnzeige.RootElement.AccessibleDescription")
-        Me.lblAnzeige.RootElement.AccessibleName = resources.GetString("lblAnzeige.RootElement.AccessibleName")
-        Me.lblAnzeige.RootElement.Alignment = CType(resources.GetObject("lblAnzeige.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblAnzeige.RootElement.AngleTransform = CType(resources.GetObject("lblAnzeige.RootElement.AngleTransform"), Single)
-        Me.lblAnzeige.RootElement.FlipText = CType(resources.GetObject("lblAnzeige.RootElement.FlipText"), Boolean)
-        Me.lblAnzeige.RootElement.Margin = CType(resources.GetObject("lblAnzeige.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblAnzeige.RootElement.Text = resources.GetString("lblAnzeige.RootElement.Text")
-        Me.lblAnzeige.RootElement.TextOrientation = CType(resources.GetObject("lblAnzeige.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
         'RadLabel3
         '
         resources.ApplyResources(Me.RadLabel3, "RadLabel3")
         Me.RadLabel3.Name = "RadLabel3"
         '
-        '
-        '
-        Me.RadLabel3.RootElement.AccessibleDescription = resources.GetString("RadLabel3.RootElement.AccessibleDescription")
-        Me.RadLabel3.RootElement.AccessibleName = resources.GetString("RadLabel3.RootElement.AccessibleName")
-        Me.RadLabel3.RootElement.Alignment = CType(resources.GetObject("RadLabel3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadLabel3.RootElement.AngleTransform = CType(resources.GetObject("RadLabel3.RootElement.AngleTransform"), Single)
-        Me.RadLabel3.RootElement.FlipText = CType(resources.GetObject("RadLabel3.RootElement.FlipText"), Boolean)
-        Me.RadLabel3.RootElement.Margin = CType(resources.GetObject("RadLabel3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel3.RootElement.Text = resources.GetString("RadLabel3.RootElement.Text")
-        Me.RadLabel3.RootElement.TextOrientation = CType(resources.GetObject("RadLabel3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        '
         'RadCheckBoxUeberlast
         '
         resources.ApplyResources(Me.RadCheckBoxUeberlast, "RadCheckBoxUeberlast")
         Me.RadCheckBoxUeberlast.Name = "RadCheckBoxUeberlast"
-        '
-        '
-        '
-        Me.RadCheckBoxUeberlast.RootElement.AccessibleDescription = resources.GetString("RadCheckBoxUeberlast.RootElement.AccessibleDescription")
-        Me.RadCheckBoxUeberlast.RootElement.AccessibleName = resources.GetString("RadCheckBoxUeberlast.RootElement.AccessibleName")
-        Me.RadCheckBoxUeberlast.RootElement.Alignment = CType(resources.GetObject("RadCheckBoxUeberlast.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadCheckBoxUeberlast.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxUeberlast.RootElement.AngleTransform"), Single)
-        Me.RadCheckBoxUeberlast.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxUeberlast.RootElement.FlipText"), Boolean)
-        Me.RadCheckBoxUeberlast.RootElement.Margin = CType(resources.GetObject("RadCheckBoxUeberlast.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadCheckBoxUeberlast.RootElement.Text = resources.GetString("RadCheckBoxUeberlast.RootElement.Text")
-        Me.RadCheckBoxUeberlast.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxUeberlast.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
         '
         'lblKg
         '
         resources.ApplyResources(Me.lblKg, "lblKg")
         Me.lblKg.Name = "lblKg"
         '
-        '
-        '
-        Me.lblKg.RootElement.AccessibleDescription = resources.GetString("lblKg.RootElement.AccessibleDescription")
-        Me.lblKg.RootElement.AccessibleName = resources.GetString("lblKg.RootElement.AccessibleName")
-        Me.lblKg.RootElement.Alignment = CType(resources.GetObject("lblKg.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblKg.RootElement.AngleTransform = CType(resources.GetObject("lblKg.RootElement.AngleTransform"), Single)
-        Me.lblKg.RootElement.FlipText = CType(resources.GetObject("lblKg.RootElement.FlipText"), Boolean)
-        Me.lblKg.RootElement.Margin = CType(resources.GetObject("lblKg.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblKg.RootElement.Text = resources.GetString("lblKg.RootElement.Text")
-        Me.lblKg.RootElement.TextOrientation = CType(resources.GetObject("lblKg.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        '
         'PictureBox2
         '
-        Me.PictureBox2.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox2, "PictureBox2")
+        Me.PictureBox2.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.TabStop = False
         '
