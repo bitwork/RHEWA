@@ -489,6 +489,8 @@
                     Else
                         Return False
                     End If
+                Else
+                    Return True
                 End If
 
             Else
