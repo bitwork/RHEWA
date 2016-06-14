@@ -380,11 +380,16 @@
                     RadTextBoxPunkt5Faktor.Text = Math.Round(CDec(RadTextBoxPunkt5Faktor.Text), 2, MidpointRounding.AwayFromZero)
                 End If
             Case Else
-                RadTextBoxPunkt5Faktor.Text = (CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3) + CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Einschaltnullstellbereich) + _
+                Try
+
+                    RadTextBoxPunkt5Faktor.Text = (CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3) + CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Einschaltnullstellbereich) + _
                                                CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Ecklastzuschlag) + CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Totlast) + _
                                                CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AdditiveTarahoechstlast)) / CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3)
 
 
+                Catch ex As Exception
+                    RadTextBoxPunkt5Faktor.Text = -99
+                End Try
 
                 '=WENN('Daten-Eingabe'!$G$15="";"R fehlt";WENN($G$33="";"Q fehlt";WENN('Daten-Eingabe'!$G$16="";"Anzahl  N  fehlt";($G$33*'Daten-Eingabe'!$G$14*'Daten-Eingabe'!$G$15)/'Daten-Eingabe'!$G$16)))
                 RadTextBoxPunkt5QMax.Text = (RadTextBoxPunkt5Faktor.Text * objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 * objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Uebersetzungsverhaeltnis) / objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen

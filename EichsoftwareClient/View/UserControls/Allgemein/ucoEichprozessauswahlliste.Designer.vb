@@ -83,6 +83,7 @@ Partial Class ucoEichprozessauswahlliste
         'RadGridViewAuswahlliste
         '
         resources.ApplyResources(Me.RadGridViewAuswahlliste, "RadGridViewAuswahlliste")
+        Me.RadGridViewAuswahlliste.AutoSizeRows = True
         '
         '
         '

@@ -401,6 +401,7 @@ Partial Class uco_9PruefungLinearitaet
         Me.lblBereich2FallendEFGSpezial = New Telerik.WinControls.UI.RadLabel()
         Me.lblBereich2FallendGewicht = New Telerik.WinControls.UI.RadLabel()
         Me.lblBereich2FallendAnzeigeGewicht = New Telerik.WinControls.UI.RadLabel()
+        Me.FlowLayoutPanel2 = New System.Windows.Forms.FlowLayoutPanel()
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanel1.PanelContainer.SuspendLayout()
         Me.RadScrollablePanel1.SuspendLayout()
@@ -781,6 +782,7 @@ Partial Class uco_9PruefungLinearitaet
         CType(Me.lblBereich2FallendEFGSpezial, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblBereich2FallendGewicht, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblBereich2FallendAnzeigeGewicht, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.FlowLayoutPanel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'RadScrollablePanel1
@@ -3099,15 +3101,8 @@ Partial Class uco_9PruefungLinearitaet
         'RadGroupBoxBereich2Fallend
         '
         Me.RadGroupBoxBereich2Fallend.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
-        Me.RadGroupBoxBereich2Fallend.Controls.Add(Me.PanelBereich2FallendWZ1)
-        Me.RadGroupBoxBereich2Fallend.Controls.Add(Me.PanelBereich2FallendWZ2)
-        Me.RadGroupBoxBereich2Fallend.Controls.Add(Me.PanelBereich2FallendWZ3)
-        Me.RadGroupBoxBereich2Fallend.Controls.Add(Me.PanelBereich2FallendWZ4)
-        Me.RadGroupBoxBereich2Fallend.Controls.Add(Me.PanelBereich2FallendWZ5)
-        Me.RadGroupBoxBereich2Fallend.Controls.Add(Me.PanelBereich2FallendWZ7)
+        Me.RadGroupBoxBereich2Fallend.Controls.Add(Me.FlowLayoutPanel2)
         Me.RadGroupBoxBereich2Fallend.Controls.Add(Me.lblPflichtfeld5)
-        Me.RadGroupBoxBereich2Fallend.Controls.Add(Me.PanelBereich2FallendWZ6)
-        Me.RadGroupBoxBereich2Fallend.Controls.Add(Me.PanelBereich2FallendWZ8)
         Me.RadGroupBoxBereich2Fallend.Controls.Add(Me.lblBereich2FallendFehlerGrenzen)
         Me.RadGroupBoxBereich2Fallend.Controls.Add(Me.lblBereich2FallendEFGSpezial)
         Me.RadGroupBoxBereich2Fallend.Controls.Add(Me.lblBereich2FallendGewicht)
@@ -3549,6 +3544,19 @@ Partial Class uco_9PruefungLinearitaet
         resources.ApplyResources(Me.lblBereich2FallendAnzeigeGewicht, "lblBereich2FallendAnzeigeGewicht")
         Me.lblBereich2FallendAnzeigeGewicht.Name = "lblBereich2FallendAnzeigeGewicht"
         '
+        'FlowLayoutPanel2
+        '
+        Me.FlowLayoutPanel2.Controls.Add(Me.PanelBereich2FallendWZ8)
+        Me.FlowLayoutPanel2.Controls.Add(Me.PanelBereich2FallendWZ7)
+        Me.FlowLayoutPanel2.Controls.Add(Me.PanelBereich2FallendWZ6)
+        Me.FlowLayoutPanel2.Controls.Add(Me.PanelBereich2FallendWZ5)
+        Me.FlowLayoutPanel2.Controls.Add(Me.PanelBereich2FallendWZ4)
+        Me.FlowLayoutPanel2.Controls.Add(Me.PanelBereich2FallendWZ3)
+        Me.FlowLayoutPanel2.Controls.Add(Me.PanelBereich2FallendWZ2)
+        Me.FlowLayoutPanel2.Controls.Add(Me.PanelBereich2FallendWZ1)
+        resources.ApplyResources(Me.FlowLayoutPanel2, "FlowLayoutPanel2")
+        Me.FlowLayoutPanel2.Name = "FlowLayoutPanel2"
+        '
         'uco_9PruefungLinearitaet
         '
         resources.ApplyResources(Me, "$this")
@@ -3989,6 +3997,7 @@ Partial Class uco_9PruefungLinearitaet
         CType(Me.lblBereich2FallendEFGSpezial, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblBereich2FallendGewicht, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblBereich2FallendAnzeigeGewicht, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.FlowLayoutPanel2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -4370,5 +4379,5 @@ Partial Class uco_9PruefungLinearitaet
     Friend WithEvents lblPflichtfeld4 As System.Windows.Forms.Label
     Friend WithEvents lblPflichtfeld3 As System.Windows.Forms.Label
     Friend WithEvents lblPflichtfeld2 As System.Windows.Forms.Label
-
+    Friend WithEvents FlowLayoutPanel2 As FlowLayoutPanel
 End Class

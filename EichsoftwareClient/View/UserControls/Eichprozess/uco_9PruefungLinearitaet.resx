@@ -7194,159 +7194,6 @@
   <data name="&gt;&gt;RadGroupBoxBereich3Fallend.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="PictureBoxFallend29.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="PictureBoxFallend29.Location" type="System.Drawing.Point, System.Drawing">
-    <value>327, 3</value>
-  </data>
-  <data name="PictureBoxFallend29.Size" type="System.Drawing.Size, System.Drawing">
-    <value>18, 21</value>
-  </data>
-  <data name="PictureBoxFallend29.TabIndex" type="System.Int32, mscorlib">
-    <value>58</value>
-  </data>
-  <data name="&gt;&gt;PictureBoxFallend29.Name" xml:space="preserve">
-    <value>PictureBoxFallend29</value>
-  </data>
-  <data name="&gt;&gt;PictureBoxFallend29.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PictureBoxFallend29.Parent" xml:space="preserve">
-    <value>PanelBereich2FallendWZ1</value>
-  </data>
-  <data name="&gt;&gt;PictureBoxFallend29.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="PictureBoxFallend30.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="PictureBoxFallend30.Location" type="System.Drawing.Point, System.Drawing">
-    <value>209, 3</value>
-  </data>
-  <data name="PictureBoxFallend30.Size" type="System.Drawing.Size, System.Drawing">
-    <value>18, 21</value>
-  </data>
-  <data name="PictureBoxFallend30.TabIndex" type="System.Int32, mscorlib">
-    <value>57</value>
-  </data>
-  <data name="&gt;&gt;PictureBoxFallend30.Name" xml:space="preserve">
-    <value>PictureBoxFallend30</value>
-  </data>
-  <data name="&gt;&gt;PictureBoxFallend30.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PictureBoxFallend30.Parent" xml:space="preserve">
-    <value>PanelBereich2FallendWZ1</value>
-  </data>
-  <data name="&gt;&gt;PictureBoxFallend30.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="RadTextBoxControlBereich2FallendWeight1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="RadTextBoxControlBereich2FallendWeight1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 20</value>
-  </data>
-  <data name="RadTextBoxControlBereich2FallendWeight1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight1.Name" xml:space="preserve">
-    <value>RadTextBoxControlBereich2FallendWeight1</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight1.Parent" xml:space="preserve">
-    <value>PanelBereich2FallendWZ1</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="RadTextBoxControlBereich2FallendDisplayWeight1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 3</value>
-  </data>
-  <data name="RadTextBoxControlBereich2FallendDisplayWeight1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 20</value>
-  </data>
-  <data name="RadTextBoxControlBereich2FallendDisplayWeight1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight1.Name" xml:space="preserve">
-    <value>RadTextBoxControlBereich2FallendDisplayWeight1</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight1.Parent" xml:space="preserve">
-    <value>PanelBereich2FallendWZ1</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight1.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="RadTextBoxControlBereich2FallendErrorLimit1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>233, 3</value>
-  </data>
-  <data name="RadTextBoxControlBereich2FallendErrorLimit1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 20</value>
-  </data>
-  <data name="RadTextBoxControlBereich2FallendErrorLimit1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit1.Name" xml:space="preserve">
-    <value>RadTextBoxControlBereich2FallendErrorLimit1</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit1.Parent" xml:space="preserve">
-    <value>PanelBereich2FallendWZ1</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit1.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="RadCheckBoxBereich2FallendVEL1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>351, 3</value>
-  </data>
-  <data name="RadCheckBoxBereich2FallendVEL1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 15</value>
-  </data>
-  <data name="RadCheckBoxBereich2FallendVEL1.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL1.Name" xml:space="preserve">
-    <value>RadCheckBoxBereich2FallendVEL1</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL1.Parent" xml:space="preserve">
-    <value>PanelBereich2FallendWZ1</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL1.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="PanelBereich2FallendWZ1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 69</value>
-  </data>
-  <data name="PanelBereich2FallendWZ1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>376, 25</value>
-  </data>
-  <data name="PanelBereich2FallendWZ1.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;PanelBereich2FallendWZ1.Name" xml:space="preserve">
-    <value>PanelBereich2FallendWZ1</value>
-  </data>
-  <data name="&gt;&gt;PanelBereich2FallendWZ1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PanelBereich2FallendWZ1.Parent" xml:space="preserve">
-    <value>RadGroupBoxBereich2Fallend</value>
-  </data>
-  <data name="&gt;&gt;PanelBereich2FallendWZ1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="PictureBoxFallend31.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -7480,7 +7327,7 @@
     <value>5</value>
   </data>
   <data name="PanelBereich2FallendWZ2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 100</value>
+    <value>3, 3</value>
   </data>
   <data name="PanelBereich2FallendWZ2.Size" type="System.Drawing.Size, System.Drawing">
     <value>376, 25</value>
@@ -7495,652 +7342,163 @@
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;PanelBereich2FallendWZ2.Parent" xml:space="preserve">
-    <value>RadGroupBoxBereich2Fallend</value>
+    <value>FlowLayoutPanel2</value>
   </data>
   <data name="&gt;&gt;PanelBereich2FallendWZ2.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
-  <data name="PictureBoxFallend33.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="PictureBoxFallend29.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="PictureBoxFallend33.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="PictureBoxFallend29.Location" type="System.Drawing.Point, System.Drawing">
     <value>327, 3</value>
   </data>
-  <data name="PictureBoxFallend33.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="PictureBoxFallend29.Size" type="System.Drawing.Size, System.Drawing">
     <value>18, 21</value>
   </data>
-  <data name="PictureBoxFallend33.TabIndex" type="System.Int32, mscorlib">
+  <data name="PictureBoxFallend29.TabIndex" type="System.Int32, mscorlib">
     <value>58</value>
   </data>
-  <data name="&gt;&gt;PictureBoxFallend33.Name" xml:space="preserve">
-    <value>PictureBoxFallend33</value>
+  <data name="&gt;&gt;PictureBoxFallend29.Name" xml:space="preserve">
+    <value>PictureBoxFallend29</value>
   </data>
-  <data name="&gt;&gt;PictureBoxFallend33.Type" xml:space="preserve">
+  <data name="&gt;&gt;PictureBoxFallend29.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;PictureBoxFallend33.Parent" xml:space="preserve">
-    <value>PanelBereich2FallendWZ3</value>
+  <data name="&gt;&gt;PictureBoxFallend29.Parent" xml:space="preserve">
+    <value>PanelBereich2FallendWZ1</value>
   </data>
-  <data name="&gt;&gt;PictureBoxFallend33.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;PictureBoxFallend29.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="PictureBoxFallend34.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="PictureBoxFallend30.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="PictureBoxFallend34.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="PictureBoxFallend30.Location" type="System.Drawing.Point, System.Drawing">
     <value>209, 3</value>
   </data>
-  <data name="PictureBoxFallend34.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="PictureBoxFallend30.Size" type="System.Drawing.Size, System.Drawing">
     <value>18, 21</value>
   </data>
-  <data name="PictureBoxFallend34.TabIndex" type="System.Int32, mscorlib">
+  <data name="PictureBoxFallend30.TabIndex" type="System.Int32, mscorlib">
     <value>57</value>
   </data>
-  <data name="&gt;&gt;PictureBoxFallend34.Name" xml:space="preserve">
-    <value>PictureBoxFallend34</value>
+  <data name="&gt;&gt;PictureBoxFallend30.Name" xml:space="preserve">
+    <value>PictureBoxFallend30</value>
   </data>
-  <data name="&gt;&gt;PictureBoxFallend34.Type" xml:space="preserve">
+  <data name="&gt;&gt;PictureBoxFallend30.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;PictureBoxFallend34.Parent" xml:space="preserve">
-    <value>PanelBereich2FallendWZ3</value>
+  <data name="&gt;&gt;PictureBoxFallend30.Parent" xml:space="preserve">
+    <value>PanelBereich2FallendWZ1</value>
   </data>
-  <data name="&gt;&gt;PictureBoxFallend34.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;PictureBoxFallend30.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="RadTextBoxControlBereich2FallendWeight3.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RadTextBoxControlBereich2FallendWeight1.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
   </data>
-  <data name="RadTextBoxControlBereich2FallendWeight3.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RadTextBoxControlBereich2FallendWeight1.Size" type="System.Drawing.Size, System.Drawing">
     <value>78, 20</value>
   </data>
-  <data name="RadTextBoxControlBereich2FallendWeight3.TabIndex" type="System.Int32, mscorlib">
+  <data name="RadTextBoxControlBereich2FallendWeight1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight3.Name" xml:space="preserve">
-    <value>RadTextBoxControlBereich2FallendWeight3</value>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight1.Name" xml:space="preserve">
+    <value>RadTextBoxControlBereich2FallendWeight1</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight3.Type" xml:space="preserve">
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight1.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight3.Parent" xml:space="preserve">
-    <value>PanelBereich2FallendWZ3</value>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight1.Parent" xml:space="preserve">
+    <value>PanelBereich2FallendWZ1</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight3.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight1.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="RadTextBoxControlBereich2FallendDisplayWeight3.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RadTextBoxControlBereich2FallendDisplayWeight1.Location" type="System.Drawing.Point, System.Drawing">
     <value>120, 3</value>
   </data>
-  <data name="RadTextBoxControlBereich2FallendDisplayWeight3.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RadTextBoxControlBereich2FallendDisplayWeight1.Size" type="System.Drawing.Size, System.Drawing">
     <value>78, 20</value>
   </data>
-  <data name="RadTextBoxControlBereich2FallendDisplayWeight3.TabIndex" type="System.Int32, mscorlib">
+  <data name="RadTextBoxControlBereich2FallendDisplayWeight1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight3.Name" xml:space="preserve">
-    <value>RadTextBoxControlBereich2FallendDisplayWeight3</value>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight1.Name" xml:space="preserve">
+    <value>RadTextBoxControlBereich2FallendDisplayWeight1</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight3.Type" xml:space="preserve">
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight1.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight3.Parent" xml:space="preserve">
-    <value>PanelBereich2FallendWZ3</value>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight1.Parent" xml:space="preserve">
+    <value>PanelBereich2FallendWZ1</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight3.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight1.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="RadTextBoxControlBereich2FallendErrorLimit3.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RadTextBoxControlBereich2FallendErrorLimit1.Location" type="System.Drawing.Point, System.Drawing">
     <value>233, 3</value>
   </data>
-  <data name="RadTextBoxControlBereich2FallendErrorLimit3.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RadTextBoxControlBereich2FallendErrorLimit1.Size" type="System.Drawing.Size, System.Drawing">
     <value>78, 20</value>
   </data>
-  <data name="RadTextBoxControlBereich2FallendErrorLimit3.TabIndex" type="System.Int32, mscorlib">
+  <data name="RadTextBoxControlBereich2FallendErrorLimit1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit3.Name" xml:space="preserve">
-    <value>RadTextBoxControlBereich2FallendErrorLimit3</value>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit1.Name" xml:space="preserve">
+    <value>RadTextBoxControlBereich2FallendErrorLimit1</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit3.Type" xml:space="preserve">
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit1.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit3.Parent" xml:space="preserve">
-    <value>PanelBereich2FallendWZ3</value>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit1.Parent" xml:space="preserve">
+    <value>PanelBereich2FallendWZ1</value>
   </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit3.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit1.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="RadCheckBoxBereich2FallendVEL3.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RadCheckBoxBereich2FallendVEL1.Location" type="System.Drawing.Point, System.Drawing">
     <value>351, 3</value>
   </data>
-  <data name="RadCheckBoxBereich2FallendVEL3.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RadCheckBoxBereich2FallendVEL1.Size" type="System.Drawing.Size, System.Drawing">
     <value>15, 15</value>
   </data>
-  <data name="RadCheckBoxBereich2FallendVEL3.TabIndex" type="System.Int32, mscorlib">
+  <data name="RadCheckBoxBereich2FallendVEL1.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL3.Name" xml:space="preserve">
-    <value>RadCheckBoxBereich2FallendVEL3</value>
+  <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL1.Name" xml:space="preserve">
+    <value>RadCheckBoxBereich2FallendVEL1</value>
   </data>
-  <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL3.Type" xml:space="preserve">
+  <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL1.Type" xml:space="preserve">
     <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
-  <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL3.Parent" xml:space="preserve">
-    <value>PanelBereich2FallendWZ3</value>
+  <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL1.Parent" xml:space="preserve">
+    <value>PanelBereich2FallendWZ1</value>
   </data>
-  <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL3.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL1.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="PanelBereich2FallendWZ3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 131</value>
+  <data name="PanelBereich2FallendWZ1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 34</value>
   </data>
-  <data name="PanelBereich2FallendWZ3.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="PanelBereich2FallendWZ1.Size" type="System.Drawing.Size, System.Drawing">
     <value>376, 25</value>
   </data>
-  <data name="PanelBereich2FallendWZ3.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+  <data name="PanelBereich2FallendWZ1.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
   </data>
-  <data name="&gt;&gt;PanelBereich2FallendWZ3.Name" xml:space="preserve">
-    <value>PanelBereich2FallendWZ3</value>
+  <data name="&gt;&gt;PanelBereich2FallendWZ1.Name" xml:space="preserve">
+    <value>PanelBereich2FallendWZ1</value>
   </data>
-  <data name="&gt;&gt;PanelBereich2FallendWZ3.Type" xml:space="preserve">
+  <data name="&gt;&gt;PanelBereich2FallendWZ1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;PanelBereich2FallendWZ3.Parent" xml:space="preserve">
-    <value>RadGroupBoxBereich2Fallend</value>
+  <data name="&gt;&gt;PanelBereich2FallendWZ1.Parent" xml:space="preserve">
+    <value>FlowLayoutPanel2</value>
   </data>
-  <data name="&gt;&gt;PanelBereich2FallendWZ3.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="PictureBoxFallend35.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="PictureBoxFallend35.Location" type="System.Drawing.Point, System.Drawing">
-    <value>327, 3</value>
-  </data>
-  <data name="PictureBoxFallend35.Size" type="System.Drawing.Size, System.Drawing">
-    <value>18, 21</value>
-  </data>
-  <data name="PictureBoxFallend35.TabIndex" type="System.Int32, mscorlib">
-    <value>58</value>
-  </data>
-  <data name="&gt;&gt;PictureBoxFallend35.Name" xml:space="preserve">
-    <value>PictureBoxFallend35</value>
-  </data>
-  <data name="&gt;&gt;PictureBoxFallend35.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PictureBoxFallend35.Parent" xml:space="preserve">
-    <value>PanelBereich2FallendWZ4</value>
-  </data>
-  <data name="&gt;&gt;PictureBoxFallend35.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="PictureBoxFallend36.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="PictureBoxFallend36.Location" type="System.Drawing.Point, System.Drawing">
-    <value>209, 3</value>
-  </data>
-  <data name="PictureBoxFallend36.Size" type="System.Drawing.Size, System.Drawing">
-    <value>18, 21</value>
-  </data>
-  <data name="PictureBoxFallend36.TabIndex" type="System.Int32, mscorlib">
-    <value>57</value>
-  </data>
-  <data name="&gt;&gt;PictureBoxFallend36.Name" xml:space="preserve">
-    <value>PictureBoxFallend36</value>
-  </data>
-  <data name="&gt;&gt;PictureBoxFallend36.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PictureBoxFallend36.Parent" xml:space="preserve">
-    <value>PanelBereich2FallendWZ4</value>
-  </data>
-  <data name="&gt;&gt;PictureBoxFallend36.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;PanelBereich2FallendWZ1.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="RadTextBoxControlBereich2FallendWeight4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="RadTextBoxControlBereich2FallendWeight4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 20</value>
-  </data>
-  <data name="RadTextBoxControlBereich2FallendWeight4.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight4.Name" xml:space="preserve">
-    <value>RadTextBoxControlBereich2FallendWeight4</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight4.Parent" xml:space="preserve">
-    <value>PanelBereich2FallendWZ4</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight4.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="RadTextBoxControlBereich2FallendDisplayWeight4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 3</value>
-  </data>
-  <data name="RadTextBoxControlBereich2FallendDisplayWeight4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 20</value>
-  </data>
-  <data name="RadTextBoxControlBereich2FallendDisplayWeight4.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight4.Name" xml:space="preserve">
-    <value>RadTextBoxControlBereich2FallendDisplayWeight4</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight4.Parent" xml:space="preserve">
-    <value>PanelBereich2FallendWZ4</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight4.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="RadTextBoxControlBereich2FallendErrorLimit4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>233, 3</value>
-  </data>
-  <data name="RadTextBoxControlBereich2FallendErrorLimit4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 20</value>
-  </data>
-  <data name="RadTextBoxControlBereich2FallendErrorLimit4.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit4.Name" xml:space="preserve">
-    <value>RadTextBoxControlBereich2FallendErrorLimit4</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit4.Parent" xml:space="preserve">
-    <value>PanelBereich2FallendWZ4</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit4.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="RadCheckBoxBereich2FallendVEL4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>351, 3</value>
-  </data>
-  <data name="RadCheckBoxBereich2FallendVEL4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 15</value>
-  </data>
-  <data name="RadCheckBoxBereich2FallendVEL4.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL4.Name" xml:space="preserve">
-    <value>RadCheckBoxBereich2FallendVEL4</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL4.Parent" xml:space="preserve">
-    <value>PanelBereich2FallendWZ4</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL4.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="PanelBereich2FallendWZ4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 162</value>
-  </data>
-  <data name="PanelBereich2FallendWZ4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>376, 25</value>
-  </data>
-  <data name="PanelBereich2FallendWZ4.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;PanelBereich2FallendWZ4.Name" xml:space="preserve">
-    <value>PanelBereich2FallendWZ4</value>
-  </data>
-  <data name="&gt;&gt;PanelBereich2FallendWZ4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PanelBereich2FallendWZ4.Parent" xml:space="preserve">
-    <value>RadGroupBoxBereich2Fallend</value>
-  </data>
-  <data name="&gt;&gt;PanelBereich2FallendWZ4.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="PictureBoxFallend37.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="PictureBoxFallend37.Location" type="System.Drawing.Point, System.Drawing">
-    <value>327, 3</value>
-  </data>
-  <data name="PictureBoxFallend37.Size" type="System.Drawing.Size, System.Drawing">
-    <value>18, 21</value>
-  </data>
-  <data name="PictureBoxFallend37.TabIndex" type="System.Int32, mscorlib">
-    <value>58</value>
-  </data>
-  <data name="&gt;&gt;PictureBoxFallend37.Name" xml:space="preserve">
-    <value>PictureBoxFallend37</value>
-  </data>
-  <data name="&gt;&gt;PictureBoxFallend37.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PictureBoxFallend37.Parent" xml:space="preserve">
-    <value>PanelBereich2FallendWZ5</value>
-  </data>
-  <data name="&gt;&gt;PictureBoxFallend37.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="PictureBoxFallend38.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="PictureBoxFallend38.Location" type="System.Drawing.Point, System.Drawing">
-    <value>209, 3</value>
-  </data>
-  <data name="PictureBoxFallend38.Size" type="System.Drawing.Size, System.Drawing">
-    <value>18, 21</value>
-  </data>
-  <data name="PictureBoxFallend38.TabIndex" type="System.Int32, mscorlib">
-    <value>57</value>
-  </data>
-  <data name="&gt;&gt;PictureBoxFallend38.Name" xml:space="preserve">
-    <value>PictureBoxFallend38</value>
-  </data>
-  <data name="&gt;&gt;PictureBoxFallend38.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PictureBoxFallend38.Parent" xml:space="preserve">
-    <value>PanelBereich2FallendWZ5</value>
-  </data>
-  <data name="&gt;&gt;PictureBoxFallend38.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="RadTextBoxControlBereich2FallendWeight5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="RadTextBoxControlBereich2FallendWeight5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 20</value>
-  </data>
-  <data name="RadTextBoxControlBereich2FallendWeight5.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight5.Name" xml:space="preserve">
-    <value>RadTextBoxControlBereich2FallendWeight5</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight5.Parent" xml:space="preserve">
-    <value>PanelBereich2FallendWZ5</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight5.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="RadTextBoxControlBereich2FallendDisplayWeight5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 3</value>
-  </data>
-  <data name="RadTextBoxControlBereich2FallendDisplayWeight5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 20</value>
-  </data>
-  <data name="RadTextBoxControlBereich2FallendDisplayWeight5.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight5.Name" xml:space="preserve">
-    <value>RadTextBoxControlBereich2FallendDisplayWeight5</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight5.Parent" xml:space="preserve">
-    <value>PanelBereich2FallendWZ5</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight5.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="RadTextBoxControlBereich2FallendErrorLimit5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>233, 3</value>
-  </data>
-  <data name="RadTextBoxControlBereich2FallendErrorLimit5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 20</value>
-  </data>
-  <data name="RadTextBoxControlBereich2FallendErrorLimit5.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit5.Name" xml:space="preserve">
-    <value>RadTextBoxControlBereich2FallendErrorLimit5</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit5.Parent" xml:space="preserve">
-    <value>PanelBereich2FallendWZ5</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit5.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="RadCheckBoxBereich2FallendVEL5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>351, 3</value>
-  </data>
-  <data name="RadCheckBoxBereich2FallendVEL5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 15</value>
-  </data>
-  <data name="RadCheckBoxBereich2FallendVEL5.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL5.Name" xml:space="preserve">
-    <value>RadCheckBoxBereich2FallendVEL5</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL5.Parent" xml:space="preserve">
-    <value>PanelBereich2FallendWZ5</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL5.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="PanelBereich2FallendWZ5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 193</value>
-  </data>
-  <data name="PanelBereich2FallendWZ5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>376, 25</value>
-  </data>
-  <data name="PanelBereich2FallendWZ5.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;PanelBereich2FallendWZ5.Name" xml:space="preserve">
-    <value>PanelBereich2FallendWZ5</value>
-  </data>
-  <data name="&gt;&gt;PanelBereich2FallendWZ5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PanelBereich2FallendWZ5.Parent" xml:space="preserve">
-    <value>RadGroupBoxBereich2Fallend</value>
-  </data>
-  <data name="&gt;&gt;PanelBereich2FallendWZ5.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="PictureBoxFallend41.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="PictureBoxFallend41.Location" type="System.Drawing.Point, System.Drawing">
-    <value>327, 3</value>
-  </data>
-  <data name="PictureBoxFallend41.Size" type="System.Drawing.Size, System.Drawing">
-    <value>18, 21</value>
-  </data>
-  <data name="PictureBoxFallend41.TabIndex" type="System.Int32, mscorlib">
-    <value>58</value>
-  </data>
-  <data name="&gt;&gt;PictureBoxFallend41.Name" xml:space="preserve">
-    <value>PictureBoxFallend41</value>
-  </data>
-  <data name="&gt;&gt;PictureBoxFallend41.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PictureBoxFallend41.Parent" xml:space="preserve">
-    <value>PanelBereich2FallendWZ7</value>
-  </data>
-  <data name="&gt;&gt;PictureBoxFallend41.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="PictureBoxFallend42.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="PictureBoxFallend42.Location" type="System.Drawing.Point, System.Drawing">
-    <value>209, 3</value>
-  </data>
-  <data name="PictureBoxFallend42.Size" type="System.Drawing.Size, System.Drawing">
-    <value>18, 21</value>
-  </data>
-  <data name="PictureBoxFallend42.TabIndex" type="System.Int32, mscorlib">
-    <value>57</value>
-  </data>
-  <data name="&gt;&gt;PictureBoxFallend42.Name" xml:space="preserve">
-    <value>PictureBoxFallend42</value>
-  </data>
-  <data name="&gt;&gt;PictureBoxFallend42.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PictureBoxFallend42.Parent" xml:space="preserve">
-    <value>PanelBereich2FallendWZ7</value>
-  </data>
-  <data name="&gt;&gt;PictureBoxFallend42.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="RadTextBoxControlBereich2FallendWeight7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="RadTextBoxControlBereich2FallendWeight7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 20</value>
-  </data>
-  <data name="RadTextBoxControlBereich2FallendWeight7.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight7.Name" xml:space="preserve">
-    <value>RadTextBoxControlBereich2FallendWeight7</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight7.Parent" xml:space="preserve">
-    <value>PanelBereich2FallendWZ7</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight7.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="RadTextBoxControlBereich2FallendDisplayWeight7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 3</value>
-  </data>
-  <data name="RadTextBoxControlBereich2FallendDisplayWeight7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 20</value>
-  </data>
-  <data name="RadTextBoxControlBereich2FallendDisplayWeight7.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight7.Name" xml:space="preserve">
-    <value>RadTextBoxControlBereich2FallendDisplayWeight7</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight7.Parent" xml:space="preserve">
-    <value>PanelBereich2FallendWZ7</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight7.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="RadTextBoxControlBereich2FallendErrorLimit7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>233, 3</value>
-  </data>
-  <data name="RadTextBoxControlBereich2FallendErrorLimit7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 20</value>
-  </data>
-  <data name="RadTextBoxControlBereich2FallendErrorLimit7.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit7.Name" xml:space="preserve">
-    <value>RadTextBoxControlBereich2FallendErrorLimit7</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit7.Parent" xml:space="preserve">
-    <value>PanelBereich2FallendWZ7</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit7.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="RadCheckBoxBereich2FallendVEL7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>351, 3</value>
-  </data>
-  <data name="RadCheckBoxBereich2FallendVEL7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 15</value>
-  </data>
-  <data name="RadCheckBoxBereich2FallendVEL7.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL7.Name" xml:space="preserve">
-    <value>RadCheckBoxBereich2FallendVEL7</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL7.Parent" xml:space="preserve">
-    <value>PanelBereich2FallendWZ7</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL7.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="PanelBereich2FallendWZ7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 255</value>
-  </data>
-  <data name="PanelBereich2FallendWZ7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>376, 25</value>
-  </data>
-  <data name="PanelBereich2FallendWZ7.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;PanelBereich2FallendWZ7.Name" xml:space="preserve">
-    <value>PanelBereich2FallendWZ7</value>
-  </data>
-  <data name="&gt;&gt;PanelBereich2FallendWZ7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PanelBereich2FallendWZ7.Parent" xml:space="preserve">
-    <value>RadGroupBoxBereich2Fallend</value>
-  </data>
-  <data name="&gt;&gt;PanelBereich2FallendWZ7.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="lblPflichtfeld5.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblPflichtfeld5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lblPflichtfeld5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>380, 30</value>
-  </data>
-  <data name="lblPflichtfeld5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>12, 13</value>
-  </data>
-  <data name="lblPflichtfeld5.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="lblPflichtfeld5.Text" xml:space="preserve">
-    <value>*</value>
-  </data>
-  <data name="&gt;&gt;lblPflichtfeld5.Name" xml:space="preserve">
-    <value>lblPflichtfeld5</value>
-  </data>
-  <data name="&gt;&gt;lblPflichtfeld5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblPflichtfeld5.Parent" xml:space="preserve">
-    <value>RadGroupBoxBereich2Fallend</value>
-  </data>
-  <data name="&gt;&gt;lblPflichtfeld5.ZOrder" xml:space="preserve">
-    <value>6</value>
   </data>
   <data name="PictureBoxFallend39.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -8275,7 +7633,7 @@
     <value>5</value>
   </data>
   <data name="PanelBereich2FallendWZ6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 224</value>
+    <value>3, 65</value>
   </data>
   <data name="PanelBereich2FallendWZ6.Size" type="System.Drawing.Size, System.Drawing">
     <value>376, 25</value>
@@ -8290,10 +7648,10 @@
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;PanelBereich2FallendWZ6.Parent" xml:space="preserve">
-    <value>RadGroupBoxBereich2Fallend</value>
+    <value>FlowLayoutPanel2</value>
   </data>
   <data name="&gt;&gt;PanelBereich2FallendWZ6.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>2</value>
   </data>
   <data name="PictureBoxFallend43.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -8428,7 +7786,7 @@
     <value>5</value>
   </data>
   <data name="PanelBereich2FallendWZ8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 286</value>
+    <value>3, 96</value>
   </data>
   <data name="PanelBereich2FallendWZ8.Size" type="System.Drawing.Size, System.Drawing">
     <value>376, 25</value>
@@ -8443,10 +7801,673 @@
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;PanelBereich2FallendWZ8.Parent" xml:space="preserve">
-    <value>RadGroupBoxBereich2Fallend</value>
+    <value>FlowLayoutPanel2</value>
   </data>
   <data name="&gt;&gt;PanelBereich2FallendWZ8.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="PictureBoxFallend41.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="PictureBoxFallend41.Location" type="System.Drawing.Point, System.Drawing">
+    <value>327, 3</value>
+  </data>
+  <data name="PictureBoxFallend41.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 21</value>
+  </data>
+  <data name="PictureBoxFallend41.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="&gt;&gt;PictureBoxFallend41.Name" xml:space="preserve">
+    <value>PictureBoxFallend41</value>
+  </data>
+  <data name="&gt;&gt;PictureBoxFallend41.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PictureBoxFallend41.Parent" xml:space="preserve">
+    <value>PanelBereich2FallendWZ7</value>
+  </data>
+  <data name="&gt;&gt;PictureBoxFallend41.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="PictureBoxFallend42.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="PictureBoxFallend42.Location" type="System.Drawing.Point, System.Drawing">
+    <value>209, 3</value>
+  </data>
+  <data name="PictureBoxFallend42.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 21</value>
+  </data>
+  <data name="PictureBoxFallend42.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="&gt;&gt;PictureBoxFallend42.Name" xml:space="preserve">
+    <value>PictureBoxFallend42</value>
+  </data>
+  <data name="&gt;&gt;PictureBoxFallend42.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PictureBoxFallend42.Parent" xml:space="preserve">
+    <value>PanelBereich2FallendWZ7</value>
+  </data>
+  <data name="&gt;&gt;PictureBoxFallend42.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RadTextBoxControlBereich2FallendWeight7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="RadTextBoxControlBereich2FallendWeight7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 20</value>
+  </data>
+  <data name="RadTextBoxControlBereich2FallendWeight7.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight7.Name" xml:space="preserve">
+    <value>RadTextBoxControlBereich2FallendWeight7</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight7.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight7.Parent" xml:space="preserve">
+    <value>PanelBereich2FallendWZ7</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight7.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="RadTextBoxControlBereich2FallendDisplayWeight7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>120, 3</value>
+  </data>
+  <data name="RadTextBoxControlBereich2FallendDisplayWeight7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 20</value>
+  </data>
+  <data name="RadTextBoxControlBereich2FallendDisplayWeight7.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight7.Name" xml:space="preserve">
+    <value>RadTextBoxControlBereich2FallendDisplayWeight7</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight7.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight7.Parent" xml:space="preserve">
+    <value>PanelBereich2FallendWZ7</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight7.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="RadTextBoxControlBereich2FallendErrorLimit7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>233, 3</value>
+  </data>
+  <data name="RadTextBoxControlBereich2FallendErrorLimit7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 20</value>
+  </data>
+  <data name="RadTextBoxControlBereich2FallendErrorLimit7.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit7.Name" xml:space="preserve">
+    <value>RadTextBoxControlBereich2FallendErrorLimit7</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit7.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit7.Parent" xml:space="preserve">
+    <value>PanelBereich2FallendWZ7</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit7.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="RadCheckBoxBereich2FallendVEL7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>351, 3</value>
+  </data>
+  <data name="RadCheckBoxBereich2FallendVEL7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 15</value>
+  </data>
+  <data name="RadCheckBoxBereich2FallendVEL7.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL7.Name" xml:space="preserve">
+    <value>RadCheckBoxBereich2FallendVEL7</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL7.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL7.Parent" xml:space="preserve">
+    <value>PanelBereich2FallendWZ7</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL7.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="PanelBereich2FallendWZ7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 127</value>
+  </data>
+  <data name="PanelBereich2FallendWZ7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>376, 25</value>
+  </data>
+  <data name="PanelBereich2FallendWZ7.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;PanelBereich2FallendWZ7.Name" xml:space="preserve">
+    <value>PanelBereich2FallendWZ7</value>
+  </data>
+  <data name="&gt;&gt;PanelBereich2FallendWZ7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PanelBereich2FallendWZ7.Parent" xml:space="preserve">
+    <value>FlowLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;PanelBereich2FallendWZ7.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="PictureBoxFallend37.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="PictureBoxFallend37.Location" type="System.Drawing.Point, System.Drawing">
+    <value>327, 3</value>
+  </data>
+  <data name="PictureBoxFallend37.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 21</value>
+  </data>
+  <data name="PictureBoxFallend37.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="&gt;&gt;PictureBoxFallend37.Name" xml:space="preserve">
+    <value>PictureBoxFallend37</value>
+  </data>
+  <data name="&gt;&gt;PictureBoxFallend37.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PictureBoxFallend37.Parent" xml:space="preserve">
+    <value>PanelBereich2FallendWZ5</value>
+  </data>
+  <data name="&gt;&gt;PictureBoxFallend37.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="PictureBoxFallend38.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="PictureBoxFallend38.Location" type="System.Drawing.Point, System.Drawing">
+    <value>209, 3</value>
+  </data>
+  <data name="PictureBoxFallend38.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 21</value>
+  </data>
+  <data name="PictureBoxFallend38.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="&gt;&gt;PictureBoxFallend38.Name" xml:space="preserve">
+    <value>PictureBoxFallend38</value>
+  </data>
+  <data name="&gt;&gt;PictureBoxFallend38.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PictureBoxFallend38.Parent" xml:space="preserve">
+    <value>PanelBereich2FallendWZ5</value>
+  </data>
+  <data name="&gt;&gt;PictureBoxFallend38.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RadTextBoxControlBereich2FallendWeight5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="RadTextBoxControlBereich2FallendWeight5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 20</value>
+  </data>
+  <data name="RadTextBoxControlBereich2FallendWeight5.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight5.Name" xml:space="preserve">
+    <value>RadTextBoxControlBereich2FallendWeight5</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight5.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight5.Parent" xml:space="preserve">
+    <value>PanelBereich2FallendWZ5</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight5.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="RadTextBoxControlBereich2FallendDisplayWeight5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>120, 3</value>
+  </data>
+  <data name="RadTextBoxControlBereich2FallendDisplayWeight5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 20</value>
+  </data>
+  <data name="RadTextBoxControlBereich2FallendDisplayWeight5.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight5.Name" xml:space="preserve">
+    <value>RadTextBoxControlBereich2FallendDisplayWeight5</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight5.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight5.Parent" xml:space="preserve">
+    <value>PanelBereich2FallendWZ5</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight5.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="RadTextBoxControlBereich2FallendErrorLimit5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>233, 3</value>
+  </data>
+  <data name="RadTextBoxControlBereich2FallendErrorLimit5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 20</value>
+  </data>
+  <data name="RadTextBoxControlBereich2FallendErrorLimit5.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit5.Name" xml:space="preserve">
+    <value>RadTextBoxControlBereich2FallendErrorLimit5</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit5.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit5.Parent" xml:space="preserve">
+    <value>PanelBereich2FallendWZ5</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit5.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="RadCheckBoxBereich2FallendVEL5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>351, 3</value>
+  </data>
+  <data name="RadCheckBoxBereich2FallendVEL5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 15</value>
+  </data>
+  <data name="RadCheckBoxBereich2FallendVEL5.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL5.Name" xml:space="preserve">
+    <value>RadCheckBoxBereich2FallendVEL5</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL5.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL5.Parent" xml:space="preserve">
+    <value>PanelBereich2FallendWZ5</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL5.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="PanelBereich2FallendWZ5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 158</value>
+  </data>
+  <data name="PanelBereich2FallendWZ5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>376, 25</value>
+  </data>
+  <data name="PanelBereich2FallendWZ5.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;PanelBereich2FallendWZ5.Name" xml:space="preserve">
+    <value>PanelBereich2FallendWZ5</value>
+  </data>
+  <data name="&gt;&gt;PanelBereich2FallendWZ5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PanelBereich2FallendWZ5.Parent" xml:space="preserve">
+    <value>FlowLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;PanelBereich2FallendWZ5.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="PictureBoxFallend35.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="PictureBoxFallend35.Location" type="System.Drawing.Point, System.Drawing">
+    <value>327, 3</value>
+  </data>
+  <data name="PictureBoxFallend35.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 21</value>
+  </data>
+  <data name="PictureBoxFallend35.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="&gt;&gt;PictureBoxFallend35.Name" xml:space="preserve">
+    <value>PictureBoxFallend35</value>
+  </data>
+  <data name="&gt;&gt;PictureBoxFallend35.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PictureBoxFallend35.Parent" xml:space="preserve">
+    <value>PanelBereich2FallendWZ4</value>
+  </data>
+  <data name="&gt;&gt;PictureBoxFallend35.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="PictureBoxFallend36.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="PictureBoxFallend36.Location" type="System.Drawing.Point, System.Drawing">
+    <value>209, 3</value>
+  </data>
+  <data name="PictureBoxFallend36.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 21</value>
+  </data>
+  <data name="PictureBoxFallend36.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="&gt;&gt;PictureBoxFallend36.Name" xml:space="preserve">
+    <value>PictureBoxFallend36</value>
+  </data>
+  <data name="&gt;&gt;PictureBoxFallend36.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PictureBoxFallend36.Parent" xml:space="preserve">
+    <value>PanelBereich2FallendWZ4</value>
+  </data>
+  <data name="&gt;&gt;PictureBoxFallend36.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RadTextBoxControlBereich2FallendWeight4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="RadTextBoxControlBereich2FallendWeight4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 20</value>
+  </data>
+  <data name="RadTextBoxControlBereich2FallendWeight4.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight4.Name" xml:space="preserve">
+    <value>RadTextBoxControlBereich2FallendWeight4</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight4.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight4.Parent" xml:space="preserve">
+    <value>PanelBereich2FallendWZ4</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight4.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="RadTextBoxControlBereich2FallendDisplayWeight4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>120, 3</value>
+  </data>
+  <data name="RadTextBoxControlBereich2FallendDisplayWeight4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 20</value>
+  </data>
+  <data name="RadTextBoxControlBereich2FallendDisplayWeight4.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight4.Name" xml:space="preserve">
+    <value>RadTextBoxControlBereich2FallendDisplayWeight4</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight4.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight4.Parent" xml:space="preserve">
+    <value>PanelBereich2FallendWZ4</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight4.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="RadTextBoxControlBereich2FallendErrorLimit4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>233, 3</value>
+  </data>
+  <data name="RadTextBoxControlBereich2FallendErrorLimit4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 20</value>
+  </data>
+  <data name="RadTextBoxControlBereich2FallendErrorLimit4.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit4.Name" xml:space="preserve">
+    <value>RadTextBoxControlBereich2FallendErrorLimit4</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit4.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit4.Parent" xml:space="preserve">
+    <value>PanelBereich2FallendWZ4</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit4.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="RadCheckBoxBereich2FallendVEL4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>351, 3</value>
+  </data>
+  <data name="RadCheckBoxBereich2FallendVEL4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 15</value>
+  </data>
+  <data name="RadCheckBoxBereich2FallendVEL4.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL4.Name" xml:space="preserve">
+    <value>RadCheckBoxBereich2FallendVEL4</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL4.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL4.Parent" xml:space="preserve">
+    <value>PanelBereich2FallendWZ4</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL4.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="PanelBereich2FallendWZ4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 189</value>
+  </data>
+  <data name="PanelBereich2FallendWZ4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>376, 25</value>
+  </data>
+  <data name="PanelBereich2FallendWZ4.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;PanelBereich2FallendWZ4.Name" xml:space="preserve">
+    <value>PanelBereich2FallendWZ4</value>
+  </data>
+  <data name="&gt;&gt;PanelBereich2FallendWZ4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PanelBereich2FallendWZ4.Parent" xml:space="preserve">
+    <value>FlowLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;PanelBereich2FallendWZ4.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="PictureBoxFallend33.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="PictureBoxFallend33.Location" type="System.Drawing.Point, System.Drawing">
+    <value>327, 3</value>
+  </data>
+  <data name="PictureBoxFallend33.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 21</value>
+  </data>
+  <data name="PictureBoxFallend33.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="&gt;&gt;PictureBoxFallend33.Name" xml:space="preserve">
+    <value>PictureBoxFallend33</value>
+  </data>
+  <data name="&gt;&gt;PictureBoxFallend33.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PictureBoxFallend33.Parent" xml:space="preserve">
+    <value>PanelBereich2FallendWZ3</value>
+  </data>
+  <data name="&gt;&gt;PictureBoxFallend33.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="PictureBoxFallend34.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="PictureBoxFallend34.Location" type="System.Drawing.Point, System.Drawing">
+    <value>209, 3</value>
+  </data>
+  <data name="PictureBoxFallend34.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 21</value>
+  </data>
+  <data name="PictureBoxFallend34.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="&gt;&gt;PictureBoxFallend34.Name" xml:space="preserve">
+    <value>PictureBoxFallend34</value>
+  </data>
+  <data name="&gt;&gt;PictureBoxFallend34.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PictureBoxFallend34.Parent" xml:space="preserve">
+    <value>PanelBereich2FallendWZ3</value>
+  </data>
+  <data name="&gt;&gt;PictureBoxFallend34.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RadTextBoxControlBereich2FallendWeight3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="RadTextBoxControlBereich2FallendWeight3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 20</value>
+  </data>
+  <data name="RadTextBoxControlBereich2FallendWeight3.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight3.Name" xml:space="preserve">
+    <value>RadTextBoxControlBereich2FallendWeight3</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight3.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight3.Parent" xml:space="preserve">
+    <value>PanelBereich2FallendWZ3</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="RadTextBoxControlBereich2FallendDisplayWeight3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>120, 3</value>
+  </data>
+  <data name="RadTextBoxControlBereich2FallendDisplayWeight3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 20</value>
+  </data>
+  <data name="RadTextBoxControlBereich2FallendDisplayWeight3.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight3.Name" xml:space="preserve">
+    <value>RadTextBoxControlBereich2FallendDisplayWeight3</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight3.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight3.Parent" xml:space="preserve">
+    <value>PanelBereich2FallendWZ3</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight3.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="RadTextBoxControlBereich2FallendErrorLimit3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>233, 3</value>
+  </data>
+  <data name="RadTextBoxControlBereich2FallendErrorLimit3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 20</value>
+  </data>
+  <data name="RadTextBoxControlBereich2FallendErrorLimit3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit3.Name" xml:space="preserve">
+    <value>RadTextBoxControlBereich2FallendErrorLimit3</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit3.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit3.Parent" xml:space="preserve">
+    <value>PanelBereich2FallendWZ3</value>
+  </data>
+  <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit3.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="RadCheckBoxBereich2FallendVEL3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>351, 3</value>
+  </data>
+  <data name="RadCheckBoxBereich2FallendVEL3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>15, 15</value>
+  </data>
+  <data name="RadCheckBoxBereich2FallendVEL3.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL3.Name" xml:space="preserve">
+    <value>RadCheckBoxBereich2FallendVEL3</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL3.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL3.Parent" xml:space="preserve">
+    <value>PanelBereich2FallendWZ3</value>
+  </data>
+  <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL3.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="PanelBereich2FallendWZ3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 220</value>
+  </data>
+  <data name="PanelBereich2FallendWZ3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>376, 25</value>
+  </data>
+  <data name="PanelBereich2FallendWZ3.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;PanelBereich2FallendWZ3.Name" xml:space="preserve">
+    <value>PanelBereich2FallendWZ3</value>
+  </data>
+  <data name="&gt;&gt;PanelBereich2FallendWZ3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PanelBereich2FallendWZ3.Parent" xml:space="preserve">
+    <value>FlowLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;PanelBereich2FallendWZ3.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="FlowLayoutPanel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 66</value>
+  </data>
+  <data name="FlowLayoutPanel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>377, 251</value>
+  </data>
+  <data name="FlowLayoutPanel2.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;FlowLayoutPanel2.Name" xml:space="preserve">
+    <value>FlowLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;FlowLayoutPanel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FlowLayoutPanel2.Parent" xml:space="preserve">
+    <value>RadGroupBoxBereich2Fallend</value>
+  </data>
+  <data name="&gt;&gt;FlowLayoutPanel2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblPflichtfeld5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblPflichtfeld5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblPflichtfeld5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>380, 30</value>
+  </data>
+  <data name="lblPflichtfeld5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 13</value>
+  </data>
+  <data name="lblPflichtfeld5.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
+  </data>
+  <data name="lblPflichtfeld5.Text" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld5.Name" xml:space="preserve">
+    <value>lblPflichtfeld5</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld5.Parent" xml:space="preserve">
+    <value>RadGroupBoxBereich2Fallend</value>
+  </data>
+  <data name="&gt;&gt;lblPflichtfeld5.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="lblBereich2FallendFehlerGrenzen.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt, style=Bold</value>
@@ -8473,7 +8494,7 @@
     <value>RadGroupBoxBereich2Fallend</value>
   </data>
   <data name="&gt;&gt;lblBereich2FallendFehlerGrenzen.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>2</value>
   </data>
   <data name="lblBereich2FallendEFGSpezial.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt, style=Bold</value>
@@ -8500,7 +8521,7 @@
     <value>RadGroupBoxBereich2Fallend</value>
   </data>
   <data name="&gt;&gt;lblBereich2FallendEFGSpezial.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>3</value>
   </data>
   <data name="lblBereich2FallendGewicht.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt, style=Bold</value>
@@ -8527,7 +8548,7 @@
     <value>RadGroupBoxBereich2Fallend</value>
   </data>
   <data name="&gt;&gt;lblBereich2FallendGewicht.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>4</value>
   </data>
   <data name="lblBereich2FallendAnzeigeGewicht.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt, style=Bold</value>
@@ -8554,7 +8575,7 @@
     <value>RadGroupBoxBereich2Fallend</value>
   </data>
   <data name="&gt;&gt;lblBereich2FallendAnzeigeGewicht.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>5</value>
   </data>
   <data name="RadGroupBoxBereich2Fallend.HeaderText" xml:space="preserve">
     <value>Range 2 linearity down</value>
@@ -8635,6 +8656,6 @@
     <value>uco_9PruefungLinearitaet</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.5948.23713, Culture=neutral, PublicKeyToken=null</value>
+    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.6009.27291, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>
