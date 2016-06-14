@@ -495,7 +495,17 @@
         Try
             RadGridViewAuswahlliste.Groups(groupIndex).GroupRow.ChildRows(index).IsSelected = True
             RadGridViewAuswahlliste.Groups(groupIndex).GroupRow.ChildRows(index).IsCurrent = True
+            RadGridViewAuswahlliste.TableElement.ScrollToRow(RadGridViewAuswahlliste.SelectedRows(0))
+
         Catch ex As Exception
+            Try
+                RadGridViewAuswahlliste.Groups(groupIndex).GroupRow.ChildRows(index - 1).IsSelected = True
+                RadGridViewAuswahlliste.Groups(groupIndex).GroupRow.ChildRows(index - 1).IsCurrent = True
+                RadGridViewAuswahlliste.TableElement.ScrollToRow(RadGridViewAuswahlliste.SelectedRows(0))
+
+            Catch ex2 As Exception
+
+            End Try
         End Try
         Me.Enabled = True
     End Sub
@@ -544,7 +554,7 @@
         Dim index As Integer = 0
         Dim groupIndex As Integer = 0
         Try
-            If Not RadGridViewRHEWAAlle.SelectedRows.Count > 0 Then
+            If  RadGridViewRHEWAAlle.SelectedRows.Count > 0 Then
                 index = RadGridViewRHEWAAlle.SelectedRows(0).Index
                 groupIndex = RadGridViewRHEWAAlle.SelectedRows(0).Group.GroupRow.Index
             End If
@@ -608,17 +618,25 @@
                 RadGridViewRHEWAAlle.Groups(groupIndex).GroupRow.ChildRows(index).IsCurrent = True
 
             Catch ex As Exception
+                Try
+                    RadGridViewRHEWAAlle.Groups(groupIndex).GroupRow.ChildRows(index - 1).IsSelected = True
+                    RadGridViewRHEWAAlle.Groups(groupIndex).GroupRow.ChildRows(index - 1).IsCurrent = True
+
+                Catch ex2 As Exception
+
+                End Try
             End Try
 
-            'RadGridViewRHEWAAlle.ShowFilteringRow = True
-            'RadGridViewRHEWAAlle.EnableFiltering = True
-            'RadGridViewRHEWAAlle.EnableCustomFiltering = False
+
 
             RadGridViewRHEWAAlle.EnableFiltering = True
             RadGridViewRHEWAAlle.MasterTemplate.ShowHeaderCellButtons = True
             RadGridViewRHEWAAlle.MasterTemplate.ShowFilteringRow = True
 
             Me.Enabled = True
+
+            RadGridViewRHEWAAlle.TableElement.ScrollToRow(RadGridViewRHEWAAlle.SelectedRows(0))
+
         Catch ex As Exception
         End Try
     End Sub
