@@ -622,10 +622,7 @@
           Or RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper = "B" _
           Or RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper = "C" _
           Or RadTextBoxControlWZGenauigkeitsklasse.Text = "D".ToUpper _
-          Or RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper = "I" _
-          Or RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper = "II" _
-          Or RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper = "III" _
-          Or RadTextBoxControlWZGenauigkeitsklasse.Text = "IV".ToUpper Then
+          Then
             Else
                 'Ungültiger Wert für Genauigikeitsklasse
                 MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_GenaugigkeitsklasseUnguelitg, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)

@@ -710,7 +710,7 @@ Ist der Fehler &gt; 0,3e → L = 0,5 Max = Normalien von 50% von Max werden ben�
     <value>Der Vorgang kann nicht bearbeitet werden. Er ist schon als genehmigt markiert</value>
   </data>
   <data name="Fehler_GenaugigkeitsklasseUnguelitg" xml:space="preserve">
-    <value>Bitte geben Sie eine gültige Genauigkeitsklasse ein (I,II,III,IV)</value>
+    <value>Bitte geben Sie eine gültige Genauigkeitsklasse ein (A,B,C oder D)</value>
   </data>
   <data name="Fehler_KeinServerObjektEichung" xml:space="preserve">
     <value>Es konnte kein passender Konformitätsbewertungsprozess gefunden werden. Bitte wenden Sie sich an RHEWA</value>
