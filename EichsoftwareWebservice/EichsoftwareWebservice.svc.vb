@@ -1,6 +1,7 @@
 ﻿' HINWEIS: Mit dem Befehl "Umbenennen" im Kontextmenü können Sie den Klassennamen "Service1" sowohl im Code als auch in der SVC-Datei und der Konfigurationsdatei ändern.
 Imports System.Data.Entity
 Imports System.Data.Objects
+
 Public Class EichsoftwareWebservice
     Implements IEichsoftwareWebservice
 
@@ -210,9 +211,9 @@ Public Class EichsoftwareWebservice
                                 Catch ex As Exception
                                 End Try
                             End If
-                   
-                    NewServerObj.ServerEichprotokoll.Sicherung_Bemerkungen = tmpoldMessage & vbNewLine & vbNewLine & "#(" & Date.Now & " " & WindowsUsername & "(" & HEKennung & ")" & ")# " & vbNewLine & tmpNewMessage
-                    End If
+
+                            NewServerObj.ServerEichprotokoll.Sicherung_Bemerkungen = tmpoldMessage & vbNewLine & vbNewLine & "#(" & Date.Now & " " & WindowsUsername & "(" & HEKennung & ")" & ")# " & vbNewLine & tmpNewMessage
+                        End If
                     Catch ex As Exception
                         SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
                     End Try
@@ -333,7 +334,7 @@ Public Class EichsoftwareWebservice
                     Dim Obj = (From Eichprozess In DbContext.ServerEichprozess.Include("ServerEichprotokoll") _
                                .Include("ServerLookup_Auswertegeraet").Include("ServerKompatiblitaetsnachweis") _
                                .Include("ServerLookup_Waegezelle").Include("ServerLookup_Waagenart") _
-                               .Include("ServerLookup_Waagentyp") _
+                               .Include("ServerLookup_Waagentyp")
                                Where Eichprozess.Vorgangsnummer = Vorgangsnummer).FirstOrDefault
 
                     ''abruch
@@ -522,6 +523,7 @@ Public Class EichsoftwareWebservice
                                     Obj.ServerEichprotokoll.ServerPruefungAnsprechvermoegen.Add(sourceo)
                                 Next
                             Catch e As Exception
+                                SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, String.Format("Fehler: {0} Stacktrace: {1}", e.Message, e.StackTrace))
                             End Try
 
                             Try
@@ -530,6 +532,8 @@ Public Class EichsoftwareWebservice
                                     Obj.ServerLookup_Vorgangsstatus = sourceo
                                 Next
                             Catch e As Exception
+                                SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, String.Format("Fehler: {0} Stacktrace: {1}", e.Message, e.StackTrace))
+
                             End Try
 
                             Try
@@ -538,6 +542,8 @@ Public Class EichsoftwareWebservice
                                     Obj.ServerEichprotokoll.ServerPruefungAussermittigeBelastung.Add(sourceo)
                                 Next
                             Catch e As Exception
+                                SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, String.Format("Fehler: {0} Stacktrace: {1}", e.Message, e.StackTrace))
+
                             End Try
 
 
@@ -547,6 +553,8 @@ Public Class EichsoftwareWebservice
                                     Obj.ServerEichprotokoll.ServerPruefungLinearitaetFallend.Add(sourceo)
                                 Next
                             Catch e As Exception
+                                SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, String.Format("Fehler: {0} Stacktrace: {1}", e.Message, e.StackTrace))
+
                             End Try
 
 
@@ -556,6 +564,8 @@ Public Class EichsoftwareWebservice
                                     Obj.ServerEichprotokoll.ServerPruefungLinearitaetSteigend.Add(sourceo)
                                 Next
                             Catch e As Exception
+                                SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, String.Format("Fehler: {0} Stacktrace: {1}", e.Message, e.StackTrace))
+
                             End Try
 
                             Try
@@ -564,6 +574,8 @@ Public Class EichsoftwareWebservice
                                     Obj.ServerEichprotokoll.ServerPruefungRollendeLasten.Add(sourceo)
                                 Next
                             Catch e As Exception
+                                SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, String.Format("Fehler: {0} Stacktrace: {1}", e.Message, e.StackTrace))
+
                             End Try
 
                             Try
@@ -572,6 +584,8 @@ Public Class EichsoftwareWebservice
                                     Obj.ServerEichprotokoll.ServerPruefungStabilitaetGleichgewichtslage.Add(sourceo)
                                 Next
                             Catch e As Exception
+                                SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, String.Format("Fehler: {0} Stacktrace: {1}", e.Message, e.StackTrace))
+
                             End Try
 
 
@@ -581,6 +595,8 @@ Public Class EichsoftwareWebservice
                                     Obj.ServerEichprotokoll.ServerPruefungStaffelverfahrenErsatzlast.Add(sourceo)
                                 Next
                             Catch e As Exception
+                                SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, String.Format("Fehler: {0} Stacktrace: {1}", e.Message, e.StackTrace))
+
                             End Try
 
                             Try
@@ -589,6 +605,8 @@ Public Class EichsoftwareWebservice
                                     Obj.ServerEichprotokoll.ServerPruefungStaffelverfahrenNormallast.Add(sourceo)
                                 Next
                             Catch e As Exception
+                                SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, String.Format("Fehler: {0} Stacktrace: {1}", e.Message, e.StackTrace))
+
                             End Try
 
                             Try
@@ -597,11 +615,13 @@ Public Class EichsoftwareWebservice
                                     Obj.ServerEichprotokoll.ServerPruefungWiederholbarkeit.Add(sourceo)
                                 Next
                             Catch e As Exception
+                                SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, String.Format("Fehler: {0} Stacktrace: {1}", e.Message, e.StackTrace))
+
                             End Try
                             returnlist.Add(Obj)
 
                         Catch ex As Exception
-                            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler: " & ex.Message & " " & ex.StackTrace)
+                            SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, String.Format("Fehler: {0} Stacktrace: {1}", ex.Message, ex.StackTrace))
                         End Try
                     Next
                     SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Gebe zurück")
@@ -639,20 +659,20 @@ Public Class EichsoftwareWebservice
                 DbContext.Configuration.LazyLoadingEnabled = False
                 DbContext.Configuration.ProxyCreationEnabled = False
                 Try
-                    Dim Query = From Eichprozess In DbContext.ServerEichprozess.Include("ServerLookup_Waegezelle") Where Eichprozess.Standardwaage = True _
-                            Join Lookup In DbContext.ServerLookup_Vorgangsstatus On Eichprozess.FK_Vorgangsstatus Equals Lookup.ID _
-                            Join Lookup2 In DbContext.ServerLookup_Bearbeitungsstatus On Eichprozess.FK_Bearbeitungsstatus Equals Lookup2.ID _
-                                                 Select New With _
-               { _
-                    Eichprozess.ID, _
-                    .Status = Lookup.Status, _
-                                Eichprozess.Vorgangsnummer, _
-                                .Fabriknummer = Eichprozess.ServerKompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer, _
-                     .Pruefscheinnummer = Eichprozess.ServerEichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer, _
-                                .Lookup_Waegezelle = Eichprozess.ServerLookup_Waegezelle.Typ, _
-                                .Lookup_Waagentyp = Eichprozess.ServerLookup_Waagentyp.Typ, _
-                                .Lookup_Waagenart = Eichprozess.ServerLookup_Waagenart.Art, _
-                                .Lookup_Auswertegeraet = Eichprozess.ServerLookup_Auswertegeraet.Typ, _
+                    Dim Query = From Eichprozess In DbContext.ServerEichprozess.Include("ServerLookup_Waegezelle") Where Eichprozess.Standardwaage = True
+                                Join Lookup In DbContext.ServerLookup_Vorgangsstatus On Eichprozess.FK_Vorgangsstatus Equals Lookup.ID
+                                Join Lookup2 In DbContext.ServerLookup_Bearbeitungsstatus On Eichprozess.FK_Bearbeitungsstatus Equals Lookup2.ID
+                                Select New With
+               {
+                    Eichprozess.ID,
+                    .Status = Lookup.Status,
+                                Eichprozess.Vorgangsnummer,
+                                .Fabriknummer = Eichprozess.ServerKompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer,
+                     .Pruefscheinnummer = Eichprozess.ServerEichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer,
+                                .Lookup_Waegezelle = Eichprozess.ServerLookup_Waegezelle.Typ,
+                                .Lookup_Waagentyp = Eichprozess.ServerLookup_Waagentyp.Typ,
+                                .Lookup_Waagenart = Eichprozess.ServerLookup_Waagenart.Art,
+                                .Lookup_Auswertegeraet = Eichprozess.ServerLookup_Auswertegeraet.Typ,
                              .Uploaddatum = Eichprozess.UploadDatum
                                  }
 
@@ -797,27 +817,27 @@ Public Class EichsoftwareWebservice
                 DbContext.Configuration.LazyLoadingEnabled = False
                 DbContext.Configuration.ProxyCreationEnabled = False
                 Try
-                    Dim Query = From Eichprozess In DbContext.ServerEichprozess.Include("ServerLookup_Waegezelle") _
-                            Join Lookup In DbContext.ServerLookup_Vorgangsstatus On Eichprozess.FK_Vorgangsstatus Equals Lookup.ID _
-                            Join Lookup2 In DbContext.ServerLookup_Bearbeitungsstatus On Eichprozess.FK_Bearbeitungsstatus Equals Lookup2.ID _
-                                                 Select New With _
-               { _
-                    Eichprozess.ID, _
-                    .Status = Lookup.Status, _
-                                Eichprozess.Vorgangsnummer, _
-                                .Fabriknummer = Eichprozess.ServerKompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer, _
-                     .Pruefscheinnummer = Eichprozess.ServerEichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer, _
-                                .Lookup_Waegezelle = Eichprozess.ServerLookup_Waegezelle.Typ, _
-                                .Lookup_Waagentyp = Eichprozess.ServerLookup_Waagentyp.Typ, _
-                                .Lookup_Waagenart = Eichprozess.ServerLookup_Waagenart.Art, _
-                                .Lookup_Auswertegeraet = Eichprozess.ServerLookup_Auswertegeraet.Typ, _
-                                .Sachbearbeiter = Eichprozess.ServerEichprotokoll.Identifikationsdaten_Pruefer, _
-                       .ZurBearbeitungGesperrtDurch = Eichprozess.ZurBearbeitungGesperrtDurch, _
-                     .Anhangpfad = Eichprozess.UploadFilePath, _
-                     .NeuWZ = Eichprozess.ServerLookup_Waegezelle.Neu, _
-                    .Bearbeitungsstatus = Lookup2.Status, _
-                .Uploaddatum = Eichprozess.UploadDatum, _
-                    .Bemerkung = Eichprozess.ServerEichprotokoll.Sicherung_Bemerkungen _
+                    Dim Query = From Eichprozess In DbContext.ServerEichprozess.Include("ServerLookup_Waegezelle")
+                                Join Lookup In DbContext.ServerLookup_Vorgangsstatus On Eichprozess.FK_Vorgangsstatus Equals Lookup.ID
+                                Join Lookup2 In DbContext.ServerLookup_Bearbeitungsstatus On Eichprozess.FK_Bearbeitungsstatus Equals Lookup2.ID
+                                Select New With
+               {
+                    Eichprozess.ID,
+                    .Status = Lookup.Status,
+                                Eichprozess.Vorgangsnummer,
+                                .Fabriknummer = Eichprozess.ServerKompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer,
+                     .Pruefscheinnummer = Eichprozess.ServerEichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer,
+                                .Lookup_Waegezelle = Eichprozess.ServerLookup_Waegezelle.Typ,
+                                .Lookup_Waagentyp = Eichprozess.ServerLookup_Waagentyp.Typ,
+                                .Lookup_Waagenart = Eichprozess.ServerLookup_Waagenart.Art,
+                                .Lookup_Auswertegeraet = Eichprozess.ServerLookup_Auswertegeraet.Typ,
+                                .Sachbearbeiter = Eichprozess.ServerEichprotokoll.Identifikationsdaten_Pruefer,
+                       .ZurBearbeitungGesperrtDurch = Eichprozess.ZurBearbeitungGesperrtDurch,
+                     .Anhangpfad = Eichprozess.UploadFilePath,
+                     .NeuWZ = Eichprozess.ServerLookup_Waegezelle.Neu,
+                    .Bearbeitungsstatus = Lookup2.Status,
+                .Uploaddatum = Eichprozess.UploadDatum,
+                    .Bemerkung = Eichprozess.ServerEichprotokoll.Sicherung_Bemerkungen
                                  }
 
                     If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG QUERY ausgeführt")
@@ -895,7 +915,7 @@ Public Class EichsoftwareWebservice
                                     objReturn.Pruefscheinnummer = objeichprozess.Pruefscheinnummer
                                 End If
 
- If Not objeichprozess.Bemerkung Is Nothing Then
+                                If Not objeichprozess.Bemerkung Is Nothing Then
                                     objReturn.Bemerkung = objeichprozess.Bemerkung
                                 End If
 
@@ -1010,28 +1030,28 @@ Public Class EichsoftwareWebservice
                 'aufgrund einer Limitierung im Entity Framework 5 in Verbindung mit LINQ und den Vergleich zweier Datumswerte, wird hier leider nur auf das MinDate geprüft und im Anschluss nach dem Query auf das Max Date.
                 'syntaktisch funktioniert der Vergleich Mindate >= Value AND Max Date <= Value, aber es kommen falsche ergebnisse zurück
                 Try
-                    Dim Query = From Eichprozess In DbContext.ServerEichprozess.Include("ServerLookup_Waegezelle") _
-                            Join Lookup In DbContext.ServerLookup_Vorgangsstatus On Eichprozess.FK_Vorgangsstatus Equals Lookup.ID _
-                            Join Lookup2 In DbContext.ServerLookup_Bearbeitungsstatus On Eichprozess.FK_Bearbeitungsstatus Equals Lookup2.ID _
-                            Where Eichprozess.UploadDatum.Value >= dateVon
-                                                 Select New With _
-               { _
-                    Eichprozess.ID, _
-                    .Status = Lookup.Status, _
-                                Eichprozess.Vorgangsnummer, _
-                                .Fabriknummer = Eichprozess.ServerKompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer, _
-                     .Pruefscheinnummer = Eichprozess.ServerEichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer, _
-                                .Lookup_Waegezelle = Eichprozess.ServerLookup_Waegezelle.Typ, _
-                                .Lookup_Waagentyp = Eichprozess.ServerLookup_Waagentyp.Typ, _
-                                .Lookup_Waagenart = Eichprozess.ServerLookup_Waagenart.Art, _
-                                .Lookup_Auswertegeraet = Eichprozess.ServerLookup_Auswertegeraet.Typ, _
-                                .Sachbearbeiter = Eichprozess.ServerEichprotokoll.Identifikationsdaten_Pruefer, _
-                       .ZurBearbeitungGesperrtDurch = Eichprozess.ZurBearbeitungGesperrtDurch, _
-                     .Anhangpfad = Eichprozess.UploadFilePath, _
-                     .NeuWZ = Eichprozess.ServerLookup_Waegezelle.Neu, _
-                    .Bearbeitungsstatus = Lookup2.Status, _
-                .Uploaddatum = Eichprozess.UploadDatum, _
-                    .Bemerkung = Eichprozess.ServerEichprotokoll.Sicherung_Bemerkungen _
+                    Dim Query = From Eichprozess In DbContext.ServerEichprozess.Include("ServerLookup_Waegezelle")
+                                Join Lookup In DbContext.ServerLookup_Vorgangsstatus On Eichprozess.FK_Vorgangsstatus Equals Lookup.ID
+                                Join Lookup2 In DbContext.ServerLookup_Bearbeitungsstatus On Eichprozess.FK_Bearbeitungsstatus Equals Lookup2.ID
+                                Where Eichprozess.UploadDatum.Value >= dateVon
+                                Select New With
+               {
+                    Eichprozess.ID,
+                    .Status = Lookup.Status,
+                                Eichprozess.Vorgangsnummer,
+                                .Fabriknummer = Eichprozess.ServerKompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer,
+                     .Pruefscheinnummer = Eichprozess.ServerEichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer,
+                                .Lookup_Waegezelle = Eichprozess.ServerLookup_Waegezelle.Typ,
+                                .Lookup_Waagentyp = Eichprozess.ServerLookup_Waagentyp.Typ,
+                                .Lookup_Waagenart = Eichprozess.ServerLookup_Waagenart.Art,
+                                .Lookup_Auswertegeraet = Eichprozess.ServerLookup_Auswertegeraet.Typ,
+                                .Sachbearbeiter = Eichprozess.ServerEichprotokoll.Identifikationsdaten_Pruefer,
+                       .ZurBearbeitungGesperrtDurch = Eichprozess.ZurBearbeitungGesperrtDurch,
+                     .Anhangpfad = Eichprozess.UploadFilePath,
+                     .NeuWZ = Eichprozess.ServerLookup_Waegezelle.Neu,
+                    .Bearbeitungsstatus = Lookup2.Status,
+                .Uploaddatum = Eichprozess.UploadDatum,
+                    .Bemerkung = Eichprozess.ServerEichprotokoll.Sicherung_Bemerkungen
                                  }
 
                     If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG QUERY ausgeführt")
@@ -1348,7 +1368,7 @@ Public Class EichsoftwareWebservice
     ''' <param name="AnzahlCE"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Function AddEichmarkenverwaltung(ByVal HEKennung As String, Lizenzschluessel As String, ByVal BenutzerIDFK As String, ByVal AnzahlBenannteStelle As Integer, ByVal AnzahlEichsiegel13x13 As Integer, _
+    Public Function AddEichmarkenverwaltung(ByVal HEKennung As String, Lizenzschluessel As String, ByVal BenutzerIDFK As String, ByVal AnzahlBenannteStelle As Integer, ByVal AnzahlEichsiegel13x13 As Integer,
                                             ByVal AnzahlEichsiegelRund As Integer, ByVal AnzahlHinweismarke As Integer, ByVal AnzahlGruenesM As Integer, ByVal AnzahlCE As Integer, ByVal AnzahlCE2016 As Integer, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements IEichsoftwareWebservice.AddEichmarkenverwaltung
         ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
         If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
