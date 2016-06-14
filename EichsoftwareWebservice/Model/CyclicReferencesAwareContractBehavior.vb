@@ -4,7 +4,7 @@ Imports System.ServiceModel.Dispatcher
 
 Public Class CyclicReferencesAwareContractBehavior
     Implements IContractBehavior
-    Private Const maxItemsInObjectGraph As Int32 = &HFFFF
+    Private Const maxItemsInObjectGraph As Int32 = 2147483647
     Private Const ignoreExtensionDataObject As Boolean = False
 
     Private _on As Boolean

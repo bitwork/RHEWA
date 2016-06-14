@@ -1,18 +1,18 @@
 ﻿' HINWEIS: Mit dem Befehl "Umbenennen" im Kontextmenü können Sie den Schnittstellennamen "IService1" sowohl im Code als auch in der Konfigurationsdatei ändern.
-<ServiceContract()> _
-<CyclicReferencesAware(True)> _
+<ServiceContract()>
+<CyclicReferencesAware(True)>
 Public Interface IEichsoftwareWebservice
-    <OperationContract()> _
+    <OperationContract()>
     Function Test() As Boolean
 
-    <OperationContract()> _
+    <OperationContract()>
     Function PruefeLizenz(ByVal HEKennung As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean
-    <OperationContract()> _
+    <OperationContract()>
     Function GetLizenzdaten(ByVal HEKennung As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As clsLizenzdaten
     <OperationContract()>
     Function AktiviereLizenz(ByVal HEKennung As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean
 
-    <OperationContract()> _
+    <OperationContract()>
     Function PruefeObRHEWALizenz(ByVal HEKennung As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean
 
     <OperationContract()>

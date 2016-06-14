@@ -400,8 +400,9 @@ Public Class clsWebserviceFunctions
         Try
             'abrufen des Statusts für jeden versendeten Eichprozess
             Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
+
                 Try
-                    webContext.Open()
+                webContext.Open()
                 Catch ex As Exception
                     Exit Sub
                 End Try
