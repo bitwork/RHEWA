@@ -7,6 +7,8 @@
     'Private AktuellerStatusDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Komptabilitätsnachweis zurückgesetzt
     Private _currentObjPruefungWiederholbarkeit As PruefungWiederholbarkeit
     Private _ListPruefungWiederholbarkeit As New List(Of PruefungWiederholbarkeit)
+
+    Private AllreadyAsked As Boolean = False
 #End Region
 
 #Region "Constructors"
@@ -479,7 +481,16 @@
         'sonderfall Kopierte Waage
         If objEichprozess.AusStandardwaageErzeugt Then
             If Not AbortSaving Then
-                Return Me.ShowValidationErrorBoxStandardwaage(GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderWiederholbarkeit)
+                If Not AllreadyAsked Then
+
+                    If Me.ShowValidationErrorBoxStandardwaage(GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderWiederholbarkeit) Then
+                        AllreadyAsked = True
+                        Return True
+                    Else
+                        Return False
+                    End If
+                End If
+
             Else
                 Return Me.ShowValidationErrorBox(False)
             End If

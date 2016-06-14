@@ -33,7 +33,9 @@ Partial Class FrmAuswahlStandardwaage
         '
         'RadGridViewStandardwaagen
         '
-        Me.RadGridViewStandardwaagen.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.RadGridViewStandardwaagen.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RadGridViewStandardwaagen.Location = New System.Drawing.Point(0, 0)
         '
         '
@@ -50,7 +52,7 @@ Partial Class FrmAuswahlStandardwaage
         Me.RadGridViewStandardwaagen.MasterTemplate.ViewDefinition = TableViewDefinition1
         Me.RadGridViewStandardwaagen.Name = "RadGridViewStandardwaagen"
         Me.RadGridViewStandardwaagen.ShowNoDataText = False
-        Me.RadGridViewStandardwaagen.Size = New System.Drawing.Size(1145, 557)
+        Me.RadGridViewStandardwaagen.Size = New System.Drawing.Size(1145, 524)
         Me.RadGridViewStandardwaagen.TabIndex = 0
         Me.RadGridViewStandardwaagen.Text = "RadGridView1"
         '
