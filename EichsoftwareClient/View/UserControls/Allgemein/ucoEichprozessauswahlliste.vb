@@ -571,8 +571,9 @@
             'RadGridViewRHEWAAlle.BestFitColumns()
             'RadGridViewRHEWAAlle.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
             RadGridViewRHEWAAlle.BestFitColumns()
-            RadGridViewRHEWAAlle.EnableAlternatingRowColor = True
-            RadGridViewRHEWAAlle.ShowNoDataText = True
+            RadGridViewRHEWAAlle.EnableAlternatingRowColor = False
+            RadGridViewRHEWAAlle.ShowNoDataText = False
+            RadGridViewRHEWAAlle.AutoSizeRows = True
 
             Try
                 'bedingte Formatierung - nur hinzufügen, falls sie nicht schon existiert
@@ -609,6 +610,13 @@
             Catch ex As Exception
             End Try
 
+            'RadGridViewRHEWAAlle.ShowFilteringRow = True
+            'RadGridViewRHEWAAlle.EnableFiltering = True
+            'RadGridViewRHEWAAlle.EnableCustomFiltering = False
+
+            RadGridViewRHEWAAlle.EnableFiltering = True
+            RadGridViewRHEWAAlle.MasterTemplate.ShowHeaderCellButtons = True
+            RadGridViewRHEWAAlle.MasterTemplate.ShowFilteringRow = True
 
             Me.Enabled = True
         Catch ex As Exception

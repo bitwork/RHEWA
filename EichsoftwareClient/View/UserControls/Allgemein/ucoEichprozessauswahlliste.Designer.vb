@@ -241,7 +241,6 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadGridViewRHEWAAlle.MasterTemplate.AllowCellContextMenu = False
         Me.RadGridViewRHEWAAlle.MasterTemplate.AllowDeleteRow = False
         Me.RadGridViewRHEWAAlle.MasterTemplate.AllowEditRow = False
-        Me.RadGridViewRHEWAAlle.MasterTemplate.AllowSearchRow = True
         Me.RadGridViewRHEWAAlle.MasterTemplate.ShowGroupedColumns = True
         Me.RadGridViewRHEWAAlle.MasterTemplate.ViewDefinition = TableViewDefinition2
         Me.RadGridViewRHEWAAlle.Name = "RadGridViewRHEWAAlle"

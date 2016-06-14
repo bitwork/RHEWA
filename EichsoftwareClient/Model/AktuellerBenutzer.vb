@@ -1,4 +1,7 @@
-﻿''' <summary>
+﻿Imports System.ComponentModel
+Imports Telerik.WinControls.Data
+Imports Telerik.WinControls.UI
+''' <summary>
 ''' hilfsklasse. Enthält Informationen und Einstellungen des aktuell angemeldeten Benutzers
 ''' </summary>
 ''' <remarks></remarks>
@@ -233,6 +236,8 @@ Public Class AktuellerBenutzer
             Dim gridProzesseRHEWA = CType(uco, ucoEichprozessauswahlliste).RadGridViewRHEWAAlle
             Try
                 Using stream As New IO.MemoryStream()
+                    '   SetzeGridLayoutString(gridProzesse)
+
                     gridProzesse.SaveLayout(stream)
                     If Not stream Is Nothing Then
                         stream.Position = 0
@@ -248,6 +253,7 @@ Public Class AktuellerBenutzer
 
             Try
                 Using stream As New IO.MemoryStream()
+                    '       SetzeGridLayoutString(gridProzesseRHEWA)
                     gridProzesseRHEWA.SaveLayout(stream)
                     If Not stream Is Nothing Then
                         stream.Position = 0
@@ -260,6 +266,27 @@ Public Class AktuellerBenutzer
             End Try
         End If
         AktuellerBenutzer.SaveSettings()
+
+    End Sub
+
+    Private Shared Sub SetzeGridLayoutString(RadGridView As RadGridView)
+        RadGridView.XmlSerializationInfo.DisregardOriginalSerializationVisibility = True
+        RadGridView.XmlSerializationInfo.SerializationMetadata.Clear()
+
+        RadGridView.XmlSerializationInfo.SerializationMetadata.Add(GetType(RadGridView), "MasterTemplate", DesignerSerializationVisibilityAttribute.Content)
+        RadGridView.XmlSerializationInfo.SerializationMetadata.Add(GetType(GridViewTemplate), "Templates", DesignerSerializationVisibilityAttribute.Content)
+        RadGridView.XmlSerializationInfo.SerializationMetadata.Add(GetType(GridViewTemplate), "Caption", DesignerSerializationVisibilityAttribute.Visible)
+        RadGridView.XmlSerializationInfo.SerializationMetadata.Add(GetType(GridViewTemplate), "Columns", DesignerSerializationVisibilityAttribute.Content)
+        RadGridView.XmlSerializationInfo.SerializationMetadata.Add(GetType(GridViewDataColumn), "Name", DesignerSerializationVisibilityAttribute.Visible)
+        RadGridView.XmlSerializationInfo.SerializationMetadata.Add(GetType(GridViewDataColumn), "Width", DesignerSerializationVisibilityAttribute.Visible)
+        'Groups Descriptors
+        RadGridView.XmlSerializationInfo.SerializationMetadata.Add(GetType(GridViewTemplate), "GroupDescriptors", DesignerSerializationVisibilityAttribute.Content)
+        RadGridView.XmlSerializationInfo.SerializationMetadata.Add(GetType(GroupDescriptor), "GroupNames", DesignerSerializationVisibilityAttribute.Content)
+        RadGridView.XmlSerializationInfo.SerializationMetadata.Add(GetType(SortDescriptor), "PropertyName", DesignerSerializationVisibilityAttribute.Visible)
+        'Sort Descriptors            
+        RadGridView.XmlSerializationInfo.SerializationMetadata.Add(GetType(GridViewTemplate), "SortDescriptors", DesignerSerializationVisibilityAttribute.Content)
+        RadGridView.XmlSerializationInfo.SerializationMetadata.Add(GetType(SortDescriptor), "Direction", DesignerSerializationVisibilityAttribute.Visible)
+
 
     End Sub
 
