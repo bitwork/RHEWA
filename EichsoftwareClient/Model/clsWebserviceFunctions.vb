@@ -344,16 +344,20 @@ Public Class clsWebserviceFunctions
                                     '###################
                                     'neue Datenbankverbindung
                                     Dim objServerEichprozess = webContext.GetEichProzess(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, Eichprozess.Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
-                                    If objServerEichprozess Is Nothing Then
+                                    If objServerEichprozess Is Nothing And Not NeuerStatus = GlobaleEnumeratoren.enuBearbeitungsstatus.noch_nicht_versendet Then
                                         MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_KeinServerObjektEichung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                                        Exit For
                                     End If
 
-                                    'umwandeln des Serverobjektes in Clientobject
-                                    clsClientServerConversionFunctions.CopyClientObjectPropertiesWithOwnIDs(Eichprozess, objServerEichprozess)
-
                                     If NeuerStatus = GlobaleEnumeratoren.enuBearbeitungsstatus.Genehmigt Then
+                                        'umwandeln des Serverobjektes in Clientobject
+                                        clsClientServerConversionFunctions.CopyClientObjectPropertiesWithOwnIDs(Eichprozess, objServerEichprozess)
+                                        Eichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Versenden
+                                    ElseIf NeuerStatus = GlobaleEnumeratoren.enuBearbeitungsstatus.noch_nicht_versendet Then 'erneut versenden
                                         Eichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Versenden
                                     Else
+                                        'umwandeln des Serverobjektes in Clientobject
+                                        clsClientServerConversionFunctions.CopyClientObjectPropertiesWithOwnIDs(Eichprozess, objServerEichprozess)
                                         Eichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
                                     End If
                                     Eichprozess.FK_Bearbeitungsstatus = NeuerStatus

@@ -22,15 +22,21 @@ Public Class EichsoftwareWebservice
     Public Function GetLizenz(ByVal HEKennung As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements IEichsoftwareWebservice.PruefeLizenz
         'SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Prüfe Lizenz")
 
-        Using dbcontext As New EichenSQLDatabaseEntities1
-            Dim ObjLizenz = (From lic In dbcontext.ServerLizensierung Where lic.HEKennung = HEKennung And lic.Lizenzschluessel = Lizenzschluessel And lic.Aktiv = True).FirstOrDefault
-            If Not ObjLizenz Is Nothing Then
-                Return True
-            Else
-                SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Lizenz ungültig")
-                Return False
-            End If
-        End Using
+        Try
+            Using dbcontext As New EichenSQLDatabaseEntities1
+                Dim ObjLizenz = (From lic In dbcontext.ServerLizensierung Where lic.HEKennung = HEKennung And lic.Lizenzschluessel = Lizenzschluessel And lic.Aktiv = True).FirstOrDefault
+                If Not ObjLizenz Is Nothing Then
+                    Return True
+                Else
+                    SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Lizenz ungültig")
+                    Return False
+                End If
+            End Using
+        Catch ex As Exception
+            Return False
+
+        End Try
+
     End Function
 
     ''' <summary>
@@ -164,7 +170,7 @@ Public Class EichsoftwareWebservice
     ''' </summary>
     ''' <param name="HEKennung"></param>
     ''' <param name="Lizenzschluessel"></param>
-    ''' <param name="pObjEichprozess"></param>
+    ''' <param name="NewServerObj"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
     Public Function AddEichprozess(ByVal HEKennung As String, Lizenzschluessel As String, ByRef NewServerObj As ServerEichprozess, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements IEichsoftwareWebservice.AddEichprozess
@@ -172,7 +178,7 @@ Public Class EichsoftwareWebservice
             SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Füge Konformitätsbewertungsprozess hinzu bzw. Aktualisiere")
 
             ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
-            If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
+            If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return False
             'neuen Context aufbauen
             'prüfen ob der eichprozess schoneinmal eingegangen ist anhand von Vorgangsnummer
             Using DbContext As New EichenSQLDatabaseEntities1
@@ -234,7 +240,12 @@ Public Class EichsoftwareWebservice
         Catch ex As Entity.Infrastructure.DbUpdateException
             Debug.WriteLine(ex.InnerException.InnerException.Message)
             SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
-
+            Try
+                SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Ergänzung: " & ex.InnerException.Message)
+                SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Ergänzung: " & ex.InnerException.InnerException.Message)
+            Catch ex2 As Exception
+            End Try
+            Return False
         Catch ex As Entity.Validation.DbEntityValidationException
             For Each e In ex.EntityValidationErrors
                 For Each v In e.ValidationErrors
@@ -258,29 +269,34 @@ Public Class EichsoftwareWebservice
     ''' <param name="Domainname">The domainname.</param>
     ''' <param name="Computername">The computername.</param>
     ''' <returns></returns>
-    Public Function AddWaegezelle(HEKennung As String, Lizenzschluessel As String, ByVal pObjWZ As ServerLookup_Waegezelle, WindowsUsername As String, Domainname As String, Computername As String) As Boolean Implements IEichsoftwareWebservice.AddWaegezelle
+    Public Function AddWaegezelle(HEKennung As String, Lizenzschluessel As String, ByVal pObjWZ As ServerLookup_Waegezelle, WindowsUsername As String, Domainname As String, Computername As String) As String Implements IEichsoftwareWebservice.AddWaegezelle
         Try
             SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Füge neue WZ hinzu")
 
             ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
-            If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
+            If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return ""
             'neuen Context aufbauen
             'prüfen ob der eichprozess schoneinmal eingegangen ist anhand von Vorgangsnummer
             If pObjWZ.Neu Then
-                pObjWZ.ErstellDatum = Date.Now
-                pObjWZ.Deaktiviert = True
-
                 Using DbContext As New EichenSQLDatabaseEntities1
                     DbContext.Configuration.LazyLoadingEnabled = True
+
                     Dim Serverob = (From db In DbContext.ServerLookup_Waegezelle Select db Where db.Hersteller = pObjWZ.Hersteller And db.Typ = pObjWZ.Typ).FirstOrDefault
                     If Serverob Is Nothing Then
                         'wenn neue nicht WZ vorhanden ist
+                        pObjWZ.ErstellDatum = Date.Now
+                        pObjWZ.Deaktiviert = True
+
                         Try
                             DbContext.ServerLookup_Waegezelle.Add(pObjWZ)
                             DbContext.SaveChanges()
                         Catch ex As Exception
                             SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
+                            Return ""
                         End Try
+                    Else 'ein anderer Benutzer hat diese WZ bereits angelegt
+                        pObjWZ = Serverob
+
                     End If
 
                 End Using
@@ -288,11 +304,11 @@ Public Class EichsoftwareWebservice
             HEKennung = Nothing
             Lizenzschluessel = Nothing
 
-            Return True
+            Return pObjWZ.ID
         Catch ex As Entity.Infrastructure.DbUpdateException
             Debug.WriteLine(ex.InnerException.InnerException.Message)
             SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
-
+            Return Nothing
         Catch ex As Entity.Validation.DbEntityValidationException
             For Each e In ex.EntityValidationErrors
                 For Each v In e.ValidationErrors
@@ -302,7 +318,7 @@ Public Class EichsoftwareWebservice
                 Next
 
             Next
-            Return False
+            Return Nothing
         End Try
     End Function
 
@@ -1404,6 +1420,9 @@ Public Class EichsoftwareWebservice
                     Lizenzschluessel = Nothing
                     Vorgangsnummer = Nothing
                     Return Serverob.FK_Bearbeitungsstatus
+                Else
+                    'Vorgang konnte auf dem Server nicht gefunden werden. Muss erneut gesendet werden
+                    Return 4
                 End If
 
             End Using

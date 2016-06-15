@@ -152,7 +152,7 @@ Public Class Uco21Versenden
                 End Try
 
                 Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
-
+                Dim bolSuccess As Boolean = False
                 Try
                     'prüfen ob neue WZ hinzuzufügen ist
                     If Not objEichprozess Is Nothing Then
@@ -161,40 +161,34 @@ Public Class Uco21Versenden
                                 'umwandeln von Client WZ in Server WZ
                                 Dim objServerWZ As New EichsoftwareWebservice.ServerLookup_Waegezelle
                                 clsClientServerConversionFunctions.CopyServerObjectPropertieWZs(objServerWZ, objEichprozess.Lookup_Waegezelle)
-                                Webcontext.AddWaegezelle(objLiz.HEKennung, objLiz.Lizenzschluessel, objServerWZ, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
-
-                                objServerEichprozess._FK_Waegezelle = objServerWZ._ID
+                                Dim neueWZID = Webcontext.AddWaegezelle(objLiz.HEKennung, objLiz.Lizenzschluessel, objServerWZ, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                                If neueWZID = "" Then
+                                    '//zurücksetzen des Status
+                                    MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_SpeicherAnomalie)
+                                    EichprozessStatusZurueckSetzen()
+                                    Return
+                                End If
+                                ' überschreiben der WZ mit der Serverseitigen. für den Fall, das die WZ die neu war, bereits von einem anderem Benutzer angelegt wurde aber noch nicht freigegeben
+                                objServerEichprozess._FK_Waegezelle = neueWZID
+                                For Each item In objServerEichprozess._ServerMogelstatistik
+                                    item._FK_Waegezelle = neueWZID
+                                Next
                             End If
                         End If
                     End If
 
-                    Webcontext.AddEichprozess(objLiz.HEKennung, objLiz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                    bolSuccess = Webcontext.AddEichprozess(objLiz.HEKennung, objLiz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                    If bolSuccess = False Then
+                        '//zurücksetzen des Status
+                        MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_SpeicherAnomalie)
+                        EichprozessStatusZurueckSetzen()
+                        Return
+                    End If
                 Catch ex As Exception
                     MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
-
-                    Using Context As New EichsoftwareClientdatabaseEntities1
-                        'prüfen ob CREATE oder UPDATE durchgeführt werden muss
-                        If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
-                            'prüfen ob das Objekt anhand der ID gefunden werden kann
-                            Dim dobjEichprozess As Eichprozess = Context.Eichprozess.FirstOrDefault(Function(value) value.Vorgangsnummer = objEichprozess.Vorgangsnummer)
-                            If Not dobjEichprozess Is Nothing Then
-                                'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
-                                objEichprozess = dobjEichprozess
-                                'neuen Status zuweisen
-
-                                ' Status zurück setzen
-                                objEichprozess.FK_Bearbeitungsstatus = 4
-                                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Versenden
-
-                                'SaveWithoutValidationNeeded(Me)
-                                Try
-                                    Context.SaveChanges()
-                                Catch ex2 As Entity.Validation.DbEntityValidationException
-                                    Exit Sub
-                                End Try
-                            End If
-                        End If
-                    End Using
+                    '//zurücksetzen des Status
+                    EichprozessStatusZurueckSetzen()
+                    Return
                 End Try
                 Try
                     'nur versenden wenn der Eichprozess noch nicht versendet wurde. Sonst würden zu oft Marken abgezogen. Ausserdem sonderfall: eichmarkenverwaltung wurde geändert (dirty)
@@ -223,6 +217,32 @@ Public Class Uco21Versenden
                     MessageBox.Show(e.StackTrace, e.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End Try
             End Using
+        End Using
+    End Sub
+
+    Private Sub EichprozessStatusZurueckSetzen()
+        Using Context As New EichsoftwareClientdatabaseEntities1
+            'prüfen ob CREATE oder UPDATE durchgeführt werden muss
+            If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
+                'prüfen ob das Objekt anhand der ID gefunden werden kann
+                Dim dobjEichprozess As Eichprozess = Context.Eichprozess.FirstOrDefault(Function(value) value.Vorgangsnummer = objEichprozess.Vorgangsnummer)
+                If Not dobjEichprozess Is Nothing Then
+                    'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
+                    objEichprozess = dobjEichprozess
+                    'neuen Status zuweisen
+
+                    ' Status zurück setzen
+                    objEichprozess.FK_Bearbeitungsstatus = 4
+                    objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Versenden
+
+                    'SaveWithoutValidationNeeded(Me)
+                    Try
+                        Context.SaveChanges()
+                    Catch ex2 As Entity.Validation.DbEntityValidationException
+                        Exit Sub
+                    End Try
+                End If
+            End If
         End Using
     End Sub
 

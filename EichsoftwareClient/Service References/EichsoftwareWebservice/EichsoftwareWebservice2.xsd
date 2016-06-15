@@ -204,7 +204,7 @@
   <xs:element name="AddWaegezelleResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="AddWaegezelleResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="AddWaegezelleResult" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

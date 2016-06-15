@@ -1073,6 +1073,9 @@ Public Class clsClientServerConversionFunctions
     ''' <param name="TargetObject"></param>
     ''' <remarks></remarks>
     Public Shared Sub UpdateForeignTables(ByRef TargetObject As Eichprozess, ByRef SourceObject As EichsoftwareWebservice.ServerEichprozess)
+        If SourceObject Is Nothing OrElse TargetObject Is Nothing Then
+            Return
+        End If
         Using dbcontext As New EichsoftwareClientdatabaseEntities1
             Dim EichprotokollID As String = TargetObject.Eichprotokoll.ID
 

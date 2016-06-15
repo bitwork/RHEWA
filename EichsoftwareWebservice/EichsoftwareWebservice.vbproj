@@ -33,6 +33,7 @@
     </SccAuxPath>
     <SccProvider>
     </SccProvider>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -292,6 +293,16 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Web STRATO.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web%28DEBUG Liveumgebung%29.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web%28DEBUG Liveumgebung%29.Debug.config">
+      <DependentUpon>Web%28DEBUG Liveumgebung%29.config</DependentUpon>
+    </Content>
+    <Content Include="Web%28DEBUG Liveumgebung%29.Release.config">
+      <DependentUpon>Web%28DEBUG Liveumgebung%29.config</DependentUpon>
       <SubType>Designer</SubType>
     </Content>
     <None Include="Web.Release.config">
