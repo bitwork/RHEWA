@@ -554,7 +554,7 @@
         Dim index As Integer = 0
         Dim groupIndex As Integer = 0
         Try
-            If  RadGridViewRHEWAAlle.SelectedRows.Count > 0 Then
+            If RadGridViewRHEWAAlle.SelectedRows.Count > 0 Then
                 index = RadGridViewRHEWAAlle.SelectedRows(0).Index
                 groupIndex = RadGridViewRHEWAAlle.SelectedRows(0).Group.GroupRow.Index
             End If
@@ -857,7 +857,7 @@
 
 
                 Dim file As New IO.FileInfo(objFTPDaten.FTPFilePath)
-
+                Dim fileName As String = file.Name
 
                 'download Ordner anlegen wenn benötigt
                 Dim folder As New IO.DirectoryInfo(file.DirectoryName)
@@ -866,18 +866,21 @@
                         folder.Create()
                     End If
                 Catch ex As Exception
-                    MessageBox.Show(ex.Message)
-                    Return ""
+                    MessageBox.Show(ex.Message + " Es wird eine temporäre Datei erzeugt")
+                    Dim tempfile = New IO.FileInfo(System.IO.Path.GetTempFileName)
+                    Dim newName = IO.Path.ChangeExtension(tempfile.FullName, file.Extension)
+                    IO.File.Move(tempfile.FullName, newName)
+                    file = New IO.FileInfo(newName)
                 End Try
 
                 'downloadgroße ermitteln
                 Dim filesize As Long
-                filesize = objFTP.GetFileSize(objFTPDaten.FTPServername, objFTPDaten.FTPUserName, password, file.Name)
+                filesize = objFTP.GetFileSize(objFTPDaten.FTPServername, objFTPDaten.FTPUserName, password, fileName)
                 If filesize = 0 Then Return "" 'abbruch 
                 BackgroundWorkerDownloadFromFTP.ReportProgress(filesize)
                 Try
                     'datei download. FTPUploadPath bekommt den reelen Pfad auf dem FTP Server
-                    If objFTP.DownloadFileFromFTP(objFTPDaten.FTPServername, objFTPDaten.FTPUserName, password, file.Name, file.FullName) Then
+                    If objFTP.DownloadFileFromFTP(objFTPDaten.FTPServername, objFTPDaten.FTPUserName, password, fileName, file.FullName) Then
                         Return file.FullName
                     Else
                         Try
@@ -1096,5 +1099,5 @@
         Return True
     End Function
 
-  
+
 End Class
