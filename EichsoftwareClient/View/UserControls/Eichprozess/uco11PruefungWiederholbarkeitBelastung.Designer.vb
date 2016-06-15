@@ -129,36 +129,27 @@ Partial Class uco11PruefungWiederholbarkeitBelastung
         '
         'RadScrollablePanel1.PanelContainer
         '
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadGroupBoxPruefungAussermittigeBelastung)
         resources.ApplyResources(Me.RadScrollablePanel1.PanelContainer, "RadScrollablePanel1.PanelContainer")
-        '
-        '
-        '
-        Me.RadScrollablePanel1.RootElement.AccessibleDescription = Nothing
-        Me.RadScrollablePanel1.RootElement.AccessibleName = Nothing
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadGroupBoxPruefungAussermittigeBelastung)
         '
         'RadGroupBoxPruefungAussermittigeBelastung
         '
-        Me.RadGroupBoxPruefungAussermittigeBelastung.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         resources.ApplyResources(Me.RadGroupBoxPruefungAussermittigeBelastung, "RadGroupBoxPruefungAussermittigeBelastung")
+        Me.RadGroupBoxPruefungAussermittigeBelastung.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBoxPruefungAussermittigeBelastung.Controls.Add(Me.FlowLayoutPanel1)
         Me.RadGroupBoxPruefungAussermittigeBelastung.Name = "RadGroupBoxPruefungAussermittigeBelastung"
         '
-        '
-        '
-        Me.RadGroupBoxPruefungAussermittigeBelastung.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxPruefungAussermittigeBelastung.RootElement.AccessibleName = Nothing
-        '
         'FlowLayoutPanel1
         '
+        resources.ApplyResources(Me.FlowLayoutPanel1, "FlowLayoutPanel1")
         Me.FlowLayoutPanel1.Controls.Add(Me.RadGroupBoxBereich1)
         Me.FlowLayoutPanel1.Controls.Add(Me.RadGroupBoxBereich2)
         Me.FlowLayoutPanel1.Controls.Add(Me.RadButtonShowEFG2)
-        resources.ApplyResources(Me.FlowLayoutPanel1, "FlowLayoutPanel1")
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
         '
         'RadGroupBoxBereich1
         '
+        resources.ApplyResources(Me.RadGroupBoxBereich1, "RadGroupBoxBereich1")
         Me.RadGroupBoxBereich1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBoxBereich1.Controls.Add(Me.RadLabel1)
         Me.RadGroupBoxBereich1.Controls.Add(Me.PictureBox29)
@@ -174,13 +165,7 @@ Partial Class uco11PruefungWiederholbarkeitBelastung
         Me.RadGroupBoxBereich1.Controls.Add(Me.PictureBox80)
         Me.RadGroupBoxBereich1.Controls.Add(Me.lblBereich1EFGSpeziallBerechnung)
         Me.RadGroupBoxBereich1.Controls.Add(Me.lblBereich1EFGSpezial)
-        resources.ApplyResources(Me.RadGroupBoxBereich1, "RadGroupBoxBereich1")
         Me.RadGroupBoxBereich1.Name = "RadGroupBoxBereich1"
-        '
-        '
-        '
-        Me.RadGroupBoxBereich1.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxBereich1.RootElement.AccessibleName = Nothing
         Me.RadGroupBoxBereich1.TabStop = False
         '
         'RadLabel1
@@ -188,23 +173,18 @@ Partial Class uco11PruefungWiederholbarkeitBelastung
         resources.ApplyResources(Me.RadLabel1, "RadLabel1")
         Me.RadLabel1.Name = "RadLabel1"
         '
-        '
-        '
-        Me.RadLabel1.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel1.RootElement.AccessibleName = Nothing
-        '
         'PictureBox29
         '
-        Me.PictureBox29.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox29, "PictureBox29")
+        Me.PictureBox29.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox29.Name = "PictureBox29"
         Me.PictureBox29.TabStop = False
         '
         'PanelBereich1WZ1
         '
+        resources.ApplyResources(Me.PanelBereich1WZ1, "PanelBereich1WZ1")
         Me.PanelBereich1WZ1.Controls.Add(Me.RadTextBoxControlBereich1Weight1)
         Me.PanelBereich1WZ1.Controls.Add(Me.RadTextBoxControlBereich1DisplayWeight1)
-        resources.ApplyResources(Me.PanelBereich1WZ1, "PanelBereich1WZ1")
         Me.PanelBereich1WZ1.Name = "PanelBereich1WZ1"
         '
         'RadTextBoxControlBereich1Weight1
@@ -213,26 +193,16 @@ Partial Class uco11PruefungWiederholbarkeitBelastung
         Me.RadTextBoxControlBereich1Weight1.MaxLength = 20
         Me.RadTextBoxControlBereich1Weight1.Name = "RadTextBoxControlBereich1Weight1"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich1Weight1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1Weight1.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich1DisplayWeight1
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1DisplayWeight1, "RadTextBoxControlBereich1DisplayWeight1")
         Me.RadTextBoxControlBereich1DisplayWeight1.MaxLength = 20
         Me.RadTextBoxControlBereich1DisplayWeight1.Name = "RadTextBoxControlBereich1DisplayWeight1"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich1DisplayWeight1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1DisplayWeight1.RootElement.AccessibleName = Nothing
-        '
         'PictureBox30
         '
-        Me.PictureBox30.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox30, "PictureBox30")
+        Me.PictureBox30.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox30.Name = "PictureBox30"
         Me.PictureBox30.TabStop = False
         '
@@ -241,16 +211,11 @@ Partial Class uco11PruefungWiederholbarkeitBelastung
         resources.ApplyResources(Me.lblBereich1FehlerGrenzen, "lblBereich1FehlerGrenzen")
         Me.lblBereich1FehlerGrenzen.Name = "lblBereich1FehlerGrenzen"
         '
-        '
-        '
-        Me.lblBereich1FehlerGrenzen.RootElement.AccessibleDescription = Nothing
-        Me.lblBereich1FehlerGrenzen.RootElement.AccessibleName = Nothing
-        '
         'PanelBereich1WZ2
         '
+        resources.ApplyResources(Me.PanelBereich1WZ2, "PanelBereich1WZ2")
         Me.PanelBereich1WZ2.Controls.Add(Me.RadTextBoxControlBereich1Weight2)
         Me.PanelBereich1WZ2.Controls.Add(Me.RadTextBoxControlBereich1DisplayWeight2)
-        resources.ApplyResources(Me.PanelBereich1WZ2, "PanelBereich1WZ2")
         Me.PanelBereich1WZ2.Name = "PanelBereich1WZ2"
         '
         'RadTextBoxControlBereich1Weight2
@@ -258,11 +223,6 @@ Partial Class uco11PruefungWiederholbarkeitBelastung
         resources.ApplyResources(Me.RadTextBoxControlBereich1Weight2, "RadTextBoxControlBereich1Weight2")
         Me.RadTextBoxControlBereich1Weight2.MaxLength = 20
         Me.RadTextBoxControlBereich1Weight2.Name = "RadTextBoxControlBereich1Weight2"
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich1Weight2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1Weight2.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich1Weight2.TabStop = False
         '
         'RadTextBoxControlBereich1DisplayWeight2
@@ -271,16 +231,11 @@ Partial Class uco11PruefungWiederholbarkeitBelastung
         Me.RadTextBoxControlBereich1DisplayWeight2.MaxLength = 20
         Me.RadTextBoxControlBereich1DisplayWeight2.Name = "RadTextBoxControlBereich1DisplayWeight2"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich1DisplayWeight2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1DisplayWeight2.RootElement.AccessibleName = Nothing
-        '
         'PanelBereich1WZ3
         '
+        resources.ApplyResources(Me.PanelBereich1WZ3, "PanelBereich1WZ3")
         Me.PanelBereich1WZ3.Controls.Add(Me.RadTextBoxControlBereich1Weight3)
         Me.PanelBereich1WZ3.Controls.Add(Me.RadTextBoxControlBereich1DisplayWeight3)
-        resources.ApplyResources(Me.PanelBereich1WZ3, "PanelBereich1WZ3")
         Me.PanelBereich1WZ3.Name = "PanelBereich1WZ3"
         '
         'RadTextBoxControlBereich1Weight3
@@ -288,11 +243,6 @@ Partial Class uco11PruefungWiederholbarkeitBelastung
         resources.ApplyResources(Me.RadTextBoxControlBereich1Weight3, "RadTextBoxControlBereich1Weight3")
         Me.RadTextBoxControlBereich1Weight3.MaxLength = 20
         Me.RadTextBoxControlBereich1Weight3.Name = "RadTextBoxControlBereich1Weight3"
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich1Weight3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1Weight3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich1Weight3.TabStop = False
         '
         'RadTextBoxControlBereich1DisplayWeight3
@@ -301,33 +251,18 @@ Partial Class uco11PruefungWiederholbarkeitBelastung
         Me.RadTextBoxControlBereich1DisplayWeight3.MaxLength = 20
         Me.RadTextBoxControlBereich1DisplayWeight3.Name = "RadTextBoxControlBereich1DisplayWeight3"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich1DisplayWeight3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1DisplayWeight3.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich1ErrorLimit1
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1ErrorLimit1, "RadTextBoxControlBereich1ErrorLimit1")
         Me.RadTextBoxControlBereich1ErrorLimit1.MaxLength = 20
         Me.RadTextBoxControlBereich1ErrorLimit1.Name = "RadTextBoxControlBereich1ErrorLimit1"
         Me.RadTextBoxControlBereich1ErrorLimit1.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich1ErrorLimit1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1ErrorLimit1.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich1ErrorLimit1.TabStop = False
         '
         'RadCheckBoxBereich1VEL1
         '
         resources.ApplyResources(Me.RadCheckBoxBereich1VEL1, "RadCheckBoxBereich1VEL1")
         Me.RadCheckBoxBereich1VEL1.Name = "RadCheckBoxBereich1VEL1"
-        '
-        '
-        '
-        Me.RadCheckBoxBereich1VEL1.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxBereich1VEL1.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxBereich1VEL1.TabStop = False
         '
         'lblBereich1Gewicht
@@ -335,25 +270,15 @@ Partial Class uco11PruefungWiederholbarkeitBelastung
         resources.ApplyResources(Me.lblBereich1Gewicht, "lblBereich1Gewicht")
         Me.lblBereich1Gewicht.Name = "lblBereich1Gewicht"
         '
-        '
-        '
-        Me.lblBereich1Gewicht.RootElement.AccessibleDescription = Nothing
-        Me.lblBereich1Gewicht.RootElement.AccessibleName = Nothing
-        '
         'lblBereich1AnzeigeGewicht
         '
         resources.ApplyResources(Me.lblBereich1AnzeigeGewicht, "lblBereich1AnzeigeGewicht")
         Me.lblBereich1AnzeigeGewicht.Name = "lblBereich1AnzeigeGewicht"
         '
-        '
-        '
-        Me.lblBereich1AnzeigeGewicht.RootElement.AccessibleDescription = Nothing
-        Me.lblBereich1AnzeigeGewicht.RootElement.AccessibleName = Nothing
-        '
         'PictureBox80
         '
-        Me.PictureBox80.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox80, "PictureBox80")
+        Me.PictureBox80.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox80.Name = "PictureBox80"
         Me.PictureBox80.TabStop = False
         '
@@ -362,11 +287,6 @@ Partial Class uco11PruefungWiederholbarkeitBelastung
         resources.ApplyResources(Me.lblBereich1EFGSpeziallBerechnung, "lblBereich1EFGSpeziallBerechnung")
         Me.lblBereich1EFGSpeziallBerechnung.Name = "lblBereich1EFGSpeziallBerechnung"
         Me.lblBereich1EFGSpeziallBerechnung.ReadOnly = True
-        '
-        '
-        '
-        Me.lblBereich1EFGSpeziallBerechnung.RootElement.AccessibleDescription = Nothing
-        Me.lblBereich1EFGSpeziallBerechnung.RootElement.AccessibleName = Nothing
         Me.lblBereich1EFGSpeziallBerechnung.TabStop = False
         '
         'lblBereich1EFGSpezial
@@ -374,13 +294,9 @@ Partial Class uco11PruefungWiederholbarkeitBelastung
         resources.ApplyResources(Me.lblBereich1EFGSpezial, "lblBereich1EFGSpezial")
         Me.lblBereich1EFGSpezial.Name = "lblBereich1EFGSpezial"
         '
-        '
-        '
-        Me.lblBereich1EFGSpezial.RootElement.AccessibleDescription = Nothing
-        Me.lblBereich1EFGSpezial.RootElement.AccessibleName = Nothing
-        '
         'RadGroupBoxBereich2
         '
+        resources.ApplyResources(Me.RadGroupBoxBereich2, "RadGroupBoxBereich2")
         Me.RadGroupBoxBereich2.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBoxBereich2.Controls.Add(Me.RadLabel2)
         Me.RadGroupBoxBereich2.Controls.Add(Me.PictureBox77)
@@ -396,13 +312,7 @@ Partial Class uco11PruefungWiederholbarkeitBelastung
         Me.RadGroupBoxBereich2.Controls.Add(Me.lblBereich2EFGSpezial)
         Me.RadGroupBoxBereich2.Controls.Add(Me.lblBereich2Gewicht)
         Me.RadGroupBoxBereich2.Controls.Add(Me.lblBereich2AnzeigeGewicht)
-        resources.ApplyResources(Me.RadGroupBoxBereich2, "RadGroupBoxBereich2")
         Me.RadGroupBoxBereich2.Name = "RadGroupBoxBereich2"
-        '
-        '
-        '
-        Me.RadGroupBoxBereich2.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxBereich2.RootElement.AccessibleName = Nothing
         Me.RadGroupBoxBereich2.TabStop = False
         '
         'RadLabel2
@@ -410,29 +320,24 @@ Partial Class uco11PruefungWiederholbarkeitBelastung
         resources.ApplyResources(Me.RadLabel2, "RadLabel2")
         Me.RadLabel2.Name = "RadLabel2"
         '
-        '
-        '
-        Me.RadLabel2.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel2.RootElement.AccessibleName = Nothing
-        '
         'PictureBox77
         '
-        Me.PictureBox77.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox77, "PictureBox77")
+        Me.PictureBox77.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox77.Name = "PictureBox77"
         Me.PictureBox77.TabStop = False
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox1, "PictureBox1")
+        Me.PictureBox1.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.TabStop = False
         '
         'PictureBox78
         '
-        Me.PictureBox78.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         resources.ApplyResources(Me.PictureBox78, "PictureBox78")
+        Me.PictureBox78.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
         Me.PictureBox78.Name = "PictureBox78"
         Me.PictureBox78.TabStop = False
         '
@@ -441,18 +346,13 @@ Partial Class uco11PruefungWiederholbarkeitBelastung
         resources.ApplyResources(Me.lblBereich2EFGSpeziallBerechnung, "lblBereich2EFGSpeziallBerechnung")
         Me.lblBereich2EFGSpeziallBerechnung.Name = "lblBereich2EFGSpeziallBerechnung"
         Me.lblBereich2EFGSpeziallBerechnung.ReadOnly = True
-        '
-        '
-        '
-        Me.lblBereich2EFGSpeziallBerechnung.RootElement.AccessibleDescription = Nothing
-        Me.lblBereich2EFGSpeziallBerechnung.RootElement.AccessibleName = Nothing
         Me.lblBereich2EFGSpeziallBerechnung.TabStop = False
         '
         'PanelBereich2WZ1
         '
+        resources.ApplyResources(Me.PanelBereich2WZ1, "PanelBereich2WZ1")
         Me.PanelBereich2WZ1.Controls.Add(Me.RadTextBoxControlBereich2Weight1)
         Me.PanelBereich2WZ1.Controls.Add(Me.RadTextBoxControlBereich2DisplayWeight1)
-        resources.ApplyResources(Me.PanelBereich2WZ1, "PanelBereich2WZ1")
         Me.PanelBereich2WZ1.Name = "PanelBereich2WZ1"
         '
         'RadTextBoxControlBereich2Weight1
@@ -461,27 +361,17 @@ Partial Class uco11PruefungWiederholbarkeitBelastung
         Me.RadTextBoxControlBereich2Weight1.MaxLength = 20
         Me.RadTextBoxControlBereich2Weight1.Name = "RadTextBoxControlBereich2Weight1"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich2Weight1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2Weight1.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich2DisplayWeight1
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2DisplayWeight1, "RadTextBoxControlBereich2DisplayWeight1")
         Me.RadTextBoxControlBereich2DisplayWeight1.MaxLength = 20
         Me.RadTextBoxControlBereich2DisplayWeight1.Name = "RadTextBoxControlBereich2DisplayWeight1"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich2DisplayWeight1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2DisplayWeight1.RootElement.AccessibleName = Nothing
-        '
         'PanelBereich2WZ2
         '
+        resources.ApplyResources(Me.PanelBereich2WZ2, "PanelBereich2WZ2")
         Me.PanelBereich2WZ2.Controls.Add(Me.RadTextBoxControlBereich2Weight2)
         Me.PanelBereich2WZ2.Controls.Add(Me.RadTextBoxControlBereich2DisplayWeight2)
-        resources.ApplyResources(Me.PanelBereich2WZ2, "PanelBereich2WZ2")
         Me.PanelBereich2WZ2.Name = "PanelBereich2WZ2"
         '
         'RadTextBoxControlBereich2Weight2
@@ -489,11 +379,6 @@ Partial Class uco11PruefungWiederholbarkeitBelastung
         resources.ApplyResources(Me.RadTextBoxControlBereich2Weight2, "RadTextBoxControlBereich2Weight2")
         Me.RadTextBoxControlBereich2Weight2.MaxLength = 20
         Me.RadTextBoxControlBereich2Weight2.Name = "RadTextBoxControlBereich2Weight2"
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich2Weight2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2Weight2.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich2Weight2.TabStop = False
         '
         'RadTextBoxControlBereich2DisplayWeight2
@@ -502,22 +387,12 @@ Partial Class uco11PruefungWiederholbarkeitBelastung
         Me.RadTextBoxControlBereich2DisplayWeight2.MaxLength = 20
         Me.RadTextBoxControlBereich2DisplayWeight2.Name = "RadTextBoxControlBereich2DisplayWeight2"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich2DisplayWeight2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2DisplayWeight2.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich2ErrorLimit1
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2ErrorLimit1, "RadTextBoxControlBereich2ErrorLimit1")
         Me.RadTextBoxControlBereich2ErrorLimit1.MaxLength = 20
         Me.RadTextBoxControlBereich2ErrorLimit1.Name = "RadTextBoxControlBereich2ErrorLimit1"
         Me.RadTextBoxControlBereich2ErrorLimit1.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich2ErrorLimit1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2ErrorLimit1.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich2ErrorLimit1.TabStop = False
         '
         'lblBereich2FehlerGrenzen
@@ -525,27 +400,17 @@ Partial Class uco11PruefungWiederholbarkeitBelastung
         resources.ApplyResources(Me.lblBereich2FehlerGrenzen, "lblBereich2FehlerGrenzen")
         Me.lblBereich2FehlerGrenzen.Name = "lblBereich2FehlerGrenzen"
         '
-        '
-        '
-        Me.lblBereich2FehlerGrenzen.RootElement.AccessibleDescription = Nothing
-        Me.lblBereich2FehlerGrenzen.RootElement.AccessibleName = Nothing
-        '
         'RadCheckBoxBereich2VEL1
         '
         resources.ApplyResources(Me.RadCheckBoxBereich2VEL1, "RadCheckBoxBereich2VEL1")
         Me.RadCheckBoxBereich2VEL1.Name = "RadCheckBoxBereich2VEL1"
-        '
-        '
-        '
-        Me.RadCheckBoxBereich2VEL1.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxBereich2VEL1.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxBereich2VEL1.TabStop = False
         '
         'PanelBereich2WZ3
         '
+        resources.ApplyResources(Me.PanelBereich2WZ3, "PanelBereich2WZ3")
         Me.PanelBereich2WZ3.Controls.Add(Me.RadTextBoxControlBereich2Weight3)
         Me.PanelBereich2WZ3.Controls.Add(Me.RadTextBoxControlBereich2DisplayWeight3)
-        resources.ApplyResources(Me.PanelBereich2WZ3, "PanelBereich2WZ3")
         Me.PanelBereich2WZ3.Name = "PanelBereich2WZ3"
         '
         'RadTextBoxControlBereich2Weight3
@@ -553,11 +418,6 @@ Partial Class uco11PruefungWiederholbarkeitBelastung
         resources.ApplyResources(Me.RadTextBoxControlBereich2Weight3, "RadTextBoxControlBereich2Weight3")
         Me.RadTextBoxControlBereich2Weight3.MaxLength = 20
         Me.RadTextBoxControlBereich2Weight3.Name = "RadTextBoxControlBereich2Weight3"
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich2Weight3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2Weight3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich2Weight3.TabStop = False
         '
         'RadTextBoxControlBereich2DisplayWeight3
@@ -566,50 +426,25 @@ Partial Class uco11PruefungWiederholbarkeitBelastung
         Me.RadTextBoxControlBereich2DisplayWeight3.MaxLength = 20
         Me.RadTextBoxControlBereich2DisplayWeight3.Name = "RadTextBoxControlBereich2DisplayWeight3"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich2DisplayWeight3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2DisplayWeight3.RootElement.AccessibleName = Nothing
-        '
         'lblBereich2EFGSpezial
         '
         resources.ApplyResources(Me.lblBereich2EFGSpezial, "lblBereich2EFGSpezial")
         Me.lblBereich2EFGSpezial.Name = "lblBereich2EFGSpezial"
-        '
-        '
-        '
-        Me.lblBereich2EFGSpezial.RootElement.AccessibleDescription = Nothing
-        Me.lblBereich2EFGSpezial.RootElement.AccessibleName = Nothing
         '
         'lblBereich2Gewicht
         '
         resources.ApplyResources(Me.lblBereich2Gewicht, "lblBereich2Gewicht")
         Me.lblBereich2Gewicht.Name = "lblBereich2Gewicht"
         '
-        '
-        '
-        Me.lblBereich2Gewicht.RootElement.AccessibleDescription = Nothing
-        Me.lblBereich2Gewicht.RootElement.AccessibleName = Nothing
-        '
         'lblBereich2AnzeigeGewicht
         '
         resources.ApplyResources(Me.lblBereich2AnzeigeGewicht, "lblBereich2AnzeigeGewicht")
         Me.lblBereich2AnzeigeGewicht.Name = "lblBereich2AnzeigeGewicht"
         '
-        '
-        '
-        Me.lblBereich2AnzeigeGewicht.RootElement.AccessibleDescription = Nothing
-        Me.lblBereich2AnzeigeGewicht.RootElement.AccessibleName = Nothing
-        '
         'RadButtonShowEFG2
         '
         resources.ApplyResources(Me.RadButtonShowEFG2, "RadButtonShowEFG2")
         Me.RadButtonShowEFG2.Name = "RadButtonShowEFG2"
-        '
-        '
-        '
-        Me.RadButtonShowEFG2.RootElement.AccessibleDescription = Nothing
-        Me.RadButtonShowEFG2.RootElement.AccessibleName = Nothing
         '
         'uco11PruefungWiederholbarkeitBelastung
         '
