@@ -129,6 +129,7 @@ Partial Class ucoEichprozessauswahlliste
         'RadButtonNeuStandardwaage
         '
         resources.ApplyResources(Me.RadButtonNeuStandardwaage, "RadButtonNeuStandardwaage")
+        Me.RadButtonNeuStandardwaage.BackColor = System.Drawing.Color.Transparent
         Me.RadButtonNeuStandardwaage.Image = Global.EichsoftwareClient.My.Resources.Resources.report_add
         Me.RadButtonNeuStandardwaage.Name = "RadButtonNeuStandardwaage"
         Me.RadButtonNeuStandardwaage.TextWrap = True
@@ -148,6 +149,7 @@ Partial Class ucoEichprozessauswahlliste
         'RadButtonClientUpdateDatabase
         '
         resources.ApplyResources(Me.RadButtonClientUpdateDatabase, "RadButtonClientUpdateDatabase")
+        Me.RadButtonClientUpdateDatabase.BackColor = System.Drawing.Color.Transparent
         Me.RadButtonClientUpdateDatabase.Image = Global.EichsoftwareClient.My.Resources.Resources.database_refresh
         Me.RadButtonClientUpdateDatabase.Name = "RadButtonClientUpdateDatabase"
         Me.RadButtonClientUpdateDatabase.TextWrap = True
@@ -160,6 +162,7 @@ Partial Class ucoEichprozessauswahlliste
         'RadButtonClientAusblenden
         '
         resources.ApplyResources(Me.RadButtonClientAusblenden, "RadButtonClientAusblenden")
+        Me.RadButtonClientAusblenden.BackColor = System.Drawing.Color.Transparent
         Me.RadButtonClientAusblenden.Image = Global.EichsoftwareClient.My.Resources.Resources.report_delete
         Me.RadButtonClientAusblenden.Name = "RadButtonClientAusblenden"
         Me.RadButtonClientAusblenden.TextWrap = True
@@ -167,6 +170,7 @@ Partial Class ucoEichprozessauswahlliste
         'RadButtonClientNeu
         '
         resources.ApplyResources(Me.RadButtonClientNeu, "RadButtonClientNeu")
+        Me.RadButtonClientNeu.BackColor = System.Drawing.Color.Transparent
         Me.RadButtonClientNeu.Image = Global.EichsoftwareClient.My.Resources.Resources.report_add
         Me.RadButtonClientNeu.Name = "RadButtonClientNeu"
         Me.RadButtonClientNeu.TextWrap = True
@@ -174,6 +178,7 @@ Partial Class ucoEichprozessauswahlliste
         'RadButtonClientBearbeiten
         '
         resources.ApplyResources(Me.RadButtonClientBearbeiten, "RadButtonClientBearbeiten")
+        Me.RadButtonClientBearbeiten.BackColor = System.Drawing.Color.Transparent
         Me.RadButtonClientBearbeiten.Image = Global.EichsoftwareClient.My.Resources.Resources.report_edit
         Me.RadButtonClientBearbeiten.Name = "RadButtonClientBearbeiten"
         Me.RadButtonClientBearbeiten.TextWrap = True

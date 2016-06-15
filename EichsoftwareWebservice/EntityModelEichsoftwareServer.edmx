@@ -1472,6 +1472,8 @@
           <NavigationProperty Name="ServerEichprozess" Relationship="EichenSQLDatabaseModel.FK_Eichprozess_Lookup_Waegezelle" FromRole="ServerLookup_Waegezelle" ToRole="ServerEichprozess" />
           <NavigationProperty Name="ServerMogelstatistik" Relationship="EichenSQLDatabaseModel.FK_Mogelstatistik_Lookup_Waegezelle" FromRole="ServerLookup_Waegezelle" ToRole="ServerMogelstatistik" />
           <Property Type="Boolean" Name="Neu" Nullable="false" />
+		    <Property Type="Int32" Name="MindestvorlastProzent" />
+          <Property Type="String" Name="Bemerkung" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="ServerMogelstatistik">
           <Key>
@@ -2338,6 +2340,8 @@
           <EntitySetMapping Name="ServerLookup_Waegezelle">
             <EntityTypeMapping TypeName="EichenSQLDatabaseModel.ServerLookup_Waegezelle">
               <MappingFragment StoreEntitySet="ServerLookup_Waegezelle">
+			     <ScalarProperty Name="Bemerkung" ColumnName="Bemerkung" />
+                <ScalarProperty Name="MindestvorlastProzent" ColumnName="MindestvorlastProzent" />
                 <ScalarProperty Name="Neu" ColumnName="Neu" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Hersteller" ColumnName="Hersteller" />

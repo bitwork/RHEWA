@@ -96,7 +96,14 @@ Public Class FrmMainContainer
         End Get
         Set(value As String)
             lblHeaderText.Text = value
-            Me.Text = value
+
+            If Deployment.Application.ApplicationDeployment.IsNetworkDeployed Then
+                Me.Text = value + " v." + Deployment.Application.ApplicationDeployment.CurrentDeployment.CurrentVersion.ToString
+            Else
+
+                Me.Text = value + " v." + Application.ProductVersion.ToString
+            End If
+
         End Set
     End Property
 
