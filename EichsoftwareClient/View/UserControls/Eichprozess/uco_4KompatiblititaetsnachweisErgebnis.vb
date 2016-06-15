@@ -867,6 +867,7 @@
         'Je nach Erfolg der Prüfung werden die Checkboxen eingefärbt
         For Each GroupBox In FlowLayoutPanel1.Controls
             If TypeOf GroupBox Is Telerik.WinControls.UI.RadGroupBox Then
+                Dim boolGroupboxInvalid As Boolean = False 'marker um zu überprüfen ob eine validierung bereits ungültigt ist. Sonst könnte die Groupbox wieder ohne Rand dargestellt werden, wenn die erste Prüfung falsch die zweite aber korrekt war
                 For Each Control In GroupBox.controls
                     If TypeOf Control Is Telerik.WinControls.UI.RadCheckBox Then
                         If CType(Control, Telerik.WinControls.UI.RadCheckBox).Visible = True AndAlso CType(Control, Telerik.WinControls.UI.RadCheckBox).Checked = False Then
@@ -874,10 +875,14 @@
                             CType(GroupBox, Telerik.WinControls.UI.RadGroupBox).GroupBoxElement.BorderColor = Color.Red
                             CType(GroupBox, Telerik.WinControls.UI.RadGroupBox).GroupBoxElement.BorderWidth = 4
                             CType(GroupBox, Telerik.WinControls.UI.RadGroupBox).BackColor = Color.FromArgb(4, Color.Red)
+                            boolGroupboxInvalid = True
                         Else
-                            CType(GroupBox, Telerik.WinControls.UI.RadGroupBox).GroupBoxElement.BorderColor = System.Drawing.Color.FromArgb(255, 196, 199, 182)
-                            CType(GroupBox, Telerik.WinControls.UI.RadGroupBox).GroupBoxElement.BorderWidth = 1
-                            CType(GroupBox, Telerik.WinControls.UI.RadGroupBox).BackColor = Color.White
+                            If boolGroupboxInvalid = False Then
+                                CType(GroupBox, Telerik.WinControls.UI.RadGroupBox).GroupBoxElement.BorderColor = System.Drawing.Color.FromArgb(255, 196, 199, 182)
+                                CType(GroupBox, Telerik.WinControls.UI.RadGroupBox).GroupBoxElement.BorderWidth = 1
+                                CType(GroupBox, Telerik.WinControls.UI.RadGroupBox).BackColor = Color.White
+                            End If
+
                         End If
                     End If
                 Next
