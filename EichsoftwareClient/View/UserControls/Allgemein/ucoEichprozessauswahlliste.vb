@@ -189,14 +189,14 @@
             If o.Count = 0 Then
                 Dim objCondition As New Telerik.WinControls.UI.ConditionalFormattingObject("Fehlerhaft", Telerik.WinControls.UI.ConditionTypes.Equal, "Fehlerhaft", "", True)
                 Dim objCondition2 As New Telerik.WinControls.UI.ConditionalFormattingObject("invalid", Telerik.WinControls.UI.ConditionTypes.Equal, "Invalid", "", True)
-                objCondition.RowBackColor = Color.FromArgb(247, 87, 67)
-                objCondition2.RowBackColor = Color.FromArgb(247, 87, 67)
+                objCondition.RowBackColor = Color.FromArgb(254, 120, 110)
+                objCondition2.RowBackColor = Color.FromArgb(254, 120, 110)
 
                 Dim objCondition3 As New Telerik.WinControls.UI.ConditionalFormattingObject("Genehmigt", Telerik.WinControls.UI.ConditionTypes.Equal, "Genehmigt", "", True)
                 Dim objCondition4 As New Telerik.WinControls.UI.ConditionalFormattingObject("Valid", Telerik.WinControls.UI.ConditionTypes.Equal, "Valid", "", True)
 
-                objCondition3.RowBackColor = Color.LightGreen
-                objCondition4.RowBackColor = Color.LightGreen
+                objCondition3.RowBackColor = Color.FromArgb(201, 255, 132)
+                objCondition4.RowBackColor = Color.FromArgb(201, 255, 132)
                 RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition)
                 RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition2)
 
@@ -590,10 +590,10 @@
 
                 If o.Count = 0 Then
                     Dim objCondition As New Telerik.WinControls.UI.ConditionalFormattingObject("Fehlerhaft", Telerik.WinControls.UI.ConditionTypes.Equal, "Fehlerhaft", "", True)
-                    objCondition.RowBackColor = Color.FromArgb(247, 87, 67)
+                    objCondition.RowBackColor = Color.FromArgb(254, 120, 110)
 
                     Dim objCondition2 As New Telerik.WinControls.UI.ConditionalFormattingObject("Genehmigt", Telerik.WinControls.UI.ConditionTypes.Equal, "Genehmigt", "", True)
-                    objCondition2.RowBackColor = Color.LightGreen
+                    objCondition2.RowBackColor = Color.FromArgb(201, 255, 132)
 
                     RadGridViewRHEWAAlle.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition)
                     RadGridViewRHEWAAlle.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition2)
