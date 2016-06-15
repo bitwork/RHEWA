@@ -18,8 +18,6 @@ Public Class frmEingabeNeueLizenz
         ' Add any initialization after the InitializeComponent() call.
     End Sub
 
-
-
     Private Sub Auswertegeraet_Load(sender As Object, e As EventArgs) Handles Me.Load
         LadeObjekt()
 
@@ -48,8 +46,7 @@ Public Class frmEingabeNeueLizenz
     End Sub
 
     Private Sub FillControls()
-        ''todo Dropdown Wert zuweisen aus Objekt 
-
+        ''todo Dropdown Wert zuweisen aus Objekt
 
         RadTextBoxControl1.Text = _objLizen.HEKennung
         RadTextBoxControl2.Text = _objLizen.Lizenzschluessel
@@ -60,8 +57,6 @@ Public Class frmEingabeNeueLizenz
         RadMultiColumnComboBoxBenutzer.Enabled = _bolNew
     End Sub
 
-
-
     Private Sub LadeDropDownDatenquelle()
         Try
 
@@ -69,24 +64,21 @@ Public Class frmEingabeNeueLizenz
                 Dim Benutzer As Entity.DbSet(Of Benutzer) = context.Benutzer
                 Dim Firmen As Entity.DbSet(Of Firmen) = context.Firmen
 
-
-
                 If _bolNew Then 'lade alle ohne Eintrag in Lizenztabelle
                     'ausfilterung von DS die bereits einen Eintrag in der Lizenz Tabelle haben
 
-
                     'abrufen der Entität aus der Datenbank
                     Dim query = From Benutz In Benutzer
-                        Join Firma In Firmen On Benutz.Firma_FK Equals Firma.ID Order By Benutz.Nachname
-                    Select New With _
-                    { _
-                        Benutz.ID, _
-                        Benutz.HEKennung, _
-                        Benutz.Nachname, _
-                        Benutz.Vorname, _
-                        .Firma = Firma.Name, _
-                        .Anzeigename = Benutz.Nachname + ", " + Benutz.Vorname
-                    }
+                                Join Firma In Firmen On Benutz.Firma_FK Equals Firma.ID Order By Benutz.Nachname
+                                Select New With
+                                {
+                                    Benutz.ID,
+                                    Benutz.HEKennung,
+                                    Benutz.Nachname,
+                                    Benutz.Vorname,
+                                    .Firma = Firma.Name,
+                                    .Anzeigename = Benutz.Nachname + ", " + Benutz.Vorname
+                                }
 
                     'ab hier sind alle Benutzer bekannt.
                     'nun kontrollieren ob es für die Benutzer bereits einen Eintrag in der Lizenztabelle gibt
@@ -112,13 +104,13 @@ Public Class frmEingabeNeueLizenz
                 Else ' lade Benutzer ahnhand von ID
                     'abrufen der Entität aus der Datenbank
                     Dim query = From Benutz In Benutzer Join Firma In Firmen On Benutz.Firma_FK Equals Firma.ID Where Benutz.ID = _objLizen.FK_BenutzerID
-                                Select New With _
-                   { _
-                       Benutz.ID, _
-                       Benutz.HEKennung, _
-                        Benutz.Nachname, _
-                        Benutz.Vorname, _
-                        .Firma = Firma.Name, _
+                                Select New With
+                   {
+                       Benutz.ID,
+                       Benutz.HEKennung,
+                        Benutz.Nachname,
+                        Benutz.Vorname,
+                        .Firma = Firma.Name,
                     .Anzeigename = Benutz.Nachname + ", " + Benutz.Vorname
                     }
 
@@ -148,8 +140,6 @@ Public Class frmEingabeNeueLizenz
         End Try
     End Sub
 
-
-
     Private Sub RadMultiColumnComboBoxBenutzer_SelectedIndexChanged(sender As Object, e As EventArgs) Handles RadMultiColumnComboBoxBenutzer.SelectedIndexChanged
         Try
             Dim selecteditem = RadMultiColumnComboBoxBenutzer.SelectedItem
@@ -166,7 +156,6 @@ Public Class frmEingabeNeueLizenz
         End Try
     End Sub
 
-
     Private Sub UpdateObject()
         Try
             Dim selecteditem = RadMultiColumnComboBoxBenutzer.SelectedItem
@@ -175,7 +164,6 @@ Public Class frmEingabeNeueLizenz
         Catch ex As Exception
             MessageBox.Show("Konnte BenutzerID nicht auslesen")
         End Try
-
 
         _objLizen.HEKennung = RadTextBoxControl1.Text
         _objLizen.Lizenzschluessel = RadTextBoxControl2.Text
@@ -190,7 +178,6 @@ Public Class frmEingabeNeueLizenz
 
     Friend Sub Save()
         If ValidateControls() = True Then
-
 
             'neuen Context aufbauen
             Using Context As New EichenEntities
@@ -313,7 +300,5 @@ Public Class frmEingabeNeueLizenz
         Return True
 
     End Function
-
-
 
 End Class

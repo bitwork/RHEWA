@@ -5,8 +5,8 @@ Friend Class uco_8PruefungNullstellungUndAussermittigeBelastung
     Inherits ucoContent
 
 #Region "Member Variables"
-    Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken 
-    'Private AktuellerStatusDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. 
+    Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken
+    'Private AktuellerStatusDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden.
     'Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Komptabilitätsnachweis zurückgesetzt
     Private _ListPruefungAussermittigeBelastung As New List(Of PruefungAussermittigeBelastung)
     Private _currentObjPruefungAussermittigeBelastung As PruefungAussermittigeBelastung
@@ -144,7 +144,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
             Dim AnzeigeMax2 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlDisplayWeight{0}", 2))
             Dim AnzeigeMax3 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlDisplayWeight{0}", 3))
 
-
             Dim listdecimals As New List(Of Decimal)
             If IsNumeric(AnzeigeMax1.Text) Then
                 listdecimals.Add(AnzeigeMax1.Text)
@@ -162,7 +161,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                 min = listdecimals.Min
 
                 Dim differenz As Decimal = max - min
-
 
                 Try
                     If (differenz) > (CDec(lblEFGSpeziallBerechnung.Text) * 0.33) Then
@@ -237,7 +235,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
             'Catch ex As Exception
             'End Try
 
-
         Catch ex As Exception
         End Try
     End Sub
@@ -260,7 +257,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         RadTextBoxControlWeight1.Text = CType(sender, Telerik.WinControls.UI.RadTextBox).Text
         RadTextBoxControlWeight2.Text = CType(sender, Telerik.WinControls.UI.RadTextBox).Text
         RadTextBoxControlWeight3.Text = CType(sender, Telerik.WinControls.UI.RadTextBox).Text
-
 
         'neu berechnen der Fehler und EFG
         CalculateEFGWiederholungen(RadTextBoxControlWeight1)
@@ -303,13 +299,11 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                 Exit Sub
             End Try
 
-
             'EFG durch die Differenz zwischen den 3 Belastungen. Mit anderen Worten: Die Differenz der Wägeergebnisse bei der 3maligen Belastung darf nicht größer sein, als der Absolutwert der für diese Belastung geltenden Fehlergrenze der Waage.
 
             Dim AnzeigeMax1 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlDisplayWeight{0}", 1))
             Dim AnzeigeMax2 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlDisplayWeight{0}", 2))
             Dim AnzeigeMax3 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlDisplayWeight{0}", 3))
-
 
             Dim listdecimals As New List(Of Decimal)
             If IsNumeric(AnzeigeMax1.Text) Then
@@ -352,8 +346,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         CalculateEFGWiederholungen(sender)
     End Sub
 
-
-
 #End Region
 
 #Region "Aussermittige Belastung Text changed Events"
@@ -374,9 +366,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
             Exit Sub
         End Try
 
-
-      
-
         'Alte Formel
         Try
             Fehler.Text = CDec(Anzeige.Text) - CDec(Last.Text)
@@ -389,8 +378,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
             End If
         Catch ex As Exception
         End Try
-
-
 
         ''Neue EFG Formel nach Herrn Strack
         'Try
@@ -417,7 +404,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         'End Try
 
     End Sub
-
 
     ''' <summary>
     ''' wenn sich eine der Last Werte ändert, muss es in allen anderen Textboxen nachgezogen werden
@@ -466,8 +452,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         RadTextBoxControlBereich3Weight2.TextChanged,
         RadTextBoxControlBereich3Weight1.TextChanged
 
-
-
         If _suspendEvents = True Then Exit Sub
         AktuellerStatusDirty = True
 
@@ -477,7 +461,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         'bereich laden
         Dim bereich = GetBereich(sender).ToString
 
-    
         'alle steuerlemente iterieren
         Try
             For i As Integer = 1 To 13
@@ -494,13 +477,11 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
 
                 Last.Text = CType(sender, Telerik.WinControls.UI.RadTextBox).Text
 
-
                 'wenn weight1 leer ist, sind auch alle anderen leer
                 Dim EFG As Telerik.WinControls.UI.RadCheckBox = FindControl(String.Format("RadCheckBoxBereich{0}VEL{1}", bereich, Belastungsort))
                 If Last.Text.Equals("") Then
                     EFG.Checked = False
                 End If
-
 
                 'neu berechnen der Fehler und EFG
                 CalculateEFGAussermittigeBelastung(bereich, Belastungsort)
@@ -572,8 +553,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         End Try
     End Sub
 
-
-
 #End Region
 
     ''' <summary>
@@ -600,8 +579,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         RadGroupBoxBereich2.Location = New Size(21, 644)
         RadGroupBoxBereich3.Location = New Size(21, 1139)
 
-
-
         objEichprozess = ParentFormular.CurrentEichprozess
         'events abbrechen
         _suspendEvents = True
@@ -611,7 +588,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
             Using context As New EichsoftwareClientdatabaseEntities1
 
                 'neu laden des Objekts, diesmal mit den lookup Objekten
-                objEichprozess = (From a In context.Eichprozess.Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis"). _
+                objEichprozess = (From a In context.Eichprozess.Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").
                                   Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Eichprotokoll") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
 
                 'abrufen aller Prüfungs entitäten die sich auf dieses eichprotokoll beziehen
@@ -647,10 +624,8 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                 End Using
             End Try
 
-
             _currentObjVerfahren = objEichprozess.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren
         End If
-
 
         'steuerelemente mit werten aus DB füllen
         FillControls()
@@ -669,8 +644,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         _suspendEvents = False
     End Sub
 
-   
-
 #Region "FillControls"
     ''' <summary>
     ''' Lädt die Werte aus dem Objekt in die Steuerlemente
@@ -678,7 +651,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    ''' 
+    '''
     Private Sub FillControls()
         'Steuerlemente füllen
         FillControlsNullstellung()
@@ -782,7 +755,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                             Next
                         End Try
 
-
                         objEichprozess.Eichprotokoll.PruefungAussermittigeBelastung.Add(objPruefung)
                         Try
                             Context.SaveChanges()
@@ -796,7 +768,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                         _ListPruefungAussermittigeBelastung.Add(objPruefung)
                     Next
                 End If
-
 
             Next
         Else
@@ -812,7 +783,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                 '    'durch die Differenz kenne ich die neuen Werte
                 'End If
 
-
                 Dim differenz As Integer = 0
                 If _ListPruefungAussermittigeBelastung.Count < (objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen + 1) * intBereiche Then
                     'hinzufügen der neuen elemente
@@ -822,7 +792,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                     differenz = _ListPruefungAussermittigeBelastung.Count - (objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen + 1) * intBereiche
                     'durch die Differenz kenne ich die neuen Werte
                 End If
-
 
                 If differenz = 0 Then
                     'jedes objekt initialisieren und aus context laden und updaten
@@ -916,7 +885,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
 
                                 If bolNeu Then
 
-
                                     objEichprozess.Eichprotokoll.PruefungAussermittigeBelastung.Add(objPruefung)
                                     Try
                                         Context.SaveChanges()
@@ -932,9 +900,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                             Next
                         End If
 
-
                     Next
-
 
                 End If
 
@@ -969,7 +935,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                         Next
                     End Try
 
-
                     objEichprozess.Eichprotokoll.PruefungWiederholbarkeit.Add(objPruefung)
                     Try
                         Context.SaveChanges()
@@ -979,7 +944,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                             MessageBox.Show(e.ValidationErrors(0).ErrorMessage)
                         Next
                     End Try
-
 
                     _ListPruefungWiederholbarkeit.Add(objPruefung)
 
@@ -1039,17 +1003,15 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
 
         End If
 
-
     End Sub
     Private Sub BerechneHoechstlast()
 
         Dim Teilungsfaktor As Integer = 3
         Dim wert As String = "" 'hilfsvariable zum zuweisen des Textwertes
-        'je nach Zahl der Wägezellen ändert sich die Berechnung. Bei mehr als 4 WZ ändert sich die Formel von Hoechstlast / 3 auf Hoechstlast/(Anzahl WZ-1) 
+        'je nach Zahl der Wägezellen ändert sich die Berechnung. Bei mehr als 4 WZ ändert sich die Formel von Hoechstlast / 3 auf Hoechstlast/(Anzahl WZ-1)
         If objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen > 4 Then
             Teilungsfaktor = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen - 1
         End If
-
 
         'alle textboxen den entsprechenden Wert zuordnen
         For Bereich As Integer = 1 To 3
@@ -1086,10 +1048,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         lblBereich2EFGSpeziallBerechnung.Mask = String.Format("F{0}", _intNullstellenE) 'anzahl nullstellen für Textcontrol definieren
         lblBereich3EFGSpeziallBerechnung.Mask = String.Format("F{0}", _intNullstellenE) 'anzahl nullstellen für Textcontrol definieren
 
-
         BerechneHoechstlast()
-
-
 
         For Bereich As Integer = 1 To 3
             Dim sBereich As String = Bereich 'wegen LINQ eigenart
@@ -1102,12 +1061,10 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                     sBelastungsortControl = "Mitte"
                 End If
 
-
                 Dim Last As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}Weight{1}", CInt(Bereich), sBelastungsortControl))
                 Dim Anzeige As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}DisplayWeight{1}", CInt(Bereich), sBelastungsortControl))
                 Dim Fehler As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}ErrorLimit{1}", CInt(Bereich), sBelastungsortControl))
                 Dim EFG As Telerik.WinControls.UI.RadCheckBox = FindControl(String.Format("RadCheckBoxBereich{0}VEL{1}", CInt(Bereich), sBelastungsortControl))
-
 
                 _currentObjPruefungAussermittigeBelastung = Nothing
                 _currentObjPruefungAussermittigeBelastung = (From o In _ListPruefungAussermittigeBelastung Where o.Belastungsort = sBelastungsortDB And o.Bereich = sBereich).FirstOrDefault
@@ -1121,8 +1078,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
             Next
         Next
 
-     
-
         Try
             lblBereich1EFGSpeziallBerechnung.Text = GetEFG(RadTextBoxControlBereich1Weight1.Text, 1)
             lblBereich2EFGSpeziallBerechnung.Text = GetEFG(RadTextBoxControlBereich2Weight1.Text, 2)
@@ -1130,7 +1085,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         Catch ex As Exception
 
         End Try
-       
 
     End Sub
 
@@ -1173,13 +1127,12 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
 
             'nicht nur werden die Groupboxen kleiner, sie müssen auch verschoben werden . (Passiert in Relation zur Vorherigen Groupbox)
             RadGroupBoxBereich2.Location = New Size(RadGroupBoxBereich2.Location.X, RadGroupBoxBereich1.Location.Y + NeueHoehe + 20)
-            'dritte Groupbox muss sogar doppelt so hoch verschoben werden 
+            'dritte Groupbox muss sogar doppelt so hoch verschoben werden
             RadGroupBoxBereich3.Location = New Size(RadGroupBoxBereich3.Location.X, RadGroupBoxBereich1.Location.Y + (NeueHoehe * 2) + 40)
 
             'zuweisen der 2. und 3. mitte in relation zur oben gewählten Location der Mitte 1
             PanelBereich2WZMitte.Location = PanelBereich1WZMitte.Location
             PanelBereich3WZMitte.Location = PanelBereich1WZMitte.Location
-
 
             'berechnen der äußeren Group Box Hoehe.
             'Der wert ergibt sich aus der neuen Position der letzten sichtbaren Groupbox + deren neuer höher+ einige Pixel Puffer
@@ -1214,7 +1167,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
 
         End Try
 
-
         'bereich 1
 
         Select Case objEichprozess.Lookup_Waagenart.Art
@@ -1242,9 +1194,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                 RadTextBoxControlWeight3.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3 * 0.5
                 lblEFGSpeziallBerechnung.Text = GetEFG(RadTextBoxControlWeight2.Text, 3) 'selber werte wie weight 2 und 3
         End Select
-
-
-
 
         'anzeige KG Nur laden wenn schon etwas eingegeben wurde
         'bereich 1
@@ -1275,7 +1224,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
             RadTextBoxControlWeight3.Text = _currentObjPruefungWiederholbarkeit.Last
             RadTextBoxControlDisplayWeight3.Text = _currentObjPruefungWiederholbarkeit.Anzeige
         End If
-
 
     End Sub
 
@@ -1428,44 +1376,44 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         If RadCheckBoxBereich3VEL12.Checked = False And RadCheckBoxBereich3VEL12.Visible = True Then RadTextBoxControlBereich3DisplayWeight12.TextBoxElement.Border.ForeColor = Color.Red
         If RadCheckBoxBereich3VELMitte.Checked = False And RadCheckBoxBereich3VELMitte.Visible = True Then RadTextBoxControlBereich3DisplayWeightMitte.TextBoxElement.Border.ForeColor = Color.Red
 
-        If RadCheckBoxBereich1VEL1.Checked = False And RadCheckBoxBereich1VEL1.Visible = True Or _
-        RadCheckBoxBereich1VEL2.Checked = False And RadCheckBoxBereich1VEL2.Visible = True Or _
-        RadCheckBoxBereich1VEL3.Checked = False And RadCheckBoxBereich1VEL3.Visible = True Or _
-        RadCheckBoxBereich1VEL4.Checked = False And RadCheckBoxBereich1VEL4.Visible = True Or _
-        RadCheckBoxBereich1VEL5.Checked = False And RadCheckBoxBereich1VEL5.Visible = True Or _
-        RadCheckBoxBereich1VEL6.Checked = False And RadCheckBoxBereich1VEL6.Visible = True Or _
-        RadCheckBoxBereich1VEL7.Checked = False And RadCheckBoxBereich1VEL7.Visible = True Or _
-        RadCheckBoxBereich1VEL8.Checked = False And RadCheckBoxBereich1VEL8.Visible = True Or _
-        RadCheckBoxBereich1VEL9.Checked = False And RadCheckBoxBereich1VEL9.Visible = True Or _
-        RadCheckBoxBereich1VEL10.Checked = False And RadCheckBoxBereich1VEL10.Visible = True Or _
-        RadCheckBoxBereich1VEL11.Checked = False And RadCheckBoxBereich1VEL11.Visible = True Or _
-        RadCheckBoxBereich1VEL12.Checked = False And RadCheckBoxBereich1VEL12.Visible = True Or _
-        RadCheckBoxBereich1VELMitte.Checked = False And RadCheckBoxBereich1VELMitte.Visible = True Or _
-        RadCheckBoxBereich2VEL1.Checked = False And RadCheckBoxBereich2VEL1.Visible = True Or _
-        RadCheckBoxBereich2VEL2.Checked = False And RadCheckBoxBereich2VEL2.Visible = True Or _
-        RadCheckBoxBereich2VEL3.Checked = False And RadCheckBoxBereich2VEL3.Visible = True Or _
-        RadCheckBoxBereich2VEL4.Checked = False And RadCheckBoxBereich2VEL4.Visible = True Or _
-        RadCheckBoxBereich2VEL5.Checked = False And RadCheckBoxBereich2VEL5.Visible = True Or _
-        RadCheckBoxBereich2VEL6.Checked = False And RadCheckBoxBereich2VEL6.Visible = True Or _
-        RadCheckBoxBereich2VEL7.Checked = False And RadCheckBoxBereich2VEL7.Visible = True Or _
-        RadCheckBoxBereich2VEL8.Checked = False And RadCheckBoxBereich2VEL8.Visible = True Or _
-        RadCheckBoxBereich2VEL9.Checked = False And RadCheckBoxBereich2VEL9.Visible = True Or _
-        RadCheckBoxBereich2VEL10.Checked = False And RadCheckBoxBereich2VEL10.Visible = True Or _
-        RadCheckBoxBereich2VEL11.Checked = False And RadCheckBoxBereich2VEL11.Visible = True Or _
-        RadCheckBoxBereich2VEL12.Checked = False And RadCheckBoxBereich2VEL12.Visible = True Or _
-        RadCheckBoxBereich2VELMitte.Checked = False And RadCheckBoxBereich2VELMitte.Visible = True Or _
-        RadCheckBoxBereich3VEL1.Checked = False And RadCheckBoxBereich3VEL1.Visible = True Or _
-        RadCheckBoxBereich3VEL2.Checked = False And RadCheckBoxBereich3VEL2.Visible = True Or _
-        RadCheckBoxBereich3VEL3.Checked = False And RadCheckBoxBereich3VEL3.Visible = True Or _
-        RadCheckBoxBereich3VEL4.Checked = False And RadCheckBoxBereich3VEL4.Visible = True Or _
-        RadCheckBoxBereich3VEL5.Checked = False And RadCheckBoxBereich3VEL5.Visible = True Or _
-        RadCheckBoxBereich3VEL6.Checked = False And RadCheckBoxBereich3VEL6.Visible = True Or _
-        RadCheckBoxBereich3VEL7.Checked = False And RadCheckBoxBereich3VEL7.Visible = True Or _
-        RadCheckBoxBereich3VEL8.Checked = False And RadCheckBoxBereich3VEL8.Visible = True Or _
-        RadCheckBoxBereich3VEL9.Checked = False And RadCheckBoxBereich3VEL9.Visible = True Or _
-        RadCheckBoxBereich3VEL10.Checked = False And RadCheckBoxBereich3VEL10.Visible = True Or _
-        RadCheckBoxBereich3VEL11.Checked = False And RadCheckBoxBereich3VEL11.Visible = True Or _
-        RadCheckBoxBereich3VEL12.Checked = False And RadCheckBoxBereich3VEL12.Visible = True Or _
+        If RadCheckBoxBereich1VEL1.Checked = False And RadCheckBoxBereich1VEL1.Visible = True Or
+        RadCheckBoxBereich1VEL2.Checked = False And RadCheckBoxBereich1VEL2.Visible = True Or
+        RadCheckBoxBereich1VEL3.Checked = False And RadCheckBoxBereich1VEL3.Visible = True Or
+        RadCheckBoxBereich1VEL4.Checked = False And RadCheckBoxBereich1VEL4.Visible = True Or
+        RadCheckBoxBereich1VEL5.Checked = False And RadCheckBoxBereich1VEL5.Visible = True Or
+        RadCheckBoxBereich1VEL6.Checked = False And RadCheckBoxBereich1VEL6.Visible = True Or
+        RadCheckBoxBereich1VEL7.Checked = False And RadCheckBoxBereich1VEL7.Visible = True Or
+        RadCheckBoxBereich1VEL8.Checked = False And RadCheckBoxBereich1VEL8.Visible = True Or
+        RadCheckBoxBereich1VEL9.Checked = False And RadCheckBoxBereich1VEL9.Visible = True Or
+        RadCheckBoxBereich1VEL10.Checked = False And RadCheckBoxBereich1VEL10.Visible = True Or
+        RadCheckBoxBereich1VEL11.Checked = False And RadCheckBoxBereich1VEL11.Visible = True Or
+        RadCheckBoxBereich1VEL12.Checked = False And RadCheckBoxBereich1VEL12.Visible = True Or
+        RadCheckBoxBereich1VELMitte.Checked = False And RadCheckBoxBereich1VELMitte.Visible = True Or
+        RadCheckBoxBereich2VEL1.Checked = False And RadCheckBoxBereich2VEL1.Visible = True Or
+        RadCheckBoxBereich2VEL2.Checked = False And RadCheckBoxBereich2VEL2.Visible = True Or
+        RadCheckBoxBereich2VEL3.Checked = False And RadCheckBoxBereich2VEL3.Visible = True Or
+        RadCheckBoxBereich2VEL4.Checked = False And RadCheckBoxBereich2VEL4.Visible = True Or
+        RadCheckBoxBereich2VEL5.Checked = False And RadCheckBoxBereich2VEL5.Visible = True Or
+        RadCheckBoxBereich2VEL6.Checked = False And RadCheckBoxBereich2VEL6.Visible = True Or
+        RadCheckBoxBereich2VEL7.Checked = False And RadCheckBoxBereich2VEL7.Visible = True Or
+        RadCheckBoxBereich2VEL8.Checked = False And RadCheckBoxBereich2VEL8.Visible = True Or
+        RadCheckBoxBereich2VEL9.Checked = False And RadCheckBoxBereich2VEL9.Visible = True Or
+        RadCheckBoxBereich2VEL10.Checked = False And RadCheckBoxBereich2VEL10.Visible = True Or
+        RadCheckBoxBereich2VEL11.Checked = False And RadCheckBoxBereich2VEL11.Visible = True Or
+        RadCheckBoxBereich2VEL12.Checked = False And RadCheckBoxBereich2VEL12.Visible = True Or
+        RadCheckBoxBereich2VELMitte.Checked = False And RadCheckBoxBereich2VELMitte.Visible = True Or
+        RadCheckBoxBereich3VEL1.Checked = False And RadCheckBoxBereich3VEL1.Visible = True Or
+        RadCheckBoxBereich3VEL2.Checked = False And RadCheckBoxBereich3VEL2.Visible = True Or
+        RadCheckBoxBereich3VEL3.Checked = False And RadCheckBoxBereich3VEL3.Visible = True Or
+        RadCheckBoxBereich3VEL4.Checked = False And RadCheckBoxBereich3VEL4.Visible = True Or
+        RadCheckBoxBereich3VEL5.Checked = False And RadCheckBoxBereich3VEL5.Visible = True Or
+        RadCheckBoxBereich3VEL6.Checked = False And RadCheckBoxBereich3VEL6.Visible = True Or
+        RadCheckBoxBereich3VEL7.Checked = False And RadCheckBoxBereich3VEL7.Visible = True Or
+        RadCheckBoxBereich3VEL8.Checked = False And RadCheckBoxBereich3VEL8.Visible = True Or
+        RadCheckBoxBereich3VEL9.Checked = False And RadCheckBoxBereich3VEL9.Visible = True Or
+        RadCheckBoxBereich3VEL10.Checked = False And RadCheckBoxBereich3VEL10.Visible = True Or
+        RadCheckBoxBereich3VEL11.Checked = False And RadCheckBoxBereich3VEL11.Visible = True Or
+        RadCheckBoxBereich3VEL12.Checked = False And RadCheckBoxBereich3VEL12.Visible = True Or
         RadCheckBoxBereich3VELMitte.Checked = False And RadCheckBoxBereich3VELMitte.Visible = True Then
             AbortSaving = True
             Return False
@@ -1476,7 +1424,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
 
 #End Region
 #End Region
-
 
     ''' <summary>
     ''' Gültigkeit der Eingaben überprüfen
@@ -1551,10 +1498,8 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
 
             If ValidateControls() = True Then
 
-
                 'neuen Context aufbauen
                 Using Context As New EichsoftwareClientdatabaseEntities1
-
 
                     'prüfen ob CREATE oder UPDATE durchgeführt werden muss
                     If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
@@ -1564,11 +1509,8 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                             'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
                             objEichprozess = dobjEichprozess
 
-
-
                             SaveAussermittigeBelastung(Context)
                             SaveWiederholungen(Context)
-
 
                             'neuen Status zuweisen
                             'die reihenfolge wird hier je nach Verfahren verändert
@@ -1594,8 +1536,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                                         AktuellerStatusDirty = False
                                     End If
                             End Select
-
-
 
                             'Füllt das Objekt mit den Werten aus den Steuerlementen
                             UpdateObject()
@@ -1632,7 +1572,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                         objEichprozess = dobjEichprozess
                         'neuen Status zuweisen
 
-
                         SaveAussermittigeBelastung(Context)
                         SaveWiederholungen(Context)
 
@@ -1655,7 +1594,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         MyBase.LokalisierungNeeded(UserControl)
 
         'lokalisierung: Leider kann ich den automatismus von .NET nicht nutzen. Dieser funktioniert nur sauber, wenn ein Dialog erzeugt wird. Zur Laufzeit aber gibt es diverse Probleme mit dem Automatischen Ändern der Sprache,
-        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße 
+        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco_8PruefungNullstellungUndAussermittigeBelastung))
 
         Me.RadGroupBoxBereich1.Text = resources.GetString("RadGroupBoxBereich1.Text")
@@ -1695,10 +1634,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         Me.RadButtonShowEFG.Text = resources.GetString("RadButtonShowEFG.Text")
         Me.RadButtonShowEFG2.Text = resources.GetString("RadButtonShowEFG2.Text")
 
-
-
-
-
         If Not ParentFormular Is Nothing Then
             Try
                 'Hilfetext setzen
@@ -1710,8 +1645,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
             Catch ex As Exception
             End Try
         End If
-
-
 
     End Sub
 
@@ -1736,14 +1669,13 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
     Protected Overrides Sub EntsperrungNeeded()
         MyBase.EntsperrungNeeded()
 
-        'Hiermit wird ein lesender Vorgang wieder entsperrt. 
+        'Hiermit wird ein lesender Vorgang wieder entsperrt.
         EnableControls(RadGroupBoxBereich1)
         EnableControls(RadGroupBoxBereich2)
         EnableControls(RadGroupBoxBereich3)
         EnableControls(RadGroupBoxPruefungAussermittigeBelastung)
         EnableControls(RadGroupBoxPruefungGenaugikeit)
         EnableControls(RadGroupBoxWiederholungen)
-
 
         'ändern des Moduses
         DialogModus = enuDialogModus.korrigierend
@@ -1754,41 +1686,35 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         If Me.Equals(TargetUserControl) Then
             MyBase.VersendenNeeded(TargetUserControl)
 
-          
-                Dim objServerEichprozess As New EichsoftwareWebservice.ServerEichprozess
-                'auf fehlerhaft Status setzen
-                objEichprozess.FK_Bearbeitungsstatus = 2
-                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Konformitätsbewertungsbevollmächtigter sich den DS von Anfang angucken muss
-                UpdateObject()
-                UeberschreibePruefungsobjekte()
+            Dim objServerEichprozess As New EichsoftwareWebservice.ServerEichprozess
+            'auf fehlerhaft Status setzen
+            objEichprozess.FK_Bearbeitungsstatus = 2
+            objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Konformitätsbewertungsbevollmächtigter sich den DS von Anfang angucken muss
+            UpdateObject()
+            UeberschreibePruefungsobjekte()
 
-
-
-
-                'erzeuegn eines Server Objektes auf basis des aktuellen DS
+            'erzeuegn eines Server Objektes auf basis des aktuellen DS
             objServerEichprozess = clsClientServerConversionFunctions.CopyServerObjectProperties(objServerEichprozess, objEichprozess, clsClientServerConversionFunctions.enuModus.RHEWASendetAnClient)
-                Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
-                    Try
-                        Webcontext.Open()
-                    Catch ex As Exception
-                        MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                        Exit Sub
-                    End Try
+            Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
+                Try
+                    Webcontext.Open()
+                Catch ex As Exception
+                    MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    Exit Sub
+                End Try
 
+                Try
+                    'add prüft anhand der Vorgangsnummer automatisch ob ein neuer Prozess angelegt, oder ein vorhandener aktualisiert wird
+                    Webcontext.AddEichprozess(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
 
-
-                    Try
-                        'add prüft anhand der Vorgangsnummer automatisch ob ein neuer Prozess angelegt, oder ein vorhandener aktualisiert wird
-                        Webcontext.AddEichprozess(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
-
-                        'schließen des dialoges
-                        ParentFormular.Close()
-                    Catch ex As Exception
-                        MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                        ' Status zurück setzen
-                        Exit Sub
-                    End Try
-                End Using
+                    'schließen des dialoges
+                    ParentFormular.Close()
+                Catch ex As Exception
+                    MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    ' Status zurück setzen
+                    Exit Sub
+                End Try
+            End Using
         End If
     End Sub
 

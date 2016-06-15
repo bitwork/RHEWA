@@ -1,18 +1,18 @@
-﻿' 13.05.2014 hill EichsoftwareClient uco10PruefungStaffelverfahren.vb 
+﻿' 13.05.2014 hill EichsoftwareClient uco10PruefungStaffelverfahren.vb
 Imports System
-  
-Public Class uco10PruefungStaffelverfahren
-Inherits ucoContent
 
-    #Region "Member Variables"
-    Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken 
+Public Class uco10PruefungStaffelverfahren
+    Inherits ucoContent
+
+#Region "Member Variables"
+    Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken
     Private _ListPruefungStaffelverfahrenNormallast As New List(Of PruefungStaffelverfahrenNormallast)
     Private _ListPruefungStaffelverfahrenErsatzlast As New List(Of PruefungStaffelverfahrenErsatzlast)
 
     Private AnzahlBereiche As Integer
-    #End Region
+#End Region
 
-    #Region "Constructors"
+#Region "Constructors"
     Sub New()
         MyBase.New()
         ' Dieser Aufruf ist für den Designer erforderlich.
@@ -27,8 +27,7 @@ Inherits ucoContent
         EichprozessStatusReihenfolge = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitErsatzlast
     End Sub
 
-    #End Region
-
+#End Region
 
 #Region "Events"
     ''' <summary>
@@ -146,7 +145,6 @@ Inherits ucoContent
 
 #End Region
 
-
 #Region "Methods"
     Protected Friend Overrides Sub LoadFromDatabase()
         SuspendLayout()
@@ -197,7 +195,6 @@ Inherits ucoContent
             End Try
 
         End If
-
 
         'steuerelemente mit werten aus DB füllen
         FillControls()
@@ -254,9 +251,6 @@ Inherits ucoContent
         Catch e As Exception
         End Try
     End Sub
-
-
-
 
     ''' <summary>
     '''    je nach Art der Waage andere Bereichsgruppen ausblenden
@@ -439,8 +433,6 @@ Inherits ucoContent
                 _currentObjPruefungStaffelverfahrenErsatzlast = Nothing
                 _currentObjPruefungStaffelverfahrenErsatzlast = (From o In _ListPruefungStaffelverfahrenErsatzlast Where o.Bereich = CStr(Bereich) And o.Staffel = CStr(Staffel)).FirstOrDefault
 
-
-
                 Dim Last1 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 1))
                 Dim Last2 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 2))
                 Dim Last3 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Last{2}", CInt(Staffel), CInt(Bereich), 3))
@@ -457,7 +449,6 @@ Inherits ucoContent
                 Dim EFG5 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblStaffel{0}Bereich{1}EFGWert{2}", CInt(Staffel), CInt(Bereich), 5))
                 Dim EFG6 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblStaffel{0}Bereich{1}EFGWert{2}", CInt(Staffel), CInt(Bereich), 6))
                 Dim EFG7 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblStaffel{0}Bereich{1}EFGWert{2}", CInt(Staffel), CInt(Bereich), 7))
-
 
                 If Not _currentObjPruefungStaffelverfahrenErsatzlast Is Nothing Then
                     Last1.Text = _currentObjPruefungStaffelverfahrenErsatzlast.Ersatzlast_Soll
@@ -598,7 +589,6 @@ Inherits ucoContent
         Dim EFG6 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblStaffel{0}Bereich{1}EFGWert{2}", CInt(Staffel), CInt(Bereich), 6))
         Dim EFG7 As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblStaffel{0}Bereich{1}EFGWert{2}", CInt(Staffel), CInt(Bereich), 7))
 
-
         PObjPruefung.NormalLast_Last_1 = Last1.Text
 
         If Bereich = "1" Then 'diese Felder gibt es nur im Bereich 1 weil dort zustäzlich gegen 0 geprüft werden muss
@@ -721,7 +711,6 @@ Inherits ucoContent
         End If
     End Sub
 
-
     ''' <summary>
     ''' Gültigkeit der Eingaben überprüfen
     ''' </summary>
@@ -753,8 +742,6 @@ Inherits ucoContent
             'fehlermeldung anzeigen bei falscher validierung
             Return Me.ShowValidationErrorBox(False)
         End If
-
-
 
         'logik zum Valideren der Eichfehlergrenzen der einzelnen Staffeln. Abhängig davon wieviele Staffeln überhaupt ausgefüllt sind
         If (intausgefuellteStaffeln >= 1) Then
@@ -802,8 +789,7 @@ Inherits ucoContent
 
 #End Region
 
-
-    #Region "Events die neue Berechnungen beim Ändern von Feldinformationen erfordern"
+#Region "Events die neue Berechnungen beim Ändern von Feldinformationen erfordern"
 
     Private Sub BerechneStaffelBereich(ByVal Staffel As String, ByVal Bereich As String)
         Try
@@ -877,7 +863,6 @@ Inherits ucoContent
 
                 'EFG Wert 1 und 2 Berechnen
 
-
                 Try
                     If CDec(Last1.Text) < Math.Round(CDec(Eichwert * 500), _intNullstellenE, MidpointRounding.AwayFromZero) Then
                         'Im Bereich 1 wird gegen den nullwert geprüft. Ab bereich 2 gegen 20e. dort fällt EFG2 weg. stattdessen wird EFG3 genutzt
@@ -902,8 +887,6 @@ Inherits ucoContent
                 Catch ex As InvalidCastException
                 End Try
 
-
-
                 'berechnen der Differenzen
                 Try
                     Fehler5.Text = CDec(Anzeige4.Text) - CDec(Anzeige1.Text)
@@ -913,7 +896,6 @@ Inherits ucoContent
                 'messabweichung berechnen (abgeändert von Excel mappe. hier wird statt der min. normalien die eingebene Normalien Menge genommen
                 Try
                     'Fehler6.Text = CDec(Anzeige3.Text) - CDec(Anzeige1.Text) - CDec(Last3.Text) //alte Rechnung
-
 
                     'weitere Anpassung nach Absprache mit Herrn Lüling und Herrn Strack:
                     'Ermittlung der Messabweichung für eine Staffel
@@ -935,9 +917,6 @@ Inherits ucoContent
                         Fehler6.Text = (CDec(Anzeige3Normallast.Text)) - CDec(Anzeige1.Text) - CDec(Last2.Text)
                     End If
 
-
-
-
                 Catch ex As InvalidCastException
                 End Try
 
@@ -958,7 +937,7 @@ Inherits ucoContent
                 Catch e As InvalidCastException
                 End Try
 
-                'Berechnen von EFG  4 
+                'Berechnen von EFG  4
                 Try
                     '=WENN(B130<$B$49;WERT(0,5*$B$15);(1*$B$15))
                     If CDec(Last4.Text) < Math.Round(CDec(Eichwert * 500), _intNullstellenE, MidpointRounding.AwayFromZero) Then
@@ -987,7 +966,7 @@ Inherits ucoContent
                 Catch e As InvalidCastException
                 End Try
 
-            Else 'staffel 2 - 7 werden anders berechnet 
+            Else 'staffel 2 - 7 werden anders berechnet
                 'lasten
                 Try
                     Last3Normallast.Text = CDec(Last2.Text) + CDec(Anzeige1.Text)
@@ -1014,7 +993,6 @@ Inherits ucoContent
                 Catch e As Exception
                 End Try
 
-
                 Try
                     'berechnen von EFG 5
                     EFG5.Text = Math.Round(CDec(Eichwert), _intNullstellenE) / 5
@@ -1032,8 +1010,6 @@ Inherits ucoContent
                     End If
                 Catch e As Exception
                 End Try
-
-
 
             End If
 
@@ -1065,11 +1041,9 @@ Inherits ucoContent
         _suspendEvents = False
     End Sub
 
-    #End Region
+#End Region
 
-
-    #Region " Messabweichung der Waage [SEwi]"
-
+#Region " Messabweichung der Waage [SEwi]"
 
     ''' <summary>
     ''' Messabweichung ergibt sich aus Summe der Fehler aller Staffeln
@@ -1078,7 +1052,6 @@ Inherits ucoContent
     ''' <remarks></remarks>
     Private Sub BerechneMessabweichung(ByVal Bereich As String)
         Try
-
 
             'die Messabweichung durch alle Staffeln durchreichen
             Dim Fehler6Staffel1 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 1, CInt(Bereich), 6))
@@ -1092,7 +1065,6 @@ Inherits ucoContent
             Dim Fehler7Staffel3 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 3, CInt(Bereich), 7))
             Dim Fehler7Staffel4 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 4, CInt(Bereich), 7))
             Dim Fehler7Staffel5 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlStaffel{0}Bereich{1}Fehler{2}", 5, CInt(Bereich), 7))
-
 
             Try
                 'differenz der Waage Berechnen
@@ -1129,10 +1101,9 @@ Inherits ucoContent
         End Try
     End Sub
 
-    #End Region
+#End Region
 
-
-    #Region "Hilfetexte"
+#Region "Hilfetexte"
     Private Sub RadTextBoxControlStaffel1Bereich1Last1_MouseEnter(sender As Object, e As EventArgs) Handles RadTextBoxControlStaffel1Bereich3Last4.MouseEnter, RadTextBoxControlStaffel1Bereich3Last3.MouseEnter, RadTextBoxControlStaffel1Bereich3Last1.MouseEnter, RadTextBoxControlStaffel1Bereich2Last4.MouseEnter, RadTextBoxControlStaffel1Bereich2Last3.MouseEnter, RadTextBoxControlStaffel1Bereich2Last1.MouseEnter, RadTextBoxControlStaffel1Bereich1Last4.MouseEnter, RadTextBoxControlStaffel1Bereich1Last3.MouseEnter, RadTextBoxControlStaffel1Bereich1Last1.MouseEnter
         ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungStaffelverfahrenNormallast)
     End Sub
@@ -1162,16 +1133,16 @@ Inherits ucoContent
         ParentFormular.SETContextHelpText(My.Resources.GlobaleLokalisierung.Hilfe_PruefungStaffelverfahrenErsatzlastErsatzlast2)
     End Sub
 
-    #End Region
+#End Region
 
-    #Region "Overrides"
+#Region "Overrides"
     Protected Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
         If Me.Equals(UserControl) = False Then Exit Sub
 
         MyBase.LokalisierungNeeded(UserControl)
 
         'lokalisierung: Leider kann ich den automatismus von .NET nicht nutzen. Dieser funktioniert nur sauber, wenn ein Dialog erzeugt wird. Zur Laufzeit aber gibt es diverse Probleme mit dem Automatischen Ändern der Sprache,
-        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße 
+        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco10PruefungStaffelverfahren))
 
         For Each Control In RadScrollablePanel1.PanelContainer.Controls
@@ -1204,14 +1175,13 @@ Inherits ucoContent
             End Try
         End If
 
-
     End Sub
 
     'Entsperrroutine
     Protected Overrides Sub EntsperrungNeeded()
         MyBase.EntsperrungNeeded()
 
-        'Hiermit wird ein lesender Vorgang wieder entsperrt. 
+        'Hiermit wird ein lesender Vorgang wieder entsperrt.
         EnableControls(RadGroupBoxStaffel1Bereich1)
         EnableControls(RadGroupBoxStaffel1Bereich2)
         EnableControls(RadGroupBoxStaffel1Bereich3)
@@ -1292,10 +1262,8 @@ Inherits ucoContent
 
             If ValidateControls() = True Then
 
-
                 'neuen Context aufbauen
                 Using Context As New EichsoftwareClientdatabaseEntities1
-
 
                     'prüfen ob CREATE oder UPDATE durchgeführt werden muss
                     If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
@@ -1304,8 +1272,6 @@ Inherits ucoContent
                         If Not dobjEichprozess Is Nothing Then
                             'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
                             objEichprozess = dobjEichprozess
-
-
 
                             'wenn es defintiv noch keine pruefungen gibt, neue Anlegen
                             If _ListPruefungStaffelverfahrenNormallast.Count = 0 Then
@@ -1389,7 +1355,6 @@ Inherits ucoContent
 
                             End If
 
-
                             'neuen Status zuweisen
                             If AktuellerStatusDirty = False Then
                                 ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
@@ -1400,7 +1365,6 @@ Inherits ucoContent
                                 objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderWiederholbarkeit
                                 AktuellerStatusDirty = False
                             End If
-
 
                             'Füllt das Objekt mit den Werten aus den Steuerlementen
                             UpdateObject()
@@ -1420,7 +1384,6 @@ Inherits ucoContent
         MyBase.SaveWithoutValidationNeeded(usercontrol)
         If Me.Equals(usercontrol) Then
 
-
             'neuen Context aufbauen
             Using Context As New EichsoftwareClientdatabaseEntities1
                 If DialogModus = enuDialogModus.lesend Then
@@ -1436,8 +1399,6 @@ Inherits ucoContent
                     If Not dobjEichprozess Is Nothing Then
                         'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
                         objEichprozess = dobjEichprozess
-
-
 
                         'wenn es defintiv noch keine pruefungen gibt, neue Anlegen
                         If _ListPruefungStaffelverfahrenNormallast.Count = 0 Then
@@ -1526,7 +1487,6 @@ Inherits ucoContent
 
                         End If
 
-
                         ''Füllt das Objekt mit den Werten aus den Steuerlementen
                         'UpdateObject()
                         ''Speichern in Datenbank
@@ -1537,7 +1497,6 @@ Inherits ucoContent
 
             ParentFormular.CurrentEichprozess = objEichprozess
         End If
-
 
     End Sub
 
@@ -1558,8 +1517,6 @@ Inherits ucoContent
         End If
     End Sub
 
-    #End Region
+#End Region
 
-  
-   
 End Class

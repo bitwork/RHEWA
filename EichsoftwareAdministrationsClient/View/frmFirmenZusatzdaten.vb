@@ -8,8 +8,6 @@ Public Class frmFirmenZusatzdaten
     Private EditMode As Boolean = False 'gibt an ob ich im Editierungsmodus bin (beim Klick auf bearbeiten)
 #End Region
 
-
-
 #Region "Methoden"
     Private Sub FormatGrid()
         Try
@@ -52,8 +50,6 @@ Public Class frmFirmenZusatzdaten
         RadGridView1.BestFitColumns()
     End Sub
 
-    
-
     Private Sub LoadFromDatabase()
         Try
             SuspendLayout()
@@ -61,21 +57,20 @@ Public Class frmFirmenZusatzdaten
             Using Context As New EichenEntities
                 'Daten aus eichmarkenverwaltungstabelle und Benutzertabelle zusammenführen. Fürs Databinding Casten in einen neuen Typen
                 Dim Data = From FirmenZusatzdaten In Context.ServerFirmenZusatzdaten
-                Join Firma In Context.Firmen On Firma.ID Equals FirmenZusatzdaten.Firmen_FK
-                Select New With {
-                         FirmenZusatzdaten.ID, _
-                                 .Firma = Firma.Name, _
-                    Firma.Land, _
-                                 FirmenZusatzdaten.Abrechnungsmodell, _
-                                 FirmenZusatzdaten.BeginnVertrag, _
-                                 FirmenZusatzdaten.EndeVertrag, _
-                                 FirmenZusatzdaten.Erstschulung, _
-                                 FirmenZusatzdaten.LetztesAudit, _
-                                 FirmenZusatzdaten.MonatJahrZertifikat, _
-                                 FirmenZusatzdaten.Nachschulung, _
-                                FirmenZusatzdaten.Qualifizierungspauschale
-                }
-
+                           Join Firma In Context.Firmen On Firma.ID Equals FirmenZusatzdaten.Firmen_FK
+                           Select New With {
+                                    FirmenZusatzdaten.ID,
+                                            .Firma = Firma.Name,
+                               Firma.Land,
+                                            FirmenZusatzdaten.Abrechnungsmodell,
+                                            FirmenZusatzdaten.BeginnVertrag,
+                                            FirmenZusatzdaten.EndeVertrag,
+                                            FirmenZusatzdaten.Erstschulung,
+                                            FirmenZusatzdaten.LetztesAudit,
+                                            FirmenZusatzdaten.MonatJahrZertifikat,
+                                            FirmenZusatzdaten.Nachschulung,
+                                           FirmenZusatzdaten.Qualifizierungspauschale
+                           }
 
                 'databinding
                 RadGridView1.DataSource = Data.ToList
@@ -84,7 +79,6 @@ Public Class frmFirmenZusatzdaten
                 'Kindtabelle Firmendaten
 
                 '##################################################################
-
 
                 'Grid Formatieren
                 FormatGrid()
@@ -96,7 +90,6 @@ Public Class frmFirmenZusatzdaten
             MessageBox.Show(ex.StackTrace)
         End Try
     End Sub
-
 
     ''' <summary>
     ''' Iteritert das Grid und speichert alle Änderungen in die Datenbank. Setzt ausserdem den gesperrt Status zurück
@@ -164,7 +157,6 @@ Public Class frmFirmenZusatzdaten
         End Try
     End Sub
 
-   
     ''' <summary>
     ''' Lädt Gridlayout aus settings
     ''' </summary>
@@ -263,8 +255,5 @@ Public Class frmFirmenZusatzdaten
 #End Region
 
 #End Region
-
-
-
 
 End Class

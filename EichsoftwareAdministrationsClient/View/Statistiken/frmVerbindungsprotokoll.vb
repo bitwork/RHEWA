@@ -3,18 +3,15 @@ Imports System.ComponentModel
 
 Public Class FrmVerbindungsprotokoll
 
-
-
     Private Sub FrmVerbindungsprotokoll_Load(sender As Object, e As EventArgs) Handles Me.Load
         LoadFromDatabase()
-
 
     End Sub
 
     Private Sub LoadFromDatabase()
         Using Context As New EichenEntities
             Dim Data = From Verbindungsprotokoll In Context.ServerVerbindungsprotokoll Select Verbindungsprotokoll
-                       
+
             RadGridView1.DataSource = Data.ToList
             Try
                 RadGridView1.Columns("ID").IsVisible = False
@@ -36,7 +33,6 @@ Public Class FrmVerbindungsprotokoll
                 Catch e As Exception
 
                 End Try
-
 
             Catch ex As Exception
             End Try

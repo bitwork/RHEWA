@@ -24,7 +24,7 @@ Public Class clsWebserviceFunctions
                 Return webContext.Test
             End Using
         Catch ex As Exception
-           Return False
+            Return False
         End Try
         Return True
     End Function
@@ -93,7 +93,7 @@ Public Class clsWebserviceFunctions
                 End Try
                 Using DBContext As New EichsoftwareClientdatabaseEntities1
 
-                    'Eingrenzen welche Daten synchronisiert werden müssen, je nach Einstllung des Benutzers 
+                    'Eingrenzen welche Daten synchronisiert werden müssen, je nach Einstllung des Benutzers
                     Dim StartDatum As Date = #1/1/2000#
                     Dim EndDatum As Date = #12/31/2999#
 
@@ -108,7 +108,6 @@ Public Class clsWebserviceFunctions
                         AktuellerBenutzer.SaveSettings()
                     End If
 
-
                     Dim objWZResultList = webContext.GetNeueWZ(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, AktuellerBenutzer.Instance.LetztesUpdate, My.User.Name, System.Environment.UserDomainName, My.Computer.Name, StartDatum, EndDatum)
 
                     If Not objWZResultList Is Nothing Then
@@ -121,11 +120,9 @@ Public Class clsWebserviceFunctions
                             Try
                                 Dim query = From d In DBContext.Lookup_Waegezelle Where d.ID = tObjServerWZ._ID
 
-
                                 'prüfen ob es bereits einen Artikel in der lokalen DB gibt, mit dem aktuellen ID-Wert
-                                If query.Count = 0 Then 'Es gbit den Artikel noch nicht in der lokalen Datebank => insert 
+                                If query.Count = 0 Then 'Es gbit den Artikel noch nicht in der lokalen Datebank => insert
                                     Dim newWZ As New Lookup_Waegezelle
-
 
                                     newWZ.ID = objServerArtikel._ID
                                     newWZ.Hoechsteteilungsfaktor = objServerArtikel._Hoechsteteilungsfaktor
@@ -212,7 +209,7 @@ Public Class clsWebserviceFunctions
                     Exit Sub
                 End Try
                 Using DBContext As New EichsoftwareClientdatabaseEntities1
-                    'Eingrenzen welche Daten synchronisiert werden müssen, je nach Einstllung des Benutzers 
+                    'Eingrenzen welche Daten synchronisiert werden müssen, je nach Einstllung des Benutzers
                     Dim StartDatum As Date = #1/1/2000#
                     Dim EndDatum As Date = #12/31/2999#
 
@@ -238,9 +235,8 @@ Public Class clsWebserviceFunctions
                             Dim query = From d In DBContext.Lookup_Auswertegeraet Where d.ID = tObjServerAWG._ID
 
                             'prüfen ob es bereits einen Artikel in der lokalen DB gibt, mit dem aktuellen ID-Wert
-                            If query.Count = 0 Then 'Es gbit den Artikel noch nicht in der lokalen Datebank => insert 
+                            If query.Count = 0 Then 'Es gbit den Artikel noch nicht in der lokalen Datebank => insert
                                 Dim newAWG As New Lookup_Auswertegeraet
-
 
                                 newAWG.ID = objServerArtikel._ID
                                 newAWG.Bauartzulassung = objServerArtikel._Bauartzulassung
@@ -318,7 +314,6 @@ Public Class clsWebserviceFunctions
         End Try
     End Sub
 
-
     ''' <summary>
     ''' holt aktuellen Status eigenerer Eichungenen (z.b. Abgelehnt oder Erfolgreich) aus DB über Webservice
     ''' </summary>
@@ -335,7 +330,6 @@ Public Class clsWebserviceFunctions
                     Exit Sub
                 End Try
                 Using DBContext As New EichsoftwareClientdatabaseEntities1
-
 
                     'hole die prozesse mit dem status 1 = in bearbeitung bei rhewa
                     Dim query = From db In DBContext.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select db Where db.FK_Bearbeitungsstatus = 1
@@ -402,12 +396,12 @@ Public Class clsWebserviceFunctions
             Using webContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
 
                 Try
-                webContext.Open()
+                    webContext.Open()
                 Catch ex As Exception
                     Exit Sub
                 End Try
                 Using DBContext As New EichsoftwareClientdatabaseEntities1
-                    'Eingrenzen welche Daten synchronisiert werden müssen, je nach Einstllung des Benutzers 
+                    'Eingrenzen welche Daten synchronisiert werden müssen, je nach Einstllung des Benutzers
                     Dim StartDatum As Date = #1/1/2000#
                     Dim EndDatum As Date = #12/31/2999#
 
@@ -421,7 +415,6 @@ Public Class clsWebserviceFunctions
                         AktuellerBenutzer.Instance.Synchronisierungsmodus = "Alles"
                         AktuellerBenutzer.SaveSettings()
                     End If
-
 
                     Try
                         'wenn es eine Änderung gab, wird das geänderte Objekt vom Server abgerufen. Damit können änderungen die von einem RHEWA Mitarbeiter durchgeführt wurden übernommen werden
@@ -599,7 +592,6 @@ Public Class clsWebserviceFunctions
                     objClientEichprozess = dbcontext.Eichprozess.Create
                     objServerEichprozess = webContext.GetEichProzess(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
 
-
                     If objServerEichprozess Is Nothing Then
                         MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_KeinServerObjektEichung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
                     End If
@@ -654,7 +646,7 @@ Public Class clsWebserviceFunctions
                         Return Nothing
                     End Try
 
-                    'rückgabe 
+                    'rückgabe
                     Return objClientEichprozess
 
                 Catch ex As Exception
@@ -663,7 +655,6 @@ Public Class clsWebserviceFunctions
             End Using
         End Using
     End Function
-
 
     ' ''' <summary>
     ' ''' erzeugt 1:1 kopie von Serverobjekt in lokaler DB. wird nicht mehr benötigt, da der kopiervorgang nun verschärft wurde und keine 1:1 kopie mehr erzeugt werden darf.
@@ -687,7 +678,6 @@ Public Class clsWebserviceFunctions
     '                objClientEichprozess = dbcontext.Eichprozess.Create
     '                objServerEichprozess = webContext.GetEichProzess(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
 
-
     '                If objServerEichprozess Is Nothing Then
     '                    MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_KeinServerObjektEichung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
     '                End If
@@ -699,7 +689,6 @@ Public Class clsWebserviceFunctions
     '                objClientEichprozess.Vorgangsnummer = Guid.NewGuid.ToString
     '                objClientEichprozess.FK_Bearbeitungsstatus = 4 'noch nichts
     '                objClientEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
-
 
     '                dbcontext.Eichprozess.Add(objClientEichprozess)
 
@@ -751,8 +740,6 @@ Public Class clsWebserviceFunctions
                 MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Return False
             End Try
-
-
 
             'prüfen ob der datensatz von jemand anderem in Bearbeitung ist
 
@@ -855,7 +842,6 @@ Public Class clsWebserviceFunctions
         Return Nothing
     End Function
 
-
     ''' <summary>
     ''' Sperrt den aktuellen Server Eichprozess zur Bearbeitung. Wenn ein anderer Benutzer diesen DS öffnen will, kriegt er eine hinweismeldung
     ''' </summary>
@@ -879,7 +865,7 @@ Public Class clsWebserviceFunctions
             End Try
 
             'prüfen ob der datensatz von jemand anderem in Bearbeitung ist
-           Messagetext = PruefeSperrung(EichprozessVorgangsnummer)
+            Messagetext = PruefeSperrung(EichprozessVorgangsnummer)
 
             If Messagetext.Equals("") = False Then
                 'rhewa arbeitet in deutsch und hat keine lokalisierung gewünscht
@@ -911,7 +897,7 @@ Public Class clsWebserviceFunctions
     End Function
 
     ''' <summary>
-    ''' Prüft ob DS gesperrt ist. 
+    ''' Prüft ob DS gesperrt ist.
     ''' </summary>
     ''' <param name="EichprozessVorgangsnummer">Die Vorgangsnummer des Eichprozesses den es zu prüfen gilt</param>
     ''' <returns>String.Empty wenn nicht gesperrt. Ansonsten Hinweis auf den Benutzer der gesperrt hat</returns>

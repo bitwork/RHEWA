@@ -1,13 +1,10 @@
-﻿
-Public Class uco_5Beschaffenheitspruefung
+﻿Public Class uco_5Beschaffenheitspruefung
     Inherits ucoContent
-
 
 #Region "Member Variables"
     Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken
     Private _objEichprotokoll As Eichprotokoll
 #End Region
-
 
 #Region "Constructors"
     Sub New()
@@ -46,8 +43,6 @@ Public Class uco_5Beschaffenheitspruefung
         LoadFromDatabase()
     End Sub
 
-
-
 #End Region
 
     Protected Friend Overrides Sub LoadFromDatabase()
@@ -61,7 +56,6 @@ Public Class uco_5Beschaffenheitspruefung
             End If
         End Using
         _objEichprotokoll = objEichprozess.Eichprotokoll
-
 
         'steuerelemente mit werten aus DB füllen
         FillControls()
@@ -77,7 +71,6 @@ Public Class uco_5Beschaffenheitspruefung
         End If
         _suspendEvents = False
     End Sub
-
 
     ''' <summary>
     ''' Lädt die Werte aus dem Beschaffenheitspruefungsobjekt in die Steuerlemente
@@ -113,8 +106,6 @@ Public Class uco_5Beschaffenheitspruefung
 
 #Region "Overrides"
 
-
-
     ''' <summary>
     ''' aktualisieren der Oberfläche wenn nötig
     ''' </summary>
@@ -131,7 +122,6 @@ Public Class uco_5Beschaffenheitspruefung
             LoadFromDatabase() 'war mal auskommentiert. ich weiß gerade nicht mehr wieso. Ergänzung: war ausdokumentiert, weil damit die Werte der NSW und WZ übeschrieben werden wenn man auf zurück klickt. Wenn es allerdings ausdokumenterit ist, funktioniert das anlegen einer neuen WZ nicht
         End If
     End Sub
-
 
     ''' <summary>
     ''' Gültigkeit der Eingaben überprüfen
@@ -158,7 +148,7 @@ Public Class uco_5Beschaffenheitspruefung
         MyBase.LokalisierungNeeded(UserControl)
 
         'lokalisierung: Leider kann ich den automatismus von .NET nicht nutzen. Dieser funktioniert nur sauber, wenn ein Dialog erzeugt wird. Zur Laufzeit aber gibt es diverse Probleme mit dem Automatischen Ändern der Sprache,
-        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße 
+        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco_5Beschaffenheitspruefung))
 
         Me.RadGroupBoxWaegebruecke.Text = resources.GetString("RadGroupBoxWaegebruecke.Text")
@@ -180,7 +170,7 @@ Public Class uco_5Beschaffenheitspruefung
         Me.RadLabel1.Text = resources.GetString("RadLabel1.Text")
         Me.RadLabel4.Text = resources.GetString("RadLabel4.Text")
         Me.RadLabel2.Text = resources.GetString("RadLabel2.Text")
-     
+
         If Not ParentFormular Is Nothing Then
             Try
                 'Hilfetext setzen
@@ -190,7 +180,6 @@ Public Class uco_5Beschaffenheitspruefung
             Catch ex As Exception
             End Try
         End If
-
 
     End Sub
 
@@ -213,9 +202,7 @@ Public Class uco_5Beschaffenheitspruefung
                 Exit Sub
             End If
 
-
             If ValidateControls() Then
-
 
                 'neuen Context aufbauen
                 Using Context As New EichsoftwareClientdatabaseEntities1
@@ -227,7 +214,6 @@ Public Class uco_5Beschaffenheitspruefung
                             Dim dobjEichprotkoll As Eichprotokoll = Context.Eichprotokoll.FirstOrDefault(Function(value) value.ID = _objEichprotokoll.ID)
                             _objEichprotokoll = dobjEichprotkoll
                         End If
-
 
                         'Füllt das Objekt mit den Werten aus den Steuerlementen
                         UpdateObject()
@@ -263,20 +249,18 @@ Public Class uco_5Beschaffenheitspruefung
 
                     End If
 
-                  
                 End Using
                 ParentFormular.CurrentEichprozess = objEichprozess
             End If
         End If
 
     End Sub
-   
 
     'Entsperrroutine
     Protected Overrides Sub EntsperrungNeeded()
         MyBase.EntsperrungNeeded()
 
-        'Hiermit wird ein lesender Vorgang wieder entsperrt. 
+        'Hiermit wird ein lesender Vorgang wieder entsperrt.
         EnableControls(RadGroupBoxAufstellbedingungen)
         EnableControls(RadGroupBoxAuswerteGeraete)
         EnableControls(RadGroupBoxVerbindungselemente)
@@ -298,7 +282,6 @@ Public Class uco_5Beschaffenheitspruefung
             objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Konformitätsbewertungsbevollmächtigter sich den DS von Anfang angucken muss
             UpdateObject()
 
-
             'erzeugen eines Server Objektes auf basis des aktuellen DS
             objServerEichprozess = clsClientServerConversionFunctions.CopyServerObjectProperties(objServerEichprozess, objEichprozess, clsClientServerConversionFunctions.enuModus.RHEWASendetAnClient)
             Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
@@ -308,8 +291,6 @@ Public Class uco_5Beschaffenheitspruefung
                     MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
                     Exit Sub
                 End Try
-
-
 
                 Try
                     'add prüft anhand der Vorgangsnummer automatisch ob ein neuer Prozess angelegt, oder ein vorhandener aktualisiert wird
@@ -347,7 +328,6 @@ Public Class uco_5Beschaffenheitspruefung
             c.ButtonElement.CheckMarkPrimitive.Border.RightColor = Color.FromArgb(255, 0, 102, 51)
             c.ButtonElement.CheckMarkPrimitive.Border.TopColor = Color.FromArgb(255, 0, 102, 51)
 
-
         End If
     End Sub
     ''' <summary>
@@ -368,7 +348,6 @@ Public Class uco_5Beschaffenheitspruefung
             c.ButtonElement.CheckMarkPrimitive.Border.TopColor = Color.FromArgb(255, 173, 176, 173)
         End If
     End Sub
-
 
     Private Sub RadCheckBoxAWG1_Click(sender As System.Object, e As System.EventArgs)
         If _suspendEvents Then Exit Sub

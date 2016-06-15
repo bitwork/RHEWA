@@ -1,7 +1,7 @@
 ﻿Public Class clsServerHelper
 
     ''' <summary>
-    ''' Methode welche alle N:1 Verbindungen auf einen Eichprozess entfernt 
+    ''' Methode welche alle N:1 Verbindungen auf einen Eichprozess entfernt
     ''' </summary>
     ''' <param name="TargetObject"></param>
     ''' <remarks></remarks>
@@ -11,7 +11,6 @@
             Using dbcontext As New EichenSQLDatabaseEntities1
                 Dim EichprozessID As String = TargetObject.ID
                 Dim EichprotokollID As String = TargetObject.ServerEichprotokoll.ID
-
 
                 Dim mogelobjqery = (From db In dbcontext.ServerMogelstatistik Select db Where db.FK_Eichprozess = EichprozessID)
                 For Each obj In mogelobjqery
@@ -32,7 +31,6 @@
                 Catch e As Exception
                 End Try
 
-
                 Try
                     'aufräumen und alte löschen
                     Dim query2 = From a In dbcontext.ServerPruefungAussermittigeBelastung Where a.FK_Eichprotokoll = EichprotokollID
@@ -42,7 +40,6 @@
                     dbcontext.SaveChanges()
                 Catch e As Exception
                 End Try
-
 
                 Try
                     Dim query4 = From a In dbcontext.ServerPruefungLinearitaetFallend Where a.FK_Eichprotokoll = EichprotokollID
@@ -70,7 +67,6 @@
                         dbcontext.ServerPruefungRollendeLasten.Remove(obj)
                     Next
                     dbcontext.SaveChanges()
-
 
                 Catch e As Exception
                 End Try
@@ -117,7 +113,6 @@
                 Catch e As Exception
                 End Try
 
-
                 dbcontext.ServerEichprotokoll.Remove(TargetObject.ServerEichprotokoll)
                 dbcontext.SaveChanges()
                 dbcontext.ServerKompatiblitaetsnachweis.Remove(TargetObject.ServerKompatiblitaetsnachweis)
@@ -126,8 +121,5 @@
         Catch ex As Exception
         End Try
     End Sub
-
-  
-
 
 End Class

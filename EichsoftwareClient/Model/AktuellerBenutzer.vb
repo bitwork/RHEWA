@@ -48,7 +48,6 @@ Public Class AktuellerBenutzer
         End Set
     End Property
 
-
     ''' <summary>
     ''' Gets the  aktuelle sprache.
     ''' </summary>
@@ -141,7 +140,6 @@ Public Class AktuellerBenutzer
         End Set
     End Property
 
-
     ''' <summary>
     ''' Gets the  grid settings.
     ''' </summary>
@@ -161,7 +159,6 @@ Public Class AktuellerBenutzer
             Return mvarDefaultGridSettingsRHEWA
         End Get
     End Property
-
 
     Public Shared ReadOnly Property Instance() As AktuellerBenutzer
         Get
@@ -190,12 +187,9 @@ Public Class AktuellerBenutzer
             mobjSingletonObject.mvarSyncBis = Konfig.SyncBis
             mobjSingletonObject.mvarSynchronisierungsmodus = Konfig.Synchronisierungsmodus
 
-
         End Using
 
-
         Return mobjSingletonObject
-
 
     End Function
 
@@ -222,8 +216,6 @@ Public Class AktuellerBenutzer
             Return True
         End Using
     End Function
-
-
 
     ''' <summary>
     ''' Speichert Gridlayout als XML Stream, welcher in DB zum aktuellen Benutzer gespeichert wird
@@ -283,10 +275,9 @@ Public Class AktuellerBenutzer
         RadGridView.XmlSerializationInfo.SerializationMetadata.Add(GetType(GridViewTemplate), "GroupDescriptors", DesignerSerializationVisibilityAttribute.Content)
         RadGridView.XmlSerializationInfo.SerializationMetadata.Add(GetType(GroupDescriptor), "GroupNames", DesignerSerializationVisibilityAttribute.Content)
         RadGridView.XmlSerializationInfo.SerializationMetadata.Add(GetType(SortDescriptor), "PropertyName", DesignerSerializationVisibilityAttribute.Visible)
-        'Sort Descriptors            
+        'Sort Descriptors
         RadGridView.XmlSerializationInfo.SerializationMetadata.Add(GetType(GridViewTemplate), "SortDescriptors", DesignerSerializationVisibilityAttribute.Content)
         RadGridView.XmlSerializationInfo.SerializationMetadata.Add(GetType(SortDescriptor), "Direction", DesignerSerializationVisibilityAttribute.Visible)
-
 
     End Sub
 

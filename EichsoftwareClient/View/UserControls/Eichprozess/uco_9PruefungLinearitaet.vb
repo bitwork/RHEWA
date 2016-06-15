@@ -1,11 +1,11 @@
-﻿' 11.03.2014 hill EichsoftwareClient ucoPruefungLinearitaet.vb 
+﻿' 11.03.2014 hill EichsoftwareClient ucoPruefungLinearitaet.vb
 Imports System
 
 Public Class uco_9PruefungLinearitaet
     Inherits ucoContent
 
 #Region "Member Variables"
-    Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken 
+    Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken
     'Private AktuellerStatusDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Komptabilitätsnachweis zurückgesetzt
     Private _ListPruefungPruefungLinearitaetSteigend As New List(Of PruefungLinearitaetSteigend)
     Private _ListPruefungPruefungLinearitaetFallend As New List(Of PruefungLinearitaetFallend)
@@ -64,14 +64,13 @@ Public Class uco_9PruefungLinearitaet
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
-    Private Sub RadButtonShowEFG_Click(sender As Object, e As EventArgs) Handles  RadButtonShowEFGSteigend.Click
+    Private Sub RadButtonShowEFG_Click(sender As Object, e As EventArgs) Handles RadButtonShowEFGSteigend.Click
         Dim f As New frmEichfehlergrenzen(objEichprozess)
         f.Show()
     End Sub
 
-    Private Sub RadTextBoxControlBereich_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles RadTextBoxControlBereich3DisplayWeight8.Validating, RadTextBoxControlBereich3DisplayWeight7.Validating, RadTextBoxControlBereich3DisplayWeight6.Validating, RadTextBoxControlBereich3DisplayWeight5.Validating, RadTextBoxControlBereich3DisplayWeight4.Validating, RadTextBoxControlBereich3DisplayWeight3.Validating, RadTextBoxControlBereich3DisplayWeight2.Validating, RadTextBoxControlBereich3DisplayWeight1.Validating, RadTextBoxControlBereich2DisplayWeight8.Validating, RadTextBoxControlBereich2DisplayWeight7.Validating, RadTextBoxControlBereich2DisplayWeight6.Validating, RadTextBoxControlBereich2DisplayWeight5.Validating, RadTextBoxControlBereich2DisplayWeight4.Validating, RadTextBoxControlBereich2DisplayWeight3.Validating, RadTextBoxControlBereich2DisplayWeight2.Validating, RadTextBoxControlBereich2DisplayWeight1.Validating, RadTextBoxControlBereich1DisplayWeight8.Validating, RadTextBoxControlBereich1DisplayWeight7.Validating, RadTextBoxControlBereich1DisplayWeight6.Validating, RadTextBoxControlBereich1DisplayWeight5.Validating, RadTextBoxControlBereich1DisplayWeight4.Validating, RadTextBoxControlBereich1DisplayWeight3.Validating, RadTextBoxControlBereich1DisplayWeight2.Validating, RadTextBoxControlBereich1DisplayWeight1.Validating, _
+    Private Sub RadTextBoxControlBereich_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles RadTextBoxControlBereich3DisplayWeight8.Validating, RadTextBoxControlBereich3DisplayWeight7.Validating, RadTextBoxControlBereich3DisplayWeight6.Validating, RadTextBoxControlBereich3DisplayWeight5.Validating, RadTextBoxControlBereich3DisplayWeight4.Validating, RadTextBoxControlBereich3DisplayWeight3.Validating, RadTextBoxControlBereich3DisplayWeight2.Validating, RadTextBoxControlBereich3DisplayWeight1.Validating, RadTextBoxControlBereich2DisplayWeight8.Validating, RadTextBoxControlBereich2DisplayWeight7.Validating, RadTextBoxControlBereich2DisplayWeight6.Validating, RadTextBoxControlBereich2DisplayWeight5.Validating, RadTextBoxControlBereich2DisplayWeight4.Validating, RadTextBoxControlBereich2DisplayWeight3.Validating, RadTextBoxControlBereich2DisplayWeight2.Validating, RadTextBoxControlBereich2DisplayWeight1.Validating, RadTextBoxControlBereich1DisplayWeight8.Validating, RadTextBoxControlBereich1DisplayWeight7.Validating, RadTextBoxControlBereich1DisplayWeight6.Validating, RadTextBoxControlBereich1DisplayWeight5.Validating, RadTextBoxControlBereich1DisplayWeight4.Validating, RadTextBoxControlBereich1DisplayWeight3.Validating, RadTextBoxControlBereich1DisplayWeight2.Validating, RadTextBoxControlBereich1DisplayWeight1.Validating,
     RadTextBoxControlBereich3Weight8.Validating, RadTextBoxControlBereich3Weight7.Validating, RadTextBoxControlBereich3Weight6.Validating, RadTextBoxControlBereich3Weight5.Validating, RadTextBoxControlBereich3Weight4.Validating, RadTextBoxControlBereich3Weight3.Validating, RadTextBoxControlBereich3Weight2.Validating, RadTextBoxControlBereich3Weight1.Validating, RadTextBoxControlBereich2Weight8.Validating, RadTextBoxControlBereich2Weight7.Validating, RadTextBoxControlBereich2Weight6.Validating, RadTextBoxControlBereich2Weight5.Validating, RadTextBoxControlBereich2Weight4.Validating, RadTextBoxControlBereich2Weight3.Validating, RadTextBoxControlBereich2Weight2.Validating, RadTextBoxControlBereich2Weight1.Validating, RadTextBoxControlBereich1Weight8.Validating, RadTextBoxControlBereich1Weight7.Validating, RadTextBoxControlBereich1Weight6.Validating, RadTextBoxControlBereich1Weight5.Validating, RadTextBoxControlBereich1Weight4.Validating, RadTextBoxControlBereich1Weight3.Validating, RadTextBoxControlBereich1Weight2.Validating, RadTextBoxControlBereich1Weight1.Validating
-
 
         Dim result As Decimal
         If Not sender.readonly = True Then
@@ -103,12 +102,6 @@ Public Class uco_9PruefungLinearitaet
     Private Sub RadCheckBoxBereichVEL_MouseClick(sender As Object, e As MouseEventArgs) Handles RadCheckBoxBereich3VEL8.MouseClick, RadCheckBoxBereich3VEL7.MouseClick, RadCheckBoxBereich3VEL6.MouseClick, RadCheckBoxBereich3VEL5.MouseClick, RadCheckBoxBereich3VEL4.MouseClick, RadCheckBoxBereich3VEL3.MouseClick, RadCheckBoxBereich3VEL2.MouseClick, RadCheckBoxBereich3VEL1.MouseClick, RadCheckBoxBereich2VEL8.MouseClick, RadCheckBoxBereich2VEL7.MouseClick, RadCheckBoxBereich2VEL6.MouseClick, RadCheckBoxBereich2VEL5.MouseClick, RadCheckBoxBereich2VEL4.MouseClick, RadCheckBoxBereich2VEL3.MouseClick, RadCheckBoxBereich2VEL2.MouseClick, RadCheckBoxBereich2VEL1.MouseClick, RadCheckBoxBereich1VEL8.MouseClick, RadCheckBoxBereich1VEL7.MouseClick, RadCheckBoxBereich1VEL6.MouseClick, RadCheckBoxBereich1VEL5.MouseClick, RadCheckBoxBereich1VEL4.MouseClick, RadCheckBoxBereich1VEL3.MouseClick, RadCheckBoxBereich1VEL2.MouseClick, RadCheckBoxBereich1VEL1.MouseClick, RadCheckBoxBereich3FallendVEL8.MouseClick, RadCheckBoxBereich3FallendVEL7.MouseClick, RadCheckBoxBereich3FallendVEL6.MouseClick, RadCheckBoxBereich3FallendVEL5.MouseClick, RadCheckBoxBereich3FallendVEL4.MouseClick, RadCheckBoxBereich3FallendVEL3.MouseClick, RadCheckBoxBereich3FallendVEL2.MouseClick, RadCheckBoxBereich3FallendVEL1.MouseClick, RadCheckBoxBereich2FallendVEL8.MouseClick, RadCheckBoxBereich2FallendVEL7.MouseClick, RadCheckBoxBereich2FallendVEL6.MouseClick, RadCheckBoxBereich2FallendVEL5.MouseClick, RadCheckBoxBereich2FallendVEL4.MouseClick, RadCheckBoxBereich2FallendVEL3.MouseClick, RadCheckBoxBereich2FallendVEL2.MouseClick, RadCheckBoxBereich2FallendVEL1.MouseClick, RadCheckBoxBereich1FallendVEL8.MouseClick, RadCheckBoxBereich1FallendVEL7.MouseClick, RadCheckBoxBereich1FallendVEL6.MouseClick, RadCheckBoxBereich1FallendVEL5.MouseClick, RadCheckBoxBereich1FallendVEL4.MouseClick, RadCheckBoxBereich1FallendVEL3.MouseClick, RadCheckBoxBereich1FallendVEL2.MouseClick, RadCheckBoxBereich1FallendVEL1.MouseClick
         CType(sender, Telerik.WinControls.UI.RadCheckBox).Checked = Not CType(sender, Telerik.WinControls.UI.RadCheckBox).Checked
     End Sub
-
-
-
-
-
-
 
     ''' <summary>
     ''' EFG Werte müssen jeweils bei Steigend und Fallend gleich sein. Diese funktion reicht sie weiter und berechnet
@@ -148,11 +141,11 @@ Public Class uco_9PruefungLinearitaet
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
-    Private Sub RadTextBoxControlBereich1_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlBereich1Weight8.TextChanged, RadTextBoxControlBereich1Weight7.TextChanged, RadTextBoxControlBereich1Weight6.TextChanged, RadTextBoxControlBereich1Weight5.TextChanged, RadTextBoxControlBereich1Weight4.TextChanged, RadTextBoxControlBereich1Weight3.TextChanged, RadTextBoxControlBereich1Weight2.TextChanged, RadTextBoxControlBereich1Weight1.TextChanged, _
-         RadTextBoxControlBereich2Weight8.TextChanged, RadTextBoxControlBereich2Weight7.TextChanged, RadTextBoxControlBereich2Weight6.TextChanged, RadTextBoxControlBereich2Weight5.TextChanged, RadTextBoxControlBereich2Weight4.TextChanged, RadTextBoxControlBereich2Weight3.TextChanged, RadTextBoxControlBereich2Weight2.TextChanged, RadTextBoxControlBereich2Weight1.TextChanged, _
-        RadTextBoxControlBereich3Weight8.TextChanged, RadTextBoxControlBereich3Weight7.TextChanged, RadTextBoxControlBereich3Weight6.TextChanged, RadTextBoxControlBereich3Weight5.TextChanged, RadTextBoxControlBereich3Weight4.TextChanged, RadTextBoxControlBereich3Weight3.TextChanged, RadTextBoxControlBereich3Weight2.TextChanged, RadTextBoxControlBereich3Weight1.TextChanged, _
-        RadTextBoxControlBereich1FallendWeight8.TextChanged, RadTextBoxControlBereich1FallendWeight7.TextChanged, RadTextBoxControlBereich1FallendWeight6.TextChanged, RadTextBoxControlBereich1FallendWeight5.TextChanged, RadTextBoxControlBereich1FallendWeight4.TextChanged, RadTextBoxControlBereich1FallendWeight3.TextChanged, RadTextBoxControlBereich1FallendWeight2.TextChanged, RadTextBoxControlBereich1FallendWeight1.TextChanged, _
-        RadTextBoxControlBereich2FallendWeight8.TextChanged, RadTextBoxControlBereich2FallendWeight7.TextChanged, RadTextBoxControlBereich2FallendWeight6.TextChanged, RadTextBoxControlBereich2FallendWeight5.TextChanged, RadTextBoxControlBereich2FallendWeight4.TextChanged, RadTextBoxControlBereich2FallendWeight3.TextChanged, RadTextBoxControlBereich2FallendWeight2.TextChanged, RadTextBoxControlBereich2FallendWeight1.TextChanged, _
+    Private Sub RadTextBoxControlBereich1_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlBereich1Weight8.TextChanged, RadTextBoxControlBereich1Weight7.TextChanged, RadTextBoxControlBereich1Weight6.TextChanged, RadTextBoxControlBereich1Weight5.TextChanged, RadTextBoxControlBereich1Weight4.TextChanged, RadTextBoxControlBereich1Weight3.TextChanged, RadTextBoxControlBereich1Weight2.TextChanged, RadTextBoxControlBereich1Weight1.TextChanged,
+         RadTextBoxControlBereich2Weight8.TextChanged, RadTextBoxControlBereich2Weight7.TextChanged, RadTextBoxControlBereich2Weight6.TextChanged, RadTextBoxControlBereich2Weight5.TextChanged, RadTextBoxControlBereich2Weight4.TextChanged, RadTextBoxControlBereich2Weight3.TextChanged, RadTextBoxControlBereich2Weight2.TextChanged, RadTextBoxControlBereich2Weight1.TextChanged,
+        RadTextBoxControlBereich3Weight8.TextChanged, RadTextBoxControlBereich3Weight7.TextChanged, RadTextBoxControlBereich3Weight6.TextChanged, RadTextBoxControlBereich3Weight5.TextChanged, RadTextBoxControlBereich3Weight4.TextChanged, RadTextBoxControlBereich3Weight3.TextChanged, RadTextBoxControlBereich3Weight2.TextChanged, RadTextBoxControlBereich3Weight1.TextChanged,
+        RadTextBoxControlBereich1FallendWeight8.TextChanged, RadTextBoxControlBereich1FallendWeight7.TextChanged, RadTextBoxControlBereich1FallendWeight6.TextChanged, RadTextBoxControlBereich1FallendWeight5.TextChanged, RadTextBoxControlBereich1FallendWeight4.TextChanged, RadTextBoxControlBereich1FallendWeight3.TextChanged, RadTextBoxControlBereich1FallendWeight2.TextChanged, RadTextBoxControlBereich1FallendWeight1.TextChanged,
+        RadTextBoxControlBereich2FallendWeight8.TextChanged, RadTextBoxControlBereich2FallendWeight7.TextChanged, RadTextBoxControlBereich2FallendWeight6.TextChanged, RadTextBoxControlBereich2FallendWeight5.TextChanged, RadTextBoxControlBereich2FallendWeight4.TextChanged, RadTextBoxControlBereich2FallendWeight3.TextChanged, RadTextBoxControlBereich2FallendWeight2.TextChanged, RadTextBoxControlBereich2FallendWeight1.TextChanged,
         RadTextBoxControlBereich3FallendWeight8.TextChanged, RadTextBoxControlBereich3FallendWeight7.TextChanged, RadTextBoxControlBereich3FallendWeight6.TextChanged, RadTextBoxControlBereich3FallendWeight5.TextChanged, RadTextBoxControlBereich3FallendWeight4.TextChanged, RadTextBoxControlBereich3FallendWeight3.TextChanged, RadTextBoxControlBereich3FallendWeight2.TextChanged, RadTextBoxControlBereich3FallendWeight1.TextChanged
 
         ReicheEFGWeiter(sender)
@@ -243,7 +236,6 @@ Public Class uco_9PruefungLinearitaet
 
         End If
 
-
         'steuerelemente mit werten aus DB füllen
         FillControls()
 
@@ -264,9 +256,6 @@ Public Class uco_9PruefungLinearitaet
         _suspendEvents = False
     End Sub
 
-   
-
-
     Private Sub FillLinearitaetSteigend()
         ''ein ausblenden von WZ Bereichenen
         EinAusblendenVonMessBereichen()
@@ -284,7 +273,6 @@ Public Class uco_9PruefungLinearitaet
         RadTextBoxControlBereich1Weight4.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 2000
         RadTextBoxControlBereich1Weight5.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1
 
-
         'bereich 2
         Try
 
@@ -294,7 +282,6 @@ Public Class uco_9PruefungLinearitaet
                 RadTextBoxControlBereich2Weight3.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2 / 2
                 RadTextBoxControlBereich2Weight4.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 2000
                 RadTextBoxControlBereich2Weight5.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2
-
 
             End If
         Catch ex As Exception
@@ -339,14 +326,12 @@ Public Class uco_9PruefungLinearitaet
 
         'Last Berechnen
 
-
         'bereich 1
         RadTextBoxControlBereich1FallendWeight1.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 20
         RadTextBoxControlBereich1FallendWeight2.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 500
         RadTextBoxControlBereich1FallendWeight3.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1 / 2
         RadTextBoxControlBereich1FallendWeight4.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1 * 2000
         RadTextBoxControlBereich1FallendWeight5.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1
-
 
         'bereich 2
         Try
@@ -375,7 +360,6 @@ Public Class uco_9PruefungLinearitaet
         Catch ex As Exception
         End Try
 
-
         For Each objPruefung In _ListPruefungPruefungLinearitaetFallend
             Dim Messpunkt As Integer = objPruefung.Messpunkt
             Dim Bereich As Integer = objPruefung.Bereich
@@ -394,8 +378,6 @@ Public Class uco_9PruefungLinearitaet
         Next
     End Sub
 
-
-
     ''' <summary>
     ''' Lädt die Werte aus dem Objekt in die Steuerlemente
     ''' </summary>
@@ -413,7 +395,7 @@ Public Class uco_9PruefungLinearitaet
 
         'Steuerlemente füllen
         'dynamisches laden der Nullstellen:
-    
+
         HoleNullstellen()
 
         'je nach Art der Waage andere Bereichsgruppen ausblenden
@@ -437,7 +419,6 @@ Public Class uco_9PruefungLinearitaet
             RadGroupBoxBereich3Fallend.Visible = True
         End If
 
-
         FillLinearitaetSteigend()
         FillLinearitaetFallend()
 
@@ -452,7 +433,7 @@ Public Class uco_9PruefungLinearitaet
     ''' <author></author>
     ''' <commentauthor></commentauthor>
     Private Sub UpdatePruefungsLinSteigendObject(ByVal PObjPruefung As PruefungLinearitaetSteigend)
-           Dim Messpunkt As Integer = PObjPruefung.Messpunkt
+        Dim Messpunkt As Integer = PObjPruefung.Messpunkt
         Dim Bereich As Integer = PObjPruefung.Bereich
 
         Dim ctrlLast As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}Weight{1}", Bereich, Messpunkt))
@@ -522,7 +503,6 @@ Public Class uco_9PruefungLinearitaet
 
     End Function
 
-  
     ''' <summary>
     ''' je nach anzahl von eingestellten Messpunkten werden die panels ein oder ausgeblendet
     ''' </summary>
@@ -549,9 +529,9 @@ Public Class uco_9PruefungLinearitaet
         Next
     End Sub
 
-    Private Sub BerechneUndWeiseZu(ByRef FehlerGrenzeTextbox As Telerik.WinControls.UI.RadTextBox, _
-    ByRef AnzeigeGewichtTextbox As Telerik.WinControls.UI.RadTextBox, _
-    ByRef GewichtTextbox As Telerik.WinControls.UI.RadTextBox, _
+    Private Sub BerechneUndWeiseZu(ByRef FehlerGrenzeTextbox As Telerik.WinControls.UI.RadTextBox,
+    ByRef AnzeigeGewichtTextbox As Telerik.WinControls.UI.RadTextBox,
+    ByRef GewichtTextbox As Telerik.WinControls.UI.RadTextBox,
     ByRef Checkbox As Telerik.WinControls.UI.RadCheckBox, ByVal Bereich As Integer)
 
         If _suspendEvents = False Then
@@ -565,14 +545,13 @@ Public Class uco_9PruefungLinearitaet
             Exit Sub
         End If
 
-
         'Hier gibt es kein EFG Feld. Deswegen wird für jeden DS einzeln durch GETEFG der EFG Wert errrechnet
         Try
             FehlerGrenzeTextbox.Text = CDec(AnzeigeGewichtTextbox.Text) - CDec(GewichtTextbox.Text)
 
-            If CDec(AnzeigeGewichtTextbox.Text) > CDec(GewichtTextbox.Text) + GetEFG(CDec(GewichtTextbox.Text), bereich) Then
+            If CDec(AnzeigeGewichtTextbox.Text) > CDec(GewichtTextbox.Text) + GetEFG(CDec(GewichtTextbox.Text), Bereich) Then
                 Checkbox.Checked = False
-            ElseIf CDec(AnzeigeGewichtTextbox.Text) < CDec(GewichtTextbox.Text) - GetEFG(CDec(GewichtTextbox.Text), bereich) Then
+            ElseIf CDec(AnzeigeGewichtTextbox.Text) < CDec(GewichtTextbox.Text) - GetEFG(CDec(GewichtTextbox.Text), Bereich) Then
                 Checkbox.Checked = False
             Else
                 Checkbox.Checked = True
@@ -581,8 +560,6 @@ Public Class uco_9PruefungLinearitaet
             Debug.WriteLine(ex.Message)
             Debug.WriteLine(ex.StackTrace)
         End Try
-
-
 
     End Sub
 
@@ -597,8 +574,6 @@ Public Class uco_9PruefungLinearitaet
         Dim GewichtTextbox As Telerik.WinControls.UI.RadTextBox
         Dim Checkbox As Telerik.WinControls.UI.RadCheckBox
 
-
-
         Dim SuchstringFehlerGrenzeTextbox As String = String.Format("RadTextBoxControlBereich{0}{1}ErrorLimit{2}", CInt(Bereich), Pruefung, CInt(Messpunkt))
         Dim SuchstringAnzeigeGewichtTextbox As String = String.Format("RadTextBoxControlBereich{0}{1}DisplayWeight{2}", CInt(Bereich), Pruefung, CInt(Messpunkt))
         Dim SuchstringGewichtTextbox As String = String.Format("RadTextBoxControlBereich{0}{1}Weight{2}", CInt(Bereich), Pruefung, CInt(Messpunkt))
@@ -609,9 +584,9 @@ Public Class uco_9PruefungLinearitaet
         GewichtTextbox = FindControl(SuchstringGewichtTextbox)
         Checkbox = FindControl(SuchstringCheckbox)
 
-        If Not FehlerGrenzeTextbox Is Nothing AndAlso _
-            Not AnzeigeGewichtTextbox Is Nothing AndAlso _
-            Not GewichtTextbox Is Nothing AndAlso _
+        If Not FehlerGrenzeTextbox Is Nothing AndAlso
+            Not AnzeigeGewichtTextbox Is Nothing AndAlso
+            Not GewichtTextbox Is Nothing AndAlso
             Not Checkbox Is Nothing Then
 
             BerechneUndWeiseZu(FehlerGrenzeTextbox, AnzeigeGewichtTextbox, GewichtTextbox, Checkbox, Bereich)
@@ -629,8 +604,6 @@ Public Class uco_9PruefungLinearitaet
         Dim GewichtTextbox As Telerik.WinControls.UI.RadTextBox
         Dim Checkbox As Telerik.WinControls.UI.RadCheckBox
 
-
-
         For Messpunkt As Integer = 1 To 8 Step 1
             Dim SuchstringFehlerGrenzeTextbox As String = String.Format("RadTextBoxControlBereich{0}{1}ErrorLimit{2}", CInt(Bereich), Pruefung, CInt(Messpunkt))
             Dim SuchstringAnzeigeGewichtTextbox As String = String.Format("RadTextBoxControlBereich{0}{1}DisplayWeight{2}", CInt(Bereich), Pruefung, CInt(Messpunkt))
@@ -642,15 +615,14 @@ Public Class uco_9PruefungLinearitaet
             GewichtTextbox = FindControl(SuchstringGewichtTextbox)
             Checkbox = FindControl(SuchstringCheckbox)
 
-            If Not FehlerGrenzeTextbox Is Nothing AndAlso _
-                Not AnzeigeGewichtTextbox Is Nothing AndAlso _
-                Not GewichtTextbox Is Nothing AndAlso _
+            If Not FehlerGrenzeTextbox Is Nothing AndAlso
+                Not AnzeigeGewichtTextbox Is Nothing AndAlso
+                Not GewichtTextbox Is Nothing AndAlso
                 Not Checkbox Is Nothing Then
 
                 BerechneUndWeiseZu(FehlerGrenzeTextbox, AnzeigeGewichtTextbox, GewichtTextbox, Checkbox, Bereich)
             End If
         Next
-
 
     End Sub
 
@@ -665,8 +637,6 @@ Public Class uco_9PruefungLinearitaet
         Dim GewichtTextbox As Telerik.WinControls.UI.RadTextBox
         Dim Checkbox As Telerik.WinControls.UI.RadCheckBox
 
-
-
         For Bereich As Integer = 1 To 3 Step 1
             For Messpunkt As Integer = 1 To 8 Step 1
                 Dim SuchstringFehlerGrenzeTextbox As String = String.Format("RadTextBoxControlBereich{0}{1}ErrorLimit{2}", CInt(Bereich), Pruefung, CInt(Messpunkt))
@@ -679,9 +649,9 @@ Public Class uco_9PruefungLinearitaet
                 GewichtTextbox = FindControl(SuchstringGewichtTextbox)
                 Checkbox = FindControl(SuchstringCheckbox)
 
-                If Not FehlerGrenzeTextbox Is Nothing AndAlso _
-                    Not AnzeigeGewichtTextbox Is Nothing AndAlso _
-                    Not GewichtTextbox Is Nothing AndAlso _
+                If Not FehlerGrenzeTextbox Is Nothing AndAlso
+                    Not AnzeigeGewichtTextbox Is Nothing AndAlso
+                    Not GewichtTextbox Is Nothing AndAlso
                     Not Checkbox Is Nothing Then
 
                     BerechneUndWeiseZu(FehlerGrenzeTextbox, AnzeigeGewichtTextbox, GewichtTextbox, Checkbox, Bereich)
@@ -690,7 +660,6 @@ Public Class uco_9PruefungLinearitaet
                 End If
             Next
         Next
-
 
     End Sub
 
@@ -705,7 +674,6 @@ Public Class uco_9PruefungLinearitaet
 
         Berechne(Pruefung, Bereich, Messpunkt)
     End Sub
-
 
 #End Region
 #End Region
@@ -752,7 +720,6 @@ Public Class uco_9PruefungLinearitaet
         Next
     End Sub
 
-
 #Region "Overrides"
     'Speicherroutine
     Protected Overrides Sub SaveNeeded(ByVal UserControl As UserControl)
@@ -778,10 +745,8 @@ Public Class uco_9PruefungLinearitaet
 
             If ValidateControls() = True Then
 
-
                 'neuen Context aufbauen
                 Using Context As New EichsoftwareClientdatabaseEntities1
-
 
                     'prüfen ob CREATE oder UPDATE durchgeführt werden muss
                     If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
@@ -803,7 +768,6 @@ Public Class uco_9PruefungLinearitaet
                             'wenn es defintiv noch keine pruefungen gibt, neue Anlegen
                             If _ListPruefungPruefungLinearitaetSteigend.Count = 0 Then
                                 'anzahl Bereiche auslesen um damit die anzahl der benötigten Iterationen und Objekt Erzeugungen zu erfahren
-
 
                                 For j = 1 To intBereiche
                                     For intMesspunkt As Integer = 1 To _intAnzahlMesspunkte
@@ -843,7 +807,6 @@ Public Class uco_9PruefungLinearitaet
                                         Catch ex As Exception
                                         End Try
                                     Next
-
 
                                 End If
 
@@ -904,14 +867,12 @@ Public Class uco_9PruefungLinearitaet
                                     Context.SaveChanges()
                                 Next
 
-
                                 'sonderfall es wurden neue messpunkte hinzugefügt
 
                                 'zählen der angezeigten messpunkte
                                 Dim neueAnzahlMesspunkte As Integer = 0
                                 If Not _ListPruefungPruefungLinearitaetFallend.Count = 0 Then
                                     'Zählen der eingetragenden Messpunkte
-
 
                                     For Each Control In RadGroupBoxBereich1.Controls
                                         Try
@@ -955,7 +916,6 @@ Public Class uco_9PruefungLinearitaet
                                 End If
                             End If
 
-
                             'neuen Status zuweisen
                             If AktuellerStatusDirty = False Then
                                 ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
@@ -985,7 +945,6 @@ Public Class uco_9PruefungLinearitaet
         MyBase.SaveWithoutValidationNeeded(usercontrol)
         If Me.Equals(usercontrol) Then
 
-
             'neuen Context aufbauen
             Using Context As New EichsoftwareClientdatabaseEntities1
                 If DialogModus = enuDialogModus.lesend Then
@@ -1014,7 +973,6 @@ Public Class uco_9PruefungLinearitaet
                         'wenn es defintiv noch keine pruefungen gibt, neue Anlegen
                         If _ListPruefungPruefungLinearitaetSteigend.Count = 0 Then
                             'anzahl Bereiche auslesen um damit die anzahl der benötigten Iterationen und Objekt Erzeugungen zu erfahren
-
 
                             For j = 1 To intBereiche
                                 For intMesspunkt As Integer = 1 To _intAnzahlMesspunkte
@@ -1054,7 +1012,6 @@ Public Class uco_9PruefungLinearitaet
                                     Catch ex As Exception
                                     End Try
                                 Next
-
 
                             End If
 
@@ -1115,14 +1072,12 @@ Public Class uco_9PruefungLinearitaet
                                 Context.SaveChanges()
                             Next
 
-
                             'sonderfall es wurden neue messpunkte hinzugefügt
 
                             'zählen der angezeigten messpunkte
                             Dim neueAnzahlMesspunkte As Integer = 0
                             If Not _ListPruefungPruefungLinearitaetFallend.Count = 0 Then
                                 'Zählen der eingetragenden Messpunkte
-
 
                                 For Each Control In RadGroupBoxBereich1.Controls
                                     Try
@@ -1180,10 +1135,8 @@ Public Class uco_9PruefungLinearitaet
         MyBase.LokalisierungNeeded(UserControl)
 
         'lokalisierung: Leider kann ich den automatismus von .NET nicht nutzen. Dieser funktioniert nur sauber, wenn ein Dialog erzeugt wird. Zur Laufzeit aber gibt es diverse Probleme mit dem Automatischen Ändern der Sprache,
-        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße 
+        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco_9PruefungLinearitaet))
-
-
 
         RadGroupBoxBereich1.Text = resources.GetString("RadGroupBoxBereich1.Text")
         RadGroupBoxBereich2.Text = resources.GetString("RadGroupBoxBereich2.Text")
@@ -1191,8 +1144,6 @@ Public Class uco_9PruefungLinearitaet
         RadGroupBoxBereich1Fallend.Text = resources.GetString("RadGroupBoxBereich1Fallend.Text")
         RadGroupBoxBereich2Fallend.Text = resources.GetString("RadGroupBoxBereich2Fallend.Text")
         RadGroupBoxBereich3Fallend.Text = resources.GetString("RadGroupBoxBereich3Fallend.Text")
-
-
 
         lblBereich1AnzeigeGewicht.Text = resources.GetString("lblBereich1AnzeigeGewicht.Text")
         lblBereich2AnzeigeGewicht.Text = resources.GetString("lblBereich2AnzeigeGewicht.Text")
@@ -1222,10 +1173,7 @@ Public Class uco_9PruefungLinearitaet
         lblBereich2FallendEFGSpezial.Text = resources.GetString("lblBereich2FallendEFGSpezial.Text")
         lblBereich3FallendEFGSpezial.Text = resources.GetString("lblBereich3FallendEFGSpezial.Text")
 
-
         RadButtonShowEFGSteigend.Text = resources.GetString("RadButtonShowEFGSteigend.Text")
-
-
 
         If Not ParentFormular Is Nothing Then
             Try
@@ -1238,7 +1186,6 @@ Public Class uco_9PruefungLinearitaet
             Catch ex As Exception
             End Try
         End If
-
 
     End Sub
 
@@ -1265,7 +1212,6 @@ Public Class uco_9PruefungLinearitaet
 
 #End Region
 
-
     'Entsperrroutine
     Protected Overrides Sub EntsperrungNeeded()
         MyBase.EntsperrungNeeded()
@@ -1287,7 +1233,6 @@ Public Class uco_9PruefungLinearitaet
     End Sub
 
     Protected Overrides Sub VersendenNeeded(TargetUserControl As UserControl)
-
 
         If Me.Equals(TargetUserControl) Then
             MyBase.VersendenNeeded(TargetUserControl)
@@ -1325,6 +1270,5 @@ Public Class uco_9PruefungLinearitaet
             End Using
         End If
     End Sub
-
 
 End Class

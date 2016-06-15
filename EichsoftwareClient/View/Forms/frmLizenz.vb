@@ -95,7 +95,6 @@ Public Class FrmLizenz
                             Catch ex As Exception
                             End Try
 
-
                             'abschluss des dialoges
                             Me.DialogResult = Windows.Forms.DialogResult.OK
                             Me.Close()
@@ -129,7 +128,6 @@ Public Class FrmLizenz
     Private Sub RadCheckBoxAkzeptieren_ToggleStateChanged(sender As Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadCheckBoxAkzeptieren.ToggleStateChanged
         RadButtonOK.Enabled = RadCheckBoxAkzeptieren.Checked
     End Sub
-
 
 #Region "Lokalisierung"
     Private Sub RadButtonChangeLanguageToGerman_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonChangeLanguageToPolish.Click, RadButtonChangeLanguageToGerman.Click, RadButtonChangeLanguageToEnglish.Click

@@ -6,7 +6,6 @@
 Public Class ucoContent
     Implements INotifyPropertyChanged
 
-
 #Region "Member Variables"
     Private WithEvents _ParentForm As FrmMainContainer 'Bezug zum Parentcontrol.
     Private _PreviousUco As ucoContent 'mit dieser variable merkt sich das aktuelle UCO, welches Uco VOR ihm im Eichprozess dran kam
@@ -38,7 +37,7 @@ Public Class ucoContent
     End Property
 
 #Region "Property Changed Event für Dirty Flag, damit Ampel UCO darauf reagieren kann"
-    ' Declare the event 
+    ' Declare the event
     Public Event PropertyChanged As System.ComponentModel.PropertyChangedEventHandler Implements INotifyPropertyChanged.PropertyChanged
 
     Private Sub onpropertychanged(ByVal name As String)
@@ -142,7 +141,6 @@ Public Class ucoContent
         _NextUco = Nothing
     End Sub
 
-
     Sub New(ByRef pParentform As FrmMainContainer, ByRef pObjEichprozess As Eichprozess, Optional ByRef pPreviousUco As ucoContent = Nothing, Optional ByRef pNextUco As ucoContent = Nothing, Optional ByVal pEnuModus As enuDialogModus = enuDialogModus.normal)
 
         ' Dieser Aufruf ist für den Designer erforderlich.
@@ -167,7 +165,6 @@ Public Class ucoContent
 
     End Sub
 
-
 #End Region
 #Region "Must Override"
     Protected Friend Overridable Function ValidationNeeded() As Boolean
@@ -184,7 +181,7 @@ Public Class ucoContent
     ''' <param name="Name"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    <DebuggerStepThroughAttribute()> _
+    <DebuggerStepThroughAttribute()>
     Protected Overridable Function FindControl(ByVal Name As String) As Control
         Dim myControl As Control()
         myControl = Me.Controls.Find(Name, True)
@@ -227,7 +224,6 @@ Public Class ucoContent
         End If
     End Sub
 
-
     ''' <summary>
     ''' SaveNeeded wird vom Container ParentForm abgefeuert und gibt dem Usercontrol an das es zu speichern hat
     ''' Die Überladene Methode muss sich dann um die Speicherlogik kümmern, sofern das übergebende Usercontrol dem eigenem entspricht
@@ -248,7 +244,6 @@ Public Class ucoContent
     ''' <commentauthor>Die Überladene Routine sollte überprüfen ob me.equals(Usercontrol) = true ist, um nicht unnötig oft alles zu speichern</commentauthor>
     Protected Overridable Sub SaveWithoutValidationNeeded(ByVal usercontrol As UserControl) Handles _ParentForm.SaveWithoutValidationNeeded
     End Sub
-
 
     ''' <summary>
     ''' Ermöglicht das aufrufen von UCO bezogenden Code zur lokalisierung
@@ -290,7 +285,6 @@ Public Class ucoContent
     Friend Function ShowValidationErrorBox(ByVal DebugOnly As Boolean, Optional ByVal pDisplayMessage As String = "") As Boolean
         Dim DisplayMessage As String = pDisplayMessage
         If DisplayMessage.Equals("") Then DisplayMessage = My.Resources.GlobaleLokalisierung.PflichtfelderAusfuellen
-
 
         If Me.AbortSaving = True Then
             If _bolValidierungsmodus Then
@@ -457,11 +451,7 @@ Public Class ucoContent
             Return True
         End If
 
-
     End Function
-
-
-
 
 #Region "Hilfsfunktionen"
     ''' <summary>
@@ -502,7 +492,6 @@ Public Class ucoContent
             Return -1
         End Try
     End Function
-
 
     ''' <summary>
     ''' Erwartet z.b. ein Steuerelement, prüft den Namen und gibt zurück um welchen Bereich es sich handelt

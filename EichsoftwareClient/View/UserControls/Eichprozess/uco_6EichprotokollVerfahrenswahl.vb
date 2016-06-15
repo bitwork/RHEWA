@@ -1,7 +1,6 @@
 ﻿Public Class uco_6EichprotokollVerfahrenswahl
     Inherits ucoContent
 
-
 #Region "Member Variables"
     Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken (z.b. selected index changed beim laden des Formulars)
     'Private AktuellerStatusDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Verfahrenswahl zurückgesetzt
@@ -95,14 +94,12 @@
             End If
         End If
 
-
-
         '  RadRadioButtonNormalien.Focus()
 
     End Sub
     ''' <summary>
     ''' je nach Art der Waage MAX1, Max2 oder MAX3 auslesen. Wenn dieser Wert unter 1000KG liegt, wird automatisch ü.60 KG mit normalien gewählt
-    ''' 
+    '''
     ''' </summary>
     ''' <remarks></remarks>
     Private Sub EnableDisableRadioButtons()
@@ -124,7 +121,6 @@
                 End If
         End Select
 
-
         If bolLock Then
             '  objEichprozess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgmitNormalien
             RadRadioButtonNormalien.IsChecked = True
@@ -137,7 +133,6 @@
         RadRadioButtonStaffelverfahren.Enabled = Not bolLock
     End Sub
 
-
     ''' <summary>
     ''' Füllt das Objekt mit den Werten aus den Steuerlementen
     ''' </summary>
@@ -146,10 +141,9 @@
     ''' <commentauthor></commentauthor>
     Private Sub UpdateObject()
         If DialogModus = enuDialogModus.normal Then objEichprozess.Bearbeitungsdatum = Date.Now
-        'je nachdem ob das Objekt schon existiert (man ist im Vorgang bereits weiter)  oder nicht, das eine oder andere Objekt ansprechen. Der Hintergrund kommt leider vom Entity Framework 
+        'je nachdem ob das Objekt schon existiert (man ist im Vorgang bereits weiter)  oder nicht, das eine oder andere Objekt ansprechen. Der Hintergrund kommt leider vom Entity Framework
         'ich habe erst eine ID im Eichprotokoll, wenn ich dieses Speichere. Somit kann ich dem Eichprozess FK aufs Eichprotokoll nur zuweisen, wenn das Eichprotokoll bereits gespeichert ist
         If Not objEichprozess.Eichprotokoll Is Nothing Then
-
 
             If RadRadioButtonFahrzeugwaagen.IsChecked Then
                 objEichprozess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.Fahrzeugwaagen
@@ -188,7 +182,6 @@
         End If
     End Sub
 
-
     'Speicherroutine
     Protected Overrides Sub SaveNeeded(ByVal UserControl As UserControl)
         If Me.Equals(UserControl) Then
@@ -220,7 +213,6 @@
                         Dim dobjEichprotkoll As Eichprotokoll = Context.Eichprotokoll.FirstOrDefault(Function(value) value.ID = _objEichprotokoll.ID)
                         _objEichprotokoll = dobjEichprotkoll
                     End If
-
 
                     'Füllt das Objekt mit den Werten aus den Steuerlementen
                     UpdateObject()
@@ -259,7 +251,6 @@
         End If
     End Sub
 
-
     Protected Overrides Sub SaveWithoutValidationNeeded(usercontrol As UserControl)
         If Me.Equals(usercontrol) Then
             If DialogModus = enuDialogModus.lesend Then
@@ -291,20 +282,18 @@
     End Sub
 #End Region
 
-
     Protected Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
         If Me.Equals(UserControl) = False Then Exit Sub
 
         MyBase.LokalisierungNeeded(UserControl)
 
         'lokalisierung: Leider kann ich den automatismus von .NET nicht nutzen. Dieser funktioniert nur sauber, wenn ein Dialog erzeugt wird. Zur Laufzeit aber gibt es diverse Probleme mit dem Automatischen Ändern der Sprache,
-        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße 
+        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco_6EichprotokollVerfahrenswahl))
 
         Me.RadRadioButtonFahrzeugwaagen.Text = resources.GetString("RadRadioButtonFahrzeugwaagen.Text")
         Me.RadRadioButtonStaffelverfahren.Text = resources.GetString("RadRadioButtonStaffelverfahren.Text")
         Me.RadRadioButtonNormalien.Text = resources.GetString("RadRadioButtonNormalien.Text")
-
 
         If Not ParentFormular Is Nothing Then
             Try
@@ -315,7 +304,6 @@
             Catch ex As Exception
             End Try
         End If
-
 
     End Sub
 
@@ -334,7 +322,7 @@
     Protected Overrides Sub EntsperrungNeeded()
         MyBase.EntsperrungNeeded()
 
-        'Hiermit wird ein lesender Vorgang wieder entsperrt. 
+        'Hiermit wird ein lesender Vorgang wieder entsperrt.
         EnableControls(Me)
 
         'ändern des Moduses
@@ -344,40 +332,38 @@
 
     Protected Overrides Sub VersendenNeeded(TargetUserControl As UserControl)
 
-
         If Me.Equals(TargetUserControl) Then
             MyBase.VersendenNeeded(TargetUserControl)
-      
-                Dim objServerEichprozess As New EichsoftwareWebservice.ServerEichprozess
-                'auf fehlerhaft Status setzen
-                objEichprozess.FK_Bearbeitungsstatus = 2
-                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Konformitätsbewertungsbevollmächtigter sich den DS von Anfang angucken muss
-                UpdateObject()
 
-                'erzeuegn eines Server Objektes auf basis des aktuellen DS
+            Dim objServerEichprozess As New EichsoftwareWebservice.ServerEichprozess
+            'auf fehlerhaft Status setzen
+            objEichprozess.FK_Bearbeitungsstatus = 2
+            objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Konformitätsbewertungsbevollmächtigter sich den DS von Anfang angucken muss
+            UpdateObject()
+
+            'erzeuegn eines Server Objektes auf basis des aktuellen DS
             objServerEichprozess = clsClientServerConversionFunctions.CopyServerObjectProperties(objServerEichprozess, objEichprozess, clsClientServerConversionFunctions.enuModus.RHEWASendetAnClient)
-                Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
-                    Try
-                        Webcontext.Open()
-                    Catch ex As Exception
-                        MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                        Exit Sub
-                    End Try
+            Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
+                Try
+                    Webcontext.Open()
+                Catch ex As Exception
+                    MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    Exit Sub
+                End Try
 
-               
-                    Try
-                        'add prüft anhand der Vorgangsnummer automatisch ob ein neuer Prozess angelegt, oder ein vorhandener aktualisiert wird
-                        Webcontext.AddEichprozess(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                Try
+                    'add prüft anhand der Vorgangsnummer automatisch ob ein neuer Prozess angelegt, oder ein vorhandener aktualisiert wird
+                    Webcontext.AddEichprozess(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
 
-                        'schließen des dialoges
-                        ParentFormular.Close()
-                    Catch ex As Exception
-                        MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                        ' Status zurück setzen
-                        Exit Sub
-                    End Try
+                    'schließen des dialoges
+                    ParentFormular.Close()
+                Catch ex As Exception
+                    MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    ' Status zurück setzen
+                    Exit Sub
+                End Try
 
-                End Using
+            End Using
         End If
     End Sub
 End Class

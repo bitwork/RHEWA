@@ -10,7 +10,6 @@ Public Class clsFTP
     ''' <remarks></remarks>
     Public Event ReportFTPProgress(ByVal Progress As Integer)
 
-
     ''' <summary>
     ''' Lädt Datei vom Pfad an FTP hoch
     ''' </summary>
@@ -70,7 +69,6 @@ Public Class clsFTP
                             fs.Close()
                         End Using
 
-
                     Finally
 
                         ostream.Close()
@@ -104,7 +102,6 @@ Public Class clsFTP
                 If conn.FileExists(FTPFilePath) Then
                     Using ostream As Stream = conn.OpenRead(FTPFilePath)
 
-
                         Try
                             Dim sumbytes As Integer
                             Const buffer As Integer = 8192 * 1024
@@ -133,14 +130,12 @@ Public Class clsFTP
                                 Return True
                             End Using
 
-
                         Finally
 
                             ostream.Close()
                         End Try
                     End Using
                 End If
-
 
             End If
             Return False

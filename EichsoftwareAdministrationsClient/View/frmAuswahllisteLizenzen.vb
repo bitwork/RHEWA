@@ -11,33 +11,26 @@
         LoadFromDatabase()
     End Sub
 
-
     Private Sub LoadFromDatabase()
         Using Context As New EichenEntities
 
             Try
                 'abrufen alle Lizenzdaten mit Join auf Benutzer und firmentabelle
                 Dim Data = From Lizenz In Context.ServerLizensierung
-                            Join Benutz In Context.Benutzer On Benutz.ID Equals Lizenz.FK_BenutzerID
-                 Join Firma In Context.Firmen On Firma.ID Equals Benutz.Firma_FK
-                 Select New With
-                        {
-                            Lizenz.ID, _
-                            Lizenz.LetzteAktivierung, _
-                            Lizenz.Aktiv, _
-                            Lizenz.RHEWALizenz, _
-                            Lizenz.HEKennung, _
-                            Benutz.Nachname, _
-                            Benutz.Vorname, _
-                        Lizenz.Lizenzschluessel, _
-                           .Firma = Firma.Name
-                 }
-
-
-
-
-
-
+                           Join Benutz In Context.Benutzer On Benutz.ID Equals Lizenz.FK_BenutzerID
+                           Join Firma In Context.Firmen On Firma.ID Equals Benutz.Firma_FK
+                           Select New With
+                                  {
+                                      Lizenz.ID,
+                                      Lizenz.LetzteAktivierung,
+                                      Lizenz.Aktiv,
+                                      Lizenz.RHEWALizenz,
+                                      Lizenz.HEKennung,
+                                      Benutz.Nachname,
+                                      Benutz.Vorname,
+                                  Lizenz.Lizenzschluessel,
+                                     .Firma = Firma.Name
+                           }
 
                 RadGridViewAuswahlliste.DataSource = Data.ToList
                 Try
@@ -53,13 +46,11 @@
                     RadGridViewAuswahlliste.Columns("LetzteAktivierung").HeaderText = "Letzte Aktivierung"
                     RadGridViewAuswahlliste.Columns("Lizenzschluessel").HeaderText = "Lizenzschlüssel"
 
-
                 Catch e As Exception
                 End Try
                 RadGridViewAuswahlliste.BestFitColumns()
             Catch e As Exception
             End Try
-
 
         End Using
     End Sub
@@ -90,7 +81,6 @@
     '        Catch e As Exception
     '        End Try
 
-
     '    End Using
     'End Sub
     Private Sub EditEichprozess()
@@ -115,9 +105,6 @@
     Private Sub RadButtonBearbeiten_Click(sender As Object, e As EventArgs) Handles RadButtonBearbeiten.Click
         EditEichprozess()
     End Sub
-
-
-   
 
     Private Sub FrmAuswahllisteWZ_Load(sender As Object, e As EventArgs) Handles Me.Load
         LoadFromDatabase()

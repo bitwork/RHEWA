@@ -10,8 +10,6 @@
     End Sub
 #End Region
 
-  
-
     Private Sub RadButtonAuswertegeraetAuswertegeraet_Click(sender As System.Object, e As System.EventArgs) Handles RadButtonAuswertegeraet.Click
         Dim f As New FrmAuswahllisteAWG
         f.ShowDialog()
@@ -33,12 +31,12 @@
     End Sub
 
     Private Sub RadButtonVerbindungsprotokoll_Click(sender As Object, e As EventArgs) Handles RadButtonVerbindungsprotokoll.Click
-        Dim f As New frmVerbindungsprotokoll
+        Dim f As New FrmVerbindungsprotokoll
         f.ShowDialog()
     End Sub
 
     Private Sub RadButtonMogelstatistik_Click(sender As Object, e As EventArgs) Handles RadButtonMogelstatistik.Click
-        Dim f As New FrmMogelstatistik
+        Dim f As New frmMogelstatistik
         f.ShowDialog()
     End Sub
 
@@ -58,7 +56,7 @@
     End Sub
 
     Private Sub RadButtonPruefscheinnummersuche_Click(sender As Object, e As EventArgs) Handles RadButtonPruefscheinnummersuche.Click
-        Dim f As New frmPruefscheinnummersuche
+        Dim f As New FrmPruefscheinnummersuche
         f.ShowDialog()
     End Sub
 

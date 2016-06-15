@@ -20,8 +20,6 @@
 
     End Sub
 
-
-
     Private Sub Auswertegeraet_Load(sender As Object, e As EventArgs) Handles Me.Load
         Using context As New EichenEntities()
             'abrufen der Entität aus der Datenbank
@@ -63,7 +61,6 @@
             RadCheckBoxTaraeinrichtungHalbSelbsttaetig.Checked = _objAWG.TaraeinrichtungHalbSelbsttaetig
             RadCheckBoxTaraeinrichtungSelbsttaetig.Checked = _objAWG.TaraeinrichtungSelbsttaetig
             RadCheckBoxTaraeinrichtungTaraeingabe.Checked = _objAWG.TaraeinrichtungTaraeingabe
-
 
             Try
                 RadCheckBoxDeaktiviert.Checked = _objAWG.Deaktiviert
@@ -112,7 +109,6 @@
 
     Friend Sub Save()
         If ValidateControls() = True Then
-
 
             'neuen Context aufbauen
             Using Context As New EichenEntities
@@ -211,7 +207,6 @@
     Private Sub RadTextBoxControlAuswertegeraetBruchteilEichfehlergrenze_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles RadTextBoxControlAuswertegeraetSpeisespannung.Validating, RadTextBoxControlAuswertegeraetMindestmesssignal.Validating, RadTextBoxControlAuswertegeraetMindesteingangsspannung.Validating, RadTextBoxControlAuswertegeraetMAXAnzahlTeilungswerteMehrbereichswaage.Validating, RadTextBoxControlAuswertegeraetMAXAnzahlTeilungswertEinbereichswaage.Validating, RadTextBoxControlAuswertegeraetKabellaengeQuerschnitt.Validating, RadTextBoxControlAuswertegeraetGrenzwertTemperaturbereichMIN.Validating, RadTextBoxControlAuswertegeraetGrenzwertTemperaturbereichMAX.Validating, RadTextBoxControlAuswertegeraetGrenzwertLastwiderstandMIN.Validating, RadTextBoxControlAuswertegeraetGrenzWertLastwiderstandMAX.Validating, RadTextBoxControlAuswertegeraetBruchteilEichfehlergrenze.Validating
         If _bolSuspendEvents = True Then Exit Sub
 
-
         Dim result As Decimal
         If Not sender.isreadonly = True Then
 
@@ -240,7 +235,6 @@
                     CType(sender, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.FromArgb(0, 255, 255, 255)
 
                 End If
-
 
             End If
         End If

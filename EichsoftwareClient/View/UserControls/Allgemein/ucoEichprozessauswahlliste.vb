@@ -115,7 +115,6 @@
         RadButtonEinstellungen.Visible = True
         RadButtonEinstellungen.Enabled = True
 
-
         'Tabelle mit Server Items ausblenden
         If AktuellerBenutzer.Instance.Lizenz.RHEWALizenz = False Then
             Try
@@ -154,7 +153,7 @@
     End Sub
 
     ''' <summary>
-    ''' Ein und ausblenden sowie lokalisierung des Grids 
+    ''' Ein und ausblenden sowie lokalisierung des Grids
     ''' </summary>
     ''' <remarks></remarks>
     Private Sub FormatTable()
@@ -190,14 +189,14 @@
             If o.Count = 0 Then
                 Dim objCondition As New Telerik.WinControls.UI.ConditionalFormattingObject("Fehlerhaft", Telerik.WinControls.UI.ConditionTypes.Equal, "Fehlerhaft", "", True)
                 Dim objCondition2 As New Telerik.WinControls.UI.ConditionalFormattingObject("invalid", Telerik.WinControls.UI.ConditionTypes.Equal, "Invalid", "", True)
-                objCondition.CellBackColor = Color.FromArgb(247, 87, 67)
-                objCondition2.CellBackColor = Color.FromArgb(247, 87, 67)
+                objCondition.RowBackColor = Color.FromArgb(247, 87, 67)
+                objCondition2.RowBackColor = Color.FromArgb(247, 87, 67)
 
                 Dim objCondition3 As New Telerik.WinControls.UI.ConditionalFormattingObject("Genehmigt", Telerik.WinControls.UI.ConditionTypes.Equal, "Genehmigt", "", True)
                 Dim objCondition4 As New Telerik.WinControls.UI.ConditionalFormattingObject("Valid", Telerik.WinControls.UI.ConditionTypes.Equal, "Valid", "", True)
 
-                objCondition3.CellBackColor = Color.LightGreen
-                objCondition4.CellBackColor = Color.LightGreen
+                objCondition3.RowBackColor = Color.LightGreen
+                objCondition4.RowBackColor = Color.LightGreen
                 RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition)
                 RadGridViewAuswahlliste.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition2)
 
@@ -207,7 +206,6 @@
                 descriptor.GroupNames.Add("Bearbeitungsstatus", System.ComponentModel.ListSortDirection.Ascending)
                 Me.RadGridViewAuswahlliste.GroupDescriptors.Add(descriptor)
             End If
-
 
         Catch ex As Exception
 
@@ -340,7 +338,7 @@
 
 #Region "Konformitätsbewertungsprozess Routinen Client"
     ''' <summary>
-    ''' Neuen Eichprozess anlegen 
+    ''' Neuen Eichprozess anlegen
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
@@ -592,22 +590,18 @@
 
                 If o.Count = 0 Then
                     Dim objCondition As New Telerik.WinControls.UI.ConditionalFormattingObject("Fehlerhaft", Telerik.WinControls.UI.ConditionTypes.Equal, "Fehlerhaft", "", True)
-                    objCondition.CellBackColor = Color.FromArgb(247, 87, 67)
-
+                    objCondition.RowBackColor = Color.FromArgb(247, 87, 67)
 
                     Dim objCondition2 As New Telerik.WinControls.UI.ConditionalFormattingObject("Genehmigt", Telerik.WinControls.UI.ConditionTypes.Equal, "Genehmigt", "", True)
-                    objCondition2.CellBackColor = Color.LightGreen
-
+                    objCondition2.RowBackColor = Color.LightGreen
 
                     RadGridViewRHEWAAlle.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition)
                     RadGridViewRHEWAAlle.Columns("Bearbeitungsstatus").ConditionalFormattingObjectList.Add(objCondition2)
-
 
                     Dim descriptor As New Telerik.WinControls.Data.GroupDescriptor()
                     descriptor.GroupNames.Add("Bearbeitungsstatus", System.ComponentModel.ListSortDirection.Ascending)
                     Me.RadGridViewRHEWAAlle.GroupDescriptors.Add(descriptor)
                 End If
-
 
             Catch ex As Exception
 
@@ -626,8 +620,6 @@
 
                 End Try
             End Try
-
-
 
             RadGridViewRHEWAAlle.EnableFiltering = True
             RadGridViewRHEWAAlle.MasterTemplate.ShowHeaderCellButtons = True
@@ -714,7 +706,6 @@
     '    End If
     'End Sub
 
-
 #Region "Genehmigen / Ablehnen"
     ''' <summary>
     ''' Eichprozess genehmigen
@@ -776,7 +767,6 @@
         If RadGridViewRHEWAAlle.SelectedRows.Count = 0 Then Exit Sub
         If Not TypeOf e.Row Is Telerik.WinControls.UI.GridViewDataRowInfo Then Exit Sub
 
-
         Try
             If (RadGridViewRHEWAAlle.Columns(e.ColumnIndex).Name = "AnhangPfad") Then
 
@@ -815,7 +805,6 @@
             End If
         End If
 
-
     End Sub
 
     Public Function InitDownloadDateiVonFTP(ByVal vorgangsnummer As String) As String
@@ -828,9 +817,7 @@
                 Return False
             End Try
 
-
             Dim objFTPDaten = Webcontext.GetFTPCredentials(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
-
 
             'aufbereiten der für FTP benötigten Verbindungsdaten
             If Not objFTPDaten Is Nothing Then
@@ -855,7 +842,6 @@
                 password = RijndaelSimple.Decrypt(password, passPhrase, saltValue, hashAlgorithm, passwordIterations, initVector,
                     keySize)
 
-
                 Dim file As New IO.FileInfo(objFTPDaten.FTPFilePath)
                 Dim fileName As String = file.Name
 
@@ -876,7 +862,7 @@
                 'downloadgroße ermitteln
                 Dim filesize As Long
                 filesize = objFTP.GetFileSize(objFTPDaten.FTPServername, objFTPDaten.FTPUserName, password, fileName)
-                If filesize = 0 Then Return "" 'abbruch 
+                If filesize = 0 Then Return "" 'abbruch
                 BackgroundWorkerDownloadFromFTP.ReportProgress(filesize)
                 Try
                     'datei download. FTPUploadPath bekommt den reelen Pfad auf dem FTP Server
@@ -904,8 +890,6 @@
         Return ""
     End Function
 
-
-
     Private Sub BackgroundWorkerDownloadFromFTP_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorkerDownloadFromFTP.DoWork
         Dim vorgangsnummer As String = e.Argument
         e.Result = InitDownloadDateiVonFTP(vorgangsnummer)
@@ -916,7 +900,6 @@
         Me.RadProgressBar.Visible = False
         Me.RadProgressBar.Value1 = 0
         RadProgressBar.Text = ""
-
 
         Dim filepath As String = e.Result
         If filepath.Equals("") = False Then
@@ -996,7 +979,6 @@
                     'prüfen ob Eichprozesse die versendet wurden genehmigt oder abgelehnt wurden
                     clsWebserviceFunctions.GetGenehmigungsstatus(bolNeuGenehmigung)
 
-
                     AktuellerBenutzer.Instance.LetztesUpdate = Date.Now
                     AktuellerBenutzer.SaveSettings()
 
@@ -1040,7 +1022,6 @@
             Dim bolNeuAWG As Boolean = False
             Dim bolNeuGenehmigung As Boolean = False
 
-
             'neue Stammdaten zum Benutzer holen
             clsWebserviceFunctions.GetNeueStammdaten(bolNeuStammdaten)
 
@@ -1049,11 +1030,8 @@
             'prüfen ob es neue AWG gibt
             clsWebserviceFunctions.GetNeuesAWG(bolNeuAWG)
 
-
-
             AktuellerBenutzer.Instance.LetztesUpdate = Date.Now
             AktuellerBenutzer.SaveSettings()
-
 
             'prüfen ob Eichprozesse die versendet wurden genehmigt oder abgelehnt wurden
             clsWebserviceFunctions.GetGenehmigungsstatus(bolNeuGenehmigung)
@@ -1098,6 +1076,5 @@
     Protected Friend Overrides Function ValidationNeeded() As Boolean
         Return True
     End Function
-
 
 End Class

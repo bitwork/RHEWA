@@ -1,17 +1,15 @@
-﻿' 11.03.2014 hill EichsoftwareAdministrationsClient frmAuswahllisteEichmarkenverwaltung.vb 
+﻿' 11.03.2014 hill EichsoftwareAdministrationsClient frmAuswahllisteEichmarkenverwaltung.vb
 Imports System
 Imports System.IO
 Imports Telerik.WinControls.UI
 
 Public Class FrmAuswahllisteEichmarkenverwaltung
 
-    #Region "Deklaration"
+#Region "Deklaration"
     Private EditMode As Boolean = False 'gibt an ob ich im Editierungsmodus bin (beim Klick auf bearbeiten)
-    #End Region
+#End Region
 
-
-
-    #Region "Methoden"
+#Region "Methoden"
     Private Sub FormatGrid()
         Try
             Try
@@ -142,7 +140,7 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
 
         End Try
 
-            RadGridView1.BestFitColumns()
+        RadGridView1.BestFitColumns()
     End Sub
 
     Private Sub FormatColumnHeader(ByVal col As Telerik.WinControls.UI.GridViewColumn)
@@ -161,276 +159,265 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
     Private Sub LoadFromDatabase()
         Try
 
-        
-        SuspendLayout()
-        'Eichmarken Grid
-        Using Context As New EichenEntities
-            'Daten aus eichmarkenverwaltungstabelle und Benutzertabelle zusammenführen. Fürs Databinding Casten in einen neuen Typen
+            SuspendLayout()
+            'Eichmarken Grid
+            Using Context As New EichenEntities
+                'Daten aus eichmarkenverwaltungstabelle und Benutzertabelle zusammenführen. Fürs Databinding Casten in einen neuen Typen
                 Dim Data = From Eichmarken In Context.ServerEichmarkenverwaltung
-                Join Benutzer In Context.Benutzer On Eichmarken.FK_BenutzerID Equals Benutzer.ID
-                Join Firma In Context.Firmen On Firma.ID Equals Benutzer.Firma_FK
-                Select New With {
-                    Eichmarken.ID, _
-                    Benutzer.Firma_FK, _
-                    Eichmarken.ZurBearbeitungGesperrtDurch, _
-                    Benutzer.Nachname, _
-                    Benutzer.Vorname, _
-                    .Firma = Firma.Name, _
-                    Firma.Land, _
-                    Eichmarken.HEKennung, _
-                    Eichmarken.Bemerkung, _
-                    Eichmarken.BenannteStelleAnzahl, _
-                    Eichmarken.BenannteStelleAnzahlMeldestand, _
-                    Eichmarken.CEAnzahl, _
-                    Eichmarken.CEAnzahlMeldestand, _
-                      Eichmarken.CE2016Anzahl, _
-                    Eichmarken.CE2016AnzahlMeldestand, _
-                    Eichmarken.Eichsiegel13x13Anzahl, _
-                    Eichmarken.Eichsiegel13x13AnzahlMeldestand, _
-                    Eichmarken.EichsiegelRundAnzahl, _
-                    Eichmarken.EichsiegelRundAnzahlMeldestand, _
-                    Eichmarken.GruenesMAnzahl, _
-                    Eichmarken.GruenesMAnzahlMeldestand, _
-                    Eichmarken.HinweismarkeGelochtAnzahl, _
-                    Eichmarken.HinweismarkeGelochtAnzahlMeldestand, _
-                    Eichmarken.FehlmengeBenannteStelle0103, _
-                    Eichmarken.FehlmengeBenannteStelle0111, _
-                    Eichmarken.FehlmengeHinweismarken, _
-                    Eichmarken.FehlmengeSicherungsmarkegross, _
-                    Eichmarken.FehlmengeSicherungsmarkeklein, _
-                    Eichmarken.zerstoerteMarke0103, _
-                    Eichmarken.Archiv2007_BenannteStelle0298, _
-                    Eichmarken.Archiv2007_Eichungen, _
-                    Eichmarken.Archiv2007_Hinweismarke, _
-                    Eichmarken.Archiv2007_SicherungsmarkeGross, _
-                    Eichmarken.Archiv2007_SicherungsmarkeKlein, _
-                    Eichmarken.Archiv2008_BenannteStelle0298, _
-                    Eichmarken.Archiv2008_Eichungen, _
-                    Eichmarken.Archiv2008_Hinweismarke, _
-                    Eichmarken.Archiv2008_SicherungsmarkeGross, _
-                    Eichmarken.Archiv2008_SicherungsmarkeKlein, _
-                    Eichmarken.Archiv2009_BenannteStelle0298, _
-                    Eichmarken.Archiv2009_Eichungen, _
-                    Eichmarken.Archiv2009_Hinweismarke, _
-                    Eichmarken.Archiv2009_SicherungsmarkeGross, _
-                    Eichmarken.Archiv2009_SicherungsmarkeKlein, _
-                    Eichmarken.Archiv2010_BenannteStelle0298, _
-                    Eichmarken.Archiv2010_Eichungen, _
-                    Eichmarken.Archiv2010_Hinweismarke, _
-                    Eichmarken.Archiv2010_SicherungsmarkeGross, _
-                    Eichmarken.Archiv2010_SicherungsmarkeKlein, _
-                    Eichmarken.Archiv2011_BenannteStelle0298, _
-                    Eichmarken.Archiv2011_BenannteStelle0103, _
-                    Eichmarken.Archiv2011_Eichungen, _
-                    Eichmarken.Archiv2011_Hinweismarke, _
-                    Eichmarken.Archiv2011_SicherungsmarkeGross, _
-                    Eichmarken.Archiv2011_SicherungsmarkeKlein, _
-                    Eichmarken.Archiv2012_BenannteStelle0103, _
-                    Eichmarken.Archiv2012_Eichungen, _
-                    Eichmarken.Archiv2012_Hinweismarke, _
-                    Eichmarken.Archiv2012_SicherungsmarkeGross, _
-                    Eichmarken.Archiv2012_SicherungsmarkeKlein, _
-                    Eichmarken.Archiv2013_BenannteStelle0103, _
-                    Eichmarken.Archiv2013_Eichungen, _
-                    Eichmarken.Archiv2013_Hinweismarke, _
-                    Eichmarken.Archiv2013_SicherungsmarkeGross, _
-                    Eichmarken.Archiv2013_SicherungsmarkeKlein, _
-                    Eichmarken.Archiv2014_BenannteStelle0103, _
-                    Eichmarken.Archiv2014_BenannteStelle0111, _
-                    Eichmarken.Archiv2014_Eichungen, _
-                    Eichmarken.Archiv2014_Hinweismarke, _
-                    Eichmarken.Archiv2014_SicherungsmarkeGross, _
-                    Eichmarken.Archiv2014_SicherungsmarkeKlein, _
-                    Eichmarken.FK_BenutzerID
-                }
+                           Join Benutzer In Context.Benutzer On Eichmarken.FK_BenutzerID Equals Benutzer.ID
+                           Join Firma In Context.Firmen On Firma.ID Equals Benutzer.Firma_FK
+                           Select New With {
+                               Eichmarken.ID,
+                               Benutzer.Firma_FK,
+                               Eichmarken.ZurBearbeitungGesperrtDurch,
+                               Benutzer.Nachname,
+                               Benutzer.Vorname,
+                               .Firma = Firma.Name,
+                               Firma.Land,
+                               Eichmarken.HEKennung,
+                               Eichmarken.Bemerkung,
+                               Eichmarken.BenannteStelleAnzahl,
+                               Eichmarken.BenannteStelleAnzahlMeldestand,
+                               Eichmarken.CEAnzahl,
+                               Eichmarken.CEAnzahlMeldestand,
+                                 Eichmarken.CE2016Anzahl,
+                               Eichmarken.CE2016AnzahlMeldestand,
+                               Eichmarken.Eichsiegel13x13Anzahl,
+                               Eichmarken.Eichsiegel13x13AnzahlMeldestand,
+                               Eichmarken.EichsiegelRundAnzahl,
+                               Eichmarken.EichsiegelRundAnzahlMeldestand,
+                               Eichmarken.GruenesMAnzahl,
+                               Eichmarken.GruenesMAnzahlMeldestand,
+                               Eichmarken.HinweismarkeGelochtAnzahl,
+                               Eichmarken.HinweismarkeGelochtAnzahlMeldestand,
+                               Eichmarken.FehlmengeBenannteStelle0103,
+                               Eichmarken.FehlmengeBenannteStelle0111,
+                               Eichmarken.FehlmengeHinweismarken,
+                               Eichmarken.FehlmengeSicherungsmarkegross,
+                               Eichmarken.FehlmengeSicherungsmarkeklein,
+                               Eichmarken.zerstoerteMarke0103,
+                               Eichmarken.Archiv2007_BenannteStelle0298,
+                               Eichmarken.Archiv2007_Eichungen,
+                               Eichmarken.Archiv2007_Hinweismarke,
+                               Eichmarken.Archiv2007_SicherungsmarkeGross,
+                               Eichmarken.Archiv2007_SicherungsmarkeKlein,
+                               Eichmarken.Archiv2008_BenannteStelle0298,
+                               Eichmarken.Archiv2008_Eichungen,
+                               Eichmarken.Archiv2008_Hinweismarke,
+                               Eichmarken.Archiv2008_SicherungsmarkeGross,
+                               Eichmarken.Archiv2008_SicherungsmarkeKlein,
+                               Eichmarken.Archiv2009_BenannteStelle0298,
+                               Eichmarken.Archiv2009_Eichungen,
+                               Eichmarken.Archiv2009_Hinweismarke,
+                               Eichmarken.Archiv2009_SicherungsmarkeGross,
+                               Eichmarken.Archiv2009_SicherungsmarkeKlein,
+                               Eichmarken.Archiv2010_BenannteStelle0298,
+                               Eichmarken.Archiv2010_Eichungen,
+                               Eichmarken.Archiv2010_Hinweismarke,
+                               Eichmarken.Archiv2010_SicherungsmarkeGross,
+                               Eichmarken.Archiv2010_SicherungsmarkeKlein,
+                               Eichmarken.Archiv2011_BenannteStelle0298,
+                               Eichmarken.Archiv2011_BenannteStelle0103,
+                               Eichmarken.Archiv2011_Eichungen,
+                               Eichmarken.Archiv2011_Hinweismarke,
+                               Eichmarken.Archiv2011_SicherungsmarkeGross,
+                               Eichmarken.Archiv2011_SicherungsmarkeKlein,
+                               Eichmarken.Archiv2012_BenannteStelle0103,
+                               Eichmarken.Archiv2012_Eichungen,
+                               Eichmarken.Archiv2012_Hinweismarke,
+                               Eichmarken.Archiv2012_SicherungsmarkeGross,
+                               Eichmarken.Archiv2012_SicherungsmarkeKlein,
+                               Eichmarken.Archiv2013_BenannteStelle0103,
+                               Eichmarken.Archiv2013_Eichungen,
+                               Eichmarken.Archiv2013_Hinweismarke,
+                               Eichmarken.Archiv2013_SicherungsmarkeGross,
+                               Eichmarken.Archiv2013_SicherungsmarkeKlein,
+                               Eichmarken.Archiv2014_BenannteStelle0103,
+                               Eichmarken.Archiv2014_BenannteStelle0111,
+                               Eichmarken.Archiv2014_Eichungen,
+                               Eichmarken.Archiv2014_Hinweismarke,
+                               Eichmarken.Archiv2014_SicherungsmarkeGross,
+                               Eichmarken.Archiv2014_SicherungsmarkeKlein,
+                               Eichmarken.FK_BenutzerID
+                           }
 
+                'databinding
+                RadGridView1.DataSource = Data.ToList
+                '##################################################################
 
-            'databinding
-            RadGridView1.DataSource = Data.ToList
-            '##################################################################
+                'Kindtabelle Firmendaten
 
-            'Kindtabelle Firmendaten
+                '##################################################################
 
-            '##################################################################
+                'alle Firmen auslesen
 
-
-
-            'alle Firmen auslesen
-
-            'Das entityframework machte hier Probleme mit dem doppelten left outer join. deswegen ein umweg.
-            'es werden erst alle Firmendaten geladen, dann alle Zuordnungsdaten und dann diese Daten in einer Datatable zusammengeführt. Alles in einem Schritt wäre natürlich schöner gewesen
+                'Das entityframework machte hier Probleme mit dem doppelten left outer join. deswegen ein umweg.
+                'es werden erst alle Firmendaten geladen, dann alle Zuordnungsdaten und dann diese Daten in einer Datatable zusammengeführt. Alles in einem Schritt wäre natürlich schöner gewesen
                 Dim Firmen = From firma In Context.Firmen
-                From firmenzusatzdaten In firma.ServerFirmenZusatzdaten.DefaultIfEmpty
-                Select New With {
-                    .id = firma.ID, _
-                    firma.Name, _
-                    firma.Telefon, _
-                    firma.Strasse, _
-                    firma.Ort, _
-                    firma.PLZ, _
-                    firma.Land, _
-                    firmenzusatzdaten.Abrechnungsmodell, _
-                    firmenzusatzdaten.BeginnVertrag, _
-                    firmenzusatzdaten.EndeVertrag, _
-                    firmenzusatzdaten.Erstschulung, _
-                    firmenzusatzdaten.LetztesAudit, _
-                    firmenzusatzdaten.MonatJahrZertifikat, _
-                    firmenzusatzdaten.Nachschulung, _
-                    firmenzusatzdaten.Qualifizierungspauschale
-                }
+                             From firmenzusatzdaten In firma.ServerFirmenZusatzdaten.DefaultIfEmpty
+                             Select New With {
+                                 .id = firma.ID,
+                                 firma.Name,
+                                 firma.Telefon,
+                                 firma.Strasse,
+                                 firma.Ort,
+                                 firma.PLZ,
+                                 firma.Land,
+                                 firmenzusatzdaten.Abrechnungsmodell,
+                                 firmenzusatzdaten.BeginnVertrag,
+                                 firmenzusatzdaten.EndeVertrag,
+                                 firmenzusatzdaten.Erstschulung,
+                                 firmenzusatzdaten.LetztesAudit,
+                                 firmenzusatzdaten.MonatJahrZertifikat,
+                                 firmenzusatzdaten.Nachschulung,
+                                 firmenzusatzdaten.Qualifizierungspauschale
+                             }
 
-            'es gibt DB Seitig eine Abhängigkeit zwischen Firmen und Firmenzusatzdaten. Deswegen wurde hier kein JOIN gewählt. WICHTIG: die Firmen zusatzdaten werden nicht aus dem Context geladen, sondern von "firma". Dies klappt nur weil durch die Beziehung eine Navigation property existiert
+                'es gibt DB Seitig eine Abhängigkeit zwischen Firmen und Firmenzusatzdaten. Deswegen wurde hier kein JOIN gewählt. WICHTIG: die Firmen zusatzdaten werden nicht aus dem Context geladen, sondern von "firma". Dies klappt nur weil durch die Beziehung eine Navigation property existiert
 
-            Dim FirmenZuordnung = (From Zuordnung In Context.ServerLookupVertragspartnerFirma).ToList
+                Dim FirmenZuordnung = (From Zuordnung In Context.ServerLookupVertragspartnerFirma).ToList
 
-            Dim dtFirmenKomplett As New DataTable("Firmen")
-            dtFirmenKomplett.Columns.Add("ID")
-            dtFirmenKomplett.Columns.Add("Name")
-            dtFirmenKomplett.Columns.Add("Telefon")
-            dtFirmenKomplett.Columns.Add("Strasse")
-            dtFirmenKomplett.Columns.Add("Ort")
-            dtFirmenKomplett.Columns.Add("PLZ")
-            dtFirmenKomplett.Columns.Add("Land")
-            dtFirmenKomplett.Columns.Add("Abrechnungsmodell")
-            dtFirmenKomplett.Columns.Add("BeginnVertrag")
-            dtFirmenKomplett.Columns.Add("EndeVertrag")
-            dtFirmenKomplett.Columns.Add("Erstschulung")
-            dtFirmenKomplett.Columns.Add("LetztesAudit")
-            dtFirmenKomplett.Columns.Add("MonatJahrZertifikat")
-            dtFirmenKomplett.Columns.Add("Nachschulung")
-            dtFirmenKomplett.Columns.Add("Qualifizierungspauschale")
+                Dim dtFirmenKomplett As New DataTable("Firmen")
+                dtFirmenKomplett.Columns.Add("ID")
+                dtFirmenKomplett.Columns.Add("Name")
+                dtFirmenKomplett.Columns.Add("Telefon")
+                dtFirmenKomplett.Columns.Add("Strasse")
+                dtFirmenKomplett.Columns.Add("Ort")
+                dtFirmenKomplett.Columns.Add("PLZ")
+                dtFirmenKomplett.Columns.Add("Land")
+                dtFirmenKomplett.Columns.Add("Abrechnungsmodell")
+                dtFirmenKomplett.Columns.Add("BeginnVertrag")
+                dtFirmenKomplett.Columns.Add("EndeVertrag")
+                dtFirmenKomplett.Columns.Add("Erstschulung")
+                dtFirmenKomplett.Columns.Add("LetztesAudit")
+                dtFirmenKomplett.Columns.Add("MonatJahrZertifikat")
+                dtFirmenKomplett.Columns.Add("Nachschulung")
+                dtFirmenKomplett.Columns.Add("Qualifizierungspauschale")
 
-            dtFirmenKomplett.Columns.Add("Hauptfirma_FK") 'falls die aktuelle Firma eine Vertragsfirma ist, steht hier drin der Verweis zur Hauptfirma
+                dtFirmenKomplett.Columns.Add("Hauptfirma_FK") 'falls die aktuelle Firma eine Vertragsfirma ist, steht hier drin der Verweis zur Hauptfirma
 
-            'umwandeln von entität zu DT. Leider notwendig.
-            For Each Firma In Firmen
-                Dim nrow As DataRow = dtFirmenKomplett.NewRow
-                nrow.Item("ID") = Firma.id
-                nrow.Item("Name") = Firma.Name
-                nrow.Item("Telefon") = Firma.Telefon
-                nrow.Item("Strasse") = Firma.Strasse
-                nrow.Item("Ort") = Firma.Ort
-                nrow.Item("PLZ") = Firma.PLZ
-                nrow.Item("Land") = Firma.Land
+                'umwandeln von entität zu DT. Leider notwendig.
+                For Each Firma In Firmen
+                    Dim nrow As DataRow = dtFirmenKomplett.NewRow
+                    nrow.Item("ID") = Firma.id
+                    nrow.Item("Name") = Firma.Name
+                    nrow.Item("Telefon") = Firma.Telefon
+                    nrow.Item("Strasse") = Firma.Strasse
+                    nrow.Item("Ort") = Firma.Ort
+                    nrow.Item("PLZ") = Firma.PLZ
+                    nrow.Item("Land") = Firma.Land
 
+                    Try
+                        nrow.Item("Abrechnungsmodell") = CDate(Firma.Abrechnungsmodell).Date.ToShortDateString
+                    Catch e As Exception
+                        Debug.WriteLine(e.Message)
+                        Debug.WriteLine(e.StackTrace)
+                    End Try
+                    Try
+                        nrow.Item("BeginnVertrag") = CDate(Firma.BeginnVertrag).Date.ToShortDateString
+                    Catch e As Exception
+                        Debug.WriteLine(e.Message)
+                        Debug.WriteLine(e.StackTrace)
+                    End Try
+                    Try
+                        nrow.Item("EndeVertrag") = CDate(Firma.EndeVertrag).Date.ToShortDateString
+                    Catch e As Exception
+                        Debug.WriteLine(e.Message)
+                        Debug.WriteLine(e.StackTrace)
+                    End Try
+                    Try
+                        nrow.Item("Erstschulung") = CDate(Firma.Erstschulung).Date.ToShortDateString
+                    Catch e As Exception
+                        Debug.WriteLine(e.Message)
+                        Debug.WriteLine(e.StackTrace)
+                    End Try
+                    Try
+                        nrow.Item("LetztesAudit") = CDate(Firma.LetztesAudit).Date.ToShortDateString
+                    Catch e As Exception
+                        Debug.WriteLine(e.Message)
+                        Debug.WriteLine(e.StackTrace)
+                    End Try
+                    Try
+                        nrow.Item("Nachschulung") = CDate(Firma.Nachschulung).Date.ToShortDateString
+                    Catch e As Exception
+                        Debug.WriteLine(e.Message)
+                        Debug.WriteLine(e.StackTrace)
+                    End Try
 
-                Try
-                    nrow.Item("Abrechnungsmodell") = CDate(Firma.Abrechnungsmodell).Date.ToShortDateString
-                Catch e As Exception
-                    Debug.WriteLine(e.Message)
-                    Debug.WriteLine(e.StackTrace)
-                End Try
-                Try
-                    nrow.Item("BeginnVertrag") = CDate(Firma.BeginnVertrag).Date.ToShortDateString
-                Catch e As Exception
-                    Debug.WriteLine(e.Message)
-                    Debug.WriteLine(e.StackTrace)
-                End Try
-                Try
-                    nrow.Item("EndeVertrag") = CDate(Firma.EndeVertrag).Date.ToShortDateString
-                Catch e As Exception
-                    Debug.WriteLine(e.Message)
-                    Debug.WriteLine(e.StackTrace)
-                End Try
-                Try
-                    nrow.Item("Erstschulung") = CDate(Firma.Erstschulung).Date.ToShortDateString
-                Catch e As Exception
-                    Debug.WriteLine(e.Message)
-                    Debug.WriteLine(e.StackTrace)
-                End Try
-                Try
-                    nrow.Item("LetztesAudit") = CDate(Firma.LetztesAudit).Date.ToShortDateString
-                Catch e As Exception
-                    Debug.WriteLine(e.Message)
-                    Debug.WriteLine(e.StackTrace)
-                End Try
-                Try
-                    nrow.Item("Nachschulung") = CDate(Firma.Nachschulung).Date.ToShortDateString
-                Catch e As Exception
-                    Debug.WriteLine(e.Message)
-                    Debug.WriteLine(e.StackTrace)
-                End Try
+                    nrow.Item("MonatJahrZertifikat") = Firma.MonatJahrZertifikat
+                    nrow.Item("Qualifizierungspauschale") = Firma.Qualifizierungspauschale
 
+                    'Über Firma prüfen ob es eine Hauptfirma gibt
+                    If FirmenZuordnung.Contains((From firm In FirmenZuordnung Where firm.Vertragspartner_FK = Firma.id).FirstOrDefault) Then
+                        'laut Herrn Strack, kann eine Firma immer nur eine Hauptfirma haben. Eine Hauptfirma aber n Firmen
+                        Dim hauptfirmaID = (From firm In FirmenZuordnung Where firm.Vertragspartner_FK = Firma.id Select firm.Firma_FK).FirstOrDefault
+                        nrow.Item("Hauptfirma_FK") = hauptfirmaID 'falls die aktuelle Firma eine Vertragsfirma ist, steht hier drin der Verweis zur Hauptfirma
 
+                    End If
 
-                nrow.Item("MonatJahrZertifikat") = Firma.MonatJahrZertifikat
-                nrow.Item("Qualifizierungspauschale") = Firma.Qualifizierungspauschale
+                    dtFirmenKomplett.Rows.Add(nrow)
+                Next
 
+                '###########################################
+                'MAPPING über Benutzer die Firmen Hierarisch zuordnen
+                '##########################################
 
-                'Über Firma prüfen ob es eine Hauptfirma gibt
-                If FirmenZuordnung.Contains((From firm In FirmenZuordnung Where firm.Vertragspartner_FK = Firma.id).FirstOrDefault) Then
-                    'laut Herrn Strack, kann eine Firma immer nur eine Hauptfirma haben. Eine Hauptfirma aber n Firmen
-                    Dim hauptfirmaID = (From firm In FirmenZuordnung Where firm.Vertragspartner_FK = Firma.id Select firm.Firma_FK).FirstOrDefault
-                    nrow.Item("Hauptfirma_FK") = hauptfirmaID 'falls die aktuelle Firma eine Vertragsfirma ist, steht hier drin der Verweis zur Hauptfirma
+                'Mapping zur Firmentabelle
+                Dim SecondLevelTemplateFirmen As New GridViewTemplate()
+                SecondLevelTemplateFirmen.DataSource = dtFirmenKomplett.DefaultView
+                SecondLevelTemplateFirmen.AllowAddNewRow = False
+                SecondLevelTemplateFirmen.AllowColumnChooser = False
+                SecondLevelTemplateFirmen.AllowColumnHeaderContextMenu = False
+                SecondLevelTemplateFirmen.AllowColumnReorder = False
+                SecondLevelTemplateFirmen.AllowDeleteRow = False
+                SecondLevelTemplateFirmen.AllowDragToGroup = False
+                SecondLevelTemplateFirmen.AllowEditRow = False
+                SecondLevelTemplateFirmen.BestFitColumns()
 
-                End If
+                'Relation aufbauen zwischen Parent und Child über Firma des Benutzers
+                RadGridView1.MasterTemplate.Templates.Add(SecondLevelTemplateFirmen)
 
-                dtFirmenKomplett.Rows.Add(nrow)
-            Next
+                Dim relation As New GridViewRelation(RadGridView1.MasterTemplate)
+                relation.ChildTemplate = SecondLevelTemplateFirmen
+                relation.RelationName = "BenutzerFirma"
+                relation.ParentColumnNames.Add("Firma_FK")
+                relation.ChildColumnNames.Add("ID")
 
-            '###########################################
-            'MAPPING über Benutzer die Firmen Hierarisch zuordnen
-            '##########################################
+                RadGridView1.Relations.Add(relation)
 
-            'Mapping zur Firmentabelle
-            Dim SecondLevelTemplateFirmen As New GridViewTemplate()
-            SecondLevelTemplateFirmen.DataSource = dtFirmenKomplett.DefaultView
-            SecondLevelTemplateFirmen.AllowAddNewRow = False
-            SecondLevelTemplateFirmen.AllowColumnChooser = False
-            SecondLevelTemplateFirmen.AllowColumnHeaderContextMenu = False
-            SecondLevelTemplateFirmen.AllowColumnReorder = False
-            SecondLevelTemplateFirmen.AllowDeleteRow = False
-            SecondLevelTemplateFirmen.AllowDragToGroup = False
-            SecondLevelTemplateFirmen.AllowEditRow = False
-            SecondLevelTemplateFirmen.BestFitColumns()
+                '#########################################################
+                ' MAPPING Selbstreferenz des Templates erzeugen um Hauptfirma zum Vertragspartner zuzuordnen
+                '#########################################################
+                '      Me.RadGridView1.Relations.AddSelfReference(template, "Hauptfirma_FK", "ID")
 
-            'Relation aufbauen zwischen Parent und Child über Firma des Benutzers
-            RadGridView1.MasterTemplate.Templates.Add(SecondLevelTemplateFirmen)
+                Dim dtHauptfirmenView As New DataView(dtFirmenKomplett)
+                dtHauptfirmenView.RowFilter = "Hauptfirma_FK is NULL"
 
-            Dim relation As New GridViewRelation(RadGridView1.MasterTemplate)
-            relation.ChildTemplate = SecondLevelTemplateFirmen
-            relation.RelationName = "BenutzerFirma"
-            relation.ParentColumnNames.Add("Firma_FK")
-            relation.ChildColumnNames.Add("ID")
+                'Mapping zur Firmentabelle
+                Dim ThirdLevelTemplateHauptfirmen = New GridViewTemplate()
+                ThirdLevelTemplateHauptfirmen.DataSource = dtHauptfirmenView.ToTable
+                ThirdLevelTemplateHauptfirmen.AllowAddNewRow = False
+                ThirdLevelTemplateHauptfirmen.AllowColumnChooser = False
+                ThirdLevelTemplateHauptfirmen.AllowColumnHeaderContextMenu = False
+                ThirdLevelTemplateHauptfirmen.AllowColumnReorder = False
+                ThirdLevelTemplateHauptfirmen.AllowDeleteRow = False
+                ThirdLevelTemplateHauptfirmen.AllowDragToGroup = False
+                ThirdLevelTemplateHauptfirmen.AllowEditRow = False
+                ThirdLevelTemplateHauptfirmen.BestFitColumns()
 
+                'Relation aufbauen zwischen Parent und Child über Firma und Hauptfirma
+                SecondLevelTemplateFirmen.Templates.Add(ThirdLevelTemplateHauptfirmen)
 
-            RadGridView1.Relations.Add(relation)
+                Dim relation2 As New GridViewRelation(SecondLevelTemplateFirmen)
+                relation2.ChildTemplate = ThirdLevelTemplateHauptfirmen
+                relation2.RelationName = "FirmaHauptfirma"
+                relation2.ParentColumnNames.Add("Hauptfirma_FK")
+                relation2.ChildColumnNames.Add("ID")
 
-            '#########################################################
-            ' MAPPING Selbstreferenz des Templates erzeugen um Hauptfirma zum Vertragspartner zuzuordnen
-            '#########################################################
-            '      Me.RadGridView1.Relations.AddSelfReference(template, "Hauptfirma_FK", "ID")
+                RadGridView1.Relations.Add(relation2)
 
-            Dim dtHauptfirmenView As New DataView(dtFirmenKomplett)
-            dtHauptfirmenView.RowFilter = "Hauptfirma_FK is NULL"
-
-
-            'Mapping zur Firmentabelle
-            Dim ThirdLevelTemplateHauptfirmen = New GridViewTemplate()
-            ThirdLevelTemplateHauptfirmen.DataSource = dtHauptfirmenView.ToTable
-            ThirdLevelTemplateHauptfirmen.AllowAddNewRow = False
-            ThirdLevelTemplateHauptfirmen.AllowColumnChooser = False
-            ThirdLevelTemplateHauptfirmen.AllowColumnHeaderContextMenu = False
-            ThirdLevelTemplateHauptfirmen.AllowColumnReorder = False
-            ThirdLevelTemplateHauptfirmen.AllowDeleteRow = False
-            ThirdLevelTemplateHauptfirmen.AllowDragToGroup = False
-            ThirdLevelTemplateHauptfirmen.AllowEditRow = False
-            ThirdLevelTemplateHauptfirmen.BestFitColumns()
-
-            'Relation aufbauen zwischen Parent und Child über Firma und Hauptfirma
-            SecondLevelTemplateFirmen.Templates.Add(ThirdLevelTemplateHauptfirmen)
-
-            Dim relation2 As New GridViewRelation(SecondLevelTemplateFirmen)
-            relation2.ChildTemplate = ThirdLevelTemplateHauptfirmen
-            relation2.RelationName = "FirmaHauptfirma"
-            relation2.ParentColumnNames.Add("Hauptfirma_FK")
-            relation2.ChildColumnNames.Add("ID")
-
-            RadGridView1.Relations.Add(relation2)
-
-
-            'Grid Formatieren
-            FormatGrid()
+                'Grid Formatieren
+                FormatGrid()
             End Using
 
             ResumeLayout()
@@ -477,7 +464,6 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
 
                         If Not row.DataBoundItem Is Nothing Then
                             If Not objEichmarke Is Nothing Then
-
 
                                 Try
                                     MergeEichmarkenItems(row.DataBoundItem, objEichmarke)
@@ -663,9 +649,9 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
         End Try
     End Sub
 
-    #End Region
+#End Region
 
-    #Region "Form Events"
+#Region "Form Events"
 
     Private Sub FrmAuswahllisteWZ_Load(sender As Object, e As EventArgs) Handles Me.Load
         LoadFromDatabase()
@@ -692,7 +678,7 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
 
     End Sub
 
-    #Region "Bearbeitungs / Speicheroutine"
+#Region "Bearbeitungs / Speicheroutine"
     Private Sub RadButtonBearbeiten_Click(sender As Object, e As EventArgs) Handles RadButtonBearbeiten.Click
         RadButtonBearbeiten.Visible = False
         RadButtonAbbrechen.Visible = True
@@ -726,11 +712,11 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
         LoadFromDatabase()
     End Sub
 
-    #End Region
+#End Region
 
-    #End Region
+#End Region
 
-    #Region "Grid Events"
+#Region "Grid Events"
     Private Sub RadGridView1_CellFormatting(sender As Object, e As CellFormattingEventArgs) Handles RadGridView1.CellFormatting
         Try
             Dim template As GridViewTemplate = e.Row.ViewTemplate
@@ -789,7 +775,6 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
                 e.CellElement.DrawFill = True
                 e.CellElement.GradientStyle = Telerik.WinControls.GradientStyles.Solid
                 e.CellElement.BackColor = Color.FromArgb(206, 209, 0)
-
 
             End If
         Catch ex As Exception
@@ -864,7 +849,6 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
                 End If
             End If
 
-
         End Using
     End Sub
 
@@ -901,15 +885,11 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
     '            e.CellElement.GradientStyle = Telerik.WinControls.GradientStyles.Linear
     '            e.CellElement.BackColor = Color.White
 
-
-
     '        End If
     '    Catch ex As Exception
     '    End Try
     'End Sub
 
-    #End Region
-
-
+#End Region
 
 End Class

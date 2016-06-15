@@ -211,7 +211,6 @@ Public Class clsClientServerConversionFunctions
         Catch e As Exception
         End Try
 
-
         Try
             Dim intCounter As Integer = 0
             For Each sourceo In SourceObject._ServerEichprotokoll.ServerPruefungAussermittigeBelastung
@@ -235,7 +234,6 @@ Public Class clsClientServerConversionFunctions
         Catch e As Exception
         End Try
 
-
         Try
             Dim intCounter As Integer = 0
             For Each sourceo In SourceObject._ServerEichprotokoll.ServerPruefungLinearitaetFallend
@@ -257,7 +255,6 @@ Public Class clsClientServerConversionFunctions
             Next
         Catch e As Exception
         End Try
-
 
         Try
             Dim intCounter As Integer = 0
@@ -302,7 +299,6 @@ Public Class clsClientServerConversionFunctions
         Catch e As Exception
         End Try
 
-
         Try
             Dim intCounter As Integer = 0
             For Each sourceo In SourceObject._ServerEichprotokoll.ServerPruefungStabilitaetGleichgewichtslage
@@ -324,7 +320,6 @@ Public Class clsClientServerConversionFunctions
             Next
         Catch e As Exception
         End Try
-
 
         Try
             Dim intCounter As Integer = 0
@@ -356,8 +351,6 @@ Public Class clsClientServerConversionFunctions
             Next
         Catch e As Exception
         End Try
-
-
 
         Try
             Dim intCounter As Integer = 0
@@ -398,7 +391,6 @@ Public Class clsClientServerConversionFunctions
             Next
         Catch e As Exception
         End Try
-
 
         Try
             Dim intCounter As Integer = 0
@@ -465,7 +457,6 @@ Public Class clsClientServerConversionFunctions
         End If
     End Sub
 
-
 #End Region
 
 #Region "Client -> Server"
@@ -499,8 +490,6 @@ Public Class clsClientServerConversionFunctions
             Catch e As Exception
             End Try
 
-
-
             Try
                 If pModus = enuModus.RHEWASendetAnClient Then
                     query = SourceObject.Eichprotokoll.PruefungAussermittigeBelastung
@@ -528,16 +517,12 @@ Public Class clsClientServerConversionFunctions
             Catch e As Exception
             End Try
 
-
-
-
             Try
                 If pModus = enuModus.RHEWASendetAnClient Then
                     query = SourceObject.Eichprotokoll.PruefungLinearitaetFallend
                 Else
                     query = (From db In dbcontext.PruefungLinearitaetFallend Where db.FK_Eichprotokoll = EichID).ToList
                 End If
-
 
                 ReDim TargetObject._ServerEichprotokoll.ServerPruefungLinearitaetFallend(query.Count - 1)
                 Dim intCounter As Integer = 0
@@ -556,7 +541,6 @@ Public Class clsClientServerConversionFunctions
                 Next
             Catch e As Exception
             End Try
-
 
             Try
                 If pModus = enuModus.RHEWASendetAnClient Then
@@ -611,7 +595,6 @@ Public Class clsClientServerConversionFunctions
             Catch e As Exception
             End Try
 
-
             Try
                 If pModus = enuModus.RHEWASendetAnClient Then
                     query = SourceObject.Eichprotokoll.PruefungStabilitaetGleichgewichtslage
@@ -620,7 +603,6 @@ Public Class clsClientServerConversionFunctions
                     query = (From db In dbcontext.PruefungStabilitaetGleichgewichtslage Where db.FK_Eichprotokoll = EichID).ToList
 
                 End If
-
 
                 ReDim TargetObject._ServerEichprotokoll.ServerPruefungStabilitaetGleichgewichtslage(query.Count - 1)
                 Dim intCounter As Integer = 0
@@ -640,14 +622,12 @@ Public Class clsClientServerConversionFunctions
             Catch e As Exception
             End Try
 
-
             Try
                 If pModus = enuModus.RHEWASendetAnClient Then
                     query = SourceObject.Eichprotokoll.PruefungStaffelverfahrenErsatzlast
                 Else
                     query = (From db In dbcontext.PruefungStaffelverfahrenErsatzlast Where db.FK_Eichprotokoll = EichID).ToList
                 End If
-
 
                 ReDim TargetObject._ServerEichprotokoll.ServerPruefungStaffelverfahrenErsatzlast(query.Count - 1)
                 Dim intCounter As Integer = 0
@@ -721,8 +701,6 @@ Public Class clsClientServerConversionFunctions
             Catch e As Exception
             End Try
 
-
-
             'TargetObject._ServerEichprotokoll.ServerPruefungWiederholbarkeit = SourceObject.Eichprotokoll.PruefungWiederholbarkeit
             Try
                 If pModus = enuModus.RHEWASendetAnClient Then
@@ -732,7 +710,6 @@ Public Class clsClientServerConversionFunctions
                     query = (From db In dbcontext.PruefungWiederholbarkeit Where db.FK_Eichprotokoll = EichID).ToList
 
                 End If
-
 
                 ReDim TargetObject._ServerEichprotokoll.ServerPruefungWiederholbarkeit(query.Count - 1)
                 Dim intCounter As Integer = 0
@@ -761,7 +738,6 @@ Public Class clsClientServerConversionFunctions
                     query = (From db In dbcontext.Mogelstatistik Where db.FK_Eichprozess = EichprozessID).ToList
 
                 End If
-
 
                 ReDim TargetObject._ServerMogelstatistik(query.Count - 1)
                 Dim intCounter As Integer = 0
@@ -864,7 +840,6 @@ Public Class clsClientServerConversionFunctions
         TargetObject._ServerKompatiblitaetsnachweis.Kompatiblitaet_Waage_Zulassungsinhaber = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Zulassungsinhaber
         TargetObject._ServerKompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast = SourceObject.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast
 
-
     End Sub
 
     Private Shared Sub CopyServerEichprotokoll(ByRef TargetObject As EichsoftwareWebservice.ServerEichprozess, ByRef SourceObject As Eichprozess)
@@ -942,7 +917,6 @@ Public Class clsClientServerConversionFunctions
 
 #End Region
 
-
 #End Region
 
 #Region "Methoden"
@@ -969,7 +943,6 @@ Public Class clsClientServerConversionFunctions
 
         'kompatiblitätsnachweis
         CopyClientKompNachweis(TargetObject, SourceObject, True)
-
 
         'Eichprotokoll
         CopyClientEichprotokoll(TargetObject, SourceObject, True, True)
@@ -1039,7 +1012,6 @@ Public Class clsClientServerConversionFunctions
         TargetObject.UploadFilePath = SourceObject._UploadFilePath
         TargetObject.ErzeugerLizenz = AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel
 
-
         'kompatiblitätsnachweis
         CopyClientKompNachweis(TargetObject, SourceObject, True)
 
@@ -1081,13 +1053,11 @@ Public Class clsClientServerConversionFunctions
         'kompatiblitätsnachweis
         CopyServerKompNachweis(TargetObject, SourceObject)
 
-
         'Eichprotokoll
         CopyServerEichprotokoll(TargetObject, SourceObject)
 
         'prüfungen übertragen. je nach Modus aus Client SDF laden oder aus Speicher laden (Serverobjekt)
         CopyServerPruefungen(pModus, TargetObject, SourceObject)
-
 
         Return TargetObject
     End Function
@@ -1118,7 +1088,6 @@ Public Class clsClientServerConversionFunctions
                 Next
                 dbcontext.SaveChanges()
 
-
                 For Each sourceo In SourceObject._ServerEichprotokoll.ServerPruefungAnsprechvermoegen
                     Dim targeto = New PruefungAnsprechvermoegen
                     targeto.Anzeige = sourceo._Anzeige
@@ -1132,8 +1101,6 @@ Public Class clsClientServerConversionFunctions
             Catch e As Exception
             End Try
             dbcontext.SaveChanges()
-
-
 
             Try
                 'aufräumen und alte löschen
@@ -1358,7 +1325,6 @@ Public Class clsClientServerConversionFunctions
         End Using
     End Sub
 
-
     ''' <summary>
     ''' noch fehlende Nachschlage Listen laden (wie waagenart und typ)
     ''' </summary>
@@ -1373,7 +1339,6 @@ Public Class clsClientServerConversionFunctions
             Targetobject.Eichprotokoll.Lookup_Konformitaetsbewertungsverfahren = (From f In dbContext.Lookup_Konformitaetsbewertungsverfahren Where f.ID = Targetobject.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren Select f).FirstOrDefault
         End Using
     End Sub
-
 
 #End Region
 

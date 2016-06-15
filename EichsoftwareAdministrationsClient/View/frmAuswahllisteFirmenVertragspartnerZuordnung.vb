@@ -14,30 +14,28 @@ Public Class frmAuswahllisteFirmenVertragspartnerZuordnung
         LoadFromDatabase()
     End Sub
 
-
     Private Sub LoadFromDatabase()
         Using Context As New EichenEntities
 
             Try
                 'abrufen alle Lizenzdaten mit Join auf Benutzer und firmentabelle
                 Dim Data = From Eichenzuordnung In Context.ServerLookupVertragspartnerFirma
-                   Join Firma In Context.Firmen On Firma.ID Equals Eichenzuordnung.Firma_FK
-                   Join Firma2 In Context.Firmen On Firma2.ID Equals Eichenzuordnung.Vertragspartner_FK
-                    Select New With
-                 {
-                     Eichenzuordnung.ID, _
-                    .Hauptfirma = Firma.Name, _
-                .Vertragspartner = Firma2.Name, _
-                .HauptfirmaID = Firma.ID, _
-                .VertragspartnerID = Firma2.ID
-          }
+                           Join Firma In Context.Firmen On Firma.ID Equals Eichenzuordnung.Firma_FK
+                           Join Firma2 In Context.Firmen On Firma2.ID Equals Eichenzuordnung.Vertragspartner_FK
+                           Select New With
+                        {
+                            Eichenzuordnung.ID,
+                           .Hauptfirma = Firma.Name,
+                       .Vertragspartner = Firma2.Name,
+                       .HauptfirmaID = Firma.ID,
+                       .VertragspartnerID = Firma2.ID
+                 }
                 RadGridViewAuswahlliste.DataSource = Nothing
                 RadGridViewAuswahlliste.DataSource = Data.ToList
 
                 FormatGrid()
             Catch e As Exception
             End Try
-
 
         End Using
     End Sub
@@ -76,10 +74,8 @@ Public Class frmAuswahllisteFirmenVertragspartnerZuordnung
         RadGridViewAuswahlliste.AutoExpandGroups = True
         RadGridViewAuswahlliste.ShowGroupedColumns = True
 
-
         RadGridViewAuswahlliste.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
     End Sub
-
 
     Private Sub EditFirmenzuordnung()
         If RadGridViewAuswahlliste.SelectedRows.Count > 0 Then

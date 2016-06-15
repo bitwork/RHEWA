@@ -19,8 +19,6 @@
 
     End Sub
 
-
-
     Private Sub Auswertegeraet_Load(sender As Object, e As EventArgs) Handles Me.Load
         Using context As New EichenEntities()
             'abrufen der Entität aus der Datenbank
@@ -104,7 +102,6 @@
     Friend Sub Save()
         If ValidateControls() = True Then
 
-
             'neuen Context aufbauen
             Using Context As New EichenEntities
                 'prüfen ob CREATE oder UPDATE durchgeführt werden muss
@@ -143,7 +140,6 @@
             End Using
             Me.Close()
         End If
-
 
     End Sub
 
@@ -199,7 +195,6 @@
 
     End Function
 
-
     Private Sub RadTextBoxControlWaegezelleBruchteilEichfehlergrenze_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles RadTextBoxControWaegezelleHoechstteilungsfaktor.Validating, RadTextBoxControlWaegezelleWiderstandWaegezelle.Validating, RadTextBoxControlWaegezelleWaegezellenkennwert.Validating, RadTextBoxControlWaegezelleRueckkehrVorlastsignal.Validating, RadTextBoxControlWaegezelleMinTeilungswert.Validating, RadTextBoxControlWaegezelleMindestvorlast.Validating, RadTextBoxControlWaegezelleMAXAnzahlTeilungswerte.Validating, RadTextBoxControlWaegezelleKriechteilungsfaktor.Validating, RadTextBoxControlWaegezelleGrenzwertTemperaturbereichMIN.Validating, RadTextBoxControlWaegezelleGrenzwertTemperaturbereichMAX.Validating, RadTextBoxControlWaegezelleBruchteilEichfehlergrenze.Validating
         Dim result As Decimal
         If _bolSuspendEvents = True Then Exit Sub
@@ -231,7 +226,6 @@
                     CType(sender, Telerik.WinControls.UI.RadTextBoxControl).TextBoxElement.BorderColor = Color.FromArgb(0, 255, 255, 255)
 
                 End If
-
 
             End If
         End If

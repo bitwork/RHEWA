@@ -1,11 +1,10 @@
 ﻿Public Class uco19EichtechnischeSicherung
     Inherits ucoContent
 #Region "Member Variables"
-    Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken 
+    Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken
     'Private AktuellerStatusDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Komptabilitätsnachweis zurückgesetzt
     Private _objEichprotokoll As Eichprotokoll
 #End Region
-
 
 #Region "Constructors"
     Sub New()
@@ -21,8 +20,6 @@
         EichprozessStatusReihenfolge = GlobaleEnumeratoren.enuEichprozessStatus.EichtechnischeSicherungundDatensicherung
     End Sub
 #End Region
-
-
 
 #Region "Events"
     ''' <summary>
@@ -150,8 +147,6 @@
             PictureBox3.Image = PictureBox3.ErrorImage
         End Try
 
-
-
         'checkboxen
 
         If Not objEichprozess.Eichprotokoll.Sicherung_Eichsiegel13x13 Is Nothing Then
@@ -170,9 +165,7 @@
             RadCheckBoxCE2016Kennzeichen.Checked = objEichprozess.Eichprotokoll.Sicherung_CE2016
         End If
 
-
         'anzahl
-
 
         If Not objEichprozess.Eichprotokoll.Sicherung_Eichsiegel13x13Anzahl Is Nothing Then
             RadTextBoxControlEichsiegel13x13.Text = objEichprozess.Eichprotokoll.Sicherung_Eichsiegel13x13Anzahl
@@ -189,8 +182,6 @@
         If Not objEichprozess.Eichprotokoll.Sicherung_CE2016Anzahl Is Nothing Then
             RadTextBoxControlCE2016Kennzeichen.Text = objEichprozess.Eichprotokoll.Sicherung_CE2016Anzahl
         End If
-
-
 
         'alibi
         If Not objEichprozess.Eichprotokoll.Sicherung_DatenAusgelesen Is Nothing Then
@@ -228,7 +219,6 @@
         objEichprozess.Eichprotokoll.Sicherung_GruenesM = False 'TODO obsolete
         objEichprozess.Eichprotokoll.Sicherung_CE = False 'TODO obsolete
         objEichprozess.Eichprotokoll.Sicherung_CE2016 = RadCheckBoxCE2016Kennzeichen.Checked
-
 
         If DialogModus = enuDialogModus.normal Then objEichprozess.Bearbeitungsdatum = Date.Now
 
@@ -287,7 +277,6 @@
         Catch ex As Exception
         End Try
 
-
         'alibi
         objEichprozess.Eichprotokoll.Sicherung_DatenAusgelesen = RadCheckBoxKonfigurationsProgramm.Checked
         objEichprozess.Eichprotokoll.Sicherung_AlibispeicherEingerichtet = RadCheckBoxAlibispeicher.Checked
@@ -296,8 +285,6 @@
         objEichprozess.Eichprotokoll.Sicherung_Bemerkungen = RadTextBoxControlBemerkungen.Text
 
     End Sub
-
-
 
     ''' <summary>
     ''' Gültigkeit der Eingaben überprüfen
@@ -308,8 +295,6 @@
     Private Function ValidateControls() As Boolean
         'prüfen ob alle Felder ausgefüllt sind
         Me.AbortSaving = False
-
-
 
         If RadCheckBoxEichsiegel13x13.Checked Then
             If RadTextBoxControlEichsiegel13x13.Text = "" Then
@@ -332,7 +317,6 @@
             End If
         End If
 
-
         If RadCheckBoxCE2016Kennzeichen.Checked Then
             If RadTextBoxControlCE2016Kennzeichen.Text = "" Then
                 AbortSaving = True
@@ -346,7 +330,6 @@
                 RadTextBoxControlAufbewahrungsdauer.Focus()
             End If
         End If
-
 
         If AbortSaving Then
             MessageBox.Show(My.Resources.GlobaleLokalisierung.PflichtfelderAusfuellen, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
@@ -381,7 +364,6 @@
             End If
 
             If ValidateControls() = True Then
-
 
                 'neuen Context aufbauen
                 Using Context As New EichsoftwareClientdatabaseEntities1
@@ -469,14 +451,13 @@
 
 #End Region
 
-
     Protected Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
         If Me.Equals(UserControl) = False Then Exit Sub
 
         MyBase.LokalisierungNeeded(UserControl)
 
         'lokalisierung: Leider kann ich den automatismus von .NET nicht nutzen. Dieser funktioniert nur sauber, wenn ein Dialog erzeugt wird. Zur Laufzeit aber gibt es diverse Probleme mit dem Automatischen Ändern der Sprache,
-        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße 
+        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco19EichtechnischeSicherung))
 
         Me.lblAlibispeicher.Text = resources.GetString("lblAlibispeicher.Text")
@@ -489,8 +470,6 @@
         Me.lblEichsiegelRund.Text = resources.GetString("lblEichsiegelRund.Text")
         Me.lblHinweismarke.Text = resources.GetString("lblHinweismarke.Text")
         Me.lblSicherungshinweise.Text = resources.GetString("lblSicherungshinweise.Text")
-
-
 
         If Not ParentFormular Is Nothing Then
             Try
@@ -507,7 +486,6 @@
     End Sub
 
 #Region "Checkboxen EVents mit Textboxen"
-
 
     Private Sub RadCheckBoxEichsiegel13x13_ToggleStateChanged(sender As Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadCheckBoxEichsiegel13x13.ToggleStateChanged
         RadTextBoxControlEichsiegel13x13.ReadOnly = Not RadCheckBoxEichsiegel13x13.Checked
@@ -536,7 +514,6 @@
         End If
     End Sub
 
-
     Private Sub RadCheckBoxCE2016_ToggleStateChanged(sender As Object, args As Telerik.WinControls.UI.StateChangedEventArgs) Handles RadCheckBoxCE2016Kennzeichen.ToggleStateChanged
         RadTextBoxControlCE2016Kennzeichen.ReadOnly = Not RadCheckBoxCE2016Kennzeichen.Checked
         PictureBoxCE2016.Visible = Not RadCheckBoxCE2016Kennzeichen.Checked
@@ -546,10 +523,7 @@
         End If
     End Sub
 
-
-
 #End Region
-
 
     Private Sub RadTextBoxControlBenannteStelle_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles RadTextBoxControlHinweismarke.Validating, RadTextBoxControlEichsiegelRund.Validating, RadTextBoxControlEichsiegel13x13.Validating, RadTextBoxControlCE2016Kennzeichen.Validating
         Dim result As Decimal
@@ -596,7 +570,7 @@
     Protected Overrides Sub EntsperrungNeeded()
         MyBase.EntsperrungNeeded()
 
-        'Hiermit wird ein lesender Vorgang wieder entsperrt. 
+        'Hiermit wird ein lesender Vorgang wieder entsperrt.
         EnableControls(Me.RadScrollablePanel1.PanelContainer)
 
         'ändern des Moduses
@@ -605,7 +579,6 @@
     End Sub
 
     Protected Overrides Sub VersendenNeeded(TargetUserControl As UserControl)
-
 
         If Me.Equals(TargetUserControl) Then
             MyBase.VersendenNeeded(TargetUserControl)

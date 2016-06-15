@@ -19,24 +19,24 @@
             Context.Configuration.ProxyCreationEnabled = False
 
             Dim Data = From Eichprozess In Context.ServerEichprozess.Include("ServerLookup_Waegezelle").Include("ServerEichprotokoll") Where Eichprozess.FK_Bearbeitungsstatus = 3
-                                               Join Lookup2 In Context.ServerLookup_Bearbeitungsstatus On Eichprozess.FK_Bearbeitungsstatus Equals Lookup2.ID _
-                                             Select New With _
-           { _
-                Eichprozess.ID, _
-                .Standardwaage = Eichprozess.Standardwaage, _
-                .Pruefscheinnummer = Eichprozess.ServerEichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer, _
-                                                    Eichprozess.Vorgangsnummer, _
-                            .Fabriknummer = Eichprozess.ServerKompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer, _
-                            .Lookup_Waegezelle = Eichprozess.ServerLookup_Waegezelle.Typ, _
-                            .Lookup_Waagentyp = Eichprozess.ServerLookup_Waagentyp.Typ, _
-                            .Lookup_Waagenart = Eichprozess.ServerLookup_Waagenart.Art, _
-                            .Lookup_Auswertegeraet = Eichprozess.ServerLookup_Auswertegeraet.Typ, _
-                            .Sachbearbeiter = Eichprozess.ServerEichprotokoll.Identifikationsdaten_Pruefer, _
-                   .ZurBearbeitungGesperrtDurch = Eichprozess.ZurBearbeitungGesperrtDurch, _
-                                .NeuWZ = Eichprozess.ServerLookup_Waegezelle.Neu, _
-                .Bearbeitungsstatus = Lookup2.Status, _
-            .Uploaddatum = Eichprozess.UploadDatum
-                             }
+                       Join Lookup2 In Context.ServerLookup_Bearbeitungsstatus On Eichprozess.FK_Bearbeitungsstatus Equals Lookup2.ID
+                       Select New With
+{
+Eichprozess.ID,
+.Standardwaage = Eichprozess.Standardwaage,
+.Pruefscheinnummer = Eichprozess.ServerEichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer,
+                              Eichprozess.Vorgangsnummer,
+      .Fabriknummer = Eichprozess.ServerKompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer,
+      .Lookup_Waegezelle = Eichprozess.ServerLookup_Waegezelle.Typ,
+      .Lookup_Waagentyp = Eichprozess.ServerLookup_Waagentyp.Typ,
+      .Lookup_Waagenart = Eichprozess.ServerLookup_Waagenart.Art,
+      .Lookup_Auswertegeraet = Eichprozess.ServerLookup_Auswertegeraet.Typ,
+      .Sachbearbeiter = Eichprozess.ServerEichprotokoll.Identifikationsdaten_Pruefer,
+.ZurBearbeitungGesperrtDurch = Eichprozess.ZurBearbeitungGesperrtDurch,
+          .NeuWZ = Eichprozess.ServerLookup_Waegezelle.Neu,
+.Bearbeitungsstatus = Lookup2.Status,
+.Uploaddatum = Eichprozess.UploadDatum
+       }
 
             'databinding
             RadGridView1.DataSource = Data.ToArray

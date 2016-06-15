@@ -18,8 +18,6 @@ Public Class frmEingabeFirmenVertragspartnerZuordnung
         ' Add any initialization after the InitializeComponent() call.
     End Sub
 
-
-
     Private Sub frmFirmenzuordnung_Load(sender As Object, e As EventArgs) Handles Me.Load
         LadeObjekt()
 
@@ -53,8 +51,6 @@ Public Class frmEingabeFirmenVertragspartnerZuordnung
         RadDropDownListUnterfirma.SelectedValue = _objFirmenzuordnung.Vertragspartner_FK
     End Sub
 
-
-
     Private Sub LadeDropDownDatenquelle()
         Try
             Using context As New EichenEntities
@@ -68,7 +64,6 @@ Public Class frmEingabeFirmenVertragspartnerZuordnung
                 RadDropDownListHauptfirma.ValueMember = "ID"
                 RadDropDownListHauptfirma.DisplayMember = "Name"
 
-
                 RadDropDownListUnterfirma.DataSource = sourceVertragspartnerFirmen
                 RadDropDownListUnterfirma.ValueMember = "ID"
                 RadDropDownListUnterfirma.DisplayMember = "Name"
@@ -76,7 +71,6 @@ Public Class frmEingabeFirmenVertragspartnerZuordnung
         Catch ex As Exception
         End Try
     End Sub
-
 
     Private Sub UpdateObject()
         Try
@@ -188,9 +182,6 @@ Public Class frmEingabeFirmenVertragspartnerZuordnung
             End Try
         End If
 
-
-
-
         If AbortSaveing Then
             MessageBox.Show("Bitte füllen Sie alle Felder aus", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             Return False
@@ -239,7 +230,7 @@ Public Class frmEingabeFirmenVertragspartnerZuordnung
             Return False
         End Try
         '##############################################################
-        'prüfen ob es bereits zum gewählten Vertragspartner eine Zurodnung gibt. Laut Herrn Strack darf eine Hauptfirma zwar mehrere vertragspartner haben, aber eine Unterfirma nur einen Hauptfirma 
+        'prüfen ob es bereits zum gewählten Vertragspartner eine Zurodnung gibt. Laut Herrn Strack darf eine Hauptfirma zwar mehrere vertragspartner haben, aber eine Unterfirma nur einen Hauptfirma
         Try
             If _bolNew Then
 
@@ -263,8 +254,6 @@ Public Class frmEingabeFirmenVertragspartnerZuordnung
         Return True
 
     End Function
-
-
 
     Private Sub RadButton2_Click(sender As Object, e As EventArgs) Handles RadButtonAbbrechen.Click
         Me.Close()

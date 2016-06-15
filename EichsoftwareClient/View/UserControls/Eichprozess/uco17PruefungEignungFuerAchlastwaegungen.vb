@@ -1,11 +1,10 @@
 ﻿Public Class uco17PruefungEignungFuerAchlastwaegungen
     Inherits ucoContent
 #Region "Member Variables"
-    Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken 
+    Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken
     'Private AktuellerStatusDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Komptabilitätsnachweis zurückgesetzt
     Private _objEichprotokoll As Eichprotokoll
 #End Region
-
 
 #Region "Constructors"
     Sub New()
@@ -18,7 +17,6 @@
         InitializeComponent()
         EichprozessStatusReihenfolge = GlobaleEnumeratoren.enuEichprozessStatus.EignungfürAchslastwägungen
     End Sub
-
 
 #End Region
 
@@ -137,7 +135,7 @@
 
         End If
 
-         'fehlermeldung anzeigen bei falscher validierung
+        'fehlermeldung anzeigen bei falscher validierung
         Return Me.ShowValidationErrorBox(False)
     End Function
 
@@ -166,7 +164,6 @@
             End If
 
             If ValidateControls() = True Then
-
 
                 'neuen Context aufbauen
                 Using Context As New EichsoftwareClientdatabaseEntities1
@@ -254,23 +251,18 @@
 
 #End Region
 
-
-
-
-
     Protected Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
         If Me.Equals(UserControl) = False Then Exit Sub
 
         MyBase.LokalisierungNeeded(UserControl)
 
         'lokalisierung: Leider kann ich den automatismus von .NET nicht nutzen. Dieser funktioniert nur sauber, wenn ein Dialog erzeugt wird. Zur Laufzeit aber gibt es diverse Probleme mit dem Automatischen Ändern der Sprache,
-        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße 
+        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco17PruefungEignungFuerAchlastwaegungen))
 
         Me.lblWaageNichtGeeignet.Text = resources.GetString("lblWaageNichtGeeignet.Text")
         Me.lblWaagegeprueft.Text = resources.GetString("lblWaagegeprueft.Text")
         Me.lblZufahrtenInOrdnung.Text = resources.GetString("lblZufahrtenInOrdnung.Text")
-
 
         If Not ParentFormular Is Nothing Then
             Try
@@ -286,12 +278,11 @@
 
     End Sub
 
-
     'Entsperrroutine
     Protected Overrides Sub EntsperrungNeeded()
         MyBase.EntsperrungNeeded()
 
-        'Hiermit wird ein lesender Vorgang wieder entsperrt. 
+        'Hiermit wird ein lesender Vorgang wieder entsperrt.
         EnableControls(RadScrollablePanel1.PanelContainer)
 
         'ändern des Moduses
@@ -311,7 +302,7 @@
                 objEichprozess.FK_Bearbeitungsstatus = 2
                 objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Konformitätsbewertungsbevollmächtigter sich den DS von Anfang angucken muss
                 UpdateObject()
-            
+
                 'erzeuegn eines Server Objektes auf basis des aktuellen DS
                 objServerEichprozess = clsClientServerConversionFunctions.CopyServerObjectProperties(objServerEichprozess, objEichprozess, clsClientServerConversionFunctions.enuModus.RHEWASendetAnClient)
                 Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient

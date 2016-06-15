@@ -4,7 +4,7 @@ Imports Telerik.WinControls.Layouts
 Imports Telerik.WinControls
 
 ''' <summary>
-''' Klasse zum Rendern eines Custom Usercontrol List Elements. Wird genutzt für die Breadcrump Navigation. 
+''' Klasse zum Rendern eines Custom Usercontrol List Elements. Wird genutzt für die Breadcrump Navigation.
 ''' </summary>
 ''' <remarks>DebuggerStepThrough aktiviert. Er wird hier also nie reindebuggen, solange die Property gesetzt ist.</remarks>
 <DebuggerStepThrough()>
@@ -33,7 +33,6 @@ Friend Class CustomVisualItem
         imageElement.NotifyParentOnMouseInput = True
         imageElement.ShouldHandleMouseInput = False
 
-
         stackLayout.Children.Add(imageElement)
 
         titleElement = New LightVisualElement()
@@ -46,9 +45,6 @@ Friend Class CustomVisualItem
         titleElement.AutoSizeMode = RadAutoSizeMode.WrapAroundChildren
         titleElement.NotifyParentOnMouseInput = True
         titleElement.ShouldHandleMouseInput = False
-
-
-
 
         stackLayout.Children.Add(titleElement)
         stackLayout.NotifyParentOnMouseInput = True
@@ -104,4 +100,3 @@ Friend Class CustomVisualItem
     End Property
 
 End Class
-

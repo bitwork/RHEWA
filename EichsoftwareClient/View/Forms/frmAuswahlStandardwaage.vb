@@ -23,20 +23,18 @@
 
     End Sub
 
-
     Private Sub RadGridViewStandardwaagen_CellClick(sender As Object, e As Telerik.WinControls.UI.GridViewCellEventArgs) Handles RadGridViewStandardwaagen.CellDoubleClick
         If Not TypeOf e.Row Is Telerik.WinControls.UI.GridViewDataRowInfo Then Exit Sub
         StandardwaageDeklarieren()
 
     End Sub
 
-
     Private Sub RadButtonZuordnen_Click(sender As Object, e As EventArgs) Handles RadButtonZuordnen.Click
         StandardwaageDeklarieren()
     End Sub
 
     ''' <summary>
-    ''' markiert / entfernt Flag zur Deklaration einer Standardwaage eines Vorgangs 
+    ''' markiert / entfernt Flag zur Deklaration einer Standardwaage eines Vorgangs
     ''' </summary>
     ''' <remarks></remarks>
     Private Sub StandardwaageDeklarieren()

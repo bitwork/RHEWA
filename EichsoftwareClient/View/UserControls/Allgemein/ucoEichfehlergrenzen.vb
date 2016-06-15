@@ -2,7 +2,7 @@
     Inherits ucoContent
 
 #Region "Member Variables"
-    Private _suspendEvents As Boolean = False  'Variable zum temporären stoppen der Eventlogiken 
+    Private _suspendEvents As Boolean = False  'Variable zum temporären stoppen der Eventlogiken
     Private _parentForm As FrmMainContainer
 #End Region
 
@@ -67,7 +67,6 @@
 
         HoleNullstellen()
 
-
         'Steuerlemente füllen
         Select Case objEichprozess.Lookup_Waagenart.Art
             Case Is = "Einbereichswaage"
@@ -113,7 +112,6 @@
         Catch ex As Exception
         End Try
 
-
         Try
             'Bereiche berechnen
             RadTextBoxControlBereich2e20.Text = Math.Round(CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2 * 20), _intNullstellenE, MidpointRounding.AwayFromZero)
@@ -141,7 +139,6 @@
             'RadTextBoxControlBereich2VFG2000e.Text = Math.Round(CDec(RadTextBoxControlBereich2EFG2000e.Text * 2), _intNullstellenE, MidpointRounding.AwayFromZero)
         Catch ex As Exception
         End Try
-
 
         Try
             'Bereiche berechnen
@@ -180,7 +177,7 @@
         MyBase.LokalisierungNeeded(UserControl)
 
         'lokalisierung: Leider kann ich den automatismus von .NET nicht nutzen. Dieser funktioniert nur sauber, wenn ein Dialog erzeugt wird. Zur Laufzeit aber gibt es diverse Probleme mit dem Automatischen Ändern der Sprache,
-        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße 
+        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucoEichfehlergrenzen))
 
         Me.lblBis1.Text = resources.GetString("lblBis1.Text")
@@ -206,12 +203,6 @@
         Me.RadGroupBox3.Text = resources.GetString("RadGroupBox3.text")
     End Sub
 
-
 #End Region
-
-
-
-
-
 
 End Class

@@ -27,7 +27,6 @@
     Private Sub RadButtonAbbrechen_Click(sender As Object, e As EventArgs) Handles RadButtonAbbrechen.Click
         Me.Close()
 
-
     End Sub
 
     Private Sub RadButtonGridSettingsZuruecksetzen_Click(sender As Object, e As EventArgs) Handles RadButtonGridSettingsZuruecksetzen.Click
@@ -71,7 +70,6 @@
         Dim alterSyncmodus As String = AktuellerBenutzer.Instance.Synchronisierungsmodus 'variable wird genutzt um zu prüfen ob überhaupt Änderungen vorgenommen werden müssen
         Dim alterSyncAbWert As String = AktuellerBenutzer.Instance.SyncAb
         Dim alterSyncBisWert As String = AktuellerBenutzer.Instance.SyncBis
-
 
         If RadRadioButtonSyncAlles.IsChecked Then
             AktuellerBenutzer.Instance.Synchronisierungsmodus = "Alles"
@@ -152,7 +150,6 @@
                 RadDateTimePickerSince.Culture = New System.Globalization.CultureInfo("en")
         End Select
     End Sub
-
 
 #End Region
 

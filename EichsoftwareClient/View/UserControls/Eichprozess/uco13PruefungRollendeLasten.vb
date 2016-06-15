@@ -2,7 +2,7 @@
     Inherits ucoContent
 
 #Region "Member Variables"
-    Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken 
+    Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken
     'Private AktuellerStatusDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Komptabilitätsnachweis zurückgesetzt
     Private _currentObjPruefungRollendeLasten As PruefungRollendeLasten
     Private _ListPruefungRollendeLasten As New List(Of PruefungRollendeLasten)
@@ -19,7 +19,6 @@
         EichprozessStatusReihenfolge = GlobaleEnumeratoren.enuEichprozessStatus.WaagenFuerRollendeLasten
     End Sub
 #End Region
-
 
 #Region "Events"
     ''' <summary>
@@ -153,7 +152,6 @@
         Catch ex As Exception
         End Try
 
-
         'fehler
         Try
             RadTextBoxControlFehlerLinks2.Text = CDec(RadTextBoxControlAnzeigeLinks2.Text) - CDec(RadTextBoxControlLastLinks2.Text)
@@ -179,7 +177,6 @@
         Catch ex As Exception
         End Try
 
-
         _suspendEvents = False
     End Sub
     Private Sub BerechneFehlerundEFGRechts(Optional sender As Telerik.WinControls.UI.RadTextBox = Nothing)
@@ -188,7 +185,6 @@
 
         'damit keine Event Kettenreaktion durchgeführt wird, werden die Events ab hier unterbrochen
         _suspendEvents = True
-
 
         Try
             'zuweisen der last an alle Felder
@@ -279,10 +275,8 @@
         Catch ex As Exception
         End Try
 
-
         _suspendEvents = False
     End Sub
-
 
     ''' <summary>
     ''' wenn sich einer der Anzeige Werte ändert, müssen die Fehler und EFG neu berechnet werden
@@ -298,7 +292,6 @@
         End Try
     End Sub
 
-
 #End Region
 
 #Region "bereich Rechts"
@@ -308,7 +301,7 @@
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
-    Private Sub RadTextBoxControlAnzeigeRechts1_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlAnzeigeRechts3.TextChanged, RadTextBoxControlAnzeigeRechts2.TextChanged, RadTextBoxControlAnzeigeRechts1.TextChanged, _
+    Private Sub RadTextBoxControlAnzeigeRechts1_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlAnzeigeRechts3.TextChanged, RadTextBoxControlAnzeigeRechts2.TextChanged, RadTextBoxControlAnzeigeRechts1.TextChanged,
           RadTextBoxControlLastRechts1.TextChanged, RadTextBoxControlLastRechts2.TextChanged, RadTextBoxControlLastRechts3.TextChanged
         Try
             If _suspendEvents = True Then Exit Sub
@@ -369,7 +362,6 @@
 
         End If
 
-
         'steuerelemente mit werten aus DB füllen
         FillControls()
 
@@ -394,13 +386,10 @@
 
         HoleNullstellen()
 
-
         'füllen der berechnenten Steuerelemente
 
         lblEFGWertLinks.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
         lblEFGWertRechts.Mask = "F" & _intNullstellenE 'anzahl nullstellen für Textcontrol definieren
-
-
 
         'wenn es sich um das Staffel oder Fahrzeugwaagen verfahren handelt wird an dieser Stelle die Wiederholbarkeit nur mit MAX geprüft. MIN erfolgte dann bereits vorher
 
@@ -414,8 +403,6 @@
 
     End Sub
     Private Sub FillControlsLinks()
-
-
 
         'anzeige KG Nur laden wenn schon etwas eingegeben wurde
         'bereich 1
@@ -496,7 +483,6 @@
         'neuen Context aufbauen
         Using Context As New EichsoftwareClientdatabaseEntities1
 
-
             'jedes objekt initialisieren und aus context laden und updaten
             For Each obj In _ListPruefungRollendeLasten
                 Dim objPruefung = Context.PruefungRollendeLasten.FirstOrDefault(Function(value) value.ID = obj.ID)
@@ -570,7 +556,6 @@
 
     End Sub
 
-
     ''' <summary>
     ''' Gültigkeit der Eingaben überprüfen
     ''' </summary>
@@ -581,8 +566,8 @@
         'prüfen ob alle Felder ausgefüllt sind
         Me.AbortSaving = False
 
-        If RadCheckBoxAuffahrtLinks1.Checked = False And RadCheckBoxAuffahrtLinks1.Visible = True Or _
-            RadCheckBoxAuffahrtLinks2.Checked = False And RadCheckBoxAuffahrtLinks2.Visible = True Or _
+        If RadCheckBoxAuffahrtLinks1.Checked = False And RadCheckBoxAuffahrtLinks1.Visible = True Or
+            RadCheckBoxAuffahrtLinks2.Checked = False And RadCheckBoxAuffahrtLinks2.Visible = True Or
             RadCheckBoxAuffahrtLinks3.Checked = False And RadCheckBoxAuffahrtLinks3.Visible = True Then
             AbortSaving = True
 
@@ -592,17 +577,14 @@
 
         End If
 
-
-        If RadCheckBoxlblAuffahrtRechts1.Checked = False And RadCheckBoxlblAuffahrtRechts1.Visible = True Or _
-              RadCheckBoxlblAuffahrtRechts2.Checked = False And RadCheckBoxlblAuffahrtRechts2.Visible = True Or _
+        If RadCheckBoxlblAuffahrtRechts1.Checked = False And RadCheckBoxlblAuffahrtRechts1.Visible = True Or
+              RadCheckBoxlblAuffahrtRechts2.Checked = False And RadCheckBoxlblAuffahrtRechts2.Visible = True Or
               RadCheckBoxlblAuffahrtRechts3.Checked = False And RadCheckBoxlblAuffahrtRechts2.Visible = True Then
             AbortSaving = True
             RadTextBoxControlAnzeigeRechts1.TextBoxElement.Border.ForeColor = Color.Red
             RadTextBoxControlAnzeigeRechts2.TextBoxElement.Border.ForeColor = Color.Red
             RadTextBoxControlAnzeigeRechts3.TextBoxElement.Border.ForeColor = Color.Red
         End If
-
-
 
         'fehlermeldung anzeigen bei falscher validierung
         Return Me.ShowValidationErrorBox(False)
@@ -623,7 +605,6 @@
                 Exit Sub
             End If
 
-
             If DialogModus = enuDialogModus.korrigierend Then
                 UpdateObject()
                 If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.PrüfungdesAnsprechvermögens Then
@@ -635,10 +616,8 @@
 
             If ValidateControls() = True Then
 
-
                 'neuen Context aufbauen
                 Using Context As New EichsoftwareClientdatabaseEntities1
-
 
                     'prüfen ob CREATE oder UPDATE durchgeführt werden muss
                     If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
@@ -648,9 +627,6 @@
                             'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
                             objEichprozess = dobjEichprozess
 
-
-
-
                             'wenn es defintiv noch keine pruefungen gibt, neue Anlegen
                             If _ListPruefungRollendeLasten.Count = 0 Then
                                 'anzahl Wiederholungen beträgt 3 um damit die anzahl der benötigten Iterationen und Objekt Erzeugungen zu erfahren
@@ -658,7 +634,6 @@
 
                                     'linke Last
                                     Dim objPruefung = Context.PruefungRollendeLasten.Create
-
 
                                     objPruefung.Belastungsstelle = i
                                     objPruefung.AuffahrtSeite = "links"
@@ -670,8 +645,6 @@
                                     Context.SaveChanges()
 
                                     _ListPruefungRollendeLasten.Add(objPruefung)
-
-
 
                                     'rechte Last
                                     objPruefung = Nothing
@@ -697,7 +670,6 @@
                                 Next
                             End If
 
-
                             'neuen Status zuweisen
                             'die reihenfolge wird hier je nach Verfahren verändert
 
@@ -710,8 +682,6 @@
                                 objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungdesAnsprechvermögens
                                 AktuellerStatusDirty = False
                             End If
-
-
 
                             'Füllt das Objekt mit den Werten aus den Steuerlementen
                             UpdateObject()
@@ -732,7 +702,6 @@
 
         If Me.Equals(usercontrol) Then
 
-
             'neuen Context aufbauen
             Using Context As New EichsoftwareClientdatabaseEntities1
                 If DialogModus = enuDialogModus.lesend Then
@@ -749,9 +718,6 @@
                         'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
                         objEichprozess = dobjEichprozess
 
-
-
-
                         'wenn es defintiv noch keine pruefungen gibt, neue Anlegen
                         If _ListPruefungRollendeLasten.Count = 0 Then
                             'anzahl Wiederholungen beträgt 3 um damit die anzahl der benötigten Iterationen und Objekt Erzeugungen zu erfahren
@@ -759,7 +725,6 @@
 
                                 'linke Last
                                 Dim objPruefung = Context.PruefungRollendeLasten.Create
-
 
                                 objPruefung.Belastungsstelle = i
                                 objPruefung.AuffahrtSeite = "links"
@@ -771,8 +736,6 @@
                                 Context.SaveChanges()
 
                                 _ListPruefungRollendeLasten.Add(objPruefung)
-
-
 
                                 'rechte Last
                                 objPruefung = Nothing
@@ -798,7 +761,6 @@
                             Next
                         End If
 
-
                         'Füllt das Objekt mit den Werten aus den Steuerlementen
                         UpdateObject()
                         'Speichern in Datenbank
@@ -810,7 +772,6 @@
             ParentFormular.CurrentEichprozess = objEichprozess
         End If
     End Sub
-
 
     ''' <summary>
     ''' aktualisieren der Oberfläche wenn nötig
@@ -831,14 +792,13 @@
 
 #End Region
 
-
     Protected Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
         If Me.Equals(UserControl) = False Then Exit Sub
 
         MyBase.LokalisierungNeeded(UserControl)
 
         'lokalisierung: Leider kann ich den automatismus von .NET nicht nutzen. Dieser funktioniert nur sauber, wenn ein Dialog erzeugt wird. Zur Laufzeit aber gibt es diverse Probleme mit dem Automatischen Ändern der Sprache,
-        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße 
+        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco13PruefungRollendeLasten))
 
         Me.lblAnzeigeLinks.Text = resources.GetString("RadLabelDisplay.Text")
@@ -860,8 +820,6 @@
         Me.lblLastLinks.Text = resources.GetString("lblLastLinks.Text")
         Me.lblLastRechts.Text = resources.GetString("lblLastRechts.Text")
 
-
-
         If Not ParentFormular Is Nothing Then
             Try
                 'Hilfetext setzen
@@ -874,13 +832,11 @@
             End Try
         End If
 
-
     End Sub
 
     Private Sub RadCheckBoxAuffahrtLinks1_MouseClick(sender As Object, e As MouseEventArgs) Handles RadCheckBoxlblAuffahrtRechts3.MouseClick, RadCheckBoxlblAuffahrtRechts2.MouseClick, RadCheckBoxlblAuffahrtRechts1.MouseClick, RadCheckBoxAuffahrtLinks3.MouseClick, RadCheckBoxAuffahrtLinks2.MouseClick, RadCheckBoxAuffahrtLinks1.MouseClick
         CType(sender, Telerik.WinControls.UI.RadCheckBox).Checked = Not CType(sender, Telerik.WinControls.UI.RadCheckBox).Checked
     End Sub
-
 
     Private Sub RadButton1_Click(sender As Object, e As EventArgs) Handles RadButton1.Click
         Dim f As New frmEichfehlergrenzen(objEichprozess)
@@ -891,7 +847,7 @@
     Protected Overrides Sub EntsperrungNeeded()
         MyBase.EntsperrungNeeded()
 
-        'Hiermit wird ein lesender Vorgang wieder entsperrt. 
+        'Hiermit wird ein lesender Vorgang wieder entsperrt.
         EnableControls(RadScrollablePanel1.PanelContainer)
 
         'ändern des Moduses

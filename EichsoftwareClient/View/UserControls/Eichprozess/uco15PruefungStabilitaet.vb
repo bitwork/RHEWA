@@ -2,12 +2,11 @@
     Inherits ucoContent
 
 #Region "Member Variables"
-    Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken 
+    Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken
     'Private AktuellerStatusDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Komptabilitätsnachweis zurückgesetzt
     Private _ListPruefungStabilitaet As New List(Of PruefungStabilitaetGleichgewichtslage)
     Private _currentObjPruefungStabilitaetGleichgewichtslage As PruefungStabilitaetGleichgewichtslage
 #End Region
-
 
 #Region "Constructors"
     Sub New()
@@ -91,7 +90,6 @@
             'falls der Konformitätsbewertungsvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
             DisableControls(RadScrollablePanel1.PanelContainer)
 
-
         End If
         'events abbrechen
         _suspendEvents = False
@@ -113,7 +111,6 @@
             LoadFromDatabase() 'war mal auskommentiert. ich weiß gerade nicht mehr wieso. Ergänzung: war ausdokumentiert, weil damit die Werte der NSW und WZ übeschrieben werden wenn man auf zurück klickt. Wenn es allerdings ausdokumenterit ist, funktioniert das anlegen einer neuen WZ nicht
         End If
     End Sub
-
 
     ''' <summary>
     ''' Lädt die Werte aus dem Objekt in die Steuerlemente
@@ -183,7 +180,6 @@
             RadCheckBoxAbdruck5.Checked = _currentObjPruefungStabilitaetGleichgewichtslage.AbdruckOK
         End If
 
-
         'fokus setzen auf erstes Steuerelement
         RadTextBoxControlLast1.Focus()
 
@@ -232,18 +228,17 @@
         For Each obj In _ListPruefungStabilitaet
             objEichprozess.Eichprotokoll.PruefungStabilitaetGleichgewichtslage.Add(obj)
         Next
-    
-    End Sub
 
+    End Sub
 
     Private Function ValidateControls() As Boolean
         'prüfen ob alle Felder ausgefüllt sind
         Me.AbortSaving = False
 
-        If RadCheckBoxAbdruck1.Checked = False Or _
-     RadCheckBoxAbdruck2.Checked = False Or _
-     RadCheckBoxAbdruck3.Checked = False Or _
-     RadCheckBoxAbdruck4.Checked = False Or _
+        If RadCheckBoxAbdruck1.Checked = False Or
+     RadCheckBoxAbdruck2.Checked = False Or
+     RadCheckBoxAbdruck3.Checked = False Or
+     RadCheckBoxAbdruck4.Checked = False Or
       RadCheckBoxAbdruck5.Checked = False Then
             AbortSaving = True
         End If
@@ -253,8 +248,6 @@
         lblPflichtfeld3.Visible = IIf(RadCheckBoxAbdruck3.Checked = False, True, False)
         lblPflichtfeld4.Visible = IIf(RadCheckBoxAbdruck4.Checked = False, True, False)
         lblPflichtfeld5.Visible = IIf(RadCheckBoxAbdruck5.Checked = False, True, False)
-
-
 
         'fehlermeldung anzeigen bei falscher validierung
         'sonderfall Kopierte Waage
@@ -271,7 +264,6 @@
         End If
     End Function
 
-
     'Speicherroutine
     Protected Overrides Sub SaveNeeded(ByVal UserControl As UserControl)
         If Me.Equals(UserControl) Then
@@ -284,13 +276,10 @@
                 Exit Sub
             End If
 
-
             If ValidateControls() = True Then
-
 
                 'neuen Context aufbauen
                 Using Context As New EichsoftwareClientdatabaseEntities1
-
 
                     'prüfen ob CREATE oder UPDATE durchgeführt werden muss
                     If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
@@ -300,12 +289,9 @@
                             'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
                             objEichprozess = dobjEichprozess
 
-
-
                             'wenn es defintiv noch keine pruefungen gibt, neue Anlegen
                             If _ListPruefungStabilitaet.Count = 0 Then
                                 'anzahl Bereiche auslesen um damit die anzahl der benötigten Iterationen und Objekt Erzeugungen zu erfahren
-
 
                                 For i = 1 To 5
                                     Dim objPruefung = Context.PruefungStabilitaetGleichgewichtslage.Create
@@ -331,7 +317,6 @@
 
                             End If
 
-
                             'neuen Status zuweisen
                             If AktuellerStatusDirty = False Then
                                 ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
@@ -342,7 +327,6 @@
                                 objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Taraeinrichtung
                                 AktuellerStatusDirty = False
                             End If
-
 
                             'Speichern in Datenbank
                             Context.SaveChanges()
@@ -356,11 +340,9 @@
         End If
     End Sub
 
-
     Protected Overrides Sub SaveWithoutValidationNeeded(usercontrol As UserControl)
         MyBase.SaveWithoutValidationNeeded(usercontrol)
         If Me.Equals(usercontrol) Then
-
 
             'neuen Context aufbauen
             Using Context As New EichsoftwareClientdatabaseEntities1
@@ -377,12 +359,9 @@
                         'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
                         objEichprozess = dobjEichprozess
 
-
-
                         'wenn es defintiv noch keine pruefungen gibt, neue Anlegen
                         If _ListPruefungStabilitaet.Count = 0 Then
                             'anzahl Bereiche auslesen um damit die anzahl der benötigten Iterationen und Objekt Erzeugungen zu erfahren
-
 
                             For i = 1 To 5
                                 Dim objPruefung = Context.PruefungStabilitaetGleichgewichtslage.Create
@@ -423,7 +402,7 @@
         MyBase.LokalisierungNeeded(UserControl)
 
         'lokalisierung: Leider kann ich den automatismus von .NET nicht nutzen. Dieser funktioniert nur sauber, wenn ein Dialog erzeugt wird. Zur Laufzeit aber gibt es diverse Probleme mit dem Automatischen Ändern der Sprache,
-        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße 
+        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco15PruefungStabilitaet))
 
         Me.lblAbdruck.Text = resources.GetString("lblAbdruck.Text")
@@ -431,7 +410,6 @@
         Me.lblBeschreibung.Text = resources.GetString("lblBeschreibung.Text")
         Me.lblLast.Text = resources.GetString("lblLast.Text")
         Me.lblPrintBeschreibung.Text = resources.GetString("lblPrintBeschreibung.Text")
-
 
         If Not ParentFormular Is Nothing Then
             Try
@@ -446,8 +424,6 @@
         End If
 
     End Sub
-
-
 
     ''' <summary>
     ''' LAst auf alle Lasten ausweiten
@@ -501,7 +477,7 @@
     Protected Overrides Sub EntsperrungNeeded()
         MyBase.EntsperrungNeeded()
 
-        'Hiermit wird ein lesender Vorgang wieder entsperrt. 
+        'Hiermit wird ein lesender Vorgang wieder entsperrt.
         For Each Control In Me.RadScrollablePanel1.PanelContainer.Controls
             Try
                 Control.readonly = Not Control.readonly
@@ -537,11 +513,10 @@
                     End If
                 End If
             Next
-      
+
         End Using
     End Sub
     Protected Overrides Sub VersendenNeeded(TargetUserControl As UserControl)
-
 
         If Me.Equals(TargetUserControl) Then
             MyBase.VersendenNeeded(TargetUserControl)

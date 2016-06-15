@@ -4,7 +4,7 @@
     Private mvarObjLizenz As Lizensierung
     Private ucoEichprozessauswahlliste As ucoEichprozessauswahlliste
 #End Region
-    
+
 #Region "Konstruktoren"
     Sub New()
         ' This call is required by the designer.
@@ -32,7 +32,6 @@
         End Set
     End Property
 #End Region
-
 
     Private Sub OpenBenutzerAuswahl()
         Dim f As New FrmBenutzerauswahl

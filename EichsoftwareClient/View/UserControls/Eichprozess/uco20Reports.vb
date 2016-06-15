@@ -1,5 +1,4 @@
-﻿
-Public Class uco20Reports
+﻿Public Class uco20Reports
     Inherits ucoContent
 
 #Region "Member Variabeln"
@@ -7,7 +6,7 @@ Public Class uco20Reports
 #End Region
 
 #Region "Konstruktoren"
-    'Private AktuellerStatusDirty As Boolean = False 'TH: Hier eigentlich obsolete. variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann 
+    'Private AktuellerStatusDirty As Boolean = False 'TH: Hier eigentlich obsolete. variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann
     Sub New()
         MyBase.New()
         ' Dieser Aufruf ist für den Designer erforderlich.
@@ -59,9 +58,6 @@ Public Class uco20Reports
 
 #End Region
 
-
-
-
 #Region "Overrides"
     ''' <summary>
     ''' Validations the needed.
@@ -110,7 +106,6 @@ Public Class uco20Reports
                             AktuellerStatusDirty = False
                         End If
 
-
                         'Speichern in Datenbank
                         Try
                             Context.SaveChanges()
@@ -126,9 +121,7 @@ Public Class uco20Reports
             ParentFormular.CurrentEichprozess = objEichprozess
         End If
 
-
     End Sub
-
 
     ''' <summary>
     ''' aktualisieren der Oberfläche wenn nötig
@@ -151,7 +144,7 @@ Public Class uco20Reports
     Protected Overrides Sub EntsperrungNeeded()
         MyBase.EntsperrungNeeded()
 
-        'Hiermit wird ein lesender Vorgang wieder entsperrt. 
+        'Hiermit wird ein lesender Vorgang wieder entsperrt.
         EnableControls(Me)
 
         'ändern des Moduses
@@ -159,7 +152,6 @@ Public Class uco20Reports
         ParentFormular.DialogModus = FrmMainContainer.enuDialogModus.korrigierend
     End Sub
     Protected Overrides Sub VersendenNeeded(TargetUserControl As UserControl)
-
 
         If Me.Equals(TargetUserControl) Then
             MyBase.VersendenNeeded(TargetUserControl)
@@ -170,7 +162,6 @@ Public Class uco20Reports
                 'auf fehlerhaft Status setzen
                 objEichprozess.FK_Bearbeitungsstatus = 2
                 objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Konformitätsbewertungsbevollmächtigter sich den DS von Anfang angucken muss
-
 
                 'erzeuegn eines Server Objektes auf basis des aktuellen DS
                 objServerEichprozess = clsClientServerConversionFunctions.CopyServerObjectProperties(objServerEichprozess, objEichprozess, clsClientServerConversionFunctions.enuModus.RHEWASendetAnClient)
@@ -304,7 +295,5 @@ Public Class uco20Reports
     End Sub
 
 #End Region
-
-
 
 End Class

@@ -2,7 +2,7 @@
     Inherits ucoContent
 
 #Region "Member Variables"
-    Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken 
+    Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken
     'Private AktuellerStatusDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Komptabilitätsnachweis zurückgesetzt
     Private _objEichprotokoll As Eichprotokoll
     'Private _objDBFunctions As New clsDBFunctions
@@ -49,7 +49,6 @@
         'daten füllen
         LoadFromDatabase()
     End Sub
-
 
     ''' <summary>
     ''' wenn an den Textboxen etwas geändert wurde, ist das objekt als Dirty zu markieren
@@ -99,10 +98,6 @@
             DisableControls(RadGroupBoxVerwendungszweckNullstellung)
             DisableControls(RadGroupBoxVerwendungszweckTara)
 
-
-
-
-
         End If
         'events abbrechen
         _suspendEvents = False
@@ -140,7 +135,6 @@
 
         'Stammdaten aus lokaler Lizenz laden
         RadTextBoxControlPruefer.Text = AktuellerBenutzer.Instance.Lizenz.Name & ", " & AktuellerBenutzer.Instance.Lizenz.Vorname & " (" + AktuellerBenutzer.Instance.Lizenz.HEKennung & ")"
-
 
         RadTextBoxControlFabriknummer.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer
 
@@ -263,7 +257,6 @@
 
         End If
 
-
         Select Case objEichprozess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren
             Case Is = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgmitNormalien
                 'vollständiges Staffelverfahren NEIN
@@ -290,7 +283,6 @@
 
         End Select
 
-
         'Sonderfall durch Herrn Strack definiert:
         If dMAXHoechlast < 1000 Then
             RadCheckBoxVolleNormallast.Checked = True
@@ -301,7 +293,6 @@
             RadCheckBoxVolleNormallast.Enabled = True
             RadTextBoxControlBetragNormallast.Enabled = True
         End If
-
 
         'bereich Komponenten
         RadTextBoxControlAWG.Text = objEichprozess.Lookup_Auswertegeraet.Typ
@@ -404,8 +395,6 @@
         Catch ex As Exception
         End Try
 
-
-
         'fokus setzen auf erstes Steuerelement
         RadTextBoxControlBenutzer.Focus()
 
@@ -449,7 +438,6 @@
         objEichprozess.Eichprotokoll.Verwendungszweck_HandTara = RadRadioButtonHandTara.IsChecked
         objEichprozess.Eichprotokoll.Taraeinrichtung_Taraeingabe = RadRadioButtonTaraeingabe.IsChecked
 
-
         objEichprozess.Eichprotokoll.Verwendungszweck_Drucker = RadCheckBoxDrucker.Checked
         objEichprozess.Eichprotokoll.Verwendungszweck_Druckertyp = RadTextBoxControlDruckerTyp.Text
         objEichprozess.Eichprotokoll.Verwendungszweck_EichfaehigerDatenspeicher = RadCheckBoxEichfaehigerSpeicher.Checked
@@ -474,7 +462,7 @@
         End Try
 
         Try
-            CType(control, Telerik.WinControls.UI.RadDateTimePicker).DateTimePickerElement.TextBoxElement.Border.ForeColor = color.red
+            CType(control, Telerik.WinControls.UI.RadDateTimePicker).DateTimePickerElement.TextBoxElement.Border.ForeColor = Color.Red
         Catch ex As Exception
         End Try
     End Sub
@@ -490,7 +478,6 @@
         Catch ex As Exception
         End Try
     End Sub
-
 
     ''' <summary>
     ''' Gültigkeit der Eingaben überprüfen
@@ -569,8 +556,7 @@
             End If
         End If
 
-
-          'fehlermeldung anzeigen bei falscher validierung
+        'fehlermeldung anzeigen bei falscher validierung
         Return Me.ShowValidationErrorBox(True)
 
     End Function
@@ -599,7 +585,6 @@
             End If
 
             If ValidateControls() = True Then
-
 
                 'neuen Context aufbauen
                 Using Context As New EichsoftwareClientdatabaseEntities1
@@ -681,7 +666,7 @@
         MyBase.LokalisierungNeeded(UserControl)
 
         'lokalisierung: Leider kann ich den automatismus von .NET nicht nutzen. Dieser funktioniert nur sauber, wenn ein Dialog erzeugt wird. Zur Laufzeit aber gibt es diverse Probleme mit dem Automatischen Ändern der Sprache,
-        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße 
+        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco_7EichprotokollDaten))
 
         lblAnzahlWZ.Text = resources.GetString("lblAnzahlWZ.Text")
@@ -711,7 +696,6 @@
         RadRadioButtonHandTara.Text = resources.GetString("RadRadioButtonHandTara.Text")
         RadRadioButtonTaraeingabe.Text = resources.GetString("RadRadioButtonTaraeingabe.Text")
 
-
         RadRadioButtonNustellungAutomatisch.Text = resources.GetString("RadRadioButtonNustellungAutomatisch.Text")
         RadRadioButtonNustellungHalbAutomatisch.Text = resources.GetString("RadRadioButtonNustellungHalbAutomatisch.Text")
         RadRadioButtonNustellungNullNachfuehrung.Text = resources.GetString("RadRadioButtonNustellungNullNachfuehrung.Text")
@@ -740,7 +724,6 @@
             Catch ex As Exception
             End Try
         End If
-
 
     End Sub
 
@@ -795,7 +778,7 @@
     Protected Overrides Sub EntsperrungNeeded()
         MyBase.EntsperrungNeeded()
 
-        'Hiermit wird ein lesender Vorgang wieder entsperrt. 
+        'Hiermit wird ein lesender Vorgang wieder entsperrt.
         EnableControls(RadGroupBoxBeschaffenheitspruefung)
         EnableControls(RadGroupBoxBeschaffenheitspruefungNormalien)
         EnableControls(RadGroupBoxIdentifikationsdaten)
@@ -809,7 +792,6 @@
         EnableControls(RadGroupBoxVerwendungszweckEquipment)
         EnableControls(RadGroupBoxVerwendungszweckNullstellung)
         EnableControls(RadGroupBoxVerwendungszweckTara)
-
 
         'ändern des Moduses
         DialogModus = enuDialogModus.korrigierend

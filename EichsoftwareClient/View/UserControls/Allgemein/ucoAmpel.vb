@@ -19,7 +19,6 @@ Public Class ucoAmpel
     Private _aktuellerGewaehlterVorgang As GlobaleEnumeratoren.enuEichprozessStatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
 #End Region
 
-
 #Region "Konstruktoren"
     ''' <summary>
     ''' methode welche in beiden Konstrkturen verwendet wird, zum zuweisen von standardwerten
@@ -67,7 +66,7 @@ Public Class ucoAmpel
     Sub New(ByVal pParentForm As Form)
         ' This call is required by the designer.
         InitializeComponent()
-  InitConstructor()
+        InitConstructor()
         Try
             _ParentForm = pParentForm
         Catch ex As Exception
@@ -75,8 +74,6 @@ Public Class ucoAmpel
     End Sub
 
 #End Region
-
-
 
 #Region "properties"
     Public Property AktuellerGewaehlterVorgang As GlobaleEnumeratoren.enuEichprozessStatus
@@ -137,7 +134,7 @@ Public Class ucoAmpel
                     'sonderfall versenden = fertig
                     If pStatus = GlobaleEnumeratoren.enuEichprozessStatus.Versenden Then
                         If Not _ParentForm.CurrentEichprozess Is Nothing Then
-                            If _ParentForm.CurrentEichprozess.FK_Bearbeitungsstatus = GlobaleEnumeratoren.enuBearbeitungsstatus.noch_nicht_versendet Or _
+                            If _ParentForm.CurrentEichprozess.FK_Bearbeitungsstatus = GlobaleEnumeratoren.enuBearbeitungsstatus.noch_nicht_versendet Or
  _ParentForm.CurrentEichprozess.FK_Bearbeitungsstatus = GlobaleEnumeratoren.enuBearbeitungsstatus.Fehlerhaft Then
                                 item("Image") = ConvertBitmapToByteArray(My.Resources.bullet_yellow)
                             Else
@@ -253,7 +250,6 @@ Public Class ucoAmpel
         nrow("Image") = ConvertBitmapToByteArray(My.Resources.bullet_red)
         Datasource.Rows.Add(nrow)
 
-
         nrow = Datasource.NewRow
         nrow("Title") = My.Resources.GlobaleLokalisierung.Ueberschrift_Kompatiblitaetsnachweis
         nrow("Status") = CInt(GlobaleEnumeratoren.enuEichprozessStatus.Kompatbilitaetsnachweis)
@@ -368,7 +364,6 @@ Public Class ucoAmpel
         nrow("Image") = ConvertBitmapToByteArray(My.Resources.bullet_red)
         Datasource.Rows.Add(nrow)
 
-
         RadListView1.DataSource = Datasource
         RadListView1.DisplayMember = "Title"
         RadListView1.ValueMember = "Status"
@@ -400,8 +395,6 @@ Public Class ucoAmpel
         End Try
     End Sub
 #End Region
-
-
 
 #Region "telerik"
     ''' <summary>
@@ -473,10 +466,6 @@ Public Class ucoAmpel
     '    End Try
     'End Sub
 
-   
-
-
-
     ''' <summary>
     ''' Event welches von Telerik gebraucht wird, um unser Custom Visual Item in der Listbox zu erzeugen
     ''' </summary>
@@ -488,7 +477,6 @@ Public Class ucoAmpel
     End Sub
 
 #End Region
-
 
 #Region "Hilfsfunktionen"
 
@@ -560,7 +548,6 @@ Public Class ucoAmpel
                         returnlist.Add(GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderRichtigkeitmitNormallastLinearitaet)
                 End Select
 
-
                 If objEichprozess.Eichprotokoll.Verwendungszweck_Drucker = False Then
                     returnlist.Add(GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderStabilitätderGleichgewichtslage)
                 End If
@@ -583,4 +570,3 @@ Public Class ucoAmpel
 #End Region
 
 End Class
-

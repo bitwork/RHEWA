@@ -1,14 +1,13 @@
 ﻿Public Class uco14PruefungAnsprechvermoegen
     Inherits ucoContent
 #Region "Member Variables"
-    Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken 
+    Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken
     'Private AktuellerStatusDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Komptabilitätsnachweis zurückgesetzt
     Private _objEichprotokoll As Eichprotokoll
 
     Private _currentObjPruefungAnsprechvermoegen As PruefungAnsprechvermoegen
     Private _ListPruefungAnsprechvermoegen As New List(Of PruefungAnsprechvermoegen)
 #End Region
-
 
 #Region "Constructors"
     Sub New()
@@ -22,9 +21,6 @@
         EichprozessStatusReihenfolge = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungdesAnsprechvermögens
     End Sub
 #End Region
-
-
-
 
 #Region "Events"
     ''' <summary>
@@ -96,7 +92,6 @@
         'steuerelemente mit werten aus DB füllen
         FillControls()
 
-
         If DialogModus = enuDialogModus.lesend Then
             'falls der Konformitätsbewertungsvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
             DisableControls(Me)
@@ -139,7 +134,6 @@
         _currentObjPruefungAnsprechvermoegen = Nothing
         _currentObjPruefungAnsprechvermoegen = (From o In _ListPruefungAnsprechvermoegen Where o.LastL = "Halb").FirstOrDefault
 
-
         If Not _currentObjPruefungAnsprechvermoegen Is Nothing Then
             RadTextBoxControlLast2.Text = _currentObjPruefungAnsprechvermoegen.Last
             RadTextBoxControlAnzeige2.Text = _currentObjPruefungAnsprechvermoegen.Anzeige
@@ -155,7 +149,6 @@
                     RadTextBoxControlLast2.Text = CDec(objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3) / 2
             End Select
         End If
-
 
         'max
         _currentObjPruefungAnsprechvermoegen = Nothing
@@ -189,18 +182,17 @@
         'neuen Context aufbauen
         Using Context As New EichsoftwareClientdatabaseEntities1
             'jedes objekt initialisieren und aus context laden und updaten
-                For Each obj In _ListPruefungAnsprechvermoegen
-                    Dim objPruefung = Context.PruefungAnsprechvermoegen.FirstOrDefault(Function(value) value.ID = obj.ID)
-                    If Not objPruefung Is Nothing Then
-                        'in lokaler DB gucken
-                        UpdatePruefungsObject(objPruefung)
-                    Else 'es handelt sich um eine Serverobjekt im => Korrekturmodus
-                        If DialogModus = enuDialogModus.korrigierend Then
-                            UpdatePruefungsObject(obj)
-                        End If
+            For Each obj In _ListPruefungAnsprechvermoegen
+                Dim objPruefung = Context.PruefungAnsprechvermoegen.FirstOrDefault(Function(value) value.ID = obj.ID)
+                If Not objPruefung Is Nothing Then
+                    'in lokaler DB gucken
+                    UpdatePruefungsObject(objPruefung)
+                Else 'es handelt sich um eine Serverobjekt im => Korrekturmodus
+                    If DialogModus = enuDialogModus.korrigierend Then
+                        UpdatePruefungsObject(obj)
                     End If
-                Next
-
+                End If
+            Next
 
         End Using
     End Sub
@@ -232,7 +224,6 @@
         Next
     End Sub
 
-
     ''' <summary>
     ''' Gültigkeit der Eingaben überprüfen
     ''' </summary>
@@ -254,11 +245,11 @@
             AbortSaving = True
         End If
 
-        If RadTextBoxControlAnzeige1.Text.Trim = "" Or _
-            RadTextBoxControlAnzeige2.Text.Trim = "" Or _
-            RadTextBoxControlAnzeige3.Text.Trim = "" Or _
-RadTextBoxControlLast1.Text.Trim = "" Or _
-RadTextBoxControlLast2.Text.Trim = "" Or _
+        If RadTextBoxControlAnzeige1.Text.Trim = "" Or
+            RadTextBoxControlAnzeige2.Text.Trim = "" Or
+            RadTextBoxControlAnzeige3.Text.Trim = "" Or
+RadTextBoxControlLast1.Text.Trim = "" Or
+RadTextBoxControlLast2.Text.Trim = "" Or
             RadTextBoxControlLast3.Text.Trim = "" Then
 
             AbortSaving = True
@@ -271,7 +262,6 @@ RadTextBoxControlLast2.Text.Trim = "" Or _
 
         End If
         Return Me.ShowValidationErrorBox(False)
-
 
     End Function
 
@@ -318,7 +308,6 @@ RadTextBoxControlLast2.Text.Trim = "" Or _
             End If
 
             If ValidateControls() = True Then
-
 
                 'neuen Context aufbauen
                 Using Context As New EichsoftwareClientdatabaseEntities1
@@ -383,11 +372,9 @@ RadTextBoxControlLast2.Text.Trim = "" Or _
                                 Next
                             End If
 
-
                             'Wenn kein Drucker gewählt wurde entfällt die PRüfung der Stablität der GLeichgewichtslage
                             If objEichprozess.Eichprotokoll.Verwendungszweck_Drucker = False Then
                                 If AktuellerStatusDirty = False Then
-
 
                                     ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
                                     If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.Taraeinrichtung Then
@@ -400,7 +387,6 @@ RadTextBoxControlLast2.Text.Trim = "" Or _
                             Else
                                 If AktuellerStatusDirty = False Then
 
-
                                     ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
                                     If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderStabilitätderGleichgewichtslage Then
                                         objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderStabilitätderGleichgewichtslage
@@ -410,9 +396,6 @@ RadTextBoxControlLast2.Text.Trim = "" Or _
                                     AktuellerStatusDirty = False
                                 End If
                             End If
-
-
-
 
                             'Füllt das Objekt mit den Werten aus den Steuerlementen
                             UpdateObject()
@@ -526,16 +509,11 @@ RadTextBoxControlLast2.Text.Trim = "" Or _
 
 #End Region
 
-
-
-
     Private Sub RadButtonShowEFGSteigend_Click(sender As Object, e As EventArgs) Handles RadButtonShowEFG.Click
         Dim f As New frmEichfehlergrenzen(objEichprozess)
         f.Show()
 
     End Sub
-
-
 
     Protected Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
         If Me.Equals(UserControl) = False Then Exit Sub
@@ -543,7 +521,7 @@ RadTextBoxControlLast2.Text.Trim = "" Or _
         MyBase.LokalisierungNeeded(UserControl)
 
         'lokalisierung: Leider kann ich den automatismus von .NET nicht nutzen. Dieser funktioniert nur sauber, wenn ein Dialog erzeugt wird. Zur Laufzeit aber gibt es diverse Probleme mit dem Automatischen Ändern der Sprache,
-        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße 
+        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco14PruefungAnsprechvermoegen))
 
         Me.lblAnzeige.Text = resources.GetString("lblAnzeige.Text")
@@ -565,10 +543,7 @@ RadTextBoxControlLast2.Text.Trim = "" Or _
             End Try
         End If
 
-
     End Sub
-
-
 
     'berechnen des D1 Wertes aus MIN Eichwert + Anzeige2
     Private Sub RadTextBoxControlLast1_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlAnzeige1.TextChanged, RadTextBoxControlLast1.TextChanged
@@ -627,7 +602,7 @@ RadTextBoxControlLast2.Text.Trim = "" Or _
         End Try
     End Sub
 
-    Private Sub RadTextBoxControlAnzeige1_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles RadTextBoxControlAnzeige3.Validating, RadTextBoxControlAnzeige2.Validating, RadTextBoxControlAnzeige1.Validating, _
+    Private Sub RadTextBoxControlAnzeige1_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles RadTextBoxControlAnzeige3.Validating, RadTextBoxControlAnzeige2.Validating, RadTextBoxControlAnzeige1.Validating,
         RadTextBoxControlLast3.Validating, RadTextBoxControlLast2.Validating, RadTextBoxControlLast1.Validating
         Dim result As Decimal
         If Not sender.readonly = True Then
@@ -659,7 +634,7 @@ RadTextBoxControlLast2.Text.Trim = "" Or _
     Protected Overrides Sub EntsperrungNeeded()
         MyBase.EntsperrungNeeded()
 
-        'Hiermit wird ein lesender Vorgang wieder entsperrt. 
+        'Hiermit wird ein lesender Vorgang wieder entsperrt.
         EnableControls(Me)
 
         'ändern des Moduses
@@ -668,7 +643,6 @@ RadTextBoxControlLast2.Text.Trim = "" Or _
     End Sub
 
     Protected Overrides Sub VersendenNeeded(TargetUserControl As UserControl)
-
 
         If Me.Equals(TargetUserControl) Then
             MyBase.VersendenNeeded(TargetUserControl)

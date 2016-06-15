@@ -1,8 +1,6 @@
 ﻿Public Class uco_3Kompatiblititaetsnachweis
     Inherits ucoContent
 
-
-
 #Region "Member Variables"
     Private _objMogelstatistik As Mogelstatistik
     Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken (z.b. selected index changed beim laden des Formulars)
@@ -151,10 +149,6 @@
 
         End If
 
-
-
-
-
         If Not objEichprozess.FK_WaagenArt Is Nothing Then
 
             '  Waagenart = (From dbWaagenart In Context.Lookup_Waagenart Select dbWaagenart Where dbWaagenart.ID = objEichprozess.FK_WaagenArt).FirstOrDefault
@@ -165,14 +159,12 @@
                 RadTextBoxControlWaageHoechstlast2.Visible = False
                 lblKGMax2.Visible = False
 
-
                 lblPflichtfeld1.Visible = True
                 lblPflichtfeld2.Visible = True
                 lblPflichtfeld3.Visible = False
                 lblPflichtfeld4.Visible = False
                 lblPflichtfeld5.Visible = False
                 lblPflichtfeld6.Visible = False
-
 
                 lblE2.Visible = False
                 RadTextBoxControlWaageEichwert2.Visible = False
@@ -182,11 +174,9 @@
                 RadTextBoxControlWaageHoechstlast3.Visible = False
                 lblKGMax3.Visible = False
 
-
                 lblE3.Visible = False
                 RadTextBoxControlWaageEichwert3.Visible = False
                 lblEKG3.Visible = False
-
 
                 'umbennenen des Textes
                 lblMax1.Text = "Max"
@@ -215,7 +205,6 @@
                 RadTextBoxControlWaageHoechstlast3.Visible = False
                 lblKGMax3.Visible = False
 
-
                 lblE3.Visible = False
                 RadTextBoxControlWaageEichwert3.Visible = False
                 lblEKG3.Visible = False
@@ -224,7 +213,6 @@
                 lblE1.Text = "e1"
             ElseIf objEichprozess.Lookup_Waagenart.Art = "Dreibereichswaage" Or objEichprozess.Lookup_Waagenart.Art = "Dreiteilungswaage" Then
                 'zweiten und dritten bereich einblenden
-
 
                 'zweiten Bereich einblenden
                 lblMax2.Visible = True
@@ -246,7 +234,6 @@
                 lblMax3.Visible = True
                 RadTextBoxControlWaageHoechstlast3.Visible = True
                 lblKGMax3.Visible = True
-
 
                 lblE3.Visible = True
                 RadTextBoxControlWaageEichwert3.Visible = True
@@ -359,7 +346,6 @@
             PictureBoxWZ8.Visible = False
             PictureBoxWZ9.Visible = False
 
-
             'felder beschreiben lassen
             RadTextBoxControlWZGenauigkeitsklasse.ReadOnly = False
             RadTextBoxControlWZGenauigkeitsklasse.Enabled = True
@@ -395,7 +381,6 @@
             PictureBoxWZ9.Visible = True
             PictureBoxWZ10.Visible = True
             PictureBoxWZ11.Visible = True
-
 
             RadTextBoxControlWZGenauigkeitsklasse.ReadOnly = True
 
@@ -571,8 +556,6 @@
                                     Continue For
                                 End If
 
-
-
                                 'minteilungswert darf leer sein, wenn Hoechsteilungsfaktor gefüllt
                                 If Control.Equals(RadTextBoxControlWZMinTeilungswert) Then
                                     'ist gültig wenn hoechstteilungsfaktor gefüllt
@@ -603,7 +586,6 @@
                                     End If
                                 End If
 
-
                                 Me.AbortSaving = True
 
                                 CType(Control, Telerik.WinControls.UI.RadTextBox).TextBoxElement.Border.ForeColor = Color.Red
@@ -633,8 +615,6 @@
             End If
         End If
 
-
-
         If Me.AbortSaving = True Then
             If Debugger.IsAttached Then 'standardwerte füllen für schnelleres testen
                 If Me.ShowValidationErrorBox(True) Then
@@ -658,14 +638,12 @@
             End If
         End If
 
-
         'Speichern soll nicht abgebrochen werden, da alles okay ist
         Me.AbortSaving = False
         Return True
 
         'prüfen ob eine neue WZ angelegt wurde (über button und neuem Dialog vermutlich)
     End Function
-
 
     'Speicherroutine
     Protected Overrides Sub SaveNeeded(ByVal UserControl As UserControl)
@@ -688,7 +666,6 @@
             End If
 
             If ValidateControls() = True Then
-
 
                 'neuen Context aufbauen
                 Using Context As New EichsoftwareClientdatabaseEntities1
@@ -750,7 +727,6 @@
                         objEichprozess = dobjEichprozess
                         'neuen Status zuweisen
 
-
                         'Füllt das Objekt mit den Werten aus den Steuerlementen
                         UpdateObject()
                         'Speichern in Datenbank
@@ -772,14 +748,13 @@
 
 #End Region
 
-
     Protected Overrides Sub LokalisierungNeeded(UserControl As System.Windows.Forms.UserControl)
         If Me.Equals(UserControl) = False Then Exit Sub
 
         MyBase.LokalisierungNeeded(UserControl)
 
         'lokalisierung: Leider kann ich den automatismus von .NET nicht nutzen. Dieser funktioniert nur sauber, wenn ein Dialog erzeugt wird. Zur Laufzeit aber gibt es diverse Probleme mit dem Automatischen Ändern der Sprache,
-        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße 
+        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco_3Kompatiblititaetsnachweis))
 
         Me.RadGroupBoxVerbindungselemente.Text = resources.GetString("RadGroupBoxVerbindungselemente.Text")
@@ -868,7 +843,6 @@
             LoadFromDatabase() 'war mal auskommentiert. ich weiß gerade nicht mehr wieso. Ergänzung: war ausdokumentiert, weil damit die Werte der NSW und WZ übeschrieben werden wenn man auf zurück klickt. Wenn es allerdings ausdokumenterit ist, funktioniert das anlegen einer neuen WZ nicht
         End If
     End Sub
-
 
     ''' <summary>
     ''' Event welches alle MouseHovers der Textboxen abfängt um den entsprechenden Hilfetext anzuzeigen
@@ -1096,11 +1070,7 @@
             End Select
         End If
 
-
-
     End Sub
-
-
 
     ''' <summary>
     ''' event welches prüft ob in den eingabefeldern auch nur gültige Zahlen eingegeben wurden
@@ -1136,40 +1106,35 @@
 
                 End If
 
-
             End If
         End If
-
-
 
     End Sub
 
     ''' <summary>
     ''' Es dürfen nur kommas aber keine Punkte eingegeben werden. Sonst wird das mit der Lokalisiernug zu komplex.
     ''' In EN gibt es z.b. , als 1000er trennzeichen . als kommatrennzeichen
-    ''' in DE gibtt es das genau anders herum 
+    ''' in DE gibtt es das genau anders herum
     ''' und in PL gibt es gar kein 1000er Trennzeichen
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
-    Private Sub RadTextBoxControlWaageKlasse_TextChanging(sender As Object, e As Telerik.WinControls.TextChangingEventArgs) Handles RadTextBoxControlWZWiderstand.TextChanging, RadTextBoxControlWZWaegezellenkennwert.TextChanging, _
-        RadTextBoxControlWZTemperaturbereichMIN.TextChanging, RadTextBoxControlWZTemperaturbereichMAX.TextChanging, RadTextBoxControlWZRueckkehrVorlastsignal.TextChanging, _
-        RadTextBoxControlWZMinTeilungswert.TextChanging, RadTextBoxControlWZMindestvorlast.TextChanging, RadTextBoxControlWZMaxTeilungswerte.TextChanging, _
-        RadTextBoxControlWZKriechteilungsfaktor.TextChanging, RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.TextChanging, RadTextBoxControlWZHoechstteilungsfaktor.TextChanging, RadTextBoxControlWZHoechstlast.TextChanging, _
-        RadTextBoxControlWZBruchteilEichfehlergrenze.TextChanging, RadTextBoxControlWaageUebersetzungsverhaeltnis.TextChanging, _
-        RadTextBoxControlWaageTotlast.TextChanging, RadTextBoxControlWaageTemperaturbereichMin.TextChanging, RadTextBoxControlWaageTemperaturbereichMax.TextChanging, _
-        RadTextBoxControlWaageKlasse.TextChanging, RadTextBoxControlWaageKabelquerschnitt.TextChanging, RadTextBoxControlWaageKabellaenge.TextChanging, _
-        RadTextBoxControlWaageHoechstlast3.TextChanging, RadTextBoxControlWaageHoechstlast2.TextChanging, RadTextBoxControlWaageHoechstlast1.TextChanging, _
-        RadTextBoxControlWaageEichwert3.TextChanging, RadTextBoxControlWaageEichwert2.TextChanging, RadTextBoxControlWaageEichwert1.TextChanging, _
-        RadTextBoxControlWaageEcklastzuschlag.TextChanging, RadTextBoxControlWaageAnzahlWaegezellen.TextChanging, RadTextBoxControlWaageAdditiveTarahoechstlast.TextChanging, _
-        RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze.TextChanging, RadTextBoxControlEinschaltnullstellbereich.TextChanging, RadTextBoxControlAWGTemperaturbereichMin.TextChanging, _
-        RadTextBoxControlAWGTemperaturbereichMax.TextChanging, RadTextBoxControlAWGTeilungswerte.TextChanging, RadTextBoxControlAWGSpeisespannung.TextChanging, _
-        RadTextBoxControlAWGMindestmesssignal.TextChanging, RadTextBoxControlAWGMindesteingangsspannung.TextChanging, RadTextBoxControlAWGKlasse.TextChanging, _
-        RadTextBoxControlAWGKabellaenge.TextChanging, RadTextBoxControlAWGGrenzwerteLastwiderstandMin.TextChanging, RadTextBoxControlAWGGrenzwerteLastwiderstandMax.TextChanging, _
+    Private Sub RadTextBoxControlWaageKlasse_TextChanging(sender As Object, e As Telerik.WinControls.TextChangingEventArgs) Handles RadTextBoxControlWZWiderstand.TextChanging, RadTextBoxControlWZWaegezellenkennwert.TextChanging,
+        RadTextBoxControlWZTemperaturbereichMIN.TextChanging, RadTextBoxControlWZTemperaturbereichMAX.TextChanging, RadTextBoxControlWZRueckkehrVorlastsignal.TextChanging,
+        RadTextBoxControlWZMinTeilungswert.TextChanging, RadTextBoxControlWZMindestvorlast.TextChanging, RadTextBoxControlWZMaxTeilungswerte.TextChanging,
+        RadTextBoxControlWZKriechteilungsfaktor.TextChanging, RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.TextChanging, RadTextBoxControlWZHoechstteilungsfaktor.TextChanging, RadTextBoxControlWZHoechstlast.TextChanging,
+        RadTextBoxControlWZBruchteilEichfehlergrenze.TextChanging, RadTextBoxControlWaageUebersetzungsverhaeltnis.TextChanging,
+        RadTextBoxControlWaageTotlast.TextChanging, RadTextBoxControlWaageTemperaturbereichMin.TextChanging, RadTextBoxControlWaageTemperaturbereichMax.TextChanging,
+        RadTextBoxControlWaageKlasse.TextChanging, RadTextBoxControlWaageKabelquerschnitt.TextChanging, RadTextBoxControlWaageKabellaenge.TextChanging,
+        RadTextBoxControlWaageHoechstlast3.TextChanging, RadTextBoxControlWaageHoechstlast2.TextChanging, RadTextBoxControlWaageHoechstlast1.TextChanging,
+        RadTextBoxControlWaageEichwert3.TextChanging, RadTextBoxControlWaageEichwert2.TextChanging, RadTextBoxControlWaageEichwert1.TextChanging,
+        RadTextBoxControlWaageEcklastzuschlag.TextChanging, RadTextBoxControlWaageAnzahlWaegezellen.TextChanging, RadTextBoxControlWaageAdditiveTarahoechstlast.TextChanging,
+        RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze.TextChanging, RadTextBoxControlEinschaltnullstellbereich.TextChanging, RadTextBoxControlAWGTemperaturbereichMin.TextChanging,
+        RadTextBoxControlAWGTemperaturbereichMax.TextChanging, RadTextBoxControlAWGTeilungswerte.TextChanging, RadTextBoxControlAWGSpeisespannung.TextChanging,
+        RadTextBoxControlAWGMindestmesssignal.TextChanging, RadTextBoxControlAWGMindesteingangsspannung.TextChanging, RadTextBoxControlAWGKlasse.TextChanging,
+        RadTextBoxControlAWGKabellaenge.TextChanging, RadTextBoxControlAWGGrenzwerteLastwiderstandMin.TextChanging, RadTextBoxControlAWGGrenzwerteLastwiderstandMax.TextChanging,
         RadTextBoxControlAWGBruchteilEichfehlergrenze.TextChanging, RadTextBoxControlAWGAnschlussart.TextChanging
-
-
 
         If _suspendEvents = True Then Exit Sub
 
@@ -1178,8 +1143,6 @@
             e.Cancel = True
         End If
     End Sub
-
-
 
     ''' <summary>
     ''' wenn an den Textboxen etwas geändert wurde, ist das objekt als Dirty zu markieren
@@ -1191,7 +1154,6 @@
         If _suspendEvents = True Then Exit Sub
         AktuellerStatusDirty = True
     End Sub
-
 
     Private Sub RadTextBoxControlWZGenauigkeitsklasse_TextChanging(sender As Object, e As Telerik.WinControls.TextChangingEventArgs) Handles RadTextBoxControlWZGenauigkeitsklasse.TextChanging
         If _suspendEvents = True Then
@@ -1213,7 +1175,7 @@
     Protected Overrides Sub EntsperrungNeeded()
         MyBase.EntsperrungNeeded()
 
-        'Hiermit wird ein lesender Vorgang wieder entsperrt. 
+        'Hiermit wird ein lesender Vorgang wieder entsperrt.
         EnableControls(RadGroupBoxAWG)
         EnableControls(RadGroupBoxVerbindungselemente)
         EnableControls(RadGroupBoxWaage)
@@ -1226,40 +1188,37 @@
 
     Protected Overrides Sub VersendenNeeded(TargetUserControl As UserControl)
 
-
         If Me.Equals(TargetUserControl) Then
             MyBase.VersendenNeeded(TargetUserControl)
 
-                Dim objServerEichprozess As New EichsoftwareWebservice.ServerEichprozess
-                'auf fehlerhaft Status setzen
-                objEichprozess.FK_Bearbeitungsstatus = 2
-                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Konformitätsbewertungsbevollmächtigter sich den DS von Anfang angucken muss
-                UpdateObject()
+            Dim objServerEichprozess As New EichsoftwareWebservice.ServerEichprozess
+            'auf fehlerhaft Status setzen
+            objEichprozess.FK_Bearbeitungsstatus = 2
+            objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe 'auf die erste Seite "zurückblättern" damit Konformitätsbewertungsbevollmächtigter sich den DS von Anfang angucken muss
+            UpdateObject()
 
-                'erzeuegn eines Server Objektes auf basis des aktuellen DS
+            'erzeuegn eines Server Objektes auf basis des aktuellen DS
             objServerEichprozess = clsClientServerConversionFunctions.CopyServerObjectProperties(objServerEichprozess, objEichprozess, clsClientServerConversionFunctions.enuModus.RHEWASendetAnClient)
-                Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
-                    Try
-                        Webcontext.Open()
-                    Catch ex As Exception
-                        MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                        Exit Sub
-                    End Try
+            Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
+                Try
+                    Webcontext.Open()
+                Catch ex As Exception
+                    MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    Exit Sub
+                End Try
 
-                  
+                Try
+                    'add prüft anhand der Vorgangsnummer automatisch ob ein neuer Prozess angelegt, oder ein vorhandener aktualisiert wird
+                    Webcontext.AddEichprozess(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
 
-                    Try
-                        'add prüft anhand der Vorgangsnummer automatisch ob ein neuer Prozess angelegt, oder ein vorhandener aktualisiert wird
-                        Webcontext.AddEichprozess(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
-
-                        'schließen des dialoges
-                        ParentFormular.Close()
-                    Catch ex As Exception
-                        MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
-                        ' Status zurück setzen
-                        Exit Sub
-                    End Try
-                End Using
+                    'schließen des dialoges
+                    ParentFormular.Close()
+                Catch ex As Exception
+                    MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    ' Status zurück setzen
+                    Exit Sub
+                End Try
+            End Using
 
         End If
     End Sub

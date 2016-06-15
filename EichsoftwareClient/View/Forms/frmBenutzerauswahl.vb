@@ -5,7 +5,6 @@ Public Class FrmBenutzerauswahl
 
     Private mvarGewaehlteBenutzerLizenz As Lizensierung 'aktuell gewählter Benutzer
 
-
     ''' <summary>
     ''' Gets the gewaehlte benutzer lizenz.
     ''' </summary>
@@ -47,10 +46,10 @@ Public Class FrmBenutzerauswahl
     ''' <remarks></remarks>
     Private Sub LadeBenutzer()
         Using context As New EichsoftwareClientdatabaseEntities1
-            Dim data = From Benutzer In context.Lizensierung Select New With _
-                                                 { _
-                                                     .Name = Benutzer.Vorname & " " & Benutzer.Name, _
-                                                     .Lizenzschluessel = Benutzer.Lizenzschluessel, _
+            Dim data = From Benutzer In context.Lizensierung Select New With
+                                                 {
+                                                     .Name = Benutzer.Vorname & " " & Benutzer.Name,
+                                                     .Lizenzschluessel = Benutzer.Lizenzschluessel,
                                                      .Aktiv = Benutzer.Aktiv
                                               }
 
@@ -70,7 +69,6 @@ Public Class FrmBenutzerauswahl
     Private Sub RadButtonNeuerBenutzer_Click(sender As Object, e As EventArgs) Handles RadButtonNeuerBenutzer.Click
         ShowNeueLizenz()
     End Sub
-
 
     ''' <summary>
     ''' Validierung
@@ -127,7 +125,6 @@ Public Class FrmBenutzerauswahl
             BestaetigeDialog()
         End If
     End Sub
-
 
     ''' <summary>
     '''    Doppelklick abfangen für schnelleres vorblättern

@@ -3,7 +3,6 @@
 Public Class frmDBSync
     Private Const DBTABLES As String = "ServerVerbindungsprotokoll,ServerLookupVertragspartnerFirma,ServerKonfiguration,Servereichmarkenverwaltung,Firmen,ServerFirmenZusatzdaten,Benutzer,ServerLizensierung,ServerLookup_Waagenart,ServerKompatiblitaetsnachweis,ServerLookup_Vorgangsstatus,ServerLookup_Auswertegeraet,ServerLookup_Waegezelle,ServerLookup_Bearbeitungsstatus,ServerLookup_Waagentyp,ServerLookup_Konformitaetsbewertungsverfahren,ServerEichprotokoll,ServerEichprozess,ServerMogelstatistik,ServerPruefungAnsprechvermoegen,ServerPruefungAussermittigeBelastung,ServerPruefungLinearitaetFallend,ServerPruefungLinearitaetSteigend,ServerPruefungRollendeLasten,ServerPruefungStabilitaetGleichgewichtslage,ServerPruefungStaffelverfahrenErsatzlast,ServerPruefungStaffelverfahrenNormallast,ServerPruefungWiederholbarkeit"
 
-
     Private Sub Start()
         'einblenden des DEV Syncs
         If Debugger.IsAttached Then RadioButtonSyncStratoDEV.Visible = True Else RadioButtonSyncStratoDEV.Visible = False
@@ -56,8 +55,6 @@ Public Class frmDBSync
         Dim fileContentsSQL As String = ""
         Dim fileContentsLOG As String = ""
 
-
-
         Dim psi As New ProcessStartInfo(PathScript)
         If Debugger.IsAttached Then
             psi.CreateNoWindow = False
@@ -71,8 +68,7 @@ Public Class frmDBSync
 
         psi.WorkingDirectory = PathWorkingDirectory
 
-
-        Dim process As Process = process.Start(psi)
+        Dim process As Process = Process.Start(psi)
 
         'Code erst weiterführen wenn Shellscript abgeschlossen wurde
         process.WaitForExit()
@@ -83,7 +79,6 @@ Public Class frmDBSync
 
             'lesen der Datei in String
             fileContentsSQL = My.Computer.FileSystem.ReadAllText(SQLFile.FullName)
-
 
             Try
                 'löschen der Datei
@@ -107,7 +102,6 @@ Public Class frmDBSync
                 cmd.CommandText = fileContentsSQL
                 cmd.CommandType = CommandType.Text
 
-
                 'öffnen der DB Verbindung
                 Dim previousConnectionState As ConnectionState
                 previousConnectionState = conn.State
@@ -128,7 +122,6 @@ Public Class frmDBSync
 
             End If
 
-
             'auslesen der LogDatei
             Dim LogFile As New IO.FileInfo(PathLog)
             Try
@@ -139,7 +132,6 @@ Public Class frmDBSync
                 End If
             Catch ex As Exception
             End Try
-
 
             'schreiben des rückgabe wertes
             returnvalue = New Tuple(Of String, String)(fileContentsSQL, fileContentsLOG)
@@ -153,10 +145,6 @@ Public Class frmDBSync
             returnvalue = New Tuple(Of String, String)("Datei wurde nicht erzeugt. Fehler", fileContentsLOG)
             e.Result = returnvalue
         End If
-
-
-
-
 
     End Sub
 
@@ -204,12 +192,10 @@ Public Class frmDBSync
         End If
     End Sub
 
-
     Private Sub TimerLog_Tick(sender As Object, e As EventArgs) Handles TimerLog.Tick
         Try
             'auslesen der LogDatei
             Dim PathLog As String = AppDomain.CurrentDomain.BaseDirectory & "Repository\OfflineSync.log"
-
 
             Dim LogFile As New IO.FileInfo(PathLog)
             Try

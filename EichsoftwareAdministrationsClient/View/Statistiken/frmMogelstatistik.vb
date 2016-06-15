@@ -3,10 +3,8 @@ Imports System.ComponentModel
 
 Public Class frmMogelstatistik
 
-
     Private Sub FrmVerbindungsprotokoll_Load(sender As Object, e As EventArgs) Handles Me.Load
         LoadFromDatabase()
-
 
     End Sub
 
@@ -29,7 +27,6 @@ Public Class frmMogelstatistik
                 Catch e As Exception
                 End Try
 
-
                 Try
                     Dim sortdescriptor = New SortDescriptor()
                     sortdescriptor.Direction = ListSortDirection.Ascending
@@ -38,7 +35,6 @@ Public Class frmMogelstatistik
                 Catch e As Exception
 
                 End Try
-
 
             Catch ex As Exception
             End Try

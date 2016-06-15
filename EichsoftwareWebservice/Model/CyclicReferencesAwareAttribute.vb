@@ -1,6 +1,6 @@
 ﻿Imports System.ServiceModel.Description
 
-<AttributeUsage(AttributeTargets.[Interface] Or AttributeTargets.Method)> _
+<AttributeUsage(AttributeTargets.[Interface] Or AttributeTargets.Method)>
 Public Class CyclicReferencesAwareAttribute
     Inherits Attribute
     Implements IContractBehavior

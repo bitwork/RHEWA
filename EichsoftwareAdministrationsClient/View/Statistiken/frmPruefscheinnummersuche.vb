@@ -14,27 +14,25 @@ Public Class FrmPruefscheinnummersuche
             Context.Configuration.ProxyCreationEnabled = False
 
             Dim Data = From Eichprozess In Context.ServerEichprozess.Include("ServerLookup_Waegezelle").Include("ServerEichprotokoll") Where Eichprozess.ServerEichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer.Contains(Suchtext)
-                        Join Lookup In Context.ServerLookup_Vorgangsstatus On Eichprozess.FK_Vorgangsstatus Equals Lookup.ID _
-                        Join Lookup2 In Context.ServerLookup_Bearbeitungsstatus On Eichprozess.FK_Bearbeitungsstatus Equals Lookup2.ID _
-                                             Select New With _
-           { _
-                Eichprozess.ID, _
-                .Pruefscheinnummer = Eichprozess.ServerEichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer, _
-                            .Status = Lookup.Status, _
-                            Eichprozess.Vorgangsnummer, _
-                            .Fabriknummer = Eichprozess.ServerKompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer, _
-                            .Lookup_Waegezelle = Eichprozess.ServerLookup_Waegezelle.Typ, _
-                            .Lookup_Waagentyp = Eichprozess.ServerLookup_Waagentyp.Typ, _
-                            .Lookup_Waagenart = Eichprozess.ServerLookup_Waagenart.Art, _
-                            .Lookup_Auswertegeraet = Eichprozess.ServerLookup_Auswertegeraet.Typ, _
-                            .Sachbearbeiter = Eichprozess.ServerEichprotokoll.Identifikationsdaten_Pruefer, _
-                   .ZurBearbeitungGesperrtDurch = Eichprozess.ZurBearbeitungGesperrtDurch, _
-                                .NeuWZ = Eichprozess.ServerLookup_Waegezelle.Neu, _
-                .Bearbeitungsstatus = Lookup2.Status, _
-            .Uploaddatum = Eichprozess.UploadDatum
-                             }
-
-
+                       Join Lookup In Context.ServerLookup_Vorgangsstatus On Eichprozess.FK_Vorgangsstatus Equals Lookup.ID
+                       Join Lookup2 In Context.ServerLookup_Bearbeitungsstatus On Eichprozess.FK_Bearbeitungsstatus Equals Lookup2.ID
+                       Select New With
+{
+Eichprozess.ID,
+.Pruefscheinnummer = Eichprozess.ServerEichprotokoll.Beschaffenheitspruefung_Pruefscheinnummer,
+      .Status = Lookup.Status,
+      Eichprozess.Vorgangsnummer,
+      .Fabriknummer = Eichprozess.ServerKompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer,
+      .Lookup_Waegezelle = Eichprozess.ServerLookup_Waegezelle.Typ,
+      .Lookup_Waagentyp = Eichprozess.ServerLookup_Waagentyp.Typ,
+      .Lookup_Waagenart = Eichprozess.ServerLookup_Waagenart.Art,
+      .Lookup_Auswertegeraet = Eichprozess.ServerLookup_Auswertegeraet.Typ,
+      .Sachbearbeiter = Eichprozess.ServerEichprotokoll.Identifikationsdaten_Pruefer,
+.ZurBearbeitungGesperrtDurch = Eichprozess.ZurBearbeitungGesperrtDurch,
+          .NeuWZ = Eichprozess.ServerLookup_Waegezelle.Neu,
+.Bearbeitungsstatus = Lookup2.Status,
+.Uploaddatum = Eichprozess.UploadDatum
+       }
 
             '   Dim Data = From Eichprozesse In Context.ServerEichprozess.Include("ServerEichprotokoll") Select Eichprozesse
 
@@ -43,7 +41,6 @@ Public Class FrmPruefscheinnummersuche
             Try
                 RadGridView1.Columns("ID").IsVisible = False
 
-
                 RadGridView1.Columns("Pruefscheinnummer").HeaderText = "Prüfscheinnummer"
                 RadGridView1.Columns("Lookup_Waegezelle").HeaderText = "WZ"
                 RadGridView1.Columns("Lookup_Waagentyp").HeaderText = "Waagentyp"
@@ -51,7 +48,6 @@ Public Class FrmPruefscheinnummersuche
                 RadGridView1.Columns("Lookup_Auswertegeraet").HeaderText = "AWG"
                 RadGridView1.Columns("ZurBearbeitungGesperrtDurch").HeaderText = "gesperrt durch"
                 RadGridView1.Columns("NeuWZ").HeaderText = "neue WZ"
-
 
             Catch ex As Exception
             End Try

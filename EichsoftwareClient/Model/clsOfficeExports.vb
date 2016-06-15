@@ -12,12 +12,12 @@ Public Class clsOfficeExports
     ''' </summary>
     ''' <remarks></remarks>
     Public Sub ExportKompatiblitaetsnachweisDE(ByVal objEichProzess As Eichprozess)
-        Dim pEichProzess As Eichprozess = objEichprozess
+        Dim pEichProzess As Eichprozess = objEichProzess
 
         Dim objExcelApp As New Microsoft.Office.Interop.Excel.Application
         Dim objExcelWorkbook As Microsoft.Office.Interop.Excel.Workbook
         Dim objExcelWorksheetDatenEingabe As Microsoft.Office.Interop.Excel.Worksheet
-   
+
         Dim objExcelWorksheetTabelle1 As Microsoft.Office.Interop.Excel.Worksheet
         Dim ExcelSavePath As String
         Dim DocumentName As String = "Kompatibilitätsnachweis DE" & "_" & pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer & ".xls"
@@ -56,11 +56,10 @@ Public Class clsOfficeExports
             'AUSWAHLFELDER ANFANG
             '_________________________________________________________________________________________________________________________________
 
-
             'Waagentyp NSW befüllen in A14 auf Daten-Eingabe
             objExcelWorksheetDatenEingabe.Cells(14, 1).value = pEichProzess.Lookup_Waagentyp.Typ
 
-            'Waagentyp  NSW befüllen in A10 auf Tabelle1 
+            'Waagentyp  NSW befüllen in A10 auf Tabelle1
             If pEichProzess.Lookup_Waagenart.Art = "Einbereichswaage" Then
                 objExcelWorksheetTabelle1.Cells(10, 1).value = 1
             End If
@@ -81,16 +80,13 @@ Public Class clsOfficeExports
                 objExcelWorksheetTabelle1.Cells(10, 1).value = 5
             End If
 
-
             '_________________________________________________________________________________________________________________________________
             'AUSWAHLFELDER ENDE
             '_________________________________________________________________________________________________________________________________
 
-
             '_________________________________________________________________________________________________________________________________
             'NSW ANFANG
             '_________________________________________________________________________________________________________________________________
-
 
             'Anschrift Waagenbaufirma befüllen in C4 TEIL1 auf Daten-Eingabe
             objExcelWorksheetDatenEingabe.Cells(4, 3).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Hersteller
@@ -232,14 +228,7 @@ Public Class clsOfficeExports
             'Waage_Kabelquerschnitt befüllen in G23 auf Daten-Eingabe
             objExcelWorksheetDatenEingabe.Cells(23, 7).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Kabelquerschnitt
 
-
-
-
             'Waage_Revisionsnummer befüllen in UNBEKANNT !
-
-
-
-
 
             'Waage_Totlast befüllen in G19 auf Daten-Eingabe
             objExcelWorksheetDatenEingabe.Cells(19, 7).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Totlast
@@ -253,16 +242,13 @@ Public Class clsOfficeExports
             'WZ_Hoechstlast befüllen in G37 auf Daten-Eingabe
             objExcelWorksheetDatenEingabe.Cells(37, 7).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast.Split(";")(0)
 
-
             '_________________________________________________________________________________________________________________________________
             'NSW ENDE
             '_________________________________________________________________________________________________________________________________
 
-
             '_________________________________________________________________________________________________________________________________
             'AWG ANFANG
             '_________________________________________________________________________________________________________________________________
-
 
             'Anschlussart AWG befüllen G33 auf Daten-Eingabe
             objExcelWorksheetDatenEingabe.Cells(33, 7).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_AWG_Anschlussart
@@ -322,7 +308,6 @@ Public Class clsOfficeExports
             'Typ befüllen AWG in A30 auf Daten-Eingabe
             objExcelWorksheetDatenEingabe.Cells(30, 1).value = pEichProzess.Lookup_Auswertegeraet.Typ
 
-
             '_________________________________________________________________________________________________________________________________
             'AWG ENDE
             '_________________________________________________________________________________________________________________________________
@@ -330,7 +315,6 @@ Public Class clsOfficeExports
             '_________________________________________________________________________________________________________________________________
             'WZ ANFANG
             '_________________________________________________________________________________________________________________________________
-
 
             'Bauartzulassung WZ befüllen in A47 auf Daten-Eingabe
             objExcelWorksheetDatenEingabe.Cells(47, 1).value = pEichProzess.Lookup_Waegezelle.Bauartzulassung
@@ -384,11 +368,8 @@ Public Class clsOfficeExports
             'WZ ENDE
             '_________________________________________________________________________________________________________________________________
 
-
             'aufrufen des Ausblenden Markos welche die EWerte Positioniert und je nach Waagenart die anderen Ergebnis Sheets einblendet
             objExcelApp.Run("Ausblenden")
-
-
 
             'excel dokument speichern
             objExcelWorkbook.Save()
@@ -412,13 +393,10 @@ Public Class clsOfficeExports
 
             End Try
 
-
-
             'excel dokument Anzeigen
             Process.Start(CompletePath)
         End If
     End Sub
-
 
     ''' <summary>
     ''' Kompatiblitätsnachweis ENGLISCH
@@ -426,7 +404,6 @@ Public Class clsOfficeExports
     ''' <remarks></remarks>
     Public Sub ExportKompatiblitaetsnachweisEN(ByVal objEichProzess As Eichprozess)
         Dim pEichProzess As Eichprozess = objEichProzess
-
 
         Dim objExcelApp As New Microsoft.Office.Interop.Excel.Application
         Dim objExcelWorkbook As Microsoft.Office.Interop.Excel.Workbook
@@ -468,11 +445,10 @@ Public Class clsOfficeExports
             'AUSWAHLFELDER ANFANG
             '_________________________________________________________________________________________________________________________________
 
-
             'Waagentyp NSW befüllen in A14 auf Daten-Eingabe
             objExcelWorksheetDatenEingabe.Cells(14, 1).value = pEichProzess.Lookup_Waagentyp.Typ_EN
 
-            'Waagentyp  NSW befüllen in A10 auf Tabelle1 
+            'Waagentyp  NSW befüllen in A10 auf Tabelle1
             If pEichProzess.Lookup_Waagenart.Art_EN = "One range WI" Then
                 objExcelWorksheetTabelle1.Cells(10, 1).value = 1
             End If
@@ -493,16 +469,13 @@ Public Class clsOfficeExports
                 objExcelWorksheetTabelle1.Cells(10, 1).value = 5
             End If
 
-
             '_________________________________________________________________________________________________________________________________
             'AUSWAHLFELDER ENDE
             '_________________________________________________________________________________________________________________________________
 
-
             '_________________________________________________________________________________________________________________________________
             'NSW ANFANG
             '_________________________________________________________________________________________________________________________________
-
 
             'Anschrift Waagenbaufirma befüllen in C4 TEIL1 auf Daten-Eingabe
             objExcelWorksheetDatenEingabe.Cells(4, 3).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Hersteller
@@ -644,14 +617,7 @@ Public Class clsOfficeExports
             'Waage_Kabelquerschnitt befüllen in G23 auf Daten-Eingabe
             objExcelWorksheetDatenEingabe.Cells(23, 7).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Kabelquerschnitt
 
-
-
-
             'Waage_Revisionsnummer befüllen in UNBEKANNT !
-
-
-
-
 
             'Waage_Totlast befüllen in G19 auf Daten-Eingabe
             objExcelWorksheetDatenEingabe.Cells(19, 7).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Totlast
@@ -665,16 +631,13 @@ Public Class clsOfficeExports
             'WZ_Hoechstlast befüllen in G37 auf Daten-Eingabe
             objExcelWorksheetDatenEingabe.Cells(37, 7).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast.Split(";")(0)
 
-
             '_________________________________________________________________________________________________________________________________
             'NSW ENDE
             '_________________________________________________________________________________________________________________________________
 
-
             '_________________________________________________________________________________________________________________________________
             'AWG ANFANG
             '_________________________________________________________________________________________________________________________________
-
 
             'Anschlussart AWG befüllen G33 auf Daten-Eingabe
             objExcelWorksheetDatenEingabe.Cells(33, 7).value = pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_AWG_Anschlussart
@@ -703,7 +666,6 @@ Public Class clsOfficeExports
             End If
 
             If Not pEichProzess.Lookup_Waagenart.Art_EN = "One range WI" Then
-
 
                 'MAXAnzahlTeilungswerteMehrbereichswaage AWG befüllen in G26 auf Daten-Eingabe
                 objExcelWorksheetDatenEingabe.Cells(26, 7).Value = pEichProzess.Lookup_Auswertegeraet.MAXAnzahlTeilungswerteMehrbereichswaage
@@ -737,7 +699,6 @@ Public Class clsOfficeExports
             'Typ befüllen AWG in A30 auf Daten-Eingabe
             objExcelWorksheetDatenEingabe.Cells(30, 1).value = pEichProzess.Lookup_Auswertegeraet.Typ
 
-
             '_________________________________________________________________________________________________________________________________
             'AWG ENDE
             '_________________________________________________________________________________________________________________________________
@@ -745,7 +706,6 @@ Public Class clsOfficeExports
             '_________________________________________________________________________________________________________________________________
             'WZ ANFANG
             '_________________________________________________________________________________________________________________________________
-
 
             'Bauartzulassung WZ befüllen in A47 auf Daten-Eingabe
             objExcelWorksheetDatenEingabe.Cells(47, 1).value = pEichProzess.Lookup_Waegezelle.Bauartzulassung
@@ -858,7 +818,7 @@ Public Class clsOfficeExports
             'Worksheets zuweisen
             objExcelWorksheetKonformerk = objExcelWorkbook.Worksheets("Konformerk.")
 
-            'Waagentyp befüllen in E21 auf Konformerk. (Werte kommen aus Typen) 
+            'Waagentyp befüllen in E21 auf Konformerk. (Werte kommen aus Typen)
             If Not objEichProzess.Lookup_Auswertegeraet.Typ Is Nothing Then
                 objExcelWorksheetKonformerk.Cells(21, 5).value = objEichProzess.Lookup_Auswertegeraet.Typ.ToString
             End If
@@ -901,8 +861,8 @@ Public Class clsOfficeExports
     ''' </summary>
     ''' <remarks></remarks>
     Public Sub ExportKonformitaetssnachweisPL(ByVal objEichProzess As Eichprozess)
-        Dim pEichProzess As Eichprozess = objEichprozess
-      
+        Dim pEichProzess As Eichprozess = objEichProzess
+
         Dim objExcelApp As New Microsoft.Office.Interop.Excel.Application
         Dim objExcelWorkbook As Microsoft.Office.Interop.Excel.Workbook
         Dim objExcelWorksheetKonformerk As Microsoft.Office.Interop.Excel.Worksheet
@@ -932,7 +892,7 @@ Public Class clsOfficeExports
             'Worksheets zuweisen
             objExcelWorksheetKonformerk = objExcelWorkbook.Worksheets("Konformerk.")
 
-            'Waagentyp befüllen in E21 auf Konformerk. (Werte kommen aus Typen) 
+            'Waagentyp befüllen in E21 auf Konformerk. (Werte kommen aus Typen)
             If Not pEichProzess.Lookup_Auswertegeraet.Typ Is Nothing Then
                 objExcelWorksheetKonformerk.Cells(21, 5).value = pEichProzess.Lookup_Auswertegeraet.Typ.ToString
             End If
@@ -978,7 +938,7 @@ Public Class clsOfficeExports
     ''' </summary>
     ''' <remarks></remarks>
     Public Sub ExportKonformitaetssnachweisRU(ByVal objEichProzess As Eichprozess)
-        Dim pEichProzess As Eichprozess = objEichprozess
+        Dim pEichProzess As Eichprozess = objEichProzess
 
         Dim objExcelApp As New Microsoft.Office.Interop.Excel.Application
         Dim objExcelWorkbook As Microsoft.Office.Interop.Excel.Workbook
@@ -1009,7 +969,7 @@ Public Class clsOfficeExports
             'Worksheets zuweisen
             objExcelWorksheetKonformerk = objExcelWorkbook.Worksheets("Konformerk.")
 
-            'Waagentyp befüllen in E21 auf Konformerk. (Werte kommen aus Typen) 
+            'Waagentyp befüllen in E21 auf Konformerk. (Werte kommen aus Typen)
             If Not pEichProzess.Lookup_Auswertegeraet.Typ Is Nothing Then
                 objExcelWorksheetKonformerk.Cells(21, 5).value = pEichProzess.Lookup_Auswertegeraet.Typ.ToString
             End If
@@ -1055,8 +1015,7 @@ Public Class clsOfficeExports
     ''' </summary>
     ''' <remarks></remarks>
     Public Sub ExportErsteichungDE(ByVal objEichProzess As Eichprozess)
-        Dim pEichProzess As Eichprozess = objEichprozess
-
+        Dim pEichProzess As Eichprozess = objEichProzess
 
         Dim objWordApp As New Microsoft.Office.Interop.Word.Application
         Dim objWordDoc As Microsoft.Office.Interop.Word.Document
@@ -1064,7 +1023,6 @@ Public Class clsOfficeExports
         Dim WordSavePath As String
         Dim CompletePath As String
         Dim b() As Byte = My.Resources.Ersteichung_DE
-
 
         If FolderBrowserDialog.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
             WordSavePath = FolderBrowserDialog.SelectedPath
@@ -1105,7 +1063,6 @@ Public Class clsOfficeExports
         Dim CompletePath As String
         Dim b() As Byte = My.Resources.Ersteichung_EN
 
-
         If FolderBrowserDialog.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
             WordSavePath = FolderBrowserDialog.SelectedPath
             CompletePath = WordSavePath & "Ersteichung_EN.doc"
@@ -1136,15 +1093,14 @@ Public Class clsOfficeExports
     ''' </summary>
     ''' <remarks></remarks>
     Public Sub ExportErsteichungPL(ByVal objEichProzess As Eichprozess)
-        Dim pEichProzess As Eichprozess = objEichprozess
-   
+        Dim pEichProzess As Eichprozess = objEichProzess
+
         Dim objWordApp As New Microsoft.Office.Interop.Word.Application
         Dim objWordDoc As Microsoft.Office.Interop.Word.Document
         Dim FolderBrowserDialog As New FolderBrowserDialog
         Dim WordSavePath As String
         Dim CompletePath As String
         Dim b() As Byte = My.Resources.Ersteichung_PL
-
 
         If FolderBrowserDialog.ShowDialog() = System.Windows.Forms.DialogResult.OK Then
             WordSavePath = FolderBrowserDialog.SelectedPath
@@ -1176,7 +1132,7 @@ Public Class clsOfficeExports
     ''' </summary>
     ''' <remarks></remarks>
     Public Sub ExportEichprozess(ByVal objEichProzess As Eichprozess)
-        Dim pEichProzess As Eichprozess = objEichprozess
+        Dim pEichProzess As Eichprozess = objEichProzess
         'word instanz
 
         Dim objWordApp As New Microsoft.Office.Interop.Word.Application
@@ -1189,7 +1145,6 @@ Public Class clsOfficeExports
 
             objWordDoc = objWordApp.Documents.Add()
             objWordApp.Visible = True
-
 
             With objWordDoc
                 Dim r = objWordDoc.Range(Nothing, Nothing)
@@ -1278,7 +1233,7 @@ Public Class clsOfficeExports
                 r.InsertAfter("Beschaffenheitsprüfung" + vbNewLine + vbNewLine)
                 para.Range.Style = "Standard"
                 r.InsertAfter("Genehmigt: " & pEichProzess.Eichprotokoll.Beschaffenheitspruefung_Genehmigt & vbNewLine)
-             
+
                 ''Eichprotokoll
                 para.Range.Style = "Überschrift 1"
                 r.InsertAfter("Eichprotokoll" + vbNewLine + vbNewLine)
@@ -1350,7 +1305,7 @@ Public Class clsOfficeExports
                 Using dbcontext As New EichsoftwareClientdatabaseEntities1
                     Try
                         'hole mir aus der DB alle Pruefungen deren FK Eichprotokoll unserem aktuellem Eichprtookoll entsprechen
-                        Dim query = From db In dbcontext.PruefungAnsprechvermoegen Where db.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID Select db
+                        Dim query = From db In dbcontext.PruefungAnsprechvermoegen Where db.FK_Eichprotokoll = objEichProzess.Eichprotokoll.ID Select db
                         para.Range.Style = "Überschrift 1"
                         r.InsertAfter("Prüfung Ansprechvermögen" + vbNewLine + vbNewLine)
                         para.Range.Style = "Standard"
@@ -1367,7 +1322,7 @@ Public Class clsOfficeExports
                     End Try
 
                     Try
-                        Dim query = From db In dbcontext.PruefungAussermittigeBelastung Where db.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID Select db
+                        Dim query = From db In dbcontext.PruefungAussermittigeBelastung Where db.FK_Eichprotokoll = objEichProzess.Eichprotokoll.ID Select db
                         para.Range.Style = "Überschrift 1"
                         r.InsertAfter("Prüfung Aussermittige Belastung" + vbNewLine + vbNewLine)
                         para.Range.Style = "Standard"
@@ -1401,13 +1356,12 @@ Public Class clsOfficeExports
                             r.InsertAfter("ID: " & sourceo.ID & vbNewLine)
                             r.InsertAfter("Last: " & sourceo.Last & vbNewLine)
 
-
                         Next
                     Catch ex As Exception
                     End Try
 
                     Try
-                        Dim query = From db In dbcontext.PruefungLinearitaetSteigend Where db.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID Select db
+                        Dim query = From db In dbcontext.PruefungLinearitaetSteigend Where db.FK_Eichprotokoll = objEichProzess.Eichprotokoll.ID Select db
                         para.Range.Style = "Überschrift 1"
                         r.InsertAfter("Prüfung Linearität Steigend" + vbNewLine + vbNewLine)
                         para.Range.Style = "Standard"
@@ -1426,7 +1380,7 @@ Public Class clsOfficeExports
                     End Try
 
                     Try
-                        Dim query = From db In dbcontext.PruefungRollendeLasten Where db.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID Select db
+                        Dim query = From db In dbcontext.PruefungRollendeLasten Where db.FK_Eichprotokoll = objEichProzess.Eichprotokoll.ID Select db
                         para.Range.Style = "Überschrift 1"
                         r.InsertAfter("Prüfung rollende Lasten" + vbNewLine + vbNewLine)
                         para.Range.Style = "Standard"
@@ -1446,7 +1400,7 @@ Public Class clsOfficeExports
                     End Try
 
                     Try
-                        Dim query = From db In dbcontext.PruefungStabilitaetGleichgewichtslage Where db.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID Select db
+                        Dim query = From db In dbcontext.PruefungStabilitaetGleichgewichtslage Where db.FK_Eichprotokoll = objEichProzess.Eichprotokoll.ID Select db
                         para.Range.Style = "Überschrift 1"
                         r.InsertAfter("Prüfung Stabilität Gleichgewichtslage" + vbNewLine + vbNewLine)
                         para.Range.Style = "Standard"
@@ -1460,13 +1414,12 @@ Public Class clsOfficeExports
                             r.InsertAfter("ID: " & sourceo.ID & vbNewLine)
                             r.InsertAfter("Last: " & sourceo.Last & vbNewLine)
 
-
                         Next
                     Catch ex As Exception
                     End Try
 
                     Try
-                        Dim query = From db In dbcontext.PruefungStaffelverfahrenErsatzlast Where db.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID Select db
+                        Dim query = From db In dbcontext.PruefungStaffelverfahrenErsatzlast Where db.FK_Eichprotokoll = objEichProzess.Eichprotokoll.ID Select db
                         para.Range.Style = "Überschrift 1"
                         r.InsertAfter("Prüfung Staffelverfahren Ersatzlast" + vbNewLine + vbNewLine)
                         para.Range.Style = "Standard"
@@ -1489,13 +1442,12 @@ Public Class clsOfficeExports
                             r.InsertAfter("Staffel: " & sourceo.Staffel & vbNewLine)
                             r.InsertAfter("Zusätzliche Ersatzlast Soll: " & sourceo.ZusaetzlicheErsatzlast_Soll & vbNewLine)
 
-
                         Next
                     Catch ex As Exception
                     End Try
 
                     Try
-                        Dim query = From db In dbcontext.PruefungStaffelverfahrenNormallast Where db.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID Select db
+                        Dim query = From db In dbcontext.PruefungStaffelverfahrenNormallast Where db.FK_Eichprotokoll = objEichProzess.Eichprotokoll.ID Select db
                         para.Range.Style = "Überschrift 1"
                         r.InsertAfter("Prüfung Staffelverfahren Normallast" + vbNewLine + vbNewLine)
                         para.Range.Style = "Standard"
@@ -1531,7 +1483,7 @@ Public Class clsOfficeExports
                     End Try
 
                     Try
-                        Dim query = From db In dbcontext.PruefungWiederholbarkeit Where db.FK_Eichprotokoll = objEichprozess.Eichprotokoll.ID Select db
+                        Dim query = From db In dbcontext.PruefungWiederholbarkeit Where db.FK_Eichprotokoll = objEichProzess.Eichprotokoll.ID Select db
                         para.Range.Style = "Überschrift 1"
                         r.InsertAfter("Prüfung Wiederholbarkeit" + vbNewLine + vbNewLine)
                         para.Range.Style = "Standard"

@@ -33,7 +33,6 @@ Public Class FrmMainContainer
 
     Friend AbortBreadCrumbNavigation As Boolean = False
 
-
 #End Region
 
 #Region "Enumeratoren"
@@ -62,7 +61,6 @@ Public Class FrmMainContainer
         'zuweisen des Eichprozesses
         Me.CurrentEichprozess = pEichprozess
         Me.DialogModus = penumDialogModus
-
 
     End Sub
 #End Region
@@ -145,7 +143,6 @@ Public Class FrmMainContainer
         RadLabelContextHelp.MaximumSize = New Size(RadScrollablePanelContextHelp.Size.Width - 30, 0)
     End Sub
 
-
     ''' <summary>
     ''' tauscht das aktuell zur Ansicht gebrachte UCO mit dem aus dem Parameter aus. Die anderen werden nicht gelöscht und befinden sich im hintergrund
     ''' </summary>
@@ -167,7 +164,6 @@ Public Class FrmMainContainer
 
         '    controls(0).bringtofront()
         'End If
-
 
         '    _CurrentUco.BringToFront()
         '    _CurrentUco.Dock = DockStyle.Fill
@@ -249,7 +245,6 @@ Public Class FrmMainContainer
         'speichern der aktuellen Eingaben ins Objekt
         RaiseEvent LokalisierungNeeded(_CurrentUco)
 
-
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmMainContainer))
         'übersetzung der Formular elemente von frmMainContainer
 
@@ -296,7 +291,6 @@ Public Class FrmMainContainer
             End If
         End If
 
-
         'Shift Enter für schnelleres vorblättern
         If e.KeyCode = Keys.Return Then
             If e.Modifiers.HasFlag(Keys.Shift) Then
@@ -309,7 +303,6 @@ Public Class FrmMainContainer
 
         End If
     End Sub
-
 
     ''' <summary>
     '''   Laderoutine
@@ -389,8 +382,6 @@ Public Class FrmMainContainer
         RadButtonNavigateForwards.Visible = False
         AktuellerBenutzer.LadeGridLayout(uco)
     End Sub
-
-
 
     ''' <summary>
     ''' lädt das benötigte Uco zum aktuellen Eichprozess Objektes (me.currenteichprozess)
@@ -473,7 +464,6 @@ Public Class FrmMainContainer
                         Exit Sub
                 End Select
             End If
-
 
             'prüfen ob der Button zum entsperren eingeblendet werden soll
             If DialogModus = enuDialogModus.lesend Then
@@ -580,9 +570,6 @@ Public Class FrmMainContainer
         End If
     End Sub
 
-
-
-
     ''' <summary>
     ''' Navigiere  vorwärts inklusive speichern und laden des neuen UCOs
     ''' </summary>
@@ -626,14 +613,9 @@ Public Class FrmMainContainer
         RaiseEvent SaveNeeded(_CurrentUco)
         Dim uco As Object = Nothing
 
-
-
-
         'abbruch des Vorgangs,wenn die validierung einen fehler erzeugt hat
         If _CurrentUco.AbortSaving = True Then Exit Sub
         If _CurrentUco.NextUco Is Nothing Then
-
-
 
             'sonderfälle abprüfen in denen der Vorgang nicht wie gewohnt weiter geht
             'TODO Abändern der Routine. Vorwärts Blättern setzt die Reihenfolge eines hoch je nach Status, Rückwärts blättern prüft im Status welcher Eichprozesswert vorliegt und lädt dann ein anderes UCO. Sollte angepasst werden
@@ -705,7 +687,6 @@ Public Class FrmMainContainer
 
                 End Try
             End If
-
 
             Select Case _CurrentUco.EichprozessStatusReihenfolge + 1
                 Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Stammdateneingabe
@@ -793,8 +774,6 @@ Public Class FrmMainContainer
             ChangeActiveContentUserControl(_CurrentUco.NextUco)
 
         End If
-
-
 
         'sonderfall für Standardwaagen. In diesem Fall werden bestimmte Dialoge beim vorwärts blättern übersprungen
         If CurrentEichprozess.AusStandardwaageErzeugt = True Then
@@ -890,8 +869,6 @@ Public Class FrmMainContainer
                     Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Versenden
                         uco = New uco20Reports(Me, CurrentEichprozess, Nothing, pUcoToCheck, DialogModus)
 
-
-
                     Case Else
 
                         Me.Close()
@@ -949,7 +926,7 @@ Public Class FrmMainContainer
                 Else
                     pUcoToCheck = uco
                 End If
-                End If
+            End If
         Loop Until pUcoToCheck Is Nothing
         AbortBreadCrumbNavigation = False 'SpringeZuMethode aus ucoAmpel aktivieren
         Return pUcoToCheck
@@ -971,7 +948,6 @@ Public Class FrmMainContainer
 
         'TH Event abfeuern, damit steuerelemente bescheid wissen, das sie in DB speichern müssen
         RaiseEvent SaveWithoutValidationNeeded(_CurrentUco)
-
 
         'prüfen ob das vorherige UCO bereits geladen wurde, ansonsten erzeugen
         If _CurrentUco.PreviousUco Is Nothing Then
@@ -1048,8 +1024,6 @@ Public Class FrmMainContainer
                 Case Is = GlobaleEnumeratoren.enuEichprozessStatus.Versenden
                     uco = New uco20Reports(Me, CurrentEichprozess, Nothing, _CurrentUco, DialogModus)
 
-
-
                 Case Else
 
                     Me.Close()
@@ -1070,7 +1044,6 @@ Public Class FrmMainContainer
         'vorheriges Uco zu anzeige bringen
         RaiseEvent UpdateNeeded(uco)
         ChangeActiveContentUserControl(uco)
-
 
         AbortBreadCrumbNavigation = False 'SpringeZuMethode aus ucoAmpel aktivieren
     End Sub
@@ -1109,9 +1082,7 @@ Public Class FrmMainContainer
         End If
     End Sub
 
-
 #End Region
-
 
     ''' <summary>
     ''' Triggered Event im UCO, welches den Versendenprozess startet
@@ -1160,7 +1131,6 @@ Public Class FrmMainContainer
 
     End Sub
 
-
     ''' <summary>
     ''' Eventhandler für UCO Event. Wenn dort eine Eigenschaft geändert wird, wird ein Dirty Flag gesetzt. Durch das Dirty flag wird hier der Status des aktuellen Vorgangs angepasst.
     ''' Beispiel: Der Eichprozess befindet sich im 10. Schritt. im 8 wird aber etwas geändert. Dies kann folgen haben für die kommenden Schritte. Deswegen wird dann der aktuelle Schritt auf 8 zurückgesetzt
@@ -1179,7 +1149,6 @@ Public Class FrmMainContainer
     ''' </summary>
     ''' <remarks></remarks>
     Private Sub ZeigeStandardwaagenPopUp()
-       
 
         If _StandardWaagePopupShown = True Then Exit Sub
         _StandardWaagePopupShown = True
@@ -1194,7 +1163,6 @@ Public Class FrmMainContainer
         popup.FixedSize = New Drawing.Size(300, 150)
         popup.FadeAnimationType = Telerik.WinControls.UI.FadeAnimationType.FadeIn
         popup.Show()
-
 
     End Sub
 

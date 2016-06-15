@@ -35,13 +35,9 @@
                 RadGridViewAuswahlliste.Columns("KabellaengeQuerschnitt").HeaderText = "Kabellänge/ Querschnitt "
                 RadGridViewAuswahlliste.Columns("ErstellDatum").HeaderText = "Erstellungsdatum"
 
-
-
-
             Catch ex As Exception
 
             End Try
-
 
             RadGridViewAuswahlliste.BestFitColumns()
         End Using
@@ -63,7 +59,6 @@
                 'nach dem schließen des Dialogs aktualisieren
                 LoadFromDatabase()
 
-
             End If
         End If
     End Sub
@@ -72,8 +67,6 @@
         EditEichprozess()
     End Sub
 
-  
-  
     Private Sub FrmAuswahllisteWZ_Load(sender As Object, e As EventArgs) Handles Me.Load
         LoadFromDatabase()
     End Sub

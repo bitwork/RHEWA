@@ -11,7 +11,6 @@
     '            Dim HEKennung As String = "tim"
     '            Dim Schluessel As String = "Hill"
 
-
     '            Dim objLic As New Lizensierung
     '            objLic.HEKennung = HEKennung
     '            objLic.Lizenzschluessel = Schluessel
@@ -33,7 +32,6 @@
     '            Catch ex As Exception
     '            End Try
 
-
     '            My.Settings.LetzterBenutzer = objLic.Lizenzschluessel
     '            My.Settings.Save()
     '            AktuellerBenutzer.Instance.Lizenz.RHEWALizenz = objLic.RHEWALizenz
@@ -45,9 +43,6 @@
 
     '    End Try
     'End Sub
-
-
-
 
     ''' <summary>
     '''  löscht lokale Datenbank, für resyncronisierung des aktuellen Benutzers
@@ -75,7 +70,6 @@
                         listIDsKompatiblitaetsnachweis.Add(obj.FK_Kompatibilitaetsnachweis)
                     End If
 
-
                     DBContext.Eichprozess.Remove(obj)
                 Next
 
@@ -92,7 +86,6 @@
                         DBContext.Kompatiblitaetsnachweis.Remove(obj)
                     Next
                 Next
-
 
                 For Each ID In listIDsEichprotokoll
                     Dim eichprotokolle = From eichprotokoll In DBContext.Eichprotokoll Where eichprotokoll.ID = ID
@@ -249,9 +242,8 @@
                               .Include("Lookup_Waegezelle").AsNoTracking _
                               .Include("Lookup_Waagenart").AsNoTracking _
                               .Include("Lookup_Waagentyp").AsNoTracking _
-                                                            .Include("Mogelstatistik").AsNoTracking _
-                                  Select Obj Where Obj.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault 'firstor default um erstes element zurückzugeben das übereintrifft(bei ID Spalten sollte es eh nur 1 sein)
-
+                                                            .Include("Mogelstatistik").AsNoTracking
+                              Select Obj Where Obj.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault 'firstor default um erstes element zurückzugeben das übereintrifft(bei ID Spalten sollte es eh nur 1 sein)
 
             objEichprozess.Lookup_Vorgangsstatus = (From f1 In Context.Lookup_Vorgangsstatus.AsNoTracking Where f1.ID = objEichprozess.FK_Vorgangsstatus Select f1).FirstOrDefault
             objEichprozess.Lookup_Waagenart = (From f1 In Context.Lookup_Waagenart.AsNoTracking Where f1.ID = objEichprozess.FK_WaagenArt Select f1).FirstOrDefault
@@ -314,107 +306,103 @@
         'neuen Context aufbauen
         Using Context As New EichsoftwareClientdatabaseEntities1
             Context.Configuration.LazyLoadingEnabled = True
-       
+
             'je nach Sprache die Abfrage anpassen um die entsprechenden Übersetzungen der Lookupwerte aus der DB zu laden
             Select Case AktuellerBenutzer.Instance.AktuelleSprache.ToLower
                 Case "de"
 
-                    Dim Data = From Eichprozess In Context.Eichprozess _
-                                              Where Eichprozess.Ausgeblendet = bolAusgeblendeteElementeAnzeigen And Eichprozess.ErzeugerLizenz = AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel _
-                                                               Select New With _
-                                                 { _
-                                                         .Status = Eichprozess.Lookup_Vorgangsstatus.Status, _
-                                                         .Bearbeitungsstatus = Eichprozess.Lookup_Bearbeitungsstatus.Status, _
-                                                         Eichprozess.ID, _
-                                                         Eichprozess.Vorgangsnummer, _
-                                                         .Fabriknummer = Eichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer, _
-                                                         .Lookup_Waegezelle = Eichprozess.Lookup_Waegezelle.Typ, _
-                                                         .Lookup_Waagentyp = Eichprozess.Lookup_Waagentyp.Typ, _
-                                                         .Lookup_Waagenart = Eichprozess.Lookup_Waagenart.Art, _
-                                                         .Lookup_Auswertegeraet = Eichprozess.Lookup_Auswertegeraet.Typ, _
-                                                         Eichprozess.Ausgeblendet, _
-                                                         Eichprozess.Bearbeitungsdatum, _
-                                                           .Bemerkung = Eichprozess.Eichprotokoll.Sicherung_Bemerkungen _
-                                                                                                      }
-
-
-
+                    Dim Data = From Eichprozess In Context.Eichprozess
+                               Where Eichprozess.Ausgeblendet = bolAusgeblendeteElementeAnzeigen And Eichprozess.ErzeugerLizenz = AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel
+                               Select New With
+                 {
+                         .Status = Eichprozess.Lookup_Vorgangsstatus.Status,
+                         .Bearbeitungsstatus = Eichprozess.Lookup_Bearbeitungsstatus.Status,
+                         Eichprozess.ID,
+                         Eichprozess.Vorgangsnummer,
+                         .Fabriknummer = Eichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer,
+                         .Lookup_Waegezelle = Eichprozess.Lookup_Waegezelle.Typ,
+                         .Lookup_Waagentyp = Eichprozess.Lookup_Waagentyp.Typ,
+                         .Lookup_Waagenart = Eichprozess.Lookup_Waagenart.Art,
+                         .Lookup_Auswertegeraet = Eichprozess.Lookup_Auswertegeraet.Typ,
+                         Eichprozess.Ausgeblendet,
+                         Eichprozess.Bearbeitungsdatum,
+                           .Bemerkung = Eichprozess.Eichprotokoll.Sicherung_Bemerkungen
+                                                                      }
 
                     'zuweisen der Ergebnismenge als Datenquelle für das Grid
                     Return Data.ToList
                 Case "en"
                     'laden der benötigten Liste mit nur den benötigten Spalten
-                    'TH Diese Linq abfrage führt einen Join auf die Status Tabelle aus um den Status als Anzeigewert anzeigen zu können. 
+                    'TH Diese Linq abfrage führt einen Join auf die Status Tabelle aus um den Status als Anzeigewert anzeigen zu können.
                     'Außerdem werden durch die .Name = Wert Notatation im Kontext des "select NEW" eine neue temporäre "Klasse" erzeugt, die die übergebenen Werte beinhaltet - als kämen sie aus einer Datenbanktabelle
-                    Dim Data = From Eichprozess In Context.Eichprozess _
-                                                       Where Eichprozess.Ausgeblendet = bolAusgeblendeteElementeAnzeigen And Eichprozess.ErzeugerLizenz = AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel _
-                               Select New With _
-                                                { _
-                                                              .Status = Eichprozess.Lookup_Vorgangsstatus.Status_EN, _
-                                                         .Bearbeitungsstatus = Eichprozess.Lookup_Bearbeitungsstatus.Status_EN, _
-                                                        Eichprozess.ID, _
-                                                        Eichprozess.Vorgangsnummer, _
-                                                          .Fabriknummer = Eichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer, _
-                                                        .Lookup_Waegezelle = Eichprozess.Lookup_Waegezelle.Typ, _
-                                                        .Lookup_Waagentyp = Eichprozess.Lookup_Waagentyp.Typ_EN, _
-                                                        .Lookup_Waagenart = Eichprozess.Lookup_Waagenart.Art_EN, _
-                                                        .Lookup_Auswertegeraet = Eichprozess.Lookup_Auswertegeraet.Typ, _
-                                                        Eichprozess.Ausgeblendet, _
-                                                         Eichprozess.Bearbeitungsdatum, _
-                                                           .Bemerkung = Eichprozess.Eichprotokoll.Sicherung_Bemerkungen _
+                    Dim Data = From Eichprozess In Context.Eichprozess
+                               Where Eichprozess.Ausgeblendet = bolAusgeblendeteElementeAnzeigen And Eichprozess.ErzeugerLizenz = AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel
+                               Select New With
+                                                {
+                                                              .Status = Eichprozess.Lookup_Vorgangsstatus.Status_EN,
+                                                         .Bearbeitungsstatus = Eichprozess.Lookup_Bearbeitungsstatus.Status_EN,
+                                                        Eichprozess.ID,
+                                                        Eichprozess.Vorgangsnummer,
+                                                          .Fabriknummer = Eichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer,
+                                                        .Lookup_Waegezelle = Eichprozess.Lookup_Waegezelle.Typ,
+                                                        .Lookup_Waagentyp = Eichprozess.Lookup_Waagentyp.Typ_EN,
+                                                        .Lookup_Waagenart = Eichprozess.Lookup_Waagenart.Art_EN,
+                                                        .Lookup_Auswertegeraet = Eichprozess.Lookup_Auswertegeraet.Typ,
+                                                        Eichprozess.Ausgeblendet,
+                                                         Eichprozess.Bearbeitungsdatum,
+                                                           .Bemerkung = Eichprozess.Eichprotokoll.Sicherung_Bemerkungen
                                                 }
 
                     'zuweisen der Ergebnismenge als Datenquelle für das Grid
                     Return Data.ToList
                 Case "pl"
                     'laden der benötigten Liste mit nur den benötigten Spalten
-                    'TH Diese Linq abfrage führt einen Join auf die Status Tabelle aus um den Status als Anzeigewert anzeigen zu können. 
+                    'TH Diese Linq abfrage führt einen Join auf die Status Tabelle aus um den Status als Anzeigewert anzeigen zu können.
                     'Außerdem werden durch die .Name = Wert Notatation im Kontext des "select NEW" eine neue temporäre "Klasse" erzeugt, die die übergebenen Werte beinhaltet - als kämen sie aus einer Datenbanktabelle
-                    Dim Data = From Eichprozess In Context.Eichprozess _
-                                                  Where Eichprozess.Ausgeblendet = bolAusgeblendeteElementeAnzeigen And Eichprozess.ErzeugerLizenz = AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel _
-                               Select New With _
-                                                { _
-                                                          .Status = Eichprozess.Lookup_Vorgangsstatus.Status_PL, _
-                                                         .Bearbeitungsstatus = Eichprozess.Lookup_Bearbeitungsstatus.Status_PL, _
-                                                        Eichprozess.ID, _
-                                                        Eichprozess.Vorgangsnummer, _
-                                                           .Fabriknummer = Eichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer, _
-                                                        .Lookup_Waegezelle = Eichprozess.Lookup_Waegezelle.Typ, _
-                                                        .Lookup_Waagentyp = Eichprozess.Lookup_Waagentyp.Typ_PL, _
-                                                        .Lookup_Waagenart = Eichprozess.Lookup_Waagenart.Art_EN, _
-                                                        .Lookup_Auswertegeraet = Eichprozess.Lookup_Auswertegeraet.Typ, _
-                                                        Eichprozess.Ausgeblendet, _
-                                                         Eichprozess.Bearbeitungsdatum, _
-                                                         .Bemerkung = Eichprozess.Eichprotokoll.Sicherung_Bemerkungen _
+                    Dim Data = From Eichprozess In Context.Eichprozess
+                               Where Eichprozess.Ausgeblendet = bolAusgeblendeteElementeAnzeigen And Eichprozess.ErzeugerLizenz = AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel
+                               Select New With
+                                                {
+                                                          .Status = Eichprozess.Lookup_Vorgangsstatus.Status_PL,
+                                                         .Bearbeitungsstatus = Eichprozess.Lookup_Bearbeitungsstatus.Status_PL,
+                                                        Eichprozess.ID,
+                                                        Eichprozess.Vorgangsnummer,
+                                                           .Fabriknummer = Eichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer,
+                                                        .Lookup_Waegezelle = Eichprozess.Lookup_Waegezelle.Typ,
+                                                        .Lookup_Waagentyp = Eichprozess.Lookup_Waagentyp.Typ_PL,
+                                                        .Lookup_Waagenart = Eichprozess.Lookup_Waagenart.Art_EN,
+                                                        .Lookup_Auswertegeraet = Eichprozess.Lookup_Auswertegeraet.Typ,
+                                                        Eichprozess.Ausgeblendet,
+                                                         Eichprozess.Bearbeitungsdatum,
+                                                         .Bemerkung = Eichprozess.Eichprotokoll.Sicherung_Bemerkungen
                                                 }
 
                     'zuweisen der Ergebnismenge als Datenquelle für das Grid
                     Return Data.ToList
                 Case Else
                     'laden der benötigten Liste mit nur den benötigten Spalten
-                    'TH Diese Linq abfrage führt einen Join auf die Status Tabelle aus um den Status als Anzeigewert anzeigen zu können. 
+                    'TH Diese Linq abfrage führt einen Join auf die Status Tabelle aus um den Status als Anzeigewert anzeigen zu können.
                     'Außerdem werden durch die .Name = Wert Notatation im Kontext des "select NEW" eine neue temporäre "Klasse" erzeugt, die die übergebenen Werte beinhaltet - als kämen sie aus einer Datenbanktabelle
-                    Dim Data = From Eichprozess In Context.Eichprozess _
-                                                            Where Eichprozess.Ausgeblendet = bolAusgeblendeteElementeAnzeigen And Eichprozess.ErzeugerLizenz = AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel _
-                               Select New With _
-                                                { _
-                                                          .Status = Eichprozess.Lookup_Vorgangsstatus.Status_EN, _
-                                                         .Bearbeitungsstatus = Eichprozess.Lookup_Bearbeitungsstatus.Status_EN, _
-                                                        Eichprozess.ID, Eichprozess.Vorgangsnummer, _
-                                                         .Fabriknummer = Eichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer, _
-                                                        .Lookup_Waegezelle = Eichprozess.Lookup_Waegezelle.Typ, _
-                                                        .Lookup_Waagentyp = Eichprozess.Lookup_Waagentyp.Typ, .Lookup_Waagentyp_EN = Eichprozess.Lookup_Waagentyp.Typ_EN, .Lookup_Waagentyp_PL = Eichprozess.Lookup_Waagentyp.Typ_PL, _
-                                                        .Lookup_Waagenart = Eichprozess.Lookup_Waagenart.Art, .Lookup_Waagenart_EN = Eichprozess.Lookup_Waagenart.Art_EN, .Lookup_Waagenart_PL = Eichprozess.Lookup_Waagenart.Art_PL, _
-                                                        .Lookup_Auswertegeraet = Eichprozess.Lookup_Auswertegeraet.Typ, _
-                                                        Eichprozess.Ausgeblendet, _
-                                                         Eichprozess.Bearbeitungsdatum, _
-                                                    .Bemerkung = Eichprozess.Eichprotokoll.Sicherung_Bemerkungen _
+                    Dim Data = From Eichprozess In Context.Eichprozess
+                               Where Eichprozess.Ausgeblendet = bolAusgeblendeteElementeAnzeigen And Eichprozess.ErzeugerLizenz = AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel
+                               Select New With
+                                                {
+                                                          .Status = Eichprozess.Lookup_Vorgangsstatus.Status_EN,
+                                                         .Bearbeitungsstatus = Eichprozess.Lookup_Bearbeitungsstatus.Status_EN,
+                                                        Eichprozess.ID, Eichprozess.Vorgangsnummer,
+                                                         .Fabriknummer = Eichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer,
+                                                        .Lookup_Waegezelle = Eichprozess.Lookup_Waegezelle.Typ,
+                                                        .Lookup_Waagentyp = Eichprozess.Lookup_Waagentyp.Typ, .Lookup_Waagentyp_EN = Eichprozess.Lookup_Waagentyp.Typ_EN, .Lookup_Waagentyp_PL = Eichprozess.Lookup_Waagentyp.Typ_PL,
+                                                        .Lookup_Waagenart = Eichprozess.Lookup_Waagenart.Art, .Lookup_Waagenart_EN = Eichprozess.Lookup_Waagenart.Art_EN, .Lookup_Waagenart_PL = Eichprozess.Lookup_Waagenart.Art_PL,
+                                                        .Lookup_Auswertegeraet = Eichprozess.Lookup_Auswertegeraet.Typ,
+                                                        Eichprozess.Ausgeblendet,
+                                                         Eichprozess.Bearbeitungsdatum,
+                                                    .Bemerkung = Eichprozess.Eichprotokoll.Sicherung_Bemerkungen
                                                 }
 
                     'zuweisen der Ergebnismenge als Datenquelle für das Grid
                     Return Data.ToList
             End Select
-
 
         End Using
     End Function

@@ -22,7 +22,6 @@ Public Class EichsoftwareWebservice
     Public Function GetLizenz(ByVal HEKennung As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements IEichsoftwareWebservice.PruefeLizenz
         'SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Prüfe Lizenz")
 
-
         Using dbcontext As New EichenSQLDatabaseEntities1
             Dim ObjLizenz = (From lic In dbcontext.ServerLizensierung Where lic.HEKennung = HEKennung And lic.Lizenzschluessel = Lizenzschluessel And lic.Aktiv = True).FirstOrDefault
             If Not ObjLizenz Is Nothing Then
@@ -249,8 +248,6 @@ Public Class EichsoftwareWebservice
         End Try
     End Function
 
-
-
     ''' <summary>
     ''' Adds the waegezelle.
     ''' </summary>
@@ -310,7 +307,7 @@ Public Class EichsoftwareWebservice
     End Function
 
     ''' <summary>
-    ''' holt einen bestimmten serverseitigen Eichprozess 
+    ''' holt einen bestimmten serverseitigen Eichprozess
     ''' </summary>
     ''' <param name="HEKennung"></param>
     ''' <param name="Lizenzschluessel"></param>
@@ -340,8 +337,6 @@ Public Class EichsoftwareWebservice
                     ''abruch
                     If Obj Is Nothing Then Return Nothing
 
-
-
                     'prüfungen
                     Dim EichID As String = Obj.ServerEichprotokoll.ID
 
@@ -369,9 +364,6 @@ Public Class EichsoftwareWebservice
                     Catch e As Exception
                     End Try
 
-
-
-
                     Try
                         Dim query = From db In DbContext.ServerPruefungLinearitaetFallend Where db.FK_Eichprotokoll = EichID
                         For Each sourceo In query
@@ -379,7 +371,6 @@ Public Class EichsoftwareWebservice
                         Next
                     Catch e As Exception
                     End Try
-
 
                     Try
                         Dim query = From db In DbContext.ServerPruefungLinearitaetSteigend Where db.FK_Eichprotokoll = EichID
@@ -404,7 +395,6 @@ Public Class EichsoftwareWebservice
                         Next
                     Catch e As Exception
                     End Try
-
 
                     Try
                         Dim query = From db In DbContext.ServerPruefungStaffelverfahrenErsatzlast Where db.FK_Eichprotokoll = EichID
@@ -453,7 +443,6 @@ Public Class EichsoftwareWebservice
 
                     Return Obj
 
-
                 Catch ex As Exception
                     SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
 
@@ -493,7 +482,6 @@ Public Class EichsoftwareWebservice
             Using DbContext As New EichenSQLDatabaseEntities1
                 SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DB Verbindung aufgebaut ")
 
-
                 DbContext.Configuration.LazyLoadingEnabled = False
                 DbContext.Configuration.ProxyCreationEnabled = False
                 Try
@@ -501,7 +489,6 @@ Public Class EichsoftwareWebservice
                                .Include("ServerLookup_Auswertegeraet").Include("ServerKompatiblitaetsnachweis") _
                                .Include("ServerLookup_Waegezelle").Include("ServerLookup_Waagenart") _
                                .Include("ServerLookup_Waagentyp") Where Eichprozess.UploadDatum > SyncAllesSeit And Eichprozess.UploadDatum < SyncAllesBis And Eichprozess.ErzeugerLizenz = Lizenzschluessel)
-
 
                     ''abruch
                     If Eichprozesse Is Nothing Then
@@ -512,7 +499,6 @@ Public Class EichsoftwareWebservice
                     Dim returnlist As New List(Of ServerEichprozess)
                     For Each Obj In Eichprozesse
                         Try
-
 
                             'prüfungen
                             Dim EichID As String = Obj.ServerEichprotokoll.ID
@@ -546,7 +532,6 @@ Public Class EichsoftwareWebservice
 
                             End Try
 
-
                             Try
                                 Dim query = From db In DbContext.ServerPruefungLinearitaetFallend Where db.FK_Eichprotokoll = EichID
                                 For Each sourceo In query
@@ -556,7 +541,6 @@ Public Class EichsoftwareWebservice
                                 SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, String.Format("Fehler: {0} Stacktrace: {1}", e.Message, e.StackTrace))
 
                             End Try
-
 
                             Try
                                 Dim query = From db In DbContext.ServerPruefungLinearitaetSteigend Where db.FK_Eichprotokoll = EichID
@@ -587,7 +571,6 @@ Public Class EichsoftwareWebservice
                                 SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, String.Format("Fehler: {0} Stacktrace: {1}", e.Message, e.StackTrace))
 
                             End Try
-
 
                             Try
                                 Dim query = From db In DbContext.ServerPruefungStaffelverfahrenErsatzlast Where db.FK_Eichprotokoll = EichID
@@ -636,7 +619,6 @@ Public Class EichsoftwareWebservice
                 End Try
             End Using
 
-
         Catch ex As Exception
             SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
 
@@ -644,14 +626,11 @@ Public Class EichsoftwareWebservice
         End Try
     End Function
 
-
-
     Public Function GetStandardwaagen(ByVal HEKennung As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As clsEichprozessFuerAuswahlliste() Implements IEichsoftwareWebservice.GetStandardwaagen
         Try
             Dim boldebug As Boolean = False ' debug logs schreiben
             ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
             If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
-
 
             'neuen Context aufbauen
             Using DbContext As New EichenSQLDatabaseEntities1
@@ -676,8 +655,6 @@ Public Class EichsoftwareWebservice
                              .Uploaddatum = Eichprozess.UploadDatum
                                  }
 
-
-
                     Dim ReturnList As New List(Of clsEichprozessFuerAuswahlliste)
 
                     'Wrapper für die KLasse. Problematischer Weise kann man keine anoynmen Typen zurückgeben. Deswegen gibt es die behilfsklasse clsEichprozessFuerAuswahlliste.
@@ -691,7 +668,6 @@ Public Class EichsoftwareWebservice
 
                             Try
                                 If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 1")
-
 
                                 Dim objReturn As New clsEichprozessFuerAuswahlliste
 
@@ -730,22 +706,16 @@ Public Class EichsoftwareWebservice
 
                                 If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 9")
 
-
                                 If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 10")
-
 
                                 If Not objeichprozess.Pruefscheinnummer Is Nothing Then
                                     objReturn.Pruefscheinnummer = objeichprozess.Pruefscheinnummer
                                 End If
 
-
-
                                 If Not objeichprozess.Uploaddatum Is Nothing Then
                                     objReturn.Uploaddatum = objeichprozess.Uploaddatum
                                 End If
                                 If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 11")
-
-
 
                                 '   Dim ModelArtikel As New Model.clsArtikel(objArtikel.Id, objArtikel.HEKennung, objArtikel.Beschreibung, objArtikel.Preis, objArtikel.ErstellDatum)
                                 ReturnList.Add(objReturn)
@@ -842,7 +812,6 @@ Public Class EichsoftwareWebservice
 
                     If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG QUERY ausgeführt")
 
-
                     Dim ReturnList As New List(Of clsEichprozessFuerAuswahlliste)
 
                     'Wrapper für die KLasse. Problematischer Weise kann man keine anoynmen Typen zurückgeben. Deswegen gibt es die behilfsklasse clsEichprozessFuerAuswahlliste.
@@ -853,14 +822,11 @@ Public Class EichsoftwareWebservice
                     For Each objeichprozess In Query
                         Try
 
-
                             If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Durchlauf: " & counter)
                             counter += 1
 
-
                             Try
                                 If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 1")
-
 
                                 Dim objReturn As New clsEichprozessFuerAuswahlliste
 
@@ -918,7 +884,6 @@ Public Class EichsoftwareWebservice
                                 If Not objeichprozess.Bemerkung Is Nothing Then
                                     objReturn.Bemerkung = objeichprozess.Bemerkung
                                 End If
-
 
                                 If Not objeichprozess.Uploaddatum Is Nothing Then
                                     objReturn.Uploaddatum = objeichprozess.Uploaddatum
@@ -978,7 +943,6 @@ Public Class EichsoftwareWebservice
             Return Nothing
         End Try
     End Function
-
 
     ''' <summary>
     ''' Holt alle Eichprozesse als Datatable für RHEWA ansicht aller Eichprozesse, gefiltert nach Uploadmonat
@@ -1056,7 +1020,6 @@ Public Class EichsoftwareWebservice
 
                     If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG QUERY ausgeführt")
 
-
                     Dim ReturnList As New List(Of clsEichprozessFuerAuswahlliste)
 
                     'Wrapper für die KLasse. Problematischer Weise kann man keine anoynmen Typen zurückgeben. Deswegen gibt es die behilfsklasse clsEichprozessFuerAuswahlliste.
@@ -1076,10 +1039,8 @@ Public Class EichsoftwareWebservice
                             If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Durchlauf: " & counter)
                             counter += 1
 
-
                             Try
                                 If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG 1")
-
 
                                 Dim objReturn As New clsEichprozessFuerAuswahlliste
 
@@ -1137,7 +1098,6 @@ Public Class EichsoftwareWebservice
                                 If Not objeichprozess.Bemerkung Is Nothing Then
                                     objReturn.Bemerkung = objeichprozess.Bemerkung
                                 End If
-
 
                                 If Not objeichprozess.Uploaddatum Is Nothing Then
                                     objReturn.Uploaddatum = objeichprozess.Uploaddatum
@@ -1216,7 +1176,6 @@ Public Class EichsoftwareWebservice
         If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
         SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Hole WZ")
 
-
         Using DBContext As New EichenSQLDatabaseEntities1
             DBContext.Configuration.LazyLoadingEnabled = False
             DBContext.Configuration.ProxyCreationEnabled = False
@@ -1248,10 +1207,6 @@ Public Class EichsoftwareWebservice
                     query = From d In DBContext.ServerLookup_Waegezelle Where d.ErstellDatum >= LetztesUpdate Order By d.ID
                 End If
 
-
-
-
-
                 Dim ReturnList As New List(Of ServerLookup_Waegezelle)
 
                 For Each objWZ In query
@@ -1274,7 +1229,6 @@ Public Class EichsoftwareWebservice
                 Return Nothing
             End Try
         End Using
-
 
     End Function
 
@@ -1326,10 +1280,6 @@ Public Class EichsoftwareWebservice
                 Else 'fall das Startwert gleich default aber endwert nicht, ist nicht vorgesehen. Fallback auf Sync Alles seit
                     query = From d In DBContext.ServerLookup_Auswertegeraet Where d.ErstellDatum >= LetztesUpdate Order By d.ID
                 End If
-
-
-
-
 
                 Dim ReturnList As New List(Of ServerLookup_Auswertegeraet)
 
@@ -1410,7 +1360,6 @@ Public Class EichsoftwareWebservice
                 Catch e As Exception
                 End Try
 
-
                 Try
                     DbContext.SaveChanges()
                 Catch e As Exception
@@ -1444,7 +1393,6 @@ Public Class EichsoftwareWebservice
             ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
             If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
             SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Prüfe gültigkeit des Eichprozesses")
-
 
             'neuen Context aufbauen
             'prüfen ob der eichprozess schoneinmal eingegangen ist anhand von Vorgangsnummer
@@ -1520,7 +1468,6 @@ Public Class EichsoftwareWebservice
 
                     Return True
 
-
                 Catch ex As Exception
                     SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
 
@@ -1573,7 +1520,6 @@ Public Class EichsoftwareWebservice
                     Vorgangsnummer = Nothing
 
                     Return True
-
 
                 Catch ex As Exception
                     SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
@@ -1641,7 +1587,6 @@ Public Class EichsoftwareWebservice
 
                     End Try
 
-
                     'prüfen ob der Sperrer nicht einem selbst entspricht
                     If Obj.ZurBearbeitungGesperrtDurch = WindowsUsername Then
                         Return ""
@@ -1649,7 +1594,7 @@ Public Class EichsoftwareWebservice
                         Return Obj.ZurBearbeitungGesperrtDurch
                     End If
 
-                    'ansonsten 
+                    'ansonsten
                     Return ""
 
                 Catch ex As Exception
@@ -1695,7 +1640,6 @@ Public Class EichsoftwareWebservice
                     ''abruch
                     If Obj Is Nothing Then Return "Objekt nicht gefunden"
 
-
                     'entsperren wen bolsperren = false
                     If bolSperren Then
                         'Keine sperrung vorliegend, wir setzten sie
@@ -1727,14 +1671,12 @@ Public Class EichsoftwareWebservice
 
                         End Try
 
-
                         'prüfen ob man selbst gesperrt hat
                         If Obj.ZurBearbeitungGesperrtDurch = WindowsUsername Then
                             Return ""
                         End If
 
-
-                        'ansonsten 
+                        'ansonsten
                         Return "Benutzer ist nicht der Sperrer"
 
                     Else
@@ -1742,7 +1684,6 @@ Public Class EichsoftwareWebservice
                         DbContext.SaveChanges()
                         Return ""
                     End If
-
 
                 Catch ex As Exception
                     SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
@@ -1813,6 +1754,5 @@ Public Class EichsoftwareWebservice
             Return Nothing
         End Try
     End Function
-
 
 End Class

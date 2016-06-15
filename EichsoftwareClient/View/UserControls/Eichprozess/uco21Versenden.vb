@@ -4,7 +4,7 @@ Imports System.IO
 
 Public Class Uco21Versenden
     Inherits ucoContent
-    'Private AktuellerStatusDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann 
+    'Private AktuellerStatusDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann
     Private WithEvents objFTP As New clsFTP
     Private FTPUploadPath As String = "" 'Wert der gesetzt wird, falls ein Dokument zum FTP hochgeladen wird. Dieser wert entspricht dann dem reelen Dateipfad auf dem FTP Server
     Sub New()
@@ -18,7 +18,6 @@ Public Class Uco21Versenden
         InitializeComponent()
         EichprozessStatusReihenfolge = GlobaleEnumeratoren.enuEichprozessStatus.Versenden
     End Sub
-
 
     Private Sub ucoBeschaffenheitspruefung_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         If Not ParentFormular Is Nothing Then
@@ -36,10 +35,8 @@ Public Class Uco21Versenden
 
         ParentFormular.RadButtonNavigateForwards.Enabled = False
 
-
         'daten füllen
         LoadFromDatabase()
-
 
         'falls der Konformitätsbewertungsvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
         If DialogModus = enuDialogModus.lesend Then
@@ -62,7 +59,6 @@ Public Class Uco21Versenden
         End If
 
         FillControls()
-
 
         If DialogModus = enuDialogModus.lesend Then
             'falls der Konformitätsbewertungsvorgang nur lesend betrchtet werden soll, wird versucht alle Steuerlemente auf REadonly zu setzen. Wenn das nicht klappt,werden sie disabled
@@ -108,9 +104,7 @@ Public Class Uco21Versenden
             Exit Sub
         End If
 
-
         Dim objServerEichprozess As New EichsoftwareWebservice.ServerEichprozess
-
 
         'auf versendet Status setzen
         If objEichprozess.FK_Bearbeitungsstatus = 4 Or objEichprozess.FK_Bearbeitungsstatus = 2 Then 'wenn neu oder fehlerhaft auf versendet zurücksetzen
@@ -143,7 +137,7 @@ Public Class Uco21Versenden
 
         Using dbcontext As New EichsoftwareClientdatabaseEntities1
             objEichprozess = (From a In dbcontext.Eichprozess.Include("Eichprotokoll").Include("Lookup_Auswertegeraet").Include("Kompatiblitaetsnachweis").Include("Lookup_Waegezelle").Include("Lookup_Waagenart").Include("Lookup_Waagentyp").Include("Mogelstatistik") Select a Where a.Vorgangsnummer = objEichprozess.Vorgangsnummer).FirstOrDefault
-            objEichprozess.AusStandardwaageErzeugt = False 'Egal ob der Prozess versendet wird oder nicht, das Flag bei einer kopierten Leistung kann entfernt werden, da es sich jetzt um eine gültige Waage handelt 
+            objEichprozess.AusStandardwaageErzeugt = False 'Egal ob der Prozess versendet wird oder nicht, das Flag bei einer kopierten Leistung kann entfernt werden, da es sich jetzt um eine gültige Waage handelt
             objServerEichprozess = clsClientServerConversionFunctions.CopyServerObjectProperties(objServerEichprozess, objEichprozess, clsClientServerConversionFunctions.enuModus.ClientSendetAnRhewa)
 
             'verbindung öffnen
@@ -156,7 +150,6 @@ Public Class Uco21Versenden
 
                     Exit Sub
                 End Try
-
 
                 Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
 
@@ -175,11 +168,9 @@ Public Class Uco21Versenden
                         End If
                     End If
 
-
                     Webcontext.AddEichprozess(objLiz.HEKennung, objLiz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
                 Catch ex As Exception
                     MessageBox.Show(ex.StackTrace, ex.Message, MessageBoxButtons.OK, MessageBoxIcon.Error)
-
 
                     Using Context As New EichsoftwareClientdatabaseEntities1
                         'prüfen ob CREATE oder UPDATE durchgeführt werden muss
@@ -215,9 +206,9 @@ Public Class Uco21Versenden
                                 If TypeOf uco Is uco19EichtechnischeSicherung Then
                                     If CType(uco, uco19EichtechnischeSicherung).AktuellerStatusDirty Then
 
-                                        Webcontext.AddEichmarkenverwaltung(objLiz.HEKennung, objLiz.Lizenzschluessel, objLiz.FK_BenutzerID, _
-                                                        objEichprozess.Eichprotokoll.Sicherung_BenannteStelleAnzahl, objEichprozess.Eichprotokoll.Sicherung_Eichsiegel13x13Anzahl, _
-                                                        objEichprozess.Eichprotokoll.Sicherung_EichsiegelRundAnzahl, objEichprozess.Eichprotokoll.Sicherung_HinweismarkeGelochtAnzahl, _
+                                        Webcontext.AddEichmarkenverwaltung(objLiz.HEKennung, objLiz.Lizenzschluessel, objLiz.FK_BenutzerID,
+                                                        objEichprozess.Eichprotokoll.Sicherung_BenannteStelleAnzahl, objEichprozess.Eichprotokoll.Sicherung_Eichsiegel13x13Anzahl,
+                                                        objEichprozess.Eichprotokoll.Sicherung_EichsiegelRundAnzahl, objEichprozess.Eichprotokoll.Sicherung_HinweismarkeGelochtAnzahl,
                                                         objEichprozess.Eichprotokoll.Sicherung_GruenesMAnzahl, objEichprozess.Eichprotokoll.Sicherung_CEAnzahl, objEichprozess.Eichprotokoll.Sicherung_CE2016Anzahl, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
                                     End If
                                     Exit For
@@ -226,7 +217,6 @@ Public Class Uco21Versenden
                             Next
                         End If
                     End If
-
 
                     ParentFormular.Close()
                 Catch e As Exception
@@ -259,8 +249,6 @@ Public Class Uco21Versenden
                         objEichprozess = dobjEichprozess
                         'neuen Status zuweisen
 
-
-
                         'Speichern in Datenbank
                         UpdateObject()
                         Try
@@ -276,7 +264,6 @@ Public Class Uco21Versenden
 
             ParentFormular.CurrentEichprozess = objEichprozess
         End If
-
 
     End Sub
 
@@ -301,8 +288,6 @@ Public Class Uco21Versenden
                         objEichprozess = dobjEichprozess
                         'neuen Status zuweisen
 
-
-
                         'Speichern in Datenbank
                         UpdateObject()
                         Try
@@ -318,7 +303,6 @@ Public Class Uco21Versenden
 
             ParentFormular.CurrentEichprozess = objEichprozess
         End If
-
 
     End Sub
 
@@ -392,12 +376,11 @@ Public Class Uco21Versenden
         Return Not Me.AbortSaving
     End Function
 
-
     'Entsperrroutine
     Protected Overrides Sub EntsperrungNeeded()
         MyBase.EntsperrungNeeded()
 
-        'Hiermit wird ein lesender Vorgang wieder entsperrt. 
+        'Hiermit wird ein lesender Vorgang wieder entsperrt.
         EnableControls(Me)
         'ändern des Moduses
         DialogModus = enuDialogModus.korrigierend
@@ -451,15 +434,11 @@ Public Class Uco21Versenden
         MyBase.LokalisierungNeeded(UserControl)
 
         'lokalisierung: Leider kann ich den automatismus von .NET nicht nutzen. Dieser funktioniert nur sauber, wenn ein Dialog erzeugt wird. Zur Laufzeit aber gibt es diverse Probleme mit dem Automatischen Ändern der Sprache,
-        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße 
+        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Uco21Versenden))
-
-
 
         Me.RadButtonUploadPath.Text = resources.GetString("RadButtonUploadPath.Text")
         Me.RadButtonAnRhewaSenden.Text = resources.GetString("RadButtonAnRhewaSenden.Text")
-
-
 
         If Not ParentFormular Is Nothing Then
             Try
@@ -475,9 +454,7 @@ Public Class Uco21Versenden
             End Try
         End If
 
-
     End Sub
-
 
 #Region "FTP Upload"
     Private Sub BackgroundWorkerUploadFTP_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorkerUploadFTP.DoWork
@@ -507,7 +484,6 @@ Public Class Uco21Versenden
         End If
     End Sub
 
-
     Public Sub InitUploadFileToFTP()
         Using dbcontext As New EichsoftwareClientdatabaseEntities1
             Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
@@ -521,7 +497,6 @@ Public Class Uco21Versenden
                 'daten von WebDB holen
                 Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
                 Dim objFTPDaten = Webcontext.GetFTPCredentials(objLiz.HEKennung, objLiz.Lizenzschluessel, objEichprozess.Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
-
 
                 'aufbereiten der für FTP benötigten Verbindungsdaten
                 If Not objFTPDaten Is Nothing Then
@@ -544,7 +519,7 @@ Public Class Uco21Versenden
                     ' can be 192 or 128
                     Dim UploadfilePath = RadTextBoxControlUploadPath.Text
 
-                    password = RijndaelSimple.Decrypt(password, passPhrase, saltValue, hashAlgorithm, passwordIterations, initVector, _
+                    password = RijndaelSimple.Decrypt(password, passPhrase, saltValue, hashAlgorithm, passwordIterations, initVector,
                         keySize)
 
                     'datei upload. FTPUploadPath bekommt den reelen Pfad auf dem FTP Server
@@ -585,6 +560,5 @@ Public Class Uco21Versenden
         End Try
     End Sub
 #End Region
-
 
 End Class
