@@ -21,6 +21,9 @@ Public Class clsOfficeExports
         Dim objExcelWorksheetTabelle1 As Microsoft.Office.Interop.Excel.Worksheet
         Dim ExcelSavePath As String
         Dim DocumentName As String = "Kompatibilitätsnachweis DE" & "_" & pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer & ".xls"
+        For Each c As Char In System.IO.Path.GetInvalidFileNameChars()
+            DocumentName = DocumentName.Replace(c, "_"c)
+        Next
         Dim CompletePath As String
         Dim b() As Byte = My.Resources.Kompatibilitätsnachweis_DE
         Dim FolderBrowserDialog As New FolderBrowserDialog
@@ -417,6 +420,9 @@ Public Class clsOfficeExports
         Dim objExcelWorksheetTabelle1 As Microsoft.Office.Interop.Excel.Worksheet
         Dim ExcelSavePath As String
         Dim DocumentName As String = "Kompatibilitätsnachweis EN" & "_" & pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer & ".xls"
+        For Each c As Char In System.IO.Path.GetInvalidFileNameChars()
+            DocumentName = DocumentName.Replace(c, "_"c)
+        Next
         Dim CompletePath As String
         Dim b() As Byte = My.Resources.Kompatibilitätsnachweis_EN
         Dim FolderBrowserDialog As New FolderBrowserDialog
@@ -806,6 +812,9 @@ Public Class clsOfficeExports
         Dim objExcelWorksheetKonformerk As Microsoft.Office.Interop.Excel.Worksheet
         Dim ExcelSavePath As String
         Dim DocumentName As String = "Konformitätserklärung DE" & "_" & objEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer & ".xls"
+        For Each c As Char In System.IO.Path.GetInvalidFileNameChars()
+            DocumentName = DocumentName.Replace(c, "_"c)
+        Next
         Dim CompletePath As String
         Dim b() As Byte = My.Resources.Konformitätserklärung_DE
         Dim FolderBrowserDialog As New FolderBrowserDialog
@@ -880,6 +889,9 @@ Public Class clsOfficeExports
         Dim objExcelWorksheetKonformerk As Microsoft.Office.Interop.Excel.Worksheet
         Dim ExcelSavePath As String
         Dim DocumentName As String = "Konformitätserklärung PL" & "_" & pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer & ".xls"
+        For Each c As Char In System.IO.Path.GetInvalidFileNameChars()
+            DocumentName = DocumentName.Replace(c, "_"c)
+        Next
         Dim CompletePath As String
         Dim b() As Byte = My.Resources.Konformitätserklärung_PL
         Dim FolderBrowserDialog As New FolderBrowserDialog
@@ -957,6 +969,9 @@ Public Class clsOfficeExports
         Dim objExcelWorksheetKonformerk As Microsoft.Office.Interop.Excel.Worksheet
         Dim ExcelSavePath As String
         Dim DocumentName As String = "Konformitätserklärung RO" & "_" & pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer & ".xls"
+        For Each c As Char In System.IO.Path.GetInvalidFileNameChars()
+            DocumentName = DocumentName.Replace(c, "_"c)
+        Next
         Dim CompletePath As String
         Dim b() As Byte = My.Resources.Konformitätserklärung_RO
         Dim FolderBrowserDialog As New FolderBrowserDialog
