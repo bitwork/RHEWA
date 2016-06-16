@@ -110,6 +110,16 @@
     ''' <author></author>
     ''' <commentauthor></commentauthor>
     Private Sub FillControls()
+
+        If AktuellerBenutzer.Instance.Lizenz.RHEWALizenz Then
+            If objEichprozess.AusStandardwaageErzeugt = True Then
+                lblTruck.Visible = False
+                RadTextBoxControlNormalienEichfahrzeugFirma.Visible = False
+                RadDateTimePickerNormalienLetztePruefung.Visible = False
+                RadDateTimePickerNormalienLetztePruefung.Value = Now
+                lblPruefzeitraum.Visible = False
+            End If
+        End If
         Dim dMAXHoechlast As Decimal 'variable zum speichern der höchsten Hoechstlast (je nach Art der Waage Max1,2 oder 3)
 
         'Steuerlemente füllen
