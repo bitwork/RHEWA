@@ -344,7 +344,13 @@ Public Class clsOfficeExports
             objExcelWorksheetDatenEingabe.Cells(40, 7).value = pEichProzess.Lookup_Waegezelle.MaxAnzahlTeilungswerte
 
             'Mindestvorlast WZ befüllen in G38 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(38, 7).value = pEichProzess.Lookup_Waegezelle.Mindestvorlast
+            If Not pEichProzess.Lookup_Waegezelle.MindestvorlastProzent Is Nothing Then
+                objExcelWorksheetDatenEingabe.Cells(38, 7).value = (pEichProzess.Lookup_Waegezelle.MindestvorlastProzent / 100) * pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast
+
+            Else
+                objExcelWorksheetDatenEingabe.Cells(38, 7).value = pEichProzess.Lookup_Waegezelle.Mindestvorlast
+
+            End If
 
             'MinTeilungswert WZ befüllen in G41 auf Daten-Eingabe
             objExcelWorksheetDatenEingabe.Cells(41, 7).value = pEichProzess.Lookup_Waegezelle.MinTeilungswert
@@ -735,8 +741,14 @@ Public Class clsOfficeExports
             objExcelWorksheetDatenEingabe.Cells(40, 7).value = pEichProzess.Lookup_Waegezelle.MaxAnzahlTeilungswerte
 
             'Mindestvorlast WZ befüllen in G38 auf Daten-Eingabe
-            objExcelWorksheetDatenEingabe.Cells(38, 7).value = pEichProzess.Lookup_Waegezelle.Mindestvorlast
 
+            If Not pEichProzess.Lookup_Waegezelle.MindestvorlastProzent Is Nothing Then
+                objExcelWorksheetDatenEingabe.Cells(38, 7).value = (pEichProzess.Lookup_Waegezelle.MindestvorlastProzent / 100) * pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast
+
+            Else
+                objExcelWorksheetDatenEingabe.Cells(38, 7).value = pEichProzess.Lookup_Waegezelle.Mindestvorlast
+
+            End If
             'MinTeilungswert WZ befüllen in G41 auf Daten-Eingabe
             objExcelWorksheetDatenEingabe.Cells(41, 7).value = pEichProzess.Lookup_Waegezelle.MinTeilungswert
 
@@ -1187,6 +1199,11 @@ Public Class clsOfficeExports
                 r.InsertAfter("Kriechteilungsfaktor: " & pEichProzess.Lookup_Waegezelle.Kriechteilungsfaktor & vbNewLine)
                 r.InsertAfter("Max Anzahl Teilungswerte: " & pEichProzess.Lookup_Waegezelle.MaxAnzahlTeilungswerte & vbNewLine)
                 r.InsertAfter("Mindestvorlast: " & pEichProzess.Lookup_Waegezelle.Mindestvorlast & vbNewLine)
+                If Not pEichProzess.Lookup_Waegezelle.MindestvorlastProzent Is Nothing Then
+                    r.InsertAfter("Mindestvorlast: " & (pEichProzess.Lookup_Waegezelle.MindestvorlastProzent / 100) * pEichProzess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast)
+                Else
+                    r.InsertAfter("Mindestvorlast: " & pEichProzess.Lookup_Waegezelle.Mindestvorlast)
+                End If
                 r.InsertAfter("Min Teilungswert: " & pEichProzess.Lookup_Waegezelle.MinTeilungswert & vbNewLine)
                 r.InsertAfter("Prüfbericht: " & pEichProzess.Lookup_Waegezelle.Pruefbericht & vbNewLine)
                 r.InsertAfter("Revisionsnummer: " & pEichProzess.Lookup_Waegezelle.Revisionsnummer & vbNewLine)

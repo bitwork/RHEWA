@@ -173,7 +173,7 @@ Public Class EichsoftwareWebservice
     ''' <param name="NewServerObj"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Function AddEichprozess(ByVal HEKennung As String, Lizenzschluessel As String, ByRef NewServerObj As ServerEichprozess, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements IEichsoftwareWebservice.AddEichprozess
+    Public Function AddEichprozess(ByVal HEKennung As String, Lizenzschluessel As String, ByRef NewServerObj As ServerEichprozess, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, Programmversionsnummer As String) As Boolean Implements IEichsoftwareWebservice.AddEichprozess
         Try
             SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Füge Konformitätsbewertungsprozess hinzu bzw. Aktualisiere")
 
@@ -189,7 +189,7 @@ Public Class EichsoftwareWebservice
 
                 If CurrentServerobj Is Nothing Then
                     'anpassen des Bemerkungstextes Timestamp / Benutzer / Kommentar
-                    NewServerObj.ServerEichprotokoll.Sicherung_Bemerkungen = "#(" & Date.Now & " " & WindowsUsername & "(" & HEKennung & ")" & ")# " & vbNewLine & NewServerObj.ServerEichprotokoll.Sicherung_Bemerkungen.ToString
+                    NewServerObj.ServerEichprotokoll.Sicherung_Bemerkungen = "#(" & Date.Now & " " & WindowsUsername & "(" & HEKennung & ") @ v." & Programmversionsnummer & ")# " & vbNewLine & NewServerObj.ServerEichprotokoll.Sicherung_Bemerkungen.ToString
                 Else 'update
                     'aufräumen und löschen der alten Einträge in der Datenbank
                     Dim tmpoldMessage As String = ""
@@ -217,18 +217,20 @@ Public Class EichsoftwareWebservice
                                 End Try
                             End If
 
-                            NewServerObj.ServerEichprotokoll.Sicherung_Bemerkungen = tmpoldMessage & vbNewLine & vbNewLine & "#(" & Date.Now & " " & WindowsUsername & "(" & HEKennung & ")" & ")# " & vbNewLine & tmpNewMessage
+                            NewServerObj.ServerEichprotokoll.Sicherung_Bemerkungen = tmpoldMessage & vbNewLine & vbNewLine & "#(" & Date.Now & " " & WindowsUsername & "(" & HEKennung & ") @ v." & Programmversionsnummer & ")# " & vbNewLine & tmpNewMessage
                         End If
                     Catch ex As Exception
                         SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Fehler aufgetreten: " & ex.Message & ex.StackTrace)
                     End Try
                 End If
+
                 If NewServerObj.ErzeugerLizenz Is Nothing Then
                     NewServerObj.ErzeugerLizenz = Lizenzschluessel 'lizenzschlüssel zur identifizierung des datensatztes hinzufügen
                 ElseIf NewServerObj.ErzeugerLizenz.Equals("") Then
                     NewServerObj.ErzeugerLizenz = Lizenzschluessel 'lizenzschlüssel zur identifizierung des datensatztes hinzufügen
 
                 End If
+
                 DbContext.ServerEichprozess.Add(NewServerObj)
                 DbContext.SaveChanges()
             End Using
@@ -803,6 +805,7 @@ Public Class EichsoftwareWebservice
                 DbContext.Configuration.LazyLoadingEnabled = False
                 DbContext.Configuration.ProxyCreationEnabled = False
                 Try
+
                     Dim Query = From Eichprozess In DbContext.ServerEichprozess.Include("ServerLookup_Waegezelle")
                                 Join Lookup In DbContext.ServerLookup_Vorgangsstatus On Eichprozess.FK_Vorgangsstatus Equals Lookup.ID
                                 Join Lookup2 In DbContext.ServerLookup_Bearbeitungsstatus On Eichprozess.FK_Bearbeitungsstatus Equals Lookup2.ID
@@ -818,14 +821,15 @@ Public Class EichsoftwareWebservice
                                 .Lookup_Waagenart = Eichprozess.ServerLookup_Waagenart.Art,
                                 .Lookup_Auswertegeraet = Eichprozess.ServerLookup_Auswertegeraet.Typ,
                                 .Sachbearbeiter = Eichprozess.ServerEichprotokoll.Identifikationsdaten_Pruefer,
-                       .ZurBearbeitungGesperrtDurch = Eichprozess.ZurBearbeitungGesperrtDurch,
-                     .Anhangpfad = Eichprozess.UploadFilePath,
-                     .NeuWZ = Eichprozess.ServerLookup_Waegezelle.Neu,
-                    .Bearbeitungsstatus = Lookup2.Status,
-                .Uploaddatum = Eichprozess.UploadDatum,
-                    .Bemerkung = Eichprozess.ServerEichprotokoll.Sicherung_Bemerkungen
-                                 }
+                           .ZurBearbeitungGesperrtDurch = Eichprozess.ZurBearbeitungGesperrtDurch,
+                         .Anhangpfad = Eichprozess.UploadFilePath,
+                        .Bearbeitungsstatus = Lookup2.Status,
+                    .Uploaddatum = Eichprozess.UploadDatum,
+                        .Bemerkung = Eichprozess.ServerEichprotokoll.Sicherung_Bemerkungen,
+                                    .NeuWZ = Eichprozess.ServerLookup_Waegezelle.Neu
+                       }
 
+                    '.NeuWZ = Eichprozess.ServerLookup_Waegezelle.Neu,
                     If boldebug Then SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "DEBUG QUERY ausgeführt")
 
                     Dim ReturnList As New List(Of clsEichprozessFuerAuswahlliste)

@@ -22,6 +22,7 @@
   <xs:complexType name="ServerLookup_Waegezelle">
     <xs:sequence>
       <xs:element name="_Bauartzulassung" nillable="true" type="xs:string" />
+      <xs:element name="_Bemerkung" nillable="true" type="xs:string" />
       <xs:element name="_BruchteilEichfehlergrenze" nillable="true" type="xs:string" />
       <xs:element name="_Deaktiviert" type="xs:boolean" />
       <xs:element name="_ErstellDatum" nillable="true" type="xs:dateTime" />
@@ -35,6 +36,7 @@
       <xs:element name="_MaxAnzahlTeilungswerte" nillable="true" type="xs:string" />
       <xs:element name="_MinTeilungswert" nillable="true" type="xs:string" />
       <xs:element name="_Mindestvorlast" nillable="true" type="xs:string" />
+      <xs:element name="_MindestvorlastProzent" nillable="true" type="xs:string" />
       <xs:element name="_Neu" type="xs:boolean" />
       <xs:element name="_Pruefbericht" nillable="true" type="xs:string" />
       <xs:element name="_Revisionsnummer" nillable="true" type="xs:string" />

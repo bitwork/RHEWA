@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="EichenSQLDatabaseModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+      <Schema Namespace="EichenSQLDatabaseModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="EichenSQLDatabaseModelStoreContainer">
           <EntitySet Name="Benutzer" EntityType="EichenSQLDatabaseModel.Store.Benutzer" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Firmen" EntityType="EichenSQLDatabaseModel.Store.Firmen" store:Type="Tables" Schema="dbo" />
@@ -496,6 +496,8 @@
           <Property Name="ErstellDatum" Type="datetime" />
           <Property Name="Deaktiviert" Type="bit" Nullable="false" />
           <Property Name="Neu" Type="bit" Nullable="false" />
+          <Property  Type="nvarchar" MaxLength="4" Name="MindestvorlastProzent" />
+          <Property Type="nvarchar" Name="Bemerkung" MaxLength="255" />
         </EntityType>
         <EntityType Name="ServerLookupVertragspartnerFirma">
           <Key>
@@ -709,92 +711,92 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      <Association Name="FK_Eichprozess_Eichprotokoll">
-        <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.Store.ServerEichprotokoll" Multiplicity="0..1">
-          <OnDelete Action="Cascade" />
-        </End>
-        <End Role="ServerEichprozess" Type="EichenSQLDatabaseModel.Store.ServerEichprozess" Multiplicity="*" />
-        <ReferentialConstraint>
-          <Principal Role="ServerEichprotokoll">
-            <PropertyRef Name="ID" />
-          </Principal>
-          <Dependent Role="ServerEichprozess">
-            <PropertyRef Name="FK_Eichprotokoll" />
-          </Dependent>
-        </ReferentialConstraint>
-      </Association>
-      <Association Name="FK_Eichprozess_Kompatiblitaetsnachweis">
-        <End Role="ServerKompatiblitaetsnachweis" Type="EichenSQLDatabaseModel.Store.ServerKompatiblitaetsnachweis" Multiplicity="0..1" />
-        <End Role="ServerEichprozess" Type="EichenSQLDatabaseModel.Store.ServerEichprozess" Multiplicity="*" />
-        <ReferentialConstraint>
-          <Principal Role="ServerKompatiblitaetsnachweis">
-            <PropertyRef Name="ID" />
-          </Principal>
-          <Dependent Role="ServerEichprozess">
-            <PropertyRef Name="FK_Kompatibilitaetsnachweis" />
-          </Dependent>
-        </ReferentialConstraint>
-      </Association>
-      <Association Name="FK_Eichprozess_Lookup_Auswertegeraet">
-        <End Role="ServerLookup_Auswertegeraet" Type="EichenSQLDatabaseModel.Store.ServerLookup_Auswertegeraet" Multiplicity="0..1" />
-        <End Role="ServerEichprozess" Type="EichenSQLDatabaseModel.Store.ServerEichprozess" Multiplicity="*" />
-        <ReferentialConstraint>
-          <Principal Role="ServerLookup_Auswertegeraet">
-            <PropertyRef Name="ID" />
-          </Principal>
-          <Dependent Role="ServerEichprozess">
-            <PropertyRef Name="FK_Auswertegeraet" />
-          </Dependent>
-        </ReferentialConstraint>
-      </Association>
-      <Association Name="FK_Eichprozess_Lookup_Vorgangsstatus">
-        <End Role="ServerLookup_Vorgangsstatus" Type="EichenSQLDatabaseModel.Store.ServerLookup_Vorgangsstatus" Multiplicity="1" />
-        <End Role="ServerEichprozess" Type="EichenSQLDatabaseModel.Store.ServerEichprozess" Multiplicity="*" />
-        <ReferentialConstraint>
-          <Principal Role="ServerLookup_Vorgangsstatus">
-            <PropertyRef Name="ID" />
-          </Principal>
-          <Dependent Role="ServerEichprozess">
-            <PropertyRef Name="FK_Vorgangsstatus" />
-          </Dependent>
-        </ReferentialConstraint>
-      </Association>
-      <Association Name="FK_Eichprozess_Lookup_Waagenart">
-        <End Role="ServerLookup_Waagenart" Type="EichenSQLDatabaseModel.Store.ServerLookup_Waagenart" Multiplicity="0..1" />
-        <End Role="ServerEichprozess" Type="EichenSQLDatabaseModel.Store.ServerEichprozess" Multiplicity="*" />
-        <ReferentialConstraint>
-          <Principal Role="ServerLookup_Waagenart">
-            <PropertyRef Name="ID" />
-          </Principal>
-          <Dependent Role="ServerEichprozess">
-            <PropertyRef Name="FK_WaagenArt" />
-          </Dependent>
-        </ReferentialConstraint>
-      </Association>
-      <Association Name="FK_Eichprozess_Lookup_Waagentyp">
-        <End Role="ServerLookup_Waagentyp" Type="EichenSQLDatabaseModel.Store.ServerLookup_Waagentyp" Multiplicity="0..1" />
-        <End Role="ServerEichprozess" Type="EichenSQLDatabaseModel.Store.ServerEichprozess" Multiplicity="*" />
-        <ReferentialConstraint>
-          <Principal Role="ServerLookup_Waagentyp">
-            <PropertyRef Name="ID" />
-          </Principal>
-          <Dependent Role="ServerEichprozess">
-            <PropertyRef Name="FK_WaagenTyp" />
-          </Dependent>
-        </ReferentialConstraint>
-      </Association>
-      <Association Name="FK_Eichprozess_Lookup_Waegezelle">
-        <End Role="ServerLookup_Waegezelle" Type="EichenSQLDatabaseModel.Store.ServerLookup_Waegezelle" Multiplicity="0..1" />
-        <End Role="ServerEichprozess" Type="EichenSQLDatabaseModel.Store.ServerEichprozess" Multiplicity="*" />
-        <ReferentialConstraint>
-          <Principal Role="ServerLookup_Waegezelle">
-            <PropertyRef Name="ID" />
-          </Principal>
-          <Dependent Role="ServerEichprozess">
-            <PropertyRef Name="FK_Waegezelle" />
-          </Dependent>
-        </ReferentialConstraint>
-      </Association>
+        <Association Name="FK_Eichprozess_Eichprotokoll">
+          <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.Store.ServerEichprotokoll" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="ServerEichprozess" Type="EichenSQLDatabaseModel.Store.ServerEichprozess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerEichprotokoll">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerEichprozess">
+              <PropertyRef Name="FK_Eichprotokoll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Eichprozess_Kompatiblitaetsnachweis">
+          <End Role="ServerKompatiblitaetsnachweis" Type="EichenSQLDatabaseModel.Store.ServerKompatiblitaetsnachweis" Multiplicity="0..1" />
+          <End Role="ServerEichprozess" Type="EichenSQLDatabaseModel.Store.ServerEichprozess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerKompatiblitaetsnachweis">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerEichprozess">
+              <PropertyRef Name="FK_Kompatibilitaetsnachweis" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Eichprozess_Lookup_Auswertegeraet">
+          <End Role="ServerLookup_Auswertegeraet" Type="EichenSQLDatabaseModel.Store.ServerLookup_Auswertegeraet" Multiplicity="0..1" />
+          <End Role="ServerEichprozess" Type="EichenSQLDatabaseModel.Store.ServerEichprozess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerLookup_Auswertegeraet">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerEichprozess">
+              <PropertyRef Name="FK_Auswertegeraet" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Eichprozess_Lookup_Vorgangsstatus">
+          <End Role="ServerLookup_Vorgangsstatus" Type="EichenSQLDatabaseModel.Store.ServerLookup_Vorgangsstatus" Multiplicity="1" />
+          <End Role="ServerEichprozess" Type="EichenSQLDatabaseModel.Store.ServerEichprozess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerLookup_Vorgangsstatus">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerEichprozess">
+              <PropertyRef Name="FK_Vorgangsstatus" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Eichprozess_Lookup_Waagenart">
+          <End Role="ServerLookup_Waagenart" Type="EichenSQLDatabaseModel.Store.ServerLookup_Waagenart" Multiplicity="0..1" />
+          <End Role="ServerEichprozess" Type="EichenSQLDatabaseModel.Store.ServerEichprozess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerLookup_Waagenart">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerEichprozess">
+              <PropertyRef Name="FK_WaagenArt" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Eichprozess_Lookup_Waagentyp">
+          <End Role="ServerLookup_Waagentyp" Type="EichenSQLDatabaseModel.Store.ServerLookup_Waagentyp" Multiplicity="0..1" />
+          <End Role="ServerEichprozess" Type="EichenSQLDatabaseModel.Store.ServerEichprozess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerLookup_Waagentyp">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerEichprozess">
+              <PropertyRef Name="FK_WaagenTyp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Eichprozess_Lookup_Waegezelle">
+          <End Role="ServerLookup_Waegezelle" Type="EichenSQLDatabaseModel.Store.ServerLookup_Waegezelle" Multiplicity="0..1" />
+          <End Role="ServerEichprozess" Type="EichenSQLDatabaseModel.Store.ServerEichprozess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerLookup_Waegezelle">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerEichprozess">
+              <PropertyRef Name="FK_Waegezelle" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Mogelstatistik_Eichprozess">
           <End Role="ServerEichprozess" Type="EichenSQLDatabaseModel.Store.ServerEichprozess" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
@@ -971,18 +973,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      <Association Name="FK_ServerEichprozess_ServerLookup_Bearbeitungsstatus">
-        <End Role="ServerLookup_Bearbeitungsstatus" Type="EichenSQLDatabaseModel.Store.ServerLookup_Bearbeitungsstatus" Multiplicity="0..1" />
-        <End Role="ServerEichprozess" Type="EichenSQLDatabaseModel.Store.ServerEichprozess" Multiplicity="*" />
-        <ReferentialConstraint>
-          <Principal Role="ServerLookup_Bearbeitungsstatus">
-            <PropertyRef Name="ID" />
-          </Principal>
-          <Dependent Role="ServerEichprozess">
-            <PropertyRef Name="FK_Bearbeitungsstatus" />
-          </Dependent>
-        </ReferentialConstraint>
-      </Association>
+        <Association Name="FK_ServerEichprozess_ServerLookup_Bearbeitungsstatus">
+          <End Role="ServerLookup_Bearbeitungsstatus" Type="EichenSQLDatabaseModel.Store.ServerLookup_Bearbeitungsstatus" Multiplicity="0..1" />
+          <End Role="ServerEichprozess" Type="EichenSQLDatabaseModel.Store.ServerEichprozess" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerLookup_Bearbeitungsstatus">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerEichprozess">
+              <PropertyRef Name="FK_Bearbeitungsstatus" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_ServerFirmenZusatzdaten_Firmen">
           <End Role="Firmen" Type="EichenSQLDatabaseModel.Store.Firmen" Multiplicity="0..1" />
           <End Role="ServerFirmenZusatzdaten" Type="EichenSQLDatabaseModel.Store.ServerFirmenZusatzdaten" Multiplicity="*" />
@@ -1007,7 +1009,8 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="EichenSQLDatabaseModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
@@ -1472,7 +1475,7 @@
           <NavigationProperty Name="ServerEichprozess" Relationship="EichenSQLDatabaseModel.FK_Eichprozess_Lookup_Waegezelle" FromRole="ServerLookup_Waegezelle" ToRole="ServerEichprozess" />
           <NavigationProperty Name="ServerMogelstatistik" Relationship="EichenSQLDatabaseModel.FK_Mogelstatistik_Lookup_Waegezelle" FromRole="ServerLookup_Waegezelle" ToRole="ServerMogelstatistik" />
           <Property Type="Boolean" Name="Neu" Nullable="false" />
-		    <Property Type="Int32" Name="MindestvorlastProzent" />
+          <Property Type="String" MaxLength="4" FixedLength="false" Unicode="true" Name="MindestvorlastProzent" />
           <Property Type="String" Name="Bemerkung" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="ServerMogelstatistik">
@@ -2340,8 +2343,6 @@
           <EntitySetMapping Name="ServerLookup_Waegezelle">
             <EntityTypeMapping TypeName="EichenSQLDatabaseModel.ServerLookup_Waegezelle">
               <MappingFragment StoreEntitySet="ServerLookup_Waegezelle">
-			     <ScalarProperty Name="Bemerkung" ColumnName="Bemerkung" />
-                <ScalarProperty Name="MindestvorlastProzent" ColumnName="MindestvorlastProzent" />
                 <ScalarProperty Name="Neu" ColumnName="Neu" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Hersteller" ColumnName="Hersteller" />
@@ -2363,6 +2364,8 @@
                 <ScalarProperty Name="BruchteilEichfehlergrenze" ColumnName="BruchteilEichfehlergrenze" />
                 <ScalarProperty Name="ErstellDatum" ColumnName="ErstellDatum" />
                 <ScalarProperty Name="Deaktiviert" ColumnName="Deaktiviert" />
+                <ScalarProperty Name="Bemerkung" ColumnName="Bemerkung" />
+                <ScalarProperty Name="MindestvorlastProzent" ColumnName="MindestvorlastProzent" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -2665,7 +2668,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
       <Diagram Name="EntityModelEichsoftwareServer" ZoomLevel="50">
-       
+
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerEichmarkenverwaltung" Width="1.5" PointX="0.75" PointY="2.25" Height="4.480205078125" IsExpanded="true" />
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerEichprotokoll" Width="1.5" PointX="3" PointY="20" Height="17.172099609375" IsExpanded="true" />
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerEichprozess" Width="1.5" PointX="8.25" PointY="26" Height="5.2494108072916674" IsExpanded="true" />
@@ -2689,7 +2692,7 @@
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerPruefungStaffelverfahrenNormallast" Width="1.5" PointX="5.25" PointY="48.375" Height="6.210917968749996" IsExpanded="true" />
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerPruefungWiederholbarkeit" Width="1.5" PointX="5.25" PointY="44.625" Height="2.9417936197916674" IsExpanded="true" />
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerLookup_Bearbeitungsstatus" Width="1.5" PointX="2.75" PointY="6.25" Height="1.7879850260416674" IsExpanded="true" />
-               <AssociationConnector Association="EichenSQLDatabaseModel.FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren" ManuallyRouted="false">
+        <AssociationConnector Association="EichenSQLDatabaseModel.FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren" ManuallyRouted="false">
           <ConnectorPoint PointX="2.25" PointY="28.615143229166666" />
           <ConnectorPoint PointX="3" PointY="28.615143229166666" />
         </AssociationConnector>
@@ -2811,7 +2814,7 @@
           <ConnectorPoint PointX="11.25" PointY="70.531100201822923" />
           <ConnectorPoint PointX="11.25" PointY="32.172425130208325" />
         </AssociationConnector>
-        <AssociationConnector Association="EichenSQLDatabaseModel.FK_ServerEichprozess_ServerLookup_Bearbeitungsstatus" >
+        <AssociationConnector Association="EichenSQLDatabaseModel.FK_ServerEichprozess_ServerLookup_Bearbeitungsstatus">
           <ConnectorPoint PointX="4.25" PointY="7.9153043619791683" />
           <ConnectorPoint PointX="8.5937475" PointY="7.9153043619791683" />
           <ConnectorPoint PointX="8.5937475" PointY="26" />

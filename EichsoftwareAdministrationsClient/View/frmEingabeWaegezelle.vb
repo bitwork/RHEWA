@@ -49,6 +49,8 @@
             RadTextBoxControlWaegezelleKriechteilungsfaktor.Text = _objWZ.Kriechteilungsfaktor
             RadTextBoxControlWaegezelleMAXAnzahlTeilungswerte.Text = _objWZ.MaxAnzahlTeilungswerte
             RadTextBoxControlWaegezelleMindestvorlast.Text = _objWZ.Mindestvorlast
+            RadTextBoxControlWaegezelleMindestvorlastProzent.Text = _objWZ.MindestvorlastProzent
+
             RadTextBoxControlWaegezelleMinTeilungswert.Text = _objWZ.MinTeilungswert
             RadTextBoxControlWaegezellePruefbericht.Text = _objWZ.Pruefbericht
             RadTextBoxControlWaegezelleRueckkehrVorlastsignal.Text = _objWZ.RueckkehrVorlastsignal
@@ -75,6 +77,8 @@
         _objWZ.Kriechteilungsfaktor = RadTextBoxControlWaegezelleKriechteilungsfaktor.Text
         _objWZ.MaxAnzahlTeilungswerte = RadTextBoxControlWaegezelleMAXAnzahlTeilungswerte.Text
         _objWZ.Mindestvorlast = RadTextBoxControlWaegezelleMindestvorlast.Text
+        _objWZ.MindestvorlastProzent = RadTextBoxControlWaegezelleMindestvorlastProzent.Text
+
         _objWZ.MinTeilungswert = RadTextBoxControlWaegezelleMinTeilungswert.Text
         _objWZ.RueckkehrVorlastsignal = RadTextBoxControlWaegezelleRueckkehrVorlastsignal.Text
         _objWZ.Waegezellenkennwert = RadTextBoxControlWaegezelleWaegezellenkennwert.Text
@@ -195,7 +199,7 @@
 
     End Function
 
-    Private Sub RadTextBoxControlWaegezelleBruchteilEichfehlergrenze_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles RadTextBoxControWaegezelleHoechstteilungsfaktor.Validating, RadTextBoxControlWaegezelleWiderstandWaegezelle.Validating, RadTextBoxControlWaegezelleWaegezellenkennwert.Validating, RadTextBoxControlWaegezelleRueckkehrVorlastsignal.Validating, RadTextBoxControlWaegezelleMinTeilungswert.Validating, RadTextBoxControlWaegezelleMindestvorlast.Validating, RadTextBoxControlWaegezelleMAXAnzahlTeilungswerte.Validating, RadTextBoxControlWaegezelleKriechteilungsfaktor.Validating, RadTextBoxControlWaegezelleGrenzwertTemperaturbereichMIN.Validating, RadTextBoxControlWaegezelleGrenzwertTemperaturbereichMAX.Validating, RadTextBoxControlWaegezelleBruchteilEichfehlergrenze.Validating
+    Private Sub RadTextBoxControlWaegezelleBruchteilEichfehlergrenze_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles RadTextBoxControWaegezelleHoechstteilungsfaktor.Validating, RadTextBoxControlWaegezelleWiderstandWaegezelle.Validating, RadTextBoxControlWaegezelleWaegezellenkennwert.Validating, RadTextBoxControlWaegezelleRueckkehrVorlastsignal.Validating, RadTextBoxControlWaegezelleMinTeilungswert.Validating, RadTextBoxControlWaegezelleMindestvorlast.Validating, RadTextBoxControlWaegezelleMindestvorlastProzent.Validating, RadTextBoxControlWaegezelleMAXAnzahlTeilungswerte.Validating, RadTextBoxControlWaegezelleKriechteilungsfaktor.Validating, RadTextBoxControlWaegezelleGrenzwertTemperaturbereichMIN.Validating, RadTextBoxControlWaegezelleGrenzwertTemperaturbereichMAX.Validating, RadTextBoxControlWaegezelleBruchteilEichfehlergrenze.Validating
         Dim result As Decimal
         If _bolSuspendEvents = True Then Exit Sub
         If Not sender.isreadonly = True Then

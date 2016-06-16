@@ -32,7 +32,7 @@ Partial Public Class ServerLookup_Waegezelle
     Public Property ErstellDatum As Nullable(Of Date)
     Public Property Deaktiviert As Boolean
     Public Property Neu As Boolean
-    Public Property MindestvorlastProzent As Nullable(Of Integer)
+    Public Property MindestvorlastProzent As String
     Public Property Bemerkung As String
 
     Public Overridable Property ServerMogelstatistik As ICollection(Of ServerMogelstatistik) = New HashSet(Of ServerMogelstatistik)

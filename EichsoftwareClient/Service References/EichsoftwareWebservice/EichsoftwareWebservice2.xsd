@@ -178,6 +178,7 @@
         <xs:element minOccurs="0" name="WindowsUsername" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Domainname" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="Computername" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Programmversionsnummer" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

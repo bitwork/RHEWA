@@ -19,6 +19,7 @@ Partial Public Class Lookup_Waegezelle
     Public Property Revisionsnummer As String
     Public Property Genauigkeitsklasse As String
     Public Property Mindestvorlast As String
+    Public Property MindestvorlastProzent As String
     Public Property Waegezellenkennwert As String
     Public Property MaxAnzahlTeilungswerte As String
     Public Property MinTeilungswert As String

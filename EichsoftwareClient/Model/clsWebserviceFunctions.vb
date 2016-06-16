@@ -129,6 +129,8 @@ Public Class clsWebserviceFunctions
                                     newWZ.Kriechteilungsfaktor = objServerArtikel._Kriechteilungsfaktor
                                     newWZ.MaxAnzahlTeilungswerte = objServerArtikel._MaxAnzahlTeilungswerte
                                     newWZ.Mindestvorlast = objServerArtikel._Mindestvorlast
+                                    newWZ.MindestvorlastProzent = objServerArtikel._MindestvorlastProzent
+
                                     newWZ.MinTeilungswert = objServerArtikel._MinTeilungswert
                                     newWZ.RueckkehrVorlastsignal = objServerArtikel._RueckkehrVorlastsignal
                                     newWZ.Waegezellenkennwert = objServerArtikel._Waegezellenkennwert
@@ -160,6 +162,8 @@ Public Class clsWebserviceFunctions
                                         objWZ.Kriechteilungsfaktor = objServerArtikel._Kriechteilungsfaktor
                                         objWZ.MaxAnzahlTeilungswerte = objServerArtikel._MaxAnzahlTeilungswerte
                                         objWZ.Mindestvorlast = objServerArtikel._Mindestvorlast
+                                        objWZ.MindestvorlastProzent = objServerArtikel._MindestvorlastProzent
+
                                         objWZ.MinTeilungswert = objServerArtikel._MinTeilungswert
                                         objWZ.RueckkehrVorlastsignal = objServerArtikel._RueckkehrVorlastsignal
                                         objWZ.Waegezellenkennwert = objServerArtikel._Waegezellenkennwert

@@ -281,7 +281,14 @@
 
             If Not wz.Mindestvorlast Is Nothing Then
                 RadTextBoxControlWZMindestvorlast.Text = wz.Mindestvorlast
-
+                If IsNumeric(RadTextBoxControlWZHoechstlast.Text) Then
+                    Try
+                        If Not objEichprozess.Lookup_Waegezelle.MindestvorlastProzent Is Nothing Then
+                            RadTextBoxControlWZMindestvorlast.Text = (objEichprozess.Lookup_Waegezelle.MindestvorlastProzent / 100) * RadTextBoxControlWZHoechstlast.text    
+                        End If
+                    Catch ex As Exception
+                    End Try
+                End If
             End If
             If Not wz.Waegezellenkennwert Is Nothing Then
                 RadTextBoxControlWZWaegezellenkennwert.Text = wz.Waegezellenkennwert
@@ -1153,6 +1160,22 @@
     Private Sub RadTextBoxControlWaageKlasse_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlWZWiderstand.TextChanged, RadTextBoxControlWZWaegezellenkennwert.TextChanged, RadTextBoxControlWZTemperaturbereichMIN.TextChanged, RadTextBoxControlWZTemperaturbereichMAX.TextChanged, RadTextBoxControlWZRueckkehrVorlastsignal.TextChanged, RadTextBoxControlWZMinTeilungswert.TextChanged, RadTextBoxControlWZMindestvorlast.TextChanged, RadTextBoxControlWZMaxTeilungswerte.TextChanged, RadTextBoxControlWZKriechteilungsfaktor.TextChanged, RadTextBoxControlWZHoechstteilungsfaktor.TextChanged, RadTextBoxControlWZHoechstlast.TextChanged, RadTextBoxControlWZBruchteilEichfehlergrenze.TextChanged, RadTextBoxControlWaageUebersetzungsverhaeltnis.TextChanged, RadTextBoxControlWaageTotlast.TextChanged, RadTextBoxControlWaageTemperaturbereichMin.TextChanged, RadTextBoxControlWaageTemperaturbereichMax.TextChanged, RadTextBoxControlWaageKlasse.TextChanged, RadTextBoxControlWaageKabelquerschnitt.TextChanged, RadTextBoxControlWaageKabellaenge.TextChanged, RadTextBoxControlWaageHoechstlast3.TextChanged, RadTextBoxControlWaageHoechstlast2.TextChanged, RadTextBoxControlWaageHoechstlast1.TextChanged, RadTextBoxControlWaageEichwert3.TextChanged, RadTextBoxControlWaageEichwert2.TextChanged, RadTextBoxControlWaageEichwert1.TextChanged, RadTextBoxControlWaageEcklastzuschlag.TextChanged, RadTextBoxControlWaageAnzahlWaegezellen.TextChanged, RadTextBoxControlWaageAdditiveTarahoechstlast.TextChanged, RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze.TextChanged, RadTextBoxControlEinschaltnullstellbereich.TextChanged, RadTextBoxControlAWGTemperaturbereichMin.TextChanged, RadTextBoxControlAWGTemperaturbereichMax.TextChanged, RadTextBoxControlAWGTeilungswerte.TextChanged, RadTextBoxControlAWGSpeisespannung.TextChanged, RadTextBoxControlAWGMindestmesssignal.TextChanged, RadTextBoxControlAWGMindesteingangsspannung.TextChanged, RadTextBoxControlAWGKlasse.TextChanged, RadTextBoxControlAWGKabellaenge.TextChanged, RadTextBoxControlAWGGrenzwerteLastwiderstandMin.TextChanged, RadTextBoxControlAWGGrenzwerteLastwiderstandMax.TextChanged, RadTextBoxControlAWGBruchteilEichfehlergrenze.TextChanged, RadTextBoxControlAWGAnschlussart.TextChanged, RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.TextChanged
         If _suspendEvents = True Then Exit Sub
         AktuellerStatusDirty = True
+
+        If sender.name = RadTextBoxControlWZHoechstlast.Name Then
+            If IsNumeric(RadTextBoxControlWZHoechstlast.Text) Then
+                If Not objEichprozess Is Nothing Then
+                    If Not objEichprozess.Lookup_Waegezelle Is Nothing Then
+                        Try
+                           If Not objEichprozess.Lookup_Waegezelle.MindestvorlastProzent Is Nothing Then
+                                RadTextBoxControlWZMindestvorlast.Text = (objEichprozess.Lookup_Waegezelle.MindestvorlastProzent / 100) * RadTextBoxControlWZHoechstlast.Text
+
+                            End If
+                        Catch ex As Exception
+                        End Try
+                    End If
+                End If
+            End If
+        End If
     End Sub
 
     Private Sub RadTextBoxControlWZGenauigkeitsklasse_TextChanging(sender As Object, e As Telerik.WinControls.TextChangingEventArgs) Handles RadTextBoxControlWZGenauigkeitsklasse.TextChanging
@@ -1209,7 +1232,7 @@
 
                 Try
                     'add prüft anhand der Vorgangsnummer automatisch ob ein neuer Prozess angelegt, oder ein vorhandener aktualisiert wird
-                    Webcontext.AddEichprozess(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                    Webcontext.AddEichprozess(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name, Version)
 
                     'schließen des dialoges
                     ParentFormular.Close()

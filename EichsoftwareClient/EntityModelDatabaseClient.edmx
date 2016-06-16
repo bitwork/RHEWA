@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="EichsoftwareClientdatabaseModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.4.0" ProviderManifestToken="4.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+      <Schema Namespace="EichsoftwareClientdatabaseModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.4.0" ProviderManifestToken="4.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="EichsoftwareClientdatabaseModelStoreContainer">
           <EntitySet Name="Eichprotokoll" EntityType="EichsoftwareClientdatabaseModel.Store.Eichprotokoll" store:Type="Tables" />
           <EntitySet Name="Eichprozess" EntityType="EichsoftwareClientdatabaseModel.Store.Eichprozess" store:Type="Tables" />
@@ -359,6 +359,7 @@
           <Property Name="Revisionsnummer" Type="nvarchar" MaxLength="50" />
           <Property Name="Genauigkeitsklasse" Type="nvarchar" MaxLength="10" />
           <Property Name="Mindestvorlast" Type="nvarchar" MaxLength="50" />
+          <Property Name="MindestvorlastProzent"  Type="nvarchar" MaxLength="4" />
           <Property Name="Waegezellenkennwert" Type="nvarchar" MaxLength="50" />
           <Property Name="MaxAnzahlTeilungswerte" Type="nvarchar" MaxLength="50" />
           <Property Name="MinTeilungswert" Type="nvarchar" MaxLength="50" />
@@ -804,7 +805,8 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="EichsoftwareClientdatabaseModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
@@ -1176,6 +1178,7 @@
           <Property Type="String" Name="Revisionsnummer" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Genauigkeitsklasse" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Mindestvorlast" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MindestvorlastProzent"  MaxLength="4" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Waegezellenkennwert" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="MaxAnzahlTeilungswerte" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="MinTeilungswert" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -1649,12 +1652,12 @@
           <Property Type="String" Name="GridSettings" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="GridSettingsRHEWA" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
-        </Schema>
+      </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="EichsoftwareClientdatabaseModelStoreContainer" CdmEntityContainer="EichsoftwareClientdatabaseEntities1">
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="EichsoftwareClientdatabaseModelStoreContainer" CdmEntityContainer="EichsoftwareClientdatabaseEntities1">
           <EntitySetMapping Name="Eichprotokoll">
             <EntityTypeMapping TypeName="EichsoftwareClientdatabaseModel.Eichprotokoll">
               <MappingFragment StoreEntitySet="Eichprotokoll">
@@ -1901,6 +1904,7 @@
                 <ScalarProperty Name="MaxAnzahlTeilungswerte" ColumnName="MaxAnzahlTeilungswerte" />
                 <ScalarProperty Name="Waegezellenkennwert" ColumnName="Waegezellenkennwert" />
                 <ScalarProperty Name="Mindestvorlast" ColumnName="Mindestvorlast" />
+                <ScalarProperty Name="MindestvorlastProzent" ColumnName="MindestvorlastProzent" />
                 <ScalarProperty Name="Genauigkeitsklasse" ColumnName="Genauigkeitsklasse" />
                 <ScalarProperty Name="Revisionsnummer" ColumnName="Revisionsnummer" />
                 <ScalarProperty Name="Bauartzulassung" ColumnName="Bauartzulassung" />
@@ -2117,7 +2121,8 @@
             </EntityTypeMapping>
           </EntitySetMapping>
         </EntityContainerMapping>
-</Mapping></edmx:Mappings>
+      </Mapping>
+    </edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
   <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
@@ -2147,7 +2152,7 @@
           <ConnectorPoint PointX="9.75" PointY="27.557444661458334" />
           <ConnectorPoint PointX="10.5" PointY="27.557444661458334" />
         </AssociationConnector>
-        </Diagram>
+      </Diagram>
     </Diagrams>
   </Designer>
 </edmx:Edmx>

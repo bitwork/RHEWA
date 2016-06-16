@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="EichenModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+      <Schema Namespace="EichenModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityType Name="Benutzer">
           <Key>
             <PropertyRef Name="ID" />
@@ -336,7 +336,7 @@
           <Property Name="Revisionsnummer" Type="nvarchar" MaxLength="50" />
           <Property Name="Genauigkeitsklasse" Type="nvarchar" MaxLength="10" />
           <Property Name="Mindestvorlast" Type="nvarchar" MaxLength="50" />
-          <Property Name="MindestvorlastProzent" Type="int" />
+          <Property Name="MindestvorlastProzent"  Type="nvarchar" MaxLength="4" />
           <Property Name="Waegezellenkennwert" Type="nvarchar" MaxLength="50" />
           <Property Name="MaxAnzahlTeilungswerte" Type="nvarchar" MaxLength="50" />
           <Property Name="MinTeilungswert" Type="nvarchar" MaxLength="50" />
@@ -521,7 +521,8 @@
             <End Role="ServerLizensierung" EntitySet="ServerLizensierung" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="EichenModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
@@ -818,7 +819,7 @@
           <Property Type="Boolean" Name="Neu" Nullable="false" />
           <NavigationProperty Name="ServerMogelstatistik" Relationship="EichenModel.FK_Mogelstatistik_Lookup_Waegezelle" FromRole="ServerLookup_Waegezelle" ToRole="ServerMogelstatistik" />
           <NavigationProperty Name="ServerEichprozess" Relationship="EichenModel.FK_Eichprozess_Lookup_Waegezelle" FromRole="ServerLookup_Waegezelle" ToRole="ServerEichprozess" />
-          <Property Name="MindestvorlastProzent" Type="Int32" />
+          <Property Name="MindestvorlastProzent" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
           <Property Name="Bemerkung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <Association Name="FK_Mogelstatistik_Lookup_Auswertegeraet">
@@ -1197,7 +1198,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        </Schema>
+      </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -1667,11 +1668,11 @@
         <EntityTypeShape EntityType="EichenModel.ServerPruefungStaffelverfahrenErsatzlast" Width="1.5" PointX="5.25" PointY="39.375" Height="4.48020507812501" />
         <EntityTypeShape EntityType="EichenModel.ServerPruefungStaffelverfahrenNormallast" Width="1.5" PointX="5.25" PointY="48.375" Height="6.2109179687499818" />
         <EntityTypeShape EntityType="EichenModel.ServerPruefungWiederholbarkeit" Width="1.5" PointX="5.25" PointY="44.625" Height="2.9417936197916674" />
-               <AssociationConnector Association="EichenModel.FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren" >
+        <AssociationConnector Association="EichenModel.FK_Eichprotokoll_Lookup_Konformitaetsbewertungsverfahren">
           <ConnectorPoint PointX="2.25" PointY="28.615143229166662" />
           <ConnectorPoint PointX="3" PointY="28.615143229166662" />
         </AssociationConnector>
-        <AssociationConnector Association="EichenModel.FK_Eichprozess_Eichprotokoll" >
+        <AssociationConnector Association="EichenModel.FK_Eichprozess_Eichprotokoll">
           <ConnectorPoint PointX="4.5" PointY="28.531073876953123" />
           <ConnectorPoint PointX="6.858072916666667" PointY="28.531073876953123" />
           <ConnectorPoint PointX="7.153645833333333" PointY="28.531073876953123" />
@@ -1679,65 +1680,65 @@
           <ConnectorPoint PointX="7.368489583333333" PointY="28.531073876953123" />
           <ConnectorPoint PointX="8.25" PointY="28.531073876953123" />
         </AssociationConnector>
-        <AssociationConnector Association="EichenModel.FK_PruefungAussermittigeBelastung_Eichprotokoll" >
+        <AssociationConnector Association="EichenModel.FK_PruefungAussermittigeBelastung_Eichprotokoll">
           <ConnectorPoint PointX="4.5" PointY="20.470896809895834" />
           <ConnectorPoint PointX="5.25" PointY="20.470896809895834" />
         </AssociationConnector>
-        <AssociationConnector Association="EichenModel.FK_PruefungEichfehlergrenzen_Eichprotokoll" >
+        <AssociationConnector Association="EichenModel.FK_PruefungEichfehlergrenzen_Eichprotokoll">
           <ConnectorPoint PointX="4.5" PointY="23.124746093749998" />
           <ConnectorPoint PointX="5.25" PointY="23.124746093749998" />
         </AssociationConnector>
-        <AssociationConnector Association="EichenModel.FK_PruefungLinearitaetFallend_Eichprotokoll" >
+        <AssociationConnector Association="EichenModel.FK_PruefungLinearitaetFallend_Eichprotokoll">
           <ConnectorPoint PointX="4.5" PointY="26.624746093749998" />
           <ConnectorPoint PointX="5.25" PointY="26.624746093749998" />
         </AssociationConnector>
-        <AssociationConnector Association="EichenModel.FK_PruefungLinearitaetSteigend_Eichprotokoll" >
+        <AssociationConnector Association="EichenModel.FK_PruefungLinearitaetSteigend_Eichprotokoll">
           <ConnectorPoint PointX="4.5" PointY="30.124746093749998" />
           <ConnectorPoint PointX="5.25" PointY="30.124746093749998" />
         </AssociationConnector>
-        <AssociationConnector Association="EichenModel.FK_PruefungLinearitaetSteigendAnsprechvermoegen_Eichprotokoll" >
+        <AssociationConnector Association="EichenModel.FK_PruefungLinearitaetSteigendAnsprechvermoegen_Eichprotokoll">
           <ConnectorPoint PointX="3.75" PointY="20" />
           <ConnectorPoint PointX="3.75" PointY="16.028595377604162" />
           <ConnectorPoint PointX="5.25" PointY="16.028595377604162" />
         </AssociationConnector>
-        <AssociationConnector Association="EichenModel.FK_PruefungRollendeLasten_Eichprotokoll" >
+        <AssociationConnector Association="EichenModel.FK_PruefungRollendeLasten_Eichprotokoll">
           <ConnectorPoint PointX="4.5" PointY="33.720896809895834" />
           <ConnectorPoint PointX="5.25" PointY="33.720896809895834" />
         </AssociationConnector>
-        <AssociationConnector Association="EichenModel.FK_PruefungStabilitaetGleichgewichtslage_Eichprotokoll" >
+        <AssociationConnector Association="EichenModel.FK_PruefungStabilitaetGleichgewichtslage_Eichprotokoll">
           <ConnectorPoint PointX="4.5" PointY="36.427399088541662" />
           <ConnectorPoint PointX="5.25" PointY="36.427399088541662" />
         </AssociationConnector>
-        <AssociationConnector Association="EichenModel.FK_PruefungStaffelverfahrenErsatzlast_Eichprotokoll" >
+        <AssociationConnector Association="EichenModel.FK_PruefungStaffelverfahrenErsatzlast_Eichprotokoll">
           <ConnectorPoint PointX="3.75" PointY="36.979798177083332" />
           <ConnectorPoint PointX="3.75" PointY="41.615102539062505" />
           <ConnectorPoint PointX="4.0729191666666669" PointY="41.615102539062505" />
           <ConnectorPoint PointX="4.2395858333333329" PointY="41.615102539062505" />
           <ConnectorPoint PointX="5.25" PointY="41.615102539062505" />
         </AssociationConnector>
-        <AssociationConnector Association="EichenModel.FK_PruefungStaffelverfahrenNormallast_Eichprotokoll" >
+        <AssociationConnector Association="EichenModel.FK_PruefungStaffelverfahrenNormallast_Eichprotokoll">
           <ConnectorPoint PointX="4.1562525" PointY="36.979798177083332" />
           <ConnectorPoint PointX="4.1562525" PointY="51.480458984374991" />
           <ConnectorPoint PointX="5.25" PointY="51.480458984374991" />
         </AssociationConnector>
-        <AssociationConnector Association="EichenModel.FK_PruefungWiederholbarkeit_Eichprotokoll" >
+        <AssociationConnector Association="EichenModel.FK_PruefungWiederholbarkeit_Eichprotokoll">
           <ConnectorPoint PointX="3.3437475" PointY="36.979798177083332" />
           <ConnectorPoint PointX="3.3437475" PointY="46.095896809895834" />
           <ConnectorPoint PointX="4.0729191666666669" PointY="46.095896809895834" />
           <ConnectorPoint PointX="4.2395858333333329" PointY="46.095896809895834" />
           <ConnectorPoint PointX="5.25" PointY="46.095896809895834" />
         </AssociationConnector>
-        <AssociationConnector Association="EichenModel.FK_Eichprozess_Kompatiblitaetsnachweis" >
+        <AssociationConnector Association="EichenModel.FK_Eichprozess_Kompatiblitaetsnachweis">
           <ConnectorPoint PointX="7.5" PointY="4.143911132812498" />
           <ConnectorPoint PointX="9" PointY="4.143911132812498" />
           <ConnectorPoint PointX="9" PointY="26" />
         </AssociationConnector>
-        <AssociationConnector Association="EichenModel.FK_Eichprozess_Lookup_Auswertegeraet" >
+        <AssociationConnector Association="EichenModel.FK_Eichprozess_Lookup_Auswertegeraet">
           <ConnectorPoint PointX="7.28515625" PointY="55.25" />
           <ConnectorPoint PointX="7.28515625" PointY="28.249647753906249" />
           <ConnectorPoint PointX="8.25" PointY="28.249647753906249" />
         </AssociationConnector>
-        <AssociationConnector Association="EichenModel.FK_Eichprozess_Lookup_Vorgangsstatus" >
+        <AssociationConnector Association="EichenModel.FK_Eichprozess_Lookup_Vorgangsstatus">
           <ConnectorPoint PointX="7.5" PointY="62.115143229166662" />
           <ConnectorPoint PointX="8.3072879166666649" PointY="62.115143229166662" />
           <ConnectorPoint PointX="8.4739545833333327" PointY="62.115143229166662" />
@@ -1746,30 +1747,30 @@
           <ConnectorPoint PointX="9" PointY="62.115143229166662" />
           <ConnectorPoint PointX="9" PointY="31.249410807291667" />
         </AssociationConnector>
-        <AssociationConnector Association="EichenModel.FK_Eichprozess_Lookup_Waagenart" >
+        <AssociationConnector Association="EichenModel.FK_Eichprozess_Lookup_Waagenart">
           <ConnectorPoint PointX="7.5" PointY="64.865143229166662" />
           <ConnectorPoint PointX="8.3072879166666649" PointY="64.865143229166662" />
           <ConnectorPoint PointX="8.4739545833333327" PointY="64.865143229166662" />
           <ConnectorPoint PointX="8.5937475" PointY="64.865143229166662" />
           <ConnectorPoint PointX="8.5937475" PointY="31.249410807291667" />
         </AssociationConnector>
-        <AssociationConnector Association="EichenModel.FK_Eichprozess_Lookup_Waagentyp" >
+        <AssociationConnector Association="EichenModel.FK_Eichprozess_Lookup_Waagentyp">
           <ConnectorPoint PointX="7.5" PointY="67.490143229166662" />
           <ConnectorPoint PointX="8.3072879166666649" PointY="67.490143229166662" />
           <ConnectorPoint PointX="8.4739545833333327" PointY="67.490143229166662" />
           <ConnectorPoint PointX="9.4062525" PointY="67.490143229166662" />
           <ConnectorPoint PointX="9.4062525" PointY="31.249410807291667" />
         </AssociationConnector>
-        <AssociationConnector Association="EichenModel.FK_Eichprozess_Lookup_Waegezelle" >
+        <AssociationConnector Association="EichenModel.FK_Eichprozess_Lookup_Waegezelle">
           <ConnectorPoint PointX="7.5" PointY="71.874705403645834" />
           <ConnectorPoint PointX="8.3906212499999988" PointY="71.874705403645834" />
           <ConnectorPoint PointX="8.3906212499999988" PointY="31.249410807291667" />
         </AssociationConnector>
-        <AssociationConnector Association="EichenModel.FK_Mogelstatistik_Eichprozess" >
+        <AssociationConnector Association="EichenModel.FK_Mogelstatistik_Eichprozess">
           <ConnectorPoint PointX="9.75" PointY="28.624705403645834" />
           <ConnectorPoint PointX="10.5" PointY="28.624705403645834" />
         </AssociationConnector>
-        <AssociationConnector Association="EichenModel.FK_Mogelstatistik_Lookup_Auswertegeraet" >
+        <AssociationConnector Association="EichenModel.FK_Mogelstatistik_Lookup_Auswertegeraet">
           <ConnectorPoint PointX="6.94140625" PointY="55.25" />
           <ConnectorPoint PointX="6.94140625" PointY="25.09375" />
           <ConnectorPoint PointX="6.986979166666667" PointY="25.09375" />
@@ -1778,7 +1779,7 @@
           <ConnectorPoint PointX="8.5520833333333339" PointY="25.09375" />
           <ConnectorPoint PointX="10.5" PointY="25.09375" />
         </AssociationConnector>
-        <AssociationConnector Association="EichenModel.FK_Mogelstatistik_Lookup_Waegezelle" >
+        <AssociationConnector Association="EichenModel.FK_Mogelstatistik_Lookup_Waegezelle">
           <ConnectorPoint PointX="7.5" PointY="70.531100201822923" />
           <ConnectorPoint PointX="8.3072879166666649" PointY="70.531100201822923" />
           <ConnectorPoint PointX="8.4739545833333327" PointY="70.531100201822923" />

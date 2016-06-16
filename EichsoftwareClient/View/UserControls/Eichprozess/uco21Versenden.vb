@@ -177,7 +177,7 @@ Public Class Uco21Versenden
                         End If
                     End If
 
-                    bolSuccess = Webcontext.AddEichprozess(objLiz.HEKennung, objLiz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                    bolSuccess = Webcontext.AddEichprozess(objLiz.HEKennung, objLiz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name, Version)
                     If bolSuccess = False Then
                         '//zurücksetzen des Status
                         MessageBox.Show(My.Resources.GlobaleLokalisierung.Fehler_SpeicherAnomalie)
@@ -434,7 +434,7 @@ Public Class Uco21Versenden
 
                     Try
                         'add prüft anhand der Vorgangsnummer automatisch ob ein neuer Prozess angelegt, oder ein vorhandener aktualisiert wird
-                        Webcontext.AddEichprozess(objLiz.HEKennung, objLiz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                        Webcontext.AddEichprozess(objLiz.HEKennung, objLiz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name, Version)
 
                         'schließen des dialoges
                         ParentFormular.Close()

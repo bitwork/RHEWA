@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d93fbc3ad5f64180af62fb93acaed507" Name="Diagram1" ZoomLevel="50">
+      <Diagram DiagramId="d93fbc3ad5f64180af62fb93acaed507" Name="Diagram1" ZoomLevel="85">
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerEichmarkenverwaltung" Width="1.5" PointX="0.75" PointY="2.375" IsExpanded="true" />
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerEichprotokoll" Width="3" PointX="1.5" PointY="20.25" IsExpanded="true" />
         <EntityTypeShape EntityType="EichenSQLDatabaseModel.ServerEichprozess" Width="1.5" PointX="8.25" PointY="25.625" IsExpanded="true" />

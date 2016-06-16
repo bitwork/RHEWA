@@ -28,7 +28,7 @@ Public Interface IEichsoftwareWebservice
     Function AddEichmarkenverwaltung(ByVal HEKennung As String, Lizenzschluessel As String, ByVal BenutzerFK As String, ByVal AnzahlBenannteStelle As Integer, ByVal AnzahlEichsiegel13x13 As Integer, ByVal AnzahlEichsiegelRund As Integer, ByVal AnzahlHinweismarke As Integer,
                                     ByVal AnzahlGruenesM As Integer, ByVal AnzahlCE As Integer, ByVal AnzahlCE2016 As Integer, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean
     <OperationContract()>
-    Function AddEichprozess(ByVal HEKennung As String, Lizenzschluessel As String, ByRef pObjEichprozess As ServerEichprozess, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean
+    Function AddEichprozess(ByVal HEKennung As String, Lizenzschluessel As String, ByRef pObjEichprozess As ServerEichprozess, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, Programmversionsnummer As String) As Boolean
 
     <OperationContract()>
     Function AddWaegezelle(ByVal HEKennung As String, Lizenzschluessel As String, ByVal pObjWZ As ServerLookup_Waegezelle, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As String

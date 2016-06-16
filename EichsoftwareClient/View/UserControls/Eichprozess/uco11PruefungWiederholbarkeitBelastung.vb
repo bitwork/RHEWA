@@ -1,9 +1,8 @@
 ﻿Public Class uco11PruefungWiederholbarkeitBelastung
     Inherits ucoContent
 
-
 #Region "Member Variables"
-    Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken 
+    Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken
     'Private AktuellerStatusDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann wird der Vorgang auf Komptabilitätsnachweis zurückgesetzt
     Private _currentObjPruefungWiederholbarkeit As PruefungWiederholbarkeit
     Private _ListPruefungWiederholbarkeit As New List(Of PruefungWiederholbarkeit)
@@ -30,7 +29,6 @@
 
 #End Region
 
-
     Private Sub CalculateEFG(bereich As String, Wiederholung As String)
         Dim Fehler As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}ErrorLimit{1}", bereich, 1)) 'gibt nur ein control
         Dim EFG As Telerik.WinControls.UI.RadCheckBox = FindControl(String.Format("RadCheckBoxBereich{0}VEL{1}", bereich, 1)) 'gibt nur ein control
@@ -52,19 +50,16 @@
 
         'EFG Wert Berechnen
         Try
-        Spezial.Text = GetEFG(Last.Text, EichwertBereich)
+            Spezial.Text = GetEFG(Last.Text, EichwertBereich)
         Catch ex As InvalidCastException
             Exit Sub
         End Try
-
-
 
         'EFG durch die Differenz zwischen den 3 Belastungen. Mit anderen Worten: Die Differenz der Wägeergebnisse bei der 3maligen Belastung darf nicht größer sein, als der Absolutwert der für diese Belastung geltenden Fehlergrenze der Waage.
 
         Dim AnzeigeMax1 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}DisplayWeight{1}", bereich, 1))
         Dim AnzeigeMax2 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}DisplayWeight{1}", bereich, 2))
         Dim AnzeigeMax3 As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}DisplayWeight{1}", bereich, 3))
-
 
         Dim listdecimals As New List(Of Decimal)
         If IsNumeric(AnzeigeMax1.Text) Then
@@ -97,7 +92,6 @@
             EFG.Checked = False
         End If
 
-
     End Sub
 
 #Region "Events"
@@ -125,13 +119,13 @@
         LoadFromDatabase()
     End Sub
 
-    Private Sub RadTextBoxControlBereich1DisplayWeight1_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles RadTextBoxControlBereich1DisplayWeight1.Validating, _
-       RadTextBoxControlBereich1DisplayWeight2.Validating, RadTextBoxControlBereich1DisplayWeight3.Validating, _
-       RadTextBoxControlBereich1Weight1.Validating, _
+    Private Sub RadTextBoxControlBereich1DisplayWeight1_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles RadTextBoxControlBereich1DisplayWeight1.Validating,
+       RadTextBoxControlBereich1DisplayWeight2.Validating, RadTextBoxControlBereich1DisplayWeight3.Validating,
+       RadTextBoxControlBereich1Weight1.Validating,
        RadTextBoxControlBereich1Weight2.Validating, RadTextBoxControlBereich1Weight3.Validating,
-       RadTextBoxControlBereich2DisplayWeight1.Validating, _
-       RadTextBoxControlBereich2DisplayWeight2.Validating, RadTextBoxControlBereich2DisplayWeight3.Validating, _
-       RadTextBoxControlBereich2Weight1.Validating, _
+       RadTextBoxControlBereich2DisplayWeight1.Validating,
+       RadTextBoxControlBereich2DisplayWeight2.Validating, RadTextBoxControlBereich2DisplayWeight3.Validating,
+       RadTextBoxControlBereich2Weight1.Validating,
        RadTextBoxControlBereich2Weight2.Validating, RadTextBoxControlBereich2Weight3.Validating
 
         Dim result As Decimal
@@ -175,7 +169,6 @@
 
         Dim Bereich = GetBereich(sender)
 
-
         If Bereich = "1" Then
             'bereich 1
             RadTextBoxControlBereich1Weight1.Text = CType(sender, Telerik.WinControls.UI.RadTextBox).Text
@@ -199,14 +192,10 @@
 
 #Region "bereich MAX"
 
-
-
-
 #End Region
     Private Sub RadCheckBoxBereich1VEL1_MouseClick(sender As Object, e As MouseEventArgs) Handles RadCheckBoxBereich1VEL1.MouseClick, RadCheckBoxBereich2VEL1.MouseClick
         CType(sender, Telerik.WinControls.UI.RadCheckBox).Checked = Not CType(sender, Telerik.WinControls.UI.RadCheckBox).Checked
     End Sub
-
 
 #End Region
 #Region "Methods"
@@ -221,7 +210,6 @@
         Dim f As New frmEichfehlergrenzen(objEichprozess)
         f.Show()
     End Sub
-
 
     Protected Friend Overrides Sub LoadFromDatabase()
 
@@ -291,7 +279,6 @@
 
         End If
 
-
         'steuerelemente mit werten aus DB füllen
         FillControls()
         If DialogModus = enuDialogModus.lesend Then
@@ -348,8 +335,6 @@
             Faktor = 1
         End If
 
-
-
         Select Case objEichprozess.Lookup_Waagenart.Art
             Case Is = "Einbereichswaage"
                 Hoechstlast = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1 * Faktor
@@ -367,7 +352,6 @@
         'lblBereich2EFGSpeziallBerechnung.Text = Math.Round(Eichwert * 1.5, _intNullstellenE, MidpointRounding.AwayFromZero)
         Dim Spezial As Telerik.WinControls.UI.RadMaskedEditBox = FindControl(String.Format("lblBereich{0}EFGSpeziallBerechnung", Bereich))
         Spezial.Text = Eichwert
-
 
         If Belastung = "halb" Then
             RadTextBoxControlBereich1Weight1.Text = Hoechstlast
@@ -395,7 +379,6 @@
             End If
         Next
     End Sub
-
 
     ''' <summary>
     ''' Füllt das Objekt mit den Werten aus den Steuerlementen
@@ -477,7 +460,6 @@
             RadTextBoxControlBereich2DisplayWeight3.TextBoxElement.Border.ForeColor = Color.Red
         End If
 
-
         'sonderfall Kopierte Waage
         If objEichprozess.AusStandardwaageErzeugt Then
             If Not AbortSaving Then
@@ -545,11 +527,8 @@
 
             If ValidateControls() = True Then
 
-
                 'neuen Context aufbauen
                 Using Context As New EichsoftwareClientdatabaseEntities1
-
-
 
                     'prüfen ob CREATE oder UPDATE durchgeführt werden muss
                     If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
@@ -558,7 +537,6 @@
                         If Not dobjEichprozess Is Nothing Then
                             'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
                             objEichprozess = dobjEichprozess
-
 
                             'hier muss unterschieden werden, welches verfahren gewählt wurde.
                             'wenn es nicht mit normalien ist, dann wird an dieser stelle volle und halbe last eingetragen
@@ -586,7 +564,6 @@
                                         _ListPruefungWiederholbarkeit.Add(objPruefung)
                                     End If
 
-
                                     'max Last
                                     objPruefung = Nothing
                                     objPruefung = Context.PruefungWiederholbarkeit.Create
@@ -611,7 +588,6 @@
                                 Next
                             End If
 
-
                             'neuen Status zuweisen
 
                             If AktuellerStatusDirty = False Then
@@ -624,8 +600,6 @@
                                 AktuellerStatusDirty = False
                             End If
 
-
-
                             'Füllt das Objekt mit den Werten aus den Steuerlementen
                             UpdateObject()
                             'Speichern in Datenbank
@@ -633,10 +607,7 @@
                         End If
                     End If
 
-
                 End Using
-
-
 
                 ParentFormular.CurrentEichprozess = objEichprozess
             End If
@@ -657,7 +628,6 @@
             'neuen Context aufbauen
             Using Context As New EichsoftwareClientdatabaseEntities1
 
-
                 'prüfen ob CREATE oder UPDATE durchgeführt werden muss
                 If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
                     'prüfen ob das Objekt anhand der ID gefunden werden kann
@@ -665,8 +635,6 @@
                     If Not dobjEichprozess Is Nothing Then
                         'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
                         objEichprozess = dobjEichprozess
-
-
 
                         'wenn es defintiv noch keine pruefungen gibt, neue Anlegen
                         If _ListPruefungWiederholbarkeit.Count = 0 Then
@@ -731,10 +699,8 @@
         MyBase.LokalisierungNeeded(UserControl)
 
         'lokalisierung: Leider kann ich den automatismus von .NET nicht nutzen. Dieser funktioniert nur sauber, wenn ein Dialog erzeugt wird. Zur Laufzeit aber gibt es diverse Probleme mit dem Automatischen Ändern der Sprache,
-        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße 
+        'da auch informationen wie Positionen und Größen "lokalisiert" gespeichert werden. Wenn nun zur Laufzeit, also das Fenster größer gemacht wurde, setzt er die Anchor etc. auf die Ursprungsgröße
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco11PruefungWiederholbarkeitBelastung))
-
-
 
         Me.RadGroupBoxBereich1.Text = resources.GetString("RadGroupBoxBereich1.Text")
         Me.RadGroupBoxBereich2.Text = resources.GetString("RadGroupBoxBereich2.Text")
@@ -745,14 +711,11 @@
         Me.lblBereich1FehlerGrenzen.Text = resources.GetString("lblBereich1FehlerGrenzen.Text")
         Me.lblBereich1Gewicht.Text = resources.GetString("lblBereich1Gewicht.Text")
 
-
         Me.lblBereich2AnzeigeGewicht.Text = resources.GetString("lblBereich2AnzeigeGewicht.Text")
         Me.lblBereich2EFGSpezial.Text = resources.GetString("lblBereich2EFGSpezial.Text")
         Me.lblBereich2EFGSpeziallBerechnung.Text = resources.GetString("lblBereich2EFGSpeziallBerechnung.Text")
         Me.lblBereich2FehlerGrenzen.Text = resources.GetString("lblBereich2FehlerGrenzen.Text")
         Me.lblBereich2Gewicht.Text = resources.GetString("lblBereich2Gewicht.Text")
-
-
 
         If Not ParentFormular Is Nothing Then
             Try
@@ -765,7 +728,6 @@
             Catch ex As Exception
             End Try
         End If
-
 
     End Sub
 
@@ -790,9 +752,8 @@
     Protected Overrides Sub EntsperrungNeeded()
         MyBase.EntsperrungNeeded()
 
-        'Hiermit wird ein lesender Vorgang wieder entsperrt. 
+        'Hiermit wird ein lesender Vorgang wieder entsperrt.
         EnableControls(RadGroupBoxPruefungAussermittigeBelastung)
-
 
         'ändern des Moduses
         DialogModus = enuDialogModus.korrigierend
@@ -800,7 +761,6 @@
     End Sub
 
     Protected Overrides Sub VersendenNeeded(TargetUserControl As UserControl)
-
 
         If Me.Equals(TargetUserControl) Then
             MyBase.VersendenNeeded(TargetUserControl)
@@ -824,10 +784,9 @@
                     Exit Sub
                 End Try
 
-
                 Try
                     'add prüft anhand der Vorgangsnummer automatisch ob ein neuer Prozess angelegt, oder ein vorhandener aktualisiert wird
-                    Webcontext.AddEichprozess(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                    Webcontext.AddEichprozess(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, objServerEichprozess, My.User.Name, System.Environment.UserDomainName, My.Computer.Name, Version)
 
                     'schließen des dialoges
                     ParentFormular.Close()

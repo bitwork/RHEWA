@@ -117,6 +117,16 @@ Public Class ucoContent
         End Set
     End Property
 
+    Protected Friend ReadOnly Property Version As String
+        Get
+            If Deployment.Application.ApplicationDeployment.IsNetworkDeployed Then
+                Dim myVersion = Deployment.Application.ApplicationDeployment.CurrentDeployment.CurrentVersion
+                Return myVersion.ToString(3)
+            End If
+            Return Application.ProductVersion.ToString
+        End Get
+    End Property
+
     ''' <summary>
     ''' Gets or sets the next uco.
     ''' </summary>
