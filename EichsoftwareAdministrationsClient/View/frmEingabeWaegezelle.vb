@@ -44,6 +44,7 @@
             RadTextBoxControlWaegezelleGenauigkeitsklasse.Text = _objWZ.Genauigkeitsklasse
             RadTextBoxControlWaegezelleGrenzwertTemperaturbereichMAX.Text = _objWZ.GrenzwertTemperaturbereichMAX
             RadTextBoxControlWaegezelleGrenzwertTemperaturbereichMIN.Text = _objWZ.GrenzwertTemperaturbereichMIN
+            RadTextBoxControlBermerkung.Text = _objWZ.Bemerkung
             RadTextBoxControlWaegezelleHersteller.Text = _objWZ.Hersteller
             RadTextBoxControWaegezelleHoechstteilungsfaktor.Text = _objWZ.Hoechsteteilungsfaktor
             RadTextBoxControlWaegezelleKriechteilungsfaktor.Text = _objWZ.Kriechteilungsfaktor
@@ -88,6 +89,7 @@
         _objWZ.Genauigkeitsklasse = RadTextBoxControlWaegezelleGenauigkeitsklasse.Text
         _objWZ.GrenzwertTemperaturbereichMAX = RadTextBoxControlWaegezelleGrenzwertTemperaturbereichMAX.Text
         _objWZ.GrenzwertTemperaturbereichMIN = RadTextBoxControlWaegezelleGrenzwertTemperaturbereichMIN.Text
+        _objWZ.Bemerkung = RadTextBoxControlBermerkung.Text
         _objWZ.Hersteller = RadTextBoxControlWaegezelleHersteller.Text
         _objWZ.Pruefbericht = RadTextBoxControlWaegezellePruefbericht.Text
         _objWZ.Typ = RadTextBoxControlWaegezelleTyp.Text
