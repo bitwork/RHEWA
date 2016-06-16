@@ -117,7 +117,8 @@
                 RadTextBoxControlNormalienEichfahrzeugFirma.Visible = False
                 RadDateTimePickerNormalienLetztePruefung.Visible = False
                 RadDateTimePickerNormalienLetztePruefung.Value = Now
-                lblPruefzeitraum.Visible = False
+                lblTestzeitraum.Visible = False
+                Label10.Visible = False
             End If
         End If
         Dim dMAXHoechlast As Decimal 'variable zum speichern der höchsten Hoechstlast (je nach Art der Waage Max1,2 oder 3)
