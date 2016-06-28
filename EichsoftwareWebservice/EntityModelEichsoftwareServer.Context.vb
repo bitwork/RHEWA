@@ -50,5 +50,6 @@ Partial Public Class EichenSQLDatabaseEntities1
     Public Property Firmen() As DbSet(Of Firmen)
     Public Property ServerFirmenZusatzdaten() As DbSet(Of ServerFirmenZusatzdaten)
     Public Property ServerLookupVertragspartnerFirma() As DbSet(Of ServerLookupVertragspartnerFirma)
+    Public Property StatusPrüfscheinnummer() As DbSet(Of StatusPrüfscheinnummer)
 
 End Class

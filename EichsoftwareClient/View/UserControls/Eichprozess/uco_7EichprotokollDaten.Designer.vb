@@ -163,6 +163,7 @@ Partial Class uco_7EichprotokollDaten
         Me.RadTextBoxControlAufstellungsort = New Telerik.WinControls.UI.RadTextBox()
         Me.lblBenutzer = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlBenutzer = New Telerik.WinControls.UI.RadTextBox()
+        Me.BackgroundWorkerPruefscheinnummern = New System.ComponentModel.BackgroundWorker()
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanel1.PanelContainer.SuspendLayout()
         Me.RadScrollablePanel1.SuspendLayout()
@@ -1305,6 +1306,9 @@ Partial Class uco_7EichprotokollDaten
         Me.RadTextBoxControlBenutzer.MaxLength = 50
         Me.RadTextBoxControlBenutzer.Name = "RadTextBoxControlBenutzer"
         '
+        'BackgroundWorkerPruefscheinnummern
+        '
+        '
         'uco_7EichprotokollDaten
         '
         resources.ApplyResources(Me, "$this")
@@ -1611,4 +1615,5 @@ Partial Class uco_7EichprotokollDaten
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents RadRadioButtonTaraeingabe As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents RadTextBoxControlDruckerTyp As Telerik.WinControls.UI.RadDropDownList
+    Friend WithEvents BackgroundWorkerPruefscheinnummern As System.ComponentModel.BackgroundWorker
 End Class

@@ -421,4 +421,23 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetGesperrtePrüfscheinnummern">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HEKennung" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Lizenzschluessel" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Vorgangsnummer" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="WindowsUsername" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Domainname" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Computername" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGesperrtePrüfscheinnummernResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/EichsoftwareWebservice" minOccurs="0" name="GetGesperrtePrüfscheinnummernResult" nillable="true" type="q13:ArrayOfStatusPrüfscheinnummer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

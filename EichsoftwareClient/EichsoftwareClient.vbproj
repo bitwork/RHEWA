@@ -940,6 +940,9 @@
     <None Include="Service References\EichsoftwareWebservice\EichsoftwareClient.EichsoftwareWebservice.ServerLookup_Waegezelle.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\EichsoftwareWebservice\EichsoftwareClient.EichsoftwareWebservice.StatusPrüfscheinnummer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\EichsoftwareWebservice\EichsoftwareWebservice.wsdl" />
     <None Include="Service References\EichsoftwareWebservice\EichsoftwareWebservice.xsd">
       <SubType>Designer</SubType>

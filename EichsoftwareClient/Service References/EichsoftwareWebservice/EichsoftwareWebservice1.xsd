@@ -78,7 +78,7 @@
       <xs:element name="_ServerLookup_Waagentyp" nillable="true" type="tns:ServerLookup_Waagentyp" />
       <xs:element name="_ServerLookup_Waegezelle" nillable="true" type="tns:ServerLookup_Waegezelle" />
       <xs:element name="_ServerMogelstatistik" nillable="true" type="tns:ArrayOfServerMogelstatistik" />
-      <xs:element name="_Standardwaage" type="xs:boolean" />
+      <xs:element name="_Standardwaage" nillable="true" type="xs:boolean" />
       <xs:element name="_UploadDatum" nillable="true" type="xs:dateTime" />
       <xs:element name="_UploadFilePath" nillable="true" type="xs:string" />
       <xs:element name="_Vorgangsnummer" nillable="true" type="xs:string" />
@@ -588,4 +588,18 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="clsServerFTPDaten" nillable="true" type="tns:clsServerFTPDaten" />
+  <xs:complexType name="ArrayOfStatusPrüfscheinnummer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StatusPrüfscheinnummer" nillable="true" type="tns:StatusPrüfscheinnummer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStatusPrüfscheinnummer" nillable="true" type="tns:ArrayOfStatusPrüfscheinnummer" />
+  <xs:complexType name="StatusPrüfscheinnummer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Gesperrt" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="GesperrtDurchDatum" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Nummer" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StatusPrüfscheinnummer" nillable="true" type="tns:StatusPrüfscheinnummer" />
 </xs:schema>

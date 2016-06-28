@@ -933,4 +933,42 @@ Public Class clsWebserviceFunctions
             Return ""
         End Try
     End Function
+
+    ''' <summary>
+    ''' Methode welche Eichprozesse vom Server holt, die als Standardwaage deklariert sind und die Daten in eine für das datagrid Bindbare Auflistung speichert.
+    ''' </summary>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Public Shared Function GetStatusPruefscheinnummern() As List(Of EichsoftwareWebservice.StatusPrüfscheinnummer)
+        Try
+            'neuen Context aufbauen
+            Using WebContext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
+                Try
+                    WebContext.Open()
+                Catch ex As Exception
+                    Return Nothing
+                End Try
+
+                Try
+                    Dim data = WebContext.GetGesperrtePrüfscheinnummern(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, "", My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+                    Return data.ToList
+                Catch ex As Exception
+                    MessageBox.Show(ex.Message)
+                    If Debugger.IsAttached Then
+                        MessageBox.Show(ex.StackTrace)
+                        MessageBox.Show(ex.InnerException.Message)
+                        MessageBox.Show(ex.InnerException.StackTrace)
+                        MessageBox.Show(ex.InnerException.InnerException.Message)
+                        MessageBox.Show(ex.InnerException.InnerException.StackTrace)
+                    End If
+                    Return Nothing
+                End Try
+            End Using
+        Catch ex As ServiceModel.EndpointNotFoundException
+            MessageBox.Show("Keine Verbindung zum Stratoserver möglich")
+            Return Nothing
+        Catch ex As Exception
+            Return Nothing
+        End Try
+    End Function
 End Class

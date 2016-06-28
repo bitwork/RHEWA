@@ -65,6 +65,9 @@ Public Interface IEichsoftwareWebservice
     <OperationContract()>
     Function GetFTPCredentials(ByVal HEKennung As String, Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As clsServerFTPDaten
 
+    <OperationContract()>
+    Function GetGesperrtePrüfscheinnummern(ByVal HEKennung As String, Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As List(Of StatusPrüfscheinnummer)
+
 End Interface
 
 #Region "Klassen für Client"

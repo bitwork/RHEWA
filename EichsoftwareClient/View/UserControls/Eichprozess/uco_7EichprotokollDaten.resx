@@ -3569,6 +3569,9 @@
   <data name="&gt;&gt;RadScrollablePanel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="BackgroundWorkerPruefscheinnummern.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -3578,10 +3581,16 @@
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
     <value>943, 1206</value>
   </data>
+  <data name="&gt;&gt;BackgroundWorkerPruefscheinnummern.Name" xml:space="preserve">
+    <value>BackgroundWorkerPruefscheinnummern</value>
+  </data>
+  <data name="&gt;&gt;BackgroundWorkerPruefscheinnummern.Type" xml:space="preserve">
+    <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>uco_7EichprotokollDaten</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.5948.26893, Culture=neutral, PublicKeyToken=null</value>
+    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.6023.22443, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

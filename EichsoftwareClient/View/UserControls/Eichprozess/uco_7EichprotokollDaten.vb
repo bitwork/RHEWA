@@ -1,4 +1,6 @@
-﻿Public Class uco_7EichprotokollDaten
+﻿Imports EichsoftwareClient.EichsoftwareWebservice
+
+Public Class uco_7EichprotokollDaten
     Inherits ucoContent
 
 #Region "Member Variables"
@@ -59,7 +61,9 @@
     Private Sub RadTextBoxControlBenutzer_TextChanged(sender As Object, e As EventArgs) Handles RadTextBoxControlWZFabriknummer.TextChanged, RadTextBoxControlSoftwarestand.TextChanged, RadTextBoxControlNormalienPruefscheinnummer.TextChanged, RadTextBoxControlNormalienPruefintervall.TextChanged, RadTextBoxControlNormalienGenauigkeitsklasse.TextChanged, RadTextBoxControlNormalienEichfahrzeugFirma.TextChanged, RadTextBoxControlMxM.TextChanged, RadTextBoxControlMin3.TextChanged, RadTextBoxControlMin2.TextChanged, RadTextBoxControlMin1.TextChanged, RadTextBoxControlEichzaehlerstand.TextChanged, RadTextBoxControlBetragNormallast.TextChanged, RadTextBoxControlBenutzer.TextChanged, RadTextBoxControlBaujahr.TextChanged, RadTextBoxControlAufstellungsort.TextChanged
         If _suspendEvents = True Then Exit Sub
         AktuellerStatusDirty = True
+
     End Sub
+
 #End Region
 
 #Region "Methods"
@@ -851,5 +855,70 @@
             End Using
         End If
     End Sub
+
+#Region "Prüfscheinnummern"
+    Private ListPruefscheinnnummern As List(Of StatusPrüfscheinnummer)
+    Private Sub CheckPruefscheinnummer(sender As Object)
+        Try
+            Dim txt As Telerik.WinControls.UI.RadTextBox = DirectCast(sender, Telerik.WinControls.UI.RadTextBox)
+            If txt Is RadTextBoxControlNormalienPruefscheinnummer Then
+                If AktuellerBenutzer.Instance.Lizenz.RHEWALizenz Then
+                    BackgroundWorkerPruefscheinnummern.RunWorkerAsync()
+                End If
+            End If
+        Catch ex As Exception
+        End Try
+    End Sub
+    Private Sub BackgroundWorkerPruefscheinnummern_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles BackgroundWorkerPruefscheinnummern.DoWork
+        If ListPruefscheinnnummern Is Nothing Then
+            ListPruefscheinnnummern = clsWebserviceFunctions.GetStatusPruefscheinnummern()
+        End If
+        Dim Vergleichswerte = RadTextBoxControlNormalienPruefscheinnummer.Text
+        Try
+            Dim ArrVergleichswerte = Vergleichswerte.Split(";")
+            Dim results = (From o In ListPruefscheinnnummern Where ArrVergleichswerte.Contains(o.Nummer)).ToList
+            'e.Result = results
+            'Return
+
+            Dim returnString As String = ""
+
+            For Each result In results
+                If result.Gesperrt Then
+                    returnString += String.Format("Das Gewicht mit der Nummer {0} darf nicht verwendet werden und muss aussortiert werden ", result.Nummer) & vbNewLine & vbNewLine
+                ElseIf result.GesperrtDurchDatum Then
+                    returnString += String.Format("Das Gewicht mit der Nummer {0} darf nur auf Anweisung verwendet werden. Der Prüfschein ist abgelaufen ", result.Nummer) & vbNewLine & vbNewLine
+                End If
+            Next
+            e.Result = returnString
+            Return
+        Catch ex As Exception
+
+        End Try
+        e.Result = ""
+    End Sub
+
+    Private Sub BackgroundWorkerPruefscheinnummern_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorkerPruefscheinnummern.RunWorkerCompleted
+        If e.Result <> "" Then
+
+            Dim tooltip As New Telerik.WinControls.UI.RadDesktopAlert()
+            tooltip.IsPinned = True
+            tooltip.ContentText = e.Result
+            tooltip.FixedSize = New System.Drawing.Size(600, 450)
+            tooltip.SoundToPlay = Media.SystemSounds.Exclamation
+            tooltip.PlaySound = True
+            '20 - vertical margins, 70 - caption height
+            Dim graphics As Telerik.WinControls.MeasurementGraphics = Telerik.WinControls.MeasurementGraphics.CreateMeasurementGraphics()
+            Dim sizeF As SizeF = graphics.Graphics.MeasureString(tooltip.ContentText, Me.Font, tooltip.FixedSize.Width - 20)
+
+            tooltip.FixedSize = New Size(tooltip.FixedSize.Width - 20, CInt(sizeF.Height) + 80)
+            tooltip.Show()
+
+        End If
+    End Sub
+
+    Private Sub RadTextBoxControlNormalienPruefscheinnummer_Validated(sender As Object, e As EventArgs) Handles RadTextBoxControlNormalienPruefscheinnummer.Validated
+        CheckPruefscheinnummer(sender)
+    End Sub
+#End Region
 
 End Class
