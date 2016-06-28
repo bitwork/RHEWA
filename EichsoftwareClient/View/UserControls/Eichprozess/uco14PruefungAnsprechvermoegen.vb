@@ -261,9 +261,30 @@ RadTextBoxControlLast2.Text.Trim = "" Or
             RadTextBoxControlAnzeige3.TextBoxElement.Border.ForeColor = Color.Red
 
         End If
-        Return Me.ShowValidationErrorBox(False)
+        Dim result = Me.ShowValidationErrorBox(False)
+
+        If result = DialogResult.Yes Or result = DialogResult.Ignore Then
+            Return True
+        ElseIf result = DialogResult.Retry Then
+            ' Ist = soll
+            OverwriteIstSoll()
+            'rekursiver Aufruf
+            Return ValidateControls()
+        Else
+            Return False
+        End If
 
     End Function
+
+    Private Sub OverwriteIstSoll()
+        RadTextBoxControlAnzeige1.Text = RadTextBoxControlLast1.Text
+        RadTextBoxControlAnzeige2.Text = RadTextBoxControlLast2.Text
+        RadTextBoxControlAnzeige3.Text = RadTextBoxControlLast3.Text
+        RadCheckBoxHalb.Checked = True
+        RadCheckBoxMax.Checked = True
+        RadCheckBoxMin.Checked = True
+
+    End Sub
 
 #End Region
 

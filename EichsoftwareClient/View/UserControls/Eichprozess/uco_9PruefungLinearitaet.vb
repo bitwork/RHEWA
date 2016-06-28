@@ -499,9 +499,73 @@ Public Class uco_9PruefungLinearitaet
         Next
 
         'fehlermeldung anzeigen bei falscher validierung
-        Return Me.ShowValidationErrorBox(False)
+        Dim result = Me.ShowValidationErrorBox(False)
+
+            Return True
+        ElseIf result = DialogResult.Retry Then
+            ' Ist = soll
+            OverwriteIstSoll()
+            'rekursiver Aufruf
+            Return ValidateControls()
+        Else
+            Return False
+        End If
 
     End Function
+
+    Private Sub OverwriteIstSoll()
+        RadTextBoxControlBereich1DisplayWeight1.Text = RadTextBoxControlBereich1Weight1.Text
+        RadTextBoxControlBereich1DisplayWeight2.Text = RadTextBoxControlBereich1Weight2.Text
+        RadTextBoxControlBereich1DisplayWeight3.Text = RadTextBoxControlBereich1Weight3.Text
+        RadTextBoxControlBereich1DisplayWeight4.Text = RadTextBoxControlBereich1Weight4.Text
+        RadTextBoxControlBereich1DisplayWeight5.Text = RadTextBoxControlBereich1Weight5.Text
+        RadTextBoxControlBereich1DisplayWeight6.Text = RadTextBoxControlBereich1Weight6.Text
+        RadTextBoxControlBereich1DisplayWeight7.Text = RadTextBoxControlBereich1Weight7.Text
+        RadTextBoxControlBereich1DisplayWeight8.Text = RadTextBoxControlBereich1Weight8.Text
+        RadTextBoxControlBereich1FallendDisplayWeight1.Text = RadTextBoxControlBereich1FallendWeight1.Text
+        RadTextBoxControlBereich1FallendDisplayWeight2.Text = RadTextBoxControlBereich1FallendWeight2.Text
+        RadTextBoxControlBereich1FallendDisplayWeight3.Text = RadTextBoxControlBereich1FallendWeight3.Text
+        RadTextBoxControlBereich1FallendDisplayWeight4.Text = RadTextBoxControlBereich1FallendWeight4.Text
+        RadTextBoxControlBereich1FallendDisplayWeight5.Text = RadTextBoxControlBereich1FallendWeight5.Text
+        RadTextBoxControlBereich1FallendDisplayWeight6.Text = RadTextBoxControlBereich1FallendWeight6.Text
+        RadTextBoxControlBereich1FallendDisplayWeight7.Text = RadTextBoxControlBereich1FallendWeight7.Text
+        RadTextBoxControlBereich1FallendDisplayWeight8.Text = RadTextBoxControlBereich1FallendWeight8.Text
+
+        RadTextBoxControlBereich2DisplayWeight1.Text = RadTextBoxControlBereich2Weight1.Text
+        RadTextBoxControlBereich2DisplayWeight2.Text = RadTextBoxControlBereich2Weight2.Text
+        RadTextBoxControlBereich2DisplayWeight3.Text = RadTextBoxControlBereich2Weight3.Text
+        RadTextBoxControlBereich2DisplayWeight4.Text = RadTextBoxControlBereich2Weight4.Text
+        RadTextBoxControlBereich2DisplayWeight5.Text = RadTextBoxControlBereich2Weight5.Text
+        RadTextBoxControlBereich2DisplayWeight6.Text = RadTextBoxControlBereich2Weight6.Text
+        RadTextBoxControlBereich2DisplayWeight7.Text = RadTextBoxControlBereich2Weight7.Text
+        RadTextBoxControlBereich2DisplayWeight8.Text = RadTextBoxControlBereich2Weight8.Text
+        RadTextBoxControlBereich2FallendDisplayWeight1.Text = RadTextBoxControlBereich2FallendWeight1.Text
+        RadTextBoxControlBereich2FallendDisplayWeight2.Text = RadTextBoxControlBereich2FallendWeight2.Text
+        RadTextBoxControlBereich2FallendDisplayWeight3.Text = RadTextBoxControlBereich2FallendWeight3.Text
+        RadTextBoxControlBereich2FallendDisplayWeight4.Text = RadTextBoxControlBereich2FallendWeight4.Text
+        RadTextBoxControlBereich2FallendDisplayWeight5.Text = RadTextBoxControlBereich2FallendWeight5.Text
+        RadTextBoxControlBereich2FallendDisplayWeight6.Text = RadTextBoxControlBereich2FallendWeight6.Text
+        RadTextBoxControlBereich2FallendDisplayWeight7.Text = RadTextBoxControlBereich2FallendWeight7.Text
+        RadTextBoxControlBereich2FallendDisplayWeight8.Text = RadTextBoxControlBereich2FallendWeight8.Text
+
+        RadTextBoxControlBereich3DisplayWeight1.Text = RadTextBoxControlBereich3Weight1.Text
+        RadTextBoxControlBereich3DisplayWeight2.Text = RadTextBoxControlBereich3Weight2.Text
+        RadTextBoxControlBereich3DisplayWeight3.Text = RadTextBoxControlBereich3Weight3.Text
+        RadTextBoxControlBereich3DisplayWeight4.Text = RadTextBoxControlBereich3Weight4.Text
+        RadTextBoxControlBereich3DisplayWeight5.Text = RadTextBoxControlBereich3Weight5.Text
+        RadTextBoxControlBereich3DisplayWeight6.Text = RadTextBoxControlBereich3Weight6.Text
+        RadTextBoxControlBereich3DisplayWeight7.Text = RadTextBoxControlBereich3Weight7.Text
+        RadTextBoxControlBereich3DisplayWeight8.Text = RadTextBoxControlBereich3Weight8.Text
+        RadTextBoxControlBereich3FallendDisplayWeight1.Text = RadTextBoxControlBereich3FallendWeight1.Text
+        RadTextBoxControlBereich3FallendDisplayWeight2.Text = RadTextBoxControlBereich3FallendWeight2.Text
+        RadTextBoxControlBereich3FallendDisplayWeight3.Text = RadTextBoxControlBereich3FallendWeight3.Text
+        RadTextBoxControlBereich3FallendDisplayWeight4.Text = RadTextBoxControlBereich3FallendWeight4.Text
+        RadTextBoxControlBereich3FallendDisplayWeight5.Text = RadTextBoxControlBereich3FallendWeight5.Text
+        RadTextBoxControlBereich3FallendDisplayWeight6.Text = RadTextBoxControlBereich3FallendWeight6.Text
+        RadTextBoxControlBereich3FallendDisplayWeight7.Text = RadTextBoxControlBereich3FallendWeight7.Text
+        RadTextBoxControlBereich3FallendDisplayWeight8.Text = RadTextBoxControlBereich3FallendWeight8.Text
+
+    End Sub
 
     ''' <summary>
     ''' je nach anzahl von eingestellten Messpunkten werden die panels ein oder ausgeblendet

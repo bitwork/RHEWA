@@ -284,7 +284,7 @@
                 If IsNumeric(RadTextBoxControlWZHoechstlast.Text) Then
                     Try
                         If Not objEichprozess.Lookup_Waegezelle.MindestvorlastProzent Is Nothing Then
-                            RadTextBoxControlWZMindestvorlast.Text = (objEichprozess.Lookup_Waegezelle.MindestvorlastProzent / 100) * RadTextBoxControlWZHoechstlast.text    
+                            RadTextBoxControlWZMindestvorlast.Text = (objEichprozess.Lookup_Waegezelle.MindestvorlastProzent / 100) * RadTextBoxControlWZHoechstlast.Text
                         End If
                     Catch ex As Exception
                     End Try
@@ -624,7 +624,7 @@
 
         If Me.AbortSaving = True Then
             If Debugger.IsAttached Then 'standardwerte füllen für schnelleres testen
-                If Me.ShowValidationErrorBox(True) Then
+                If Me.ShowValidationErrorBox(True) = DialogResult.Retry Then
                     RadTextBoxControlWaageHoechstlast1.Text = "1000"
                     RadTextBoxControlWaageHoechstlast2.Text = "2000"
                     RadTextBoxControlWaageEichwert1.Text = "5"
@@ -1166,7 +1166,7 @@
                 If Not objEichprozess Is Nothing Then
                     If Not objEichprozess.Lookup_Waegezelle Is Nothing Then
                         Try
-                           If Not objEichprozess.Lookup_Waegezelle.MindestvorlastProzent Is Nothing Then
+                            If Not objEichprozess.Lookup_Waegezelle.MindestvorlastProzent Is Nothing Then
                                 RadTextBoxControlWZMindestvorlast.Text = (objEichprozess.Lookup_Waegezelle.MindestvorlastProzent / 100) * RadTextBoxControlWZHoechstlast.Text
 
                             End If

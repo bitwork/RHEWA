@@ -255,14 +255,44 @@
             If Not AbortSaving Then
                 Return Me.ShowValidationErrorBoxStandardwaage(GlobaleEnumeratoren.enuEichprozessStatus.PrüfungderStabilitätderGleichgewichtslage)
             Else
-                Return Me.ShowValidationErrorBox(False)
+                Dim result = Me.ShowValidationErrorBox(False)
+
+                If result = DialogResult.Yes Or result = DialogResult.Ignore Then
+                    Return True
+                ElseIf result = DialogResult.Retry Then
+                    ' Ist = soll
+                    OverwriteIstSoll()
+                    'rekursiver Aufruf
+                    Return ValidateControls()
+                Else
+                    Return False
+                End If
             End If
         Else
             'fehlermeldung anzeigen bei falscher validierung
-            Return Me.ShowValidationErrorBox(False)
+            Dim result = Me.ShowValidationErrorBox(False)
+
+            If result = DialogResult.Yes Or result = DialogResult.Ignore Then
+                Return True
+            ElseIf result = DialogResult.Retry Then
+                ' Ist = soll
+                OverwriteIstSoll()
+                'rekursiver Aufruf
+                Return ValidateControls()
+            Else
+                Return False
+            End If
 
         End If
     End Function
+
+    Private Sub OverwriteIstSoll()
+        RadCheckBoxAbdruck1.Checked = True
+        RadCheckBoxAbdruck2.Checked = True
+        RadCheckBoxAbdruck3.Checked = True
+        RadCheckBoxAbdruck4.Checked = True
+        RadCheckBoxAbdruck5.Checked = True
+    End Sub
 
     'Speicherroutine
     Protected Overrides Sub SaveNeeded(ByVal UserControl As UserControl)

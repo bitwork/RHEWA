@@ -476,13 +476,46 @@
                 End If
 
             Else
-                Return Me.ShowValidationErrorBox(False)
+                Dim result = Me.ShowValidationErrorBox(False)
+
+                If result = DialogResult.Yes Or result = DialogResult.Ignore Then
+                    Return True
+                ElseIf result = DialogResult.Retry Then
+                    ' Ist = soll
+                    OverwriteIstSoll()
+                    'rekursiver Aufruf
+                    Return ValidateControls()
+                Else
+                    Return False
+                End If
             End If
         Else
             'fehlermeldung anzeigen bei falscher validierung
-            Return Me.ShowValidationErrorBox(False)
+            Dim result = Me.ShowValidationErrorBox(False)
+
+            If result = DialogResult.Yes Or result = DialogResult.Ignore Then
+                Return True
+            ElseIf result = DialogResult.Retry Then
+                ' Ist = soll
+                OverwriteIstSoll()
+                'rekursiver Aufruf
+                Return ValidateControls()
+            Else
+                Return False
+            End If
         End If
     End Function
+
+    Private Sub OverwriteIstSoll()
+        RadTextBoxControlBereich1DisplayWeight1.Text = RadTextBoxControlBereich1Weight1.Text
+        RadTextBoxControlBereich1DisplayWeight2.Text = RadTextBoxControlBereich1Weight2.Text
+        RadTextBoxControlBereich1DisplayWeight3.Text = RadTextBoxControlBereich1Weight3.Text
+
+        RadTextBoxControlBereich2DisplayWeight1.Text = RadTextBoxControlBereich2Weight1.Text
+        RadTextBoxControlBereich2DisplayWeight2.Text = RadTextBoxControlBereich2Weight2.Text
+        RadTextBoxControlBereich2DisplayWeight3.Text = RadTextBoxControlBereich2Weight3.Text
+
+    End Sub
 
     Private Sub RadTextBoxControlBereich1DisplayWeight1_TextChanged(sender As Object, e As EventArgs) Handles _
         RadTextBoxControlBereich1DisplayWeight1.TextChanged,

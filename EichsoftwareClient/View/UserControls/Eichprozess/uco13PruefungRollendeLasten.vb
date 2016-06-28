@@ -587,8 +587,29 @@
         End If
 
         'fehlermeldung anzeigen bei falscher validierung
-        Return Me.ShowValidationErrorBox(False)
+        Dim result = Me.ShowValidationErrorBox(False)
+
+        If result = DialogResult.Yes Or result = DialogResult.Ignore Then
+            Return True
+        ElseIf result = DialogResult.Retry Then
+            ' Ist = soll
+            OverwriteIstSoll()
+            'rekursiver Aufruf
+            Return ValidateControls()
+        Else
+            Return False
+        End If
     End Function
+
+    Private Sub OverwriteIstSoll()
+        RadTextBoxControlAnzeigeLinks1.Text = RadTextBoxControlLastLinks1.Text
+        RadTextBoxControlAnzeigeLinks2.Text = RadTextBoxControlLastLinks2.Text
+        RadTextBoxControlAnzeigeLinks3.Text = RadTextBoxControllastLinks3.Text
+
+        RadTextBoxControlAnzeigeRechts1.Text = RadTextBoxControlLastRechts1.Text
+        RadTextBoxControlAnzeigeRechts2.Text = RadTextBoxControlLastRechts2.Text
+        RadTextBoxControlAnzeigeRechts3.Text = RadTextBoxControlLastRechts3.Text
+    End Sub
 
 #End Region
 

@@ -568,7 +568,13 @@
         End If
 
         'fehlermeldung anzeigen bei falscher validierung
-        Return Me.ShowValidationErrorBox(True)
+        Dim result = Me.ShowValidationErrorBox(True)
+
+        If result = DialogResult.Yes Or result = DialogResult.Retry Or result = DialogResult.Ignore Then
+            Return True
+        Else
+            Return False
+        End If
 
     End Function
 

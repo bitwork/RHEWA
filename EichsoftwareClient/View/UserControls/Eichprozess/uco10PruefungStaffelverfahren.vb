@@ -740,7 +740,18 @@ Public Class uco10PruefungStaffelverfahren
 
         If AbortSaving Then
             'fehlermeldung anzeigen bei falscher validierung
-            Return Me.ShowValidationErrorBox(False)
+            Dim result = Me.ShowValidationErrorBox(False)
+
+            If result = DialogResult.Yes Or result = DialogResult.Ignore Then
+                Return True
+            ElseIf result = DialogResult.Retry Then
+                ' Ist = soll
+                OverwriteIstSoll()
+                'rekursiver Aufruf
+                Return ValidateControls()
+            Else
+                Return False
+            End If
         End If
 
         'logik zum Valideren der Eichfehlergrenzen der einzelnen Staffeln. Abhängig davon wieviele Staffeln überhaupt ausgefüllt sind
@@ -780,12 +791,27 @@ Public Class uco10PruefungStaffelverfahren
 
         If AbortSaving Then
             'fehlermeldung anzeigen bei falscher validierung
-            Return Me.ShowValidationErrorBox(False, My.Resources.GlobaleLokalisierung.EichfehlergrenzenNichtEingehalten)
+            Dim result = Me.ShowValidationErrorBox(False, My.Resources.GlobaleLokalisierung.EichfehlergrenzenNichtEingehalten)
+
+            If result = DialogResult.Yes Or result = DialogResult.Ignore Then
+                Return True
+            ElseIf result = DialogResult.Retry Then
+                ' Ist = soll
+                OverwriteIstSoll()
+                'rekursiver Aufruf
+                Return ValidateControls()
+            Else
+                Return False
+            End If
         End If
 
         Return True
 
     End Function
+
+    Private Sub OverwriteIstSoll()
+        Throw New NotImplementedException()
+    End Sub
 
 #End Region
 

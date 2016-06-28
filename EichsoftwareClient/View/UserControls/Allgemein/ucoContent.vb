@@ -292,7 +292,7 @@ Public Class ucoContent
     ''' <param name="pDisplayMessage">Hinweistext der in der Messagebox auftauchen soll</param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Friend Function ShowValidationErrorBox(ByVal DebugOnly As Boolean, Optional ByVal pDisplayMessage As String = "") As Boolean
+    Friend Function ShowValidationErrorBox(ByVal DebugOnly As Boolean, Optional ByVal pDisplayMessage As String = "") As DialogResult
         Dim DisplayMessage As String = pDisplayMessage
         If DisplayMessage.Equals("") Then DisplayMessage = My.Resources.GlobaleLokalisierung.PflichtfelderAusfuellen
 
@@ -304,36 +304,59 @@ Public Class ucoContent
             End If
 
             If DebugOnly = False Then
-                If MessageBox.Show(My.Resources.GlobaleLokalisierung.ValidierungUeberspringen, "", MessageBoxButtons.YesNo) = DialogResult.Yes Then
-                    Me.AbortSaving = False
-                    Return True
+                Dim result As DialogResult
+                If _objEichprozess.AusStandardwaageErzeugt Then
+                    result = MessageBox.Show(String.Format("Standardwaage {0}{0} - Klicken Sie ""Ignorieren"" um die Validierung bewusst zu überspringen {0}{0} Klicken Sie ""Wiederholen"" um die Soll-Werte mit den Ist-Werten gleichzusetzen  {0}{0} Klicken Sie ""Abbrechen"" um nichts zu ändern ", vbNewLine), "", MessageBoxButtons.AbortRetryIgnore)
                 Else
+                    result = MessageBox.Show(My.Resources.GlobaleLokalisierung.ValidierungUeberspringen, "", MessageBoxButtons.YesNo)
+                End If
+
+                If result = DialogResult.Ignore Or result = DialogResult.Yes Then 'Ignore = Validierung bewusst überspringen
+                    Me.AbortSaving = False
+                    Return result
+                ElseIf result = DialogResult.Retry Then 'Werte automatisch einpflegen
+                    Me.AbortSaving = False
+                    Return result
+                Else 'Validierung als Falsch akzeptieren
                     MessageBox.Show(DisplayMessage, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                     Me.AbortSaving = True
-                    Return False
+                    Return result
                 End If
             Else
                 If Debugger.IsAttached Then
-                    If MessageBox.Show(My.Resources.GlobaleLokalisierung.ValidierungUeberspringen, "", MessageBoxButtons.YesNo) = DialogResult.Yes Then
-                        Me.AbortSaving = False
-                        Return True
+                    Dim result As DialogResult
+                    If _objEichprozess.AusStandardwaageErzeugt Then
+                        result = MessageBox.Show(String.Format("Standardwaage {0}{0} - Klicken Sie ""Ignorieren"" um die Validierung bewusst zu überspringen {0}{0} Klicken Sie ""Wiederholen"" um die Soll-Werte mit den Ist-Werten gleichzusetzen  {0}{0} Klicken Sie ""Abbrechen"" um nichts zu ändern ", vbNewLine), "", MessageBoxButtons.AbortRetryIgnore)
                     Else
+                        result = MessageBox.Show(My.Resources.GlobaleLokalisierung.ValidierungUeberspringen, "", MessageBoxButtons.YesNo)
+                    End If
+
+                    If result = DialogResult.Ignore Or result = DialogResult.Yes Then 'Ignore = Validierung bewusst überspringen
+                        Me.AbortSaving = False
+                        Return result
+
+                    ElseIf result = DialogResult.Retry Then 'Werte automatisch einpflegen
+                        Me.AbortSaving = False
+                        Return result
+
+                    Else 'Validierung als Falsch akzeptieren
                         MessageBox.Show(DisplayMessage, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                         Me.AbortSaving = True
-                        Return False
+                        Return result
+
                     End If
                 Else
-                    MessageBox.Show(DisplayMessage, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    Dim result As DialogResult = MessageBox.Show(DisplayMessage, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                     Me.AbortSaving = True
-                    Return False
+                    Return result
+
                 End If
             End If
-
         End If
 
         'Speichern soll nicht abgebrochen werden, da alles okay ist
         Me.AbortSaving = False
-        Return True
+        Return DialogResult.Yes
     End Function
     ''' <summary>
     ''' Hiearschisches deaktivieren der Steuerelemente

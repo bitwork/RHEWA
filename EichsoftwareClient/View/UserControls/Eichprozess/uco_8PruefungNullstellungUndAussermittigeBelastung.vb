@@ -1435,32 +1435,40 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         'prüfen ob alle Felder ausgefüllt sind
         AbortSaving = False
 
-        'If ValidateControlsNullstellung() Then
-        '    If ValidateControlsAussermittigeBelastung() Then
-        '        If ValidatecontrolsWiederholungen() Then
-        '        Else
-        '                      Return Me.ShowValidationErrorBox(My.Resources.GlobaleLokalisierung.EichfehlergrenzenNichtEingehalten)
-        '        End If
-        '    Else
-        '        Return Me.ShowValidationErrorBox(My.Resources.GlobaleLokalisierung.EichfehlergrenzenNichtEingehalten)
-        '    End If
-        'Else
-        '    ValidateControlsAussermittigeBelastung()
-        '    ValidatecontrolsWiederholungen()
-        '    'fehlermeldung anzeigen bei falscher validierung
-        '    Return Me.ShowValidationErrorBox()
-        'End If
-
         If ValidateControlsNullstellung() = False Then
             ValidateControlsAussermittigeBelastung()
             ValidatecontrolsWiederholungen()
             'fehlermeldung anzeigen bei falscher validierung
-            Return Me.ShowValidationErrorBox(False)
+
+            'fehlermeldung anzeigen bei falscher validierung
+            Dim result = Me.ShowValidationErrorBox(False)
+
+                Return True
+            ElseIf result = DialogResult.Retry Then
+                ' Ist = soll
+                OverwriteIstSoll()
+                'rekursiver Aufruf
+                Return ValidateControls()
+            Else
+                Return False
+            End If
         Else
             ValidateControlsAussermittigeBelastung()
             ValidatecontrolsWiederholungen()
             'fehlermeldung anzeigen bei falscher validierung
-            Return Me.ShowValidationErrorBox(False, My.Resources.GlobaleLokalisierung.EichfehlergrenzenNichtEingehalten)
+            Dim result = Me.ShowValidationErrorBox(False, My.Resources.GlobaleLokalisierung.EichfehlergrenzenNichtEingehalten)
+
+            If result = DialogResult.Yes Or result = DialogResult.Ignore Then
+                Return True
+
+            ElseIf result = DialogResult.Retry Then
+                ' Ist = soll
+                OverwriteIstSoll()
+                'rekursiver Aufruf
+                Return ValidateControls()
+            Else
+                Return False
+            End If
         End If
 
         'Speichern soll nicht abgebrochen werden, da alles okay ist
@@ -1468,6 +1476,56 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         Return True
 
     End Function
+
+    Private Sub OverwriteIstSoll()
+        RadCheckBoxNullstellungOK.Checked = True
+        RadTextBoxControlDisplayWeight1.Text = RadTextBoxControlWeight1.Text
+        RadTextBoxControlDisplayWeight2.Text = RadTextBoxControlWeight2.Text
+        RadTextBoxControlDisplayWeight3.Text = RadTextBoxControlWeight3.Text
+
+        RadTextBoxControlBereich1DisplayWeight1.Text = RadTextBoxControlBereich1Weight1.Text
+        RadTextBoxControlBereich1DisplayWeight2.Text = RadTextBoxControlBereich1Weight2.Text
+        RadTextBoxControlBereich1DisplayWeight3.Text = RadTextBoxControlBereich1Weight3.Text
+        RadTextBoxControlBereich1DisplayWeight4.Text = RadTextBoxControlBereich1Weight4.Text
+        RadTextBoxControlBereich1DisplayWeight5.Text = RadTextBoxControlBereich1Weight5.Text
+        RadTextBoxControlBereich1DisplayWeight6.Text = RadTextBoxControlBereich1Weight6.Text
+        RadTextBoxControlBereich1DisplayWeight7.Text = RadTextBoxControlBereich1Weight7.Text
+        RadTextBoxControlBereich1DisplayWeight8.Text = RadTextBoxControlBereich1Weight8.Text
+        RadTextBoxControlBereich1DisplayWeight9.Text = RadTextBoxControlBereich1Weight9.Text
+        RadTextBoxControlBereich1DisplayWeight10.Text = RadTextBoxControlBereich1Weight10.Text
+        RadTextBoxControlBereich1DisplayWeight11.Text = RadTextBoxControlBereich1Weight11.Text
+        RadTextBoxControlBereich1DisplayWeight12.Text = RadTextBoxControlBereich1Weight12.Text
+        RadTextBoxControlBereich1DisplayWeightMitte.Text = RadTextBoxControlBereich1WeightMitte.Text
+
+        RadTextBoxControlBereich2DisplayWeight1.Text = RadTextBoxControlBereich2Weight1.Text
+        RadTextBoxControlBereich2DisplayWeight2.Text = RadTextBoxControlBereich2Weight2.Text
+        RadTextBoxControlBereich2DisplayWeight3.Text = RadTextBoxControlBereich2Weight3.Text
+        RadTextBoxControlBereich2DisplayWeight4.Text = RadTextBoxControlBereich2Weight4.Text
+        RadTextBoxControlBereich2DisplayWeight5.Text = RadTextBoxControlBereich2Weight5.Text
+        RadTextBoxControlBereich2DisplayWeight6.Text = RadTextBoxControlBereich2Weight6.Text
+        RadTextBoxControlBereich2DisplayWeight7.Text = RadTextBoxControlBereich2Weight7.Text
+        RadTextBoxControlBereich2DisplayWeight8.Text = RadTextBoxControlBereich2Weight8.Text
+        RadTextBoxControlBereich2DisplayWeight9.Text = RadTextBoxControlBereich2Weight9.Text
+        RadTextBoxControlBereich2DisplayWeight10.Text = RadTextBoxControlBereich2Weight10.Text
+        RadTextBoxControlBereich2DisplayWeight11.Text = RadTextBoxControlBereich2Weight11.Text
+        RadTextBoxControlBereich2DisplayWeight12.Text = RadTextBoxControlBereich2Weight12.Text
+        RadTextBoxControlBereich2DisplayWeightMitte.Text = RadTextBoxControlBereich2WeightMitte.Text
+
+        RadTextBoxControlBereich3DisplayWeight1.Text = RadTextBoxControlBereich3Weight1.Text
+        RadTextBoxControlBereich3DisplayWeight2.Text = RadTextBoxControlBereich3Weight2.Text
+        RadTextBoxControlBereich3DisplayWeight3.Text = RadTextBoxControlBereich3Weight3.Text
+        RadTextBoxControlBereich3DisplayWeight4.Text = RadTextBoxControlBereich3Weight4.Text
+        RadTextBoxControlBereich3DisplayWeight5.Text = RadTextBoxControlBereich3Weight5.Text
+        RadTextBoxControlBereich3DisplayWeight6.Text = RadTextBoxControlBereich3Weight6.Text
+        RadTextBoxControlBereich3DisplayWeight7.Text = RadTextBoxControlBereich3Weight7.Text
+        RadTextBoxControlBereich3DisplayWeight8.Text = RadTextBoxControlBereich3Weight8.Text
+        RadTextBoxControlBereich3DisplayWeight9.Text = RadTextBoxControlBereich3Weight9.Text
+        RadTextBoxControlBereich3DisplayWeight10.Text = RadTextBoxControlBereich3Weight10.Text
+        RadTextBoxControlBereich3DisplayWeight11.Text = RadTextBoxControlBereich3Weight11.Text
+        RadTextBoxControlBereich3DisplayWeight12.Text = RadTextBoxControlBereich3Weight12.Text
+        RadTextBoxControlBereich3DisplayWeightMitte.Text = RadTextBoxControlBereich3WeightMitte.Text
+
+    End Sub
 
 #End Region
 

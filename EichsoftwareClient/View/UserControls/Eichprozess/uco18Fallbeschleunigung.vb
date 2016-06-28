@@ -129,8 +129,24 @@
         End If
 
         'fehlermeldung anzeigen bei falscher validierung
-        Return Me.ShowValidationErrorBox(False)
+        Dim result = Me.ShowValidationErrorBox(False)
+
+        If result = DialogResult.Yes Or result = DialogResult.Ignore Then
+            Return True
+        ElseIf result = DialogResult.Retry Then
+            ' Ist = soll
+            OverwriteIstSoll()
+            'rekursiver Aufruf
+            Return ValidateControls()
+        Else
+            Return False
+        End If
     End Function
+
+    Private Sub OverwriteIstSoll()
+        RadCheckBoxSchwerkraft.Checked = True
+        RadTextBoxControlG.Text = "9,81"
+    End Sub
 
 #End Region
 

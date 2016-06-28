@@ -622,7 +622,7 @@
         'fehlermeldung anzeigen bei falscher validierung
         If Me.AbortSaving = True Then
             If Debugger.IsAttached Then 'standardwerte füllen für schnelleres testen
-                If Me.ShowValidationErrorBox(True) Then
+                If Me.ShowValidationErrorBox(True) = DialogResult.Retry Then
                     RadTextBoxAWGBauartzulassung.Text = "Bauartzulassung"
                     RadTextBoxAWGHersteller.Text = "bitwork GmbH"
                     RadTextBoxAWGPruefbericht.Text = "Prüfbereicht"
