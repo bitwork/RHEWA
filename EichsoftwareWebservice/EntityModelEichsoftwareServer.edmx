@@ -5,16 +5,6 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="EichenSQLDatabaseModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
-        <EntityContainer Name="EichenSQLDatabaseModelStoreContainer">
-          <EntitySet Name="Benutzer" EntityType="EichenSQLDatabaseModel.Store.Benutzer" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Firmen" EntityType="EichenSQLDatabaseModel.Store.Firmen" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="ServerEichmarkenverwaltung" EntityType="EichenSQLDatabaseModel.Store.ServerEichmarkenverwaltung" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="ServerEichprotokoll" EntityType="EichenSQLDatabaseModel.Store.ServerEichprotokoll" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="ServerEichprozess" EntityType="EichenSQLDatabaseModel.Store.ServerEichprozess" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="ServerFirmenZusatzdaten" EntityType="EichenSQLDatabaseModel.Store.ServerFirmenZusatzdaten" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="ServerKompatiblitaetsnachweis" EntityType="EichenSQLDatabaseModel.Store.ServerKompatiblitaetsnachweis" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="ServerKonfiguration" EntityType="EichenSQLDatabaseModel.Store.ServerKonfiguration" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="ServerLizensierung" EntityType="EichenSQLDatabaseModel.Store.ServerLizensierung" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ServerLookup_Auswertegeraet" EntityType="EichenSQLDatabaseModel.Store.ServerLookup_Auswertegeraet" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ServerLookup_Bearbeitungsstatus" EntityType="EichenSQLDatabaseModel.Store.ServerLookup_Bearbeitungsstatus" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ServerLookup_Konformitaetsbewertungsverfahren" EntityType="EichenSQLDatabaseModel.Store.ServerLookup_Konformitaetsbewertungsverfahren" store:Type="Tables" Schema="dbo" />
