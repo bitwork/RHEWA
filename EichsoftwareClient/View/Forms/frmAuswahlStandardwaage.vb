@@ -38,33 +38,37 @@
     ''' </summary>
     ''' <remarks></remarks>
     Private Sub StandardwaageDeklarieren()
-        If Not RadGridViewStandardwaagen.Rows.Count = 0 Then
-            If RadGridViewStandardwaagen.SelectedRows.Count > 0 Then
-                If Not RadGridViewStandardwaagen.SelectedRows(0) Is Nothing Then
-                    If TypeOf RadGridViewStandardwaagen.SelectedRows(0) Is Telerik.WinControls.UI.GridViewDataRowInfo Then
+        Try
+            If Not RadGridViewStandardwaagen.Rows.Count = 0 Then
+                If RadGridViewStandardwaagen.SelectedRows.Count > 0 Then
+                    If Not RadGridViewStandardwaagen.SelectedRows(0) Is Nothing Then
+                        If TypeOf RadGridViewStandardwaagen.SelectedRows(0) Is Telerik.WinControls.UI.GridViewDataRowInfo Then
 
-                        Dim ID As String
-                        ID = RadGridViewStandardwaagen.SelectedRows(0).Cells("Vorgangsnummer").Value
-                        If Not ID.Equals("") Then
-                            If MessageBox.Show(My.Resources.GlobaleLokalisierung.Frage_Kopieren, My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+                            Dim ID As String
+                            ID = RadGridViewStandardwaagen.SelectedRows(0).Cells("Vorgangsnummer").Value
+                            If Not ID.Equals("") Then
+                                If MessageBox.Show(My.Resources.GlobaleLokalisierung.Frage_Kopieren, My.Resources.GlobaleLokalisierung.Frage, MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
 
-                                Dim Fabriknummer As String
-                                Fabriknummer = InputBox("Neue Fabriknummer")
+                                    Dim Fabriknummer As String
+                                    Fabriknummer = InputBox("Neue Fabriknummer")
 
-                                'holen einer lokalen Kopie des Server eichprozesses
-                                Dim objClientEichprozess = clsWebserviceFunctions.GetLokaleKopieVonEichprozess(ID, Fabriknummer)
-                                If Not objClientEichprozess Is Nothing Then
-                                    'anzeigen des Dialogs zur Bearbeitung der Eichung
-                                    Dim f As New FrmMainContainer(objClientEichprozess)
-                                    f.ShowDialog()
-                                    'nach dem schließen des Dialogs aktualisieren
-                                    Me.Close()
+                                    'holen einer lokalen Kopie des Server eichprozesses
+                                    Dim objClientEichprozess = clsWebserviceFunctions.GetLokaleKopieVonEichprozess(ID, Fabriknummer)
+                                    If Not objClientEichprozess Is Nothing Then
+                                        'anzeigen des Dialogs zur Bearbeitung der Eichung
+                                        Dim f As New FrmMainContainer(objClientEichprozess)
+                                        f.ShowDialog()
+                                        'nach dem schließen des Dialogs aktualisieren
+                                        Me.Close()
+                                    End If
                                 End If
                             End If
                         End If
                     End If
                 End If
             End If
-        End If
+        Catch ex As Exception
+
+        End Try
     End Sub
 End Class
