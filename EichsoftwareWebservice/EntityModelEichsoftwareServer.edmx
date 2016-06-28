@@ -4,128 +4,12 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="EichenSQLDatabaseModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
-          <EntitySet Name="ServerLookup_Auswertegeraet" EntityType="EichenSQLDatabaseModel.Store.ServerLookup_Auswertegeraet" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="ServerLookup_Bearbeitungsstatus" EntityType="EichenSQLDatabaseModel.Store.ServerLookup_Bearbeitungsstatus" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="ServerLookup_Konformitaetsbewertungsverfahren" EntityType="EichenSQLDatabaseModel.Store.ServerLookup_Konformitaetsbewertungsverfahren" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="ServerLookup_Vorgangsstatus" EntityType="EichenSQLDatabaseModel.Store.ServerLookup_Vorgangsstatus" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="ServerLookup_Waagenart" EntityType="EichenSQLDatabaseModel.Store.ServerLookup_Waagenart" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="ServerLookup_Waagentyp" EntityType="EichenSQLDatabaseModel.Store.ServerLookup_Waagentyp" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="ServerLookup_Waegezelle" EntityType="EichenSQLDatabaseModel.Store.ServerLookup_Waegezelle" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="ServerLookupVertragspartnerFirma" EntityType="EichenSQLDatabaseModel.Store.ServerLookupVertragspartnerFirma" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="ServerMogelstatistik" EntityType="EichenSQLDatabaseModel.Store.ServerMogelstatistik" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="ServerPruefungAnsprechvermoegen" EntityType="EichenSQLDatabaseModel.Store.ServerPruefungAnsprechvermoegen" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="ServerPruefungAussermittigeBelastung" EntityType="EichenSQLDatabaseModel.Store.ServerPruefungAussermittigeBelastung" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="ServerPruefungLinearitaetFallend" EntityType="EichenSQLDatabaseModel.Store.ServerPruefungLinearitaetFallend" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="ServerPruefungLinearitaetSteigend" EntityType="EichenSQLDatabaseModel.Store.ServerPruefungLinearitaetSteigend" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="ServerPruefungRollendeLasten" EntityType="EichenSQLDatabaseModel.Store.ServerPruefungRollendeLasten" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="ServerPruefungStabilitaetGleichgewichtslage" EntityType="EichenSQLDatabaseModel.Store.ServerPruefungStabilitaetGleichgewichtslage" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="ServerPruefungStaffelverfahrenErsatzlast" EntityType="EichenSQLDatabaseModel.Store.ServerPruefungStaffelverfahrenErsatzlast" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="ServerPruefungStaffelverfahrenNormallast" EntityType="EichenSQLDatabaseModel.Store.ServerPruefungStaffelverfahrenNormallast" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="ServerPruefungWiederholbarkeit" EntityType="EichenSQLDatabaseModel.Store.ServerPruefungWiederholbarkeit" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="ServerVerbindungsprotokoll" EntityType="EichenSQLDatabaseModel.Store.ServerVerbindungsprotokoll" store:Type="Tables" Schema="dbo" />
-          <AssociationSet Name="FK_Benutzer_Firmen" Association="EichenSQLDatabaseModel.Store.FK_Benutzer_Firmen">
-            <End Role="Firmen" EntitySet="Firmen" />
-            <End Role="Benutzer" EntitySet="Benutzer" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Eichprozess_Eichprotokoll" Association="EichenSQLDatabaseModel.Store.FK_Eichprozess_Eichprotokoll">
-            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
-            <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Eichprozess_Kompatiblitaetsnachweis" Association="EichenSQLDatabaseModel.Store.FK_Eichprozess_Kompatiblitaetsnachweis">
-            <End Role="ServerKompatiblitaetsnachweis" EntitySet="ServerKompatiblitaetsnachweis" />
-            <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Eichprozess_Lookup_Auswertegeraet" Association="EichenSQLDatabaseModel.Store.FK_Eichprozess_Lookup_Auswertegeraet">
-            <End Role="ServerLookup_Auswertegeraet" EntitySet="ServerLookup_Auswertegeraet" />
-            <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Eichprozess_Lookup_Vorgangsstatus" Association="EichenSQLDatabaseModel.Store.FK_Eichprozess_Lookup_Vorgangsstatus">
-            <End Role="ServerLookup_Vorgangsstatus" EntitySet="ServerLookup_Vorgangsstatus" />
-            <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Eichprozess_Lookup_Waagenart" Association="EichenSQLDatabaseModel.Store.FK_Eichprozess_Lookup_Waagenart">
-            <End Role="ServerLookup_Waagenart" EntitySet="ServerLookup_Waagenart" />
-            <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Eichprozess_Lookup_Waagentyp" Association="EichenSQLDatabaseModel.Store.FK_Eichprozess_Lookup_Waagentyp">
-            <End Role="ServerLookup_Waagentyp" EntitySet="ServerLookup_Waagentyp" />
-            <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Eichprozess_Lookup_Waegezelle" Association="EichenSQLDatabaseModel.Store.FK_Eichprozess_Lookup_Waegezelle">
-            <End Role="ServerLookup_Waegezelle" EntitySet="ServerLookup_Waegezelle" />
-            <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Mogelstatistik_Eichprozess" Association="EichenSQLDatabaseModel.Store.FK_Mogelstatistik_Eichprozess">
-            <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
-            <End Role="ServerMogelstatistik" EntitySet="ServerMogelstatistik" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Mogelstatistik_Lookup_Auswertegeraet" Association="EichenSQLDatabaseModel.Store.FK_Mogelstatistik_Lookup_Auswertegeraet">
-            <End Role="ServerLookup_Auswertegeraet" EntitySet="ServerLookup_Auswertegeraet" />
-            <End Role="ServerMogelstatistik" EntitySet="ServerMogelstatistik" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Mogelstatistik_Lookup_Waegezelle" Association="EichenSQLDatabaseModel.Store.FK_Mogelstatistik_Lookup_Waegezelle">
-            <End Role="ServerLookup_Waegezelle" EntitySet="ServerLookup_Waegezelle" />
-            <End Role="ServerMogelstatistik" EntitySet="ServerMogelstatistik" />
-          </AssociationSet>
-          <AssociationSet Name="FK_PruefungAussermittigeBelastung_Eichprotokoll" Association="EichenSQLDatabaseModel.Store.FK_PruefungAussermittigeBelastung_Eichprotokoll">
-            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
-            <End Role="ServerPruefungAussermittigeBelastung" EntitySet="ServerPruefungAussermittigeBelastung" />
-          </AssociationSet>
-          <AssociationSet Name="FK_PruefungLinearitaetFallend_Eichprotokoll" Association="EichenSQLDatabaseModel.Store.FK_PruefungLinearitaetFallend_Eichprotokoll">
-            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
-            <End Role="ServerPruefungLinearitaetFallend" EntitySet="ServerPruefungLinearitaetFallend" />
-          </AssociationSet>
-          <AssociationSet Name="FK_PruefungLinearitaetSteigend_Eichprotokoll" Association="EichenSQLDatabaseModel.Store.FK_PruefungLinearitaetSteigend_Eichprotokoll">
-            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
-            <End Role="ServerPruefungLinearitaetSteigend" EntitySet="ServerPruefungLinearitaetSteigend" />
-          </AssociationSet>
-          <AssociationSet Name="FK_PruefungLinearitaetSteigendAnsprechvermoegen_Eichprotokoll" Association="EichenSQLDatabaseModel.Store.FK_PruefungLinearitaetSteigendAnsprechvermoegen_Eichprotokoll">
-            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
-            <End Role="ServerPruefungAnsprechvermoegen" EntitySet="ServerPruefungAnsprechvermoegen" />
-          </AssociationSet>
-          <AssociationSet Name="FK_PruefungRollendeLasten_Eichprotokoll" Association="EichenSQLDatabaseModel.Store.FK_PruefungRollendeLasten_Eichprotokoll">
-            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
-            <End Role="ServerPruefungRollendeLasten" EntitySet="ServerPruefungRollendeLasten" />
-          </AssociationSet>
-          <AssociationSet Name="FK_PruefungStabilitaetGleichgewichtslage_Eichprotokoll" Association="EichenSQLDatabaseModel.Store.FK_PruefungStabilitaetGleichgewichtslage_Eichprotokoll">
-            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
-            <End Role="ServerPruefungStabilitaetGleichgewichtslage" EntitySet="ServerPruefungStabilitaetGleichgewichtslage" />
-          </AssociationSet>
-          <AssociationSet Name="FK_PruefungStaffelverfahrenErsatzlast_Eichprotokoll" Association="EichenSQLDatabaseModel.Store.FK_PruefungStaffelverfahrenErsatzlast_Eichprotokoll">
-            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
-            <End Role="ServerPruefungStaffelverfahrenErsatzlast" EntitySet="ServerPruefungStaffelverfahrenErsatzlast" />
-          </AssociationSet>
-          <AssociationSet Name="FK_PruefungStaffelverfahrenNormallast_Eichprotokoll" Association="EichenSQLDatabaseModel.Store.FK_PruefungStaffelverfahrenNormallast_Eichprotokoll">
-            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
-            <End Role="ServerPruefungStaffelverfahrenNormallast" EntitySet="ServerPruefungStaffelverfahrenNormallast" />
-          </AssociationSet>
-          <AssociationSet Name="FK_PruefungWiederholbarkeit_Eichprotokoll" Association="EichenSQLDatabaseModel.Store.FK_PruefungWiederholbarkeit_Eichprotokoll">
-            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
-            <End Role="ServerPruefungWiederholbarkeit" EntitySet="ServerPruefungWiederholbarkeit" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ServerEichprotokoll_ServerLookup_Konformitaetsbewertungsverfahren" Association="EichenSQLDatabaseModel.Store.FK_ServerEichprotokoll_ServerLookup_Konformitaetsbewertungsverfahren">
-            <End Role="ServerLookup_Konformitaetsbewertungsverfahren" EntitySet="ServerLookup_Konformitaetsbewertungsverfahren" />
-            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ServerEichprozess_ServerLookup_Bearbeitungsstatus" Association="EichenSQLDatabaseModel.Store.FK_ServerEichprozess_ServerLookup_Bearbeitungsstatus">
-            <End Role="ServerLookup_Bearbeitungsstatus" EntitySet="ServerLookup_Bearbeitungsstatus" />
-            <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ServerFirmenZusatzdaten_Firmen" Association="EichenSQLDatabaseModel.Store.FK_ServerFirmenZusatzdaten_Firmen">
-            <End Role="Firmen" EntitySet="Firmen" />
-            <End Role="ServerFirmenZusatzdaten" EntitySet="ServerFirmenZusatzdaten" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ServerLizensierung_Benutzer" Association="EichenSQLDatabaseModel.Store.FK_ServerLizensierung_Benutzer">
-            <End Role="Benutzer" EntitySet="Benutzer" />
-            <End Role="ServerLizensierung" EntitySet="ServerLizensierung" />
-          </AssociationSet>
-        </EntityContainer>
+    <Schema Namespace="EichenSQLDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityType Name="Benutzer">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ID" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Vorname" Type="nvarchar" MaxLength="999" />
           <Property Name="Nachname" Type="nvarchar" MaxLength="999" />
           <Property Name="Telefon" Type="nvarchar" MaxLength="50" />
@@ -136,7 +20,7 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ID" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="KundenNr" Type="nvarchar" MaxLength="50" />
           <Property Name="Name" Type="nvarchar" MaxLength="999" />
           <Property Name="Strasse" Type="nvarchar" MaxLength="999" />
@@ -149,7 +33,7 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="FK_BenutzerID" Type="nvarchar" MaxLength="50" />
           <Property Name="HEKennung" Type="nvarchar" MaxLength="50" />
           <Property Name="BenannteStelleAnzahl" Type="int" />
@@ -221,7 +105,7 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="FK_Identifikationsdaten_Konformitaetsbewertungsverfahren" Type="tinyint" />
           <Property Name="Identifikationsdaten_Benutzer" Type="nvarchar" MaxLength="50" />
           <Property Name="Identifikationsdaten_Aufstellungsort" Type="nvarchar" MaxLength="50" />
@@ -295,8 +179,8 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="Vorgangsnummer" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Vorgangsnummer" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="FK_Vorgangsstatus" Type="tinyint" Nullable="false" />
           <Property Name="FK_Auswertegeraet" Type="nvarchar" MaxLength="50" />
           <Property Name="FK_Waegezelle" Type="nvarchar" MaxLength="50" />
@@ -311,13 +195,13 @@
           <Property Name="BearbeitungsDatum" Type="datetime" />
           <Property Name="ErzeugerLizenz" Type="nvarchar" MaxLength="50" />
           <Property Name="ZurBearbeitungGesperrtDurch" Type="nvarchar" MaxLength="50" />
-          <Property Name="Standardwaage" Type="bit" Nullable="false" />
+          <Property Name="Standardwaage" Type="bit" />
         </EntityType>
         <EntityType Name="ServerFirmenZusatzdaten">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ID" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Firmen_FK" Type="nvarchar" MaxLength="50" />
           <Property Name="Abrechnungsmodell" Type="nvarchar" MaxLength="50" />
           <Property Name="Qualifizierungspauschale" Type="nvarchar" MaxLength="50" />
@@ -332,7 +216,7 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Kompatiblitaet_Waage_Hoechstlast1" Type="nvarchar" MaxLength="50" />
           <Property Name="Kompatiblitaet_Waage_Hoechstlast2" Type="nvarchar" MaxLength="50" />
           <Property Name="Kompatiblitaet_Waage_Hoechstlast3" Type="nvarchar" MaxLength="50" />
@@ -358,7 +242,7 @@
           <Property Name="Kompatiblitaet_Hersteller" Type="nvarchar" MaxLength="255" />
           <Property Name="Kompatiblitaet_Strasse" Type="nvarchar" MaxLength="255" />
           <Property Name="Kompatiblitaet_Ort" Type="nvarchar" MaxLength="255" />
-          <Property Name="Kompatiblitaet_Postleitzahl" Type="nvarchar" Nullable="false" MaxLength="255" />
+          <Property Name="Kompatiblitaet_Postleitzahl" Type="nvarchar" MaxLength="255" Nullable="false" />
           <Property Name="Kompatiblitaet_AWG_Anschlussart" Type="nvarchar" MaxLength="50" />
           <Property Name="Kompatiblitaet_WZ_Hoechstlast" Type="nvarchar" MaxLength="20" />
         </EntityType>
@@ -366,7 +250,7 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="LetzteSynchronisierungMitRHEWA" Type="datetime" />
           <Property Name="NetzwerkpfadFuerDateianhaenge" Type="nvarchar" MaxLength="255" />
           <Property Name="FTPServerAdresse" Type="nvarchar" MaxLength="255" />
@@ -378,9 +262,9 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="HEKennung" Type="nvarchar" Nullable="false" MaxLength="50" />
-          <Property Name="Lizenzschluessel" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HEKennung" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Lizenzschluessel" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="LetzteAktivierung" Type="date" />
           <Property Name="RHEWALizenz" Type="bit" Nullable="false" />
           <Property Name="Aktiv" Type="bit" Nullable="false" />
@@ -390,8 +274,8 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="nvarchar" Nullable="false" MaxLength="50" />
-          <Property Name="Typ" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Typ" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Hersteller" Type="nvarchar" MaxLength="50" />
           <Property Name="Pruefbericht" Type="nvarchar" MaxLength="50" />
           <Property Name="Bauartzulassung" Type="nvarchar" MaxLength="50" />
@@ -420,7 +304,7 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="tinyint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Status" Type="nvarchar" MaxLength="50" />
           <Property Name="Status_EN" Type="nvarchar" MaxLength="50" />
           <Property Name="Status_PL" Type="nvarchar" MaxLength="50" />
@@ -429,8 +313,8 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="tinyint" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="Verfahren" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ID" Type="tinyint" Nullable="false" />
+          <Property Name="Verfahren" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Verfahren_EN" Type="nvarchar" MaxLength="50" />
           <Property Name="Verfahren_PL" Type="nvarchar" MaxLength="50" />
         </EntityType>
@@ -447,8 +331,8 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="tinyint" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="Art" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Art" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Art_EN" Type="nvarchar" MaxLength="50" />
           <Property Name="Art_PL" Type="nvarchar" MaxLength="50" />
         </EntityType>
@@ -456,8 +340,8 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="tinyint" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="Typ" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Typ" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Typ_EN" Type="nvarchar" MaxLength="50" />
           <Property Name="Typ_PL" Type="nvarchar" MaxLength="50" />
         </EntityType>
@@ -465,14 +349,15 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="nvarchar" Nullable="false" MaxLength="50" />
-          <Property Name="Hersteller" Type="nvarchar" Nullable="false" MaxLength="50" />
-          <Property Name="Typ" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Hersteller" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Typ" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Pruefbericht" Type="nvarchar" MaxLength="50" />
           <Property Name="Bauartzulassung" Type="nvarchar" MaxLength="50" />
           <Property Name="Revisionsnummer" Type="nvarchar" MaxLength="50" />
           <Property Name="Genauigkeitsklasse" Type="nvarchar" MaxLength="10" />
           <Property Name="Mindestvorlast" Type="nvarchar" MaxLength="50" />
+          <Property Name="MindestvorlastProzent" Type="nvarchar" MaxLength="4" />
           <Property Name="Waegezellenkennwert" Type="nvarchar" MaxLength="50" />
           <Property Name="MaxAnzahlTeilungswerte" Type="nvarchar" MaxLength="50" />
           <Property Name="MinTeilungswert" Type="nvarchar" MaxLength="50" />
@@ -486,22 +371,21 @@
           <Property Name="ErstellDatum" Type="datetime" />
           <Property Name="Deaktiviert" Type="bit" Nullable="false" />
           <Property Name="Neu" Type="bit" Nullable="false" />
-          <Property  Type="nvarchar" MaxLength="4" Name="MindestvorlastProzent" />
-          <Property Type="nvarchar" Name="Bemerkung" MaxLength="255" />
+          <Property Name="Bemerkung" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="ServerLookupVertragspartnerFirma">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="nvarchar" Nullable="false" MaxLength="50" />
-          <Property Name="Firma_FK" Type="nvarchar" Nullable="false" MaxLength="50" />
-          <Property Name="Vertragspartner_FK" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Firma_FK" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Vertragspartner_FK" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="ServerMogelstatistik">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="FK_Eichprozess" Type="int" />
           <Property Name="FK_Auswertegeraet" Type="nvarchar" MaxLength="50" />
           <Property Name="FK_Waegezelle" Type="nvarchar" MaxLength="50" />
@@ -509,179 +393,179 @@
           <Property Name="Kompatiblitaet_Waage_Bauartzulassung" Type="nvarchar" MaxLength="50" />
           <Property Name="Kompatiblitaet_Waage_Revisionsnummer" Type="nvarchar" MaxLength="50" />
           <Property Name="Kompatiblitaet_Waage_Zulassungsinhaber" Type="nvarchar" MaxLength="50" />
-          <Property Name="Kompatiblitaet_Waage_Genauigkeitsklasse" Type="nvarchar" Nullable="false" MaxLength="3" />
-          <Property Name="Kompatiblitaet_Waage_AdditiveTarahoechstlast" Type="nvarchar" Nullable="false" MaxLength="5" />
-          <Property Name="Kompatiblitaet_Waage_GrenzenTemperaturbereichMIN" Type="nvarchar" Nullable="false" MaxLength="4" />
-          <Property Name="Kompatiblitaet_Waage_GrenzenTemperaturbereichMAX" Type="nvarchar" Nullable="false" MaxLength="4" />
-          <Property Name="Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich1" Type="nvarchar" Nullable="false" MaxLength="10" />
-          <Property Name="Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich1" Type="nvarchar" Nullable="false" MaxLength="10" />
-          <Property Name="Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich2" Type="nvarchar" Nullable="false" MaxLength="10" />
-          <Property Name="Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich2" Type="nvarchar" Nullable="false" MaxLength="10" />
-          <Property Name="Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich3" Type="nvarchar" Nullable="false" MaxLength="10" />
-          <Property Name="Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich3" Type="nvarchar" Nullable="false" MaxLength="10" />
-          <Property Name="Kompatiblitaet_Waage_Uebersetzungsverhaeltnis" Type="nvarchar" Nullable="false" MaxLength="10" />
-          <Property Name="Kompatiblitaet_Waage_AnzahlWaegezellen" Type="nvarchar" Nullable="false" MaxLength="5" />
-          <Property Name="Kompatiblitaet_Waage_Einschaltnullstellbereich" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="Kompatiblitaet_Waage_Ecklastzuschlag" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="Kompatiblitaet_Waage_Totlast" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="Kompatiblitaet_Waage_Kabellaenge" Type="nvarchar" Nullable="false" MaxLength="5" />
-          <Property Name="Kompatiblitaet_Waage_Kabelquerschnitt" Type="nvarchar" Nullable="false" MaxLength="10" />
-          <Property Name="Kompatiblitaet_AnschriftWaagenbaufirma" Type="nvarchar" Nullable="false" MaxLength="255" />
-          <Property Name="Kompatiblitaet_Verbindungselemente_BruchteilEichfehlergrenze" Type="nchar" Nullable="false" MaxLength="10" />
-          <Property Name="Kompatiblitaet_AWG_Anschlussart" Type="nchar" Nullable="false" MaxLength="10" />
+          <Property Name="Kompatiblitaet_Waage_Genauigkeitsklasse" Type="nvarchar" MaxLength="3" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_AdditiveTarahoechstlast" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_GrenzenTemperaturbereichMIN" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_GrenzenTemperaturbereichMAX" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich1" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich1" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich2" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich2" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_HoechstlastEichwertMax_Bereich3" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_HoechstlastEichwertE_Bereich3" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_Uebersetzungsverhaeltnis" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_AnzahlWaegezellen" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_Einschaltnullstellbereich" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_Ecklastzuschlag" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_Totlast" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_Kabellaenge" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="Kompatiblitaet_Waage_Kabelquerschnitt" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Kompatiblitaet_AnschriftWaagenbaufirma" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Kompatiblitaet_Verbindungselemente_BruchteilEichfehlergrenze" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Kompatiblitaet_AWG_Anschlussart" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="Kompatiblitaet_WZ_Hoechstlast" Type="nvarchar" MaxLength="20" />
         </EntityType>
         <EntityType Name="ServerPruefungAnsprechvermoegen">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="FK_Eichprotokoll" Type="int" Nullable="false" />
-          <Property Name="LastL" Type="nvarchar" Nullable="false" MaxLength="10" />
-          <Property Name="Last" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="Anzeige" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="Last1d" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="LastL" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Last" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Anzeige" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Last1d" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="Ziffernsprung" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="ServerPruefungAussermittigeBelastung">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="FK_Eichprotokoll" Type="int" Nullable="false" />
           <Property Name="Bereich" Type="tinyint" Nullable="false" />
-          <Property Name="Belastungsort" Type="nvarchar" Nullable="false" MaxLength="2" />
-          <Property Name="Last" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="Anzeige" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="Fehler" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="Belastungsort" Type="nvarchar" MaxLength="2" Nullable="false" />
+          <Property Name="Last" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Anzeige" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Fehler" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="EFG" Type="bit" Nullable="false" />
-          <Property Name="EFGExtra" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="EFGExtra" Type="nvarchar" MaxLength="20" Nullable="false" />
         </EntityType>
         <EntityType Name="ServerPruefungLinearitaetFallend">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="FK_Eichprotokoll" Type="int" Nullable="false" />
           <Property Name="Bereich" Type="tinyint" Nullable="false" />
-          <Property Name="Messpunkt" Type="nvarchar" Nullable="false" MaxLength="2" />
-          <Property Name="Last" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="Anzeige" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="Fehler" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="EFG" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="Messpunkt" Type="nvarchar" MaxLength="2" Nullable="false" />
+          <Property Name="Last" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Anzeige" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Fehler" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="EFG" Type="nvarchar" MaxLength="20" Nullable="false" />
         </EntityType>
         <EntityType Name="ServerPruefungLinearitaetSteigend">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="FK_Eichprotokoll" Type="int" Nullable="false" />
           <Property Name="Bereich" Type="tinyint" Nullable="false" />
-          <Property Name="Messpunkt" Type="nvarchar" Nullable="false" MaxLength="2" />
-          <Property Name="Last" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="Anzeige" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="Fehler" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="EFG" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="Messpunkt" Type="nvarchar" MaxLength="2" Nullable="false" />
+          <Property Name="Last" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Anzeige" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Fehler" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="EFG" Type="nvarchar" MaxLength="20" Nullable="false" />
         </EntityType>
         <EntityType Name="ServerPruefungRollendeLasten">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="FK_Eichprotokoll" Type="int" Nullable="false" />
           <Property Name="Belastungsstelle" Type="tinyint" Nullable="false" />
-          <Property Name="AuffahrtSeite" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="Last" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="Anzeige" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="Fehler" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="EFG" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="EFGExtra" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="AuffahrtSeite" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Last" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Anzeige" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Fehler" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="EFG" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="EFGExtra" Type="nvarchar" MaxLength="20" Nullable="false" />
         </EntityType>
         <EntityType Name="ServerPruefungStabilitaetGleichgewichtslage">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="FK_Eichprotokoll" Type="int" Nullable="false" />
           <Property Name="Durchlauf" Type="tinyint" Nullable="false" />
-          <Property Name="Last" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="Anzeige" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="MIN" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="MAX" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="Last" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Anzeige" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MIN" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MAX" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="AbdruckOK" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="ServerPruefungStaffelverfahrenErsatzlast">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="FK_Eichprotokoll" Type="int" Nullable="false" />
           <Property Name="Staffel" Type="tinyint" Nullable="false" />
           <Property Name="Bereich" Type="tinyint" Nullable="false" />
-          <Property Name="Ersatzlast_Soll" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="Ersatzlast_Ist" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="ZusaetzlicheErsatzlast_Soll" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="ErsatzUndNormallast_Soll" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="ErsatzUndNormallast_Ist" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="Ersatzlast2_Soll" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="Ersatzlast2_Ist" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="DifferenzAnzeigewerte_Fehler" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="DifferenzAnzeigewerte_EFG" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="MessabweichungStaffel_Fehler" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="MessabweichungStaffel_EFG" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="MessabweichungWaage_Fehler" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="MessabweichungWaage_EFG" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="Ersatzlast_Soll" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Ersatzlast_Ist" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ZusaetzlicheErsatzlast_Soll" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ErsatzUndNormallast_Soll" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ErsatzUndNormallast_Ist" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Ersatzlast2_Soll" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Ersatzlast2_Ist" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="DifferenzAnzeigewerte_Fehler" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="DifferenzAnzeigewerte_EFG" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MessabweichungStaffel_Fehler" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MessabweichungStaffel_EFG" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MessabweichungWaage_Fehler" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MessabweichungWaage_EFG" Type="nvarchar" MaxLength="20" Nullable="false" />
         </EntityType>
         <EntityType Name="ServerPruefungStaffelverfahrenNormallast">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="FK_Eichprotokoll" Type="int" Nullable="false" />
           <Property Name="Staffel" Type="tinyint" Nullable="false" />
           <Property Name="Bereich" Type="tinyint" Nullable="false" />
-          <Property Name="NormalLast_Last_1" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="NormalLast_Last_2" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="NormalLast_Last_3" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="NormalLast_Last_4" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="NormalLast_Anzeige_1" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="NormalLast_Fehler_1" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="NormalLast_EFG_1" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="NormalLast_Anzeige_2" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="NormalLast_Fehler_2" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="NormalLast_EFG_2" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="NormalLast_Anzeige_4" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="NormalLast_Fehler_4" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="NormalLast_EFG_4" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="NormalLast_Anzeige_3" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="NormalLast_Fehler_3" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="NormalLast_EFG_3" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="DifferenzAnzeigewerte_Fehler" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="DifferenzAnzeigewerte_EFG" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="MessabweichungStaffel_Fehler" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="MessabweichungStaffel_EFG" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="MessabweichungWaage_Fehler" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="MessabweichungWaage_EFG" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="NormalLast_Last_1" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_Last_2" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_Last_3" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_Last_4" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_Anzeige_1" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_Fehler_1" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_EFG_1" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_Anzeige_2" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_Fehler_2" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_EFG_2" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_Anzeige_4" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_Fehler_4" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_EFG_4" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_Anzeige_3" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_Fehler_3" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_EFG_3" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="DifferenzAnzeigewerte_Fehler" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="DifferenzAnzeigewerte_EFG" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MessabweichungStaffel_Fehler" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MessabweichungStaffel_EFG" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MessabweichungWaage_Fehler" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MessabweichungWaage_EFG" Type="nvarchar" MaxLength="20" Nullable="false" />
         </EntityType>
         <EntityType Name="ServerPruefungWiederholbarkeit">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="FK_Eichprotokoll" Type="int" Nullable="false" />
           <Property Name="Wiederholung" Type="tinyint" Nullable="false" />
-          <Property Name="Belastung" Type="varchar" Nullable="false" MaxLength="5" />
-          <Property Name="Last" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="Anzeige" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="Fehler" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="EFG" Type="nvarchar" Nullable="false" MaxLength="20" />
-          <Property Name="EFG_Extra" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="Belastung" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="Last" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Anzeige" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Fehler" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="EFG" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="EFG_Extra" Type="nvarchar" MaxLength="20" Nullable="false" />
         </EntityType>
         <EntityType Name="ServerVerbindungsprotokoll">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Lizenzschluessel_FK" Type="nvarchar" MaxLength="50" />
           <Property Name="Domain" Type="nvarchar" MaxLength="255" />
           <Property Name="Computername" Type="nvarchar" MaxLength="255" />
@@ -689,9 +573,17 @@
           <Property Name="Aktion" Type="nvarchar(max)" />
           <Property Name="Zeitstempel" Type="datetime" />
         </EntityType>
+        <EntityType Name="StatusPrüfscheinnummer">
+          <Key>
+            <PropertyRef Name="Nummer" />
+          </Key>
+          <Property Name="Nummer" Type="int" Nullable="false" />
+          <Property Name="Gesperrt" Type="bit" />
+          <Property Name="GesperrtDurchDatum" Type="bit" />
+        </EntityType>
         <Association Name="FK_Benutzer_Firmen">
-          <End Role="Firmen" Type="EichenSQLDatabaseModel.Store.Firmen" Multiplicity="0..1" />
-          <End Role="Benutzer" Type="EichenSQLDatabaseModel.Store.Benutzer" Multiplicity="*" />
+          <End Role="Firmen" Type="Self.Firmen" Multiplicity="0..1" />
+          <End Role="Benutzer" Type="Self.Benutzer" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Firmen">
               <PropertyRef Name="ID" />
@@ -701,97 +593,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Eichprozess_Eichprotokoll">
-          <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.Store.ServerEichprotokoll" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="ServerEichprozess" Type="EichenSQLDatabaseModel.Store.ServerEichprozess" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ServerEichprotokoll">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="ServerEichprozess">
-              <PropertyRef Name="FK_Eichprotokoll" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Eichprozess_Kompatiblitaetsnachweis">
-          <End Role="ServerKompatiblitaetsnachweis" Type="EichenSQLDatabaseModel.Store.ServerKompatiblitaetsnachweis" Multiplicity="0..1" />
-          <End Role="ServerEichprozess" Type="EichenSQLDatabaseModel.Store.ServerEichprozess" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ServerKompatiblitaetsnachweis">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="ServerEichprozess">
-              <PropertyRef Name="FK_Kompatibilitaetsnachweis" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Eichprozess_Lookup_Auswertegeraet">
-          <End Role="ServerLookup_Auswertegeraet" Type="EichenSQLDatabaseModel.Store.ServerLookup_Auswertegeraet" Multiplicity="0..1" />
-          <End Role="ServerEichprozess" Type="EichenSQLDatabaseModel.Store.ServerEichprozess" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ServerLookup_Auswertegeraet">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="ServerEichprozess">
-              <PropertyRef Name="FK_Auswertegeraet" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Eichprozess_Lookup_Vorgangsstatus">
-          <End Role="ServerLookup_Vorgangsstatus" Type="EichenSQLDatabaseModel.Store.ServerLookup_Vorgangsstatus" Multiplicity="1" />
-          <End Role="ServerEichprozess" Type="EichenSQLDatabaseModel.Store.ServerEichprozess" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ServerLookup_Vorgangsstatus">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="ServerEichprozess">
-              <PropertyRef Name="FK_Vorgangsstatus" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Eichprozess_Lookup_Waagenart">
-          <End Role="ServerLookup_Waagenart" Type="EichenSQLDatabaseModel.Store.ServerLookup_Waagenart" Multiplicity="0..1" />
-          <End Role="ServerEichprozess" Type="EichenSQLDatabaseModel.Store.ServerEichprozess" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ServerLookup_Waagenart">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="ServerEichprozess">
-              <PropertyRef Name="FK_WaagenArt" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Eichprozess_Lookup_Waagentyp">
-          <End Role="ServerLookup_Waagentyp" Type="EichenSQLDatabaseModel.Store.ServerLookup_Waagentyp" Multiplicity="0..1" />
-          <End Role="ServerEichprozess" Type="EichenSQLDatabaseModel.Store.ServerEichprozess" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ServerLookup_Waagentyp">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="ServerEichprozess">
-              <PropertyRef Name="FK_WaagenTyp" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Eichprozess_Lookup_Waegezelle">
-          <End Role="ServerLookup_Waegezelle" Type="EichenSQLDatabaseModel.Store.ServerLookup_Waegezelle" Multiplicity="0..1" />
-          <End Role="ServerEichprozess" Type="EichenSQLDatabaseModel.Store.ServerEichprozess" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ServerLookup_Waegezelle">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="ServerEichprozess">
-              <PropertyRef Name="FK_Waegezelle" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Mogelstatistik_Eichprozess">
-          <End Role="ServerEichprozess" Type="EichenSQLDatabaseModel.Store.ServerEichprozess" Multiplicity="0..1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="ServerMogelstatistik" Type="EichenSQLDatabaseModel.Store.ServerMogelstatistik" Multiplicity="*" />
+          <End Role="ServerEichprozess" Type="Self.ServerEichprozess" Multiplicity="0..1" />
+          <End Role="ServerMogelstatistik" Type="Self.ServerMogelstatistik" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ServerEichprozess">
               <PropertyRef Name="ID" />
@@ -802,8 +606,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Mogelstatistik_Lookup_Auswertegeraet">
-          <End Role="ServerLookup_Auswertegeraet" Type="EichenSQLDatabaseModel.Store.ServerLookup_Auswertegeraet" Multiplicity="0..1" />
-          <End Role="ServerMogelstatistik" Type="EichenSQLDatabaseModel.Store.ServerMogelstatistik" Multiplicity="*" />
+          <End Role="ServerLookup_Auswertegeraet" Type="Self.ServerLookup_Auswertegeraet" Multiplicity="0..1" />
+          <End Role="ServerMogelstatistik" Type="Self.ServerMogelstatistik" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ServerLookup_Auswertegeraet">
               <PropertyRef Name="ID" />
@@ -814,8 +618,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Mogelstatistik_Lookup_Waegezelle">
-          <End Role="ServerLookup_Waegezelle" Type="EichenSQLDatabaseModel.Store.ServerLookup_Waegezelle" Multiplicity="0..1" />
-          <End Role="ServerMogelstatistik" Type="EichenSQLDatabaseModel.Store.ServerMogelstatistik" Multiplicity="*" />
+          <End Role="ServerLookup_Waegezelle" Type="Self.ServerLookup_Waegezelle" Multiplicity="0..1" />
+          <End Role="ServerMogelstatistik" Type="Self.ServerMogelstatistik" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ServerLookup_Waegezelle">
               <PropertyRef Name="ID" />
@@ -826,10 +630,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_PruefungAussermittigeBelastung_Eichprotokoll">
-          <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.Store.ServerEichprotokoll" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="ServerPruefungAussermittigeBelastung" Type="EichenSQLDatabaseModel.Store.ServerPruefungAussermittigeBelastung" Multiplicity="*" />
+          <End Role="ServerEichprotokoll" Type="Self.ServerEichprotokoll" Multiplicity="1" />
+          <End Role="ServerPruefungAussermittigeBelastung" Type="Self.ServerPruefungAussermittigeBelastung" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ServerEichprotokoll">
               <PropertyRef Name="ID" />
@@ -840,10 +642,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_PruefungLinearitaetFallend_Eichprotokoll">
-          <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.Store.ServerEichprotokoll" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="ServerPruefungLinearitaetFallend" Type="EichenSQLDatabaseModel.Store.ServerPruefungLinearitaetFallend" Multiplicity="*" />
+          <End Role="ServerEichprotokoll" Type="Self.ServerEichprotokoll" Multiplicity="1" />
+          <End Role="ServerPruefungLinearitaetFallend" Type="Self.ServerPruefungLinearitaetFallend" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ServerEichprotokoll">
               <PropertyRef Name="ID" />
@@ -854,10 +654,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_PruefungLinearitaetSteigend_Eichprotokoll">
-          <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.Store.ServerEichprotokoll" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="ServerPruefungLinearitaetSteigend" Type="EichenSQLDatabaseModel.Store.ServerPruefungLinearitaetSteigend" Multiplicity="*" />
+          <End Role="ServerEichprotokoll" Type="Self.ServerEichprotokoll" Multiplicity="1" />
+          <End Role="ServerPruefungLinearitaetSteigend" Type="Self.ServerPruefungLinearitaetSteigend" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ServerEichprotokoll">
               <PropertyRef Name="ID" />
@@ -868,10 +666,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_PruefungLinearitaetSteigendAnsprechvermoegen_Eichprotokoll">
-          <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.Store.ServerEichprotokoll" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="ServerPruefungAnsprechvermoegen" Type="EichenSQLDatabaseModel.Store.ServerPruefungAnsprechvermoegen" Multiplicity="*" />
+          <End Role="ServerEichprotokoll" Type="Self.ServerEichprotokoll" Multiplicity="1" />
+          <End Role="ServerPruefungAnsprechvermoegen" Type="Self.ServerPruefungAnsprechvermoegen" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ServerEichprotokoll">
               <PropertyRef Name="ID" />
@@ -882,10 +678,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_PruefungRollendeLasten_Eichprotokoll">
-          <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.Store.ServerEichprotokoll" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="ServerPruefungRollendeLasten" Type="EichenSQLDatabaseModel.Store.ServerPruefungRollendeLasten" Multiplicity="*" />
+          <End Role="ServerEichprotokoll" Type="Self.ServerEichprotokoll" Multiplicity="1" />
+          <End Role="ServerPruefungRollendeLasten" Type="Self.ServerPruefungRollendeLasten" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ServerEichprotokoll">
               <PropertyRef Name="ID" />
@@ -896,10 +690,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_PruefungStabilitaetGleichgewichtslage_Eichprotokoll">
-          <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.Store.ServerEichprotokoll" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="ServerPruefungStabilitaetGleichgewichtslage" Type="EichenSQLDatabaseModel.Store.ServerPruefungStabilitaetGleichgewichtslage" Multiplicity="*" />
+          <End Role="ServerEichprotokoll" Type="Self.ServerEichprotokoll" Multiplicity="1" />
+          <End Role="ServerPruefungStabilitaetGleichgewichtslage" Type="Self.ServerPruefungStabilitaetGleichgewichtslage" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ServerEichprotokoll">
               <PropertyRef Name="ID" />
@@ -910,10 +702,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_PruefungStaffelverfahrenErsatzlast_Eichprotokoll">
-          <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.Store.ServerEichprotokoll" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="ServerPruefungStaffelverfahrenErsatzlast" Type="EichenSQLDatabaseModel.Store.ServerPruefungStaffelverfahrenErsatzlast" Multiplicity="*" />
+          <End Role="ServerEichprotokoll" Type="Self.ServerEichprotokoll" Multiplicity="1" />
+          <End Role="ServerPruefungStaffelverfahrenErsatzlast" Type="Self.ServerPruefungStaffelverfahrenErsatzlast" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ServerEichprotokoll">
               <PropertyRef Name="ID" />
@@ -924,10 +714,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_PruefungStaffelverfahrenNormallast_Eichprotokoll">
-          <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.Store.ServerEichprotokoll" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="ServerPruefungStaffelverfahrenNormallast" Type="EichenSQLDatabaseModel.Store.ServerPruefungStaffelverfahrenNormallast" Multiplicity="*" />
+          <End Role="ServerEichprotokoll" Type="Self.ServerEichprotokoll" Multiplicity="1" />
+          <End Role="ServerPruefungStaffelverfahrenNormallast" Type="Self.ServerPruefungStaffelverfahrenNormallast" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ServerEichprotokoll">
               <PropertyRef Name="ID" />
@@ -938,10 +726,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_PruefungWiederholbarkeit_Eichprotokoll">
-          <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.Store.ServerEichprotokoll" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="ServerPruefungWiederholbarkeit" Type="EichenSQLDatabaseModel.Store.ServerPruefungWiederholbarkeit" Multiplicity="*" />
+          <End Role="ServerEichprotokoll" Type="Self.ServerEichprotokoll" Multiplicity="1" />
+          <End Role="ServerPruefungWiederholbarkeit" Type="Self.ServerPruefungWiederholbarkeit" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ServerEichprotokoll">
               <PropertyRef Name="ID" />
@@ -952,8 +738,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_ServerEichprotokoll_ServerLookup_Konformitaetsbewertungsverfahren">
-          <End Role="ServerLookup_Konformitaetsbewertungsverfahren" Type="EichenSQLDatabaseModel.Store.ServerLookup_Konformitaetsbewertungsverfahren" Multiplicity="0..1" />
-          <End Role="ServerEichprotokoll" Type="EichenSQLDatabaseModel.Store.ServerEichprotokoll" Multiplicity="*" />
+          <End Role="ServerLookup_Konformitaetsbewertungsverfahren" Type="Self.ServerLookup_Konformitaetsbewertungsverfahren" Multiplicity="0..1" />
+          <End Role="ServerEichprotokoll" Type="Self.ServerEichprotokoll" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ServerLookup_Konformitaetsbewertungsverfahren">
               <PropertyRef Name="ID" />
@@ -963,21 +749,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_ServerEichprozess_ServerLookup_Bearbeitungsstatus">
-          <End Role="ServerLookup_Bearbeitungsstatus" Type="EichenSQLDatabaseModel.Store.ServerLookup_Bearbeitungsstatus" Multiplicity="0..1" />
-          <End Role="ServerEichprozess" Type="EichenSQLDatabaseModel.Store.ServerEichprozess" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ServerLookup_Bearbeitungsstatus">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="ServerEichprozess">
-              <PropertyRef Name="FK_Bearbeitungsstatus" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_ServerFirmenZusatzdaten_Firmen">
-          <End Role="Firmen" Type="EichenSQLDatabaseModel.Store.Firmen" Multiplicity="0..1" />
-          <End Role="ServerFirmenZusatzdaten" Type="EichenSQLDatabaseModel.Store.ServerFirmenZusatzdaten" Multiplicity="*" />
+          <End Role="Firmen" Type="Self.Firmen" Multiplicity="0..1" />
+          <End Role="ServerFirmenZusatzdaten" Type="Self.ServerFirmenZusatzdaten" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Firmen">
               <PropertyRef Name="ID" />
@@ -988,8 +762,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_ServerLizensierung_Benutzer">
-          <End Role="Benutzer" Type="EichenSQLDatabaseModel.Store.Benutzer" Multiplicity="0..1" />
-          <End Role="ServerLizensierung" Type="EichenSQLDatabaseModel.Store.ServerLizensierung" Multiplicity="*" />
+          <End Role="Benutzer" Type="Self.Benutzer" Multiplicity="0..1" />
+          <End Role="ServerLizensierung" Type="Self.ServerLizensierung" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Benutzer">
               <PropertyRef Name="ID" />
@@ -999,8 +773,102 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
-    </edmx:StorageModels>
+        <EntityContainer Name="EichenSQLDatabaseModelStoreContainer">
+          <EntitySet Name="Benutzer" EntityType="Self.Benutzer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Firmen" EntityType="Self.Firmen" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServerEichmarkenverwaltung" EntityType="Self.ServerEichmarkenverwaltung" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServerEichprotokoll" EntityType="Self.ServerEichprotokoll" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServerEichprozess" EntityType="Self.ServerEichprozess" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServerFirmenZusatzdaten" EntityType="Self.ServerFirmenZusatzdaten" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServerKompatiblitaetsnachweis" EntityType="Self.ServerKompatiblitaetsnachweis" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServerKonfiguration" EntityType="Self.ServerKonfiguration" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServerLizensierung" EntityType="Self.ServerLizensierung" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServerLookup_Auswertegeraet" EntityType="Self.ServerLookup_Auswertegeraet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServerLookup_Bearbeitungsstatus" EntityType="Self.ServerLookup_Bearbeitungsstatus" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServerLookup_Konformitaetsbewertungsverfahren" EntityType="Self.ServerLookup_Konformitaetsbewertungsverfahren" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServerLookup_Vorgangsstatus" EntityType="Self.ServerLookup_Vorgangsstatus" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServerLookup_Waagenart" EntityType="Self.ServerLookup_Waagenart" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServerLookup_Waagentyp" EntityType="Self.ServerLookup_Waagentyp" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServerLookup_Waegezelle" EntityType="Self.ServerLookup_Waegezelle" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServerLookupVertragspartnerFirma" EntityType="Self.ServerLookupVertragspartnerFirma" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServerMogelstatistik" EntityType="Self.ServerMogelstatistik" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServerPruefungAnsprechvermoegen" EntityType="Self.ServerPruefungAnsprechvermoegen" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServerPruefungAussermittigeBelastung" EntityType="Self.ServerPruefungAussermittigeBelastung" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServerPruefungLinearitaetFallend" EntityType="Self.ServerPruefungLinearitaetFallend" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServerPruefungLinearitaetSteigend" EntityType="Self.ServerPruefungLinearitaetSteigend" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServerPruefungRollendeLasten" EntityType="Self.ServerPruefungRollendeLasten" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServerPruefungStabilitaetGleichgewichtslage" EntityType="Self.ServerPruefungStabilitaetGleichgewichtslage" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServerPruefungStaffelverfahrenErsatzlast" EntityType="Self.ServerPruefungStaffelverfahrenErsatzlast" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServerPruefungStaffelverfahrenNormallast" EntityType="Self.ServerPruefungStaffelverfahrenNormallast" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServerPruefungWiederholbarkeit" EntityType="Self.ServerPruefungWiederholbarkeit" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServerVerbindungsprotokoll" EntityType="Self.ServerVerbindungsprotokoll" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StatusPrüfscheinnummer" EntityType="Self.StatusPrüfscheinnummer" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Benutzer_Firmen" Association="Self.FK_Benutzer_Firmen">
+            <End Role="Firmen" EntitySet="Firmen" />
+            <End Role="Benutzer" EntitySet="Benutzer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Mogelstatistik_Eichprozess" Association="Self.FK_Mogelstatistik_Eichprozess">
+            <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
+            <End Role="ServerMogelstatistik" EntitySet="ServerMogelstatistik" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Mogelstatistik_Lookup_Auswertegeraet" Association="Self.FK_Mogelstatistik_Lookup_Auswertegeraet">
+            <End Role="ServerLookup_Auswertegeraet" EntitySet="ServerLookup_Auswertegeraet" />
+            <End Role="ServerMogelstatistik" EntitySet="ServerMogelstatistik" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Mogelstatistik_Lookup_Waegezelle" Association="Self.FK_Mogelstatistik_Lookup_Waegezelle">
+            <End Role="ServerLookup_Waegezelle" EntitySet="ServerLookup_Waegezelle" />
+            <End Role="ServerMogelstatistik" EntitySet="ServerMogelstatistik" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PruefungAussermittigeBelastung_Eichprotokoll" Association="Self.FK_PruefungAussermittigeBelastung_Eichprotokoll">
+            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
+            <End Role="ServerPruefungAussermittigeBelastung" EntitySet="ServerPruefungAussermittigeBelastung" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PruefungLinearitaetFallend_Eichprotokoll" Association="Self.FK_PruefungLinearitaetFallend_Eichprotokoll">
+            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
+            <End Role="ServerPruefungLinearitaetFallend" EntitySet="ServerPruefungLinearitaetFallend" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PruefungLinearitaetSteigend_Eichprotokoll" Association="Self.FK_PruefungLinearitaetSteigend_Eichprotokoll">
+            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
+            <End Role="ServerPruefungLinearitaetSteigend" EntitySet="ServerPruefungLinearitaetSteigend" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PruefungLinearitaetSteigendAnsprechvermoegen_Eichprotokoll" Association="Self.FK_PruefungLinearitaetSteigendAnsprechvermoegen_Eichprotokoll">
+            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
+            <End Role="ServerPruefungAnsprechvermoegen" EntitySet="ServerPruefungAnsprechvermoegen" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PruefungRollendeLasten_Eichprotokoll" Association="Self.FK_PruefungRollendeLasten_Eichprotokoll">
+            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
+            <End Role="ServerPruefungRollendeLasten" EntitySet="ServerPruefungRollendeLasten" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PruefungStabilitaetGleichgewichtslage_Eichprotokoll" Association="Self.FK_PruefungStabilitaetGleichgewichtslage_Eichprotokoll">
+            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
+            <End Role="ServerPruefungStabilitaetGleichgewichtslage" EntitySet="ServerPruefungStabilitaetGleichgewichtslage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PruefungStaffelverfahrenErsatzlast_Eichprotokoll" Association="Self.FK_PruefungStaffelverfahrenErsatzlast_Eichprotokoll">
+            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
+            <End Role="ServerPruefungStaffelverfahrenErsatzlast" EntitySet="ServerPruefungStaffelverfahrenErsatzlast" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PruefungStaffelverfahrenNormallast_Eichprotokoll" Association="Self.FK_PruefungStaffelverfahrenNormallast_Eichprotokoll">
+            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
+            <End Role="ServerPruefungStaffelverfahrenNormallast" EntitySet="ServerPruefungStaffelverfahrenNormallast" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PruefungWiederholbarkeit_Eichprotokoll" Association="Self.FK_PruefungWiederholbarkeit_Eichprotokoll">
+            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
+            <End Role="ServerPruefungWiederholbarkeit" EntitySet="ServerPruefungWiederholbarkeit" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServerEichprotokoll_ServerLookup_Konformitaetsbewertungsverfahren" Association="Self.FK_ServerEichprotokoll_ServerLookup_Konformitaetsbewertungsverfahren">
+            <End Role="ServerLookup_Konformitaetsbewertungsverfahren" EntitySet="ServerLookup_Konformitaetsbewertungsverfahren" />
+            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServerFirmenZusatzdaten_Firmen" Association="Self.FK_ServerFirmenZusatzdaten_Firmen">
+            <End Role="Firmen" EntitySet="Firmen" />
+            <End Role="ServerFirmenZusatzdaten" EntitySet="ServerFirmenZusatzdaten" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServerLizensierung_Benutzer" Association="Self.FK_ServerLizensierung_Benutzer">
+            <End Role="Benutzer" EntitySet="Benutzer" />
+            <End Role="ServerLizensierung" EntitySet="ServerLizensierung" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="EichenSQLDatabaseModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
@@ -1129,6 +997,7 @@
             <End Role="Firmen" EntitySet="Firmen" />
             <End Role="ServerFirmenZusatzdaten" EntitySet="ServerFirmenZusatzdaten" />
           </AssociationSet>
+          <EntitySet Name="StatusPrüfscheinnummer" EntityType="EichenSQLDatabaseModel.StatusPrüfscheinnummer" />
         </EntityContainer>
         <EntityType Name="ServerEichmarkenverwaltung">
           <Key>
@@ -1282,7 +1151,7 @@
           <Property Type="String" Name="Beschaffenheitspruefung_Genauigkeitsklasse" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Beschaffenheitspruefung_Pruefintervall" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Beschaffenheitspruefung_LetztePruefung" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Beschaffenheitspruefung_Pruefscheinnummer" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Beschaffenheitspruefung_Pruefscheinnummer" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Beschaffenheitspruefung_EichfahrzeugFirma" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="Boolean" Name="Sicherung_CE2016" />
           <Property Type="Int16" Name="Sicherung_CE2016Anzahl" />
@@ -1316,7 +1185,7 @@
           <Property Type="DateTime" Name="BearbeitungsDatum" Precision="3" />
           <Property Type="String" Name="ErzeugerLizenz" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="ZurBearbeitungGesperrtDurch" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="Boolean" Name="Standardwaage" Nullable="false" />
+          <Property Type="Boolean" Name="Standardwaage" />
         </EntityType>
         <EntityType Name="ServerKompatiblitaetsnachweis">
           <Key>
@@ -2034,6 +1903,14 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="StatusPrüfscheinnummer">
+          <Key>
+            <PropertyRef Name="Nummer" />
+          </Key>
+          <Property Name="Nummer" Type="Int32" Nullable="false" />
+          <Property Name="Gesperrt" Type="Boolean" />
+          <Property Name="GesperrtDurchDatum" Type="Boolean" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -2636,6 +2513,15 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="StatusPrüfscheinnummer">
+            <EntityTypeMapping TypeName="EichenSQLDatabaseModel.StatusPrüfscheinnummer">
+              <MappingFragment StoreEntitySet="StatusPrüfscheinnummer">
+                <ScalarProperty Name="GesperrtDurchDatum" ColumnName="GesperrtDurchDatum" />
+                <ScalarProperty Name="Gesperrt" ColumnName="Gesperrt" />
+                <ScalarProperty Name="Nummer" ColumnName="Nummer" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -2653,6 +2539,7 @@
         <DesignerProperty Name="EnablePluralization" Value="False" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->
