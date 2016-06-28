@@ -1,6 +1,7 @@
 ﻿' HINWEIS: Mit dem Befehl "Umbenennen" im Kontextmenü können Sie den Klassennamen "Service1" sowohl im Code als auch in der SVC-Datei und der Konfigurationsdatei ändern.
 Imports System.Data.Entity
 Imports System.Data.Objects
+Imports EichsoftwareWebservice
 
 Public Class EichsoftwareWebservice
     Implements IEichsoftwareWebservice
@@ -1778,4 +1779,18 @@ Public Class EichsoftwareWebservice
         End Try
     End Function
 
+    Public Function GetGesperrtePrüfscheinnummern(HEKennung As String, Lizenzschluessel As String, Vorgangsnummer As String, WindowsUsername As String, Domainname As String, Computername As String) As List(Of StatusPrüfscheinnummer) Implements IEichsoftwareWebservice.GetGesperrtePrüfscheinnummern
+
+        Using dbcontext As New EichenSQLDatabaseEntities1
+            Dim ObjLizenz = (From lic In dbcontext.ServerLizensierung Where lic.HEKennung = HEKennung And lic.Lizenzschluessel = Lizenzschluessel And lic.Aktiv = True).FirstOrDefault
+            If Not ObjLizenz Is Nothing Then
+
+                Dim Pruefscheinnummern = (From o In dbcontext.StatusPrüfscheinnummer Where o.Gesperrt = True Or o.GesperrtDurchDatum = True).ToList
+                Return Pruefscheinnummern
+
+            End If
+        End Using
+
+        Return New List(Of StatusPrüfscheinnummer)
+    End Function
 End Class
