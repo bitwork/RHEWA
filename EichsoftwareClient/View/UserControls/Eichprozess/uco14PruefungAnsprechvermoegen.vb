@@ -687,7 +687,7 @@ RadTextBoxControlLast2.Text.Trim = "" Or
                         Exit Sub
                     End Try
 
-                    Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
+                    Dim objLiz = (From db In dbcontext.Lizensierung Where db.Lizenzschluessel = AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel And db.HEKennung = AktuellerBenutzer.Instance.Lizenz.HEKennung).FirstOrDefault
 
                     Try
                         'add prüft anhand der Vorgangsnummer automatisch ob ein neuer Prozess angelegt, oder ein vorhandener aktualisiert wird

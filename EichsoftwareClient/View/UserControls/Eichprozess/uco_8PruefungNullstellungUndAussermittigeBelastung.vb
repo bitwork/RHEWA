@@ -1443,6 +1443,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
             'fehlermeldung anzeigen bei falscher validierung
             Dim result = Me.ShowValidationErrorBox(False)
 
+            If result = DialogResult.Yes Or result = DialogResult.Ignore Then
                 Return True
             ElseIf result = DialogResult.Retry Then
                 ' Ist = soll

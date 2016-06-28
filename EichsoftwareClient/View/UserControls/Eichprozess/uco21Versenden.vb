@@ -104,6 +104,14 @@ Public Class Uco21Versenden
             Exit Sub
         End If
 
+        'Bei Standardwaagen soll eine Bestätigung des Benutzers eingefordert werden
+        If objEichprozess.AusStandardwaageErzeugt Then
+            If InputBox(String.Format("Bitte bestätigen Sie mit ihrer HE-Kennung ({0}) die ordnungsgemäße Überprüfung.", AktuellerBenutzer.Instance.Lizenz.HEKennung), "Bestätigung").ToLower <> AktuellerBenutzer.Instance.Lizenz.HEKennung.ToLower Then
+                MessageBox.Show("Die HE-Kennung stimmt nicht überrein. Das Versenden wird abgebrochen")
+                Return
+            End If
+        End If
+
         Dim objServerEichprozess As New EichsoftwareWebservice.ServerEichprozess
 
         'auf versendet Status setzen
@@ -151,7 +159,7 @@ Public Class Uco21Versenden
                     Exit Sub
                 End Try
 
-                Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
+                Dim objLiz = (From db In dbcontext.Lizensierung Where db.Lizenzschluessel = AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel And db.HEKennung = AktuellerBenutzer.Instance.Lizenz.HEKennung).FirstOrDefault
                 Dim bolSuccess As Boolean = False
                 Try
                     'prüfen ob neue WZ hinzuzufügen ist
@@ -430,7 +438,7 @@ Public Class Uco21Versenden
                         Exit Sub
                     End Try
 
-                    Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
+                    Dim objLiz = (From db In dbcontext.Lizensierung Where db.Lizenzschluessel = AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel And db.HEKennung = AktuellerBenutzer.Instance.Lizenz.HEKennung).FirstOrDefault
 
                     Try
                         'add prüft anhand der Vorgangsnummer automatisch ob ein neuer Prozess angelegt, oder ein vorhandener aktualisiert wird
@@ -515,7 +523,7 @@ Public Class Uco21Versenden
                 End Try
 
                 'daten von WebDB holen
-                Dim objLiz = (From db In dbcontext.Lizensierung Select db).FirstOrDefault
+                Dim objLiz = (From db In dbcontext.Lizensierung Where db.Lizenzschluessel = AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel And db.HEKennung = AktuellerBenutzer.Instance.Lizenz.HEKennung).FirstOrDefault
                 Dim objFTPDaten = Webcontext.GetFTPCredentials(objLiz.HEKennung, objLiz.Lizenzschluessel, objEichprozess.Vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
 
                 'aufbereiten der für FTP benötigten Verbindungsdaten
