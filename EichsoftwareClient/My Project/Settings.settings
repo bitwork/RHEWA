@@ -14,5 +14,8 @@
     <Setting Name="RHEWAFilterMonatBis" Type="System.DateTime" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="LetzterOrdnerPlausiblitaet" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -132,7 +132,7 @@
     <value>RadScrollablePanelTrafficLightBreadcrumb.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanelTrafficLightBreadcrumb.PanelContainer.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadScrollablePanelContainer, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadScrollablePanelContainer, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanelTrafficLightBreadcrumb.PanelContainer.Parent" xml:space="preserve">
     <value>RadScrollablePanelTrafficLightBreadcrumb</value>
@@ -140,34 +140,10 @@
   <data name="&gt;&gt;RadScrollablePanelTrafficLightBreadcrumb.PanelContainer.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="RadScrollablePanelTrafficLightBreadcrumb.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadScrollablePanelTrafficLightBreadcrumb.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadScrollablePanelTrafficLightBreadcrumb.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="RadScrollablePanelTrafficLightBreadcrumb.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadScrollablePanelTrafficLightBreadcrumb.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadScrollablePanelTrafficLightBreadcrumb.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadScrollablePanelTrafficLightBreadcrumb.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadScrollablePanelTrafficLightBreadcrumb.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
   <data name="RadScrollablePanelTrafficLightBreadcrumb.Size" type="System.Drawing.Size, System.Drawing">
     <value>999, 74</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="RadScrollablePanelTrafficLightBreadcrumb.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
@@ -178,7 +154,7 @@
     <value>RadScrollablePanelTrafficLightBreadcrumb</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanelTrafficLightBreadcrumb.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadScrollablePanel, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadScrollablePanel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanelTrafficLightBreadcrumb.Parent" xml:space="preserve">
     <value>SplitContainer3.Panel2</value>
@@ -195,30 +171,6 @@
   <data name="RadLabelContextHelp.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 33</value>
   </data>
-  <data name="RadLabelContextHelp.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadLabelContextHelp.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadLabelContextHelp.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadLabelContextHelp.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadLabelContextHelp.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadLabelContextHelp.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadLabelContextHelp.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadLabelContextHelp.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
   <data name="RadLabelContextHelp.Size" type="System.Drawing.Size, System.Drawing">
     <value>114, 18</value>
   </data>
@@ -232,7 +184,7 @@
     <value>RadLabelContextHelp</value>
   </data>
   <data name="&gt;&gt;RadLabelContextHelp.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadLabelContextHelp.Parent" xml:space="preserve">
     <value>RadScrollablePanelContextHelp.PanelContainer</value>
@@ -247,7 +199,7 @@
     <value>NoControl</value>
   </data>
   <data name="PictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>167, 3</value>
+    <value>163, 3</value>
   </data>
   <data name="PictureBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 39</value>
@@ -274,37 +226,13 @@
     <value>RadScrollablePanelContextHelp.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanelContextHelp.PanelContainer.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadScrollablePanelContainer, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadScrollablePanelContainer, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanelContextHelp.PanelContainer.Parent" xml:space="preserve">
     <value>RadScrollablePanelContextHelp</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanelContextHelp.PanelContainer.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="RadScrollablePanelContextHelp.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadScrollablePanelContextHelp.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadScrollablePanelContextHelp.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadScrollablePanelContextHelp.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadScrollablePanelContextHelp.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadScrollablePanelContextHelp.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadScrollablePanelContextHelp.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadScrollablePanelContextHelp.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="RadScrollablePanelContextHelp.Size" type="System.Drawing.Size, System.Drawing">
     <value>204, 660</value>
@@ -319,7 +247,7 @@
     <value>RadScrollablePanelContextHelp</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanelContextHelp.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadScrollablePanel, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadScrollablePanel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanelContextHelp.Parent" xml:space="preserve">
     <value>SplitContainer2.Panel2</value>
@@ -329,30 +257,6 @@
   </data>
   <data name="SplitPanelContent.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
-  </data>
-  <data name="SplitPanelContent.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="SplitPanelContent.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="SplitPanelContent.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="SplitPanelContent.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="SplitPanelContent.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="SplitPanelContent.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="SplitPanelContent.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="SplitPanelContent.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="SplitPanelContent.Size" type="System.Drawing.Size, System.Drawing">
     <value>1064, 590</value>
@@ -367,7 +271,7 @@
     <value>SplitPanelContent</value>
   </data>
   <data name="&gt;&gt;SplitPanelContent.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.SplitPanel, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.SplitPanel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;SplitPanelContent.Parent" xml:space="preserve">
     <value>RadSplitContainerNavigation</value>
@@ -375,38 +279,44 @@
   <data name="&gt;&gt;SplitPanelContent.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="RadButtonPlausibilitaet.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="RadButtonPlausibilitaet.Location" type="System.Drawing.Point, System.Drawing">
+    <value>321, 9</value>
+  </data>
+  <data name="RadButtonPlausibilitaet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 50</value>
+  </data>
+  <data name="RadButtonPlausibilitaet.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="RadButtonPlausibilitaet.Text" xml:space="preserve">
+    <value>Plausibilitätsprüfung</value>
+  </data>
+  <data name="RadButtonPlausibilitaet.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
+  </data>
+  <data name="RadButtonPlausibilitaet.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;RadButtonPlausibilitaet.Name" xml:space="preserve">
+    <value>RadButtonPlausibilitaet</value>
+  </data>
+  <data name="&gt;&gt;RadButtonPlausibilitaet.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadButtonPlausibilitaet.Parent" xml:space="preserve">
+    <value>SplitPanelNavigation</value>
+  </data>
+  <data name="&gt;&gt;RadButtonPlausibilitaet.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="RadButtonVersenden.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
   </data>
   <data name="RadButtonVersenden.Location" type="System.Drawing.Point, System.Drawing">
     <value>616, 9</value>
-  </data>
-  <data name="RadButtonVersenden.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadButtonVersenden.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadButtonVersenden.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadButtonVersenden.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadButtonVersenden.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadButtonVersenden.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadButtonVersenden.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadButtonVersenden.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="RadButtonVersenden.RootElement.ToolTipText" xml:space="preserve">
-    <value>Hiermit lässt sich ein Konformitätsbewertungsprozess von einem exteren Bevollmächtigten auf schreibbar setzen um korrekturen vorzunehmen</value>
   </data>
   <data name="RadButtonVersenden.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 50</value>
@@ -427,46 +337,19 @@
     <value>RadButtonVersenden</value>
   </data>
   <data name="&gt;&gt;RadButtonVersenden.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonVersenden.Parent" xml:space="preserve">
     <value>SplitPanelNavigation</value>
   </data>
   <data name="&gt;&gt;RadButtonVersenden.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="RadButtonEntsperren.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
   </data>
   <data name="RadButtonEntsperren.Location" type="System.Drawing.Point, System.Drawing">
     <value>454, 9</value>
-  </data>
-  <data name="RadButtonEntsperren.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadButtonEntsperren.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadButtonEntsperren.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadButtonEntsperren.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadButtonEntsperren.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadButtonEntsperren.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadButtonEntsperren.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadButtonEntsperren.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="RadButtonEntsperren.RootElement.ToolTipText" xml:space="preserve">
-    <value>Hiermit lässt sich ein Konformitätsbewertungsprozess von einem exteren Bevollmächtigten auf schreibbar setzen um korrekturen vorzunehmen</value>
   </data>
   <data name="RadButtonEntsperren.Size" type="System.Drawing.Size, System.Drawing">
     <value>156, 50</value>
@@ -487,13 +370,13 @@
     <value>RadButtonEntsperren</value>
   </data>
   <data name="&gt;&gt;RadButtonEntsperren.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonEntsperren.Parent" xml:space="preserve">
     <value>SplitPanelNavigation</value>
   </data>
   <data name="&gt;&gt;RadButtonEntsperren.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="RadButtonChangeLanguageToPolish.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
@@ -506,30 +389,6 @@
   </data>
   <data name="RadButtonChangeLanguageToPolish.Location" type="System.Drawing.Point, System.Drawing">
     <value>284, 9</value>
-  </data>
-  <data name="RadButtonChangeLanguageToPolish.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadButtonChangeLanguageToPolish.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadButtonChangeLanguageToPolish.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadButtonChangeLanguageToPolish.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadButtonChangeLanguageToPolish.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadButtonChangeLanguageToPolish.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadButtonChangeLanguageToPolish.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadButtonChangeLanguageToPolish.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="RadButtonChangeLanguageToPolish.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 50</value>
@@ -544,13 +403,13 @@
     <value>RadButtonChangeLanguageToPolish</value>
   </data>
   <data name="&gt;&gt;RadButtonChangeLanguageToPolish.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonChangeLanguageToPolish.Parent" xml:space="preserve">
     <value>SplitPanelNavigation</value>
   </data>
   <data name="&gt;&gt;RadButtonChangeLanguageToPolish.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="resource.Text" xml:space="preserve">
     <value> </value>
@@ -567,30 +426,6 @@
   <data name="RadButtonChangeLanguageToEnglish.Location" type="System.Drawing.Point, System.Drawing">
     <value>228, 9</value>
   </data>
-  <data name="RadButtonChangeLanguageToEnglish.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadButtonChangeLanguageToEnglish.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadButtonChangeLanguageToEnglish.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadButtonChangeLanguageToEnglish.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadButtonChangeLanguageToEnglish.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadButtonChangeLanguageToEnglish.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadButtonChangeLanguageToEnglish.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadButtonChangeLanguageToEnglish.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
   <data name="RadButtonChangeLanguageToEnglish.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 50</value>
   </data>
@@ -601,13 +436,16 @@
     <value>RadButtonChangeLanguageToEnglish</value>
   </data>
   <data name="&gt;&gt;RadButtonChangeLanguageToEnglish.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonChangeLanguageToEnglish.Parent" xml:space="preserve">
     <value>SplitPanelNavigation</value>
   </data>
   <data name="&gt;&gt;RadButtonChangeLanguageToEnglish.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
+  </data>
+  <data name="resource.Text1" xml:space="preserve">
+    <value />
   </data>
   <data name="RadButtonChangeLanguageToGerman.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
@@ -621,30 +459,6 @@
   <data name="RadButtonChangeLanguageToGerman.Location" type="System.Drawing.Point, System.Drawing">
     <value>172, 10</value>
   </data>
-  <data name="RadButtonChangeLanguageToGerman.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadButtonChangeLanguageToGerman.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadButtonChangeLanguageToGerman.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadButtonChangeLanguageToGerman.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadButtonChangeLanguageToGerman.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadButtonChangeLanguageToGerman.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadButtonChangeLanguageToGerman.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadButtonChangeLanguageToGerman.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
   <data name="RadButtonChangeLanguageToGerman.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 50</value>
   </data>
@@ -655,13 +469,16 @@
     <value>RadButtonChangeLanguageToGerman</value>
   </data>
   <data name="&gt;&gt;RadButtonChangeLanguageToGerman.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonChangeLanguageToGerman.Parent" xml:space="preserve">
     <value>SplitPanelNavigation</value>
   </data>
   <data name="&gt;&gt;RadButtonChangeLanguageToGerman.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
+  </data>
+  <data name="resource.Text2" xml:space="preserve">
+    <value />
   </data>
   <data name="RadButtonNavigateBackwards.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -674,33 +491,6 @@
   </data>
   <data name="RadButtonNavigateBackwards.Location" type="System.Drawing.Point, System.Drawing">
     <value>821, 9</value>
-  </data>
-  <data name="RadButtonNavigateBackwards.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadButtonNavigateBackwards.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadButtonNavigateBackwards.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadButtonNavigateBackwards.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadButtonNavigateBackwards.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadButtonNavigateBackwards.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadButtonNavigateBackwards.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadButtonNavigateBackwards.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="RadButtonNavigateBackwards.RootElement.ToolTipText" xml:space="preserve">
-    <value>Shortcut: Ctrl + Enter</value>
   </data>
   <data name="RadButtonNavigateBackwards.Size" type="System.Drawing.Size, System.Drawing">
     <value>95, 50</value>
@@ -718,18 +508,18 @@
     <value>RadButtonNavigateBackwards</value>
   </data>
   <data name="&gt;&gt;RadButtonNavigateBackwards.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonNavigateBackwards.Parent" xml:space="preserve">
     <value>SplitPanelNavigation</value>
   </data>
   <data name="&gt;&gt;RadButtonNavigateBackwards.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="resource.Image" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="resource.Text1" xml:space="preserve">
+  <data name="resource.Text3" xml:space="preserve">
     <value>Back</value>
   </data>
   <data name="RadButtonNavigateForwards.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -740,33 +530,6 @@
   </data>
   <data name="RadButtonNavigateForwards.Location" type="System.Drawing.Point, System.Drawing">
     <value>922, 9</value>
-  </data>
-  <data name="RadButtonNavigateForwards.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadButtonNavigateForwards.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadButtonNavigateForwards.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadButtonNavigateForwards.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadButtonNavigateForwards.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadButtonNavigateForwards.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadButtonNavigateForwards.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadButtonNavigateForwards.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
-  <data name="RadButtonNavigateForwards.RootElement.ToolTipText" xml:space="preserve">
-    <value>Shortcut: Shift + Enter</value>
   </data>
   <data name="RadButtonNavigateForwards.Size" type="System.Drawing.Size, System.Drawing">
     <value>139, 50</value>
@@ -784,18 +547,18 @@
     <value>RadButtonNavigateForwards</value>
   </data>
   <data name="&gt;&gt;RadButtonNavigateForwards.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonNavigateForwards.Parent" xml:space="preserve">
     <value>SplitPanelNavigation</value>
   </data>
   <data name="&gt;&gt;RadButtonNavigateForwards.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="resource.Image1" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
   </data>
-  <data name="resource.Text2" xml:space="preserve">
+  <data name="resource.Text4" xml:space="preserve">
     <value>Next</value>
   </data>
   <data name="PictureBoxRHEWALogo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -826,34 +589,10 @@
     <value>SplitPanelNavigation</value>
   </data>
   <data name="&gt;&gt;PictureBoxRHEWALogo.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="SplitPanelNavigation.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 594</value>
-  </data>
-  <data name="SplitPanelNavigation.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="SplitPanelNavigation.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="SplitPanelNavigation.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="SplitPanelNavigation.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="SplitPanelNavigation.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="SplitPanelNavigation.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="SplitPanelNavigation.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="SplitPanelNavigation.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="SplitPanelNavigation.Size" type="System.Drawing.Size, System.Drawing">
     <value>1064, 66</value>
@@ -868,7 +607,7 @@
     <value>SplitPanelNavigation</value>
   </data>
   <data name="&gt;&gt;SplitPanelNavigation.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.SplitPanel, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.SplitPanel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;SplitPanelNavigation.Parent" xml:space="preserve">
     <value>RadSplitContainerNavigation</value>
@@ -885,30 +624,6 @@
   <data name="RadSplitContainerNavigation.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="RadSplitContainerNavigation.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadSplitContainerNavigation.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadSplitContainerNavigation.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadSplitContainerNavigation.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadSplitContainerNavigation.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadSplitContainerNavigation.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadSplitContainerNavigation.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadSplitContainerNavigation.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
   <data name="RadSplitContainerNavigation.Size" type="System.Drawing.Size, System.Drawing">
     <value>1064, 660</value>
   </data>
@@ -922,7 +637,7 @@
     <value>RadSplitContainerNavigation</value>
   </data>
   <data name="&gt;&gt;RadSplitContainerNavigation.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadSplitContainer, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadSplitContainer, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadSplitContainerNavigation.Parent" xml:space="preserve">
     <value>SplitContainer2.Panel1</value>
@@ -942,30 +657,6 @@
   <data name="lblHeaderText.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="lblHeaderText.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblHeaderText.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblHeaderText.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="lblHeaderText.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblHeaderText.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lblHeaderText.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblHeaderText.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblHeaderText.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
   <data name="lblHeaderText.Size" type="System.Drawing.Size, System.Drawing">
     <value>269, 74</value>
   </data>
@@ -979,19 +670,13 @@
     <value>lblHeaderText</value>
   </data>
   <data name="&gt;&gt;lblHeaderText.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblHeaderText.Parent" xml:space="preserve">
     <value>SplitContainer3.Panel1</value>
   </data>
   <data name="&gt;&gt;lblHeaderText.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="RadDropDownButtonElement1.AccessibleDescription" xml:space="preserve">
-    <value>RadDropDownButtonElement1</value>
-  </data>
-  <data name="RadDropDownButtonElement1.AccessibleName" xml:space="preserve">
-    <value>RadDropDownButtonElement1</value>
   </data>
   <data name="RadDropDownButtonElement1.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
@@ -1017,12 +702,6 @@
   <data name="RadDropDownButtonElement1.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="RadMenuItem1.AccessibleDescription" xml:space="preserve">
-    <value>RadMenuItem1</value>
-  </data>
-  <data name="RadMenuItem1.AccessibleName" xml:space="preserve">
-    <value>RadMenuItem1</value>
-  </data>
   <data name="RadMenuItem1.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
@@ -1037,6 +716,9 @@
   </data>
   <data name="RadMenuItem1.ImageIndex" type="System.Int32, mscorlib">
     <value>-1</value>
+  </data>
+  <data name="RadMenuItem1.ImageKey" xml:space="preserve">
+    <value />
   </data>
   <data name="RadMenuItem1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -1056,12 +738,6 @@
   <data name="RadMenuItem1.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="RadMenuItem2.AccessibleDescription" xml:space="preserve">
-    <value>RadMenuItem2</value>
-  </data>
-  <data name="RadMenuItem2.AccessibleName" xml:space="preserve">
-    <value>RadMenuItem2</value>
-  </data>
   <data name="RadMenuItem2.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
@@ -1076,6 +752,9 @@
   </data>
   <data name="RadMenuItem2.ImageIndex" type="System.Int32, mscorlib">
     <value>-1</value>
+  </data>
+  <data name="RadMenuItem2.ImageKey" xml:space="preserve">
+    <value />
   </data>
   <data name="RadMenuItem2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -1095,12 +774,6 @@
   <data name="RadMenuItem2.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="RadMenuItem3.AccessibleDescription" xml:space="preserve">
-    <value>RadMenuItem3</value>
-  </data>
-  <data name="RadMenuItem3.AccessibleName" xml:space="preserve">
-    <value>RadMenuItem3</value>
-  </data>
   <data name="RadMenuItem3.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
@@ -1115,6 +788,9 @@
   </data>
   <data name="RadMenuItem3.ImageIndex" type="System.Int32, mscorlib">
     <value>-1</value>
+  </data>
+  <data name="RadMenuItem3.ImageKey" xml:space="preserve">
+    <value />
   </data>
   <data name="RadMenuItem3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -1137,30 +813,6 @@
   <data name="RadTextBox2.Location" type="System.Drawing.Point, System.Drawing">
     <value>94, 44</value>
   </data>
-  <data name="RadTextBox2.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBox2.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBox2.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadTextBox2.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadTextBox2.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadTextBox2.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadTextBox2.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBox2.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
   <data name="RadTextBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 22</value>
   </data>
@@ -1174,7 +826,7 @@
     <value>RadTextBox2</value>
   </data>
   <data name="&gt;&gt;RadTextBox2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <metadata name="ImageListTrafficLight.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>525, 17</value>
@@ -1184,7 +836,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAB6
-        EgAAAk1TRnQBSQFMAgEBAwEAAZgBBAGYAQQBIAEAASABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAGA
+        EgAAAk1TRnQBSQFMAgEBAwEAAagBBAGoAQQBIAEAASABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAGA
         AwABIAMAAQEBAAEgBgABQP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wBPAAEBAwQBBgMLAQ8DEAEV
         AxABFgMQARYDEAEVAwsBDwMEAQYDAAEBWwABAQMEAQYDCwEPAxABFQMQARYDEAEWAxABFQMLAQ8DBAEG
         AwABAVsAAQEDBAEGAwsBDwMQARUDEAEWAxABFgMQARUDCwEPAwQBBgMAAQHUAAMCAQMDCgEOAxcBIAMj
@@ -1265,12 +917,6 @@
         AQcC/wHgAQcC/wHgAQcB/wQADP8EAAz/BAAM/wQADP8EAAz/BAAM/wQADP8EAAz/BAAM/wQACw==
 </value>
   </data>
-  <data name="RadDropDownButtonElement2.AccessibleDescription" xml:space="preserve">
-    <value>RadDropDownButtonElementKompatibilitaetsnachweis</value>
-  </data>
-  <data name="RadDropDownButtonElement2.AccessibleName" xml:space="preserve">
-    <value>RadDropDownButtonElementKompatibilitaetsnachweis</value>
-  </data>
   <data name="RadDropDownButtonElement2.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
@@ -1295,12 +941,6 @@
   <data name="RadDropDownButtonElement2.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="RadMenuItem4.AccessibleDescription" xml:space="preserve">
-    <value>Messtechnische und technische Daten</value>
-  </data>
-  <data name="RadMenuItem4.AccessibleName" xml:space="preserve">
-    <value>Messtechnische und technische Daten</value>
-  </data>
   <data name="RadMenuItem4.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
@@ -1312,6 +952,9 @@
   </data>
   <data name="RadMenuItem4.ImageIndex" type="System.Int32, mscorlib">
     <value>-1</value>
+  </data>
+  <data name="RadMenuItem4.ImageKey" xml:space="preserve">
+    <value />
   </data>
   <data name="RadMenuItem4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -1331,12 +974,6 @@
   <data name="RadMenuItem4.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="RadMenuItem5.AccessibleDescription" xml:space="preserve">
-    <value>Waage</value>
-  </data>
-  <data name="RadMenuItem5.AccessibleName" xml:space="preserve">
-    <value>Waage</value>
-  </data>
   <data name="RadMenuItem5.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
@@ -1348,6 +985,9 @@
   </data>
   <data name="RadMenuItem5.ImageIndex" type="System.Int32, mscorlib">
     <value>-1</value>
+  </data>
+  <data name="RadMenuItem5.ImageKey" xml:space="preserve">
+    <value />
   </data>
   <data name="RadMenuItem5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -1367,12 +1007,6 @@
   <data name="RadMenuItem5.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="RadMenuItem6.AccessibleDescription" xml:space="preserve">
-    <value>Auswertegerät</value>
-  </data>
-  <data name="RadMenuItem6.AccessibleName" xml:space="preserve">
-    <value>Auswertegerät</value>
-  </data>
   <data name="RadMenuItem6.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
@@ -1384,6 +1018,9 @@
   </data>
   <data name="RadMenuItem6.ImageIndex" type="System.Int32, mscorlib">
     <value>-1</value>
+  </data>
+  <data name="RadMenuItem6.ImageKey" xml:space="preserve">
+    <value />
   </data>
   <data name="RadMenuItem6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -1403,12 +1040,6 @@
   <data name="RadMenuItem6.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="RadMenuItem7.AccessibleDescription" xml:space="preserve">
-    <value>Wägezelle(n)</value>
-  </data>
-  <data name="RadMenuItem7.AccessibleName" xml:space="preserve">
-    <value>Wägezelle(n)</value>
-  </data>
   <data name="RadMenuItem7.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
@@ -1420,6 +1051,9 @@
   </data>
   <data name="RadMenuItem7.ImageIndex" type="System.Int32, mscorlib">
     <value>-1</value>
+  </data>
+  <data name="RadMenuItem7.ImageKey" xml:space="preserve">
+    <value />
   </data>
   <data name="RadMenuItem7.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -1439,12 +1073,6 @@
   <data name="RadMenuItem7.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="RadMenuItem8.AccessibleDescription" xml:space="preserve">
-    <value>Verbindungselemente</value>
-  </data>
-  <data name="RadMenuItem8.AccessibleName" xml:space="preserve">
-    <value>Verbindungselemente</value>
-  </data>
   <data name="RadMenuItem8.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
@@ -1456,6 +1084,9 @@
   </data>
   <data name="RadMenuItem8.ImageIndex" type="System.Int32, mscorlib">
     <value>-1</value>
+  </data>
+  <data name="RadMenuItem8.ImageKey" xml:space="preserve">
+    <value />
   </data>
   <data name="RadMenuItem8.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -1474,12 +1105,6 @@
   </data>
   <data name="RadMenuItem8.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
-  </data>
-  <data name="RadDropDownButtonElement3.AccessibleDescription" xml:space="preserve">
-    <value>Beschaffenheit</value>
-  </data>
-  <data name="RadDropDownButtonElement3.AccessibleName" xml:space="preserve">
-    <value>Beschaffenheit</value>
   </data>
   <data name="RadDropDownButtonElement3.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
@@ -1505,12 +1130,6 @@
   <data name="RadDropDownButtonElement3.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="RadDropDownButtonElement4.AccessibleDescription" xml:space="preserve">
-    <value>Messtechnik</value>
-  </data>
-  <data name="RadDropDownButtonElement4.AccessibleName" xml:space="preserve">
-    <value>Messtechnik</value>
-  </data>
   <data name="RadDropDownButtonElement4.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
   </data>
@@ -1534,12 +1153,6 @@
   </data>
   <data name="RadDropDownButtonElement4.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
-  </data>
-  <data name="RadDropDownButtonElement5.AccessibleDescription" xml:space="preserve">
-    <value>Sicherung</value>
-  </data>
-  <data name="RadDropDownButtonElement5.AccessibleName" xml:space="preserve">
-    <value>Sicherung</value>
   </data>
   <data name="RadDropDownButtonElement5.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopLeft</value>
@@ -1812,53 +1425,32 @@
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>640, 480</value>
   </data>
-  <data name="FrmMainContainer.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
+  <data name="$this.Text" xml:space="preserve">
     <value />
-  </data>
-  <data name="FrmMainContainer.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="FrmMainContainer.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="FrmMainContainer.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="FrmMainContainer.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="FrmMainContainer.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="FrmMainContainer.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="FrmMainContainer.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="&gt;&gt;RadDropDownButtonElement1.Name" xml:space="preserve">
     <value>RadDropDownButtonElement1</value>
   </data>
   <data name="&gt;&gt;RadDropDownButtonElement1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadDropDownButtonElement, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadDropDownButtonElement, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadMenuItem1.Name" xml:space="preserve">
     <value>RadMenuItem1</value>
   </data>
   <data name="&gt;&gt;RadMenuItem1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadMenuItem2.Name" xml:space="preserve">
     <value>RadMenuItem2</value>
   </data>
   <data name="&gt;&gt;RadMenuItem2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadMenuItem3.Name" xml:space="preserve">
     <value>RadMenuItem3</value>
   </data>
   <data name="&gt;&gt;RadMenuItem3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;ImageListTrafficLight.Name" xml:space="preserve">
     <value>ImageListTrafficLight</value>
@@ -1870,60 +1462,60 @@
     <value>RadDropDownButtonElement2</value>
   </data>
   <data name="&gt;&gt;RadDropDownButtonElement2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadDropDownButtonElement, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadDropDownButtonElement, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadMenuItem4.Name" xml:space="preserve">
     <value>RadMenuItem4</value>
   </data>
   <data name="&gt;&gt;RadMenuItem4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadMenuItem5.Name" xml:space="preserve">
     <value>RadMenuItem5</value>
   </data>
   <data name="&gt;&gt;RadMenuItem5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadMenuItem6.Name" xml:space="preserve">
     <value>RadMenuItem6</value>
   </data>
   <data name="&gt;&gt;RadMenuItem6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadMenuItem7.Name" xml:space="preserve">
     <value>RadMenuItem7</value>
   </data>
   <data name="&gt;&gt;RadMenuItem7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadMenuItem8.Name" xml:space="preserve">
     <value>RadMenuItem8</value>
   </data>
   <data name="&gt;&gt;RadMenuItem8.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadMenuItem, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadDropDownButtonElement3.Name" xml:space="preserve">
     <value>RadDropDownButtonElement3</value>
   </data>
   <data name="&gt;&gt;RadDropDownButtonElement3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadDropDownButtonElement, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadDropDownButtonElement, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadDropDownButtonElement4.Name" xml:space="preserve">
     <value>RadDropDownButtonElement4</value>
   </data>
   <data name="&gt;&gt;RadDropDownButtonElement4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadDropDownButtonElement, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadDropDownButtonElement, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadDropDownButtonElement5.Name" xml:space="preserve">
     <value>RadDropDownButtonElement5</value>
   </data>
   <data name="&gt;&gt;RadDropDownButtonElement5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadDropDownButtonElement, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadDropDownButtonElement, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FrmMainContainer</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadForm, Telerik.WinControls.UI, Version=2015.2.728.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadForm, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
 </root>

@@ -44,7 +44,7 @@
     <PublisherName>RHEWA Waagenfabrik GmbH</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>88</ApplicationRevision>
+    <ApplicationRevision>89</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -135,6 +135,7 @@
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="Telerik.WinControls, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Telerik\UI for WinForms Q1 2016\Bin40\Telerik.WinControls.dll</HintPath>
@@ -228,6 +229,7 @@
     <Compile Include="Model\clsFTP.vb" />
     <Compile Include="Model\clsGeneralFunctions.vb" />
     <Compile Include="Model\clsOfficeExports.vb" />
+    <Compile Include="Model\clsPlausibilitaetspruefung.vb" />
     <Compile Include="Model\clsWebserviceFunctions.vb" />
     <Compile Include="Model\telerikgridlocalizer.vb" />
     <Compile Include="Mogelstatistik.vb">
@@ -348,6 +350,12 @@
       <DependentUpon>frmNeueWaegezele.vb</DependentUpon>
     </Compile>
     <Compile Include="View\Forms\frmNeueWaegezele.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Forms\frmPlausibiltaetspruefung.Designer.vb">
+      <DependentUpon>frmPlausibiltaetspruefung.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\Forms\frmPlausibiltaetspruefung.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\UserControls\Allgemein\CustomVisualItem.vb" />
@@ -585,6 +593,9 @@
     <EmbeddedResource Include="View\Forms\frmNeueWaegezele.resx">
       <DependentUpon>frmNeueWaegezele.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\frmPlausibiltaetspruefung.resx">
+      <DependentUpon>frmPlausibiltaetspruefung.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Allgemein\ucoAmpel.resx">
       <DependentUpon>ucoAmpel.vb</DependentUpon>
@@ -901,6 +912,7 @@
     <None Include="My Project\DataSources\Lookup_Waegezelle.datasource" />
     <None Include="My Project\DataSources\Lookup_Zusatzeinrichtung.datasource" />
     <None Include="My Project\DataSources\Mogelstatistik.datasource" />
+    <None Include="My Project\DataSources\PlausibilitaetDatasource.datasource" />
     <None Include="My Project\DataSources\PruefungAnsprechvermoegen.datasource" />
     <None Include="My Project\DataSources\PruefungAussermittigeBelastung.datasource" />
     <None Include="My Project\DataSources\PruefungEichfehlergrenzen.datasource" />

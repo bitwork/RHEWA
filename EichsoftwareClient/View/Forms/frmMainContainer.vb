@@ -55,6 +55,7 @@ Public Class FrmMainContainer
     End Sub
 
     Sub New(ByVal pEichprozess As Eichprozess, Optional ByVal penumDialogModus As enuDialogModus = enuDialogModus.normal)
+        Me.Visible = False
         ' Dieser Aufruf ist für den Designer erforderlich.
         InitializeComponent()
 
@@ -318,8 +319,8 @@ Public Class FrmMainContainer
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub FrmMainContainer_Load(sender As Object, e As System.EventArgs) Handles Me.Load
+        Me.Visible = False
         'frmMain Container nutzt entweder die logiken zum Blättern eines eichprozesses (sofern me.currenteichprozess) nicht nothing ist oder aber zeigt die Auswahlliste an, in der die eigenen Eichprozesse aufgelistet werden.
-
         'prüfen ob ein Vorgang vorliegt oder nicht
         If Me.CurrentEichprozess Is Nothing Then 'wenn kein vorgang vorliegt Auswahlliste anzeiegn
 
@@ -345,11 +346,10 @@ Public Class FrmMainContainer
 
         End If
 
-        ''Lokalisierung anstossen
-        'TriggerLokalisierung()
-        Me.WindowState = FormWindowState.Normal
+        'Me.WindowState = FormWindowState.Normal
+        Me.Refresh()
         Me.WindowState = FormWindowState.Maximized
-
+        Me.Visible = True
     End Sub
 
     ''' <summary>
@@ -478,7 +478,7 @@ Public Class FrmMainContainer
 
                 If AktuellerBenutzer.Instance.Lizenz.RHEWALizenz = True Then
                     RadButtonEntsperren.Visible = True
-
+                    RadButtonPlausibilitaet.Visible = True
                     'prüfen ob eine Sperrung des DS vorliegt und DS sperren wenn nicht
                     clsWebserviceFunctions.SetzeSperrung(True, CurrentEichprozess.Vorgangsnummer)
                 End If
@@ -1173,4 +1173,21 @@ Public Class FrmMainContainer
 
     End Sub
 
+    Private Sub RadButtonPlausibilitaet_Click(sender As Object, e As EventArgs) Handles RadButtonPlausibilitaet.Click
+        If Not CurrentEichprozess Is Nothing Then
+
+            Dim f As New frmPlausibiltaetspruefung(objEichProzess:=CurrentEichprozess)
+            f.Show()
+        End If
+
+    End Sub
+
+    Private Sub FrmMainContainer_ResizeBegin(sender As Object, e As EventArgs) Handles MyBase.ResizeBegin
+        '    Me.SuspendLayout()
+
+    End Sub
+
+    Private Sub FrmMainContainer_ResizeEnd(sender As Object, e As EventArgs) Handles MyBase.ResizeEnd
+        '  Me.ResumeLayout()
+    End Sub
 End Class

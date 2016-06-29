@@ -971,4 +971,112 @@ Public Class clsWebserviceFunctions
             Return Nothing
         End Try
     End Function
+
+    Public Shared Function InitDownloadDateiVonFTP(ByVal vorgangsnummer As String, objFTP As clsFTP, backgroundworker As System.ComponentModel.BackgroundWorker) As String
+
+        Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
+            Try
+                Webcontext.Open()
+            Catch ex As Exception
+                MessageBox.Show(My.Resources.GlobaleLokalisierung.KeineVerbindung, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Return False
+            End Try
+
+            Dim objFTPDaten = Webcontext.GetFTPCredentials(AktuellerBenutzer.Instance.Lizenz.HEKennung, AktuellerBenutzer.Instance.Lizenz.Lizenzschluessel, vorgangsnummer, My.User.Name, System.Environment.UserDomainName, My.Computer.Name)
+
+            'aufbereiten der für FTP benötigten Verbindungsdaten
+            If Not objFTPDaten Is Nothing Then
+
+                'get decrypted Password and configuration from Database
+
+                Dim password As String = objFTPDaten.FTPEncryptedPassword
+                ' original plaintext
+                Dim passPhrase As String = "Pas5pr@se"
+                ' can be any string
+                Dim saltValue As String = objFTPDaten.FTPSaltKey
+                ' can be any string
+                Dim hashAlgorithm As String = "SHA1"
+                ' can be "MD5"
+                Dim passwordIterations As Integer = 2
+                ' can be any number
+                Dim initVector As String = "@1B2c3D4e5F6g7H8"
+                ' must be 16 bytes
+                Dim keySize As Integer = 256
+                ' can be 192 or 128
+
+                password = RijndaelSimple.Decrypt(password, passPhrase, saltValue, hashAlgorithm, passwordIterations, initVector,
+                    keySize)
+
+                Dim file As New IO.FileInfo(objFTPDaten.FTPFilePath)
+
+                'abbruch wenn bereits vorhanden
+                If file.Exists Then Return file.FullName
+
+                Dim fileName As String = file.Name
+
+                'download Ordner anlegen wenn benötigt
+                Dim folder As New IO.DirectoryInfo(file.DirectoryName)
+                Try
+                    If folder.Exists = False Then
+                        folder.Create()
+                    End If
+                Catch ex As Exception
+                    MessageBox.Show(ex.Message + " Es wird eine temporäre Datei erzeugt")
+                    Dim tempfile = New IO.FileInfo(System.IO.Path.GetTempFileName)
+                    Dim newName = IO.Path.ChangeExtension(tempfile.FullName, file.Extension)
+                    IO.File.Move(tempfile.FullName, newName)
+                    file = New IO.FileInfo(newName)
+                End Try
+
+                'downloadgroße ermitteln
+                Dim filesize As Long
+                filesize = objFTP.GetFileSize(objFTPDaten.FTPServername, objFTPDaten.FTPUserName, password, fileName)
+                If filesize = 0 Then Return "" 'abbruch
+                backgroundworker.ReportProgress(filesize)
+                Try
+                    'datei download. FTPUploadPath bekommt den reelen Pfad auf dem FTP Server
+                    If objFTP.DownloadFileFromFTP(objFTPDaten.FTPServername, objFTPDaten.FTPUserName, password, fileName, file.FullName) Then
+                        Return file.FullName
+                    Else
+                        Try
+                            file.Delete()
+                        Catch ex As Exception
+                            MessageBox.Show("Konnte fehlerhafte Datei nicht löschen " & file.FullName)
+                        End Try
+                        Return ""
+                    End If
+                Catch ex As Exception
+                    Try
+                        file.Delete()
+                    Catch ex2 As Exception
+                        MessageBox.Show("Konnte fehlerhafte Datei nicht löschen " & file.FullName)
+                    End Try
+                    Return ""
+                End Try
+            End If
+        End Using
+
+        Return ""
+    End Function
+
+    ''' <summary>
+    ''' Konnektitätsprüfung zum Strato
+    ''' </summary>
+    ''' <returns></returns>
+    Public Shared Function CanPingStrato() As Boolean
+        Const timeout As Integer = 1000
+        Const host As String = "h2223265.stratoserver.net"
+
+        Dim ping = New Net.NetworkInformation.Ping()
+        Dim buffer = New Byte(31) {}
+        Dim pingOptions = New Net.NetworkInformation.PingOptions()
+
+        Try
+            Dim reply = ping.Send(host, timeout, buffer, pingOptions)
+            Return (reply IsNot Nothing AndAlso reply.Status = Net.NetworkInformation.IPStatus.Success)
+        Catch generatedExceptionName As Exception
+            Return False
+        End Try
+    End Function
+
 End Class

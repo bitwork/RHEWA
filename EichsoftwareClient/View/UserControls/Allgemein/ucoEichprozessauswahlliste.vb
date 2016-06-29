@@ -631,8 +631,10 @@
             RadGridViewRHEWAAlle.MasterTemplate.ShowFilteringRow = True
 
             Me.Enabled = True
-
-            RadGridViewRHEWAAlle.TableElement.ScrollToRow(RadGridViewRHEWAAlle.SelectedRows(0))
+            Try
+                RadGridViewRHEWAAlle.TableElement.ScrollToRow(RadGridViewRHEWAAlle.SelectedRows(0))
+            Catch ex As Exception
+            End Try
 
             Me.ResumeLayout()
             Me.Visible = True
