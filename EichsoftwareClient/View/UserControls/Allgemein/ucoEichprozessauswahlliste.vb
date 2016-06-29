@@ -63,6 +63,8 @@
 
 #Region "Formular Logiken"
     Private Sub ucoEichprozessauswahlliste_Load(sender As Object, e As System.EventArgs) Handles Me.Load
+        Me.SuspendLayout()
+        Me.Visible = False
         'laden des eingestellten Moants für den nächsten Programmstart
         Try
             If My.Settings.RHEWAFilterMonatBis.Equals(New Date) Then
@@ -81,6 +83,7 @@
         End Try
 
         LadeRoutine()
+
     End Sub
 
     Private Sub RadButtonRefresh_Click(sender As Object, e As EventArgs) Handles RadButtonRefresh.Click
@@ -506,6 +509,8 @@
             End Try
         End Try
         Me.Enabled = True
+        Me.ResumeLayout()
+        Me.Visible = True
     End Sub
 #End Region
 
@@ -629,6 +634,8 @@
 
             RadGridViewRHEWAAlle.TableElement.ScrollToRow(RadGridViewRHEWAAlle.SelectedRows(0))
 
+            Me.ResumeLayout()
+            Me.Visible = True
         Catch ex As Exception
         End Try
     End Sub
