@@ -80,8 +80,8 @@ Partial Class uco12PruefungUeberlastanzeige
         '
         'PictureBox2
         '
-        resources.ApplyResources(Me.PictureBox2, "PictureBox2")
         Me.PictureBox2.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBox2, "PictureBox2")
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.TabStop = False
         '
@@ -104,6 +104,7 @@ Partial Class uco12PruefungUeberlastanzeige
         Me.Controls.Add(Me.RadLabel2)
         Me.Controls.Add(Me.RadTextBoxControlMaxE)
         Me.Controls.Add(Me.lblUeberlast)
+        Me.DoubleBuffered = True
         Me.Name = "uco12PruefungUeberlastanzeige"
         CType(Me.lblUeberlast, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlMaxE, System.ComponentModel.ISupportInitialize).EndInit()

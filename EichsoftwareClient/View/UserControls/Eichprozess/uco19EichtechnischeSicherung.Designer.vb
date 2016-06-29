@@ -359,6 +359,7 @@ Partial Class uco19EichtechnischeSicherung
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.RadScrollablePanel1)
+        Me.DoubleBuffered = True
         Me.Name = "uco19EichtechnischeSicherung"
         Me.RadScrollablePanel1.PanelContainer.ResumeLayout(False)
         Me.RadScrollablePanel1.PanelContainer.PerformLayout()

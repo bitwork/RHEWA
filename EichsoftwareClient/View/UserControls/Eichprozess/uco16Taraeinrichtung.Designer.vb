@@ -60,10 +60,6 @@ Partial Class uco16Taraeinrichtung
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadCheckBoxTaraErweiterteRichtigkeitspruefung)
         resources.ApplyResources(Me.RadScrollablePanel1.PanelContainer, "RadScrollablePanel1.PanelContainer")
         '
-        '
-        '
-        Me.RadScrollablePanel1.RootElement.Padding = CType(resources.GetObject("RadScrollablePanel1.RootElement.Padding"), System.Windows.Forms.Padding)
-        '
         'lblPflichtfeld2
         '
         resources.ApplyResources(Me.lblPflichtfeld2, "lblPflichtfeld2")
@@ -83,15 +79,8 @@ Partial Class uco16Taraeinrichtung
         '
         '
         '
-        Me.lblTaraAusrichtung.RootElement.AccessibleDescription = resources.GetString("lblTaraAusrichtung.RootElement.AccessibleDescription")
-        Me.lblTaraAusrichtung.RootElement.AccessibleName = resources.GetString("lblTaraAusrichtung.RootElement.AccessibleName")
-        Me.lblTaraAusrichtung.RootElement.Alignment = CType(resources.GetObject("lblTaraAusrichtung.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblTaraAusrichtung.RootElement.AngleTransform = CType(resources.GetObject("lblTaraAusrichtung.RootElement.AngleTransform"), Single)
-        Me.lblTaraAusrichtung.RootElement.FlipText = CType(resources.GetObject("lblTaraAusrichtung.RootElement.FlipText"), Boolean)
-        Me.lblTaraAusrichtung.RootElement.Margin = CType(resources.GetObject("lblTaraAusrichtung.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblTaraAusrichtung.RootElement.Padding = CType(resources.GetObject("lblTaraAusrichtung.RootElement.Padding"), System.Windows.Forms.Padding)
-        Me.lblTaraAusrichtung.RootElement.Text = resources.GetString("lblTaraAusrichtung.RootElement.Text")
-        Me.lblTaraAusrichtung.RootElement.TextOrientation = CType(resources.GetObject("lblTaraAusrichtung.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblTaraAusrichtung.RootElement.AccessibleDescription = Nothing
+        Me.lblTaraAusrichtung.RootElement.AccessibleName = Nothing
         '
         'RadCheckBoxTaraGenauigkeitTarrierung
         '
@@ -100,15 +89,8 @@ Partial Class uco16Taraeinrichtung
         '
         '
         '
-        Me.RadCheckBoxTaraGenauigkeitTarrierung.RootElement.AccessibleDescription = resources.GetString("RadCheckBoxTaraGenauigkeitTarrierung.RootElement.AccessibleDescription")
-        Me.RadCheckBoxTaraGenauigkeitTarrierung.RootElement.AccessibleName = resources.GetString("RadCheckBoxTaraGenauigkeitTarrierung.RootElement.AccessibleName")
-        Me.RadCheckBoxTaraGenauigkeitTarrierung.RootElement.Alignment = CType(resources.GetObject("RadCheckBoxTaraGenauigkeitTarrierung.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadCheckBoxTaraGenauigkeitTarrierung.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxTaraGenauigkeitTarrierung.RootElement.AngleTransform"), Single)
-        Me.RadCheckBoxTaraGenauigkeitTarrierung.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxTaraGenauigkeitTarrierung.RootElement.FlipText"), Boolean)
-        Me.RadCheckBoxTaraGenauigkeitTarrierung.RootElement.Margin = CType(resources.GetObject("RadCheckBoxTaraGenauigkeitTarrierung.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadCheckBoxTaraGenauigkeitTarrierung.RootElement.Padding = CType(resources.GetObject("RadCheckBoxTaraGenauigkeitTarrierung.RootElement.Padding"), System.Windows.Forms.Padding)
-        Me.RadCheckBoxTaraGenauigkeitTarrierung.RootElement.Text = resources.GetString("RadCheckBoxTaraGenauigkeitTarrierung.RootElement.Text")
-        Me.RadCheckBoxTaraGenauigkeitTarrierung.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxTaraGenauigkeitTarrierung.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadCheckBoxTaraGenauigkeitTarrierung.RootElement.AccessibleDescription = Nothing
+        Me.RadCheckBoxTaraGenauigkeitTarrierung.RootElement.AccessibleName = Nothing
         '
         'lblGenauigkeit
         '
@@ -117,15 +99,8 @@ Partial Class uco16Taraeinrichtung
         '
         '
         '
-        Me.lblGenauigkeit.RootElement.AccessibleDescription = resources.GetString("lblGenauigkeit.RootElement.AccessibleDescription")
-        Me.lblGenauigkeit.RootElement.AccessibleName = resources.GetString("lblGenauigkeit.RootElement.AccessibleName")
-        Me.lblGenauigkeit.RootElement.Alignment = CType(resources.GetObject("lblGenauigkeit.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblGenauigkeit.RootElement.AngleTransform = CType(resources.GetObject("lblGenauigkeit.RootElement.AngleTransform"), Single)
-        Me.lblGenauigkeit.RootElement.FlipText = CType(resources.GetObject("lblGenauigkeit.RootElement.FlipText"), Boolean)
-        Me.lblGenauigkeit.RootElement.Margin = CType(resources.GetObject("lblGenauigkeit.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblGenauigkeit.RootElement.Padding = CType(resources.GetObject("lblGenauigkeit.RootElement.Padding"), System.Windows.Forms.Padding)
-        Me.lblGenauigkeit.RootElement.Text = resources.GetString("lblGenauigkeit.RootElement.Text")
-        Me.lblGenauigkeit.RootElement.TextOrientation = CType(resources.GetObject("lblGenauigkeit.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblGenauigkeit.RootElement.AccessibleDescription = Nothing
+        Me.lblGenauigkeit.RootElement.AccessibleName = Nothing
         '
         'RadCheckBoxTaraausgleicheinrichtungOK
         '
@@ -134,15 +109,8 @@ Partial Class uco16Taraeinrichtung
         '
         '
         '
-        Me.RadCheckBoxTaraausgleicheinrichtungOK.RootElement.AccessibleDescription = resources.GetString("RadCheckBoxTaraausgleicheinrichtungOK.RootElement.AccessibleDescription")
-        Me.RadCheckBoxTaraausgleicheinrichtungOK.RootElement.AccessibleName = resources.GetString("RadCheckBoxTaraausgleicheinrichtungOK.RootElement.AccessibleName")
-        Me.RadCheckBoxTaraausgleicheinrichtungOK.RootElement.Alignment = CType(resources.GetObject("RadCheckBoxTaraausgleicheinrichtungOK.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadCheckBoxTaraausgleicheinrichtungOK.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxTaraausgleicheinrichtungOK.RootElement.AngleTransform"), Single)
-        Me.RadCheckBoxTaraausgleicheinrichtungOK.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxTaraausgleicheinrichtungOK.RootElement.FlipText"), Boolean)
-        Me.RadCheckBoxTaraausgleicheinrichtungOK.RootElement.Margin = CType(resources.GetObject("RadCheckBoxTaraausgleicheinrichtungOK.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadCheckBoxTaraausgleicheinrichtungOK.RootElement.Padding = CType(resources.GetObject("RadCheckBoxTaraausgleicheinrichtungOK.RootElement.Padding"), System.Windows.Forms.Padding)
-        Me.RadCheckBoxTaraausgleicheinrichtungOK.RootElement.Text = resources.GetString("RadCheckBoxTaraausgleicheinrichtungOK.RootElement.Text")
-        Me.RadCheckBoxTaraausgleicheinrichtungOK.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxTaraausgleicheinrichtungOK.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadCheckBoxTaraausgleicheinrichtungOK.RootElement.AccessibleDescription = Nothing
+        Me.RadCheckBoxTaraausgleicheinrichtungOK.RootElement.AccessibleName = Nothing
         '
         'lblRichtigkeitspruefung
         '
@@ -151,15 +119,8 @@ Partial Class uco16Taraeinrichtung
         '
         '
         '
-        Me.lblRichtigkeitspruefung.RootElement.AccessibleDescription = resources.GetString("lblRichtigkeitspruefung.RootElement.AccessibleDescription")
-        Me.lblRichtigkeitspruefung.RootElement.AccessibleName = resources.GetString("lblRichtigkeitspruefung.RootElement.AccessibleName")
-        Me.lblRichtigkeitspruefung.RootElement.Alignment = CType(resources.GetObject("lblRichtigkeitspruefung.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblRichtigkeitspruefung.RootElement.AngleTransform = CType(resources.GetObject("lblRichtigkeitspruefung.RootElement.AngleTransform"), Single)
-        Me.lblRichtigkeitspruefung.RootElement.FlipText = CType(resources.GetObject("lblRichtigkeitspruefung.RootElement.FlipText"), Boolean)
-        Me.lblRichtigkeitspruefung.RootElement.Margin = CType(resources.GetObject("lblRichtigkeitspruefung.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblRichtigkeitspruefung.RootElement.Padding = CType(resources.GetObject("lblRichtigkeitspruefung.RootElement.Padding"), System.Windows.Forms.Padding)
-        Me.lblRichtigkeitspruefung.RootElement.Text = resources.GetString("lblRichtigkeitspruefung.RootElement.Text")
-        Me.lblRichtigkeitspruefung.RootElement.TextOrientation = CType(resources.GetObject("lblRichtigkeitspruefung.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblRichtigkeitspruefung.RootElement.AccessibleDescription = Nothing
+        Me.lblRichtigkeitspruefung.RootElement.AccessibleName = Nothing
         '
         'RadCheckBoxTaraErweiterteRichtigkeitspruefung
         '
@@ -168,22 +129,16 @@ Partial Class uco16Taraeinrichtung
         '
         '
         '
-        Me.RadCheckBoxTaraErweiterteRichtigkeitspruefung.RootElement.AccessibleDescription = resources.GetString("RadCheckBoxTaraErweiterteRichtigkeitspruefung.RootElement.AccessibleDescription")
-        Me.RadCheckBoxTaraErweiterteRichtigkeitspruefung.RootElement.AccessibleName = resources.GetString("RadCheckBoxTaraErweiterteRichtigkeitspruefung.RootElement.AccessibleName")
-        Me.RadCheckBoxTaraErweiterteRichtigkeitspruefung.RootElement.Alignment = CType(resources.GetObject("RadCheckBoxTaraErweiterteRichtigkeitspruefung.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadCheckBoxTaraErweiterteRichtigkeitspruefung.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxTaraErweiterteRichtigkeitspruefung.RootElement.AngleTransform"), Single)
-        Me.RadCheckBoxTaraErweiterteRichtigkeitspruefung.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxTaraErweiterteRichtigkeitspruefung.RootElement.FlipText"), Boolean)
-        Me.RadCheckBoxTaraErweiterteRichtigkeitspruefung.RootElement.Margin = CType(resources.GetObject("RadCheckBoxTaraErweiterteRichtigkeitspruefung.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadCheckBoxTaraErweiterteRichtigkeitspruefung.RootElement.Padding = CType(resources.GetObject("RadCheckBoxTaraErweiterteRichtigkeitspruefung.RootElement.Padding"), System.Windows.Forms.Padding)
-        Me.RadCheckBoxTaraErweiterteRichtigkeitspruefung.RootElement.Text = resources.GetString("RadCheckBoxTaraErweiterteRichtigkeitspruefung.RootElement.Text")
-        Me.RadCheckBoxTaraErweiterteRichtigkeitspruefung.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxTaraErweiterteRichtigkeitspruefung.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadCheckBoxTaraErweiterteRichtigkeitspruefung.RootElement.AccessibleDescription = Nothing
+        Me.RadCheckBoxTaraErweiterteRichtigkeitspruefung.RootElement.AccessibleName = Nothing
         '
-        'ucoTaraeinrichtung
+        'uco16Taraeinrichtung
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.RadScrollablePanel1)
-        Me.Name = "ucoTaraeinrichtung"
+        Me.DoubleBuffered = True
+        Me.Name = "uco16Taraeinrichtung"
         Me.RadScrollablePanel1.PanelContainer.ResumeLayout(False)
         Me.RadScrollablePanel1.PanelContainer.PerformLayout()
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).EndInit()

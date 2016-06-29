@@ -340,56 +340,7 @@ Partial Class uco_9PruefungLinearitaet
         Me.lblBereich3FallendGewicht = New Telerik.WinControls.UI.RadLabel()
         Me.lblBereich3FallendAnzeigeGewicht = New Telerik.WinControls.UI.RadLabel()
         Me.RadGroupBoxBereich2Fallend = New Telerik.WinControls.UI.RadGroupBox()
-        Me.PanelBereich2FallendWZ1 = New System.Windows.Forms.Panel()
-        Me.PictureBoxFallend29 = New System.Windows.Forms.PictureBox()
-        Me.PictureBoxFallend30 = New System.Windows.Forms.PictureBox()
-        Me.RadTextBoxControlBereich2FallendWeight1 = New Telerik.WinControls.UI.RadTextBox()
-        Me.RadTextBoxControlBereich2FallendDisplayWeight1 = New Telerik.WinControls.UI.RadTextBox()
-        Me.RadTextBoxControlBereich2FallendErrorLimit1 = New Telerik.WinControls.UI.RadTextBox()
-        Me.RadCheckBoxBereich2FallendVEL1 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.PanelBereich2FallendWZ2 = New System.Windows.Forms.Panel()
-        Me.PictureBoxFallend31 = New System.Windows.Forms.PictureBox()
-        Me.PictureBoxFallend32 = New System.Windows.Forms.PictureBox()
-        Me.RadTextBoxControlBereich2FallendWeight2 = New Telerik.WinControls.UI.RadTextBox()
-        Me.RadTextBoxControlBereich2FallendDisplayWeight2 = New Telerik.WinControls.UI.RadTextBox()
-        Me.RadTextBoxControlBereich2FallendErrorLimit2 = New Telerik.WinControls.UI.RadTextBox()
-        Me.RadCheckBoxBereich2FallendVEL2 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.PanelBereich2FallendWZ3 = New System.Windows.Forms.Panel()
-        Me.PictureBoxFallend33 = New System.Windows.Forms.PictureBox()
-        Me.PictureBoxFallend34 = New System.Windows.Forms.PictureBox()
-        Me.RadTextBoxControlBereich2FallendWeight3 = New Telerik.WinControls.UI.RadTextBox()
-        Me.RadTextBoxControlBereich2FallendDisplayWeight3 = New Telerik.WinControls.UI.RadTextBox()
-        Me.RadTextBoxControlBereich2FallendErrorLimit3 = New Telerik.WinControls.UI.RadTextBox()
-        Me.RadCheckBoxBereich2FallendVEL3 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.PanelBereich2FallendWZ4 = New System.Windows.Forms.Panel()
-        Me.PictureBoxFallend35 = New System.Windows.Forms.PictureBox()
-        Me.PictureBoxFallend36 = New System.Windows.Forms.PictureBox()
-        Me.RadTextBoxControlBereich2FallendWeight4 = New Telerik.WinControls.UI.RadTextBox()
-        Me.RadTextBoxControlBereich2FallendDisplayWeight4 = New Telerik.WinControls.UI.RadTextBox()
-        Me.RadTextBoxControlBereich2FallendErrorLimit4 = New Telerik.WinControls.UI.RadTextBox()
-        Me.RadCheckBoxBereich2FallendVEL4 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.PanelBereich2FallendWZ5 = New System.Windows.Forms.Panel()
-        Me.PictureBoxFallend37 = New System.Windows.Forms.PictureBox()
-        Me.PictureBoxFallend38 = New System.Windows.Forms.PictureBox()
-        Me.RadTextBoxControlBereich2FallendWeight5 = New Telerik.WinControls.UI.RadTextBox()
-        Me.RadTextBoxControlBereich2FallendDisplayWeight5 = New Telerik.WinControls.UI.RadTextBox()
-        Me.RadTextBoxControlBereich2FallendErrorLimit5 = New Telerik.WinControls.UI.RadTextBox()
-        Me.RadCheckBoxBereich2FallendVEL5 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.PanelBereich2FallendWZ7 = New System.Windows.Forms.Panel()
-        Me.PictureBoxFallend41 = New System.Windows.Forms.PictureBox()
-        Me.PictureBoxFallend42 = New System.Windows.Forms.PictureBox()
-        Me.RadTextBoxControlBereich2FallendWeight7 = New Telerik.WinControls.UI.RadTextBox()
-        Me.RadTextBoxControlBereich2FallendDisplayWeight7 = New Telerik.WinControls.UI.RadTextBox()
-        Me.RadTextBoxControlBereich2FallendErrorLimit7 = New Telerik.WinControls.UI.RadTextBox()
-        Me.RadCheckBoxBereich2FallendVEL7 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.lblPflichtfeld5 = New System.Windows.Forms.Label()
-        Me.PanelBereich2FallendWZ6 = New System.Windows.Forms.Panel()
-        Me.PictureBoxFallend39 = New System.Windows.Forms.PictureBox()
-        Me.PictureBoxFallend40 = New System.Windows.Forms.PictureBox()
-        Me.RadTextBoxControlBereich2FallendWeight6 = New Telerik.WinControls.UI.RadTextBox()
-        Me.RadTextBoxControlBereich2FallendDisplayWeight6 = New Telerik.WinControls.UI.RadTextBox()
-        Me.RadTextBoxControlBereich2FallendErrorLimit6 = New Telerik.WinControls.UI.RadTextBox()
-        Me.RadCheckBoxBereich2FallendVEL6 = New Telerik.WinControls.UI.RadCheckBox()
+        Me.FlowLayoutPanel2 = New System.Windows.Forms.FlowLayoutPanel()
         Me.PanelBereich2FallendWZ8 = New System.Windows.Forms.Panel()
         Me.PictureBoxFallend43 = New System.Windows.Forms.PictureBox()
         Me.PictureBoxFallend44 = New System.Windows.Forms.PictureBox()
@@ -397,11 +348,60 @@ Partial Class uco_9PruefungLinearitaet
         Me.RadTextBoxControlBereich2FallendDisplayWeight8 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich2FallendErrorLimit8 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich2FallendVEL8 = New Telerik.WinControls.UI.RadCheckBox()
+        Me.PanelBereich2FallendWZ7 = New System.Windows.Forms.Panel()
+        Me.PictureBoxFallend41 = New System.Windows.Forms.PictureBox()
+        Me.PictureBoxFallend42 = New System.Windows.Forms.PictureBox()
+        Me.RadTextBoxControlBereich2FallendWeight7 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2FallendDisplayWeight7 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2FallendErrorLimit7 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadCheckBoxBereich2FallendVEL7 = New Telerik.WinControls.UI.RadCheckBox()
+        Me.PanelBereich2FallendWZ6 = New System.Windows.Forms.Panel()
+        Me.PictureBoxFallend39 = New System.Windows.Forms.PictureBox()
+        Me.PictureBoxFallend40 = New System.Windows.Forms.PictureBox()
+        Me.RadTextBoxControlBereich2FallendWeight6 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2FallendDisplayWeight6 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2FallendErrorLimit6 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadCheckBoxBereich2FallendVEL6 = New Telerik.WinControls.UI.RadCheckBox()
+        Me.PanelBereich2FallendWZ5 = New System.Windows.Forms.Panel()
+        Me.PictureBoxFallend37 = New System.Windows.Forms.PictureBox()
+        Me.PictureBoxFallend38 = New System.Windows.Forms.PictureBox()
+        Me.RadTextBoxControlBereich2FallendWeight5 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2FallendDisplayWeight5 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2FallendErrorLimit5 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadCheckBoxBereich2FallendVEL5 = New Telerik.WinControls.UI.RadCheckBox()
+        Me.PanelBereich2FallendWZ4 = New System.Windows.Forms.Panel()
+        Me.PictureBoxFallend35 = New System.Windows.Forms.PictureBox()
+        Me.PictureBoxFallend36 = New System.Windows.Forms.PictureBox()
+        Me.RadTextBoxControlBereich2FallendWeight4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2FallendDisplayWeight4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2FallendErrorLimit4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadCheckBoxBereich2FallendVEL4 = New Telerik.WinControls.UI.RadCheckBox()
+        Me.PanelBereich2FallendWZ3 = New System.Windows.Forms.Panel()
+        Me.PictureBoxFallend33 = New System.Windows.Forms.PictureBox()
+        Me.PictureBoxFallend34 = New System.Windows.Forms.PictureBox()
+        Me.RadTextBoxControlBereich2FallendWeight3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2FallendDisplayWeight3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2FallendErrorLimit3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadCheckBoxBereich2FallendVEL3 = New Telerik.WinControls.UI.RadCheckBox()
+        Me.PanelBereich2FallendWZ2 = New System.Windows.Forms.Panel()
+        Me.PictureBoxFallend31 = New System.Windows.Forms.PictureBox()
+        Me.PictureBoxFallend32 = New System.Windows.Forms.PictureBox()
+        Me.RadTextBoxControlBereich2FallendWeight2 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2FallendDisplayWeight2 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2FallendErrorLimit2 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadCheckBoxBereich2FallendVEL2 = New Telerik.WinControls.UI.RadCheckBox()
+        Me.PanelBereich2FallendWZ1 = New System.Windows.Forms.Panel()
+        Me.PictureBoxFallend29 = New System.Windows.Forms.PictureBox()
+        Me.PictureBoxFallend30 = New System.Windows.Forms.PictureBox()
+        Me.RadTextBoxControlBereich2FallendWeight1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2FallendDisplayWeight1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBoxControlBereich2FallendErrorLimit1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadCheckBoxBereich2FallendVEL1 = New Telerik.WinControls.UI.RadCheckBox()
+        Me.lblPflichtfeld5 = New System.Windows.Forms.Label()
         Me.lblBereich2FallendFehlerGrenzen = New Telerik.WinControls.UI.RadLabel()
         Me.lblBereich2FallendEFGSpezial = New Telerik.WinControls.UI.RadLabel()
         Me.lblBereich2FallendGewicht = New Telerik.WinControls.UI.RadLabel()
         Me.lblBereich2FallendAnzeigeGewicht = New Telerik.WinControls.UI.RadLabel()
-        Me.FlowLayoutPanel2 = New System.Windows.Forms.FlowLayoutPanel()
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanel1.PanelContainer.SuspendLayout()
         Me.RadScrollablePanel1.SuspendLayout()
@@ -722,41 +722,14 @@ Partial Class uco_9PruefungLinearitaet
         CType(Me.lblBereich3FallendAnzeigeGewicht, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBoxBereich2Fallend, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxBereich2Fallend.SuspendLayout()
-        Me.PanelBereich2FallendWZ1.SuspendLayout()
-        CType(Me.PictureBoxFallend29, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBoxFallend30, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControlBereich2FallendWeight1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControlBereich2FallendDisplayWeight1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControlBereich2FallendErrorLimit1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadCheckBoxBereich2FallendVEL1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.PanelBereich2FallendWZ2.SuspendLayout()
-        CType(Me.PictureBoxFallend31, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBoxFallend32, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControlBereich2FallendWeight2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControlBereich2FallendDisplayWeight2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControlBereich2FallendErrorLimit2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadCheckBoxBereich2FallendVEL2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.PanelBereich2FallendWZ3.SuspendLayout()
-        CType(Me.PictureBoxFallend33, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBoxFallend34, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControlBereich2FallendWeight3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControlBereich2FallendDisplayWeight3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControlBereich2FallendErrorLimit3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadCheckBoxBereich2FallendVEL3, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.PanelBereich2FallendWZ4.SuspendLayout()
-        CType(Me.PictureBoxFallend35, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBoxFallend36, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControlBereich2FallendWeight4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControlBereich2FallendDisplayWeight4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControlBereich2FallendErrorLimit4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadCheckBoxBereich2FallendVEL4, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.PanelBereich2FallendWZ5.SuspendLayout()
-        CType(Me.PictureBoxFallend37, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBoxFallend38, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControlBereich2FallendWeight5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControlBereich2FallendDisplayWeight5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControlBereich2FallendErrorLimit5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadCheckBoxBereich2FallendVEL5, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.FlowLayoutPanel2.SuspendLayout()
+        Me.PanelBereich2FallendWZ8.SuspendLayout()
+        CType(Me.PictureBoxFallend43, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBoxFallend44, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxControlBereich2FallendWeight8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxControlBereich2FallendDisplayWeight8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxControlBereich2FallendErrorLimit8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadCheckBoxBereich2FallendVEL8, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBereich2FallendWZ7.SuspendLayout()
         CType(Me.PictureBoxFallend41, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxFallend42, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -771,18 +744,45 @@ Partial Class uco_9PruefungLinearitaet
         CType(Me.RadTextBoxControlBereich2FallendDisplayWeight6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich2FallendErrorLimit6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadCheckBoxBereich2FallendVEL6, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.PanelBereich2FallendWZ8.SuspendLayout()
-        CType(Me.PictureBoxFallend43, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBoxFallend44, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControlBereich2FallendWeight8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControlBereich2FallendDisplayWeight8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControlBereich2FallendErrorLimit8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadCheckBoxBereich2FallendVEL8, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelBereich2FallendWZ5.SuspendLayout()
+        CType(Me.PictureBoxFallend37, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBoxFallend38, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxControlBereich2FallendWeight5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxControlBereich2FallendDisplayWeight5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxControlBereich2FallendErrorLimit5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadCheckBoxBereich2FallendVEL5, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelBereich2FallendWZ4.SuspendLayout()
+        CType(Me.PictureBoxFallend35, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBoxFallend36, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxControlBereich2FallendWeight4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxControlBereich2FallendDisplayWeight4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxControlBereich2FallendErrorLimit4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadCheckBoxBereich2FallendVEL4, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelBereich2FallendWZ3.SuspendLayout()
+        CType(Me.PictureBoxFallend33, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBoxFallend34, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxControlBereich2FallendWeight3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxControlBereich2FallendDisplayWeight3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxControlBereich2FallendErrorLimit3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadCheckBoxBereich2FallendVEL3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelBereich2FallendWZ2.SuspendLayout()
+        CType(Me.PictureBoxFallend31, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBoxFallend32, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxControlBereich2FallendWeight2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxControlBereich2FallendDisplayWeight2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxControlBereich2FallendErrorLimit2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadCheckBoxBereich2FallendVEL2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelBereich2FallendWZ1.SuspendLayout()
+        CType(Me.PictureBoxFallend29, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBoxFallend30, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxControlBereich2FallendWeight1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxControlBereich2FallendDisplayWeight1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBoxControlBereich2FallendErrorLimit1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadCheckBoxBereich2FallendVEL1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblBereich2FallendFehlerGrenzen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblBereich2FallendEFGSpezial, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblBereich2FallendGewicht, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblBereich2FallendAnzeigeGewicht, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.FlowLayoutPanel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'RadScrollablePanel1
@@ -3110,368 +3110,18 @@ Partial Class uco_9PruefungLinearitaet
         resources.ApplyResources(Me.RadGroupBoxBereich2Fallend, "RadGroupBoxBereich2Fallend")
         Me.RadGroupBoxBereich2Fallend.Name = "RadGroupBoxBereich2Fallend"
         '
-        'PanelBereich2FallendWZ1
-        '
-        Me.PanelBereich2FallendWZ1.Controls.Add(Me.PictureBoxFallend29)
-        Me.PanelBereich2FallendWZ1.Controls.Add(Me.PictureBoxFallend30)
-        Me.PanelBereich2FallendWZ1.Controls.Add(Me.RadTextBoxControlBereich2FallendWeight1)
-        Me.PanelBereich2FallendWZ1.Controls.Add(Me.RadTextBoxControlBereich2FallendDisplayWeight1)
-        Me.PanelBereich2FallendWZ1.Controls.Add(Me.RadTextBoxControlBereich2FallendErrorLimit1)
-        Me.PanelBereich2FallendWZ1.Controls.Add(Me.RadCheckBoxBereich2FallendVEL1)
-        resources.ApplyResources(Me.PanelBereich2FallendWZ1, "PanelBereich2FallendWZ1")
-        Me.PanelBereich2FallendWZ1.Name = "PanelBereich2FallendWZ1"
-        '
-        'PictureBoxFallend29
-        '
-        Me.PictureBoxFallend29.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBoxFallend29, "PictureBoxFallend29")
-        Me.PictureBoxFallend29.Name = "PictureBoxFallend29"
-        Me.PictureBoxFallend29.TabStop = False
-        '
-        'PictureBoxFallend30
-        '
-        Me.PictureBoxFallend30.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBoxFallend30, "PictureBoxFallend30")
-        Me.PictureBoxFallend30.Name = "PictureBoxFallend30"
-        Me.PictureBoxFallend30.TabStop = False
-        '
-        'RadTextBoxControlBereich2FallendWeight1
-        '
-        resources.ApplyResources(Me.RadTextBoxControlBereich2FallendWeight1, "RadTextBoxControlBereich2FallendWeight1")
-        Me.RadTextBoxControlBereich2FallendWeight1.MaxLength = 20
-        Me.RadTextBoxControlBereich2FallendWeight1.Name = "RadTextBoxControlBereich2FallendWeight1"
-        '
-        'RadTextBoxControlBereich2FallendDisplayWeight1
-        '
-        resources.ApplyResources(Me.RadTextBoxControlBereich2FallendDisplayWeight1, "RadTextBoxControlBereich2FallendDisplayWeight1")
-        Me.RadTextBoxControlBereich2FallendDisplayWeight1.MaxLength = 20
-        Me.RadTextBoxControlBereich2FallendDisplayWeight1.Name = "RadTextBoxControlBereich2FallendDisplayWeight1"
-        '
-        'RadTextBoxControlBereich2FallendErrorLimit1
-        '
-        resources.ApplyResources(Me.RadTextBoxControlBereich2FallendErrorLimit1, "RadTextBoxControlBereich2FallendErrorLimit1")
-        Me.RadTextBoxControlBereich2FallendErrorLimit1.MaxLength = 20
-        Me.RadTextBoxControlBereich2FallendErrorLimit1.Name = "RadTextBoxControlBereich2FallendErrorLimit1"
-        Me.RadTextBoxControlBereich2FallendErrorLimit1.ReadOnly = True
-        Me.RadTextBoxControlBereich2FallendErrorLimit1.TabStop = False
-        '
-        'RadCheckBoxBereich2FallendVEL1
-        '
-        resources.ApplyResources(Me.RadCheckBoxBereich2FallendVEL1, "RadCheckBoxBereich2FallendVEL1")
-        Me.RadCheckBoxBereich2FallendVEL1.Name = "RadCheckBoxBereich2FallendVEL1"
-        Me.RadCheckBoxBereich2FallendVEL1.TabStop = False
-        '
-        'PanelBereich2FallendWZ2
-        '
-        Me.PanelBereich2FallendWZ2.Controls.Add(Me.PictureBoxFallend31)
-        Me.PanelBereich2FallendWZ2.Controls.Add(Me.PictureBoxFallend32)
-        Me.PanelBereich2FallendWZ2.Controls.Add(Me.RadTextBoxControlBereich2FallendWeight2)
-        Me.PanelBereich2FallendWZ2.Controls.Add(Me.RadTextBoxControlBereich2FallendDisplayWeight2)
-        Me.PanelBereich2FallendWZ2.Controls.Add(Me.RadTextBoxControlBereich2FallendErrorLimit2)
-        Me.PanelBereich2FallendWZ2.Controls.Add(Me.RadCheckBoxBereich2FallendVEL2)
-        resources.ApplyResources(Me.PanelBereich2FallendWZ2, "PanelBereich2FallendWZ2")
-        Me.PanelBereich2FallendWZ2.Name = "PanelBereich2FallendWZ2"
-        '
-        'PictureBoxFallend31
-        '
-        Me.PictureBoxFallend31.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBoxFallend31, "PictureBoxFallend31")
-        Me.PictureBoxFallend31.Name = "PictureBoxFallend31"
-        Me.PictureBoxFallend31.TabStop = False
-        '
-        'PictureBoxFallend32
-        '
-        Me.PictureBoxFallend32.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBoxFallend32, "PictureBoxFallend32")
-        Me.PictureBoxFallend32.Name = "PictureBoxFallend32"
-        Me.PictureBoxFallend32.TabStop = False
-        '
-        'RadTextBoxControlBereich2FallendWeight2
-        '
-        resources.ApplyResources(Me.RadTextBoxControlBereich2FallendWeight2, "RadTextBoxControlBereich2FallendWeight2")
-        Me.RadTextBoxControlBereich2FallendWeight2.MaxLength = 20
-        Me.RadTextBoxControlBereich2FallendWeight2.Name = "RadTextBoxControlBereich2FallendWeight2"
-        '
-        'RadTextBoxControlBereich2FallendDisplayWeight2
-        '
-        resources.ApplyResources(Me.RadTextBoxControlBereich2FallendDisplayWeight2, "RadTextBoxControlBereich2FallendDisplayWeight2")
-        Me.RadTextBoxControlBereich2FallendDisplayWeight2.MaxLength = 20
-        Me.RadTextBoxControlBereich2FallendDisplayWeight2.Name = "RadTextBoxControlBereich2FallendDisplayWeight2"
-        '
-        'RadTextBoxControlBereich2FallendErrorLimit2
-        '
-        resources.ApplyResources(Me.RadTextBoxControlBereich2FallendErrorLimit2, "RadTextBoxControlBereich2FallendErrorLimit2")
-        Me.RadTextBoxControlBereich2FallendErrorLimit2.MaxLength = 20
-        Me.RadTextBoxControlBereich2FallendErrorLimit2.Name = "RadTextBoxControlBereich2FallendErrorLimit2"
-        Me.RadTextBoxControlBereich2FallendErrorLimit2.ReadOnly = True
-        Me.RadTextBoxControlBereich2FallendErrorLimit2.TabStop = False
-        '
-        'RadCheckBoxBereich2FallendVEL2
-        '
-        resources.ApplyResources(Me.RadCheckBoxBereich2FallendVEL2, "RadCheckBoxBereich2FallendVEL2")
-        Me.RadCheckBoxBereich2FallendVEL2.Name = "RadCheckBoxBereich2FallendVEL2"
-        Me.RadCheckBoxBereich2FallendVEL2.TabStop = False
-        '
-        'PanelBereich2FallendWZ3
-        '
-        Me.PanelBereich2FallendWZ3.Controls.Add(Me.PictureBoxFallend33)
-        Me.PanelBereich2FallendWZ3.Controls.Add(Me.PictureBoxFallend34)
-        Me.PanelBereich2FallendWZ3.Controls.Add(Me.RadTextBoxControlBereich2FallendWeight3)
-        Me.PanelBereich2FallendWZ3.Controls.Add(Me.RadTextBoxControlBereich2FallendDisplayWeight3)
-        Me.PanelBereich2FallendWZ3.Controls.Add(Me.RadTextBoxControlBereich2FallendErrorLimit3)
-        Me.PanelBereich2FallendWZ3.Controls.Add(Me.RadCheckBoxBereich2FallendVEL3)
-        resources.ApplyResources(Me.PanelBereich2FallendWZ3, "PanelBereich2FallendWZ3")
-        Me.PanelBereich2FallendWZ3.Name = "PanelBereich2FallendWZ3"
-        '
-        'PictureBoxFallend33
-        '
-        Me.PictureBoxFallend33.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBoxFallend33, "PictureBoxFallend33")
-        Me.PictureBoxFallend33.Name = "PictureBoxFallend33"
-        Me.PictureBoxFallend33.TabStop = False
-        '
-        'PictureBoxFallend34
-        '
-        Me.PictureBoxFallend34.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBoxFallend34, "PictureBoxFallend34")
-        Me.PictureBoxFallend34.Name = "PictureBoxFallend34"
-        Me.PictureBoxFallend34.TabStop = False
-        '
-        'RadTextBoxControlBereich2FallendWeight3
-        '
-        resources.ApplyResources(Me.RadTextBoxControlBereich2FallendWeight3, "RadTextBoxControlBereich2FallendWeight3")
-        Me.RadTextBoxControlBereich2FallendWeight3.MaxLength = 20
-        Me.RadTextBoxControlBereich2FallendWeight3.Name = "RadTextBoxControlBereich2FallendWeight3"
-        '
-        'RadTextBoxControlBereich2FallendDisplayWeight3
-        '
-        resources.ApplyResources(Me.RadTextBoxControlBereich2FallendDisplayWeight3, "RadTextBoxControlBereich2FallendDisplayWeight3")
-        Me.RadTextBoxControlBereich2FallendDisplayWeight3.MaxLength = 20
-        Me.RadTextBoxControlBereich2FallendDisplayWeight3.Name = "RadTextBoxControlBereich2FallendDisplayWeight3"
-        '
-        'RadTextBoxControlBereich2FallendErrorLimit3
-        '
-        resources.ApplyResources(Me.RadTextBoxControlBereich2FallendErrorLimit3, "RadTextBoxControlBereich2FallendErrorLimit3")
-        Me.RadTextBoxControlBereich2FallendErrorLimit3.MaxLength = 20
-        Me.RadTextBoxControlBereich2FallendErrorLimit3.Name = "RadTextBoxControlBereich2FallendErrorLimit3"
-        Me.RadTextBoxControlBereich2FallendErrorLimit3.ReadOnly = True
-        Me.RadTextBoxControlBereich2FallendErrorLimit3.TabStop = False
-        '
-        'RadCheckBoxBereich2FallendVEL3
-        '
-        resources.ApplyResources(Me.RadCheckBoxBereich2FallendVEL3, "RadCheckBoxBereich2FallendVEL3")
-        Me.RadCheckBoxBereich2FallendVEL3.Name = "RadCheckBoxBereich2FallendVEL3"
-        Me.RadCheckBoxBereich2FallendVEL3.TabStop = False
-        '
-        'PanelBereich2FallendWZ4
-        '
-        Me.PanelBereich2FallendWZ4.Controls.Add(Me.PictureBoxFallend35)
-        Me.PanelBereich2FallendWZ4.Controls.Add(Me.PictureBoxFallend36)
-        Me.PanelBereich2FallendWZ4.Controls.Add(Me.RadTextBoxControlBereich2FallendWeight4)
-        Me.PanelBereich2FallendWZ4.Controls.Add(Me.RadTextBoxControlBereich2FallendDisplayWeight4)
-        Me.PanelBereich2FallendWZ4.Controls.Add(Me.RadTextBoxControlBereich2FallendErrorLimit4)
-        Me.PanelBereich2FallendWZ4.Controls.Add(Me.RadCheckBoxBereich2FallendVEL4)
-        resources.ApplyResources(Me.PanelBereich2FallendWZ4, "PanelBereich2FallendWZ4")
-        Me.PanelBereich2FallendWZ4.Name = "PanelBereich2FallendWZ4"
-        '
-        'PictureBoxFallend35
-        '
-        Me.PictureBoxFallend35.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBoxFallend35, "PictureBoxFallend35")
-        Me.PictureBoxFallend35.Name = "PictureBoxFallend35"
-        Me.PictureBoxFallend35.TabStop = False
-        '
-        'PictureBoxFallend36
-        '
-        Me.PictureBoxFallend36.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBoxFallend36, "PictureBoxFallend36")
-        Me.PictureBoxFallend36.Name = "PictureBoxFallend36"
-        Me.PictureBoxFallend36.TabStop = False
-        '
-        'RadTextBoxControlBereich2FallendWeight4
-        '
-        resources.ApplyResources(Me.RadTextBoxControlBereich2FallendWeight4, "RadTextBoxControlBereich2FallendWeight4")
-        Me.RadTextBoxControlBereich2FallendWeight4.MaxLength = 20
-        Me.RadTextBoxControlBereich2FallendWeight4.Name = "RadTextBoxControlBereich2FallendWeight4"
-        '
-        'RadTextBoxControlBereich2FallendDisplayWeight4
-        '
-        resources.ApplyResources(Me.RadTextBoxControlBereich2FallendDisplayWeight4, "RadTextBoxControlBereich2FallendDisplayWeight4")
-        Me.RadTextBoxControlBereich2FallendDisplayWeight4.MaxLength = 20
-        Me.RadTextBoxControlBereich2FallendDisplayWeight4.Name = "RadTextBoxControlBereich2FallendDisplayWeight4"
-        '
-        'RadTextBoxControlBereich2FallendErrorLimit4
-        '
-        resources.ApplyResources(Me.RadTextBoxControlBereich2FallendErrorLimit4, "RadTextBoxControlBereich2FallendErrorLimit4")
-        Me.RadTextBoxControlBereich2FallendErrorLimit4.MaxLength = 20
-        Me.RadTextBoxControlBereich2FallendErrorLimit4.Name = "RadTextBoxControlBereich2FallendErrorLimit4"
-        Me.RadTextBoxControlBereich2FallendErrorLimit4.ReadOnly = True
-        Me.RadTextBoxControlBereich2FallendErrorLimit4.TabStop = False
-        '
-        'RadCheckBoxBereich2FallendVEL4
-        '
-        resources.ApplyResources(Me.RadCheckBoxBereich2FallendVEL4, "RadCheckBoxBereich2FallendVEL4")
-        Me.RadCheckBoxBereich2FallendVEL4.Name = "RadCheckBoxBereich2FallendVEL4"
-        Me.RadCheckBoxBereich2FallendVEL4.TabStop = False
-        '
-        'PanelBereich2FallendWZ5
-        '
-        Me.PanelBereich2FallendWZ5.Controls.Add(Me.PictureBoxFallend37)
-        Me.PanelBereich2FallendWZ5.Controls.Add(Me.PictureBoxFallend38)
-        Me.PanelBereich2FallendWZ5.Controls.Add(Me.RadTextBoxControlBereich2FallendWeight5)
-        Me.PanelBereich2FallendWZ5.Controls.Add(Me.RadTextBoxControlBereich2FallendDisplayWeight5)
-        Me.PanelBereich2FallendWZ5.Controls.Add(Me.RadTextBoxControlBereich2FallendErrorLimit5)
-        Me.PanelBereich2FallendWZ5.Controls.Add(Me.RadCheckBoxBereich2FallendVEL5)
-        resources.ApplyResources(Me.PanelBereich2FallendWZ5, "PanelBereich2FallendWZ5")
-        Me.PanelBereich2FallendWZ5.Name = "PanelBereich2FallendWZ5"
-        '
-        'PictureBoxFallend37
-        '
-        Me.PictureBoxFallend37.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBoxFallend37, "PictureBoxFallend37")
-        Me.PictureBoxFallend37.Name = "PictureBoxFallend37"
-        Me.PictureBoxFallend37.TabStop = False
-        '
-        'PictureBoxFallend38
-        '
-        Me.PictureBoxFallend38.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBoxFallend38, "PictureBoxFallend38")
-        Me.PictureBoxFallend38.Name = "PictureBoxFallend38"
-        Me.PictureBoxFallend38.TabStop = False
-        '
-        'RadTextBoxControlBereich2FallendWeight5
-        '
-        resources.ApplyResources(Me.RadTextBoxControlBereich2FallendWeight5, "RadTextBoxControlBereich2FallendWeight5")
-        Me.RadTextBoxControlBereich2FallendWeight5.MaxLength = 20
-        Me.RadTextBoxControlBereich2FallendWeight5.Name = "RadTextBoxControlBereich2FallendWeight5"
-        '
-        'RadTextBoxControlBereich2FallendDisplayWeight5
-        '
-        resources.ApplyResources(Me.RadTextBoxControlBereich2FallendDisplayWeight5, "RadTextBoxControlBereich2FallendDisplayWeight5")
-        Me.RadTextBoxControlBereich2FallendDisplayWeight5.MaxLength = 20
-        Me.RadTextBoxControlBereich2FallendDisplayWeight5.Name = "RadTextBoxControlBereich2FallendDisplayWeight5"
-        '
-        'RadTextBoxControlBereich2FallendErrorLimit5
-        '
-        resources.ApplyResources(Me.RadTextBoxControlBereich2FallendErrorLimit5, "RadTextBoxControlBereich2FallendErrorLimit5")
-        Me.RadTextBoxControlBereich2FallendErrorLimit5.MaxLength = 20
-        Me.RadTextBoxControlBereich2FallendErrorLimit5.Name = "RadTextBoxControlBereich2FallendErrorLimit5"
-        Me.RadTextBoxControlBereich2FallendErrorLimit5.ReadOnly = True
-        Me.RadTextBoxControlBereich2FallendErrorLimit5.TabStop = False
-        '
-        'RadCheckBoxBereich2FallendVEL5
-        '
-        resources.ApplyResources(Me.RadCheckBoxBereich2FallendVEL5, "RadCheckBoxBereich2FallendVEL5")
-        Me.RadCheckBoxBereich2FallendVEL5.Name = "RadCheckBoxBereich2FallendVEL5"
-        Me.RadCheckBoxBereich2FallendVEL5.TabStop = False
-        '
-        'PanelBereich2FallendWZ7
-        '
-        Me.PanelBereich2FallendWZ7.Controls.Add(Me.PictureBoxFallend41)
-        Me.PanelBereich2FallendWZ7.Controls.Add(Me.PictureBoxFallend42)
-        Me.PanelBereich2FallendWZ7.Controls.Add(Me.RadTextBoxControlBereich2FallendWeight7)
-        Me.PanelBereich2FallendWZ7.Controls.Add(Me.RadTextBoxControlBereich2FallendDisplayWeight7)
-        Me.PanelBereich2FallendWZ7.Controls.Add(Me.RadTextBoxControlBereich2FallendErrorLimit7)
-        Me.PanelBereich2FallendWZ7.Controls.Add(Me.RadCheckBoxBereich2FallendVEL7)
-        resources.ApplyResources(Me.PanelBereich2FallendWZ7, "PanelBereich2FallendWZ7")
-        Me.PanelBereich2FallendWZ7.Name = "PanelBereich2FallendWZ7"
-        '
-        'PictureBoxFallend41
-        '
-        Me.PictureBoxFallend41.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBoxFallend41, "PictureBoxFallend41")
-        Me.PictureBoxFallend41.Name = "PictureBoxFallend41"
-        Me.PictureBoxFallend41.TabStop = False
-        '
-        'PictureBoxFallend42
-        '
-        Me.PictureBoxFallend42.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBoxFallend42, "PictureBoxFallend42")
-        Me.PictureBoxFallend42.Name = "PictureBoxFallend42"
-        Me.PictureBoxFallend42.TabStop = False
-        '
-        'RadTextBoxControlBereich2FallendWeight7
-        '
-        resources.ApplyResources(Me.RadTextBoxControlBereich2FallendWeight7, "RadTextBoxControlBereich2FallendWeight7")
-        Me.RadTextBoxControlBereich2FallendWeight7.MaxLength = 20
-        Me.RadTextBoxControlBereich2FallendWeight7.Name = "RadTextBoxControlBereich2FallendWeight7"
-        '
-        'RadTextBoxControlBereich2FallendDisplayWeight7
-        '
-        resources.ApplyResources(Me.RadTextBoxControlBereich2FallendDisplayWeight7, "RadTextBoxControlBereich2FallendDisplayWeight7")
-        Me.RadTextBoxControlBereich2FallendDisplayWeight7.MaxLength = 20
-        Me.RadTextBoxControlBereich2FallendDisplayWeight7.Name = "RadTextBoxControlBereich2FallendDisplayWeight7"
-        '
-        'RadTextBoxControlBereich2FallendErrorLimit7
-        '
-        resources.ApplyResources(Me.RadTextBoxControlBereich2FallendErrorLimit7, "RadTextBoxControlBereich2FallendErrorLimit7")
-        Me.RadTextBoxControlBereich2FallendErrorLimit7.MaxLength = 20
-        Me.RadTextBoxControlBereich2FallendErrorLimit7.Name = "RadTextBoxControlBereich2FallendErrorLimit7"
-        Me.RadTextBoxControlBereich2FallendErrorLimit7.ReadOnly = True
-        Me.RadTextBoxControlBereich2FallendErrorLimit7.TabStop = False
-        '
-        'RadCheckBoxBereich2FallendVEL7
-        '
-        resources.ApplyResources(Me.RadCheckBoxBereich2FallendVEL7, "RadCheckBoxBereich2FallendVEL7")
-        Me.RadCheckBoxBereich2FallendVEL7.Name = "RadCheckBoxBereich2FallendVEL7"
-        Me.RadCheckBoxBereich2FallendVEL7.TabStop = False
-        '
-        'lblPflichtfeld5
-        '
-        resources.ApplyResources(Me.lblPflichtfeld5, "lblPflichtfeld5")
-        Me.lblPflichtfeld5.ForeColor = System.Drawing.Color.Red
-        Me.lblPflichtfeld5.Name = "lblPflichtfeld5"
-        '
-        'PanelBereich2FallendWZ6
-        '
-        Me.PanelBereich2FallendWZ6.Controls.Add(Me.PictureBoxFallend39)
-        Me.PanelBereich2FallendWZ6.Controls.Add(Me.PictureBoxFallend40)
-        Me.PanelBereich2FallendWZ6.Controls.Add(Me.RadTextBoxControlBereich2FallendWeight6)
-        Me.PanelBereich2FallendWZ6.Controls.Add(Me.RadTextBoxControlBereich2FallendDisplayWeight6)
-        Me.PanelBereich2FallendWZ6.Controls.Add(Me.RadTextBoxControlBereich2FallendErrorLimit6)
-        Me.PanelBereich2FallendWZ6.Controls.Add(Me.RadCheckBoxBereich2FallendVEL6)
-        resources.ApplyResources(Me.PanelBereich2FallendWZ6, "PanelBereich2FallendWZ6")
-        Me.PanelBereich2FallendWZ6.Name = "PanelBereich2FallendWZ6"
-        '
-        'PictureBoxFallend39
-        '
-        Me.PictureBoxFallend39.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBoxFallend39, "PictureBoxFallend39")
-        Me.PictureBoxFallend39.Name = "PictureBoxFallend39"
-        Me.PictureBoxFallend39.TabStop = False
-        '
-        'PictureBoxFallend40
-        '
-        Me.PictureBoxFallend40.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBoxFallend40, "PictureBoxFallend40")
-        Me.PictureBoxFallend40.Name = "PictureBoxFallend40"
-        Me.PictureBoxFallend40.TabStop = False
-        '
-        'RadTextBoxControlBereich2FallendWeight6
-        '
-        resources.ApplyResources(Me.RadTextBoxControlBereich2FallendWeight6, "RadTextBoxControlBereich2FallendWeight6")
-        Me.RadTextBoxControlBereich2FallendWeight6.MaxLength = 20
-        Me.RadTextBoxControlBereich2FallendWeight6.Name = "RadTextBoxControlBereich2FallendWeight6"
-        '
-        'RadTextBoxControlBereich2FallendDisplayWeight6
-        '
-        resources.ApplyResources(Me.RadTextBoxControlBereich2FallendDisplayWeight6, "RadTextBoxControlBereich2FallendDisplayWeight6")
-        Me.RadTextBoxControlBereich2FallendDisplayWeight6.MaxLength = 20
-        Me.RadTextBoxControlBereich2FallendDisplayWeight6.Name = "RadTextBoxControlBereich2FallendDisplayWeight6"
-        '
-        'RadTextBoxControlBereich2FallendErrorLimit6
-        '
-        resources.ApplyResources(Me.RadTextBoxControlBereich2FallendErrorLimit6, "RadTextBoxControlBereich2FallendErrorLimit6")
-        Me.RadTextBoxControlBereich2FallendErrorLimit6.MaxLength = 20
-        Me.RadTextBoxControlBereich2FallendErrorLimit6.Name = "RadTextBoxControlBereich2FallendErrorLimit6"
-        Me.RadTextBoxControlBereich2FallendErrorLimit6.ReadOnly = True
-        Me.RadTextBoxControlBereich2FallendErrorLimit6.TabStop = False
-        '
-        'RadCheckBoxBereich2FallendVEL6
-        '
-        resources.ApplyResources(Me.RadCheckBoxBereich2FallendVEL6, "RadCheckBoxBereich2FallendVEL6")
-        Me.RadCheckBoxBereich2FallendVEL6.Name = "RadCheckBoxBereich2FallendVEL6"
-        Me.RadCheckBoxBereich2FallendVEL6.TabStop = False
+        'FlowLayoutPanel2
+        '
+        Me.FlowLayoutPanel2.Controls.Add(Me.PanelBereich2FallendWZ8)
+        Me.FlowLayoutPanel2.Controls.Add(Me.PanelBereich2FallendWZ7)
+        Me.FlowLayoutPanel2.Controls.Add(Me.PanelBereich2FallendWZ6)
+        Me.FlowLayoutPanel2.Controls.Add(Me.PanelBereich2FallendWZ5)
+        Me.FlowLayoutPanel2.Controls.Add(Me.PanelBereich2FallendWZ4)
+        Me.FlowLayoutPanel2.Controls.Add(Me.PanelBereich2FallendWZ3)
+        Me.FlowLayoutPanel2.Controls.Add(Me.PanelBereich2FallendWZ2)
+        Me.FlowLayoutPanel2.Controls.Add(Me.PanelBereich2FallendWZ1)
+        resources.ApplyResources(Me.FlowLayoutPanel2, "FlowLayoutPanel2")
+        Me.FlowLayoutPanel2.Name = "FlowLayoutPanel2"
         '
         'PanelBereich2FallendWZ8
         '
@@ -3524,6 +3174,369 @@ Partial Class uco_9PruefungLinearitaet
         Me.RadCheckBoxBereich2FallendVEL8.Name = "RadCheckBoxBereich2FallendVEL8"
         Me.RadCheckBoxBereich2FallendVEL8.TabStop = False
         '
+        'PanelBereich2FallendWZ7
+        '
+        Me.PanelBereich2FallendWZ7.Controls.Add(Me.PictureBoxFallend41)
+        Me.PanelBereich2FallendWZ7.Controls.Add(Me.PictureBoxFallend42)
+        Me.PanelBereich2FallendWZ7.Controls.Add(Me.RadTextBoxControlBereich2FallendWeight7)
+        Me.PanelBereich2FallendWZ7.Controls.Add(Me.RadTextBoxControlBereich2FallendDisplayWeight7)
+        Me.PanelBereich2FallendWZ7.Controls.Add(Me.RadTextBoxControlBereich2FallendErrorLimit7)
+        Me.PanelBereich2FallendWZ7.Controls.Add(Me.RadCheckBoxBereich2FallendVEL7)
+        resources.ApplyResources(Me.PanelBereich2FallendWZ7, "PanelBereich2FallendWZ7")
+        Me.PanelBereich2FallendWZ7.Name = "PanelBereich2FallendWZ7"
+        '
+        'PictureBoxFallend41
+        '
+        Me.PictureBoxFallend41.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBoxFallend41, "PictureBoxFallend41")
+        Me.PictureBoxFallend41.Name = "PictureBoxFallend41"
+        Me.PictureBoxFallend41.TabStop = False
+        '
+        'PictureBoxFallend42
+        '
+        Me.PictureBoxFallend42.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBoxFallend42, "PictureBoxFallend42")
+        Me.PictureBoxFallend42.Name = "PictureBoxFallend42"
+        Me.PictureBoxFallend42.TabStop = False
+        '
+        'RadTextBoxControlBereich2FallendWeight7
+        '
+        resources.ApplyResources(Me.RadTextBoxControlBereich2FallendWeight7, "RadTextBoxControlBereich2FallendWeight7")
+        Me.RadTextBoxControlBereich2FallendWeight7.MaxLength = 20
+        Me.RadTextBoxControlBereich2FallendWeight7.Name = "RadTextBoxControlBereich2FallendWeight7"
+        '
+        'RadTextBoxControlBereich2FallendDisplayWeight7
+        '
+        resources.ApplyResources(Me.RadTextBoxControlBereich2FallendDisplayWeight7, "RadTextBoxControlBereich2FallendDisplayWeight7")
+        Me.RadTextBoxControlBereich2FallendDisplayWeight7.MaxLength = 20
+        Me.RadTextBoxControlBereich2FallendDisplayWeight7.Name = "RadTextBoxControlBereich2FallendDisplayWeight7"
+        '
+        'RadTextBoxControlBereich2FallendErrorLimit7
+        '
+        resources.ApplyResources(Me.RadTextBoxControlBereich2FallendErrorLimit7, "RadTextBoxControlBereich2FallendErrorLimit7")
+        Me.RadTextBoxControlBereich2FallendErrorLimit7.MaxLength = 20
+        Me.RadTextBoxControlBereich2FallendErrorLimit7.Name = "RadTextBoxControlBereich2FallendErrorLimit7"
+        Me.RadTextBoxControlBereich2FallendErrorLimit7.ReadOnly = True
+        Me.RadTextBoxControlBereich2FallendErrorLimit7.TabStop = False
+        '
+        'RadCheckBoxBereich2FallendVEL7
+        '
+        resources.ApplyResources(Me.RadCheckBoxBereich2FallendVEL7, "RadCheckBoxBereich2FallendVEL7")
+        Me.RadCheckBoxBereich2FallendVEL7.Name = "RadCheckBoxBereich2FallendVEL7"
+        Me.RadCheckBoxBereich2FallendVEL7.TabStop = False
+        '
+        'PanelBereich2FallendWZ6
+        '
+        Me.PanelBereich2FallendWZ6.Controls.Add(Me.PictureBoxFallend39)
+        Me.PanelBereich2FallendWZ6.Controls.Add(Me.PictureBoxFallend40)
+        Me.PanelBereich2FallendWZ6.Controls.Add(Me.RadTextBoxControlBereich2FallendWeight6)
+        Me.PanelBereich2FallendWZ6.Controls.Add(Me.RadTextBoxControlBereich2FallendDisplayWeight6)
+        Me.PanelBereich2FallendWZ6.Controls.Add(Me.RadTextBoxControlBereich2FallendErrorLimit6)
+        Me.PanelBereich2FallendWZ6.Controls.Add(Me.RadCheckBoxBereich2FallendVEL6)
+        resources.ApplyResources(Me.PanelBereich2FallendWZ6, "PanelBereich2FallendWZ6")
+        Me.PanelBereich2FallendWZ6.Name = "PanelBereich2FallendWZ6"
+        '
+        'PictureBoxFallend39
+        '
+        Me.PictureBoxFallend39.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBoxFallend39, "PictureBoxFallend39")
+        Me.PictureBoxFallend39.Name = "PictureBoxFallend39"
+        Me.PictureBoxFallend39.TabStop = False
+        '
+        'PictureBoxFallend40
+        '
+        Me.PictureBoxFallend40.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBoxFallend40, "PictureBoxFallend40")
+        Me.PictureBoxFallend40.Name = "PictureBoxFallend40"
+        Me.PictureBoxFallend40.TabStop = False
+        '
+        'RadTextBoxControlBereich2FallendWeight6
+        '
+        resources.ApplyResources(Me.RadTextBoxControlBereich2FallendWeight6, "RadTextBoxControlBereich2FallendWeight6")
+        Me.RadTextBoxControlBereich2FallendWeight6.MaxLength = 20
+        Me.RadTextBoxControlBereich2FallendWeight6.Name = "RadTextBoxControlBereich2FallendWeight6"
+        '
+        'RadTextBoxControlBereich2FallendDisplayWeight6
+        '
+        resources.ApplyResources(Me.RadTextBoxControlBereich2FallendDisplayWeight6, "RadTextBoxControlBereich2FallendDisplayWeight6")
+        Me.RadTextBoxControlBereich2FallendDisplayWeight6.MaxLength = 20
+        Me.RadTextBoxControlBereich2FallendDisplayWeight6.Name = "RadTextBoxControlBereich2FallendDisplayWeight6"
+        '
+        'RadTextBoxControlBereich2FallendErrorLimit6
+        '
+        resources.ApplyResources(Me.RadTextBoxControlBereich2FallendErrorLimit6, "RadTextBoxControlBereich2FallendErrorLimit6")
+        Me.RadTextBoxControlBereich2FallendErrorLimit6.MaxLength = 20
+        Me.RadTextBoxControlBereich2FallendErrorLimit6.Name = "RadTextBoxControlBereich2FallendErrorLimit6"
+        Me.RadTextBoxControlBereich2FallendErrorLimit6.ReadOnly = True
+        Me.RadTextBoxControlBereich2FallendErrorLimit6.TabStop = False
+        '
+        'RadCheckBoxBereich2FallendVEL6
+        '
+        resources.ApplyResources(Me.RadCheckBoxBereich2FallendVEL6, "RadCheckBoxBereich2FallendVEL6")
+        Me.RadCheckBoxBereich2FallendVEL6.Name = "RadCheckBoxBereich2FallendVEL6"
+        Me.RadCheckBoxBereich2FallendVEL6.TabStop = False
+        '
+        'PanelBereich2FallendWZ5
+        '
+        Me.PanelBereich2FallendWZ5.Controls.Add(Me.PictureBoxFallend37)
+        Me.PanelBereich2FallendWZ5.Controls.Add(Me.PictureBoxFallend38)
+        Me.PanelBereich2FallendWZ5.Controls.Add(Me.RadTextBoxControlBereich2FallendWeight5)
+        Me.PanelBereich2FallendWZ5.Controls.Add(Me.RadTextBoxControlBereich2FallendDisplayWeight5)
+        Me.PanelBereich2FallendWZ5.Controls.Add(Me.RadTextBoxControlBereich2FallendErrorLimit5)
+        Me.PanelBereich2FallendWZ5.Controls.Add(Me.RadCheckBoxBereich2FallendVEL5)
+        resources.ApplyResources(Me.PanelBereich2FallendWZ5, "PanelBereich2FallendWZ5")
+        Me.PanelBereich2FallendWZ5.Name = "PanelBereich2FallendWZ5"
+        '
+        'PictureBoxFallend37
+        '
+        Me.PictureBoxFallend37.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBoxFallend37, "PictureBoxFallend37")
+        Me.PictureBoxFallend37.Name = "PictureBoxFallend37"
+        Me.PictureBoxFallend37.TabStop = False
+        '
+        'PictureBoxFallend38
+        '
+        Me.PictureBoxFallend38.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBoxFallend38, "PictureBoxFallend38")
+        Me.PictureBoxFallend38.Name = "PictureBoxFallend38"
+        Me.PictureBoxFallend38.TabStop = False
+        '
+        'RadTextBoxControlBereich2FallendWeight5
+        '
+        resources.ApplyResources(Me.RadTextBoxControlBereich2FallendWeight5, "RadTextBoxControlBereich2FallendWeight5")
+        Me.RadTextBoxControlBereich2FallendWeight5.MaxLength = 20
+        Me.RadTextBoxControlBereich2FallendWeight5.Name = "RadTextBoxControlBereich2FallendWeight5"
+        '
+        'RadTextBoxControlBereich2FallendDisplayWeight5
+        '
+        resources.ApplyResources(Me.RadTextBoxControlBereich2FallendDisplayWeight5, "RadTextBoxControlBereich2FallendDisplayWeight5")
+        Me.RadTextBoxControlBereich2FallendDisplayWeight5.MaxLength = 20
+        Me.RadTextBoxControlBereich2FallendDisplayWeight5.Name = "RadTextBoxControlBereich2FallendDisplayWeight5"
+        '
+        'RadTextBoxControlBereich2FallendErrorLimit5
+        '
+        resources.ApplyResources(Me.RadTextBoxControlBereich2FallendErrorLimit5, "RadTextBoxControlBereich2FallendErrorLimit5")
+        Me.RadTextBoxControlBereich2FallendErrorLimit5.MaxLength = 20
+        Me.RadTextBoxControlBereich2FallendErrorLimit5.Name = "RadTextBoxControlBereich2FallendErrorLimit5"
+        Me.RadTextBoxControlBereich2FallendErrorLimit5.ReadOnly = True
+        Me.RadTextBoxControlBereich2FallendErrorLimit5.TabStop = False
+        '
+        'RadCheckBoxBereich2FallendVEL5
+        '
+        resources.ApplyResources(Me.RadCheckBoxBereich2FallendVEL5, "RadCheckBoxBereich2FallendVEL5")
+        Me.RadCheckBoxBereich2FallendVEL5.Name = "RadCheckBoxBereich2FallendVEL5"
+        Me.RadCheckBoxBereich2FallendVEL5.TabStop = False
+        '
+        'PanelBereich2FallendWZ4
+        '
+        Me.PanelBereich2FallendWZ4.Controls.Add(Me.PictureBoxFallend35)
+        Me.PanelBereich2FallendWZ4.Controls.Add(Me.PictureBoxFallend36)
+        Me.PanelBereich2FallendWZ4.Controls.Add(Me.RadTextBoxControlBereich2FallendWeight4)
+        Me.PanelBereich2FallendWZ4.Controls.Add(Me.RadTextBoxControlBereich2FallendDisplayWeight4)
+        Me.PanelBereich2FallendWZ4.Controls.Add(Me.RadTextBoxControlBereich2FallendErrorLimit4)
+        Me.PanelBereich2FallendWZ4.Controls.Add(Me.RadCheckBoxBereich2FallendVEL4)
+        resources.ApplyResources(Me.PanelBereich2FallendWZ4, "PanelBereich2FallendWZ4")
+        Me.PanelBereich2FallendWZ4.Name = "PanelBereich2FallendWZ4"
+        '
+        'PictureBoxFallend35
+        '
+        Me.PictureBoxFallend35.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBoxFallend35, "PictureBoxFallend35")
+        Me.PictureBoxFallend35.Name = "PictureBoxFallend35"
+        Me.PictureBoxFallend35.TabStop = False
+        '
+        'PictureBoxFallend36
+        '
+        Me.PictureBoxFallend36.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBoxFallend36, "PictureBoxFallend36")
+        Me.PictureBoxFallend36.Name = "PictureBoxFallend36"
+        Me.PictureBoxFallend36.TabStop = False
+        '
+        'RadTextBoxControlBereich2FallendWeight4
+        '
+        resources.ApplyResources(Me.RadTextBoxControlBereich2FallendWeight4, "RadTextBoxControlBereich2FallendWeight4")
+        Me.RadTextBoxControlBereich2FallendWeight4.MaxLength = 20
+        Me.RadTextBoxControlBereich2FallendWeight4.Name = "RadTextBoxControlBereich2FallendWeight4"
+        '
+        'RadTextBoxControlBereich2FallendDisplayWeight4
+        '
+        resources.ApplyResources(Me.RadTextBoxControlBereich2FallendDisplayWeight4, "RadTextBoxControlBereich2FallendDisplayWeight4")
+        Me.RadTextBoxControlBereich2FallendDisplayWeight4.MaxLength = 20
+        Me.RadTextBoxControlBereich2FallendDisplayWeight4.Name = "RadTextBoxControlBereich2FallendDisplayWeight4"
+        '
+        'RadTextBoxControlBereich2FallendErrorLimit4
+        '
+        resources.ApplyResources(Me.RadTextBoxControlBereich2FallendErrorLimit4, "RadTextBoxControlBereich2FallendErrorLimit4")
+        Me.RadTextBoxControlBereich2FallendErrorLimit4.MaxLength = 20
+        Me.RadTextBoxControlBereich2FallendErrorLimit4.Name = "RadTextBoxControlBereich2FallendErrorLimit4"
+        Me.RadTextBoxControlBereich2FallendErrorLimit4.ReadOnly = True
+        Me.RadTextBoxControlBereich2FallendErrorLimit4.TabStop = False
+        '
+        'RadCheckBoxBereich2FallendVEL4
+        '
+        resources.ApplyResources(Me.RadCheckBoxBereich2FallendVEL4, "RadCheckBoxBereich2FallendVEL4")
+        Me.RadCheckBoxBereich2FallendVEL4.Name = "RadCheckBoxBereich2FallendVEL4"
+        Me.RadCheckBoxBereich2FallendVEL4.TabStop = False
+        '
+        'PanelBereich2FallendWZ3
+        '
+        Me.PanelBereich2FallendWZ3.Controls.Add(Me.PictureBoxFallend33)
+        Me.PanelBereich2FallendWZ3.Controls.Add(Me.PictureBoxFallend34)
+        Me.PanelBereich2FallendWZ3.Controls.Add(Me.RadTextBoxControlBereich2FallendWeight3)
+        Me.PanelBereich2FallendWZ3.Controls.Add(Me.RadTextBoxControlBereich2FallendDisplayWeight3)
+        Me.PanelBereich2FallendWZ3.Controls.Add(Me.RadTextBoxControlBereich2FallendErrorLimit3)
+        Me.PanelBereich2FallendWZ3.Controls.Add(Me.RadCheckBoxBereich2FallendVEL3)
+        resources.ApplyResources(Me.PanelBereich2FallendWZ3, "PanelBereich2FallendWZ3")
+        Me.PanelBereich2FallendWZ3.Name = "PanelBereich2FallendWZ3"
+        '
+        'PictureBoxFallend33
+        '
+        Me.PictureBoxFallend33.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBoxFallend33, "PictureBoxFallend33")
+        Me.PictureBoxFallend33.Name = "PictureBoxFallend33"
+        Me.PictureBoxFallend33.TabStop = False
+        '
+        'PictureBoxFallend34
+        '
+        Me.PictureBoxFallend34.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBoxFallend34, "PictureBoxFallend34")
+        Me.PictureBoxFallend34.Name = "PictureBoxFallend34"
+        Me.PictureBoxFallend34.TabStop = False
+        '
+        'RadTextBoxControlBereich2FallendWeight3
+        '
+        resources.ApplyResources(Me.RadTextBoxControlBereich2FallendWeight3, "RadTextBoxControlBereich2FallendWeight3")
+        Me.RadTextBoxControlBereich2FallendWeight3.MaxLength = 20
+        Me.RadTextBoxControlBereich2FallendWeight3.Name = "RadTextBoxControlBereich2FallendWeight3"
+        '
+        'RadTextBoxControlBereich2FallendDisplayWeight3
+        '
+        resources.ApplyResources(Me.RadTextBoxControlBereich2FallendDisplayWeight3, "RadTextBoxControlBereich2FallendDisplayWeight3")
+        Me.RadTextBoxControlBereich2FallendDisplayWeight3.MaxLength = 20
+        Me.RadTextBoxControlBereich2FallendDisplayWeight3.Name = "RadTextBoxControlBereich2FallendDisplayWeight3"
+        '
+        'RadTextBoxControlBereich2FallendErrorLimit3
+        '
+        resources.ApplyResources(Me.RadTextBoxControlBereich2FallendErrorLimit3, "RadTextBoxControlBereich2FallendErrorLimit3")
+        Me.RadTextBoxControlBereich2FallendErrorLimit3.MaxLength = 20
+        Me.RadTextBoxControlBereich2FallendErrorLimit3.Name = "RadTextBoxControlBereich2FallendErrorLimit3"
+        Me.RadTextBoxControlBereich2FallendErrorLimit3.ReadOnly = True
+        Me.RadTextBoxControlBereich2FallendErrorLimit3.TabStop = False
+        '
+        'RadCheckBoxBereich2FallendVEL3
+        '
+        resources.ApplyResources(Me.RadCheckBoxBereich2FallendVEL3, "RadCheckBoxBereich2FallendVEL3")
+        Me.RadCheckBoxBereich2FallendVEL3.Name = "RadCheckBoxBereich2FallendVEL3"
+        Me.RadCheckBoxBereich2FallendVEL3.TabStop = False
+        '
+        'PanelBereich2FallendWZ2
+        '
+        Me.PanelBereich2FallendWZ2.Controls.Add(Me.PictureBoxFallend31)
+        Me.PanelBereich2FallendWZ2.Controls.Add(Me.PictureBoxFallend32)
+        Me.PanelBereich2FallendWZ2.Controls.Add(Me.RadTextBoxControlBereich2FallendWeight2)
+        Me.PanelBereich2FallendWZ2.Controls.Add(Me.RadTextBoxControlBereich2FallendDisplayWeight2)
+        Me.PanelBereich2FallendWZ2.Controls.Add(Me.RadTextBoxControlBereich2FallendErrorLimit2)
+        Me.PanelBereich2FallendWZ2.Controls.Add(Me.RadCheckBoxBereich2FallendVEL2)
+        resources.ApplyResources(Me.PanelBereich2FallendWZ2, "PanelBereich2FallendWZ2")
+        Me.PanelBereich2FallendWZ2.Name = "PanelBereich2FallendWZ2"
+        '
+        'PictureBoxFallend31
+        '
+        Me.PictureBoxFallend31.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBoxFallend31, "PictureBoxFallend31")
+        Me.PictureBoxFallend31.Name = "PictureBoxFallend31"
+        Me.PictureBoxFallend31.TabStop = False
+        '
+        'PictureBoxFallend32
+        '
+        Me.PictureBoxFallend32.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBoxFallend32, "PictureBoxFallend32")
+        Me.PictureBoxFallend32.Name = "PictureBoxFallend32"
+        Me.PictureBoxFallend32.TabStop = False
+        '
+        'RadTextBoxControlBereich2FallendWeight2
+        '
+        resources.ApplyResources(Me.RadTextBoxControlBereich2FallendWeight2, "RadTextBoxControlBereich2FallendWeight2")
+        Me.RadTextBoxControlBereich2FallendWeight2.MaxLength = 20
+        Me.RadTextBoxControlBereich2FallendWeight2.Name = "RadTextBoxControlBereich2FallendWeight2"
+        '
+        'RadTextBoxControlBereich2FallendDisplayWeight2
+        '
+        resources.ApplyResources(Me.RadTextBoxControlBereich2FallendDisplayWeight2, "RadTextBoxControlBereich2FallendDisplayWeight2")
+        Me.RadTextBoxControlBereich2FallendDisplayWeight2.MaxLength = 20
+        Me.RadTextBoxControlBereich2FallendDisplayWeight2.Name = "RadTextBoxControlBereich2FallendDisplayWeight2"
+        '
+        'RadTextBoxControlBereich2FallendErrorLimit2
+        '
+        resources.ApplyResources(Me.RadTextBoxControlBereich2FallendErrorLimit2, "RadTextBoxControlBereich2FallendErrorLimit2")
+        Me.RadTextBoxControlBereich2FallendErrorLimit2.MaxLength = 20
+        Me.RadTextBoxControlBereich2FallendErrorLimit2.Name = "RadTextBoxControlBereich2FallendErrorLimit2"
+        Me.RadTextBoxControlBereich2FallendErrorLimit2.ReadOnly = True
+        Me.RadTextBoxControlBereich2FallendErrorLimit2.TabStop = False
+        '
+        'RadCheckBoxBereich2FallendVEL2
+        '
+        resources.ApplyResources(Me.RadCheckBoxBereich2FallendVEL2, "RadCheckBoxBereich2FallendVEL2")
+        Me.RadCheckBoxBereich2FallendVEL2.Name = "RadCheckBoxBereich2FallendVEL2"
+        Me.RadCheckBoxBereich2FallendVEL2.TabStop = False
+        '
+        'PanelBereich2FallendWZ1
+        '
+        Me.PanelBereich2FallendWZ1.Controls.Add(Me.PictureBoxFallend29)
+        Me.PanelBereich2FallendWZ1.Controls.Add(Me.PictureBoxFallend30)
+        Me.PanelBereich2FallendWZ1.Controls.Add(Me.RadTextBoxControlBereich2FallendWeight1)
+        Me.PanelBereich2FallendWZ1.Controls.Add(Me.RadTextBoxControlBereich2FallendDisplayWeight1)
+        Me.PanelBereich2FallendWZ1.Controls.Add(Me.RadTextBoxControlBereich2FallendErrorLimit1)
+        Me.PanelBereich2FallendWZ1.Controls.Add(Me.RadCheckBoxBereich2FallendVEL1)
+        resources.ApplyResources(Me.PanelBereich2FallendWZ1, "PanelBereich2FallendWZ1")
+        Me.PanelBereich2FallendWZ1.Name = "PanelBereich2FallendWZ1"
+        '
+        'PictureBoxFallend29
+        '
+        Me.PictureBoxFallend29.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBoxFallend29, "PictureBoxFallend29")
+        Me.PictureBoxFallend29.Name = "PictureBoxFallend29"
+        Me.PictureBoxFallend29.TabStop = False
+        '
+        'PictureBoxFallend30
+        '
+        Me.PictureBoxFallend30.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBoxFallend30, "PictureBoxFallend30")
+        Me.PictureBoxFallend30.Name = "PictureBoxFallend30"
+        Me.PictureBoxFallend30.TabStop = False
+        '
+        'RadTextBoxControlBereich2FallendWeight1
+        '
+        resources.ApplyResources(Me.RadTextBoxControlBereich2FallendWeight1, "RadTextBoxControlBereich2FallendWeight1")
+        Me.RadTextBoxControlBereich2FallendWeight1.MaxLength = 20
+        Me.RadTextBoxControlBereich2FallendWeight1.Name = "RadTextBoxControlBereich2FallendWeight1"
+        '
+        'RadTextBoxControlBereich2FallendDisplayWeight1
+        '
+        resources.ApplyResources(Me.RadTextBoxControlBereich2FallendDisplayWeight1, "RadTextBoxControlBereich2FallendDisplayWeight1")
+        Me.RadTextBoxControlBereich2FallendDisplayWeight1.MaxLength = 20
+        Me.RadTextBoxControlBereich2FallendDisplayWeight1.Name = "RadTextBoxControlBereich2FallendDisplayWeight1"
+        '
+        'RadTextBoxControlBereich2FallendErrorLimit1
+        '
+        resources.ApplyResources(Me.RadTextBoxControlBereich2FallendErrorLimit1, "RadTextBoxControlBereich2FallendErrorLimit1")
+        Me.RadTextBoxControlBereich2FallendErrorLimit1.MaxLength = 20
+        Me.RadTextBoxControlBereich2FallendErrorLimit1.Name = "RadTextBoxControlBereich2FallendErrorLimit1"
+        Me.RadTextBoxControlBereich2FallendErrorLimit1.ReadOnly = True
+        Me.RadTextBoxControlBereich2FallendErrorLimit1.TabStop = False
+        '
+        'RadCheckBoxBereich2FallendVEL1
+        '
+        resources.ApplyResources(Me.RadCheckBoxBereich2FallendVEL1, "RadCheckBoxBereich2FallendVEL1")
+        Me.RadCheckBoxBereich2FallendVEL1.Name = "RadCheckBoxBereich2FallendVEL1"
+        Me.RadCheckBoxBereich2FallendVEL1.TabStop = False
+        '
+        'lblPflichtfeld5
+        '
+        resources.ApplyResources(Me.lblPflichtfeld5, "lblPflichtfeld5")
+        Me.lblPflichtfeld5.ForeColor = System.Drawing.Color.Red
+        Me.lblPflichtfeld5.Name = "lblPflichtfeld5"
+        '
         'lblBereich2FallendFehlerGrenzen
         '
         resources.ApplyResources(Me.lblBereich2FallendFehlerGrenzen, "lblBereich2FallendFehlerGrenzen")
@@ -3544,24 +3557,12 @@ Partial Class uco_9PruefungLinearitaet
         resources.ApplyResources(Me.lblBereich2FallendAnzeigeGewicht, "lblBereich2FallendAnzeigeGewicht")
         Me.lblBereich2FallendAnzeigeGewicht.Name = "lblBereich2FallendAnzeigeGewicht"
         '
-        'FlowLayoutPanel2
-        '
-        Me.FlowLayoutPanel2.Controls.Add(Me.PanelBereich2FallendWZ8)
-        Me.FlowLayoutPanel2.Controls.Add(Me.PanelBereich2FallendWZ7)
-        Me.FlowLayoutPanel2.Controls.Add(Me.PanelBereich2FallendWZ6)
-        Me.FlowLayoutPanel2.Controls.Add(Me.PanelBereich2FallendWZ5)
-        Me.FlowLayoutPanel2.Controls.Add(Me.PanelBereich2FallendWZ4)
-        Me.FlowLayoutPanel2.Controls.Add(Me.PanelBereich2FallendWZ3)
-        Me.FlowLayoutPanel2.Controls.Add(Me.PanelBereich2FallendWZ2)
-        Me.FlowLayoutPanel2.Controls.Add(Me.PanelBereich2FallendWZ1)
-        resources.ApplyResources(Me.FlowLayoutPanel2, "FlowLayoutPanel2")
-        Me.FlowLayoutPanel2.Name = "FlowLayoutPanel2"
-        '
         'uco_9PruefungLinearitaet
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.RadScrollablePanel1)
+        Me.DoubleBuffered = True
         Me.Name = "uco_9PruefungLinearitaet"
         Me.RadScrollablePanel1.PanelContainer.ResumeLayout(False)
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3929,46 +3930,15 @@ Partial Class uco_9PruefungLinearitaet
         CType(Me.RadGroupBoxBereich2Fallend, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxBereich2Fallend.ResumeLayout(False)
         Me.RadGroupBoxBereich2Fallend.PerformLayout()
-        Me.PanelBereich2FallendWZ1.ResumeLayout(False)
-        Me.PanelBereich2FallendWZ1.PerformLayout()
-        CType(Me.PictureBoxFallend29, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBoxFallend30, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControlBereich2FallendWeight1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControlBereich2FallendDisplayWeight1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControlBereich2FallendErrorLimit1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadCheckBoxBereich2FallendVEL1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.PanelBereich2FallendWZ2.ResumeLayout(False)
-        Me.PanelBereich2FallendWZ2.PerformLayout()
-        CType(Me.PictureBoxFallend31, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBoxFallend32, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControlBereich2FallendWeight2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControlBereich2FallendDisplayWeight2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControlBereich2FallendErrorLimit2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadCheckBoxBereich2FallendVEL2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.PanelBereich2FallendWZ3.ResumeLayout(False)
-        Me.PanelBereich2FallendWZ3.PerformLayout()
-        CType(Me.PictureBoxFallend33, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBoxFallend34, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControlBereich2FallendWeight3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControlBereich2FallendDisplayWeight3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControlBereich2FallendErrorLimit3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadCheckBoxBereich2FallendVEL3, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.PanelBereich2FallendWZ4.ResumeLayout(False)
-        Me.PanelBereich2FallendWZ4.PerformLayout()
-        CType(Me.PictureBoxFallend35, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBoxFallend36, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControlBereich2FallendWeight4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControlBereich2FallendDisplayWeight4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControlBereich2FallendErrorLimit4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadCheckBoxBereich2FallendVEL4, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.PanelBereich2FallendWZ5.ResumeLayout(False)
-        Me.PanelBereich2FallendWZ5.PerformLayout()
-        CType(Me.PictureBoxFallend37, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBoxFallend38, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControlBereich2FallendWeight5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControlBereich2FallendDisplayWeight5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControlBereich2FallendErrorLimit5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadCheckBoxBereich2FallendVEL5, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.FlowLayoutPanel2.ResumeLayout(False)
+        Me.PanelBereich2FallendWZ8.ResumeLayout(False)
+        Me.PanelBereich2FallendWZ8.PerformLayout()
+        CType(Me.PictureBoxFallend43, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBoxFallend44, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxControlBereich2FallendWeight8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxControlBereich2FallendDisplayWeight8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxControlBereich2FallendErrorLimit8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadCheckBoxBereich2FallendVEL8, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelBereich2FallendWZ7.ResumeLayout(False)
         Me.PanelBereich2FallendWZ7.PerformLayout()
         CType(Me.PictureBoxFallend41, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3985,19 +3955,50 @@ Partial Class uco_9PruefungLinearitaet
         CType(Me.RadTextBoxControlBereich2FallendDisplayWeight6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich2FallendErrorLimit6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadCheckBoxBereich2FallendVEL6, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.PanelBereich2FallendWZ8.ResumeLayout(False)
-        Me.PanelBereich2FallendWZ8.PerformLayout()
-        CType(Me.PictureBoxFallend43, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBoxFallend44, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControlBereich2FallendWeight8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControlBereich2FallendDisplayWeight8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControlBereich2FallendErrorLimit8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadCheckBoxBereich2FallendVEL8, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelBereich2FallendWZ5.ResumeLayout(False)
+        Me.PanelBereich2FallendWZ5.PerformLayout()
+        CType(Me.PictureBoxFallend37, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBoxFallend38, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxControlBereich2FallendWeight5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxControlBereich2FallendDisplayWeight5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxControlBereich2FallendErrorLimit5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadCheckBoxBereich2FallendVEL5, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelBereich2FallendWZ4.ResumeLayout(False)
+        Me.PanelBereich2FallendWZ4.PerformLayout()
+        CType(Me.PictureBoxFallend35, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBoxFallend36, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxControlBereich2FallendWeight4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxControlBereich2FallendDisplayWeight4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxControlBereich2FallendErrorLimit4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadCheckBoxBereich2FallendVEL4, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelBereich2FallendWZ3.ResumeLayout(False)
+        Me.PanelBereich2FallendWZ3.PerformLayout()
+        CType(Me.PictureBoxFallend33, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBoxFallend34, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxControlBereich2FallendWeight3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxControlBereich2FallendDisplayWeight3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxControlBereich2FallendErrorLimit3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadCheckBoxBereich2FallendVEL3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelBereich2FallendWZ2.ResumeLayout(False)
+        Me.PanelBereich2FallendWZ2.PerformLayout()
+        CType(Me.PictureBoxFallend31, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBoxFallend32, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxControlBereich2FallendWeight2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxControlBereich2FallendDisplayWeight2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxControlBereich2FallendErrorLimit2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadCheckBoxBereich2FallendVEL2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelBereich2FallendWZ1.ResumeLayout(False)
+        Me.PanelBereich2FallendWZ1.PerformLayout()
+        CType(Me.PictureBoxFallend29, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBoxFallend30, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxControlBereich2FallendWeight1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxControlBereich2FallendDisplayWeight1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBoxControlBereich2FallendErrorLimit1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadCheckBoxBereich2FallendVEL1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblBereich2FallendFehlerGrenzen, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblBereich2FallendEFGSpezial, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblBereich2FallendGewicht, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblBereich2FallendAnzeigeGewicht, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.FlowLayoutPanel2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub

@@ -462,11 +462,6 @@ Partial Class uco_3Kompatiblititaetsnachweis
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadGroupBoxWaage)
         resources.ApplyResources(Me.RadScrollablePanel1.PanelContainer, "RadScrollablePanel1.PanelContainer")
         '
-        '
-        '
-        Me.RadScrollablePanel1.RootElement.AccessibleDescription = Nothing
-        Me.RadScrollablePanel1.RootElement.AccessibleName = Nothing
-        '
         'RadGroupBoxVerbindungselemente
         '
         Me.RadGroupBoxVerbindungselemente.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
@@ -478,11 +473,6 @@ Partial Class uco_3Kompatiblititaetsnachweis
         Me.RadGroupBoxVerbindungselemente.Controls.Add(Me.lblVerbindungEichfehlergrenze)
         resources.ApplyResources(Me.RadGroupBoxVerbindungselemente, "RadGroupBoxVerbindungselemente")
         Me.RadGroupBoxVerbindungselemente.Name = "RadGroupBoxVerbindungselemente"
-        '
-        '
-        '
-        Me.RadGroupBoxVerbindungselemente.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxVerbindungselemente.RootElement.AccessibleName = Nothing
         '
         'PictureBox8
         '
@@ -496,11 +486,6 @@ Partial Class uco_3Kompatiblititaetsnachweis
         resources.ApplyResources(Me.RadSeparator15, "RadSeparator15")
         Me.RadSeparator15.Name = "RadSeparator15"
         Me.RadSeparator15.Orientation = System.Windows.Forms.Orientation.Vertical
-        '
-        '
-        '
-        Me.RadSeparator15.RootElement.AccessibleDescription = Nothing
-        Me.RadSeparator15.RootElement.AccessibleName = Nothing
         Me.RadSeparator15.TabStop = False
         '
         'RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze
@@ -509,11 +494,6 @@ Partial Class uco_3Kompatiblititaetsnachweis
         Me.RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze.MaxLength = 10
         Me.RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze.Name = "RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze"
         Me.RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlVerbindungselementeBruchteilEichfehlergrenze.TabStop = False
         '
         'RadSeparator16
@@ -521,11 +501,6 @@ Partial Class uco_3Kompatiblititaetsnachweis
         resources.ApplyResources(Me.RadSeparator16, "RadSeparator16")
         Me.RadSeparator16.Name = "RadSeparator16"
         Me.RadSeparator16.Orientation = System.Windows.Forms.Orientation.Vertical
-        '
-        '
-        '
-        Me.RadSeparator16.RootElement.AccessibleDescription = Nothing
-        Me.RadSeparator16.RootElement.AccessibleName = Nothing
         Me.RadSeparator16.TabStop = False
         '
         'RadLabel76
@@ -533,20 +508,10 @@ Partial Class uco_3Kompatiblititaetsnachweis
         resources.ApplyResources(Me.RadLabel76, "RadLabel76")
         Me.RadLabel76.Name = "RadLabel76"
         '
-        '
-        '
-        Me.RadLabel76.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel76.RootElement.AccessibleName = Nothing
-        '
         'lblVerbindungEichfehlergrenze
         '
         resources.ApplyResources(Me.lblVerbindungEichfehlergrenze, "lblVerbindungEichfehlergrenze")
         Me.lblVerbindungEichfehlergrenze.Name = "lblVerbindungEichfehlergrenze"
-        '
-        '
-        '
-        Me.lblVerbindungEichfehlergrenze.RootElement.AccessibleDescription = Nothing
-        Me.lblVerbindungEichfehlergrenze.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxWZ
         '
@@ -618,11 +583,6 @@ Partial Class uco_3Kompatiblititaetsnachweis
         resources.ApplyResources(Me.RadGroupBoxWZ, "RadGroupBoxWZ")
         Me.RadGroupBoxWZ.Name = "RadGroupBoxWZ"
         '
-        '
-        '
-        Me.RadGroupBoxWZ.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxWZ.RootElement.AccessibleName = Nothing
-        '
         'RadButton1
         '
         resources.ApplyResources(Me.RadButton1, "RadButton1")
@@ -633,22 +593,12 @@ Partial Class uco_3Kompatiblititaetsnachweis
         resources.ApplyResources(Me.RadLabel1, "RadLabel1")
         Me.RadLabel1.Name = "RadLabel1"
         '
-        '
-        '
-        Me.RadLabel1.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel1.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt
         '
         resources.ApplyResources(Me.RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt, "RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt")
         Me.RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.MaxLength = 50
         Me.RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.Name = "RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt"
         Me.RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt.RootElement.AccessibleName = Nothing
         '
         'Label10
         '
@@ -738,80 +688,40 @@ Partial Class uco_3Kompatiblititaetsnachweis
         resources.ApplyResources(Me.RadLabel108, "RadLabel108")
         Me.RadLabel108.Name = "RadLabel108"
         '
-        '
-        '
-        Me.RadLabel108.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel108.RootElement.AccessibleName = Nothing
-        '
         'RadLabel111
         '
         resources.ApplyResources(Me.RadLabel111, "RadLabel111")
         Me.RadLabel111.Name = "RadLabel111"
-        '
-        '
-        '
-        Me.RadLabel111.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel111.RootElement.AccessibleName = Nothing
         '
         'RadLabel105
         '
         resources.ApplyResources(Me.RadLabel105, "RadLabel105")
         Me.RadLabel105.Name = "RadLabel105"
         '
-        '
-        '
-        Me.RadLabel105.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel105.RootElement.AccessibleName = Nothing
-        '
         'RadLabel106
         '
         resources.ApplyResources(Me.RadLabel106, "RadLabel106")
         Me.RadLabel106.Name = "RadLabel106"
-        '
-        '
-        '
-        Me.RadLabel106.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel106.RootElement.AccessibleName = Nothing
         '
         'RadLabel107
         '
         resources.ApplyResources(Me.RadLabel107, "RadLabel107")
         Me.RadLabel107.Name = "RadLabel107"
         '
-        '
-        '
-        Me.RadLabel107.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel107.RootElement.AccessibleName = Nothing
-        '
         'RadLabel103
         '
         resources.ApplyResources(Me.RadLabel103, "RadLabel103")
         Me.RadLabel103.Name = "RadLabel103"
-        '
-        '
-        '
-        Me.RadLabel103.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel103.RootElement.AccessibleName = Nothing
         '
         'RadLabel93
         '
         resources.ApplyResources(Me.RadLabel93, "RadLabel93")
         Me.RadLabel93.Name = "RadLabel93"
         '
-        '
-        '
-        Me.RadLabel93.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel93.RootElement.AccessibleName = Nothing
-        '
         'RadLabel101
         '
         resources.ApplyResources(Me.RadLabel101, "RadLabel101")
         Me.RadLabel101.Name = "RadLabel101"
-        '
-        '
-        '
-        Me.RadLabel101.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel101.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlWZTemperaturbereichMAX
         '
@@ -819,11 +729,6 @@ Partial Class uco_3Kompatiblititaetsnachweis
         Me.RadTextBoxControlWZTemperaturbereichMAX.MaxLength = 5
         Me.RadTextBoxControlWZTemperaturbereichMAX.Name = "RadTextBoxControlWZTemperaturbereichMAX"
         Me.RadTextBoxControlWZTemperaturbereichMAX.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlWZTemperaturbereichMAX.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlWZTemperaturbereichMAX.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlWZTemperaturbereichMAX.TabStop = False
         '
         'RadLabel78
@@ -831,22 +736,12 @@ Partial Class uco_3Kompatiblititaetsnachweis
         resources.ApplyResources(Me.RadLabel78, "RadLabel78")
         Me.RadLabel78.Name = "RadLabel78"
         '
-        '
-        '
-        Me.RadLabel78.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel78.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlWZBruchteilEichfehlergrenze
         '
         resources.ApplyResources(Me.RadTextBoxControlWZBruchteilEichfehlergrenze, "RadTextBoxControlWZBruchteilEichfehlergrenze")
         Me.RadTextBoxControlWZBruchteilEichfehlergrenze.MaxLength = 5
         Me.RadTextBoxControlWZBruchteilEichfehlergrenze.Name = "RadTextBoxControlWZBruchteilEichfehlergrenze"
         Me.RadTextBoxControlWZBruchteilEichfehlergrenze.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlWZBruchteilEichfehlergrenze.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlWZBruchteilEichfehlergrenze.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlWZBruchteilEichfehlergrenze.TabStop = False
         '
         'RadLabel74
@@ -854,20 +749,10 @@ Partial Class uco_3Kompatiblititaetsnachweis
         resources.ApplyResources(Me.RadLabel74, "RadLabel74")
         Me.RadLabel74.Name = "RadLabel74"
         '
-        '
-        '
-        Me.RadLabel74.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel74.RootElement.AccessibleName = Nothing
-        '
         'lblWZEichfehlergrenze
         '
         resources.ApplyResources(Me.lblWZEichfehlergrenze, "lblWZEichfehlergrenze")
         Me.lblWZEichfehlergrenze.Name = "lblWZEichfehlergrenze"
-        '
-        '
-        '
-        Me.lblWZEichfehlergrenze.RootElement.AccessibleDescription = Nothing
-        Me.lblWZEichfehlergrenze.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlWZTemperaturbereichMIN
         '
@@ -875,11 +760,6 @@ Partial Class uco_3Kompatiblititaetsnachweis
         Me.RadTextBoxControlWZTemperaturbereichMIN.MaxLength = 5
         Me.RadTextBoxControlWZTemperaturbereichMIN.Name = "RadTextBoxControlWZTemperaturbereichMIN"
         Me.RadTextBoxControlWZTemperaturbereichMIN.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlWZTemperaturbereichMIN.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlWZTemperaturbereichMIN.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlWZTemperaturbereichMIN.TabStop = False
         '
         'RadLabel52
@@ -887,41 +767,21 @@ Partial Class uco_3Kompatiblititaetsnachweis
         resources.ApplyResources(Me.RadLabel52, "RadLabel52")
         Me.RadLabel52.Name = "RadLabel52"
         '
-        '
-        '
-        Me.RadLabel52.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel52.RootElement.AccessibleName = Nothing
-        '
         'lblWZTemperatur
         '
         resources.ApplyResources(Me.lblWZTemperatur, "lblWZTemperatur")
         Me.lblWZTemperatur.Name = "lblWZTemperatur"
         '
-        '
-        '
-        Me.lblWZTemperatur.RootElement.AccessibleDescription = Nothing
-        Me.lblWZTemperatur.RootElement.AccessibleName = Nothing
-        '
         'RadSeparator10
         '
         resources.ApplyResources(Me.RadSeparator10, "RadSeparator10")
         Me.RadSeparator10.Name = "RadSeparator10"
-        '
-        '
-        '
-        Me.RadSeparator10.RootElement.AccessibleDescription = Nothing
-        Me.RadSeparator10.RootElement.AccessibleName = Nothing
         Me.RadSeparator10.TabStop = False
         '
         'lblWZKlasse2
         '
         resources.ApplyResources(Me.lblWZKlasse2, "lblWZKlasse2")
         Me.lblWZKlasse2.Name = "lblWZKlasse2"
-        '
-        '
-        '
-        Me.lblWZKlasse2.RootElement.AccessibleDescription = Nothing
-        Me.lblWZKlasse2.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlWZGenauigkeitsklasse
         '
@@ -930,31 +790,16 @@ Partial Class uco_3Kompatiblititaetsnachweis
         Me.RadTextBoxControlWZGenauigkeitsklasse.Name = "RadTextBoxControlWZGenauigkeitsklasse"
         Me.RadTextBoxControlWZGenauigkeitsklasse.ReadOnly = True
         '
-        '
-        '
-        Me.RadTextBoxControlWZGenauigkeitsklasse.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlWZGenauigkeitsklasse.RootElement.AccessibleName = Nothing
-        '
         'lblWZKlasse
         '
         resources.ApplyResources(Me.lblWZKlasse, "lblWZKlasse")
         Me.lblWZKlasse.Name = "lblWZKlasse"
-        '
-        '
-        '
-        Me.lblWZKlasse.RootElement.AccessibleDescription = Nothing
-        Me.lblWZKlasse.RootElement.AccessibleName = Nothing
         '
         'RadSeparator11
         '
         resources.ApplyResources(Me.RadSeparator11, "RadSeparator11")
         Me.RadSeparator11.Name = "RadSeparator11"
         Me.RadSeparator11.Orientation = System.Windows.Forms.Orientation.Vertical
-        '
-        '
-        '
-        Me.RadSeparator11.RootElement.AccessibleDescription = Nothing
-        Me.RadSeparator11.RootElement.AccessibleName = Nothing
         Me.RadSeparator11.TabStop = False
         '
         'RadSeparator12
@@ -962,11 +807,6 @@ Partial Class uco_3Kompatiblititaetsnachweis
         resources.ApplyResources(Me.RadSeparator12, "RadSeparator12")
         Me.RadSeparator12.Name = "RadSeparator12"
         Me.RadSeparator12.Orientation = System.Windows.Forms.Orientation.Vertical
-        '
-        '
-        '
-        Me.RadSeparator12.RootElement.AccessibleDescription = Nothing
-        Me.RadSeparator12.RootElement.AccessibleName = Nothing
         Me.RadSeparator12.TabStop = False
         '
         'RadTextBoxControlWZWiderstand
@@ -976,11 +816,6 @@ Partial Class uco_3Kompatiblititaetsnachweis
         Me.RadTextBoxControlWZWiderstand.Name = "RadTextBoxControlWZWiderstand"
         Me.RadTextBoxControlWZWiderstand.ReadOnly = True
         '
-        '
-        '
-        Me.RadTextBoxControlWZWiderstand.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlWZWiderstand.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlWZRueckkehrVorlastsignal
         '
         resources.ApplyResources(Me.RadTextBoxControlWZRueckkehrVorlastsignal, "RadTextBoxControlWZRueckkehrVorlastsignal")
@@ -988,50 +823,25 @@ Partial Class uco_3Kompatiblititaetsnachweis
         Me.RadTextBoxControlWZRueckkehrVorlastsignal.Name = "RadTextBoxControlWZRueckkehrVorlastsignal"
         Me.RadTextBoxControlWZRueckkehrVorlastsignal.ReadOnly = True
         '
-        '
-        '
-        Me.RadTextBoxControlWZRueckkehrVorlastsignal.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlWZRueckkehrVorlastsignal.RootElement.AccessibleName = Nothing
-        '
         'RadLabel55
         '
         resources.ApplyResources(Me.RadLabel55, "RadLabel55")
         Me.RadLabel55.Name = "RadLabel55"
-        '
-        '
-        '
-        Me.RadLabel55.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel55.RootElement.AccessibleName = Nothing
         '
         'RadLabel56
         '
         resources.ApplyResources(Me.RadLabel56, "RadLabel56")
         Me.RadLabel56.Name = "RadLabel56"
         '
-        '
-        '
-        Me.RadLabel56.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel56.RootElement.AccessibleName = Nothing
-        '
         'lblWZWiderstandWZ
         '
         resources.ApplyResources(Me.lblWZWiderstandWZ, "lblWZWiderstandWZ")
         Me.lblWZWiderstandWZ.Name = "lblWZWiderstandWZ"
         '
-        '
-        '
-        Me.lblWZWiderstandWZ.RootElement.AccessibleDescription = Nothing
-        Me.lblWZWiderstandWZ.RootElement.AccessibleName = Nothing
-        '
         'lblWZRueckkehrVorlastsignal
         '
         resources.ApplyResources(Me.lblWZRueckkehrVorlastsignal, "lblWZRueckkehrVorlastsignal")
         Me.lblWZRueckkehrVorlastsignal.Name = "lblWZRueckkehrVorlastsignal"
-        '
-        '
-        '
-        Me.lblWZRueckkehrVorlastsignal.RootElement.AccessibleDescription = Nothing
-        Me.lblWZRueckkehrVorlastsignal.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlWZMinTeilungswert
         '
@@ -1040,22 +850,12 @@ Partial Class uco_3Kompatiblititaetsnachweis
         Me.RadTextBoxControlWZMinTeilungswert.Name = "RadTextBoxControlWZMinTeilungswert"
         Me.RadTextBoxControlWZMinTeilungswert.ReadOnly = True
         '
-        '
-        '
-        Me.RadTextBoxControlWZMinTeilungswert.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlWZMinTeilungswert.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlWZHoechstteilungsfaktor
         '
         resources.ApplyResources(Me.RadTextBoxControlWZHoechstteilungsfaktor, "RadTextBoxControlWZHoechstteilungsfaktor")
         Me.RadTextBoxControlWZHoechstteilungsfaktor.MaxLength = 50
         Me.RadTextBoxControlWZHoechstteilungsfaktor.Name = "RadTextBoxControlWZHoechstteilungsfaktor"
         Me.RadTextBoxControlWZHoechstteilungsfaktor.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlWZHoechstteilungsfaktor.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlWZHoechstteilungsfaktor.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlWZKriechteilungsfaktor
         '
@@ -1064,22 +864,12 @@ Partial Class uco_3Kompatiblititaetsnachweis
         Me.RadTextBoxControlWZKriechteilungsfaktor.Name = "RadTextBoxControlWZKriechteilungsfaktor"
         Me.RadTextBoxControlWZKriechteilungsfaktor.ReadOnly = True
         '
-        '
-        '
-        Me.RadTextBoxControlWZKriechteilungsfaktor.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlWZKriechteilungsfaktor.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlWZMaxTeilungswerte
         '
         resources.ApplyResources(Me.RadTextBoxControlWZMaxTeilungswerte, "RadTextBoxControlWZMaxTeilungswerte")
         Me.RadTextBoxControlWZMaxTeilungswerte.MaxLength = 50
         Me.RadTextBoxControlWZMaxTeilungswerte.Name = "RadTextBoxControlWZMaxTeilungswerte"
         Me.RadTextBoxControlWZMaxTeilungswerte.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlWZMaxTeilungswerte.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlWZMaxTeilungswerte.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlWZWaegezellenkennwert
         '
@@ -1088,11 +878,6 @@ Partial Class uco_3Kompatiblititaetsnachweis
         Me.RadTextBoxControlWZWaegezellenkennwert.Name = "RadTextBoxControlWZWaegezellenkennwert"
         Me.RadTextBoxControlWZWaegezellenkennwert.ReadOnly = True
         '
-        '
-        '
-        Me.RadTextBoxControlWZWaegezellenkennwert.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlWZWaegezellenkennwert.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlWZMindestvorlast
         '
         resources.ApplyResources(Me.RadTextBoxControlWZMindestvorlast, "RadTextBoxControlWZMindestvorlast")
@@ -1100,161 +885,81 @@ Partial Class uco_3Kompatiblititaetsnachweis
         Me.RadTextBoxControlWZMindestvorlast.Name = "RadTextBoxControlWZMindestvorlast"
         Me.RadTextBoxControlWZMindestvorlast.ReadOnly = True
         '
-        '
-        '
-        Me.RadTextBoxControlWZMindestvorlast.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlWZMindestvorlast.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlWZHoechstlast
         '
         resources.ApplyResources(Me.RadTextBoxControlWZHoechstlast, "RadTextBoxControlWZHoechstlast")
         Me.RadTextBoxControlWZHoechstlast.MaxLength = 20
         Me.RadTextBoxControlWZHoechstlast.Name = "RadTextBoxControlWZHoechstlast"
         '
-        '
-        '
-        Me.RadTextBoxControlWZHoechstlast.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlWZHoechstlast.RootElement.AccessibleName = Nothing
-        '
         'RadLabel60
         '
         resources.ApplyResources(Me.RadLabel60, "RadLabel60")
         Me.RadLabel60.Name = "RadLabel60"
-        '
-        '
-        '
-        Me.RadLabel60.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel60.RootElement.AccessibleName = Nothing
         '
         'RadLabel61
         '
         resources.ApplyResources(Me.RadLabel61, "RadLabel61")
         Me.RadLabel61.Name = "RadLabel61"
         '
-        '
-        '
-        Me.RadLabel61.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel61.RootElement.AccessibleName = Nothing
-        '
         'RadLabel62
         '
         resources.ApplyResources(Me.RadLabel62, "RadLabel62")
         Me.RadLabel62.Name = "RadLabel62"
-        '
-        '
-        '
-        Me.RadLabel62.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel62.RootElement.AccessibleName = Nothing
         '
         'RadLabel63
         '
         resources.ApplyResources(Me.RadLabel63, "RadLabel63")
         Me.RadLabel63.Name = "RadLabel63"
         '
-        '
-        '
-        Me.RadLabel63.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel63.RootElement.AccessibleName = Nothing
-        '
         'RadLabel64
         '
         resources.ApplyResources(Me.RadLabel64, "RadLabel64")
         Me.RadLabel64.Name = "RadLabel64"
-        '
-        '
-        '
-        Me.RadLabel64.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel64.RootElement.AccessibleName = Nothing
         '
         'RadLabel65
         '
         resources.ApplyResources(Me.RadLabel65, "RadLabel65")
         Me.RadLabel65.Name = "RadLabel65"
         '
-        '
-        '
-        Me.RadLabel65.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel65.RootElement.AccessibleName = Nothing
-        '
         'RadLabel66
         '
         resources.ApplyResources(Me.RadLabel66, "RadLabel66")
         Me.RadLabel66.Name = "RadLabel66"
-        '
-        '
-        '
-        Me.RadLabel66.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel66.RootElement.AccessibleName = Nothing
         '
         'lblwzKriechteilungsfaktor
         '
         resources.ApplyResources(Me.lblwzKriechteilungsfaktor, "lblwzKriechteilungsfaktor")
         Me.lblwzKriechteilungsfaktor.Name = "lblwzKriechteilungsfaktor"
         '
-        '
-        '
-        Me.lblwzKriechteilungsfaktor.RootElement.AccessibleDescription = Nothing
-        Me.lblwzKriechteilungsfaktor.RootElement.AccessibleName = Nothing
-        '
         'lblWZHoechstteilungswert
         '
         resources.ApplyResources(Me.lblWZHoechstteilungswert, "lblWZHoechstteilungswert")
         Me.lblWZHoechstteilungswert.Name = "lblWZHoechstteilungswert"
-        '
-        '
-        '
-        Me.lblWZHoechstteilungswert.RootElement.AccessibleDescription = Nothing
-        Me.lblWZHoechstteilungswert.RootElement.AccessibleName = Nothing
         '
         'lblWZMinTeilungswert
         '
         resources.ApplyResources(Me.lblWZMinTeilungswert, "lblWZMinTeilungswert")
         Me.lblWZMinTeilungswert.Name = "lblWZMinTeilungswert"
         '
-        '
-        '
-        Me.lblWZMinTeilungswert.RootElement.AccessibleDescription = Nothing
-        Me.lblWZMinTeilungswert.RootElement.AccessibleName = Nothing
-        '
         'lblWZTeilungswerte
         '
         resources.ApplyResources(Me.lblWZTeilungswerte, "lblWZTeilungswerte")
         Me.lblWZTeilungswerte.Name = "lblWZTeilungswerte"
-        '
-        '
-        '
-        Me.lblWZTeilungswerte.RootElement.AccessibleDescription = Nothing
-        Me.lblWZTeilungswerte.RootElement.AccessibleName = Nothing
         '
         'lblWZWaegezellenkennwert
         '
         resources.ApplyResources(Me.lblWZWaegezellenkennwert, "lblWZWaegezellenkennwert")
         Me.lblWZWaegezellenkennwert.Name = "lblWZWaegezellenkennwert"
         '
-        '
-        '
-        Me.lblWZWaegezellenkennwert.RootElement.AccessibleDescription = Nothing
-        Me.lblWZWaegezellenkennwert.RootElement.AccessibleName = Nothing
-        '
         'lblWZMindestvorlast
         '
         resources.ApplyResources(Me.lblWZMindestvorlast, "lblWZMindestvorlast")
         Me.lblWZMindestvorlast.Name = "lblWZMindestvorlast"
         '
-        '
-        '
-        Me.lblWZMindestvorlast.RootElement.AccessibleDescription = Nothing
-        Me.lblWZMindestvorlast.RootElement.AccessibleName = Nothing
-        '
         'lblWZHoechstlast
         '
         resources.ApplyResources(Me.lblWZHoechstlast, "lblWZHoechstlast")
         Me.lblWZHoechstlast.Name = "lblWZHoechstlast"
-        '
-        '
-        '
-        Me.lblWZHoechstlast.RootElement.AccessibleDescription = Nothing
-        Me.lblWZHoechstlast.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxAWG
         '
@@ -1317,11 +1022,6 @@ Partial Class uco_3Kompatiblititaetsnachweis
         resources.ApplyResources(Me.RadGroupBoxAWG, "RadGroupBoxAWG")
         Me.RadGroupBoxAWG.Name = "RadGroupBoxAWG"
         '
-        '
-        '
-        Me.RadGroupBoxAWG.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxAWG.RootElement.AccessibleName = Nothing
-        '
         'Label8
         '
         resources.ApplyResources(Me.Label8, "Label8")
@@ -1332,11 +1032,6 @@ Partial Class uco_3Kompatiblititaetsnachweis
         '
         resources.ApplyResources(Me.RadLabel30, "RadLabel30")
         Me.RadLabel30.Name = "RadLabel30"
-        '
-        '
-        '
-        Me.RadLabel30.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel30.RootElement.AccessibleName = Nothing
         '
         'PictureBox15
         '
@@ -1406,91 +1101,46 @@ Partial Class uco_3Kompatiblititaetsnachweis
         resources.ApplyResources(Me.RadLabel102, "RadLabel102")
         Me.RadLabel102.Name = "RadLabel102"
         '
-        '
-        '
-        Me.RadLabel102.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel102.RootElement.AccessibleName = Nothing
-        '
         'RadLabel99
         '
         resources.ApplyResources(Me.RadLabel99, "RadLabel99")
         Me.RadLabel99.Name = "RadLabel99"
-        '
-        '
-        '
-        Me.RadLabel99.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel99.RootElement.AccessibleName = Nothing
         '
         'RadLabel100
         '
         resources.ApplyResources(Me.RadLabel100, "RadLabel100")
         Me.RadLabel100.Name = "RadLabel100"
         '
-        '
-        '
-        Me.RadLabel100.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel100.RootElement.AccessibleName = Nothing
-        '
         'RadLabel94
         '
         resources.ApplyResources(Me.RadLabel94, "RadLabel94")
         Me.RadLabel94.Name = "RadLabel94"
-        '
-        '
-        '
-        Me.RadLabel94.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel94.RootElement.AccessibleName = Nothing
         '
         'RadLabel95
         '
         resources.ApplyResources(Me.RadLabel95, "RadLabel95")
         Me.RadLabel95.Name = "RadLabel95"
         '
-        '
-        '
-        Me.RadLabel95.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel95.RootElement.AccessibleName = Nothing
-        '
         'RadLabel96
         '
         resources.ApplyResources(Me.RadLabel96, "RadLabel96")
         Me.RadLabel96.Name = "RadLabel96"
-        '
-        '
-        '
-        Me.RadLabel96.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel96.RootElement.AccessibleName = Nothing
         '
         'RadLabel97
         '
         resources.ApplyResources(Me.RadLabel97, "RadLabel97")
         Me.RadLabel97.Name = "RadLabel97"
         '
-        '
-        '
-        Me.RadLabel97.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel97.RootElement.AccessibleName = Nothing
-        '
         'RadLabel98
         '
         resources.ApplyResources(Me.RadLabel98, "RadLabel98")
         Me.RadLabel98.Name = "RadLabel98"
-        '
-        '
-        '
-        Me.RadLabel98.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel98.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlAWGTemperaturbereichMax
         '
         resources.ApplyResources(Me.RadTextBoxControlAWGTemperaturbereichMax, "RadTextBoxControlAWGTemperaturbereichMax")
         Me.RadTextBoxControlAWGTemperaturbereichMax.Name = "RadTextBoxControlAWGTemperaturbereichMax"
         Me.RadTextBoxControlAWGTemperaturbereichMax.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlAWGTemperaturbereichMax.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlAWGTemperaturbereichMax.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlAWGTemperaturbereichMax.TabStop = False
         '
         'RadLabel51
@@ -1498,20 +1148,10 @@ Partial Class uco_3Kompatiblititaetsnachweis
         resources.ApplyResources(Me.RadLabel51, "RadLabel51")
         Me.RadLabel51.Name = "RadLabel51"
         '
-        '
-        '
-        Me.RadLabel51.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel51.RootElement.AccessibleName = Nothing
-        '
         'RadSeparator9
         '
         resources.ApplyResources(Me.RadSeparator9, "RadSeparator9")
         Me.RadSeparator9.Name = "RadSeparator9"
-        '
-        '
-        '
-        Me.RadSeparator9.RootElement.AccessibleDescription = Nothing
-        Me.RadSeparator9.RootElement.AccessibleName = Nothing
         Me.RadSeparator9.TabStop = False
         '
         'lblAWGKlasse2
@@ -1519,21 +1159,11 @@ Partial Class uco_3Kompatiblititaetsnachweis
         resources.ApplyResources(Me.lblAWGKlasse2, "lblAWGKlasse2")
         Me.lblAWGKlasse2.Name = "lblAWGKlasse2"
         '
-        '
-        '
-        Me.lblAWGKlasse2.RootElement.AccessibleDescription = Nothing
-        Me.lblAWGKlasse2.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlAWGKlasse
         '
         resources.ApplyResources(Me.RadTextBoxControlAWGKlasse, "RadTextBoxControlAWGKlasse")
         Me.RadTextBoxControlAWGKlasse.Name = "RadTextBoxControlAWGKlasse"
         Me.RadTextBoxControlAWGKlasse.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlAWGKlasse.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlAWGKlasse.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlAWGKlasse.TabStop = False
         '
         'lblAWGKlasse
@@ -1541,21 +1171,11 @@ Partial Class uco_3Kompatiblititaetsnachweis
         resources.ApplyResources(Me.lblAWGKlasse, "lblAWGKlasse")
         Me.lblAWGKlasse.Name = "lblAWGKlasse"
         '
-        '
-        '
-        Me.lblAWGKlasse.RootElement.AccessibleDescription = Nothing
-        Me.lblAWGKlasse.RootElement.AccessibleName = Nothing
-        '
         'RadSeparator6
         '
         resources.ApplyResources(Me.RadSeparator6, "RadSeparator6")
         Me.RadSeparator6.Name = "RadSeparator6"
         Me.RadSeparator6.Orientation = System.Windows.Forms.Orientation.Vertical
-        '
-        '
-        '
-        Me.RadSeparator6.RootElement.AccessibleDescription = Nothing
-        Me.RadSeparator6.RootElement.AccessibleName = Nothing
         Me.RadSeparator6.TabStop = False
         '
         'RadSeparator8
@@ -1563,11 +1183,6 @@ Partial Class uco_3Kompatiblititaetsnachweis
         resources.ApplyResources(Me.RadSeparator8, "RadSeparator8")
         Me.RadSeparator8.Name = "RadSeparator8"
         Me.RadSeparator8.Orientation = System.Windows.Forms.Orientation.Vertical
-        '
-        '
-        '
-        Me.RadSeparator8.RootElement.AccessibleDescription = Nothing
-        Me.RadSeparator8.RootElement.AccessibleName = Nothing
         Me.RadSeparator8.TabStop = False
         '
         'RadTextBoxControlAWGKabellaenge
@@ -1575,11 +1190,6 @@ Partial Class uco_3Kompatiblititaetsnachweis
         resources.ApplyResources(Me.RadTextBoxControlAWGKabellaenge, "RadTextBoxControlAWGKabellaenge")
         Me.RadTextBoxControlAWGKabellaenge.Name = "RadTextBoxControlAWGKabellaenge"
         Me.RadTextBoxControlAWGKabellaenge.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlAWGKabellaenge.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlAWGKabellaenge.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlAWGKabellaenge.TabStop = False
         '
         'RadTextBoxControlAWGAnschlussart
@@ -1587,51 +1197,26 @@ Partial Class uco_3Kompatiblititaetsnachweis
         resources.ApplyResources(Me.RadTextBoxControlAWGAnschlussart, "RadTextBoxControlAWGAnschlussart")
         Me.RadTextBoxControlAWGAnschlussart.Name = "RadTextBoxControlAWGAnschlussart"
         '
-        '
-        '
-        Me.RadTextBoxControlAWGAnschlussart.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlAWGAnschlussart.RootElement.AccessibleName = Nothing
-        '
         'lblKabel
         '
         resources.ApplyResources(Me.lblKabel, "lblKabel")
         Me.lblKabel.Name = "lblKabel"
-        '
-        '
-        '
-        Me.lblKabel.RootElement.AccessibleDescription = Nothing
-        Me.lblKabel.RootElement.AccessibleName = Nothing
         '
         'lblAWGKabellaenge
         '
         resources.ApplyResources(Me.lblAWGKabellaenge, "lblAWGKabellaenge")
         Me.lblAWGKabellaenge.Name = "lblAWGKabellaenge"
         '
-        '
-        '
-        Me.lblAWGKabellaenge.RootElement.AccessibleDescription = Nothing
-        Me.lblAWGKabellaenge.RootElement.AccessibleName = Nothing
-        '
         'lblAWGAnschlussart
         '
         resources.ApplyResources(Me.lblAWGAnschlussart, "lblAWGAnschlussart")
         Me.lblAWGAnschlussart.Name = "lblAWGAnschlussart"
-        '
-        '
-        '
-        Me.lblAWGAnschlussart.RootElement.AccessibleDescription = Nothing
-        Me.lblAWGAnschlussart.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlAWGGrenzwerteLastwiderstandMax
         '
         resources.ApplyResources(Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMax, "RadTextBoxControlAWGGrenzwerteLastwiderstandMax")
         Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMax.Name = "RadTextBoxControlAWGGrenzwerteLastwiderstandMax"
         Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMax.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMax.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMax.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMax.TabStop = False
         '
         'RadLabel34
@@ -1639,21 +1224,11 @@ Partial Class uco_3Kompatiblititaetsnachweis
         resources.ApplyResources(Me.RadLabel34, "RadLabel34")
         Me.RadLabel34.Name = "RadLabel34"
         '
-        '
-        '
-        Me.RadLabel34.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel34.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlAWGGrenzwerteLastwiderstandMin
         '
         resources.ApplyResources(Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMin, "RadTextBoxControlAWGGrenzwerteLastwiderstandMin")
         Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMin.Name = "RadTextBoxControlAWGGrenzwerteLastwiderstandMin"
         Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMin.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMin.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMin.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlAWGGrenzwerteLastwiderstandMin.TabStop = False
         '
         'RadTextBoxControlAWGTemperaturbereichMin
@@ -1661,11 +1236,6 @@ Partial Class uco_3Kompatiblititaetsnachweis
         resources.ApplyResources(Me.RadTextBoxControlAWGTemperaturbereichMin, "RadTextBoxControlAWGTemperaturbereichMin")
         Me.RadTextBoxControlAWGTemperaturbereichMin.Name = "RadTextBoxControlAWGTemperaturbereichMin"
         Me.RadTextBoxControlAWGTemperaturbereichMin.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlAWGTemperaturbereichMin.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlAWGTemperaturbereichMin.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlAWGTemperaturbereichMin.TabStop = False
         '
         'RadTextBoxControlAWGBruchteilEichfehlergrenze
@@ -1673,11 +1243,6 @@ Partial Class uco_3Kompatiblititaetsnachweis
         resources.ApplyResources(Me.RadTextBoxControlAWGBruchteilEichfehlergrenze, "RadTextBoxControlAWGBruchteilEichfehlergrenze")
         Me.RadTextBoxControlAWGBruchteilEichfehlergrenze.Name = "RadTextBoxControlAWGBruchteilEichfehlergrenze"
         Me.RadTextBoxControlAWGBruchteilEichfehlergrenze.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlAWGBruchteilEichfehlergrenze.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlAWGBruchteilEichfehlergrenze.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlAWGBruchteilEichfehlergrenze.TabStop = False
         '
         'RadTextBoxControlAWGMindestmesssignal
@@ -1685,11 +1250,6 @@ Partial Class uco_3Kompatiblititaetsnachweis
         resources.ApplyResources(Me.RadTextBoxControlAWGMindestmesssignal, "RadTextBoxControlAWGMindestmesssignal")
         Me.RadTextBoxControlAWGMindestmesssignal.Name = "RadTextBoxControlAWGMindestmesssignal"
         Me.RadTextBoxControlAWGMindestmesssignal.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlAWGMindestmesssignal.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlAWGMindestmesssignal.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlAWGMindestmesssignal.TabStop = False
         '
         'RadTextBoxControlAWGMindesteingangsspannung
@@ -1697,11 +1257,6 @@ Partial Class uco_3Kompatiblititaetsnachweis
         resources.ApplyResources(Me.RadTextBoxControlAWGMindesteingangsspannung, "RadTextBoxControlAWGMindesteingangsspannung")
         Me.RadTextBoxControlAWGMindesteingangsspannung.Name = "RadTextBoxControlAWGMindesteingangsspannung"
         Me.RadTextBoxControlAWGMindesteingangsspannung.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlAWGMindesteingangsspannung.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlAWGMindesteingangsspannung.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlAWGMindesteingangsspannung.TabStop = False
         '
         'RadTextBoxControlAWGSpeisespannung
@@ -1709,11 +1264,6 @@ Partial Class uco_3Kompatiblititaetsnachweis
         resources.ApplyResources(Me.RadTextBoxControlAWGSpeisespannung, "RadTextBoxControlAWGSpeisespannung")
         Me.RadTextBoxControlAWGSpeisespannung.Name = "RadTextBoxControlAWGSpeisespannung"
         Me.RadTextBoxControlAWGSpeisespannung.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlAWGSpeisespannung.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlAWGSpeisespannung.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlAWGSpeisespannung.TabStop = False
         '
         'RadTextBoxControlAWGTeilungswerte
@@ -1721,11 +1271,6 @@ Partial Class uco_3Kompatiblititaetsnachweis
         resources.ApplyResources(Me.RadTextBoxControlAWGTeilungswerte, "RadTextBoxControlAWGTeilungswerte")
         Me.RadTextBoxControlAWGTeilungswerte.Name = "RadTextBoxControlAWGTeilungswerte"
         Me.RadTextBoxControlAWGTeilungswerte.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlAWGTeilungswerte.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlAWGTeilungswerte.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlAWGTeilungswerte.TabStop = False
         '
         'RadLabel35
@@ -1733,140 +1278,70 @@ Partial Class uco_3Kompatiblititaetsnachweis
         resources.ApplyResources(Me.RadLabel35, "RadLabel35")
         Me.RadLabel35.Name = "RadLabel35"
         '
-        '
-        '
-        Me.RadLabel35.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel35.RootElement.AccessibleName = Nothing
-        '
         'RadLabel36
         '
         resources.ApplyResources(Me.RadLabel36, "RadLabel36")
         Me.RadLabel36.Name = "RadLabel36"
-        '
-        '
-        '
-        Me.RadLabel36.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel36.RootElement.AccessibleName = Nothing
         '
         'RadLabel37
         '
         resources.ApplyResources(Me.RadLabel37, "RadLabel37")
         Me.RadLabel37.Name = "RadLabel37"
         '
-        '
-        '
-        Me.RadLabel37.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel37.RootElement.AccessibleName = Nothing
-        '
         'RadLabel38
         '
         resources.ApplyResources(Me.RadLabel38, "RadLabel38")
         Me.RadLabel38.Name = "RadLabel38"
-        '
-        '
-        '
-        Me.RadLabel38.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel38.RootElement.AccessibleName = Nothing
         '
         'RadLabel39
         '
         resources.ApplyResources(Me.RadLabel39, "RadLabel39")
         Me.RadLabel39.Name = "RadLabel39"
         '
-        '
-        '
-        Me.RadLabel39.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel39.RootElement.AccessibleName = Nothing
-        '
         'RadLabel40
         '
         resources.ApplyResources(Me.RadLabel40, "RadLabel40")
         Me.RadLabel40.Name = "RadLabel40"
-        '
-        '
-        '
-        Me.RadLabel40.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel40.RootElement.AccessibleName = Nothing
         '
         'RadLabel41
         '
         resources.ApplyResources(Me.RadLabel41, "RadLabel41")
         Me.RadLabel41.Name = "RadLabel41"
         '
-        '
-        '
-        Me.RadLabel41.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel41.RootElement.AccessibleName = Nothing
-        '
         'lblAWGEichfehlergrenze
         '
         resources.ApplyResources(Me.lblAWGEichfehlergrenze, "lblAWGEichfehlergrenze")
         Me.lblAWGEichfehlergrenze.Name = "lblAWGEichfehlergrenze"
-        '
-        '
-        '
-        Me.lblAWGEichfehlergrenze.RootElement.AccessibleDescription = Nothing
-        Me.lblAWGEichfehlergrenze.RootElement.AccessibleName = Nothing
         '
         'lblAWGTemperatur
         '
         resources.ApplyResources(Me.lblAWGTemperatur, "lblAWGTemperatur")
         Me.lblAWGTemperatur.Name = "lblAWGTemperatur"
         '
-        '
-        '
-        Me.lblAWGTemperatur.RootElement.AccessibleDescription = Nothing
-        Me.lblAWGTemperatur.RootElement.AccessibleName = Nothing
-        '
         'lblAWGWiderstand
         '
         resources.ApplyResources(Me.lblAWGWiderstand, "lblAWGWiderstand")
         Me.lblAWGWiderstand.Name = "lblAWGWiderstand"
-        '
-        '
-        '
-        Me.lblAWGWiderstand.RootElement.AccessibleDescription = Nothing
-        Me.lblAWGWiderstand.RootElement.AccessibleName = Nothing
         '
         'lblAWGMinMessSignal
         '
         resources.ApplyResources(Me.lblAWGMinMessSignal, "lblAWGMinMessSignal")
         Me.lblAWGMinMessSignal.Name = "lblAWGMinMessSignal"
         '
-        '
-        '
-        Me.lblAWGMinMessSignal.RootElement.AccessibleDescription = Nothing
-        Me.lblAWGMinMessSignal.RootElement.AccessibleName = Nothing
-        '
         'lblAWGMindesteingangsspannung
         '
         resources.ApplyResources(Me.lblAWGMindesteingangsspannung, "lblAWGMindesteingangsspannung")
         Me.lblAWGMindesteingangsspannung.Name = "lblAWGMindesteingangsspannung"
-        '
-        '
-        '
-        Me.lblAWGMindesteingangsspannung.RootElement.AccessibleDescription = Nothing
-        Me.lblAWGMindesteingangsspannung.RootElement.AccessibleName = Nothing
         '
         'lblAWGSpeisespannung
         '
         resources.ApplyResources(Me.lblAWGSpeisespannung, "lblAWGSpeisespannung")
         Me.lblAWGSpeisespannung.Name = "lblAWGSpeisespannung"
         '
-        '
-        '
-        Me.lblAWGSpeisespannung.RootElement.AccessibleDescription = Nothing
-        Me.lblAWGSpeisespannung.RootElement.AccessibleName = Nothing
-        '
         'lblAWGmaxAnzahlTeilungswerte
         '
         resources.ApplyResources(Me.lblAWGmaxAnzahlTeilungswerte, "lblAWGmaxAnzahlTeilungswerte")
         Me.lblAWGmaxAnzahlTeilungswerte.Name = "lblAWGmaxAnzahlTeilungswerte"
-        '
-        '
-        '
-        Me.lblAWGmaxAnzahlTeilungswerte.RootElement.AccessibleDescription = Nothing
-        Me.lblAWGmaxAnzahlTeilungswerte.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxWaage
         '
@@ -1962,11 +1437,6 @@ Partial Class uco_3Kompatiblititaetsnachweis
         Me.RadGroupBoxWaage.Controls.Add(Me.lblWIKlasse)
         resources.ApplyResources(Me.RadGroupBoxWaage, "RadGroupBoxWaage")
         Me.RadGroupBoxWaage.Name = "RadGroupBoxWaage"
-        '
-        '
-        '
-        Me.RadGroupBoxWaage.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxWaage.RootElement.AccessibleName = Nothing
         '
         'lblPflichtfeld6
         '
@@ -2088,140 +1558,70 @@ Partial Class uco_3Kompatiblititaetsnachweis
         resources.ApplyResources(Me.RadLabel92, "RadLabel92")
         Me.RadLabel92.Name = "RadLabel92"
         '
-        '
-        '
-        Me.RadLabel92.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel92.RootElement.AccessibleName = Nothing
-        '
         'RadLabel91
         '
         resources.ApplyResources(Me.RadLabel91, "RadLabel91")
         Me.RadLabel91.Name = "RadLabel91"
-        '
-        '
-        '
-        Me.RadLabel91.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel91.RootElement.AccessibleName = Nothing
         '
         'RadLabel90
         '
         resources.ApplyResources(Me.RadLabel90, "RadLabel90")
         Me.RadLabel90.Name = "RadLabel90"
         '
-        '
-        '
-        Me.RadLabel90.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel90.RootElement.AccessibleName = Nothing
-        '
         'RadLabel89
         '
         resources.ApplyResources(Me.RadLabel89, "RadLabel89")
         Me.RadLabel89.Name = "RadLabel89"
-        '
-        '
-        '
-        Me.RadLabel89.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel89.RootElement.AccessibleName = Nothing
         '
         'RadLabel88
         '
         resources.ApplyResources(Me.RadLabel88, "RadLabel88")
         Me.RadLabel88.Name = "RadLabel88"
         '
-        '
-        '
-        Me.RadLabel88.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel88.RootElement.AccessibleName = Nothing
-        '
         'RadLabel85
         '
         resources.ApplyResources(Me.RadLabel85, "RadLabel85")
         Me.RadLabel85.Name = "RadLabel85"
-        '
-        '
-        '
-        Me.RadLabel85.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel85.RootElement.AccessibleName = Nothing
         '
         'RadLabel86
         '
         resources.ApplyResources(Me.RadLabel86, "RadLabel86")
         Me.RadLabel86.Name = "RadLabel86"
         '
-        '
-        '
-        Me.RadLabel86.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel86.RootElement.AccessibleName = Nothing
-        '
         'RadLabel87
         '
         resources.ApplyResources(Me.RadLabel87, "RadLabel87")
         Me.RadLabel87.Name = "RadLabel87"
-        '
-        '
-        '
-        Me.RadLabel87.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel87.RootElement.AccessibleName = Nothing
         '
         'lblEKG3
         '
         resources.ApplyResources(Me.lblEKG3, "lblEKG3")
         Me.lblEKG3.Name = "lblEKG3"
         '
-        '
-        '
-        Me.lblEKG3.RootElement.AccessibleDescription = Nothing
-        Me.lblEKG3.RootElement.AccessibleName = Nothing
-        '
         'lblEKG2
         '
         resources.ApplyResources(Me.lblEKG2, "lblEKG2")
         Me.lblEKG2.Name = "lblEKG2"
-        '
-        '
-        '
-        Me.lblEKG2.RootElement.AccessibleDescription = Nothing
-        Me.lblEKG2.RootElement.AccessibleName = Nothing
         '
         'lblEKG1
         '
         resources.ApplyResources(Me.lblEKG1, "lblEKG1")
         Me.lblEKG1.Name = "lblEKG1"
         '
-        '
-        '
-        Me.lblEKG1.RootElement.AccessibleDescription = Nothing
-        Me.lblEKG1.RootElement.AccessibleName = Nothing
-        '
         'lblKGMax3
         '
         resources.ApplyResources(Me.lblKGMax3, "lblKGMax3")
         Me.lblKGMax3.Name = "lblKGMax3"
-        '
-        '
-        '
-        Me.lblKGMax3.RootElement.AccessibleDescription = Nothing
-        Me.lblKGMax3.RootElement.AccessibleName = Nothing
         '
         'lblKGMax2
         '
         resources.ApplyResources(Me.lblKGMax2, "lblKGMax2")
         Me.lblKGMax2.Name = "lblKGMax2"
         '
-        '
-        '
-        Me.lblKGMax2.RootElement.AccessibleDescription = Nothing
-        Me.lblKGMax2.RootElement.AccessibleName = Nothing
-        '
         'lblKGMax1
         '
         resources.ApplyResources(Me.lblKGMax1, "lblKGMax1")
         Me.lblKGMax1.Name = "lblKGMax1"
-        '
-        '
-        '
-        Me.lblKGMax1.RootElement.AccessibleDescription = Nothing
-        Me.lblKGMax1.RootElement.AccessibleName = Nothing
         '
         'PictureBox2
         '
@@ -2242,11 +1642,6 @@ Partial Class uco_3Kompatiblititaetsnachweis
         resources.ApplyResources(Me.RadSeparator13, "RadSeparator13")
         Me.RadSeparator13.Name = "RadSeparator13"
         Me.RadSeparator13.Orientation = System.Windows.Forms.Orientation.Vertical
-        '
-        '
-        '
-        Me.RadSeparator13.RootElement.AccessibleDescription = Nothing
-        Me.RadSeparator13.RootElement.AccessibleName = Nothing
         Me.RadSeparator13.TabStop = False
         '
         'RadSeparator14
@@ -2254,22 +1649,12 @@ Partial Class uco_3Kompatiblititaetsnachweis
         resources.ApplyResources(Me.RadSeparator14, "RadSeparator14")
         Me.RadSeparator14.Name = "RadSeparator14"
         Me.RadSeparator14.Orientation = System.Windows.Forms.Orientation.Vertical
-        '
-        '
-        '
-        Me.RadSeparator14.RootElement.AccessibleDescription = Nothing
-        Me.RadSeparator14.RootElement.AccessibleName = Nothing
         Me.RadSeparator14.TabStop = False
         '
         'RadSeparator7
         '
         resources.ApplyResources(Me.RadSeparator7, "RadSeparator7")
         Me.RadSeparator7.Name = "RadSeparator7"
-        '
-        '
-        '
-        Me.RadSeparator7.RootElement.AccessibleDescription = Nothing
-        Me.RadSeparator7.RootElement.AccessibleName = Nothing
         Me.RadSeparator7.TabStop = False
         '
         'lblWaageKlasse2
@@ -2277,21 +1662,11 @@ Partial Class uco_3Kompatiblititaetsnachweis
         resources.ApplyResources(Me.lblWaageKlasse2, "lblWaageKlasse2")
         Me.lblWaageKlasse2.Name = "lblWaageKlasse2"
         '
-        '
-        '
-        Me.lblWaageKlasse2.RootElement.AccessibleDescription = Nothing
-        Me.lblWaageKlasse2.RootElement.AccessibleName = Nothing
-        '
         'RadSeparator4
         '
         resources.ApplyResources(Me.RadSeparator4, "RadSeparator4")
         Me.RadSeparator4.Name = "RadSeparator4"
         Me.RadSeparator4.Orientation = System.Windows.Forms.Orientation.Vertical
-        '
-        '
-        '
-        Me.RadSeparator4.RootElement.AccessibleDescription = Nothing
-        Me.RadSeparator4.RootElement.AccessibleName = Nothing
         Me.RadSeparator4.TabStop = False
         '
         'RadSeparator5
@@ -2299,11 +1674,6 @@ Partial Class uco_3Kompatiblititaetsnachweis
         resources.ApplyResources(Me.RadSeparator5, "RadSeparator5")
         Me.RadSeparator5.Name = "RadSeparator5"
         Me.RadSeparator5.Orientation = System.Windows.Forms.Orientation.Vertical
-        '
-        '
-        '
-        Me.RadSeparator5.RootElement.AccessibleDescription = Nothing
-        Me.RadSeparator5.RootElement.AccessibleName = Nothing
         Me.RadSeparator5.TabStop = False
         '
         'RadSeparator3
@@ -2311,11 +1681,6 @@ Partial Class uco_3Kompatiblititaetsnachweis
         resources.ApplyResources(Me.RadSeparator3, "RadSeparator3")
         Me.RadSeparator3.Name = "RadSeparator3"
         Me.RadSeparator3.Orientation = System.Windows.Forms.Orientation.Vertical
-        '
-        '
-        '
-        Me.RadSeparator3.RootElement.AccessibleDescription = Nothing
-        Me.RadSeparator3.RootElement.AccessibleName = Nothing
         Me.RadSeparator3.TabStop = False
         '
         'RadSeparator2
@@ -2323,11 +1688,6 @@ Partial Class uco_3Kompatiblititaetsnachweis
         resources.ApplyResources(Me.RadSeparator2, "RadSeparator2")
         Me.RadSeparator2.Name = "RadSeparator2"
         Me.RadSeparator2.Orientation = System.Windows.Forms.Orientation.Vertical
-        '
-        '
-        '
-        Me.RadSeparator2.RootElement.AccessibleDescription = Nothing
-        Me.RadSeparator2.RootElement.AccessibleName = Nothing
         Me.RadSeparator2.TabStop = False
         '
         'RadTextBoxControlWaageKabelquerschnitt
@@ -2336,132 +1696,67 @@ Partial Class uco_3Kompatiblititaetsnachweis
         Me.RadTextBoxControlWaageKabelquerschnitt.MaxLength = 10
         Me.RadTextBoxControlWaageKabelquerschnitt.Name = "RadTextBoxControlWaageKabelquerschnitt"
         '
-        '
-        '
-        Me.RadTextBoxControlWaageKabelquerschnitt.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlWaageKabelquerschnitt.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlWaageKabellaenge
         '
         resources.ApplyResources(Me.RadTextBoxControlWaageKabellaenge, "RadTextBoxControlWaageKabellaenge")
         Me.RadTextBoxControlWaageKabellaenge.MaxLength = 5
         Me.RadTextBoxControlWaageKabellaenge.Name = "RadTextBoxControlWaageKabellaenge"
         '
-        '
-        '
-        Me.RadTextBoxControlWaageKabellaenge.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlWaageKabellaenge.RootElement.AccessibleName = Nothing
-        '
         'RadLabel25
         '
         resources.ApplyResources(Me.RadLabel25, "RadLabel25")
         Me.RadLabel25.Name = "RadLabel25"
-        '
-        '
-        '
-        Me.RadLabel25.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel25.RootElement.AccessibleName = Nothing
         '
         'RadLabel26
         '
         resources.ApplyResources(Me.RadLabel26, "RadLabel26")
         Me.RadLabel26.Name = "RadLabel26"
         '
-        '
-        '
-        Me.RadLabel26.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel26.RootElement.AccessibleName = Nothing
-        '
         'lblKabelquerschnitt
         '
         resources.ApplyResources(Me.lblKabelquerschnitt, "lblKabelquerschnitt")
         Me.lblKabelquerschnitt.Name = "lblKabelquerschnitt"
-        '
-        '
-        '
-        Me.lblKabelquerschnitt.RootElement.AccessibleDescription = Nothing
-        Me.lblKabelquerschnitt.RootElement.AccessibleName = Nothing
         '
         'lblKabellaenge
         '
         resources.ApplyResources(Me.lblKabellaenge, "lblKabellaenge")
         Me.lblKabellaenge.Name = "lblKabellaenge"
         '
-        '
-        '
-        Me.lblKabellaenge.RootElement.AccessibleDescription = Nothing
-        Me.lblKabellaenge.RootElement.AccessibleName = Nothing
-        '
         'lblE3
         '
         resources.ApplyResources(Me.lblE3, "lblE3")
         Me.lblE3.Name = "lblE3"
-        '
-        '
-        '
-        Me.lblE3.RootElement.AccessibleDescription = Nothing
-        Me.lblE3.RootElement.AccessibleName = Nothing
         '
         'lblMax3
         '
         resources.ApplyResources(Me.lblMax3, "lblMax3")
         Me.lblMax3.Name = "lblMax3"
         '
-        '
-        '
-        Me.lblMax3.RootElement.AccessibleDescription = Nothing
-        Me.lblMax3.RootElement.AccessibleName = Nothing
-        '
         'lblE2
         '
         resources.ApplyResources(Me.lblE2, "lblE2")
         Me.lblE2.Name = "lblE2"
-        '
-        '
-        '
-        Me.lblE2.RootElement.AccessibleDescription = Nothing
-        Me.lblE2.RootElement.AccessibleName = Nothing
         '
         'lblMax2
         '
         resources.ApplyResources(Me.lblMax2, "lblMax2")
         Me.lblMax2.Name = "lblMax2"
         '
-        '
-        '
-        Me.lblMax2.RootElement.AccessibleDescription = Nothing
-        Me.lblMax2.RootElement.AccessibleName = Nothing
-        '
         'lblE1
         '
         resources.ApplyResources(Me.lblE1, "lblE1")
         Me.lblE1.Name = "lblE1"
-        '
-        '
-        '
-        Me.lblE1.RootElement.AccessibleDescription = Nothing
-        Me.lblE1.RootElement.AccessibleName = Nothing
         '
         'lblMax1
         '
         resources.ApplyResources(Me.lblMax1, "lblMax1")
         Me.lblMax1.Name = "lblMax1"
         '
-        '
-        '
-        Me.lblMax1.RootElement.AccessibleDescription = Nothing
-        Me.lblMax1.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlWaageTemperaturbereichMax
         '
         resources.ApplyResources(Me.RadTextBoxControlWaageTemperaturbereichMax, "RadTextBoxControlWaageTemperaturbereichMax")
         Me.RadTextBoxControlWaageTemperaturbereichMax.Name = "RadTextBoxControlWaageTemperaturbereichMax"
         Me.RadTextBoxControlWaageTemperaturbereichMax.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlWaageTemperaturbereichMax.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlWaageTemperaturbereichMax.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlWaageTemperaturbereichMax.TabStop = False
         '
         'RadLabel18
@@ -2469,20 +1764,10 @@ Partial Class uco_3Kompatiblititaetsnachweis
         resources.ApplyResources(Me.RadLabel18, "RadLabel18")
         Me.RadLabel18.Name = "RadLabel18"
         '
-        '
-        '
-        Me.RadLabel18.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel18.RootElement.AccessibleName = Nothing
-        '
         'RadSeparator1
         '
         resources.ApplyResources(Me.RadSeparator1, "RadSeparator1")
         Me.RadSeparator1.Name = "RadSeparator1"
-        '
-        '
-        '
-        Me.RadSeparator1.RootElement.AccessibleDescription = Nothing
-        Me.RadSeparator1.RootElement.AccessibleName = Nothing
         Me.RadSeparator1.TabStop = False
         '
         'RadTextBoxControlWaageTotlast
@@ -2491,21 +1776,11 @@ Partial Class uco_3Kompatiblititaetsnachweis
         Me.RadTextBoxControlWaageTotlast.MaxLength = 20
         Me.RadTextBoxControlWaageTotlast.Name = "RadTextBoxControlWaageTotlast"
         '
-        '
-        '
-        Me.RadTextBoxControlWaageTotlast.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlWaageTotlast.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlWaageAdditiveTarahoechstlast
         '
         resources.ApplyResources(Me.RadTextBoxControlWaageAdditiveTarahoechstlast, "RadTextBoxControlWaageAdditiveTarahoechstlast")
         Me.RadTextBoxControlWaageAdditiveTarahoechstlast.Name = "RadTextBoxControlWaageAdditiveTarahoechstlast"
         Me.RadTextBoxControlWaageAdditiveTarahoechstlast.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlWaageAdditiveTarahoechstlast.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlWaageAdditiveTarahoechstlast.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlWaageAdditiveTarahoechstlast.TabStop = False
         '
         'RadTextBoxControlWaageTemperaturbereichMin
@@ -2513,11 +1788,6 @@ Partial Class uco_3Kompatiblititaetsnachweis
         resources.ApplyResources(Me.RadTextBoxControlWaageTemperaturbereichMin, "RadTextBoxControlWaageTemperaturbereichMin")
         Me.RadTextBoxControlWaageTemperaturbereichMin.Name = "RadTextBoxControlWaageTemperaturbereichMin"
         Me.RadTextBoxControlWaageTemperaturbereichMin.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlWaageTemperaturbereichMin.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlWaageTemperaturbereichMin.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlWaageTemperaturbereichMin.TabStop = False
         '
         'RadTextBoxControlWaageEcklastzuschlag
@@ -2526,21 +1796,11 @@ Partial Class uco_3Kompatiblititaetsnachweis
         Me.RadTextBoxControlWaageEcklastzuschlag.MaxLength = 20
         Me.RadTextBoxControlWaageEcklastzuschlag.Name = "RadTextBoxControlWaageEcklastzuschlag"
         '
-        '
-        '
-        Me.RadTextBoxControlWaageEcklastzuschlag.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlWaageEcklastzuschlag.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlEinschaltnullstellbereich
         '
         resources.ApplyResources(Me.RadTextBoxControlEinschaltnullstellbereich, "RadTextBoxControlEinschaltnullstellbereich")
         Me.RadTextBoxControlEinschaltnullstellbereich.MaxLength = 20
         Me.RadTextBoxControlEinschaltnullstellbereich.Name = "RadTextBoxControlEinschaltnullstellbereich"
-        '
-        '
-        '
-        Me.RadTextBoxControlEinschaltnullstellbereich.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlEinschaltnullstellbereich.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlWaageAnzahlWaegezellen
         '
@@ -2548,161 +1808,81 @@ Partial Class uco_3Kompatiblititaetsnachweis
         Me.RadTextBoxControlWaageAnzahlWaegezellen.MaxLength = 5
         Me.RadTextBoxControlWaageAnzahlWaegezellen.Name = "RadTextBoxControlWaageAnzahlWaegezellen"
         '
-        '
-        '
-        Me.RadTextBoxControlWaageAnzahlWaegezellen.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlWaageAnzahlWaegezellen.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlWaageUebersetzungsverhaeltnis
         '
         resources.ApplyResources(Me.RadTextBoxControlWaageUebersetzungsverhaeltnis, "RadTextBoxControlWaageUebersetzungsverhaeltnis")
         Me.RadTextBoxControlWaageUebersetzungsverhaeltnis.MaxLength = 10
         Me.RadTextBoxControlWaageUebersetzungsverhaeltnis.Name = "RadTextBoxControlWaageUebersetzungsverhaeltnis"
         '
-        '
-        '
-        Me.RadTextBoxControlWaageUebersetzungsverhaeltnis.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlWaageUebersetzungsverhaeltnis.RootElement.AccessibleName = Nothing
-        '
         'RadLabel11
         '
         resources.ApplyResources(Me.RadLabel11, "RadLabel11")
         Me.RadLabel11.Name = "RadLabel11"
-        '
-        '
-        '
-        Me.RadLabel11.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel11.RootElement.AccessibleName = Nothing
         '
         'RadLabel12
         '
         resources.ApplyResources(Me.RadLabel12, "RadLabel12")
         Me.RadLabel12.Name = "RadLabel12"
         '
-        '
-        '
-        Me.RadLabel12.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel12.RootElement.AccessibleName = Nothing
-        '
         'RadLabel13
         '
         resources.ApplyResources(Me.RadLabel13, "RadLabel13")
         Me.RadLabel13.Name = "RadLabel13"
-        '
-        '
-        '
-        Me.RadLabel13.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel13.RootElement.AccessibleName = Nothing
         '
         'RadLabel14
         '
         resources.ApplyResources(Me.RadLabel14, "RadLabel14")
         Me.RadLabel14.Name = "RadLabel14"
         '
-        '
-        '
-        Me.RadLabel14.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel14.RootElement.AccessibleName = Nothing
-        '
         'RadLabel15
         '
         resources.ApplyResources(Me.RadLabel15, "RadLabel15")
         Me.RadLabel15.Name = "RadLabel15"
-        '
-        '
-        '
-        Me.RadLabel15.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel15.RootElement.AccessibleName = Nothing
         '
         'RadLabel16
         '
         resources.ApplyResources(Me.RadLabel16, "RadLabel16")
         Me.RadLabel16.Name = "RadLabel16"
         '
-        '
-        '
-        Me.RadLabel16.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel16.RootElement.AccessibleName = Nothing
-        '
         'RadLabel17
         '
         resources.ApplyResources(Me.RadLabel17, "RadLabel17")
         Me.RadLabel17.Name = "RadLabel17"
-        '
-        '
-        '
-        Me.RadLabel17.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel17.RootElement.AccessibleName = Nothing
         '
         'lblGrenzenTemp
         '
         resources.ApplyResources(Me.lblGrenzenTemp, "lblGrenzenTemp")
         Me.lblGrenzenTemp.Name = "lblGrenzenTemp"
         '
-        '
-        '
-        Me.lblGrenzenTemp.RootElement.AccessibleDescription = Nothing
-        Me.lblGrenzenTemp.RootElement.AccessibleName = Nothing
-        '
         'lbladditiveTarahoechstlast
         '
         resources.ApplyResources(Me.lbladditiveTarahoechstlast, "lbladditiveTarahoechstlast")
         Me.lbladditiveTarahoechstlast.Name = "lbladditiveTarahoechstlast"
-        '
-        '
-        '
-        Me.lbladditiveTarahoechstlast.RootElement.AccessibleDescription = Nothing
-        Me.lbladditiveTarahoechstlast.RootElement.AccessibleName = Nothing
         '
         'lbltotlast
         '
         resources.ApplyResources(Me.lbltotlast, "lbltotlast")
         Me.lbltotlast.Name = "lbltotlast"
         '
-        '
-        '
-        Me.lbltotlast.RootElement.AccessibleDescription = Nothing
-        Me.lbltotlast.RootElement.AccessibleName = Nothing
-        '
         'lblEcklastzuschalg
         '
         resources.ApplyResources(Me.lblEcklastzuschalg, "lblEcklastzuschalg")
         Me.lblEcklastzuschalg.Name = "lblEcklastzuschalg"
-        '
-        '
-        '
-        Me.lblEcklastzuschalg.RootElement.AccessibleDescription = Nothing
-        Me.lblEcklastzuschalg.RootElement.AccessibleName = Nothing
         '
         'lblEinschaltnullbereich
         '
         resources.ApplyResources(Me.lblEinschaltnullbereich, "lblEinschaltnullbereich")
         Me.lblEinschaltnullbereich.Name = "lblEinschaltnullbereich"
         '
-        '
-        '
-        Me.lblEinschaltnullbereich.RootElement.AccessibleDescription = Nothing
-        Me.lblEinschaltnullbereich.RootElement.AccessibleName = Nothing
-        '
         'lblAnzWaeegezellen
         '
         resources.ApplyResources(Me.lblAnzWaeegezellen, "lblAnzWaeegezellen")
         Me.lblAnzWaeegezellen.Name = "lblAnzWaeegezellen"
         '
-        '
-        '
-        Me.lblAnzWaeegezellen.RootElement.AccessibleDescription = Nothing
-        Me.lblAnzWaeegezellen.RootElement.AccessibleName = Nothing
-        '
         'lblUebersetzung
         '
         resources.ApplyResources(Me.lblUebersetzung, "lblUebersetzung")
         Me.lblUebersetzung.Name = "lblUebersetzung"
-        '
-        '
-        '
-        Me.lblUebersetzung.RootElement.AccessibleDescription = Nothing
-        Me.lblUebersetzung.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlWaageEichwert3
         '
@@ -2710,21 +1890,11 @@ Partial Class uco_3Kompatiblititaetsnachweis
         Me.RadTextBoxControlWaageEichwert3.MaxLength = 50
         Me.RadTextBoxControlWaageEichwert3.Name = "RadTextBoxControlWaageEichwert3"
         '
-        '
-        '
-        Me.RadTextBoxControlWaageEichwert3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlWaageEichwert3.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlWaageHoechstlast3
         '
         resources.ApplyResources(Me.RadTextBoxControlWaageHoechstlast3, "RadTextBoxControlWaageHoechstlast3")
         Me.RadTextBoxControlWaageHoechstlast3.MaxLength = 50
         Me.RadTextBoxControlWaageHoechstlast3.Name = "RadTextBoxControlWaageHoechstlast3"
-        '
-        '
-        '
-        Me.RadTextBoxControlWaageHoechstlast3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlWaageHoechstlast3.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlWaageEichwert2
         '
@@ -2732,21 +1902,11 @@ Partial Class uco_3Kompatiblititaetsnachweis
         Me.RadTextBoxControlWaageEichwert2.MaxLength = 50
         Me.RadTextBoxControlWaageEichwert2.Name = "RadTextBoxControlWaageEichwert2"
         '
-        '
-        '
-        Me.RadTextBoxControlWaageEichwert2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlWaageEichwert2.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlWaageHoechstlast2
         '
         resources.ApplyResources(Me.RadTextBoxControlWaageHoechstlast2, "RadTextBoxControlWaageHoechstlast2")
         Me.RadTextBoxControlWaageHoechstlast2.MaxLength = 50
         Me.RadTextBoxControlWaageHoechstlast2.Name = "RadTextBoxControlWaageHoechstlast2"
-        '
-        '
-        '
-        Me.RadTextBoxControlWaageHoechstlast2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlWaageHoechstlast2.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlWaageEichwert1
         '
@@ -2754,52 +1914,27 @@ Partial Class uco_3Kompatiblititaetsnachweis
         Me.RadTextBoxControlWaageEichwert1.MaxLength = 50
         Me.RadTextBoxControlWaageEichwert1.Name = "RadTextBoxControlWaageEichwert1"
         '
-        '
-        '
-        Me.RadTextBoxControlWaageEichwert1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlWaageEichwert1.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlWaageHoechstlast1
         '
         resources.ApplyResources(Me.RadTextBoxControlWaageHoechstlast1, "RadTextBoxControlWaageHoechstlast1")
         Me.RadTextBoxControlWaageHoechstlast1.MaxLength = 50
         Me.RadTextBoxControlWaageHoechstlast1.Name = "RadTextBoxControlWaageHoechstlast1"
         '
-        '
-        '
-        Me.RadTextBoxControlWaageHoechstlast1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlWaageHoechstlast1.RootElement.AccessibleName = Nothing
-        '
         'lblEichwert
         '
         resources.ApplyResources(Me.lblEichwert, "lblEichwert")
         Me.lblEichwert.Name = "lblEichwert"
-        '
-        '
-        '
-        Me.lblEichwert.RootElement.AccessibleDescription = Nothing
-        Me.lblEichwert.RootElement.AccessibleName = Nothing
         '
         'lblWIMaxCap
         '
         resources.ApplyResources(Me.lblWIMaxCap, "lblWIMaxCap")
         Me.lblWIMaxCap.Name = "lblWIMaxCap"
         '
-        '
-        '
-        Me.lblWIMaxCap.RootElement.AccessibleDescription = Nothing
-        Me.lblWIMaxCap.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlWaageKlasse
         '
         resources.ApplyResources(Me.RadTextBoxControlWaageKlasse, "RadTextBoxControlWaageKlasse")
         Me.RadTextBoxControlWaageKlasse.Name = "RadTextBoxControlWaageKlasse"
         Me.RadTextBoxControlWaageKlasse.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlWaageKlasse.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlWaageKlasse.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlWaageKlasse.TabStop = False
         '
         'lblWIKlasse
@@ -2807,16 +1942,12 @@ Partial Class uco_3Kompatiblititaetsnachweis
         resources.ApplyResources(Me.lblWIKlasse, "lblWIKlasse")
         Me.lblWIKlasse.Name = "lblWIKlasse"
         '
-        '
-        '
-        Me.lblWIKlasse.RootElement.AccessibleDescription = Nothing
-        Me.lblWIKlasse.RootElement.AccessibleName = Nothing
-        '
         'uco_3Kompatiblititaetsnachweis
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.RadScrollablePanel1)
+        Me.DoubleBuffered = True
         Me.Name = "uco_3Kompatiblititaetsnachweis"
         Me.RadScrollablePanel1.PanelContainer.ResumeLayout(False)
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).EndInit()

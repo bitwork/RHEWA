@@ -309,6 +309,7 @@ Partial Class ucoEichprozessauswahlliste
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Transparent
         Me.Controls.Add(Me.RadPageView1)
+        Me.DoubleBuffered = True
         Me.Name = "ucoEichprozessauswahlliste"
         CType(Me.RadGridViewAuswahlliste.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGridViewAuswahlliste, System.ComponentModel.ISupportInitialize).EndInit()

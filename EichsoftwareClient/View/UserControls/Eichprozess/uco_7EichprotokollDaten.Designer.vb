@@ -1314,6 +1314,7 @@ Partial Class uco_7EichprotokollDaten
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.RadScrollablePanel1)
+        Me.DoubleBuffered = True
         Me.Name = "uco_7EichprotokollDaten"
         Me.RadScrollablePanel1.PanelContainer.ResumeLayout(False)
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).EndInit()

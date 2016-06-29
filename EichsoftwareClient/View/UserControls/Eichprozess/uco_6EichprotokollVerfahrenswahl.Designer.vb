@@ -32,23 +32,14 @@ Partial Class uco_6EichprotokollVerfahrenswahl
         '
         'RadRadioButtonNormalien
         '
+        Me.RadRadioButtonNormalien.CheckState = System.Windows.Forms.CheckState.Checked
         resources.ApplyResources(Me.RadRadioButtonNormalien, "RadRadioButtonNormalien")
         Me.RadRadioButtonNormalien.Name = "RadRadioButtonNormalien"
         '
         '
         '
-        Me.RadRadioButtonNormalien.RootElement.AccessibleDescription = resources.GetString("RadRadioButtonNormalien.RootElement.AccessibleDescription")
-        Me.RadRadioButtonNormalien.RootElement.AccessibleName = resources.GetString("RadRadioButtonNormalien.RootElement.AccessibleName")
-        Me.RadRadioButtonNormalien.RootElement.Alignment = CType(resources.GetObject("RadRadioButtonNormalien.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadRadioButtonNormalien.RootElement.AngleTransform = CType(resources.GetObject("RadRadioButtonNormalien.RootElement.AngleTransform"), Single)
-        Me.RadRadioButtonNormalien.RootElement.FlipText = CType(resources.GetObject("RadRadioButtonNormalien.RootElement.FlipText"), Boolean)
-        Me.RadRadioButtonNormalien.RootElement.KeyTip = resources.GetString("RadRadioButtonNormalien.RootElement.KeyTip")
-        Me.RadRadioButtonNormalien.RootElement.Margin = CType(resources.GetObject("RadRadioButtonNormalien.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadRadioButtonNormalien.RootElement.Padding = CType(resources.GetObject("RadRadioButtonNormalien.RootElement.Padding"), System.Windows.Forms.Padding)
-        Me.RadRadioButtonNormalien.RootElement.Text = resources.GetString("RadRadioButtonNormalien.RootElement.Text")
-        Me.RadRadioButtonNormalien.RootElement.TextOrientation = CType(resources.GetObject("RadRadioButtonNormalien.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadRadioButtonNormalien.RootElement.ToolTipText = resources.GetString("RadRadioButtonNormalien.RootElement.ToolTipText")
-        Me.RadRadioButtonNormalien.TabStop = True
+        Me.RadRadioButtonNormalien.RootElement.AccessibleDescription = Nothing
+        Me.RadRadioButtonNormalien.RootElement.AccessibleName = Nothing
         Me.RadRadioButtonNormalien.ToggleState = Telerik.WinControls.Enumerations.ToggleState.[On]
         '
         'RadRadioButtonStaffelverfahren
@@ -58,17 +49,8 @@ Partial Class uco_6EichprotokollVerfahrenswahl
         '
         '
         '
-        Me.RadRadioButtonStaffelverfahren.RootElement.AccessibleDescription = resources.GetString("RadRadioButtonStaffelverfahren.RootElement.AccessibleDescription")
-        Me.RadRadioButtonStaffelverfahren.RootElement.AccessibleName = resources.GetString("RadRadioButtonStaffelverfahren.RootElement.AccessibleName")
-        Me.RadRadioButtonStaffelverfahren.RootElement.Alignment = CType(resources.GetObject("RadRadioButtonStaffelverfahren.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadRadioButtonStaffelverfahren.RootElement.AngleTransform = CType(resources.GetObject("RadRadioButtonStaffelverfahren.RootElement.AngleTransform"), Single)
-        Me.RadRadioButtonStaffelverfahren.RootElement.FlipText = CType(resources.GetObject("RadRadioButtonStaffelverfahren.RootElement.FlipText"), Boolean)
-        Me.RadRadioButtonStaffelverfahren.RootElement.KeyTip = resources.GetString("RadRadioButtonStaffelverfahren.RootElement.KeyTip")
-        Me.RadRadioButtonStaffelverfahren.RootElement.Margin = CType(resources.GetObject("RadRadioButtonStaffelverfahren.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadRadioButtonStaffelverfahren.RootElement.Padding = CType(resources.GetObject("RadRadioButtonStaffelverfahren.RootElement.Padding"), System.Windows.Forms.Padding)
-        Me.RadRadioButtonStaffelverfahren.RootElement.Text = resources.GetString("RadRadioButtonStaffelverfahren.RootElement.Text")
-        Me.RadRadioButtonStaffelverfahren.RootElement.TextOrientation = CType(resources.GetObject("RadRadioButtonStaffelverfahren.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadRadioButtonStaffelverfahren.RootElement.ToolTipText = resources.GetString("RadRadioButtonStaffelverfahren.RootElement.ToolTipText")
+        Me.RadRadioButtonStaffelverfahren.RootElement.AccessibleDescription = Nothing
+        Me.RadRadioButtonStaffelverfahren.RootElement.AccessibleName = Nothing
         '
         'RadRadioButtonFahrzeugwaagen
         '
@@ -77,26 +59,18 @@ Partial Class uco_6EichprotokollVerfahrenswahl
         '
         '
         '
-        Me.RadRadioButtonFahrzeugwaagen.RootElement.AccessibleDescription = resources.GetString("RadRadioButtonFahrzeugwaagen.RootElement.AccessibleDescription")
-        Me.RadRadioButtonFahrzeugwaagen.RootElement.AccessibleName = resources.GetString("RadRadioButtonFahrzeugwaagen.RootElement.AccessibleName")
-        Me.RadRadioButtonFahrzeugwaagen.RootElement.Alignment = CType(resources.GetObject("RadRadioButtonFahrzeugwaagen.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadRadioButtonFahrzeugwaagen.RootElement.AngleTransform = CType(resources.GetObject("RadRadioButtonFahrzeugwaagen.RootElement.AngleTransform"), Single)
-        Me.RadRadioButtonFahrzeugwaagen.RootElement.FlipText = CType(resources.GetObject("RadRadioButtonFahrzeugwaagen.RootElement.FlipText"), Boolean)
-        Me.RadRadioButtonFahrzeugwaagen.RootElement.KeyTip = resources.GetString("RadRadioButtonFahrzeugwaagen.RootElement.KeyTip")
-        Me.RadRadioButtonFahrzeugwaagen.RootElement.Margin = CType(resources.GetObject("RadRadioButtonFahrzeugwaagen.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadRadioButtonFahrzeugwaagen.RootElement.Padding = CType(resources.GetObject("RadRadioButtonFahrzeugwaagen.RootElement.Padding"), System.Windows.Forms.Padding)
-        Me.RadRadioButtonFahrzeugwaagen.RootElement.Text = resources.GetString("RadRadioButtonFahrzeugwaagen.RootElement.Text")
-        Me.RadRadioButtonFahrzeugwaagen.RootElement.TextOrientation = CType(resources.GetObject("RadRadioButtonFahrzeugwaagen.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadRadioButtonFahrzeugwaagen.RootElement.ToolTipText = resources.GetString("RadRadioButtonFahrzeugwaagen.RootElement.ToolTipText")
+        Me.RadRadioButtonFahrzeugwaagen.RootElement.AccessibleDescription = Nothing
+        Me.RadRadioButtonFahrzeugwaagen.RootElement.AccessibleName = Nothing
         '
-        'ucoEichprotokollVerfahrenswahl
+        'uco_6EichprotokollVerfahrenswahl
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.RadRadioButtonFahrzeugwaagen)
         Me.Controls.Add(Me.RadRadioButtonStaffelverfahren)
         Me.Controls.Add(Me.RadRadioButtonNormalien)
-        Me.Name = "ucoEichprotokollVerfahrenswahl"
+        Me.DoubleBuffered = True
+        Me.Name = "uco_6EichprotokollVerfahrenswahl"
         CType(Me.RadRadioButtonNormalien, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadRadioButtonStaffelverfahren, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadRadioButtonFahrzeugwaagen, System.ComponentModel.ISupportInitialize).EndInit()

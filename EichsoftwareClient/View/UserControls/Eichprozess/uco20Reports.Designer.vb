@@ -62,14 +62,8 @@ Partial Class uco20Reports
         '
         '
         '
-        Me.RadButtonExportErstEichungPL.RootElement.AccessibleDescription = resources.GetString("RadButtonExportErstEichungPL.RootElement.AccessibleDescription")
-        Me.RadButtonExportErstEichungPL.RootElement.AccessibleName = resources.GetString("RadButtonExportErstEichungPL.RootElement.AccessibleName")
-        Me.RadButtonExportErstEichungPL.RootElement.Alignment = CType(resources.GetObject("RadButtonExportErstEichungPL.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadButtonExportErstEichungPL.RootElement.AngleTransform = CType(resources.GetObject("RadButtonExportErstEichungPL.RootElement.AngleTransform"), Single)
-        Me.RadButtonExportErstEichungPL.RootElement.FlipText = CType(resources.GetObject("RadButtonExportErstEichungPL.RootElement.FlipText"), Boolean)
-        Me.RadButtonExportErstEichungPL.RootElement.Margin = CType(resources.GetObject("RadButtonExportErstEichungPL.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButtonExportErstEichungPL.RootElement.Text = resources.GetString("RadButtonExportErstEichungPL.RootElement.Text")
-        Me.RadButtonExportErstEichungPL.RootElement.TextOrientation = CType(resources.GetObject("RadButtonExportErstEichungPL.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadButtonExportErstEichungPL.RootElement.AccessibleDescription = Nothing
+        Me.RadButtonExportErstEichungPL.RootElement.AccessibleName = Nothing
         '
         'RadButtonExportKonformitaetserklaerungRO
         '
@@ -78,14 +72,8 @@ Partial Class uco20Reports
         '
         '
         '
-        Me.RadButtonExportKonformitaetserklaerungRO.RootElement.AccessibleDescription = resources.GetString("RadButtonExportKonformitaetserklaerungRO.RootElement.AccessibleDescription")
-        Me.RadButtonExportKonformitaetserklaerungRO.RootElement.AccessibleName = resources.GetString("RadButtonExportKonformitaetserklaerungRO.RootElement.AccessibleName")
-        Me.RadButtonExportKonformitaetserklaerungRO.RootElement.Alignment = CType(resources.GetObject("RadButtonExportKonformitaetserklaerungRO.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadButtonExportKonformitaetserklaerungRO.RootElement.AngleTransform = CType(resources.GetObject("RadButtonExportKonformitaetserklaerungRO.RootElement.AngleTransform"), Single)
-        Me.RadButtonExportKonformitaetserklaerungRO.RootElement.FlipText = CType(resources.GetObject("RadButtonExportKonformitaetserklaerungRO.RootElement.FlipText"), Boolean)
-        Me.RadButtonExportKonformitaetserklaerungRO.RootElement.Margin = CType(resources.GetObject("RadButtonExportKonformitaetserklaerungRO.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButtonExportKonformitaetserklaerungRO.RootElement.Text = resources.GetString("RadButtonExportKonformitaetserklaerungRO.RootElement.Text")
-        Me.RadButtonExportKonformitaetserklaerungRO.RootElement.TextOrientation = CType(resources.GetObject("RadButtonExportKonformitaetserklaerungRO.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadButtonExportKonformitaetserklaerungRO.RootElement.AccessibleDescription = Nothing
+        Me.RadButtonExportKonformitaetserklaerungRO.RootElement.AccessibleName = Nothing
         '
         'RadButtonExportKonformitaetserklaerungPL
         '
@@ -94,14 +82,8 @@ Partial Class uco20Reports
         '
         '
         '
-        Me.RadButtonExportKonformitaetserklaerungPL.RootElement.AccessibleDescription = resources.GetString("RadButtonExportKonformitaetserklaerungPL.RootElement.AccessibleDescription")
-        Me.RadButtonExportKonformitaetserklaerungPL.RootElement.AccessibleName = resources.GetString("RadButtonExportKonformitaetserklaerungPL.RootElement.AccessibleName")
-        Me.RadButtonExportKonformitaetserklaerungPL.RootElement.Alignment = CType(resources.GetObject("RadButtonExportKonformitaetserklaerungPL.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadButtonExportKonformitaetserklaerungPL.RootElement.AngleTransform = CType(resources.GetObject("RadButtonExportKonformitaetserklaerungPL.RootElement.AngleTransform"), Single)
-        Me.RadButtonExportKonformitaetserklaerungPL.RootElement.FlipText = CType(resources.GetObject("RadButtonExportKonformitaetserklaerungPL.RootElement.FlipText"), Boolean)
-        Me.RadButtonExportKonformitaetserklaerungPL.RootElement.Margin = CType(resources.GetObject("RadButtonExportKonformitaetserklaerungPL.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButtonExportKonformitaetserklaerungPL.RootElement.Text = resources.GetString("RadButtonExportKonformitaetserklaerungPL.RootElement.Text")
-        Me.RadButtonExportKonformitaetserklaerungPL.RootElement.TextOrientation = CType(resources.GetObject("RadButtonExportKonformitaetserklaerungPL.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadButtonExportKonformitaetserklaerungPL.RootElement.AccessibleDescription = Nothing
+        Me.RadButtonExportKonformitaetserklaerungPL.RootElement.AccessibleName = Nothing
         '
         'RadButtonExportErstEichungDE
         '
@@ -110,14 +92,8 @@ Partial Class uco20Reports
         '
         '
         '
-        Me.RadButtonExportErstEichungDE.RootElement.AccessibleDescription = resources.GetString("RadButtonExportErstEichungDE.RootElement.AccessibleDescription")
-        Me.RadButtonExportErstEichungDE.RootElement.AccessibleName = resources.GetString("RadButtonExportErstEichungDE.RootElement.AccessibleName")
-        Me.RadButtonExportErstEichungDE.RootElement.Alignment = CType(resources.GetObject("RadButtonExportErstEichungDE.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadButtonExportErstEichungDE.RootElement.AngleTransform = CType(resources.GetObject("RadButtonExportErstEichungDE.RootElement.AngleTransform"), Single)
-        Me.RadButtonExportErstEichungDE.RootElement.FlipText = CType(resources.GetObject("RadButtonExportErstEichungDE.RootElement.FlipText"), Boolean)
-        Me.RadButtonExportErstEichungDE.RootElement.Margin = CType(resources.GetObject("RadButtonExportErstEichungDE.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButtonExportErstEichungDE.RootElement.Text = resources.GetString("RadButtonExportErstEichungDE.RootElement.Text")
-        Me.RadButtonExportErstEichungDE.RootElement.TextOrientation = CType(resources.GetObject("RadButtonExportErstEichungDE.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadButtonExportErstEichungDE.RootElement.AccessibleDescription = Nothing
+        Me.RadButtonExportErstEichungDE.RootElement.AccessibleName = Nothing
         '
         'RadButtonExportErstEichungEN
         '
@@ -126,14 +102,8 @@ Partial Class uco20Reports
         '
         '
         '
-        Me.RadButtonExportErstEichungEN.RootElement.AccessibleDescription = resources.GetString("RadButtonExportErstEichungEN.RootElement.AccessibleDescription")
-        Me.RadButtonExportErstEichungEN.RootElement.AccessibleName = resources.GetString("RadButtonExportErstEichungEN.RootElement.AccessibleName")
-        Me.RadButtonExportErstEichungEN.RootElement.Alignment = CType(resources.GetObject("RadButtonExportErstEichungEN.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadButtonExportErstEichungEN.RootElement.AngleTransform = CType(resources.GetObject("RadButtonExportErstEichungEN.RootElement.AngleTransform"), Single)
-        Me.RadButtonExportErstEichungEN.RootElement.FlipText = CType(resources.GetObject("RadButtonExportErstEichungEN.RootElement.FlipText"), Boolean)
-        Me.RadButtonExportErstEichungEN.RootElement.Margin = CType(resources.GetObject("RadButtonExportErstEichungEN.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButtonExportErstEichungEN.RootElement.Text = resources.GetString("RadButtonExportErstEichungEN.RootElement.Text")
-        Me.RadButtonExportErstEichungEN.RootElement.TextOrientation = CType(resources.GetObject("RadButtonExportErstEichungEN.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadButtonExportErstEichungEN.RootElement.AccessibleDescription = Nothing
+        Me.RadButtonExportErstEichungEN.RootElement.AccessibleName = Nothing
         '
         'RadButtonExportKonformitaetserklaerungDE
         '
@@ -142,14 +112,8 @@ Partial Class uco20Reports
         '
         '
         '
-        Me.RadButtonExportKonformitaetserklaerungDE.RootElement.AccessibleDescription = resources.GetString("RadButtonExportKonformitaetserklaerungDE.RootElement.AccessibleDescription")
-        Me.RadButtonExportKonformitaetserklaerungDE.RootElement.AccessibleName = resources.GetString("RadButtonExportKonformitaetserklaerungDE.RootElement.AccessibleName")
-        Me.RadButtonExportKonformitaetserklaerungDE.RootElement.Alignment = CType(resources.GetObject("RadButtonExportKonformitaetserklaerungDE.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadButtonExportKonformitaetserklaerungDE.RootElement.AngleTransform = CType(resources.GetObject("RadButtonExportKonformitaetserklaerungDE.RootElement.AngleTransform"), Single)
-        Me.RadButtonExportKonformitaetserklaerungDE.RootElement.FlipText = CType(resources.GetObject("RadButtonExportKonformitaetserklaerungDE.RootElement.FlipText"), Boolean)
-        Me.RadButtonExportKonformitaetserklaerungDE.RootElement.Margin = CType(resources.GetObject("RadButtonExportKonformitaetserklaerungDE.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButtonExportKonformitaetserklaerungDE.RootElement.Text = resources.GetString("RadButtonExportKonformitaetserklaerungDE.RootElement.Text")
-        Me.RadButtonExportKonformitaetserklaerungDE.RootElement.TextOrientation = CType(resources.GetObject("RadButtonExportKonformitaetserklaerungDE.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadButtonExportKonformitaetserklaerungDE.RootElement.AccessibleDescription = Nothing
+        Me.RadButtonExportKonformitaetserklaerungDE.RootElement.AccessibleName = Nothing
         '
         'RadButtonExportKompatibliaetsnachweisEN
         '
@@ -158,14 +122,8 @@ Partial Class uco20Reports
         '
         '
         '
-        Me.RadButtonExportKompatibliaetsnachweisEN.RootElement.AccessibleDescription = resources.GetString("RadButtonExportKompatibliaetsnachweisEN.RootElement.AccessibleDescription")
-        Me.RadButtonExportKompatibliaetsnachweisEN.RootElement.AccessibleName = resources.GetString("RadButtonExportKompatibliaetsnachweisEN.RootElement.AccessibleName")
-        Me.RadButtonExportKompatibliaetsnachweisEN.RootElement.Alignment = CType(resources.GetObject("RadButtonExportKompatibliaetsnachweisEN.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadButtonExportKompatibliaetsnachweisEN.RootElement.AngleTransform = CType(resources.GetObject("RadButtonExportKompatibliaetsnachweisEN.RootElement.AngleTransform"), Single)
-        Me.RadButtonExportKompatibliaetsnachweisEN.RootElement.FlipText = CType(resources.GetObject("RadButtonExportKompatibliaetsnachweisEN.RootElement.FlipText"), Boolean)
-        Me.RadButtonExportKompatibliaetsnachweisEN.RootElement.Margin = CType(resources.GetObject("RadButtonExportKompatibliaetsnachweisEN.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButtonExportKompatibliaetsnachweisEN.RootElement.Text = resources.GetString("RadButtonExportKompatibliaetsnachweisEN.RootElement.Text")
-        Me.RadButtonExportKompatibliaetsnachweisEN.RootElement.TextOrientation = CType(resources.GetObject("RadButtonExportKompatibliaetsnachweisEN.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadButtonExportKompatibliaetsnachweisEN.RootElement.AccessibleDescription = Nothing
+        Me.RadButtonExportKompatibliaetsnachweisEN.RootElement.AccessibleName = Nothing
         '
         'RadButtonExportKompatibliaetsnachweisDE
         '
@@ -174,14 +132,8 @@ Partial Class uco20Reports
         '
         '
         '
-        Me.RadButtonExportKompatibliaetsnachweisDE.RootElement.AccessibleDescription = resources.GetString("RadButtonExportKompatibliaetsnachweisDE.RootElement.AccessibleDescription")
-        Me.RadButtonExportKompatibliaetsnachweisDE.RootElement.AccessibleName = resources.GetString("RadButtonExportKompatibliaetsnachweisDE.RootElement.AccessibleName")
-        Me.RadButtonExportKompatibliaetsnachweisDE.RootElement.Alignment = CType(resources.GetObject("RadButtonExportKompatibliaetsnachweisDE.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadButtonExportKompatibliaetsnachweisDE.RootElement.AngleTransform = CType(resources.GetObject("RadButtonExportKompatibliaetsnachweisDE.RootElement.AngleTransform"), Single)
-        Me.RadButtonExportKompatibliaetsnachweisDE.RootElement.FlipText = CType(resources.GetObject("RadButtonExportKompatibliaetsnachweisDE.RootElement.FlipText"), Boolean)
-        Me.RadButtonExportKompatibliaetsnachweisDE.RootElement.Margin = CType(resources.GetObject("RadButtonExportKompatibliaetsnachweisDE.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButtonExportKompatibliaetsnachweisDE.RootElement.Text = resources.GetString("RadButtonExportKompatibliaetsnachweisDE.RootElement.Text")
-        Me.RadButtonExportKompatibliaetsnachweisDE.RootElement.TextOrientation = CType(resources.GetObject("RadButtonExportKompatibliaetsnachweisDE.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadButtonExportKompatibliaetsnachweisDE.RootElement.AccessibleDescription = Nothing
+        Me.RadButtonExportKompatibliaetsnachweisDE.RootElement.AccessibleName = Nothing
         '
         'RadGroupBox1
         '
@@ -195,14 +147,8 @@ Partial Class uco20Reports
         '
         '
         '
-        Me.RadGroupBox1.RootElement.AccessibleDescription = resources.GetString("RadGroupBox1.RootElement.AccessibleDescription")
-        Me.RadGroupBox1.RootElement.AccessibleName = resources.GetString("RadGroupBox1.RootElement.AccessibleName")
-        Me.RadGroupBox1.RootElement.Alignment = CType(resources.GetObject("RadGroupBox1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadGroupBox1.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBox1.RootElement.AngleTransform"), Single)
-        Me.RadGroupBox1.RootElement.FlipText = CType(resources.GetObject("RadGroupBox1.RootElement.FlipText"), Boolean)
-        Me.RadGroupBox1.RootElement.Margin = CType(resources.GetObject("RadGroupBox1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadGroupBox1.RootElement.Text = resources.GetString("RadGroupBox1.RootElement.Text")
-        Me.RadGroupBox1.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBox1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadGroupBox1.RootElement.AccessibleDescription = Nothing
+        Me.RadGroupBox1.RootElement.AccessibleName = Nothing
         '
         'RadButtonExportEichprozessDE
         '
@@ -211,14 +157,8 @@ Partial Class uco20Reports
         '
         '
         '
-        Me.RadButtonExportEichprozessDE.RootElement.AccessibleDescription = resources.GetString("RadButtonExportEichprozessDE.RootElement.AccessibleDescription")
-        Me.RadButtonExportEichprozessDE.RootElement.AccessibleName = resources.GetString("RadButtonExportEichprozessDE.RootElement.AccessibleName")
-        Me.RadButtonExportEichprozessDE.RootElement.Alignment = CType(resources.GetObject("RadButtonExportEichprozessDE.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadButtonExportEichprozessDE.RootElement.AngleTransform = CType(resources.GetObject("RadButtonExportEichprozessDE.RootElement.AngleTransform"), Single)
-        Me.RadButtonExportEichprozessDE.RootElement.FlipText = CType(resources.GetObject("RadButtonExportEichprozessDE.RootElement.FlipText"), Boolean)
-        Me.RadButtonExportEichprozessDE.RootElement.Margin = CType(resources.GetObject("RadButtonExportEichprozessDE.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButtonExportEichprozessDE.RootElement.Text = resources.GetString("RadButtonExportEichprozessDE.RootElement.Text")
-        Me.RadButtonExportEichprozessDE.RootElement.TextOrientation = CType(resources.GetObject("RadButtonExportEichprozessDE.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadButtonExportEichprozessDE.RootElement.AccessibleDescription = Nothing
+        Me.RadButtonExportEichprozessDE.RootElement.AccessibleName = Nothing
         '
         'RadGroupBox2
         '
@@ -230,14 +170,8 @@ Partial Class uco20Reports
         '
         '
         '
-        Me.RadGroupBox2.RootElement.AccessibleDescription = resources.GetString("RadGroupBox2.RootElement.AccessibleDescription")
-        Me.RadGroupBox2.RootElement.AccessibleName = resources.GetString("RadGroupBox2.RootElement.AccessibleName")
-        Me.RadGroupBox2.RootElement.Alignment = CType(resources.GetObject("RadGroupBox2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadGroupBox2.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBox2.RootElement.AngleTransform"), Single)
-        Me.RadGroupBox2.RootElement.FlipText = CType(resources.GetObject("RadGroupBox2.RootElement.FlipText"), Boolean)
-        Me.RadGroupBox2.RootElement.Margin = CType(resources.GetObject("RadGroupBox2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadGroupBox2.RootElement.Text = resources.GetString("RadGroupBox2.RootElement.Text")
-        Me.RadGroupBox2.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBox2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadGroupBox2.RootElement.AccessibleDescription = Nothing
+        Me.RadGroupBox2.RootElement.AccessibleName = Nothing
         '
         'RadGroupBox3
         '
@@ -249,14 +183,8 @@ Partial Class uco20Reports
         '
         '
         '
-        Me.RadGroupBox3.RootElement.AccessibleDescription = resources.GetString("RadGroupBox3.RootElement.AccessibleDescription")
-        Me.RadGroupBox3.RootElement.AccessibleName = resources.GetString("RadGroupBox3.RootElement.AccessibleName")
-        Me.RadGroupBox3.RootElement.Alignment = CType(resources.GetObject("RadGroupBox3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadGroupBox3.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBox3.RootElement.AngleTransform"), Single)
-        Me.RadGroupBox3.RootElement.FlipText = CType(resources.GetObject("RadGroupBox3.RootElement.FlipText"), Boolean)
-        Me.RadGroupBox3.RootElement.Margin = CType(resources.GetObject("RadGroupBox3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadGroupBox3.RootElement.Text = resources.GetString("RadGroupBox3.RootElement.Text")
-        Me.RadGroupBox3.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBox3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadGroupBox3.RootElement.AccessibleDescription = Nothing
+        Me.RadGroupBox3.RootElement.AccessibleName = Nothing
         '
         'RadGroupBox4
         '
@@ -267,14 +195,8 @@ Partial Class uco20Reports
         '
         '
         '
-        Me.RadGroupBox4.RootElement.AccessibleDescription = resources.GetString("RadGroupBox4.RootElement.AccessibleDescription")
-        Me.RadGroupBox4.RootElement.AccessibleName = resources.GetString("RadGroupBox4.RootElement.AccessibleName")
-        Me.RadGroupBox4.RootElement.Alignment = CType(resources.GetObject("RadGroupBox4.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadGroupBox4.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBox4.RootElement.AngleTransform"), Single)
-        Me.RadGroupBox4.RootElement.FlipText = CType(resources.GetObject("RadGroupBox4.RootElement.FlipText"), Boolean)
-        Me.RadGroupBox4.RootElement.Margin = CType(resources.GetObject("RadGroupBox4.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadGroupBox4.RootElement.Text = resources.GetString("RadGroupBox4.RootElement.Text")
-        Me.RadGroupBox4.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBox4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadGroupBox4.RootElement.AccessibleDescription = Nothing
+        Me.RadGroupBox4.RootElement.AccessibleName = Nothing
         '
         'uco20Reports
         '
@@ -284,6 +206,7 @@ Partial Class uco20Reports
         Me.Controls.Add(Me.RadGroupBox3)
         Me.Controls.Add(Me.RadGroupBox2)
         Me.Controls.Add(Me.RadGroupBox1)
+        Me.DoubleBuffered = True
         Me.Name = "uco20Reports"
         CType(Me.RadButtonExportErstEichungPL, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonExportKonformitaetserklaerungRO, System.ComponentModel.ISupportInitialize).EndInit()

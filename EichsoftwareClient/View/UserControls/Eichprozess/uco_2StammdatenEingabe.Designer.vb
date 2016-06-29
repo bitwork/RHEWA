@@ -144,14 +144,8 @@ Partial Class uco_2StammdatenEingabe
         '
         '
         '
-        Me.RadScrollablePanel1.RootElement.AccessibleDescription = resources.GetString("RadScrollablePanel1.RootElement.AccessibleDescription")
-        Me.RadScrollablePanel1.RootElement.AccessibleName = resources.GetString("RadScrollablePanel1.RootElement.AccessibleName")
-        Me.RadScrollablePanel1.RootElement.Alignment = CType(resources.GetObject("RadScrollablePanel1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadScrollablePanel1.RootElement.AngleTransform = CType(resources.GetObject("RadScrollablePanel1.RootElement.AngleTransform"), Single)
-        Me.RadScrollablePanel1.RootElement.FlipText = CType(resources.GetObject("RadScrollablePanel1.RootElement.FlipText"), Boolean)
-        Me.RadScrollablePanel1.RootElement.Margin = CType(resources.GetObject("RadScrollablePanel1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadScrollablePanel1.RootElement.Text = resources.GetString("RadScrollablePanel1.RootElement.Text")
-        Me.RadScrollablePanel1.RootElement.TextOrientation = CType(resources.GetObject("RadScrollablePanel1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadScrollablePanel1.RootElement.AccessibleDescription = Nothing
+        Me.RadScrollablePanel1.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxStammdaten
         '
@@ -173,14 +167,8 @@ Partial Class uco_2StammdatenEingabe
         '
         '
         '
-        Me.RadGroupBoxStammdaten.RootElement.AccessibleDescription = resources.GetString("RadGroupBoxStammdaten.RootElement.AccessibleDescription")
-        Me.RadGroupBoxStammdaten.RootElement.AccessibleName = resources.GetString("RadGroupBoxStammdaten.RootElement.AccessibleName")
-        Me.RadGroupBoxStammdaten.RootElement.Alignment = CType(resources.GetObject("RadGroupBoxStammdaten.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadGroupBoxStammdaten.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBoxStammdaten.RootElement.AngleTransform"), Single)
-        Me.RadGroupBoxStammdaten.RootElement.FlipText = CType(resources.GetObject("RadGroupBoxStammdaten.RootElement.FlipText"), Boolean)
-        Me.RadGroupBoxStammdaten.RootElement.Margin = CType(resources.GetObject("RadGroupBoxStammdaten.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadGroupBoxStammdaten.RootElement.Text = resources.GetString("RadGroupBoxStammdaten.RootElement.Text")
-        Me.RadGroupBoxStammdaten.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxStammdaten.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadGroupBoxStammdaten.RootElement.AccessibleDescription = Nothing
+        Me.RadGroupBoxStammdaten.RootElement.AccessibleName = Nothing
         '
         'Label3
         '
@@ -214,14 +202,8 @@ Partial Class uco_2StammdatenEingabe
         '
         '
         '
-        Me.RadTextBoxStammdatenPLZ.RootElement.AccessibleDescription = resources.GetString("RadTextBoxStammdatenPLZ.RootElement.AccessibleDescription")
-        Me.RadTextBoxStammdatenPLZ.RootElement.AccessibleName = resources.GetString("RadTextBoxStammdatenPLZ.RootElement.AccessibleName")
-        Me.RadTextBoxStammdatenPLZ.RootElement.Alignment = CType(resources.GetObject("RadTextBoxStammdatenPLZ.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxStammdatenPLZ.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxStammdatenPLZ.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxStammdatenPLZ.RootElement.FlipText = CType(resources.GetObject("RadTextBoxStammdatenPLZ.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxStammdatenPLZ.RootElement.Margin = CType(resources.GetObject("RadTextBoxStammdatenPLZ.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxStammdatenPLZ.RootElement.Text = resources.GetString("RadTextBoxStammdatenPLZ.RootElement.Text")
-        Me.RadTextBoxStammdatenPLZ.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxStammdatenPLZ.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxStammdatenPLZ.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxStammdatenPLZ.RootElement.AccessibleName = Nothing
         '
         'lblPLZ
         '
@@ -230,14 +212,8 @@ Partial Class uco_2StammdatenEingabe
         '
         '
         '
-        Me.lblPLZ.RootElement.AccessibleDescription = resources.GetString("lblPLZ.RootElement.AccessibleDescription")
-        Me.lblPLZ.RootElement.AccessibleName = resources.GetString("lblPLZ.RootElement.AccessibleName")
-        Me.lblPLZ.RootElement.Alignment = CType(resources.GetObject("lblPLZ.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblPLZ.RootElement.AngleTransform = CType(resources.GetObject("lblPLZ.RootElement.AngleTransform"), Single)
-        Me.lblPLZ.RootElement.FlipText = CType(resources.GetObject("lblPLZ.RootElement.FlipText"), Boolean)
-        Me.lblPLZ.RootElement.Margin = CType(resources.GetObject("lblPLZ.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblPLZ.RootElement.Text = resources.GetString("lblPLZ.RootElement.Text")
-        Me.lblPLZ.RootElement.TextOrientation = CType(resources.GetObject("lblPLZ.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblPLZ.RootElement.AccessibleDescription = Nothing
+        Me.lblPLZ.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxStammdatenOrt
         '
@@ -247,14 +223,8 @@ Partial Class uco_2StammdatenEingabe
         '
         '
         '
-        Me.RadTextBoxStammdatenOrt.RootElement.AccessibleDescription = resources.GetString("RadTextBoxStammdatenOrt.RootElement.AccessibleDescription")
-        Me.RadTextBoxStammdatenOrt.RootElement.AccessibleName = resources.GetString("RadTextBoxStammdatenOrt.RootElement.AccessibleName")
-        Me.RadTextBoxStammdatenOrt.RootElement.Alignment = CType(resources.GetObject("RadTextBoxStammdatenOrt.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxStammdatenOrt.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxStammdatenOrt.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxStammdatenOrt.RootElement.FlipText = CType(resources.GetObject("RadTextBoxStammdatenOrt.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxStammdatenOrt.RootElement.Margin = CType(resources.GetObject("RadTextBoxStammdatenOrt.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxStammdatenOrt.RootElement.Text = resources.GetString("RadTextBoxStammdatenOrt.RootElement.Text")
-        Me.RadTextBoxStammdatenOrt.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxStammdatenOrt.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxStammdatenOrt.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxStammdatenOrt.RootElement.AccessibleName = Nothing
         '
         'lblOrt
         '
@@ -263,14 +233,8 @@ Partial Class uco_2StammdatenEingabe
         '
         '
         '
-        Me.lblOrt.RootElement.AccessibleDescription = resources.GetString("lblOrt.RootElement.AccessibleDescription")
-        Me.lblOrt.RootElement.AccessibleName = resources.GetString("lblOrt.RootElement.AccessibleName")
-        Me.lblOrt.RootElement.Alignment = CType(resources.GetObject("lblOrt.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblOrt.RootElement.AngleTransform = CType(resources.GetObject("lblOrt.RootElement.AngleTransform"), Single)
-        Me.lblOrt.RootElement.FlipText = CType(resources.GetObject("lblOrt.RootElement.FlipText"), Boolean)
-        Me.lblOrt.RootElement.Margin = CType(resources.GetObject("lblOrt.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblOrt.RootElement.Text = resources.GetString("lblOrt.RootElement.Text")
-        Me.lblOrt.RootElement.TextOrientation = CType(resources.GetObject("lblOrt.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblOrt.RootElement.AccessibleDescription = Nothing
+        Me.lblOrt.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxStammdatenStrasse
         '
@@ -280,14 +244,8 @@ Partial Class uco_2StammdatenEingabe
         '
         '
         '
-        Me.RadTextBoxStammdatenStrasse.RootElement.AccessibleDescription = resources.GetString("RadTextBoxStammdatenStrasse.RootElement.AccessibleDescription")
-        Me.RadTextBoxStammdatenStrasse.RootElement.AccessibleName = resources.GetString("RadTextBoxStammdatenStrasse.RootElement.AccessibleName")
-        Me.RadTextBoxStammdatenStrasse.RootElement.Alignment = CType(resources.GetObject("RadTextBoxStammdatenStrasse.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxStammdatenStrasse.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxStammdatenStrasse.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxStammdatenStrasse.RootElement.FlipText = CType(resources.GetObject("RadTextBoxStammdatenStrasse.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxStammdatenStrasse.RootElement.Margin = CType(resources.GetObject("RadTextBoxStammdatenStrasse.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxStammdatenStrasse.RootElement.Text = resources.GetString("RadTextBoxStammdatenStrasse.RootElement.Text")
-        Me.RadTextBoxStammdatenStrasse.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxStammdatenStrasse.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxStammdatenStrasse.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxStammdatenStrasse.RootElement.AccessibleName = Nothing
         '
         'lblStrasse
         '
@@ -296,14 +254,8 @@ Partial Class uco_2StammdatenEingabe
         '
         '
         '
-        Me.lblStrasse.RootElement.AccessibleDescription = resources.GetString("lblStrasse.RootElement.AccessibleDescription")
-        Me.lblStrasse.RootElement.AccessibleName = resources.GetString("lblStrasse.RootElement.AccessibleName")
-        Me.lblStrasse.RootElement.Alignment = CType(resources.GetObject("lblStrasse.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStrasse.RootElement.AngleTransform = CType(resources.GetObject("lblStrasse.RootElement.AngleTransform"), Single)
-        Me.lblStrasse.RootElement.FlipText = CType(resources.GetObject("lblStrasse.RootElement.FlipText"), Boolean)
-        Me.lblStrasse.RootElement.Margin = CType(resources.GetObject("lblStrasse.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStrasse.RootElement.Text = resources.GetString("lblStrasse.RootElement.Text")
-        Me.lblStrasse.RootElement.TextOrientation = CType(resources.GetObject("lblStrasse.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStrasse.RootElement.AccessibleDescription = Nothing
+        Me.lblStrasse.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxStammdatenWaagenbaufirma
         '
@@ -313,14 +265,8 @@ Partial Class uco_2StammdatenEingabe
         '
         '
         '
-        Me.RadTextBoxStammdatenWaagenbaufirma.RootElement.AccessibleDescription = resources.GetString("RadTextBoxStammdatenWaagenbaufirma.RootElement.AccessibleDescription")
-        Me.RadTextBoxStammdatenWaagenbaufirma.RootElement.AccessibleName = resources.GetString("RadTextBoxStammdatenWaagenbaufirma.RootElement.AccessibleName")
-        Me.RadTextBoxStammdatenWaagenbaufirma.RootElement.Alignment = CType(resources.GetObject("RadTextBoxStammdatenWaagenbaufirma.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxStammdatenWaagenbaufirma.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxStammdatenWaagenbaufirma.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxStammdatenWaagenbaufirma.RootElement.FlipText = CType(resources.GetObject("RadTextBoxStammdatenWaagenbaufirma.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxStammdatenWaagenbaufirma.RootElement.Margin = CType(resources.GetObject("RadTextBoxStammdatenWaagenbaufirma.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxStammdatenWaagenbaufirma.RootElement.Text = resources.GetString("RadTextBoxStammdatenWaagenbaufirma.RootElement.Text")
-        Me.RadTextBoxStammdatenWaagenbaufirma.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxStammdatenWaagenbaufirma.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxStammdatenWaagenbaufirma.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxStammdatenWaagenbaufirma.RootElement.AccessibleName = Nothing
         '
         'lblWaagenbaufirma
         '
@@ -329,14 +275,8 @@ Partial Class uco_2StammdatenEingabe
         '
         '
         '
-        Me.lblWaagenbaufirma.RootElement.AccessibleDescription = resources.GetString("lblWaagenbaufirma.RootElement.AccessibleDescription")
-        Me.lblWaagenbaufirma.RootElement.AccessibleName = resources.GetString("lblWaagenbaufirma.RootElement.AccessibleName")
-        Me.lblWaagenbaufirma.RootElement.Alignment = CType(resources.GetObject("lblWaagenbaufirma.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblWaagenbaufirma.RootElement.AngleTransform = CType(resources.GetObject("lblWaagenbaufirma.RootElement.AngleTransform"), Single)
-        Me.lblWaagenbaufirma.RootElement.FlipText = CType(resources.GetObject("lblWaagenbaufirma.RootElement.FlipText"), Boolean)
-        Me.lblWaagenbaufirma.RootElement.Margin = CType(resources.GetObject("lblWaagenbaufirma.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblWaagenbaufirma.RootElement.Text = resources.GetString("lblWaagenbaufirma.RootElement.Text")
-        Me.lblWaagenbaufirma.RootElement.TextOrientation = CType(resources.GetObject("lblWaagenbaufirma.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblWaagenbaufirma.RootElement.AccessibleDescription = Nothing
+        Me.lblWaagenbaufirma.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxWZ
         '
@@ -359,14 +299,8 @@ Partial Class uco_2StammdatenEingabe
         '
         '
         '
-        Me.RadGroupBoxWZ.RootElement.AccessibleDescription = resources.GetString("RadGroupBoxWZ.RootElement.AccessibleDescription")
-        Me.RadGroupBoxWZ.RootElement.AccessibleName = resources.GetString("RadGroupBoxWZ.RootElement.AccessibleName")
-        Me.RadGroupBoxWZ.RootElement.Alignment = CType(resources.GetObject("RadGroupBoxWZ.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadGroupBoxWZ.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBoxWZ.RootElement.AngleTransform"), Single)
-        Me.RadGroupBoxWZ.RootElement.FlipText = CType(resources.GetObject("RadGroupBoxWZ.RootElement.FlipText"), Boolean)
-        Me.RadGroupBoxWZ.RootElement.Margin = CType(resources.GetObject("RadGroupBoxWZ.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadGroupBoxWZ.RootElement.Text = resources.GetString("RadGroupBoxWZ.RootElement.Text")
-        Me.RadGroupBoxWZ.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxWZ.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadGroupBoxWZ.RootElement.AccessibleDescription = Nothing
+        Me.RadGroupBoxWZ.RootElement.AccessibleName = Nothing
         '
         'Label9
         '
@@ -402,14 +336,8 @@ Partial Class uco_2StammdatenEingabe
         '
         '
         '
-        Me.RadButtonNeueWaegezelle.RootElement.AccessibleDescription = resources.GetString("RadButtonNeueWaegezelle.RootElement.AccessibleDescription")
-        Me.RadButtonNeueWaegezelle.RootElement.AccessibleName = resources.GetString("RadButtonNeueWaegezelle.RootElement.AccessibleName")
-        Me.RadButtonNeueWaegezelle.RootElement.Alignment = CType(resources.GetObject("RadButtonNeueWaegezelle.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadButtonNeueWaegezelle.RootElement.AngleTransform = CType(resources.GetObject("RadButtonNeueWaegezelle.RootElement.AngleTransform"), Single)
-        Me.RadButtonNeueWaegezelle.RootElement.FlipText = CType(resources.GetObject("RadButtonNeueWaegezelle.RootElement.FlipText"), Boolean)
-        Me.RadButtonNeueWaegezelle.RootElement.Margin = CType(resources.GetObject("RadButtonNeueWaegezelle.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButtonNeueWaegezelle.RootElement.Text = resources.GetString("RadButtonNeueWaegezelle.RootElement.Text")
-        Me.RadButtonNeueWaegezelle.RootElement.TextOrientation = CType(resources.GetObject("RadButtonNeueWaegezelle.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadButtonNeueWaegezelle.RootElement.AccessibleDescription = Nothing
+        Me.RadButtonNeueWaegezelle.RootElement.AccessibleName = Nothing
         '
         'RadDropdownlistlWZHersteller
         '
@@ -420,14 +348,8 @@ Partial Class uco_2StammdatenEingabe
         '
         '
         '
-        Me.RadDropdownlistlWZHersteller.RootElement.AccessibleDescription = resources.GetString("RadDropdownlistlWZHersteller.RootElement.AccessibleDescription")
-        Me.RadDropdownlistlWZHersteller.RootElement.AccessibleName = resources.GetString("RadDropdownlistlWZHersteller.RootElement.AccessibleName")
-        Me.RadDropdownlistlWZHersteller.RootElement.Alignment = CType(resources.GetObject("RadDropdownlistlWZHersteller.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadDropdownlistlWZHersteller.RootElement.AngleTransform = CType(resources.GetObject("RadDropdownlistlWZHersteller.RootElement.AngleTransform"), Single)
-        Me.RadDropdownlistlWZHersteller.RootElement.FlipText = CType(resources.GetObject("RadDropdownlistlWZHersteller.RootElement.FlipText"), Boolean)
-        Me.RadDropdownlistlWZHersteller.RootElement.Margin = CType(resources.GetObject("RadDropdownlistlWZHersteller.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadDropdownlistlWZHersteller.RootElement.Text = resources.GetString("RadDropdownlistlWZHersteller.RootElement.Text")
-        Me.RadDropdownlistlWZHersteller.RootElement.TextOrientation = CType(resources.GetObject("RadDropdownlistlWZHersteller.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadDropdownlistlWZHersteller.RootElement.AccessibleDescription = Nothing
+        Me.RadDropdownlistlWZHersteller.RootElement.AccessibleName = Nothing
         '
         'RadDropdownlistlWZTyp
         '
@@ -438,14 +360,8 @@ Partial Class uco_2StammdatenEingabe
         '
         '
         '
-        Me.RadDropdownlistlWZTyp.RootElement.AccessibleDescription = resources.GetString("RadDropdownlistlWZTyp.RootElement.AccessibleDescription")
-        Me.RadDropdownlistlWZTyp.RootElement.AccessibleName = resources.GetString("RadDropdownlistlWZTyp.RootElement.AccessibleName")
-        Me.RadDropdownlistlWZTyp.RootElement.Alignment = CType(resources.GetObject("RadDropdownlistlWZTyp.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadDropdownlistlWZTyp.RootElement.AngleTransform = CType(resources.GetObject("RadDropdownlistlWZTyp.RootElement.AngleTransform"), Single)
-        Me.RadDropdownlistlWZTyp.RootElement.FlipText = CType(resources.GetObject("RadDropdownlistlWZTyp.RootElement.FlipText"), Boolean)
-        Me.RadDropdownlistlWZTyp.RootElement.Margin = CType(resources.GetObject("RadDropdownlistlWZTyp.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadDropdownlistlWZTyp.RootElement.Text = resources.GetString("RadDropdownlistlWZTyp.RootElement.Text")
-        Me.RadDropdownlistlWZTyp.RootElement.TextOrientation = CType(resources.GetObject("RadDropdownlistlWZTyp.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadDropdownlistlWZTyp.RootElement.AccessibleDescription = Nothing
+        Me.RadDropdownlistlWZTyp.RootElement.AccessibleName = Nothing
         '
         'lblAWZTyp
         '
@@ -454,14 +370,8 @@ Partial Class uco_2StammdatenEingabe
         '
         '
         '
-        Me.lblAWZTyp.RootElement.AccessibleDescription = resources.GetString("lblAWZTyp.RootElement.AccessibleDescription")
-        Me.lblAWZTyp.RootElement.AccessibleName = resources.GetString("lblAWZTyp.RootElement.AccessibleName")
-        Me.lblAWZTyp.RootElement.Alignment = CType(resources.GetObject("lblAWZTyp.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblAWZTyp.RootElement.AngleTransform = CType(resources.GetObject("lblAWZTyp.RootElement.AngleTransform"), Single)
-        Me.lblAWZTyp.RootElement.FlipText = CType(resources.GetObject("lblAWZTyp.RootElement.FlipText"), Boolean)
-        Me.lblAWZTyp.RootElement.Margin = CType(resources.GetObject("lblAWZTyp.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblAWZTyp.RootElement.Text = resources.GetString("lblAWZTyp.RootElement.Text")
-        Me.lblAWZTyp.RootElement.TextOrientation = CType(resources.GetObject("lblAWZTyp.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblAWZTyp.RootElement.AccessibleDescription = Nothing
+        Me.lblAWZTyp.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxWZBauartzulassung
         '
@@ -472,14 +382,8 @@ Partial Class uco_2StammdatenEingabe
         '
         '
         '
-        Me.RadTextBoxWZBauartzulassung.RootElement.AccessibleDescription = resources.GetString("RadTextBoxWZBauartzulassung.RootElement.AccessibleDescription")
-        Me.RadTextBoxWZBauartzulassung.RootElement.AccessibleName = resources.GetString("RadTextBoxWZBauartzulassung.RootElement.AccessibleName")
-        Me.RadTextBoxWZBauartzulassung.RootElement.Alignment = CType(resources.GetObject("RadTextBoxWZBauartzulassung.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxWZBauartzulassung.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxWZBauartzulassung.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxWZBauartzulassung.RootElement.FlipText = CType(resources.GetObject("RadTextBoxWZBauartzulassung.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxWZBauartzulassung.RootElement.Margin = CType(resources.GetObject("RadTextBoxWZBauartzulassung.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxWZBauartzulassung.RootElement.Text = resources.GetString("RadTextBoxWZBauartzulassung.RootElement.Text")
-        Me.RadTextBoxWZBauartzulassung.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxWZBauartzulassung.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxWZBauartzulassung.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxWZBauartzulassung.RootElement.AccessibleName = Nothing
         Me.RadTextBoxWZBauartzulassung.TabStop = False
         '
         'lblAWZZulassung2
@@ -489,14 +393,8 @@ Partial Class uco_2StammdatenEingabe
         '
         '
         '
-        Me.lblAWZZulassung2.RootElement.AccessibleDescription = resources.GetString("lblAWZZulassung2.RootElement.AccessibleDescription")
-        Me.lblAWZZulassung2.RootElement.AccessibleName = resources.GetString("lblAWZZulassung2.RootElement.AccessibleName")
-        Me.lblAWZZulassung2.RootElement.Alignment = CType(resources.GetObject("lblAWZZulassung2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblAWZZulassung2.RootElement.AngleTransform = CType(resources.GetObject("lblAWZZulassung2.RootElement.AngleTransform"), Single)
-        Me.lblAWZZulassung2.RootElement.FlipText = CType(resources.GetObject("lblAWZZulassung2.RootElement.FlipText"), Boolean)
-        Me.lblAWZZulassung2.RootElement.Margin = CType(resources.GetObject("lblAWZZulassung2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblAWZZulassung2.RootElement.Text = resources.GetString("lblAWZZulassung2.RootElement.Text")
-        Me.lblAWZZulassung2.RootElement.TextOrientation = CType(resources.GetObject("lblAWZZulassung2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblAWZZulassung2.RootElement.AccessibleDescription = Nothing
+        Me.lblAWZZulassung2.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxWZPruefbericht
         '
@@ -507,14 +405,8 @@ Partial Class uco_2StammdatenEingabe
         '
         '
         '
-        Me.RadTextBoxWZPruefbericht.RootElement.AccessibleDescription = resources.GetString("RadTextBoxWZPruefbericht.RootElement.AccessibleDescription")
-        Me.RadTextBoxWZPruefbericht.RootElement.AccessibleName = resources.GetString("RadTextBoxWZPruefbericht.RootElement.AccessibleName")
-        Me.RadTextBoxWZPruefbericht.RootElement.Alignment = CType(resources.GetObject("RadTextBoxWZPruefbericht.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxWZPruefbericht.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxWZPruefbericht.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxWZPruefbericht.RootElement.FlipText = CType(resources.GetObject("RadTextBoxWZPruefbericht.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxWZPruefbericht.RootElement.Margin = CType(resources.GetObject("RadTextBoxWZPruefbericht.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxWZPruefbericht.RootElement.Text = resources.GetString("RadTextBoxWZPruefbericht.RootElement.Text")
-        Me.RadTextBoxWZPruefbericht.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxWZPruefbericht.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxWZPruefbericht.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxWZPruefbericht.RootElement.AccessibleName = Nothing
         Me.RadTextBoxWZPruefbericht.TabStop = False
         '
         'lblAWZZulassung
@@ -524,14 +416,8 @@ Partial Class uco_2StammdatenEingabe
         '
         '
         '
-        Me.lblAWZZulassung.RootElement.AccessibleDescription = resources.GetString("lblAWZZulassung.RootElement.AccessibleDescription")
-        Me.lblAWZZulassung.RootElement.AccessibleName = resources.GetString("lblAWZZulassung.RootElement.AccessibleName")
-        Me.lblAWZZulassung.RootElement.Alignment = CType(resources.GetObject("lblAWZZulassung.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblAWZZulassung.RootElement.AngleTransform = CType(resources.GetObject("lblAWZZulassung.RootElement.AngleTransform"), Single)
-        Me.lblAWZZulassung.RootElement.FlipText = CType(resources.GetObject("lblAWZZulassung.RootElement.FlipText"), Boolean)
-        Me.lblAWZZulassung.RootElement.Margin = CType(resources.GetObject("lblAWZZulassung.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblAWZZulassung.RootElement.Text = resources.GetString("lblAWZZulassung.RootElement.Text")
-        Me.lblAWZZulassung.RootElement.TextOrientation = CType(resources.GetObject("lblAWZZulassung.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblAWZZulassung.RootElement.AccessibleDescription = Nothing
+        Me.lblAWZZulassung.RootElement.AccessibleName = Nothing
         '
         'lblAWZHersteller
         '
@@ -540,14 +426,8 @@ Partial Class uco_2StammdatenEingabe
         '
         '
         '
-        Me.lblAWZHersteller.RootElement.AccessibleDescription = resources.GetString("lblAWZHersteller.RootElement.AccessibleDescription")
-        Me.lblAWZHersteller.RootElement.AccessibleName = resources.GetString("lblAWZHersteller.RootElement.AccessibleName")
-        Me.lblAWZHersteller.RootElement.Alignment = CType(resources.GetObject("lblAWZHersteller.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblAWZHersteller.RootElement.AngleTransform = CType(resources.GetObject("lblAWZHersteller.RootElement.AngleTransform"), Single)
-        Me.lblAWZHersteller.RootElement.FlipText = CType(resources.GetObject("lblAWZHersteller.RootElement.FlipText"), Boolean)
-        Me.lblAWZHersteller.RootElement.Margin = CType(resources.GetObject("lblAWZHersteller.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblAWZHersteller.RootElement.Text = resources.GetString("lblAWZHersteller.RootElement.Text")
-        Me.lblAWZHersteller.RootElement.TextOrientation = CType(resources.GetObject("lblAWZHersteller.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblAWZHersteller.RootElement.AccessibleDescription = Nothing
+        Me.lblAWZHersteller.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxWaage
         '
@@ -569,14 +449,8 @@ Partial Class uco_2StammdatenEingabe
         '
         '
         '
-        Me.RadGroupBoxWaage.RootElement.AccessibleDescription = resources.GetString("RadGroupBoxWaage.RootElement.AccessibleDescription")
-        Me.RadGroupBoxWaage.RootElement.AccessibleName = resources.GetString("RadGroupBoxWaage.RootElement.AccessibleName")
-        Me.RadGroupBoxWaage.RootElement.Alignment = CType(resources.GetObject("RadGroupBoxWaage.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadGroupBoxWaage.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBoxWaage.RootElement.AngleTransform"), Single)
-        Me.RadGroupBoxWaage.RootElement.FlipText = CType(resources.GetObject("RadGroupBoxWaage.RootElement.FlipText"), Boolean)
-        Me.RadGroupBoxWaage.RootElement.Margin = CType(resources.GetObject("RadGroupBoxWaage.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadGroupBoxWaage.RootElement.Text = resources.GetString("RadGroupBoxWaage.RootElement.Text")
-        Me.RadGroupBoxWaage.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxWaage.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadGroupBoxWaage.RootElement.AccessibleDescription = Nothing
+        Me.RadGroupBoxWaage.RootElement.AccessibleName = Nothing
         '
         'Label6
         '
@@ -603,14 +477,8 @@ Partial Class uco_2StammdatenEingabe
         '
         '
         '
-        Me.lblWaagenart.RootElement.AccessibleDescription = resources.GetString("lblWaagenart.RootElement.AccessibleDescription")
-        Me.lblWaagenart.RootElement.AccessibleName = resources.GetString("lblWaagenart.RootElement.AccessibleName")
-        Me.lblWaagenart.RootElement.Alignment = CType(resources.GetObject("lblWaagenart.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblWaagenart.RootElement.AngleTransform = CType(resources.GetObject("lblWaagenart.RootElement.AngleTransform"), Single)
-        Me.lblWaagenart.RootElement.FlipText = CType(resources.GetObject("lblWaagenart.RootElement.FlipText"), Boolean)
-        Me.lblWaagenart.RootElement.Margin = CType(resources.GetObject("lblWaagenart.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblWaagenart.RootElement.Text = resources.GetString("lblWaagenart.RootElement.Text")
-        Me.lblWaagenart.RootElement.TextOrientation = CType(resources.GetObject("lblWaagenart.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblWaagenart.RootElement.AccessibleDescription = Nothing
+        Me.lblWaagenart.RootElement.AccessibleName = Nothing
         '
         'PictureBox4
         '
@@ -628,14 +496,8 @@ Partial Class uco_2StammdatenEingabe
         '
         '
         '
-        Me.RadDropDownListWaagenArt.RootElement.AccessibleDescription = resources.GetString("RadDropDownListWaagenArt.RootElement.AccessibleDescription")
-        Me.RadDropDownListWaagenArt.RootElement.AccessibleName = resources.GetString("RadDropDownListWaagenArt.RootElement.AccessibleName")
-        Me.RadDropDownListWaagenArt.RootElement.Alignment = CType(resources.GetObject("RadDropDownListWaagenArt.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadDropDownListWaagenArt.RootElement.AngleTransform = CType(resources.GetObject("RadDropDownListWaagenArt.RootElement.AngleTransform"), Single)
-        Me.RadDropDownListWaagenArt.RootElement.FlipText = CType(resources.GetObject("RadDropDownListWaagenArt.RootElement.FlipText"), Boolean)
-        Me.RadDropDownListWaagenArt.RootElement.Margin = CType(resources.GetObject("RadDropDownListWaagenArt.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadDropDownListWaagenArt.RootElement.Text = resources.GetString("RadDropDownListWaagenArt.RootElement.Text")
-        Me.RadDropDownListWaagenArt.RootElement.TextOrientation = CType(resources.GetObject("RadDropDownListWaagenArt.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadDropDownListWaagenArt.RootElement.AccessibleDescription = Nothing
+        Me.RadDropDownListWaagenArt.RootElement.AccessibleName = Nothing
         '
         'RadLabel16
         '
@@ -644,14 +506,8 @@ Partial Class uco_2StammdatenEingabe
         '
         '
         '
-        Me.RadLabel16.RootElement.AccessibleDescription = resources.GetString("RadLabel16.RootElement.AccessibleDescription")
-        Me.RadLabel16.RootElement.AccessibleName = resources.GetString("RadLabel16.RootElement.AccessibleName")
-        Me.RadLabel16.RootElement.Alignment = CType(resources.GetObject("RadLabel16.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadLabel16.RootElement.AngleTransform = CType(resources.GetObject("RadLabel16.RootElement.AngleTransform"), Single)
-        Me.RadLabel16.RootElement.FlipText = CType(resources.GetObject("RadLabel16.RootElement.FlipText"), Boolean)
-        Me.RadLabel16.RootElement.Margin = CType(resources.GetObject("RadLabel16.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel16.RootElement.Text = resources.GetString("RadLabel16.RootElement.Text")
-        Me.RadLabel16.RootElement.TextOrientation = CType(resources.GetObject("RadLabel16.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadLabel16.RootElement.AccessibleDescription = Nothing
+        Me.RadLabel16.RootElement.AccessibleName = Nothing
         '
         'RadDropdownlistWaagenTyp
         '
@@ -662,14 +518,8 @@ Partial Class uco_2StammdatenEingabe
         '
         '
         '
-        Me.RadDropdownlistWaagenTyp.RootElement.AccessibleDescription = resources.GetString("RadDropdownlistWaagenTyp.RootElement.AccessibleDescription")
-        Me.RadDropdownlistWaagenTyp.RootElement.AccessibleName = resources.GetString("RadDropdownlistWaagenTyp.RootElement.AccessibleName")
-        Me.RadDropdownlistWaagenTyp.RootElement.Alignment = CType(resources.GetObject("RadDropdownlistWaagenTyp.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadDropdownlistWaagenTyp.RootElement.AngleTransform = CType(resources.GetObject("RadDropdownlistWaagenTyp.RootElement.AngleTransform"), Single)
-        Me.RadDropdownlistWaagenTyp.RootElement.FlipText = CType(resources.GetObject("RadDropdownlistWaagenTyp.RootElement.FlipText"), Boolean)
-        Me.RadDropdownlistWaagenTyp.RootElement.Margin = CType(resources.GetObject("RadDropdownlistWaagenTyp.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadDropdownlistWaagenTyp.RootElement.Text = resources.GetString("RadDropdownlistWaagenTyp.RootElement.Text")
-        Me.RadDropdownlistWaagenTyp.RootElement.TextOrientation = CType(resources.GetObject("RadDropdownlistWaagenTyp.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadDropdownlistWaagenTyp.RootElement.AccessibleDescription = Nothing
+        Me.RadDropdownlistWaagenTyp.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxWaageZulassungsinhaber
         '
@@ -680,14 +530,8 @@ Partial Class uco_2StammdatenEingabe
         '
         '
         '
-        Me.RadTextBoxWaageZulassungsinhaber.RootElement.AccessibleDescription = resources.GetString("RadTextBoxWaageZulassungsinhaber.RootElement.AccessibleDescription")
-        Me.RadTextBoxWaageZulassungsinhaber.RootElement.AccessibleName = resources.GetString("RadTextBoxWaageZulassungsinhaber.RootElement.AccessibleName")
-        Me.RadTextBoxWaageZulassungsinhaber.RootElement.Alignment = CType(resources.GetObject("RadTextBoxWaageZulassungsinhaber.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxWaageZulassungsinhaber.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxWaageZulassungsinhaber.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxWaageZulassungsinhaber.RootElement.FlipText = CType(resources.GetObject("RadTextBoxWaageZulassungsinhaber.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxWaageZulassungsinhaber.RootElement.Margin = CType(resources.GetObject("RadTextBoxWaageZulassungsinhaber.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxWaageZulassungsinhaber.RootElement.Text = resources.GetString("RadTextBoxWaageZulassungsinhaber.RootElement.Text")
-        Me.RadTextBoxWaageZulassungsinhaber.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxWaageZulassungsinhaber.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxWaageZulassungsinhaber.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxWaageZulassungsinhaber.RootElement.AccessibleName = Nothing
         Me.RadTextBoxWaageZulassungsinhaber.TabStop = False
         '
         'lblAWaagenTyp
@@ -697,14 +541,8 @@ Partial Class uco_2StammdatenEingabe
         '
         '
         '
-        Me.lblAWaagenTyp.RootElement.AccessibleDescription = resources.GetString("lblAWaagenTyp.RootElement.AccessibleDescription")
-        Me.lblAWaagenTyp.RootElement.AccessibleName = resources.GetString("lblAWaagenTyp.RootElement.AccessibleName")
-        Me.lblAWaagenTyp.RootElement.Alignment = CType(resources.GetObject("lblAWaagenTyp.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblAWaagenTyp.RootElement.AngleTransform = CType(resources.GetObject("lblAWaagenTyp.RootElement.AngleTransform"), Single)
-        Me.lblAWaagenTyp.RootElement.FlipText = CType(resources.GetObject("lblAWaagenTyp.RootElement.FlipText"), Boolean)
-        Me.lblAWaagenTyp.RootElement.Margin = CType(resources.GetObject("lblAWaagenTyp.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblAWaagenTyp.RootElement.Text = resources.GetString("lblAWaagenTyp.RootElement.Text")
-        Me.lblAWaagenTyp.RootElement.TextOrientation = CType(resources.GetObject("lblAWaagenTyp.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblAWaagenTyp.RootElement.AccessibleDescription = Nothing
+        Me.lblAWaagenTyp.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxWaageSeriennummer
         '
@@ -714,14 +552,8 @@ Partial Class uco_2StammdatenEingabe
         '
         '
         '
-        Me.RadTextBoxWaageSeriennummer.RootElement.AccessibleDescription = resources.GetString("RadTextBoxWaageSeriennummer.RootElement.AccessibleDescription")
-        Me.RadTextBoxWaageSeriennummer.RootElement.AccessibleName = resources.GetString("RadTextBoxWaageSeriennummer.RootElement.AccessibleName")
-        Me.RadTextBoxWaageSeriennummer.RootElement.Alignment = CType(resources.GetObject("RadTextBoxWaageSeriennummer.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxWaageSeriennummer.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxWaageSeriennummer.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxWaageSeriennummer.RootElement.FlipText = CType(resources.GetObject("RadTextBoxWaageSeriennummer.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxWaageSeriennummer.RootElement.Margin = CType(resources.GetObject("RadTextBoxWaageSeriennummer.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxWaageSeriennummer.RootElement.Text = resources.GetString("RadTextBoxWaageSeriennummer.RootElement.Text")
-        Me.RadTextBoxWaageSeriennummer.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxWaageSeriennummer.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxWaageSeriennummer.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxWaageSeriennummer.RootElement.AccessibleName = Nothing
         '
         'lblAWaageSeriennummer
         '
@@ -730,14 +562,8 @@ Partial Class uco_2StammdatenEingabe
         '
         '
         '
-        Me.lblAWaageSeriennummer.RootElement.AccessibleDescription = resources.GetString("lblAWaageSeriennummer.RootElement.AccessibleDescription")
-        Me.lblAWaageSeriennummer.RootElement.AccessibleName = resources.GetString("lblAWaageSeriennummer.RootElement.AccessibleName")
-        Me.lblAWaageSeriennummer.RootElement.Alignment = CType(resources.GetObject("lblAWaageSeriennummer.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblAWaageSeriennummer.RootElement.AngleTransform = CType(resources.GetObject("lblAWaageSeriennummer.RootElement.AngleTransform"), Single)
-        Me.lblAWaageSeriennummer.RootElement.FlipText = CType(resources.GetObject("lblAWaageSeriennummer.RootElement.FlipText"), Boolean)
-        Me.lblAWaageSeriennummer.RootElement.Margin = CType(resources.GetObject("lblAWaageSeriennummer.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblAWaageSeriennummer.RootElement.Text = resources.GetString("lblAWaageSeriennummer.RootElement.Text")
-        Me.lblAWaageSeriennummer.RootElement.TextOrientation = CType(resources.GetObject("lblAWaageSeriennummer.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblAWaageSeriennummer.RootElement.AccessibleDescription = Nothing
+        Me.lblAWaageSeriennummer.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxAWG
         '
@@ -759,14 +585,8 @@ Partial Class uco_2StammdatenEingabe
         '
         '
         '
-        Me.RadGroupBoxAWG.RootElement.AccessibleDescription = resources.GetString("RadGroupBoxAWG.RootElement.AccessibleDescription")
-        Me.RadGroupBoxAWG.RootElement.AccessibleName = resources.GetString("RadGroupBoxAWG.RootElement.AccessibleName")
-        Me.RadGroupBoxAWG.RootElement.Alignment = CType(resources.GetObject("RadGroupBoxAWG.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadGroupBoxAWG.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBoxAWG.RootElement.AngleTransform"), Single)
-        Me.RadGroupBoxAWG.RootElement.FlipText = CType(resources.GetObject("RadGroupBoxAWG.RootElement.FlipText"), Boolean)
-        Me.RadGroupBoxAWG.RootElement.Margin = CType(resources.GetObject("RadGroupBoxAWG.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadGroupBoxAWG.RootElement.Text = resources.GetString("RadGroupBoxAWG.RootElement.Text")
-        Me.RadGroupBoxAWG.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxAWG.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadGroupBoxAWG.RootElement.AccessibleDescription = Nothing
+        Me.RadGroupBoxAWG.RootElement.AccessibleName = Nothing
         '
         'Label7
         '
@@ -804,14 +624,8 @@ Partial Class uco_2StammdatenEingabe
         '
         '
         '
-        Me.RadDropdownlistAWGTyp.RootElement.AccessibleDescription = resources.GetString("RadDropdownlistAWGTyp.RootElement.AccessibleDescription")
-        Me.RadDropdownlistAWGTyp.RootElement.AccessibleName = resources.GetString("RadDropdownlistAWGTyp.RootElement.AccessibleName")
-        Me.RadDropdownlistAWGTyp.RootElement.Alignment = CType(resources.GetObject("RadDropdownlistAWGTyp.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadDropdownlistAWGTyp.RootElement.AngleTransform = CType(resources.GetObject("RadDropdownlistAWGTyp.RootElement.AngleTransform"), Single)
-        Me.RadDropdownlistAWGTyp.RootElement.FlipText = CType(resources.GetObject("RadDropdownlistAWGTyp.RootElement.FlipText"), Boolean)
-        Me.RadDropdownlistAWGTyp.RootElement.Margin = CType(resources.GetObject("RadDropdownlistAWGTyp.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadDropdownlistAWGTyp.RootElement.Text = resources.GetString("RadDropdownlistAWGTyp.RootElement.Text")
-        Me.RadDropdownlistAWGTyp.RootElement.TextOrientation = CType(resources.GetObject("RadDropdownlistAWGTyp.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadDropdownlistAWGTyp.RootElement.AccessibleDescription = Nothing
+        Me.RadDropdownlistAWGTyp.RootElement.AccessibleName = Nothing
         '
         'lblAWGTyp
         '
@@ -820,14 +634,8 @@ Partial Class uco_2StammdatenEingabe
         '
         '
         '
-        Me.lblAWGTyp.RootElement.AccessibleDescription = resources.GetString("lblAWGTyp.RootElement.AccessibleDescription")
-        Me.lblAWGTyp.RootElement.AccessibleName = resources.GetString("lblAWGTyp.RootElement.AccessibleName")
-        Me.lblAWGTyp.RootElement.Alignment = CType(resources.GetObject("lblAWGTyp.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblAWGTyp.RootElement.AngleTransform = CType(resources.GetObject("lblAWGTyp.RootElement.AngleTransform"), Single)
-        Me.lblAWGTyp.RootElement.FlipText = CType(resources.GetObject("lblAWGTyp.RootElement.FlipText"), Boolean)
-        Me.lblAWGTyp.RootElement.Margin = CType(resources.GetObject("lblAWGTyp.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblAWGTyp.RootElement.Text = resources.GetString("lblAWGTyp.RootElement.Text")
-        Me.lblAWGTyp.RootElement.TextOrientation = CType(resources.GetObject("lblAWGTyp.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblAWGTyp.RootElement.AccessibleDescription = Nothing
+        Me.lblAWGTyp.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxAWGBauartzulassung
         '
@@ -838,14 +646,8 @@ Partial Class uco_2StammdatenEingabe
         '
         '
         '
-        Me.RadTextBoxAWGBauartzulassung.RootElement.AccessibleDescription = resources.GetString("RadTextBoxAWGBauartzulassung.RootElement.AccessibleDescription")
-        Me.RadTextBoxAWGBauartzulassung.RootElement.AccessibleName = resources.GetString("RadTextBoxAWGBauartzulassung.RootElement.AccessibleName")
-        Me.RadTextBoxAWGBauartzulassung.RootElement.Alignment = CType(resources.GetObject("RadTextBoxAWGBauartzulassung.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxAWGBauartzulassung.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxAWGBauartzulassung.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxAWGBauartzulassung.RootElement.FlipText = CType(resources.GetObject("RadTextBoxAWGBauartzulassung.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxAWGBauartzulassung.RootElement.Margin = CType(resources.GetObject("RadTextBoxAWGBauartzulassung.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxAWGBauartzulassung.RootElement.Text = resources.GetString("RadTextBoxAWGBauartzulassung.RootElement.Text")
-        Me.RadTextBoxAWGBauartzulassung.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxAWGBauartzulassung.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxAWGBauartzulassung.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxAWGBauartzulassung.RootElement.AccessibleName = Nothing
         Me.RadTextBoxAWGBauartzulassung.TabStop = False
         '
         'lblAWGBauart2
@@ -855,14 +657,8 @@ Partial Class uco_2StammdatenEingabe
         '
         '
         '
-        Me.lblAWGBauart2.RootElement.AccessibleDescription = resources.GetString("lblAWGBauart2.RootElement.AccessibleDescription")
-        Me.lblAWGBauart2.RootElement.AccessibleName = resources.GetString("lblAWGBauart2.RootElement.AccessibleName")
-        Me.lblAWGBauart2.RootElement.Alignment = CType(resources.GetObject("lblAWGBauart2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblAWGBauart2.RootElement.AngleTransform = CType(resources.GetObject("lblAWGBauart2.RootElement.AngleTransform"), Single)
-        Me.lblAWGBauart2.RootElement.FlipText = CType(resources.GetObject("lblAWGBauart2.RootElement.FlipText"), Boolean)
-        Me.lblAWGBauart2.RootElement.Margin = CType(resources.GetObject("lblAWGBauart2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblAWGBauart2.RootElement.Text = resources.GetString("lblAWGBauart2.RootElement.Text")
-        Me.lblAWGBauart2.RootElement.TextOrientation = CType(resources.GetObject("lblAWGBauart2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblAWGBauart2.RootElement.AccessibleDescription = Nothing
+        Me.lblAWGBauart2.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxAWGPruefbericht
         '
@@ -873,14 +669,8 @@ Partial Class uco_2StammdatenEingabe
         '
         '
         '
-        Me.RadTextBoxAWGPruefbericht.RootElement.AccessibleDescription = resources.GetString("RadTextBoxAWGPruefbericht.RootElement.AccessibleDescription")
-        Me.RadTextBoxAWGPruefbericht.RootElement.AccessibleName = resources.GetString("RadTextBoxAWGPruefbericht.RootElement.AccessibleName")
-        Me.RadTextBoxAWGPruefbericht.RootElement.Alignment = CType(resources.GetObject("RadTextBoxAWGPruefbericht.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxAWGPruefbericht.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxAWGPruefbericht.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxAWGPruefbericht.RootElement.FlipText = CType(resources.GetObject("RadTextBoxAWGPruefbericht.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxAWGPruefbericht.RootElement.Margin = CType(resources.GetObject("RadTextBoxAWGPruefbericht.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxAWGPruefbericht.RootElement.Text = resources.GetString("RadTextBoxAWGPruefbericht.RootElement.Text")
-        Me.RadTextBoxAWGPruefbericht.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxAWGPruefbericht.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxAWGPruefbericht.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxAWGPruefbericht.RootElement.AccessibleName = Nothing
         Me.RadTextBoxAWGPruefbericht.TabStop = False
         '
         'lblAWGBauart
@@ -890,14 +680,8 @@ Partial Class uco_2StammdatenEingabe
         '
         '
         '
-        Me.lblAWGBauart.RootElement.AccessibleDescription = resources.GetString("lblAWGBauart.RootElement.AccessibleDescription")
-        Me.lblAWGBauart.RootElement.AccessibleName = resources.GetString("lblAWGBauart.RootElement.AccessibleName")
-        Me.lblAWGBauart.RootElement.Alignment = CType(resources.GetObject("lblAWGBauart.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblAWGBauart.RootElement.AngleTransform = CType(resources.GetObject("lblAWGBauart.RootElement.AngleTransform"), Single)
-        Me.lblAWGBauart.RootElement.FlipText = CType(resources.GetObject("lblAWGBauart.RootElement.FlipText"), Boolean)
-        Me.lblAWGBauart.RootElement.Margin = CType(resources.GetObject("lblAWGBauart.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblAWGBauart.RootElement.Text = resources.GetString("lblAWGBauart.RootElement.Text")
-        Me.lblAWGBauart.RootElement.TextOrientation = CType(resources.GetObject("lblAWGBauart.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblAWGBauart.RootElement.AccessibleDescription = Nothing
+        Me.lblAWGBauart.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxAWGHersteller
         '
@@ -908,14 +692,8 @@ Partial Class uco_2StammdatenEingabe
         '
         '
         '
-        Me.RadTextBoxAWGHersteller.RootElement.AccessibleDescription = resources.GetString("RadTextBoxAWGHersteller.RootElement.AccessibleDescription")
-        Me.RadTextBoxAWGHersteller.RootElement.AccessibleName = resources.GetString("RadTextBoxAWGHersteller.RootElement.AccessibleName")
-        Me.RadTextBoxAWGHersteller.RootElement.Alignment = CType(resources.GetObject("RadTextBoxAWGHersteller.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxAWGHersteller.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxAWGHersteller.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxAWGHersteller.RootElement.FlipText = CType(resources.GetObject("RadTextBoxAWGHersteller.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxAWGHersteller.RootElement.Margin = CType(resources.GetObject("RadTextBoxAWGHersteller.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxAWGHersteller.RootElement.Text = resources.GetString("RadTextBoxAWGHersteller.RootElement.Text")
-        Me.RadTextBoxAWGHersteller.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxAWGHersteller.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxAWGHersteller.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxAWGHersteller.RootElement.AccessibleName = Nothing
         Me.RadTextBoxAWGHersteller.TabStop = False
         '
         'lblAWGHersteller
@@ -925,20 +703,15 @@ Partial Class uco_2StammdatenEingabe
         '
         '
         '
-        Me.lblAWGHersteller.RootElement.AccessibleDescription = resources.GetString("lblAWGHersteller.RootElement.AccessibleDescription")
-        Me.lblAWGHersteller.RootElement.AccessibleName = resources.GetString("lblAWGHersteller.RootElement.AccessibleName")
-        Me.lblAWGHersteller.RootElement.Alignment = CType(resources.GetObject("lblAWGHersteller.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblAWGHersteller.RootElement.AngleTransform = CType(resources.GetObject("lblAWGHersteller.RootElement.AngleTransform"), Single)
-        Me.lblAWGHersteller.RootElement.FlipText = CType(resources.GetObject("lblAWGHersteller.RootElement.FlipText"), Boolean)
-        Me.lblAWGHersteller.RootElement.Margin = CType(resources.GetObject("lblAWGHersteller.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblAWGHersteller.RootElement.Text = resources.GetString("lblAWGHersteller.RootElement.Text")
-        Me.lblAWGHersteller.RootElement.TextOrientation = CType(resources.GetObject("lblAWGHersteller.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblAWGHersteller.RootElement.AccessibleDescription = Nothing
+        Me.lblAWGHersteller.RootElement.AccessibleName = Nothing
         '
         'uco_2StammdatenEingabe
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.RadScrollablePanel1)
+        Me.DoubleBuffered = True
         Me.Name = "uco_2StammdatenEingabe"
         Me.RadScrollablePanel1.PanelContainer.ResumeLayout(False)
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).EndInit()

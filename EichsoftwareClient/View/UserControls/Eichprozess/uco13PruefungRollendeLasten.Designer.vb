@@ -170,7 +170,6 @@ Partial Class uco13PruefungRollendeLasten
         '
         'RadScrollablePanel1.PanelContainer
         '
-        resources.ApplyResources(Me.RadScrollablePanel1.PanelContainer, "RadScrollablePanel1.PanelContainer")
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.lblPflichtfeld6)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.lblPflichtfeld5)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.lblPflichtfeld4)
@@ -239,343 +238,239 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadTextBoxControlLastRechts3)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.lblEFGWertRechts)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadTextBoxControlLastRechts1)
+        resources.ApplyResources(Me.RadScrollablePanel1.PanelContainer, "RadScrollablePanel1.PanelContainer")
         '
         '
         '
-        Me.RadScrollablePanel1.RootElement.AccessibleDescription = resources.GetString("RadScrollablePanel1.RootElement.AccessibleDescription")
-        Me.RadScrollablePanel1.RootElement.AccessibleName = resources.GetString("RadScrollablePanel1.RootElement.AccessibleName")
-        Me.RadScrollablePanel1.RootElement.Alignment = CType(resources.GetObject("RadScrollablePanel1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadScrollablePanel1.RootElement.AngleTransform = CType(resources.GetObject("RadScrollablePanel1.RootElement.AngleTransform"), Single)
-        Me.RadScrollablePanel1.RootElement.FlipText = CType(resources.GetObject("RadScrollablePanel1.RootElement.FlipText"), Boolean)
-        Me.RadScrollablePanel1.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadScrollablePanel1.RootElement.Margin = CType(resources.GetObject("RadScrollablePanel1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadScrollablePanel1.RootElement.Text = resources.GetString("RadScrollablePanel1.RootElement.Text")
-        Me.RadScrollablePanel1.RootElement.TextOrientation = CType(resources.GetObject("RadScrollablePanel1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadScrollablePanel1.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadScrollablePanel1.RootElement.AccessibleDescription = Nothing
+        Me.RadScrollablePanel1.RootElement.AccessibleName = Nothing
         '
         'lblPflichtfeld6
         '
         resources.ApplyResources(Me.lblPflichtfeld6, "lblPflichtfeld6")
         Me.lblPflichtfeld6.ForeColor = System.Drawing.Color.Red
-        Me.lblPflichtfeld6.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblPflichtfeld6.Name = "lblPflichtfeld6"
         '
         'lblPflichtfeld5
         '
         resources.ApplyResources(Me.lblPflichtfeld5, "lblPflichtfeld5")
         Me.lblPflichtfeld5.ForeColor = System.Drawing.Color.Red
-        Me.lblPflichtfeld5.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblPflichtfeld5.Name = "lblPflichtfeld5"
         '
         'lblPflichtfeld4
         '
         resources.ApplyResources(Me.lblPflichtfeld4, "lblPflichtfeld4")
         Me.lblPflichtfeld4.ForeColor = System.Drawing.Color.Red
-        Me.lblPflichtfeld4.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblPflichtfeld4.Name = "lblPflichtfeld4"
         '
         'lblPflichtfeld3
         '
         resources.ApplyResources(Me.lblPflichtfeld3, "lblPflichtfeld3")
         Me.lblPflichtfeld3.ForeColor = System.Drawing.Color.Red
-        Me.lblPflichtfeld3.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblPflichtfeld3.Name = "lblPflichtfeld3"
         '
         'lblPflichtfeld2
         '
         resources.ApplyResources(Me.lblPflichtfeld2, "lblPflichtfeld2")
         Me.lblPflichtfeld2.ForeColor = System.Drawing.Color.Red
-        Me.lblPflichtfeld2.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblPflichtfeld2.Name = "lblPflichtfeld2"
         '
         'lblPflichtfeld1
         '
         resources.ApplyResources(Me.lblPflichtfeld1, "lblPflichtfeld1")
         Me.lblPflichtfeld1.ForeColor = System.Drawing.Color.Red
-        Me.lblPflichtfeld1.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblPflichtfeld1.Name = "lblPflichtfeld1"
         '
         'RadButton1
         '
         resources.ApplyResources(Me.RadButton1, "RadButton1")
-        Me.RadButton1.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadButton1.Name = "RadButton1"
         '
         '
         '
-        Me.RadButton1.RootElement.AccessibleDescription = resources.GetString("RadButton1.RootElement.AccessibleDescription")
-        Me.RadButton1.RootElement.AccessibleName = resources.GetString("RadButton1.RootElement.AccessibleName")
-        Me.RadButton1.RootElement.Alignment = CType(resources.GetObject("RadButton1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadButton1.RootElement.AngleTransform = CType(resources.GetObject("RadButton1.RootElement.AngleTransform"), Single)
-        Me.RadButton1.RootElement.FlipText = CType(resources.GetObject("RadButton1.RootElement.FlipText"), Boolean)
-        Me.RadButton1.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadButton1.RootElement.Margin = CType(resources.GetObject("RadButton1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButton1.RootElement.Text = resources.GetString("RadButton1.RootElement.Text")
-        Me.RadButton1.RootElement.TextOrientation = CType(resources.GetObject("RadButton1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadButton1.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadButton1.RootElement.AccessibleDescription = Nothing
+        Me.RadButton1.RootElement.AccessibleName = Nothing
         '
         'PictureBox18
         '
-        resources.ApplyResources(Me.PictureBox18, "PictureBox18")
         Me.PictureBox18.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBox18, "PictureBox18")
         Me.PictureBox18.Name = "PictureBox18"
         Me.PictureBox18.TabStop = False
         '
         'PictureBox79
         '
-        resources.ApplyResources(Me.PictureBox79, "PictureBox79")
         Me.PictureBox79.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBox79, "PictureBox79")
         Me.PictureBox79.Name = "PictureBox79"
         Me.PictureBox79.TabStop = False
         '
         'PictureBox2
         '
-        resources.ApplyResources(Me.PictureBox2, "PictureBox2")
         Me.PictureBox2.Image = Global.EichsoftwareClient.My.Resources.Resources.Verschiebeweg_GB
+        resources.ApplyResources(Me.PictureBox2, "PictureBox2")
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.TabStop = False
         '
         'PictureBox15
         '
-        resources.ApplyResources(Me.PictureBox15, "PictureBox15")
         Me.PictureBox15.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBox15, "PictureBox15")
         Me.PictureBox15.Name = "PictureBox15"
         Me.PictureBox15.TabStop = False
         '
         'lblBelastungsstelleLinks
         '
         resources.ApplyResources(Me.lblBelastungsstelleLinks, "lblBelastungsstelleLinks")
-        Me.lblBelastungsstelleLinks.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblBelastungsstelleLinks.Name = "lblBelastungsstelleLinks"
         '
         '
         '
-        Me.lblBelastungsstelleLinks.RootElement.AccessibleDescription = resources.GetString("lblBelastungsstelleLinks.RootElement.AccessibleDescription")
-        Me.lblBelastungsstelleLinks.RootElement.AccessibleName = resources.GetString("lblBelastungsstelleLinks.RootElement.AccessibleName")
-        Me.lblBelastungsstelleLinks.RootElement.Alignment = CType(resources.GetObject("lblBelastungsstelleLinks.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblBelastungsstelleLinks.RootElement.AngleTransform = CType(resources.GetObject("lblBelastungsstelleLinks.RootElement.AngleTransform"), Single)
-        Me.lblBelastungsstelleLinks.RootElement.FlipText = CType(resources.GetObject("lblBelastungsstelleLinks.RootElement.FlipText"), Boolean)
-        Me.lblBelastungsstelleLinks.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.lblBelastungsstelleLinks.RootElement.Margin = CType(resources.GetObject("lblBelastungsstelleLinks.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblBelastungsstelleLinks.RootElement.Text = resources.GetString("lblBelastungsstelleLinks.RootElement.Text")
-        Me.lblBelastungsstelleLinks.RootElement.TextOrientation = CType(resources.GetObject("lblBelastungsstelleLinks.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblBelastungsstelleLinks.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.lblBelastungsstelleLinks.RootElement.AccessibleDescription = Nothing
+        Me.lblBelastungsstelleLinks.RootElement.AccessibleName = Nothing
         '
         'PictureBox16
         '
-        resources.ApplyResources(Me.PictureBox16, "PictureBox16")
         Me.PictureBox16.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBox16, "PictureBox16")
         Me.PictureBox16.Name = "PictureBox16"
         Me.PictureBox16.TabStop = False
         '
         'lblAuffahrtLinks1
         '
         resources.ApplyResources(Me.lblAuffahrtLinks1, "lblAuffahrtLinks1")
-        Me.lblAuffahrtLinks1.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblAuffahrtLinks1.Name = "lblAuffahrtLinks1"
         '
         '
         '
-        Me.lblAuffahrtLinks1.RootElement.AccessibleDescription = resources.GetString("lblAuffahrtLinks1.RootElement.AccessibleDescription")
-        Me.lblAuffahrtLinks1.RootElement.AccessibleName = resources.GetString("lblAuffahrtLinks1.RootElement.AccessibleName")
-        Me.lblAuffahrtLinks1.RootElement.Alignment = CType(resources.GetObject("lblAuffahrtLinks1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblAuffahrtLinks1.RootElement.AngleTransform = CType(resources.GetObject("lblAuffahrtLinks1.RootElement.AngleTransform"), Single)
-        Me.lblAuffahrtLinks1.RootElement.FlipText = CType(resources.GetObject("lblAuffahrtLinks1.RootElement.FlipText"), Boolean)
-        Me.lblAuffahrtLinks1.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.lblAuffahrtLinks1.RootElement.Margin = CType(resources.GetObject("lblAuffahrtLinks1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblAuffahrtLinks1.RootElement.Text = resources.GetString("lblAuffahrtLinks1.RootElement.Text")
-        Me.lblAuffahrtLinks1.RootElement.TextOrientation = CType(resources.GetObject("lblAuffahrtLinks1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblAuffahrtLinks1.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.lblAuffahrtLinks1.RootElement.AccessibleDescription = Nothing
+        Me.lblAuffahrtLinks1.RootElement.AccessibleName = Nothing
         '
         'PictureBox17
         '
-        resources.ApplyResources(Me.PictureBox17, "PictureBox17")
         Me.PictureBox17.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBox17, "PictureBox17")
         Me.PictureBox17.Name = "PictureBox17"
         Me.PictureBox17.TabStop = False
         '
         'lblAuffahrtLinks2
         '
         resources.ApplyResources(Me.lblAuffahrtLinks2, "lblAuffahrtLinks2")
-        Me.lblAuffahrtLinks2.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblAuffahrtLinks2.Name = "lblAuffahrtLinks2"
         '
         '
         '
-        Me.lblAuffahrtLinks2.RootElement.AccessibleDescription = resources.GetString("lblAuffahrtLinks2.RootElement.AccessibleDescription")
-        Me.lblAuffahrtLinks2.RootElement.AccessibleName = resources.GetString("lblAuffahrtLinks2.RootElement.AccessibleName")
-        Me.lblAuffahrtLinks2.RootElement.Alignment = CType(resources.GetObject("lblAuffahrtLinks2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblAuffahrtLinks2.RootElement.AngleTransform = CType(resources.GetObject("lblAuffahrtLinks2.RootElement.AngleTransform"), Single)
-        Me.lblAuffahrtLinks2.RootElement.FlipText = CType(resources.GetObject("lblAuffahrtLinks2.RootElement.FlipText"), Boolean)
-        Me.lblAuffahrtLinks2.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.lblAuffahrtLinks2.RootElement.Margin = CType(resources.GetObject("lblAuffahrtLinks2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblAuffahrtLinks2.RootElement.Text = resources.GetString("lblAuffahrtLinks2.RootElement.Text")
-        Me.lblAuffahrtLinks2.RootElement.TextOrientation = CType(resources.GetObject("lblAuffahrtLinks2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblAuffahrtLinks2.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.lblAuffahrtLinks2.RootElement.AccessibleDescription = Nothing
+        Me.lblAuffahrtLinks2.RootElement.AccessibleName = Nothing
         '
         'PictureBox12
         '
-        resources.ApplyResources(Me.PictureBox12, "PictureBox12")
         Me.PictureBox12.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBox12, "PictureBox12")
         Me.PictureBox12.Name = "PictureBox12"
         Me.PictureBox12.TabStop = False
         '
         'lblAuffahrtLinks3
         '
         resources.ApplyResources(Me.lblAuffahrtLinks3, "lblAuffahrtLinks3")
-        Me.lblAuffahrtLinks3.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblAuffahrtLinks3.Name = "lblAuffahrtLinks3"
         '
         '
         '
-        Me.lblAuffahrtLinks3.RootElement.AccessibleDescription = resources.GetString("lblAuffahrtLinks3.RootElement.AccessibleDescription")
-        Me.lblAuffahrtLinks3.RootElement.AccessibleName = resources.GetString("lblAuffahrtLinks3.RootElement.AccessibleName")
-        Me.lblAuffahrtLinks3.RootElement.Alignment = CType(resources.GetObject("lblAuffahrtLinks3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblAuffahrtLinks3.RootElement.AngleTransform = CType(resources.GetObject("lblAuffahrtLinks3.RootElement.AngleTransform"), Single)
-        Me.lblAuffahrtLinks3.RootElement.FlipText = CType(resources.GetObject("lblAuffahrtLinks3.RootElement.FlipText"), Boolean)
-        Me.lblAuffahrtLinks3.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.lblAuffahrtLinks3.RootElement.Margin = CType(resources.GetObject("lblAuffahrtLinks3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblAuffahrtLinks3.RootElement.Text = resources.GetString("lblAuffahrtLinks3.RootElement.Text")
-        Me.lblAuffahrtLinks3.RootElement.TextOrientation = CType(resources.GetObject("lblAuffahrtLinks3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblAuffahrtLinks3.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.lblAuffahrtLinks3.RootElement.AccessibleDescription = Nothing
+        Me.lblAuffahrtLinks3.RootElement.AccessibleName = Nothing
         '
         'PictureBox13
         '
-        resources.ApplyResources(Me.PictureBox13, "PictureBox13")
         Me.PictureBox13.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBox13, "PictureBox13")
         Me.PictureBox13.Name = "PictureBox13"
         Me.PictureBox13.TabStop = False
         '
         'lblLastLinks
         '
         resources.ApplyResources(Me.lblLastLinks, "lblLastLinks")
-        Me.lblLastLinks.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblLastLinks.Name = "lblLastLinks"
         '
         '
         '
-        Me.lblLastLinks.RootElement.AccessibleDescription = resources.GetString("lblLastLinks.RootElement.AccessibleDescription")
-        Me.lblLastLinks.RootElement.AccessibleName = resources.GetString("lblLastLinks.RootElement.AccessibleName")
-        Me.lblLastLinks.RootElement.Alignment = CType(resources.GetObject("lblLastLinks.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblLastLinks.RootElement.AngleTransform = CType(resources.GetObject("lblLastLinks.RootElement.AngleTransform"), Single)
-        Me.lblLastLinks.RootElement.FlipText = CType(resources.GetObject("lblLastLinks.RootElement.FlipText"), Boolean)
-        Me.lblLastLinks.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.lblLastLinks.RootElement.Margin = CType(resources.GetObject("lblLastLinks.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblLastLinks.RootElement.Text = resources.GetString("lblLastLinks.RootElement.Text")
-        Me.lblLastLinks.RootElement.TextOrientation = CType(resources.GetObject("lblLastLinks.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblLastLinks.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.lblLastLinks.RootElement.AccessibleDescription = Nothing
+        Me.lblLastLinks.RootElement.AccessibleName = Nothing
         '
         'PictureBox14
         '
-        resources.ApplyResources(Me.PictureBox14, "PictureBox14")
         Me.PictureBox14.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBox14, "PictureBox14")
         Me.PictureBox14.Name = "PictureBox14"
         Me.PictureBox14.TabStop = False
         '
         'lblAnzeigeLinks
         '
         resources.ApplyResources(Me.lblAnzeigeLinks, "lblAnzeigeLinks")
-        Me.lblAnzeigeLinks.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblAnzeigeLinks.Name = "lblAnzeigeLinks"
         '
         '
         '
-        Me.lblAnzeigeLinks.RootElement.AccessibleDescription = resources.GetString("lblAnzeigeLinks.RootElement.AccessibleDescription")
-        Me.lblAnzeigeLinks.RootElement.AccessibleName = resources.GetString("lblAnzeigeLinks.RootElement.AccessibleName")
-        Me.lblAnzeigeLinks.RootElement.Alignment = CType(resources.GetObject("lblAnzeigeLinks.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblAnzeigeLinks.RootElement.AngleTransform = CType(resources.GetObject("lblAnzeigeLinks.RootElement.AngleTransform"), Single)
-        Me.lblAnzeigeLinks.RootElement.FlipText = CType(resources.GetObject("lblAnzeigeLinks.RootElement.FlipText"), Boolean)
-        Me.lblAnzeigeLinks.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.lblAnzeigeLinks.RootElement.Margin = CType(resources.GetObject("lblAnzeigeLinks.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblAnzeigeLinks.RootElement.Text = resources.GetString("lblAnzeigeLinks.RootElement.Text")
-        Me.lblAnzeigeLinks.RootElement.TextOrientation = CType(resources.GetObject("lblAnzeigeLinks.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblAnzeigeLinks.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.lblAnzeigeLinks.RootElement.AccessibleDescription = Nothing
+        Me.lblAnzeigeLinks.RootElement.AccessibleName = Nothing
         '
         'PictureBox9
         '
-        resources.ApplyResources(Me.PictureBox9, "PictureBox9")
         Me.PictureBox9.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBox9, "PictureBox9")
         Me.PictureBox9.Name = "PictureBox9"
         Me.PictureBox9.TabStop = False
         '
         'lblFehlerLinks
         '
         resources.ApplyResources(Me.lblFehlerLinks, "lblFehlerLinks")
-        Me.lblFehlerLinks.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblFehlerLinks.Name = "lblFehlerLinks"
         '
         '
         '
-        Me.lblFehlerLinks.RootElement.AccessibleDescription = resources.GetString("lblFehlerLinks.RootElement.AccessibleDescription")
-        Me.lblFehlerLinks.RootElement.AccessibleName = resources.GetString("lblFehlerLinks.RootElement.AccessibleName")
-        Me.lblFehlerLinks.RootElement.Alignment = CType(resources.GetObject("lblFehlerLinks.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblFehlerLinks.RootElement.AngleTransform = CType(resources.GetObject("lblFehlerLinks.RootElement.AngleTransform"), Single)
-        Me.lblFehlerLinks.RootElement.FlipText = CType(resources.GetObject("lblFehlerLinks.RootElement.FlipText"), Boolean)
-        Me.lblFehlerLinks.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.lblFehlerLinks.RootElement.Margin = CType(resources.GetObject("lblFehlerLinks.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblFehlerLinks.RootElement.Text = resources.GetString("lblFehlerLinks.RootElement.Text")
-        Me.lblFehlerLinks.RootElement.TextOrientation = CType(resources.GetObject("lblFehlerLinks.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblFehlerLinks.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.lblFehlerLinks.RootElement.AccessibleDescription = Nothing
+        Me.lblFehlerLinks.RootElement.AccessibleName = Nothing
         '
         'PictureBox10
         '
-        resources.ApplyResources(Me.PictureBox10, "PictureBox10")
         Me.PictureBox10.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBox10, "PictureBox10")
         Me.PictureBox10.Name = "PictureBox10"
         Me.PictureBox10.TabStop = False
         '
         'lblEFGLinks
         '
         resources.ApplyResources(Me.lblEFGLinks, "lblEFGLinks")
-        Me.lblEFGLinks.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblEFGLinks.Name = "lblEFGLinks"
         '
         '
         '
-        Me.lblEFGLinks.RootElement.AccessibleDescription = resources.GetString("lblEFGLinks.RootElement.AccessibleDescription")
-        Me.lblEFGLinks.RootElement.AccessibleName = resources.GetString("lblEFGLinks.RootElement.AccessibleName")
-        Me.lblEFGLinks.RootElement.Alignment = CType(resources.GetObject("lblEFGLinks.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblEFGLinks.RootElement.AngleTransform = CType(resources.GetObject("lblEFGLinks.RootElement.AngleTransform"), Single)
-        Me.lblEFGLinks.RootElement.FlipText = CType(resources.GetObject("lblEFGLinks.RootElement.FlipText"), Boolean)
-        Me.lblEFGLinks.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.lblEFGLinks.RootElement.Margin = CType(resources.GetObject("lblEFGLinks.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblEFGLinks.RootElement.Text = resources.GetString("lblEFGLinks.RootElement.Text")
-        Me.lblEFGLinks.RootElement.TextOrientation = CType(resources.GetObject("lblEFGLinks.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblEFGLinks.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.lblEFGLinks.RootElement.AccessibleDescription = Nothing
+        Me.lblEFGLinks.RootElement.AccessibleName = Nothing
         '
         'PictureBox11
         '
-        resources.ApplyResources(Me.PictureBox11, "PictureBox11")
         Me.PictureBox11.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBox11, "PictureBox11")
         Me.PictureBox11.Name = "PictureBox11"
         Me.PictureBox11.TabStop = False
         '
         'lblEFGWertLinks
         '
         resources.ApplyResources(Me.lblEFGWertLinks, "lblEFGWertLinks")
-        Me.lblEFGWertLinks.Mask = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblEFGWertLinks.Name = "lblEFGWertLinks"
-        Me.lblEFGWertLinks.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblEFGWertLinks.ReadOnly = True
         '
         '
         '
-        Me.lblEFGWertLinks.RootElement.AccessibleDescription = resources.GetString("lblEFGWertLinks.RootElement.AccessibleDescription")
-        Me.lblEFGWertLinks.RootElement.AccessibleName = resources.GetString("lblEFGWertLinks.RootElement.AccessibleName")
-        Me.lblEFGWertLinks.RootElement.Alignment = CType(resources.GetObject("lblEFGWertLinks.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblEFGWertLinks.RootElement.AngleTransform = CType(resources.GetObject("lblEFGWertLinks.RootElement.AngleTransform"), Single)
-        Me.lblEFGWertLinks.RootElement.FlipText = CType(resources.GetObject("lblEFGWertLinks.RootElement.FlipText"), Boolean)
-        Me.lblEFGWertLinks.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.lblEFGWertLinks.RootElement.Margin = CType(resources.GetObject("lblEFGWertLinks.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblEFGWertLinks.RootElement.Text = resources.GetString("lblEFGWertLinks.RootElement.Text")
-        Me.lblEFGWertLinks.RootElement.TextOrientation = CType(resources.GetObject("lblEFGWertLinks.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblEFGWertLinks.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.lblEFGWertLinks.RootElement.AccessibleDescription = Nothing
+        Me.lblEFGWertLinks.RootElement.AccessibleName = Nothing
         Me.lblEFGWertLinks.TabStop = False
         '
         'PictureBox8
         '
-        resources.ApplyResources(Me.PictureBox8, "PictureBox8")
         Me.PictureBox8.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBox8, "PictureBox8")
         Me.PictureBox8.Name = "PictureBox8"
         Me.PictureBox8.TabStop = False
         '
@@ -584,26 +479,16 @@ Partial Class uco13PruefungRollendeLasten
         resources.ApplyResources(Me.RadTextBoxControlLastLinks1, "RadTextBoxControlLastLinks1")
         Me.RadTextBoxControlLastLinks1.MaxLength = 20
         Me.RadTextBoxControlLastLinks1.Name = "RadTextBoxControlLastLinks1"
-        Me.RadTextBoxControlLastLinks1.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         '
         '
-        Me.RadTextBoxControlLastLinks1.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlLastLinks1.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlLastLinks1.RootElement.AccessibleName = resources.GetString("RadTextBoxControlLastLinks1.RootElement.AccessibleName")
-        Me.RadTextBoxControlLastLinks1.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlLastLinks1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlLastLinks1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlLastLinks1.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlLastLinks1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlLastLinks1.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlLastLinks1.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadTextBoxControlLastLinks1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlLastLinks1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlLastLinks1.RootElement.Text = resources.GetString("RadTextBoxControlLastLinks1.RootElement.Text")
-        Me.RadTextBoxControlLastLinks1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlLastLinks1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlLastLinks1.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadTextBoxControlLastLinks1.Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadTextBoxControlLastLinks1.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlLastLinks1.RootElement.AccessibleName = Nothing
         '
         'PictureBox7
         '
-        resources.ApplyResources(Me.PictureBox7, "PictureBox7")
         Me.PictureBox7.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBox7, "PictureBox7")
         Me.PictureBox7.Name = "PictureBox7"
         Me.PictureBox7.TabStop = False
         '
@@ -612,26 +497,16 @@ Partial Class uco13PruefungRollendeLasten
         resources.ApplyResources(Me.RadTextBoxControllastLinks3, "RadTextBoxControllastLinks3")
         Me.RadTextBoxControllastLinks3.MaxLength = 20
         Me.RadTextBoxControllastLinks3.Name = "RadTextBoxControllastLinks3"
-        Me.RadTextBoxControllastLinks3.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         '
         '
-        Me.RadTextBoxControllastLinks3.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControllastLinks3.RootElement.AccessibleDescription")
-        Me.RadTextBoxControllastLinks3.RootElement.AccessibleName = resources.GetString("RadTextBoxControllastLinks3.RootElement.AccessibleName")
-        Me.RadTextBoxControllastLinks3.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControllastLinks3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControllastLinks3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControllastLinks3.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControllastLinks3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControllastLinks3.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControllastLinks3.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadTextBoxControllastLinks3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControllastLinks3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControllastLinks3.RootElement.Text = resources.GetString("RadTextBoxControllastLinks3.RootElement.Text")
-        Me.RadTextBoxControllastLinks3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControllastLinks3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControllastLinks3.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadTextBoxControllastLinks3.Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadTextBoxControllastLinks3.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControllastLinks3.RootElement.AccessibleName = Nothing
         '
         'PictureBox6
         '
-        resources.ApplyResources(Me.PictureBox6, "PictureBox6")
         Me.PictureBox6.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBox6, "PictureBox6")
         Me.PictureBox6.Name = "PictureBox6"
         Me.PictureBox6.TabStop = False
         '
@@ -640,87 +515,48 @@ Partial Class uco13PruefungRollendeLasten
         resources.ApplyResources(Me.RadTextBoxControlLastLinks2, "RadTextBoxControlLastLinks2")
         Me.RadTextBoxControlLastLinks2.MaxLength = 20
         Me.RadTextBoxControlLastLinks2.Name = "RadTextBoxControlLastLinks2"
-        Me.RadTextBoxControlLastLinks2.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         '
         '
-        Me.RadTextBoxControlLastLinks2.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlLastLinks2.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlLastLinks2.RootElement.AccessibleName = resources.GetString("RadTextBoxControlLastLinks2.RootElement.AccessibleName")
-        Me.RadTextBoxControlLastLinks2.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlLastLinks2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlLastLinks2.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlLastLinks2.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlLastLinks2.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlLastLinks2.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlLastLinks2.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadTextBoxControlLastLinks2.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlLastLinks2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlLastLinks2.RootElement.Text = resources.GetString("RadTextBoxControlLastLinks2.RootElement.Text")
-        Me.RadTextBoxControlLastLinks2.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlLastLinks2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlLastLinks2.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadTextBoxControlLastLinks2.Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadTextBoxControlLastLinks2.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlLastLinks2.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlAnzeigeLinks1
         '
         resources.ApplyResources(Me.RadTextBoxControlAnzeigeLinks1, "RadTextBoxControlAnzeigeLinks1")
         Me.RadTextBoxControlAnzeigeLinks1.MaxLength = 20
         Me.RadTextBoxControlAnzeigeLinks1.Name = "RadTextBoxControlAnzeigeLinks1"
-        Me.RadTextBoxControlAnzeigeLinks1.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         '
         '
-        Me.RadTextBoxControlAnzeigeLinks1.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlAnzeigeLinks1.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlAnzeigeLinks1.RootElement.AccessibleName = resources.GetString("RadTextBoxControlAnzeigeLinks1.RootElement.AccessibleName")
-        Me.RadTextBoxControlAnzeigeLinks1.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlAnzeigeLinks1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlAnzeigeLinks1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlAnzeigeLinks1.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlAnzeigeLinks1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlAnzeigeLinks1.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlAnzeigeLinks1.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadTextBoxControlAnzeigeLinks1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlAnzeigeLinks1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlAnzeigeLinks1.RootElement.Text = resources.GetString("RadTextBoxControlAnzeigeLinks1.RootElement.Text")
-        Me.RadTextBoxControlAnzeigeLinks1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlAnzeigeLinks1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlAnzeigeLinks1.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadTextBoxControlAnzeigeLinks1.Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadTextBoxControlAnzeigeLinks1.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlAnzeigeLinks1.RootElement.AccessibleName = Nothing
         '
         'RadButtonShowEFG
         '
         resources.ApplyResources(Me.RadButtonShowEFG, "RadButtonShowEFG")
-        Me.RadButtonShowEFG.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadButtonShowEFG.Name = "RadButtonShowEFG"
         '
         '
         '
-        Me.RadButtonShowEFG.RootElement.AccessibleDescription = resources.GetString("RadButtonShowEFG.RootElement.AccessibleDescription")
-        Me.RadButtonShowEFG.RootElement.AccessibleName = resources.GetString("RadButtonShowEFG.RootElement.AccessibleName")
-        Me.RadButtonShowEFG.RootElement.Alignment = CType(resources.GetObject("RadButtonShowEFG.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadButtonShowEFG.RootElement.AngleTransform = CType(resources.GetObject("RadButtonShowEFG.RootElement.AngleTransform"), Single)
-        Me.RadButtonShowEFG.RootElement.FlipText = CType(resources.GetObject("RadButtonShowEFG.RootElement.FlipText"), Boolean)
-        Me.RadButtonShowEFG.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadButtonShowEFG.RootElement.Margin = CType(resources.GetObject("RadButtonShowEFG.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadButtonShowEFG.RootElement.Text = resources.GetString("RadButtonShowEFG.RootElement.Text")
-        Me.RadButtonShowEFG.RootElement.TextOrientation = CType(resources.GetObject("RadButtonShowEFG.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadButtonShowEFG.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadButtonShowEFG.RootElement.AccessibleDescription = Nothing
+        Me.RadButtonShowEFG.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlAnzeigeLinks2
         '
         resources.ApplyResources(Me.RadTextBoxControlAnzeigeLinks2, "RadTextBoxControlAnzeigeLinks2")
         Me.RadTextBoxControlAnzeigeLinks2.MaxLength = 20
         Me.RadTextBoxControlAnzeigeLinks2.Name = "RadTextBoxControlAnzeigeLinks2"
-        Me.RadTextBoxControlAnzeigeLinks2.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         '
         '
-        Me.RadTextBoxControlAnzeigeLinks2.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlAnzeigeLinks2.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlAnzeigeLinks2.RootElement.AccessibleName = resources.GetString("RadTextBoxControlAnzeigeLinks2.RootElement.AccessibleName")
-        Me.RadTextBoxControlAnzeigeLinks2.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlAnzeigeLinks2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlAnzeigeLinks2.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlAnzeigeLinks2.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlAnzeigeLinks2.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlAnzeigeLinks2.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlAnzeigeLinks2.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadTextBoxControlAnzeigeLinks2.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlAnzeigeLinks2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlAnzeigeLinks2.RootElement.Text = resources.GetString("RadTextBoxControlAnzeigeLinks2.RootElement.Text")
-        Me.RadTextBoxControlAnzeigeLinks2.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlAnzeigeLinks2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlAnzeigeLinks2.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadTextBoxControlAnzeigeLinks2.Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadTextBoxControlAnzeigeLinks2.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlAnzeigeLinks2.RootElement.AccessibleName = Nothing
         '
         'PictureBox5
         '
-        resources.ApplyResources(Me.PictureBox5, "PictureBox5")
         Me.PictureBox5.Image = Global.EichsoftwareClient.My.Resources.Resources.LKW_Gedreht
+        resources.ApplyResources(Me.PictureBox5, "PictureBox5")
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.TabStop = False
         '
@@ -729,26 +565,16 @@ Partial Class uco13PruefungRollendeLasten
         resources.ApplyResources(Me.RadTextBoxControlAnzeigeLinks3, "RadTextBoxControlAnzeigeLinks3")
         Me.RadTextBoxControlAnzeigeLinks3.MaxLength = 20
         Me.RadTextBoxControlAnzeigeLinks3.Name = "RadTextBoxControlAnzeigeLinks3"
-        Me.RadTextBoxControlAnzeigeLinks3.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         '
         '
-        Me.RadTextBoxControlAnzeigeLinks3.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlAnzeigeLinks3.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlAnzeigeLinks3.RootElement.AccessibleName = resources.GetString("RadTextBoxControlAnzeigeLinks3.RootElement.AccessibleName")
-        Me.RadTextBoxControlAnzeigeLinks3.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlAnzeigeLinks3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlAnzeigeLinks3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlAnzeigeLinks3.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlAnzeigeLinks3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlAnzeigeLinks3.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlAnzeigeLinks3.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadTextBoxControlAnzeigeLinks3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlAnzeigeLinks3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlAnzeigeLinks3.RootElement.Text = resources.GetString("RadTextBoxControlAnzeigeLinks3.RootElement.Text")
-        Me.RadTextBoxControlAnzeigeLinks3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlAnzeigeLinks3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlAnzeigeLinks3.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadTextBoxControlAnzeigeLinks3.Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadTextBoxControlAnzeigeLinks3.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlAnzeigeLinks3.RootElement.AccessibleName = Nothing
         '
         'PictureBox4
         '
-        resources.ApplyResources(Me.PictureBox4, "PictureBox4")
         Me.PictureBox4.Image = Global.EichsoftwareClient.My.Resources.Resources.LKW
+        resources.ApplyResources(Me.PictureBox4, "PictureBox4")
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.TabStop = False
         '
@@ -757,28 +583,18 @@ Partial Class uco13PruefungRollendeLasten
         resources.ApplyResources(Me.RadTextBoxControlFehlerLinks1, "RadTextBoxControlFehlerLinks1")
         Me.RadTextBoxControlFehlerLinks1.MaxLength = 20
         Me.RadTextBoxControlFehlerLinks1.Name = "RadTextBoxControlFehlerLinks1"
-        Me.RadTextBoxControlFehlerLinks1.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadTextBoxControlFehlerLinks1.ReadOnly = True
         '
         '
         '
-        Me.RadTextBoxControlFehlerLinks1.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlFehlerLinks1.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlFehlerLinks1.RootElement.AccessibleName = resources.GetString("RadTextBoxControlFehlerLinks1.RootElement.AccessibleName")
-        Me.RadTextBoxControlFehlerLinks1.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlFehlerLinks1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlFehlerLinks1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlFehlerLinks1.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlFehlerLinks1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlFehlerLinks1.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlFehlerLinks1.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadTextBoxControlFehlerLinks1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlFehlerLinks1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlFehlerLinks1.RootElement.Text = resources.GetString("RadTextBoxControlFehlerLinks1.RootElement.Text")
-        Me.RadTextBoxControlFehlerLinks1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlFehlerLinks1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlFehlerLinks1.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadTextBoxControlFehlerLinks1.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlFehlerLinks1.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlFehlerLinks1.TabStop = False
-        Me.RadTextBoxControlFehlerLinks1.Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         'PictureBox3
         '
-        resources.ApplyResources(Me.PictureBox3, "PictureBox3")
         Me.PictureBox3.Image = Global.EichsoftwareClient.My.Resources.Resources.Fahrzeug_Wenden_GB
+        resources.ApplyResources(Me.PictureBox3, "PictureBox3")
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.TabStop = False
         '
@@ -787,443 +603,240 @@ Partial Class uco13PruefungRollendeLasten
         resources.ApplyResources(Me.RadTextBoxControlFehlerLinks2, "RadTextBoxControlFehlerLinks2")
         Me.RadTextBoxControlFehlerLinks2.MaxLength = 20
         Me.RadTextBoxControlFehlerLinks2.Name = "RadTextBoxControlFehlerLinks2"
-        Me.RadTextBoxControlFehlerLinks2.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadTextBoxControlFehlerLinks2.ReadOnly = True
         '
         '
         '
-        Me.RadTextBoxControlFehlerLinks2.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlFehlerLinks2.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlFehlerLinks2.RootElement.AccessibleName = resources.GetString("RadTextBoxControlFehlerLinks2.RootElement.AccessibleName")
-        Me.RadTextBoxControlFehlerLinks2.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlFehlerLinks2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlFehlerLinks2.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlFehlerLinks2.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlFehlerLinks2.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlFehlerLinks2.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlFehlerLinks2.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadTextBoxControlFehlerLinks2.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlFehlerLinks2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlFehlerLinks2.RootElement.Text = resources.GetString("RadTextBoxControlFehlerLinks2.RootElement.Text")
-        Me.RadTextBoxControlFehlerLinks2.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlFehlerLinks2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlFehlerLinks2.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadTextBoxControlFehlerLinks2.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlFehlerLinks2.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlFehlerLinks2.TabStop = False
-        Me.RadTextBoxControlFehlerLinks2.Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         'RadTextBoxControlFehlerLinks3
         '
         resources.ApplyResources(Me.RadTextBoxControlFehlerLinks3, "RadTextBoxControlFehlerLinks3")
         Me.RadTextBoxControlFehlerLinks3.MaxLength = 20
         Me.RadTextBoxControlFehlerLinks3.Name = "RadTextBoxControlFehlerLinks3"
-        Me.RadTextBoxControlFehlerLinks3.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadTextBoxControlFehlerLinks3.ReadOnly = True
         '
         '
         '
-        Me.RadTextBoxControlFehlerLinks3.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlFehlerLinks3.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlFehlerLinks3.RootElement.AccessibleName = resources.GetString("RadTextBoxControlFehlerLinks3.RootElement.AccessibleName")
-        Me.RadTextBoxControlFehlerLinks3.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlFehlerLinks3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlFehlerLinks3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlFehlerLinks3.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlFehlerLinks3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlFehlerLinks3.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlFehlerLinks3.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadTextBoxControlFehlerLinks3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlFehlerLinks3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlFehlerLinks3.RootElement.Text = resources.GetString("RadTextBoxControlFehlerLinks3.RootElement.Text")
-        Me.RadTextBoxControlFehlerLinks3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlFehlerLinks3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlFehlerLinks3.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadTextBoxControlFehlerLinks3.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlFehlerLinks3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlFehlerLinks3.TabStop = False
-        Me.RadTextBoxControlFehlerLinks3.Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         'RadCheckBoxAuffahrtLinks1
         '
         resources.ApplyResources(Me.RadCheckBoxAuffahrtLinks1, "RadCheckBoxAuffahrtLinks1")
-        Me.RadCheckBoxAuffahrtLinks1.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadCheckBoxAuffahrtLinks1.Name = "RadCheckBoxAuffahrtLinks1"
         '
         '
         '
-        Me.RadCheckBoxAuffahrtLinks1.RootElement.AccessibleDescription = resources.GetString("RadCheckBoxAuffahrtLinks1.RootElement.AccessibleDescription")
-        Me.RadCheckBoxAuffahrtLinks1.RootElement.AccessibleName = resources.GetString("RadCheckBoxAuffahrtLinks1.RootElement.AccessibleName")
-        Me.RadCheckBoxAuffahrtLinks1.RootElement.Alignment = CType(resources.GetObject("RadCheckBoxAuffahrtLinks1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadCheckBoxAuffahrtLinks1.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxAuffahrtLinks1.RootElement.AngleTransform"), Single)
-        Me.RadCheckBoxAuffahrtLinks1.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxAuffahrtLinks1.RootElement.FlipText"), Boolean)
-        Me.RadCheckBoxAuffahrtLinks1.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadCheckBoxAuffahrtLinks1.RootElement.Margin = CType(resources.GetObject("RadCheckBoxAuffahrtLinks1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadCheckBoxAuffahrtLinks1.RootElement.Text = resources.GetString("RadCheckBoxAuffahrtLinks1.RootElement.Text")
-        Me.RadCheckBoxAuffahrtLinks1.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxAuffahrtLinks1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadCheckBoxAuffahrtLinks1.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadCheckBoxAuffahrtLinks1.RootElement.AccessibleDescription = Nothing
+        Me.RadCheckBoxAuffahrtLinks1.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxAuffahrtLinks1.TabStop = False
-        Me.RadCheckBoxAuffahrtLinks1.Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         'RadCheckBoxlblAuffahrtRechts3
         '
         resources.ApplyResources(Me.RadCheckBoxlblAuffahrtRechts3, "RadCheckBoxlblAuffahrtRechts3")
-        Me.RadCheckBoxlblAuffahrtRechts3.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadCheckBoxlblAuffahrtRechts3.Name = "RadCheckBoxlblAuffahrtRechts3"
         '
         '
         '
-        Me.RadCheckBoxlblAuffahrtRechts3.RootElement.AccessibleDescription = resources.GetString("RadCheckBoxlblAuffahrtRechts3.RootElement.AccessibleDescription")
-        Me.RadCheckBoxlblAuffahrtRechts3.RootElement.AccessibleName = resources.GetString("RadCheckBoxlblAuffahrtRechts3.RootElement.AccessibleName")
-        Me.RadCheckBoxlblAuffahrtRechts3.RootElement.Alignment = CType(resources.GetObject("RadCheckBoxlblAuffahrtRechts3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadCheckBoxlblAuffahrtRechts3.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxlblAuffahrtRechts3.RootElement.AngleTransform"), Single)
-        Me.RadCheckBoxlblAuffahrtRechts3.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxlblAuffahrtRechts3.RootElement.FlipText"), Boolean)
-        Me.RadCheckBoxlblAuffahrtRechts3.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadCheckBoxlblAuffahrtRechts3.RootElement.Margin = CType(resources.GetObject("RadCheckBoxlblAuffahrtRechts3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadCheckBoxlblAuffahrtRechts3.RootElement.Text = resources.GetString("RadCheckBoxlblAuffahrtRechts3.RootElement.Text")
-        Me.RadCheckBoxlblAuffahrtRechts3.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxlblAuffahrtRechts3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadCheckBoxlblAuffahrtRechts3.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadCheckBoxlblAuffahrtRechts3.RootElement.AccessibleDescription = Nothing
+        Me.RadCheckBoxlblAuffahrtRechts3.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxlblAuffahrtRechts3.TabStop = False
-        Me.RadCheckBoxlblAuffahrtRechts3.Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         'RadCheckBoxAuffahrtLinks2
         '
         resources.ApplyResources(Me.RadCheckBoxAuffahrtLinks2, "RadCheckBoxAuffahrtLinks2")
-        Me.RadCheckBoxAuffahrtLinks2.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadCheckBoxAuffahrtLinks2.Name = "RadCheckBoxAuffahrtLinks2"
         '
         '
         '
-        Me.RadCheckBoxAuffahrtLinks2.RootElement.AccessibleDescription = resources.GetString("RadCheckBoxAuffahrtLinks2.RootElement.AccessibleDescription")
-        Me.RadCheckBoxAuffahrtLinks2.RootElement.AccessibleName = resources.GetString("RadCheckBoxAuffahrtLinks2.RootElement.AccessibleName")
-        Me.RadCheckBoxAuffahrtLinks2.RootElement.Alignment = CType(resources.GetObject("RadCheckBoxAuffahrtLinks2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadCheckBoxAuffahrtLinks2.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxAuffahrtLinks2.RootElement.AngleTransform"), Single)
-        Me.RadCheckBoxAuffahrtLinks2.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxAuffahrtLinks2.RootElement.FlipText"), Boolean)
-        Me.RadCheckBoxAuffahrtLinks2.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadCheckBoxAuffahrtLinks2.RootElement.Margin = CType(resources.GetObject("RadCheckBoxAuffahrtLinks2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadCheckBoxAuffahrtLinks2.RootElement.Text = resources.GetString("RadCheckBoxAuffahrtLinks2.RootElement.Text")
-        Me.RadCheckBoxAuffahrtLinks2.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxAuffahrtLinks2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadCheckBoxAuffahrtLinks2.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadCheckBoxAuffahrtLinks2.RootElement.AccessibleDescription = Nothing
+        Me.RadCheckBoxAuffahrtLinks2.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxAuffahrtLinks2.TabStop = False
-        Me.RadCheckBoxAuffahrtLinks2.Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         'RadCheckBoxlblAuffahrtRechts2
         '
         resources.ApplyResources(Me.RadCheckBoxlblAuffahrtRechts2, "RadCheckBoxlblAuffahrtRechts2")
-        Me.RadCheckBoxlblAuffahrtRechts2.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadCheckBoxlblAuffahrtRechts2.Name = "RadCheckBoxlblAuffahrtRechts2"
         '
         '
         '
-        Me.RadCheckBoxlblAuffahrtRechts2.RootElement.AccessibleDescription = resources.GetString("RadCheckBoxlblAuffahrtRechts2.RootElement.AccessibleDescription")
-        Me.RadCheckBoxlblAuffahrtRechts2.RootElement.AccessibleName = resources.GetString("RadCheckBoxlblAuffahrtRechts2.RootElement.AccessibleName")
-        Me.RadCheckBoxlblAuffahrtRechts2.RootElement.Alignment = CType(resources.GetObject("RadCheckBoxlblAuffahrtRechts2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadCheckBoxlblAuffahrtRechts2.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxlblAuffahrtRechts2.RootElement.AngleTransform"), Single)
-        Me.RadCheckBoxlblAuffahrtRechts2.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxlblAuffahrtRechts2.RootElement.FlipText"), Boolean)
-        Me.RadCheckBoxlblAuffahrtRechts2.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadCheckBoxlblAuffahrtRechts2.RootElement.Margin = CType(resources.GetObject("RadCheckBoxlblAuffahrtRechts2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadCheckBoxlblAuffahrtRechts2.RootElement.Text = resources.GetString("RadCheckBoxlblAuffahrtRechts2.RootElement.Text")
-        Me.RadCheckBoxlblAuffahrtRechts2.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxlblAuffahrtRechts2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadCheckBoxlblAuffahrtRechts2.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadCheckBoxlblAuffahrtRechts2.RootElement.AccessibleDescription = Nothing
+        Me.RadCheckBoxlblAuffahrtRechts2.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxlblAuffahrtRechts2.TabStop = False
-        Me.RadCheckBoxlblAuffahrtRechts2.Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         'RadCheckBoxAuffahrtLinks3
         '
         resources.ApplyResources(Me.RadCheckBoxAuffahrtLinks3, "RadCheckBoxAuffahrtLinks3")
-        Me.RadCheckBoxAuffahrtLinks3.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadCheckBoxAuffahrtLinks3.Name = "RadCheckBoxAuffahrtLinks3"
         '
         '
         '
-        Me.RadCheckBoxAuffahrtLinks3.RootElement.AccessibleDescription = resources.GetString("RadCheckBoxAuffahrtLinks3.RootElement.AccessibleDescription")
-        Me.RadCheckBoxAuffahrtLinks3.RootElement.AccessibleName = resources.GetString("RadCheckBoxAuffahrtLinks3.RootElement.AccessibleName")
-        Me.RadCheckBoxAuffahrtLinks3.RootElement.Alignment = CType(resources.GetObject("RadCheckBoxAuffahrtLinks3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadCheckBoxAuffahrtLinks3.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxAuffahrtLinks3.RootElement.AngleTransform"), Single)
-        Me.RadCheckBoxAuffahrtLinks3.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxAuffahrtLinks3.RootElement.FlipText"), Boolean)
-        Me.RadCheckBoxAuffahrtLinks3.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadCheckBoxAuffahrtLinks3.RootElement.Margin = CType(resources.GetObject("RadCheckBoxAuffahrtLinks3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadCheckBoxAuffahrtLinks3.RootElement.Text = resources.GetString("RadCheckBoxAuffahrtLinks3.RootElement.Text")
-        Me.RadCheckBoxAuffahrtLinks3.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxAuffahrtLinks3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadCheckBoxAuffahrtLinks3.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadCheckBoxAuffahrtLinks3.RootElement.AccessibleDescription = Nothing
+        Me.RadCheckBoxAuffahrtLinks3.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxAuffahrtLinks3.TabStop = False
-        Me.RadCheckBoxAuffahrtLinks3.Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         'RadCheckBoxlblAuffahrtRechts1
         '
         resources.ApplyResources(Me.RadCheckBoxlblAuffahrtRechts1, "RadCheckBoxlblAuffahrtRechts1")
-        Me.RadCheckBoxlblAuffahrtRechts1.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadCheckBoxlblAuffahrtRechts1.Name = "RadCheckBoxlblAuffahrtRechts1"
         '
         '
         '
-        Me.RadCheckBoxlblAuffahrtRechts1.RootElement.AccessibleDescription = resources.GetString("RadCheckBoxlblAuffahrtRechts1.RootElement.AccessibleDescription")
-        Me.RadCheckBoxlblAuffahrtRechts1.RootElement.AccessibleName = resources.GetString("RadCheckBoxlblAuffahrtRechts1.RootElement.AccessibleName")
-        Me.RadCheckBoxlblAuffahrtRechts1.RootElement.Alignment = CType(resources.GetObject("RadCheckBoxlblAuffahrtRechts1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadCheckBoxlblAuffahrtRechts1.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxlblAuffahrtRechts1.RootElement.AngleTransform"), Single)
-        Me.RadCheckBoxlblAuffahrtRechts1.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxlblAuffahrtRechts1.RootElement.FlipText"), Boolean)
-        Me.RadCheckBoxlblAuffahrtRechts1.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadCheckBoxlblAuffahrtRechts1.RootElement.Margin = CType(resources.GetObject("RadCheckBoxlblAuffahrtRechts1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadCheckBoxlblAuffahrtRechts1.RootElement.Text = resources.GetString("RadCheckBoxlblAuffahrtRechts1.RootElement.Text")
-        Me.RadCheckBoxlblAuffahrtRechts1.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxlblAuffahrtRechts1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadCheckBoxlblAuffahrtRechts1.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadCheckBoxlblAuffahrtRechts1.RootElement.AccessibleDescription = Nothing
+        Me.RadCheckBoxlblAuffahrtRechts1.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxlblAuffahrtRechts1.TabStop = False
-        Me.RadCheckBoxlblAuffahrtRechts1.Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         'lblBelastungsstelleRechts
         '
         resources.ApplyResources(Me.lblBelastungsstelleRechts, "lblBelastungsstelleRechts")
-        Me.lblBelastungsstelleRechts.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblBelastungsstelleRechts.Name = "lblBelastungsstelleRechts"
         '
         '
         '
-        Me.lblBelastungsstelleRechts.RootElement.AccessibleDescription = resources.GetString("lblBelastungsstelleRechts.RootElement.AccessibleDescription")
-        Me.lblBelastungsstelleRechts.RootElement.AccessibleName = resources.GetString("lblBelastungsstelleRechts.RootElement.AccessibleName")
-        Me.lblBelastungsstelleRechts.RootElement.Alignment = CType(resources.GetObject("lblBelastungsstelleRechts.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblBelastungsstelleRechts.RootElement.AngleTransform = CType(resources.GetObject("lblBelastungsstelleRechts.RootElement.AngleTransform"), Single)
-        Me.lblBelastungsstelleRechts.RootElement.FlipText = CType(resources.GetObject("lblBelastungsstelleRechts.RootElement.FlipText"), Boolean)
-        Me.lblBelastungsstelleRechts.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.lblBelastungsstelleRechts.RootElement.Margin = CType(resources.GetObject("lblBelastungsstelleRechts.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblBelastungsstelleRechts.RootElement.Text = resources.GetString("lblBelastungsstelleRechts.RootElement.Text")
-        Me.lblBelastungsstelleRechts.RootElement.TextOrientation = CType(resources.GetObject("lblBelastungsstelleRechts.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblBelastungsstelleRechts.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.lblBelastungsstelleRechts.RootElement.AccessibleDescription = Nothing
+        Me.lblBelastungsstelleRechts.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlFehlerRechts3
         '
         resources.ApplyResources(Me.RadTextBoxControlFehlerRechts3, "RadTextBoxControlFehlerRechts3")
         Me.RadTextBoxControlFehlerRechts3.MaxLength = 20
         Me.RadTextBoxControlFehlerRechts3.Name = "RadTextBoxControlFehlerRechts3"
-        Me.RadTextBoxControlFehlerRechts3.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadTextBoxControlFehlerRechts3.ReadOnly = True
         '
         '
         '
-        Me.RadTextBoxControlFehlerRechts3.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlFehlerRechts3.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlFehlerRechts3.RootElement.AccessibleName = resources.GetString("RadTextBoxControlFehlerRechts3.RootElement.AccessibleName")
-        Me.RadTextBoxControlFehlerRechts3.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlFehlerRechts3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlFehlerRechts3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlFehlerRechts3.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlFehlerRechts3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlFehlerRechts3.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlFehlerRechts3.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadTextBoxControlFehlerRechts3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlFehlerRechts3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlFehlerRechts3.RootElement.Text = resources.GetString("RadTextBoxControlFehlerRechts3.RootElement.Text")
-        Me.RadTextBoxControlFehlerRechts3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlFehlerRechts3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlFehlerRechts3.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadTextBoxControlFehlerRechts3.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlFehlerRechts3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlFehlerRechts3.TabStop = False
-        Me.RadTextBoxControlFehlerRechts3.Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         'lblAuffahrtRechts1
         '
         resources.ApplyResources(Me.lblAuffahrtRechts1, "lblAuffahrtRechts1")
-        Me.lblAuffahrtRechts1.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblAuffahrtRechts1.Name = "lblAuffahrtRechts1"
         '
         '
         '
-        Me.lblAuffahrtRechts1.RootElement.AccessibleDescription = resources.GetString("lblAuffahrtRechts1.RootElement.AccessibleDescription")
-        Me.lblAuffahrtRechts1.RootElement.AccessibleName = resources.GetString("lblAuffahrtRechts1.RootElement.AccessibleName")
-        Me.lblAuffahrtRechts1.RootElement.Alignment = CType(resources.GetObject("lblAuffahrtRechts1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblAuffahrtRechts1.RootElement.AngleTransform = CType(resources.GetObject("lblAuffahrtRechts1.RootElement.AngleTransform"), Single)
-        Me.lblAuffahrtRechts1.RootElement.FlipText = CType(resources.GetObject("lblAuffahrtRechts1.RootElement.FlipText"), Boolean)
-        Me.lblAuffahrtRechts1.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.lblAuffahrtRechts1.RootElement.Margin = CType(resources.GetObject("lblAuffahrtRechts1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblAuffahrtRechts1.RootElement.Text = resources.GetString("lblAuffahrtRechts1.RootElement.Text")
-        Me.lblAuffahrtRechts1.RootElement.TextOrientation = CType(resources.GetObject("lblAuffahrtRechts1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblAuffahrtRechts1.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.lblAuffahrtRechts1.RootElement.AccessibleDescription = Nothing
+        Me.lblAuffahrtRechts1.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlFehlerRechts2
         '
         resources.ApplyResources(Me.RadTextBoxControlFehlerRechts2, "RadTextBoxControlFehlerRechts2")
         Me.RadTextBoxControlFehlerRechts2.MaxLength = 20
         Me.RadTextBoxControlFehlerRechts2.Name = "RadTextBoxControlFehlerRechts2"
-        Me.RadTextBoxControlFehlerRechts2.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadTextBoxControlFehlerRechts2.ReadOnly = True
         '
         '
         '
-        Me.RadTextBoxControlFehlerRechts2.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlFehlerRechts2.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlFehlerRechts2.RootElement.AccessibleName = resources.GetString("RadTextBoxControlFehlerRechts2.RootElement.AccessibleName")
-        Me.RadTextBoxControlFehlerRechts2.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlFehlerRechts2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlFehlerRechts2.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlFehlerRechts2.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlFehlerRechts2.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlFehlerRechts2.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlFehlerRechts2.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadTextBoxControlFehlerRechts2.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlFehlerRechts2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlFehlerRechts2.RootElement.Text = resources.GetString("RadTextBoxControlFehlerRechts2.RootElement.Text")
-        Me.RadTextBoxControlFehlerRechts2.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlFehlerRechts2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlFehlerRechts2.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadTextBoxControlFehlerRechts2.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlFehlerRechts2.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlFehlerRechts2.TabStop = False
-        Me.RadTextBoxControlFehlerRechts2.Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         'lblAuffahrtRechts2
         '
         resources.ApplyResources(Me.lblAuffahrtRechts2, "lblAuffahrtRechts2")
-        Me.lblAuffahrtRechts2.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblAuffahrtRechts2.Name = "lblAuffahrtRechts2"
         '
         '
         '
-        Me.lblAuffahrtRechts2.RootElement.AccessibleDescription = resources.GetString("lblAuffahrtRechts2.RootElement.AccessibleDescription")
-        Me.lblAuffahrtRechts2.RootElement.AccessibleName = resources.GetString("lblAuffahrtRechts2.RootElement.AccessibleName")
-        Me.lblAuffahrtRechts2.RootElement.Alignment = CType(resources.GetObject("lblAuffahrtRechts2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblAuffahrtRechts2.RootElement.AngleTransform = CType(resources.GetObject("lblAuffahrtRechts2.RootElement.AngleTransform"), Single)
-        Me.lblAuffahrtRechts2.RootElement.FlipText = CType(resources.GetObject("lblAuffahrtRechts2.RootElement.FlipText"), Boolean)
-        Me.lblAuffahrtRechts2.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.lblAuffahrtRechts2.RootElement.Margin = CType(resources.GetObject("lblAuffahrtRechts2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblAuffahrtRechts2.RootElement.Text = resources.GetString("lblAuffahrtRechts2.RootElement.Text")
-        Me.lblAuffahrtRechts2.RootElement.TextOrientation = CType(resources.GetObject("lblAuffahrtRechts2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblAuffahrtRechts2.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.lblAuffahrtRechts2.RootElement.AccessibleDescription = Nothing
+        Me.lblAuffahrtRechts2.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlFehlerRechts1
         '
         resources.ApplyResources(Me.RadTextBoxControlFehlerRechts1, "RadTextBoxControlFehlerRechts1")
         Me.RadTextBoxControlFehlerRechts1.MaxLength = 20
         Me.RadTextBoxControlFehlerRechts1.Name = "RadTextBoxControlFehlerRechts1"
-        Me.RadTextBoxControlFehlerRechts1.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.RadTextBoxControlFehlerRechts1.ReadOnly = True
         '
         '
         '
-        Me.RadTextBoxControlFehlerRechts1.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlFehlerRechts1.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlFehlerRechts1.RootElement.AccessibleName = resources.GetString("RadTextBoxControlFehlerRechts1.RootElement.AccessibleName")
-        Me.RadTextBoxControlFehlerRechts1.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlFehlerRechts1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlFehlerRechts1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlFehlerRechts1.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlFehlerRechts1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlFehlerRechts1.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlFehlerRechts1.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadTextBoxControlFehlerRechts1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlFehlerRechts1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlFehlerRechts1.RootElement.Text = resources.GetString("RadTextBoxControlFehlerRechts1.RootElement.Text")
-        Me.RadTextBoxControlFehlerRechts1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlFehlerRechts1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlFehlerRechts1.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadTextBoxControlFehlerRechts1.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlFehlerRechts1.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlFehlerRechts1.TabStop = False
-        Me.RadTextBoxControlFehlerRechts1.Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         'lblAuffahrtRechts3
         '
         resources.ApplyResources(Me.lblAuffahrtRechts3, "lblAuffahrtRechts3")
-        Me.lblAuffahrtRechts3.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblAuffahrtRechts3.Name = "lblAuffahrtRechts3"
         '
         '
         '
-        Me.lblAuffahrtRechts3.RootElement.AccessibleDescription = resources.GetString("lblAuffahrtRechts3.RootElement.AccessibleDescription")
-        Me.lblAuffahrtRechts3.RootElement.AccessibleName = resources.GetString("lblAuffahrtRechts3.RootElement.AccessibleName")
-        Me.lblAuffahrtRechts3.RootElement.Alignment = CType(resources.GetObject("lblAuffahrtRechts3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblAuffahrtRechts3.RootElement.AngleTransform = CType(resources.GetObject("lblAuffahrtRechts3.RootElement.AngleTransform"), Single)
-        Me.lblAuffahrtRechts3.RootElement.FlipText = CType(resources.GetObject("lblAuffahrtRechts3.RootElement.FlipText"), Boolean)
-        Me.lblAuffahrtRechts3.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.lblAuffahrtRechts3.RootElement.Margin = CType(resources.GetObject("lblAuffahrtRechts3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblAuffahrtRechts3.RootElement.Text = resources.GetString("lblAuffahrtRechts3.RootElement.Text")
-        Me.lblAuffahrtRechts3.RootElement.TextOrientation = CType(resources.GetObject("lblAuffahrtRechts3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblAuffahrtRechts3.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.lblAuffahrtRechts3.RootElement.AccessibleDescription = Nothing
+        Me.lblAuffahrtRechts3.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlAnzeigeRechts3
         '
         resources.ApplyResources(Me.RadTextBoxControlAnzeigeRechts3, "RadTextBoxControlAnzeigeRechts3")
         Me.RadTextBoxControlAnzeigeRechts3.MaxLength = 20
         Me.RadTextBoxControlAnzeigeRechts3.Name = "RadTextBoxControlAnzeigeRechts3"
-        Me.RadTextBoxControlAnzeigeRechts3.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         '
         '
-        Me.RadTextBoxControlAnzeigeRechts3.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlAnzeigeRechts3.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlAnzeigeRechts3.RootElement.AccessibleName = resources.GetString("RadTextBoxControlAnzeigeRechts3.RootElement.AccessibleName")
-        Me.RadTextBoxControlAnzeigeRechts3.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlAnzeigeRechts3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlAnzeigeRechts3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlAnzeigeRechts3.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlAnzeigeRechts3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlAnzeigeRechts3.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlAnzeigeRechts3.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadTextBoxControlAnzeigeRechts3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlAnzeigeRechts3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlAnzeigeRechts3.RootElement.Text = resources.GetString("RadTextBoxControlAnzeigeRechts3.RootElement.Text")
-        Me.RadTextBoxControlAnzeigeRechts3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlAnzeigeRechts3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlAnzeigeRechts3.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadTextBoxControlAnzeigeRechts3.Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadTextBoxControlAnzeigeRechts3.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlAnzeigeRechts3.RootElement.AccessibleName = Nothing
         '
         'lblLastRechts
         '
         resources.ApplyResources(Me.lblLastRechts, "lblLastRechts")
-        Me.lblLastRechts.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblLastRechts.Name = "lblLastRechts"
         '
         '
         '
-        Me.lblLastRechts.RootElement.AccessibleDescription = resources.GetString("lblLastRechts.RootElement.AccessibleDescription")
-        Me.lblLastRechts.RootElement.AccessibleName = resources.GetString("lblLastRechts.RootElement.AccessibleName")
-        Me.lblLastRechts.RootElement.Alignment = CType(resources.GetObject("lblLastRechts.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblLastRechts.RootElement.AngleTransform = CType(resources.GetObject("lblLastRechts.RootElement.AngleTransform"), Single)
-        Me.lblLastRechts.RootElement.FlipText = CType(resources.GetObject("lblLastRechts.RootElement.FlipText"), Boolean)
-        Me.lblLastRechts.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.lblLastRechts.RootElement.Margin = CType(resources.GetObject("lblLastRechts.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblLastRechts.RootElement.Text = resources.GetString("lblLastRechts.RootElement.Text")
-        Me.lblLastRechts.RootElement.TextOrientation = CType(resources.GetObject("lblLastRechts.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblLastRechts.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.lblLastRechts.RootElement.AccessibleDescription = Nothing
+        Me.lblLastRechts.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlAnzeigeRechts2
         '
         resources.ApplyResources(Me.RadTextBoxControlAnzeigeRechts2, "RadTextBoxControlAnzeigeRechts2")
         Me.RadTextBoxControlAnzeigeRechts2.MaxLength = 20
         Me.RadTextBoxControlAnzeigeRechts2.Name = "RadTextBoxControlAnzeigeRechts2"
-        Me.RadTextBoxControlAnzeigeRechts2.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         '
         '
-        Me.RadTextBoxControlAnzeigeRechts2.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlAnzeigeRechts2.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlAnzeigeRechts2.RootElement.AccessibleName = resources.GetString("RadTextBoxControlAnzeigeRechts2.RootElement.AccessibleName")
-        Me.RadTextBoxControlAnzeigeRechts2.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlAnzeigeRechts2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlAnzeigeRechts2.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlAnzeigeRechts2.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlAnzeigeRechts2.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlAnzeigeRechts2.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlAnzeigeRechts2.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadTextBoxControlAnzeigeRechts2.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlAnzeigeRechts2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlAnzeigeRechts2.RootElement.Text = resources.GetString("RadTextBoxControlAnzeigeRechts2.RootElement.Text")
-        Me.RadTextBoxControlAnzeigeRechts2.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlAnzeigeRechts2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlAnzeigeRechts2.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadTextBoxControlAnzeigeRechts2.Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadTextBoxControlAnzeigeRechts2.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlAnzeigeRechts2.RootElement.AccessibleName = Nothing
         '
         'lblAnzeigeRechts
         '
         resources.ApplyResources(Me.lblAnzeigeRechts, "lblAnzeigeRechts")
-        Me.lblAnzeigeRechts.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblAnzeigeRechts.Name = "lblAnzeigeRechts"
         '
         '
         '
-        Me.lblAnzeigeRechts.RootElement.AccessibleDescription = resources.GetString("lblAnzeigeRechts.RootElement.AccessibleDescription")
-        Me.lblAnzeigeRechts.RootElement.AccessibleName = resources.GetString("lblAnzeigeRechts.RootElement.AccessibleName")
-        Me.lblAnzeigeRechts.RootElement.Alignment = CType(resources.GetObject("lblAnzeigeRechts.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblAnzeigeRechts.RootElement.AngleTransform = CType(resources.GetObject("lblAnzeigeRechts.RootElement.AngleTransform"), Single)
-        Me.lblAnzeigeRechts.RootElement.FlipText = CType(resources.GetObject("lblAnzeigeRechts.RootElement.FlipText"), Boolean)
-        Me.lblAnzeigeRechts.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.lblAnzeigeRechts.RootElement.Margin = CType(resources.GetObject("lblAnzeigeRechts.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblAnzeigeRechts.RootElement.Text = resources.GetString("lblAnzeigeRechts.RootElement.Text")
-        Me.lblAnzeigeRechts.RootElement.TextOrientation = CType(resources.GetObject("lblAnzeigeRechts.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblAnzeigeRechts.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.lblAnzeigeRechts.RootElement.AccessibleDescription = Nothing
+        Me.lblAnzeigeRechts.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlAnzeigeRechts1
         '
         resources.ApplyResources(Me.RadTextBoxControlAnzeigeRechts1, "RadTextBoxControlAnzeigeRechts1")
         Me.RadTextBoxControlAnzeigeRechts1.MaxLength = 20
         Me.RadTextBoxControlAnzeigeRechts1.Name = "RadTextBoxControlAnzeigeRechts1"
-        Me.RadTextBoxControlAnzeigeRechts1.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         '
         '
-        Me.RadTextBoxControlAnzeigeRechts1.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlAnzeigeRechts1.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlAnzeigeRechts1.RootElement.AccessibleName = resources.GetString("RadTextBoxControlAnzeigeRechts1.RootElement.AccessibleName")
-        Me.RadTextBoxControlAnzeigeRechts1.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlAnzeigeRechts1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlAnzeigeRechts1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlAnzeigeRechts1.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlAnzeigeRechts1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlAnzeigeRechts1.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlAnzeigeRechts1.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadTextBoxControlAnzeigeRechts1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlAnzeigeRechts1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlAnzeigeRechts1.RootElement.Text = resources.GetString("RadTextBoxControlAnzeigeRechts1.RootElement.Text")
-        Me.RadTextBoxControlAnzeigeRechts1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlAnzeigeRechts1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlAnzeigeRechts1.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadTextBoxControlAnzeigeRechts1.Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadTextBoxControlAnzeigeRechts1.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlAnzeigeRechts1.RootElement.AccessibleName = Nothing
         '
         'lblFehlerRechts
         '
         resources.ApplyResources(Me.lblFehlerRechts, "lblFehlerRechts")
         Me.lblFehlerRechts.Controls.Add(Me.PictureBox1)
-        Me.lblFehlerRechts.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblFehlerRechts.Name = "lblFehlerRechts"
         '
         '
         '
-        Me.lblFehlerRechts.RootElement.AccessibleDescription = resources.GetString("lblFehlerRechts.RootElement.AccessibleDescription")
-        Me.lblFehlerRechts.RootElement.AccessibleName = resources.GetString("lblFehlerRechts.RootElement.AccessibleName")
-        Me.lblFehlerRechts.RootElement.Alignment = CType(resources.GetObject("lblFehlerRechts.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblFehlerRechts.RootElement.AngleTransform = CType(resources.GetObject("lblFehlerRechts.RootElement.AngleTransform"), Single)
-        Me.lblFehlerRechts.RootElement.FlipText = CType(resources.GetObject("lblFehlerRechts.RootElement.FlipText"), Boolean)
-        Me.lblFehlerRechts.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.lblFehlerRechts.RootElement.Margin = CType(resources.GetObject("lblFehlerRechts.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblFehlerRechts.RootElement.Text = resources.GetString("lblFehlerRechts.RootElement.Text")
-        Me.lblFehlerRechts.RootElement.TextOrientation = CType(resources.GetObject("lblFehlerRechts.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblFehlerRechts.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.lblFehlerRechts.RootElement.AccessibleDescription = Nothing
+        Me.lblFehlerRechts.RootElement.AccessibleName = Nothing
         '
         'PictureBox1
         '
-        resources.ApplyResources(Me.PictureBox1, "PictureBox1")
         Me.PictureBox1.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBox1, "PictureBox1")
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.TabStop = False
         '
@@ -1232,82 +845,43 @@ Partial Class uco13PruefungRollendeLasten
         resources.ApplyResources(Me.RadTextBoxControlLastRechts2, "RadTextBoxControlLastRechts2")
         Me.RadTextBoxControlLastRechts2.MaxLength = 20
         Me.RadTextBoxControlLastRechts2.Name = "RadTextBoxControlLastRechts2"
-        Me.RadTextBoxControlLastRechts2.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         '
         '
-        Me.RadTextBoxControlLastRechts2.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlLastRechts2.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlLastRechts2.RootElement.AccessibleName = resources.GetString("RadTextBoxControlLastRechts2.RootElement.AccessibleName")
-        Me.RadTextBoxControlLastRechts2.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlLastRechts2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlLastRechts2.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlLastRechts2.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlLastRechts2.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlLastRechts2.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlLastRechts2.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadTextBoxControlLastRechts2.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlLastRechts2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlLastRechts2.RootElement.Text = resources.GetString("RadTextBoxControlLastRechts2.RootElement.Text")
-        Me.RadTextBoxControlLastRechts2.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlLastRechts2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlLastRechts2.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadTextBoxControlLastRechts2.Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadTextBoxControlLastRechts2.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlLastRechts2.RootElement.AccessibleName = Nothing
         '
         'lblEFGRechts
         '
         resources.ApplyResources(Me.lblEFGRechts, "lblEFGRechts")
-        Me.lblEFGRechts.ImageKey = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblEFGRechts.Name = "lblEFGRechts"
         '
         '
         '
-        Me.lblEFGRechts.RootElement.AccessibleDescription = resources.GetString("lblEFGRechts.RootElement.AccessibleDescription")
-        Me.lblEFGRechts.RootElement.AccessibleName = resources.GetString("lblEFGRechts.RootElement.AccessibleName")
-        Me.lblEFGRechts.RootElement.Alignment = CType(resources.GetObject("lblEFGRechts.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblEFGRechts.RootElement.AngleTransform = CType(resources.GetObject("lblEFGRechts.RootElement.AngleTransform"), Single)
-        Me.lblEFGRechts.RootElement.FlipText = CType(resources.GetObject("lblEFGRechts.RootElement.FlipText"), Boolean)
-        Me.lblEFGRechts.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.lblEFGRechts.RootElement.Margin = CType(resources.GetObject("lblEFGRechts.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblEFGRechts.RootElement.Text = resources.GetString("lblEFGRechts.RootElement.Text")
-        Me.lblEFGRechts.RootElement.TextOrientation = CType(resources.GetObject("lblEFGRechts.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblEFGRechts.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.lblEFGRechts.RootElement.AccessibleDescription = Nothing
+        Me.lblEFGRechts.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlLastRechts3
         '
         resources.ApplyResources(Me.RadTextBoxControlLastRechts3, "RadTextBoxControlLastRechts3")
         Me.RadTextBoxControlLastRechts3.MaxLength = 20
         Me.RadTextBoxControlLastRechts3.Name = "RadTextBoxControlLastRechts3"
-        Me.RadTextBoxControlLastRechts3.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         '
         '
-        Me.RadTextBoxControlLastRechts3.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlLastRechts3.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlLastRechts3.RootElement.AccessibleName = resources.GetString("RadTextBoxControlLastRechts3.RootElement.AccessibleName")
-        Me.RadTextBoxControlLastRechts3.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlLastRechts3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlLastRechts3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlLastRechts3.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlLastRechts3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlLastRechts3.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlLastRechts3.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadTextBoxControlLastRechts3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlLastRechts3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlLastRechts3.RootElement.Text = resources.GetString("RadTextBoxControlLastRechts3.RootElement.Text")
-        Me.RadTextBoxControlLastRechts3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlLastRechts3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlLastRechts3.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadTextBoxControlLastRechts3.Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadTextBoxControlLastRechts3.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlLastRechts3.RootElement.AccessibleName = Nothing
         '
         'lblEFGWertRechts
         '
         resources.ApplyResources(Me.lblEFGWertRechts, "lblEFGWertRechts")
-        Me.lblEFGWertRechts.Mask = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblEFGWertRechts.Name = "lblEFGWertRechts"
-        Me.lblEFGWertRechts.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         Me.lblEFGWertRechts.ReadOnly = True
         '
         '
         '
-        Me.lblEFGWertRechts.RootElement.AccessibleDescription = resources.GetString("lblEFGWertRechts.RootElement.AccessibleDescription")
-        Me.lblEFGWertRechts.RootElement.AccessibleName = resources.GetString("lblEFGWertRechts.RootElement.AccessibleName")
-        Me.lblEFGWertRechts.RootElement.Alignment = CType(resources.GetObject("lblEFGWertRechts.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblEFGWertRechts.RootElement.AngleTransform = CType(resources.GetObject("lblEFGWertRechts.RootElement.AngleTransform"), Single)
-        Me.lblEFGWertRechts.RootElement.FlipText = CType(resources.GetObject("lblEFGWertRechts.RootElement.FlipText"), Boolean)
-        Me.lblEFGWertRechts.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.lblEFGWertRechts.RootElement.Margin = CType(resources.GetObject("lblEFGWertRechts.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblEFGWertRechts.RootElement.Text = resources.GetString("lblEFGWertRechts.RootElement.Text")
-        Me.lblEFGWertRechts.RootElement.TextOrientation = CType(resources.GetObject("lblEFGWertRechts.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.lblEFGWertRechts.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.lblEFGWertRechts.RootElement.AccessibleDescription = Nothing
+        Me.lblEFGWertRechts.RootElement.AccessibleName = Nothing
         Me.lblEFGWertRechts.TabStop = False
         '
         'RadTextBoxControlLastRechts1
@@ -1315,21 +889,11 @@ Partial Class uco13PruefungRollendeLasten
         resources.ApplyResources(Me.RadTextBoxControlLastRechts1, "RadTextBoxControlLastRechts1")
         Me.RadTextBoxControlLastRechts1.MaxLength = 20
         Me.RadTextBoxControlLastRechts1.Name = "RadTextBoxControlLastRechts1"
-        Me.RadTextBoxControlLastRechts1.NullText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
         '
         '
         '
-        Me.RadTextBoxControlLastRechts1.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlLastRechts1.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlLastRechts1.RootElement.AccessibleName = resources.GetString("RadTextBoxControlLastRechts1.RootElement.AccessibleName")
-        Me.RadTextBoxControlLastRechts1.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlLastRechts1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlLastRechts1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlLastRechts1.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlLastRechts1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlLastRechts1.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlLastRechts1.RootElement.KeyTip = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadTextBoxControlLastRechts1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlLastRechts1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlLastRechts1.RootElement.Text = resources.GetString("RadTextBoxControlLastRechts1.RootElement.Text")
-        Me.RadTextBoxControlLastRechts1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlLastRechts1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
-        Me.RadTextBoxControlLastRechts1.RootElement.ToolTipText = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
-        Me.RadTextBoxControlLastRechts1.Text = Global.EichsoftwareClient.My.Resources.GlobaleLokalisierung.EichprotokollZuruecksenden
+        Me.RadTextBoxControlLastRechts1.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlLastRechts1.RootElement.AccessibleName = Nothing
         '
         'PanelContainer
         '
@@ -1340,6 +904,7 @@ Partial Class uco13PruefungRollendeLasten
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.RadScrollablePanel1)
+        Me.DoubleBuffered = True
         Me.Name = "uco13PruefungRollendeLasten"
         Me.RadScrollablePanel1.PanelContainer.ResumeLayout(False)
         Me.RadScrollablePanel1.PanelContainer.PerformLayout()

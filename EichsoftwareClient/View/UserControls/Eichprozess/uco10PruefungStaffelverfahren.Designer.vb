@@ -1133,14 +1133,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadScrollablePanel1.RootElement.AccessibleDescription = resources.GetString("RadScrollablePanel1.RootElement.AccessibleDescription")
-        Me.RadScrollablePanel1.RootElement.AccessibleName = resources.GetString("RadScrollablePanel1.RootElement.AccessibleName")
-        Me.RadScrollablePanel1.RootElement.Alignment = CType(resources.GetObject("RadScrollablePanel1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadScrollablePanel1.RootElement.AngleTransform = CType(resources.GetObject("RadScrollablePanel1.RootElement.AngleTransform"), Single)
-        Me.RadScrollablePanel1.RootElement.FlipText = CType(resources.GetObject("RadScrollablePanel1.RootElement.FlipText"), Boolean)
-        Me.RadScrollablePanel1.RootElement.Margin = CType(resources.GetObject("RadScrollablePanel1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadScrollablePanel1.RootElement.Text = resources.GetString("RadScrollablePanel1.RootElement.Text")
-        Me.RadScrollablePanel1.RootElement.TextOrientation = CType(resources.GetObject("RadScrollablePanel1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadScrollablePanel1.RootElement.AccessibleDescription = Nothing
+        Me.RadScrollablePanel1.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxStaffel5
         '
@@ -1153,14 +1147,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadGroupBoxStaffel5.RootElement.AccessibleDescription = resources.GetString("RadGroupBoxStaffel5.RootElement.AccessibleDescription")
-        Me.RadGroupBoxStaffel5.RootElement.AccessibleName = resources.GetString("RadGroupBoxStaffel5.RootElement.AccessibleName")
-        Me.RadGroupBoxStaffel5.RootElement.Alignment = CType(resources.GetObject("RadGroupBoxStaffel5.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadGroupBoxStaffel5.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBoxStaffel5.RootElement.AngleTransform"), Single)
-        Me.RadGroupBoxStaffel5.RootElement.FlipText = CType(resources.GetObject("RadGroupBoxStaffel5.RootElement.FlipText"), Boolean)
-        Me.RadGroupBoxStaffel5.RootElement.Margin = CType(resources.GetObject("RadGroupBoxStaffel5.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadGroupBoxStaffel5.RootElement.Text = resources.GetString("RadGroupBoxStaffel5.RootElement.Text")
-        Me.RadGroupBoxStaffel5.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxStaffel5.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadGroupBoxStaffel5.RootElement.AccessibleDescription = Nothing
+        Me.RadGroupBoxStaffel5.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxStaffel5Bereich3
         '
@@ -1202,14 +1190,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadGroupBoxStaffel5Bereich3.RootElement.AccessibleDescription = resources.GetString("RadGroupBoxStaffel5Bereich3.RootElement.AccessibleDescription")
-        Me.RadGroupBoxStaffel5Bereich3.RootElement.AccessibleName = resources.GetString("RadGroupBoxStaffel5Bereich3.RootElement.AccessibleName")
-        Me.RadGroupBoxStaffel5Bereich3.RootElement.Alignment = CType(resources.GetObject("RadGroupBoxStaffel5Bereich3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadGroupBoxStaffel5Bereich3.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBoxStaffel5Bereich3.RootElement.AngleTransform"), Single)
-        Me.RadGroupBoxStaffel5Bereich3.RootElement.FlipText = CType(resources.GetObject("RadGroupBoxStaffel5Bereich3.RootElement.FlipText"), Boolean)
-        Me.RadGroupBoxStaffel5Bereich3.RootElement.Margin = CType(resources.GetObject("RadGroupBoxStaffel5Bereich3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadGroupBoxStaffel5Bereich3.RootElement.Text = resources.GetString("RadGroupBoxStaffel5Bereich3.RootElement.Text")
-        Me.RadGroupBoxStaffel5Bereich3.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxStaffel5Bereich3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadGroupBoxStaffel5Bereich3.RootElement.AccessibleDescription = Nothing
+        Me.RadGroupBoxStaffel5Bereich3.RootElement.AccessibleName = Nothing
         '
         'PictureBox124
         '
@@ -1253,14 +1235,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel5Bereich3ErsatzLastUnten.RootElement.AccessibleDescription = resources.GetString("lblStaffel5Bereich3ErsatzLastUnten.RootElement.AccessibleDescription")
-        Me.lblStaffel5Bereich3ErsatzLastUnten.RootElement.AccessibleName = resources.GetString("lblStaffel5Bereich3ErsatzLastUnten.RootElement.AccessibleName")
-        Me.lblStaffel5Bereich3ErsatzLastUnten.RootElement.Alignment = CType(resources.GetObject("lblStaffel5Bereich3ErsatzLastUnten.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel5Bereich3ErsatzLastUnten.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel5Bereich3ErsatzLastUnten.RootElement.AngleTransform"), Single)
-        Me.lblStaffel5Bereich3ErsatzLastUnten.RootElement.FlipText = CType(resources.GetObject("lblStaffel5Bereich3ErsatzLastUnten.RootElement.FlipText"), Boolean)
-        Me.lblStaffel5Bereich3ErsatzLastUnten.RootElement.Margin = CType(resources.GetObject("lblStaffel5Bereich3ErsatzLastUnten.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel5Bereich3ErsatzLastUnten.RootElement.Text = resources.GetString("lblStaffel5Bereich3ErsatzLastUnten.RootElement.Text")
-        Me.lblStaffel5Bereich3ErsatzLastUnten.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel5Bereich3ErsatzLastUnten.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel5Bereich3ErsatzLastUnten.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel5Bereich3ErsatzLastUnten.RootElement.AccessibleName = Nothing
         '
         'lblStaffel5Bereich3ErsatzLastOben
         '
@@ -1269,14 +1245,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel5Bereich3ErsatzLastOben.RootElement.AccessibleDescription = resources.GetString("lblStaffel5Bereich3ErsatzLastOben.RootElement.AccessibleDescription")
-        Me.lblStaffel5Bereich3ErsatzLastOben.RootElement.AccessibleName = resources.GetString("lblStaffel5Bereich3ErsatzLastOben.RootElement.AccessibleName")
-        Me.lblStaffel5Bereich3ErsatzLastOben.RootElement.Alignment = CType(resources.GetObject("lblStaffel5Bereich3ErsatzLastOben.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel5Bereich3ErsatzLastOben.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel5Bereich3ErsatzLastOben.RootElement.AngleTransform"), Single)
-        Me.lblStaffel5Bereich3ErsatzLastOben.RootElement.FlipText = CType(resources.GetObject("lblStaffel5Bereich3ErsatzLastOben.RootElement.FlipText"), Boolean)
-        Me.lblStaffel5Bereich3ErsatzLastOben.RootElement.Margin = CType(resources.GetObject("lblStaffel5Bereich3ErsatzLastOben.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel5Bereich3ErsatzLastOben.RootElement.Text = resources.GetString("lblStaffel5Bereich3ErsatzLastOben.RootElement.Text")
-        Me.lblStaffel5Bereich3ErsatzLastOben.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel5Bereich3ErsatzLastOben.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel5Bereich3ErsatzLastOben.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel5Bereich3ErsatzLastOben.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel5Bereich3Fehler7
         '
@@ -1285,14 +1255,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel5Bereich3Fehler7.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel5Bereich3Fehler7.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel5Bereich3Fehler7.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel5Bereich3Fehler7.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel5Bereich3Fehler7.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Fehler7.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel5Bereich3Fehler7.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Fehler7.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel5Bereich3Fehler7.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Fehler7.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel5Bereich3Fehler7.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Fehler7.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel5Bereich3Fehler7.RootElement.Text = resources.GetString("RadTextBoxControlStaffel5Bereich3Fehler7.RootElement.Text")
-        Me.RadTextBoxControlStaffel5Bereich3Fehler7.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Fehler7.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel5Bereich3Fehler7.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel5Bereich3Fehler7.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel5Bereich3Fehler7.TabStop = False
         '
         'RadTextBoxControlStaffel5Bereich3Fehler6
@@ -1302,14 +1266,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel5Bereich3Fehler6.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel5Bereich3Fehler6.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel5Bereich3Fehler6.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel5Bereich3Fehler6.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel5Bereich3Fehler6.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Fehler6.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel5Bereich3Fehler6.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Fehler6.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel5Bereich3Fehler6.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Fehler6.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel5Bereich3Fehler6.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Fehler6.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel5Bereich3Fehler6.RootElement.Text = resources.GetString("RadTextBoxControlStaffel5Bereich3Fehler6.RootElement.Text")
-        Me.RadTextBoxControlStaffel5Bereich3Fehler6.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Fehler6.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel5Bereich3Fehler6.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel5Bereich3Fehler6.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel5Bereich3Fehler6.TabStop = False
         '
         'RadTextBoxControlStaffel5Bereich3Fehler5
@@ -1319,14 +1277,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel5Bereich3Fehler5.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel5Bereich3Fehler5.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel5Bereich3Fehler5.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel5Bereich3Fehler5.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel5Bereich3Fehler5.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Fehler5.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel5Bereich3Fehler5.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Fehler5.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel5Bereich3Fehler5.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Fehler5.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel5Bereich3Fehler5.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Fehler5.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel5Bereich3Fehler5.RootElement.Text = resources.GetString("RadTextBoxControlStaffel5Bereich3Fehler5.RootElement.Text")
-        Me.RadTextBoxControlStaffel5Bereich3Fehler5.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Fehler5.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel5Bereich3Fehler5.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel5Bereich3Fehler5.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel5Bereich3Fehler5.TabStop = False
         '
         'RadTextBoxControlStaffel5Bereich3Last4
@@ -1336,14 +1288,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel5Bereich3Last4.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel5Bereich3Last4.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel5Bereich3Last4.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel5Bereich3Last4.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel5Bereich3Last4.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Last4.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel5Bereich3Last4.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Last4.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel5Bereich3Last4.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Last4.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel5Bereich3Last4.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Last4.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel5Bereich3Last4.RootElement.Text = resources.GetString("RadTextBoxControlStaffel5Bereich3Last4.RootElement.Text")
-        Me.RadTextBoxControlStaffel5Bereich3Last4.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Last4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel5Bereich3Last4.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel5Bereich3Last4.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel5Bereich3Last4.TabStop = False
         '
         'RadTextBoxControlStaffel5Bereich3Anzeige4
@@ -1353,14 +1299,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel5Bereich3Anzeige4.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel5Bereich3Anzeige4.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel5Bereich3Anzeige4.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel5Bereich3Anzeige4.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel5Bereich3Anzeige4.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Anzeige4.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel5Bereich3Anzeige4.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Anzeige4.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel5Bereich3Anzeige4.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Anzeige4.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel5Bereich3Anzeige4.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Anzeige4.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel5Bereich3Anzeige4.RootElement.Text = resources.GetString("RadTextBoxControlStaffel5Bereich3Anzeige4.RootElement.Text")
-        Me.RadTextBoxControlStaffel5Bereich3Anzeige4.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Anzeige4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel5Bereich3Anzeige4.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel5Bereich3Anzeige4.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel5Bereich3Anzeige3
         '
@@ -1369,14 +1309,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel5Bereich3Anzeige3.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel5Bereich3Anzeige3.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel5Bereich3Anzeige3.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel5Bereich3Anzeige3.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel5Bereich3Anzeige3.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Anzeige3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel5Bereich3Anzeige3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Anzeige3.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel5Bereich3Anzeige3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Anzeige3.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel5Bereich3Anzeige3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Anzeige3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel5Bereich3Anzeige3.RootElement.Text = resources.GetString("RadTextBoxControlStaffel5Bereich3Anzeige3.RootElement.Text")
-        Me.RadTextBoxControlStaffel5Bereich3Anzeige3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Anzeige3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel5Bereich3Anzeige3.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel5Bereich3Anzeige3.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel5Bereich3Last3
         '
@@ -1385,14 +1319,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel5Bereich3Last3.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel5Bereich3Last3.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel5Bereich3Last3.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel5Bereich3Last3.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel5Bereich3Last3.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Last3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel5Bereich3Last3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Last3.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel5Bereich3Last3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Last3.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel5Bereich3Last3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Last3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel5Bereich3Last3.RootElement.Text = resources.GetString("RadTextBoxControlStaffel5Bereich3Last3.RootElement.Text")
-        Me.RadTextBoxControlStaffel5Bereich3Last3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Last3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel5Bereich3Last3.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel5Bereich3Last3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel5Bereich3Last3.TabStop = False
         '
         'RadTextBoxControlStaffel5Bereich3Last2
@@ -1402,14 +1330,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel5Bereich3Last2.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel5Bereich3Last2.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel5Bereich3Last2.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel5Bereich3Last2.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel5Bereich3Last2.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Last2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel5Bereich3Last2.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Last2.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel5Bereich3Last2.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Last2.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel5Bereich3Last2.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Last2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel5Bereich3Last2.RootElement.Text = resources.GetString("RadTextBoxControlStaffel5Bereich3Last2.RootElement.Text")
-        Me.RadTextBoxControlStaffel5Bereich3Last2.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Last2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel5Bereich3Last2.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel5Bereich3Last2.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel5Bereich3Anzeige1
         '
@@ -1418,14 +1340,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel5Bereich3Anzeige1.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel5Bereich3Anzeige1.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel5Bereich3Anzeige1.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel5Bereich3Anzeige1.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel5Bereich3Anzeige1.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Anzeige1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel5Bereich3Anzeige1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Anzeige1.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel5Bereich3Anzeige1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Anzeige1.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel5Bereich3Anzeige1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Anzeige1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel5Bereich3Anzeige1.RootElement.Text = resources.GetString("RadTextBoxControlStaffel5Bereich3Anzeige1.RootElement.Text")
-        Me.RadTextBoxControlStaffel5Bereich3Anzeige1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Anzeige1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel5Bereich3Anzeige1.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel5Bereich3Anzeige1.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel5Bereich3Last1
         '
@@ -1434,14 +1350,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel5Bereich3Last1.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel5Bereich3Last1.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel5Bereich3Last1.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel5Bereich3Last1.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel5Bereich3Last1.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Last1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel5Bereich3Last1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Last1.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel5Bereich3Last1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Last1.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel5Bereich3Last1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Last1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel5Bereich3Last1.RootElement.Text = resources.GetString("RadTextBoxControlStaffel5Bereich3Last1.RootElement.Text")
-        Me.RadTextBoxControlStaffel5Bereich3Last1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich3Last1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel5Bereich3Last1.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel5Bereich3Last1.RootElement.AccessibleName = Nothing
         '
         'lblStaffel5Bereich3MessabweichungWaage
         '
@@ -1450,14 +1360,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel5Bereich3MessabweichungWaage.RootElement.AccessibleDescription = resources.GetString("lblStaffel5Bereich3MessabweichungWaage.RootElement.AccessibleDescription")
-        Me.lblStaffel5Bereich3MessabweichungWaage.RootElement.AccessibleName = resources.GetString("lblStaffel5Bereich3MessabweichungWaage.RootElement.AccessibleName")
-        Me.lblStaffel5Bereich3MessabweichungWaage.RootElement.Alignment = CType(resources.GetObject("lblStaffel5Bereich3MessabweichungWaage.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel5Bereich3MessabweichungWaage.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel5Bereich3MessabweichungWaage.RootElement.AngleTransform"), Single)
-        Me.lblStaffel5Bereich3MessabweichungWaage.RootElement.FlipText = CType(resources.GetObject("lblStaffel5Bereich3MessabweichungWaage.RootElement.FlipText"), Boolean)
-        Me.lblStaffel5Bereich3MessabweichungWaage.RootElement.Margin = CType(resources.GetObject("lblStaffel5Bereich3MessabweichungWaage.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel5Bereich3MessabweichungWaage.RootElement.Text = resources.GetString("lblStaffel5Bereich3MessabweichungWaage.RootElement.Text")
-        Me.lblStaffel5Bereich3MessabweichungWaage.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel5Bereich3MessabweichungWaage.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel5Bereich3MessabweichungWaage.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel5Bereich3MessabweichungWaage.RootElement.AccessibleName = Nothing
         '
         'lblStaffel5Bereich3MessabweichungStaffel
         '
@@ -1466,14 +1370,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel5Bereich3MessabweichungStaffel.RootElement.AccessibleDescription = resources.GetString("lblStaffel5Bereich3MessabweichungStaffel.RootElement.AccessibleDescription")
-        Me.lblStaffel5Bereich3MessabweichungStaffel.RootElement.AccessibleName = resources.GetString("lblStaffel5Bereich3MessabweichungStaffel.RootElement.AccessibleName")
-        Me.lblStaffel5Bereich3MessabweichungStaffel.RootElement.Alignment = CType(resources.GetObject("lblStaffel5Bereich3MessabweichungStaffel.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel5Bereich3MessabweichungStaffel.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel5Bereich3MessabweichungStaffel.RootElement.AngleTransform"), Single)
-        Me.lblStaffel5Bereich3MessabweichungStaffel.RootElement.FlipText = CType(resources.GetObject("lblStaffel5Bereich3MessabweichungStaffel.RootElement.FlipText"), Boolean)
-        Me.lblStaffel5Bereich3MessabweichungStaffel.RootElement.Margin = CType(resources.GetObject("lblStaffel5Bereich3MessabweichungStaffel.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel5Bereich3MessabweichungStaffel.RootElement.Text = resources.GetString("lblStaffel5Bereich3MessabweichungStaffel.RootElement.Text")
-        Me.lblStaffel5Bereich3MessabweichungStaffel.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel5Bereich3MessabweichungStaffel.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel5Bereich3MessabweichungStaffel.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel5Bereich3MessabweichungStaffel.RootElement.AccessibleName = Nothing
         '
         'lblStaffel5Bereich3Differenz
         '
@@ -1482,14 +1380,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel5Bereich3Differenz.RootElement.AccessibleDescription = resources.GetString("lblStaffel5Bereich3Differenz.RootElement.AccessibleDescription")
-        Me.lblStaffel5Bereich3Differenz.RootElement.AccessibleName = resources.GetString("lblStaffel5Bereich3Differenz.RootElement.AccessibleName")
-        Me.lblStaffel5Bereich3Differenz.RootElement.Alignment = CType(resources.GetObject("lblStaffel5Bereich3Differenz.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel5Bereich3Differenz.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel5Bereich3Differenz.RootElement.AngleTransform"), Single)
-        Me.lblStaffel5Bereich3Differenz.RootElement.FlipText = CType(resources.GetObject("lblStaffel5Bereich3Differenz.RootElement.FlipText"), Boolean)
-        Me.lblStaffel5Bereich3Differenz.RootElement.Margin = CType(resources.GetObject("lblStaffel5Bereich3Differenz.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel5Bereich3Differenz.RootElement.Text = resources.GetString("lblStaffel5Bereich3Differenz.RootElement.Text")
-        Me.lblStaffel5Bereich3Differenz.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel5Bereich3Differenz.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel5Bereich3Differenz.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel5Bereich3Differenz.RootElement.AccessibleName = Nothing
         '
         'lblStaffel5Bereich3ZusastzNormalLast
         '
@@ -1498,14 +1390,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel5Bereich3ZusastzNormalLast.RootElement.AccessibleDescription = resources.GetString("lblStaffel5Bereich3ZusastzNormalLast.RootElement.AccessibleDescription")
-        Me.lblStaffel5Bereich3ZusastzNormalLast.RootElement.AccessibleName = resources.GetString("lblStaffel5Bereich3ZusastzNormalLast.RootElement.AccessibleName")
-        Me.lblStaffel5Bereich3ZusastzNormalLast.RootElement.Alignment = CType(resources.GetObject("lblStaffel5Bereich3ZusastzNormalLast.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel5Bereich3ZusastzNormalLast.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel5Bereich3ZusastzNormalLast.RootElement.AngleTransform"), Single)
-        Me.lblStaffel5Bereich3ZusastzNormalLast.RootElement.FlipText = CType(resources.GetObject("lblStaffel5Bereich3ZusastzNormalLast.RootElement.FlipText"), Boolean)
-        Me.lblStaffel5Bereich3ZusastzNormalLast.RootElement.Margin = CType(resources.GetObject("lblStaffel5Bereich3ZusastzNormalLast.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel5Bereich3ZusastzNormalLast.RootElement.Text = resources.GetString("lblStaffel5Bereich3ZusastzNormalLast.RootElement.Text")
-        Me.lblStaffel5Bereich3ZusastzNormalLast.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel5Bereich3ZusastzNormalLast.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel5Bereich3ZusastzNormalLast.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel5Bereich3ZusastzNormalLast.RootElement.AccessibleName = Nothing
         '
         'lblStaffel5Bereich3NormalLast
         '
@@ -1514,14 +1400,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel5Bereich3NormalLast.RootElement.AccessibleDescription = resources.GetString("lblStaffel5Bereich3NormalLast.RootElement.AccessibleDescription")
-        Me.lblStaffel5Bereich3NormalLast.RootElement.AccessibleName = resources.GetString("lblStaffel5Bereich3NormalLast.RootElement.AccessibleName")
-        Me.lblStaffel5Bereich3NormalLast.RootElement.Alignment = CType(resources.GetObject("lblStaffel5Bereich3NormalLast.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel5Bereich3NormalLast.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel5Bereich3NormalLast.RootElement.AngleTransform"), Single)
-        Me.lblStaffel5Bereich3NormalLast.RootElement.FlipText = CType(resources.GetObject("lblStaffel5Bereich3NormalLast.RootElement.FlipText"), Boolean)
-        Me.lblStaffel5Bereich3NormalLast.RootElement.Margin = CType(resources.GetObject("lblStaffel5Bereich3NormalLast.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel5Bereich3NormalLast.RootElement.Text = resources.GetString("lblStaffel5Bereich3NormalLast.RootElement.Text")
-        Me.lblStaffel5Bereich3NormalLast.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel5Bereich3NormalLast.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel5Bereich3NormalLast.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel5Bereich3NormalLast.RootElement.AccessibleName = Nothing
         '
         'PictureBox85
         '
@@ -1552,14 +1432,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel5Bereich3EFGWert7.RootElement.AccessibleDescription = resources.GetString("lblStaffel5Bereich3EFGWert7.RootElement.AccessibleDescription")
-        Me.lblStaffel5Bereich3EFGWert7.RootElement.AccessibleName = resources.GetString("lblStaffel5Bereich3EFGWert7.RootElement.AccessibleName")
-        Me.lblStaffel5Bereich3EFGWert7.RootElement.Alignment = CType(resources.GetObject("lblStaffel5Bereich3EFGWert7.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel5Bereich3EFGWert7.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel5Bereich3EFGWert7.RootElement.AngleTransform"), Single)
-        Me.lblStaffel5Bereich3EFGWert7.RootElement.FlipText = CType(resources.GetObject("lblStaffel5Bereich3EFGWert7.RootElement.FlipText"), Boolean)
-        Me.lblStaffel5Bereich3EFGWert7.RootElement.Margin = CType(resources.GetObject("lblStaffel5Bereich3EFGWert7.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel5Bereich3EFGWert7.RootElement.Text = resources.GetString("lblStaffel5Bereich3EFGWert7.RootElement.Text")
-        Me.lblStaffel5Bereich3EFGWert7.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel5Bereich3EFGWert7.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel5Bereich3EFGWert7.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel5Bereich3EFGWert7.RootElement.AccessibleName = Nothing
         Me.lblStaffel5Bereich3EFGWert7.TabStop = False
         '
         'lblStaffel5Bereich3EFGWert6
@@ -1570,14 +1444,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel5Bereich3EFGWert6.RootElement.AccessibleDescription = resources.GetString("lblStaffel5Bereich3EFGWert6.RootElement.AccessibleDescription")
-        Me.lblStaffel5Bereich3EFGWert6.RootElement.AccessibleName = resources.GetString("lblStaffel5Bereich3EFGWert6.RootElement.AccessibleName")
-        Me.lblStaffel5Bereich3EFGWert6.RootElement.Alignment = CType(resources.GetObject("lblStaffel5Bereich3EFGWert6.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel5Bereich3EFGWert6.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel5Bereich3EFGWert6.RootElement.AngleTransform"), Single)
-        Me.lblStaffel5Bereich3EFGWert6.RootElement.FlipText = CType(resources.GetObject("lblStaffel5Bereich3EFGWert6.RootElement.FlipText"), Boolean)
-        Me.lblStaffel5Bereich3EFGWert6.RootElement.Margin = CType(resources.GetObject("lblStaffel5Bereich3EFGWert6.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel5Bereich3EFGWert6.RootElement.Text = resources.GetString("lblStaffel5Bereich3EFGWert6.RootElement.Text")
-        Me.lblStaffel5Bereich3EFGWert6.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel5Bereich3EFGWert6.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel5Bereich3EFGWert6.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel5Bereich3EFGWert6.RootElement.AccessibleName = Nothing
         Me.lblStaffel5Bereich3EFGWert6.TabStop = False
         '
         'lblStaffel5Bereich3EFGWert5
@@ -1588,14 +1456,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel5Bereich3EFGWert5.RootElement.AccessibleDescription = resources.GetString("lblStaffel5Bereich3EFGWert5.RootElement.AccessibleDescription")
-        Me.lblStaffel5Bereich3EFGWert5.RootElement.AccessibleName = resources.GetString("lblStaffel5Bereich3EFGWert5.RootElement.AccessibleName")
-        Me.lblStaffel5Bereich3EFGWert5.RootElement.Alignment = CType(resources.GetObject("lblStaffel5Bereich3EFGWert5.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel5Bereich3EFGWert5.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel5Bereich3EFGWert5.RootElement.AngleTransform"), Single)
-        Me.lblStaffel5Bereich3EFGWert5.RootElement.FlipText = CType(resources.GetObject("lblStaffel5Bereich3EFGWert5.RootElement.FlipText"), Boolean)
-        Me.lblStaffel5Bereich3EFGWert5.RootElement.Margin = CType(resources.GetObject("lblStaffel5Bereich3EFGWert5.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel5Bereich3EFGWert5.RootElement.Text = resources.GetString("lblStaffel5Bereich3EFGWert5.RootElement.Text")
-        Me.lblStaffel5Bereich3EFGWert5.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel5Bereich3EFGWert5.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel5Bereich3EFGWert5.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel5Bereich3EFGWert5.RootElement.AccessibleName = Nothing
         Me.lblStaffel5Bereich3EFGWert5.TabStop = False
         '
         'lblStaffel5Bereich3EFG
@@ -1605,14 +1467,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel5Bereich3EFG.RootElement.AccessibleDescription = resources.GetString("lblStaffel5Bereich3EFG.RootElement.AccessibleDescription")
-        Me.lblStaffel5Bereich3EFG.RootElement.AccessibleName = resources.GetString("lblStaffel5Bereich3EFG.RootElement.AccessibleName")
-        Me.lblStaffel5Bereich3EFG.RootElement.Alignment = CType(resources.GetObject("lblStaffel5Bereich3EFG.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel5Bereich3EFG.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel5Bereich3EFG.RootElement.AngleTransform"), Single)
-        Me.lblStaffel5Bereich3EFG.RootElement.FlipText = CType(resources.GetObject("lblStaffel5Bereich3EFG.RootElement.FlipText"), Boolean)
-        Me.lblStaffel5Bereich3EFG.RootElement.Margin = CType(resources.GetObject("lblStaffel5Bereich3EFG.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel5Bereich3EFG.RootElement.Text = resources.GetString("lblStaffel5Bereich3EFG.RootElement.Text")
-        Me.lblStaffel5Bereich3EFG.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel5Bereich3EFG.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel5Bereich3EFG.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel5Bereich3EFG.RootElement.AccessibleName = Nothing
         '
         'lblStaffel5Bereich3Fehler
         '
@@ -1621,14 +1477,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel5Bereich3Fehler.RootElement.AccessibleDescription = resources.GetString("lblStaffel5Bereich3Fehler.RootElement.AccessibleDescription")
-        Me.lblStaffel5Bereich3Fehler.RootElement.AccessibleName = resources.GetString("lblStaffel5Bereich3Fehler.RootElement.AccessibleName")
-        Me.lblStaffel5Bereich3Fehler.RootElement.Alignment = CType(resources.GetObject("lblStaffel5Bereich3Fehler.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel5Bereich3Fehler.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel5Bereich3Fehler.RootElement.AngleTransform"), Single)
-        Me.lblStaffel5Bereich3Fehler.RootElement.FlipText = CType(resources.GetObject("lblStaffel5Bereich3Fehler.RootElement.FlipText"), Boolean)
-        Me.lblStaffel5Bereich3Fehler.RootElement.Margin = CType(resources.GetObject("lblStaffel5Bereich3Fehler.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel5Bereich3Fehler.RootElement.Text = resources.GetString("lblStaffel5Bereich3Fehler.RootElement.Text")
-        Me.lblStaffel5Bereich3Fehler.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel5Bereich3Fehler.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel5Bereich3Fehler.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel5Bereich3Fehler.RootElement.AccessibleName = Nothing
         '
         'lblStaffel5Bereich3Anzeige
         '
@@ -1637,14 +1487,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel5Bereich3Anzeige.RootElement.AccessibleDescription = resources.GetString("lblStaffel5Bereich3Anzeige.RootElement.AccessibleDescription")
-        Me.lblStaffel5Bereich3Anzeige.RootElement.AccessibleName = resources.GetString("lblStaffel5Bereich3Anzeige.RootElement.AccessibleName")
-        Me.lblStaffel5Bereich3Anzeige.RootElement.Alignment = CType(resources.GetObject("lblStaffel5Bereich3Anzeige.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel5Bereich3Anzeige.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel5Bereich3Anzeige.RootElement.AngleTransform"), Single)
-        Me.lblStaffel5Bereich3Anzeige.RootElement.FlipText = CType(resources.GetObject("lblStaffel5Bereich3Anzeige.RootElement.FlipText"), Boolean)
-        Me.lblStaffel5Bereich3Anzeige.RootElement.Margin = CType(resources.GetObject("lblStaffel5Bereich3Anzeige.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel5Bereich3Anzeige.RootElement.Text = resources.GetString("lblStaffel5Bereich3Anzeige.RootElement.Text")
-        Me.lblStaffel5Bereich3Anzeige.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel5Bereich3Anzeige.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel5Bereich3Anzeige.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel5Bereich3Anzeige.RootElement.AccessibleName = Nothing
         '
         'lblStaffel5Bereich3Last
         '
@@ -1653,14 +1497,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel5Bereich3Last.RootElement.AccessibleDescription = resources.GetString("lblStaffel5Bereich3Last.RootElement.AccessibleDescription")
-        Me.lblStaffel5Bereich3Last.RootElement.AccessibleName = resources.GetString("lblStaffel5Bereich3Last.RootElement.AccessibleName")
-        Me.lblStaffel5Bereich3Last.RootElement.Alignment = CType(resources.GetObject("lblStaffel5Bereich3Last.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel5Bereich3Last.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel5Bereich3Last.RootElement.AngleTransform"), Single)
-        Me.lblStaffel5Bereich3Last.RootElement.FlipText = CType(resources.GetObject("lblStaffel5Bereich3Last.RootElement.FlipText"), Boolean)
-        Me.lblStaffel5Bereich3Last.RootElement.Margin = CType(resources.GetObject("lblStaffel5Bereich3Last.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel5Bereich3Last.RootElement.Text = resources.GetString("lblStaffel5Bereich3Last.RootElement.Text")
-        Me.lblStaffel5Bereich3Last.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel5Bereich3Last.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel5Bereich3Last.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel5Bereich3Last.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxStaffel5Bereich2
         '
@@ -1702,14 +1540,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadGroupBoxStaffel5Bereich2.RootElement.AccessibleDescription = resources.GetString("RadGroupBoxStaffel5Bereich2.RootElement.AccessibleDescription")
-        Me.RadGroupBoxStaffel5Bereich2.RootElement.AccessibleName = resources.GetString("RadGroupBoxStaffel5Bereich2.RootElement.AccessibleName")
-        Me.RadGroupBoxStaffel5Bereich2.RootElement.Alignment = CType(resources.GetObject("RadGroupBoxStaffel5Bereich2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadGroupBoxStaffel5Bereich2.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBoxStaffel5Bereich2.RootElement.AngleTransform"), Single)
-        Me.RadGroupBoxStaffel5Bereich2.RootElement.FlipText = CType(resources.GetObject("RadGroupBoxStaffel5Bereich2.RootElement.FlipText"), Boolean)
-        Me.RadGroupBoxStaffel5Bereich2.RootElement.Margin = CType(resources.GetObject("RadGroupBoxStaffel5Bereich2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadGroupBoxStaffel5Bereich2.RootElement.Text = resources.GetString("RadGroupBoxStaffel5Bereich2.RootElement.Text")
-        Me.RadGroupBoxStaffel5Bereich2.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxStaffel5Bereich2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadGroupBoxStaffel5Bereich2.RootElement.AccessibleDescription = Nothing
+        Me.RadGroupBoxStaffel5Bereich2.RootElement.AccessibleName = Nothing
         '
         'PictureBox127
         '
@@ -1753,14 +1585,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel5Bereich2ErsatzLastUnten.RootElement.AccessibleDescription = resources.GetString("lblStaffel5Bereich2ErsatzLastUnten.RootElement.AccessibleDescription")
-        Me.lblStaffel5Bereich2ErsatzLastUnten.RootElement.AccessibleName = resources.GetString("lblStaffel5Bereich2ErsatzLastUnten.RootElement.AccessibleName")
-        Me.lblStaffel5Bereich2ErsatzLastUnten.RootElement.Alignment = CType(resources.GetObject("lblStaffel5Bereich2ErsatzLastUnten.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel5Bereich2ErsatzLastUnten.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel5Bereich2ErsatzLastUnten.RootElement.AngleTransform"), Single)
-        Me.lblStaffel5Bereich2ErsatzLastUnten.RootElement.FlipText = CType(resources.GetObject("lblStaffel5Bereich2ErsatzLastUnten.RootElement.FlipText"), Boolean)
-        Me.lblStaffel5Bereich2ErsatzLastUnten.RootElement.Margin = CType(resources.GetObject("lblStaffel5Bereich2ErsatzLastUnten.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel5Bereich2ErsatzLastUnten.RootElement.Text = resources.GetString("lblStaffel5Bereich2ErsatzLastUnten.RootElement.Text")
-        Me.lblStaffel5Bereich2ErsatzLastUnten.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel5Bereich2ErsatzLastUnten.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel5Bereich2ErsatzLastUnten.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel5Bereich2ErsatzLastUnten.RootElement.AccessibleName = Nothing
         '
         'lblStaffel5Bereich2ErsatzLastOben
         '
@@ -1769,14 +1595,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel5Bereich2ErsatzLastOben.RootElement.AccessibleDescription = resources.GetString("lblStaffel5Bereich2ErsatzLastOben.RootElement.AccessibleDescription")
-        Me.lblStaffel5Bereich2ErsatzLastOben.RootElement.AccessibleName = resources.GetString("lblStaffel5Bereich2ErsatzLastOben.RootElement.AccessibleName")
-        Me.lblStaffel5Bereich2ErsatzLastOben.RootElement.Alignment = CType(resources.GetObject("lblStaffel5Bereich2ErsatzLastOben.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel5Bereich2ErsatzLastOben.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel5Bereich2ErsatzLastOben.RootElement.AngleTransform"), Single)
-        Me.lblStaffel5Bereich2ErsatzLastOben.RootElement.FlipText = CType(resources.GetObject("lblStaffel5Bereich2ErsatzLastOben.RootElement.FlipText"), Boolean)
-        Me.lblStaffel5Bereich2ErsatzLastOben.RootElement.Margin = CType(resources.GetObject("lblStaffel5Bereich2ErsatzLastOben.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel5Bereich2ErsatzLastOben.RootElement.Text = resources.GetString("lblStaffel5Bereich2ErsatzLastOben.RootElement.Text")
-        Me.lblStaffel5Bereich2ErsatzLastOben.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel5Bereich2ErsatzLastOben.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel5Bereich2ErsatzLastOben.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel5Bereich2ErsatzLastOben.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel5Bereich2Fehler7
         '
@@ -1785,14 +1605,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel5Bereich2Fehler7.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel5Bereich2Fehler7.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel5Bereich2Fehler7.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel5Bereich2Fehler7.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel5Bereich2Fehler7.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Fehler7.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel5Bereich2Fehler7.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Fehler7.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel5Bereich2Fehler7.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Fehler7.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel5Bereich2Fehler7.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Fehler7.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel5Bereich2Fehler7.RootElement.Text = resources.GetString("RadTextBoxControlStaffel5Bereich2Fehler7.RootElement.Text")
-        Me.RadTextBoxControlStaffel5Bereich2Fehler7.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Fehler7.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel5Bereich2Fehler7.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel5Bereich2Fehler7.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel5Bereich2Fehler7.TabStop = False
         '
         'RadTextBoxControlStaffel5Bereich2Fehler6
@@ -1802,14 +1616,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel5Bereich2Fehler6.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel5Bereich2Fehler6.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel5Bereich2Fehler6.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel5Bereich2Fehler6.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel5Bereich2Fehler6.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Fehler6.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel5Bereich2Fehler6.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Fehler6.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel5Bereich2Fehler6.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Fehler6.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel5Bereich2Fehler6.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Fehler6.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel5Bereich2Fehler6.RootElement.Text = resources.GetString("RadTextBoxControlStaffel5Bereich2Fehler6.RootElement.Text")
-        Me.RadTextBoxControlStaffel5Bereich2Fehler6.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Fehler6.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel5Bereich2Fehler6.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel5Bereich2Fehler6.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel5Bereich2Fehler6.TabStop = False
         '
         'RadTextBoxControlStaffel5Bereich2Fehler5
@@ -1819,14 +1627,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel5Bereich2Fehler5.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel5Bereich2Fehler5.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel5Bereich2Fehler5.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel5Bereich2Fehler5.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel5Bereich2Fehler5.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Fehler5.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel5Bereich2Fehler5.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Fehler5.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel5Bereich2Fehler5.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Fehler5.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel5Bereich2Fehler5.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Fehler5.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel5Bereich2Fehler5.RootElement.Text = resources.GetString("RadTextBoxControlStaffel5Bereich2Fehler5.RootElement.Text")
-        Me.RadTextBoxControlStaffel5Bereich2Fehler5.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Fehler5.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel5Bereich2Fehler5.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel5Bereich2Fehler5.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel5Bereich2Fehler5.TabStop = False
         '
         'RadTextBoxControlStaffel5Bereich2Last4
@@ -1836,14 +1638,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel5Bereich2Last4.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel5Bereich2Last4.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel5Bereich2Last4.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel5Bereich2Last4.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel5Bereich2Last4.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Last4.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel5Bereich2Last4.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Last4.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel5Bereich2Last4.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Last4.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel5Bereich2Last4.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Last4.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel5Bereich2Last4.RootElement.Text = resources.GetString("RadTextBoxControlStaffel5Bereich2Last4.RootElement.Text")
-        Me.RadTextBoxControlStaffel5Bereich2Last4.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Last4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel5Bereich2Last4.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel5Bereich2Last4.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel5Bereich2Last4.TabStop = False
         '
         'RadTextBoxControlStaffel5Bereich2Anzeige4
@@ -1853,14 +1649,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel5Bereich2Anzeige4.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel5Bereich2Anzeige4.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel5Bereich2Anzeige4.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel5Bereich2Anzeige4.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel5Bereich2Anzeige4.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Anzeige4.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel5Bereich2Anzeige4.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Anzeige4.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel5Bereich2Anzeige4.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Anzeige4.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel5Bereich2Anzeige4.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Anzeige4.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel5Bereich2Anzeige4.RootElement.Text = resources.GetString("RadTextBoxControlStaffel5Bereich2Anzeige4.RootElement.Text")
-        Me.RadTextBoxControlStaffel5Bereich2Anzeige4.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Anzeige4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel5Bereich2Anzeige4.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel5Bereich2Anzeige4.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel5Bereich2Anzeige3
         '
@@ -1869,14 +1659,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel5Bereich2Anzeige3.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel5Bereich2Anzeige3.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel5Bereich2Anzeige3.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel5Bereich2Anzeige3.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel5Bereich2Anzeige3.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Anzeige3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel5Bereich2Anzeige3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Anzeige3.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel5Bereich2Anzeige3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Anzeige3.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel5Bereich2Anzeige3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Anzeige3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel5Bereich2Anzeige3.RootElement.Text = resources.GetString("RadTextBoxControlStaffel5Bereich2Anzeige3.RootElement.Text")
-        Me.RadTextBoxControlStaffel5Bereich2Anzeige3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Anzeige3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel5Bereich2Anzeige3.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel5Bereich2Anzeige3.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel5Bereich2Last3
         '
@@ -1885,14 +1669,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel5Bereich2Last3.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel5Bereich2Last3.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel5Bereich2Last3.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel5Bereich2Last3.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel5Bereich2Last3.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Last3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel5Bereich2Last3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Last3.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel5Bereich2Last3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Last3.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel5Bereich2Last3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Last3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel5Bereich2Last3.RootElement.Text = resources.GetString("RadTextBoxControlStaffel5Bereich2Last3.RootElement.Text")
-        Me.RadTextBoxControlStaffel5Bereich2Last3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Last3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel5Bereich2Last3.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel5Bereich2Last3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel5Bereich2Last3.TabStop = False
         '
         'RadTextBoxControlStaffel5Bereich2Last2
@@ -1902,14 +1680,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel5Bereich2Last2.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel5Bereich2Last2.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel5Bereich2Last2.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel5Bereich2Last2.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel5Bereich2Last2.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Last2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel5Bereich2Last2.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Last2.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel5Bereich2Last2.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Last2.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel5Bereich2Last2.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Last2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel5Bereich2Last2.RootElement.Text = resources.GetString("RadTextBoxControlStaffel5Bereich2Last2.RootElement.Text")
-        Me.RadTextBoxControlStaffel5Bereich2Last2.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Last2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel5Bereich2Last2.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel5Bereich2Last2.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel5Bereich2Anzeige1
         '
@@ -1918,14 +1690,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel5Bereich2Anzeige1.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel5Bereich2Anzeige1.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel5Bereich2Anzeige1.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel5Bereich2Anzeige1.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel5Bereich2Anzeige1.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Anzeige1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel5Bereich2Anzeige1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Anzeige1.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel5Bereich2Anzeige1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Anzeige1.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel5Bereich2Anzeige1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Anzeige1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel5Bereich2Anzeige1.RootElement.Text = resources.GetString("RadTextBoxControlStaffel5Bereich2Anzeige1.RootElement.Text")
-        Me.RadTextBoxControlStaffel5Bereich2Anzeige1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Anzeige1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel5Bereich2Anzeige1.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel5Bereich2Anzeige1.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel5Bereich2Last1
         '
@@ -1934,14 +1700,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel5Bereich2Last1.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel5Bereich2Last1.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel5Bereich2Last1.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel5Bereich2Last1.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel5Bereich2Last1.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Last1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel5Bereich2Last1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Last1.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel5Bereich2Last1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Last1.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel5Bereich2Last1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Last1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel5Bereich2Last1.RootElement.Text = resources.GetString("RadTextBoxControlStaffel5Bereich2Last1.RootElement.Text")
-        Me.RadTextBoxControlStaffel5Bereich2Last1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich2Last1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel5Bereich2Last1.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel5Bereich2Last1.RootElement.AccessibleName = Nothing
         '
         'lblStaffel5Bereich2MessabweichungWaage
         '
@@ -1950,14 +1710,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel5Bereich2MessabweichungWaage.RootElement.AccessibleDescription = resources.GetString("lblStaffel5Bereich2MessabweichungWaage.RootElement.AccessibleDescription")
-        Me.lblStaffel5Bereich2MessabweichungWaage.RootElement.AccessibleName = resources.GetString("lblStaffel5Bereich2MessabweichungWaage.RootElement.AccessibleName")
-        Me.lblStaffel5Bereich2MessabweichungWaage.RootElement.Alignment = CType(resources.GetObject("lblStaffel5Bereich2MessabweichungWaage.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel5Bereich2MessabweichungWaage.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel5Bereich2MessabweichungWaage.RootElement.AngleTransform"), Single)
-        Me.lblStaffel5Bereich2MessabweichungWaage.RootElement.FlipText = CType(resources.GetObject("lblStaffel5Bereich2MessabweichungWaage.RootElement.FlipText"), Boolean)
-        Me.lblStaffel5Bereich2MessabweichungWaage.RootElement.Margin = CType(resources.GetObject("lblStaffel5Bereich2MessabweichungWaage.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel5Bereich2MessabweichungWaage.RootElement.Text = resources.GetString("lblStaffel5Bereich2MessabweichungWaage.RootElement.Text")
-        Me.lblStaffel5Bereich2MessabweichungWaage.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel5Bereich2MessabweichungWaage.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel5Bereich2MessabweichungWaage.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel5Bereich2MessabweichungWaage.RootElement.AccessibleName = Nothing
         '
         'lblStaffel5Bereich2MessabweichungStaffel
         '
@@ -1966,14 +1720,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel5Bereich2MessabweichungStaffel.RootElement.AccessibleDescription = resources.GetString("lblStaffel5Bereich2MessabweichungStaffel.RootElement.AccessibleDescription")
-        Me.lblStaffel5Bereich2MessabweichungStaffel.RootElement.AccessibleName = resources.GetString("lblStaffel5Bereich2MessabweichungStaffel.RootElement.AccessibleName")
-        Me.lblStaffel5Bereich2MessabweichungStaffel.RootElement.Alignment = CType(resources.GetObject("lblStaffel5Bereich2MessabweichungStaffel.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel5Bereich2MessabweichungStaffel.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel5Bereich2MessabweichungStaffel.RootElement.AngleTransform"), Single)
-        Me.lblStaffel5Bereich2MessabweichungStaffel.RootElement.FlipText = CType(resources.GetObject("lblStaffel5Bereich2MessabweichungStaffel.RootElement.FlipText"), Boolean)
-        Me.lblStaffel5Bereich2MessabweichungStaffel.RootElement.Margin = CType(resources.GetObject("lblStaffel5Bereich2MessabweichungStaffel.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel5Bereich2MessabweichungStaffel.RootElement.Text = resources.GetString("lblStaffel5Bereich2MessabweichungStaffel.RootElement.Text")
-        Me.lblStaffel5Bereich2MessabweichungStaffel.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel5Bereich2MessabweichungStaffel.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel5Bereich2MessabweichungStaffel.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel5Bereich2MessabweichungStaffel.RootElement.AccessibleName = Nothing
         '
         'lblStaffel5Bereich2Differenz
         '
@@ -1982,14 +1730,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel5Bereich2Differenz.RootElement.AccessibleDescription = resources.GetString("lblStaffel5Bereich2Differenz.RootElement.AccessibleDescription")
-        Me.lblStaffel5Bereich2Differenz.RootElement.AccessibleName = resources.GetString("lblStaffel5Bereich2Differenz.RootElement.AccessibleName")
-        Me.lblStaffel5Bereich2Differenz.RootElement.Alignment = CType(resources.GetObject("lblStaffel5Bereich2Differenz.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel5Bereich2Differenz.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel5Bereich2Differenz.RootElement.AngleTransform"), Single)
-        Me.lblStaffel5Bereich2Differenz.RootElement.FlipText = CType(resources.GetObject("lblStaffel5Bereich2Differenz.RootElement.FlipText"), Boolean)
-        Me.lblStaffel5Bereich2Differenz.RootElement.Margin = CType(resources.GetObject("lblStaffel5Bereich2Differenz.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel5Bereich2Differenz.RootElement.Text = resources.GetString("lblStaffel5Bereich2Differenz.RootElement.Text")
-        Me.lblStaffel5Bereich2Differenz.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel5Bereich2Differenz.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel5Bereich2Differenz.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel5Bereich2Differenz.RootElement.AccessibleName = Nothing
         '
         'lblStaffel5Bereich2ZusastzNormalLast
         '
@@ -1998,14 +1740,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel5Bereich2ZusastzNormalLast.RootElement.AccessibleDescription = resources.GetString("lblStaffel5Bereich2ZusastzNormalLast.RootElement.AccessibleDescription")
-        Me.lblStaffel5Bereich2ZusastzNormalLast.RootElement.AccessibleName = resources.GetString("lblStaffel5Bereich2ZusastzNormalLast.RootElement.AccessibleName")
-        Me.lblStaffel5Bereich2ZusastzNormalLast.RootElement.Alignment = CType(resources.GetObject("lblStaffel5Bereich2ZusastzNormalLast.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel5Bereich2ZusastzNormalLast.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel5Bereich2ZusastzNormalLast.RootElement.AngleTransform"), Single)
-        Me.lblStaffel5Bereich2ZusastzNormalLast.RootElement.FlipText = CType(resources.GetObject("lblStaffel5Bereich2ZusastzNormalLast.RootElement.FlipText"), Boolean)
-        Me.lblStaffel5Bereich2ZusastzNormalLast.RootElement.Margin = CType(resources.GetObject("lblStaffel5Bereich2ZusastzNormalLast.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel5Bereich2ZusastzNormalLast.RootElement.Text = resources.GetString("lblStaffel5Bereich2ZusastzNormalLast.RootElement.Text")
-        Me.lblStaffel5Bereich2ZusastzNormalLast.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel5Bereich2ZusastzNormalLast.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel5Bereich2ZusastzNormalLast.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel5Bereich2ZusastzNormalLast.RootElement.AccessibleName = Nothing
         '
         'lblStaffel5Bereich2NormalLast
         '
@@ -2014,14 +1750,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel5Bereich2NormalLast.RootElement.AccessibleDescription = resources.GetString("lblStaffel5Bereich2NormalLast.RootElement.AccessibleDescription")
-        Me.lblStaffel5Bereich2NormalLast.RootElement.AccessibleName = resources.GetString("lblStaffel5Bereich2NormalLast.RootElement.AccessibleName")
-        Me.lblStaffel5Bereich2NormalLast.RootElement.Alignment = CType(resources.GetObject("lblStaffel5Bereich2NormalLast.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel5Bereich2NormalLast.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel5Bereich2NormalLast.RootElement.AngleTransform"), Single)
-        Me.lblStaffel5Bereich2NormalLast.RootElement.FlipText = CType(resources.GetObject("lblStaffel5Bereich2NormalLast.RootElement.FlipText"), Boolean)
-        Me.lblStaffel5Bereich2NormalLast.RootElement.Margin = CType(resources.GetObject("lblStaffel5Bereich2NormalLast.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel5Bereich2NormalLast.RootElement.Text = resources.GetString("lblStaffel5Bereich2NormalLast.RootElement.Text")
-        Me.lblStaffel5Bereich2NormalLast.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel5Bereich2NormalLast.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel5Bereich2NormalLast.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel5Bereich2NormalLast.RootElement.AccessibleName = Nothing
         '
         'PictureBox92
         '
@@ -2052,14 +1782,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel5Bereich2EFGWert7.RootElement.AccessibleDescription = resources.GetString("lblStaffel5Bereich2EFGWert7.RootElement.AccessibleDescription")
-        Me.lblStaffel5Bereich2EFGWert7.RootElement.AccessibleName = resources.GetString("lblStaffel5Bereich2EFGWert7.RootElement.AccessibleName")
-        Me.lblStaffel5Bereich2EFGWert7.RootElement.Alignment = CType(resources.GetObject("lblStaffel5Bereich2EFGWert7.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel5Bereich2EFGWert7.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel5Bereich2EFGWert7.RootElement.AngleTransform"), Single)
-        Me.lblStaffel5Bereich2EFGWert7.RootElement.FlipText = CType(resources.GetObject("lblStaffel5Bereich2EFGWert7.RootElement.FlipText"), Boolean)
-        Me.lblStaffel5Bereich2EFGWert7.RootElement.Margin = CType(resources.GetObject("lblStaffel5Bereich2EFGWert7.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel5Bereich2EFGWert7.RootElement.Text = resources.GetString("lblStaffel5Bereich2EFGWert7.RootElement.Text")
-        Me.lblStaffel5Bereich2EFGWert7.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel5Bereich2EFGWert7.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel5Bereich2EFGWert7.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel5Bereich2EFGWert7.RootElement.AccessibleName = Nothing
         Me.lblStaffel5Bereich2EFGWert7.TabStop = False
         '
         'lblStaffel5Bereich2EFGWert6
@@ -2070,14 +1794,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel5Bereich2EFGWert6.RootElement.AccessibleDescription = resources.GetString("lblStaffel5Bereich2EFGWert6.RootElement.AccessibleDescription")
-        Me.lblStaffel5Bereich2EFGWert6.RootElement.AccessibleName = resources.GetString("lblStaffel5Bereich2EFGWert6.RootElement.AccessibleName")
-        Me.lblStaffel5Bereich2EFGWert6.RootElement.Alignment = CType(resources.GetObject("lblStaffel5Bereich2EFGWert6.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel5Bereich2EFGWert6.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel5Bereich2EFGWert6.RootElement.AngleTransform"), Single)
-        Me.lblStaffel5Bereich2EFGWert6.RootElement.FlipText = CType(resources.GetObject("lblStaffel5Bereich2EFGWert6.RootElement.FlipText"), Boolean)
-        Me.lblStaffel5Bereich2EFGWert6.RootElement.Margin = CType(resources.GetObject("lblStaffel5Bereich2EFGWert6.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel5Bereich2EFGWert6.RootElement.Text = resources.GetString("lblStaffel5Bereich2EFGWert6.RootElement.Text")
-        Me.lblStaffel5Bereich2EFGWert6.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel5Bereich2EFGWert6.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel5Bereich2EFGWert6.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel5Bereich2EFGWert6.RootElement.AccessibleName = Nothing
         Me.lblStaffel5Bereich2EFGWert6.TabStop = False
         '
         'lblStaffel5Bereich2EFGWert5
@@ -2088,14 +1806,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel5Bereich2EFGWert5.RootElement.AccessibleDescription = resources.GetString("lblStaffel5Bereich2EFGWert5.RootElement.AccessibleDescription")
-        Me.lblStaffel5Bereich2EFGWert5.RootElement.AccessibleName = resources.GetString("lblStaffel5Bereich2EFGWert5.RootElement.AccessibleName")
-        Me.lblStaffel5Bereich2EFGWert5.RootElement.Alignment = CType(resources.GetObject("lblStaffel5Bereich2EFGWert5.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel5Bereich2EFGWert5.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel5Bereich2EFGWert5.RootElement.AngleTransform"), Single)
-        Me.lblStaffel5Bereich2EFGWert5.RootElement.FlipText = CType(resources.GetObject("lblStaffel5Bereich2EFGWert5.RootElement.FlipText"), Boolean)
-        Me.lblStaffel5Bereich2EFGWert5.RootElement.Margin = CType(resources.GetObject("lblStaffel5Bereich2EFGWert5.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel5Bereich2EFGWert5.RootElement.Text = resources.GetString("lblStaffel5Bereich2EFGWert5.RootElement.Text")
-        Me.lblStaffel5Bereich2EFGWert5.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel5Bereich2EFGWert5.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel5Bereich2EFGWert5.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel5Bereich2EFGWert5.RootElement.AccessibleName = Nothing
         Me.lblStaffel5Bereich2EFGWert5.TabStop = False
         '
         'lblStaffel5Bereich2EFG
@@ -2105,14 +1817,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel5Bereich2EFG.RootElement.AccessibleDescription = resources.GetString("lblStaffel5Bereich2EFG.RootElement.AccessibleDescription")
-        Me.lblStaffel5Bereich2EFG.RootElement.AccessibleName = resources.GetString("lblStaffel5Bereich2EFG.RootElement.AccessibleName")
-        Me.lblStaffel5Bereich2EFG.RootElement.Alignment = CType(resources.GetObject("lblStaffel5Bereich2EFG.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel5Bereich2EFG.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel5Bereich2EFG.RootElement.AngleTransform"), Single)
-        Me.lblStaffel5Bereich2EFG.RootElement.FlipText = CType(resources.GetObject("lblStaffel5Bereich2EFG.RootElement.FlipText"), Boolean)
-        Me.lblStaffel5Bereich2EFG.RootElement.Margin = CType(resources.GetObject("lblStaffel5Bereich2EFG.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel5Bereich2EFG.RootElement.Text = resources.GetString("lblStaffel5Bereich2EFG.RootElement.Text")
-        Me.lblStaffel5Bereich2EFG.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel5Bereich2EFG.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel5Bereich2EFG.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel5Bereich2EFG.RootElement.AccessibleName = Nothing
         '
         'lblStaffel5Bereich2Fehler
         '
@@ -2121,14 +1827,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel5Bereich2Fehler.RootElement.AccessibleDescription = resources.GetString("lblStaffel5Bereich2Fehler.RootElement.AccessibleDescription")
-        Me.lblStaffel5Bereich2Fehler.RootElement.AccessibleName = resources.GetString("lblStaffel5Bereich2Fehler.RootElement.AccessibleName")
-        Me.lblStaffel5Bereich2Fehler.RootElement.Alignment = CType(resources.GetObject("lblStaffel5Bereich2Fehler.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel5Bereich2Fehler.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel5Bereich2Fehler.RootElement.AngleTransform"), Single)
-        Me.lblStaffel5Bereich2Fehler.RootElement.FlipText = CType(resources.GetObject("lblStaffel5Bereich2Fehler.RootElement.FlipText"), Boolean)
-        Me.lblStaffel5Bereich2Fehler.RootElement.Margin = CType(resources.GetObject("lblStaffel5Bereich2Fehler.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel5Bereich2Fehler.RootElement.Text = resources.GetString("lblStaffel5Bereich2Fehler.RootElement.Text")
-        Me.lblStaffel5Bereich2Fehler.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel5Bereich2Fehler.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel5Bereich2Fehler.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel5Bereich2Fehler.RootElement.AccessibleName = Nothing
         '
         'lblStaffel5Bereich2Anzeige
         '
@@ -2137,14 +1837,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel5Bereich2Anzeige.RootElement.AccessibleDescription = resources.GetString("lblStaffel5Bereich2Anzeige.RootElement.AccessibleDescription")
-        Me.lblStaffel5Bereich2Anzeige.RootElement.AccessibleName = resources.GetString("lblStaffel5Bereich2Anzeige.RootElement.AccessibleName")
-        Me.lblStaffel5Bereich2Anzeige.RootElement.Alignment = CType(resources.GetObject("lblStaffel5Bereich2Anzeige.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel5Bereich2Anzeige.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel5Bereich2Anzeige.RootElement.AngleTransform"), Single)
-        Me.lblStaffel5Bereich2Anzeige.RootElement.FlipText = CType(resources.GetObject("lblStaffel5Bereich2Anzeige.RootElement.FlipText"), Boolean)
-        Me.lblStaffel5Bereich2Anzeige.RootElement.Margin = CType(resources.GetObject("lblStaffel5Bereich2Anzeige.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel5Bereich2Anzeige.RootElement.Text = resources.GetString("lblStaffel5Bereich2Anzeige.RootElement.Text")
-        Me.lblStaffel5Bereich2Anzeige.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel5Bereich2Anzeige.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel5Bereich2Anzeige.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel5Bereich2Anzeige.RootElement.AccessibleName = Nothing
         '
         'lblStaffel5Bereich2Last
         '
@@ -2153,14 +1847,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel5Bereich2Last.RootElement.AccessibleDescription = resources.GetString("lblStaffel5Bereich2Last.RootElement.AccessibleDescription")
-        Me.lblStaffel5Bereich2Last.RootElement.AccessibleName = resources.GetString("lblStaffel5Bereich2Last.RootElement.AccessibleName")
-        Me.lblStaffel5Bereich2Last.RootElement.Alignment = CType(resources.GetObject("lblStaffel5Bereich2Last.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel5Bereich2Last.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel5Bereich2Last.RootElement.AngleTransform"), Single)
-        Me.lblStaffel5Bereich2Last.RootElement.FlipText = CType(resources.GetObject("lblStaffel5Bereich2Last.RootElement.FlipText"), Boolean)
-        Me.lblStaffel5Bereich2Last.RootElement.Margin = CType(resources.GetObject("lblStaffel5Bereich2Last.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel5Bereich2Last.RootElement.Text = resources.GetString("lblStaffel5Bereich2Last.RootElement.Text")
-        Me.lblStaffel5Bereich2Last.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel5Bereich2Last.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel5Bereich2Last.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel5Bereich2Last.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxStaffel5Bereich1
         '
@@ -2202,14 +1890,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadGroupBoxStaffel5Bereich1.RootElement.AccessibleDescription = resources.GetString("RadGroupBoxStaffel5Bereich1.RootElement.AccessibleDescription")
-        Me.RadGroupBoxStaffel5Bereich1.RootElement.AccessibleName = resources.GetString("RadGroupBoxStaffel5Bereich1.RootElement.AccessibleName")
-        Me.RadGroupBoxStaffel5Bereich1.RootElement.Alignment = CType(resources.GetObject("RadGroupBoxStaffel5Bereich1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadGroupBoxStaffel5Bereich1.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBoxStaffel5Bereich1.RootElement.AngleTransform"), Single)
-        Me.RadGroupBoxStaffel5Bereich1.RootElement.FlipText = CType(resources.GetObject("RadGroupBoxStaffel5Bereich1.RootElement.FlipText"), Boolean)
-        Me.RadGroupBoxStaffel5Bereich1.RootElement.Margin = CType(resources.GetObject("RadGroupBoxStaffel5Bereich1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadGroupBoxStaffel5Bereich1.RootElement.Text = resources.GetString("RadGroupBoxStaffel5Bereich1.RootElement.Text")
-        Me.RadGroupBoxStaffel5Bereich1.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxStaffel5Bereich1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadGroupBoxStaffel5Bereich1.RootElement.AccessibleDescription = Nothing
+        Me.RadGroupBoxStaffel5Bereich1.RootElement.AccessibleName = Nothing
         '
         'PictureBox130
         '
@@ -2253,14 +1935,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel5Bereich1ErsatzLastUnten.RootElement.AccessibleDescription = resources.GetString("lblStaffel5Bereich1ErsatzLastUnten.RootElement.AccessibleDescription")
-        Me.lblStaffel5Bereich1ErsatzLastUnten.RootElement.AccessibleName = resources.GetString("lblStaffel5Bereich1ErsatzLastUnten.RootElement.AccessibleName")
-        Me.lblStaffel5Bereich1ErsatzLastUnten.RootElement.Alignment = CType(resources.GetObject("lblStaffel5Bereich1ErsatzLastUnten.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel5Bereich1ErsatzLastUnten.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel5Bereich1ErsatzLastUnten.RootElement.AngleTransform"), Single)
-        Me.lblStaffel5Bereich1ErsatzLastUnten.RootElement.FlipText = CType(resources.GetObject("lblStaffel5Bereich1ErsatzLastUnten.RootElement.FlipText"), Boolean)
-        Me.lblStaffel5Bereich1ErsatzLastUnten.RootElement.Margin = CType(resources.GetObject("lblStaffel5Bereich1ErsatzLastUnten.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel5Bereich1ErsatzLastUnten.RootElement.Text = resources.GetString("lblStaffel5Bereich1ErsatzLastUnten.RootElement.Text")
-        Me.lblStaffel5Bereich1ErsatzLastUnten.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel5Bereich1ErsatzLastUnten.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel5Bereich1ErsatzLastUnten.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel5Bereich1ErsatzLastUnten.RootElement.AccessibleName = Nothing
         '
         'lblStaffel5Bereich1ErsatzLastOben
         '
@@ -2269,14 +1945,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel5Bereich1ErsatzLastOben.RootElement.AccessibleDescription = resources.GetString("lblStaffel5Bereich1ErsatzLastOben.RootElement.AccessibleDescription")
-        Me.lblStaffel5Bereich1ErsatzLastOben.RootElement.AccessibleName = resources.GetString("lblStaffel5Bereich1ErsatzLastOben.RootElement.AccessibleName")
-        Me.lblStaffel5Bereich1ErsatzLastOben.RootElement.Alignment = CType(resources.GetObject("lblStaffel5Bereich1ErsatzLastOben.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel5Bereich1ErsatzLastOben.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel5Bereich1ErsatzLastOben.RootElement.AngleTransform"), Single)
-        Me.lblStaffel5Bereich1ErsatzLastOben.RootElement.FlipText = CType(resources.GetObject("lblStaffel5Bereich1ErsatzLastOben.RootElement.FlipText"), Boolean)
-        Me.lblStaffel5Bereich1ErsatzLastOben.RootElement.Margin = CType(resources.GetObject("lblStaffel5Bereich1ErsatzLastOben.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel5Bereich1ErsatzLastOben.RootElement.Text = resources.GetString("lblStaffel5Bereich1ErsatzLastOben.RootElement.Text")
-        Me.lblStaffel5Bereich1ErsatzLastOben.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel5Bereich1ErsatzLastOben.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel5Bereich1ErsatzLastOben.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel5Bereich1ErsatzLastOben.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel5Bereich1Fehler7
         '
@@ -2285,14 +1955,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel5Bereich1Fehler7.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel5Bereich1Fehler7.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel5Bereich1Fehler7.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel5Bereich1Fehler7.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel5Bereich1Fehler7.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Fehler7.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel5Bereich1Fehler7.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Fehler7.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel5Bereich1Fehler7.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Fehler7.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel5Bereich1Fehler7.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Fehler7.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel5Bereich1Fehler7.RootElement.Text = resources.GetString("RadTextBoxControlStaffel5Bereich1Fehler7.RootElement.Text")
-        Me.RadTextBoxControlStaffel5Bereich1Fehler7.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Fehler7.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel5Bereich1Fehler7.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel5Bereich1Fehler7.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel5Bereich1Fehler7.TabStop = False
         '
         'RadTextBoxControlStaffel5Bereich1Fehler6
@@ -2302,14 +1966,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel5Bereich1Fehler6.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel5Bereich1Fehler6.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel5Bereich1Fehler6.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel5Bereich1Fehler6.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel5Bereich1Fehler6.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Fehler6.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel5Bereich1Fehler6.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Fehler6.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel5Bereich1Fehler6.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Fehler6.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel5Bereich1Fehler6.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Fehler6.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel5Bereich1Fehler6.RootElement.Text = resources.GetString("RadTextBoxControlStaffel5Bereich1Fehler6.RootElement.Text")
-        Me.RadTextBoxControlStaffel5Bereich1Fehler6.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Fehler6.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel5Bereich1Fehler6.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel5Bereich1Fehler6.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel5Bereich1Fehler6.TabStop = False
         '
         'RadTextBoxControlStaffel5Bereich1Fehler5
@@ -2319,14 +1977,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel5Bereich1Fehler5.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel5Bereich1Fehler5.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel5Bereich1Fehler5.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel5Bereich1Fehler5.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel5Bereich1Fehler5.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Fehler5.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel5Bereich1Fehler5.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Fehler5.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel5Bereich1Fehler5.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Fehler5.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel5Bereich1Fehler5.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Fehler5.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel5Bereich1Fehler5.RootElement.Text = resources.GetString("RadTextBoxControlStaffel5Bereich1Fehler5.RootElement.Text")
-        Me.RadTextBoxControlStaffel5Bereich1Fehler5.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Fehler5.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel5Bereich1Fehler5.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel5Bereich1Fehler5.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel5Bereich1Fehler5.TabStop = False
         '
         'RadTextBoxControlStaffel5Bereich1Last4
@@ -2336,14 +1988,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel5Bereich1Last4.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel5Bereich1Last4.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel5Bereich1Last4.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel5Bereich1Last4.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel5Bereich1Last4.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Last4.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel5Bereich1Last4.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Last4.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel5Bereich1Last4.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Last4.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel5Bereich1Last4.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Last4.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel5Bereich1Last4.RootElement.Text = resources.GetString("RadTextBoxControlStaffel5Bereich1Last4.RootElement.Text")
-        Me.RadTextBoxControlStaffel5Bereich1Last4.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Last4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel5Bereich1Last4.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel5Bereich1Last4.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel5Bereich1Last4.TabStop = False
         '
         'RadTextBoxControlStaffel5Bereich1Anzeige4
@@ -2353,14 +1999,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel5Bereich1Anzeige4.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel5Bereich1Anzeige4.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel5Bereich1Anzeige4.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel5Bereich1Anzeige4.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel5Bereich1Anzeige4.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Anzeige4.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel5Bereich1Anzeige4.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Anzeige4.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel5Bereich1Anzeige4.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Anzeige4.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel5Bereich1Anzeige4.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Anzeige4.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel5Bereich1Anzeige4.RootElement.Text = resources.GetString("RadTextBoxControlStaffel5Bereich1Anzeige4.RootElement.Text")
-        Me.RadTextBoxControlStaffel5Bereich1Anzeige4.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Anzeige4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel5Bereich1Anzeige4.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel5Bereich1Anzeige4.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel5Bereich1Anzeige3
         '
@@ -2369,14 +2009,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel5Bereich1Anzeige3.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel5Bereich1Anzeige3.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel5Bereich1Anzeige3.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel5Bereich1Anzeige3.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel5Bereich1Anzeige3.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Anzeige3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel5Bereich1Anzeige3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Anzeige3.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel5Bereich1Anzeige3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Anzeige3.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel5Bereich1Anzeige3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Anzeige3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel5Bereich1Anzeige3.RootElement.Text = resources.GetString("RadTextBoxControlStaffel5Bereich1Anzeige3.RootElement.Text")
-        Me.RadTextBoxControlStaffel5Bereich1Anzeige3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Anzeige3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel5Bereich1Anzeige3.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel5Bereich1Anzeige3.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel5Bereich1Last3
         '
@@ -2385,14 +2019,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel5Bereich1Last3.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel5Bereich1Last3.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel5Bereich1Last3.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel5Bereich1Last3.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel5Bereich1Last3.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Last3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel5Bereich1Last3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Last3.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel5Bereich1Last3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Last3.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel5Bereich1Last3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Last3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel5Bereich1Last3.RootElement.Text = resources.GetString("RadTextBoxControlStaffel5Bereich1Last3.RootElement.Text")
-        Me.RadTextBoxControlStaffel5Bereich1Last3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Last3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel5Bereich1Last3.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel5Bereich1Last3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel5Bereich1Last3.TabStop = False
         '
         'RadTextBoxControlStaffel5Bereich1Last2
@@ -2402,14 +2030,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel5Bereich1Last2.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel5Bereich1Last2.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel5Bereich1Last2.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel5Bereich1Last2.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel5Bereich1Last2.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Last2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel5Bereich1Last2.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Last2.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel5Bereich1Last2.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Last2.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel5Bereich1Last2.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Last2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel5Bereich1Last2.RootElement.Text = resources.GetString("RadTextBoxControlStaffel5Bereich1Last2.RootElement.Text")
-        Me.RadTextBoxControlStaffel5Bereich1Last2.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Last2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel5Bereich1Last2.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel5Bereich1Last2.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel5Bereich1Anzeige1
         '
@@ -2418,14 +2040,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel5Bereich1Anzeige1.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel5Bereich1Anzeige1.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel5Bereich1Anzeige1.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel5Bereich1Anzeige1.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel5Bereich1Anzeige1.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Anzeige1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel5Bereich1Anzeige1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Anzeige1.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel5Bereich1Anzeige1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Anzeige1.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel5Bereich1Anzeige1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Anzeige1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel5Bereich1Anzeige1.RootElement.Text = resources.GetString("RadTextBoxControlStaffel5Bereich1Anzeige1.RootElement.Text")
-        Me.RadTextBoxControlStaffel5Bereich1Anzeige1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Anzeige1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel5Bereich1Anzeige1.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel5Bereich1Anzeige1.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel5Bereich1Last1
         '
@@ -2434,14 +2050,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel5Bereich1Last1.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel5Bereich1Last1.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel5Bereich1Last1.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel5Bereich1Last1.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel5Bereich1Last1.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Last1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel5Bereich1Last1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Last1.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel5Bereich1Last1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Last1.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel5Bereich1Last1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Last1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel5Bereich1Last1.RootElement.Text = resources.GetString("RadTextBoxControlStaffel5Bereich1Last1.RootElement.Text")
-        Me.RadTextBoxControlStaffel5Bereich1Last1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel5Bereich1Last1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel5Bereich1Last1.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel5Bereich1Last1.RootElement.AccessibleName = Nothing
         '
         'lblStaffel5Bereich1MessabweichungWaage
         '
@@ -2450,14 +2060,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel5Bereich1MessabweichungWaage.RootElement.AccessibleDescription = resources.GetString("lblStaffel5Bereich1MessabweichungWaage.RootElement.AccessibleDescription")
-        Me.lblStaffel5Bereich1MessabweichungWaage.RootElement.AccessibleName = resources.GetString("lblStaffel5Bereich1MessabweichungWaage.RootElement.AccessibleName")
-        Me.lblStaffel5Bereich1MessabweichungWaage.RootElement.Alignment = CType(resources.GetObject("lblStaffel5Bereich1MessabweichungWaage.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel5Bereich1MessabweichungWaage.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel5Bereich1MessabweichungWaage.RootElement.AngleTransform"), Single)
-        Me.lblStaffel5Bereich1MessabweichungWaage.RootElement.FlipText = CType(resources.GetObject("lblStaffel5Bereich1MessabweichungWaage.RootElement.FlipText"), Boolean)
-        Me.lblStaffel5Bereich1MessabweichungWaage.RootElement.Margin = CType(resources.GetObject("lblStaffel5Bereich1MessabweichungWaage.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel5Bereich1MessabweichungWaage.RootElement.Text = resources.GetString("lblStaffel5Bereich1MessabweichungWaage.RootElement.Text")
-        Me.lblStaffel5Bereich1MessabweichungWaage.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel5Bereich1MessabweichungWaage.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel5Bereich1MessabweichungWaage.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel5Bereich1MessabweichungWaage.RootElement.AccessibleName = Nothing
         '
         'lblStaffel5Bereich1MessabweichungStaffel
         '
@@ -2466,14 +2070,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel5Bereich1MessabweichungStaffel.RootElement.AccessibleDescription = resources.GetString("lblStaffel5Bereich1MessabweichungStaffel.RootElement.AccessibleDescription")
-        Me.lblStaffel5Bereich1MessabweichungStaffel.RootElement.AccessibleName = resources.GetString("lblStaffel5Bereich1MessabweichungStaffel.RootElement.AccessibleName")
-        Me.lblStaffel5Bereich1MessabweichungStaffel.RootElement.Alignment = CType(resources.GetObject("lblStaffel5Bereich1MessabweichungStaffel.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel5Bereich1MessabweichungStaffel.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel5Bereich1MessabweichungStaffel.RootElement.AngleTransform"), Single)
-        Me.lblStaffel5Bereich1MessabweichungStaffel.RootElement.FlipText = CType(resources.GetObject("lblStaffel5Bereich1MessabweichungStaffel.RootElement.FlipText"), Boolean)
-        Me.lblStaffel5Bereich1MessabweichungStaffel.RootElement.Margin = CType(resources.GetObject("lblStaffel5Bereich1MessabweichungStaffel.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel5Bereich1MessabweichungStaffel.RootElement.Text = resources.GetString("lblStaffel5Bereich1MessabweichungStaffel.RootElement.Text")
-        Me.lblStaffel5Bereich1MessabweichungStaffel.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel5Bereich1MessabweichungStaffel.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel5Bereich1MessabweichungStaffel.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel5Bereich1MessabweichungStaffel.RootElement.AccessibleName = Nothing
         '
         'lblStaffel5Bereich1Differenz
         '
@@ -2482,14 +2080,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel5Bereich1Differenz.RootElement.AccessibleDescription = resources.GetString("lblStaffel5Bereich1Differenz.RootElement.AccessibleDescription")
-        Me.lblStaffel5Bereich1Differenz.RootElement.AccessibleName = resources.GetString("lblStaffel5Bereich1Differenz.RootElement.AccessibleName")
-        Me.lblStaffel5Bereich1Differenz.RootElement.Alignment = CType(resources.GetObject("lblStaffel5Bereich1Differenz.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel5Bereich1Differenz.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel5Bereich1Differenz.RootElement.AngleTransform"), Single)
-        Me.lblStaffel5Bereich1Differenz.RootElement.FlipText = CType(resources.GetObject("lblStaffel5Bereich1Differenz.RootElement.FlipText"), Boolean)
-        Me.lblStaffel5Bereich1Differenz.RootElement.Margin = CType(resources.GetObject("lblStaffel5Bereich1Differenz.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel5Bereich1Differenz.RootElement.Text = resources.GetString("lblStaffel5Bereich1Differenz.RootElement.Text")
-        Me.lblStaffel5Bereich1Differenz.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel5Bereich1Differenz.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel5Bereich1Differenz.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel5Bereich1Differenz.RootElement.AccessibleName = Nothing
         '
         'lblStaffel5Bereich1ZusastzNormalLast
         '
@@ -2498,14 +2090,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel5Bereich1ZusastzNormalLast.RootElement.AccessibleDescription = resources.GetString("lblStaffel5Bereich1ZusastzNormalLast.RootElement.AccessibleDescription")
-        Me.lblStaffel5Bereich1ZusastzNormalLast.RootElement.AccessibleName = resources.GetString("lblStaffel5Bereich1ZusastzNormalLast.RootElement.AccessibleName")
-        Me.lblStaffel5Bereich1ZusastzNormalLast.RootElement.Alignment = CType(resources.GetObject("lblStaffel5Bereich1ZusastzNormalLast.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel5Bereich1ZusastzNormalLast.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel5Bereich1ZusastzNormalLast.RootElement.AngleTransform"), Single)
-        Me.lblStaffel5Bereich1ZusastzNormalLast.RootElement.FlipText = CType(resources.GetObject("lblStaffel5Bereich1ZusastzNormalLast.RootElement.FlipText"), Boolean)
-        Me.lblStaffel5Bereich1ZusastzNormalLast.RootElement.Margin = CType(resources.GetObject("lblStaffel5Bereich1ZusastzNormalLast.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel5Bereich1ZusastzNormalLast.RootElement.Text = resources.GetString("lblStaffel5Bereich1ZusastzNormalLast.RootElement.Text")
-        Me.lblStaffel5Bereich1ZusastzNormalLast.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel5Bereich1ZusastzNormalLast.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel5Bereich1ZusastzNormalLast.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel5Bereich1ZusastzNormalLast.RootElement.AccessibleName = Nothing
         '
         'lblStaffel5Bereich1NormalLast
         '
@@ -2514,14 +2100,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel5Bereich1NormalLast.RootElement.AccessibleDescription = resources.GetString("lblStaffel5Bereich1NormalLast.RootElement.AccessibleDescription")
-        Me.lblStaffel5Bereich1NormalLast.RootElement.AccessibleName = resources.GetString("lblStaffel5Bereich1NormalLast.RootElement.AccessibleName")
-        Me.lblStaffel5Bereich1NormalLast.RootElement.Alignment = CType(resources.GetObject("lblStaffel5Bereich1NormalLast.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel5Bereich1NormalLast.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel5Bereich1NormalLast.RootElement.AngleTransform"), Single)
-        Me.lblStaffel5Bereich1NormalLast.RootElement.FlipText = CType(resources.GetObject("lblStaffel5Bereich1NormalLast.RootElement.FlipText"), Boolean)
-        Me.lblStaffel5Bereich1NormalLast.RootElement.Margin = CType(resources.GetObject("lblStaffel5Bereich1NormalLast.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel5Bereich1NormalLast.RootElement.Text = resources.GetString("lblStaffel5Bereich1NormalLast.RootElement.Text")
-        Me.lblStaffel5Bereich1NormalLast.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel5Bereich1NormalLast.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel5Bereich1NormalLast.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel5Bereich1NormalLast.RootElement.AccessibleName = Nothing
         '
         'PictureBox99
         '
@@ -2552,14 +2132,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel5Bereich1EFGWert7.RootElement.AccessibleDescription = resources.GetString("lblStaffel5Bereich1EFGWert7.RootElement.AccessibleDescription")
-        Me.lblStaffel5Bereich1EFGWert7.RootElement.AccessibleName = resources.GetString("lblStaffel5Bereich1EFGWert7.RootElement.AccessibleName")
-        Me.lblStaffel5Bereich1EFGWert7.RootElement.Alignment = CType(resources.GetObject("lblStaffel5Bereich1EFGWert7.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel5Bereich1EFGWert7.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel5Bereich1EFGWert7.RootElement.AngleTransform"), Single)
-        Me.lblStaffel5Bereich1EFGWert7.RootElement.FlipText = CType(resources.GetObject("lblStaffel5Bereich1EFGWert7.RootElement.FlipText"), Boolean)
-        Me.lblStaffel5Bereich1EFGWert7.RootElement.Margin = CType(resources.GetObject("lblStaffel5Bereich1EFGWert7.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel5Bereich1EFGWert7.RootElement.Text = resources.GetString("lblStaffel5Bereich1EFGWert7.RootElement.Text")
-        Me.lblStaffel5Bereich1EFGWert7.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel5Bereich1EFGWert7.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel5Bereich1EFGWert7.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel5Bereich1EFGWert7.RootElement.AccessibleName = Nothing
         Me.lblStaffel5Bereich1EFGWert7.TabStop = False
         '
         'lblStaffel5Bereich1EFGWert6
@@ -2570,14 +2144,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel5Bereich1EFGWert6.RootElement.AccessibleDescription = resources.GetString("lblStaffel5Bereich1EFGWert6.RootElement.AccessibleDescription")
-        Me.lblStaffel5Bereich1EFGWert6.RootElement.AccessibleName = resources.GetString("lblStaffel5Bereich1EFGWert6.RootElement.AccessibleName")
-        Me.lblStaffel5Bereich1EFGWert6.RootElement.Alignment = CType(resources.GetObject("lblStaffel5Bereich1EFGWert6.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel5Bereich1EFGWert6.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel5Bereich1EFGWert6.RootElement.AngleTransform"), Single)
-        Me.lblStaffel5Bereich1EFGWert6.RootElement.FlipText = CType(resources.GetObject("lblStaffel5Bereich1EFGWert6.RootElement.FlipText"), Boolean)
-        Me.lblStaffel5Bereich1EFGWert6.RootElement.Margin = CType(resources.GetObject("lblStaffel5Bereich1EFGWert6.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel5Bereich1EFGWert6.RootElement.Text = resources.GetString("lblStaffel5Bereich1EFGWert6.RootElement.Text")
-        Me.lblStaffel5Bereich1EFGWert6.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel5Bereich1EFGWert6.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel5Bereich1EFGWert6.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel5Bereich1EFGWert6.RootElement.AccessibleName = Nothing
         Me.lblStaffel5Bereich1EFGWert6.TabStop = False
         '
         'lblStaffel5Bereich1EFGWert5
@@ -2588,14 +2156,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel5Bereich1EFGWert5.RootElement.AccessibleDescription = resources.GetString("lblStaffel5Bereich1EFGWert5.RootElement.AccessibleDescription")
-        Me.lblStaffel5Bereich1EFGWert5.RootElement.AccessibleName = resources.GetString("lblStaffel5Bereich1EFGWert5.RootElement.AccessibleName")
-        Me.lblStaffel5Bereich1EFGWert5.RootElement.Alignment = CType(resources.GetObject("lblStaffel5Bereich1EFGWert5.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel5Bereich1EFGWert5.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel5Bereich1EFGWert5.RootElement.AngleTransform"), Single)
-        Me.lblStaffel5Bereich1EFGWert5.RootElement.FlipText = CType(resources.GetObject("lblStaffel5Bereich1EFGWert5.RootElement.FlipText"), Boolean)
-        Me.lblStaffel5Bereich1EFGWert5.RootElement.Margin = CType(resources.GetObject("lblStaffel5Bereich1EFGWert5.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel5Bereich1EFGWert5.RootElement.Text = resources.GetString("lblStaffel5Bereich1EFGWert5.RootElement.Text")
-        Me.lblStaffel5Bereich1EFGWert5.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel5Bereich1EFGWert5.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel5Bereich1EFGWert5.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel5Bereich1EFGWert5.RootElement.AccessibleName = Nothing
         Me.lblStaffel5Bereich1EFGWert5.TabStop = False
         '
         'lblStaffel5Bereich1EFG
@@ -2605,14 +2167,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel5Bereich1EFG.RootElement.AccessibleDescription = resources.GetString("lblStaffel5Bereich1EFG.RootElement.AccessibleDescription")
-        Me.lblStaffel5Bereich1EFG.RootElement.AccessibleName = resources.GetString("lblStaffel5Bereich1EFG.RootElement.AccessibleName")
-        Me.lblStaffel5Bereich1EFG.RootElement.Alignment = CType(resources.GetObject("lblStaffel5Bereich1EFG.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel5Bereich1EFG.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel5Bereich1EFG.RootElement.AngleTransform"), Single)
-        Me.lblStaffel5Bereich1EFG.RootElement.FlipText = CType(resources.GetObject("lblStaffel5Bereich1EFG.RootElement.FlipText"), Boolean)
-        Me.lblStaffel5Bereich1EFG.RootElement.Margin = CType(resources.GetObject("lblStaffel5Bereich1EFG.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel5Bereich1EFG.RootElement.Text = resources.GetString("lblStaffel5Bereich1EFG.RootElement.Text")
-        Me.lblStaffel5Bereich1EFG.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel5Bereich1EFG.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel5Bereich1EFG.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel5Bereich1EFG.RootElement.AccessibleName = Nothing
         '
         'lblStaffel5Bereich1Fehler
         '
@@ -2621,14 +2177,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel5Bereich1Fehler.RootElement.AccessibleDescription = resources.GetString("lblStaffel5Bereich1Fehler.RootElement.AccessibleDescription")
-        Me.lblStaffel5Bereich1Fehler.RootElement.AccessibleName = resources.GetString("lblStaffel5Bereich1Fehler.RootElement.AccessibleName")
-        Me.lblStaffel5Bereich1Fehler.RootElement.Alignment = CType(resources.GetObject("lblStaffel5Bereich1Fehler.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel5Bereich1Fehler.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel5Bereich1Fehler.RootElement.AngleTransform"), Single)
-        Me.lblStaffel5Bereich1Fehler.RootElement.FlipText = CType(resources.GetObject("lblStaffel5Bereich1Fehler.RootElement.FlipText"), Boolean)
-        Me.lblStaffel5Bereich1Fehler.RootElement.Margin = CType(resources.GetObject("lblStaffel5Bereich1Fehler.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel5Bereich1Fehler.RootElement.Text = resources.GetString("lblStaffel5Bereich1Fehler.RootElement.Text")
-        Me.lblStaffel5Bereich1Fehler.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel5Bereich1Fehler.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel5Bereich1Fehler.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel5Bereich1Fehler.RootElement.AccessibleName = Nothing
         '
         'lblStaffel5Bereich1Anzeige
         '
@@ -2637,14 +2187,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel5Bereich1Anzeige.RootElement.AccessibleDescription = resources.GetString("lblStaffel5Bereich1Anzeige.RootElement.AccessibleDescription")
-        Me.lblStaffel5Bereich1Anzeige.RootElement.AccessibleName = resources.GetString("lblStaffel5Bereich1Anzeige.RootElement.AccessibleName")
-        Me.lblStaffel5Bereich1Anzeige.RootElement.Alignment = CType(resources.GetObject("lblStaffel5Bereich1Anzeige.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel5Bereich1Anzeige.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel5Bereich1Anzeige.RootElement.AngleTransform"), Single)
-        Me.lblStaffel5Bereich1Anzeige.RootElement.FlipText = CType(resources.GetObject("lblStaffel5Bereich1Anzeige.RootElement.FlipText"), Boolean)
-        Me.lblStaffel5Bereich1Anzeige.RootElement.Margin = CType(resources.GetObject("lblStaffel5Bereich1Anzeige.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel5Bereich1Anzeige.RootElement.Text = resources.GetString("lblStaffel5Bereich1Anzeige.RootElement.Text")
-        Me.lblStaffel5Bereich1Anzeige.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel5Bereich1Anzeige.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel5Bereich1Anzeige.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel5Bereich1Anzeige.RootElement.AccessibleName = Nothing
         '
         'lblStaffel5Bereich1Last
         '
@@ -2653,14 +2197,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel5Bereich1Last.RootElement.AccessibleDescription = resources.GetString("lblStaffel5Bereich1Last.RootElement.AccessibleDescription")
-        Me.lblStaffel5Bereich1Last.RootElement.AccessibleName = resources.GetString("lblStaffel5Bereich1Last.RootElement.AccessibleName")
-        Me.lblStaffel5Bereich1Last.RootElement.Alignment = CType(resources.GetObject("lblStaffel5Bereich1Last.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel5Bereich1Last.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel5Bereich1Last.RootElement.AngleTransform"), Single)
-        Me.lblStaffel5Bereich1Last.RootElement.FlipText = CType(resources.GetObject("lblStaffel5Bereich1Last.RootElement.FlipText"), Boolean)
-        Me.lblStaffel5Bereich1Last.RootElement.Margin = CType(resources.GetObject("lblStaffel5Bereich1Last.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel5Bereich1Last.RootElement.Text = resources.GetString("lblStaffel5Bereich1Last.RootElement.Text")
-        Me.lblStaffel5Bereich1Last.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel5Bereich1Last.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel5Bereich1Last.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel5Bereich1Last.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxStaffel4
         '
@@ -2673,14 +2211,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadGroupBoxStaffel4.RootElement.AccessibleDescription = resources.GetString("RadGroupBoxStaffel4.RootElement.AccessibleDescription")
-        Me.RadGroupBoxStaffel4.RootElement.AccessibleName = resources.GetString("RadGroupBoxStaffel4.RootElement.AccessibleName")
-        Me.RadGroupBoxStaffel4.RootElement.Alignment = CType(resources.GetObject("RadGroupBoxStaffel4.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadGroupBoxStaffel4.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBoxStaffel4.RootElement.AngleTransform"), Single)
-        Me.RadGroupBoxStaffel4.RootElement.FlipText = CType(resources.GetObject("RadGroupBoxStaffel4.RootElement.FlipText"), Boolean)
-        Me.RadGroupBoxStaffel4.RootElement.Margin = CType(resources.GetObject("RadGroupBoxStaffel4.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadGroupBoxStaffel4.RootElement.Text = resources.GetString("RadGroupBoxStaffel4.RootElement.Text")
-        Me.RadGroupBoxStaffel4.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxStaffel4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadGroupBoxStaffel4.RootElement.AccessibleDescription = Nothing
+        Me.RadGroupBoxStaffel4.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxStaffel4Bereich3
         '
@@ -2722,14 +2254,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadGroupBoxStaffel4Bereich3.RootElement.AccessibleDescription = resources.GetString("RadGroupBoxStaffel4Bereich3.RootElement.AccessibleDescription")
-        Me.RadGroupBoxStaffel4Bereich3.RootElement.AccessibleName = resources.GetString("RadGroupBoxStaffel4Bereich3.RootElement.AccessibleName")
-        Me.RadGroupBoxStaffel4Bereich3.RootElement.Alignment = CType(resources.GetObject("RadGroupBoxStaffel4Bereich3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadGroupBoxStaffel4Bereich3.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBoxStaffel4Bereich3.RootElement.AngleTransform"), Single)
-        Me.RadGroupBoxStaffel4Bereich3.RootElement.FlipText = CType(resources.GetObject("RadGroupBoxStaffel4Bereich3.RootElement.FlipText"), Boolean)
-        Me.RadGroupBoxStaffel4Bereich3.RootElement.Margin = CType(resources.GetObject("RadGroupBoxStaffel4Bereich3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadGroupBoxStaffel4Bereich3.RootElement.Text = resources.GetString("RadGroupBoxStaffel4Bereich3.RootElement.Text")
-        Me.RadGroupBoxStaffel4Bereich3.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxStaffel4Bereich3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadGroupBoxStaffel4Bereich3.RootElement.AccessibleDescription = Nothing
+        Me.RadGroupBoxStaffel4Bereich3.RootElement.AccessibleName = Nothing
         '
         'PictureBox121
         '
@@ -2773,14 +2299,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel4Bereich3ErsatzLastUnten.RootElement.AccessibleDescription = resources.GetString("lblStaffel4Bereich3ErsatzLastUnten.RootElement.AccessibleDescription")
-        Me.lblStaffel4Bereich3ErsatzLastUnten.RootElement.AccessibleName = resources.GetString("lblStaffel4Bereich3ErsatzLastUnten.RootElement.AccessibleName")
-        Me.lblStaffel4Bereich3ErsatzLastUnten.RootElement.Alignment = CType(resources.GetObject("lblStaffel4Bereich3ErsatzLastUnten.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel4Bereich3ErsatzLastUnten.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel4Bereich3ErsatzLastUnten.RootElement.AngleTransform"), Single)
-        Me.lblStaffel4Bereich3ErsatzLastUnten.RootElement.FlipText = CType(resources.GetObject("lblStaffel4Bereich3ErsatzLastUnten.RootElement.FlipText"), Boolean)
-        Me.lblStaffel4Bereich3ErsatzLastUnten.RootElement.Margin = CType(resources.GetObject("lblStaffel4Bereich3ErsatzLastUnten.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel4Bereich3ErsatzLastUnten.RootElement.Text = resources.GetString("lblStaffel4Bereich3ErsatzLastUnten.RootElement.Text")
-        Me.lblStaffel4Bereich3ErsatzLastUnten.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel4Bereich3ErsatzLastUnten.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel4Bereich3ErsatzLastUnten.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel4Bereich3ErsatzLastUnten.RootElement.AccessibleName = Nothing
         '
         'lblStaffel4Bereich3ErsatzLastOben
         '
@@ -2789,14 +2309,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel4Bereich3ErsatzLastOben.RootElement.AccessibleDescription = resources.GetString("lblStaffel4Bereich3ErsatzLastOben.RootElement.AccessibleDescription")
-        Me.lblStaffel4Bereich3ErsatzLastOben.RootElement.AccessibleName = resources.GetString("lblStaffel4Bereich3ErsatzLastOben.RootElement.AccessibleName")
-        Me.lblStaffel4Bereich3ErsatzLastOben.RootElement.Alignment = CType(resources.GetObject("lblStaffel4Bereich3ErsatzLastOben.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel4Bereich3ErsatzLastOben.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel4Bereich3ErsatzLastOben.RootElement.AngleTransform"), Single)
-        Me.lblStaffel4Bereich3ErsatzLastOben.RootElement.FlipText = CType(resources.GetObject("lblStaffel4Bereich3ErsatzLastOben.RootElement.FlipText"), Boolean)
-        Me.lblStaffel4Bereich3ErsatzLastOben.RootElement.Margin = CType(resources.GetObject("lblStaffel4Bereich3ErsatzLastOben.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel4Bereich3ErsatzLastOben.RootElement.Text = resources.GetString("lblStaffel4Bereich3ErsatzLastOben.RootElement.Text")
-        Me.lblStaffel4Bereich3ErsatzLastOben.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel4Bereich3ErsatzLastOben.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel4Bereich3ErsatzLastOben.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel4Bereich3ErsatzLastOben.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel4Bereich3Fehler7
         '
@@ -2805,14 +2319,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel4Bereich3Fehler7.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel4Bereich3Fehler7.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel4Bereich3Fehler7.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel4Bereich3Fehler7.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel4Bereich3Fehler7.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Fehler7.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel4Bereich3Fehler7.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Fehler7.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel4Bereich3Fehler7.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Fehler7.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel4Bereich3Fehler7.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Fehler7.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel4Bereich3Fehler7.RootElement.Text = resources.GetString("RadTextBoxControlStaffel4Bereich3Fehler7.RootElement.Text")
-        Me.RadTextBoxControlStaffel4Bereich3Fehler7.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Fehler7.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel4Bereich3Fehler7.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel4Bereich3Fehler7.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel4Bereich3Fehler7.TabStop = False
         '
         'RadTextBoxControlStaffel4Bereich3Fehler6
@@ -2822,14 +2330,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel4Bereich3Fehler6.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel4Bereich3Fehler6.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel4Bereich3Fehler6.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel4Bereich3Fehler6.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel4Bereich3Fehler6.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Fehler6.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel4Bereich3Fehler6.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Fehler6.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel4Bereich3Fehler6.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Fehler6.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel4Bereich3Fehler6.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Fehler6.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel4Bereich3Fehler6.RootElement.Text = resources.GetString("RadTextBoxControlStaffel4Bereich3Fehler6.RootElement.Text")
-        Me.RadTextBoxControlStaffel4Bereich3Fehler6.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Fehler6.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel4Bereich3Fehler6.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel4Bereich3Fehler6.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel4Bereich3Fehler6.TabStop = False
         '
         'RadTextBoxControlStaffel4Bereich3Fehler5
@@ -2839,14 +2341,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel4Bereich3Fehler5.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel4Bereich3Fehler5.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel4Bereich3Fehler5.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel4Bereich3Fehler5.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel4Bereich3Fehler5.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Fehler5.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel4Bereich3Fehler5.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Fehler5.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel4Bereich3Fehler5.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Fehler5.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel4Bereich3Fehler5.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Fehler5.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel4Bereich3Fehler5.RootElement.Text = resources.GetString("RadTextBoxControlStaffel4Bereich3Fehler5.RootElement.Text")
-        Me.RadTextBoxControlStaffel4Bereich3Fehler5.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Fehler5.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel4Bereich3Fehler5.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel4Bereich3Fehler5.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel4Bereich3Fehler5.TabStop = False
         '
         'RadTextBoxControlStaffel4Bereich3Last4
@@ -2856,14 +2352,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel4Bereich3Last4.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel4Bereich3Last4.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel4Bereich3Last4.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel4Bereich3Last4.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel4Bereich3Last4.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Last4.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel4Bereich3Last4.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Last4.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel4Bereich3Last4.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Last4.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel4Bereich3Last4.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Last4.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel4Bereich3Last4.RootElement.Text = resources.GetString("RadTextBoxControlStaffel4Bereich3Last4.RootElement.Text")
-        Me.RadTextBoxControlStaffel4Bereich3Last4.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Last4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel4Bereich3Last4.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel4Bereich3Last4.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel4Bereich3Last4.TabStop = False
         '
         'RadTextBoxControlStaffel4Bereich3Anzeige4
@@ -2873,14 +2363,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel4Bereich3Anzeige4.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel4Bereich3Anzeige4.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel4Bereich3Anzeige4.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel4Bereich3Anzeige4.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel4Bereich3Anzeige4.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Anzeige4.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel4Bereich3Anzeige4.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Anzeige4.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel4Bereich3Anzeige4.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Anzeige4.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel4Bereich3Anzeige4.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Anzeige4.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel4Bereich3Anzeige4.RootElement.Text = resources.GetString("RadTextBoxControlStaffel4Bereich3Anzeige4.RootElement.Text")
-        Me.RadTextBoxControlStaffel4Bereich3Anzeige4.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Anzeige4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel4Bereich3Anzeige4.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel4Bereich3Anzeige4.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel4Bereich3Anzeige3
         '
@@ -2889,14 +2373,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel4Bereich3Anzeige3.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel4Bereich3Anzeige3.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel4Bereich3Anzeige3.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel4Bereich3Anzeige3.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel4Bereich3Anzeige3.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Anzeige3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel4Bereich3Anzeige3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Anzeige3.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel4Bereich3Anzeige3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Anzeige3.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel4Bereich3Anzeige3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Anzeige3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel4Bereich3Anzeige3.RootElement.Text = resources.GetString("RadTextBoxControlStaffel4Bereich3Anzeige3.RootElement.Text")
-        Me.RadTextBoxControlStaffel4Bereich3Anzeige3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Anzeige3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel4Bereich3Anzeige3.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel4Bereich3Anzeige3.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel4Bereich3Last3
         '
@@ -2905,14 +2383,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel4Bereich3Last3.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel4Bereich3Last3.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel4Bereich3Last3.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel4Bereich3Last3.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel4Bereich3Last3.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Last3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel4Bereich3Last3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Last3.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel4Bereich3Last3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Last3.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel4Bereich3Last3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Last3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel4Bereich3Last3.RootElement.Text = resources.GetString("RadTextBoxControlStaffel4Bereich3Last3.RootElement.Text")
-        Me.RadTextBoxControlStaffel4Bereich3Last3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Last3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel4Bereich3Last3.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel4Bereich3Last3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel4Bereich3Last3.TabStop = False
         '
         'RadTextBoxControlStaffel4Bereich3Last2
@@ -2922,14 +2394,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel4Bereich3Last2.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel4Bereich3Last2.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel4Bereich3Last2.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel4Bereich3Last2.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel4Bereich3Last2.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Last2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel4Bereich3Last2.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Last2.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel4Bereich3Last2.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Last2.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel4Bereich3Last2.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Last2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel4Bereich3Last2.RootElement.Text = resources.GetString("RadTextBoxControlStaffel4Bereich3Last2.RootElement.Text")
-        Me.RadTextBoxControlStaffel4Bereich3Last2.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Last2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel4Bereich3Last2.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel4Bereich3Last2.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel4Bereich3Anzeige1
         '
@@ -2938,14 +2404,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel4Bereich3Anzeige1.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel4Bereich3Anzeige1.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel4Bereich3Anzeige1.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel4Bereich3Anzeige1.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel4Bereich3Anzeige1.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Anzeige1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel4Bereich3Anzeige1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Anzeige1.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel4Bereich3Anzeige1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Anzeige1.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel4Bereich3Anzeige1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Anzeige1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel4Bereich3Anzeige1.RootElement.Text = resources.GetString("RadTextBoxControlStaffel4Bereich3Anzeige1.RootElement.Text")
-        Me.RadTextBoxControlStaffel4Bereich3Anzeige1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Anzeige1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel4Bereich3Anzeige1.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel4Bereich3Anzeige1.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel4Bereich3Last1
         '
@@ -2954,14 +2414,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel4Bereich3Last1.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel4Bereich3Last1.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel4Bereich3Last1.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel4Bereich3Last1.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel4Bereich3Last1.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Last1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel4Bereich3Last1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Last1.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel4Bereich3Last1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Last1.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel4Bereich3Last1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Last1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel4Bereich3Last1.RootElement.Text = resources.GetString("RadTextBoxControlStaffel4Bereich3Last1.RootElement.Text")
-        Me.RadTextBoxControlStaffel4Bereich3Last1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich3Last1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel4Bereich3Last1.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel4Bereich3Last1.RootElement.AccessibleName = Nothing
         '
         'lblStaffel4Bereich3MessabweichungWaage
         '
@@ -2970,14 +2424,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel4Bereich3MessabweichungWaage.RootElement.AccessibleDescription = resources.GetString("lblStaffel4Bereich3MessabweichungWaage.RootElement.AccessibleDescription")
-        Me.lblStaffel4Bereich3MessabweichungWaage.RootElement.AccessibleName = resources.GetString("lblStaffel4Bereich3MessabweichungWaage.RootElement.AccessibleName")
-        Me.lblStaffel4Bereich3MessabweichungWaage.RootElement.Alignment = CType(resources.GetObject("lblStaffel4Bereich3MessabweichungWaage.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel4Bereich3MessabweichungWaage.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel4Bereich3MessabweichungWaage.RootElement.AngleTransform"), Single)
-        Me.lblStaffel4Bereich3MessabweichungWaage.RootElement.FlipText = CType(resources.GetObject("lblStaffel4Bereich3MessabweichungWaage.RootElement.FlipText"), Boolean)
-        Me.lblStaffel4Bereich3MessabweichungWaage.RootElement.Margin = CType(resources.GetObject("lblStaffel4Bereich3MessabweichungWaage.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel4Bereich3MessabweichungWaage.RootElement.Text = resources.GetString("lblStaffel4Bereich3MessabweichungWaage.RootElement.Text")
-        Me.lblStaffel4Bereich3MessabweichungWaage.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel4Bereich3MessabweichungWaage.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel4Bereich3MessabweichungWaage.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel4Bereich3MessabweichungWaage.RootElement.AccessibleName = Nothing
         '
         'lblStaffel4Bereich3MessabweichungStaffel
         '
@@ -2986,14 +2434,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel4Bereich3MessabweichungStaffel.RootElement.AccessibleDescription = resources.GetString("lblStaffel4Bereich3MessabweichungStaffel.RootElement.AccessibleDescription")
-        Me.lblStaffel4Bereich3MessabweichungStaffel.RootElement.AccessibleName = resources.GetString("lblStaffel4Bereich3MessabweichungStaffel.RootElement.AccessibleName")
-        Me.lblStaffel4Bereich3MessabweichungStaffel.RootElement.Alignment = CType(resources.GetObject("lblStaffel4Bereich3MessabweichungStaffel.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel4Bereich3MessabweichungStaffel.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel4Bereich3MessabweichungStaffel.RootElement.AngleTransform"), Single)
-        Me.lblStaffel4Bereich3MessabweichungStaffel.RootElement.FlipText = CType(resources.GetObject("lblStaffel4Bereich3MessabweichungStaffel.RootElement.FlipText"), Boolean)
-        Me.lblStaffel4Bereich3MessabweichungStaffel.RootElement.Margin = CType(resources.GetObject("lblStaffel4Bereich3MessabweichungStaffel.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel4Bereich3MessabweichungStaffel.RootElement.Text = resources.GetString("lblStaffel4Bereich3MessabweichungStaffel.RootElement.Text")
-        Me.lblStaffel4Bereich3MessabweichungStaffel.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel4Bereich3MessabweichungStaffel.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel4Bereich3MessabweichungStaffel.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel4Bereich3MessabweichungStaffel.RootElement.AccessibleName = Nothing
         '
         'lblStaffel4Bereich3Differenz
         '
@@ -3002,14 +2444,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel4Bereich3Differenz.RootElement.AccessibleDescription = resources.GetString("lblStaffel4Bereich3Differenz.RootElement.AccessibleDescription")
-        Me.lblStaffel4Bereich3Differenz.RootElement.AccessibleName = resources.GetString("lblStaffel4Bereich3Differenz.RootElement.AccessibleName")
-        Me.lblStaffel4Bereich3Differenz.RootElement.Alignment = CType(resources.GetObject("lblStaffel4Bereich3Differenz.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel4Bereich3Differenz.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel4Bereich3Differenz.RootElement.AngleTransform"), Single)
-        Me.lblStaffel4Bereich3Differenz.RootElement.FlipText = CType(resources.GetObject("lblStaffel4Bereich3Differenz.RootElement.FlipText"), Boolean)
-        Me.lblStaffel4Bereich3Differenz.RootElement.Margin = CType(resources.GetObject("lblStaffel4Bereich3Differenz.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel4Bereich3Differenz.RootElement.Text = resources.GetString("lblStaffel4Bereich3Differenz.RootElement.Text")
-        Me.lblStaffel4Bereich3Differenz.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel4Bereich3Differenz.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel4Bereich3Differenz.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel4Bereich3Differenz.RootElement.AccessibleName = Nothing
         '
         'lblStaffel4Bereich3ZusastzNormalLast
         '
@@ -3018,14 +2454,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel4Bereich3ZusastzNormalLast.RootElement.AccessibleDescription = resources.GetString("lblStaffel4Bereich3ZusastzNormalLast.RootElement.AccessibleDescription")
-        Me.lblStaffel4Bereich3ZusastzNormalLast.RootElement.AccessibleName = resources.GetString("lblStaffel4Bereich3ZusastzNormalLast.RootElement.AccessibleName")
-        Me.lblStaffel4Bereich3ZusastzNormalLast.RootElement.Alignment = CType(resources.GetObject("lblStaffel4Bereich3ZusastzNormalLast.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel4Bereich3ZusastzNormalLast.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel4Bereich3ZusastzNormalLast.RootElement.AngleTransform"), Single)
-        Me.lblStaffel4Bereich3ZusastzNormalLast.RootElement.FlipText = CType(resources.GetObject("lblStaffel4Bereich3ZusastzNormalLast.RootElement.FlipText"), Boolean)
-        Me.lblStaffel4Bereich3ZusastzNormalLast.RootElement.Margin = CType(resources.GetObject("lblStaffel4Bereich3ZusastzNormalLast.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel4Bereich3ZusastzNormalLast.RootElement.Text = resources.GetString("lblStaffel4Bereich3ZusastzNormalLast.RootElement.Text")
-        Me.lblStaffel4Bereich3ZusastzNormalLast.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel4Bereich3ZusastzNormalLast.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel4Bereich3ZusastzNormalLast.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel4Bereich3ZusastzNormalLast.RootElement.AccessibleName = Nothing
         '
         'lblStaffel4Bereich3NormalLast
         '
@@ -3034,14 +2464,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel4Bereich3NormalLast.RootElement.AccessibleDescription = resources.GetString("lblStaffel4Bereich3NormalLast.RootElement.AccessibleDescription")
-        Me.lblStaffel4Bereich3NormalLast.RootElement.AccessibleName = resources.GetString("lblStaffel4Bereich3NormalLast.RootElement.AccessibleName")
-        Me.lblStaffel4Bereich3NormalLast.RootElement.Alignment = CType(resources.GetObject("lblStaffel4Bereich3NormalLast.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel4Bereich3NormalLast.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel4Bereich3NormalLast.RootElement.AngleTransform"), Single)
-        Me.lblStaffel4Bereich3NormalLast.RootElement.FlipText = CType(resources.GetObject("lblStaffel4Bereich3NormalLast.RootElement.FlipText"), Boolean)
-        Me.lblStaffel4Bereich3NormalLast.RootElement.Margin = CType(resources.GetObject("lblStaffel4Bereich3NormalLast.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel4Bereich3NormalLast.RootElement.Text = resources.GetString("lblStaffel4Bereich3NormalLast.RootElement.Text")
-        Me.lblStaffel4Bereich3NormalLast.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel4Bereich3NormalLast.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel4Bereich3NormalLast.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel4Bereich3NormalLast.RootElement.AccessibleName = Nothing
         '
         'PictureBox63
         '
@@ -3072,14 +2496,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel4Bereich3EFGWert7.RootElement.AccessibleDescription = resources.GetString("lblStaffel4Bereich3EFGWert7.RootElement.AccessibleDescription")
-        Me.lblStaffel4Bereich3EFGWert7.RootElement.AccessibleName = resources.GetString("lblStaffel4Bereich3EFGWert7.RootElement.AccessibleName")
-        Me.lblStaffel4Bereich3EFGWert7.RootElement.Alignment = CType(resources.GetObject("lblStaffel4Bereich3EFGWert7.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel4Bereich3EFGWert7.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel4Bereich3EFGWert7.RootElement.AngleTransform"), Single)
-        Me.lblStaffel4Bereich3EFGWert7.RootElement.FlipText = CType(resources.GetObject("lblStaffel4Bereich3EFGWert7.RootElement.FlipText"), Boolean)
-        Me.lblStaffel4Bereich3EFGWert7.RootElement.Margin = CType(resources.GetObject("lblStaffel4Bereich3EFGWert7.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel4Bereich3EFGWert7.RootElement.Text = resources.GetString("lblStaffel4Bereich3EFGWert7.RootElement.Text")
-        Me.lblStaffel4Bereich3EFGWert7.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel4Bereich3EFGWert7.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel4Bereich3EFGWert7.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel4Bereich3EFGWert7.RootElement.AccessibleName = Nothing
         Me.lblStaffel4Bereich3EFGWert7.TabStop = False
         '
         'lblStaffel4Bereich3EFGWert6
@@ -3090,14 +2508,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel4Bereich3EFGWert6.RootElement.AccessibleDescription = resources.GetString("lblStaffel4Bereich3EFGWert6.RootElement.AccessibleDescription")
-        Me.lblStaffel4Bereich3EFGWert6.RootElement.AccessibleName = resources.GetString("lblStaffel4Bereich3EFGWert6.RootElement.AccessibleName")
-        Me.lblStaffel4Bereich3EFGWert6.RootElement.Alignment = CType(resources.GetObject("lblStaffel4Bereich3EFGWert6.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel4Bereich3EFGWert6.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel4Bereich3EFGWert6.RootElement.AngleTransform"), Single)
-        Me.lblStaffel4Bereich3EFGWert6.RootElement.FlipText = CType(resources.GetObject("lblStaffel4Bereich3EFGWert6.RootElement.FlipText"), Boolean)
-        Me.lblStaffel4Bereich3EFGWert6.RootElement.Margin = CType(resources.GetObject("lblStaffel4Bereich3EFGWert6.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel4Bereich3EFGWert6.RootElement.Text = resources.GetString("lblStaffel4Bereich3EFGWert6.RootElement.Text")
-        Me.lblStaffel4Bereich3EFGWert6.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel4Bereich3EFGWert6.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel4Bereich3EFGWert6.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel4Bereich3EFGWert6.RootElement.AccessibleName = Nothing
         Me.lblStaffel4Bereich3EFGWert6.TabStop = False
         '
         'lblStaffel4Bereich3EFGWert5
@@ -3108,14 +2520,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel4Bereich3EFGWert5.RootElement.AccessibleDescription = resources.GetString("lblStaffel4Bereich3EFGWert5.RootElement.AccessibleDescription")
-        Me.lblStaffel4Bereich3EFGWert5.RootElement.AccessibleName = resources.GetString("lblStaffel4Bereich3EFGWert5.RootElement.AccessibleName")
-        Me.lblStaffel4Bereich3EFGWert5.RootElement.Alignment = CType(resources.GetObject("lblStaffel4Bereich3EFGWert5.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel4Bereich3EFGWert5.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel4Bereich3EFGWert5.RootElement.AngleTransform"), Single)
-        Me.lblStaffel4Bereich3EFGWert5.RootElement.FlipText = CType(resources.GetObject("lblStaffel4Bereich3EFGWert5.RootElement.FlipText"), Boolean)
-        Me.lblStaffel4Bereich3EFGWert5.RootElement.Margin = CType(resources.GetObject("lblStaffel4Bereich3EFGWert5.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel4Bereich3EFGWert5.RootElement.Text = resources.GetString("lblStaffel4Bereich3EFGWert5.RootElement.Text")
-        Me.lblStaffel4Bereich3EFGWert5.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel4Bereich3EFGWert5.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel4Bereich3EFGWert5.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel4Bereich3EFGWert5.RootElement.AccessibleName = Nothing
         Me.lblStaffel4Bereich3EFGWert5.TabStop = False
         '
         'lblStaffel4Bereich3EFG
@@ -3125,14 +2531,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel4Bereich3EFG.RootElement.AccessibleDescription = resources.GetString("lblStaffel4Bereich3EFG.RootElement.AccessibleDescription")
-        Me.lblStaffel4Bereich3EFG.RootElement.AccessibleName = resources.GetString("lblStaffel4Bereich3EFG.RootElement.AccessibleName")
-        Me.lblStaffel4Bereich3EFG.RootElement.Alignment = CType(resources.GetObject("lblStaffel4Bereich3EFG.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel4Bereich3EFG.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel4Bereich3EFG.RootElement.AngleTransform"), Single)
-        Me.lblStaffel4Bereich3EFG.RootElement.FlipText = CType(resources.GetObject("lblStaffel4Bereich3EFG.RootElement.FlipText"), Boolean)
-        Me.lblStaffel4Bereich3EFG.RootElement.Margin = CType(resources.GetObject("lblStaffel4Bereich3EFG.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel4Bereich3EFG.RootElement.Text = resources.GetString("lblStaffel4Bereich3EFG.RootElement.Text")
-        Me.lblStaffel4Bereich3EFG.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel4Bereich3EFG.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel4Bereich3EFG.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel4Bereich3EFG.RootElement.AccessibleName = Nothing
         '
         'lblStaffel4Bereich3Fehler
         '
@@ -3141,14 +2541,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel4Bereich3Fehler.RootElement.AccessibleDescription = resources.GetString("lblStaffel4Bereich3Fehler.RootElement.AccessibleDescription")
-        Me.lblStaffel4Bereich3Fehler.RootElement.AccessibleName = resources.GetString("lblStaffel4Bereich3Fehler.RootElement.AccessibleName")
-        Me.lblStaffel4Bereich3Fehler.RootElement.Alignment = CType(resources.GetObject("lblStaffel4Bereich3Fehler.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel4Bereich3Fehler.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel4Bereich3Fehler.RootElement.AngleTransform"), Single)
-        Me.lblStaffel4Bereich3Fehler.RootElement.FlipText = CType(resources.GetObject("lblStaffel4Bereich3Fehler.RootElement.FlipText"), Boolean)
-        Me.lblStaffel4Bereich3Fehler.RootElement.Margin = CType(resources.GetObject("lblStaffel4Bereich3Fehler.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel4Bereich3Fehler.RootElement.Text = resources.GetString("lblStaffel4Bereich3Fehler.RootElement.Text")
-        Me.lblStaffel4Bereich3Fehler.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel4Bereich3Fehler.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel4Bereich3Fehler.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel4Bereich3Fehler.RootElement.AccessibleName = Nothing
         '
         'lblStaffel4Bereich3Anzeige
         '
@@ -3157,14 +2551,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel4Bereich3Anzeige.RootElement.AccessibleDescription = resources.GetString("lblStaffel4Bereich3Anzeige.RootElement.AccessibleDescription")
-        Me.lblStaffel4Bereich3Anzeige.RootElement.AccessibleName = resources.GetString("lblStaffel4Bereich3Anzeige.RootElement.AccessibleName")
-        Me.lblStaffel4Bereich3Anzeige.RootElement.Alignment = CType(resources.GetObject("lblStaffel4Bereich3Anzeige.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel4Bereich3Anzeige.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel4Bereich3Anzeige.RootElement.AngleTransform"), Single)
-        Me.lblStaffel4Bereich3Anzeige.RootElement.FlipText = CType(resources.GetObject("lblStaffel4Bereich3Anzeige.RootElement.FlipText"), Boolean)
-        Me.lblStaffel4Bereich3Anzeige.RootElement.Margin = CType(resources.GetObject("lblStaffel4Bereich3Anzeige.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel4Bereich3Anzeige.RootElement.Text = resources.GetString("lblStaffel4Bereich3Anzeige.RootElement.Text")
-        Me.lblStaffel4Bereich3Anzeige.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel4Bereich3Anzeige.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel4Bereich3Anzeige.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel4Bereich3Anzeige.RootElement.AccessibleName = Nothing
         '
         'lblStaffel4Bereich3Last
         '
@@ -3173,14 +2561,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel4Bereich3Last.RootElement.AccessibleDescription = resources.GetString("lblStaffel4Bereich3Last.RootElement.AccessibleDescription")
-        Me.lblStaffel4Bereich3Last.RootElement.AccessibleName = resources.GetString("lblStaffel4Bereich3Last.RootElement.AccessibleName")
-        Me.lblStaffel4Bereich3Last.RootElement.Alignment = CType(resources.GetObject("lblStaffel4Bereich3Last.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel4Bereich3Last.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel4Bereich3Last.RootElement.AngleTransform"), Single)
-        Me.lblStaffel4Bereich3Last.RootElement.FlipText = CType(resources.GetObject("lblStaffel4Bereich3Last.RootElement.FlipText"), Boolean)
-        Me.lblStaffel4Bereich3Last.RootElement.Margin = CType(resources.GetObject("lblStaffel4Bereich3Last.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel4Bereich3Last.RootElement.Text = resources.GetString("lblStaffel4Bereich3Last.RootElement.Text")
-        Me.lblStaffel4Bereich3Last.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel4Bereich3Last.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel4Bereich3Last.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel4Bereich3Last.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxStaffel4Bereich2
         '
@@ -3222,14 +2604,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadGroupBoxStaffel4Bereich2.RootElement.AccessibleDescription = resources.GetString("RadGroupBoxStaffel4Bereich2.RootElement.AccessibleDescription")
-        Me.RadGroupBoxStaffel4Bereich2.RootElement.AccessibleName = resources.GetString("RadGroupBoxStaffel4Bereich2.RootElement.AccessibleName")
-        Me.RadGroupBoxStaffel4Bereich2.RootElement.Alignment = CType(resources.GetObject("RadGroupBoxStaffel4Bereich2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadGroupBoxStaffel4Bereich2.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBoxStaffel4Bereich2.RootElement.AngleTransform"), Single)
-        Me.RadGroupBoxStaffel4Bereich2.RootElement.FlipText = CType(resources.GetObject("RadGroupBoxStaffel4Bereich2.RootElement.FlipText"), Boolean)
-        Me.RadGroupBoxStaffel4Bereich2.RootElement.Margin = CType(resources.GetObject("RadGroupBoxStaffel4Bereich2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadGroupBoxStaffel4Bereich2.RootElement.Text = resources.GetString("RadGroupBoxStaffel4Bereich2.RootElement.Text")
-        Me.RadGroupBoxStaffel4Bereich2.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxStaffel4Bereich2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadGroupBoxStaffel4Bereich2.RootElement.AccessibleDescription = Nothing
+        Me.RadGroupBoxStaffel4Bereich2.RootElement.AccessibleName = Nothing
         '
         'PictureBox118
         '
@@ -3273,14 +2649,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel4Bereich2ErsatzLastUnten.RootElement.AccessibleDescription = resources.GetString("lblStaffel4Bereich2ErsatzLastUnten.RootElement.AccessibleDescription")
-        Me.lblStaffel4Bereich2ErsatzLastUnten.RootElement.AccessibleName = resources.GetString("lblStaffel4Bereich2ErsatzLastUnten.RootElement.AccessibleName")
-        Me.lblStaffel4Bereich2ErsatzLastUnten.RootElement.Alignment = CType(resources.GetObject("lblStaffel4Bereich2ErsatzLastUnten.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel4Bereich2ErsatzLastUnten.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel4Bereich2ErsatzLastUnten.RootElement.AngleTransform"), Single)
-        Me.lblStaffel4Bereich2ErsatzLastUnten.RootElement.FlipText = CType(resources.GetObject("lblStaffel4Bereich2ErsatzLastUnten.RootElement.FlipText"), Boolean)
-        Me.lblStaffel4Bereich2ErsatzLastUnten.RootElement.Margin = CType(resources.GetObject("lblStaffel4Bereich2ErsatzLastUnten.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel4Bereich2ErsatzLastUnten.RootElement.Text = resources.GetString("lblStaffel4Bereich2ErsatzLastUnten.RootElement.Text")
-        Me.lblStaffel4Bereich2ErsatzLastUnten.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel4Bereich2ErsatzLastUnten.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel4Bereich2ErsatzLastUnten.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel4Bereich2ErsatzLastUnten.RootElement.AccessibleName = Nothing
         '
         'lblStaffel4Bereich2ErsatzLastOben
         '
@@ -3289,14 +2659,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel4Bereich2ErsatzLastOben.RootElement.AccessibleDescription = resources.GetString("lblStaffel4Bereich2ErsatzLastOben.RootElement.AccessibleDescription")
-        Me.lblStaffel4Bereich2ErsatzLastOben.RootElement.AccessibleName = resources.GetString("lblStaffel4Bereich2ErsatzLastOben.RootElement.AccessibleName")
-        Me.lblStaffel4Bereich2ErsatzLastOben.RootElement.Alignment = CType(resources.GetObject("lblStaffel4Bereich2ErsatzLastOben.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel4Bereich2ErsatzLastOben.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel4Bereich2ErsatzLastOben.RootElement.AngleTransform"), Single)
-        Me.lblStaffel4Bereich2ErsatzLastOben.RootElement.FlipText = CType(resources.GetObject("lblStaffel4Bereich2ErsatzLastOben.RootElement.FlipText"), Boolean)
-        Me.lblStaffel4Bereich2ErsatzLastOben.RootElement.Margin = CType(resources.GetObject("lblStaffel4Bereich2ErsatzLastOben.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel4Bereich2ErsatzLastOben.RootElement.Text = resources.GetString("lblStaffel4Bereich2ErsatzLastOben.RootElement.Text")
-        Me.lblStaffel4Bereich2ErsatzLastOben.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel4Bereich2ErsatzLastOben.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel4Bereich2ErsatzLastOben.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel4Bereich2ErsatzLastOben.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel4Bereich2Fehler7
         '
@@ -3305,14 +2669,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel4Bereich2Fehler7.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel4Bereich2Fehler7.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel4Bereich2Fehler7.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel4Bereich2Fehler7.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel4Bereich2Fehler7.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Fehler7.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel4Bereich2Fehler7.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Fehler7.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel4Bereich2Fehler7.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Fehler7.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel4Bereich2Fehler7.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Fehler7.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel4Bereich2Fehler7.RootElement.Text = resources.GetString("RadTextBoxControlStaffel4Bereich2Fehler7.RootElement.Text")
-        Me.RadTextBoxControlStaffel4Bereich2Fehler7.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Fehler7.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel4Bereich2Fehler7.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel4Bereich2Fehler7.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel4Bereich2Fehler7.TabStop = False
         '
         'RadTextBoxControlStaffel4Bereich2Fehler6
@@ -3322,14 +2680,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel4Bereich2Fehler6.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel4Bereich2Fehler6.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel4Bereich2Fehler6.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel4Bereich2Fehler6.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel4Bereich2Fehler6.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Fehler6.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel4Bereich2Fehler6.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Fehler6.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel4Bereich2Fehler6.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Fehler6.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel4Bereich2Fehler6.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Fehler6.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel4Bereich2Fehler6.RootElement.Text = resources.GetString("RadTextBoxControlStaffel4Bereich2Fehler6.RootElement.Text")
-        Me.RadTextBoxControlStaffel4Bereich2Fehler6.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Fehler6.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel4Bereich2Fehler6.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel4Bereich2Fehler6.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel4Bereich2Fehler6.TabStop = False
         '
         'RadTextBoxControlStaffel4Bereich2Fehler5
@@ -3339,14 +2691,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel4Bereich2Fehler5.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel4Bereich2Fehler5.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel4Bereich2Fehler5.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel4Bereich2Fehler5.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel4Bereich2Fehler5.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Fehler5.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel4Bereich2Fehler5.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Fehler5.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel4Bereich2Fehler5.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Fehler5.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel4Bereich2Fehler5.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Fehler5.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel4Bereich2Fehler5.RootElement.Text = resources.GetString("RadTextBoxControlStaffel4Bereich2Fehler5.RootElement.Text")
-        Me.RadTextBoxControlStaffel4Bereich2Fehler5.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Fehler5.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel4Bereich2Fehler5.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel4Bereich2Fehler5.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel4Bereich2Fehler5.TabStop = False
         '
         'RadTextBoxControlStaffel4Bereich2Last4
@@ -3356,14 +2702,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel4Bereich2Last4.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel4Bereich2Last4.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel4Bereich2Last4.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel4Bereich2Last4.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel4Bereich2Last4.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Last4.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel4Bereich2Last4.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Last4.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel4Bereich2Last4.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Last4.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel4Bereich2Last4.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Last4.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel4Bereich2Last4.RootElement.Text = resources.GetString("RadTextBoxControlStaffel4Bereich2Last4.RootElement.Text")
-        Me.RadTextBoxControlStaffel4Bereich2Last4.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Last4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel4Bereich2Last4.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel4Bereich2Last4.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel4Bereich2Last4.TabStop = False
         '
         'RadTextBoxControlStaffel4Bereich2Anzeige4
@@ -3373,14 +2713,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel4Bereich2Anzeige4.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel4Bereich2Anzeige4.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel4Bereich2Anzeige4.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel4Bereich2Anzeige4.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel4Bereich2Anzeige4.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Anzeige4.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel4Bereich2Anzeige4.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Anzeige4.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel4Bereich2Anzeige4.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Anzeige4.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel4Bereich2Anzeige4.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Anzeige4.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel4Bereich2Anzeige4.RootElement.Text = resources.GetString("RadTextBoxControlStaffel4Bereich2Anzeige4.RootElement.Text")
-        Me.RadTextBoxControlStaffel4Bereich2Anzeige4.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Anzeige4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel4Bereich2Anzeige4.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel4Bereich2Anzeige4.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel4Bereich2Anzeige3
         '
@@ -3389,14 +2723,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel4Bereich2Anzeige3.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel4Bereich2Anzeige3.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel4Bereich2Anzeige3.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel4Bereich2Anzeige3.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel4Bereich2Anzeige3.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Anzeige3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel4Bereich2Anzeige3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Anzeige3.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel4Bereich2Anzeige3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Anzeige3.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel4Bereich2Anzeige3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Anzeige3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel4Bereich2Anzeige3.RootElement.Text = resources.GetString("RadTextBoxControlStaffel4Bereich2Anzeige3.RootElement.Text")
-        Me.RadTextBoxControlStaffel4Bereich2Anzeige3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Anzeige3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel4Bereich2Anzeige3.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel4Bereich2Anzeige3.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel4Bereich2Last3
         '
@@ -3405,14 +2733,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel4Bereich2Last3.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel4Bereich2Last3.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel4Bereich2Last3.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel4Bereich2Last3.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel4Bereich2Last3.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Last3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel4Bereich2Last3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Last3.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel4Bereich2Last3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Last3.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel4Bereich2Last3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Last3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel4Bereich2Last3.RootElement.Text = resources.GetString("RadTextBoxControlStaffel4Bereich2Last3.RootElement.Text")
-        Me.RadTextBoxControlStaffel4Bereich2Last3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Last3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel4Bereich2Last3.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel4Bereich2Last3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel4Bereich2Last3.TabStop = False
         '
         'RadTextBoxControlStaffel4Bereich2Last2
@@ -3422,14 +2744,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel4Bereich2Last2.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel4Bereich2Last2.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel4Bereich2Last2.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel4Bereich2Last2.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel4Bereich2Last2.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Last2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel4Bereich2Last2.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Last2.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel4Bereich2Last2.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Last2.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel4Bereich2Last2.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Last2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel4Bereich2Last2.RootElement.Text = resources.GetString("RadTextBoxControlStaffel4Bereich2Last2.RootElement.Text")
-        Me.RadTextBoxControlStaffel4Bereich2Last2.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Last2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel4Bereich2Last2.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel4Bereich2Last2.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel4Bereich2Anzeige1
         '
@@ -3438,14 +2754,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel4Bereich2Anzeige1.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel4Bereich2Anzeige1.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel4Bereich2Anzeige1.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel4Bereich2Anzeige1.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel4Bereich2Anzeige1.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Anzeige1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel4Bereich2Anzeige1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Anzeige1.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel4Bereich2Anzeige1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Anzeige1.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel4Bereich2Anzeige1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Anzeige1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel4Bereich2Anzeige1.RootElement.Text = resources.GetString("RadTextBoxControlStaffel4Bereich2Anzeige1.RootElement.Text")
-        Me.RadTextBoxControlStaffel4Bereich2Anzeige1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Anzeige1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel4Bereich2Anzeige1.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel4Bereich2Anzeige1.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel4Bereich2Last1
         '
@@ -3454,14 +2764,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel4Bereich2Last1.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel4Bereich2Last1.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel4Bereich2Last1.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel4Bereich2Last1.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel4Bereich2Last1.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Last1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel4Bereich2Last1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Last1.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel4Bereich2Last1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Last1.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel4Bereich2Last1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Last1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel4Bereich2Last1.RootElement.Text = resources.GetString("RadTextBoxControlStaffel4Bereich2Last1.RootElement.Text")
-        Me.RadTextBoxControlStaffel4Bereich2Last1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich2Last1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel4Bereich2Last1.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel4Bereich2Last1.RootElement.AccessibleName = Nothing
         '
         'lblStaffel4Bereich2MessabweichungWaage
         '
@@ -3470,14 +2774,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel4Bereich2MessabweichungWaage.RootElement.AccessibleDescription = resources.GetString("lblStaffel4Bereich2MessabweichungWaage.RootElement.AccessibleDescription")
-        Me.lblStaffel4Bereich2MessabweichungWaage.RootElement.AccessibleName = resources.GetString("lblStaffel4Bereich2MessabweichungWaage.RootElement.AccessibleName")
-        Me.lblStaffel4Bereich2MessabweichungWaage.RootElement.Alignment = CType(resources.GetObject("lblStaffel4Bereich2MessabweichungWaage.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel4Bereich2MessabweichungWaage.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel4Bereich2MessabweichungWaage.RootElement.AngleTransform"), Single)
-        Me.lblStaffel4Bereich2MessabweichungWaage.RootElement.FlipText = CType(resources.GetObject("lblStaffel4Bereich2MessabweichungWaage.RootElement.FlipText"), Boolean)
-        Me.lblStaffel4Bereich2MessabweichungWaage.RootElement.Margin = CType(resources.GetObject("lblStaffel4Bereich2MessabweichungWaage.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel4Bereich2MessabweichungWaage.RootElement.Text = resources.GetString("lblStaffel4Bereich2MessabweichungWaage.RootElement.Text")
-        Me.lblStaffel4Bereich2MessabweichungWaage.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel4Bereich2MessabweichungWaage.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel4Bereich2MessabweichungWaage.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel4Bereich2MessabweichungWaage.RootElement.AccessibleName = Nothing
         '
         'lblStaffel4Bereich2MessabweichungStaffel
         '
@@ -3486,14 +2784,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel4Bereich2MessabweichungStaffel.RootElement.AccessibleDescription = resources.GetString("lblStaffel4Bereich2MessabweichungStaffel.RootElement.AccessibleDescription")
-        Me.lblStaffel4Bereich2MessabweichungStaffel.RootElement.AccessibleName = resources.GetString("lblStaffel4Bereich2MessabweichungStaffel.RootElement.AccessibleName")
-        Me.lblStaffel4Bereich2MessabweichungStaffel.RootElement.Alignment = CType(resources.GetObject("lblStaffel4Bereich2MessabweichungStaffel.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel4Bereich2MessabweichungStaffel.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel4Bereich2MessabweichungStaffel.RootElement.AngleTransform"), Single)
-        Me.lblStaffel4Bereich2MessabweichungStaffel.RootElement.FlipText = CType(resources.GetObject("lblStaffel4Bereich2MessabweichungStaffel.RootElement.FlipText"), Boolean)
-        Me.lblStaffel4Bereich2MessabweichungStaffel.RootElement.Margin = CType(resources.GetObject("lblStaffel4Bereich2MessabweichungStaffel.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel4Bereich2MessabweichungStaffel.RootElement.Text = resources.GetString("lblStaffel4Bereich2MessabweichungStaffel.RootElement.Text")
-        Me.lblStaffel4Bereich2MessabweichungStaffel.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel4Bereich2MessabweichungStaffel.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel4Bereich2MessabweichungStaffel.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel4Bereich2MessabweichungStaffel.RootElement.AccessibleName = Nothing
         '
         'lblStaffel4Bereich2Differenz
         '
@@ -3502,14 +2794,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel4Bereich2Differenz.RootElement.AccessibleDescription = resources.GetString("lblStaffel4Bereich2Differenz.RootElement.AccessibleDescription")
-        Me.lblStaffel4Bereich2Differenz.RootElement.AccessibleName = resources.GetString("lblStaffel4Bereich2Differenz.RootElement.AccessibleName")
-        Me.lblStaffel4Bereich2Differenz.RootElement.Alignment = CType(resources.GetObject("lblStaffel4Bereich2Differenz.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel4Bereich2Differenz.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel4Bereich2Differenz.RootElement.AngleTransform"), Single)
-        Me.lblStaffel4Bereich2Differenz.RootElement.FlipText = CType(resources.GetObject("lblStaffel4Bereich2Differenz.RootElement.FlipText"), Boolean)
-        Me.lblStaffel4Bereich2Differenz.RootElement.Margin = CType(resources.GetObject("lblStaffel4Bereich2Differenz.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel4Bereich2Differenz.RootElement.Text = resources.GetString("lblStaffel4Bereich2Differenz.RootElement.Text")
-        Me.lblStaffel4Bereich2Differenz.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel4Bereich2Differenz.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel4Bereich2Differenz.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel4Bereich2Differenz.RootElement.AccessibleName = Nothing
         '
         'lblStaffel4Bereich2ZusastzNormalLast
         '
@@ -3518,14 +2804,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel4Bereich2ZusastzNormalLast.RootElement.AccessibleDescription = resources.GetString("lblStaffel4Bereich2ZusastzNormalLast.RootElement.AccessibleDescription")
-        Me.lblStaffel4Bereich2ZusastzNormalLast.RootElement.AccessibleName = resources.GetString("lblStaffel4Bereich2ZusastzNormalLast.RootElement.AccessibleName")
-        Me.lblStaffel4Bereich2ZusastzNormalLast.RootElement.Alignment = CType(resources.GetObject("lblStaffel4Bereich2ZusastzNormalLast.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel4Bereich2ZusastzNormalLast.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel4Bereich2ZusastzNormalLast.RootElement.AngleTransform"), Single)
-        Me.lblStaffel4Bereich2ZusastzNormalLast.RootElement.FlipText = CType(resources.GetObject("lblStaffel4Bereich2ZusastzNormalLast.RootElement.FlipText"), Boolean)
-        Me.lblStaffel4Bereich2ZusastzNormalLast.RootElement.Margin = CType(resources.GetObject("lblStaffel4Bereich2ZusastzNormalLast.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel4Bereich2ZusastzNormalLast.RootElement.Text = resources.GetString("lblStaffel4Bereich2ZusastzNormalLast.RootElement.Text")
-        Me.lblStaffel4Bereich2ZusastzNormalLast.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel4Bereich2ZusastzNormalLast.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel4Bereich2ZusastzNormalLast.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel4Bereich2ZusastzNormalLast.RootElement.AccessibleName = Nothing
         '
         'lblStaffel4Bereich2NormalLast
         '
@@ -3534,14 +2814,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel4Bereich2NormalLast.RootElement.AccessibleDescription = resources.GetString("lblStaffel4Bereich2NormalLast.RootElement.AccessibleDescription")
-        Me.lblStaffel4Bereich2NormalLast.RootElement.AccessibleName = resources.GetString("lblStaffel4Bereich2NormalLast.RootElement.AccessibleName")
-        Me.lblStaffel4Bereich2NormalLast.RootElement.Alignment = CType(resources.GetObject("lblStaffel4Bereich2NormalLast.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel4Bereich2NormalLast.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel4Bereich2NormalLast.RootElement.AngleTransform"), Single)
-        Me.lblStaffel4Bereich2NormalLast.RootElement.FlipText = CType(resources.GetObject("lblStaffel4Bereich2NormalLast.RootElement.FlipText"), Boolean)
-        Me.lblStaffel4Bereich2NormalLast.RootElement.Margin = CType(resources.GetObject("lblStaffel4Bereich2NormalLast.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel4Bereich2NormalLast.RootElement.Text = resources.GetString("lblStaffel4Bereich2NormalLast.RootElement.Text")
-        Me.lblStaffel4Bereich2NormalLast.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel4Bereich2NormalLast.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel4Bereich2NormalLast.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel4Bereich2NormalLast.RootElement.AccessibleName = Nothing
         '
         'PictureBox70
         '
@@ -3572,14 +2846,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel4Bereich2EFGWert7.RootElement.AccessibleDescription = resources.GetString("lblStaffel4Bereich2EFGWert7.RootElement.AccessibleDescription")
-        Me.lblStaffel4Bereich2EFGWert7.RootElement.AccessibleName = resources.GetString("lblStaffel4Bereich2EFGWert7.RootElement.AccessibleName")
-        Me.lblStaffel4Bereich2EFGWert7.RootElement.Alignment = CType(resources.GetObject("lblStaffel4Bereich2EFGWert7.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel4Bereich2EFGWert7.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel4Bereich2EFGWert7.RootElement.AngleTransform"), Single)
-        Me.lblStaffel4Bereich2EFGWert7.RootElement.FlipText = CType(resources.GetObject("lblStaffel4Bereich2EFGWert7.RootElement.FlipText"), Boolean)
-        Me.lblStaffel4Bereich2EFGWert7.RootElement.Margin = CType(resources.GetObject("lblStaffel4Bereich2EFGWert7.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel4Bereich2EFGWert7.RootElement.Text = resources.GetString("lblStaffel4Bereich2EFGWert7.RootElement.Text")
-        Me.lblStaffel4Bereich2EFGWert7.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel4Bereich2EFGWert7.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel4Bereich2EFGWert7.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel4Bereich2EFGWert7.RootElement.AccessibleName = Nothing
         Me.lblStaffel4Bereich2EFGWert7.TabStop = False
         '
         'lblStaffel4Bereich2EFGWert6
@@ -3590,14 +2858,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel4Bereich2EFGWert6.RootElement.AccessibleDescription = resources.GetString("lblStaffel4Bereich2EFGWert6.RootElement.AccessibleDescription")
-        Me.lblStaffel4Bereich2EFGWert6.RootElement.AccessibleName = resources.GetString("lblStaffel4Bereich2EFGWert6.RootElement.AccessibleName")
-        Me.lblStaffel4Bereich2EFGWert6.RootElement.Alignment = CType(resources.GetObject("lblStaffel4Bereich2EFGWert6.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel4Bereich2EFGWert6.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel4Bereich2EFGWert6.RootElement.AngleTransform"), Single)
-        Me.lblStaffel4Bereich2EFGWert6.RootElement.FlipText = CType(resources.GetObject("lblStaffel4Bereich2EFGWert6.RootElement.FlipText"), Boolean)
-        Me.lblStaffel4Bereich2EFGWert6.RootElement.Margin = CType(resources.GetObject("lblStaffel4Bereich2EFGWert6.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel4Bereich2EFGWert6.RootElement.Text = resources.GetString("lblStaffel4Bereich2EFGWert6.RootElement.Text")
-        Me.lblStaffel4Bereich2EFGWert6.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel4Bereich2EFGWert6.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel4Bereich2EFGWert6.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel4Bereich2EFGWert6.RootElement.AccessibleName = Nothing
         Me.lblStaffel4Bereich2EFGWert6.TabStop = False
         '
         'lblStaffel4Bereich2EFGWert5
@@ -3608,14 +2870,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel4Bereich2EFGWert5.RootElement.AccessibleDescription = resources.GetString("lblStaffel4Bereich2EFGWert5.RootElement.AccessibleDescription")
-        Me.lblStaffel4Bereich2EFGWert5.RootElement.AccessibleName = resources.GetString("lblStaffel4Bereich2EFGWert5.RootElement.AccessibleName")
-        Me.lblStaffel4Bereich2EFGWert5.RootElement.Alignment = CType(resources.GetObject("lblStaffel4Bereich2EFGWert5.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel4Bereich2EFGWert5.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel4Bereich2EFGWert5.RootElement.AngleTransform"), Single)
-        Me.lblStaffel4Bereich2EFGWert5.RootElement.FlipText = CType(resources.GetObject("lblStaffel4Bereich2EFGWert5.RootElement.FlipText"), Boolean)
-        Me.lblStaffel4Bereich2EFGWert5.RootElement.Margin = CType(resources.GetObject("lblStaffel4Bereich2EFGWert5.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel4Bereich2EFGWert5.RootElement.Text = resources.GetString("lblStaffel4Bereich2EFGWert5.RootElement.Text")
-        Me.lblStaffel4Bereich2EFGWert5.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel4Bereich2EFGWert5.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel4Bereich2EFGWert5.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel4Bereich2EFGWert5.RootElement.AccessibleName = Nothing
         Me.lblStaffel4Bereich2EFGWert5.TabStop = False
         '
         'lblStaffel4Bereich2EFG
@@ -3625,14 +2881,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel4Bereich2EFG.RootElement.AccessibleDescription = resources.GetString("lblStaffel4Bereich2EFG.RootElement.AccessibleDescription")
-        Me.lblStaffel4Bereich2EFG.RootElement.AccessibleName = resources.GetString("lblStaffel4Bereich2EFG.RootElement.AccessibleName")
-        Me.lblStaffel4Bereich2EFG.RootElement.Alignment = CType(resources.GetObject("lblStaffel4Bereich2EFG.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel4Bereich2EFG.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel4Bereich2EFG.RootElement.AngleTransform"), Single)
-        Me.lblStaffel4Bereich2EFG.RootElement.FlipText = CType(resources.GetObject("lblStaffel4Bereich2EFG.RootElement.FlipText"), Boolean)
-        Me.lblStaffel4Bereich2EFG.RootElement.Margin = CType(resources.GetObject("lblStaffel4Bereich2EFG.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel4Bereich2EFG.RootElement.Text = resources.GetString("lblStaffel4Bereich2EFG.RootElement.Text")
-        Me.lblStaffel4Bereich2EFG.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel4Bereich2EFG.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel4Bereich2EFG.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel4Bereich2EFG.RootElement.AccessibleName = Nothing
         '
         'lblStaffel4Bereich2Fehler
         '
@@ -3641,14 +2891,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel4Bereich2Fehler.RootElement.AccessibleDescription = resources.GetString("lblStaffel4Bereich2Fehler.RootElement.AccessibleDescription")
-        Me.lblStaffel4Bereich2Fehler.RootElement.AccessibleName = resources.GetString("lblStaffel4Bereich2Fehler.RootElement.AccessibleName")
-        Me.lblStaffel4Bereich2Fehler.RootElement.Alignment = CType(resources.GetObject("lblStaffel4Bereich2Fehler.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel4Bereich2Fehler.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel4Bereich2Fehler.RootElement.AngleTransform"), Single)
-        Me.lblStaffel4Bereich2Fehler.RootElement.FlipText = CType(resources.GetObject("lblStaffel4Bereich2Fehler.RootElement.FlipText"), Boolean)
-        Me.lblStaffel4Bereich2Fehler.RootElement.Margin = CType(resources.GetObject("lblStaffel4Bereich2Fehler.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel4Bereich2Fehler.RootElement.Text = resources.GetString("lblStaffel4Bereich2Fehler.RootElement.Text")
-        Me.lblStaffel4Bereich2Fehler.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel4Bereich2Fehler.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel4Bereich2Fehler.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel4Bereich2Fehler.RootElement.AccessibleName = Nothing
         '
         'lblStaffel4Bereich2Anzeige
         '
@@ -3657,14 +2901,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel4Bereich2Anzeige.RootElement.AccessibleDescription = resources.GetString("lblStaffel4Bereich2Anzeige.RootElement.AccessibleDescription")
-        Me.lblStaffel4Bereich2Anzeige.RootElement.AccessibleName = resources.GetString("lblStaffel4Bereich2Anzeige.RootElement.AccessibleName")
-        Me.lblStaffel4Bereich2Anzeige.RootElement.Alignment = CType(resources.GetObject("lblStaffel4Bereich2Anzeige.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel4Bereich2Anzeige.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel4Bereich2Anzeige.RootElement.AngleTransform"), Single)
-        Me.lblStaffel4Bereich2Anzeige.RootElement.FlipText = CType(resources.GetObject("lblStaffel4Bereich2Anzeige.RootElement.FlipText"), Boolean)
-        Me.lblStaffel4Bereich2Anzeige.RootElement.Margin = CType(resources.GetObject("lblStaffel4Bereich2Anzeige.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel4Bereich2Anzeige.RootElement.Text = resources.GetString("lblStaffel4Bereich2Anzeige.RootElement.Text")
-        Me.lblStaffel4Bereich2Anzeige.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel4Bereich2Anzeige.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel4Bereich2Anzeige.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel4Bereich2Anzeige.RootElement.AccessibleName = Nothing
         '
         'lblStaffel4Bereich2Last
         '
@@ -3673,14 +2911,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel4Bereich2Last.RootElement.AccessibleDescription = resources.GetString("lblStaffel4Bereich2Last.RootElement.AccessibleDescription")
-        Me.lblStaffel4Bereich2Last.RootElement.AccessibleName = resources.GetString("lblStaffel4Bereich2Last.RootElement.AccessibleName")
-        Me.lblStaffel4Bereich2Last.RootElement.Alignment = CType(resources.GetObject("lblStaffel4Bereich2Last.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel4Bereich2Last.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel4Bereich2Last.RootElement.AngleTransform"), Single)
-        Me.lblStaffel4Bereich2Last.RootElement.FlipText = CType(resources.GetObject("lblStaffel4Bereich2Last.RootElement.FlipText"), Boolean)
-        Me.lblStaffel4Bereich2Last.RootElement.Margin = CType(resources.GetObject("lblStaffel4Bereich2Last.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel4Bereich2Last.RootElement.Text = resources.GetString("lblStaffel4Bereich2Last.RootElement.Text")
-        Me.lblStaffel4Bereich2Last.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel4Bereich2Last.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel4Bereich2Last.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel4Bereich2Last.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxStaffel4Bereich1
         '
@@ -3722,14 +2954,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadGroupBoxStaffel4Bereich1.RootElement.AccessibleDescription = resources.GetString("RadGroupBoxStaffel4Bereich1.RootElement.AccessibleDescription")
-        Me.RadGroupBoxStaffel4Bereich1.RootElement.AccessibleName = resources.GetString("RadGroupBoxStaffel4Bereich1.RootElement.AccessibleName")
-        Me.RadGroupBoxStaffel4Bereich1.RootElement.Alignment = CType(resources.GetObject("RadGroupBoxStaffel4Bereich1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadGroupBoxStaffel4Bereich1.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBoxStaffel4Bereich1.RootElement.AngleTransform"), Single)
-        Me.RadGroupBoxStaffel4Bereich1.RootElement.FlipText = CType(resources.GetObject("RadGroupBoxStaffel4Bereich1.RootElement.FlipText"), Boolean)
-        Me.RadGroupBoxStaffel4Bereich1.RootElement.Margin = CType(resources.GetObject("RadGroupBoxStaffel4Bereich1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadGroupBoxStaffel4Bereich1.RootElement.Text = resources.GetString("RadGroupBoxStaffel4Bereich1.RootElement.Text")
-        Me.RadGroupBoxStaffel4Bereich1.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxStaffel4Bereich1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadGroupBoxStaffel4Bereich1.RootElement.AccessibleDescription = Nothing
+        Me.RadGroupBoxStaffel4Bereich1.RootElement.AccessibleName = Nothing
         '
         'PictureBox115
         '
@@ -3773,14 +2999,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel4Bereich1ErsatzLastUnten.RootElement.AccessibleDescription = resources.GetString("lblStaffel4Bereich1ErsatzLastUnten.RootElement.AccessibleDescription")
-        Me.lblStaffel4Bereich1ErsatzLastUnten.RootElement.AccessibleName = resources.GetString("lblStaffel4Bereich1ErsatzLastUnten.RootElement.AccessibleName")
-        Me.lblStaffel4Bereich1ErsatzLastUnten.RootElement.Alignment = CType(resources.GetObject("lblStaffel4Bereich1ErsatzLastUnten.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel4Bereich1ErsatzLastUnten.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel4Bereich1ErsatzLastUnten.RootElement.AngleTransform"), Single)
-        Me.lblStaffel4Bereich1ErsatzLastUnten.RootElement.FlipText = CType(resources.GetObject("lblStaffel4Bereich1ErsatzLastUnten.RootElement.FlipText"), Boolean)
-        Me.lblStaffel4Bereich1ErsatzLastUnten.RootElement.Margin = CType(resources.GetObject("lblStaffel4Bereich1ErsatzLastUnten.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel4Bereich1ErsatzLastUnten.RootElement.Text = resources.GetString("lblStaffel4Bereich1ErsatzLastUnten.RootElement.Text")
-        Me.lblStaffel4Bereich1ErsatzLastUnten.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel4Bereich1ErsatzLastUnten.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel4Bereich1ErsatzLastUnten.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel4Bereich1ErsatzLastUnten.RootElement.AccessibleName = Nothing
         '
         'lblStaffel4Bereich1ErsatzLastOben
         '
@@ -3789,14 +3009,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel4Bereich1ErsatzLastOben.RootElement.AccessibleDescription = resources.GetString("lblStaffel4Bereich1ErsatzLastOben.RootElement.AccessibleDescription")
-        Me.lblStaffel4Bereich1ErsatzLastOben.RootElement.AccessibleName = resources.GetString("lblStaffel4Bereich1ErsatzLastOben.RootElement.AccessibleName")
-        Me.lblStaffel4Bereich1ErsatzLastOben.RootElement.Alignment = CType(resources.GetObject("lblStaffel4Bereich1ErsatzLastOben.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel4Bereich1ErsatzLastOben.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel4Bereich1ErsatzLastOben.RootElement.AngleTransform"), Single)
-        Me.lblStaffel4Bereich1ErsatzLastOben.RootElement.FlipText = CType(resources.GetObject("lblStaffel4Bereich1ErsatzLastOben.RootElement.FlipText"), Boolean)
-        Me.lblStaffel4Bereich1ErsatzLastOben.RootElement.Margin = CType(resources.GetObject("lblStaffel4Bereich1ErsatzLastOben.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel4Bereich1ErsatzLastOben.RootElement.Text = resources.GetString("lblStaffel4Bereich1ErsatzLastOben.RootElement.Text")
-        Me.lblStaffel4Bereich1ErsatzLastOben.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel4Bereich1ErsatzLastOben.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel4Bereich1ErsatzLastOben.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel4Bereich1ErsatzLastOben.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel4Bereich1Fehler7
         '
@@ -3805,14 +3019,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel4Bereich1Fehler7.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel4Bereich1Fehler7.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel4Bereich1Fehler7.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel4Bereich1Fehler7.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel4Bereich1Fehler7.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Fehler7.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel4Bereich1Fehler7.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Fehler7.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel4Bereich1Fehler7.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Fehler7.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel4Bereich1Fehler7.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Fehler7.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel4Bereich1Fehler7.RootElement.Text = resources.GetString("RadTextBoxControlStaffel4Bereich1Fehler7.RootElement.Text")
-        Me.RadTextBoxControlStaffel4Bereich1Fehler7.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Fehler7.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel4Bereich1Fehler7.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel4Bereich1Fehler7.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel4Bereich1Fehler7.TabStop = False
         '
         'RadTextBoxControlStaffel4Bereich1Fehler6
@@ -3822,14 +3030,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel4Bereich1Fehler6.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel4Bereich1Fehler6.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel4Bereich1Fehler6.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel4Bereich1Fehler6.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel4Bereich1Fehler6.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Fehler6.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel4Bereich1Fehler6.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Fehler6.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel4Bereich1Fehler6.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Fehler6.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel4Bereich1Fehler6.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Fehler6.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel4Bereich1Fehler6.RootElement.Text = resources.GetString("RadTextBoxControlStaffel4Bereich1Fehler6.RootElement.Text")
-        Me.RadTextBoxControlStaffel4Bereich1Fehler6.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Fehler6.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel4Bereich1Fehler6.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel4Bereich1Fehler6.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel4Bereich1Fehler6.TabStop = False
         '
         'RadTextBoxControlStaffel4Bereich1Fehler5
@@ -3839,14 +3041,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel4Bereich1Fehler5.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel4Bereich1Fehler5.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel4Bereich1Fehler5.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel4Bereich1Fehler5.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel4Bereich1Fehler5.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Fehler5.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel4Bereich1Fehler5.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Fehler5.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel4Bereich1Fehler5.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Fehler5.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel4Bereich1Fehler5.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Fehler5.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel4Bereich1Fehler5.RootElement.Text = resources.GetString("RadTextBoxControlStaffel4Bereich1Fehler5.RootElement.Text")
-        Me.RadTextBoxControlStaffel4Bereich1Fehler5.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Fehler5.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel4Bereich1Fehler5.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel4Bereich1Fehler5.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel4Bereich1Fehler5.TabStop = False
         '
         'RadTextBoxControlStaffel4Bereich1Last4
@@ -3856,14 +3052,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel4Bereich1Last4.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel4Bereich1Last4.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel4Bereich1Last4.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel4Bereich1Last4.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel4Bereich1Last4.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Last4.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel4Bereich1Last4.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Last4.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel4Bereich1Last4.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Last4.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel4Bereich1Last4.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Last4.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel4Bereich1Last4.RootElement.Text = resources.GetString("RadTextBoxControlStaffel4Bereich1Last4.RootElement.Text")
-        Me.RadTextBoxControlStaffel4Bereich1Last4.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Last4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel4Bereich1Last4.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel4Bereich1Last4.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel4Bereich1Last4.TabStop = False
         '
         'RadTextBoxControlStaffel4Bereich1Anzeige4
@@ -3873,14 +3063,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel4Bereich1Anzeige4.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel4Bereich1Anzeige4.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel4Bereich1Anzeige4.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel4Bereich1Anzeige4.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel4Bereich1Anzeige4.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Anzeige4.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel4Bereich1Anzeige4.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Anzeige4.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel4Bereich1Anzeige4.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Anzeige4.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel4Bereich1Anzeige4.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Anzeige4.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel4Bereich1Anzeige4.RootElement.Text = resources.GetString("RadTextBoxControlStaffel4Bereich1Anzeige4.RootElement.Text")
-        Me.RadTextBoxControlStaffel4Bereich1Anzeige4.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Anzeige4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel4Bereich1Anzeige4.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel4Bereich1Anzeige4.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel4Bereich1Anzeige3
         '
@@ -3889,14 +3073,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel4Bereich1Anzeige3.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel4Bereich1Anzeige3.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel4Bereich1Anzeige3.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel4Bereich1Anzeige3.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel4Bereich1Anzeige3.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Anzeige3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel4Bereich1Anzeige3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Anzeige3.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel4Bereich1Anzeige3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Anzeige3.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel4Bereich1Anzeige3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Anzeige3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel4Bereich1Anzeige3.RootElement.Text = resources.GetString("RadTextBoxControlStaffel4Bereich1Anzeige3.RootElement.Text")
-        Me.RadTextBoxControlStaffel4Bereich1Anzeige3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Anzeige3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel4Bereich1Anzeige3.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel4Bereich1Anzeige3.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel4Bereich1Last3
         '
@@ -3905,14 +3083,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel4Bereich1Last3.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel4Bereich1Last3.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel4Bereich1Last3.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel4Bereich1Last3.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel4Bereich1Last3.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Last3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel4Bereich1Last3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Last3.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel4Bereich1Last3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Last3.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel4Bereich1Last3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Last3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel4Bereich1Last3.RootElement.Text = resources.GetString("RadTextBoxControlStaffel4Bereich1Last3.RootElement.Text")
-        Me.RadTextBoxControlStaffel4Bereich1Last3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Last3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel4Bereich1Last3.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel4Bereich1Last3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel4Bereich1Last3.TabStop = False
         '
         'RadTextBoxControlStaffel4Bereich1Last2
@@ -3922,14 +3094,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel4Bereich1Last2.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel4Bereich1Last2.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel4Bereich1Last2.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel4Bereich1Last2.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel4Bereich1Last2.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Last2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel4Bereich1Last2.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Last2.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel4Bereich1Last2.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Last2.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel4Bereich1Last2.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Last2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel4Bereich1Last2.RootElement.Text = resources.GetString("RadTextBoxControlStaffel4Bereich1Last2.RootElement.Text")
-        Me.RadTextBoxControlStaffel4Bereich1Last2.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Last2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel4Bereich1Last2.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel4Bereich1Last2.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel4Bereich1Anzeige1
         '
@@ -3938,14 +3104,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel4Bereich1Anzeige1.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel4Bereich1Anzeige1.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel4Bereich1Anzeige1.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel4Bereich1Anzeige1.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel4Bereich1Anzeige1.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Anzeige1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel4Bereich1Anzeige1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Anzeige1.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel4Bereich1Anzeige1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Anzeige1.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel4Bereich1Anzeige1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Anzeige1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel4Bereich1Anzeige1.RootElement.Text = resources.GetString("RadTextBoxControlStaffel4Bereich1Anzeige1.RootElement.Text")
-        Me.RadTextBoxControlStaffel4Bereich1Anzeige1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Anzeige1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel4Bereich1Anzeige1.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel4Bereich1Anzeige1.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel4Bereich1Last1
         '
@@ -3954,14 +3114,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel4Bereich1Last1.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel4Bereich1Last1.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel4Bereich1Last1.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel4Bereich1Last1.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel4Bereich1Last1.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Last1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel4Bereich1Last1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Last1.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel4Bereich1Last1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Last1.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel4Bereich1Last1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Last1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel4Bereich1Last1.RootElement.Text = resources.GetString("RadTextBoxControlStaffel4Bereich1Last1.RootElement.Text")
-        Me.RadTextBoxControlStaffel4Bereich1Last1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel4Bereich1Last1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel4Bereich1Last1.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel4Bereich1Last1.RootElement.AccessibleName = Nothing
         '
         'lblStaffel4Bereich1MessabweichungWaage
         '
@@ -3970,14 +3124,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel4Bereich1MessabweichungWaage.RootElement.AccessibleDescription = resources.GetString("lblStaffel4Bereich1MessabweichungWaage.RootElement.AccessibleDescription")
-        Me.lblStaffel4Bereich1MessabweichungWaage.RootElement.AccessibleName = resources.GetString("lblStaffel4Bereich1MessabweichungWaage.RootElement.AccessibleName")
-        Me.lblStaffel4Bereich1MessabweichungWaage.RootElement.Alignment = CType(resources.GetObject("lblStaffel4Bereich1MessabweichungWaage.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel4Bereich1MessabweichungWaage.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel4Bereich1MessabweichungWaage.RootElement.AngleTransform"), Single)
-        Me.lblStaffel4Bereich1MessabweichungWaage.RootElement.FlipText = CType(resources.GetObject("lblStaffel4Bereich1MessabweichungWaage.RootElement.FlipText"), Boolean)
-        Me.lblStaffel4Bereich1MessabweichungWaage.RootElement.Margin = CType(resources.GetObject("lblStaffel4Bereich1MessabweichungWaage.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel4Bereich1MessabweichungWaage.RootElement.Text = resources.GetString("lblStaffel4Bereich1MessabweichungWaage.RootElement.Text")
-        Me.lblStaffel4Bereich1MessabweichungWaage.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel4Bereich1MessabweichungWaage.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel4Bereich1MessabweichungWaage.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel4Bereich1MessabweichungWaage.RootElement.AccessibleName = Nothing
         '
         'lblStaffel4Bereich1MessabweichungStaffel
         '
@@ -3986,14 +3134,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel4Bereich1MessabweichungStaffel.RootElement.AccessibleDescription = resources.GetString("lblStaffel4Bereich1MessabweichungStaffel.RootElement.AccessibleDescription")
-        Me.lblStaffel4Bereich1MessabweichungStaffel.RootElement.AccessibleName = resources.GetString("lblStaffel4Bereich1MessabweichungStaffel.RootElement.AccessibleName")
-        Me.lblStaffel4Bereich1MessabweichungStaffel.RootElement.Alignment = CType(resources.GetObject("lblStaffel4Bereich1MessabweichungStaffel.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel4Bereich1MessabweichungStaffel.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel4Bereich1MessabweichungStaffel.RootElement.AngleTransform"), Single)
-        Me.lblStaffel4Bereich1MessabweichungStaffel.RootElement.FlipText = CType(resources.GetObject("lblStaffel4Bereich1MessabweichungStaffel.RootElement.FlipText"), Boolean)
-        Me.lblStaffel4Bereich1MessabweichungStaffel.RootElement.Margin = CType(resources.GetObject("lblStaffel4Bereich1MessabweichungStaffel.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel4Bereich1MessabweichungStaffel.RootElement.Text = resources.GetString("lblStaffel4Bereich1MessabweichungStaffel.RootElement.Text")
-        Me.lblStaffel4Bereich1MessabweichungStaffel.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel4Bereich1MessabweichungStaffel.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel4Bereich1MessabweichungStaffel.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel4Bereich1MessabweichungStaffel.RootElement.AccessibleName = Nothing
         '
         'lblStaffel4Bereich1Differenz
         '
@@ -4002,14 +3144,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel4Bereich1Differenz.RootElement.AccessibleDescription = resources.GetString("lblStaffel4Bereich1Differenz.RootElement.AccessibleDescription")
-        Me.lblStaffel4Bereich1Differenz.RootElement.AccessibleName = resources.GetString("lblStaffel4Bereich1Differenz.RootElement.AccessibleName")
-        Me.lblStaffel4Bereich1Differenz.RootElement.Alignment = CType(resources.GetObject("lblStaffel4Bereich1Differenz.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel4Bereich1Differenz.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel4Bereich1Differenz.RootElement.AngleTransform"), Single)
-        Me.lblStaffel4Bereich1Differenz.RootElement.FlipText = CType(resources.GetObject("lblStaffel4Bereich1Differenz.RootElement.FlipText"), Boolean)
-        Me.lblStaffel4Bereich1Differenz.RootElement.Margin = CType(resources.GetObject("lblStaffel4Bereich1Differenz.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel4Bereich1Differenz.RootElement.Text = resources.GetString("lblStaffel4Bereich1Differenz.RootElement.Text")
-        Me.lblStaffel4Bereich1Differenz.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel4Bereich1Differenz.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel4Bereich1Differenz.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel4Bereich1Differenz.RootElement.AccessibleName = Nothing
         '
         'lblStaffel4Bereich1ZusastzNormalLast
         '
@@ -4018,14 +3154,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel4Bereich1ZusastzNormalLast.RootElement.AccessibleDescription = resources.GetString("lblStaffel4Bereich1ZusastzNormalLast.RootElement.AccessibleDescription")
-        Me.lblStaffel4Bereich1ZusastzNormalLast.RootElement.AccessibleName = resources.GetString("lblStaffel4Bereich1ZusastzNormalLast.RootElement.AccessibleName")
-        Me.lblStaffel4Bereich1ZusastzNormalLast.RootElement.Alignment = CType(resources.GetObject("lblStaffel4Bereich1ZusastzNormalLast.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel4Bereich1ZusastzNormalLast.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel4Bereich1ZusastzNormalLast.RootElement.AngleTransform"), Single)
-        Me.lblStaffel4Bereich1ZusastzNormalLast.RootElement.FlipText = CType(resources.GetObject("lblStaffel4Bereich1ZusastzNormalLast.RootElement.FlipText"), Boolean)
-        Me.lblStaffel4Bereich1ZusastzNormalLast.RootElement.Margin = CType(resources.GetObject("lblStaffel4Bereich1ZusastzNormalLast.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel4Bereich1ZusastzNormalLast.RootElement.Text = resources.GetString("lblStaffel4Bereich1ZusastzNormalLast.RootElement.Text")
-        Me.lblStaffel4Bereich1ZusastzNormalLast.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel4Bereich1ZusastzNormalLast.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel4Bereich1ZusastzNormalLast.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel4Bereich1ZusastzNormalLast.RootElement.AccessibleName = Nothing
         '
         'lblStaffel4Bereich1NormalLast
         '
@@ -4034,14 +3164,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel4Bereich1NormalLast.RootElement.AccessibleDescription = resources.GetString("lblStaffel4Bereich1NormalLast.RootElement.AccessibleDescription")
-        Me.lblStaffel4Bereich1NormalLast.RootElement.AccessibleName = resources.GetString("lblStaffel4Bereich1NormalLast.RootElement.AccessibleName")
-        Me.lblStaffel4Bereich1NormalLast.RootElement.Alignment = CType(resources.GetObject("lblStaffel4Bereich1NormalLast.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel4Bereich1NormalLast.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel4Bereich1NormalLast.RootElement.AngleTransform"), Single)
-        Me.lblStaffel4Bereich1NormalLast.RootElement.FlipText = CType(resources.GetObject("lblStaffel4Bereich1NormalLast.RootElement.FlipText"), Boolean)
-        Me.lblStaffel4Bereich1NormalLast.RootElement.Margin = CType(resources.GetObject("lblStaffel4Bereich1NormalLast.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel4Bereich1NormalLast.RootElement.Text = resources.GetString("lblStaffel4Bereich1NormalLast.RootElement.Text")
-        Me.lblStaffel4Bereich1NormalLast.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel4Bereich1NormalLast.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel4Bereich1NormalLast.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel4Bereich1NormalLast.RootElement.AccessibleName = Nothing
         '
         'PictureBox77
         '
@@ -4072,14 +3196,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel4Bereich1EFGWert7.RootElement.AccessibleDescription = resources.GetString("lblStaffel4Bereich1EFGWert7.RootElement.AccessibleDescription")
-        Me.lblStaffel4Bereich1EFGWert7.RootElement.AccessibleName = resources.GetString("lblStaffel4Bereich1EFGWert7.RootElement.AccessibleName")
-        Me.lblStaffel4Bereich1EFGWert7.RootElement.Alignment = CType(resources.GetObject("lblStaffel4Bereich1EFGWert7.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel4Bereich1EFGWert7.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel4Bereich1EFGWert7.RootElement.AngleTransform"), Single)
-        Me.lblStaffel4Bereich1EFGWert7.RootElement.FlipText = CType(resources.GetObject("lblStaffel4Bereich1EFGWert7.RootElement.FlipText"), Boolean)
-        Me.lblStaffel4Bereich1EFGWert7.RootElement.Margin = CType(resources.GetObject("lblStaffel4Bereich1EFGWert7.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel4Bereich1EFGWert7.RootElement.Text = resources.GetString("lblStaffel4Bereich1EFGWert7.RootElement.Text")
-        Me.lblStaffel4Bereich1EFGWert7.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel4Bereich1EFGWert7.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel4Bereich1EFGWert7.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel4Bereich1EFGWert7.RootElement.AccessibleName = Nothing
         Me.lblStaffel4Bereich1EFGWert7.TabStop = False
         '
         'lblStaffel4Bereich1EFGWert6
@@ -4090,14 +3208,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel4Bereich1EFGWert6.RootElement.AccessibleDescription = resources.GetString("lblStaffel4Bereich1EFGWert6.RootElement.AccessibleDescription")
-        Me.lblStaffel4Bereich1EFGWert6.RootElement.AccessibleName = resources.GetString("lblStaffel4Bereich1EFGWert6.RootElement.AccessibleName")
-        Me.lblStaffel4Bereich1EFGWert6.RootElement.Alignment = CType(resources.GetObject("lblStaffel4Bereich1EFGWert6.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel4Bereich1EFGWert6.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel4Bereich1EFGWert6.RootElement.AngleTransform"), Single)
-        Me.lblStaffel4Bereich1EFGWert6.RootElement.FlipText = CType(resources.GetObject("lblStaffel4Bereich1EFGWert6.RootElement.FlipText"), Boolean)
-        Me.lblStaffel4Bereich1EFGWert6.RootElement.Margin = CType(resources.GetObject("lblStaffel4Bereich1EFGWert6.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel4Bereich1EFGWert6.RootElement.Text = resources.GetString("lblStaffel4Bereich1EFGWert6.RootElement.Text")
-        Me.lblStaffel4Bereich1EFGWert6.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel4Bereich1EFGWert6.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel4Bereich1EFGWert6.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel4Bereich1EFGWert6.RootElement.AccessibleName = Nothing
         Me.lblStaffel4Bereich1EFGWert6.TabStop = False
         '
         'lblStaffel4Bereich1EFGWert5
@@ -4108,14 +3220,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel4Bereich1EFGWert5.RootElement.AccessibleDescription = resources.GetString("lblStaffel4Bereich1EFGWert5.RootElement.AccessibleDescription")
-        Me.lblStaffel4Bereich1EFGWert5.RootElement.AccessibleName = resources.GetString("lblStaffel4Bereich1EFGWert5.RootElement.AccessibleName")
-        Me.lblStaffel4Bereich1EFGWert5.RootElement.Alignment = CType(resources.GetObject("lblStaffel4Bereich1EFGWert5.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel4Bereich1EFGWert5.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel4Bereich1EFGWert5.RootElement.AngleTransform"), Single)
-        Me.lblStaffel4Bereich1EFGWert5.RootElement.FlipText = CType(resources.GetObject("lblStaffel4Bereich1EFGWert5.RootElement.FlipText"), Boolean)
-        Me.lblStaffel4Bereich1EFGWert5.RootElement.Margin = CType(resources.GetObject("lblStaffel4Bereich1EFGWert5.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel4Bereich1EFGWert5.RootElement.Text = resources.GetString("lblStaffel4Bereich1EFGWert5.RootElement.Text")
-        Me.lblStaffel4Bereich1EFGWert5.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel4Bereich1EFGWert5.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel4Bereich1EFGWert5.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel4Bereich1EFGWert5.RootElement.AccessibleName = Nothing
         Me.lblStaffel4Bereich1EFGWert5.TabStop = False
         '
         'lblStaffel4Bereich1EFG
@@ -4125,14 +3231,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel4Bereich1EFG.RootElement.AccessibleDescription = resources.GetString("lblStaffel4Bereich1EFG.RootElement.AccessibleDescription")
-        Me.lblStaffel4Bereich1EFG.RootElement.AccessibleName = resources.GetString("lblStaffel4Bereich1EFG.RootElement.AccessibleName")
-        Me.lblStaffel4Bereich1EFG.RootElement.Alignment = CType(resources.GetObject("lblStaffel4Bereich1EFG.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel4Bereich1EFG.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel4Bereich1EFG.RootElement.AngleTransform"), Single)
-        Me.lblStaffel4Bereich1EFG.RootElement.FlipText = CType(resources.GetObject("lblStaffel4Bereich1EFG.RootElement.FlipText"), Boolean)
-        Me.lblStaffel4Bereich1EFG.RootElement.Margin = CType(resources.GetObject("lblStaffel4Bereich1EFG.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel4Bereich1EFG.RootElement.Text = resources.GetString("lblStaffel4Bereich1EFG.RootElement.Text")
-        Me.lblStaffel4Bereich1EFG.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel4Bereich1EFG.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel4Bereich1EFG.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel4Bereich1EFG.RootElement.AccessibleName = Nothing
         '
         'lblStaffel4Bereich1Fehler
         '
@@ -4141,14 +3241,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel4Bereich1Fehler.RootElement.AccessibleDescription = resources.GetString("lblStaffel4Bereich1Fehler.RootElement.AccessibleDescription")
-        Me.lblStaffel4Bereich1Fehler.RootElement.AccessibleName = resources.GetString("lblStaffel4Bereich1Fehler.RootElement.AccessibleName")
-        Me.lblStaffel4Bereich1Fehler.RootElement.Alignment = CType(resources.GetObject("lblStaffel4Bereich1Fehler.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel4Bereich1Fehler.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel4Bereich1Fehler.RootElement.AngleTransform"), Single)
-        Me.lblStaffel4Bereich1Fehler.RootElement.FlipText = CType(resources.GetObject("lblStaffel4Bereich1Fehler.RootElement.FlipText"), Boolean)
-        Me.lblStaffel4Bereich1Fehler.RootElement.Margin = CType(resources.GetObject("lblStaffel4Bereich1Fehler.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel4Bereich1Fehler.RootElement.Text = resources.GetString("lblStaffel4Bereich1Fehler.RootElement.Text")
-        Me.lblStaffel4Bereich1Fehler.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel4Bereich1Fehler.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel4Bereich1Fehler.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel4Bereich1Fehler.RootElement.AccessibleName = Nothing
         '
         'lblStaffel4Bereich1Anzeige
         '
@@ -4157,14 +3251,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel4Bereich1Anzeige.RootElement.AccessibleDescription = resources.GetString("lblStaffel4Bereich1Anzeige.RootElement.AccessibleDescription")
-        Me.lblStaffel4Bereich1Anzeige.RootElement.AccessibleName = resources.GetString("lblStaffel4Bereich1Anzeige.RootElement.AccessibleName")
-        Me.lblStaffel4Bereich1Anzeige.RootElement.Alignment = CType(resources.GetObject("lblStaffel4Bereich1Anzeige.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel4Bereich1Anzeige.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel4Bereich1Anzeige.RootElement.AngleTransform"), Single)
-        Me.lblStaffel4Bereich1Anzeige.RootElement.FlipText = CType(resources.GetObject("lblStaffel4Bereich1Anzeige.RootElement.FlipText"), Boolean)
-        Me.lblStaffel4Bereich1Anzeige.RootElement.Margin = CType(resources.GetObject("lblStaffel4Bereich1Anzeige.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel4Bereich1Anzeige.RootElement.Text = resources.GetString("lblStaffel4Bereich1Anzeige.RootElement.Text")
-        Me.lblStaffel4Bereich1Anzeige.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel4Bereich1Anzeige.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel4Bereich1Anzeige.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel4Bereich1Anzeige.RootElement.AccessibleName = Nothing
         '
         'lblStaffel4Bereich1Last
         '
@@ -4173,14 +3261,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel4Bereich1Last.RootElement.AccessibleDescription = resources.GetString("lblStaffel4Bereich1Last.RootElement.AccessibleDescription")
-        Me.lblStaffel4Bereich1Last.RootElement.AccessibleName = resources.GetString("lblStaffel4Bereich1Last.RootElement.AccessibleName")
-        Me.lblStaffel4Bereich1Last.RootElement.Alignment = CType(resources.GetObject("lblStaffel4Bereich1Last.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel4Bereich1Last.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel4Bereich1Last.RootElement.AngleTransform"), Single)
-        Me.lblStaffel4Bereich1Last.RootElement.FlipText = CType(resources.GetObject("lblStaffel4Bereich1Last.RootElement.FlipText"), Boolean)
-        Me.lblStaffel4Bereich1Last.RootElement.Margin = CType(resources.GetObject("lblStaffel4Bereich1Last.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel4Bereich1Last.RootElement.Text = resources.GetString("lblStaffel4Bereich1Last.RootElement.Text")
-        Me.lblStaffel4Bereich1Last.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel4Bereich1Last.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel4Bereich1Last.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel4Bereich1Last.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxStaffel3
         '
@@ -4193,14 +3275,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadGroupBoxStaffel3.RootElement.AccessibleDescription = resources.GetString("RadGroupBoxStaffel3.RootElement.AccessibleDescription")
-        Me.RadGroupBoxStaffel3.RootElement.AccessibleName = resources.GetString("RadGroupBoxStaffel3.RootElement.AccessibleName")
-        Me.RadGroupBoxStaffel3.RootElement.Alignment = CType(resources.GetObject("RadGroupBoxStaffel3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadGroupBoxStaffel3.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBoxStaffel3.RootElement.AngleTransform"), Single)
-        Me.RadGroupBoxStaffel3.RootElement.FlipText = CType(resources.GetObject("RadGroupBoxStaffel3.RootElement.FlipText"), Boolean)
-        Me.RadGroupBoxStaffel3.RootElement.Margin = CType(resources.GetObject("RadGroupBoxStaffel3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadGroupBoxStaffel3.RootElement.Text = resources.GetString("RadGroupBoxStaffel3.RootElement.Text")
-        Me.RadGroupBoxStaffel3.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxStaffel3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadGroupBoxStaffel3.RootElement.AccessibleDescription = Nothing
+        Me.RadGroupBoxStaffel3.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxStaffel3Bereich3
         '
@@ -4242,14 +3318,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadGroupBoxStaffel3Bereich3.RootElement.AccessibleDescription = resources.GetString("RadGroupBoxStaffel3Bereich3.RootElement.AccessibleDescription")
-        Me.RadGroupBoxStaffel3Bereich3.RootElement.AccessibleName = resources.GetString("RadGroupBoxStaffel3Bereich3.RootElement.AccessibleName")
-        Me.RadGroupBoxStaffel3Bereich3.RootElement.Alignment = CType(resources.GetObject("RadGroupBoxStaffel3Bereich3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadGroupBoxStaffel3Bereich3.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBoxStaffel3Bereich3.RootElement.AngleTransform"), Single)
-        Me.RadGroupBoxStaffel3Bereich3.RootElement.FlipText = CType(resources.GetObject("RadGroupBoxStaffel3Bereich3.RootElement.FlipText"), Boolean)
-        Me.RadGroupBoxStaffel3Bereich3.RootElement.Margin = CType(resources.GetObject("RadGroupBoxStaffel3Bereich3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadGroupBoxStaffel3Bereich3.RootElement.Text = resources.GetString("RadGroupBoxStaffel3Bereich3.RootElement.Text")
-        Me.RadGroupBoxStaffel3Bereich3.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxStaffel3Bereich3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadGroupBoxStaffel3Bereich3.RootElement.AccessibleDescription = Nothing
+        Me.RadGroupBoxStaffel3Bereich3.RootElement.AccessibleName = Nothing
         '
         'PictureBox106
         '
@@ -4293,14 +3363,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel3Bereich3ErsatzLastUnten.RootElement.AccessibleDescription = resources.GetString("lblStaffel3Bereich3ErsatzLastUnten.RootElement.AccessibleDescription")
-        Me.lblStaffel3Bereich3ErsatzLastUnten.RootElement.AccessibleName = resources.GetString("lblStaffel3Bereich3ErsatzLastUnten.RootElement.AccessibleName")
-        Me.lblStaffel3Bereich3ErsatzLastUnten.RootElement.Alignment = CType(resources.GetObject("lblStaffel3Bereich3ErsatzLastUnten.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel3Bereich3ErsatzLastUnten.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel3Bereich3ErsatzLastUnten.RootElement.AngleTransform"), Single)
-        Me.lblStaffel3Bereich3ErsatzLastUnten.RootElement.FlipText = CType(resources.GetObject("lblStaffel3Bereich3ErsatzLastUnten.RootElement.FlipText"), Boolean)
-        Me.lblStaffel3Bereich3ErsatzLastUnten.RootElement.Margin = CType(resources.GetObject("lblStaffel3Bereich3ErsatzLastUnten.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel3Bereich3ErsatzLastUnten.RootElement.Text = resources.GetString("lblStaffel3Bereich3ErsatzLastUnten.RootElement.Text")
-        Me.lblStaffel3Bereich3ErsatzLastUnten.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel3Bereich3ErsatzLastUnten.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel3Bereich3ErsatzLastUnten.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel3Bereich3ErsatzLastUnten.RootElement.AccessibleName = Nothing
         '
         'lblStaffel3Bereich3ErsatzLastOben
         '
@@ -4309,14 +3373,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel3Bereich3ErsatzLastOben.RootElement.AccessibleDescription = resources.GetString("lblStaffel3Bereich3ErsatzLastOben.RootElement.AccessibleDescription")
-        Me.lblStaffel3Bereich3ErsatzLastOben.RootElement.AccessibleName = resources.GetString("lblStaffel3Bereich3ErsatzLastOben.RootElement.AccessibleName")
-        Me.lblStaffel3Bereich3ErsatzLastOben.RootElement.Alignment = CType(resources.GetObject("lblStaffel3Bereich3ErsatzLastOben.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel3Bereich3ErsatzLastOben.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel3Bereich3ErsatzLastOben.RootElement.AngleTransform"), Single)
-        Me.lblStaffel3Bereich3ErsatzLastOben.RootElement.FlipText = CType(resources.GetObject("lblStaffel3Bereich3ErsatzLastOben.RootElement.FlipText"), Boolean)
-        Me.lblStaffel3Bereich3ErsatzLastOben.RootElement.Margin = CType(resources.GetObject("lblStaffel3Bereich3ErsatzLastOben.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel3Bereich3ErsatzLastOben.RootElement.Text = resources.GetString("lblStaffel3Bereich3ErsatzLastOben.RootElement.Text")
-        Me.lblStaffel3Bereich3ErsatzLastOben.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel3Bereich3ErsatzLastOben.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel3Bereich3ErsatzLastOben.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel3Bereich3ErsatzLastOben.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel3Bereich3Fehler7
         '
@@ -4325,14 +3383,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel3Bereich3Fehler7.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel3Bereich3Fehler7.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel3Bereich3Fehler7.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel3Bereich3Fehler7.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel3Bereich3Fehler7.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Fehler7.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel3Bereich3Fehler7.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Fehler7.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel3Bereich3Fehler7.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Fehler7.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel3Bereich3Fehler7.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Fehler7.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel3Bereich3Fehler7.RootElement.Text = resources.GetString("RadTextBoxControlStaffel3Bereich3Fehler7.RootElement.Text")
-        Me.RadTextBoxControlStaffel3Bereich3Fehler7.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Fehler7.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel3Bereich3Fehler7.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel3Bereich3Fehler7.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel3Bereich3Fehler7.TabStop = False
         '
         'RadTextBoxControlStaffel3Bereich3Fehler6
@@ -4342,14 +3394,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel3Bereich3Fehler6.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel3Bereich3Fehler6.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel3Bereich3Fehler6.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel3Bereich3Fehler6.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel3Bereich3Fehler6.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Fehler6.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel3Bereich3Fehler6.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Fehler6.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel3Bereich3Fehler6.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Fehler6.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel3Bereich3Fehler6.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Fehler6.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel3Bereich3Fehler6.RootElement.Text = resources.GetString("RadTextBoxControlStaffel3Bereich3Fehler6.RootElement.Text")
-        Me.RadTextBoxControlStaffel3Bereich3Fehler6.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Fehler6.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel3Bereich3Fehler6.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel3Bereich3Fehler6.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel3Bereich3Fehler6.TabStop = False
         '
         'RadTextBoxControlStaffel3Bereich3Fehler5
@@ -4359,14 +3405,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel3Bereich3Fehler5.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel3Bereich3Fehler5.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel3Bereich3Fehler5.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel3Bereich3Fehler5.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel3Bereich3Fehler5.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Fehler5.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel3Bereich3Fehler5.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Fehler5.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel3Bereich3Fehler5.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Fehler5.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel3Bereich3Fehler5.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Fehler5.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel3Bereich3Fehler5.RootElement.Text = resources.GetString("RadTextBoxControlStaffel3Bereich3Fehler5.RootElement.Text")
-        Me.RadTextBoxControlStaffel3Bereich3Fehler5.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Fehler5.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel3Bereich3Fehler5.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel3Bereich3Fehler5.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel3Bereich3Fehler5.TabStop = False
         '
         'RadTextBoxControlStaffel3Bereich3Last4
@@ -4376,14 +3416,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel3Bereich3Last4.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel3Bereich3Last4.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel3Bereich3Last4.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel3Bereich3Last4.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel3Bereich3Last4.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Last4.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel3Bereich3Last4.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Last4.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel3Bereich3Last4.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Last4.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel3Bereich3Last4.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Last4.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel3Bereich3Last4.RootElement.Text = resources.GetString("RadTextBoxControlStaffel3Bereich3Last4.RootElement.Text")
-        Me.RadTextBoxControlStaffel3Bereich3Last4.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Last4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel3Bereich3Last4.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel3Bereich3Last4.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel3Bereich3Last4.TabStop = False
         '
         'RadTextBoxControlStaffel3Bereich3Anzeige4
@@ -4393,14 +3427,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel3Bereich3Anzeige4.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel3Bereich3Anzeige4.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel3Bereich3Anzeige4.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel3Bereich3Anzeige4.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel3Bereich3Anzeige4.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Anzeige4.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel3Bereich3Anzeige4.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Anzeige4.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel3Bereich3Anzeige4.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Anzeige4.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel3Bereich3Anzeige4.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Anzeige4.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel3Bereich3Anzeige4.RootElement.Text = resources.GetString("RadTextBoxControlStaffel3Bereich3Anzeige4.RootElement.Text")
-        Me.RadTextBoxControlStaffel3Bereich3Anzeige4.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Anzeige4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel3Bereich3Anzeige4.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel3Bereich3Anzeige4.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel3Bereich3Anzeige3
         '
@@ -4409,14 +3437,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel3Bereich3Anzeige3.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel3Bereich3Anzeige3.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel3Bereich3Anzeige3.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel3Bereich3Anzeige3.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel3Bereich3Anzeige3.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Anzeige3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel3Bereich3Anzeige3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Anzeige3.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel3Bereich3Anzeige3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Anzeige3.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel3Bereich3Anzeige3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Anzeige3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel3Bereich3Anzeige3.RootElement.Text = resources.GetString("RadTextBoxControlStaffel3Bereich3Anzeige3.RootElement.Text")
-        Me.RadTextBoxControlStaffel3Bereich3Anzeige3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Anzeige3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel3Bereich3Anzeige3.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel3Bereich3Anzeige3.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel3Bereich3Last3
         '
@@ -4425,14 +3447,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel3Bereich3Last3.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel3Bereich3Last3.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel3Bereich3Last3.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel3Bereich3Last3.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel3Bereich3Last3.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Last3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel3Bereich3Last3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Last3.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel3Bereich3Last3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Last3.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel3Bereich3Last3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Last3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel3Bereich3Last3.RootElement.Text = resources.GetString("RadTextBoxControlStaffel3Bereich3Last3.RootElement.Text")
-        Me.RadTextBoxControlStaffel3Bereich3Last3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Last3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel3Bereich3Last3.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel3Bereich3Last3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel3Bereich3Last3.TabStop = False
         '
         'RadTextBoxControlStaffel3Bereich3Last2
@@ -4442,14 +3458,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel3Bereich3Last2.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel3Bereich3Last2.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel3Bereich3Last2.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel3Bereich3Last2.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel3Bereich3Last2.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Last2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel3Bereich3Last2.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Last2.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel3Bereich3Last2.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Last2.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel3Bereich3Last2.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Last2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel3Bereich3Last2.RootElement.Text = resources.GetString("RadTextBoxControlStaffel3Bereich3Last2.RootElement.Text")
-        Me.RadTextBoxControlStaffel3Bereich3Last2.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Last2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel3Bereich3Last2.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel3Bereich3Last2.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel3Bereich3Anzeige1
         '
@@ -4458,14 +3468,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel3Bereich3Anzeige1.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel3Bereich3Anzeige1.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel3Bereich3Anzeige1.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel3Bereich3Anzeige1.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel3Bereich3Anzeige1.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Anzeige1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel3Bereich3Anzeige1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Anzeige1.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel3Bereich3Anzeige1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Anzeige1.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel3Bereich3Anzeige1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Anzeige1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel3Bereich3Anzeige1.RootElement.Text = resources.GetString("RadTextBoxControlStaffel3Bereich3Anzeige1.RootElement.Text")
-        Me.RadTextBoxControlStaffel3Bereich3Anzeige1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Anzeige1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel3Bereich3Anzeige1.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel3Bereich3Anzeige1.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel3Bereich3Last1
         '
@@ -4474,14 +3478,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel3Bereich3Last1.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel3Bereich3Last1.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel3Bereich3Last1.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel3Bereich3Last1.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel3Bereich3Last1.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Last1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel3Bereich3Last1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Last1.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel3Bereich3Last1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Last1.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel3Bereich3Last1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Last1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel3Bereich3Last1.RootElement.Text = resources.GetString("RadTextBoxControlStaffel3Bereich3Last1.RootElement.Text")
-        Me.RadTextBoxControlStaffel3Bereich3Last1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich3Last1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel3Bereich3Last1.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel3Bereich3Last1.RootElement.AccessibleName = Nothing
         '
         'lblStaffel3Bereich3MessabweichungWaage
         '
@@ -4490,14 +3488,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel3Bereich3MessabweichungWaage.RootElement.AccessibleDescription = resources.GetString("lblStaffel3Bereich3MessabweichungWaage.RootElement.AccessibleDescription")
-        Me.lblStaffel3Bereich3MessabweichungWaage.RootElement.AccessibleName = resources.GetString("lblStaffel3Bereich3MessabweichungWaage.RootElement.AccessibleName")
-        Me.lblStaffel3Bereich3MessabweichungWaage.RootElement.Alignment = CType(resources.GetObject("lblStaffel3Bereich3MessabweichungWaage.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel3Bereich3MessabweichungWaage.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel3Bereich3MessabweichungWaage.RootElement.AngleTransform"), Single)
-        Me.lblStaffel3Bereich3MessabweichungWaage.RootElement.FlipText = CType(resources.GetObject("lblStaffel3Bereich3MessabweichungWaage.RootElement.FlipText"), Boolean)
-        Me.lblStaffel3Bereich3MessabweichungWaage.RootElement.Margin = CType(resources.GetObject("lblStaffel3Bereich3MessabweichungWaage.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel3Bereich3MessabweichungWaage.RootElement.Text = resources.GetString("lblStaffel3Bereich3MessabweichungWaage.RootElement.Text")
-        Me.lblStaffel3Bereich3MessabweichungWaage.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel3Bereich3MessabweichungWaage.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel3Bereich3MessabweichungWaage.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel3Bereich3MessabweichungWaage.RootElement.AccessibleName = Nothing
         '
         'lblStaffel3Bereich3MessabweichungStaffel
         '
@@ -4506,14 +3498,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel3Bereich3MessabweichungStaffel.RootElement.AccessibleDescription = resources.GetString("lblStaffel3Bereich3MessabweichungStaffel.RootElement.AccessibleDescription")
-        Me.lblStaffel3Bereich3MessabweichungStaffel.RootElement.AccessibleName = resources.GetString("lblStaffel3Bereich3MessabweichungStaffel.RootElement.AccessibleName")
-        Me.lblStaffel3Bereich3MessabweichungStaffel.RootElement.Alignment = CType(resources.GetObject("lblStaffel3Bereich3MessabweichungStaffel.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel3Bereich3MessabweichungStaffel.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel3Bereich3MessabweichungStaffel.RootElement.AngleTransform"), Single)
-        Me.lblStaffel3Bereich3MessabweichungStaffel.RootElement.FlipText = CType(resources.GetObject("lblStaffel3Bereich3MessabweichungStaffel.RootElement.FlipText"), Boolean)
-        Me.lblStaffel3Bereich3MessabweichungStaffel.RootElement.Margin = CType(resources.GetObject("lblStaffel3Bereich3MessabweichungStaffel.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel3Bereich3MessabweichungStaffel.RootElement.Text = resources.GetString("lblStaffel3Bereich3MessabweichungStaffel.RootElement.Text")
-        Me.lblStaffel3Bereich3MessabweichungStaffel.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel3Bereich3MessabweichungStaffel.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel3Bereich3MessabweichungStaffel.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel3Bereich3MessabweichungStaffel.RootElement.AccessibleName = Nothing
         '
         'lblStaffel3Bereich3Differenz
         '
@@ -4522,14 +3508,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel3Bereich3Differenz.RootElement.AccessibleDescription = resources.GetString("lblStaffel3Bereich3Differenz.RootElement.AccessibleDescription")
-        Me.lblStaffel3Bereich3Differenz.RootElement.AccessibleName = resources.GetString("lblStaffel3Bereich3Differenz.RootElement.AccessibleName")
-        Me.lblStaffel3Bereich3Differenz.RootElement.Alignment = CType(resources.GetObject("lblStaffel3Bereich3Differenz.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel3Bereich3Differenz.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel3Bereich3Differenz.RootElement.AngleTransform"), Single)
-        Me.lblStaffel3Bereich3Differenz.RootElement.FlipText = CType(resources.GetObject("lblStaffel3Bereich3Differenz.RootElement.FlipText"), Boolean)
-        Me.lblStaffel3Bereich3Differenz.RootElement.Margin = CType(resources.GetObject("lblStaffel3Bereich3Differenz.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel3Bereich3Differenz.RootElement.Text = resources.GetString("lblStaffel3Bereich3Differenz.RootElement.Text")
-        Me.lblStaffel3Bereich3Differenz.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel3Bereich3Differenz.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel3Bereich3Differenz.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel3Bereich3Differenz.RootElement.AccessibleName = Nothing
         '
         'lblStaffel3Bereich3ZusastzNormalLast
         '
@@ -4538,14 +3518,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel3Bereich3ZusastzNormalLast.RootElement.AccessibleDescription = resources.GetString("lblStaffel3Bereich3ZusastzNormalLast.RootElement.AccessibleDescription")
-        Me.lblStaffel3Bereich3ZusastzNormalLast.RootElement.AccessibleName = resources.GetString("lblStaffel3Bereich3ZusastzNormalLast.RootElement.AccessibleName")
-        Me.lblStaffel3Bereich3ZusastzNormalLast.RootElement.Alignment = CType(resources.GetObject("lblStaffel3Bereich3ZusastzNormalLast.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel3Bereich3ZusastzNormalLast.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel3Bereich3ZusastzNormalLast.RootElement.AngleTransform"), Single)
-        Me.lblStaffel3Bereich3ZusastzNormalLast.RootElement.FlipText = CType(resources.GetObject("lblStaffel3Bereich3ZusastzNormalLast.RootElement.FlipText"), Boolean)
-        Me.lblStaffel3Bereich3ZusastzNormalLast.RootElement.Margin = CType(resources.GetObject("lblStaffel3Bereich3ZusastzNormalLast.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel3Bereich3ZusastzNormalLast.RootElement.Text = resources.GetString("lblStaffel3Bereich3ZusastzNormalLast.RootElement.Text")
-        Me.lblStaffel3Bereich3ZusastzNormalLast.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel3Bereich3ZusastzNormalLast.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel3Bereich3ZusastzNormalLast.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel3Bereich3ZusastzNormalLast.RootElement.AccessibleName = Nothing
         '
         'lblStaffel3Bereich3NormalLast
         '
@@ -4554,14 +3528,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel3Bereich3NormalLast.RootElement.AccessibleDescription = resources.GetString("lblStaffel3Bereich3NormalLast.RootElement.AccessibleDescription")
-        Me.lblStaffel3Bereich3NormalLast.RootElement.AccessibleName = resources.GetString("lblStaffel3Bereich3NormalLast.RootElement.AccessibleName")
-        Me.lblStaffel3Bereich3NormalLast.RootElement.Alignment = CType(resources.GetObject("lblStaffel3Bereich3NormalLast.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel3Bereich3NormalLast.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel3Bereich3NormalLast.RootElement.AngleTransform"), Single)
-        Me.lblStaffel3Bereich3NormalLast.RootElement.FlipText = CType(resources.GetObject("lblStaffel3Bereich3NormalLast.RootElement.FlipText"), Boolean)
-        Me.lblStaffel3Bereich3NormalLast.RootElement.Margin = CType(resources.GetObject("lblStaffel3Bereich3NormalLast.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel3Bereich3NormalLast.RootElement.Text = resources.GetString("lblStaffel3Bereich3NormalLast.RootElement.Text")
-        Me.lblStaffel3Bereich3NormalLast.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel3Bereich3NormalLast.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel3Bereich3NormalLast.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel3Bereich3NormalLast.RootElement.AccessibleName = Nothing
         '
         'PictureBox42
         '
@@ -4592,14 +3560,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel3Bereich3EFGWert7.RootElement.AccessibleDescription = resources.GetString("lblStaffel3Bereich3EFGWert7.RootElement.AccessibleDescription")
-        Me.lblStaffel3Bereich3EFGWert7.RootElement.AccessibleName = resources.GetString("lblStaffel3Bereich3EFGWert7.RootElement.AccessibleName")
-        Me.lblStaffel3Bereich3EFGWert7.RootElement.Alignment = CType(resources.GetObject("lblStaffel3Bereich3EFGWert7.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel3Bereich3EFGWert7.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel3Bereich3EFGWert7.RootElement.AngleTransform"), Single)
-        Me.lblStaffel3Bereich3EFGWert7.RootElement.FlipText = CType(resources.GetObject("lblStaffel3Bereich3EFGWert7.RootElement.FlipText"), Boolean)
-        Me.lblStaffel3Bereich3EFGWert7.RootElement.Margin = CType(resources.GetObject("lblStaffel3Bereich3EFGWert7.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel3Bereich3EFGWert7.RootElement.Text = resources.GetString("lblStaffel3Bereich3EFGWert7.RootElement.Text")
-        Me.lblStaffel3Bereich3EFGWert7.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel3Bereich3EFGWert7.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel3Bereich3EFGWert7.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel3Bereich3EFGWert7.RootElement.AccessibleName = Nothing
         Me.lblStaffel3Bereich3EFGWert7.TabStop = False
         '
         'lblStaffel3Bereich3EFGWert6
@@ -4610,14 +3572,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel3Bereich3EFGWert6.RootElement.AccessibleDescription = resources.GetString("lblStaffel3Bereich3EFGWert6.RootElement.AccessibleDescription")
-        Me.lblStaffel3Bereich3EFGWert6.RootElement.AccessibleName = resources.GetString("lblStaffel3Bereich3EFGWert6.RootElement.AccessibleName")
-        Me.lblStaffel3Bereich3EFGWert6.RootElement.Alignment = CType(resources.GetObject("lblStaffel3Bereich3EFGWert6.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel3Bereich3EFGWert6.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel3Bereich3EFGWert6.RootElement.AngleTransform"), Single)
-        Me.lblStaffel3Bereich3EFGWert6.RootElement.FlipText = CType(resources.GetObject("lblStaffel3Bereich3EFGWert6.RootElement.FlipText"), Boolean)
-        Me.lblStaffel3Bereich3EFGWert6.RootElement.Margin = CType(resources.GetObject("lblStaffel3Bereich3EFGWert6.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel3Bereich3EFGWert6.RootElement.Text = resources.GetString("lblStaffel3Bereich3EFGWert6.RootElement.Text")
-        Me.lblStaffel3Bereich3EFGWert6.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel3Bereich3EFGWert6.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel3Bereich3EFGWert6.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel3Bereich3EFGWert6.RootElement.AccessibleName = Nothing
         Me.lblStaffel3Bereich3EFGWert6.TabStop = False
         '
         'lblStaffel3Bereich3EFGWert5
@@ -4628,14 +3584,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel3Bereich3EFGWert5.RootElement.AccessibleDescription = resources.GetString("lblStaffel3Bereich3EFGWert5.RootElement.AccessibleDescription")
-        Me.lblStaffel3Bereich3EFGWert5.RootElement.AccessibleName = resources.GetString("lblStaffel3Bereich3EFGWert5.RootElement.AccessibleName")
-        Me.lblStaffel3Bereich3EFGWert5.RootElement.Alignment = CType(resources.GetObject("lblStaffel3Bereich3EFGWert5.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel3Bereich3EFGWert5.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel3Bereich3EFGWert5.RootElement.AngleTransform"), Single)
-        Me.lblStaffel3Bereich3EFGWert5.RootElement.FlipText = CType(resources.GetObject("lblStaffel3Bereich3EFGWert5.RootElement.FlipText"), Boolean)
-        Me.lblStaffel3Bereich3EFGWert5.RootElement.Margin = CType(resources.GetObject("lblStaffel3Bereich3EFGWert5.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel3Bereich3EFGWert5.RootElement.Text = resources.GetString("lblStaffel3Bereich3EFGWert5.RootElement.Text")
-        Me.lblStaffel3Bereich3EFGWert5.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel3Bereich3EFGWert5.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel3Bereich3EFGWert5.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel3Bereich3EFGWert5.RootElement.AccessibleName = Nothing
         Me.lblStaffel3Bereich3EFGWert5.TabStop = False
         '
         'lblStaffel3Bereich3EFG
@@ -4645,14 +3595,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel3Bereich3EFG.RootElement.AccessibleDescription = resources.GetString("lblStaffel3Bereich3EFG.RootElement.AccessibleDescription")
-        Me.lblStaffel3Bereich3EFG.RootElement.AccessibleName = resources.GetString("lblStaffel3Bereich3EFG.RootElement.AccessibleName")
-        Me.lblStaffel3Bereich3EFG.RootElement.Alignment = CType(resources.GetObject("lblStaffel3Bereich3EFG.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel3Bereich3EFG.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel3Bereich3EFG.RootElement.AngleTransform"), Single)
-        Me.lblStaffel3Bereich3EFG.RootElement.FlipText = CType(resources.GetObject("lblStaffel3Bereich3EFG.RootElement.FlipText"), Boolean)
-        Me.lblStaffel3Bereich3EFG.RootElement.Margin = CType(resources.GetObject("lblStaffel3Bereich3EFG.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel3Bereich3EFG.RootElement.Text = resources.GetString("lblStaffel3Bereich3EFG.RootElement.Text")
-        Me.lblStaffel3Bereich3EFG.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel3Bereich3EFG.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel3Bereich3EFG.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel3Bereich3EFG.RootElement.AccessibleName = Nothing
         '
         'lblStaffel3Bereich3Fehler
         '
@@ -4661,14 +3605,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel3Bereich3Fehler.RootElement.AccessibleDescription = resources.GetString("lblStaffel3Bereich3Fehler.RootElement.AccessibleDescription")
-        Me.lblStaffel3Bereich3Fehler.RootElement.AccessibleName = resources.GetString("lblStaffel3Bereich3Fehler.RootElement.AccessibleName")
-        Me.lblStaffel3Bereich3Fehler.RootElement.Alignment = CType(resources.GetObject("lblStaffel3Bereich3Fehler.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel3Bereich3Fehler.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel3Bereich3Fehler.RootElement.AngleTransform"), Single)
-        Me.lblStaffel3Bereich3Fehler.RootElement.FlipText = CType(resources.GetObject("lblStaffel3Bereich3Fehler.RootElement.FlipText"), Boolean)
-        Me.lblStaffel3Bereich3Fehler.RootElement.Margin = CType(resources.GetObject("lblStaffel3Bereich3Fehler.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel3Bereich3Fehler.RootElement.Text = resources.GetString("lblStaffel3Bereich3Fehler.RootElement.Text")
-        Me.lblStaffel3Bereich3Fehler.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel3Bereich3Fehler.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel3Bereich3Fehler.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel3Bereich3Fehler.RootElement.AccessibleName = Nothing
         '
         'lblStaffel3Bereich3Anzeige
         '
@@ -4677,14 +3615,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel3Bereich3Anzeige.RootElement.AccessibleDescription = resources.GetString("lblStaffel3Bereich3Anzeige.RootElement.AccessibleDescription")
-        Me.lblStaffel3Bereich3Anzeige.RootElement.AccessibleName = resources.GetString("lblStaffel3Bereich3Anzeige.RootElement.AccessibleName")
-        Me.lblStaffel3Bereich3Anzeige.RootElement.Alignment = CType(resources.GetObject("lblStaffel3Bereich3Anzeige.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel3Bereich3Anzeige.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel3Bereich3Anzeige.RootElement.AngleTransform"), Single)
-        Me.lblStaffel3Bereich3Anzeige.RootElement.FlipText = CType(resources.GetObject("lblStaffel3Bereich3Anzeige.RootElement.FlipText"), Boolean)
-        Me.lblStaffel3Bereich3Anzeige.RootElement.Margin = CType(resources.GetObject("lblStaffel3Bereich3Anzeige.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel3Bereich3Anzeige.RootElement.Text = resources.GetString("lblStaffel3Bereich3Anzeige.RootElement.Text")
-        Me.lblStaffel3Bereich3Anzeige.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel3Bereich3Anzeige.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel3Bereich3Anzeige.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel3Bereich3Anzeige.RootElement.AccessibleName = Nothing
         '
         'lblStaffel3Bereich3Last
         '
@@ -4693,14 +3625,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel3Bereich3Last.RootElement.AccessibleDescription = resources.GetString("lblStaffel3Bereich3Last.RootElement.AccessibleDescription")
-        Me.lblStaffel3Bereich3Last.RootElement.AccessibleName = resources.GetString("lblStaffel3Bereich3Last.RootElement.AccessibleName")
-        Me.lblStaffel3Bereich3Last.RootElement.Alignment = CType(resources.GetObject("lblStaffel3Bereich3Last.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel3Bereich3Last.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel3Bereich3Last.RootElement.AngleTransform"), Single)
-        Me.lblStaffel3Bereich3Last.RootElement.FlipText = CType(resources.GetObject("lblStaffel3Bereich3Last.RootElement.FlipText"), Boolean)
-        Me.lblStaffel3Bereich3Last.RootElement.Margin = CType(resources.GetObject("lblStaffel3Bereich3Last.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel3Bereich3Last.RootElement.Text = resources.GetString("lblStaffel3Bereich3Last.RootElement.Text")
-        Me.lblStaffel3Bereich3Last.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel3Bereich3Last.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel3Bereich3Last.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel3Bereich3Last.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxStaffel3Bereich2
         '
@@ -4742,14 +3668,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadGroupBoxStaffel3Bereich2.RootElement.AccessibleDescription = resources.GetString("RadGroupBoxStaffel3Bereich2.RootElement.AccessibleDescription")
-        Me.RadGroupBoxStaffel3Bereich2.RootElement.AccessibleName = resources.GetString("RadGroupBoxStaffel3Bereich2.RootElement.AccessibleName")
-        Me.RadGroupBoxStaffel3Bereich2.RootElement.Alignment = CType(resources.GetObject("RadGroupBoxStaffel3Bereich2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadGroupBoxStaffel3Bereich2.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBoxStaffel3Bereich2.RootElement.AngleTransform"), Single)
-        Me.RadGroupBoxStaffel3Bereich2.RootElement.FlipText = CType(resources.GetObject("RadGroupBoxStaffel3Bereich2.RootElement.FlipText"), Boolean)
-        Me.RadGroupBoxStaffel3Bereich2.RootElement.Margin = CType(resources.GetObject("RadGroupBoxStaffel3Bereich2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadGroupBoxStaffel3Bereich2.RootElement.Text = resources.GetString("RadGroupBoxStaffel3Bereich2.RootElement.Text")
-        Me.RadGroupBoxStaffel3Bereich2.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxStaffel3Bereich2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadGroupBoxStaffel3Bereich2.RootElement.AccessibleDescription = Nothing
+        Me.RadGroupBoxStaffel3Bereich2.RootElement.AccessibleName = Nothing
         '
         'PictureBox109
         '
@@ -4793,14 +3713,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel3Bereich2ErsatzLastUnten.RootElement.AccessibleDescription = resources.GetString("lblStaffel3Bereich2ErsatzLastUnten.RootElement.AccessibleDescription")
-        Me.lblStaffel3Bereich2ErsatzLastUnten.RootElement.AccessibleName = resources.GetString("lblStaffel3Bereich2ErsatzLastUnten.RootElement.AccessibleName")
-        Me.lblStaffel3Bereich2ErsatzLastUnten.RootElement.Alignment = CType(resources.GetObject("lblStaffel3Bereich2ErsatzLastUnten.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel3Bereich2ErsatzLastUnten.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel3Bereich2ErsatzLastUnten.RootElement.AngleTransform"), Single)
-        Me.lblStaffel3Bereich2ErsatzLastUnten.RootElement.FlipText = CType(resources.GetObject("lblStaffel3Bereich2ErsatzLastUnten.RootElement.FlipText"), Boolean)
-        Me.lblStaffel3Bereich2ErsatzLastUnten.RootElement.Margin = CType(resources.GetObject("lblStaffel3Bereich2ErsatzLastUnten.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel3Bereich2ErsatzLastUnten.RootElement.Text = resources.GetString("lblStaffel3Bereich2ErsatzLastUnten.RootElement.Text")
-        Me.lblStaffel3Bereich2ErsatzLastUnten.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel3Bereich2ErsatzLastUnten.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel3Bereich2ErsatzLastUnten.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel3Bereich2ErsatzLastUnten.RootElement.AccessibleName = Nothing
         '
         'lblStaffel3Bereich2ErsatzLastOben
         '
@@ -4809,14 +3723,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel3Bereich2ErsatzLastOben.RootElement.AccessibleDescription = resources.GetString("lblStaffel3Bereich2ErsatzLastOben.RootElement.AccessibleDescription")
-        Me.lblStaffel3Bereich2ErsatzLastOben.RootElement.AccessibleName = resources.GetString("lblStaffel3Bereich2ErsatzLastOben.RootElement.AccessibleName")
-        Me.lblStaffel3Bereich2ErsatzLastOben.RootElement.Alignment = CType(resources.GetObject("lblStaffel3Bereich2ErsatzLastOben.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel3Bereich2ErsatzLastOben.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel3Bereich2ErsatzLastOben.RootElement.AngleTransform"), Single)
-        Me.lblStaffel3Bereich2ErsatzLastOben.RootElement.FlipText = CType(resources.GetObject("lblStaffel3Bereich2ErsatzLastOben.RootElement.FlipText"), Boolean)
-        Me.lblStaffel3Bereich2ErsatzLastOben.RootElement.Margin = CType(resources.GetObject("lblStaffel3Bereich2ErsatzLastOben.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel3Bereich2ErsatzLastOben.RootElement.Text = resources.GetString("lblStaffel3Bereich2ErsatzLastOben.RootElement.Text")
-        Me.lblStaffel3Bereich2ErsatzLastOben.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel3Bereich2ErsatzLastOben.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel3Bereich2ErsatzLastOben.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel3Bereich2ErsatzLastOben.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel3Bereich2Fehler7
         '
@@ -4825,14 +3733,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel3Bereich2Fehler7.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel3Bereich2Fehler7.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel3Bereich2Fehler7.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel3Bereich2Fehler7.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel3Bereich2Fehler7.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Fehler7.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel3Bereich2Fehler7.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Fehler7.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel3Bereich2Fehler7.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Fehler7.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel3Bereich2Fehler7.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Fehler7.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel3Bereich2Fehler7.RootElement.Text = resources.GetString("RadTextBoxControlStaffel3Bereich2Fehler7.RootElement.Text")
-        Me.RadTextBoxControlStaffel3Bereich2Fehler7.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Fehler7.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel3Bereich2Fehler7.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel3Bereich2Fehler7.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel3Bereich2Fehler7.TabStop = False
         '
         'RadTextBoxControlStaffel3Bereich2Fehler6
@@ -4842,14 +3744,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel3Bereich2Fehler6.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel3Bereich2Fehler6.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel3Bereich2Fehler6.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel3Bereich2Fehler6.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel3Bereich2Fehler6.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Fehler6.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel3Bereich2Fehler6.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Fehler6.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel3Bereich2Fehler6.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Fehler6.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel3Bereich2Fehler6.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Fehler6.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel3Bereich2Fehler6.RootElement.Text = resources.GetString("RadTextBoxControlStaffel3Bereich2Fehler6.RootElement.Text")
-        Me.RadTextBoxControlStaffel3Bereich2Fehler6.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Fehler6.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel3Bereich2Fehler6.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel3Bereich2Fehler6.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel3Bereich2Fehler6.TabStop = False
         '
         'RadTextBoxControlStaffel3Bereich2Fehler5
@@ -4859,14 +3755,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel3Bereich2Fehler5.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel3Bereich2Fehler5.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel3Bereich2Fehler5.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel3Bereich2Fehler5.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel3Bereich2Fehler5.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Fehler5.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel3Bereich2Fehler5.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Fehler5.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel3Bereich2Fehler5.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Fehler5.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel3Bereich2Fehler5.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Fehler5.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel3Bereich2Fehler5.RootElement.Text = resources.GetString("RadTextBoxControlStaffel3Bereich2Fehler5.RootElement.Text")
-        Me.RadTextBoxControlStaffel3Bereich2Fehler5.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Fehler5.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel3Bereich2Fehler5.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel3Bereich2Fehler5.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel3Bereich2Fehler5.TabStop = False
         '
         'RadTextBoxControlStaffel3Bereich2Last4
@@ -4876,14 +3766,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel3Bereich2Last4.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel3Bereich2Last4.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel3Bereich2Last4.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel3Bereich2Last4.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel3Bereich2Last4.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Last4.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel3Bereich2Last4.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Last4.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel3Bereich2Last4.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Last4.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel3Bereich2Last4.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Last4.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel3Bereich2Last4.RootElement.Text = resources.GetString("RadTextBoxControlStaffel3Bereich2Last4.RootElement.Text")
-        Me.RadTextBoxControlStaffel3Bereich2Last4.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Last4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel3Bereich2Last4.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel3Bereich2Last4.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel3Bereich2Last4.TabStop = False
         '
         'RadTextBoxControlStaffel3Bereich2Anzeige4
@@ -4893,14 +3777,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel3Bereich2Anzeige4.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel3Bereich2Anzeige4.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel3Bereich2Anzeige4.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel3Bereich2Anzeige4.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel3Bereich2Anzeige4.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Anzeige4.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel3Bereich2Anzeige4.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Anzeige4.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel3Bereich2Anzeige4.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Anzeige4.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel3Bereich2Anzeige4.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Anzeige4.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel3Bereich2Anzeige4.RootElement.Text = resources.GetString("RadTextBoxControlStaffel3Bereich2Anzeige4.RootElement.Text")
-        Me.RadTextBoxControlStaffel3Bereich2Anzeige4.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Anzeige4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel3Bereich2Anzeige4.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel3Bereich2Anzeige4.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel3Bereich2Anzeige3
         '
@@ -4909,14 +3787,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel3Bereich2Anzeige3.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel3Bereich2Anzeige3.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel3Bereich2Anzeige3.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel3Bereich2Anzeige3.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel3Bereich2Anzeige3.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Anzeige3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel3Bereich2Anzeige3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Anzeige3.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel3Bereich2Anzeige3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Anzeige3.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel3Bereich2Anzeige3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Anzeige3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel3Bereich2Anzeige3.RootElement.Text = resources.GetString("RadTextBoxControlStaffel3Bereich2Anzeige3.RootElement.Text")
-        Me.RadTextBoxControlStaffel3Bereich2Anzeige3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Anzeige3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel3Bereich2Anzeige3.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel3Bereich2Anzeige3.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel3Bereich2Last3
         '
@@ -4925,14 +3797,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel3Bereich2Last3.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel3Bereich2Last3.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel3Bereich2Last3.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel3Bereich2Last3.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel3Bereich2Last3.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Last3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel3Bereich2Last3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Last3.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel3Bereich2Last3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Last3.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel3Bereich2Last3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Last3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel3Bereich2Last3.RootElement.Text = resources.GetString("RadTextBoxControlStaffel3Bereich2Last3.RootElement.Text")
-        Me.RadTextBoxControlStaffel3Bereich2Last3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Last3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel3Bereich2Last3.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel3Bereich2Last3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel3Bereich2Last3.TabStop = False
         '
         'RadTextBoxControlStaffel3Bereich2Last2
@@ -4942,14 +3808,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel3Bereich2Last2.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel3Bereich2Last2.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel3Bereich2Last2.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel3Bereich2Last2.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel3Bereich2Last2.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Last2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel3Bereich2Last2.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Last2.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel3Bereich2Last2.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Last2.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel3Bereich2Last2.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Last2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel3Bereich2Last2.RootElement.Text = resources.GetString("RadTextBoxControlStaffel3Bereich2Last2.RootElement.Text")
-        Me.RadTextBoxControlStaffel3Bereich2Last2.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Last2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel3Bereich2Last2.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel3Bereich2Last2.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel3Bereich2Anzeige1
         '
@@ -4958,14 +3818,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel3Bereich2Anzeige1.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel3Bereich2Anzeige1.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel3Bereich2Anzeige1.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel3Bereich2Anzeige1.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel3Bereich2Anzeige1.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Anzeige1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel3Bereich2Anzeige1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Anzeige1.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel3Bereich2Anzeige1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Anzeige1.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel3Bereich2Anzeige1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Anzeige1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel3Bereich2Anzeige1.RootElement.Text = resources.GetString("RadTextBoxControlStaffel3Bereich2Anzeige1.RootElement.Text")
-        Me.RadTextBoxControlStaffel3Bereich2Anzeige1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Anzeige1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel3Bereich2Anzeige1.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel3Bereich2Anzeige1.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel3Bereich2Last1
         '
@@ -4974,14 +3828,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel3Bereich2Last1.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel3Bereich2Last1.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel3Bereich2Last1.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel3Bereich2Last1.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel3Bereich2Last1.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Last1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel3Bereich2Last1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Last1.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel3Bereich2Last1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Last1.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel3Bereich2Last1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Last1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel3Bereich2Last1.RootElement.Text = resources.GetString("RadTextBoxControlStaffel3Bereich2Last1.RootElement.Text")
-        Me.RadTextBoxControlStaffel3Bereich2Last1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich2Last1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel3Bereich2Last1.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel3Bereich2Last1.RootElement.AccessibleName = Nothing
         '
         'lblStaffel3Bereich2MessabweichungWaage
         '
@@ -4990,14 +3838,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel3Bereich2MessabweichungWaage.RootElement.AccessibleDescription = resources.GetString("lblStaffel3Bereich2MessabweichungWaage.RootElement.AccessibleDescription")
-        Me.lblStaffel3Bereich2MessabweichungWaage.RootElement.AccessibleName = resources.GetString("lblStaffel3Bereich2MessabweichungWaage.RootElement.AccessibleName")
-        Me.lblStaffel3Bereich2MessabweichungWaage.RootElement.Alignment = CType(resources.GetObject("lblStaffel3Bereich2MessabweichungWaage.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel3Bereich2MessabweichungWaage.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel3Bereich2MessabweichungWaage.RootElement.AngleTransform"), Single)
-        Me.lblStaffel3Bereich2MessabweichungWaage.RootElement.FlipText = CType(resources.GetObject("lblStaffel3Bereich2MessabweichungWaage.RootElement.FlipText"), Boolean)
-        Me.lblStaffel3Bereich2MessabweichungWaage.RootElement.Margin = CType(resources.GetObject("lblStaffel3Bereich2MessabweichungWaage.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel3Bereich2MessabweichungWaage.RootElement.Text = resources.GetString("lblStaffel3Bereich2MessabweichungWaage.RootElement.Text")
-        Me.lblStaffel3Bereich2MessabweichungWaage.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel3Bereich2MessabweichungWaage.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel3Bereich2MessabweichungWaage.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel3Bereich2MessabweichungWaage.RootElement.AccessibleName = Nothing
         '
         'lblStaffel3Bereich2MessabweichungStaffel
         '
@@ -5006,14 +3848,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel3Bereich2MessabweichungStaffel.RootElement.AccessibleDescription = resources.GetString("lblStaffel3Bereich2MessabweichungStaffel.RootElement.AccessibleDescription")
-        Me.lblStaffel3Bereich2MessabweichungStaffel.RootElement.AccessibleName = resources.GetString("lblStaffel3Bereich2MessabweichungStaffel.RootElement.AccessibleName")
-        Me.lblStaffel3Bereich2MessabweichungStaffel.RootElement.Alignment = CType(resources.GetObject("lblStaffel3Bereich2MessabweichungStaffel.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel3Bereich2MessabweichungStaffel.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel3Bereich2MessabweichungStaffel.RootElement.AngleTransform"), Single)
-        Me.lblStaffel3Bereich2MessabweichungStaffel.RootElement.FlipText = CType(resources.GetObject("lblStaffel3Bereich2MessabweichungStaffel.RootElement.FlipText"), Boolean)
-        Me.lblStaffel3Bereich2MessabweichungStaffel.RootElement.Margin = CType(resources.GetObject("lblStaffel3Bereich2MessabweichungStaffel.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel3Bereich2MessabweichungStaffel.RootElement.Text = resources.GetString("lblStaffel3Bereich2MessabweichungStaffel.RootElement.Text")
-        Me.lblStaffel3Bereich2MessabweichungStaffel.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel3Bereich2MessabweichungStaffel.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel3Bereich2MessabweichungStaffel.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel3Bereich2MessabweichungStaffel.RootElement.AccessibleName = Nothing
         '
         'lblStaffel3Bereich2Differenz
         '
@@ -5022,14 +3858,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel3Bereich2Differenz.RootElement.AccessibleDescription = resources.GetString("lblStaffel3Bereich2Differenz.RootElement.AccessibleDescription")
-        Me.lblStaffel3Bereich2Differenz.RootElement.AccessibleName = resources.GetString("lblStaffel3Bereich2Differenz.RootElement.AccessibleName")
-        Me.lblStaffel3Bereich2Differenz.RootElement.Alignment = CType(resources.GetObject("lblStaffel3Bereich2Differenz.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel3Bereich2Differenz.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel3Bereich2Differenz.RootElement.AngleTransform"), Single)
-        Me.lblStaffel3Bereich2Differenz.RootElement.FlipText = CType(resources.GetObject("lblStaffel3Bereich2Differenz.RootElement.FlipText"), Boolean)
-        Me.lblStaffel3Bereich2Differenz.RootElement.Margin = CType(resources.GetObject("lblStaffel3Bereich2Differenz.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel3Bereich2Differenz.RootElement.Text = resources.GetString("lblStaffel3Bereich2Differenz.RootElement.Text")
-        Me.lblStaffel3Bereich2Differenz.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel3Bereich2Differenz.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel3Bereich2Differenz.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel3Bereich2Differenz.RootElement.AccessibleName = Nothing
         '
         'lblStaffel3Bereich2ZusastzNormalLast
         '
@@ -5038,14 +3868,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel3Bereich2ZusastzNormalLast.RootElement.AccessibleDescription = resources.GetString("lblStaffel3Bereich2ZusastzNormalLast.RootElement.AccessibleDescription")
-        Me.lblStaffel3Bereich2ZusastzNormalLast.RootElement.AccessibleName = resources.GetString("lblStaffel3Bereich2ZusastzNormalLast.RootElement.AccessibleName")
-        Me.lblStaffel3Bereich2ZusastzNormalLast.RootElement.Alignment = CType(resources.GetObject("lblStaffel3Bereich2ZusastzNormalLast.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel3Bereich2ZusastzNormalLast.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel3Bereich2ZusastzNormalLast.RootElement.AngleTransform"), Single)
-        Me.lblStaffel3Bereich2ZusastzNormalLast.RootElement.FlipText = CType(resources.GetObject("lblStaffel3Bereich2ZusastzNormalLast.RootElement.FlipText"), Boolean)
-        Me.lblStaffel3Bereich2ZusastzNormalLast.RootElement.Margin = CType(resources.GetObject("lblStaffel3Bereich2ZusastzNormalLast.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel3Bereich2ZusastzNormalLast.RootElement.Text = resources.GetString("lblStaffel3Bereich2ZusastzNormalLast.RootElement.Text")
-        Me.lblStaffel3Bereich2ZusastzNormalLast.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel3Bereich2ZusastzNormalLast.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel3Bereich2ZusastzNormalLast.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel3Bereich2ZusastzNormalLast.RootElement.AccessibleName = Nothing
         '
         'lblStaffel3Bereich2NormalLast
         '
@@ -5054,14 +3878,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel3Bereich2NormalLast.RootElement.AccessibleDescription = resources.GetString("lblStaffel3Bereich2NormalLast.RootElement.AccessibleDescription")
-        Me.lblStaffel3Bereich2NormalLast.RootElement.AccessibleName = resources.GetString("lblStaffel3Bereich2NormalLast.RootElement.AccessibleName")
-        Me.lblStaffel3Bereich2NormalLast.RootElement.Alignment = CType(resources.GetObject("lblStaffel3Bereich2NormalLast.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel3Bereich2NormalLast.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel3Bereich2NormalLast.RootElement.AngleTransform"), Single)
-        Me.lblStaffel3Bereich2NormalLast.RootElement.FlipText = CType(resources.GetObject("lblStaffel3Bereich2NormalLast.RootElement.FlipText"), Boolean)
-        Me.lblStaffel3Bereich2NormalLast.RootElement.Margin = CType(resources.GetObject("lblStaffel3Bereich2NormalLast.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel3Bereich2NormalLast.RootElement.Text = resources.GetString("lblStaffel3Bereich2NormalLast.RootElement.Text")
-        Me.lblStaffel3Bereich2NormalLast.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel3Bereich2NormalLast.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel3Bereich2NormalLast.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel3Bereich2NormalLast.RootElement.AccessibleName = Nothing
         '
         'PictureBox49
         '
@@ -5092,14 +3910,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel3Bereich2EFGWert7.RootElement.AccessibleDescription = resources.GetString("lblStaffel3Bereich2EFGWert7.RootElement.AccessibleDescription")
-        Me.lblStaffel3Bereich2EFGWert7.RootElement.AccessibleName = resources.GetString("lblStaffel3Bereich2EFGWert7.RootElement.AccessibleName")
-        Me.lblStaffel3Bereich2EFGWert7.RootElement.Alignment = CType(resources.GetObject("lblStaffel3Bereich2EFGWert7.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel3Bereich2EFGWert7.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel3Bereich2EFGWert7.RootElement.AngleTransform"), Single)
-        Me.lblStaffel3Bereich2EFGWert7.RootElement.FlipText = CType(resources.GetObject("lblStaffel3Bereich2EFGWert7.RootElement.FlipText"), Boolean)
-        Me.lblStaffel3Bereich2EFGWert7.RootElement.Margin = CType(resources.GetObject("lblStaffel3Bereich2EFGWert7.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel3Bereich2EFGWert7.RootElement.Text = resources.GetString("lblStaffel3Bereich2EFGWert7.RootElement.Text")
-        Me.lblStaffel3Bereich2EFGWert7.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel3Bereich2EFGWert7.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel3Bereich2EFGWert7.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel3Bereich2EFGWert7.RootElement.AccessibleName = Nothing
         Me.lblStaffel3Bereich2EFGWert7.TabStop = False
         '
         'lblStaffel3Bereich2EFGWert6
@@ -5110,14 +3922,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel3Bereich2EFGWert6.RootElement.AccessibleDescription = resources.GetString("lblStaffel3Bereich2EFGWert6.RootElement.AccessibleDescription")
-        Me.lblStaffel3Bereich2EFGWert6.RootElement.AccessibleName = resources.GetString("lblStaffel3Bereich2EFGWert6.RootElement.AccessibleName")
-        Me.lblStaffel3Bereich2EFGWert6.RootElement.Alignment = CType(resources.GetObject("lblStaffel3Bereich2EFGWert6.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel3Bereich2EFGWert6.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel3Bereich2EFGWert6.RootElement.AngleTransform"), Single)
-        Me.lblStaffel3Bereich2EFGWert6.RootElement.FlipText = CType(resources.GetObject("lblStaffel3Bereich2EFGWert6.RootElement.FlipText"), Boolean)
-        Me.lblStaffel3Bereich2EFGWert6.RootElement.Margin = CType(resources.GetObject("lblStaffel3Bereich2EFGWert6.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel3Bereich2EFGWert6.RootElement.Text = resources.GetString("lblStaffel3Bereich2EFGWert6.RootElement.Text")
-        Me.lblStaffel3Bereich2EFGWert6.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel3Bereich2EFGWert6.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel3Bereich2EFGWert6.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel3Bereich2EFGWert6.RootElement.AccessibleName = Nothing
         Me.lblStaffel3Bereich2EFGWert6.TabStop = False
         '
         'lblStaffel3Bereich2EFGWert5
@@ -5128,14 +3934,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel3Bereich2EFGWert5.RootElement.AccessibleDescription = resources.GetString("lblStaffel3Bereich2EFGWert5.RootElement.AccessibleDescription")
-        Me.lblStaffel3Bereich2EFGWert5.RootElement.AccessibleName = resources.GetString("lblStaffel3Bereich2EFGWert5.RootElement.AccessibleName")
-        Me.lblStaffel3Bereich2EFGWert5.RootElement.Alignment = CType(resources.GetObject("lblStaffel3Bereich2EFGWert5.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel3Bereich2EFGWert5.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel3Bereich2EFGWert5.RootElement.AngleTransform"), Single)
-        Me.lblStaffel3Bereich2EFGWert5.RootElement.FlipText = CType(resources.GetObject("lblStaffel3Bereich2EFGWert5.RootElement.FlipText"), Boolean)
-        Me.lblStaffel3Bereich2EFGWert5.RootElement.Margin = CType(resources.GetObject("lblStaffel3Bereich2EFGWert5.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel3Bereich2EFGWert5.RootElement.Text = resources.GetString("lblStaffel3Bereich2EFGWert5.RootElement.Text")
-        Me.lblStaffel3Bereich2EFGWert5.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel3Bereich2EFGWert5.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel3Bereich2EFGWert5.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel3Bereich2EFGWert5.RootElement.AccessibleName = Nothing
         Me.lblStaffel3Bereich2EFGWert5.TabStop = False
         '
         'lblStaffel3Bereich2EFG
@@ -5145,14 +3945,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel3Bereich2EFG.RootElement.AccessibleDescription = resources.GetString("lblStaffel3Bereich2EFG.RootElement.AccessibleDescription")
-        Me.lblStaffel3Bereich2EFG.RootElement.AccessibleName = resources.GetString("lblStaffel3Bereich2EFG.RootElement.AccessibleName")
-        Me.lblStaffel3Bereich2EFG.RootElement.Alignment = CType(resources.GetObject("lblStaffel3Bereich2EFG.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel3Bereich2EFG.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel3Bereich2EFG.RootElement.AngleTransform"), Single)
-        Me.lblStaffel3Bereich2EFG.RootElement.FlipText = CType(resources.GetObject("lblStaffel3Bereich2EFG.RootElement.FlipText"), Boolean)
-        Me.lblStaffel3Bereich2EFG.RootElement.Margin = CType(resources.GetObject("lblStaffel3Bereich2EFG.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel3Bereich2EFG.RootElement.Text = resources.GetString("lblStaffel3Bereich2EFG.RootElement.Text")
-        Me.lblStaffel3Bereich2EFG.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel3Bereich2EFG.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel3Bereich2EFG.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel3Bereich2EFG.RootElement.AccessibleName = Nothing
         '
         'lblStaffel3Bereich2Fehler
         '
@@ -5161,14 +3955,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel3Bereich2Fehler.RootElement.AccessibleDescription = resources.GetString("lblStaffel3Bereich2Fehler.RootElement.AccessibleDescription")
-        Me.lblStaffel3Bereich2Fehler.RootElement.AccessibleName = resources.GetString("lblStaffel3Bereich2Fehler.RootElement.AccessibleName")
-        Me.lblStaffel3Bereich2Fehler.RootElement.Alignment = CType(resources.GetObject("lblStaffel3Bereich2Fehler.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel3Bereich2Fehler.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel3Bereich2Fehler.RootElement.AngleTransform"), Single)
-        Me.lblStaffel3Bereich2Fehler.RootElement.FlipText = CType(resources.GetObject("lblStaffel3Bereich2Fehler.RootElement.FlipText"), Boolean)
-        Me.lblStaffel3Bereich2Fehler.RootElement.Margin = CType(resources.GetObject("lblStaffel3Bereich2Fehler.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel3Bereich2Fehler.RootElement.Text = resources.GetString("lblStaffel3Bereich2Fehler.RootElement.Text")
-        Me.lblStaffel3Bereich2Fehler.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel3Bereich2Fehler.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel3Bereich2Fehler.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel3Bereich2Fehler.RootElement.AccessibleName = Nothing
         '
         'lblStaffel3Bereich2Anzeige
         '
@@ -5177,14 +3965,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel3Bereich2Anzeige.RootElement.AccessibleDescription = resources.GetString("lblStaffel3Bereich2Anzeige.RootElement.AccessibleDescription")
-        Me.lblStaffel3Bereich2Anzeige.RootElement.AccessibleName = resources.GetString("lblStaffel3Bereich2Anzeige.RootElement.AccessibleName")
-        Me.lblStaffel3Bereich2Anzeige.RootElement.Alignment = CType(resources.GetObject("lblStaffel3Bereich2Anzeige.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel3Bereich2Anzeige.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel3Bereich2Anzeige.RootElement.AngleTransform"), Single)
-        Me.lblStaffel3Bereich2Anzeige.RootElement.FlipText = CType(resources.GetObject("lblStaffel3Bereich2Anzeige.RootElement.FlipText"), Boolean)
-        Me.lblStaffel3Bereich2Anzeige.RootElement.Margin = CType(resources.GetObject("lblStaffel3Bereich2Anzeige.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel3Bereich2Anzeige.RootElement.Text = resources.GetString("lblStaffel3Bereich2Anzeige.RootElement.Text")
-        Me.lblStaffel3Bereich2Anzeige.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel3Bereich2Anzeige.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel3Bereich2Anzeige.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel3Bereich2Anzeige.RootElement.AccessibleName = Nothing
         '
         'lblStaffel3Bereich2Last
         '
@@ -5193,14 +3975,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel3Bereich2Last.RootElement.AccessibleDescription = resources.GetString("lblStaffel3Bereich2Last.RootElement.AccessibleDescription")
-        Me.lblStaffel3Bereich2Last.RootElement.AccessibleName = resources.GetString("lblStaffel3Bereich2Last.RootElement.AccessibleName")
-        Me.lblStaffel3Bereich2Last.RootElement.Alignment = CType(resources.GetObject("lblStaffel3Bereich2Last.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel3Bereich2Last.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel3Bereich2Last.RootElement.AngleTransform"), Single)
-        Me.lblStaffel3Bereich2Last.RootElement.FlipText = CType(resources.GetObject("lblStaffel3Bereich2Last.RootElement.FlipText"), Boolean)
-        Me.lblStaffel3Bereich2Last.RootElement.Margin = CType(resources.GetObject("lblStaffel3Bereich2Last.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel3Bereich2Last.RootElement.Text = resources.GetString("lblStaffel3Bereich2Last.RootElement.Text")
-        Me.lblStaffel3Bereich2Last.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel3Bereich2Last.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel3Bereich2Last.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel3Bereich2Last.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxStaffel3Bereich1
         '
@@ -5242,14 +4018,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadGroupBoxStaffel3Bereich1.RootElement.AccessibleDescription = resources.GetString("RadGroupBoxStaffel3Bereich1.RootElement.AccessibleDescription")
-        Me.RadGroupBoxStaffel3Bereich1.RootElement.AccessibleName = resources.GetString("RadGroupBoxStaffel3Bereich1.RootElement.AccessibleName")
-        Me.RadGroupBoxStaffel3Bereich1.RootElement.Alignment = CType(resources.GetObject("RadGroupBoxStaffel3Bereich1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadGroupBoxStaffel3Bereich1.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBoxStaffel3Bereich1.RootElement.AngleTransform"), Single)
-        Me.RadGroupBoxStaffel3Bereich1.RootElement.FlipText = CType(resources.GetObject("RadGroupBoxStaffel3Bereich1.RootElement.FlipText"), Boolean)
-        Me.RadGroupBoxStaffel3Bereich1.RootElement.Margin = CType(resources.GetObject("RadGroupBoxStaffel3Bereich1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadGroupBoxStaffel3Bereich1.RootElement.Text = resources.GetString("RadGroupBoxStaffel3Bereich1.RootElement.Text")
-        Me.RadGroupBoxStaffel3Bereich1.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxStaffel3Bereich1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadGroupBoxStaffel3Bereich1.RootElement.AccessibleDescription = Nothing
+        Me.RadGroupBoxStaffel3Bereich1.RootElement.AccessibleName = Nothing
         '
         'PictureBox112
         '
@@ -5293,14 +4063,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel3Bereich1ErsatzLastUnten.RootElement.AccessibleDescription = resources.GetString("lblStaffel3Bereich1ErsatzLastUnten.RootElement.AccessibleDescription")
-        Me.lblStaffel3Bereich1ErsatzLastUnten.RootElement.AccessibleName = resources.GetString("lblStaffel3Bereich1ErsatzLastUnten.RootElement.AccessibleName")
-        Me.lblStaffel3Bereich1ErsatzLastUnten.RootElement.Alignment = CType(resources.GetObject("lblStaffel3Bereich1ErsatzLastUnten.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel3Bereich1ErsatzLastUnten.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel3Bereich1ErsatzLastUnten.RootElement.AngleTransform"), Single)
-        Me.lblStaffel3Bereich1ErsatzLastUnten.RootElement.FlipText = CType(resources.GetObject("lblStaffel3Bereich1ErsatzLastUnten.RootElement.FlipText"), Boolean)
-        Me.lblStaffel3Bereich1ErsatzLastUnten.RootElement.Margin = CType(resources.GetObject("lblStaffel3Bereich1ErsatzLastUnten.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel3Bereich1ErsatzLastUnten.RootElement.Text = resources.GetString("lblStaffel3Bereich1ErsatzLastUnten.RootElement.Text")
-        Me.lblStaffel3Bereich1ErsatzLastUnten.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel3Bereich1ErsatzLastUnten.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel3Bereich1ErsatzLastUnten.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel3Bereich1ErsatzLastUnten.RootElement.AccessibleName = Nothing
         '
         'lblStaffel3Bereich1ErsatzLastOben
         '
@@ -5309,14 +4073,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel3Bereich1ErsatzLastOben.RootElement.AccessibleDescription = resources.GetString("lblStaffel3Bereich1ErsatzLastOben.RootElement.AccessibleDescription")
-        Me.lblStaffel3Bereich1ErsatzLastOben.RootElement.AccessibleName = resources.GetString("lblStaffel3Bereich1ErsatzLastOben.RootElement.AccessibleName")
-        Me.lblStaffel3Bereich1ErsatzLastOben.RootElement.Alignment = CType(resources.GetObject("lblStaffel3Bereich1ErsatzLastOben.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel3Bereich1ErsatzLastOben.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel3Bereich1ErsatzLastOben.RootElement.AngleTransform"), Single)
-        Me.lblStaffel3Bereich1ErsatzLastOben.RootElement.FlipText = CType(resources.GetObject("lblStaffel3Bereich1ErsatzLastOben.RootElement.FlipText"), Boolean)
-        Me.lblStaffel3Bereich1ErsatzLastOben.RootElement.Margin = CType(resources.GetObject("lblStaffel3Bereich1ErsatzLastOben.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel3Bereich1ErsatzLastOben.RootElement.Text = resources.GetString("lblStaffel3Bereich1ErsatzLastOben.RootElement.Text")
-        Me.lblStaffel3Bereich1ErsatzLastOben.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel3Bereich1ErsatzLastOben.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel3Bereich1ErsatzLastOben.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel3Bereich1ErsatzLastOben.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel3Bereich1Fehler7
         '
@@ -5325,14 +4083,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel3Bereich1Fehler7.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel3Bereich1Fehler7.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel3Bereich1Fehler7.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel3Bereich1Fehler7.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel3Bereich1Fehler7.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Fehler7.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel3Bereich1Fehler7.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Fehler7.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel3Bereich1Fehler7.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Fehler7.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel3Bereich1Fehler7.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Fehler7.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel3Bereich1Fehler7.RootElement.Text = resources.GetString("RadTextBoxControlStaffel3Bereich1Fehler7.RootElement.Text")
-        Me.RadTextBoxControlStaffel3Bereich1Fehler7.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Fehler7.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel3Bereich1Fehler7.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel3Bereich1Fehler7.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel3Bereich1Fehler7.TabStop = False
         '
         'RadTextBoxControlStaffel3Bereich1Fehler6
@@ -5342,14 +4094,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel3Bereich1Fehler6.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel3Bereich1Fehler6.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel3Bereich1Fehler6.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel3Bereich1Fehler6.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel3Bereich1Fehler6.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Fehler6.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel3Bereich1Fehler6.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Fehler6.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel3Bereich1Fehler6.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Fehler6.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel3Bereich1Fehler6.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Fehler6.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel3Bereich1Fehler6.RootElement.Text = resources.GetString("RadTextBoxControlStaffel3Bereich1Fehler6.RootElement.Text")
-        Me.RadTextBoxControlStaffel3Bereich1Fehler6.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Fehler6.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel3Bereich1Fehler6.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel3Bereich1Fehler6.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel3Bereich1Fehler6.TabStop = False
         '
         'RadTextBoxControlStaffel3Bereich1Fehler5
@@ -5359,14 +4105,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel3Bereich1Fehler5.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel3Bereich1Fehler5.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel3Bereich1Fehler5.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel3Bereich1Fehler5.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel3Bereich1Fehler5.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Fehler5.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel3Bereich1Fehler5.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Fehler5.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel3Bereich1Fehler5.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Fehler5.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel3Bereich1Fehler5.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Fehler5.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel3Bereich1Fehler5.RootElement.Text = resources.GetString("RadTextBoxControlStaffel3Bereich1Fehler5.RootElement.Text")
-        Me.RadTextBoxControlStaffel3Bereich1Fehler5.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Fehler5.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel3Bereich1Fehler5.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel3Bereich1Fehler5.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel3Bereich1Fehler5.TabStop = False
         '
         'RadTextBoxControlStaffel3Bereich1Last4
@@ -5376,14 +4116,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel3Bereich1Last4.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel3Bereich1Last4.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel3Bereich1Last4.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel3Bereich1Last4.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel3Bereich1Last4.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Last4.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel3Bereich1Last4.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Last4.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel3Bereich1Last4.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Last4.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel3Bereich1Last4.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Last4.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel3Bereich1Last4.RootElement.Text = resources.GetString("RadTextBoxControlStaffel3Bereich1Last4.RootElement.Text")
-        Me.RadTextBoxControlStaffel3Bereich1Last4.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Last4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel3Bereich1Last4.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel3Bereich1Last4.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel3Bereich1Last4.TabStop = False
         '
         'RadTextBoxControlStaffel3Bereich1Anzeige4
@@ -5393,14 +4127,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel3Bereich1Anzeige4.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel3Bereich1Anzeige4.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel3Bereich1Anzeige4.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel3Bereich1Anzeige4.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel3Bereich1Anzeige4.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Anzeige4.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel3Bereich1Anzeige4.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Anzeige4.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel3Bereich1Anzeige4.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Anzeige4.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel3Bereich1Anzeige4.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Anzeige4.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel3Bereich1Anzeige4.RootElement.Text = resources.GetString("RadTextBoxControlStaffel3Bereich1Anzeige4.RootElement.Text")
-        Me.RadTextBoxControlStaffel3Bereich1Anzeige4.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Anzeige4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel3Bereich1Anzeige4.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel3Bereich1Anzeige4.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel3Bereich1Anzeige3
         '
@@ -5409,14 +4137,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel3Bereich1Anzeige3.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel3Bereich1Anzeige3.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel3Bereich1Anzeige3.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel3Bereich1Anzeige3.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel3Bereich1Anzeige3.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Anzeige3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel3Bereich1Anzeige3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Anzeige3.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel3Bereich1Anzeige3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Anzeige3.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel3Bereich1Anzeige3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Anzeige3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel3Bereich1Anzeige3.RootElement.Text = resources.GetString("RadTextBoxControlStaffel3Bereich1Anzeige3.RootElement.Text")
-        Me.RadTextBoxControlStaffel3Bereich1Anzeige3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Anzeige3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel3Bereich1Anzeige3.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel3Bereich1Anzeige3.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel3Bereich1Last3
         '
@@ -5425,14 +4147,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel3Bereich1Last3.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel3Bereich1Last3.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel3Bereich1Last3.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel3Bereich1Last3.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel3Bereich1Last3.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Last3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel3Bereich1Last3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Last3.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel3Bereich1Last3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Last3.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel3Bereich1Last3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Last3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel3Bereich1Last3.RootElement.Text = resources.GetString("RadTextBoxControlStaffel3Bereich1Last3.RootElement.Text")
-        Me.RadTextBoxControlStaffel3Bereich1Last3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Last3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel3Bereich1Last3.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel3Bereich1Last3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel3Bereich1Last3.TabStop = False
         '
         'RadTextBoxControlStaffel3Bereich1Last2
@@ -5442,14 +4158,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel3Bereich1Last2.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel3Bereich1Last2.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel3Bereich1Last2.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel3Bereich1Last2.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel3Bereich1Last2.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Last2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel3Bereich1Last2.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Last2.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel3Bereich1Last2.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Last2.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel3Bereich1Last2.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Last2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel3Bereich1Last2.RootElement.Text = resources.GetString("RadTextBoxControlStaffel3Bereich1Last2.RootElement.Text")
-        Me.RadTextBoxControlStaffel3Bereich1Last2.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Last2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel3Bereich1Last2.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel3Bereich1Last2.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel3Bereich1Anzeige1
         '
@@ -5458,14 +4168,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel3Bereich1Anzeige1.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel3Bereich1Anzeige1.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel3Bereich1Anzeige1.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel3Bereich1Anzeige1.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel3Bereich1Anzeige1.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Anzeige1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel3Bereich1Anzeige1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Anzeige1.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel3Bereich1Anzeige1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Anzeige1.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel3Bereich1Anzeige1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Anzeige1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel3Bereich1Anzeige1.RootElement.Text = resources.GetString("RadTextBoxControlStaffel3Bereich1Anzeige1.RootElement.Text")
-        Me.RadTextBoxControlStaffel3Bereich1Anzeige1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Anzeige1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel3Bereich1Anzeige1.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel3Bereich1Anzeige1.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel3Bereich1Last1
         '
@@ -5474,14 +4178,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel3Bereich1Last1.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel3Bereich1Last1.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel3Bereich1Last1.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel3Bereich1Last1.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel3Bereich1Last1.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Last1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel3Bereich1Last1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Last1.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel3Bereich1Last1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Last1.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel3Bereich1Last1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Last1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel3Bereich1Last1.RootElement.Text = resources.GetString("RadTextBoxControlStaffel3Bereich1Last1.RootElement.Text")
-        Me.RadTextBoxControlStaffel3Bereich1Last1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel3Bereich1Last1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel3Bereich1Last1.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel3Bereich1Last1.RootElement.AccessibleName = Nothing
         '
         'lblStaffel3Bereich1MessabweichungWaage
         '
@@ -5490,14 +4188,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel3Bereich1MessabweichungWaage.RootElement.AccessibleDescription = resources.GetString("lblStaffel3Bereich1MessabweichungWaage.RootElement.AccessibleDescription")
-        Me.lblStaffel3Bereich1MessabweichungWaage.RootElement.AccessibleName = resources.GetString("lblStaffel3Bereich1MessabweichungWaage.RootElement.AccessibleName")
-        Me.lblStaffel3Bereich1MessabweichungWaage.RootElement.Alignment = CType(resources.GetObject("lblStaffel3Bereich1MessabweichungWaage.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel3Bereich1MessabweichungWaage.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel3Bereich1MessabweichungWaage.RootElement.AngleTransform"), Single)
-        Me.lblStaffel3Bereich1MessabweichungWaage.RootElement.FlipText = CType(resources.GetObject("lblStaffel3Bereich1MessabweichungWaage.RootElement.FlipText"), Boolean)
-        Me.lblStaffel3Bereich1MessabweichungWaage.RootElement.Margin = CType(resources.GetObject("lblStaffel3Bereich1MessabweichungWaage.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel3Bereich1MessabweichungWaage.RootElement.Text = resources.GetString("lblStaffel3Bereich1MessabweichungWaage.RootElement.Text")
-        Me.lblStaffel3Bereich1MessabweichungWaage.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel3Bereich1MessabweichungWaage.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel3Bereich1MessabweichungWaage.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel3Bereich1MessabweichungWaage.RootElement.AccessibleName = Nothing
         '
         'lblStaffel3Bereich1MessabweichungStaffel
         '
@@ -5506,14 +4198,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel3Bereich1MessabweichungStaffel.RootElement.AccessibleDescription = resources.GetString("lblStaffel3Bereich1MessabweichungStaffel.RootElement.AccessibleDescription")
-        Me.lblStaffel3Bereich1MessabweichungStaffel.RootElement.AccessibleName = resources.GetString("lblStaffel3Bereich1MessabweichungStaffel.RootElement.AccessibleName")
-        Me.lblStaffel3Bereich1MessabweichungStaffel.RootElement.Alignment = CType(resources.GetObject("lblStaffel3Bereich1MessabweichungStaffel.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel3Bereich1MessabweichungStaffel.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel3Bereich1MessabweichungStaffel.RootElement.AngleTransform"), Single)
-        Me.lblStaffel3Bereich1MessabweichungStaffel.RootElement.FlipText = CType(resources.GetObject("lblStaffel3Bereich1MessabweichungStaffel.RootElement.FlipText"), Boolean)
-        Me.lblStaffel3Bereich1MessabweichungStaffel.RootElement.Margin = CType(resources.GetObject("lblStaffel3Bereich1MessabweichungStaffel.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel3Bereich1MessabweichungStaffel.RootElement.Text = resources.GetString("lblStaffel3Bereich1MessabweichungStaffel.RootElement.Text")
-        Me.lblStaffel3Bereich1MessabweichungStaffel.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel3Bereich1MessabweichungStaffel.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel3Bereich1MessabweichungStaffel.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel3Bereich1MessabweichungStaffel.RootElement.AccessibleName = Nothing
         '
         'lblStaffel3Bereich1Differenz
         '
@@ -5522,14 +4208,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel3Bereich1Differenz.RootElement.AccessibleDescription = resources.GetString("lblStaffel3Bereich1Differenz.RootElement.AccessibleDescription")
-        Me.lblStaffel3Bereich1Differenz.RootElement.AccessibleName = resources.GetString("lblStaffel3Bereich1Differenz.RootElement.AccessibleName")
-        Me.lblStaffel3Bereich1Differenz.RootElement.Alignment = CType(resources.GetObject("lblStaffel3Bereich1Differenz.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel3Bereich1Differenz.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel3Bereich1Differenz.RootElement.AngleTransform"), Single)
-        Me.lblStaffel3Bereich1Differenz.RootElement.FlipText = CType(resources.GetObject("lblStaffel3Bereich1Differenz.RootElement.FlipText"), Boolean)
-        Me.lblStaffel3Bereich1Differenz.RootElement.Margin = CType(resources.GetObject("lblStaffel3Bereich1Differenz.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel3Bereich1Differenz.RootElement.Text = resources.GetString("lblStaffel3Bereich1Differenz.RootElement.Text")
-        Me.lblStaffel3Bereich1Differenz.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel3Bereich1Differenz.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel3Bereich1Differenz.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel3Bereich1Differenz.RootElement.AccessibleName = Nothing
         '
         'lblStaffel3Bereich1ZusastzNormalLast
         '
@@ -5538,14 +4218,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel3Bereich1ZusastzNormalLast.RootElement.AccessibleDescription = resources.GetString("lblStaffel3Bereich1ZusastzNormalLast.RootElement.AccessibleDescription")
-        Me.lblStaffel3Bereich1ZusastzNormalLast.RootElement.AccessibleName = resources.GetString("lblStaffel3Bereich1ZusastzNormalLast.RootElement.AccessibleName")
-        Me.lblStaffel3Bereich1ZusastzNormalLast.RootElement.Alignment = CType(resources.GetObject("lblStaffel3Bereich1ZusastzNormalLast.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel3Bereich1ZusastzNormalLast.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel3Bereich1ZusastzNormalLast.RootElement.AngleTransform"), Single)
-        Me.lblStaffel3Bereich1ZusastzNormalLast.RootElement.FlipText = CType(resources.GetObject("lblStaffel3Bereich1ZusastzNormalLast.RootElement.FlipText"), Boolean)
-        Me.lblStaffel3Bereich1ZusastzNormalLast.RootElement.Margin = CType(resources.GetObject("lblStaffel3Bereich1ZusastzNormalLast.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel3Bereich1ZusastzNormalLast.RootElement.Text = resources.GetString("lblStaffel3Bereich1ZusastzNormalLast.RootElement.Text")
-        Me.lblStaffel3Bereich1ZusastzNormalLast.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel3Bereich1ZusastzNormalLast.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel3Bereich1ZusastzNormalLast.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel3Bereich1ZusastzNormalLast.RootElement.AccessibleName = Nothing
         '
         'lblStaffel3Bereich1NormalLast
         '
@@ -5554,14 +4228,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel3Bereich1NormalLast.RootElement.AccessibleDescription = resources.GetString("lblStaffel3Bereich1NormalLast.RootElement.AccessibleDescription")
-        Me.lblStaffel3Bereich1NormalLast.RootElement.AccessibleName = resources.GetString("lblStaffel3Bereich1NormalLast.RootElement.AccessibleName")
-        Me.lblStaffel3Bereich1NormalLast.RootElement.Alignment = CType(resources.GetObject("lblStaffel3Bereich1NormalLast.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel3Bereich1NormalLast.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel3Bereich1NormalLast.RootElement.AngleTransform"), Single)
-        Me.lblStaffel3Bereich1NormalLast.RootElement.FlipText = CType(resources.GetObject("lblStaffel3Bereich1NormalLast.RootElement.FlipText"), Boolean)
-        Me.lblStaffel3Bereich1NormalLast.RootElement.Margin = CType(resources.GetObject("lblStaffel3Bereich1NormalLast.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel3Bereich1NormalLast.RootElement.Text = resources.GetString("lblStaffel3Bereich1NormalLast.RootElement.Text")
-        Me.lblStaffel3Bereich1NormalLast.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel3Bereich1NormalLast.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel3Bereich1NormalLast.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel3Bereich1NormalLast.RootElement.AccessibleName = Nothing
         '
         'PictureBox56
         '
@@ -5592,14 +4260,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel3Bereich1EFGWert7.RootElement.AccessibleDescription = resources.GetString("lblStaffel3Bereich1EFGWert7.RootElement.AccessibleDescription")
-        Me.lblStaffel3Bereich1EFGWert7.RootElement.AccessibleName = resources.GetString("lblStaffel3Bereich1EFGWert7.RootElement.AccessibleName")
-        Me.lblStaffel3Bereich1EFGWert7.RootElement.Alignment = CType(resources.GetObject("lblStaffel3Bereich1EFGWert7.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel3Bereich1EFGWert7.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel3Bereich1EFGWert7.RootElement.AngleTransform"), Single)
-        Me.lblStaffel3Bereich1EFGWert7.RootElement.FlipText = CType(resources.GetObject("lblStaffel3Bereich1EFGWert7.RootElement.FlipText"), Boolean)
-        Me.lblStaffel3Bereich1EFGWert7.RootElement.Margin = CType(resources.GetObject("lblStaffel3Bereich1EFGWert7.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel3Bereich1EFGWert7.RootElement.Text = resources.GetString("lblStaffel3Bereich1EFGWert7.RootElement.Text")
-        Me.lblStaffel3Bereich1EFGWert7.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel3Bereich1EFGWert7.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel3Bereich1EFGWert7.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel3Bereich1EFGWert7.RootElement.AccessibleName = Nothing
         Me.lblStaffel3Bereich1EFGWert7.TabStop = False
         '
         'lblStaffel3Bereich1EFGWert6
@@ -5610,14 +4272,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel3Bereich1EFGWert6.RootElement.AccessibleDescription = resources.GetString("lblStaffel3Bereich1EFGWert6.RootElement.AccessibleDescription")
-        Me.lblStaffel3Bereich1EFGWert6.RootElement.AccessibleName = resources.GetString("lblStaffel3Bereich1EFGWert6.RootElement.AccessibleName")
-        Me.lblStaffel3Bereich1EFGWert6.RootElement.Alignment = CType(resources.GetObject("lblStaffel3Bereich1EFGWert6.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel3Bereich1EFGWert6.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel3Bereich1EFGWert6.RootElement.AngleTransform"), Single)
-        Me.lblStaffel3Bereich1EFGWert6.RootElement.FlipText = CType(resources.GetObject("lblStaffel3Bereich1EFGWert6.RootElement.FlipText"), Boolean)
-        Me.lblStaffel3Bereich1EFGWert6.RootElement.Margin = CType(resources.GetObject("lblStaffel3Bereich1EFGWert6.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel3Bereich1EFGWert6.RootElement.Text = resources.GetString("lblStaffel3Bereich1EFGWert6.RootElement.Text")
-        Me.lblStaffel3Bereich1EFGWert6.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel3Bereich1EFGWert6.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel3Bereich1EFGWert6.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel3Bereich1EFGWert6.RootElement.AccessibleName = Nothing
         Me.lblStaffel3Bereich1EFGWert6.TabStop = False
         '
         'lblStaffel3Bereich1EFGWert5
@@ -5628,14 +4284,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel3Bereich1EFGWert5.RootElement.AccessibleDescription = resources.GetString("lblStaffel3Bereich1EFGWert5.RootElement.AccessibleDescription")
-        Me.lblStaffel3Bereich1EFGWert5.RootElement.AccessibleName = resources.GetString("lblStaffel3Bereich1EFGWert5.RootElement.AccessibleName")
-        Me.lblStaffel3Bereich1EFGWert5.RootElement.Alignment = CType(resources.GetObject("lblStaffel3Bereich1EFGWert5.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel3Bereich1EFGWert5.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel3Bereich1EFGWert5.RootElement.AngleTransform"), Single)
-        Me.lblStaffel3Bereich1EFGWert5.RootElement.FlipText = CType(resources.GetObject("lblStaffel3Bereich1EFGWert5.RootElement.FlipText"), Boolean)
-        Me.lblStaffel3Bereich1EFGWert5.RootElement.Margin = CType(resources.GetObject("lblStaffel3Bereich1EFGWert5.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel3Bereich1EFGWert5.RootElement.Text = resources.GetString("lblStaffel3Bereich1EFGWert5.RootElement.Text")
-        Me.lblStaffel3Bereich1EFGWert5.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel3Bereich1EFGWert5.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel3Bereich1EFGWert5.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel3Bereich1EFGWert5.RootElement.AccessibleName = Nothing
         Me.lblStaffel3Bereich1EFGWert5.TabStop = False
         '
         'lblStaffel3Bereich1EFG
@@ -5645,14 +4295,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel3Bereich1EFG.RootElement.AccessibleDescription = resources.GetString("lblStaffel3Bereich1EFG.RootElement.AccessibleDescription")
-        Me.lblStaffel3Bereich1EFG.RootElement.AccessibleName = resources.GetString("lblStaffel3Bereich1EFG.RootElement.AccessibleName")
-        Me.lblStaffel3Bereich1EFG.RootElement.Alignment = CType(resources.GetObject("lblStaffel3Bereich1EFG.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel3Bereich1EFG.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel3Bereich1EFG.RootElement.AngleTransform"), Single)
-        Me.lblStaffel3Bereich1EFG.RootElement.FlipText = CType(resources.GetObject("lblStaffel3Bereich1EFG.RootElement.FlipText"), Boolean)
-        Me.lblStaffel3Bereich1EFG.RootElement.Margin = CType(resources.GetObject("lblStaffel3Bereich1EFG.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel3Bereich1EFG.RootElement.Text = resources.GetString("lblStaffel3Bereich1EFG.RootElement.Text")
-        Me.lblStaffel3Bereich1EFG.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel3Bereich1EFG.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel3Bereich1EFG.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel3Bereich1EFG.RootElement.AccessibleName = Nothing
         '
         'lblStaffel3Bereich1Fehler
         '
@@ -5661,14 +4305,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel3Bereich1Fehler.RootElement.AccessibleDescription = resources.GetString("lblStaffel3Bereich1Fehler.RootElement.AccessibleDescription")
-        Me.lblStaffel3Bereich1Fehler.RootElement.AccessibleName = resources.GetString("lblStaffel3Bereich1Fehler.RootElement.AccessibleName")
-        Me.lblStaffel3Bereich1Fehler.RootElement.Alignment = CType(resources.GetObject("lblStaffel3Bereich1Fehler.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel3Bereich1Fehler.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel3Bereich1Fehler.RootElement.AngleTransform"), Single)
-        Me.lblStaffel3Bereich1Fehler.RootElement.FlipText = CType(resources.GetObject("lblStaffel3Bereich1Fehler.RootElement.FlipText"), Boolean)
-        Me.lblStaffel3Bereich1Fehler.RootElement.Margin = CType(resources.GetObject("lblStaffel3Bereich1Fehler.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel3Bereich1Fehler.RootElement.Text = resources.GetString("lblStaffel3Bereich1Fehler.RootElement.Text")
-        Me.lblStaffel3Bereich1Fehler.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel3Bereich1Fehler.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel3Bereich1Fehler.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel3Bereich1Fehler.RootElement.AccessibleName = Nothing
         '
         'lblStaffel3Bereich1Anzeige
         '
@@ -5677,14 +4315,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel3Bereich1Anzeige.RootElement.AccessibleDescription = resources.GetString("lblStaffel3Bereich1Anzeige.RootElement.AccessibleDescription")
-        Me.lblStaffel3Bereich1Anzeige.RootElement.AccessibleName = resources.GetString("lblStaffel3Bereich1Anzeige.RootElement.AccessibleName")
-        Me.lblStaffel3Bereich1Anzeige.RootElement.Alignment = CType(resources.GetObject("lblStaffel3Bereich1Anzeige.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel3Bereich1Anzeige.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel3Bereich1Anzeige.RootElement.AngleTransform"), Single)
-        Me.lblStaffel3Bereich1Anzeige.RootElement.FlipText = CType(resources.GetObject("lblStaffel3Bereich1Anzeige.RootElement.FlipText"), Boolean)
-        Me.lblStaffel3Bereich1Anzeige.RootElement.Margin = CType(resources.GetObject("lblStaffel3Bereich1Anzeige.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel3Bereich1Anzeige.RootElement.Text = resources.GetString("lblStaffel3Bereich1Anzeige.RootElement.Text")
-        Me.lblStaffel3Bereich1Anzeige.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel3Bereich1Anzeige.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel3Bereich1Anzeige.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel3Bereich1Anzeige.RootElement.AccessibleName = Nothing
         '
         'lblStaffel3Bereich1Last
         '
@@ -5693,14 +4325,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel3Bereich1Last.RootElement.AccessibleDescription = resources.GetString("lblStaffel3Bereich1Last.RootElement.AccessibleDescription")
-        Me.lblStaffel3Bereich1Last.RootElement.AccessibleName = resources.GetString("lblStaffel3Bereich1Last.RootElement.AccessibleName")
-        Me.lblStaffel3Bereich1Last.RootElement.Alignment = CType(resources.GetObject("lblStaffel3Bereich1Last.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel3Bereich1Last.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel3Bereich1Last.RootElement.AngleTransform"), Single)
-        Me.lblStaffel3Bereich1Last.RootElement.FlipText = CType(resources.GetObject("lblStaffel3Bereich1Last.RootElement.FlipText"), Boolean)
-        Me.lblStaffel3Bereich1Last.RootElement.Margin = CType(resources.GetObject("lblStaffel3Bereich1Last.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel3Bereich1Last.RootElement.Text = resources.GetString("lblStaffel3Bereich1Last.RootElement.Text")
-        Me.lblStaffel3Bereich1Last.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel3Bereich1Last.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel3Bereich1Last.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel3Bereich1Last.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxStaffel2
         '
@@ -5713,14 +4339,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadGroupBoxStaffel2.RootElement.AccessibleDescription = resources.GetString("RadGroupBoxStaffel2.RootElement.AccessibleDescription")
-        Me.RadGroupBoxStaffel2.RootElement.AccessibleName = resources.GetString("RadGroupBoxStaffel2.RootElement.AccessibleName")
-        Me.RadGroupBoxStaffel2.RootElement.Alignment = CType(resources.GetObject("RadGroupBoxStaffel2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadGroupBoxStaffel2.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBoxStaffel2.RootElement.AngleTransform"), Single)
-        Me.RadGroupBoxStaffel2.RootElement.FlipText = CType(resources.GetObject("RadGroupBoxStaffel2.RootElement.FlipText"), Boolean)
-        Me.RadGroupBoxStaffel2.RootElement.Margin = CType(resources.GetObject("RadGroupBoxStaffel2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadGroupBoxStaffel2.RootElement.Text = resources.GetString("RadGroupBoxStaffel2.RootElement.Text")
-        Me.RadGroupBoxStaffel2.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxStaffel2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadGroupBoxStaffel2.RootElement.AccessibleDescription = Nothing
+        Me.RadGroupBoxStaffel2.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxStaffel2Bereich3
         '
@@ -5762,14 +4382,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadGroupBoxStaffel2Bereich3.RootElement.AccessibleDescription = resources.GetString("RadGroupBoxStaffel2Bereich3.RootElement.AccessibleDescription")
-        Me.RadGroupBoxStaffel2Bereich3.RootElement.AccessibleName = resources.GetString("RadGroupBoxStaffel2Bereich3.RootElement.AccessibleName")
-        Me.RadGroupBoxStaffel2Bereich3.RootElement.Alignment = CType(resources.GetObject("RadGroupBoxStaffel2Bereich3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadGroupBoxStaffel2Bereich3.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBoxStaffel2Bereich3.RootElement.AngleTransform"), Single)
-        Me.RadGroupBoxStaffel2Bereich3.RootElement.FlipText = CType(resources.GetObject("RadGroupBoxStaffel2Bereich3.RootElement.FlipText"), Boolean)
-        Me.RadGroupBoxStaffel2Bereich3.RootElement.Margin = CType(resources.GetObject("RadGroupBoxStaffel2Bereich3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadGroupBoxStaffel2Bereich3.RootElement.Text = resources.GetString("RadGroupBoxStaffel2Bereich3.RootElement.Text")
-        Me.RadGroupBoxStaffel2Bereich3.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxStaffel2Bereich3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadGroupBoxStaffel2Bereich3.RootElement.AccessibleDescription = Nothing
+        Me.RadGroupBoxStaffel2Bereich3.RootElement.AccessibleName = Nothing
         '
         'PictureBox103
         '
@@ -5813,14 +4427,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel2Bereich3ErsatzLastUnten.RootElement.AccessibleDescription = resources.GetString("lblStaffel2Bereich3ErsatzLastUnten.RootElement.AccessibleDescription")
-        Me.lblStaffel2Bereich3ErsatzLastUnten.RootElement.AccessibleName = resources.GetString("lblStaffel2Bereich3ErsatzLastUnten.RootElement.AccessibleName")
-        Me.lblStaffel2Bereich3ErsatzLastUnten.RootElement.Alignment = CType(resources.GetObject("lblStaffel2Bereich3ErsatzLastUnten.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel2Bereich3ErsatzLastUnten.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel2Bereich3ErsatzLastUnten.RootElement.AngleTransform"), Single)
-        Me.lblStaffel2Bereich3ErsatzLastUnten.RootElement.FlipText = CType(resources.GetObject("lblStaffel2Bereich3ErsatzLastUnten.RootElement.FlipText"), Boolean)
-        Me.lblStaffel2Bereich3ErsatzLastUnten.RootElement.Margin = CType(resources.GetObject("lblStaffel2Bereich3ErsatzLastUnten.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel2Bereich3ErsatzLastUnten.RootElement.Text = resources.GetString("lblStaffel2Bereich3ErsatzLastUnten.RootElement.Text")
-        Me.lblStaffel2Bereich3ErsatzLastUnten.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel2Bereich3ErsatzLastUnten.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel2Bereich3ErsatzLastUnten.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel2Bereich3ErsatzLastUnten.RootElement.AccessibleName = Nothing
         '
         'lblStaffel2Bereich3ErsatzLastOben
         '
@@ -5829,14 +4437,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel2Bereich3ErsatzLastOben.RootElement.AccessibleDescription = resources.GetString("lblStaffel2Bereich3ErsatzLastOben.RootElement.AccessibleDescription")
-        Me.lblStaffel2Bereich3ErsatzLastOben.RootElement.AccessibleName = resources.GetString("lblStaffel2Bereich3ErsatzLastOben.RootElement.AccessibleName")
-        Me.lblStaffel2Bereich3ErsatzLastOben.RootElement.Alignment = CType(resources.GetObject("lblStaffel2Bereich3ErsatzLastOben.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel2Bereich3ErsatzLastOben.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel2Bereich3ErsatzLastOben.RootElement.AngleTransform"), Single)
-        Me.lblStaffel2Bereich3ErsatzLastOben.RootElement.FlipText = CType(resources.GetObject("lblStaffel2Bereich3ErsatzLastOben.RootElement.FlipText"), Boolean)
-        Me.lblStaffel2Bereich3ErsatzLastOben.RootElement.Margin = CType(resources.GetObject("lblStaffel2Bereich3ErsatzLastOben.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel2Bereich3ErsatzLastOben.RootElement.Text = resources.GetString("lblStaffel2Bereich3ErsatzLastOben.RootElement.Text")
-        Me.lblStaffel2Bereich3ErsatzLastOben.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel2Bereich3ErsatzLastOben.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel2Bereich3ErsatzLastOben.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel2Bereich3ErsatzLastOben.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel2Bereich3Fehler7
         '
@@ -5845,14 +4447,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel2Bereich3Fehler7.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel2Bereich3Fehler7.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel2Bereich3Fehler7.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel2Bereich3Fehler7.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel2Bereich3Fehler7.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Fehler7.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel2Bereich3Fehler7.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Fehler7.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel2Bereich3Fehler7.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Fehler7.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel2Bereich3Fehler7.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Fehler7.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel2Bereich3Fehler7.RootElement.Text = resources.GetString("RadTextBoxControlStaffel2Bereich3Fehler7.RootElement.Text")
-        Me.RadTextBoxControlStaffel2Bereich3Fehler7.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Fehler7.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel2Bereich3Fehler7.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel2Bereich3Fehler7.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel2Bereich3Fehler7.TabStop = False
         '
         'RadTextBoxControlStaffel2Bereich3Fehler6
@@ -5862,14 +4458,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel2Bereich3Fehler6.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel2Bereich3Fehler6.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel2Bereich3Fehler6.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel2Bereich3Fehler6.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel2Bereich3Fehler6.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Fehler6.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel2Bereich3Fehler6.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Fehler6.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel2Bereich3Fehler6.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Fehler6.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel2Bereich3Fehler6.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Fehler6.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel2Bereich3Fehler6.RootElement.Text = resources.GetString("RadTextBoxControlStaffel2Bereich3Fehler6.RootElement.Text")
-        Me.RadTextBoxControlStaffel2Bereich3Fehler6.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Fehler6.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel2Bereich3Fehler6.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel2Bereich3Fehler6.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel2Bereich3Fehler6.TabStop = False
         '
         'RadTextBoxControlStaffel2Bereich3Fehler5
@@ -5879,14 +4469,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel2Bereich3Fehler5.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel2Bereich3Fehler5.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel2Bereich3Fehler5.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel2Bereich3Fehler5.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel2Bereich3Fehler5.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Fehler5.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel2Bereich3Fehler5.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Fehler5.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel2Bereich3Fehler5.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Fehler5.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel2Bereich3Fehler5.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Fehler5.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel2Bereich3Fehler5.RootElement.Text = resources.GetString("RadTextBoxControlStaffel2Bereich3Fehler5.RootElement.Text")
-        Me.RadTextBoxControlStaffel2Bereich3Fehler5.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Fehler5.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel2Bereich3Fehler5.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel2Bereich3Fehler5.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel2Bereich3Fehler5.TabStop = False
         '
         'RadTextBoxControlStaffel2Bereich3Last4
@@ -5896,14 +4480,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel2Bereich3Last4.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel2Bereich3Last4.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel2Bereich3Last4.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel2Bereich3Last4.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel2Bereich3Last4.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Last4.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel2Bereich3Last4.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Last4.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel2Bereich3Last4.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Last4.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel2Bereich3Last4.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Last4.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel2Bereich3Last4.RootElement.Text = resources.GetString("RadTextBoxControlStaffel2Bereich3Last4.RootElement.Text")
-        Me.RadTextBoxControlStaffel2Bereich3Last4.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Last4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel2Bereich3Last4.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel2Bereich3Last4.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel2Bereich3Last4.TabStop = False
         '
         'RadTextBoxControlStaffel2Bereich3Anzeige4
@@ -5913,14 +4491,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel2Bereich3Anzeige4.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel2Bereich3Anzeige4.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel2Bereich3Anzeige4.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel2Bereich3Anzeige4.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel2Bereich3Anzeige4.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Anzeige4.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel2Bereich3Anzeige4.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Anzeige4.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel2Bereich3Anzeige4.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Anzeige4.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel2Bereich3Anzeige4.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Anzeige4.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel2Bereich3Anzeige4.RootElement.Text = resources.GetString("RadTextBoxControlStaffel2Bereich3Anzeige4.RootElement.Text")
-        Me.RadTextBoxControlStaffel2Bereich3Anzeige4.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Anzeige4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel2Bereich3Anzeige4.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel2Bereich3Anzeige4.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel2Bereich3Anzeige3
         '
@@ -5929,14 +4501,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel2Bereich3Anzeige3.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel2Bereich3Anzeige3.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel2Bereich3Anzeige3.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel2Bereich3Anzeige3.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel2Bereich3Anzeige3.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Anzeige3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel2Bereich3Anzeige3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Anzeige3.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel2Bereich3Anzeige3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Anzeige3.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel2Bereich3Anzeige3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Anzeige3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel2Bereich3Anzeige3.RootElement.Text = resources.GetString("RadTextBoxControlStaffel2Bereich3Anzeige3.RootElement.Text")
-        Me.RadTextBoxControlStaffel2Bereich3Anzeige3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Anzeige3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel2Bereich3Anzeige3.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel2Bereich3Anzeige3.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel2Bereich3Last3
         '
@@ -5945,14 +4511,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel2Bereich3Last3.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel2Bereich3Last3.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel2Bereich3Last3.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel2Bereich3Last3.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel2Bereich3Last3.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Last3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel2Bereich3Last3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Last3.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel2Bereich3Last3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Last3.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel2Bereich3Last3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Last3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel2Bereich3Last3.RootElement.Text = resources.GetString("RadTextBoxControlStaffel2Bereich3Last3.RootElement.Text")
-        Me.RadTextBoxControlStaffel2Bereich3Last3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Last3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel2Bereich3Last3.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel2Bereich3Last3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel2Bereich3Last3.TabStop = False
         '
         'RadTextBoxControlStaffel2Bereich3Last2
@@ -5962,14 +4522,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel2Bereich3Last2.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel2Bereich3Last2.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel2Bereich3Last2.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel2Bereich3Last2.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel2Bereich3Last2.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Last2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel2Bereich3Last2.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Last2.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel2Bereich3Last2.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Last2.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel2Bereich3Last2.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Last2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel2Bereich3Last2.RootElement.Text = resources.GetString("RadTextBoxControlStaffel2Bereich3Last2.RootElement.Text")
-        Me.RadTextBoxControlStaffel2Bereich3Last2.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Last2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel2Bereich3Last2.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel2Bereich3Last2.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel2Bereich3Anzeige1
         '
@@ -5978,14 +4532,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel2Bereich3Anzeige1.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel2Bereich3Anzeige1.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel2Bereich3Anzeige1.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel2Bereich3Anzeige1.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel2Bereich3Anzeige1.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Anzeige1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel2Bereich3Anzeige1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Anzeige1.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel2Bereich3Anzeige1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Anzeige1.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel2Bereich3Anzeige1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Anzeige1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel2Bereich3Anzeige1.RootElement.Text = resources.GetString("RadTextBoxControlStaffel2Bereich3Anzeige1.RootElement.Text")
-        Me.RadTextBoxControlStaffel2Bereich3Anzeige1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Anzeige1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel2Bereich3Anzeige1.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel2Bereich3Anzeige1.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel2Bereich3Last1
         '
@@ -5994,14 +4542,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel2Bereich3Last1.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel2Bereich3Last1.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel2Bereich3Last1.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel2Bereich3Last1.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel2Bereich3Last1.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Last1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel2Bereich3Last1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Last1.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel2Bereich3Last1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Last1.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel2Bereich3Last1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Last1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel2Bereich3Last1.RootElement.Text = resources.GetString("RadTextBoxControlStaffel2Bereich3Last1.RootElement.Text")
-        Me.RadTextBoxControlStaffel2Bereich3Last1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich3Last1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel2Bereich3Last1.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel2Bereich3Last1.RootElement.AccessibleName = Nothing
         '
         'lblStaffel2Bereich3MessabweichungWaage
         '
@@ -6010,14 +4552,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel2Bereich3MessabweichungWaage.RootElement.AccessibleDescription = resources.GetString("lblStaffel2Bereich3MessabweichungWaage.RootElement.AccessibleDescription")
-        Me.lblStaffel2Bereich3MessabweichungWaage.RootElement.AccessibleName = resources.GetString("lblStaffel2Bereich3MessabweichungWaage.RootElement.AccessibleName")
-        Me.lblStaffel2Bereich3MessabweichungWaage.RootElement.Alignment = CType(resources.GetObject("lblStaffel2Bereich3MessabweichungWaage.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel2Bereich3MessabweichungWaage.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel2Bereich3MessabweichungWaage.RootElement.AngleTransform"), Single)
-        Me.lblStaffel2Bereich3MessabweichungWaage.RootElement.FlipText = CType(resources.GetObject("lblStaffel2Bereich3MessabweichungWaage.RootElement.FlipText"), Boolean)
-        Me.lblStaffel2Bereich3MessabweichungWaage.RootElement.Margin = CType(resources.GetObject("lblStaffel2Bereich3MessabweichungWaage.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel2Bereich3MessabweichungWaage.RootElement.Text = resources.GetString("lblStaffel2Bereich3MessabweichungWaage.RootElement.Text")
-        Me.lblStaffel2Bereich3MessabweichungWaage.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel2Bereich3MessabweichungWaage.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel2Bereich3MessabweichungWaage.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel2Bereich3MessabweichungWaage.RootElement.AccessibleName = Nothing
         '
         'lblStaffel2Bereich3MessabweichungStaffel
         '
@@ -6026,14 +4562,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel2Bereich3MessabweichungStaffel.RootElement.AccessibleDescription = resources.GetString("lblStaffel2Bereich3MessabweichungStaffel.RootElement.AccessibleDescription")
-        Me.lblStaffel2Bereich3MessabweichungStaffel.RootElement.AccessibleName = resources.GetString("lblStaffel2Bereich3MessabweichungStaffel.RootElement.AccessibleName")
-        Me.lblStaffel2Bereich3MessabweichungStaffel.RootElement.Alignment = CType(resources.GetObject("lblStaffel2Bereich3MessabweichungStaffel.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel2Bereich3MessabweichungStaffel.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel2Bereich3MessabweichungStaffel.RootElement.AngleTransform"), Single)
-        Me.lblStaffel2Bereich3MessabweichungStaffel.RootElement.FlipText = CType(resources.GetObject("lblStaffel2Bereich3MessabweichungStaffel.RootElement.FlipText"), Boolean)
-        Me.lblStaffel2Bereich3MessabweichungStaffel.RootElement.Margin = CType(resources.GetObject("lblStaffel2Bereich3MessabweichungStaffel.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel2Bereich3MessabweichungStaffel.RootElement.Text = resources.GetString("lblStaffel2Bereich3MessabweichungStaffel.RootElement.Text")
-        Me.lblStaffel2Bereich3MessabweichungStaffel.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel2Bereich3MessabweichungStaffel.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel2Bereich3MessabweichungStaffel.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel2Bereich3MessabweichungStaffel.RootElement.AccessibleName = Nothing
         '
         'lblStaffel2Bereich3Differenz
         '
@@ -6042,14 +4572,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel2Bereich3Differenz.RootElement.AccessibleDescription = resources.GetString("lblStaffel2Bereich3Differenz.RootElement.AccessibleDescription")
-        Me.lblStaffel2Bereich3Differenz.RootElement.AccessibleName = resources.GetString("lblStaffel2Bereich3Differenz.RootElement.AccessibleName")
-        Me.lblStaffel2Bereich3Differenz.RootElement.Alignment = CType(resources.GetObject("lblStaffel2Bereich3Differenz.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel2Bereich3Differenz.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel2Bereich3Differenz.RootElement.AngleTransform"), Single)
-        Me.lblStaffel2Bereich3Differenz.RootElement.FlipText = CType(resources.GetObject("lblStaffel2Bereich3Differenz.RootElement.FlipText"), Boolean)
-        Me.lblStaffel2Bereich3Differenz.RootElement.Margin = CType(resources.GetObject("lblStaffel2Bereich3Differenz.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel2Bereich3Differenz.RootElement.Text = resources.GetString("lblStaffel2Bereich3Differenz.RootElement.Text")
-        Me.lblStaffel2Bereich3Differenz.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel2Bereich3Differenz.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel2Bereich3Differenz.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel2Bereich3Differenz.RootElement.AccessibleName = Nothing
         '
         'lblStaffel2Bereich3ZusastzNormalLast
         '
@@ -6058,14 +4582,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel2Bereich3ZusastzNormalLast.RootElement.AccessibleDescription = resources.GetString("lblStaffel2Bereich3ZusastzNormalLast.RootElement.AccessibleDescription")
-        Me.lblStaffel2Bereich3ZusastzNormalLast.RootElement.AccessibleName = resources.GetString("lblStaffel2Bereich3ZusastzNormalLast.RootElement.AccessibleName")
-        Me.lblStaffel2Bereich3ZusastzNormalLast.RootElement.Alignment = CType(resources.GetObject("lblStaffel2Bereich3ZusastzNormalLast.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel2Bereich3ZusastzNormalLast.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel2Bereich3ZusastzNormalLast.RootElement.AngleTransform"), Single)
-        Me.lblStaffel2Bereich3ZusastzNormalLast.RootElement.FlipText = CType(resources.GetObject("lblStaffel2Bereich3ZusastzNormalLast.RootElement.FlipText"), Boolean)
-        Me.lblStaffel2Bereich3ZusastzNormalLast.RootElement.Margin = CType(resources.GetObject("lblStaffel2Bereich3ZusastzNormalLast.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel2Bereich3ZusastzNormalLast.RootElement.Text = resources.GetString("lblStaffel2Bereich3ZusastzNormalLast.RootElement.Text")
-        Me.lblStaffel2Bereich3ZusastzNormalLast.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel2Bereich3ZusastzNormalLast.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel2Bereich3ZusastzNormalLast.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel2Bereich3ZusastzNormalLast.RootElement.AccessibleName = Nothing
         '
         'lblStaffel2Bereich3NormalLast
         '
@@ -6074,14 +4592,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel2Bereich3NormalLast.RootElement.AccessibleDescription = resources.GetString("lblStaffel2Bereich3NormalLast.RootElement.AccessibleDescription")
-        Me.lblStaffel2Bereich3NormalLast.RootElement.AccessibleName = resources.GetString("lblStaffel2Bereich3NormalLast.RootElement.AccessibleName")
-        Me.lblStaffel2Bereich3NormalLast.RootElement.Alignment = CType(resources.GetObject("lblStaffel2Bereich3NormalLast.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel2Bereich3NormalLast.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel2Bereich3NormalLast.RootElement.AngleTransform"), Single)
-        Me.lblStaffel2Bereich3NormalLast.RootElement.FlipText = CType(resources.GetObject("lblStaffel2Bereich3NormalLast.RootElement.FlipText"), Boolean)
-        Me.lblStaffel2Bereich3NormalLast.RootElement.Margin = CType(resources.GetObject("lblStaffel2Bereich3NormalLast.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel2Bereich3NormalLast.RootElement.Text = resources.GetString("lblStaffel2Bereich3NormalLast.RootElement.Text")
-        Me.lblStaffel2Bereich3NormalLast.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel2Bereich3NormalLast.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel2Bereich3NormalLast.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel2Bereich3NormalLast.RootElement.AccessibleName = Nothing
         '
         'PictureBox21
         '
@@ -6112,14 +4624,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel2Bereich3EFGWert7.RootElement.AccessibleDescription = resources.GetString("lblStaffel2Bereich3EFGWert7.RootElement.AccessibleDescription")
-        Me.lblStaffel2Bereich3EFGWert7.RootElement.AccessibleName = resources.GetString("lblStaffel2Bereich3EFGWert7.RootElement.AccessibleName")
-        Me.lblStaffel2Bereich3EFGWert7.RootElement.Alignment = CType(resources.GetObject("lblStaffel2Bereich3EFGWert7.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel2Bereich3EFGWert7.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel2Bereich3EFGWert7.RootElement.AngleTransform"), Single)
-        Me.lblStaffel2Bereich3EFGWert7.RootElement.FlipText = CType(resources.GetObject("lblStaffel2Bereich3EFGWert7.RootElement.FlipText"), Boolean)
-        Me.lblStaffel2Bereich3EFGWert7.RootElement.Margin = CType(resources.GetObject("lblStaffel2Bereich3EFGWert7.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel2Bereich3EFGWert7.RootElement.Text = resources.GetString("lblStaffel2Bereich3EFGWert7.RootElement.Text")
-        Me.lblStaffel2Bereich3EFGWert7.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel2Bereich3EFGWert7.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel2Bereich3EFGWert7.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel2Bereich3EFGWert7.RootElement.AccessibleName = Nothing
         Me.lblStaffel2Bereich3EFGWert7.TabStop = False
         '
         'lblStaffel2Bereich3EFGWert6
@@ -6130,14 +4636,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel2Bereich3EFGWert6.RootElement.AccessibleDescription = resources.GetString("lblStaffel2Bereich3EFGWert6.RootElement.AccessibleDescription")
-        Me.lblStaffel2Bereich3EFGWert6.RootElement.AccessibleName = resources.GetString("lblStaffel2Bereich3EFGWert6.RootElement.AccessibleName")
-        Me.lblStaffel2Bereich3EFGWert6.RootElement.Alignment = CType(resources.GetObject("lblStaffel2Bereich3EFGWert6.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel2Bereich3EFGWert6.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel2Bereich3EFGWert6.RootElement.AngleTransform"), Single)
-        Me.lblStaffel2Bereich3EFGWert6.RootElement.FlipText = CType(resources.GetObject("lblStaffel2Bereich3EFGWert6.RootElement.FlipText"), Boolean)
-        Me.lblStaffel2Bereich3EFGWert6.RootElement.Margin = CType(resources.GetObject("lblStaffel2Bereich3EFGWert6.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel2Bereich3EFGWert6.RootElement.Text = resources.GetString("lblStaffel2Bereich3EFGWert6.RootElement.Text")
-        Me.lblStaffel2Bereich3EFGWert6.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel2Bereich3EFGWert6.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel2Bereich3EFGWert6.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel2Bereich3EFGWert6.RootElement.AccessibleName = Nothing
         Me.lblStaffel2Bereich3EFGWert6.TabStop = False
         '
         'lblStaffel2Bereich3EFGWert5
@@ -6148,14 +4648,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel2Bereich3EFGWert5.RootElement.AccessibleDescription = resources.GetString("lblStaffel2Bereich3EFGWert5.RootElement.AccessibleDescription")
-        Me.lblStaffel2Bereich3EFGWert5.RootElement.AccessibleName = resources.GetString("lblStaffel2Bereich3EFGWert5.RootElement.AccessibleName")
-        Me.lblStaffel2Bereich3EFGWert5.RootElement.Alignment = CType(resources.GetObject("lblStaffel2Bereich3EFGWert5.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel2Bereich3EFGWert5.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel2Bereich3EFGWert5.RootElement.AngleTransform"), Single)
-        Me.lblStaffel2Bereich3EFGWert5.RootElement.FlipText = CType(resources.GetObject("lblStaffel2Bereich3EFGWert5.RootElement.FlipText"), Boolean)
-        Me.lblStaffel2Bereich3EFGWert5.RootElement.Margin = CType(resources.GetObject("lblStaffel2Bereich3EFGWert5.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel2Bereich3EFGWert5.RootElement.Text = resources.GetString("lblStaffel2Bereich3EFGWert5.RootElement.Text")
-        Me.lblStaffel2Bereich3EFGWert5.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel2Bereich3EFGWert5.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel2Bereich3EFGWert5.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel2Bereich3EFGWert5.RootElement.AccessibleName = Nothing
         Me.lblStaffel2Bereich3EFGWert5.TabStop = False
         '
         'lblStaffel2Bereich3EFG
@@ -6165,14 +4659,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel2Bereich3EFG.RootElement.AccessibleDescription = resources.GetString("lblStaffel2Bereich3EFG.RootElement.AccessibleDescription")
-        Me.lblStaffel2Bereich3EFG.RootElement.AccessibleName = resources.GetString("lblStaffel2Bereich3EFG.RootElement.AccessibleName")
-        Me.lblStaffel2Bereich3EFG.RootElement.Alignment = CType(resources.GetObject("lblStaffel2Bereich3EFG.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel2Bereich3EFG.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel2Bereich3EFG.RootElement.AngleTransform"), Single)
-        Me.lblStaffel2Bereich3EFG.RootElement.FlipText = CType(resources.GetObject("lblStaffel2Bereich3EFG.RootElement.FlipText"), Boolean)
-        Me.lblStaffel2Bereich3EFG.RootElement.Margin = CType(resources.GetObject("lblStaffel2Bereich3EFG.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel2Bereich3EFG.RootElement.Text = resources.GetString("lblStaffel2Bereich3EFG.RootElement.Text")
-        Me.lblStaffel2Bereich3EFG.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel2Bereich3EFG.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel2Bereich3EFG.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel2Bereich3EFG.RootElement.AccessibleName = Nothing
         '
         'lblStaffel2Bereich3Fehler
         '
@@ -6181,14 +4669,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel2Bereich3Fehler.RootElement.AccessibleDescription = resources.GetString("lblStaffel2Bereich3Fehler.RootElement.AccessibleDescription")
-        Me.lblStaffel2Bereich3Fehler.RootElement.AccessibleName = resources.GetString("lblStaffel2Bereich3Fehler.RootElement.AccessibleName")
-        Me.lblStaffel2Bereich3Fehler.RootElement.Alignment = CType(resources.GetObject("lblStaffel2Bereich3Fehler.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel2Bereich3Fehler.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel2Bereich3Fehler.RootElement.AngleTransform"), Single)
-        Me.lblStaffel2Bereich3Fehler.RootElement.FlipText = CType(resources.GetObject("lblStaffel2Bereich3Fehler.RootElement.FlipText"), Boolean)
-        Me.lblStaffel2Bereich3Fehler.RootElement.Margin = CType(resources.GetObject("lblStaffel2Bereich3Fehler.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel2Bereich3Fehler.RootElement.Text = resources.GetString("lblStaffel2Bereich3Fehler.RootElement.Text")
-        Me.lblStaffel2Bereich3Fehler.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel2Bereich3Fehler.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel2Bereich3Fehler.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel2Bereich3Fehler.RootElement.AccessibleName = Nothing
         '
         'lblStaffel2Bereich3Anzeige
         '
@@ -6197,14 +4679,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel2Bereich3Anzeige.RootElement.AccessibleDescription = resources.GetString("lblStaffel2Bereich3Anzeige.RootElement.AccessibleDescription")
-        Me.lblStaffel2Bereich3Anzeige.RootElement.AccessibleName = resources.GetString("lblStaffel2Bereich3Anzeige.RootElement.AccessibleName")
-        Me.lblStaffel2Bereich3Anzeige.RootElement.Alignment = CType(resources.GetObject("lblStaffel2Bereich3Anzeige.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel2Bereich3Anzeige.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel2Bereich3Anzeige.RootElement.AngleTransform"), Single)
-        Me.lblStaffel2Bereich3Anzeige.RootElement.FlipText = CType(resources.GetObject("lblStaffel2Bereich3Anzeige.RootElement.FlipText"), Boolean)
-        Me.lblStaffel2Bereich3Anzeige.RootElement.Margin = CType(resources.GetObject("lblStaffel2Bereich3Anzeige.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel2Bereich3Anzeige.RootElement.Text = resources.GetString("lblStaffel2Bereich3Anzeige.RootElement.Text")
-        Me.lblStaffel2Bereich3Anzeige.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel2Bereich3Anzeige.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel2Bereich3Anzeige.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel2Bereich3Anzeige.RootElement.AccessibleName = Nothing
         '
         'lblStaffel2Bereich3Last
         '
@@ -6213,14 +4689,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel2Bereich3Last.RootElement.AccessibleDescription = resources.GetString("lblStaffel2Bereich3Last.RootElement.AccessibleDescription")
-        Me.lblStaffel2Bereich3Last.RootElement.AccessibleName = resources.GetString("lblStaffel2Bereich3Last.RootElement.AccessibleName")
-        Me.lblStaffel2Bereich3Last.RootElement.Alignment = CType(resources.GetObject("lblStaffel2Bereich3Last.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel2Bereich3Last.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel2Bereich3Last.RootElement.AngleTransform"), Single)
-        Me.lblStaffel2Bereich3Last.RootElement.FlipText = CType(resources.GetObject("lblStaffel2Bereich3Last.RootElement.FlipText"), Boolean)
-        Me.lblStaffel2Bereich3Last.RootElement.Margin = CType(resources.GetObject("lblStaffel2Bereich3Last.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel2Bereich3Last.RootElement.Text = resources.GetString("lblStaffel2Bereich3Last.RootElement.Text")
-        Me.lblStaffel2Bereich3Last.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel2Bereich3Last.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel2Bereich3Last.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel2Bereich3Last.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxStaffel2Bereich2
         '
@@ -6262,14 +4732,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadGroupBoxStaffel2Bereich2.RootElement.AccessibleDescription = resources.GetString("RadGroupBoxStaffel2Bereich2.RootElement.AccessibleDescription")
-        Me.RadGroupBoxStaffel2Bereich2.RootElement.AccessibleName = resources.GetString("RadGroupBoxStaffel2Bereich2.RootElement.AccessibleName")
-        Me.RadGroupBoxStaffel2Bereich2.RootElement.Alignment = CType(resources.GetObject("RadGroupBoxStaffel2Bereich2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadGroupBoxStaffel2Bereich2.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBoxStaffel2Bereich2.RootElement.AngleTransform"), Single)
-        Me.RadGroupBoxStaffel2Bereich2.RootElement.FlipText = CType(resources.GetObject("RadGroupBoxStaffel2Bereich2.RootElement.FlipText"), Boolean)
-        Me.RadGroupBoxStaffel2Bereich2.RootElement.Margin = CType(resources.GetObject("RadGroupBoxStaffel2Bereich2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadGroupBoxStaffel2Bereich2.RootElement.Text = resources.GetString("RadGroupBoxStaffel2Bereich2.RootElement.Text")
-        Me.RadGroupBoxStaffel2Bereich2.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxStaffel2Bereich2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadGroupBoxStaffel2Bereich2.RootElement.AccessibleDescription = Nothing
+        Me.RadGroupBoxStaffel2Bereich2.RootElement.AccessibleName = Nothing
         '
         'PictureBox97
         '
@@ -6313,14 +4777,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel2Bereich2ErsatzLastUnten.RootElement.AccessibleDescription = resources.GetString("lblStaffel2Bereich2ErsatzLastUnten.RootElement.AccessibleDescription")
-        Me.lblStaffel2Bereich2ErsatzLastUnten.RootElement.AccessibleName = resources.GetString("lblStaffel2Bereich2ErsatzLastUnten.RootElement.AccessibleName")
-        Me.lblStaffel2Bereich2ErsatzLastUnten.RootElement.Alignment = CType(resources.GetObject("lblStaffel2Bereich2ErsatzLastUnten.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel2Bereich2ErsatzLastUnten.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel2Bereich2ErsatzLastUnten.RootElement.AngleTransform"), Single)
-        Me.lblStaffel2Bereich2ErsatzLastUnten.RootElement.FlipText = CType(resources.GetObject("lblStaffel2Bereich2ErsatzLastUnten.RootElement.FlipText"), Boolean)
-        Me.lblStaffel2Bereich2ErsatzLastUnten.RootElement.Margin = CType(resources.GetObject("lblStaffel2Bereich2ErsatzLastUnten.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel2Bereich2ErsatzLastUnten.RootElement.Text = resources.GetString("lblStaffel2Bereich2ErsatzLastUnten.RootElement.Text")
-        Me.lblStaffel2Bereich2ErsatzLastUnten.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel2Bereich2ErsatzLastUnten.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel2Bereich2ErsatzLastUnten.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel2Bereich2ErsatzLastUnten.RootElement.AccessibleName = Nothing
         '
         'lblStaffel2Bereich2ErsatzLastOben
         '
@@ -6329,14 +4787,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel2Bereich2ErsatzLastOben.RootElement.AccessibleDescription = resources.GetString("lblStaffel2Bereich2ErsatzLastOben.RootElement.AccessibleDescription")
-        Me.lblStaffel2Bereich2ErsatzLastOben.RootElement.AccessibleName = resources.GetString("lblStaffel2Bereich2ErsatzLastOben.RootElement.AccessibleName")
-        Me.lblStaffel2Bereich2ErsatzLastOben.RootElement.Alignment = CType(resources.GetObject("lblStaffel2Bereich2ErsatzLastOben.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel2Bereich2ErsatzLastOben.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel2Bereich2ErsatzLastOben.RootElement.AngleTransform"), Single)
-        Me.lblStaffel2Bereich2ErsatzLastOben.RootElement.FlipText = CType(resources.GetObject("lblStaffel2Bereich2ErsatzLastOben.RootElement.FlipText"), Boolean)
-        Me.lblStaffel2Bereich2ErsatzLastOben.RootElement.Margin = CType(resources.GetObject("lblStaffel2Bereich2ErsatzLastOben.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel2Bereich2ErsatzLastOben.RootElement.Text = resources.GetString("lblStaffel2Bereich2ErsatzLastOben.RootElement.Text")
-        Me.lblStaffel2Bereich2ErsatzLastOben.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel2Bereich2ErsatzLastOben.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel2Bereich2ErsatzLastOben.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel2Bereich2ErsatzLastOben.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel2Bereich2Fehler7
         '
@@ -6345,14 +4797,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel2Bereich2Fehler7.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel2Bereich2Fehler7.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel2Bereich2Fehler7.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel2Bereich2Fehler7.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel2Bereich2Fehler7.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Fehler7.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel2Bereich2Fehler7.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Fehler7.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel2Bereich2Fehler7.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Fehler7.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel2Bereich2Fehler7.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Fehler7.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel2Bereich2Fehler7.RootElement.Text = resources.GetString("RadTextBoxControlStaffel2Bereich2Fehler7.RootElement.Text")
-        Me.RadTextBoxControlStaffel2Bereich2Fehler7.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Fehler7.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel2Bereich2Fehler7.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel2Bereich2Fehler7.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel2Bereich2Fehler7.TabStop = False
         '
         'RadTextBoxControlStaffel2Bereich2Fehler6
@@ -6362,14 +4808,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel2Bereich2Fehler6.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel2Bereich2Fehler6.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel2Bereich2Fehler6.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel2Bereich2Fehler6.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel2Bereich2Fehler6.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Fehler6.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel2Bereich2Fehler6.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Fehler6.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel2Bereich2Fehler6.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Fehler6.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel2Bereich2Fehler6.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Fehler6.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel2Bereich2Fehler6.RootElement.Text = resources.GetString("RadTextBoxControlStaffel2Bereich2Fehler6.RootElement.Text")
-        Me.RadTextBoxControlStaffel2Bereich2Fehler6.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Fehler6.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel2Bereich2Fehler6.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel2Bereich2Fehler6.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel2Bereich2Fehler6.TabStop = False
         '
         'RadTextBoxControlStaffel2Bereich2Fehler5
@@ -6379,14 +4819,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel2Bereich2Fehler5.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel2Bereich2Fehler5.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel2Bereich2Fehler5.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel2Bereich2Fehler5.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel2Bereich2Fehler5.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Fehler5.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel2Bereich2Fehler5.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Fehler5.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel2Bereich2Fehler5.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Fehler5.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel2Bereich2Fehler5.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Fehler5.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel2Bereich2Fehler5.RootElement.Text = resources.GetString("RadTextBoxControlStaffel2Bereich2Fehler5.RootElement.Text")
-        Me.RadTextBoxControlStaffel2Bereich2Fehler5.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Fehler5.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel2Bereich2Fehler5.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel2Bereich2Fehler5.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel2Bereich2Fehler5.TabStop = False
         '
         'RadTextBoxControlStaffel2Bereich2Last4
@@ -6396,14 +4830,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel2Bereich2Last4.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel2Bereich2Last4.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel2Bereich2Last4.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel2Bereich2Last4.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel2Bereich2Last4.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Last4.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel2Bereich2Last4.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Last4.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel2Bereich2Last4.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Last4.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel2Bereich2Last4.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Last4.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel2Bereich2Last4.RootElement.Text = resources.GetString("RadTextBoxControlStaffel2Bereich2Last4.RootElement.Text")
-        Me.RadTextBoxControlStaffel2Bereich2Last4.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Last4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel2Bereich2Last4.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel2Bereich2Last4.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel2Bereich2Last4.TabStop = False
         '
         'RadTextBoxControlStaffel2Bereich2Anzeige4
@@ -6413,14 +4841,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel2Bereich2Anzeige4.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel2Bereich2Anzeige4.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel2Bereich2Anzeige4.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel2Bereich2Anzeige4.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel2Bereich2Anzeige4.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Anzeige4.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel2Bereich2Anzeige4.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Anzeige4.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel2Bereich2Anzeige4.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Anzeige4.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel2Bereich2Anzeige4.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Anzeige4.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel2Bereich2Anzeige4.RootElement.Text = resources.GetString("RadTextBoxControlStaffel2Bereich2Anzeige4.RootElement.Text")
-        Me.RadTextBoxControlStaffel2Bereich2Anzeige4.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Anzeige4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel2Bereich2Anzeige4.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel2Bereich2Anzeige4.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel2Bereich2Anzeige3
         '
@@ -6429,14 +4851,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel2Bereich2Anzeige3.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel2Bereich2Anzeige3.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel2Bereich2Anzeige3.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel2Bereich2Anzeige3.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel2Bereich2Anzeige3.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Anzeige3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel2Bereich2Anzeige3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Anzeige3.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel2Bereich2Anzeige3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Anzeige3.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel2Bereich2Anzeige3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Anzeige3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel2Bereich2Anzeige3.RootElement.Text = resources.GetString("RadTextBoxControlStaffel2Bereich2Anzeige3.RootElement.Text")
-        Me.RadTextBoxControlStaffel2Bereich2Anzeige3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Anzeige3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel2Bereich2Anzeige3.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel2Bereich2Anzeige3.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel2Bereich2Last3
         '
@@ -6445,14 +4861,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel2Bereich2Last3.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel2Bereich2Last3.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel2Bereich2Last3.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel2Bereich2Last3.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel2Bereich2Last3.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Last3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel2Bereich2Last3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Last3.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel2Bereich2Last3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Last3.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel2Bereich2Last3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Last3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel2Bereich2Last3.RootElement.Text = resources.GetString("RadTextBoxControlStaffel2Bereich2Last3.RootElement.Text")
-        Me.RadTextBoxControlStaffel2Bereich2Last3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Last3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel2Bereich2Last3.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel2Bereich2Last3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel2Bereich2Last3.TabStop = False
         '
         'RadTextBoxControlStaffel2Bereich2Last2
@@ -6462,14 +4872,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel2Bereich2Last2.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel2Bereich2Last2.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel2Bereich2Last2.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel2Bereich2Last2.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel2Bereich2Last2.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Last2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel2Bereich2Last2.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Last2.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel2Bereich2Last2.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Last2.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel2Bereich2Last2.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Last2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel2Bereich2Last2.RootElement.Text = resources.GetString("RadTextBoxControlStaffel2Bereich2Last2.RootElement.Text")
-        Me.RadTextBoxControlStaffel2Bereich2Last2.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Last2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel2Bereich2Last2.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel2Bereich2Last2.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel2Bereich2Anzeige1
         '
@@ -6478,14 +4882,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel2Bereich2Anzeige1.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel2Bereich2Anzeige1.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel2Bereich2Anzeige1.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel2Bereich2Anzeige1.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel2Bereich2Anzeige1.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Anzeige1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel2Bereich2Anzeige1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Anzeige1.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel2Bereich2Anzeige1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Anzeige1.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel2Bereich2Anzeige1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Anzeige1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel2Bereich2Anzeige1.RootElement.Text = resources.GetString("RadTextBoxControlStaffel2Bereich2Anzeige1.RootElement.Text")
-        Me.RadTextBoxControlStaffel2Bereich2Anzeige1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Anzeige1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel2Bereich2Anzeige1.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel2Bereich2Anzeige1.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel2Bereich2Last1
         '
@@ -6494,14 +4892,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel2Bereich2Last1.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel2Bereich2Last1.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel2Bereich2Last1.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel2Bereich2Last1.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel2Bereich2Last1.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Last1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel2Bereich2Last1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Last1.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel2Bereich2Last1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Last1.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel2Bereich2Last1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Last1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel2Bereich2Last1.RootElement.Text = resources.GetString("RadTextBoxControlStaffel2Bereich2Last1.RootElement.Text")
-        Me.RadTextBoxControlStaffel2Bereich2Last1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich2Last1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel2Bereich2Last1.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel2Bereich2Last1.RootElement.AccessibleName = Nothing
         '
         'lblStaffel2Bereich2MessabweichungWaage
         '
@@ -6510,14 +4902,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel2Bereich2MessabweichungWaage.RootElement.AccessibleDescription = resources.GetString("lblStaffel2Bereich2MessabweichungWaage.RootElement.AccessibleDescription")
-        Me.lblStaffel2Bereich2MessabweichungWaage.RootElement.AccessibleName = resources.GetString("lblStaffel2Bereich2MessabweichungWaage.RootElement.AccessibleName")
-        Me.lblStaffel2Bereich2MessabweichungWaage.RootElement.Alignment = CType(resources.GetObject("lblStaffel2Bereich2MessabweichungWaage.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel2Bereich2MessabweichungWaage.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel2Bereich2MessabweichungWaage.RootElement.AngleTransform"), Single)
-        Me.lblStaffel2Bereich2MessabweichungWaage.RootElement.FlipText = CType(resources.GetObject("lblStaffel2Bereich2MessabweichungWaage.RootElement.FlipText"), Boolean)
-        Me.lblStaffel2Bereich2MessabweichungWaage.RootElement.Margin = CType(resources.GetObject("lblStaffel2Bereich2MessabweichungWaage.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel2Bereich2MessabweichungWaage.RootElement.Text = resources.GetString("lblStaffel2Bereich2MessabweichungWaage.RootElement.Text")
-        Me.lblStaffel2Bereich2MessabweichungWaage.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel2Bereich2MessabweichungWaage.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel2Bereich2MessabweichungWaage.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel2Bereich2MessabweichungWaage.RootElement.AccessibleName = Nothing
         '
         'lblStaffel2Bereich2MessabweichungStaffel
         '
@@ -6526,14 +4912,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel2Bereich2MessabweichungStaffel.RootElement.AccessibleDescription = resources.GetString("lblStaffel2Bereich2MessabweichungStaffel.RootElement.AccessibleDescription")
-        Me.lblStaffel2Bereich2MessabweichungStaffel.RootElement.AccessibleName = resources.GetString("lblStaffel2Bereich2MessabweichungStaffel.RootElement.AccessibleName")
-        Me.lblStaffel2Bereich2MessabweichungStaffel.RootElement.Alignment = CType(resources.GetObject("lblStaffel2Bereich2MessabweichungStaffel.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel2Bereich2MessabweichungStaffel.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel2Bereich2MessabweichungStaffel.RootElement.AngleTransform"), Single)
-        Me.lblStaffel2Bereich2MessabweichungStaffel.RootElement.FlipText = CType(resources.GetObject("lblStaffel2Bereich2MessabweichungStaffel.RootElement.FlipText"), Boolean)
-        Me.lblStaffel2Bereich2MessabweichungStaffel.RootElement.Margin = CType(resources.GetObject("lblStaffel2Bereich2MessabweichungStaffel.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel2Bereich2MessabweichungStaffel.RootElement.Text = resources.GetString("lblStaffel2Bereich2MessabweichungStaffel.RootElement.Text")
-        Me.lblStaffel2Bereich2MessabweichungStaffel.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel2Bereich2MessabweichungStaffel.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel2Bereich2MessabweichungStaffel.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel2Bereich2MessabweichungStaffel.RootElement.AccessibleName = Nothing
         '
         'lblStaffel2Bereich2Differenz
         '
@@ -6542,14 +4922,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel2Bereich2Differenz.RootElement.AccessibleDescription = resources.GetString("lblStaffel2Bereich2Differenz.RootElement.AccessibleDescription")
-        Me.lblStaffel2Bereich2Differenz.RootElement.AccessibleName = resources.GetString("lblStaffel2Bereich2Differenz.RootElement.AccessibleName")
-        Me.lblStaffel2Bereich2Differenz.RootElement.Alignment = CType(resources.GetObject("lblStaffel2Bereich2Differenz.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel2Bereich2Differenz.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel2Bereich2Differenz.RootElement.AngleTransform"), Single)
-        Me.lblStaffel2Bereich2Differenz.RootElement.FlipText = CType(resources.GetObject("lblStaffel2Bereich2Differenz.RootElement.FlipText"), Boolean)
-        Me.lblStaffel2Bereich2Differenz.RootElement.Margin = CType(resources.GetObject("lblStaffel2Bereich2Differenz.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel2Bereich2Differenz.RootElement.Text = resources.GetString("lblStaffel2Bereich2Differenz.RootElement.Text")
-        Me.lblStaffel2Bereich2Differenz.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel2Bereich2Differenz.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel2Bereich2Differenz.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel2Bereich2Differenz.RootElement.AccessibleName = Nothing
         '
         'lblStaffel2Bereich2ZusastzNormalLast
         '
@@ -6558,14 +4932,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel2Bereich2ZusastzNormalLast.RootElement.AccessibleDescription = resources.GetString("lblStaffel2Bereich2ZusastzNormalLast.RootElement.AccessibleDescription")
-        Me.lblStaffel2Bereich2ZusastzNormalLast.RootElement.AccessibleName = resources.GetString("lblStaffel2Bereich2ZusastzNormalLast.RootElement.AccessibleName")
-        Me.lblStaffel2Bereich2ZusastzNormalLast.RootElement.Alignment = CType(resources.GetObject("lblStaffel2Bereich2ZusastzNormalLast.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel2Bereich2ZusastzNormalLast.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel2Bereich2ZusastzNormalLast.RootElement.AngleTransform"), Single)
-        Me.lblStaffel2Bereich2ZusastzNormalLast.RootElement.FlipText = CType(resources.GetObject("lblStaffel2Bereich2ZusastzNormalLast.RootElement.FlipText"), Boolean)
-        Me.lblStaffel2Bereich2ZusastzNormalLast.RootElement.Margin = CType(resources.GetObject("lblStaffel2Bereich2ZusastzNormalLast.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel2Bereich2ZusastzNormalLast.RootElement.Text = resources.GetString("lblStaffel2Bereich2ZusastzNormalLast.RootElement.Text")
-        Me.lblStaffel2Bereich2ZusastzNormalLast.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel2Bereich2ZusastzNormalLast.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel2Bereich2ZusastzNormalLast.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel2Bereich2ZusastzNormalLast.RootElement.AccessibleName = Nothing
         '
         'lblStaffel2Bereich2NormalLast
         '
@@ -6574,14 +4942,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel2Bereich2NormalLast.RootElement.AccessibleDescription = resources.GetString("lblStaffel2Bereich2NormalLast.RootElement.AccessibleDescription")
-        Me.lblStaffel2Bereich2NormalLast.RootElement.AccessibleName = resources.GetString("lblStaffel2Bereich2NormalLast.RootElement.AccessibleName")
-        Me.lblStaffel2Bereich2NormalLast.RootElement.Alignment = CType(resources.GetObject("lblStaffel2Bereich2NormalLast.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel2Bereich2NormalLast.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel2Bereich2NormalLast.RootElement.AngleTransform"), Single)
-        Me.lblStaffel2Bereich2NormalLast.RootElement.FlipText = CType(resources.GetObject("lblStaffel2Bereich2NormalLast.RootElement.FlipText"), Boolean)
-        Me.lblStaffel2Bereich2NormalLast.RootElement.Margin = CType(resources.GetObject("lblStaffel2Bereich2NormalLast.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel2Bereich2NormalLast.RootElement.Text = resources.GetString("lblStaffel2Bereich2NormalLast.RootElement.Text")
-        Me.lblStaffel2Bereich2NormalLast.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel2Bereich2NormalLast.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel2Bereich2NormalLast.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel2Bereich2NormalLast.RootElement.AccessibleName = Nothing
         '
         'PictureBox28
         '
@@ -6612,14 +4974,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel2Bereich2EFGWert7.RootElement.AccessibleDescription = resources.GetString("lblStaffel2Bereich2EFGWert7.RootElement.AccessibleDescription")
-        Me.lblStaffel2Bereich2EFGWert7.RootElement.AccessibleName = resources.GetString("lblStaffel2Bereich2EFGWert7.RootElement.AccessibleName")
-        Me.lblStaffel2Bereich2EFGWert7.RootElement.Alignment = CType(resources.GetObject("lblStaffel2Bereich2EFGWert7.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel2Bereich2EFGWert7.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel2Bereich2EFGWert7.RootElement.AngleTransform"), Single)
-        Me.lblStaffel2Bereich2EFGWert7.RootElement.FlipText = CType(resources.GetObject("lblStaffel2Bereich2EFGWert7.RootElement.FlipText"), Boolean)
-        Me.lblStaffel2Bereich2EFGWert7.RootElement.Margin = CType(resources.GetObject("lblStaffel2Bereich2EFGWert7.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel2Bereich2EFGWert7.RootElement.Text = resources.GetString("lblStaffel2Bereich2EFGWert7.RootElement.Text")
-        Me.lblStaffel2Bereich2EFGWert7.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel2Bereich2EFGWert7.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel2Bereich2EFGWert7.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel2Bereich2EFGWert7.RootElement.AccessibleName = Nothing
         Me.lblStaffel2Bereich2EFGWert7.TabStop = False
         '
         'lblStaffel2Bereich2EFGWert6
@@ -6630,14 +4986,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel2Bereich2EFGWert6.RootElement.AccessibleDescription = resources.GetString("lblStaffel2Bereich2EFGWert6.RootElement.AccessibleDescription")
-        Me.lblStaffel2Bereich2EFGWert6.RootElement.AccessibleName = resources.GetString("lblStaffel2Bereich2EFGWert6.RootElement.AccessibleName")
-        Me.lblStaffel2Bereich2EFGWert6.RootElement.Alignment = CType(resources.GetObject("lblStaffel2Bereich2EFGWert6.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel2Bereich2EFGWert6.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel2Bereich2EFGWert6.RootElement.AngleTransform"), Single)
-        Me.lblStaffel2Bereich2EFGWert6.RootElement.FlipText = CType(resources.GetObject("lblStaffel2Bereich2EFGWert6.RootElement.FlipText"), Boolean)
-        Me.lblStaffel2Bereich2EFGWert6.RootElement.Margin = CType(resources.GetObject("lblStaffel2Bereich2EFGWert6.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel2Bereich2EFGWert6.RootElement.Text = resources.GetString("lblStaffel2Bereich2EFGWert6.RootElement.Text")
-        Me.lblStaffel2Bereich2EFGWert6.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel2Bereich2EFGWert6.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel2Bereich2EFGWert6.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel2Bereich2EFGWert6.RootElement.AccessibleName = Nothing
         Me.lblStaffel2Bereich2EFGWert6.TabStop = False
         '
         'lblStaffel2Bereich2EFGWert5
@@ -6648,14 +4998,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel2Bereich2EFGWert5.RootElement.AccessibleDescription = resources.GetString("lblStaffel2Bereich2EFGWert5.RootElement.AccessibleDescription")
-        Me.lblStaffel2Bereich2EFGWert5.RootElement.AccessibleName = resources.GetString("lblStaffel2Bereich2EFGWert5.RootElement.AccessibleName")
-        Me.lblStaffel2Bereich2EFGWert5.RootElement.Alignment = CType(resources.GetObject("lblStaffel2Bereich2EFGWert5.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel2Bereich2EFGWert5.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel2Bereich2EFGWert5.RootElement.AngleTransform"), Single)
-        Me.lblStaffel2Bereich2EFGWert5.RootElement.FlipText = CType(resources.GetObject("lblStaffel2Bereich2EFGWert5.RootElement.FlipText"), Boolean)
-        Me.lblStaffel2Bereich2EFGWert5.RootElement.Margin = CType(resources.GetObject("lblStaffel2Bereich2EFGWert5.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel2Bereich2EFGWert5.RootElement.Text = resources.GetString("lblStaffel2Bereich2EFGWert5.RootElement.Text")
-        Me.lblStaffel2Bereich2EFGWert5.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel2Bereich2EFGWert5.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel2Bereich2EFGWert5.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel2Bereich2EFGWert5.RootElement.AccessibleName = Nothing
         Me.lblStaffel2Bereich2EFGWert5.TabStop = False
         '
         'lblStaffel2Bereich2EFG
@@ -6665,14 +5009,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel2Bereich2EFG.RootElement.AccessibleDescription = resources.GetString("lblStaffel2Bereich2EFG.RootElement.AccessibleDescription")
-        Me.lblStaffel2Bereich2EFG.RootElement.AccessibleName = resources.GetString("lblStaffel2Bereich2EFG.RootElement.AccessibleName")
-        Me.lblStaffel2Bereich2EFG.RootElement.Alignment = CType(resources.GetObject("lblStaffel2Bereich2EFG.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel2Bereich2EFG.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel2Bereich2EFG.RootElement.AngleTransform"), Single)
-        Me.lblStaffel2Bereich2EFG.RootElement.FlipText = CType(resources.GetObject("lblStaffel2Bereich2EFG.RootElement.FlipText"), Boolean)
-        Me.lblStaffel2Bereich2EFG.RootElement.Margin = CType(resources.GetObject("lblStaffel2Bereich2EFG.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel2Bereich2EFG.RootElement.Text = resources.GetString("lblStaffel2Bereich2EFG.RootElement.Text")
-        Me.lblStaffel2Bereich2EFG.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel2Bereich2EFG.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel2Bereich2EFG.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel2Bereich2EFG.RootElement.AccessibleName = Nothing
         '
         'lblStaffel2Bereich2Fehler
         '
@@ -6681,14 +5019,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel2Bereich2Fehler.RootElement.AccessibleDescription = resources.GetString("lblStaffel2Bereich2Fehler.RootElement.AccessibleDescription")
-        Me.lblStaffel2Bereich2Fehler.RootElement.AccessibleName = resources.GetString("lblStaffel2Bereich2Fehler.RootElement.AccessibleName")
-        Me.lblStaffel2Bereich2Fehler.RootElement.Alignment = CType(resources.GetObject("lblStaffel2Bereich2Fehler.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel2Bereich2Fehler.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel2Bereich2Fehler.RootElement.AngleTransform"), Single)
-        Me.lblStaffel2Bereich2Fehler.RootElement.FlipText = CType(resources.GetObject("lblStaffel2Bereich2Fehler.RootElement.FlipText"), Boolean)
-        Me.lblStaffel2Bereich2Fehler.RootElement.Margin = CType(resources.GetObject("lblStaffel2Bereich2Fehler.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel2Bereich2Fehler.RootElement.Text = resources.GetString("lblStaffel2Bereich2Fehler.RootElement.Text")
-        Me.lblStaffel2Bereich2Fehler.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel2Bereich2Fehler.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel2Bereich2Fehler.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel2Bereich2Fehler.RootElement.AccessibleName = Nothing
         '
         'lblStaffel2Bereich2Anzeige
         '
@@ -6697,14 +5029,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel2Bereich2Anzeige.RootElement.AccessibleDescription = resources.GetString("lblStaffel2Bereich2Anzeige.RootElement.AccessibleDescription")
-        Me.lblStaffel2Bereich2Anzeige.RootElement.AccessibleName = resources.GetString("lblStaffel2Bereich2Anzeige.RootElement.AccessibleName")
-        Me.lblStaffel2Bereich2Anzeige.RootElement.Alignment = CType(resources.GetObject("lblStaffel2Bereich2Anzeige.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel2Bereich2Anzeige.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel2Bereich2Anzeige.RootElement.AngleTransform"), Single)
-        Me.lblStaffel2Bereich2Anzeige.RootElement.FlipText = CType(resources.GetObject("lblStaffel2Bereich2Anzeige.RootElement.FlipText"), Boolean)
-        Me.lblStaffel2Bereich2Anzeige.RootElement.Margin = CType(resources.GetObject("lblStaffel2Bereich2Anzeige.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel2Bereich2Anzeige.RootElement.Text = resources.GetString("lblStaffel2Bereich2Anzeige.RootElement.Text")
-        Me.lblStaffel2Bereich2Anzeige.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel2Bereich2Anzeige.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel2Bereich2Anzeige.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel2Bereich2Anzeige.RootElement.AccessibleName = Nothing
         '
         'lblStaffel2Bereich2Last
         '
@@ -6713,14 +5039,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel2Bereich2Last.RootElement.AccessibleDescription = resources.GetString("lblStaffel2Bereich2Last.RootElement.AccessibleDescription")
-        Me.lblStaffel2Bereich2Last.RootElement.AccessibleName = resources.GetString("lblStaffel2Bereich2Last.RootElement.AccessibleName")
-        Me.lblStaffel2Bereich2Last.RootElement.Alignment = CType(resources.GetObject("lblStaffel2Bereich2Last.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel2Bereich2Last.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel2Bereich2Last.RootElement.AngleTransform"), Single)
-        Me.lblStaffel2Bereich2Last.RootElement.FlipText = CType(resources.GetObject("lblStaffel2Bereich2Last.RootElement.FlipText"), Boolean)
-        Me.lblStaffel2Bereich2Last.RootElement.Margin = CType(resources.GetObject("lblStaffel2Bereich2Last.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel2Bereich2Last.RootElement.Text = resources.GetString("lblStaffel2Bereich2Last.RootElement.Text")
-        Me.lblStaffel2Bereich2Last.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel2Bereich2Last.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel2Bereich2Last.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel2Bereich2Last.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxStaffel2Bereich1
         '
@@ -6762,14 +5082,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadGroupBoxStaffel2Bereich1.RootElement.AccessibleDescription = resources.GetString("RadGroupBoxStaffel2Bereich1.RootElement.AccessibleDescription")
-        Me.RadGroupBoxStaffel2Bereich1.RootElement.AccessibleName = resources.GetString("RadGroupBoxStaffel2Bereich1.RootElement.AccessibleName")
-        Me.RadGroupBoxStaffel2Bereich1.RootElement.Alignment = CType(resources.GetObject("RadGroupBoxStaffel2Bereich1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadGroupBoxStaffel2Bereich1.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBoxStaffel2Bereich1.RootElement.AngleTransform"), Single)
-        Me.RadGroupBoxStaffel2Bereich1.RootElement.FlipText = CType(resources.GetObject("RadGroupBoxStaffel2Bereich1.RootElement.FlipText"), Boolean)
-        Me.RadGroupBoxStaffel2Bereich1.RootElement.Margin = CType(resources.GetObject("RadGroupBoxStaffel2Bereich1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadGroupBoxStaffel2Bereich1.RootElement.Text = resources.GetString("RadGroupBoxStaffel2Bereich1.RootElement.Text")
-        Me.RadGroupBoxStaffel2Bereich1.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxStaffel2Bereich1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadGroupBoxStaffel2Bereich1.RootElement.AccessibleDescription = Nothing
+        Me.RadGroupBoxStaffel2Bereich1.RootElement.AccessibleName = Nothing
         '
         'PictureBox91
         '
@@ -6813,14 +5127,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel2Bereich1ErsatzLastUnten.RootElement.AccessibleDescription = resources.GetString("lblStaffel2Bereich1ErsatzLastUnten.RootElement.AccessibleDescription")
-        Me.lblStaffel2Bereich1ErsatzLastUnten.RootElement.AccessibleName = resources.GetString("lblStaffel2Bereich1ErsatzLastUnten.RootElement.AccessibleName")
-        Me.lblStaffel2Bereich1ErsatzLastUnten.RootElement.Alignment = CType(resources.GetObject("lblStaffel2Bereich1ErsatzLastUnten.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel2Bereich1ErsatzLastUnten.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel2Bereich1ErsatzLastUnten.RootElement.AngleTransform"), Single)
-        Me.lblStaffel2Bereich1ErsatzLastUnten.RootElement.FlipText = CType(resources.GetObject("lblStaffel2Bereich1ErsatzLastUnten.RootElement.FlipText"), Boolean)
-        Me.lblStaffel2Bereich1ErsatzLastUnten.RootElement.Margin = CType(resources.GetObject("lblStaffel2Bereich1ErsatzLastUnten.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel2Bereich1ErsatzLastUnten.RootElement.Text = resources.GetString("lblStaffel2Bereich1ErsatzLastUnten.RootElement.Text")
-        Me.lblStaffel2Bereich1ErsatzLastUnten.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel2Bereich1ErsatzLastUnten.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel2Bereich1ErsatzLastUnten.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel2Bereich1ErsatzLastUnten.RootElement.AccessibleName = Nothing
         '
         'lblStaffel2Bereich1ErsatzLastOben
         '
@@ -6829,14 +5137,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel2Bereich1ErsatzLastOben.RootElement.AccessibleDescription = resources.GetString("lblStaffel2Bereich1ErsatzLastOben.RootElement.AccessibleDescription")
-        Me.lblStaffel2Bereich1ErsatzLastOben.RootElement.AccessibleName = resources.GetString("lblStaffel2Bereich1ErsatzLastOben.RootElement.AccessibleName")
-        Me.lblStaffel2Bereich1ErsatzLastOben.RootElement.Alignment = CType(resources.GetObject("lblStaffel2Bereich1ErsatzLastOben.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel2Bereich1ErsatzLastOben.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel2Bereich1ErsatzLastOben.RootElement.AngleTransform"), Single)
-        Me.lblStaffel2Bereich1ErsatzLastOben.RootElement.FlipText = CType(resources.GetObject("lblStaffel2Bereich1ErsatzLastOben.RootElement.FlipText"), Boolean)
-        Me.lblStaffel2Bereich1ErsatzLastOben.RootElement.Margin = CType(resources.GetObject("lblStaffel2Bereich1ErsatzLastOben.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel2Bereich1ErsatzLastOben.RootElement.Text = resources.GetString("lblStaffel2Bereich1ErsatzLastOben.RootElement.Text")
-        Me.lblStaffel2Bereich1ErsatzLastOben.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel2Bereich1ErsatzLastOben.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel2Bereich1ErsatzLastOben.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel2Bereich1ErsatzLastOben.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel2Bereich1Fehler7
         '
@@ -6845,14 +5147,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel2Bereich1Fehler7.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel2Bereich1Fehler7.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel2Bereich1Fehler7.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel2Bereich1Fehler7.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel2Bereich1Fehler7.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Fehler7.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel2Bereich1Fehler7.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Fehler7.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel2Bereich1Fehler7.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Fehler7.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel2Bereich1Fehler7.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Fehler7.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel2Bereich1Fehler7.RootElement.Text = resources.GetString("RadTextBoxControlStaffel2Bereich1Fehler7.RootElement.Text")
-        Me.RadTextBoxControlStaffel2Bereich1Fehler7.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Fehler7.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel2Bereich1Fehler7.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel2Bereich1Fehler7.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel2Bereich1Fehler7.TabStop = False
         '
         'RadTextBoxControlStaffel2Bereich1Fehler6
@@ -6862,14 +5158,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel2Bereich1Fehler6.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel2Bereich1Fehler6.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel2Bereich1Fehler6.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel2Bereich1Fehler6.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel2Bereich1Fehler6.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Fehler6.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel2Bereich1Fehler6.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Fehler6.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel2Bereich1Fehler6.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Fehler6.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel2Bereich1Fehler6.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Fehler6.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel2Bereich1Fehler6.RootElement.Text = resources.GetString("RadTextBoxControlStaffel2Bereich1Fehler6.RootElement.Text")
-        Me.RadTextBoxControlStaffel2Bereich1Fehler6.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Fehler6.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel2Bereich1Fehler6.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel2Bereich1Fehler6.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel2Bereich1Fehler6.TabStop = False
         '
         'RadTextBoxControlStaffel2Bereich1Fehler5
@@ -6879,14 +5169,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel2Bereich1Fehler5.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel2Bereich1Fehler5.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel2Bereich1Fehler5.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel2Bereich1Fehler5.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel2Bereich1Fehler5.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Fehler5.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel2Bereich1Fehler5.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Fehler5.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel2Bereich1Fehler5.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Fehler5.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel2Bereich1Fehler5.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Fehler5.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel2Bereich1Fehler5.RootElement.Text = resources.GetString("RadTextBoxControlStaffel2Bereich1Fehler5.RootElement.Text")
-        Me.RadTextBoxControlStaffel2Bereich1Fehler5.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Fehler5.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel2Bereich1Fehler5.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel2Bereich1Fehler5.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel2Bereich1Fehler5.TabStop = False
         '
         'RadTextBoxControlStaffel2Bereich1Last4
@@ -6896,14 +5180,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel2Bereich1Last4.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel2Bereich1Last4.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel2Bereich1Last4.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel2Bereich1Last4.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel2Bereich1Last4.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Last4.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel2Bereich1Last4.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Last4.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel2Bereich1Last4.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Last4.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel2Bereich1Last4.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Last4.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel2Bereich1Last4.RootElement.Text = resources.GetString("RadTextBoxControlStaffel2Bereich1Last4.RootElement.Text")
-        Me.RadTextBoxControlStaffel2Bereich1Last4.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Last4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel2Bereich1Last4.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel2Bereich1Last4.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel2Bereich1Last4.TabStop = False
         '
         'RadTextBoxControlStaffel2Bereich1Anzeige4
@@ -6913,14 +5191,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel2Bereich1Anzeige4.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel2Bereich1Anzeige4.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel2Bereich1Anzeige4.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel2Bereich1Anzeige4.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel2Bereich1Anzeige4.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Anzeige4.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel2Bereich1Anzeige4.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Anzeige4.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel2Bereich1Anzeige4.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Anzeige4.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel2Bereich1Anzeige4.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Anzeige4.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel2Bereich1Anzeige4.RootElement.Text = resources.GetString("RadTextBoxControlStaffel2Bereich1Anzeige4.RootElement.Text")
-        Me.RadTextBoxControlStaffel2Bereich1Anzeige4.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Anzeige4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel2Bereich1Anzeige4.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel2Bereich1Anzeige4.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel2Bereich1Anzeige3
         '
@@ -6929,14 +5201,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel2Bereich1Anzeige3.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel2Bereich1Anzeige3.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel2Bereich1Anzeige3.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel2Bereich1Anzeige3.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel2Bereich1Anzeige3.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Anzeige3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel2Bereich1Anzeige3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Anzeige3.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel2Bereich1Anzeige3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Anzeige3.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel2Bereich1Anzeige3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Anzeige3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel2Bereich1Anzeige3.RootElement.Text = resources.GetString("RadTextBoxControlStaffel2Bereich1Anzeige3.RootElement.Text")
-        Me.RadTextBoxControlStaffel2Bereich1Anzeige3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Anzeige3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel2Bereich1Anzeige3.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel2Bereich1Anzeige3.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel2Bereich1Last3
         '
@@ -6945,14 +5211,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel2Bereich1Last3.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel2Bereich1Last3.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel2Bereich1Last3.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel2Bereich1Last3.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel2Bereich1Last3.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Last3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel2Bereich1Last3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Last3.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel2Bereich1Last3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Last3.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel2Bereich1Last3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Last3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel2Bereich1Last3.RootElement.Text = resources.GetString("RadTextBoxControlStaffel2Bereich1Last3.RootElement.Text")
-        Me.RadTextBoxControlStaffel2Bereich1Last3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Last3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel2Bereich1Last3.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel2Bereich1Last3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel2Bereich1Last3.TabStop = False
         '
         'RadTextBoxControlStaffel2Bereich1Last2
@@ -6962,14 +5222,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel2Bereich1Last2.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel2Bereich1Last2.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel2Bereich1Last2.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel2Bereich1Last2.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel2Bereich1Last2.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Last2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel2Bereich1Last2.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Last2.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel2Bereich1Last2.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Last2.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel2Bereich1Last2.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Last2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel2Bereich1Last2.RootElement.Text = resources.GetString("RadTextBoxControlStaffel2Bereich1Last2.RootElement.Text")
-        Me.RadTextBoxControlStaffel2Bereich1Last2.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Last2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel2Bereich1Last2.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel2Bereich1Last2.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel2Bereich1Anzeige1
         '
@@ -6978,14 +5232,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel2Bereich1Anzeige1.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel2Bereich1Anzeige1.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel2Bereich1Anzeige1.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel2Bereich1Anzeige1.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel2Bereich1Anzeige1.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Anzeige1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel2Bereich1Anzeige1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Anzeige1.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel2Bereich1Anzeige1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Anzeige1.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel2Bereich1Anzeige1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Anzeige1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel2Bereich1Anzeige1.RootElement.Text = resources.GetString("RadTextBoxControlStaffel2Bereich1Anzeige1.RootElement.Text")
-        Me.RadTextBoxControlStaffel2Bereich1Anzeige1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Anzeige1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel2Bereich1Anzeige1.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel2Bereich1Anzeige1.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel2Bereich1Last1
         '
@@ -6994,14 +5242,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel2Bereich1Last1.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel2Bereich1Last1.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel2Bereich1Last1.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel2Bereich1Last1.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel2Bereich1Last1.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Last1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel2Bereich1Last1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Last1.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel2Bereich1Last1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Last1.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel2Bereich1Last1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Last1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel2Bereich1Last1.RootElement.Text = resources.GetString("RadTextBoxControlStaffel2Bereich1Last1.RootElement.Text")
-        Me.RadTextBoxControlStaffel2Bereich1Last1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel2Bereich1Last1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel2Bereich1Last1.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel2Bereich1Last1.RootElement.AccessibleName = Nothing
         '
         'lblStaffel2Bereich1MessabweichungWaage
         '
@@ -7010,14 +5252,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel2Bereich1MessabweichungWaage.RootElement.AccessibleDescription = resources.GetString("lblStaffel2Bereich1MessabweichungWaage.RootElement.AccessibleDescription")
-        Me.lblStaffel2Bereich1MessabweichungWaage.RootElement.AccessibleName = resources.GetString("lblStaffel2Bereich1MessabweichungWaage.RootElement.AccessibleName")
-        Me.lblStaffel2Bereich1MessabweichungWaage.RootElement.Alignment = CType(resources.GetObject("lblStaffel2Bereich1MessabweichungWaage.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel2Bereich1MessabweichungWaage.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel2Bereich1MessabweichungWaage.RootElement.AngleTransform"), Single)
-        Me.lblStaffel2Bereich1MessabweichungWaage.RootElement.FlipText = CType(resources.GetObject("lblStaffel2Bereich1MessabweichungWaage.RootElement.FlipText"), Boolean)
-        Me.lblStaffel2Bereich1MessabweichungWaage.RootElement.Margin = CType(resources.GetObject("lblStaffel2Bereich1MessabweichungWaage.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel2Bereich1MessabweichungWaage.RootElement.Text = resources.GetString("lblStaffel2Bereich1MessabweichungWaage.RootElement.Text")
-        Me.lblStaffel2Bereich1MessabweichungWaage.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel2Bereich1MessabweichungWaage.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel2Bereich1MessabweichungWaage.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel2Bereich1MessabweichungWaage.RootElement.AccessibleName = Nothing
         '
         'lblStaffel2Bereich1MessabweichungStaffel
         '
@@ -7026,14 +5262,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel2Bereich1MessabweichungStaffel.RootElement.AccessibleDescription = resources.GetString("lblStaffel2Bereich1MessabweichungStaffel.RootElement.AccessibleDescription")
-        Me.lblStaffel2Bereich1MessabweichungStaffel.RootElement.AccessibleName = resources.GetString("lblStaffel2Bereich1MessabweichungStaffel.RootElement.AccessibleName")
-        Me.lblStaffel2Bereich1MessabweichungStaffel.RootElement.Alignment = CType(resources.GetObject("lblStaffel2Bereich1MessabweichungStaffel.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel2Bereich1MessabweichungStaffel.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel2Bereich1MessabweichungStaffel.RootElement.AngleTransform"), Single)
-        Me.lblStaffel2Bereich1MessabweichungStaffel.RootElement.FlipText = CType(resources.GetObject("lblStaffel2Bereich1MessabweichungStaffel.RootElement.FlipText"), Boolean)
-        Me.lblStaffel2Bereich1MessabweichungStaffel.RootElement.Margin = CType(resources.GetObject("lblStaffel2Bereich1MessabweichungStaffel.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel2Bereich1MessabweichungStaffel.RootElement.Text = resources.GetString("lblStaffel2Bereich1MessabweichungStaffel.RootElement.Text")
-        Me.lblStaffel2Bereich1MessabweichungStaffel.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel2Bereich1MessabweichungStaffel.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel2Bereich1MessabweichungStaffel.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel2Bereich1MessabweichungStaffel.RootElement.AccessibleName = Nothing
         '
         'lblStaffel2Bereich1Differenz
         '
@@ -7042,14 +5272,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel2Bereich1Differenz.RootElement.AccessibleDescription = resources.GetString("lblStaffel2Bereich1Differenz.RootElement.AccessibleDescription")
-        Me.lblStaffel2Bereich1Differenz.RootElement.AccessibleName = resources.GetString("lblStaffel2Bereich1Differenz.RootElement.AccessibleName")
-        Me.lblStaffel2Bereich1Differenz.RootElement.Alignment = CType(resources.GetObject("lblStaffel2Bereich1Differenz.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel2Bereich1Differenz.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel2Bereich1Differenz.RootElement.AngleTransform"), Single)
-        Me.lblStaffel2Bereich1Differenz.RootElement.FlipText = CType(resources.GetObject("lblStaffel2Bereich1Differenz.RootElement.FlipText"), Boolean)
-        Me.lblStaffel2Bereich1Differenz.RootElement.Margin = CType(resources.GetObject("lblStaffel2Bereich1Differenz.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel2Bereich1Differenz.RootElement.Text = resources.GetString("lblStaffel2Bereich1Differenz.RootElement.Text")
-        Me.lblStaffel2Bereich1Differenz.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel2Bereich1Differenz.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel2Bereich1Differenz.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel2Bereich1Differenz.RootElement.AccessibleName = Nothing
         '
         'lblStaffel2Bereich1ZusastzNormalLast
         '
@@ -7058,14 +5282,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel2Bereich1ZusastzNormalLast.RootElement.AccessibleDescription = resources.GetString("lblStaffel2Bereich1ZusastzNormalLast.RootElement.AccessibleDescription")
-        Me.lblStaffel2Bereich1ZusastzNormalLast.RootElement.AccessibleName = resources.GetString("lblStaffel2Bereich1ZusastzNormalLast.RootElement.AccessibleName")
-        Me.lblStaffel2Bereich1ZusastzNormalLast.RootElement.Alignment = CType(resources.GetObject("lblStaffel2Bereich1ZusastzNormalLast.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel2Bereich1ZusastzNormalLast.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel2Bereich1ZusastzNormalLast.RootElement.AngleTransform"), Single)
-        Me.lblStaffel2Bereich1ZusastzNormalLast.RootElement.FlipText = CType(resources.GetObject("lblStaffel2Bereich1ZusastzNormalLast.RootElement.FlipText"), Boolean)
-        Me.lblStaffel2Bereich1ZusastzNormalLast.RootElement.Margin = CType(resources.GetObject("lblStaffel2Bereich1ZusastzNormalLast.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel2Bereich1ZusastzNormalLast.RootElement.Text = resources.GetString("lblStaffel2Bereich1ZusastzNormalLast.RootElement.Text")
-        Me.lblStaffel2Bereich1ZusastzNormalLast.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel2Bereich1ZusastzNormalLast.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel2Bereich1ZusastzNormalLast.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel2Bereich1ZusastzNormalLast.RootElement.AccessibleName = Nothing
         '
         'lblStaffel2Bereich1NormalLast
         '
@@ -7074,14 +5292,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel2Bereich1NormalLast.RootElement.AccessibleDescription = resources.GetString("lblStaffel2Bereich1NormalLast.RootElement.AccessibleDescription")
-        Me.lblStaffel2Bereich1NormalLast.RootElement.AccessibleName = resources.GetString("lblStaffel2Bereich1NormalLast.RootElement.AccessibleName")
-        Me.lblStaffel2Bereich1NormalLast.RootElement.Alignment = CType(resources.GetObject("lblStaffel2Bereich1NormalLast.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel2Bereich1NormalLast.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel2Bereich1NormalLast.RootElement.AngleTransform"), Single)
-        Me.lblStaffel2Bereich1NormalLast.RootElement.FlipText = CType(resources.GetObject("lblStaffel2Bereich1NormalLast.RootElement.FlipText"), Boolean)
-        Me.lblStaffel2Bereich1NormalLast.RootElement.Margin = CType(resources.GetObject("lblStaffel2Bereich1NormalLast.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel2Bereich1NormalLast.RootElement.Text = resources.GetString("lblStaffel2Bereich1NormalLast.RootElement.Text")
-        Me.lblStaffel2Bereich1NormalLast.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel2Bereich1NormalLast.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel2Bereich1NormalLast.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel2Bereich1NormalLast.RootElement.AccessibleName = Nothing
         '
         'PictureBox35
         '
@@ -7112,14 +5324,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel2Bereich1EFGWert7.RootElement.AccessibleDescription = resources.GetString("lblStaffel2Bereich1EFGWert7.RootElement.AccessibleDescription")
-        Me.lblStaffel2Bereich1EFGWert7.RootElement.AccessibleName = resources.GetString("lblStaffel2Bereich1EFGWert7.RootElement.AccessibleName")
-        Me.lblStaffel2Bereich1EFGWert7.RootElement.Alignment = CType(resources.GetObject("lblStaffel2Bereich1EFGWert7.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel2Bereich1EFGWert7.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel2Bereich1EFGWert7.RootElement.AngleTransform"), Single)
-        Me.lblStaffel2Bereich1EFGWert7.RootElement.FlipText = CType(resources.GetObject("lblStaffel2Bereich1EFGWert7.RootElement.FlipText"), Boolean)
-        Me.lblStaffel2Bereich1EFGWert7.RootElement.Margin = CType(resources.GetObject("lblStaffel2Bereich1EFGWert7.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel2Bereich1EFGWert7.RootElement.Text = resources.GetString("lblStaffel2Bereich1EFGWert7.RootElement.Text")
-        Me.lblStaffel2Bereich1EFGWert7.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel2Bereich1EFGWert7.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel2Bereich1EFGWert7.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel2Bereich1EFGWert7.RootElement.AccessibleName = Nothing
         Me.lblStaffel2Bereich1EFGWert7.TabStop = False
         '
         'lblStaffel2Bereich1EFGWert6
@@ -7130,14 +5336,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel2Bereich1EFGWert6.RootElement.AccessibleDescription = resources.GetString("lblStaffel2Bereich1EFGWert6.RootElement.AccessibleDescription")
-        Me.lblStaffel2Bereich1EFGWert6.RootElement.AccessibleName = resources.GetString("lblStaffel2Bereich1EFGWert6.RootElement.AccessibleName")
-        Me.lblStaffel2Bereich1EFGWert6.RootElement.Alignment = CType(resources.GetObject("lblStaffel2Bereich1EFGWert6.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel2Bereich1EFGWert6.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel2Bereich1EFGWert6.RootElement.AngleTransform"), Single)
-        Me.lblStaffel2Bereich1EFGWert6.RootElement.FlipText = CType(resources.GetObject("lblStaffel2Bereich1EFGWert6.RootElement.FlipText"), Boolean)
-        Me.lblStaffel2Bereich1EFGWert6.RootElement.Margin = CType(resources.GetObject("lblStaffel2Bereich1EFGWert6.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel2Bereich1EFGWert6.RootElement.Text = resources.GetString("lblStaffel2Bereich1EFGWert6.RootElement.Text")
-        Me.lblStaffel2Bereich1EFGWert6.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel2Bereich1EFGWert6.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel2Bereich1EFGWert6.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel2Bereich1EFGWert6.RootElement.AccessibleName = Nothing
         Me.lblStaffel2Bereich1EFGWert6.TabStop = False
         '
         'lblStaffel2Bereich1EFGWert5
@@ -7148,14 +5348,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel2Bereich1EFGWert5.RootElement.AccessibleDescription = resources.GetString("lblStaffel2Bereich1EFGWert5.RootElement.AccessibleDescription")
-        Me.lblStaffel2Bereich1EFGWert5.RootElement.AccessibleName = resources.GetString("lblStaffel2Bereich1EFGWert5.RootElement.AccessibleName")
-        Me.lblStaffel2Bereich1EFGWert5.RootElement.Alignment = CType(resources.GetObject("lblStaffel2Bereich1EFGWert5.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel2Bereich1EFGWert5.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel2Bereich1EFGWert5.RootElement.AngleTransform"), Single)
-        Me.lblStaffel2Bereich1EFGWert5.RootElement.FlipText = CType(resources.GetObject("lblStaffel2Bereich1EFGWert5.RootElement.FlipText"), Boolean)
-        Me.lblStaffel2Bereich1EFGWert5.RootElement.Margin = CType(resources.GetObject("lblStaffel2Bereich1EFGWert5.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel2Bereich1EFGWert5.RootElement.Text = resources.GetString("lblStaffel2Bereich1EFGWert5.RootElement.Text")
-        Me.lblStaffel2Bereich1EFGWert5.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel2Bereich1EFGWert5.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel2Bereich1EFGWert5.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel2Bereich1EFGWert5.RootElement.AccessibleName = Nothing
         Me.lblStaffel2Bereich1EFGWert5.TabStop = False
         '
         'lblStaffel2Bereich1EFG
@@ -7165,14 +5359,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel2Bereich1EFG.RootElement.AccessibleDescription = resources.GetString("lblStaffel2Bereich1EFG.RootElement.AccessibleDescription")
-        Me.lblStaffel2Bereich1EFG.RootElement.AccessibleName = resources.GetString("lblStaffel2Bereich1EFG.RootElement.AccessibleName")
-        Me.lblStaffel2Bereich1EFG.RootElement.Alignment = CType(resources.GetObject("lblStaffel2Bereich1EFG.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel2Bereich1EFG.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel2Bereich1EFG.RootElement.AngleTransform"), Single)
-        Me.lblStaffel2Bereich1EFG.RootElement.FlipText = CType(resources.GetObject("lblStaffel2Bereich1EFG.RootElement.FlipText"), Boolean)
-        Me.lblStaffel2Bereich1EFG.RootElement.Margin = CType(resources.GetObject("lblStaffel2Bereich1EFG.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel2Bereich1EFG.RootElement.Text = resources.GetString("lblStaffel2Bereich1EFG.RootElement.Text")
-        Me.lblStaffel2Bereich1EFG.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel2Bereich1EFG.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel2Bereich1EFG.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel2Bereich1EFG.RootElement.AccessibleName = Nothing
         '
         'lblStaffel2Bereich1Fehler
         '
@@ -7181,14 +5369,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel2Bereich1Fehler.RootElement.AccessibleDescription = resources.GetString("lblStaffel2Bereich1Fehler.RootElement.AccessibleDescription")
-        Me.lblStaffel2Bereich1Fehler.RootElement.AccessibleName = resources.GetString("lblStaffel2Bereich1Fehler.RootElement.AccessibleName")
-        Me.lblStaffel2Bereich1Fehler.RootElement.Alignment = CType(resources.GetObject("lblStaffel2Bereich1Fehler.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel2Bereich1Fehler.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel2Bereich1Fehler.RootElement.AngleTransform"), Single)
-        Me.lblStaffel2Bereich1Fehler.RootElement.FlipText = CType(resources.GetObject("lblStaffel2Bereich1Fehler.RootElement.FlipText"), Boolean)
-        Me.lblStaffel2Bereich1Fehler.RootElement.Margin = CType(resources.GetObject("lblStaffel2Bereich1Fehler.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel2Bereich1Fehler.RootElement.Text = resources.GetString("lblStaffel2Bereich1Fehler.RootElement.Text")
-        Me.lblStaffel2Bereich1Fehler.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel2Bereich1Fehler.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel2Bereich1Fehler.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel2Bereich1Fehler.RootElement.AccessibleName = Nothing
         '
         'lblStaffel2Bereich1Anzeige
         '
@@ -7197,14 +5379,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel2Bereich1Anzeige.RootElement.AccessibleDescription = resources.GetString("lblStaffel2Bereich1Anzeige.RootElement.AccessibleDescription")
-        Me.lblStaffel2Bereich1Anzeige.RootElement.AccessibleName = resources.GetString("lblStaffel2Bereich1Anzeige.RootElement.AccessibleName")
-        Me.lblStaffel2Bereich1Anzeige.RootElement.Alignment = CType(resources.GetObject("lblStaffel2Bereich1Anzeige.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel2Bereich1Anzeige.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel2Bereich1Anzeige.RootElement.AngleTransform"), Single)
-        Me.lblStaffel2Bereich1Anzeige.RootElement.FlipText = CType(resources.GetObject("lblStaffel2Bereich1Anzeige.RootElement.FlipText"), Boolean)
-        Me.lblStaffel2Bereich1Anzeige.RootElement.Margin = CType(resources.GetObject("lblStaffel2Bereich1Anzeige.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel2Bereich1Anzeige.RootElement.Text = resources.GetString("lblStaffel2Bereich1Anzeige.RootElement.Text")
-        Me.lblStaffel2Bereich1Anzeige.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel2Bereich1Anzeige.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel2Bereich1Anzeige.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel2Bereich1Anzeige.RootElement.AccessibleName = Nothing
         '
         'lblStaffel2Bereich1Last
         '
@@ -7213,14 +5389,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel2Bereich1Last.RootElement.AccessibleDescription = resources.GetString("lblStaffel2Bereich1Last.RootElement.AccessibleDescription")
-        Me.lblStaffel2Bereich1Last.RootElement.AccessibleName = resources.GetString("lblStaffel2Bereich1Last.RootElement.AccessibleName")
-        Me.lblStaffel2Bereich1Last.RootElement.Alignment = CType(resources.GetObject("lblStaffel2Bereich1Last.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel2Bereich1Last.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel2Bereich1Last.RootElement.AngleTransform"), Single)
-        Me.lblStaffel2Bereich1Last.RootElement.FlipText = CType(resources.GetObject("lblStaffel2Bereich1Last.RootElement.FlipText"), Boolean)
-        Me.lblStaffel2Bereich1Last.RootElement.Margin = CType(resources.GetObject("lblStaffel2Bereich1Last.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel2Bereich1Last.RootElement.Text = resources.GetString("lblStaffel2Bereich1Last.RootElement.Text")
-        Me.lblStaffel2Bereich1Last.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel2Bereich1Last.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel2Bereich1Last.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel2Bereich1Last.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxStaffel1
         '
@@ -7233,14 +5403,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadGroupBoxStaffel1.RootElement.AccessibleDescription = resources.GetString("RadGroupBoxStaffel1.RootElement.AccessibleDescription")
-        Me.RadGroupBoxStaffel1.RootElement.AccessibleName = resources.GetString("RadGroupBoxStaffel1.RootElement.AccessibleName")
-        Me.RadGroupBoxStaffel1.RootElement.Alignment = CType(resources.GetObject("RadGroupBoxStaffel1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadGroupBoxStaffel1.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBoxStaffel1.RootElement.AngleTransform"), Single)
-        Me.RadGroupBoxStaffel1.RootElement.FlipText = CType(resources.GetObject("RadGroupBoxStaffel1.RootElement.FlipText"), Boolean)
-        Me.RadGroupBoxStaffel1.RootElement.Margin = CType(resources.GetObject("RadGroupBoxStaffel1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadGroupBoxStaffel1.RootElement.Text = resources.GetString("RadGroupBoxStaffel1.RootElement.Text")
-        Me.RadGroupBoxStaffel1.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxStaffel1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadGroupBoxStaffel1.RootElement.AccessibleDescription = Nothing
+        Me.RadGroupBoxStaffel1.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxStaffel1Bereich3
         '
@@ -7291,14 +5455,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadGroupBoxStaffel1Bereich3.RootElement.AccessibleDescription = resources.GetString("RadGroupBoxStaffel1Bereich3.RootElement.AccessibleDescription")
-        Me.RadGroupBoxStaffel1Bereich3.RootElement.AccessibleName = resources.GetString("RadGroupBoxStaffel1Bereich3.RootElement.AccessibleName")
-        Me.RadGroupBoxStaffel1Bereich3.RootElement.Alignment = CType(resources.GetObject("RadGroupBoxStaffel1Bereich3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadGroupBoxStaffel1Bereich3.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBoxStaffel1Bereich3.RootElement.AngleTransform"), Single)
-        Me.RadGroupBoxStaffel1Bereich3.RootElement.FlipText = CType(resources.GetObject("RadGroupBoxStaffel1Bereich3.RootElement.FlipText"), Boolean)
-        Me.RadGroupBoxStaffel1Bereich3.RootElement.Margin = CType(resources.GetObject("RadGroupBoxStaffel1Bereich3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadGroupBoxStaffel1Bereich3.RootElement.Text = resources.GetString("RadGroupBoxStaffel1Bereich3.RootElement.Text")
-        Me.RadGroupBoxStaffel1Bereich3.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxStaffel1Bereich3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadGroupBoxStaffel1Bereich3.RootElement.AccessibleDescription = Nothing
+        Me.RadGroupBoxStaffel1Bereich3.RootElement.AccessibleName = Nothing
         '
         'PictureBox141
         '
@@ -7314,14 +5472,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadLabel8.RootElement.AccessibleDescription = resources.GetString("RadLabel8.RootElement.AccessibleDescription")
-        Me.RadLabel8.RootElement.AccessibleName = resources.GetString("RadLabel8.RootElement.AccessibleName")
-        Me.RadLabel8.RootElement.Alignment = CType(resources.GetObject("RadLabel8.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadLabel8.RootElement.AngleTransform = CType(resources.GetObject("RadLabel8.RootElement.AngleTransform"), Single)
-        Me.RadLabel8.RootElement.FlipText = CType(resources.GetObject("RadLabel8.RootElement.FlipText"), Boolean)
-        Me.RadLabel8.RootElement.Margin = CType(resources.GetObject("RadLabel8.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel8.RootElement.Text = resources.GetString("RadLabel8.RootElement.Text")
-        Me.RadLabel8.RootElement.TextOrientation = CType(resources.GetObject("RadLabel8.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadLabel8.RootElement.AccessibleDescription = Nothing
+        Me.RadLabel8.RootElement.AccessibleName = Nothing
         '
         'RadLabel3
         '
@@ -7330,14 +5482,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadLabel3.RootElement.AccessibleDescription = resources.GetString("RadLabel3.RootElement.AccessibleDescription")
-        Me.RadLabel3.RootElement.AccessibleName = resources.GetString("RadLabel3.RootElement.AccessibleName")
-        Me.RadLabel3.RootElement.Alignment = CType(resources.GetObject("RadLabel3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadLabel3.RootElement.AngleTransform = CType(resources.GetObject("RadLabel3.RootElement.AngleTransform"), Single)
-        Me.RadLabel3.RootElement.FlipText = CType(resources.GetObject("RadLabel3.RootElement.FlipText"), Boolean)
-        Me.RadLabel3.RootElement.Margin = CType(resources.GetObject("RadLabel3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel3.RootElement.Text = resources.GetString("RadLabel3.RootElement.Text")
-        Me.RadLabel3.RootElement.TextOrientation = CType(resources.GetObject("RadLabel3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadLabel3.RootElement.AccessibleDescription = Nothing
+        Me.RadLabel3.RootElement.AccessibleName = Nothing
         '
         'PictureBox88
         '
@@ -7388,14 +5534,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel1Bereich3Fehler7.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel1Bereich3Fehler7.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel1Bereich3Fehler7.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel1Bereich3Fehler7.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel1Bereich3Fehler7.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Fehler7.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel1Bereich3Fehler7.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Fehler7.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel1Bereich3Fehler7.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Fehler7.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel1Bereich3Fehler7.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Fehler7.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel1Bereich3Fehler7.RootElement.Text = resources.GetString("RadTextBoxControlStaffel1Bereich3Fehler7.RootElement.Text")
-        Me.RadTextBoxControlStaffel1Bereich3Fehler7.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Fehler7.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel1Bereich3Fehler7.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel1Bereich3Fehler7.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel1Bereich3Fehler7.TabStop = False
         '
         'RadTextBoxControlStaffel1Bereich3Fehler6
@@ -7405,14 +5545,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel1Bereich3Fehler6.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel1Bereich3Fehler6.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel1Bereich3Fehler6.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel1Bereich3Fehler6.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel1Bereich3Fehler6.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Fehler6.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel1Bereich3Fehler6.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Fehler6.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel1Bereich3Fehler6.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Fehler6.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel1Bereich3Fehler6.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Fehler6.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel1Bereich3Fehler6.RootElement.Text = resources.GetString("RadTextBoxControlStaffel1Bereich3Fehler6.RootElement.Text")
-        Me.RadTextBoxControlStaffel1Bereich3Fehler6.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Fehler6.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel1Bereich3Fehler6.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel1Bereich3Fehler6.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel1Bereich3Fehler6.TabStop = False
         '
         'RadTextBoxControlStaffel1Bereich3Fehler5
@@ -7422,14 +5556,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel1Bereich3Fehler5.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel1Bereich3Fehler5.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel1Bereich3Fehler5.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel1Bereich3Fehler5.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel1Bereich3Fehler5.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Fehler5.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel1Bereich3Fehler5.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Fehler5.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel1Bereich3Fehler5.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Fehler5.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel1Bereich3Fehler5.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Fehler5.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel1Bereich3Fehler5.RootElement.Text = resources.GetString("RadTextBoxControlStaffel1Bereich3Fehler5.RootElement.Text")
-        Me.RadTextBoxControlStaffel1Bereich3Fehler5.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Fehler5.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel1Bereich3Fehler5.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel1Bereich3Fehler5.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel1Bereich3Fehler5.TabStop = False
         '
         'RadTextBoxControlStaffel1Bereich3Last4
@@ -7439,14 +5567,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel1Bereich3Last4.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel1Bereich3Last4.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel1Bereich3Last4.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel1Bereich3Last4.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel1Bereich3Last4.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Last4.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel1Bereich3Last4.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Last4.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel1Bereich3Last4.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Last4.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel1Bereich3Last4.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Last4.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel1Bereich3Last4.RootElement.Text = resources.GetString("RadTextBoxControlStaffel1Bereich3Last4.RootElement.Text")
-        Me.RadTextBoxControlStaffel1Bereich3Last4.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Last4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel1Bereich3Last4.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel1Bereich3Last4.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel1Bereich3Anzeige4
         '
@@ -7455,14 +5577,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel1Bereich3Anzeige4.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel1Bereich3Anzeige4.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel1Bereich3Anzeige4.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel1Bereich3Anzeige4.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel1Bereich3Anzeige4.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Anzeige4.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel1Bereich3Anzeige4.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Anzeige4.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel1Bereich3Anzeige4.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Anzeige4.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel1Bereich3Anzeige4.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Anzeige4.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel1Bereich3Anzeige4.RootElement.Text = resources.GetString("RadTextBoxControlStaffel1Bereich3Anzeige4.RootElement.Text")
-        Me.RadTextBoxControlStaffel1Bereich3Anzeige4.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Anzeige4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel1Bereich3Anzeige4.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel1Bereich3Anzeige4.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel1Bereich3Fehler4
         '
@@ -7471,14 +5587,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel1Bereich3Fehler4.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel1Bereich3Fehler4.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel1Bereich3Fehler4.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel1Bereich3Fehler4.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel1Bereich3Fehler4.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Fehler4.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel1Bereich3Fehler4.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Fehler4.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel1Bereich3Fehler4.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Fehler4.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel1Bereich3Fehler4.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Fehler4.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel1Bereich3Fehler4.RootElement.Text = resources.GetString("RadTextBoxControlStaffel1Bereich3Fehler4.RootElement.Text")
-        Me.RadTextBoxControlStaffel1Bereich3Fehler4.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Fehler4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel1Bereich3Fehler4.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel1Bereich3Fehler4.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel1Bereich3Fehler4.TabStop = False
         '
         'RadTextBoxControlStaffel1Bereich3Fehler3
@@ -7488,14 +5598,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel1Bereich3Fehler3.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel1Bereich3Fehler3.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel1Bereich3Fehler3.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel1Bereich3Fehler3.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel1Bereich3Fehler3.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Fehler3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel1Bereich3Fehler3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Fehler3.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel1Bereich3Fehler3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Fehler3.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel1Bereich3Fehler3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Fehler3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel1Bereich3Fehler3.RootElement.Text = resources.GetString("RadTextBoxControlStaffel1Bereich3Fehler3.RootElement.Text")
-        Me.RadTextBoxControlStaffel1Bereich3Fehler3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Fehler3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel1Bereich3Fehler3.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel1Bereich3Fehler3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel1Bereich3Fehler3.TabStop = False
         '
         'RadTextBoxControlStaffel1Bereich3Anzeige3
@@ -7505,14 +5609,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel1Bereich3Anzeige3.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel1Bereich3Anzeige3.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel1Bereich3Anzeige3.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel1Bereich3Anzeige3.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel1Bereich3Anzeige3.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Anzeige3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel1Bereich3Anzeige3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Anzeige3.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel1Bereich3Anzeige3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Anzeige3.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel1Bereich3Anzeige3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Anzeige3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel1Bereich3Anzeige3.RootElement.Text = resources.GetString("RadTextBoxControlStaffel1Bereich3Anzeige3.RootElement.Text")
-        Me.RadTextBoxControlStaffel1Bereich3Anzeige3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Anzeige3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel1Bereich3Anzeige3.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel1Bereich3Anzeige3.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel1Bereich3Last3
         '
@@ -7521,14 +5619,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel1Bereich3Last3.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel1Bereich3Last3.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel1Bereich3Last3.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel1Bereich3Last3.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel1Bereich3Last3.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Last3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel1Bereich3Last3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Last3.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel1Bereich3Last3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Last3.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel1Bereich3Last3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Last3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel1Bereich3Last3.RootElement.Text = resources.GetString("RadTextBoxControlStaffel1Bereich3Last3.RootElement.Text")
-        Me.RadTextBoxControlStaffel1Bereich3Last3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Last3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel1Bereich3Last3.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel1Bereich3Last3.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel1Bereich3Last1
         '
@@ -7537,14 +5629,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel1Bereich3Last1.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel1Bereich3Last1.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel1Bereich3Last1.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel1Bereich3Last1.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel1Bereich3Last1.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Last1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel1Bereich3Last1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Last1.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel1Bereich3Last1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Last1.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel1Bereich3Last1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Last1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel1Bereich3Last1.RootElement.Text = resources.GetString("RadTextBoxControlStaffel1Bereich3Last1.RootElement.Text")
-        Me.RadTextBoxControlStaffel1Bereich3Last1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Last1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel1Bereich3Last1.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel1Bereich3Last1.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel1Bereich3Anzeige1
         '
@@ -7553,14 +5639,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel1Bereich3Anzeige1.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel1Bereich3Anzeige1.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel1Bereich3Anzeige1.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel1Bereich3Anzeige1.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel1Bereich3Anzeige1.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Anzeige1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel1Bereich3Anzeige1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Anzeige1.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel1Bereich3Anzeige1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Anzeige1.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel1Bereich3Anzeige1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Anzeige1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel1Bereich3Anzeige1.RootElement.Text = resources.GetString("RadTextBoxControlStaffel1Bereich3Anzeige1.RootElement.Text")
-        Me.RadTextBoxControlStaffel1Bereich3Anzeige1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Anzeige1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel1Bereich3Anzeige1.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel1Bereich3Anzeige1.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel1Bereich3Fehler1
         '
@@ -7569,14 +5649,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel1Bereich3Fehler1.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel1Bereich3Fehler1.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel1Bereich3Fehler1.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel1Bereich3Fehler1.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel1Bereich3Fehler1.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Fehler1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel1Bereich3Fehler1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Fehler1.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel1Bereich3Fehler1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Fehler1.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel1Bereich3Fehler1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Fehler1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel1Bereich3Fehler1.RootElement.Text = resources.GetString("RadTextBoxControlStaffel1Bereich3Fehler1.RootElement.Text")
-        Me.RadTextBoxControlStaffel1Bereich3Fehler1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich3Fehler1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel1Bereich3Fehler1.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel1Bereich3Fehler1.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel1Bereich3Fehler1.TabStop = False
         '
         'lblStaffel1Bereich3MessabweichungWaage
@@ -7586,14 +5660,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel1Bereich3MessabweichungWaage.RootElement.AccessibleDescription = resources.GetString("lblStaffel1Bereich3MessabweichungWaage.RootElement.AccessibleDescription")
-        Me.lblStaffel1Bereich3MessabweichungWaage.RootElement.AccessibleName = resources.GetString("lblStaffel1Bereich3MessabweichungWaage.RootElement.AccessibleName")
-        Me.lblStaffel1Bereich3MessabweichungWaage.RootElement.Alignment = CType(resources.GetObject("lblStaffel1Bereich3MessabweichungWaage.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel1Bereich3MessabweichungWaage.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel1Bereich3MessabweichungWaage.RootElement.AngleTransform"), Single)
-        Me.lblStaffel1Bereich3MessabweichungWaage.RootElement.FlipText = CType(resources.GetObject("lblStaffel1Bereich3MessabweichungWaage.RootElement.FlipText"), Boolean)
-        Me.lblStaffel1Bereich3MessabweichungWaage.RootElement.Margin = CType(resources.GetObject("lblStaffel1Bereich3MessabweichungWaage.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel1Bereich3MessabweichungWaage.RootElement.Text = resources.GetString("lblStaffel1Bereich3MessabweichungWaage.RootElement.Text")
-        Me.lblStaffel1Bereich3MessabweichungWaage.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel1Bereich3MessabweichungWaage.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel1Bereich3MessabweichungWaage.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel1Bereich3MessabweichungWaage.RootElement.AccessibleName = Nothing
         '
         'lblStaffel1Bereich3MessabweichungStaffel
         '
@@ -7602,14 +5670,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel1Bereich3MessabweichungStaffel.RootElement.AccessibleDescription = resources.GetString("lblStaffel1Bereich3MessabweichungStaffel.RootElement.AccessibleDescription")
-        Me.lblStaffel1Bereich3MessabweichungStaffel.RootElement.AccessibleName = resources.GetString("lblStaffel1Bereich3MessabweichungStaffel.RootElement.AccessibleName")
-        Me.lblStaffel1Bereich3MessabweichungStaffel.RootElement.Alignment = CType(resources.GetObject("lblStaffel1Bereich3MessabweichungStaffel.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel1Bereich3MessabweichungStaffel.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel1Bereich3MessabweichungStaffel.RootElement.AngleTransform"), Single)
-        Me.lblStaffel1Bereich3MessabweichungStaffel.RootElement.FlipText = CType(resources.GetObject("lblStaffel1Bereich3MessabweichungStaffel.RootElement.FlipText"), Boolean)
-        Me.lblStaffel1Bereich3MessabweichungStaffel.RootElement.Margin = CType(resources.GetObject("lblStaffel1Bereich3MessabweichungStaffel.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel1Bereich3MessabweichungStaffel.RootElement.Text = resources.GetString("lblStaffel1Bereich3MessabweichungStaffel.RootElement.Text")
-        Me.lblStaffel1Bereich3MessabweichungStaffel.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel1Bereich3MessabweichungStaffel.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel1Bereich3MessabweichungStaffel.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel1Bereich3MessabweichungStaffel.RootElement.AccessibleName = Nothing
         '
         'lblStaffel1Bereich3Differenz
         '
@@ -7618,14 +5680,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel1Bereich3Differenz.RootElement.AccessibleDescription = resources.GetString("lblStaffel1Bereich3Differenz.RootElement.AccessibleDescription")
-        Me.lblStaffel1Bereich3Differenz.RootElement.AccessibleName = resources.GetString("lblStaffel1Bereich3Differenz.RootElement.AccessibleName")
-        Me.lblStaffel1Bereich3Differenz.RootElement.Alignment = CType(resources.GetObject("lblStaffel1Bereich3Differenz.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel1Bereich3Differenz.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel1Bereich3Differenz.RootElement.AngleTransform"), Single)
-        Me.lblStaffel1Bereich3Differenz.RootElement.FlipText = CType(resources.GetObject("lblStaffel1Bereich3Differenz.RootElement.FlipText"), Boolean)
-        Me.lblStaffel1Bereich3Differenz.RootElement.Margin = CType(resources.GetObject("lblStaffel1Bereich3Differenz.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel1Bereich3Differenz.RootElement.Text = resources.GetString("lblStaffel1Bereich3Differenz.RootElement.Text")
-        Me.lblStaffel1Bereich3Differenz.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel1Bereich3Differenz.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel1Bereich3Differenz.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel1Bereich3Differenz.RootElement.AccessibleName = Nothing
         '
         'lblStaffel1Bereich3NormalLast
         '
@@ -7634,14 +5690,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel1Bereich3NormalLast.RootElement.AccessibleDescription = resources.GetString("lblStaffel1Bereich3NormalLast.RootElement.AccessibleDescription")
-        Me.lblStaffel1Bereich3NormalLast.RootElement.AccessibleName = resources.GetString("lblStaffel1Bereich3NormalLast.RootElement.AccessibleName")
-        Me.lblStaffel1Bereich3NormalLast.RootElement.Alignment = CType(resources.GetObject("lblStaffel1Bereich3NormalLast.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel1Bereich3NormalLast.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel1Bereich3NormalLast.RootElement.AngleTransform"), Single)
-        Me.lblStaffel1Bereich3NormalLast.RootElement.FlipText = CType(resources.GetObject("lblStaffel1Bereich3NormalLast.RootElement.FlipText"), Boolean)
-        Me.lblStaffel1Bereich3NormalLast.RootElement.Margin = CType(resources.GetObject("lblStaffel1Bereich3NormalLast.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel1Bereich3NormalLast.RootElement.Text = resources.GetString("lblStaffel1Bereich3NormalLast.RootElement.Text")
-        Me.lblStaffel1Bereich3NormalLast.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel1Bereich3NormalLast.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel1Bereich3NormalLast.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel1Bereich3NormalLast.RootElement.AccessibleName = Nothing
         '
         'PictureBox15
         '
@@ -7686,14 +5736,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel1Bereich3EFGWert7.RootElement.AccessibleDescription = resources.GetString("lblStaffel1Bereich3EFGWert7.RootElement.AccessibleDescription")
-        Me.lblStaffel1Bereich3EFGWert7.RootElement.AccessibleName = resources.GetString("lblStaffel1Bereich3EFGWert7.RootElement.AccessibleName")
-        Me.lblStaffel1Bereich3EFGWert7.RootElement.Alignment = CType(resources.GetObject("lblStaffel1Bereich3EFGWert7.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel1Bereich3EFGWert7.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel1Bereich3EFGWert7.RootElement.AngleTransform"), Single)
-        Me.lblStaffel1Bereich3EFGWert7.RootElement.FlipText = CType(resources.GetObject("lblStaffel1Bereich3EFGWert7.RootElement.FlipText"), Boolean)
-        Me.lblStaffel1Bereich3EFGWert7.RootElement.Margin = CType(resources.GetObject("lblStaffel1Bereich3EFGWert7.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel1Bereich3EFGWert7.RootElement.Text = resources.GetString("lblStaffel1Bereich3EFGWert7.RootElement.Text")
-        Me.lblStaffel1Bereich3EFGWert7.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel1Bereich3EFGWert7.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel1Bereich3EFGWert7.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel1Bereich3EFGWert7.RootElement.AccessibleName = Nothing
         Me.lblStaffel1Bereich3EFGWert7.TabStop = False
         '
         'lblStaffel1Bereich3EFGWert6
@@ -7704,14 +5748,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel1Bereich3EFGWert6.RootElement.AccessibleDescription = resources.GetString("lblStaffel1Bereich3EFGWert6.RootElement.AccessibleDescription")
-        Me.lblStaffel1Bereich3EFGWert6.RootElement.AccessibleName = resources.GetString("lblStaffel1Bereich3EFGWert6.RootElement.AccessibleName")
-        Me.lblStaffel1Bereich3EFGWert6.RootElement.Alignment = CType(resources.GetObject("lblStaffel1Bereich3EFGWert6.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel1Bereich3EFGWert6.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel1Bereich3EFGWert6.RootElement.AngleTransform"), Single)
-        Me.lblStaffel1Bereich3EFGWert6.RootElement.FlipText = CType(resources.GetObject("lblStaffel1Bereich3EFGWert6.RootElement.FlipText"), Boolean)
-        Me.lblStaffel1Bereich3EFGWert6.RootElement.Margin = CType(resources.GetObject("lblStaffel1Bereich3EFGWert6.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel1Bereich3EFGWert6.RootElement.Text = resources.GetString("lblStaffel1Bereich3EFGWert6.RootElement.Text")
-        Me.lblStaffel1Bereich3EFGWert6.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel1Bereich3EFGWert6.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel1Bereich3EFGWert6.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel1Bereich3EFGWert6.RootElement.AccessibleName = Nothing
         Me.lblStaffel1Bereich3EFGWert6.TabStop = False
         '
         'lblStaffel1Bereich3EFGWert5
@@ -7722,14 +5760,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel1Bereich3EFGWert5.RootElement.AccessibleDescription = resources.GetString("lblStaffel1Bereich3EFGWert5.RootElement.AccessibleDescription")
-        Me.lblStaffel1Bereich3EFGWert5.RootElement.AccessibleName = resources.GetString("lblStaffel1Bereich3EFGWert5.RootElement.AccessibleName")
-        Me.lblStaffel1Bereich3EFGWert5.RootElement.Alignment = CType(resources.GetObject("lblStaffel1Bereich3EFGWert5.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel1Bereich3EFGWert5.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel1Bereich3EFGWert5.RootElement.AngleTransform"), Single)
-        Me.lblStaffel1Bereich3EFGWert5.RootElement.FlipText = CType(resources.GetObject("lblStaffel1Bereich3EFGWert5.RootElement.FlipText"), Boolean)
-        Me.lblStaffel1Bereich3EFGWert5.RootElement.Margin = CType(resources.GetObject("lblStaffel1Bereich3EFGWert5.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel1Bereich3EFGWert5.RootElement.Text = resources.GetString("lblStaffel1Bereich3EFGWert5.RootElement.Text")
-        Me.lblStaffel1Bereich3EFGWert5.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel1Bereich3EFGWert5.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel1Bereich3EFGWert5.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel1Bereich3EFGWert5.RootElement.AccessibleName = Nothing
         Me.lblStaffel1Bereich3EFGWert5.TabStop = False
         '
         'lblStaffel1Bereich3EFGWert4
@@ -7740,14 +5772,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel1Bereich3EFGWert4.RootElement.AccessibleDescription = resources.GetString("lblStaffel1Bereich3EFGWert4.RootElement.AccessibleDescription")
-        Me.lblStaffel1Bereich3EFGWert4.RootElement.AccessibleName = resources.GetString("lblStaffel1Bereich3EFGWert4.RootElement.AccessibleName")
-        Me.lblStaffel1Bereich3EFGWert4.RootElement.Alignment = CType(resources.GetObject("lblStaffel1Bereich3EFGWert4.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel1Bereich3EFGWert4.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel1Bereich3EFGWert4.RootElement.AngleTransform"), Single)
-        Me.lblStaffel1Bereich3EFGWert4.RootElement.FlipText = CType(resources.GetObject("lblStaffel1Bereich3EFGWert4.RootElement.FlipText"), Boolean)
-        Me.lblStaffel1Bereich3EFGWert4.RootElement.Margin = CType(resources.GetObject("lblStaffel1Bereich3EFGWert4.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel1Bereich3EFGWert4.RootElement.Text = resources.GetString("lblStaffel1Bereich3EFGWert4.RootElement.Text")
-        Me.lblStaffel1Bereich3EFGWert4.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel1Bereich3EFGWert4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel1Bereich3EFGWert4.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel1Bereich3EFGWert4.RootElement.AccessibleName = Nothing
         Me.lblStaffel1Bereich3EFGWert4.TabStop = False
         '
         'lblStaffel1Bereich3EFGWert3
@@ -7758,14 +5784,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel1Bereich3EFGWert3.RootElement.AccessibleDescription = resources.GetString("lblStaffel1Bereich3EFGWert3.RootElement.AccessibleDescription")
-        Me.lblStaffel1Bereich3EFGWert3.RootElement.AccessibleName = resources.GetString("lblStaffel1Bereich3EFGWert3.RootElement.AccessibleName")
-        Me.lblStaffel1Bereich3EFGWert3.RootElement.Alignment = CType(resources.GetObject("lblStaffel1Bereich3EFGWert3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel1Bereich3EFGWert3.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel1Bereich3EFGWert3.RootElement.AngleTransform"), Single)
-        Me.lblStaffel1Bereich3EFGWert3.RootElement.FlipText = CType(resources.GetObject("lblStaffel1Bereich3EFGWert3.RootElement.FlipText"), Boolean)
-        Me.lblStaffel1Bereich3EFGWert3.RootElement.Margin = CType(resources.GetObject("lblStaffel1Bereich3EFGWert3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel1Bereich3EFGWert3.RootElement.Text = resources.GetString("lblStaffel1Bereich3EFGWert3.RootElement.Text")
-        Me.lblStaffel1Bereich3EFGWert3.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel1Bereich3EFGWert3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel1Bereich3EFGWert3.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel1Bereich3EFGWert3.RootElement.AccessibleName = Nothing
         Me.lblStaffel1Bereich3EFGWert3.TabStop = False
         '
         'PictureBox20
@@ -7783,14 +5803,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel1Bereich3EFGWert1.RootElement.AccessibleDescription = resources.GetString("lblStaffel1Bereich3EFGWert1.RootElement.AccessibleDescription")
-        Me.lblStaffel1Bereich3EFGWert1.RootElement.AccessibleName = resources.GetString("lblStaffel1Bereich3EFGWert1.RootElement.AccessibleName")
-        Me.lblStaffel1Bereich3EFGWert1.RootElement.Alignment = CType(resources.GetObject("lblStaffel1Bereich3EFGWert1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel1Bereich3EFGWert1.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel1Bereich3EFGWert1.RootElement.AngleTransform"), Single)
-        Me.lblStaffel1Bereich3EFGWert1.RootElement.FlipText = CType(resources.GetObject("lblStaffel1Bereich3EFGWert1.RootElement.FlipText"), Boolean)
-        Me.lblStaffel1Bereich3EFGWert1.RootElement.Margin = CType(resources.GetObject("lblStaffel1Bereich3EFGWert1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel1Bereich3EFGWert1.RootElement.Text = resources.GetString("lblStaffel1Bereich3EFGWert1.RootElement.Text")
-        Me.lblStaffel1Bereich3EFGWert1.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel1Bereich3EFGWert1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel1Bereich3EFGWert1.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel1Bereich3EFGWert1.RootElement.AccessibleName = Nothing
         Me.lblStaffel1Bereich3EFGWert1.TabStop = False
         '
         'lblStaffel1Bereich3EFG
@@ -7800,14 +5814,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel1Bereich3EFG.RootElement.AccessibleDescription = resources.GetString("lblStaffel1Bereich3EFG.RootElement.AccessibleDescription")
-        Me.lblStaffel1Bereich3EFG.RootElement.AccessibleName = resources.GetString("lblStaffel1Bereich3EFG.RootElement.AccessibleName")
-        Me.lblStaffel1Bereich3EFG.RootElement.Alignment = CType(resources.GetObject("lblStaffel1Bereich3EFG.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel1Bereich3EFG.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel1Bereich3EFG.RootElement.AngleTransform"), Single)
-        Me.lblStaffel1Bereich3EFG.RootElement.FlipText = CType(resources.GetObject("lblStaffel1Bereich3EFG.RootElement.FlipText"), Boolean)
-        Me.lblStaffel1Bereich3EFG.RootElement.Margin = CType(resources.GetObject("lblStaffel1Bereich3EFG.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel1Bereich3EFG.RootElement.Text = resources.GetString("lblStaffel1Bereich3EFG.RootElement.Text")
-        Me.lblStaffel1Bereich3EFG.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel1Bereich3EFG.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel1Bereich3EFG.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel1Bereich3EFG.RootElement.AccessibleName = Nothing
         '
         'lblStaffel1Bereich3Fehler
         '
@@ -7816,14 +5824,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel1Bereich3Fehler.RootElement.AccessibleDescription = resources.GetString("lblStaffel1Bereich3Fehler.RootElement.AccessibleDescription")
-        Me.lblStaffel1Bereich3Fehler.RootElement.AccessibleName = resources.GetString("lblStaffel1Bereich3Fehler.RootElement.AccessibleName")
-        Me.lblStaffel1Bereich3Fehler.RootElement.Alignment = CType(resources.GetObject("lblStaffel1Bereich3Fehler.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel1Bereich3Fehler.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel1Bereich3Fehler.RootElement.AngleTransform"), Single)
-        Me.lblStaffel1Bereich3Fehler.RootElement.FlipText = CType(resources.GetObject("lblStaffel1Bereich3Fehler.RootElement.FlipText"), Boolean)
-        Me.lblStaffel1Bereich3Fehler.RootElement.Margin = CType(resources.GetObject("lblStaffel1Bereich3Fehler.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel1Bereich3Fehler.RootElement.Text = resources.GetString("lblStaffel1Bereich3Fehler.RootElement.Text")
-        Me.lblStaffel1Bereich3Fehler.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel1Bereich3Fehler.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel1Bereich3Fehler.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel1Bereich3Fehler.RootElement.AccessibleName = Nothing
         '
         'lblStaffel1Bereich3Anzeige
         '
@@ -7832,14 +5834,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel1Bereich3Anzeige.RootElement.AccessibleDescription = resources.GetString("lblStaffel1Bereich3Anzeige.RootElement.AccessibleDescription")
-        Me.lblStaffel1Bereich3Anzeige.RootElement.AccessibleName = resources.GetString("lblStaffel1Bereich3Anzeige.RootElement.AccessibleName")
-        Me.lblStaffel1Bereich3Anzeige.RootElement.Alignment = CType(resources.GetObject("lblStaffel1Bereich3Anzeige.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel1Bereich3Anzeige.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel1Bereich3Anzeige.RootElement.AngleTransform"), Single)
-        Me.lblStaffel1Bereich3Anzeige.RootElement.FlipText = CType(resources.GetObject("lblStaffel1Bereich3Anzeige.RootElement.FlipText"), Boolean)
-        Me.lblStaffel1Bereich3Anzeige.RootElement.Margin = CType(resources.GetObject("lblStaffel1Bereich3Anzeige.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel1Bereich3Anzeige.RootElement.Text = resources.GetString("lblStaffel1Bereich3Anzeige.RootElement.Text")
-        Me.lblStaffel1Bereich3Anzeige.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel1Bereich3Anzeige.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel1Bereich3Anzeige.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel1Bereich3Anzeige.RootElement.AccessibleName = Nothing
         '
         'lblStaffel1Bereich3Last
         '
@@ -7848,14 +5844,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel1Bereich3Last.RootElement.AccessibleDescription = resources.GetString("lblStaffel1Bereich3Last.RootElement.AccessibleDescription")
-        Me.lblStaffel1Bereich3Last.RootElement.AccessibleName = resources.GetString("lblStaffel1Bereich3Last.RootElement.AccessibleName")
-        Me.lblStaffel1Bereich3Last.RootElement.Alignment = CType(resources.GetObject("lblStaffel1Bereich3Last.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel1Bereich3Last.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel1Bereich3Last.RootElement.AngleTransform"), Single)
-        Me.lblStaffel1Bereich3Last.RootElement.FlipText = CType(resources.GetObject("lblStaffel1Bereich3Last.RootElement.FlipText"), Boolean)
-        Me.lblStaffel1Bereich3Last.RootElement.Margin = CType(resources.GetObject("lblStaffel1Bereich3Last.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel1Bereich3Last.RootElement.Text = resources.GetString("lblStaffel1Bereich3Last.RootElement.Text")
-        Me.lblStaffel1Bereich3Last.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel1Bereich3Last.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel1Bereich3Last.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel1Bereich3Last.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxStaffel1Bereich2
         '
@@ -7906,14 +5896,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadGroupBoxStaffel1Bereich2.RootElement.AccessibleDescription = resources.GetString("RadGroupBoxStaffel1Bereich2.RootElement.AccessibleDescription")
-        Me.RadGroupBoxStaffel1Bereich2.RootElement.AccessibleName = resources.GetString("RadGroupBoxStaffel1Bereich2.RootElement.AccessibleName")
-        Me.RadGroupBoxStaffel1Bereich2.RootElement.Alignment = CType(resources.GetObject("RadGroupBoxStaffel1Bereich2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadGroupBoxStaffel1Bereich2.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBoxStaffel1Bereich2.RootElement.AngleTransform"), Single)
-        Me.RadGroupBoxStaffel1Bereich2.RootElement.FlipText = CType(resources.GetObject("RadGroupBoxStaffel1Bereich2.RootElement.FlipText"), Boolean)
-        Me.RadGroupBoxStaffel1Bereich2.RootElement.Margin = CType(resources.GetObject("RadGroupBoxStaffel1Bereich2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadGroupBoxStaffel1Bereich2.RootElement.Text = resources.GetString("RadGroupBoxStaffel1Bereich2.RootElement.Text")
-        Me.RadGroupBoxStaffel1Bereich2.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxStaffel1Bereich2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadGroupBoxStaffel1Bereich2.RootElement.AccessibleDescription = Nothing
+        Me.RadGroupBoxStaffel1Bereich2.RootElement.AccessibleName = Nothing
         '
         'PictureBox139
         '
@@ -7929,14 +5913,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadLabel6.RootElement.AccessibleDescription = resources.GetString("RadLabel6.RootElement.AccessibleDescription")
-        Me.RadLabel6.RootElement.AccessibleName = resources.GetString("RadLabel6.RootElement.AccessibleName")
-        Me.RadLabel6.RootElement.Alignment = CType(resources.GetObject("RadLabel6.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadLabel6.RootElement.AngleTransform = CType(resources.GetObject("RadLabel6.RootElement.AngleTransform"), Single)
-        Me.RadLabel6.RootElement.FlipText = CType(resources.GetObject("RadLabel6.RootElement.FlipText"), Boolean)
-        Me.RadLabel6.RootElement.Margin = CType(resources.GetObject("RadLabel6.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel6.RootElement.Text = resources.GetString("RadLabel6.RootElement.Text")
-        Me.RadLabel6.RootElement.TextOrientation = CType(resources.GetObject("RadLabel6.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadLabel6.RootElement.AccessibleDescription = Nothing
+        Me.RadLabel6.RootElement.AccessibleName = Nothing
         '
         'RadLabel2
         '
@@ -7945,14 +5923,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadLabel2.RootElement.AccessibleDescription = resources.GetString("RadLabel2.RootElement.AccessibleDescription")
-        Me.RadLabel2.RootElement.AccessibleName = resources.GetString("RadLabel2.RootElement.AccessibleName")
-        Me.RadLabel2.RootElement.Alignment = CType(resources.GetObject("RadLabel2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadLabel2.RootElement.AngleTransform = CType(resources.GetObject("RadLabel2.RootElement.AngleTransform"), Single)
-        Me.RadLabel2.RootElement.FlipText = CType(resources.GetObject("RadLabel2.RootElement.FlipText"), Boolean)
-        Me.RadLabel2.RootElement.Margin = CType(resources.GetObject("RadLabel2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel2.RootElement.Text = resources.GetString("RadLabel2.RootElement.Text")
-        Me.RadLabel2.RootElement.TextOrientation = CType(resources.GetObject("RadLabel2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadLabel2.RootElement.AccessibleDescription = Nothing
+        Me.RadLabel2.RootElement.AccessibleName = Nothing
         '
         'PictureBox82
         '
@@ -8003,14 +5975,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel1Bereich2Fehler7.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel1Bereich2Fehler7.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel1Bereich2Fehler7.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel1Bereich2Fehler7.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel1Bereich2Fehler7.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Fehler7.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel1Bereich2Fehler7.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Fehler7.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel1Bereich2Fehler7.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Fehler7.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel1Bereich2Fehler7.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Fehler7.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel1Bereich2Fehler7.RootElement.Text = resources.GetString("RadTextBoxControlStaffel1Bereich2Fehler7.RootElement.Text")
-        Me.RadTextBoxControlStaffel1Bereich2Fehler7.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Fehler7.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel1Bereich2Fehler7.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel1Bereich2Fehler7.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel1Bereich2Fehler7.TabStop = False
         '
         'RadTextBoxControlStaffel1Bereich2Fehler6
@@ -8020,14 +5986,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel1Bereich2Fehler6.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel1Bereich2Fehler6.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel1Bereich2Fehler6.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel1Bereich2Fehler6.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel1Bereich2Fehler6.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Fehler6.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel1Bereich2Fehler6.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Fehler6.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel1Bereich2Fehler6.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Fehler6.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel1Bereich2Fehler6.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Fehler6.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel1Bereich2Fehler6.RootElement.Text = resources.GetString("RadTextBoxControlStaffel1Bereich2Fehler6.RootElement.Text")
-        Me.RadTextBoxControlStaffel1Bereich2Fehler6.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Fehler6.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel1Bereich2Fehler6.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel1Bereich2Fehler6.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel1Bereich2Fehler6.TabStop = False
         '
         'RadTextBoxControlStaffel1Bereich2Fehler5
@@ -8037,14 +5997,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel1Bereich2Fehler5.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel1Bereich2Fehler5.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel1Bereich2Fehler5.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel1Bereich2Fehler5.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel1Bereich2Fehler5.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Fehler5.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel1Bereich2Fehler5.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Fehler5.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel1Bereich2Fehler5.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Fehler5.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel1Bereich2Fehler5.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Fehler5.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel1Bereich2Fehler5.RootElement.Text = resources.GetString("RadTextBoxControlStaffel1Bereich2Fehler5.RootElement.Text")
-        Me.RadTextBoxControlStaffel1Bereich2Fehler5.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Fehler5.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel1Bereich2Fehler5.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel1Bereich2Fehler5.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel1Bereich2Fehler5.TabStop = False
         '
         'RadTextBoxControlStaffel1Bereich2Last4
@@ -8054,14 +6008,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel1Bereich2Last4.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel1Bereich2Last4.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel1Bereich2Last4.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel1Bereich2Last4.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel1Bereich2Last4.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Last4.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel1Bereich2Last4.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Last4.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel1Bereich2Last4.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Last4.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel1Bereich2Last4.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Last4.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel1Bereich2Last4.RootElement.Text = resources.GetString("RadTextBoxControlStaffel1Bereich2Last4.RootElement.Text")
-        Me.RadTextBoxControlStaffel1Bereich2Last4.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Last4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel1Bereich2Last4.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel1Bereich2Last4.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel1Bereich2Anzeige4
         '
@@ -8070,14 +6018,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel1Bereich2Anzeige4.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel1Bereich2Anzeige4.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel1Bereich2Anzeige4.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel1Bereich2Anzeige4.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel1Bereich2Anzeige4.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Anzeige4.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel1Bereich2Anzeige4.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Anzeige4.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel1Bereich2Anzeige4.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Anzeige4.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel1Bereich2Anzeige4.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Anzeige4.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel1Bereich2Anzeige4.RootElement.Text = resources.GetString("RadTextBoxControlStaffel1Bereich2Anzeige4.RootElement.Text")
-        Me.RadTextBoxControlStaffel1Bereich2Anzeige4.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Anzeige4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel1Bereich2Anzeige4.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel1Bereich2Anzeige4.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel1Bereich2Fehler4
         '
@@ -8086,14 +6028,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel1Bereich2Fehler4.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel1Bereich2Fehler4.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel1Bereich2Fehler4.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel1Bereich2Fehler4.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel1Bereich2Fehler4.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Fehler4.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel1Bereich2Fehler4.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Fehler4.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel1Bereich2Fehler4.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Fehler4.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel1Bereich2Fehler4.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Fehler4.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel1Bereich2Fehler4.RootElement.Text = resources.GetString("RadTextBoxControlStaffel1Bereich2Fehler4.RootElement.Text")
-        Me.RadTextBoxControlStaffel1Bereich2Fehler4.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Fehler4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel1Bereich2Fehler4.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel1Bereich2Fehler4.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel1Bereich2Fehler4.TabStop = False
         '
         'RadTextBoxControlStaffel1Bereich2Fehler3
@@ -8103,14 +6039,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel1Bereich2Fehler3.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel1Bereich2Fehler3.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel1Bereich2Fehler3.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel1Bereich2Fehler3.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel1Bereich2Fehler3.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Fehler3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel1Bereich2Fehler3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Fehler3.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel1Bereich2Fehler3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Fehler3.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel1Bereich2Fehler3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Fehler3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel1Bereich2Fehler3.RootElement.Text = resources.GetString("RadTextBoxControlStaffel1Bereich2Fehler3.RootElement.Text")
-        Me.RadTextBoxControlStaffel1Bereich2Fehler3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Fehler3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel1Bereich2Fehler3.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel1Bereich2Fehler3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel1Bereich2Fehler3.TabStop = False
         '
         'RadTextBoxControlStaffel1Bereich2Anzeige3
@@ -8120,14 +6050,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel1Bereich2Anzeige3.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel1Bereich2Anzeige3.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel1Bereich2Anzeige3.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel1Bereich2Anzeige3.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel1Bereich2Anzeige3.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Anzeige3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel1Bereich2Anzeige3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Anzeige3.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel1Bereich2Anzeige3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Anzeige3.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel1Bereich2Anzeige3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Anzeige3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel1Bereich2Anzeige3.RootElement.Text = resources.GetString("RadTextBoxControlStaffel1Bereich2Anzeige3.RootElement.Text")
-        Me.RadTextBoxControlStaffel1Bereich2Anzeige3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Anzeige3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel1Bereich2Anzeige3.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel1Bereich2Anzeige3.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel1Bereich2Last3
         '
@@ -8136,14 +6060,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel1Bereich2Last3.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel1Bereich2Last3.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel1Bereich2Last3.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel1Bereich2Last3.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel1Bereich2Last3.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Last3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel1Bereich2Last3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Last3.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel1Bereich2Last3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Last3.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel1Bereich2Last3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Last3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel1Bereich2Last3.RootElement.Text = resources.GetString("RadTextBoxControlStaffel1Bereich2Last3.RootElement.Text")
-        Me.RadTextBoxControlStaffel1Bereich2Last3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Last3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel1Bereich2Last3.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel1Bereich2Last3.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel1Bereich2Last1
         '
@@ -8152,14 +6070,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel1Bereich2Last1.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel1Bereich2Last1.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel1Bereich2Last1.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel1Bereich2Last1.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel1Bereich2Last1.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Last1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel1Bereich2Last1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Last1.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel1Bereich2Last1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Last1.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel1Bereich2Last1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Last1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel1Bereich2Last1.RootElement.Text = resources.GetString("RadTextBoxControlStaffel1Bereich2Last1.RootElement.Text")
-        Me.RadTextBoxControlStaffel1Bereich2Last1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Last1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel1Bereich2Last1.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel1Bereich2Last1.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel1Bereich2Anzeige1
         '
@@ -8168,14 +6080,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel1Bereich2Anzeige1.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel1Bereich2Anzeige1.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel1Bereich2Anzeige1.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel1Bereich2Anzeige1.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel1Bereich2Anzeige1.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Anzeige1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel1Bereich2Anzeige1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Anzeige1.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel1Bereich2Anzeige1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Anzeige1.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel1Bereich2Anzeige1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Anzeige1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel1Bereich2Anzeige1.RootElement.Text = resources.GetString("RadTextBoxControlStaffel1Bereich2Anzeige1.RootElement.Text")
-        Me.RadTextBoxControlStaffel1Bereich2Anzeige1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Anzeige1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel1Bereich2Anzeige1.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel1Bereich2Anzeige1.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel1Bereich2Fehler1
         '
@@ -8184,14 +6090,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel1Bereich2Fehler1.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel1Bereich2Fehler1.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel1Bereich2Fehler1.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel1Bereich2Fehler1.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel1Bereich2Fehler1.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Fehler1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel1Bereich2Fehler1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Fehler1.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel1Bereich2Fehler1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Fehler1.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel1Bereich2Fehler1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Fehler1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel1Bereich2Fehler1.RootElement.Text = resources.GetString("RadTextBoxControlStaffel1Bereich2Fehler1.RootElement.Text")
-        Me.RadTextBoxControlStaffel1Bereich2Fehler1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich2Fehler1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel1Bereich2Fehler1.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel1Bereich2Fehler1.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel1Bereich2Fehler1.TabStop = False
         '
         'lblStaffel1Bereich2MessabweichungWaage
@@ -8201,14 +6101,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel1Bereich2MessabweichungWaage.RootElement.AccessibleDescription = resources.GetString("lblStaffel1Bereich2MessabweichungWaage.RootElement.AccessibleDescription")
-        Me.lblStaffel1Bereich2MessabweichungWaage.RootElement.AccessibleName = resources.GetString("lblStaffel1Bereich2MessabweichungWaage.RootElement.AccessibleName")
-        Me.lblStaffel1Bereich2MessabweichungWaage.RootElement.Alignment = CType(resources.GetObject("lblStaffel1Bereich2MessabweichungWaage.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel1Bereich2MessabweichungWaage.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel1Bereich2MessabweichungWaage.RootElement.AngleTransform"), Single)
-        Me.lblStaffel1Bereich2MessabweichungWaage.RootElement.FlipText = CType(resources.GetObject("lblStaffel1Bereich2MessabweichungWaage.RootElement.FlipText"), Boolean)
-        Me.lblStaffel1Bereich2MessabweichungWaage.RootElement.Margin = CType(resources.GetObject("lblStaffel1Bereich2MessabweichungWaage.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel1Bereich2MessabweichungWaage.RootElement.Text = resources.GetString("lblStaffel1Bereich2MessabweichungWaage.RootElement.Text")
-        Me.lblStaffel1Bereich2MessabweichungWaage.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel1Bereich2MessabweichungWaage.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel1Bereich2MessabweichungWaage.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel1Bereich2MessabweichungWaage.RootElement.AccessibleName = Nothing
         '
         'lblStaffel1Bereich2MessabweichungStaffel
         '
@@ -8217,14 +6111,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel1Bereich2MessabweichungStaffel.RootElement.AccessibleDescription = resources.GetString("lblStaffel1Bereich2MessabweichungStaffel.RootElement.AccessibleDescription")
-        Me.lblStaffel1Bereich2MessabweichungStaffel.RootElement.AccessibleName = resources.GetString("lblStaffel1Bereich2MessabweichungStaffel.RootElement.AccessibleName")
-        Me.lblStaffel1Bereich2MessabweichungStaffel.RootElement.Alignment = CType(resources.GetObject("lblStaffel1Bereich2MessabweichungStaffel.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel1Bereich2MessabweichungStaffel.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel1Bereich2MessabweichungStaffel.RootElement.AngleTransform"), Single)
-        Me.lblStaffel1Bereich2MessabweichungStaffel.RootElement.FlipText = CType(resources.GetObject("lblStaffel1Bereich2MessabweichungStaffel.RootElement.FlipText"), Boolean)
-        Me.lblStaffel1Bereich2MessabweichungStaffel.RootElement.Margin = CType(resources.GetObject("lblStaffel1Bereich2MessabweichungStaffel.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel1Bereich2MessabweichungStaffel.RootElement.Text = resources.GetString("lblStaffel1Bereich2MessabweichungStaffel.RootElement.Text")
-        Me.lblStaffel1Bereich2MessabweichungStaffel.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel1Bereich2MessabweichungStaffel.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel1Bereich2MessabweichungStaffel.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel1Bereich2MessabweichungStaffel.RootElement.AccessibleName = Nothing
         '
         'lblStaffel1Bereich2Differenz
         '
@@ -8233,14 +6121,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel1Bereich2Differenz.RootElement.AccessibleDescription = resources.GetString("lblStaffel1Bereich2Differenz.RootElement.AccessibleDescription")
-        Me.lblStaffel1Bereich2Differenz.RootElement.AccessibleName = resources.GetString("lblStaffel1Bereich2Differenz.RootElement.AccessibleName")
-        Me.lblStaffel1Bereich2Differenz.RootElement.Alignment = CType(resources.GetObject("lblStaffel1Bereich2Differenz.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel1Bereich2Differenz.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel1Bereich2Differenz.RootElement.AngleTransform"), Single)
-        Me.lblStaffel1Bereich2Differenz.RootElement.FlipText = CType(resources.GetObject("lblStaffel1Bereich2Differenz.RootElement.FlipText"), Boolean)
-        Me.lblStaffel1Bereich2Differenz.RootElement.Margin = CType(resources.GetObject("lblStaffel1Bereich2Differenz.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel1Bereich2Differenz.RootElement.Text = resources.GetString("lblStaffel1Bereich2Differenz.RootElement.Text")
-        Me.lblStaffel1Bereich2Differenz.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel1Bereich2Differenz.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel1Bereich2Differenz.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel1Bereich2Differenz.RootElement.AccessibleName = Nothing
         '
         'lblStaffel1Bereich2NormalLast
         '
@@ -8249,14 +6131,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel1Bereich2NormalLast.RootElement.AccessibleDescription = resources.GetString("lblStaffel1Bereich2NormalLast.RootElement.AccessibleDescription")
-        Me.lblStaffel1Bereich2NormalLast.RootElement.AccessibleName = resources.GetString("lblStaffel1Bereich2NormalLast.RootElement.AccessibleName")
-        Me.lblStaffel1Bereich2NormalLast.RootElement.Alignment = CType(resources.GetObject("lblStaffel1Bereich2NormalLast.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel1Bereich2NormalLast.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel1Bereich2NormalLast.RootElement.AngleTransform"), Single)
-        Me.lblStaffel1Bereich2NormalLast.RootElement.FlipText = CType(resources.GetObject("lblStaffel1Bereich2NormalLast.RootElement.FlipText"), Boolean)
-        Me.lblStaffel1Bereich2NormalLast.RootElement.Margin = CType(resources.GetObject("lblStaffel1Bereich2NormalLast.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel1Bereich2NormalLast.RootElement.Text = resources.GetString("lblStaffel1Bereich2NormalLast.RootElement.Text")
-        Me.lblStaffel1Bereich2NormalLast.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel1Bereich2NormalLast.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel1Bereich2NormalLast.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel1Bereich2NormalLast.RootElement.AccessibleName = Nothing
         '
         'PictureBox8
         '
@@ -8301,14 +6177,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel1Bereich2EFGWert7.RootElement.AccessibleDescription = resources.GetString("lblStaffel1Bereich2EFGWert7.RootElement.AccessibleDescription")
-        Me.lblStaffel1Bereich2EFGWert7.RootElement.AccessibleName = resources.GetString("lblStaffel1Bereich2EFGWert7.RootElement.AccessibleName")
-        Me.lblStaffel1Bereich2EFGWert7.RootElement.Alignment = CType(resources.GetObject("lblStaffel1Bereich2EFGWert7.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel1Bereich2EFGWert7.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel1Bereich2EFGWert7.RootElement.AngleTransform"), Single)
-        Me.lblStaffel1Bereich2EFGWert7.RootElement.FlipText = CType(resources.GetObject("lblStaffel1Bereich2EFGWert7.RootElement.FlipText"), Boolean)
-        Me.lblStaffel1Bereich2EFGWert7.RootElement.Margin = CType(resources.GetObject("lblStaffel1Bereich2EFGWert7.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel1Bereich2EFGWert7.RootElement.Text = resources.GetString("lblStaffel1Bereich2EFGWert7.RootElement.Text")
-        Me.lblStaffel1Bereich2EFGWert7.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel1Bereich2EFGWert7.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel1Bereich2EFGWert7.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel1Bereich2EFGWert7.RootElement.AccessibleName = Nothing
         Me.lblStaffel1Bereich2EFGWert7.TabStop = False
         '
         'lblStaffel1Bereich2EFGWert6
@@ -8319,14 +6189,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel1Bereich2EFGWert6.RootElement.AccessibleDescription = resources.GetString("lblStaffel1Bereich2EFGWert6.RootElement.AccessibleDescription")
-        Me.lblStaffel1Bereich2EFGWert6.RootElement.AccessibleName = resources.GetString("lblStaffel1Bereich2EFGWert6.RootElement.AccessibleName")
-        Me.lblStaffel1Bereich2EFGWert6.RootElement.Alignment = CType(resources.GetObject("lblStaffel1Bereich2EFGWert6.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel1Bereich2EFGWert6.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel1Bereich2EFGWert6.RootElement.AngleTransform"), Single)
-        Me.lblStaffel1Bereich2EFGWert6.RootElement.FlipText = CType(resources.GetObject("lblStaffel1Bereich2EFGWert6.RootElement.FlipText"), Boolean)
-        Me.lblStaffel1Bereich2EFGWert6.RootElement.Margin = CType(resources.GetObject("lblStaffel1Bereich2EFGWert6.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel1Bereich2EFGWert6.RootElement.Text = resources.GetString("lblStaffel1Bereich2EFGWert6.RootElement.Text")
-        Me.lblStaffel1Bereich2EFGWert6.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel1Bereich2EFGWert6.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel1Bereich2EFGWert6.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel1Bereich2EFGWert6.RootElement.AccessibleName = Nothing
         Me.lblStaffel1Bereich2EFGWert6.TabStop = False
         '
         'lblStaffel1Bereich2EFGWert5
@@ -8337,14 +6201,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel1Bereich2EFGWert5.RootElement.AccessibleDescription = resources.GetString("lblStaffel1Bereich2EFGWert5.RootElement.AccessibleDescription")
-        Me.lblStaffel1Bereich2EFGWert5.RootElement.AccessibleName = resources.GetString("lblStaffel1Bereich2EFGWert5.RootElement.AccessibleName")
-        Me.lblStaffel1Bereich2EFGWert5.RootElement.Alignment = CType(resources.GetObject("lblStaffel1Bereich2EFGWert5.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel1Bereich2EFGWert5.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel1Bereich2EFGWert5.RootElement.AngleTransform"), Single)
-        Me.lblStaffel1Bereich2EFGWert5.RootElement.FlipText = CType(resources.GetObject("lblStaffel1Bereich2EFGWert5.RootElement.FlipText"), Boolean)
-        Me.lblStaffel1Bereich2EFGWert5.RootElement.Margin = CType(resources.GetObject("lblStaffel1Bereich2EFGWert5.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel1Bereich2EFGWert5.RootElement.Text = resources.GetString("lblStaffel1Bereich2EFGWert5.RootElement.Text")
-        Me.lblStaffel1Bereich2EFGWert5.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel1Bereich2EFGWert5.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel1Bereich2EFGWert5.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel1Bereich2EFGWert5.RootElement.AccessibleName = Nothing
         Me.lblStaffel1Bereich2EFGWert5.TabStop = False
         '
         'lblStaffel1Bereich2EFGWert4
@@ -8355,14 +6213,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel1Bereich2EFGWert4.RootElement.AccessibleDescription = resources.GetString("lblStaffel1Bereich2EFGWert4.RootElement.AccessibleDescription")
-        Me.lblStaffel1Bereich2EFGWert4.RootElement.AccessibleName = resources.GetString("lblStaffel1Bereich2EFGWert4.RootElement.AccessibleName")
-        Me.lblStaffel1Bereich2EFGWert4.RootElement.Alignment = CType(resources.GetObject("lblStaffel1Bereich2EFGWert4.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel1Bereich2EFGWert4.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel1Bereich2EFGWert4.RootElement.AngleTransform"), Single)
-        Me.lblStaffel1Bereich2EFGWert4.RootElement.FlipText = CType(resources.GetObject("lblStaffel1Bereich2EFGWert4.RootElement.FlipText"), Boolean)
-        Me.lblStaffel1Bereich2EFGWert4.RootElement.Margin = CType(resources.GetObject("lblStaffel1Bereich2EFGWert4.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel1Bereich2EFGWert4.RootElement.Text = resources.GetString("lblStaffel1Bereich2EFGWert4.RootElement.Text")
-        Me.lblStaffel1Bereich2EFGWert4.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel1Bereich2EFGWert4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel1Bereich2EFGWert4.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel1Bereich2EFGWert4.RootElement.AccessibleName = Nothing
         Me.lblStaffel1Bereich2EFGWert4.TabStop = False
         '
         'lblStaffel1Bereich2EFGWert3
@@ -8373,14 +6225,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel1Bereich2EFGWert3.RootElement.AccessibleDescription = resources.GetString("lblStaffel1Bereich2EFGWert3.RootElement.AccessibleDescription")
-        Me.lblStaffel1Bereich2EFGWert3.RootElement.AccessibleName = resources.GetString("lblStaffel1Bereich2EFGWert3.RootElement.AccessibleName")
-        Me.lblStaffel1Bereich2EFGWert3.RootElement.Alignment = CType(resources.GetObject("lblStaffel1Bereich2EFGWert3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel1Bereich2EFGWert3.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel1Bereich2EFGWert3.RootElement.AngleTransform"), Single)
-        Me.lblStaffel1Bereich2EFGWert3.RootElement.FlipText = CType(resources.GetObject("lblStaffel1Bereich2EFGWert3.RootElement.FlipText"), Boolean)
-        Me.lblStaffel1Bereich2EFGWert3.RootElement.Margin = CType(resources.GetObject("lblStaffel1Bereich2EFGWert3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel1Bereich2EFGWert3.RootElement.Text = resources.GetString("lblStaffel1Bereich2EFGWert3.RootElement.Text")
-        Me.lblStaffel1Bereich2EFGWert3.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel1Bereich2EFGWert3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel1Bereich2EFGWert3.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel1Bereich2EFGWert3.RootElement.AccessibleName = Nothing
         Me.lblStaffel1Bereich2EFGWert3.TabStop = False
         '
         'PictureBox13
@@ -8398,14 +6244,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel1Bereich2EFGWert1.RootElement.AccessibleDescription = resources.GetString("lblStaffel1Bereich2EFGWert1.RootElement.AccessibleDescription")
-        Me.lblStaffel1Bereich2EFGWert1.RootElement.AccessibleName = resources.GetString("lblStaffel1Bereich2EFGWert1.RootElement.AccessibleName")
-        Me.lblStaffel1Bereich2EFGWert1.RootElement.Alignment = CType(resources.GetObject("lblStaffel1Bereich2EFGWert1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel1Bereich2EFGWert1.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel1Bereich2EFGWert1.RootElement.AngleTransform"), Single)
-        Me.lblStaffel1Bereich2EFGWert1.RootElement.FlipText = CType(resources.GetObject("lblStaffel1Bereich2EFGWert1.RootElement.FlipText"), Boolean)
-        Me.lblStaffel1Bereich2EFGWert1.RootElement.Margin = CType(resources.GetObject("lblStaffel1Bereich2EFGWert1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel1Bereich2EFGWert1.RootElement.Text = resources.GetString("lblStaffel1Bereich2EFGWert1.RootElement.Text")
-        Me.lblStaffel1Bereich2EFGWert1.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel1Bereich2EFGWert1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel1Bereich2EFGWert1.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel1Bereich2EFGWert1.RootElement.AccessibleName = Nothing
         Me.lblStaffel1Bereich2EFGWert1.TabStop = False
         '
         'lblStaffel1Bereich2EFG
@@ -8415,14 +6255,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel1Bereich2EFG.RootElement.AccessibleDescription = resources.GetString("lblStaffel1Bereich2EFG.RootElement.AccessibleDescription")
-        Me.lblStaffel1Bereich2EFG.RootElement.AccessibleName = resources.GetString("lblStaffel1Bereich2EFG.RootElement.AccessibleName")
-        Me.lblStaffel1Bereich2EFG.RootElement.Alignment = CType(resources.GetObject("lblStaffel1Bereich2EFG.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel1Bereich2EFG.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel1Bereich2EFG.RootElement.AngleTransform"), Single)
-        Me.lblStaffel1Bereich2EFG.RootElement.FlipText = CType(resources.GetObject("lblStaffel1Bereich2EFG.RootElement.FlipText"), Boolean)
-        Me.lblStaffel1Bereich2EFG.RootElement.Margin = CType(resources.GetObject("lblStaffel1Bereich2EFG.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel1Bereich2EFG.RootElement.Text = resources.GetString("lblStaffel1Bereich2EFG.RootElement.Text")
-        Me.lblStaffel1Bereich2EFG.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel1Bereich2EFG.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel1Bereich2EFG.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel1Bereich2EFG.RootElement.AccessibleName = Nothing
         '
         'lblStaffel1Bereich2Fehler
         '
@@ -8431,14 +6265,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel1Bereich2Fehler.RootElement.AccessibleDescription = resources.GetString("lblStaffel1Bereich2Fehler.RootElement.AccessibleDescription")
-        Me.lblStaffel1Bereich2Fehler.RootElement.AccessibleName = resources.GetString("lblStaffel1Bereich2Fehler.RootElement.AccessibleName")
-        Me.lblStaffel1Bereich2Fehler.RootElement.Alignment = CType(resources.GetObject("lblStaffel1Bereich2Fehler.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel1Bereich2Fehler.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel1Bereich2Fehler.RootElement.AngleTransform"), Single)
-        Me.lblStaffel1Bereich2Fehler.RootElement.FlipText = CType(resources.GetObject("lblStaffel1Bereich2Fehler.RootElement.FlipText"), Boolean)
-        Me.lblStaffel1Bereich2Fehler.RootElement.Margin = CType(resources.GetObject("lblStaffel1Bereich2Fehler.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel1Bereich2Fehler.RootElement.Text = resources.GetString("lblStaffel1Bereich2Fehler.RootElement.Text")
-        Me.lblStaffel1Bereich2Fehler.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel1Bereich2Fehler.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel1Bereich2Fehler.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel1Bereich2Fehler.RootElement.AccessibleName = Nothing
         '
         'lblStaffel1Bereich2Anzeige
         '
@@ -8447,14 +6275,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel1Bereich2Anzeige.RootElement.AccessibleDescription = resources.GetString("lblStaffel1Bereich2Anzeige.RootElement.AccessibleDescription")
-        Me.lblStaffel1Bereich2Anzeige.RootElement.AccessibleName = resources.GetString("lblStaffel1Bereich2Anzeige.RootElement.AccessibleName")
-        Me.lblStaffel1Bereich2Anzeige.RootElement.Alignment = CType(resources.GetObject("lblStaffel1Bereich2Anzeige.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel1Bereich2Anzeige.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel1Bereich2Anzeige.RootElement.AngleTransform"), Single)
-        Me.lblStaffel1Bereich2Anzeige.RootElement.FlipText = CType(resources.GetObject("lblStaffel1Bereich2Anzeige.RootElement.FlipText"), Boolean)
-        Me.lblStaffel1Bereich2Anzeige.RootElement.Margin = CType(resources.GetObject("lblStaffel1Bereich2Anzeige.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel1Bereich2Anzeige.RootElement.Text = resources.GetString("lblStaffel1Bereich2Anzeige.RootElement.Text")
-        Me.lblStaffel1Bereich2Anzeige.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel1Bereich2Anzeige.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel1Bereich2Anzeige.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel1Bereich2Anzeige.RootElement.AccessibleName = Nothing
         '
         'lblStaffel1Bereich2Last
         '
@@ -8463,14 +6285,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel1Bereich2Last.RootElement.AccessibleDescription = resources.GetString("lblStaffel1Bereich2Last.RootElement.AccessibleDescription")
-        Me.lblStaffel1Bereich2Last.RootElement.AccessibleName = resources.GetString("lblStaffel1Bereich2Last.RootElement.AccessibleName")
-        Me.lblStaffel1Bereich2Last.RootElement.Alignment = CType(resources.GetObject("lblStaffel1Bereich2Last.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel1Bereich2Last.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel1Bereich2Last.RootElement.AngleTransform"), Single)
-        Me.lblStaffel1Bereich2Last.RootElement.FlipText = CType(resources.GetObject("lblStaffel1Bereich2Last.RootElement.FlipText"), Boolean)
-        Me.lblStaffel1Bereich2Last.RootElement.Margin = CType(resources.GetObject("lblStaffel1Bereich2Last.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel1Bereich2Last.RootElement.Text = resources.GetString("lblStaffel1Bereich2Last.RootElement.Text")
-        Me.lblStaffel1Bereich2Last.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel1Bereich2Last.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel1Bereich2Last.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel1Bereich2Last.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxStaffel1Bereich1
         '
@@ -8528,14 +6344,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadGroupBoxStaffel1Bereich1.RootElement.AccessibleDescription = resources.GetString("RadGroupBoxStaffel1Bereich1.RootElement.AccessibleDescription")
-        Me.RadGroupBoxStaffel1Bereich1.RootElement.AccessibleName = resources.GetString("RadGroupBoxStaffel1Bereich1.RootElement.AccessibleName")
-        Me.RadGroupBoxStaffel1Bereich1.RootElement.Alignment = CType(resources.GetObject("RadGroupBoxStaffel1Bereich1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadGroupBoxStaffel1Bereich1.RootElement.AngleTransform = CType(resources.GetObject("RadGroupBoxStaffel1Bereich1.RootElement.AngleTransform"), Single)
-        Me.RadGroupBoxStaffel1Bereich1.RootElement.FlipText = CType(resources.GetObject("RadGroupBoxStaffel1Bereich1.RootElement.FlipText"), Boolean)
-        Me.RadGroupBoxStaffel1Bereich1.RootElement.Margin = CType(resources.GetObject("RadGroupBoxStaffel1Bereich1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadGroupBoxStaffel1Bereich1.RootElement.Text = resources.GetString("RadGroupBoxStaffel1Bereich1.RootElement.Text")
-        Me.RadGroupBoxStaffel1Bereich1.RootElement.TextOrientation = CType(resources.GetObject("RadGroupBoxStaffel1Bereich1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadGroupBoxStaffel1Bereich1.RootElement.AccessibleDescription = Nothing
+        Me.RadGroupBoxStaffel1Bereich1.RootElement.AccessibleName = Nothing
         '
         'PictureBox140
         '
@@ -8551,14 +6361,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadLabel5.RootElement.AccessibleDescription = resources.GetString("RadLabel5.RootElement.AccessibleDescription")
-        Me.RadLabel5.RootElement.AccessibleName = resources.GetString("RadLabel5.RootElement.AccessibleName")
-        Me.RadLabel5.RootElement.Alignment = CType(resources.GetObject("RadLabel5.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadLabel5.RootElement.AngleTransform = CType(resources.GetObject("RadLabel5.RootElement.AngleTransform"), Single)
-        Me.RadLabel5.RootElement.FlipText = CType(resources.GetObject("RadLabel5.RootElement.FlipText"), Boolean)
-        Me.RadLabel5.RootElement.Margin = CType(resources.GetObject("RadLabel5.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel5.RootElement.Text = resources.GetString("RadLabel5.RootElement.Text")
-        Me.RadLabel5.RootElement.TextOrientation = CType(resources.GetObject("RadLabel5.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadLabel5.RootElement.AccessibleDescription = Nothing
+        Me.RadLabel5.RootElement.AccessibleName = Nothing
         '
         'RadLabel4
         '
@@ -8567,14 +6371,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadLabel4.RootElement.AccessibleDescription = resources.GetString("RadLabel4.RootElement.AccessibleDescription")
-        Me.RadLabel4.RootElement.AccessibleName = resources.GetString("RadLabel4.RootElement.AccessibleName")
-        Me.RadLabel4.RootElement.Alignment = CType(resources.GetObject("RadLabel4.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadLabel4.RootElement.AngleTransform = CType(resources.GetObject("RadLabel4.RootElement.AngleTransform"), Single)
-        Me.RadLabel4.RootElement.FlipText = CType(resources.GetObject("RadLabel4.RootElement.FlipText"), Boolean)
-        Me.RadLabel4.RootElement.Margin = CType(resources.GetObject("RadLabel4.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel4.RootElement.Text = resources.GetString("RadLabel4.RootElement.Text")
-        Me.RadLabel4.RootElement.TextOrientation = CType(resources.GetObject("RadLabel4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadLabel4.RootElement.AccessibleDescription = Nothing
+        Me.RadLabel4.RootElement.AccessibleName = Nothing
         '
         'RadLabel1
         '
@@ -8583,14 +6381,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadLabel1.RootElement.AccessibleDescription = resources.GetString("RadLabel1.RootElement.AccessibleDescription")
-        Me.RadLabel1.RootElement.AccessibleName = resources.GetString("RadLabel1.RootElement.AccessibleName")
-        Me.RadLabel1.RootElement.Alignment = CType(resources.GetObject("RadLabel1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadLabel1.RootElement.AngleTransform = CType(resources.GetObject("RadLabel1.RootElement.AngleTransform"), Single)
-        Me.RadLabel1.RootElement.FlipText = CType(resources.GetObject("RadLabel1.RootElement.FlipText"), Boolean)
-        Me.RadLabel1.RootElement.Margin = CType(resources.GetObject("RadLabel1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel1.RootElement.Text = resources.GetString("RadLabel1.RootElement.Text")
-        Me.RadLabel1.RootElement.TextOrientation = CType(resources.GetObject("RadLabel1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadLabel1.RootElement.AccessibleDescription = Nothing
+        Me.RadLabel1.RootElement.AccessibleName = Nothing
         '
         'PictureBox133
         '
@@ -8606,14 +6398,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel1Bereich1Last2.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel1Bereich1Last2.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel1Bereich1Last2.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel1Bereich1Last2.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel1Bereich1Last2.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Last2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel1Bereich1Last2.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Last2.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel1Bereich1Last2.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Last2.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel1Bereich1Last2.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Last2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel1Bereich1Last2.RootElement.Text = resources.GetString("RadTextBoxControlStaffel1Bereich1Last2.RootElement.Text")
-        Me.RadTextBoxControlStaffel1Bereich1Last2.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Last2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel1Bereich1Last2.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel1Bereich1Last2.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel1Bereich1Anzeige2
         '
@@ -8622,14 +6408,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige2.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel1Bereich1Anzeige2.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige2.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel1Bereich1Anzeige2.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige2.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Anzeige2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige2.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Anzeige2.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige2.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Anzeige2.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige2.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Anzeige2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige2.RootElement.Text = resources.GetString("RadTextBoxControlStaffel1Bereich1Anzeige2.RootElement.Text")
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige2.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Anzeige2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel1Bereich1Anzeige2.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel1Bereich1Anzeige2.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel1Bereich1Fehler2
         '
@@ -8638,14 +6418,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel1Bereich1Fehler2.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel1Bereich1Fehler2.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel1Bereich1Fehler2.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel1Bereich1Fehler2.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel1Bereich1Fehler2.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Fehler2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel1Bereich1Fehler2.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Fehler2.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel1Bereich1Fehler2.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Fehler2.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel1Bereich1Fehler2.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Fehler2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel1Bereich1Fehler2.RootElement.Text = resources.GetString("RadTextBoxControlStaffel1Bereich1Fehler2.RootElement.Text")
-        Me.RadTextBoxControlStaffel1Bereich1Fehler2.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Fehler2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel1Bereich1Fehler2.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel1Bereich1Fehler2.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel1Bereich1Fehler2.TabStop = False
         '
         'PictureBox134
@@ -8663,14 +6437,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel1Bereich1EFGWert2.RootElement.AccessibleDescription = resources.GetString("lblStaffel1Bereich1EFGWert2.RootElement.AccessibleDescription")
-        Me.lblStaffel1Bereich1EFGWert2.RootElement.AccessibleName = resources.GetString("lblStaffel1Bereich1EFGWert2.RootElement.AccessibleName")
-        Me.lblStaffel1Bereich1EFGWert2.RootElement.Alignment = CType(resources.GetObject("lblStaffel1Bereich1EFGWert2.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel1Bereich1EFGWert2.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel1Bereich1EFGWert2.RootElement.AngleTransform"), Single)
-        Me.lblStaffel1Bereich1EFGWert2.RootElement.FlipText = CType(resources.GetObject("lblStaffel1Bereich1EFGWert2.RootElement.FlipText"), Boolean)
-        Me.lblStaffel1Bereich1EFGWert2.RootElement.Margin = CType(resources.GetObject("lblStaffel1Bereich1EFGWert2.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel1Bereich1EFGWert2.RootElement.Text = resources.GetString("lblStaffel1Bereich1EFGWert2.RootElement.Text")
-        Me.lblStaffel1Bereich1EFGWert2.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel1Bereich1EFGWert2.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel1Bereich1EFGWert2.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel1Bereich1EFGWert2.RootElement.AccessibleName = Nothing
         Me.lblStaffel1Bereich1EFGWert2.TabStop = False
         '
         'PictureBox75
@@ -8722,14 +6490,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel1Bereich1Fehler7.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel1Bereich1Fehler7.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel1Bereich1Fehler7.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel1Bereich1Fehler7.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel1Bereich1Fehler7.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Fehler7.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel1Bereich1Fehler7.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Fehler7.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel1Bereich1Fehler7.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Fehler7.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel1Bereich1Fehler7.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Fehler7.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel1Bereich1Fehler7.RootElement.Text = resources.GetString("RadTextBoxControlStaffel1Bereich1Fehler7.RootElement.Text")
-        Me.RadTextBoxControlStaffel1Bereich1Fehler7.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Fehler7.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel1Bereich1Fehler7.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel1Bereich1Fehler7.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel1Bereich1Fehler7.TabStop = False
         '
         'RadTextBoxControlStaffel1Bereich1Fehler6
@@ -8739,14 +6501,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel1Bereich1Fehler6.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel1Bereich1Fehler6.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel1Bereich1Fehler6.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel1Bereich1Fehler6.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel1Bereich1Fehler6.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Fehler6.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel1Bereich1Fehler6.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Fehler6.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel1Bereich1Fehler6.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Fehler6.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel1Bereich1Fehler6.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Fehler6.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel1Bereich1Fehler6.RootElement.Text = resources.GetString("RadTextBoxControlStaffel1Bereich1Fehler6.RootElement.Text")
-        Me.RadTextBoxControlStaffel1Bereich1Fehler6.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Fehler6.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel1Bereich1Fehler6.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel1Bereich1Fehler6.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel1Bereich1Fehler6.TabStop = False
         '
         'RadTextBoxControlStaffel1Bereich1Fehler5
@@ -8756,14 +6512,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel1Bereich1Fehler5.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel1Bereich1Fehler5.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel1Bereich1Fehler5.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel1Bereich1Fehler5.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel1Bereich1Fehler5.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Fehler5.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel1Bereich1Fehler5.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Fehler5.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel1Bereich1Fehler5.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Fehler5.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel1Bereich1Fehler5.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Fehler5.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel1Bereich1Fehler5.RootElement.Text = resources.GetString("RadTextBoxControlStaffel1Bereich1Fehler5.RootElement.Text")
-        Me.RadTextBoxControlStaffel1Bereich1Fehler5.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Fehler5.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel1Bereich1Fehler5.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel1Bereich1Fehler5.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel1Bereich1Fehler5.TabStop = False
         '
         'RadTextBoxControlStaffel1Bereich1Last4
@@ -8773,14 +6523,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel1Bereich1Last4.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel1Bereich1Last4.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel1Bereich1Last4.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel1Bereich1Last4.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel1Bereich1Last4.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Last4.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel1Bereich1Last4.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Last4.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel1Bereich1Last4.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Last4.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel1Bereich1Last4.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Last4.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel1Bereich1Last4.RootElement.Text = resources.GetString("RadTextBoxControlStaffel1Bereich1Last4.RootElement.Text")
-        Me.RadTextBoxControlStaffel1Bereich1Last4.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Last4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel1Bereich1Last4.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel1Bereich1Last4.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel1Bereich1Anzeige4
         '
@@ -8789,14 +6533,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige4.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel1Bereich1Anzeige4.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige4.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel1Bereich1Anzeige4.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige4.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Anzeige4.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige4.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Anzeige4.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige4.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Anzeige4.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige4.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Anzeige4.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige4.RootElement.Text = resources.GetString("RadTextBoxControlStaffel1Bereich1Anzeige4.RootElement.Text")
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige4.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Anzeige4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel1Bereich1Anzeige4.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel1Bereich1Anzeige4.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel1Bereich1Fehler4
         '
@@ -8805,14 +6543,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel1Bereich1Fehler4.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel1Bereich1Fehler4.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel1Bereich1Fehler4.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel1Bereich1Fehler4.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel1Bereich1Fehler4.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Fehler4.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel1Bereich1Fehler4.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Fehler4.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel1Bereich1Fehler4.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Fehler4.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel1Bereich1Fehler4.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Fehler4.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel1Bereich1Fehler4.RootElement.Text = resources.GetString("RadTextBoxControlStaffel1Bereich1Fehler4.RootElement.Text")
-        Me.RadTextBoxControlStaffel1Bereich1Fehler4.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Fehler4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel1Bereich1Fehler4.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel1Bereich1Fehler4.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel1Bereich1Fehler4.TabStop = False
         '
         'RadTextBoxControlStaffel1Bereich1Fehler3
@@ -8822,14 +6554,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel1Bereich1Fehler3.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel1Bereich1Fehler3.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel1Bereich1Fehler3.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel1Bereich1Fehler3.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel1Bereich1Fehler3.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Fehler3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel1Bereich1Fehler3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Fehler3.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel1Bereich1Fehler3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Fehler3.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel1Bereich1Fehler3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Fehler3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel1Bereich1Fehler3.RootElement.Text = resources.GetString("RadTextBoxControlStaffel1Bereich1Fehler3.RootElement.Text")
-        Me.RadTextBoxControlStaffel1Bereich1Fehler3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Fehler3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel1Bereich1Fehler3.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel1Bereich1Fehler3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel1Bereich1Fehler3.TabStop = False
         '
         'RadTextBoxControlStaffel1Bereich1Anzeige3
@@ -8839,14 +6565,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige3.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel1Bereich1Anzeige3.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige3.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel1Bereich1Anzeige3.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige3.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Anzeige3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Anzeige3.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Anzeige3.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Anzeige3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige3.RootElement.Text = resources.GetString("RadTextBoxControlStaffel1Bereich1Anzeige3.RootElement.Text")
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Anzeige3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel1Bereich1Anzeige3.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel1Bereich1Anzeige3.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel1Bereich1Last3
         '
@@ -8855,14 +6575,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel1Bereich1Last3.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel1Bereich1Last3.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel1Bereich1Last3.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel1Bereich1Last3.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel1Bereich1Last3.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Last3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel1Bereich1Last3.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Last3.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel1Bereich1Last3.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Last3.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel1Bereich1Last3.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Last3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel1Bereich1Last3.RootElement.Text = resources.GetString("RadTextBoxControlStaffel1Bereich1Last3.RootElement.Text")
-        Me.RadTextBoxControlStaffel1Bereich1Last3.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Last3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel1Bereich1Last3.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel1Bereich1Last3.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel1Bereich1Last1
         '
@@ -8871,14 +6585,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel1Bereich1Last1.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel1Bereich1Last1.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel1Bereich1Last1.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel1Bereich1Last1.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel1Bereich1Last1.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Last1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel1Bereich1Last1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Last1.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel1Bereich1Last1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Last1.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel1Bereich1Last1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Last1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel1Bereich1Last1.RootElement.Text = resources.GetString("RadTextBoxControlStaffel1Bereich1Last1.RootElement.Text")
-        Me.RadTextBoxControlStaffel1Bereich1Last1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Last1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel1Bereich1Last1.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel1Bereich1Last1.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel1Bereich1Anzeige1
         '
@@ -8887,14 +6595,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige1.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel1Bereich1Anzeige1.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige1.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel1Bereich1Anzeige1.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige1.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Anzeige1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Anzeige1.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Anzeige1.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Anzeige1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige1.RootElement.Text = resources.GetString("RadTextBoxControlStaffel1Bereich1Anzeige1.RootElement.Text")
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Anzeige1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel1Bereich1Anzeige1.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel1Bereich1Anzeige1.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel1Bereich1Fehler1
         '
@@ -8903,14 +6605,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.RadTextBoxControlStaffel1Bereich1Fehler1.RootElement.AccessibleDescription = resources.GetString("RadTextBoxControlStaffel1Bereich1Fehler1.RootElement.AccessibleDescription")
-        Me.RadTextBoxControlStaffel1Bereich1Fehler1.RootElement.AccessibleName = resources.GetString("RadTextBoxControlStaffel1Bereich1Fehler1.RootElement.AccessibleName")
-        Me.RadTextBoxControlStaffel1Bereich1Fehler1.RootElement.Alignment = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Fehler1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadTextBoxControlStaffel1Bereich1Fehler1.RootElement.AngleTransform = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Fehler1.RootElement.AngleTransform"), Single)
-        Me.RadTextBoxControlStaffel1Bereich1Fehler1.RootElement.FlipText = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Fehler1.RootElement.FlipText"), Boolean)
-        Me.RadTextBoxControlStaffel1Bereich1Fehler1.RootElement.Margin = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Fehler1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadTextBoxControlStaffel1Bereich1Fehler1.RootElement.Text = resources.GetString("RadTextBoxControlStaffel1Bereich1Fehler1.RootElement.Text")
-        Me.RadTextBoxControlStaffel1Bereich1Fehler1.RootElement.TextOrientation = CType(resources.GetObject("RadTextBoxControlStaffel1Bereich1Fehler1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadTextBoxControlStaffel1Bereich1Fehler1.RootElement.AccessibleDescription = Nothing
+        Me.RadTextBoxControlStaffel1Bereich1Fehler1.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel1Bereich1Fehler1.TabStop = False
         '
         'lblStaffel1Bereich1MessabweichungWaage
@@ -8920,14 +6616,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel1Bereich1MessabweichungWaage.RootElement.AccessibleDescription = resources.GetString("lblStaffel1Bereich1MessabweichungWaage.RootElement.AccessibleDescription")
-        Me.lblStaffel1Bereich1MessabweichungWaage.RootElement.AccessibleName = resources.GetString("lblStaffel1Bereich1MessabweichungWaage.RootElement.AccessibleName")
-        Me.lblStaffel1Bereich1MessabweichungWaage.RootElement.Alignment = CType(resources.GetObject("lblStaffel1Bereich1MessabweichungWaage.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel1Bereich1MessabweichungWaage.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel1Bereich1MessabweichungWaage.RootElement.AngleTransform"), Single)
-        Me.lblStaffel1Bereich1MessabweichungWaage.RootElement.FlipText = CType(resources.GetObject("lblStaffel1Bereich1MessabweichungWaage.RootElement.FlipText"), Boolean)
-        Me.lblStaffel1Bereich1MessabweichungWaage.RootElement.Margin = CType(resources.GetObject("lblStaffel1Bereich1MessabweichungWaage.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel1Bereich1MessabweichungWaage.RootElement.Text = resources.GetString("lblStaffel1Bereich1MessabweichungWaage.RootElement.Text")
-        Me.lblStaffel1Bereich1MessabweichungWaage.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel1Bereich1MessabweichungWaage.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel1Bereich1MessabweichungWaage.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel1Bereich1MessabweichungWaage.RootElement.AccessibleName = Nothing
         '
         'lblStaffel1Bereich1MessabweichungStaffel
         '
@@ -8936,14 +6626,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel1Bereich1MessabweichungStaffel.RootElement.AccessibleDescription = resources.GetString("lblStaffel1Bereich1MessabweichungStaffel.RootElement.AccessibleDescription")
-        Me.lblStaffel1Bereich1MessabweichungStaffel.RootElement.AccessibleName = resources.GetString("lblStaffel1Bereich1MessabweichungStaffel.RootElement.AccessibleName")
-        Me.lblStaffel1Bereich1MessabweichungStaffel.RootElement.Alignment = CType(resources.GetObject("lblStaffel1Bereich1MessabweichungStaffel.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel1Bereich1MessabweichungStaffel.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel1Bereich1MessabweichungStaffel.RootElement.AngleTransform"), Single)
-        Me.lblStaffel1Bereich1MessabweichungStaffel.RootElement.FlipText = CType(resources.GetObject("lblStaffel1Bereich1MessabweichungStaffel.RootElement.FlipText"), Boolean)
-        Me.lblStaffel1Bereich1MessabweichungStaffel.RootElement.Margin = CType(resources.GetObject("lblStaffel1Bereich1MessabweichungStaffel.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel1Bereich1MessabweichungStaffel.RootElement.Text = resources.GetString("lblStaffel1Bereich1MessabweichungStaffel.RootElement.Text")
-        Me.lblStaffel1Bereich1MessabweichungStaffel.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel1Bereich1MessabweichungStaffel.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel1Bereich1MessabweichungStaffel.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel1Bereich1MessabweichungStaffel.RootElement.AccessibleName = Nothing
         '
         'lblStaffel1Bereich1Differenz
         '
@@ -8953,14 +6637,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel1Bereich1Differenz.RootElement.AccessibleDescription = resources.GetString("lblStaffel1Bereich1Differenz.RootElement.AccessibleDescription")
-        Me.lblStaffel1Bereich1Differenz.RootElement.AccessibleName = resources.GetString("lblStaffel1Bereich1Differenz.RootElement.AccessibleName")
-        Me.lblStaffel1Bereich1Differenz.RootElement.Alignment = CType(resources.GetObject("lblStaffel1Bereich1Differenz.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel1Bereich1Differenz.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel1Bereich1Differenz.RootElement.AngleTransform"), Single)
-        Me.lblStaffel1Bereich1Differenz.RootElement.FlipText = CType(resources.GetObject("lblStaffel1Bereich1Differenz.RootElement.FlipText"), Boolean)
-        Me.lblStaffel1Bereich1Differenz.RootElement.Margin = CType(resources.GetObject("lblStaffel1Bereich1Differenz.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel1Bereich1Differenz.RootElement.Text = resources.GetString("lblStaffel1Bereich1Differenz.RootElement.Text")
-        Me.lblStaffel1Bereich1Differenz.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel1Bereich1Differenz.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel1Bereich1Differenz.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel1Bereich1Differenz.RootElement.AccessibleName = Nothing
         '
         'lblStaffel1Bereich1NormalLast
         '
@@ -8969,14 +6647,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel1Bereich1NormalLast.RootElement.AccessibleDescription = resources.GetString("lblStaffel1Bereich1NormalLast.RootElement.AccessibleDescription")
-        Me.lblStaffel1Bereich1NormalLast.RootElement.AccessibleName = resources.GetString("lblStaffel1Bereich1NormalLast.RootElement.AccessibleName")
-        Me.lblStaffel1Bereich1NormalLast.RootElement.Alignment = CType(resources.GetObject("lblStaffel1Bereich1NormalLast.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel1Bereich1NormalLast.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel1Bereich1NormalLast.RootElement.AngleTransform"), Single)
-        Me.lblStaffel1Bereich1NormalLast.RootElement.FlipText = CType(resources.GetObject("lblStaffel1Bereich1NormalLast.RootElement.FlipText"), Boolean)
-        Me.lblStaffel1Bereich1NormalLast.RootElement.Margin = CType(resources.GetObject("lblStaffel1Bereich1NormalLast.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel1Bereich1NormalLast.RootElement.Text = resources.GetString("lblStaffel1Bereich1NormalLast.RootElement.Text")
-        Me.lblStaffel1Bereich1NormalLast.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel1Bereich1NormalLast.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel1Bereich1NormalLast.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel1Bereich1NormalLast.RootElement.AccessibleName = Nothing
         '
         'PictureBox5
         '
@@ -9021,14 +6693,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel1Bereich1EFGWert7.RootElement.AccessibleDescription = resources.GetString("lblStaffel1Bereich1EFGWert7.RootElement.AccessibleDescription")
-        Me.lblStaffel1Bereich1EFGWert7.RootElement.AccessibleName = resources.GetString("lblStaffel1Bereich1EFGWert7.RootElement.AccessibleName")
-        Me.lblStaffel1Bereich1EFGWert7.RootElement.Alignment = CType(resources.GetObject("lblStaffel1Bereich1EFGWert7.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel1Bereich1EFGWert7.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel1Bereich1EFGWert7.RootElement.AngleTransform"), Single)
-        Me.lblStaffel1Bereich1EFGWert7.RootElement.FlipText = CType(resources.GetObject("lblStaffel1Bereich1EFGWert7.RootElement.FlipText"), Boolean)
-        Me.lblStaffel1Bereich1EFGWert7.RootElement.Margin = CType(resources.GetObject("lblStaffel1Bereich1EFGWert7.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel1Bereich1EFGWert7.RootElement.Text = resources.GetString("lblStaffel1Bereich1EFGWert7.RootElement.Text")
-        Me.lblStaffel1Bereich1EFGWert7.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel1Bereich1EFGWert7.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel1Bereich1EFGWert7.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel1Bereich1EFGWert7.RootElement.AccessibleName = Nothing
         Me.lblStaffel1Bereich1EFGWert7.TabStop = False
         '
         'lblStaffel1Bereich1EFGWert6
@@ -9039,14 +6705,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel1Bereich1EFGWert6.RootElement.AccessibleDescription = resources.GetString("lblStaffel1Bereich1EFGWert6.RootElement.AccessibleDescription")
-        Me.lblStaffel1Bereich1EFGWert6.RootElement.AccessibleName = resources.GetString("lblStaffel1Bereich1EFGWert6.RootElement.AccessibleName")
-        Me.lblStaffel1Bereich1EFGWert6.RootElement.Alignment = CType(resources.GetObject("lblStaffel1Bereich1EFGWert6.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel1Bereich1EFGWert6.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel1Bereich1EFGWert6.RootElement.AngleTransform"), Single)
-        Me.lblStaffel1Bereich1EFGWert6.RootElement.FlipText = CType(resources.GetObject("lblStaffel1Bereich1EFGWert6.RootElement.FlipText"), Boolean)
-        Me.lblStaffel1Bereich1EFGWert6.RootElement.Margin = CType(resources.GetObject("lblStaffel1Bereich1EFGWert6.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel1Bereich1EFGWert6.RootElement.Text = resources.GetString("lblStaffel1Bereich1EFGWert6.RootElement.Text")
-        Me.lblStaffel1Bereich1EFGWert6.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel1Bereich1EFGWert6.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel1Bereich1EFGWert6.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel1Bereich1EFGWert6.RootElement.AccessibleName = Nothing
         Me.lblStaffel1Bereich1EFGWert6.TabStop = False
         '
         'lblStaffel1Bereich1EFGWert5
@@ -9057,14 +6717,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel1Bereich1EFGWert5.RootElement.AccessibleDescription = resources.GetString("lblStaffel1Bereich1EFGWert5.RootElement.AccessibleDescription")
-        Me.lblStaffel1Bereich1EFGWert5.RootElement.AccessibleName = resources.GetString("lblStaffel1Bereich1EFGWert5.RootElement.AccessibleName")
-        Me.lblStaffel1Bereich1EFGWert5.RootElement.Alignment = CType(resources.GetObject("lblStaffel1Bereich1EFGWert5.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel1Bereich1EFGWert5.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel1Bereich1EFGWert5.RootElement.AngleTransform"), Single)
-        Me.lblStaffel1Bereich1EFGWert5.RootElement.FlipText = CType(resources.GetObject("lblStaffel1Bereich1EFGWert5.RootElement.FlipText"), Boolean)
-        Me.lblStaffel1Bereich1EFGWert5.RootElement.Margin = CType(resources.GetObject("lblStaffel1Bereich1EFGWert5.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel1Bereich1EFGWert5.RootElement.Text = resources.GetString("lblStaffel1Bereich1EFGWert5.RootElement.Text")
-        Me.lblStaffel1Bereich1EFGWert5.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel1Bereich1EFGWert5.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel1Bereich1EFGWert5.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel1Bereich1EFGWert5.RootElement.AccessibleName = Nothing
         Me.lblStaffel1Bereich1EFGWert5.TabStop = False
         '
         'lblStaffel1Bereich1EFGWert4
@@ -9075,14 +6729,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel1Bereich1EFGWert4.RootElement.AccessibleDescription = resources.GetString("lblStaffel1Bereich1EFGWert4.RootElement.AccessibleDescription")
-        Me.lblStaffel1Bereich1EFGWert4.RootElement.AccessibleName = resources.GetString("lblStaffel1Bereich1EFGWert4.RootElement.AccessibleName")
-        Me.lblStaffel1Bereich1EFGWert4.RootElement.Alignment = CType(resources.GetObject("lblStaffel1Bereich1EFGWert4.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel1Bereich1EFGWert4.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel1Bereich1EFGWert4.RootElement.AngleTransform"), Single)
-        Me.lblStaffel1Bereich1EFGWert4.RootElement.FlipText = CType(resources.GetObject("lblStaffel1Bereich1EFGWert4.RootElement.FlipText"), Boolean)
-        Me.lblStaffel1Bereich1EFGWert4.RootElement.Margin = CType(resources.GetObject("lblStaffel1Bereich1EFGWert4.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel1Bereich1EFGWert4.RootElement.Text = resources.GetString("lblStaffel1Bereich1EFGWert4.RootElement.Text")
-        Me.lblStaffel1Bereich1EFGWert4.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel1Bereich1EFGWert4.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel1Bereich1EFGWert4.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel1Bereich1EFGWert4.RootElement.AccessibleName = Nothing
         Me.lblStaffel1Bereich1EFGWert4.TabStop = False
         '
         'lblStaffel1Bereich1EFGWert3
@@ -9093,14 +6741,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel1Bereich1EFGWert3.RootElement.AccessibleDescription = resources.GetString("lblStaffel1Bereich1EFGWert3.RootElement.AccessibleDescription")
-        Me.lblStaffel1Bereich1EFGWert3.RootElement.AccessibleName = resources.GetString("lblStaffel1Bereich1EFGWert3.RootElement.AccessibleName")
-        Me.lblStaffel1Bereich1EFGWert3.RootElement.Alignment = CType(resources.GetObject("lblStaffel1Bereich1EFGWert3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel1Bereich1EFGWert3.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel1Bereich1EFGWert3.RootElement.AngleTransform"), Single)
-        Me.lblStaffel1Bereich1EFGWert3.RootElement.FlipText = CType(resources.GetObject("lblStaffel1Bereich1EFGWert3.RootElement.FlipText"), Boolean)
-        Me.lblStaffel1Bereich1EFGWert3.RootElement.Margin = CType(resources.GetObject("lblStaffel1Bereich1EFGWert3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel1Bereich1EFGWert3.RootElement.Text = resources.GetString("lblStaffel1Bereich1EFGWert3.RootElement.Text")
-        Me.lblStaffel1Bereich1EFGWert3.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel1Bereich1EFGWert3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel1Bereich1EFGWert3.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel1Bereich1EFGWert3.RootElement.AccessibleName = Nothing
         Me.lblStaffel1Bereich1EFGWert3.TabStop = False
         '
         'PictureBox79
@@ -9118,14 +6760,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel1Bereich1EFGWert1.RootElement.AccessibleDescription = resources.GetString("lblStaffel1Bereich1EFGWert1.RootElement.AccessibleDescription")
-        Me.lblStaffel1Bereich1EFGWert1.RootElement.AccessibleName = resources.GetString("lblStaffel1Bereich1EFGWert1.RootElement.AccessibleName")
-        Me.lblStaffel1Bereich1EFGWert1.RootElement.Alignment = CType(resources.GetObject("lblStaffel1Bereich1EFGWert1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel1Bereich1EFGWert1.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel1Bereich1EFGWert1.RootElement.AngleTransform"), Single)
-        Me.lblStaffel1Bereich1EFGWert1.RootElement.FlipText = CType(resources.GetObject("lblStaffel1Bereich1EFGWert1.RootElement.FlipText"), Boolean)
-        Me.lblStaffel1Bereich1EFGWert1.RootElement.Margin = CType(resources.GetObject("lblStaffel1Bereich1EFGWert1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel1Bereich1EFGWert1.RootElement.Text = resources.GetString("lblStaffel1Bereich1EFGWert1.RootElement.Text")
-        Me.lblStaffel1Bereich1EFGWert1.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel1Bereich1EFGWert1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel1Bereich1EFGWert1.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel1Bereich1EFGWert1.RootElement.AccessibleName = Nothing
         Me.lblStaffel1Bereich1EFGWert1.TabStop = False
         '
         'lblStaffel1Bereich1EFG
@@ -9135,14 +6771,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel1Bereich1EFG.RootElement.AccessibleDescription = resources.GetString("lblStaffel1Bereich1EFG.RootElement.AccessibleDescription")
-        Me.lblStaffel1Bereich1EFG.RootElement.AccessibleName = resources.GetString("lblStaffel1Bereich1EFG.RootElement.AccessibleName")
-        Me.lblStaffel1Bereich1EFG.RootElement.Alignment = CType(resources.GetObject("lblStaffel1Bereich1EFG.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel1Bereich1EFG.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel1Bereich1EFG.RootElement.AngleTransform"), Single)
-        Me.lblStaffel1Bereich1EFG.RootElement.FlipText = CType(resources.GetObject("lblStaffel1Bereich1EFG.RootElement.FlipText"), Boolean)
-        Me.lblStaffel1Bereich1EFG.RootElement.Margin = CType(resources.GetObject("lblStaffel1Bereich1EFG.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel1Bereich1EFG.RootElement.Text = resources.GetString("lblStaffel1Bereich1EFG.RootElement.Text")
-        Me.lblStaffel1Bereich1EFG.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel1Bereich1EFG.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel1Bereich1EFG.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel1Bereich1EFG.RootElement.AccessibleName = Nothing
         '
         'lblStaffel1Bereich1Fehler
         '
@@ -9151,14 +6781,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel1Bereich1Fehler.RootElement.AccessibleDescription = resources.GetString("lblStaffel1Bereich1Fehler.RootElement.AccessibleDescription")
-        Me.lblStaffel1Bereich1Fehler.RootElement.AccessibleName = resources.GetString("lblStaffel1Bereich1Fehler.RootElement.AccessibleName")
-        Me.lblStaffel1Bereich1Fehler.RootElement.Alignment = CType(resources.GetObject("lblStaffel1Bereich1Fehler.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel1Bereich1Fehler.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel1Bereich1Fehler.RootElement.AngleTransform"), Single)
-        Me.lblStaffel1Bereich1Fehler.RootElement.FlipText = CType(resources.GetObject("lblStaffel1Bereich1Fehler.RootElement.FlipText"), Boolean)
-        Me.lblStaffel1Bereich1Fehler.RootElement.Margin = CType(resources.GetObject("lblStaffel1Bereich1Fehler.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel1Bereich1Fehler.RootElement.Text = resources.GetString("lblStaffel1Bereich1Fehler.RootElement.Text")
-        Me.lblStaffel1Bereich1Fehler.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel1Bereich1Fehler.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel1Bereich1Fehler.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel1Bereich1Fehler.RootElement.AccessibleName = Nothing
         '
         'lblStaffel1Bereich1Anzeige
         '
@@ -9167,14 +6791,8 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel1Bereich1Anzeige.RootElement.AccessibleDescription = resources.GetString("lblStaffel1Bereich1Anzeige.RootElement.AccessibleDescription")
-        Me.lblStaffel1Bereich1Anzeige.RootElement.AccessibleName = resources.GetString("lblStaffel1Bereich1Anzeige.RootElement.AccessibleName")
-        Me.lblStaffel1Bereich1Anzeige.RootElement.Alignment = CType(resources.GetObject("lblStaffel1Bereich1Anzeige.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel1Bereich1Anzeige.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel1Bereich1Anzeige.RootElement.AngleTransform"), Single)
-        Me.lblStaffel1Bereich1Anzeige.RootElement.FlipText = CType(resources.GetObject("lblStaffel1Bereich1Anzeige.RootElement.FlipText"), Boolean)
-        Me.lblStaffel1Bereich1Anzeige.RootElement.Margin = CType(resources.GetObject("lblStaffel1Bereich1Anzeige.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel1Bereich1Anzeige.RootElement.Text = resources.GetString("lblStaffel1Bereich1Anzeige.RootElement.Text")
-        Me.lblStaffel1Bereich1Anzeige.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel1Bereich1Anzeige.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel1Bereich1Anzeige.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel1Bereich1Anzeige.RootElement.AccessibleName = Nothing
         '
         'lblStaffel1Bereich1Last
         '
@@ -9183,20 +6801,15 @@ Partial Class uco10PruefungStaffelverfahren
         '
         '
         '
-        Me.lblStaffel1Bereich1Last.RootElement.AccessibleDescription = resources.GetString("lblStaffel1Bereich1Last.RootElement.AccessibleDescription")
-        Me.lblStaffel1Bereich1Last.RootElement.AccessibleName = resources.GetString("lblStaffel1Bereich1Last.RootElement.AccessibleName")
-        Me.lblStaffel1Bereich1Last.RootElement.Alignment = CType(resources.GetObject("lblStaffel1Bereich1Last.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblStaffel1Bereich1Last.RootElement.AngleTransform = CType(resources.GetObject("lblStaffel1Bereich1Last.RootElement.AngleTransform"), Single)
-        Me.lblStaffel1Bereich1Last.RootElement.FlipText = CType(resources.GetObject("lblStaffel1Bereich1Last.RootElement.FlipText"), Boolean)
-        Me.lblStaffel1Bereich1Last.RootElement.Margin = CType(resources.GetObject("lblStaffel1Bereich1Last.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblStaffel1Bereich1Last.RootElement.Text = resources.GetString("lblStaffel1Bereich1Last.RootElement.Text")
-        Me.lblStaffel1Bereich1Last.RootElement.TextOrientation = CType(resources.GetObject("lblStaffel1Bereich1Last.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblStaffel1Bereich1Last.RootElement.AccessibleDescription = Nothing
+        Me.lblStaffel1Bereich1Last.RootElement.AccessibleName = Nothing
         '
         'uco10PruefungStaffelverfahren
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.RadScrollablePanel1)
+        Me.DoubleBuffered = True
         Me.Name = "uco10PruefungStaffelverfahren"
         Me.RadScrollablePanel1.PanelContainer.ResumeLayout(false)
         CType(Me.RadScrollablePanel1,System.ComponentModel.ISupportInitialize).EndInit

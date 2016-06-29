@@ -44,14 +44,8 @@ Partial Class uco18Fallbeschleunigung
         '
         '
         '
-        Me.lblBeschreibung.RootElement.AccessibleDescription = resources.GetString("lblBeschreibung.RootElement.AccessibleDescription")
-        Me.lblBeschreibung.RootElement.AccessibleName = resources.GetString("lblBeschreibung.RootElement.AccessibleName")
-        Me.lblBeschreibung.RootElement.Alignment = CType(resources.GetObject("lblBeschreibung.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.lblBeschreibung.RootElement.AngleTransform = CType(resources.GetObject("lblBeschreibung.RootElement.AngleTransform"), Single)
-        Me.lblBeschreibung.RootElement.FlipText = CType(resources.GetObject("lblBeschreibung.RootElement.FlipText"), Boolean)
-        Me.lblBeschreibung.RootElement.Margin = CType(resources.GetObject("lblBeschreibung.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.lblBeschreibung.RootElement.Text = resources.GetString("lblBeschreibung.RootElement.Text")
-        Me.lblBeschreibung.RootElement.TextOrientation = CType(resources.GetObject("lblBeschreibung.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.lblBeschreibung.RootElement.AccessibleDescription = Nothing
+        Me.lblBeschreibung.RootElement.AccessibleName = Nothing
         '
         'RadLabel1
         '
@@ -60,14 +54,8 @@ Partial Class uco18Fallbeschleunigung
         '
         '
         '
-        Me.RadLabel1.RootElement.AccessibleDescription = resources.GetString("RadLabel1.RootElement.AccessibleDescription")
-        Me.RadLabel1.RootElement.AccessibleName = resources.GetString("RadLabel1.RootElement.AccessibleName")
-        Me.RadLabel1.RootElement.Alignment = CType(resources.GetObject("RadLabel1.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadLabel1.RootElement.AngleTransform = CType(resources.GetObject("RadLabel1.RootElement.AngleTransform"), Single)
-        Me.RadLabel1.RootElement.FlipText = CType(resources.GetObject("RadLabel1.RootElement.FlipText"), Boolean)
-        Me.RadLabel1.RootElement.Margin = CType(resources.GetObject("RadLabel1.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel1.RootElement.Text = resources.GetString("RadLabel1.RootElement.Text")
-        Me.RadLabel1.RootElement.TextOrientation = CType(resources.GetObject("RadLabel1.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadLabel1.RootElement.AccessibleDescription = Nothing
+        Me.RadLabel1.RootElement.AccessibleName = Nothing
         '
         'RadLabel3
         '
@@ -76,14 +64,8 @@ Partial Class uco18Fallbeschleunigung
         '
         '
         '
-        Me.RadLabel3.RootElement.AccessibleDescription = resources.GetString("RadLabel3.RootElement.AccessibleDescription")
-        Me.RadLabel3.RootElement.AccessibleName = resources.GetString("RadLabel3.RootElement.AccessibleName")
-        Me.RadLabel3.RootElement.Alignment = CType(resources.GetObject("RadLabel3.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadLabel3.RootElement.AngleTransform = CType(resources.GetObject("RadLabel3.RootElement.AngleTransform"), Single)
-        Me.RadLabel3.RootElement.FlipText = CType(resources.GetObject("RadLabel3.RootElement.FlipText"), Boolean)
-        Me.RadLabel3.RootElement.Margin = CType(resources.GetObject("RadLabel3.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadLabel3.RootElement.Text = resources.GetString("RadLabel3.RootElement.Text")
-        Me.RadLabel3.RootElement.TextOrientation = CType(resources.GetObject("RadLabel3.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadLabel3.RootElement.AccessibleDescription = Nothing
+        Me.RadLabel3.RootElement.AccessibleName = Nothing
         '
         'RadCheckBoxSchwerkraft
         '
@@ -92,18 +74,13 @@ Partial Class uco18Fallbeschleunigung
         '
         '
         '
-        Me.RadCheckBoxSchwerkraft.RootElement.AccessibleDescription = resources.GetString("RadCheckBoxSchwerkraft.RootElement.AccessibleDescription")
-        Me.RadCheckBoxSchwerkraft.RootElement.AccessibleName = resources.GetString("RadCheckBoxSchwerkraft.RootElement.AccessibleName")
-        Me.RadCheckBoxSchwerkraft.RootElement.Alignment = CType(resources.GetObject("RadCheckBoxSchwerkraft.RootElement.Alignment"), System.Drawing.ContentAlignment)
-        Me.RadCheckBoxSchwerkraft.RootElement.AngleTransform = CType(resources.GetObject("RadCheckBoxSchwerkraft.RootElement.AngleTransform"), Single)
-        Me.RadCheckBoxSchwerkraft.RootElement.FlipText = CType(resources.GetObject("RadCheckBoxSchwerkraft.RootElement.FlipText"), Boolean)
-        Me.RadCheckBoxSchwerkraft.RootElement.Margin = CType(resources.GetObject("RadCheckBoxSchwerkraft.RootElement.Margin"), System.Windows.Forms.Padding)
-        Me.RadCheckBoxSchwerkraft.RootElement.Text = resources.GetString("RadCheckBoxSchwerkraft.RootElement.Text")
-        Me.RadCheckBoxSchwerkraft.RootElement.TextOrientation = CType(resources.GetObject("RadCheckBoxSchwerkraft.RootElement.TextOrientation"), System.Windows.Forms.Orientation)
+        Me.RadCheckBoxSchwerkraft.RootElement.AccessibleDescription = Nothing
+        Me.RadCheckBoxSchwerkraft.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlG
         '
         resources.ApplyResources(Me.RadTextBoxControlG, "RadTextBoxControlG")
+        Me.RadTextBoxControlG.MaxLength = 10
         Me.RadTextBoxControlG.Name = "RadTextBoxControlG"
         '
         'lblPflichtfeld1
@@ -129,6 +106,7 @@ Partial Class uco18Fallbeschleunigung
         Me.Controls.Add(Me.RadLabel3)
         Me.Controls.Add(Me.RadLabel1)
         Me.Controls.Add(Me.lblBeschreibung)
+        Me.DoubleBuffered = True
         Me.ForeColor = System.Drawing.Color.Black
         Me.Name = "uco18Fallbeschleunigung"
         CType(Me.lblBeschreibung, System.ComponentModel.ISupportInitialize).EndInit()

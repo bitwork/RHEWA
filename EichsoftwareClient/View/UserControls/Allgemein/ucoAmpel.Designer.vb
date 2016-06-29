@@ -37,12 +37,13 @@ Partial Class ucoAmpel
         Me.RadListView1.TabIndex = 0
         Me.RadListView1.Text = "RadListView1"
         '
-        'ucoNewStatustlist
+        'ucoAmpel
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.RadListView1)
-        Me.Name = "ucoNewStatustlist"
+        Me.DoubleBuffered = True
+        Me.Name = "ucoAmpel"
         Me.Size = New System.Drawing.Size(227, 110)
         CType(Me.RadListView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

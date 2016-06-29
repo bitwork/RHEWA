@@ -46,6 +46,7 @@ Partial Class ucoBenutzerwechsel
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.RadButton1)
+        Me.DoubleBuffered = True
         Me.Name = "ucoBenutzerwechsel"
         Me.Size = New System.Drawing.Size(526, 55)
         CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).EndInit()

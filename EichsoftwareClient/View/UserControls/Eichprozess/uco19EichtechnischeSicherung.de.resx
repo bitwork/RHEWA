@@ -119,7 +119,7 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lblCE2016Kennzeichen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 18</value>
+    <value>199, 18</value>
   </data>
   <data name="lblCE2016Kennzeichen.Text" xml:space="preserve">
     <value>Marke CE, Mxx, "Benannte Stelle 0111"</value>
@@ -173,7 +173,7 @@
     <value>Bemerkungen:</value>
   </data>
   <data name="RadTextBoxControlBemerkungen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>477, 647</value>
+    <value>477, 1092</value>
   </data>
   <data name="lblAnzahl.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 18</value>

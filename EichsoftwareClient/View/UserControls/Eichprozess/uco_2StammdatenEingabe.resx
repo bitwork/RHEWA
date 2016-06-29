@@ -246,30 +246,6 @@
   <data name="RadTextBoxStammdatenPLZ.Location" type="System.Drawing.Point, System.Drawing">
     <value>239, 105</value>
   </data>
-  <data name="RadTextBoxStammdatenPLZ.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxStammdatenPLZ.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxStammdatenPLZ.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadTextBoxStammdatenPLZ.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadTextBoxStammdatenPLZ.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadTextBoxStammdatenPLZ.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadTextBoxStammdatenPLZ.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxStammdatenPLZ.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
   <data name="RadTextBoxStammdatenPLZ.Size" type="System.Drawing.Size, System.Drawing">
     <value>361, 20</value>
   </data>
@@ -280,7 +256,7 @@
     <value>RadTextBoxStammdatenPLZ</value>
   </data>
   <data name="&gt;&gt;RadTextBoxStammdatenPLZ.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxStammdatenPLZ.Parent" xml:space="preserve">
     <value>RadGroupBoxStammdaten</value>
@@ -290,30 +266,6 @@
   </data>
   <data name="lblPLZ.Location" type="System.Drawing.Point, System.Drawing">
     <value>34, 105</value>
-  </data>
-  <data name="lblPLZ.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblPLZ.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblPLZ.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="lblPLZ.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblPLZ.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lblPLZ.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblPLZ.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblPLZ.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="lblPLZ.Size" type="System.Drawing.Size, System.Drawing">
     <value>66, 18</value>
@@ -328,7 +280,7 @@
     <value>lblPLZ</value>
   </data>
   <data name="&gt;&gt;lblPLZ.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblPLZ.Parent" xml:space="preserve">
     <value>RadGroupBoxStammdaten</value>
@@ -338,30 +290,6 @@
   </data>
   <data name="RadTextBoxStammdatenOrt.Location" type="System.Drawing.Point, System.Drawing">
     <value>239, 79</value>
-  </data>
-  <data name="RadTextBoxStammdatenOrt.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxStammdatenOrt.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxStammdatenOrt.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadTextBoxStammdatenOrt.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadTextBoxStammdatenOrt.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadTextBoxStammdatenOrt.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadTextBoxStammdatenOrt.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxStammdatenOrt.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="RadTextBoxStammdatenOrt.Size" type="System.Drawing.Size, System.Drawing">
     <value>361, 20</value>
@@ -373,7 +301,7 @@
     <value>RadTextBoxStammdatenOrt</value>
   </data>
   <data name="&gt;&gt;RadTextBoxStammdatenOrt.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxStammdatenOrt.Parent" xml:space="preserve">
     <value>RadGroupBoxStammdaten</value>
@@ -383,30 +311,6 @@
   </data>
   <data name="lblOrt.Location" type="System.Drawing.Point, System.Drawing">
     <value>33, 79</value>
-  </data>
-  <data name="lblOrt.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblOrt.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblOrt.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="lblOrt.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblOrt.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lblOrt.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblOrt.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblOrt.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="lblOrt.Size" type="System.Drawing.Size, System.Drawing">
     <value>25, 18</value>
@@ -421,7 +325,7 @@
     <value>lblOrt</value>
   </data>
   <data name="&gt;&gt;lblOrt.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblOrt.Parent" xml:space="preserve">
     <value>RadGroupBoxStammdaten</value>
@@ -431,30 +335,6 @@
   </data>
   <data name="RadTextBoxStammdatenStrasse.Location" type="System.Drawing.Point, System.Drawing">
     <value>239, 53</value>
-  </data>
-  <data name="RadTextBoxStammdatenStrasse.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxStammdatenStrasse.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxStammdatenStrasse.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadTextBoxStammdatenStrasse.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadTextBoxStammdatenStrasse.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadTextBoxStammdatenStrasse.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadTextBoxStammdatenStrasse.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxStammdatenStrasse.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="RadTextBoxStammdatenStrasse.Size" type="System.Drawing.Size, System.Drawing">
     <value>361, 20</value>
@@ -466,7 +346,7 @@
     <value>RadTextBoxStammdatenStrasse</value>
   </data>
   <data name="&gt;&gt;RadTextBoxStammdatenStrasse.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxStammdatenStrasse.Parent" xml:space="preserve">
     <value>RadGroupBoxStammdaten</value>
@@ -476,30 +356,6 @@
   </data>
   <data name="lblStrasse.Location" type="System.Drawing.Point, System.Drawing">
     <value>33, 53</value>
-  </data>
-  <data name="lblStrasse.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblStrasse.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblStrasse.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="lblStrasse.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblStrasse.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lblStrasse.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblStrasse.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblStrasse.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="lblStrasse.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 18</value>
@@ -514,7 +370,7 @@
     <value>lblStrasse</value>
   </data>
   <data name="&gt;&gt;lblStrasse.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblStrasse.Parent" xml:space="preserve">
     <value>RadGroupBoxStammdaten</value>
@@ -524,30 +380,6 @@
   </data>
   <data name="RadTextBoxStammdatenWaagenbaufirma.Location" type="System.Drawing.Point, System.Drawing">
     <value>239, 27</value>
-  </data>
-  <data name="RadTextBoxStammdatenWaagenbaufirma.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxStammdatenWaagenbaufirma.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxStammdatenWaagenbaufirma.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadTextBoxStammdatenWaagenbaufirma.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadTextBoxStammdatenWaagenbaufirma.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadTextBoxStammdatenWaagenbaufirma.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadTextBoxStammdatenWaagenbaufirma.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxStammdatenWaagenbaufirma.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="RadTextBoxStammdatenWaagenbaufirma.Size" type="System.Drawing.Size, System.Drawing">
     <value>361, 20</value>
@@ -559,7 +391,7 @@
     <value>RadTextBoxStammdatenWaagenbaufirma</value>
   </data>
   <data name="&gt;&gt;RadTextBoxStammdatenWaagenbaufirma.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxStammdatenWaagenbaufirma.Parent" xml:space="preserve">
     <value>RadGroupBoxStammdaten</value>
@@ -569,30 +401,6 @@
   </data>
   <data name="lblWaagenbaufirma.Location" type="System.Drawing.Point, System.Drawing">
     <value>33, 27</value>
-  </data>
-  <data name="lblWaagenbaufirma.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblWaagenbaufirma.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblWaagenbaufirma.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="lblWaagenbaufirma.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblWaagenbaufirma.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lblWaagenbaufirma.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblWaagenbaufirma.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblWaagenbaufirma.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="lblWaagenbaufirma.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 18</value>
@@ -607,7 +415,7 @@
     <value>lblWaagenbaufirma</value>
   </data>
   <data name="&gt;&gt;lblWaagenbaufirma.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblWaagenbaufirma.Parent" xml:space="preserve">
     <value>RadGroupBoxStammdaten</value>
@@ -620,30 +428,6 @@
   </data>
   <data name="RadGroupBoxStammdaten.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
-  </data>
-  <data name="RadGroupBoxStammdaten.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadGroupBoxStammdaten.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadGroupBoxStammdaten.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadGroupBoxStammdaten.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadGroupBoxStammdaten.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadGroupBoxStammdaten.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadGroupBoxStammdaten.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadGroupBoxStammdaten.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="RadGroupBoxStammdaten.Size" type="System.Drawing.Size, System.Drawing">
     <value>927, 145</value>
@@ -658,7 +442,7 @@
     <value>RadGroupBoxStammdaten</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxStammdaten.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxStammdaten.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -774,30 +558,6 @@
   <data name="RadButtonNeueWaegezelle.Location" type="System.Drawing.Point, System.Drawing">
     <value>606, 31</value>
   </data>
-  <data name="RadButtonNeueWaegezelle.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadButtonNeueWaegezelle.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadButtonNeueWaegezelle.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadButtonNeueWaegezelle.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadButtonNeueWaegezelle.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadButtonNeueWaegezelle.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadButtonNeueWaegezelle.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadButtonNeueWaegezelle.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
   <data name="RadButtonNeueWaegezelle.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 42</value>
   </data>
@@ -808,7 +568,7 @@
     <value>RadButtonNeueWaegezelle</value>
   </data>
   <data name="&gt;&gt;RadButtonNeueWaegezelle.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonNeueWaegezelle.Parent" xml:space="preserve">
     <value>RadGroupBoxWZ</value>
@@ -818,30 +578,6 @@
   </data>
   <data name="RadDropdownlistlWZHersteller.Location" type="System.Drawing.Point, System.Drawing">
     <value>239, 31</value>
-  </data>
-  <data name="RadDropdownlistlWZHersteller.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadDropdownlistlWZHersteller.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadDropdownlistlWZHersteller.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadDropdownlistlWZHersteller.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadDropdownlistlWZHersteller.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadDropdownlistlWZHersteller.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadDropdownlistlWZHersteller.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadDropdownlistlWZHersteller.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="RadDropdownlistlWZHersteller.Size" type="System.Drawing.Size, System.Drawing">
     <value>361, 20</value>
@@ -853,7 +589,7 @@
     <value>RadDropdownlistlWZHersteller</value>
   </data>
   <data name="&gt;&gt;RadDropdownlistlWZHersteller.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadDropDownList, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadDropDownList, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadDropdownlistlWZHersteller.Parent" xml:space="preserve">
     <value>RadGroupBoxWZ</value>
@@ -863,30 +599,6 @@
   </data>
   <data name="RadDropdownlistlWZTyp.Location" type="System.Drawing.Point, System.Drawing">
     <value>239, 61</value>
-  </data>
-  <data name="RadDropdownlistlWZTyp.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadDropdownlistlWZTyp.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadDropdownlistlWZTyp.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadDropdownlistlWZTyp.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadDropdownlistlWZTyp.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadDropdownlistlWZTyp.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadDropdownlistlWZTyp.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadDropdownlistlWZTyp.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="RadDropdownlistlWZTyp.Size" type="System.Drawing.Size, System.Drawing">
     <value>361, 20</value>
@@ -898,7 +610,7 @@
     <value>RadDropdownlistlWZTyp</value>
   </data>
   <data name="&gt;&gt;RadDropdownlistlWZTyp.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadDropDownList, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadDropDownList, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadDropdownlistlWZTyp.Parent" xml:space="preserve">
     <value>RadGroupBoxWZ</value>
@@ -908,30 +620,6 @@
   </data>
   <data name="lblAWZTyp.Location" type="System.Drawing.Point, System.Drawing">
     <value>33, 61</value>
-  </data>
-  <data name="lblAWZTyp.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblAWZTyp.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblAWZTyp.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="lblAWZTyp.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblAWZTyp.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lblAWZTyp.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblAWZTyp.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblAWZTyp.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="lblAWZTyp.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 18</value>
@@ -946,7 +634,7 @@
     <value>lblAWZTyp</value>
   </data>
   <data name="&gt;&gt;lblAWZTyp.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblAWZTyp.Parent" xml:space="preserve">
     <value>RadGroupBoxWZ</value>
@@ -956,30 +644,6 @@
   </data>
   <data name="RadTextBoxWZBauartzulassung.Location" type="System.Drawing.Point, System.Drawing">
     <value>267, 117</value>
-  </data>
-  <data name="RadTextBoxWZBauartzulassung.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxWZBauartzulassung.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxWZBauartzulassung.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadTextBoxWZBauartzulassung.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadTextBoxWZBauartzulassung.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadTextBoxWZBauartzulassung.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadTextBoxWZBauartzulassung.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxWZBauartzulassung.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="RadTextBoxWZBauartzulassung.Size" type="System.Drawing.Size, System.Drawing">
     <value>333, 20</value>
@@ -991,7 +655,7 @@
     <value>RadTextBoxWZBauartzulassung</value>
   </data>
   <data name="&gt;&gt;RadTextBoxWZBauartzulassung.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxWZBauartzulassung.Parent" xml:space="preserve">
     <value>RadGroupBoxWZ</value>
@@ -1001,30 +665,6 @@
   </data>
   <data name="lblAWZZulassung2.Location" type="System.Drawing.Point, System.Drawing">
     <value>33, 117</value>
-  </data>
-  <data name="lblAWZZulassung2.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblAWZZulassung2.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblAWZZulassung2.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="lblAWZZulassung2.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblAWZZulassung2.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lblAWZZulassung2.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblAWZZulassung2.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblAWZZulassung2.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="lblAWZZulassung2.Size" type="System.Drawing.Size, System.Drawing">
     <value>199, 18</value>
@@ -1039,7 +679,7 @@
     <value>lblAWZZulassung2</value>
   </data>
   <data name="&gt;&gt;lblAWZZulassung2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblAWZZulassung2.Parent" xml:space="preserve">
     <value>RadGroupBoxWZ</value>
@@ -1049,30 +689,6 @@
   </data>
   <data name="RadTextBoxWZPruefbericht.Location" type="System.Drawing.Point, System.Drawing">
     <value>239, 91</value>
-  </data>
-  <data name="RadTextBoxWZPruefbericht.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxWZPruefbericht.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxWZPruefbericht.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadTextBoxWZPruefbericht.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadTextBoxWZPruefbericht.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadTextBoxWZPruefbericht.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadTextBoxWZPruefbericht.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxWZPruefbericht.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="RadTextBoxWZPruefbericht.Size" type="System.Drawing.Size, System.Drawing">
     <value>361, 20</value>
@@ -1084,7 +700,7 @@
     <value>RadTextBoxWZPruefbericht</value>
   </data>
   <data name="&gt;&gt;RadTextBoxWZPruefbericht.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxWZPruefbericht.Parent" xml:space="preserve">
     <value>RadGroupBoxWZ</value>
@@ -1094,30 +710,6 @@
   </data>
   <data name="lblAWZZulassung.Location" type="System.Drawing.Point, System.Drawing">
     <value>33, 91</value>
-  </data>
-  <data name="lblAWZZulassung.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblAWZZulassung.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblAWZZulassung.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="lblAWZZulassung.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblAWZZulassung.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lblAWZZulassung.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblAWZZulassung.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblAWZZulassung.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="lblAWZZulassung.Size" type="System.Drawing.Size, System.Drawing">
     <value>101, 18</value>
@@ -1132,7 +724,7 @@
     <value>lblAWZZulassung</value>
   </data>
   <data name="&gt;&gt;lblAWZZulassung.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblAWZZulassung.Parent" xml:space="preserve">
     <value>RadGroupBoxWZ</value>
@@ -1142,30 +734,6 @@
   </data>
   <data name="lblAWZHersteller.Location" type="System.Drawing.Point, System.Drawing">
     <value>33, 31</value>
-  </data>
-  <data name="lblAWZHersteller.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblAWZHersteller.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblAWZHersteller.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="lblAWZHersteller.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblAWZHersteller.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lblAWZHersteller.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblAWZHersteller.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblAWZHersteller.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="lblAWZHersteller.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 18</value>
@@ -1180,7 +748,7 @@
     <value>lblAWZHersteller</value>
   </data>
   <data name="&gt;&gt;lblAWZHersteller.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblAWZHersteller.Parent" xml:space="preserve">
     <value>RadGroupBoxWZ</value>
@@ -1194,30 +762,6 @@
   </data>
   <data name="RadGroupBoxWZ.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 462</value>
-  </data>
-  <data name="RadGroupBoxWZ.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadGroupBoxWZ.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadGroupBoxWZ.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadGroupBoxWZ.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadGroupBoxWZ.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadGroupBoxWZ.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadGroupBoxWZ.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadGroupBoxWZ.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="RadGroupBoxWZ.Size" type="System.Drawing.Size, System.Drawing">
     <value>927, 147</value>
@@ -1233,7 +777,7 @@
     <value>RadGroupBoxWZ</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxWZ.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxWZ.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -1334,30 +878,6 @@
   <data name="lblWaagenart.Location" type="System.Drawing.Point, System.Drawing">
     <value>34, 91</value>
   </data>
-  <data name="lblWaagenart.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblWaagenart.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblWaagenart.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="lblWaagenart.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblWaagenart.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lblWaagenart.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblWaagenart.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblWaagenart.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
   <data name="lblWaagenart.Size" type="System.Drawing.Size, System.Drawing">
     <value>92, 18</value>
   </data>
@@ -1371,7 +891,7 @@
     <value>lblWaagenart</value>
   </data>
   <data name="&gt;&gt;lblWaagenart.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblWaagenart.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
@@ -1403,30 +923,6 @@
   <data name="RadDropDownListWaagenArt.Location" type="System.Drawing.Point, System.Drawing">
     <value>239, 91</value>
   </data>
-  <data name="RadDropDownListWaagenArt.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadDropDownListWaagenArt.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadDropDownListWaagenArt.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadDropDownListWaagenArt.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadDropDownListWaagenArt.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadDropDownListWaagenArt.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadDropDownListWaagenArt.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadDropDownListWaagenArt.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
   <data name="RadDropDownListWaagenArt.Size" type="System.Drawing.Size, System.Drawing">
     <value>361, 20</value>
   </data>
@@ -1437,7 +933,7 @@
     <value>RadDropDownListWaagenArt</value>
   </data>
   <data name="&gt;&gt;RadDropDownListWaagenArt.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadDropDownList, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadDropDownList, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadDropDownListWaagenArt.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
@@ -1447,30 +943,6 @@
   </data>
   <data name="RadLabel16.Location" type="System.Drawing.Point, System.Drawing">
     <value>34, 121</value>
-  </data>
-  <data name="RadLabel16.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadLabel16.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadLabel16.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadLabel16.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadLabel16.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadLabel16.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadLabel16.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadLabel16.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="RadLabel16.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 18</value>
@@ -1485,7 +957,7 @@
     <value>RadLabel16</value>
   </data>
   <data name="&gt;&gt;RadLabel16.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadLabel16.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
@@ -1495,30 +967,6 @@
   </data>
   <data name="RadDropdownlistWaagenTyp.Location" type="System.Drawing.Point, System.Drawing">
     <value>239, 61</value>
-  </data>
-  <data name="RadDropdownlistWaagenTyp.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadDropdownlistWaagenTyp.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadDropdownlistWaagenTyp.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadDropdownlistWaagenTyp.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadDropdownlistWaagenTyp.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadDropdownlistWaagenTyp.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadDropdownlistWaagenTyp.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadDropdownlistWaagenTyp.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="RadDropdownlistWaagenTyp.Size" type="System.Drawing.Size, System.Drawing">
     <value>361, 20</value>
@@ -1530,7 +978,7 @@
     <value>RadDropdownlistWaagenTyp</value>
   </data>
   <data name="&gt;&gt;RadDropdownlistWaagenTyp.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadDropDownList, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadDropDownList, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadDropdownlistWaagenTyp.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
@@ -1540,30 +988,6 @@
   </data>
   <data name="RadTextBoxWaageZulassungsinhaber.Location" type="System.Drawing.Point, System.Drawing">
     <value>239, 121</value>
-  </data>
-  <data name="RadTextBoxWaageZulassungsinhaber.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxWaageZulassungsinhaber.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxWaageZulassungsinhaber.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadTextBoxWaageZulassungsinhaber.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadTextBoxWaageZulassungsinhaber.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadTextBoxWaageZulassungsinhaber.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadTextBoxWaageZulassungsinhaber.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxWaageZulassungsinhaber.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="RadTextBoxWaageZulassungsinhaber.Size" type="System.Drawing.Size, System.Drawing">
     <value>361, 20</value>
@@ -1575,7 +999,7 @@
     <value>RadTextBoxWaageZulassungsinhaber</value>
   </data>
   <data name="&gt;&gt;RadTextBoxWaageZulassungsinhaber.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxWaageZulassungsinhaber.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
@@ -1585,30 +1009,6 @@
   </data>
   <data name="lblAWaagenTyp.Location" type="System.Drawing.Point, System.Drawing">
     <value>33, 61</value>
-  </data>
-  <data name="lblAWaagenTyp.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblAWaagenTyp.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblAWaagenTyp.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="lblAWaagenTyp.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblAWaagenTyp.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lblAWaagenTyp.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblAWaagenTyp.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblAWaagenTyp.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="lblAWaagenTyp.Size" type="System.Drawing.Size, System.Drawing">
     <value>150, 18</value>
@@ -1623,7 +1023,7 @@
     <value>lblAWaagenTyp</value>
   </data>
   <data name="&gt;&gt;lblAWaagenTyp.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblAWaagenTyp.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
@@ -1633,30 +1033,6 @@
   </data>
   <data name="RadTextBoxWaageSeriennummer.Location" type="System.Drawing.Point, System.Drawing">
     <value>239, 35</value>
-  </data>
-  <data name="RadTextBoxWaageSeriennummer.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxWaageSeriennummer.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxWaageSeriennummer.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadTextBoxWaageSeriennummer.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadTextBoxWaageSeriennummer.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadTextBoxWaageSeriennummer.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadTextBoxWaageSeriennummer.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxWaageSeriennummer.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="RadTextBoxWaageSeriennummer.Size" type="System.Drawing.Size, System.Drawing">
     <value>361, 20</value>
@@ -1668,7 +1044,7 @@
     <value>RadTextBoxWaageSeriennummer</value>
   </data>
   <data name="&gt;&gt;RadTextBoxWaageSeriennummer.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxWaageSeriennummer.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
@@ -1678,30 +1054,6 @@
   </data>
   <data name="lblAWaageSeriennummer.Location" type="System.Drawing.Point, System.Drawing">
     <value>33, 35</value>
-  </data>
-  <data name="lblAWaageSeriennummer.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblAWaageSeriennummer.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblAWaageSeriennummer.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="lblAWaageSeriennummer.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblAWaageSeriennummer.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lblAWaageSeriennummer.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblAWaageSeriennummer.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblAWaageSeriennummer.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="lblAWaageSeriennummer.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 18</value>
@@ -1716,7 +1068,7 @@
     <value>lblAWaageSeriennummer</value>
   </data>
   <data name="&gt;&gt;lblAWaageSeriennummer.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblAWaageSeriennummer.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
@@ -1729,30 +1081,6 @@
   </data>
   <data name="RadGroupBoxWaage.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 154</value>
-  </data>
-  <data name="RadGroupBoxWaage.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadGroupBoxWaage.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadGroupBoxWaage.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadGroupBoxWaage.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadGroupBoxWaage.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadGroupBoxWaage.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadGroupBoxWaage.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadGroupBoxWaage.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="RadGroupBoxWaage.Size" type="System.Drawing.Size, System.Drawing">
     <value>927, 151</value>
@@ -1767,7 +1095,7 @@
     <value>RadGroupBoxWaage</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxWaage.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxWaage.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -1871,30 +1199,6 @@
   <data name="RadDropdownlistAWGTyp.Location" type="System.Drawing.Point, System.Drawing">
     <value>238, 32</value>
   </data>
-  <data name="RadDropdownlistAWGTyp.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadDropdownlistAWGTyp.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadDropdownlistAWGTyp.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadDropdownlistAWGTyp.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadDropdownlistAWGTyp.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadDropdownlistAWGTyp.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadDropdownlistAWGTyp.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadDropdownlistAWGTyp.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
   <data name="RadDropdownlistAWGTyp.Size" type="System.Drawing.Size, System.Drawing">
     <value>361, 20</value>
   </data>
@@ -1905,7 +1209,7 @@
     <value>RadDropdownlistAWGTyp</value>
   </data>
   <data name="&gt;&gt;RadDropdownlistAWGTyp.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadDropDownList, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadDropDownList, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadDropdownlistAWGTyp.Parent" xml:space="preserve">
     <value>RadGroupBoxAWG</value>
@@ -1915,30 +1219,6 @@
   </data>
   <data name="lblAWGTyp.Location" type="System.Drawing.Point, System.Drawing">
     <value>32, 30</value>
-  </data>
-  <data name="lblAWGTyp.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblAWGTyp.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblAWGTyp.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="lblAWGTyp.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblAWGTyp.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lblAWGTyp.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblAWGTyp.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblAWGTyp.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="lblAWGTyp.Size" type="System.Drawing.Size, System.Drawing">
     <value>30, 18</value>
@@ -1953,7 +1233,7 @@
     <value>lblAWGTyp</value>
   </data>
   <data name="&gt;&gt;lblAWGTyp.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblAWGTyp.Parent" xml:space="preserve">
     <value>RadGroupBoxAWG</value>
@@ -1963,30 +1243,6 @@
   </data>
   <data name="RadTextBoxAWGBauartzulassung.Location" type="System.Drawing.Point, System.Drawing">
     <value>267, 114</value>
-  </data>
-  <data name="RadTextBoxAWGBauartzulassung.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxAWGBauartzulassung.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxAWGBauartzulassung.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadTextBoxAWGBauartzulassung.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadTextBoxAWGBauartzulassung.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadTextBoxAWGBauartzulassung.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadTextBoxAWGBauartzulassung.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxAWGBauartzulassung.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="RadTextBoxAWGBauartzulassung.Size" type="System.Drawing.Size, System.Drawing">
     <value>332, 20</value>
@@ -1998,7 +1254,7 @@
     <value>RadTextBoxAWGBauartzulassung</value>
   </data>
   <data name="&gt;&gt;RadTextBoxAWGBauartzulassung.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxAWGBauartzulassung.Parent" xml:space="preserve">
     <value>RadGroupBoxAWG</value>
@@ -2008,30 +1264,6 @@
   </data>
   <data name="lblAWGBauart2.Location" type="System.Drawing.Point, System.Drawing">
     <value>32, 114</value>
-  </data>
-  <data name="lblAWGBauart2.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblAWGBauart2.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblAWGBauart2.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="lblAWGBauart2.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblAWGBauart2.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lblAWGBauart2.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblAWGBauart2.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblAWGBauart2.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="lblAWGBauart2.Size" type="System.Drawing.Size, System.Drawing">
     <value>199, 18</value>
@@ -2046,7 +1278,7 @@
     <value>lblAWGBauart2</value>
   </data>
   <data name="&gt;&gt;lblAWGBauart2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblAWGBauart2.Parent" xml:space="preserve">
     <value>RadGroupBoxAWG</value>
@@ -2056,30 +1288,6 @@
   </data>
   <data name="RadTextBoxAWGPruefbericht.Location" type="System.Drawing.Point, System.Drawing">
     <value>238, 88</value>
-  </data>
-  <data name="RadTextBoxAWGPruefbericht.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxAWGPruefbericht.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxAWGPruefbericht.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadTextBoxAWGPruefbericht.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadTextBoxAWGPruefbericht.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadTextBoxAWGPruefbericht.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadTextBoxAWGPruefbericht.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxAWGPruefbericht.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="RadTextBoxAWGPruefbericht.Size" type="System.Drawing.Size, System.Drawing">
     <value>361, 20</value>
@@ -2091,7 +1299,7 @@
     <value>RadTextBoxAWGPruefbericht</value>
   </data>
   <data name="&gt;&gt;RadTextBoxAWGPruefbericht.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxAWGPruefbericht.Parent" xml:space="preserve">
     <value>RadGroupBoxAWG</value>
@@ -2101,30 +1309,6 @@
   </data>
   <data name="lblAWGBauart.Location" type="System.Drawing.Point, System.Drawing">
     <value>32, 88</value>
-  </data>
-  <data name="lblAWGBauart.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblAWGBauart.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblAWGBauart.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="lblAWGBauart.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblAWGBauart.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lblAWGBauart.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblAWGBauart.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblAWGBauart.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="lblAWGBauart.Size" type="System.Drawing.Size, System.Drawing">
     <value>101, 18</value>
@@ -2139,7 +1323,7 @@
     <value>lblAWGBauart</value>
   </data>
   <data name="&gt;&gt;lblAWGBauart.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblAWGBauart.Parent" xml:space="preserve">
     <value>RadGroupBoxAWG</value>
@@ -2149,30 +1333,6 @@
   </data>
   <data name="RadTextBoxAWGHersteller.Location" type="System.Drawing.Point, System.Drawing">
     <value>238, 62</value>
-  </data>
-  <data name="RadTextBoxAWGHersteller.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxAWGHersteller.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxAWGHersteller.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadTextBoxAWGHersteller.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadTextBoxAWGHersteller.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadTextBoxAWGHersteller.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadTextBoxAWGHersteller.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadTextBoxAWGHersteller.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="RadTextBoxAWGHersteller.Size" type="System.Drawing.Size, System.Drawing">
     <value>361, 20</value>
@@ -2184,7 +1344,7 @@
     <value>RadTextBoxAWGHersteller</value>
   </data>
   <data name="&gt;&gt;RadTextBoxAWGHersteller.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxAWGHersteller.Parent" xml:space="preserve">
     <value>RadGroupBoxAWG</value>
@@ -2194,30 +1354,6 @@
   </data>
   <data name="lblAWGHersteller.Location" type="System.Drawing.Point, System.Drawing">
     <value>32, 62</value>
-  </data>
-  <data name="lblAWGHersteller.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblAWGHersteller.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblAWGHersteller.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="lblAWGHersteller.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblAWGHersteller.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lblAWGHersteller.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblAWGHersteller.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblAWGHersteller.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="lblAWGHersteller.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 18</value>
@@ -2232,7 +1368,7 @@
     <value>lblAWGHersteller</value>
   </data>
   <data name="&gt;&gt;lblAWGHersteller.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblAWGHersteller.Parent" xml:space="preserve">
     <value>RadGroupBoxAWG</value>
@@ -2246,30 +1382,6 @@
   </data>
   <data name="RadGroupBoxAWG.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 311</value>
-  </data>
-  <data name="RadGroupBoxAWG.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadGroupBoxAWG.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadGroupBoxAWG.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadGroupBoxAWG.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadGroupBoxAWG.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadGroupBoxAWG.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadGroupBoxAWG.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadGroupBoxAWG.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="RadGroupBoxAWG.Size" type="System.Drawing.Size, System.Drawing">
     <value>927, 145</value>
@@ -2285,7 +1397,7 @@
     <value>RadGroupBoxAWG</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxAWG.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxAWG.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -2300,37 +1412,13 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanel1.PanelContainer.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadScrollablePanelContainer, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadScrollablePanelContainer, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanel1.PanelContainer.Parent" xml:space="preserve">
     <value>RadScrollablePanel1</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanel1.PanelContainer.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="RadScrollablePanel1.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadScrollablePanel1.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadScrollablePanel1.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadScrollablePanel1.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadScrollablePanel1.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadScrollablePanel1.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadScrollablePanel1.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadScrollablePanel1.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="RadScrollablePanel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>935, 634</value>
@@ -2342,7 +1430,7 @@
     <value>RadScrollablePanel1</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanel1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadScrollablePanel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadScrollablePanel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanel1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -2363,6 +1451,6 @@
     <value>uco_2StammdatenEingabe</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.5659.11537, Culture=neutral, PublicKeyToken=null</value>
+    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.6024.16918, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

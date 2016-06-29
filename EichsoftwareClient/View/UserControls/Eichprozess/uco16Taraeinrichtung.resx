@@ -186,33 +186,6 @@
   <data name="lblTaraAusrichtung.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 12</value>
   </data>
-  <data name="lblTaraAusrichtung.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblTaraAusrichtung.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblTaraAusrichtung.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="lblTaraAusrichtung.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblTaraAusrichtung.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lblTaraAusrichtung.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblTaraAusrichtung.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblTaraAusrichtung.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblTaraAusrichtung.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
-  </data>
   <data name="lblTaraAusrichtung.Size" type="System.Drawing.Size, System.Drawing">
     <value>112, 18</value>
   </data>
@@ -226,7 +199,7 @@
     <value>lblTaraAusrichtung</value>
   </data>
   <data name="&gt;&gt;lblTaraAusrichtung.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblTaraAusrichtung.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -236,33 +209,6 @@
   </data>
   <data name="RadCheckBoxTaraGenauigkeitTarrierung.Location" type="System.Drawing.Point, System.Drawing">
     <value>452, 63</value>
-  </data>
-  <data name="RadCheckBoxTaraGenauigkeitTarrierung.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxTaraGenauigkeitTarrierung.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxTaraGenauigkeitTarrierung.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadCheckBoxTaraGenauigkeitTarrierung.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadCheckBoxTaraGenauigkeitTarrierung.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadCheckBoxTaraGenauigkeitTarrierung.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadCheckBoxTaraGenauigkeitTarrierung.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadCheckBoxTaraGenauigkeitTarrierung.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxTaraGenauigkeitTarrierung.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="RadCheckBoxTaraGenauigkeitTarrierung.Size" type="System.Drawing.Size, System.Drawing">
     <value>15, 15</value>
@@ -274,7 +220,7 @@
     <value>RadCheckBoxTaraGenauigkeitTarrierung</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxTaraGenauigkeitTarrierung.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxTaraGenauigkeitTarrierung.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -284,33 +230,6 @@
   </data>
   <data name="lblGenauigkeit.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 36</value>
-  </data>
-  <data name="lblGenauigkeit.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblGenauigkeit.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblGenauigkeit.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="lblGenauigkeit.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblGenauigkeit.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lblGenauigkeit.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblGenauigkeit.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblGenauigkeit.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblGenauigkeit.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="lblGenauigkeit.Size" type="System.Drawing.Size, System.Drawing">
     <value>172, 18</value>
@@ -325,7 +244,7 @@
     <value>lblGenauigkeit</value>
   </data>
   <data name="&gt;&gt;lblGenauigkeit.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblGenauigkeit.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -335,33 +254,6 @@
   </data>
   <data name="RadCheckBoxTaraausgleicheinrichtungOK.Location" type="System.Drawing.Point, System.Drawing">
     <value>452, 36</value>
-  </data>
-  <data name="RadCheckBoxTaraausgleicheinrichtungOK.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxTaraausgleicheinrichtungOK.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxTaraausgleicheinrichtungOK.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadCheckBoxTaraausgleicheinrichtungOK.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadCheckBoxTaraausgleicheinrichtungOK.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadCheckBoxTaraausgleicheinrichtungOK.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadCheckBoxTaraausgleicheinrichtungOK.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadCheckBoxTaraausgleicheinrichtungOK.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxTaraausgleicheinrichtungOK.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="RadCheckBoxTaraausgleicheinrichtungOK.Size" type="System.Drawing.Size, System.Drawing">
     <value>15, 15</value>
@@ -373,7 +265,7 @@
     <value>RadCheckBoxTaraausgleicheinrichtungOK</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxTaraausgleicheinrichtungOK.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxTaraausgleicheinrichtungOK.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -383,33 +275,6 @@
   </data>
   <data name="lblRichtigkeitspruefung.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 60</value>
-  </data>
-  <data name="lblRichtigkeitspruefung.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblRichtigkeitspruefung.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblRichtigkeitspruefung.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="lblRichtigkeitspruefung.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblRichtigkeitspruefung.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lblRichtigkeitspruefung.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblRichtigkeitspruefung.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="lblRichtigkeitspruefung.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="lblRichtigkeitspruefung.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="lblRichtigkeitspruefung.Size" type="System.Drawing.Size, System.Drawing">
     <value>11, 18</value>
@@ -424,7 +289,7 @@
     <value>lblRichtigkeitspruefung</value>
   </data>
   <data name="&gt;&gt;lblRichtigkeitspruefung.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblRichtigkeitspruefung.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -434,33 +299,6 @@
   </data>
   <data name="RadCheckBoxTaraErweiterteRichtigkeitspruefung.Location" type="System.Drawing.Point, System.Drawing">
     <value>452, 12</value>
-  </data>
-  <data name="RadCheckBoxTaraErweiterteRichtigkeitspruefung.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxTaraErweiterteRichtigkeitspruefung.RootElement.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxTaraErweiterteRichtigkeitspruefung.RootElement.Alignment" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopLeft</value>
-  </data>
-  <data name="RadCheckBoxTaraErweiterteRichtigkeitspruefung.RootElement.AngleTransform" type="System.Single, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="RadCheckBoxTaraErweiterteRichtigkeitspruefung.RootElement.FlipText" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="RadCheckBoxTaraErweiterteRichtigkeitspruefung.RootElement.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadCheckBoxTaraErweiterteRichtigkeitspruefung.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="RadCheckBoxTaraErweiterteRichtigkeitspruefung.RootElement.Text" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="RadCheckBoxTaraErweiterteRichtigkeitspruefung.RootElement.TextOrientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
-    <value>Horizontal</value>
   </data>
   <data name="RadCheckBoxTaraErweiterteRichtigkeitspruefung.Size" type="System.Drawing.Size, System.Drawing">
     <value>15, 15</value>
@@ -472,7 +310,7 @@
     <value>RadCheckBoxTaraErweiterteRichtigkeitspruefung</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxTaraErweiterteRichtigkeitspruefung.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxTaraErweiterteRichtigkeitspruefung.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -487,16 +325,13 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanel1.PanelContainer.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadScrollablePanelContainer, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadScrollablePanelContainer, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanel1.PanelContainer.Parent" xml:space="preserve">
     <value>RadScrollablePanel1</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanel1.PanelContainer.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="RadScrollablePanel1.RootElement.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>1, 1, 1, 1</value>
   </data>
   <data name="RadScrollablePanel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>512, 102</value>
@@ -511,7 +346,7 @@
     <value>RadScrollablePanel1</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanel1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadScrollablePanel, Telerik.WinControls.UI, Version=2015.1.331.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadScrollablePanel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanel1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -529,9 +364,9 @@
     <value>512, 102</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>ucoTaraeinrichtung</value>
+    <value>uco16Taraeinrichtung</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, EichsoftwareClient, Version=1.0.5168.20417, Culture=neutral, PublicKeyToken=null</value>
+    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.6024.16918, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

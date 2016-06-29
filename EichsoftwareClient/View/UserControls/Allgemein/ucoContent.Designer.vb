@@ -36,6 +36,7 @@ Partial Class ucoContent
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.DoubleBuffered = True
         Me.Name = "ucoContent"
         Me.ResumeLayout(False)
 

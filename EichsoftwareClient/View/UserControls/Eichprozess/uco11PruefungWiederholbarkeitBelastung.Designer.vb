@@ -129,27 +129,26 @@ Partial Class uco11PruefungWiederholbarkeitBelastung
         '
         'RadScrollablePanel1.PanelContainer
         '
-        resources.ApplyResources(Me.RadScrollablePanel1.PanelContainer, "RadScrollablePanel1.PanelContainer")
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadGroupBoxPruefungAussermittigeBelastung)
+        resources.ApplyResources(Me.RadScrollablePanel1.PanelContainer, "RadScrollablePanel1.PanelContainer")
         '
         'RadGroupBoxPruefungAussermittigeBelastung
         '
-        resources.ApplyResources(Me.RadGroupBoxPruefungAussermittigeBelastung, "RadGroupBoxPruefungAussermittigeBelastung")
         Me.RadGroupBoxPruefungAussermittigeBelastung.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        resources.ApplyResources(Me.RadGroupBoxPruefungAussermittigeBelastung, "RadGroupBoxPruefungAussermittigeBelastung")
         Me.RadGroupBoxPruefungAussermittigeBelastung.Controls.Add(Me.FlowLayoutPanel1)
         Me.RadGroupBoxPruefungAussermittigeBelastung.Name = "RadGroupBoxPruefungAussermittigeBelastung"
         '
         'FlowLayoutPanel1
         '
-        resources.ApplyResources(Me.FlowLayoutPanel1, "FlowLayoutPanel1")
         Me.FlowLayoutPanel1.Controls.Add(Me.RadGroupBoxBereich1)
         Me.FlowLayoutPanel1.Controls.Add(Me.RadGroupBoxBereich2)
         Me.FlowLayoutPanel1.Controls.Add(Me.RadButtonShowEFG2)
+        resources.ApplyResources(Me.FlowLayoutPanel1, "FlowLayoutPanel1")
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
         '
         'RadGroupBoxBereich1
         '
-        resources.ApplyResources(Me.RadGroupBoxBereich1, "RadGroupBoxBereich1")
         Me.RadGroupBoxBereich1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBoxBereich1.Controls.Add(Me.RadLabel1)
         Me.RadGroupBoxBereich1.Controls.Add(Me.PictureBox29)
@@ -165,6 +164,7 @@ Partial Class uco11PruefungWiederholbarkeitBelastung
         Me.RadGroupBoxBereich1.Controls.Add(Me.PictureBox80)
         Me.RadGroupBoxBereich1.Controls.Add(Me.lblBereich1EFGSpeziallBerechnung)
         Me.RadGroupBoxBereich1.Controls.Add(Me.lblBereich1EFGSpezial)
+        resources.ApplyResources(Me.RadGroupBoxBereich1, "RadGroupBoxBereich1")
         Me.RadGroupBoxBereich1.Name = "RadGroupBoxBereich1"
         Me.RadGroupBoxBereich1.TabStop = False
         '
@@ -175,16 +175,16 @@ Partial Class uco11PruefungWiederholbarkeitBelastung
         '
         'PictureBox29
         '
-        resources.ApplyResources(Me.PictureBox29, "PictureBox29")
         Me.PictureBox29.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBox29, "PictureBox29")
         Me.PictureBox29.Name = "PictureBox29"
         Me.PictureBox29.TabStop = False
         '
         'PanelBereich1WZ1
         '
-        resources.ApplyResources(Me.PanelBereich1WZ1, "PanelBereich1WZ1")
         Me.PanelBereich1WZ1.Controls.Add(Me.RadTextBoxControlBereich1Weight1)
         Me.PanelBereich1WZ1.Controls.Add(Me.RadTextBoxControlBereich1DisplayWeight1)
+        resources.ApplyResources(Me.PanelBereich1WZ1, "PanelBereich1WZ1")
         Me.PanelBereich1WZ1.Name = "PanelBereich1WZ1"
         '
         'RadTextBoxControlBereich1Weight1
@@ -201,8 +201,8 @@ Partial Class uco11PruefungWiederholbarkeitBelastung
         '
         'PictureBox30
         '
-        resources.ApplyResources(Me.PictureBox30, "PictureBox30")
         Me.PictureBox30.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBox30, "PictureBox30")
         Me.PictureBox30.Name = "PictureBox30"
         Me.PictureBox30.TabStop = False
         '
@@ -213,9 +213,9 @@ Partial Class uco11PruefungWiederholbarkeitBelastung
         '
         'PanelBereich1WZ2
         '
-        resources.ApplyResources(Me.PanelBereich1WZ2, "PanelBereich1WZ2")
         Me.PanelBereich1WZ2.Controls.Add(Me.RadTextBoxControlBereich1Weight2)
         Me.PanelBereich1WZ2.Controls.Add(Me.RadTextBoxControlBereich1DisplayWeight2)
+        resources.ApplyResources(Me.PanelBereich1WZ2, "PanelBereich1WZ2")
         Me.PanelBereich1WZ2.Name = "PanelBereich1WZ2"
         '
         'RadTextBoxControlBereich1Weight2
@@ -233,9 +233,9 @@ Partial Class uco11PruefungWiederholbarkeitBelastung
         '
         'PanelBereich1WZ3
         '
-        resources.ApplyResources(Me.PanelBereich1WZ3, "PanelBereich1WZ3")
         Me.PanelBereich1WZ3.Controls.Add(Me.RadTextBoxControlBereich1Weight3)
         Me.PanelBereich1WZ3.Controls.Add(Me.RadTextBoxControlBereich1DisplayWeight3)
+        resources.ApplyResources(Me.PanelBereich1WZ3, "PanelBereich1WZ3")
         Me.PanelBereich1WZ3.Name = "PanelBereich1WZ3"
         '
         'RadTextBoxControlBereich1Weight3
@@ -277,8 +277,8 @@ Partial Class uco11PruefungWiederholbarkeitBelastung
         '
         'PictureBox80
         '
-        resources.ApplyResources(Me.PictureBox80, "PictureBox80")
         Me.PictureBox80.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBox80, "PictureBox80")
         Me.PictureBox80.Name = "PictureBox80"
         Me.PictureBox80.TabStop = False
         '
@@ -296,7 +296,6 @@ Partial Class uco11PruefungWiederholbarkeitBelastung
         '
         'RadGroupBoxBereich2
         '
-        resources.ApplyResources(Me.RadGroupBoxBereich2, "RadGroupBoxBereich2")
         Me.RadGroupBoxBereich2.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBoxBereich2.Controls.Add(Me.RadLabel2)
         Me.RadGroupBoxBereich2.Controls.Add(Me.PictureBox77)
@@ -312,6 +311,7 @@ Partial Class uco11PruefungWiederholbarkeitBelastung
         Me.RadGroupBoxBereich2.Controls.Add(Me.lblBereich2EFGSpezial)
         Me.RadGroupBoxBereich2.Controls.Add(Me.lblBereich2Gewicht)
         Me.RadGroupBoxBereich2.Controls.Add(Me.lblBereich2AnzeigeGewicht)
+        resources.ApplyResources(Me.RadGroupBoxBereich2, "RadGroupBoxBereich2")
         Me.RadGroupBoxBereich2.Name = "RadGroupBoxBereich2"
         Me.RadGroupBoxBereich2.TabStop = False
         '
@@ -322,22 +322,22 @@ Partial Class uco11PruefungWiederholbarkeitBelastung
         '
         'PictureBox77
         '
-        resources.ApplyResources(Me.PictureBox77, "PictureBox77")
         Me.PictureBox77.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBox77, "PictureBox77")
         Me.PictureBox77.Name = "PictureBox77"
         Me.PictureBox77.TabStop = False
         '
         'PictureBox1
         '
-        resources.ApplyResources(Me.PictureBox1, "PictureBox1")
         Me.PictureBox1.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBox1, "PictureBox1")
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.TabStop = False
         '
         'PictureBox78
         '
-        resources.ApplyResources(Me.PictureBox78, "PictureBox78")
         Me.PictureBox78.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBox78, "PictureBox78")
         Me.PictureBox78.Name = "PictureBox78"
         Me.PictureBox78.TabStop = False
         '
@@ -350,9 +350,9 @@ Partial Class uco11PruefungWiederholbarkeitBelastung
         '
         'PanelBereich2WZ1
         '
-        resources.ApplyResources(Me.PanelBereich2WZ1, "PanelBereich2WZ1")
         Me.PanelBereich2WZ1.Controls.Add(Me.RadTextBoxControlBereich2Weight1)
         Me.PanelBereich2WZ1.Controls.Add(Me.RadTextBoxControlBereich2DisplayWeight1)
+        resources.ApplyResources(Me.PanelBereich2WZ1, "PanelBereich2WZ1")
         Me.PanelBereich2WZ1.Name = "PanelBereich2WZ1"
         '
         'RadTextBoxControlBereich2Weight1
@@ -369,9 +369,9 @@ Partial Class uco11PruefungWiederholbarkeitBelastung
         '
         'PanelBereich2WZ2
         '
-        resources.ApplyResources(Me.PanelBereich2WZ2, "PanelBereich2WZ2")
         Me.PanelBereich2WZ2.Controls.Add(Me.RadTextBoxControlBereich2Weight2)
         Me.PanelBereich2WZ2.Controls.Add(Me.RadTextBoxControlBereich2DisplayWeight2)
+        resources.ApplyResources(Me.PanelBereich2WZ2, "PanelBereich2WZ2")
         Me.PanelBereich2WZ2.Name = "PanelBereich2WZ2"
         '
         'RadTextBoxControlBereich2Weight2
@@ -408,9 +408,9 @@ Partial Class uco11PruefungWiederholbarkeitBelastung
         '
         'PanelBereich2WZ3
         '
-        resources.ApplyResources(Me.PanelBereich2WZ3, "PanelBereich2WZ3")
         Me.PanelBereich2WZ3.Controls.Add(Me.RadTextBoxControlBereich2Weight3)
         Me.PanelBereich2WZ3.Controls.Add(Me.RadTextBoxControlBereich2DisplayWeight3)
+        resources.ApplyResources(Me.PanelBereich2WZ3, "PanelBereich2WZ3")
         Me.PanelBereich2WZ3.Name = "PanelBereich2WZ3"
         '
         'RadTextBoxControlBereich2Weight3
@@ -451,6 +451,7 @@ Partial Class uco11PruefungWiederholbarkeitBelastung
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.RadScrollablePanel1)
+        Me.DoubleBuffered = True
         Me.Name = "uco11PruefungWiederholbarkeitBelastung"
         Me.RadScrollablePanel1.PanelContainer.ResumeLayout(False)
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).EndInit()
