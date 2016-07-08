@@ -124,6 +124,21 @@
     <value>124, 25</value>
   </metadata>
   <metadata name="PlausibilitaetDatasourceBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>384, 25</value>
+    <value>483, 25</value>
   </metadata>
+  <metadata name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>645, 25</value>
+  </metadata>
+  <data name="RadTextBoxControlLastWaegebrueckeBerechnung4.ToolTip" xml:space="preserve">
+    <value>Dieser Wert enspricht der errechneten Totlast. Dabei sind evtl. vorhandene Eigengewichte von Hebeln, Kontergewichten und evtl. Verbiegung der Wägezelle mit einbezogen. Daraus kann sich ergeben, dass der hier angezeigte Wert höher ist, als das tatsächliche Eigengewicht der Wägebrücke. Für den Kompatibilitätsnachweis muss aber dieser errechnete Wert bei DL eingetragen werden.</value>
+  </data>
+  <data name="RadTextBoxControlLastWaegebrueckeBerechnung3.ToolTip" xml:space="preserve">
+    <value>Dieser Wert enspricht der errechneten Totlast. Dabei sind evtl. vorhandene Eigengewichte von Hebeln, Kontergewichten und evtl. Verbiegung der Wägezelle mit einbezogen. Daraus kann sich ergeben, dass der hier angezeigte Wert höher ist, als das tatsächliche Eigengewicht der Wägebrücke. Für den Kompatibilitätsnachweis muss aber dieser errechnete Wert bei DL eingetragen werden.</value>
+  </data>
+  <data name="RadTextBoxControlLastWaegebrueckeBerechnung2.ToolTip" xml:space="preserve">
+    <value>Dieser Wert enspricht der errechneten Totlast. Dabei sind evtl. vorhandene Eigengewichte von Hebeln, Kontergewichten und evtl. Verbiegung der Wägezelle mit einbezogen. Daraus kann sich ergeben, dass der hier angezeigte Wert höher ist, als das tatsächliche Eigengewicht der Wägebrücke. Für den Kompatibilitätsnachweis muss aber dieser errechnete Wert bei DL eingetragen werden.</value>
+  </data>
+  <data name="RadTextBoxControlLastWaegebrueckeBerechnung1.ToolTip" xml:space="preserve">
+    <value>Dieser Wert enspricht der errechneten Totlast. Dabei sind evtl. vorhandene Eigengewichte von Hebeln, Kontergewichten und evtl. Verbiegung der Wägezelle mit einbezogen. Daraus kann sich ergeben, dass der hier angezeigte Wert höher ist, als das tatsächliche Eigengewicht der Wägebrücke. Für den Kompatibilitätsnachweis muss aber dieser errechnete Wert bei DL eingetragen werden.</value>
+  </data>
 </root>

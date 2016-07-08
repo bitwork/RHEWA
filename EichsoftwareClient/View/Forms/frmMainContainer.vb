@@ -319,37 +319,43 @@ Public Class FrmMainContainer
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub FrmMainContainer_Load(sender As Object, e As System.EventArgs) Handles Me.Load
-        Me.Visible = False
-        'frmMain Container nutzt entweder die logiken zum Blättern eines eichprozesses (sofern me.currenteichprozess) nicht nothing ist oder aber zeigt die Auswahlliste an, in der die eigenen Eichprozesse aufgelistet werden.
-        'prüfen ob ein Vorgang vorliegt oder nicht
-        If Me.CurrentEichprozess Is Nothing Then 'wenn kein vorgang vorliegt Auswahlliste anzeiegn
+        Try
 
-            'auswahl des Benutzers, führt auch zur Lizenzeingabe, falls noch kein Benutzer angelegt wurde
-            Dim frmBenutzerauswahl As New FrmBenutzerauswahl
-            If frmBenutzerauswahl.ShowDialog = Windows.Forms.DialogResult.OK Then
 
-                LadeAuswahlListe()
+            Me.Visible = False
+            'frmMain Container nutzt entweder die logiken zum Blättern eines eichprozesses (sofern me.currenteichprozess) nicht nothing ist oder aber zeigt die Auswahlliste an, in der die eigenen Eichprozesse aufgelistet werden.
+            'prüfen ob ein Vorgang vorliegt oder nicht
+            If Me.CurrentEichprozess Is Nothing Then 'wenn kein vorgang vorliegt Auswahlliste anzeiegn
 
-                'aktuelle Sprache der Anwendung auf vorher gewählte Sprache setzen
-                RuntimeLocalizer.ChangeCulture(Me, AktuellerBenutzer.Instance.AktuelleSprache)
+                'auswahl des Benutzers, führt auch zur Lizenzeingabe, falls noch kein Benutzer angelegt wurde
+                Dim frmBenutzerauswahl As New FrmBenutzerauswahl
+                If frmBenutzerauswahl.ShowDialog = Windows.Forms.DialogResult.OK Then
 
-                'Lokalisierung anstossen
-                TriggerLokalisierung()
+                    LadeAuswahlListe()
+
+                    'aktuelle Sprache der Anwendung auf vorher gewählte Sprache setzen
+                    RuntimeLocalizer.ChangeCulture(Me, AktuellerBenutzer.Instance.AktuelleSprache)
+
+                    'Lokalisierung anstossen
+                    TriggerLokalisierung()
+                Else
+                    Application.Exit()
+                    Me.Close()
+                End If
             Else
-                Application.Exit()
-                Me.Close()
+                _StandardWaagePopupShown = False
+                'laden des benötigten UCOs anhand status von me.currentEichprozess
+                LadeEichprozessVorgangsUco()
+
             End If
-        Else
-            _StandardWaagePopupShown = False
-            'laden des benötigten UCOs anhand status von me.currentEichprozess
-            LadeEichprozessVorgangsUco()
 
-        End If
+            'Me.WindowState = FormWindowState.Normal
+            Me.Refresh()
+            Me.WindowState = FormWindowState.Maximized
+            Me.Visible = True
+        Catch ex As Exception
 
-        'Me.WindowState = FormWindowState.Normal
-        Me.Refresh()
-        Me.WindowState = FormWindowState.Maximized
-        Me.Visible = True
+        End Try
     End Sub
 
     ''' <summary>

@@ -499,7 +499,14 @@ Public Class clsPlausibilitaetspruefung
 
             For i As Integer = 0 To 10
                 If i = 0 OrElse i Mod 2 = 0 Then 'die geraden Werte entsprechen den Gewichten
-                    Dim Gewicht = Werte(i)
+                    Dim Gewicht As Decimal
+                    Try
+                        If Werte(i) = "" Then Werte(i) = 0
+                        Gewicht = CDec(Werte(i))
+                    Catch ex As Exception
+                        Gewicht = 0
+                    End Try
+
                     Select Case Gewichtseinheit
                         Case = 0
                             Gewicht = CDec(Gewicht) * 1000
@@ -518,7 +525,15 @@ Public Class clsPlausibilitaetspruefung
                         maxGewicht = Gewicht
                     End If
                 Else ' die ungeraden den Analogwerten
-                    Dim Analogwert = Werte(i)
+                    Dim Analogwert As Decimal
+                    Try
+                        If Werte(i) = "" Then Werte(i) = 0
+                        Analogwert = Werte(i)
+                    Catch ex As Exception
+                        Analogwert = 0
+                    End Try
+
+
 
                     If Analogwert < minAnalog AndAlso Analogwert <> 0 Then
                         minAnalog = Analogwert
