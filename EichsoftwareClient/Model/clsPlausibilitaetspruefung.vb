@@ -322,7 +322,7 @@ Public Class clsPlausibilitaetspruefung
             adapter = New OleDbDataAdapter(cmd, conn)
             adapter.Fill(dtWBEinstellungen)
         Catch ex As Exception
-            cmd = "Select konMehrbereich as Mehrbereich, konGewichtseinheit as Gewichtseinheit, konMax1 as Max1, konTeilung1 as Teilung1, konMax2 as Max2, konTeilung2 as Teilung2, konMax3 as Max3, konTeilung3 as Teilung3, konEinschaltnullstellen as Einschaltnullstelle from tblKonfiguration_WBEinstellungen"
+            cmd = "Select konMehrbereich as Mehrbereich, konGewichtseinheit as Gewichtseinheit, konMax1 as Max1, konTeilung1 as Teilung1, konMax2 as Max2, konTeilung2 as Teilung2, konMax3 as Max3, konTeilung3 as Teilung3, konEinschaltnullstellen as Einschaltnullstelle from tblKonfiguration_WBEinstellung"
             adapter = New OleDbDataAdapter(cmd, conn)
             adapter.Fill(dtWBEinstellungen)
         End Try
