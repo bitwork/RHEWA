@@ -57,7 +57,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		RESX_ExcelExportMode = SingleSheet
 		RESX_PrefixTranslations = True
+		RESX_ExcelExportMode = SingleSheet
 	EndGlobalSection
 EndGlobal
