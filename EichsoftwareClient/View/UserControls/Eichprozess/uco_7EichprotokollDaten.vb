@@ -873,7 +873,7 @@ Public Class uco_7EichprotokollDaten
         If ListPruefscheinnnummern Is Nothing Then
             ListPruefscheinnnummern = clsWebserviceFunctions.GetStatusPruefscheinnummern()
         End If
-        Dim Vergleichswerte = RadTextBoxControlNormalienPruefscheinnummer.Text
+        Dim Vergleichswerte = RadTextBoxControlNormalienPruefscheinnummer.Text.Replace(",", ";")
         Try
             Dim ArrVergleichswerte = Vergleichswerte.Split(";")
             Dim results = (From o In ListPruefscheinnnummern Where ArrVergleichswerte.Contains(o.Nummer)).ToList
