@@ -928,19 +928,13 @@ Public Class uco10PruefungStaffelverfahren
 
                     'Für die Ermittlung der Messabweichung der Staffel 1 für den Bereich 1 gilt folgende Formel:
                     'Messabweichung = Anzeigewert (Normallast) – Anzeigewert (Nullwert) – Normallast
-                    If (Staffel = "1") Then
-                        If Bereich = "1" Then
-                            Fehler6.Text = CDec(Anzeige3Normallast.Text) - CDec(Anzeige1.Text) - CDec(Last3Normallast.Text)
-                        Else
-                            'Für die Ermittlung der Messabweichung der Staffel 1 für die Bereiche 2 und 3 wird in der bestehenden Prüfanweisung keine Vorgehensweise beschrieben. Deshalb wird an dieser Stelle der Berechnung folgende Vereinbarung zugrunde gelegt: Die Mindestlast bleibt bei der Ermittlung der Messabweichung an dieser Stelle unberücksichtigt. Lediglich die Differenz von SOLL und IST der Mindestlast wird berücksichtigt.
-                            'Folgende Formel gilt:
-                            'Messabweichung = Anzeigewert (Normallast) – (Anzeigewert (Mindestlast) – Mindestlast) – Normallast
-                            Fehler6.Text = (CDec(Anzeige3Normallast.Text)) - (CDec(Anzeige1.Text) - CDec(Last1.Text)) - CDec(Last3Normallast.Text)
-                        End If
+                    If Bereich = "1" Then
+                        Fehler6.Text = CDec(Anzeige3Normallast.Text) - CDec(Anzeige1.Text) - CDec(Last3Normallast.Text)
                     Else
-                        'Für die Ermittlung der Messabweichung der Staffeln 2-5 für alle Bereiche gilt folgende Formel:
-                        'Messabweichung = Anzeigewert (Ersatzlast+Normallast) – Anzeigewert (Ersatzlast) – Normallast
-                        Fehler6.Text = (CDec(Anzeige3Normallast.Text)) - CDec(Anzeige1.Text) - CDec(Last2.Text)
+                        'Für die Ermittlung der Messabweichung der Staffel 1 für die Bereiche 2 und 3 wird in der bestehenden Prüfanweisung keine Vorgehensweise beschrieben. Deshalb wird an dieser Stelle der Berechnung folgende Vereinbarung zugrunde gelegt: Die Mindestlast bleibt bei der Ermittlung der Messabweichung an dieser Stelle unberücksichtigt. Lediglich die Differenz von SOLL und IST der Mindestlast wird berücksichtigt.
+                        'Folgende Formel gilt:
+                        'Messabweichung = Anzeigewert (Normallast) – (Anzeigewert (Mindestlast) – Mindestlast) – Normallast
+                        Fehler6.Text = (CDec(Anzeige3Normallast.Text)) - (CDec(Anzeige1.Text) - CDec(Last1.Text)) - CDec(Last3Normallast.Text)
                     End If
 
                 Catch ex As InvalidCastException
