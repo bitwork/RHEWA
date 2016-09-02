@@ -325,11 +325,9 @@ Public Class ucoContent
             Else
                 If Debugger.IsAttached Then
                     Dim result As DialogResult
-                    If _objEichprozess.AusStandardwaageErzeugt Then
-                        result = MessageBox.Show(String.Format("Standardwaage {0}{0} - Klicken Sie ""Ignorieren"" um die Validierung bewusst zu überspringen {0}{0} Klicken Sie ""Wiederholen"" um die Soll-Werte mit den Ist-Werten gleichzusetzen  {0}{0} Klicken Sie ""Abbrechen"" um nichts zu ändern ", vbNewLine), "", MessageBoxButtons.AbortRetryIgnore)
-                    Else
-                        result = MessageBox.Show(My.Resources.GlobaleLokalisierung.ValidierungUeberspringen, "", MessageBoxButtons.YesNo)
-                    End If
+
+                    result = MessageBox.Show(String.Format("DEBUG ONLY Standardwaage {0}{0} - Klicken Sie ""Ignorieren"" um die Validierung bewusst zu überspringen {0}{0} Klicken Sie ""Wiederholen"" um die Soll-Werte mit den Ist-Werten gleichzusetzen  {0}{0} Klicken Sie ""Abbrechen"" um nichts zu ändern ", vbNewLine), "", MessageBoxButtons.AbortRetryIgnore)
+
 
                     If result = DialogResult.Ignore Or result = DialogResult.Yes Then 'Ignore = Validierung bewusst überspringen
                         Me.AbortSaving = False

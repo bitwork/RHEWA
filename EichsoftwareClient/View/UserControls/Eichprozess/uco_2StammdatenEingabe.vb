@@ -642,7 +642,6 @@
 
                     Return True
                 Else
-                    MessageBox.Show(My.Resources.GlobaleLokalisierung.PflichtfelderAusfuellen, My.Resources.GlobaleLokalisierung.Fehler, MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                     Return False
                 End If
             Else
