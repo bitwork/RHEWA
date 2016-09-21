@@ -3030,216 +3030,6 @@
   <data name="&gt;&gt;PanelBereich3WZ6.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
-  <data name="Label42.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label42.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label42.Location" type="System.Drawing.Point, System.Drawing">
-    <value>446, -1</value>
-  </data>
-  <data name="Label42.Size" type="System.Drawing.Size, System.Drawing">
-    <value>12, 13</value>
-  </data>
-  <data name="Label42.TabIndex" type="System.Int32, mscorlib">
-    <value>603</value>
-  </data>
-  <data name="Label42.Text" xml:space="preserve">
-    <value>*</value>
-  </data>
-  <data name="&gt;&gt;Label42.Name" xml:space="preserve">
-    <value>Label42</value>
-  </data>
-  <data name="&gt;&gt;Label42.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label42.Parent" xml:space="preserve">
-    <value>PanelBereich3WZMitte</value>
-  </data>
-  <data name="&gt;&gt;Label42.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="PictureBox53.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="PictureBox53.Location" type="System.Drawing.Point, System.Drawing">
-    <value>404, 3</value>
-  </data>
-  <data name="PictureBox53.Size" type="System.Drawing.Size, System.Drawing">
-    <value>18, 21</value>
-  </data>
-  <data name="PictureBox53.TabIndex" type="System.Int32, mscorlib">
-    <value>58</value>
-  </data>
-  <data name="&gt;&gt;PictureBox53.Name" xml:space="preserve">
-    <value>PictureBox53</value>
-  </data>
-  <data name="&gt;&gt;PictureBox53.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PictureBox53.Parent" xml:space="preserve">
-    <value>PanelBereich3WZMitte</value>
-  </data>
-  <data name="&gt;&gt;PictureBox53.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="PictureBox54.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="PictureBox54.Location" type="System.Drawing.Point, System.Drawing">
-    <value>286, 3</value>
-  </data>
-  <data name="PictureBox54.Size" type="System.Drawing.Size, System.Drawing">
-    <value>18, 21</value>
-  </data>
-  <data name="PictureBox54.TabIndex" type="System.Int32, mscorlib">
-    <value>57</value>
-  </data>
-  <data name="&gt;&gt;PictureBox54.Name" xml:space="preserve">
-    <value>PictureBox54</value>
-  </data>
-  <data name="&gt;&gt;PictureBox54.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PictureBox54.Parent" xml:space="preserve">
-    <value>PanelBereich3WZMitte</value>
-  </data>
-  <data name="&gt;&gt;PictureBox54.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="RadLabel34.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt, style=Bold</value>
-  </data>
-  <data name="RadLabel34.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 3</value>
-  </data>
-  <data name="RadLabel34.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 18</value>
-  </data>
-  <data name="RadLabel34.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
-  </data>
-  <data name="RadLabel34.Text" xml:space="preserve">
-    <value>Center</value>
-  </data>
-  <data name="&gt;&gt;RadLabel34.Name" xml:space="preserve">
-    <value>RadLabel34</value>
-  </data>
-  <data name="&gt;&gt;RadLabel34.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadLabel34.Parent" xml:space="preserve">
-    <value>PanelBereich3WZMitte</value>
-  </data>
-  <data name="&gt;&gt;RadLabel34.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="RadTextBoxControlBereich3WeightMitte.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 3</value>
-  </data>
-  <data name="RadTextBoxControlBereich3WeightMitte.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 20</value>
-  </data>
-  <data name="RadTextBoxControlBereich3WeightMitte.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich3WeightMitte.Name" xml:space="preserve">
-    <value>RadTextBoxControlBereich3WeightMitte</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich3WeightMitte.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich3WeightMitte.Parent" xml:space="preserve">
-    <value>PanelBereich3WZMitte</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich3WeightMitte.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="RadTextBoxControlBereich3DisplayWeightMitte.Location" type="System.Drawing.Point, System.Drawing">
-    <value>197, 3</value>
-  </data>
-  <data name="RadTextBoxControlBereich3DisplayWeightMitte.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 20</value>
-  </data>
-  <data name="RadTextBoxControlBereich3DisplayWeightMitte.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich3DisplayWeightMitte.Name" xml:space="preserve">
-    <value>RadTextBoxControlBereich3DisplayWeightMitte</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich3DisplayWeightMitte.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich3DisplayWeightMitte.Parent" xml:space="preserve">
-    <value>PanelBereich3WZMitte</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich3DisplayWeightMitte.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="RadTextBoxControlBereich3ErrorLimitMitte.Location" type="System.Drawing.Point, System.Drawing">
-    <value>310, 3</value>
-  </data>
-  <data name="RadTextBoxControlBereich3ErrorLimitMitte.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 20</value>
-  </data>
-  <data name="RadTextBoxControlBereich3ErrorLimitMitte.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich3ErrorLimitMitte.Name" xml:space="preserve">
-    <value>RadTextBoxControlBereich3ErrorLimitMitte</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich3ErrorLimitMitte.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich3ErrorLimitMitte.Parent" xml:space="preserve">
-    <value>PanelBereich3WZMitte</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich3ErrorLimitMitte.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="RadCheckBoxBereich3VELMitte.Location" type="System.Drawing.Point, System.Drawing">
-    <value>428, 3</value>
-  </data>
-  <data name="RadCheckBoxBereich3VELMitte.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 15</value>
-  </data>
-  <data name="RadCheckBoxBereich3VELMitte.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxBereich3VELMitte.Name" xml:space="preserve">
-    <value>RadCheckBoxBereich3VELMitte</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxBereich3VELMitte.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxBereich3VELMitte.Parent" xml:space="preserve">
-    <value>PanelBereich3WZMitte</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxBereich3VELMitte.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="PanelBereich3WZMitte.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 441</value>
-  </data>
-  <data name="PanelBereich3WZMitte.Size" type="System.Drawing.Size, System.Drawing">
-    <value>465, 25</value>
-  </data>
-  <data name="PanelBereich3WZMitte.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;PanelBereich3WZMitte.Name" xml:space="preserve">
-    <value>PanelBereich3WZMitte</value>
-  </data>
-  <data name="&gt;&gt;PanelBereich3WZMitte.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PanelBereich3WZMitte.Parent" xml:space="preserve">
-    <value>RadGroupBoxBereich3</value>
-  </data>
-  <data name="&gt;&gt;PanelBereich3WZMitte.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
   <data name="Label39.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -3451,7 +3241,7 @@
     <value>RadGroupBoxBereich3</value>
   </data>
   <data name="&gt;&gt;PanelBereich3WZ10.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>15</value>
   </data>
   <data name="Label36.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3664,7 +3454,7 @@
     <value>RadGroupBoxBereich3</value>
   </data>
   <data name="&gt;&gt;PanelBereich3WZ7.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>16</value>
   </data>
   <data name="Label38.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3877,7 +3667,7 @@
     <value>RadGroupBoxBereich3</value>
   </data>
   <data name="&gt;&gt;PanelBereich3WZ9.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>17</value>
   </data>
   <data name="Label37.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -4090,7 +3880,7 @@
     <value>RadGroupBoxBereich3</value>
   </data>
   <data name="&gt;&gt;PanelBereich3WZ8.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>18</value>
   </data>
   <data name="RadGroupBoxBereich3.HeaderText" xml:space="preserve">
     <value>Range 3</value>
@@ -4169,216 +3959,6 @@
   </data>
   <data name="&gt;&gt;lblBereich2EFGSpeziallBerechnung.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="Label29.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label29.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label29.Location" type="System.Drawing.Point, System.Drawing">
-    <value>447, -1</value>
-  </data>
-  <data name="Label29.Size" type="System.Drawing.Size, System.Drawing">
-    <value>12, 13</value>
-  </data>
-  <data name="Label29.TabIndex" type="System.Int32, mscorlib">
-    <value>603</value>
-  </data>
-  <data name="Label29.Text" xml:space="preserve">
-    <value>*</value>
-  </data>
-  <data name="&gt;&gt;Label29.Name" xml:space="preserve">
-    <value>Label29</value>
-  </data>
-  <data name="&gt;&gt;Label29.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label29.Parent" xml:space="preserve">
-    <value>PanelBereich2WZMitte</value>
-  </data>
-  <data name="&gt;&gt;Label29.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="PictureBox27.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="PictureBox27.Location" type="System.Drawing.Point, System.Drawing">
-    <value>404, 3</value>
-  </data>
-  <data name="PictureBox27.Size" type="System.Drawing.Size, System.Drawing">
-    <value>18, 21</value>
-  </data>
-  <data name="PictureBox27.TabIndex" type="System.Int32, mscorlib">
-    <value>58</value>
-  </data>
-  <data name="&gt;&gt;PictureBox27.Name" xml:space="preserve">
-    <value>PictureBox27</value>
-  </data>
-  <data name="&gt;&gt;PictureBox27.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PictureBox27.Parent" xml:space="preserve">
-    <value>PanelBereich2WZMitte</value>
-  </data>
-  <data name="&gt;&gt;PictureBox27.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="PictureBox28.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="PictureBox28.Location" type="System.Drawing.Point, System.Drawing">
-    <value>286, 3</value>
-  </data>
-  <data name="PictureBox28.Size" type="System.Drawing.Size, System.Drawing">
-    <value>18, 21</value>
-  </data>
-  <data name="PictureBox28.TabIndex" type="System.Int32, mscorlib">
-    <value>57</value>
-  </data>
-  <data name="&gt;&gt;PictureBox28.Name" xml:space="preserve">
-    <value>PictureBox28</value>
-  </data>
-  <data name="&gt;&gt;PictureBox28.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PictureBox28.Parent" xml:space="preserve">
-    <value>PanelBereich2WZMitte</value>
-  </data>
-  <data name="&gt;&gt;PictureBox28.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="RadLabel15.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 8.25pt, style=Bold</value>
-  </data>
-  <data name="RadLabel15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 3</value>
-  </data>
-  <data name="RadLabel15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 18</value>
-  </data>
-  <data name="RadLabel15.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
-  </data>
-  <data name="RadLabel15.Text" xml:space="preserve">
-    <value>Center</value>
-  </data>
-  <data name="&gt;&gt;RadLabel15.Name" xml:space="preserve">
-    <value>RadLabel15</value>
-  </data>
-  <data name="&gt;&gt;RadLabel15.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadLabel15.Parent" xml:space="preserve">
-    <value>PanelBereich2WZMitte</value>
-  </data>
-  <data name="&gt;&gt;RadLabel15.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="RadTextBoxControlBereich2WeightMitte.Location" type="System.Drawing.Point, System.Drawing">
-    <value>80, 3</value>
-  </data>
-  <data name="RadTextBoxControlBereich2WeightMitte.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 20</value>
-  </data>
-  <data name="RadTextBoxControlBereich2WeightMitte.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2WeightMitte.Name" xml:space="preserve">
-    <value>RadTextBoxControlBereich2WeightMitte</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2WeightMitte.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2WeightMitte.Parent" xml:space="preserve">
-    <value>PanelBereich2WZMitte</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2WeightMitte.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="RadTextBoxControlBereich2DisplayWeightMitte.Location" type="System.Drawing.Point, System.Drawing">
-    <value>197, 3</value>
-  </data>
-  <data name="RadTextBoxControlBereich2DisplayWeightMitte.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 20</value>
-  </data>
-  <data name="RadTextBoxControlBereich2DisplayWeightMitte.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2DisplayWeightMitte.Name" xml:space="preserve">
-    <value>RadTextBoxControlBereich2DisplayWeightMitte</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2DisplayWeightMitte.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2DisplayWeightMitte.Parent" xml:space="preserve">
-    <value>PanelBereich2WZMitte</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2DisplayWeightMitte.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="RadTextBoxControlBereich2ErrorLimitMitte.Location" type="System.Drawing.Point, System.Drawing">
-    <value>310, 3</value>
-  </data>
-  <data name="RadTextBoxControlBereich2ErrorLimitMitte.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 20</value>
-  </data>
-  <data name="RadTextBoxControlBereich2ErrorLimitMitte.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2ErrorLimitMitte.Name" xml:space="preserve">
-    <value>RadTextBoxControlBereich2ErrorLimitMitte</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2ErrorLimitMitte.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2ErrorLimitMitte.Parent" xml:space="preserve">
-    <value>PanelBereich2WZMitte</value>
-  </data>
-  <data name="&gt;&gt;RadTextBoxControlBereich2ErrorLimitMitte.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="RadCheckBoxBereich2VELMitte.Location" type="System.Drawing.Point, System.Drawing">
-    <value>428, 3</value>
-  </data>
-  <data name="RadCheckBoxBereich2VELMitte.Size" type="System.Drawing.Size, System.Drawing">
-    <value>15, 15</value>
-  </data>
-  <data name="RadCheckBoxBereich2VELMitte.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxBereich2VELMitte.Name" xml:space="preserve">
-    <value>RadCheckBoxBereich2VELMitte</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxBereich2VELMitte.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxBereich2VELMitte.Parent" xml:space="preserve">
-    <value>PanelBereich2WZMitte</value>
-  </data>
-  <data name="&gt;&gt;RadCheckBoxBereich2VELMitte.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="PanelBereich2WZMitte.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 441</value>
-  </data>
-  <data name="PanelBereich2WZMitte.Size" type="System.Drawing.Size, System.Drawing">
-    <value>465, 25</value>
-  </data>
-  <data name="PanelBereich2WZMitte.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;PanelBereich2WZMitte.Name" xml:space="preserve">
-    <value>PanelBereich2WZMitte</value>
-  </data>
-  <data name="&gt;&gt;PanelBereich2WZMitte.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;PanelBereich2WZMitte.Parent" xml:space="preserve">
-    <value>RadGroupBoxBereich2</value>
-  </data>
-  <data name="&gt;&gt;PanelBereich2WZMitte.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <data name="Label17.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -4588,7 +4168,7 @@
     <value>RadGroupBoxBereich2</value>
   </data>
   <data name="&gt;&gt;PanelBereich2WZ1.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="lblMessOrtBereich2.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -4618,7 +4198,7 @@
     <value>RadGroupBoxBereich2</value>
   </data>
   <data name="&gt;&gt;lblMessOrtBereich2.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="lblBereich2FehlerGrenzen.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt, style=Bold</value>
@@ -4645,7 +4225,7 @@
     <value>RadGroupBoxBereich2</value>
   </data>
   <data name="&gt;&gt;lblBereich2FehlerGrenzen.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="Label18.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -4858,7 +4438,7 @@
     <value>RadGroupBoxBereich2</value>
   </data>
   <data name="&gt;&gt;PanelBereich2WZ2.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="lblBereich2EFGSpezial.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt, style=Bold</value>
@@ -4885,7 +4465,7 @@
     <value>RadGroupBoxBereich2</value>
   </data>
   <data name="&gt;&gt;lblBereich2EFGSpezial.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="Label19.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5098,7 +4678,7 @@
     <value>RadGroupBoxBereich2</value>
   </data>
   <data name="&gt;&gt;PanelBereich2WZ3.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>7</value>
   </data>
   <data name="lblBereich2Gewicht.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt, style=Bold</value>
@@ -5125,7 +4705,7 @@
     <value>RadGroupBoxBereich2</value>
   </data>
   <data name="&gt;&gt;lblBereich2Gewicht.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>8</value>
   </data>
   <data name="lblBereich2AnzeigeGewicht.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt, style=Bold</value>
@@ -5152,7 +4732,7 @@
     <value>RadGroupBoxBereich2</value>
   </data>
   <data name="&gt;&gt;lblBereich2AnzeigeGewicht.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>9</value>
   </data>
   <data name="Label20.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5365,7 +4945,7 @@
     <value>RadGroupBoxBereich2</value>
   </data>
   <data name="&gt;&gt;PanelBereich2WZ4.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>10</value>
   </data>
   <data name="Label27.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5578,7 +5158,7 @@
     <value>RadGroupBoxBereich2</value>
   </data>
   <data name="&gt;&gt;PanelBereich2WZ11.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>11</value>
   </data>
   <data name="Label26.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5791,7 +5371,7 @@
     <value>RadGroupBoxBereich2</value>
   </data>
   <data name="&gt;&gt;PanelBereich2WZ10.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>12</value>
   </data>
   <data name="Label21.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6004,7 +5584,7 @@
     <value>RadGroupBoxBereich2</value>
   </data>
   <data name="&gt;&gt;PanelBereich2WZ5.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>13</value>
   </data>
   <data name="Label28.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6217,7 +5797,7 @@
     <value>RadGroupBoxBereich2</value>
   </data>
   <data name="&gt;&gt;PanelBereich2WZ12.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>14</value>
   </data>
   <data name="Label25.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6430,7 +6010,7 @@
     <value>RadGroupBoxBereich2</value>
   </data>
   <data name="&gt;&gt;PanelBereich2WZ9.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>15</value>
   </data>
   <data name="Label22.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6643,7 +6223,7 @@
     <value>RadGroupBoxBereich2</value>
   </data>
   <data name="&gt;&gt;PanelBereich2WZ6.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>16</value>
   </data>
   <data name="Label24.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6856,7 +6436,7 @@
     <value>RadGroupBoxBereich2</value>
   </data>
   <data name="&gt;&gt;PanelBereich2WZ8.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>17</value>
   </data>
   <data name="Label23.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -7069,7 +6649,7 @@
     <value>RadGroupBoxBereich2</value>
   </data>
   <data name="&gt;&gt;PanelBereich2WZ7.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>18</value>
   </data>
   <data name="RadGroupBoxBereich2.HeaderText" xml:space="preserve">
     <value>Range 2</value>
@@ -10177,6 +9757,6 @@
     <value>uco_8PruefungNullstellungUndAussermittigeBelastung</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.6108.20583, Culture=neutral, PublicKeyToken=null</value>
+    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.6108.21803, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

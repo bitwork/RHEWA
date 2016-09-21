@@ -147,15 +147,6 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich3DisplayWeight6 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich3ErrorLimit6 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich3VEL6 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.PanelBereich3WZMitte = New System.Windows.Forms.Panel()
-        Me.Label42 = New System.Windows.Forms.Label()
-        Me.PictureBox53 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox54 = New System.Windows.Forms.PictureBox()
-        Me.RadLabel34 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlBereich3WeightMitte = New Telerik.WinControls.UI.RadTextBox()
-        Me.RadTextBoxControlBereich3DisplayWeightMitte = New Telerik.WinControls.UI.RadTextBox()
-        Me.RadTextBoxControlBereich3ErrorLimitMitte = New Telerik.WinControls.UI.RadTextBox()
-        Me.RadCheckBoxBereich3VELMitte = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich3WZ10 = New System.Windows.Forms.Panel()
         Me.Label39 = New System.Windows.Forms.Label()
         Me.PictureBox59 = New System.Windows.Forms.PictureBox()
@@ -195,15 +186,6 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadGroupBoxBereich2 = New Telerik.WinControls.UI.RadGroupBox()
         Me.PictureBox80 = New System.Windows.Forms.PictureBox()
         Me.lblBereich2EFGSpeziallBerechnung = New Telerik.WinControls.UI.RadMaskedEditBox()
-        Me.PanelBereich2WZMitte = New System.Windows.Forms.Panel()
-        Me.Label29 = New System.Windows.Forms.Label()
-        Me.PictureBox27 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox28 = New System.Windows.Forms.PictureBox()
-        Me.RadLabel15 = New Telerik.WinControls.UI.RadLabel()
-        Me.RadTextBoxControlBereich2WeightMitte = New Telerik.WinControls.UI.RadTextBox()
-        Me.RadTextBoxControlBereich2DisplayWeightMitte = New Telerik.WinControls.UI.RadTextBox()
-        Me.RadTextBoxControlBereich2ErrorLimitMitte = New Telerik.WinControls.UI.RadTextBox()
-        Me.RadCheckBoxBereich2VELMitte = New Telerik.WinControls.UI.RadCheckBox()
         Me.PanelBereich2WZ1 = New System.Windows.Forms.Panel()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.PictureBox29 = New System.Windows.Forms.PictureBox()
@@ -562,14 +544,6 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.RadTextBoxControlBereich3DisplayWeight6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlBereich3ErrorLimit6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadCheckBoxBereich3VEL6, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.PanelBereich3WZMitte.SuspendLayout()
-        CType(Me.PictureBox53, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox54, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel34, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControlBereich3WeightMitte, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControlBereich3DisplayWeightMitte, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControlBereich3ErrorLimitMitte, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadCheckBoxBereich3VELMitte, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBereich3WZ10.SuspendLayout()
         CType(Me.PictureBox59, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox60, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -606,14 +580,6 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadGroupBoxBereich2.SuspendLayout()
         CType(Me.PictureBox80, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblBereich2EFGSpeziallBerechnung, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.PanelBereich2WZMitte.SuspendLayout()
-        CType(Me.PictureBox27, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox28, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadLabel15, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControlBereich2WeightMitte, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControlBereich2DisplayWeightMitte, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControlBereich2ErrorLimitMitte, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadCheckBoxBereich2VELMitte, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBereich2WZ1.SuspendLayout()
         CType(Me.PictureBox29, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox30, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1156,7 +1122,6 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadGroupBoxBereich3.Controls.Add(Me.PanelBereich3WZ12)
         Me.RadGroupBoxBereich3.Controls.Add(Me.PanelBereich3WZ11)
         Me.RadGroupBoxBereich3.Controls.Add(Me.PanelBereich3WZ6)
-        Me.RadGroupBoxBereich3.Controls.Add(Me.PanelBereich3WZMitte)
         Me.RadGroupBoxBereich3.Controls.Add(Me.PanelBereich3WZ10)
         Me.RadGroupBoxBereich3.Controls.Add(Me.PanelBereich3WZ7)
         Me.RadGroupBoxBereich3.Controls.Add(Me.PanelBereich3WZ9)
@@ -1722,71 +1687,6 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadCheckBoxBereich3VEL6.Name = "RadCheckBoxBereich3VEL6"
         Me.RadCheckBoxBereich3VEL6.TabStop = False
         '
-        'PanelBereich3WZMitte
-        '
-        Me.PanelBereich3WZMitte.Controls.Add(Me.Label42)
-        Me.PanelBereich3WZMitte.Controls.Add(Me.PictureBox53)
-        Me.PanelBereich3WZMitte.Controls.Add(Me.PictureBox54)
-        Me.PanelBereich3WZMitte.Controls.Add(Me.RadLabel34)
-        Me.PanelBereich3WZMitte.Controls.Add(Me.RadTextBoxControlBereich3WeightMitte)
-        Me.PanelBereich3WZMitte.Controls.Add(Me.RadTextBoxControlBereich3DisplayWeightMitte)
-        Me.PanelBereich3WZMitte.Controls.Add(Me.RadTextBoxControlBereich3ErrorLimitMitte)
-        Me.PanelBereich3WZMitte.Controls.Add(Me.RadCheckBoxBereich3VELMitte)
-        resources.ApplyResources(Me.PanelBereich3WZMitte, "PanelBereich3WZMitte")
-        Me.PanelBereich3WZMitte.Name = "PanelBereich3WZMitte"
-        '
-        'Label42
-        '
-        resources.ApplyResources(Me.Label42, "Label42")
-        Me.Label42.ForeColor = System.Drawing.Color.Red
-        Me.Label42.Name = "Label42"
-        '
-        'PictureBox53
-        '
-        Me.PictureBox53.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox53, "PictureBox53")
-        Me.PictureBox53.Name = "PictureBox53"
-        Me.PictureBox53.TabStop = False
-        '
-        'PictureBox54
-        '
-        Me.PictureBox54.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox54, "PictureBox54")
-        Me.PictureBox54.Name = "PictureBox54"
-        Me.PictureBox54.TabStop = False
-        '
-        'RadLabel34
-        '
-        resources.ApplyResources(Me.RadLabel34, "RadLabel34")
-        Me.RadLabel34.Name = "RadLabel34"
-        '
-        'RadTextBoxControlBereich3WeightMitte
-        '
-        resources.ApplyResources(Me.RadTextBoxControlBereich3WeightMitte, "RadTextBoxControlBereich3WeightMitte")
-        Me.RadTextBoxControlBereich3WeightMitte.MaxLength = 20
-        Me.RadTextBoxControlBereich3WeightMitte.Name = "RadTextBoxControlBereich3WeightMitte"
-        Me.RadTextBoxControlBereich3WeightMitte.TabStop = False
-        '
-        'RadTextBoxControlBereich3DisplayWeightMitte
-        '
-        resources.ApplyResources(Me.RadTextBoxControlBereich3DisplayWeightMitte, "RadTextBoxControlBereich3DisplayWeightMitte")
-        Me.RadTextBoxControlBereich3DisplayWeightMitte.MaxLength = 20
-        Me.RadTextBoxControlBereich3DisplayWeightMitte.Name = "RadTextBoxControlBereich3DisplayWeightMitte"
-        '
-        'RadTextBoxControlBereich3ErrorLimitMitte
-        '
-        resources.ApplyResources(Me.RadTextBoxControlBereich3ErrorLimitMitte, "RadTextBoxControlBereich3ErrorLimitMitte")
-        Me.RadTextBoxControlBereich3ErrorLimitMitte.MaxLength = 20
-        Me.RadTextBoxControlBereich3ErrorLimitMitte.Name = "RadTextBoxControlBereich3ErrorLimitMitte"
-        Me.RadTextBoxControlBereich3ErrorLimitMitte.ReadOnly = True
-        Me.RadTextBoxControlBereich3ErrorLimitMitte.TabStop = False
-        '
-        'RadCheckBoxBereich3VELMitte
-        '
-        resources.ApplyResources(Me.RadCheckBoxBereich3VELMitte, "RadCheckBoxBereich3VELMitte")
-        Me.RadCheckBoxBereich3VELMitte.Name = "RadCheckBoxBereich3VELMitte"
-        Me.RadCheckBoxBereich3VELMitte.TabStop = False
-        '
         'PanelBereich3WZ10
         '
         Me.PanelBereich3WZ10.Controls.Add(Me.Label39)
@@ -2052,7 +1952,6 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadGroupBoxBereich2.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBoxBereich2.Controls.Add(Me.PictureBox80)
         Me.RadGroupBoxBereich2.Controls.Add(Me.lblBereich2EFGSpeziallBerechnung)
-        Me.RadGroupBoxBereich2.Controls.Add(Me.PanelBereich2WZMitte)
         Me.RadGroupBoxBereich2.Controls.Add(Me.PanelBereich2WZ1)
         Me.RadGroupBoxBereich2.Controls.Add(Me.lblMessOrtBereich2)
         Me.RadGroupBoxBereich2.Controls.Add(Me.lblBereich2FehlerGrenzen)
@@ -2086,71 +1985,6 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.lblBereich2EFGSpeziallBerechnung.Name = "lblBereich2EFGSpeziallBerechnung"
         Me.lblBereich2EFGSpeziallBerechnung.ReadOnly = True
         Me.lblBereich2EFGSpeziallBerechnung.TabStop = False
-        '
-        'PanelBereich2WZMitte
-        '
-        Me.PanelBereich2WZMitte.Controls.Add(Me.Label29)
-        Me.PanelBereich2WZMitte.Controls.Add(Me.PictureBox27)
-        Me.PanelBereich2WZMitte.Controls.Add(Me.PictureBox28)
-        Me.PanelBereich2WZMitte.Controls.Add(Me.RadLabel15)
-        Me.PanelBereich2WZMitte.Controls.Add(Me.RadTextBoxControlBereich2WeightMitte)
-        Me.PanelBereich2WZMitte.Controls.Add(Me.RadTextBoxControlBereich2DisplayWeightMitte)
-        Me.PanelBereich2WZMitte.Controls.Add(Me.RadTextBoxControlBereich2ErrorLimitMitte)
-        Me.PanelBereich2WZMitte.Controls.Add(Me.RadCheckBoxBereich2VELMitte)
-        resources.ApplyResources(Me.PanelBereich2WZMitte, "PanelBereich2WZMitte")
-        Me.PanelBereich2WZMitte.Name = "PanelBereich2WZMitte"
-        '
-        'Label29
-        '
-        resources.ApplyResources(Me.Label29, "Label29")
-        Me.Label29.ForeColor = System.Drawing.Color.Red
-        Me.Label29.Name = "Label29"
-        '
-        'PictureBox27
-        '
-        Me.PictureBox27.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox27, "PictureBox27")
-        Me.PictureBox27.Name = "PictureBox27"
-        Me.PictureBox27.TabStop = False
-        '
-        'PictureBox28
-        '
-        Me.PictureBox28.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
-        resources.ApplyResources(Me.PictureBox28, "PictureBox28")
-        Me.PictureBox28.Name = "PictureBox28"
-        Me.PictureBox28.TabStop = False
-        '
-        'RadLabel15
-        '
-        resources.ApplyResources(Me.RadLabel15, "RadLabel15")
-        Me.RadLabel15.Name = "RadLabel15"
-        '
-        'RadTextBoxControlBereich2WeightMitte
-        '
-        resources.ApplyResources(Me.RadTextBoxControlBereich2WeightMitte, "RadTextBoxControlBereich2WeightMitte")
-        Me.RadTextBoxControlBereich2WeightMitte.MaxLength = 20
-        Me.RadTextBoxControlBereich2WeightMitte.Name = "RadTextBoxControlBereich2WeightMitte"
-        Me.RadTextBoxControlBereich2WeightMitte.TabStop = False
-        '
-        'RadTextBoxControlBereich2DisplayWeightMitte
-        '
-        resources.ApplyResources(Me.RadTextBoxControlBereich2DisplayWeightMitte, "RadTextBoxControlBereich2DisplayWeightMitte")
-        Me.RadTextBoxControlBereich2DisplayWeightMitte.MaxLength = 20
-        Me.RadTextBoxControlBereich2DisplayWeightMitte.Name = "RadTextBoxControlBereich2DisplayWeightMitte"
-        '
-        'RadTextBoxControlBereich2ErrorLimitMitte
-        '
-        resources.ApplyResources(Me.RadTextBoxControlBereich2ErrorLimitMitte, "RadTextBoxControlBereich2ErrorLimitMitte")
-        Me.RadTextBoxControlBereich2ErrorLimitMitte.MaxLength = 20
-        Me.RadTextBoxControlBereich2ErrorLimitMitte.Name = "RadTextBoxControlBereich2ErrorLimitMitte"
-        Me.RadTextBoxControlBereich2ErrorLimitMitte.ReadOnly = True
-        Me.RadTextBoxControlBereich2ErrorLimitMitte.TabStop = False
-        '
-        'RadCheckBoxBereich2VELMitte
-        '
-        resources.ApplyResources(Me.RadCheckBoxBereich2VELMitte, "RadCheckBoxBereich2VELMitte")
-        Me.RadCheckBoxBereich2VELMitte.Name = "RadCheckBoxBereich2VELMitte"
-        Me.RadCheckBoxBereich2VELMitte.TabStop = False
         '
         'PanelBereich2WZ1
         '
@@ -4006,15 +3840,6 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         CType(Me.RadTextBoxControlBereich3DisplayWeight6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlBereich3ErrorLimit6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadCheckBoxBereich3VEL6, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.PanelBereich3WZMitte.ResumeLayout(False)
-        Me.PanelBereich3WZMitte.PerformLayout()
-        CType(Me.PictureBox53, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox54, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel34, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControlBereich3WeightMitte, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControlBereich3DisplayWeightMitte, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControlBereich3ErrorLimitMitte, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadCheckBoxBereich3VELMitte, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelBereich3WZ10.ResumeLayout(False)
         Me.PanelBereich3WZ10.PerformLayout()
         CType(Me.PictureBox59, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4056,15 +3881,6 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadGroupBoxBereich2.PerformLayout()
         CType(Me.PictureBox80, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblBereich2EFGSpeziallBerechnung, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.PanelBereich2WZMitte.ResumeLayout(False)
-        Me.PanelBereich2WZMitte.PerformLayout()
-        CType(Me.PictureBox27, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox28, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadLabel15, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControlBereich2WeightMitte, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControlBereich2DisplayWeightMitte, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControlBereich2ErrorLimitMitte, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadCheckBoxBereich2VELMitte, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelBereich2WZ1.ResumeLayout(False)
         Me.PanelBereich2WZ1.PerformLayout()
         CType(Me.PictureBox29, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4399,12 +4215,6 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
     Friend WithEvents RadTextBoxControlBereich1ErrorLimit2 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich1VEL2 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents RadGroupBoxBereich3 As Telerik.WinControls.UI.RadGroupBox
-    Friend WithEvents PanelBereich3WZMitte As System.Windows.Forms.Panel
-    Friend WithEvents RadLabel34 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBereich3WeightMitte As Telerik.WinControls.UI.RadTextBox
-    Friend WithEvents RadTextBoxControlBereich3DisplayWeightMitte As Telerik.WinControls.UI.RadTextBox
-    Friend WithEvents RadTextBoxControlBereich3ErrorLimitMitte As Telerik.WinControls.UI.RadTextBox
-    Friend WithEvents RadCheckBoxBereich3VELMitte As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents PanelBereich3WZ12 As System.Windows.Forms.Panel
     Friend WithEvents RadLabel35 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadTextBoxControlBereich3Weight12 As Telerik.WinControls.UI.RadTextBox
@@ -4483,12 +4293,6 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
     Friend WithEvents lblBereich3Gewicht As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblBereich3AnzeigeGewicht As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadGroupBoxBereich2 As Telerik.WinControls.UI.RadGroupBox
-    Friend WithEvents PanelBereich2WZMitte As System.Windows.Forms.Panel
-    Friend WithEvents RadLabel15 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents RadTextBoxControlBereich2WeightMitte As Telerik.WinControls.UI.RadTextBox
-    Friend WithEvents RadTextBoxControlBereich2DisplayWeightMitte As Telerik.WinControls.UI.RadTextBox
-    Friend WithEvents RadTextBoxControlBereich2ErrorLimitMitte As Telerik.WinControls.UI.RadTextBox
-    Friend WithEvents RadCheckBoxBereich2VELMitte As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents PanelBereich2WZ12 As System.Windows.Forms.Panel
     Friend WithEvents RadLabel16 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadTextBoxControlBereich2Weight12 As Telerik.WinControls.UI.RadTextBox
@@ -4587,8 +4391,6 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
     Friend PictureBox58 As System.Windows.Forms.PictureBox
     Friend PictureBox67 As System.Windows.Forms.PictureBox
     Friend PictureBox68 As System.Windows.Forms.PictureBox
-    Friend PictureBox53 As System.Windows.Forms.PictureBox
-    Friend PictureBox54 As System.Windows.Forms.PictureBox
     Friend PictureBox59 As System.Windows.Forms.PictureBox
     Friend PictureBox60 As System.Windows.Forms.PictureBox
     Friend PictureBox65 As System.Windows.Forms.PictureBox
@@ -4597,8 +4399,6 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
     Friend PictureBox62 As System.Windows.Forms.PictureBox
     Friend PictureBox63 As System.Windows.Forms.PictureBox
     Friend PictureBox64 As System.Windows.Forms.PictureBox
-    Friend PictureBox27 As System.Windows.Forms.PictureBox
-    Friend PictureBox28 As System.Windows.Forms.PictureBox
     Friend PictureBox29 As System.Windows.Forms.PictureBox
     Friend PictureBox30 As System.Windows.Forms.PictureBox
     Friend PictureBox31 As System.Windows.Forms.PictureBox
@@ -4695,12 +4495,10 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
     Friend Label41 As System.Windows.Forms.Label
     Friend Label40 As System.Windows.Forms.Label
     Friend Label35 As System.Windows.Forms.Label
-    Friend Label42 As System.Windows.Forms.Label
     Friend Label39 As System.Windows.Forms.Label
     Friend Label36 As System.Windows.Forms.Label
     Friend Label38 As System.Windows.Forms.Label
     Friend Label37 As System.Windows.Forms.Label
-    Friend Label29 As System.Windows.Forms.Label
     Friend Label17 As System.Windows.Forms.Label
     Friend Label18 As System.Windows.Forms.Label
     Friend Label19 As System.Windows.Forms.Label

@@ -66,16 +66,15 @@ Friend Class uco_8PruefungNullstellungUndAussermittigeBelastung
     End Sub
 
     Private Sub RadTextBoxControlWeight_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles RadTextBoxControlWeight3.Validating, RadTextBoxControlWeight2.Validating, RadTextBoxControlWeight1.Validating,
-        RadTextBoxControlDisplayWeight3.Validating, RadTextBoxControlDisplayWeight2.Validating, RadTextBoxControlDisplayWeight1.Validating, RadTextBoxControlBereich3WeightMitte.Validating, RadTextBoxControlBereich3Weight9.Validating,
+        RadTextBoxControlDisplayWeight3.Validating, RadTextBoxControlDisplayWeight2.Validating, RadTextBoxControlDisplayWeight1.Validating, RadTextBoxControlBereich3Weight9.Validating,
         RadTextBoxControlBereich3Weight8.Validating, RadTextBoxControlBereich3Weight7.Validating, RadTextBoxControlBereich3Weight6.Validating, RadTextBoxControlBereich3Weight5.Validating, RadTextBoxControlBereich3Weight4.Validating,
         RadTextBoxControlBereich3Weight3.Validating, RadTextBoxControlBereich3Weight2.Validating, RadTextBoxControlBereich3Weight12.Validating, RadTextBoxControlBereich3Weight11.Validating, RadTextBoxControlBereich3Weight10.Validating,
-        RadTextBoxControlBereich3Weight1.Validating, RadTextBoxControlBereich3DisplayWeightMitte.Validating, RadTextBoxControlBereich3DisplayWeight9.Validating, RadTextBoxControlBereich3DisplayWeight8.Validating,
+        RadTextBoxControlBereich3Weight1.Validating, RadTextBoxControlBereich3DisplayWeight9.Validating, RadTextBoxControlBereich3DisplayWeight8.Validating,
         RadTextBoxControlBereich3DisplayWeight7.Validating, RadTextBoxControlBereich3DisplayWeight6.Validating, RadTextBoxControlBereich3DisplayWeight5.Validating, RadTextBoxControlBereich3DisplayWeight4.Validating,
 RadTextBoxControlBereich3DisplayWeight3.Validating, RadTextBoxControlBereich3DisplayWeight2.Validating, RadTextBoxControlBereich3DisplayWeight12.Validating, RadTextBoxControlBereich3DisplayWeight11.Validating,
-RadTextBoxControlBereich3DisplayWeight10.Validating, RadTextBoxControlBereich3DisplayWeight1.Validating, RadTextBoxControlBereich2WeightMitte.Validating, RadTextBoxControlBereich2Weight9.Validating, RadTextBoxControlBereich2Weight8.Validating,
+RadTextBoxControlBereich3DisplayWeight10.Validating, RadTextBoxControlBereich3DisplayWeight1.Validating, RadTextBoxControlBereich2Weight9.Validating, RadTextBoxControlBereich2Weight8.Validating,
 RadTextBoxControlBereich2Weight7.Validating, RadTextBoxControlBereich2Weight6.Validating, RadTextBoxControlBereich2Weight5.Validating, RadTextBoxControlBereich2Weight4.Validating, RadTextBoxControlBereich2Weight3.Validating,
-RadTextBoxControlBereich2Weight2.Validating, RadTextBoxControlBereich2Weight12.Validating, RadTextBoxControlBereich2Weight11.Validating, RadTextBoxControlBereich2Weight10.Validating, RadTextBoxControlBereich2Weight1.Validating,
-RadTextBoxControlBereich2DisplayWeightMitte.Validating, RadTextBoxControlBereich2DisplayWeight9.Validating, RadTextBoxControlBereich2DisplayWeight8.Validating, RadTextBoxControlBereich2DisplayWeight7.Validating,
+RadTextBoxControlBereich2Weight2.Validating, RadTextBoxControlBereich2Weight12.Validating, RadTextBoxControlBereich2Weight11.Validating, RadTextBoxControlBereich2Weight10.Validating, RadTextBoxControlBereich2Weight1.Validating, RadTextBoxControlBereich2DisplayWeight9.Validating, RadTextBoxControlBereich2DisplayWeight8.Validating, RadTextBoxControlBereich2DisplayWeight7.Validating,
 RadTextBoxControlBereich2DisplayWeight6.Validating, RadTextBoxControlBereich2DisplayWeight5.Validating, RadTextBoxControlBereich2DisplayWeight4.Validating, RadTextBoxControlBereich2DisplayWeight3.Validating,
 RadTextBoxControlBereich2DisplayWeight2.Validating, RadTextBoxControlBereich2DisplayWeight12.Validating, RadTextBoxControlBereich2DisplayWeight11.Validating, RadTextBoxControlBereich2DisplayWeight10.Validating,
 RadTextBoxControlBereich2DisplayWeight1.Validating, RadTextBoxControlBereich1WeightMitte.Validating, RadTextBoxControlBereich1Weight9.Validating, RadTextBoxControlBereich1Weight8.Validating, RadTextBoxControlBereich1Weight7.Validating,
@@ -105,9 +104,9 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         End If
     End Sub
 
-    Private Sub RadCheckBoxBereich1VEL1_MouseClick(sender As Object, e As MouseEventArgs) Handles RadCheckBoxBereich3VELMitte.MouseClick, RadCheckBoxBereich3VEL9.MouseClick, RadCheckBoxBereich3VEL8.MouseClick, RadCheckBoxBereich3VEL7.MouseClick,
+    Private Sub RadCheckBoxBereich1VEL1_MouseClick(sender As Object, e As MouseEventArgs) Handles RadCheckBoxBereich3VEL9.MouseClick, RadCheckBoxBereich3VEL8.MouseClick, RadCheckBoxBereich3VEL7.MouseClick,
           RadCheckBoxBereich3VEL6.MouseClick, RadCheckBoxBereich3VEL5.MouseClick, RadCheckBoxBereich3VEL4.MouseClick, RadCheckBoxBereich3VEL3.MouseClick, RadCheckBoxBereich3VEL2.MouseClick, RadCheckBoxBereich3VEL12.MouseClick,
-          RadCheckBoxBereich3VEL11.MouseClick, RadCheckBoxBereich3VEL10.MouseClick, RadCheckBoxBereich3VEL1.MouseClick, RadCheckBoxBereich2VELMitte.MouseClick, RadCheckBoxBereich2VEL9.MouseClick, RadCheckBoxBereich2VEL8.MouseClick,
+          RadCheckBoxBereich3VEL11.MouseClick, RadCheckBoxBereich3VEL10.MouseClick, RadCheckBoxBereich3VEL1.MouseClick, RadCheckBoxBereich2VEL9.MouseClick, RadCheckBoxBereich2VEL8.MouseClick,
           RadCheckBoxBereich2VEL7.MouseClick, RadCheckBoxBereich2VEL6.MouseClick, RadCheckBoxBereich2VEL5.MouseClick, RadCheckBoxBereich2VEL4.MouseClick, RadCheckBoxBereich2VEL3.MouseClick, RadCheckBoxBereich2VEL2.MouseClick,
           RadCheckBoxBereich2VEL12.MouseClick, RadCheckBoxBereich2VEL11.MouseClick, RadCheckBoxBereich2VEL10.MouseClick, RadCheckBoxBereich2VEL1.MouseClick, RadCheckBoxBereich1VELMitte.MouseClick, RadCheckBoxBereich1VEL9.MouseClick,
           RadCheckBoxBereich1VEL8.MouseClick, RadCheckBoxBereich1VEL7.MouseClick, RadCheckBoxBereich1VEL6.MouseClick, RadCheckBoxBereich1VEL5.MouseClick, RadCheckBoxBereich1VEL4.MouseClick, RadCheckBoxBereich1VEL3.MouseClick,
@@ -425,7 +424,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         RadTextBoxControlBereich1Weight3.TextChanged,
         RadTextBoxControlBereich1Weight2.TextChanged,
         RadTextBoxControlBereich1Weight1.TextChanged,
-        RadTextBoxControlBereich2WeightMitte.TextChanged,
         RadTextBoxControlBereich2Weight12.TextChanged,
         RadTextBoxControlBereich2Weight11.TextChanged,
         RadTextBoxControlBereich2Weight10.TextChanged,
@@ -438,7 +436,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         RadTextBoxControlBereich2Weight3.TextChanged,
         RadTextBoxControlBereich2Weight2.TextChanged,
         RadTextBoxControlBereich2Weight1.TextChanged,
-        RadTextBoxControlBereich3WeightMitte.TextChanged,
         RadTextBoxControlBereich3Weight12.TextChanged,
         RadTextBoxControlBereich3Weight11.TextChanged,
         RadTextBoxControlBereich3Weight10.TextChanged,
@@ -525,7 +522,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         RadTextBoxControlBereich2DisplayWeight10.TextChanged,
         RadTextBoxControlBereich2DisplayWeight11.TextChanged,
         RadTextBoxControlBereich2DisplayWeight12.TextChanged,
-        RadTextBoxControlBereich2DisplayWeightMitte.TextChanged,
         RadTextBoxControlBereich3DisplayWeight1.TextChanged,
         RadTextBoxControlBereich3DisplayWeight2.TextChanged,
         RadTextBoxControlBereich3DisplayWeight3.TextChanged,
@@ -537,8 +533,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         RadTextBoxControlBereich3DisplayWeight9.TextChanged,
         RadTextBoxControlBereich3DisplayWeight10.TextChanged,
         RadTextBoxControlBereich3DisplayWeight11.TextChanged,
-        RadTextBoxControlBereich3DisplayWeight12.TextChanged,
-        RadTextBoxControlBereich3DisplayWeightMitte.TextChanged
+        RadTextBoxControlBereich3DisplayWeight12.TextChanged
 
         Try
 
@@ -735,6 +730,11 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                     Next
                 Else
                     For intBelastungsort As Integer = 1 To (objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen + 1) 'eine Mehr für Mitte
+                        'bei mehrbereichswagen gibt es die Mitte nur im ersten Durchlauf
+                        If j > 1 And intBelastungsort = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen + 1 Then
+                            Continue For
+                        End If
+
                         Dim objPruefung = Context.PruefungAussermittigeBelastung.Create
                         'wenn es die eine itereation mehr ist:
                         If intBelastungsort = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen + 1 Then
@@ -856,6 +856,11 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                         Else
                             Dim intbelastungsort As Integer = 1
                             For i As Integer = 1 To (objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen + 1) 'eine Mehr für Mitte
+                                'bei mehrbereichswagen gibt es die Mitte nur im ersten Durchlauf
+                                If j > 1 And intbelastungsort = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen + 1 Then
+                                    Continue For
+                                End If
+
                                 intbelastungsort = i
                                 bolNeu = False
                                 Dim objPruefung = (From pruefungen In Context.PruefungAussermittigeBelastung Where pruefungen.Belastungsort = CStr(intbelastungsort) And pruefungen.Bereich = Bereich).FirstOrDefault
@@ -1035,7 +1040,10 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                     If Belastungsort = 13 Then sBelastungsOrt = "Mitte" 'sonderfall
 
                     Dim Last As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}Weight{1}", CInt(Bereich), sBelastungsOrt))
-                    Last.Text = wert
+                    If Not Last Is Nothing Then
+                        Last.Text = wert
+                    End If
+
                 Next
             End If
             wert = "-1"
@@ -1070,10 +1078,14 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
                 _currentObjPruefungAussermittigeBelastung = (From o In _ListPruefungAussermittigeBelastung Where o.Belastungsort = sBelastungsortDB And o.Bereich = sBereich).FirstOrDefault
 
                 If Not _currentObjPruefungAussermittigeBelastung Is Nothing Then
-                    Last.Text = _currentObjPruefungAussermittigeBelastung.Last
-                    Anzeige.Text = _currentObjPruefungAussermittigeBelastung.Anzeige
-                    Fehler.Text = _currentObjPruefungAussermittigeBelastung.Fehler
-                    EFG.Checked = _currentObjPruefungAussermittigeBelastung.EFG
+                    If Not Last Is Nothing Then
+
+                        Last.Text = _currentObjPruefungAussermittigeBelastung.Last
+                        Anzeige.Text = _currentObjPruefungAussermittigeBelastung.Anzeige
+                        Fehler.Text = _currentObjPruefungAussermittigeBelastung.Fehler
+                        EFG.Checked = _currentObjPruefungAussermittigeBelastung.EFG
+                    End If
+
                 End If
             Next
         Next
@@ -1129,10 +1141,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
             RadGroupBoxBereich2.Location = New Size(RadGroupBoxBereich2.Location.X, RadGroupBoxBereich1.Location.Y + NeueHoehe + 20)
             'dritte Groupbox muss sogar doppelt so hoch verschoben werden
             RadGroupBoxBereich3.Location = New Size(RadGroupBoxBereich3.Location.X, RadGroupBoxBereich1.Location.Y + (NeueHoehe * 2) + 40)
-
-            'zuweisen der 2. und 3. mitte in relation zur oben gewählten Location der Mitte 1
-            PanelBereich2WZMitte.Location = PanelBereich1WZMitte.Location
-            PanelBereich3WZMitte.Location = PanelBereich1WZMitte.Location
 
             'berechnen der äußeren Group Box Hoehe.
             'Der wert ergibt sich aus der neuen Position der letzten sichtbaren Groupbox + deren neuer höher+ einige Pixel Puffer
@@ -1259,8 +1267,10 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         Dim Bereich As String = PObjPruefung.Bereich
 
         'sonderfall
-        If Belastungsort = "M" Then
+        If Belastungsort = "M" And Bereich = 1 Then
             Belastungsort = "Mitte"
+        ElseIf Belastungsort = "M" And Bereich <> 1 Then
+            Exit Sub
         End If
 
         Dim Last As Telerik.WinControls.UI.RadTextBox = FindControl(String.Format("RadTextBoxControlBereich{0}Weight{1}", CInt(Bereich), Belastungsort))
@@ -1361,7 +1371,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         If RadCheckBoxBereich2VEL10.Checked = False And RadCheckBoxBereich2VEL10.Visible = True Then RadTextBoxControlBereich2DisplayWeight10.TextBoxElement.Border.ForeColor = Color.Red
         If RadCheckBoxBereich2VEL11.Checked = False And RadCheckBoxBereich2VEL11.Visible = True Then RadTextBoxControlBereich2DisplayWeight11.TextBoxElement.Border.ForeColor = Color.Red
         If RadCheckBoxBereich2VEL12.Checked = False And RadCheckBoxBereich2VEL12.Visible = True Then RadTextBoxControlBereich2DisplayWeight12.TextBoxElement.Border.ForeColor = Color.Red
-        If RadCheckBoxBereich2VELMitte.Checked = False And RadCheckBoxBereich2VELMitte.Visible = True Then RadTextBoxControlBereich2DisplayWeightMitte.TextBoxElement.Border.ForeColor = Color.Red
         If RadCheckBoxBereich3VEL1.Checked = False And RadCheckBoxBereich3VEL1.Visible = True Then RadTextBoxControlBereich3DisplayWeight1.TextBoxElement.Border.ForeColor = Color.Red
         If RadCheckBoxBereich3VEL2.Checked = False And RadCheckBoxBereich3VEL2.Visible = True Then RadTextBoxControlBereich3DisplayWeight2.TextBoxElement.Border.ForeColor = Color.Red
         If RadCheckBoxBereich3VEL3.Checked = False And RadCheckBoxBereich3VEL3.Visible = True Then RadTextBoxControlBereich3DisplayWeight3.TextBoxElement.Border.ForeColor = Color.Red
@@ -1374,7 +1383,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         If RadCheckBoxBereich3VEL10.Checked = False And RadCheckBoxBereich3VEL10.Visible = True Then RadTextBoxControlBereich3DisplayWeight10.TextBoxElement.Border.ForeColor = Color.Red
         If RadCheckBoxBereich3VEL11.Checked = False And RadCheckBoxBereich3VEL11.Visible = True Then RadTextBoxControlBereich3DisplayWeight11.TextBoxElement.Border.ForeColor = Color.Red
         If RadCheckBoxBereich3VEL12.Checked = False And RadCheckBoxBereich3VEL12.Visible = True Then RadTextBoxControlBereich3DisplayWeight12.TextBoxElement.Border.ForeColor = Color.Red
-        If RadCheckBoxBereich3VELMitte.Checked = False And RadCheckBoxBereich3VELMitte.Visible = True Then RadTextBoxControlBereich3DisplayWeightMitte.TextBoxElement.Border.ForeColor = Color.Red
 
         If RadCheckBoxBereich1VEL1.Checked = False And RadCheckBoxBereich1VEL1.Visible = True Or
         RadCheckBoxBereich1VEL2.Checked = False And RadCheckBoxBereich1VEL2.Visible = True Or
@@ -1401,7 +1409,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         RadCheckBoxBereich2VEL10.Checked = False And RadCheckBoxBereich2VEL10.Visible = True Or
         RadCheckBoxBereich2VEL11.Checked = False And RadCheckBoxBereich2VEL11.Visible = True Or
         RadCheckBoxBereich2VEL12.Checked = False And RadCheckBoxBereich2VEL12.Visible = True Or
-        RadCheckBoxBereich2VELMitte.Checked = False And RadCheckBoxBereich2VELMitte.Visible = True Or
         RadCheckBoxBereich3VEL1.Checked = False And RadCheckBoxBereich3VEL1.Visible = True Or
         RadCheckBoxBereich3VEL2.Checked = False And RadCheckBoxBereich3VEL2.Visible = True Or
         RadCheckBoxBereich3VEL3.Checked = False And RadCheckBoxBereich3VEL3.Visible = True Or
@@ -1414,8 +1421,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         RadCheckBoxBereich3VEL10.Checked = False And RadCheckBoxBereich3VEL10.Visible = True Or
         RadCheckBoxBereich3VEL11.Checked = False And RadCheckBoxBereich3VEL11.Visible = True Or
         RadCheckBoxBereich3VEL12.Checked = False And RadCheckBoxBereich3VEL12.Visible = True Or
-        RadCheckBoxBereich3VELMitte.Checked = False And RadCheckBoxBereich3VELMitte.Visible = True Then
-            AbortSaving = True
+            AbortSaving = True Then
             Return False
 
         End If
@@ -1510,7 +1516,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         RadTextBoxControlBereich2DisplayWeight10.Text = RadTextBoxControlBereich2Weight10.Text
         RadTextBoxControlBereich2DisplayWeight11.Text = RadTextBoxControlBereich2Weight11.Text
         RadTextBoxControlBereich2DisplayWeight12.Text = RadTextBoxControlBereich2Weight12.Text
-        RadTextBoxControlBereich2DisplayWeightMitte.Text = RadTextBoxControlBereich2WeightMitte.Text
 
         RadTextBoxControlBereich3DisplayWeight1.Text = RadTextBoxControlBereich3Weight1.Text
         RadTextBoxControlBereich3DisplayWeight2.Text = RadTextBoxControlBereich3Weight2.Text
@@ -1524,7 +1529,6 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         RadTextBoxControlBereich3DisplayWeight10.Text = RadTextBoxControlBereich3Weight10.Text
         RadTextBoxControlBereich3DisplayWeight11.Text = RadTextBoxControlBereich3Weight11.Text
         RadTextBoxControlBereich3DisplayWeight12.Text = RadTextBoxControlBereich3Weight12.Text
-        RadTextBoxControlBereich3DisplayWeightMitte.Text = RadTextBoxControlBereich3WeightMitte.Text
 
     End Sub
 
