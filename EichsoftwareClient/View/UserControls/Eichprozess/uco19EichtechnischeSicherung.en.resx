@@ -118,61 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lblSicherungshinweise.Size" type="System.Drawing.Size, System.Drawing">
-    <value>415, 18</value>
-  </data>
-  <data name="lblSicherungshinweise.Text" xml:space="preserve">
-    <value>Czy naniesiono wszystkie wymagane naklejki zabezpieczające oraz wskazówkowe?</value>
-  </data>
-  <data name="lblEichsiegel13x13.Size" type="System.Drawing.Size, System.Drawing">
-    <value>175, 18</value>
-  </data>
-  <data name="lblEichsiegel13x13.Text" xml:space="preserve">
-    <value>Naklejka "Cecha legalizacji" 14x14</value>
-  </data>
-  <data name="lblEichsiegelRund.Size" type="System.Drawing.Size, System.Drawing">
-    <value>183, 18</value>
-  </data>
-  <data name="lblEichsiegelRund.Text" xml:space="preserve">
-    <value>Naklejka "Cecha legalizacji" okrągła</value>
-  </data>
-  <data name="lblHinweismarke.Size" type="System.Drawing.Size, System.Drawing">
-    <value>202, 18</value>
-  </data>
-  <data name="lblHinweismarke.Text" xml:space="preserve">
-    <value>Naklejka informacyjna przedziurawiona</value>
-  </data>
-  <data name="lblDatenKonfiguration.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 18</value>
-  </data>
-  <data name="lblDatenKonfiguration.Text" xml:space="preserve">
-    <value>Czy wyczytano dane za pomocą programu Config?</value>
-  </data>
-  <data name="lblAlibispeicher.Size" type="System.Drawing.Size, System.Drawing">
-    <value>212, 18</value>
-  </data>
-  <data name="lblAlibispeicher.Text" xml:space="preserve">
-    <value>Czy sporządzono pamięć alibi dla 90 dni?</value>
-  </data>
-  <data name="lblAufbewahrungsdauer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>286, 18</value>
-  </data>
-  <data name="lblAufbewahrungsdauer.Text" xml:space="preserve">
-    <value>Czy zredukowano czas przechowywania w pamięci alibi?</value>
-  </data>
-  <data name="lblBemerkungen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 18</value>
-  </data>
-  <data name="lblBemerkungen.Text" xml:space="preserve">
-    <value>Spostrzeżenia:</value>
-  </data>
   <data name="RadTextBoxControlBemerkungen.Size" type="System.Drawing.Size, System.Drawing">
     <value>477, 1092</value>
-  </data>
-  <data name="lblAnzahl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 18</value>
-  </data>
-  <data name="lblAnzahl.Text" xml:space="preserve">
-    <value>Ilość</value>
   </data>
 </root>

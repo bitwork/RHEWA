@@ -103,7 +103,6 @@ Partial Class uco19EichtechnischeSicherung
         '
         'RadScrollablePanel1.PanelContainer
         '
-        resources.ApplyResources(Me.RadScrollablePanel1.PanelContainer, "RadScrollablePanel1.PanelContainer")
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label7)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label6)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.PictureBoxCE2016)
@@ -140,6 +139,7 @@ Partial Class uco19EichtechnischeSicherung
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadCheckBoxAufbewahrungsdauer)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadCheckBoxKonfigurationsProgramm)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadCheckBoxAlibispeicher)
+        resources.ApplyResources(Me.RadScrollablePanel1.PanelContainer, "RadScrollablePanel1.PanelContainer")
         '
         'Label7
         '
@@ -155,8 +155,8 @@ Partial Class uco19EichtechnischeSicherung
         '
         'PictureBoxCE2016
         '
-        resources.ApplyResources(Me.PictureBoxCE2016, "PictureBoxCE2016")
         Me.PictureBoxCE2016.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBoxCE2016, "PictureBoxCE2016")
         Me.PictureBoxCE2016.Name = "PictureBoxCE2016"
         Me.PictureBoxCE2016.TabStop = False
         '
@@ -202,8 +202,8 @@ Partial Class uco19EichtechnischeSicherung
         '
         'PictureBox3
         '
-        resources.ApplyResources(Me.PictureBox3, "PictureBox3")
         Me.PictureBox3.Image = Global.EichsoftwareClient.My.Resources.Resources._82Alpha_typenschild
+        resources.ApplyResources(Me.PictureBox3, "PictureBox3")
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.TabStop = False
         '
@@ -236,8 +236,8 @@ Partial Class uco19EichtechnischeSicherung
         '
         'PictureBoxAilbi
         '
-        resources.ApplyResources(Me.PictureBoxAilbi, "PictureBoxAilbi")
         Me.PictureBoxAilbi.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBoxAilbi, "PictureBoxAilbi")
         Me.PictureBoxAilbi.Name = "PictureBoxAilbi"
         Me.PictureBoxAilbi.TabStop = False
         '
@@ -248,8 +248,8 @@ Partial Class uco19EichtechnischeSicherung
         '
         'PictureBoxHinweismarke
         '
-        resources.ApplyResources(Me.PictureBoxHinweismarke, "PictureBoxHinweismarke")
         Me.PictureBoxHinweismarke.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBoxHinweismarke, "PictureBoxHinweismarke")
         Me.PictureBoxHinweismarke.Name = "PictureBoxHinweismarke"
         Me.PictureBoxHinweismarke.TabStop = False
         '
@@ -260,8 +260,8 @@ Partial Class uco19EichtechnischeSicherung
         '
         'PictureBoxEichsiegelRund
         '
-        resources.ApplyResources(Me.PictureBoxEichsiegelRund, "PictureBoxEichsiegelRund")
         Me.PictureBoxEichsiegelRund.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBoxEichsiegelRund, "PictureBoxEichsiegelRund")
         Me.PictureBoxEichsiegelRund.Name = "PictureBoxEichsiegelRund"
         Me.PictureBoxEichsiegelRund.TabStop = False
         '
@@ -272,8 +272,8 @@ Partial Class uco19EichtechnischeSicherung
         '
         'PictureBoxEichsiegel13x13
         '
-        resources.ApplyResources(Me.PictureBoxEichsiegel13x13, "PictureBoxEichsiegel13x13")
         Me.PictureBoxEichsiegel13x13.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
+        resources.ApplyResources(Me.PictureBoxEichsiegel13x13, "PictureBoxEichsiegel13x13")
         Me.PictureBoxEichsiegel13x13.Name = "PictureBoxEichsiegel13x13"
         Me.PictureBoxEichsiegel13x13.TabStop = False
         '

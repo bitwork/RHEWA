@@ -628,6 +628,9 @@
       <DependentUpon>uco17PruefungEignungFuerAchlastwaegungen.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\UserControls\Eichprozess\uco19EichtechnischeSicherung.en.resx">
+      <DependentUpon>uco19EichtechnischeSicherung.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\UserControls\Eichprozess\uco21Versenden.en.resx">
       <DependentUpon>uco21Versenden.vb</DependentUpon>
       <SubType>Designer</SubType>
