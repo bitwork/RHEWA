@@ -497,7 +497,7 @@ Public Class clsPlausibilitaetspruefung
 
             Dim countjustagepunkte As Integer
 
-            For i As Integer = 0 To 10
+            For i As Integer = 0 To 9
                 If i = 0 OrElse i Mod 2 = 0 Then 'die geraden Werte entsprechen den Gewichten
                     Dim Gewicht As Decimal
                     Try
