@@ -42,40 +42,20 @@ Partial Class uco18Fallbeschleunigung
         resources.ApplyResources(Me.lblBeschreibung, "lblBeschreibung")
         Me.lblBeschreibung.Name = "lblBeschreibung"
         '
-        '
-        '
-        Me.lblBeschreibung.RootElement.AccessibleDescription = Nothing
-        Me.lblBeschreibung.RootElement.AccessibleName = Nothing
-        '
         'RadLabel1
         '
         resources.ApplyResources(Me.RadLabel1, "RadLabel1")
         Me.RadLabel1.Name = "RadLabel1"
-        '
-        '
-        '
-        Me.RadLabel1.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel1.RootElement.AccessibleName = Nothing
         '
         'RadLabel3
         '
         resources.ApplyResources(Me.RadLabel3, "RadLabel3")
         Me.RadLabel3.Name = "RadLabel3"
         '
-        '
-        '
-        Me.RadLabel3.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel3.RootElement.AccessibleName = Nothing
-        '
         'RadCheckBoxSchwerkraft
         '
         resources.ApplyResources(Me.RadCheckBoxSchwerkraft, "RadCheckBoxSchwerkraft")
         Me.RadCheckBoxSchwerkraft.Name = "RadCheckBoxSchwerkraft"
-        '
-        '
-        '
-        Me.RadCheckBoxSchwerkraft.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxSchwerkraft.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlG
         '
@@ -106,7 +86,6 @@ Partial Class uco18Fallbeschleunigung
         Me.Controls.Add(Me.RadLabel3)
         Me.Controls.Add(Me.RadLabel1)
         Me.Controls.Add(Me.lblBeschreibung)
-        Me.DoubleBuffered = True
         Me.ForeColor = System.Drawing.Color.Black
         Me.Name = "uco18Fallbeschleunigung"
         CType(Me.lblBeschreibung, System.ComponentModel.ISupportInitialize).EndInit()

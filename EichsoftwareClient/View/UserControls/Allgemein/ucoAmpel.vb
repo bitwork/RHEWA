@@ -97,7 +97,7 @@ Public Class ucoAmpel
 
 #Region "Methoden"
     ''' <summary>
-    ''' Füllt die Breadcrumb neu, bei wechselnder Lokalisierung
+    ''' Füllt die Breadcrumb neu, bei wechselnder Lokalisierungc
     ''' </summary>
     ''' <remarks></remarks>
     Private Sub LokalisierungNeeded() Handles _ParentForm.LokalisierungNeeded

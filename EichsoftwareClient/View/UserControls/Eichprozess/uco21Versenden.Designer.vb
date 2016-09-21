@@ -46,41 +46,21 @@ Partial Class Uco21Versenden
         resources.ApplyResources(Me.RadLabel1, "RadLabel1")
         Me.RadLabel1.Name = "RadLabel1"
         '
-        '
-        '
-        Me.RadLabel1.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel1.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlUploadPath
         '
         resources.ApplyResources(Me.RadTextBoxControlUploadPath, "RadTextBoxControlUploadPath")
         Me.RadTextBoxControlUploadPath.Name = "RadTextBoxControlUploadPath"
         Me.RadTextBoxControlUploadPath.ReadOnly = True
         '
-        '
-        '
-        Me.RadTextBoxControlUploadPath.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlUploadPath.RootElement.AccessibleName = Nothing
-        '
         'RadButtonUploadPath
         '
         resources.ApplyResources(Me.RadButtonUploadPath, "RadButtonUploadPath")
         Me.RadButtonUploadPath.Name = "RadButtonUploadPath"
         '
-        '
-        '
-        Me.RadButtonUploadPath.RootElement.AccessibleDescription = Nothing
-        Me.RadButtonUploadPath.RootElement.AccessibleName = Nothing
-        '
         'RadButtonAnRhewaSenden
         '
         resources.ApplyResources(Me.RadButtonAnRhewaSenden, "RadButtonAnRhewaSenden")
         Me.RadButtonAnRhewaSenden.Name = "RadButtonAnRhewaSenden"
-        '
-        '
-        '
-        Me.RadButtonAnRhewaSenden.RootElement.AccessibleDescription = Nothing
-        Me.RadButtonAnRhewaSenden.RootElement.AccessibleName = Nothing
         '
         'BackgroundWorkerUploadFTP
         '
@@ -91,11 +71,6 @@ Partial Class Uco21Versenden
         resources.ApplyResources(Me.RadProgressBar, "RadProgressBar")
         Me.RadProgressBar.Name = "RadProgressBar"
         '
-        '
-        '
-        Me.RadProgressBar.RootElement.AccessibleDescription = Nothing
-        Me.RadProgressBar.RootElement.AccessibleName = Nothing
-        '
         'Uco21Versenden
         '
         resources.ApplyResources(Me, "$this")
@@ -105,7 +80,6 @@ Partial Class Uco21Versenden
         Me.Controls.Add(Me.RadButtonUploadPath)
         Me.Controls.Add(Me.RadTextBoxControlUploadPath)
         Me.Controls.Add(Me.RadLabel1)
-        Me.DoubleBuffered = True
         Me.Name = "Uco21Versenden"
         CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlUploadPath, System.ComponentModel.ISupportInitialize).EndInit()

@@ -240,11 +240,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadTextBoxControlLastRechts1)
         resources.ApplyResources(Me.RadScrollablePanel1.PanelContainer, "RadScrollablePanel1.PanelContainer")
         '
-        '
-        '
-        Me.RadScrollablePanel1.RootElement.AccessibleDescription = Nothing
-        Me.RadScrollablePanel1.RootElement.AccessibleName = Nothing
-        '
         'lblPflichtfeld6
         '
         resources.ApplyResources(Me.lblPflichtfeld6, "lblPflichtfeld6")
@@ -286,11 +281,6 @@ Partial Class uco13PruefungRollendeLasten
         resources.ApplyResources(Me.RadButton1, "RadButton1")
         Me.RadButton1.Name = "RadButton1"
         '
-        '
-        '
-        Me.RadButton1.RootElement.AccessibleDescription = Nothing
-        Me.RadButton1.RootElement.AccessibleName = Nothing
-        '
         'PictureBox18
         '
         Me.PictureBox18.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
@@ -324,11 +314,6 @@ Partial Class uco13PruefungRollendeLasten
         resources.ApplyResources(Me.lblBelastungsstelleLinks, "lblBelastungsstelleLinks")
         Me.lblBelastungsstelleLinks.Name = "lblBelastungsstelleLinks"
         '
-        '
-        '
-        Me.lblBelastungsstelleLinks.RootElement.AccessibleDescription = Nothing
-        Me.lblBelastungsstelleLinks.RootElement.AccessibleName = Nothing
-        '
         'PictureBox16
         '
         Me.PictureBox16.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
@@ -340,11 +325,6 @@ Partial Class uco13PruefungRollendeLasten
         '
         resources.ApplyResources(Me.lblAuffahrtLinks1, "lblAuffahrtLinks1")
         Me.lblAuffahrtLinks1.Name = "lblAuffahrtLinks1"
-        '
-        '
-        '
-        Me.lblAuffahrtLinks1.RootElement.AccessibleDescription = Nothing
-        Me.lblAuffahrtLinks1.RootElement.AccessibleName = Nothing
         '
         'PictureBox17
         '
@@ -358,11 +338,6 @@ Partial Class uco13PruefungRollendeLasten
         resources.ApplyResources(Me.lblAuffahrtLinks2, "lblAuffahrtLinks2")
         Me.lblAuffahrtLinks2.Name = "lblAuffahrtLinks2"
         '
-        '
-        '
-        Me.lblAuffahrtLinks2.RootElement.AccessibleDescription = Nothing
-        Me.lblAuffahrtLinks2.RootElement.AccessibleName = Nothing
-        '
         'PictureBox12
         '
         Me.PictureBox12.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
@@ -374,11 +349,6 @@ Partial Class uco13PruefungRollendeLasten
         '
         resources.ApplyResources(Me.lblAuffahrtLinks3, "lblAuffahrtLinks3")
         Me.lblAuffahrtLinks3.Name = "lblAuffahrtLinks3"
-        '
-        '
-        '
-        Me.lblAuffahrtLinks3.RootElement.AccessibleDescription = Nothing
-        Me.lblAuffahrtLinks3.RootElement.AccessibleName = Nothing
         '
         'PictureBox13
         '
@@ -392,11 +362,6 @@ Partial Class uco13PruefungRollendeLasten
         resources.ApplyResources(Me.lblLastLinks, "lblLastLinks")
         Me.lblLastLinks.Name = "lblLastLinks"
         '
-        '
-        '
-        Me.lblLastLinks.RootElement.AccessibleDescription = Nothing
-        Me.lblLastLinks.RootElement.AccessibleName = Nothing
-        '
         'PictureBox14
         '
         Me.PictureBox14.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
@@ -408,11 +373,6 @@ Partial Class uco13PruefungRollendeLasten
         '
         resources.ApplyResources(Me.lblAnzeigeLinks, "lblAnzeigeLinks")
         Me.lblAnzeigeLinks.Name = "lblAnzeigeLinks"
-        '
-        '
-        '
-        Me.lblAnzeigeLinks.RootElement.AccessibleDescription = Nothing
-        Me.lblAnzeigeLinks.RootElement.AccessibleName = Nothing
         '
         'PictureBox9
         '
@@ -426,11 +386,6 @@ Partial Class uco13PruefungRollendeLasten
         resources.ApplyResources(Me.lblFehlerLinks, "lblFehlerLinks")
         Me.lblFehlerLinks.Name = "lblFehlerLinks"
         '
-        '
-        '
-        Me.lblFehlerLinks.RootElement.AccessibleDescription = Nothing
-        Me.lblFehlerLinks.RootElement.AccessibleName = Nothing
-        '
         'PictureBox10
         '
         Me.PictureBox10.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
@@ -442,11 +397,6 @@ Partial Class uco13PruefungRollendeLasten
         '
         resources.ApplyResources(Me.lblEFGLinks, "lblEFGLinks")
         Me.lblEFGLinks.Name = "lblEFGLinks"
-        '
-        '
-        '
-        Me.lblEFGLinks.RootElement.AccessibleDescription = Nothing
-        Me.lblEFGLinks.RootElement.AccessibleName = Nothing
         '
         'PictureBox11
         '
@@ -460,11 +410,6 @@ Partial Class uco13PruefungRollendeLasten
         resources.ApplyResources(Me.lblEFGWertLinks, "lblEFGWertLinks")
         Me.lblEFGWertLinks.Name = "lblEFGWertLinks"
         Me.lblEFGWertLinks.ReadOnly = True
-        '
-        '
-        '
-        Me.lblEFGWertLinks.RootElement.AccessibleDescription = Nothing
-        Me.lblEFGWertLinks.RootElement.AccessibleName = Nothing
         Me.lblEFGWertLinks.TabStop = False
         '
         'PictureBox8
@@ -480,11 +425,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadTextBoxControlLastLinks1.MaxLength = 20
         Me.RadTextBoxControlLastLinks1.Name = "RadTextBoxControlLastLinks1"
         '
-        '
-        '
-        Me.RadTextBoxControlLastLinks1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlLastLinks1.RootElement.AccessibleName = Nothing
-        '
         'PictureBox7
         '
         Me.PictureBox7.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
@@ -497,11 +437,6 @@ Partial Class uco13PruefungRollendeLasten
         resources.ApplyResources(Me.RadTextBoxControllastLinks3, "RadTextBoxControllastLinks3")
         Me.RadTextBoxControllastLinks3.MaxLength = 20
         Me.RadTextBoxControllastLinks3.Name = "RadTextBoxControllastLinks3"
-        '
-        '
-        '
-        Me.RadTextBoxControllastLinks3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControllastLinks3.RootElement.AccessibleName = Nothing
         '
         'PictureBox6
         '
@@ -516,42 +451,22 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadTextBoxControlLastLinks2.MaxLength = 20
         Me.RadTextBoxControlLastLinks2.Name = "RadTextBoxControlLastLinks2"
         '
-        '
-        '
-        Me.RadTextBoxControlLastLinks2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlLastLinks2.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlAnzeigeLinks1
         '
         resources.ApplyResources(Me.RadTextBoxControlAnzeigeLinks1, "RadTextBoxControlAnzeigeLinks1")
         Me.RadTextBoxControlAnzeigeLinks1.MaxLength = 20
         Me.RadTextBoxControlAnzeigeLinks1.Name = "RadTextBoxControlAnzeigeLinks1"
         '
-        '
-        '
-        Me.RadTextBoxControlAnzeigeLinks1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlAnzeigeLinks1.RootElement.AccessibleName = Nothing
-        '
         'RadButtonShowEFG
         '
         resources.ApplyResources(Me.RadButtonShowEFG, "RadButtonShowEFG")
         Me.RadButtonShowEFG.Name = "RadButtonShowEFG"
-        '
-        '
-        '
-        Me.RadButtonShowEFG.RootElement.AccessibleDescription = Nothing
-        Me.RadButtonShowEFG.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlAnzeigeLinks2
         '
         resources.ApplyResources(Me.RadTextBoxControlAnzeigeLinks2, "RadTextBoxControlAnzeigeLinks2")
         Me.RadTextBoxControlAnzeigeLinks2.MaxLength = 20
         Me.RadTextBoxControlAnzeigeLinks2.Name = "RadTextBoxControlAnzeigeLinks2"
-        '
-        '
-        '
-        Me.RadTextBoxControlAnzeigeLinks2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlAnzeigeLinks2.RootElement.AccessibleName = Nothing
         '
         'PictureBox5
         '
@@ -566,11 +481,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadTextBoxControlAnzeigeLinks3.MaxLength = 20
         Me.RadTextBoxControlAnzeigeLinks3.Name = "RadTextBoxControlAnzeigeLinks3"
         '
-        '
-        '
-        Me.RadTextBoxControlAnzeigeLinks3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlAnzeigeLinks3.RootElement.AccessibleName = Nothing
-        '
         'PictureBox4
         '
         Me.PictureBox4.Image = Global.EichsoftwareClient.My.Resources.Resources.LKW
@@ -584,11 +494,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadTextBoxControlFehlerLinks1.MaxLength = 20
         Me.RadTextBoxControlFehlerLinks1.Name = "RadTextBoxControlFehlerLinks1"
         Me.RadTextBoxControlFehlerLinks1.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlFehlerLinks1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlFehlerLinks1.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlFehlerLinks1.TabStop = False
         '
         'PictureBox3
@@ -604,11 +509,6 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadTextBoxControlFehlerLinks2.MaxLength = 20
         Me.RadTextBoxControlFehlerLinks2.Name = "RadTextBoxControlFehlerLinks2"
         Me.RadTextBoxControlFehlerLinks2.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlFehlerLinks2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlFehlerLinks2.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlFehlerLinks2.TabStop = False
         '
         'RadTextBoxControlFehlerLinks3
@@ -617,77 +517,42 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadTextBoxControlFehlerLinks3.MaxLength = 20
         Me.RadTextBoxControlFehlerLinks3.Name = "RadTextBoxControlFehlerLinks3"
         Me.RadTextBoxControlFehlerLinks3.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlFehlerLinks3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlFehlerLinks3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlFehlerLinks3.TabStop = False
         '
         'RadCheckBoxAuffahrtLinks1
         '
         resources.ApplyResources(Me.RadCheckBoxAuffahrtLinks1, "RadCheckBoxAuffahrtLinks1")
         Me.RadCheckBoxAuffahrtLinks1.Name = "RadCheckBoxAuffahrtLinks1"
-        '
-        '
-        '
-        Me.RadCheckBoxAuffahrtLinks1.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxAuffahrtLinks1.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxAuffahrtLinks1.TabStop = False
         '
         'RadCheckBoxlblAuffahrtRechts3
         '
         resources.ApplyResources(Me.RadCheckBoxlblAuffahrtRechts3, "RadCheckBoxlblAuffahrtRechts3")
         Me.RadCheckBoxlblAuffahrtRechts3.Name = "RadCheckBoxlblAuffahrtRechts3"
-        '
-        '
-        '
-        Me.RadCheckBoxlblAuffahrtRechts3.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxlblAuffahrtRechts3.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxlblAuffahrtRechts3.TabStop = False
         '
         'RadCheckBoxAuffahrtLinks2
         '
         resources.ApplyResources(Me.RadCheckBoxAuffahrtLinks2, "RadCheckBoxAuffahrtLinks2")
         Me.RadCheckBoxAuffahrtLinks2.Name = "RadCheckBoxAuffahrtLinks2"
-        '
-        '
-        '
-        Me.RadCheckBoxAuffahrtLinks2.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxAuffahrtLinks2.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxAuffahrtLinks2.TabStop = False
         '
         'RadCheckBoxlblAuffahrtRechts2
         '
         resources.ApplyResources(Me.RadCheckBoxlblAuffahrtRechts2, "RadCheckBoxlblAuffahrtRechts2")
         Me.RadCheckBoxlblAuffahrtRechts2.Name = "RadCheckBoxlblAuffahrtRechts2"
-        '
-        '
-        '
-        Me.RadCheckBoxlblAuffahrtRechts2.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxlblAuffahrtRechts2.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxlblAuffahrtRechts2.TabStop = False
         '
         'RadCheckBoxAuffahrtLinks3
         '
         resources.ApplyResources(Me.RadCheckBoxAuffahrtLinks3, "RadCheckBoxAuffahrtLinks3")
         Me.RadCheckBoxAuffahrtLinks3.Name = "RadCheckBoxAuffahrtLinks3"
-        '
-        '
-        '
-        Me.RadCheckBoxAuffahrtLinks3.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxAuffahrtLinks3.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxAuffahrtLinks3.TabStop = False
         '
         'RadCheckBoxlblAuffahrtRechts1
         '
         resources.ApplyResources(Me.RadCheckBoxlblAuffahrtRechts1, "RadCheckBoxlblAuffahrtRechts1")
         Me.RadCheckBoxlblAuffahrtRechts1.Name = "RadCheckBoxlblAuffahrtRechts1"
-        '
-        '
-        '
-        Me.RadCheckBoxlblAuffahrtRechts1.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxlblAuffahrtRechts1.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxlblAuffahrtRechts1.TabStop = False
         '
         'lblBelastungsstelleRechts
@@ -695,22 +560,12 @@ Partial Class uco13PruefungRollendeLasten
         resources.ApplyResources(Me.lblBelastungsstelleRechts, "lblBelastungsstelleRechts")
         Me.lblBelastungsstelleRechts.Name = "lblBelastungsstelleRechts"
         '
-        '
-        '
-        Me.lblBelastungsstelleRechts.RootElement.AccessibleDescription = Nothing
-        Me.lblBelastungsstelleRechts.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlFehlerRechts3
         '
         resources.ApplyResources(Me.RadTextBoxControlFehlerRechts3, "RadTextBoxControlFehlerRechts3")
         Me.RadTextBoxControlFehlerRechts3.MaxLength = 20
         Me.RadTextBoxControlFehlerRechts3.Name = "RadTextBoxControlFehlerRechts3"
         Me.RadTextBoxControlFehlerRechts3.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlFehlerRechts3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlFehlerRechts3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlFehlerRechts3.TabStop = False
         '
         'lblAuffahrtRechts1
@@ -718,22 +573,12 @@ Partial Class uco13PruefungRollendeLasten
         resources.ApplyResources(Me.lblAuffahrtRechts1, "lblAuffahrtRechts1")
         Me.lblAuffahrtRechts1.Name = "lblAuffahrtRechts1"
         '
-        '
-        '
-        Me.lblAuffahrtRechts1.RootElement.AccessibleDescription = Nothing
-        Me.lblAuffahrtRechts1.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlFehlerRechts2
         '
         resources.ApplyResources(Me.RadTextBoxControlFehlerRechts2, "RadTextBoxControlFehlerRechts2")
         Me.RadTextBoxControlFehlerRechts2.MaxLength = 20
         Me.RadTextBoxControlFehlerRechts2.Name = "RadTextBoxControlFehlerRechts2"
         Me.RadTextBoxControlFehlerRechts2.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlFehlerRechts2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlFehlerRechts2.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlFehlerRechts2.TabStop = False
         '
         'lblAuffahrtRechts2
@@ -741,22 +586,12 @@ Partial Class uco13PruefungRollendeLasten
         resources.ApplyResources(Me.lblAuffahrtRechts2, "lblAuffahrtRechts2")
         Me.lblAuffahrtRechts2.Name = "lblAuffahrtRechts2"
         '
-        '
-        '
-        Me.lblAuffahrtRechts2.RootElement.AccessibleDescription = Nothing
-        Me.lblAuffahrtRechts2.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlFehlerRechts1
         '
         resources.ApplyResources(Me.RadTextBoxControlFehlerRechts1, "RadTextBoxControlFehlerRechts1")
         Me.RadTextBoxControlFehlerRechts1.MaxLength = 20
         Me.RadTextBoxControlFehlerRechts1.Name = "RadTextBoxControlFehlerRechts1"
         Me.RadTextBoxControlFehlerRechts1.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlFehlerRechts1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlFehlerRechts1.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlFehlerRechts1.TabStop = False
         '
         'lblAuffahrtRechts3
@@ -764,31 +599,16 @@ Partial Class uco13PruefungRollendeLasten
         resources.ApplyResources(Me.lblAuffahrtRechts3, "lblAuffahrtRechts3")
         Me.lblAuffahrtRechts3.Name = "lblAuffahrtRechts3"
         '
-        '
-        '
-        Me.lblAuffahrtRechts3.RootElement.AccessibleDescription = Nothing
-        Me.lblAuffahrtRechts3.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlAnzeigeRechts3
         '
         resources.ApplyResources(Me.RadTextBoxControlAnzeigeRechts3, "RadTextBoxControlAnzeigeRechts3")
         Me.RadTextBoxControlAnzeigeRechts3.MaxLength = 20
         Me.RadTextBoxControlAnzeigeRechts3.Name = "RadTextBoxControlAnzeigeRechts3"
         '
-        '
-        '
-        Me.RadTextBoxControlAnzeigeRechts3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlAnzeigeRechts3.RootElement.AccessibleName = Nothing
-        '
         'lblLastRechts
         '
         resources.ApplyResources(Me.lblLastRechts, "lblLastRechts")
         Me.lblLastRechts.Name = "lblLastRechts"
-        '
-        '
-        '
-        Me.lblLastRechts.RootElement.AccessibleDescription = Nothing
-        Me.lblLastRechts.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlAnzeigeRechts2
         '
@@ -796,20 +616,10 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadTextBoxControlAnzeigeRechts2.MaxLength = 20
         Me.RadTextBoxControlAnzeigeRechts2.Name = "RadTextBoxControlAnzeigeRechts2"
         '
-        '
-        '
-        Me.RadTextBoxControlAnzeigeRechts2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlAnzeigeRechts2.RootElement.AccessibleName = Nothing
-        '
         'lblAnzeigeRechts
         '
         resources.ApplyResources(Me.lblAnzeigeRechts, "lblAnzeigeRechts")
         Me.lblAnzeigeRechts.Name = "lblAnzeigeRechts"
-        '
-        '
-        '
-        Me.lblAnzeigeRechts.RootElement.AccessibleDescription = Nothing
-        Me.lblAnzeigeRechts.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlAnzeigeRechts1
         '
@@ -817,21 +627,11 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadTextBoxControlAnzeigeRechts1.MaxLength = 20
         Me.RadTextBoxControlAnzeigeRechts1.Name = "RadTextBoxControlAnzeigeRechts1"
         '
-        '
-        '
-        Me.RadTextBoxControlAnzeigeRechts1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlAnzeigeRechts1.RootElement.AccessibleName = Nothing
-        '
         'lblFehlerRechts
         '
         resources.ApplyResources(Me.lblFehlerRechts, "lblFehlerRechts")
         Me.lblFehlerRechts.Controls.Add(Me.PictureBox1)
         Me.lblFehlerRechts.Name = "lblFehlerRechts"
-        '
-        '
-        '
-        Me.lblFehlerRechts.RootElement.AccessibleDescription = Nothing
-        Me.lblFehlerRechts.RootElement.AccessibleName = Nothing
         '
         'PictureBox1
         '
@@ -846,20 +646,10 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadTextBoxControlLastRechts2.MaxLength = 20
         Me.RadTextBoxControlLastRechts2.Name = "RadTextBoxControlLastRechts2"
         '
-        '
-        '
-        Me.RadTextBoxControlLastRechts2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlLastRechts2.RootElement.AccessibleName = Nothing
-        '
         'lblEFGRechts
         '
         resources.ApplyResources(Me.lblEFGRechts, "lblEFGRechts")
         Me.lblEFGRechts.Name = "lblEFGRechts"
-        '
-        '
-        '
-        Me.lblEFGRechts.RootElement.AccessibleDescription = Nothing
-        Me.lblEFGRechts.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlLastRechts3
         '
@@ -867,21 +657,11 @@ Partial Class uco13PruefungRollendeLasten
         Me.RadTextBoxControlLastRechts3.MaxLength = 20
         Me.RadTextBoxControlLastRechts3.Name = "RadTextBoxControlLastRechts3"
         '
-        '
-        '
-        Me.RadTextBoxControlLastRechts3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlLastRechts3.RootElement.AccessibleName = Nothing
-        '
         'lblEFGWertRechts
         '
         resources.ApplyResources(Me.lblEFGWertRechts, "lblEFGWertRechts")
         Me.lblEFGWertRechts.Name = "lblEFGWertRechts"
         Me.lblEFGWertRechts.ReadOnly = True
-        '
-        '
-        '
-        Me.lblEFGWertRechts.RootElement.AccessibleDescription = Nothing
-        Me.lblEFGWertRechts.RootElement.AccessibleName = Nothing
         Me.lblEFGWertRechts.TabStop = False
         '
         'RadTextBoxControlLastRechts1
@@ -889,11 +669,6 @@ Partial Class uco13PruefungRollendeLasten
         resources.ApplyResources(Me.RadTextBoxControlLastRechts1, "RadTextBoxControlLastRechts1")
         Me.RadTextBoxControlLastRechts1.MaxLength = 20
         Me.RadTextBoxControlLastRechts1.Name = "RadTextBoxControlLastRechts1"
-        '
-        '
-        '
-        Me.RadTextBoxControlLastRechts1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlLastRechts1.RootElement.AccessibleName = Nothing
         '
         'PanelContainer
         '
@@ -904,7 +679,6 @@ Partial Class uco13PruefungRollendeLasten
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.RadScrollablePanel1)
-        Me.DoubleBuffered = True
         Me.Name = "uco13PruefungRollendeLasten"
         Me.RadScrollablePanel1.PanelContainer.ResumeLayout(False)
         Me.RadScrollablePanel1.PanelContainer.PerformLayout()

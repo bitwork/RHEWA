@@ -85,67 +85,36 @@ Partial Class uco17PruefungEignungFuerAchlastwaegungen
         resources.ApplyResources(Me.lblZufahrtenInOrdnung, "lblZufahrtenInOrdnung")
         Me.lblZufahrtenInOrdnung.Name = "lblZufahrtenInOrdnung"
         '
-        '
-        '
-        Me.lblZufahrtenInOrdnung.RootElement.AccessibleDescription = Nothing
-        Me.lblZufahrtenInOrdnung.RootElement.AccessibleName = Nothing
-        '
         'RadCheckBoxWaagegeprueft
         '
         resources.ApplyResources(Me.RadCheckBoxWaagegeprueft, "RadCheckBoxWaagegeprueft")
         Me.RadCheckBoxWaagegeprueft.Name = "RadCheckBoxWaagegeprueft"
-        '
-        '
-        '
-        Me.RadCheckBoxWaagegeprueft.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxWaagegeprueft.RootElement.AccessibleName = Nothing
         '
         'lblWaageNichtGeeignet
         '
         resources.ApplyResources(Me.lblWaageNichtGeeignet, "lblWaageNichtGeeignet")
         Me.lblWaageNichtGeeignet.Name = "lblWaageNichtGeeignet"
         '
-        '
-        '
-        Me.lblWaageNichtGeeignet.RootElement.AccessibleDescription = Nothing
-        Me.lblWaageNichtGeeignet.RootElement.AccessibleName = Nothing
-        '
         'RadCheckBoxWaageNichtGeeignet
         '
         resources.ApplyResources(Me.RadCheckBoxWaageNichtGeeignet, "RadCheckBoxWaageNichtGeeignet")
         Me.RadCheckBoxWaageNichtGeeignet.Name = "RadCheckBoxWaageNichtGeeignet"
-        '
-        '
-        '
-        Me.RadCheckBoxWaageNichtGeeignet.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxWaageNichtGeeignet.RootElement.AccessibleName = Nothing
         '
         'lblWaagegeprueft
         '
         resources.ApplyResources(Me.lblWaagegeprueft, "lblWaagegeprueft")
         Me.lblWaagegeprueft.Name = "lblWaagegeprueft"
         '
-        '
-        '
-        Me.lblWaagegeprueft.RootElement.AccessibleDescription = Nothing
-        Me.lblWaagegeprueft.RootElement.AccessibleName = Nothing
-        '
         'RadCheckBoxZufahrtenInOrdnung
         '
         resources.ApplyResources(Me.RadCheckBoxZufahrtenInOrdnung, "RadCheckBoxZufahrtenInOrdnung")
         Me.RadCheckBoxZufahrtenInOrdnung.Name = "RadCheckBoxZufahrtenInOrdnung"
-        '
-        '
-        '
-        Me.RadCheckBoxZufahrtenInOrdnung.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxZufahrtenInOrdnung.RootElement.AccessibleName = Nothing
         '
         'uco17PruefungEignungFuerAchlastwaegungen
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.RadScrollablePanel1)
-        Me.DoubleBuffered = True
         Me.Name = "uco17PruefungEignungFuerAchlastwaegungen"
         Me.RadScrollablePanel1.PanelContainer.ResumeLayout(False)
         Me.RadScrollablePanel1.PanelContainer.PerformLayout()

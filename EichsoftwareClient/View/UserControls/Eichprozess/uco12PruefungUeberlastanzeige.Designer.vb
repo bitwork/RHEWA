@@ -104,7 +104,6 @@ Partial Class uco12PruefungUeberlastanzeige
         Me.Controls.Add(Me.RadLabel2)
         Me.Controls.Add(Me.RadTextBoxControlMaxE)
         Me.Controls.Add(Me.lblUeberlast)
-        Me.DoubleBuffered = True
         Me.Name = "uco12PruefungUeberlastanzeige"
         CType(Me.lblUeberlast, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlMaxE, System.ComponentModel.ISupportInitialize).EndInit()

@@ -229,7 +229,7 @@
     <value>lblZufahrtenInOrdnung</value>
   </data>
   <data name="&gt;&gt;lblZufahrtenInOrdnung.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblZufahrtenInOrdnung.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -250,7 +250,7 @@
     <value>RadCheckBoxWaagegeprueft</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxWaagegeprueft.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxWaagegeprueft.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -274,7 +274,7 @@
     <value>lblWaageNichtGeeignet</value>
   </data>
   <data name="&gt;&gt;lblWaageNichtGeeignet.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblWaageNichtGeeignet.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -295,7 +295,7 @@
     <value>RadCheckBoxWaageNichtGeeignet</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxWaageNichtGeeignet.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxWaageNichtGeeignet.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -319,7 +319,7 @@
     <value>lblWaagegeprueft</value>
   </data>
   <data name="&gt;&gt;lblWaagegeprueft.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblWaagegeprueft.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -328,7 +328,7 @@
     <value>7</value>
   </data>
   <data name="RadCheckBoxZufahrtenInOrdnung.Location" type="System.Drawing.Point, System.Drawing">
-    <value>607, 15</value>
+    <value>608, 15</value>
   </data>
   <data name="RadCheckBoxZufahrtenInOrdnung.Size" type="System.Drawing.Size, System.Drawing">
     <value>15, 15</value>
@@ -340,7 +340,7 @@
     <value>RadCheckBoxZufahrtenInOrdnung</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxZufahrtenInOrdnung.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxZufahrtenInOrdnung.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -355,7 +355,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanel1.PanelContainer.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadScrollablePanelContainer, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadScrollablePanelContainer, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanel1.PanelContainer.Parent" xml:space="preserve">
     <value>RadScrollablePanel1</value>
@@ -376,7 +376,7 @@
     <value>RadScrollablePanel1</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanel1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadScrollablePanel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadScrollablePanel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanel1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -397,6 +397,6 @@
     <value>uco17PruefungEignungFuerAchlastwaegungen</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.6024.16918, Culture=neutral, PublicKeyToken=null</value>
+    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.6108.20583, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

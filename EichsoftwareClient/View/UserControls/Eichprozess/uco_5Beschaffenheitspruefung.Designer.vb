@@ -131,11 +131,6 @@ Partial Class uco_5Beschaffenheitspruefung
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadGroupBoxAuswerteGeraete)
         resources.ApplyResources(Me.RadScrollablePanel1.PanelContainer, "RadScrollablePanel1.PanelContainer")
         '
-        '
-        '
-        Me.RadScrollablePanel1.RootElement.AccessibleDescription = Nothing
-        Me.RadScrollablePanel1.RootElement.AccessibleName = Nothing
-        '
         'lblPflichtfeld1
         '
         resources.ApplyResources(Me.lblPflichtfeld1, "lblPflichtfeld1")
@@ -148,11 +143,6 @@ Partial Class uco_5Beschaffenheitspruefung
         resources.ApplyResources(Me.RadGroupBoxAufstellbedingungen, "RadGroupBoxAufstellbedingungen")
         Me.RadGroupBoxAufstellbedingungen.Controls.Add(Me.RadLabel20)
         Me.RadGroupBoxAufstellbedingungen.Name = "RadGroupBoxAufstellbedingungen"
-        '
-        '
-        '
-        Me.RadGroupBoxAufstellbedingungen.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxAufstellbedingungen.RootElement.AccessibleName = Nothing
         Me.RadGroupBoxAufstellbedingungen.ThemeName = "Telerik.WinControls.UI.RadGroupBox"
         '
         'RadLabel20
@@ -160,30 +150,15 @@ Partial Class uco_5Beschaffenheitspruefung
         resources.ApplyResources(Me.RadLabel20, "RadLabel20")
         Me.RadLabel20.Name = "RadLabel20"
         '
-        '
-        '
-        Me.RadLabel20.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel20.RootElement.AccessibleName = Nothing
-        '
         'RadCheckBoxApprove
         '
         resources.ApplyResources(Me.RadCheckBoxApprove, "RadCheckBoxApprove")
         Me.RadCheckBoxApprove.Name = "RadCheckBoxApprove"
         '
-        '
-        '
-        Me.RadCheckBoxApprove.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxApprove.RootElement.AccessibleName = Nothing
-        '
         'RadLabel19
         '
         resources.ApplyResources(Me.RadLabel19, "RadLabel19")
         Me.RadLabel19.Name = "RadLabel19"
-        '
-        '
-        '
-        Me.RadLabel19.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel19.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxWaegebruecke
         '
@@ -196,22 +171,12 @@ Partial Class uco_5Beschaffenheitspruefung
         Me.RadGroupBoxWaegebruecke.Controls.Add(Me.RadLabel11)
         Me.RadGroupBoxWaegebruecke.Controls.Add(Me.RadLabel13)
         Me.RadGroupBoxWaegebruecke.Name = "RadGroupBoxWaegebruecke"
-        '
-        '
-        '
-        Me.RadGroupBoxWaegebruecke.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxWaegebruecke.RootElement.AccessibleName = Nothing
         Me.RadGroupBoxWaegebruecke.ThemeName = "Telerik.WinControls.UI.RadGroupBox"
         '
         'RadSeparator14
         '
         resources.ApplyResources(Me.RadSeparator14, "RadSeparator14")
         Me.RadSeparator14.Name = "RadSeparator14"
-        '
-        '
-        '
-        Me.RadSeparator14.RootElement.AccessibleDescription = Nothing
-        Me.RadSeparator14.RootElement.AccessibleName = Nothing
         Me.RadSeparator14.ShowShadow = False
         Me.RadSeparator14.TabStop = False
         '
@@ -219,11 +184,6 @@ Partial Class uco_5Beschaffenheitspruefung
         '
         resources.ApplyResources(Me.RadSeparator11, "RadSeparator11")
         Me.RadSeparator11.Name = "RadSeparator11"
-        '
-        '
-        '
-        Me.RadSeparator11.RootElement.AccessibleDescription = Nothing
-        Me.RadSeparator11.RootElement.AccessibleName = Nothing
         Me.RadSeparator11.ShowShadow = False
         Me.RadSeparator11.TabStop = False
         '
@@ -231,11 +191,6 @@ Partial Class uco_5Beschaffenheitspruefung
         '
         resources.ApplyResources(Me.RadSeparator10, "RadSeparator10")
         Me.RadSeparator10.Name = "RadSeparator10"
-        '
-        '
-        '
-        Me.RadSeparator10.RootElement.AccessibleDescription = Nothing
-        Me.RadSeparator10.RootElement.AccessibleName = Nothing
         Me.RadSeparator10.ShowShadow = False
         Me.RadSeparator10.TabStop = False
         '
@@ -244,30 +199,15 @@ Partial Class uco_5Beschaffenheitspruefung
         resources.ApplyResources(Me.RadLabel15, "RadLabel15")
         Me.RadLabel15.Name = "RadLabel15"
         '
-        '
-        '
-        Me.RadLabel15.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel15.RootElement.AccessibleName = Nothing
-        '
         'RadLabel11
         '
         resources.ApplyResources(Me.RadLabel11, "RadLabel11")
         Me.RadLabel11.Name = "RadLabel11"
         '
-        '
-        '
-        Me.RadLabel11.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel11.RootElement.AccessibleName = Nothing
-        '
         'RadLabel13
         '
         resources.ApplyResources(Me.RadLabel13, "RadLabel13")
         Me.RadLabel13.Name = "RadLabel13"
-        '
-        '
-        '
-        Me.RadLabel13.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel13.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxWaegezellen
         '
@@ -283,22 +223,12 @@ Partial Class uco_5Beschaffenheitspruefung
         Me.RadGroupBoxWaegezellen.Controls.Add(Me.RadLabel6)
         Me.RadGroupBoxWaegezellen.Controls.Add(Me.RadLabel8)
         Me.RadGroupBoxWaegezellen.Name = "RadGroupBoxWaegezellen"
-        '
-        '
-        '
-        Me.RadGroupBoxWaegezellen.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxWaegezellen.RootElement.AccessibleName = Nothing
         Me.RadGroupBoxWaegezellen.ThemeName = "Telerik.WinControls.UI.RadGroupBox"
         '
         'RadSeparator6
         '
         resources.ApplyResources(Me.RadSeparator6, "RadSeparator6")
         Me.RadSeparator6.Name = "RadSeparator6"
-        '
-        '
-        '
-        Me.RadSeparator6.RootElement.AccessibleDescription = Nothing
-        Me.RadSeparator6.RootElement.AccessibleName = Nothing
         Me.RadSeparator6.ShowShadow = False
         Me.RadSeparator6.TabStop = False
         '
@@ -306,11 +236,6 @@ Partial Class uco_5Beschaffenheitspruefung
         '
         resources.ApplyResources(Me.RadSeparator5, "RadSeparator5")
         Me.RadSeparator5.Name = "RadSeparator5"
-        '
-        '
-        '
-        Me.RadSeparator5.RootElement.AccessibleDescription = Nothing
-        Me.RadSeparator5.RootElement.AccessibleName = Nothing
         Me.RadSeparator5.ShowShadow = False
         Me.RadSeparator5.TabStop = False
         '
@@ -318,11 +243,6 @@ Partial Class uco_5Beschaffenheitspruefung
         '
         resources.ApplyResources(Me.RadSeparator4, "RadSeparator4")
         Me.RadSeparator4.Name = "RadSeparator4"
-        '
-        '
-        '
-        Me.RadSeparator4.RootElement.AccessibleDescription = Nothing
-        Me.RadSeparator4.RootElement.AccessibleName = Nothing
         Me.RadSeparator4.ShowShadow = False
         Me.RadSeparator4.TabStop = False
         '
@@ -330,11 +250,6 @@ Partial Class uco_5Beschaffenheitspruefung
         '
         resources.ApplyResources(Me.RadSeparator3, "RadSeparator3")
         Me.RadSeparator3.Name = "RadSeparator3"
-        '
-        '
-        '
-        Me.RadSeparator3.RootElement.AccessibleDescription = Nothing
-        Me.RadSeparator3.RootElement.AccessibleName = Nothing
         Me.RadSeparator3.ShowShadow = False
         Me.RadSeparator3.TabStop = False
         '
@@ -343,50 +258,25 @@ Partial Class uco_5Beschaffenheitspruefung
         resources.ApplyResources(Me.RadLabel7, "RadLabel7")
         Me.RadLabel7.Name = "RadLabel7"
         '
-        '
-        '
-        Me.RadLabel7.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel7.RootElement.AccessibleName = Nothing
-        '
         'RadLabel5
         '
         resources.ApplyResources(Me.RadLabel5, "RadLabel5")
         Me.RadLabel5.Name = "RadLabel5"
-        '
-        '
-        '
-        Me.RadLabel5.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel5.RootElement.AccessibleName = Nothing
         '
         'RadLabel3
         '
         resources.ApplyResources(Me.RadLabel3, "RadLabel3")
         Me.RadLabel3.Name = "RadLabel3"
         '
-        '
-        '
-        Me.RadLabel3.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel3.RootElement.AccessibleName = Nothing
-        '
         'RadLabel6
         '
         resources.ApplyResources(Me.RadLabel6, "RadLabel6")
         Me.RadLabel6.Name = "RadLabel6"
         '
-        '
-        '
-        Me.RadLabel6.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel6.RootElement.AccessibleName = Nothing
-        '
         'RadLabel8
         '
         resources.ApplyResources(Me.RadLabel8, "RadLabel8")
         Me.RadLabel8.Name = "RadLabel8"
-        '
-        '
-        '
-        Me.RadLabel8.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel8.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxVerbindungselemente
         '
@@ -400,11 +290,6 @@ Partial Class uco_5Beschaffenheitspruefung
         Me.RadGroupBoxVerbindungselemente.Controls.Add(Me.RadLabel12)
         Me.RadGroupBoxVerbindungselemente.Controls.Add(Me.RadLabel10)
         Me.RadGroupBoxVerbindungselemente.Name = "RadGroupBoxVerbindungselemente"
-        '
-        '
-        '
-        Me.RadGroupBoxVerbindungselemente.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxVerbindungselemente.RootElement.AccessibleName = Nothing
         Me.RadGroupBoxVerbindungselemente.Tag = ""
         Me.RadGroupBoxVerbindungselemente.ThemeName = "Telerik.WinControls.UI.RadGroupBox"
         '
@@ -412,11 +297,6 @@ Partial Class uco_5Beschaffenheitspruefung
         '
         resources.ApplyResources(Me.RadSeparator9, "RadSeparator9")
         Me.RadSeparator9.Name = "RadSeparator9"
-        '
-        '
-        '
-        Me.RadSeparator9.RootElement.AccessibleDescription = Nothing
-        Me.RadSeparator9.RootElement.AccessibleName = Nothing
         Me.RadSeparator9.ShowShadow = False
         Me.RadSeparator9.TabStop = False
         '
@@ -424,11 +304,6 @@ Partial Class uco_5Beschaffenheitspruefung
         '
         resources.ApplyResources(Me.RadSeparator8, "RadSeparator8")
         Me.RadSeparator8.Name = "RadSeparator8"
-        '
-        '
-        '
-        Me.RadSeparator8.RootElement.AccessibleDescription = Nothing
-        Me.RadSeparator8.RootElement.AccessibleName = Nothing
         Me.RadSeparator8.ShowShadow = False
         Me.RadSeparator8.TabStop = False
         '
@@ -436,11 +311,6 @@ Partial Class uco_5Beschaffenheitspruefung
         '
         resources.ApplyResources(Me.RadSeparator7, "RadSeparator7")
         Me.RadSeparator7.Name = "RadSeparator7"
-        '
-        '
-        '
-        Me.RadSeparator7.RootElement.AccessibleDescription = Nothing
-        Me.RadSeparator7.RootElement.AccessibleName = Nothing
         Me.RadSeparator7.ShowShadow = False
         Me.RadSeparator7.TabStop = False
         '
@@ -449,40 +319,20 @@ Partial Class uco_5Beschaffenheitspruefung
         resources.ApplyResources(Me.RadLabel16, "RadLabel16")
         Me.RadLabel16.Name = "RadLabel16"
         '
-        '
-        '
-        Me.RadLabel16.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel16.RootElement.AccessibleName = Nothing
-        '
         'RadLabel14
         '
         resources.ApplyResources(Me.RadLabel14, "RadLabel14")
         Me.RadLabel14.Name = "RadLabel14"
-        '
-        '
-        '
-        Me.RadLabel14.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel14.RootElement.AccessibleName = Nothing
         '
         'RadLabel12
         '
         resources.ApplyResources(Me.RadLabel12, "RadLabel12")
         Me.RadLabel12.Name = "RadLabel12"
         '
-        '
-        '
-        Me.RadLabel12.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel12.RootElement.AccessibleName = Nothing
-        '
         'RadLabel10
         '
         resources.ApplyResources(Me.RadLabel10, "RadLabel10")
         Me.RadLabel10.Name = "RadLabel10"
-        '
-        '
-        '
-        Me.RadLabel10.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel10.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxAuswerteGeraete
         '
@@ -498,22 +348,12 @@ Partial Class uco_5Beschaffenheitspruefung
         Me.RadGroupBoxAuswerteGeraete.Controls.Add(Me.RadLabel4)
         Me.RadGroupBoxAuswerteGeraete.Controls.Add(Me.RadLabel2)
         Me.RadGroupBoxAuswerteGeraete.Name = "RadGroupBoxAuswerteGeraete"
-        '
-        '
-        '
-        Me.RadGroupBoxAuswerteGeraete.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxAuswerteGeraete.RootElement.AccessibleName = Nothing
         Me.RadGroupBoxAuswerteGeraete.ThemeName = "Telerik.WinControls.UI.RadGroupBox"
         '
         'RadSeparator13
         '
         resources.ApplyResources(Me.RadSeparator13, "RadSeparator13")
         Me.RadSeparator13.Name = "RadSeparator13"
-        '
-        '
-        '
-        Me.RadSeparator13.RootElement.AccessibleDescription = Nothing
-        Me.RadSeparator13.RootElement.AccessibleName = Nothing
         Me.RadSeparator13.ShowShadow = False
         Me.RadSeparator13.TabStop = False
         '
@@ -522,20 +362,10 @@ Partial Class uco_5Beschaffenheitspruefung
         resources.ApplyResources(Me.RadLabel17, "RadLabel17")
         Me.RadLabel17.Name = "RadLabel17"
         '
-        '
-        '
-        Me.RadLabel17.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel17.RootElement.AccessibleName = Nothing
-        '
         'RadSeparator12
         '
         resources.ApplyResources(Me.RadSeparator12, "RadSeparator12")
         Me.RadSeparator12.Name = "RadSeparator12"
-        '
-        '
-        '
-        Me.RadSeparator12.RootElement.AccessibleDescription = Nothing
-        Me.RadSeparator12.RootElement.AccessibleName = Nothing
         Me.RadSeparator12.ShowShadow = False
         Me.RadSeparator12.TabStop = False
         '
@@ -544,20 +374,10 @@ Partial Class uco_5Beschaffenheitspruefung
         resources.ApplyResources(Me.RadLabel9, "RadLabel9")
         Me.RadLabel9.Name = "RadLabel9"
         '
-        '
-        '
-        Me.RadLabel9.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel9.RootElement.AccessibleName = Nothing
-        '
         'RadSeparator2
         '
         resources.ApplyResources(Me.RadSeparator2, "RadSeparator2")
         Me.RadSeparator2.Name = "RadSeparator2"
-        '
-        '
-        '
-        Me.RadSeparator2.RootElement.AccessibleDescription = Nothing
-        Me.RadSeparator2.RootElement.AccessibleName = Nothing
         Me.RadSeparator2.ShowShadow = False
         Me.RadSeparator2.TabStop = False
         '
@@ -565,11 +385,6 @@ Partial Class uco_5Beschaffenheitspruefung
         '
         resources.ApplyResources(Me.RadSeparator1, "RadSeparator1")
         Me.RadSeparator1.Name = "RadSeparator1"
-        '
-        '
-        '
-        Me.RadSeparator1.RootElement.AccessibleDescription = Nothing
-        Me.RadSeparator1.RootElement.AccessibleName = Nothing
         Me.RadSeparator1.ShowShadow = False
         Me.RadSeparator1.TabStop = False
         '
@@ -578,37 +393,21 @@ Partial Class uco_5Beschaffenheitspruefung
         resources.ApplyResources(Me.RadLabel1, "RadLabel1")
         Me.RadLabel1.Name = "RadLabel1"
         '
-        '
-        '
-        Me.RadLabel1.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel1.RootElement.AccessibleName = Nothing
-        '
         'RadLabel4
         '
         resources.ApplyResources(Me.RadLabel4, "RadLabel4")
         Me.RadLabel4.Name = "RadLabel4"
-        '
-        '
-        '
-        Me.RadLabel4.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel4.RootElement.AccessibleName = Nothing
         '
         'RadLabel2
         '
         resources.ApplyResources(Me.RadLabel2, "RadLabel2")
         Me.RadLabel2.Name = "RadLabel2"
         '
-        '
-        '
-        Me.RadLabel2.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel2.RootElement.AccessibleName = Nothing
-        '
         'uco_5Beschaffenheitspruefung
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.RadScrollablePanel1)
-        Me.DoubleBuffered = True
         Me.Name = "uco_5Beschaffenheitspruefung"
         Me.RadScrollablePanel1.PanelContainer.ResumeLayout(False)
         Me.RadScrollablePanel1.PanelContainer.PerformLayout()

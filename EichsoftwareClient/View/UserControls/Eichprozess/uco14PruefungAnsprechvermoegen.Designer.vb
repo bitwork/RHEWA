@@ -90,70 +90,35 @@ Partial Class uco14PruefungAnsprechvermoegen
         resources.ApplyResources(Me.lblLastL, "lblLastL")
         Me.lblLastL.Name = "lblLastL"
         '
-        '
-        '
-        Me.lblLastL.RootElement.AccessibleDescription = Nothing
-        Me.lblLastL.RootElement.AccessibleName = Nothing
-        '
         'lblLastkg
         '
         resources.ApplyResources(Me.lblLastkg, "lblLastkg")
         Me.lblLastkg.Name = "lblLastkg"
-        '
-        '
-        '
-        Me.lblLastkg.RootElement.AccessibleDescription = Nothing
-        Me.lblLastkg.RootElement.AccessibleName = Nothing
         '
         'lblAnzeige
         '
         resources.ApplyResources(Me.lblAnzeige, "lblAnzeige")
         Me.lblAnzeige.Name = "lblAnzeige"
         '
-        '
-        '
-        Me.lblAnzeige.RootElement.AccessibleDescription = Nothing
-        Me.lblAnzeige.RootElement.AccessibleName = Nothing
-        '
         'lblLast1d
         '
         resources.ApplyResources(Me.lblLast1d, "lblLast1d")
         Me.lblLast1d.Name = "lblLast1d"
-        '
-        '
-        '
-        Me.lblLast1d.RootElement.AccessibleDescription = Nothing
-        Me.lblLast1d.RootElement.AccessibleName = Nothing
         '
         'RadLabel1
         '
         resources.ApplyResources(Me.RadLabel1, "RadLabel1")
         Me.RadLabel1.Name = "RadLabel1"
         '
-        '
-        '
-        Me.RadLabel1.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel1.RootElement.AccessibleName = Nothing
-        '
         'RadLabel2
         '
         resources.ApplyResources(Me.RadLabel2, "RadLabel2")
         Me.RadLabel2.Name = "RadLabel2"
         '
-        '
-        '
-        Me.RadLabel2.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel2.RootElement.AccessibleName = Nothing
-        '
         'RadLabel3
         '
         resources.ApplyResources(Me.RadLabel3, "RadLabel3")
         Me.RadLabel3.Name = "RadLabel3"
-        '
-        '
-        '
-        Me.RadLabel3.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel3.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlLast1
         '
@@ -161,21 +126,11 @@ Partial Class uco14PruefungAnsprechvermoegen
         Me.RadTextBoxControlLast1.MaxLength = 20
         Me.RadTextBoxControlLast1.Name = "RadTextBoxControlLast1"
         '
-        '
-        '
-        Me.RadTextBoxControlLast1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlLast1.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlLast2
         '
         resources.ApplyResources(Me.RadTextBoxControlLast2, "RadTextBoxControlLast2")
         Me.RadTextBoxControlLast2.MaxLength = 20
         Me.RadTextBoxControlLast2.Name = "RadTextBoxControlLast2"
-        '
-        '
-        '
-        Me.RadTextBoxControlLast2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlLast2.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlLast3
         '
@@ -183,21 +138,11 @@ Partial Class uco14PruefungAnsprechvermoegen
         Me.RadTextBoxControlLast3.MaxLength = 20
         Me.RadTextBoxControlLast3.Name = "RadTextBoxControlLast3"
         '
-        '
-        '
-        Me.RadTextBoxControlLast3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlLast3.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlAnzeige1
         '
         resources.ApplyResources(Me.RadTextBoxControlAnzeige1, "RadTextBoxControlAnzeige1")
         Me.RadTextBoxControlAnzeige1.MaxLength = 20
         Me.RadTextBoxControlAnzeige1.Name = "RadTextBoxControlAnzeige1"
-        '
-        '
-        '
-        Me.RadTextBoxControlAnzeige1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlAnzeige1.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlAnzeige2
         '
@@ -205,21 +150,11 @@ Partial Class uco14PruefungAnsprechvermoegen
         Me.RadTextBoxControlAnzeige2.MaxLength = 20
         Me.RadTextBoxControlAnzeige2.Name = "RadTextBoxControlAnzeige2"
         '
-        '
-        '
-        Me.RadTextBoxControlAnzeige2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlAnzeige2.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlAnzeige3
         '
         resources.ApplyResources(Me.RadTextBoxControlAnzeige3, "RadTextBoxControlAnzeige3")
         Me.RadTextBoxControlAnzeige3.MaxLength = 20
         Me.RadTextBoxControlAnzeige3.Name = "RadTextBoxControlAnzeige3"
-        '
-        '
-        '
-        Me.RadTextBoxControlAnzeige3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlAnzeige3.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControLastD1
         '
@@ -227,11 +162,6 @@ Partial Class uco14PruefungAnsprechvermoegen
         Me.RadTextBoxControLastD1.MaxLength = 20
         Me.RadTextBoxControLastD1.Name = "RadTextBoxControLastD1"
         Me.RadTextBoxControLastD1.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControLastD1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControLastD1.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControLastD1.TabStop = False
         '
         'RadTextBoxControlLastD2
@@ -240,11 +170,6 @@ Partial Class uco14PruefungAnsprechvermoegen
         Me.RadTextBoxControlLastD2.MaxLength = 20
         Me.RadTextBoxControlLastD2.Name = "RadTextBoxControlLastD2"
         Me.RadTextBoxControlLastD2.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlLastD2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlLastD2.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlLastD2.TabStop = False
         '
         'RadTextBoxControlLastD3
@@ -253,11 +178,6 @@ Partial Class uco14PruefungAnsprechvermoegen
         Me.RadTextBoxControlLastD3.MaxLength = 20
         Me.RadTextBoxControlLastD3.Name = "RadTextBoxControlLastD3"
         Me.RadTextBoxControlLastD3.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlLastD3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlLastD3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlLastD3.TabStop = False
         '
         'RadCheckBoxMin
@@ -265,60 +185,30 @@ Partial Class uco14PruefungAnsprechvermoegen
         resources.ApplyResources(Me.RadCheckBoxMin, "RadCheckBoxMin")
         Me.RadCheckBoxMin.Name = "RadCheckBoxMin"
         '
-        '
-        '
-        Me.RadCheckBoxMin.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxMin.RootElement.AccessibleName = Nothing
-        '
         'RadCheckBoxHalb
         '
         resources.ApplyResources(Me.RadCheckBoxHalb, "RadCheckBoxHalb")
         Me.RadCheckBoxHalb.Name = "RadCheckBoxHalb"
-        '
-        '
-        '
-        Me.RadCheckBoxHalb.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxHalb.RootElement.AccessibleName = Nothing
         '
         'RadCheckBoxMax
         '
         resources.ApplyResources(Me.RadCheckBoxMax, "RadCheckBoxMax")
         Me.RadCheckBoxMax.Name = "RadCheckBoxMax"
         '
-        '
-        '
-        Me.RadCheckBoxMax.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxMax.RootElement.AccessibleName = Nothing
-        '
         'lblBeschreibung
         '
         resources.ApplyResources(Me.lblBeschreibung, "lblBeschreibung")
         Me.lblBeschreibung.Name = "lblBeschreibung"
-        '
-        '
-        '
-        Me.lblBeschreibung.RootElement.AccessibleDescription = Nothing
-        Me.lblBeschreibung.RootElement.AccessibleName = Nothing
         '
         'lblLastBeschreibung
         '
         resources.ApplyResources(Me.lblLastBeschreibung, "lblLastBeschreibung")
         Me.lblLastBeschreibung.Name = "lblLastBeschreibung"
         '
-        '
-        '
-        Me.lblLastBeschreibung.RootElement.AccessibleDescription = Nothing
-        Me.lblLastBeschreibung.RootElement.AccessibleName = Nothing
-        '
         'RadButtonShowEFG
         '
         resources.ApplyResources(Me.RadButtonShowEFG, "RadButtonShowEFG")
         Me.RadButtonShowEFG.Name = "RadButtonShowEFG"
-        '
-        '
-        '
-        Me.RadButtonShowEFG.RootElement.AccessibleDescription = Nothing
-        Me.RadButtonShowEFG.RootElement.AccessibleName = Nothing
         '
         'PictureBox1
         '
@@ -345,11 +235,6 @@ Partial Class uco14PruefungAnsprechvermoegen
         '
         resources.ApplyResources(Me.RadLabel4, "RadLabel4")
         Me.RadLabel4.Name = "RadLabel4"
-        '
-        '
-        '
-        Me.RadLabel4.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel4.RootElement.AccessibleName = Nothing
         '
         'lblPflichtfeld1
         '
@@ -444,7 +329,6 @@ Partial Class uco14PruefungAnsprechvermoegen
         Me.Controls.Add(Me.lblAnzeige)
         Me.Controls.Add(Me.lblLastkg)
         Me.Controls.Add(Me.lblLastL)
-        Me.DoubleBuffered = True
         Me.Name = "uco14PruefungAnsprechvermoegen"
         CType(Me.lblLastL, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblLastkg, System.ComponentModel.ISupportInitialize).EndInit()

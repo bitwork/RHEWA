@@ -1947,7 +1947,6 @@ Partial Class uco_3Kompatiblititaetsnachweis
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.RadScrollablePanel1)
-        Me.DoubleBuffered = True
         Me.Name = "uco_3Kompatiblititaetsnachweis"
         Me.RadScrollablePanel1.PanelContainer.ResumeLayout(False)
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).EndInit()

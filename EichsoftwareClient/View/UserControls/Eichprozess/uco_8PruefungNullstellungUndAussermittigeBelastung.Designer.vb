@@ -840,11 +840,6 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.FlowLayoutPanel1)
         resources.ApplyResources(Me.RadScrollablePanel1.PanelContainer, "RadScrollablePanel1.PanelContainer")
         '
-        '
-        '
-        Me.RadScrollablePanel1.RootElement.AccessibleDescription = Nothing
-        Me.RadScrollablePanel1.RootElement.AccessibleName = Nothing
-        '
         'FlowLayoutPanel1
         '
         Me.FlowLayoutPanel1.Controls.Add(Me.RadGroupBoxPruefungGenaugikeit)
@@ -864,11 +859,6 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadGroupBoxPruefungGenaugikeit, "RadGroupBoxPruefungGenaugikeit")
         Me.RadGroupBoxPruefungGenaugikeit.Name = "RadGroupBoxPruefungGenaugikeit"
         '
-        '
-        '
-        Me.RadGroupBoxPruefungGenaugikeit.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxPruefungGenaugikeit.RootElement.AccessibleName = Nothing
-        '
         'Label3
         '
         resources.ApplyResources(Me.Label3, "Label3")
@@ -880,40 +870,20 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadCheckBoxNullstellungOK, "RadCheckBoxNullstellungOK")
         Me.RadCheckBoxNullstellungOK.Name = "RadCheckBoxNullstellungOK"
         '
-        '
-        '
-        Me.RadCheckBoxNullstellungOK.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxNullstellungOK.RootElement.AccessibleName = Nothing
-        '
         'lblHinweisNullstellung
         '
         resources.ApplyResources(Me.lblHinweisNullstellung, "lblHinweisNullstellung")
         Me.lblHinweisNullstellung.Name = "lblHinweisNullstellung"
-        '
-        '
-        '
-        Me.lblHinweisNullstellung.RootElement.AccessibleDescription = Nothing
-        Me.lblHinweisNullstellung.RootElement.AccessibleName = Nothing
         '
         'RadButtonShowEFG
         '
         resources.ApplyResources(Me.RadButtonShowEFG, "RadButtonShowEFG")
         Me.RadButtonShowEFG.Name = "RadButtonShowEFG"
         '
-        '
-        '
-        Me.RadButtonShowEFG.RootElement.AccessibleDescription = Nothing
-        Me.RadButtonShowEFG.RootElement.AccessibleName = Nothing
-        '
         'lblNullstellungOK
         '
         resources.ApplyResources(Me.lblNullstellungOK, "lblNullstellungOK")
         Me.lblNullstellungOK.Name = "lblNullstellungOK"
-        '
-        '
-        '
-        Me.lblNullstellungOK.RootElement.AccessibleDescription = Nothing
-        Me.lblNullstellungOK.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxWiederholungen
         '
@@ -943,11 +913,6 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadGroupBoxWiederholungen, "RadGroupBoxWiederholungen")
         Me.RadGroupBoxWiederholungen.Name = "RadGroupBoxWiederholungen"
         '
-        '
-        '
-        Me.RadGroupBoxWiederholungen.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxWiederholungen.RootElement.AccessibleName = Nothing
-        '
         'lblPflichtfeld1
         '
         resources.ApplyResources(Me.lblPflichtfeld1, "lblPflichtfeld1")
@@ -959,20 +924,10 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadLabel1, "RadLabel1")
         Me.RadLabel1.Name = "RadLabel1"
         '
-        '
-        '
-        Me.RadLabel1.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel1.RootElement.AccessibleName = Nothing
-        '
         'lblWiederholungen
         '
         resources.ApplyResources(Me.lblWiederholungen, "lblWiederholungen")
         Me.lblWiederholungen.Name = "lblWiederholungen"
-        '
-        '
-        '
-        Me.lblWiederholungen.RootElement.AccessibleDescription = Nothing
-        Me.lblWiederholungen.RootElement.AccessibleName = Nothing
         '
         'PictureBox83
         '
@@ -986,11 +941,6 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadLabel29, "RadLabel29")
         Me.RadLabel29.Name = "RadLabel29"
         '
-        '
-        '
-        Me.RadLabel29.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel29.RootElement.AccessibleName = Nothing
-        '
         'PictureBox84
         '
         Me.PictureBox84.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
@@ -1003,30 +953,15 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadLabel30, "RadLabel30")
         Me.RadLabel30.Name = "RadLabel30"
         '
-        '
-        '
-        Me.RadLabel30.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel30.RootElement.AccessibleName = Nothing
-        '
         'RadLabel31
         '
         resources.ApplyResources(Me.RadLabel31, "RadLabel31")
         Me.RadLabel31.Name = "RadLabel31"
         '
-        '
-        '
-        Me.RadLabel31.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel31.RootElement.AccessibleName = Nothing
-        '
         'lblMengeStandardgewichte2
         '
         resources.ApplyResources(Me.lblMengeStandardgewichte2, "lblMengeStandardgewichte2")
         Me.lblMengeStandardgewichte2.Name = "lblMengeStandardgewichte2"
-        '
-        '
-        '
-        Me.lblMengeStandardgewichte2.RootElement.AccessibleDescription = Nothing
-        Me.lblMengeStandardgewichte2.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlErrorLimit1
         '
@@ -1034,11 +969,6 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlErrorLimit1.MaxLength = 20
         Me.RadTextBoxControlErrorLimit1.Name = "RadTextBoxControlErrorLimit1"
         Me.RadTextBoxControlErrorLimit1.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlErrorLimit1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlErrorLimit1.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlErrorLimit1.TabStop = False
         '
         'lblMengeStandardgewichte1
@@ -1046,20 +976,10 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.lblMengeStandardgewichte1, "lblMengeStandardgewichte1")
         Me.lblMengeStandardgewichte1.Name = "lblMengeStandardgewichte1"
         '
-        '
-        '
-        Me.lblMengeStandardgewichte1.RootElement.AccessibleDescription = Nothing
-        Me.lblMengeStandardgewichte1.RootElement.AccessibleName = Nothing
-        '
         'RadCheckBoxVEL1
         '
         resources.ApplyResources(Me.RadCheckBoxVEL1, "RadCheckBoxVEL1")
         Me.RadCheckBoxVEL1.Name = "RadCheckBoxVEL1"
-        '
-        '
-        '
-        Me.RadCheckBoxVEL1.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxVEL1.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxVEL1.TabStop = False
         '
         'RadTextBoxControlBetragNormallast
@@ -1068,11 +988,6 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBetragNormallast.MaxLength = 20
         Me.RadTextBoxControlBetragNormallast.Name = "RadTextBoxControlBetragNormallast"
         Me.RadTextBoxControlBetragNormallast.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBetragNormallast.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBetragNormallast.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBetragNormallast.TabStop = False
         '
         'PictureBox82
@@ -1087,11 +1002,6 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.lblEFGSpeziallBerechnung, "lblEFGSpeziallBerechnung")
         Me.lblEFGSpeziallBerechnung.Name = "lblEFGSpeziallBerechnung"
         Me.lblEFGSpeziallBerechnung.ReadOnly = True
-        '
-        '
-        '
-        Me.lblEFGSpeziallBerechnung.RootElement.AccessibleDescription = Nothing
-        Me.lblEFGSpeziallBerechnung.RootElement.AccessibleName = Nothing
         Me.lblEFGSpeziallBerechnung.TabStop = False
         '
         'Panel1
@@ -1107,21 +1017,11 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlWeight1.MaxLength = 20
         Me.RadTextBoxControlWeight1.Name = "RadTextBoxControlWeight1"
         '
-        '
-        '
-        Me.RadTextBoxControlWeight1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlWeight1.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlDisplayWeight1
         '
         resources.ApplyResources(Me.RadTextBoxControlDisplayWeight1, "RadTextBoxControlDisplayWeight1")
         Me.RadTextBoxControlDisplayWeight1.MaxLength = 20
         Me.RadTextBoxControlDisplayWeight1.Name = "RadTextBoxControlDisplayWeight1"
-        '
-        '
-        '
-        Me.RadTextBoxControlDisplayWeight1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlDisplayWeight1.RootElement.AccessibleName = Nothing
         '
         'Panel2
         '
@@ -1135,11 +1035,6 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadTextBoxControlWeight2, "RadTextBoxControlWeight2")
         Me.RadTextBoxControlWeight2.MaxLength = 20
         Me.RadTextBoxControlWeight2.Name = "RadTextBoxControlWeight2"
-        '
-        '
-        '
-        Me.RadTextBoxControlWeight2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlWeight2.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlWeight2.TabStop = False
         '
         'RadTextBoxControlDisplayWeight2
@@ -1148,20 +1043,10 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlDisplayWeight2.MaxLength = 20
         Me.RadTextBoxControlDisplayWeight2.Name = "RadTextBoxControlDisplayWeight2"
         '
-        '
-        '
-        Me.RadTextBoxControlDisplayWeight2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlDisplayWeight2.RootElement.AccessibleName = Nothing
-        '
         'lblFehlerGrenzen
         '
         resources.ApplyResources(Me.lblFehlerGrenzen, "lblFehlerGrenzen")
         Me.lblFehlerGrenzen.Name = "lblFehlerGrenzen"
-        '
-        '
-        '
-        Me.lblFehlerGrenzen.RootElement.AccessibleDescription = Nothing
-        Me.lblFehlerGrenzen.RootElement.AccessibleName = Nothing
         '
         'Panel3
         '
@@ -1175,11 +1060,6 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadTextBoxControlWeight3, "RadTextBoxControlWeight3")
         Me.RadTextBoxControlWeight3.MaxLength = 20
         Me.RadTextBoxControlWeight3.Name = "RadTextBoxControlWeight3"
-        '
-        '
-        '
-        Me.RadTextBoxControlWeight3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlWeight3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlWeight3.TabStop = False
         '
         'RadTextBoxControlDisplayWeight3
@@ -1188,40 +1068,20 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlDisplayWeight3.MaxLength = 20
         Me.RadTextBoxControlDisplayWeight3.Name = "RadTextBoxControlDisplayWeight3"
         '
-        '
-        '
-        Me.RadTextBoxControlDisplayWeight3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlDisplayWeight3.RootElement.AccessibleName = Nothing
-        '
         'lblEFGSpezial
         '
         resources.ApplyResources(Me.lblEFGSpezial, "lblEFGSpezial")
         Me.lblEFGSpezial.Name = "lblEFGSpezial"
-        '
-        '
-        '
-        Me.lblEFGSpezial.RootElement.AccessibleDescription = Nothing
-        Me.lblEFGSpezial.RootElement.AccessibleName = Nothing
         '
         'lblGewicht
         '
         resources.ApplyResources(Me.lblGewicht, "lblGewicht")
         Me.lblGewicht.Name = "lblGewicht"
         '
-        '
-        '
-        Me.lblGewicht.RootElement.AccessibleDescription = Nothing
-        Me.lblGewicht.RootElement.AccessibleName = Nothing
-        '
         'lblAnzeigeGewicht
         '
         resources.ApplyResources(Me.lblAnzeigeGewicht, "lblAnzeigeGewicht")
         Me.lblAnzeigeGewicht.Name = "lblAnzeigeGewicht"
-        '
-        '
-        '
-        Me.lblAnzeigeGewicht.RootElement.AccessibleDescription = Nothing
-        Me.lblAnzeigeGewicht.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxPruefungAussermittigeBelastung
         '
@@ -1238,11 +1098,6 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadGroupBoxPruefungAussermittigeBelastung, "RadGroupBoxPruefungAussermittigeBelastung")
         Me.RadGroupBoxPruefungAussermittigeBelastung.Name = "RadGroupBoxPruefungAussermittigeBelastung"
         '
-        '
-        '
-        Me.RadGroupBoxPruefungAussermittigeBelastung.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxPruefungAussermittigeBelastung.RootElement.AccessibleName = Nothing
-        '
         'PictureBox12LC
         '
         Me.PictureBox12LC.Image = Global.EichsoftwareClient.My.Resources.Resources.TwelveLCs
@@ -1254,11 +1109,6 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         '
         resources.ApplyResources(Me.RadButtonShowEFG2, "RadButtonShowEFG2")
         Me.RadButtonShowEFG2.Name = "RadButtonShowEFG2"
-        '
-        '
-        '
-        Me.RadButtonShowEFG2.RootElement.AccessibleDescription = Nothing
-        Me.RadButtonShowEFG2.RootElement.AccessibleName = Nothing
         '
         'PictureBox8LC
         '
@@ -1314,11 +1164,6 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadGroupBoxBereich3, "RadGroupBoxBereich3")
         Me.RadGroupBoxBereich3.Name = "RadGroupBoxBereich3"
         '
-        '
-        '
-        Me.RadGroupBoxBereich3.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxBereich3.RootElement.AccessibleName = Nothing
-        '
         'PictureBox81
         '
         Me.PictureBox81.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
@@ -1331,11 +1176,6 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.lblBereich3EFGSpeziallBerechnung, "lblBereich3EFGSpeziallBerechnung")
         Me.lblBereich3EFGSpeziallBerechnung.Name = "lblBereich3EFGSpeziallBerechnung"
         Me.lblBereich3EFGSpeziallBerechnung.ReadOnly = True
-        '
-        '
-        '
-        Me.lblBereich3EFGSpeziallBerechnung.RootElement.AccessibleDescription = Nothing
-        Me.lblBereich3EFGSpeziallBerechnung.RootElement.AccessibleName = Nothing
         Me.lblBereich3EFGSpeziallBerechnung.TabStop = False
         '
         'PanelBereich3WZ1
@@ -1376,21 +1216,11 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadLabel46, "RadLabel46")
         Me.RadLabel46.Name = "RadLabel46"
         '
-        '
-        '
-        Me.RadLabel46.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel46.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich3Weight1
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3Weight1, "RadTextBoxControlBereich3Weight1")
         Me.RadTextBoxControlBereich3Weight1.MaxLength = 20
         Me.RadTextBoxControlBereich3Weight1.Name = "RadTextBoxControlBereich3Weight1"
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich3Weight1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3Weight1.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlBereich3DisplayWeight1
         '
@@ -1398,33 +1228,18 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich3DisplayWeight1.MaxLength = 20
         Me.RadTextBoxControlBereich3DisplayWeight1.Name = "RadTextBoxControlBereich3DisplayWeight1"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich3DisplayWeight1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3DisplayWeight1.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich3ErrorLimit1
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3ErrorLimit1, "RadTextBoxControlBereich3ErrorLimit1")
         Me.RadTextBoxControlBereich3ErrorLimit1.MaxLength = 20
         Me.RadTextBoxControlBereich3ErrorLimit1.Name = "RadTextBoxControlBereich3ErrorLimit1"
         Me.RadTextBoxControlBereich3ErrorLimit1.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich3ErrorLimit1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3ErrorLimit1.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich3ErrorLimit1.TabStop = False
         '
         'RadCheckBoxBereich3VEL1
         '
         resources.ApplyResources(Me.RadCheckBoxBereich3VEL1, "RadCheckBoxBereich3VEL1")
         Me.RadCheckBoxBereich3VEL1.Name = "RadCheckBoxBereich3VEL1"
-        '
-        '
-        '
-        Me.RadCheckBoxBereich3VEL1.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxBereich3VEL1.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxBereich3VEL1.TabStop = False
         '
         'PanelBereich3WZ2
@@ -1465,21 +1280,11 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadLabel45, "RadLabel45")
         Me.RadLabel45.Name = "RadLabel45"
         '
-        '
-        '
-        Me.RadLabel45.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel45.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich3Weight2
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3Weight2, "RadTextBoxControlBereich3Weight2")
         Me.RadTextBoxControlBereich3Weight2.MaxLength = 20
         Me.RadTextBoxControlBereich3Weight2.Name = "RadTextBoxControlBereich3Weight2"
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich3Weight2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3Weight2.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich3Weight2.TabStop = False
         '
         'RadTextBoxControlBereich3DisplayWeight2
@@ -1488,33 +1293,18 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich3DisplayWeight2.MaxLength = 20
         Me.RadTextBoxControlBereich3DisplayWeight2.Name = "RadTextBoxControlBereich3DisplayWeight2"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich3DisplayWeight2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3DisplayWeight2.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich3ErrorLimit2
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3ErrorLimit2, "RadTextBoxControlBereich3ErrorLimit2")
         Me.RadTextBoxControlBereich3ErrorLimit2.MaxLength = 20
         Me.RadTextBoxControlBereich3ErrorLimit2.Name = "RadTextBoxControlBereich3ErrorLimit2"
         Me.RadTextBoxControlBereich3ErrorLimit2.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich3ErrorLimit2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3ErrorLimit2.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich3ErrorLimit2.TabStop = False
         '
         'RadCheckBoxBereich3VEL2
         '
         resources.ApplyResources(Me.RadCheckBoxBereich3VEL2, "RadCheckBoxBereich3VEL2")
         Me.RadCheckBoxBereich3VEL2.Name = "RadCheckBoxBereich3VEL2"
-        '
-        '
-        '
-        Me.RadCheckBoxBereich3VEL2.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxBereich3VEL2.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxBereich3VEL2.TabStop = False
         '
         'lblMessOrtBereich3
@@ -1522,20 +1312,10 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.lblMessOrtBereich3, "lblMessOrtBereich3")
         Me.lblMessOrtBereich3.Name = "lblMessOrtBereich3"
         '
-        '
-        '
-        Me.lblMessOrtBereich3.RootElement.AccessibleDescription = Nothing
-        Me.lblMessOrtBereich3.RootElement.AccessibleName = Nothing
-        '
         'lblBereich3FehlerGrenzen
         '
         resources.ApplyResources(Me.lblBereich3FehlerGrenzen, "lblBereich3FehlerGrenzen")
         Me.lblBereich3FehlerGrenzen.Name = "lblBereich3FehlerGrenzen"
-        '
-        '
-        '
-        Me.lblBereich3FehlerGrenzen.RootElement.AccessibleDescription = Nothing
-        Me.lblBereich3FehlerGrenzen.RootElement.AccessibleName = Nothing
         '
         'PanelBereich3WZ3
         '
@@ -1575,21 +1355,11 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadLabel44, "RadLabel44")
         Me.RadLabel44.Name = "RadLabel44"
         '
-        '
-        '
-        Me.RadLabel44.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel44.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich3Weight3
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3Weight3, "RadTextBoxControlBereich3Weight3")
         Me.RadTextBoxControlBereich3Weight3.MaxLength = 20
         Me.RadTextBoxControlBereich3Weight3.Name = "RadTextBoxControlBereich3Weight3"
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich3Weight3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3Weight3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich3Weight3.TabStop = False
         '
         'RadTextBoxControlBereich3DisplayWeight3
@@ -1598,44 +1368,24 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich3DisplayWeight3.MaxLength = 20
         Me.RadTextBoxControlBereich3DisplayWeight3.Name = "RadTextBoxControlBereich3DisplayWeight3"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich3DisplayWeight3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3DisplayWeight3.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich3ErrorLimit3
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3ErrorLimit3, "RadTextBoxControlBereich3ErrorLimit3")
         Me.RadTextBoxControlBereich3ErrorLimit3.MaxLength = 20
         Me.RadTextBoxControlBereich3ErrorLimit3.Name = "RadTextBoxControlBereich3ErrorLimit3"
         Me.RadTextBoxControlBereich3ErrorLimit3.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich3ErrorLimit3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3ErrorLimit3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich3ErrorLimit3.TabStop = False
         '
         'RadCheckBoxBereich3VEL3
         '
         resources.ApplyResources(Me.RadCheckBoxBereich3VEL3, "RadCheckBoxBereich3VEL3")
         Me.RadCheckBoxBereich3VEL3.Name = "RadCheckBoxBereich3VEL3"
-        '
-        '
-        '
-        Me.RadCheckBoxBereich3VEL3.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxBereich3VEL3.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxBereich3VEL3.TabStop = False
         '
         'lblBereich3EFGSpezial
         '
         resources.ApplyResources(Me.lblBereich3EFGSpezial, "lblBereich3EFGSpezial")
         Me.lblBereich3EFGSpezial.Name = "lblBereich3EFGSpezial"
-        '
-        '
-        '
-        Me.lblBereich3EFGSpezial.RootElement.AccessibleDescription = Nothing
-        Me.lblBereich3EFGSpezial.RootElement.AccessibleName = Nothing
         '
         'PanelBereich3WZ4
         '
@@ -1675,21 +1425,11 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadLabel43, "RadLabel43")
         Me.RadLabel43.Name = "RadLabel43"
         '
-        '
-        '
-        Me.RadLabel43.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel43.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich3Weight4
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3Weight4, "RadTextBoxControlBereich3Weight4")
         Me.RadTextBoxControlBereich3Weight4.MaxLength = 20
         Me.RadTextBoxControlBereich3Weight4.Name = "RadTextBoxControlBereich3Weight4"
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich3Weight4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3Weight4.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich3Weight4.TabStop = False
         '
         'RadTextBoxControlBereich3DisplayWeight4
@@ -1698,33 +1438,18 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich3DisplayWeight4.MaxLength = 20
         Me.RadTextBoxControlBereich3DisplayWeight4.Name = "RadTextBoxControlBereich3DisplayWeight4"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich3DisplayWeight4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3DisplayWeight4.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich3ErrorLimit4
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3ErrorLimit4, "RadTextBoxControlBereich3ErrorLimit4")
         Me.RadTextBoxControlBereich3ErrorLimit4.MaxLength = 20
         Me.RadTextBoxControlBereich3ErrorLimit4.Name = "RadTextBoxControlBereich3ErrorLimit4"
         Me.RadTextBoxControlBereich3ErrorLimit4.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich3ErrorLimit4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3ErrorLimit4.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich3ErrorLimit4.TabStop = False
         '
         'RadCheckBoxBereich3VEL4
         '
         resources.ApplyResources(Me.RadCheckBoxBereich3VEL4, "RadCheckBoxBereich3VEL4")
         Me.RadCheckBoxBereich3VEL4.Name = "RadCheckBoxBereich3VEL4"
-        '
-        '
-        '
-        Me.RadCheckBoxBereich3VEL4.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxBereich3VEL4.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxBereich3VEL4.TabStop = False
         '
         'lblBereich3Gewicht
@@ -1732,20 +1457,10 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.lblBereich3Gewicht, "lblBereich3Gewicht")
         Me.lblBereich3Gewicht.Name = "lblBereich3Gewicht"
         '
-        '
-        '
-        Me.lblBereich3Gewicht.RootElement.AccessibleDescription = Nothing
-        Me.lblBereich3Gewicht.RootElement.AccessibleName = Nothing
-        '
         'lblBereich3AnzeigeGewicht
         '
         resources.ApplyResources(Me.lblBereich3AnzeigeGewicht, "lblBereich3AnzeigeGewicht")
         Me.lblBereich3AnzeigeGewicht.Name = "lblBereich3AnzeigeGewicht"
-        '
-        '
-        '
-        Me.lblBereich3AnzeigeGewicht.RootElement.AccessibleDescription = Nothing
-        Me.lblBereich3AnzeigeGewicht.RootElement.AccessibleName = Nothing
         '
         'PanelBereich3WZ5
         '
@@ -1785,21 +1500,11 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadLabel42, "RadLabel42")
         Me.RadLabel42.Name = "RadLabel42"
         '
-        '
-        '
-        Me.RadLabel42.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel42.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich3Weight5
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3Weight5, "RadTextBoxControlBereich3Weight5")
         Me.RadTextBoxControlBereich3Weight5.MaxLength = 20
         Me.RadTextBoxControlBereich3Weight5.Name = "RadTextBoxControlBereich3Weight5"
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich3Weight5.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3Weight5.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich3Weight5.TabStop = False
         '
         'RadTextBoxControlBereich3DisplayWeight5
@@ -1808,33 +1513,18 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich3DisplayWeight5.MaxLength = 20
         Me.RadTextBoxControlBereich3DisplayWeight5.Name = "RadTextBoxControlBereich3DisplayWeight5"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich3DisplayWeight5.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3DisplayWeight5.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich3ErrorLimit5
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3ErrorLimit5, "RadTextBoxControlBereich3ErrorLimit5")
         Me.RadTextBoxControlBereich3ErrorLimit5.MaxLength = 20
         Me.RadTextBoxControlBereich3ErrorLimit5.Name = "RadTextBoxControlBereich3ErrorLimit5"
         Me.RadTextBoxControlBereich3ErrorLimit5.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich3ErrorLimit5.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3ErrorLimit5.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich3ErrorLimit5.TabStop = False
         '
         'RadCheckBoxBereich3VEL5
         '
         resources.ApplyResources(Me.RadCheckBoxBereich3VEL5, "RadCheckBoxBereich3VEL5")
         Me.RadCheckBoxBereich3VEL5.Name = "RadCheckBoxBereich3VEL5"
-        '
-        '
-        '
-        Me.RadCheckBoxBereich3VEL5.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxBereich3VEL5.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxBereich3VEL5.TabStop = False
         '
         'PanelBereich3WZ12
@@ -1875,21 +1565,11 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadLabel35, "RadLabel35")
         Me.RadLabel35.Name = "RadLabel35"
         '
-        '
-        '
-        Me.RadLabel35.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel35.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich3Weight12
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3Weight12, "RadTextBoxControlBereich3Weight12")
         Me.RadTextBoxControlBereich3Weight12.MaxLength = 20
         Me.RadTextBoxControlBereich3Weight12.Name = "RadTextBoxControlBereich3Weight12"
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich3Weight12.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3Weight12.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich3Weight12.TabStop = False
         '
         'RadTextBoxControlBereich3DisplayWeight12
@@ -1898,33 +1578,18 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich3DisplayWeight12.MaxLength = 20
         Me.RadTextBoxControlBereich3DisplayWeight12.Name = "RadTextBoxControlBereich3DisplayWeight12"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich3DisplayWeight12.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3DisplayWeight12.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich3ErrorLimit12
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3ErrorLimit12, "RadTextBoxControlBereich3ErrorLimit12")
         Me.RadTextBoxControlBereich3ErrorLimit12.MaxLength = 20
         Me.RadTextBoxControlBereich3ErrorLimit12.Name = "RadTextBoxControlBereich3ErrorLimit12"
         Me.RadTextBoxControlBereich3ErrorLimit12.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich3ErrorLimit12.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3ErrorLimit12.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich3ErrorLimit12.TabStop = False
         '
         'RadCheckBoxBereich3VEL12
         '
         resources.ApplyResources(Me.RadCheckBoxBereich3VEL12, "RadCheckBoxBereich3VEL12")
         Me.RadCheckBoxBereich3VEL12.Name = "RadCheckBoxBereich3VEL12"
-        '
-        '
-        '
-        Me.RadCheckBoxBereich3VEL12.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxBereich3VEL12.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxBereich3VEL12.TabStop = False
         '
         'PanelBereich3WZ11
@@ -1965,21 +1630,11 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadLabel36, "RadLabel36")
         Me.RadLabel36.Name = "RadLabel36"
         '
-        '
-        '
-        Me.RadLabel36.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel36.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich3Weight11
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3Weight11, "RadTextBoxControlBereich3Weight11")
         Me.RadTextBoxControlBereich3Weight11.MaxLength = 20
         Me.RadTextBoxControlBereich3Weight11.Name = "RadTextBoxControlBereich3Weight11"
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich3Weight11.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3Weight11.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich3Weight11.TabStop = False
         '
         'RadTextBoxControlBereich3DisplayWeight11
@@ -1988,33 +1643,18 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich3DisplayWeight11.MaxLength = 20
         Me.RadTextBoxControlBereich3DisplayWeight11.Name = "RadTextBoxControlBereich3DisplayWeight11"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich3DisplayWeight11.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3DisplayWeight11.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich3ErrorLimit11
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3ErrorLimit11, "RadTextBoxControlBereich3ErrorLimit11")
         Me.RadTextBoxControlBereich3ErrorLimit11.MaxLength = 20
         Me.RadTextBoxControlBereich3ErrorLimit11.Name = "RadTextBoxControlBereich3ErrorLimit11"
         Me.RadTextBoxControlBereich3ErrorLimit11.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich3ErrorLimit11.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3ErrorLimit11.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich3ErrorLimit11.TabStop = False
         '
         'RadCheckBoxBereich3VEL11
         '
         resources.ApplyResources(Me.RadCheckBoxBereich3VEL11, "RadCheckBoxBereich3VEL11")
         Me.RadCheckBoxBereich3VEL11.Name = "RadCheckBoxBereich3VEL11"
-        '
-        '
-        '
-        Me.RadCheckBoxBereich3VEL11.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxBereich3VEL11.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxBereich3VEL11.TabStop = False
         '
         'PanelBereich3WZ6
@@ -2055,21 +1695,11 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadLabel41, "RadLabel41")
         Me.RadLabel41.Name = "RadLabel41"
         '
-        '
-        '
-        Me.RadLabel41.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel41.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich3Weight6
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3Weight6, "RadTextBoxControlBereich3Weight6")
         Me.RadTextBoxControlBereich3Weight6.MaxLength = 20
         Me.RadTextBoxControlBereich3Weight6.Name = "RadTextBoxControlBereich3Weight6"
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich3Weight6.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3Weight6.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich3Weight6.TabStop = False
         '
         'RadTextBoxControlBereich3DisplayWeight6
@@ -2078,33 +1708,18 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich3DisplayWeight6.MaxLength = 20
         Me.RadTextBoxControlBereich3DisplayWeight6.Name = "RadTextBoxControlBereich3DisplayWeight6"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich3DisplayWeight6.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3DisplayWeight6.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich3ErrorLimit6
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3ErrorLimit6, "RadTextBoxControlBereich3ErrorLimit6")
         Me.RadTextBoxControlBereich3ErrorLimit6.MaxLength = 20
         Me.RadTextBoxControlBereich3ErrorLimit6.Name = "RadTextBoxControlBereich3ErrorLimit6"
         Me.RadTextBoxControlBereich3ErrorLimit6.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich3ErrorLimit6.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3ErrorLimit6.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich3ErrorLimit6.TabStop = False
         '
         'RadCheckBoxBereich3VEL6
         '
         resources.ApplyResources(Me.RadCheckBoxBereich3VEL6, "RadCheckBoxBereich3VEL6")
         Me.RadCheckBoxBereich3VEL6.Name = "RadCheckBoxBereich3VEL6"
-        '
-        '
-        '
-        Me.RadCheckBoxBereich3VEL6.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxBereich3VEL6.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxBereich3VEL6.TabStop = False
         '
         'PanelBereich3WZMitte
@@ -2145,21 +1760,11 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadLabel34, "RadLabel34")
         Me.RadLabel34.Name = "RadLabel34"
         '
-        '
-        '
-        Me.RadLabel34.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel34.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich3WeightMitte
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3WeightMitte, "RadTextBoxControlBereich3WeightMitte")
         Me.RadTextBoxControlBereich3WeightMitte.MaxLength = 20
         Me.RadTextBoxControlBereich3WeightMitte.Name = "RadTextBoxControlBereich3WeightMitte"
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich3WeightMitte.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3WeightMitte.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich3WeightMitte.TabStop = False
         '
         'RadTextBoxControlBereich3DisplayWeightMitte
@@ -2168,33 +1773,18 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich3DisplayWeightMitte.MaxLength = 20
         Me.RadTextBoxControlBereich3DisplayWeightMitte.Name = "RadTextBoxControlBereich3DisplayWeightMitte"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich3DisplayWeightMitte.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3DisplayWeightMitte.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich3ErrorLimitMitte
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3ErrorLimitMitte, "RadTextBoxControlBereich3ErrorLimitMitte")
         Me.RadTextBoxControlBereich3ErrorLimitMitte.MaxLength = 20
         Me.RadTextBoxControlBereich3ErrorLimitMitte.Name = "RadTextBoxControlBereich3ErrorLimitMitte"
         Me.RadTextBoxControlBereich3ErrorLimitMitte.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich3ErrorLimitMitte.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3ErrorLimitMitte.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich3ErrorLimitMitte.TabStop = False
         '
         'RadCheckBoxBereich3VELMitte
         '
         resources.ApplyResources(Me.RadCheckBoxBereich3VELMitte, "RadCheckBoxBereich3VELMitte")
         Me.RadCheckBoxBereich3VELMitte.Name = "RadCheckBoxBereich3VELMitte"
-        '
-        '
-        '
-        Me.RadCheckBoxBereich3VELMitte.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxBereich3VELMitte.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxBereich3VELMitte.TabStop = False
         '
         'PanelBereich3WZ10
@@ -2235,21 +1825,11 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadLabel37, "RadLabel37")
         Me.RadLabel37.Name = "RadLabel37"
         '
-        '
-        '
-        Me.RadLabel37.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel37.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich3Weight10
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3Weight10, "RadTextBoxControlBereich3Weight10")
         Me.RadTextBoxControlBereich3Weight10.MaxLength = 20
         Me.RadTextBoxControlBereich3Weight10.Name = "RadTextBoxControlBereich3Weight10"
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich3Weight10.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3Weight10.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich3Weight10.TabStop = False
         '
         'RadTextBoxControlBereich3DisplayWeight10
@@ -2258,33 +1838,18 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich3DisplayWeight10.MaxLength = 20
         Me.RadTextBoxControlBereich3DisplayWeight10.Name = "RadTextBoxControlBereich3DisplayWeight10"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich3DisplayWeight10.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3DisplayWeight10.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich3ErrorLimit10
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3ErrorLimit10, "RadTextBoxControlBereich3ErrorLimit10")
         Me.RadTextBoxControlBereich3ErrorLimit10.MaxLength = 20
         Me.RadTextBoxControlBereich3ErrorLimit10.Name = "RadTextBoxControlBereich3ErrorLimit10"
         Me.RadTextBoxControlBereich3ErrorLimit10.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich3ErrorLimit10.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3ErrorLimit10.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich3ErrorLimit10.TabStop = False
         '
         'RadCheckBoxBereich3VEL10
         '
         resources.ApplyResources(Me.RadCheckBoxBereich3VEL10, "RadCheckBoxBereich3VEL10")
         Me.RadCheckBoxBereich3VEL10.Name = "RadCheckBoxBereich3VEL10"
-        '
-        '
-        '
-        Me.RadCheckBoxBereich3VEL10.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxBereich3VEL10.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxBereich3VEL10.TabStop = False
         '
         'PanelBereich3WZ7
@@ -2325,21 +1890,11 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadLabel40, "RadLabel40")
         Me.RadLabel40.Name = "RadLabel40"
         '
-        '
-        '
-        Me.RadLabel40.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel40.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich3Weight7
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3Weight7, "RadTextBoxControlBereich3Weight7")
         Me.RadTextBoxControlBereich3Weight7.MaxLength = 20
         Me.RadTextBoxControlBereich3Weight7.Name = "RadTextBoxControlBereich3Weight7"
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich3Weight7.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3Weight7.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich3Weight7.TabStop = False
         '
         'RadTextBoxControlBereich3DisplayWeight7
@@ -2348,33 +1903,18 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich3DisplayWeight7.MaxLength = 20
         Me.RadTextBoxControlBereich3DisplayWeight7.Name = "RadTextBoxControlBereich3DisplayWeight7"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich3DisplayWeight7.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3DisplayWeight7.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich3ErrorLimit7
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3ErrorLimit7, "RadTextBoxControlBereich3ErrorLimit7")
         Me.RadTextBoxControlBereich3ErrorLimit7.MaxLength = 20
         Me.RadTextBoxControlBereich3ErrorLimit7.Name = "RadTextBoxControlBereich3ErrorLimit7"
         Me.RadTextBoxControlBereich3ErrorLimit7.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich3ErrorLimit7.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3ErrorLimit7.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich3ErrorLimit7.TabStop = False
         '
         'RadCheckBoxBereich3VEL7
         '
         resources.ApplyResources(Me.RadCheckBoxBereich3VEL7, "RadCheckBoxBereich3VEL7")
         Me.RadCheckBoxBereich3VEL7.Name = "RadCheckBoxBereich3VEL7"
-        '
-        '
-        '
-        Me.RadCheckBoxBereich3VEL7.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxBereich3VEL7.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxBereich3VEL7.TabStop = False
         '
         'PanelBereich3WZ9
@@ -2415,21 +1955,11 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadLabel38, "RadLabel38")
         Me.RadLabel38.Name = "RadLabel38"
         '
-        '
-        '
-        Me.RadLabel38.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel38.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich3Weight9
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3Weight9, "RadTextBoxControlBereich3Weight9")
         Me.RadTextBoxControlBereich3Weight9.MaxLength = 20
         Me.RadTextBoxControlBereich3Weight9.Name = "RadTextBoxControlBereich3Weight9"
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich3Weight9.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3Weight9.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich3Weight9.TabStop = False
         '
         'RadTextBoxControlBereich3DisplayWeight9
@@ -2438,33 +1968,18 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich3DisplayWeight9.MaxLength = 20
         Me.RadTextBoxControlBereich3DisplayWeight9.Name = "RadTextBoxControlBereich3DisplayWeight9"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich3DisplayWeight9.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3DisplayWeight9.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich3ErrorLimit9
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3ErrorLimit9, "RadTextBoxControlBereich3ErrorLimit9")
         Me.RadTextBoxControlBereich3ErrorLimit9.MaxLength = 20
         Me.RadTextBoxControlBereich3ErrorLimit9.Name = "RadTextBoxControlBereich3ErrorLimit9"
         Me.RadTextBoxControlBereich3ErrorLimit9.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich3ErrorLimit9.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3ErrorLimit9.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich3ErrorLimit9.TabStop = False
         '
         'RadCheckBoxBereich3VEL9
         '
         resources.ApplyResources(Me.RadCheckBoxBereich3VEL9, "RadCheckBoxBereich3VEL9")
         Me.RadCheckBoxBereich3VEL9.Name = "RadCheckBoxBereich3VEL9"
-        '
-        '
-        '
-        Me.RadCheckBoxBereich3VEL9.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxBereich3VEL9.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxBereich3VEL9.TabStop = False
         '
         'PanelBereich3WZ8
@@ -2505,21 +2020,11 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadLabel39, "RadLabel39")
         Me.RadLabel39.Name = "RadLabel39"
         '
-        '
-        '
-        Me.RadLabel39.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel39.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich3Weight8
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3Weight8, "RadTextBoxControlBereich3Weight8")
         Me.RadTextBoxControlBereich3Weight8.MaxLength = 20
         Me.RadTextBoxControlBereich3Weight8.Name = "RadTextBoxControlBereich3Weight8"
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich3Weight8.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3Weight8.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich3Weight8.TabStop = False
         '
         'RadTextBoxControlBereich3DisplayWeight8
@@ -2528,33 +2033,18 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich3DisplayWeight8.MaxLength = 20
         Me.RadTextBoxControlBereich3DisplayWeight8.Name = "RadTextBoxControlBereich3DisplayWeight8"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich3DisplayWeight8.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3DisplayWeight8.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich3ErrorLimit8
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich3ErrorLimit8, "RadTextBoxControlBereich3ErrorLimit8")
         Me.RadTextBoxControlBereich3ErrorLimit8.MaxLength = 20
         Me.RadTextBoxControlBereich3ErrorLimit8.Name = "RadTextBoxControlBereich3ErrorLimit8"
         Me.RadTextBoxControlBereich3ErrorLimit8.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich3ErrorLimit8.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich3ErrorLimit8.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich3ErrorLimit8.TabStop = False
         '
         'RadCheckBoxBereich3VEL8
         '
         resources.ApplyResources(Me.RadCheckBoxBereich3VEL8, "RadCheckBoxBereich3VEL8")
         Me.RadCheckBoxBereich3VEL8.Name = "RadCheckBoxBereich3VEL8"
-        '
-        '
-        '
-        Me.RadCheckBoxBereich3VEL8.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxBereich3VEL8.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxBereich3VEL8.TabStop = False
         '
         'RadGroupBoxBereich2
@@ -2583,11 +2073,6 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadGroupBoxBereich2, "RadGroupBoxBereich2")
         Me.RadGroupBoxBereich2.Name = "RadGroupBoxBereich2"
         '
-        '
-        '
-        Me.RadGroupBoxBereich2.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxBereich2.RootElement.AccessibleName = Nothing
-        '
         'PictureBox80
         '
         Me.PictureBox80.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
@@ -2600,11 +2085,6 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.lblBereich2EFGSpeziallBerechnung, "lblBereich2EFGSpeziallBerechnung")
         Me.lblBereich2EFGSpeziallBerechnung.Name = "lblBereich2EFGSpeziallBerechnung"
         Me.lblBereich2EFGSpeziallBerechnung.ReadOnly = True
-        '
-        '
-        '
-        Me.lblBereich2EFGSpeziallBerechnung.RootElement.AccessibleDescription = Nothing
-        Me.lblBereich2EFGSpeziallBerechnung.RootElement.AccessibleName = Nothing
         Me.lblBereich2EFGSpeziallBerechnung.TabStop = False
         '
         'PanelBereich2WZMitte
@@ -2645,21 +2125,11 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadLabel15, "RadLabel15")
         Me.RadLabel15.Name = "RadLabel15"
         '
-        '
-        '
-        Me.RadLabel15.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel15.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich2WeightMitte
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2WeightMitte, "RadTextBoxControlBereich2WeightMitte")
         Me.RadTextBoxControlBereich2WeightMitte.MaxLength = 20
         Me.RadTextBoxControlBereich2WeightMitte.Name = "RadTextBoxControlBereich2WeightMitte"
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich2WeightMitte.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2WeightMitte.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich2WeightMitte.TabStop = False
         '
         'RadTextBoxControlBereich2DisplayWeightMitte
@@ -2668,33 +2138,18 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich2DisplayWeightMitte.MaxLength = 20
         Me.RadTextBoxControlBereich2DisplayWeightMitte.Name = "RadTextBoxControlBereich2DisplayWeightMitte"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich2DisplayWeightMitte.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2DisplayWeightMitte.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich2ErrorLimitMitte
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2ErrorLimitMitte, "RadTextBoxControlBereich2ErrorLimitMitte")
         Me.RadTextBoxControlBereich2ErrorLimitMitte.MaxLength = 20
         Me.RadTextBoxControlBereich2ErrorLimitMitte.Name = "RadTextBoxControlBereich2ErrorLimitMitte"
         Me.RadTextBoxControlBereich2ErrorLimitMitte.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich2ErrorLimitMitte.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2ErrorLimitMitte.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich2ErrorLimitMitte.TabStop = False
         '
         'RadCheckBoxBereich2VELMitte
         '
         resources.ApplyResources(Me.RadCheckBoxBereich2VELMitte, "RadCheckBoxBereich2VELMitte")
         Me.RadCheckBoxBereich2VELMitte.Name = "RadCheckBoxBereich2VELMitte"
-        '
-        '
-        '
-        Me.RadCheckBoxBereich2VELMitte.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxBereich2VELMitte.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxBereich2VELMitte.TabStop = False
         '
         'PanelBereich2WZ1
@@ -2735,21 +2190,11 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadLabel27, "RadLabel27")
         Me.RadLabel27.Name = "RadLabel27"
         '
-        '
-        '
-        Me.RadLabel27.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel27.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich2Weight1
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2Weight1, "RadTextBoxControlBereich2Weight1")
         Me.RadTextBoxControlBereich2Weight1.MaxLength = 20
         Me.RadTextBoxControlBereich2Weight1.Name = "RadTextBoxControlBereich2Weight1"
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich2Weight1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2Weight1.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlBereich2DisplayWeight1
         '
@@ -2757,33 +2202,18 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich2DisplayWeight1.MaxLength = 20
         Me.RadTextBoxControlBereich2DisplayWeight1.Name = "RadTextBoxControlBereich2DisplayWeight1"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich2DisplayWeight1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2DisplayWeight1.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich2ErrorLimit1
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2ErrorLimit1, "RadTextBoxControlBereich2ErrorLimit1")
         Me.RadTextBoxControlBereich2ErrorLimit1.MaxLength = 20
         Me.RadTextBoxControlBereich2ErrorLimit1.Name = "RadTextBoxControlBereich2ErrorLimit1"
         Me.RadTextBoxControlBereich2ErrorLimit1.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich2ErrorLimit1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2ErrorLimit1.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich2ErrorLimit1.TabStop = False
         '
         'RadCheckBoxBereich2VEL1
         '
         resources.ApplyResources(Me.RadCheckBoxBereich2VEL1, "RadCheckBoxBereich2VEL1")
         Me.RadCheckBoxBereich2VEL1.Name = "RadCheckBoxBereich2VEL1"
-        '
-        '
-        '
-        Me.RadCheckBoxBereich2VEL1.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxBereich2VEL1.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxBereich2VEL1.TabStop = False
         '
         'lblMessOrtBereich2
@@ -2791,20 +2221,10 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.lblMessOrtBereich2, "lblMessOrtBereich2")
         Me.lblMessOrtBereich2.Name = "lblMessOrtBereich2"
         '
-        '
-        '
-        Me.lblMessOrtBereich2.RootElement.AccessibleDescription = Nothing
-        Me.lblMessOrtBereich2.RootElement.AccessibleName = Nothing
-        '
         'lblBereich2FehlerGrenzen
         '
         resources.ApplyResources(Me.lblBereich2FehlerGrenzen, "lblBereich2FehlerGrenzen")
         Me.lblBereich2FehlerGrenzen.Name = "lblBereich2FehlerGrenzen"
-        '
-        '
-        '
-        Me.lblBereich2FehlerGrenzen.RootElement.AccessibleDescription = Nothing
-        Me.lblBereich2FehlerGrenzen.RootElement.AccessibleName = Nothing
         '
         'PanelBereich2WZ2
         '
@@ -2844,21 +2264,11 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadLabel26, "RadLabel26")
         Me.RadLabel26.Name = "RadLabel26"
         '
-        '
-        '
-        Me.RadLabel26.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel26.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich2Weight2
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2Weight2, "RadTextBoxControlBereich2Weight2")
         Me.RadTextBoxControlBereich2Weight2.MaxLength = 20
         Me.RadTextBoxControlBereich2Weight2.Name = "RadTextBoxControlBereich2Weight2"
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich2Weight2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2Weight2.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich2Weight2.TabStop = False
         '
         'RadTextBoxControlBereich2DisplayWeight2
@@ -2867,44 +2277,24 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich2DisplayWeight2.MaxLength = 20
         Me.RadTextBoxControlBereich2DisplayWeight2.Name = "RadTextBoxControlBereich2DisplayWeight2"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich2DisplayWeight2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2DisplayWeight2.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich2ErrorLimit2
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2ErrorLimit2, "RadTextBoxControlBereich2ErrorLimit2")
         Me.RadTextBoxControlBereich2ErrorLimit2.MaxLength = 20
         Me.RadTextBoxControlBereich2ErrorLimit2.Name = "RadTextBoxControlBereich2ErrorLimit2"
         Me.RadTextBoxControlBereich2ErrorLimit2.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich2ErrorLimit2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2ErrorLimit2.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich2ErrorLimit2.TabStop = False
         '
         'RadCheckBoxBereich2VEL2
         '
         resources.ApplyResources(Me.RadCheckBoxBereich2VEL2, "RadCheckBoxBereich2VEL2")
         Me.RadCheckBoxBereich2VEL2.Name = "RadCheckBoxBereich2VEL2"
-        '
-        '
-        '
-        Me.RadCheckBoxBereich2VEL2.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxBereich2VEL2.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxBereich2VEL2.TabStop = False
         '
         'lblBereich2EFGSpezial
         '
         resources.ApplyResources(Me.lblBereich2EFGSpezial, "lblBereich2EFGSpezial")
         Me.lblBereich2EFGSpezial.Name = "lblBereich2EFGSpezial"
-        '
-        '
-        '
-        Me.lblBereich2EFGSpezial.RootElement.AccessibleDescription = Nothing
-        Me.lblBereich2EFGSpezial.RootElement.AccessibleName = Nothing
         '
         'PanelBereich2WZ3
         '
@@ -2944,21 +2334,11 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadLabel25, "RadLabel25")
         Me.RadLabel25.Name = "RadLabel25"
         '
-        '
-        '
-        Me.RadLabel25.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel25.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich2Weight3
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2Weight3, "RadTextBoxControlBereich2Weight3")
         Me.RadTextBoxControlBereich2Weight3.MaxLength = 20
         Me.RadTextBoxControlBereich2Weight3.Name = "RadTextBoxControlBereich2Weight3"
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich2Weight3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2Weight3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich2Weight3.TabStop = False
         '
         'RadTextBoxControlBereich2DisplayWeight3
@@ -2967,33 +2347,18 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich2DisplayWeight3.MaxLength = 20
         Me.RadTextBoxControlBereich2DisplayWeight3.Name = "RadTextBoxControlBereich2DisplayWeight3"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich2DisplayWeight3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2DisplayWeight3.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich2ErrorLimit3
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2ErrorLimit3, "RadTextBoxControlBereich2ErrorLimit3")
         Me.RadTextBoxControlBereich2ErrorLimit3.MaxLength = 20
         Me.RadTextBoxControlBereich2ErrorLimit3.Name = "RadTextBoxControlBereich2ErrorLimit3"
         Me.RadTextBoxControlBereich2ErrorLimit3.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich2ErrorLimit3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2ErrorLimit3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich2ErrorLimit3.TabStop = False
         '
         'RadCheckBoxBereich2VEL3
         '
         resources.ApplyResources(Me.RadCheckBoxBereich2VEL3, "RadCheckBoxBereich2VEL3")
         Me.RadCheckBoxBereich2VEL3.Name = "RadCheckBoxBereich2VEL3"
-        '
-        '
-        '
-        Me.RadCheckBoxBereich2VEL3.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxBereich2VEL3.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxBereich2VEL3.TabStop = False
         '
         'lblBereich2Gewicht
@@ -3001,20 +2366,10 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.lblBereich2Gewicht, "lblBereich2Gewicht")
         Me.lblBereich2Gewicht.Name = "lblBereich2Gewicht"
         '
-        '
-        '
-        Me.lblBereich2Gewicht.RootElement.AccessibleDescription = Nothing
-        Me.lblBereich2Gewicht.RootElement.AccessibleName = Nothing
-        '
         'lblBereich2AnzeigeGewicht
         '
         resources.ApplyResources(Me.lblBereich2AnzeigeGewicht, "lblBereich2AnzeigeGewicht")
         Me.lblBereich2AnzeigeGewicht.Name = "lblBereich2AnzeigeGewicht"
-        '
-        '
-        '
-        Me.lblBereich2AnzeigeGewicht.RootElement.AccessibleDescription = Nothing
-        Me.lblBereich2AnzeigeGewicht.RootElement.AccessibleName = Nothing
         '
         'PanelBereich2WZ4
         '
@@ -3054,21 +2409,11 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadLabel24, "RadLabel24")
         Me.RadLabel24.Name = "RadLabel24"
         '
-        '
-        '
-        Me.RadLabel24.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel24.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich2Weight4
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2Weight4, "RadTextBoxControlBereich2Weight4")
         Me.RadTextBoxControlBereich2Weight4.MaxLength = 20
         Me.RadTextBoxControlBereich2Weight4.Name = "RadTextBoxControlBereich2Weight4"
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich2Weight4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2Weight4.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich2Weight4.TabStop = False
         '
         'RadTextBoxControlBereich2DisplayWeight4
@@ -3077,33 +2422,18 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich2DisplayWeight4.MaxLength = 20
         Me.RadTextBoxControlBereich2DisplayWeight4.Name = "RadTextBoxControlBereich2DisplayWeight4"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich2DisplayWeight4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2DisplayWeight4.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich2ErrorLimit4
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2ErrorLimit4, "RadTextBoxControlBereich2ErrorLimit4")
         Me.RadTextBoxControlBereich2ErrorLimit4.MaxLength = 20
         Me.RadTextBoxControlBereich2ErrorLimit4.Name = "RadTextBoxControlBereich2ErrorLimit4"
         Me.RadTextBoxControlBereich2ErrorLimit4.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich2ErrorLimit4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2ErrorLimit4.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich2ErrorLimit4.TabStop = False
         '
         'RadCheckBoxBereich2VEL4
         '
         resources.ApplyResources(Me.RadCheckBoxBereich2VEL4, "RadCheckBoxBereich2VEL4")
         Me.RadCheckBoxBereich2VEL4.Name = "RadCheckBoxBereich2VEL4"
-        '
-        '
-        '
-        Me.RadCheckBoxBereich2VEL4.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxBereich2VEL4.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxBereich2VEL4.TabStop = False
         '
         'PanelBereich2WZ11
@@ -3144,21 +2474,11 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadLabel17, "RadLabel17")
         Me.RadLabel17.Name = "RadLabel17"
         '
-        '
-        '
-        Me.RadLabel17.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel17.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich2Weight11
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2Weight11, "RadTextBoxControlBereich2Weight11")
         Me.RadTextBoxControlBereich2Weight11.MaxLength = 20
         Me.RadTextBoxControlBereich2Weight11.Name = "RadTextBoxControlBereich2Weight11"
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich2Weight11.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2Weight11.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich2Weight11.TabStop = False
         '
         'RadTextBoxControlBereich2DisplayWeight11
@@ -3167,33 +2487,18 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich2DisplayWeight11.MaxLength = 20
         Me.RadTextBoxControlBereich2DisplayWeight11.Name = "RadTextBoxControlBereich2DisplayWeight11"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich2DisplayWeight11.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2DisplayWeight11.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich2ErrorLimit11
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2ErrorLimit11, "RadTextBoxControlBereich2ErrorLimit11")
         Me.RadTextBoxControlBereich2ErrorLimit11.MaxLength = 20
         Me.RadTextBoxControlBereich2ErrorLimit11.Name = "RadTextBoxControlBereich2ErrorLimit11"
         Me.RadTextBoxControlBereich2ErrorLimit11.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich2ErrorLimit11.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2ErrorLimit11.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich2ErrorLimit11.TabStop = False
         '
         'RadCheckBoxBereich2VEL11
         '
         resources.ApplyResources(Me.RadCheckBoxBereich2VEL11, "RadCheckBoxBereich2VEL11")
         Me.RadCheckBoxBereich2VEL11.Name = "RadCheckBoxBereich2VEL11"
-        '
-        '
-        '
-        Me.RadCheckBoxBereich2VEL11.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxBereich2VEL11.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxBereich2VEL11.TabStop = False
         '
         'PanelBereich2WZ10
@@ -3234,21 +2539,11 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadLabel18, "RadLabel18")
         Me.RadLabel18.Name = "RadLabel18"
         '
-        '
-        '
-        Me.RadLabel18.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel18.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich2Weight10
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2Weight10, "RadTextBoxControlBereich2Weight10")
         Me.RadTextBoxControlBereich2Weight10.MaxLength = 20
         Me.RadTextBoxControlBereich2Weight10.Name = "RadTextBoxControlBereich2Weight10"
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich2Weight10.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2Weight10.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich2Weight10.TabStop = False
         '
         'RadTextBoxControlBereich2DisplayWeight10
@@ -3257,33 +2552,18 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich2DisplayWeight10.MaxLength = 20
         Me.RadTextBoxControlBereich2DisplayWeight10.Name = "RadTextBoxControlBereich2DisplayWeight10"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich2DisplayWeight10.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2DisplayWeight10.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich2ErrorLimit10
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2ErrorLimit10, "RadTextBoxControlBereich2ErrorLimit10")
         Me.RadTextBoxControlBereich2ErrorLimit10.MaxLength = 20
         Me.RadTextBoxControlBereich2ErrorLimit10.Name = "RadTextBoxControlBereich2ErrorLimit10"
         Me.RadTextBoxControlBereich2ErrorLimit10.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich2ErrorLimit10.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2ErrorLimit10.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich2ErrorLimit10.TabStop = False
         '
         'RadCheckBoxBereich2VEL10
         '
         resources.ApplyResources(Me.RadCheckBoxBereich2VEL10, "RadCheckBoxBereich2VEL10")
         Me.RadCheckBoxBereich2VEL10.Name = "RadCheckBoxBereich2VEL10"
-        '
-        '
-        '
-        Me.RadCheckBoxBereich2VEL10.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxBereich2VEL10.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxBereich2VEL10.TabStop = False
         '
         'PanelBereich2WZ5
@@ -3324,21 +2604,11 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadLabel23, "RadLabel23")
         Me.RadLabel23.Name = "RadLabel23"
         '
-        '
-        '
-        Me.RadLabel23.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel23.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich2Weight5
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2Weight5, "RadTextBoxControlBereich2Weight5")
         Me.RadTextBoxControlBereich2Weight5.MaxLength = 20
         Me.RadTextBoxControlBereich2Weight5.Name = "RadTextBoxControlBereich2Weight5"
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich2Weight5.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2Weight5.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich2Weight5.TabStop = False
         '
         'RadTextBoxControlBereich2DisplayWeight5
@@ -3347,33 +2617,18 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich2DisplayWeight5.MaxLength = 20
         Me.RadTextBoxControlBereich2DisplayWeight5.Name = "RadTextBoxControlBereich2DisplayWeight5"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich2DisplayWeight5.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2DisplayWeight5.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich2ErrorLimit5
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2ErrorLimit5, "RadTextBoxControlBereich2ErrorLimit5")
         Me.RadTextBoxControlBereich2ErrorLimit5.MaxLength = 20
         Me.RadTextBoxControlBereich2ErrorLimit5.Name = "RadTextBoxControlBereich2ErrorLimit5"
         Me.RadTextBoxControlBereich2ErrorLimit5.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich2ErrorLimit5.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2ErrorLimit5.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich2ErrorLimit5.TabStop = False
         '
         'RadCheckBoxBereich2VEL5
         '
         resources.ApplyResources(Me.RadCheckBoxBereich2VEL5, "RadCheckBoxBereich2VEL5")
         Me.RadCheckBoxBereich2VEL5.Name = "RadCheckBoxBereich2VEL5"
-        '
-        '
-        '
-        Me.RadCheckBoxBereich2VEL5.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxBereich2VEL5.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxBereich2VEL5.TabStop = False
         '
         'PanelBereich2WZ12
@@ -3414,21 +2669,11 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadLabel16, "RadLabel16")
         Me.RadLabel16.Name = "RadLabel16"
         '
-        '
-        '
-        Me.RadLabel16.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel16.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich2Weight12
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2Weight12, "RadTextBoxControlBereich2Weight12")
         Me.RadTextBoxControlBereich2Weight12.MaxLength = 20
         Me.RadTextBoxControlBereich2Weight12.Name = "RadTextBoxControlBereich2Weight12"
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich2Weight12.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2Weight12.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich2Weight12.TabStop = False
         '
         'RadTextBoxControlBereich2DisplayWeight12
@@ -3437,33 +2682,18 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich2DisplayWeight12.MaxLength = 20
         Me.RadTextBoxControlBereich2DisplayWeight12.Name = "RadTextBoxControlBereich2DisplayWeight12"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich2DisplayWeight12.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2DisplayWeight12.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich2ErrorLimit12
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2ErrorLimit12, "RadTextBoxControlBereich2ErrorLimit12")
         Me.RadTextBoxControlBereich2ErrorLimit12.MaxLength = 20
         Me.RadTextBoxControlBereich2ErrorLimit12.Name = "RadTextBoxControlBereich2ErrorLimit12"
         Me.RadTextBoxControlBereich2ErrorLimit12.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich2ErrorLimit12.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2ErrorLimit12.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich2ErrorLimit12.TabStop = False
         '
         'RadCheckBoxBereich2VEL12
         '
         resources.ApplyResources(Me.RadCheckBoxBereich2VEL12, "RadCheckBoxBereich2VEL12")
         Me.RadCheckBoxBereich2VEL12.Name = "RadCheckBoxBereich2VEL12"
-        '
-        '
-        '
-        Me.RadCheckBoxBereich2VEL12.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxBereich2VEL12.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxBereich2VEL12.TabStop = False
         '
         'PanelBereich2WZ9
@@ -3504,21 +2734,11 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadLabel19, "RadLabel19")
         Me.RadLabel19.Name = "RadLabel19"
         '
-        '
-        '
-        Me.RadLabel19.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel19.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich2Weight9
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2Weight9, "RadTextBoxControlBereich2Weight9")
         Me.RadTextBoxControlBereich2Weight9.MaxLength = 20
         Me.RadTextBoxControlBereich2Weight9.Name = "RadTextBoxControlBereich2Weight9"
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich2Weight9.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2Weight9.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich2Weight9.TabStop = False
         '
         'RadTextBoxControlBereich2DisplayWeight9
@@ -3527,33 +2747,18 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich2DisplayWeight9.MaxLength = 20
         Me.RadTextBoxControlBereich2DisplayWeight9.Name = "RadTextBoxControlBereich2DisplayWeight9"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich2DisplayWeight9.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2DisplayWeight9.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich2ErrorLimit9
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2ErrorLimit9, "RadTextBoxControlBereich2ErrorLimit9")
         Me.RadTextBoxControlBereich2ErrorLimit9.MaxLength = 20
         Me.RadTextBoxControlBereich2ErrorLimit9.Name = "RadTextBoxControlBereich2ErrorLimit9"
         Me.RadTextBoxControlBereich2ErrorLimit9.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich2ErrorLimit9.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2ErrorLimit9.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich2ErrorLimit9.TabStop = False
         '
         'RadCheckBoxBereich2VEL9
         '
         resources.ApplyResources(Me.RadCheckBoxBereich2VEL9, "RadCheckBoxBereich2VEL9")
         Me.RadCheckBoxBereich2VEL9.Name = "RadCheckBoxBereich2VEL9"
-        '
-        '
-        '
-        Me.RadCheckBoxBereich2VEL9.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxBereich2VEL9.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxBereich2VEL9.TabStop = False
         '
         'PanelBereich2WZ6
@@ -3594,21 +2799,11 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadLabel22, "RadLabel22")
         Me.RadLabel22.Name = "RadLabel22"
         '
-        '
-        '
-        Me.RadLabel22.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel22.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich2Weight6
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2Weight6, "RadTextBoxControlBereich2Weight6")
         Me.RadTextBoxControlBereich2Weight6.MaxLength = 20
         Me.RadTextBoxControlBereich2Weight6.Name = "RadTextBoxControlBereich2Weight6"
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich2Weight6.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2Weight6.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich2Weight6.TabStop = False
         '
         'RadTextBoxControlBereich2DisplayWeight6
@@ -3617,33 +2812,18 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich2DisplayWeight6.MaxLength = 20
         Me.RadTextBoxControlBereich2DisplayWeight6.Name = "RadTextBoxControlBereich2DisplayWeight6"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich2DisplayWeight6.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2DisplayWeight6.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich2ErrorLimit6
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2ErrorLimit6, "RadTextBoxControlBereich2ErrorLimit6")
         Me.RadTextBoxControlBereich2ErrorLimit6.MaxLength = 20
         Me.RadTextBoxControlBereich2ErrorLimit6.Name = "RadTextBoxControlBereich2ErrorLimit6"
         Me.RadTextBoxControlBereich2ErrorLimit6.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich2ErrorLimit6.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2ErrorLimit6.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich2ErrorLimit6.TabStop = False
         '
         'RadCheckBoxBereich2VEL6
         '
         resources.ApplyResources(Me.RadCheckBoxBereich2VEL6, "RadCheckBoxBereich2VEL6")
         Me.RadCheckBoxBereich2VEL6.Name = "RadCheckBoxBereich2VEL6"
-        '
-        '
-        '
-        Me.RadCheckBoxBereich2VEL6.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxBereich2VEL6.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxBereich2VEL6.TabStop = False
         '
         'PanelBereich2WZ8
@@ -3684,21 +2864,11 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadLabel20, "RadLabel20")
         Me.RadLabel20.Name = "RadLabel20"
         '
-        '
-        '
-        Me.RadLabel20.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel20.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich2Weight8
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2Weight8, "RadTextBoxControlBereich2Weight8")
         Me.RadTextBoxControlBereich2Weight8.MaxLength = 20
         Me.RadTextBoxControlBereich2Weight8.Name = "RadTextBoxControlBereich2Weight8"
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich2Weight8.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2Weight8.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich2Weight8.TabStop = False
         '
         'RadTextBoxControlBereich2DisplayWeight8
@@ -3707,33 +2877,18 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich2DisplayWeight8.MaxLength = 20
         Me.RadTextBoxControlBereich2DisplayWeight8.Name = "RadTextBoxControlBereich2DisplayWeight8"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich2DisplayWeight8.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2DisplayWeight8.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich2ErrorLimit8
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2ErrorLimit8, "RadTextBoxControlBereich2ErrorLimit8")
         Me.RadTextBoxControlBereich2ErrorLimit8.MaxLength = 20
         Me.RadTextBoxControlBereich2ErrorLimit8.Name = "RadTextBoxControlBereich2ErrorLimit8"
         Me.RadTextBoxControlBereich2ErrorLimit8.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich2ErrorLimit8.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2ErrorLimit8.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich2ErrorLimit8.TabStop = False
         '
         'RadCheckBoxBereich2VEL8
         '
         resources.ApplyResources(Me.RadCheckBoxBereich2VEL8, "RadCheckBoxBereich2VEL8")
         Me.RadCheckBoxBereich2VEL8.Name = "RadCheckBoxBereich2VEL8"
-        '
-        '
-        '
-        Me.RadCheckBoxBereich2VEL8.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxBereich2VEL8.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxBereich2VEL8.TabStop = False
         '
         'PanelBereich2WZ7
@@ -3774,21 +2929,11 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadLabel21, "RadLabel21")
         Me.RadLabel21.Name = "RadLabel21"
         '
-        '
-        '
-        Me.RadLabel21.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel21.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich2Weight7
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2Weight7, "RadTextBoxControlBereich2Weight7")
         Me.RadTextBoxControlBereich2Weight7.MaxLength = 20
         Me.RadTextBoxControlBereich2Weight7.Name = "RadTextBoxControlBereich2Weight7"
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich2Weight7.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2Weight7.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich2Weight7.TabStop = False
         '
         'RadTextBoxControlBereich2DisplayWeight7
@@ -3797,33 +2942,18 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich2DisplayWeight7.MaxLength = 20
         Me.RadTextBoxControlBereich2DisplayWeight7.Name = "RadTextBoxControlBereich2DisplayWeight7"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich2DisplayWeight7.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2DisplayWeight7.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich2ErrorLimit7
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich2ErrorLimit7, "RadTextBoxControlBereich2ErrorLimit7")
         Me.RadTextBoxControlBereich2ErrorLimit7.MaxLength = 20
         Me.RadTextBoxControlBereich2ErrorLimit7.Name = "RadTextBoxControlBereich2ErrorLimit7"
         Me.RadTextBoxControlBereich2ErrorLimit7.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich2ErrorLimit7.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich2ErrorLimit7.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich2ErrorLimit7.TabStop = False
         '
         'RadCheckBoxBereich2VEL7
         '
         resources.ApplyResources(Me.RadCheckBoxBereich2VEL7, "RadCheckBoxBereich2VEL7")
         Me.RadCheckBoxBereich2VEL7.Name = "RadCheckBoxBereich2VEL7"
-        '
-        '
-        '
-        Me.RadCheckBoxBereich2VEL7.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxBereich2VEL7.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxBereich2VEL7.TabStop = False
         '
         'RadGroupBoxBereich1
@@ -3852,11 +2982,6 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadGroupBoxBereich1, "RadGroupBoxBereich1")
         Me.RadGroupBoxBereich1.Name = "RadGroupBoxBereich1"
         '
-        '
-        '
-        Me.RadGroupBoxBereich1.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxBereich1.RootElement.AccessibleName = Nothing
-        '
         'PictureBox79
         '
         Me.PictureBox79.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
@@ -3869,11 +2994,6 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.lblBereich1EFGSpeziallBerechnung, "lblBereich1EFGSpeziallBerechnung")
         Me.lblBereich1EFGSpeziallBerechnung.Name = "lblBereich1EFGSpeziallBerechnung"
         Me.lblBereich1EFGSpeziallBerechnung.ReadOnly = True
-        '
-        '
-        '
-        Me.lblBereich1EFGSpeziallBerechnung.RootElement.AccessibleDescription = Nothing
-        Me.lblBereich1EFGSpeziallBerechnung.RootElement.AccessibleName = Nothing
         Me.lblBereich1EFGSpeziallBerechnung.TabStop = False
         '
         'PanelBereich1WZ1
@@ -3914,21 +3034,11 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadLabel13, "RadLabel13")
         Me.RadLabel13.Name = "RadLabel13"
         '
-        '
-        '
-        Me.RadLabel13.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel13.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich1Weight1
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1Weight1, "RadTextBoxControlBereich1Weight1")
         Me.RadTextBoxControlBereich1Weight1.MaxLength = 20
         Me.RadTextBoxControlBereich1Weight1.Name = "RadTextBoxControlBereich1Weight1"
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich1Weight1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1Weight1.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlBereich1DisplayWeight1
         '
@@ -3936,33 +3046,18 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich1DisplayWeight1.MaxLength = 20
         Me.RadTextBoxControlBereich1DisplayWeight1.Name = "RadTextBoxControlBereich1DisplayWeight1"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich1DisplayWeight1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1DisplayWeight1.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich1ErrorLimit1
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1ErrorLimit1, "RadTextBoxControlBereich1ErrorLimit1")
         Me.RadTextBoxControlBereich1ErrorLimit1.MaxLength = 20
         Me.RadTextBoxControlBereich1ErrorLimit1.Name = "RadTextBoxControlBereich1ErrorLimit1"
         Me.RadTextBoxControlBereich1ErrorLimit1.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich1ErrorLimit1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1ErrorLimit1.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich1ErrorLimit1.TabStop = False
         '
         'RadCheckBoxBereich1VEL1
         '
         resources.ApplyResources(Me.RadCheckBoxBereich1VEL1, "RadCheckBoxBereich1VEL1")
         Me.RadCheckBoxBereich1VEL1.Name = "RadCheckBoxBereich1VEL1"
-        '
-        '
-        '
-        Me.RadCheckBoxBereich1VEL1.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxBereich1VEL1.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxBereich1VEL1.TabStop = False
         '
         'PanelBereich1WZ2
@@ -3996,11 +3091,6 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadLabel2, "RadLabel2")
         Me.RadLabel2.Name = "RadLabel2"
         '
-        '
-        '
-        Me.RadLabel2.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel2.RootElement.AccessibleName = Nothing
-        '
         'PictureBox4
         '
         Me.PictureBox4.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
@@ -4013,11 +3103,6 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadTextBoxControlBereich1Weight2, "RadTextBoxControlBereich1Weight2")
         Me.RadTextBoxControlBereich1Weight2.MaxLength = 20
         Me.RadTextBoxControlBereich1Weight2.Name = "RadTextBoxControlBereich1Weight2"
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich1Weight2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1Weight2.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich1Weight2.TabStop = False
         '
         'RadTextBoxControlBereich1DisplayWeight2
@@ -4026,33 +3111,18 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich1DisplayWeight2.MaxLength = 20
         Me.RadTextBoxControlBereich1DisplayWeight2.Name = "RadTextBoxControlBereich1DisplayWeight2"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich1DisplayWeight2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1DisplayWeight2.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich1ErrorLimit2
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1ErrorLimit2, "RadTextBoxControlBereich1ErrorLimit2")
         Me.RadTextBoxControlBereich1ErrorLimit2.MaxLength = 20
         Me.RadTextBoxControlBereich1ErrorLimit2.Name = "RadTextBoxControlBereich1ErrorLimit2"
         Me.RadTextBoxControlBereich1ErrorLimit2.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich1ErrorLimit2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1ErrorLimit2.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich1ErrorLimit2.TabStop = False
         '
         'RadCheckBoxBereich1VEL2
         '
         resources.ApplyResources(Me.RadCheckBoxBereich1VEL2, "RadCheckBoxBereich1VEL2")
         Me.RadCheckBoxBereich1VEL2.Name = "RadCheckBoxBereich1VEL2"
-        '
-        '
-        '
-        Me.RadCheckBoxBereich1VEL2.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxBereich1VEL2.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxBereich1VEL2.TabStop = False
         '
         'lblMessOrtBereich1
@@ -4060,20 +3130,10 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.lblMessOrtBereich1, "lblMessOrtBereich1")
         Me.lblMessOrtBereich1.Name = "lblMessOrtBereich1"
         '
-        '
-        '
-        Me.lblMessOrtBereich1.RootElement.AccessibleDescription = Nothing
-        Me.lblMessOrtBereich1.RootElement.AccessibleName = Nothing
-        '
         'lblBereich1FehlerGrenzen
         '
         resources.ApplyResources(Me.lblBereich1FehlerGrenzen, "lblBereich1FehlerGrenzen")
         Me.lblBereich1FehlerGrenzen.Name = "lblBereich1FehlerGrenzen"
-        '
-        '
-        '
-        Me.lblBereich1FehlerGrenzen.RootElement.AccessibleDescription = Nothing
-        Me.lblBereich1FehlerGrenzen.RootElement.AccessibleName = Nothing
         '
         'PanelBereich1WZ3
         '
@@ -4106,11 +3166,6 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadLabel4, "RadLabel4")
         Me.RadLabel4.Name = "RadLabel4"
         '
-        '
-        '
-        Me.RadLabel4.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel4.RootElement.AccessibleName = Nothing
-        '
         'PictureBox6
         '
         Me.PictureBox6.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
@@ -4123,11 +3178,6 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadTextBoxControlBereich1Weight3, "RadTextBoxControlBereich1Weight3")
         Me.RadTextBoxControlBereich1Weight3.MaxLength = 20
         Me.RadTextBoxControlBereich1Weight3.Name = "RadTextBoxControlBereich1Weight3"
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich1Weight3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1Weight3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich1Weight3.TabStop = False
         '
         'RadTextBoxControlBereich1DisplayWeight3
@@ -4136,44 +3186,24 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich1DisplayWeight3.MaxLength = 20
         Me.RadTextBoxControlBereich1DisplayWeight3.Name = "RadTextBoxControlBereich1DisplayWeight3"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich1DisplayWeight3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1DisplayWeight3.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich1ErrorLimit3
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1ErrorLimit3, "RadTextBoxControlBereich1ErrorLimit3")
         Me.RadTextBoxControlBereich1ErrorLimit3.MaxLength = 20
         Me.RadTextBoxControlBereich1ErrorLimit3.Name = "RadTextBoxControlBereich1ErrorLimit3"
         Me.RadTextBoxControlBereich1ErrorLimit3.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich1ErrorLimit3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1ErrorLimit3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich1ErrorLimit3.TabStop = False
         '
         'RadCheckBoxBereich1VEL3
         '
         resources.ApplyResources(Me.RadCheckBoxBereich1VEL3, "RadCheckBoxBereich1VEL3")
         Me.RadCheckBoxBereich1VEL3.Name = "RadCheckBoxBereich1VEL3"
-        '
-        '
-        '
-        Me.RadCheckBoxBereich1VEL3.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxBereich1VEL3.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxBereich1VEL3.TabStop = False
         '
         'lblBereich1EFGSpezial
         '
         resources.ApplyResources(Me.lblBereich1EFGSpezial, "lblBereich1EFGSpezial")
         Me.lblBereich1EFGSpezial.Name = "lblBereich1EFGSpezial"
-        '
-        '
-        '
-        Me.lblBereich1EFGSpezial.RootElement.AccessibleDescription = Nothing
-        Me.lblBereich1EFGSpezial.RootElement.AccessibleName = Nothing
         '
         'PanelBereich1WZ4
         '
@@ -4206,11 +3236,6 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadLabel5, "RadLabel5")
         Me.RadLabel5.Name = "RadLabel5"
         '
-        '
-        '
-        Me.RadLabel5.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel5.RootElement.AccessibleName = Nothing
-        '
         'PictureBox8
         '
         Me.PictureBox8.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
@@ -4223,11 +3248,6 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadTextBoxControlBereich1Weight4, "RadTextBoxControlBereich1Weight4")
         Me.RadTextBoxControlBereich1Weight4.MaxLength = 20
         Me.RadTextBoxControlBereich1Weight4.Name = "RadTextBoxControlBereich1Weight4"
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich1Weight4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1Weight4.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich1Weight4.TabStop = False
         '
         'RadTextBoxControlBereich1DisplayWeight4
@@ -4236,33 +3256,18 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich1DisplayWeight4.MaxLength = 20
         Me.RadTextBoxControlBereich1DisplayWeight4.Name = "RadTextBoxControlBereich1DisplayWeight4"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich1DisplayWeight4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1DisplayWeight4.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich1ErrorLimit4
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1ErrorLimit4, "RadTextBoxControlBereich1ErrorLimit4")
         Me.RadTextBoxControlBereich1ErrorLimit4.MaxLength = 20
         Me.RadTextBoxControlBereich1ErrorLimit4.Name = "RadTextBoxControlBereich1ErrorLimit4"
         Me.RadTextBoxControlBereich1ErrorLimit4.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich1ErrorLimit4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1ErrorLimit4.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich1ErrorLimit4.TabStop = False
         '
         'RadCheckBoxBereich1VEL4
         '
         resources.ApplyResources(Me.RadCheckBoxBereich1VEL4, "RadCheckBoxBereich1VEL4")
         Me.RadCheckBoxBereich1VEL4.Name = "RadCheckBoxBereich1VEL4"
-        '
-        '
-        '
-        Me.RadCheckBoxBereich1VEL4.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxBereich1VEL4.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxBereich1VEL4.TabStop = False
         '
         'lblBereich1Gewicht
@@ -4270,20 +3275,10 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.lblBereich1Gewicht, "lblBereich1Gewicht")
         Me.lblBereich1Gewicht.Name = "lblBereich1Gewicht"
         '
-        '
-        '
-        Me.lblBereich1Gewicht.RootElement.AccessibleDescription = Nothing
-        Me.lblBereich1Gewicht.RootElement.AccessibleName = Nothing
-        '
         'lblBereich1AnzeigeGewicht
         '
         resources.ApplyResources(Me.lblBereich1AnzeigeGewicht, "lblBereich1AnzeigeGewicht")
         Me.lblBereich1AnzeigeGewicht.Name = "lblBereich1AnzeigeGewicht"
-        '
-        '
-        '
-        Me.lblBereich1AnzeigeGewicht.RootElement.AccessibleDescription = Nothing
-        Me.lblBereich1AnzeigeGewicht.RootElement.AccessibleName = Nothing
         '
         'PanelBereich1WZ5
         '
@@ -4323,21 +3318,11 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadLabel6, "RadLabel6")
         Me.RadLabel6.Name = "RadLabel6"
         '
-        '
-        '
-        Me.RadLabel6.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel6.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich1Weight5
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1Weight5, "RadTextBoxControlBereich1Weight5")
         Me.RadTextBoxControlBereich1Weight5.MaxLength = 20
         Me.RadTextBoxControlBereich1Weight5.Name = "RadTextBoxControlBereich1Weight5"
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich1Weight5.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1Weight5.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich1Weight5.TabStop = False
         '
         'RadTextBoxControlBereich1DisplayWeight5
@@ -4346,33 +3331,18 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich1DisplayWeight5.MaxLength = 20
         Me.RadTextBoxControlBereich1DisplayWeight5.Name = "RadTextBoxControlBereich1DisplayWeight5"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich1DisplayWeight5.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1DisplayWeight5.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich1ErrorLimit5
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1ErrorLimit5, "RadTextBoxControlBereich1ErrorLimit5")
         Me.RadTextBoxControlBereich1ErrorLimit5.MaxLength = 20
         Me.RadTextBoxControlBereich1ErrorLimit5.Name = "RadTextBoxControlBereich1ErrorLimit5"
         Me.RadTextBoxControlBereich1ErrorLimit5.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich1ErrorLimit5.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1ErrorLimit5.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich1ErrorLimit5.TabStop = False
         '
         'RadCheckBoxBereich1VEL5
         '
         resources.ApplyResources(Me.RadCheckBoxBereich1VEL5, "RadCheckBoxBereich1VEL5")
         Me.RadCheckBoxBereich1VEL5.Name = "RadCheckBoxBereich1VEL5"
-        '
-        '
-        '
-        Me.RadCheckBoxBereich1VEL5.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxBereich1VEL5.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxBereich1VEL5.TabStop = False
         '
         'PanelBereich1WZ12
@@ -4413,21 +3383,11 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadLabel14, "RadLabel14")
         Me.RadLabel14.Name = "RadLabel14"
         '
-        '
-        '
-        Me.RadLabel14.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel14.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich1Weight12
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1Weight12, "RadTextBoxControlBereich1Weight12")
         Me.RadTextBoxControlBereich1Weight12.MaxLength = 20
         Me.RadTextBoxControlBereich1Weight12.Name = "RadTextBoxControlBereich1Weight12"
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich1Weight12.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1Weight12.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich1Weight12.TabStop = False
         '
         'RadTextBoxControlBereich1DisplayWeight12
@@ -4436,33 +3396,18 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich1DisplayWeight12.MaxLength = 20
         Me.RadTextBoxControlBereich1DisplayWeight12.Name = "RadTextBoxControlBereich1DisplayWeight12"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich1DisplayWeight12.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1DisplayWeight12.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich1ErrorLimit12
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1ErrorLimit12, "RadTextBoxControlBereich1ErrorLimit12")
         Me.RadTextBoxControlBereich1ErrorLimit12.MaxLength = 20
         Me.RadTextBoxControlBereich1ErrorLimit12.Name = "RadTextBoxControlBereich1ErrorLimit12"
         Me.RadTextBoxControlBereich1ErrorLimit12.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich1ErrorLimit12.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1ErrorLimit12.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich1ErrorLimit12.TabStop = False
         '
         'RadCheckBoxBereich1VEL12
         '
         resources.ApplyResources(Me.RadCheckBoxBereich1VEL12, "RadCheckBoxBereich1VEL12")
         Me.RadCheckBoxBereich1VEL12.Name = "RadCheckBoxBereich1VEL12"
-        '
-        '
-        '
-        Me.RadCheckBoxBereich1VEL12.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxBereich1VEL12.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxBereich1VEL12.TabStop = False
         '
         'PanelBereich1WZ11
@@ -4503,21 +3448,11 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadLabel12, "RadLabel12")
         Me.RadLabel12.Name = "RadLabel12"
         '
-        '
-        '
-        Me.RadLabel12.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel12.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich1Weight11
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1Weight11, "RadTextBoxControlBereich1Weight11")
         Me.RadTextBoxControlBereich1Weight11.MaxLength = 20
         Me.RadTextBoxControlBereich1Weight11.Name = "RadTextBoxControlBereich1Weight11"
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich1Weight11.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1Weight11.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich1Weight11.TabStop = False
         '
         'RadTextBoxControlBereich1DisplayWeight11
@@ -4526,33 +3461,18 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich1DisplayWeight11.MaxLength = 20
         Me.RadTextBoxControlBereich1DisplayWeight11.Name = "RadTextBoxControlBereich1DisplayWeight11"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich1DisplayWeight11.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1DisplayWeight11.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich1ErrorLimit11
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1ErrorLimit11, "RadTextBoxControlBereich1ErrorLimit11")
         Me.RadTextBoxControlBereich1ErrorLimit11.MaxLength = 20
         Me.RadTextBoxControlBereich1ErrorLimit11.Name = "RadTextBoxControlBereich1ErrorLimit11"
         Me.RadTextBoxControlBereich1ErrorLimit11.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich1ErrorLimit11.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1ErrorLimit11.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich1ErrorLimit11.TabStop = False
         '
         'RadCheckBoxBereich1VEL11
         '
         resources.ApplyResources(Me.RadCheckBoxBereich1VEL11, "RadCheckBoxBereich1VEL11")
         Me.RadCheckBoxBereich1VEL11.Name = "RadCheckBoxBereich1VEL11"
-        '
-        '
-        '
-        Me.RadCheckBoxBereich1VEL11.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxBereich1VEL11.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxBereich1VEL11.TabStop = False
         '
         'PanelBereich1WZ6
@@ -4593,21 +3513,11 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadLabel7, "RadLabel7")
         Me.RadLabel7.Name = "RadLabel7"
         '
-        '
-        '
-        Me.RadLabel7.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel7.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich1Weight6
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1Weight6, "RadTextBoxControlBereich1Weight6")
         Me.RadTextBoxControlBereich1Weight6.MaxLength = 20
         Me.RadTextBoxControlBereich1Weight6.Name = "RadTextBoxControlBereich1Weight6"
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich1Weight6.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1Weight6.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich1Weight6.TabStop = False
         '
         'RadTextBoxControlBereich1DisplayWeight6
@@ -4616,33 +3526,18 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich1DisplayWeight6.MaxLength = 20
         Me.RadTextBoxControlBereich1DisplayWeight6.Name = "RadTextBoxControlBereich1DisplayWeight6"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich1DisplayWeight6.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1DisplayWeight6.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich1ErrorLimit6
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1ErrorLimit6, "RadTextBoxControlBereich1ErrorLimit6")
         Me.RadTextBoxControlBereich1ErrorLimit6.MaxLength = 20
         Me.RadTextBoxControlBereich1ErrorLimit6.Name = "RadTextBoxControlBereich1ErrorLimit6"
         Me.RadTextBoxControlBereich1ErrorLimit6.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich1ErrorLimit6.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1ErrorLimit6.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich1ErrorLimit6.TabStop = False
         '
         'RadCheckBoxBereich1VEL6
         '
         resources.ApplyResources(Me.RadCheckBoxBereich1VEL6, "RadCheckBoxBereich1VEL6")
         Me.RadCheckBoxBereich1VEL6.Name = "RadCheckBoxBereich1VEL6"
-        '
-        '
-        '
-        Me.RadCheckBoxBereich1VEL6.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxBereich1VEL6.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxBereich1VEL6.TabStop = False
         '
         'PanelBereich1WZMitte
@@ -4683,21 +3578,11 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.lblBereich1Mitte, "lblBereich1Mitte")
         Me.lblBereich1Mitte.Name = "lblBereich1Mitte"
         '
-        '
-        '
-        Me.lblBereich1Mitte.RootElement.AccessibleDescription = Nothing
-        Me.lblBereich1Mitte.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich1WeightMitte
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1WeightMitte, "RadTextBoxControlBereich1WeightMitte")
         Me.RadTextBoxControlBereich1WeightMitte.MaxLength = 20
         Me.RadTextBoxControlBereich1WeightMitte.Name = "RadTextBoxControlBereich1WeightMitte"
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich1WeightMitte.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1WeightMitte.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich1WeightMitte.TabStop = False
         '
         'RadTextBoxControlBereich1DisplayWeightMitte
@@ -4706,33 +3591,18 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich1DisplayWeightMitte.MaxLength = 20
         Me.RadTextBoxControlBereich1DisplayWeightMitte.Name = "RadTextBoxControlBereich1DisplayWeightMitte"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich1DisplayWeightMitte.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1DisplayWeightMitte.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich1ErrorLimitMitte
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1ErrorLimitMitte, "RadTextBoxControlBereich1ErrorLimitMitte")
         Me.RadTextBoxControlBereich1ErrorLimitMitte.MaxLength = 20
         Me.RadTextBoxControlBereich1ErrorLimitMitte.Name = "RadTextBoxControlBereich1ErrorLimitMitte"
         Me.RadTextBoxControlBereich1ErrorLimitMitte.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich1ErrorLimitMitte.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1ErrorLimitMitte.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich1ErrorLimitMitte.TabStop = False
         '
         'RadCheckBoxBereich1VELMitte
         '
         resources.ApplyResources(Me.RadCheckBoxBereich1VELMitte, "RadCheckBoxBereich1VELMitte")
         Me.RadCheckBoxBereich1VELMitte.Name = "RadCheckBoxBereich1VELMitte"
-        '
-        '
-        '
-        Me.RadCheckBoxBereich1VELMitte.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxBereich1VELMitte.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxBereich1VELMitte.TabStop = False
         '
         'PanelBereich1WZ10
@@ -4773,21 +3643,11 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadLabel11, "RadLabel11")
         Me.RadLabel11.Name = "RadLabel11"
         '
-        '
-        '
-        Me.RadLabel11.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel11.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich1Weight10
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1Weight10, "RadTextBoxControlBereich1Weight10")
         Me.RadTextBoxControlBereich1Weight10.MaxLength = 20
         Me.RadTextBoxControlBereich1Weight10.Name = "RadTextBoxControlBereich1Weight10"
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich1Weight10.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1Weight10.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich1Weight10.TabStop = False
         '
         'RadTextBoxControlBereich1DisplayWeight10
@@ -4796,33 +3656,18 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich1DisplayWeight10.MaxLength = 20
         Me.RadTextBoxControlBereich1DisplayWeight10.Name = "RadTextBoxControlBereich1DisplayWeight10"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich1DisplayWeight10.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1DisplayWeight10.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich1ErrorLimit10
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1ErrorLimit10, "RadTextBoxControlBereich1ErrorLimit10")
         Me.RadTextBoxControlBereich1ErrorLimit10.MaxLength = 20
         Me.RadTextBoxControlBereich1ErrorLimit10.Name = "RadTextBoxControlBereich1ErrorLimit10"
         Me.RadTextBoxControlBereich1ErrorLimit10.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich1ErrorLimit10.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1ErrorLimit10.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich1ErrorLimit10.TabStop = False
         '
         'RadCheckBoxBereich1VEL10
         '
         resources.ApplyResources(Me.RadCheckBoxBereich1VEL10, "RadCheckBoxBereich1VEL10")
         Me.RadCheckBoxBereich1VEL10.Name = "RadCheckBoxBereich1VEL10"
-        '
-        '
-        '
-        Me.RadCheckBoxBereich1VEL10.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxBereich1VEL10.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxBereich1VEL10.TabStop = False
         '
         'PanelBereich1WZ7
@@ -4863,21 +3708,11 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadLabel8, "RadLabel8")
         Me.RadLabel8.Name = "RadLabel8"
         '
-        '
-        '
-        Me.RadLabel8.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel8.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich1Weight7
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1Weight7, "RadTextBoxControlBereich1Weight7")
         Me.RadTextBoxControlBereich1Weight7.MaxLength = 20
         Me.RadTextBoxControlBereich1Weight7.Name = "RadTextBoxControlBereich1Weight7"
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich1Weight7.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1Weight7.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich1Weight7.TabStop = False
         '
         'RadTextBoxControlBereich1DisplayWeight7
@@ -4886,33 +3721,18 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich1DisplayWeight7.MaxLength = 20
         Me.RadTextBoxControlBereich1DisplayWeight7.Name = "RadTextBoxControlBereich1DisplayWeight7"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich1DisplayWeight7.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1DisplayWeight7.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich1ErrorLimit7
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1ErrorLimit7, "RadTextBoxControlBereich1ErrorLimit7")
         Me.RadTextBoxControlBereich1ErrorLimit7.MaxLength = 20
         Me.RadTextBoxControlBereich1ErrorLimit7.Name = "RadTextBoxControlBereich1ErrorLimit7"
         Me.RadTextBoxControlBereich1ErrorLimit7.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich1ErrorLimit7.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1ErrorLimit7.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich1ErrorLimit7.TabStop = False
         '
         'RadCheckBoxBereich1VEL7
         '
         resources.ApplyResources(Me.RadCheckBoxBereich1VEL7, "RadCheckBoxBereich1VEL7")
         Me.RadCheckBoxBereich1VEL7.Name = "RadCheckBoxBereich1VEL7"
-        '
-        '
-        '
-        Me.RadCheckBoxBereich1VEL7.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxBereich1VEL7.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxBereich1VEL7.TabStop = False
         '
         'PanelBereich1WZ9
@@ -4953,21 +3773,11 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadLabel10, "RadLabel10")
         Me.RadLabel10.Name = "RadLabel10"
         '
-        '
-        '
-        Me.RadLabel10.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel10.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich1Weight9
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1Weight9, "RadTextBoxControlBereich1Weight9")
         Me.RadTextBoxControlBereich1Weight9.MaxLength = 20
         Me.RadTextBoxControlBereich1Weight9.Name = "RadTextBoxControlBereich1Weight9"
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich1Weight9.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1Weight9.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich1Weight9.TabStop = False
         '
         'RadTextBoxControlBereich1DisplayWeight9
@@ -4976,33 +3786,18 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich1DisplayWeight9.MaxLength = 20
         Me.RadTextBoxControlBereich1DisplayWeight9.Name = "RadTextBoxControlBereich1DisplayWeight9"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich1DisplayWeight9.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1DisplayWeight9.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich1ErrorLimit9
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1ErrorLimit9, "RadTextBoxControlBereich1ErrorLimit9")
         Me.RadTextBoxControlBereich1ErrorLimit9.MaxLength = 20
         Me.RadTextBoxControlBereich1ErrorLimit9.Name = "RadTextBoxControlBereich1ErrorLimit9"
         Me.RadTextBoxControlBereich1ErrorLimit9.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich1ErrorLimit9.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1ErrorLimit9.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich1ErrorLimit9.TabStop = False
         '
         'RadCheckBoxBereich1VEL9
         '
         resources.ApplyResources(Me.RadCheckBoxBereich1VEL9, "RadCheckBoxBereich1VEL9")
         Me.RadCheckBoxBereich1VEL9.Name = "RadCheckBoxBereich1VEL9"
-        '
-        '
-        '
-        Me.RadCheckBoxBereich1VEL9.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxBereich1VEL9.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxBereich1VEL9.TabStop = False
         '
         'PanelBereich1WZ8
@@ -5043,21 +3838,11 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me.RadLabel9, "RadLabel9")
         Me.RadLabel9.Name = "RadLabel9"
         '
-        '
-        '
-        Me.RadLabel9.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel9.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich1Weight8
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1Weight8, "RadTextBoxControlBereich1Weight8")
         Me.RadTextBoxControlBereich1Weight8.MaxLength = 20
         Me.RadTextBoxControlBereich1Weight8.Name = "RadTextBoxControlBereich1Weight8"
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich1Weight8.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1Weight8.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich1Weight8.TabStop = False
         '
         'RadTextBoxControlBereich1DisplayWeight8
@@ -5066,33 +3851,18 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         Me.RadTextBoxControlBereich1DisplayWeight8.MaxLength = 20
         Me.RadTextBoxControlBereich1DisplayWeight8.Name = "RadTextBoxControlBereich1DisplayWeight8"
         '
-        '
-        '
-        Me.RadTextBoxControlBereich1DisplayWeight8.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1DisplayWeight8.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlBereich1ErrorLimit8
         '
         resources.ApplyResources(Me.RadTextBoxControlBereich1ErrorLimit8, "RadTextBoxControlBereich1ErrorLimit8")
         Me.RadTextBoxControlBereich1ErrorLimit8.MaxLength = 20
         Me.RadTextBoxControlBereich1ErrorLimit8.Name = "RadTextBoxControlBereich1ErrorLimit8"
         Me.RadTextBoxControlBereich1ErrorLimit8.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxControlBereich1ErrorLimit8.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlBereich1ErrorLimit8.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlBereich1ErrorLimit8.TabStop = False
         '
         'RadCheckBoxBereich1VEL8
         '
         resources.ApplyResources(Me.RadCheckBoxBereich1VEL8, "RadCheckBoxBereich1VEL8")
         Me.RadCheckBoxBereich1VEL8.Name = "RadCheckBoxBereich1VEL8"
-        '
-        '
-        '
-        Me.RadCheckBoxBereich1VEL8.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxBereich1VEL8.RootElement.AccessibleName = Nothing
         Me.RadCheckBoxBereich1VEL8.TabStop = False
         '
         'uco_8PruefungNullstellungUndAussermittigeBelastung
@@ -5100,7 +3870,6 @@ Partial Class uco_8PruefungNullstellungUndAussermittigeBelastung
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.RadScrollablePanel1)
-        Me.DoubleBuffered = True
         Me.Name = "uco_8PruefungNullstellungUndAussermittigeBelastung"
         Me.RadScrollablePanel1.PanelContainer.ResumeLayout(False)
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).EndInit()

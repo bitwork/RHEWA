@@ -142,7 +142,7 @@
     <value>RadButtonSteigendMinus</value>
   </data>
   <data name="&gt;&gt;RadButtonSteigendMinus.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonSteigendMinus.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -241,7 +241,7 @@
     <value>RadTextBoxControlBereich3Weight1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3Weight1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3Weight1.Parent" xml:space="preserve">
     <value>PanelBereich3WZ1</value>
@@ -262,7 +262,7 @@
     <value>RadTextBoxControlBereich3DisplayWeight1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3DisplayWeight1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3DisplayWeight1.Parent" xml:space="preserve">
     <value>PanelBereich3WZ1</value>
@@ -283,7 +283,7 @@
     <value>RadTextBoxControlBereich3ErrorLimit1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3ErrorLimit1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3ErrorLimit1.Parent" xml:space="preserve">
     <value>PanelBereich3WZ1</value>
@@ -304,7 +304,7 @@
     <value>RadCheckBoxBereich3VEL1</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich3VEL1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich3VEL1.Parent" xml:space="preserve">
     <value>PanelBereich3WZ1</value>
@@ -394,7 +394,7 @@
     <value>RadTextBoxControlBereich3Weight2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3Weight2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3Weight2.Parent" xml:space="preserve">
     <value>PanelBereich3WZ2</value>
@@ -415,7 +415,7 @@
     <value>RadTextBoxControlBereich3DisplayWeight2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3DisplayWeight2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3DisplayWeight2.Parent" xml:space="preserve">
     <value>PanelBereich3WZ2</value>
@@ -436,7 +436,7 @@
     <value>RadTextBoxControlBereich3ErrorLimit2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3ErrorLimit2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3ErrorLimit2.Parent" xml:space="preserve">
     <value>PanelBereich3WZ2</value>
@@ -457,7 +457,7 @@
     <value>RadCheckBoxBereich3VEL2</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich3VEL2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich3VEL2.Parent" xml:space="preserve">
     <value>PanelBereich3WZ2</value>
@@ -505,7 +505,7 @@
     <value>lblBereich3FehlerGrenzen</value>
   </data>
   <data name="&gt;&gt;lblBereich3FehlerGrenzen.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblBereich3FehlerGrenzen.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich3</value>
@@ -574,7 +574,7 @@
     <value>RadTextBoxControlBereich3Weight3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3Weight3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3Weight3.Parent" xml:space="preserve">
     <value>PanelBereich3WZ3</value>
@@ -595,7 +595,7 @@
     <value>RadTextBoxControlBereich3DisplayWeight3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3DisplayWeight3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3DisplayWeight3.Parent" xml:space="preserve">
     <value>PanelBereich3WZ3</value>
@@ -616,7 +616,7 @@
     <value>RadTextBoxControlBereich3ErrorLimit3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3ErrorLimit3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3ErrorLimit3.Parent" xml:space="preserve">
     <value>PanelBereich3WZ3</value>
@@ -637,7 +637,7 @@
     <value>RadCheckBoxBereich3VEL3</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich3VEL3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich3VEL3.Parent" xml:space="preserve">
     <value>PanelBereich3WZ3</value>
@@ -685,7 +685,7 @@
     <value>lblBereich3EFGSpezial</value>
   </data>
   <data name="&gt;&gt;lblBereich3EFGSpezial.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblBereich3EFGSpezial.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich3</value>
@@ -754,7 +754,7 @@
     <value>RadTextBoxControlBereich3Weight4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3Weight4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3Weight4.Parent" xml:space="preserve">
     <value>PanelBereich3WZ4</value>
@@ -775,7 +775,7 @@
     <value>RadTextBoxControlBereich3DisplayWeight4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3DisplayWeight4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3DisplayWeight4.Parent" xml:space="preserve">
     <value>PanelBereich3WZ4</value>
@@ -796,7 +796,7 @@
     <value>RadTextBoxControlBereich3ErrorLimit4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3ErrorLimit4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3ErrorLimit4.Parent" xml:space="preserve">
     <value>PanelBereich3WZ4</value>
@@ -817,7 +817,7 @@
     <value>RadCheckBoxBereich3VEL4</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich3VEL4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich3VEL4.Parent" xml:space="preserve">
     <value>PanelBereich3WZ4</value>
@@ -865,7 +865,7 @@
     <value>lblBereich3Gewicht</value>
   </data>
   <data name="&gt;&gt;lblBereich3Gewicht.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblBereich3Gewicht.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich3</value>
@@ -892,7 +892,7 @@
     <value>lblBereich3AnzeigeGewicht</value>
   </data>
   <data name="&gt;&gt;lblBereich3AnzeigeGewicht.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblBereich3AnzeigeGewicht.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich3</value>
@@ -961,7 +961,7 @@
     <value>RadTextBoxControlBereich3Weight5</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3Weight5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3Weight5.Parent" xml:space="preserve">
     <value>PanelBereich3WZ5</value>
@@ -982,7 +982,7 @@
     <value>RadTextBoxControlBereich3DisplayWeight5</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3DisplayWeight5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3DisplayWeight5.Parent" xml:space="preserve">
     <value>PanelBereich3WZ5</value>
@@ -1003,7 +1003,7 @@
     <value>RadTextBoxControlBereich3ErrorLimit5</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3ErrorLimit5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3ErrorLimit5.Parent" xml:space="preserve">
     <value>PanelBereich3WZ5</value>
@@ -1024,7 +1024,7 @@
     <value>RadCheckBoxBereich3VEL5</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich3VEL5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich3VEL5.Parent" xml:space="preserve">
     <value>PanelBereich3WZ5</value>
@@ -1114,7 +1114,7 @@
     <value>RadTextBoxControlBereich3Weight6</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3Weight6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3Weight6.Parent" xml:space="preserve">
     <value>PanelBereich3WZ6</value>
@@ -1135,7 +1135,7 @@
     <value>RadTextBoxControlBereich3DisplayWeight6</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3DisplayWeight6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3DisplayWeight6.Parent" xml:space="preserve">
     <value>PanelBereich3WZ6</value>
@@ -1156,7 +1156,7 @@
     <value>RadTextBoxControlBereich3ErrorLimit6</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3ErrorLimit6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3ErrorLimit6.Parent" xml:space="preserve">
     <value>PanelBereich3WZ6</value>
@@ -1177,7 +1177,7 @@
     <value>RadCheckBoxBereich3VEL6</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich3VEL6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich3VEL6.Parent" xml:space="preserve">
     <value>PanelBereich3WZ6</value>
@@ -1267,7 +1267,7 @@
     <value>RadTextBoxControlBereich3Weight7</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3Weight7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3Weight7.Parent" xml:space="preserve">
     <value>PanelBereich3WZ7</value>
@@ -1288,7 +1288,7 @@
     <value>RadTextBoxControlBereich3DisplayWeight7</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3DisplayWeight7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3DisplayWeight7.Parent" xml:space="preserve">
     <value>PanelBereich3WZ7</value>
@@ -1309,7 +1309,7 @@
     <value>RadTextBoxControlBereich3ErrorLimit7</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3ErrorLimit7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3ErrorLimit7.Parent" xml:space="preserve">
     <value>PanelBereich3WZ7</value>
@@ -1330,7 +1330,7 @@
     <value>RadCheckBoxBereich3VEL7</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich3VEL7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich3VEL7.Parent" xml:space="preserve">
     <value>PanelBereich3WZ7</value>
@@ -1420,7 +1420,7 @@
     <value>RadTextBoxControlBereich3Weight8</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3Weight8.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3Weight8.Parent" xml:space="preserve">
     <value>PanelBereich3WZ8</value>
@@ -1441,7 +1441,7 @@
     <value>RadTextBoxControlBereich3DisplayWeight8</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3DisplayWeight8.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3DisplayWeight8.Parent" xml:space="preserve">
     <value>PanelBereich3WZ8</value>
@@ -1462,7 +1462,7 @@
     <value>RadTextBoxControlBereich3ErrorLimit8</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3ErrorLimit8.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3ErrorLimit8.Parent" xml:space="preserve">
     <value>PanelBereich3WZ8</value>
@@ -1483,7 +1483,7 @@
     <value>RadCheckBoxBereich3VEL8</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich3VEL8.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich3VEL8.Parent" xml:space="preserve">
     <value>PanelBereich3WZ8</value>
@@ -1534,7 +1534,7 @@
     <value>RadGroupBoxBereich3</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxBereich3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxBereich3.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -1633,7 +1633,7 @@
     <value>RadTextBoxControlBereich2Weight1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2Weight1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2Weight1.Parent" xml:space="preserve">
     <value>PanelBereich2WZ1</value>
@@ -1654,7 +1654,7 @@
     <value>RadTextBoxControlBereich2DisplayWeight1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2DisplayWeight1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2DisplayWeight1.Parent" xml:space="preserve">
     <value>PanelBereich2WZ1</value>
@@ -1675,7 +1675,7 @@
     <value>RadTextBoxControlBereich2ErrorLimit1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2ErrorLimit1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2ErrorLimit1.Parent" xml:space="preserve">
     <value>PanelBereich2WZ1</value>
@@ -1696,7 +1696,7 @@
     <value>RadCheckBoxBereich2VEL1</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich2VEL1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich2VEL1.Parent" xml:space="preserve">
     <value>PanelBereich2WZ1</value>
@@ -1744,7 +1744,7 @@
     <value>lblBereich2FehlerGrenzen</value>
   </data>
   <data name="&gt;&gt;lblBereich2FehlerGrenzen.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblBereich2FehlerGrenzen.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich2</value>
@@ -1813,7 +1813,7 @@
     <value>RadTextBoxControlBereich2Weight2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2Weight2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2Weight2.Parent" xml:space="preserve">
     <value>PanelBereich2WZ2</value>
@@ -1834,7 +1834,7 @@
     <value>RadTextBoxControlBereich2DisplayWeight2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2DisplayWeight2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2DisplayWeight2.Parent" xml:space="preserve">
     <value>PanelBereich2WZ2</value>
@@ -1855,7 +1855,7 @@
     <value>RadTextBoxControlBereich2ErrorLimit2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2ErrorLimit2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2ErrorLimit2.Parent" xml:space="preserve">
     <value>PanelBereich2WZ2</value>
@@ -1876,7 +1876,7 @@
     <value>RadCheckBoxBereich2VEL2</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich2VEL2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich2VEL2.Parent" xml:space="preserve">
     <value>PanelBereich2WZ2</value>
@@ -1924,7 +1924,7 @@
     <value>lblBereich2EFGSpezial</value>
   </data>
   <data name="&gt;&gt;lblBereich2EFGSpezial.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblBereich2EFGSpezial.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich2</value>
@@ -1993,7 +1993,7 @@
     <value>RadTextBoxControlBereich2Weight3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2Weight3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2Weight3.Parent" xml:space="preserve">
     <value>PanelBereich2WZ3</value>
@@ -2014,7 +2014,7 @@
     <value>RadTextBoxControlBereich2DisplayWeight3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2DisplayWeight3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2DisplayWeight3.Parent" xml:space="preserve">
     <value>PanelBereich2WZ3</value>
@@ -2035,7 +2035,7 @@
     <value>RadTextBoxControlBereich2ErrorLimit3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2ErrorLimit3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2ErrorLimit3.Parent" xml:space="preserve">
     <value>PanelBereich2WZ3</value>
@@ -2056,7 +2056,7 @@
     <value>RadCheckBoxBereich2VEL3</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich2VEL3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich2VEL3.Parent" xml:space="preserve">
     <value>PanelBereich2WZ3</value>
@@ -2104,7 +2104,7 @@
     <value>lblBereich2Gewicht</value>
   </data>
   <data name="&gt;&gt;lblBereich2Gewicht.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblBereich2Gewicht.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich2</value>
@@ -2131,7 +2131,7 @@
     <value>lblBereich2AnzeigeGewicht</value>
   </data>
   <data name="&gt;&gt;lblBereich2AnzeigeGewicht.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblBereich2AnzeigeGewicht.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich2</value>
@@ -2200,7 +2200,7 @@
     <value>RadTextBoxControlBereich2Weight4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2Weight4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2Weight4.Parent" xml:space="preserve">
     <value>PanelBereich2WZ4</value>
@@ -2221,7 +2221,7 @@
     <value>RadTextBoxControlBereich2DisplayWeight4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2DisplayWeight4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2DisplayWeight4.Parent" xml:space="preserve">
     <value>PanelBereich2WZ4</value>
@@ -2242,7 +2242,7 @@
     <value>RadTextBoxControlBereich2ErrorLimit4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2ErrorLimit4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2ErrorLimit4.Parent" xml:space="preserve">
     <value>PanelBereich2WZ4</value>
@@ -2263,7 +2263,7 @@
     <value>RadCheckBoxBereich2VEL4</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich2VEL4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich2VEL4.Parent" xml:space="preserve">
     <value>PanelBereich2WZ4</value>
@@ -2353,7 +2353,7 @@
     <value>RadTextBoxControlBereich2Weight5</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2Weight5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2Weight5.Parent" xml:space="preserve">
     <value>PanelBereich2WZ5</value>
@@ -2374,7 +2374,7 @@
     <value>RadTextBoxControlBereich2DisplayWeight5</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2DisplayWeight5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2DisplayWeight5.Parent" xml:space="preserve">
     <value>PanelBereich2WZ5</value>
@@ -2395,7 +2395,7 @@
     <value>RadTextBoxControlBereich2ErrorLimit5</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2ErrorLimit5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2ErrorLimit5.Parent" xml:space="preserve">
     <value>PanelBereich2WZ5</value>
@@ -2416,7 +2416,7 @@
     <value>RadCheckBoxBereich2VEL5</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich2VEL5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich2VEL5.Parent" xml:space="preserve">
     <value>PanelBereich2WZ5</value>
@@ -2506,7 +2506,7 @@
     <value>RadTextBoxControlBereich2Weight6</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2Weight6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2Weight6.Parent" xml:space="preserve">
     <value>PanelBereich2WZ6</value>
@@ -2527,7 +2527,7 @@
     <value>RadTextBoxControlBereich2DisplayWeight6</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2DisplayWeight6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2DisplayWeight6.Parent" xml:space="preserve">
     <value>PanelBereich2WZ6</value>
@@ -2548,7 +2548,7 @@
     <value>RadTextBoxControlBereich2ErrorLimit6</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2ErrorLimit6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2ErrorLimit6.Parent" xml:space="preserve">
     <value>PanelBereich2WZ6</value>
@@ -2569,7 +2569,7 @@
     <value>RadCheckBoxBereich2VEL6</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich2VEL6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich2VEL6.Parent" xml:space="preserve">
     <value>PanelBereich2WZ6</value>
@@ -2659,7 +2659,7 @@
     <value>RadTextBoxControlBereich2Weight8</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2Weight8.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2Weight8.Parent" xml:space="preserve">
     <value>PanelBereich2WZ8</value>
@@ -2680,7 +2680,7 @@
     <value>RadTextBoxControlBereich2DisplayWeight8</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2DisplayWeight8.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2DisplayWeight8.Parent" xml:space="preserve">
     <value>PanelBereich2WZ8</value>
@@ -2701,7 +2701,7 @@
     <value>RadTextBoxControlBereich2ErrorLimit8</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2ErrorLimit8.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2ErrorLimit8.Parent" xml:space="preserve">
     <value>PanelBereich2WZ8</value>
@@ -2722,7 +2722,7 @@
     <value>RadCheckBoxBereich2VEL8</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich2VEL8.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich2VEL8.Parent" xml:space="preserve">
     <value>PanelBereich2WZ8</value>
@@ -2812,7 +2812,7 @@
     <value>RadTextBoxControlBereich2Weight7</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2Weight7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2Weight7.Parent" xml:space="preserve">
     <value>PanelBereich2WZ7</value>
@@ -2833,7 +2833,7 @@
     <value>RadTextBoxControlBereich2DisplayWeight7</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2DisplayWeight7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2DisplayWeight7.Parent" xml:space="preserve">
     <value>PanelBereich2WZ7</value>
@@ -2854,7 +2854,7 @@
     <value>RadTextBoxControlBereich2ErrorLimit7</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2ErrorLimit7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2ErrorLimit7.Parent" xml:space="preserve">
     <value>PanelBereich2WZ7</value>
@@ -2875,7 +2875,7 @@
     <value>RadCheckBoxBereich2VEL7</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich2VEL7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich2VEL7.Parent" xml:space="preserve">
     <value>PanelBereich2WZ7</value>
@@ -2926,7 +2926,7 @@
     <value>RadGroupBoxBereich2</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxBereich2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxBereich2.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -3022,7 +3022,7 @@
     <value>RadTextBoxControlBereich1Weight1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1Weight1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1Weight1.Parent" xml:space="preserve">
     <value>PanelBereich1WZ1</value>
@@ -3043,7 +3043,7 @@
     <value>RadTextBoxControlBereich1DisplayWeight1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1DisplayWeight1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1DisplayWeight1.Parent" xml:space="preserve">
     <value>PanelBereich1WZ1</value>
@@ -3064,7 +3064,7 @@
     <value>RadTextBoxControlBereich1ErrorLimit1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1ErrorLimit1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1ErrorLimit1.Parent" xml:space="preserve">
     <value>PanelBereich1WZ1</value>
@@ -3085,7 +3085,7 @@
     <value>RadCheckBoxBereich1VEL1</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich1VEL1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich1VEL1.Parent" xml:space="preserve">
     <value>PanelBereich1WZ1</value>
@@ -3175,7 +3175,7 @@
     <value>RadTextBoxControlBereich1Weight2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1Weight2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1Weight2.Parent" xml:space="preserve">
     <value>PanelBereich1WZ2</value>
@@ -3196,7 +3196,7 @@
     <value>RadTextBoxControlBereich1DisplayWeight2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1DisplayWeight2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1DisplayWeight2.Parent" xml:space="preserve">
     <value>PanelBereich1WZ2</value>
@@ -3217,7 +3217,7 @@
     <value>RadTextBoxControlBereich1ErrorLimit2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1ErrorLimit2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1ErrorLimit2.Parent" xml:space="preserve">
     <value>PanelBereich1WZ2</value>
@@ -3238,7 +3238,7 @@
     <value>RadCheckBoxBereich1VEL2</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich1VEL2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich1VEL2.Parent" xml:space="preserve">
     <value>PanelBereich1WZ2</value>
@@ -3286,7 +3286,7 @@
     <value>lblBereich1FehlerGrenzen</value>
   </data>
   <data name="&gt;&gt;lblBereich1FehlerGrenzen.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblBereich1FehlerGrenzen.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich1</value>
@@ -3355,7 +3355,7 @@
     <value>RadTextBoxControlBereich1Weight3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1Weight3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1Weight3.Parent" xml:space="preserve">
     <value>PanelBereich1WZ3</value>
@@ -3376,7 +3376,7 @@
     <value>RadTextBoxControlBereich1DisplayWeight3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1DisplayWeight3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1DisplayWeight3.Parent" xml:space="preserve">
     <value>PanelBereich1WZ3</value>
@@ -3397,7 +3397,7 @@
     <value>RadTextBoxControlBereich1ErrorLimit3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1ErrorLimit3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1ErrorLimit3.Parent" xml:space="preserve">
     <value>PanelBereich1WZ3</value>
@@ -3418,7 +3418,7 @@
     <value>RadCheckBoxBereich1VEL3</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich1VEL3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich1VEL3.Parent" xml:space="preserve">
     <value>PanelBereich1WZ3</value>
@@ -3466,7 +3466,7 @@
     <value>lblBereich1EFGSpezial</value>
   </data>
   <data name="&gt;&gt;lblBereich1EFGSpezial.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblBereich1EFGSpezial.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich1</value>
@@ -3535,7 +3535,7 @@
     <value>RadTextBoxControlBereich1Weight4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1Weight4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1Weight4.Parent" xml:space="preserve">
     <value>PanelBereich1WZ4</value>
@@ -3556,7 +3556,7 @@
     <value>RadTextBoxControlBereich1DisplayWeight4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1DisplayWeight4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1DisplayWeight4.Parent" xml:space="preserve">
     <value>PanelBereich1WZ4</value>
@@ -3577,7 +3577,7 @@
     <value>RadTextBoxControlBereich1ErrorLimit4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1ErrorLimit4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1ErrorLimit4.Parent" xml:space="preserve">
     <value>PanelBereich1WZ4</value>
@@ -3598,7 +3598,7 @@
     <value>RadCheckBoxBereich1VEL4</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich1VEL4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich1VEL4.Parent" xml:space="preserve">
     <value>PanelBereich1WZ4</value>
@@ -3646,7 +3646,7 @@
     <value>lblBereich1Gewicht</value>
   </data>
   <data name="&gt;&gt;lblBereich1Gewicht.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblBereich1Gewicht.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich1</value>
@@ -3673,7 +3673,7 @@
     <value>lblBereich1AnzeigeGewicht</value>
   </data>
   <data name="&gt;&gt;lblBereich1AnzeigeGewicht.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblBereich1AnzeigeGewicht.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich1</value>
@@ -3742,7 +3742,7 @@
     <value>RadTextBoxControlBereich1Weight5</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1Weight5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1Weight5.Parent" xml:space="preserve">
     <value>PanelBereich1WZ5</value>
@@ -3763,7 +3763,7 @@
     <value>RadTextBoxControlBereich1DisplayWeight5</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1DisplayWeight5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1DisplayWeight5.Parent" xml:space="preserve">
     <value>PanelBereich1WZ5</value>
@@ -3784,7 +3784,7 @@
     <value>RadTextBoxControlBereich1ErrorLimit5</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1ErrorLimit5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1ErrorLimit5.Parent" xml:space="preserve">
     <value>PanelBereich1WZ5</value>
@@ -3805,7 +3805,7 @@
     <value>RadCheckBoxBereich1VEL5</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich1VEL5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich1VEL5.Parent" xml:space="preserve">
     <value>PanelBereich1WZ5</value>
@@ -3895,7 +3895,7 @@
     <value>RadTextBoxControlBereich1Weight6</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1Weight6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1Weight6.Parent" xml:space="preserve">
     <value>PanelBereich1WZ6</value>
@@ -3916,7 +3916,7 @@
     <value>RadTextBoxControlBereich1DisplayWeight6</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1DisplayWeight6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1DisplayWeight6.Parent" xml:space="preserve">
     <value>PanelBereich1WZ6</value>
@@ -3937,7 +3937,7 @@
     <value>RadTextBoxControlBereich1ErrorLimit6</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1ErrorLimit6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1ErrorLimit6.Parent" xml:space="preserve">
     <value>PanelBereich1WZ6</value>
@@ -3958,7 +3958,7 @@
     <value>RadCheckBoxBereich1VEL6</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich1VEL6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich1VEL6.Parent" xml:space="preserve">
     <value>PanelBereich1WZ6</value>
@@ -4048,7 +4048,7 @@
     <value>RadTextBoxControlBereich1Weight7</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1Weight7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1Weight7.Parent" xml:space="preserve">
     <value>PanelBereich1WZ7</value>
@@ -4069,7 +4069,7 @@
     <value>RadTextBoxControlBereich1DisplayWeight7</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1DisplayWeight7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1DisplayWeight7.Parent" xml:space="preserve">
     <value>PanelBereich1WZ7</value>
@@ -4090,7 +4090,7 @@
     <value>RadTextBoxControlBereich1ErrorLimit7</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1ErrorLimit7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1ErrorLimit7.Parent" xml:space="preserve">
     <value>PanelBereich1WZ7</value>
@@ -4111,7 +4111,7 @@
     <value>RadCheckBoxBereich1VEL7</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich1VEL7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich1VEL7.Parent" xml:space="preserve">
     <value>PanelBereich1WZ7</value>
@@ -4201,7 +4201,7 @@
     <value>RadTextBoxControlBereich1Weight8</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1Weight8.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1Weight8.Parent" xml:space="preserve">
     <value>PanelBereich1WZ8</value>
@@ -4222,7 +4222,7 @@
     <value>RadTextBoxControlBereich1DisplayWeight8</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1DisplayWeight8.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1DisplayWeight8.Parent" xml:space="preserve">
     <value>PanelBereich1WZ8</value>
@@ -4243,7 +4243,7 @@
     <value>RadTextBoxControlBereich1ErrorLimit8</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1ErrorLimit8.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1ErrorLimit8.Parent" xml:space="preserve">
     <value>PanelBereich1WZ8</value>
@@ -4264,7 +4264,7 @@
     <value>RadCheckBoxBereich1VEL8</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich1VEL8.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich1VEL8.Parent" xml:space="preserve">
     <value>PanelBereich1WZ8</value>
@@ -4312,7 +4312,7 @@
     <value>RadGroupBoxBereich1</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxBereich1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxBereich1.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -4339,7 +4339,7 @@
     <value>RadButtonShowEFGSteigend</value>
   </data>
   <data name="&gt;&gt;RadButtonShowEFGSteigend.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonShowEFGSteigend.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -4396,7 +4396,7 @@
     <value>lblBereich1FallendGewicht</value>
   </data>
   <data name="&gt;&gt;lblBereich1FallendGewicht.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblBereich1FallendGewicht.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich1Fallend</value>
@@ -4423,7 +4423,7 @@
     <value>lblBereich1FallendAnzeigeGewicht</value>
   </data>
   <data name="&gt;&gt;lblBereich1FallendAnzeigeGewicht.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblBereich1FallendAnzeigeGewicht.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich1Fallend</value>
@@ -4492,7 +4492,7 @@
     <value>RadTextBoxControlBereich1FallendWeight8</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendWeight8.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendWeight8.Parent" xml:space="preserve">
     <value>PanelBereich1FallendWZ8</value>
@@ -4513,7 +4513,7 @@
     <value>RadTextBoxControlBereich1FallendDisplayWeight8</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendDisplayWeight8.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendDisplayWeight8.Parent" xml:space="preserve">
     <value>PanelBereich1FallendWZ8</value>
@@ -4534,7 +4534,7 @@
     <value>RadTextBoxControlBereich1FallendErrorLimit8</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendErrorLimit8.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendErrorLimit8.Parent" xml:space="preserve">
     <value>PanelBereich1FallendWZ8</value>
@@ -4555,7 +4555,7 @@
     <value>RadCheckBoxBereich1FallendVEL8</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich1FallendVEL8.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich1FallendVEL8.Parent" xml:space="preserve">
     <value>PanelBereich1FallendWZ8</value>
@@ -4645,7 +4645,7 @@
     <value>RadTextBoxControlBereich1FallendWeight7</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendWeight7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendWeight7.Parent" xml:space="preserve">
     <value>PanelBereich1FallendWZ7</value>
@@ -4666,7 +4666,7 @@
     <value>RadTextBoxControlBereich1FallendDisplayWeight7</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendDisplayWeight7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendDisplayWeight7.Parent" xml:space="preserve">
     <value>PanelBereich1FallendWZ7</value>
@@ -4687,7 +4687,7 @@
     <value>RadTextBoxControlBereich1FallendErrorLimit7</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendErrorLimit7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendErrorLimit7.Parent" xml:space="preserve">
     <value>PanelBereich1FallendWZ7</value>
@@ -4708,7 +4708,7 @@
     <value>RadCheckBoxBereich1FallendVEL7</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich1FallendVEL7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich1FallendVEL7.Parent" xml:space="preserve">
     <value>PanelBereich1FallendWZ7</value>
@@ -4798,7 +4798,7 @@
     <value>RadTextBoxControlBereich1FallendWeight6</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendWeight6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendWeight6.Parent" xml:space="preserve">
     <value>PanelBereich1FallendWZ6</value>
@@ -4819,7 +4819,7 @@
     <value>RadTextBoxControlBereich1FallendDisplayWeight6</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendDisplayWeight6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendDisplayWeight6.Parent" xml:space="preserve">
     <value>PanelBereich1FallendWZ6</value>
@@ -4840,7 +4840,7 @@
     <value>RadTextBoxControlBereich1FallendErrorLimit6</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendErrorLimit6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendErrorLimit6.Parent" xml:space="preserve">
     <value>PanelBereich1FallendWZ6</value>
@@ -4861,7 +4861,7 @@
     <value>RadCheckBoxBereich1FallendVEL6</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich1FallendVEL6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich1FallendVEL6.Parent" xml:space="preserve">
     <value>PanelBereich1FallendWZ6</value>
@@ -4951,7 +4951,7 @@
     <value>RadTextBoxControlBereich1FallendWeight5</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendWeight5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendWeight5.Parent" xml:space="preserve">
     <value>PanelBereich1FallendWZ5</value>
@@ -4972,7 +4972,7 @@
     <value>RadTextBoxControlBereich1FallendDisplayWeight5</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendDisplayWeight5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendDisplayWeight5.Parent" xml:space="preserve">
     <value>PanelBereich1FallendWZ5</value>
@@ -4993,7 +4993,7 @@
     <value>RadTextBoxControlBereich1FallendErrorLimit5</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendErrorLimit5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendErrorLimit5.Parent" xml:space="preserve">
     <value>PanelBereich1FallendWZ5</value>
@@ -5014,7 +5014,7 @@
     <value>RadCheckBoxBereich1FallendVEL5</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich1FallendVEL5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich1FallendVEL5.Parent" xml:space="preserve">
     <value>PanelBereich1FallendWZ5</value>
@@ -5104,7 +5104,7 @@
     <value>RadTextBoxControlBereich1FallendWeight4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendWeight4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendWeight4.Parent" xml:space="preserve">
     <value>PanelBereich1FallendWZ4</value>
@@ -5125,7 +5125,7 @@
     <value>RadTextBoxControlBereich1FallendDisplayWeight4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendDisplayWeight4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendDisplayWeight4.Parent" xml:space="preserve">
     <value>PanelBereich1FallendWZ4</value>
@@ -5146,7 +5146,7 @@
     <value>RadTextBoxControlBereich1FallendErrorLimit4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendErrorLimit4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendErrorLimit4.Parent" xml:space="preserve">
     <value>PanelBereich1FallendWZ4</value>
@@ -5167,7 +5167,7 @@
     <value>RadCheckBoxBereich1FallendVEL4</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich1FallendVEL4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich1FallendVEL4.Parent" xml:space="preserve">
     <value>PanelBereich1FallendWZ4</value>
@@ -5257,7 +5257,7 @@
     <value>RadTextBoxControlBereich1FallendWeight3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendWeight3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendWeight3.Parent" xml:space="preserve">
     <value>PanelBereich1FallendWZ3</value>
@@ -5278,7 +5278,7 @@
     <value>RadTextBoxControlBereich1FallendDisplayWeight3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendDisplayWeight3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendDisplayWeight3.Parent" xml:space="preserve">
     <value>PanelBereich1FallendWZ3</value>
@@ -5299,7 +5299,7 @@
     <value>RadTextBoxControlBereich1FallendErrorLimit3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendErrorLimit3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendErrorLimit3.Parent" xml:space="preserve">
     <value>PanelBereich1FallendWZ3</value>
@@ -5320,7 +5320,7 @@
     <value>RadCheckBoxBereich1FallendVEL3</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich1FallendVEL3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich1FallendVEL3.Parent" xml:space="preserve">
     <value>PanelBereich1FallendWZ3</value>
@@ -5410,7 +5410,7 @@
     <value>RadTextBoxControlBereich1FallendWeight2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendWeight2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendWeight2.Parent" xml:space="preserve">
     <value>PanelBereich1FallendWZ2</value>
@@ -5431,7 +5431,7 @@
     <value>RadTextBoxControlBereich1FallendDisplayWeight2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendDisplayWeight2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendDisplayWeight2.Parent" xml:space="preserve">
     <value>PanelBereich1FallendWZ2</value>
@@ -5452,7 +5452,7 @@
     <value>RadTextBoxControlBereich1FallendErrorLimit2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendErrorLimit2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendErrorLimit2.Parent" xml:space="preserve">
     <value>PanelBereich1FallendWZ2</value>
@@ -5473,7 +5473,7 @@
     <value>RadCheckBoxBereich1FallendVEL2</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich1FallendVEL2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich1FallendVEL2.Parent" xml:space="preserve">
     <value>PanelBereich1FallendWZ2</value>
@@ -5563,7 +5563,7 @@
     <value>RadTextBoxControlBereich1FallendWeight1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendWeight1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendWeight1.Parent" xml:space="preserve">
     <value>PanelBereich1FallendWZ1</value>
@@ -5584,7 +5584,7 @@
     <value>RadTextBoxControlBereich1FallendDisplayWeight1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendDisplayWeight1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendDisplayWeight1.Parent" xml:space="preserve">
     <value>PanelBereich1FallendWZ1</value>
@@ -5605,7 +5605,7 @@
     <value>RadTextBoxControlBereich1FallendErrorLimit1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendErrorLimit1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich1FallendErrorLimit1.Parent" xml:space="preserve">
     <value>PanelBereich1FallendWZ1</value>
@@ -5626,7 +5626,7 @@
     <value>RadCheckBoxBereich1FallendVEL1</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich1FallendVEL1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich1FallendVEL1.Parent" xml:space="preserve">
     <value>PanelBereich1FallendWZ1</value>
@@ -5695,7 +5695,7 @@
     <value>lblBereich1FallendEFGSpezial</value>
   </data>
   <data name="&gt;&gt;lblBereich1FallendEFGSpezial.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblBereich1FallendEFGSpezial.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich1Fallend</value>
@@ -5722,7 +5722,7 @@
     <value>lblBereich1FallendFehlerGrenzen</value>
   </data>
   <data name="&gt;&gt;lblBereich1FallendFehlerGrenzen.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblBereich1FallendFehlerGrenzen.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich1Fallend</value>
@@ -5749,7 +5749,7 @@
     <value>RadGroupBoxBereich1Fallend</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxBereich1Fallend.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxBereich1Fallend.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -5773,7 +5773,7 @@
     <value>RadButtonSteigendPlus</value>
   </data>
   <data name="&gt;&gt;RadButtonSteigendPlus.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonSteigendPlus.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -5872,7 +5872,7 @@
     <value>RadTextBoxControlBereich3FallendWeight8</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendWeight8.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendWeight8.Parent" xml:space="preserve">
     <value>PanelBereich3FallendWZ8</value>
@@ -5893,7 +5893,7 @@
     <value>RadTextBoxControlBereich3FallendDisplayWeight8</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendDisplayWeight8.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendDisplayWeight8.Parent" xml:space="preserve">
     <value>PanelBereich3FallendWZ8</value>
@@ -5914,7 +5914,7 @@
     <value>RadTextBoxControlBereich3FallendErrorLimit8</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendErrorLimit8.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendErrorLimit8.Parent" xml:space="preserve">
     <value>PanelBereich3FallendWZ8</value>
@@ -5935,7 +5935,7 @@
     <value>RadCheckBoxBereich3FallendVEL8</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich3FallendVEL8.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich3FallendVEL8.Parent" xml:space="preserve">
     <value>PanelBereich3FallendWZ8</value>
@@ -6025,7 +6025,7 @@
     <value>RadTextBoxControlBereich3FallendWeight7</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendWeight7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendWeight7.Parent" xml:space="preserve">
     <value>PanelBereich3FallendWZ7</value>
@@ -6046,7 +6046,7 @@
     <value>RadTextBoxControlBereich3FallendDisplayWeight7</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendDisplayWeight7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendDisplayWeight7.Parent" xml:space="preserve">
     <value>PanelBereich3FallendWZ7</value>
@@ -6067,7 +6067,7 @@
     <value>RadTextBoxControlBereich3FallendErrorLimit7</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendErrorLimit7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendErrorLimit7.Parent" xml:space="preserve">
     <value>PanelBereich3FallendWZ7</value>
@@ -6088,7 +6088,7 @@
     <value>RadCheckBoxBereich3FallendVEL7</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich3FallendVEL7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich3FallendVEL7.Parent" xml:space="preserve">
     <value>PanelBereich3FallendWZ7</value>
@@ -6178,7 +6178,7 @@
     <value>RadTextBoxControlBereich3FallendWeight6</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendWeight6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendWeight6.Parent" xml:space="preserve">
     <value>PanelBereich3FallendWZ6</value>
@@ -6199,7 +6199,7 @@
     <value>RadTextBoxControlBereich3FallendDisplayWeight6</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendDisplayWeight6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendDisplayWeight6.Parent" xml:space="preserve">
     <value>PanelBereich3FallendWZ6</value>
@@ -6220,7 +6220,7 @@
     <value>RadTextBoxControlBereich3FallendErrorLimit6</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendErrorLimit6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendErrorLimit6.Parent" xml:space="preserve">
     <value>PanelBereich3FallendWZ6</value>
@@ -6241,7 +6241,7 @@
     <value>RadCheckBoxBereich3FallendVEL6</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich3FallendVEL6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich3FallendVEL6.Parent" xml:space="preserve">
     <value>PanelBereich3FallendWZ6</value>
@@ -6331,7 +6331,7 @@
     <value>RadTextBoxControlBereich3FallendWeight5</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendWeight5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendWeight5.Parent" xml:space="preserve">
     <value>PanelBereich3FallendWZ5</value>
@@ -6352,7 +6352,7 @@
     <value>RadTextBoxControlBereich3FallendDisplayWeight5</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendDisplayWeight5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendDisplayWeight5.Parent" xml:space="preserve">
     <value>PanelBereich3FallendWZ5</value>
@@ -6373,7 +6373,7 @@
     <value>RadTextBoxControlBereich3FallendErrorLimit5</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendErrorLimit5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendErrorLimit5.Parent" xml:space="preserve">
     <value>PanelBereich3FallendWZ5</value>
@@ -6394,7 +6394,7 @@
     <value>RadCheckBoxBereich3FallendVEL5</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich3FallendVEL5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich3FallendVEL5.Parent" xml:space="preserve">
     <value>PanelBereich3FallendWZ5</value>
@@ -6484,7 +6484,7 @@
     <value>RadTextBoxControlBereich3FallendWeight4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendWeight4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendWeight4.Parent" xml:space="preserve">
     <value>PanelBereich3FallendWZ4</value>
@@ -6505,7 +6505,7 @@
     <value>RadTextBoxControlBereich3FallendDisplayWeight4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendDisplayWeight4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendDisplayWeight4.Parent" xml:space="preserve">
     <value>PanelBereich3FallendWZ4</value>
@@ -6526,7 +6526,7 @@
     <value>RadTextBoxControlBereich3FallendErrorLimit4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendErrorLimit4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendErrorLimit4.Parent" xml:space="preserve">
     <value>PanelBereich3FallendWZ4</value>
@@ -6547,7 +6547,7 @@
     <value>RadCheckBoxBereich3FallendVEL4</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich3FallendVEL4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich3FallendVEL4.Parent" xml:space="preserve">
     <value>PanelBereich3FallendWZ4</value>
@@ -6637,7 +6637,7 @@
     <value>RadTextBoxControlBereich3FallendWeight3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendWeight3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendWeight3.Parent" xml:space="preserve">
     <value>PanelBereich3FallendWZ3</value>
@@ -6658,7 +6658,7 @@
     <value>RadTextBoxControlBereich3FallendDisplayWeight3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendDisplayWeight3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendDisplayWeight3.Parent" xml:space="preserve">
     <value>PanelBereich3FallendWZ3</value>
@@ -6679,7 +6679,7 @@
     <value>RadTextBoxControlBereich3FallendErrorLimit3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendErrorLimit3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendErrorLimit3.Parent" xml:space="preserve">
     <value>PanelBereich3FallendWZ3</value>
@@ -6700,7 +6700,7 @@
     <value>RadCheckBoxBereich3FallendVEL3</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich3FallendVEL3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich3FallendVEL3.Parent" xml:space="preserve">
     <value>PanelBereich3FallendWZ3</value>
@@ -6790,7 +6790,7 @@
     <value>RadTextBoxControlBereich3FallendWeight2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendWeight2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendWeight2.Parent" xml:space="preserve">
     <value>PanelBereich3FallendWZ2</value>
@@ -6811,7 +6811,7 @@
     <value>RadTextBoxControlBereich3FallendDisplayWeight2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendDisplayWeight2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendDisplayWeight2.Parent" xml:space="preserve">
     <value>PanelBereich3FallendWZ2</value>
@@ -6832,7 +6832,7 @@
     <value>RadTextBoxControlBereich3FallendErrorLimit2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendErrorLimit2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendErrorLimit2.Parent" xml:space="preserve">
     <value>PanelBereich3FallendWZ2</value>
@@ -6853,7 +6853,7 @@
     <value>RadCheckBoxBereich3FallendVEL2</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich3FallendVEL2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich3FallendVEL2.Parent" xml:space="preserve">
     <value>PanelBereich3FallendWZ2</value>
@@ -6943,7 +6943,7 @@
     <value>RadTextBoxControlBereich3FallendWeight1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendWeight1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendWeight1.Parent" xml:space="preserve">
     <value>PanelBereich3FallendWZ1</value>
@@ -6964,7 +6964,7 @@
     <value>RadTextBoxControlBereich3FallendDisplayWeight1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendDisplayWeight1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendDisplayWeight1.Parent" xml:space="preserve">
     <value>PanelBereich3FallendWZ1</value>
@@ -6985,7 +6985,7 @@
     <value>RadTextBoxControlBereich3FallendErrorLimit1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendErrorLimit1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich3FallendErrorLimit1.Parent" xml:space="preserve">
     <value>PanelBereich3FallendWZ1</value>
@@ -7006,7 +7006,7 @@
     <value>RadCheckBoxBereich3FallendVEL1</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich3FallendVEL1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich3FallendVEL1.Parent" xml:space="preserve">
     <value>PanelBereich3FallendWZ1</value>
@@ -7075,7 +7075,7 @@
     <value>lblBereich3FallendFehlerGrenzen</value>
   </data>
   <data name="&gt;&gt;lblBereich3FallendFehlerGrenzen.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblBereich3FallendFehlerGrenzen.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich3Fallend</value>
@@ -7102,7 +7102,7 @@
     <value>lblBereich3FallendEFGSpezial</value>
   </data>
   <data name="&gt;&gt;lblBereich3FallendEFGSpezial.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblBereich3FallendEFGSpezial.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich3Fallend</value>
@@ -7129,7 +7129,7 @@
     <value>lblBereich3FallendGewicht</value>
   </data>
   <data name="&gt;&gt;lblBereich3FallendGewicht.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblBereich3FallendGewicht.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich3Fallend</value>
@@ -7156,7 +7156,7 @@
     <value>lblBereich3FallendAnzeigeGewicht</value>
   </data>
   <data name="&gt;&gt;lblBereich3FallendAnzeigeGewicht.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblBereich3FallendAnzeigeGewicht.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich3Fallend</value>
@@ -7186,7 +7186,7 @@
     <value>RadGroupBoxBereich3Fallend</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxBereich3Fallend.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxBereich3Fallend.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -7255,7 +7255,7 @@
     <value>RadTextBoxControlBereich2FallendWeight8</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight8.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight8.Parent" xml:space="preserve">
     <value>PanelBereich2FallendWZ8</value>
@@ -7276,7 +7276,7 @@
     <value>RadTextBoxControlBereich2FallendDisplayWeight8</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight8.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight8.Parent" xml:space="preserve">
     <value>PanelBereich2FallendWZ8</value>
@@ -7297,7 +7297,7 @@
     <value>RadTextBoxControlBereich2FallendErrorLimit8</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit8.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit8.Parent" xml:space="preserve">
     <value>PanelBereich2FallendWZ8</value>
@@ -7318,7 +7318,7 @@
     <value>RadCheckBoxBereich2FallendVEL8</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL8.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL8.Parent" xml:space="preserve">
     <value>PanelBereich2FallendWZ8</value>
@@ -7408,7 +7408,7 @@
     <value>RadTextBoxControlBereich2FallendWeight7</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight7.Parent" xml:space="preserve">
     <value>PanelBereich2FallendWZ7</value>
@@ -7429,7 +7429,7 @@
     <value>RadTextBoxControlBereich2FallendDisplayWeight7</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight7.Parent" xml:space="preserve">
     <value>PanelBereich2FallendWZ7</value>
@@ -7450,7 +7450,7 @@
     <value>RadTextBoxControlBereich2FallendErrorLimit7</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit7.Parent" xml:space="preserve">
     <value>PanelBereich2FallendWZ7</value>
@@ -7471,7 +7471,7 @@
     <value>RadCheckBoxBereich2FallendVEL7</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL7.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL7.Parent" xml:space="preserve">
     <value>PanelBereich2FallendWZ7</value>
@@ -7561,7 +7561,7 @@
     <value>RadTextBoxControlBereich2FallendWeight6</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight6.Parent" xml:space="preserve">
     <value>PanelBereich2FallendWZ6</value>
@@ -7582,7 +7582,7 @@
     <value>RadTextBoxControlBereich2FallendDisplayWeight6</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight6.Parent" xml:space="preserve">
     <value>PanelBereich2FallendWZ6</value>
@@ -7603,7 +7603,7 @@
     <value>RadTextBoxControlBereich2FallendErrorLimit6</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit6.Parent" xml:space="preserve">
     <value>PanelBereich2FallendWZ6</value>
@@ -7624,7 +7624,7 @@
     <value>RadCheckBoxBereich2FallendVEL6</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL6.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL6.Parent" xml:space="preserve">
     <value>PanelBereich2FallendWZ6</value>
@@ -7714,7 +7714,7 @@
     <value>RadTextBoxControlBereich2FallendWeight5</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight5.Parent" xml:space="preserve">
     <value>PanelBereich2FallendWZ5</value>
@@ -7735,7 +7735,7 @@
     <value>RadTextBoxControlBereich2FallendDisplayWeight5</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight5.Parent" xml:space="preserve">
     <value>PanelBereich2FallendWZ5</value>
@@ -7756,7 +7756,7 @@
     <value>RadTextBoxControlBereich2FallendErrorLimit5</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit5.Parent" xml:space="preserve">
     <value>PanelBereich2FallendWZ5</value>
@@ -7777,7 +7777,7 @@
     <value>RadCheckBoxBereich2FallendVEL5</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL5.Parent" xml:space="preserve">
     <value>PanelBereich2FallendWZ5</value>
@@ -7867,7 +7867,7 @@
     <value>RadTextBoxControlBereich2FallendWeight4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight4.Parent" xml:space="preserve">
     <value>PanelBereich2FallendWZ4</value>
@@ -7888,7 +7888,7 @@
     <value>RadTextBoxControlBereich2FallendDisplayWeight4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight4.Parent" xml:space="preserve">
     <value>PanelBereich2FallendWZ4</value>
@@ -7909,7 +7909,7 @@
     <value>RadTextBoxControlBereich2FallendErrorLimit4</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit4.Parent" xml:space="preserve">
     <value>PanelBereich2FallendWZ4</value>
@@ -7930,7 +7930,7 @@
     <value>RadCheckBoxBereich2FallendVEL4</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL4.Parent" xml:space="preserve">
     <value>PanelBereich2FallendWZ4</value>
@@ -8020,7 +8020,7 @@
     <value>RadTextBoxControlBereich2FallendWeight3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight3.Parent" xml:space="preserve">
     <value>PanelBereich2FallendWZ3</value>
@@ -8041,7 +8041,7 @@
     <value>RadTextBoxControlBereich2FallendDisplayWeight3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight3.Parent" xml:space="preserve">
     <value>PanelBereich2FallendWZ3</value>
@@ -8062,7 +8062,7 @@
     <value>RadTextBoxControlBereich2FallendErrorLimit3</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit3.Parent" xml:space="preserve">
     <value>PanelBereich2FallendWZ3</value>
@@ -8083,7 +8083,7 @@
     <value>RadCheckBoxBereich2FallendVEL3</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL3.Parent" xml:space="preserve">
     <value>PanelBereich2FallendWZ3</value>
@@ -8173,7 +8173,7 @@
     <value>RadTextBoxControlBereich2FallendWeight2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight2.Parent" xml:space="preserve">
     <value>PanelBereich2FallendWZ2</value>
@@ -8194,7 +8194,7 @@
     <value>RadTextBoxControlBereich2FallendDisplayWeight2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight2.Parent" xml:space="preserve">
     <value>PanelBereich2FallendWZ2</value>
@@ -8215,7 +8215,7 @@
     <value>RadTextBoxControlBereich2FallendErrorLimit2</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit2.Parent" xml:space="preserve">
     <value>PanelBereich2FallendWZ2</value>
@@ -8236,7 +8236,7 @@
     <value>RadCheckBoxBereich2FallendVEL2</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL2.Parent" xml:space="preserve">
     <value>PanelBereich2FallendWZ2</value>
@@ -8326,7 +8326,7 @@
     <value>RadTextBoxControlBereich2FallendWeight1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendWeight1.Parent" xml:space="preserve">
     <value>PanelBereich2FallendWZ1</value>
@@ -8347,7 +8347,7 @@
     <value>RadTextBoxControlBereich2FallendDisplayWeight1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendDisplayWeight1.Parent" xml:space="preserve">
     <value>PanelBereich2FallendWZ1</value>
@@ -8368,7 +8368,7 @@
     <value>RadTextBoxControlBereich2FallendErrorLimit1</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBereich2FallendErrorLimit1.Parent" xml:space="preserve">
     <value>PanelBereich2FallendWZ1</value>
@@ -8389,7 +8389,7 @@
     <value>RadCheckBoxBereich2FallendVEL1</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadCheckBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxBereich2FallendVEL1.Parent" xml:space="preserve">
     <value>PanelBereich2FallendWZ1</value>
@@ -8488,7 +8488,7 @@
     <value>lblBereich2FallendFehlerGrenzen</value>
   </data>
   <data name="&gt;&gt;lblBereich2FallendFehlerGrenzen.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblBereich2FallendFehlerGrenzen.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich2Fallend</value>
@@ -8515,7 +8515,7 @@
     <value>lblBereich2FallendEFGSpezial</value>
   </data>
   <data name="&gt;&gt;lblBereich2FallendEFGSpezial.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblBereich2FallendEFGSpezial.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich2Fallend</value>
@@ -8542,7 +8542,7 @@
     <value>lblBereich2FallendGewicht</value>
   </data>
   <data name="&gt;&gt;lblBereich2FallendGewicht.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblBereich2FallendGewicht.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich2Fallend</value>
@@ -8569,7 +8569,7 @@
     <value>lblBereich2FallendAnzeigeGewicht</value>
   </data>
   <data name="&gt;&gt;lblBereich2FallendAnzeigeGewicht.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblBereich2FallendAnzeigeGewicht.Parent" xml:space="preserve">
     <value>RadGroupBoxBereich2Fallend</value>
@@ -8599,7 +8599,7 @@
     <value>RadGroupBoxBereich2Fallend</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxBereich2Fallend.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxBereich2Fallend.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -8614,7 +8614,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanel1.PanelContainer.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadScrollablePanelContainer, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadScrollablePanelContainer, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanel1.PanelContainer.Parent" xml:space="preserve">
     <value>RadScrollablePanel1</value>
@@ -8635,7 +8635,7 @@
     <value>RadScrollablePanel1</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanel1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadScrollablePanel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadScrollablePanel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanel1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -8656,6 +8656,6 @@
     <value>uco_9PruefungLinearitaet</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.6024.16918, Culture=neutral, PublicKeyToken=null</value>
+    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.6108.20583, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

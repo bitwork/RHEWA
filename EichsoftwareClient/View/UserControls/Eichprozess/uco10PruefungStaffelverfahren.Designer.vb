@@ -1131,11 +1131,6 @@ Partial Class uco10PruefungStaffelverfahren
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadGroupBoxStaffel1)
         resources.ApplyResources(Me.RadScrollablePanel1.PanelContainer, "RadScrollablePanel1.PanelContainer")
         '
-        '
-        '
-        Me.RadScrollablePanel1.RootElement.AccessibleDescription = Nothing
-        Me.RadScrollablePanel1.RootElement.AccessibleName = Nothing
-        '
         'RadGroupBoxStaffel5
         '
         Me.RadGroupBoxStaffel5.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
@@ -1144,11 +1139,6 @@ Partial Class uco10PruefungStaffelverfahren
         Me.RadGroupBoxStaffel5.Controls.Add(Me.RadGroupBoxStaffel5Bereich1)
         resources.ApplyResources(Me.RadGroupBoxStaffel5, "RadGroupBoxStaffel5")
         Me.RadGroupBoxStaffel5.Name = "RadGroupBoxStaffel5"
-        '
-        '
-        '
-        Me.RadGroupBoxStaffel5.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxStaffel5.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxStaffel5Bereich3
         '
@@ -1187,11 +1177,6 @@ Partial Class uco10PruefungStaffelverfahren
         Me.RadGroupBoxStaffel5Bereich3.Controls.Add(Me.lblStaffel5Bereich3Last)
         resources.ApplyResources(Me.RadGroupBoxStaffel5Bereich3, "RadGroupBoxStaffel5Bereich3")
         Me.RadGroupBoxStaffel5Bereich3.Name = "RadGroupBoxStaffel5Bereich3"
-        '
-        '
-        '
-        Me.RadGroupBoxStaffel5Bereich3.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxStaffel5Bereich3.RootElement.AccessibleName = Nothing
         '
         'PictureBox124
         '
@@ -1233,63 +1218,33 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel5Bereich3ErsatzLastUnten, "lblStaffel5Bereich3ErsatzLastUnten")
         Me.lblStaffel5Bereich3ErsatzLastUnten.Name = "lblStaffel5Bereich3ErsatzLastUnten"
         '
-        '
-        '
-        Me.lblStaffel5Bereich3ErsatzLastUnten.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel5Bereich3ErsatzLastUnten.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel5Bereich3ErsatzLastOben
         '
         resources.ApplyResources(Me.lblStaffel5Bereich3ErsatzLastOben, "lblStaffel5Bereich3ErsatzLastOben")
         Me.lblStaffel5Bereich3ErsatzLastOben.Name = "lblStaffel5Bereich3ErsatzLastOben"
         '
-        '
-        '
-        Me.lblStaffel5Bereich3ErsatzLastOben.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel5Bereich3ErsatzLastOben.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel5Bereich3Fehler7
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel5Bereich3Fehler7, "RadTextBoxControlStaffel5Bereich3Fehler7")
         Me.RadTextBoxControlStaffel5Bereich3Fehler7.Name = "RadTextBoxControlStaffel5Bereich3Fehler7"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel5Bereich3Fehler7.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel5Bereich3Fehler7.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel5Bereich3Fehler7.TabStop = False
         '
         'RadTextBoxControlStaffel5Bereich3Fehler6
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel5Bereich3Fehler6, "RadTextBoxControlStaffel5Bereich3Fehler6")
         Me.RadTextBoxControlStaffel5Bereich3Fehler6.Name = "RadTextBoxControlStaffel5Bereich3Fehler6"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel5Bereich3Fehler6.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel5Bereich3Fehler6.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel5Bereich3Fehler6.TabStop = False
         '
         'RadTextBoxControlStaffel5Bereich3Fehler5
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel5Bereich3Fehler5, "RadTextBoxControlStaffel5Bereich3Fehler5")
         Me.RadTextBoxControlStaffel5Bereich3Fehler5.Name = "RadTextBoxControlStaffel5Bereich3Fehler5"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel5Bereich3Fehler5.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel5Bereich3Fehler5.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel5Bereich3Fehler5.TabStop = False
         '
         'RadTextBoxControlStaffel5Bereich3Last4
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel5Bereich3Last4, "RadTextBoxControlStaffel5Bereich3Last4")
         Me.RadTextBoxControlStaffel5Bereich3Last4.Name = "RadTextBoxControlStaffel5Bereich3Last4"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel5Bereich3Last4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel5Bereich3Last4.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel5Bereich3Last4.TabStop = False
         '
         'RadTextBoxControlStaffel5Bereich3Anzeige4
@@ -1297,30 +1252,15 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.RadTextBoxControlStaffel5Bereich3Anzeige4, "RadTextBoxControlStaffel5Bereich3Anzeige4")
         Me.RadTextBoxControlStaffel5Bereich3Anzeige4.Name = "RadTextBoxControlStaffel5Bereich3Anzeige4"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel5Bereich3Anzeige4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel5Bereich3Anzeige4.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel5Bereich3Anzeige3
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel5Bereich3Anzeige3, "RadTextBoxControlStaffel5Bereich3Anzeige3")
         Me.RadTextBoxControlStaffel5Bereich3Anzeige3.Name = "RadTextBoxControlStaffel5Bereich3Anzeige3"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel5Bereich3Anzeige3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel5Bereich3Anzeige3.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel5Bereich3Last3
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel5Bereich3Last3, "RadTextBoxControlStaffel5Bereich3Last3")
         Me.RadTextBoxControlStaffel5Bereich3Last3.Name = "RadTextBoxControlStaffel5Bereich3Last3"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel5Bereich3Last3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel5Bereich3Last3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel5Bereich3Last3.TabStop = False
         '
         'RadTextBoxControlStaffel5Bereich3Last2
@@ -1328,80 +1268,40 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.RadTextBoxControlStaffel5Bereich3Last2, "RadTextBoxControlStaffel5Bereich3Last2")
         Me.RadTextBoxControlStaffel5Bereich3Last2.Name = "RadTextBoxControlStaffel5Bereich3Last2"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel5Bereich3Last2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel5Bereich3Last2.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel5Bereich3Anzeige1
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel5Bereich3Anzeige1, "RadTextBoxControlStaffel5Bereich3Anzeige1")
         Me.RadTextBoxControlStaffel5Bereich3Anzeige1.Name = "RadTextBoxControlStaffel5Bereich3Anzeige1"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel5Bereich3Anzeige1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel5Bereich3Anzeige1.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel5Bereich3Last1
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel5Bereich3Last1, "RadTextBoxControlStaffel5Bereich3Last1")
         Me.RadTextBoxControlStaffel5Bereich3Last1.Name = "RadTextBoxControlStaffel5Bereich3Last1"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel5Bereich3Last1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel5Bereich3Last1.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel5Bereich3MessabweichungWaage
         '
         resources.ApplyResources(Me.lblStaffel5Bereich3MessabweichungWaage, "lblStaffel5Bereich3MessabweichungWaage")
         Me.lblStaffel5Bereich3MessabweichungWaage.Name = "lblStaffel5Bereich3MessabweichungWaage"
-        '
-        '
-        '
-        Me.lblStaffel5Bereich3MessabweichungWaage.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel5Bereich3MessabweichungWaage.RootElement.AccessibleName = Nothing
         '
         'lblStaffel5Bereich3MessabweichungStaffel
         '
         resources.ApplyResources(Me.lblStaffel5Bereich3MessabweichungStaffel, "lblStaffel5Bereich3MessabweichungStaffel")
         Me.lblStaffel5Bereich3MessabweichungStaffel.Name = "lblStaffel5Bereich3MessabweichungStaffel"
         '
-        '
-        '
-        Me.lblStaffel5Bereich3MessabweichungStaffel.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel5Bereich3MessabweichungStaffel.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel5Bereich3Differenz
         '
         resources.ApplyResources(Me.lblStaffel5Bereich3Differenz, "lblStaffel5Bereich3Differenz")
         Me.lblStaffel5Bereich3Differenz.Name = "lblStaffel5Bereich3Differenz"
-        '
-        '
-        '
-        Me.lblStaffel5Bereich3Differenz.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel5Bereich3Differenz.RootElement.AccessibleName = Nothing
         '
         'lblStaffel5Bereich3ZusastzNormalLast
         '
         resources.ApplyResources(Me.lblStaffel5Bereich3ZusastzNormalLast, "lblStaffel5Bereich3ZusastzNormalLast")
         Me.lblStaffel5Bereich3ZusastzNormalLast.Name = "lblStaffel5Bereich3ZusastzNormalLast"
         '
-        '
-        '
-        Me.lblStaffel5Bereich3ZusastzNormalLast.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel5Bereich3ZusastzNormalLast.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel5Bereich3NormalLast
         '
         resources.ApplyResources(Me.lblStaffel5Bereich3NormalLast, "lblStaffel5Bereich3NormalLast")
         Me.lblStaffel5Bereich3NormalLast.Name = "lblStaffel5Bereich3NormalLast"
-        '
-        '
-        '
-        Me.lblStaffel5Bereich3NormalLast.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel5Bereich3NormalLast.RootElement.AccessibleName = Nothing
         '
         'PictureBox85
         '
@@ -1429,11 +1329,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel5Bereich3EFGWert7, "lblStaffel5Bereich3EFGWert7")
         Me.lblStaffel5Bereich3EFGWert7.Name = "lblStaffel5Bereich3EFGWert7"
         Me.lblStaffel5Bereich3EFGWert7.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel5Bereich3EFGWert7.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel5Bereich3EFGWert7.RootElement.AccessibleName = Nothing
         Me.lblStaffel5Bereich3EFGWert7.TabStop = False
         '
         'lblStaffel5Bereich3EFGWert6
@@ -1441,11 +1336,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel5Bereich3EFGWert6, "lblStaffel5Bereich3EFGWert6")
         Me.lblStaffel5Bereich3EFGWert6.Name = "lblStaffel5Bereich3EFGWert6"
         Me.lblStaffel5Bereich3EFGWert6.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel5Bereich3EFGWert6.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel5Bereich3EFGWert6.RootElement.AccessibleName = Nothing
         Me.lblStaffel5Bereich3EFGWert6.TabStop = False
         '
         'lblStaffel5Bereich3EFGWert5
@@ -1453,11 +1343,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel5Bereich3EFGWert5, "lblStaffel5Bereich3EFGWert5")
         Me.lblStaffel5Bereich3EFGWert5.Name = "lblStaffel5Bereich3EFGWert5"
         Me.lblStaffel5Bereich3EFGWert5.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel5Bereich3EFGWert5.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel5Bereich3EFGWert5.RootElement.AccessibleName = Nothing
         Me.lblStaffel5Bereich3EFGWert5.TabStop = False
         '
         'lblStaffel5Bereich3EFG
@@ -1465,40 +1350,20 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel5Bereich3EFG, "lblStaffel5Bereich3EFG")
         Me.lblStaffel5Bereich3EFG.Name = "lblStaffel5Bereich3EFG"
         '
-        '
-        '
-        Me.lblStaffel5Bereich3EFG.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel5Bereich3EFG.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel5Bereich3Fehler
         '
         resources.ApplyResources(Me.lblStaffel5Bereich3Fehler, "lblStaffel5Bereich3Fehler")
         Me.lblStaffel5Bereich3Fehler.Name = "lblStaffel5Bereich3Fehler"
-        '
-        '
-        '
-        Me.lblStaffel5Bereich3Fehler.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel5Bereich3Fehler.RootElement.AccessibleName = Nothing
         '
         'lblStaffel5Bereich3Anzeige
         '
         resources.ApplyResources(Me.lblStaffel5Bereich3Anzeige, "lblStaffel5Bereich3Anzeige")
         Me.lblStaffel5Bereich3Anzeige.Name = "lblStaffel5Bereich3Anzeige"
         '
-        '
-        '
-        Me.lblStaffel5Bereich3Anzeige.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel5Bereich3Anzeige.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel5Bereich3Last
         '
         resources.ApplyResources(Me.lblStaffel5Bereich3Last, "lblStaffel5Bereich3Last")
         Me.lblStaffel5Bereich3Last.Name = "lblStaffel5Bereich3Last"
-        '
-        '
-        '
-        Me.lblStaffel5Bereich3Last.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel5Bereich3Last.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxStaffel5Bereich2
         '
@@ -1537,11 +1402,6 @@ Partial Class uco10PruefungStaffelverfahren
         Me.RadGroupBoxStaffel5Bereich2.Controls.Add(Me.lblStaffel5Bereich2Last)
         resources.ApplyResources(Me.RadGroupBoxStaffel5Bereich2, "RadGroupBoxStaffel5Bereich2")
         Me.RadGroupBoxStaffel5Bereich2.Name = "RadGroupBoxStaffel5Bereich2"
-        '
-        '
-        '
-        Me.RadGroupBoxStaffel5Bereich2.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxStaffel5Bereich2.RootElement.AccessibleName = Nothing
         '
         'PictureBox127
         '
@@ -1583,63 +1443,33 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel5Bereich2ErsatzLastUnten, "lblStaffel5Bereich2ErsatzLastUnten")
         Me.lblStaffel5Bereich2ErsatzLastUnten.Name = "lblStaffel5Bereich2ErsatzLastUnten"
         '
-        '
-        '
-        Me.lblStaffel5Bereich2ErsatzLastUnten.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel5Bereich2ErsatzLastUnten.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel5Bereich2ErsatzLastOben
         '
         resources.ApplyResources(Me.lblStaffel5Bereich2ErsatzLastOben, "lblStaffel5Bereich2ErsatzLastOben")
         Me.lblStaffel5Bereich2ErsatzLastOben.Name = "lblStaffel5Bereich2ErsatzLastOben"
         '
-        '
-        '
-        Me.lblStaffel5Bereich2ErsatzLastOben.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel5Bereich2ErsatzLastOben.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel5Bereich2Fehler7
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel5Bereich2Fehler7, "RadTextBoxControlStaffel5Bereich2Fehler7")
         Me.RadTextBoxControlStaffel5Bereich2Fehler7.Name = "RadTextBoxControlStaffel5Bereich2Fehler7"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel5Bereich2Fehler7.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel5Bereich2Fehler7.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel5Bereich2Fehler7.TabStop = False
         '
         'RadTextBoxControlStaffel5Bereich2Fehler6
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel5Bereich2Fehler6, "RadTextBoxControlStaffel5Bereich2Fehler6")
         Me.RadTextBoxControlStaffel5Bereich2Fehler6.Name = "RadTextBoxControlStaffel5Bereich2Fehler6"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel5Bereich2Fehler6.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel5Bereich2Fehler6.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel5Bereich2Fehler6.TabStop = False
         '
         'RadTextBoxControlStaffel5Bereich2Fehler5
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel5Bereich2Fehler5, "RadTextBoxControlStaffel5Bereich2Fehler5")
         Me.RadTextBoxControlStaffel5Bereich2Fehler5.Name = "RadTextBoxControlStaffel5Bereich2Fehler5"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel5Bereich2Fehler5.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel5Bereich2Fehler5.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel5Bereich2Fehler5.TabStop = False
         '
         'RadTextBoxControlStaffel5Bereich2Last4
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel5Bereich2Last4, "RadTextBoxControlStaffel5Bereich2Last4")
         Me.RadTextBoxControlStaffel5Bereich2Last4.Name = "RadTextBoxControlStaffel5Bereich2Last4"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel5Bereich2Last4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel5Bereich2Last4.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel5Bereich2Last4.TabStop = False
         '
         'RadTextBoxControlStaffel5Bereich2Anzeige4
@@ -1647,30 +1477,15 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.RadTextBoxControlStaffel5Bereich2Anzeige4, "RadTextBoxControlStaffel5Bereich2Anzeige4")
         Me.RadTextBoxControlStaffel5Bereich2Anzeige4.Name = "RadTextBoxControlStaffel5Bereich2Anzeige4"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel5Bereich2Anzeige4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel5Bereich2Anzeige4.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel5Bereich2Anzeige3
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel5Bereich2Anzeige3, "RadTextBoxControlStaffel5Bereich2Anzeige3")
         Me.RadTextBoxControlStaffel5Bereich2Anzeige3.Name = "RadTextBoxControlStaffel5Bereich2Anzeige3"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel5Bereich2Anzeige3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel5Bereich2Anzeige3.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel5Bereich2Last3
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel5Bereich2Last3, "RadTextBoxControlStaffel5Bereich2Last3")
         Me.RadTextBoxControlStaffel5Bereich2Last3.Name = "RadTextBoxControlStaffel5Bereich2Last3"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel5Bereich2Last3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel5Bereich2Last3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel5Bereich2Last3.TabStop = False
         '
         'RadTextBoxControlStaffel5Bereich2Last2
@@ -1678,80 +1493,40 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.RadTextBoxControlStaffel5Bereich2Last2, "RadTextBoxControlStaffel5Bereich2Last2")
         Me.RadTextBoxControlStaffel5Bereich2Last2.Name = "RadTextBoxControlStaffel5Bereich2Last2"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel5Bereich2Last2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel5Bereich2Last2.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel5Bereich2Anzeige1
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel5Bereich2Anzeige1, "RadTextBoxControlStaffel5Bereich2Anzeige1")
         Me.RadTextBoxControlStaffel5Bereich2Anzeige1.Name = "RadTextBoxControlStaffel5Bereich2Anzeige1"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel5Bereich2Anzeige1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel5Bereich2Anzeige1.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel5Bereich2Last1
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel5Bereich2Last1, "RadTextBoxControlStaffel5Bereich2Last1")
         Me.RadTextBoxControlStaffel5Bereich2Last1.Name = "RadTextBoxControlStaffel5Bereich2Last1"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel5Bereich2Last1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel5Bereich2Last1.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel5Bereich2MessabweichungWaage
         '
         resources.ApplyResources(Me.lblStaffel5Bereich2MessabweichungWaage, "lblStaffel5Bereich2MessabweichungWaage")
         Me.lblStaffel5Bereich2MessabweichungWaage.Name = "lblStaffel5Bereich2MessabweichungWaage"
-        '
-        '
-        '
-        Me.lblStaffel5Bereich2MessabweichungWaage.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel5Bereich2MessabweichungWaage.RootElement.AccessibleName = Nothing
         '
         'lblStaffel5Bereich2MessabweichungStaffel
         '
         resources.ApplyResources(Me.lblStaffel5Bereich2MessabweichungStaffel, "lblStaffel5Bereich2MessabweichungStaffel")
         Me.lblStaffel5Bereich2MessabweichungStaffel.Name = "lblStaffel5Bereich2MessabweichungStaffel"
         '
-        '
-        '
-        Me.lblStaffel5Bereich2MessabweichungStaffel.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel5Bereich2MessabweichungStaffel.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel5Bereich2Differenz
         '
         resources.ApplyResources(Me.lblStaffel5Bereich2Differenz, "lblStaffel5Bereich2Differenz")
         Me.lblStaffel5Bereich2Differenz.Name = "lblStaffel5Bereich2Differenz"
-        '
-        '
-        '
-        Me.lblStaffel5Bereich2Differenz.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel5Bereich2Differenz.RootElement.AccessibleName = Nothing
         '
         'lblStaffel5Bereich2ZusastzNormalLast
         '
         resources.ApplyResources(Me.lblStaffel5Bereich2ZusastzNormalLast, "lblStaffel5Bereich2ZusastzNormalLast")
         Me.lblStaffel5Bereich2ZusastzNormalLast.Name = "lblStaffel5Bereich2ZusastzNormalLast"
         '
-        '
-        '
-        Me.lblStaffel5Bereich2ZusastzNormalLast.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel5Bereich2ZusastzNormalLast.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel5Bereich2NormalLast
         '
         resources.ApplyResources(Me.lblStaffel5Bereich2NormalLast, "lblStaffel5Bereich2NormalLast")
         Me.lblStaffel5Bereich2NormalLast.Name = "lblStaffel5Bereich2NormalLast"
-        '
-        '
-        '
-        Me.lblStaffel5Bereich2NormalLast.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel5Bereich2NormalLast.RootElement.AccessibleName = Nothing
         '
         'PictureBox92
         '
@@ -1779,11 +1554,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel5Bereich2EFGWert7, "lblStaffel5Bereich2EFGWert7")
         Me.lblStaffel5Bereich2EFGWert7.Name = "lblStaffel5Bereich2EFGWert7"
         Me.lblStaffel5Bereich2EFGWert7.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel5Bereich2EFGWert7.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel5Bereich2EFGWert7.RootElement.AccessibleName = Nothing
         Me.lblStaffel5Bereich2EFGWert7.TabStop = False
         '
         'lblStaffel5Bereich2EFGWert6
@@ -1791,11 +1561,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel5Bereich2EFGWert6, "lblStaffel5Bereich2EFGWert6")
         Me.lblStaffel5Bereich2EFGWert6.Name = "lblStaffel5Bereich2EFGWert6"
         Me.lblStaffel5Bereich2EFGWert6.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel5Bereich2EFGWert6.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel5Bereich2EFGWert6.RootElement.AccessibleName = Nothing
         Me.lblStaffel5Bereich2EFGWert6.TabStop = False
         '
         'lblStaffel5Bereich2EFGWert5
@@ -1803,11 +1568,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel5Bereich2EFGWert5, "lblStaffel5Bereich2EFGWert5")
         Me.lblStaffel5Bereich2EFGWert5.Name = "lblStaffel5Bereich2EFGWert5"
         Me.lblStaffel5Bereich2EFGWert5.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel5Bereich2EFGWert5.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel5Bereich2EFGWert5.RootElement.AccessibleName = Nothing
         Me.lblStaffel5Bereich2EFGWert5.TabStop = False
         '
         'lblStaffel5Bereich2EFG
@@ -1815,40 +1575,20 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel5Bereich2EFG, "lblStaffel5Bereich2EFG")
         Me.lblStaffel5Bereich2EFG.Name = "lblStaffel5Bereich2EFG"
         '
-        '
-        '
-        Me.lblStaffel5Bereich2EFG.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel5Bereich2EFG.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel5Bereich2Fehler
         '
         resources.ApplyResources(Me.lblStaffel5Bereich2Fehler, "lblStaffel5Bereich2Fehler")
         Me.lblStaffel5Bereich2Fehler.Name = "lblStaffel5Bereich2Fehler"
-        '
-        '
-        '
-        Me.lblStaffel5Bereich2Fehler.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel5Bereich2Fehler.RootElement.AccessibleName = Nothing
         '
         'lblStaffel5Bereich2Anzeige
         '
         resources.ApplyResources(Me.lblStaffel5Bereich2Anzeige, "lblStaffel5Bereich2Anzeige")
         Me.lblStaffel5Bereich2Anzeige.Name = "lblStaffel5Bereich2Anzeige"
         '
-        '
-        '
-        Me.lblStaffel5Bereich2Anzeige.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel5Bereich2Anzeige.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel5Bereich2Last
         '
         resources.ApplyResources(Me.lblStaffel5Bereich2Last, "lblStaffel5Bereich2Last")
         Me.lblStaffel5Bereich2Last.Name = "lblStaffel5Bereich2Last"
-        '
-        '
-        '
-        Me.lblStaffel5Bereich2Last.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel5Bereich2Last.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxStaffel5Bereich1
         '
@@ -1887,11 +1627,6 @@ Partial Class uco10PruefungStaffelverfahren
         Me.RadGroupBoxStaffel5Bereich1.Controls.Add(Me.lblStaffel5Bereich1Last)
         resources.ApplyResources(Me.RadGroupBoxStaffel5Bereich1, "RadGroupBoxStaffel5Bereich1")
         Me.RadGroupBoxStaffel5Bereich1.Name = "RadGroupBoxStaffel5Bereich1"
-        '
-        '
-        '
-        Me.RadGroupBoxStaffel5Bereich1.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxStaffel5Bereich1.RootElement.AccessibleName = Nothing
         '
         'PictureBox130
         '
@@ -1933,63 +1668,33 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel5Bereich1ErsatzLastUnten, "lblStaffel5Bereich1ErsatzLastUnten")
         Me.lblStaffel5Bereich1ErsatzLastUnten.Name = "lblStaffel5Bereich1ErsatzLastUnten"
         '
-        '
-        '
-        Me.lblStaffel5Bereich1ErsatzLastUnten.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel5Bereich1ErsatzLastUnten.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel5Bereich1ErsatzLastOben
         '
         resources.ApplyResources(Me.lblStaffel5Bereich1ErsatzLastOben, "lblStaffel5Bereich1ErsatzLastOben")
         Me.lblStaffel5Bereich1ErsatzLastOben.Name = "lblStaffel5Bereich1ErsatzLastOben"
         '
-        '
-        '
-        Me.lblStaffel5Bereich1ErsatzLastOben.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel5Bereich1ErsatzLastOben.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel5Bereich1Fehler7
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel5Bereich1Fehler7, "RadTextBoxControlStaffel5Bereich1Fehler7")
         Me.RadTextBoxControlStaffel5Bereich1Fehler7.Name = "RadTextBoxControlStaffel5Bereich1Fehler7"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel5Bereich1Fehler7.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel5Bereich1Fehler7.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel5Bereich1Fehler7.TabStop = False
         '
         'RadTextBoxControlStaffel5Bereich1Fehler6
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel5Bereich1Fehler6, "RadTextBoxControlStaffel5Bereich1Fehler6")
         Me.RadTextBoxControlStaffel5Bereich1Fehler6.Name = "RadTextBoxControlStaffel5Bereich1Fehler6"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel5Bereich1Fehler6.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel5Bereich1Fehler6.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel5Bereich1Fehler6.TabStop = False
         '
         'RadTextBoxControlStaffel5Bereich1Fehler5
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel5Bereich1Fehler5, "RadTextBoxControlStaffel5Bereich1Fehler5")
         Me.RadTextBoxControlStaffel5Bereich1Fehler5.Name = "RadTextBoxControlStaffel5Bereich1Fehler5"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel5Bereich1Fehler5.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel5Bereich1Fehler5.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel5Bereich1Fehler5.TabStop = False
         '
         'RadTextBoxControlStaffel5Bereich1Last4
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel5Bereich1Last4, "RadTextBoxControlStaffel5Bereich1Last4")
         Me.RadTextBoxControlStaffel5Bereich1Last4.Name = "RadTextBoxControlStaffel5Bereich1Last4"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel5Bereich1Last4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel5Bereich1Last4.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel5Bereich1Last4.TabStop = False
         '
         'RadTextBoxControlStaffel5Bereich1Anzeige4
@@ -1997,30 +1702,15 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.RadTextBoxControlStaffel5Bereich1Anzeige4, "RadTextBoxControlStaffel5Bereich1Anzeige4")
         Me.RadTextBoxControlStaffel5Bereich1Anzeige4.Name = "RadTextBoxControlStaffel5Bereich1Anzeige4"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel5Bereich1Anzeige4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel5Bereich1Anzeige4.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel5Bereich1Anzeige3
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel5Bereich1Anzeige3, "RadTextBoxControlStaffel5Bereich1Anzeige3")
         Me.RadTextBoxControlStaffel5Bereich1Anzeige3.Name = "RadTextBoxControlStaffel5Bereich1Anzeige3"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel5Bereich1Anzeige3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel5Bereich1Anzeige3.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel5Bereich1Last3
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel5Bereich1Last3, "RadTextBoxControlStaffel5Bereich1Last3")
         Me.RadTextBoxControlStaffel5Bereich1Last3.Name = "RadTextBoxControlStaffel5Bereich1Last3"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel5Bereich1Last3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel5Bereich1Last3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel5Bereich1Last3.TabStop = False
         '
         'RadTextBoxControlStaffel5Bereich1Last2
@@ -2028,80 +1718,40 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.RadTextBoxControlStaffel5Bereich1Last2, "RadTextBoxControlStaffel5Bereich1Last2")
         Me.RadTextBoxControlStaffel5Bereich1Last2.Name = "RadTextBoxControlStaffel5Bereich1Last2"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel5Bereich1Last2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel5Bereich1Last2.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel5Bereich1Anzeige1
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel5Bereich1Anzeige1, "RadTextBoxControlStaffel5Bereich1Anzeige1")
         Me.RadTextBoxControlStaffel5Bereich1Anzeige1.Name = "RadTextBoxControlStaffel5Bereich1Anzeige1"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel5Bereich1Anzeige1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel5Bereich1Anzeige1.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel5Bereich1Last1
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel5Bereich1Last1, "RadTextBoxControlStaffel5Bereich1Last1")
         Me.RadTextBoxControlStaffel5Bereich1Last1.Name = "RadTextBoxControlStaffel5Bereich1Last1"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel5Bereich1Last1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel5Bereich1Last1.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel5Bereich1MessabweichungWaage
         '
         resources.ApplyResources(Me.lblStaffel5Bereich1MessabweichungWaage, "lblStaffel5Bereich1MessabweichungWaage")
         Me.lblStaffel5Bereich1MessabweichungWaage.Name = "lblStaffel5Bereich1MessabweichungWaage"
-        '
-        '
-        '
-        Me.lblStaffel5Bereich1MessabweichungWaage.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel5Bereich1MessabweichungWaage.RootElement.AccessibleName = Nothing
         '
         'lblStaffel5Bereich1MessabweichungStaffel
         '
         resources.ApplyResources(Me.lblStaffel5Bereich1MessabweichungStaffel, "lblStaffel5Bereich1MessabweichungStaffel")
         Me.lblStaffel5Bereich1MessabweichungStaffel.Name = "lblStaffel5Bereich1MessabweichungStaffel"
         '
-        '
-        '
-        Me.lblStaffel5Bereich1MessabweichungStaffel.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel5Bereich1MessabweichungStaffel.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel5Bereich1Differenz
         '
         resources.ApplyResources(Me.lblStaffel5Bereich1Differenz, "lblStaffel5Bereich1Differenz")
         Me.lblStaffel5Bereich1Differenz.Name = "lblStaffel5Bereich1Differenz"
-        '
-        '
-        '
-        Me.lblStaffel5Bereich1Differenz.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel5Bereich1Differenz.RootElement.AccessibleName = Nothing
         '
         'lblStaffel5Bereich1ZusastzNormalLast
         '
         resources.ApplyResources(Me.lblStaffel5Bereich1ZusastzNormalLast, "lblStaffel5Bereich1ZusastzNormalLast")
         Me.lblStaffel5Bereich1ZusastzNormalLast.Name = "lblStaffel5Bereich1ZusastzNormalLast"
         '
-        '
-        '
-        Me.lblStaffel5Bereich1ZusastzNormalLast.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel5Bereich1ZusastzNormalLast.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel5Bereich1NormalLast
         '
         resources.ApplyResources(Me.lblStaffel5Bereich1NormalLast, "lblStaffel5Bereich1NormalLast")
         Me.lblStaffel5Bereich1NormalLast.Name = "lblStaffel5Bereich1NormalLast"
-        '
-        '
-        '
-        Me.lblStaffel5Bereich1NormalLast.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel5Bereich1NormalLast.RootElement.AccessibleName = Nothing
         '
         'PictureBox99
         '
@@ -2129,11 +1779,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel5Bereich1EFGWert7, "lblStaffel5Bereich1EFGWert7")
         Me.lblStaffel5Bereich1EFGWert7.Name = "lblStaffel5Bereich1EFGWert7"
         Me.lblStaffel5Bereich1EFGWert7.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel5Bereich1EFGWert7.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel5Bereich1EFGWert7.RootElement.AccessibleName = Nothing
         Me.lblStaffel5Bereich1EFGWert7.TabStop = False
         '
         'lblStaffel5Bereich1EFGWert6
@@ -2141,11 +1786,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel5Bereich1EFGWert6, "lblStaffel5Bereich1EFGWert6")
         Me.lblStaffel5Bereich1EFGWert6.Name = "lblStaffel5Bereich1EFGWert6"
         Me.lblStaffel5Bereich1EFGWert6.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel5Bereich1EFGWert6.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel5Bereich1EFGWert6.RootElement.AccessibleName = Nothing
         Me.lblStaffel5Bereich1EFGWert6.TabStop = False
         '
         'lblStaffel5Bereich1EFGWert5
@@ -2153,11 +1793,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel5Bereich1EFGWert5, "lblStaffel5Bereich1EFGWert5")
         Me.lblStaffel5Bereich1EFGWert5.Name = "lblStaffel5Bereich1EFGWert5"
         Me.lblStaffel5Bereich1EFGWert5.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel5Bereich1EFGWert5.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel5Bereich1EFGWert5.RootElement.AccessibleName = Nothing
         Me.lblStaffel5Bereich1EFGWert5.TabStop = False
         '
         'lblStaffel5Bereich1EFG
@@ -2165,40 +1800,20 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel5Bereich1EFG, "lblStaffel5Bereich1EFG")
         Me.lblStaffel5Bereich1EFG.Name = "lblStaffel5Bereich1EFG"
         '
-        '
-        '
-        Me.lblStaffel5Bereich1EFG.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel5Bereich1EFG.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel5Bereich1Fehler
         '
         resources.ApplyResources(Me.lblStaffel5Bereich1Fehler, "lblStaffel5Bereich1Fehler")
         Me.lblStaffel5Bereich1Fehler.Name = "lblStaffel5Bereich1Fehler"
-        '
-        '
-        '
-        Me.lblStaffel5Bereich1Fehler.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel5Bereich1Fehler.RootElement.AccessibleName = Nothing
         '
         'lblStaffel5Bereich1Anzeige
         '
         resources.ApplyResources(Me.lblStaffel5Bereich1Anzeige, "lblStaffel5Bereich1Anzeige")
         Me.lblStaffel5Bereich1Anzeige.Name = "lblStaffel5Bereich1Anzeige"
         '
-        '
-        '
-        Me.lblStaffel5Bereich1Anzeige.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel5Bereich1Anzeige.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel5Bereich1Last
         '
         resources.ApplyResources(Me.lblStaffel5Bereich1Last, "lblStaffel5Bereich1Last")
         Me.lblStaffel5Bereich1Last.Name = "lblStaffel5Bereich1Last"
-        '
-        '
-        '
-        Me.lblStaffel5Bereich1Last.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel5Bereich1Last.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxStaffel4
         '
@@ -2208,11 +1823,6 @@ Partial Class uco10PruefungStaffelverfahren
         Me.RadGroupBoxStaffel4.Controls.Add(Me.RadGroupBoxStaffel4Bereich1)
         resources.ApplyResources(Me.RadGroupBoxStaffel4, "RadGroupBoxStaffel4")
         Me.RadGroupBoxStaffel4.Name = "RadGroupBoxStaffel4"
-        '
-        '
-        '
-        Me.RadGroupBoxStaffel4.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxStaffel4.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxStaffel4Bereich3
         '
@@ -2251,11 +1861,6 @@ Partial Class uco10PruefungStaffelverfahren
         Me.RadGroupBoxStaffel4Bereich3.Controls.Add(Me.lblStaffel4Bereich3Last)
         resources.ApplyResources(Me.RadGroupBoxStaffel4Bereich3, "RadGroupBoxStaffel4Bereich3")
         Me.RadGroupBoxStaffel4Bereich3.Name = "RadGroupBoxStaffel4Bereich3"
-        '
-        '
-        '
-        Me.RadGroupBoxStaffel4Bereich3.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxStaffel4Bereich3.RootElement.AccessibleName = Nothing
         '
         'PictureBox121
         '
@@ -2297,63 +1902,33 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel4Bereich3ErsatzLastUnten, "lblStaffel4Bereich3ErsatzLastUnten")
         Me.lblStaffel4Bereich3ErsatzLastUnten.Name = "lblStaffel4Bereich3ErsatzLastUnten"
         '
-        '
-        '
-        Me.lblStaffel4Bereich3ErsatzLastUnten.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel4Bereich3ErsatzLastUnten.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel4Bereich3ErsatzLastOben
         '
         resources.ApplyResources(Me.lblStaffel4Bereich3ErsatzLastOben, "lblStaffel4Bereich3ErsatzLastOben")
         Me.lblStaffel4Bereich3ErsatzLastOben.Name = "lblStaffel4Bereich3ErsatzLastOben"
         '
-        '
-        '
-        Me.lblStaffel4Bereich3ErsatzLastOben.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel4Bereich3ErsatzLastOben.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel4Bereich3Fehler7
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel4Bereich3Fehler7, "RadTextBoxControlStaffel4Bereich3Fehler7")
         Me.RadTextBoxControlStaffel4Bereich3Fehler7.Name = "RadTextBoxControlStaffel4Bereich3Fehler7"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel4Bereich3Fehler7.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel4Bereich3Fehler7.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel4Bereich3Fehler7.TabStop = False
         '
         'RadTextBoxControlStaffel4Bereich3Fehler6
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel4Bereich3Fehler6, "RadTextBoxControlStaffel4Bereich3Fehler6")
         Me.RadTextBoxControlStaffel4Bereich3Fehler6.Name = "RadTextBoxControlStaffel4Bereich3Fehler6"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel4Bereich3Fehler6.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel4Bereich3Fehler6.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel4Bereich3Fehler6.TabStop = False
         '
         'RadTextBoxControlStaffel4Bereich3Fehler5
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel4Bereich3Fehler5, "RadTextBoxControlStaffel4Bereich3Fehler5")
         Me.RadTextBoxControlStaffel4Bereich3Fehler5.Name = "RadTextBoxControlStaffel4Bereich3Fehler5"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel4Bereich3Fehler5.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel4Bereich3Fehler5.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel4Bereich3Fehler5.TabStop = False
         '
         'RadTextBoxControlStaffel4Bereich3Last4
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel4Bereich3Last4, "RadTextBoxControlStaffel4Bereich3Last4")
         Me.RadTextBoxControlStaffel4Bereich3Last4.Name = "RadTextBoxControlStaffel4Bereich3Last4"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel4Bereich3Last4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel4Bereich3Last4.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel4Bereich3Last4.TabStop = False
         '
         'RadTextBoxControlStaffel4Bereich3Anzeige4
@@ -2361,30 +1936,15 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.RadTextBoxControlStaffel4Bereich3Anzeige4, "RadTextBoxControlStaffel4Bereich3Anzeige4")
         Me.RadTextBoxControlStaffel4Bereich3Anzeige4.Name = "RadTextBoxControlStaffel4Bereich3Anzeige4"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel4Bereich3Anzeige4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel4Bereich3Anzeige4.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel4Bereich3Anzeige3
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel4Bereich3Anzeige3, "RadTextBoxControlStaffel4Bereich3Anzeige3")
         Me.RadTextBoxControlStaffel4Bereich3Anzeige3.Name = "RadTextBoxControlStaffel4Bereich3Anzeige3"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel4Bereich3Anzeige3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel4Bereich3Anzeige3.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel4Bereich3Last3
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel4Bereich3Last3, "RadTextBoxControlStaffel4Bereich3Last3")
         Me.RadTextBoxControlStaffel4Bereich3Last3.Name = "RadTextBoxControlStaffel4Bereich3Last3"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel4Bereich3Last3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel4Bereich3Last3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel4Bereich3Last3.TabStop = False
         '
         'RadTextBoxControlStaffel4Bereich3Last2
@@ -2392,80 +1952,40 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.RadTextBoxControlStaffel4Bereich3Last2, "RadTextBoxControlStaffel4Bereich3Last2")
         Me.RadTextBoxControlStaffel4Bereich3Last2.Name = "RadTextBoxControlStaffel4Bereich3Last2"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel4Bereich3Last2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel4Bereich3Last2.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel4Bereich3Anzeige1
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel4Bereich3Anzeige1, "RadTextBoxControlStaffel4Bereich3Anzeige1")
         Me.RadTextBoxControlStaffel4Bereich3Anzeige1.Name = "RadTextBoxControlStaffel4Bereich3Anzeige1"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel4Bereich3Anzeige1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel4Bereich3Anzeige1.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel4Bereich3Last1
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel4Bereich3Last1, "RadTextBoxControlStaffel4Bereich3Last1")
         Me.RadTextBoxControlStaffel4Bereich3Last1.Name = "RadTextBoxControlStaffel4Bereich3Last1"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel4Bereich3Last1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel4Bereich3Last1.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel4Bereich3MessabweichungWaage
         '
         resources.ApplyResources(Me.lblStaffel4Bereich3MessabweichungWaage, "lblStaffel4Bereich3MessabweichungWaage")
         Me.lblStaffel4Bereich3MessabweichungWaage.Name = "lblStaffel4Bereich3MessabweichungWaage"
-        '
-        '
-        '
-        Me.lblStaffel4Bereich3MessabweichungWaage.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel4Bereich3MessabweichungWaage.RootElement.AccessibleName = Nothing
         '
         'lblStaffel4Bereich3MessabweichungStaffel
         '
         resources.ApplyResources(Me.lblStaffel4Bereich3MessabweichungStaffel, "lblStaffel4Bereich3MessabweichungStaffel")
         Me.lblStaffel4Bereich3MessabweichungStaffel.Name = "lblStaffel4Bereich3MessabweichungStaffel"
         '
-        '
-        '
-        Me.lblStaffel4Bereich3MessabweichungStaffel.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel4Bereich3MessabweichungStaffel.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel4Bereich3Differenz
         '
         resources.ApplyResources(Me.lblStaffel4Bereich3Differenz, "lblStaffel4Bereich3Differenz")
         Me.lblStaffel4Bereich3Differenz.Name = "lblStaffel4Bereich3Differenz"
-        '
-        '
-        '
-        Me.lblStaffel4Bereich3Differenz.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel4Bereich3Differenz.RootElement.AccessibleName = Nothing
         '
         'lblStaffel4Bereich3ZusastzNormalLast
         '
         resources.ApplyResources(Me.lblStaffel4Bereich3ZusastzNormalLast, "lblStaffel4Bereich3ZusastzNormalLast")
         Me.lblStaffel4Bereich3ZusastzNormalLast.Name = "lblStaffel4Bereich3ZusastzNormalLast"
         '
-        '
-        '
-        Me.lblStaffel4Bereich3ZusastzNormalLast.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel4Bereich3ZusastzNormalLast.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel4Bereich3NormalLast
         '
         resources.ApplyResources(Me.lblStaffel4Bereich3NormalLast, "lblStaffel4Bereich3NormalLast")
         Me.lblStaffel4Bereich3NormalLast.Name = "lblStaffel4Bereich3NormalLast"
-        '
-        '
-        '
-        Me.lblStaffel4Bereich3NormalLast.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel4Bereich3NormalLast.RootElement.AccessibleName = Nothing
         '
         'PictureBox63
         '
@@ -2493,11 +2013,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel4Bereich3EFGWert7, "lblStaffel4Bereich3EFGWert7")
         Me.lblStaffel4Bereich3EFGWert7.Name = "lblStaffel4Bereich3EFGWert7"
         Me.lblStaffel4Bereich3EFGWert7.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel4Bereich3EFGWert7.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel4Bereich3EFGWert7.RootElement.AccessibleName = Nothing
         Me.lblStaffel4Bereich3EFGWert7.TabStop = False
         '
         'lblStaffel4Bereich3EFGWert6
@@ -2505,11 +2020,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel4Bereich3EFGWert6, "lblStaffel4Bereich3EFGWert6")
         Me.lblStaffel4Bereich3EFGWert6.Name = "lblStaffel4Bereich3EFGWert6"
         Me.lblStaffel4Bereich3EFGWert6.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel4Bereich3EFGWert6.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel4Bereich3EFGWert6.RootElement.AccessibleName = Nothing
         Me.lblStaffel4Bereich3EFGWert6.TabStop = False
         '
         'lblStaffel4Bereich3EFGWert5
@@ -2517,11 +2027,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel4Bereich3EFGWert5, "lblStaffel4Bereich3EFGWert5")
         Me.lblStaffel4Bereich3EFGWert5.Name = "lblStaffel4Bereich3EFGWert5"
         Me.lblStaffel4Bereich3EFGWert5.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel4Bereich3EFGWert5.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel4Bereich3EFGWert5.RootElement.AccessibleName = Nothing
         Me.lblStaffel4Bereich3EFGWert5.TabStop = False
         '
         'lblStaffel4Bereich3EFG
@@ -2529,40 +2034,20 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel4Bereich3EFG, "lblStaffel4Bereich3EFG")
         Me.lblStaffel4Bereich3EFG.Name = "lblStaffel4Bereich3EFG"
         '
-        '
-        '
-        Me.lblStaffel4Bereich3EFG.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel4Bereich3EFG.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel4Bereich3Fehler
         '
         resources.ApplyResources(Me.lblStaffel4Bereich3Fehler, "lblStaffel4Bereich3Fehler")
         Me.lblStaffel4Bereich3Fehler.Name = "lblStaffel4Bereich3Fehler"
-        '
-        '
-        '
-        Me.lblStaffel4Bereich3Fehler.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel4Bereich3Fehler.RootElement.AccessibleName = Nothing
         '
         'lblStaffel4Bereich3Anzeige
         '
         resources.ApplyResources(Me.lblStaffel4Bereich3Anzeige, "lblStaffel4Bereich3Anzeige")
         Me.lblStaffel4Bereich3Anzeige.Name = "lblStaffel4Bereich3Anzeige"
         '
-        '
-        '
-        Me.lblStaffel4Bereich3Anzeige.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel4Bereich3Anzeige.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel4Bereich3Last
         '
         resources.ApplyResources(Me.lblStaffel4Bereich3Last, "lblStaffel4Bereich3Last")
         Me.lblStaffel4Bereich3Last.Name = "lblStaffel4Bereich3Last"
-        '
-        '
-        '
-        Me.lblStaffel4Bereich3Last.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel4Bereich3Last.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxStaffel4Bereich2
         '
@@ -2601,11 +2086,6 @@ Partial Class uco10PruefungStaffelverfahren
         Me.RadGroupBoxStaffel4Bereich2.Controls.Add(Me.lblStaffel4Bereich2Last)
         resources.ApplyResources(Me.RadGroupBoxStaffel4Bereich2, "RadGroupBoxStaffel4Bereich2")
         Me.RadGroupBoxStaffel4Bereich2.Name = "RadGroupBoxStaffel4Bereich2"
-        '
-        '
-        '
-        Me.RadGroupBoxStaffel4Bereich2.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxStaffel4Bereich2.RootElement.AccessibleName = Nothing
         '
         'PictureBox118
         '
@@ -2647,63 +2127,33 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel4Bereich2ErsatzLastUnten, "lblStaffel4Bereich2ErsatzLastUnten")
         Me.lblStaffel4Bereich2ErsatzLastUnten.Name = "lblStaffel4Bereich2ErsatzLastUnten"
         '
-        '
-        '
-        Me.lblStaffel4Bereich2ErsatzLastUnten.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel4Bereich2ErsatzLastUnten.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel4Bereich2ErsatzLastOben
         '
         resources.ApplyResources(Me.lblStaffel4Bereich2ErsatzLastOben, "lblStaffel4Bereich2ErsatzLastOben")
         Me.lblStaffel4Bereich2ErsatzLastOben.Name = "lblStaffel4Bereich2ErsatzLastOben"
         '
-        '
-        '
-        Me.lblStaffel4Bereich2ErsatzLastOben.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel4Bereich2ErsatzLastOben.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel4Bereich2Fehler7
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel4Bereich2Fehler7, "RadTextBoxControlStaffel4Bereich2Fehler7")
         Me.RadTextBoxControlStaffel4Bereich2Fehler7.Name = "RadTextBoxControlStaffel4Bereich2Fehler7"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel4Bereich2Fehler7.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel4Bereich2Fehler7.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel4Bereich2Fehler7.TabStop = False
         '
         'RadTextBoxControlStaffel4Bereich2Fehler6
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel4Bereich2Fehler6, "RadTextBoxControlStaffel4Bereich2Fehler6")
         Me.RadTextBoxControlStaffel4Bereich2Fehler6.Name = "RadTextBoxControlStaffel4Bereich2Fehler6"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel4Bereich2Fehler6.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel4Bereich2Fehler6.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel4Bereich2Fehler6.TabStop = False
         '
         'RadTextBoxControlStaffel4Bereich2Fehler5
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel4Bereich2Fehler5, "RadTextBoxControlStaffel4Bereich2Fehler5")
         Me.RadTextBoxControlStaffel4Bereich2Fehler5.Name = "RadTextBoxControlStaffel4Bereich2Fehler5"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel4Bereich2Fehler5.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel4Bereich2Fehler5.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel4Bereich2Fehler5.TabStop = False
         '
         'RadTextBoxControlStaffel4Bereich2Last4
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel4Bereich2Last4, "RadTextBoxControlStaffel4Bereich2Last4")
         Me.RadTextBoxControlStaffel4Bereich2Last4.Name = "RadTextBoxControlStaffel4Bereich2Last4"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel4Bereich2Last4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel4Bereich2Last4.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel4Bereich2Last4.TabStop = False
         '
         'RadTextBoxControlStaffel4Bereich2Anzeige4
@@ -2711,30 +2161,15 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.RadTextBoxControlStaffel4Bereich2Anzeige4, "RadTextBoxControlStaffel4Bereich2Anzeige4")
         Me.RadTextBoxControlStaffel4Bereich2Anzeige4.Name = "RadTextBoxControlStaffel4Bereich2Anzeige4"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel4Bereich2Anzeige4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel4Bereich2Anzeige4.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel4Bereich2Anzeige3
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel4Bereich2Anzeige3, "RadTextBoxControlStaffel4Bereich2Anzeige3")
         Me.RadTextBoxControlStaffel4Bereich2Anzeige3.Name = "RadTextBoxControlStaffel4Bereich2Anzeige3"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel4Bereich2Anzeige3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel4Bereich2Anzeige3.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel4Bereich2Last3
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel4Bereich2Last3, "RadTextBoxControlStaffel4Bereich2Last3")
         Me.RadTextBoxControlStaffel4Bereich2Last3.Name = "RadTextBoxControlStaffel4Bereich2Last3"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel4Bereich2Last3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel4Bereich2Last3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel4Bereich2Last3.TabStop = False
         '
         'RadTextBoxControlStaffel4Bereich2Last2
@@ -2742,80 +2177,40 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.RadTextBoxControlStaffel4Bereich2Last2, "RadTextBoxControlStaffel4Bereich2Last2")
         Me.RadTextBoxControlStaffel4Bereich2Last2.Name = "RadTextBoxControlStaffel4Bereich2Last2"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel4Bereich2Last2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel4Bereich2Last2.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel4Bereich2Anzeige1
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel4Bereich2Anzeige1, "RadTextBoxControlStaffel4Bereich2Anzeige1")
         Me.RadTextBoxControlStaffel4Bereich2Anzeige1.Name = "RadTextBoxControlStaffel4Bereich2Anzeige1"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel4Bereich2Anzeige1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel4Bereich2Anzeige1.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel4Bereich2Last1
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel4Bereich2Last1, "RadTextBoxControlStaffel4Bereich2Last1")
         Me.RadTextBoxControlStaffel4Bereich2Last1.Name = "RadTextBoxControlStaffel4Bereich2Last1"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel4Bereich2Last1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel4Bereich2Last1.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel4Bereich2MessabweichungWaage
         '
         resources.ApplyResources(Me.lblStaffel4Bereich2MessabweichungWaage, "lblStaffel4Bereich2MessabweichungWaage")
         Me.lblStaffel4Bereich2MessabweichungWaage.Name = "lblStaffel4Bereich2MessabweichungWaage"
-        '
-        '
-        '
-        Me.lblStaffel4Bereich2MessabweichungWaage.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel4Bereich2MessabweichungWaage.RootElement.AccessibleName = Nothing
         '
         'lblStaffel4Bereich2MessabweichungStaffel
         '
         resources.ApplyResources(Me.lblStaffel4Bereich2MessabweichungStaffel, "lblStaffel4Bereich2MessabweichungStaffel")
         Me.lblStaffel4Bereich2MessabweichungStaffel.Name = "lblStaffel4Bereich2MessabweichungStaffel"
         '
-        '
-        '
-        Me.lblStaffel4Bereich2MessabweichungStaffel.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel4Bereich2MessabweichungStaffel.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel4Bereich2Differenz
         '
         resources.ApplyResources(Me.lblStaffel4Bereich2Differenz, "lblStaffel4Bereich2Differenz")
         Me.lblStaffel4Bereich2Differenz.Name = "lblStaffel4Bereich2Differenz"
-        '
-        '
-        '
-        Me.lblStaffel4Bereich2Differenz.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel4Bereich2Differenz.RootElement.AccessibleName = Nothing
         '
         'lblStaffel4Bereich2ZusastzNormalLast
         '
         resources.ApplyResources(Me.lblStaffel4Bereich2ZusastzNormalLast, "lblStaffel4Bereich2ZusastzNormalLast")
         Me.lblStaffel4Bereich2ZusastzNormalLast.Name = "lblStaffel4Bereich2ZusastzNormalLast"
         '
-        '
-        '
-        Me.lblStaffel4Bereich2ZusastzNormalLast.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel4Bereich2ZusastzNormalLast.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel4Bereich2NormalLast
         '
         resources.ApplyResources(Me.lblStaffel4Bereich2NormalLast, "lblStaffel4Bereich2NormalLast")
         Me.lblStaffel4Bereich2NormalLast.Name = "lblStaffel4Bereich2NormalLast"
-        '
-        '
-        '
-        Me.lblStaffel4Bereich2NormalLast.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel4Bereich2NormalLast.RootElement.AccessibleName = Nothing
         '
         'PictureBox70
         '
@@ -2843,11 +2238,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel4Bereich2EFGWert7, "lblStaffel4Bereich2EFGWert7")
         Me.lblStaffel4Bereich2EFGWert7.Name = "lblStaffel4Bereich2EFGWert7"
         Me.lblStaffel4Bereich2EFGWert7.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel4Bereich2EFGWert7.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel4Bereich2EFGWert7.RootElement.AccessibleName = Nothing
         Me.lblStaffel4Bereich2EFGWert7.TabStop = False
         '
         'lblStaffel4Bereich2EFGWert6
@@ -2855,11 +2245,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel4Bereich2EFGWert6, "lblStaffel4Bereich2EFGWert6")
         Me.lblStaffel4Bereich2EFGWert6.Name = "lblStaffel4Bereich2EFGWert6"
         Me.lblStaffel4Bereich2EFGWert6.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel4Bereich2EFGWert6.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel4Bereich2EFGWert6.RootElement.AccessibleName = Nothing
         Me.lblStaffel4Bereich2EFGWert6.TabStop = False
         '
         'lblStaffel4Bereich2EFGWert5
@@ -2867,11 +2252,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel4Bereich2EFGWert5, "lblStaffel4Bereich2EFGWert5")
         Me.lblStaffel4Bereich2EFGWert5.Name = "lblStaffel4Bereich2EFGWert5"
         Me.lblStaffel4Bereich2EFGWert5.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel4Bereich2EFGWert5.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel4Bereich2EFGWert5.RootElement.AccessibleName = Nothing
         Me.lblStaffel4Bereich2EFGWert5.TabStop = False
         '
         'lblStaffel4Bereich2EFG
@@ -2879,40 +2259,20 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel4Bereich2EFG, "lblStaffel4Bereich2EFG")
         Me.lblStaffel4Bereich2EFG.Name = "lblStaffel4Bereich2EFG"
         '
-        '
-        '
-        Me.lblStaffel4Bereich2EFG.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel4Bereich2EFG.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel4Bereich2Fehler
         '
         resources.ApplyResources(Me.lblStaffel4Bereich2Fehler, "lblStaffel4Bereich2Fehler")
         Me.lblStaffel4Bereich2Fehler.Name = "lblStaffel4Bereich2Fehler"
-        '
-        '
-        '
-        Me.lblStaffel4Bereich2Fehler.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel4Bereich2Fehler.RootElement.AccessibleName = Nothing
         '
         'lblStaffel4Bereich2Anzeige
         '
         resources.ApplyResources(Me.lblStaffel4Bereich2Anzeige, "lblStaffel4Bereich2Anzeige")
         Me.lblStaffel4Bereich2Anzeige.Name = "lblStaffel4Bereich2Anzeige"
         '
-        '
-        '
-        Me.lblStaffel4Bereich2Anzeige.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel4Bereich2Anzeige.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel4Bereich2Last
         '
         resources.ApplyResources(Me.lblStaffel4Bereich2Last, "lblStaffel4Bereich2Last")
         Me.lblStaffel4Bereich2Last.Name = "lblStaffel4Bereich2Last"
-        '
-        '
-        '
-        Me.lblStaffel4Bereich2Last.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel4Bereich2Last.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxStaffel4Bereich1
         '
@@ -2951,11 +2311,6 @@ Partial Class uco10PruefungStaffelverfahren
         Me.RadGroupBoxStaffel4Bereich1.Controls.Add(Me.lblStaffel4Bereich1Last)
         resources.ApplyResources(Me.RadGroupBoxStaffel4Bereich1, "RadGroupBoxStaffel4Bereich1")
         Me.RadGroupBoxStaffel4Bereich1.Name = "RadGroupBoxStaffel4Bereich1"
-        '
-        '
-        '
-        Me.RadGroupBoxStaffel4Bereich1.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxStaffel4Bereich1.RootElement.AccessibleName = Nothing
         '
         'PictureBox115
         '
@@ -2997,63 +2352,33 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel4Bereich1ErsatzLastUnten, "lblStaffel4Bereich1ErsatzLastUnten")
         Me.lblStaffel4Bereich1ErsatzLastUnten.Name = "lblStaffel4Bereich1ErsatzLastUnten"
         '
-        '
-        '
-        Me.lblStaffel4Bereich1ErsatzLastUnten.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel4Bereich1ErsatzLastUnten.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel4Bereich1ErsatzLastOben
         '
         resources.ApplyResources(Me.lblStaffel4Bereich1ErsatzLastOben, "lblStaffel4Bereich1ErsatzLastOben")
         Me.lblStaffel4Bereich1ErsatzLastOben.Name = "lblStaffel4Bereich1ErsatzLastOben"
         '
-        '
-        '
-        Me.lblStaffel4Bereich1ErsatzLastOben.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel4Bereich1ErsatzLastOben.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel4Bereich1Fehler7
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel4Bereich1Fehler7, "RadTextBoxControlStaffel4Bereich1Fehler7")
         Me.RadTextBoxControlStaffel4Bereich1Fehler7.Name = "RadTextBoxControlStaffel4Bereich1Fehler7"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel4Bereich1Fehler7.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel4Bereich1Fehler7.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel4Bereich1Fehler7.TabStop = False
         '
         'RadTextBoxControlStaffel4Bereich1Fehler6
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel4Bereich1Fehler6, "RadTextBoxControlStaffel4Bereich1Fehler6")
         Me.RadTextBoxControlStaffel4Bereich1Fehler6.Name = "RadTextBoxControlStaffel4Bereich1Fehler6"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel4Bereich1Fehler6.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel4Bereich1Fehler6.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel4Bereich1Fehler6.TabStop = False
         '
         'RadTextBoxControlStaffel4Bereich1Fehler5
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel4Bereich1Fehler5, "RadTextBoxControlStaffel4Bereich1Fehler5")
         Me.RadTextBoxControlStaffel4Bereich1Fehler5.Name = "RadTextBoxControlStaffel4Bereich1Fehler5"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel4Bereich1Fehler5.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel4Bereich1Fehler5.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel4Bereich1Fehler5.TabStop = False
         '
         'RadTextBoxControlStaffel4Bereich1Last4
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel4Bereich1Last4, "RadTextBoxControlStaffel4Bereich1Last4")
         Me.RadTextBoxControlStaffel4Bereich1Last4.Name = "RadTextBoxControlStaffel4Bereich1Last4"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel4Bereich1Last4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel4Bereich1Last4.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel4Bereich1Last4.TabStop = False
         '
         'RadTextBoxControlStaffel4Bereich1Anzeige4
@@ -3061,30 +2386,15 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.RadTextBoxControlStaffel4Bereich1Anzeige4, "RadTextBoxControlStaffel4Bereich1Anzeige4")
         Me.RadTextBoxControlStaffel4Bereich1Anzeige4.Name = "RadTextBoxControlStaffel4Bereich1Anzeige4"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel4Bereich1Anzeige4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel4Bereich1Anzeige4.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel4Bereich1Anzeige3
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel4Bereich1Anzeige3, "RadTextBoxControlStaffel4Bereich1Anzeige3")
         Me.RadTextBoxControlStaffel4Bereich1Anzeige3.Name = "RadTextBoxControlStaffel4Bereich1Anzeige3"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel4Bereich1Anzeige3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel4Bereich1Anzeige3.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel4Bereich1Last3
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel4Bereich1Last3, "RadTextBoxControlStaffel4Bereich1Last3")
         Me.RadTextBoxControlStaffel4Bereich1Last3.Name = "RadTextBoxControlStaffel4Bereich1Last3"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel4Bereich1Last3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel4Bereich1Last3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel4Bereich1Last3.TabStop = False
         '
         'RadTextBoxControlStaffel4Bereich1Last2
@@ -3092,80 +2402,40 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.RadTextBoxControlStaffel4Bereich1Last2, "RadTextBoxControlStaffel4Bereich1Last2")
         Me.RadTextBoxControlStaffel4Bereich1Last2.Name = "RadTextBoxControlStaffel4Bereich1Last2"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel4Bereich1Last2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel4Bereich1Last2.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel4Bereich1Anzeige1
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel4Bereich1Anzeige1, "RadTextBoxControlStaffel4Bereich1Anzeige1")
         Me.RadTextBoxControlStaffel4Bereich1Anzeige1.Name = "RadTextBoxControlStaffel4Bereich1Anzeige1"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel4Bereich1Anzeige1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel4Bereich1Anzeige1.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel4Bereich1Last1
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel4Bereich1Last1, "RadTextBoxControlStaffel4Bereich1Last1")
         Me.RadTextBoxControlStaffel4Bereich1Last1.Name = "RadTextBoxControlStaffel4Bereich1Last1"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel4Bereich1Last1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel4Bereich1Last1.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel4Bereich1MessabweichungWaage
         '
         resources.ApplyResources(Me.lblStaffel4Bereich1MessabweichungWaage, "lblStaffel4Bereich1MessabweichungWaage")
         Me.lblStaffel4Bereich1MessabweichungWaage.Name = "lblStaffel4Bereich1MessabweichungWaage"
-        '
-        '
-        '
-        Me.lblStaffel4Bereich1MessabweichungWaage.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel4Bereich1MessabweichungWaage.RootElement.AccessibleName = Nothing
         '
         'lblStaffel4Bereich1MessabweichungStaffel
         '
         resources.ApplyResources(Me.lblStaffel4Bereich1MessabweichungStaffel, "lblStaffel4Bereich1MessabweichungStaffel")
         Me.lblStaffel4Bereich1MessabweichungStaffel.Name = "lblStaffel4Bereich1MessabweichungStaffel"
         '
-        '
-        '
-        Me.lblStaffel4Bereich1MessabweichungStaffel.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel4Bereich1MessabweichungStaffel.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel4Bereich1Differenz
         '
         resources.ApplyResources(Me.lblStaffel4Bereich1Differenz, "lblStaffel4Bereich1Differenz")
         Me.lblStaffel4Bereich1Differenz.Name = "lblStaffel4Bereich1Differenz"
-        '
-        '
-        '
-        Me.lblStaffel4Bereich1Differenz.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel4Bereich1Differenz.RootElement.AccessibleName = Nothing
         '
         'lblStaffel4Bereich1ZusastzNormalLast
         '
         resources.ApplyResources(Me.lblStaffel4Bereich1ZusastzNormalLast, "lblStaffel4Bereich1ZusastzNormalLast")
         Me.lblStaffel4Bereich1ZusastzNormalLast.Name = "lblStaffel4Bereich1ZusastzNormalLast"
         '
-        '
-        '
-        Me.lblStaffel4Bereich1ZusastzNormalLast.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel4Bereich1ZusastzNormalLast.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel4Bereich1NormalLast
         '
         resources.ApplyResources(Me.lblStaffel4Bereich1NormalLast, "lblStaffel4Bereich1NormalLast")
         Me.lblStaffel4Bereich1NormalLast.Name = "lblStaffel4Bereich1NormalLast"
-        '
-        '
-        '
-        Me.lblStaffel4Bereich1NormalLast.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel4Bereich1NormalLast.RootElement.AccessibleName = Nothing
         '
         'PictureBox77
         '
@@ -3193,11 +2463,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel4Bereich1EFGWert7, "lblStaffel4Bereich1EFGWert7")
         Me.lblStaffel4Bereich1EFGWert7.Name = "lblStaffel4Bereich1EFGWert7"
         Me.lblStaffel4Bereich1EFGWert7.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel4Bereich1EFGWert7.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel4Bereich1EFGWert7.RootElement.AccessibleName = Nothing
         Me.lblStaffel4Bereich1EFGWert7.TabStop = False
         '
         'lblStaffel4Bereich1EFGWert6
@@ -3205,11 +2470,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel4Bereich1EFGWert6, "lblStaffel4Bereich1EFGWert6")
         Me.lblStaffel4Bereich1EFGWert6.Name = "lblStaffel4Bereich1EFGWert6"
         Me.lblStaffel4Bereich1EFGWert6.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel4Bereich1EFGWert6.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel4Bereich1EFGWert6.RootElement.AccessibleName = Nothing
         Me.lblStaffel4Bereich1EFGWert6.TabStop = False
         '
         'lblStaffel4Bereich1EFGWert5
@@ -3217,11 +2477,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel4Bereich1EFGWert5, "lblStaffel4Bereich1EFGWert5")
         Me.lblStaffel4Bereich1EFGWert5.Name = "lblStaffel4Bereich1EFGWert5"
         Me.lblStaffel4Bereich1EFGWert5.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel4Bereich1EFGWert5.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel4Bereich1EFGWert5.RootElement.AccessibleName = Nothing
         Me.lblStaffel4Bereich1EFGWert5.TabStop = False
         '
         'lblStaffel4Bereich1EFG
@@ -3229,40 +2484,20 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel4Bereich1EFG, "lblStaffel4Bereich1EFG")
         Me.lblStaffel4Bereich1EFG.Name = "lblStaffel4Bereich1EFG"
         '
-        '
-        '
-        Me.lblStaffel4Bereich1EFG.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel4Bereich1EFG.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel4Bereich1Fehler
         '
         resources.ApplyResources(Me.lblStaffel4Bereich1Fehler, "lblStaffel4Bereich1Fehler")
         Me.lblStaffel4Bereich1Fehler.Name = "lblStaffel4Bereich1Fehler"
-        '
-        '
-        '
-        Me.lblStaffel4Bereich1Fehler.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel4Bereich1Fehler.RootElement.AccessibleName = Nothing
         '
         'lblStaffel4Bereich1Anzeige
         '
         resources.ApplyResources(Me.lblStaffel4Bereich1Anzeige, "lblStaffel4Bereich1Anzeige")
         Me.lblStaffel4Bereich1Anzeige.Name = "lblStaffel4Bereich1Anzeige"
         '
-        '
-        '
-        Me.lblStaffel4Bereich1Anzeige.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel4Bereich1Anzeige.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel4Bereich1Last
         '
         resources.ApplyResources(Me.lblStaffel4Bereich1Last, "lblStaffel4Bereich1Last")
         Me.lblStaffel4Bereich1Last.Name = "lblStaffel4Bereich1Last"
-        '
-        '
-        '
-        Me.lblStaffel4Bereich1Last.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel4Bereich1Last.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxStaffel3
         '
@@ -3272,11 +2507,6 @@ Partial Class uco10PruefungStaffelverfahren
         Me.RadGroupBoxStaffel3.Controls.Add(Me.RadGroupBoxStaffel3Bereich1)
         resources.ApplyResources(Me.RadGroupBoxStaffel3, "RadGroupBoxStaffel3")
         Me.RadGroupBoxStaffel3.Name = "RadGroupBoxStaffel3"
-        '
-        '
-        '
-        Me.RadGroupBoxStaffel3.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxStaffel3.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxStaffel3Bereich3
         '
@@ -3315,11 +2545,6 @@ Partial Class uco10PruefungStaffelverfahren
         Me.RadGroupBoxStaffel3Bereich3.Controls.Add(Me.lblStaffel3Bereich3Last)
         resources.ApplyResources(Me.RadGroupBoxStaffel3Bereich3, "RadGroupBoxStaffel3Bereich3")
         Me.RadGroupBoxStaffel3Bereich3.Name = "RadGroupBoxStaffel3Bereich3"
-        '
-        '
-        '
-        Me.RadGroupBoxStaffel3Bereich3.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxStaffel3Bereich3.RootElement.AccessibleName = Nothing
         '
         'PictureBox106
         '
@@ -3361,63 +2586,33 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel3Bereich3ErsatzLastUnten, "lblStaffel3Bereich3ErsatzLastUnten")
         Me.lblStaffel3Bereich3ErsatzLastUnten.Name = "lblStaffel3Bereich3ErsatzLastUnten"
         '
-        '
-        '
-        Me.lblStaffel3Bereich3ErsatzLastUnten.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel3Bereich3ErsatzLastUnten.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel3Bereich3ErsatzLastOben
         '
         resources.ApplyResources(Me.lblStaffel3Bereich3ErsatzLastOben, "lblStaffel3Bereich3ErsatzLastOben")
         Me.lblStaffel3Bereich3ErsatzLastOben.Name = "lblStaffel3Bereich3ErsatzLastOben"
         '
-        '
-        '
-        Me.lblStaffel3Bereich3ErsatzLastOben.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel3Bereich3ErsatzLastOben.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel3Bereich3Fehler7
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel3Bereich3Fehler7, "RadTextBoxControlStaffel3Bereich3Fehler7")
         Me.RadTextBoxControlStaffel3Bereich3Fehler7.Name = "RadTextBoxControlStaffel3Bereich3Fehler7"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel3Bereich3Fehler7.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel3Bereich3Fehler7.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel3Bereich3Fehler7.TabStop = False
         '
         'RadTextBoxControlStaffel3Bereich3Fehler6
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel3Bereich3Fehler6, "RadTextBoxControlStaffel3Bereich3Fehler6")
         Me.RadTextBoxControlStaffel3Bereich3Fehler6.Name = "RadTextBoxControlStaffel3Bereich3Fehler6"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel3Bereich3Fehler6.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel3Bereich3Fehler6.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel3Bereich3Fehler6.TabStop = False
         '
         'RadTextBoxControlStaffel3Bereich3Fehler5
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel3Bereich3Fehler5, "RadTextBoxControlStaffel3Bereich3Fehler5")
         Me.RadTextBoxControlStaffel3Bereich3Fehler5.Name = "RadTextBoxControlStaffel3Bereich3Fehler5"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel3Bereich3Fehler5.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel3Bereich3Fehler5.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel3Bereich3Fehler5.TabStop = False
         '
         'RadTextBoxControlStaffel3Bereich3Last4
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel3Bereich3Last4, "RadTextBoxControlStaffel3Bereich3Last4")
         Me.RadTextBoxControlStaffel3Bereich3Last4.Name = "RadTextBoxControlStaffel3Bereich3Last4"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel3Bereich3Last4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel3Bereich3Last4.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel3Bereich3Last4.TabStop = False
         '
         'RadTextBoxControlStaffel3Bereich3Anzeige4
@@ -3425,30 +2620,15 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.RadTextBoxControlStaffel3Bereich3Anzeige4, "RadTextBoxControlStaffel3Bereich3Anzeige4")
         Me.RadTextBoxControlStaffel3Bereich3Anzeige4.Name = "RadTextBoxControlStaffel3Bereich3Anzeige4"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel3Bereich3Anzeige4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel3Bereich3Anzeige4.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel3Bereich3Anzeige3
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel3Bereich3Anzeige3, "RadTextBoxControlStaffel3Bereich3Anzeige3")
         Me.RadTextBoxControlStaffel3Bereich3Anzeige3.Name = "RadTextBoxControlStaffel3Bereich3Anzeige3"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel3Bereich3Anzeige3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel3Bereich3Anzeige3.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel3Bereich3Last3
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel3Bereich3Last3, "RadTextBoxControlStaffel3Bereich3Last3")
         Me.RadTextBoxControlStaffel3Bereich3Last3.Name = "RadTextBoxControlStaffel3Bereich3Last3"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel3Bereich3Last3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel3Bereich3Last3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel3Bereich3Last3.TabStop = False
         '
         'RadTextBoxControlStaffel3Bereich3Last2
@@ -3456,80 +2636,40 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.RadTextBoxControlStaffel3Bereich3Last2, "RadTextBoxControlStaffel3Bereich3Last2")
         Me.RadTextBoxControlStaffel3Bereich3Last2.Name = "RadTextBoxControlStaffel3Bereich3Last2"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel3Bereich3Last2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel3Bereich3Last2.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel3Bereich3Anzeige1
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel3Bereich3Anzeige1, "RadTextBoxControlStaffel3Bereich3Anzeige1")
         Me.RadTextBoxControlStaffel3Bereich3Anzeige1.Name = "RadTextBoxControlStaffel3Bereich3Anzeige1"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel3Bereich3Anzeige1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel3Bereich3Anzeige1.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel3Bereich3Last1
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel3Bereich3Last1, "RadTextBoxControlStaffel3Bereich3Last1")
         Me.RadTextBoxControlStaffel3Bereich3Last1.Name = "RadTextBoxControlStaffel3Bereich3Last1"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel3Bereich3Last1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel3Bereich3Last1.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel3Bereich3MessabweichungWaage
         '
         resources.ApplyResources(Me.lblStaffel3Bereich3MessabweichungWaage, "lblStaffel3Bereich3MessabweichungWaage")
         Me.lblStaffel3Bereich3MessabweichungWaage.Name = "lblStaffel3Bereich3MessabweichungWaage"
-        '
-        '
-        '
-        Me.lblStaffel3Bereich3MessabweichungWaage.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel3Bereich3MessabweichungWaage.RootElement.AccessibleName = Nothing
         '
         'lblStaffel3Bereich3MessabweichungStaffel
         '
         resources.ApplyResources(Me.lblStaffel3Bereich3MessabweichungStaffel, "lblStaffel3Bereich3MessabweichungStaffel")
         Me.lblStaffel3Bereich3MessabweichungStaffel.Name = "lblStaffel3Bereich3MessabweichungStaffel"
         '
-        '
-        '
-        Me.lblStaffel3Bereich3MessabweichungStaffel.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel3Bereich3MessabweichungStaffel.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel3Bereich3Differenz
         '
         resources.ApplyResources(Me.lblStaffel3Bereich3Differenz, "lblStaffel3Bereich3Differenz")
         Me.lblStaffel3Bereich3Differenz.Name = "lblStaffel3Bereich3Differenz"
-        '
-        '
-        '
-        Me.lblStaffel3Bereich3Differenz.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel3Bereich3Differenz.RootElement.AccessibleName = Nothing
         '
         'lblStaffel3Bereich3ZusastzNormalLast
         '
         resources.ApplyResources(Me.lblStaffel3Bereich3ZusastzNormalLast, "lblStaffel3Bereich3ZusastzNormalLast")
         Me.lblStaffel3Bereich3ZusastzNormalLast.Name = "lblStaffel3Bereich3ZusastzNormalLast"
         '
-        '
-        '
-        Me.lblStaffel3Bereich3ZusastzNormalLast.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel3Bereich3ZusastzNormalLast.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel3Bereich3NormalLast
         '
         resources.ApplyResources(Me.lblStaffel3Bereich3NormalLast, "lblStaffel3Bereich3NormalLast")
         Me.lblStaffel3Bereich3NormalLast.Name = "lblStaffel3Bereich3NormalLast"
-        '
-        '
-        '
-        Me.lblStaffel3Bereich3NormalLast.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel3Bereich3NormalLast.RootElement.AccessibleName = Nothing
         '
         'PictureBox42
         '
@@ -3557,11 +2697,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel3Bereich3EFGWert7, "lblStaffel3Bereich3EFGWert7")
         Me.lblStaffel3Bereich3EFGWert7.Name = "lblStaffel3Bereich3EFGWert7"
         Me.lblStaffel3Bereich3EFGWert7.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel3Bereich3EFGWert7.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel3Bereich3EFGWert7.RootElement.AccessibleName = Nothing
         Me.lblStaffel3Bereich3EFGWert7.TabStop = False
         '
         'lblStaffel3Bereich3EFGWert6
@@ -3569,11 +2704,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel3Bereich3EFGWert6, "lblStaffel3Bereich3EFGWert6")
         Me.lblStaffel3Bereich3EFGWert6.Name = "lblStaffel3Bereich3EFGWert6"
         Me.lblStaffel3Bereich3EFGWert6.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel3Bereich3EFGWert6.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel3Bereich3EFGWert6.RootElement.AccessibleName = Nothing
         Me.lblStaffel3Bereich3EFGWert6.TabStop = False
         '
         'lblStaffel3Bereich3EFGWert5
@@ -3581,11 +2711,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel3Bereich3EFGWert5, "lblStaffel3Bereich3EFGWert5")
         Me.lblStaffel3Bereich3EFGWert5.Name = "lblStaffel3Bereich3EFGWert5"
         Me.lblStaffel3Bereich3EFGWert5.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel3Bereich3EFGWert5.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel3Bereich3EFGWert5.RootElement.AccessibleName = Nothing
         Me.lblStaffel3Bereich3EFGWert5.TabStop = False
         '
         'lblStaffel3Bereich3EFG
@@ -3593,40 +2718,20 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel3Bereich3EFG, "lblStaffel3Bereich3EFG")
         Me.lblStaffel3Bereich3EFG.Name = "lblStaffel3Bereich3EFG"
         '
-        '
-        '
-        Me.lblStaffel3Bereich3EFG.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel3Bereich3EFG.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel3Bereich3Fehler
         '
         resources.ApplyResources(Me.lblStaffel3Bereich3Fehler, "lblStaffel3Bereich3Fehler")
         Me.lblStaffel3Bereich3Fehler.Name = "lblStaffel3Bereich3Fehler"
-        '
-        '
-        '
-        Me.lblStaffel3Bereich3Fehler.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel3Bereich3Fehler.RootElement.AccessibleName = Nothing
         '
         'lblStaffel3Bereich3Anzeige
         '
         resources.ApplyResources(Me.lblStaffel3Bereich3Anzeige, "lblStaffel3Bereich3Anzeige")
         Me.lblStaffel3Bereich3Anzeige.Name = "lblStaffel3Bereich3Anzeige"
         '
-        '
-        '
-        Me.lblStaffel3Bereich3Anzeige.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel3Bereich3Anzeige.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel3Bereich3Last
         '
         resources.ApplyResources(Me.lblStaffel3Bereich3Last, "lblStaffel3Bereich3Last")
         Me.lblStaffel3Bereich3Last.Name = "lblStaffel3Bereich3Last"
-        '
-        '
-        '
-        Me.lblStaffel3Bereich3Last.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel3Bereich3Last.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxStaffel3Bereich2
         '
@@ -3665,11 +2770,6 @@ Partial Class uco10PruefungStaffelverfahren
         Me.RadGroupBoxStaffel3Bereich2.Controls.Add(Me.lblStaffel3Bereich2Last)
         resources.ApplyResources(Me.RadGroupBoxStaffel3Bereich2, "RadGroupBoxStaffel3Bereich2")
         Me.RadGroupBoxStaffel3Bereich2.Name = "RadGroupBoxStaffel3Bereich2"
-        '
-        '
-        '
-        Me.RadGroupBoxStaffel3Bereich2.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxStaffel3Bereich2.RootElement.AccessibleName = Nothing
         '
         'PictureBox109
         '
@@ -3711,63 +2811,33 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel3Bereich2ErsatzLastUnten, "lblStaffel3Bereich2ErsatzLastUnten")
         Me.lblStaffel3Bereich2ErsatzLastUnten.Name = "lblStaffel3Bereich2ErsatzLastUnten"
         '
-        '
-        '
-        Me.lblStaffel3Bereich2ErsatzLastUnten.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel3Bereich2ErsatzLastUnten.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel3Bereich2ErsatzLastOben
         '
         resources.ApplyResources(Me.lblStaffel3Bereich2ErsatzLastOben, "lblStaffel3Bereich2ErsatzLastOben")
         Me.lblStaffel3Bereich2ErsatzLastOben.Name = "lblStaffel3Bereich2ErsatzLastOben"
         '
-        '
-        '
-        Me.lblStaffel3Bereich2ErsatzLastOben.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel3Bereich2ErsatzLastOben.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel3Bereich2Fehler7
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel3Bereich2Fehler7, "RadTextBoxControlStaffel3Bereich2Fehler7")
         Me.RadTextBoxControlStaffel3Bereich2Fehler7.Name = "RadTextBoxControlStaffel3Bereich2Fehler7"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel3Bereich2Fehler7.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel3Bereich2Fehler7.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel3Bereich2Fehler7.TabStop = False
         '
         'RadTextBoxControlStaffel3Bereich2Fehler6
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel3Bereich2Fehler6, "RadTextBoxControlStaffel3Bereich2Fehler6")
         Me.RadTextBoxControlStaffel3Bereich2Fehler6.Name = "RadTextBoxControlStaffel3Bereich2Fehler6"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel3Bereich2Fehler6.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel3Bereich2Fehler6.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel3Bereich2Fehler6.TabStop = False
         '
         'RadTextBoxControlStaffel3Bereich2Fehler5
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel3Bereich2Fehler5, "RadTextBoxControlStaffel3Bereich2Fehler5")
         Me.RadTextBoxControlStaffel3Bereich2Fehler5.Name = "RadTextBoxControlStaffel3Bereich2Fehler5"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel3Bereich2Fehler5.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel3Bereich2Fehler5.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel3Bereich2Fehler5.TabStop = False
         '
         'RadTextBoxControlStaffel3Bereich2Last4
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel3Bereich2Last4, "RadTextBoxControlStaffel3Bereich2Last4")
         Me.RadTextBoxControlStaffel3Bereich2Last4.Name = "RadTextBoxControlStaffel3Bereich2Last4"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel3Bereich2Last4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel3Bereich2Last4.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel3Bereich2Last4.TabStop = False
         '
         'RadTextBoxControlStaffel3Bereich2Anzeige4
@@ -3775,30 +2845,15 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.RadTextBoxControlStaffel3Bereich2Anzeige4, "RadTextBoxControlStaffel3Bereich2Anzeige4")
         Me.RadTextBoxControlStaffel3Bereich2Anzeige4.Name = "RadTextBoxControlStaffel3Bereich2Anzeige4"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel3Bereich2Anzeige4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel3Bereich2Anzeige4.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel3Bereich2Anzeige3
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel3Bereich2Anzeige3, "RadTextBoxControlStaffel3Bereich2Anzeige3")
         Me.RadTextBoxControlStaffel3Bereich2Anzeige3.Name = "RadTextBoxControlStaffel3Bereich2Anzeige3"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel3Bereich2Anzeige3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel3Bereich2Anzeige3.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel3Bereich2Last3
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel3Bereich2Last3, "RadTextBoxControlStaffel3Bereich2Last3")
         Me.RadTextBoxControlStaffel3Bereich2Last3.Name = "RadTextBoxControlStaffel3Bereich2Last3"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel3Bereich2Last3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel3Bereich2Last3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel3Bereich2Last3.TabStop = False
         '
         'RadTextBoxControlStaffel3Bereich2Last2
@@ -3806,80 +2861,40 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.RadTextBoxControlStaffel3Bereich2Last2, "RadTextBoxControlStaffel3Bereich2Last2")
         Me.RadTextBoxControlStaffel3Bereich2Last2.Name = "RadTextBoxControlStaffel3Bereich2Last2"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel3Bereich2Last2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel3Bereich2Last2.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel3Bereich2Anzeige1
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel3Bereich2Anzeige1, "RadTextBoxControlStaffel3Bereich2Anzeige1")
         Me.RadTextBoxControlStaffel3Bereich2Anzeige1.Name = "RadTextBoxControlStaffel3Bereich2Anzeige1"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel3Bereich2Anzeige1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel3Bereich2Anzeige1.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel3Bereich2Last1
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel3Bereich2Last1, "RadTextBoxControlStaffel3Bereich2Last1")
         Me.RadTextBoxControlStaffel3Bereich2Last1.Name = "RadTextBoxControlStaffel3Bereich2Last1"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel3Bereich2Last1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel3Bereich2Last1.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel3Bereich2MessabweichungWaage
         '
         resources.ApplyResources(Me.lblStaffel3Bereich2MessabweichungWaage, "lblStaffel3Bereich2MessabweichungWaage")
         Me.lblStaffel3Bereich2MessabweichungWaage.Name = "lblStaffel3Bereich2MessabweichungWaage"
-        '
-        '
-        '
-        Me.lblStaffel3Bereich2MessabweichungWaage.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel3Bereich2MessabweichungWaage.RootElement.AccessibleName = Nothing
         '
         'lblStaffel3Bereich2MessabweichungStaffel
         '
         resources.ApplyResources(Me.lblStaffel3Bereich2MessabweichungStaffel, "lblStaffel3Bereich2MessabweichungStaffel")
         Me.lblStaffel3Bereich2MessabweichungStaffel.Name = "lblStaffel3Bereich2MessabweichungStaffel"
         '
-        '
-        '
-        Me.lblStaffel3Bereich2MessabweichungStaffel.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel3Bereich2MessabweichungStaffel.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel3Bereich2Differenz
         '
         resources.ApplyResources(Me.lblStaffel3Bereich2Differenz, "lblStaffel3Bereich2Differenz")
         Me.lblStaffel3Bereich2Differenz.Name = "lblStaffel3Bereich2Differenz"
-        '
-        '
-        '
-        Me.lblStaffel3Bereich2Differenz.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel3Bereich2Differenz.RootElement.AccessibleName = Nothing
         '
         'lblStaffel3Bereich2ZusastzNormalLast
         '
         resources.ApplyResources(Me.lblStaffel3Bereich2ZusastzNormalLast, "lblStaffel3Bereich2ZusastzNormalLast")
         Me.lblStaffel3Bereich2ZusastzNormalLast.Name = "lblStaffel3Bereich2ZusastzNormalLast"
         '
-        '
-        '
-        Me.lblStaffel3Bereich2ZusastzNormalLast.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel3Bereich2ZusastzNormalLast.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel3Bereich2NormalLast
         '
         resources.ApplyResources(Me.lblStaffel3Bereich2NormalLast, "lblStaffel3Bereich2NormalLast")
         Me.lblStaffel3Bereich2NormalLast.Name = "lblStaffel3Bereich2NormalLast"
-        '
-        '
-        '
-        Me.lblStaffel3Bereich2NormalLast.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel3Bereich2NormalLast.RootElement.AccessibleName = Nothing
         '
         'PictureBox49
         '
@@ -3907,11 +2922,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel3Bereich2EFGWert7, "lblStaffel3Bereich2EFGWert7")
         Me.lblStaffel3Bereich2EFGWert7.Name = "lblStaffel3Bereich2EFGWert7"
         Me.lblStaffel3Bereich2EFGWert7.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel3Bereich2EFGWert7.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel3Bereich2EFGWert7.RootElement.AccessibleName = Nothing
         Me.lblStaffel3Bereich2EFGWert7.TabStop = False
         '
         'lblStaffel3Bereich2EFGWert6
@@ -3919,11 +2929,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel3Bereich2EFGWert6, "lblStaffel3Bereich2EFGWert6")
         Me.lblStaffel3Bereich2EFGWert6.Name = "lblStaffel3Bereich2EFGWert6"
         Me.lblStaffel3Bereich2EFGWert6.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel3Bereich2EFGWert6.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel3Bereich2EFGWert6.RootElement.AccessibleName = Nothing
         Me.lblStaffel3Bereich2EFGWert6.TabStop = False
         '
         'lblStaffel3Bereich2EFGWert5
@@ -3931,11 +2936,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel3Bereich2EFGWert5, "lblStaffel3Bereich2EFGWert5")
         Me.lblStaffel3Bereich2EFGWert5.Name = "lblStaffel3Bereich2EFGWert5"
         Me.lblStaffel3Bereich2EFGWert5.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel3Bereich2EFGWert5.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel3Bereich2EFGWert5.RootElement.AccessibleName = Nothing
         Me.lblStaffel3Bereich2EFGWert5.TabStop = False
         '
         'lblStaffel3Bereich2EFG
@@ -3943,40 +2943,20 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel3Bereich2EFG, "lblStaffel3Bereich2EFG")
         Me.lblStaffel3Bereich2EFG.Name = "lblStaffel3Bereich2EFG"
         '
-        '
-        '
-        Me.lblStaffel3Bereich2EFG.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel3Bereich2EFG.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel3Bereich2Fehler
         '
         resources.ApplyResources(Me.lblStaffel3Bereich2Fehler, "lblStaffel3Bereich2Fehler")
         Me.lblStaffel3Bereich2Fehler.Name = "lblStaffel3Bereich2Fehler"
-        '
-        '
-        '
-        Me.lblStaffel3Bereich2Fehler.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel3Bereich2Fehler.RootElement.AccessibleName = Nothing
         '
         'lblStaffel3Bereich2Anzeige
         '
         resources.ApplyResources(Me.lblStaffel3Bereich2Anzeige, "lblStaffel3Bereich2Anzeige")
         Me.lblStaffel3Bereich2Anzeige.Name = "lblStaffel3Bereich2Anzeige"
         '
-        '
-        '
-        Me.lblStaffel3Bereich2Anzeige.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel3Bereich2Anzeige.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel3Bereich2Last
         '
         resources.ApplyResources(Me.lblStaffel3Bereich2Last, "lblStaffel3Bereich2Last")
         Me.lblStaffel3Bereich2Last.Name = "lblStaffel3Bereich2Last"
-        '
-        '
-        '
-        Me.lblStaffel3Bereich2Last.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel3Bereich2Last.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxStaffel3Bereich1
         '
@@ -4015,11 +2995,6 @@ Partial Class uco10PruefungStaffelverfahren
         Me.RadGroupBoxStaffel3Bereich1.Controls.Add(Me.lblStaffel3Bereich1Last)
         resources.ApplyResources(Me.RadGroupBoxStaffel3Bereich1, "RadGroupBoxStaffel3Bereich1")
         Me.RadGroupBoxStaffel3Bereich1.Name = "RadGroupBoxStaffel3Bereich1"
-        '
-        '
-        '
-        Me.RadGroupBoxStaffel3Bereich1.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxStaffel3Bereich1.RootElement.AccessibleName = Nothing
         '
         'PictureBox112
         '
@@ -4061,63 +3036,33 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel3Bereich1ErsatzLastUnten, "lblStaffel3Bereich1ErsatzLastUnten")
         Me.lblStaffel3Bereich1ErsatzLastUnten.Name = "lblStaffel3Bereich1ErsatzLastUnten"
         '
-        '
-        '
-        Me.lblStaffel3Bereich1ErsatzLastUnten.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel3Bereich1ErsatzLastUnten.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel3Bereich1ErsatzLastOben
         '
         resources.ApplyResources(Me.lblStaffel3Bereich1ErsatzLastOben, "lblStaffel3Bereich1ErsatzLastOben")
         Me.lblStaffel3Bereich1ErsatzLastOben.Name = "lblStaffel3Bereich1ErsatzLastOben"
         '
-        '
-        '
-        Me.lblStaffel3Bereich1ErsatzLastOben.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel3Bereich1ErsatzLastOben.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel3Bereich1Fehler7
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel3Bereich1Fehler7, "RadTextBoxControlStaffel3Bereich1Fehler7")
         Me.RadTextBoxControlStaffel3Bereich1Fehler7.Name = "RadTextBoxControlStaffel3Bereich1Fehler7"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel3Bereich1Fehler7.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel3Bereich1Fehler7.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel3Bereich1Fehler7.TabStop = False
         '
         'RadTextBoxControlStaffel3Bereich1Fehler6
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel3Bereich1Fehler6, "RadTextBoxControlStaffel3Bereich1Fehler6")
         Me.RadTextBoxControlStaffel3Bereich1Fehler6.Name = "RadTextBoxControlStaffel3Bereich1Fehler6"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel3Bereich1Fehler6.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel3Bereich1Fehler6.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel3Bereich1Fehler6.TabStop = False
         '
         'RadTextBoxControlStaffel3Bereich1Fehler5
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel3Bereich1Fehler5, "RadTextBoxControlStaffel3Bereich1Fehler5")
         Me.RadTextBoxControlStaffel3Bereich1Fehler5.Name = "RadTextBoxControlStaffel3Bereich1Fehler5"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel3Bereich1Fehler5.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel3Bereich1Fehler5.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel3Bereich1Fehler5.TabStop = False
         '
         'RadTextBoxControlStaffel3Bereich1Last4
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel3Bereich1Last4, "RadTextBoxControlStaffel3Bereich1Last4")
         Me.RadTextBoxControlStaffel3Bereich1Last4.Name = "RadTextBoxControlStaffel3Bereich1Last4"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel3Bereich1Last4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel3Bereich1Last4.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel3Bereich1Last4.TabStop = False
         '
         'RadTextBoxControlStaffel3Bereich1Anzeige4
@@ -4125,30 +3070,15 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.RadTextBoxControlStaffel3Bereich1Anzeige4, "RadTextBoxControlStaffel3Bereich1Anzeige4")
         Me.RadTextBoxControlStaffel3Bereich1Anzeige4.Name = "RadTextBoxControlStaffel3Bereich1Anzeige4"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel3Bereich1Anzeige4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel3Bereich1Anzeige4.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel3Bereich1Anzeige3
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel3Bereich1Anzeige3, "RadTextBoxControlStaffel3Bereich1Anzeige3")
         Me.RadTextBoxControlStaffel3Bereich1Anzeige3.Name = "RadTextBoxControlStaffel3Bereich1Anzeige3"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel3Bereich1Anzeige3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel3Bereich1Anzeige3.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel3Bereich1Last3
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel3Bereich1Last3, "RadTextBoxControlStaffel3Bereich1Last3")
         Me.RadTextBoxControlStaffel3Bereich1Last3.Name = "RadTextBoxControlStaffel3Bereich1Last3"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel3Bereich1Last3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel3Bereich1Last3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel3Bereich1Last3.TabStop = False
         '
         'RadTextBoxControlStaffel3Bereich1Last2
@@ -4156,80 +3086,40 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.RadTextBoxControlStaffel3Bereich1Last2, "RadTextBoxControlStaffel3Bereich1Last2")
         Me.RadTextBoxControlStaffel3Bereich1Last2.Name = "RadTextBoxControlStaffel3Bereich1Last2"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel3Bereich1Last2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel3Bereich1Last2.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel3Bereich1Anzeige1
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel3Bereich1Anzeige1, "RadTextBoxControlStaffel3Bereich1Anzeige1")
         Me.RadTextBoxControlStaffel3Bereich1Anzeige1.Name = "RadTextBoxControlStaffel3Bereich1Anzeige1"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel3Bereich1Anzeige1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel3Bereich1Anzeige1.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel3Bereich1Last1
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel3Bereich1Last1, "RadTextBoxControlStaffel3Bereich1Last1")
         Me.RadTextBoxControlStaffel3Bereich1Last1.Name = "RadTextBoxControlStaffel3Bereich1Last1"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel3Bereich1Last1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel3Bereich1Last1.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel3Bereich1MessabweichungWaage
         '
         resources.ApplyResources(Me.lblStaffel3Bereich1MessabweichungWaage, "lblStaffel3Bereich1MessabweichungWaage")
         Me.lblStaffel3Bereich1MessabweichungWaage.Name = "lblStaffel3Bereich1MessabweichungWaage"
-        '
-        '
-        '
-        Me.lblStaffel3Bereich1MessabweichungWaage.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel3Bereich1MessabweichungWaage.RootElement.AccessibleName = Nothing
         '
         'lblStaffel3Bereich1MessabweichungStaffel
         '
         resources.ApplyResources(Me.lblStaffel3Bereich1MessabweichungStaffel, "lblStaffel3Bereich1MessabweichungStaffel")
         Me.lblStaffel3Bereich1MessabweichungStaffel.Name = "lblStaffel3Bereich1MessabweichungStaffel"
         '
-        '
-        '
-        Me.lblStaffel3Bereich1MessabweichungStaffel.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel3Bereich1MessabweichungStaffel.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel3Bereich1Differenz
         '
         resources.ApplyResources(Me.lblStaffel3Bereich1Differenz, "lblStaffel3Bereich1Differenz")
         Me.lblStaffel3Bereich1Differenz.Name = "lblStaffel3Bereich1Differenz"
-        '
-        '
-        '
-        Me.lblStaffel3Bereich1Differenz.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel3Bereich1Differenz.RootElement.AccessibleName = Nothing
         '
         'lblStaffel3Bereich1ZusastzNormalLast
         '
         resources.ApplyResources(Me.lblStaffel3Bereich1ZusastzNormalLast, "lblStaffel3Bereich1ZusastzNormalLast")
         Me.lblStaffel3Bereich1ZusastzNormalLast.Name = "lblStaffel3Bereich1ZusastzNormalLast"
         '
-        '
-        '
-        Me.lblStaffel3Bereich1ZusastzNormalLast.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel3Bereich1ZusastzNormalLast.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel3Bereich1NormalLast
         '
         resources.ApplyResources(Me.lblStaffel3Bereich1NormalLast, "lblStaffel3Bereich1NormalLast")
         Me.lblStaffel3Bereich1NormalLast.Name = "lblStaffel3Bereich1NormalLast"
-        '
-        '
-        '
-        Me.lblStaffel3Bereich1NormalLast.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel3Bereich1NormalLast.RootElement.AccessibleName = Nothing
         '
         'PictureBox56
         '
@@ -4257,11 +3147,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel3Bereich1EFGWert7, "lblStaffel3Bereich1EFGWert7")
         Me.lblStaffel3Bereich1EFGWert7.Name = "lblStaffel3Bereich1EFGWert7"
         Me.lblStaffel3Bereich1EFGWert7.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel3Bereich1EFGWert7.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel3Bereich1EFGWert7.RootElement.AccessibleName = Nothing
         Me.lblStaffel3Bereich1EFGWert7.TabStop = False
         '
         'lblStaffel3Bereich1EFGWert6
@@ -4269,11 +3154,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel3Bereich1EFGWert6, "lblStaffel3Bereich1EFGWert6")
         Me.lblStaffel3Bereich1EFGWert6.Name = "lblStaffel3Bereich1EFGWert6"
         Me.lblStaffel3Bereich1EFGWert6.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel3Bereich1EFGWert6.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel3Bereich1EFGWert6.RootElement.AccessibleName = Nothing
         Me.lblStaffel3Bereich1EFGWert6.TabStop = False
         '
         'lblStaffel3Bereich1EFGWert5
@@ -4281,11 +3161,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel3Bereich1EFGWert5, "lblStaffel3Bereich1EFGWert5")
         Me.lblStaffel3Bereich1EFGWert5.Name = "lblStaffel3Bereich1EFGWert5"
         Me.lblStaffel3Bereich1EFGWert5.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel3Bereich1EFGWert5.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel3Bereich1EFGWert5.RootElement.AccessibleName = Nothing
         Me.lblStaffel3Bereich1EFGWert5.TabStop = False
         '
         'lblStaffel3Bereich1EFG
@@ -4293,40 +3168,20 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel3Bereich1EFG, "lblStaffel3Bereich1EFG")
         Me.lblStaffel3Bereich1EFG.Name = "lblStaffel3Bereich1EFG"
         '
-        '
-        '
-        Me.lblStaffel3Bereich1EFG.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel3Bereich1EFG.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel3Bereich1Fehler
         '
         resources.ApplyResources(Me.lblStaffel3Bereich1Fehler, "lblStaffel3Bereich1Fehler")
         Me.lblStaffel3Bereich1Fehler.Name = "lblStaffel3Bereich1Fehler"
-        '
-        '
-        '
-        Me.lblStaffel3Bereich1Fehler.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel3Bereich1Fehler.RootElement.AccessibleName = Nothing
         '
         'lblStaffel3Bereich1Anzeige
         '
         resources.ApplyResources(Me.lblStaffel3Bereich1Anzeige, "lblStaffel3Bereich1Anzeige")
         Me.lblStaffel3Bereich1Anzeige.Name = "lblStaffel3Bereich1Anzeige"
         '
-        '
-        '
-        Me.lblStaffel3Bereich1Anzeige.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel3Bereich1Anzeige.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel3Bereich1Last
         '
         resources.ApplyResources(Me.lblStaffel3Bereich1Last, "lblStaffel3Bereich1Last")
         Me.lblStaffel3Bereich1Last.Name = "lblStaffel3Bereich1Last"
-        '
-        '
-        '
-        Me.lblStaffel3Bereich1Last.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel3Bereich1Last.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxStaffel2
         '
@@ -4336,11 +3191,6 @@ Partial Class uco10PruefungStaffelverfahren
         Me.RadGroupBoxStaffel2.Controls.Add(Me.RadGroupBoxStaffel2Bereich1)
         resources.ApplyResources(Me.RadGroupBoxStaffel2, "RadGroupBoxStaffel2")
         Me.RadGroupBoxStaffel2.Name = "RadGroupBoxStaffel2"
-        '
-        '
-        '
-        Me.RadGroupBoxStaffel2.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxStaffel2.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxStaffel2Bereich3
         '
@@ -4379,11 +3229,6 @@ Partial Class uco10PruefungStaffelverfahren
         Me.RadGroupBoxStaffel2Bereich3.Controls.Add(Me.lblStaffel2Bereich3Last)
         resources.ApplyResources(Me.RadGroupBoxStaffel2Bereich3, "RadGroupBoxStaffel2Bereich3")
         Me.RadGroupBoxStaffel2Bereich3.Name = "RadGroupBoxStaffel2Bereich3"
-        '
-        '
-        '
-        Me.RadGroupBoxStaffel2Bereich3.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxStaffel2Bereich3.RootElement.AccessibleName = Nothing
         '
         'PictureBox103
         '
@@ -4425,63 +3270,33 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel2Bereich3ErsatzLastUnten, "lblStaffel2Bereich3ErsatzLastUnten")
         Me.lblStaffel2Bereich3ErsatzLastUnten.Name = "lblStaffel2Bereich3ErsatzLastUnten"
         '
-        '
-        '
-        Me.lblStaffel2Bereich3ErsatzLastUnten.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel2Bereich3ErsatzLastUnten.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel2Bereich3ErsatzLastOben
         '
         resources.ApplyResources(Me.lblStaffel2Bereich3ErsatzLastOben, "lblStaffel2Bereich3ErsatzLastOben")
         Me.lblStaffel2Bereich3ErsatzLastOben.Name = "lblStaffel2Bereich3ErsatzLastOben"
         '
-        '
-        '
-        Me.lblStaffel2Bereich3ErsatzLastOben.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel2Bereich3ErsatzLastOben.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel2Bereich3Fehler7
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel2Bereich3Fehler7, "RadTextBoxControlStaffel2Bereich3Fehler7")
         Me.RadTextBoxControlStaffel2Bereich3Fehler7.Name = "RadTextBoxControlStaffel2Bereich3Fehler7"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel2Bereich3Fehler7.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel2Bereich3Fehler7.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel2Bereich3Fehler7.TabStop = False
         '
         'RadTextBoxControlStaffel2Bereich3Fehler6
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel2Bereich3Fehler6, "RadTextBoxControlStaffel2Bereich3Fehler6")
         Me.RadTextBoxControlStaffel2Bereich3Fehler6.Name = "RadTextBoxControlStaffel2Bereich3Fehler6"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel2Bereich3Fehler6.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel2Bereich3Fehler6.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel2Bereich3Fehler6.TabStop = False
         '
         'RadTextBoxControlStaffel2Bereich3Fehler5
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel2Bereich3Fehler5, "RadTextBoxControlStaffel2Bereich3Fehler5")
         Me.RadTextBoxControlStaffel2Bereich3Fehler5.Name = "RadTextBoxControlStaffel2Bereich3Fehler5"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel2Bereich3Fehler5.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel2Bereich3Fehler5.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel2Bereich3Fehler5.TabStop = False
         '
         'RadTextBoxControlStaffel2Bereich3Last4
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel2Bereich3Last4, "RadTextBoxControlStaffel2Bereich3Last4")
         Me.RadTextBoxControlStaffel2Bereich3Last4.Name = "RadTextBoxControlStaffel2Bereich3Last4"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel2Bereich3Last4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel2Bereich3Last4.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel2Bereich3Last4.TabStop = False
         '
         'RadTextBoxControlStaffel2Bereich3Anzeige4
@@ -4489,30 +3304,15 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.RadTextBoxControlStaffel2Bereich3Anzeige4, "RadTextBoxControlStaffel2Bereich3Anzeige4")
         Me.RadTextBoxControlStaffel2Bereich3Anzeige4.Name = "RadTextBoxControlStaffel2Bereich3Anzeige4"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel2Bereich3Anzeige4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel2Bereich3Anzeige4.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel2Bereich3Anzeige3
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel2Bereich3Anzeige3, "RadTextBoxControlStaffel2Bereich3Anzeige3")
         Me.RadTextBoxControlStaffel2Bereich3Anzeige3.Name = "RadTextBoxControlStaffel2Bereich3Anzeige3"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel2Bereich3Anzeige3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel2Bereich3Anzeige3.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel2Bereich3Last3
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel2Bereich3Last3, "RadTextBoxControlStaffel2Bereich3Last3")
         Me.RadTextBoxControlStaffel2Bereich3Last3.Name = "RadTextBoxControlStaffel2Bereich3Last3"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel2Bereich3Last3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel2Bereich3Last3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel2Bereich3Last3.TabStop = False
         '
         'RadTextBoxControlStaffel2Bereich3Last2
@@ -4520,80 +3320,40 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.RadTextBoxControlStaffel2Bereich3Last2, "RadTextBoxControlStaffel2Bereich3Last2")
         Me.RadTextBoxControlStaffel2Bereich3Last2.Name = "RadTextBoxControlStaffel2Bereich3Last2"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel2Bereich3Last2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel2Bereich3Last2.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel2Bereich3Anzeige1
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel2Bereich3Anzeige1, "RadTextBoxControlStaffel2Bereich3Anzeige1")
         Me.RadTextBoxControlStaffel2Bereich3Anzeige1.Name = "RadTextBoxControlStaffel2Bereich3Anzeige1"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel2Bereich3Anzeige1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel2Bereich3Anzeige1.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel2Bereich3Last1
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel2Bereich3Last1, "RadTextBoxControlStaffel2Bereich3Last1")
         Me.RadTextBoxControlStaffel2Bereich3Last1.Name = "RadTextBoxControlStaffel2Bereich3Last1"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel2Bereich3Last1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel2Bereich3Last1.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel2Bereich3MessabweichungWaage
         '
         resources.ApplyResources(Me.lblStaffel2Bereich3MessabweichungWaage, "lblStaffel2Bereich3MessabweichungWaage")
         Me.lblStaffel2Bereich3MessabweichungWaage.Name = "lblStaffel2Bereich3MessabweichungWaage"
-        '
-        '
-        '
-        Me.lblStaffel2Bereich3MessabweichungWaage.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel2Bereich3MessabweichungWaage.RootElement.AccessibleName = Nothing
         '
         'lblStaffel2Bereich3MessabweichungStaffel
         '
         resources.ApplyResources(Me.lblStaffel2Bereich3MessabweichungStaffel, "lblStaffel2Bereich3MessabweichungStaffel")
         Me.lblStaffel2Bereich3MessabweichungStaffel.Name = "lblStaffel2Bereich3MessabweichungStaffel"
         '
-        '
-        '
-        Me.lblStaffel2Bereich3MessabweichungStaffel.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel2Bereich3MessabweichungStaffel.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel2Bereich3Differenz
         '
         resources.ApplyResources(Me.lblStaffel2Bereich3Differenz, "lblStaffel2Bereich3Differenz")
         Me.lblStaffel2Bereich3Differenz.Name = "lblStaffel2Bereich3Differenz"
-        '
-        '
-        '
-        Me.lblStaffel2Bereich3Differenz.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel2Bereich3Differenz.RootElement.AccessibleName = Nothing
         '
         'lblStaffel2Bereich3ZusastzNormalLast
         '
         resources.ApplyResources(Me.lblStaffel2Bereich3ZusastzNormalLast, "lblStaffel2Bereich3ZusastzNormalLast")
         Me.lblStaffel2Bereich3ZusastzNormalLast.Name = "lblStaffel2Bereich3ZusastzNormalLast"
         '
-        '
-        '
-        Me.lblStaffel2Bereich3ZusastzNormalLast.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel2Bereich3ZusastzNormalLast.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel2Bereich3NormalLast
         '
         resources.ApplyResources(Me.lblStaffel2Bereich3NormalLast, "lblStaffel2Bereich3NormalLast")
         Me.lblStaffel2Bereich3NormalLast.Name = "lblStaffel2Bereich3NormalLast"
-        '
-        '
-        '
-        Me.lblStaffel2Bereich3NormalLast.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel2Bereich3NormalLast.RootElement.AccessibleName = Nothing
         '
         'PictureBox21
         '
@@ -4621,11 +3381,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel2Bereich3EFGWert7, "lblStaffel2Bereich3EFGWert7")
         Me.lblStaffel2Bereich3EFGWert7.Name = "lblStaffel2Bereich3EFGWert7"
         Me.lblStaffel2Bereich3EFGWert7.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel2Bereich3EFGWert7.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel2Bereich3EFGWert7.RootElement.AccessibleName = Nothing
         Me.lblStaffel2Bereich3EFGWert7.TabStop = False
         '
         'lblStaffel2Bereich3EFGWert6
@@ -4633,11 +3388,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel2Bereich3EFGWert6, "lblStaffel2Bereich3EFGWert6")
         Me.lblStaffel2Bereich3EFGWert6.Name = "lblStaffel2Bereich3EFGWert6"
         Me.lblStaffel2Bereich3EFGWert6.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel2Bereich3EFGWert6.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel2Bereich3EFGWert6.RootElement.AccessibleName = Nothing
         Me.lblStaffel2Bereich3EFGWert6.TabStop = False
         '
         'lblStaffel2Bereich3EFGWert5
@@ -4645,11 +3395,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel2Bereich3EFGWert5, "lblStaffel2Bereich3EFGWert5")
         Me.lblStaffel2Bereich3EFGWert5.Name = "lblStaffel2Bereich3EFGWert5"
         Me.lblStaffel2Bereich3EFGWert5.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel2Bereich3EFGWert5.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel2Bereich3EFGWert5.RootElement.AccessibleName = Nothing
         Me.lblStaffel2Bereich3EFGWert5.TabStop = False
         '
         'lblStaffel2Bereich3EFG
@@ -4657,40 +3402,20 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel2Bereich3EFG, "lblStaffel2Bereich3EFG")
         Me.lblStaffel2Bereich3EFG.Name = "lblStaffel2Bereich3EFG"
         '
-        '
-        '
-        Me.lblStaffel2Bereich3EFG.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel2Bereich3EFG.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel2Bereich3Fehler
         '
         resources.ApplyResources(Me.lblStaffel2Bereich3Fehler, "lblStaffel2Bereich3Fehler")
         Me.lblStaffel2Bereich3Fehler.Name = "lblStaffel2Bereich3Fehler"
-        '
-        '
-        '
-        Me.lblStaffel2Bereich3Fehler.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel2Bereich3Fehler.RootElement.AccessibleName = Nothing
         '
         'lblStaffel2Bereich3Anzeige
         '
         resources.ApplyResources(Me.lblStaffel2Bereich3Anzeige, "lblStaffel2Bereich3Anzeige")
         Me.lblStaffel2Bereich3Anzeige.Name = "lblStaffel2Bereich3Anzeige"
         '
-        '
-        '
-        Me.lblStaffel2Bereich3Anzeige.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel2Bereich3Anzeige.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel2Bereich3Last
         '
         resources.ApplyResources(Me.lblStaffel2Bereich3Last, "lblStaffel2Bereich3Last")
         Me.lblStaffel2Bereich3Last.Name = "lblStaffel2Bereich3Last"
-        '
-        '
-        '
-        Me.lblStaffel2Bereich3Last.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel2Bereich3Last.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxStaffel2Bereich2
         '
@@ -4729,11 +3454,6 @@ Partial Class uco10PruefungStaffelverfahren
         Me.RadGroupBoxStaffel2Bereich2.Controls.Add(Me.lblStaffel2Bereich2Last)
         resources.ApplyResources(Me.RadGroupBoxStaffel2Bereich2, "RadGroupBoxStaffel2Bereich2")
         Me.RadGroupBoxStaffel2Bereich2.Name = "RadGroupBoxStaffel2Bereich2"
-        '
-        '
-        '
-        Me.RadGroupBoxStaffel2Bereich2.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxStaffel2Bereich2.RootElement.AccessibleName = Nothing
         '
         'PictureBox97
         '
@@ -4775,63 +3495,33 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel2Bereich2ErsatzLastUnten, "lblStaffel2Bereich2ErsatzLastUnten")
         Me.lblStaffel2Bereich2ErsatzLastUnten.Name = "lblStaffel2Bereich2ErsatzLastUnten"
         '
-        '
-        '
-        Me.lblStaffel2Bereich2ErsatzLastUnten.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel2Bereich2ErsatzLastUnten.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel2Bereich2ErsatzLastOben
         '
         resources.ApplyResources(Me.lblStaffel2Bereich2ErsatzLastOben, "lblStaffel2Bereich2ErsatzLastOben")
         Me.lblStaffel2Bereich2ErsatzLastOben.Name = "lblStaffel2Bereich2ErsatzLastOben"
         '
-        '
-        '
-        Me.lblStaffel2Bereich2ErsatzLastOben.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel2Bereich2ErsatzLastOben.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel2Bereich2Fehler7
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel2Bereich2Fehler7, "RadTextBoxControlStaffel2Bereich2Fehler7")
         Me.RadTextBoxControlStaffel2Bereich2Fehler7.Name = "RadTextBoxControlStaffel2Bereich2Fehler7"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel2Bereich2Fehler7.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel2Bereich2Fehler7.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel2Bereich2Fehler7.TabStop = False
         '
         'RadTextBoxControlStaffel2Bereich2Fehler6
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel2Bereich2Fehler6, "RadTextBoxControlStaffel2Bereich2Fehler6")
         Me.RadTextBoxControlStaffel2Bereich2Fehler6.Name = "RadTextBoxControlStaffel2Bereich2Fehler6"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel2Bereich2Fehler6.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel2Bereich2Fehler6.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel2Bereich2Fehler6.TabStop = False
         '
         'RadTextBoxControlStaffel2Bereich2Fehler5
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel2Bereich2Fehler5, "RadTextBoxControlStaffel2Bereich2Fehler5")
         Me.RadTextBoxControlStaffel2Bereich2Fehler5.Name = "RadTextBoxControlStaffel2Bereich2Fehler5"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel2Bereich2Fehler5.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel2Bereich2Fehler5.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel2Bereich2Fehler5.TabStop = False
         '
         'RadTextBoxControlStaffel2Bereich2Last4
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel2Bereich2Last4, "RadTextBoxControlStaffel2Bereich2Last4")
         Me.RadTextBoxControlStaffel2Bereich2Last4.Name = "RadTextBoxControlStaffel2Bereich2Last4"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel2Bereich2Last4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel2Bereich2Last4.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel2Bereich2Last4.TabStop = False
         '
         'RadTextBoxControlStaffel2Bereich2Anzeige4
@@ -4839,30 +3529,15 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.RadTextBoxControlStaffel2Bereich2Anzeige4, "RadTextBoxControlStaffel2Bereich2Anzeige4")
         Me.RadTextBoxControlStaffel2Bereich2Anzeige4.Name = "RadTextBoxControlStaffel2Bereich2Anzeige4"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel2Bereich2Anzeige4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel2Bereich2Anzeige4.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel2Bereich2Anzeige3
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel2Bereich2Anzeige3, "RadTextBoxControlStaffel2Bereich2Anzeige3")
         Me.RadTextBoxControlStaffel2Bereich2Anzeige3.Name = "RadTextBoxControlStaffel2Bereich2Anzeige3"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel2Bereich2Anzeige3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel2Bereich2Anzeige3.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel2Bereich2Last3
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel2Bereich2Last3, "RadTextBoxControlStaffel2Bereich2Last3")
         Me.RadTextBoxControlStaffel2Bereich2Last3.Name = "RadTextBoxControlStaffel2Bereich2Last3"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel2Bereich2Last3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel2Bereich2Last3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel2Bereich2Last3.TabStop = False
         '
         'RadTextBoxControlStaffel2Bereich2Last2
@@ -4870,80 +3545,40 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.RadTextBoxControlStaffel2Bereich2Last2, "RadTextBoxControlStaffel2Bereich2Last2")
         Me.RadTextBoxControlStaffel2Bereich2Last2.Name = "RadTextBoxControlStaffel2Bereich2Last2"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel2Bereich2Last2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel2Bereich2Last2.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel2Bereich2Anzeige1
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel2Bereich2Anzeige1, "RadTextBoxControlStaffel2Bereich2Anzeige1")
         Me.RadTextBoxControlStaffel2Bereich2Anzeige1.Name = "RadTextBoxControlStaffel2Bereich2Anzeige1"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel2Bereich2Anzeige1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel2Bereich2Anzeige1.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel2Bereich2Last1
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel2Bereich2Last1, "RadTextBoxControlStaffel2Bereich2Last1")
         Me.RadTextBoxControlStaffel2Bereich2Last1.Name = "RadTextBoxControlStaffel2Bereich2Last1"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel2Bereich2Last1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel2Bereich2Last1.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel2Bereich2MessabweichungWaage
         '
         resources.ApplyResources(Me.lblStaffel2Bereich2MessabweichungWaage, "lblStaffel2Bereich2MessabweichungWaage")
         Me.lblStaffel2Bereich2MessabweichungWaage.Name = "lblStaffel2Bereich2MessabweichungWaage"
-        '
-        '
-        '
-        Me.lblStaffel2Bereich2MessabweichungWaage.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel2Bereich2MessabweichungWaage.RootElement.AccessibleName = Nothing
         '
         'lblStaffel2Bereich2MessabweichungStaffel
         '
         resources.ApplyResources(Me.lblStaffel2Bereich2MessabweichungStaffel, "lblStaffel2Bereich2MessabweichungStaffel")
         Me.lblStaffel2Bereich2MessabweichungStaffel.Name = "lblStaffel2Bereich2MessabweichungStaffel"
         '
-        '
-        '
-        Me.lblStaffel2Bereich2MessabweichungStaffel.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel2Bereich2MessabweichungStaffel.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel2Bereich2Differenz
         '
         resources.ApplyResources(Me.lblStaffel2Bereich2Differenz, "lblStaffel2Bereich2Differenz")
         Me.lblStaffel2Bereich2Differenz.Name = "lblStaffel2Bereich2Differenz"
-        '
-        '
-        '
-        Me.lblStaffel2Bereich2Differenz.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel2Bereich2Differenz.RootElement.AccessibleName = Nothing
         '
         'lblStaffel2Bereich2ZusastzNormalLast
         '
         resources.ApplyResources(Me.lblStaffel2Bereich2ZusastzNormalLast, "lblStaffel2Bereich2ZusastzNormalLast")
         Me.lblStaffel2Bereich2ZusastzNormalLast.Name = "lblStaffel2Bereich2ZusastzNormalLast"
         '
-        '
-        '
-        Me.lblStaffel2Bereich2ZusastzNormalLast.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel2Bereich2ZusastzNormalLast.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel2Bereich2NormalLast
         '
         resources.ApplyResources(Me.lblStaffel2Bereich2NormalLast, "lblStaffel2Bereich2NormalLast")
         Me.lblStaffel2Bereich2NormalLast.Name = "lblStaffel2Bereich2NormalLast"
-        '
-        '
-        '
-        Me.lblStaffel2Bereich2NormalLast.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel2Bereich2NormalLast.RootElement.AccessibleName = Nothing
         '
         'PictureBox28
         '
@@ -4971,11 +3606,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel2Bereich2EFGWert7, "lblStaffel2Bereich2EFGWert7")
         Me.lblStaffel2Bereich2EFGWert7.Name = "lblStaffel2Bereich2EFGWert7"
         Me.lblStaffel2Bereich2EFGWert7.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel2Bereich2EFGWert7.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel2Bereich2EFGWert7.RootElement.AccessibleName = Nothing
         Me.lblStaffel2Bereich2EFGWert7.TabStop = False
         '
         'lblStaffel2Bereich2EFGWert6
@@ -4983,11 +3613,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel2Bereich2EFGWert6, "lblStaffel2Bereich2EFGWert6")
         Me.lblStaffel2Bereich2EFGWert6.Name = "lblStaffel2Bereich2EFGWert6"
         Me.lblStaffel2Bereich2EFGWert6.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel2Bereich2EFGWert6.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel2Bereich2EFGWert6.RootElement.AccessibleName = Nothing
         Me.lblStaffel2Bereich2EFGWert6.TabStop = False
         '
         'lblStaffel2Bereich2EFGWert5
@@ -4995,11 +3620,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel2Bereich2EFGWert5, "lblStaffel2Bereich2EFGWert5")
         Me.lblStaffel2Bereich2EFGWert5.Name = "lblStaffel2Bereich2EFGWert5"
         Me.lblStaffel2Bereich2EFGWert5.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel2Bereich2EFGWert5.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel2Bereich2EFGWert5.RootElement.AccessibleName = Nothing
         Me.lblStaffel2Bereich2EFGWert5.TabStop = False
         '
         'lblStaffel2Bereich2EFG
@@ -5007,40 +3627,20 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel2Bereich2EFG, "lblStaffel2Bereich2EFG")
         Me.lblStaffel2Bereich2EFG.Name = "lblStaffel2Bereich2EFG"
         '
-        '
-        '
-        Me.lblStaffel2Bereich2EFG.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel2Bereich2EFG.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel2Bereich2Fehler
         '
         resources.ApplyResources(Me.lblStaffel2Bereich2Fehler, "lblStaffel2Bereich2Fehler")
         Me.lblStaffel2Bereich2Fehler.Name = "lblStaffel2Bereich2Fehler"
-        '
-        '
-        '
-        Me.lblStaffel2Bereich2Fehler.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel2Bereich2Fehler.RootElement.AccessibleName = Nothing
         '
         'lblStaffel2Bereich2Anzeige
         '
         resources.ApplyResources(Me.lblStaffel2Bereich2Anzeige, "lblStaffel2Bereich2Anzeige")
         Me.lblStaffel2Bereich2Anzeige.Name = "lblStaffel2Bereich2Anzeige"
         '
-        '
-        '
-        Me.lblStaffel2Bereich2Anzeige.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel2Bereich2Anzeige.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel2Bereich2Last
         '
         resources.ApplyResources(Me.lblStaffel2Bereich2Last, "lblStaffel2Bereich2Last")
         Me.lblStaffel2Bereich2Last.Name = "lblStaffel2Bereich2Last"
-        '
-        '
-        '
-        Me.lblStaffel2Bereich2Last.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel2Bereich2Last.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxStaffel2Bereich1
         '
@@ -5079,11 +3679,6 @@ Partial Class uco10PruefungStaffelverfahren
         Me.RadGroupBoxStaffel2Bereich1.Controls.Add(Me.lblStaffel2Bereich1Last)
         resources.ApplyResources(Me.RadGroupBoxStaffel2Bereich1, "RadGroupBoxStaffel2Bereich1")
         Me.RadGroupBoxStaffel2Bereich1.Name = "RadGroupBoxStaffel2Bereich1"
-        '
-        '
-        '
-        Me.RadGroupBoxStaffel2Bereich1.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxStaffel2Bereich1.RootElement.AccessibleName = Nothing
         '
         'PictureBox91
         '
@@ -5125,63 +3720,33 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel2Bereich1ErsatzLastUnten, "lblStaffel2Bereich1ErsatzLastUnten")
         Me.lblStaffel2Bereich1ErsatzLastUnten.Name = "lblStaffel2Bereich1ErsatzLastUnten"
         '
-        '
-        '
-        Me.lblStaffel2Bereich1ErsatzLastUnten.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel2Bereich1ErsatzLastUnten.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel2Bereich1ErsatzLastOben
         '
         resources.ApplyResources(Me.lblStaffel2Bereich1ErsatzLastOben, "lblStaffel2Bereich1ErsatzLastOben")
         Me.lblStaffel2Bereich1ErsatzLastOben.Name = "lblStaffel2Bereich1ErsatzLastOben"
         '
-        '
-        '
-        Me.lblStaffel2Bereich1ErsatzLastOben.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel2Bereich1ErsatzLastOben.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel2Bereich1Fehler7
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel2Bereich1Fehler7, "RadTextBoxControlStaffel2Bereich1Fehler7")
         Me.RadTextBoxControlStaffel2Bereich1Fehler7.Name = "RadTextBoxControlStaffel2Bereich1Fehler7"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel2Bereich1Fehler7.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel2Bereich1Fehler7.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel2Bereich1Fehler7.TabStop = False
         '
         'RadTextBoxControlStaffel2Bereich1Fehler6
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel2Bereich1Fehler6, "RadTextBoxControlStaffel2Bereich1Fehler6")
         Me.RadTextBoxControlStaffel2Bereich1Fehler6.Name = "RadTextBoxControlStaffel2Bereich1Fehler6"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel2Bereich1Fehler6.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel2Bereich1Fehler6.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel2Bereich1Fehler6.TabStop = False
         '
         'RadTextBoxControlStaffel2Bereich1Fehler5
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel2Bereich1Fehler5, "RadTextBoxControlStaffel2Bereich1Fehler5")
         Me.RadTextBoxControlStaffel2Bereich1Fehler5.Name = "RadTextBoxControlStaffel2Bereich1Fehler5"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel2Bereich1Fehler5.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel2Bereich1Fehler5.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel2Bereich1Fehler5.TabStop = False
         '
         'RadTextBoxControlStaffel2Bereich1Last4
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel2Bereich1Last4, "RadTextBoxControlStaffel2Bereich1Last4")
         Me.RadTextBoxControlStaffel2Bereich1Last4.Name = "RadTextBoxControlStaffel2Bereich1Last4"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel2Bereich1Last4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel2Bereich1Last4.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel2Bereich1Last4.TabStop = False
         '
         'RadTextBoxControlStaffel2Bereich1Anzeige4
@@ -5189,30 +3754,15 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.RadTextBoxControlStaffel2Bereich1Anzeige4, "RadTextBoxControlStaffel2Bereich1Anzeige4")
         Me.RadTextBoxControlStaffel2Bereich1Anzeige4.Name = "RadTextBoxControlStaffel2Bereich1Anzeige4"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel2Bereich1Anzeige4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel2Bereich1Anzeige4.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel2Bereich1Anzeige3
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel2Bereich1Anzeige3, "RadTextBoxControlStaffel2Bereich1Anzeige3")
         Me.RadTextBoxControlStaffel2Bereich1Anzeige3.Name = "RadTextBoxControlStaffel2Bereich1Anzeige3"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel2Bereich1Anzeige3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel2Bereich1Anzeige3.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel2Bereich1Last3
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel2Bereich1Last3, "RadTextBoxControlStaffel2Bereich1Last3")
         Me.RadTextBoxControlStaffel2Bereich1Last3.Name = "RadTextBoxControlStaffel2Bereich1Last3"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel2Bereich1Last3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel2Bereich1Last3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel2Bereich1Last3.TabStop = False
         '
         'RadTextBoxControlStaffel2Bereich1Last2
@@ -5220,80 +3770,40 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.RadTextBoxControlStaffel2Bereich1Last2, "RadTextBoxControlStaffel2Bereich1Last2")
         Me.RadTextBoxControlStaffel2Bereich1Last2.Name = "RadTextBoxControlStaffel2Bereich1Last2"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel2Bereich1Last2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel2Bereich1Last2.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel2Bereich1Anzeige1
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel2Bereich1Anzeige1, "RadTextBoxControlStaffel2Bereich1Anzeige1")
         Me.RadTextBoxControlStaffel2Bereich1Anzeige1.Name = "RadTextBoxControlStaffel2Bereich1Anzeige1"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel2Bereich1Anzeige1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel2Bereich1Anzeige1.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel2Bereich1Last1
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel2Bereich1Last1, "RadTextBoxControlStaffel2Bereich1Last1")
         Me.RadTextBoxControlStaffel2Bereich1Last1.Name = "RadTextBoxControlStaffel2Bereich1Last1"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel2Bereich1Last1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel2Bereich1Last1.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel2Bereich1MessabweichungWaage
         '
         resources.ApplyResources(Me.lblStaffel2Bereich1MessabweichungWaage, "lblStaffel2Bereich1MessabweichungWaage")
         Me.lblStaffel2Bereich1MessabweichungWaage.Name = "lblStaffel2Bereich1MessabweichungWaage"
-        '
-        '
-        '
-        Me.lblStaffel2Bereich1MessabweichungWaage.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel2Bereich1MessabweichungWaage.RootElement.AccessibleName = Nothing
         '
         'lblStaffel2Bereich1MessabweichungStaffel
         '
         resources.ApplyResources(Me.lblStaffel2Bereich1MessabweichungStaffel, "lblStaffel2Bereich1MessabweichungStaffel")
         Me.lblStaffel2Bereich1MessabweichungStaffel.Name = "lblStaffel2Bereich1MessabweichungStaffel"
         '
-        '
-        '
-        Me.lblStaffel2Bereich1MessabweichungStaffel.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel2Bereich1MessabweichungStaffel.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel2Bereich1Differenz
         '
         resources.ApplyResources(Me.lblStaffel2Bereich1Differenz, "lblStaffel2Bereich1Differenz")
         Me.lblStaffel2Bereich1Differenz.Name = "lblStaffel2Bereich1Differenz"
-        '
-        '
-        '
-        Me.lblStaffel2Bereich1Differenz.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel2Bereich1Differenz.RootElement.AccessibleName = Nothing
         '
         'lblStaffel2Bereich1ZusastzNormalLast
         '
         resources.ApplyResources(Me.lblStaffel2Bereich1ZusastzNormalLast, "lblStaffel2Bereich1ZusastzNormalLast")
         Me.lblStaffel2Bereich1ZusastzNormalLast.Name = "lblStaffel2Bereich1ZusastzNormalLast"
         '
-        '
-        '
-        Me.lblStaffel2Bereich1ZusastzNormalLast.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel2Bereich1ZusastzNormalLast.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel2Bereich1NormalLast
         '
         resources.ApplyResources(Me.lblStaffel2Bereich1NormalLast, "lblStaffel2Bereich1NormalLast")
         Me.lblStaffel2Bereich1NormalLast.Name = "lblStaffel2Bereich1NormalLast"
-        '
-        '
-        '
-        Me.lblStaffel2Bereich1NormalLast.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel2Bereich1NormalLast.RootElement.AccessibleName = Nothing
         '
         'PictureBox35
         '
@@ -5321,11 +3831,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel2Bereich1EFGWert7, "lblStaffel2Bereich1EFGWert7")
         Me.lblStaffel2Bereich1EFGWert7.Name = "lblStaffel2Bereich1EFGWert7"
         Me.lblStaffel2Bereich1EFGWert7.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel2Bereich1EFGWert7.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel2Bereich1EFGWert7.RootElement.AccessibleName = Nothing
         Me.lblStaffel2Bereich1EFGWert7.TabStop = False
         '
         'lblStaffel2Bereich1EFGWert6
@@ -5333,11 +3838,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel2Bereich1EFGWert6, "lblStaffel2Bereich1EFGWert6")
         Me.lblStaffel2Bereich1EFGWert6.Name = "lblStaffel2Bereich1EFGWert6"
         Me.lblStaffel2Bereich1EFGWert6.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel2Bereich1EFGWert6.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel2Bereich1EFGWert6.RootElement.AccessibleName = Nothing
         Me.lblStaffel2Bereich1EFGWert6.TabStop = False
         '
         'lblStaffel2Bereich1EFGWert5
@@ -5345,11 +3845,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel2Bereich1EFGWert5, "lblStaffel2Bereich1EFGWert5")
         Me.lblStaffel2Bereich1EFGWert5.Name = "lblStaffel2Bereich1EFGWert5"
         Me.lblStaffel2Bereich1EFGWert5.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel2Bereich1EFGWert5.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel2Bereich1EFGWert5.RootElement.AccessibleName = Nothing
         Me.lblStaffel2Bereich1EFGWert5.TabStop = False
         '
         'lblStaffel2Bereich1EFG
@@ -5357,40 +3852,20 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel2Bereich1EFG, "lblStaffel2Bereich1EFG")
         Me.lblStaffel2Bereich1EFG.Name = "lblStaffel2Bereich1EFG"
         '
-        '
-        '
-        Me.lblStaffel2Bereich1EFG.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel2Bereich1EFG.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel2Bereich1Fehler
         '
         resources.ApplyResources(Me.lblStaffel2Bereich1Fehler, "lblStaffel2Bereich1Fehler")
         Me.lblStaffel2Bereich1Fehler.Name = "lblStaffel2Bereich1Fehler"
-        '
-        '
-        '
-        Me.lblStaffel2Bereich1Fehler.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel2Bereich1Fehler.RootElement.AccessibleName = Nothing
         '
         'lblStaffel2Bereich1Anzeige
         '
         resources.ApplyResources(Me.lblStaffel2Bereich1Anzeige, "lblStaffel2Bereich1Anzeige")
         Me.lblStaffel2Bereich1Anzeige.Name = "lblStaffel2Bereich1Anzeige"
         '
-        '
-        '
-        Me.lblStaffel2Bereich1Anzeige.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel2Bereich1Anzeige.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel2Bereich1Last
         '
         resources.ApplyResources(Me.lblStaffel2Bereich1Last, "lblStaffel2Bereich1Last")
         Me.lblStaffel2Bereich1Last.Name = "lblStaffel2Bereich1Last"
-        '
-        '
-        '
-        Me.lblStaffel2Bereich1Last.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel2Bereich1Last.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxStaffel1
         '
@@ -5400,11 +3875,6 @@ Partial Class uco10PruefungStaffelverfahren
         Me.RadGroupBoxStaffel1.Controls.Add(Me.RadGroupBoxStaffel1Bereich1)
         resources.ApplyResources(Me.RadGroupBoxStaffel1, "RadGroupBoxStaffel1")
         Me.RadGroupBoxStaffel1.Name = "RadGroupBoxStaffel1"
-        '
-        '
-        '
-        Me.RadGroupBoxStaffel1.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxStaffel1.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxStaffel1Bereich3
         '
@@ -5453,11 +3923,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.RadGroupBoxStaffel1Bereich3, "RadGroupBoxStaffel1Bereich3")
         Me.RadGroupBoxStaffel1Bereich3.Name = "RadGroupBoxStaffel1Bereich3"
         '
-        '
-        '
-        Me.RadGroupBoxStaffel1Bereich3.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxStaffel1Bereich3.RootElement.AccessibleName = Nothing
-        '
         'PictureBox141
         '
         Me.PictureBox141.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
@@ -5470,20 +3935,10 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.RadLabel8, "RadLabel8")
         Me.RadLabel8.Name = "RadLabel8"
         '
-        '
-        '
-        Me.RadLabel8.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel8.RootElement.AccessibleName = Nothing
-        '
         'RadLabel3
         '
         resources.ApplyResources(Me.RadLabel3, "RadLabel3")
         Me.RadLabel3.Name = "RadLabel3"
-        '
-        '
-        '
-        Me.RadLabel3.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel3.RootElement.AccessibleName = Nothing
         '
         'PictureBox88
         '
@@ -5531,33 +3986,18 @@ Partial Class uco10PruefungStaffelverfahren
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel1Bereich3Fehler7, "RadTextBoxControlStaffel1Bereich3Fehler7")
         Me.RadTextBoxControlStaffel1Bereich3Fehler7.Name = "RadTextBoxControlStaffel1Bereich3Fehler7"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel1Bereich3Fehler7.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel1Bereich3Fehler7.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel1Bereich3Fehler7.TabStop = False
         '
         'RadTextBoxControlStaffel1Bereich3Fehler6
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel1Bereich3Fehler6, "RadTextBoxControlStaffel1Bereich3Fehler6")
         Me.RadTextBoxControlStaffel1Bereich3Fehler6.Name = "RadTextBoxControlStaffel1Bereich3Fehler6"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel1Bereich3Fehler6.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel1Bereich3Fehler6.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel1Bereich3Fehler6.TabStop = False
         '
         'RadTextBoxControlStaffel1Bereich3Fehler5
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel1Bereich3Fehler5, "RadTextBoxControlStaffel1Bereich3Fehler5")
         Me.RadTextBoxControlStaffel1Bereich3Fehler5.Name = "RadTextBoxControlStaffel1Bereich3Fehler5"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel1Bereich3Fehler5.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel1Bereich3Fehler5.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel1Bereich3Fehler5.TabStop = False
         '
         'RadTextBoxControlStaffel1Bereich3Last4
@@ -5565,41 +4005,21 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.RadTextBoxControlStaffel1Bereich3Last4, "RadTextBoxControlStaffel1Bereich3Last4")
         Me.RadTextBoxControlStaffel1Bereich3Last4.Name = "RadTextBoxControlStaffel1Bereich3Last4"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel1Bereich3Last4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel1Bereich3Last4.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel1Bereich3Anzeige4
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel1Bereich3Anzeige4, "RadTextBoxControlStaffel1Bereich3Anzeige4")
         Me.RadTextBoxControlStaffel1Bereich3Anzeige4.Name = "RadTextBoxControlStaffel1Bereich3Anzeige4"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel1Bereich3Anzeige4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel1Bereich3Anzeige4.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel1Bereich3Fehler4
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel1Bereich3Fehler4, "RadTextBoxControlStaffel1Bereich3Fehler4")
         Me.RadTextBoxControlStaffel1Bereich3Fehler4.Name = "RadTextBoxControlStaffel1Bereich3Fehler4"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel1Bereich3Fehler4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel1Bereich3Fehler4.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel1Bereich3Fehler4.TabStop = False
         '
         'RadTextBoxControlStaffel1Bereich3Fehler3
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel1Bereich3Fehler3, "RadTextBoxControlStaffel1Bereich3Fehler3")
         Me.RadTextBoxControlStaffel1Bereich3Fehler3.Name = "RadTextBoxControlStaffel1Bereich3Fehler3"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel1Bereich3Fehler3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel1Bereich3Fehler3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel1Bereich3Fehler3.TabStop = False
         '
         'RadTextBoxControlStaffel1Bereich3Anzeige3
@@ -5607,50 +4027,25 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.RadTextBoxControlStaffel1Bereich3Anzeige3, "RadTextBoxControlStaffel1Bereich3Anzeige3")
         Me.RadTextBoxControlStaffel1Bereich3Anzeige3.Name = "RadTextBoxControlStaffel1Bereich3Anzeige3"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel1Bereich3Anzeige3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel1Bereich3Anzeige3.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel1Bereich3Last3
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel1Bereich3Last3, "RadTextBoxControlStaffel1Bereich3Last3")
         Me.RadTextBoxControlStaffel1Bereich3Last3.Name = "RadTextBoxControlStaffel1Bereich3Last3"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel1Bereich3Last3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel1Bereich3Last3.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel1Bereich3Last1
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel1Bereich3Last1, "RadTextBoxControlStaffel1Bereich3Last1")
         Me.RadTextBoxControlStaffel1Bereich3Last1.Name = "RadTextBoxControlStaffel1Bereich3Last1"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel1Bereich3Last1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel1Bereich3Last1.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel1Bereich3Anzeige1
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel1Bereich3Anzeige1, "RadTextBoxControlStaffel1Bereich3Anzeige1")
         Me.RadTextBoxControlStaffel1Bereich3Anzeige1.Name = "RadTextBoxControlStaffel1Bereich3Anzeige1"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel1Bereich3Anzeige1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel1Bereich3Anzeige1.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel1Bereich3Fehler1
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel1Bereich3Fehler1, "RadTextBoxControlStaffel1Bereich3Fehler1")
         Me.RadTextBoxControlStaffel1Bereich3Fehler1.Name = "RadTextBoxControlStaffel1Bereich3Fehler1"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel1Bereich3Fehler1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel1Bereich3Fehler1.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel1Bereich3Fehler1.TabStop = False
         '
         'lblStaffel1Bereich3MessabweichungWaage
@@ -5658,40 +4053,20 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel1Bereich3MessabweichungWaage, "lblStaffel1Bereich3MessabweichungWaage")
         Me.lblStaffel1Bereich3MessabweichungWaage.Name = "lblStaffel1Bereich3MessabweichungWaage"
         '
-        '
-        '
-        Me.lblStaffel1Bereich3MessabweichungWaage.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel1Bereich3MessabweichungWaage.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel1Bereich3MessabweichungStaffel
         '
         resources.ApplyResources(Me.lblStaffel1Bereich3MessabweichungStaffel, "lblStaffel1Bereich3MessabweichungStaffel")
         Me.lblStaffel1Bereich3MessabweichungStaffel.Name = "lblStaffel1Bereich3MessabweichungStaffel"
-        '
-        '
-        '
-        Me.lblStaffel1Bereich3MessabweichungStaffel.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel1Bereich3MessabweichungStaffel.RootElement.AccessibleName = Nothing
         '
         'lblStaffel1Bereich3Differenz
         '
         resources.ApplyResources(Me.lblStaffel1Bereich3Differenz, "lblStaffel1Bereich3Differenz")
         Me.lblStaffel1Bereich3Differenz.Name = "lblStaffel1Bereich3Differenz"
         '
-        '
-        '
-        Me.lblStaffel1Bereich3Differenz.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel1Bereich3Differenz.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel1Bereich3NormalLast
         '
         resources.ApplyResources(Me.lblStaffel1Bereich3NormalLast, "lblStaffel1Bereich3NormalLast")
         Me.lblStaffel1Bereich3NormalLast.Name = "lblStaffel1Bereich3NormalLast"
-        '
-        '
-        '
-        Me.lblStaffel1Bereich3NormalLast.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel1Bereich3NormalLast.RootElement.AccessibleName = Nothing
         '
         'PictureBox15
         '
@@ -5733,11 +4108,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel1Bereich3EFGWert7, "lblStaffel1Bereich3EFGWert7")
         Me.lblStaffel1Bereich3EFGWert7.Name = "lblStaffel1Bereich3EFGWert7"
         Me.lblStaffel1Bereich3EFGWert7.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel1Bereich3EFGWert7.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel1Bereich3EFGWert7.RootElement.AccessibleName = Nothing
         Me.lblStaffel1Bereich3EFGWert7.TabStop = False
         '
         'lblStaffel1Bereich3EFGWert6
@@ -5745,11 +4115,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel1Bereich3EFGWert6, "lblStaffel1Bereich3EFGWert6")
         Me.lblStaffel1Bereich3EFGWert6.Name = "lblStaffel1Bereich3EFGWert6"
         Me.lblStaffel1Bereich3EFGWert6.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel1Bereich3EFGWert6.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel1Bereich3EFGWert6.RootElement.AccessibleName = Nothing
         Me.lblStaffel1Bereich3EFGWert6.TabStop = False
         '
         'lblStaffel1Bereich3EFGWert5
@@ -5757,11 +4122,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel1Bereich3EFGWert5, "lblStaffel1Bereich3EFGWert5")
         Me.lblStaffel1Bereich3EFGWert5.Name = "lblStaffel1Bereich3EFGWert5"
         Me.lblStaffel1Bereich3EFGWert5.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel1Bereich3EFGWert5.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel1Bereich3EFGWert5.RootElement.AccessibleName = Nothing
         Me.lblStaffel1Bereich3EFGWert5.TabStop = False
         '
         'lblStaffel1Bereich3EFGWert4
@@ -5769,11 +4129,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel1Bereich3EFGWert4, "lblStaffel1Bereich3EFGWert4")
         Me.lblStaffel1Bereich3EFGWert4.Name = "lblStaffel1Bereich3EFGWert4"
         Me.lblStaffel1Bereich3EFGWert4.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel1Bereich3EFGWert4.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel1Bereich3EFGWert4.RootElement.AccessibleName = Nothing
         Me.lblStaffel1Bereich3EFGWert4.TabStop = False
         '
         'lblStaffel1Bereich3EFGWert3
@@ -5781,11 +4136,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel1Bereich3EFGWert3, "lblStaffel1Bereich3EFGWert3")
         Me.lblStaffel1Bereich3EFGWert3.Name = "lblStaffel1Bereich3EFGWert3"
         Me.lblStaffel1Bereich3EFGWert3.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel1Bereich3EFGWert3.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel1Bereich3EFGWert3.RootElement.AccessibleName = Nothing
         Me.lblStaffel1Bereich3EFGWert3.TabStop = False
         '
         'PictureBox20
@@ -5800,11 +4150,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel1Bereich3EFGWert1, "lblStaffel1Bereich3EFGWert1")
         Me.lblStaffel1Bereich3EFGWert1.Name = "lblStaffel1Bereich3EFGWert1"
         Me.lblStaffel1Bereich3EFGWert1.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel1Bereich3EFGWert1.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel1Bereich3EFGWert1.RootElement.AccessibleName = Nothing
         Me.lblStaffel1Bereich3EFGWert1.TabStop = False
         '
         'lblStaffel1Bereich3EFG
@@ -5812,40 +4157,20 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel1Bereich3EFG, "lblStaffel1Bereich3EFG")
         Me.lblStaffel1Bereich3EFG.Name = "lblStaffel1Bereich3EFG"
         '
-        '
-        '
-        Me.lblStaffel1Bereich3EFG.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel1Bereich3EFG.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel1Bereich3Fehler
         '
         resources.ApplyResources(Me.lblStaffel1Bereich3Fehler, "lblStaffel1Bereich3Fehler")
         Me.lblStaffel1Bereich3Fehler.Name = "lblStaffel1Bereich3Fehler"
-        '
-        '
-        '
-        Me.lblStaffel1Bereich3Fehler.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel1Bereich3Fehler.RootElement.AccessibleName = Nothing
         '
         'lblStaffel1Bereich3Anzeige
         '
         resources.ApplyResources(Me.lblStaffel1Bereich3Anzeige, "lblStaffel1Bereich3Anzeige")
         Me.lblStaffel1Bereich3Anzeige.Name = "lblStaffel1Bereich3Anzeige"
         '
-        '
-        '
-        Me.lblStaffel1Bereich3Anzeige.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel1Bereich3Anzeige.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel1Bereich3Last
         '
         resources.ApplyResources(Me.lblStaffel1Bereich3Last, "lblStaffel1Bereich3Last")
         Me.lblStaffel1Bereich3Last.Name = "lblStaffel1Bereich3Last"
-        '
-        '
-        '
-        Me.lblStaffel1Bereich3Last.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel1Bereich3Last.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxStaffel1Bereich2
         '
@@ -5894,11 +4219,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.RadGroupBoxStaffel1Bereich2, "RadGroupBoxStaffel1Bereich2")
         Me.RadGroupBoxStaffel1Bereich2.Name = "RadGroupBoxStaffel1Bereich2"
         '
-        '
-        '
-        Me.RadGroupBoxStaffel1Bereich2.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxStaffel1Bereich2.RootElement.AccessibleName = Nothing
-        '
         'PictureBox139
         '
         Me.PictureBox139.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
@@ -5911,20 +4231,10 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.RadLabel6, "RadLabel6")
         Me.RadLabel6.Name = "RadLabel6"
         '
-        '
-        '
-        Me.RadLabel6.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel6.RootElement.AccessibleName = Nothing
-        '
         'RadLabel2
         '
         resources.ApplyResources(Me.RadLabel2, "RadLabel2")
         Me.RadLabel2.Name = "RadLabel2"
-        '
-        '
-        '
-        Me.RadLabel2.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel2.RootElement.AccessibleName = Nothing
         '
         'PictureBox82
         '
@@ -5972,33 +4282,18 @@ Partial Class uco10PruefungStaffelverfahren
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel1Bereich2Fehler7, "RadTextBoxControlStaffel1Bereich2Fehler7")
         Me.RadTextBoxControlStaffel1Bereich2Fehler7.Name = "RadTextBoxControlStaffel1Bereich2Fehler7"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel1Bereich2Fehler7.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel1Bereich2Fehler7.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel1Bereich2Fehler7.TabStop = False
         '
         'RadTextBoxControlStaffel1Bereich2Fehler6
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel1Bereich2Fehler6, "RadTextBoxControlStaffel1Bereich2Fehler6")
         Me.RadTextBoxControlStaffel1Bereich2Fehler6.Name = "RadTextBoxControlStaffel1Bereich2Fehler6"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel1Bereich2Fehler6.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel1Bereich2Fehler6.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel1Bereich2Fehler6.TabStop = False
         '
         'RadTextBoxControlStaffel1Bereich2Fehler5
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel1Bereich2Fehler5, "RadTextBoxControlStaffel1Bereich2Fehler5")
         Me.RadTextBoxControlStaffel1Bereich2Fehler5.Name = "RadTextBoxControlStaffel1Bereich2Fehler5"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel1Bereich2Fehler5.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel1Bereich2Fehler5.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel1Bereich2Fehler5.TabStop = False
         '
         'RadTextBoxControlStaffel1Bereich2Last4
@@ -6006,41 +4301,21 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.RadTextBoxControlStaffel1Bereich2Last4, "RadTextBoxControlStaffel1Bereich2Last4")
         Me.RadTextBoxControlStaffel1Bereich2Last4.Name = "RadTextBoxControlStaffel1Bereich2Last4"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel1Bereich2Last4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel1Bereich2Last4.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel1Bereich2Anzeige4
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel1Bereich2Anzeige4, "RadTextBoxControlStaffel1Bereich2Anzeige4")
         Me.RadTextBoxControlStaffel1Bereich2Anzeige4.Name = "RadTextBoxControlStaffel1Bereich2Anzeige4"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel1Bereich2Anzeige4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel1Bereich2Anzeige4.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel1Bereich2Fehler4
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel1Bereich2Fehler4, "RadTextBoxControlStaffel1Bereich2Fehler4")
         Me.RadTextBoxControlStaffel1Bereich2Fehler4.Name = "RadTextBoxControlStaffel1Bereich2Fehler4"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel1Bereich2Fehler4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel1Bereich2Fehler4.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel1Bereich2Fehler4.TabStop = False
         '
         'RadTextBoxControlStaffel1Bereich2Fehler3
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel1Bereich2Fehler3, "RadTextBoxControlStaffel1Bereich2Fehler3")
         Me.RadTextBoxControlStaffel1Bereich2Fehler3.Name = "RadTextBoxControlStaffel1Bereich2Fehler3"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel1Bereich2Fehler3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel1Bereich2Fehler3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel1Bereich2Fehler3.TabStop = False
         '
         'RadTextBoxControlStaffel1Bereich2Anzeige3
@@ -6048,50 +4323,25 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.RadTextBoxControlStaffel1Bereich2Anzeige3, "RadTextBoxControlStaffel1Bereich2Anzeige3")
         Me.RadTextBoxControlStaffel1Bereich2Anzeige3.Name = "RadTextBoxControlStaffel1Bereich2Anzeige3"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel1Bereich2Anzeige3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel1Bereich2Anzeige3.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel1Bereich2Last3
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel1Bereich2Last3, "RadTextBoxControlStaffel1Bereich2Last3")
         Me.RadTextBoxControlStaffel1Bereich2Last3.Name = "RadTextBoxControlStaffel1Bereich2Last3"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel1Bereich2Last3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel1Bereich2Last3.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel1Bereich2Last1
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel1Bereich2Last1, "RadTextBoxControlStaffel1Bereich2Last1")
         Me.RadTextBoxControlStaffel1Bereich2Last1.Name = "RadTextBoxControlStaffel1Bereich2Last1"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel1Bereich2Last1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel1Bereich2Last1.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel1Bereich2Anzeige1
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel1Bereich2Anzeige1, "RadTextBoxControlStaffel1Bereich2Anzeige1")
         Me.RadTextBoxControlStaffel1Bereich2Anzeige1.Name = "RadTextBoxControlStaffel1Bereich2Anzeige1"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel1Bereich2Anzeige1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel1Bereich2Anzeige1.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel1Bereich2Fehler1
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel1Bereich2Fehler1, "RadTextBoxControlStaffel1Bereich2Fehler1")
         Me.RadTextBoxControlStaffel1Bereich2Fehler1.Name = "RadTextBoxControlStaffel1Bereich2Fehler1"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel1Bereich2Fehler1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel1Bereich2Fehler1.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel1Bereich2Fehler1.TabStop = False
         '
         'lblStaffel1Bereich2MessabweichungWaage
@@ -6099,40 +4349,20 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel1Bereich2MessabweichungWaage, "lblStaffel1Bereich2MessabweichungWaage")
         Me.lblStaffel1Bereich2MessabweichungWaage.Name = "lblStaffel1Bereich2MessabweichungWaage"
         '
-        '
-        '
-        Me.lblStaffel1Bereich2MessabweichungWaage.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel1Bereich2MessabweichungWaage.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel1Bereich2MessabweichungStaffel
         '
         resources.ApplyResources(Me.lblStaffel1Bereich2MessabweichungStaffel, "lblStaffel1Bereich2MessabweichungStaffel")
         Me.lblStaffel1Bereich2MessabweichungStaffel.Name = "lblStaffel1Bereich2MessabweichungStaffel"
-        '
-        '
-        '
-        Me.lblStaffel1Bereich2MessabweichungStaffel.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel1Bereich2MessabweichungStaffel.RootElement.AccessibleName = Nothing
         '
         'lblStaffel1Bereich2Differenz
         '
         resources.ApplyResources(Me.lblStaffel1Bereich2Differenz, "lblStaffel1Bereich2Differenz")
         Me.lblStaffel1Bereich2Differenz.Name = "lblStaffel1Bereich2Differenz"
         '
-        '
-        '
-        Me.lblStaffel1Bereich2Differenz.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel1Bereich2Differenz.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel1Bereich2NormalLast
         '
         resources.ApplyResources(Me.lblStaffel1Bereich2NormalLast, "lblStaffel1Bereich2NormalLast")
         Me.lblStaffel1Bereich2NormalLast.Name = "lblStaffel1Bereich2NormalLast"
-        '
-        '
-        '
-        Me.lblStaffel1Bereich2NormalLast.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel1Bereich2NormalLast.RootElement.AccessibleName = Nothing
         '
         'PictureBox8
         '
@@ -6174,11 +4404,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel1Bereich2EFGWert7, "lblStaffel1Bereich2EFGWert7")
         Me.lblStaffel1Bereich2EFGWert7.Name = "lblStaffel1Bereich2EFGWert7"
         Me.lblStaffel1Bereich2EFGWert7.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel1Bereich2EFGWert7.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel1Bereich2EFGWert7.RootElement.AccessibleName = Nothing
         Me.lblStaffel1Bereich2EFGWert7.TabStop = False
         '
         'lblStaffel1Bereich2EFGWert6
@@ -6186,11 +4411,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel1Bereich2EFGWert6, "lblStaffel1Bereich2EFGWert6")
         Me.lblStaffel1Bereich2EFGWert6.Name = "lblStaffel1Bereich2EFGWert6"
         Me.lblStaffel1Bereich2EFGWert6.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel1Bereich2EFGWert6.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel1Bereich2EFGWert6.RootElement.AccessibleName = Nothing
         Me.lblStaffel1Bereich2EFGWert6.TabStop = False
         '
         'lblStaffel1Bereich2EFGWert5
@@ -6198,11 +4418,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel1Bereich2EFGWert5, "lblStaffel1Bereich2EFGWert5")
         Me.lblStaffel1Bereich2EFGWert5.Name = "lblStaffel1Bereich2EFGWert5"
         Me.lblStaffel1Bereich2EFGWert5.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel1Bereich2EFGWert5.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel1Bereich2EFGWert5.RootElement.AccessibleName = Nothing
         Me.lblStaffel1Bereich2EFGWert5.TabStop = False
         '
         'lblStaffel1Bereich2EFGWert4
@@ -6210,11 +4425,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel1Bereich2EFGWert4, "lblStaffel1Bereich2EFGWert4")
         Me.lblStaffel1Bereich2EFGWert4.Name = "lblStaffel1Bereich2EFGWert4"
         Me.lblStaffel1Bereich2EFGWert4.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel1Bereich2EFGWert4.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel1Bereich2EFGWert4.RootElement.AccessibleName = Nothing
         Me.lblStaffel1Bereich2EFGWert4.TabStop = False
         '
         'lblStaffel1Bereich2EFGWert3
@@ -6222,11 +4432,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel1Bereich2EFGWert3, "lblStaffel1Bereich2EFGWert3")
         Me.lblStaffel1Bereich2EFGWert3.Name = "lblStaffel1Bereich2EFGWert3"
         Me.lblStaffel1Bereich2EFGWert3.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel1Bereich2EFGWert3.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel1Bereich2EFGWert3.RootElement.AccessibleName = Nothing
         Me.lblStaffel1Bereich2EFGWert3.TabStop = False
         '
         'PictureBox13
@@ -6241,11 +4446,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel1Bereich2EFGWert1, "lblStaffel1Bereich2EFGWert1")
         Me.lblStaffel1Bereich2EFGWert1.Name = "lblStaffel1Bereich2EFGWert1"
         Me.lblStaffel1Bereich2EFGWert1.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel1Bereich2EFGWert1.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel1Bereich2EFGWert1.RootElement.AccessibleName = Nothing
         Me.lblStaffel1Bereich2EFGWert1.TabStop = False
         '
         'lblStaffel1Bereich2EFG
@@ -6253,40 +4453,20 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel1Bereich2EFG, "lblStaffel1Bereich2EFG")
         Me.lblStaffel1Bereich2EFG.Name = "lblStaffel1Bereich2EFG"
         '
-        '
-        '
-        Me.lblStaffel1Bereich2EFG.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel1Bereich2EFG.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel1Bereich2Fehler
         '
         resources.ApplyResources(Me.lblStaffel1Bereich2Fehler, "lblStaffel1Bereich2Fehler")
         Me.lblStaffel1Bereich2Fehler.Name = "lblStaffel1Bereich2Fehler"
-        '
-        '
-        '
-        Me.lblStaffel1Bereich2Fehler.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel1Bereich2Fehler.RootElement.AccessibleName = Nothing
         '
         'lblStaffel1Bereich2Anzeige
         '
         resources.ApplyResources(Me.lblStaffel1Bereich2Anzeige, "lblStaffel1Bereich2Anzeige")
         Me.lblStaffel1Bereich2Anzeige.Name = "lblStaffel1Bereich2Anzeige"
         '
-        '
-        '
-        Me.lblStaffel1Bereich2Anzeige.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel1Bereich2Anzeige.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel1Bereich2Last
         '
         resources.ApplyResources(Me.lblStaffel1Bereich2Last, "lblStaffel1Bereich2Last")
         Me.lblStaffel1Bereich2Last.Name = "lblStaffel1Bereich2Last"
-        '
-        '
-        '
-        Me.lblStaffel1Bereich2Last.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel1Bereich2Last.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxStaffel1Bereich1
         '
@@ -6342,11 +4522,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.RadGroupBoxStaffel1Bereich1, "RadGroupBoxStaffel1Bereich1")
         Me.RadGroupBoxStaffel1Bereich1.Name = "RadGroupBoxStaffel1Bereich1"
         '
-        '
-        '
-        Me.RadGroupBoxStaffel1Bereich1.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxStaffel1Bereich1.RootElement.AccessibleName = Nothing
-        '
         'PictureBox140
         '
         Me.PictureBox140.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
@@ -6359,30 +4534,15 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.RadLabel5, "RadLabel5")
         Me.RadLabel5.Name = "RadLabel5"
         '
-        '
-        '
-        Me.RadLabel5.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel5.RootElement.AccessibleName = Nothing
-        '
         'RadLabel4
         '
         resources.ApplyResources(Me.RadLabel4, "RadLabel4")
         Me.RadLabel4.Name = "RadLabel4"
         '
-        '
-        '
-        Me.RadLabel4.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel4.RootElement.AccessibleName = Nothing
-        '
         'RadLabel1
         '
         resources.ApplyResources(Me.RadLabel1, "RadLabel1")
         Me.RadLabel1.Name = "RadLabel1"
-        '
-        '
-        '
-        Me.RadLabel1.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel1.RootElement.AccessibleName = Nothing
         '
         'PictureBox133
         '
@@ -6396,30 +4556,15 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.RadTextBoxControlStaffel1Bereich1Last2, "RadTextBoxControlStaffel1Bereich1Last2")
         Me.RadTextBoxControlStaffel1Bereich1Last2.Name = "RadTextBoxControlStaffel1Bereich1Last2"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel1Bereich1Last2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel1Bereich1Last2.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel1Bereich1Anzeige2
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel1Bereich1Anzeige2, "RadTextBoxControlStaffel1Bereich1Anzeige2")
         Me.RadTextBoxControlStaffel1Bereich1Anzeige2.Name = "RadTextBoxControlStaffel1Bereich1Anzeige2"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige2.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel1Bereich1Fehler2
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel1Bereich1Fehler2, "RadTextBoxControlStaffel1Bereich1Fehler2")
         Me.RadTextBoxControlStaffel1Bereich1Fehler2.Name = "RadTextBoxControlStaffel1Bereich1Fehler2"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel1Bereich1Fehler2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel1Bereich1Fehler2.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel1Bereich1Fehler2.TabStop = False
         '
         'PictureBox134
@@ -6434,11 +4579,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel1Bereich1EFGWert2, "lblStaffel1Bereich1EFGWert2")
         Me.lblStaffel1Bereich1EFGWert2.Name = "lblStaffel1Bereich1EFGWert2"
         Me.lblStaffel1Bereich1EFGWert2.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel1Bereich1EFGWert2.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel1Bereich1EFGWert2.RootElement.AccessibleName = Nothing
         Me.lblStaffel1Bereich1EFGWert2.TabStop = False
         '
         'PictureBox75
@@ -6487,33 +4627,18 @@ Partial Class uco10PruefungStaffelverfahren
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel1Bereich1Fehler7, "RadTextBoxControlStaffel1Bereich1Fehler7")
         Me.RadTextBoxControlStaffel1Bereich1Fehler7.Name = "RadTextBoxControlStaffel1Bereich1Fehler7"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel1Bereich1Fehler7.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel1Bereich1Fehler7.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel1Bereich1Fehler7.TabStop = False
         '
         'RadTextBoxControlStaffel1Bereich1Fehler6
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel1Bereich1Fehler6, "RadTextBoxControlStaffel1Bereich1Fehler6")
         Me.RadTextBoxControlStaffel1Bereich1Fehler6.Name = "RadTextBoxControlStaffel1Bereich1Fehler6"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel1Bereich1Fehler6.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel1Bereich1Fehler6.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel1Bereich1Fehler6.TabStop = False
         '
         'RadTextBoxControlStaffel1Bereich1Fehler5
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel1Bereich1Fehler5, "RadTextBoxControlStaffel1Bereich1Fehler5")
         Me.RadTextBoxControlStaffel1Bereich1Fehler5.Name = "RadTextBoxControlStaffel1Bereich1Fehler5"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel1Bereich1Fehler5.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel1Bereich1Fehler5.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel1Bereich1Fehler5.TabStop = False
         '
         'RadTextBoxControlStaffel1Bereich1Last4
@@ -6521,41 +4646,21 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.RadTextBoxControlStaffel1Bereich1Last4, "RadTextBoxControlStaffel1Bereich1Last4")
         Me.RadTextBoxControlStaffel1Bereich1Last4.Name = "RadTextBoxControlStaffel1Bereich1Last4"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel1Bereich1Last4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel1Bereich1Last4.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel1Bereich1Anzeige4
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel1Bereich1Anzeige4, "RadTextBoxControlStaffel1Bereich1Anzeige4")
         Me.RadTextBoxControlStaffel1Bereich1Anzeige4.Name = "RadTextBoxControlStaffel1Bereich1Anzeige4"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige4.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel1Bereich1Fehler4
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel1Bereich1Fehler4, "RadTextBoxControlStaffel1Bereich1Fehler4")
         Me.RadTextBoxControlStaffel1Bereich1Fehler4.Name = "RadTextBoxControlStaffel1Bereich1Fehler4"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel1Bereich1Fehler4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel1Bereich1Fehler4.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel1Bereich1Fehler4.TabStop = False
         '
         'RadTextBoxControlStaffel1Bereich1Fehler3
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel1Bereich1Fehler3, "RadTextBoxControlStaffel1Bereich1Fehler3")
         Me.RadTextBoxControlStaffel1Bereich1Fehler3.Name = "RadTextBoxControlStaffel1Bereich1Fehler3"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel1Bereich1Fehler3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel1Bereich1Fehler3.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel1Bereich1Fehler3.TabStop = False
         '
         'RadTextBoxControlStaffel1Bereich1Anzeige3
@@ -6563,50 +4668,25 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.RadTextBoxControlStaffel1Bereich1Anzeige3, "RadTextBoxControlStaffel1Bereich1Anzeige3")
         Me.RadTextBoxControlStaffel1Bereich1Anzeige3.Name = "RadTextBoxControlStaffel1Bereich1Anzeige3"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige3.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel1Bereich1Last3
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel1Bereich1Last3, "RadTextBoxControlStaffel1Bereich1Last3")
         Me.RadTextBoxControlStaffel1Bereich1Last3.Name = "RadTextBoxControlStaffel1Bereich1Last3"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel1Bereich1Last3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel1Bereich1Last3.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlStaffel1Bereich1Last1
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel1Bereich1Last1, "RadTextBoxControlStaffel1Bereich1Last1")
         Me.RadTextBoxControlStaffel1Bereich1Last1.Name = "RadTextBoxControlStaffel1Bereich1Last1"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel1Bereich1Last1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel1Bereich1Last1.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel1Bereich1Anzeige1
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel1Bereich1Anzeige1, "RadTextBoxControlStaffel1Bereich1Anzeige1")
         Me.RadTextBoxControlStaffel1Bereich1Anzeige1.Name = "RadTextBoxControlStaffel1Bereich1Anzeige1"
         '
-        '
-        '
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel1Bereich1Anzeige1.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlStaffel1Bereich1Fehler1
         '
         resources.ApplyResources(Me.RadTextBoxControlStaffel1Bereich1Fehler1, "RadTextBoxControlStaffel1Bereich1Fehler1")
         Me.RadTextBoxControlStaffel1Bereich1Fehler1.Name = "RadTextBoxControlStaffel1Bereich1Fehler1"
-        '
-        '
-        '
-        Me.RadTextBoxControlStaffel1Bereich1Fehler1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlStaffel1Bereich1Fehler1.RootElement.AccessibleName = Nothing
         Me.RadTextBoxControlStaffel1Bereich1Fehler1.TabStop = False
         '
         'lblStaffel1Bereich1MessabweichungWaage
@@ -6614,20 +4694,10 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel1Bereich1MessabweichungWaage, "lblStaffel1Bereich1MessabweichungWaage")
         Me.lblStaffel1Bereich1MessabweichungWaage.Name = "lblStaffel1Bereich1MessabweichungWaage"
         '
-        '
-        '
-        Me.lblStaffel1Bereich1MessabweichungWaage.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel1Bereich1MessabweichungWaage.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel1Bereich1MessabweichungStaffel
         '
         resources.ApplyResources(Me.lblStaffel1Bereich1MessabweichungStaffel, "lblStaffel1Bereich1MessabweichungStaffel")
         Me.lblStaffel1Bereich1MessabweichungStaffel.Name = "lblStaffel1Bereich1MessabweichungStaffel"
-        '
-        '
-        '
-        Me.lblStaffel1Bereich1MessabweichungStaffel.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel1Bereich1MessabweichungStaffel.RootElement.AccessibleName = Nothing
         '
         'lblStaffel1Bereich1Differenz
         '
@@ -6635,20 +4705,10 @@ Partial Class uco10PruefungStaffelverfahren
         Me.lblStaffel1Bereich1Differenz.BackColor = System.Drawing.Color.Transparent
         Me.lblStaffel1Bereich1Differenz.Name = "lblStaffel1Bereich1Differenz"
         '
-        '
-        '
-        Me.lblStaffel1Bereich1Differenz.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel1Bereich1Differenz.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel1Bereich1NormalLast
         '
         resources.ApplyResources(Me.lblStaffel1Bereich1NormalLast, "lblStaffel1Bereich1NormalLast")
         Me.lblStaffel1Bereich1NormalLast.Name = "lblStaffel1Bereich1NormalLast"
-        '
-        '
-        '
-        Me.lblStaffel1Bereich1NormalLast.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel1Bereich1NormalLast.RootElement.AccessibleName = Nothing
         '
         'PictureBox5
         '
@@ -6690,11 +4750,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel1Bereich1EFGWert7, "lblStaffel1Bereich1EFGWert7")
         Me.lblStaffel1Bereich1EFGWert7.Name = "lblStaffel1Bereich1EFGWert7"
         Me.lblStaffel1Bereich1EFGWert7.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel1Bereich1EFGWert7.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel1Bereich1EFGWert7.RootElement.AccessibleName = Nothing
         Me.lblStaffel1Bereich1EFGWert7.TabStop = False
         '
         'lblStaffel1Bereich1EFGWert6
@@ -6702,11 +4757,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel1Bereich1EFGWert6, "lblStaffel1Bereich1EFGWert6")
         Me.lblStaffel1Bereich1EFGWert6.Name = "lblStaffel1Bereich1EFGWert6"
         Me.lblStaffel1Bereich1EFGWert6.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel1Bereich1EFGWert6.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel1Bereich1EFGWert6.RootElement.AccessibleName = Nothing
         Me.lblStaffel1Bereich1EFGWert6.TabStop = False
         '
         'lblStaffel1Bereich1EFGWert5
@@ -6714,11 +4764,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel1Bereich1EFGWert5, "lblStaffel1Bereich1EFGWert5")
         Me.lblStaffel1Bereich1EFGWert5.Name = "lblStaffel1Bereich1EFGWert5"
         Me.lblStaffel1Bereich1EFGWert5.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel1Bereich1EFGWert5.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel1Bereich1EFGWert5.RootElement.AccessibleName = Nothing
         Me.lblStaffel1Bereich1EFGWert5.TabStop = False
         '
         'lblStaffel1Bereich1EFGWert4
@@ -6726,11 +4771,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel1Bereich1EFGWert4, "lblStaffel1Bereich1EFGWert4")
         Me.lblStaffel1Bereich1EFGWert4.Name = "lblStaffel1Bereich1EFGWert4"
         Me.lblStaffel1Bereich1EFGWert4.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel1Bereich1EFGWert4.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel1Bereich1EFGWert4.RootElement.AccessibleName = Nothing
         Me.lblStaffel1Bereich1EFGWert4.TabStop = False
         '
         'lblStaffel1Bereich1EFGWert3
@@ -6738,11 +4778,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel1Bereich1EFGWert3, "lblStaffel1Bereich1EFGWert3")
         Me.lblStaffel1Bereich1EFGWert3.Name = "lblStaffel1Bereich1EFGWert3"
         Me.lblStaffel1Bereich1EFGWert3.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel1Bereich1EFGWert3.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel1Bereich1EFGWert3.RootElement.AccessibleName = Nothing
         Me.lblStaffel1Bereich1EFGWert3.TabStop = False
         '
         'PictureBox79
@@ -6757,11 +4792,6 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel1Bereich1EFGWert1, "lblStaffel1Bereich1EFGWert1")
         Me.lblStaffel1Bereich1EFGWert1.Name = "lblStaffel1Bereich1EFGWert1"
         Me.lblStaffel1Bereich1EFGWert1.ReadOnly = True
-        '
-        '
-        '
-        Me.lblStaffel1Bereich1EFGWert1.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel1Bereich1EFGWert1.RootElement.AccessibleName = Nothing
         Me.lblStaffel1Bereich1EFGWert1.TabStop = False
         '
         'lblStaffel1Bereich1EFG
@@ -6769,47 +4799,26 @@ Partial Class uco10PruefungStaffelverfahren
         resources.ApplyResources(Me.lblStaffel1Bereich1EFG, "lblStaffel1Bereich1EFG")
         Me.lblStaffel1Bereich1EFG.Name = "lblStaffel1Bereich1EFG"
         '
-        '
-        '
-        Me.lblStaffel1Bereich1EFG.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel1Bereich1EFG.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel1Bereich1Fehler
         '
         resources.ApplyResources(Me.lblStaffel1Bereich1Fehler, "lblStaffel1Bereich1Fehler")
         Me.lblStaffel1Bereich1Fehler.Name = "lblStaffel1Bereich1Fehler"
-        '
-        '
-        '
-        Me.lblStaffel1Bereich1Fehler.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel1Bereich1Fehler.RootElement.AccessibleName = Nothing
         '
         'lblStaffel1Bereich1Anzeige
         '
         resources.ApplyResources(Me.lblStaffel1Bereich1Anzeige, "lblStaffel1Bereich1Anzeige")
         Me.lblStaffel1Bereich1Anzeige.Name = "lblStaffel1Bereich1Anzeige"
         '
-        '
-        '
-        Me.lblStaffel1Bereich1Anzeige.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel1Bereich1Anzeige.RootElement.AccessibleName = Nothing
-        '
         'lblStaffel1Bereich1Last
         '
         resources.ApplyResources(Me.lblStaffel1Bereich1Last, "lblStaffel1Bereich1Last")
         Me.lblStaffel1Bereich1Last.Name = "lblStaffel1Bereich1Last"
-        '
-        '
-        '
-        Me.lblStaffel1Bereich1Last.RootElement.AccessibleDescription = Nothing
-        Me.lblStaffel1Bereich1Last.RootElement.AccessibleName = Nothing
         '
         'uco10PruefungStaffelverfahren
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.RadScrollablePanel1)
-        Me.DoubleBuffered = True
         Me.Name = "uco10PruefungStaffelverfahren"
         Me.RadScrollablePanel1.PanelContainer.ResumeLayout(false)
         CType(Me.RadScrollablePanel1,System.ComponentModel.ISupportInitialize).EndInit

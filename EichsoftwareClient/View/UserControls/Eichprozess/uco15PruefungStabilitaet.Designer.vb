@@ -197,160 +197,80 @@ Partial Class uco15PruefungStabilitaet
         resources.ApplyResources(Me.lblBeschreibung, "lblBeschreibung")
         Me.lblBeschreibung.Name = "lblBeschreibung"
         '
-        '
-        '
-        Me.lblBeschreibung.RootElement.AccessibleDescription = Nothing
-        Me.lblBeschreibung.RootElement.AccessibleName = Nothing
-        '
         'RadCheckBoxAbdruck5
         '
         resources.ApplyResources(Me.RadCheckBoxAbdruck5, "RadCheckBoxAbdruck5")
         Me.RadCheckBoxAbdruck5.Name = "RadCheckBoxAbdruck5"
-        '
-        '
-        '
-        Me.RadCheckBoxAbdruck5.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxAbdruck5.RootElement.AccessibleName = Nothing
         '
         'RadLabel1
         '
         resources.ApplyResources(Me.RadLabel1, "RadLabel1")
         Me.RadLabel1.Name = "RadLabel1"
         '
-        '
-        '
-        Me.RadLabel1.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel1.RootElement.AccessibleName = Nothing
-        '
         'RadCheckBoxAbdruck4
         '
         resources.ApplyResources(Me.RadCheckBoxAbdruck4, "RadCheckBoxAbdruck4")
         Me.RadCheckBoxAbdruck4.Name = "RadCheckBoxAbdruck4"
-        '
-        '
-        '
-        Me.RadCheckBoxAbdruck4.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxAbdruck4.RootElement.AccessibleName = Nothing
         '
         'lblLast
         '
         resources.ApplyResources(Me.lblLast, "lblLast")
         Me.lblLast.Name = "lblLast"
         '
-        '
-        '
-        Me.lblLast.RootElement.AccessibleDescription = Nothing
-        Me.lblLast.RootElement.AccessibleName = Nothing
-        '
         'RadCheckBoxAbdruck3
         '
         resources.ApplyResources(Me.RadCheckBoxAbdruck3, "RadCheckBoxAbdruck3")
         Me.RadCheckBoxAbdruck3.Name = "RadCheckBoxAbdruck3"
-        '
-        '
-        '
-        Me.RadCheckBoxAbdruck3.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxAbdruck3.RootElement.AccessibleName = Nothing
         '
         'lblAnzeige
         '
         resources.ApplyResources(Me.lblAnzeige, "lblAnzeige")
         Me.lblAnzeige.Name = "lblAnzeige"
         '
-        '
-        '
-        Me.lblAnzeige.RootElement.AccessibleDescription = Nothing
-        Me.lblAnzeige.RootElement.AccessibleName = Nothing
-        '
         'RadCheckBoxAbdruck2
         '
         resources.ApplyResources(Me.RadCheckBoxAbdruck2, "RadCheckBoxAbdruck2")
         Me.RadCheckBoxAbdruck2.Name = "RadCheckBoxAbdruck2"
-        '
-        '
-        '
-        Me.RadCheckBoxAbdruck2.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxAbdruck2.RootElement.AccessibleName = Nothing
         '
         'RadLabel2
         '
         resources.ApplyResources(Me.RadLabel2, "RadLabel2")
         Me.RadLabel2.Name = "RadLabel2"
         '
-        '
-        '
-        Me.RadLabel2.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel2.RootElement.AccessibleName = Nothing
-        '
         'RadCheckBoxAbdruck1
         '
         resources.ApplyResources(Me.RadCheckBoxAbdruck1, "RadCheckBoxAbdruck1")
         Me.RadCheckBoxAbdruck1.Name = "RadCheckBoxAbdruck1"
-        '
-        '
-        '
-        Me.RadCheckBoxAbdruck1.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxAbdruck1.RootElement.AccessibleName = Nothing
         '
         'RadLabel3
         '
         resources.ApplyResources(Me.RadLabel3, "RadLabel3")
         Me.RadLabel3.Name = "RadLabel3"
         '
-        '
-        '
-        Me.RadLabel3.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel3.RootElement.AccessibleName = Nothing
-        '
         'lblAbdruck
         '
         resources.ApplyResources(Me.lblAbdruck, "lblAbdruck")
         Me.lblAbdruck.Name = "lblAbdruck"
-        '
-        '
-        '
-        Me.lblAbdruck.RootElement.AccessibleDescription = Nothing
-        Me.lblAbdruck.RootElement.AccessibleName = Nothing
         '
         'RadLabel4
         '
         resources.ApplyResources(Me.RadLabel4, "RadLabel4")
         Me.RadLabel4.Name = "RadLabel4"
         '
-        '
-        '
-        Me.RadLabel4.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel4.RootElement.AccessibleName = Nothing
-        '
         'lblPrintBeschreibung
         '
         resources.ApplyResources(Me.lblPrintBeschreibung, "lblPrintBeschreibung")
         Me.lblPrintBeschreibung.Name = "lblPrintBeschreibung"
-        '
-        '
-        '
-        Me.lblPrintBeschreibung.RootElement.AccessibleDescription = Nothing
-        Me.lblPrintBeschreibung.RootElement.AccessibleName = Nothing
         '
         'RadLabel5
         '
         resources.ApplyResources(Me.RadLabel5, "RadLabel5")
         Me.RadLabel5.Name = "RadLabel5"
         '
-        '
-        '
-        Me.RadLabel5.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel5.RootElement.AccessibleName = Nothing
-        '
         'RadLabel6
         '
         resources.ApplyResources(Me.RadLabel6, "RadLabel6")
         Me.RadLabel6.Name = "RadLabel6"
-        '
-        '
-        '
-        Me.RadLabel6.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel6.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlMax5
         '
@@ -358,20 +278,10 @@ Partial Class uco15PruefungStabilitaet
         Me.RadTextBoxControlMax5.MaxLength = 20
         Me.RadTextBoxControlMax5.Name = "RadTextBoxControlMax5"
         '
-        '
-        '
-        Me.RadTextBoxControlMax5.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlMax5.RootElement.AccessibleName = Nothing
-        '
         'RadLabel7
         '
         resources.ApplyResources(Me.RadLabel7, "RadLabel7")
         Me.RadLabel7.Name = "RadLabel7"
-        '
-        '
-        '
-        Me.RadLabel7.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel7.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlMax4
         '
@@ -379,20 +289,10 @@ Partial Class uco15PruefungStabilitaet
         Me.RadTextBoxControlMax4.MaxLength = 20
         Me.RadTextBoxControlMax4.Name = "RadTextBoxControlMax4"
         '
-        '
-        '
-        Me.RadTextBoxControlMax4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlMax4.RootElement.AccessibleName = Nothing
-        '
         'RadLabel8
         '
         resources.ApplyResources(Me.RadLabel8, "RadLabel8")
         Me.RadLabel8.Name = "RadLabel8"
-        '
-        '
-        '
-        Me.RadLabel8.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel8.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlMax3
         '
@@ -400,21 +300,11 @@ Partial Class uco15PruefungStabilitaet
         Me.RadTextBoxControlMax3.MaxLength = 20
         Me.RadTextBoxControlMax3.Name = "RadTextBoxControlMax3"
         '
-        '
-        '
-        Me.RadTextBoxControlMax3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlMax3.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlLast1
         '
         resources.ApplyResources(Me.RadTextBoxControlLast1, "RadTextBoxControlLast1")
         Me.RadTextBoxControlLast1.MaxLength = 20
         Me.RadTextBoxControlLast1.Name = "RadTextBoxControlLast1"
-        '
-        '
-        '
-        Me.RadTextBoxControlLast1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlLast1.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlMax2
         '
@@ -422,21 +312,11 @@ Partial Class uco15PruefungStabilitaet
         Me.RadTextBoxControlMax2.MaxLength = 20
         Me.RadTextBoxControlMax2.Name = "RadTextBoxControlMax2"
         '
-        '
-        '
-        Me.RadTextBoxControlMax2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlMax2.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlLast2
         '
         resources.ApplyResources(Me.RadTextBoxControlLast2, "RadTextBoxControlLast2")
         Me.RadTextBoxControlLast2.MaxLength = 20
         Me.RadTextBoxControlLast2.Name = "RadTextBoxControlLast2"
-        '
-        '
-        '
-        Me.RadTextBoxControlLast2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlLast2.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlMax1
         '
@@ -444,21 +324,11 @@ Partial Class uco15PruefungStabilitaet
         Me.RadTextBoxControlMax1.MaxLength = 20
         Me.RadTextBoxControlMax1.Name = "RadTextBoxControlMax1"
         '
-        '
-        '
-        Me.RadTextBoxControlMax1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlMax1.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlLast3
         '
         resources.ApplyResources(Me.RadTextBoxControlLast3, "RadTextBoxControlLast3")
         Me.RadTextBoxControlLast3.MaxLength = 20
         Me.RadTextBoxControlLast3.Name = "RadTextBoxControlLast3"
-        '
-        '
-        '
-        Me.RadTextBoxControlLast3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlLast3.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlMin5
         '
@@ -466,21 +336,11 @@ Partial Class uco15PruefungStabilitaet
         Me.RadTextBoxControlMin5.MaxLength = 20
         Me.RadTextBoxControlMin5.Name = "RadTextBoxControlMin5"
         '
-        '
-        '
-        Me.RadTextBoxControlMin5.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlMin5.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlLast4
         '
         resources.ApplyResources(Me.RadTextBoxControlLast4, "RadTextBoxControlLast4")
         Me.RadTextBoxControlLast4.MaxLength = 20
         Me.RadTextBoxControlLast4.Name = "RadTextBoxControlLast4"
-        '
-        '
-        '
-        Me.RadTextBoxControlLast4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlLast4.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlMin4
         '
@@ -488,21 +348,11 @@ Partial Class uco15PruefungStabilitaet
         Me.RadTextBoxControlMin4.MaxLength = 20
         Me.RadTextBoxControlMin4.Name = "RadTextBoxControlMin4"
         '
-        '
-        '
-        Me.RadTextBoxControlMin4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlMin4.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlLast5
         '
         resources.ApplyResources(Me.RadTextBoxControlLast5, "RadTextBoxControlLast5")
         Me.RadTextBoxControlLast5.MaxLength = 20
         Me.RadTextBoxControlLast5.Name = "RadTextBoxControlLast5"
-        '
-        '
-        '
-        Me.RadTextBoxControlLast5.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlLast5.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlMin3
         '
@@ -510,21 +360,11 @@ Partial Class uco15PruefungStabilitaet
         Me.RadTextBoxControlMin3.MaxLength = 20
         Me.RadTextBoxControlMin3.Name = "RadTextBoxControlMin3"
         '
-        '
-        '
-        Me.RadTextBoxControlMin3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlMin3.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlAnzeige1
         '
         resources.ApplyResources(Me.RadTextBoxControlAnzeige1, "RadTextBoxControlAnzeige1")
         Me.RadTextBoxControlAnzeige1.MaxLength = 20
         Me.RadTextBoxControlAnzeige1.Name = "RadTextBoxControlAnzeige1"
-        '
-        '
-        '
-        Me.RadTextBoxControlAnzeige1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlAnzeige1.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlMin2
         '
@@ -532,21 +372,11 @@ Partial Class uco15PruefungStabilitaet
         Me.RadTextBoxControlMin2.MaxLength = 20
         Me.RadTextBoxControlMin2.Name = "RadTextBoxControlMin2"
         '
-        '
-        '
-        Me.RadTextBoxControlMin2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlMin2.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlAnzeige2
         '
         resources.ApplyResources(Me.RadTextBoxControlAnzeige2, "RadTextBoxControlAnzeige2")
         Me.RadTextBoxControlAnzeige2.MaxLength = 20
         Me.RadTextBoxControlAnzeige2.Name = "RadTextBoxControlAnzeige2"
-        '
-        '
-        '
-        Me.RadTextBoxControlAnzeige2.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlAnzeige2.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlMin1
         '
@@ -554,21 +384,11 @@ Partial Class uco15PruefungStabilitaet
         Me.RadTextBoxControlMin1.MaxLength = 20
         Me.RadTextBoxControlMin1.Name = "RadTextBoxControlMin1"
         '
-        '
-        '
-        Me.RadTextBoxControlMin1.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlMin1.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlAnzeige3
         '
         resources.ApplyResources(Me.RadTextBoxControlAnzeige3, "RadTextBoxControlAnzeige3")
         Me.RadTextBoxControlAnzeige3.MaxLength = 20
         Me.RadTextBoxControlAnzeige3.Name = "RadTextBoxControlAnzeige3"
-        '
-        '
-        '
-        Me.RadTextBoxControlAnzeige3.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlAnzeige3.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxControlAnzeige5
         '
@@ -576,28 +396,17 @@ Partial Class uco15PruefungStabilitaet
         Me.RadTextBoxControlAnzeige5.MaxLength = 20
         Me.RadTextBoxControlAnzeige5.Name = "RadTextBoxControlAnzeige5"
         '
-        '
-        '
-        Me.RadTextBoxControlAnzeige5.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlAnzeige5.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxControlAnzeige4
         '
         resources.ApplyResources(Me.RadTextBoxControlAnzeige4, "RadTextBoxControlAnzeige4")
         Me.RadTextBoxControlAnzeige4.MaxLength = 20
         Me.RadTextBoxControlAnzeige4.Name = "RadTextBoxControlAnzeige4"
         '
-        '
-        '
-        Me.RadTextBoxControlAnzeige4.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxControlAnzeige4.RootElement.AccessibleName = Nothing
-        '
         'uco15PruefungStabilitaet
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.RadScrollablePanel1)
-        Me.DoubleBuffered = True
         Me.Name = "uco15PruefungStabilitaet"
         Me.RadScrollablePanel1.PanelContainer.ResumeLayout(False)
         Me.RadScrollablePanel1.PanelContainer.PerformLayout()

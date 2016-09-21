@@ -77,67 +77,36 @@ Partial Class uco16Taraeinrichtung
         resources.ApplyResources(Me.lblTaraAusrichtung, "lblTaraAusrichtung")
         Me.lblTaraAusrichtung.Name = "lblTaraAusrichtung"
         '
-        '
-        '
-        Me.lblTaraAusrichtung.RootElement.AccessibleDescription = Nothing
-        Me.lblTaraAusrichtung.RootElement.AccessibleName = Nothing
-        '
         'RadCheckBoxTaraGenauigkeitTarrierung
         '
         resources.ApplyResources(Me.RadCheckBoxTaraGenauigkeitTarrierung, "RadCheckBoxTaraGenauigkeitTarrierung")
         Me.RadCheckBoxTaraGenauigkeitTarrierung.Name = "RadCheckBoxTaraGenauigkeitTarrierung"
-        '
-        '
-        '
-        Me.RadCheckBoxTaraGenauigkeitTarrierung.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxTaraGenauigkeitTarrierung.RootElement.AccessibleName = Nothing
         '
         'lblGenauigkeit
         '
         resources.ApplyResources(Me.lblGenauigkeit, "lblGenauigkeit")
         Me.lblGenauigkeit.Name = "lblGenauigkeit"
         '
-        '
-        '
-        Me.lblGenauigkeit.RootElement.AccessibleDescription = Nothing
-        Me.lblGenauigkeit.RootElement.AccessibleName = Nothing
-        '
         'RadCheckBoxTaraausgleicheinrichtungOK
         '
         resources.ApplyResources(Me.RadCheckBoxTaraausgleicheinrichtungOK, "RadCheckBoxTaraausgleicheinrichtungOK")
         Me.RadCheckBoxTaraausgleicheinrichtungOK.Name = "RadCheckBoxTaraausgleicheinrichtungOK"
-        '
-        '
-        '
-        Me.RadCheckBoxTaraausgleicheinrichtungOK.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxTaraausgleicheinrichtungOK.RootElement.AccessibleName = Nothing
         '
         'lblRichtigkeitspruefung
         '
         resources.ApplyResources(Me.lblRichtigkeitspruefung, "lblRichtigkeitspruefung")
         Me.lblRichtigkeitspruefung.Name = "lblRichtigkeitspruefung"
         '
-        '
-        '
-        Me.lblRichtigkeitspruefung.RootElement.AccessibleDescription = Nothing
-        Me.lblRichtigkeitspruefung.RootElement.AccessibleName = Nothing
-        '
         'RadCheckBoxTaraErweiterteRichtigkeitspruefung
         '
         resources.ApplyResources(Me.RadCheckBoxTaraErweiterteRichtigkeitspruefung, "RadCheckBoxTaraErweiterteRichtigkeitspruefung")
         Me.RadCheckBoxTaraErweiterteRichtigkeitspruefung.Name = "RadCheckBoxTaraErweiterteRichtigkeitspruefung"
-        '
-        '
-        '
-        Me.RadCheckBoxTaraErweiterteRichtigkeitspruefung.RootElement.AccessibleDescription = Nothing
-        Me.RadCheckBoxTaraErweiterteRichtigkeitspruefung.RootElement.AccessibleName = Nothing
         '
         'uco16Taraeinrichtung
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.RadScrollablePanel1)
-        Me.DoubleBuffered = True
         Me.Name = "uco16Taraeinrichtung"
         Me.RadScrollablePanel1.PanelContainer.ResumeLayout(False)
         Me.RadScrollablePanel1.PanelContainer.PerformLayout()

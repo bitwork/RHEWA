@@ -35,11 +35,6 @@ Partial Class uco_6EichprotokollVerfahrenswahl
         Me.RadRadioButtonNormalien.CheckState = System.Windows.Forms.CheckState.Checked
         resources.ApplyResources(Me.RadRadioButtonNormalien, "RadRadioButtonNormalien")
         Me.RadRadioButtonNormalien.Name = "RadRadioButtonNormalien"
-        '
-        '
-        '
-        Me.RadRadioButtonNormalien.RootElement.AccessibleDescription = Nothing
-        Me.RadRadioButtonNormalien.RootElement.AccessibleName = Nothing
         Me.RadRadioButtonNormalien.ToggleState = Telerik.WinControls.Enumerations.ToggleState.[On]
         '
         'RadRadioButtonStaffelverfahren
@@ -47,20 +42,10 @@ Partial Class uco_6EichprotokollVerfahrenswahl
         resources.ApplyResources(Me.RadRadioButtonStaffelverfahren, "RadRadioButtonStaffelverfahren")
         Me.RadRadioButtonStaffelverfahren.Name = "RadRadioButtonStaffelverfahren"
         '
-        '
-        '
-        Me.RadRadioButtonStaffelverfahren.RootElement.AccessibleDescription = Nothing
-        Me.RadRadioButtonStaffelverfahren.RootElement.AccessibleName = Nothing
-        '
         'RadRadioButtonFahrzeugwaagen
         '
         resources.ApplyResources(Me.RadRadioButtonFahrzeugwaagen, "RadRadioButtonFahrzeugwaagen")
         Me.RadRadioButtonFahrzeugwaagen.Name = "RadRadioButtonFahrzeugwaagen"
-        '
-        '
-        '
-        Me.RadRadioButtonFahrzeugwaagen.RootElement.AccessibleDescription = Nothing
-        Me.RadRadioButtonFahrzeugwaagen.RootElement.AccessibleName = Nothing
         '
         'uco_6EichprotokollVerfahrenswahl
         '
@@ -69,7 +54,6 @@ Partial Class uco_6EichprotokollVerfahrenswahl
         Me.Controls.Add(Me.RadRadioButtonFahrzeugwaagen)
         Me.Controls.Add(Me.RadRadioButtonStaffelverfahren)
         Me.Controls.Add(Me.RadRadioButtonNormalien)
-        Me.DoubleBuffered = True
         Me.Name = "uco_6EichprotokollVerfahrenswahl"
         CType(Me.RadRadioButtonNormalien, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadRadioButtonStaffelverfahren, System.ComponentModel.ISupportInitialize).EndInit()

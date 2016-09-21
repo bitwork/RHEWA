@@ -256,7 +256,7 @@
     <value>RadTextBoxStammdatenPLZ</value>
   </data>
   <data name="&gt;&gt;RadTextBoxStammdatenPLZ.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxStammdatenPLZ.Parent" xml:space="preserve">
     <value>RadGroupBoxStammdaten</value>
@@ -280,7 +280,7 @@
     <value>lblPLZ</value>
   </data>
   <data name="&gt;&gt;lblPLZ.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblPLZ.Parent" xml:space="preserve">
     <value>RadGroupBoxStammdaten</value>
@@ -301,7 +301,7 @@
     <value>RadTextBoxStammdatenOrt</value>
   </data>
   <data name="&gt;&gt;RadTextBoxStammdatenOrt.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxStammdatenOrt.Parent" xml:space="preserve">
     <value>RadGroupBoxStammdaten</value>
@@ -325,7 +325,7 @@
     <value>lblOrt</value>
   </data>
   <data name="&gt;&gt;lblOrt.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblOrt.Parent" xml:space="preserve">
     <value>RadGroupBoxStammdaten</value>
@@ -346,7 +346,7 @@
     <value>RadTextBoxStammdatenStrasse</value>
   </data>
   <data name="&gt;&gt;RadTextBoxStammdatenStrasse.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxStammdatenStrasse.Parent" xml:space="preserve">
     <value>RadGroupBoxStammdaten</value>
@@ -370,7 +370,7 @@
     <value>lblStrasse</value>
   </data>
   <data name="&gt;&gt;lblStrasse.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblStrasse.Parent" xml:space="preserve">
     <value>RadGroupBoxStammdaten</value>
@@ -391,7 +391,7 @@
     <value>RadTextBoxStammdatenWaagenbaufirma</value>
   </data>
   <data name="&gt;&gt;RadTextBoxStammdatenWaagenbaufirma.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxStammdatenWaagenbaufirma.Parent" xml:space="preserve">
     <value>RadGroupBoxStammdaten</value>
@@ -415,7 +415,7 @@
     <value>lblWaagenbaufirma</value>
   </data>
   <data name="&gt;&gt;lblWaagenbaufirma.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblWaagenbaufirma.Parent" xml:space="preserve">
     <value>RadGroupBoxStammdaten</value>
@@ -442,7 +442,7 @@
     <value>RadGroupBoxStammdaten</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxStammdaten.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxStammdaten.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -568,7 +568,7 @@
     <value>RadButtonNeueWaegezelle</value>
   </data>
   <data name="&gt;&gt;RadButtonNeueWaegezelle.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonNeueWaegezelle.Parent" xml:space="preserve">
     <value>RadGroupBoxWZ</value>
@@ -589,7 +589,7 @@
     <value>RadDropdownlistlWZHersteller</value>
   </data>
   <data name="&gt;&gt;RadDropdownlistlWZHersteller.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadDropDownList, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadDropDownList, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadDropdownlistlWZHersteller.Parent" xml:space="preserve">
     <value>RadGroupBoxWZ</value>
@@ -610,7 +610,7 @@
     <value>RadDropdownlistlWZTyp</value>
   </data>
   <data name="&gt;&gt;RadDropdownlistlWZTyp.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadDropDownList, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadDropDownList, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadDropdownlistlWZTyp.Parent" xml:space="preserve">
     <value>RadGroupBoxWZ</value>
@@ -634,7 +634,7 @@
     <value>lblAWZTyp</value>
   </data>
   <data name="&gt;&gt;lblAWZTyp.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblAWZTyp.Parent" xml:space="preserve">
     <value>RadGroupBoxWZ</value>
@@ -655,7 +655,7 @@
     <value>RadTextBoxWZBauartzulassung</value>
   </data>
   <data name="&gt;&gt;RadTextBoxWZBauartzulassung.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxWZBauartzulassung.Parent" xml:space="preserve">
     <value>RadGroupBoxWZ</value>
@@ -679,7 +679,7 @@
     <value>lblAWZZulassung2</value>
   </data>
   <data name="&gt;&gt;lblAWZZulassung2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblAWZZulassung2.Parent" xml:space="preserve">
     <value>RadGroupBoxWZ</value>
@@ -700,7 +700,7 @@
     <value>RadTextBoxWZPruefbericht</value>
   </data>
   <data name="&gt;&gt;RadTextBoxWZPruefbericht.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxWZPruefbericht.Parent" xml:space="preserve">
     <value>RadGroupBoxWZ</value>
@@ -724,7 +724,7 @@
     <value>lblAWZZulassung</value>
   </data>
   <data name="&gt;&gt;lblAWZZulassung.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblAWZZulassung.Parent" xml:space="preserve">
     <value>RadGroupBoxWZ</value>
@@ -748,7 +748,7 @@
     <value>lblAWZHersteller</value>
   </data>
   <data name="&gt;&gt;lblAWZHersteller.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblAWZHersteller.Parent" xml:space="preserve">
     <value>RadGroupBoxWZ</value>
@@ -777,7 +777,7 @@
     <value>RadGroupBoxWZ</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxWZ.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxWZ.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -891,7 +891,7 @@
     <value>lblWaagenart</value>
   </data>
   <data name="&gt;&gt;lblWaagenart.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblWaagenart.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
@@ -933,7 +933,7 @@
     <value>RadDropDownListWaagenArt</value>
   </data>
   <data name="&gt;&gt;RadDropDownListWaagenArt.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadDropDownList, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadDropDownList, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadDropDownListWaagenArt.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
@@ -957,7 +957,7 @@
     <value>RadLabel16</value>
   </data>
   <data name="&gt;&gt;RadLabel16.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadLabel16.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
@@ -978,7 +978,7 @@
     <value>RadDropdownlistWaagenTyp</value>
   </data>
   <data name="&gt;&gt;RadDropdownlistWaagenTyp.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadDropDownList, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadDropDownList, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadDropdownlistWaagenTyp.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
@@ -999,7 +999,7 @@
     <value>RadTextBoxWaageZulassungsinhaber</value>
   </data>
   <data name="&gt;&gt;RadTextBoxWaageZulassungsinhaber.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxWaageZulassungsinhaber.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
@@ -1023,7 +1023,7 @@
     <value>lblAWaagenTyp</value>
   </data>
   <data name="&gt;&gt;lblAWaagenTyp.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblAWaagenTyp.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
@@ -1044,7 +1044,7 @@
     <value>RadTextBoxWaageSeriennummer</value>
   </data>
   <data name="&gt;&gt;RadTextBoxWaageSeriennummer.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxWaageSeriennummer.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
@@ -1068,7 +1068,7 @@
     <value>lblAWaageSeriennummer</value>
   </data>
   <data name="&gt;&gt;lblAWaageSeriennummer.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblAWaageSeriennummer.Parent" xml:space="preserve">
     <value>RadGroupBoxWaage</value>
@@ -1095,7 +1095,7 @@
     <value>RadGroupBoxWaage</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxWaage.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxWaage.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -1209,7 +1209,7 @@
     <value>RadDropdownlistAWGTyp</value>
   </data>
   <data name="&gt;&gt;RadDropdownlistAWGTyp.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadDropDownList, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadDropDownList, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadDropdownlistAWGTyp.Parent" xml:space="preserve">
     <value>RadGroupBoxAWG</value>
@@ -1233,7 +1233,7 @@
     <value>lblAWGTyp</value>
   </data>
   <data name="&gt;&gt;lblAWGTyp.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblAWGTyp.Parent" xml:space="preserve">
     <value>RadGroupBoxAWG</value>
@@ -1254,7 +1254,7 @@
     <value>RadTextBoxAWGBauartzulassung</value>
   </data>
   <data name="&gt;&gt;RadTextBoxAWGBauartzulassung.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxAWGBauartzulassung.Parent" xml:space="preserve">
     <value>RadGroupBoxAWG</value>
@@ -1278,7 +1278,7 @@
     <value>lblAWGBauart2</value>
   </data>
   <data name="&gt;&gt;lblAWGBauart2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblAWGBauart2.Parent" xml:space="preserve">
     <value>RadGroupBoxAWG</value>
@@ -1299,7 +1299,7 @@
     <value>RadTextBoxAWGPruefbericht</value>
   </data>
   <data name="&gt;&gt;RadTextBoxAWGPruefbericht.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxAWGPruefbericht.Parent" xml:space="preserve">
     <value>RadGroupBoxAWG</value>
@@ -1323,7 +1323,7 @@
     <value>lblAWGBauart</value>
   </data>
   <data name="&gt;&gt;lblAWGBauart.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblAWGBauart.Parent" xml:space="preserve">
     <value>RadGroupBoxAWG</value>
@@ -1344,7 +1344,7 @@
     <value>RadTextBoxAWGHersteller</value>
   </data>
   <data name="&gt;&gt;RadTextBoxAWGHersteller.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadTextBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadTextBoxAWGHersteller.Parent" xml:space="preserve">
     <value>RadGroupBoxAWG</value>
@@ -1368,7 +1368,7 @@
     <value>lblAWGHersteller</value>
   </data>
   <data name="&gt;&gt;lblAWGHersteller.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;lblAWGHersteller.Parent" xml:space="preserve">
     <value>RadGroupBoxAWG</value>
@@ -1397,7 +1397,7 @@
     <value>RadGroupBoxAWG</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxAWG.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxAWG.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -1412,7 +1412,7 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanel1.PanelContainer.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadScrollablePanelContainer, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadScrollablePanelContainer, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanel1.PanelContainer.Parent" xml:space="preserve">
     <value>RadScrollablePanel1</value>
@@ -1430,7 +1430,7 @@
     <value>RadScrollablePanel1</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanel1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadScrollablePanel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadScrollablePanel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadScrollablePanel1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -1451,6 +1451,6 @@
     <value>uco_2StammdatenEingabe</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.6024.16918, Culture=neutral, PublicKeyToken=null</value>
+    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.6108.20583, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

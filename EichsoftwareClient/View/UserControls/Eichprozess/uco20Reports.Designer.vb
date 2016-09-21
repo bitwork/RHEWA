@@ -60,80 +60,40 @@ Partial Class uco20Reports
         resources.ApplyResources(Me.RadButtonExportErstEichungPL, "RadButtonExportErstEichungPL")
         Me.RadButtonExportErstEichungPL.Name = "RadButtonExportErstEichungPL"
         '
-        '
-        '
-        Me.RadButtonExportErstEichungPL.RootElement.AccessibleDescription = Nothing
-        Me.RadButtonExportErstEichungPL.RootElement.AccessibleName = Nothing
-        '
         'RadButtonExportKonformitaetserklaerungRO
         '
         resources.ApplyResources(Me.RadButtonExportKonformitaetserklaerungRO, "RadButtonExportKonformitaetserklaerungRO")
         Me.RadButtonExportKonformitaetserklaerungRO.Name = "RadButtonExportKonformitaetserklaerungRO"
-        '
-        '
-        '
-        Me.RadButtonExportKonformitaetserklaerungRO.RootElement.AccessibleDescription = Nothing
-        Me.RadButtonExportKonformitaetserklaerungRO.RootElement.AccessibleName = Nothing
         '
         'RadButtonExportKonformitaetserklaerungPL
         '
         resources.ApplyResources(Me.RadButtonExportKonformitaetserklaerungPL, "RadButtonExportKonformitaetserklaerungPL")
         Me.RadButtonExportKonformitaetserklaerungPL.Name = "RadButtonExportKonformitaetserklaerungPL"
         '
-        '
-        '
-        Me.RadButtonExportKonformitaetserklaerungPL.RootElement.AccessibleDescription = Nothing
-        Me.RadButtonExportKonformitaetserklaerungPL.RootElement.AccessibleName = Nothing
-        '
         'RadButtonExportErstEichungDE
         '
         resources.ApplyResources(Me.RadButtonExportErstEichungDE, "RadButtonExportErstEichungDE")
         Me.RadButtonExportErstEichungDE.Name = "RadButtonExportErstEichungDE"
-        '
-        '
-        '
-        Me.RadButtonExportErstEichungDE.RootElement.AccessibleDescription = Nothing
-        Me.RadButtonExportErstEichungDE.RootElement.AccessibleName = Nothing
         '
         'RadButtonExportErstEichungEN
         '
         resources.ApplyResources(Me.RadButtonExportErstEichungEN, "RadButtonExportErstEichungEN")
         Me.RadButtonExportErstEichungEN.Name = "RadButtonExportErstEichungEN"
         '
-        '
-        '
-        Me.RadButtonExportErstEichungEN.RootElement.AccessibleDescription = Nothing
-        Me.RadButtonExportErstEichungEN.RootElement.AccessibleName = Nothing
-        '
         'RadButtonExportKonformitaetserklaerungDE
         '
         resources.ApplyResources(Me.RadButtonExportKonformitaetserklaerungDE, "RadButtonExportKonformitaetserklaerungDE")
         Me.RadButtonExportKonformitaetserklaerungDE.Name = "RadButtonExportKonformitaetserklaerungDE"
-        '
-        '
-        '
-        Me.RadButtonExportKonformitaetserklaerungDE.RootElement.AccessibleDescription = Nothing
-        Me.RadButtonExportKonformitaetserklaerungDE.RootElement.AccessibleName = Nothing
         '
         'RadButtonExportKompatibliaetsnachweisEN
         '
         resources.ApplyResources(Me.RadButtonExportKompatibliaetsnachweisEN, "RadButtonExportKompatibliaetsnachweisEN")
         Me.RadButtonExportKompatibliaetsnachweisEN.Name = "RadButtonExportKompatibliaetsnachweisEN"
         '
-        '
-        '
-        Me.RadButtonExportKompatibliaetsnachweisEN.RootElement.AccessibleDescription = Nothing
-        Me.RadButtonExportKompatibliaetsnachweisEN.RootElement.AccessibleName = Nothing
-        '
         'RadButtonExportKompatibliaetsnachweisDE
         '
         resources.ApplyResources(Me.RadButtonExportKompatibliaetsnachweisDE, "RadButtonExportKompatibliaetsnachweisDE")
         Me.RadButtonExportKompatibliaetsnachweisDE.Name = "RadButtonExportKompatibliaetsnachweisDE"
-        '
-        '
-        '
-        Me.RadButtonExportKompatibliaetsnachweisDE.RootElement.AccessibleDescription = Nothing
-        Me.RadButtonExportKompatibliaetsnachweisDE.RootElement.AccessibleName = Nothing
         '
         'RadGroupBox1
         '
@@ -145,20 +105,10 @@ Partial Class uco20Reports
         resources.ApplyResources(Me.RadGroupBox1, "RadGroupBox1")
         Me.RadGroupBox1.Name = "RadGroupBox1"
         '
-        '
-        '
-        Me.RadGroupBox1.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBox1.RootElement.AccessibleName = Nothing
-        '
         'RadButtonExportEichprozessDE
         '
         resources.ApplyResources(Me.RadButtonExportEichprozessDE, "RadButtonExportEichprozessDE")
         Me.RadButtonExportEichprozessDE.Name = "RadButtonExportEichprozessDE"
-        '
-        '
-        '
-        Me.RadButtonExportEichprozessDE.RootElement.AccessibleDescription = Nothing
-        Me.RadButtonExportEichprozessDE.RootElement.AccessibleName = Nothing
         '
         'RadGroupBox2
         '
@@ -168,11 +118,6 @@ Partial Class uco20Reports
         resources.ApplyResources(Me.RadGroupBox2, "RadGroupBox2")
         Me.RadGroupBox2.Name = "RadGroupBox2"
         '
-        '
-        '
-        Me.RadGroupBox2.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBox2.RootElement.AccessibleName = Nothing
-        '
         'RadGroupBox3
         '
         Me.RadGroupBox3.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
@@ -181,22 +126,12 @@ Partial Class uco20Reports
         resources.ApplyResources(Me.RadGroupBox3, "RadGroupBox3")
         Me.RadGroupBox3.Name = "RadGroupBox3"
         '
-        '
-        '
-        Me.RadGroupBox3.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBox3.RootElement.AccessibleName = Nothing
-        '
         'RadGroupBox4
         '
         Me.RadGroupBox4.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBox4.Controls.Add(Me.RadButtonExportKonformitaetserklaerungRO)
         resources.ApplyResources(Me.RadGroupBox4, "RadGroupBox4")
         Me.RadGroupBox4.Name = "RadGroupBox4"
-        '
-        '
-        '
-        Me.RadGroupBox4.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBox4.RootElement.AccessibleName = Nothing
         '
         'uco20Reports
         '
@@ -206,7 +141,6 @@ Partial Class uco20Reports
         Me.Controls.Add(Me.RadGroupBox3)
         Me.Controls.Add(Me.RadGroupBox2)
         Me.Controls.Add(Me.RadGroupBox1)
-        Me.DoubleBuffered = True
         Me.Name = "uco20Reports"
         CType(Me.RadButtonExportErstEichungPL, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonExportKonformitaetserklaerungRO, System.ComponentModel.ISupportInitialize).EndInit()

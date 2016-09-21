@@ -139,7 +139,7 @@
     <value>RadButtonExportErstEichungPL</value>
   </data>
   <data name="&gt;&gt;RadButtonExportErstEichungPL.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonExportErstEichungPL.Parent" xml:space="preserve">
     <value>RadGroupBox3</value>
@@ -166,7 +166,7 @@
     <value>RadButtonExportKonformitaetserklaerungRO</value>
   </data>
   <data name="&gt;&gt;RadButtonExportKonformitaetserklaerungRO.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonExportKonformitaetserklaerungRO.Parent" xml:space="preserve">
     <value>RadGroupBox4</value>
@@ -196,7 +196,7 @@
     <value>RadButtonExportKonformitaetserklaerungPL</value>
   </data>
   <data name="&gt;&gt;RadButtonExportKonformitaetserklaerungPL.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonExportKonformitaetserklaerungPL.Parent" xml:space="preserve">
     <value>RadGroupBox3</value>
@@ -223,7 +223,7 @@
     <value>RadButtonExportErstEichungDE</value>
   </data>
   <data name="&gt;&gt;RadButtonExportErstEichungDE.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonExportErstEichungDE.Parent" xml:space="preserve">
     <value>RadGroupBox1</value>
@@ -250,7 +250,7 @@
     <value>RadButtonExportErstEichungEN</value>
   </data>
   <data name="&gt;&gt;RadButtonExportErstEichungEN.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonExportErstEichungEN.Parent" xml:space="preserve">
     <value>RadGroupBox2</value>
@@ -280,7 +280,7 @@
     <value>RadButtonExportKonformitaetserklaerungDE</value>
   </data>
   <data name="&gt;&gt;RadButtonExportKonformitaetserklaerungDE.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonExportKonformitaetserklaerungDE.Parent" xml:space="preserve">
     <value>RadGroupBox1</value>
@@ -307,7 +307,7 @@
     <value>RadButtonExportKompatibliaetsnachweisEN</value>
   </data>
   <data name="&gt;&gt;RadButtonExportKompatibliaetsnachweisEN.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonExportKompatibliaetsnachweisEN.Parent" xml:space="preserve">
     <value>RadGroupBox2</value>
@@ -334,7 +334,7 @@
     <value>RadButtonExportKompatibliaetsnachweisDE</value>
   </data>
   <data name="&gt;&gt;RadButtonExportKompatibliaetsnachweisDE.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonExportKompatibliaetsnachweisDE.Parent" xml:space="preserve">
     <value>RadGroupBox1</value>
@@ -361,7 +361,7 @@
     <value>RadButtonExportEichprozessDE</value>
   </data>
   <data name="&gt;&gt;RadButtonExportEichprozessDE.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadButton, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadButtonExportEichprozessDE.Parent" xml:space="preserve">
     <value>RadGroupBox1</value>
@@ -388,7 +388,7 @@
     <value>RadGroupBox1</value>
   </data>
   <data name="&gt;&gt;RadGroupBox1.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadGroupBox1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -415,7 +415,7 @@
     <value>RadGroupBox2</value>
   </data>
   <data name="&gt;&gt;RadGroupBox2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadGroupBox2.Parent" xml:space="preserve">
     <value>$this</value>
@@ -442,7 +442,7 @@
     <value>RadGroupBox3</value>
   </data>
   <data name="&gt;&gt;RadGroupBox3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadGroupBox3.Parent" xml:space="preserve">
     <value>$this</value>
@@ -472,7 +472,7 @@
     <value>RadGroupBox4</value>
   </data>
   <data name="&gt;&gt;RadGroupBox4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadGroupBox4.Parent" xml:space="preserve">
     <value>$this</value>
@@ -493,6 +493,6 @@
     <value>uco20Reports</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.6024.16918, Culture=neutral, PublicKeyToken=null</value>
+    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.6108.20583, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

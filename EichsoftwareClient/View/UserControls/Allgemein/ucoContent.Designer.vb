@@ -22,15 +22,8 @@ Partial Class ucoContent
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ucoContent))
-        Me.TimerStatusAenderung = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
-        '
-        'TimerStatusAenderung
-        '
-        Me.TimerStatusAenderung.Enabled = True
-        Me.TimerStatusAenderung.Interval = 2000
         '
         'ucoContent
         '
@@ -41,6 +34,5 @@ Partial Class ucoContent
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents TimerStatusAenderung As System.Windows.Forms.Timer
 
 End Class

@@ -3,7 +3,7 @@
 ''' Das UcoContent bietet die Basisklasse für alle im Eichprozess genutzten Ucos. Es enthält allgemein gültige Methoden und Eigenschaften
 ''' </summary>
 ''' <remarks></remarks>
-Public MustInherit Class ucoContent
+Public Class ucoContent
     Implements INotifyPropertyChanged
 
 #Region "Member Variables"
@@ -177,7 +177,9 @@ Public MustInherit Class ucoContent
 
 #End Region
 #Region "Must Override"
-    Protected Friend MustOverride Function ValidationNeeded() As Boolean
+    Protected Friend Overridable Function ValidationNeeded() As Boolean
+        Return False
+    End Function
 
     Protected Friend Overridable Sub LoadFromDatabase()
 

@@ -142,11 +142,6 @@ Partial Class uco_2StammdatenEingabe
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.RadGroupBoxAWG)
         resources.ApplyResources(Me.RadScrollablePanel1.PanelContainer, "RadScrollablePanel1.PanelContainer")
         '
-        '
-        '
-        Me.RadScrollablePanel1.RootElement.AccessibleDescription = Nothing
-        Me.RadScrollablePanel1.RootElement.AccessibleName = Nothing
-        '
         'RadGroupBoxStammdaten
         '
         Me.RadGroupBoxStammdaten.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
@@ -164,11 +159,6 @@ Partial Class uco_2StammdatenEingabe
         Me.RadGroupBoxStammdaten.Controls.Add(Me.lblWaagenbaufirma)
         resources.ApplyResources(Me.RadGroupBoxStammdaten, "RadGroupBoxStammdaten")
         Me.RadGroupBoxStammdaten.Name = "RadGroupBoxStammdaten"
-        '
-        '
-        '
-        Me.RadGroupBoxStammdaten.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxStammdaten.RootElement.AccessibleName = Nothing
         '
         'Label3
         '
@@ -200,20 +190,10 @@ Partial Class uco_2StammdatenEingabe
         Me.RadTextBoxStammdatenPLZ.MaxLength = 255
         Me.RadTextBoxStammdatenPLZ.Name = "RadTextBoxStammdatenPLZ"
         '
-        '
-        '
-        Me.RadTextBoxStammdatenPLZ.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxStammdatenPLZ.RootElement.AccessibleName = Nothing
-        '
         'lblPLZ
         '
         resources.ApplyResources(Me.lblPLZ, "lblPLZ")
         Me.lblPLZ.Name = "lblPLZ"
-        '
-        '
-        '
-        Me.lblPLZ.RootElement.AccessibleDescription = Nothing
-        Me.lblPLZ.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxStammdatenOrt
         '
@@ -221,20 +201,10 @@ Partial Class uco_2StammdatenEingabe
         Me.RadTextBoxStammdatenOrt.MaxLength = 255
         Me.RadTextBoxStammdatenOrt.Name = "RadTextBoxStammdatenOrt"
         '
-        '
-        '
-        Me.RadTextBoxStammdatenOrt.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxStammdatenOrt.RootElement.AccessibleName = Nothing
-        '
         'lblOrt
         '
         resources.ApplyResources(Me.lblOrt, "lblOrt")
         Me.lblOrt.Name = "lblOrt"
-        '
-        '
-        '
-        Me.lblOrt.RootElement.AccessibleDescription = Nothing
-        Me.lblOrt.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxStammdatenStrasse
         '
@@ -242,20 +212,10 @@ Partial Class uco_2StammdatenEingabe
         Me.RadTextBoxStammdatenStrasse.MaxLength = 255
         Me.RadTextBoxStammdatenStrasse.Name = "RadTextBoxStammdatenStrasse"
         '
-        '
-        '
-        Me.RadTextBoxStammdatenStrasse.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxStammdatenStrasse.RootElement.AccessibleName = Nothing
-        '
         'lblStrasse
         '
         resources.ApplyResources(Me.lblStrasse, "lblStrasse")
         Me.lblStrasse.Name = "lblStrasse"
-        '
-        '
-        '
-        Me.lblStrasse.RootElement.AccessibleDescription = Nothing
-        Me.lblStrasse.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxStammdatenWaagenbaufirma
         '
@@ -263,20 +223,10 @@ Partial Class uco_2StammdatenEingabe
         Me.RadTextBoxStammdatenWaagenbaufirma.MaxLength = 255
         Me.RadTextBoxStammdatenWaagenbaufirma.Name = "RadTextBoxStammdatenWaagenbaufirma"
         '
-        '
-        '
-        Me.RadTextBoxStammdatenWaagenbaufirma.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxStammdatenWaagenbaufirma.RootElement.AccessibleName = Nothing
-        '
         'lblWaagenbaufirma
         '
         resources.ApplyResources(Me.lblWaagenbaufirma, "lblWaagenbaufirma")
         Me.lblWaagenbaufirma.Name = "lblWaagenbaufirma"
-        '
-        '
-        '
-        Me.lblWaagenbaufirma.RootElement.AccessibleDescription = Nothing
-        Me.lblWaagenbaufirma.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxWZ
         '
@@ -296,11 +246,6 @@ Partial Class uco_2StammdatenEingabe
         Me.RadGroupBoxWZ.Controls.Add(Me.lblAWZHersteller)
         resources.ApplyResources(Me.RadGroupBoxWZ, "RadGroupBoxWZ")
         Me.RadGroupBoxWZ.Name = "RadGroupBoxWZ"
-        '
-        '
-        '
-        Me.RadGroupBoxWZ.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxWZ.RootElement.AccessibleName = Nothing
         '
         'Label9
         '
@@ -334,22 +279,12 @@ Partial Class uco_2StammdatenEingabe
         resources.ApplyResources(Me.RadButtonNeueWaegezelle, "RadButtonNeueWaegezelle")
         Me.RadButtonNeueWaegezelle.Name = "RadButtonNeueWaegezelle"
         '
-        '
-        '
-        Me.RadButtonNeueWaegezelle.RootElement.AccessibleDescription = Nothing
-        Me.RadButtonNeueWaegezelle.RootElement.AccessibleName = Nothing
-        '
         'RadDropdownlistlWZHersteller
         '
         Me.RadDropdownlistlWZHersteller.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.RadDropdownlistlWZHersteller.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList
         resources.ApplyResources(Me.RadDropdownlistlWZHersteller, "RadDropdownlistlWZHersteller")
         Me.RadDropdownlistlWZHersteller.Name = "RadDropdownlistlWZHersteller"
-        '
-        '
-        '
-        Me.RadDropdownlistlWZHersteller.RootElement.AccessibleDescription = Nothing
-        Me.RadDropdownlistlWZHersteller.RootElement.AccessibleName = Nothing
         '
         'RadDropdownlistlWZTyp
         '
@@ -358,20 +293,10 @@ Partial Class uco_2StammdatenEingabe
         resources.ApplyResources(Me.RadDropdownlistlWZTyp, "RadDropdownlistlWZTyp")
         Me.RadDropdownlistlWZTyp.Name = "RadDropdownlistlWZTyp"
         '
-        '
-        '
-        Me.RadDropdownlistlWZTyp.RootElement.AccessibleDescription = Nothing
-        Me.RadDropdownlistlWZTyp.RootElement.AccessibleName = Nothing
-        '
         'lblAWZTyp
         '
         resources.ApplyResources(Me.lblAWZTyp, "lblAWZTyp")
         Me.lblAWZTyp.Name = "lblAWZTyp"
-        '
-        '
-        '
-        Me.lblAWZTyp.RootElement.AccessibleDescription = Nothing
-        Me.lblAWZTyp.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxWZBauartzulassung
         '
@@ -379,11 +304,6 @@ Partial Class uco_2StammdatenEingabe
         Me.RadTextBoxWZBauartzulassung.MaxLength = 50
         Me.RadTextBoxWZBauartzulassung.Name = "RadTextBoxWZBauartzulassung"
         Me.RadTextBoxWZBauartzulassung.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxWZBauartzulassung.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxWZBauartzulassung.RootElement.AccessibleName = Nothing
         Me.RadTextBoxWZBauartzulassung.TabStop = False
         '
         'lblAWZZulassung2
@@ -391,22 +311,12 @@ Partial Class uco_2StammdatenEingabe
         resources.ApplyResources(Me.lblAWZZulassung2, "lblAWZZulassung2")
         Me.lblAWZZulassung2.Name = "lblAWZZulassung2"
         '
-        '
-        '
-        Me.lblAWZZulassung2.RootElement.AccessibleDescription = Nothing
-        Me.lblAWZZulassung2.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxWZPruefbericht
         '
         resources.ApplyResources(Me.RadTextBoxWZPruefbericht, "RadTextBoxWZPruefbericht")
         Me.RadTextBoxWZPruefbericht.MaxLength = 50
         Me.RadTextBoxWZPruefbericht.Name = "RadTextBoxWZPruefbericht"
         Me.RadTextBoxWZPruefbericht.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxWZPruefbericht.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxWZPruefbericht.RootElement.AccessibleName = Nothing
         Me.RadTextBoxWZPruefbericht.TabStop = False
         '
         'lblAWZZulassung
@@ -414,20 +324,10 @@ Partial Class uco_2StammdatenEingabe
         resources.ApplyResources(Me.lblAWZZulassung, "lblAWZZulassung")
         Me.lblAWZZulassung.Name = "lblAWZZulassung"
         '
-        '
-        '
-        Me.lblAWZZulassung.RootElement.AccessibleDescription = Nothing
-        Me.lblAWZZulassung.RootElement.AccessibleName = Nothing
-        '
         'lblAWZHersteller
         '
         resources.ApplyResources(Me.lblAWZHersteller, "lblAWZHersteller")
         Me.lblAWZHersteller.Name = "lblAWZHersteller"
-        '
-        '
-        '
-        Me.lblAWZHersteller.RootElement.AccessibleDescription = Nothing
-        Me.lblAWZHersteller.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxWaage
         '
@@ -446,11 +346,6 @@ Partial Class uco_2StammdatenEingabe
         Me.RadGroupBoxWaage.Controls.Add(Me.lblAWaageSeriennummer)
         resources.ApplyResources(Me.RadGroupBoxWaage, "RadGroupBoxWaage")
         Me.RadGroupBoxWaage.Name = "RadGroupBoxWaage"
-        '
-        '
-        '
-        Me.RadGroupBoxWaage.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxWaage.RootElement.AccessibleName = Nothing
         '
         'Label6
         '
@@ -475,11 +370,6 @@ Partial Class uco_2StammdatenEingabe
         resources.ApplyResources(Me.lblWaagenart, "lblWaagenart")
         Me.lblWaagenart.Name = "lblWaagenart"
         '
-        '
-        '
-        Me.lblWaagenart.RootElement.AccessibleDescription = Nothing
-        Me.lblWaagenart.RootElement.AccessibleName = Nothing
-        '
         'PictureBox4
         '
         Me.PictureBox4.Image = Global.EichsoftwareClient.My.Resources.Resources.lock
@@ -494,20 +384,10 @@ Partial Class uco_2StammdatenEingabe
         resources.ApplyResources(Me.RadDropDownListWaagenArt, "RadDropDownListWaagenArt")
         Me.RadDropDownListWaagenArt.Name = "RadDropDownListWaagenArt"
         '
-        '
-        '
-        Me.RadDropDownListWaagenArt.RootElement.AccessibleDescription = Nothing
-        Me.RadDropDownListWaagenArt.RootElement.AccessibleName = Nothing
-        '
         'RadLabel16
         '
         resources.ApplyResources(Me.RadLabel16, "RadLabel16")
         Me.RadLabel16.Name = "RadLabel16"
-        '
-        '
-        '
-        Me.RadLabel16.RootElement.AccessibleDescription = Nothing
-        Me.RadLabel16.RootElement.AccessibleName = Nothing
         '
         'RadDropdownlistWaagenTyp
         '
@@ -516,22 +396,12 @@ Partial Class uco_2StammdatenEingabe
         resources.ApplyResources(Me.RadDropdownlistWaagenTyp, "RadDropdownlistWaagenTyp")
         Me.RadDropdownlistWaagenTyp.Name = "RadDropdownlistWaagenTyp"
         '
-        '
-        '
-        Me.RadDropdownlistWaagenTyp.RootElement.AccessibleDescription = Nothing
-        Me.RadDropdownlistWaagenTyp.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxWaageZulassungsinhaber
         '
         resources.ApplyResources(Me.RadTextBoxWaageZulassungsinhaber, "RadTextBoxWaageZulassungsinhaber")
         Me.RadTextBoxWaageZulassungsinhaber.MaxLength = 50
         Me.RadTextBoxWaageZulassungsinhaber.Name = "RadTextBoxWaageZulassungsinhaber"
         Me.RadTextBoxWaageZulassungsinhaber.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxWaageZulassungsinhaber.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxWaageZulassungsinhaber.RootElement.AccessibleName = Nothing
         Me.RadTextBoxWaageZulassungsinhaber.TabStop = False
         '
         'lblAWaagenTyp
@@ -539,31 +409,16 @@ Partial Class uco_2StammdatenEingabe
         resources.ApplyResources(Me.lblAWaagenTyp, "lblAWaagenTyp")
         Me.lblAWaagenTyp.Name = "lblAWaagenTyp"
         '
-        '
-        '
-        Me.lblAWaagenTyp.RootElement.AccessibleDescription = Nothing
-        Me.lblAWaagenTyp.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxWaageSeriennummer
         '
         resources.ApplyResources(Me.RadTextBoxWaageSeriennummer, "RadTextBoxWaageSeriennummer")
         Me.RadTextBoxWaageSeriennummer.MaxLength = 50
         Me.RadTextBoxWaageSeriennummer.Name = "RadTextBoxWaageSeriennummer"
         '
-        '
-        '
-        Me.RadTextBoxWaageSeriennummer.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxWaageSeriennummer.RootElement.AccessibleName = Nothing
-        '
         'lblAWaageSeriennummer
         '
         resources.ApplyResources(Me.lblAWaageSeriennummer, "lblAWaageSeriennummer")
         Me.lblAWaageSeriennummer.Name = "lblAWaageSeriennummer"
-        '
-        '
-        '
-        Me.lblAWaageSeriennummer.RootElement.AccessibleDescription = Nothing
-        Me.lblAWaageSeriennummer.RootElement.AccessibleName = Nothing
         '
         'RadGroupBoxAWG
         '
@@ -582,11 +437,6 @@ Partial Class uco_2StammdatenEingabe
         Me.RadGroupBoxAWG.Controls.Add(Me.lblAWGHersteller)
         resources.ApplyResources(Me.RadGroupBoxAWG, "RadGroupBoxAWG")
         Me.RadGroupBoxAWG.Name = "RadGroupBoxAWG"
-        '
-        '
-        '
-        Me.RadGroupBoxAWG.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBoxAWG.RootElement.AccessibleName = Nothing
         '
         'Label7
         '
@@ -622,20 +472,10 @@ Partial Class uco_2StammdatenEingabe
         resources.ApplyResources(Me.RadDropdownlistAWGTyp, "RadDropdownlistAWGTyp")
         Me.RadDropdownlistAWGTyp.Name = "RadDropdownlistAWGTyp"
         '
-        '
-        '
-        Me.RadDropdownlistAWGTyp.RootElement.AccessibleDescription = Nothing
-        Me.RadDropdownlistAWGTyp.RootElement.AccessibleName = Nothing
-        '
         'lblAWGTyp
         '
         resources.ApplyResources(Me.lblAWGTyp, "lblAWGTyp")
         Me.lblAWGTyp.Name = "lblAWGTyp"
-        '
-        '
-        '
-        Me.lblAWGTyp.RootElement.AccessibleDescription = Nothing
-        Me.lblAWGTyp.RootElement.AccessibleName = Nothing
         '
         'RadTextBoxAWGBauartzulassung
         '
@@ -643,11 +483,6 @@ Partial Class uco_2StammdatenEingabe
         Me.RadTextBoxAWGBauartzulassung.MaxLength = 50
         Me.RadTextBoxAWGBauartzulassung.Name = "RadTextBoxAWGBauartzulassung"
         Me.RadTextBoxAWGBauartzulassung.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxAWGBauartzulassung.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxAWGBauartzulassung.RootElement.AccessibleName = Nothing
         Me.RadTextBoxAWGBauartzulassung.TabStop = False
         '
         'lblAWGBauart2
@@ -655,22 +490,12 @@ Partial Class uco_2StammdatenEingabe
         resources.ApplyResources(Me.lblAWGBauart2, "lblAWGBauart2")
         Me.lblAWGBauart2.Name = "lblAWGBauart2"
         '
-        '
-        '
-        Me.lblAWGBauart2.RootElement.AccessibleDescription = Nothing
-        Me.lblAWGBauart2.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxAWGPruefbericht
         '
         resources.ApplyResources(Me.RadTextBoxAWGPruefbericht, "RadTextBoxAWGPruefbericht")
         Me.RadTextBoxAWGPruefbericht.MaxLength = 50
         Me.RadTextBoxAWGPruefbericht.Name = "RadTextBoxAWGPruefbericht"
         Me.RadTextBoxAWGPruefbericht.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxAWGPruefbericht.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxAWGPruefbericht.RootElement.AccessibleName = Nothing
         Me.RadTextBoxAWGPruefbericht.TabStop = False
         '
         'lblAWGBauart
@@ -678,22 +503,12 @@ Partial Class uco_2StammdatenEingabe
         resources.ApplyResources(Me.lblAWGBauart, "lblAWGBauart")
         Me.lblAWGBauart.Name = "lblAWGBauart"
         '
-        '
-        '
-        Me.lblAWGBauart.RootElement.AccessibleDescription = Nothing
-        Me.lblAWGBauart.RootElement.AccessibleName = Nothing
-        '
         'RadTextBoxAWGHersteller
         '
         resources.ApplyResources(Me.RadTextBoxAWGHersteller, "RadTextBoxAWGHersteller")
         Me.RadTextBoxAWGHersteller.MaxLength = 50
         Me.RadTextBoxAWGHersteller.Name = "RadTextBoxAWGHersteller"
         Me.RadTextBoxAWGHersteller.ReadOnly = True
-        '
-        '
-        '
-        Me.RadTextBoxAWGHersteller.RootElement.AccessibleDescription = Nothing
-        Me.RadTextBoxAWGHersteller.RootElement.AccessibleName = Nothing
         Me.RadTextBoxAWGHersteller.TabStop = False
         '
         'lblAWGHersteller
@@ -701,17 +516,11 @@ Partial Class uco_2StammdatenEingabe
         resources.ApplyResources(Me.lblAWGHersteller, "lblAWGHersteller")
         Me.lblAWGHersteller.Name = "lblAWGHersteller"
         '
-        '
-        '
-        Me.lblAWGHersteller.RootElement.AccessibleDescription = Nothing
-        Me.lblAWGHersteller.RootElement.AccessibleName = Nothing
-        '
         'uco_2StammdatenEingabe
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.RadScrollablePanel1)
-        Me.DoubleBuffered = True
         Me.Name = "uco_2StammdatenEingabe"
         Me.RadScrollablePanel1.PanelContainer.ResumeLayout(False)
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).EndInit()

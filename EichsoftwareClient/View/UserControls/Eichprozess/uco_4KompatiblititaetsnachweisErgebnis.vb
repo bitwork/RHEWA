@@ -341,7 +341,6 @@
                 End Try
 
                 '=WENN('Daten-Eingabe'!$G$15="";"R fehlt";WENN($G$33="";"Q fehlt";WENN('Daten-Eingabe'!$G$16="";"Anzahl  N  fehlt";($G$33*'Daten-Eingabe'!$G$11*'Daten-Eingabe'!$G$15)/'Daten-Eingabe'!$G$16)))
-                'in der Excelmappe ohne Nachkommastellen angegeben deswegen CINT()
                 RadTextBoxPunkt5QMax.Text = (RadTextBoxPunkt5Faktor.Text * objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1 * objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Uebersetzungsverhaeltnis) / objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen
 
                 'vorher bereits runden des Faktorwertes (mit 2 Dezimalstellen angegeben), da damit gerechnet wird
@@ -382,11 +381,11 @@
 
         End Select
         'in der Excelmappe ohne Nachkommastellen angegeben deswegen CINT()
-        If Not RadTextBoxPunkt5QMax.Text.Equals("") Then
-            If IsNumeric(RadTextBoxPunkt5QMax.Text) Then
-                RadTextBoxPunkt5QMax.Text = CInt(RadTextBoxPunkt5QMax.Text)
-            End If
-        End If
+        'If Not RadTextBoxPunkt5QMax.Text.Equals("") Then
+        '    If IsNumeric(RadTextBoxPunkt5QMax.Text) Then
+        '        RadTextBoxPunkt5QMax.Text = CInt(RadTextBoxPunkt5QMax.Text)
+        '    End If
+        'End If
         RadTextBoxPunkt5EMax.Text = objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast.Split(";")(0)
 
         '=WENN(ODER($G$33="";$G$35="";$G$35>10000000);"NEIN";WENN($D$35>$G$35;"NEIN";"JA"))
