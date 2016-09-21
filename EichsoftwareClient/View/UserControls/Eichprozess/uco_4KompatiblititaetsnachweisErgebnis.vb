@@ -517,14 +517,14 @@
                 RadTextBoxPunkt6bMax.Text = ""
         End Select
 
-        'runden auf 0 Nachkommastellen
-        If RadTextBoxPunkt6bNLC.Visible = True Then
+        ''runden auf 0 Nachkommastellen
+        'If RadTextBoxPunkt6bNLC.Visible = True Then
 
-            If Not RadTextBoxPunkt6bNLC.Text.Equals("") Then
-                RadTextBoxPunkt6bNLC.Text = CInt(RadTextBoxPunkt6bNLC.Text)
-            End If
+        '    If Not RadTextBoxPunkt6bNLC.Text.Equals("") Then
+        '        RadTextBoxPunkt6bNLC.Text = CInt(RadTextBoxPunkt6bNLC.Text)
+        '    End If
 
-        End If
+        'End If
 
         'eMAX
         '=WENN('Daten-Eingabe'!$H$12="";"";WENN('Daten-Eingabe'!$H$12=0;"";'Daten-Eingabe'!$G$13/'Daten-Eingabe'!$H$12))
@@ -572,12 +572,12 @@
                 End Select
 
         End Select
-        'runden auf 0 nachkommastellen
-        If RadTextBoxPunkt6cNLC.Visible = True Then
-            If Not RadTextBoxPunkt6cNLC.Text.Equals("") Then
-                RadTextBoxPunkt6cNLC.Text = CInt(RadTextBoxPunkt6cNLC.Text)
-            End If
-        End If
+        ''runden auf 0 nachkommastellen
+        'If RadTextBoxPunkt6cNLC.Visible = True Then
+        '    If Not RadTextBoxPunkt6cNLC.Text.Equals("") Then
+        '        RadTextBoxPunkt6cNLC.Text = CInt(RadTextBoxPunkt6cNLC.Text)
+        '    End If
+        'End If
 
         '=WENN($D$53>10000000;"NEIN";WENN($G$53="";"NEIN";WENN($G$53>$D$53;"NEIN";"JA")))
         If RadTextBoxPunkt6cMAX.Text = "" OrElse RadTextBoxPunkt6cNLC.Text = "" OrElse CDec(RadTextBoxPunkt6cNLC.Text) > 10000000 Then
@@ -599,12 +599,12 @@
             RadTextBoxPunkt6dEMin.Text = objEichprozess.Lookup_Waegezelle.Mindestvorlast
         End If
 
-        'runden auf 0 nachkommastellen
-        If RadTextBoxPunkt6dDL.Visible = True Then
-            If Not RadTextBoxPunkt6dDL.Text.Equals("") Then
-                RadTextBoxPunkt6dDL.Text = CInt(RadTextBoxPunkt6dDL.Text)
-            End If
-        End If
+        ''runden auf 0 nachkommastellen
+        'If RadTextBoxPunkt6dDL.Visible = True Then
+        '    If Not RadTextBoxPunkt6dDL.Text.Equals("") Then
+        '        RadTextBoxPunkt6dDL.Text = CInt(RadTextBoxPunkt6dDL.Text)
+        '    End If
+        'End If
 
         '=WENN(ODER($E$58="";$G$58="");"NEIN";WENN($G$58>$E$58;"NEIN";"JA"))
         If RadTextBoxPunkt6dDL.Text = "" OrElse RadTextBoxPunkt6dDL.Text = "" OrElse RadTextBoxPunkt6dEMin.Text = "" Then
@@ -724,10 +724,10 @@
             RadTextBoxPunkt9RLMax.Text = objEichprozess.Lookup_Auswertegeraet.GrenzwertLastwiderstandMAX
         End If
 
-        'runden auf 0 Nachkommastellen
-        If Not RadTextBoxPunkt9RLC.Text.Equals("") Then
-            RadTextBoxPunkt9RLC.Text = CInt(RadTextBoxPunkt9RLC.Text)
-        End If
+        ''runden auf 0 Nachkommastellen
+        'If Not RadTextBoxPunkt9RLC.Text.Equals("") Then
+        '    RadTextBoxPunkt9RLC.Text = CInt(RadTextBoxPunkt9RLC.Text)
+        'End If
 
         '=WENN($C$76=0;"NEIN";WENN($G$76="fehlt";"NEIN";WENN($E$76="";"NEIN";WENN($E$76<$C$76;"NEIN";WENN($E$76>$G$76;"NEIN";"JA")))))
         If RadTextBoxPunkt9RLmin.Text = "" OrElse RadTextBoxPunkt9RLC.Text = "" OrElse RadTextBoxPunkt9RLMax.Text = "" Then
