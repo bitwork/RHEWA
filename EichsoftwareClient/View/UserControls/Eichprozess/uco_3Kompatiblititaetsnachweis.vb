@@ -434,7 +434,7 @@
         objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen = RadTextBoxControlWaageAnzahlWaegezellen.Text.Trim
         objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Ecklastzuschlag = RadTextBoxControlWaageEcklastzuschlag.Text.Trim
         objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Einschaltnullstellbereich = RadTextBoxControlEinschaltnullstellbereich.Text.Trim
-        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Genauigkeitsklasse = RadTextBoxControlWaageKlasse.Text.Trim
+        objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Genauigkeitsklasse = RadTextBoxControlWaageKlasse.Text.ToUpper.Trim
         objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_GrenzenTemperaturbereichMAX = RadTextBoxControlWaageTemperaturbereichMax.Text.Trim
         objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_GrenzenTemperaturbereichMIN = RadTextBoxControlWaageTemperaturbereichMin.Text.Trim
         objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Kabellaenge = RadTextBoxControlWaageKabellaenge.Text.Trim
@@ -455,7 +455,7 @@
 
         'im falle einer neuen WZ die Werte übernehmen
         If objEichprozess.Lookup_Waegezelle.Neu Then
-            objEichprozess.Lookup_Waegezelle.Genauigkeitsklasse = RadTextBoxControlWZGenauigkeitsklasse.Text.Trim
+            objEichprozess.Lookup_Waegezelle.Genauigkeitsklasse = RadTextBoxControlWZGenauigkeitsklasse.Text.ToUpper.Trim
             objEichprozess.Lookup_Waegezelle.Mindestvorlast = RadTextBoxControlWZMindestvorlast.Text.Trim
             objEichprozess.Lookup_Waegezelle.Waegezellenkennwert = RadTextBoxControlWZWaegezellenkennwert.Text.Trim
             objEichprozess.Lookup_Waegezelle.MaxAnzahlTeilungswerte = RadTextBoxControlWZMaxTeilungswerte.Text.Trim
