@@ -895,13 +895,13 @@
     <value>range3</value>
   </data>
   <data name="RadGroupBoxStaffel5Bereich3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>988, 31</value>
+    <value>988, 1344</value>
   </data>
   <data name="RadGroupBoxStaffel5Bereich3.Size" type="System.Drawing.Size, System.Drawing">
     <value>485, 262</value>
   </data>
   <data name="RadGroupBoxStaffel5Bereich3.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>14</value>
   </data>
   <data name="RadGroupBoxStaffel5Bereich3.Text" xml:space="preserve">
     <value>range3</value>
@@ -913,7 +913,7 @@
     <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxStaffel5Bereich3.Parent" xml:space="preserve">
-    <value>RadGroupBoxStaffel5</value>
+    <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxStaffel5Bereich3.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -1687,13 +1687,13 @@
     <value>range2</value>
   </data>
   <data name="RadGroupBoxStaffel5Bereich2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>497, 31</value>
+    <value>497, 1344</value>
   </data>
   <data name="RadGroupBoxStaffel5Bereich2.Size" type="System.Drawing.Size, System.Drawing">
     <value>485, 262</value>
   </data>
   <data name="RadGroupBoxStaffel5Bereich2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>9</value>
   </data>
   <data name="RadGroupBoxStaffel5Bereich2.Text" xml:space="preserve">
     <value>range2</value>
@@ -1705,7 +1705,7 @@
     <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxStaffel5Bereich2.Parent" xml:space="preserve">
-    <value>RadGroupBoxStaffel5</value>
+    <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxStaffel5Bereich2.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -2479,13 +2479,13 @@
     <value>range1</value>
   </data>
   <data name="RadGroupBoxStaffel5Bereich1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 31</value>
+    <value>6, 1344</value>
   </data>
   <data name="RadGroupBoxStaffel5Bereich1.Size" type="System.Drawing.Size, System.Drawing">
     <value>485, 262</value>
   </data>
   <data name="RadGroupBoxStaffel5Bereich1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>4</value>
   </data>
   <data name="RadGroupBoxStaffel5Bereich1.Text" xml:space="preserve">
     <value>range1</value>
@@ -2497,37 +2497,10 @@
     <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxStaffel5Bereich1.Parent" xml:space="preserve">
-    <value>RadGroupBoxStaffel5</value>
+    <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxStaffel5Bereich1.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="RadGroupBoxStaffel5.HeaderText" xml:space="preserve">
-    <value>fifth part</value>
-  </data>
-  <data name="RadGroupBoxStaffel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 1310</value>
-  </data>
-  <data name="RadGroupBoxStaffel5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1484, 319</value>
-  </data>
-  <data name="RadGroupBoxStaffel5.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="RadGroupBoxStaffel5.Text" xml:space="preserve">
-    <value>fifth part</value>
-  </data>
-  <data name="&gt;&gt;RadGroupBoxStaffel5.Name" xml:space="preserve">
-    <value>RadGroupBoxStaffel5</value>
-  </data>
-  <data name="&gt;&gt;RadGroupBoxStaffel5.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadGroupBoxStaffel5.Parent" xml:space="preserve">
-    <value>RadScrollablePanel1.PanelContainer</value>
-  </data>
-  <data name="&gt;&gt;RadGroupBoxStaffel5.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="PictureBox121.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -3298,13 +3271,13 @@
     <value>range3</value>
   </data>
   <data name="RadGroupBoxStaffel4Bereich3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>988, 40</value>
+    <value>988, 1018</value>
   </data>
   <data name="RadGroupBoxStaffel4Bereich3.Size" type="System.Drawing.Size, System.Drawing">
     <value>485, 262</value>
   </data>
   <data name="RadGroupBoxStaffel4Bereich3.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>13</value>
   </data>
   <data name="RadGroupBoxStaffel4Bereich3.Text" xml:space="preserve">
     <value>range3</value>
@@ -3316,10 +3289,10 @@
     <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxStaffel4Bereich3.Parent" xml:space="preserve">
-    <value>RadGroupBoxStaffel4</value>
+    <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxStaffel4Bereich3.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>3</value>
   </data>
   <data name="PictureBox118.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -4090,13 +4063,13 @@
     <value>range2</value>
   </data>
   <data name="RadGroupBoxStaffel4Bereich2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>497, 40</value>
+    <value>497, 1018</value>
   </data>
   <data name="RadGroupBoxStaffel4Bereich2.Size" type="System.Drawing.Size, System.Drawing">
     <value>485, 262</value>
   </data>
   <data name="RadGroupBoxStaffel4Bereich2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>8</value>
   </data>
   <data name="RadGroupBoxStaffel4Bereich2.Text" xml:space="preserve">
     <value>range2</value>
@@ -4108,10 +4081,10 @@
     <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxStaffel4Bereich2.Parent" xml:space="preserve">
-    <value>RadGroupBoxStaffel4</value>
+    <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxStaffel4Bereich2.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="PictureBox115.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -4882,13 +4855,13 @@
     <value>range1</value>
   </data>
   <data name="RadGroupBoxStaffel4Bereich1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 40</value>
+    <value>6, 1018</value>
   </data>
   <data name="RadGroupBoxStaffel4Bereich1.Size" type="System.Drawing.Size, System.Drawing">
     <value>485, 262</value>
   </data>
   <data name="RadGroupBoxStaffel4Bereich1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>3</value>
   </data>
   <data name="RadGroupBoxStaffel4Bereich1.Text" xml:space="preserve">
     <value>range1</value>
@@ -4900,37 +4873,10 @@
     <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxStaffel4Bereich1.Parent" xml:space="preserve">
-    <value>RadGroupBoxStaffel4</value>
-  </data>
-  <data name="&gt;&gt;RadGroupBoxStaffel4Bereich1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="RadGroupBoxStaffel4.HeaderText" xml:space="preserve">
-    <value>fourth part</value>
-  </data>
-  <data name="RadGroupBoxStaffel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 985</value>
-  </data>
-  <data name="RadGroupBoxStaffel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1484, 319</value>
-  </data>
-  <data name="RadGroupBoxStaffel4.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="RadGroupBoxStaffel4.Text" xml:space="preserve">
-    <value>fourth part</value>
-  </data>
-  <data name="&gt;&gt;RadGroupBoxStaffel4.Name" xml:space="preserve">
-    <value>RadGroupBoxStaffel4</value>
-  </data>
-  <data name="&gt;&gt;RadGroupBoxStaffel4.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadGroupBoxStaffel4.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
-  <data name="&gt;&gt;RadGroupBoxStaffel4.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;RadGroupBoxStaffel4Bereich1.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="PictureBox106.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -5701,13 +5647,13 @@
     <value>range3</value>
   </data>
   <data name="RadGroupBoxStaffel3Bereich3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>988, 42</value>
+    <value>988, 689</value>
   </data>
   <data name="RadGroupBoxStaffel3Bereich3.Size" type="System.Drawing.Size, System.Drawing">
     <value>485, 262</value>
   </data>
   <data name="RadGroupBoxStaffel3Bereich3.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>12</value>
   </data>
   <data name="RadGroupBoxStaffel3Bereich3.Text" xml:space="preserve">
     <value>range3</value>
@@ -5719,10 +5665,10 @@
     <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxStaffel3Bereich3.Parent" xml:space="preserve">
-    <value>RadGroupBoxStaffel3</value>
+    <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxStaffel3Bereich3.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>6</value>
   </data>
   <data name="PictureBox109.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -6493,13 +6439,13 @@
     <value>range2</value>
   </data>
   <data name="RadGroupBoxStaffel3Bereich2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>497, 42</value>
+    <value>497, 689</value>
   </data>
   <data name="RadGroupBoxStaffel3Bereich2.Size" type="System.Drawing.Size, System.Drawing">
     <value>485, 262</value>
   </data>
   <data name="RadGroupBoxStaffel3Bereich2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>7</value>
   </data>
   <data name="RadGroupBoxStaffel3Bereich2.Text" xml:space="preserve">
     <value>range2</value>
@@ -6511,10 +6457,10 @@
     <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxStaffel3Bereich2.Parent" xml:space="preserve">
-    <value>RadGroupBoxStaffel3</value>
+    <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxStaffel3Bereich2.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>7</value>
   </data>
   <data name="PictureBox112.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -7285,13 +7231,13 @@
     <value>range1</value>
   </data>
   <data name="RadGroupBoxStaffel3Bereich1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 42</value>
+    <value>6, 689</value>
   </data>
   <data name="RadGroupBoxStaffel3Bereich1.Size" type="System.Drawing.Size, System.Drawing">
     <value>485, 262</value>
   </data>
   <data name="RadGroupBoxStaffel3Bereich1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="RadGroupBoxStaffel3Bereich1.Text" xml:space="preserve">
     <value>range1</value>
@@ -7303,37 +7249,10 @@
     <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxStaffel3Bereich1.Parent" xml:space="preserve">
-    <value>RadGroupBoxStaffel3</value>
-  </data>
-  <data name="&gt;&gt;RadGroupBoxStaffel3Bereich1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="RadGroupBoxStaffel3.HeaderText" xml:space="preserve">
-    <value>third part</value>
-  </data>
-  <data name="RadGroupBoxStaffel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 660</value>
-  </data>
-  <data name="RadGroupBoxStaffel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1484, 319</value>
-  </data>
-  <data name="RadGroupBoxStaffel3.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="RadGroupBoxStaffel3.Text" xml:space="preserve">
-    <value>third part</value>
-  </data>
-  <data name="&gt;&gt;RadGroupBoxStaffel3.Name" xml:space="preserve">
-    <value>RadGroupBoxStaffel3</value>
-  </data>
-  <data name="&gt;&gt;RadGroupBoxStaffel3.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadGroupBoxStaffel3.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
-  <data name="&gt;&gt;RadGroupBoxStaffel3.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;RadGroupBoxStaffel3Bereich1.ZOrder" xml:space="preserve">
+    <value>8</value>
   </data>
   <data name="PictureBox103.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -8104,13 +8023,13 @@
     <value>range3</value>
   </data>
   <data name="RadGroupBoxStaffel2Bereich3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>987, 43</value>
+    <value>987, 360</value>
   </data>
   <data name="RadGroupBoxStaffel2Bereich3.Size" type="System.Drawing.Size, System.Drawing">
     <value>485, 262</value>
   </data>
   <data name="RadGroupBoxStaffel2Bereich3.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>11</value>
   </data>
   <data name="RadGroupBoxStaffel2Bereich3.Text" xml:space="preserve">
     <value>range3</value>
@@ -8122,10 +8041,10 @@
     <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxStaffel2Bereich3.Parent" xml:space="preserve">
-    <value>RadGroupBoxStaffel2</value>
+    <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxStaffel2Bereich3.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>9</value>
   </data>
   <data name="PictureBox97.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -8896,13 +8815,13 @@
     <value>range2</value>
   </data>
   <data name="RadGroupBoxStaffel2Bereich2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>496, 43</value>
+    <value>496, 360</value>
   </data>
   <data name="RadGroupBoxStaffel2Bereich2.Size" type="System.Drawing.Size, System.Drawing">
     <value>485, 262</value>
   </data>
   <data name="RadGroupBoxStaffel2Bereich2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>6</value>
   </data>
   <data name="RadGroupBoxStaffel2Bereich2.Text" xml:space="preserve">
     <value>range2</value>
@@ -8914,10 +8833,10 @@
     <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxStaffel2Bereich2.Parent" xml:space="preserve">
-    <value>RadGroupBoxStaffel2</value>
+    <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxStaffel2Bereich2.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>10</value>
   </data>
   <data name="PictureBox91.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -9697,13 +9616,13 @@
     <value>range1</value>
   </data>
   <data name="RadGroupBoxStaffel2Bereich1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 43</value>
+    <value>6, 360</value>
   </data>
   <data name="RadGroupBoxStaffel2Bereich1.Size" type="System.Drawing.Size, System.Drawing">
     <value>485, 262</value>
   </data>
   <data name="RadGroupBoxStaffel2Bereich1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="RadGroupBoxStaffel2Bereich1.Text" xml:space="preserve">
     <value>range1</value>
@@ -9715,37 +9634,10 @@
     <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxStaffel2Bereich1.Parent" xml:space="preserve">
-    <value>RadGroupBoxStaffel2</value>
-  </data>
-  <data name="&gt;&gt;RadGroupBoxStaffel2Bereich1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="RadGroupBoxStaffel2.HeaderText" xml:space="preserve">
-    <value>second part</value>
-  </data>
-  <data name="RadGroupBoxStaffel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 335</value>
-  </data>
-  <data name="RadGroupBoxStaffel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1484, 319</value>
-  </data>
-  <data name="RadGroupBoxStaffel2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="RadGroupBoxStaffel2.Text" xml:space="preserve">
-    <value>second part</value>
-  </data>
-  <data name="&gt;&gt;RadGroupBoxStaffel2.Name" xml:space="preserve">
-    <value>RadGroupBoxStaffel2</value>
-  </data>
-  <data name="&gt;&gt;RadGroupBoxStaffel2.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;RadGroupBoxStaffel2.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
-  <data name="&gt;&gt;RadGroupBoxStaffel2.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;RadGroupBoxStaffel2Bereich1.ZOrder" xml:space="preserve">
+    <value>11</value>
   </data>
   <data name="PictureBox141.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -10750,7 +10642,7 @@
     <value>485, 283</value>
   </data>
   <data name="RadGroupBoxStaffel1Bereich3.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>10</value>
   </data>
   <data name="RadGroupBoxStaffel1Bereich3.Text" xml:space="preserve">
     <value>range3</value>
@@ -10762,10 +10654,10 @@
     <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxStaffel1Bereich3.Parent" xml:space="preserve">
-    <value>RadGroupBoxStaffel1</value>
+    <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxStaffel1Bereich3.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>12</value>
   </data>
   <data name="PictureBox139.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -11770,7 +11662,7 @@
     <value>485, 283</value>
   </data>
   <data name="RadGroupBoxStaffel1Bereich2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>5</value>
   </data>
   <data name="RadGroupBoxStaffel1Bereich2.Text" xml:space="preserve">
     <value>range2</value>
@@ -11782,10 +11674,10 @@
     <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxStaffel1Bereich2.Parent" xml:space="preserve">
-    <value>RadGroupBoxStaffel1</value>
+    <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxStaffel1Bereich2.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>13</value>
   </data>
   <data name="PictureBox140.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -12976,10 +12868,10 @@
     <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxStaffel1Bereich1.Parent" xml:space="preserve">
-    <value>RadGroupBoxStaffel1</value>
+    <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxStaffel1Bereich1.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>14</value>
   </data>
   <data name="RadGroupBoxStaffel1.HeaderText" xml:space="preserve">
     <value>first part</value>
@@ -13006,7 +12898,115 @@
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;RadGroupBoxStaffel1.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="RadGroupBoxStaffel2.HeaderText" xml:space="preserve">
+    <value>second part</value>
+  </data>
+  <data name="RadGroupBoxStaffel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 335</value>
+  </data>
+  <data name="RadGroupBoxStaffel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1484, 319</value>
+  </data>
+  <data name="RadGroupBoxStaffel2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="RadGroupBoxStaffel2.Text" xml:space="preserve">
+    <value>second part</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBoxStaffel2.Name" xml:space="preserve">
+    <value>RadGroupBoxStaffel2</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBoxStaffel2.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBoxStaffel2.Parent" xml:space="preserve">
+    <value>RadScrollablePanel1.PanelContainer</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBoxStaffel2.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="RadGroupBoxStaffel3.HeaderText" xml:space="preserve">
+    <value>third part</value>
+  </data>
+  <data name="RadGroupBoxStaffel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 660</value>
+  </data>
+  <data name="RadGroupBoxStaffel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1484, 319</value>
+  </data>
+  <data name="RadGroupBoxStaffel3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="RadGroupBoxStaffel3.Text" xml:space="preserve">
+    <value>third part</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBoxStaffel3.Name" xml:space="preserve">
+    <value>RadGroupBoxStaffel3</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBoxStaffel3.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBoxStaffel3.Parent" xml:space="preserve">
+    <value>RadScrollablePanel1.PanelContainer</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBoxStaffel3.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="RadGroupBoxStaffel4.HeaderText" xml:space="preserve">
+    <value>fourth part</value>
+  </data>
+  <data name="RadGroupBoxStaffel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 985</value>
+  </data>
+  <data name="RadGroupBoxStaffel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1484, 319</value>
+  </data>
+  <data name="RadGroupBoxStaffel4.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="RadGroupBoxStaffel4.Text" xml:space="preserve">
+    <value>fourth part</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBoxStaffel4.Name" xml:space="preserve">
+    <value>RadGroupBoxStaffel4</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBoxStaffel4.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBoxStaffel4.Parent" xml:space="preserve">
+    <value>RadScrollablePanel1.PanelContainer</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBoxStaffel4.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="RadGroupBoxStaffel5.HeaderText" xml:space="preserve">
+    <value>fifth part</value>
+  </data>
+  <data name="RadGroupBoxStaffel5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 1310</value>
+  </data>
+  <data name="RadGroupBoxStaffel5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1484, 319</value>
+  </data>
+  <data name="RadGroupBoxStaffel5.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
+  </data>
+  <data name="RadGroupBoxStaffel5.Text" xml:space="preserve">
+    <value>fifth part</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBoxStaffel5.Name" xml:space="preserve">
+    <value>RadGroupBoxStaffel5</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBoxStaffel5.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadGroupBox, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBoxStaffel5.Parent" xml:space="preserve">
+    <value>RadScrollablePanel1.PanelContainer</value>
+  </data>
+  <data name="&gt;&gt;RadGroupBoxStaffel5.ZOrder" xml:space="preserve">
+    <value>19</value>
   </data>
   <data name="RadScrollablePanel1.PanelContainer.Size" type="System.Drawing.Size, System.Drawing">
     <value>1499, 1677</value>
@@ -13057,6 +13057,6 @@
     <value>uco10PruefungStaffelverfahren</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.6108.20583, Culture=neutral, PublicKeyToken=null</value>
+    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.6108.24164, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>
