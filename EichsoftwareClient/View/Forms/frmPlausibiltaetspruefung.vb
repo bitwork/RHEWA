@@ -38,7 +38,6 @@ Public Class frmPlausibiltaetspruefung
         objCondition.RowBackColor = Color.FromArgb(254, 120, 110)
         RadGridViewVergleichswerte.Columns(0).ConditionalFormattingObjectList.Add(objCondition)
 
-
     End Sub
 
     Private Sub RadButtonOpen_Click(sender As Object, e As EventArgs) Handles RadButtonOpen.Click
@@ -103,19 +102,18 @@ Public Class frmPlausibiltaetspruefung
             RadTextBoxControlADWertBerechnung3.Text = CDec(objPlausiblitaet.AnalogwertJustagepunktMaxConfig) - CDec(objPlausiblitaet.AnalogwertJustagepunktMinConfig)
             RadTextBoxControlADWertBerechnung4.Text = CDec(_objEichprozess.Lookup_Waegezelle.Waegezellenkennwert) / (2 + 1 / 12)
 
-
             RadTextBoxControlProzentualeAuslasungWZBerechnung1.Text = (CDec(RadTextBoxControlADWertBerechnung1.Text) / CDec(RadTextBoxControlADWertBerechnung4.Text)) * 100
             RadTextBoxControlProzentualeAuslasungWZBerechnung2.Text = (CDec(RadTextBoxControlADWertBerechnung2.Text) / CDec(RadTextBoxControlADWertBerechnung4.Text)) * 100
             RadTextBoxControlProzentualeAuslasungWZBerechnung3.Text = (CDec(RadTextBoxControlADWertBerechnung3.Text) / CDec(RadTextBoxControlADWertBerechnung4.Text)) * 100
             RadTextBoxControlProzentualeAuslasungWZBerechnung4.Text = (CDec(RadTextBoxControlADWertBerechnung4.Text) / CDec(RadTextBoxControlADWertBerechnung4.Text)) * 100
 
-            RadTextBoxControlLastWZBerechnung1.Text = Math.Round(CDec(_objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast) * CDec(RadTextBoxControlProzentualeAuslasungWZBerechnung1.Value), 2, MidpointRounding.AwayFromZero)
-            RadTextBoxControlLastWZBerechnung2.Text = Math.Round(CDec(_objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast) * CDec(RadTextBoxControlProzentualeAuslasungWZBerechnung2.Value), 2, MidpointRounding.AwayFromZero)
-            RadTextBoxControlLastWZBerechnung3.Text = Math.Round(CDec(_objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast) * CDec(RadTextBoxControlProzentualeAuslasungWZBerechnung3.Value), 2, MidpointRounding.AwayFromZero)
+            RadTextBoxControlLastWZBerechnung1.Text = (Math.Round(CDec(_objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast) * CDec(RadTextBoxControlProzentualeAuslasungWZBerechnung1.Value), 2, MidpointRounding.AwayFromZero)) * _objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen
+            RadTextBoxControlLastWZBerechnung2.Text = (Math.Round(CDec(_objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast) * CDec(RadTextBoxControlProzentualeAuslasungWZBerechnung2.Value), 2, MidpointRounding.AwayFromZero)) * _objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen
+            RadTextBoxControlLastWZBerechnung3.Text = (Math.Round(CDec(_objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast) * CDec(RadTextBoxControlProzentualeAuslasungWZBerechnung3.Value), 2, MidpointRounding.AwayFromZero)) * _objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen
 
             If _objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Uebersetzungsverhaeltnis = 1 Then
                 RadTextBoxControlLastWZBerechnung4.Text = Math.Round(_objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast * _objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen, 2, MidpointRounding.AwayFromZero)
-                RadTextBoxControlErrechnetesUebersetzungsverhaeltnis.Text = Math.Round(CDec(_objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast) * CDec(RadTextBoxControlProzentualeAuslasungWZBerechnung3.Value) / (CDec(objPlausiblitaet.GewichtswertJustagepunktMaxConfig) - CDec(objPlausiblitaet.GewichtswertJustagepunktMinConfig)), 4, MidpointRounding.AwayFromZero)
+                RadTextBoxControlErrechnetesUebersetzungsverhaeltnis.Text = (Math.Round(CDec(_objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast) * CDec(RadTextBoxControlProzentualeAuslasungWZBerechnung3.Value) / (CDec(objPlausiblitaet.GewichtswertJustagepunktMaxConfig) - CDec(objPlausiblitaet.GewichtswertJustagepunktMinConfig)), 4, MidpointRounding.AwayFromZero)) * _objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_AnzahlWaegezellen
             Else
                 RadTextBoxControlLastWZBerechnung4.Text = Math.Round(CDec(_objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_WZ_Hoechstlast), 2, MidpointRounding.AwayFromZero)
                 RadTextBoxControlLastWaegebrueckeBerechnung3.Text = Math.Round(CDec(objPlausiblitaet.GewichtswertJustagepunktMaxConfig) - CDec(objPlausiblitaet.GewichtswertJustagepunktMinConfig), 2, MidpointRounding.AwayFromZero)
