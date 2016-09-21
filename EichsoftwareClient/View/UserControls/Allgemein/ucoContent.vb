@@ -3,7 +3,7 @@
 ''' Das UcoContent bietet die Basisklasse für alle im Eichprozess genutzten Ucos. Es enthält allgemein gültige Methoden und Eigenschaften
 ''' </summary>
 ''' <remarks></remarks>
-Public Class ucoContent
+Public MustInherit Class ucoContent
     Implements INotifyPropertyChanged
 
 #Region "Member Variables"
@@ -177,9 +177,8 @@ Public Class ucoContent
 
 #End Region
 #Region "Must Override"
-    Protected Friend Overridable Function ValidationNeeded() As Boolean
+    Protected Friend MustOverride Function ValidationNeeded() As Boolean
 
-    End Function
     Protected Friend Overridable Sub LoadFromDatabase()
 
     End Sub
@@ -305,7 +304,7 @@ Public Class ucoContent
 
             If DebugOnly = False Then
                 Dim result As DialogResult
-                If _objEichprozess.AusStandardwaageErzeugt Then
+                If _objEichprozess.AusStandardwaageErzeugt Or AktuellerBenutzer.Instance.Lizenz.RHEWALizenz Then
                     result = MessageBox.Show(String.Format("Standardwaage {0}{0} - Klicken Sie ""Ignorieren"" um die Validierung bewusst zu überspringen {0}{0} Klicken Sie ""Wiederholen"" um die Soll-Werte mit den Ist-Werten gleichzusetzen  {0}{0} Klicken Sie ""Abbrechen"" um nichts zu ändern ", vbNewLine), "", MessageBoxButtons.AbortRetryIgnore)
                 Else
                     result = MessageBox.Show(My.Resources.GlobaleLokalisierung.ValidierungUeberspringen, "", MessageBoxButtons.YesNo)
@@ -327,7 +326,6 @@ Public Class ucoContent
                     Dim result As DialogResult
 
                     result = MessageBox.Show(String.Format("DEBUG ONLY Standardwaage {0}{0} - Klicken Sie ""Ignorieren"" um die Validierung bewusst zu überspringen {0}{0} Klicken Sie ""Wiederholen"" um die Soll-Werte mit den Ist-Werten gleichzusetzen  {0}{0} Klicken Sie ""Abbrechen"" um nichts zu ändern ", vbNewLine), "", MessageBoxButtons.AbortRetryIgnore)
-
 
                     If result = DialogResult.Ignore Or result = DialogResult.Yes Then 'Ignore = Validierung bewusst überspringen
                         Me.AbortSaving = False
