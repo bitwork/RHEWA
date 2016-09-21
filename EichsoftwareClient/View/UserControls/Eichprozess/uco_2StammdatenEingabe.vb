@@ -376,6 +376,7 @@
         RadDropdownlistWaagenTyp.DataSource = _DatasourceDropdownListWaagentyp
         RadDropDownListWaagenArt.DataSource = _DatasourceDropdownListWaagenArt
         RadDropdownlistAWGTyp.DataSource = _DatasourceDropdownListAWG
+        RadDropdownlistAWGTyp.SelectedIndex = -1
         RadDropdownlistlWZTyp.DataSource = _DatasourceDropdownListWZ
         RadDropdownlistlWZHersteller.DataSource = _DatasourceDropdownListWZHersteller
 
