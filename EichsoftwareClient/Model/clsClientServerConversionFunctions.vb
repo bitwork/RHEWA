@@ -1002,7 +1002,7 @@ Public Class clsClientServerConversionFunctions
         TargetObject.FK_WaagenArt = SourceObject._FK_WaagenArt
         TargetObject.FK_WaagenTyp = SourceObject._FK_WaagenTyp
         TargetObject.FK_Waegezelle = SourceObject._FK_Waegezelle
-
+        TargetObject.Bearbeitungsdatum = SourceObject._UploadDatum
         If bolBehalteVorgangsnummer Then
             TargetObject.Vorgangsnummer = SourceObject._Vorgangsnummer
         Else

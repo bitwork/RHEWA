@@ -404,7 +404,7 @@ Public Class clsPlausibilitaetspruefung
             GewichtswertJustagepunktMax = maxGewicht
             Exit For
         Next
-
+        Return True
     End Function
 
     Private Function HoleWerteXML() As Boolean
@@ -533,8 +533,6 @@ Public Class clsPlausibilitaetspruefung
                         Analogwert = 0
                     End Try
 
-
-
                     If Analogwert < minAnalog AndAlso Analogwert <> 0 Then
                         minAnalog = Analogwert
                     End If
@@ -561,6 +559,7 @@ Public Class clsPlausibilitaetspruefung
         'For Each node As XmlNode In nl
         '    Console.WriteLine(node.InnerText)
         'Next node
+        Return True
     End Function
 
     Public Function getAsDatasource() As List(Of PlausibilitaetDatasource)

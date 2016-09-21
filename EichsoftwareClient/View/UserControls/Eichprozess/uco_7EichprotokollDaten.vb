@@ -877,6 +877,8 @@ Public Class uco_7EichprotokollDaten
         Try
             Dim ArrVergleichswerte = Vergleichswerte.Split(";")
             Dim results = (From o In ListPruefscheinnnummern Where ArrVergleichswerte.Contains(o.Nummer)).ToList
+            Dim negativeResults = (From o In ArrVergleichswerte Where Not ListPruefscheinnnummern.Select(Function(c) c.Nummer.ToString).Contains(o)).ToList
+
             'e.Result = results
             'Return
 
@@ -888,6 +890,10 @@ Public Class uco_7EichprotokollDaten
                 ElseIf result.GesperrtDurchDatum Then
                     returnString += String.Format("Das Gewicht mit der Nummer {0} darf nur auf Anweisung verwendet werden. Der Prüfschein ist abgelaufen ", result.Nummer) & vbNewLine & vbNewLine
                 End If
+            Next
+
+            For Each result In negativeResults
+                returnString += String.Format("Das Gewicht mit der Nummer {0} wurde nicht gefunden.", result) & vbNewLine & vbNewLine
             Next
             e.Result = returnString
             Return

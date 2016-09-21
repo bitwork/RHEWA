@@ -466,16 +466,10 @@
     End Sub
 
     ''' <summary>
-    '''   ''' <summary>
-    ''' Databinding und Formatierung
+    '''
     ''' </summary>
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
-    ''' <remarks></remarks>
-    ''' </summary>
-    ''' <param name="sender"></param>
-    ''' <param name="e"></param>
-    ''' <remarks></remarks>
     Private Sub BackgroundWorkerLoadFromDatabase_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles BackgroundWorkerLoadFromDatabase.RunWorkerCompleted
         'zuweisen der Ergebnismenge als Datenquelle für das Grid
         Dim index As Integer = 0
