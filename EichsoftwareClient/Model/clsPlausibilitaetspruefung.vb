@@ -25,7 +25,9 @@ Public Class clsPlausibilitaetspruefung
     Private Ziffernschritt2 As String
     Private Waegebereich3 As String
     Private Ziffernschritt3 As String
-    Private Einschalltnullstellen As String
+    Private EinschalltnullstellenMax As String
+    Private EinschalltnullstellenMin As String
+    Private EichsiegelOffen As String
 
     Private AnzahlJustagepunkte As String
     Private AnalogwertJustagepunktMin As String
@@ -38,135 +40,148 @@ Public Class clsPlausibilitaetspruefung
 
 #Region "Properties"
 #Region "Aus Config"
-    Public ReadOnly Property FabriknummerConfig As string
+    Public ReadOnly Property FabriknummerConfig As String
         Get
             Return Fabriknummer
         End Get
     End Property
 
-    Public ReadOnly Property FirmwareVersionConfig As string
+    Public ReadOnly Property EichsiegelOffenConfig As String
+        Get
+            Return EichsiegelOffen
+        End Get
+    End Property
+
+    Public ReadOnly Property FirmwareVersionConfig As String
         Get
             Return FirmwareVersion
         End Get
     End Property
 
-    Public ReadOnly Property ModelConfig As string
+    Public ReadOnly Property ModelConfig As String
         Get
             Return Model
         End Get
     End Property
 
-    Public ReadOnly Property EichzaehlerstandConfig As string
+    Public ReadOnly Property EichzaehlerstandConfig As String
         Get
             Return Eichzaehlerstand
         End Get
     End Property
 
-    Public ReadOnly Property ErdbeschleunigungConfig As string
+    Public ReadOnly Property ErdbeschleunigungConfig As String
         Get
             Return Erdbeschleunigung
         End Get
     End Property
 
-    Public ReadOnly Property MehrbereichConfig As string
+    Public ReadOnly Property MehrbereichConfig As String
         Get
             Return Mehrbereich
         End Get
 
     End Property
 
-    Public ReadOnly Property GewichtseinheitConfig As string
+    Public ReadOnly Property GewichtseinheitConfig As String
         Get
             Return Gewichtseinheit
         End Get
 
     End Property
 
-    Public ReadOnly Property Waegebereich1Config As string
+    Public ReadOnly Property Waegebereich1Config As String
         Get
             Return Waegebereich1
         End Get
 
     End Property
 
-    Public ReadOnly Property Ziffernschritt1Config As string
+    Public ReadOnly Property Ziffernschritt1Config As String
         Get
             Return Ziffernschritt1
         End Get
 
     End Property
 
-    Public ReadOnly Property Waegebereich2Config As string
+    Public ReadOnly Property Waegebereich2Config As String
         Get
             Return Waegebereich2
         End Get
 
     End Property
 
-    Public ReadOnly Property Ziffernschritt2Config As string
+    Public ReadOnly Property Ziffernschritt2Config As String
         Get
             Return Ziffernschritt2
         End Get
 
     End Property
 
-    Public ReadOnly Property Waegebereich3Config As string
+    Public ReadOnly Property Waegebereich3Config As String
         Get
             Return Waegebereich3
         End Get
 
     End Property
 
-    Public ReadOnly Property Ziffernschritt3Config As string
+    Public ReadOnly Property Ziffernschritt3Config As String
         Get
             Return Ziffernschritt3
         End Get
 
     End Property
 
-    Public ReadOnly Property EinschalltnullstellenConfig As string
+    Public ReadOnly Property EinschalltnullstellenConfigMax As String
         Get
-            Return Einschalltnullstellen
+            Return EinschalltnullstellenMax
         End Get
 
     End Property
 
-    Public ReadOnly Property AnzahlJustagepunkteConfig As string
+    Public ReadOnly Property EinschalltnullstellenConfigMIN As String
+        Get
+            Return EinschalltnullstellenMin
+        End Get
+
+    End Property
+
+    Public ReadOnly Property AnzahlJustagepunkteConfig As String
         Get
             Return AnzahlJustagepunkte
         End Get
 
     End Property
 
-    Public ReadOnly Property AnalogwertJustagepunktMinConfig As string
+    Public ReadOnly Property AnalogwertJustagepunktMinConfig As String
         Get
             Return AnalogwertJustagepunktMin
         End Get
 
     End Property
 
-    Public ReadOnly Property AnalogwertJustagepunktMaxConfig As string
+    Public ReadOnly Property AnalogwertJustagepunktMaxConfig As String
         Get
             Return AnalogwertJustagepunktMax
         End Get
 
     End Property
 
-    Public ReadOnly Property GewichtswertJustagepunktMinConfig As string
+    Public ReadOnly Property GewichtswertJustagepunktMinConfig As String
         Get
             Return GewichtswertJustagepunktMin
         End Get
 
     End Property
 
-    Public ReadOnly Property GewichtswertJustagepunktMaxConfig As string
+    Public ReadOnly Property GewichtswertJustagepunktMaxConfig As String
         Get
             Return GewichtswertJustagepunktMax
         End Get
 
     End Property
 
-    Public ReadOnly Property UebersetzungsverhaeltnisConfig As string
+    Public ReadOnly Property UebersetzungsverhaeltnisConfig As String
         Get
             Return Uebersetzungsverhaeltnis
         End Get
@@ -174,91 +189,103 @@ Public Class clsPlausibilitaetspruefung
     End Property
 #End Region
 #Region "AusSoftware"
-    Public ReadOnly Property FabriknummerSoftware As string
+    Public ReadOnly Property FabriknummerSoftware As String
         Get
             Return _objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer
         End Get
     End Property
 
-    Public ReadOnly Property FirmwareVersionSoftware As string
+    Public ReadOnly Property EichsiegelOffenSoftware As String
+        Get
+            Return "N/A"
+        End Get
+    End Property
+
+    Public ReadOnly Property FirmwareVersionSoftware As String
         Get
             Return _objEichprozess.Eichprotokoll.Komponenten_Softwarestand
         End Get
     End Property
 
-    Public ReadOnly Property ModelSoftware As string
+    Public ReadOnly Property ModelSoftware As String
         Get
             Return _objEichprozess.Lookup_Auswertegeraet.Typ
         End Get
     End Property
 
-    Public ReadOnly Property EichzaehlerstandSoftware As string
+    Public ReadOnly Property EichzaehlerstandSoftware As String
         Get
-            Return Eichzaehlerstand
+            Return _objEichprozess.Eichprotokoll.Komponenten_Eichzaehlerstand
         End Get
     End Property
 
-    Public ReadOnly Property ErdbeschleunigungSoftware As string
+    Public ReadOnly Property ErdbeschleunigungSoftware As String
         Get
             Return _objEichprozess.Eichprotokoll.Fallbeschleunigung_g
         End Get
     End Property
 
-    Public ReadOnly Property MehrbereichSoftware As string
+    Public ReadOnly Property MehrbereichSoftware As String
         Get
             Return Mehrbereich
         End Get
     End Property
 
-    Public ReadOnly Property GewichtseinheitSoftware As string
+    Public ReadOnly Property GewichtseinheitSoftware As String
         Get
             Return "1"
         End Get
     End Property
 
-    Public ReadOnly Property Waegebereich1Software As string
+    Public ReadOnly Property Waegebereich1Software As String
         Get
             Return _objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1
         End Get
     End Property
 
-    Public ReadOnly Property Ziffernschritt1Software As string
+    Public ReadOnly Property Ziffernschritt1Software As String
         Get
             Return _objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1
         End Get
     End Property
 
-    Public ReadOnly Property Waegebereich2Software As string
+    Public ReadOnly Property Waegebereich2Software As String
         Get
             Return _objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2
         End Get
     End Property
 
-    Public ReadOnly Property Ziffernschritt2Software As string
+    Public ReadOnly Property Ziffernschritt2Software As String
         Get
             Return _objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2
         End Get
     End Property
 
-    Public ReadOnly Property Waegebereich3Software As string
+    Public ReadOnly Property Waegebereich3Software As String
         Get '?
             Return _objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3
         End Get
     End Property
 
-    Public ReadOnly Property Ziffernschritt3Software As string
+    Public ReadOnly Property Ziffernschritt3Software As String
         Get '?
             Return _objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3
         End Get
     End Property
 
-    Public ReadOnly Property EinschalltnullstellenSoftware As string
+    Public ReadOnly Property EinschalltnullstellenSoftwareMax As String
         Get
             Return _objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Einschaltnullstellbereich
         End Get
     End Property
 
-    Public ReadOnly Property UebersetzungsverhaeltnisSoftware As string
+    Public ReadOnly Property EinschalltnullstellenSoftwaremin As String
+        Get
+            Return "N/A"
+        End Get
+    End Property
+
+    Public ReadOnly Property UebersetzungsverhaeltnisSoftware As String
         Get
             Return Uebersetzungsverhaeltnis
         End Get
@@ -267,10 +294,10 @@ Public Class clsPlausibilitaetspruefung
 #End Region
 #End Region
 
-    Public Function LadeWerte(waegebereich As Integer, filename As string, objEichprozess As Eichprozess) As Boolean
+    Public Function LadeWerte(waegebereich As Integer, filename As String, objEichprozess As Eichprozess) As Boolean
         _objEichprozess = objEichprozess
         _Waegebereich = waegebereich
-        Eichzaehlerstand = _objEichprozess.Eichprotokoll.Komponenten_Eichzaehlerstand
+
         Uebersetzungsverhaeltnis = _objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Uebersetzungsverhaeltnis
 
         _filename = filename
@@ -298,11 +325,11 @@ Public Class clsPlausibilitaetspruefung
         Dim dtWBEinstellungen As New DataTable
 
         Try
-            cmd = "Select Fabrik_Nr as Fabriknummer, konFirmware as Version, konGeraeteTyp as Typ   from tblKon_Information"
+            cmd = "Select Fabrik_Nr as Fabriknummer, konFirmware as Version, konGeraeteTyp as Typ, konEichsiegelnr as EichsiegelNr, konEichsiegel   from tblKon_Information"
             adapter = New OleDbDataAdapter(cmd, conn)
             adapter.Fill(dtInformation)
         Catch ex As Exception
-            cmd = "Select konFabrikationsnummer as Fabriknummer, konProgrammversion as Version, konAuswertegeraetetyp as Typ from tblKonfiguration_Information"
+            cmd = "Select konFabrikationsnummer as Fabriknummer, konProgrammversion as Version, konAuswertegeraetetyp as Typ, konEichsiegelnr as EichsiegelNr,konEichsiegel from tblKonfiguration_Information"
             adapter = New OleDbDataAdapter(cmd, conn)
             adapter.Fill(dtInformation)
         End Try
@@ -318,11 +345,11 @@ Public Class clsPlausibilitaetspruefung
         End Try
 
         Try
-            cmd = "Select konWaegebereich as Mehrbereich, konGewichtseinheit as Gewichtseinheit, konMaxBereich1 as Max1, konTeilungBereich1 as Teilung1, konMaxBereich2 as Max2, konTeilungBereich2 as Teilung2, konMaxBereich3 as Max3, konTeilungBereich3 as Teilung3, konEinschaltnustelle as Einschaltnullstelle from tblKon_WBEinstellungen"
+            cmd = "Select konWaegebereich as Mehrbereich, konGewichtseinheit as Gewichtseinheit, konMaxBereich1 as Max1, konTeilungBereich1 as Teilung1, konMaxBereich2 as Max2, konTeilungBereich2 as Teilung2, konMaxBereich3 as Max3, konTeilungBereich3 as Teilung3, konEinschaltnustelle as Einschaltnullstelle, konObereToleranzE, konUntereToleranzE from tblKon_WBEinstellungen"
             adapter = New OleDbDataAdapter(cmd, conn)
             adapter.Fill(dtWBEinstellungen)
         Catch ex As Exception
-            cmd = "Select konMehrbereich as Mehrbereich, konGewichtseinheit as Gewichtseinheit, konMax1 as Max1, konTeilung1 as Teilung1, konMax2 as Max2, konTeilung2 as Teilung2, konMax3 as Max3, konTeilung3 as Teilung3, konEinschaltnullstellen as Einschaltnullstelle from tblKonfiguration_WBEinstellung"
+            cmd = "Select konMehrbereich as Mehrbereich, konGewichtseinheit as Gewichtseinheit, konMax1 as Max1, konTeilung1 as Teilung1, konMax2 as Max2, konTeilung2 as Teilung2, konMax3 as Max3, konTeilung3 as Teilung3, konEinschaltnullstellen as Einschaltnullstelle, konObereToleranzE,konUntereToleranzE from tblKonfiguration_WBEinstellung"
             adapter = New OleDbDataAdapter(cmd, conn)
             adapter.Fill(dtWBEinstellungen)
         End Try
@@ -341,6 +368,12 @@ Public Class clsPlausibilitaetspruefung
             Fabriknummer = row("Fabriknummer")
             FirmwareVersion = row("Version")
             Model = row("Typ")
+            Eichzaehlerstand = row("EichsiegelNr")
+            Try
+                EichsiegelOffen = row("konEichsiegel")
+            Catch ex As Exception
+                EichsiegelOffen = "N/A"
+            End Try
             Exit For
         Next
 
@@ -358,7 +391,13 @@ Public Class clsPlausibilitaetspruefung
             Ziffernschritt1 = row("Teilung1")
             Ziffernschritt2 = row("Teilung2")
             Ziffernschritt3 = row("Teilung3")
-            Einschalltnullstellen = row("Einschaltnullstelle")
+            Try
+                EinschalltnullstellenMax = row("konObereToleranzE")
+                EinschalltnullstellenMin = row("konUntereToleranzE")
+            Catch ex As Exception
+
+            End Try
+
             Exit For
         Next
 
@@ -405,6 +444,14 @@ Public Class clsPlausibilitaetspruefung
             Exit For
         Next
         Return True
+    End Function
+
+    Private Shared Iterator Function ChunksUpto(str As String, maxChunkSize As Integer) As IEnumerable(Of String)
+        Dim i As Integer = 0
+        While i < str.Length
+            Yield str.Substring(i, Math.Min(maxChunkSize, str.Length - i))
+            i += maxChunkSize
+        End While
     End Function
 
     Private Function HoleWerteXML() As Boolean
@@ -459,8 +506,28 @@ Public Class clsPlausibilitaetspruefung
             Ziffernschritt2 = Werte(6)
             Waegebereich3 = Werte(7)
             Ziffernschritt3 = Werte(8)
-            Einschalltnullstellen = Werte(20)
+            EinschalltnullstellenMin = Werte(21)
+            EinschalltnullstellenMax = Werte(22)
 
+        Next
+
+        nl = xd.GetElementsByTagName("VerificationInfo")
+        For Each node As XmlNode In nl
+            Dim Werte = node.InnerText.Split(";")
+
+            Eichzaehlerstand = "0"
+            EichsiegelOffen = Werte(0)(_Waegebereich - 1)
+            'eine einheit bei werte(1) ist immer 36 Zeichen lang
+
+            Dim werteeichsiegel = ChunksUpto(Werte(1), 36)
+            For Each wert In werteeichsiegel
+                If wert(0).ToString.Equals(_Waegebereich.ToString) Then 'Waegebruecke auslesen
+                    If CInt(wert(5).ToString) > CInt(Eichzaehlerstand) Then
+                        Eichzaehlerstand = wert(5)
+                    End If
+                End If
+
+            Next
         Next
 
         nl = xd.GetElementsByTagName("WP_Adjustment")
@@ -569,6 +636,7 @@ Public Class clsPlausibilitaetspruefung
         Werte.Add(New PlausibilitaetDatasource("Firmware-Version", Me.FirmwareVersionConfig, Me.FirmwareVersionSoftware))
         Werte.Add(New PlausibilitaetDatasource("Model", Me.ModelConfig, Me.ModelSoftware))
         Werte.Add(New PlausibilitaetDatasource("Eichzählerstand", Me.EichzaehlerstandConfig, Me.EichzaehlerstandSoftware))
+        Werte.Add(New PlausibilitaetDatasource("Eichsiegel offen", Me.EichsiegelOffen, Me.EichsiegelOffenSoftware))
         Werte.Add(New PlausibilitaetDatasource("Erdbeschleunigung", Me.ErdbeschleunigungConfig, Me.ErdbeschleunigungSoftware))
         Werte.Add(New PlausibilitaetDatasource("Mehrbereich", Me.MehrbereichConfig, Me.MehrbereichSoftware))
         Werte.Add(New PlausibilitaetDatasource("Gewichtseinheit", Me.GewichtseinheitConfig, Me.GewichtseinheitSoftware))
@@ -578,7 +646,8 @@ Public Class clsPlausibilitaetspruefung
         Werte.Add(New PlausibilitaetDatasource("Ziffernschritt 2", Me.Ziffernschritt2Config, Me.Ziffernschritt2Software))
         Werte.Add(New PlausibilitaetDatasource("Wägebereich 3", Me.Waegebereich3Config, Me.Waegebereich3Software))
         Werte.Add(New PlausibilitaetDatasource("Ziffernschritt 3", Me.Ziffernschritt3Config, Me.Ziffernschritt3Software))
-        Werte.Add(New PlausibilitaetDatasource("Einschalltnullstellen", Me.EinschalltnullstellenConfig, Me.EinschalltnullstellenSoftware))
+        Werte.Add(New PlausibilitaetDatasource("Einschalltnullstellen untere Toleranz", Me.EinschalltnullstellenConfigMIN, Me.EinschalltnullstellenSoftwaremin))
+        Werte.Add(New PlausibilitaetDatasource("Einschalltnullstellen obere Toleranz", Me.EinschalltnullstellenConfigMax, Me.EinschalltnullstellenSoftwareMax))
 
         Return Werte
 
@@ -587,14 +656,14 @@ Public Class clsPlausibilitaetspruefung
 End Class
 
 Public Class PlausibilitaetDatasource
-    Public Sub New(eigenschaft As string, wertAusConfig As string, wertAusSoftware As string)
+    Public Sub New(eigenschaft As String, wertAusConfig As String, wertAusSoftware As String)
         Me.Eigenschaft = eigenschaft
         Me.WertAusConfig = wertAusConfig
         Me.WertAusSoftware = wertAusSoftware
     End Sub
 
-    Public Property Eigenschaft As string
-    Public Property WertAusConfig As string
-    Public Property WertAusSoftware As string
+    Public Property Eigenschaft As String
+    Public Property WertAusConfig As String
+    Public Property WertAusSoftware As String
 
 End Class
