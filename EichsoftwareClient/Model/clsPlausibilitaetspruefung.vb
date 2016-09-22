@@ -541,7 +541,7 @@ Public Class clsPlausibilitaetspruefung
         For Each node As XmlNode In nl
             For Each subnode As XmlNode In node.ChildNodes
                 If subnode.Name.ToString.Equals("Original") Then
-                    OriginalStatus = node.InnerText
+                    OriginalStatus = subnode.FirstChild.Value
                 End If
             Next
         Next
