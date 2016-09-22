@@ -64,10 +64,15 @@ Partial Class uco19EichtechnischeSicherung
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanel1.PanelContainer.SuspendLayout()
         Me.RadScrollablePanel1.SuspendLayout()
+        CType(Me.Label7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxCE2016, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblCE2016Kennzeichen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlCE2016Kennzeichen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadCheckBoxCE2016Kennzeichen, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblSicherungshinweise, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -144,14 +149,14 @@ Partial Class uco19EichtechnischeSicherung
         '
         'Label7
         '
-        resources.ApplyResources(Me.Label7, "Label7")
         Me.Label7.ForeColor = System.Drawing.Color.Red
+        resources.ApplyResources(Me.Label7, "Label7")
         Me.Label7.Name = "Label7"
         '
         'Label6
         '
-        resources.ApplyResources(Me.Label6, "Label6")
         Me.Label6.ForeColor = System.Drawing.Color.Red
+        resources.ApplyResources(Me.Label6, "Label6")
         Me.Label6.Name = "Label6"
         '
         'PictureBoxCE2016
@@ -180,20 +185,20 @@ Partial Class uco19EichtechnischeSicherung
         '
         'Label3
         '
-        resources.ApplyResources(Me.Label3, "Label3")
         Me.Label3.ForeColor = System.Drawing.Color.Red
+        resources.ApplyResources(Me.Label3, "Label3")
         Me.Label3.Name = "Label3"
         '
         'Label2
         '
-        resources.ApplyResources(Me.Label2, "Label2")
         Me.Label2.ForeColor = System.Drawing.Color.Red
+        resources.ApplyResources(Me.Label2, "Label2")
         Me.Label2.Name = "Label2"
         '
         'Label1
         '
-        resources.ApplyResources(Me.Label1, "Label1")
         Me.Label1.ForeColor = System.Drawing.Color.Red
+        resources.ApplyResources(Me.Label1, "Label1")
         Me.Label1.Name = "Label1"
         '
         'lblSicherungshinweise
@@ -365,10 +370,15 @@ Partial Class uco19EichtechnischeSicherung
         Me.RadScrollablePanel1.PanelContainer.PerformLayout()
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadScrollablePanel1.ResumeLayout(False)
+        CType(Me.Label7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxCE2016, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblCE2016Kennzeichen, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControlCE2016Kennzeichen, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadCheckBoxCE2016Kennzeichen, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.lblSicherungshinweise, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()

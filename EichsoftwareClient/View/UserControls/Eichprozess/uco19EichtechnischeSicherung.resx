@@ -125,10 +125,6 @@
   <data name="RadScrollablePanel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Label7.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="Label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -136,10 +132,11 @@
     <value>486, 69</value>
   </data>
   <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>12, 13</value>
+    <value>11, 18</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Label7.TabIndex" type="System.Int32, mscorlib">
-    <value>270</value>
+    <value>4</value>
   </data>
   <data name="Label7.Text" xml:space="preserve">
     <value>*</value>
@@ -148,16 +145,13 @@
     <value>Label7</value>
   </data>
   <data name="&gt;&gt;Label7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;Label7.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;Label7.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="Label6.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="Label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -166,10 +160,10 @@
     <value>485, 267</value>
   </data>
   <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>12, 13</value>
+    <value>11, 18</value>
   </data>
   <data name="Label6.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>24</value>
   </data>
   <data name="Label6.Text" xml:space="preserve">
     <value>*</value>
@@ -178,7 +172,7 @@
     <value>Label6</value>
   </data>
   <data name="&gt;&gt;Label6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;Label6.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -217,7 +211,7 @@
     <value>151, 18</value>
   </data>
   <data name="lblCE2016Kennzeichen.TabIndex" type="System.Int32, mscorlib">
-    <value>266</value>
+    <value>1</value>
   </data>
   <data name="lblCE2016Kennzeichen.Text" xml:space="preserve">
     <value>CE Marking from 04/20/2016</value>
@@ -241,7 +235,7 @@
     <value>125, 20</value>
   </data>
   <data name="RadTextBoxControlCE2016Kennzeichen.TabIndex" type="System.Int32, mscorlib">
-    <value>268</value>
+    <value>3</value>
   </data>
   <data name="RadTextBoxControlCE2016Kennzeichen.Text" xml:space="preserve">
     <value>0</value>
@@ -265,7 +259,7 @@
     <value>15, 15</value>
   </data>
   <data name="RadCheckBoxCE2016Kennzeichen.TabIndex" type="System.Int32, mscorlib">
-    <value>267</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxCE2016Kennzeichen.Name" xml:space="preserve">
     <value>RadCheckBoxCE2016Kennzeichen</value>
@@ -279,9 +273,6 @@
   <data name="&gt;&gt;RadCheckBoxCE2016Kennzeichen.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="Label3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="Label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -289,10 +280,10 @@
     <value>486, 170</value>
   </data>
   <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>12, 13</value>
+    <value>11, 18</value>
   </data>
   <data name="Label3.TabIndex" type="System.Int32, mscorlib">
-    <value>263</value>
+    <value>16</value>
   </data>
   <data name="Label3.Text" xml:space="preserve">
     <value>*</value>
@@ -301,16 +292,13 @@
     <value>Label3</value>
   </data>
   <data name="&gt;&gt;Label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;Label3.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
     <value>6</value>
-  </data>
-  <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="Label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -319,10 +307,10 @@
     <value>485, 134</value>
   </data>
   <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>12, 13</value>
+    <value>11, 18</value>
   </data>
   <data name="Label2.TabIndex" type="System.Int32, mscorlib">
-    <value>262</value>
+    <value>12</value>
   </data>
   <data name="Label2.Text" xml:space="preserve">
     <value>*</value>
@@ -331,16 +319,13 @@
     <value>Label2</value>
   </data>
   <data name="&gt;&gt;Label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;Label2.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
   </data>
   <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
     <value>7</value>
-  </data>
-  <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
   </data>
   <data name="Label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -349,10 +334,10 @@
     <value>485, 100</value>
   </data>
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>12, 13</value>
+    <value>11, 18</value>
   </data>
   <data name="Label1.TabIndex" type="System.Int32, mscorlib">
-    <value>261</value>
+    <value>8</value>
   </data>
   <data name="Label1.Text" xml:space="preserve">
     <value>*</value>
@@ -361,7 +346,7 @@
     <value>Label1</value>
   </data>
   <data name="&gt;&gt;Label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="&gt;&gt;Label1.Parent" xml:space="preserve">
     <value>RadScrollablePanel1.PanelContainer</value>
@@ -454,7 +439,7 @@
     <value>199, 18</value>
   </data>
   <data name="lblEichsiegel13x13.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="lblEichsiegel13x13.Text" xml:space="preserve">
     <value>verification marking "Eichsiegel 14x14"</value>
@@ -505,7 +490,7 @@
     <value>199, 18</value>
   </data>
   <data name="lblEichsiegelRund.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="lblEichsiegelRund.Text" xml:space="preserve">
     <value>verification marking "Eichsiegel" round</value>
@@ -529,7 +514,7 @@
     <value>165, 18</value>
   </data>
   <data name="lblHinweismarke.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+    <value>13</value>
   </data>
   <data name="lblHinweismarke.Text" xml:space="preserve">
     <value>information marking perforated</value>
@@ -577,7 +562,7 @@
     <value>186, 18</value>
   </data>
   <data name="lblDatenKonfiguration.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
+    <value>17</value>
   </data>
   <data name="lblDatenKonfiguration.Text" xml:space="preserve">
     <value>read out data over Config Program?</value>
@@ -625,7 +610,7 @@
     <value>219, 18</value>
   </data>
   <data name="lblAlibispeicher.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
+    <value>19</value>
   </data>
   <data name="lblAlibispeicher.Text" xml:space="preserve">
     <value>retention period for alibi memory 90 days?</value>
@@ -673,7 +658,7 @@
     <value>235, 18</value>
   </data>
   <data name="lblAufbewahrungsdauer.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
+    <value>21</value>
   </data>
   <data name="lblAufbewahrungsdauer.Text" xml:space="preserve">
     <value>reduce the retention period for alibi memory?</value>
@@ -721,7 +706,7 @@
     <value>48, 18</value>
   </data>
   <data name="lblBemerkungen.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
+    <value>25</value>
   </data>
   <data name="lblBemerkungen.Text" xml:space="preserve">
     <value>remarks:</value>
@@ -748,10 +733,10 @@
     <value>3, 325</value>
   </data>
   <data name="RadTextBoxControlBemerkungen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>477, 1092</value>
+    <value>477, 1537</value>
   </data>
   <data name="RadTextBoxControlBemerkungen.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
+    <value>26</value>
   </data>
   <data name="&gt;&gt;RadTextBoxControlBemerkungen.Name" xml:space="preserve">
     <value>RadTextBoxControlBemerkungen</value>
@@ -772,7 +757,7 @@
     <value>125, 20</value>
   </data>
   <data name="RadTextBoxControlAufbewahrungsdauer.TabIndex" type="System.Int32, mscorlib">
-    <value>255</value>
+    <value>23</value>
   </data>
   <data name="RadTextBoxControlAufbewahrungsdauer.Text" xml:space="preserve">
     <value>0</value>
@@ -796,7 +781,7 @@
     <value>58, 18</value>
   </data>
   <data name="lblAnzahl.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+    <value>0</value>
   </data>
   <data name="lblAnzahl.Text" xml:space="preserve">
     <value>how many</value>
@@ -820,7 +805,7 @@
     <value>15, 15</value>
   </data>
   <data name="RadCheckBoxEichsiegel13x13.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxEichsiegel13x13.Name" xml:space="preserve">
     <value>RadCheckBoxEichsiegel13x13</value>
@@ -841,7 +826,7 @@
     <value>125, 20</value>
   </data>
   <data name="RadTextBoxControlHinweismarke.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+    <value>15</value>
   </data>
   <data name="RadTextBoxControlHinweismarke.Text" xml:space="preserve">
     <value>0</value>
@@ -865,7 +850,7 @@
     <value>15, 15</value>
   </data>
   <data name="RadCheckBoxEichsiegelRund.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxEichsiegelRund.Name" xml:space="preserve">
     <value>RadCheckBoxEichsiegelRund</value>
@@ -886,7 +871,7 @@
     <value>125, 20</value>
   </data>
   <data name="RadTextBoxControlEichsiegelRund.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="RadTextBoxControlEichsiegelRund.Text" xml:space="preserve">
     <value>0</value>
@@ -910,7 +895,7 @@
     <value>15, 15</value>
   </data>
   <data name="RadCheckBoxHinweismarke.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+    <value>14</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxHinweismarke.Name" xml:space="preserve">
     <value>RadCheckBoxHinweismarke</value>
@@ -931,7 +916,7 @@
     <value>125, 20</value>
   </data>
   <data name="RadTextBoxControlEichsiegel13x13.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="RadTextBoxControlEichsiegel13x13.Text" xml:space="preserve">
     <value>0</value>
@@ -955,7 +940,7 @@
     <value>15, 15</value>
   </data>
   <data name="RadCheckBoxAufbewahrungsdauer.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
+    <value>22</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxAufbewahrungsdauer.Name" xml:space="preserve">
     <value>RadCheckBoxAufbewahrungsdauer</value>
@@ -976,7 +961,7 @@
     <value>15, 15</value>
   </data>
   <data name="RadCheckBoxKonfigurationsProgramm.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
+    <value>18</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxKonfigurationsProgramm.Name" xml:space="preserve">
     <value>RadCheckBoxKonfigurationsProgramm</value>
@@ -997,7 +982,7 @@
     <value>15, 15</value>
   </data>
   <data name="RadCheckBoxAlibispeicher.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
+    <value>20</value>
   </data>
   <data name="&gt;&gt;RadCheckBoxAlibispeicher.Name" xml:space="preserve">
     <value>RadCheckBoxAlibispeicher</value>
@@ -1030,7 +1015,7 @@
     <value>1098, 547</value>
   </data>
   <data name="RadScrollablePanel1.TabIndex" type="System.Int32, mscorlib">
-    <value>260</value>
+    <value>0</value>
   </data>
   <data name="RadScrollablePanel1.Text" xml:space="preserve">
     <value>RadScrollablePanel1</value>
@@ -1060,6 +1045,6 @@
     <value>uco19EichtechnischeSicherung</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.6108.26021, Culture=neutral, PublicKeyToken=null</value>
+    <value>EichsoftwareClient.ucoContent, KonformitätsbewertungsClient, Version=1.0.6109.26419, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>
