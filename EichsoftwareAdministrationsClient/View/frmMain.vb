@@ -64,4 +64,9 @@
         Dim f As New FrmStandardwaagen
         f.ShowDialog()
     End Sub
+
+    Private Sub RadButtonEichungenloeschen_Click(sender As Object, e As EventArgs) Handles RadButtonEichungenloeschen.Click
+        Dim f As New frmWaagenLoeschen
+        f.ShowDialog()
+    End Sub
 End Class

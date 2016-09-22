@@ -10,12 +10,9 @@
 Imports System
 Imports System.Collections.Generic
 
-Partial Public Class ServerLookup_Waagentyp
-    Public Property ID As Byte
-    Public Property Typ As String
-    Public Property Typ_EN As String
-    Public Property Typ_PL As String
-
-    Public Overridable Property ServerEichprozess As ICollection(Of ServerEichprozess) = New HashSet(Of ServerEichprozess)
+Partial Public Class StatusPrüfscheinnummer
+    Public Property Nummer As Integer
+    Public Property Gesperrt As Nullable(Of Boolean)
+    Public Property GesperrtDurchDatum As Nullable(Of Boolean)
 
 End Class

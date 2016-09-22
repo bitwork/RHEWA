@@ -86,8 +86,8 @@
         End If
 
         'nehme Änderung an Syncverhalten vor
-        If alterSyncmodus <> AktuellerBenutzer.Instance.Synchronisierungsmodus Or alterSyncAbWert <> AktuellerBenutzer.Instance.SyncAb Or alterSyncBisWert <> AktuellerBenutzer.Instance.SyncBis Then
-            AktuellerBenutzer.Instance.LetztesUpdate = "01.01.2000"
+        'If alterSyncmodus <> AktuellerBenutzer.Instance.Synchronisierungsmodus Or alterSyncAbWert <> AktuellerBenutzer.Instance.SyncAb Or alterSyncBisWert <> AktuellerBenutzer.Instance.SyncBis Then
+        AktuellerBenutzer.Instance.LetztesUpdate = "01.01.2000"
             AktuellerBenutzer.Instance.HoleAlleeigenenEichungenVomServer = True
             AktuellerBenutzer.SaveSettings()
 
@@ -95,11 +95,11 @@
             Me.DialogResult = Windows.Forms.DialogResult.OK
             Me.Close()
             Exit Sub
-        End If
+        'End If
 
         'es wurde nichts geändert, also muss auch nichts heruntergeladen werden
-        Me.DialogResult = Windows.Forms.DialogResult.Cancel
-        Me.Close()
+        'Me.DialogResult = Windows.Forms.DialogResult.Cancel
+        'Me.Close()
     End Sub
 
     ''' <summary>

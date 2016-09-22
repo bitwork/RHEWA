@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="EichenModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+    <Schema Namespace="EichenModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityType Name="Benutzer">
           <Key>
             <PropertyRef Name="ID" />
@@ -336,7 +336,7 @@
           <Property Name="Revisionsnummer" Type="nvarchar" MaxLength="50" />
           <Property Name="Genauigkeitsklasse" Type="nvarchar" MaxLength="10" />
           <Property Name="Mindestvorlast" Type="nvarchar" MaxLength="50" />
-          <Property Name="MindestvorlastProzent"  Type="nvarchar" MaxLength="4" />
+          <Property Name="MindestvorlastProzent" Type="nvarchar" MaxLength="4" />
           <Property Name="Waegezellenkennwert" Type="nvarchar" MaxLength="50" />
           <Property Name="MaxAnzahlTeilungswerte" Type="nvarchar" MaxLength="50" />
           <Property Name="MinTeilungswert" Type="nvarchar" MaxLength="50" />
@@ -394,6 +394,152 @@
           <Property Name="Kompatiblitaet_AWG_Anschlussart" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="Kompatiblitaet_WZ_Hoechstlast" Type="nvarchar" MaxLength="20" />
         </EntityType>
+        <EntityType Name="ServerPruefungAnsprechvermoegen">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FK_Eichprotokoll" Type="int" Nullable="false" />
+          <Property Name="LastL" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Last" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Anzeige" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Last1d" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Ziffernsprung" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ServerPruefungAussermittigeBelastung">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FK_Eichprotokoll" Type="int" Nullable="false" />
+          <Property Name="Bereich" Type="tinyint" Nullable="false" />
+          <Property Name="Belastungsort" Type="nvarchar" MaxLength="2" Nullable="false" />
+          <Property Name="Last" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Anzeige" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Fehler" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="EFG" Type="bit" Nullable="false" />
+          <Property Name="EFGExtra" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ServerPruefungLinearitaetFallend">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FK_Eichprotokoll" Type="int" Nullable="false" />
+          <Property Name="Bereich" Type="tinyint" Nullable="false" />
+          <Property Name="Messpunkt" Type="nvarchar" MaxLength="2" Nullable="false" />
+          <Property Name="Last" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Anzeige" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Fehler" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="EFG" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ServerPruefungLinearitaetSteigend">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FK_Eichprotokoll" Type="int" Nullable="false" />
+          <Property Name="Bereich" Type="tinyint" Nullable="false" />
+          <Property Name="Messpunkt" Type="nvarchar" MaxLength="2" Nullable="false" />
+          <Property Name="Last" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Anzeige" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Fehler" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="EFG" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ServerPruefungRollendeLasten">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FK_Eichprotokoll" Type="int" Nullable="false" />
+          <Property Name="Belastungsstelle" Type="tinyint" Nullable="false" />
+          <Property Name="AuffahrtSeite" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Last" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Anzeige" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Fehler" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="EFG" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="EFGExtra" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ServerPruefungStabilitaetGleichgewichtslage">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FK_Eichprotokoll" Type="int" Nullable="false" />
+          <Property Name="Durchlauf" Type="tinyint" Nullable="false" />
+          <Property Name="Last" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Anzeige" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MIN" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MAX" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="AbdruckOK" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ServerPruefungStaffelverfahrenErsatzlast">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FK_Eichprotokoll" Type="int" Nullable="false" />
+          <Property Name="Staffel" Type="tinyint" Nullable="false" />
+          <Property Name="Bereich" Type="tinyint" Nullable="false" />
+          <Property Name="Ersatzlast_Soll" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Ersatzlast_Ist" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ZusaetzlicheErsatzlast_Soll" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ErsatzUndNormallast_Soll" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ErsatzUndNormallast_Ist" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Ersatzlast2_Soll" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Ersatzlast2_Ist" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="DifferenzAnzeigewerte_Fehler" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="DifferenzAnzeigewerte_EFG" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MessabweichungStaffel_Fehler" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MessabweichungStaffel_EFG" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MessabweichungWaage_Fehler" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MessabweichungWaage_EFG" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ServerPruefungStaffelverfahrenNormallast">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FK_Eichprotokoll" Type="int" Nullable="false" />
+          <Property Name="Staffel" Type="tinyint" Nullable="false" />
+          <Property Name="Bereich" Type="tinyint" Nullable="false" />
+          <Property Name="NormalLast_Last_1" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_Last_2" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_Last_3" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_Last_4" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_Anzeige_1" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_Fehler_1" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_EFG_1" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_Anzeige_2" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_Fehler_2" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_EFG_2" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_Anzeige_4" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_Fehler_4" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_EFG_4" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_Anzeige_3" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_Fehler_3" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="NormalLast_EFG_3" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="DifferenzAnzeigewerte_Fehler" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="DifferenzAnzeigewerte_EFG" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MessabweichungStaffel_Fehler" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MessabweichungStaffel_EFG" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MessabweichungWaage_Fehler" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MessabweichungWaage_EFG" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ServerPruefungWiederholbarkeit">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FK_Eichprotokoll" Type="int" Nullable="false" />
+          <Property Name="Wiederholung" Type="tinyint" Nullable="false" />
+          <Property Name="Belastung" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="Last" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Anzeige" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Fehler" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="EFG" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="EFG_Extra" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
         <EntityType Name="ServerVerbindungsprotokoll">
           <Key>
             <PropertyRef Name="ID" />
@@ -405,6 +551,26 @@
           <Property Name="Windowsbenutzer" Type="nvarchar" MaxLength="255" />
           <Property Name="Aktion" Type="nvarchar(max)" />
           <Property Name="Zeitstempel" Type="datetime" />
+        </EntityType>
+        <EntityType Name="ServerVerbindungsprotokollArchiv">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Lizenzschluessel_FK" Type="nvarchar" MaxLength="50" />
+          <Property Name="Domain" Type="nvarchar" MaxLength="255" />
+          <Property Name="Computername" Type="nvarchar" MaxLength="255" />
+          <Property Name="Windowsbenutzer" Type="nvarchar" MaxLength="255" />
+          <Property Name="Aktion" Type="nvarchar(max)" />
+          <Property Name="Zeitstempel" Type="datetime" />
+        </EntityType>
+        <EntityType Name="StatusPrüfscheinnummer">
+          <Key>
+            <PropertyRef Name="Nummer" />
+          </Key>
+          <Property Name="Nummer" Type="int" Nullable="false" />
+          <Property Name="Gesperrt" Type="bit" />
+          <Property Name="GesperrtDurchDatum" Type="bit" />
         </EntityType>
         <Association Name="FK_Benutzer_Firmen">
           <End Role="Firmen" Type="Self.Firmen" Multiplicity="0..1" />
@@ -454,6 +620,114 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_PruefungAussermittigeBelastung_Eichprotokoll">
+          <End Role="ServerEichprotokoll" Type="Self.ServerEichprotokoll" Multiplicity="1" />
+          <End Role="ServerPruefungAussermittigeBelastung" Type="Self.ServerPruefungAussermittigeBelastung" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerEichprotokoll">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerPruefungAussermittigeBelastung">
+              <PropertyRef Name="FK_Eichprotokoll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PruefungLinearitaetFallend_Eichprotokoll">
+          <End Role="ServerEichprotokoll" Type="Self.ServerEichprotokoll" Multiplicity="1" />
+          <End Role="ServerPruefungLinearitaetFallend" Type="Self.ServerPruefungLinearitaetFallend" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerEichprotokoll">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerPruefungLinearitaetFallend">
+              <PropertyRef Name="FK_Eichprotokoll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PruefungLinearitaetSteigend_Eichprotokoll">
+          <End Role="ServerEichprotokoll" Type="Self.ServerEichprotokoll" Multiplicity="1" />
+          <End Role="ServerPruefungLinearitaetSteigend" Type="Self.ServerPruefungLinearitaetSteigend" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerEichprotokoll">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerPruefungLinearitaetSteigend">
+              <PropertyRef Name="FK_Eichprotokoll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PruefungLinearitaetSteigendAnsprechvermoegen_Eichprotokoll">
+          <End Role="ServerEichprotokoll" Type="Self.ServerEichprotokoll" Multiplicity="1" />
+          <End Role="ServerPruefungAnsprechvermoegen" Type="Self.ServerPruefungAnsprechvermoegen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerEichprotokoll">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerPruefungAnsprechvermoegen">
+              <PropertyRef Name="FK_Eichprotokoll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PruefungRollendeLasten_Eichprotokoll">
+          <End Role="ServerEichprotokoll" Type="Self.ServerEichprotokoll" Multiplicity="1" />
+          <End Role="ServerPruefungRollendeLasten" Type="Self.ServerPruefungRollendeLasten" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerEichprotokoll">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerPruefungRollendeLasten">
+              <PropertyRef Name="FK_Eichprotokoll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PruefungStabilitaetGleichgewichtslage_Eichprotokoll">
+          <End Role="ServerEichprotokoll" Type="Self.ServerEichprotokoll" Multiplicity="1" />
+          <End Role="ServerPruefungStabilitaetGleichgewichtslage" Type="Self.ServerPruefungStabilitaetGleichgewichtslage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerEichprotokoll">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerPruefungStabilitaetGleichgewichtslage">
+              <PropertyRef Name="FK_Eichprotokoll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PruefungStaffelverfahrenErsatzlast_Eichprotokoll">
+          <End Role="ServerEichprotokoll" Type="Self.ServerEichprotokoll" Multiplicity="1" />
+          <End Role="ServerPruefungStaffelverfahrenErsatzlast" Type="Self.ServerPruefungStaffelverfahrenErsatzlast" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerEichprotokoll">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerPruefungStaffelverfahrenErsatzlast">
+              <PropertyRef Name="FK_Eichprotokoll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PruefungStaffelverfahrenNormallast_Eichprotokoll">
+          <End Role="ServerEichprotokoll" Type="Self.ServerEichprotokoll" Multiplicity="1" />
+          <End Role="ServerPruefungStaffelverfahrenNormallast" Type="Self.ServerPruefungStaffelverfahrenNormallast" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerEichprotokoll">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerPruefungStaffelverfahrenNormallast">
+              <PropertyRef Name="FK_Eichprotokoll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PruefungWiederholbarkeit_Eichprotokoll">
+          <End Role="ServerEichprotokoll" Type="Self.ServerEichprotokoll" Multiplicity="1" />
+          <End Role="ServerPruefungWiederholbarkeit" Type="Self.ServerPruefungWiederholbarkeit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerEichprotokoll">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerPruefungWiederholbarkeit">
+              <PropertyRef Name="FK_Eichprotokoll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_ServerFirmenZusatzdaten_Firmen">
           <End Role="Firmen" Type="Self.Firmen" Multiplicity="0..1" />
           <End Role="ServerFirmenZusatzdaten" Type="Self.ServerFirmenZusatzdaten" Multiplicity="*" />
@@ -495,7 +769,18 @@
           <EntitySet Name="ServerLookup_Waegezelle" EntityType="Self.ServerLookup_Waegezelle" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ServerLookupVertragspartnerFirma" EntityType="Self.ServerLookupVertragspartnerFirma" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ServerMogelstatistik" EntityType="Self.ServerMogelstatistik" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServerPruefungAnsprechvermoegen" EntityType="Self.ServerPruefungAnsprechvermoegen" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServerPruefungAussermittigeBelastung" EntityType="Self.ServerPruefungAussermittigeBelastung" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServerPruefungLinearitaetFallend" EntityType="Self.ServerPruefungLinearitaetFallend" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServerPruefungLinearitaetSteigend" EntityType="Self.ServerPruefungLinearitaetSteigend" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServerPruefungRollendeLasten" EntityType="Self.ServerPruefungRollendeLasten" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServerPruefungStabilitaetGleichgewichtslage" EntityType="Self.ServerPruefungStabilitaetGleichgewichtslage" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServerPruefungStaffelverfahrenErsatzlast" EntityType="Self.ServerPruefungStaffelverfahrenErsatzlast" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServerPruefungStaffelverfahrenNormallast" EntityType="Self.ServerPruefungStaffelverfahrenNormallast" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServerPruefungWiederholbarkeit" EntityType="Self.ServerPruefungWiederholbarkeit" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ServerVerbindungsprotokoll" EntityType="Self.ServerVerbindungsprotokoll" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServerVerbindungsprotokollArchiv" EntityType="Self.ServerVerbindungsprotokollArchiv" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StatusPrüfscheinnummer" EntityType="Self.StatusPrüfscheinnummer" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Benutzer_Firmen" Association="Self.FK_Benutzer_Firmen">
             <End Role="Firmen" EntitySet="Firmen" />
             <End Role="Benutzer" EntitySet="Benutzer" />
@@ -512,6 +797,42 @@
             <End Role="ServerLookup_Waegezelle" EntitySet="ServerLookup_Waegezelle" />
             <End Role="ServerMogelstatistik" EntitySet="ServerMogelstatistik" />
           </AssociationSet>
+          <AssociationSet Name="FK_PruefungAussermittigeBelastung_Eichprotokoll" Association="Self.FK_PruefungAussermittigeBelastung_Eichprotokoll">
+            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
+            <End Role="ServerPruefungAussermittigeBelastung" EntitySet="ServerPruefungAussermittigeBelastung" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PruefungLinearitaetFallend_Eichprotokoll" Association="Self.FK_PruefungLinearitaetFallend_Eichprotokoll">
+            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
+            <End Role="ServerPruefungLinearitaetFallend" EntitySet="ServerPruefungLinearitaetFallend" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PruefungLinearitaetSteigend_Eichprotokoll" Association="Self.FK_PruefungLinearitaetSteigend_Eichprotokoll">
+            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
+            <End Role="ServerPruefungLinearitaetSteigend" EntitySet="ServerPruefungLinearitaetSteigend" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PruefungLinearitaetSteigendAnsprechvermoegen_Eichprotokoll" Association="Self.FK_PruefungLinearitaetSteigendAnsprechvermoegen_Eichprotokoll">
+            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
+            <End Role="ServerPruefungAnsprechvermoegen" EntitySet="ServerPruefungAnsprechvermoegen" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PruefungRollendeLasten_Eichprotokoll" Association="Self.FK_PruefungRollendeLasten_Eichprotokoll">
+            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
+            <End Role="ServerPruefungRollendeLasten" EntitySet="ServerPruefungRollendeLasten" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PruefungStabilitaetGleichgewichtslage_Eichprotokoll" Association="Self.FK_PruefungStabilitaetGleichgewichtslage_Eichprotokoll">
+            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
+            <End Role="ServerPruefungStabilitaetGleichgewichtslage" EntitySet="ServerPruefungStabilitaetGleichgewichtslage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PruefungStaffelverfahrenErsatzlast_Eichprotokoll" Association="Self.FK_PruefungStaffelverfahrenErsatzlast_Eichprotokoll">
+            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
+            <End Role="ServerPruefungStaffelverfahrenErsatzlast" EntitySet="ServerPruefungStaffelverfahrenErsatzlast" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PruefungStaffelverfahrenNormallast_Eichprotokoll" Association="Self.FK_PruefungStaffelverfahrenNormallast_Eichprotokoll">
+            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
+            <End Role="ServerPruefungStaffelverfahrenNormallast" EntitySet="ServerPruefungStaffelverfahrenNormallast" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PruefungWiederholbarkeit_Eichprotokoll" Association="Self.FK_PruefungWiederholbarkeit_Eichprotokoll">
+            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
+            <End Role="ServerPruefungWiederholbarkeit" EntitySet="ServerPruefungWiederholbarkeit" />
+          </AssociationSet>
           <AssociationSet Name="FK_ServerFirmenZusatzdaten_Firmen" Association="Self.FK_ServerFirmenZusatzdaten_Firmen">
             <End Role="Firmen" EntitySet="Firmen" />
             <End Role="ServerFirmenZusatzdaten" EntitySet="ServerFirmenZusatzdaten" />
@@ -521,8 +842,7 @@
             <End Role="ServerLizensierung" EntitySet="ServerLizensierung" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="EichenModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
@@ -600,6 +920,53 @@
             <End Role="ServerLookup_Waagentyp" EntitySet="ServerLookup_Waagentyp" />
             <End Role="ServerEichprozess" EntitySet="ServerEichprozess" />
           </AssociationSet>
+          <EntitySet Name="ServerPruefungAnsprechvermoegen" EntityType="EichenModel.ServerPruefungAnsprechvermoegen" />
+          <EntitySet Name="ServerPruefungAussermittigeBelastung" EntityType="EichenModel.ServerPruefungAussermittigeBelastung" />
+          <EntitySet Name="ServerPruefungLinearitaetFallend" EntityType="EichenModel.ServerPruefungLinearitaetFallend" />
+          <EntitySet Name="ServerPruefungLinearitaetSteigend" EntityType="EichenModel.ServerPruefungLinearitaetSteigend" />
+          <EntitySet Name="ServerPruefungRollendeLasten" EntityType="EichenModel.ServerPruefungRollendeLasten" />
+          <EntitySet Name="ServerPruefungStabilitaetGleichgewichtslage" EntityType="EichenModel.ServerPruefungStabilitaetGleichgewichtslage" />
+          <EntitySet Name="ServerPruefungStaffelverfahrenErsatzlast" EntityType="EichenModel.ServerPruefungStaffelverfahrenErsatzlast" />
+          <EntitySet Name="ServerPruefungStaffelverfahrenNormallast" EntityType="EichenModel.ServerPruefungStaffelverfahrenNormallast" />
+          <EntitySet Name="ServerPruefungWiederholbarkeit" EntityType="EichenModel.ServerPruefungWiederholbarkeit" />
+          <EntitySet Name="ServerVerbindungsprotokollArchiv" EntityType="EichenModel.ServerVerbindungsprotokollArchiv" />
+          <AssociationSet Name="FK_PruefungAussermittigeBelastung_Eichprotokoll" Association="EichenModel.FK_PruefungAussermittigeBelastung_Eichprotokoll">
+            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
+            <End Role="ServerPruefungAussermittigeBelastung" EntitySet="ServerPruefungAussermittigeBelastung" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PruefungLinearitaetFallend_Eichprotokoll" Association="EichenModel.FK_PruefungLinearitaetFallend_Eichprotokoll">
+            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
+            <End Role="ServerPruefungLinearitaetFallend" EntitySet="ServerPruefungLinearitaetFallend" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PruefungLinearitaetSteigend_Eichprotokoll" Association="EichenModel.FK_PruefungLinearitaetSteigend_Eichprotokoll">
+            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
+            <End Role="ServerPruefungLinearitaetSteigend" EntitySet="ServerPruefungLinearitaetSteigend" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PruefungLinearitaetSteigendAnsprechvermoegen_Eichprotokoll" Association="EichenModel.FK_PruefungLinearitaetSteigendAnsprechvermoegen_Eichprotokoll">
+            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
+            <End Role="ServerPruefungAnsprechvermoegen" EntitySet="ServerPruefungAnsprechvermoegen" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PruefungRollendeLasten_Eichprotokoll" Association="EichenModel.FK_PruefungRollendeLasten_Eichprotokoll">
+            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
+            <End Role="ServerPruefungRollendeLasten" EntitySet="ServerPruefungRollendeLasten" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PruefungStabilitaetGleichgewichtslage_Eichprotokoll" Association="EichenModel.FK_PruefungStabilitaetGleichgewichtslage_Eichprotokoll">
+            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
+            <End Role="ServerPruefungStabilitaetGleichgewichtslage" EntitySet="ServerPruefungStabilitaetGleichgewichtslage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PruefungStaffelverfahrenErsatzlast_Eichprotokoll" Association="EichenModel.FK_PruefungStaffelverfahrenErsatzlast_Eichprotokoll">
+            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
+            <End Role="ServerPruefungStaffelverfahrenErsatzlast" EntitySet="ServerPruefungStaffelverfahrenErsatzlast" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PruefungStaffelverfahrenNormallast_Eichprotokoll" Association="EichenModel.FK_PruefungStaffelverfahrenNormallast_Eichprotokoll">
+            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
+            <End Role="ServerPruefungStaffelverfahrenNormallast" EntitySet="ServerPruefungStaffelverfahrenNormallast" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PruefungWiederholbarkeit_Eichprotokoll" Association="EichenModel.FK_PruefungWiederholbarkeit_Eichprotokoll">
+            <End Role="ServerEichprotokoll" EntitySet="ServerEichprotokoll" />
+            <End Role="ServerPruefungWiederholbarkeit" EntitySet="ServerPruefungWiederholbarkeit" />
+          </AssociationSet>
+          <EntitySet Name="StatusPrüfscheinnummer" EntityType="EichenModel.StatusPrüfscheinnummer" />
         </EntityContainer>
         <EntityType Name="ServerKompatiblitaetsnachweis">
           <Key>
@@ -1028,6 +1395,15 @@
           <NavigationProperty Name="ServerEichprozess" Relationship="EichenModel.FK_Eichprozess_Eichprotokoll" FromRole="ServerEichprotokoll" ToRole="ServerEichprozess" />
           <Property Type="Boolean" Name="Sicherung_CE2016" />
           <Property Type="Int16" Name="Sicherung_CE2016Anzahl" />
+          <NavigationProperty Name="ServerPruefungAussermittigeBelastung" Relationship="EichenModel.FK_PruefungAussermittigeBelastung_Eichprotokoll" FromRole="ServerEichprotokoll" ToRole="ServerPruefungAussermittigeBelastung" />
+          <NavigationProperty Name="ServerPruefungLinearitaetFallend" Relationship="EichenModel.FK_PruefungLinearitaetFallend_Eichprotokoll" FromRole="ServerEichprotokoll" ToRole="ServerPruefungLinearitaetFallend" />
+          <NavigationProperty Name="ServerPruefungLinearitaetSteigend" Relationship="EichenModel.FK_PruefungLinearitaetSteigend_Eichprotokoll" FromRole="ServerEichprotokoll" ToRole="ServerPruefungLinearitaetSteigend" />
+          <NavigationProperty Name="ServerPruefungAnsprechvermoegen" Relationship="EichenModel.FK_PruefungLinearitaetSteigendAnsprechvermoegen_Eichprotokoll" FromRole="ServerEichprotokoll" ToRole="ServerPruefungAnsprechvermoegen" />
+          <NavigationProperty Name="ServerPruefungRollendeLasten" Relationship="EichenModel.FK_PruefungRollendeLasten_Eichprotokoll" FromRole="ServerEichprotokoll" ToRole="ServerPruefungRollendeLasten" />
+          <NavigationProperty Name="ServerPruefungStabilitaetGleichgewichtslage" Relationship="EichenModel.FK_PruefungStabilitaetGleichgewichtslage_Eichprotokoll" FromRole="ServerEichprotokoll" ToRole="ServerPruefungStabilitaetGleichgewichtslage" />
+          <NavigationProperty Name="ServerPruefungStaffelverfahrenErsatzlast" Relationship="EichenModel.FK_PruefungStaffelverfahrenErsatzlast_Eichprotokoll" FromRole="ServerEichprotokoll" ToRole="ServerPruefungStaffelverfahrenErsatzlast" />
+          <NavigationProperty Name="ServerPruefungStaffelverfahrenNormallast" Relationship="EichenModel.FK_PruefungStaffelverfahrenNormallast_Eichprotokoll" FromRole="ServerEichprotokoll" ToRole="ServerPruefungStaffelverfahrenNormallast" />
+          <NavigationProperty Name="ServerPruefungWiederholbarkeit" Relationship="EichenModel.FK_PruefungWiederholbarkeit_Eichprotokoll" FromRole="ServerEichprotokoll" ToRole="ServerPruefungWiederholbarkeit" />
         </EntityType>
         <EntityType Name="ServerEichprozess">
           <Key>
@@ -1198,6 +1574,289 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="ServerPruefungAnsprechvermoegen">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FK_Eichprotokoll" Type="Int32" Nullable="false" />
+          <Property Name="LastL" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Last" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Anzeige" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Last1d" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Ziffernsprung" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="ServerEichprotokoll" Relationship="EichenModel.FK_PruefungLinearitaetSteigendAnsprechvermoegen_Eichprotokoll" FromRole="ServerPruefungAnsprechvermoegen" ToRole="ServerEichprotokoll" />
+        </EntityType>
+        <EntityType Name="ServerPruefungAussermittigeBelastung">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FK_Eichprotokoll" Type="Int32" Nullable="false" />
+          <Property Name="Bereich" Type="Byte" Nullable="false" />
+          <Property Name="Belastungsort" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="Last" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Anzeige" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Fehler" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="EFG" Type="Boolean" Nullable="false" />
+          <Property Name="EFGExtra" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ServerEichprotokoll" Relationship="EichenModel.FK_PruefungAussermittigeBelastung_Eichprotokoll" FromRole="ServerPruefungAussermittigeBelastung" ToRole="ServerEichprotokoll" />
+        </EntityType>
+        <EntityType Name="ServerPruefungLinearitaetFallend">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FK_Eichprotokoll" Type="Int32" Nullable="false" />
+          <Property Name="Bereich" Type="Byte" Nullable="false" />
+          <Property Name="Messpunkt" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="Last" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Anzeige" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Fehler" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="EFG" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ServerEichprotokoll" Relationship="EichenModel.FK_PruefungLinearitaetFallend_Eichprotokoll" FromRole="ServerPruefungLinearitaetFallend" ToRole="ServerEichprotokoll" />
+        </EntityType>
+        <EntityType Name="ServerPruefungLinearitaetSteigend">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FK_Eichprotokoll" Type="Int32" Nullable="false" />
+          <Property Name="Bereich" Type="Byte" Nullable="false" />
+          <Property Name="Messpunkt" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="Last" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Anzeige" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Fehler" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="EFG" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ServerEichprotokoll" Relationship="EichenModel.FK_PruefungLinearitaetSteigend_Eichprotokoll" FromRole="ServerPruefungLinearitaetSteigend" ToRole="ServerEichprotokoll" />
+        </EntityType>
+        <EntityType Name="ServerPruefungRollendeLasten">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FK_Eichprotokoll" Type="Int32" Nullable="false" />
+          <Property Name="Belastungsstelle" Type="Byte" Nullable="false" />
+          <Property Name="AuffahrtSeite" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Last" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Anzeige" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Fehler" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="EFG" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="EFGExtra" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ServerEichprotokoll" Relationship="EichenModel.FK_PruefungRollendeLasten_Eichprotokoll" FromRole="ServerPruefungRollendeLasten" ToRole="ServerEichprotokoll" />
+        </EntityType>
+        <EntityType Name="ServerPruefungStabilitaetGleichgewichtslage">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FK_Eichprotokoll" Type="Int32" Nullable="false" />
+          <Property Name="Durchlauf" Type="Byte" Nullable="false" />
+          <Property Name="Last" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Anzeige" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MIN" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MAX" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="AbdruckOK" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="ServerEichprotokoll" Relationship="EichenModel.FK_PruefungStabilitaetGleichgewichtslage_Eichprotokoll" FromRole="ServerPruefungStabilitaetGleichgewichtslage" ToRole="ServerEichprotokoll" />
+        </EntityType>
+        <EntityType Name="ServerPruefungStaffelverfahrenErsatzlast">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FK_Eichprotokoll" Type="Int32" Nullable="false" />
+          <Property Name="Staffel" Type="Byte" Nullable="false" />
+          <Property Name="Bereich" Type="Byte" Nullable="false" />
+          <Property Name="Ersatzlast_Soll" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Ersatzlast_Ist" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ZusaetzlicheErsatzlast_Soll" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ErsatzUndNormallast_Soll" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ErsatzUndNormallast_Ist" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Ersatzlast2_Soll" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Ersatzlast2_Ist" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DifferenzAnzeigewerte_Fehler" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DifferenzAnzeigewerte_EFG" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MessabweichungStaffel_Fehler" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MessabweichungStaffel_EFG" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MessabweichungWaage_Fehler" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MessabweichungWaage_EFG" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ServerEichprotokoll" Relationship="EichenModel.FK_PruefungStaffelverfahrenErsatzlast_Eichprotokoll" FromRole="ServerPruefungStaffelverfahrenErsatzlast" ToRole="ServerEichprotokoll" />
+        </EntityType>
+        <EntityType Name="ServerPruefungStaffelverfahrenNormallast">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FK_Eichprotokoll" Type="Int32" Nullable="false" />
+          <Property Name="Staffel" Type="Byte" Nullable="false" />
+          <Property Name="Bereich" Type="Byte" Nullable="false" />
+          <Property Name="NormalLast_Last_1" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="NormalLast_Last_2" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="NormalLast_Last_3" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="NormalLast_Last_4" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="NormalLast_Anzeige_1" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="NormalLast_Fehler_1" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="NormalLast_EFG_1" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="NormalLast_Anzeige_2" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="NormalLast_Fehler_2" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="NormalLast_EFG_2" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="NormalLast_Anzeige_4" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="NormalLast_Fehler_4" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="NormalLast_EFG_4" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="NormalLast_Anzeige_3" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="NormalLast_Fehler_3" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="NormalLast_EFG_3" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DifferenzAnzeigewerte_Fehler" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DifferenzAnzeigewerte_EFG" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MessabweichungStaffel_Fehler" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MessabweichungStaffel_EFG" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MessabweichungWaage_Fehler" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MessabweichungWaage_EFG" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ServerEichprotokoll" Relationship="EichenModel.FK_PruefungStaffelverfahrenNormallast_Eichprotokoll" FromRole="ServerPruefungStaffelverfahrenNormallast" ToRole="ServerEichprotokoll" />
+        </EntityType>
+        <EntityType Name="ServerPruefungWiederholbarkeit">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FK_Eichprotokoll" Type="Int32" Nullable="false" />
+          <Property Name="Wiederholung" Type="Byte" Nullable="false" />
+          <Property Name="Belastung" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Last" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Anzeige" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Fehler" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="EFG" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="EFG_Extra" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ServerEichprotokoll" Relationship="EichenModel.FK_PruefungWiederholbarkeit_Eichprotokoll" FromRole="ServerPruefungWiederholbarkeit" ToRole="ServerEichprotokoll" />
+        </EntityType>
+        <EntityType Name="ServerVerbindungsprotokollArchiv">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Lizenzschluessel_FK" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Domain" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Computername" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Windowsbenutzer" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Aktion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Zeitstempel" Type="DateTime" Precision="3" />
+        </EntityType>
+        <Association Name="FK_PruefungAussermittigeBelastung_Eichprotokoll">
+          <End Type="EichenModel.ServerEichprotokoll" Role="ServerEichprotokoll" Multiplicity="1" />
+          <End Type="EichenModel.ServerPruefungAussermittigeBelastung" Role="ServerPruefungAussermittigeBelastung" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerEichprotokoll">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerPruefungAussermittigeBelastung">
+              <PropertyRef Name="FK_Eichprotokoll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PruefungLinearitaetFallend_Eichprotokoll">
+          <End Type="EichenModel.ServerEichprotokoll" Role="ServerEichprotokoll" Multiplicity="1" />
+          <End Type="EichenModel.ServerPruefungLinearitaetFallend" Role="ServerPruefungLinearitaetFallend" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerEichprotokoll">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerPruefungLinearitaetFallend">
+              <PropertyRef Name="FK_Eichprotokoll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PruefungLinearitaetSteigend_Eichprotokoll">
+          <End Type="EichenModel.ServerEichprotokoll" Role="ServerEichprotokoll" Multiplicity="1" />
+          <End Type="EichenModel.ServerPruefungLinearitaetSteigend" Role="ServerPruefungLinearitaetSteigend" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerEichprotokoll">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerPruefungLinearitaetSteigend">
+              <PropertyRef Name="FK_Eichprotokoll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PruefungLinearitaetSteigendAnsprechvermoegen_Eichprotokoll">
+          <End Type="EichenModel.ServerEichprotokoll" Role="ServerEichprotokoll" Multiplicity="1" />
+          <End Type="EichenModel.ServerPruefungAnsprechvermoegen" Role="ServerPruefungAnsprechvermoegen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerEichprotokoll">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerPruefungAnsprechvermoegen">
+              <PropertyRef Name="FK_Eichprotokoll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PruefungRollendeLasten_Eichprotokoll">
+          <End Type="EichenModel.ServerEichprotokoll" Role="ServerEichprotokoll" Multiplicity="1" />
+          <End Type="EichenModel.ServerPruefungRollendeLasten" Role="ServerPruefungRollendeLasten" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerEichprotokoll">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerPruefungRollendeLasten">
+              <PropertyRef Name="FK_Eichprotokoll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PruefungStabilitaetGleichgewichtslage_Eichprotokoll">
+          <End Type="EichenModel.ServerEichprotokoll" Role="ServerEichprotokoll" Multiplicity="1" />
+          <End Type="EichenModel.ServerPruefungStabilitaetGleichgewichtslage" Role="ServerPruefungStabilitaetGleichgewichtslage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerEichprotokoll">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerPruefungStabilitaetGleichgewichtslage">
+              <PropertyRef Name="FK_Eichprotokoll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PruefungStaffelverfahrenErsatzlast_Eichprotokoll">
+          <End Type="EichenModel.ServerEichprotokoll" Role="ServerEichprotokoll" Multiplicity="1" />
+          <End Type="EichenModel.ServerPruefungStaffelverfahrenErsatzlast" Role="ServerPruefungStaffelverfahrenErsatzlast" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerEichprotokoll">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerPruefungStaffelverfahrenErsatzlast">
+              <PropertyRef Name="FK_Eichprotokoll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PruefungStaffelverfahrenNormallast_Eichprotokoll">
+          <End Type="EichenModel.ServerEichprotokoll" Role="ServerEichprotokoll" Multiplicity="1" />
+          <End Type="EichenModel.ServerPruefungStaffelverfahrenNormallast" Role="ServerPruefungStaffelverfahrenNormallast" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerEichprotokoll">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerPruefungStaffelverfahrenNormallast">
+              <PropertyRef Name="FK_Eichprotokoll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PruefungWiederholbarkeit_Eichprotokoll">
+          <End Type="EichenModel.ServerEichprotokoll" Role="ServerEichprotokoll" Multiplicity="1" />
+          <End Type="EichenModel.ServerPruefungWiederholbarkeit" Role="ServerPruefungWiederholbarkeit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServerEichprotokoll">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="ServerPruefungWiederholbarkeit">
+              <PropertyRef Name="FK_Eichprotokoll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="StatusPrüfscheinnummer">
+          <Key>
+            <PropertyRef Name="Nummer" />
+          </Key>
+          <Property Name="Nummer" Type="Int32" Nullable="false" />
+          <Property Name="Gesperrt" Type="Boolean" />
+          <Property Name="GesperrtDurchDatum" Type="Boolean" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1619,6 +2278,183 @@
                 <ScalarProperty Name="Typ_EN" ColumnName="Typ_EN" />
                 <ScalarProperty Name="Typ" ColumnName="Typ" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServerPruefungAnsprechvermoegen">
+            <EntityTypeMapping TypeName="EichenModel.ServerPruefungAnsprechvermoegen">
+              <MappingFragment StoreEntitySet="ServerPruefungAnsprechvermoegen">
+                <ScalarProperty Name="Ziffernsprung" ColumnName="Ziffernsprung" />
+                <ScalarProperty Name="Last1d" ColumnName="Last1d" />
+                <ScalarProperty Name="Anzeige" ColumnName="Anzeige" />
+                <ScalarProperty Name="Last" ColumnName="Last" />
+                <ScalarProperty Name="LastL" ColumnName="LastL" />
+                <ScalarProperty Name="FK_Eichprotokoll" ColumnName="FK_Eichprotokoll" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServerPruefungAussermittigeBelastung">
+            <EntityTypeMapping TypeName="EichenModel.ServerPruefungAussermittigeBelastung">
+              <MappingFragment StoreEntitySet="ServerPruefungAussermittigeBelastung">
+                <ScalarProperty Name="EFGExtra" ColumnName="EFGExtra" />
+                <ScalarProperty Name="EFG" ColumnName="EFG" />
+                <ScalarProperty Name="Fehler" ColumnName="Fehler" />
+                <ScalarProperty Name="Anzeige" ColumnName="Anzeige" />
+                <ScalarProperty Name="Last" ColumnName="Last" />
+                <ScalarProperty Name="Belastungsort" ColumnName="Belastungsort" />
+                <ScalarProperty Name="Bereich" ColumnName="Bereich" />
+                <ScalarProperty Name="FK_Eichprotokoll" ColumnName="FK_Eichprotokoll" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServerPruefungLinearitaetFallend">
+            <EntityTypeMapping TypeName="EichenModel.ServerPruefungLinearitaetFallend">
+              <MappingFragment StoreEntitySet="ServerPruefungLinearitaetFallend">
+                <ScalarProperty Name="EFG" ColumnName="EFG" />
+                <ScalarProperty Name="Fehler" ColumnName="Fehler" />
+                <ScalarProperty Name="Anzeige" ColumnName="Anzeige" />
+                <ScalarProperty Name="Last" ColumnName="Last" />
+                <ScalarProperty Name="Messpunkt" ColumnName="Messpunkt" />
+                <ScalarProperty Name="Bereich" ColumnName="Bereich" />
+                <ScalarProperty Name="FK_Eichprotokoll" ColumnName="FK_Eichprotokoll" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServerPruefungLinearitaetSteigend">
+            <EntityTypeMapping TypeName="EichenModel.ServerPruefungLinearitaetSteigend">
+              <MappingFragment StoreEntitySet="ServerPruefungLinearitaetSteigend">
+                <ScalarProperty Name="EFG" ColumnName="EFG" />
+                <ScalarProperty Name="Fehler" ColumnName="Fehler" />
+                <ScalarProperty Name="Anzeige" ColumnName="Anzeige" />
+                <ScalarProperty Name="Last" ColumnName="Last" />
+                <ScalarProperty Name="Messpunkt" ColumnName="Messpunkt" />
+                <ScalarProperty Name="Bereich" ColumnName="Bereich" />
+                <ScalarProperty Name="FK_Eichprotokoll" ColumnName="FK_Eichprotokoll" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServerPruefungRollendeLasten">
+            <EntityTypeMapping TypeName="EichenModel.ServerPruefungRollendeLasten">
+              <MappingFragment StoreEntitySet="ServerPruefungRollendeLasten">
+                <ScalarProperty Name="EFGExtra" ColumnName="EFGExtra" />
+                <ScalarProperty Name="EFG" ColumnName="EFG" />
+                <ScalarProperty Name="Fehler" ColumnName="Fehler" />
+                <ScalarProperty Name="Anzeige" ColumnName="Anzeige" />
+                <ScalarProperty Name="Last" ColumnName="Last" />
+                <ScalarProperty Name="AuffahrtSeite" ColumnName="AuffahrtSeite" />
+                <ScalarProperty Name="Belastungsstelle" ColumnName="Belastungsstelle" />
+                <ScalarProperty Name="FK_Eichprotokoll" ColumnName="FK_Eichprotokoll" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServerPruefungStabilitaetGleichgewichtslage">
+            <EntityTypeMapping TypeName="EichenModel.ServerPruefungStabilitaetGleichgewichtslage">
+              <MappingFragment StoreEntitySet="ServerPruefungStabilitaetGleichgewichtslage">
+                <ScalarProperty Name="AbdruckOK" ColumnName="AbdruckOK" />
+                <ScalarProperty Name="MAX" ColumnName="MAX" />
+                <ScalarProperty Name="MIN" ColumnName="MIN" />
+                <ScalarProperty Name="Anzeige" ColumnName="Anzeige" />
+                <ScalarProperty Name="Last" ColumnName="Last" />
+                <ScalarProperty Name="Durchlauf" ColumnName="Durchlauf" />
+                <ScalarProperty Name="FK_Eichprotokoll" ColumnName="FK_Eichprotokoll" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServerPruefungStaffelverfahrenErsatzlast">
+            <EntityTypeMapping TypeName="EichenModel.ServerPruefungStaffelverfahrenErsatzlast">
+              <MappingFragment StoreEntitySet="ServerPruefungStaffelverfahrenErsatzlast">
+                <ScalarProperty Name="MessabweichungWaage_EFG" ColumnName="MessabweichungWaage_EFG" />
+                <ScalarProperty Name="MessabweichungWaage_Fehler" ColumnName="MessabweichungWaage_Fehler" />
+                <ScalarProperty Name="MessabweichungStaffel_EFG" ColumnName="MessabweichungStaffel_EFG" />
+                <ScalarProperty Name="MessabweichungStaffel_Fehler" ColumnName="MessabweichungStaffel_Fehler" />
+                <ScalarProperty Name="DifferenzAnzeigewerte_EFG" ColumnName="DifferenzAnzeigewerte_EFG" />
+                <ScalarProperty Name="DifferenzAnzeigewerte_Fehler" ColumnName="DifferenzAnzeigewerte_Fehler" />
+                <ScalarProperty Name="Ersatzlast2_Ist" ColumnName="Ersatzlast2_Ist" />
+                <ScalarProperty Name="Ersatzlast2_Soll" ColumnName="Ersatzlast2_Soll" />
+                <ScalarProperty Name="ErsatzUndNormallast_Ist" ColumnName="ErsatzUndNormallast_Ist" />
+                <ScalarProperty Name="ErsatzUndNormallast_Soll" ColumnName="ErsatzUndNormallast_Soll" />
+                <ScalarProperty Name="ZusaetzlicheErsatzlast_Soll" ColumnName="ZusaetzlicheErsatzlast_Soll" />
+                <ScalarProperty Name="Ersatzlast_Ist" ColumnName="Ersatzlast_Ist" />
+                <ScalarProperty Name="Ersatzlast_Soll" ColumnName="Ersatzlast_Soll" />
+                <ScalarProperty Name="Bereich" ColumnName="Bereich" />
+                <ScalarProperty Name="Staffel" ColumnName="Staffel" />
+                <ScalarProperty Name="FK_Eichprotokoll" ColumnName="FK_Eichprotokoll" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServerPruefungStaffelverfahrenNormallast">
+            <EntityTypeMapping TypeName="EichenModel.ServerPruefungStaffelverfahrenNormallast">
+              <MappingFragment StoreEntitySet="ServerPruefungStaffelverfahrenNormallast">
+                <ScalarProperty Name="MessabweichungWaage_EFG" ColumnName="MessabweichungWaage_EFG" />
+                <ScalarProperty Name="MessabweichungWaage_Fehler" ColumnName="MessabweichungWaage_Fehler" />
+                <ScalarProperty Name="MessabweichungStaffel_EFG" ColumnName="MessabweichungStaffel_EFG" />
+                <ScalarProperty Name="MessabweichungStaffel_Fehler" ColumnName="MessabweichungStaffel_Fehler" />
+                <ScalarProperty Name="DifferenzAnzeigewerte_EFG" ColumnName="DifferenzAnzeigewerte_EFG" />
+                <ScalarProperty Name="DifferenzAnzeigewerte_Fehler" ColumnName="DifferenzAnzeigewerte_Fehler" />
+                <ScalarProperty Name="NormalLast_EFG_3" ColumnName="NormalLast_EFG_3" />
+                <ScalarProperty Name="NormalLast_Fehler_3" ColumnName="NormalLast_Fehler_3" />
+                <ScalarProperty Name="NormalLast_Anzeige_3" ColumnName="NormalLast_Anzeige_3" />
+                <ScalarProperty Name="NormalLast_EFG_4" ColumnName="NormalLast_EFG_4" />
+                <ScalarProperty Name="NormalLast_Fehler_4" ColumnName="NormalLast_Fehler_4" />
+                <ScalarProperty Name="NormalLast_Anzeige_4" ColumnName="NormalLast_Anzeige_4" />
+                <ScalarProperty Name="NormalLast_EFG_2" ColumnName="NormalLast_EFG_2" />
+                <ScalarProperty Name="NormalLast_Fehler_2" ColumnName="NormalLast_Fehler_2" />
+                <ScalarProperty Name="NormalLast_Anzeige_2" ColumnName="NormalLast_Anzeige_2" />
+                <ScalarProperty Name="NormalLast_EFG_1" ColumnName="NormalLast_EFG_1" />
+                <ScalarProperty Name="NormalLast_Fehler_1" ColumnName="NormalLast_Fehler_1" />
+                <ScalarProperty Name="NormalLast_Anzeige_1" ColumnName="NormalLast_Anzeige_1" />
+                <ScalarProperty Name="NormalLast_Last_4" ColumnName="NormalLast_Last_4" />
+                <ScalarProperty Name="NormalLast_Last_3" ColumnName="NormalLast_Last_3" />
+                <ScalarProperty Name="NormalLast_Last_2" ColumnName="NormalLast_Last_2" />
+                <ScalarProperty Name="NormalLast_Last_1" ColumnName="NormalLast_Last_1" />
+                <ScalarProperty Name="Bereich" ColumnName="Bereich" />
+                <ScalarProperty Name="Staffel" ColumnName="Staffel" />
+                <ScalarProperty Name="FK_Eichprotokoll" ColumnName="FK_Eichprotokoll" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServerPruefungWiederholbarkeit">
+            <EntityTypeMapping TypeName="EichenModel.ServerPruefungWiederholbarkeit">
+              <MappingFragment StoreEntitySet="ServerPruefungWiederholbarkeit">
+                <ScalarProperty Name="EFG_Extra" ColumnName="EFG_Extra" />
+                <ScalarProperty Name="EFG" ColumnName="EFG" />
+                <ScalarProperty Name="Fehler" ColumnName="Fehler" />
+                <ScalarProperty Name="Anzeige" ColumnName="Anzeige" />
+                <ScalarProperty Name="Last" ColumnName="Last" />
+                <ScalarProperty Name="Belastung" ColumnName="Belastung" />
+                <ScalarProperty Name="Wiederholung" ColumnName="Wiederholung" />
+                <ScalarProperty Name="FK_Eichprotokoll" ColumnName="FK_Eichprotokoll" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServerVerbindungsprotokollArchiv">
+            <EntityTypeMapping TypeName="EichenModel.ServerVerbindungsprotokollArchiv">
+              <MappingFragment StoreEntitySet="ServerVerbindungsprotokollArchiv">
+                <ScalarProperty Name="Zeitstempel" ColumnName="Zeitstempel" />
+                <ScalarProperty Name="Aktion" ColumnName="Aktion" />
+                <ScalarProperty Name="Windowsbenutzer" ColumnName="Windowsbenutzer" />
+                <ScalarProperty Name="Computername" ColumnName="Computername" />
+                <ScalarProperty Name="Domain" ColumnName="Domain" />
+                <ScalarProperty Name="Lizenzschluessel_FK" ColumnName="Lizenzschluessel_FK" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StatusPrüfscheinnummer">
+            <EntityTypeMapping TypeName="EichenModel.StatusPrüfscheinnummer">
+              <MappingFragment StoreEntitySet="StatusPrüfscheinnummer">
+                <ScalarProperty Name="GesperrtDurchDatum" ColumnName="GesperrtDurchDatum" />
+                <ScalarProperty Name="Gesperrt" ColumnName="Gesperrt" />
+                <ScalarProperty Name="Nummer" ColumnName="Nummer" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

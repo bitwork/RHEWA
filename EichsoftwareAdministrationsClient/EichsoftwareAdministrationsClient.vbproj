@@ -156,6 +156,39 @@
     <Compile Include="ServerLookup_Waagentyp.vb">
       <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
     </Compile>
+    <Compile Include="ServerPruefungAnsprechvermoegen.vb">
+      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServerPruefungAussermittigeBelastung.vb">
+      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServerPruefungLinearitaetFallend.vb">
+      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServerPruefungLinearitaetSteigend.vb">
+      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServerPruefungRollendeLasten.vb">
+      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServerPruefungStabilitaetGleichgewichtslage.vb">
+      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServerPruefungStaffelverfahrenErsatzlast.vb">
+      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServerPruefungStaffelverfahrenNormallast.vb">
+      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServerPruefungWiederholbarkeit.vb">
+      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServerVerbindungsprotokollArchiv.vb">
+      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StatusPrüfscheinnummer.vb">
+      <DependentUpon>EntityModelDatabaseAdminClient.tt</DependentUpon>
+    </Compile>
     <Compile Include="View\frmFirmenZusatzdaten.Designer.vb">
       <DependentUpon>frmFirmenZusatzdaten.vb</DependentUpon>
     </Compile>
@@ -232,6 +265,12 @@
       <DependentUpon>frmEingabeAuswertegeraet.vb</DependentUpon>
     </Compile>
     <Compile Include="View\frmEingabeAuswertegeraet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmWaagenLoeschen.Designer.vb">
+      <DependentUpon>frmWaagenLoeschen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmWaagenLoeschen.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\frmStandardwaagen.Designer.vb">
@@ -344,6 +383,9 @@
     <EmbeddedResource Include="View\frmEingabeAuswertegeraet.resx">
       <DependentUpon>frmEingabeAuswertegeraet.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmWaagenLoeschen.resx">
+      <DependentUpon>frmWaagenLoeschen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmStandardwaagen.resx">
       <DependentUpon>frmStandardwaagen.vb</DependentUpon>

@@ -32,12 +32,13 @@ Public Class frmPlausibiltaetspruefung
             LabelOption.Visible = True
             RadButtonAnhang.Visible = True
         End If
-
-        'Grid formatieren
-        Dim objCondition As New Telerik.WinControls.UI.ExpressionFormattingObject("Fehlerhaft", "WertAusConfig <> WertAusSoftware", True)
-        objCondition.RowBackColor = Color.FromArgb(254, 120, 110)
-        RadGridViewVergleichswerte.Columns(0).ConditionalFormattingObjectList.Add(objCondition)
-
+        Try
+            'Grid formatieren
+            Dim objCondition As New Telerik.WinControls.UI.ExpressionFormattingObject("Fehlerhaft", "WertAusConfig <> WertAusSoftware", True)
+            objCondition.RowBackColor = Color.FromArgb(254, 120, 110)
+            RadGridViewVergleichswerte.Columns(0).ConditionalFormattingObjectList.Add(objCondition)
+        Catch ex As Exception
+        End Try
     End Sub
 
     Private Sub RadButtonOpen_Click(sender As Object, e As EventArgs) Handles RadButtonOpen.Click
@@ -156,7 +157,7 @@ Public Class frmPlausibiltaetspruefung
 
 #Region "FTP"
 
-    Private Sub OeffneDateiVonFTP(ByVal vorgangsnummer As string)
+    Private Sub OeffneDateiVonFTP(ByVal vorgangsnummer As String)
         If Not BackgroundWorkerDownloadFromFTP.IsBusy Then
             Me.Enabled = False
             Me.RadProgressBar.Visible = True

@@ -40,6 +40,7 @@ Partial Class FrmEinstellungen
         CType(Me.RadDateTimePickerEnd, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadDateTimePickerStart, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadDateTimePickerSince, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadRadioButtonSyncZwischen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadRadioButtonSyncSeit, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadRadioButtonSyncAlles, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -62,21 +63,11 @@ Partial Class FrmEinstellungen
         Me.RadGroupBox1.Controls.Add(Me.RadRadioButtonSyncAlles)
         Me.RadGroupBox1.Name = "RadGroupBox1"
         '
-        '
-        '
-        Me.RadGroupBox1.RootElement.AccessibleDescription = Nothing
-        Me.RadGroupBox1.RootElement.AccessibleName = Nothing
-        '
         'RadDateTimePickerEnd
         '
         resources.ApplyResources(Me.RadDateTimePickerEnd, "RadDateTimePickerEnd")
         Me.RadDateTimePickerEnd.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.RadDateTimePickerEnd.Name = "RadDateTimePickerEnd"
-        '
-        '
-        '
-        Me.RadDateTimePickerEnd.RootElement.AccessibleDescription = Nothing
-        Me.RadDateTimePickerEnd.RootElement.AccessibleName = Nothing
         Me.RadDateTimePickerEnd.TabStop = False
         Me.RadDateTimePickerEnd.Value = New Date(2014, 2, 12, 11, 45, 34, 423)
         '
@@ -85,11 +76,6 @@ Partial Class FrmEinstellungen
         resources.ApplyResources(Me.RadDateTimePickerStart, "RadDateTimePickerStart")
         Me.RadDateTimePickerStart.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.RadDateTimePickerStart.Name = "RadDateTimePickerStart"
-        '
-        '
-        '
-        Me.RadDateTimePickerStart.RootElement.AccessibleDescription = Nothing
-        Me.RadDateTimePickerStart.RootElement.AccessibleName = Nothing
         Me.RadDateTimePickerStart.TabStop = False
         Me.RadDateTimePickerStart.Value = New Date(2014, 2, 12, 11, 45, 34, 423)
         '
@@ -98,11 +84,6 @@ Partial Class FrmEinstellungen
         resources.ApplyResources(Me.RadDateTimePickerSince, "RadDateTimePickerSince")
         Me.RadDateTimePickerSince.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.RadDateTimePickerSince.Name = "RadDateTimePickerSince"
-        '
-        '
-        '
-        Me.RadDateTimePickerSince.RootElement.AccessibleDescription = Nothing
-        Me.RadDateTimePickerSince.RootElement.AccessibleName = Nothing
         Me.RadDateTimePickerSince.TabStop = False
         Me.RadDateTimePickerSince.Value = New Date(2014, 2, 12, 11, 45, 34, 423)
         '
@@ -116,31 +97,16 @@ Partial Class FrmEinstellungen
         resources.ApplyResources(Me.RadRadioButtonSyncZwischen, "RadRadioButtonSyncZwischen")
         Me.RadRadioButtonSyncZwischen.Name = "RadRadioButtonSyncZwischen"
         '
-        '
-        '
-        Me.RadRadioButtonSyncZwischen.RootElement.AccessibleDescription = Nothing
-        Me.RadRadioButtonSyncZwischen.RootElement.AccessibleName = Nothing
-        '
         'RadRadioButtonSyncSeit
         '
         resources.ApplyResources(Me.RadRadioButtonSyncSeit, "RadRadioButtonSyncSeit")
         Me.RadRadioButtonSyncSeit.Name = "RadRadioButtonSyncSeit"
-        '
-        '
-        '
-        Me.RadRadioButtonSyncSeit.RootElement.AccessibleDescription = Nothing
-        Me.RadRadioButtonSyncSeit.RootElement.AccessibleName = Nothing
         '
         'RadRadioButtonSyncAlles
         '
         resources.ApplyResources(Me.RadRadioButtonSyncAlles, "RadRadioButtonSyncAlles")
         Me.RadRadioButtonSyncAlles.CheckState = System.Windows.Forms.CheckState.Checked
         Me.RadRadioButtonSyncAlles.Name = "RadRadioButtonSyncAlles"
-        '
-        '
-        '
-        Me.RadRadioButtonSyncAlles.RootElement.AccessibleDescription = Nothing
-        Me.RadRadioButtonSyncAlles.RootElement.AccessibleName = Nothing
         Me.RadRadioButtonSyncAlles.ToggleState = Telerik.WinControls.Enumerations.ToggleState.[On]
         '
         'RadButtonOK
@@ -150,20 +116,10 @@ Partial Class FrmEinstellungen
         Me.RadButtonOK.Image = Global.EichsoftwareClient.My.Resources.Resources.disk
         Me.RadButtonOK.Name = "RadButtonOK"
         '
-        '
-        '
-        Me.RadButtonOK.RootElement.AccessibleDescription = Nothing
-        Me.RadButtonOK.RootElement.AccessibleName = Nothing
-        '
         'RadButtonAbbrechen
         '
         resources.ApplyResources(Me.RadButtonAbbrechen, "RadButtonAbbrechen")
         Me.RadButtonAbbrechen.Name = "RadButtonAbbrechen"
-        '
-        '
-        '
-        Me.RadButtonAbbrechen.RootElement.AccessibleDescription = Nothing
-        Me.RadButtonAbbrechen.RootElement.AccessibleName = Nothing
         '
         'RadButtonGridSettingsZuruecksetzen
         '
@@ -182,8 +138,6 @@ Partial Class FrmEinstellungen
         '
         '
         '
-        Me.RootElement.AccessibleDescription = Nothing
-        Me.RootElement.AccessibleName = Nothing
         Me.RootElement.ApplyShapeToControl = True
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
@@ -193,6 +147,7 @@ Partial Class FrmEinstellungen
         CType(Me.RadDateTimePickerEnd, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadDateTimePickerStart, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadDateTimePickerSince, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadRadioButtonSyncZwischen, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadRadioButtonSyncSeit, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadRadioButtonSyncAlles, System.ComponentModel.ISupportInitialize).EndInit()

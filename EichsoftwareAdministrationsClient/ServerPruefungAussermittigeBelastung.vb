@@ -10,15 +10,17 @@
 Imports System
 Imports System.Collections.Generic
 
-Partial Public Class ServerLizensierung
+Partial Public Class ServerPruefungAussermittigeBelastung
     Public Property ID As Integer
-    Public Property Lizenzschluessel As String
-    Public Property LetzteAktivierung As Nullable(Of Date)
-    Public Property RHEWALizenz As Boolean
-    Public Property Aktiv As Boolean
-    Public Property HEKennung As String
-    Public Property FK_BenutzerID As String
+    Public Property FK_Eichprotokoll As Integer
+    Public Property Bereich As Byte
+    Public Property Belastungsort As String
+    Public Property Last As String
+    Public Property Anzeige As String
+    Public Property Fehler As String
+    Public Property EFG As Boolean
+    Public Property EFGExtra As String
 
-    Public Overridable Property Benutzer As Benutzer
+    Public Overridable Property ServerEichprotokoll As ServerEichprotokoll
 
 End Class

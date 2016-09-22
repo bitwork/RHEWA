@@ -10,12 +10,15 @@
 Imports System
 Imports System.Collections.Generic
 
-Partial Public Class ServerLookup_Waagentyp
-    Public Property ID As Byte
-    Public Property Typ As String
-    Public Property Typ_EN As String
-    Public Property Typ_PL As String
+Partial Public Class ServerPruefungAnsprechvermoegen
+    Public Property ID As Integer
+    Public Property FK_Eichprotokoll As Integer
+    Public Property LastL As String
+    Public Property Last As String
+    Public Property Anzeige As String
+    Public Property Last1d As String
+    Public Property Ziffernsprung As Boolean
 
-    Public Overridable Property ServerEichprozess As ICollection(Of ServerEichprozess) = New HashSet(Of ServerEichprozess)
+    Public Overridable Property ServerEichprotokoll As ServerEichprotokoll
 
 End Class

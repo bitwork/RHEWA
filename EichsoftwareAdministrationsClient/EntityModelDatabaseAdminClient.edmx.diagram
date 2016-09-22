@@ -34,6 +34,26 @@
         <EntityTypeShape EntityType="EichenModel.ServerLookup_Waagentyp" Width="1.5" PointX="1.3885508577286037" PointY="7.77953566973076" />
         <AssociationConnector Association="EichenModel.FK_Eichprozess_Lookup_Waagenart" />
         <AssociationConnector Association="EichenModel.FK_Eichprozess_Lookup_Waagentyp" />
+        <EntityTypeShape EntityType="EichenModel.ServerPruefungAnsprechvermoegen" Width="1.5" PointX="6.75" PointY="45.25" />
+        <EntityTypeShape EntityType="EichenModel.ServerPruefungAussermittigeBelastung" Width="1.5" PointX="6.75" PointY="18.5" />
+        <EntityTypeShape EntityType="EichenModel.ServerPruefungLinearitaetFallend" Width="1.5" PointX="6.75" PointY="32.75" />
+        <EntityTypeShape EntityType="EichenModel.ServerPruefungLinearitaetSteigend" Width="1.5" PointX="6.75" PointY="48.5" />
+        <EntityTypeShape EntityType="EichenModel.ServerPruefungRollendeLasten" Width="1.5" PointX="6.75" PointY="29.125" />
+        <EntityTypeShape EntityType="EichenModel.ServerPruefungStabilitaetGleichgewichtslage" Width="1.5" PointX="6.75" PointY="52" />
+        <EntityTypeShape EntityType="EichenModel.ServerPruefungStaffelverfahrenErsatzlast" Width="1.5" PointX="6.75" PointY="36.25" />
+        <EntityTypeShape EntityType="EichenModel.ServerPruefungStaffelverfahrenNormallast" Width="1.5" PointX="6.75" PointY="22.125" />
+        <EntityTypeShape EntityType="EichenModel.ServerPruefungWiederholbarkeit" Width="1.5" PointX="6.75" PointY="41.5" />
+        <EntityTypeShape EntityType="EichenModel.ServerVerbindungsprotokollArchiv" Width="1.5" PointX="10.375" PointY="7.75" />
+        <AssociationConnector Association="EichenModel.FK_PruefungAussermittigeBelastung_Eichprotokoll" />
+        <AssociationConnector Association="EichenModel.FK_PruefungLinearitaetFallend_Eichprotokoll" />
+        <AssociationConnector Association="EichenModel.FK_PruefungLinearitaetSteigend_Eichprotokoll" />
+        <AssociationConnector Association="EichenModel.FK_PruefungLinearitaetSteigendAnsprechvermoegen_Eichprotokoll" />
+        <AssociationConnector Association="EichenModel.FK_PruefungRollendeLasten_Eichprotokoll" />
+        <AssociationConnector Association="EichenModel.FK_PruefungStabilitaetGleichgewichtslage_Eichprotokoll" />
+        <AssociationConnector Association="EichenModel.FK_PruefungStaffelverfahrenErsatzlast_Eichprotokoll" />
+        <AssociationConnector Association="EichenModel.FK_PruefungStaffelverfahrenNormallast_Eichprotokoll" />
+        <AssociationConnector Association="EichenModel.FK_PruefungWiederholbarkeit_Eichprotokoll" />
+        <EntityTypeShape EntityType="EichenModel.StatusPrüfscheinnummer" Width="1.5" PointX="5.375" PointY="11.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

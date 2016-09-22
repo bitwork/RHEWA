@@ -62,34 +62,36 @@ Eichprozess.ID,
 
     Private Sub StandardwaageDeklarieren()
         If Not RadGridView1.Rows.Count = 0 Then
-            If Not RadGridView1.SelectedRows(0) Is Nothing Then
-                Dim ID As String
-                ID = RadGridView1.SelectedRows(0).Cells("ID").Value
+            If Not RadGridView1.SelectedRows.Count = 0 Then
+                If Not RadGridView1.SelectedRows(0) Is Nothing Then
+                    Dim ID As String
+                    ID = RadGridView1.SelectedRows(0).Cells("ID").Value
 
-                Dim Standardwaage As Boolean = False
-                Standardwaage = RadGridView1.SelectedRows(0).Cells("Standardwaage").Value
+                    Dim Standardwaage As Boolean = False
+                    Standardwaage = RadGridView1.SelectedRows(0).Cells("Standardwaage").Value
 
-                Dim Fragetext As String
-                If Standardwaage = True Then
-                    Fragetext = "Möchten Sie den aktuellen Datensatz von der Auswahlliste der Standardwaagen entfernen?"
-                Else
-                    Fragetext = "Möchten Sie den aktuellen Datensatz als Standardwaagen deklarieren?"
-                End If
-                If MessageBox.Show(Fragetext, "Frage", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
-                    Using context As New EichenEntities
-                        Dim Prozess = (From prozesse In context.ServerEichprozess Where prozesse.ID = ID).FirstOrDefault
-                        If Not Prozess Is Nothing Then
-                            If Not Prozess.Standardwaage Is Nothing Then
-                                Prozess.Standardwaage = Not Prozess.Standardwaage  'umkehren der Auswahl
-                            Else
-                                Prozess.Standardwaage = True
+                    Dim Fragetext As String
+                    If Standardwaage = True Then
+                        Fragetext = "Möchten Sie den aktuellen Datensatz von der Auswahlliste der Standardwaagen entfernen?"
+                    Else
+                        Fragetext = "Möchten Sie den aktuellen Datensatz als Standardwaagen deklarieren?"
+                    End If
+                    If MessageBox.Show(Fragetext, "Frage", MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes Then
+                        Using context As New EichenEntities
+                            Dim Prozess = (From prozesse In context.ServerEichprozess Where prozesse.ID = ID).FirstOrDefault
+                            If Not Prozess Is Nothing Then
+                                If Not Prozess.Standardwaage Is Nothing Then
+                                    Prozess.Standardwaage = Not Prozess.Standardwaage  'umkehren der Auswahl
+                                Else
+                                    Prozess.Standardwaage = True
+                                End If
                             End If
-                        End If
-                        context.SaveChanges()
-                    End Using
+                            context.SaveChanges()
+                        End Using
+                    End If
                 End If
             End If
         End If
-        LadeDaten()
+            LadeDaten()
     End Sub
 End Class

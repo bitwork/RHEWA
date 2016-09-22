@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,78 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>690, 135</value>
-  </data>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>Diese Optionen können genutzt werden, wenn es Probleme mit zu großen Datenmengen oder langsamen Ladezeiten gibt.
-
-Standardmäßig wird alles von RHEWA auf den Client synchronisiert.
-Zusätzlich kann ein Startdatum eingegeben werden. Somit könnte jeder Datensatz seit Januar 2013 synchronisiert werden.
-Daten von 2012 würden ausgelassen.
-
-Wenn Sie nur einen Bestimmten Zeitraum synchronisieren wollen, können Sie ein Start- und Enddatum wählen.
-
-Es werden KEINE Daten gelöscht. Wenn Sie "Synchronisiere Alles" wählen, werden alle Daten von RHEWA auf Ihren Client zurückgeladen
-</value>
-  </data>
-  <data name="RadRadioButtonSyncZwischen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 18</value>
-  </data>
-  <data name="RadRadioButtonSyncZwischen.Text" xml:space="preserve">
-    <value>Synchronisiere Alles zwischen</value>
-  </data>
-  <data name="RadRadioButtonSyncSeit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>135, 18</value>
-  </data>
-  <data name="RadRadioButtonSyncSeit.Text" xml:space="preserve">
-    <value>Synchronisiere Alles ab</value>
-  </data>
-  <data name="RadRadioButtonSyncAlles.Size" type="System.Drawing.Size, System.Drawing">
-    <value>119, 18</value>
-  </data>
-  <data name="RadRadioButtonSyncAlles.Text" xml:space="preserve">
-    <value>Synchronisiere Alles</value>
-  </data>
-  <data name="RadGroupBox1.HeaderText" xml:space="preserve">
-    <value>Synchronisierungs Einstellungen</value>
-  </data>
-  <data name="RadGroupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>775, 238</value>
-  </data>
-  <data name="RadGroupBox1.Text" xml:space="preserve">
-    <value>Synchronisierungs Einstellungen</value>
-  </data>
-  <data name="RadButtonOK.Location" type="System.Drawing.Point, System.Drawing">
-    <value>470, 256</value>
-  </data>
-  <data name="RadButtonOK.Text" xml:space="preserve">
-    <value>Speichern</value>
-  </data>
-  <data name="RadButtonAbbrechen.Location" type="System.Drawing.Point, System.Drawing">
-    <value>627, 256</value>
-  </data>
-  <data name="RadButtonAbbrechen.Text" xml:space="preserve">
-    <value>Abbrechen</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="RadButtonGridSettingsZuruecksetzen.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="RadButtonGridSettingsZuruecksetzen.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 256</value>
-  </data>
-  <data name="RadButtonGridSettingsZuruecksetzen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>213, 40</value>
-  </data>
-  <data name="RadButtonGridSettingsZuruecksetzen.Text" xml:space="preserve">
-    <value>Tabellenformat zurücksetzen</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>790, 302</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Konfiguration</value>
-  </data>
 </root>
