@@ -1,4 +1,7 @@
-﻿Public Class ucoEichprozessauswahlliste
+Imports Telerik.WinControls.UI
+
+Public Class ucoEichprozessauswahlliste
+
     Inherits ucoContent
 #Region "Member Variables"
     Private WithEvents _ParentForm As FrmMainContainer
@@ -997,4 +1000,9 @@
         Return True
     End Function
 
+    Private Sub RadGridView_ViewCellFormatting(sender As Object, e As CellFormattingEventArgs) Handles RadGridViewAuswahlliste.ViewCellFormatting, RadGridViewRHEWAAlle.ViewCellFormatting
+        If (TypeOf e.CellElement Is GridHeaderCellElement) Then
+            e.CellElement.TextWrap = True
+        End If
+    End Sub
 End Class

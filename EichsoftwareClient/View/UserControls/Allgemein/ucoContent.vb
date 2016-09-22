@@ -1,4 +1,4 @@
-﻿Imports System.ComponentModel
+Imports System.ComponentModel
 ''' <summary>
 ''' Das UcoContent bietet die Basisklasse für alle im Eichprozess genutzten Ucos. Es enthält allgemein gültige Methoden und Eigenschaften
 ''' </summary>
@@ -371,7 +371,7 @@ Public Class ucoContent
                 DisableControls(Control)
                 Continue For
             End If
-            If TypeOf Control Is Panel Then
+            If TypeOf Control Is Panel Or TypeOf Control Is Telerik.WinControls.UI.RadPanel Then
                 DisableControls(Control)
                 Continue For
             End If

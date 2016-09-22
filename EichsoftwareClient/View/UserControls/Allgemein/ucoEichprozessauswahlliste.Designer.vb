@@ -1,5 +1,6 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class ucoEichprozessauswahlliste
+
     Inherits EichsoftwareClient.ucoContent
 
     'UserControl überschreibt den Löschvorgang, um die Komponentenliste zu bereinigen.
@@ -37,12 +38,12 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadButtonClientNeu = New Telerik.WinControls.UI.RadButton()
         Me.RadButtonClientBearbeiten = New Telerik.WinControls.UI.RadButton()
         Me.RadPageViewPageAlle = New Telerik.WinControls.UI.RadPageViewPage()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label3 = New Telerik.WinControls.UI.RadLabel()
         Me.RadDateTimePickerFilterMonatLadeAlleEichprozesseBis = New Telerik.WinControls.UI.RadDateTimePicker()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label2 = New Telerik.WinControls.UI.RadLabel()
         Me.RadButtonRefresh = New Telerik.WinControls.UI.RadButton()
         Me.RadCheckBoxLadeAlleEichprozesse = New Telerik.WinControls.UI.RadCheckBox()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label1 = New Telerik.WinControls.UI.RadLabel()
         Me.RadGridViewRHEWAAlle = New Telerik.WinControls.UI.RadGridView()
         Me.RadDateTimePickerFilterMonatLadeAlleEichprozesseVon = New Telerik.WinControls.UI.RadDateTimePicker()
         Me.RadButtonEichprozessKopierenRHEWA = New Telerik.WinControls.UI.RadButton()
@@ -66,9 +67,12 @@ Partial Class ucoEichprozessauswahlliste
         CType(Me.RadButtonClientNeu, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonClientBearbeiten, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadPageViewPageAlle.SuspendLayout()
+        CType(Me.Label3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadDateTimePickerFilterMonatLadeAlleEichprozesseBis, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButtonRefresh, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadCheckBoxLadeAlleEichprozesse, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGridViewRHEWAAlle, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGridViewRHEWAAlle.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadDateTimePickerFilterMonatLadeAlleEichprozesseVon, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -94,6 +98,7 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadGridViewAuswahlliste.MasterTemplate.AllowDeleteRow = False
         Me.RadGridViewAuswahlliste.MasterTemplate.AllowEditRow = False
         Me.RadGridViewAuswahlliste.MasterTemplate.AllowRowHeaderContextMenu = False
+        Me.RadGridViewAuswahlliste.MasterTemplate.AllowRowResize = False
         Me.RadGridViewAuswahlliste.MasterTemplate.AllowSearchRow = True
         Me.RadGridViewAuswahlliste.MasterTemplate.ShowGroupedColumns = True
         Me.RadGridViewAuswahlliste.MasterTemplate.ViewDefinition = TableViewDefinition1
@@ -185,13 +190,13 @@ Partial Class ucoEichprozessauswahlliste
         '
         'RadPageViewPageAlle
         '
+        Me.RadPageViewPageAlle.Controls.Add(Me.RadGridViewRHEWAAlle)
         Me.RadPageViewPageAlle.Controls.Add(Me.Label3)
         Me.RadPageViewPageAlle.Controls.Add(Me.RadDateTimePickerFilterMonatLadeAlleEichprozesseBis)
         Me.RadPageViewPageAlle.Controls.Add(Me.Label2)
         Me.RadPageViewPageAlle.Controls.Add(Me.RadButtonRefresh)
         Me.RadPageViewPageAlle.Controls.Add(Me.RadCheckBoxLadeAlleEichprozesse)
         Me.RadPageViewPageAlle.Controls.Add(Me.Label1)
-        Me.RadPageViewPageAlle.Controls.Add(Me.RadGridViewRHEWAAlle)
         Me.RadPageViewPageAlle.Controls.Add(Me.RadDateTimePickerFilterMonatLadeAlleEichprozesseVon)
         Me.RadPageViewPageAlle.Controls.Add(Me.RadButtonEichprozessKopierenRHEWA)
         Me.RadPageViewPageAlle.Controls.Add(Me.RadButtonEichprozessAblehnenRHEWA)
@@ -240,6 +245,7 @@ Partial Class ucoEichprozessauswahlliste
         'RadGridViewRHEWAAlle
         '
         resources.ApplyResources(Me.RadGridViewRHEWAAlle, "RadGridViewRHEWAAlle")
+        Me.RadGridViewRHEWAAlle.AutoSizeRows = True
         '
         '
         '
@@ -247,6 +253,7 @@ Partial Class ucoEichprozessauswahlliste
         Me.RadGridViewRHEWAAlle.MasterTemplate.AllowCellContextMenu = False
         Me.RadGridViewRHEWAAlle.MasterTemplate.AllowDeleteRow = False
         Me.RadGridViewRHEWAAlle.MasterTemplate.AllowEditRow = False
+        Me.RadGridViewRHEWAAlle.MasterTemplate.AllowRowResize = False
         Me.RadGridViewRHEWAAlle.MasterTemplate.ShowGroupedColumns = True
         Me.RadGridViewRHEWAAlle.MasterTemplate.ViewDefinition = TableViewDefinition2
         Me.RadGridViewRHEWAAlle.Name = "RadGridViewRHEWAAlle"
@@ -325,9 +332,12 @@ Partial Class ucoEichprozessauswahlliste
         CType(Me.RadButtonClientBearbeiten, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadPageViewPageAlle.ResumeLayout(False)
         Me.RadPageViewPageAlle.PerformLayout()
+        CType(Me.Label3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadDateTimePickerFilterMonatLadeAlleEichprozesseBis, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButtonRefresh, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadCheckBoxLadeAlleEichprozesse, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGridViewRHEWAAlle.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGridViewRHEWAAlle, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadDateTimePickerFilterMonatLadeAlleEichprozesseVon, System.ComponentModel.ISupportInitialize).EndInit()
@@ -364,9 +374,9 @@ Partial Class ucoEichprozessauswahlliste
     Friend WithEvents RadButtonNeuStandardwaage As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadDateTimePickerFilterMonatLadeAlleEichprozesseVon As Telerik.WinControls.UI.RadDateTimePicker
     Friend WithEvents RadCheckBoxLadeAlleEichprozesse As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label1 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label3 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadDateTimePickerFilterMonatLadeAlleEichprozesseBis As Telerik.WinControls.UI.RadDateTimePicker
-    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As Telerik.WinControls.UI.RadLabel
 
 End Class
