@@ -944,6 +944,9 @@
     <None Include="Resources\Ersteichung DE.doc" />
     <None Include="Resources\Ersteichung EN.doc" />
     <None Include="Resources\Ersteichung PL.doc" />
+    <None Include="Resources\Vorlage Messprotokoll Fahrzeugwaage mit Staffelverfahren deutsch.xls" />
+    <None Include="Resources\Vorlage Messprotokoll mit Normalien deutsch.xls" />
+    <None Include="Resources\Vorlage Messprotokoll Staffelverfahren deutsch.xls" />
     <None Include="Service References\EichsoftwareWebservice\EichsoftwareClient.EichsoftwareWebservice.clsEichprozessFuerAuswahlliste.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

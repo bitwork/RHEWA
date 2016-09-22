@@ -29,6 +29,8 @@ Public Class clsPlausibilitaetspruefung
     Private EinschalltnullstellenMin As String
     Private EichsiegelOffen As String
 
+    Private OriginalStatus As String
+
     Private AnzahlJustagepunkte As String
     Private AnalogwertJustagepunktMin As String
     Private AnalogwertJustagepunktMax As String
@@ -187,6 +189,12 @@ Public Class clsPlausibilitaetspruefung
         End Get
 
     End Property
+
+    Public ReadOnly Property OriginalstatusConfig As String
+        Get
+            Return OriginalStatus
+        End Get
+    End Property
 #End Region
 #Region "AusSoftware"
     Public ReadOnly Property FabriknummerSoftware As String
@@ -291,6 +299,12 @@ Public Class clsPlausibilitaetspruefung
         End Get
     End Property
 
+    Public ReadOnly Property OriginalstatusSoftware As String
+        Get
+            Return "N/A"
+        End Get
+    End Property
+
 #End Region
 #End Region
 
@@ -323,6 +337,7 @@ Public Class clsPlausibilitaetspruefung
         Dim dtInformation As New DataTable
         Dim dtAllgemein As New DataTable
         Dim dtWBEinstellungen As New DataTable
+        Dim dtKonfiguration As New DataTable
 
         Try
             cmd = "Select Fabrik_Nr as Fabriknummer, konFirmware as Version, konGeraeteTyp as Typ, konEichsiegelnr as EichsiegelNr, konEichsiegel   from tblKon_Information"
@@ -332,6 +347,14 @@ Public Class clsPlausibilitaetspruefung
             cmd = "Select konFabrikationsnummer as Fabriknummer, konProgrammversion as Version, konAuswertegeraetetyp as Typ, konEichsiegelnr as EichsiegelNr,konEichsiegel from tblKonfiguration_Information"
             adapter = New OleDbDataAdapter(cmd, conn)
             adapter.Fill(dtInformation)
+        End Try
+
+        Try
+            cmd = "Select Original from tblKonfigurationen"
+            adapter = New OleDbDataAdapter(cmd, conn)
+            adapter.Fill(dtKonfiguration)
+        Catch ex As Exception
+
         End Try
 
         Try
@@ -377,6 +400,10 @@ Public Class clsPlausibilitaetspruefung
             Exit For
         Next
 
+        For Each row As DataRow In dtKonfiguration.Rows
+            OriginalStatus = row("Original")
+            Exit For
+        Next
         For Each row As DataRow In dtAllgemein.Rows
             Erdbeschleunigung = row("gWert")
             Exit For
@@ -510,6 +537,14 @@ Public Class clsPlausibilitaetspruefung
             EinschalltnullstellenMax = Werte(22)
 
         Next
+        nl = xd.GetElementsByTagName("Configurations")
+        For Each node As XmlNode In nl
+            For Each subnode As XmlNode In node.ChildNodes
+                If subnode.Name.ToString.Equals("Original") Then
+                    OriginalStatus = node.InnerText
+                End If
+            Next
+        Next
 
         nl = xd.GetElementsByTagName("VerificationInfo")
         For Each node As XmlNode In nl
@@ -635,6 +670,8 @@ Public Class clsPlausibilitaetspruefung
         Werte.Add(New PlausibilitaetDatasource("Fabriknummer", Me.FabriknummerConfig, Me.FabriknummerSoftware))
         Werte.Add(New PlausibilitaetDatasource("Firmware-Version", Me.FirmwareVersionConfig, Me.FirmwareVersionSoftware))
         Werte.Add(New PlausibilitaetDatasource("Model", Me.ModelConfig, Me.ModelSoftware))
+        Werte.Add(New PlausibilitaetDatasource("Original", Me.OriginalstatusConfig, Me.OriginalstatusSoftware))
+
         Werte.Add(New PlausibilitaetDatasource("Eichzählerstand", Me.EichzaehlerstandConfig, Me.EichzaehlerstandSoftware))
         Werte.Add(New PlausibilitaetDatasource("Eichsiegel offen", Me.EichsiegelOffen, Me.EichsiegelOffenSoftware))
         Werte.Add(New PlausibilitaetDatasource("Erdbeschleunigung", Me.ErdbeschleunigungConfig, Me.ErdbeschleunigungSoftware))
