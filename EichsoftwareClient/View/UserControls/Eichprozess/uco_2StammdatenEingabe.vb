@@ -1,4 +1,5 @@
-﻿Public Class uco_2StammdatenEingabe
+Public Class uco_2StammdatenEingabe
+
     Inherits ucoContent
 
 #Region "Member Variables"
@@ -807,7 +808,7 @@
         If (TypeOf sender Is Telerik.WinControls.UI.RadDropDownList) Then
             c = CType(sender, Telerik.WinControls.UI.RadDropDownList)
 
-            If (c.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList) AndAlso (Not c.DropDownListElement.ContainsFocus) Then
+            If (c.DropDownStyle  = Telerik.WinControls.RadDropDownStyle.DropDownList) AndAlso (Not c.DropDownListElement.ContainsFocus) Then
 
                 c.DropDownListElement.Focus()
                 'If c.DropDownListElement.IsPopupOpen = False Then

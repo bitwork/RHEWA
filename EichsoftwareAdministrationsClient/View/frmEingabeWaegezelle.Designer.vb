@@ -1,5 +1,6 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class frmEingabeWaegezelle
+
     Inherits Telerik.WinControls.UI.RadForm
 
     'Form overrides dispose to clean up the component list.
@@ -58,19 +59,19 @@ Partial Class frmEingabeWaegezelle
         Me.RadTextBoxControlWaegezelleBauartzulassung = New Telerik.WinControls.UI.RadTextBoxControl()
         Me.RadCheckBoxDeaktiviert = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadCheckBoxNeueWZ = New Telerik.WinControls.UI.RadCheckBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label2 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label3 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label4 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label5 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label6 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label7 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label8 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label9 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label10 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label11 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label13 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label15 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label16 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel74 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel52 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel78 = New Telerik.WinControls.UI.RadLabel()
@@ -891,19 +892,19 @@ Partial Class frmEingabeWaegezelle
     Friend WithEvents RadTextBoxControlWaegezelleBauartzulassung As Telerik.WinControls.UI.RadTextBoxControl
     Friend WithEvents RadCheckBoxDeaktiviert As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents RadCheckBoxNeueWZ As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents Label11 As System.Windows.Forms.Label
-    Friend WithEvents Label13 As System.Windows.Forms.Label
-    Friend WithEvents Label15 As System.Windows.Forms.Label
-    Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label3 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label4 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label5 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label6 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label7 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label8 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label9 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label10 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label11 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label13 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label15 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label16 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel74 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel52 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel78 As Telerik.WinControls.UI.RadLabel

@@ -1,4 +1,5 @@
-﻿Public Class uco15PruefungStabilitaet
+Public Class uco15PruefungStabilitaet
+
     Inherits ucoContent
 
 #Region "Member Variables"

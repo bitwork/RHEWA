@@ -11,14 +11,14 @@ Imports System
 Imports System.Collections.Generic
 
 Partial Public Class ServerFirmenZusatzdaten
-    Public Property ID As String
-    Public Property Firmen_FK As String
-    Public Property Abrechnungsmodell As String
-    Public Property Qualifizierungspauschale As String
+    Public Property ID As string
+    Public Property Firmen_FK As string
+    Public Property Abrechnungsmodell As string
+    Public Property Qualifizierungspauschale As string
     Public Property BeginnVertrag As Nullable(Of Date)
     Public Property EndeVertrag As Nullable(Of Date)
     Public Property Erstschulung As Nullable(Of Date)
-    Public Property MonatJahrZertifikat As String
+    Public Property MonatJahrZertifikat As string
     Public Property Nachschulung As Nullable(Of Date)
     Public Property LetztesAudit As Nullable(Of Date)
 

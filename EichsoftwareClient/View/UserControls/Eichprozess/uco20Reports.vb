@@ -1,4 +1,5 @@
-﻿Public Class uco20Reports
+Public Class uco20Reports
+
     Inherits ucoContent
 
 #Region "Member Variabeln"

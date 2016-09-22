@@ -1,5 +1,6 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class uco16Taraeinrichtung
+
     Inherits ucoContent
 
     'UserControl overrides dispose to clean up the component list.
@@ -24,8 +25,8 @@ Partial Class uco16Taraeinrichtung
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco16Taraeinrichtung))
         Me.RadScrollablePanel1 = New Telerik.WinControls.UI.RadScrollablePanel()
-        Me.lblPflichtfeld2 = New System.Windows.Forms.Label()
-        Me.lblPflichtfeld1 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld2 = New Telerik.WinControls.UI.RadLabel()
+        Me.lblPflichtfeld1 = New Telerik.WinControls.UI.RadLabel()
         Me.lblTaraAusrichtung = New Telerik.WinControls.UI.RadLabel()
         Me.RadCheckBoxTaraGenauigkeitTarrierung = New Telerik.WinControls.UI.RadCheckBox()
         Me.lblGenauigkeit = New Telerik.WinControls.UI.RadLabel()
@@ -128,7 +129,7 @@ Partial Class uco16Taraeinrichtung
     Friend WithEvents RadCheckBoxTaraausgleicheinrichtungOK As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents RadCheckBoxTaraGenauigkeitTarrierung As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents RadScrollablePanel1 As Telerik.WinControls.UI.RadScrollablePanel
-    Friend WithEvents lblPflichtfeld1 As System.Windows.Forms.Label
-    Friend WithEvents lblPflichtfeld2 As System.Windows.Forms.Label
+    Friend WithEvents lblPflichtfeld1 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents lblPflichtfeld2 As Telerik.WinControls.UI.RadLabel
 
 End Class

@@ -11,14 +11,14 @@ Imports System
 Imports System.Collections.Generic
 
 Partial Public Class Konfiguration
-    Public Property BenutzerLizenz As String
+    Public Property BenutzerLizenz As string
     Public Property LetztesUpdate As Date
-    Public Property AktuelleSprache As String
-    Public Property Synchronisierungsmodus As String
+    Public Property AktuelleSprache As string
+    Public Property Synchronisierungsmodus As string
     Public Property SyncAb As Date
     Public Property SyncBis As Date
     Public Property HoleAlleeigenenEichungenVomServer As Boolean
-    Public Property GridSettings As String
-    Public Property GridSettingsRHEWA As String
+    Public Property GridSettings As string
+    Public Property GridSettingsRHEWA As string
 
 End Class

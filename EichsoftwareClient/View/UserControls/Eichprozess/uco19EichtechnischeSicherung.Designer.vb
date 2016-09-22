@@ -1,5 +1,6 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class uco19EichtechnischeSicherung
+
     Inherits ucoContent
 
     'UserControl overrides dispose to clean up the component list.
@@ -24,15 +25,15 @@ Partial Class uco19EichtechnischeSicherung
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco19EichtechnischeSicherung))
         Me.RadScrollablePanel1 = New Telerik.WinControls.UI.RadScrollablePanel()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label6 = New Telerik.WinControls.UI.RadLabel()
         Me.PictureBoxCE2016 = New System.Windows.Forms.PictureBox()
         Me.lblCE2016Kennzeichen = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlCE2016Kennzeichen = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxCE2016Kennzeichen = New Telerik.WinControls.UI.RadCheckBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label3 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label2 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label1 = New Telerik.WinControls.UI.RadLabel()
         Me.lblSicherungshinweise = New Telerik.WinControls.UI.RadLabel()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
@@ -426,11 +427,11 @@ Partial Class uco19EichtechnischeSicherung
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label2 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label1 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label6 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label7 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents PictureBoxCE2016 As System.Windows.Forms.PictureBox
     Friend WithEvents lblCE2016Kennzeichen As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadTextBoxControlCE2016Kennzeichen As Telerik.WinControls.UI.RadTextBox

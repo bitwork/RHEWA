@@ -1,8 +1,9 @@
-﻿Imports System.Net.FtpClient
+Imports System.Net.FtpClient
 Imports System.Net
 Imports System.IO
 
 Public Class Uco21Versenden
+
     Inherits ucoContent
     'Private AktuellerStatusDirty As Boolean = False 'variable die genutzt wird, um bei öffnen eines existierenden Eichprozesses speichern zu können wenn grundlegende Änderungen vorgenommen wurden. Wie das ändern der Waagenart und der Waegezelle. Dann
     Private WithEvents objFTP As New clsFTP

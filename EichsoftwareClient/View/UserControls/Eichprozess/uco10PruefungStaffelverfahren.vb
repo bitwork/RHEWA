@@ -1,7 +1,8 @@
-﻿' 13.05.2014 hill EichsoftwareClient uco10PruefungStaffelverfahren.vb
+' 13.05.2014 hill EichsoftwareClient uco10PruefungStaffelverfahren.vb
 Imports System
 
 Public Class uco10PruefungStaffelverfahren
+
     Inherits ucoContent
 
 #Region "Member Variables"

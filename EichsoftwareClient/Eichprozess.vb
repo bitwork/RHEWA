@@ -12,18 +12,18 @@ Imports System.Collections.Generic
 
 Partial Public Class Eichprozess
     Public Property ID As Integer
-    Public Property Vorgangsnummer As String
+    Public Property Vorgangsnummer As string
     Public Property FK_Vorgangsstatus As Byte
-    Public Property FK_Auswertegeraet As String
-    Public Property FK_Waegezelle As String
+    Public Property FK_Auswertegeraet As string
+    Public Property FK_Waegezelle As string
     Public Property FK_Eichprotokoll As Nullable(Of Integer)
     Public Property FK_WaagenTyp As Nullable(Of Byte)
     Public Property FK_WaagenArt As Nullable(Of Byte)
     Public Property FK_Kompatibilitaetsnachweis As Nullable(Of Integer)
     Public Property Ausgeblendet As Boolean
-    Public Property UploadFilePath As String
+    Public Property UploadFilePath As string
     Public Property FK_Bearbeitungsstatus As Nullable(Of Integer)
-    Public Property ErzeugerLizenz As String
+    Public Property ErzeugerLizenz As string
     Public Property AusStandardwaageErzeugt As Boolean
     Public Property Bearbeitungsdatum As Nullable(Of Date)
 

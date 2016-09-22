@@ -1,7 +1,8 @@
-﻿Imports System.ServiceModel.Description
+Imports System.ServiceModel.Description
 Imports System.Xml
 
 Friend Class ApplyCyclicDataContractSerializerOperationBehavior
+
     Inherits DataContractSerializerOperationBehavior
     Private ReadOnly _maxItemsInObjectGraph As Int32
     Private ReadOnly _ignoreExtensionDataObject As Boolean
@@ -14,7 +15,7 @@ Friend Class ApplyCyclicDataContractSerializerOperationBehavior
         _preserveObjectReferences = preserveObjectReferences
     End Sub
 
-    Public Overrides Function CreateSerializer(type As Type, name As [String], ns As [String], knownTypes As IList(Of Type)) As XmlObjectSerializer
+    Public Overrides Function CreateSerializer(type As Type, name As string, ns As string, knownTypes As IList(Of Type)) As XmlObjectSerializer
         'dataContractSurrogate
         Return (New DataContractSerializer(type, name, ns, knownTypes, _maxItemsInObjectGraph, _ignoreExtensionDataObject, _
             _preserveObjectReferences, Nothing))

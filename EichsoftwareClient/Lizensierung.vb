@@ -12,17 +12,17 @@ Imports System.Collections.Generic
 
 Partial Public Class Lizensierung
     Public Property ID As Integer
-    Public Property Lizenzschluessel As String
+    Public Property Lizenzschluessel As string
     Public Property LetzteAktivierung As Nullable(Of Date)
     Public Property RHEWALizenz As Boolean
     Public Property Aktiv As Boolean
-    Public Property FirmaOrt As String
-    Public Property Firma As String
-    Public Property Vorname As String
-    Public Property Name As String
-    Public Property FirmaPLZ As String
-    Public Property FirmaStrasse As String
-    Public Property HEKennung As String
-    Public Property FK_BenutzerID As String
+    Public Property FirmaOrt As string
+    Public Property Firma As string
+    Public Property Vorname As string
+    Public Property Name As string
+    Public Property FirmaPLZ As string
+    Public Property FirmaStrasse As string
+    Public Property HEKennung As string
+    Public Property FK_BenutzerID As string
 
 End Class

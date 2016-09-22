@@ -12,9 +12,9 @@ Imports System.Collections.Generic
 
 Partial Public Class ServerLookup_Waagentyp
     Public Property ID As Byte
-    Public Property Typ As String
-    Public Property Typ_EN As String
-    Public Property Typ_PL As String
+    Public Property Typ As string
+    Public Property Typ_EN As string
+    Public Property Typ_PL As string
 
     Public Overridable Property ServerEichprozess As ICollection(Of ServerEichprozess) = New HashSet(Of ServerEichprozess)
 

@@ -137,32 +137,32 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Telerik.WinControls, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\lib\RCWF\2016.3.913.40\Telerik.WinControls.dll</HintPath>
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLLs\Telerik.WinControls.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.WinControls.GridView, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\lib\RCWF\2016.3.913.40\Telerik.WinControls.GridView.dll</HintPath>
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLLs\Telerik.WinControls.GridView.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.WinControls.RadDock, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\lib\RCWF\2016.3.913.40\Telerik.WinControls.RadDock.dll</HintPath>
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLLs\Telerik.WinControls.RadDock.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.WinControls.UI, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\lib\RCWF\2016.3.913.40\Telerik.WinControls.UI.dll</HintPath>
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLLs\Telerik.WinControls.UI.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.WinControls.UI.Design, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\lib\RCWF\2016.3.913.40\Telerik.WinControls.UI.Design.dll</HintPath>
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLLs\Telerik.WinControls.UI.Design.dll</HintPath>
     </Reference>
     <Reference Include="TelerikCommon, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\lib\RCWF\2016.3.913.40\TelerikCommon.dll</HintPath>
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLLs\TelerikCommon.dll</HintPath>
     </Reference>
     <Reference Include="TelerikData, Version=2016.3.913.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\lib\RCWF\2016.3.913.40\TelerikData.dll</HintPath>
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLLs\TelerikData.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -338,10 +338,10 @@
     <Compile Include="View\Forms\frmEichfehlergrenzen.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Forms\frmMainContainer.Designer.vb">
-      <DependentUpon>frmMainContainer.vb</DependentUpon>
+    <Compile Include="View\Forms\frmMainContainer2.Designer.vb">
+      <DependentUpon>frmMainContainer2.vb</DependentUpon>
     </Compile>
-    <Compile Include="View\Forms\frmMainContainer.vb">
+    <Compile Include="View\Forms\frmMainContainer2.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -581,12 +581,11 @@
       <DependentUpon>frmEichfehlergrenzen.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Forms\frmMainContainer.de.resx">
-      <DependentUpon>frmMainContainer.vb</DependentUpon>
-      <SubType>Designer</SubType>
+    <EmbeddedResource Include="View\Forms\frmMainContainer2.de.resx">
+      <DependentUpon>frmMainContainer2.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Forms\frmMainContainer.resx">
-      <DependentUpon>frmMainContainer.vb</DependentUpon>
+    <EmbeddedResource Include="View\Forms\frmMainContainer2.resx">
+      <DependentUpon>frmMainContainer2.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -1043,10 +1042,17 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DLLs\System.Net.FtpClient.dll">
+    <None Include="DLLs\System.Net.FtpClient.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="DLLs\System.Net.FtpClient.XML" />
+    </None>
+    <None Include="DLLs\System.Net.FtpClient.XML" />
+    <None Include="DLLs\Telerik.WinControls.dll" />
+    <None Include="DLLs\Telerik.WinControls.GridView.dll" />
+    <None Include="DLLs\Telerik.WinControls.RadDock.dll" />
+    <None Include="DLLs\Telerik.WinControls.UI.Design.dll" />
+    <None Include="DLLs\Telerik.WinControls.UI.dll" />
+    <None Include="DLLs\TelerikCommon.dll" />
+    <None Include="DLLs\TelerikData.dll" />
     <Content Include="EichsoftwareClientdatabase.sdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

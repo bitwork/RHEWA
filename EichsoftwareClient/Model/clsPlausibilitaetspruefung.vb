@@ -1,4 +1,4 @@
-﻿Imports System.Data.OleDb
+Imports System.Data.OleDb
 Imports System.Xml
 Imports System.Xml.Linq
 
@@ -38,135 +38,135 @@ Public Class clsPlausibilitaetspruefung
 
 #Region "Properties"
 #Region "Aus Config"
-    Public ReadOnly Property FabriknummerConfig As String
+    Public ReadOnly Property FabriknummerConfig As string
         Get
             Return Fabriknummer
         End Get
     End Property
 
-    Public ReadOnly Property FirmwareVersionConfig As String
+    Public ReadOnly Property FirmwareVersionConfig As string
         Get
             Return FirmwareVersion
         End Get
     End Property
 
-    Public ReadOnly Property ModelConfig As String
+    Public ReadOnly Property ModelConfig As string
         Get
             Return Model
         End Get
     End Property
 
-    Public ReadOnly Property EichzaehlerstandConfig As String
+    Public ReadOnly Property EichzaehlerstandConfig As string
         Get
             Return Eichzaehlerstand
         End Get
     End Property
 
-    Public ReadOnly Property ErdbeschleunigungConfig As String
+    Public ReadOnly Property ErdbeschleunigungConfig As string
         Get
             Return Erdbeschleunigung
         End Get
     End Property
 
-    Public ReadOnly Property MehrbereichConfig As String
+    Public ReadOnly Property MehrbereichConfig As string
         Get
             Return Mehrbereich
         End Get
 
     End Property
 
-    Public ReadOnly Property GewichtseinheitConfig As String
+    Public ReadOnly Property GewichtseinheitConfig As string
         Get
             Return Gewichtseinheit
         End Get
 
     End Property
 
-    Public ReadOnly Property Waegebereich1Config As String
+    Public ReadOnly Property Waegebereich1Config As string
         Get
             Return Waegebereich1
         End Get
 
     End Property
 
-    Public ReadOnly Property Ziffernschritt1Config As String
+    Public ReadOnly Property Ziffernschritt1Config As string
         Get
             Return Ziffernschritt1
         End Get
 
     End Property
 
-    Public ReadOnly Property Waegebereich2Config As String
+    Public ReadOnly Property Waegebereich2Config As string
         Get
             Return Waegebereich2
         End Get
 
     End Property
 
-    Public ReadOnly Property Ziffernschritt2Config As String
+    Public ReadOnly Property Ziffernschritt2Config As string
         Get
             Return Ziffernschritt2
         End Get
 
     End Property
 
-    Public ReadOnly Property Waegebereich3Config As String
+    Public ReadOnly Property Waegebereich3Config As string
         Get
             Return Waegebereich3
         End Get
 
     End Property
 
-    Public ReadOnly Property Ziffernschritt3Config As String
+    Public ReadOnly Property Ziffernschritt3Config As string
         Get
             Return Ziffernschritt3
         End Get
 
     End Property
 
-    Public ReadOnly Property EinschalltnullstellenConfig As String
+    Public ReadOnly Property EinschalltnullstellenConfig As string
         Get
             Return Einschalltnullstellen
         End Get
 
     End Property
 
-    Public ReadOnly Property AnzahlJustagepunkteConfig As String
+    Public ReadOnly Property AnzahlJustagepunkteConfig As string
         Get
             Return AnzahlJustagepunkte
         End Get
 
     End Property
 
-    Public ReadOnly Property AnalogwertJustagepunktMinConfig As String
+    Public ReadOnly Property AnalogwertJustagepunktMinConfig As string
         Get
             Return AnalogwertJustagepunktMin
         End Get
 
     End Property
 
-    Public ReadOnly Property AnalogwertJustagepunktMaxConfig As String
+    Public ReadOnly Property AnalogwertJustagepunktMaxConfig As string
         Get
             Return AnalogwertJustagepunktMax
         End Get
 
     End Property
 
-    Public ReadOnly Property GewichtswertJustagepunktMinConfig As String
+    Public ReadOnly Property GewichtswertJustagepunktMinConfig As string
         Get
             Return GewichtswertJustagepunktMin
         End Get
 
     End Property
 
-    Public ReadOnly Property GewichtswertJustagepunktMaxConfig As String
+    Public ReadOnly Property GewichtswertJustagepunktMaxConfig As string
         Get
             Return GewichtswertJustagepunktMax
         End Get
 
     End Property
 
-    Public ReadOnly Property UebersetzungsverhaeltnisConfig As String
+    Public ReadOnly Property UebersetzungsverhaeltnisConfig As string
         Get
             Return Uebersetzungsverhaeltnis
         End Get
@@ -174,91 +174,91 @@ Public Class clsPlausibilitaetspruefung
     End Property
 #End Region
 #Region "AusSoftware"
-    Public ReadOnly Property FabriknummerSoftware As String
+    Public ReadOnly Property FabriknummerSoftware As string
         Get
             Return _objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_FabrikNummer
         End Get
     End Property
 
-    Public ReadOnly Property FirmwareVersionSoftware As String
+    Public ReadOnly Property FirmwareVersionSoftware As string
         Get
             Return _objEichprozess.Eichprotokoll.Komponenten_Softwarestand
         End Get
     End Property
 
-    Public ReadOnly Property ModelSoftware As String
+    Public ReadOnly Property ModelSoftware As string
         Get
             Return _objEichprozess.Lookup_Auswertegeraet.Typ
         End Get
     End Property
 
-    Public ReadOnly Property EichzaehlerstandSoftware As String
+    Public ReadOnly Property EichzaehlerstandSoftware As string
         Get
             Return Eichzaehlerstand
         End Get
     End Property
 
-    Public ReadOnly Property ErdbeschleunigungSoftware As String
+    Public ReadOnly Property ErdbeschleunigungSoftware As string
         Get
             Return _objEichprozess.Eichprotokoll.Fallbeschleunigung_g
         End Get
     End Property
 
-    Public ReadOnly Property MehrbereichSoftware As String
+    Public ReadOnly Property MehrbereichSoftware As string
         Get
             Return Mehrbereich
         End Get
     End Property
 
-    Public ReadOnly Property GewichtseinheitSoftware As String
+    Public ReadOnly Property GewichtseinheitSoftware As string
         Get
             Return "1"
         End Get
     End Property
 
-    Public ReadOnly Property Waegebereich1Software As String
+    Public ReadOnly Property Waegebereich1Software As string
         Get
             Return _objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast1
         End Get
     End Property
 
-    Public ReadOnly Property Ziffernschritt1Software As String
+    Public ReadOnly Property Ziffernschritt1Software As string
         Get
             Return _objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert1
         End Get
     End Property
 
-    Public ReadOnly Property Waegebereich2Software As String
+    Public ReadOnly Property Waegebereich2Software As string
         Get
             Return _objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast2
         End Get
     End Property
 
-    Public ReadOnly Property Ziffernschritt2Software As String
+    Public ReadOnly Property Ziffernschritt2Software As string
         Get
             Return _objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert2
         End Get
     End Property
 
-    Public ReadOnly Property Waegebereich3Software As String
+    Public ReadOnly Property Waegebereich3Software As string
         Get '?
             Return _objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Hoechstlast3
         End Get
     End Property
 
-    Public ReadOnly Property Ziffernschritt3Software As String
+    Public ReadOnly Property Ziffernschritt3Software As string
         Get '?
             Return _objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Eichwert3
         End Get
     End Property
 
-    Public ReadOnly Property EinschalltnullstellenSoftware As String
+    Public ReadOnly Property EinschalltnullstellenSoftware As string
         Get
             Return _objEichprozess.Kompatiblitaetsnachweis.Kompatiblitaet_Waage_Einschaltnullstellbereich
         End Get
     End Property
 
-    Public ReadOnly Property UebersetzungsverhaeltnisSoftware As String
+    Public ReadOnly Property UebersetzungsverhaeltnisSoftware As string
         Get
             Return Uebersetzungsverhaeltnis
         End Get
@@ -267,7 +267,7 @@ Public Class clsPlausibilitaetspruefung
 #End Region
 #End Region
 
-    Public Function LadeWerte(waegebereich As Integer, filename As String, objEichprozess As Eichprozess) As Boolean
+    Public Function LadeWerte(waegebereich As Integer, filename As string, objEichprozess As Eichprozess) As Boolean
         _objEichprozess = objEichprozess
         _Waegebereich = waegebereich
         Eichzaehlerstand = _objEichprozess.Eichprotokoll.Komponenten_Eichzaehlerstand
@@ -587,14 +587,14 @@ Public Class clsPlausibilitaetspruefung
 End Class
 
 Public Class PlausibilitaetDatasource
-    Public Sub New(eigenschaft As String, wertAusConfig As String, wertAusSoftware As String)
+    Public Sub New(eigenschaft As string, wertAusConfig As string, wertAusSoftware As string)
         Me.Eigenschaft = eigenschaft
         Me.WertAusConfig = wertAusConfig
         Me.WertAusSoftware = wertAusSoftware
     End Sub
 
-    Public Property Eigenschaft As String
-    Public Property WertAusConfig As String
-    Public Property WertAusSoftware As String
+    Public Property Eigenschaft As string
+    Public Property WertAusConfig As string
+    Public Property WertAusSoftware As string
 
 End Class

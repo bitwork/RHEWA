@@ -1,4 +1,5 @@
-﻿Public Class ucoEichfehlergrenzen
+Public Class ucoEichfehlergrenzen
+
     Inherits ucoContent
 
 #Region "Member Variables"

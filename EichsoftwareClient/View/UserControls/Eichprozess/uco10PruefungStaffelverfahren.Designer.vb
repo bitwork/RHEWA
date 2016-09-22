@@ -1,5 +1,6 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class uco10PruefungStaffelverfahren
+
     Inherits ucoContent
 
     'UserControl overrides dispose to clean up the component list.
@@ -558,10 +559,10 @@ Partial Class uco10PruefungStaffelverfahren
         Me.lblStaffel1Bereich1Fehler = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel1Bereich1Anzeige = New Telerik.WinControls.UI.RadLabel()
         Me.lblStaffel1Bereich1Last = New Telerik.WinControls.UI.RadLabel()
-        CType(Me.RadScrollablePanel1,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).BeginInit
         Me.RadScrollablePanel1.PanelContainer.SuspendLayout
         Me.RadScrollablePanel1.SuspendLayout
-        CType(Me.RadGroupBoxStaffel5,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.RadGroupBoxStaffel5, System.ComponentModel.ISupportInitialize).BeginInit
         CType(Me.RadGroupBoxStaffel5Bereich3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBoxStaffel5Bereich3.SuspendLayout()
         CType(Me.PictureBox124, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -5251,145 +5252,145 @@ Partial Class uco10PruefungStaffelverfahren
         CType(Me.RadGroupBoxStaffel1Bereich3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBoxStaffel1Bereich3.ResumeLayout(false)
         Me.RadGroupBoxStaffel1Bereich3.PerformLayout
-        CType(Me.PictureBox141,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadLabel8,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadLabel3,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.PictureBox88,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.PictureBox89,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.PictureBox90,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.PictureBox27,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.PictureBox31,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.PictureBox32,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlStaffel1Bereich3Fehler7,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlStaffel1Bereich3Fehler6,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlStaffel1Bereich3Fehler5,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlStaffel1Bereich3Last4,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlStaffel1Bereich3Anzeige4,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlStaffel1Bereich3Fehler4,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlStaffel1Bereich3Fehler3,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlStaffel1Bereich3Anzeige3,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlStaffel1Bereich3Last3,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlStaffel1Bereich3Last1,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlStaffel1Bereich3Anzeige1,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlStaffel1Bereich3Fehler1,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblStaffel1Bereich3MessabweichungWaage,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblStaffel1Bereich3MessabweichungStaffel,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblStaffel1Bereich3Differenz,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblStaffel1Bereich3NormalLast,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.PictureBox15,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.PictureBox16,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.PictureBox17,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.PictureBox18,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.PictureBox19,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblStaffel1Bereich3EFGWert7,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblStaffel1Bereich3EFGWert6,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblStaffel1Bereich3EFGWert5,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblStaffel1Bereich3EFGWert4,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblStaffel1Bereich3EFGWert3,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.PictureBox20,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblStaffel1Bereich3EFGWert1,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblStaffel1Bereich3EFG,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblStaffel1Bereich3Fehler,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblStaffel1Bereich3Anzeige,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblStaffel1Bereich3Last,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadGroupBoxStaffel1Bereich2,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox141, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadLabel8, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadLabel3, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox88, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox89, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox90, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox27, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox31, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox32, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadTextBoxControlStaffel1Bereich3Fehler7, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadTextBoxControlStaffel1Bereich3Fehler6, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadTextBoxControlStaffel1Bereich3Fehler5, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadTextBoxControlStaffel1Bereich3Last4, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadTextBoxControlStaffel1Bereich3Anzeige4, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadTextBoxControlStaffel1Bereich3Fehler4, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadTextBoxControlStaffel1Bereich3Fehler3, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadTextBoxControlStaffel1Bereich3Anzeige3, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadTextBoxControlStaffel1Bereich3Last3, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadTextBoxControlStaffel1Bereich3Last1, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadTextBoxControlStaffel1Bereich3Anzeige1, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadTextBoxControlStaffel1Bereich3Fehler1, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblStaffel1Bereich3MessabweichungWaage, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblStaffel1Bereich3MessabweichungStaffel, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblStaffel1Bereich3Differenz, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblStaffel1Bereich3NormalLast, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblStaffel1Bereich3EFGWert7, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblStaffel1Bereich3EFGWert6, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblStaffel1Bereich3EFGWert5, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblStaffel1Bereich3EFGWert4, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblStaffel1Bereich3EFGWert3, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblStaffel1Bereich3EFGWert1, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblStaffel1Bereich3EFG, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblStaffel1Bereich3Fehler, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblStaffel1Bereich3Anzeige, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblStaffel1Bereich3Last, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadGroupBoxStaffel1Bereich2, System.ComponentModel.ISupportInitialize).EndInit
         Me.RadGroupBoxStaffel1Bereich2.ResumeLayout(false)
         Me.RadGroupBoxStaffel1Bereich2.PerformLayout
-        CType(Me.PictureBox139,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadLabel6,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadLabel2,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.PictureBox82,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.PictureBox83,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.PictureBox84,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.PictureBox24,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.PictureBox25,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.PictureBox26,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlStaffel1Bereich2Fehler7,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlStaffel1Bereich2Fehler6,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlStaffel1Bereich2Fehler5,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlStaffel1Bereich2Last4,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlStaffel1Bereich2Anzeige4,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlStaffel1Bereich2Fehler4,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlStaffel1Bereich2Fehler3,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlStaffel1Bereich2Anzeige3,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlStaffel1Bereich2Last3,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlStaffel1Bereich2Last1,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlStaffel1Bereich2Anzeige1,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlStaffel1Bereich2Fehler1,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblStaffel1Bereich2MessabweichungWaage,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblStaffel1Bereich2MessabweichungStaffel,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblStaffel1Bereich2Differenz,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblStaffel1Bereich2NormalLast,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.PictureBox8,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.PictureBox9,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.PictureBox10,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.PictureBox11,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.PictureBox12,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblStaffel1Bereich2EFGWert7,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblStaffel1Bereich2EFGWert6,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblStaffel1Bereich2EFGWert5,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblStaffel1Bereich2EFGWert4,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblStaffel1Bereich2EFGWert3,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.PictureBox13,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblStaffel1Bereich2EFGWert1,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblStaffel1Bereich2EFG,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblStaffel1Bereich2Fehler,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblStaffel1Bereich2Anzeige,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblStaffel1Bereich2Last,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadGroupBoxStaffel1Bereich1,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox139, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadLabel6, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadLabel2, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox82, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox83, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox84, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox24, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox25, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox26, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadTextBoxControlStaffel1Bereich2Fehler7, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadTextBoxControlStaffel1Bereich2Fehler6, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadTextBoxControlStaffel1Bereich2Fehler5, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadTextBoxControlStaffel1Bereich2Last4, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadTextBoxControlStaffel1Bereich2Anzeige4, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadTextBoxControlStaffel1Bereich2Fehler4, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadTextBoxControlStaffel1Bereich2Fehler3, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadTextBoxControlStaffel1Bereich2Anzeige3, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadTextBoxControlStaffel1Bereich2Last3, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadTextBoxControlStaffel1Bereich2Last1, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadTextBoxControlStaffel1Bereich2Anzeige1, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadTextBoxControlStaffel1Bereich2Fehler1, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblStaffel1Bereich2MessabweichungWaage, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblStaffel1Bereich2MessabweichungStaffel, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblStaffel1Bereich2Differenz, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblStaffel1Bereich2NormalLast, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblStaffel1Bereich2EFGWert7, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblStaffel1Bereich2EFGWert6, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblStaffel1Bereich2EFGWert5, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblStaffel1Bereich2EFGWert4, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblStaffel1Bereich2EFGWert3, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblStaffel1Bereich2EFGWert1, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblStaffel1Bereich2EFG, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblStaffel1Bereich2Fehler, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblStaffel1Bereich2Anzeige, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblStaffel1Bereich2Last, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadGroupBoxStaffel1Bereich1, System.ComponentModel.ISupportInitialize).EndInit
         Me.RadGroupBoxStaffel1Bereich1.ResumeLayout(false)
         Me.RadGroupBoxStaffel1Bereich1.PerformLayout
-        CType(Me.PictureBox140,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadLabel5,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadLabel4,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadLabel1,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.PictureBox133,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlStaffel1Bereich1Last2,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlStaffel1Bereich1Anzeige2,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlStaffel1Bereich1Fehler2,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.PictureBox134,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblStaffel1Bereich1EFGWert2,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.PictureBox75,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.PictureBox76,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.PictureBox81,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.PictureBox6,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.PictureBox7,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.PictureBox14,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlStaffel1Bereich1Fehler7,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlStaffel1Bereich1Fehler6,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlStaffel1Bereich1Fehler5,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlStaffel1Bereich1Last4,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlStaffel1Bereich1Anzeige4,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlStaffel1Bereich1Fehler4,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlStaffel1Bereich1Fehler3,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlStaffel1Bereich1Anzeige3,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlStaffel1Bereich1Last3,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlStaffel1Bereich1Last1,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlStaffel1Bereich1Anzeige1,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RadTextBoxControlStaffel1Bereich1Fehler1,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblStaffel1Bereich1MessabweichungWaage,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblStaffel1Bereich1MessabweichungStaffel,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblStaffel1Bereich1Differenz,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblStaffel1Bereich1NormalLast,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.PictureBox5,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.PictureBox4,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.PictureBox3,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.PictureBox2,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.PictureBox1,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblStaffel1Bereich1EFGWert7,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblStaffel1Bereich1EFGWert6,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblStaffel1Bereich1EFGWert5,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblStaffel1Bereich1EFGWert4,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblStaffel1Bereich1EFGWert3,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.PictureBox79,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblStaffel1Bereich1EFGWert1,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblStaffel1Bereich1EFG,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblStaffel1Bereich1Fehler,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblStaffel1Bereich1Anzeige,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lblStaffel1Bereich1Last,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox140, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadLabel5, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadLabel4, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox133, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadTextBoxControlStaffel1Bereich1Last2, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadTextBoxControlStaffel1Bereich1Anzeige2, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadTextBoxControlStaffel1Bereich1Fehler2, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox134, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblStaffel1Bereich1EFGWert2, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox75, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox76, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox81, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadTextBoxControlStaffel1Bereich1Fehler7, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadTextBoxControlStaffel1Bereich1Fehler6, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadTextBoxControlStaffel1Bereich1Fehler5, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadTextBoxControlStaffel1Bereich1Last4, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadTextBoxControlStaffel1Bereich1Anzeige4, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadTextBoxControlStaffel1Bereich1Fehler4, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadTextBoxControlStaffel1Bereich1Fehler3, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadTextBoxControlStaffel1Bereich1Anzeige3, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadTextBoxControlStaffel1Bereich1Last3, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadTextBoxControlStaffel1Bereich1Last1, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadTextBoxControlStaffel1Bereich1Anzeige1, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.RadTextBoxControlStaffel1Bereich1Fehler1, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblStaffel1Bereich1MessabweichungWaage, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblStaffel1Bereich1MessabweichungStaffel, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblStaffel1Bereich1Differenz, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblStaffel1Bereich1NormalLast, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblStaffel1Bereich1EFGWert7, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblStaffel1Bereich1EFGWert6, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblStaffel1Bereich1EFGWert5, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblStaffel1Bereich1EFGWert4, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblStaffel1Bereich1EFGWert3, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.PictureBox79, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblStaffel1Bereich1EFGWert1, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblStaffel1Bereich1EFG, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblStaffel1Bereich1Fehler, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblStaffel1Bereich1Anzeige, System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.lblStaffel1Bereich1Last, System.ComponentModel.ISupportInitialize).EndInit
         Me.ResumeLayout(false)
 
-End Sub
+    End Sub
     Friend WithEvents RadGroupBoxStaffel1 As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents RadGroupBoxStaffel1Bereich1 As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents RadTextBoxControlStaffel1Bereich1Fehler7 As Telerik.WinControls.UI.RadTextBox

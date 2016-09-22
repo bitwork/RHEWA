@@ -1,5 +1,6 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class ucoBenutzerwechsel
+
     Inherits System.Windows.Forms.UserControl
 
     'UserControl overrides dispose to clean up the component list.

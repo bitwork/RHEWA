@@ -1,4 +1,5 @@
-﻿Public Class uco18Fallbeschleunigung
+Public Class uco18Fallbeschleunigung
+
     Inherits ucoContent
 
 #Region "Member Variables"

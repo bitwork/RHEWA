@@ -1,4 +1,4 @@
-﻿Imports System.Data.SqlClient
+Imports System.Data.SqlClient
 
 Public Class frmDBSync
     Private Const DBTABLES As String = "ServerVerbindungsprotokoll,ServerLookupVertragspartnerFirma,ServerKonfiguration,Servereichmarkenverwaltung,Firmen,ServerFirmenZusatzdaten,Benutzer,ServerLizensierung,ServerLookup_Waagenart,ServerKompatiblitaetsnachweis,ServerLookup_Vorgangsstatus,ServerLookup_Auswertegeraet,ServerLookup_Waegezelle,ServerLookup_Bearbeitungsstatus,ServerLookup_Waagentyp,ServerLookup_Konformitaetsbewertungsverfahren,ServerEichprotokoll,ServerEichprozess,ServerMogelstatistik,ServerPruefungAnsprechvermoegen,ServerPruefungAussermittigeBelastung,ServerPruefungLinearitaetFallend,ServerPruefungLinearitaetSteigend,ServerPruefungRollendeLasten,ServerPruefungStabilitaetGleichgewichtslage,ServerPruefungStaffelverfahrenErsatzlast,ServerPruefungStaffelverfahrenNormallast,ServerPruefungWiederholbarkeit"
@@ -38,15 +38,15 @@ Public Class frmDBSync
 
         'Connection String initialisieren
         Dim conn As New SqlClient.SqlConnection
-        If RadioButtonSyncStratoRHEWA.Checked Then
+        If RadioButtonSyncStratoRHEWA.IsChecked Then
             'TODO DB PFad von RHEWA Eintragen
             conn.ConnectionString = "Data Source=WIN7MOBDEV01;Initial Catalog=Herstellerersteichung;Persist Security Info=True;User ID=sa;Password=Test1234"
             PathScript = AppDomain.CurrentDomain.BaseDirectory & "Repository\Call_DTS STRATO RHEWA.bat"
 
-        ElseIf RadioButtonSyncRHEWAStrato.Checked Then
+        ElseIf RadioButtonSyncRHEWAStrato.IsChecked Then
             conn.ConnectionString = "Data Source=h2223265.stratoserver.net;Initial Catalog=Herstellerersteichung;Persist Security Info=True;User ID=Eichen;Password=Eichen2013"
             PathScript = AppDomain.CurrentDomain.BaseDirectory & "Repository\Call_DTS RHEWA STRATO.bat"
-        ElseIf RadioButtonSyncStratoDEV.Checked Then
+        ElseIf RadioButtonSyncStratoDEV.IsChecked Then
             conn.ConnectionString = "Data Source=WIN7MOBDEV01;Initial Catalog=Herstellerersteichung;Persist Security Info=True;User ID=sa;Password=Test1234"
             PathScript = AppDomain.CurrentDomain.BaseDirectory & "Repository\Call_DTS STRATO DEV.bat"
         End If
@@ -148,7 +148,7 @@ Public Class frmDBSync
 
     End Sub
 
-    Private Function GETActivateConstraintsSkript() As String
+    Private Function GETActivateConstraintsSkript() As string
         Dim Tables As String() = DBTABLES.Split(",")
         Dim ConstraintSkript As String = ""
         For Each table In Tables
@@ -157,7 +157,7 @@ Public Class frmDBSync
         Return ConstraintSkript
     End Function
 
-    Private Function GETDeactivateConstraintsSkript() As String
+    Private Function GETDeactivateConstraintsSkript() As string
         Dim Tables As String() = DBTABLES.Split(",")
         Dim ConstraintSkript As String = ""
         For Each table In Tables

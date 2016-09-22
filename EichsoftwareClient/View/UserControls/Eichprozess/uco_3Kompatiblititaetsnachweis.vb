@@ -1,4 +1,5 @@
-﻿Public Class uco_3Kompatiblititaetsnachweis
+Public Class uco_3Kompatiblititaetsnachweis
+
     Inherits ucoContent
 
 #Region "Member Variables"

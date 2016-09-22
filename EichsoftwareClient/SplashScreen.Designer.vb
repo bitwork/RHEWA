@@ -1,6 +1,7 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class SplashScreen
-    Inherits System.Windows.Forms.Form
+
+    Inherits Telerik.WinControls.UI.RadForm
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _
@@ -13,9 +14,9 @@ Partial Class SplashScreen
             MyBase.Dispose(disposing)
         End Try
     End Sub
-    Friend WithEvents ApplicationTitle As System.Windows.Forms.Label
-    Friend WithEvents Version As System.Windows.Forms.Label
-    Friend WithEvents Copyright As System.Windows.Forms.Label
+    Friend WithEvents ApplicationTitle As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Version As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Copyright As Telerik.WinControls.UI.RadLabel
     Friend WithEvents MainLayoutPanel As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents DetailsLayoutPanel As System.Windows.Forms.TableLayoutPanel
 
@@ -29,9 +30,9 @@ Partial Class SplashScreen
     Private Sub InitializeComponent()
         Me.MainLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
         Me.DetailsLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
-        Me.Version = New System.Windows.Forms.Label()
-        Me.Copyright = New System.Windows.Forms.Label()
-        Me.ApplicationTitle = New System.Windows.Forms.Label()
+        Me.Version = New Telerik.WinControls.UI.RadLabel()
+        Me.Copyright = New Telerik.WinControls.UI.RadLabel()
+        Me.ApplicationTitle = New Telerik.WinControls.UI.RadLabel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.MainLayoutPanel.SuspendLayout()
         Me.DetailsLayoutPanel.SuspendLayout()
@@ -104,7 +105,7 @@ Partial Class SplashScreen
         Me.ApplicationTitle.Size = New System.Drawing.Size(317, 212)
         Me.ApplicationTitle.TabIndex = 0
         Me.ApplicationTitle.Text = "Application Title"
-        Me.ApplicationTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.ApplicationTitle.TextAlignment = System.Drawing.ContentAlignment.TopCenter
         '
         'PictureBox1
         '

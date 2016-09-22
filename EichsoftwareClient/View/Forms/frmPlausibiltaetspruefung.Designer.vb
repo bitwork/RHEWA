@@ -1,6 +1,7 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class frmPlausibiltaetspruefung
-    Inherits System.Windows.Forms.Form
+
+    Inherits Telerik.WinControls.UI.RadForm
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _
@@ -41,32 +42,32 @@ Partial Class frmPlausibiltaetspruefung
         Me.RadProgressBar = New Telerik.WinControls.UI.RadProgressBar()
         Me.RadButtonAnhang = New Telerik.WinControls.UI.RadButton()
         Me.RadDropDownListWaegebruecke = New Telerik.WinControls.UI.RadDropDownList()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.LabelOption = New System.Windows.Forms.Label()
+        Me.Label1 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label2 = New Telerik.WinControls.UI.RadLabel()
+        Me.LabelOption = New Telerik.WinControls.UI.RadLabel()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.RadGridViewVergleichswerte = New Telerik.WinControls.UI.RadGridView()
         Me.RadTextBoxControlJustagePunkt1 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label4 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlJustagePunkt2 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label6 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlAnalogwert2 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label9 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label10 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlAnalogwert1 = New Telerik.WinControls.UI.RadTextBoxControl()
         Me.RadTextBoxControlWZNennlast = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label7 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlWZKennwert = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label8 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label11 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label12 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlAnzahlWZ = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label13 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label14 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label15 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label16 = New Telerik.WinControls.UI.RadLabel()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.RadTextBoxControlADWertBerechnung2 = New Telerik.WinControls.UI.RadTextBoxControl()
         Me.RadTextBoxControlADWertBerechnung1 = New Telerik.WinControls.UI.RadTextBoxControl()
@@ -81,13 +82,13 @@ Partial Class frmPlausibiltaetspruefung
         Me.RadTextBoxControlLastWaegebrueckeBerechnung3 = New Telerik.WinControls.UI.RadTextBoxControl()
         Me.RadTextBoxControlLastWaegebrueckeBerechnung2 = New Telerik.WinControls.UI.RadTextBoxControl()
         Me.RadTextBoxControlLastWaegebrueckeBerechnung1 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.LabelLastWaegebruecke = New System.Windows.Forms.Label()
+        Me.LabelLastWaegebruecke = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlUebersetzungsverhaeltnis = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.LabelArrow1 = New System.Windows.Forms.Label()
-        Me.LabelArrow2 = New System.Windows.Forms.Label()
-        Me.LabelArrow3 = New System.Windows.Forms.Label()
-        Me.LabelArrow4 = New System.Windows.Forms.Label()
+        Me.Label18 = New Telerik.WinControls.UI.RadLabel()
+        Me.LabelArrow1 = New Telerik.WinControls.UI.RadLabel()
+        Me.LabelArrow2 = New Telerik.WinControls.UI.RadLabel()
+        Me.LabelArrow3 = New Telerik.WinControls.UI.RadLabel()
+        Me.LabelArrow4 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlProzentualeAuslasungWZBerechnung1 = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.RadTextBoxControlProzentualeAuslasungWZBerechnung2 = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.RadTextBoxControlProzentualeAuslasungWZBerechnung3 = New Telerik.WinControls.UI.RadMaskedEditBox()
@@ -456,7 +457,7 @@ Partial Class frmPlausibiltaetspruefung
         Me.Label16.Size = New System.Drawing.Size(146, 13)
         Me.Label16.TabIndex = 38
         Me.Label16.Text = "Last auf den Wägezellen [kg]"
-        Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Label16.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
         '
         'RadTextBoxControlADWertBerechnung2
         '
@@ -592,7 +593,7 @@ Partial Class frmPlausibiltaetspruefung
         Me.LabelLastWaegebruecke.Size = New System.Drawing.Size(149, 13)
         Me.LabelLastWaegebruecke.TabIndex = 52
         Me.LabelLastWaegebruecke.Text = "Last auf der Wägebrücke [kg]"
-        Me.LabelLastWaegebruecke.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.LabelLastWaegebruecke.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
         '
         'RadTextBoxControlUebersetzungsverhaeltnis
         '
@@ -802,32 +803,32 @@ Partial Class frmPlausibiltaetspruefung
     Friend WithEvents RadProgressBar As Telerik.WinControls.UI.RadProgressBar
     Friend WithEvents RadButtonAnhang As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadDropDownListWaegebruecke As Telerik.WinControls.UI.RadDropDownList
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents LabelOption As Label
+    Friend WithEvents Label1 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label2 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents LabelOption As Telerik.WinControls.UI.RadLabel
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
     Friend WithEvents RadGridViewVergleichswerte As Telerik.WinControls.UI.RadGridView
     Friend WithEvents RadTextBoxControlJustagePunkt1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label4 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadTextBoxControlJustagePunkt2 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label6 As Label
+    Friend WithEvents Label5 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label6 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadTextBoxControlAnalogwert2 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label10 As Label
+    Friend WithEvents Label9 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label10 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadTextBoxControlAnalogwert1 As Telerik.WinControls.UI.RadTextBoxControl
     Friend WithEvents RadTextBoxControlWZNennlast As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents Label7 As Label
+    Friend WithEvents Label7 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadTextBoxControlWZKennwert As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Label11 As Label
-    Friend WithEvents Label12 As Label
+    Friend WithEvents Label8 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label11 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label12 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadTextBoxControlAnzahlWZ As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents Label13 As Label
-    Friend WithEvents Label14 As Label
-    Friend WithEvents Label15 As Label
-    Friend WithEvents Label16 As Label
+    Friend WithEvents Label13 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label14 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label15 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label16 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents RadTextBoxControlADWertBerechnung2 As Telerik.WinControls.UI.RadTextBoxControl
     Friend WithEvents RadTextBoxControlADWertBerechnung1 As Telerik.WinControls.UI.RadTextBoxControl
@@ -842,13 +843,13 @@ Partial Class frmPlausibiltaetspruefung
     Friend WithEvents RadTextBoxControlLastWaegebrueckeBerechnung3 As Telerik.WinControls.UI.RadTextBoxControl
     Friend WithEvents RadTextBoxControlLastWaegebrueckeBerechnung2 As Telerik.WinControls.UI.RadTextBoxControl
     Friend WithEvents RadTextBoxControlLastWaegebrueckeBerechnung1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents LabelLastWaegebruecke As Label
+    Friend WithEvents LabelLastWaegebruecke As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadTextBoxControlUebersetzungsverhaeltnis As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents Label18 As Label
-    Friend WithEvents LabelArrow1 As Label
-    Friend WithEvents LabelArrow2 As Label
-    Friend WithEvents LabelArrow3 As Label
-    Friend WithEvents LabelArrow4 As Label
+    Friend WithEvents Label18 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents LabelArrow1 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents LabelArrow2 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents LabelArrow3 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents LabelArrow4 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadTextBoxControlProzentualeAuslasungWZBerechnung1 As Telerik.WinControls.UI.RadMaskedEditBox
     Friend WithEvents RadTextBoxControlProzentualeAuslasungWZBerechnung2 As Telerik.WinControls.UI.RadMaskedEditBox
     Friend WithEvents RadTextBoxControlProzentualeAuslasungWZBerechnung3 As Telerik.WinControls.UI.RadMaskedEditBox

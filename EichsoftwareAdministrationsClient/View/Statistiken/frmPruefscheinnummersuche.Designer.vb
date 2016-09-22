@@ -1,5 +1,6 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class FrmPruefscheinnummersuche
+
     Inherits Telerik.WinControls.UI.RadForm
 
     'Form overrides dispose to clean up the component list.
@@ -24,7 +25,7 @@ Partial Class FrmPruefscheinnummersuche
     Private Sub InitializeComponent()
         Me.RadGridView1 = New Telerik.WinControls.UI.RadGridView()
         Me.RadTextBoxControlPruefscheinnummer = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label1 = New Telerik.WinControls.UI.RadLabel()
         Me.RadButtonSuchen = New Telerik.WinControls.UI.RadButton()
         CType(Me.RadGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGridView1.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -102,10 +103,10 @@ Partial Class FrmPruefscheinnummersuche
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
-End Sub
+    End Sub
     Friend WithEvents RadGridView1 As Telerik.WinControls.UI.RadGridView
     Friend WithEvents RadTextBoxControlPruefscheinnummer As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label1 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadButtonSuchen As Telerik.WinControls.UI.RadButton
 End Class
 

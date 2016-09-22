@@ -1,5 +1,6 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class uco_2StammdatenEingabe
+
     Inherits ucoContent
 
     'UserControl overrides dispose to clean up the component list.
@@ -25,10 +26,10 @@ Partial Class uco_2StammdatenEingabe
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco_2StammdatenEingabe))
         Me.RadScrollablePanel1 = New Telerik.WinControls.UI.RadScrollablePanel()
         Me.RadGroupBoxStammdaten = New Telerik.WinControls.UI.RadGroupBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.lblPflichtfeld = New System.Windows.Forms.Label()
+        Me.Label3 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label2 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label1 = New Telerik.WinControls.UI.RadLabel()
+        Me.lblPflichtfeld = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxStammdatenPLZ = New Telerik.WinControls.UI.RadTextBox()
         Me.lblPLZ = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxStammdatenOrt = New Telerik.WinControls.UI.RadTextBox()
@@ -38,8 +39,8 @@ Partial Class uco_2StammdatenEingabe
         Me.RadTextBoxStammdatenWaagenbaufirma = New Telerik.WinControls.UI.RadTextBox()
         Me.lblWaagenbaufirma = New Telerik.WinControls.UI.RadLabel()
         Me.RadGroupBoxWZ = New Telerik.WinControls.UI.RadGroupBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label8 = New Telerik.WinControls.UI.RadLabel()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.RadButtonNeueWaegezelle = New Telerik.WinControls.UI.RadButton()
@@ -52,9 +53,9 @@ Partial Class uco_2StammdatenEingabe
         Me.lblAWZZulassung = New Telerik.WinControls.UI.RadLabel()
         Me.lblAWZHersteller = New Telerik.WinControls.UI.RadLabel()
         Me.RadGroupBoxWaage = New Telerik.WinControls.UI.RadGroupBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label6 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label5 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label4 = New Telerik.WinControls.UI.RadLabel()
         Me.lblWaagenart = New Telerik.WinControls.UI.RadLabel()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.RadDropDownListWaagenArt = New Telerik.WinControls.UI.RadDropDownList()
@@ -65,7 +66,7 @@ Partial Class uco_2StammdatenEingabe
         Me.RadTextBoxWaageSeriennummer = New Telerik.WinControls.UI.RadTextBox()
         Me.lblAWaageSeriennummer = New Telerik.WinControls.UI.RadLabel()
         Me.RadGroupBoxAWG = New Telerik.WinControls.UI.RadGroupBox()
-        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label7 = New Telerik.WinControls.UI.RadLabel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -282,14 +283,14 @@ Partial Class uco_2StammdatenEingabe
         'RadDropdownlistlWZHersteller
         '
         Me.RadDropdownlistlWZHersteller.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.RadDropdownlistlWZHersteller.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList
+        Me.RadDropdownlistlWZHersteller.DropDownStyle  = Telerik.WinControls.RadDropDownStyle.DropDownList
         resources.ApplyResources(Me.RadDropdownlistlWZHersteller, "RadDropdownlistlWZHersteller")
         Me.RadDropdownlistlWZHersteller.Name = "RadDropdownlistlWZHersteller"
         '
         'RadDropdownlistlWZTyp
         '
         Me.RadDropdownlistlWZTyp.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.RadDropdownlistlWZTyp.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList
+        Me.RadDropdownlistlWZTyp.DropDownStyle  = Telerik.WinControls.RadDropDownStyle.DropDownList
         resources.ApplyResources(Me.RadDropdownlistlWZTyp, "RadDropdownlistlWZTyp")
         Me.RadDropdownlistlWZTyp.Name = "RadDropdownlistlWZTyp"
         '
@@ -380,7 +381,7 @@ Partial Class uco_2StammdatenEingabe
         'RadDropDownListWaagenArt
         '
         Me.RadDropDownListWaagenArt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.RadDropDownListWaagenArt.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList
+        Me.RadDropDownListWaagenArt.DropDownStyle  = Telerik.WinControls.RadDropDownStyle.DropDownList
         resources.ApplyResources(Me.RadDropDownListWaagenArt, "RadDropDownListWaagenArt")
         Me.RadDropDownListWaagenArt.Name = "RadDropDownListWaagenArt"
         '
@@ -392,7 +393,7 @@ Partial Class uco_2StammdatenEingabe
         'RadDropdownlistWaagenTyp
         '
         Me.RadDropdownlistWaagenTyp.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.RadDropdownlistWaagenTyp.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList
+        Me.RadDropdownlistWaagenTyp.DropDownStyle  = Telerik.WinControls.RadDropDownStyle.DropDownList
         resources.ApplyResources(Me.RadDropdownlistWaagenTyp, "RadDropdownlistWaagenTyp")
         Me.RadDropdownlistWaagenTyp.Name = "RadDropdownlistWaagenTyp"
         '
@@ -468,7 +469,7 @@ Partial Class uco_2StammdatenEingabe
         'RadDropdownlistAWGTyp
         '
         Me.RadDropdownlistAWGTyp.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.RadDropdownlistAWGTyp.DropDownStyle = Telerik.WinControls.RadDropDownStyle.DropDownList
+        Me.RadDropdownlistAWGTyp.DropDownStyle  = Telerik.WinControls.RadDropDownStyle.DropDownList
         resources.ApplyResources(Me.RadDropdownlistAWGTyp, "RadDropdownlistAWGTyp")
         Me.RadDropdownlistAWGTyp.Name = "RadDropdownlistAWGTyp"
         '
@@ -624,15 +625,15 @@ Partial Class uco_2StammdatenEingabe
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents lblWaagenart As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents lblPflichtfeld As System.Windows.Forms.Label
-    Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label2 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label1 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents lblPflichtfeld As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label9 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label8 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label6 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label5 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label4 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label7 As Telerik.WinControls.UI.RadLabel
 
 End Class

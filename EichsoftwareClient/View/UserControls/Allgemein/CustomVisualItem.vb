@@ -1,4 +1,4 @@
-﻿Imports System.Text
+Imports System.Text
 Imports Telerik.WinControls.UI
 Imports Telerik.WinControls.Layouts
 Imports Telerik.WinControls
@@ -9,6 +9,7 @@ Imports Telerik.WinControls
 ''' <remarks>DebuggerStepThrough aktiviert. Er wird hier also nie reindebuggen, solange die Property gesetzt ist.</remarks>
 <DebuggerStepThrough()>
 Friend Class CustomVisualItem
+
     Inherits Telerik.WinControls.UI.IconListViewVisualItem
     Private imageElement As LightVisualElement
     Private titleElement As LightVisualElement

@@ -1,9 +1,10 @@
-﻿Imports Telerik.WinControls.UI.Localization
+Imports Telerik.WinControls.UI.Localization
 
 Public Class telerikgridlocalizerEN
+
     Inherits RadGridLocalizationProvider
 
-    Public Overrides Function GetLocalizedString(id As String) As String
+    Public Overrides Function GetLocalizedString(id As String) As string
         Select Case id
             Case RadGridStringId.ConditionalFormattingPleaseSelectValidCellValue
                 Return "Please select valid cell value"
@@ -399,9 +400,10 @@ Public Class telerikgridlocalizerEN
 End Class
 
 Public Class telerikgridlocalizerDE
+
     Inherits RadGridLocalizationProvider
 
-    Public Overrides Function GetLocalizedString(id As String) As String
+    Public Overrides Function GetLocalizedString(id As String) As string
         Select Case id
             Case RadGridStringId.ConditionalFormattingPleaseSelectValidCellValue
                 Return "Please select valid cell value"

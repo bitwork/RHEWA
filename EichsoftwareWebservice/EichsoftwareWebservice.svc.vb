@@ -1,4 +1,4 @@
-﻿' HINWEIS: Mit dem Befehl "Umbenennen" im Kontextmenü können Sie den Klassennamen "Service1" sowohl im Code als auch in der SVC-Datei und der Konfigurationsdatei ändern.
+' HINWEIS: Mit dem Befehl "Umbenennen" im Kontextmenü können Sie den Klassennamen "Service1" sowohl im Code als auch in der SVC-Datei und der Konfigurationsdatei ändern.
 Imports System.Data.Entity
 Imports System.Data.Objects
 Imports EichsoftwareWebservice
@@ -20,7 +20,7 @@ Public Class EichsoftwareWebservice
     ''' <param name="Lizenzschluessel"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Function GetLizenz(ByVal HEKennung As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements IEichsoftwareWebservice.PruefeLizenz
+    Public Function GetLizenz(ByVal HEKennung As string, Lizenzschluessel As string, ByVal WindowsUsername As string, ByVal Domainname As string, ByVal Computername As string) As Boolean Implements IEichsoftwareWebservice.PruefeLizenz
         'SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Prüfe Lizenz")
 
         Try
@@ -50,7 +50,7 @@ Public Class EichsoftwareWebservice
     ''' <param name="Computername"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Function GetLizenzdaten(ByVal HEKennung As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As clsLizenzdaten Implements IEichsoftwareWebservice.GetLizenzdaten
+    Function GetLizenzdaten(ByVal HEKennung As string, Lizenzschluessel As string, ByVal WindowsUsername As string, ByVal Domainname As string, ByVal Computername As string) As clsLizenzdaten Implements IEichsoftwareWebservice.GetLizenzdaten
         Dim objLizenzdaten As New clsLizenzdaten
         SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Hole Lizenzdaten")
         Try
@@ -87,7 +87,7 @@ Public Class EichsoftwareWebservice
     ''' <param name="Domainname"></param>
     ''' <param name="Computername"></param>
     ''' <remarks></remarks>
-    Public Sub SchreibeVerbindungsprotokoll(ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, ByVal Aktivitaet As String) Implements IEichsoftwareWebservice.SchreibeVerbindungsprotokoll
+    Public Sub SchreibeVerbindungsprotokoll(ByVal Lizenzschluessel As string, ByVal WindowsUsername As string, ByVal Domainname As string, ByVal Computername As string, ByVal Aktivitaet As string) Implements IEichsoftwareWebservice.SchreibeVerbindungsprotokoll
 
         Dim thread As New Threading.Thread(Sub()
                                                Try
@@ -121,7 +121,7 @@ Public Class EichsoftwareWebservice
     ''' <param name="Lizenzschluessel"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Function SetValidLizenz(ByVal HEKennung As String, ByVal Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements IEichsoftwareWebservice.AktiviereLizenz
+    Public Function SetValidLizenz(ByVal HEKennung As string, ByVal Lizenzschluessel As string, ByVal WindowsUsername As string, ByVal Domainname As string, ByVal Computername As string) As Boolean Implements IEichsoftwareWebservice.AktiviereLizenz
         Try
             Using dbcontext As New EichenSQLDatabaseEntities1
                 SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Aktiviere Lizenz")
@@ -148,7 +148,7 @@ Public Class EichsoftwareWebservice
     ''' <param name="Lizenzschluessel"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Function GetValidRHEWALizenz(ByVal HEKennung As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements IEichsoftwareWebservice.PruefeObRHEWALizenz
+    Public Function GetValidRHEWALizenz(ByVal HEKennung As string, Lizenzschluessel As string, ByVal WindowsUsername As string, ByVal Domainname As string, ByVal Computername As string) As Boolean Implements IEichsoftwareWebservice.PruefeObRHEWALizenz
         Try
             Using dbcontext As New EichenSQLDatabaseEntities1
                 SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Prüfe ob RHEWA Mitarbeiter")
@@ -174,7 +174,7 @@ Public Class EichsoftwareWebservice
     ''' <param name="NewServerObj"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Function AddEichprozess(ByVal HEKennung As String, Lizenzschluessel As String, ByRef NewServerObj As ServerEichprozess, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, Programmversionsnummer As String) As Boolean Implements IEichsoftwareWebservice.AddEichprozess
+    Public Function AddEichprozess(ByVal HEKennung As string, Lizenzschluessel As string, ByRef NewServerObj As ServerEichprozess, ByVal WindowsUsername As string, ByVal Domainname As string, ByVal Computername As string, Programmversionsnummer As string) As Boolean Implements IEichsoftwareWebservice.AddEichprozess
         Try
             SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Füge Konformitätsbewertungsprozess hinzu bzw. Aktualisiere")
 
@@ -272,7 +272,7 @@ Public Class EichsoftwareWebservice
     ''' <param name="Domainname">The domainname.</param>
     ''' <param name="Computername">The computername.</param>
     ''' <returns></returns>
-    Public Function AddWaegezelle(HEKennung As String, Lizenzschluessel As String, ByVal pObjWZ As ServerLookup_Waegezelle, WindowsUsername As String, Domainname As String, Computername As String) As String Implements IEichsoftwareWebservice.AddWaegezelle
+    Public Function AddWaegezelle(HEKennung As String, Lizenzschluessel As String, ByVal pObjWZ As ServerLookup_Waegezelle, WindowsUsername As String, Domainname As String, Computername As String) As string Implements IEichsoftwareWebservice.AddWaegezelle
         Try
             SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Füge neue WZ hinzu")
 
@@ -333,7 +333,7 @@ Public Class EichsoftwareWebservice
     ''' <param name="Vorgangsnummer"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Function GetEichProzess(ByVal HEKennung As String, Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As ServerEichprozess Implements IEichsoftwareWebservice.GetEichProzess
+    Public Function GetEichProzess(ByVal HEKennung As string, Lizenzschluessel As string, ByVal Vorgangsnummer As string, ByVal WindowsUsername As string, ByVal Domainname As string, ByVal Computername As string) As ServerEichprozess Implements IEichsoftwareWebservice.GetEichProzess
         Try
             ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
             If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
@@ -489,7 +489,7 @@ Public Class EichsoftwareWebservice
     ''' <param name="SyncAllesBis"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Function GetAlleEichprozesseImZeitraum(ByVal HEKennung As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, Optional ByVal SyncAllesSeit As Date = #1/1/2000#, Optional ByVal SyncAllesBis As Date = #12/31/2999#) As ServerEichprozess() Implements IEichsoftwareWebservice.GetAlleEichprozesseImZeitraum
+    Public Function GetAlleEichprozesseImZeitraum(ByVal HEKennung As string, Lizenzschluessel As string, ByVal WindowsUsername As string, ByVal Domainname As string, ByVal Computername As string, Optional ByVal SyncAllesSeit As Date = #1/1/2000#, Optional ByVal SyncAllesBis As Date = #12/31/2999#) As ServerEichprozess() Implements IEichsoftwareWebservice.GetAlleEichprozesseImZeitraum
         Try
             ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
             If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
@@ -645,7 +645,7 @@ Public Class EichsoftwareWebservice
         End Try
     End Function
 
-    Public Function GetStandardwaagen(ByVal HEKennung As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As clsEichprozessFuerAuswahlliste() Implements IEichsoftwareWebservice.GetStandardwaagen
+    Public Function GetStandardwaagen(ByVal HEKennung As string, Lizenzschluessel As string, ByVal WindowsUsername As string, ByVal Domainname As string, ByVal Computername As string) As clsEichprozessFuerAuswahlliste() Implements IEichsoftwareWebservice.GetStandardwaagen
         Try
             Dim boldebug As Boolean = False ' debug logs schreiben
             ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
@@ -782,7 +782,7 @@ Public Class EichsoftwareWebservice
     ''' <param name="Computername"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Function GetAlleEichprozesse(ByVal HEKennung As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As clsEichprozessFuerAuswahlliste() Implements IEichsoftwareWebservice.GetAlleEichprozesse
+    Public Function GetAlleEichprozesse(ByVal HEKennung As string, Lizenzschluessel As string, ByVal WindowsUsername As string, ByVal Domainname As string, ByVal Computername As string) As clsEichprozessFuerAuswahlliste() Implements IEichsoftwareWebservice.GetAlleEichprozesse
         Try
             Dim boldebug As Boolean = False ' debug logs schreiben
             ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
@@ -975,7 +975,7 @@ Public Class EichsoftwareWebservice
     ''' <param name="Computername"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Function GetAlleEichprozesseNachUploadMonat(ByVal HEKennung As String, Lizenzschluessel As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, ByVal UploadjahrVon As Integer, ByVal UploadmonatVon As Integer, ByVal UploadjahrBis As Integer, ByVal UploadmonatBis As Integer) As clsEichprozessFuerAuswahlliste() Implements IEichsoftwareWebservice.GetAlleEichprozesseNachUploadMonat
+    Public Function GetAlleEichprozesseNachUploadMonat(ByVal HEKennung As string, Lizenzschluessel As string, ByVal WindowsUsername As string, ByVal Domainname As string, ByVal Computername As string, ByVal UploadjahrVon As Integer, ByVal UploadmonatVon As Integer, ByVal UploadjahrBis As Integer, ByVal UploadmonatBis As Integer) As clsEichprozessFuerAuswahlliste() Implements IEichsoftwareWebservice.GetAlleEichprozesseNachUploadMonat
         Try
             Dim boldebug As Boolean = False ' debug logs schreiben
             ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
@@ -1192,7 +1192,7 @@ Public Class EichsoftwareWebservice
     ''' <param name="SyncAllesBis"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Function GetNeueWZ(ByVal HEKennung As String, Lizenzschluessel As String, ByVal LetztesUpdate As Date, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, Optional ByVal SyncAllesSeit As Date = #1/1/2000#, Optional ByVal SyncAllesBis As Date = #12/31/2999#) As ServerLookup_Waegezelle() Implements IEichsoftwareWebservice.GetNeueWZ
+    Public Function GetNeueWZ(ByVal HEKennung As string, Lizenzschluessel As string, ByVal LetztesUpdate As Date, ByVal WindowsUsername As string, ByVal Domainname As string, ByVal Computername As string, Optional ByVal SyncAllesSeit As Date = #1/1/2000#, Optional ByVal SyncAllesBis As Date = #12/31/2999#) As ServerLookup_Waegezelle() Implements IEichsoftwareWebservice.GetNeueWZ
         ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
         If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
         SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Hole WZ")
@@ -1266,7 +1266,7 @@ Public Class EichsoftwareWebservice
     ''' <param name="SyncAllesBis"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Function GetNeuesAWG(ByVal HEKennung As String, Lizenzschluessel As String, ByVal LetztesUpdate As Date, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String, Optional ByVal SyncAllesSeit As Date = #1/1/2000#, Optional ByVal SyncAllesBis As Date = #12/31/2999#) As ServerLookup_Auswertegeraet() Implements IEichsoftwareWebservice.GetNeuesAWG
+    Public Function GetNeuesAWG(ByVal HEKennung As string, Lizenzschluessel As string, ByVal LetztesUpdate As Date, ByVal WindowsUsername As string, ByVal Domainname As string, ByVal Computername As string, Optional ByVal SyncAllesSeit As Date = #1/1/2000#, Optional ByVal SyncAllesBis As Date = #12/31/2999#) As ServerLookup_Auswertegeraet() Implements IEichsoftwareWebservice.GetNeuesAWG
         ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
         If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
         SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Hole AWG")
@@ -1339,8 +1339,7 @@ Public Class EichsoftwareWebservice
     ''' <param name="AnzahlCE"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Function AddEichmarkenverwaltung(ByVal HEKennung As String, Lizenzschluessel As String, ByVal BenutzerIDFK As String, ByVal AnzahlBenannteStelle As Integer, ByVal AnzahlEichsiegel13x13 As Integer,
-                                            ByVal AnzahlEichsiegelRund As Integer, ByVal AnzahlHinweismarke As Integer, ByVal AnzahlGruenesM As Integer, ByVal AnzahlCE As Integer, ByVal AnzahlCE2016 As Integer, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements IEichsoftwareWebservice.AddEichmarkenverwaltung
+    Public Function AddEichmarkenverwaltung(ByVal HEKennung As string, Lizenzschluessel As string, ByVal BenutzerIDFK As string, ByVal AnzahlBenannteStelle As Integer, ByVal AnzahlEichsiegel13x13 As Integer, ByVal AnzahlEichsiegelRund As Integer, ByVal AnzahlHinweismarke As Integer, ByVal AnzahlGruenesM As Integer, ByVal AnzahlCE As Integer, ByVal AnzahlCE2016 As Integer, ByVal WindowsUsername As string, ByVal Domainname As string, ByVal Computername As string) As Boolean Implements IEichsoftwareWebservice.AddEichmarkenverwaltung
         ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
         If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
         SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Aktualisiere Eichmarkenverwaltung")
@@ -1408,7 +1407,7 @@ Public Class EichsoftwareWebservice
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    Public Function GetGueltigkeitEichprozess(ByVal HEKennung As String, Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As String Implements IEichsoftwareWebservice.CheckGueltigkeitEichprozess
+    Public Function GetGueltigkeitEichprozess(ByVal HEKennung As String, Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As string Implements IEichsoftwareWebservice.CheckGueltigkeitEichprozess
         'da die ID im Server von der im Client abweichen kann wird hier mit der Vorgangsnummer gearbeitet die pro Prozess Eindeutig generiert wrid
         Try
             ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
@@ -1464,7 +1463,7 @@ Public Class EichsoftwareWebservice
     ''' <param name="Computername"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Function SetEichprozessUngueltig(ByVal HEKennung As String, Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements IEichsoftwareWebservice.SetEichprozessUngueltig
+    Public Function SetEichprozessUngueltig(ByVal HEKennung As string, Lizenzschluessel As string, ByVal Vorgangsnummer As string, ByVal WindowsUsername As string, ByVal Domainname As string, ByVal Computername As string) As Boolean Implements IEichsoftwareWebservice.SetEichprozessUngueltig
         Try
             ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
             If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
@@ -1517,7 +1516,7 @@ Public Class EichsoftwareWebservice
     ''' <param name="Computername"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Function SetEichprozessgenehmigt(ByVal HEKennung As String, Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As Boolean Implements IEichsoftwareWebservice.SetEichprozessGenehmight
+    Public Function SetEichprozessgenehmigt(ByVal HEKennung As string, Lizenzschluessel As string, ByVal Vorgangsnummer As string, ByVal WindowsUsername As string, ByVal Domainname As string, ByVal Computername As string) As Boolean Implements IEichsoftwareWebservice.SetEichprozessGenehmight
         Try
             ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
             If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
@@ -1570,7 +1569,7 @@ Public Class EichsoftwareWebservice
     ''' <param name="Computername"></param>
     ''' <returns>WindowsUsername des Sperrers wenn gesperrt</returns>
     ''' <remarks></remarks>
-    Function GetSperrung(ByVal HEKennung As String, Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As String Implements IEichsoftwareWebservice.CheckSperrung
+    Function GetSperrung(ByVal HEKennung As String, Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As string Implements IEichsoftwareWebservice.CheckSperrung
         Try
             ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
             If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
@@ -1647,7 +1646,7 @@ Public Class EichsoftwareWebservice
     ''' <param name="Computername"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Function SetSperrung(ByVal bolSperren As Boolean, ByVal HEKennung As String, Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As String Implements IEichsoftwareWebservice.SetSperrung
+    Function SetSperrung(ByVal bolSperren As Boolean, ByVal HEKennung As String, Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As string Implements IEichsoftwareWebservice.SetSperrung
         Try
             ''abruch falls irgend jemand den Service ohne gültige Lizenz aufruft
             If GetLizenz(HEKennung, Lizenzschluessel, WindowsUsername, Domainname, Computername) = False Then Return Nothing
@@ -1733,7 +1732,7 @@ Public Class EichsoftwareWebservice
     ''' <param name="Computername"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Function GetFTPCredentials(ByVal HEKennung As String, Lizenzschluessel As String, ByVal Vorgangsnummer As String, ByVal WindowsUsername As String, ByVal Domainname As String, ByVal Computername As String) As clsServerFTPDaten Implements IEichsoftwareWebservice.GetFTPCredentials
+    Function GetFTPCredentials(ByVal HEKennung As string, Lizenzschluessel As string, ByVal Vorgangsnummer As string, ByVal WindowsUsername As string, ByVal Domainname As string, ByVal Computername As string) As clsServerFTPDaten Implements IEichsoftwareWebservice.GetFTPCredentials
         SchreibeVerbindungsprotokoll(Lizenzschluessel, WindowsUsername, Domainname, Computername, "Hole FTP Zugangsdaten")
         Try
             Using dbcontext As New EichenSQLDatabaseEntities1
@@ -1779,7 +1778,7 @@ Public Class EichsoftwareWebservice
         End Try
     End Function
 
-    Public Function GetGesperrtePrüfscheinnummern(HEKennung As String, Lizenzschluessel As String, Vorgangsnummer As String, WindowsUsername As String, Domainname As String, Computername As String) As List(Of StatusPrüfscheinnummer) Implements IEichsoftwareWebservice.GetGesperrtePrüfscheinnummern
+    Public Function GetGesperrtePrüfscheinnummern(HEKennung As string, Lizenzschluessel As string, Vorgangsnummer As string, WindowsUsername As string, Domainname As string, Computername As string) As List(Of StatusPrüfscheinnummer) Implements IEichsoftwareWebservice.GetGesperrtePrüfscheinnummern
 
         Using dbcontext As New EichenSQLDatabaseEntities1
             Dim ObjLizenz = (From lic In dbcontext.ServerLizensierung Where lic.HEKennung = HEKennung And lic.Lizenzschluessel = Lizenzschluessel And lic.Aktiv = True).FirstOrDefault

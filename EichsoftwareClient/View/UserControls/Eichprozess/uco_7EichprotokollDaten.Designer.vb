@@ -1,5 +1,6 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class uco_7EichprotokollDaten
+
     Inherits ucoContent
 
     'UserControl overrides dispose to clean up the component list.
@@ -26,10 +27,10 @@ Partial Class uco_7EichprotokollDaten
         Me.RadScrollablePanel1 = New Telerik.WinControls.UI.RadScrollablePanel()
         Me.RadGroupBoxBeschaffenheitspruefung = New Telerik.WinControls.UI.RadGroupBox()
         Me.RadGroupBoxBeschaffenheitspruefungNormalien = New Telerik.WinControls.UI.RadGroupBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label11 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label10 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label9 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label8 = New Telerik.WinControls.UI.RadLabel()
         Me.RadDateTimePickerNormalienLetztePruefung = New Telerik.WinControls.UI.RadDateTimePicker()
         Me.RadTextBoxControlNormalienEichfahrzeugFirma = New Telerik.WinControls.UI.RadTextBox()
         Me.lblTruck = New Telerik.WinControls.UI.RadLabel()
@@ -47,7 +48,7 @@ Partial Class uco_7EichprotokollDaten
         Me.RadRadioButtonAutoTara = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadGroupBoxVerwendungszweckEquipment = New Telerik.WinControls.UI.RadGroupBox()
         Me.RadTextBoxControlDruckerTyp = New Telerik.WinControls.UI.RadDropDownList()
-        Me.lblPflichtfeldDrucker = New System.Windows.Forms.Label()
+        Me.lblPflichtfeldDrucker = New Telerik.WinControls.UI.RadLabel()
         Me.RadCheckBoxDrucker = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadCheckBoxEichfaehigerSpeicher = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadCheckBoxPC = New Telerik.WinControls.UI.RadCheckBox()
@@ -58,7 +59,7 @@ Partial Class uco_7EichprotokollDaten
         Me.RadRadioButtonNustellungAutomatisch = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadRadioButtonNustellungHalbAutomatisch = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadGroupBoxVerwendungszweckArtderWaage = New Telerik.WinControls.UI.RadGroupBox()
-        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label7 = New Telerik.WinControls.UI.RadLabel()
         Me.lblArtWaage = New Telerik.WinControls.UI.RadLabel()
         Me.PictureBox16 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlWaagentyp = New Telerik.WinControls.UI.RadTextBox()
@@ -68,9 +69,9 @@ Partial Class uco_7EichprotokollDaten
         Me.lblDimension = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlMxM = New Telerik.WinControls.UI.RadTextBox()
         Me.RadGroupBoxKomponenten = New Telerik.WinControls.UI.RadGroupBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label4 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label5 = New Telerik.WinControls.UI.RadLabel()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox20 = New System.Windows.Forms.PictureBox()
         Me.PictureBox19 = New System.Windows.Forms.PictureBox()
@@ -90,7 +91,7 @@ Partial Class uco_7EichprotokollDaten
         Me.RadTextBoxControlSoftwarestand = New Telerik.WinControls.UI.RadTextBox()
         Me.lblAWG = New Telerik.WinControls.UI.RadLabel()
         Me.RadGroupBoxPruefverfahren = New Telerik.WinControls.UI.RadGroupBox()
-        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label12 = New Telerik.WinControls.UI.RadLabel()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.RadLabel6 = New Telerik.WinControls.UI.RadLabel()
         Me.lblNormalienGewichte = New Telerik.WinControls.UI.RadLabel()
@@ -98,9 +99,9 @@ Partial Class uco_7EichprotokollDaten
         Me.RadCheckBoxVollstaendigesStaffelverfahren = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadCheckBoxVolleNormallast = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadGroupBoxIdentifikationsdaten = New Telerik.WinControls.UI.RadGroupBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label3 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label2 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label1 = New Telerik.WinControls.UI.RadLabel()
         Me.RadGroupBoxMax1 = New Telerik.WinControls.UI.RadGroupBox()
         Me.RadLabel11 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControl1Hoechstwert1 = New Telerik.WinControls.UI.RadTextBox()
@@ -1600,19 +1601,19 @@ Partial Class uco_7EichprotokollDaten
     Friend WithEvents RadGroupBoxMax1 As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents RadGroupBoxMax3 As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents RadGroupBoxMax2 As Telerik.WinControls.UI.RadGroupBox
-    Friend WithEvents lblPflichtfeldDrucker As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents Label11 As System.Windows.Forms.Label
-    Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents Label12 As System.Windows.Forms.Label
+    Friend WithEvents lblPflichtfeldDrucker As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label2 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label1 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label3 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label6 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label4 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label5 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label11 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label10 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label9 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label8 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label7 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label12 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadRadioButtonTaraeingabe As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents RadTextBoxControlDruckerTyp As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents BackgroundWorkerPruefscheinnummern As System.ComponentModel.BackgroundWorker

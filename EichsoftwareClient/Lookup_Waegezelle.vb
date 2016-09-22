@@ -11,25 +11,25 @@ Imports System
 Imports System.Collections.Generic
 
 Partial Public Class Lookup_Waegezelle
-    Public Property ID As String
-    Public Property Hersteller As String
-    Public Property Typ As String
-    Public Property Pruefbericht As String
-    Public Property Bauartzulassung As String
-    Public Property Revisionsnummer As String
-    Public Property Genauigkeitsklasse As String
-    Public Property Mindestvorlast As String
-    Public Property MindestvorlastProzent As String
-    Public Property Waegezellenkennwert As String
-    Public Property MaxAnzahlTeilungswerte As String
-    Public Property MinTeilungswert As String
-    Public Property Hoechsteteilungsfaktor As String
-    Public Property Kriechteilungsfaktor As String
-    Public Property RueckkehrVorlastsignal As String
-    Public Property WiderstandWaegezelle As String
-    Public Property GrenzwertTemperaturbereichMIN As String
-    Public Property GrenzwertTemperaturbereichMAX As String
-    Public Property BruchteilEichfehlergrenze As String
+    Public Property ID As string
+    Public Property Hersteller As string
+    Public Property Typ As string
+    Public Property Pruefbericht As string
+    Public Property Bauartzulassung As string
+    Public Property Revisionsnummer As string
+    Public Property Genauigkeitsklasse As string
+    Public Property Mindestvorlast As string
+    Public Property MindestvorlastProzent As string
+    Public Property Waegezellenkennwert As string
+    Public Property MaxAnzahlTeilungswerte As string
+    Public Property MinTeilungswert As string
+    Public Property Hoechsteteilungsfaktor As string
+    Public Property Kriechteilungsfaktor As string
+    Public Property RueckkehrVorlastsignal As string
+    Public Property WiderstandWaegezelle As string
+    Public Property GrenzwertTemperaturbereichMIN As string
+    Public Property GrenzwertTemperaturbereichMAX As string
+    Public Property BruchteilEichfehlergrenze As string
     Public Property Neu As Boolean
     Public Property Deaktiviert As Boolean
 

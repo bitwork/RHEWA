@@ -1,11 +1,11 @@
-﻿Imports Telerik.WinControls.UI
+Imports Telerik.WinControls.UI
 
 Public Class frmEingabeNeueLizenz
     Private _ID As String = "-1"
     Private _objLizen As ServerLizensierung
     Private _objEichmarkenverwaltung As ServerEichmarkenverwaltung 'dieser Eintrag wird mit anlegen der Lizenz erzeugt
     Private _bolNew As Boolean = False
-    Sub New(ByVal pID As String)
+    Sub New(ByVal pID As string)
         ' This call is required by the designer.
         InitializeComponent()
         _ID = pID
@@ -130,7 +130,7 @@ Public Class frmEingabeNeueLizenz
             'Ändern des Dropdown Designs
             Dim combo As RadMultiColumnComboBoxElement = RadMultiColumnComboBoxBenutzer.MultiColumnComboBoxElement ' get a reference to the grid viewDimgridAsRadGridView = combo.EditorControl
             ' get a reference to the grid viewDimgridAsRadGridView = combo.EditorControl
-            Dim grid As RadGridView = combo.EditorControl
+            Dim grid As Telerik.WinControls.UI.RadGridView = combo.EditorControl
 
             grid.BestFitColumns()
             grid.ShowFilteringRow = True

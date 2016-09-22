@@ -1,4 +1,4 @@
-﻿''' <summary>
+''' <summary>
 ''' Klasse mit allegmeinen aufrufen des Webservices
 ''' </summary>
 ''' <remarks></remarks>
@@ -584,7 +584,7 @@ Public Class clsWebserviceFunctions
     ''' <param name="NeueFabriknummer"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Shared Function GetLokaleKopieVonEichprozess(ByVal Vorgangsnummer As String, ByVal NeueFabriknummer As String) As Eichprozess
+    Public Shared Function GetLokaleKopieVonEichprozess(ByVal Vorgangsnummer As string, ByVal NeueFabriknummer As string) As Eichprozess
         Dim objServerEichprozess As EichsoftwareWebservice.ServerEichprozess = Nothing
         Dim objClientEichprozess As Eichprozess = Nothing
         'neue Datenbankverbindung
@@ -735,7 +735,7 @@ Public Class clsWebserviceFunctions
     ''' <param name="Vorgangsnummer"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Shared Function GenehmigeEichprozess(ByVal Vorgangsnummer As String)
+    Public Shared Function GenehmigeEichprozess(ByVal Vorgangsnummer As string)
         Dim result As String = ""
         Dim Messagetext As String = ""
         Dim bolSetGueltig As Boolean = True 'variable zum abbrechen des Prozesses, falls jemand anderes an dem DS arbeitet
@@ -778,7 +778,7 @@ Public Class clsWebserviceFunctions
     ''' <param name="Vorgangsnummer"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Shared Function AblehnenEichprozess(ByVal Vorgangsnummer As String) As Boolean
+    Public Shared Function AblehnenEichprozess(ByVal Vorgangsnummer As string) As Boolean
         Dim result As String = ""
         Dim bolSetUnueltig As Boolean = True 'variable zum abbrechen des Prozesses, falls jemand anderes an dem DS arbeitet
         Dim Messagetext As String = ""
@@ -821,7 +821,7 @@ Public Class clsWebserviceFunctions
     ''' <param name="Vorgangsnummer"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Shared Function ZeigeServerEichprozess(ByVal Vorgangsnummer As String) As Eichprozess
+    Public Shared Function ZeigeServerEichprozess(ByVal Vorgangsnummer As string) As Eichprozess
         Dim objServerEichprozess As EichsoftwareWebservice.ServerEichprozess = Nothing
         Dim objClientEichprozess As Eichprozess = Nothing
         'neue Datenbankverbindung
@@ -858,7 +858,7 @@ Public Class clsWebserviceFunctions
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    Public Shared Function SetzeSperrung(ByVal bolSperren As Boolean, ByVal EichprozessVorgangsnummer As String) As Boolean
+    Public Shared Function SetzeSperrung(ByVal bolSperren As Boolean, ByVal EichprozessVorgangsnummer As string) As Boolean
         Dim result As String = ""
         Dim bolSetSperrung As Boolean = True 'variable zum abbrechen des Prozesses, falls jemand anderes an dem DS arbeitet
         Dim Messagetext As String = "" 'variable bekommt Ergebniss der Sperrprüfung. Ist anschließend leer wenn keine Sperrung vorliegt
@@ -912,7 +912,7 @@ Public Class clsWebserviceFunctions
     ''' <remarks></remarks>
     ''' <author></author>
     ''' <commentauthor></commentauthor>
-    Public Shared Function PruefeSperrung(ByVal EichprozessVorgangsnummer As String) As String
+    Public Shared Function PruefeSperrung(ByVal EichprozessVorgangsnummer As String) As string
         Dim Messagetext As String = ""
 
         Try
@@ -972,7 +972,7 @@ Public Class clsWebserviceFunctions
         End Try
     End Function
 
-    Public Shared Function InitDownloadDateiVonFTP(ByVal vorgangsnummer As String, objFTP As clsFTP, backgroundworker As System.ComponentModel.BackgroundWorker) As String
+    Public Shared Function InitDownloadDateiVonFTP(ByVal vorgangsnummer As String, objFTP As clsFTP, backgroundworker As System.ComponentModel.BackgroundWorker) As string
 
         Using Webcontext As New EichsoftwareWebservice.EichsoftwareWebserviceClient
             Try

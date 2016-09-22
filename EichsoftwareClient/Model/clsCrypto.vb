@@ -1,4 +1,4 @@
-﻿Imports System.Security.Cryptography
+Imports System.Security.Cryptography
 Imports System.IO
 Imports System.Text
 
@@ -45,7 +45,7 @@ Public Class RijndaelSimple
     ''' </returns>
     '''
     Public Shared Function Encrypt(plainText As String, passPhrase As String, saltValue As String, hashAlgorithm As String, passwordIterations As Integer, initVector As String,
-        keySize As Integer) As String
+        keySize As Integer) As string
         ' Convert strings into byte arrays.
         ' Let us assume that strings only contain ASCII codes.
         ' If strings include Unicode characters, use Unicode, UTF7, or UTF8
@@ -149,7 +149,7 @@ Public Class RijndaelSimple
     ''' ciphertext.
     ''' </remarks>
     Public Shared Function Decrypt(cipherText As String, passPhrase As String, saltValue As String, hashAlgorithm As String, passwordIterations As Integer, initVector As String,
-        keySize As Integer) As String
+        keySize As Integer) As string
         ' Convert strings defining encryption key characteristics into byte
         ' arrays. Let us assume that strings only contain ASCII codes.
         ' If strings include Unicode characters, use Unicode, UTF7, or UTF8

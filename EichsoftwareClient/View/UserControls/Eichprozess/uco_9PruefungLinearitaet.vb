@@ -1,7 +1,8 @@
-﻿' 11.03.2014 hill EichsoftwareClient ucoPruefungLinearitaet.vb
+' 11.03.2014 hill EichsoftwareClient ucoPruefungLinearitaet.vb
 Imports System
 
 Public Class uco_9PruefungLinearitaet
+
     Inherits ucoContent
 
 #Region "Member Variables"
@@ -187,7 +188,7 @@ Public Class uco_9PruefungLinearitaet
 
 #Region "Methods"
     Protected Friend Overrides Sub LoadFromDatabase()
-
+        Me.SuspendLayout()
         objEichprozess = ParentFormular.CurrentEichprozess
         'events abbrechen
         _suspendEvents = True
@@ -254,6 +255,7 @@ Public Class uco_9PruefungLinearitaet
         End If
         'events abbrechen
         _suspendEvents = False
+        Me.ResumeLayout()
     End Sub
 
     Private Sub FillLinearitaetSteigend()
@@ -575,7 +577,7 @@ Public Class uco_9PruefungLinearitaet
     Private Sub EinAusblendenVonMessBereichen()
         For i As Integer = 4 To 8 'messpunkt
             For j As Integer = 1 To 3 'bereich
-                Dim Panel As Windows.Forms.Panel = FindControl(String.Format("PanelBereich{0}WZ{1}", j, i))
+                Dim Panel As Telerik.WinControls.UI.RadPanel = FindControl(String.Format("PanelBereich{0}WZ{1}", j, i))
                 If _intAnzahlMesspunkte >= i Then
                     Panel.Visible = True
                 Else

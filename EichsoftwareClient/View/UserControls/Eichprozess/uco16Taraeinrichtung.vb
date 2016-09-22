@@ -1,4 +1,5 @@
-﻿Public Class uco16Taraeinrichtung
+Public Class uco16Taraeinrichtung
+
     Inherits ucoContent
 #Region "Member Variables"
     Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken

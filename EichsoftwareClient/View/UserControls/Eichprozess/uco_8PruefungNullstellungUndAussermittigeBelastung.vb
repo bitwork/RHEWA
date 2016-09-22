@@ -1,7 +1,8 @@
-﻿Imports System
+Imports System
 Imports System.Data.Entity
 
 Friend Class uco_8PruefungNullstellungUndAussermittigeBelastung
+
     Inherits ucoContent
 
 #Region "Member Variables"
@@ -565,6 +566,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
 
 #Region "Methods"
     Protected Friend Overrides Sub LoadFromDatabase()
+        Me.SuspendLayout()
         'zurücksetzten der Groupboxen größen auf default (designer) werte. Sonst würden die Groupboxen immer kleiner gerechnet
         RadGroupBoxBereich1.Size = New Size(503, 489)
         RadGroupBoxBereich2.Size = New Size(503, 489)
@@ -637,6 +639,7 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         End If
         'events abbrechen
         _suspendEvents = False
+        Me.ResumeLayout()
     End Sub
 
 #Region "FillControls"
@@ -1109,11 +1112,11 @@ RadTextBoxControlBereich1DisplayWeight12.Validating, RadTextBoxControlBereich1Di
         'aus dem Designer sind alle panel bis auf 1 und Mitte visible = false und werden heir auf sichtbar geschaltet
         For i As Integer = 1 To AnzlWZ Step 1
             For bereich As Integer = 1 To 3
-                Dim PanelWZ As System.Windows.Forms.Panel = FindControl(String.Format("PanelBereich{0}WZ{1}", CInt(bereich), i))
+                Dim PanelWZ As Telerik.WinControls.UI.RadPanel = FindControl(String.Format("PanelBereich{0}WZ{1}", CInt(bereich), i))
                 PanelWZ.Visible = True
             Next
         Next
-        Dim PanelWZMAX As System.Windows.Forms.Panel = FindControl(String.Format("PanelBereich{0}WZ{1}", 1, AnzlWZ))
+        Dim PanelWZMAX As Telerik.WinControls.UI.RadPanel = FindControl(String.Format("PanelBereich{0}WZ{1}", 1, AnzlWZ))
         PanelBereich1WZMitte.Location = New Size(PanelWZMAX.Location.X, PanelWZMAX.Location.Y + 30)
     End Sub
 

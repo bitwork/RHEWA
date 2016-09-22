@@ -11,8 +11,8 @@ Imports System
 Imports System.Collections.Generic
 
 Partial Public Class ServerLookupVertragspartnerFirma
-    Public Property ID As String
-    Public Property Firma_FK As String
-    Public Property Vertragspartner_FK As String
+    Public Property ID As string
+    Public Property Firma_FK As string
+    Public Property Vertragspartner_FK As string
 
 End Class

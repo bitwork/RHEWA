@@ -1,11 +1,11 @@
-﻿Public Class clsGeneralFunctions
+Public Class clsGeneralFunctions
     ''' <summary>
     ''' Methode zum ermitteln der anzahl der benötigten Nullstellen nach dem RHEWA System
     ''' </summary>
     ''' <param name="value"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Shared Function GetRHEWADecimalDigits(ByVal value As String) As Integer
+    Public Shared Function GetRHEWADecimalDigits(ByVal value As string) As Integer
         Try
             If value Is Nothing Then
                 Return 0

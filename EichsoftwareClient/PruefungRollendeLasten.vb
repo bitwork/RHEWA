@@ -14,12 +14,12 @@ Partial Public Class PruefungRollendeLasten
     Public Property ID As Integer
     Public Property FK_Eichprotokoll As Integer
     Public Property Belastungsstelle As Byte
-    Public Property AuffahrtSeite As String
-    Public Property Last As String
-    Public Property Anzeige As String
-    Public Property Fehler As String
-    Public Property EFG As String
-    Public Property EFGExtra As String
+    Public Property AuffahrtSeite As string
+    Public Property Last As string
+    Public Property Anzeige As string
+    Public Property Fehler As string
+    Public Property EFG As string
+    Public Property EFGExtra As string
 
     Public Overridable Property Eichprotokoll As Eichprotokoll
 

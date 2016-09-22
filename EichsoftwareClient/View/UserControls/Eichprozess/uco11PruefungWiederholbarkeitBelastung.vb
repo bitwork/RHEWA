@@ -1,4 +1,5 @@
-﻿Public Class uco11PruefungWiederholbarkeitBelastung
+Public Class uco11PruefungWiederholbarkeitBelastung
+
     Inherits ucoContent
 
 #Region "Member Variables"

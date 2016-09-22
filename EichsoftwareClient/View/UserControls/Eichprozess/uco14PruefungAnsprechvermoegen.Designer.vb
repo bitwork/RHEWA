@@ -1,5 +1,6 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class uco14PruefungAnsprechvermoegen
+
     Inherits ucoContent
     'UserControl overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _
@@ -48,15 +49,15 @@ Partial Class uco14PruefungAnsprechvermoegen
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.RadLabel4 = New Telerik.WinControls.UI.RadLabel()
-        Me.lblPflichtfeld1 = New System.Windows.Forms.Label()
-        Me.lblPflichtfeld2 = New System.Windows.Forms.Label()
-        Me.lblPflichtfeld3 = New System.Windows.Forms.Label()
-        Me.lblPflichtfeld4 = New System.Windows.Forms.Label()
-        Me.lblPflichtfeld5 = New System.Windows.Forms.Label()
-        Me.lblPflichtfeld6 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld1 = New Telerik.WinControls.UI.RadLabel()
+        Me.lblPflichtfeld2 = New Telerik.WinControls.UI.RadLabel()
+        Me.lblPflichtfeld3 = New Telerik.WinControls.UI.RadLabel()
+        Me.lblPflichtfeld4 = New Telerik.WinControls.UI.RadLabel()
+        Me.lblPflichtfeld5 = New Telerik.WinControls.UI.RadLabel()
+        Me.lblPflichtfeld6 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label1 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label2 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label3 = New Telerik.WinControls.UI.RadLabel()
         CType(Me.lblLastL, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblLastkg, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.lblAnzeige, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -386,14 +387,14 @@ Partial Class uco14PruefungAnsprechvermoegen
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
     Friend WithEvents RadLabel4 As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents lblPflichtfeld1 As System.Windows.Forms.Label
-    Friend WithEvents lblPflichtfeld2 As System.Windows.Forms.Label
-    Friend WithEvents lblPflichtfeld3 As System.Windows.Forms.Label
-    Friend WithEvents lblPflichtfeld4 As System.Windows.Forms.Label
-    Friend WithEvents lblPflichtfeld5 As System.Windows.Forms.Label
-    Friend WithEvents lblPflichtfeld6 As System.Windows.Forms.Label
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents lblPflichtfeld1 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents lblPflichtfeld2 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents lblPflichtfeld3 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents lblPflichtfeld4 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents lblPflichtfeld5 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents lblPflichtfeld6 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label1 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label2 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label3 As Telerik.WinControls.UI.RadLabel
 
 End Class

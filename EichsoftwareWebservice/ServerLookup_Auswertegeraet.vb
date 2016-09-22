@@ -11,23 +11,23 @@ Imports System
 Imports System.Collections.Generic
 
 Partial Public Class ServerLookup_Auswertegeraet
-    Public Property ID As String
-    Public Property Typ As String
-    Public Property Hersteller As String
-    Public Property Pruefbericht As String
-    Public Property Bauartzulassung As String
-    Public Property Genauigkeitsklasse As String
-    Public Property MAXAnzahlTeilungswerteEinbereichswaage As String
-    Public Property MAXAnzahlTeilungswerteMehrbereichswaage As String
-    Public Property Speisespannung As String
-    Public Property Mindesteingangsspannung As String
-    Public Property Mindestmesssignal As String
-    Public Property GrenzwertLastwiderstandMIN As String
-    Public Property GrenzwertLastwiderstandMAX As String
-    Public Property GrenzwertTemperaturbereichMIN As String
-    Public Property GrenzwertTemperaturbereichMAX As String
-    Public Property BruchteilEichfehlergrenze As String
-    Public Property KabellaengeQuerschnitt As String
+    Public Property ID As string
+    Public Property Typ As string
+    Public Property Hersteller As string
+    Public Property Pruefbericht As string
+    Public Property Bauartzulassung As string
+    Public Property Genauigkeitsklasse As string
+    Public Property MAXAnzahlTeilungswerteEinbereichswaage As string
+    Public Property MAXAnzahlTeilungswerteMehrbereichswaage As string
+    Public Property Speisespannung As string
+    Public Property Mindesteingangsspannung As string
+    Public Property Mindestmesssignal As string
+    Public Property GrenzwertLastwiderstandMIN As string
+    Public Property GrenzwertLastwiderstandMAX As string
+    Public Property GrenzwertTemperaturbereichMIN As string
+    Public Property GrenzwertTemperaturbereichMAX As string
+    Public Property BruchteilEichfehlergrenze As string
+    Public Property KabellaengeQuerschnitt As string
     Public Property ErstellDatum As Nullable(Of Date)
     Public Property Deaktiviert As Boolean
     Public Property TaraeinrichtungTaraeingabe As Boolean

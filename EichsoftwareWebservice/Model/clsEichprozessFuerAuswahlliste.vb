@@ -1,17 +1,17 @@
-﻿Public Class clsEichprozessFuerAuswahlliste
-    Public Property ID As String = ""
-    Public Property Vorgangsnummer As String = ""
-    Public Property Fabriknummer As String = ""
-    Public Property WZ As String = ""
-    Public Property Waagentyp As String = ""
-    Public Property Waagenart As String = ""
-    Public Property AWG As String = ""
-    Public Property Eichbevollmaechtigter As String = ""
-    Public Property Bearbeitungsstatus As String = ""
-    Public Property GesperrtDurch As String = ""
-    Public Property AnhangPfad As String = ""
+Public Class clsEichprozessFuerAuswahlliste
+    Public Property ID As string = ""
+    Public Property Vorgangsnummer As string = ""
+    Public Property Fabriknummer As string = ""
+    Public Property WZ As string = ""
+    Public Property Waagentyp As string = ""
+    Public Property Waagenart As string = ""
+    Public Property AWG As string = ""
+    Public Property Eichbevollmaechtigter As string = ""
+    Public Property Bearbeitungsstatus As string = ""
+    Public Property GesperrtDurch As string = ""
+    Public Property AnhangPfad As string = ""
     Public Property NeueWZ As Boolean = False
     Public Property Uploaddatum As DateTime
-    Public Property Pruefscheinnummer As String
-    Public Property Bemerkung As String
+    Public Property Pruefscheinnummer As string
+    Public Property Bemerkung As string
 End Class

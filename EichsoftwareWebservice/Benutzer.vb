@@ -11,12 +11,12 @@ Imports System
 Imports System.Collections.Generic
 
 Partial Public Class Benutzer
-    Public Property ID As String
-    Public Property Vorname As String
-    Public Property Nachname As String
-    Public Property Telefon As String
-    Public Property HEKennung As String
-    Public Property Firma_FK As String
+    Public Property ID As string
+    Public Property Vorname As string
+    Public Property Nachname As string
+    Public Property Telefon As string
+    Public Property HEKennung As string
+    Public Property Firma_FK As string
 
     Public Overridable Property Firmen As Firmen
     Public Overridable Property ServerLizensierung As ICollection(Of ServerLizensierung) = New HashSet(Of ServerLizensierung)

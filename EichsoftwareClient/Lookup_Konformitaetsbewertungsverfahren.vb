@@ -12,9 +12,9 @@ Imports System.Collections.Generic
 
 Partial Public Class Lookup_Konformitaetsbewertungsverfahren
     Public Property ID As Byte
-    Public Property Verfahren As String
-    Public Property Verfahren_EN As String
-    Public Property Verfahren_PL As String
+    Public Property Verfahren As string
+    Public Property Verfahren_EN As string
+    Public Property Verfahren_PL As string
 
     Public Overridable Property Eichprotokoll As ICollection(Of Eichprotokoll) = New HashSet(Of Eichprotokoll)
 

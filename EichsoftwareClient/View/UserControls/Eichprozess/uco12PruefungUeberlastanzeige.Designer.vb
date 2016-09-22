@@ -1,5 +1,6 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class uco12PruefungUeberlastanzeige
+
     Inherits ucoContent
 
     'UserControl overrides dispose to clean up the component list.
@@ -31,7 +32,7 @@ Partial Class uco12PruefungUeberlastanzeige
         Me.RadCheckBoxUeberlast = New Telerik.WinControls.UI.RadCheckBox()
         Me.lblKg = New Telerik.WinControls.UI.RadLabel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.lblPflichtfeld1 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld1 = New Telerik.WinControls.UI.RadLabel()
         CType(Me.lblUeberlast, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControlMaxE, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -125,6 +126,6 @@ Partial Class uco12PruefungUeberlastanzeige
     Friend WithEvents RadCheckBoxUeberlast As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents lblKg As Telerik.WinControls.UI.RadLabel
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
-    Friend WithEvents lblPflichtfeld1 As System.Windows.Forms.Label
+    Friend WithEvents lblPflichtfeld1 As Telerik.WinControls.UI.RadLabel
 
 End Class

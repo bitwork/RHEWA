@@ -12,9 +12,9 @@ Imports System.Collections.Generic
 
 Partial Public Class Lookup_Vorgangsstatus
     Public Property ID As Byte
-    Public Property Status As String
-    Public Property Status_EN As String
-    Public Property Status_PL As String
+    Public Property Status As string
+    Public Property Status_EN As string
+    Public Property Status_PL As string
 
     Public Overridable Property Eichprozess As ICollection(Of Eichprozess) = New HashSet(Of Eichprozess)
 

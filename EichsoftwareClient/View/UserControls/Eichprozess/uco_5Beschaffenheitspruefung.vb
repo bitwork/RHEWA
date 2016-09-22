@@ -1,4 +1,5 @@
-﻿Public Class uco_5Beschaffenheitspruefung
+Public Class uco_5Beschaffenheitspruefung
+
     Inherits ucoContent
 
 #Region "Member Variables"

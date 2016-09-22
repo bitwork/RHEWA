@@ -14,12 +14,12 @@ Partial Public Class ServerPruefungAussermittigeBelastung
     Public Property ID As Integer
     Public Property FK_Eichprotokoll As Integer
     Public Property Bereich As Byte
-    Public Property Belastungsort As String
-    Public Property Last As String
-    Public Property Anzeige As String
-    Public Property Fehler As String
+    Public Property Belastungsort As string
+    Public Property Last As string
+    Public Property Anzeige As string
+    Public Property Fehler As string
     Public Property EFG As Boolean
-    Public Property EFGExtra As String
+    Public Property EFGExtra As string
 
     Public Overridable Property ServerEichprotokoll As ServerEichprotokoll
 

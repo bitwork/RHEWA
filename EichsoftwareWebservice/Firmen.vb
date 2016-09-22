@@ -11,14 +11,14 @@ Imports System
 Imports System.Collections.Generic
 
 Partial Public Class Firmen
-    Public Property ID As String
-    Public Property KundenNr As String
-    Public Property Name As String
-    Public Property Strasse As String
-    Public Property PLZ As String
-    Public Property Telefon As String
-    Public Property Ort As String
-    Public Property Land As String
+    Public Property ID As string
+    Public Property KundenNr As string
+    Public Property Name As string
+    Public Property Strasse As string
+    Public Property PLZ As string
+    Public Property Telefon As string
+    Public Property Ort As string
+    Public Property Land As string
 
     Public Overridable Property Benutzer As ICollection(Of Benutzer) = New HashSet(Of Benutzer)
     Public Overridable Property ServerFirmenZusatzdaten As ICollection(Of ServerFirmenZusatzdaten) = New HashSet(Of ServerFirmenZusatzdaten)

@@ -15,19 +15,19 @@ Partial Public Class ServerPruefungStaffelverfahrenErsatzlast
     Public Property FK_Eichprotokoll As Integer
     Public Property Staffel As Byte
     Public Property Bereich As Byte
-    Public Property Ersatzlast_Soll As String
-    Public Property Ersatzlast_Ist As String
-    Public Property ZusaetzlicheErsatzlast_Soll As String
-    Public Property ErsatzUndNormallast_Soll As String
-    Public Property ErsatzUndNormallast_Ist As String
-    Public Property Ersatzlast2_Soll As String
-    Public Property Ersatzlast2_Ist As String
-    Public Property DifferenzAnzeigewerte_Fehler As String
-    Public Property DifferenzAnzeigewerte_EFG As String
-    Public Property MessabweichungStaffel_Fehler As String
-    Public Property MessabweichungStaffel_EFG As String
-    Public Property MessabweichungWaage_Fehler As String
-    Public Property MessabweichungWaage_EFG As String
+    Public Property Ersatzlast_Soll As string
+    Public Property Ersatzlast_Ist As string
+    Public Property ZusaetzlicheErsatzlast_Soll As string
+    Public Property ErsatzUndNormallast_Soll As string
+    Public Property ErsatzUndNormallast_Ist As string
+    Public Property Ersatzlast2_Soll As string
+    Public Property Ersatzlast2_Ist As string
+    Public Property DifferenzAnzeigewerte_Fehler As string
+    Public Property DifferenzAnzeigewerte_EFG As string
+    Public Property MessabweichungStaffel_Fehler As string
+    Public Property MessabweichungStaffel_EFG As string
+    Public Property MessabweichungWaage_Fehler As string
+    Public Property MessabweichungWaage_EFG As string
 
     Public Overridable Property ServerEichprotokoll As ServerEichprotokoll
 

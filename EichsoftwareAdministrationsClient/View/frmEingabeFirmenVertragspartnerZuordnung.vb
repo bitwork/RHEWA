@@ -1,11 +1,11 @@
-﻿Imports Telerik.WinControls.UI
+Imports Telerik.WinControls.UI
 
 Public Class frmEingabeFirmenVertragspartnerZuordnung
 
     Private _ID As String = "-1"
     Private _objFirmenzuordnung As ServerLookupVertragspartnerFirma 'dieser Eintrag wird mit anlegen der Lizenz erzeugt
     Private _bolNew As Boolean = False
-    Sub New(ByVal pID As String)
+    Sub New(ByVal pID As string)
         ' This call is required by the designer.
         InitializeComponent()
         _ID = pID

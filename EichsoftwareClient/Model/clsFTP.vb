@@ -1,4 +1,4 @@
-﻿Imports System.Net.FtpClient
+Imports System.Net.FtpClient
 Imports System.IO
 Imports System.Net
 
@@ -19,7 +19,7 @@ Public Class clsFTP
     ''' <param name="UploadfilePath"></param>
     ''' <returns>Voller Pfad der Datei auf FTP Server</returns>
     ''' <remarks></remarks>
-    Public Function UploadFiletoFTP(ByVal pFTPServer As String, ByVal pUsername As String, ByVal pPassword As String, ByVal UploadfilePath As String) As String
+    Public Function UploadFiletoFTP(ByVal pFTPServer As String, ByVal pUsername As String, ByVal pPassword As String, ByVal UploadfilePath As String) As string
         Dim FTPUploadPath As String = ""
 
         Using conn As New FtpClient()
@@ -90,7 +90,7 @@ Public Class clsFTP
     ''' <param name="LocalFilePath"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Function DownloadFileFromFTP(ByVal pFTPServer As String, ByVal pUsername As String, ByVal pPassword As String, ByVal FTPFilePath As String, ByVal LocalFilePath As String) As String
+    Public Function DownloadFileFromFTP(ByVal pFTPServer As String, ByVal pUsername As String, ByVal pPassword As String, ByVal FTPFilePath As String, ByVal LocalFilePath As String) As string
 
         Using conn As New FtpClient()
             'FTP Upload
@@ -152,7 +152,7 @@ Public Class clsFTP
     ''' <param name="FTPFilePath"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Function GetFileSize(ByVal pFTPServer As String, ByVal pUsername As String, ByVal pPassword As String, ByVal FTPFilePath As String) As Long
+    Public Function GetFileSize(ByVal pFTPServer As string, ByVal pUsername As string, ByVal pPassword As string, ByVal FTPFilePath As string) As Long
         Using conn As New FtpClient()
             'FTP Upload
             conn.Host = pFTPServer

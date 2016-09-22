@@ -1,5 +1,6 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class FrmEinstellungen
+
     Inherits Telerik.WinControls.UI.RadForm
 
     'Form overrides dispose to clean up the component list.
@@ -27,7 +28,7 @@ Partial Class FrmEinstellungen
         Me.RadDateTimePickerEnd = New Telerik.WinControls.UI.RadDateTimePicker()
         Me.RadDateTimePickerStart = New Telerik.WinControls.UI.RadDateTimePicker()
         Me.RadDateTimePickerSince = New Telerik.WinControls.UI.RadDateTimePicker()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label1 = New Telerik.WinControls.UI.RadLabel()
         Me.RadRadioButtonSyncZwischen = New Telerik.WinControls.UI.RadRadioButton()
         Me.RadRadioButtonSyncSeit = New Telerik.WinControls.UI.RadRadioButton()
         Me.RadRadioButtonSyncAlles = New Telerik.WinControls.UI.RadRadioButton()
@@ -206,7 +207,7 @@ Partial Class FrmEinstellungen
     Friend WithEvents RadRadioButtonSyncZwischen As Telerik.WinControls.UI.RadRadioButton
     Friend WithEvents RadRadioButtonSyncSeit As Telerik.WinControls.UI.RadRadioButton
     Friend WithEvents RadRadioButtonSyncAlles As Telerik.WinControls.UI.RadRadioButton
-    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label1 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadButtonOK As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadButtonAbbrechen As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadDateTimePickerEnd As Telerik.WinControls.UI.RadDateTimePicker

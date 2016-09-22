@@ -1,4 +1,4 @@
-﻿Imports System.Globalization
+Imports System.Globalization
 
 Public Class FrmLizenz
     ''' <summary>
@@ -140,7 +140,7 @@ Public Class FrmLizenz
         End If
     End Sub
 
-    Private Sub changeCulture(ByVal Code As String)
+    Private Sub changeCulture(ByVal Code As string)
         Dim culture As CultureInfo = CultureInfo.GetCultureInfo(Code)
 
         Threading.Thread.CurrentThread.CurrentUICulture = culture

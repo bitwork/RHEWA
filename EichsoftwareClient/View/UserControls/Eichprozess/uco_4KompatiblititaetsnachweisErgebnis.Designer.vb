@@ -1,5 +1,6 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class uco_4KompatiblititaetsnachweisErgebnis
+
     Inherits EichsoftwareClient.ucoContent
 
     'UserControl überschreibt den Löschvorgang, um die Komponentenliste zu bereinigen.
@@ -24,7 +25,7 @@ Partial Class uco_4KompatiblititaetsnachweisErgebnis
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco_4KompatiblititaetsnachweisErgebnis))
         Me.RadScrollablePanel1 = New Telerik.WinControls.UI.RadScrollablePanel()
-        Me.lblPflichtfeld = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld = New Telerik.WinControls.UI.RadLabel()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.RadGroupBoxPunkt1 = New Telerik.WinControls.UI.RadGroupBox()
         Me.lblPunkt1Waage = New Telerik.WinControls.UI.RadLabel()
@@ -2888,6 +2889,6 @@ Partial Class uco_4KompatiblititaetsnachweisErgebnis
     Friend WithEvents RadCheckBoxPunkt6aMax2 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents RadCheckBoxPunkt6aMax3 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents FlowLayoutPanel1 As System.Windows.Forms.FlowLayoutPanel
-    Friend WithEvents lblPflichtfeld As System.Windows.Forms.Label
+    Friend WithEvents lblPflichtfeld As Telerik.WinControls.UI.RadLabel
 
 End Class

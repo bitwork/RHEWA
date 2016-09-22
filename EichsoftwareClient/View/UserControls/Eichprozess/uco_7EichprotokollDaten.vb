@@ -1,6 +1,7 @@
-﻿Imports EichsoftwareClient.EichsoftwareWebservice
+Imports EichsoftwareClient.EichsoftwareWebservice
 
 Public Class uco_7EichprotokollDaten
+
     Inherits ucoContent
 
 #Region "Member Variables"

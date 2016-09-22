@@ -1,4 +1,5 @@
-﻿Public Class uco17PruefungEignungFuerAchlastwaegungen
+Public Class uco17PruefungEignungFuerAchlastwaegungen
+
     Inherits ucoContent
 #Region "Member Variables"
     Private _suspendEvents As Boolean = False 'Variable zum temporären stoppen der Eventlogiken

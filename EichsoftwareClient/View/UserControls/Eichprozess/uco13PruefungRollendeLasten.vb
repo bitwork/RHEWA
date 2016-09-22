@@ -1,4 +1,5 @@
-﻿Public Class uco13PruefungRollendeLasten
+Public Class uco13PruefungRollendeLasten
+
     Inherits ucoContent
 
 #Region "Member Variables"

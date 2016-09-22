@@ -1,5 +1,6 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class uco_5Beschaffenheitspruefung
+
     Inherits EichsoftwareClient.ucoContent
 
 
@@ -25,7 +26,7 @@ Partial Class uco_5Beschaffenheitspruefung
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(uco_5Beschaffenheitspruefung))
         Me.RadScrollablePanel1 = New Telerik.WinControls.UI.RadScrollablePanel()
-        Me.lblPflichtfeld1 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld1 = New Telerik.WinControls.UI.RadLabel()
         Me.RadGroupBoxAufstellbedingungen = New Telerik.WinControls.UI.RadGroupBox()
         Me.RadLabel20 = New Telerik.WinControls.UI.RadLabel()
         Me.RadCheckBoxApprove = New Telerik.WinControls.UI.RadCheckBox()
@@ -505,6 +506,6 @@ Partial Class uco_5Beschaffenheitspruefung
     Friend WithEvents RadCheckBoxApprove As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents RadLabel19 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadSeparator14 As Telerik.WinControls.UI.RadSeparator
-    Friend WithEvents lblPflichtfeld1 As System.Windows.Forms.Label
+    Friend WithEvents lblPflichtfeld1 As Telerik.WinControls.UI.RadLabel
 
 End Class

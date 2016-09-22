@@ -1,4 +1,4 @@
-﻿Imports Telerik.WinControls.Data
+Imports Telerik.WinControls.Data
 Imports System.ComponentModel
 
 Public Class FrmPruefscheinnummersuche
@@ -7,7 +7,7 @@ Public Class FrmPruefscheinnummersuche
         Suchen(RadTextBoxControlPruefscheinnummer.Text)
     End Sub
 
-    Private Sub Suchen(ByVal Suchtext As String)
+    Private Sub Suchen(ByVal Suchtext As string)
         Using Context As New EichenEntities
 
             Context.Configuration.LazyLoadingEnabled = False

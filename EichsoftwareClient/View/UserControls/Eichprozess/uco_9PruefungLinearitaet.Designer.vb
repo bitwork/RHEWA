@@ -1,5 +1,6 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class uco_9PruefungLinearitaet
+
     Inherits ucoContent
 
     'UserControl überschreibt den Löschvorgang, um die Komponentenliste zu bereinigen.
@@ -26,15 +27,15 @@ Partial Class uco_9PruefungLinearitaet
         Me.RadScrollablePanel1 = New Telerik.WinControls.UI.RadScrollablePanel()
         Me.RadButtonSteigendMinus = New Telerik.WinControls.UI.RadButton()
         Me.RadGroupBoxBereich3 = New Telerik.WinControls.UI.RadGroupBox()
-        Me.lblPflichtfeld3 = New System.Windows.Forms.Label()
-        Me.PanelBereich3WZ1 = New System.Windows.Forms.Panel()
+        Me.lblPflichtfeld3 = New Telerik.WinControls.UI.RadLabel()
+        Me.PanelBereich3WZ1 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBox77 = New System.Windows.Forms.PictureBox()
         Me.PictureBox78 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich3Weight1 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich3DisplayWeight1 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich3ErrorLimit1 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich3VEL1 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.PanelBereich3WZ2 = New System.Windows.Forms.Panel()
+        Me.PanelBereich3WZ2 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBox75 = New System.Windows.Forms.PictureBox()
         Me.PictureBox76 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich3Weight2 = New Telerik.WinControls.UI.RadTextBox()
@@ -42,7 +43,7 @@ Partial Class uco_9PruefungLinearitaet
         Me.RadTextBoxControlBereich3ErrorLimit2 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich3VEL2 = New Telerik.WinControls.UI.RadCheckBox()
         Me.lblBereich3FehlerGrenzen = New Telerik.WinControls.UI.RadLabel()
-        Me.PanelBereich3WZ3 = New System.Windows.Forms.Panel()
+        Me.PanelBereich3WZ3 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBox73 = New System.Windows.Forms.PictureBox()
         Me.PictureBox74 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich3Weight3 = New Telerik.WinControls.UI.RadTextBox()
@@ -50,7 +51,7 @@ Partial Class uco_9PruefungLinearitaet
         Me.RadTextBoxControlBereich3ErrorLimit3 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich3VEL3 = New Telerik.WinControls.UI.RadCheckBox()
         Me.lblBereich3EFGSpezial = New Telerik.WinControls.UI.RadLabel()
-        Me.PanelBereich3WZ4 = New System.Windows.Forms.Panel()
+        Me.PanelBereich3WZ4 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBox71 = New System.Windows.Forms.PictureBox()
         Me.PictureBox72 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich3Weight4 = New Telerik.WinControls.UI.RadTextBox()
@@ -59,28 +60,28 @@ Partial Class uco_9PruefungLinearitaet
         Me.RadCheckBoxBereich3VEL4 = New Telerik.WinControls.UI.RadCheckBox()
         Me.lblBereich3Gewicht = New Telerik.WinControls.UI.RadLabel()
         Me.lblBereich3AnzeigeGewicht = New Telerik.WinControls.UI.RadLabel()
-        Me.PanelBereich3WZ5 = New System.Windows.Forms.Panel()
+        Me.PanelBereich3WZ5 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBox69 = New System.Windows.Forms.PictureBox()
         Me.PictureBox70 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich3Weight5 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich3DisplayWeight5 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich3ErrorLimit5 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich3VEL5 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.PanelBereich3WZ6 = New System.Windows.Forms.Panel()
+        Me.PanelBereich3WZ6 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBox67 = New System.Windows.Forms.PictureBox()
         Me.PictureBox68 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich3Weight6 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich3DisplayWeight6 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich3ErrorLimit6 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich3VEL6 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.PanelBereich3WZ7 = New System.Windows.Forms.Panel()
+        Me.PanelBereich3WZ7 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBox65 = New System.Windows.Forms.PictureBox()
         Me.PictureBox66 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich3Weight7 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich3DisplayWeight7 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich3ErrorLimit7 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich3VEL7 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.PanelBereich3WZ8 = New System.Windows.Forms.Panel()
+        Me.PanelBereich3WZ8 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBox63 = New System.Windows.Forms.PictureBox()
         Me.PictureBox64 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich3Weight8 = New Telerik.WinControls.UI.RadTextBox()
@@ -88,8 +89,8 @@ Partial Class uco_9PruefungLinearitaet
         Me.RadTextBoxControlBereich3ErrorLimit8 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich3VEL8 = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadGroupBoxBereich2 = New Telerik.WinControls.UI.RadGroupBox()
-        Me.lblPflichtfeld2 = New System.Windows.Forms.Label()
-        Me.PanelBereich2WZ1 = New System.Windows.Forms.Panel()
+        Me.lblPflichtfeld2 = New Telerik.WinControls.UI.RadLabel()
+        Me.PanelBereich2WZ1 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBox29 = New System.Windows.Forms.PictureBox()
         Me.PictureBox30 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich2Weight1 = New Telerik.WinControls.UI.RadTextBox()
@@ -97,7 +98,7 @@ Partial Class uco_9PruefungLinearitaet
         Me.RadTextBoxControlBereich2ErrorLimit1 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich2VEL1 = New Telerik.WinControls.UI.RadCheckBox()
         Me.lblBereich2FehlerGrenzen = New Telerik.WinControls.UI.RadLabel()
-        Me.PanelBereich2WZ2 = New System.Windows.Forms.Panel()
+        Me.PanelBereich2WZ2 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBox31 = New System.Windows.Forms.PictureBox()
         Me.PictureBox32 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich2Weight2 = New Telerik.WinControls.UI.RadTextBox()
@@ -105,7 +106,7 @@ Partial Class uco_9PruefungLinearitaet
         Me.RadTextBoxControlBereich2ErrorLimit2 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich2VEL2 = New Telerik.WinControls.UI.RadCheckBox()
         Me.lblBereich2EFGSpezial = New Telerik.WinControls.UI.RadLabel()
-        Me.PanelBereich2WZ3 = New System.Windows.Forms.Panel()
+        Me.PanelBereich2WZ3 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBox33 = New System.Windows.Forms.PictureBox()
         Me.PictureBox34 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich2Weight3 = New Telerik.WinControls.UI.RadTextBox()
@@ -114,35 +115,35 @@ Partial Class uco_9PruefungLinearitaet
         Me.RadCheckBoxBereich2VEL3 = New Telerik.WinControls.UI.RadCheckBox()
         Me.lblBereich2Gewicht = New Telerik.WinControls.UI.RadLabel()
         Me.lblBereich2AnzeigeGewicht = New Telerik.WinControls.UI.RadLabel()
-        Me.PanelBereich2WZ4 = New System.Windows.Forms.Panel()
+        Me.PanelBereich2WZ4 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBox35 = New System.Windows.Forms.PictureBox()
         Me.PictureBox36 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich2Weight4 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich2DisplayWeight4 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich2ErrorLimit4 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich2VEL4 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.PanelBereich2WZ5 = New System.Windows.Forms.Panel()
+        Me.PanelBereich2WZ5 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBox37 = New System.Windows.Forms.PictureBox()
         Me.PictureBox38 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich2Weight5 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich2DisplayWeight5 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich2ErrorLimit5 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich2VEL5 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.PanelBereich2WZ6 = New System.Windows.Forms.Panel()
+        Me.PanelBereich2WZ6 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBox39 = New System.Windows.Forms.PictureBox()
         Me.PictureBox40 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich2Weight6 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich2DisplayWeight6 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich2ErrorLimit6 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich2VEL6 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.PanelBereich2WZ8 = New System.Windows.Forms.Panel()
+        Me.PanelBereich2WZ8 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBox43 = New System.Windows.Forms.PictureBox()
         Me.PictureBox44 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich2Weight8 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich2DisplayWeight8 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich2ErrorLimit8 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich2VEL8 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.PanelBereich2WZ7 = New System.Windows.Forms.Panel()
+        Me.PanelBereich2WZ7 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBox41 = New System.Windows.Forms.PictureBox()
         Me.PictureBox42 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich2Weight7 = New Telerik.WinControls.UI.RadTextBox()
@@ -150,15 +151,15 @@ Partial Class uco_9PruefungLinearitaet
         Me.RadTextBoxControlBereich2ErrorLimit7 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich2VEL7 = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadGroupBoxBereich1 = New Telerik.WinControls.UI.RadGroupBox()
-        Me.lblPflichtfeld1 = New System.Windows.Forms.Label()
-        Me.PanelBereich1WZ1 = New System.Windows.Forms.Panel()
+        Me.lblPflichtfeld1 = New Telerik.WinControls.UI.RadLabel()
+        Me.PanelBereich1WZ1 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich1Weight1 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich1DisplayWeight1 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich1ErrorLimit1 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich1VEL1 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.PanelBereich1WZ2 = New System.Windows.Forms.Panel()
+        Me.PanelBereich1WZ2 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich1Weight2 = New Telerik.WinControls.UI.RadTextBox()
@@ -166,7 +167,7 @@ Partial Class uco_9PruefungLinearitaet
         Me.RadTextBoxControlBereich1ErrorLimit2 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich1VEL2 = New Telerik.WinControls.UI.RadCheckBox()
         Me.lblBereich1FehlerGrenzen = New Telerik.WinControls.UI.RadLabel()
-        Me.PanelBereich1WZ3 = New System.Windows.Forms.Panel()
+        Me.PanelBereich1WZ3 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich1Weight3 = New Telerik.WinControls.UI.RadTextBox()
@@ -174,7 +175,7 @@ Partial Class uco_9PruefungLinearitaet
         Me.RadTextBoxControlBereich1ErrorLimit3 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich1VEL3 = New Telerik.WinControls.UI.RadCheckBox()
         Me.lblBereich1EFGSpezial = New Telerik.WinControls.UI.RadLabel()
-        Me.PanelBereich1WZ4 = New System.Windows.Forms.Panel()
+        Me.PanelBereich1WZ4 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich1Weight4 = New Telerik.WinControls.UI.RadTextBox()
@@ -183,28 +184,28 @@ Partial Class uco_9PruefungLinearitaet
         Me.RadCheckBoxBereich1VEL4 = New Telerik.WinControls.UI.RadCheckBox()
         Me.lblBereich1Gewicht = New Telerik.WinControls.UI.RadLabel()
         Me.lblBereich1AnzeigeGewicht = New Telerik.WinControls.UI.RadLabel()
-        Me.PanelBereich1WZ5 = New System.Windows.Forms.Panel()
+        Me.PanelBereich1WZ5 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
         Me.PictureBox10 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich1Weight5 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich1DisplayWeight5 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich1ErrorLimit5 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich1VEL5 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.PanelBereich1WZ6 = New System.Windows.Forms.Panel()
+        Me.PanelBereich1WZ6 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBox11 = New System.Windows.Forms.PictureBox()
         Me.PictureBox12 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich1Weight6 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich1DisplayWeight6 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich1ErrorLimit6 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich1VEL6 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.PanelBereich1WZ7 = New System.Windows.Forms.Panel()
+        Me.PanelBereich1WZ7 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBox13 = New System.Windows.Forms.PictureBox()
         Me.PictureBox14 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich1Weight7 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich1DisplayWeight7 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich1ErrorLimit7 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich1VEL7 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.PanelBereich1WZ8 = New System.Windows.Forms.Panel()
+        Me.PanelBereich1WZ8 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBox15 = New System.Windows.Forms.PictureBox()
         Me.PictureBox16 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich1Weight8 = New Telerik.WinControls.UI.RadTextBox()
@@ -213,60 +214,60 @@ Partial Class uco_9PruefungLinearitaet
         Me.RadCheckBoxBereich1VEL8 = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadButtonShowEFGSteigend = New Telerik.WinControls.UI.RadButton()
         Me.RadGroupBoxBereich1Fallend = New Telerik.WinControls.UI.RadGroupBox()
-        Me.lblPflichtfeld4 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld4 = New Telerik.WinControls.UI.RadLabel()
         Me.lblBereich1FallendGewicht = New Telerik.WinControls.UI.RadLabel()
         Me.lblBereich1FallendAnzeigeGewicht = New Telerik.WinControls.UI.RadLabel()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.PanelBereich1FallendWZ8 = New System.Windows.Forms.Panel()
+        Me.PanelBereich1FallendWZ8 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBoxFallend15 = New System.Windows.Forms.PictureBox()
         Me.PictureBoxFallend16 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich1FallendWeight8 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich1FallendDisplayWeight8 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich1FallendErrorLimit8 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich1FallendVEL8 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.PanelBereich1FallendWZ7 = New System.Windows.Forms.Panel()
+        Me.PanelBereich1FallendWZ7 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBoxFallend13 = New System.Windows.Forms.PictureBox()
         Me.PictureBoxFallend14 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich1FallendWeight7 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich1FallendDisplayWeight7 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich1FallendErrorLimit7 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich1FallendVEL7 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.PanelBereich1FallendWZ6 = New System.Windows.Forms.Panel()
+        Me.PanelBereich1FallendWZ6 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBoxFallend11 = New System.Windows.Forms.PictureBox()
         Me.PictureBoxFallend12 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich1FallendWeight6 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich1FallendDisplayWeight6 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich1FallendErrorLimit6 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich1FallendVEL6 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.PanelBereich1FallendWZ5 = New System.Windows.Forms.Panel()
+        Me.PanelBereich1FallendWZ5 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBoxFallend9 = New System.Windows.Forms.PictureBox()
         Me.PictureBoxFallend10 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich1FallendWeight5 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich1FallendDisplayWeight5 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich1FallendErrorLimit5 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich1FallendVEL5 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.PanelBereich1FallendWZ4 = New System.Windows.Forms.Panel()
+        Me.PanelBereich1FallendWZ4 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBoxFallend7 = New System.Windows.Forms.PictureBox()
         Me.PictureBoxFallend8 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich1FallendWeight4 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich1FallendDisplayWeight4 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich1FallendErrorLimit4 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich1FallendVEL4 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.PanelBereich1FallendWZ3 = New System.Windows.Forms.Panel()
+        Me.PanelBereich1FallendWZ3 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBoxFallend5 = New System.Windows.Forms.PictureBox()
         Me.PictureBoxFallend6 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich1FallendWeight3 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich1FallendDisplayWeight3 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich1FallendErrorLimit3 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich1FallendVEL3 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.PanelBereich1FallendWZ2 = New System.Windows.Forms.Panel()
+        Me.PanelBereich1FallendWZ2 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBoxFallend3 = New System.Windows.Forms.PictureBox()
         Me.PictureBoxFallend4 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich1FallendWeight2 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich1FallendDisplayWeight2 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich1FallendErrorLimit2 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich1FallendVEL2 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.PanelBereich1FallendWZ1 = New System.Windows.Forms.Panel()
+        Me.PanelBereich1FallendWZ1 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBoxFallend1 = New System.Windows.Forms.PictureBox()
         Me.PictureBoxFallend2 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich1FallendWeight1 = New Telerik.WinControls.UI.RadTextBox()
@@ -277,58 +278,58 @@ Partial Class uco_9PruefungLinearitaet
         Me.lblBereich1FallendFehlerGrenzen = New Telerik.WinControls.UI.RadLabel()
         Me.RadButtonSteigendPlus = New Telerik.WinControls.UI.RadButton()
         Me.RadGroupBoxBereich3Fallend = New Telerik.WinControls.UI.RadGroupBox()
-        Me.lblPflichtfeld6 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld6 = New Telerik.WinControls.UI.RadLabel()
         Me.FlowLayoutPanel3 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.PanelBereich3FallendWZ8 = New System.Windows.Forms.Panel()
+        Me.PanelBereich3FallendWZ8 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBoxFallend63 = New System.Windows.Forms.PictureBox()
         Me.PictureBoxFallend64 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich3FallendWeight8 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich3FallendDisplayWeight8 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich3FallendErrorLimit8 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich3FallendVEL8 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.PanelBereich3FallendWZ7 = New System.Windows.Forms.Panel()
+        Me.PanelBereich3FallendWZ7 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBoxFallend65 = New System.Windows.Forms.PictureBox()
         Me.PictureBoxFallend66 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich3FallendWeight7 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich3FallendDisplayWeight7 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich3FallendErrorLimit7 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich3FallendVEL7 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.PanelBereich3FallendWZ6 = New System.Windows.Forms.Panel()
+        Me.PanelBereich3FallendWZ6 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBoxFallend67 = New System.Windows.Forms.PictureBox()
         Me.PictureBoxFallend68 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich3FallendWeight6 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich3FallendDisplayWeight6 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich3FallendErrorLimit6 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich3FallendVEL6 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.PanelBereich3FallendWZ5 = New System.Windows.Forms.Panel()
+        Me.PanelBereich3FallendWZ5 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBoxFallend69 = New System.Windows.Forms.PictureBox()
         Me.PictureBoxFallend70 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich3FallendWeight5 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich3FallendDisplayWeight5 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich3FallendErrorLimit5 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich3FallendVEL5 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.PanelBereich3FallendWZ4 = New System.Windows.Forms.Panel()
+        Me.PanelBereich3FallendWZ4 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBoxFallend71 = New System.Windows.Forms.PictureBox()
         Me.PictureBoxFallend72 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich3FallendWeight4 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich3FallendDisplayWeight4 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich3FallendErrorLimit4 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich3FallendVEL4 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.PanelBereich3FallendWZ3 = New System.Windows.Forms.Panel()
+        Me.PanelBereich3FallendWZ3 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBoxFallend73 = New System.Windows.Forms.PictureBox()
         Me.PictureBoxFallend74 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich3FallendWeight3 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich3FallendDisplayWeight3 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich3FallendErrorLimit3 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich3FallendVEL3 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.PanelBereich3FallendWZ2 = New System.Windows.Forms.Panel()
+        Me.PanelBereich3FallendWZ2 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBoxFallend75 = New System.Windows.Forms.PictureBox()
         Me.PictureBoxFallend76 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich3FallendWeight2 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich3FallendDisplayWeight2 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich3FallendErrorLimit2 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich3FallendVEL2 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.PanelBereich3FallendWZ1 = New System.Windows.Forms.Panel()
+        Me.PanelBereich3FallendWZ1 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBoxFallend77 = New System.Windows.Forms.PictureBox()
         Me.PictureBoxFallend78 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich3FallendWeight1 = New Telerik.WinControls.UI.RadTextBox()
@@ -341,63 +342,63 @@ Partial Class uco_9PruefungLinearitaet
         Me.lblBereich3FallendAnzeigeGewicht = New Telerik.WinControls.UI.RadLabel()
         Me.RadGroupBoxBereich2Fallend = New Telerik.WinControls.UI.RadGroupBox()
         Me.FlowLayoutPanel2 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.PanelBereich2FallendWZ8 = New System.Windows.Forms.Panel()
+        Me.PanelBereich2FallendWZ8 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBoxFallend43 = New System.Windows.Forms.PictureBox()
         Me.PictureBoxFallend44 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich2FallendWeight8 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich2FallendDisplayWeight8 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich2FallendErrorLimit8 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich2FallendVEL8 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.PanelBereich2FallendWZ7 = New System.Windows.Forms.Panel()
+        Me.PanelBereich2FallendWZ7 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBoxFallend41 = New System.Windows.Forms.PictureBox()
         Me.PictureBoxFallend42 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich2FallendWeight7 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich2FallendDisplayWeight7 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich2FallendErrorLimit7 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich2FallendVEL7 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.PanelBereich2FallendWZ6 = New System.Windows.Forms.Panel()
+        Me.PanelBereich2FallendWZ6 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBoxFallend39 = New System.Windows.Forms.PictureBox()
         Me.PictureBoxFallend40 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich2FallendWeight6 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich2FallendDisplayWeight6 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich2FallendErrorLimit6 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich2FallendVEL6 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.PanelBereich2FallendWZ5 = New System.Windows.Forms.Panel()
+        Me.PanelBereich2FallendWZ5 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBoxFallend37 = New System.Windows.Forms.PictureBox()
         Me.PictureBoxFallend38 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich2FallendWeight5 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich2FallendDisplayWeight5 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich2FallendErrorLimit5 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich2FallendVEL5 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.PanelBereich2FallendWZ4 = New System.Windows.Forms.Panel()
+        Me.PanelBereich2FallendWZ4 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBoxFallend35 = New System.Windows.Forms.PictureBox()
         Me.PictureBoxFallend36 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich2FallendWeight4 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich2FallendDisplayWeight4 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich2FallendErrorLimit4 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich2FallendVEL4 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.PanelBereich2FallendWZ3 = New System.Windows.Forms.Panel()
+        Me.PanelBereich2FallendWZ3 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBoxFallend33 = New System.Windows.Forms.PictureBox()
         Me.PictureBoxFallend34 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich2FallendWeight3 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich2FallendDisplayWeight3 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich2FallendErrorLimit3 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich2FallendVEL3 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.PanelBereich2FallendWZ2 = New System.Windows.Forms.Panel()
+        Me.PanelBereich2FallendWZ2 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBoxFallend31 = New System.Windows.Forms.PictureBox()
         Me.PictureBoxFallend32 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich2FallendWeight2 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich2FallendDisplayWeight2 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich2FallendErrorLimit2 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich2FallendVEL2 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.PanelBereich2FallendWZ1 = New System.Windows.Forms.Panel()
+        Me.PanelBereich2FallendWZ1 = New Telerik.WinControls.UI.RadPanel()
         Me.PictureBoxFallend29 = New System.Windows.Forms.PictureBox()
         Me.PictureBoxFallend30 = New System.Windows.Forms.PictureBox()
         Me.RadTextBoxControlBereich2FallendWeight1 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich2FallendDisplayWeight1 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadTextBoxControlBereich2FallendErrorLimit1 = New Telerik.WinControls.UI.RadTextBox()
         Me.RadCheckBoxBereich2FallendVEL1 = New Telerik.WinControls.UI.RadCheckBox()
-        Me.lblPflichtfeld5 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld5 = New Telerik.WinControls.UI.RadLabel()
         Me.lblBereich2FallendFehlerGrenzen = New Telerik.WinControls.UI.RadLabel()
         Me.lblBereich2FallendEFGSpezial = New Telerik.WinControls.UI.RadLabel()
         Me.lblBereich2FallendGewicht = New Telerik.WinControls.UI.RadLabel()
@@ -4003,14 +4004,14 @@ Partial Class uco_9PruefungLinearitaet
     End Sub
     Friend WithEvents RadButtonShowEFGSteigend As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadGroupBoxBereich3 As Telerik.WinControls.UI.RadGroupBox
-    Friend WithEvents PanelBereich3WZ1 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich3WZ1 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBox77 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox78 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich3Weight1 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich3DisplayWeight1 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich3ErrorLimit1 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich3VEL1 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents PanelBereich3WZ2 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich3WZ2 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBox75 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox76 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich3Weight2 As Telerik.WinControls.UI.RadTextBox
@@ -4018,7 +4019,7 @@ Partial Class uco_9PruefungLinearitaet
     Friend WithEvents RadTextBoxControlBereich3ErrorLimit2 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich3VEL2 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents lblBereich3FehlerGrenzen As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents PanelBereich3WZ3 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich3WZ3 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBox73 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox74 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich3Weight3 As Telerik.WinControls.UI.RadTextBox
@@ -4026,7 +4027,7 @@ Partial Class uco_9PruefungLinearitaet
     Friend WithEvents RadTextBoxControlBereich3ErrorLimit3 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich3VEL3 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents lblBereich3EFGSpezial As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents PanelBereich3WZ4 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich3WZ4 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBox71 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox72 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich3Weight4 As Telerik.WinControls.UI.RadTextBox
@@ -4035,28 +4036,28 @@ Partial Class uco_9PruefungLinearitaet
     Friend WithEvents RadCheckBoxBereich3VEL4 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents lblBereich3Gewicht As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblBereich3AnzeigeGewicht As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents PanelBereich3WZ5 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich3WZ5 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBox69 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox70 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich3Weight5 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich3DisplayWeight5 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich3ErrorLimit5 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich3VEL5 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents PanelBereich3WZ6 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich3WZ6 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBox67 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox68 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich3Weight6 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich3DisplayWeight6 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich3ErrorLimit6 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich3VEL6 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents PanelBereich3WZ7 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich3WZ7 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBox65 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox66 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich3Weight7 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich3DisplayWeight7 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich3ErrorLimit7 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich3VEL7 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents PanelBereich3WZ8 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich3WZ8 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBox63 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox64 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich3Weight8 As Telerik.WinControls.UI.RadTextBox
@@ -4064,7 +4065,7 @@ Partial Class uco_9PruefungLinearitaet
     Friend WithEvents RadTextBoxControlBereich3ErrorLimit8 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich3VEL8 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents RadGroupBoxBereich2 As Telerik.WinControls.UI.RadGroupBox
-    Friend WithEvents PanelBereich2WZ1 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich2WZ1 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBox29 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox30 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich2Weight1 As Telerik.WinControls.UI.RadTextBox
@@ -4072,7 +4073,7 @@ Partial Class uco_9PruefungLinearitaet
     Friend WithEvents RadTextBoxControlBereich2ErrorLimit1 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich2VEL1 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents lblBereich2FehlerGrenzen As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents PanelBereich2WZ2 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich2WZ2 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBox31 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox32 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich2Weight2 As Telerik.WinControls.UI.RadTextBox
@@ -4080,7 +4081,7 @@ Partial Class uco_9PruefungLinearitaet
     Friend WithEvents RadTextBoxControlBereich2ErrorLimit2 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich2VEL2 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents lblBereich2EFGSpezial As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents PanelBereich2WZ3 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich2WZ3 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBox33 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox34 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich2Weight3 As Telerik.WinControls.UI.RadTextBox
@@ -4089,35 +4090,35 @@ Partial Class uco_9PruefungLinearitaet
     Friend WithEvents RadCheckBoxBereich2VEL3 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents lblBereich2Gewicht As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblBereich2AnzeigeGewicht As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents PanelBereich2WZ4 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich2WZ4 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBox35 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox36 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich2Weight4 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich2DisplayWeight4 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich2ErrorLimit4 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich2VEL4 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents PanelBereich2WZ5 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich2WZ5 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBox37 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox38 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich2Weight5 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich2DisplayWeight5 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich2ErrorLimit5 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich2VEL5 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents PanelBereich2WZ6 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich2WZ6 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBox39 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox40 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich2Weight6 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich2DisplayWeight6 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich2ErrorLimit6 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich2VEL6 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents PanelBereich2WZ8 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich2WZ8 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBox43 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox44 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich2Weight8 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich2DisplayWeight8 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich2ErrorLimit8 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich2VEL8 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents PanelBereich2WZ7 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich2WZ7 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBox41 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox42 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich2Weight7 As Telerik.WinControls.UI.RadTextBox
@@ -4125,14 +4126,14 @@ Partial Class uco_9PruefungLinearitaet
     Friend WithEvents RadTextBoxControlBereich2ErrorLimit7 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich2VEL7 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents RadGroupBoxBereich1 As Telerik.WinControls.UI.RadGroupBox
-    Friend WithEvents PanelBereich1WZ1 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich1WZ1 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich1Weight1 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich1DisplayWeight1 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich1ErrorLimit1 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich1VEL1 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents PanelBereich1WZ2 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich1WZ2 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich1Weight2 As Telerik.WinControls.UI.RadTextBox
@@ -4140,7 +4141,7 @@ Partial Class uco_9PruefungLinearitaet
     Friend WithEvents RadTextBoxControlBereich1ErrorLimit2 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich1VEL2 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents lblBereich1FehlerGrenzen As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents PanelBereich1WZ3 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich1WZ3 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBox5 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox6 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich1Weight3 As Telerik.WinControls.UI.RadTextBox
@@ -4148,7 +4149,7 @@ Partial Class uco_9PruefungLinearitaet
     Friend WithEvents RadTextBoxControlBereich1ErrorLimit3 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich1VEL3 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents lblBereich1EFGSpezial As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents PanelBereich1WZ4 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich1WZ4 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBox7 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox8 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich1Weight4 As Telerik.WinControls.UI.RadTextBox
@@ -4157,28 +4158,28 @@ Partial Class uco_9PruefungLinearitaet
     Friend WithEvents RadCheckBoxBereich1VEL4 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents lblBereich1Gewicht As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblBereich1AnzeigeGewicht As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents PanelBereich1WZ5 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich1WZ5 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBox9 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox10 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich1Weight5 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich1DisplayWeight5 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich1ErrorLimit5 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich1VEL5 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents PanelBereich1WZ6 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich1WZ6 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBox11 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox12 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich1Weight6 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich1DisplayWeight6 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich1ErrorLimit6 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich1VEL6 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents PanelBereich1WZ7 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich1WZ7 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBox13 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox14 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich1Weight7 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich1DisplayWeight7 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich1ErrorLimit7 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich1VEL7 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents PanelBereich1WZ8 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich1WZ8 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBox15 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox16 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich1Weight8 As Telerik.WinControls.UI.RadTextBox
@@ -4189,14 +4190,14 @@ Partial Class uco_9PruefungLinearitaet
     Friend WithEvents RadButtonSteigendMinus As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadScrollablePanel1 As Telerik.WinControls.UI.RadScrollablePanel
     Friend WithEvents RadGroupBoxBereich3Fallend As Telerik.WinControls.UI.RadGroupBox
-    Friend WithEvents PanelBereich3FallendWZ1 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich3FallendWZ1 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBoxFallend77 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBoxFallend78 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich3FallendWeight1 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich3FallendDisplayWeight1 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich3FallendErrorLimit1 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich3FallendVEL1 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents PanelBereich3FallendWZ2 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich3FallendWZ2 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBoxFallend75 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBoxFallend76 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich3FallendWeight2 As Telerik.WinControls.UI.RadTextBox
@@ -4204,7 +4205,7 @@ Partial Class uco_9PruefungLinearitaet
     Friend WithEvents RadTextBoxControlBereich3FallendErrorLimit2 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich3FallendVEL2 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents lblBereich3FallendFehlerGrenzen As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents PanelBereich3FallendWZ3 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich3FallendWZ3 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBoxFallend73 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBoxFallend74 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich3FallendWeight3 As Telerik.WinControls.UI.RadTextBox
@@ -4212,7 +4213,7 @@ Partial Class uco_9PruefungLinearitaet
     Friend WithEvents RadTextBoxControlBereich3FallendErrorLimit3 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich3FallendVEL3 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents lblBereich3FallendEFGSpezial As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents PanelBereich3FallendWZ4 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich3FallendWZ4 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBoxFallend71 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBoxFallend72 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich3FallendWeight4 As Telerik.WinControls.UI.RadTextBox
@@ -4221,28 +4222,28 @@ Partial Class uco_9PruefungLinearitaet
     Friend WithEvents RadCheckBoxBereich3FallendVEL4 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents lblBereich3FallendGewicht As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblBereich3FallendAnzeigeGewicht As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents PanelBereich3FallendWZ5 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich3FallendWZ5 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBoxFallend69 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBoxFallend70 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich3FallendWeight5 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich3FallendDisplayWeight5 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich3FallendErrorLimit5 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich3FallendVEL5 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents PanelBereich3FallendWZ6 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich3FallendWZ6 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBoxFallend67 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBoxFallend68 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich3FallendWeight6 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich3FallendDisplayWeight6 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich3FallendErrorLimit6 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich3FallendVEL6 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents PanelBereich3FallendWZ7 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich3FallendWZ7 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBoxFallend65 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBoxFallend66 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich3FallendWeight7 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich3FallendDisplayWeight7 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich3FallendErrorLimit7 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich3FallendVEL7 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents PanelBereich3FallendWZ8 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich3FallendWZ8 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBoxFallend63 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBoxFallend64 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich3FallendWeight8 As Telerik.WinControls.UI.RadTextBox
@@ -4250,7 +4251,7 @@ Partial Class uco_9PruefungLinearitaet
     Friend WithEvents RadTextBoxControlBereich3FallendErrorLimit8 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich3FallendVEL8 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents RadGroupBoxBereich2Fallend As Telerik.WinControls.UI.RadGroupBox
-    Friend WithEvents PanelBereich2FallendWZ1 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich2FallendWZ1 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBoxFallend29 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBoxFallend30 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich2FallendWeight1 As Telerik.WinControls.UI.RadTextBox
@@ -4258,7 +4259,7 @@ Partial Class uco_9PruefungLinearitaet
     Friend WithEvents RadTextBoxControlBereich2FallendErrorLimit1 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich2FallendVEL1 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents lblBereich2FallendFehlerGrenzen As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents PanelBereich2FallendWZ2 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich2FallendWZ2 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBoxFallend31 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBoxFallend32 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich2FallendWeight2 As Telerik.WinControls.UI.RadTextBox
@@ -4266,7 +4267,7 @@ Partial Class uco_9PruefungLinearitaet
     Friend WithEvents RadTextBoxControlBereich2FallendErrorLimit2 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich2FallendVEL2 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents lblBereich2FallendEFGSpezial As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents PanelBereich2FallendWZ3 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich2FallendWZ3 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBoxFallend33 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBoxFallend34 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich2FallendWeight3 As Telerik.WinControls.UI.RadTextBox
@@ -4275,35 +4276,35 @@ Partial Class uco_9PruefungLinearitaet
     Friend WithEvents RadCheckBoxBereich2FallendVEL3 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents lblBereich2FallendGewicht As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblBereich2FallendAnzeigeGewicht As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents PanelBereich2FallendWZ4 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich2FallendWZ4 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBoxFallend35 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBoxFallend36 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich2FallendWeight4 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich2FallendDisplayWeight4 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich2FallendErrorLimit4 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich2FallendVEL4 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents PanelBereich2FallendWZ5 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich2FallendWZ5 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBoxFallend37 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBoxFallend38 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich2FallendWeight5 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich2FallendDisplayWeight5 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich2FallendErrorLimit5 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich2FallendVEL5 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents PanelBereich2FallendWZ6 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich2FallendWZ6 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBoxFallend39 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBoxFallend40 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich2FallendWeight6 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich2FallendDisplayWeight6 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich2FallendErrorLimit6 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich2FallendVEL6 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents PanelBereich2FallendWZ8 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich2FallendWZ8 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBoxFallend43 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBoxFallend44 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich2FallendWeight8 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich2FallendDisplayWeight8 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich2FallendErrorLimit8 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich2FallendVEL8 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents PanelBereich2FallendWZ7 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich2FallendWZ7 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBoxFallend41 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBoxFallend42 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich2FallendWeight7 As Telerik.WinControls.UI.RadTextBox
@@ -4311,14 +4312,14 @@ Partial Class uco_9PruefungLinearitaet
     Friend WithEvents RadTextBoxControlBereich2FallendErrorLimit7 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich2FallendVEL7 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents RadGroupBoxBereich1Fallend As Telerik.WinControls.UI.RadGroupBox
-    Friend WithEvents PanelBereich1FallendWZ1 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich1FallendWZ1 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBoxFallend1 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBoxFallend2 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich1FallendWeight1 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich1FallendDisplayWeight1 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich1FallendErrorLimit1 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich1FallendVEL1 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents PanelBereich1FallendWZ2 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich1FallendWZ2 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBoxFallend3 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBoxFallend4 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich1FallendWeight2 As Telerik.WinControls.UI.RadTextBox
@@ -4326,7 +4327,7 @@ Partial Class uco_9PruefungLinearitaet
     Friend WithEvents RadTextBoxControlBereich1FallendErrorLimit2 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich1FallendVEL2 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents lblBereich1FallendFehlerGrenzen As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents PanelBereich1FallendWZ3 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich1FallendWZ3 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBoxFallend5 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBoxFallend6 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich1FallendWeight3 As Telerik.WinControls.UI.RadTextBox
@@ -4334,7 +4335,7 @@ Partial Class uco_9PruefungLinearitaet
     Friend WithEvents RadTextBoxControlBereich1FallendErrorLimit3 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich1FallendVEL3 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents lblBereich1FallendEFGSpezial As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents PanelBereich1FallendWZ4 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich1FallendWZ4 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBoxFallend7 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBoxFallend8 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich1FallendWeight4 As Telerik.WinControls.UI.RadTextBox
@@ -4343,28 +4344,28 @@ Partial Class uco_9PruefungLinearitaet
     Friend WithEvents RadCheckBoxBereich1FallendVEL4 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents lblBereich1FallendGewicht As Telerik.WinControls.UI.RadLabel
     Friend WithEvents lblBereich1FallendAnzeigeGewicht As Telerik.WinControls.UI.RadLabel
-    Friend WithEvents PanelBereich1FallendWZ5 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich1FallendWZ5 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBoxFallend9 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBoxFallend10 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich1FallendWeight5 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich1FallendDisplayWeight5 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich1FallendErrorLimit5 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich1FallendVEL5 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents PanelBereich1FallendWZ6 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich1FallendWZ6 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBoxFallend11 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBoxFallend12 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich1FallendWeight6 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich1FallendDisplayWeight6 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich1FallendErrorLimit6 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich1FallendVEL6 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents PanelBereich1FallendWZ7 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich1FallendWZ7 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBoxFallend13 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBoxFallend14 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich1FallendWeight7 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich1FallendDisplayWeight7 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadTextBoxControlBereich1FallendErrorLimit7 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadCheckBoxBereich1FallendVEL7 As Telerik.WinControls.UI.RadCheckBox
-    Friend WithEvents PanelBereich1FallendWZ8 As System.Windows.Forms.Panel
+    Friend WithEvents PanelBereich1FallendWZ8 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents PictureBoxFallend15 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBoxFallend16 As System.Windows.Forms.PictureBox
     Friend WithEvents RadTextBoxControlBereich1FallendWeight8 As Telerik.WinControls.UI.RadTextBox
@@ -4373,11 +4374,11 @@ Partial Class uco_9PruefungLinearitaet
     Friend WithEvents RadCheckBoxBereich1FallendVEL8 As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents FlowLayoutPanel3 As System.Windows.Forms.FlowLayoutPanel
     Friend WithEvents FlowLayoutPanel1 As System.Windows.Forms.FlowLayoutPanel
-    Friend WithEvents lblPflichtfeld1 As System.Windows.Forms.Label
-    Friend WithEvents lblPflichtfeld6 As System.Windows.Forms.Label
-    Friend WithEvents lblPflichtfeld5 As System.Windows.Forms.Label
-    Friend WithEvents lblPflichtfeld4 As System.Windows.Forms.Label
-    Friend WithEvents lblPflichtfeld3 As System.Windows.Forms.Label
-    Friend WithEvents lblPflichtfeld2 As System.Windows.Forms.Label
+    Friend WithEvents lblPflichtfeld1 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents lblPflichtfeld6 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents lblPflichtfeld5 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents lblPflichtfeld4 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents lblPflichtfeld3 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents lblPflichtfeld2 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents FlowLayoutPanel2 As FlowLayoutPanel
 End Class

@@ -1,4 +1,4 @@
-﻿Imports System.ComponentModel
+Imports System.ComponentModel
 Imports Telerik.WinControls.Data
 Imports Telerik.WinControls.UI
 ''' <summary>
@@ -53,11 +53,11 @@ Public Class AktuellerBenutzer
     ''' Gets the  aktuelle sprache.
     ''' </summary>
     ''' <value>The  aktuelle sprache.</value>
-    Public Property AktuelleSprache() As String
+    Public Property AktuelleSprache() As string
         Get
             Return mvarAktuelleSprache
         End Get
-        Set(value As String)
+        Set(value As string)
             mvarAktuelleSprache = value
         End Set
     End Property
@@ -66,11 +66,11 @@ Public Class AktuellerBenutzer
     ''' Gets the  synchronisierungsmodus.
     ''' </summary>
     ''' <value>The  synchronisierungsmodus.</value>
-    Public Property Synchronisierungsmodus() As String
+    Public Property Synchronisierungsmodus() As string
         Get
             Return mvarSynchronisierungsmodus
         End Get
-        Set(value As String)
+        Set(value As string)
             'speichern in Konfig DB
             mvarSynchronisierungsmodus = value
         End Set
@@ -119,11 +119,11 @@ Public Class AktuellerBenutzer
     ''' Gets the  grid settings.
     ''' </summary>
     ''' <value>The  grid settings.</value>
-    Public Property GridSettings() As String
+    Public Property GridSettings() As string
         Get
             Return mvarGridSettings
         End Get
-        Set(value As String)
+        Set(value As string)
             mvarGridSettings = value
         End Set
     End Property
@@ -132,11 +132,11 @@ Public Class AktuellerBenutzer
     ''' Gets the  grid settings rhewa.
     ''' </summary>
     ''' <value>The  grid settings rhewa.</value>
-    Public Property GridSettingsRhewa() As String
+    Public Property GridSettingsRhewa() As string
         Get
             Return mvarGridSettingsRHEWA
         End Get
-        Set(value As String)
+        Set(value As string)
             mvarGridSettingsRHEWA = value
         End Set
     End Property
@@ -145,7 +145,7 @@ Public Class AktuellerBenutzer
     ''' Gets the  grid settings.
     ''' </summary>
     ''' <value>The  grid settings.</value>
-    Public ReadOnly Property GridDefaultSettings() As String
+    Public ReadOnly Property GridDefaultSettings() As string
         Get
             Return mvarDefaultGridSettings
         End Get
@@ -155,7 +155,7 @@ Public Class AktuellerBenutzer
     ''' Gets the  grid settings rhewa.
     ''' </summary>
     ''' <value>The  grid settings rhewa.</value>
-    Public ReadOnly Property GridDefaultSettingsRhewa() As String
+    Public ReadOnly Property GridDefaultSettingsRhewa() As string
         Get
             Return mvarDefaultGridSettingsRHEWA
         End Get
@@ -167,7 +167,7 @@ Public Class AktuellerBenutzer
         End Get
     End Property
 
-    Public Shared Function GetNewInstance(ByVal pLizenzschluessel As String)
+    Public Shared Function GetNewInstance(ByVal pLizenzschluessel As string)
         mobjSingletonObject = New AktuellerBenutzer
         mobjSingletonObject.mvarObjLizenz = clsDBFunctions.HoleLizenzObjekt(pLizenzschluessel)
 
@@ -262,7 +262,7 @@ Public Class AktuellerBenutzer
 
     End Sub
 
-    Private Shared Sub SetzeGridLayoutString(RadGridView As RadGridView)
+    Private Shared Sub SetzeGridLayoutString(RadGridView As Telerik.WinControls.UI.RadGridView)
         RadGridView.XmlSerializationInfo.DisregardOriginalSerializationVisibility = True
         RadGridView.XmlSerializationInfo.SerializationMetadata.Clear()
 

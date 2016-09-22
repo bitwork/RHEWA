@@ -1,4 +1,4 @@
-﻿Public Class clsDBFunctions
+Public Class clsDBFunctions
 
     ' ''' <summary>
     ' ''' DEBUG Funktion um Lizenzdialog aus Testzwecken zu überspringen
@@ -180,7 +180,7 @@
     ''' <param name="pLizenzschluessel"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Shared Function HoleLizenzObjekt(ByVal pLizenzschluessel As String) As Lizensierung
+    Public Shared Function HoleLizenzObjekt(ByVal pLizenzschluessel As string) As Lizensierung
         Try
             Using context As New EichsoftwareClientdatabaseEntities1
                 Dim objLic = (From lizenz In context.Lizensierung Where lizenz.Lizenzschluessel = pLizenzschluessel)
@@ -221,7 +221,7 @@
     ''' <param name="Vorgangsnummer"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Shared Function HoleVorhandenenEichprozess(ByVal Vorgangsnummer As String) As Eichprozess
+    Public Shared Function HoleVorhandenenEichprozess(ByVal Vorgangsnummer As string) As Eichprozess
         Using Context As New EichsoftwareClientdatabaseEntities1
             Dim objEichprozess = (From Obj In Context.Eichprozess Select Obj Where Obj.Vorgangsnummer = Vorgangsnummer).FirstOrDefault 'firstor default um erstes element zurückzugeben das übereintrifft(bei ID Spalten sollte es eh nur 1 sein)
             Return objEichprozess
@@ -283,7 +283,7 @@
     ''' <param name="Vorgangsnummer"></param>
     ''' <returns></returns>
     ''' <remarks></remarks>
-    Public Shared Function BlendeEichprozessAus(ByVal Vorgangsnummer As String) As Boolean
+    Public Shared Function BlendeEichprozessAus(ByVal Vorgangsnummer As string) As Boolean
         Using context As New EichsoftwareClientdatabaseEntities1
             Dim objEichprozess = (From Obj In context.Eichprozess Select Obj Where Obj.Vorgangsnummer = Vorgangsnummer).FirstOrDefault 'firstor default um erstes element zurückzugeben
             If Not objEichprozess Is Nothing Then

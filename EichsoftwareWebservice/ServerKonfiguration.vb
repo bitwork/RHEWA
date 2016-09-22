@@ -13,10 +13,10 @@ Imports System.Collections.Generic
 Partial Public Class ServerKonfiguration
     Public Property ID As Integer
     Public Property LetzteSynchronisierungMitRHEWA As Nullable(Of Date)
-    Public Property NetzwerkpfadFuerDateianhaenge As String
-    Public Property FTPServerAdresse As String
-    Public Property FTPServerBenutzername As String
-    Public Property FTPServerEnkodiertesPasswort As String
-    Public Property FTPServerCryptoSaltKey As String
+    Public Property NetzwerkpfadFuerDateianhaenge As string
+    Public Property FTPServerAdresse As string
+    Public Property FTPServerBenutzername As string
+    Public Property FTPServerEnkodiertesPasswort As string
+    Public Property FTPServerCryptoSaltKey As string
 
 End Class

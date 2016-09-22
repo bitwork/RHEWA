@@ -1,4 +1,5 @@
-﻿Public Class uco_6EichprotokollVerfahrenswahl
+Public Class uco_6EichprotokollVerfahrenswahl
+
     Inherits ucoContent
 
 #Region "Member Variables"

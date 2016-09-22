@@ -1,4 +1,4 @@
-﻿' 11.03.2014 hill EichsoftwareAdministrationsClient frmAuswahllisteEichmarkenverwaltung.vb
+' 11.03.2014 hill EichsoftwareAdministrationsClient frmAuswahllisteEichmarkenverwaltung.vb
 Imports System
 Imports System.IO
 Imports Telerik.WinControls.UI
@@ -717,7 +717,7 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
 #End Region
 
 #Region "Grid Events"
-    Private Sub RadGridView1_CellFormatting(sender As Object, e As CellFormattingEventArgs) Handles RadGridView1.CellFormatting
+    Private Sub RadGridView1_CellFormatting(sender As Object, e As Telerik.WinControls.UI.CellFormattingEventArgs) Handles RadGridView1.CellFormatting
         Try
             Dim template As GridViewTemplate = e.Row.ViewTemplate
 
@@ -788,7 +788,7 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     ''' <remarks></remarks>
-    Private Sub radGridView1_ViewCellFormatting(sender As Object, e As CellFormattingEventArgs) Handles RadGridView1.ViewCellFormatting
+    Private Sub radGridView1_ViewCellFormatting(sender As Object, e As Telerik.WinControls.UI.CellFormattingEventArgs) Handles RadGridView1.ViewCellFormatting
         Dim cell As GridGroupExpanderCellElement = TryCast(e.CellElement, GridGroupExpanderCellElement)
         If cell IsNot Nothing AndAlso TypeOf e.CellElement.RowElement Is GridDataRowElement Then
             If Not clsTelerikHelper.IsExpandable(cell.RowInfo) Then
@@ -808,7 +808,7 @@ Public Class FrmAuswahllisteEichmarkenverwaltung
         e.Cancel = Not clsTelerikHelper.IsExpandable(e.ParentRow)
     End Sub
 
-    Private Sub RadGridView1_CellBeginEdit(sender As Object, e As GridViewCellCancelEventArgs) Handles RadGridView1.CellBeginEdit
+    Private Sub RadGridView1_CellBeginEdit(sender As Object, e As Telerik.WinControls.UI.GridViewCellCancelEventArgs) Handles RadGridView1.CellBeginEdit
         Dim SelectedId As String
         SelectedId = e.Row.Cells("ID").Value
         'auf Sperrung prüfen

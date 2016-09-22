@@ -1,4 +1,4 @@
-﻿Imports System.Xml
+Imports System.Xml
 Imports System.Xml.Linq
 Imports EichsoftwareClient
 
@@ -156,7 +156,7 @@ Public Class frmPlausibiltaetspruefung
 
 #Region "FTP"
 
-    Private Sub OeffneDateiVonFTP(ByVal vorgangsnummer As String)
+    Private Sub OeffneDateiVonFTP(ByVal vorgangsnummer As string)
         If Not BackgroundWorkerDownloadFromFTP.IsBusy Then
             Me.Enabled = False
             Me.RadProgressBar.Visible = True

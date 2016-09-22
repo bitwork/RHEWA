@@ -1,5 +1,6 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class uco18Fallbeschleunigung
+
     Inherits ucoContent
 
     'UserControl overrides dispose to clean up the component list.
@@ -28,8 +29,8 @@ Partial Class uco18Fallbeschleunigung
         Me.RadLabel3 = New Telerik.WinControls.UI.RadLabel()
         Me.RadCheckBoxSchwerkraft = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadTextBoxControlG = New Telerik.WinControls.UI.RadTextBox()
-        Me.lblPflichtfeld1 = New System.Windows.Forms.Label()
-        Me.lblPflichtfeld2 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld1 = New Telerik.WinControls.UI.RadLabel()
+        Me.lblPflichtfeld2 = New Telerik.WinControls.UI.RadLabel()
         CType(Me.lblBeschreibung, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadLabel3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -102,7 +103,7 @@ Partial Class uco18Fallbeschleunigung
     Friend WithEvents RadLabel3 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadCheckBoxSchwerkraft As Telerik.WinControls.UI.RadCheckBox
     Friend WithEvents RadTextBoxControlG As Telerik.WinControls.UI.RadTextBox
-    Friend WithEvents lblPflichtfeld1 As System.Windows.Forms.Label
-    Friend WithEvents lblPflichtfeld2 As System.Windows.Forms.Label
+    Friend WithEvents lblPflichtfeld1 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents lblPflichtfeld2 As Telerik.WinControls.UI.RadLabel
 
 End Class

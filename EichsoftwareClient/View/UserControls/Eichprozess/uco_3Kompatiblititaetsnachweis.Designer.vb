@@ -1,5 +1,6 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class uco_3Kompatiblititaetsnachweis
+
     Inherits EichsoftwareClient.ucoContent
 
     'UserControl überschreibt den Löschvorgang, um die Komponentenliste zu bereinigen.
@@ -35,7 +36,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         Me.RadButton1 = New Telerik.WinControls.UI.RadButton()
         Me.RadLabel1 = New Telerik.WinControls.UI.RadLabel()
         Me.RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt = New Telerik.WinControls.UI.RadTextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label10 = New Telerik.WinControls.UI.RadLabel()
         Me.PictureBoxWZ1 = New System.Windows.Forms.PictureBox()
         Me.PictureBoxWZ7 = New System.Windows.Forms.PictureBox()
         Me.PictureBoxWZ9 = New System.Windows.Forms.PictureBox()
@@ -97,7 +98,7 @@ Partial Class uco_3Kompatiblititaetsnachweis
         Me.lblWZMindestvorlast = New Telerik.WinControls.UI.RadLabel()
         Me.lblWZHoechstlast = New Telerik.WinControls.UI.RadLabel()
         Me.RadGroupBoxAWG = New Telerik.WinControls.UI.RadGroupBox()
-        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label8 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel30 = New Telerik.WinControls.UI.RadLabel()
         Me.PictureBox15 = New System.Windows.Forms.PictureBox()
         Me.PictureBox14 = New System.Windows.Forms.PictureBox()
@@ -153,24 +154,24 @@ Partial Class uco_3Kompatiblititaetsnachweis
         Me.lblAWGSpeisespannung = New Telerik.WinControls.UI.RadLabel()
         Me.lblAWGmaxAnzahlTeilungswerte = New Telerik.WinControls.UI.RadLabel()
         Me.RadGroupBoxWaage = New Telerik.WinControls.UI.RadGroupBox()
-        Me.lblPflichtfeld6 = New System.Windows.Forms.Label()
-        Me.lblPflichtfeld4 = New System.Windows.Forms.Label()
-        Me.lblPflichtfeld2 = New System.Windows.Forms.Label()
-        Me.lblPflichtfeld5 = New System.Windows.Forms.Label()
-        Me.lblPflichtfeld3 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.lblPflichtfeld11 = New System.Windows.Forms.Label()
-        Me.lblPflichtfeld1 = New System.Windows.Forms.Label()
+        Me.lblPflichtfeld6 = New Telerik.WinControls.UI.RadLabel()
+        Me.lblPflichtfeld4 = New Telerik.WinControls.UI.RadLabel()
+        Me.lblPflichtfeld2 = New Telerik.WinControls.UI.RadLabel()
+        Me.lblPflichtfeld5 = New Telerik.WinControls.UI.RadLabel()
+        Me.lblPflichtfeld3 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label13 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label14 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label11 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label12 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label6 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label9 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label5 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label7 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label4 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label3 = New Telerik.WinControls.UI.RadLabel()
+        Me.Label2 = New Telerik.WinControls.UI.RadLabel()
+        Me.lblPflichtfeld11 = New Telerik.WinControls.UI.RadLabel()
+        Me.lblPflichtfeld1 = New Telerik.WinControls.UI.RadLabel()
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
         Me.RadLabel92 = New Telerik.WinControls.UI.RadLabel()
         Me.RadLabel91 = New Telerik.WinControls.UI.RadLabel()
@@ -2356,26 +2357,26 @@ Partial Class uco_3Kompatiblititaetsnachweis
     Friend WithEvents PictureBox11 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox10 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox9 As System.Windows.Forms.PictureBox
-    Friend WithEvents lblPflichtfeld11 As System.Windows.Forms.Label
-    Friend WithEvents lblPflichtfeld1 As System.Windows.Forms.Label
-    Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label13 As System.Windows.Forms.Label
-    Friend WithEvents Label14 As System.Windows.Forms.Label
-    Friend WithEvents Label11 As System.Windows.Forms.Label
-    Friend WithEvents Label12 As System.Windows.Forms.Label
-    Friend WithEvents lblPflichtfeld6 As System.Windows.Forms.Label
-    Friend WithEvents lblPflichtfeld4 As System.Windows.Forms.Label
-    Friend WithEvents lblPflichtfeld2 As System.Windows.Forms.Label
-    Friend WithEvents lblPflichtfeld5 As System.Windows.Forms.Label
-    Friend WithEvents lblPflichtfeld3 As System.Windows.Forms.Label
+    Friend WithEvents lblPflichtfeld11 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents lblPflichtfeld1 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label10 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label8 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label6 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label9 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label5 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label7 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label4 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label3 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label2 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label13 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label14 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label11 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents Label12 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents lblPflichtfeld6 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents lblPflichtfeld4 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents lblPflichtfeld2 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents lblPflichtfeld5 As Telerik.WinControls.UI.RadLabel
+    Friend WithEvents lblPflichtfeld3 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadLabel1 As Telerik.WinControls.UI.RadLabel
     Friend WithEvents RadTextBoxControlWZHoechstteilungsfaktorAufgedruckt As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadButton1 As Telerik.WinControls.UI.RadButton

@@ -170,7 +170,7 @@ Public Class ucoAmpel
     Public Sub FindeElementUndSelektiere(ByVal pStatus As GlobaleEnumeratoren.enuEichprozessStatus)
         Try
             'prüfen ob das aktuelle element welchse das Event triggert bereits fokusiert ist, wenn ja => überspringen
-            Dim ListItemTmp = (From raditem In RadListView1.Items Where raditem.Value = pStatus And raditem.Selected = True).FirstOrDefault
+            Dim ListItemTmp = (From raditem In RadListView1.Items Where  IsNumeric(raditem.Value) And raditem.Value = pStatus And raditem.Visible = True And raditem.Selected = True).FirstOrDefault
             If Not ListItemTmp Is Nothing Then 'es ist markiert/fokusiert => abbruch
                 Exit Sub
             Else

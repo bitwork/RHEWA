@@ -1,6 +1,7 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class frmDBSync
-    Inherits System.Windows.Forms.Form
+
+    Inherits Telerik.WinControls.UI.RadForm
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _
@@ -23,23 +24,25 @@ Partial Class frmDBSync
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.RadioButtonSyncStratoRHEWA = New System.Windows.Forms.RadioButton()
-        Me.RadioButtonSyncRHEWAStrato = New System.Windows.Forms.RadioButton()
+        Me.RadioButtonSyncStratoRHEWA = New Telerik.WinControls.UI.RadRadioButton()
+        Me.RadioButtonSyncRHEWAStrato = New Telerik.WinControls.UI.RadRadioButton()
         Me.RadWaitingBar1 = New Telerik.WinControls.UI.RadWaitingBar()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-        Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.SplitContainer1 = New Telerik.WinControls.UI.RadSplitContainer()
+
+        Dim SplitContainer1Panel1 as new Telerik.WinControls.UI.SplitPanel()
+        Dim SplitContainer1Panel2 as new Telerik.WinControls.UI.SplitPanel()
+        SplitContainer1.Controls.AddRange(new System.Windows.Forms.Control() {
+        SplitContainer1Panel1, SplitContainer1Panel2})
         Me.RadGroupBox1 = New Telerik.WinControls.UI.RadGroupBox()
-        Me.RadListControlLog = New System.Windows.Forms.TextBox()
+        Me.RadListControlLog = New Telerik.WinControls.UI.RadTextBox()
         Me.RadGroupBox2 = New Telerik.WinControls.UI.RadGroupBox()
-        Me.RadListControlSQLQuery = New System.Windows.Forms.TextBox()
+        Me.RadListControlSQLQuery = New Telerik.WinControls.UI.RadTextBox()
         Me.TimerLog = New System.Windows.Forms.Timer(Me.components)
         Me.ButtonSync = New Telerik.WinControls.UI.RadButton()
-        Me.RadioButtonSyncStratoDEV = New System.Windows.Forms.RadioButton()
+        Me.RadioButtonSyncStratoDEV = New Telerik.WinControls.UI.RadRadioButton()
         CType(Me.RadWaitingBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SplitContainer1.Panel1.SuspendLayout()
-        Me.SplitContainer1.Panel2.SuspendLayout()
-        Me.SplitContainer1.SuspendLayout()
         CType(Me.RadGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBox1.SuspendLayout()
         CType(Me.RadGroupBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -50,13 +53,12 @@ Partial Class frmDBSync
         'RadioButtonSyncStratoRHEWA
         '
         Me.RadioButtonSyncStratoRHEWA.AutoSize = True
-        Me.RadioButtonSyncStratoRHEWA.Checked = True
+        Me.RadioButtonSyncStratoRHEWA.IsChecked = True
         Me.RadioButtonSyncStratoRHEWA.Location = New System.Drawing.Point(13, 13)
         Me.RadioButtonSyncStratoRHEWA.Name = "RadioButtonSyncStratoRHEWA"
         Me.RadioButtonSyncStratoRHEWA.Size = New System.Drawing.Size(211, 17)
         Me.RadioButtonSyncStratoRHEWA.TabIndex = 0
         Me.RadioButtonSyncStratoRHEWA.Text = "Sync von Strato zu RHEWA (Standard)"
-        Me.RadioButtonSyncStratoRHEWA.UseVisualStyleBackColor = True
         '
         'RadioButtonSyncRHEWAStrato
         '
@@ -66,7 +68,6 @@ Partial Class frmDBSync
         Me.RadioButtonSyncRHEWAStrato.Size = New System.Drawing.Size(318, 17)
         Me.RadioButtonSyncRHEWAStrato.TabIndex = 1
         Me.RadioButtonSyncRHEWAStrato.Text = "Sync von RHEWA zu Strato (Nach Ausfall des Strato Servers)"
-        Me.RadioButtonSyncRHEWAStrato.UseVisualStyleBackColor = True
         '
         'RadWaitingBar1
         '
@@ -88,14 +89,8 @@ Partial Class frmDBSync
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.SplitContainer1.Location = New System.Drawing.Point(13, 114)
         Me.SplitContainer1.Name = "SplitContainer1"
-        '
-        'SplitContainer1.Panel1
-        '
-        Me.SplitContainer1.Panel1.Controls.Add(Me.RadGroupBox1)
-        '
-        'SplitContainer1.Panel2
-        '
-        Me.SplitContainer1.Panel2.Controls.Add(Me.RadGroupBox2)
+        SplitContainer1Panel1.Controls.Add(Me.RadGroupBox1)
+        SplitContainer1Panel2.Controls.Add(Me.RadGroupBox2)
         Me.SplitContainer1.Size = New System.Drawing.Size(756, 378)
         Me.SplitContainer1.SplitterDistance = 366
         Me.SplitContainer1.TabIndex = 6
@@ -172,7 +167,6 @@ Partial Class frmDBSync
         Me.RadioButtonSyncStratoDEV.Size = New System.Drawing.Size(140, 17)
         Me.RadioButtonSyncStratoDEV.TabIndex = 7
         Me.RadioButtonSyncStratoDEV.Text = "Sync von Strato zu DEV"
-        Me.RadioButtonSyncStratoDEV.UseVisualStyleBackColor = True
         '
         'frmDBSync
         '
@@ -189,10 +183,7 @@ Partial Class frmDBSync
         Me.Name = "frmDBSync"
         Me.Text = "DB Sync"
         CType(Me.RadWaitingBar1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.SplitContainer1.Panel1.ResumeLayout(False)
-        Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.SplitContainer1.ResumeLayout(False)
         CType(Me.RadGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBox1.ResumeLayout(False)
         Me.RadGroupBox1.PerformLayout()
@@ -204,17 +195,17 @@ Partial Class frmDBSync
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents RadioButtonSyncStratoRHEWA As System.Windows.Forms.RadioButton
-    Friend WithEvents RadioButtonSyncRHEWAStrato As System.Windows.Forms.RadioButton
+    Friend WithEvents RadioButtonSyncStratoRHEWA As Telerik.WinControls.UI.RadRadioButton
+    Friend WithEvents RadioButtonSyncRHEWAStrato As Telerik.WinControls.UI.RadRadioButton
     Friend WithEvents RadWaitingBar1 As Telerik.WinControls.UI.RadWaitingBar
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
-    Friend WithEvents SplitContainer1 As System.Windows.Forms.SplitContainer
-    Friend WithEvents RadListControlSQLQuery As System.Windows.Forms.TextBox
-    Friend WithEvents RadListControlLog As System.Windows.Forms.TextBox
+    Friend WithEvents SplitContainer1 As Telerik.WinControls.UI.RadSplitContainer
+    Friend WithEvents RadListControlSQLQuery As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadListControlLog As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents TimerLog As System.Windows.Forms.Timer
     Friend WithEvents RadGroupBox1 As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents RadGroupBox2 As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents ButtonSync As Telerik.WinControls.UI.RadButton
-    Friend WithEvents RadioButtonSyncStratoDEV As System.Windows.Forms.RadioButton
+    Friend WithEvents RadioButtonSyncStratoDEV As Telerik.WinControls.UI.RadRadioButton
 
 End Class
