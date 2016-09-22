@@ -30,7 +30,35 @@ Public Class uco_6EichprotokollVerfahrenswahl
     ''' </summary>
     ''' <returns></returns>
     Protected Friend Overrides Function ValidationNeeded() As Boolean
-        Return True
+        Return ValidateControls()
+    End Function
+
+    ''' <summary>
+    ''' Gültigkeit der Eingaben überprüfen
+    ''' </summary>
+    ''' <remarks></remarks>
+    ''' <author></author>
+    ''' <commentauthor></commentauthor>
+    Private Function ValidateControls() As Boolean
+        'prüfen ob alle Felder ausgefüllt sind
+        Me.AbortSaving = False
+        If RadRadioButtonFahrzeugwaagen.IsChecked Or RadRadioButtonNormalien.IsChecked Or RadRadioButtonStaffelverfahren.IsChecked Then
+            Return True
+        Else
+            AbortSaving = True
+            'fehlermeldung anzeigen bei falscher validierung
+            Dim result = Me.ShowValidationErrorBox(True)
+
+            If result = DialogResult.Yes Or result = DialogResult.Ignore Then
+                Return True
+            ElseIf result = DialogResult.Retry Then
+                Me.RadRadioButtonNormalien.IsChecked = true
+                Return True
+            Else
+                Return False
+            End If
+            Return False
+        End If
     End Function
     Private Sub ucoBeschaffenheitspruefung_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         _suspendEvents = True
@@ -89,9 +117,9 @@ Public Class uco_6EichprotokollVerfahrenswahl
                 RadRadioButtonNormalien.IsChecked = True
             ElseIf _objEichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgimStaffelverfahren Then
                 RadRadioButtonStaffelverfahren.IsChecked = True
-            Else
-                RadRadioButtonNormalien.IsChecked = True
-                _objEichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgmitNormalien
+                'Else
+                '    RadRadioButtonNormalien.IsChecked = True
+                '    _objEichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgmitNormalien
             End If
         End If
 
@@ -122,13 +150,13 @@ Public Class uco_6EichprotokollVerfahrenswahl
                 End If
         End Select
 
-        If bolLock Then
-            '  objEichprozess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgmitNormalien
-            RadRadioButtonNormalien.IsChecked = True
-        Else
-            '    objEichprozess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgimStaffelverfahren
-            RadRadioButtonStaffelverfahren.IsChecked = True
-        End If
+        'If bolLock Then
+        '    '  objEichprozess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgmitNormalien
+        '    RadRadioButtonNormalien.IsChecked = True
+        'Else
+        '    '    objEichprozess.Eichprotokoll.FK_Identifikationsdaten_Konformitaetsbewertungsverfahren = GlobaleEnumeratoren.enuVerfahrensauswahl.ueber60kgimStaffelverfahren
+        '    RadRadioButtonStaffelverfahren.IsChecked = True
+        'End If
 
         RadRadioButtonFahrzeugwaagen.Enabled = Not bolLock
         RadRadioButtonStaffelverfahren.Enabled = Not bolLock
@@ -202,53 +230,55 @@ Public Class uco_6EichprotokollVerfahrenswahl
                 ParentFormular.CurrentEichprozess = objEichprozess
                 Exit Sub
             End If
-            Using Context As New EichsoftwareClientdatabaseEntities1
+            If ValidateControls() = True Then
 
-                If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
+                Using Context As New EichsoftwareClientdatabaseEntities1
 
-                    If _objEichprotokoll Is Nothing Then           'neues Eichprotokoll anlegen und verfahrens Art zuweisen
-                        _objEichprotokoll = Context.Eichprotokoll.Create
-                        Context.Eichprotokoll.Add(_objEichprotokoll)
+                    If objEichprozess.ID <> 0 Then 'an dieser stelle muss eine ID existieren
 
-                    Else
-                        Dim dobjEichprotkoll As Eichprotokoll = Context.Eichprotokoll.FirstOrDefault(Function(value) value.ID = _objEichprotokoll.ID)
-                        _objEichprotokoll = dobjEichprotkoll
-                    End If
+                        If _objEichprotokoll Is Nothing Then           'neues Eichprotokoll anlegen und verfahrens Art zuweisen
+                            _objEichprotokoll = Context.Eichprotokoll.Create
+                            Context.Eichprotokoll.Add(_objEichprotokoll)
 
-                    'Füllt das Objekt mit den Werten aus den Steuerlementen
-                    UpdateObject()
-                    'Speichern in Datenbank
-                    Context.SaveChanges()
-
-                    'zuweisen des eichprotokolls an den eichprozess
-
-                    'prüfen ob das Objekt anhand der ID gefunden werden kann
-                    Dim dobjEichprozess As Eichprozess = Context.Eichprozess.FirstOrDefault(Function(value) value.Vorgangsnummer = objEichprozess.Vorgangsnummer)
-                    If Not dobjEichprozess Is Nothing Then
-                        'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
-                        objEichprozess = dobjEichprozess
-                        objEichprozess.FK_Eichprotokoll = _objEichprotokoll.ID 'zuweisen des eichprotokolls an den eichprozess
-                        objEichprozess.Eichprotokoll = _objEichprotokoll
-                        'neuen Status zuweisen
-                        If AktuellerStatusDirty = False Then
-                            If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.EichprotokollStammdaten Then
-                                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.EichprotokollStammdaten
-                            End If
-                        ElseIf AktuellerStatusDirty = True Then
-                            objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.EichprotokollStammdaten
+                        Else
+                            Dim dobjEichprotkoll As Eichprotokoll = Context.Eichprotokoll.FirstOrDefault(Function(value) value.ID = _objEichprotokoll.ID)
+                            _objEichprotokoll = dobjEichprotkoll
                         End If
-                        ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
 
                         'Füllt das Objekt mit den Werten aus den Steuerlementen
                         UpdateObject()
                         'Speichern in Datenbank
                         Context.SaveChanges()
 
-                    End If
-                End If
-            End Using
+                        'zuweisen des eichprotokolls an den eichprozess
 
-            ParentFormular.CurrentEichprozess = objEichprozess
+                        'prüfen ob das Objekt anhand der ID gefunden werden kann
+                        Dim dobjEichprozess As Eichprozess = Context.Eichprozess.FirstOrDefault(Function(value) value.Vorgangsnummer = objEichprozess.Vorgangsnummer)
+                        If Not dobjEichprozess Is Nothing Then
+                            'lokale Variable mit Instanz aus DB überschreiben. Dies ist notwendig, damit das Entity Framework weiß, das ein Update vorgenommen werden muss.
+                            objEichprozess = dobjEichprozess
+                            objEichprozess.FK_Eichprotokoll = _objEichprotokoll.ID 'zuweisen des eichprotokolls an den eichprozess
+                            objEichprozess.Eichprotokoll = _objEichprotokoll
+                            'neuen Status zuweisen
+                            If AktuellerStatusDirty = False Then
+                                If objEichprozess.FK_Vorgangsstatus < GlobaleEnumeratoren.enuEichprozessStatus.EichprotokollStammdaten Then
+                                    objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.EichprotokollStammdaten
+                                End If
+                            ElseIf AktuellerStatusDirty = True Then
+                                objEichprozess.FK_Vorgangsstatus = GlobaleEnumeratoren.enuEichprozessStatus.EichprotokollStammdaten
+                            End If
+                            ' Wenn der aktuelle Status kleiner ist als der für die Beschaffenheitspruefung, wird dieser überschrieben. Sonst würde ein aktuellere Status mit dem vorherigen überschrieben
+
+                            'Füllt das Objekt mit den Werten aus den Steuerlementen
+                            UpdateObject()
+                            'Speichern in Datenbank
+                            Context.SaveChanges()
+
+                        End If
+                    End If
+                End Using
+                ParentFormular.CurrentEichprozess = objEichprozess
+            End If
         End If
     End Sub
 

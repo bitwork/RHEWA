@@ -33,20 +33,21 @@ Partial Class uco_6EichprotokollVerfahrenswahl
         '
         'RadRadioButtonNormalien
         '
-        Me.RadRadioButtonNormalien.CheckState = System.Windows.Forms.CheckState.Checked
         resources.ApplyResources(Me.RadRadioButtonNormalien, "RadRadioButtonNormalien")
         Me.RadRadioButtonNormalien.Name = "RadRadioButtonNormalien"
-        Me.RadRadioButtonNormalien.ToggleState = Telerik.WinControls.Enumerations.ToggleState.[On]
+        Me.RadRadioButtonNormalien.TabStop = False
         '
         'RadRadioButtonStaffelverfahren
         '
         resources.ApplyResources(Me.RadRadioButtonStaffelverfahren, "RadRadioButtonStaffelverfahren")
         Me.RadRadioButtonStaffelverfahren.Name = "RadRadioButtonStaffelverfahren"
+        Me.RadRadioButtonStaffelverfahren.TabStop = False
         '
         'RadRadioButtonFahrzeugwaagen
         '
         resources.ApplyResources(Me.RadRadioButtonFahrzeugwaagen, "RadRadioButtonFahrzeugwaagen")
         Me.RadRadioButtonFahrzeugwaagen.Name = "RadRadioButtonFahrzeugwaagen"
+        Me.RadRadioButtonFahrzeugwaagen.TabStop = False
         '
         'uco_6EichprotokollVerfahrenswahl
         '
