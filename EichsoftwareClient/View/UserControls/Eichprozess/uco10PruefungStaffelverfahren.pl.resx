@@ -903,7 +903,7 @@
     <value>36, 32</value>
   </data>
   <data name="lblStaffel1Bereich3Last.Text" xml:space="preserve">
-    <value>&lt;html&gt;Obcią-&lt;br /&gt;żenie&lt;/html&gt;</value>
+    <value>Obciążenie [kg]</value>
   </data>
   <data name="RadGroupBoxStaffel1Bereich3.HeaderText" xml:space="preserve">
     <value>Zakres 3</value>
@@ -940,7 +940,7 @@
     <value>36, 32</value>
   </data>
   <data name="lblStaffel1Bereich2Last.Text" xml:space="preserve">
-    <value>&lt;html&gt;Obcią-&lt;br /&gt;żenie&lt;/html&gt;</value>
+    <value>Obciążenie [kg]</value>
   </data>
   <data name="RadGroupBoxStaffel1Bereich2.HeaderText" xml:space="preserve">
     <value>Zakres 2</value>
@@ -986,7 +986,7 @@
     <value>36, 32</value>
   </data>
   <data name="lblStaffel1Bereich1Last.Text" xml:space="preserve">
-    <value>&lt;html&gt;Obcią-&lt;br /&gt;żenie&lt;/html&gt;</value>
+    <value>Obciążenie [kg]</value>
   </data>
   <data name="RadGroupBoxStaffel1Bereich1.HeaderText" xml:space="preserve">
     <value>Zakres 1</value>

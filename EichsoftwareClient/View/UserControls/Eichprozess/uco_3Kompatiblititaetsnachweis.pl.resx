@@ -239,21 +239,93 @@
     <value>Granice zakresu temperatury</value>
   </data>
   <data name="RadGroupBoxVerbindungselemente.HeaderText" xml:space="preserve">
-    <value>      83 plus          ges. 87 Ohm</value>
+    <value>Elementy złączne</value>
   </data>
   <data name="RadGroupBoxVerbindungselemente.Text" xml:space="preserve">
-    <value>      83 Z              ges. 35 Ohm</value>
+    <value>Elementy złączne</value>
   </data>
   <data name="RadGroupBoxWZ.HeaderText" xml:space="preserve">
-    <value>Czujnik(i) tensometryczny(e)</value>
+    <value>Czujnik(i) tensometryczny (e )</value>
   </data>
   <data name="RadGroupBoxWZ.Text" xml:space="preserve">
-    <value>Czujnik(i) tensometryczny(e)</value>
+    <value>Czujnik(i) tensometryczny (e )</value>
   </data>
   <data name="lblWZWaegezellenkennwert.Text" xml:space="preserve">
-    <value>Wartość znamionowa czujnika</value>
+    <value>Wartość znamionowa czujnika tensometrycznego</value>
   </data>
   <data name="lblWZWiderstandWZ.Text" xml:space="preserve">
-    <value>Opór (pojedyńczego) czujnika</value>
+    <value>Opór (pojedyńczego) czujnika tensometrycznego</value>
+  </data>
+  <data name="lblAWGWiderstand.Text" xml:space="preserve">
+    <value>Wartości graniczne opornika obciążającego</value>
+  </data>
+  <data name="lblAWGmaxAnzahlTeilungswerte.Text" xml:space="preserve">
+    <value>Największa dopuszczalna ilość wartości podziałki</value>
+  </data>
+  <data name="lblWZTeilungswerte.Text" xml:space="preserve">
+    <value>Największa dopuszczalna ilość wartości podziałki</value>
+  </data>
+  <data name="lblWZHoechstlast.Text" xml:space="preserve">
+    <value>Obciążenie maksymalne (obciążenie nominalne)</value>
+  </data>
+  <data name="lblWIMaxCap.Text" xml:space="preserve">
+    <value>Obciążenie maksymalne</value>
+  </data>
+  <data name="lblWZHoechstteilungswert.Text" xml:space="preserve">
+    <value>Największy współczynnik podziałkowy</value>
+  </data>
+  <data name="lblKabellaenge.Text" xml:space="preserve">
+    <value>Długość kabla</value>
+  </data>
+  <data name="lblKabelquerschnitt.Text" xml:space="preserve">
+    <value>Przekrój kabla</value>
+  </data>
+  <data name="lblAWGKlasse2.Text" xml:space="preserve">
+    <value>Klasa</value>
+  </data>
+  <data name="lblWaageKlasse2.Text" xml:space="preserve">
+    <value>Klasa</value>
+  </data>
+  <data name="lblWZKlasse2.Text" xml:space="preserve">
+    <value>Klasa</value>
+  </data>
+  <data name="lblWZMinTeilungswert.Text" xml:space="preserve">
+    <value>Najmniejsza dopuszyczalna wartość podziałki lub</value>
+  </data>
+  <data name="lblwzKriechteilungsfaktor.Text" xml:space="preserve">
+    <value>Współczynnik podziałki pełzającej lub</value>
+  </data>
+  <data name="lblKabel.Text" xml:space="preserve">
+    <value>Przewód</value>
+  </data>
+  <data name="lblAWGKabellaenge.Text" xml:space="preserve">
+    <value>max. długość lub przekrój kabla </value>
+  </data>
+  <data name="lblAWGMindesteingangsspannung.Text" xml:space="preserve">
+    <value>Najmniejsze napięcie wejściowe miernika</value>
+  </data>
+  <data name="lblAWGMinMessSignal.Text" xml:space="preserve">
+    <value>Najmniejszy sygnał pomiarowy na jedną wartość legaluzacyjną</value>
+  </data>
+  <data name="lblWZMindestvorlast.Text" xml:space="preserve">
+    <value>Najmniejsze obciążenie wstępne</value>
+  </data>
+  <data name="lblWZRueckkehrVorlastsignal.Text" xml:space="preserve">
+    <value>Powrót sygnału obciążenia wstępnego</value>
+  </data>
+  <data name="lblAWGSpeisespannung.Text" xml:space="preserve">
+    <value>Napięcie zasilające dla czujnika(ów)</value>
+  </data>
+  <data name="lbltotlast.Text" xml:space="preserve">
+    <value>Ciężar własny</value>
+  </data>
+  <data name="lblUebersetzung.Text" xml:space="preserve">
+    <value>Przełożenie</value>
+  </data>
+  <data name="RadGroupBoxWaage.HeaderText" xml:space="preserve">
+    <value>Waga (nieautomatyczna)</value>
+  </data>
+  <data name="RadGroupBoxWaage.Text" xml:space="preserve">
+    <value>Waga (nieautomatyczna)</value>
   </data>
 </root>

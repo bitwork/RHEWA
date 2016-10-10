@@ -154,10 +154,12 @@
 </value>
   </data>
   <data name="RadGroupBoxBeschaffenheitspruefungNormalien.HeaderText" xml:space="preserve">
-    <value>Untere Grenze für die an das Auswertegerät anschließbaren Lastwiderstände</value>
+    <value>Zastosowane wzorce
+</value>
   </data>
   <data name="RadGroupBoxBeschaffenheitspruefungNormalien.Text" xml:space="preserve">
-    <value>Erläuterung zu Lastwiderstand:</value>
+    <value>Zastosowane wzorce
+</value>
   </data>
   <data name="RadCheckBoxAnzeigen.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 143</value>
@@ -175,7 +177,7 @@
     <value>429, 18</value>
   </data>
   <data name="RadCheckBoxKompatiblitaetsnachweisVorhanden.Text" xml:space="preserve">
-    <value>Czy istnieje dowód kompatybilności?					
+    <value>Czy istnieje świadectwo kompatybilności?					
 </value>
   </data>
   <data name="RadCheckBoxAufstellungsbedingungen.Text" xml:space="preserve">
@@ -183,14 +185,14 @@
 </value>
   </data>
   <data name="RadCheckBoxZulassungsunterlagen.Text" xml:space="preserve">
-    <value>Czy są dostępne dokumenty zatwierdzenia w formie pisemnej ?					
+    <value>Czy dokumenty zatwierdzenia są dostępne w formie czytelnej?					
 </value>
   </data>
   <data name="RadCheckBoxMesstechnischeMerkmale.Size" type="System.Drawing.Size, System.Drawing">
     <value>426, 35</value>
   </data>
   <data name="RadCheckBoxMesstechnischeMerkmale.Text" xml:space="preserve">
-    <value>&lt;html&gt;Czy cechy metrologiczne (klasa, min, maks, e oraz d) są w porządku?&lt;/html&gt;</value>
+    <value>Czy cechy metrologiczne (klasa, min, maks, e oraz d) są w porządku?</value>
   </data>
   <data name="RadCheckBoxAufschriften.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 119</value>
@@ -222,13 +224,14 @@
     <value>77, 18</value>
   </data>
   <data name="RadRadioButtonHandTara.Text" xml:space="preserve">
-    <value>Tara ręczna</value>
+    <value>półautomatycznie	
+</value>
   </data>
   <data name="RadRadioButtonAutoTara.Size" type="System.Drawing.Size, System.Drawing">
     <value>69, 18</value>
   </data>
   <data name="RadRadioButtonAutoTara.Text" xml:space="preserve">
-    <value>Auto Tara</value>
+    <value>automatycznie</value>
   </data>
   <data name="RadGroupBoxVerwendungszweckTara.HeaderText" xml:space="preserve">
     <value>Urządzenia tary		
@@ -456,7 +459,9 @@
     <value>211, 28</value>
   </data>
   <data name="RadCheckBoxVolleNormallast.Text" xml:space="preserve">
-    <value>Näherungsweise kleinstmöglicher Eingangswiderstand der einzelnen (parallelgeschalteten) Wägezelle(n) bzw. näherungsweise größtmöglicher Eingangswiderstand der Wägezelle(n)</value>
+    <value>Pełne obciążenie wzorcowe
+
+</value>
   </data>
   <data name="RadGroupBoxPruefverfahren.HeaderText" xml:space="preserve">
     <value>1. Procedura badania
@@ -533,5 +538,26 @@
   <data name="lblGenauigkeitsklasse.Text" xml:space="preserve">
     <value>Klasa dokładności		
 </value>
+  </data>
+  <data name="RadCheckBoxHalbSelbsteinspielend.Text" xml:space="preserve">
+    <value>pół-/somozgrywająca:</value>
+  </data>
+  <data name="RadCheckBoxHybridMechWaage.Text" xml:space="preserve">
+    <value>Waga  mech. / hybrydowa:</value>
+  </data>
+  <data name="RadTextBoxControlNormalienPruefintervall.Text" xml:space="preserve">
+    <value>rocznie</value>
+  </data>
+  <data name="RadCheckBoxMehrbereichswaage.Text" xml:space="preserve">
+    <value>Waga wielozakresowa:</value>
+  </data>
+  <data name="RadCheckBoxMehrteilungswaage.Text" xml:space="preserve">
+    <value>Waga wielopodziałkowa:</value>
+  </data>
+  <data name="RadCheckBoxNichtselbsteinspielend.Text" xml:space="preserve">
+    <value>niesamowgrywający:</value>
+  </data>
+  <data name="lblPruefer.Text" xml:space="preserve">
+    <value>Kontroler:</value>
   </data>
 </root>

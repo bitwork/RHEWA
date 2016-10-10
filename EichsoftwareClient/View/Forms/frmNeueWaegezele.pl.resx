@@ -126,4 +126,16 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Wprowadzenie nowego czujnika tensometrycznego.</value>
   </data>
+  <data name="RadLabel4.Text" xml:space="preserve">
+    <value>Producent</value>
+  </data>
+  <data name="RadLabel2.Text" xml:space="preserve">
+    <value>lub dopuszczenie sposobu budowy:</value>
+  </data>
+  <data name="RadButtonSpeichern.Text" xml:space="preserve">
+    <value>Zapisz</value>
+  </data>
+  <data name="RadLabel1.Text" xml:space="preserve">
+    <value>Typ</value>
+  </data>
 </root>

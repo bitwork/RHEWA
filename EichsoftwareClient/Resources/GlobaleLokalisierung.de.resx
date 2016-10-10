@@ -237,7 +237,8 @@ Auswertegerät    83Z            12V
 Auswertegerät    82a,b,c,e    5V</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_AWGTeilungswerte" xml:space="preserve">
-    <value>&lt;html&gt;&lt;p&gt;&lt;strong&gt;Größte zulässige Anzahl der Teilungswerte des Größte  Anzahl der Eichwerte des Auswertegerätes&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;                          Einbereichswaage           2-3 Bereichswaage                                   &lt;br /&gt;Genauigkeits-&lt;br /&gt;klasse                    III               IV                  III            IV &lt;br /&gt;Gerät&lt;br /&gt;83+/83Z/84        10000          1000              3000        1000&lt;br /&gt;82a,b,c,e            10000          1000              6000        1000&lt;/p&gt;&lt;p&gt;Auswertegerätes&lt;br /&gt;Die maximale Anzahl nind der Teilungswerte für das Auswertegerät darf nicht kleiner sein als die Anzahl der Eichwerte der Waage n = Max/e. Bei Mehrbereichs- und Mehrteilungswaagen gilt dies für jeden einzelnen Wägebereich i.&lt;/p&gt;&lt;/html&gt;</value>
+    <value>&lt;html&gt;&lt;p&gt;&lt;strong&gt;Größte zulässige Anzahl der Teilungswerte des Größte  Anzahl der Eichwerte des Auswertegerätes&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;                          Einbereichswaage           2-3 Bereichswaage                                   &lt;br /&gt;Genauigkeits-&lt;br /&gt;klasse                    III               IV                  III            IV &lt;br /&gt;Gerät&lt;br /&gt;83+/83Z/84        10000          1000              3000        1000&lt;br /&gt;82a,b,c,e            10000          1000              6000        1000&lt;/p&gt;&lt;p&gt;Auswertegerätes&lt;br /&gt;
+Die maximale Anzahl nind der Teilungswerte für das Auswertegerät darf nicht kleiner sein als die Anzahl der Eichwerte der Waage n = Max/e. Bei Mehrbereichs- und Mehrteilungswaagen gilt dies für jeden einzelnen Wägebereich i.&lt;/p&gt;&lt;/html&gt;</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_AWGTemperaturbereichMax" xml:space="preserve">
     <value>Obere Grenze des Bereichs für die Umgebungstemperatur, wobei die zulässigen Temperaturbereiche der Wägezelle(n) und des Auswertegeräts den Temperaturbereich der Waage überdecken müssen.</value>
@@ -476,7 +477,7 @@ der Wägezelle(n) und des Auswertegeräts den Temperaturbereich der Waage überd
 Eingangswiderstand einer Wägezelle.
 Es sind ggf. N Wägezellen parallel geschaltet.
 RLC / N muß innerhalb der Grenzen für die an das Auswertegerät anschließbaren Lastwiderstände liegen.
-
+muss zwischen dem zugelassenen minimalen und maximalen Lastwiderstand des Auswertegerätes liegen.
 
 Type     C            Y              Z        E min      C        R LC
 1022       3         10000                        0          2         415

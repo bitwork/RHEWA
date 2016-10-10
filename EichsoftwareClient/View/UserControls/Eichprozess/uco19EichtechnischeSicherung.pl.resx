@@ -128,13 +128,13 @@
     <value>175, 18</value>
   </data>
   <data name="lblEichsiegel13x13.Text" xml:space="preserve">
-    <value>Naklejka "Cecha legalizacji" 13x13</value>
+    <value>Naklejka zabezpieczająca "Cecha legalizacji" 13x13</value>
   </data>
   <data name="lblEichsiegelRund.Size" type="System.Drawing.Size, System.Drawing">
     <value>183, 18</value>
   </data>
   <data name="lblEichsiegelRund.Text" xml:space="preserve">
-    <value>Naklejka "Cecha legalizacji" okrągła</value>
+    <value>Naklejka zabezpieczająca "Cecha legalizacji" okrągła</value>
   </data>
   <data name="lblHinweismarke.Size" type="System.Drawing.Size, System.Drawing">
     <value>202, 18</value>
@@ -183,5 +183,8 @@
   </data>
   <data name="lblGruenesM.Text" xml:space="preserve">
     <value>Zielone "M"</value>
+  </data>
+  <data name="lblCE2016Kennzeichen.Text" xml:space="preserve">
+    <value>Naklejka CE, Mxx, "Jednostka notyfikowana 0111"</value>
   </data>
 </root>

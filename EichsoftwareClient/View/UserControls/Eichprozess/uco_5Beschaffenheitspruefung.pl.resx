@@ -313,11 +313,11 @@
     <value>Sprawdziłem wszystkie wyżej wymienione kryteria. Wszystkie kryteria są spełnione.</value>
   </data>
   <data name="RadGroupBoxAufstellbedingungen.HeaderText" xml:space="preserve">
-    <value>Kriterien für den Aufstellungsort (EN):									
+    <value>Kryteria dla miejsca instalacji wagi:									
 </value>
   </data>
   <data name="RadGroupBoxAufstellbedingungen.Text" xml:space="preserve">
-    <value>Kriterien für den Aufstellungsort (EN):									
+    <value>Kryteria dla miejsca instalacji wagi:									
 </value>
   </data>
 </root>

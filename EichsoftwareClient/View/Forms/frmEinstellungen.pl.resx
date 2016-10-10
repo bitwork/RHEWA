@@ -131,4 +131,28 @@ Aby synchronizować określony okres czasu, można wybrać datę początku i ko�
 
 Dane nie zostaną skasowane. Po wybraniu "Synchronizuj wszystko", zostaną wszystkie dane zpowrotem załadowane z RHEWA na Pański Client.</value>
   </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Konfiguracja</value>
+  </data>
+  <data name="RadButtonOK.Text" xml:space="preserve">
+    <value>Zapisz</value>
+  </data>
+  <data name="RadRadioButtonSyncAlles.Text" xml:space="preserve">
+    <value>Wszystko synchronizować</value>
+  </data>
+  <data name="RadRadioButtonSyncSeit.Text" xml:space="preserve">
+    <value>Wszystko synchronizować od</value>
+  </data>
+  <data name="RadRadioButtonSyncZwischen.Text" xml:space="preserve">
+    <value>Wszystko synchronizować między</value>
+  </data>
+  <data name="RadGroupBox1.HeaderText" xml:space="preserve">
+    <value>Ustawienia synchronizacji</value>
+  </data>
+  <data name="RadGroupBox1.Text" xml:space="preserve">
+    <value>Ustawienia synchronizacji</value>
+  </data>
+  <data name="RadButtonGridSettingsZuruecksetzen.Text" xml:space="preserve">
+    <value>Rezetowanie formatu tabeli</value>
+  </data>
 </root>

@@ -126,4 +126,16 @@
   <data name="RadButtonOK.Text" xml:space="preserve">
     <value>OK</value>
   </data>
+  <data name="lblName.Text" xml:space="preserve">
+    <value>Numer pełnomocnika:</value>
+  </data>
+  <data name="RadCheckBoxAkzeptieren.Text" xml:space="preserve">
+    <value>Przeczytałem umowę licencyjną i potwierdzam ją</value>
+  </data>
+  <data name="lblLizenzschuessel.Text" xml:space="preserve">
+    <value>Klucz licencyjny:</value>
+  </data>
+  <data name="lblLizenzabkommen.Text" xml:space="preserve">
+    <value>Umowa licencyjna:</value>
+  </data>
 </root>

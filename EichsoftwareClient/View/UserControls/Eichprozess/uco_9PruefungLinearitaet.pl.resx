@@ -349,10 +349,10 @@
     <value>Wyświetlacz [kg]</value>
   </data>
   <data name="RadGroupBoxBereich1Fallend.HeaderText" xml:space="preserve">
-    <value>Zakres 1 spadający</value>
+    <value>Zakres 1 opadający</value>
   </data>
   <data name="RadGroupBoxBereich1Fallend.Text" xml:space="preserve">
-    <value>Zakres 1 spadający</value>
+    <value>Zakres 1 opadający</value>
   </data>
   <data name="RadGroupBoxBereich1.HeaderText" xml:space="preserve">
     <value>Zakres 1 wzrastający</value>
@@ -426,9 +426,39 @@
     <value>Błąd [kg]</value>
   </data>
   <data name="RadButtonShowEFGFallend.Text" xml:space="preserve">
-    <value>Pokarz GBL</value>
+    <value>Pokaż granicę błędu legalizacyjnego</value>
   </data>
   <data name="RadButtonShowEFGSteigend.Text" xml:space="preserve">
-    <value>Pokarz GBL</value>
+    <value>Pokaż granicę błędu legalizacyjnego</value>
+  </data>
+  <data name="lblBereich1FallendGewicht.Text" xml:space="preserve">
+    <value>Obciążenie [kg]</value>
+  </data>
+  <data name="lblBereich1Gewicht.Text" xml:space="preserve">
+    <value>Obciążenie [kg]</value>
+  </data>
+  <data name="lblBereich2FallendGewicht.Text" xml:space="preserve">
+    <value>Obciążenie [kg]</value>
+  </data>
+  <data name="lblBereich2Gewicht.Text" xml:space="preserve">
+    <value>Obciążenie [kg]</value>
+  </data>
+  <data name="lblBereich3FallendGewicht.Text" xml:space="preserve">
+    <value>Obciążenie [kg]</value>
+  </data>
+  <data name="lblBereich3Gewicht.Text" xml:space="preserve">
+    <value>Obciążenie [kg]</value>
+  </data>
+  <data name="RadGroupBoxPruefungLinearitaetFallend.HeaderText" xml:space="preserve">
+    <value>Liniowość opadająca</value>
+  </data>
+  <data name="RadGroupBoxPruefungLinearitaetFallend.Text" xml:space="preserve">
+    <value>Liniowość opadająca</value>
+  </data>
+  <data name="RadGroupBoxPruefungLinearitaetSteigend.HeaderText" xml:space="preserve">
+    <value>Liniowość wzrastająca</value>
+  </data>
+  <data name="RadGroupBoxPruefungLinearitaetSteigend.Text" xml:space="preserve">
+    <value>Liniowość wzrastająca</value>
   </data>
 </root>

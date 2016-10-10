@@ -181,9 +181,12 @@
     <value>Granice błędów legalizacyjnych</value>
   </data>
   <data name="lblVFG1.Text" xml:space="preserve">
-    <value>      82a               ges. 50 Ohm</value>
+    <value>Dopuszczalne granice w obiegu</value>
   </data>
   <data name="lblVFG2.Text" xml:space="preserve">
-    <value>      82b,c,e         ges. 40 Ohm</value>
+    <value>Dopuszczalne granice w obiegu</value>
+  </data>
+  <data name="lblVFG3.Text" xml:space="preserve">
+    <value>Dopuszczalne granice w obiegu</value>
   </data>
 </root>

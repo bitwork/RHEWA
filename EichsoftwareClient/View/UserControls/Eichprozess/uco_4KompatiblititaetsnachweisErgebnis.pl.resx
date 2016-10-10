@@ -211,10 +211,10 @@
     <value>(waga odciążona)</value>
   </data>
   <data name="RadGroupBoxPunkt9.HeaderText" xml:space="preserve">
-    <value>&lt;html&gt;(9) Porównanie rezystorów obciążających miernika i czujnika tensometrycznego w &lt;span style="font-family: symbol"&gt;W&lt;/span&gt;&lt;/html&gt;</value>
+    <value>&lt;html&gt;(9) Porównanie oporników obciążających miernika i czujnika tensometrycznego w &lt;span style="font-family: symbol"&gt;W&lt;/span&gt;&lt;/html&gt;</value>
   </data>
   <data name="RadGroupBoxPunkt9.Text" xml:space="preserve">
-    <value>&lt;html&gt;(9) Porównanie rezystorów obciążających miernika i czujnika tensometrycznego w &lt;span style="font-family: symbol"&gt;W&lt;/span&gt;&lt;/html&gt;</value>
+    <value>&lt;html&gt;(9) Porównanie oporników obciążających miernika i czujnika tensometrycznego w &lt;span style="font-family: symbol"&gt;W&lt;/span&gt;&lt;/html&gt;</value>
   </data>
   <data name="RadGroupBoxPunkt5.HeaderText" xml:space="preserve">
     <value>5) Największe obciążenie wagi nieautomatycznej i czujnika tensometrycznego</value>
@@ -238,11 +238,21 @@
     <value>równe lub lepsze niż</value>
   </data>
   <data name="lblPunkt1WZ.Text" xml:space="preserve">
-    <value>Czujnik tensometryczny
-</value>
+    <value>Czujnik tensometryczny</value>
   </data>
   <data name="lblPunkt2WZ.Text" xml:space="preserve">
-    <value>Czujnik tensometryczny
-</value>
+    <value>Czujnik tensometryczny</value>
+  </data>
+  <data name="lblPunkt8MinVol.Text" xml:space="preserve">
+    <value>Najmniejszy sygnał wejściowy w mV</value>
+  </data>
+  <data name="lblPunkt8Eingangspannung.Text" xml:space="preserve">
+    <value>Najmniejszy sygnał pomiarowy na jedną wartość legaluzacyjną w mV</value>
+  </data>
+  <data name="lblPunkt1Waage.Text" xml:space="preserve">
+    <value>Waga nieautomatyczna</value>
+  </data>
+  <data name="lblPunkt2Waage.Text" xml:space="preserve">
+    <value>Waga nieautomatyczna</value>
   </data>
 </root>

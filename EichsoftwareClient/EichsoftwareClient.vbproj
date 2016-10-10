@@ -346,10 +346,10 @@
     <Compile Include="View\Forms\frmEichfehlergrenzen.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Forms\frmMainContainer2.Designer.vb">
-      <DependentUpon>frmMainContainer2.vb</DependentUpon>
+    <Compile Include="View\Forms\frmMainContainer.Designer.vb">
+      <DependentUpon>frmMainContainer.vb</DependentUpon>
     </Compile>
-    <Compile Include="View\Forms\frmMainContainer2.vb">
+    <Compile Include="View\Forms\frmMainContainer.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -604,11 +604,17 @@
       <DependentUpon>frmEichfehlergrenzen.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Forms\frmMainContainer2.de.resx">
-      <DependentUpon>frmMainContainer2.vb</DependentUpon>
+    <EmbeddedResource Include="View\Forms\frmMainContainer.de.resx">
+      <DependentUpon>frmMainContainer.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Forms\frmMainContainer2.resx">
-      <DependentUpon>frmMainContainer2.vb</DependentUpon>
+    <EmbeddedResource Include="View\Forms\frmMainContainer.en.resx">
+      <DependentUpon>frmMainContainer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\frmMainContainer.pl.resx">
+      <DependentUpon>frmMainContainer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Forms\frmMainContainer.resx">
+      <DependentUpon>frmMainContainer.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">

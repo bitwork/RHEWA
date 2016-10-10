@@ -130,18 +130,30 @@
     <value>GBL [kg]</value>
   </data>
   <data name="RadGroupBoxBereich1.HeaderText" xml:space="preserve">
-    <value>Badanie powtarzalności z obciążeniem  ≈ 0,5 Max</value>
+    <value>Badanie powtarzalności z obciążeniem ≈ 0,5 Max</value>
   </data>
   <data name="RadGroupBoxBereich1.Text" xml:space="preserve">
-    <value>Badanie powtarzalności z obciążeniem  ≈ 0,5 Max</value>
+    <value>Badanie powtarzalności z obciążeniem ≈ 0,5 Max</value>
   </data>
   <data name="RadGroupBoxBereich2.HeaderText" xml:space="preserve">
-    <value>Badanie powtarzalności z obciążeniem  ≈  Max</value>
+    <value>Badanie powtarzalności z obciążeniem ≈ Max</value>
   </data>
   <data name="RadGroupBoxBereich2.Text" xml:space="preserve">
-    <value>Badanie powtarzalności z obciążeniem   ≈ Max</value>
+    <value>Badanie powtarzalności z obciążeniem ≈ Max</value>
   </data>
   <data name="RadButtonShowEFG2.Text" xml:space="preserve">
-    <value>Pokarz GBL</value>
+    <value>Pokaż granicę błędu legalizacyjnego</value>
+  </data>
+  <data name="lblBereich1Gewicht.Text" xml:space="preserve">
+    <value>Obciążenie [kg]</value>
+  </data>
+  <data name="lblBereich2Gewicht.Text" xml:space="preserve">
+    <value>Obciążenie [kg]</value>
+  </data>
+  <data name="RadGroupBoxPruefungAussermittigeBelastung.HeaderText" xml:space="preserve">
+    <value>Badanie powtarzalności</value>
+  </data>
+  <data name="RadGroupBoxPruefungAussermittigeBelastung.Text" xml:space="preserve">
+    <value>Badanie powtarzalności</value>
   </data>
 </root>

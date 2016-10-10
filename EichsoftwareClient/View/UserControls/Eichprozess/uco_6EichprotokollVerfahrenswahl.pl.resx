@@ -129,7 +129,7 @@
     <value>428, 18</value>
   </data>
   <data name="RadRadioButtonNormalien.Text" xml:space="preserve">
-    <value>Procedura oceny zgodności na wagach do 1000kg. Sprawdza się za pomocą norm</value>
+    <value>Procedura oceny zgodności. Badanie przeprowadza się z wzorcami</value>
   </data>
   <data name="RadRadioButtonStaffelverfahren.RootElement.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -153,6 +153,6 @@
     <value>343, 18</value>
   </data>
   <data name="RadRadioButtonFahrzeugwaagen.Text" xml:space="preserve">
-    <value>Procedura oceny zgodności na wagach dla pojazdów drogowych</value>
+    <value>Procedura oceny zgodności na wagach dla pojazdów drogowych (od 1000 kg)</value>
   </data>
 </root>

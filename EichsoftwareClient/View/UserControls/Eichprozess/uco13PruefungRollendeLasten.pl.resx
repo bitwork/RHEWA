@@ -266,9 +266,9 @@
     <value>Punkt obciążenia</value>
   </data>
   <data name="RadButton1.Text" xml:space="preserve">
-    <value>Pokarz GBL</value>
+    <value>Pokaż granicę błędu legalizacyjnego</value>
   </data>
   <data name="RadButtonShowEFG.Text" xml:space="preserve">
-    <value>Pokarz GBL</value>
+    <value>Pokaż granicę błędu legalizacyjnego</value>
   </data>
 </root>

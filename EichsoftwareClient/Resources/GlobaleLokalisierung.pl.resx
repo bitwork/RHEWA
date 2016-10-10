@@ -152,10 +152,10 @@ Wskazówki:
     <value>Lista wyboru</value>
   </data>
   <data name="Hilfe_KompatiblitaetsnachweisErgebnisHilfe" xml:space="preserve">
-    <value>Polnisch</value>
+    <value>Pomoc_Świadectwo kompatybilnościWynikPomoc</value>
   </data>
   <data name="Hilfe_KompatiblitaetsnachweisHilfe" xml:space="preserve">
-    <value>Polnisch</value>
+    <value>Pomoc_Świadectwo kompatybilnościPomoc</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_AWGAnschlussart" xml:space="preserve">
     <value>Rodzaj podłączenia czujnika tensometrycznego (technika 4- lub 6-przewodowa)
@@ -167,50 +167,52 @@ Przy zastosowaniu techniki 4-przewodowej do podłączenia czujników do miernika
 Według DIN EN 45501 Nr.3.5.4 dla miernika można wpisać pind = 0,5.</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_AWGGrenzwerteLastwiderstandMax" xml:space="preserve">
-    <value>upper limit of the impedance 
-for the load cell(s) to be supplied 
-(limitted by sensitivity against EMC)
-Indicator       83N         ges.5000 Ohm
-Indicator       83+         ges.5000 Ohm
-Indicator       83Z          ges.5000 Ohm
-Indicator       84            ges.5000 Ohm
-Indicator       82a          ges.3300 Ohm
-Indicator       82b,c,e    ges.5250 Ohm</value>
+    <value>Górna granica wartości oporowej miernika, do której mogą być podłączone oporniki obciążające: 
+Miernik       83N          cał. 5000 Ohm
+Miernik       83+           cał. 5000 Ohm
+Miernik       83Z           cał. 5000 Ohm
+Miernik       84             cał. 5000 Ohm
+Miernik       82a           cał. 3300 Ohm
+Miernik       82b,c,e    cał. 5250 Ohm 
+
+Górna granica wartości oporowej miernika do której mogą być podłączone oporniki obciążające. 
+Wyjaśnienie opornika obciążeniowego: 
+W przybliżeniu najmniejsza możliwa rezystancja wejściowa pojedynczych (połączonych równolegle) czujnika(ów) tensometrycznego(nych) lub w przybliżeniu nawiększa możliwa rezystancja wejściowa czujnika(ów) tensometrycznego(nych).
+Ogólnie może być tolerowane bez dalszego badania, że jeżeli w świadectwie badania lub w dopuszczeniu sposobu budowy dla nawiększej możliwej rezystancji wejściowej miernika podana zostanie wartość 1000 Ohm, wtedy wartość ta zostanie o 15% przekroczona.</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_AWGGrenzwerteLastwiderstandMin" xml:space="preserve">
-    <value>Dolna granica miernika do której może być podłączony opornik obciążeniowy
-      83 N             cał. 87 Ohm
-      83 plus           cał. 87 Ohm
-      83 Z              cał. 35 Ohm
-      84                cał. 44 Ohm
-      82a               cał.50 Ohm
-      82b,c,e          cał.40 Ohm
+    <value>Dolna granica wartości oporowej miernika, do której mogą być podłączone oporniki obciążające: 
+Miernik       83N          cał. 87 Ohm
+Miernik       83plus     cał. 87 Ohm
+Miernik       83Z           cał. 35 Ohm
+Miernik       84             cał. 44 Ohm
+Miernik       82a           cał. 50 Ohm
+Miernik       82b,c,e    cał. 40 Ohm 
 
-Dolna granica miernika do której może być podłączony opornik obciążeniowy
-Wyjaśnienie oporu obciążenia:
-Näherungsweise kleinstmöglicher Eingangswiderstand der einzelnen (parallelgeschalteten) Wägezelle(n) bzw. näherungsweise größtmöglicher Eingangswiderstand der Wägezelle(n)</value>
+Dolna granica wartości oporowej miernika do której mogą być podłączone oporniki obciążające. 
+Wyjaśnienie opornika obciążeniowego: 
+W przybliżeniu najmniejsza możliwa rezystancja wejściowa pojedynczych (połączonych równolegle) czujnika(ów) tensometrycznego(nych) lub w przybliżeniu nawiększa możliwa rezystancja wejściowa czujnika(ów) tensometrycznego(nych)</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_AWGKabellaenge" xml:space="preserve">
-    <value>Maximal allowed ratio of cable length per wire cross section 
+    <value>Maksymalny dopuszczalny iloraz długości lub przekroju kabla
 
-Indicator            83 N                     116 m/mm²
-Indicator            83 plus                 116 m/mm²
-Indicator            83Z                      440 m/mm²
-Indicator            84                         110 m/mm²
-Indicator            82a                       750 m/mm²
-Indicator            82b,c,e                54,2 m/mm²
+Miernik            83 N                     116 m/mm²
+Miernik            83 plus                116 m/mm²
+Miernik            83Z                       440 m/mm²
+Miernik            84                         110 m/mm²
+Miernik            82a                       750 m/mm²
+Miernik            82b,c,e                 54,2 m/mm²
 
-see comment to cross section of wire A</value>
+patrz również komentarz o przekraju kabla</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_AWGKlasse" xml:space="preserve">
-    <value>&lt;html&gt;&lt;p&gt;Accuracy class:&lt;br /&gt;The accuracy classes of NAWI, Ind  and  LCs  are compatible, if they follow table below:&lt;/p&gt;&lt;p&gt;&lt;strong&gt;         NAWI           I          II                III               IIII&lt;br /&gt;   Ind               I        I*), II          II*), III      III, IIII&lt;br /&gt;   LC                A       A*), B           B*), C          C, D&lt;/strong&gt;&lt;br /&gt; &lt;br /&gt;      *) at sufficient temperature range and evaluation of stability against &lt;br /&gt;      humidity and creep correspond to requirement in the lower &lt;br /&gt;      (more accurate) class&lt;/p&gt;&lt;/html&gt;</value>
+    <value>&lt;html&gt;Klasa dokładności&lt;br /&gt;Klasa dokładności wag nieautomatycznych, mierników i czujników tensometrycznych zgadzają się, jeżeli odpowiadają one danemu przyporządkowaniu: &lt;br /&gt;&lt;strong&gt;Waga nieautomatyczna     I          II             III               IIII&lt;br /&gt;Miernik     I       I*), II       II*), III       III, IIII&lt;br /&gt;Czujnik tensometryczny        A      A*), B        B*), C             C, D&lt;/strong&gt;&lt;br /&gt;*) przy wystarczającym zakresie temperatury i &lt;br /&gt;odpowiednich dowodach dotyczących stabilizacji&lt;br /&gt;przeciw wilgoci i pełzaniu&lt;br /&gt;&lt;/html&gt;</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_AWGMindesteingangsspannung" xml:space="preserve">
-    <value>the indicator may need a minimum input voltage at all (bias),
-if so   the value is given in the indicator documentation;
-this indicator is not able to measure changing polarity of voltage
-
-If no Umin is required  insert   0</value>
+    <value>Najmniejsze napięcie wejściowe miernika
+Niektóre mierniki potrzebują pewne napięcie wstępne (bias), ponieważ 
+ich wzmacniacze wstępne przygotowane są tylko dla jednej biegunowości. 
+Jeżeli Umin nie jest potrzebne, wpisać 0 !</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_AWGMindestmesssignal" xml:space="preserve">
     <value>Dla miernika podany najmniejszy sygnał pomiarowy na wartość legalizacyjną:
@@ -223,47 +225,41 @@ Miernik        82a             0,5 üV/ e
 Miernik        82b,c,e       0,3 üV/ e</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_AWGSpeisespannung" xml:space="preserve">
-    <value>Excitation power supply for the load cell(s)
+    <value>Napięcie zasilające dla czujnika(ów)
+Wpisać napięcie całkowite
+np. błędnie + 5 V, poprawnie 10 V 
+Wskazówka:
+patrz też Komentarz o przekroju kabla A
 
-Indicator             83N             8V
-Indicator             83+             8V
-Indicator             84                8V
-Indicator             83Z            12V
-Indicator             82a,b,c,e    5V
-
-Note:
-Insert total voltage,   wrong    + 5 V
-                                   correct     10 V
-
-Further see comment  for cross section A</value>
+Napięcie zasilające dla czujnika(ów)
+Miernik             83N               8V
+Miernik             83+                8V
+Miernik             84                  8V
+Miernik             83Z              12V
+Miernik             82a,b,c,e    5V</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_AWGTeilungswerte" xml:space="preserve">
-    <value>maximal number of verification scale intervals for the indicator: 
+    <value>&lt;html&gt;&lt;p&gt;&lt;strong&gt;Maksymalnie dopuszczalna ilość działek elementarnych miernika&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;           
 
-                          single -range/interval       multi -range/interval                                   
-accuracy-
-class                      III               IV                  III            IV 
-Gerät
-83+/83Z/84        10000          1000              3000        1000
-82a,b,c,e            10000          1000              6000        1000
+                               waga jednozakresowa       waga wielozakresowa                                  
+Klasa
+dokładności                     III               IV                  III                 IV 
+Miernik
+83+/83Z/84             10000          1000              3000          1000
+82a,b,c,e                   10000          1000              6000          1000
 
-maximum of 3 partial ranges
-
-The maximal number n ind  of verification scale intervals of the indicator must  be equal or better than the number of verification scale intervals of the weighing instrument  n = Max/e.
-For multiple range and muti-interval weighing instruments this must be met for every weighing range.</value>
+Maksymalnie dopuszczalna ilość nind działek elementarnych miernika nie może być mniejsza niż ilość działek elementarnych wagi n = Max/e. 
+Przy wagach wielozakresowych i wielopodziałkowych dotyczy to każdego zakresu wagowego i. &lt;/p&gt;&lt;/html&gt;</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_AWGTemperaturbereichMax" xml:space="preserve">
-    <value>limit of the temperature range
-upper limit of the environment temperature
-for the indicator</value>
+    <value>Górna granica zakresu temperatury otoczenia, przyczym dopuszczalne zakresy temperatury czujnika(ów) tensometrycznego(nych) i miernika muszą pokryć zakres temperatury wagi.</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_AWGTemperaturbereichMin" xml:space="preserve">
     <value>Granice zakresu temperatury
-lower limit of the environment temperature
-for the indicator</value>
+Dolna granica zakresu temperatury otoczenia, przyczym dopuszczalne zakresy temperatury czujnika(ów) tensometrycznego(nych) i miernika muszą pokryć zakres temperatury wagi.</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_WaageEinschaltnullstellbereich" xml:space="preserve">
-    <value>&lt;html&gt;&lt;p&gt;Function for setting the indication to zero at&lt;br /&gt;the time the indicator is switched on.&lt;br /&gt;&lt;strong&gt;Standard setting Rhewa:&lt;br /&gt;15% upper limit for permissible initial zero setting&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;        3kg = 0,450kg&lt;br /&gt;        6kg = 0,900kg&lt;br /&gt;      15kg = 2,250kg&lt;br /&gt;      30kg = 4,5kg&lt;br /&gt;      60kg = 9,0kg&lt;br /&gt;    150kg = 22,5kg&lt;br /&gt;    300kg = 45kg&lt;br /&gt;    600kg = 90kg&lt;br /&gt;  1500kg = 225kg&lt;br /&gt;  3000kg = 450kg&lt;br /&gt;  6000kg = 900kg &lt;br /&gt;15000kg = 2250kg&lt;br /&gt;&lt;/strong&gt;&lt;/p&gt;&lt;/html&gt;</value>
+    <value>&lt;html&gt;&lt;p&gt;Zekres zerowania inicjującego&lt;br /&gt;Zekres, w którym wskaźnik przy włączeniu wagi automatycznie ustawia się na zero, przed jej gotowością do pracy&lt;br /&gt;Przy możliwej zmianie nośnika przez użytkownika np: przy wagach sklepowych 20% Max (jeżeli istnieje możliwoć realizacji z miernikeim), w przeciwnym razie zawsze 4% Max&lt;br /&gt;&lt;strong&gt;Dla mierników RHEWA wpisać standardowo +15% z Max&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;        3kg = 0,450kg&lt;br /&gt;        6kg = 0,900kg&lt;br /&gt;      15kg = 2,250kg&lt;br /&gt;      30kg = 4,5kg&lt;br /&gt;      60kg = 9,0kg&lt;br /&gt;    150kg = 22,5kg&lt;br /&gt;    300kg = 45kg&lt;br /&gt;    600kg = 90kg&lt;br /&gt;  1500kg = 225kg&lt;br /&gt;  3000kg = 450kg&lt;br /&gt;  6000kg = 900kg &lt;br /&gt;15000kg = 2250kg&lt;br /&gt;&lt;/strong&gt;&lt;/p&gt;&lt;/html&gt;</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_VerbindungselementeBruchteilEichfehlergrenze" xml:space="preserve">
     <value>Ułamek błędu legalizacyjnego dla elementów złącznych pcon.
@@ -271,15 +267,14 @@ for the indicator</value>
 Dla pewnej części wszystkich nieznanych mechanicznych jak i elektrycznych elementów złącznych między nośnikiem, czujnikiem(i) a miernikiem można według DIN EN 45501 Nr. 3.5.4 wpisać pcon = 0,5.</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_WaageAdditiveTarahoechstlast" xml:space="preserve">
-    <value>maximum value of the additive tare device (if existing)
-
-if no device of Additive Tare,    fill out with    0</value>
+    <value>Obciążenie maksymalne dodatniej tary (jeżeli dostępne!).
+Jeżeli dodatnia tary nie istnieje, wpisać 0.</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_WaageAnzahlWaegezellen" xml:space="preserve">
     <value>Numer czujnika tensometrycznego</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_WaageEcklastzuschlag" xml:space="preserve">
-    <value>&lt;html&gt;&lt;p&gt;factor NUD:        (WI = weighing instrument, LC = load cell)&lt;/p&gt;&lt;p&gt;Factor for  &lt;strong&gt;N&lt;/strong&gt;on  &lt;strong&gt;U&lt;/strong&gt;niform  &lt;strong&gt;D&lt;/strong&gt;istributed  load   caused  by excentric loading,&lt;br /&gt;NUD shall prohibit that a load cell is applied with load outside of the garanteed measuring range.&lt;/p&gt;&lt;p&gt;According to WELMEC 2 (Issue 3) Nr. 3.1.6.6 followig values may be accepted for NUD:&lt;br /&gt;- WIs with lever work and with one LC, WIs with one single point LC and&lt;br /&gt;  WIs with load receptors which allöw only minimal eccentric load application &lt;br /&gt;   (eg hopper scales, but without shaker on the receptor )        0 %  Max&lt;/p&gt;&lt;p&gt;- other conventional instruments :                                            20 % Max&lt;/p&gt;&lt;p&gt;- over head track scales, fork lift scales and weighbridges :    50 % Max &lt;/p&gt;&lt;p&gt;- Multi-platform WIs with more than one load receptor&lt;br /&gt;       fix combined                                          50 % Max  (total)&lt;br /&gt;       variable selection or combined              50 % Max  (of single platform)&lt;br /&gt;   &lt;/p&gt;&lt;/html&gt;</value>
+    <value>&lt;html&gt;&lt;p&gt;Dodatkowe obciążenie rogów&lt;br /&gt;Dodatkowe obciążenie rogów przedstawią tą wielkość, która w praktyce przez mimośrodkowe &lt;br /&gt;obciążenie przy Max dodatkowo działa na czujnik. W oparciu o ustawę WELMEC 2 (Issue 3) Nr. 3.1.6.6 mogą być przyjęte następujące wartości dla NUD:&lt;/p&gt;&lt;p&gt;- Wagi hybrydowe z jednym czujnikiem tensomterycznym, wagi z jednym jednopunktowym czujnikiem tensometrycznym (Single-Point),&lt;br /&gt;   Wagi, których obciążenie dopuszcza tylko minimalne mimośrodkowe obciążenie    &lt;strong&gt;0% von Max&lt;/strong&gt;  &lt;br /&gt;                                                                                                   &lt;br /&gt;- inne powszechne wagi                                                                      &lt;strong&gt; 20% z Max&lt;/strong&gt;&lt;br /&gt;                                               &lt;br /&gt;- Wagi kolejkowe i wagi z wózkiem widlakowym jak również pomosty przejezdne     &lt;strong&gt;50% z Max&lt;/strong&gt;                                    &lt;/p&gt;&lt;p&gt;- Zestaw wag w stałym zespole (bez urządzenia przełączeniowego)  &lt;br /&gt;                                                                                                           &lt;strong&gt;50% z Max (w całości)&lt;br /&gt;&lt;/strong&gt;  z urządzeniem przełączeniowym                                                           &lt;strong&gt; 50% z Max (pomost pojedyńczy)&lt;/strong&gt;                                        &lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;/html&gt;</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_WaageEichwert" xml:space="preserve">
     <value>Wartość legalizacyjna wagi jednozakresowej</value>
@@ -294,70 +289,84 @@ if no device of Additive Tare,    fill out with    0</value>
     <value>Wartość legalizacyjna 3. zakresu wagowego wagi wielopodziałkowej (e1 = najmniejsza wartość legalizacyjna)</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_WaageHoechstlast" xml:space="preserve">
-    <value>verification interval of  
-One range weighing instrument</value>
+    <value>Obciążenie maksymalne wagi jednozakresowej</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_WaageHoechstlast1" xml:space="preserve">
-    <value>Maximum capacity  of  the lower weighing range of multiple range or multi-interval  weighing instrument</value>
+    <value>Obciążenie maksymalne dolnego zakresu wagowego wag wielopodziałkowych lub wielozakresowych</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_WaageHoechstlast2" xml:space="preserve">
-    <value>Maximum capacity of the 2nd weighing range of 
-multipe range or multi-interval weighing instruments
- (Max1 = lower weighing range)</value>
+    <value>Obciążenie maksymalne 2-go zakresu wagowego wag wielopodziałkowych lub wielozakresowych (Max1 = dolny takres wagowy)</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_WaageHoechstlast3" xml:space="preserve">
-    <value>Maximum capacity of the upper weighing range 
-of multiple range or multi-interval weighing instruments
- (Max1 = lower weighing range)</value>
+    <value>Obciążenie maksymalne 3-go zakresu wagowego wag wielopodziałkowych lub wielozakresowych (Max1 = dolny takres wagowy)</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_WaageKabellaenge" xml:space="preserve">
-    <value>length of cable
-length of cable between indicator and load cell junction box 
-( load cell cables themselves have to maintain original)</value>
+    <value>Długość kabla
+Długość kabla między skrzynką zaciskową czujników a miernikiem.</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_WaageKabelquerschnitt" xml:space="preserve">
-    <value>cross section of wire
-cross section of one wire from cable    (4 or 6 wires)
-between indicator and load cell junction box
+    <value>Przekrój kabla
+Przekrój przewodu z 4 lub 6 przewodowego kabla między skrzynką zaciskową czujników a miernikiem.
 
-Note
-- By application of different cross sections in one cable use
-           for 4-wires  the supply wires
-           for 6-wires  the reference wires
-- Using flash protection elements, the exitation voltage at the load cell
-           has to be checked when applying check on condition (8)</value>
+Wskazówki:
+Przy różnych przekrojach przewodów musi być
+      przy 4-przewodowym wyciągnięty przewód zasilający
+      a przy 6-przewodowym przewód referencyjny.
+
+Przy zastosowaniu barier odgromowych należy skontrolować napięcie zasilania na czujnikach, aby wpisać tą wartość w punkcie warunkowym (8) (minimalny sygnał pomiarowy na wartość legalizacyjną) jako napięcie zasilające czujniki Uexc.</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_WaageKlasse" xml:space="preserve">
-    <value>&lt;html&gt;&lt;p&gt;Accuracy class:&lt;br /&gt;The accuracy classes of NAWI, Ind  and  LCs  are compatible, if they follow table below:&lt;/p&gt;&lt;p&gt;&lt;strong&gt;   NAWI             I          II                III               IIII&lt;br /&gt;   Ind                 I       I*), II          II*), III       III, IIII&lt;br /&gt;   LC                 A      A*), B           B*), C           C, D&lt;/strong&gt;&lt;br /&gt; &lt;br /&gt;  *) at sufficient temperature range and evaluation of stability against  &lt;br /&gt;     humidity  and creep corresponds  to requirement in the lower &lt;br /&gt;     (more accurate) class&lt;/p&gt;&lt;/html&gt;</value>
+    <value>&lt;html&gt;Klasa dokładności&lt;br /&gt;Klasa dokładności wag nieautomatycznych, mierników i czujników tensometrycznych zgadzają się, jeżeli odpowiadają one danemu przyporządkowaniu: &lt;br /&gt;&lt;strong&gt;Waga nieautomatyczna     I          II             III               IIII&lt;br /&gt;Miernik     I       I*), II       II*), III       III, IIII&lt;br /&gt;Czujnik tensometryczny        A      A*), B        B*), C             C, D&lt;/strong&gt;&lt;br /&gt;*) przy wystarczającym zakresie temperatury i &lt;br /&gt;odpowiednich dowodach dotyczących stabilizacji&lt;br /&gt;przeciw wilgoci i pełzaniu&lt;br /&gt;&lt;/html&gt;</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_WaageTemperaturbereichMAX" xml:space="preserve">
-    <value>limit of the temperature range
-upper limit of the environment temperature
-for the whole weighing instrument</value>
+    <value>Górna granica zakresu temperatury otoczenia, przyczym dopuszczalne zakresy temperatury czujnika(ów) tensometrycznego(nych) i miernika muszą pokryć zakres temperatury wagi.</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_WaageTemperaturbereichMin" xml:space="preserve">
     <value>Granice zakresu temperatury
-lower limit of the environment temperature
-for the whole weighing instrument</value>
+Dolna granica zakresu temperatury otoczenia, przyczym dopuszczalne zakresy temperatury czujnika(ów) tensometrycznego(nych) i miernika muszą pokryć zakres temperatury wagi.</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_WaageTotlast" xml:space="preserve">
-    <value>dead load:
-weight of the load receptor and additionally  mounted constructions on the load receptor</value>
+    <value>Ciężar własny
+Ciężar własny nośnika jak również dodatkowych na nim zamontowanych  konstrukcji.
+Pomosty standardowe:
+Typ       Rozmiar                               Ciężar własny
+010       60 / 150 kg                            18 kg
+011       150 kg                                      38 kg
+012       60 / 150 kg                             10 kg
+013       60 / 150 kg                             6,9 kg
+016       150 / 300 / 600 kg              15 kg
+027       1 kg nicht eichf.                    0,29 kg
+028       3 / 6 kg                                    0,79 kg
+032        3 / 6 /15 kg                           3,6 kg
+032         30 kg                                       4,1 kg  
+033                                                           6,9 kg
+034       60 / 150 / 300                        22 kg
+035       550 X 650                                23 kg
+035       600 X 800                                25 kg
+039                                                           15,1 kg
+050       600 / 1500 / 2000 kg          45 kg
+050       3000 kg                                     50 kg
+051       Standard                                   44 kg
+051       3000 kg                                      54 kg
+060       1000 X 850 mm                      80 kg
+060       1250 X 1050 mm                  105 kg
+062       1230 X 800 mm                       34 kg
+070       1000 X 800 mm                       65 kg
+070       1250 X 1000 mm                    105 kg
+070       1500 X 1250 mm                    165/180/270 kg
+070       2000 X 1500 mm                    350/430/590 kg
+071       1250 X 1000 mm                    105 kg
+071       1500 X 1250 mm 1500kg    165 kg
+071       1500 X 1250 mm 3000kg    180 kg
+071       1500 X 1500 mm                    195 kg
+071       2000 X 1500 mm                    300 kg
+081                                                              5,0 kg
+082                                                            20,6 kg
+083                                                            26,7 kg
+852                                                            20,0 kg</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_WaageUebersetzungsverhaeltnis" xml:space="preserve">
-    <value>reduction ratio  R
-The reduction ratio is given by a lever work system. 
-
-According to R76 No T.3.3 
-R = (Force onto the load cell)/(Gravitation force onto the load receptor)
-
-Using lever works normally the number N of load cells is  N = 1  and  R &lt; 1
-The value of R has to be given by the WI-manufacturer
-Without lever system the reduction ratio R always will be  R = 1
-
-Format of Field: Number
-Excample of wrong format   1:4, inputs with ":" will be treated as time
-                    correct format  1/4 or 0,25</value>
+    <value>&lt;html&gt;&lt;p&gt;Przełożenie redukcji&lt;br /&gt;Przełożenie redukcji np. przez dźwignie, jest zgodnie z DIN EN 45501 T.3.3, równe &lt;br /&gt;( Siła działająca na czujnik) / (Siła działająca na nośnię ładunku).&lt;br /&gt;Przy wagach nieautomatycznych&lt;strong&gt;z&lt;/strong&gt; dźwignią ilość czujników tensometrycznych wynosi z regóły N = 1 a przełożenie redukcji&lt;strong&gt; R &amp;lt; 1&lt;/strong&gt;. W żadkich przypadkach może nośnia ładunku z dźwignią posiadać kilka czujników tensometrycznych. W każdym przypadku wartość R musi być podana. &lt;br /&gt;Przy wagach nieautomatycznych &lt;strong&gt;bez&lt;/strong&gt; dźwigni musi zawsze &lt;strong&gt;R = 1&lt;/strong&gt; być ustawione.&lt;/p&gt;&lt;p&gt;Format pola : Liczba&lt;br /&gt;Przykład pisowni  &lt;strong&gt;błędnie&lt;/strong&gt;    1:4 , ponieważ wpisy z ":"  &lt;br /&gt;                                                                 obiczane są jako czas &lt;br /&gt;                                         &lt;strong&gt;poprawnie&lt;/strong&gt;   0,25  lub  1/4 &lt;/p&gt;&lt;/html&gt;</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_WZBruchteilEichfehlergrenze" xml:space="preserve">
     <value>Ułamek błędu legalizacyjnego dla czujnika tensometrycznego pLC.
@@ -365,97 +374,146 @@ Excample of wrong format   1:4, inputs with ":" will be treated as time
 Jeżeli w świadectwie badania czujnika tensometrycznego nic nie podano, można wpisać według DIN EN 45501 Nr. 3.5.4 pLC = 0,7.</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_WZGenauigkeitsklasse" xml:space="preserve">
-    <value>&lt;html&gt;&lt;p&gt;Accuracy class:&lt;br /&gt;The accuracy classes of NAWI, Ind  and  LCs  are compatible, if they follow table below:&lt;/p&gt;&lt;p&gt;&lt;strong&gt;         NAWI           I          II                III               IIII&lt;br /&gt;   Ind               I        I*), II          II*), III      III, IIII&lt;br /&gt;   LC                A       A*), B           B*), C          C, D&lt;/strong&gt;&lt;br /&gt; &lt;br /&gt;      *) at sufficient temperature range and evaluation of stability against &lt;br /&gt;      humidity and creep correspond to requirement in the lower &lt;br /&gt;      (more accurate) class&lt;/p&gt;&lt;/html&gt;</value>
+    <value>&lt;html&gt;Klasa dokładności&lt;br /&gt;Klasa dokładności wag nieautomatycznych, mierników i czujników tensometrycznych zgadzają się, jeżeli odpowiadają one danemu przyporządkowaniu: &lt;br /&gt;&lt;strong&gt;Waga nieautomatyczna     I          II             III               IIII&lt;br /&gt;Miernik     I       I*), II       II*), III       III, IIII&lt;br /&gt;Czujnik tensometryczny        A      A*), B        B*), C             C, D&lt;/strong&gt;&lt;br /&gt;*) przy wystarczającym zakresie temperatury i &lt;br /&gt;odpowiednich dowodach dotyczących stabilizacji&lt;br /&gt;przeciw wilgoci i pełzaniu&lt;br /&gt;&lt;/html&gt;</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_WZHoechstlast" xml:space="preserve">
-    <value>&lt;html&gt;maximum capacity of one load cell&lt;br /&gt;The maximum capacity of the load cell shall not be exeeded when applying Max on the weighing instrument.&lt;br /&gt;                                 capacity         &lt;br /&gt;  &lt;strong&gt; Kg                   N              lb&lt;/strong&gt;&lt;br /&gt;  &lt;span style="color: #0080ff"&gt;  20,4            200&lt;/span&gt;&lt;br /&gt; &lt;span style="color: #0080c0"&gt;   51                500&lt;/span&gt;  &lt;br /&gt;&lt;span style="color: #ff0000"&gt;    91                                 200&lt;/span&gt;&lt;br /&gt;  &lt;span style="color: #0080ff"&gt; 102              1000             &lt;br /&gt;   204              2000      &lt;br /&gt;&lt;/span&gt;&lt;span style="color: #ff0000"&gt;   227                               500 &lt;br /&gt;   454                              1000&lt;/span&gt; &lt;br /&gt; &lt;span style="color: #0080ff"&gt;  510              5000         &lt;br /&gt; 1020            10000&lt;/span&gt;        &lt;br /&gt;&lt;span style="color: #ff0000"&gt; 1134                               2500&lt;/span&gt;&lt;br /&gt;&lt;span style="color: #0080ff"&gt; 2039            20000     &lt;br /&gt;&lt;/span&gt;&lt;span style="color: #ff0000"&gt; 2268                               5000&lt;br /&gt; 4035                             10000&lt;/span&gt; &lt;br /&gt;&lt;span style="color: #0080ff"&gt; 5099            50000&lt;br /&gt;10197          100000&lt;/span&gt;&lt;br /&gt;&lt;span style="color: #ff0000"&gt;20412                              45000&lt;br /&gt;34020                              75000   &lt;br /&gt;45360                            100000&lt;/span&gt;&lt;/html&gt;</value>
+    <value>&lt;html&gt;Obciążenie maksymalne (obciążenie nominalne) pojedyńczego czujnika tensometrycznego&lt;br /&gt;Obciążenie maksymalne czujnika tensometrycznego przy obciążeniu wagi z jej obciążeniem maksymanlym Max nie może być przekroczone.&lt;br /&gt;&lt;strong&gt;                                 Obciążenie nominalne          &lt;br /&gt;   Kg                   N             lb&lt;/strong&gt;&lt;br /&gt;&lt;span style="color: #0080ff"&gt;    20,4            200&lt;br /&gt;    51                500&lt;/span&gt;  &lt;br /&gt;&lt;span style="color: #ff0000"&gt;    91                                200&lt;/span&gt;&lt;br /&gt;&lt;span style="color: #0080ff"&gt;   102              1000             &lt;br /&gt;   204              2000&lt;/span&gt;      &lt;br /&gt;&lt;span style="color: #ff0000"&gt;   227                              500 &lt;br /&gt;   454                              1000&lt;/span&gt; &lt;br /&gt;&lt;span style="color: #0080ff"&gt;   510              5000         &lt;br /&gt; 1020            10000&lt;/span&gt;        &lt;br /&gt;&lt;span style="color: #ff0000"&gt; 1134                               2500&lt;/span&gt;&lt;br /&gt;&lt;span style="color: #0080ff"&gt; 2039            20000&lt;/span&gt;     &lt;br /&gt;&lt;span style="color: #ff0000"&gt; 2268                               5000&lt;br /&gt; 4035                             10000&lt;/span&gt; &lt;br /&gt;&lt;span style="color: #0080ff"&gt; 5099            50000&lt;br /&gt;10197          100000&lt;/span&gt;&lt;br /&gt;&lt;span style="color: #ff0000"&gt;20412                              45000&lt;br /&gt;34020                              75000   &lt;br /&gt;45360                            100000&lt;/span&gt;&lt;/html&gt;</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_WZHoechstteilungsfaktor" xml:space="preserve">
-    <value>ratio of  Emax / vmin   of the load cell
+    <value>Największy współczynnik podziałkowy czujnika tensometrycznego
+Jeżeli nie podano Y lub vmin (np. nie wymienione w świadectwie badania), należy dla Y wpisać nLC.
+Największy współczynnik podziałkowy czujnika tensometrycznego
+Jeżeli nie podano Y lub vmin (np. nie wymienione w świadectwie badania), należy dla Y wpisać nLC.
 
-If Y or vmin is not indicated (f.e. in the test certificate),  nLC  will be used instead of Y .</value>
+Type       C            Y               Z        E min      C        R LC
+1022        3         10000                        0          2         415
+1042        3         15000                        0          2         415
+1042        6         20000                        0          2         415
+1130        3         15000                        0          2         385
+1242        3         20000                        0          2         415  
+1242        6         20000                        0          2         415
+1260        3         15000                        0          2         415
+1510        3         12000                        0          2         380
+PC1          3         10000                        0          2         390
+PC1          3         15000                        0          2         390
+PC6          3         12500                        0          2       1106 
+PC6 MI6  3        12500        6000       0          2       1106 
+PC6          3         25000                        0          2       1106
+PC6 MI6  3         25000       6000       0          2       1106 
+PCB          3         12500                        0          2       1106
+0531        3          11500                        0          2       1106
+      
+3410        3         10000                         0          2         380
+3510        3         12000        4000       0          2         400
+3510        6         24000        8000       0          2         400
+HSB          3        10000                         0          2         420
+BK2         
+SLB           3         11500                        0          2        1106
+SB6           3         10000                        0          2        1106
+SB14         3         11500                        0          2        1100
+HCB          3         10000                        0          2        1000
+RC3           3         15000                        0          2        1100</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_WZKriechteilungsfaktor" xml:space="preserve">
-    <value>ratio of   Emax / 2* DR   of the load cell
-Where DR or Z not known  
-(f.e. not indicated in the test certificate),  
-nLC  will be used instead of  Z.</value>
-  </data>
-  <data name="Hilfe_Kompatiblitaetsnachweis_WZMaxTeilungswerte" xml:space="preserve">
-    <value>maximal number of verification scale intervals of the load cell: 
-The max. number nLC  of verification scale intervals of the load cell must be equal or better than the number of verification scale intervals of the weighing instrument  n = Max/e.
-For multiple range and muti-interval weighing instruments this must be met for every weighing range.</value>
-  </data>
-  <data name="Hilfe_Kompatiblitaetsnachweis_WZMindestvorlast" xml:space="preserve">
-    <value>minimum dead load of one load cell
+    <value>Współczynnik podziałki pełzającej czujnika tensometrycznego
+Jeżeli nie podano DR lub Z ( np. nie wymienione w świadectwie badania), należy dla Z wpisać nLC. 
 
-the applied dead load on the load cell in the WI must be 
-bigger or equal to the minimum dead load of the load cell 
-
-when Emin = 0    insert    0</value>
-  </data>
-  <data name="Hilfe_Kompatiblitaetsnachweis_WZMinTeilungswert" xml:space="preserve">
-    <value>smallest verification interval of one load cell
-If Y or vmin is not indicated (f.e. in the test certificate),  nLC will be used instead of Y .</value>
-  </data>
-  <data name="Hilfe_Kompatiblitaetsnachweis_WZRueckkehrVorlastsignal" xml:space="preserve">
-    <value>minimum dead load return of the load cell:
-Where DR or Z not known  
-(f.e. not indicated in the test certificate),  
-nLC will be used instead of Z.</value>
-  </data>
-  <data name="Hilfe_Kompatiblitaetsnachweis_WZTemperaturbereichMIN" xml:space="preserve">
-    <value>Granice zakresu temperatury
-lower limit of the environment temperature
-for the load cell</value>
-  </data>
-  <data name="Hilfe_Kompatiblitaetsnachweis_WZWaegezellenkennwert" xml:space="preserve">
-    <value>Wartośś znamionowa czujnika(Wielkość sygnału przy całkowitym obciążeniu w mV/V)</value>
-  </data>
-  <data name="Hilfe_Kompatiblitaetsnachweis_WZWiderstand" xml:space="preserve">
-    <value>Czujniki-Opór wejściowy
-
-Opór wejściowy jednego czujnika.
-Ewentualnie jest podłączonych równolegle N czujników.
-Stosunek RLC / N musi leżeć w granicach całkowitego dopuszczalnego oporu wejściowego miernika.
-
-
-Typ       C            Y              Z        E min      C        R LC
-1022       3         10000                        0          2         415
-1042       3         15000                        0          2         415
-1042       6         20000                        0          2         415
-1130       3         15000                        0          2         385
-1242       3         20000                        0          2         415  
-1242       6         20000                        0          2         415
-1260       3         15000                        0          2         415
-1510       3         12000                        0          2         380
-PC1         3         10000                        0          2         390
-PC1         3         15000                        0          2         390
-PC6         3         12500                        0          2       1106 
-PC6 MI6  3         12500        6000        0          2       1106 
-PC6         3         25000                        0          2       1106
-PC6 MI6  3         25000         6000       0          2       1106 
-PCB         3         12500                        0          2       1106
-0531       3         11500                        0          2       1106
+Type       C            Y               Z        E min      C        R LC
+1022         3         10000                        0          2         415
+1042         3         15000                        0          2         415
+1042         6         20000                        0          2         415
+1130         3         15000                        0          2         385
+1242         3         20000                        0          2         415  
+1242         6         20000                        0          2         415
+1260         3         15000                        0          2         415
+1510         3         12000                        0          2         380
+PC1           3         10000                        0          2         390
+PC1           3         15000                        0          2         390
+PC6           3         12500                        0          2       1106 
+PC6 MI6  3         12500         6000      0          2       1106 
+PC6           3         25000                        0          2       1106
+PC6 MI6  3         25000         6000      0          2       1106 
+PCB          3         12500                         0          2       1106
+0531         3         11500                        0          2       1106
       
-3410       3         10000                        0          2         380
-3510       3         12000          4000      0          2         400
-3510       6         24000          8000      0          2         400
-HSB         3         10000                        0          2         420
+3410       3          10000                         0          2         380
+3510       3          12000          4000      0          2         400
+3510       6          24000          8000      0          2         400
+HSB         3         10000                         0           2         420
 BK2         
 SLB          3         11500                        0          2        1106
 SB6          3         10000                        0          2        1106
-SB14        3         11500                        0          2        1100
-HCB          3        10000                         0         2        1000
-RC3          3        15000                        0          2        1100</value>
+SB14        3         11500                       0           2        1100
+HCB         3         10000                        0          2        1000
+RC3          3        15000                         0          2        1100</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_WZMaxTeilungswerte" xml:space="preserve">
+    <value>Największa dopuszczalna ilość wartości podziałki czujnika tensometrycznego
+Maksymalna ilość nLC wartości podziałki dla czujnika tensometrycznegonie może być mniejsza niż ilość  wartości podziałki wagi n = Max/e.
+Dla wag wielozakresowych i wielopodziałkowych obowiązuje to dla każdego pojedynczego zakresu.</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_WZMindestvorlast" xml:space="preserve">
+    <value>Najmniejsze obciążenie wstępne każdego czujnika
+Obciążenie wstępne czujnika musi być taka sama lub równa obciążeniu wstępnemu Emin.
+Jeżeli najmniejsze obciążenie wstępne czujnika
+nie jest potrzebne, wpisać 0 !</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_WZMinTeilungswert" xml:space="preserve">
+    <value>Najmniejsza dopuszyczalna wartość podziałki czujnika tensometrycznego
+Jeżeli nie podano Y lub vmin (np. nie wymienione w świadectwie badania), należy dla Y wpisać nLC.</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_WZRueckkehrVorlastsignal" xml:space="preserve">
+    <value>Powrót sygnału obciążenia wstępnego czujnika tensometrycznego
+Jeżeli nie podano DR lub Z (np. nie wymienione w świadectwie badania), należy dla Z wpisać nLC.</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_WZTemperaturbereichMIN" xml:space="preserve">
+    <value>Granice zakresu temperatury
+Dolna granica zakresu temperatury otoczenia, przyczym dopuszczalne zakresy temperatury czujnika(ów) tensometrycznego(nych) i miernika muszą pokryć zakres temperatury wagi.</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_WZWaegezellenkennwert" xml:space="preserve">
+    <value>Wartość znamionowa czujnika tensometrycznego (wielkość sygnału przy największym obciążeniu czujnika tensometrycznego w mV/V)</value>
+  </data>
+  <data name="Hilfe_Kompatiblitaetsnachweis_WZWiderstand" xml:space="preserve">
+    <value>Opór wejściowy czujnika tensometrycznego
+
+Opór wejściowy czujnika tensometrycznego.
+Podłączono ewentualnie N czujników tensometrycznych równolegle.
+RLC / N musi się znajdować między dopuszczonym minimalnym i maksymalnym oporem obciążającym miernika. 
+
+Type           C               Y              Z        E min       C         R LC
+1022        3         10000                        0             2         415
+1042        3         15000                        0             2         415
+1042        6         20000                        0             2         415
+1130        3         15000                        0             2         385
+1242        3         20000                        0             2         415  
+1242        6         20000                        0             2         415
+1260        3         15000                        0             2         415
+1510        3         12000                        0             2         380
+PC1           3         10000                        0             2         390
+PC1           3         15000                        0             2         390
+PC6           3         12500                        0             2       1106 
+PC6 MI6  3         12500        6000     0             2       1106 
+PC6           3         25000                        0             2       1106
+PC6 MI6  3         25000        6000     0             2       1106 
+PCB           3         12500                        0             2       1106
+0531        3         11500                        0             2       1106
+      
+3410        3         10000                        0             2         380
+3510        3         12000         4000    0             2         400
+3510        6         24000         8000    0             2         400
+HSB           3         10000                       0             2         420
+BK2         
+SLB            3         11500                        0           2        1106
+SB6           3         10000                        0           2        1106
+SB14        3         11500                        0           2        1100
+HCB          3         10000                        0           2        1000
+RC3          3         15000                        0           2        1100</value>
   </data>
   <data name="Hilfe_Kompatiblitaetsnachweis_WZTemperaturbereichMAX" xml:space="preserve">
-    <value>limit of the temperature range
-upper limit of the environment temperature
-for the load cell</value>
+    <value>Górna granica zakresu temperatury otoczenia, przyczym dopuszczalne zakresy temperatury czujnika(ów) tensometrycznego(nych) i miernika muszą pokryć zakres temperatury wagi.</value>
   </data>
   <data name="Hilfe_Stammdaten" xml:space="preserve">
-    <value>Polnisch</value>
+    <value>Pomoc_Dane podstawowe</value>
   </data>
   <data name="PflichtfelderAusfuellen" xml:space="preserve">
     <value>Proszę wypełnić wszystkie obowiązujące pola. Brakujące pola są zaznaczone na czerwono.</value>
@@ -467,13 +525,13 @@ for the load cell</value>
     <value>Lista wyboru</value>
   </data>
   <data name="Ueberschrift_Kompatiblitaetsnachweis" xml:space="preserve">
-    <value>Polnisch</value>
+    <value>świadectwo kompatybilności</value>
   </data>
   <data name="Ueberschrift_KompatiblitaetsnachweisErgebnis" xml:space="preserve">
     <value>Wynik dowodu kompatybilności</value>
   </data>
   <data name="Ueberschrift_Stammdaten" xml:space="preserve">
-    <value>Polnisch</value>
+    <value>Wpis danych podstawowych</value>
   </data>
   <data name="Waagenart" xml:space="preserve">
     <value>Rodzaj wagi</value>
@@ -483,26 +541,25 @@ for the load cell</value>
 </value>
   </data>
   <data name="Waegezelle" xml:space="preserve">
-    <value>Czujnik tensometryczny
-</value>
+    <value>Czujnik tensometryczny</value>
   </data>
   <data name="KompatiblitätNichtGeleistet" xml:space="preserve">
     <value>Kompatybilność składników niestety nie istnieje.  Proces oceny zgodności nie może być kontynuowany.</value>
   </data>
   <data name="Hilfe_Auswahlliste" xml:space="preserve">
-    <value>Proszę wybrać istniejącą procedurę oceny zgodności albo za pomocą okienka "Założyć" wpisać nową procedurę.</value>
+    <value>Proszę wybrać w tym oknie dialogowym jeden istniejący proces oceny zgodności albo za pomocą przycisku "Założyć" wpisać nową procedurę.</value>
   </data>
   <data name="Hilfe_Eichprotokollverfahrensauswahl" xml:space="preserve">
     <value>Polnisch</value>
   </data>
   <data name="Ueberschrift_Eichprotokollverfahrensauswahl" xml:space="preserve">
-    <value>      84                 ges. 44 Ohm</value>
+    <value>Wybór procesu</value>
   </data>
   <data name="Hilfe_EichprotokollStammdaten" xml:space="preserve">
-    <value>Polnisch</value>
+    <value>Pomoc_Dane podstawowe protokołu legalizacji</value>
   </data>
   <data name="Ueberschrift_EichprotokollStammdaten" xml:space="preserve">
-    <value>Polnisch</value>
+    <value>Protokół pomiarowy</value>
   </data>
   <data name="Eichprotokoll_Dimension" xml:space="preserve">
     <value>Wymiary pomostu wagowego</value>
@@ -514,37 +571,37 @@ for the load cell</value>
     <value>Numer fabryczny</value>
   </data>
   <data name="Hilfe_PruefungAussermittigerBelastung" xml:space="preserve">
-    <value>Hilfe_PrüfungAussermittigerBelastung(PL)</value>
+    <value>Pomoc_Badanie ociążenia minośrodkowego</value>
   </data>
   <data name="Ueberschrift_PruefungNullstellungundAussermittigeBelastung" xml:space="preserve">
-    <value>Messtechnische Prüfung (PL)</value>
+    <value>Badanie metrologiczne</value>
   </data>
   <data name="Hilfe_PruefungDerRichtigkeitMitNormallast" xml:space="preserve">
-    <value>Hilfe_PruefungDerRichtigkeitMitNormallast(EN)</value>
+    <value>Pomoc_Badanie prawidłowości z obciążeniem wzorcowym</value>
   </data>
   <data name="Ueberschrift_PruefungDerRichtigkeitMitNormallast" xml:space="preserve">
-    <value>Prüfung der Richtigkeit mit Normallast(PL)</value>
+    <value>Badanie prawidłowości z obciążeniem wzorcowym </value>
   </data>
   <data name="Hilfe_PruefungDerWiederholbarkeit" xml:space="preserve">
-    <value>Hilfe_PruefungDerWiederholbarkeit</value>
+    <value>Pomoc_Badanie powtarzalności</value>
   </data>
   <data name="Ueberschrift_PruefungDerWiederholbarkeit" xml:space="preserve">
-    <value>Ueberschrift_PruefungDerWiederholbarkeit</value>
+    <value>Badanie powtarzalności</value>
   </data>
   <data name="Hilfe_PruefungAnsprechvermoegen" xml:space="preserve">
-    <value>Hilfe_PRuefungAnsprechvermoegen (PL)</value>
+    <value>&lt;html&gt;&lt;p&gt;&lt;strong&gt;3.8 Pobudliwość&lt;/strong&gt;&lt;br /&gt;3.8.1 Waga z równoważeniem ręcznym&lt;br /&gt;Dodatkjowy ładunek odpowiadający 0,4 bezwzględnej wartości BŁęDóW GRANICZNYCH DOPUSZCZALNYCH dla danego obciążenia, łagodnie umieszczony lub zdjęty z wagi w jej równowadze, powinien spowodować zauważalne przemieszczenie wskazówki.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;A4.8 Badanie pobudliwości &lt;br /&gt;&lt;/strong&gt;Następujące badania należy wykonać przy trzech różnych obciążeniach np: Min 1/2 Max i Max.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;A4.8.1 Równoważenie ręczne i wskazanei analogowe &lt;br /&gt;&lt;/strong&gt;Dodatkowy ładunek należy delikatnie umieścić na nośni ładunku lub z niej zdjąć, gdy waga znajduje się w położeniu równowagi. Pod wpływem tego dodatkowego ładunku mechanizm równoważący powinien przyjąć zmienioną, określoną pozycję równowagi.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;A4.8.2 Wskazanie cyfrowe&lt;/strong&gt;&lt;br /&gt;Ładunek oraz dodatkowe  odważniki, w wystarczającej ilości, (10odważników po 1/10 d) należy umieścić na NOśNI ŁADUNKU. Następnie dodatkowe odważniki należy stopniowo zdejmować , aż do jrdnoznacznej zmiany wskazania (I) o jedną DZIAŁKę ELEMENTARNą, do wartości (I-d). Jeden z dodatkowych odważników powinien być umieszczony na nośni, a następnie ładunek równy 1,4 d powinien być delikatnie umieszczony na NOśNI ŁADUNKU, co powinno spowodować powiększenie początkowego wskazania o jedną DZIAŁKę ELEMENTARNą, do wartości (I+d).&lt;/p&gt;&lt;p&gt;Przykład: Wskazanie początkowe I=200 g. Zdjąć dodatkowe odważniki, aż do zmiany wskazania wskazania na I-d = 190 g. Dodać 1/10d = 1g, a następnie 1,4 d = 14 g. Wskazanie powinno wówczas wynosić I+d = 210 g.                                                                                                                                                                                                                &lt;/p&gt;&lt;/html&gt;</value>
   </data>
   <data name="Hilfe_PruefungEichtechnischeSicherung" xml:space="preserve">
-    <value>Hilfe_PRuefungEichtechnischeSicherung (PL)</value>
+    <value>Pomoc_Badanie zabezpieczenia techniczno-legalizacyjnego</value>
   </data>
   <data name="Hilfe_PruefungFallbeschleunigung" xml:space="preserve">
-    <value>Hilfe_PRuefungFallbeschleunigung (PL)</value>
+    <value>Pomoc_BadaniePrzyciąganie ziemskie</value>
   </data>
   <data name="Hilfe_PruefungRollendeLasten" xml:space="preserve">
-    <value>Hilfe_PruefungRollendeLasten  (PL)</value>
+    <value>Pomoc_Badanie ciężarów tocznych</value>
   </data>
   <data name="Hilfe_PruefungStabilitaet" xml:space="preserve">
-    <value>Hilfe_PruefungStabilitaet  (PL)</value>
+    <value>Pomoc_Badanie stabilności</value>
   </data>
   <data name="Hilfe_PruefungStaffelverfahren" xml:space="preserve">
     <value>&lt;html&gt;&lt;p&gt;&lt;span style="font-size: 13px; "&gt;&lt;span style="font-size: 13px; "&gt;&lt;strong&gt;Przeprowadzenie procedury stopniowej:&lt;br /&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size: 13px; "&gt;&lt;span style="font-size: 13px; "&gt;Całkowita procedura stopniowa składa się z badania poprawności oraz ograniczonego badania histerezy (ponieważ histereza jest tylko badana w zakresie pojedynczych stopni a nie na całej krzywej błędu, obowiązują ograniczone granice błędów legalizacyjnych). &lt;p&gt;&lt;/p&gt;&lt;p&gt;Przy badaniu z wzrastającym obciążeniem stawia się dostępne &lt;span style="color: #0000ff"&gt;obciążenie wzorcowe L&lt;/span&gt; na nieobciążoną, stabilną wagę i określa odchyłkę pomiaru 1. stopnia procedury &lt;span style="color: #0000ff"&gt;Ew1&lt;/span&gt;. Po zdjęciu obciążenia wzorcowego określa się różnicę &lt;span style="color: #0000ff"&gt;&lt;span style="font-family: symbol"&gt;D&lt;/span&gt;P1&lt;/span&gt; wartości wskazanych bez obciążenia wzorcowego, które jest miarą dla histerezy w zakresie 1. stopnia procedury. &lt;/p&gt;&lt;p&gt;Dla 2. stopnia procedury nakłada się odpowiedni ciężar zastępczy. Ten ciężar zastępczy musi odpowiadać tylko w przybliżeniu obciążeniu wzorcowemu (tolerancja ± 10e), ponieważ przyjmuje się, że krzywa błędu nie zmienia się znacznie w tym zakresie. Teraz dokłada się obciążenie wzorcowe, określa odchyłkę pomiaru &lt;span style="color: #008000"&gt;Ew2&lt;/span&gt; i po zdjęciu obciążenia wzorcowego różnicę &lt;span style="color: #008000"&gt;&lt;span style="font-family: symbol"&gt;D&lt;/span&gt;P2&lt;/span&gt; dla 2. stopnia procedury. Tą procedurę powtarza się, aż &lt;/p&gt;&lt;/span&gt;&lt;p&gt;&lt;/p&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;span style="font-size: 13px; "&gt;&lt;span style="font-size: 13px; "&gt;&lt;span style="font-size: 13px; ; color: #000000"&gt;do&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size: 13px; "&gt;&lt;span style="font-size: 13px; "&gt; osiągnięcia najwyższego obciążenia, przy czym nie jest wymagane, aby wszystkie stopnie procedury były o tej samej wielkości. Odchyłka pomiarowa EW wagi dla określonego punktu obciążenia wynika z sumy od wcześniej aż &lt;/span&gt;&lt;/span&gt;&lt;span style="font-size: 13px; "&gt;&lt;span style="font-size: 13px; "&gt;&lt;span style="font-size: 13px; ; color: #000000"&gt;do&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size: 13px; "&gt;&lt;span style="font-size: 13px; "&gt; tego punktu obciążenia obciążeniem wzorcowym stwierdzonych odchyłek pomiarowych (&lt;span style="font-family: symbol"&gt;S&lt;/span&gt;Ewi). &lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;Leży przy jednym stopniu procedury wartość absolutna różnicy wartości wskazanych [&lt;span style="font-family: symbol"&gt;D&lt;/span&gt;Pi] większa/równa 0,5 e, waga zostanie odrzucona. &lt;br /&gt;Znajduje się [&lt;span style="font-family: symbol"&gt;D&lt;/span&gt;Pi] między 0,2 e a 0,5 e należy powtórzyć owy stopień procedury. Jeżeli jest przy powtórce [&lt;span style="font-family: symbol"&gt;D&lt;/span&gt;Pi] &amp;gt; 0,2 e, waga zostanie również odrzucona.&lt;br /&gt;Całkowita procedura stopniowa może być przeprowadzona z maksymalnie pięcioma stopniami. Nie jest wymagane, aby wszystkie stopnie procedury były o tej samej wielkości. Zwłaszcza ostatni stopień procedury może być mniejszy niż poprzednie. &lt;/p&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;/html&gt;</value>
@@ -553,10 +610,10 @@ for the load cell</value>
     <value>Przy wagach hybrydowych (waga z układem dźwigniowym) należy przeprowadzić badanie poprawności z obciążeniem tary (według EN 45501 Nr.3.5.3.3 - 3.5.3.4, A 4.6).</value>
   </data>
   <data name="Hilfe_PruefungUeberlastAnzeige" xml:space="preserve">
-    <value>Hilfe_PruefungUeberlastAnzeige  (PL)</value>
+    <value>Pomoc_Badanie wskazania przeciążenia</value>
   </data>
   <data name="Ueberschrift_PruefungAnsprechvermoegen" xml:space="preserve">
-    <value>Ueberschrift_PruefungAnsprechvermoegen(PL)</value>
+    <value>Badanie reakcji pobudliwości i wrażliwości</value>
   </data>
   <data name="Ueberschrift_PruefungEichtechnischeSicherung" xml:space="preserve">
     <value>Zabezpieczenie danych legalizacyjnych i innych danych</value>
@@ -565,19 +622,19 @@ for the load cell</value>
     <value>Uwzględnienie przyspieszenia grawitacyjnego</value>
   </data>
   <data name="Ueberschrift_PruefungRollendelasten" xml:space="preserve">
-    <value>Wagi dla ładunków tocznych</value>
+    <value>Waga dla ciężarów tocznych</value>
   </data>
   <data name="Ueberschrift_PruefungStabilitaet" xml:space="preserve">
-    <value>Ueberschrift_PruefungStabilitaet(PL)</value>
+    <value>Badanie stabilności równowagi</value>
   </data>
   <data name="Ueberschrift_PruefungStaffelverfahren" xml:space="preserve">
-    <value>Ueberschrift_PruefungStaffelverfahren  (PL)</value>
+    <value>Procedura stopniowa</value>
   </data>
   <data name="Ueberschrift_PruefungTaraEinrichtung" xml:space="preserve">
-    <value>Ueberschrift_PruefungTaraEinrichtung (PL)</value>
+    <value>Urządzenie tary</value>
   </data>
   <data name="Ueberschrift_PruefungUeberlastAnzeige" xml:space="preserve">
-    <value>Ueberschrift_PruefungUeberlastAnzeige (PL)</value>
+    <value>Badanie wskazania przeciążenia</value>
   </data>
   <data name="Hilfe_PruefungStaffelverfahrenErsatzlastErsatzlast2" xml:space="preserve">
     <value>Odczytanie i wpisanie wyświetlanej wartości po zdjęciu obciążenia wzorcowego.</value>
@@ -617,19 +674,19 @@ Jest błąd ≤ 0,3e → L = 0,5 Max = potrzebne są wzorce 50% z Max.</value>
     <value>Eksport danych do wzorów Excel i Word</value>
   </data>
   <data name="Hilfe_Versenden" xml:space="preserve">
-    <value>Send Data to RHEWA</value>
+    <value>Wysłanie danych do RHEWA</value>
   </data>
   <data name="Ueberschrift_Exports" xml:space="preserve">
     <value>Eksport danych</value>
   </data>
   <data name="Ueberschrift_Versenden" xml:space="preserve">
-    <value>Send Data to RHEWA</value>
+    <value>Wysłanie danych do RHEWA</value>
   </data>
   <data name="EinsEintragen" xml:space="preserve">
     <value>Proszę wpisać "1"</value>
   </data>
   <data name="Hilfe_StammdatenNeueWZ" xml:space="preserve">
-    <value>Create a new Load Cell (PL)</value>
+    <value>Tutaj można założyć nowy czujnik tensometryczny, jeżeli nie jest zawarty w istniejącej selekcji.</value>
   </data>
   <data name="BitteNeuStarten" xml:space="preserve">
     <value>Proszę uruchomić aplikację na nowo w celu zakończenia procesu zapisania wniosku licencji.</value>
@@ -677,22 +734,22 @@ Jest błąd ≤ 0,3e → L = 0,5 Max = potrzebne są wzorce 50% z Max.</value>
     <value>Błąd przy zapisie</value>
   </data>
   <data name="Fehler_UngueltigeLizenz" xml:space="preserve">
-    <value>Nie ważna licencja. Proszę skontaktować się z firmą RHEWA</value>
+    <value>Nieważna licencja. Proszę zwrócić się do RHEWA</value>
   </data>
   <data name="Frage" xml:space="preserve">
-    <value>Question</value>
+    <value>Pytanie</value>
   </data>
   <data name="Frage_Ablehnen" xml:space="preserve">
-    <value>Möchten Sie den gewählten Konformitätsbewertungsprozess wirklich ablehnen? Der Eichbevollmächtigte kriegt diesen dann zur erneuten Bearbeitung zugesandt</value>
+    <value>Czy chcesz wybrany proces oceny zgodności naprawdę odrzucić? Pełnomocnik otrzyma go wtedy do ponownego opracowania.</value>
   </data>
   <data name="Frage_EichprotokollZuruecksenden" xml:space="preserve">
-    <value>Möchten Sie das korrigierte Messprotokoll wirklich an den Eichbevollmächtigten zurücksenden? Der Status wird dabei auf fehlerhaft gesetzt.</value>
+    <value>Czy chcesz skorygowany protokół oceny zgodności naprawdę z powrotem wysłać do pełnomocnika? Status zostanie wtedy ustawiony na błędny.</value>
   </data>
   <data name="Frage_Genehmigen" xml:space="preserve">
-    <value>Möchten Sie den gewählten Konformitätsbewertungsprozess wirklich genehmigen? Er gilt dann als abgeschlossen und kann nicht mehr bearbeitet werden</value>
+    <value>Czy chcesz wybrany proces oceny zgodności naprawdę zatwierdzić? On jest wtedy uznany jako zakończony i nie może być już więcej opracowywany.</value>
   </data>
   <data name="Frage_Kopieren" xml:space="preserve">
-    <value>Möchten Sie den gewählten Konformitätsbewertungsprozess kopieren um ihn als Vorlage zu verwenden?</value>
+    <value>Czy chcesz wybrany proces oceny zgodności skopiować aby używać go jako wzór?</value>
   </data>
   <data name="Warnung_EichungenWerdenGeloescht" xml:space="preserve">
     <value>Znaleziono niewysłane procesy oceny zgodności. Potwierdzając przez "Tak" dane te zostaną poprzez resynchronizację skasowane.  Przed nową synchronizacją neleży być świadomym, że wszystkie niewysłane procesy oceny zgodności zostaną usunięte.</value>
@@ -704,6 +761,6 @@ Jest błąd ≤ 0,3e → L = 0,5 Max = potrzebne są wzorce 50% z Max.</value>
     <value>Aktualny użytkownik: </value>
   </data>
   <data name="ValidierungUeberspringen" xml:space="preserve">
-    <value>      83 N              ges. 87 Ohm</value>
+    <value>Czy przeskoczyć walidację? Przesyłka jest tylko wtedy możliwa, jeżeli wszystko pomyślnie zostało zwalidowane.</value>
   </data>
 </root>

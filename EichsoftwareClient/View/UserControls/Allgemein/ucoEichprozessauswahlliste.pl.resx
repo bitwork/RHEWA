@@ -182,9 +182,12 @@
     <value>&lt;html&gt;&lt;p&gt;Tworzenie&lt;/p&gt;&lt;p&gt;procesu&lt;/p&gt;&lt;/html&gt;</value>
   </data>
   <data name="RadButtonClientAusblenden.Text" xml:space="preserve">
-    <value>Proces schować</value>
+    <value>Proces ukryć</value>
   </data>
   <data name="RadButtonClientBearbeiten.Text" xml:space="preserve">
     <value>Proces opracować</value>
+  </data>
+  <data name="RadButtonClientUpdateDatabase.Text" xml:space="preserve">
+    <value>Sprawdzić status wysłanych procesów</value>
   </data>
 </root>

@@ -148,15 +148,14 @@
     <value>24, 18</value>
   </data>
   <data name="lblMengeStandardgewichte2.Text" xml:space="preserve">
-    <value>kg		
+    <value>kg jest potrzebne
 </value>
   </data>
   <data name="lblMengeStandardgewichte1.Size" type="System.Drawing.Size, System.Drawing">
     <value>193, 18</value>
   </data>
   <data name="lblMengeStandardgewichte1.Text" xml:space="preserve">
-    <value>Potrzebne są wzorce o przynajmniej:				
-</value>
+    <value>Ilość wzorców:			</value>
   </data>
   <data name="lblFehlerGrenzen.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 33</value>
@@ -190,10 +189,10 @@
 </value>
   </data>
   <data name="RadGroupBoxWiederholungen.HeaderText" xml:space="preserve">
-    <value>Badanie przy mimośrodowym obciążeniu</value>
+    <value>Badanie powtarzalności przy obciążeniu ~ 0,5 Max</value>
   </data>
   <data name="RadGroupBoxWiederholungen.Text" xml:space="preserve">
-    <value>Badanie przy mimośrodowym obciążeniu</value>
+    <value>Badanie powtarzalności przy obciążeniu ~ 0,5 Max</value>
   </data>
   <data name="RadButtonShowEFG2.Text" xml:space="preserve">
     <value>GBL</value>
@@ -324,5 +323,14 @@
   </data>
   <data name="RadGroupBoxBereich3.Text" xml:space="preserve">
     <value>Zakres 3</value>
+  </data>
+  <data name="lblBereich1Mitte.Text" xml:space="preserve">
+    <value>środek</value>
+  </data>
+  <data name="RadLabel15.Text" xml:space="preserve">
+    <value>środek</value>
+  </data>
+  <data name="RadLabel34.Text" xml:space="preserve">
+    <value>środek</value>
   </data>
 </root>
