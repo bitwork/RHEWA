@@ -118,16 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="RadButtonNavigateForwards.Text" xml:space="preserve">
-    <value>Wróć</value>
+    <value>Dalej</value>
   </data>
   <data name="resource.Text3" xml:space="preserve">
-    <value>Wróć</value>
+    <value>Dalej</value>
   </data>
   <data name="RadButtonNavigateBackwards.Text" xml:space="preserve">
-    <value>Dalej</value>
+    <value>Wróć</value>
   </data>
   <data name="resource.Text4" xml:space="preserve">
-    <value>Dalej</value>
+    <value>Wróć</value>
   </data>
   <data name="RadButtonVersenden.Text" xml:space="preserve">
     <value>&lt;html&gt;Wysłać do &lt;br /&gt;pełnomocnika&lt;/html&gt;</value>
@@ -140,7 +140,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAB6
-        EgAAAk1TRnQBSQFMAgEBAwEAASgBBQEoAQUBIAEAASABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAGA
+        EgAAAk1TRnQBSQFMAgEBAwEAATABBQEwAQUBIAEAASABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAGA
         AwABIAMAAQEBAAEgBgABQP8A/wD/AP8A/wD/AP8A/wD/AP8A/wD/AP8A/wBPAAEBAwQBBgMLAQ8DEAEV
         AxABFgMQARYDEAEVAwsBDwMEAQYDAAEBWwABAQMEAQYDCwEPAxABFQMQARYDEAEWAxABFQMLAQ8DBAEG
         AwABAVsAAQEDBAEGAwsBDwMQARUDEAEWAxABFgMQARUDCwEPAwQBBgMAAQHUAAMCAQMDCgEOAxcBIAMj
